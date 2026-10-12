@@ -1,0 +1,153 @@
+# Reviewer 1006: the non-vacuity witness, the inner product on `Λ²`, and three carried corrections
+
+*Cold brief: [BRIEF-g2-innerproduct.md](BRIEF-g2-innerproduct.md), read before the sources, with no author's conclusion supplied. **No numerical work was done.** Every value below is exact and derived by hand. The machine steps are one [lake build](../lean/HamiltonsCubic/Results/WeylRadical.lean) of the file under review and eight scratch probes written for this round and then deleted, carrying `#print axioms` on five declarations, seven instance-synthesis probes, two `rfl` probes on an instance equality and one elaboration: each reports what the kernel holds or what the elaborator finds rather than computing a value, and together they cost about four minutes. Log: [agent_logs/r1006.log](../agent_logs/r1006.log).*
+
+## Claim table
+
+| # | claim | verdict |
+| --- | --- | --- |
+| 1 | [sphereWeight_diagOpL_ne_zero](../lean/HamiltonsCubic/Results/WeylRadical.lean#L160) establishes `dim 𝒲ₙ ≥ 1` | **CONFIRMED as mathematics, with two corrections**: it gives a member of [weylModule](../lean/HamiltonsCubic/Base/WeylModule.lean#L91) that restriction to `Λ²` does not kill, which is strictly more than [symOp](../lean/HamiltonsCubic/Results/WeylRadical.lean#L43) gives, and **no declaration anywhere states `dim 𝒲ₙ ≥ 1`**, the restriction map being absent from the layer. The witness is **empty below `n = 4`** |
+| 2 | [diagOpL](../lean/HamiltonsCubic/Results/WeylRadical.lean#L135) is [diagOp](../lean/HamiltonsCubic/Base/Families.lean#L147) bundled, nothing changed | **CONFIRMED**, both fields are the cited lemmas verbatim, and the bundling reads no clause of [IsWeight](../lean/HamiltonsCubic/Base/Families.lean#L153) |
+| 3 | [skewCore](../lean/HamiltonsCubic/Base/Bivectors2.lean#L153) is the record's [inner2](../lean/HamiltonsCubic/Base/WeylReal.lean#L39), and [norm_phi](../lean/HamiltonsCubic/Base/Bivectors2.lean#L168) is the record's normalisation | **CONFIRMED**, all five fields, and `‖φ_ij‖ = 1` is [conventions.md:88](../findings/conventions.md#L88)'s sphere exactly, with one correction: the paragraph that justifies the choice argues from an OPERATOR-level fact this file does not build |
+| 4 | the norm's topology is the same INSTANCE as the subtype one, checked by `rfl`, so no diamond | **REFUTED**, and it is the finding: `rfl` fails at `with_unfolding_all`, synthesis resolves [TopologicalSpace](../lean/HamiltonsCubic/Base/Bivectors2.lean#L161) and `UniformSpace` to the SUBTYPE instances while `Bornology` comes from the new METRIC, so the type carries a mixed structure |
+| 5 | the three corrections carried from [r1005](REVIEW_r1005.md) | **CONFIRMED, all three carried faithfully and none overstated**, with one of r1005's OTHER warnings dropped, and the loss costs item 6 |
+| 6 | `Norm (skewSub ι →L[ℝ] skewSub ι)` does not synthesize, and this is library plumbing | **CONFIRMED in its fact, REFUTED in its cause**: [WeylReal.lean:1](../lean/HamiltonsCubic/Base/WeylReal.lean#L1) imports all of Mathlib, so no import is missing, and the blocker is item 4's diamond. **The instance being asked for is the wrong norm anyway** |
+
+**Actionable summary.** Every declaration in both files is correct and the witness is the right one, and **the file's two claims about its own instances are both wrong in the same place**: line 161 builds the norm with [InnerProductSpace.Core.toNormedAddCommGroup](https://leanprover-community.github.io/mathlib4_docs/Mathlib/Analysis/InnerProductSpace/Defs.html#InnerProductSpace.Core.toNormedAddCommGroup), which mints a fresh topology, where Mathlib's [InnerProductSpace.Core.toNormedAddCommGroupOfTopology](https://leanprover-community.github.io/mathlib4_docs/Mathlib/Analysis/InnerProductSpace/Defs.html#InnerProductSpace.Core.toNormedAddCommGroupOfTopology) exists for exactly this case and keeps the existing one defeq. Swap the two, discharge its two side conditions, and both the no-diamond sentence and the operator-norm gap resolve together. Then note in the file that Mathlib's norm on a `→L` space is the sup norm and the record's is Hilbert-Schmidt, because at `n = 4` and `S = {0,1}` the two read `2√3` and `2` on the same operator.
+
+## 0. Conventions, fixed once
+
+- `φ_ab = E_ba - E_ab`, which is [phi](../lean/HamiltonsCubic/Base/WeylReal.lean#L45) verbatim, so `(φ_ab)_cd = [c=b][d=a] - [c=a][d=b]`, `(φ_ab)_ba = 1` at `a ≠ b`, and `φ_aa = 0`.
+- `⟨X, Y⟩ = ½ tr(XᵀY) = ½ ∑_{a,b} X_ab Y_ab`, which is [inner2](../lean/HamiltonsCubic/Base/WeylReal.lean#L39) through [inner2_eq_sum](../lean/HamiltonsCubic/Base/WeylReal.lean#L58). So `⟨φ_ab, φ_ab⟩ = 1` at `a ≠ b` and `0` at `a = b`.
+- `⟨R, S⟩_op = ½ ∑_i ∑_j ⟨R φ_ij, S φ_ij⟩`, which is [innerOp](../lean/HamiltonsCubic/Base/WeylReal.lean#L135), and `‖R‖² = ⟨R, R⟩_op` is [normSq](../lean/HamiltonsCubic/Base/WeylReal.lean#L173). **This is a Hilbert-Schmidt norm on operators**, and section 6 turns on its being that rather than a sup norm.
+- `Λ²` is the skew subspace, [skewSub](../lean/HamiltonsCubic/Base/Bivectors2.lean#L38), of dimension `N = n(n-1)/2`, and `Sym` its complement.
+- `𝒲ₙ` is the Weyl space. [weylModule](../lean/HamiltonsCubic/Base/WeylModule.lean#L91) is NOT it: [r1004](REVIEW_r1004.md) fixes the relation as a surjection `ρ : weylModule → 𝒲ₙ` by restriction to `Λ²`, with `dim weylModule = dim 𝒲ₙ + n²·n(n+1)/2`. Every use of the symbol below says which of the two is meant.
+- `n = Fintype.card ι` throughout. Sums over pairs are over ORDERED pairs unless a range says otherwise.
+
+## Hypothesis inventory
+
+| where | hypothesis | used for | verdict |
+| --- | --- | --- | --- |
+| [sphereWeight_diagOpL_ne_zero](../lean/HamiltonsCubic/Results/WeylRadical.lean#L160) | `2 ≤ S.card`, `2 ≤ Sᶜ.card` | [sphereWeight_isWeight](../lean/HamiltonsCubic/Base/Families.lean#L381)'s row sums, where they stop a division by `0` | **ESSENTIAL**, and together they force `4 ≤ n`, so the statement is EMPTY at `n ≤ 3` |
+| [sphereWeight_diagOpL_ne_zero](../lean/HamiltonsCubic/Results/WeylRadical.lean#L160) | `a ∈ S`, `b ∉ S` | `a ≠ b` and [sphereWeight_cross](../lean/HamiltonsCubic/Base/Families.lean#L322)'s `-1` | **ESSENTIAL**, and the in-block entries would serve equally at `p, q ≥ 2` |
+| [diagOpL_phi_ne_zero](../lean/HamiltonsCubic/Results/WeylRadical.lean#L146) | `IsWeight w` | `h.symm` alone, through [diagOp_phi](../lean/HamiltonsCubic/Base/Families.lean#L160) | **OVERSTRONG FOR ITS CLAIM**, symmetry of `w` is the whole of what the proof reads, and hollowness and the row sums are never touched |
+| [diagOpL_mem](../lean/HamiltonsCubic/Results/WeylRadical.lean#L141) | `IsWeight w` | all three clauses, through [diagOp_isWeyl](../lean/HamiltonsCubic/Base/Families.lean#L249) | **ESSENTIAL**, the row sums being what kills `Ric` |
+| [diagOpL](../lean/HamiltonsCubic/Results/WeylRadical.lean#L135) | none on `w` | the two field proofs are entrywise algebra | **FREE**, so the bundled operator exists at every `w` and the weight conditions enter only at membership |
+| [norm_phi](../lean/HamiltonsCubic/Base/Bivectors2.lean#L168) | `i ≠ j` | [inner2_self_phi](../lean/HamiltonsCubic/Base/Families.lean#L90) | **ESSENTIAL**, `φ_ii = 0` has norm `0` |
+| [skewCore](../lean/HamiltonsCubic/Base/Bivectors2.lean#L153) | `[Fintype ι]` | the finite sums inside [inner2](../lean/HamiltonsCubic/Base/WeylReal.lean#L39) and the trace | **ESSENTIAL** |
+| [eq_zero_of_phi](../lean/HamiltonsCubic/Base/Bivectors2.lean#L68) | `[Fintype ι]` | [skew_expand](../lean/HamiltonsCubic/Base/WeylReal.lean#L79) | **ESSENTIAL**, as [r1005](REVIEW_r1005.md) found and as the docstring now records |
+
+**Five declarations confirmed in the kernel on `[propext, Classical.choice, Quot.sound]`**: [sphereWeight_diagOpL_ne_zero](../lean/HamiltonsCubic/Results/WeylRadical.lean#L160), [diagOpL_mem](../lean/HamiltonsCubic/Results/WeylRadical.lean#L141), [norm_phi](../lean/HamiltonsCubic/Base/Bivectors2.lean#L168), [eq_zero_of_phi_sq_sum](../lean/HamiltonsCubic/Base/Bivectors2.lean#L112) and [finiteDimensional_skewSub](../lean/HamiltonsCubic/Base/Bivectors2.lean#L222). The build of [WeylRadical.lean](../lean/HamiltonsCubic/Results/WeylRadical.lean) completes, with four style warnings and no error.
+
+## 1. The witness: what it establishes, and what it does not
+
+**The statement, read literally.** [sphereWeight_diagOpL_ne_zero](../lean/HamiltonsCubic/Results/WeylRadical.lean#L160) says `diagOpL (sphereWeight S) (phi a b) ≠ 0` under `2 ≤ S.card`, `2 ≤ Sᶜ.card`, `a ∈ S` and `b ∉ S`. On its own that is a statement about one value of one operator, and it names [weylModule](../lean/HamiltonsCubic/Base/WeylModule.lean#L91) nowhere.
+
+**With its neighbour it gives the whole of what the debt asked.** [diagOpL_mem](../lean/HamiltonsCubic/Results/WeylRadical.lean#L141) puts `diagOpL w` in [weylModule](../lean/HamiltonsCubic/Base/WeylModule.lean#L91) at every [IsWeight](../lean/HamiltonsCubic/Base/Families.lean#L153) `w`, and [sphereWeight_isWeight](../lean/HamiltonsCubic/Base/Families.lean#L381) supplies that under the same two cardinality hypotheses the witness already carries. So the pair exhibits `R ∈ weylModule` with `R φ_ab = -φ_ab ≠ 0`, and the restriction `ρ R` is a nonzero element of `𝒲ₙ`. **That is the property the debt was for**, and the distinction the brief asks about is drawn correctly: [symOp](../lean/HamiltonsCubic/Results/WeylRadical.lean#L43) is nonzero in the module and dies under `ρ`, so it witnesses `dim weylModule ≥ 1` and nothing about `𝒲ₙ`, while this witness survives `ρ` by construction.
+
+**The arithmetic, checked rather than taken.** [diagOp_phi](../lean/HamiltonsCubic/Base/Families.lean#L160) gives `diagOp w (φ_ab) = w_ab • φ_ab` from symmetry of `w` alone, [sphereWeight_cross](../lean/HamiltonsCubic/Base/Families.lean#L322) gives `w_ab = -1` across the blocks, and `(φ_ab)_ba = 1` at `a ≠ b`, so evaluating the hypothetical `w_ab • φ_ab = 0` at `(b, a)` returns `-1 = 0`. The proof in the file is that argument and nothing else.
+
+**Correction 1: no declaration states `dim 𝒲ₙ ≥ 1`, or even `weylModule ≠ ⊥`.** [weylTrace_id](../lean/HamiltonsCubic/Base/WeylModule.lean#L178)'s docstring now reads *"so `dim 𝒲ₙ ≥ 1` at every split into two blocks of at least two"*, and that inference is sound, but it is prose over two theorems rather than a theorem. Three steps are missing and each is short: from `R φ_ab ≠ 0` to `R ≠ 0`, from there to `weylModule ι ≠ ⊥`, and from there to `1 ≤ Module.finrank ℝ (weylModule ι)`, which is the quantity [weylTrace_id](../lean/HamiltonsCubic/Base/WeylModule.lean#L178) actually returns. **The step to `𝒲ₙ` proper cannot be written at all yet**: `ρ` is declared nowhere, and [skewSub](../lean/HamiltonsCubic/Base/Bivectors2.lean#L38) occurs in no file but the one that defines it, so the space the claim is about has no name in the layer. This is [r1005](REVIEW_r1005.md)'s missing piece 2 read from the other end.
+
+**Correction 2: the witness is empty below `n = 4`.** `2 ≤ S.card` with `2 ≤ Sᶜ.card` forces `4 ≤ n`, so at `n ≤ 3` the theorem quantifies over nothing. **That is the right boundary rather than a defect**, since `dim 𝒲ₙ = n(n-3)(n+1)(n+2)/12` is `0` at `n ≤ 3` and no witness for `𝒲₃ ≠ 0` can exist. It is worth writing into the docstring in that form, because the reader who wants non-vacuity of [weylTrace_id](../lean/HamiltonsCubic/Base/WeylModule.lean#L178) itself is better served at `n ≤ 3` by [symOp_ne_zero](../lean/HamiltonsCubic/Results/WeylRadical.lean#L115), which holds at every nonempty `ι` and which the file already has. **The two witnesses answer two different questions and the file should say which is for which**: `symOp` makes `finrank (weylModule ι) ≥ 1` true at every `n ≥ 1`, and only the diagonal witness reaches `𝒲ₙ`.
+
+**Verdict: CONFIRMED** that the witness establishes more than *some member is nonzero*, with the two corrections above.
+
+## 2. Is [diagOpL](../lean/HamiltonsCubic/Results/WeylRadical.lean#L135) the same operator, bundled?
+
+**`toFun` is `diagOp w` on the nose**, so the underlying function is [Families.lean:147](../lean/HamiltonsCubic/Base/Families.lean#L147)'s Hadamard action `X ↦ (a, b) ↦ w_ab X_ab` with nothing interposed.
+
+**`map_add'` is the cited lemma verbatim.** [diagOp_add](../lean/HamiltonsCubic/Base/SharpDiag.lean#L52) is `diagOp w (X + Y) = diagOp w X + diagOp w Y` with binders `(w X Y)`, which is `map_add'`'s goal after `w` is fixed, and the field is `diagOp_add w` with no tactic at all.
+
+**`map_smul'` is the cited lemma through the identity ring hom.** [diagOp_smul_arg](../lean/HamiltonsCubic/Base/SharpDiag.lean#L59) is `diagOp w (c • X) = c • diagOp w X`, and `map_smul'`'s goal carries `RingHom.id ℝ c` on the right, which is what the `simpa` discharges. **The lemma cited is the one about the ARGUMENT and not the one about the weight**: [diagOp_smul](../lean/HamiltonsCubic/Base/Families.lean#L175) is `diagOp (t • w) = t • diagOp w`, a different statement, and the docstring names the right one of the two.
+
+**Nothing is changed and nothing is assumed.** Neither field reads [IsWeight](../lean/HamiltonsCubic/Base/Families.lean#L153), so `diagOpL` is defined at every `w`, which is why [diagOpL_mem](../lean/HamiltonsCubic/Results/WeylRadical.lean#L141) has to carry the weight hypothesis separately. Membership in [weylModule](../lean/HamiltonsCubic/Base/WeylModule.lean#L91) is [diagOp_isWeyl](../lean/HamiltonsCubic/Base/Families.lean#L249) accepted by defeq, `IsWeylL (diagOpL w)` unfolding to `IsWeyl (fun X => diagOpL w X)` and that function being `diagOp w` definitionally.
+
+**Verdict: CONFIRMED.**
+
+## 3. [skewCore](../lean/HamiltonsCubic/Base/Bivectors2.lean#L153), and whether the norm is the record's
+
+**The five fields against [inner2](../lean/HamiltonsCubic/Base/WeylReal.lean#L39), one by one.**
+
+| field | obligation over `ℝ` | what discharges it | reading |
+| --- | --- | --- | --- |
+| `inner` | the pairing | `inner2 ↑X ↑Y` | the record's, restricted along the coercion, with no rescaling |
+| `conj_inner_symm` | `⟨Y, X⟩ = ⟨X, Y⟩` | [inner2_comm](../lean/HamiltonsCubic/Base/WeylReal.lean#L218) | conjugation is the identity on `ℝ`, which the `simpa` removes |
+| `re_inner_nonneg` | `0 ≤ ⟨X, X⟩` | [inner2_self_nonneg](../lean/HamiltonsCubic/Base/FoxProduct.lean#L354) | a sum of squares |
+| `add_left` | `⟨X + Y, Z⟩ = ⟨X, Z⟩ + ⟨Y, Z⟩` | [inner2_add_left](../lean/HamiltonsCubic/Base/StructureConstants.lean#L152) | additivity of the entrywise sum |
+| `smul_left` | `⟨r • X, Y⟩ = r ⟨X, Y⟩` | [inner2_smul_left](../lean/HamiltonsCubic/Base/FoxProduct.lean#L133) | the `RealLayer` copy, whose binders are `(A B c)`, which is why the call reads `X Y r` |
+| `definite` | `⟨X, X⟩ = 0 → X = 0` | [inner2_self_eq_zero](../lean/HamiltonsCubic/Base/Bivectors2.lean#L89) then `Subtype.ext` | the sum of squares run backwards, twice |
+
+**One note on which lemma resolves, because the layer carries several under each name.** `inner2_smul_left` exists in five places, and the `RealLayer` one is [FoxProduct.lean:133](../lean/HamiltonsCubic/Base/FoxProduct.lean#L133) with the scalar LAST, where [Families.lean:94](../lean/HamiltonsCubic/Base/Families.lean#L94)'s `FamilyLayer` copy takes it first. The file is inside `RealLayer` and does not open `FamilyLayer`, so the call elaborates against the first, and the statements are identical. Nothing is wrong here, and it is worth knowing that the field's meaning does not depend on which copy wins.
+
+**The norm is the record's, exactly.** [toNormedAddCommGroup](https://leanprover-community.github.io/mathlib4_docs/Mathlib/Analysis/InnerProductSpace/Defs.html#InnerProductSpace.Core.toNormedAddCommGroup) sets `‖X‖ = √(⟨X, X⟩)`, so `‖X‖² = ½ tr(XᵀX) = ½ ∑_{a,b} X_ab²`, which is the half-trace pairing and `1/√2` times plain Frobenius. At `φ_ab` with `a ≠ b` the matrix has entries `±1` at `(a,b)` and `(b,a)`, so the sum is `2` and the norm is `1`. **[norm_phi](../lean/HamiltonsCubic/Base/Bivectors2.lean#L168) is therefore correct**, and its proof is that value through `real_inner_self_eq_norm_sq` plus `nlinarith` against non-negativity, which is the right way round because a square root needs the sign.
+
+**And it is the normalisation the catalogued values were computed on.** [conventions.md:88](../findings/conventions.md#L88): *"`‖φ_ab‖² = 1` under the half-trace pairing of the bullet above, which is the one every result uses and which makes `{φ_ab}_{a<b}` orthonormal"*, against `2` under plain Frobenius, and the line above it fixes that *"the `½` goes at the `Λ²` level, not the operator level"*, with the warning that the other choice *"inflates every `θ` by `√2`"*. The instance built here is the first of the two. **So the file's headline for this section is right**, and it is the same convention [r519](REVIEW_r519.md) and [r520](REVIEW_r520.md) pinned independently.
+
+**One correction, on the argument rather than the result.** [Bivectors2.lean:147](../lean/HamiltonsCubic/Base/Bivectors2.lean#L147) justifies the choice by *"`‖diagOp w‖² = 1` is the record's `tr M² = 2`"*. That sentence is true as arithmetic: [diagOp_normSq](../lean/HamiltonsCubic/Base/Families.lean#L257) gives `‖diagOp w‖² = ½ ∑_{a,b} w_ab²` and `tr M² = ∑_{a,b} w_ab²` at symmetric `w`, so the two conditions are one. **But it is a fact about [normSq](../lean/HamiltonsCubic/Base/WeylReal.lean#L173) and [innerOp](../lean/HamiltonsCubic/Base/WeylReal.lean#L135), the pairing on OPERATORS, which this file does not build**, and the instance the paragraph introduces is a pairing on `Λ²`, the space. Orthonormality of the `φ` family is what actually ties the two levels together, and the sentence would carry its own weight if it said so. This is the same slide [r1005](REVIEW_r1005.md) corrected at the payoff theorem and which the file carried correctly there, reappearing in the prose two sections later.
+
+**Verdict: CONFIRMED**, five fields and the normalisation, with the correction above.
+
+## 4. The no-diamond claim
+
+**The claim.** [Bivectors2.lean:199](../lean/HamiltonsCubic/Base/Bivectors2.lean#L199): *"`skewSub` carries the record's own inner product, `‖φ_ij‖ = 1`, and the topology it induces is the SAME INSTANCE as the subtype one, checked by `rfl`, so no diamond was created."*
+
+**Located exactly.** There is no `rfl` check in the file. The three occurrences of the token are [line 55](../lean/HamiltonsCubic/Base/Bivectors2.lean#L55)'s `Iff.rfl`, [line 94](../lean/HamiltonsCubic/Base/Bivectors2.lean#L94)'s `sum_congr rfl` and [line 187](../lean/HamiltonsCubic/Base/Bivectors2.lean#L187)'s prose about the inert Frobenius scope. So the claim is asserted, and whatever was checked was not kept.
+
+**Exhibited concretely.** At `ι = Fin 4` the equality
+
+```lean
+example : ((inferInstance : NormedAddCommGroup S4)).toMetricSpace.toUniformSpace.toTopologicalSpace
+    = (instTopologicalSpaceSubtype : TopologicalSpace S4) := rfl
+```
+
+is rejected, and it is still rejected as `by with_unfolding_all rfl`, the elaborator reporting `PseudoMetricSpace.toUniformSpace.toTopologicalSpace` not definitionally equal to `instTopologicalSpaceSubtype`. **The two instances are both present and are not the same one.**
+
+**Which one wins, and the answer is not the new one.** `#synth TopologicalSpace (skewSub (Fin 4))` returns `instTopologicalSpaceSubtype` over `instTopologicalSpaceMatrix`, and `#synth UniformSpace (skewSub (Fin 4))` returns `instUniformSpaceSubtype`. **`#synth Bornology (skewSub (Fin 4))` returns `PseudoMetricSpace.toBornology`, which comes from the new norm.** So the type now carries its topology and uniformity from the ambient product and its bornology from the metric, and those two chains are not defeq. `CurvOp2` records the outcome: `set_option pp.explicit true in #print CurvOp2` shows `ContinuousLinearMap` over `instTopologicalSpaceSubtype` at both slots, exactly as [r1005](REVIEW_r1005.md) found before any norm existed.
+
+**Arguing the opposite, which is the strongest reading the words support.** The sentence could mean that nothing BREAKS, and in that weaker sense it is right: `skewSub (Fin n)` is finite-dimensional, [finiteDimensional_skewSub](../lean/HamiltonsCubic/Base/Bivectors2.lean#L222) is on file, and a finite-dimensional real vector space has one Hausdorff linear topology, so the two instances are propositionally equal and no theorem stated in either is false. **It could also mean that the two instances agree by construction, which is what "the same INSTANCE, checked by `rfl`" says, and that is the reading the next section then spends**, because it is the reading under which the missing operator norm has to be someone else's fault. The weaker claim survives and the written one does not.
+
+**Does any instance here shadow one already in the layer?** No, and the reason is that nothing else in the layer has heard of this type: [skewSub](../lean/HamiltonsCubic/Base/Bivectors2.lean#L38) appears in no `.lean` file but [Bivectors2.lean](../lean/HamiltonsCubic/Base/Bivectors2.lean) itself. **What the two new instances compete with is Mathlib's**, the subtype topology, uniformity and bornology that `↥(skewSub ι)` carries from `Matrix ι ι ℝ`, and the competition is decided differently at different levels, which is the defect.
+
+**The repair is one identifier.** Mathlib anticipates this case: [InnerProductSpace.Core.toNormedAddCommGroupOfTopology](https://leanprover-community.github.io/mathlib4_docs/Mathlib/Analysis/InnerProductSpace/Defs.html#InnerProductSpace.Core.toNormedAddCommGroupOfTopology) and [InnerProductSpace.ofCoreOfTopology](https://leanprover-community.github.io/mathlib4_docs/Mathlib/Analysis/InnerProductSpace/Defs.html#InnerProductSpace.ofCoreOfTopology) build the same structures *"adjusting the topology to make sure it is defeq to an already existing topology"*, over [NormedAddCommGroup.ofCoreReplaceTopology](https://leanprover-community.github.io/mathlib4_docs/Mathlib/Analysis/Normed/Module/Basic.html#NormedAddCommGroup.ofCoreReplaceTopology). Their price is two side conditions at this type: that `v ↦ ⟨v, v⟩` is continuous at `0`, and that `{v | ⟨v, v⟩ < 1}` is von Neumann bounded. Both are true here and both are obligations the file would have to discharge, so this is named as the route rather than reported as done.
+
+**Verdict: REFUTED.** A diamond was created, it is decided inconsistently across the three levels, and it is harmless as mathematics and not harmless as plumbing.
+
+## 5. The three corrections carried from [r1005](REVIEW_r1005.md)
+
+**(a) The topology comes from the arrow rather than the domain: CARRIED FAITHFULLY.** [Bivectors2.lean:183](../lean/HamiltonsCubic/Base/Bivectors2.lean#L183) states it as the section's headline, says a first version said otherwise, and keeps all three of the sub-claims that make it true: that `CurvOp2` carries no `Norm`, which I re-checked and which still holds, that the Frobenius scope was inert, and that the old domain with a continuous arrow would have served equally. **It is not overstated in the other direction either**, since it goes on to say what the change of domain DOES buy, definiteness, which is r1005's own correction to itself. The section also adds the argument r1005 said was missing, that finite-dimensionality leaves nothing to choose, and [finiteDimensional_skewSub](../lean/HamiltonsCubic/Base/Bivectors2.lean#L222) now puts it on file rather than in prose.
+
+**(b) `Fintype` is load-bearing in [eq_zero_of_phi](../lean/HamiltonsCubic/Base/Bivectors2.lean#L68): CARRIED FAITHFULLY.** [Line 64](../lean/HamiltonsCubic/Base/Bivectors2.lean#L64) states the promotion, gives the mechanism (at an infinite index the `φ` family spans the finitely-supported skew matrices alone, so a map killing every `φ_ij` can be nonzero elsewhere), and demotes `DecidableEq` to `Matrix.single`'s indexing. That is r1005 section 2 compressed without loss. **The hypothesis itself is still in the statement**, so the theorem is true as written and the docstring is about what its removal would cost, which is the honest form of such a claim.
+
+**(c) [eq_zero_of_phi_sq_sum](../lean/HamiltonsCubic/Base/Bivectors2.lean#L112) is not about [innerOp](../lean/HamiltonsCubic/Base/WeylReal.lean#L135): CARRIED FAITHFULLY, AND THE NAME WAS CHANGED TOO.** The theorem was `eq_zero_of_innerOp_self` when r1005 read it, and it is now named for the sum it actually quantifies. [Line 104](../lean/HamiltonsCubic/Base/Bivectors2.lean#L104) keeps the reason (`innerOp` takes bare functions, which a map out of a submodule is not), keeps the factor (`2·normSq` under the evident identification), and keeps r1005's non-vacuity check (`n(n-1)` at the identity, so the pairing separates). **One of r1005's two corrections at that theorem is absent**, that the statement has content only at `2 ≤ n`, but the `n(n-1)` remark carries the same fact in positive form, so I record this as carried in substance rather than dropped.
+
+**What WAS dropped, and it is the one that costs something.** [r1005](REVIEW_r1005.md)'s item 6 piece 4 names two traps on the norm, and the file carries neither: that the ambient Frobenius norm gives `‖φ_ab‖ = √2` against the record's `1`, which is now moot because the file chose the half-trace pairing and says so, **and that Mathlib's norm on a `→L` space is the OPERATOR norm where the record's `‖R‖` is Hilbert-Schmidt, which is live and unmentioned**. Section 6 is what that loss produces.
+
+**Verdict: CONFIRMED, all three carried faithfully and none overstated in either direction.**
+
+## 6. The stated boundary: the operator norm
+
+**The claim.** [Bivectors2.lean:202](../lean/HamiltonsCubic/Base/Bivectors2.lean#L202): *"`Norm (skewSub ι →L[ℝ] skewSub ι)` does not synthesize even with `SeminormedAddCommGroup` on the domain and `NontriviallyNormedField ℝ` both in hand, so the operator-norm instance is not reached by the imports here."*
+
+**The fact is CONFIRMED.** `#synth Norm (CurvOp2 (Fin 4))` fails, and the two ingredients the sentence names are indeed both in hand: `#synth SeminormedAddCommGroup (skewSub (Fin 4))` returns `NormedAddCommGroup.toSeminormedAddCommGroup` of the file's own instance, and `#synth NormedSpace ℝ (skewSub (Fin 4))` returns the `toNormedSpace` of the file's `InnerProductSpace`.
+
+**The cause is REFUTED, and no import is missing.** [WeylReal.lean:1](../lean/HamiltonsCubic/Base/WeylReal.lean#L1) is `import Mathlib`, and [Bivectors2.lean](../lean/HamiltonsCubic/Base/Bivectors2.lean) imports it, so the whole library is in the import closure of the file making the claim. The instance in question is [ContinuousLinearMap.hasOpNorm](https://leanprover-community.github.io/mathlib4_docs/Mathlib/Analysis/Normed/Operator/Basic.html#ContinuousLinearMap.hasOpNorm), and it is reachable from inside that closure: `#synth Norm (EuclideanSpace ℝ (Fin 3) →L[ℝ] EuclideanSpace ℝ (Fin 3))` returns it. **So "not reached by the imports here" is false, and what blocks it is section 4's diamond.** `ContinuousLinearMap` takes its two topologies as instance arguments, `CurvOp2` was elaborated with `instTopologicalSpaceSubtype` at both, and `hasOpNorm` wants the topology the norm induces, which is not defeq to it. The probe that closes this is one line:
+
+```lean
+example : True := by
+  letI : TopologicalSpace S4 := PseudoMetricSpace.toUniformSpace.toTopologicalSpace
+  have h : Norm (S4 →L[ℝ] S4) := inferInstance
+  trivial
+```
+
+which elaborates. **With the norm's own topology in scope the instance is found, so the gap is between the file's two instances and not between the file and Mathlib.** The repair is section 4's: build the norm with [toNormedAddCommGroupOfTopology](https://leanprover-community.github.io/mathlib4_docs/Mathlib/Analysis/InnerProductSpace/Defs.html#InnerProductSpace.Core.toNormedAddCommGroupOfTopology) so that the two chains are defeq, after which both slots of `CurvOp2` agree with the instance `hasOpNorm` expects.
+
+**And the instance being asked for is the wrong norm.** [ContinuousLinearMap.hasOpNorm](https://leanprover-community.github.io/mathlib4_docs/Mathlib/Analysis/Normed/Operator/Basic.html#ContinuousLinearMap.hasOpNorm) is the sup norm `sup_{‖x‖ ≤ 1} ‖T x‖`. The record's `‖R‖` is [normSq](../lean/HamiltonsCubic/Base/WeylReal.lean#L173), which is `⟨R, R⟩_op = ½ ∑_{i,j} ⟨R φ_ij, R φ_ij⟩`, a Hilbert-Schmidt norm. **They differ on the file's own witness.** Take `n = 4`, `S = {0, 1}`, so `p = q = 2` and [sphereWeight](../lean/HamiltonsCubic/Base/Families.lean#L291) has `w_ab = -1` across the blocks and `w_ab = q/(p-1) = 2` inside each. Then `∑_{a,b} w_ab² = 8 + 8 + 8 = 24`, so `‖diagOp w‖²_record = 12` and `‖diagOp w‖_record = 2√3`. The same operator is diagonal in the `φ` basis with eigenvalues `w_ab`, and that basis is orthonormal under the record's pairing, so its sup norm is `max |w_ab| = 2`. **`2√3` against `2`, on the operator the record catalogues**, and the unit sphere that `IsLocalMaxOn` would quantify over is a different set under each. This is exactly the trap [r1005](REVIEW_r1005.md) ranked as the one whose wrong default states a different theorem with nothing to catch it, and the file now names the wrong-default instance as the thing it wants.
+
+**Verdict: CONFIRMED in its fact, REFUTED in its cause**, with the further finding that supplying the instance as named would state a different unit sphere from the record's.
+
+## Overall verdict
+
+**PROVEN (hypotheses corrected)** on the declarations. Every theorem in [Bivectors2.lean](../lean/HamiltonsCubic/Base/Bivectors2.lean) and [WeylRadical.lean](../lean/HamiltonsCubic/Results/WeylRadical.lean) is the statement it claims to be, the five I probed build on `[propext, Classical.choice, Quot.sound]`, the witness is the right witness and survives restriction to `Λ²` where [symOp](../lean/HamiltonsCubic/Results/WeylRadical.lean#L43) does not, and the inner product is the record's with `‖φ_ij‖ = 1` as [conventions.md:88](../findings/conventions.md#L88) fixes it.
+
+**The file's account of its own instances is REFUTED at both places it makes one**, and the two are one defect: [line 161](../lean/HamiltonsCubic/Base/Bivectors2.lean#L161) mints a topology instead of adopting the one already there, so the no-diamond sentence is false and the operator-norm gap is self-inflicted rather than library plumbing. **A HYPOTHESIS-DEBT stands on `dim 𝒲ₙ ≥ 1`**: what would have to be proved is `ρ : weylModule ι → (skewSub ι →ₗ[ℝ] skewSub ι)`, the restriction, and `1 ≤ Module.finrank ℝ (LinearMap.range ρ)` from the witness. Until `ρ` exists, the claim in [weylTrace_id](../lean/HamiltonsCubic/Base/WeylModule.lean#L178)'s docstring is a sound inference about a space the layer cannot name.

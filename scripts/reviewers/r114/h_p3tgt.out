@@ -1,0 +1,8 @@
+[p3] dim Weyl^inv = 45; Lambda^2 splits 6/9
+[p3] converged 0/300, distinct 0, GRADED 0
+Traceback (most recent call last):
+  File "scripts/reviewers/r114/r114_four.py", line 93, in <module>
+    hunt(name, NST, seed, tt)
+  File "scripts/reviewers/r114/r114_four.py", line 86, in hunt
+    print(f"[{name}] theta range [{min(z['theta'] for z in uniq):.6f},{max(z['theta'] for z in uniq):.6f}]", flush=True)
+ValueError: min() arg is an empty sequence

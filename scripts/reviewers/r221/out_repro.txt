@@ -1,0 +1,5 @@
+(3, 3, 1, 1, 0, 0)  cols 6,137  rows 17,233  nnz 52,245
+   author sparse_rank trial 1:    69.6s nullity 8 (m 8)
+   author sparse_rank trial 2:    68.9s nullity 8 (m 8)
+   author sparse_rank trial 3:    68.5s nullity 8 (m 8)
+   markowitz sparse         :    26.6s nullity 8

@@ -1,0 +1,50 @@
+dim Weyl_6 = 84
+sigma action on Lambda^2: +1 on 6 dims, -1 on 9 dims
+dim of the sigma-invariant subspace of Weyl_6 = 45   (singular value gap: 1.000e+00 -> 8.882e-16)
+
+376/400 converged at criticality residual <= 1e-12
+
+solutions with S_mmm = 0 (necessary condition): 1
+     theta     resid      S_mmm   leak S_hhm         gap      -/0/+  GRADED?
+  0.104886   3.5e-16   5.01e-30    17.000000   1.364e-01   7/ 0/  8   no
+
+--- all solutions sorted by gap (smallest first), top 20 ---
+     theta     resid       S_mmm   leak S_hhm         gap      -/0/+  GRADED?
+  0.420712   5.0e-16     10.3610     9.876991   1.956e-04   9/ 0/  6   no
+  0.421067   3.2e-16     10.2700     9.791414   1.270e-03   9/ 0/  6   no
+  0.413704   5.7e-16     11.2444    10.629359   1.668e-03   9/ 0/  6   no
+  0.584315   5.0e-16     19.9098     5.050517   8.016e-03  10/ 0/  5   no
+  0.422437   4.7e-16     21.0416     6.815422   8.747e-03  10/ 0/  5   no
+  0.136580   3.8e-16      4.5667    14.968331   1.124e-02   8/ 0/  7   no
+  0.136580   3.3e-16      4.5667    14.968331   1.124e-02   8/ 0/  7   no
+  0.136580   4.1e-16      4.5667    14.968331   1.124e-02   8/ 0/  7   no
+  0.136580   3.8e-16      4.5667    14.968331   1.124e-02   8/ 0/  7   no
+  0.559951   6.2e-16     14.0654     5.320957   1.192e-02   9/ 0/  6   no
+  0.424401   4.4e-16     21.1867     6.774641   1.295e-02  10/ 0/  5   no
+  0.436910   5.5e-16     10.2347     9.395350   1.571e-02   9/ 0/  6   no
+  0.436910   4.8e-16     10.2347     9.395350   1.571e-02   9/ 0/  6   no
+  0.424349   4.5e-16     21.3613     6.931505   1.619e-02  10/ 0/  5   no
+  0.129099   2.9e-16      5.3132    15.676475   1.789e-02   8/ 0/  7   no
+  0.418530   5.0e-16     21.4426     7.087037   2.047e-02  10/ 0/  5   no
+  0.087153   4.2e-16      6.1955    16.333960   2.097e-02   8/ 0/  7   no
+  0.087153   3.2e-16      6.1955    16.333960   2.097e-02   8/ 0/  7   no
+  0.087153   3.9e-16      6.1955    16.333960   2.097e-02   8/ 0/  7   no
+  0.087153   4.2e-16      6.1955    16.333960   2.097e-02   8/ 0/  7   no
+
+--- solutions whose OPPOSITE orientation has S_mmm = 0 (theta < 0 side) ---
+  theta=-0.498847 gap=7.076246e-02 S_mmm(flip)=5.45e-31 leak(flip)=25.7221
+  theta=-0.498847 gap=7.076246e-02 S_mmm(flip)=1.49e-31 leak(flip)=25.7221
+  theta=-0.498847 gap=7.076246e-02 S_mmm(flip)=2.44e-31 leak(flip)=25.7221
+  theta=-0.498847 gap=7.076246e-02 S_mmm(flip)=3.50e-32 leak(flip)=25.7221
+  theta=-0.525297 gap=1.374511e-01 S_mmm(flip)=1.69e-31 leak(flip)=26.6667
+  theta=-0.418643 gap=1.454481e-01 S_mmm(flip)=1.13e-30 leak(flip)=26.6667
+  theta=-0.308607 gap=1.543033e-01 S_mmm(flip)=1.93e-30 leak(flip)=24.0000
+  theta=-0.308607 gap=1.543033e-01 S_mmm(flip)=1.61e-30 leak(flip)=24.0000
+  theta=-0.250700 gap=1.570324e-01 S_mmm(flip)=2.52e-30 leak(flip)=24.0000
+  theta=-0.250700 gap=1.570324e-01 S_mmm(flip)=3.48e-30 leak(flip)=24.0000
+  theta=-0.250700 gap=1.570324e-01 S_mmm(flip)=3.34e-30 leak(flip)=24.0000
+  theta=-0.250700 gap=1.570324e-01 S_mmm(flip)=2.23e-30 leak(flip)=24.0000
+
+GRADED solutions found: 0
+
+wrote scripts/reviewers/r113/sols_113113.json

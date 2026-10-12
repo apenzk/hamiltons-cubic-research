@@ -1,0 +1,13 @@
+### Reviewer 21: the joint frontier, and the closed form behind it
+
+**The claim stands, and is conservative.** Recomputed independently: $\sup A$, $\sup B$, the entire frontier, both Hessians, the $\alpha$ identity, Nienhaus's reach $\alpha_N(n)$ ($0.322271$, $0.290168$, $0.234970$, exact match), every margin, and $\gamma_{\max}$ at $n=12,16$, reproducing Reviewer 19's figures to four digits with no counterexample.
+
+**$B=0$ is not an artefact of a stuck optimiser.** Three methods agree to $10^{-15}$: 23-seed alternating *global* trust-region solves, 64-start scipy L-BFGS-B, and an exact second-order Hessian pencil. Seeding deliberately near high-$B$ configurations still returns $\sqrt{5/6}$ with $B=0$.
+
+**The frontier is exactly computable.** For every $W_1\in V_{1/3}$, $M_{W_1}\cdot\Pi_{\ker}Q(W_1)=0$ (residual $\le8.5\times10^{-15}$, control $0.33$), which makes the inner maximisation a **hard-case trust-region problem** with a global solution. The value is monotone in $a\le\sqrt{5/6}$ and $\lambda\le2/3$, both suprema attained at the same $W_1^*$, so $V(t)=\sqrt{5/6}$ for $t\le t^*$ and $5/(16t)+2t/3$ beyond, with $t^*=\tfrac34\sqrt{5/6}=\sqrt{30}/8$ and $\alpha^*=32/141$.
+
+**Three corrections.** The justification "traced by ascent, hence a lower bound, the safe direction" is **wrong** and was removed: a lower estimate of a support function cannot serve inside an upper bound on $\gamma$, which is the error class that sank two earlier attempts. What rescues it is the trust-region certificate, which makes the frontier provably maximal. The threshold $t\le0.65$ was a grid artefact, the script never sampled between $0.65$ and $0.75$, and the exact value is $t^*=\sqrt{30}/8$. The values reported at $t=0.75$ were under-converged: exactly $A=5/6$, $B=1/9$.
+
+**The coverage claim was understated.** On its own numbers the overlap reaches $n\le109$ and separates at $n=110$ (worst margin $+0.000130$ at $109$, $-0.000029$ at $110$), not $n\approx120$. With the corrected threshold $\alpha^*=32/141$ the two branches overlap for **every $n\ge12$**, worst margin $+0.0074$ at $\alpha\approx0.223$ as $n\to\infty$.
+
+**Limitations stated plainly.** $n=20$ and $24$ were not reachable directly (the Weyl-basis SVD has $18145$ columns at $n=20$) so instead zero-padding the $n=12$ pair into $m=14,16,20,24$ was verified to preserve everything exactly, giving monotonicity in $n$ as a lower bound. Both branches remain conditional on Conjecture A's sharp constant $c_n$ past $n=12$. And the peak ratio grows with $c_n$, so large-$n$ tests belong at $\alpha\approx0.23$ rather than the $\alpha\approx0.295$ window.

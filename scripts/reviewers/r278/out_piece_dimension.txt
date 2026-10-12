@@ -1,0 +1,8 @@
+(S^4)^3 at n=12 : theta = 0.829156  crit-res = 1.36e-16  support dim = 12
+S^4 x S^8 at n=12: theta = 1.201561  crit-res = 4.81e-16  support dim = 12
+pad(S^4 x S^4)   : theta = 1.145644  crit-res = 3.33e-16  support dim = 8
+
+<A,B> = -2.429e-17   ||A o B||_F = 2.082e-17
+a = theta/theta_A = 0.690065559, b = 0.723746864, a^2+b^2 = 1.000000000000
+|| a A + b B - W_(S^4)^3 ||_F = 3.906e-16
+harmonic-square prediction 0.829156198 vs actual theta 0.829156198

@@ -1,0 +1,62 @@
+# Review r1502: L184's plane and eigenspace steps, and L178's attainment converse at the ℂP² block, in Lean
+
+Gate 2 review of commit 9db3d137: the new [Results/L184Plane.lean](../lean/HamiltonsCubic/Results/L184Plane.lean) (`preserves_eigenspace_neg_sq`, `skew_on_plane`), the new `L178_n4_attained` and header edits in [Results/L178Eq.lean](../lean/HamiltonsCubic/Results/L178Eq.lean), and the record edits to [lean/INDEX.md](../lean/INDEX.md)'s L178 row (line 70), which claims to repair [r1501](REVIEW_r1501.md)'s gap C-1, and L184 row (line 82). One reviewer. Analysis-only rule inherited: the only compute was the module build ("Build completed successfully", 8734 jobs, no warning from either file) and the two axiom audits.
+
+| item | claim | verdict |
+| --- | --- | --- |
+| A | `preserves_eigenspace_neg_sq` and `skew_on_plane` state L184's "each $\omega_i$ preserves every eigenspace of $A$" and case 1's "a skew map on a plane is a multiple of its area form", `starWedgeIdentity_holds` is $\star_V(J\wedge J)=2\epsilon_JJ$, and the L184 row's new owed line is accurate | CONFIRMED WITH GAP |
+| B | both L184Plane lemmas and `L178_n4_attained` are sound, and `Rp 2 0 0 (-1) 0 (-1)` is the ℂP² block | CONFIRMED |
+| C | r1501's C-1 is repaired and no edited sentence overstates | CONFIRMED, except the L184 owed line (A's gap) |
+| D | all declarations rest on `propext`, `Classical.choice`, `Quot.sound` only | CONFIRMED |
+| E | no em dash, no clause-splicing semicolon, no backticks in link text, no hard-wrapped markdown prose | CONFIRMED |
+
+**Summary: `preserves_eigenspace_neg_sq` (an eigenvector of $-\omega^2$ is carried by $\omega$ to one with the same eigenvalue) and `skew_on_plane` (a skew map preserving the span of an orthonormal pair acts there as $\omega u=cv$, $\omega v=-cu$, $c=\langle v,\omega u\rangle$) are faithful to L184's two linear-algebra steps and sound, and `starWedgeIdentity_holds` is exactly $\star(J\wedge J)=2\epsilon J$, $\epsilon=\pm1$, on ℝ⁶. `L178_n4_attained` is sound: `Rp 2 0 0 (-1) 0 (-1)` is the block $\operatorname{diag}(2,-1,-1)$ on $\Lambda^+$ in the basis $\omega^+/\sqrt2$, with $P=9\det B=18$, $\lVert R\rVert^2=6$, $324=\tfrac32\cdot216$, and rank at most three through a $6\times3$ factorisation. r1501's C-1 is repaired. 10/10 declarations on the standard three axioms. Gap A-1: the L184 row's new "Owed: the assembly of case 1 from these steps, which the L184 (statement) row carries through L191" names case 1 alone while case 3's structural steps are neither proved on the record's route nor owed, and the statement row proves the lemma by a different route rather than carrying case 1's assembly. CONFIRMED WITH GAP.**
+
+## A. Fidelity
+
+- **`preserves_eigenspace_neg_sq`.** Record, [diagonal-half.md](../findings/diagonal-half.md) line 1085: *"Each $\omega_i$ commutes with $\omega_i^2$, hence preserves every eigenspace of $A$"*, with $A=-\omega_i^2$ common to all $i$. The lemma: for a linear $\omega$ on a real inner-product space, $-\omega(\omega x)=\mu x$ implies $-\omega(\omega(\omega x))=\mu\,\omega x$. Applied at each $i$ with the common $A=-\omega_i^2$, it is the record's step exactly. It needs no skewness, which is right, since commuting with one's own square is all the record uses. **Faithful.**
+- **`skew_on_plane`.** Record, line 1089 (case 1): *"a skew map on a plane is a multiple of its area form, so $\omega_i=\sum_js_{ij}c_j\varepsilon_j$"*. Hypotheses: $\langle\omega x,y\rangle=-\langle x,\omega y\rangle$ for all $x,y$, $\lVert u\rVert=\lVert v\rVert=1$, $\langle u,v\rangle=0$, and $\omega u,\omega v\in\operatorname{span}\{u,v\}$ (which is what eigenspace preservation delivers when the eigenspace is that plane). Conclusion: $\omega u=cv$ and $\omega v=-cu$ with $c=\langle v,\omega u\rangle$, i.e. $\omega|_P=c\,\varepsilon$ with $\varepsilon u=v$, $\varepsilon v=-u$. **Faithful** to the first half of the record's sentence. *Note, no gap:* the identification $c=s_{ij}c_j$ (that $c^2$ is $A$'s eigenvalue on $P$, from $\omega^2=-A$ there) and the choice of an orthonormal basis of each eigenplane are not in the lemma. Both are one line and belong to the assembly the row names as owed.
+- **`starWedgeIdentity_holds`.** `StarWedgeIdentity` ([Base/SelfDual.lean](../lean/HamiltonsCubic/Base/SelfDual.lean) line 745) is: for every $J\in M_6(\mathbb R)$ with $J$ skew and $J^2=-1$, there is $\epsilon=\pm1$ with `star6 (wedgeSelf J) = (2 * eps) • J`. [I67PfSign.lean](../lean/HamiltonsCubic/Results/I67PfSign.lean) line 167 proves it through `starWedge_of_pf`, with $\epsilon=\mathrm{Pf}(J)$. That is the record's $\star_V(J\wedge J)=2\epsilon_JJ$ on $V=\mathbb R^6$ with the orientation sign read as the Pfaffian's. **Faithful.**
+- **Gap A-1: the L184 row's owed line.** [lean/INDEX.md](../lean/INDEX.md) line 82 now reads "The three steps it owed are PROVED … **Owed: the assembly of case 1 from these steps, which the [L184 (statement)] row carries through L191.**" Two defects in that sentence:
+  - *Case 3 is dropped.* The row's subject is the record's three-case route. Case 3 (diagonal-half.md line 1093) rests on steps that are not scalar arithmetic and are not in [L184.lean](../lean/HamiltonsCubic/Results/L184.lean), L184Plane.lean or I67PfSign.lean: the $4+2$ splitting $\omega_i=\sqrt a\,J_i\oplus\tau_i\sqrt b\,\varepsilon_P$ with $J_i$ a complex structure on $Q$, the injectivity of $\alpha\mapsto\alpha\wedge\varepsilon_P$ on $\Lambda^2Q$ (the record's debt (ii)), and $J\wedge J=2\eta\,\mathrm{vol}_Q$. Case 2 is assembled (`scalar_case_empty_orthonormal_uncond`, I67PfSign.lean line 172), case 1 is named, and case 3 is neither proved nor owed. The earlier owed list had the same omission, but this commit restates the owed set and the restatement is what now reads as complete.
+  - *"Carries through L191" describes a different proof.* The [L184 (statement)](../lean/INDEX.md) row, line 83, proves `coincident_six_empty` "WITHOUT THE RECORD'S CASE SPLIT", through `skew_normal_form`, the adjugate law and `pf6_blocks`, using `coincident_six_pair`. It carries the lemma's conclusion, not case 1's assembly from these steps. The link also points to L184Statement.lean, while the proof is in [L184Proof.lean](../lean/HamiltonsCubic/Results/L184Proof.lean).
+  - *Impact.* None on the lemma's standing: L184 is proved outright on the statement row. The defect is in the row's account of which parts of the record's route are kernel-checked. A faithful wording: "Owed on the record's route: the assembly of case 1 from these steps, and case 3's $4+2$ splitting and cross-term injectivity. The lemma itself is proved by another route on the L184 (statement) row, in L184Proof.lean." **CONFIRMED WITH GAP.**
+
+## B. Soundness
+
+- **`preserves_eigenspace_neg_sq`.** `rw [← map_neg, hx, map_smul]`: $-\omega(\omega(\omega x))=\omega(-\omega(\omega x))=\omega(\mu x)=\mu\,\omega x$. **Sound.**
+- **`skew_on_plane`.** `Submodule.mem_span_pair` writes $\omega u=\alpha u+\beta v$, $\omega v=\gamma u+\delta v$. Pairing with $u,v$ under orthonormality gives $\alpha=\langle u,\omega u\rangle$, $\beta=\langle v,\omega u\rangle$, $\gamma=\langle u,\omega v\rangle$, $\delta=\langle v,\omega v\rangle$ (`e1` to `e4`). Skewness at $(u,u)$ and $(v,v)$ with symmetry of the real inner product gives $\alpha=\delta=0$, and at $(u,v)$ gives $\gamma=-\beta$. Both calc chains then substitute. Every hypothesis is used. **Sound.**
+- **`L178_n4_attained`, the witness.** `Rp a b c d e f` is $\tfrac12\sum_{ij}B_{ij}w_iw_j^{\mathsf T}$ with $B=[[a,b,c],[b,d,e],[c,e,f]]$ and the $w_i$ (`wp`, [L178Sharp.lean](../lean/HamiltonsCubic/Results/L178Sharp.lean) line 29) orthogonal of square norm $2$. In the orthonormal basis $e_i=w_i/\sqrt2$, $\mathrm{Rp}\,e_j=\sum_iB_{ij}e_i$, so `Rp 2 0 0 (-1) 0 (-1)` is $\operatorname{diag}(2,-1,-1)$ on $\Lambda^+$ and zero on $\Lambda^-$, the ℂP² Weyl block up to positive scale (the Kähler form the simple eigenvalue). It is the argument pattern `Rp a b c d e (-a - d)` at $a=2$, $d=-1$, so `L178_theta_sd` applies. **The ℂP² block.**
+- **The four conjuncts.**
+  - *Symmetry*: entrywise by `fin_cases`, kernel-checked. The formula is manifestly symmetric in $p,q$.
+  - *Bianchi*: $R_{05}-R_{14}+R_{23}=1-\tfrac12-\tfrac12=0$ by hand, which the `simp; norm_num` step checks.
+  - *Ricci-flatness*: the sixteen $(a,b)$ contractions of `Ric` (ten independent ones by symmetry) each unfolded through `toMat4`, `coord4`, `phi` and `inner2` and closed by `norm_num`. A trace-free block on $\Lambda^+$ is Ricci-flat, so the result is expected. **Kernel-checked.**
+  - *Rank*: $\mathrm{Wm}_{p i}=w_i(p)$ ($6\times3$), $\mathrm{Nm}_{iq}=\tfrac12\lambda_iw_i(q)$ with $\lambda=(2,-1,-1)$, and $(\mathrm{Wm}\,\mathrm{Nm})_{pq}=\tfrac12\sum_i\lambda_iw_i(p)w_i(q)$, which is `Rp` at a diagonal block. `Matrix.rank_mul_le_left` gives $\operatorname{rank}(\mathrm{Wm}\,\mathrm{Nm})\le\operatorname{rank}\mathrm{Wm}$ and `Matrix.rank_le_width` gives $\operatorname{rank}\mathrm{Wm}\le\lvert\mathrm{Fin}\,3\rvert=3$. **Sound.**
+  - *$P$ and the norm*: `L178_theta_sd 2 0 0 (-1) 0` gives $P=9\det3(2,0,0,-1,0,-1)=9\cdot2=18$ (`det3` is $adf+2bce-ae^2-dc^2-fb^2=2$). `normSq_Rp` gives $4+1+1+0=6$. So $P>0$ and $P^2=324=\tfrac32\cdot6^3$. **Sound.**
+- *Note, no gap:* the file header (line 19) and the docstring say "a Weyl operator of rank three", while the theorem proves rank at most three. The rank is exactly three (three nonzero eigenvalues), so the sentence is true, and the upper bound is what the converse to `L178_n4_eq` needs.
+- **CONFIRMED.**
+
+## C. Record accuracy
+
+- **r1501's C-1 is repaired.** The L178 row (lean/INDEX.md line 70) now lists `L178_n4_attained` as "the converse at the $\mathbb{CP}^2$ block $R^+(\operatorname{diag}(2,-1,-1))$" beside the forward `L178_n4_eq`. That states both directions and scopes the converse to the one representative actually checked. **Repaired.**
+- **The rigidity item.** The row's owed list and L178Eq.lean lines 22 to 24 now name "$SO(4)$ transitive on the oriented orthonormal frames of $\Lambda^\pm$ and an orientation-reversing element of $O(4)$ carrying $\Lambda^-$ onto $\Lambda^+$", the two facts r1501's note identified ($SO(4)$ acts on $\Lambda^+$ through $SO(3)$, and $\Lambda^-$ reaches $\Lambda^+$ only through $O(4)\setminus SO(4)$). **Accurate.**
+- *Note, no gap:* the frame-closed converse (every positive multiple of an $O(4)$ image of $W_{\mathbb{CP}^2}$ attains equality) also needs $P$ and $\lVert\cdot\rVert$ to be $O(4)$-invariant and homogeneous, which the row does not name. The row's converse claim is scoped to the block, so it does not overstate, and both invariances are structural.
+- **The L184 row.** "The three steps it owed are PROVED" is accurate against the earlier owed list. The new owed line is gap A-1.
+- **The commit message** describes the three edits as made. **CONFIRMED, except A-1.**
+
+## D. Axioms
+
+- `python3 scripts/misc/axiom_audit.py --only L184Plane`: "auditing 2 declarations across 1 files … 2/2 clean -- resting on the standard three alone".
+- `python3 scripts/misc/axiom_audit.py --only L178Eq`: "auditing 8 declarations across 1 files … 8/8 clean -- resting on the standard three alone".
+- **CONFIRMED.**
+
+## E. Style
+
+- No em dash in any added line of the commit (grep count 0). The `−` in the Lean files is the minus sign U+2212.
+- No backticks inside markdown link text in the added lines (grep for ``[` `` empty).
+- Both edited INDEX rows are single lines. No hard wrap.
+- The new semicolons in the two rows separate list entries that themselves carry commas ("`preserves_eigenspace_neg_sq` and `skew_on_plane` in …, $\omega$ preserves …; and $\star_V(J\wedge J)=2\epsilon_JJ$ is …; standard three axioms"), the pattern r1499 to r1501 passed. **CONFIRMED.**
+
+## Overall
+
+**CONFIRMED WITH GAP.** Both L184Plane lemmas are faithful, sound statements of L184's eigenspace step and case 1's plane step, `starWedgeIdentity_holds` is the record's star-wedge identity, and `L178_n4_attained` is a sound kernel check that the ℂP² block is a rank-at-most-three Weyl operator attaining $P^2=\tfrac32\lVert R\rVert^6$ with $P>0$. r1501's C-1 is repaired. All 10 declarations rest on the standard three axioms. The one gap is A-1: lean/INDEX.md line 82's owed line names case 1's assembly alone, omits case 3's unproved structural steps, and says the statement row carries that assembly when it proves the lemma by a different route in L184Proof.lean.

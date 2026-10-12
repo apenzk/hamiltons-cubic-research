@@ -1,0 +1,27 @@
+  cubes span Sym^3(U): rank of { u tensor u tensor u } against dim Sym^3(U)
+
+     dim U  samples   rank  dim Sym^3
+         2       37      4          4
+         3       55     10         10
+         4       85     20         20
+         5      130     35         35
+         6      193     56         56
+         8      385    120        120
+
+  and the same statement at degree 2 and 4, since the argument is not
+  special to 3:
+
+     dim U  d   rank  dim Sym^d
+         3  2      6          6
+         3  4     15         15
+         4  2     10         10
+         4  4     35         35
+         5  2     15         15
+         5  4     70         70
+
+  So evaluation at cubes is INJECTIVE on functionals of Sym^d(U), for any U.
+  Taking U = Weyl_n: a covariant vanishing at every W tensor W tensor W is
+  zero, at every block and every n.  Obligation (i) becomes a rank
+  computation in a 184-dimensional space, not a question about functions.
+
+  STILL OPEN: whether the constructed 184 attain rank 184.

@@ -1,0 +1,11 @@
+six simple raising operators, 6,714 nonzeros in total (density 4.17e-04)
+
+(3, 3, 1, 1, 0, 0)  6,137 cols  17,233 rows  52,245 nnz  [build 0.3s]   record: OLD 1,943.1 s (e106cc2) / NEW 26.8 s (6ca5418)
+    NEW markowitz    rank   6,129  nullity   8      27.4 s
+    DEN r216 dense   rank   6,129  nullity   8      44.5 s
+    OLD e106cc2      rank   6,129  nullity   8      71.4 s
+
+(3, 2, 1, 1, 1, 0)  14,595 cols  39,559 rows  129,122 nnz  [build 0.4s]   record: NEW 164.6 s (6ca5418)
+    NEW markowitz    rank  14,591  nullity   4     170.1 s
+    DEN r216 dense   rank  14,591  nullity   4     254.9 s
+    OLD e106cc2      rank  14,591  nullity   4     447.1 s

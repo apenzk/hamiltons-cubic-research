@@ -1,0 +1,50 @@
+glued graph: 6 vertices, degree 8, 24 edges; 200 random gluings
+  optimal contraction WIDTH (max open legs): min 9, median 13, max 16
+  ONE closed graph, model A (arrays at n=12):  median 1.167e+14 flops   [min 6.056e+09, max 2.017e+17]
+  ONE closed graph, model B (Brauer coeffs):    median 3.676e+04 ops   [min 5.490e+02, max 2.304e+06]
+  peak array at width w=16: 1.849e+17 entries = 1.345e+06 TiB in float64
+
+THE GRAM.  184x184 symmetric -> 17,020 entries
+  x 720 bijections = 12,254,400 closed graphs
+  model A total: 1.430e+21 flops
+  model B total: 4.505e+11 ops
+  at 1e10 op/s: model A 4.533e+03 years, model B 4.505e+01 s
+
+WHAT WAS ABANDONED, for scale.  The trivial block of Sym^3(Weyl_12) has
+  635,220 columns; r222/r225 extrapolate 42.5 h for it, and the tail run
+  stopped at 7 of 71 blocks.  Dense elimination on a k-column block is
+  ~k^3/3; sparse (r221) beat it on the blocks measured.
+    k=  6,137: k^3/3 = 7.705e+10 flops
+    k= 13,444: k^3/3 = 8.100e+11 flops
+    k=635,220: k^3/3 = 8.544e+16 flops
+  all 71 blocks bounded above by 71 x the largest: 6.066e+18 flops
+
+AND THE GRAM IS NOT 184 x 184 DENSE.  J_c takes values in the irrep
+  V_{lambda_c}; O(n) irreps are self-dual and inequivalent irreps pair to
+  zero, so <J_c,J_b> = 0 whenever lambda_c != lambda_b.  M(n) is BLOCK
+  DIAGONAL, one block per lambda of size m_lambda.  From the record's own
+  n12_sym3_blocks.pkl:
+    77 blocks, multiplicities summing to 191, max 9
+    upper-triangular entries actually needed: 485, not 17,020
+    -> the entry count the file implies is 35x too large,
+       and det M(n) is a PRODUCT of 77 determinants of size <= 9
+
+AND THE DEGREE IS WRONG.  720 = 6! is the bijection count for gluing two
+  DEGREE-6 diagrams, which is what run_n5_diagram_gram.py does -- its
+  objects are degree-6 O(5)-INVARIANTS, counted 14 at n=5 and 89
+  universally (plan A1).  The 184 are degree-3 COVARIANTS in
+  Sym^3(Weyl_12) (r221: 191 SO multiplicities less 7 chiral pairs).
+  Gluing two cubics identifies THREE vertices: 3! = 6 bijections.
+  Priced under the reading the item actually needs -- 184 cubic
+  covariants, block diagonal, 6 bijections, 3-vertex glued graphs:
+    485 entries x 6 bijections = 2,910 closed graphs on 3 vertices
+    width: median 9, max 12
+    model A total 1.502e+13 flops; model B total 1.310e+06 ops
+
+THE r240 REFINEMENT.  brauer-pairing.md: <P,Q> = n^L q_D, a MONOMIAL in n
+  times an n-independent constant.  So per entry one needs (i) L, a cycle
+  count on the glued graph -- O(24) union-find -- and (ii) one constant.
+  NOTHING has to be evaluated at n=12: the dimension never enters.
+  Degree bound it hands the Sturm step, free:
+    deg det M(n) <= sum of L along a permutation <= 184 x 6 = 1104
+    and blockwise, <= 6 x max m_lambda = 54 per factor

@@ -1,0 +1,31 @@
+(d) THE PRUNING BRANCH -- same computation with the branch on and off
+
+     f  n  m_empty           as shipped           no pruning
+     4  2        3         31 (reached)         31 (reached)
+     4  3        3         31 (reached)         31 (reached)
+     4  4        3         31 (reached)         31 (reached)
+     6  2       10       3781 (reached)       3781 (reached)
+     6  3       15       3991 (reached)       3991 (reached)
+
+(c) THE ENUMERATION ORDER -- cost under random orders (no pruning)
+
+     f  n    m  shipped order  random min   median     max
+     4  2    3             31           3        5      18
+     4  3    3             31           3        5      14
+     4  4    3             31           3        5      15
+     6  2   10           3781          12       15      35
+     6  3   15           3991          26       47      80
+
+(b) NON-TRIVIAL lambda -- the seed is iota_lambda tensor cup^{tensor k}
+
+      lambda  f  n  m_lambda    used   total  used/m
+        (1,)  3  3         3       7      15     2.3
+        (1,)  3  4         3       7      15     2.3
+        (1,)  5  3        15     451     945    30.1
+        (1,)  5  4        15     451     945    30.1
+        (2,)  4  3         6      52     105     8.7
+        (2,)  4  4         6      52     105     8.7
+      (1, 1)  4  3         6      52     105     8.7
+      (1, 1)  4  4         6      52     105     8.7
+        (2,)  6  3        40    5146   10395   128.7
+      (1, 1)  6  3        36    5146   10395   142.9

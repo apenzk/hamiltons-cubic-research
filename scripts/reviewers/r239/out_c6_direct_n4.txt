@@ -1,0 +1,7 @@
+B_4 acts orthogonally on the 10-dim Weyl space: OK
+  d=1: monomials 10, points 240, max|A| = 1.42e-15, raw scale 3.87e+00, rank = 0
+  d=2: monomials 55, points 240, max|A| = 7.42e+00, raw scale 1.77e+01, rank = 3
+  d=3: monomials 220, points 240, max|A| = 1.39e+01, raw scale 9.66e+01, rank = 5
+  d=4: monomials 715, points 240, max|A| = 5.30e+01, raw scale 1.61e+02, rank = 14
+  d=5: monomials 2002, points 240, max|A| = 7.52e+01, raw scale 8.88e+02, rank = 27
+  d=6: monomials 5005, points 240, max|A| = 3.63e+02, raw scale 1.36e+03, rank = 67

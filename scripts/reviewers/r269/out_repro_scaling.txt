@@ -1,0 +1,20 @@
+   f  n  m_empty  median draws  per dimension
+   4  5        3             5           1.7
+   6  5       15            47           3.1
+   8  5      105           487           4.6
+  10  5      945          6435           6.8
+
+  per-dimension cost across f = 4, 6, 8, 10: 1.7, 3.1, 4.6, 6.8
+  growth from f=4 to f=10: 4.1x
+
+  THE RATIO GROWS, roughly linearly in f -- about 0.8(f-2) over these four
+  leg counts.  That is a very different growth from the enumeration order's,
+  and it is growth: `flat` would be the wrong word for it.
+
+  Compare the ENUMERATION order, whose per-dimension cost ran
+  2.3, 9, 30, 130-380 over f = 3..6 -- growing by two orders across two
+  leg counts.  Whatever the random figure does, it does not do that.
+
+  STILL NOT f = 12, and still only the EMPTY label.  The blocks n=12 needs
+  carry |lambda| up to 12, where the leg count is 24 and the diagram set is
+  23!! = 316,234,143,225.

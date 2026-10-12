@@ -1,0 +1,44 @@
+n=8 N=28 dim Weyl=300 (formula 300)
+
+[1a] trilinear symmetry on Weyl_n (3 random Weyl tensors):
+   T(X,Y,Z) = -2.946680155979e-02
+   T(Y,X,Z) = -2.946680155979e-02
+   T(Z,Y,X) = -2.946680155979e-02
+   T(X,Z,Y) = -2.946680155979e-02
+   T(Y,Z,X) = -2.946680155979e-02
+   T(Z,X,Y) = -2.946680155979e-02
+   max spread = 6.938893903907228e-18
+[1a'] same on generic symmetric NxN (not curvature ops): [-1.8226326315819357, -1.8226326315819392, -1.8226326315820653, -1.8226326315819144] spread 1.509903313490213e-13
+
+[1b] is Q(W) in Weyl_n for W in Weyl_n?
+   sample 0: |Q(W)|=0.404879 |Q(W)-proj_Weyl Q(W)|=2.713272e-16 |Ric(Q(W))|=1.975996e-16 bianchi=9.969308e-17
+   sample 1: |Q(W)|=0.423040 |Q(W)-proj_Weyl Q(W)|=2.352348e-16 |Ric(Q(W))|=1.680277e-16 bianchi=7.421586e-17
+   sample 2: |Q(W)|=0.392596 |Q(W)-proj_Weyl Q(W)|=2.999399e-16 |Ric(Q(W))|=2.571177e-16 bianchi=8.862708e-17
+   W* (sphere product): |Q-projW Q| = 1.412e-15  crit residual 2.220e-16  theta 1.145643924
+
+[1c] directional derivative of P at RANDOM (non-critical) Weyl W
+     dP[V] measured by central differences vs 3<Q(W),V>, V in Weyl_n
+   W#0 crit-res=4.341e-01 | pred  3.2104412334e-02  meas  3.2104412338e-02  rel 1.05e-10
+   W#0 crit-res=4.341e-01 | pred -7.7960910647e-02  meas -7.7960910655e-02  rel 9.66e-11
+   W#1 crit-res=4.007e-01 | pred  9.3749350115e-02  meas  9.3749350121e-02  rel 6.89e-11
+   W#1 crit-res=4.007e-01 | pred  6.6345374879e-02  meas  6.6345374881e-02  rel 2.98e-11
+   W#2 crit-res=4.204e-01 | pred  1.4116906095e-02  meas  1.4116906099e-02  rel 3.02e-10
+   W#2 crit-res=4.204e-01 | pred  9.2589198725e-02  meas  9.2589198726e-02  rel 1.24e-11
+   W#3 crit-res=4.171e-01 | pred -3.4025821993e-02  meas -3.4025821994e-02  rel 2.06e-11
+   W#3 crit-res=4.171e-01 | pred -6.4451432294e-02  meas -6.4451432290e-02  rel 6.07e-11
+   worst relative error: 3.0202883112359634e-10
+
+[1d] same test with AMBIENT symmetric directions (V not Weyl):
+   pred -3.5167896342e-02  meas -3.5167896337e-02  rel 1.38e-10
+   pred  1.3513943000e-01  meas  1.3513943000e-01  rel 1.55e-11
+   pred  6.5462522601e-03  meas  6.5462522597e-03  rel 6.01e-11
+
+[1e] scripts/weyl.py Q_general vs basis-free Q (the suspected fault):
+   sample 0: |Qg - Qc| = 3.055820e-01   |Qc| = 4.179630e-01
+      <W,Qg> = 5.086884999420e-03   <W,Qc> = 5.086884999420e-03
+      Q_general-based: pred -4.44192762e-02 meas -5.41811527e-02 rel 2.20e-01
+      off-diagonal mass of W# in W's own eigenbasis: 3.055820e-01 (|W#|=3.817730e-01)
+   sample 1: |Qg - Qc| = 2.925106e-01   |Qc| = 4.064601e-01
+      <W,Qg> = -1.443715645639e-02   <W,Qc> = -1.443715645639e-02
+      Q_general-based: pred  1.57081342e-02 meas  5.54603849e-02 rel 2.53e+00
+      off-diagonal mass of W# in W's own eigenbasis: 2.925106e-01 (|W#|=3.663561e-01)

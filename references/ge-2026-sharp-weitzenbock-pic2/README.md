@@ -1,0 +1,7 @@
+# Ge 2026, Sharp Weitzenböck and PIC2 estimates from sectional–scalar curvature pinching
+
+- **Link**: [arXiv:2607.18216](https://arxiv.org/abs/2607.18216)
+- **Identifier**: arXiv:2607.18216v1 [math.DG], 20 Jul 2026.
+- **Retrieved**: 2026-08-23 (file date of [paper.pdf](https://arxiv.org/abs/2607.18216)).
+- **Consulted for**: a sharp pointwise bound on the spectrum of the Weitzenböck endomorphism $q_2$ on two-forms, which on a Ricci-flat tensor is a bound on the spectrum of $W$ itself, the ingredient [b_lambda_weighted_bound.py](../../scripts/route-b/b_lambda_weighted_bound.py) lacks.
+- **Verdict**: **the identification holds, the headline estimate is vacuous here, the proof technique is the live part.** Definition 2.2 gives $q_2(E)=\mathrm{Ric}(E)^\sharp{}^{[2]}-2R_E$, so on Ricci-flat $E$ it collapses to $q_2(W)=-2W$ exactly (screened at residual $10^{-16}$ on $S^3\times S^3$, $\mathbb{CP}^3$, $\mathbb{CP}^4$), making every $q_2$ bound a $W$ bound. But the paper's sharp estimate $q_2(E)\ge-\tfrac{2(\ell-1)}{3\ell}\mathrm{Scal}$ assumes nonnegative sectional curvature, and a scalar-flat tensor with that hypothesis is flat, **hypothesis and conclusion are both empty on $\mathrm{Weyl}_n$**, recorded so a later cycle does not try to apply it directly. What is transferable is the **homogeneous four-frame estimate** the sharpness rests on, whose equality case is $\mathbb{CP}^\ell$ with Fubini–Study, the same extremiser that sets this project's $\sqrt{3/2}$ threshold. Theorem 1.5 and the estimate are transcribed verbatim in [notes.md](notes.md).

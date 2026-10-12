@@ -1,0 +1,56 @@
+PART 1 -- the nine cells of run_restitution_kernel.py, exactly
+
+   dimV  d  multilinear  rank(R_d) mod p  dim Sym^d  #distinct monomials
+      2  2            4                3          3                    3
+      2  3            8                4          4                    4
+      2  4           16                5          5                    5
+      3  2            9                6          6                    6
+      3  3           27               10         10                   10
+      3  4           81               15         15                   15
+      4  2           16               10         10                   10
+      4  3           64               20         20                   20
+      4  4          256               35         35                   35
+
+  Every cell agrees exactly.  And the middle column is DETERMINED by the last:
+  restituting the basis functional e_{i_1..i_d}^* gives the MONOMIAL x_{i_1}..x_{i_d},
+  so the image is spanned by monomials and its dimension is the number of
+  DISTINCT ones, which is comb(V+d-1,d) by definition.  No theorem is used.
+
+PART 2 -- is `total - r == total - sd` a second fact?
+
+  At all nine cells assert-2 holds exactly when assert-1 holds, and it is the
+  same equation with `total` added to both sides.  It tests nothing further:
+  in particular it never looks at ker(R_d) as a SUBSPACE -- only at its dimension.
+
+PART 3 -- the cube of a tensor with symmetries: is the kernel still the
+          non-symmetric complement?
+
+   n       S  dim S  multilinear on U^3  rank(R_3 on S)  dim Sym^3(S*)  dim Sym^3(U*)
+   2     all      4                  64              20             20             20
+   2     sym      3                  64              10             10             20
+   2   symtl      2                  64               4              4             20
+   2    anti      1                  64               1              1             20
+   3     all      9                 729             165            165            165
+   3     sym      6                 729              56             56            165
+   3   symtl      5                 729              35             35            165
+   3    anti      3                 729              10             10            165
+
+  rank is ALWAYS dim Sym^3(S*) -- the dimension of the SUBSPACE's symmetric
+  cube, never dim Sym^3(U*).  So for every proper S the kernel has dimension
+     total - dim Sym^3(S*)   >   total - dim Sym^3(U*),
+  and the excess is a set of SYMMETRIC multilinear functionals on U^3 that
+  restitution sends to zero ON S.  The non-symmetric complement is a PROPER
+  SUBSPACE of the kernel as soon as S is a proper subspace of U.
+
+    n=2  S=sym    dim Sym^3(U*)=      20  dim Sym^3(S*)=      10  symmetric dimensions killed =       10
+    n=2  S=symtl  dim Sym^3(U*)=      20  dim Sym^3(S*)=       4  symmetric dimensions killed =       16
+    n=2  S=anti   dim Sym^3(U*)=      20  dim Sym^3(S*)=       1  symmetric dimensions killed =       19
+    n=3  S=sym    dim Sym^3(U*)=     165  dim Sym^3(S*)=      56  symmetric dimensions killed =      109
+    n=3  S=symtl  dim Sym^3(U*)=     165  dim Sym^3(S*)=      35  symmetric dimensions killed =      130
+    n=3  S=anti   dim Sym^3(U*)=     165  dim Sym^3(S*)=      10  symmetric dimensions killed =      155
+    n=4  S=sym    dim Sym^3(U*)=     816  dim Sym^3(S*)=     220  symmetric dimensions killed =      596
+    n=4  S=symtl  dim Sym^3(U*)=     816  dim Sym^3(S*)=     165  symmetric dimensions killed =      651
+    n=4  S=anti   dim Sym^3(U*)=     816  dim Sym^3(S*)=      56  symmetric dimensions killed =      760
+    n=5  S=sym    dim Sym^3(U*)=    2925  dim Sym^3(S*)=     680  symmetric dimensions killed =     2245
+    n=5  S=symtl  dim Sym^3(U*)=    2925  dim Sym^3(S*)=     560  symmetric dimensions killed =     2365
+    n=5  S=anti   dim Sym^3(U*)=    2925  dim Sym^3(S*)=     220  symmetric dimensions killed =     2705

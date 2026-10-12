@@ -1,0 +1,42 @@
+\section{Setup and notation}
+
+\subsection{The cubic and its critical points}
+
+$Q$ is the diagonal of a symmetric trilinear form: writing $T(X,Y,Z)=\langle X,B(Y,Z)\rangle$ with $B$ the polarization of $Q$, full symmetry follows from $\tr(XYZ)=\tr(ZYX)$ for self-adjoint operators. Hence $P(W)=T(W,W,W)$, and Lagrange multipliers on $\Weyl^1_n$ give the criticality equation
+\begin{equation}\label{eq:crit}
+Q(W)\;=\;\theta\,W,\qquad \theta=P(W).
+\end{equation}
+So every critical value \emph{is} the value of $P$ at that point, and every maximizer is a critical point. Write $F_u(h)=\tfrac12(uh+hu)+u\#h$ for the linearisation of $Q$ at $u$, so that \eqref{eq:crit} reads $F_u u=\theta u$ and the Hessian of $P$ on the sphere is $6F_u-3\theta\,\Id$ up to normalisation.
+
+\begin{remarkstar}
+Under Fox's identification \cite{fox2019}, $F_u$ \emph{is} the multiplication operator $L(u)$ of the nonassociative algebra $(\mathrm{MC}(V^{*}),*)$, and the critical points of $P$ are its idempotents. This was verified from Fox's own tensor formula with no project code in the path, at residual $2\times10^{-16}$. The sign discrepancy $X*Y=-F_X(Y)$ is his curvature convention, under which $-\Id$ is an isometric algebra isomorphism. The identification supplies the Killing-type constant in closed form,
+\[
+\tr\!\big(L(x)L(y)\big)=\kappa_F(n)\,\langle x,y\rangle,\qquad \kappa_F(n)=\frac{(2n-1)(n-1)}{4}
+\]
+in the Frobenius normalisation, a value Fox's Remark~1.4 leaves uncomputed for $\dim V>4$, and which reproduces his $21/16$ at $\dim V=4$. It is verified at roughly $90$ points across $n=4,\dots,14,16$, including random unit Weyl operators that are nowhere near critical, so it is a property of the algebra rather than of its idempotents. It constrains nothing new here: both trace identities are arithmetic consequences of spectra already on file.
+\end{remarkstar}
+
+\subsection{The two named critical points}
+
+\begin{itemize}[leftmargin=1.4em]
+\item \textbf{The conjectured maximizer} $W^{*}$, the normalized Weyl operator of $S^{n/2}\times S^{n/2}$, with $P(W^{*})=\theta_0(n)=\sqrt{2(n-1)(n-2)}/n$. More generally the two-block product $S^k\times S^l$, $k+l=n$, is critical with value $\theta_{k,l}=\sqrt2\big(\tfrac{k-1}{k}\tfrac{l-1}{l}\tfrac{n-1}{n-2}\big)^{1/2}$.
+\item \textbf{The rival} $W_{\CP^2}$, the Weyl operator of $\CP^2$ \emph{in dimension four} ($\operatorname{diag}(0,0,0,-1,-1,2)/\sqrt6$ on $\Lambda^2\R^4$), zero-padded into $\Lambda^2\R^n$. Being Ricci-flat in dimension four it stays Ricci-flat after padding, so $P(W_{\CP^2})=\thstar:=\sqrt{3/2}$ for \emph{every} $n$. It is Fox's idempotent $\mathcal S^4(\alpha)$, and the $m=2$ member of the family $\theta^2=\tfrac{(m+1)(2m-1)}{3m(m-1)}$, which is decreasing in $m$, so the rival is the extreme point of its own family rather than an isolated accident.
+\end{itemize}
+
+\subsection{Two invariants}
+
+A notational convention, since two products share a symbol below: for symmetric $2$-tensors $h,k$ the expression $h\wedge k$ denotes the Kulkarni--Nomizu product, the operator on $\Lambda^2\R^n$ with $(h\wedge k)(e_i\wedge e_j)$ built from $h_{ik}k_{jl}-h_{il}k_{jk}$ and its symmetrisation, whereas on bivectors $\wedge$ is the exterior product as usual. Which one is meant is always fixed by the arguments.
+
+\begin{Defn}{1}[Bianchi defect]
+For a self-adjoint operator $R$ on $\Lambda^2\R^n$ let $\Alt(R)$ be its projection onto $\Lambda^4\R^n$, and set $\delta^2=\|\Alt(W_-)\|^2$, where $W_-$ is the negative spectral part of $W$. Although $W$ itself is Bianchi, its spectral parts need not be. The defect measures the failure. Every sphere product, in any frame, has $\delta^2=0$, whereas the rival has $\delta^2=1/9$ in every ambient dimension.
+\end{Defn}
+
+\begin{Defn}{2}[Graded slack]
+With $\theta$ as in \eqref{eq:crit}, set
+\[
+S(W)\;:=\;\|\Ric(W_-)\|^2+6\delta^2-\theta\tr(W_-)-\tr(W_-^2).
+\]
+Lemma~7 below shows $S\ge0$ at every critical point, with $S=0$ exactly on the class whose eigenspace ranges are graded by the Lie bracket: the compact symmetric pairs. A critical point is called \emph{graded} if $S=0$ and \emph{ungraded} otherwise.
+\end{Defn}
+
+% ==============================================================================

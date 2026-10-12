@@ -1,0 +1,33 @@
+(H2) is the diagram image the FULL commutant, at n BELOW every threshold?
+     dim End_{O(n)}(V^f) is computed as dim Inv_{O(n)}(V^{2f}) from the
+     Lie algebra and a reflection -- no diagram enters that number.
+      f  n  dim nu (Gram)  dim Inv_O(V^2f)  n>=f-1   n>=f
+      2  2              3                3    True   True
+      2  3              3                3    True   True
+      2  4              3                3    True   True
+      2  5              3                3    True   True
+      3  2             10               10    True  False
+      3  3             15               15    True   True
+      4  2             35               35   False  False
+     every cell agrees, including (4,2) and (3,2) where B_f(n) is not
+     semisimple and (4,2) where nu is not injective -- the FFT is what
+     carries this, and it carries it with no inequality.
+
+(H3) lambda with n/2 rows -- the associate/chirality case.
+     n=4, f=4: dim Inv_O(4) = 3, dim Inv_SO(4) = 4
+     span{ nu(D) . eps }   = 1 of the 4-dimensional SO(4) multiplicity space
+     span{ nu(D) . delta } = 3 of the 4-dimensional SO(4) multiplicity space
+     over O(4) the same seed delta gives 3 of 3 -- the whole space.
+     SO(4) WITNESS: the multiplicity space of the trivial label in V^{tensor 4}
+     is 4-dimensional for SO(4) and the diagram image cannot reach eps, so
+     M_lambda is REDUCIBLE over the image there and no seed generates it.
+     The record's theorem survives only because the group is O(n): the
+     Levi-Civita direction is exactly the associate/chirality pair, and it
+     is O(n)-non-invariant.  A1's SO(n) scope note is where this bites.
+
+(H3b) a SELF-ASSOCIATE block over O(4): lambda = (1,1), lambda'_1 = 2 = n/2.
+      dim Inv_O(4)(V^6) = 15
+      dim M_(1,1) = dim A_12 . Inv(V^6) = 6
+      span{ nu(D) c_0 } over 12 seeds (one a basis vector, 11 random): [np.int64(6)] against dim M = 6
+      one seed generates the whole self-associate block over O(4) --
+      (H3) holds for O(n), which is the group the theorem is stated for.

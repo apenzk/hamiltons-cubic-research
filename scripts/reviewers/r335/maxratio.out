@@ -1,0 +1,30 @@
+   restart 0 ratio 3.000000
+   restart 1 ratio 3.000000
+   restart 2 ratio 3.000000
+   restart 3 ratio 3.000000
+   restart 4 ratio 3.000000
+   restart 5 ratio 3.000000
+   restart 6 ratio 3.000000
+   restart 7 ratio 3.000000
+   restart 8 ratio 3.000000
+   restart 9 ratio 3.000000
+n=5  max lmax/|lmin| over Weyl_n = 3.000000   (bound n-2 = 3)
+   spectrum: [-0.2357  -0.2357  -0.2357  -0.2357  -0.2357  -0.2357   0.2357   0.2357
+  0.2357   0.70711]
+   crit residual 0.0000  theta 0.94281
+<site-packages>/cvxpy/problems/problem.py:1539: UserWarning: Solution may be inaccurate. Try another solver, adjusting the solver settings, or solve with verbose=True for more information.
+  warnings.warn(
+   restart 0 ratio 4.000000
+   restart 1 ratio 3.999902
+   restart 2 ratio 4.000000
+   restart 3 ratio 4.000000
+   restart 4 ratio 4.000000
+   restart 5 ratio 4.000000
+   restart 6 ratio 4.000000
+   restart 7 ratio 4.000000
+   restart 8 ratio 4.000000
+   restart 9 ratio 4.000000
+n=6  max lmax/|lmin| over Weyl_n = 4.000000   (bound n-2 = 4)
+   spectrum: [-0.1291 -0.1291 -0.1291 -0.1291 -0.1291 -0.1291 -0.1291 -0.1291 -0.1291
+ -0.1291 -0.1291 -0.1291  0.5164  0.5164  0.5164]
+   crit residual 0.0000  theta 0.64550

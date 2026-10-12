@@ -1,0 +1,10 @@
+  6 legs in 3 blocks of 2:
+    perfect matchings (dim of the invariants for n >= 3): 15
+    Burnside fixed-point counts over S_3: [15, 3, 3, 3, 3, 3]
+    ORBITS = dim of the S_3-SYMMETRIC part = 5
+
+  12 legs in 3 blocks of 4:
+    perfect matchings (dim of the invariants for n >= 6): 10395
+    Burnside fixed-point counts over S_3: [10395, 75, 75, 27, 27, 75]
+    ORBITS = dim of the S_3-SYMMETRIC part = 1779
+

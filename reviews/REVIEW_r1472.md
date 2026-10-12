@@ -1,0 +1,65 @@
+# REVIEW r1472: L225's matrix equality case and unnormalised bound, and L162's F monotonicity, in Lean, commits 73fcc520, bc0cf7dc and ac5790b3
+
+Log [agent_logs/r1472.log](../agent_logs/r1472.log). One reviewer, working cold and adversarially. Analysis-only: `lake build HamiltonsCubic.Results.L225Matrix HamiltonsCubic.Results.L162` and one scratch file in the session scratchpad outside the repository holding the `#print axioms` calls. No numerical screen was run, since every check here is by reading statements and proofs and by hand algebra.
+
+**Standfirst.** Both modules build, and all five new theorems rest on `propext`, `Classical.choice` and `Quot.sound` alone. `matrix_cube_eq` is the record's equality case read on the spectrum at unit Frobenius norm, and the L225 row now owes the matrix identity honestly. `matrix_cube_le_unnormalised` is the record's $\lvert M^0\rvert^3$ form, with a correct zero case and a correct scaling. In L162, the square comparison reduces to $(x-y)(x+y+4xy)\le0$, the passage from squares is sound, and the final strict inequality comes from $x<y$. `F_antitone_beta` bypasses the record's elasticity step with a direct denominator comparison, which suffices. The gaps are both in record text: at ac5790b3 the L162 row listed "so $\lambda$ falls" among PROVED items while owing that passage (G1, since repaired at HEAD 2f2dba70 except a stale count), and the row and the Lean docstring call `F_antitone_beta` the block's "elasticity step" proved "by comparing squares", when it types neither the elasticity nor a square comparison (G2).
+
+| Item | Verdict | Reason |
+| --- | --- | --- |
+| A. `matrix_cube_eq` | CONFIRMED | Every eigenvalue is $\tfrac{k-1}c$ or $-\tfrac1c$ and the multiset count of $\tfrac{k-1}c$ is $1$, which is the record's "one entry $\tfrac{k-1}c$ and the other $k-1$ entries $-\tfrac1c$" on the spectrum of $M^0/\lvert M^0\rvert$. The row owes the identity $M^0=\lvert M^0\rvert(\tfrac kc uu^{\mathsf T}-\tfrac1cI)$ and the $k=3$ equality clause |
+| B. `matrix_cube_le_unnormalised` | CONFIRMED | `e2` makes $\operatorname{tr}M^2=\sum\lambda^2$. At $r=0$ every eigenvalue vanishes and both sides are $0$. At $r>0$, $\lambda/r$ is on the unit trace-free sphere and `cube_sum_le` times $r^3$ gives the bound |
+| C. L162 monotonicity | CONFIRMED | $x^2(1+4y)-y^2(1+4x)=(x-y)(x+y+4xy)\le0$. Nonnegative sides pass from squares. $h(x)<h(y)$ reduces to $(x-y)+(x\sqrt{1+4y}-y\sqrt{1+4x})<0$, strict by $x<y$. $F=\tfrac2\beta h(\beta s)$ is used correctly, and the three theorems give both monotonicities the record needs |
+| D. Axioms | CONFIRMED | All five: `[propext, Classical.choice, Quot.sound]` |
+| E. Record text | CONFIRMED WITH GAP | G1: lean/INDEX.md:490 at ac5790b3 lists "so $\lambda$ falls" as PROVED and owes the same passage, under a header counting "four" steps. G2: lean/INDEX.md:490 and L162.lean:16-17 label `F_antitone_beta` the elasticity step and say "by comparing squares". No em dash, and every added semicolon separates list items or Lean tactics |
+
+**Summary: CONFIRMED WITH GAP, the five theorems are correct, faithful and axiom-clean, and the L162 row misdescribes what types the $\beta$ direction and, at ac5790b3, contradicted its own owed list.**
+
+## A. `matrix_cube_eq`
+
+**The record, quoted from source** (findings/second-order.md:1284): *"Then $\sum_i\lambda_i^3\le\frac{k-2}c$, with equality exactly when one entry is $\frac{k-1}c$ and the other $k-1$ entries are $-\frac1c$. Applied to the eigenvalues of a trace-free symmetric $k\times k$ matrix $M^0$ with Frobenius norm $\lvert M^0\rvert$, this reads $\operatorname{tr}\big((M^0)^3\big)\le\frac{k-2}{\sqrt{k(k-1)}}\lvert M^0\rvert^3$, with equality exactly when $M^0=\lvert M^0\rvert\big(\tfrac kc\,uu^{\mathsf T}-\tfrac1cI\big)$ for a unit vector $u$."*
+
+- **The statement.** Hypotheses: `M.IsHermitian`, $c>0$, $c^2=k(k-1)$, $k\ge2$, $\operatorname{tr}M=0$, $\operatorname{tr}M^2=1$, $\operatorname{tr}M^3=\tfrac{k-2}c$. Conclusion: `∀ i, hM.eigenvalues i = (k-1)/c ∨ hM.eigenvalues i = -1/c`, and the filter of indices with eigenvalue $\tfrac{k-1}c$ has card $1$.
+- **Multiplicity.** `hM.eigenvalues : ι → ℝ` lists eigenvalues with multiplicity, one per index, so "card $1$" is "exactly one eigenvalue, counted with multiplicity", and the rest are $-\tfrac1c$. This is the record's vector equality case on the spectrum. The two values are distinct for $k\ge2$, since $\tfrac{k-1}c=-\tfrac1c$ would need $k=0$.
+- **The proof** transfers $\operatorname{tr}M^j=\sum\lambda^j$ at $j=1,2,3$ through `trace_pow_eq_sum_eigenvalues` (SpectralTrace.lean:27) with one `hM`, so one eigenvalue function throughout, into `cube_sum_eq` (L225Statement.lean:83) and `cube_sum_eq_card` (L225Statement.lean:118), whose hypotheses match exactly.
+- **Scope.** It is the forward direction at $\lvert M^0\rvert=1$. The unnormalised equality case and the converse at matrix level ("every $M$ with this spectrum attains") are not typed. *Candidate gap, withdrawn:* the row's owed item is the identity $M^0=\lvert M^0\rvert(\tfrac kc uu^{\mathsf T}-\tfrac1cI)$ as "the equality case", which carries the norm factor and the record's "exactly when", so both directions and both normalisations sit in what is owed. The row claims only "the equality case in eigenvalue form".
+- **Honesty on the identity.** lean/INDEX.md:121 at ac5790b3: *"**Owed** ([r1471](REVIEW_r1471.md)): the equality case as the matrix identity $M^0=\lvert M^0\rvert(\tfrac kc uu^{\mathsf T}-\tfrac1cI)$, and the $k=3$ equality clause."* Honest. The spectral step from eigenvalue form to the identity (one eigenvector $u$ for $\tfrac{k-1}c$, $M=\tfrac{k-1}c uu^{\mathsf T}-\tfrac1c(I-uu^{\mathsf T})$) is exactly what is missing and is named.
+
+## B. `matrix_cube_le_unnormalised`
+
+- **$\operatorname{tr}M^2=\sum\lambda^2$.** `rw [e2, e3]` rewrites both traces into eigenvalue sums, so $r=\sqrt{\sum\lambda_j^2}=\sqrt{\operatorname{tr}M^2}$. For real symmetric $M$ this is the Frobenius norm, the record's $\lvert M^0\rvert$.
+- **Zero case.** `hr0.eq_or_lt` splits on $0=r$. From $r^2=\sum\lambda^2$ and $r=0$, `sum_eq_zero_iff_of_nonneg` gives each $\lambda_j^2=0$, so each $\lambda_j=0$. The goal $\sum\lambda^3\le\tfrac{k-2}c r^3$ becomes $0\le0$, closed by `simp`. Correct.
+- **Scaling.** At $r>0$: $\sum\lambda_j/r=0$ from `s1`, and $\sum(\lambda_j/r)^2=(\sum\lambda_j^2)/r^2=1$ by `hr2`. `cube_sum_le` gives $\sum(\lambda_j/r)^3\le\tfrac{k-2}c$, the left side equals $(\sum\lambda^3)/r^3$, and `div_le_iff₀` with $r^3>0$ yields $\sum\lambda^3\le\tfrac{k-2}c\,r^3$. The shape of the conclusion matches the goal exactly.
+- **Fidelity.** `Real.sqrt (tr M²) ^ 3` is $\lvert M^0\rvert^3$, and with $c=\sqrt{k(k-1)}$ forced by $c>0$, $c^2=k(k-1)$, this is the record's unnormalised bound verbatim. The hypothesis `hk2` is built and unused, which is cosmetic.
+
+## C. L162 monotonicity
+
+**The record, quoted from source** (findings/second-order.md:2286-2288): *"$F=\frac{2s}{1+2\beta s+\sqrt{1+4\beta s}}=\frac2\beta\,h(\beta s),\qquad h(x)=\frac x{1+2x+\sqrt{1+4x}},$ and $h'(x)=\dfrac1{2x\sqrt{4x+1}+4x+\sqrt{4x+1}+1}>0$ term by term, **so $F$ is strictly increasing in $s$.** *Decrease in $\beta$ needs more than $h'>0$*: it is the elasticity $\mathrm d\log h/\mathrm d\log x=1/\sqrt{4x+1}<1$ [...] **Given both, it suffices that $\beta$ falls and $s_0$ rises.**"*
+
+**`h_strictMonoOn`** ($0\le x<y\Rightarrow h(x)<h(y)$).
+- **Square comparison.** With $q_x^2=1+4x$, $q_y^2=1+4y$: $x^2(1+4y)-y^2(1+4x)=x^2-y^2+4xy(x-y)=(x-y)(x+y+4xy)$. Here $x-y<0$ and $x+y+4xy\ge0$, so the difference is $\le0$. The `nlinarith` hints are $(y-x)(y+x)\ge0$ and $xy(y-x)\ge0$, whose sum with weight $4$ on the second is exactly $-(x-y)(x+y+4xy)$. Correct.
+- **From squares.** $a=xq_y\ge0$ and $b=yq_x\ge0$, and $a^2\le b^2$ gives $a\le b$, since $a>b\ge0$ would force $a^2>b^2$. The hints `mul_nonneg hx hqy0` and `mul_nonneg hy.le hqx0` are the nonnegativity this needs. Correct.
+- **Final strictness.** Both denominators are positive, and $h(x)<h(y)$ is $x(1+2y+q_y)<y(1+2x+q_x)$, that is $(x-y)+(xq_y-yq_x)<0$. The first term is strictly negative and the second $\le0$, so the strict inequality holds with only the non-strict `key`. Correct. The docstring at L162.lean:81-82 states the comparison as strict, which is true (at $y>0$ the factor $x+y+4xy$ is positive) though the proof types the weak form. Not a gap.
+
+**`F_antitone_beta`.** It fixes $s>0$ and compares $2s/D(\beta')<2s/D(\beta)$ with $D(\beta)=1+2\beta s+\sqrt{1+4\beta s}$. `sqrt_le_sqrt` gives the root weakly larger, $2\beta's>2\beta s$ strictly, so $D(\beta)<D(\beta')$ with $D(\beta)>0$, and `div_lt_div_of_pos_left` closes it. It does not use $F=\tfrac2\beta h(\beta s)$ at all. That is legitimate: in the $2s/D$ form, $\beta$ appears only in the denominator, increasingly.
+
+**`F_strictMono_s`.** The identity `e`: $\tfrac{2u}{1+2\beta u+\sqrt{1+4\beta u}}=\tfrac2\beta\cdot\tfrac{\beta u}{1+2\beta u+\sqrt{1+4\beta u}}$ is correct for $\beta\ne0$. Then $0\le\beta s<\beta s'$ from $\beta>0$ and $s<s'$, `h_strictMonoOn` applies, and multiplying by $\tfrac2\beta>0$ preserves strictness. Correct.
+
+**Do these give the record's two monotonicities?** Yes. "Strictly increasing in $s$" is `F_strictMono_s` at every $\beta>0$. "Decreasing in $\beta$" is `F_antitone_beta` at every $s>0$, strictly. The composition the block needs is $F(s_0(n),\beta(n))<F(s_0(n'),\beta(n))<F(s_0(n'),\beta(n'))$ for $s_0$ rising and $\beta$ falling, which uses exactly these two at $\beta(n)>0$ and $s_0(n')>0$. The record's elasticity route is not needed. *Checked against the record by hand*: $\mathrm d\log h/\mathrm d\log x=(q+1)^2/(2q)\big/\big((q+1)^2/2\big)=1/q$ with $q=\sqrt{1+4x}$, and $h'=h/(xq)=1/(q+2xq+1+4x)$, so the record's two formulas are right, and the elasticity is untyped.
+
+## D. Axioms
+
+`lake build` completed successfully for both modules. From the scratch file:
+
+- `HamiltonsCubic.L225Statement.matrix_cube_eq`: `[propext, Classical.choice, Quot.sound]`
+- `HamiltonsCubic.L225Statement.matrix_cube_le_unnormalised`: `[propext, Classical.choice, Quot.sound]`
+- `HamiltonsCubic.L162.h_strictMonoOn`: `[propext, Classical.choice, Quot.sound]`
+- `HamiltonsCubic.L162.F_antitone_beta`: `[propext, Classical.choice, Quot.sound]`
+- `HamiltonsCubic.L162.F_strictMono_s`: `[propext, Classical.choice, Quot.sound]`
+
+## E. Record text
+
+- **L225 row** (lean/INDEX.md:121). Names `matrix_cube_eq` as the eigenvalue form and `matrix_cube_le_unnormalised` with its statement, and owes the matrix identity and the $k=3$ equality clause. Honest, as in A.
+- **second-order.md citation** (findings/second-order.md:1286): *"the matrix bound, normalised and unnormalised, with its sharpness and its equality case in eigenvalue form [...] The equality case as a matrix identity and the $k=3$ clause are not typed."* Accurate. Sharpness and the eigenvalue-form equality case are typed at unit norm only, and the owed identity covers the rest. "The $k=3$ clause" is broader than necessary, since the $k=3$ bound is an instance of the general one, which errs in the safe direction.
+- **G1, the L162 row at ac5790b3** (lean/INDEX.md:490). Under the header *"The monotonicity proof's four checkable steps are PROVED exactly"* it lists *"`theta0Sq_strictMono`, $\theta_0(n)^2$ strictly increases on $n\ge2$, so $\lambda$ falls"*, and its owed list, as rewritten by bc0cf7dc, reads *"the passage from $\theta_0$ increasing to $\lambda$ decreasing"*. The row asserts as proved what it owes. *Argued against:* "so $\lambda$ falls" can be read as the record's gloss on why the theorem matters, and the owed list disambiguates. *It stands* because the header puts the clause under "PROVED exactly", and bc0cf7dc added the owed item without adjusting the clause it contradicts. The header's "four" also became stale when bc0cf7dc appended a fifth group. **At HEAD 2f2dba70** (outside this review) `lam_strictAnti` types the passage and the owed item is gone, so the contradiction is resolved, and the "four checkable steps" count remains stale.
+- **G2, the label of `F_antitone_beta`** (lean/INDEX.md:490 and lean/HamiltonsCubic/Results/L162.lean:16-17). Both say the three theorems are *"the block's $h'>0$ and elasticity steps, by comparing squares"*. `F_antitone_beta` types neither the elasticity $1/\sqrt{4x+1}<1$ nor any square comparison: it is a denominator comparison in the $2s/D$ form. *Argued against:* "steps" can mean the conclusions those steps serve, and the conclusion is typed. *It stands* because a reader of the row would take the record's elasticity identity as machine-checked, and the method named is wrong for one of the three. The accurate account: `F_antitone_beta` replaces the elasticity step by a direct comparison, and the elasticity identity itself is untyped and unneeded. Present at HEAD.
+- **Punctuation.** No em dash in any added line of the three commits. Every added semicolon either separates list items that carry commas (the docstring bullets, the two rows) or is a Lean tactic separator.

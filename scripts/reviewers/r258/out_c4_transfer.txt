@@ -1,0 +1,35 @@
+B1  is every vector the file reads already inside V_lambda?
+  copies whose length differs from dim V_lambda: 0
+  sum over blocks of m_lambda * dim V_lambda = 7770
+  dim Sym^3(Weyl_5) = C(35+2,3) = 7770
+  => the copies exhaust Sym^3(Weyl_5) as whole so(5)-submodules, so the
+     isotypic projector P_lambda is the IDENTITY on every vector read.
+     r256's degree-3 hazard is a statement about vectors OUTSIDE V_lambda;
+     no such vector occurs in this file.
+
+B2  the n=5 table against the n=12 table
+  n=5   so(5) labels, rank 2 : 24 blocks, 41 copies, max multiplicity 4
+  n=12  so(12) labels, rank 6: 77 blocks, 191 copies, max multiplicity 9
+  labels at n=5 are pairs, at n=12 six-tuples -- the two tables have no
+  label in common as written; n=5 is seven below the stability threshold
+  12, where sym3-stability.md says modification and associate
+  identification both fire.
+  the n=12 blocks the certificate must actually handle: [(9, (3, 2, 1, 0, 0, 0)), (8, (4, 2, 2, 0, 0, 0)), (8, (3, 3, 1, 1, 0, 0)), (8, (2, 2, 0, 0, 0, 0)), (7, (4, 2, 0, 0, 0, 0)), (6, (4, 3, 1, 0, 0, 0))]
+  the widest block the file exercises: 4 columns, against 9.
+  n=12 blocks of multiplicity <= 4: 67 of 77, holding 122 of 191 copies
+
+B3  r250's transfer lemma against these carriers
+  r250: independence transfers along RESTRICTION T(f) = pi . f . iota,
+        and T(J_D^(n)) = (n/m)^L J_D^(m) needs the carrier to be a fixed
+        contraction DIAGRAM with n-independent coefficients.
+  the carriers here: dicts monomial-index -> Gaussian rational, i.e.
+        coefficient vectors in a basis of Sym^3(Weyl_5) chosen at n=5
+        by a BFS echelon over the two so(5) lowering generators.
+  so(5) has rank 2 and so(12) rank 6: the word alphabet the positions
+        index has 2 letters at n=5 and 6 at n=12, so 'position t' has no
+        n-independent meaning and no diagram is named anywhere.
+  the induced map Sym^3(iota) IS injective, so the 41 padded vectors are
+        independent in Sym^3(Weyl_12) -- but iota commutes only with
+        O(5) < O(12), so the images are not so(12)-isotypic and are not
+        the 184 covariants.  Independence of 41 vectors that are not the
+        objects in question is what transfers.

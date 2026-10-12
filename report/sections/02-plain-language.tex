@@ -1,0 +1,94 @@
+\section{The question as it was asked, in plain terms}\label{sec:plain}
+
+\emph{A notational warning that applies throughout: a reference of the form \S3.3 or \S3.5 always means a section of J\"ager's thesis, never of this report, whose own sections are referenced by a single number.}
+
+\emph{This section assumes no differential geometry. It records the question exactly as it reached us, says what the objects in it are, and shows how the informal sentence becomes the formal statement of \S1. A reader who wants only that can stop at the end of this section.}
+
+\subsection{The message}
+
+The problem arrived as a chat message on 19 August 2026. Its mathematical content, quoted exactly as sent:
+
+\begin{quote}
+\small
+\texttt{Consider the space W\_n of algebraic Weyl curvature operators in R\textasciicircum n. Let Q(W) = W\textasciicircum 2+W\textasciicircum\# be the quadratic map of Hamilton, sending W\_n to itself. Prove that the cubic P(W) = \textless W, Q(W)\textgreater{} (when restricted to W of norm 1) is maximized on the Weyl tensor of products of spheres when n \textbackslash geq 12. You may assume that this result is known when P is restricted to curvature operators that are diagonal with respect to a suitable basis of R\textasciicircum n.}
+\end{quote}
+
+\subsection{What the objects are}
+
+\paragraph{Curvature, as an operator.} On a curved space, the curvature at a point is not a single number. It records how much the space bends in each two-dimensional direction: each little plane through the point. Packaging that data as a linear operator acting on the space of such planes gives the \emph{curvature operator}. In $n$ dimensions there are $\binom n2$ independent planes, so this is an operator on a space of that size.
+
+\paragraph{The Weyl part.} A curvature operator splits into two pieces: an averaged part, which records how volumes are distorted, and the remainder, which records the pure change of shape. The remainder is the \emph{Weyl} part, and $\Weyl_n$ is the space of all algebraically possible ones in dimension $n$. Restricting attention to it removes the part of the curvature that any simple scaling argument would already control.
+
+\paragraph{Hamilton's map $Q$, and why anyone cares.} $Q(W)=W^2+W^{\#}$ is the nonlinear term in Hamilton's Ricci flow (the equation that smooths a geometry out over time, and the tool Perelman used on the Poincar\'e conjecture). Under that flow the curvature operator evolves as
+\[
+\frac{\partial R}{\partial t}=\Delta R+Q(R),
+\]
+so $Q$ is precisely the reaction term: the part that decides which curvature conditions survive the flow and which are destroyed by it. Questions about $Q$ are therefore questions about what the flow preserves, which is what makes an inequality about it worth having.
+
+\paragraph{The cubic $P$, and the unit sphere.} $P(W)=\langle W,Q(W)\rangle$ measures how much of $Q(W)$ points back along $W$ itself: how efficiently a given curvature shape reinforces itself under the flow. It is \emph{cubic}: replacing $W$ by $tW$ multiplies $P$ by $t^3$. So asking for a maximum only makes sense after fixing the size, which is what ``restricted to $W$ of norm~1'' does. The question is then about shape alone: among all curvature shapes of a fixed size, which one is most efficient?
+
+\paragraph{The answer that is conjectured.} Take two round spheres of the same dimension and multiply them together: $S^{n/2}\times S^{n/2}$, a space that is round in two independent halves of its directions. The conjecture says its curvature shape is the winner, and that nothing else ties it, once $n\ge12$.
+
+\paragraph{Why 12, of all numbers.} Because below that a different shape wins. Built from the complex projective plane $\CP^2$, it is a curvature shape whose efficiency is $\sqrt{3/2}\approx1.2247$ in \emph{every} dimension. It does not improve as space gets roomier. The sphere product's efficiency does improve with $n$, and it overtakes the rival at
+\[
+n=6+2\sqrt7\approx11.2915 .
+\]
+Twelve is simply the first whole number past that. This is not a threshold chosen to make a proof work: it is derived, three independent ways, in Lemma~2, and below it the conjecture is genuinely false.
+
+\subsection{From the sentence to the statement}
+
+Each phrase of the message corresponds to one formal object. The formal statement itself is Conjecture~A in \S\ref{sec:formal}.
+
+\begin{center}
+\begin{tabular}{@{}p{0.42\linewidth}p{0.54\linewidth}@{}}
+\toprule
+\textbf{As it was written} & \textbf{What it means formally} \\
+\midrule
+``the space $W_n$ of algebraic Weyl curvature operators'' & $\Weyl_n$: self-adjoint operators on $\Lambda^2\R^n$ obeying the first Bianchi identity with vanishing Ricci contraction \\
+``$Q(W)=W^2+W^{\#}$, the quadratic map of Hamilton'' & The reaction term of Ricci flow, where $\#$ is the Lie-algebra square built from the structure constants of $\so(n)$ \\
+``the cubic $P(W)=\langle W,Q(W)\rangle$'' & The cubic form whose critical points on the unit sphere are exactly the idempotents of Fox's nonassociative algebra \\
+``restricted to $W$ of norm 1'' & Restriction to $\Weyl^1_n$, which is compact, so a maximizer exists, and is a critical point \\
+``maximized on the Weyl tensor of products of spheres'' & The maximum is attained on the $SO(n)$-orbit of $W^{*}$, the Weyl operator of $S^{n/2}\times S^{n/2}$, of value $\theta_0(n)=\sqrt{2(n-1)(n-2)}/n$ \\
+``when $n\ge12$'' & The threshold $n>6+2\sqrt7$, below which the $\CP^2$-type rival wins \\
+``you may assume \dots\ diagonal with respect to a suitable basis'' & The case where $W$ is diagonal in the coordinate $2$-planes $e_i\wedge e_j$ of an orthonormal frame \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Two things are worth drawing out of that table, because they shape everything afterwards.
+
+\paragraph{``Maximized on'' is a statement about a whole orbit, not a point.} Rotating a curvature shape does not change how efficient it is, so if $W^{*}$ is a maximizer then so is every rotation of it. The conjecture asserts that these rotations are the \emph{only} maximizers, which is why the report keeps track of orbits and of ``rigidity'' (whether anything else can sit next to one).
+
+\paragraph{The granted assumption is a strong one, and it is where the difficulty hides.} ``Diagonal with respect to a suitable basis'' means the curvature does not mix the chosen directions: in a well-chosen coordinate frame, each little plane $e_i\wedge e_j$ is stretched by its own factor and nothing leaks between planes. That is the analogue of a diagonal matrix versus a general one. The natural hope is that the general case reduces to it by choosing the right frame, but \S\ref{sec:landscape} shows it does not: the actual rival maximizer is \emph{provably} not diagonalizable in any orthonormal frame, by three independent arguments.
+
+\subsection{What turned out to be true about the granted assumption}
+
+The last sentence of the message grants the diagonal case as known. Establishing what that grant actually buys meant finding the source, and the source is Florian J\"ager's 2016 M\"unster thesis \cite{jaeger2016}, locating which changed the shape of the problem. Its main theorem proves the diagonal case for even $n\ge16$, but the sentence immediately following it says the case $n\ge12$ is conjectural. So the assumption the problem statement grants was, in the literature, \textbf{unavailable at exactly the dimensions the conjecture turns on}, $n=12$ and $n=14$, and unavailable for odd $n$ at all.
+
+Lemma~1 closes $n=12$ and $n=14$, from scratch. That is why \S\ref{sec:granted} comes before anything else: the foundation the rest of the work stands on had to be repaired before it could be stood on.
+
+\subsection{How far it has got, without symbols}
+
+\begin{itemize}[leftmargin=1.4em]
+\item \textbf{The conjecture is not proved.} It remains open, as the sender predicted it would be.
+\item \textbf{The foundation is repaired.} The granted assumption now genuinely holds at the dimensions where the question bites.
+\item \textbf{The threshold is explained.} $n\ge12$ is derived rather than assumed, and the rival that beats the sphere product below it is identified exactly.
+\item \textbf{No rival survives.} Every named candidate, including several catalogued here, is eliminated by computing its efficiency and finding it short.
+\item \textbf{The conjectured winner is rigid, and so is every one of its rivals with symmetry.} Nothing else can sit next to a sphere product: it is an isolated peak, now proved rather than measured, for every way of splitting it into two factors apart from one small exception (Lemmas~26, 27). The same holds, with no exception at all, for the other symmetric family (Lemma~28). That rigidity is what makes the main line of attack work at all.
+\item \textbf{The main argument has a working mechanism, and what is left is one inequality.} Because every symmetric shape is an isolated peak, the symmetric shapes form separate ``islands'' in the landscape of stationary shapes. What remains is to show that nothing off those islands climbs as high as the rival: a single bound, which would settle the whole conjecture for every even dimension from twelve upward, since the other half of the question is exactly what the problem statement hands you (\S\ref{sec:outside}).
+\item \textbf{One region of the search space is closed unconditionally.} No maximizer can lie anywhere near the rival's shape, in any dimension from 12 upward (Lemma~20). This is a genuine theorem about the whole problem, not about a special case.
+\item \textbf{One infinite family is settled completely.} On curvature shapes built from a subalgebra of rotations, the conjecture is \emph{proved outright}, with its equality case, in every dimension (Lemma~23). The proof is short: three identities and one observation that a sum of squares cannot be negative.
+\item \textbf{The problem has a shape rather than a list.} It splits into three statements (\S\ref{sec:shape}). Two are settled: the sphere products really are ordered the way they must be, and among the shapes with the right kind of symmetry the balanced product wins. The third (that a genuine maximizer must have that symmetry in the first place) is open, and is the whole difficulty.
+\item \textbf{The unknown maximizer is pinned from two sides.} Every earlier argument used only the condition that says a maximizer is a stationary point. A maximizer also has to \emph{curve downward} in every direction, and that turns out to be a clean eigenvalue bound (Lemma~24). Every curvature shape on record lacking the required symmetry fails it (Observation~25).
+\item \textbf{The one inequality that remains is a well-defined question.} It quantifies over the curvature shapes that cannot be written in a ``diagonal'' form, and there is a test for that which does not depend on the coordinates you pick (Lemma~37), which matters, because a test that did would leave the set being quantified over undefined. Under it the bound is not merely satisfied but \emph{attained}, at the rival shape itself, in three independent searches.
+\item \textbf{It is the diagonal condition doing the work, not the symmetry condition.} Among the shapes with zero slack there are ones climbing much higher than the rival: the sphere products themselves. What keeps them out of the remaining question is that they \emph{are} diagonal. Any proof has to carry that condition all the way through. One that uses only the slack is bounding a much larger set.
+\item \textbf{Every curvature shape coming from a symmetric space is settled, at every dimension from twelve upward.} That is the whole of Cartan's classification (the complex and quaternionic projective spaces, the Grassmannians, the compact Lie groups, the exceptional spaces, and every product of them), and on all of it the balanced sphere product wins, uniquely (\S\ref{sec:symmetric}). The argument is a counting one: a symmetric space whose symmetry group is small cannot be efficient, and the only spaces with a large enough symmetry group are the sphere products themselves. It is worth saying what this does \emph{not} settle: having zero slack is a weaker condition than coming from a symmetric space, and the shapes in between are still owed.
+\item \textbf{The target number and the dimension twelve are both forced from outside the sphere products.} The efficiency $P$ turns out to be one side of a criterion B\"ohm and Wilking wrote down for a different purpose (whether a family of curvature cones survives the Ricci flow), and Weyl shapes are exactly that family's extreme directions. Asking the criterion to hold at the open end of the family produces the target number on its own, with no sphere product anywhere in the derivation, and shows it must fail below dimension twelve (\S\ref{sec:cone}). So neither the constant nor the threshold is a guess read off the conjectured answer.
+\item \textbf{Three attacks are open on the remaining bound, and they fail in different places.} One caps each family of shapes by a formula in its own size parameter, and is closed on the symmetric shapes by the bullet above. One is an inequality of exactly the right shape, exact at every symmetric point tested, held up by a single missing ingredient. One turns the curving-downward condition into an exclusion device, which rules out everything catalogued outside a short list. Any one of them completed settles the question.
+\item \textbf{What is left is one hard thing, and it has a name.} Curvature shapes far away from the rival, with no symmetry to exploit, are untouched. The single sharp result of this kind in the literature works in dimension four for a reason that provably does not travel: there the efficiency collapses to a quantity depending only on the shape's stretching factors, and in every dimension from five upward that collapse is impossible (\S\ref{sec:collapse}). So the missing argument has to see how the stretching directions are \emph{aligned}, not only how much they stretch, and there is a family of shapes in dimension six with identical stretching factors and wildly different efficiencies to prove it.
+\item \textbf{Two natural-looking claims about the landscape are false, and the report says so where each belongs.} The curving-downward condition does not pick out the winning family (it fails in both directions), and the landscape is not ``two peaks with a low valley between them'': a shape sits in that valley higher than the rival. Both are recorded next to the statements they constrain, because a negative result nobody can find is paid for twice.
+\end{itemize}
+
+The rest of this report is technical. \S\ref{sec:fenceposts} is the exception worth pointing a non-specialist at: it lists twenty-five things that have been \emph{proved not to work}, each of which cost a round of effort to establish, and reading it is the fastest way to see why the problem is hard rather than merely unfinished.
+
+% ==============================================================================

@@ -1,0 +1,11 @@
+dim 1638 weights 853
+T1 shape violations: 0 []
+Cartan matrix (=(ai,aj), all roots have square length 2):
+    [2, -1, 0, 0, 0, 0]
+    [-1, 2, -1, 0, 0, 0]
+    [0, -1, 2, -1, 0, 0]
+    [0, 0, -1, 2, -1, -1]
+    [0, 0, 0, -1, 2, 0]
+    [0, 0, 0, -1, 0, 2]
+T2 Serre violations: 0 []
+T3 joint kernel of the six E_i on V: dim 1 at weights [((2, 2, 0, 0, 0, 0), 1)]

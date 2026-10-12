@@ -1,0 +1,28 @@
+built an exact integer Weyl tensor on R^4 (antisym, pair-sym, Bianchi, trace-free)
+
+  n   <P,Q>  (pure x pure)        <P,M>  (pure x metric)      <M,M>  (metric x metric)
+  4   10246401/16384               10246401/4096                10246401/1024
+  5   10246401/16384               10246401/4096                51232005/4096
+  6   10246401/16384               10246401/4096                30739203/2048
+  7   10246401/16384               10246401/4096                71724807/4096
+  8   10246401/16384               10246401/4096                10246401/512
+  10  10246401/16384               10246401/4096                51232005/2048
+  12  10246401/16384               10246401/4096                30739203/1024
+
+  <P,Q> constant in n : True   (1 distinct value(s))
+  <P,M> constant in n : True   (1 distinct value(s))
+  <M,M> constant in n : False   (7 distinct value(s))
+
+  and <M,M> is exactly  n * I3^2  with I3 = -3201/64 :
+     verified at every n in (4, 5, 6, 7, 8, 10, 12) -- the value is LINEAR IN n.
+
+CONCLUSION.  Contracting the free indices does land the check among complete
+contractions -- but not among the ones r232 audited.  r232's grammar has every
+one of the 4d slots on a Weyl factor, which is why no delta-loop can form.  A
+bare metric on a covariant's free indices is a delta whose endpoints belong to
+no tensor, and pairing two of them closes the loop:  g_ab g_ab = delta^a_a = n.
+The free-index worry is not dissolved by the passage to complete contractions;
+it is RELOCATED into the pairing, and that is exactly where plan.md's A2 says
+it lives -- 'every Gram entry of two diagram covariants is a closed Brauer
+diagram, VALUED A POLYNOMIAL IN N'.  Those two sentences cannot both describe
+the same objects.

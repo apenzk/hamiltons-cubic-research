@@ -1,0 +1,108 @@
+==============================================================================
+A.  WHAT THE CHECK ACTUALLY TESTS -- the kernel dimensions it sees
+==============================================================================
+    n=  4: sv = [1.123e+01, 2.000e-14]  ratio 1.78e-15   kernel dim 1
+    n=  5: sv = [3.187e+01, 9.208e-14]  ratio 2.89e-15   kernel dim 1
+    n=  6: sv = [8.024e+01, 2.429e+01]  ratio 3.03e-01   kernel dim 0
+    n=  7: sv = [1.853e+02, 6.917e+01]  ratio 3.73e-01   kernel dim 0
+    n=  8: sv = [1.623e+02, 5.818e+01]  ratio 3.59e-01   kernel dim 0
+    n= 10: sv = [3.821e+02, 3.050e+02]  ratio 7.98e-01   kernel dim 0
+    n= 12: sv = [1.222e+03, 3.223e+02]  ratio 2.64e-01   kernel dim 0
+
+    comparisons the loop makes: 6
+    comparisons with a NON-EMPTY K_big (nested() returns True on an empty
+    K_big before looking at K_small): 1  -> [(4, 5)]
+    So exactly one containment in the whole screen has content, and every
+    n >= 6 comparison is 'True' by the empty-kernel early return.
+
+==============================================================================
+B.  MISREPORT IN THE 'NESTED' DIRECTION -- a real violation of fact (ii)
+    that the 1e-6 projector tolerance calls nesting
+==============================================================================
+    plant P4(eps): second diagram -> q2 + eps*n*q1.  Fact (ii) is FALSE for
+    every eps != 0 (the kernel line is -(eps*n + 1/2) : 1, so it MOVES with
+    n).  eps = 1 is the committed regression case.  Where does the verdict
+    flip?
+
+           eps       kernel line n=4       kernel line n=5    residual  verdict
+         1e+00  +1.000000 : -0.222222  +1.000000 : -0.181818    3.79e-02  fails, correctly
+         1e-02  -0.540000 : +1.000000  -0.550000 : +1.000000    6.78e-03  fails, correctly
+         1e-04  -0.500400 : +1.000000  -0.500500 : +1.000000    7.15e-05  fails, correctly
+         1e-05  -0.500040 : +1.000000  -0.500050 : +1.000000    7.16e-06  fails, correctly
+         1e-06  -0.500004 : +1.000000  -0.500005 : +1.000000    7.16e-07  NESTED (missed)
+         3e-07  -0.500001 : +1.000000  -0.500002 : +1.000000    2.15e-07  NESTED (missed)
+         1e-07  -0.500000 : +1.000000  -0.500001 : +1.000000    7.16e-08  NESTED (missed)
+         1e-08  -0.500000 : +1.000000  -0.500000 : +1.000000    7.16e-09  NESTED (missed)
+         1e-10  -0.500000 : +1.000000  -0.500000 : +1.000000    7.16e-11  NESTED (missed)
+
+    The check stops seeing the violation at eps ~ 1e-06: the residual
+    is linear in eps, so the screen certifies nesting only to 1e-6 in angle.
+    A violation of fact (ii) whose coefficient is below that is invisible.
+
+==============================================================================
+C.  MISREPORT IN THE 'NOT NESTED' DIRECTION -- the fatal one, because it
+    is an assert that kills the run.  A pure CHANGE OF BASIS of V, which
+    cannot change fact (ii), is turned into a failure by the 1e-9 rank
+    tolerance
+==============================================================================
+    Basis change T_b:  q1' = q1,  q2' = b * (q2 - 0.5*q1).
+    Invertible for every b != 0, and q2 - 0.5*q1 is the relation itself, so
+    at n = 4, 5 the second column is PURE ROUNDOFF, of size ~1e-15*|q1|.
+    Multiplying it by b lifts that roundoff through the 1e-9 rank tolerance
+    at a rate that differs between n = 4 and n = 5, because the roundoff
+    does.  ker eps_n is unchanged as a subspace in every row.
+
+    Two steps.  First, how far apart the two roundoff floors sit -- they are
+    independent samples of the same 1e-15-scale noise, so which of n = 4 and
+    n = 5 is larger is a coin toss over the sampling seed, and the screen
+    draws from an unseeded global rng:
+
+    over 120 seeds, the n=4 floor exceeds the n=5 floor in 44
+    of them (36%).  For any such seed there is a window of b
+    with rank 2 read at n = 4 (kernel EMPTY) and rank 1 at n = 5 (kernel a
+    line), and nested() returns False on an empty K_small by construction.
+
+      seed    floor n=4    floor n=5           b   ker dims 4,5   ker5 in ker4
+         0     2.37e-15     7.80e-16    4.43e+05         [0, 1]   False   <-- ASSERTION FIRES
+         2     2.66e-15     1.98e-15    3.95e+05         [0, 1]   False   <-- ASSERTION FIRES
+         4     1.81e-15     1.64e-15    5.79e+05         [0, 1]   False   <-- ASSERTION FIRES
+         5     3.07e-15     9.76e-16    3.42e+05         [0, 1]   False   <-- ASSERTION FIRES
+         6     2.35e-15     1.88e-15    4.46e+05         [0, 1]   False   <-- ASSERTION FIRES
+         9     1.76e-15     1.69e-15    5.95e+05         [0, 0]   True
+
+    FALSE ALARM WITNESS: 5 of those 6 abort with 'ker eps_5 is NOT
+    contained in ker eps_4 -- fact (ii) is the padding step the whole
+    reduction rests on', on a RELABELLING of the diagram basis that moves no
+    kernel anywhere.  The tolerance, not the mathematics, decided it.
+    b ~ 4e5 is not exotic: it is the ratio between the largest and smallest
+    entry of a Brauer Gram whose entries carry n^0 ... n^6 at n = 12, which
+    is 12^6 = 3.0e6 before any coefficient is counted.
+
+==============================================================================
+D.  THE max(sv[0], 1.0) CLAMP -- an absolute floor inside a relative test
+==============================================================================
+    Scaling BOTH diagram symbols by c (the most innocuous basis change
+    there is -- a choice of normalisation for the diagram symbols) with
+    c small enough that sv[0] < 1 turns the relative tolerance into the
+    absolute 1e-9, and the whole matrix reads as rank 0.
+
+             c    sv[0] at n=6   rank  kernel dim   nesting reported
+         1e+00       8.024e+01      2           0   ker6 in ker5: True
+         1e-06       8.024e-05      2           0   ker6 in ker5: True
+         1e-09       8.024e-08      2           0   ker6 in ker5: True
+         1e-12       8.024e-11      0           2   ker6 in ker5: True
+         1e-14       8.024e-13      0           2   ker6 in ker5: True
+         1e-16       8.024e-15      0           2   ker6 in ker5: True
+
+    At c = 1e-16 every kernel is the whole of R^2, every containment holds,
+    and the check reports fact (ii) verified while measuring nothing.
+
+==============================================================================
+E.  THE PROJECTOR ITSELF IS FINE
+==============================================================================
+    K_small's rows come out of an SVD, so they are orthonormal; pinv(K^T)
+    is then K itself and P = K^T K is an exact orthogonal projector.
+    n=4: ||K K^T - I|| = 2.22e-16   ||P^2 - P|| = 0.00e+00   ||P - P^T|| = 7.85e-17
+    n=5: ||K K^T - I|| = 0.00e+00   ||P^2 - P|| = 0.00e+00   ||P - P^T|| = 7.85e-17
+    So the 1e-6 is a pure angle tolerance, not a conditioning artefact of
+    pinv: the rcond default never bites here.  The failure modes are B, C, D.

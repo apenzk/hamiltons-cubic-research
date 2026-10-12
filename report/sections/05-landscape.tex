@@ -1,0 +1,128 @@
+\section{The landscape of critical points}\label{sec:landscape}
+
+\subsection{Where the threshold comes from}\label{sec:threshold}
+
+\begin{Lem}{2}[Exact dimension threshold]
+The balanced sphere product overtakes the rival exactly at the root of $n^2-12n+8=0$, that is at
+\[
+n\;=\;6+2\sqrt7\;\approx\;11.29 .
+\]
+\end{Lem}
+
+\begin{proof}
+Both values are computed in closed form and compared.
+
+\emph{The sphere products.} For $S^p\times S^q$ with unit round factors, the Kulkarni--Nomizu decomposition gives the Weyl operator explicitly on the three families of coordinate $2$-planes,
+\[
+w^{(11)}=1-\tfrac{2(p-1)}{n-2}+\sigma,\quad
+w^{(22)}=1-\tfrac{2(q-1)}{n-2}+\sigma,\quad
+w^{(12)}=-1+\sigma,\quad
+\sigma=\tfrac{p(p-1)+q(q-1)}{(n-1)(n-2)} .
+\]
+This operator is diagonal in coordinate $2$-planes, so $P$ is evaluated by Hamilton's diagonal formula $(Q(W))_{ij,ij}=\lambda_{ij}^2+\sum_{k\ne i,j}\lambda_{ik}\lambda_{jk}$. At the balanced split the normalized value is $\theta_0(n)=\sqrt{2(n-1)(n-2)}/n$. A sweep over all integer splits $2\le p\le n-2$ for $6\le n\le30$ confirms that the balanced split (or $|p-q|=1$ for odd $n$) uniquely maximizes $P$ among two-factor products at every $n$.
+
+\emph{The rival.} On a fixed $4$-plane $V\subset\R^n$ with orthogonal complex structure $J$, consider the tensors supported on $V$ built from the round-sphere pattern and the $J$-correction. The first Bianchi identity cuts the three available coefficients down to a two-parameter family (the constraint matrix has rank $1$), and within it the ratio $s:t=1:(-1)$ is \emph{identically} Ricci-flat on $V$. Such a tensor therefore equals its own Weyl part with no projection, and it is critical in every ambient dimension: every bracket term in $W^{\#}$ that touches $V^\perp$ multiplies a vanishing entry, so $Q$ cannot see the extra coordinates. Hence $P/\|W\|^3=\thstar=\sqrt{3/2}$ for every $n\ge4$, verified directly at $n=4,\dots,12$ at relative residual $<10^{-15}$.
+
+\emph{The comparison.} $\theta_0(n)=\thstar$ reads $2(n-1)(n-2)/n^2=3/2$, i.e.\ $n^2-12n+8=0$, i.e.\ $n=6\pm2\sqrt7$. The relevant root is $6+2\sqrt7\approx11.2915$, and $\theta_0$ is increasing, so the sphere product wins exactly for $n\ge12$: the numerator $n^2-12n+8$ is $-3$ at $n=11$ and $+8$ at $n=12$, and the root is irrational, so no integer attains the crossing and it is strict on both sides.
+
+\emph{At odd $n$ the real crossover is a different number.} $\Theta_n^2\ge\tfrac32$ reads $4(n-1)(n-3)\ge3(n+1)(n-2)$, that is $n^2-13n+18\ge0$, with root $\tfrac{13+\sqrt{97}}2\approx11.4244$. The integer threshold $12$ survives at both parities, but only the conclusion is parity-free, not the root.
+\end{proof}
+
+The equation is derived rather than fitted: both inputs are $n$-uniform closed forms obtained without reference to any threshold, so the crossing is not circular. A caution recorded during this work: the naive ``$\CP^2$ Weyl tensor zero-padded into $\R^n$'' is critical only at $n=4,5$ (relative residual $0.22$--$0.24$ at $n=6,7,8$), so the competitor is the Ricci-flat member of the family above, not the literal padding of a genuine Fubini--Study curvature.
+
+Three routes reach the quadratic (Fox's abstract idempotents, a coordinate-level Tachibana-trick computation, and a from-scratch explicit tensor construction), and they share their inputs. Each is a sphere-product value, a rival value, and one forced line of algebra. The Tachibana route derives $\theta_0(n)$ and does not compute the rival at all. \textbf{So the quadratic has three derivations of $\theta_0(n)$ behind it and two of $\thstar$, and $\theta(\mathcal S^4(\alpha))=\sqrt{3/2}$ is a single point of failure for every appearance of the polynomial.} That value is proved: on a fixed $4$-plane $\su(2)_+$ is a subalgebra, so $W^{\#}$ stays inside $\Lambda^+$ under padding and $Q(W)=\theta W$ holds exactly at every $n\ge4$, with $\theta$ independent of $n$. It reproduces the conjecture's integer threshold $n\ge12$ exactly rather than approximately, and it says that below the crossover the rival genuinely wins, so the $\CP^2$ exception in the conjecture's statement is real rather than a proof artifact.
+
+\subsection{The cone the problem sits in, and the constant it demands}\label{sec:cone}
+
+Problem~P is the extremal case of a cone-invariance question, and the identification fixes both the constant and the dimension hypothesis from outside the sphere products. B\"ohm--Wilking's programme asks which closed convex $O(n)$-invariant cones of algebraic curvature operators are preserved by the Ricci-flow ODE $\dot R=\Phi(R)=R^2+R^{\#}$. Beitz \cite{beitz2018} attaches to the quotient $F(R)=\|R\|^2/\|\mathrm{ric}(R)\|^2$ the family
+\[
+\Omega_a\;=\;F^{-1}\Big(\big(-\infty,\tfrac4{n-2+4a}\big]\Big),\qquad a\in[0,\tfrac n4],
+\]
+and states the conjecture that every member is invariant. Invariance is the pointwise condition $G(R):=dF_R(\Phi(R))\le0$ on the boundary, and expanding the quotient rule turns it into
+\begin{equation}\label{eq:criterion}
+G(R)\le0\iff\underbrace{\langle R,\Phi(R)\rangle}_{=\,P(R)}\;\le\;F(R)\,\big\langle\mathrm{ric}(R),\mathrm{ric}(\Phi(R))\big\rangle .
+\end{equation}
+\textbf{$P$ is the left-hand side of that criterion.} A Weyl operator has $\mathrm{ric}=0$, which is where $F$ blows up, so Weyl operators are the extremal directions of the whole family, and the maximization Problem~P poses is the hard direction of the cone question rather than a separate problem. The criterion is algebraic and pointwise: it is the static statement equivalent to dynamical invariance, and $\Weyl_n$ is where it bites hardest.
+
+\paragraph{Which end of the family is settled, and how much of it that is.} The two ends of $a\in[0,\tfrac n4]$ are different objects. In decomposition form \cite[p.~96]{beitz2018}, $R\in\Omega_a$ reads $\tfrac{4a-n}4\|R_I\|^2+a\|R_{\mathrm{ric}_0}\|^2+(\tfrac{n-2}4+a)\|R_W\|^2\le0$, so $\Omega_a$ is empty above $a=n/4$; at $a=n/4$ it is the single ray $\R_{>0}\cdot I$, where $\Phi(I)=(n-1)I$ makes invariance immediate; and as $a\to0$ it opens to $\tfrac{n-2}n\|R_W\|^2\le\|R_I\|^2$ with $R_{\mathrm{ric}_0}$ unconstrained, which carries the content. Beitz's Lemma 6.3.16 proves invariance on $[\tfrac n4-\varepsilon,\tfrac n4]$, a neighbourhood of the ray, by showing $I$ is a local maximum of $G$. Xu \cite{xu2024} makes $\varepsilon$ explicit as $1/n$ for $n\ge11$. That is a proved fraction $4/n^2$ of the parameter interval ($2.78\%$ at $n=12$, $1.56\%$ at $n=16$, shrinking as $n$ grows), and both published attacks sit at the degenerate end. \textbf{Problem~P's target $a=0$ is the far end}, and the whole interior is untouched.
+
+\begin{Lem}{43}[The criterion at $a=0$ demands exactly $\theta_0(n)$]
+On the slice $R_{\mathrm{ric}_0}=0$ the invariance criterion \eqref{eq:criterion} at $a=0$ collapses with no residue to
+\[
+\langle W,Q(W)\rangle\;\le\;\theta_0(n)\,\|W\|^3,\qquad \theta_0(n)=\frac{\sqrt{2(n-1)(n-2)}}n .
+\]
+So the constant of Problem~P is what cone invariance requires, independently of any sphere product.
+\end{Lem}
+
+\begin{proof}
+Write $R=cI+W$ with $W$ Weyl. Three published facts do the work. B\"ohm--Wilking's Lemma 2.1 gives $R+R\#I=(n-1)R_I+\tfrac{n-2}2R_{\mathrm{Ric}_0}$ with $\langle W\rangle$ in the kernel, so $W\#I=-W$ and $\Phi(I,W)=\tfrac12(IW+WI)+W\#I=0$. Their equation (6), $\mathrm{Ric}(\Phi(R))_{ij}=\sum_k\mathrm{Ric}_{kk}R_{kijk}$, gives $\mathrm{Ric}(W)=0\Rightarrow\mathrm{Ric}(\Phi(W))=0$, so $\Phi$ preserves $\Weyl_n$, using also that $\Phi$ preserves the first Bianchi identity, without which $\Phi(W)$ could carry a $\Lambda^4$ component. Hence $\Phi(cI+W)=c^2(n-1)I+\Phi(W)$ and every cross term of the cubic vanishes: $\langle W,\Phi(I)\rangle=(n-1)\langle W,I\rangle=0$, and $\langle I,\Phi(W)\rangle=0$ because $\Phi(W)$ is again Weyl. So $\langle R,\Phi(R)\rangle=c^3(n-1)\|I\|^2+\langle W,Q(W)\rangle$. On the right of \eqref{eq:criterion}, $\|\mathrm{ric}(I)\|^2$ cancels between $F$ and the pairing, leaving $\langle W,Q(W)\rangle\le c(n-1)\|W\|^2$.
+
+Normalising $\|W\|=1$, the $\partial\Omega_0$ constraint together with $\|I\|^2=\dim\Lambda^2\R^n=n(n-1)/2$ gives $c=\tfrac1n\sqrt{2(n-2)/(n-1)}$, whence $c(n-1)=\sqrt{2(n-1)(n-2)}/n=\theta_0(n)$. The collapse needs only bilinearity, $\Phi(I,W)=0$ and $\scal(Q(W))=0$. The total symmetry of $T(A,B,C)=\langle A,\Phi(B,C)\rangle$ is B\"ohm--Wilking equation (5) and is not load-bearing here. One further input is named: invariance $\Rightarrow G\le0$, where \cite{beitz2018} Lemma 2.3.4 supplies the converse, and which holds through $\tfrac d{dt}\scal=2\|\mathrm{ric}\|^2>0$.
+\end{proof}
+
+\begin{certificate}
+Both sides compared as squares, $2(n-1)(n-2)/n^2$, in exact rational arithmetic. Two reviewers on identical briefs confirmed every step. One recomputed $\theta$ on sphere-product Weyl parts from scratch with no cone and no $\|I\|^2$ anywhere, obtaining $\theta_{p,q}^2=\tfrac{2(n-1)}{n-2}\big(1-\tfrac{n-1}{pq}\big)$, maximal at $p=q$ and equal to $\theta_0(n)^2$: two disjoint routes to the same constant. The bound $\theta_0(n)$ holds at every $n$, but it is \emph{attained} only at even $n$, the best odd product giving $\tfrac{2(n-1)(n-3)}{(n-2)(n+1)}$, which reproduces $\tfrac{40}{27}$, $\tfrac{120}{77}$, $\tfrac{21}{13}$ at $n=11,13,15$.
+\end{certificate}
+
+\paragraph{Attribution, and what it leaves as this report's own.} The criterion, the function $G$, and the expansion \eqref{eq:criterion} are published twice in the sources: Beitz defines $F$ at (6.24), gives $dF_R(S)$ at (6.25), and opens Lemma 6.3.16 with ``we consider the function $G:R\mapsto dF_R(\Phi(R))$''; Xu displays the same expansion at (3.1)--(3.4) and calls it the main task. What Lemma~43 contributes is the block-by-block accounting that identifies the constant, not the bridge.
+
+\paragraph{Conventions across the three sources, which do not agree.} Beitz and this report use the same inner product, $\|I\|^2=\dim\Lambda^2=n(n-1)/2$, forced by her Remark 1.1.7 and independently by $F(I)=2/(n-1)$ at the $\Omega_{n/4}$ endpoint. Her $\mathrm{ric}$ carries a factor $\tfrac12$ against \cite{bw2008}, which cancels in Lemma~43 because $F\langle\mathrm{ric},\mathrm{ric}\,\Phi\rangle$ is invariant under rescaling $\mathrm{ric}$, and is load-bearing for any figure quoting $\|\mathrm{ric}\|$ or $\scal$ across the two. Xu's $\mathrm{Ric}$ is twice Beitz's, which is why Xu records $F(I)=\tfrac1{2(n-1)}$ against her threshold $2/(n-1)$. And \cite{bw2008} defines $P=\tfrac13\langle R,Q(R)\rangle$, a factor $3$ against this report's $P$.
+
+\begin{Lem}{44}[$n\ge12$ is necessary, not merely sufficient]
+$\Omega_0$ is \emph{not} invariant for $4\le n\le11$. The witness is explicit: zero-padded $W_{\CP^2}$ has $\theta=\thstar$ in every ambient dimension, and the operator $cI+W$ it defines at the pinned $c$ sits on $\partial\Omega_0$ (the Weyl tensor itself does not, having $\mathrm{ric}=0$ where $F$ blows up), so the criterion of Lemma~43 fails there exactly when $\theta_0(n)<\thstar$, that is when $n^2-12n+8<0$.
+\end{Lem}
+
+\noindent The conjecture's dimension hypothesis is therefore forced by an exhibited object rather than assumed, and Lemma~43 is sharp at $a=0$. The polynomial $n^2-12n+8$ of Lemma~2 is what decides it, reached here by a route with no sphere product in it. The witness is Nienhaus's \cite{nienhaus2023}.
+
+\begin{Lem}{45}[Off the slice: five surviving triples, and one new coupling]
+For general $R=cI+Y+W$ with $Y=R_{\mathrm{ric}_0}$, five of the ten distinct triples of the cubic vanish and five survive:
+\[
+\langle R,\Phi(R)\rangle=\underbrace{c^3(n-1)\|I\|^2+3c\langle I,\Phi(Y)\rangle+\langle Y,\Phi(Y)\rangle}_{W\text{-even}}
++\underbrace{3\langle W,\Phi(Y)\rangle+\langle W,Q(W)\rangle}_{W\text{-odd}} .
+\]
+Against the slice exactly one new coupling appears, the triple $(Y,Y,W)$, equal to $\tfrac3{n-2}\langle W,\mathrm{Ric}_0\wedge\mathrm{Ric}_0\rangle$. Every $I$--$W$ pairing vanishes. The $\Omega_0$ constraint depends only on $\|W\|$, so $cI+Y-W\in\Omega_0$ whenever $cI+Y+W$ is, and demanding the criterion at both signs gives the two-sided bound
+\[
+\big|\mathrm{LHS}_{\rm odd}-\mathrm{RHS}_{\rm odd}\big|\;\le\;\mathrm{RHS}_{\rm even}-\mathrm{LHS}_{\rm even},
+\qquad \mathrm{LHS}_{\rm odd}=3\langle W,\Phi(Y)\rangle+\langle W,Q(W)\rangle .
+\]
+\end{Lem}
+
+\noindent \textbf{Off the slice the $a=0$ criterion is not Conjecture~A alone}: $\langle W,Q(W)\rangle$ enters as one of three pieces of an odd part bounded on both sides. Setting $Y=0$ kills the new coupling and $\mathrm{RHS}_{\rm odd}$ together and returns Lemma~43, which is the consistency check. \emph{Scope:} $a=0$ leaves $R_{\mathrm{ric}_0}$ unconstrained, so the cone conjecture is strictly more than Conjecture~A, of which Conjecture~A is the $R_{\mathrm{ric}_0}=0$ slice. What is settled is that the constant is right, not that the two statements coincide.
+
+\emph{Attribution.} The five-term expansion is Xu's Lemma 2.8, equation (2.34), term for term and including the coefficient $\tfrac3{n-2}$, which he attributes to Huisken's proof of Theorem 3.3 \cite{huisken1985} where it is not stated as an independent lemma. The parity argument on top of it is this report's.
+
+\subsection{The conjectured maximizer is a genuine peak}
+
+\begin{Obs}{3}[Local maximality off the diagonal locus]
+$W^{*}$ is a strict local maximum of $P$ on $\Weyl^1_n$ modulo its orbit, verified by full Hessian diagonalization at $n=6,\dots,16$. At $n=12$ ($\dim\Weyl_{12}=1638$): zero positive eigenvalues and exactly $36$ zero eigenvalues, matching $\dim SO(12)\cdot W^{*}$, confirmed by two independently implemented pipelines.
+\end{Obs}
+
+\begin{certificate}
+Full Hessian diagonalization at $n=6,\dots,16$. At $n=12$, where $\dim\Weyl_{12}=1638$, two independently implemented pipelines agree: zero positive eigenvalues, exactly $36$ zero eigenvalues, matching $\dim SO(12)\cdot W^{*}$. The five rational eigenvalue families were fitted on $n=6,\dots,14$ and then confirmed exactly on a held-out $n=16$ recomputed by a second sparse route.
+\end{certificate}
+
+The spectrum is derived rather than fitted. $F_{W^{*}}$ commutes with the stabiliser $SO(k)\times SO(l)$, so splitting $\Weyl_n$ by that group's Casimir block-diagonalises it, and \emph{each Casimir block carries exactly one Hessian eigenvalue}: the isotypic decomposition is the eigenspace decomposition, and the five rational families fitted earlier are its block eigenvalues.
+
+\begin{center}
+\begin{tabular}{@{}lll@{}}
+\toprule
+$n$ & block dimensions & $(6F-3\theta)/\theta$ on each \\
+\midrule
+$8$  & $1,16,54,148,81$        & $+3,\;0,\;-1,\;-3,\;-5$ \\
+$10$ & $1,25,28,100,420,196$   & $+3,\;0,\;-\tfrac34,\;-\tfrac32,\;-3,\;-\tfrac92$ \\
+$12$ & $1,36,40,225,936,400$   & $+3,\;0,\;-\tfrac35,\;-\tfrac95,\;-3,\;-\tfrac{21}5$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The structure is legible: $+3$ sits on the one-dimensional block spanned by $W^{*}$ itself; the zero eigenvalue sits on a block of dimension $k^2$, the orbit tangent $\R^k\otimes\R^k$; the negatives are rationals with denominator $k-1$.
+
+\textbf{The block statement is derived, not read off the table.} That each Casimir block carries exactly one Hessian eigenvalue follows from a Casimir master formula in which every block-dependence cancels (\S\ref{sec:nondeg}), and two independent reviewers rebuilt it from definitions. \emph{What does not survive is the reading that the closed forms in $k$ were themselves a derivation}: matching them against tabulated rows is a fit, and a fit is blind to families absent from the table. Two such families exist here, and only the first Bianchi identity kills them.
+
+\subsection{Why the diagonal case does not generalize by itself}
+
+The obvious move (diagonalize $W$ spectrally and invoke the granted result) fails because the two notions of ``diagonal'' are different objects. The granted result needs diagonality in \emph{coordinate $2$-planes} $e_i\wedge e_j$, which is what makes the $\so(n)$ structure constants sparse, whereas a generic spectral eigenbasis of $W$ on $\Lambda^2\R^n$ is essentially never of that form. Three standard reduction tools were checked and found insufficient: sign-flip averaging onto the diagonal locus is norm-decreasing and $P$ is a cubic, so no Jensen-type inequality transfers; Palais's principle of symmetric criticality proves $W^{*}$ critical for free but gives necessity, not maximality; and the B\"ohm--Wilking cone-invariance route arrives at Problem~P rather than reducing it, because its static form is the criterion \eqref{eq:criterion}, whose pure-Weyl slice at $a=0$ is exactly the statement being proved (\S\ref{sec:cone}).
+
+Moreover, universal lifting is \emph{false}. Fox's $\mathcal S^4(\alpha)$, the presumed global maximizer for $4\le n\le11$, is provably never coordinate-diagonalizable in any orthonormal frame, by three independent arguments (a Pl\"ucker rank argument on decomposable bivectors, an exact off-diagonal residual floor of $1/\sqrt2$ under global optimization, and a representation-theoretic argument on unitary isotropy), and global polarity fails by dimension count already at $n=4$.
+
+% ==============================================================================

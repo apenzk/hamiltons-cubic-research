@@ -1,0 +1,22 @@
+=== the REVISED asserts (both must be 1) under six schemes ===
+scheme                                  n=5 ind/dep    n=6 ind/dep    n=7 ind/dep  passes?
+honest   F_ij                              1/1           1/1           1/1        YES
+indicator [F_ij != 0]                      1/1           1/1           1/1        YES
+entrywise square F_ij^2                    1/1           1/1           1/1        YES
+one contraction too many (F.F)_ij          1/1           1/1           1/1        YES
+constant 1 -- reads nothing                1/1           1/1           1/1        YES
+constant 0                                 0/0           0/0           0/0        no
+
+=== why: the second column is now IDENTICALLY ZERO ===
+   (0,1):  (W.W)_ij = -173/144    |W|^2 delta_ij = 0
+   (1,2):  (W.W)_ij = 145/288    |W|^2 delta_ij = 0
+   (0,2):  (W.W)_ij = -631/288    |W|^2 delta_ij = 0
+  both asserts are now collapses: one column of zeros, and one pair of
+  identical columns.  Nothing in the revised validation exhibits the test
+  CORRECTLY REPORTING INDEPENDENCE, so a scheme that always answers 'rank
+  1' passes it -- the constant scheme above does exactly that.
+
+=== claim 4 against the NEW components ===
+  the adversarial construction of c4_defeat_comps.py is unchanged in form:
+  3 components x 4 samples = 12 linear conditions on a 3n-member covariant
+  family, so a nonzero covariant vanishing on all of them still exists.

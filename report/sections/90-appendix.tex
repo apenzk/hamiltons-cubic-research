@@ -1,0 +1,414 @@
+\appendix
+\section*{Appendix: work that is off the path, and why}
+\addcontentsline{toc}{section}{Appendix: work that is off the path, and why}
+
+Three bodies of work below are \textbf{not} steps of the argument of \S\ref{sec:shape}. Each was pursued for a reason that was sound when it was taken, and each is now off the path for a reason worth stating, because the reasons are themselves results: two say something about what \emph{cannot} work, and the third produced theorems that stand without feeding the endgame.
+
+\begin{center}
+\begin{tabular}{@{}p{0.17\linewidth}p{0.38\linewidth}p{0.39\linewidth}@{}}
+\toprule
+& \textbf{Why it was done} & \textbf{Why it is off the path} \\
+\midrule
+\S\ref{app:census} \newline The census & A maximization conjecture is not worth attacking until the named candidates have been checked, and it had to be established that the $\CP^2$ rival is real rather than an artifact & Fence post F9: the critical set is exponentially large and mostly symmetry-free, so no census can close the problem. The residual bound of \S\ref{sec:outside} is a supremum over a set no enumeration reaches \\
+\addlinespace
+\S\ref{app:C} \newline The lifted chain & The granted diagonal proof is the only machinery that has ever produced a sharp bound of this shape, so what it costs off the diagonal locus had to be answered & It goes vacuous once the defect exceeds roughly $10^{-3}$, and the population it must control (symmetry-free critical points at high value) is exactly the one no method here can construct or search \\
+\addlinespace
+\S\ref{app:D} \newline Localization & The published localization theorem is the natural route from the critical-point statement to the general one, and its inner half came off cleanly and unconditionally & The reduction it delivers is the removal of a criticality hypothesis, which compactness supplies for free (\S\ref{sec:shape}), and its constant is the sphere-product value, so as an input to Conjecture~A it is circular \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+They are kept rather than deleted because the eliminations in \S\ref{app:census} are what make the conjecture credible enough to attack; the obstruction named in \S\ref{app:C} constrains every other route, including the live one; and \S\ref{app:D} holds the strongest unconditional theorem in the programme together with a repair of a gap in the published literature.
+
+% ------------------------------------------------------------------
+\section{The census of named rivals}\label{app:census}
+
+\emph{Why it was done.} Several of these families had never been connected to Hamilton's $Q$ at all (the quaternionic-K\"ahler case is new ground rather than a gap in searching), and until they were checked, the conjecture had no evidence behind it beyond two named points.
+
+\emph{Why it is off the path.} Fence post F9. Twenty unpenalized restarts at $n=6$ gave seventeen distinct critical values, every one with trivial stabilizer, so the named families are the high-value tip of a dense thicket and no enumeration of them bounds anything. One structural fact does reach the main line, and it is in Lemma~4's proof: reaching $P\ge\thstar$ would force an isotropy algebra large enough to contain a unitary factor, which reintroduces the defect that disqualifies it.
+
+\begin{Lem}{4}[A generator for critical points]
+Let $K\subseteq SO(n)$ be a (possibly disconnected) subgroup with $(\Lambda^4\R^n)^K=0$ and $\dim\Weyl_n^K=1$. Then the $K$-invariant $W$ is automatically a critical point, by equivariance of $Q$. Irreducibility is not required. Every member has exactly two eigenvalues, $W\propto\Pi_{\hh}-\tfrac rN\Id$ with $r=\dim\hh$ and $N=\binom n2$, whence
+\[
+P/\|W\|^3=\tfrac2n\sqrt{rN/(N-r)} .
+\]
+\end{Lem}
+
+\begin{proof}
+$Q$ is $O(n)$-equivariant, $Q(gWg^{\mathsf T})=gQ(W)g^{\mathsf T}$, so it maps $\Weyl_n^K$ into itself. If that space is one-dimensional and spanned by $W$, then $Q(W)$ is a multiple of $W$: criticality, with no computation at any example. The hypothesis $(\Lambda^4\R^n)^K=0$ is what places $W$ in $\Weyl_n$ to begin with: $\Alt(W)$ is a $K$-invariant $4$-form, hence zero.
+
+For the closed form, note that such a $W$ has exactly two eigenvalues, so $W=c(\Pi_{\hh}-\tfrac rN\Id)$ with $r=\dim\hh$, $N=\binom n2$, and $c=\sqrt{N/(r(N-r))}$ by unit norm. The eigenvalue equation then splits into two scalar equations, which the structure-constant identities of Lemma~23 solve, giving $\theta=\tfrac2n\sqrt{rN/(N-r)}$.
+\end{proof}
+
+\begin{certificate}
+The closed form was checked against held-out spaces it was never fitted to, one of which ($SU(2)^3$ at $n=9$) turns out to be exactly the three-block sphere product, tying the family back into the catalogue. Every member was screened for unit norm, Ricci-flatness, $\Alt(W)=0$ and criticality residual at $10^{-16}$.
+\end{certificate}
+
+Bi-invariant metrics on compact simple Lie groups and isotropy-irreducible symmetric spaces with $b_4=0$ both qualify. The closed form was checked against held-out spaces it was never fitted to, one of which ($SU(2)^3$ at $n=9$) turns out to be exactly the three-block sphere product, tying the family back into the catalogue. The family's maximum is the balanced split $\so(n/2)\oplus\so(n/2)$, at $\theta_0(n)$, which exceeds $\thstar$ for every $n\ge12$, so the family is not bounded below $\thstar$ at all. The figure $0.8367$ that stood here bounds only the simple-isotropy members the record tabulates, and not even those: $\spin(9)\subset\so(16)$, the isotropy of the Cayley plane, gives $0.896421$. The structural argument that stood here (that a subalgebra beyond $0.44\binom n2$ forces a unitary factor, reintroducing the invariant $4$-form and destroying the hypothesis) fails at the balanced split itself, which exceeds that threshold with no unitary factor. Large isotropy does make $P$ large, but it does not disqualify the maximiser.
+
+\begin{Lem}{5}[Rival critical-point families]
+Every named family of critical points is eliminated on value: multi-block sphere products with three or more factors; Fox's $5$-dimensional hyper-K\"ahler subalgebra and its $r\ge8$ extension; the quaternionic-K\"ahler operators on $\HP^m$; the strongly-regular-graph operators of \cite{dgk2022}; the isotropy-generated family of Lemma~4; $SO(2m)/U(m)$; and the complex Grassmannians. The highest value among them is $\theta(\HP^2)=\sqrt{56/45}\approx1.11555$, against $\thstar\approx1.2247$. The figure $0.8367$ that stood here bounds only the simple-isotropy members the record tabulates (and $\spin(9)\subset\so(16)$ gives $0.896421$), and $\HP^2$ sits in this list far above both. The elimination survives, with a margin of $0.109$ rather than $0.388$.
+\end{Lem}
+
+\begin{certificate}
+Each family was constructed and evaluated by at least two independently written pipelines, and the $Q$-machinery was validated against the coordinate-diagonal formula at $<10^{-15}$ before being trusted on anything else. The quaternionic-K\"ahler case used three constructions (one derived purely from the $Sp(1)$-invariance defining property with no formula lookup, one from the published Ishihara/Besse curvature formula, one cross-checked against Petersen--Wink \cite{pw2021}), agreeing to full double precision. For the strongly regular graphs the elimination rests on a sweep over all combinatorially valid $(n,r,\lambda,\mu)$ up to $n=200$, which is exhaustive in that range and not beyond it. The closed form written here, $\theta=\lambda-\mu+1$, contradicts Lemma~74: at the octahedron it returns $-1$ against Lemma~74's $0.645497$. Whatever normalisation it belongs to is not this document's, so the elimination in this class is evidence up to $n=200$ rather than a closed form. For Fox's hyper-K\"ahler subalgebras, an abstract classification of idempotents and an explicit tensor construction agree to six significant digits and return the same three idempotent magnitudes at $r=8$ and $r=12$.
+\end{certificate}
+
+Selected values, each confirmed by at least two independent constructions:
+\begin{center}
+\begin{tabular}{@{}lll@{}}
+\toprule
+Family & Value(s) & Verdict \\
+\midrule
+$\HP^m$ quaternionic-K\"ahler & $1.115547$ ($n{=}8$), $0.852944$ ($n{=}12$), $0.745356$ ($n{=}16$) & below both named points \\
+Fox $\mathbb B$, $r=4$ and $r\ge8$ & all collapse onto $\mathcal S^4(\alpha)$-orbits at $\thstar$ & no new competitor \\
+Strongly regular graphs & largest primitive value $0.417$ (sweep to $n=200$) & no new competitor \\
+Isotropy-generated (Lemma~4) & ceiling $0.8367$ & no new competitor \\
+$\CP^m$ family & $\theta^2=\tfrac{(m+1)(2m-1)}{3m(m-1)}$, decreasing to $2/3$ & peaks at the rival \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Two structural facts came out of this census and are used later. First, no prior literature connects Hamilton's $Q$ or Fox's algebra to quaternionic-K\"ahler geometry. That link is new ground here rather than a gap in searching. Second, the $\HP^2$ operator at $n=8$ is a \emph{strict local maximum} with nonzero defect:
+
+\begin{Obs}{9}[The high ground has more than one peak]
+At $\HP^2$ the second variation is negative on the whole tangent space apart from orbit directions, at $n=8$ and $n=12$, while $\delta^2=0.031746\ne0$. So ``defective $\Rightarrow$ saddle'' is false, and any argument excluding defective rivals must be sensitive to the \emph{value} and not to the defect alone.
+
+\begin{certificate}
+Second variation diagonalized on the full tangent space at $\HP^2$ ($n=8$, and its Ricci-flat padding into $n=12$): negative everywhere except along the orbit, with $\delta^2$ read off the same operator. The same computation shows the Ricci-flat K\"ahler family's $m=3$ member is a \emph{third-order} saddle (second variation negative semidefinite, but the value rising cubically along the extra flat directions), and its $m=4$ member an ordinary saddle, so the rival is that family's only local maximum.
+\end{certificate}
+\end{Obs}
+
+\begin{Conj}{6}[The zero-defect set hides no rival]
+The set $\{\delta^2=0\}$ has codimension $\binom n4$, far larger than the diagonal orbit, and does contain non-diagonalizable critical points. All of them sit low. For the symmetric family this is proven, by the competition between isotropy size and defect described under Lemma~4. For the symmetry-free remainder it is tested rather than proven: high-value seeded searches return to the diagonal maximizers, and at $n=12$ produced no non-diagonalizable zero-defect critical point at all.
+\end{Conj}
+
+
+% ------------------------------------------------------------------
+\section{The lifted chain, and the defect-penalty inequality}\label{app:C}
+
+\emph{Why it was done.} The granted diagonal proof is the only machinery that has ever produced a sharp bound of this shape, so what it costs off the diagonal locus is worth knowing exactly, and the answer is a single, exactly-priced term.
+
+\emph{Why it is off the path.} The assembled chain goes vacuous once the defect exceeds roughly $10^{-3}$, so tightening it cannot reach the core, and the population it would have to control is the symmetry-free high-value one that no construction produces and no search finds. Two things from it do reach the main line: Lemma~15 names the obstruction (the Bianchi defect, constant exactly $6$, no cross-term), which every other route has to respect, and Conjecture~16 remains the one inequality that would settle the problem outright if a global mechanism for it were found.
+
+\subsection{The obstruction, identified exactly}
+
+\begin{Lem}{15}[What stops the diagonal proof from lifting]
+J\"ager's argument never forms either cubic term: it transfers the eigenvalue equation to the entrywise absolute value $|W|$ and contracts, collapsing cubic data into quadratic data about row sums. Every step of that transfer survives off the diagonal locus, using spectral rather than coordinate projections, with exactly one exception: $|W|$ and the spectral parts $W_\pm$ do not satisfy the first Bianchi identity, and the identity the opening step rests on is Bianchi-dependent. The exact defect is
+\[
+\scal\big(R^2+R^{\#}\big)=\|\Ric(R)\|^2+6\,\|\Alt(R)\|^2,
+\]
+with the constant exactly $6$ in every dimension and no cross-term.
+\end{Lem}
+
+\begin{proof}
+The Ricci-level statement behind the displayed identity is that for \emph{every} symmetric $R$ on $\Lambda^2\R^n$,
+\[
+D(R)_{ij}:=\Ric(R^2+R^{\#})_{ij}-\sum_{k,l}\Ric(R)_{kl}\,T_R(k,i,l,j)\;=\;\tfrac32\sum_{k,l,m}\Alt(R)_{iklm}\,\Alt(R)_{jklm},
+\]
+so the correction is a \textbf{Gram matrix} and $D(R)\succeq0$ automatically. Taking the trace recovers the scalar identity with its constant exactly $6$ and no cross-term.
+
+We give the second of the identity's two proofs, which is the stronger one: it is a formal identity of index expressions, uses only the $S^2(\Lambda^2)$ symmetries, and is therefore valid verbatim in every dimension, with no first Bianchi identity and no stability or spanning-set argument anywhere.
+
+Set
+\[
+A_{ab}=\sum_{j,p,q}R_{ajpq}R_{bjpq},\qquad B_{ab}=\sum_{x,y,z}R_{axyz}R_{yxbz}.
+\]
+
+\emph{Step (i): $D=\tfrac12A-B$.} Expanding the two pieces of $Q$ at the Ricci level gives $\Ric(R^2)=\tfrac12A$ and $\Ric(R^{\#})=R.\Ric-B$. The $R.\Ric$ term is exactly the subtracted contraction in the definition of $D$, so it cancels and $D=\tfrac12A-B$.
+
+\emph{Step (ii): cyclic averaging on the last three slots.} Averaging $R_{a\,\cdot\,\cdot\,\cdot}R_{b\,\cdot\,\cdot\,\cdot}$ over the cyclic group acting on the last three indices produces
+\[
+3\,\mathrm{Gram}\big(\Alt R\big)=A+G_1+G_2 ,
+\]
+where $G_1,G_2$ are the two cyclically shifted pairings. This is the only place the antisymmetrisation $\Alt$ enters, and it enters as an average rather than as a projection identity.
+
+\emph{Step (iii): relabelling dummies.} Renaming summation indices gives $G_1=-B$ and transposing gives $G_2=G_1^{\mathsf T}$, while $B=B^{\mathsf T}$ by the pair symmetry of $R$. Hence $G_1+G_2=-2B$ and
+\[
+\tfrac32\,\mathrm{Gram}\big(\Alt R\big)=\tfrac12A-B=D . \qquad\square
+\]
+
+Taking the trace of the last display recovers the scalar identity $\scal(R^2+R^{\#})=\|\Ric(R)\|^2+6\|\Alt(R)\|^2$ as a corollary, which is what explains that identity's exactness.
+\end{proof}
+
+\begin{certificate}
+The three steps were machine-checked as they were written, at residuals $\le4.2\times10^{-14}$ at $n=5,6,7$. Independently: the constant fits as $1.500000000000$ with spread $\le5.8\times10^{-15}$ at $n=5,6,7,8$ across random symmetric, random positive semidefinite, and Weyl-plus-defect operators; $D\succeq0$ on $420$ operators with worst normalised minimum eigenvalue $-6.2\times10^{-15}$; $\tr D=6\|\Alt R\|^2$ exactly; and the whole identity was verified \emph{in exact rational arithmetic} on integer-valued operators at $n=5$ and $n=6$, every one of the $n^2$ entries equal on the nose, so the $3/2$ is exact rather than fitted.
+
+A second proof of the same identity, recorded for completeness: clear denominators, verify the polarized bilinear form in exact integer arithmetic on a spanning set at $n=4,5,6,7$ (all $35{,}827$ evaluation points identically zero), then extend to all $n$ by Weyl's first fundamental theorem (the difference is an $n$-independent combination of the $945$ pairings on $(\R^n)^{\otimes10}$) together with the second fundamental theorem in Brauer form (those pairings are independent at $n=5$). It carries two quoted steps that the argument above does not need.
+\end{certificate}
+
+Two consequences fix the role of the defect in everything downstream. Coordinate-diagonal operators have $\delta^2=0$ for three separate reasons: $\Alt$ lives on four \emph{distinct} indices where all three pairings vanish; $\phi\phi^{\mathsf T}$ is Bianchi exactly when $\phi$ is decomposable; and $\Alt(W_-)$ is a $\mathrm{Stab}(W)$-invariant $4$-form, so $\delta^2=0$ whenever $(\Lambda^4\R^n)^{\mathrm{Stab}(W)}=0$. The third is the strongest and explains the exclusions structurally: the rival has stabilizer containing $U(2)\times SO(n-4)$, which admits the invariant $\omega\wedge\omega$, and $\HP^2$ admits the Kraines form. And $J_4=0$ at every zero-defect point, since $|W|$ is Bianchi exactly when $\delta=0$, so the correction calculus of the whole lifted chain closes on $\delta^2$, the same scalar Conjecture~16 is written in.
+
+So the invariant master inequality carries an extra $+24\|\Alt(W_-)\|^2$, and that term is not a technicality: at Fox's $\mathcal S^4(\alpha)$ it is exactly what makes the inequality fail (by a factor of three at a genuine critical point), while the corrected version is saturated there. This is precisely how the rival escapes the diagonal argument.
+
+\subsection{The inequality the whole problem reduces to}
+
+\begin{Conj}{16}[The defect-penalty inequality]
+For $n\ge12$, on $\{\|W\|=1\}$,
+\[
+P(W)\;\le\;\theta_0(n)+\kappa_n\,\delta^2,\qquad \kappa_n=9\big(\thstar-\theta_0(n)\big),
+\]
+with $\delta^2=\|\Alt(W_-)\|^2$.
+\end{Conj}
+
+The shape is forced rather than fitted. $\kappa_n$ is pinned by requiring equality at the rival, whose defect is exactly $1/9$ in every ambient dimension. Equality then holds at \emph{both} named maximizers by construction, and $\kappa_n$ changes sign exactly at the crossover $n=6+2\sqrt7$, so the bound permits the rival above $\theta_0$ for $n\le11$ and penalizes all defect for $n\ge12$. If true it settles Conjecture~A outright (zero-defect points fall under it with no criticality hypothesis), and it is precisely the \emph{joint} bound on $\langle Q(W),W\rangle$ that fence post~2 shows is necessary.
+
+It has survived a full adversarial battery at $n=12$ and $n=14$: every catalogued critical point, random sampling, seeded gradient ascent of the penalized functional, and the ridge between the two equality points, which sags rather than bulges. The analogous interpolation statement for $n\le11$ is refuted by an explicit violation at $n=8$, but that refutation needs the penalty's other sign, so it leaves the $n\ge12$ claim untouched.
+
+\begin{Lem}{17}[First-order protection at the rival]
+For every $n\ge12$, the penalized functional cannot increase to first order at $W_{\CP^2}$ in any direction.
+\end{Lem}
+
+\begin{proof}
+\emph{Step 1: the structure at the rival, exactly.} Its spectrum on $\Lambda^2$ is $(2,-1,-1,0,\dots,0)/\sqrt6$, with $P=\thstar$ at criticality residual $4\times10^{-16}$ and $\Ric(W)=\Alt(W)=0$ identically. The defect carrier is a multiple of the Hodge form: for each self-dual $\hat\omega_i$ one has $\Alt(\hat\omega_i\hat\omega_i^{\mathsf T})=\tfrac16\star$, so
+\[
+\Alt(W_-)=a\,\star,\qquad a=\tfrac1{3\sqrt6},\qquad\text{hence}\qquad \delta^2=6a^2=\tfrac19 ,
+\]
+analytically rather than numerically, and at zero residual. This is where the $1/9$ that pins $\kappa_n$ comes from.
+
+\emph{Step 2: $\delta^2$ is not differentiable there, and the kink is the mechanism.} The spectrum has a kernel of dimension $N-3$, so a perturbation spills negative eigenvalue-slivers into it. A two-sided profile gives $\delta^2(t)\approx\tfrac19-c|t|$: the rival is a local \emph{maximizer} of the defect functional, and the tangential gradient that a smooth formula reports there is a subgradient artifact.
+
+\emph{Step 3: the one-sided derivative in closed form.} Writing the Daleckii--Krein divided differences of the spectral map across the eigenvalue blocks gives $0$ on $(+,+)$, $-1$ on $(-,-)$ and $(-,0)$, $-\tfrac13$ on $(+,-)$, $0$ on $(+,0)$, while the $(0,0)$ block contributes the kink itself. Since the anti-self-dual space satisfies $\Pi_{ASD}\subset\ker W$ and $\star=\Pi_{SD}-\Pi_{ASD}$, these assemble into
+\[
+d^{+}\delta^2(H)=-2a\,F(H),\qquad F(H)=H_{22}+H_{33}+2\tr\big(\Pi_{ASD}(P_0HP_0)_-\big),
+\]
+for every tangent direction $H$. Verified against one-sided finite differences on random, engineered-$B\prec0$, engineered-$B\succ0$, mixed and orbit-tangent directions, with worst error $3\times10^{-5}$ at the truncation level.
+
+\emph{Step 4: two structural constraints on a tangent direction.} Unit-norm tangency and the first Bianchi identity give $\langle H,\star\rangle=0$ and $2H_{11}=H_{22}+H_{33}$, whence
+\[
+H_{22}+H_{33}=\tfrac23\tr B,\qquad B:=\Pi_{ASD}H\Pi_{ASD},
+\]
+to residual $5\times10^{-16}$. This is the self-dual/anti-self-dual trace balance: the $4$-plane's diagonal entries cannot be chosen independently.
+
+\emph{Step 5: Jensen's trace inequality.} Write $B=B_+-B_-$ with $B_\pm\succeq0$ the positive and negative parts, both taken positive semidefinite. The remaining term of $F$ is convex in $H$, and the Hansen--Pedersen form of Jensen's trace inequality (applied with $f(x)=x_-$, convex with $f(0)=0$, along the isometry $\Pi_{ASD}\le P_0$) bounds it below in terms of $\tr B_-$. Combining with Step 4,
+\[
+F(H)\;\ge\;\tfrac23\tr B_++\tfrac13\tr B_-\;\ge\;0 ,
+\]
+both terms being traces of positive semidefinite operators. Since $\kappa_n<0$ exactly for $n>6+2\sqrt7$, this gives $d^{+}\Phi(H)\le0$ in every tangent direction, for every $n\ge12$. The inequality's margin was positive on all $800$ sampled directions.
+
+\emph{Step 6: below the crossover the same formula reverses.} For $n\le11$ one has $\kappa_n>0$, the identical formula makes the rival a local \emph{minimum} of $\Phi$ along those directions, and projected ascent at $n=8$ converts this into a genuine finite violation: $\Phi=1.149188$ against $\theta_0(8)=1.145644$, at a non-critical kink point with $P=1.221305$ and $\delta^2=0.101301$. The refutation therefore needs the penalty's other sign and leaves the $n\ge12$ claim untouched.
+\end{proof}
+
+\begin{remarkstar}
+Two points are built into the statement above, and both matter for what comes next. First, $\inf F=0$ and it is \emph{attained}: an earlier report of a floor $\min F=+0.15$ was a random-sampling artifact, since $F$ is convex and $1$-homogeneous on the tangent space, so projected subgradient descent certifies the sign globally and drives $F$ to $4\times10^{-5}$ at $n=8$ and $7\times10^{-5}$ at $n=12$. Second, the equality manifold $\{F=0\}$ is far larger than the orbit and the hyper-K\"ahler rotations: \emph{every} Weyl tensor of the complementary $\R^{n-4}$, zero-padded, has $F=0$ exactly: such an $H$ lies in $\ker W$, is orthogonal to $\Lambda^2\R^4$ so $B=0$, and has $H_{22}=H_{33}=0$. That is a linear subspace of dimension $\dim\Weyl_{n-4}$: $10$ at $n=8$ and $\mathbf{300}$ at $n=12$, against an orbit dimension of $34$. So the second-order argument that would complete Conjecture~16's sharpness has to control a $300$-dimensional flat, not a handful of symmetry directions. That flat is checked at second order and is safe by an $18\times$ margin, for a structural reason: complement-supported directions do not couple to the rival through $Q$ at all, so the full Hessian of $P$ acts there.
+\end{remarkstar}
+
+The equality cases are the rival's own orbit, its hyper-K\"ahler rotations, and (as an independent review of this work found) every Weyl tensor of the complementary $\R^{n-4}$, a large flat rather than a handful of symmetry directions. That flat is checked at second order and is safe by an $18\times$ margin, for a structural reason: complement-supported directions do not couple to the rival through $Q$ at all, so the full Hessian of $P$ acts there.
+
+At the rival the defect is non-smooth (its spectrum has a large kernel and perturbations spill negative eigenvalue-slivers into it), and the one-sided derivative obeys a closed formula whose nonnegativity reduces, via Jensen's trace inequality, to two structural facts: the first Bianchi identity forces a self-dual/anti-self-dual trace balance on the distinguished $4$-plane, and unit-norm tangency fixes the remaining diagonal entry against it. The mechanism deserves stating plainly: \emph{any perturbation that deepens the rival's negative eigenvalues must, to remain a curvature tensor, inject anti-self-dual mass into the kernel, and the kink prices that mass at exactly the rate the deepening gains.} Below the crossover the identical formula flips sign, reproducing the escape the numerics see there. The equality cases include a large flat (every Weyl tensor of the complementary $\R^{n-4}$, found by an independent review of this work), which is checked at second order and is safe by an $18\times$ margin, for the structural reason that complement-supported directions do not couple to the rival through $Q$ at all. What remains is second-order: the mixed flat directions need a Hessian comparison, verified numerically and not yet proven.
+
+\subsection{The lifted chain, and the dichotomy it produces}
+
+\begin{Lem}{18}[The middle chapters, lifted with the defect cost quantified]
+Spectral compressions of the criticality equation turn the workhorse inequality of J\"ager's \S3.3 into an \emph{exact identity} holding at every critical point in every frame. Its two departures from the diagonal case are pinned: the Bianchi correction is a positive-semidefinite Gram form in $\Alt(R)$ with universal constant $\tfrac32$, costing at most $24\|\Alt(W_-)\|^2\lambda_{\max}(\Ric(|W|))$ (the same defect scalar Conjecture~16 is written in, saturated exactly by the rival), and the operator positivity his proof invokes, false off the diagonal locus, is needed only through one scalar contraction whose diagonal part is proven nonnegative and whose cross term provably vanishes at every named critical point, by an isotropy argument forcing the relevant operators to commute. \S\S3.4--3.5 then lift at no cost.
+
+Granting the cross-term bound off the class where it is proven, the chain gives: \textbf{every critical point clearing the threshold has either scalar curvature at least $(n+1)\tilde\theta_0(n)$, or defect bounded below by an explicit constant}, computed at $n=12$ as $c(12)=1.0008\times10^{-3}$, with proven constants.
+\end{Lem}
+
+\begin{proof}
+\emph{The master identity, in four lines.} With $\Ric:=\Ric(|W|)$, $r=\|\Ric\|$, $S=\Ric/r$ and J\"ager's own $e$-decomposition $|W|=\sqrt{1-e^2}\,\Ric\wedge\Ric/\|\Ric\wedge\Ric\|+E$, the master relation at every critical point is an \emph{identity}:
+\[
+\theta r^2=\sqrt2\,r^2\sqrt{1-\tr S^4}\sqrt{1-e^2}\;-\;2\langle\Ric(W_-^2),\Ric\rangle\;+\;J_4\;-\;J_5 ,
+\]
+with $J_4=\langle D(|W|),\Ric\rangle$ the Bianchi correction of Lemma~15 and $J_5=\langle\Ric(X_{\mathrm{inv}}),\Ric\rangle$, $X_{\mathrm{inv}}=|W|^{\#}-P_+W^{\#}P_++P_-W^{\#}P_-$. Every term is frame-invariant, so this is J\"ager's \S3.3 skeleton valid off the diagonal locus with no hypothesis beyond criticality. His diagonal case is exactly $J_4=0$, $J_5\ge0$.
+
+The derivation is four lines. The spectral compressions of criticality give $\theta W_\pm$ blockwise, hence
+\[
+\theta|W|=\big(|W|^2+|W|^{\#}\big)-2W_-^2-X_{\mathrm{inv}} .
+\]
+Pair this with $\Ric$. Two facts finish it: $\langle|W|.\Ric,\Ric\rangle=\langle|W|,\Ric\wedge\Ric\rangle$, so the first term is exactly $\langle|W|,\Ric\wedge\Ric\rangle$; and $\|\Ric\wedge\Ric\|=\sqrt2\,r^2\sqrt{1-\tr S^4}$. The factor $\sqrt{1-e^2}$ is then the cosine $c=\langle|W|,\widehat{\Ric\wedge\Ric}\rangle$, positive at every point tested. Both facts were verified to $10^{-15}$, and the assembled identity holds at $14$ structurally diverse critical points (sphere products at $n=6,8,12,14$ in the coordinate frame and under random $O(n)$ rotations, balanced and unbalanced; the rival at $n=6,8,12$; the $SU(3)$ bi-invariant, rotated and zero-padded), with worst absolute residual $1.4\times10^{-14}$ and worst relative residual $4.1\times10^{-16}$. At two generic symmetry-free critical points the identity residual tracks the criticality residual ($3\times10^{-8}$ at criticality $6\times10^{-8}$), and at non-critical Weyl tensors it \emph{fails} (residual $-0.54$ at $n=6$), so criticality is load-bearing here too.
+
+Since $D\succeq0$ is a Gram matrix, $J_4\le\lambda_{\max}(\Ric(|W|))\cdot\tr D(|W|)=24\,\delta^2\lambda_{\max}(\Ric(|W|))$, with equality exactly when $\Ric$ is $\lambda_{\max}$ times the identity on $D$'s support, which is the case at the rival, and explains $\HP^2$'s ratio.
+
+\emph{The $J_5$ term, decomposed.} Everything here follows from one clean identity,
+\[
+|W|^{\#}=W^{\#}+4\,W_+\#W_- ,
+\]
+verified at zero residual. It gives $X_{\mathrm{inv}}=|W|^{\#}+(W-\theta)|W|$ in closed form and makes the three spectral-diagonal blocks one-liners:
+\[
+P_+X_{\mathrm{inv}}P_+=4P_+(W_+\#W_-)P_+,\qquad
+P_-X_{\mathrm{inv}}P_-=2P_-\big(W_+^{\#}+W_-^{\#}\big)P_-,\qquad
+P_0X_{\mathrm{inv}}P_0=P_0|W|^{\#}P_0 ,
+\]
+each positive semidefinite by the $\#$-positivity calculus of Lemma~7 (worst measured minimum eigenvalue $-5.4\times10^{-16}$). This \emph{proves} the surviving scalar statement $\scal(X_{\mathrm{inv}})\ge0$ and localises any failure of $X_{\mathrm{inv}}\succeq0$ in the cross-blocks.
+
+Next, $J_5=\langle X_{\mathrm{inv}},H\rangle$ with $H=\Ric^{*}(\Ric(|W|))$, and $H\succeq0$ is proven outright: for a bivector $\varphi$ with antisymmetric matrix $\Phi$,
+\[
+\langle\varphi,H\varphi\rangle=\tr\big(h\,\Phi\Phi^{\top}\big)\ge0 .
+\]
+Hence the diagonal part
+\[
+J_5^{\mathrm{diag}}=\sum_b\big\langle P_bX_{\mathrm{inv}}P_b,\;P_bHP_b\big\rangle\;\ge\;0
+\]
+is proven. The cross part vanishes identically whenever $[H,W]=0$, and an isotropy argument forces the relevant operators to commute at every named critical point.
+\end{proof}
+
+\paragraph{What is granted, and how big it is.} The open ingredient is $|\langle X_{\mathrm{cross}},H_{\mathrm{cross}}\rangle|\le J_5^{\mathrm{diag}}$ off the commuting class. At twenty points including all adversarial ones the ratio is at most $2.9\times10^{-2}$, and at six generic saddle points at $n=6$ it is at most $0.27\%$ of the diagonal part. The equality-case alignment is already exact: at every sharp point both sides vanish together. On the multi-block family the grant is now \emph{proven} in closed form, but (as \hyperref[sec:ungraded]{the ungraded half} records) below the region where the chain invokes it.
+
+\begin{Lem}{19}[The rest lifts, and the top orbits are rigid]
+The two inequalities the middle chapters rest on are proven off the diagonal locus, and more cleanly than expected: the working estimate needs nothing about its operator argument beyond positive semidefiniteness and the value of its Ricci contraction: the first Bianchi identity never enters, and a lemma whose original argument was genuinely diagonal-specific is replaced outright by an unconditional one, sharp at a family not previously noticed here (the critical operator of a product of $n/2$ two-spheres). The endgame section is frame-free until its final steps, so the defect enters the whole lifted argument at exactly one place, and that place is priced. At every high-value critical orbit the degenerate directions of the second variation are exactly the orbit directions, established in exact integer arithmetic, so each such orbit is nondegenerate and isolated: nothing branches off it.
+\end{Lem}
+
+\begin{proof}
+The load-bearing step is the lifted form of J\"ager's Lemma 3.4.6, and it holds for \textbf{every} $R\succeq0$ on $\Lambda^2\R^n$, Bianchi or not. In an orthonormal eigenbasis of $\Ric=\Ric(R)$, both $\Ric\wedge\Ric$ and $\Ric\wedge2\,\mathrm{id}$ are diagonal on the induced basis of $\Lambda^2$, hence so is their product $D$, and
+\[
+\tr(RD)=\sum_{i<j}R_{ijij}D_{ijij},
+\]
+so only $R$'s \emph{diagonal} entries in that basis enter and no structural property of $R$ has been used. Positive semidefiniteness gives $R_{ijij}=\langle R(b_i\wedge b_j),b_i\wedge b_j\rangle\ge0$ in any orthonormal basis, so J\"ager's componentwise two-variable bound may be multiplied through, yielding $\ge\langle R,\tilde R\rangle$. His computation that $\tilde R$ has vanishing Weyl part is pure scalar algebra. And under the orthogonal splitting $S^2(\Lambda^2)=\mathcal W\oplus\Ric_0\text{-type}\oplus\text{scalar}\oplus\Lambda^4$, both $\mathcal W$ and $\Lambda^4$ are annihilated by $\Ric$, so $\langle R,\tilde R\rangle$ is determined by $\Ric(R)$ exactly as in the Bianchi case. \emph{The only inputs are $R\succeq0$ and the value of $\Ric(R)$.}
+
+\emph{The statement reduces to a scalar inequality, and positive semidefiniteness is stronger than it needs.} Since the left side sees only $\operatorname{diag}(R)$ in the $\Ric$-eigenbasis, the right side only $\Ric(R)$, and $\lambda_i=\sum_{j\ne i}R_{(ij)(ij)}$ automatically, the claim ``for all $R\succeq0$'' is \emph{equivalent} to a statement about hollow nonnegative matrices: for every hollow symmetric $d\ge0$ with row sums $\lambda$,
+\[
+\sum_{i<j}d_{ij}\lambda_i\lambda_j(\lambda_i+\lambda_j)\;\ge\;n\bar\lambda^4+\bar\lambda^2(2-\epsilon)\|\lambda_0\|^2-\bar\lambda(1+\epsilon)\sum_i\lambda_{0,i}^3 .
+\]
+That equivalence holds to $3.6\times10^{-15}$ against the operator formula, and it makes the test far sharper than sampling positive semidefinite operators: adversarial minimisation over $d\ge0$ at $n=4,5,6,8,12$ returns minimum margin exactly $0$, attained only at $d\equiv\mathbf1$, i.e.\ $R=\Id$, with a strictly positive Hessian there. The hypothesis $\epsilon\ge(\sqrt{10}-3)/2$ does not bind: the same minimisation at $\epsilon=0.05$ and at $\epsilon=0$ still returns minimum margin $0$, and the Hessian at $d\equiv\mathbf1$ stays strictly positive down to $\epsilon=-0.5$. So $\epsilon_0$ is a sufficient condition inherited from J\"ager's route, not a necessary one: slack the \S3.5 margins could in principle spend.
+
+Lemma 3.4.3 is then the corollary $R:=2W_-$, which is positive semidefinite with $\Ric(2W_-)=\Ric(|W|-W)=\Ric(|W|)$ because $\Ric(W)=0$ for a Weyl operator. Lemma 3.4.8 is pure trace algebra plus Cauchy--Schwarz: $W-|W|=-2W_-$ gives $T_2=\tr(WEK)-\tr(|W|EK)$, the first term is $\le e\|WK\|$, and substituting the $e$-decomposition in the second produces exactly $X-\langle K,E^2\rangle$. No Bianchi identity, diagonality or positivity is used anywhere in either.
+\end{proof}
+
+A textual audit of the thesis's \S3.5 shows the only occurrences of $W$ in the entire section are the two $-2\langle\Ric(W_-^2),\Ric\rangle$ terms inside Corollary 3.5.1's proof (precisely the term already lifted), while Lemmas 3.5.2--3.5.6 are scalar analysis on the eigenvalues of $\Ric_0(|W|)$, valid verbatim in any frame. In the thesis's \S3.6 the setup, Lemma 3.6.2 and Lemma 3.6.3 lift verbatim, and the defect re-enters at exactly one place, Lemma 3.6.4's use of Lemma 3.2.2. Hence the single additive penalty quoted in Lemma~18 is the whole cost of running the chain off the diagonal locus.
+
+The rigidity half is the nondegeneracy of Lemma~27, applied at the rival and at every sphere pair in the dimensions that matter.
+
+That reshapes what is missing into a localization statement, \emph{every critical point at or above the rival's value lies close to one of these rigid orbits}, which the rigidity then finishes. This is the same shape as the localization strategy's Theorem~4.19, which is why the two strategies converge.
+
+Two neighbouring routes are closed rather than untried. General finiteness arguments for critical values carry constants far too large to say anything in a fixed dimension. And the lifted chain goes vacuous once the defect exceeds roughly a thousandth, so tightening it cannot reach the core. Running it quantitatively also measures how sharp the closing comparison must be: the rival forces any closing bound into a \textbf{window of width $0.011$ at $n=12$}, so nothing lossy will finish it.
+
+
+% ------------------------------------------------------------------
+\section{Localization around the rival's orbit}\label{app:D}
+
+\emph{Why it was done.} The published localization theorem splits the unit sphere around $SO(n)\cdot W_{\CP^2}$ and controls the outside, which is the natural route from the critical-point statement to the general one, and its inner half came off cleanly.
+
+\emph{Why it is off the path.} What that reduction buys is the removal of a criticality hypothesis, and compactness supplies exactly that for free (\S\ref{sec:shape}), so the extension work was removing a hypothesis the argument never needed. Its remaining branch is conditional on the sphere-product value, which is the conjecture, so it cannot be an input to it. The rival's orbit is in any case now excluded from the residual by the eigenvalue-count argument of \S\ref{sec:outside}, which needs none of this.
+
+\emph{Why it is kept.} Lemma~20 is unconditional, independently audited, and the strongest single statement in the programme about the whole sphere rather than about critical points. Lemma~22 repairs an estimate the published source states and records that it could not supply. Both are worth reporting on their own account.
+
+\subsection{What the literature supplies, and with what hypothesis}
+
+Nienhaus \cite{nienhaus2023} Theorem~4.19 removes the criticality hypothesis outside a tubular neighbourhood of $SO(n)\cdot W_{\CP^2}$, for $10\le n\le11$. \textbf{It is conditional on Conjecture~A itself.} Its proof splits on the limit of the gradient flow, and the second case reads verbatim: \emph{``2nd case. $W(t_0)\notin SO(n).W_{\CP^2}$: Then we find that $P(W)\le P(W(t_0))\le P(W^{\mathrm{crit}}_{\mathrm{sym}})$ \textbf{by Conjecture~A}''}, where his Conjecture~A is the critical-point form of the statement. So 4.19's content is a localization \emph{reduction}: it converts the critical-point statement into the general statement outside the tube. An earlier record in this programme that treated it as a free unconditional bound was wrong and is corrected here.
+
+Two halves therefore have to be supplied: the tube itself, and the extension of the reduction past $n=11$.
+
+\subsection{The tube, unconditionally}
+
+\begin{Lem}{20}[No maximizer lies near the rival's orbit]
+For every $n\ge12$, with no parity restriction, no maximizer of $P$ on $\Weyl^1_n$ lies within angular distance $0.5748$ of $SO(n)\cdot W_{\CP^2}$.
+\end{Lem}
+
+\begin{proof}
+The unit sphere of $\Weyl_n$ is compact, so $m:=\sqrt{2/3}\max P$ is attained, at some $W^{*}$. Suppose $\varphi:=d\big(W^{*},SO(n).W_{\CP^2}\big)\le0.5748$. Since $P$ is invariant under conjugation, rotate so that the nearest orbit point is $u=W_{\CP^2}$, and write $W^{*}=\cos\varphi\,u+\sin\varphi\,V$. Then $V$ is a unit vector orthogonal to $u$ and, by the first-variation condition for a nearest point on an orbit, orthogonal to $T_u\big(SO(n).u\big)$. Because $Q(u)=\thstar u$ gives $T(u,u,V)=\thstar\langle u,V\rangle=0$, the cubic expansion is exact with no linear term:
+\[
+m=\cos^3\varphi+3\cos\varphi\sin^2\varphi\,\alpha+\sin^3\varphi\,\gamma_V,\qquad
+\alpha=\sqrt{\tfrac23}\langle F_uV,V\rangle,\quad \gamma_V=\sqrt{\tfrac23}P(V).
+\]
+The largest eigenvalue of $F_u$ on $u^\perp\cap T_u(SO(n).u)^\perp$ is $\tfrac13\thstar$, so $\alpha\le1/3$ (Lemma~21 below, which also removes this step's dependence on any hypothesis about isotypic multiplicities). And $\gamma_V\le m$, because $V$ is itself a unit Weyl operator and $m$ is the maximum over all of them. Substituting both and using $\cos^3\varphi+\cos\varphi\sin^2\varphi=\cos\varphi$,
+\[
+m\;\le\;\cos\varphi+m\sin^3\varphi,\qquad\text{i.e.}\qquad m\;\le\;\psi(\varphi):=\frac{\cos\varphi}{1-\sin^3\varphi}.
+\]
+On $[0,0.5748]$ one has $\psi\le1$. With $s=\sin\varphi$, both $\cos\varphi$ and $1-s^3$ are positive, so $\psi\le1$ is $s^2(1-s)(1-s-s^2-s^3)\ge0$, that is $s\le s^*$ with $s^*$ the real root of $s^3+s^2+s=1$. And $\sin(0.5748)\le x-\tfrac{x^3}6+\tfrac{x^5}{120}\big|_{x=0.5748}<0.543672<0.5436890<s^*$, the last bound kernel-checked. $\psi$ is \emph{not} monotone there: it dips below $1$ and returns to $1$ at $\varphi=\arcsin s^*$. Hence $m\le1$, i.e.\ $\max P\le\thstar$. But a unit Weyl operator with $P>\thstar$ exists at every $n\ge12$: the balanced sphere product, with $P=\theta_0(n)$, at even $n$, and the best split, with $P^2=\frac{2(n-1)(n-3)}{(n-2)(n+1)}>\tfrac32$, at odd $n\ge13$. That is a contradiction. The degenerate branch $\varphi=0$ is covered by the same contradiction.
+\end{proof}
+
+Three features of this argument are worth isolating.
+
+\emph{The contradiction is with the value, not the location.} Nothing is assumed about where the sphere product sits.
+
+\emph{The bootstrap is what removes the dimension dependence.} Nienhaus's Theorem~4.17 bounds the analogous quantity using the a priori cap $P\le\thstar$, available only while $W_{\CP^2}$ is the global maximizer, i.e.\ only for $n\le11$. Using the attained maximum $m$ as its own cap is legitimate and removes the dimension dependence entirely. Run at $n=10$ the argument has no contradiction to draw and simply returns $\max P\le\thstar$ (the correct answer there), so it switches over exactly at $n=6+2\sqrt7$ rather than at a fitted constant. Below the crossover the same machinery yields an unconditional dichotomy: for $8\le n\le11$, either $\max P\le\thstar$, or every maximizer sits farther than $0.5748$ from the rival's orbit.
+
+\emph{The radius is more than double the largest published $\gamma_n$}, and the lemma is far from sharp: a fixed-$\varphi$ sweep over the full $1603$-dimensional complement at $n=12$ gives $\max f=0.9147$ at $\varphi=0.5748$ against $\psi=0.99999$. The reason is structural: $\alpha$ and $\gamma$ trade off against each other, so the worst case the proof guards against ($\alpha=1/3$ together with $\gamma$ at its ceiling) is not realisable on any single $V$.
+
+\paragraph{Audit.} Lemma~20 passed an independent adversarial rebuild from definitions (structure constants by literal commutators, $\#$ validated against Hamilton's diagonal formula, the Weyl basis as $\mathrm{Bianchi}\cap\mathrm{Ricci\text{-}flat}$), with the kernel identity $\ker(6F_u-3\thstar)=T_u(SO(n).u)$ of dimension $4n-14$ confirmed \emph{exactly} over a finite field at $n=6,8,10$. Four corrections were applied and are incorporated above: Theorem~4.14 has cases (a)--(g) and the seventh eigenvalue $-\thstar$ is case (g) rather than an omission; the claim must be that Nienhaus's \emph{proof} does not extend, never that his theorem fails; $\psi$ is not monotone; and the parity restriction is unnecessary, since odd $n\ge13$ also clears $\thstar$ ($1.248376$ at $n=13$, $1.270978$ at $n=15$).
+
+\subsection{The eigenvalue input, made dimension-free}
+
+\begin{Lem}{21}[$\alpha\le1/3$ is structural]
+The bound $\alpha\le\tfrac13$ holds in every dimension in the stable range, by a fixed finite computation on four multiplicity spaces, with \textbf{no multiplicity-free hypothesis}.
+\end{Lem}
+
+The published route to this bound (Nienhaus Theorem~4.14, via his Lemma~4.13) applies Schur's lemma on the stabiliser's isotypic components, which is valid only where those components are multiplicity-free (unverified at large $n$, and the one gap the tube audit left open). The hypothesis is avoidable.
+
+\begin{proof}
+$W_{\CP^2}$ is supported entirely inside $\Lambda^2(\R^4)$, so the whole construction is equivariant for $G=SO(n-4)$ acting on the last $n-4$ coordinates. Hence $F_u$ commutes with $G$ (verified at $3.9\times10^{-15}$ on the generators), and decomposing $\Weyl_n=\bigoplus_\lambda M_\lambda\otimes V_\lambda$ into $G$-isotypic pieces gives $F_u=\bigoplus_\lambda F_\lambda\otimes\Id_{V_\lambda}$, so $\operatorname{spec}(F_u)=\bigcup_\lambda\operatorname{spec}(F_\lambda)$. \emph{Multiplicities are exactly what the spaces $M_\lambda$ absorb}, which is the structural difference from the isotypic route.
+
+\begin{center}
+\begin{tabular}{@{}llll@{}}
+\toprule
+$G$-type & $\dim V_\lambda$ ($n=10/12/14$) & $\dim M_\lambda$ & $\operatorname{spec}(F_\lambda)/\thstar$ \\
+\midrule
+trivial   & $1/1/1$     & $20$ & $-1^{2},\,-\tfrac16^{6},\,0^{6},\,\tfrac13^{3},\,\tfrac12^{2},\,1$ \\
+vector    & $6/8/10$    & $20$ & $-\tfrac12^{4},\,0^{12},\,\tfrac12^{4}$ \\
+$\Lambda^2$ & $15/28/45$ & $6$  & $-\tfrac16^{2},\,0^{3},\,\tfrac13$ \\
+$S^2_0$   & $20/35/54$  & $10$ & $-\tfrac16^{6},\,0,\,\tfrac13^{3}$ \\
+two higher types & & & $0$ throughout \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Every multiplicity-space dimension and every $F_\lambda$ spectrum is identical across the three dimensions while the $\dim V_\lambda$ grow. Under the same group the orbit decomposes as $2\cdot(\text{trivial})\oplus4\cdot(\text{vector})$, of dimension $2+4(n-4)=4n-14$ for every $n$, and it coincides with the $\tfrac12\thstar$-eigenspace block by block. The identity previously verified numerically now has its reason. Deleting $\R u$ and the orbit leaves top eigenvalue $\tfrac13\thstar$ in the trivial, $\Lambda^2$ and $S^2_0$ blocks and $0$ in the vector block. Hence $\alpha\le\tfrac13$, \emph{with equality attained}, so the bound is tight rather than slack.
+\end{proof}
+
+The remaining formal obligation is a proof that the stable range begins at $n-4\ge8$ rather than a check at particular dimensions. The $n=10$ column already agrees, which is evidence that even $n-4=6$ lies inside it.
+
+\subsection{The estimate the localization theorem needs}
+
+Extending the reduction past $n=11$ turns on a single estimate inside Nienhaus's Theorem~4.17, which he states and records that he could not supply. Since $f'(\varphi)=3\sin\varphi\cdot\tilde f(\varphi)$ with $\tilde f(\pi/6)=(5\alpha+\sqrt3\gamma-3)/4$, the requirement is exactly
+\begin{equation}\label{eq:req}
+\gamma_{\max}(\alpha)\;<\;\frac{3-5\alpha}{\sqrt3}\qquad\text{for every }\alpha<\tfrac13 .
+\end{equation}
+At $\alpha=1/3$ the right-hand side is $4/(3\sqrt3)=0.769800$, which is precisely what his $c=1$ bound returns: the argument is \emph{borderline by construction}, so any constant $c_n>1$ breaks it, and the breakage is confined to $\alpha$ near $1/3$. That such a constant is forced has an explicit witness, and it exists at \emph{every} $n\ge12$ rather than at $n=12$ alone: the balanced $S^{n/2}\times S^{n/2}$ operator for the split whose first factor contains the $\CP^2$ block satisfies $\langle W_1,W_{\CP^2}\rangle=0$ exactly and lies \emph{exactly} on the orbit tangent, the reported $4.8\times10^{-16}$ being arithmetic noise around zero. At $n=12$, $P(W_1)=1.236033081$ and $f(\pi/2)=1.0092168>1$.
+
+\textbf{The constant has a closed form, and it makes the refutation an integer comparison.} $f(\varphi)=\cos^3\varphi+c_{12}\sin^3\varphi$ with
+\[
+c_{12}=\sqrt{55/54}=1.009216785\ldots,
+\]
+and $\varphi=\pi/2$ is the maximiser, derived rather than searched, so $f(\pi/2)>1$ reduces to $55>54$. \textbf{What is \emph{not} established is that $c_{12}$ is sharp}: sharpness is a supremum over the full $1603$-dimensional complement at $n=12$, which is a statement of Conjecture~A's own strength. The sweep above gives a lower bound on that supremum and no more, so $c_{12}$ is a witnessed replacement constant rather than the least one.
+
+\begin{Lem}{22}[The missing estimate, for every $n\ge12$]
+Requirement \eqref{eq:req} holds for every $n\ge12$, by two branches covering complementary $\alpha$-intervals with an overlap that survives to the limit.
+\end{Lem}
+
+\begin{proof}
+\emph{The subdivision is exact.} In Nienhaus's Remark~4.18 decomposition $W=\cos\beta\,W_1+\sin\beta\,W_2$, the admissible space splits as $(\R u\oplus T_u\mathcal O)^\perp=V_{1/3}\oplus V_{\le0}$ with nothing else possible, since $\operatorname{mult}(+1)=1$ and $\operatorname{mult}(+\tfrac12)=\dim\mathcal O$. Writing $W_2=c_0K+c_-N$ with $K\in\ker F_u$ and $N$ in the strictly negative part, and $\mu_N=\langle F N,N\rangle/\thstar\in[-1,-\tfrac16]$, the identity
+\[
+\alpha=\tfrac{1-s^2}{3}+s^2c_-^2\mu_N,\qquad s=\sin\beta,
+\]
+is exact (the cross term vanishes because $F_uW_1=\tfrac13\thstar W_1$ and $W_1\perp W_2$), whence $s^2\le6\varepsilon/(3-c_0^2)$ with $\varepsilon=\tfrac13-\alpha$.
+
+\emph{The configuration at the maximiser is forced.} The bound's maximiser always has $c_0=1$: $W_2$ lies entirely in $\ker F_u$, with $s^2=3\varepsilon$ an equality. Consequently both couplings $A=T(W_1,W_1,K)$ and $B=T(W_1,K,K)$ are evaluated at \emph{one and the same} pair, and bounding them by separate suprema (the natural route, and the source of the earlier version's loss) pays for both at once.
+
+\emph{The frontier is exact rather than estimated.} For every $W_1\in V_{1/3}$ one has $M_{W_1}\cdot\Pi_{\ker}Q(W_1)=0$, which makes the inner maximisation over $K$ a \emph{hard-case trust-region problem}, globally solvable rather than ascended. Its value is monotone in both $a\le\sqrt{5/6}$ and $\lambda\le2/3$, and both suprema are attained at the same $W_1^{*}$, giving, with $t=s/\cos\beta$,
+\[
+V(t)=\begin{cases}\sqrt{5/6}, & t\le t^{*},\\[3pt]
+\dfrac{5}{16t}+\dfrac{2t}{3}, & t>t^{*},\end{cases}
+\qquad t^{*}=\tfrac34\sqrt{\tfrac56}=\tfrac{\sqrt{30}}8=0.6846532 .
+\]
+Since $t$ and $s^2=3\varepsilon$ together fix $\alpha$, this reads: $B=0$ exactly for $\alpha\ge\alpha^{*}=32/141=0.2269504$, with $A$ pinned at $\sqrt{5/6}$. Three independent optimisers (global trust-region solves, $64$-start L-BFGS-B, and an exact second-order Hessian pencil) agree to $10^{-15}$.
+
+\emph{Why the frontier is the true maximum and not an estimate.} Write the inner problem as maximising $\phi(K)=a\,\langle K,\xi\rangle+\lambda\,\langle K,\mathcal M K\rangle$ over the unit ball, with $a\le\sqrt{5/6}$ and $\lambda\le2/3$ the two coupling constants. Ordinarily such a problem is only locally solvable, but the vanishing $M_{W_1}\Pi_{\ker}Q(W_1)=0$ says exactly that the linear term is orthogonal to the top eigenspace of the quadratic form, the defining condition of the \emph{hard case} of the trust-region subproblem, where the global maximiser is characterised by a scalar secular equation rather than found by ascent. The value is monotone in both $a$ and $\lambda$, and both suprema are attained at the same $W_1^{*}$, so the two can be charged together rather than separately. Solving the secular equation gives the closed form $V(t)$ above, with the two branches meeting at $t^{*}$ where the multiplier hits the boundary. At $t=3/4$ the exact values are $A=5/6$ and $B=1/9$. At $t=0.9$, $A=25/36$ and $B=0.280864$.
+
+\emph{The two branches overlap.} Nienhaus's own bound is sharp for small $\alpha$ and degenerates at $\tfrac13$, covering $\alpha\le0.322271$ at $n=12$, $0.290168$ at $n=16$ and $0.234970$ at $n=100$, whereas the frontier bound vanishes at $\tfrac13$ and covers $\alpha\ge32/141$ at every $n$. They overlap for every $n\ge12$, with worst margin $+0.0074$ at $\alpha\approx0.223$ in the limit $n\to\infty$.
+\end{proof}
+
+\begin{remarkstar}
+Three points govern how the proof is stated, and the first is why the frontier is not justified by ``traced by ascent, hence a lower bound (the safe direction)''. That justification is \textbf{wrong}: a lower estimate of a support function cannot serve inside an \emph{upper} bound on $\gamma$, and this is the error class that sank two previous attempts on the same estimate. What rescues the argument is the trust-region certificate, which makes the frontier provably maximal rather than merely attained. Second, the threshold $t\le0.65$ recorded earlier was a grid artefact (the sweep never sampled between $0.65$ and $0.75$), and the exact value is $t^{*}=\sqrt{30}/8$. Third, the coverage claim had been \emph{understated}: on the earlier numbers the overlap reached only $n\le109$, and with the corrected threshold $\alpha^{*}=32/141$ the two branches overlap for every $n\ge12$.
+\end{remarkstar}
+
+\begin{certificate}
+That $B=0$ on the first branch is not an artefact of a stuck optimiser: three methods agree to $10^{-15}$ ($23$-seed alternating \emph{global} trust-region solves, $64$-start L-BFGS-B, and an exact second-order Hessian pencil), and seeding deliberately near high-$B$ configurations still returns $A=\sqrt{5/6}$ with $B=0$. The three coupling constants were verified exhaustively at $n=10$ by building the full $770\times770$ matrix of $F_{W_1}$ for \emph{all} $78$ basis vectors of $V_{1/3}$ and reading the eigenspace blocks: $\sup T(W_1,W_1,K)=\sqrt{5/6}$ exact to $6.7\times10^{-16}$, $\sup T(W_1,K,K)=2/3$, $\sup T(W_1,N,N)=\sqrt{2/3}$, and the couplings $T(W_1,W_1',N)$, $T(W_1,K,N)$ and $P|_{V_{1/3}}$ all $\le8\times10^{-16}$.
+\end{certificate}
+
+\paragraph{Scope, stated exactly.} Two obligations remain attached to Lemma~22, and nothing downstream is claimed free of them.
+\begin{enumerate}[nosep,leftmargin=1.6em]
+\item The vanishing $M_{W_1}\Pi_{\ker}Q(W_1)=0$ is \emph{verified} at $n=12,14,16$ (residual $\le8.5\times10^{-15}$ against a control of $0.33$), not proven. Zero-padding the $n=12$ pair into $m=14,16,20,24$ preserves everything exactly, which gives monotonicity in $n$ but only as a lower bound. The case $n=20$ is not directly reachable, the Weyl-basis SVD having $18145$ columns there.
+\item Both branches use the sphere-product value as their constant, so the estimate is \emph{conditional on Conjecture~A's constant} past $n=12$.
+\end{enumerate}
+Alongside these, four coupling vanishings that the bound rests on are exhaustively verified numerics rather than proofs. Proving them is recorded as \textbf{blocked}: three cycles were spent without movement. Six candidate explanations are dead: a circle in the isotropy (weight-additivity forces every weight to zero); a $\mathbb Z_2$ grading (refuted directly, $T(\mathrm{odd},\mathrm{odd},\mathrm{odd})=2.8\times10^{-2}$); $\mathrm{Stab}^0$-invariance alone (the invariant cubics on $V_{1/3}$ form a four-dimensional space); the Casimir contraction (collapses to $0=0$); the $SO(n)$-invariance identity (proves a different statement, and is inert here because $W_2$ carries no $V_{1/2}$ component by construction); and support in the $4$-block. The hard-case condition is now known to be a \emph{bilinear} identity, $\langle\Pi_{\ker}Q(W_1),\mathrm{top}(W_1')\rangle=0$ for every pair with the top eigenspace exactly two-dimensional, which is a narrower target than any of these addressed and is the natural place for a seventh attempt.
+
+\paragraph{Where the estimate is actually tightest.} Direct maximisation on the exact constraint set gives true $\sup\gamma=0.636$ at $n=16$, $\alpha=0.295$, against a requirement of $0.880$, a margin of $+0.244$ where the bound above fails by $0.0081$, so the bound overshoots the truth by a factor $1.40$. The ratio of true value to requirement peaks near $\alpha=0.23$ rather than near $\alpha=0.295$, and grows with $c_n$. \textbf{Theorem~4.17's estimate is not in trouble at large $n$, but particular routes to it are.}
+
+\subsection{What (D) delivers and what it leaves}
+
+\begin{itemize}[leftmargin=1.4em]
+\item \textbf{Delivered, unconditionally:} the entire tube around the rival's orbit contains no maximizer, at every $n\ge12$, with a radius more than double the largest published one. The one rival that genuinely beats the sphere product below the crossover is eliminated together with its whole neighbourhood.
+\item \textbf{Delivered, conditionally:} the estimate blocking the published localization reduction above $n=11$, hence (granting the conjecture at critical points, and the two obligations above) the reduction extends to $n\ge12$, and with Lemma~20 gives the bound everywhere.
+\item \textbf{Left open:} maximizers away from the $\CP^2$ orbit. Lemma~20 constrains \emph{where} a maximizer can be and says nothing about anywhere else. This is the core problem.
+\end{itemize}

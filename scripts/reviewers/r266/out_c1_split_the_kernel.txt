@@ -1,0 +1,32 @@
+(A) SYMMETRIC TRACELESS, 2 legs each, degree 3 -- r260's own warm-up cell
+
+     sym traceless n=3   diagrams 15     c=rank on 3 INDEP slots 1     rank on DIAGONAL 1    [0.0s, 40 samples]
+       kernel 14 splits as  (15 - 1) = 14 killed by RESTRICTION TO THE SUBSPACE  +  (1 - 1) = 0 non-symmetric complement
+       Remark I.2.2 accounts for 0 of 14  =  0.000%
+
+     sym traceless n=4   diagrams 15     c=rank on 3 INDEP slots 1     rank on DIAGONAL 1    [0.0s, 40 samples]
+       kernel 14 splits as  (15 - 1) = 14 killed by RESTRICTION TO THE SUBSPACE  +  (1 - 1) = 0 non-symmetric complement
+       Remark I.2.2 accounts for 0 of 14  =  0.000%
+
+     sym traceless n=5   diagrams 15     c=rank on 3 INDEP slots 1     rank on DIAGONAL 1    [0.0s, 40 samples]
+       kernel 14 splits as  (15 - 1) = 14 killed by RESTRICTION TO THE SUBSPACE  +  (1 - 1) = 0 non-symmetric complement
+       Remark I.2.2 accounts for 0 of 14  =  0.000%
+
+     sym traceless n=6   diagrams 15     c=rank on 3 INDEP slots 1     rank on DIAGONAL 1    [0.0s, 40 samples]
+       kernel 14 splits as  (15 - 1) = 14 killed by RESTRICTION TO THE SUBSPACE  +  (1 - 1) = 0 non-symmetric complement
+       Remark I.2.2 accounts for 0 of 14  =  0.000%
+
+     sym traceless n=12  diagrams 15     c=rank on 3 INDEP slots 1     rank on DIAGONAL 1    [0.0s, 40 samples]
+       kernel 14 splits as  (15 - 1) = 14 killed by RESTRICTION TO THE SUBSPACE  +  (1 - 1) = 0 non-symmetric complement
+       Remark I.2.2 accounts for 0 of 14  =  0.000%
+
+(B) WEYL, 4 legs each, degree 3 -- the cells the record actually cites
+
+              Weyl n=6   diagrams 10395  c=rank on 3 INDEP slots 2     rank on DIAGONAL 2    [103.7s, 200 samples]
+       kernel 10393 splits as  (10395 - 2) = 10393 killed by RESTRICTION TO THE SUBSPACE  +  (2 - 2) = 0 non-symmetric complement
+       Remark I.2.2 accounts for 0 of 10393  =  0.000%
+
+              Weyl n=7   diagrams 10395  c=rank on 3 INDEP slots 2     rank on DIAGONAL 2    [208.4s, 200 samples]
+       kernel 10393 splits as  (10395 - 2) = 10393 killed by RESTRICTION TO THE SUBSPACE  +  (2 - 2) = 0 non-symmetric complement
+       Remark I.2.2 accounts for 0 of 10393  =  0.000%
+

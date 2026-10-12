@@ -1,0 +1,23 @@
+PART A -- degree 2, all three numbers pinned
+
+  matchings of 8 legs: 105   orbit sums under the block S_2: 65
+  n= 6: generic 4-tensor rank  65 (symmetrised  65);   WEYL rank   1 (symmetrised   1)
+  n= 7: generic 4-tensor rank  65 (symmetrised  65);   WEYL rank   1 (symmetrised   1)
+  n=12: generic 4-tensor rank  65 (symmetrised  65);   WEYL rank   1 (symmetrised   1)
+
+  The generic rank lands on the orbit count -- restitution loses exactly the
+  non-symmetric part and nothing else, as Weyl says.  The WEYL rank is 1.
+  The extra collapse is the SUBSPACE, and symmetrising changes neither number.
+
+PART B -- degree 3, the record's own case: symmetrising changes nothing
+
+  matchings of 12 legs: 10395   orbit sums under the block S_3: 1779
+  n= 6: rank of the 10,395 gamma_D at W (x)3 = 2;  rank of the 1779 SYMMETRISED functionals = 2
+        max spread WITHIN an orbit of the values at W (x)3: 1.09e-10   -- every member of an orbit takes the same value
+  n= 7: rank of the 10,395 gamma_D at W (x)3 = 2;  rank of the 1779 SYMMETRISED functionals = 2
+        max spread WITHIN an orbit of the values at W (x)3: 1.53e-10   -- every member of an orbit takes the same value
+
+  So `independence of the symmetrised functionals` is not a different
+  measurement: the restricted family is already S_3-invariant, symmetrisation
+  acts on it as multiplication by |orbit|, and the rank is the same 2.
+

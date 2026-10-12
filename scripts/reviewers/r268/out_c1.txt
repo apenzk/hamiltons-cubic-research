@@ -1,0 +1,60 @@
+(A) EXACT: each monomial of Sym^3(U) as a combination of SEVEN cubes
+
+     dim U  dim Sym^3  monomials rebuilt  max residual
+         2          4                  4             0
+         3         10                 10             0
+         4         20                 20             0
+         5         35                 35             0
+         6         56                 56             0
+         8        120                120             0
+        10        220                220             0
+
+    Every monomial is rebuilt exactly, at every dimension tried, so the
+    cubes SPAN Sym^3(U) for any U over any field of characteristic 0.
+    The statement needs no numerics and no genericity: it is an identity.
+
+(B) THE SUBSPACE CONTRAST -- cubes of a SUBSPACE reach Sym^3(S), not Sym^3(U)
+
+     dim U  dim S  rank of S-cubes  dim Sym^3 S  dim Sym^3 U
+         6      2                4            4           56
+         6      3               10           10           56
+         6      4               20           20           56
+         8      3               10           10          120
+         8      5               35           35          120
+        10      4               20           20          220
+
+    So on Sym^3(U) the cubes of S leave a kernel of codimension dim Sym^3(S).
+    THAT is the gap the retracted argument fell into (domain V^{tensor 12},
+    cubes only of the Weyl subspace).  It disappears when the domain IS
+    Sym^3(S): there the cubes of S span everything, by (A) applied to S.
+
+(C) U = Weyl_n -- the instance the programme needs
+
+      n  dim Weyl_n   n(n+1)(n+2)(n-3)/12  rank of cubes  dim Sym^3
+      4          10                    10            220        220
+      5          35                    35           7770       7770
+
+    Weyl_n is a LINEAR subspace of V^{tensor 4} -- the Riemann symmetries,
+    the first Bianchi identity and tracelessness are all linear -- so it is
+    a real vector space and (A) applies to it with nothing to check.
+
+  VERDICT: 'cubes span Sym^3(U) for any real U' is TRUE, and true by an
+  identity rather than by a rank measurement.  Whether that settles
+  obligation (i) turns on the DOMAIN of the covariants, not on this fact.
+
+(D) THE SAME AT EVERY DEGREE, exactly:  d! t_1...t_d = sum over nonempty
+    S of (-1)^{d-|S|} (sum_{i in S} t_i)^d  -- so d-th powers span Sym^d(U)
+
+     dim U  deg  dim Sym^d  monomials rebuilt  exact
+         3    2          6                  6   True
+         3    3         10                 10   True
+         3    4         15                 15   True
+         4    2         10                 10   True
+         4    3         20                 20   True
+         4    4         35                 35   True
+         5    2         15                 15   True
+         5    3         35                 35   True
+         5    4         70                 70   True
+
+    Fourteen cells of run_cubes_span.py reproduced with no sampling and no
+    tolerance: the table is an identity, not a measurement.

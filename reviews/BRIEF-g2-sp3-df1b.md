@@ -1,0 +1,35 @@
+You are working inside a mathematics research programme at the repository root. The goal is in README.md: prove that P(W) = <W, Q(W)> with Q(W) = W^2 + W^# on the unit sphere of Weyl_n (Weyl tensors as symmetric operators on Lambda^2 R^n = so(n)) is maximised, for even n >= 12, by the Weyl tensor of S^{n/2} x S^{n/2}, granting the diagonal case. theta-critical means Q(W) = theta W; theta_0(n) = sqrt(2(n-1)(n-2))/n is the balanced product's value.
+
+METHOD RULE, IN FORCE AND NOT NEGOTIABLE: this programme is ANALYSIS ONLY. Computation needs explicit per-task approval from the user, which you do not have. The single allowance is SCREENING a claim you are about to assert -- seconds of compute, on objects you construct yourself, reported as a screen and never as evidence for a positive claim. No searches, sweeps, optimisations, censuses or falsifier hunts. If you reach a point where you believe a computation is genuinely needed, write down what the run would DECIDE and what each outcome would MEAN, log it, and move on to what does not depend on it. Do not work around the block.
+
+THE DELIVERABLE IS AN ARGUMENT A HUMAN CAN READ AND CHECK. Show every step. A claim you cannot derive is labelled PLAUSIBLE, never asserted.
+
+RECORD DISCIPLINE. Before asserting anything, check it against what the record already proves -- findings/INDEX.md is the index, one line per result, and names the file each subject lives in. This cycle committed a claim that contradicted a theorem the record already held, and two reviewers had to kill it. Do not repeat that: a claim contradicting an indexed lemma is wrong until the lemma is refuted.
+
+DO NOT COMMIT. Write your report to the path named below; the session folds it in.
+
+PRIVACY. If you make any web request, the User-Agent / contact email is the placeholder aaa@aaa.com. Never any other address.
+
+LOGGING. agent_logs/<your-name>.log: first line your identity and a phase plan, a line per phase, a heartbeat every few minutes carrying live findings (not "still working"), and DONE <summary> or FAILED <reason> at close, as the first word of the last line. Log a finding the moment you find it -- the session reads your log for content.
+
+YOUR TASK. Adversarial review (Gate 2) of the claims below, covering four commits. BREAK them. Argue from the definitions in findings/conventions.md, findings/bounds-relaxations.md (Lemmas L104, L105) and findings/second-order.md (L120, L121, L24). Return per claim CONFIRMED, PLAUSIBLE or REFUTED with the correction. DO NOT WRITE INTO findings/.
+
+SETTING. W a theta-critical unit point of W_n, eigenvalues lambda_a on so(n), T_abc = <[v_a,v_b],v_c>^2, totally symmetric and hollow. (A) sum_bc T_abc = 2(n-2); (B) sum_bc lambda_b T_abc = -2 lambda_a; (C) sum_bc lambda_b lambda_c T_abc = 2 lambda_a(theta - lambda_a). At a spectrum with d = 3 distinct values nu_1 > nu_2 > nu_3, multiplicities m_1,m_2,m_3, Lemma L104 reduces the pinned class to ten variables t_ijk on class-multisets, 3d equalities of rank 3d-2, feasible dimension 4. A vertex has at least four t_ijk zero, and at a REALISABLE vertex t_ijk = 0 means <[E_i,E_j],E_k> = 0.
+
+CLAIMS TO ATTACK.
+
+G1 (the Jacobi enumeration). Of the C(10,4) = 210 candidate vanishing sets, exactly 121 satisfy the index inclusion  union_{m in B(i,j)} B(m,k)  subset  (union_{m in B(j,k)} B(i,m)) union (union_{m in B(i,k)} B(j,m))  for all i,j,k, where B(i,j) = {k : {i,j,k} not in Z}. The failure of that inclusion forces a bracket outside Z to vanish and so contradicts Z being the EXACT vanishing set. Attack: is the index inclusion actually implied by Jacobi, or is it stronger or weaker than Jacobi; is "exact vanishing set" the right frame; does total symmetry of T interact with it correctly. Script: scripts/runs/run_jacobi_closure_d3.py.
+
+G2 (the Z_3 retraction, the most important claim to check). <[X,Y],Z> is TOTALLY ANTISYMMETRIC on so(n), so T_abc depends only on the multiset {a,b,c} and a type vanishes unless every reading permits it; for a Z_m-grading the invariant form pairs g_a with g_{-a}, so the nonvanishing condition is a+b+c = 0 mod m, NOT a+b = c. Moreover over R with a positive-definite inner product a grading needs 2a = 0 mod m for every part, so at m=3 only a=0 qualifies and an order-3 element of SO(n) gives so(n) = g_0 + m, a TWO-part real decomposition. Hence the earlier claim that a Z_3-grading is a four-zero vertex is false, and the six n=12 multiplicity triples (46,10,10), (32,17,17), (24,21,21), (22,22,22), (26,20,20), (36,15,15) and the exclusion of DERIVE-t11's witness (30,20,16) drawn from them are withdrawn. Attack this retraction as hard as the original claim: is the retraction itself right, or has it over-retracted; does the symmetric pair with a split even part really survive with exactly four zeros {113,123,223,333}; is the SO(p) x U(q) centraliser count correct as complex dimensions.
+
+G3 (the pair cut). Row 1 against the multiplier phi(x) = (x - nu_1)(x - nu_2) gives an identity whose surviving terms are t_112, t_113, t_123, t_133 with right-hand side 2 nu_1 [(n-1) nu_2 + theta]; hence at nu_1 > nu_2 > 0 > nu_3 with theta > 0, t_123 and t_133 cannot both vanish. Attack the identity's coefficients and the sign reasoning.
+
+G4 (the nine identities). Each row i against phi(x) = (x - nu_a)(x - nu_b) annihilates the coefficients of types {i,a,a} and {i,b,b}, leaving EXACTLY four surviving types; so if all four vanish the left side is zero and the right side must vanish too, and a nonzero right side forbids that four-subset regardless of coefficient signs. Six of the nine right-hand sides are nu_i[(n-1)nu_j + theta], vanishing exactly at Pi-bound saturation. Net effect with G1 and G3: 210 -> 121 -> 110. Attack: is "exactly four survive" right in every one of the nine cases; is the forbidding argument valid; recount the intersection.
+
+G5 (the orbit direction). rho(E_jk) sends e_ki to e_ji and e_ji to -e_ki and annihilates every other coordinate bivector, so the orbit tangent [rho(E_jk), M] lies entirely in the pair block {j,k} with coordinates x_i = M_ki - M_ji. Since there are C(n,2) pair blocks and dim so(n) = C(n,2), the orbit is EXHAUSTED by the pair blocks and neither the 4-set blocks nor the diagonal block contains any orbit direction; hence the nine 1/2-eigenvectors Lemma L121 locates in the (2,2) 4-set blocks at S^3 x S^3 are genuinely off-orbit. Attack: the action of rho(E_jk); whether one orbit direction per block is right; whether "exhausted" follows from the counting or needs independence.
+
+The derivations are reviews/DERIVE-sp3.md, DERIVE-sp3b.md (retracted in part), DERIVE-sp3c.md and DERIVE-df1.md. Form your own view FIRST from the definitions, then check their steps.
+
+REPORT to reviews/REVIEW_rNNN.md with NNN as named at launch. Verdict line first, one per claim, then the argument. One paragraph per line, never hard-wrapped; no backticks inside markdown link text.
+
+LOGGING. agent_logs/<your-name>.log: first line identity and phase plan, a line per phase, a heartbeat every few minutes carrying live findings, DONE <summary> or FAILED <reason> as the first word of the last line.

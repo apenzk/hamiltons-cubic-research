@@ -1,0 +1,10 @@
+n=4: dim W_n = 10 (formula 10)
+   |B_n| = 384 elements enumerated
+   dim (Sym^1 W_4^*)^{B_4} = -0.000000  -> 0
+   dim (Sym^2 W_4^*)^{B_4} = 3.000000  -> 3
+   dim (Sym^3 W_4^*)^{B_4} = 5.000000  -> 5
+n=5: dim W_n = 35 (formula 35)
+   |B_n| = 3840 elements enumerated
+   dim (Sym^1 W_5^*)^{B_5} = -0.000000  -> 0
+   dim (Sym^2 W_5^*)^{B_5} = 3.000000  -> 3
+   dim (Sym^3 W_5^*)^{B_5} = 9.000000  -> 9

@@ -1,0 +1,35 @@
+  run_cubes_span.py's cube_rank under a pure rescaling of the samples
+  (rank is scale-invariant mathematics; tol=1e-9 is absolute)
+
+     dim U    scale  reported rank  dim Sym^3   assert
+         4    1e+00             20         20    holds
+         4    1e-02             20         20    holds
+         4    1e-03             20         20    holds
+         4    1e-04              0         20    FAILS
+
+         6    1e+00             56         56    holds
+         6    1e-02             56         56    holds
+         6    1e-03             56         56    holds
+         6    1e-04              0         56    FAILS
+
+         8    1e+00            120        120    holds
+         8    1e-02            120        120    holds
+         8    1e-03            120        120    holds
+         8    1e-04              0        120    FAILS
+
+  The same rescaling applied to the DEGREE-4 loop is worse still, the rows
+  being quartic in the sample:
+
+     dim U  deg    scale  reported rank  dim Sym^d
+         4    2    1e+00             10         10
+         4    2    1e-03             10         10
+         4    4    1e+00             35         35
+         4    4    1e-03              0         35
+         5    2    1e+00             15         15
+         5    2    1e-03             15         15
+         5    4    1e+00             70         70
+         5    4    1e-03              0         70
+
+  The repair is one character-class: a RELATIVE tolerance (numpy's default,
+  or rows normalised first).  r268's own c1 needs no tolerance at all --
+  the statement is an identity in exact arithmetic.

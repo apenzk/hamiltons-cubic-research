@@ -1,0 +1,24 @@
+# REVIEW r1144: L240 piece (b), orthonormality case (C), and the axiom audit regex
+
+Brief: [2026-09-25-L240b-caseC-gate2-brief.md](2026-09-25-L240b-caseC-gate2-brief.md). Log: [agent_logs/r1144.log](../agent_logs/r1144.log). Reviewed at commit e0fed29e (tree of 4707c6e1).
+
+## Item 1: the declarations state their claims. CONFIRMED
+
+- [i2_comm](../lean/HamiltonsCubic/Results/L240SlotBasis.lean#L808): `inner2 A B = inner2 B A` for all real matrices, proved by `tr(M) = tr(Mᵀ)` and `(AᵀB)ᵀ = BᵀA`. Unconditional, so nothing to weaken.
+- [pairSlot_orth_same](../lean/HamiltonsCubic/Results/L240SlotBasis.lean#L813): hypotheses `a ≠ b` and `InBlk a x`, `InBlk b y`, `InBlk a x'`, `InBlk b y'`, conclusion `inner2 = if x = x' ∧ y = y' then 2 else 0`. The role map in `pairSlot` is a bijection from `{p,q}²` onto the four slots ((p,p) to S1, (p,q) to S2, (q,q) to S3, (q,p) to S4), and S1..S4 have Gram matrix `2I` ([pair_gram](../lean/HamiltonsCubic/Results/L240SlotBasis.lean#L310)), so the statement is the right one. The membership hypotheses are needed (off the blocks `pairSlot` falls through to S3 or S4) and are exactly what the assembly gets from `blockOf_spec`. All 16 role cases are split by `rcases`, none is vacuous, and the hypotheses are jointly satisfiable for `k ≥ 2`. It takes `a ≠ b` rather than `a < b`, which is more general than the assembly needs.
+- [pairSlot_orth_diff](../lean/HamiltonsCubic/Results/L240SlotBasis.lean#L825): hypotheses `a < b`, `c < d`, `(a,b) ≠ (c,d)`, with `x y x' y'` universally quantified and no membership hypotheses. That is correct: whatever `x, y` are, `pairSlot` is one of S1..S4 of its block pair, a combination of `φ` on block members, so the proof expands both sides into the 16 `cross_phi` instances on `p`/`q` members only. The ordered form matches `slotφ`, which always calls `pairSlot N a b` with `a < b` (swapping arguments when the blocks come in the other order).
+- Assembly check (on paper): two cross slots on the same unordered block pair both reduce to `pairSlot N a b` with `a < b`. If `x = x'` and `y = y'` with the orientations opposite, then `i = l` and `j = k`, which contradicts `i < j` and `k < l`. So the `if` condition is equivalent to `ij = kl`, and the lemmas suffice for case (C). The `(√2)⁻¹` factor then turns `2` into `1` through `i2_smulR` and its left-hand twin (the latter via `i2_comm`).
+- Build: `lake build HamiltonsCubic.Results.L240SlotBasis` completed successfully with no `sorry`. Only linter warnings remain: the `maxHeartbeats 1000000` option has no reason comment, line 812 exceeds 100 characters, and some simp arguments are unused. These are cosmetic.
+
+## Item 2: the widened `DECL` regex. CONFIRMED
+
+- The change in [axiom_audit.py](../scripts/misc/axiom_audit.py#L82) replaces `[A-Za-z_][A-Za-z0-9_.'!?₀-₉]*` with `[^\W\d][\w.'!?₀-₉]*`. Both old classes are subsets of the new ones (Python 3 `\w` is Unicode for `str` patterns), so every ASCII name that was captured before is captured identically now.
+- Screen (seconds, on constructed lines): `slotφ_of_not_cross`, `i2_comm`, `foo_bar'`, `h₁_x₂`, `@[simp] p_eq_p_iff`, `protected noncomputable A.b.c_d?`, `σ_bound!`, `ℕ_thing`, `xᵢ_y`, `_u`, and `negAd_phi_swap{a}` (which stops at `{`) all come out whole. `private theorem` is still rejected by `DECL` and handled by `PRIVATE`. A name with a leading digit is still rejected.
+- The new class admits some characters that Lean does not allow as identifier starts (such as `λ`). This is harmless, since the input is Lean source that compiles.
+- Adjacent: `NAMESPACE` and `END` are still ASCII-only. No `namespace` or `end` line in `lean/HamiltonsCubic` contains a non-ASCII character today, so this is latent and does not bear on the claim.
+
+## Item 3: the audit, the docstring and the INDEX row. CONFIRMED
+
+- `python3 scripts/misc/axiom_audit.py --only L240SlotBasis` (after the background build) reports `auditing 71 declarations across 1 files` and `71/71 clean -- resting on the standard three alone`, with no "AUDIT INCOMPLETE". An independent grep counts 71 non-private `theorem`/`lemma` lines plus 1 private one, so every declaration was found.
+- The file docstring (step 9d) still says case (C) is owed. That is accurate, because the `slotφ` assembly is not yet done. It understates the file by not naming `i2_comm`, `pairSlot_orth_same` and `pairSlot_orth_diff`. This is an optional touch-up and claims nothing that is missing.
+- The [lean/INDEX.md](../lean/INDEX.md) L240 row describes the three declarations accurately ("all sixteen role cases" matches the 2⁴ split) and lists the `slotφ` assembly as owed. It claims nothing that has not been delivered. Its tail carries three overlapping "Still owed" sentences, the last two left over from before this round. Merging them into one is a suggested cleanup.

@@ -1,0 +1,34 @@
+
+(1) SUBJECTS: does the gate see an item being opened?  [plan.md staged]
+-----------------------------------------------------------------------
+   as committed   current   subject
+           True      True   fix(plan): independence is REOPENED -- both reviewers refute the closure
+          False     False   fix(plan): the covariant item is OPENED again by r260
+          False      True   fix(plan): item 1 is open again -- the closure was refuted
+          False     False   fix(plan): restore the deliverable the rewrite deleted
+          False     False   fix(plan): obligation (ii) is not closed
+          False     False   fix(plan): the closure claimed in fcaf711 does not hold
+
+(2) WHAT 'THE SUBJECT' IS: line 1 of the BASH COMMAND, in both versions
+-----------------------------------------------------------------------
+     heredoc: as committed False, current False   line 1 = 'git commit -m "$(cat <<\'EOF\''
+   -m inline: as committed  True, current  True   line 1 = 'git commit -m "fix(plan): independence is REOPENED -- both reviewers refute the closure'
+  meanwhile both versions' Deliverable scan finds ['fix(plan):'] in the heredoc
+
+(3) BYPASSES
+------------
+  nothing staged yet (-a stages at commit time): as committed False, current False
+  plan.md edited in a separate commit:            as committed False, current False
+  only old/oldplan.md staged (substring test):    as committed  True, current False
+  typed as docs(plan): -- as committed, main() returns at the GATED check before the search gate (gated=False); current runs the search gate on any commit type
+
+(4) WHAT THE Searched TRAILER ACCEPTS
+-------------------------------------
+   as committed   current   text
+           True      True   Searched: none
+           True      True   Searched: none -- the item is a wording fix
+           True     False   We never Searched: anything, and derived anyway.
+           True     False   Searched: .
+           True     False   Searched: yes
+           True      True   Searched: restitution -> references/weyl-polarization-primer/
+           True     False   echo "Searched: x" ; git commit -m "feat(x): reopen y"

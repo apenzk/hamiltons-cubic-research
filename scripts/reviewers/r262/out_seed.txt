@@ -1,0 +1,13 @@
+  e = orthogonal projector onto Sym^2(T_n) inside V^{(x)4}, T_n symmetric traceless.
+
+   n  dim Sym^2 T  dim M_0  dim e M_0  (Sym^2T)^O(n)    e c0  span{e nu(D) c0}  spans e M_0
+   3           15        3          1              1 3.8e-16                 1         True
+   4           45        4          1              1 4.1e-16                 1         True
+   5          105        3          1              1 4.2e-16                 1         True
+   6          210        3          1              1 9.3e-16                 1         True
+
+  dim Sym^2(T_n) cross-check against t(t+1)/2 with t = n(n+1)/2 - 1:
+    n=3: rank(e)=15, t(t+1)/2=15
+    n=4: rank(e)=45, t(t+1)/2=45
+    n=5: rank(e)=105, t(t+1)/2=105
+    n=6: rank(e)=210, t(t+1)/2=210

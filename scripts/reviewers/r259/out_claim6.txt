@@ -1,0 +1,68 @@
+====================================================================================
+(1)  can the audit's asserts fire?
+====================================================================================
+  DEGREE and LEGS_PER_WEYL are literals; two_r = 12, r = 6 follow.
+    assert two_r % 2 == 0  ->  True   (12 % 2, a constant)
+    assert r <= 12         ->  True   (6 <= 12, a constant)
+    assert r <= 6          ->  True   (6 <= 6, a constant)
+  Neither depends on n, on the covariants, or on anything measured.  The
+  message on the last one -- 'independence would fail somewhere in [6, 12]'
+  -- describes a state that no input to this file can produce.
+  The loop prints 'r <= n is X -> diagrams are a basis: X', the same
+  boolean twice, at n = 6, 12, 24 where it is True by the same constant.
+
+  The third check, assert lo < 1/n < hi with lo = 1/n - 1/n^2:
+    n=       2: lo < 1/n < hi is True   because 1/n^2 = 1/4 > 0
+    n=       3: lo < 1/n < hi is True   because 1/n^2 = 1/9 > 0
+    n=      12: lo < 1/n < hi is True   because 1/n^2 = 1/144 > 0
+    n= 1000000: lo < 1/n < hi is True   because 1/n^2 = 1/1000000000000 > 0
+  True for every n >= 1 by 1/n^2 > 0.  It restates the definition of lo, hi.
+
+====================================================================================
+(2)  what r244's witness decides -- exactly, over the route's own range
+====================================================================================
+  S_n = [ (n-1)/n^2 , (n+1)/n^2 ], from det B(t;n) >= 0 in r244 R2.
+
+    n= 12   S_n = [11/144, 13/144] = [0.076389, 0.090278]   1/n in S_n: True
+    n= 14   S_n = [13/196, 15/196] = [0.066327, 0.076531]   1/n in S_n: True
+    n= 16   S_n = [15/256, 17/256] = [0.058594, 0.066406]   1/n in S_n: True
+    n= 18   S_n = [17/324, 19/324] = [0.052469, 0.058642]   1/n in S_n: True
+    n= 20   S_n = [19/400, 21/400] = [0.047500, 0.052500]   1/n in S_n: True
+
+  over even n in [12, 40]:  max lower end = 11/144 (0.076389),  min upper end = 41/1600 (0.025625)
+  intersection nonempty: False
+  already empty on the pair n = 12, 16:  True   (0.076389 > 0.066406)
+
+  So the witness kills a CONSTANT t as well as a polynomial one, and it
+  does so with two dimensions.  What it does NOT do is decide the real
+  instance: it is a 2x2 family 'of A2's exact shape', not A2 itself.
+  r244's own R1 says the constant-t question is finite convex feasibility
+  and that conceding it is PREMATURE; the audit cites r244 for the
+  opposite reading.
+
+====================================================================================
+(3)  which r Theorem 3.4 needs for a covariant into a block of label lambda
+====================================================================================
+  |lambda| for the blocks of V^{tensor 12}: [0, 2, 4, 6, 8, 10, 12]
+  a covariant into V_lambda is an invariant functional on V^{tensor (12+|lambda|)},
+  so 2r = 12 + |lambda| and r = 6 + |lambda|/2:
+
+   |lambda|    r    r <= n at n=6    r <= n at n=12
+       0       6         True             True
+       2       7        False             True
+       4       8        False             True
+       6       9        False             True
+       8      10        False             True
+      10      11        False             True
+      12      12        False             True
+
+  r = 6 is the lambda = empty (invariant) row alone.  The record's 'r = 6,
+  six dimensions of slack' and 'independence holds for every n >= 6' are
+  statements about that one row.
+
+  And the blocks themselves do not survive to n = 6.  Of the labels of
+  V^{tensor 12}:
+    n=  6:   77 of 160 labels admissible   (dropped: 83)
+    n= 10:  148 of 160 labels admissible   (dropped: 12)
+    n= 11:  153 of 160 labels admissible   (dropped: 7)
+    n= 12:  160 of 160 labels admissible   (dropped: 0)

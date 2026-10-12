@@ -1,0 +1,2 @@
+n=13  predicted 71 blocks/184 mult   computed 71 blocks/184 mult
+  block-by-block mismatches: 0

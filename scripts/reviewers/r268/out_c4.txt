@@ -1,0 +1,6 @@
+  (f,n) = (4,3)  m_empty = 3  used = 31  prunes = 0  rank-dropping prunes = 0  [0s]
+    the script's own assert `used <= 12*m + 5` = 41: HOLDS (used = 31)
+
+  (f,n) = (6,2)  m_empty = 10  used = 3781  prunes = 61  rank-dropping prunes = 0  [13s]
+    the script's own assert `used <= 12*m + 5` = 125: FAILS (used = 3781)
+

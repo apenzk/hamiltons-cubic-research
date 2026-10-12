@@ -1,0 +1,11 @@
+[p1] dim Weyl^inv = 49; Lambda^2 splits 10/5
+[p1] 100/500 conv=100
+[p1] 200/500 conv=200
+[p1] 300/500 conv=300
+[p1] 400/500 conv=400
+[p1] 500/500 conv=500
+[p1] converged 500/500, distinct 28, GRADED 0
+[p1]   S=0 theta=0.000000000 gap=3.162278e-01 T_hhm=1.0000e+01 dims 5/5/5 graded=False
+[p1]   S=0 theta=0.104886129 gap=1.363520e-01 T_hhm=1.7000e+01 dims 8/7/0 graded=False
+[p1]   S=0 theta=0.699329880 gap=1.316279e-02 T_hhm=1.6000e+01 dims 8/7/0 graded=False
+[p1] theta range [0.000000,0.866025]

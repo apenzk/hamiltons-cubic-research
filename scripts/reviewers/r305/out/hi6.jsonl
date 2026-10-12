@@ -1,0 +1,11 @@
+{"n": 6, "seed": 6003, "kpow": 5, "theta": 0.08715293190849878, "Delta": 8.757359681763619, "lam": 7.5216636223957645, "ratio": 86.30419490984771, "res": 2.3844381330517805e-13, "simple_rank": 6, "kerdim": 0}
+Traceback (most recent call last):
+  File "scripts/reviewers/r305/census2.py", line 54, in <module>
+    run(n,ns,s0,[1,2,3,5,8,15])
+  File "scripts/reviewers/r305/census2.py", line 29, in run
+    step=np.linalg.lstsq(Jf,-rf,rcond=None)[0]
+  File "<site-packages>/numpy/linalg/_linalg.py", line 2508, in lstsq
+    x, resids, rank, s = gufunc(a, b, rcond, signature=signature)
+  File "<site-packages>/numpy/linalg/_linalg.py", line 116, in _raise_linalgerror_lstsq
+    raise LinAlgError("SVD did not converge in Linear Least Squares")
+numpy.linalg.LinAlgError: SVD did not converge in Linear Least Squares

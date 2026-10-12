@@ -1,0 +1,6 @@
+k=1  universal (Sage plethysm + even-partition sum) = 0
+k=2  universal (Sage plethysm + even-partition sum) = 1
+k=3  universal (Sage plethysm + even-partition sum) = 2
+k=4  universal (Sage plethysm + even-partition sum) = 7
+k=5  universal (Sage plethysm + even-partition sum) = 19
+k=6  universal (Sage plethysm + even-partition sum) = 89

@@ -1,0 +1,6 @@
+# Au-Yeung and Poon 1979, and the survey that carries its content
+
+- **Primary source**: Y.-H. Au-Yeung and Y.-T. Poon, "$3\times3$ orthostochastic matrices and the convexity of generalized numerical ranges", Linear Algebra Appl. 27 (1979) 69–79. **Refused by the publisher 2026-09-16**: ScienceDirect answered the fetch with an HTML challenge page carrying a `.pdf` name, deleted rather than kept as a placeholder.
+- **Stored copy of the content**: Bengtsson, Ericsson, Kuś, Tadej, Życzkowski, "On orthostochastic, unistochastic and qustochastic matrices", [arXiv 0708.4051](https://arxiv.org/abs/0708.4051), retrieved 2026-09-16 (`bengtsson-2007-orthostochastic-unistochastic-qustochastic.pdf`, 29 pages, extraction in `bengtsson-2007.txt`).
+- **Consulted for**: the 2026-09-16 step 9 sweep, batches 2 and 3. The exact image of $O(3)$ under $Q\mapsto Q^{\circ2}$, which the record's three-alignment relaxation replaced by Birkhoff's polytope.
+- **Verdict**: **delivers a geometric fact the record lacks.** Theorem 2.4 puts the singular points of $\varphi_r$ at $n=3$ exactly on the split orthogonal matrices, which is the record's L229 stratum, so on the open stratum the orthostochastic matrix is a smooth coordinate for the frame. The $3\times3$ orthostochastic characterisation is on page 15.

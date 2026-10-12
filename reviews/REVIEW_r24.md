@@ -1,0 +1,17 @@
+### Reviewer 24: five unaudited cycles of multi-block results
+
+**Two claims break, and one is replaced by something stronger.**
+
+**Confirmed.** The closed forms $\theta^2=2(n-1)^2/[(k-1)n^2+\sum_a(n-n_a)^2/(n_a-1)]$ and $S=3\theta^2e_3/(n-1)^2$, with $\theta^2<2/(k-1)$ and graded $\iff k\le2$. The identity $\mathrm{RHS}=\theta(4m-1)/(3m-1)$ on balanced blocks, checked independently at $m=2,3,20$. The symbolic $S=6n_1n_2n_3/D$, the eight-branch vertex solve, and the negative second-order coefficient.
+
+**Refuted: the $\mathrm{RHS}$ closed form's verification.** Both scripts compute $e^2=\max(0,1-\|\mathrm{Ric}(W_-)\|^2/\|W_-\|^2)$, which clips to $0$ on this entire family so the factor becomes $1$. The correct definition, implemented at [review_r13_independent.py:277](scripts/review_r13_independent.py#L277), is $\sqrt{1-e^2}=\langle|W|,\mathrm{Ric}\wedge\mathrm{Ric}\rangle/\|\mathrm{Ric}\wedge\mathrm{Ric}\|$. The 105-point check compared the closed form against `measure`, **two copies of the same error**, so its $4.4\times10^{-16}$ agreement is real and vacuous. The earlier "repair" of this factor was never implemented, $(6,6,6)$ still prints $1.322183$ against a true $1.200263$. Errors run $+0.0056$ at $(6,6)$ to $+0.5755$ at $(S^2)^6$, and reach the graded two-block points too. The $J_5$ script imports the same `measure`, so its floor of $0.43$ is inflated; correct values on that set run $0.19$–$0.32$.
+
+**Refuted: "$J_5$ established where load-bearing".** The chain invokes $J_5\ge0$ in exactly one place and says nothing unless $\theta\ge(n-3)\sqrt{2/((n-1)(n-2))}$. The corollary $\theta^2<2/(k-1)\le1$ caps the ungraded family **below** that floor at ratio $0.68$–$0.71$ for every $n$ from $6$ to $1200$, tending to $1/\sqrt2$. So the grant is established precisely where it is not needed. The only multi-block points reaching the floor are the balanced two-block products, where $J_5=0$ exactly, the family's one piece of load-bearing evidence is the equality case. The sweep's numbers were also wrong: the minimum over $147{,}816$ ungraded partitions is $0.044886$ at $(2,2,56)$, not $0.154185$ at $(2,2,2,2,2,50)$, whose correct value is $0.104311$; the recorded figure came from applying the balanced-only formula at non-integer $m=n/k$.
+
+**Recovered, and stronger than what it replaces.** Solving the vertex system by hand gives $w_{ab}=-\theta/(n-1)$ and $w_{aa}=\theta(n-n_a)/((n-1)(n_a-1))$, an exact critical point for every partition at residual $10^{-16}$, and from it
+
+$$J_5/r^2=\frac{\theta(4n\,e_3+8\,e_4)}{(n-1)\sum_a n_a(n-n_a)^2}\ \ge\ 0,$$
+
+with equality exactly at $k\le2$, **a proof of $J_5\ge0$ on the whole family**, replacing both the balanced-only proof and the sweep. Also: $\theta$ is *globally* maximised at balanced blocks by strict convexity of $1/(n_a-1)$, with the second-order coefficient negative in every direction rather than the single one recorded; the correct $\mathrm{RHS}$ closed form matches the definition at 1305 partitions to $2.3\times10^{-15}$; and the $k=3$ "extra branches" are the three two-block coarsenings, not a second family.
+
+**A further break.** Under the correct $\mathrm{RHS}$, the surviving lead fails at its own recorded constant: $(20,20,20)$ at $n=60$ gives $\mathrm{RHS}=1.294158$ with $\theta=0.966523$. Along balanced $(S^m)^3$, $\mathrm{RHS}\to4/3$ and $\theta\to1$, so $1$ is the best constant and $0.916$ was an artefact of stopping at $n=24$.

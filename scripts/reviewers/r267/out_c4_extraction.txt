@@ -1,0 +1,78 @@
+(a)  ODD f AND THE EMPTY PARTITION
+     An up-down path in Young's lattice changes |lambda| by exactly +-1
+     each step, so |lambda| after f steps has the parity of f.  Odd f
+     therefore cannot end at |lambda| = 0.  Checked by enumeration:
+      f  m_empty   m_(1)   m_(2)  m_(1,1)   m_(3)
+      1        0       1       0        0       0
+      2        1       0       1        1       0
+      3        0       3       0        0       1
+      4        3       0       6        6       0
+      5        0      15       0        0      10
+      6       15       0      45       45       0
+      7        0     105       0        0     105
+     TRUE for lambda = empty, and it is a statement about THAT block only:
+     odd f carries blocks of odd |lambda| and they are not empty.
+     (And seed(f,n) returns a vector of length n^(f-1) at odd f, which
+      apply_diagram cannot consume -- odd f was never runnable anyway.)
+
+(b)/(c)  COST AT NON-TRIVIAL lambda, AND ORDER DEPENDENCE
+     target = rank of the FULL diagram orbit of the seed; `used` = the
+     index at which the running span first attains it.  200 random orders.
+
+      f  n       seed  target  as-enum  rand min  rand med  rand max  med/target
+      4  3        cup       3       31         3         5        13         1.7
+      4  3   harm sym       1       53         1         3        23         3.0
+      4  3    generic      61       98        62        67        84         1.1
+      4  4        cup       3       31         3         5        13         1.7
+      4  4    antisym       1       53         1         3        23         3.0
+      4  4   harm sym       1       53         1         3        23         3.0
+      4  4    generic      99      105       102       105       105         1.1
+      4  5        cup       3       31         3         5        13         1.7
+      4  5    antisym       1       53         1         3        23         3.0
+      4  5   harm sym       1       53         1         3        23         3.0
+      4  5    generic      99      105       102       105       105         1.1
+      4  6        cup       3       31         3         5        13         1.7
+      4  6    antisym       1       53         1         3        23         3.0
+      4  6   harm sym       1       53         1         3        23         3.0
+      4  6    generic      99      105       102       105       105         1.1
+
+(d)  THE PRUNING BRANCH
+     `rows = rows[argsort(-max|row|)][:target+10]` keeps the rows with the
+     LARGEST entries.  Magnitude is not a rank criterion.  Two things to
+     settle: does it fire in the four reported cells, and is it rank-safe.
+
+      f  n  m_empty  reported used  threshold 4m+40  fires?
+      2  3        1              1               44      no
+      4  2        3             31               52      no
+      4  3        3             31               52      no
+      4  4        3             31               52      no
+
+     Minimal witness that max|entry| is not a rank criterion:
+       rows [[1000.0, 0.0], [1000.0, 0.0], [0.0, 1.0]] -> keep 2 by max|entry| -> rank 1, full rank 2
+       and DUPLICATE rows are the norm here: many diagrams send the seed
+       to the same vector, so the top-k by magnitude is often k copies.
+
+      f  n       seed  rows  distinct  full rk  top-(t+10) rk
+      4  4        cup   105         9        3              3
+      4  4    antisym   105         3        1              1
+      4  4   harm sym   105         2        1              1
+      4  4    generic   105       105       99             99
+      4  5        cup   105         9        3              3
+      4  5    antisym   105         3        1              1
+      4  5   harm sym   105         2        1              1
+      4  5    generic   105       105       99             99
+
+     3. the reviewed loop, verbatim, on a NON-TRIVIAL lambda seed.
+        f  n       seed  target  with prune  no prune
+        4  4   harm sym       1          53        53
+          assert used <= 12*target+5 = 17: WOULD FIRE
+        4  4    antisym       1          53        53
+          assert used <= 12*target+5 = 17: WOULD FIRE
+        4  5   harm sym       1          53        53
+          assert used <= 12*target+5 = 17: WOULD FIRE
+        4  5    antisym       1          53        53
+          assert used <= 12*target+5 = 17: WOULD FIRE
+        4  6   harm sym       1          53        53
+          assert used <= 12*target+5 = 17: WOULD FIRE
+        4  6    antisym       1          53        53
+          assert used <= 12*target+5 = 17: WOULD FIRE

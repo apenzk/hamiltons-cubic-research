@@ -1,0 +1,17 @@
+========================================================================================
+(D)  the route's own parameters: f = 12, the two predictions against n
+========================================================================================
+   n   sum_adm (dim Delta)^2            sum m_lambda(n)^2          equal?   n>=f-1  n>=f
+   4                 121493807789                  21634600078   False   False  False
+   5                 213360887809                 109656966853   False   False  False
+   6                 281008201522                 226603057642   False   False  False
+   7                 308049702669                 293507529091   False   False  False
+   8                 315108918207                 312896731836   False   False  False
+   9                 316125326381                 315957071241   False   False  False
+  10                 316229719418                 316222167677   False   False  False
+  11                 316233935213                 316233935213    True    True  False
+  12                 316234143225                 316234143225    True    True   True
+  13                 316234143225                 316234143225    True    True   True
+  14                 316234143225                 316234143225    True    True   True
+
+  dim B_12(n) = 23!! = 316234143225

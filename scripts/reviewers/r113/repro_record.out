@@ -1,0 +1,15 @@
+dim of the sigma-invariant subspace of Weyl_6: 45
+355/400 converged at residual <= 1e-12
+
+     theta   residual          S | five smallest |lambda|
+  0.413728    1.7e-16     1.6886 | 8.31e-05  1.08e-02  1.56e-01  1.63e-01  1.81e-01
+  0.413728    1.7e-16     1.6886 | 8.31e-05  1.08e-02  1.56e-01  1.63e-01  1.81e-01
+  0.420712    1.9e-16     2.3650 | 1.96e-04  4.35e-02  1.18e-01  1.70e-01  1.72e-01
+  0.421067    1.7e-16    10.2700 | 1.27e-03  3.07e-02  1.25e-01  1.69e-01  1.72e-01
+  0.413704    1.7e-16    11.2444 | 1.67e-03  8.07e-03  1.55e-01  1.63e-01  1.80e-01
+  0.413704    1.6e-16    11.2444 | 1.67e-03  8.07e-03  1.55e-01  1.63e-01  1.80e-01
+  0.584875    1.9e-16     0.0145 | 1.77e-03  1.39e-02  9.56e-02  1.06e-01  1.14e-01
+  0.418198    1.6e-16     0.0000 | 2.17e-03  1.32e-01  1.34e-01  1.62e-01  1.77e-01
+
+READ: if the smallest few |lambda| sit at ~1e-8 or below with residual ~1e-13,
+they are numerically zero and the 'tiny gap' is the NEXT eigenvalue up, not a small gap.

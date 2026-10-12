@@ -1,0 +1,9 @@
+sqrt(3/2) = 1.224744871391589
+  s= 4  dim Weyl=   10  max P found = 1.224744871392   (sqrt(3/2)=1.224744871392, excess +8.88e-16)   theta_0(s)=0.866025   crit resid=1.0e-08   [0s]
+  s= 5  dim Weyl=   35  max P found = 1.224744871392   (sqrt(3/2)=1.224744871392, excess +1.11e-15)   theta_0(s)=0.979796   crit resid=6.4e-09   [0s]
+  s= 6  dim Weyl=   84  max P found = 1.224744871392   (sqrt(3/2)=1.224744871392, excess +6.66e-16)   theta_0(s)=1.054093   crit resid=1.4e-08   [0s]
+  s= 7  dim Weyl=  168  max P found = 1.224744871392   (sqrt(3/2)=1.224744871392, excess +8.88e-16)   theta_0(s)=1.106567   crit resid=1.1e-08   [1s]
+  s= 8  dim Weyl=  300  max P found = 1.224744871392   (sqrt(3/2)=1.224744871392, excess +6.66e-16)   theta_0(s)=1.145644   crit resid=2.4e-09   [1s]
+  s= 9  dim Weyl=  495  max P found = 1.224744871392   (sqrt(3/2)=1.224744871392, excess +8.88e-16)   theta_0(s)=1.175889   crit resid=8.8e-09   [2s]
+  s=10  dim Weyl=  770  max P found = 1.224744871392   (sqrt(3/2)=1.224744871392, excess +6.66e-16)   theta_0(s)=1.200000   crit resid=9.9e-09   [5s]
+  s=11  dim Weyl= 1144  max P found = 1.224744871392   (sqrt(3/2)=1.224744871392, excess +4.44e-16)   theta_0(s)=1.219673   crit resid=1.7e-08   [6s]

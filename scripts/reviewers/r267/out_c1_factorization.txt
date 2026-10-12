@@ -1,0 +1,28 @@
+The integer Weyl construction, verified before use
+    n  rank of span   n(n+1)(n+2)(n-3)/12
+    4            10                    10
+    5            35                    35
+    6            84                    84
+    7           168                   168
+
+DEGREE 2, U = Weyl_n, 8 legs.  Ranks after each arrow, over F_1009.
+    n  diagrams  on V^(x)8  on W^(x)2  on Sym^2 W  at W(x)W
+    4       105        105          1           1         1
+    5       105        105          1           1         1
+    6       105        105          1           1         1
+    7       105        105          1           1         1
+
+DEGREE 3, U = Weyl_n, 12 legs -- THE PROGRAMME'S OWN CASE.
+  (r_full is r260's 10,395-at-n>=12; not resampled here.  40 samples cap
+   each measured rank at 40, so a rank of 2 is a rank of 2.)
+    n  diagrams  on W^(x)3  on Sym^3 W  at W(x)W(x)W
+    4     10395          1           1             1
+    5     10395          1           1             1
+    6     10395          2           2             2
+
+DEGREE 3, U = traceless symmetric 2-tensors, 6 legs.
+    n  diagrams  on V^(x)6  on U^(x)3  on Sym^3 U at u^(x)3
+    3        15         15          1           1         1
+    4        15         15          1           1         1
+    5        15         15          1           1         1
+    6        15         15          1           1         1

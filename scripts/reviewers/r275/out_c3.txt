@@ -1,0 +1,26 @@
+
+(d)  Are the r274 pipeline's tensors genuine trace-free Bianchi Weyl operators?
+     (checked with r275's own independent projector / tensor conversion)
+  bestF2_n12.npy         n=12 |A-A^T|=0.0e+00 Bianchi=1.4e-17 Ricci=1.9e-17 |P_W A - A|=6.9e-18 |A|=1.000000 tr(A#)=-1.000000000
+  bestF2_n14.npy         n=14 |A-A^T|=0.0e+00 Bianchi=6.9e-18 Ricci=1.0e-17 |P_W A - A|=3.5e-18 |A|=1.000000 tr(A#)=-1.000000000
+  bestF2_n16.npy         n=16 |A-A^T|=0.0e+00 Bianchi=6.9e-18 Ricci=1.9e-17 |P_W A - A|=3.5e-18 |A|=1.000000 tr(A#)=-1.000000000
+  best_F_n10.npy         n=10 |A-A^T|=0.0e+00 Bianchi=6.9e-18 Ricci=1.4e-17 |P_W A - A|=3.5e-18 |A|=1.000000 tr(A#)=-1.000000000
+  best_F_n12.npy         n=12 |A-A^T|=0.0e+00 Bianchi=6.9e-18 Ricci=1.0e-17 |P_W A - A|=3.5e-18 |A|=1.000000 tr(A#)=-1.000000000
+  best_F_n6.npy          n= 6 |A-A^T|=0.0e+00 Bianchi=1.4e-17 Ricci=3.5e-17 |P_W A - A|=6.9e-18 |A|=1.000000 tr(A#)=-1.000000000
+  best_F_n8.npy          n= 8 |A-A^T|=0.0e+00 Bianchi=1.4e-17 Ricci=2.1e-17 |P_W A - A|=6.9e-18 |A|=1.000000 tr(A#)=-1.000000000
+  best_T_n10.npy         n=10 |A-A^T|=0.0e+00 Bianchi=6.9e-18 Ricci=1.7e-17 |P_W A - A|=3.5e-18 |A|=1.000000 tr(A#)=-1.000000000
+  best_T_n12.npy         n=12 |A-A^T|=0.0e+00 Bianchi=7.1e-18 Ricci=3.3e-17 |P_W A - A|=3.5e-18 |A|=1.000000 tr(A#)=-1.000000000
+  best_T_n6.npy          n= 6 |A-A^T|=0.0e+00 Bianchi=1.4e-17 Ricci=3.5e-17 |P_W A - A|=6.9e-18 |A|=1.000000 tr(A#)=-1.000000000
+  best_T_n8.npy          n= 8 |A-A^T|=0.0e+00 Bianchi=6.9e-18 Ricci=2.1e-17 |P_W A - A|=6.9e-18 |A|=1.000000 tr(A#)=-1.000000000
+
+  target to beat: sqrt(3) = 1.732051
+
+    n  seeds   best F (A)   best F (B)  best overall   /sqrt3   theta_0  F/theta_0           best seed family
+      per-family best: S^2xS^4=1.125205  near-CP^2=1.412822  near-CP^3=1.412822  near-r274-best_F_n6.npy=1.412822  near-r274-best_T_n6.npy=1.412822  near-sphere=1.412822  padded CP^2=1.412822  padded CP^3=1.412822  r274=1.412822  random=1.412822  sphere-product=1.088601
+    6     82     1.412822     1.412822      1.412822   0.8157  1.054093   1.340321                     random   [109s]
+      per-family best: S^2xS^6=1.170884  S^3xS^5=1.148989  near-CP^2=1.420489  near-CP^3=1.420489  near-CP^4=1.420489  near-r274-best_F_n8.npy=1.420489  near-r274-best_T_n8.npy=1.420489  near-sphere=1.161889  padded CP^2=1.420489  padded CP^3=1.420489  padded CP^4=1.420489  r274=1.420489  random=1.420489  sphere-product=1.161889
+    8     87     1.420489     1.420489      1.420489   0.8201  1.145644   1.239904                     random   [153s]
+      per-family best: S^2xS^8=1.186327  S^3xS^7=1.171669  S^4xS^6=1.200474  near-CP^2=1.425703  near-CP^3=1.425703  near-CP^4=1.425703  near-CP^5=1.425703  near-r274-best_F_n10.npy=1.425703  near-r274-best_T_n10.npy=1.425703  near-sphere=1.209485  padded CP^2=1.425703  padded CP^3=1.425703  padded CP^4=1.425703  padded CP^5=1.425703  r274=1.425703  random=1.425703  sphere-product=1.209485
+   10     92     1.425703     1.425703      1.425703   0.8231  1.200000   1.188086                     random   [272s]
+      per-family best: S^2xS^10=1.191220  S^3xS^9=1.180802  S^4xS^8=1.217671  S^5xS^7=1.236545  near-CP^2=1.429351  near-CP^3=1.429351  near-CP^4=1.429351  near-CP^5=1.429351  near-CP^6=1.429351  near-r274-bestF2_n12.npy=1.429351  near-r274-best_F_n12.npy=1.429351  near-r274-best_T_n12.npy=1.242260  near-sphere=1.242260  padded CP^2=1.429351  padded CP^3=1.429351  padded CP^4=1.429351  padded CP^5=1.429351  padded CP^6=1.429351  r274=1.429351  random=1.429351  sphere-product=1.242260
+   12     81     1.429351     1.429351      1.429351   0.8252  1.236033   1.156402                     random   [395s]

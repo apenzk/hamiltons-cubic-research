@@ -1,0 +1,30 @@
+# REVIEW r1644: r1643's gaps in L127DnExcl.lean (commit 0d2e08ce)
+
+**Verdict: CONFIRMED WITH GAPS.** `dn_excl_fox` states the exclusion in exactly the operator form r1641 G2 proposed and r1643 G3 asked for, and its proof is a sound one-line reduction to `dn_excl` through `K_of_fox`. The INDEX passage now names both directions of the K and M∘ equivalence. The provenance bullet is accurate against the two landing commits. The remaining gap is that the repair commit repeats the defect it records: it swept a concurrent session's staged files (I117Stable.lean, findings/second-order.md, reviews/INDEX.md, the L265 INDEX row) and its message names none of them.
+
+Reviewer: cold adversarial Gate 2, analysis only. Beyond the axiom audit, the checks are reading and hand derivation. No numerical screen was run.
+
+## Claim table
+
+| # | Claim | Verdict | Basis |
+|---|---|---|---|
+| 1 | `dn_excl_fox` (L127DnExcl.lean:105-116) states the record's operator-form exclusion (r1643 G3) | CONFIRMED | The hypothesis `hf : ∀ a b, foxProd (diagOp (t • sphereWeight T)) (diagOp u) (phi a b) = ν • diagOp u (phi a b)` is r1641 G2's proposed form verbatim. The conclusion set (lines 110-114) is character for character `dn_excl`'s (lines 70-74), so θ = t(p + q − 1), λ_p, λ_q, −μ and 0 carry over as r1643 claim 5 checked them against the record. The hypothesis is on the basis φ_ab. An operator identity on all bivectors specialises to it, so the theorem as stated is at least as strong as one taking the full operator identity. |
+| 2 | `dn_excl_fox`'s proof is sound | CONFIRMED | `sphere_diagCrit T _ _ t` (L126DF.lean:123-125) gives `IsDiagCritical (t • sphereWeight T) θ`, whose first two fields are symmetry and hollowness of the weight, used as `hc.1` and `hc.2.1`. `IsWeight` (Base/Families.lean:153-156) has fields `symm` and `hollow`, used as `hu.symm` and `hu.hollow`. These are exactly the four hypotheses `K_of_fox` (L127DnExcl.lean:48-54) needs, and it returns `Kmat w u a c = ν * u a c` at a ≠ c, which is `dn_excl`'s `hK`. The `by omega` side goals 2 ≤ card follow from hp, hq ≥ 3. |
+| 3 | INDEX L127 row attributes the two directions correctly (r1643 G2) | CONFIRMED | lean/INDEX.md:495 now reads "`K_of_fox` giving one direction and `foxProd_diag` the other, and `dn_excl_fox` taking the hypothesis in that operator form". `K_of_fox` is M∘ ⇒ K, `foxProd_diag` (L127Dn.lean:43-45) gives the identity `M∘ diagOp u φ_ab = (Kmat w u)_ab φ_ab`, which yields K ⇒ M∘ with `diagOp_phi`. Both named, neither misattributed. The phrase leaves which direction is which to the reader, a matter of prose only. |
+| 4 | Provenance bullet (r1643 G1) | CONFIRMED | `git show --stat 8d6c80a2`: L127DnExcl.lean +104 and L127DnSpan.lean ±4, message title identical to aee943df's ("fix(lean): r1641's prose gaps in L127's D_n headers and row"), Deliverable L127DnSpan.lean. The five declarations named (KL, smul_phi_inj, K_of_fox, mem_eigenspace_KL, dn_excl) are the file's content at that commit. `git show 068b3aa9`: lean/HamiltonsCubic.lean gains `import HamiltonsCubic.Results.L127DnExcl` beside the I117Stable import, and lean/INDEX.md changes the L127 row, while the message is about L265 only. The bullet's account matches all of this. |
+| 5 | Axiom audit, "5/5 on the standard three" | CONFIRMED | `python3 scripts/misc/axiom_audit.py --only L127DnExcl.lean`: "auditing 5 declarations across 1 files, 5/5 clean, resting on the standard three alone". No `sorry`, no `native_decide`. The audit elaborates the file, so it also compiles against the current tree. |
+| 6 | Commit message accuracy for what it names, including the swept files | CONFIRMED WITH GAPS | Every bullet is accurate for the L127 work. The commit also carries a new theorem `innerOp2_sharpB_eq_Ftri` and a header correction ("four times" to "three times" the Λ⁴ part) in I117Stable.lean, the r1642 row in reviews/INDEX.md, a one-line edit to findings/second-order.md, and a change to the L265 row of lean/INDEX.md. The message mentions none of them (gap G1). |
+
+## Gaps
+
+- **G1 (provenance), commit 0d2e08ce.** The commit that records r1643 G1's sweep is itself a sweep: 5 files, of which only L127DnExcl.lean and the L127 row of lean/INDEX.md are described. `innerOp2_sharpB_eq_Ftri` in lean/HamiltonsCubic/Results/I117Stable.lean lands under a `fix(lean)` title about L127, with no Gate 2 attached to it in this commit. Commits are never amended, so the repair is a record line: the I117 session's next commit should name 0d2e08ce as the landing of `innerOp2_sharpB_eq_Ftri`, the Λ⁴ header correction, the L265 INDEX row change, the second-order.md edit and the r1642 reviews/INDEX.md row, and that theorem should be named in the scope of a Gate 2.
+- **G2 (prose, minor), [lean/INDEX.md:495](../lean/INDEX.md).** The new passage gives no audit count, while every sibling passage in the row closes with "N/N on the standard three". Append "5/5 on the standard three" after the Mathlib reference.
+
+## What would break each claim, and what was done to look for it
+
+- Claim 1 would break on a conclusion set that drifted from `dn_excl`'s, or a hypothesis quantifying over a narrower set of bivectors than the record's. I compared lines 110-114 against 70-74 term by term and read the hypothesis against r1643's quoted proposal.
+- Claim 2 would break on `sphere_diagCrit`'s fields being in a different order, or on `IsWeight` lacking `symm`/`hollow`. I read both definitions. The audit's successful elaboration is the kernel's confirmation.
+- Claim 3 would break on the passage crediting either direction to a declaration that does not prove it. I read `foxProd_diag`'s statement and `K_of_fox`'s.
+- Claim 4 would break on a stat or message mismatch in 8d6c80a2 or 068b3aa9. I read both `--stat` outputs and messages, and the 068b3aa9 diff of lean/HamiltonsCubic.lean.
+- Claim 5 would break on a hidden axiom. The audit is clean.
+- Claim 6 would break on a swept hunk with no description. I read the diffs of every file in the commit and found G1.

@@ -1,0 +1,8 @@
+n=12  sum mult*dim = 733813080               binom(dim Weyl_n + 2, 3) = 733813080               MATCH
+n=13  sum mult*dim = 1965013050              binom(dim Weyl_n + 2, 3) = 1965013050              MATCH
+n=14  sum mult*dim = 4874429560              binom(dim Weyl_n + 2, 3) = 4874429560              MATCH
+n=16  sum mult*dim = 24883123720             binom(dim Weyl_n + 2, 3) = 24883123720             MATCH
+n=18  sum mult*dim = 104207616600            binom(dim Weyl_n + 2, 3) = 104207616600            MATCH
+
+n=10, PRETENDING the stable table still holds: 76398014 vs 76385540  -> MISMATCH (check fires)
+n=10, with King's rule applied ((2^6) -> -(2^5)):        76385540 vs 76385540  -> MATCH

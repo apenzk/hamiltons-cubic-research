@@ -1,0 +1,105 @@
+\section{The granted hypothesis, and its repair}\label{sec:granted}
+
+\subsection{What the assumption actually buys}
+
+The published diagonal case is Florian J\"ager's 2016 M\"unster thesis \cite{jaeger2016}. Its Theorem~A reads, verbatim from the source:
+
+\begin{quote}\itshape
+Let $n\ge16$ be an even integer, and let $W\in\langle W\rangle_d$ with $\|W\|=1$ be given such that $W^2+W^{\#}=\theta W$ for a $\theta\ge\theta_0(n)$. Then $\theta=\theta_0(n)$, and $W$ is the normalized Weyl curvature of $S^{\frac n2}\times S^{\frac n2}$.
+\end{quote}
+
+Three features matter, and all three are consequential.
+
+\begin{enumerate}[leftmargin=1.6em]
+\item \textbf{The threshold is $n\ge16$, not $n\ge12$.} The sentence immediately after Theorem~A reads: ``The conjecture is that this is also true for all even integers $n\ge12$ and all operators $W\in\langle W\rangle$.'' So $n=12$ and $n=14$, precisely the dimensions where the conjecture first bites, were open \emph{even in the diagonal case}.
+\item \textbf{Even $n$ only.} The odd analogue $S^m\times S^{m+1}$ is left explicitly conjectural.
+\item \textbf{The proof is long}, roughly fifty pages, by contradiction, through a scalar-curvature gap phenomenon, chained $\tr\Ric^3/\tr\Ric^4$ estimates, and a final appeal to the classification of compact symmetric spaces.
+\end{enumerate}
+
+J\"ager's own setup coincides with the vertex matrix used throughout below: diagonal operators are hollow symmetric $n\times n$ matrices $(w_{ij})$ with $W(e_i\wedge e_j)=w_{ij}\,e_i\wedge e_j$, and the Weyl condition is exactly $\sum_i w_{ij}=0$ for all $j$.
+
+\subsection{Lemma L1}
+
+\begin{Lem}{1}[The granted diagonal case, repaired at the threshold dimensions]
+J\"ager's Theorem~A holds for even $n=12$ and $n=14$ as well: the restriction $n\ge16$ is an artifact of rational rounding inside one lemma, not a real obstruction.
+\end{Lem}
+
+\begin{proof}
+\emph{Step 1: the threshold is localised to one inequality, and one other constraint stands beside it.} Two dimension hypotheses carry Theorem~A. The one this repair moves is J\"ager's Lemma 3.5.6, which argues by contradiction: under his Assumption 2 the quantity $\mathrm{RHS}(t,v,y)$ assembled at the end of the proof of Lemma 3.5.5 must be $\ge0$ somewhere, where
+\[
+t=\scal(|W|),\qquad v=\tr S^4,\qquad y=(\tr S^3)^2,\qquad S=\Ric(|W|)/\|\Ric(|W|)\| .
+\]
+He bounds $\mathrm{RHS}$ through a chain of rational roundings ending in two quartics whose largest real roots are $14.811308$ and $14.962808$, forcing $n\ge15$ and hence even $n\ge16$. Both polynomials were located verbatim in the thesis text (grepped, not taken on trust), their roots computed by two independent algebra systems agreeing to $10^{-15}$, and the thesis's own inline checkpoints ($g(15)=-25497$, $h(15)=-59616$) reproduced exactly. He also establishes the two facts that make the chain avoidable: $\mathrm{RHS}$ is convex in $t$, so its maximum over the $\scal$-interval sits at an endpoint, and it is strictly decreasing in $y$.
+
+\emph{Step 2: evaluating his own expression exactly already reaches $n=14$.} Keeping the same bounds and the same two case endpoints, but evaluating rather than rounding, the maximum over the feasible region is $-0.01741$ at $n=14$ and $+0.05627$ at $n=12$. The threshold moves from $14.963$ to $13.469$. All signs are certified symbolically on the exact radical expressions rather than by floating-point comparison, and a brute-force scan of the full three-variable box reproduces the endpoint maximiser at every $n$ to $10^{-8}$, so ``maximum at the endpoints'' is verified rather than assumed.
+
+\emph{Step 3: two further roundings of his own reach $n=13$.} Lemma 3.3.6 derives $\tr S^4\le E(n):=\frac{8n^2-41n+49}{4(n+1)(n-2)(n-3)}$ and only then rounds it to $16/(8n+9)$. The proof of Lemma 3.5.5 rounds its positive-term coefficient $\frac{2\sqrt2}{\hat\theta_0(n)}\sqrt{1-\tr S^4}$ up to $2$. Keeping both exact gives $-0.01208$ at $n=13$ and $+0.02206$ at $n=12$, moving the threshold to $12.630$.
+
+\emph{Step 4: the one new ingredient, and it closes $n=12$.} The proof bounds $y$ and $v$ \emph{separately}, and its worst case puts $y$ at its floor $1/n$ while $v$ sits at its ceiling. Those are not simultaneously achievable. Equality $y=1/n$ is equality in $\tr S\le\sqrt n$, which forces the flat spectrum $\lambda_i=1/\sqrt n$, which forces $v=1/n$ as well, far below the ceiling. Since $y$ and $v$ are moments of one positive semidefinite operator with $\|S\|=1$ and at most $n$ eigenvalues in $[0,1]$, the pair $(v,y)$ ranges over the \emph{moment body} of $S$, not over a product box.
+
+Minimising $y$ at fixed $v$ is a two-constraint moment problem, so by Carath\'eodory its minimiser has at most three distinct nonzero eigenvalues. Sweeping that three-parameter family gives the lower envelope $y_{\min}(v)$ exactly. Because $\mathrm{RHS}$ is decreasing in $y$, evaluating along that envelope is an \emph{upper} bound for the maximum over the whole region. The inequality points the safe way.
+
+\emph{Step 5: discharging the remaining one-dimensional problem, with certificates.} The moment problem's Lagrangian dual supplies a supporting line valid at every value of $v$ at once, and \emph{weak} duality alone licenses it, so no constraint qualification is owed. Rationalised, the resulting statement reduces to the nonnegativity of a quartic with rational coefficients, which is settled by exact root isolation. What is left is a single scalar function of $v$ on a compact interval, discharged by validated interval arithmetic over ten subintervals, each returning a proven negative upper bound. So both dimensions are machine-\emph{checked} rather than swept, and no floating-point comparison enters the conclusion.
+
+\emph{Step 6: the second constraint, and what discharges it.} Assumption~1, $m\ge8$ and hence $n\ge16$, is a standing hypothesis of J\"ager's whole Chapter~3, and it is used again genuinely at the ideal-induction step of \S3.6, which selects an index outside a four-element set. \textbf{So the repair above is conditional on a replacement for that step}: a six-line graph argument carried in the record as Result~5b, which is unnumbered and has not been through this report's gate. Every other dimension hypothesis in the chapter is slack above $n=12$.
+\end{proof}
+
+\begin{certificate}
+An independent audit rebuilt the reduction from scratch (own $\so(n)$ pair-index bookkeeping, own constrained-subspace basis by SVD nullspace, own analytic gradient checked against finite differences) and confirmed all of it. The vertex-matrix reduction $(W^2)_{ij}=\Lambda_{ij}^2$, $(W^{\#})_{ij}=(\Lambda^2)_{ij}$, Weyl $\iff$ vanishing row sums, holds to $\le1.3\times10^{-15}$ at $n=5,\dots,8$, checked in both directions against a control matrix with nonzero row sums. Global maximization over the constrained subspace with $800$--$1500$ restarts per $n$ returns exactly $\theta_0(n)$ at every even $n\in\{4,\dots,20\}$ and $\tilde\theta_0(n)$ at every odd $n\in\{5,\dots,15\}$, agreeing to $7\times10^{-16}$, \emph{including $n=12$ and $n=14$}. At $n=12$, $1500$ restarts give exactly four clusters ($S^p\times S^{12-p}$ for $p=3,4,5,6$) and pushing to $6000$ restarts still gives four. A structurally unrelated method, the gradient-free fixed-point iteration $\Lambda\mapsto\mathrm{Proj}(\Lambda^{\circ2}+\Lambda^2)$, returns the identical value set with basin fractions within two points.
+
+One scope note is disclosed rather than glossed, and it is a live condition rather than a caveat. J\"ager's Assumption~1 stipulates $n\ge16$ as a standing hypothesis for his whole chapter, and \S3.6 uses it again where it chooses an index outside a four-element set. The quartics of \S3.5 are therefore \emph{a} binding constraint rather than the only one, and \textbf{the route through J\"ager's expression stands conditional on the replacement for that \S3.6 step}. Two reviewers, independently and on identical briefs, reached the same reading of the source.
+\end{certificate}
+
+\textbf{Lemma~1 holds outright as a corollary of Lemma~57 below}, which gives the bound and its equality case at every $n$, and the corollary is machine-checked in Lean. The proof above, through J\"ager's own expression, is an independent route, and it is that route which stays conditional on the \S3.6 replacement. The computation above covers the bulk of J\"ager's argument for odd $n$ as well, but his endgame genuinely uses evenness, and the odd case is Lemma~57's.
+
+\subsection{The diagonal case, proved outright at every \texorpdfstring{$n$}{n}}\label{sec:alldiag}
+
+The grant carries nothing the report needs. The diagonal case holds at every $n\ge4$, odd $n$ included, with its equality case, and the proof is three steps on the diagonal locus rather than a repair of anyone's threshold.
+
+\begin{Lem}{57}[The diagonal theorem, all $n$, both parities]
+Let $\mathcal D_n=\{S\ \text{symmetric, hollow},\ S\mathbf1=0\}$ be the vertex matrices of coordinate-diagonal Weyl operators. Then
+\[
+\langle Q(W),W\rangle\;\le\;\Theta_n\,\|W\|^3\qquad\text{for every diagonal }W\text{ at every }n\ge4,
+\]
+\[
+\Theta_n^2=\frac{2(n-1)(n-2)}{n^2}\ \ (n\text{ even}),\qquad
+\Theta_n^2=\frac{2(n-1)(n-3)}{(n+1)(n-2)}\ \ (n\text{ odd}),
+\]
+with equality exactly at $S^{n/2}\times S^{n/2}$ for even $n$ and at $S^{\lfloor n/2\rfloor}\times S^{\lceil n/2\rceil}$ for odd $n$, up to $\pm1\times S_n$ and at $n=4$ as well. At even $n$, $\Theta_n=\theta_0(n)$.
+\end{Lem}
+
+\begin{proof}
+At a critical point of the diagonal problem the criticality equation is the vertex identity $S^{\circ2}+S^2=\lambda S+D$. Let $\mu=\lambda_{\max}(S)$ with unit eigenvector $v$. Three steps chain.
+
+\emph{Step 1, and it is this report's own Dirichlet inequality.} Pairing that identity with $v\otimes v$ gives $v^{\mathsf T}S^{\circ2}v+\mu^2=\lambda\mu+\sum_ir_iv_i^2$ with $r_i=\sum_js_{ij}^2$. Since $\sum_ir_iv_i^2=\tfrac12\sum_{ij}s_{ij}^2(v_i^2+v_j^2)$, the two $S^{\circ2}$ terms combine into $\tfrac12\sum_{ij}s_{ij}^2(v_i-v_j)^2$, so $\lambda\mu=\mu^2-\sum_{i<j}s_{ij}^2(v_i-v_j)^2$. The row-sum condition gives $\sum_{i<j}s_{ij}(v_i-v_j)^2=-\mu$, and Cauchy--Schwarz yields $\lambda\le\tfrac{n-1}n\mu$.
+
+\emph{Step 2.} $\mu=2\langle S,Z(v)\rangle$, where $Z(v)_{ij}=v_iv_j+\tfrac{v_i^2+v_j^2}{n-2}-\tfrac1{(n-1)(n-2)}$ is the projection of $(v_iv_j)$ onto $\mathcal D_n$. It is symmetric and hollow by construction, with vanishing row sums from $\sum v=0$ and $\sum v^2=1$. Hence $\mu^2\le4\|Z(v)\|^2$.
+
+\emph{Step 3, the parity-sensitive fourth-moment lemma.} For $\sum v=0$, $\sum v^2=1$,
+\[
+\textstyle\sum_i v_i^4\;\ge\;\tfrac1n\ \ (n\text{ even}),\qquad \ge\;\tfrac{n^2+3}{n(n^2-1)}\ \ (n\text{ odd}),
+\]
+with equality at the two-value vector. This is where the parities separate, and it is the only place they do.
+
+Chaining, $\lambda^2\le(\tfrac{n-1}n)^2\cdot4\|Z\|^2_{\max}=\Theta_n^2$.
+
+\emph{Attainment, in one closed form covering both parities.} For any sphere product,
+\[
+\theta\big(S^p\times S^q\big)^2=\frac{2(n-1)(p-1)(q-1)}{(n-2)\,pq},\qquad p+q=n,
+\]
+from criticality with $\lambda_V=1-n$ independent of the split. Substituting $p=q=n/2$ returns the even $\Theta_n^2$ and $p,q=\tfrac{n\mp1}2$ the odd one, so the bound is attained at every $n$ and both parities. Since $(1-\tfrac1p)(1-\tfrac1q)$ grows as the factors even out, the balanced split beats every other sphere product.
+
+\emph{From critical points to every diagonal $W$.} $\mathcal D_n$ is a linear subspace and the cubic is continuous and homogeneous, so its maximum over the compact unit sphere of $\mathcal D_n$ is attained at a point critical for the restricted problem. Since $Q$ preserves $\mathcal D_n$, that restricted criticality is the vertex identity the chain solves. The domain is a genuine bijection: on the coordinate-diagonal locus first Bianchi is automatic and Ricci-flatness is exactly $S\mathbf1=0$.
+\end{proof}
+
+\begin{certificate}
+\textbf{Two independent rebuilds, cold and on identical briefs, cover the whole chain.} Each reviewer reconstructed every step symbolically in $n$ and reproduced both constants and the equality cases at $n=4,5,6$ by hand: $\sqrt3/2$, $2\sqrt2/3$, $\sqrt{10}/3$, each attained. The odd fourth-moment lemma carries two separate proofs from an earlier pair who closed it by different routes, an exact invariance rather than a smoothing argument, the quartic being \emph{constant} on the circle $\{\sum t=0,\ \sum t^2=\sigma\}\subset\R^3$.
+
+Two links the argument uses are the domain bijection and attainment at general $n$, both established through the closed form above. \textbf{The normalisation is $\tr S^2=2$}. Read as $\|S\|=1$ under a plain Frobenius convention over ordered pairs, the chain returns $\Theta_n/\sqrt2$.
+
+Every constant is symbolic in $n$, and no step is numerical. Free minimisation over the constraint set at $n=4,\dots,12$ matches the closed form at both parities to $10^{-9}$, and ascent on the diagonal locus at $n=5,\dots,13$ reaches exactly $\Theta_n$, attained at the balanced split, at both parities.
+\end{certificate}
+
+\paragraph{What this costs the rest of the report.} Lemma~1 repairs J\"ager's threshold at $n=12,14$ and is conditional on the \S3.6 replacement, but \textbf{Lemma~57 supersedes it unconditionally}, and the granted hypothesis with it, so nothing downstream rests on that condition. \textbf{Odd $n$ is not blocked behind the odd diagonal case}: what is open at odd $n$ is what is open at even $n$, the non-diagonal half. The route was found in an independent write-up of the same problem, audited here rather than taken on trust, and \S\ref{sec:closedroutes} records which of its claims were tested and which were not.
+
+% ==============================================================================

@@ -1,0 +1,10 @@
+E == (2m-1)[m(2m-3)^2 + m - 1]        : True
+theta - theta_0 == 0 identically      : True
+theta_0(2m) == sqrt(2(n-1)(n-2))/n    : True
+excess closed form matches m=2..60    : True
+excess > 0, m=2..500                  : True
+n^2 * excess at n=6,12,24,100,400,2000: [(6, 1.178565), (12, 0.725412), (24, 0.595964), (100, 0.520657), (400, 0.50504), (2000, 0.501002)]
+limit n^2*excess                      : 1/2
+limit ||M#||, <M#,M>, theta_0         : sqrt(2) sqrt(2) sqrt(2)
+limit cos(phi)=ip/nrm                 : 1
+n^2*(1-cos phi) limit                 : 1/2

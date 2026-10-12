@@ -1,0 +1,13 @@
+V = R^4, V^(tensor 8) has dim 65536; 105 matchings, dim Inv = 105
+
+lambda = varnothing: dim M_lambda = 15, dim e M_lambda = 0, e M inside M: True
+   nothing to span here
+
+lambda = (1,1): dim M_lambda = 45, dim e M_lambda = 2, e M inside M: True
+   seeds e ANNIHILATES: 30
+     seed 0: span{nu(D)c_0} = 45 of 45, span{e nu(D)c_0} = 2 of 2
+     seed 1: span{nu(D)c_0} = 45 of 45, span{e nu(D)c_0} = 2 of 2
+     seed 2: span{nu(D)c_0} = 45 of 45, span{e nu(D)c_0} = 2 of 2
+
+lambda = (2): dim M_lambda = 45, dim e M_lambda = 0, e M inside M: True
+   nothing to span here

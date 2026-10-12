@@ -1,0 +1,4 @@
+nonzero entries: 6714
+distinct denominators: [1, 2] max 2
+any denominator divisible by P: False
+numerators == 0 mod P: 0

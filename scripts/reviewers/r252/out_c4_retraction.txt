@@ -1,0 +1,44 @@
+(1) THE RETRACTION -- the lemma as written
+    K = [[0,1],[1,0]],  S = {e_1, e_2} spans R^2
+    p^T K p on S = [Fraction(0, 1), Fraction(0, 1)],  K != 0: True
+    -> the lemma is FALSE.  The retraction is correct.
+
+(2) THE REPLACEMENT CONDITION -- and it is the sharp one
+    {K sym : p^T K p = 0 on S} = span{p p^T : p in S}^perp, so the
+    implication holds for every K exactly when the lifts span Sym.
+    S = {e_1, e_2}             linear rank 2/2, lift rank 2/3, annihilator dim 1 -> lemma FAILS
+        witness K = [[Fraction(0, 1), Fraction(1, 1)], [Fraction(1, 1), Fraction(0, 1)]]
+    S = {e_1, e_2, e_1+e_2}    linear rank 2/2, lift rank 3/3, annihilator dim 0 -> lemma HOLDS
+    Linear spanning holds in BOTH rows; only the lift rank decides.
+
+    the spanning-SUBSPACE clause, by polarisation:
+      d=2: rank-one lifts of a SUBSPACE (all of R^2) span Sym_2: 3 = 3  -> the subspace clause is the special case
+      d=3: rank-one lifts of a SUBSPACE (all of R^3) span Sym_3: 6 = 6  -> the subspace clause is the special case
+      d=4: rank-one lifts of a SUBSPACE (all of R^4) span Sym_4: 10 = 10  -> the subspace clause is the special case
+
+(3) THE THEOREM ABOVE needs only LINEAR spanning, because psd-ness
+    collapses the quadratic condition to the linear one.
+    for D = A A^T psd:  p^T D p = 0  <=>  D p = 0, over 400 exact trials, violations = 0
+    so on the PSD CONE the two conditions define the SAME set.
+
+(4) 248's POINT, MEASURED.  The screen imposes D p = 0; the hypothesis
+    is p^T D p = 0.  Both spaces, and both psd parts.
+    honest (independent)   evaluations span R^3: 3/3
+      screen's space   {D : D p = 0}       dim 0
+      theorem's space  {D : p^T D p = 0}   dim 0
+      psd part (identical in both, by (3)): {0}
+      verdict changes under the substitution: NO  (only the dimension searched does: 0 -> 0)
+    PLANT (p_2 = 2 p_1)    evaluations span R^3: 2/3
+      screen's space   {D : D p = 0}       dim 1
+      theorem's space  {D : p^T D p = 0}   dim 3
+      psd part (identical in both, by (3)): nonzero, D = [['4', '-2', '0'], ['-2', '1', '0'], ['0', '0', '0']]
+      and that psd D also lies in the theorem's space: True
+      verdict changes under the substitution: NO  (only the dimension searched does: 1 -> 3)
+
+    248's own twisted-cubic numbers say the same: its psd witness
+    D = v v^T with v = 2e_0 - e_4 satisfies v . p = 2p_0 - p_4 = 0
+    identically on the plant, so D p = 0 too -- it sits in the dim-1
+    LINEAR annihilator the screen computes, not only in the dim-8
+    t-space.  The substitution enlarges the space searched from 0 to 3
+    (independent) and 1 to 8 (plant) and leaves both verdicts alone.
+

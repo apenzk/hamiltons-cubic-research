@@ -1,0 +1,5 @@
+max P over 200 ascents on Weyl_5 = 1.22474487139159
+sqrt(3/2)                        = 1.22474487139159
+excess (positive would REFUTE)   = 1.110e-15
+criticality residual at the top  = 6.22e-09
+Lambda^2 spectrum at the top (x sqrt6): [-1. -1. -0. -0. -0. -0.  0.  0.  0.  2.]

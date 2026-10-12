@@ -1,0 +1,19 @@
+ f  n  n<f?  (2f-1)!!  A dim End_O(n)  B dim nu(B)  C sum m^2  A=B (FFT)  A=C
+ 2  1  True         3               1            1          1        YES  YES
+ 2  2 False         3               3            3          3        YES  YES
+ 2  3 False         3               3            3          3        YES  YES
+ 2  4 False         3               3            3          3        YES  YES
+ 2  5 False         3               3            3          3        YES  YES
+ 2  6 False         3               3            3          3        YES  YES
+ 2  7 False         3               3            3          3        YES  YES
+ 3  1  True        15               1            1          1        YES  YES
+ 3  2  True        15              10           10         10        YES  YES
+ 3  3 False        15              15           15         15        YES  YES
+ 3  4 False        15              15           15         15        YES  YES
+ 4  1  True       105               1            1          1        YES  YES
+ 4  2  True       105              35           35         35        YES  YES
+ 4  3  True       105              91           91         91        YES  YES
+ 5  2  True       945             126          126        126        YES  YES
+ 6  2  True     10395             462          462        462        YES  YES
+
+0 disagreements over 16 cells (8 of them with n < f, where nu is NOT injective)

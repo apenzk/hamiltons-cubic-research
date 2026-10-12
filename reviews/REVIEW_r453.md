@@ -1,0 +1,133 @@
+# Review r453, adversarial audit of [Lemma L149](../findings/second-order.md): the $w$-sweep, the margin lower bound, and what the ceiling is worth
+
+*Reviewer r453, 2026-09-03, cold adversarial brief. Target: [Lemma L149](../findings/second-order.md), the sweep over $w=\lVert H_r\rVert$ that claims $r_n\gtrsim n^{-1-\beta}$ over **all** of $T_{W^*}S\cap T_{W^*}\mathcal O^\perp$ with $\Theta(n^{-1})$ as the ceiling. Read in full: [Lemma L149](../findings/second-order.md), [Lemma L148](../findings/second-order.md), [Lemma L147](../findings/second-order.md), [Lemma L146](../findings/second-order.md), [Lemma L145](../findings/second-order.md), [Lemma L27](../findings/nondegeneracy.md), [Lemma L143](../findings/bounds.md), [conventions.md](../findings/conventions.md), [REVIEW_r447.md](REVIEW_r447.md), [REVIEW_r450.md](REVIEW_r450.md), [REVIEW_r451.md](REVIEW_r451.md). **Analysis only** ([analysis-only.md](../.claude/rules/analysis-only.md)): every derivation below is by hand. One screen is reported, built from the defining expressions rather than from the closed forms it checks, and it is evidence for nothing. Working: [agent_logs/r453-L149.log](../agent_logs/r453-L149.log).*
+
+## Verdicts, per claim
+
+| # | claim | verdict |
+|---|---|---|
+| 1 | $\lVert H\rVert_{op}\le\Theta(n^{-1/2})+w$ by the triangle inequality and [Lemma L146](../findings/second-order.md) | **CONFIRMED.** The ratio $\lVert H_s\rVert_{op}/\lVert H_s\rVert_F$ is scale-invariant, so $\lVert H_s\rVert_F<1$ helps rather than hurts (E2) |
+| 2 | $c(H)\gtrsim c_p+w^2$, "the off-summand eigenvalues bounded below by an absolute constant" | **REFUTED AS STATED.** One off-summand direction (the *second* $S^2_0(\mathbb R^m)$ copy), has margin exactly $c_p=\Theta(1/n)$, so the bound is false by a factor $n$ at $w=1$. Both source reviews define the split correctly and L149 mis-transcribed them (E1) |
+| 3 | the repaired margin bound, with $w$ the weight outside **both** copies | **CONFIRMED**, exactly, by [Lemma L27](../findings/nondegeneracy.md)'s ten eigenvalues, and the repair changes no value in the lemma (E1) |
+| 4 | $\lVert A''\rVert=O(n^{1/2}+nw)$ | **CONFIRMED**, on the inherited $M=O(\rho)$ of [r450](REVIEW_r450.md) D1 and [r451](REVIEW_r451.md) A2, re-derived here from the Riesz decomposition with $\rho$ symbolic (E3) |
+| 5 | [Lemma L146](../findings/second-order.md) survives as an input despite [Lemma L148](../findings/second-order.md) | **CONFIRMED.** L148 displaces L146's *purpose*, not its content: the operator norm is what feeds $\rho$, and it is computed whether or not the defect vanishes (E3) |
+| 6 | $\operatorname{sign}g'(w)=\operatorname{sign}(wA-Bc)$, single interior minimum at $w^*=Bc/A$ | **CONFIRMED**, by hand and by screen (E4) |
+| 7 | $g(w^*)=\tfrac1n\sqrt{\kappa/(1+\kappa)}$ | **CONFIRMED as a value; the display that produces it is corrupt in two places at once**, numerator and denominator both. Recomputed from scratch, the stated value is right (E4) |
+| 8 | the second branch is $\Theta(n^{-1})$ uniformly in $w\in[0,1]$ | **CONFIRMED.** $g$ ranges over $[0.90/n,\,2.07/n]$ on $[0,1]$ (E4) |
+| 9 | eliminating $u$ leaves two branches, validly, uniformly in $w$ | **CONFIRMED as an inequality**, the unconstrained $\min_u$ under-estimates $f(u(H))$, and $\min_w\min(b_1,b_2)=\min(\min_wb_1,\min_wb_2)$, **but the lemma drops the one thing $u$ was carrying**: the penalty term $\lvert\kappa_n\rvert u^2t^2$ that the margin must absorb (E5) |
+| 10 | $r_n\gtrsim n^{-1-\beta}$ over all directions, $\Theta(n^{-1})$ the ceiling | **PLAUSIBLE.** It holds after E1 and E5 are repaired; the $\beta=0$ end remains unpinned, and the validity cap $\rho/2$ that both source reviews asked to be added is still absent from the displayed chain (E6) |
+| 11 | the improvement is worth having | **VACUOUS in the sense that matters**, unchanged from [r447](REVIEW_r447.md) F6, and L149 records none of it (E7) |
+
+**The one-line verdict: the sweep is right and its load-bearing premise is false as written.** The uniformity computation is correct (I recomputed it cold and it survives, including a display that is mangled twice in one line) and the trade-off it closes is genuinely closed: no direction has both a $\Theta(1/n)$ margin and a $\Theta(1)$ operator norm. But the margin premise is stated over one $S^2_0(\mathbb R^m)$ summand where the point has two, and at $p=q$ the swap symmetry of $W^*$ forces both to carry the same eigenvalue. **The fix is one word, it changes no number, and until it is made the recorded fact is off by a factor $n$ on a subspace of dimension $\Theta(n^2)$.**
+
+---
+
+## E1, the margin lower bound is false as stated, because the balanced point has two margin summands and the lemma names one
+
+This is the step the brief trusts least and it is the step that fails.
+
+**The eigenvalue list, summand by summand.** [Lemma L27](../findings/nondegeneracy.md) gives $L_e$ as a scalar on each of ten summands. At the balanced point $p=q=m$, $n=2m$, with the margin read as $3\theta_0(\tfrac12-\lambda)$ ([Lemma L141](../findings/second-order.md), confirmed for the $S^2_0$ value by [r448](REVIEW_r448.md) D6 and [r449](REVIEW_r449.md) V4):
+
+| summand | $\lambda$ | margin $3\theta_0(\tfrac12-\lambda)$ | order |
+|---|---|---|---|
+| $\langle W\rangle$ | $1$ | $-\tfrac32\theta_0$ | negative, excluded, $H\perp W^*$ on $T_{W^*}S$ |
+| $\mathbb R^p\otimes\mathbb R^q$ | $\tfrac12$ | $0$ | excluded, and cleanly (below) |
+| $S^2_0(\mathbb R^p)$ | $\lambda_m=\tfrac{m-2}{2(m-1)}$ | $\tfrac{3\theta_0}{2(m-1)}=\tfrac{3\theta_0}{n-2}=c_p$ | $\Theta(1/n)$ |
+| **$S^2_0(\mathbb R^q)$** | **$\lambda_m$, the same** | **$c_p$** | **$\Theta(1/n)$, and L149 puts this in $H_r$** |
+| $S^2_0\otimes S^2_0$ or $\Lambda^2\otimes\Lambda^2$, the $-\mu$ one | $-\mu$, $\mu=\tfrac1{m-1}$ | $3\theta_0(\tfrac12+\mu)$ | $\Theta(1)$, $\to2.12$ |
+| the $+\mu$ one | $+\mu$ | $3\theta_0\cdot\tfrac{m-3}{2(m-1)}$ | $\Theta(1)$ for $m\ge5$; **zero at $m=3$** |
+| $\mathrm{Weyl}_p$, $\mathrm{Weyl}_q$, $X_p\otimes\mathbb R^q$, $X_q\otimes\mathbb R^p$ | $0$ | $\tfrac32\theta_0$ | $\Theta(1)$, $\to2.12$ |
+
+**The counterexample is one line.** Take $H$ a unit vector in $S^2_0(\mathbb R^q)$. By L149's own set-up $H_s=0$, so $w=\lVert H_r\rVert=1$, and the recorded fact asserts $c(H)\gtrsim c_p+1=\Theta(1)$. The true value is $c(H)=c_p=\Theta(1/n)$. **The claimed bound overstates the margin by a factor $n$ on a subspace of dimension $\dim S^2_0(\mathbb R^m)=\Theta(n^2)$.**
+
+**Why it happens, and it is not a subtle point.** At $p=q$ the element of $O(n)$ exchanging $V_1$ and $V_2$ fixes $W^*$, hence commutes with $L_e$, and it exchanges the two $S^2_0$ summands. The $\lambda_m$-eigenspace is therefore *twice* what L149 assumes, with no representation-theoretic escape: the ten-summand decomposition is multiplicity-free under $O(p)\times O(q)$ and remains so at $p=q$, but $L_e$ takes the same value on two of its summands. **Multiplicity-freeness of the decomposition is not simplicity of the spectrum**, and the lemma's "$L_e$ is scalar on each summand" is doing the work of a claim that the eigenvalues are distinct.
+
+**Both reviews L149 says it completes state the split correctly, and L149 mis-transcribed both.** [r450](REVIEW_r450.md) D2: *"Let $w$ be the Frobenius weight of a unit $H$ outside the **two** $S^2_0(\mathbb R^m)$ copies … $\tfrac12-\lambda_j=\Theta(1/n)$ on $S^2_0(\mathbb R^m)$ alone and $\Theta(1)$ on all **six** other off-orbit summands."* [r451](REVIEW_r451.md) A1: *"Write $H=H_s+H_r$ with $H_s$ in the **joint $\lambda_m$-eigenspace**."* Six-plus-two is eight, which is the off-orbit count; L149's reading is seven-plus-one, and the extra summand it moves into $H_r$ is the one that breaks the bound. [Lemma L146](../findings/second-order.md)'s own opening sentence says *"the **two** $S^2_0(\mathbb R^m)$ summands"*, the plural is in the lemma L149 cites for it.
+
+**The repair, and it costs nothing.** Let $H=H_1+H_2+H_o$ with $H_1,H_2$ in the two copies and $v=\lVert H_o\rVert$. The margin is exactly additive over orthogonal summands on which $L_e$ is scalar, so $c(H)=c_p(\lVert H_1\rVert^2+\lVert H_2\rVert^2)+\sum_{j\in o}c_j\lVert H_j\rVert^2\ge c_p(1-v^2)+c_0v^2$ with $c_0=\Theta(1)$, whence $c(H)\gtrsim c_p+v^2$ on the whole of $v\in[0,1]$. And $\lVert H\rVert_{op}\le\lVert H_1\rVert_{op}+\lVert H_2\rVert_{op}+\lVert H_o\rVert_{op}\le\Theta(n^{-1/2})+v$, the two copies being interchanged by an isometry fixing $W^*$ so [Lemma L146](../findings/second-order.md)'s ratio bound applies to each. **Both facts recover their stated form with $v$ in place of $w$, so every number downstream is unchanged.** The lemma is repairable by replacing "the margin summand $S^2_0(\mathbb R^m)$" with "the joint $\lambda_m$-eigenspace, both copies of $S^2_0(\mathbb R^m)$".
+
+**The orbit summand is properly excluded, and this is the one place the exclusion is clean.** [Lemma L27](../findings/nondegeneracy.md) proves $\dim E(\tfrac12)=pq=\dim(\text{orbit})$ with $\tfrac12$ attained on the orbit summand alone, so $E(\tfrac12)$ **equals** $\mathbb R^p\otimes\mathbb R^q$ and $T_{W^*}\mathcal O^\perp$ removes exactly it. Margin zero never enters. *This holds only for $(p,q)\ne(3,3)$: at $m=3$, $\mu=\tfrac12$ and $\dim E(\tfrac12)=18$ against orbit dimension $9$, so the $+\mu$ summand carries margin zero and survives the projection.* The brief's question about $\mu\to\tfrac12$ answers itself, $\mu=1/(m-1)$, so $\mu=\tfrac12$ happens **at** $m=3$ and nowhere near it: the $+\mu$ margin is $0$, $0.573$, $0.900$, $1.112$ at $m=3,4,5,6$ and rises to $\tfrac32\theta_0$. **For $m\ge5$ it exceeds $2c_p$ and is bounded below by $3\theta_0/4$, an absolute constant.** L146's own $m\ge5$ restriction is the right one and L149 should quote it rather than claiming a bound uniform in $n$.
+
+## E2, the triangle inequality step is sound, including the $\lVert H_s\rVert_F<1$ worry
+
+The brief asks whether $\lVert H_s\rVert_{op}\le\Theta(n^{-1/2})$ survives $\lVert H_s\rVert_F=\sqrt{1-w^2}<1$. It does, and the reason is that [Lemma L146](../findings/second-order.md)'s two closed forms are homogeneous of the same weight in $h$: $\lVert H\rVert_{op}=\tfrac m{2(m-1)}\max_{a\ne a'}\lvert h_a+h_{a'}\rvert$ is degree one and $\lVert H\rVert_F^2=\tfrac{m(m-2)}{2(m-1)}\lVert h\rVert^2$ degree two, so the **ratio** $\lVert H\rVert_{op}/\lVert H\rVert_F\le1/\sqrt{m-1}$ is scale-invariant. Hence $\lVert H_s\rVert_{op}\le\lVert H_s\rVert_F/\sqrt{m-1}\le1/\sqrt{m-1}$, and a shorter $H_s$ makes it strictly smaller. The lemma is conservative here, which is the safe direction for a lower bound on $r$.
+
+$\lVert H_r\rVert_{op}\le\lVert H_r\rVert_F=w$ is the record's own $\lVert\cdot\rVert_{op}\le\lVert\cdot\rVert_F$ at the $\Lambda^2$-operator normalisation $\operatorname{tr}(W^2)=1$ ([conventions.md](../findings/conventions.md)), which is plain Frobenius. Nothing is spent.
+
+**And the additive split is not applied to the nonlinear map.** The brief's worry does not land: $H=H_s+H_r$ is used only inside $\lVert\cdot\rVert_{op}$, which is a norm, and inside $c(H)$, which is a quadratic form. $W\mapsto\mathrm{Alt}(W_-)$ is never split, it is handled by a one-variable Cauchy estimate along $W^*+zH$ whose only input is $\lVert H\rVert_{op}$. *There is no additivity claim about the nonlinear map to break.*
+
+## E3, [Lemma L146](../findings/second-order.md) survives [Lemma L148](../findings/second-order.md) as an input, and the Cauchy scaling is right
+
+**L148 displaces L146's purpose, not its content.** L148 says the defect vanishes identically on the margin summand, so a bound on $\lVert A''\rVert$ *there* prices nothing. But L149 does not use L146 for $\lVert A''\rVert$ on that summand: it uses it for $\lVert H_s\rVert_{op}$, which then feeds $\rho(H)=g_n/\lVert H\rVert_{op}$ for a **mixed** $H$ whose defect does not vanish. An operator norm is an operator norm whether or not the defect is zero. **The input is undisturbed.**
+
+**What $\lVert A''\rVert$ measures in the mixed case, which is the brief's question.** It is the second derivative along the mixed segment, where $A\not\equiv0$; L148's vanishing is a statement about the segments inside the margin subspace, which form a measure-zero slice of the sweep. What L148 does give, and L149 never states, is the linear consequence: $A'(0)$ is linear in $H$ and vanishes on the whole margin subspace, so $A'(0)[H]=A'(0)[H_r]$ and $u:=\lVert A'(0)\rVert\le\lVert H_r\rVert=w$, the missing link of E5.
+
+**The Cauchy scaling, re-derived.** Running [r447](REVIEW_r447.md) F1's Riesz decomposition with $\rho$ kept symbolic, $\lVert A(z)\rVert\le\lVert W(z)-W^*\rVert_F\lVert\Pi(z)\rVert_{op}+\lVert W^*\rVert_{op}\lVert\Pi(z)-\Pi(0)\rVert_F$, the first term $O(\rho)\cdot O(1)$ and the second $\Theta(g_n)\cdot O(\rho/g_n)$, so $M=O(\rho)$ and $\lVert A''\rVert=O(M/\rho^2)=O(1/\rho)=O(n\lVert H\rVert_{op})=O(n^{1/2}+nw)$. **I checked this on the complex circle rather than the real segment, which matters**: the $1$-Lipschitz property of $x\mapsto x_-$ that [r450](REVIEW_r450.md) D1 quotes is a Daleckii–Krein statement about *Hermitian* arguments (the divided-difference multiplier has entries in $[0,1]$, and in Frobenius norm a Schur multiplier is bounded by its largest entry), and $W^*+zH$ is not Hermitian for complex $z$. The Riesz route needs no Lipschitz property and reaches the same $O(\rho)$, so the conclusion stands on the argument r447 gave rather than the one the two later reviews shortened it to. *Recorded because the shortcut is what a successor will copy.*
+
+## E4, the calculus: the sign rule and the value are right, and the display that carries them is corrupt twice in one line
+
+**The sign rule.** With $g(w)=\sqrt{c+w^2}/(A+Bw)$,
+$$g'(w)=\frac{\frac w{\sqrt{c+w^2}}(A+Bw)-B\sqrt{c+w^2}}{(A+Bw)^2},$$
+and multiplying the numerator by $\sqrt{c+w^2}>0$ gives $w(A+Bw)-B(c+w^2)=wA-Bc$. So $\operatorname{sign}g'=\operatorname{sign}(wA-Bc)$, negative then positive, with the single interior minimum at $w^*=Bc/A$. **CONFIRMED as stated.** With $c=\kappa/n$, $A=n^{1/2}$, $B=n$ this is $w^*=\kappa n^{-1/2}$, as claimed.
+
+**The value, recomputed from scratch.** $c+w^{*2}=\kappa/n+\kappa^2/n=\kappa(1+\kappa)/n$ and $A+Bw^*=A+B^2c/A=\sqrt n+\kappa\sqrt n=(1+\kappa)\sqrt n$, so
+$$g(w^*)=\frac{\sqrt{\kappa(1+\kappa)/n}}{(1+\kappa)\sqrt n}=\frac1n\sqrt{\frac\kappa{1+\kappa}} .$$
+**The stated value is correct.** The display that produces it is not: it writes the numerator as $\sqrt{c+c^2}$, which is $w^*=c$ rather than $w^*=B c/A$, and the denominator as $A+Bc/A\cdot B/B$, which reduces to $A+Bc/A$ rather than $A+B^2c/A$. **Two independent corruptions in one line, and they do not cancel**, the literal expression evaluates to $\approx2.06/n$, which is $g(0)$, not the minimum. Both are $\Theta(1/n)$, so the headline is unaffected; the line should be rewritten because it is what the next reader will differentiate.
+
+**The endpoints and the uniformity.** $g(0)=\sqrt c/A=\sqrt\kappa/n$ and $g(1)=\sqrt{1+\kappa/n}/(\sqrt n+n)\asymp1/n$. With $\kappa=3\theta_0n/(n-2)\to3\sqrt2=4.243$ an absolute constant, the minimum is $0.900/n$ and the maximum $\sqrt\kappa/n=2.06/n$. **The branch never leaves $\Theta(1/n)$, and the spread across the whole sweep is a factor $2.3$.** CONFIRMED.
+
+> **Screen** (self-constructed, seconds; evidence for nothing, and it can fail, the grid is built from $\sqrt{c+w^2}/(A+Bw)$ itself, so a wrong closed form shows up as a mismatch). Grid-minimising over $2\times10^6$ points of $[0,1]$ at $n\in\{10^2,10^4,10^6\}$: the argmin matches $Bc/A$ to six digits and the minimum matches $\tfrac1n\sqrt{\kappa/(1+\kappa)}$ to seven, while the lemma's literal display returns $2.06/n$, the endpoint, not the minimum, which is how the corruption showed. Separately, $\mu$ computed from [Lemma L27](../findings/nondegeneracy.md)'s own displayed $\tfrac12-\mu=\frac{(p-2)(q-2)-1}{2(p-1)(q-1)}$ at $p=q=m$ agrees with $1/(m-1)$ to machine precision, and $3\theta_0(\tfrac12-\lambda_m)-3\theta_0/(n-2)=0$ exactly at $m=5,10,100$.
+
+## E5, the elimination of $u$ is valid, and it drops the term $u$ was there to control
+
+**The elimination is sound as an inequality.** [r450](REVIEW_r450.md) D3's identity $f(u^*)=2u^*/a=\Theta(\min(c/S,\sqrt c/a))$ for $f(u)=(c+u^2)/(S+au)$ is what turns three branches into two, and I re-derived it: $ac=au^{*2}+2Su^*$ gives $c+u^{*2}=2u^*(S+au^*)/a$ directly. Relaxing the constrained $u=u(H)$ to an unconstrained $\min_{u\ge0}$ under-estimates $f(u(H))$, which is the safe direction for a lower bound on $r$; and $\min_w\min(b_1,b_2)=\min(\min_wb_1,\min_wb_2)$, so the order of the two minimisations is not an issue. **The brief's worry about minimising over two variables one at a time does not bite here, because both minimisations are of the same $\min$ of two explicit functions and neither constrains the other.**
+
+**What is lost is the reason $c(H)$ was coupled to $u$ in the first place.** In [r447](REVIEW_r447.md) F2 the penalty enters at second order: $\kappa_n<0$ for $n\ge12$, so $-\kappa_n\delta^2=\lvert\kappa_n\rvert\delta^2$ works **against** the margin, and the $u^2t^2$ head of $\delta^2\le u^2t^2+2Knut^3+K^2n^2t^4$ must be absorbed by $c(H)t^2$. That is exactly what r447's *"$c(H)\gtrsim c_p+\Theta(1)v^2$, and $u\le\tfrac{\sqrt2}3v$ gives $c(H)\gtrsim c_p+u^2$"* is for. **L149's chain contains no $u$ at all and no statement that the penalty is absorbed**, so as written its $c(H)$ is the bare $L_e$ margin rather than the net margin the chain needs.
+
+**It is repairable, and the repair is an absolute-constant comparison nobody has made.** By E3, $u\le w$. The worst case is then $c(H)\ge\big[\min_j 3\theta_0(\tfrac12-\lambda_j)-\lvert\kappa_n\rvert\big]w^2$ over the six summands outside the two copies, and
+$$\lim_{n\to\infty}\Big(\tfrac32\theta_0-\lvert\kappa_n\rvert\Big)=\tfrac32\sqrt2-9\big(\sqrt2-\sqrt{3/2}\big)=2.1213-1.7053=0.4160>0 .$$
+**Positive, but by twenty per cent, and it fails for $m\le4$**, the coefficient is $-0.139$ at $m=4$ (harmless, since $\kappa_8>0$ there and the penalty helps) and $+1.011$ at $m=6$, falling to $+0.416$. So the absorption holds on the whole range that matters, and it holds because $9(\sqrt2-\sqrt{3/2})<\tfrac32\sqrt2$, an inequality that appears nowhere in the record. *r447's route through $u\le\tfrac{\sqrt2}3v$ gives a factor $\tfrac29$ of room and is more comfortable, but it is stated for the four-set-block weight $v$, not for L149's $w$, and the two are not the same coordinate.*
+
+## E6, the missing third branch, and what the $\Theta(n^{-1})$ ceiling rests on
+
+**Both source reviews asked for a validity cap and L149 did not add it.** [r450](REVIEW_r450.md)'s recommendation 6 and [r451](REVIEW_r451.md)'s recommendation 6 are the same instruction: carry $\rho/2$ as a third argument of the $\min$, because the Cauchy bound at intermediate base points needs $t\le\rho/2$ and the infimum inherits the *smallest* disc, $\inf_H\rho(H)/2=\Theta(g_n)=\Theta(n^{-1})$. **L149's displayed chain has two branches.** The lemma does address the point in prose, *"$\Theta(n^{-1})=\Theta(g_n)$ puts the tube at a fixed fraction of the smallest analyticity disc, so the absolute constants in the Cauchy step decide"*, which is the right content in the wrong place: a constraint that binds at the advertised value belongs in the display, not in a closing note.
+
+**The ceiling claim itself is CONFIRMED and it is not new.** $\Theta(n^{-1})$ is [r450](REVIEW_r450.md) D4 and [r451](REVIEW_r451.md) A4, where it is established four independent times, the $P$-side branch self-caps at $c_p/\theta_0\le3/(n-2)$, the corrected quartic branch is $\Theta(n^{-1})$, the validity cap is $\Theta(g_n)$, and $\beta\ge0$ is forced. L149 contributes the fourth of these as a uniform statement in $w$ rather than at a point, which is a real strengthening; **it does not contribute the ceiling.** The lemma's *"$\Theta(n^{-1})$ as a limit of the method is unconditional"* is right and is r451 A4's first bullet.
+
+**The trade-off is genuinely closed, and this is what I could not break.** The killer direction would be one with margin $\Theta(1/n)$ *and* operator norm $\Theta(1)$, giving $\sqrt{c_p}/n=\Theta(n^{-3/2})$ and restoring the old cap at every $\beta$, which is [r451](REVIEW_r451.md)'s mixed counterexample to [Lemma L147](../findings/second-order.md). It does not exist. Margin $\Theta(1/n)$ forces $v\lesssim n^{-1/2}$, and then $\lVert H\rVert_{op}\le\Theta(n^{-1/2})+n^{-1/2}=\Theta(n^{-1/2})$, so $\lVert A''\rVert=O(n^{1/2})$ and the branch returns to $\Theta(n^{-1})$. **The lemma's central claim (that the two quantities cannot be bad simultaneously), is correct, and the sweep is the right way to see it.**
+
+## E7, vacuity: L149 does not change [r447](REVIEW_r447.md) F6, and does not say so
+
+The brief asks whether $\Theta(n^{-1})$ is vacuous as a ceiling. Four comparisons, none of which L149 makes.
+
+- **Against $g_n$.** $\Theta(n^{-1})=\Theta(g_n)$, the ceiling is the spectral gap. The tube can never be larger than the disc on which the analytic machinery that builds it is defined, so the ceiling is not a discovery about the functional but the method's own domain restated. *That is the honest reading of "the ceiling of the method", and it is a better reason than the branch arithmetic.*
+- **Against the nearest competitor.** $S^{m-1}\times S^{m+1}$ sits at distance $\Theta(1)$ ([I20](../plan.md)), so a tube of radius $n^{-1}$ contains no competitor, as one of radius $n^{-3/2}$ did not, and as [r443](REVIEW_r443.md) D6 observed, nor would one of radius $\tfrac12$. **The half-power gained separates the tube from no competitor it was not already separated from.**
+- **Against coverage.** The orbit has dimension $\Theta(n^2)$ inside a sphere of dimension $\Theta(n^4)$, so the covered fraction vanishes at $n^{-1}$ exactly as at $n^{-3/2}$, and scenario $(\gamma)$ (which is the conjecture), carries what it carried before.
+- **Against the orbit's normal injectivity radius.** Nobody has computed it; nothing in the chain needs it, since $r_n\to0$ and the tube is filled by minimising great circles from the nearest orbit point ([r447](REVIEW_r447.md) F4). **This is the one comparison that is genuinely not owed**, and it is worth recording as closed rather than left open.
+
+**Not vacuous logically**, for [r447](REVIEW_r447.md) F6's reason: with $\kappa_n<0$ for $n\ge12$ the tube statement $P+\lvert\kappa_n\rvert\delta^2\le\theta_0$ is strictly stronger than local maximality, and the balanced orbit is a genuine equality case. **Vacuous as a gain**, unchanged across three audits now ([r447](REVIEW_r447.md) F6, [r450](REVIEW_r450.md) D8, [r451](REVIEW_r451.md) A9), and L149 is the third entry in a row to record none of it.
+
+---
+
+## What I could not break
+
+- **The uniformity computation**, in every part: the sign rule, the minimiser, the value at it, and the two endpoints. Recomputed cold, then screened against a grid built from the defining expression.
+- **The two-branch reduction** and the order of the two minimisations (E5, first paragraph).
+- **The triangle-inequality step**, including under $\lVert H_s\rVert_F<1$, which helps rather than hurts (E2).
+- **The claim that no direction is both low-margin and high-operator-norm** (E6, last paragraph), the substance of the lemma, and it is right.
+- **The exclusion of the orbit summand**, which is exact rather than approximate because [Lemma L27](../findings/nondegeneracy.md) proves $E(\tfrac12)$ *equals* the orbit tangent (E1).
+- **$\lVert A''\rVert=O(n^{1/2}+nw)$**, re-derived through the Riesz decomposition rather than the Lipschitz shortcut, which does not apply on the complex circle (E3).
+
+## What this audit did not check
+
+[Lemma L27](../findings/nondegeneracy.md)'s ten summand values and multiplicity-freeness, [Lemma L141](../findings/second-order.md)'s $c_p=3\theta_0/(n-2)$, [Lemma L133](../findings/second-order.md)'s $u\le\tfrac{\sqrt2}3v$, [Lemma L143](../findings/bounds.md)'s proof, and [Lemma L146](../findings/second-order.md)'s corrected embedding and extremal problem are taken as given, each carries its own Gate 2. I used L27's eigenvalue *list* heavily and verified only its internal arithmetic ($\mu=1/(m-1)$ from its own displayed formula, and the $S^2_0$ margin against $c_p$). Whether $\lVert A''\rVert$ is **saturated** at $O(M/\rho^2)$, [r443](REVIEW_r443.md)'s open item (iii), remains untouched, so everything here bounds what the chain can prove, not the true tube radius. [r451](REVIEW_r451.md)'s live resource is untouched too: $M=O(\rho)$ uses only $\lVert H\rVert_F=1$, and a sharper $M=O(w\rho)$ on small-$w$ directions would move the ceiling above $n^{-1}$.
+
+## What to change
+
+1. **Replace "the margin summand $S^2_0(\mathbb R^m)$" with "the joint $\lambda_m$-eigenspace, both copies of $S^2_0(\mathbb R^m)$"** in the set-up, and read $w$ as the weight outside both. This is the fix for E1 and it changes no value in the lemma. Say why the plural is forced: the swap of the two factors fixes $W^*$, so $L_e$ takes $\lambda_m$ twice.
+2. **Stop saying "the off-summand eigenvalues bounded below by an absolute constant" without a range.** Six summands qualify; the constant is $3\theta_0/4$ and it needs $m\ge5$, which is [Lemma L146](../findings/second-order.md)'s own restriction. At $m=3$ the $+\mu$ margin is zero and the whole scheme fails, orbit exclusion included.
+3. **Rewrite the $g(w^*)$ display.** The numerator is $\sqrt{c+B^2c^2/A^2}$ and the denominator $A+B^2c/A$; the stated value $\tfrac1n\sqrt{\kappa/(1+\kappa)}$ is right and the line that produces it is wrong twice.
+4. **State $u\le w$ and the absorption of the penalty.** $A'(0)$ is linear and vanishes on the margin subspace by [Lemma L148](../findings/second-order.md), so $u\le\lVert H_r\rVert=w$; the net $w^2$ coefficient is $\tfrac32\theta_0-\lvert\kappa_n\rvert\to0.416>0$, which is why $c(H)\gtrsim c_p+w^2$ can absorb $\lvert\kappa_n\rvert u^2$. Without this the chain has no account of the penalty at second order.
+5. **Add the validity branch $\rho/2$ to the displayed $\min$**, as [r450](REVIEW_r450.md) 6 and [r451](REVIEW_r451.md) 6 both asked. The prose note is the right content in the wrong place.
+6. **Say that the ceiling is [r450](REVIEW_r450.md) D4 and [r451](REVIEW_r451.md) A4**, and that L149's contribution is its uniformity in $w$, not its existence.
+7. **Record the vacuity paragraph**, which three consecutive entries have now omitted: $\Theta(n^{-1})=\Theta(g_n)$, no competitor inside at any exponent, vanishing coverage at either, and scenario $(\gamma)$ unchanged.

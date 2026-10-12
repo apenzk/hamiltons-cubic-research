@@ -1,0 +1,17 @@
+module: 853 weights, dim 1638
+|W(D6)| = 23040   (expected 23040: True)
+Sym^3: 204205 weights, dim 733,813,080 (binom(n+2,3) = 733,813,080: True)
+  [17.6s]
+decomposition: 77 irreducibles, 191 multiplicities  [19.6s]
+  negative multiplicities: 0  (must be 0)
+
+against n12_sym3_blocks.pkl: 77 blocks recorded, 77 found, 0 disagreements
+against n12_sym3_char.pkl: 0 weight-space disagreements over 204205 weights
+
+trivial block (0,0,0,0,0,0): multiplicity 2, weight space 635,220
+
+largest 8 multiplicities: [((3, 2, 1, 0, 0, 0), 9), ((3, 3, 1, 1, 0, 0), 8), ((4, 2, 2, 0, 0, 0), 8), ((2, 2, 0, 0, 0, 0), 8), ((4, 2, 0, 0, 0, 0), 7), ((4, 3, 1, 0, 0, 0), 6), ((3, 2, 2, 1, 0, 0), 6), ((2, 2, 2, 0, 0, 0), 6)]
+
+PLANTED VIOLATION: give weight (2,2,0,0,0,0) one extra dimension
+  multiplicities that move: 40  (the check FIRES: True)
+  e.g. [((3, 2, 2, 2, 2, -1), 0, -1), ((4, 2, 2, 2, 1, 1), 0, 1), ((5, 2, 2, 1, 1, 1), 0, -1), ((6, 6, 0, 0, 0, 0), 1, 4)]

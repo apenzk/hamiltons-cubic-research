@@ -1,0 +1,3 @@
+sqrt(3/2) = 1.224744871391589
+  s=12  dim Weyl= 1638  max P found = 1.236033081183   (sqrt(3/2)=1.224744871392, excess +1.13e-02)   theta_0(s)=1.236033   crit resid=5.9e-09   [13s]
+  s=13  dim Weyl= 2275  max P found = 1.248375567865   (sqrt(3/2)=1.224744871392, excess +2.36e-02)   theta_0(s)=1.249852   crit resid=4.9e-09   [30s]

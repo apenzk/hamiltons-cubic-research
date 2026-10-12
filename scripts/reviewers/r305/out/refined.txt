@@ -1,0 +1,6 @@
+seed 9015: float64 theta=1.088948052505 res=2.13e-12
+seed 9015: theta=1.088948052505048 res=2.13e-12 Delta=1.512230534 lam=0.608885447169 ratio=0.559150132 margin=1.217771 dimE1=1 mult12=23 ker=0 simple-ranks=[4] <W,Wwit>=0.956931
+seed 9018: float64 theta=1.081549248013 res=1.54e-12
+seed 9018: theta=1.081549248013368 res=1.54e-12 Delta=2.400930266 lam=0.562754631717 ratio=0.520322706 margin=1.125509 dimE1=1 mult12=26 ker=0 simple-ranks=[2, 4, 6] <W,Wwit>=0.694922
+seed 9033: float64 theta=1.079758865610 res=1.36e-12
+seed 9033: theta=1.079758865610486 res=1.36e-12 Delta=2.762849577 lam=0.553480567238 ratio=0.512596455 margin=1.106961 dimE1=1 mult12=26 ker=0 simple-ranks=[2, 6] <W,Wwit>=0.754729

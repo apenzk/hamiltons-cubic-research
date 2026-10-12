@@ -1,0 +1,78 @@
+# REVIEW r1452: L35's two-variable relaxation in Lean: `R2`, `R2_le`, `region12`, `tangent32`, `C_pos`, `beyond_av`, `g_beyond`, the transcription of L35's middle, and r1451's fixes in commit 5d8e0921
+
+Log [agent_logs/r1452.log](../agent_logs/r1452.log). One reviewer, working cold, statement fidelity and hypothesis use against the record. Analysis-only: `lake env lean` on [L35Reduce.lean](../lean/HamiltonsCubic/Results/L35Reduce.lean) (31 s, silent), one scratch file in the session scratchpad (outside the repository) carrying `#print axioms` for six names and a `#check`, reading, and the hand derivations below. No numerical run. Record: [findings/stratum-two-negative.md](../findings/stratum-two-negative.md) at 5d8e0921 (lines 520 to 558 and 647), [reviews/REVIEW_r63.md](REVIEW_r63.md) §(ii) (lines 98 to 140), [reviews/REVIEW_r1451.md](REVIEW_r1451.md), [lean/INDEX.md](../lean/INDEX.md) row L35 (line 619), [findings/LEDGER.md](../findings/LEDGER.md) line 1533, [findings/INDEX-results.md](../findings/INDEX-results.md) row 35 (line 50), [L35Residual.lean](../lean/HamiltonsCubic/Results/L35Residual.lean) lines 191 to 195, [L35c.lean](../lean/HamiltonsCubic/Results/L35c.lean) line 40.
+
+**Standfirst.** The file compiles silently and all six names rest on `propext`, `Classical.choice`, `Quot.sound`. **`R2 A d` is REVIEW_r63's $R_2(A,u)$ at $u=A^2+d$ character for character**, and `R2_le`'s domain $A>0$, $d\ge0$, $A^2+d\le1$ contains every point the chain reaches (the chain in fact has $u\le\tfrac23$, from $u\le s^2\le2-2u$). Every case of the proof rederives by hand: both minima collapse exactly at $d=\tfrac89A^2$, region I and II share the bound $5A(1-u)-\tfrac14(2-2u)^{3/2}$, the tangent identity and the reduction to $g+\psi$ check, and the ellipse factorisation agrees at three points by exact arithmetic. The transcription into stratum-two-negative.md is faithful to REVIEW_r63 §(ii), and both region II bounds are valid. r1451's three gaps are closed. The observations are wording: step 1 of the transcription writes $M$ where the display it cites writes $\mathrm{FTP}$, the record's "$g\le\sqrt{3/2}$ directly" past the endpoint carries no reason in prose, and the region maxima $1.017217$, $1.067666$ stay numerical beside Lean's $\tfrac65$.
+
+| Item | Verdict | Reason |
+| --- | --- | --- |
+| A. `R2` and `R2_le` against REVIEW_r63 | CONFIRMED | `R2 A d` $=A^3+\min(A,\sqrt d)d+\min(A,\tfrac3{2\sqrt2}\sqrt d)(2-3u)-\tfrac14(2-2u)\sqrt{2-2u}+3A(1-u)$ at $u=A^2+d$, REVIEW_r63's $R_2$ with $K_0=3/(2\sqrt2)$ and $(2-2u)\sqrt{2-2u}=(2-2u)^{3/2}$ on $u\le1$. $A=\lambda_1>0$, $d=u-A^2\ge0$ by definition, and unit norm gives $u=1-b^2-c^2\le1$. The chain has $u\le\tfrac23$ as well, so the Lean domain is a widening. No hypothesis the chain cannot supply. |
+| B. The cases | CONFIRMED | $K_0^2d=\tfrac98d\ge A^2$ iff $d\ge\tfrac89A^2$, and $d\le\tfrac89A^2$ gives $\sqrt d\le\tfrac{2\sqrt2}3A<A$. Region I and II: $\min(A,\sqrt d)d\le Ad$ collapses $R_2$ to $5A(1-u)-\tfrac14p^3$, $p^2=2-2u$, and $u\ge\tfrac{17}9A^2$ is `region12`'s `hc`. $(p-r)^2(p+\tfrac r2)=p^3-\tfrac32p^2r+\tfrac12r^3$ expands by hand, $r^2-p^2=2t^2$, and the collected coefficients are the record's $g$, $\alpha$, $\beta$, $\gamma$. Past $\sqrt{2/3}$: $\alpha\le0$, $\beta\le\tfrac34-\tfrac{12}5<0$, $\gamma<0$. $9/4-G=(m+2)^2C(m)/(m^2+2)^3$ checks at $m=-2$, $0$, $-4$, the arc runs over $m\in[-4.45,-2]\subset[-5,-2]$, and $C(-5)=877.5$, $C(-2)=162$. |
+| C. The transcription | CONFIRMED | Steps 1 to 5, $R(A,s,u)$, both partial derivatives, $R_2$, and the three-row table match REVIEW_r63 lines 100 to 130. $-b^3-c^3+6Abc=-s^3+3bc(s+2A)$ from $b^3+c^3=s^3-3bcs$. REVIEW_r63's $2A^3+A(5-6u)$ uses $d^{3/2}\le A^3$ (from $d\le A^2$), the collapse uses $d^{3/2}\le Ad$ (from $\sqrt d\le A$), both valid on region II, the collapse the tighter there. Observations: step 1 writes $3M(\lambda_P)$ and calls it "the display above", which writes $3\,\mathrm{FTP}(\lambda_P)$ (line 528), the identification resting on L42's definition one link away. "$g(A)\le\sqrt{3/2}$ directly" past the endpoint has no prose reason (one exists, below). The maxima $1.017217$, $1.067666$ are numerical. |
+| D. r1451's fixes | CONFIRMED | INDEX-results row 35 and LEDGER line 1533 now say the middle band closes by kernel interval arithmetic with the branch-and-bound certificate as an independent check. The "region I" collision is gone: the old line 532 sentence is replaced by the unlabelled table, and line 647's "region-I reduction" is the file's only use. The L35 row names `g_beyond` as the $A>\sqrt{2/3}$ branch and owes the chain from $W$ to $R_2$, all now on the record. Observations: line 647 follows REVIEW_r63 line 150's label, which is the third row of the new table. The owed list names a bound on $d$ (step 5) that $R$ never consumes. The tail tag "statement: not typed" persists beside L35Statement.lean. |
+| E. Axioms | CONFIRMED | Standard three for `R2_le`, `g_beyond`, `beyond_av`, `region12`, `C_pos`, `tangent32`. No `sorryAx`. |
+| F. Hypotheses | CONFIRMED | Every stated hypothesis is consumed and the file compiles with no unused-variable lint (screen). `hu` makes both square-root arguments nonnegative, which is where `Real.sqrt` agrees with the record's powers. Used but unstated: none. Widening: $u\le1$ for the chain's $u\le\tfrac23$. |
+
+**One-line summary.** `R2_le` is REVIEW_r63's $R_2\le\sqrt{3/2}$ on a domain containing the chain's, proved by the two minima collapses, the tangent line of $x^{3/2}$, `L35_residual`, and a new ellipse factorisation past the endpoint, all of which rederive by hand. The transcription is faithful, r1451's gaps are closed, and what remains is three wording observations. **CONFIRMED**
+
+## A. `R2` and `R2_le` against REVIEW_r63 §(ii)
+
+**The record's function.** REVIEW_r63 (line 100 on): $A:=\lambda_1$, $d:=u-A^2$, $K_0:=3/(2\sqrt2)$, and after $b=c$, $s=\sqrt{2-2u}$, $R_2(A,u)=A^3+\min(A,\sqrt d)d+\min(A,K_0\sqrt d)(2-3u)-\tfrac14(2-2u)^{3/2}+3A(1-u)$.
+
+**The Lean definition** (L35Reduce.lean, `R2`): `A ^ 3 + min A (√d) * d + min A (3 / (2 * √2) * √d) * (2 - 3 * (A ^ 2 + d)) - (2 - 2 * (A ^ 2 + d)) * √(2 - 2 * (A ^ 2 + d)) / 4 + 3 * A * (1 - (A ^ 2 + d))`. With $u=A^2+d$ each term is the record's, and $(2-2u)\sqrt{2-2u}=(2-2u)^{3/2}$ whenever $2-2u\ge0$, which `hu` supplies. **Same function.**
+
+**The domain.** $A$ is the largest positive eigenvalue, so $A>0$ once a positive exists, and trace-freeness with two negatives guarantees one. $d=\sum_{a\ge2}\lambda_a^2\ge0$. Unit norm: $u+b^2+c^2=1$, so $u\le1$. The chain reaches more than that: $s=\sum_P\lambda$ with every term positive gives $s^2\ge u$, and $(b-c)^2\ge0$ gives $s^2\le2-2u$, so $u\le\tfrac23$. `R2_le` on $A^2+d\le1$ is therefore a widening. **Every hypothesis of `R2_le` is one the chain supplies.**
+
+**The monotonicity step that lands on $R_2$**, checked for reachability. At fixed $(A,u)$, $\partial_sR=2s\min(A,K_0\sqrt d)+6sA+3bc$ ($-3s^2$ from $-s^3$ cancels $3s^2$ from $3bc(s+2A)$ with $\partial_s bc=s$), positive while $bc\ge0$, and $bc$ grows with $s$. So $s$ moves to $\sqrt{2-2u}$ with $A$ and $u$, hence $d$, unchanged, and the landing point $(A,u)$ lies in `R2_le`'s domain. The $u$-derivative is not needed for this, and it is correct as stated ($\partial_uR\ge-A+\tfrac32(s+2A)$, with $\partial_u bc=\tfrac12$ and both minima nondecreasing in $d$).
+
+## B. The proof's cases, by hand
+
+**Minima collapses.** $K_0\sqrt d\ge A\iff\tfrac98d\ge A^2\iff d\ge\tfrac89A^2$ (`hKt` in the first branch). In the second branch $t=\sqrt d\le\tfrac{2\sqrt2}3A$ (`htA`) and $\tfrac{2\sqrt2}3<1$ (from `hq1`, $\sqrt2<\tfrac32$), so $\sqrt d\le A$ and both minima take their second argument.
+
+**`region12`.** With $\min(A,K_0\sqrt d)=A$ and $\min(A,\sqrt d)d\le Ad$: $A^3+Ad+A(2-3u)+3A(1-u)=A^3+A(u-A^2)+5A-6Au=5A(1-u)=\tfrac52Ap^2$ at $p^2=2-2u$ (the proof's `e`). On $d>A^2$ this is an equality (REVIEW_r63's row one), on $\tfrac89A^2\le d\le A^2$ an upper bound (item C). `hc`, $A^2\le\tfrac9{17}(1-\tfrac12p^2)=\tfrac9{17}u$, is $d\ge\tfrac89A^2$ rewritten. The bound $\tfrac65<\sqrt{3/2}$ (`hc65`, $\tfrac{36}{25}\le\tfrac32$) exceeds the record's two maxima, so it is a coarser cap proved rather than computed.
+
+**`tangent32` and the reduction.** $(p-r)^2(p+\tfrac r2)=(p^2-2pr+r^2)(p+\tfrac r2)=p^3+\tfrac12p^2r-2p^2r-pr^2+pr^2+\tfrac12r^3=p^3-\tfrac32p^2r+\tfrac12r^3$. So $p^3\ge r^3-\tfrac32r(r^2-p^2)$ for $p,r\ge0$, which is `tangent32`, and at $r^2=2-2A^2$, $p^2=2-2A^2-2t^2$ it is REVIEW_r63's $(X-2t^2)^{3/2}\ge X^{3/2}-3t^2\sqrt X$. Substituting into $R_2=A^3+t^3+K_0t(2-3A^2-3t^2)-\tfrac14p^3+3A(1-A^2)-3At^2$ gives $g(A)+\alpha t+\beta t^2+\gamma t^3$ with $g=A^3-\tfrac14r^3+3A(1-A^2)$, $\tfrac14r^3=(1-A^2)^{3/2}/\sqrt2$, $\alpha=K_0(2-3A^2)$, $\beta=\tfrac34r-3A$, $\gamma=1-3K_0$, the proof's `hbound` with $\tfrac{3q}4=K_0$, $s^3q/2=(1-A^2)^{3/2}/\sqrt2$. `hF` matches this to `L35_residual`'s statement (L35Residual.lean lines 191 to 195) and `L35c.g`.
+
+**Past the endpoint.** $A^2>\tfrac23$ gives $2-3A^2<0$, so $\alpha\le0$ (`hal`). $r^2=2-2A^2<\tfrac23<1$ and $A>\tfrac45$ give $\beta<\tfrac34-\tfrac{12}5<0$ (`hbe`). $\gamma=1-\tfrac94\sqrt2<0$ (`hga`). So $\psi(t)\le0$ for $t\ge0$ and $R_2\le g(A)$.
+
+**`g_beyond` and `beyond_av`.** With $w=\sqrt6/3$, $a=A/w$, $v=\sqrt2\,s/w$: $v^2=3(1-A^2)=3-2a^2$ and $g=w^3(a^3-\tfrac14v^3+\tfrac32av^2)$ term by term, with $\tfrac94w^3=\tfrac32w=\sqrt{3/2}$. On $2a^2+v^2=3$ the line $v=1+m(a-1)$ through $(1,1)$ gives $(a-1)(2(a+1)+2m+m^2(a-1))=0$, so $a=\tfrac{m^2-2m-2}{m^2+2}$ and $v=1+m(a-1)=\tfrac{-m^2-4m+2}{m^2+2}$. The arc $a\in[1,\sqrt{3/2}]$, $v\ge0$ runs from the tangent slope $-2$ at $(1,1)$ to $m=-1/(\sqrt{3/2}-1)\approx-4.45$ at $v=0$, inside $[-5,-2]$, and the Lean reads the bounds off $v\le3-2a$ and $v\ge6-5a$. **The factorisation by exact arithmetic**, $G:=a^3-\tfrac14v^3+\tfrac32av^2$:
+- $m=-2$: $(a,v)=(1,1)$, $G=\tfrac94$, both sides $0$.
+- $m=0$: $(a,v)=(-1,1)$, $\tfrac94-G=5$, and $2^2\cdot10/2^3=5$.
+- $m=-4$: $(a,v)=(\tfrac{11}9,\tfrac19)$, $G=\tfrac{5389}{2916}$, $\tfrac94-G=\tfrac{1172}{2916}$, and $4\cdot586/18^3=\tfrac{2344}{5832}$, equal.
+
+$C(-5)=10+80+600+500-312.5=877.5$ and $C(-2)=10+32+96+32-8=162$, both positive, and `C_pos` is kernel-checked on the whole interval. The double root at $m=-2$ is the equality at $A=\sqrt{2/3}$.
+
+## C. The transcription in stratum-two-negative.md (lines 532 to 550)
+
+**Against REVIEW_r63 §(ii).** Steps 1 to 5 are REVIEW_r63's L1 to L5 in its own order, with the definitions $bc=(s^2-1+u)/2\ge0$ and $(b-c)^2=2-s^2-2u\ge0$ checked ($b^2+c^2=1-u$, $2bc=s^2-(b^2+c^2)$, $(b-c)^2=2(b^2+c^2)-s^2$). Step 2 links [Lemma L42](../findings/stratum-two-negative.md#lemma-l42-the-sharp-dual-weight), whose boxed display is $3M(\lambda_P)\le h(s^2-u)$ with the same $h$. $R(A,s,u)$, both derivative bounds, $R_2$, the three rows with their conditions ($d>A^2\iff A<\sqrt{u/2}$, $d>\tfrac89A^2\iff A<3\sqrt{u/17}$) and the last row's cap $t\le\tfrac{2\sqrt2}3A$ are REVIEW_r63's.
+
+**The $-s^3+3bc(s+2A)$ form.** $b^3+c^3=(b+c)^3-3bc(b+c)=s^3-3bcs$, so $-b^3-c^3+6Abc=-s^3+3bcs+6Abc=-s^3+3bc(s+2A)$. REVIEW_r63 writes it the same way when differentiating. **Correct.**
+
+**The two region II bounds.** On $\tfrac89A^2<d\le A^2$ the first minimum is $\sqrt d$, so the term is $d^{3/2}$. REVIEW_r63's $2A^3+A(5-6u)$ uses $d^{3/2}\le A^3$, valid since $d\le A^2$: $A^3+A^3+A(2-3u)+3A(1-u)=2A^3+A(5-6u)$. The collapse uses $d^{3/2}\le A\,d$, valid since $\sqrt d\le A$, giving $5A(1-u)$. $Ad\le A^3$ on this region, so the collapse is the tighter of two valid upper bounds, and the transcription's table keeps REVIEW_r63's row while the Lean uses the collapse. **Both valid.**
+
+**Observations** (none changes a claim):
+- Step 1 writes $G=\sum_P\lambda^3-b^3-c^3+6Abc+3M(\lambda_P)$ and calls it "the display above", which at line 528 reads $3\,\mathrm{FTP}(\lambda_P)$. The pair-capped packing on the positives is L42's $M(\lambda_P)$ (line 575), so the two symbols name one object. The sentence this commit replaced listed $\mathrm{FTP}$ among the symbols living in REVIEW_r63 alone, and after it $\mathrm{FTP}$ has no definition in the file except the prose "a packing on the positives" at line 612. One clause, "$M=\mathrm{FTP}$, L42's packing", closes it.
+- Line 550's "For $A>\sqrt{2/3}$ … $R_2\le g(A)\le\sqrt{3/2}$ directly" carries no reason for $g\le\sqrt{3/2}$ there. REVIEW_r63 checks $\max g$ on $4\cdot10^6$ points. A hand reason exists: $g'(A)=3-6A^2+\tfrac{3A}{\sqrt2}\sqrt{1-A^2}$, zero at $A^2=\tfrac23$, with $3-6x$ and $x(1-x)$ both decreasing on $x=A^2>\tfrac12$, so $g'<0$ on $(\sqrt{2/3},1)$ and $g\le g(\sqrt{2/3})=\sqrt{3/2}$. The Lean route (`g_beyond`) is a different, complete argument, and the sentence points to it.
+- The table's maxima $1.017217$ and $1.067666$ remain numerical values. `region12` proves $\tfrac65$ for both rows, which is all the chain needs, and line 550 says so.
+
+## D. r1451's fixes
+
+- **INDEX-results row 35** (line 50): "The middle band $[\tfrac13,0.6733]$ closes by rational interval arithmetic, carried out by the Lean kernel … the $200$-bit branch-and-bound certificate is an independent check of it." r1451 gap 3, resolved.
+- **LEDGER line 1533**: the "different kind of object" sentence is replaced by "the middle band is mechanical rather than readable: its step is checked by the kernel". Resolved.
+- **The region label** (r1451 gap 2): the sentence "region I collapsing to $5A(1-u)\dots$" is gone with the paragraph it sat in, the new table names regions by inequality only, and line 647's "region-I reduction" is the file's only occurrence. Resolved. *Observation*: that label is REVIEW_r63 line 150's, and in the new table it is the third row, so naming it "the $d\le\tfrac89A^2$ reduction" would match the table.
+- **The L35 row** (lean/INDEX.md line 619): stays **partial**, adds `R2_le` with `g_beyond` named as "the branch r1451 found untyped" (r1451 gap 1, resolved by proof rather than by listing), and the owed list is now "the chain from $W$ to $R_2$, namely the LP relaxation and the packing's decoupling, the three elementary bounds on $h$, $\sum_P\lambda^3$ and $d$, and the monotonicity of $R(A,s,u)$ onto $b=c$". That is exactly what sits between $W$ and `R2_le`, and no stated item is proved elsewhere. *Observations*: the bound on $d$ (step 5, $d\le(s-A)^2$) is consumed nowhere in $R$ or $R_2$, so owing it is harmless and unnecessary. The tail tag "statement: not typed" persists beside [L35Statement.lean](../lean/HamiltonsCubic/Results/L35Statement.lean), as r1451 noted.
+
+## E. Axioms
+
+`#print axioms` for `R2_le`, `g_beyond`, `beyond_av`, `region12`, `C_pos`, `tangent32`: each depends on `[propext, Classical.choice, Quot.sound]`. No `sorryAx`. `lake env lean` on L35Reduce.lean prints nothing. `#check @R2_le` returns `∀ (A d : ℝ), 0 < A → 0 ≤ d → A ^ 2 + d ≤ 1 → R2 A d ≤ √(3 / 2)`.
+
+## F. Hypotheses stated but unused, and used but unstated
+
+- `region12`: `hA`, `hp` in the product hints, `hc` for $p^2\le2$ and $A\le\tfrac34$.
+- `C_pos`: `h0`, `h1` in the product $(m+5)(-2-m)\ge0$.
+- `tangent32`: `hp`, `hr` for $p+\tfrac r2\ge0$.
+- `beyond_av`: `hv` for the ellipse, `hv0` and `ha` for the chord bounds on $m$ and the case split at $a=1$.
+- `g_beyond`: `hq`, `hq0`, `hw`, `hw0`, `hs`, `hs0` for the rescaling, `hA0` and `hA` for $a\ge1$.
+- `R2_le`: `hA` for $A>0$ in `L35_residual` and the sign steps, `hd` for $\sqrt d^2=d$, `hu` for $2-2u\ge0$ and $A^2\le1$.
+- The file compiles with no unused-variable lint (screen, a silent compile is not a proof of use).
+- Used but unstated: none. Widening: $u\le1$ where the chain has $u\le\tfrac23$.

@@ -1,0 +1,27 @@
+=== the file's two asserts, under four schemes ===
+scheme                                 n=5: ind/dep  n=6: ind/dep  n=7: ind/dep
+honest   F_ij                               2/1           2/1           2/1    
+indicator [F_ij != 0]                       2/1           2/1           2/1    
+entrywise square F_ij^2                     2/1           2/1           2/1    
+one contraction too many (F.F)_ij           2/1           2/1           2/1    
+
+=== but the last two are NOT linear reads, and they fabricate rank ===
+A = (W.W)_ij,  B = |W|^2 delta_ij,  C = A + B  --  exact identity C-A-B=0,
+so the true rank of {A,B,C} is 2 for every W.  What each scheme reports:
+  n=5:  true rank 2   reported: honest=2  indicator=2  entrywise=3  one=3
+  n=6:  true rank 2   reported: honest=2  indicator=2  entrywise=3  one=3
+  n=7:  true rank 2   reported: honest=2  indicator=2  entrywise=3  one=3
+
+=== why the rank-2 assert has no arithmetic content ===
+the two columns at the three chosen components, one sample, n=5:
+   (0,0):  (W.W)_ij = 489/16   |W|^2 delta_ij = 502/3
+   (0,1):  (W.W)_ij = -173/144   |W|^2 delta_ij = 0
+   (1,2):  (W.W)_ij = 145/288   |W|^2 delta_ij = 0
+  |W|^2 delta_ij is IDENTICALLY ZERO at both off-diagonal components, and
+  nonzero at (0,0).  Rank 2 follows from the zero PATTERN alone -- which is
+  why the indicator scheme, which discards every value, still reports 2.
+
+=== why the rank-1 assert has no content either ===
+  W_aibc W_ajbc == W_iabc W_jabc as MATRICES on every sample: True
+  (W_aibc = -W_iabc, so the two functions are equal, not merely dependent.)
+  Any scheme that reads the covariant's VALUE returns two identical columns.

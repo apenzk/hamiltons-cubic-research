@@ -1,0 +1,22 @@
+  f = 12:  sum over ALL labels of (dim Delta_lambda)^2 = 316234143225   ((2f-1)!! = 316234143225)
+
+    n  sum m_lambda(n)^2  sum (dim Delta)^2   agree   n >= f-1 = 11
+    1                  1          108056025   False   False
+    2            1352078        10783799632   False   False
+    3          834086421        40007304239   False   False
+    4        21634600078       121493807789   False   False
+    5       109656966853       213360887809   False   False
+    6       226603057642       281008201522   False   False
+    7       293507529091       308049702669   False   False
+    8       312896731836       315108918207   False   False
+    9       315957071241       316125326381   False   False
+   10       316222167677       316229719418   False   False
+   11       316233935213       316233935213    True   True
+   12       316234143225       316234143225    True   True
+   13       316234143225       316234143225    True   True
+   14       316234143225       316234143225    True   True
+
+  the two forms first agree at n = 11   -- the record says they 'part company at every n <= 10 and agree at every n >= 11'
+
+  labels of V^{tensor 12} admissible at n=12: 160  (of 160 labels in all)
+  labels admissible at n=6 : 77   -- the record's '77 of 160'

@@ -1,0 +1,65 @@
+==========================================================================
+CLAIM 5 -- the 25 / 16 / 47 bookkeeping, recomputed from ADAPTED
+==========================================================================
+  blocks 24   sum m 41   sum m^2 89   sum m(m+1)/2 65
+  lambda_2 even 16 blocks, sum 29;  odd 8 blocks, sum 12
+  survivors: 16 blocks, 25 multiplicities, shape 2 x 3, 5 x 2, 9 x 1
+  O_SYM 36   O_HERM 47   gauge 11
+  -> the arithmetic is right, and it is the run's own ADAPTED, not MULT quoted.
+
+  TR's shape and rank, block by block (the run asserts the shape only):
+    blocks with rank(T) < rows(T) in either split factor: none -- every T has full row rank
+
+  T annihilates u UNCONJUGATED, and does NOT annihilate conj(u) unless u is real:
+    u has a nonzero imaginary part on 5 of the 16 even blocks
+    verified on every even block.
+
+==========================================================================
+CLAIM 5 -- is B(W_0) really rank one, and is c = b* Q b nonzero mod p?
+==========================================================================
+  blocks failing rank-one or with c = 0: none -- all 16 clean
+  lambda_2 ODD blocks with a nonzero B(W_0): none
+  positions where x[:,t] is NOT proportional to u: none -- rank one holds at every position
+
+==========================================================================
+CLAIM 5 -- are the 11 'gauge' directions really gauge?
+==========================================================================
+  unrestricted: 89 columns, 65 re + 24 im
+    rank(all 89) = 14
+    rank(re only, 65) = 14
+    rank(im only, 24) = 9
+    nonzero im entries across 40 points: 360
+
+  restricted: 47 columns, 36 re + 11 im
+    rank(all 47) = 13
+    rank(re only, 36) = 13
+    rank(im only, 11) = 5
+
+  READ: '36 - 13 = 23' needs rank(re only) = 13.  If it is lower, the
+  13 lives on the 47 and the affine family over the 36 is bigger.
+
+==========================================================================
+CLAIM 6 -- plants
+==========================================================================
+  baseline: restricted row at W_0 is 0/47 nonzero; restricted sampled rank 13
+  baseline (the run's own TR)                  row  0/47  rank 13  shape-assert pass  T.u_true=0 yes  cap-assert pass  
+  P1 isotropic shift at (2, 2)                 row  0/47  rank 13  shape-assert pass  T.u_true=0 NO   cap-assert pass  T a != 0
+  P2 duplicated row at (2, 1)                  row  0/47  rank 13  shape-assert pass  T.u_true=0 yes  cap-assert pass  rowspace is a PROPER subspace of K
+  P3 corrupted u at (2, 2)                     row  6/47  rank 14  shape-assert pass  T.u_true=0 NO   cap-assert FIRES  T built from a WRONG u
+  P4 conjugated condition (TRC)                row  4/47  rank 14  shape-assert pass  T.u_true=0 NO   cap-assert FIRES  
+  P5 rank_mod_p capped at 13                   row  0/47  rank 13  shape-assert pass  annihilate-assert pass  cap-assert pass  NOTHING FIRES
+  P6 conj -> identity inside herm_row          row  0/47  rank 13
+  P7 random T of the right shape               row 27/47  rank 14  shape-assert pass  T.u_true=0 NO   cap-assert FIRES  unrelated to u
+  P8 drop the last copy (coordinate deletion)  row 20/47  rank 14  shape-assert pass  T.u_true=0 NO   cap-assert FIRES  a plausible wrong T
+  P9 over-restrict the odd blocks              row  0/35  rank 13  shape-assert FIRES (that is the check that catches it)
+
+  known-answer test of run_n5_assemble.py's rank_mod_p (40 points x 47 unknowns, planted rank):
+    planted rank  0  ->  reported  0  ok
+    planted rank  1  ->  reported  1  ok
+    planted rank  5  ->  reported  5  ok
+    planted rank 12  ->  reported 12  ok
+    planted rank 13  ->  reported 13  ok
+    planted rank 14  ->  reported 14  ok
+    planted rank 20  ->  reported 20  ok
+    planted rank 40  ->  reported 40  ok
+  rank_mod_p is CORRECT on planted ranks: True   (the file itself contains no such test)

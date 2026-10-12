@@ -1,0 +1,12 @@
+trilinear symmetry of <A#B,C> at n=6: 0.024408842573 0.024408842573 0.024408842573  spread 0.0e+00
+
+Ascent on  F(M) = tr(M^3) + ||M^#||_F  over unit Weyl_n -- post 34's own quantity
+  n= 6: max F/theta_0 = 1.3403  (post 34 records 1.3403)   support of the maximiser s = 6   theta/theta_0 = 1.1573
+  n= 8: max F/theta_0 = 1.2399  (post 34 records 1.2399)   support of the maximiser s = 8   theta/theta_0 = 1.0590
+  n=10: max F/theta_0 = 1.1881  (post 34 records 1.1881)   support of the maximiser s = 10   theta/theta_0 = 1.0075
+  n=12: max F/theta_0 = 1.1564  (post 34 records 1.1564)   support of the maximiser s = 12   theta/theta_0 = 0.9757
+
+Post 35's witness, padded W_CP2:
+  n=12: s=4  F=1.408248290464  theta=1.224744871
+  n=14: s=4  F=1.408248290464  theta=1.224744871
+  n=16: s=4  F=1.408248290464  theta=1.224744871

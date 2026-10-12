@@ -1,0 +1,24 @@
+[p3] 25/150 graded found=0
+[p3] GRADED theta=1.054092553 gap=2.108185e-01 dims 6/9 S=6.59e-30 Thhm=4.85e-30
+[p3] GRADED theta=1.054092553 gap=2.108049e-01 dims 6/9 S=4.43e-30 Thhm=4.70e-30
+[p3] GRADED theta=1.054092553 gap=2.108185e-01 dims 6/9 S=6.19e-30 Thhm=5.87e-30
+[p3] 50/150 graded found=3
+[p3] GRADED theta=1.054092553 gap=2.108185e-01 dims 6/9 S=5.23e-30 Thhm=4.44e-30
+[p3] GRADED theta=0.942809042 gap=2.357023e-01 dims 4/6 S=1.62e-30 Thhm=1.23e-30
+[p3] 75/150 graded found=5
+[p3] GRADED theta=1.054092553 gap=2.108185e-01 dims 6/9 S=6.70e-30 Thhm=5.92e-30
+[p3] GRADED theta=1.054092553 gap=2.108054e-01 dims 6/9 S=7.54e-30 Thhm=4.58e-30
+[p3] 100/150 graded found=7
+[p3] GRADED theta=1.054092553 gap=2.108050e-01 dims 6/9 S=7.72e-30 Thhm=4.89e-30
+[p3] GRADED theta=1.054092553 gap=2.108185e-01 dims 6/9 S=1.03e-29 Thhm=7.02e-30
+[p3] 125/150 graded found=9
+[p3] 150/150 graded found=9
+[p3] DONE distinct graded: 8
+    (0.942809042, 0.23570226, 4, 6, False)
+    (1.054092553, 0.210804885, 6, 9, True)
+    (1.054092553, 0.210805037, 6, 9, True)
+    (1.054092553, 0.210805397, 6, 9, True)
+    (1.054092553, 0.210818495, 6, 9, True)
+    (1.054092553, 0.2108185, 6, 9, True)
+    (1.054092553, 0.210818503, 6, 9, True)
+    (1.054092553, 0.210818506, 6, 9, True)

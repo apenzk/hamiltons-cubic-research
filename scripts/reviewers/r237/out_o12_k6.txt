@@ -1,0 +1,10 @@
+[   0.0s] k=1  dominant weights stored 6
+[   0.2s] k=2  dominant weights stored 33
+[   1.2s] k=3  dominant weights stored 122
+[   5.1s] k=4  dominant weights stored 357
+[  17.3s] k=5  dominant weights stored 891
+[  50.3s] k=6  dominant weights stored 1970
+[ 50.8s] n=12  SO(n): [0, 1, 2, 7, 19, 92]
+[ 62.3s] n=12  coset: [0, 1, 2, 7, 19, 86]
+n=12  O(n)-invariants of Sym^k, k=1..6 : [0, 1, 2, 7, 19, 89]
+     det-twisted (chiral) multiplicities  : [0, 0, 0, 0, 0, 3]

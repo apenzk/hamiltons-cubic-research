@@ -1,0 +1,33 @@
+THE RECORD'S CLAIM: 'in a miniature where the samples span, the
+t-space is necessarily zero and the interesting case cannot arise.'
+
+--- twisted cubic, independent:  k = 4, 80 evaluation points ---
+  evaluations span R^4?  rank = 4   (YES -- independent as functions)
+  t-space  {D sym : p^T D p = 0 on the image}:  dim 3  of dim Sym = 10
+  linear annihilator {D : D p = 0 on the image}: dim 0   <- this is what the screen computes
+  psd part of the t-space = {0}, proved by the zero-diagonal closure on rows [0, 1]
+
+  the record's stated reason -- p^T K p = 0 on a spanning SET forces
+  K = 0 -- refuted by the smallest possible witness:
+    e1^T K e1 = 0
+    e2^T K e2 = 0
+    {e1,e2} spans R^2, K = [[0,1],[1,0]] != 0.  The true statement
+    needs the SUBSPACE (polarisation) or the rank-one lifts p p^T to
+    span Sym -- which the image of a cubic map does NOT.
+
+--- PLANT (p_4 = 2 p_0):  k = 5, 80 evaluation points ---
+  evaluations span R^5?  rank = 4   (NO)
+  t-space  {D sym : p^T D p = 0 on the image}:  dim 8  of dim Sym = 15
+  linear annihilator {D : D p = 0 on the image}: dim 1   <- this is what the screen computes
+  psd part of the t-space is NONTRIVIAL
+    explicit psd element D = vv^T, v = 2e_0 - e_4:  rank 1, hence psd,
+    nonzero, and p^T D p vanishes at all 80 points (0 violations)
+    -> it IS in the t-space, so the recession cone is nontrivial.
+    This is the failure mode independence excludes.
+
+CONCLUSION.  A four-dimensional miniature over the image of a genuine
+cubic map has a NONZERO t-space whose psd part is {0}: the theorem's
+own step, tested.  The record's 'cannot arise at all' is false, and the
+owed screen is twenty lines, not a blocked item.  What the screen in
+run_a2pp_constant_t.py imposes -- D p = 0 -- is the theorem's
+CONCLUSION; the hypothesis to impose is p^T D p = 0.

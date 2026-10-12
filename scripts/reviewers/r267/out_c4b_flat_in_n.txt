@@ -1,0 +1,12 @@
+f = 4, cup seed.  WHICH diagrams raise the rank, at each n?
+   n target  as-enum used  rank-raising diagram indices (1-based)
+   2      3            31  [1, 16, 31]
+   3      3            31  [1, 16, 31]
+   4      3            31  [1, 16, 31]
+   5      3            31  [1, 16, 31]
+   6      3            31  [1, 16, 31]
+   7      3            31  [1, 16, 31]
+
+  The rank-raising positions are the SAME set at every n, so `used` is a
+  property of the enumeration order of `matchings`, not of n.  'flat in n'
+  restates that the order does not depend on n.

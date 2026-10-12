@@ -1,0 +1,25 @@
+  (A) dim nu(B_f(n))  from the operators themselves
+  (B) dim End_{O(n)}(V^f) = dim Inv_{O(n)}(V^{2f})  from so(n) generators + a reflection
+  (C) sum_lambda m_lambda(n)^2  from the restricted up-down recursion
+
+   f  n  n>=f-1  (A) dim nu  (B) dim End  (C) sum m^2   A<=B   B=C(Schur)   A=B(FFT)
+   2  2    True           3            3            3    True         True      True
+   2  3    True           3            3            3    True         True      True
+   2  4    True           3            3            3    True         True      True
+   2  5    True           3            3            3    True         True      True
+   2  6    True           3            3            3    True         True      True
+   3  2    True          10           10           10    True         True      True
+   3  3    True          15           15           15    True         True      True
+   4  2   False          35           35           35    True         True      True
+   5  2   False         126          126          126    True         True      True
+
+  A <= B is the CONTAINMENT and needs no FFT -- it is the upper bound the
+  reviewed script should be citing.  B = C is Schur.  A = B is Weyl's FFT,
+  and it holds at every cell here INCLUDING the sub-threshold (4,2) and (5,2),
+  so surjectivity carries no condition on n.
+
+  The same three numbers for SO(n) at (f,n) = (2,4), where the FFT acquires
+  the epsilon tensor and the diagram image is a PROPER subalgebra:
+    (f,n) = (2,4):  dim nu = 3,  dim End_O = 3,  dim End_SO = 4
+    -- the O and SO numbers differ, which is why the group matters and why
+       ASWT's SO statement could not have carried this step.

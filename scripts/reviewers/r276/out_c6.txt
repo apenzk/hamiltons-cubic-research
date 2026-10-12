@@ -1,0 +1,12 @@
+n=4 legs=4:  dim Inv_SO =   4   dim Inv_O =   3   Brauer diagrams 3 spanning rank 3   SO > O  (epsilon present)
+n=3 legs=4:  dim Inv_SO =   3   dim Inv_O =   3   Brauer diagrams 3 spanning rank 3   SO = O
+n=5 legs=4:  dim Inv_SO =   3   dim Inv_O =   3   Brauer diagrams 3 spanning rank 3   SO = O
+n=4 legs=2:  dim Inv_SO =   1   dim Inv_O =   1   Brauer diagrams 1 spanning rank 1   SO = O
+n=2 legs=2:  dim Inv_SO =   2   dim Inv_O =   1   Brauer diagrams 1 spanning rank 1   SO > O  (epsilon present)
+
+rank(Brauer) = 3, rank(Brauer + epsilon) = 4   -> epsilon is OUTSIDE the diagram span, and is SO(4)- but not O(4)-invariant.
+
+At n=12 the same mechanism sits on exactly 12 legs: epsilon_{i1...i12} is
+SO(12)-invariant, is not O(12)-invariant, hence is not in the span of the
+10395 Brauer diagrams -- so Brauer -> End_{SO(12)}(V^{ot 12}) is NOT surjective,
+while Brauer -> End_{O(12)} still is.

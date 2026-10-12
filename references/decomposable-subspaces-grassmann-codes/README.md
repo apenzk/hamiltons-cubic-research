@@ -1,0 +1,9 @@
+# Ghorpade–Patil–Pillai, Decomposable subspaces, linear sections of Grassmann varieties, and higher weights of Grassmann codes
+
+- **Link**: [arXiv:0710.5161](https://arxiv.org/abs/0710.5161)
+- **Identifier**: arXiv:0710.5161 [math.AG], October 2007.
+- **Authors**: Sudhir R. Ghorpade, Arunkumar R. Patil, Harish K. Pillai.
+- **Retrieved**: 2026-09-10, as [0710.5161.pdf](https://arxiv.org/abs/0710.5161), extracted to [0710.5161.txt](https://arxiv.org/abs/0710.5161).
+- **Consulted for**: the classification of linear subspaces of $\Lambda^2V$ consisting entirely of decomposable elements, which [I36](../../plan.md)'s sub-step (a) needs to say which eigenspaces of a Ricci-flat $W$ can occur. Found on 2026-09-10 by searching for the classification rather than for the decomposable test, the [2026-09-02 sweep](../../reviews/2026-09-02-LIT-step8-sweep.md) having searched the test and found nothing.
+- **Statements that matter**: the definitions of *close of type I* and *close of type II* (p. 4), Lemma 5, and **Theorem 6, the Structure Theorem for Decomposable Subspaces**: a subspace of $\Lambda^\ell V$ is decomposable if and only if it is close.
+- **Verdict**: **the classification, sourced, at general $\ell$.** At $\ell=2$ it says a subspace of $\Lambda^2V$ all of whose elements are decomposable is either a **pencil** $f\wedge U$ or $\Lambda^2U$ for a three-dimensional $U$, which is the classical $\alpha$/$\beta$ dichotomy the record was reaching for by hand. *The paper notes the general-$\ell$ theorem as new and the low-dimensional cases as classical, citing Marcus.* **The scope limit matters and is recorded against the item**: it classifies subspaces every element of which is decomposable, while I36b needs subspaces carrying a decomposable BASIS, which is strictly weaker, and [r849](../../reviews/REVIEW_r849.md)'s $\mathrm{span}\{e_1\wedge e_2,e_3\wedge e_4\}$ is exactly a subspace of the second kind that is not of the first.

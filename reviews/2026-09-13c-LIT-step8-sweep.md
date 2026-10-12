@@ -1,0 +1,68 @@
+# Literature sweep, 2026-09-13c
+
+**Run on Fable after the user's switch, from [2026-09-13c-step8-position.md](2026-09-13c-step8-position.md) alone, appending after every batch.** *The target is the localisation, every critical point above $\sqrt{3/2}$ within $\varepsilon_n$ of a rigid orbit, which with [L216](../findings/second-order.md) closes the conjecture, and the sweep is phrased in that node's own objects rather than the record's.*
+
+## Batch 0: the screen by mechanism, before any search
+
+**The localisation is a statement about the critical set of an invariant polynomial on a sphere, so its field is the geometry of invariant functions on $G$-manifolds and their orbit spaces**, which five sweeps never entered. *Grepped across the record:*
+
+| mechanism | on the record | reading |
+| --- | --- | --- |
+| Michel's theorem, orbits isolated in their stratum are critical for every invariant function | 5 reviews, 4 references, 0 findings | to be read: whether as the theorem or as an author's name |
+| the orbit space $S/O(n)$ as a semialgebraic set, Abud--Sartori's $\hat P$-matrix, extrema on boundary strata | 1 finding, 1 reference | to be read |
+| Landau theory, symmetry breaking, extrema of invariant potentials at maximal isotropy | 2 references in passing | unscreened as a mechanism |
+| Łojasiewicz exponents with explicit constants, Kurdyka, D'Acunto | 3 findings, 4 reviews | known: constants far too large in fixed dimension |
+| Milnor--Thom, Bézout, finiteness of critical values | 1 finding, 3 reviews | known: closed, constants far too large |
+| equivariant Morse theory, Conley index | 0 anywhere | unscreened, and Morse inequalities bound counts from BELOW, which is the wrong direction for a localisation |
+
+## Batch 1: the orbit-space field, three searches, and the record's own earlier contact with it
+
+**Michel's theorem is on the record's knowledge and on no shelf.** *The [2026-09-02 sweep](2026-09-02-LIT-step8-sweep.md), batch 4, wrote that "Michel's theorem remains the only general tool and it is on record", and the record cites it nowhere as a source.* **Stored now**: [michel-zhilinskii-2001-symmetry-invariants-topology](../references/michel-zhilinskii-2001-symmetry-invariants-topology/), Michel and Zhilinskii, Physics Reports 341 (2001), the survey by the theorem's author, retrieved from the IHES archive.
+
+**What the field holds, and what it is.** *Michel 1971: for a smooth action of a compact group on a manifold, the gradient of every invariant function vanishes on the orbits isolated in their stratum, which are therefore called critical orbits. Michel 1970: on a closed stratum containing infinitely many orbits, every invariant function has at least two critical orbits. Abud--Sartori and Procesi--Schwarz: the orbit space of a compact linear group is a semialgebraic set cut out by the positivity of the $\hat P$-matrix of the basic invariants, and an invariant function is a function of those invariants on it.* **Every one of these is a NECESSITY or an EXISTENCE statement**: which orbits must be critical, how many critical orbits a stratum must carry. **None bounds where the OTHER critical points can be, which is what a localisation is.**
+
+**And the record's rigid orbits are exactly Michel's critical orbits.** *The balanced product, every $S^p\times S^q$ and padded $\mathbb{CP}^2$ each have isotropy whose fixed space in $\mathcal W_n$ is one-dimensional, so each is isolated in its stratum and critical for every invariant function, which is the symmetric criticality the record already uses and already knows gives necessity and not maximality.* **So the orbit-space field names the record's known critical set and says nothing about the rest of it.**
+
+**The orbit space itself is out of reach as a computational object**: $\dim\mathcal W_{12}=1638$ against $\dim O(12)=66$, so $S/O(n)$ has dimension $1571$ and the invariant ring is not something the $\hat P$-matrix method can write down. *Where the record already uses this framing is [nondegeneracy.md](../findings/nondegeneracy.md)'s "isotropy enumeration necessary rather than convenient" and [R12](../routes.md), the isotype census, STALLED.*
+
+## Batch 2: the statement stripped of names, and the one field where it is a theorem
+
+**"Every critical point of a cubic on a sphere with value above a threshold lies near the maximiser" is a THEOREM in one field, and the field is random tensors.** *For the spiked tensor model the Kac--Rice landscape analysis shows exactly that shape, critical points above a threshold localised near the planted direction, by probabilistic counting over a Gaussian ensemble.* **It does not transfer**: $P$ is one deterministic invariant tensor and the count is an expectation over an ensemble it does not belong to. *Recorded as the shape the localisation has when it is provable, and as evidence that the tools proving it there are not analytic in the record's sense.*
+
+**The lowest-dimensional exact analogue is classified, in dimension three.** *Gaeta and Virga's octupolar order and Chen, Qi and Virga's work on octupolar tensors classify every critical point of a harmonic cubic on $S^2$, with the phase diagram of maxima.* **Nothing of it is on the shelf** (Gaeta, Virga, octupolar all absent) **and none of it transfers**: the method lives in the five-dimensional space of harmonic cubics on $\mathbb R^3$ whose $SO(3)$-orbit space is two-dimensional, where $\mathcal W_{12}$ has dimension $1638$ and orbit space dimension $1571$. *Left unstored as a shape hit, since the record needs its method and not its result.*
+
+**Z-eigenvectors of symmetric tensors, the third time.** *Searched by the [2026-09-03b](2026-09-03b-LIT-step8-sweep.md) and [2026-09-10](2026-09-10-LIT-step8-sweep.md) sweeps and again here under "second largest critical value": the returns are variational formulas for hypergraph tensors and Newton methods, nothing bounding where the non-maximal critical points of a structured tensor lie.*
+
+## Phase 3a: what the sweep found, in one table
+
+| candidate | mechanism | bears on the localisation |
+| --- | --- | --- |
+| Michel 4b, 4c | orbits isolated in their stratum are critical; infinite closed strata carry two critical orbits | **necessity and existence only**; names the record's rigid orbits and nothing else, now filed |
+| Abud--Sartori, Procesi--Schwarz | the orbit space as a semialgebraic set in the basic invariants | out of computational reach at orbit-space dimension $1571$, and a description rather than a bound |
+| spiked-tensor landscapes | Kac--Rice localisation of high critical points | the right SHAPE, proved by ensemble counting the record cannot use |
+| Gaeta--Virga, Chen--Qi--Virga | complete critical set of a harmonic cubic on $S^2$ | dimension three, method not transferable |
+| Z-eigenvector theory | variational formulas, Newton methods | searched three times, nothing on location |
+| Łojasiewicz with explicit exponents, Milnor--Thom | finiteness and gradient inequalities | on the record as closed, constants too large |
+
+**The verdict of the sixth sweep is the fifth's: the literature holds no mechanism for the localisation, and the localisation is the conjecture's remaining half restated with a margin.**
+
+## Phase 3b: the routes, graded on the rubric, and what I recommend
+
+| route | closes | attackable | margin | analytic | value | distance to a proof of the goal |
+| --- | --- | --- | --- | --- | --- | --- |
+| **A. The localisation as Michel-criticality**: every critical point with $\theta\ge\sqrt{3/2}$ has a one-dimensional isotropy-fixed space, hence lies on a rigid orbit | 3 | **0** | 1 | 1 | **0** | it IS the open statement; no mechanism, [R12](../routes.md)'s isotype census being the record's stalled attempt at exactly this |
+| **B. Two regions with L216**: the tubes around the rigid orbits are critical-point free, so show $\theta<\sqrt{3/2}$ on their complement | 3 | **0** | 1 | 1 | **0** | the complement is the whole non-diagonal problem; [F67](../findings/fence-posts.md) rules out the decoupled bound and nothing else is on offer |
+| **C. [I73](../plan.md)'s link, a maximiser has two eigenvalues**, from L24's cap and the frame relations of L214, after which [L105](../findings/bounds-relaxations.md) finishes | 3 | 1 | 1 | 1 | **3** | the same $3$ it has carried for days, the route still to be invented |
+| **D. [I54](../plan-verification.md)**, the four $F_\lambda$ of L21 are $m$-free | 1 | 3 | 1 | 1 | **3** | makes padded $\mathbb{CP}^2$'s radius unconditional and L20's tube theorem unconditional; a computation of known kind, and the verification loop's |
+
+**What I recommend, and it is not a route.** *Six sweeps in six days have returned the same verdict, and today's three lemmas passed Gate 2 while the one open statement did not move. The table above says what the rubric was changed to say: nothing with a route reaches the open statement.* **So the recommendation is a change of MODE rather than a new item**: pause the research loop's step 1 on the open statement, run the [verification loop](../.claude/skills/verification-loop/SKILL.md) over the $29$ results the structure check reports as awaiting audit and the [lean loop](../.claude/skills/lean-loop/SKILL.md) over what is proved and untyped, update the report to the state of the record, and return to the open statement when a human idea arrives rather than another sweep. **If the user prefers to keep deriving, D is the only item that is both startable and useful, and it belongs to the verification loop.** *That is a decision about what the programme is for, which the skill says is the user's.*
+
+## Phase 3c: the user asked for ideas rather than searches, and these are the three that survive a first screen
+
+**1. THE PAIR MASS AS A QUANTITATIVE MEASURE OF NON-DIAGONALITY, WITH BÖTTCHER--WENZEL'S EQUALITY CASE AS ITS CEILING.** *For an orthonormal eigenbasis $\{\varphi_\alpha\}$ of $W$ the record's calculus carries $T_{\alpha\beta\gamma}=c_{\alpha\beta\gamma}^2$ and the pair mass $\sum_\gamma T_{\alpha\beta\gamma}=\lVert[\varphi_\alpha,\varphi_\beta]\rVert^2$, capped at $2$ by [L31](../findings/stratum-two-negative.md), which is Böttcher--Wenzel.* **Screened here: over $4000$ random SIMPLE unit pairs the mass never exceeds $1$ ($0.993$ at $n=6$, $0.956$ at $n=8$), while general pairs reach the ceiling $2$ under ascent, attained exactly at a self-dual quaternionic triple on an $\mathbb R^4$.** *So on the coordinate-diagonal locus every pair mass is $0$ or $1$, and a pair mass above $1$ certifies a non-decomposable eigenvector, with $2$ certifying an $\mathfrak{su}(2)$-structure, which is padded $\mathbb{CP}^2$'s.* **What this offers**: the non-diagonal inequality restated inside the record's own $T$-calculus as a stability statement, $P$ decreasing in the excess of pair masses above $1$, where the two extremal configurations sit at masses $\{0,1\}$ and $\{0,1,2\}$. *Not on the record as a mechanism; what it owes first is the proof that simple pairs have mass at most $1$, which the screen suggests and which is a statement about two rank-two skew matrices.* **Grade: closes $2$, attackable $2$, margin $1$, analytic $1$, value $4$**, the first item above $3$ with a mechanism named, *and the mechanism is a reorganisation of known objects rather than a new theorem, so the grade may be optimistic.*
+
+**2. THE CONJECTURE AS A SPECTRAL-RADIUS BOUND ON MULTIPLICATION OPERATORS.** *By Banach's theorem on symmetric multilinear forms, $\sup_{\lVert x\rVert=1}P(x)=\sup_{\lVert x\rVert=\lVert y\rVert=\lVert z\rVert=1}\langle x\circ y,z\rangle=\sup_x\lVert L_x\rVert_{\mathrm{op}}$, so* **Conjecture A is equivalent to: every eigenvalue of every multiplication operator $L_x$, $x$ a unit Weyl tensor, has absolute value at most $\theta_0(n)$.** *For DIAGONAL $x$ the operator $L_x$ block-diagonalises over the sign group by [L120](../findings/second-order.md), with [L121](../findings/second-order.md) and [L122](../findings/second-order.md) giving the blocks in the sectional matrix, so the diagonal case of THIS statement is a matrix inequality on hollow zero-row-sum matrices, possibly cheaper than L57's route.* **The non-diagonal case is the whole problem again, but the object is linear in $x$, which the cubic $P$ is not, and the record has never looked at $L_x$ off critical points.** *Grade: closes $3$, attackable $1$, margin $1$, analytic $1$, value $3$.*
+
+**3. THE FRAME INEQUALITY OF L214 AVERAGED OVER $O(n)$ IS AN EXPLICIT INEQUALITY BETWEEN INVARIANTS.** *$a_F\ge\tfrac\theta2t_F(1-t_F)$ holds in every frame at a maximiser; its Haar average reads $\mathbb E_F[a_F]\ge\tfrac\theta2(c_n-\mathbb E_F[t_F^2])$ with $c_n=6/((n+1)(n+2))$ exact by Schur, the left side an invariant cubic and $\mathbb E[t_F^2]$ an invariant quartic, both with computable universal coefficients since the invariant cubics on $\mathcal W_n$ are spanned by $\operatorname{tr}W^3$ and $\langle W,W^{\#}\rangle$.* **It is a consequence of L24 and so cannot be false, and it is NOT the trace bound [F65](../findings/INDEX-traps.md) exhausted**, its weight on $L_W$ being the frame-averaged test-vector operator rather than the identity. *It is strict at the balanced product, so it passes the [trap 26](../findings/INDEX-traps.md) screen.* **Grade: closes $1$, attackable $3$, margin $1$, analytic $1$, value $3$**, a new necessary condition on maximisers whose separating power is unknown until computed.
+
+**None of the three is a route to a proof; each is a reorganisation the record has not tried.** *The first is the one I would work, because it converts the hypothesis "non-diagonal" into a number the calculus already carries, which is what every closure this week lacked.*

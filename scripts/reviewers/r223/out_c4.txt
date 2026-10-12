@@ -1,0 +1,13 @@
+8 random Weyl tensors at n=12 over F_10007, all four symmetries asserted [0.1s]
+perfect matchings of 12 slots: 10,395 in all, 1,728 with no self-pairing at a vertex
+
+EXHAUSTIVE: 1,728 diagrams, rank 2, 19.8s (11.4 ms per diagram at 8 points)
+total wall time including the Weyl tensors: 19.9s
+
+diagrams at which the rank first rose (a basis of the invariant space):
+  #0      matching [(0, 4), (1, 5), (2, 8), (3, 9), (6, 10), (7, 11)]
+          values [147, 3556, 2067, 6379, 784, 528, 2283, 6384]
+  #80     matching [(0, 4), (1, 8), (2, 6), (3, 10), (5, 9), (7, 11)]
+          values [3990, 5177, 4985, 7264, 9699, 9698, 9896, 9243]
+
+1,728 of 1,728 diagrams evaluate nonzero somewhere; they span a space of dimension 2

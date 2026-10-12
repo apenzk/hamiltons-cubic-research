@@ -1,0 +1,57 @@
+=== the reference points ===
+W_CP2 (n=4): P = 1.2247448713915896  sqrt(3/2)= 1.224744871391589  Lambda^2 spectrum*sqrt6 = [-1. -1. -0.  0.  0.  2.]
+  padded to n=5: |W|=1.000000000000  P=1.22474487139159  s=4
+  padded to n=6: |W|=1.000000000000  P=1.22474487139159  s=4
+  padded to n=8: |W|=1.000000000000  P=1.22474487139159  s=4
+  padded to n=12: |W|=1.000000000000  P=1.22474487139159  s=4
+S^6xS^6 (n=12): P = 1.23603308118261  theta_0(12)= 1.2360330811826106  s = 12
+S^3xS^3 (n=6):  P = 1.0540925533894605  theta_0(6)= 1.0540925533894598
+
+=== (b) support dim: random points, frame covariance ===
+  n=5: s(random)=5
+  n=6: s(random)=6
+  n=8: s(random)=8
+  n=12: s(random)=12
+  rotated padded CP2: s = 4  P = 1.2247448713915916  (non-padded coordinates: max |M| off the first 6 rows = 0.091)
+
+=== (a) THE CRUX: does support s force a padding? ===
+  random n=12: max |iota_v W| over ker(T) directions = 0.0 (no kernel directions => 0)
+  s=4: rank T=4, |iota_v W|=0.0e+00, |Ric(W|_V)|=1.1e-16, |Bianchi(W|_V)|=6.8e-17, P_n=-0.578526561700 vs P_s=-0.578526561700
+  s=5: rank T=5, |iota_v W|=0.0e+00, |Ric(W|_V)|=4.8e-16, |Bianchi(W|_V)|=3.0e-16, P_n=0.143112043627 vs P_s=0.143112043627
+  s=6: rank T=6, |iota_v W|=0.0e+00, |Ric(W|_V)|=4.4e-16, |Bianchi(W|_V)|=3.6e-16, P_n=0.013771463401 vs P_s=0.013771463401
+  s=7: rank T=7, |iota_v W|=0.0e+00, |Ric(W|_V)|=3.6e-16, |Bianchi(W|_V)|=6.1e-16, P_n=0.031857769657 vs P_s=0.031857769657
+
+=== (c) sqrt(3/2) vs theta_0(n) ===
+  n=  4: theta_0=0.866025  < sqrt(3/2)=1.224745
+  n=  6: theta_0=1.054093  < sqrt(3/2)=1.224745
+  n=  8: theta_0=1.145644  < sqrt(3/2)=1.224745
+  n= 10: theta_0=1.200000  < sqrt(3/2)=1.224745
+  n= 11: theta_0=1.219673  < sqrt(3/2)=1.224745
+  n= 12: theta_0=1.236033  > sqrt(3/2)=1.224745
+  n= 14: theta_0=1.261680  > sqrt(3/2)=1.224745
+  n= 20: theta_0=1.307670  > sqrt(3/2)=1.224745
+  n=100: theta_0=1.392982  > sqrt(3/2)=1.224745
+
+=== the residual stratum: is it really only FULL support? ===
+  padded S^6xS^6 (support 12) inside n=14: s=12, P=1.236033081  vs sqrt(3/2)=1.224744871  theta_0(14)=1.261680124
+  padded S^6xS^6 (support 12) inside n=16: s=12, P=1.236033081  vs sqrt(3/2)=1.224744871  theta_0(16)=1.280868846
+  padded S^7xS^7 (support 14) inside n=16: s=14, P=1.261680124  vs sqrt(3/2)=1.224744871  theta_0(16)=1.280868846
+  padded S^6xS^5 (support 11) inside n=14: s=11, P=1.217161239  vs sqrt(3/2)=1.224744871  theta_0(14)=1.261680124
+Post 6 quantity: spectral moments of L_W(H)=B(W,H) on Weyl_n
+Posts 34/35 quantity: tr(M^3) + ||M^#||_F
+Post 33 quantity: moments of the second-kind spectrum omega
+
+--- random Weyl_6 (unit, fixed, then padded) ---
+  n= 6 dimWeyl=  84 | tr L_W^2=   13.750000 (formula (n-1)(2n-1)/4= 13.7500)  tr L_W^3=    0.030104 | lam_max(L_W)=0.750618
+          P=0.104009591436  tr(M^3)+||M^#||_F=0.519077725027  omega moments p1=-0.000000000 p2=3.672629691 p3=0.214492962
+  n= 7 dimWeyl= 168 | tr L_W^2=   19.500000 (formula (n-1)(2n-1)/4= 19.5000)  tr L_W^3=    0.116321 | lam_max(L_W)=0.750618
+          P=0.104009591436  tr(M^3)+||M^#||_F=0.519077725027  omega moments p1=0.000000000 p2=3.672629691 p3=0.214492962
+  n= 8 dimWeyl= 300 | tr L_W^2=   26.250000 (formula (n-1)(2n-1)/4= 26.2500)  tr L_W^3=    0.225803 | lam_max(L_W)=0.750618
+          P=0.104009591436  tr(M^3)+||M^#||_F=0.519077725027  omega moments p1=0.000000000 p2=3.672629691 p3=0.214492962
+--- padded W_CP2 (unit, fixed, then padded) ---
+  n= 6 dimWeyl=  84 | tr L_W^2=   13.750000 (formula (n-1)(2n-1)/4= 13.7500)  tr L_W^3=   -0.867528 | lam_max(L_W)=1.224745
+          P=1.224744871392  tr(M^3)+||M^#||_F=1.408248290464  omega moments p1=0.000000000 p2=3.000000000 p3=1.224744871
+  n= 7 dimWeyl= 168 | tr L_W^2=   19.500000 (formula (n-1)(2n-1)/4= 19.5000)  tr L_W^3=   -0.306186 | lam_max(L_W)=1.224745
+          P=1.224744871392  tr(M^3)+||M^#||_F=1.408248290464  omega moments p1=-0.000000000 p2=3.000000000 p3=1.224744871
+  n= 8 dimWeyl= 300 | tr L_W^2=   26.250000 (formula (n-1)(2n-1)/4= 26.2500)  tr L_W^3=    0.459279 | lam_max(L_W)=1.224745
+          P=1.224744871392  tr(M^3)+||M^#||_F=1.408248290464  omega moments p1=-0.000000000 p2=3.000000000 p3=1.224744871

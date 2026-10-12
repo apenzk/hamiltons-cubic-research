@@ -1,0 +1,6 @@
+  n= 6:  rank at THREE INDEPENDENT Weyl tensors = 2;   rank on the diagonal W(x)W(x)W = 2
+        so arrow A (restrict the domain to Weyl^3) costs 10393 of the 10,393, and arrow B (restitution) costs 0
+  n= 7:  rank at THREE INDEPENDENT Weyl tensors = 2;   rank on the diagonal W(x)W(x)W = 2
+        so arrow A (restrict the domain to Weyl^3) costs 10393 of the 10,393, and arrow B (restitution) costs 0
+  n=12:  rank at THREE INDEPENDENT Weyl tensors = 2;   rank on the diagonal W(x)W(x)W = 2
+        so arrow A (restrict the domain to Weyl^3) costs 10393 of the 10,393, and arrow B (restitution) costs 0

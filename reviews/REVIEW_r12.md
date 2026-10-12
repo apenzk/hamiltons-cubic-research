@@ -1,0 +1,17 @@
+### Reviewer 12: the slack decomposition, the assembled bound, family C, the exceptionals, and the grants
+
+**Method.** Everything rebuilt from FINDINGS' definitions in [scripts/review_r12_independent.py](scripts/review_r12_independent.py), importing nothing from the pipeline under review; all validation gates at $10^{-15}$/$10^{-16}$, Fox anchor to 12 digits, the rank-one $\#$ constant measured as exactly $\tfrac12$.
+
+**1. The slack decomposition $S=T_1+2T_2+T_3$, CONFIRMED and strengthened.** Holds at 21 structured points, both saved witnesses, and generic LM points at $n=6$ *and* $n=7$ (an untested odd dimension); worst deviation $5.7\times10^{-9}$ only at the residual-$4\times10^{-8}$ witness file. Two upgrades: **lemmas (A) and (B) are identities of the whole Weyl space**, not just of critical points (verified at non-critical points, $3.5\times10^{-11}$); and the theorem is equivalent to the single exact identity $S-(T_1+2T_2+T_3)=-\operatorname{tr}(P_-(Q(W)-\theta W)P_-)$. **Safe to treat as settled.**
+
+**2. The assembled $\theta$ bound, inequality VALID, every tabulated number confirmed digit-for-digit, but the separation claim is REFUTED.** Two genuine ungraded $n=8$ critical points (residual $\sim5\times10^{-16}$) have the assembled RHS *above* $\sqrt{3/2}$: $\theta=0.899120\to1.23020$ and $\theta=0.859435\to1.23588$ (saved `review_r12_rhs_breaker_n8.npy`). The "does the crux's job on every point tested" claim was a 27-point-catalogue artifact, and **the proposed crux statement over $(K,t,\delta^2,S)$ is false as stated.**
+
+**3. The ungraded ceiling, broken a third time.** New record $\theta=0.906671671$ (residual $1.1\times10^{-15}$, found from two independent seeds; saved `review_r12_ungraded_record_n8.npy`), with the decomposition, lemma (B), Ricci-flatness and the Alt screen all holding at $10^{-15}$.
+
+**4. Family C, both results CONFIRMED by an independently fixed construction** ($\theta=\sqrt{8/9},5/6,\sqrt{3/5}$, $\delta^2=1/9$ to 9 digits, graded, ranks $4/9/16$ and $6/12/20$; the Grassmannians $(3,1),(4,1)$ empty at residual floors $0.42/0.43$ with passing controls). **But the on-disk [scripts/review_r11_sp_classes.py](scripts/review_r11_sp_classes.py) is the pre-fix version**, it still yields $\dim\mathfrak m=0$ and "no critical point" for every $Sp(m)/U(m)$; the fixed code behind the recorded table existed only in a session heredoc ([scripts/review_r12_repro_spclasses.py](scripts/reviewers/r12/review_r12_repro_spclasses.py) documents this).
+
+**5. The exceptional screen, the $G_2$ value is WRONG, the conclusion survives.** Exact construction from octonion derivations gives a unique ideal-wise point at $\theta=5\sqrt3/8=1.082532$, $\delta^2=1/12$, the screened $1.07155$ was $1\%$ low. Still $11.6\%$ below $\sqrt{3/2}$. **Bonus identification:** the frontier battery's remaining "uncatalogued" $n=8$ point $(5\sqrt3/8,\,1/12)$ **is this $G_2$ point, padded**. $E_6/E_7/F_4/E_8$ were not checkable here.
+
+**6. $J_5$ and P4(i), CONFIRMED**, with the worst cross ratio now $3.93\times10^{-2}$ (at the $\theta=0.859$ point) rather than $2.88\times10^{-2}$; $J_5\ge0$ held everywhere; P4(i) confirmed in both directions.
+
+**Not checked:** $E_6/E_7$ values and the $c_{\mathfrak k}<0$ rejections; $n=12$ hunts at scale; $\lambda_{\max}\le t/2$ (held everywhere measured, saturated at $S^2\times S^{n-2}$, unproven). The sharp (II)-side bound postdates this review's launch and is not covered by it.

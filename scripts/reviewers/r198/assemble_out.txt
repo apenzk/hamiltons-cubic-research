@@ -1,0 +1,16 @@
+loaded 41 highest-weight vectors
+loaded the adapted basis from cache: 24 blocks, 41 copies, 7770 vectors
+
+  blocks with a shared word list spanning every copy: 0/0
+  total copies built: 41 (41)
+  total adapted vectors: 7770 (7770)
+
+cached to n5_adapted.pkl: 26 MB, 7770 vectors
+
+adapted basis ready [111s]
+adapted vectors indexed by weight: 7770 (7770: True)
+  169 weights, largest space 234, sum of squares of sizes 921,780
+
+  the per-weight solves are what stage 3 costs; the largest is 234 x 234.
+
+measuring the multiplicity Gram h ...

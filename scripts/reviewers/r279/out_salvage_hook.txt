@@ -1,0 +1,21 @@
+==============================================================================
+A. CAN A CORPSE STILL SILENCE THE LOOP?  (_agents_running True => hook exit 0,
+   no message emitted, the loop simply stops)
+==============================================================================
+  A1 killed reviewer, salvage NEVER run                      in flight = True  <- SILENCES the loop for the whole 45 min window
+  A2 killed reviewer, salvage RUN                            in flight = False  | r902: salvaged 2 log lines -> reviews/REVIEW_r902.md (PARTIAL), log closed
+  A3 no trailing newline, salvage RUN                        in flight = True  | r903: salvaged 2 log lines -> reviews/REVIEW_r903.md (PARTIAL), log closed
+      last line becomes: '[10:00] phase2 running the n=12 solveFAILED salvaged and closed by scripts/salvage_reviewer.py\n'
+  A4 filed-then-killed (the e1fc1e6 fix)                     in flight = False  | r904: reviews/REVIEW_r904.md exists and is a full report — not overwritten, log closed
+  A5 filed-then-killed, no trailing newline                  in flight = True  | r905: reviews/REVIEW_r905.md exists and is a full report — not overwritten, log closed
+      last line becomes: '[10:00] phase2 runningFAILED closed by scripts/salvage_reviewer.py\n'
+  A6 proper DONE then a blank line                           in flight = True
+  A7 empty log (agent died before its first write)           in flight = True
+  A8 corpse whose mtime is refreshed by a poller             in flight = True  <- indefinite, the window buys nothing
+
+==============================================================================
+B. CAN A LIVE REVIEWER BE DECLARED DEAD?  (in flight = False while it works)
+==============================================================================
+  B1 live reviewer, 46 min into one computation              in flight = False  <- declared dead on 6.7 min of margin over the measured 39.3
+  B2 salvage run on a LIVE reviewer (no liveness test)       in flight = False  | r912: salvaged 2 log lines -> reviews/REVIEW_r912.md (PARTIAL), log closed
+  B3 real report saying 'PARTIAL' in its first 200 chars     overwritten = True  | r913: salvaged 2 log lines -> reviews/REVIEW_r913.md (PARTIAL), log closed

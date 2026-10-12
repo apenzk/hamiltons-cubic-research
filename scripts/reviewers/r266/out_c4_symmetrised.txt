@@ -1,0 +1,28 @@
+  perfect matchings on 12 legs: 10395   (11!! = 10395)
+  fixed matchings per element of S_3 (id, then the five others): [10395, 75, 75, 27, 27, 75]
+  orbits by canonicalisation: 1779
+  orbits by Burnside:         1779
+
+  So dim span{symmetrised gamma_D} = 1779.
+
+  RESTRICTION TO THE WEYL DIAGONAL TAKES THOSE 1779 TO RANK 2.
+  Evaluation at W (x) W (x) W is already S_3-symmetric, so symmetrising the
+  functionals cannot change a single value on the diagonal: the rank there is the
+  same 2 that r260 measured and c1 reconfirmed.
+
+  THE KERNEL ON THE SYMMETRISED FUNCTIONALS IS THEREFORE 1779 - 2 = 1777.
+
+  "on those restriction loses nothing" is false by 1777 dimensions.
+  Symmetrisation removes 10395 - 1779 = 8616 dimensions of the
+  10,393 kernel and leaves 1777.  What it removes is the part Remark I.2.2
+  describes; what remains is the part that is killed by RESTRICTION TO THE SUBSPACE
+  Weyl (x) Weyl (x) Weyl inside V^{tensor 12}, which no polarization statement
+  touches -- and c1 measures that part directly, at 10,393 of 10,393.
+
+  RECONCILING THE TWO COUNTS.  c1 finds the invariant multilinear forms on
+  THREE INDEPENDENT Weyl slots already have dimension 2, so nothing non-symmetric
+  survives restriction to the subspace, and the whole 10,393 is subspace loss.
+  This file finds symmetrisation upstairs, on twelve FREE legs, removes only
+  8616 of it.  Both are consistent and both refute the record: the operation the
+  record needs is restriction to the subspace, and symmetrising the gamma_D
+  first is a different operation that does not commute with the question.

@@ -1,0 +1,85 @@
+\section{Introduction}\label{sec:formal}
+
+\subsection{The problem}\label{sec:problem}
+
+Let $\Weyl_n\subset S^2\big(\Lambda^2\R^n\big)$ denote the space of algebraic Weyl curvature operators: self-adjoint operators on $\Lambda^2\R^n$ satisfying the first Bianchi identity and having vanishing Ricci contraction. Hamilton's quadratic map is
+\[
+Q(W)\;=\;W^2+W^{\#},
+\]
+where $W^{\#}$ is the Lie-algebra square built from the structure constants of $\so(n)\cong\Lambda^2\R^n$, and $Q$ maps $\Weyl_n$ to itself. The object of study is the cubic form
+\[
+P(W)\;=\;\langle W,Q(W)\rangle,\qquad W\in\Weyl_n .
+\]
+
+\begin{Prob}{P}[as posed]\label{prob:P}
+For $n\ge12$, the cubic $P$ restricted to $\{W\in\Weyl_n:\|W\|=1\}$ is maximized on the Weyl tensor of products of spheres.
+
+\emph{Granted:} the same statement restricted to operators \textbf{diagonal with respect to a suitable basis} of $\R^n$.
+\end{Prob}
+
+\textbf{This is the problem the report is about, and it is the statement the report was given}: \S\ref{sec:plain} quotes the message it arrived in, and the wording above adds nothing to it. The task is to remove the diagonality restriction. \textbf{Everything below is measured against Problem~P and nothing else}: where the literature states a variant, or where an equivalent form is easier to work with, that is recorded as a \emph{step} (\S\ref{sec:twoforms}) rather than as the thing being proved.
+
+\paragraph{Four things the statement leaves open, and how this report reads them.} Each is an interpretation or a derived fact, not part of what was given, and each is settled below rather than assumed.
+
+\begin{itemize}[leftmargin=1.4em]
+\item \textbf{Which product of spheres.} The statement says ``products of spheres''. Among two-block products $S^k\times S^l$ the value is $\theta_{k,l}=\sqrt2\big(\tfrac{k-1}{k}\tfrac{l-1}{l}\tfrac{n-1}{n-2}\big)^{1/2}$, maximized at the balanced split. Products of three or more factors are strictly worse. So the intended maximizer is $S^{n/2}\times S^{n/2}$, and that is a consequence rather than a hypothesis: it is part (I) of the decomposition in \S\ref{sec:shape}.
+\item \textbf{The value.} It follows, and it is \emph{parity-dependent}. The quantity the problem is about is $\Theta_n$, the maximum over products of spheres:
+\[
+\Theta_n^2=\frac{2(n-1)(n-2)}{n^2}\ \ (n\text{ even}),\qquad
+\Theta_n^2=\frac{2(n-1)(n-3)}{(n+1)(n-2)}\ \ (n\text{ odd}).
+\]
+\textbf{At even $n$, $\Theta_n=\theta_0(n)=\sqrt{2(n-1)(n-2)}/n$, whereas at odd $n$, $\Theta_n<\theta_0(n)$ strictly}, the gap being $\theta_0^2-\Theta_n^2=8(n-1)/\big(n^2(n+1)(n-2)\big)>0$, from the identity $(n-2)^2(n+1)-n^2(n-3)=4$. So $\theta_0(n)$ names a closed form and $\Theta_n$ names the target, and \textbf{posing the goal at $\theta_0(n)$ unqualified overstates it at every odd $n$}. Neither is given in the statement. Both are used here as derived quantities.
+\item \textbf{Parity.} A balanced split needs $n$ even. For odd $n$ the best product is $S^{m}\times S^{m+1}$, at $\Theta_n$ rather than $\theta_0(n)$, and the headline statement is an even-$n$ one. \S\ref{sec:granted} records what is available at each parity, the diagonal case being proved at both.
+\item \textbf{Uniqueness.} ``Maximized on'' is read as \emph{attained on the $SO(n)$-orbit of that operator and nowhere else}. The weaker reading (that the maximum equals $\Theta_n$, which is $\theta_0(n)$ at even $n$) is what most of the work bounds. The uniqueness clause is separate, and follows from kernel-equals-orbit rigidity at the maximizer.
+\end{itemize}
+
+\subsection{Steps towards the proof}\label{sec:diagram}
+
+Figure~\ref{fig:routes} reads \emph{downward as a reduction}: Problem~P at the top, Conjecture~A below it, and under that one branch per live route, each of which closes Problem~P if completed. Blue boxes are settled and grey boxes open, each box names the results and the section behind it, and the routes held in reserve share one grey box at the left. Figure~\ref{fig:routes-dag}, directly after it, reads what the results named in Figure~\ref{fig:routes} rest on.
+
+\input{sections/diagram}
+
+\input{sections/diagram-dag}
+
+Figure~\ref{fig:closed}, in \S\ref{sec:closedroutes}, maps the \emph{failed} routes onto the same line, one red branch per route, positioned at the step it was aimed at.
+
+\subsection{Where the work stands}
+
+Nine facts fix the shape of the problem. \textbf{The full ledger (every result, with the qualification each carries) is \S\ref{sec:ledger}}. This table is the orientation, not the record.
+
+\begin{center}
+\begin{tabular}{@{}p{0.46\linewidth}p{0.48\linewidth}@{}}
+\toprule
+\textbf{Component} & \textbf{State} \\
+\midrule
+The diagonal case & \textbf{Proved at every $n\ge4$}, both parities, with its equality case (Lemma~57), so the grant carries nothing the report needs \\
+The dimension threshold $n\ge12$ & Derived exactly as $n=6+2\sqrt7$ (Lemma~2), and \textbf{necessary}: $\Omega_0$ is non-invariant for $4\le n\le11$ (Lemma~44) \\
+The target constant $\theta_0(n)$ & \textbf{Demanded by cone invariance} at $a=0$, independently of the sphere products (Lemma~43) \\
+Conjecture~A on the compact symmetric spaces & \textbf{Proved} for every $n\ge12$, equality exactly at $S^{n/2}\times S^{n/2}$ (Lemmas~47, 48) \\
+$P$ as a function of two spectra & \textbf{Proved}: $\theta=\tfrac32p_3(\mu)-\tfrac12p_3(\omega)$ (Lemma~50). The collapse to one spectrum is Lovelock's identity and reaches only $n\le5$ (Lemma~51) \\
+A transfer inequality between the two cubics & \textbf{Open}, and it is what the bi-spectral route needs \\
+The residual, as a value bound & \textbf{Open}: one inequality, and it closes every even $n\ge12$ (\S\ref{sec:outside}) \\
+Maximizers away from the $\CP^2$ orbit & \textbf{Open}: this is the core problem \\
+Odd $n$ & Open exactly where even $n$ is open: the non-diagonal half \\
+\bottomrule
+\end{tabular}
+\end{center}{Provenance}
+
+No single paper states the result end to end. It is B\"ohm--Wilking's ``Conjecture A'' (``Conjecture L1'' in some of the surrounding literature), sitting inside the curvature-operator programme of \cite{bw2008}, and it is referenced by name in Nienhaus's thesis work \cite{nienhaus2023}, whose Conjecture~A is the critical-point form of Problem~P. The identification, and why the two are the same statement, is \S\ref{sec:twoforms}. Partial progress in a related direction appears in \cite{xu2024}. The algebraic object $P$, the cubic form attached to the polarization of $Q$, is treated in generality by Fox \cite{fox2019}, who shows that the Weyl operators form a simple commutative nonassociative algebra whose idempotents are exactly the critical points of $P$ on the unit sphere.
+
+\subsection{Labels, and how results are graded}\label{sec:labels}
+
+Labels in this report are literal and are used consistently:
+\begin{itemize}[nosep,leftmargin=1.4em]
+\item \textbf{Lemma}: proven. Where a proof rests on a machine computation, the computation is exact (rational, integer, modular, or validated interval arithmetic) and this is stated.
+\item \textbf{Observation}: verified numerically at the dimensions named, not proven.
+\item \textbf{Conjecture}: a candidate statement, not proven, with the evidence for it stated.
+\item \textbf{False}: a statement that does not hold, carried with the witness that settles it. These are kept because a negative is a result: it fences a route, and one that is not written down is paid for a second time. Where only a stronger reading fails, the row says which reading and the narrow form stays.
+\end{itemize}
+
+A fourth convention governs the proofs themselves. A \emph{proof} is an argument. A \emph{Verification} block is a machine computation, and it names the arithmetic it was done in, because the distinction decides what the result can carry: modular arithmetic bounds a kernel from above and so settles nondegeneracy but never degeneracy, and floating point settles neither. Every lemma below carries a proof. Where a proof leans on a step that is verified rather than argued (four coupling vanishings in Lemma~22, the cross-term grant in Lemma~18), that step is named at the point of use and never absorbed into the surrounding prose.
+
+Every load-bearing result is rebuilt from definitions by two independent reviewers, each given the claim and not the code, working the same brief. Agreement between two implementations is the evidence a \textbf{Proven} label rests on, and disagreement between them is a result of its own, since exactly one side is then wrong. A result whose audit is owed says so at the point of use, and the debt ledger of \S\ref{sec:debt} collects them. \textbf{Nothing on that ledger is cited elsewhere as settled}. A result marked \emph{machine-checked in Lean} has its statement typed and its proof checked by the Lean kernel, resting on Lean's three standard axioms and on no \texttt{sorry}. That is a third line of evidence beside the two audits: the kernel checks every step of the argument it is given, and the one thing it cannot check, that the typed statement is the lemma as stated here, is compared by hand.
+
+
+% ==============================================================================

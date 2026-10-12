@@ -1,0 +1,20 @@
+MODEL: V = R^3, f = 6, U = Lambda^2 V, e = projector onto Sym^3(U).
+       B_6(3): semisimple needs n >= 5 (fails), nu injective needs n >= 6 (fails).
+
+lambda = varnothing:  dim M_lambda = dim Inv(V^6) = 15
+                      dim e M_lambda = 0, dim of the e-FIXED subspace of M_lambda = 0
+                      e M_lambda inside M_lambda: True
+                      seed c_0 = d_12 d_34 d_56, ||e c_0|| = 0.00e+00  -> the seed is OUTSIDE the covariant space
+                      span{nu(D) c_0} = 15 of 15;  span{e nu(D) c_0} = 0 of 0
+
+lambda = (1,1) -- a genuine covariant block, realised as Lambda^2 V in legs 0,1:
+                      dim M_(1,1) = 36   (up-down prediction below)
+                      dim e M_lambda = 1, dim e-FIXED subspace = 1, e M inside M: True
+                      seeds in M_lambda that e ANNIHILATES: 30 of 90 candidates
+                        seed 0: span{nu(D)c_0} = 36 of 36, span{e nu(D)c_0} = 1 of 1
+                        seed 1: span{nu(D)c_0} = 36 of 36, span{e nu(D)c_0} = 1 of 1
+                        seed 2: span{nu(D)c_0} = 36 of 36, span{e nu(D)c_0} = 1 of 1
+                        seed 3: span{nu(D)c_0} = 36 of 36, span{e nu(D)c_0} = 1 of 1
+
+  restricted up-down multiplicities at (f,n) = (6,3): m_empty = 15, m_(1,1) = 36
+  both reproduced above by explicit linear algebra in V^{tensor 6} and V^{tensor 8}.

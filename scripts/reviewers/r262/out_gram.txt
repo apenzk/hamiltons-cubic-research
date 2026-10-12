@@ -1,0 +1,27 @@
+== (b) the loop counter: union-find components vs the reviewed traversal ==
+  f=2: 3^2 = 9 pairs, disagreements: 0
+  f=3: 15^2 = 225 pairs, disagreements: 0
+  f=4: 105^2 = 11025 pairs, disagreements: 0
+  f=2: loops(D,D) = 2 for all 3 diagrams (a matching against itself is f 2-cycles)
+  f=3: loops(D,D) = 3 for all 15 diagrams (a matching against itself is f 2-cycles)
+  f=4: loops(D,D) = 4 for all 105 diagrams (a matching against itself is f 2-cycles)
+  f=5: loops(D,D) = 5 for all 945 diagrams (a matching against itself is f 2-cycles)
+
+== (a) the Gram identity: rank[n^loops] vs dim span{nu(D)}, computed exactly ==
+   f  n  rank[n^loops] exact  dim span nu(D) exact  sum m(n)^2  agree
+   2  1                    1                     1           1   True
+   2  2                    3                     3           3   True
+   2  3                    3                     3           3   True
+   2  4                    3                     3           3   True
+   2  5                    3                     3           3   True
+   3  1                    1                     1           1   True
+   3  2                   10                    10          10   True
+   3  3                   15                    15          15   True
+   3  4                   15                    15          15   True
+   3  5                   15                    15          15   True
+   4  1                    1                     1           1   True
+   4  2                   35                    35          35   True
+   4  3                   91                    91          91   True
+   4  4                  105                   105         105   True
+
+  (c), the multiplicity test, is in r262_mult.py -- it needs the same helpers.

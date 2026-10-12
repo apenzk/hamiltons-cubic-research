@@ -1,0 +1,18 @@
+=== the projector has a kernel, and a component read cannot see it ===
+  n=5:  tr(W.W) = |W|^2 exactly: True   rank of RAW component reads = 2   rank in the TARGET = 1
+  n=6:  tr(W.W) = |W|^2 exactly: True   rank of RAW component reads = 2   rank in the TARGET = 1
+  n=7:  tr(W.W) = |W|^2 exactly: True   rank of RAW component reads = 2   rank in the TARGET = 1
+  A = (W.W)_ij and B = A - (|W|^2/n) delta_ij are independent as raw
+  covariants and are the SAME element of V_(2).  A component test run on
+  unprojected objects returns 2 where the truth in the target is 1 --
+  r254's failure mode (a dependence read as independence), reappearing at
+  the one place degree 3 differs from the validation.
+
+=== cost of one component read at degree 3, n = 12 ===
+  a degree-3 diagram has 12 index slots; |lambda| of them are free and
+  the rest are contracted in pairs, so one component costs n^((12-|l|)/2):
+   |lambda| :          0          2          4          6          8         10         12
+   ops      :    2985984     248832      20736       1728        144         12          1
+  the read itself is cheap at every |lambda| -- the file's cost claim
+  survives the move to degree 3.  What does not survive is the premise
+  that the object being read is already in V_lambda.

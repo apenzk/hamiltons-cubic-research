@@ -1,0 +1,43 @@
+==============================================================================
+CLAIM 4 -- route D's closure, both halves, independently
+
+n=8: padded W_CP2 built in Lambda^2 from the self-dual forms
+   |Ric| = 0.00e+00, Bianchi = 0.00e+00  (so it is in Weyl_n)
+   criticality residual 2.22e-16, theta = 1.224744871392, sqrt(3/2) = 1.224744871392
+   HALF (a) LOCAL MAX: dim Weyl = 300, max spec(L_e|W^perp) = 0.500000000000
+      eigenvalues > 1/2: 0;  eigenvalues = 1/2: 18;  top six [0.5 0.5 0.5 0.5 0.5 0.5]
+      dim of the O(n)-orbit tangent at W = 18  (matches the 1/2-eigenspace: True)
+      |P(W+1e-3 orbit dir) - P(W)| <= 1.84e-06  (P is constant along the orbit to O(eps^2))
+   HALF (b) PLUCKER:
+      eigenvalue -0.408248290 (dim 2): min ||omega^omega|| = 0.500000000
+      eigenvalue  0.816496581 (dim 1): min ||omega^omega|| = 0.500000000
+      Hessian check: FD -3.64387434 vs 6 theta (<L_e V,V> - 1/2) -3.64387457
+      Hessian check: FD -3.45332805 vs 6 theta (<L_e V,V> - 1/2) -3.45332830
+
+n=12: padded W_CP2 built in Lambda^2 from the self-dual forms
+   |Ric| = 0.00e+00, Bianchi = 0.00e+00  (so it is in Weyl_n)
+   criticality residual 2.22e-16, theta = 1.224744871392, sqrt(3/2) = 1.224744871392
+   HALF (a) LOCAL MAX: dim Weyl = 1638, max spec(L_e|W^perp) = 0.500000000000
+      eigenvalues > 1/2: 0;  eigenvalues = 1/2: 34;  top six [0.5 0.5 0.5 0.5 0.5 0.5]
+      dim of the O(n)-orbit tangent at W = 34  (matches the 1/2-eigenspace: True)
+      |P(W+1e-3 orbit dir) - P(W)| <= 1.84e-06  (P is constant along the orbit to O(eps^2))
+   HALF (b) PLUCKER:
+      eigenvalue -0.408248290 (dim 2): min ||omega^omega|| = 0.500000000
+      eigenvalue  0.816496581 (dim 1): min ||omega^omega|| = 0.500000000
+      Hessian check: FD -3.64740298 vs 6 theta (<L_e V,V> - 1/2) -3.64740313
+      Hessian check: FD -3.57781362 vs 6 theta (<L_e V,V> - 1/2) -3.57781389
+
+==============================================================================
+CLAIM 5 -- the mechanism route D left behind
+
+(i) is every one-positive/two-negative element Plucker-obstructed?
+   (q,r)=(1.0,1.0): |Ric|=0.0e+00 Bianchi=0.0e+00  #pos=1 #neg=2 theta=1.224744871  eigenspaces [(-0.40824829, 2, np.float64(0.5)), (0.816496581, 1, np.float64(0.5))]
+   (q,r)=(1.0,0.3): |Ric|=0.0e+00 Bianchi=0.0e+00  #pos=1 #neg=2 theta=0.757251117  eigenspaces [(-0.599760144, 1, np.float64(0.5)), (-0.179928043, 1, np.float64(0.5)), (0.779688187, 1, np.float64(0.5))]
+   (q,r)=(1.0,0.05): |Ric|=1.0e-17 Bianchi=1.0e-17  #pos=1 #neg=2 theta=0.154711880  eigenspaces [(-0.689245517, 1, np.float64(0.5)), (-0.034462276, 1, np.float64(0.5)), (0.723707793, 1, np.float64(0.5))]
+   (q,r)=(2.0,1.3): |Ric|=1.4e-16 Bianchi=8.3e-17  #pos=1 #neg=2 theta=1.143807679  eigenspaces [(-0.491176672, 1, np.float64(0.5)), (-0.319264837, 1, np.float64(0.5)), (0.810441509, 1, np.float64(0.5))]
+
+(iii) WITNESS AGAINST  Plucker-obstructed => theta <= sqrt(3/2)
+   theta_0(12) = 1.236033081183   sqrt(3/2) = 1.224744871392
+   eps=1e-01: |Ric|=4.5e-16 Bianchi=3.1e-17  theta=1.217948946 (> sqrt(3/2)? False)  max over eigenspaces of min||w^w|| = 0.607058 -> Plucker-obstructed? True
+   eps=3e-02: |Ric|=4.1e-16 Bianchi=8.1e-18  theta=1.234346301 (> sqrt(3/2)? True)  max over eigenspaces of min||w^w|| = 0.614589 -> Plucker-obstructed? True
+   eps=1e-02: |Ric|=3.1e-16 Bianchi=3.0e-18  theta=1.235844074 (> sqrt(3/2)? True)  max over eigenspaces of min||w^w|| = 0.615490 -> Plucker-obstructed? True

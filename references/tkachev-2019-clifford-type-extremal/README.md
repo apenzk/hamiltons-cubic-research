@@ -1,0 +1,6 @@
+# Tkachev 2019, On an extremal property of Jordan algebras of Clifford type
+
+- Vladimir G. Tkachev. *Comm. Algebra* **47** (2019), no. 3, 1057–1066. [arXiv:1801.05724](https://arxiv.org/abs/1801.05724). Stored 2026-08-27; PDF verified as the paper, 9 pages.
+- Reached from [Krasnov–Tkachev](../krasnov-tkachev-2018-idempotent-variety/) footnote 3, which relates extremal idempotents carrying a $\tfrac12$-eigenspace to Clifford algebras, the exact configuration at a maximiser of $P$.
+- **Verdict: the primary source for an already-closed route.** Its hypothesis is a **unital** algebra, stated in the abstract and again at Definition 1.1. $\mathrm{Weyl}_n$ under $\circ$ has no unit, since $L_u=\mathrm{Id}$ would force $\operatorname{tr}(L_u)>0$ against $\operatorname{tr}(L_x)\equiv0$. The Clifford/Hurwitz–Radon cap is therefore closed, as [fence post at fence-posts.md](../../findings/fence-posts.md) already records from the citing literature.
+- Stored anyway because that fence post rested on a second-hand reading, and a closed route is worth holding at first hand: the next cycle that reaches for Clifford structure can check the hypothesis here in one line instead of re-deriving why it fails.

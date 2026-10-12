@@ -1,0 +1,49 @@
+Nienhaus's own closed form at c=1:  Gamma = 1 - sqrt(2a(1+a))
+   alpha=0.0000  Gamma_num=1.000000000  closed=1.000000000
+   alpha=0.1000  Gamma_num=0.983869910  closed=0.530958424
+   alpha=0.2000  Gamma_num=0.929516003  closed=0.307179677
+   alpha=0.3333  Gamma_num=0.769800359  closed=0.057190958
+
+  n  sup P (granted)          c  Gamma(1/3)  ftilde(pi/6)  f(pi/6) bnd  s23*Theta  (i)  (ii)
+  9      1.224744871   1.000000    0.769800      0.000000     0.962250   0.956183 FAIL  FAIL
+ 10      1.224744871   1.000000    0.769800      0.000000     0.962250   0.979796 FAIL    ok
+ 11      1.224744871   1.000000    0.769800      0.000000     0.962250   0.993808 FAIL    ok
+ 12      1.236033081   1.009217    0.783806      0.006064     0.964001   1.009217 FAIL    ok
+ 13      1.248375568   1.019294    0.798741      0.012532     0.965868   1.019294 FAIL    ok
+ 14      1.261680124   1.030158    0.814468      0.019342     0.967834   1.030158 FAIL    ok
+ 16      1.280868846   1.045825    0.836579      0.028916     0.970598   1.045825 FAIL    ok
+ 20      1.307669683   1.067708    0.866542      0.041890     0.974343   1.067708 FAIL    ok
+ 40      1.361065759   1.111306    0.923845      0.066703     0.981506   1.111306 FAIL    ok
+
+How far can c be pushed before each closing estimate breaks (alpha = 1/3):
+   c=1.00000  Gamma= 0.769800  ftilde(pi/6)=+0.000000  f(pi/6)bnd= 0.962250
+   c=1.00500  Gamma= 0.777442  ftilde(pi/6)=+0.003309  f(pi/6)bnd= 0.963206
+   c=1.00921  Gamma= 0.783795  ftilde(pi/6)=+0.006060  f(pi/6)bnd= 0.964000
+   c=1.02000  Gamma= 0.799774  ftilde(pi/6)=+0.012979  f(pi/6)bnd= 0.965997
+   c=1.05000  Gamma= 0.842371  ftilde(pi/6)=+0.031424  f(pi/6)bnd= 0.971322
+   c=1.10000  Gamma= 0.909241  ftilde(pi/6)=+0.060380  f(pi/6)bnd= 0.979681
+   c=1.15000  Gamma= 0.972751  ftilde(pi/6)=+0.087880  f(pi/6)bnd= 0.987619
+   c=1.20000  Gamma= 1.033996  ftilde(pi/6)=+0.114400  f(pi/6)bnd= 0.995275
+   c=1.30000  Gamma= 1.151938  ftilde(pi/6)=+0.165470  f(pi/6)bnd= 1.010018
+   c=1.41420  Gamma= 1.281776  ftilde(pi/6)=+0.221692  f(pi/6)bnd= 1.026247
+   c=1.73210  Gamma= 1.628637  ftilde(pi/6)=+0.371887  f(pi/6)bnd= 1.069605
+   c=1.10000  Gamma= 0.909241  ftilde(pi/6)=+0.060380  f(pi/6)bnd= 0.979681
+   c=1.15000  Gamma= 0.972751  ftilde(pi/6)=+0.087880  f(pi/6)bnd= 0.987619
+   c=1.20000  Gamma= 1.033996  ftilde(pi/6)=+0.114400  f(pi/6)bnd= 0.995275
+   c=1.30000  Gamma= 1.151938  ftilde(pi/6)=+0.165470  f(pi/6)bnd= 1.010018
+   c=1.41420  Gamma= 1.281776  ftilde(pi/6)=+0.221692  f(pi/6)bnd= 1.026247
+   c=1.73210  Gamma= 1.628637  ftilde(pi/6)=+0.371887  f(pi/6)bnd= 1.069605
+
+exact Gamma_1(alpha) at the stationary point cos(phi_0)=alpha/(1-alpha):
+    sqrt((1 - 2*alpha)/(alpha**2 - 2*alpha + 1))*(1 - alpha**2)
+    alpha=0.1000  exact=0.983869910   Nienhaus's printed form 1-sqrt(2a(1+a)) = 0.530958424
+    alpha=0.2000  exact=0.929516003   Nienhaus's printed form 1-sqrt(2a(1+a)) = 0.307179677
+    alpha=0.3333  exact=0.769800359   Nienhaus's printed form 1-sqrt(2a(1+a)) = 0.057190958
+    at alpha=1/3 exactly: 4*sqrt(3)/9
+    ftilde(pi/6) at alpha=1/3, c=1: 0
+
+how much of (0,pi/6] survives at c = sqrt(2/3) theta_0(n):
+   n=12  c=1.009217  ftilde>0 from phi*=0.508516 rad = 0.9712 of pi/6   (deficit at pi/6: +0.006064)
+   n=14  c=1.030158  ftilde>0 from phi*=0.479424 rad = 0.9156 of pi/6   (deficit at pi/6: +0.019342)
+   n=16  c=1.045825  ftilde>0 from phi*=0.461070 rad = 0.8806 of pi/6   (deficit at pi/6: +0.028916)
+   n=20  c=1.067708  ftilde>0 from phi*=0.438905 rad = 0.8382 of pi/6   (deficit at pi/6: +0.041890)

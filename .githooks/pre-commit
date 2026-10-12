@@ -1,0 +1,35 @@
+#!/bin/sh
+# Commit-time checks, kept to seconds. Nothing here refuses a commit.
+#
+# LEAN IS CHECKED AFTER THE COMMIT, NOT BEFORE IT. Sessions commit into one tree
+# at once, so a commit-time compile waited on another session's unbuilt modules
+# and on the root file importing all of them. The trade, approved by the user on
+# 2026-09-28: a broken Lean file may land for a few minutes, and the background
+# tree build launched below reports it into /tmp/lean_tree_build.log, where the
+# committing loop reads it and fixes the error in its next commit.
+#
+# STATUS.md is regenerated when a status is asked for, and stale judgement
+# sections are caught there, so no commit is held for it.
+#
+# This is git's own hook: it holds for every session and every author.
+set -u
+STAGED=$(git diff --cached --name-only --diff-filter=ACM | grep '^lean/.*\.lean$' || true)
+[ -n "$STAGED" ] || exit 0
+[ -d lean ] || exit 0
+command -v lake >/dev/null 2>&1 || PATH="$HOME/.elan/bin:$PATH"
+command -v lake >/dev/null 2>&1 || exit 0   # no toolchain here; nothing to launch
+export PATH
+
+# An orphan module is built by nobody: `lake build` skips it and the axiom audit
+# never sees it. Reported here, fixed in a later commit.
+python3 scripts/misc/lean_orphans.py \
+  || echo "pre-commit: WARNING, unreachable lean modules (above); add them to the root file in a later commit."
+
+# The tree is verified out of band, and nothing here waits for it.
+if ! pgrep -f "\.elan/toolchains/[^ ]*/bin/lake build" >/dev/null 2>&1; then
+  (cd lean && nohup lake build >/tmp/lean_tree_build.log 2>&1 &) >/dev/null 2>&1
+  echo "pre-commit: full tree build launched in background -> /tmp/lean_tree_build.log"
+else
+  echo "pre-commit: a tree build is already running; not starting a second"
+fi
+exit 0

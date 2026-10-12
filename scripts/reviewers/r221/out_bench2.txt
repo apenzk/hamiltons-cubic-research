@@ -1,0 +1,4 @@
+lambda                      cols    rows       nnz   S author    D dense   M sparse  nullities
+(4, 2, 2, 0, 0, 0)         2,614   6,545    19,185       2.3s       3.2s       4.3s  S8 D8 M8 m8
+(4, 2, 1, 1, 0, 0)         4,186  10,728    32,235      30.4s       7.2s      10.6s  S4 D4 M4 m4
+(3, 3, 1, 1, 0, 0)         6,137  17,233    52,245      69.6s      44.2s      28.3s  S8 D8 M8 m8

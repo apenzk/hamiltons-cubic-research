@@ -1,0 +1,47 @@
+========================================================================================
+(C)  semisimplicity of B_f(n) itself, Dickson trace-form criterion
+========================================================================================
+  Rui as the record quotes it: B_f(n) semisimple over a char-0 field iff n >= f-1.
+
+  f=2 n=0  dim B_f=   3  rank(trace form)=   2  SEMISIMPLE=False   Rui predicts False   ok
+  f=2 n=1  dim B_f=   3  rank(trace form)=   3  SEMISIMPLE= True   Rui predicts  True   ok
+  f=2 n=2  dim B_f=   3  rank(trace form)=   3  SEMISIMPLE= True   Rui predicts  True   ok
+  f=2 n=3  dim B_f=   3  rank(trace form)=   3  SEMISIMPLE= True   Rui predicts  True   ok
+  f=2 n=4  dim B_f=   3  rank(trace form)=   3  SEMISIMPLE= True   Rui predicts  True   ok
+  f=2 n=5  dim B_f=   3  rank(trace form)=   3  SEMISIMPLE= True   Rui predicts  True   ok
+  f=2 n=6  dim B_f=   3  rank(trace form)=   3  SEMISIMPLE= True   Rui predicts  True   ok
+  f=2 n=7  dim B_f=   3  rank(trace form)=   3  SEMISIMPLE= True   Rui predicts  True   ok
+  f=2 n=8  dim B_f=   3  rank(trace form)=   3  SEMISIMPLE= True   Rui predicts  True   ok
+
+  f=3 n=0  dim B_f=  15  rank(trace form)=  15  SEMISIMPLE= True   Rui predicts False   *** DISAGREES ***
+  f=3 n=1  dim B_f=  15  rank(trace form)=   7  SEMISIMPLE=False   Rui predicts False   ok
+  f=3 n=2  dim B_f=  15  rank(trace form)=  15  SEMISIMPLE= True   Rui predicts  True   ok
+  f=3 n=3  dim B_f=  15  rank(trace form)=  15  SEMISIMPLE= True   Rui predicts  True   ok
+  f=3 n=4  dim B_f=  15  rank(trace form)=  15  SEMISIMPLE= True   Rui predicts  True   ok
+  f=3 n=5  dim B_f=  15  rank(trace form)=  15  SEMISIMPLE= True   Rui predicts  True   ok
+  f=3 n=6  dim B_f=  15  rank(trace form)=  15  SEMISIMPLE= True   Rui predicts  True   ok
+  f=3 n=7  dim B_f=  15  rank(trace form)=  15  SEMISIMPLE= True   Rui predicts  True   ok
+  f=3 n=8  dim B_f=  15  rank(trace form)=  15  SEMISIMPLE= True   Rui predicts  True   ok
+
+  f=4 n=0  dim B_f= 105  rank(trace form)=  69  SEMISIMPLE=False   Rui predicts False   ok
+  f=4 n=1  dim B_f= 105  rank(trace form)=  97  SEMISIMPLE=False   Rui predicts False   ok
+  f=4 n=2  dim B_f= 105  rank(trace form)=  58  SEMISIMPLE=False   Rui predicts False   ok
+  f=4 n=3  dim B_f= 105  rank(trace form)= 105  SEMISIMPLE= True   Rui predicts  True   ok
+  f=4 n=4  dim B_f= 105  rank(trace form)= 105  SEMISIMPLE= True   Rui predicts  True   ok
+  f=4 n=5  dim B_f= 105  rank(trace form)= 105  SEMISIMPLE= True   Rui predicts  True   ok
+  f=4 n=6  dim B_f= 105  rank(trace form)= 105  SEMISIMPLE= True   Rui predicts  True   ok
+  f=4 n=7  dim B_f= 105  rank(trace form)= 105  SEMISIMPLE= True   Rui predicts  True   ok
+  f=4 n=8  dim B_f= 105  rank(trace form)= 105  SEMISIMPLE= True   Rui predicts  True   ok
+
+  f=5 n=0  dim B_f= 945  rank(trace form)= 945  SEMISIMPLE= True   Rui predicts False   *** DISAGREES ***
+  f=5 n=1  dim B_f= 945  rank(trace form)= 517  SEMISIMPLE=False   Rui predicts False   ok
+  f=5 n=2  dim B_f= 945  rank(trace form)= 745  SEMISIMPLE=False   Rui predicts False   ok
+  f=5 n=3  dim B_f= 945  rank(trace form)= 706  SEMISIMPLE=False   Rui predicts False   ok
+  f=5 n=4  dim B_f= 945  rank(trace form)= 945  SEMISIMPLE= True   Rui predicts  True   ok
+  f=5 n=5  dim B_f= 945  rank(trace form)= 945  SEMISIMPLE= True   Rui predicts  True   ok
+  f=5 n=6  dim B_f= 945  rank(trace form)= 945  SEMISIMPLE= True   Rui predicts  True   ok
+  f=5 n=7  dim B_f= 945  rank(trace form)= 945  SEMISIMPLE= True   Rui predicts  True   ok
+  f=5 n=8  dim B_f= 945  rank(trace form)= 945  SEMISIMPLE= True   Rui predicts  True   ok
+
+  disagreements with n >= f-1: [(3, 0, True, False), (5, 0, True, False)]
+

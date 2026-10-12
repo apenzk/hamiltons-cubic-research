@@ -1,0 +1,23 @@
+increments and their ratios
+   d  = [0.007667 0.005214 0.003648 0.002673 0.002035]
+   d_k/d_{k-1} = [0.6801 0.6997 0.7327 0.7613]
+
+Aitken delta^2 (limit of a geometric tail), on consecutive triples
+   n= 6..10:  1.436786
+   n= 8..12:  1.437849
+   n=10..14:  1.439352
+   n=12..16:  1.440550
+
+least-squares fits  F(n) = Finf - A n^-q
+   free q :  Finf=1.456211  A=0.1493  q=0.6892   resid=1.07e-04
+   q=1.0 :  Finf=1.446480  A=0.2044   resid=4.48e-04
+   q=1.5 :  Finf=1.439336  A=0.4025   resid=1.06e-03
+   q=2.0 :  Finf=1.435815  A=0.8715   resid=1.71e-03
+   q=3.0 :  Finf=1.432413  A=4.5641   resid=3.01e-03
+
+what sqrt(3) would demand
+   with Finf=sqrt3 and exponent q=0.5: A=1.1920, so F(6) would be 1.245432 against the measured 1.412822
+   with Finf=sqrt3 and exponent q=1.0: A=4.7679, so F(6) would be 0.937406 against the measured 1.412822
+   with Finf=sqrt3 and exponent q=2.0: A=76.2859, so F(6) would be -0.387002 against the measured 1.412822
+   best fit with Finf FIXED at sqrt3: A=0.3613 q=0.0705, max resid 8.65e-04  (free-Finf resid 1.07e-04)
+   ratio of residuals: 8.1x worse

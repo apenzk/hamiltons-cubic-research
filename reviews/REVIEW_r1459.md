@@ -1,0 +1,81 @@
+# REVIEW r1459: L70's W_CP^m clause in Lean, commit e3b58773: `Jm`, `WCPm`, `WCPm_isWeylOp`, `WCPm_J`, `eigen_mul_J`, `top_card_le_one`, `WCPm_not_saturated`, the L70 row and the bounds.md sentence
+
+Log [agent_logs/r1459.log](../agent_logs/r1459.log). One reviewer, working cold and adversarially. Analysis-only: `lake build` of the file, one scratch file for `#print axioms` (in the session scratchpad, outside the repository), the Weyl part of the Fubini-Study tensor rederived by hand, and one seconds-long screen of $Q(W_{\mathbb{CP}^m})$ at $m=2,3,4$ on an object built for the purpose, reported as a screen. Record: [findings/bounds.md](../findings/bounds.md) "Lemma L70, the deficiency identity, and what saturates it" (line 224), the L70 row of [lean/INDEX.md](../lean/INDEX.md) (line 614). Lean: [L70CPm.lean](../lean/HamiltonsCubic/Results/L70CPm.lean), against `L70_saturation_dims` in [L70Compose.lean](../lean/HamiltonsCubic/Results/L70Compose.lean), `EigenFrame` in [L41Statement.lean](../lean/HamiltonsCubic/Results/L41Statement.lean), `inner2`, `phi`, `Ric`, `bianchi`, `IsWeyl`, `Qop`, `IsCritical` in [WeylReal.lean](../lean/HamiltonsCubic/Base/WeylReal.lean), `IsWeylOp` in [FoxProduct.lean](../lean/HamiltonsCubic/Base/FoxProduct.lean), `WCP2` in [Families.lean](../lean/HamiltonsCubic/Base/Families.lean).
+
+**Standfirst.** The file compiles and every named theorem rests on the standard three axioms. `WCPm` is exactly the Weyl tensor of $\mathbb{CP}^m$ (holomorphic curvature $4$), coefficient $1$, not merely a multiple, in the layer's $R_4$ convention, and at $m=2$ its spectrum $(4,0,0,0,-2,-2)$ is twice `WCP2`'s. The spectral argument is sound for any upper bound `lmax` of the spectrum, with $\lambda(\omega)\le$ `lmax` derived from completeness of the frame. `WCPm_not_saturated` is stronger than the record's sentence, since it holds for every upper bound and not only the attained maximum. **It is not vacuous**: $W_{\mathbb{CP}^m}$ is critical in the layer's exact sense $Q(W)=\theta W$, by $U(m)$-invariance, Bianchi preservation under $Q$ and $\operatorname{tr}Q(W)=0$ on $\mathcal W_n$ (argument in D), and the screen agrees. The row's decision to leave criticality owed is honest and flagged. **One wording gap**: the formula $X\mapsto-\tfrac3{2m-1}X+JXJ^{\mathsf T}+\langle J,X\rangle J$ in the L70 row and in the `WCPm` docstring uses $\langle J,X\rangle$ for the Frobenius sum $\sum J_{ij}X_{ij}$, while the same file fixes $\langle J,J\rangle=m$, the layer's half-trace pairing. Read in that pairing, the displayed operator fails Bianchi.
+
+| Item | Verdict | Reason |
+| --- | --- | --- |
+| A. `WCPm` is the Weyl tensor of $\mathbb{CP}^m$ | CONFIRMED | By hand from `WCPm_phi_apply` and `WCPm_R4`: $\langle W\varphi_{ij},\varphi_{kl}\rangle=c_A(\delta_{ik}\delta_{jl}-\delta_{il}\delta_{jk})+J_{ik}J_{jl}-J_{il}J_{jk}+2J_{ij}J_{kl}$ with $c_A=-3/(2m-1)$, which is $R_{\mathrm{FS}}-\frac{\rho}{n-1}(\delta\delta-\delta\delta)$ at $\rho=2m+2$. `Jm` has $J^2=-1$, $J^{\mathsf T}=-J$. At $m=2$ the spectrum is $(4,0^3,-2^2)=2\cdot(2,0^3,-1^2)$, `WCP2`'s. |
+| B. `WCPm_isWeylOp` | CONFIRMED | Linearity, skew, self-adjointness (on all matrices), Bianchi and Ricci all proved. `hm` enters only through $2m-1\ne0$ in `WCPm_ric`, which holds at every natural $m$ as a real, so `hm` is redundant and harmless. |
+| C. `eigen_mul_J`, `top_card_le_one` | CONFIRMED | Conjugation by $J$ turns $WX=\lambda X$ into $(\lambda-c_A+1)(X-JXJ^{\mathsf T})=0$, so $X=JXJ^{\mathsf T}$ and $X\propto J$ off $c_A\pm1$. $\lambda(\omega)\le$ `lmax` is derived (else $J$ is orthogonal to the whole frame and $J=0$), not assumed. Two orthonormal multiples of $J$ give $c^2m=d^2m=1$ and $cdm=0$, a contradiction. Valid for any upper bound. |
+| D. `WCPm_not_saturated` and criticality | CONFIRMED | States $\theta\ne\lambda_{\min}+(n-2)\lambda_{\max}$ for attained $\lambda_{\min}<0$ and every upper bound $\lambda_{\max}>0$, which contains the record's reading. `IsCritical` is satisfiable: $W_{\mathbb{CP}^m}$ is exactly critical (analytical argument below, screen agrees at residual $10^{-15}$). The owed criticality is named in the row and is L46's content in the record. |
+| E. Axioms | CONFIRMED | `WCPm_not_saturated`, `WCPm_isWeylOp`, `top_card_le_one`, `eigen_mul_J`: `propext`, `Classical.choice`, `Quot.sound`. No `sorry`, no `native_decide`. |
+| F. Record text | CONFIRMED WITH GAP | bounds.md and the row are faithful, with no em dash and no semicolon splice in the new text. Gap: $\langle J,X\rangle J$ at [lean/INDEX.md:614](../lean/INDEX.md) and [L70CPm.lean:106](../lean/HamiltonsCubic/Results/L70CPm.lean) means $\sum J_{ij}X_{ij}$, twice the pairing the same file writes as $\langle J,J\rangle=m$ at [L70CPm.lean:13](../lean/HamiltonsCubic/Results/L70CPm.lean). |
+
+**One-line summary: CONFIRMED WITH GAP.** `WCPm` is the Weyl tensor of $\mathbb{CP}^m$ on the nose, its top eigenvalue $2m+1-\tfrac3{2m-1}$ is simple with eigenvector $\omega=J$, and `WCPm_not_saturated` proves the record's clause at every critical value on the standard three axioms, non-vacuously since $W_{\mathbb{CP}^m}$ is exactly critical. Gap: the displayed formula's $\langle J,X\rangle$ is the Frobenius sum while the file's own $\langle J,J\rangle=m$ is the half-trace pairing.
+
+## The record's claim
+
+Quoted from [findings/bounds.md](../findings/bounds.md), Lemma L70, line 224: "and $W_{\mathbb{CP}^m}$ cannot saturate at $m\ge3$, since $\dim E_{\max}=1$ there against a required $m-1$ (*machine-checked at every critical value: `WCPm_not_saturated` in [L70CPm.lean](../lean/HamiltonsCubic/Results/L70CPm.lean), the top eigenvalue $2m+1-\tfrac3{2m-1}$ being simple with eigenvector the Kähler form*)". The required $m-1$ is `L70_saturation_dims`' $n-2\le2\dim E_{\max}$ at $n=2m$, and $m-1\ge2>1$ at $m\ge3$.
+
+## A. The tensor
+
+The Fubini-Study tensor $R_{ijkl}=\delta_{ik}\delta_{jl}-\delta_{il}\delta_{jk}+J_{ik}J_{jl}-J_{il}J_{jk}+2J_{ij}J_{kl}$ has $\mathrm{Ric}_{jl}=\sum_iR_{ijil}=(2m-1)\delta_{jl}-(J^2)_{jl}+2(J^{\mathsf T}J)_{jl}=(2m+2)\delta_{jl}$. It is Einstein, so its Weyl part is $R-\frac{2m+2}{2m-1}(\delta_{ik}\delta_{jl}-\delta_{il}\delta_{jk})$, whose $\delta\delta$ coefficient is $1-\frac{2m+2}{2m-1}=-\frac3{2m-1}$. The $J$ terms are unchanged.
+
+The layer: `phi i j` $=E_{ji}-E_{ij}$, `inner2` $=\tfrac12\operatorname{tr}(X^{\mathsf T}Y)$, and $R_4(i,j,k,l)=\langle W\varphi_{ij},\varphi_{kl}\rangle$. `WCPm_R4` gives $R_4=-(W\varphi_{ij})_{kl}$, and `WCPm_phi_apply` gives $(W\varphi_{ij})_{kl}=c_A(\delta_{jk}\delta_{il}-\delta_{ik}\delta_{jl})+J_{kj}J_{li}-J_{ki}J_{lj}-2J_{ij}J_{kl}$. Negating and using $J_{ki}J_{lj}=J_{ik}J_{jl}$, $J_{kj}J_{li}=J_{jk}J_{il}$ gives $R_4=c_A(\delta_{ik}\delta_{jl}-\delta_{il}\delta_{jk})+J_{ik}J_{jl}-J_{il}J_{jk}+2J_{ij}J_{kl}$, the Weyl part above with coefficient $1$. The identity operator has $R_4=\delta_{ik}\delta_{jl}-\delta_{il}\delta_{jk}$ in the same convention, so the sign convention matches the round sphere's positive curvature operator.
+
+`Jm` puts $\mathrm{sg}(a)=\pm1$ at column `partner a` in row $a$, pairing $(0,1),(2,3),\dots$. `Jm_skew`, `Jm_mul_self` and `Jm_mul_transpose` give $J^{\mathsf T}=-J$, $J^2=-1$, $JJ^{\mathsf T}=1$: an orthogonal complex structure. It enters $R_4$ only quadratically, so the orientation is immaterial.
+
+The spectrum at every $m$: $\omega=J$ at $c_A+1+2m$ (`WCPm_J`), the trace-free $J$-commuting part ($\mathfrak{su}(m)$, dimension $m^2-1$) at $c_A+1$, the $J$-anticommuting part (dimension $m(m-1)$) at $c_A-1$. At $m=2$, $c_A=-1$ and the spectrum is $4$ on $\omega$, $0$ on three vectors and $-2$ on two, which is twice `WCP2`'s $(2,-1,-1,0,0,0)$ (`WCP2_bivA`, `WCP2_bivB`, `WCP2_bivC` and the three primed kernel vectors). The file's line 22 says so. At $m=3$ the screen returns top $6.4=7-\tfrac35$, $0.4=c_A+1$, $-1.6=c_A-1$.
+
+**Candidate withdrawn.** The coefficient $2$ on $J_{ij}J_{kl}$ looked at risk of a factor-of-two slip against the half-trace pairing. `frob_phi` gives $\sum_{ab}J_{ab}(\varphi_{ij})_{ab}=-2J_{ij}$, and the $R_4$ sign flip turns $-2J_{ij}J_{kl}$ into $+2J_{ij}J_{kl}$. The Lean definition is right. The slip lives in the prose only, see F.
+
+## B. `WCPm_isWeylOp`
+
+- `WCPm_isLinOp`: additivity and homogeneity by `frob_add`, `frob_smul`. Proved.
+- `WCPm_skew`: $(JXJ^{\mathsf T})^{\mathsf T}=JX^{\mathsf T}J^{\mathsf T}=-JXJ^{\mathsf T}$ at skew $X$, and $J$ is skew. Proved.
+- `WCPm_selfAdjoint`: holds for every $X,Y$, not only skew ones, through `frob_conj` ($\operatorname{tr}$ cyclicity with $J^{\mathsf T}YJ=JYJ^{\mathsf T}$) and symmetry of `frob`. `IsWeyl` asks it only at skew arguments, so this is stronger than needed.
+- `WCPm_bianchi`: the $\delta$ terms cancel by the six-way case split, and the $J$ terms cancel by the identity $2(J_{ik}J_{jl}-J_{il}J_{jk}-J_{ij}J_{kl})+2(J_{ij}J_{kl}-J_{ik}J_{jl}+J_{il}J_{jk})=0$, which I checked by hand. The `linear_combination (-cA m) * hd` closes it.
+- `WCPm_ric`: $\mathrm{Ric}(a,b)=\delta_{ab}\big(c_A(2m-1)+3\big)$, which is $0$ at $c_A=-3/(2m-1)$. **`hm` is used** only for $2m-1\ne0$, and over $\mathbb R$ that holds at $m=0$ too ($-1\ne0$), so the hypothesis is redundant. It is harmless, and at $m=0$ the space is empty.
+
+## C. The spectral argument
+
+- `eigen_mul_J`: from $c_AX+C+fJ=\lambda X$ with $C=JXJ^{\mathsf T}$ and its conjugate $c_AC+X+fJ=\lambda C$ (`conj_conj`, `conj_J`), subtraction gives $(\lambda-c_A+1)(X-C)=0$, so $X=C$ at $\lambda\ne c_A-1$, and then $(\lambda-c_A-1)X=fJ$. Correct, and it needs no skewness of $X$.
+- `top_card_le_one`, the claim that $\lambda(\omega)\le$ `lmax` is derived: self-adjointness gives $(\lambda(\omega)-\lambda_\gamma)\langle J,v_\gamma\rangle=0$ for every frame vector. If $\lambda(\omega)>$ `lmax` $\ge\lambda_\gamma$ for all $\gamma$, every coefficient vanishes, `hf.complete` makes $J=0$, and `inner2_J_J` ($=m\ge1$) refutes it. **Derived, not assumed.**
+- Then every frame vector at `lmax` has eigenvalue $\ge c_A+1+2m>c_A+1>c_A-1$, so `eigen_mul_J` applies, and two distinct ones $cJ$, $dJ$ give $c^2m=d^2m=1$ and $cdm=0$, contradicting $c^2d^2m^2=1$. **This holds for every upper bound `lmax`**, attained or not. If `lmax` is above the true maximum the filter is empty, which is also $\le1$.
+
+**Candidate withdrawn.** I looked for a case where the top eigenvalue coincides with $c_A\pm1$, which would break `eigen_mul_J`'s hypotheses. $c_A+1+2m-(c_A+1)=2m>0$, so it never does at $m\ge1$.
+
+## D. `WCPm_not_saturated` and exact criticality
+
+**What it states.** At $m\ge3$, for $\theta$ with `IsCritical WCPm θ`, attained `lmin` $<0$ below the spectrum and any `lmax` $>0$ above it, $\theta\ne$ `lmin` $+(2m-2)\,$`lmax`. Taking `lmax` the attained maximum gives the record's clause, and the theorem also covers every larger bound. The proof composes `L70_saturation_dims` ($n-2\le2\dim E_{\max}$) with `top_card_le_one` ($\dim E_{\max}\le1$): $2m-2\le2$ fails at $m\ge3$. Correct.
+
+**Is it vacuous?** `IsCritical R θ` is $Q(R)\varphi_{ij}=\theta R\varphi_{ij}$ with $Q=R^2+R^\#$, the unprojected equation. If $Q(W_{\mathbb{CP}^m})$ had a Ricci part the hypothesis would be false for every $\theta$ and the theorem empty. **It is not, by the following argument.**
+
+1. $Q$ is $O(n)$-equivariant, and $W:=W_{\mathbb{CP}^m}$ is $U(m)$-invariant ($X\mapsto JXJ^{\mathsf T}$ and $X\mapsto\langle J,X\rangle J$ commute with conjugation by $U(m)=O(2m)\cap GL(m,\mathbb C)$). So $Q(W)$ is $U(m)$-invariant.
+2. $Q$ maps algebraic curvature operators to algebraic curvature operators (Hamilton, Böhm-Wilking), so $Q(W)$ satisfies Bianchi.
+3. Under $U(m)$, $\Lambda^2\mathbb R^{2m}=\mathbb R\omega\oplus\mathfrak{su}(m)\oplus[\![\Lambda^{2,0}]\!]$, three pairwise non-isomorphic irreducibles at $m\ge3$ (dimensions $1$, $m^2-1$, $m(m-1)$), the last of complex type. So the invariant symmetric operators on $\Lambda^2$ form a 3-dimensional space, spanned by $\mathrm{Id}$, $X\mapsto JXJ^{\mathsf T}$ and $X\mapsto\langle J,X\rangle J$. Bianchi maps it onto $(\Lambda^4)^{U(m)}=\mathbb R\,\omega\wedge\omega$ (the third operator has nonzero Bianchi image), so the invariant algebraic curvature operators are 2-dimensional, spanned by $\mathrm{Id}$ and $W$.
+4. $\operatorname{tr}Q(W)=\operatorname{tr}W^2+\operatorname{tr}W^\#=\lVert W\rVert^2-\lVert W\rVert^2=0$ on $\mathcal W_n$, since $\langle W^\#,\mathrm{Id}\rangle=\langle W\#\mathrm{Id},W\rangle$ and $W\#\mathrm{Id}=\mathrm{Ric}(W)\wedge\mathrm{id}-W=-W$ (Böhm-Wilking). The record has the same fact as INDEX-traps post 53's "$\operatorname{tr}Q(W)=0$".
+5. So $Q(W)=a\,\mathrm{Id}+bW$ with $0=\operatorname{tr}Q(W)=a\dim\Lambda^2$, hence $a=0$ and $Q(W)=bW$ exactly, with $b=\theta=P(W)/\lVert W\rVert^2$.
+
+**Screen, not evidence.** On an object built for this review (the $\binom{2m}2$ pair basis, $W$ from the Lean formula, $W^\#_{\alpha\beta}=\tfrac12c_{\alpha\gamma\delta}c_{\beta\epsilon\zeta}W_{\gamma\epsilon}W_{\delta\zeta}$ with $\mathrm{Id}^\#=(n-2)\mathrm{Id}$ as calibration, which came out with no rescaling), $\max\lvert Q(W)-\theta W\rvert$ is $0$, $9\times10^{-16}$, $4\times10^{-15}$ at $m=2,3,4$, with $\theta=2m+2$. At $m=3$ the L70 bound reads $-1.6+4\cdot6.4=24$ against $\theta=8$, slack $16=2(m-2)\theta$, matching bounds.md's "misses L70's by $2(m-2)\theta$". The screen uses my own $W^\#$ formula and not the layer's `sharpOp`, so it confirms the mathematics and says nothing about `sharpOp`.
+
+**Is leaving criticality owed honest?** Yes. The row says "the criticality of $W_{\mathbb{CP}^m}$, which [L70CPm.lean] takes as the hypothesis `IsCritical`", listed under **Owed**, and the file's docstring (lines 23-24) says the same and attributes it to the symmetric-space fact, which is the record's Lemma L46 ("at a locally symmetric Einstein space, the Weyl part is critical"). bounds.md's "machine-checked at every critical value" presupposes criticality in its own wording. **Candidate withdrawn**: I considered reporting that bounds.md does not say criticality is a hypothesis. The phrase "at every critical value" is the conditional, criticality is true, and the row carries the debt, so no reader is misled about what is proved.
+
+## E. Axioms
+
+`lake build HamiltonsCubic.Results.L70CPm` completes (linter notes only). `#print axioms` from a scratch file in the session scratchpad:
+
+- `WCPm_not_saturated`: `propext`, `Classical.choice`, `Quot.sound`
+- `WCPm_isWeylOp`: the same three
+- `top_card_le_one`: the same three
+- `eigen_mul_J`: the same three
+
+No `sorry` and no `native_decide` in the file.
+
+## F. Record text
+
+- bounds.md line 224: the parenthesis is faithful. "Top eigenvalue $2m+1-\tfrac3{2m-1}$" is `WCPm_J` ($c_A+1+2m$), "simple" is `top_card_le_one`, "eigenvector the Kähler form" is $\omega=J$. No em dash, no semicolon.
+- lean/INDEX.md line 614: the Owed clause and the PROVED sentence are faithful, and the new semicolons separate list items that carry commas. The row still ends "standard three axioms **statement: typed** |" with no full stop before the bold tag, which predates this commit.
+- **Gap, the pairing in the displayed formula.** [lean/INDEX.md:614](../lean/INDEX.md) and [L70CPm.lean:106](../lean/HamiltonsCubic/Results/L70CPm.lean) write $X\mapsto-\tfrac3{2m-1}X+JXJ^{\mathsf T}+\langle J,X\rangle J$, and the definition uses `frob Jm X` $=\sum J_{ij}X_{ij}$. [L70CPm.lean:13](../lean/HamiltonsCubic/Results/L70CPm.lean) states $\langle J,J\rangle=m$, which is `inner2`, half of `frob` (`frob_J_J` $=2m$). **Concretely**: with $\langle\cdot,\cdot\rangle=$ `inner2`, the last term contributes $+J_{ij}J_{kl}$ to $R_4$ instead of $+2J_{ij}J_{kl}$, and the Bianchi sum at $(i,j,k,l)=(0,1,2,3)$ is $-J_{01}J_{23}=-1\ne0$, so the displayed operator is not a Weyl tensor. **Argued the other way**: line 14 of the file writes the term explicitly as $(\sum J_{ij}X_{ij})J$, the Lean definition is correct, and a reader of the Lean is not misled. The row, though, gives only the $\langle J,X\rangle$ form and is the text a reader of the index sees, and the same file uses the other meaning of $\langle\cdot,\cdot\rangle$ one line earlier. The commit message repeats both forms. Kept, as a wording gap. The repair is $2\langle J,X\rangle J$ or $(\sum_{ij}J_{ij}X_{ij})J$ at both sites.

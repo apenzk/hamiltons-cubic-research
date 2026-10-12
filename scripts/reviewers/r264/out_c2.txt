@@ -1,0 +1,16 @@
+O(n>=12) blocks: 71   multiplicities: 184   (record says 71 / 184)
+SO(12) entries: 77   multiplicities: 191   (record says 77 / 191)
+all |lambda| even: True    max |lambda|: 12
+max lambda'_1 + lambda'_2: 12  -- so every block is O(n)-admissible at every n >= 12
+
+k = (12-|lambda|)/2 over the 71 blocks:
+    k = 0:  16 blocks   <-- NO PADDING AT ALL, c_0 = iota_lambda
+    k = 1:  22 blocks
+    k = 2:  16 blocks
+    k = 3:  10 blocks
+    k = 4:   5 blocks
+    k = 5:   1 blocks
+    k = 6:   1 blocks
+
+|lambda| = 12 blocks: 16 in the O table (71 blocks), 19 in the SO(12) table (77 entries)
+   findings/brauer-pairing.md and FINDINGS.md say 19; the certificate's own table has 16

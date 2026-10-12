@@ -1,0 +1,59 @@
+# REVIEW r1692: L71 end to end in Lean, and L47's Einstein-½ normalisation typed (d2829e82)
+
+**Verdict: CONFIRMED.** [L71Sat.lean](../lean/HamiltonsCubic/Results/L71Sat.lean) composes the frame-level inclusions of [L71Incl.lean](../lean/HamiltonsCubic/Results/L71Incl.lean) with the Lie-theoretic `L71` of [L71Proof.lean](../lean/HamiltonsCubic/Results/L71Proof.lean) correctly: `sat_of_frame` passes from frame vectors to spans by frame expansion and bilinear span induction, and `L71_saturated` states the record's conclusion ($\mathfrak r=0$, $\mathfrak h=[\mathfrak m,\mathfrak m]$, $[\mathfrak h,\mathfrak h]\subseteq\mathfrak h$) under hypotheses no stronger than the record's. The one added binder, "$\lambda_{\min}$ attained", is the record's implicit reading of $\lambda_{\min}$ as an eigenvalue, and it is needed in the Lean phrasing, where `lmin` is only a lower bound. `cp_normalised` is the exact statement r1691 O1 asked for. The layer holds no kernel-checked saturating instance at $n\ge5$, which is an observation about coverage and leaves the theorem's content intact.
+
+| # | Claim | Verdict |
+|---|---|---|
+| 1a | `sat_of_frame`: $\mathfrak m,\mathfrak h,\mathfrak r$ are the spans of the frame vectors labelled $\lambda_{\min}$, $\lambda_{\max}$ and neither, the record's $E_{\min}$, $E_{\max}$ and the rest | **CONFIRMED** (observation O1) |
+| 1b | Its three frame-level hypotheses are exactly the conclusions of `L71_mm`, `L71_mh`, `L71_mr` | **CONFIRMED** |
+| 1c | Its frame hypotheses (skew, unit, complete) are what `eigenFrame_exists` supplies | **CONFIRMED** |
+| 2a | `L71_saturated` states the record's conclusion under the record's hypotheses (critical, Weyl, saturation, $\lambda_{\min}<0<\lambda_{\max}$ bracketing the spectrum) | **CONFIRMED** (observation O2) |
+| 2b | "$\lambda_{\min}$ attained" is implicit in the record and needed in the Lean | **CONFIRMED** |
+| 3 | Non-vacuity: a saturating critical point at $n\ge5$ exists | **CONFIRMED ON THE RECORD, NO LEAN WITNESS** (observation O3) |
+| 4 | `cp_normalised`: $W_{\mathbb{CP}^m}/(4(m+1))$ is critical with multiplier $\tfrac12$ and has squared norm `cpNormSq m` | **CONFIRMED** |
+| 5 | Axioms: standard three only | **CONFIRMED** (screen by the repo's audit script) |
+| 6 | The [lean/INDEX.md](../lean/INDEX.md) L71 and L47 rows state what the Lean proves | **CONFIRMED** |
+
+One line: a saturating critical linear Weyl operator at $n\ge5$ now has, kernel-checked and end to end, $\mathfrak r=0$ and $\mathfrak h=[\mathfrak m,\mathfrak m]$ closed under the bracket, with only Cartan's classification left between it and the balanced sphere product.
+
+## Attack line 1: `sat_of_frame`
+
+- **The three subspaces.** `m := spanOf v (ev · = lmin)`, `h := spanOf v (ev · = lmax)`, `r := spanOf v (ev · ≠ lmin ∧ ev · ≠ lmax)`. With `v` an orthonormal eigenframe of $W$ labelled by its eigenvalues `ev`, these are $E_{\min}$, $E_{\max}$ and the sum of the remaining eigenspaces (kernel included), which is the record's "$\mathfrak r$ for everything else" in [bounds.md](../findings/bounds.md), Lemma L71. `sat_of_frame` itself asks only for a complete orthonormal frame and labels, so it is more general than the eigenframe case.
+- **The frame-level hypotheses match L71Incl verbatim.** `h_mm`, `h_mh`, `h_mr` have the shapes of `L71_mm`, `L71_mh`, `L71_mr`, with `inner2 (br (v γ) (v a)) (v b) ≠ 0` in place of `cst v γ a b ≠ 0`. The discharge in `L71_saturated` passes the L71Incl terms by `exact`, so the two forms agree definitionally. The sign convention of `cst` is irrelevant to a `≠ 0` test in any case.
+- **The passage to spans is sound.** For generators, `hexp` expands $[v_\gamma,v_a]$ in the frame (`hcomp` applied to `br_skew`), and `hsum` puts a frame sum whose nonzero coefficients carry a label into that label's span. `br_mem_of_gen` lifts a generator-level membership to spans by nested `span_induction` on both arguments, with the bilinearity lemmas `br_add_l/r`, `br_smul_l/r`, `br_zero_l/r`. For $[\mathfrak m,\mathfrak r]=0$ the target submodule is `⊥`. Spanning (`hspan`) sorts each frame term into one of the three spans by the two case splits, and $\mathfrak m\ne0$ (`hm0`) comes from a unit frame vector with label `lmin`.
+- **Frame hypotheses against `eigenFrame_exists`.** The `EigenFrame` structure ([L41Statement.lean](../lean/HamiltonsCubic/Results/L41Statement.lean), line 97) carries `skew`, `orthonormal : inner2 (v γ) (v δ) = if γ = δ then 1 else 0` and `complete : ∀ X, IsSkew X → X = ∑ γ, inner2 X (v γ) • v γ`. `hsk := hf.skew`, `hon` is `hf.orthonormal k k` simplified, `hcomp := hf.complete`. Exact match.
+- **O1.** "$\mathfrak m=E_{\min}$" is by construction (spans of eigenframe vectors of one eigenvalue are that eigenspace, by the spectral theorem), and the Lean states the spans rather than the eigenspaces. The identification is standard and the record states the result in the same terms. Typing it would need the eigen field of `EigenFrame`, which `sat_of_frame` does not use.
+
+## Attack line 2: `L71_saturated`
+
+- **Hypotheses against the record.** Record: $W$ a critical point of $\mathcal W_n$ at unit norm, $n\ge5$, $\lambda_{\min}<0<\lambda_{\max}$, saturating L70, i.e. $\theta=\lambda_{\min}+(n-2)\lambda_{\max}$ (the record's own phrasing of saturation in the L117 block). Lean: `IsWeylOp W`, `IsCritical W θ`, `5 ≤ n`, `lmin < 0 < lmax`, `lmin ≤ ev j ≤ lmax` for all `j`, `θ = lmin + (n-2) lmax`, and `∃ γ, ev γ = lmin`. Unit norm is dropped, which is harmless: $\theta$ and the eigenvalues are homogeneous of degree one in $W$, so saturation and the conclusion are scale-invariant.
+- **Conclusion against the record.** `r = ⊥`, `h = brackets m`, `[h, h] ⊆ h`. $[\mathfrak m,\mathfrak h]\subseteq\mathfrak m$ and $[\mathfrak m,\mathfrak m]\subseteq\mathfrak h$ are established inside the proof. **O2.** Three consequences the record draws are one step from the typed statement and are not themselves typed: that $W$ has exactly two eigenvalues (from `r = ⊥` and unit frame vectors, every label is `lmin` or `lmax`), that $\mathfrak{so}(n)=\mathfrak h\oplus\mathfrak m$ is direct (orthogonality of the frame), and the packaged "symmetric pair" predicate. The row's "so $(\mathfrak{so}(n),\mathfrak h)$ is a symmetric pair" reads the three typed facts plus the internal ones, which is accurate as a reading. The balanced sphere product is filed `out` (Cartan), correctly.
+- **"$\lambda_{\min}$ attained" is implicit in the record.** The record's $\lambda_{\min}$ is the minimum eigenvalue of a symmetric operator on a nonempty finite-dimensional space, so it is attained. The Lean takes `lmin` as a lower bound only, and in that phrasing the binder is needed. Without it, take any critical $W$ at $n\ge5$ with positive L70 slack $s=\mu_{\min}+(n-2)\mu_{\max}-\theta>0$ (the record's $\mathbb{CP}^3$, where L70 is slack, or `WCPm_critical_not_saturated` at $m\ge3$ in [L70CPmCrit.lean](../lean/HamiltonsCubic/Results/L70CPmCrit.lean)), set `lmax` $=\mu_{\max}$ and `lmin` $=\mu_{\min}-s$. Every other hypothesis holds (`lmin` is negative because $\mu_{\min}<0$), `m = ⊥`, and `r = ⊥` would force every eigenvalue to equal $\mu_{\max}$, contradicting tracelessness. So `hex` is load-bearing, and it is exactly the record's implicit assumption.
+- **`lmax` need not be attained, and that is sound.** If `lmin` is attained and `lmax` strictly exceeds $\mu_{\max}$, L70's bound gives $\theta\le\lambda_{\min}+(n-2)\mu_{\max}<$ `lmin + (n-2) lmax`, so `hsat` fails and the hypotheses are empty there. The looser `hhi` makes the Lean statement stronger than the record's, never weaker.
+
+## Attack line 3: non-vacuity
+
+- **On the record, the hypotheses are met.** The balanced sphere products $S^{n/2}\times S^{n/2}$ at even $n\ge6$ saturate L70: the relaxation paragraph above L71 in [bounds.md](../findings/bounds.md) states that tracelessness makes $\lambda_{\min}+(n-2)\lambda_{\max}=\theta_0(n)$ identically at $r=n(n-2)/4$, and L117's equality clause puts $\theta=\theta_0(n)$ there. $n=5$ and every odd $n$ have no saturating point (L71's last clause, `L117_no_eq_odd`).
+- **O3, in the Lean layer there is no kernel-checked saturating instance at $n\ge5$.** What I searched: every file using `Mpair_isHermitian` (the eigenvalue accessor `L71_saturated` quantifies over), 22 files, then every file mentioning `sphereWeight` together with `eigenvalues`, and every occurrence of the saturation expression `- 2) * lmax`. The sphere product is proved critical (`sphere_isCritical` in [L126DF.lean](../lean/HamiltonsCubic/Results/L126DF.lean)) and Weyl (`diagOp_isWeyl`), but no file computes its `Mpair_isHermitian` eigenvalues, so `hsat`, `hlo`, `hhi` and `hex` are nowhere discharged for it. The one Lean saturation check is `W_{ℂP²}` at $n=4$ ([L70b.lean](../lean/HamiltonsCubic/Results/L70b.lean)), outside the theorem's range, and `WCPm_critical_not_saturated` shows $\mathbb{CP}^m$ is slack at $m\ge3$. The theorem is therefore non-vacuous by the record, with no Lean witness. A witness would need the sphere product's spectrum on $\Lambda^2$ through `Mpair_isHermitian`, a bounded piece of Lean work and a natural follow-up if the row is ever to claim instantiation.
+
+## Attack line 4: `cp_normalised`
+
+- **Criticality.** With $c=1/(4(m+1))$, `Qop_smul` gives $Q(cW)=c^2Q(W)$ and `WCPm_critical` gives $Q(W)=(2m+2)W$, so $Q(cW)=c(2m+2)\cdot cW=\tfrac12\,cW$. The proof does this basis-pair by basis-pair, the form `IsCritical` takes, with the same `IsCritical` that `WCPm_critical` uses.
+- **Norm.** `normSq` is quadratic (`hsc`), and `normSq_WCPm` gives $12m(m^2-1)/(2m-1)$. Then $c^2\cdot 12m(m-1)(m+1)/(2m-1)=3m(m-1)/(4(m+1)(2m-1))=$ `cpNormSq m`, checked by hand. `cpNormSq` takes a real argument and receives the cast of `m`, as `cp_theta` does.
+- **The statement is the right one.** "Einstein constant $\tfrac12$" is L46's $Q(W)=\tfrac12W$, and "squared norm" is the layer's `normSq`, in which `theta` is defined, as r1691 established. The hypothesis `2 ≤ m` is stronger than the `1 ≤ m` the proof uses. At $m=1$ both sides vanish, so this only narrows the range to the lemma's own.
+
+## Attack line 5: axioms
+
+- `python3 scripts/misc/axiom_audit.py --only L71Sat.lean`, run in the background: "11/11 clean -- resting on the standard three alone". `--only L47CPm.lean`: "3/3 clean". A screen, covering `sat_of_frame`, `L71_saturated`, `br_mem_of_gen` and `cp_normalised`.
+
+## The rows
+
+- **L71.** The new text says `sat_of_frame` works for any complete orthonormal frame at $n\ge5$, which matches its binders, and that `L71_saturated` needs $\lambda_{\min}<0<\lambda_{\max}$ bracketing the spectrum and $\lambda_{\min}$ attained, which names `hex` openly. The Cartan step is filed `out`. The "(by reading)" qualifier on the frame-to-subspace passage is gone, correctly, since that passage is now typed.
+- **L47.** The appended clause states `cp_normalised` as proved, matching the theorem.
+
+## What would break the claims, and where I looked
+
+- **A mismatch between L71Incl's `cst` and `sat_of_frame`'s `inner2 (br …)`**: the `exact` discharges in `L71_saturated` compile, so the two agree, and the sign of `cst` could not matter to a `≠ 0` hypothesis.
+- **A label set that fails to exhaust the frame**, which would break `hspan`: the three predicates are `= lmin`, `= lmax` and their joint negation, a partition by excluded middle.
+- **A satisfiable instance of the hypotheses with the conclusion false.** The natural candidate is the Lean statement without `hex`, and the $\mathbb{CP}^3$ construction above shows it would be false. With `hex` present, L70's bound closes the only other gap (`lmax` unattained). No other instance was sought beyond this analysis.
+- **A saturating witness at $n\ge5$**, sought in the layer as described under attack line 3, and absent.

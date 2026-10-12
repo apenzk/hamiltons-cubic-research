@@ -1,0 +1,5 @@
+# Tkachev 2021, The universality of one half in commutative nonassociative algebras with identities
+
+- **Source**: Vladimir G. Tkachev, *The universality of one half in commutative nonassociative algebras with identities*, J. Algebra (2021), [arXiv:1808.03808](https://arxiv.org/abs/1808.03808), 29 pages. Retrieved 2026-09-27 as [tkachev-1808.03808.pdf](https://arxiv.org/abs/1808.03808), extracted to [tkachev-1808.03808.txt](https://arxiv.org/abs/1808.03808).
+- **Consulted for**: [L270](../../findings/second-order.md), whether the eigenvalue of $L_{c_1}$ on the plane of two idempotents $c_1,c_2$ of a metrised algebra, and the resulting comparison of their norms, is on record.
+- **Verdict**: **the paper holds the Peirce number $\tfrac12$ for every idempotent of an algebra with a nontrivial one-variable identity (Theorem 1.1) and the fusion laws (Corollary 6.7); it carries no statement on the plane of two idempotents.** Section 10 recalls metrised algebras and Hsiang algebras. The two-idempotent comparison of L270 was found in none of the filed Tkachev and Krasnov–Tkachev sources either.

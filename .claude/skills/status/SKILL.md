@@ -1,0 +1,33 @@
+---
+name: status
+description: Answer a request for where the programme stands, in eight fixed parts, reading the position out of STATUS.md and assembling only what that file cannot hold. Use when the user types "status", asks any variant of where things are, or invokes /status.
+---
+
+# Answering `status`
+
+When the user types `status` (or asks any variant of where things are) open with a header line reading `STATUS <date> <time>`, taken from the clock at the moment of answering rather than from memory, then give exactly these seven parts, in this order, and nothing else. The reply goes at the **top of a turn that then continues working**; it is never the whole turn.
+
+**PASTED MEANS THE TABLE, AS A TABLE.** *Every part below that says `pasted` is copied out of [STATUS.md](../../../STATUS.md) with its rows intact. Flattening one into a sentence of comma-separated figures is the failure this line exists to stop: the table is the thing that can be scanned, and a prose rendering of it is strictly worse than the table and no shorter.*
+
+**THE REPLY IS [STATUS.md](../../../STATUS.md) PLUS WHAT THAT FILE CANNOT HOLD.** *Parts 1, 2 and 7 are read out of it. Parts 3 to 6 are live and are the only ones assembled fresh.* **RUN `python3 scripts/misc/status_report.py` FIRST TO REGENERATE, THEN `python3 scripts/misc/status_report.py --paste` AND QUOTE ITS OUTPUT FOR PARTS 1, 2, 7 AND 8, REFLOWING NOTHING. Where the file's judgement half is stale, fix the FILE and re-run the paste**, since a reply that corrects it silently leaves the next reader with the stale version. **THE PASTE IS A COMMAND'S OUTPUT BECAUSE THE RULE ALONE FAILED TWICE IN ONE SESSION**: the generated block was quoted correctly every time while the position, being hand-written prose, was paraphrased from memory and its chain collapsed onto one line. *A chat reply is the one artefact here no hook can inspect, so the only available gate is to make the fixed parts something a command printed.*
+
+1. **The plan, as the GENERATED GRADE TABLE, pasted whole** from [STATUS.md](../../../STATUS.md): one row per grade, one column per section, plus its `ungraded` row and the line naming section 1's own ceiling.
+
+**WHAT THE REPLY ADDS TO THE TABLE IS THE READING, WHICH IS THE PART NO SCRIPT CAN GENERATE.** *A value of zero is not a low ranking, it is an item the rubric says CANNOT BE WORKED*, so a section 1 with twenty live items and six above zero is a different programme from one where those two numbers agree, and the table shows the gap while saying nothing about it. **AND WHERE EVERY ZEROED ITEM IS ZEROED BY THE SAME FACTOR, NAME THE FACTOR AND THE COUNT**, *eight items zeroed on `attackable` is one obstruction wearing eight numbers, and that is the finding rather than the ranking.* **A LARGE `ungraded` CELL IS ALSO A FINDING**, since an item with no grade was never ranked against anything and is sitting on the list by inertia.
+
+2. **The position, and the share of the work, PASTED FROM [STATUS.md](../../../STATUS.md) VIA `--paste`, NEVER RETYPED.** *That file states how both are written, so nothing about their shape is repeated here.* **Where either is stale, fix the FILE and then paste it.** **THE CHAIN IS ONE NODE PER LINE AND IS NEVER RUN TOGETHER INTO A SENTENCE OF ARROWS**, which is STATUS.md's own rule and carries its own reason: a chain run together lets a missing link pass unread. *Shortening it is not a shorter chain, it is a different object.*
+
+3. **The current item, named with its section and its grade.** Which item the work is on, which of the three sections it sits in (**advance**, **build** or **disprove**) and, when it is a section 1 item, its grade written out as `closes × attackable × margin × analytic = value`, all FOUR factors. A section 2 or 3 item carries the reason it was taken instead of the graded top: a missing object it supplies, or a test cheaper than the work it saves. *This line is what makes a status answerable rather than atmospheric, it says what is being worked on and what that work is worth, in the same breath.*
+
+4. Stage, with a percentage. Name the cycle step by number and title, and how far through that step the work is, as a percentage. Estimate it from what the step still owes, not from elapsed time: at step 1, the fraction of the task's sub-results that are settled; at step 2, reviewers finished over reviewers spawned; at step 3 and 4, files written over files the cycle will touch. One line.
+
+5. What is running. A table with a row per live process, and nothing for a quiet loop except a line saying so. Each row carries what it is, how long it has been going, its CPU percentage and its resident memory, and how far along, for a subagent, the phase it is in **out of the phase plan it logged on its first line**, as `step X of Y`, plus a percentage. Read this from the registry, the process table and the logs rather than from memory: `job.sh list` for registered jobs, a sweep of `ps` for unregistered shells and wait-loops, and the tail of each `agent_logs/*.log` for agents. **Never report a quiet machine on the registry alone**, it covers only what was launched through it, and the processes that outlive everything are the ad-hoc watchers it never saw. A process that cannot be located is reported as unknown rather than assumed alive. **Close the table with the machine's totals, CPU against the core count and memory against the machine's**, since a saturated machine (or one that has started swapping) explains a stalled cycle when no single row does.
+
+6. What this cycle has found. The results so far, in a table or a short list, what was derived, what was refuted, what is still a conjecture with its evidence. Scope it to the **current cycle only**; earlier cycles are in the record and repeating them buries what is new. If the cycle has produced nothing yet, say that plainly.
+
+
+7. **The Lean layer, PASTED FROM [STATUS.md](../../../STATUS.md)'s generated block.** *The gaps are named separately because they fail differently: a result with no Lean proof has no `sorry` to grep and no declaration to check, so only the coverage row counts it, while a `sorry` is visible to `#print axioms` and usually carries its gap in writing.* **Lead the section with the coverage row**, since the `sorry` count alone reads as a nearly finished layer.
+
+8. **The skill-proposal score bands, PASTED FROM [STATUS.md](../../../STATUS.md)'s generated block**, with the count at or above the bar and how many of those are held. *A rule waiting to act is part of the position.*
+
+Keep the whole reply short: the user is asking to orient, not to read the record. Never pad it with what is planned next, that belongs in the work that follows the reply.

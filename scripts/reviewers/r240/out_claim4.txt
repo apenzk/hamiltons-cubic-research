@@ -1,0 +1,47 @@
+exact integer Weyl tensor on R^4: antisym, pair-sym, Bianchi, trace-free  OK
+
+the pairing is contracted TWICE and compared against n^L * q_D(W):
+  - float64 with numpy's optimal path at n = [4, 5, 6, 7, 8, 9, 10]
+  - exact integers with a greedy pairwise path at n = [4, 5, 6]
+
+pairing                             L <= f/2 fitted deg   n^L q_D at every n  exact anchor
+------------------------------------------------------------------------------------------
+f=2  A vs A            (a=0,0)      0      1          0                 True          True   [0s]
+f=2  A vs g*I3         (a=0,1)      0      1          0                 True          True   [0s]
+f=2  g*I3 vs g*I3      (a=1,1)      1      1          1                 True          True   [0s]
+f=4  gg*I3 vs gg*I3    (a=2,2)      2      2          2                 True          True   [0s]
+f=4  gg*I3 vs rotated  (a=2,2)      1      2          1                 True          True   [0s]
+f=4  A+g vs A+g        (a=1,1)      1      2          1                 True          True   [0s]
+f=4  A+g vs g+A        (a=1,1)      0      2          0                 True          True   [0s]
+f=4  A+g vs gg*I3      (a=1,2)      1      2          1                 True          True   [0s]
+f=6  ggg*I3 vs ggg*I3  (a=3,3)      3      3          3                 True          True   [0s]
+f=6  ggg*I3 vs rotated (a=3,3)      1      3          1                 True          True   [0s]
+f=8  g^4*I3 vs g^4*I3  (a=4,4)      4      4          4                 True          True   [0s]
+f=8  g^4*I3 vs rotated (a=4,4)      1      4          1                 True          True   [0s]
+
+the bound is attained at every f tested: {2: 1, 4: 2, 6: 3, 8: 4}
+L <= min(a_P, a_Q) <= floor(f/2) holds in every case, with equality when
+the two bare-metric matchings coincide.
+
+sharpness, symbolically: P = Q = delta^{(x)f/2} * I3 gives n^{f/2} * I3^2.
+    f =  2:  L = 1 = floor(f/2)
+    f =  4:  L = 2 = floor(f/2)
+    f =  6:  L = 3 = floor(f/2)
+    f =  8:  L = 4 = floor(f/2)
+    f = 10:  L = 5 = floor(f/2)
+    f = 12:  L = 6 = floor(f/2)
+
+THE CEILING FOR THE CERTIFICATE.  A block of Sym^3(W_12) is labelled by a
+partition lam of the 77 SO(12) constituents (r177's decomp_D6.json); a diagram
+covariant in that block has f = |lam| free indices, and |lam| <= 12 because
+Sym^3(W_n) sits inside the 12-fold tensor power.  The sizes present are
+
+    |lam| :   0   2   4   6   8  10  12
+    count :   1   1   5  10  17  24  19
+
+all EVEN, so the per-block ceiling is exactly n^{|lam|/2}, and the ceiling over
+the whole pairing matrix is
+
+    deg_n <= 6,   attained only in the 19 blocks with |lam| = 12.
+
+r238's witness is the f = 2 row, L = 1 -- maximal for its own block.

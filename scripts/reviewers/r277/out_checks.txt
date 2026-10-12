@@ -1,0 +1,36 @@
+== theta_0(n) from the two-block product, against sqrt(2(n-1)(n-2))/n ==
+  n= 4  balanced 0.866025404   theta_0 0.866025404   delta 1.1e-16
+  n= 6  balanced 1.054092553   theta_0 1.054092553   delta 0.0e+00
+  n= 8  balanced 1.145643924   theta_0 1.145643924   delta 0.0e+00
+  n=10  balanced 1.200000000   theta_0 1.200000000   delta 0.0e+00
+  n=12  balanced 1.236033081   theta_0 1.236033081   delta 2.2e-16
+  n=14  balanced 1.261680124   theta_0 1.261680124   delta 2.2e-16
+  n=16  balanced 1.280868846   theta_0 1.280868846   delta 0.0e+00
+
+== theta_0 is strictly increasing in n, and < sqrt(2) ==
+  checked n=4..39: strictly increasing, all < sqrt(2) = 1.414213562
+  theta_0(11)=1.219673 < sqrt(3/2)=1.224745 < theta_0(12)=1.236033
+
+== the pieces of (S^4)^3 -- record says S^4 x S^8 (+) S^4 x S^4 ==
+  S^4 x S^8 : theta 1.201561484  ambient n = 12   (record 1.201561484)
+  S^4 x S^4 : theta 1.145643924  ambient n = 8   (record 1.145644)
+  harmonic recombination -> 0.829156198   (record theta((S^4)^3) = 0.829156)
+  ** the first piece lives at n_i = 12 = n. 'n_i < n' FAILS. **
+
+== the n=4 base case: max P on Weyl_4 ==
+  max det = 0.136082763,  9*max det = 1.224744871  vs sqrt(3/2) = 1.224744871
+  balanced split t=1/sqrt(2): P = 0.866025404  vs theta_0(4) = 0.866025404
+  ** max P on Weyl_4 = sqrt(3/2) > theta_0(4) = sqrt(3)/2, so '|theta_i| <= theta_0(n_i)' is FALSE at n_i = 4 **
+
+== the two forms of the harmonic-square law, k = 2 ==
+  |theta| < min|theta_i|   and   |theta| <= max|theta_i|/sqrt(k)
+   theta_i=(1.0, 1.0): theta=0.707107  min=1.000000  max/sqrt2=0.707107   -> the binding one is max/sqrt(2)
+   theta_i=(1.0, 1.4): theta=0.813733  min=1.000000  max/sqrt2=0.989949   -> the binding one is max/sqrt(2)
+   theta_i=(1.41, 1.41): theta=0.997021  min=1.410000  max/sqrt2=0.997021   -> the binding one is max/sqrt(2)
+   theta_i=(1.0, 100.0): theta=0.999950  min=1.000000  max/sqrt2=70.710678   -> the binding one is min
+  ** with |theta_i| < sqrt(2) the max/sqrt(2) form gives |theta| < 1 < theta_0(n) for every n >= 6,
+     unconditionally -- so the file's 'only where min|theta_i| <= theta_0(n)' caveat is vacuous. **
+
+== post 22's table as an independent witness of the law at k = 2 and k = 3 ==
+  CP^2 + CP^2      : harmonic(1.2247,1.2247) = 0.866025   (post 22: 0.8660)
+  CP^2 x3          : harmonic of three            = 0.707107   (post 22: 0.7071)

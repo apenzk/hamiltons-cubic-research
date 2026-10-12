@@ -1,0 +1,68 @@
+# Review r1535: L95's maximum over frames after r615, closing L95 (L95.lean, commit b062f1b6)
+
+*Gate 2, one reviewer, Lean layer. Subject: the new declarations of [L95.lean](../lean/HamiltonsCubic/Results/L95.lean) (`conjJ`, `rotate_T`, `rotate_G`, `rotate_Wcp`, `IsCx.conj`, `IsCx.sum4_le`, `frobK_gen`, `frobK_le`, `kappaSq_CP`), the rewritten [Lemma L95](../findings/bispectral.md) block, the L94/L95, L95, L254 and L161 rows of [lean/INDEX.md](../lean/INDEX.md), row 95 of [INDEX-results.md](../findings/INDEX-results.md), and the docstrings of [L161Link.lean](../lean/HamiltonsCubic/Results/L161Link.lean), checked against [REVIEW_r615.md](REVIEW_r615.md) §2.2, [REVIEW_r616.md](REVIEW_r616.md), [L94Statement.lean](../lean/HamiltonsCubic/Results/L94Statement.lean), and the gaps of [r1533](REVIEW_r1533.md) and [r1534](REVIEW_r1534.md). Analysis only: the one computation run was the build and the axiom audit.*
+
+**Standfirst.** The upper half is r615 §2.2 formalised faithfully. `rotate_Wcp` moves the frame onto the complex structure with the index order `rotate` uses, `IsCx.conj` needs only orthonormal rows because `cols_of_rows` supplies the columns, `IsCx.sum4_le` is the entrywise bound $J_{ab}^4\le J_{ab}^2$ from unit rows, and `frobK_le` with `kappaSq_le_of_forall` and the standard-frame value closes $\kappa^2(\mathbb{CP}^m)=\tfrac3{m+1}\lVert M\rVert_F^2$ as an equality. It builds, 36/36 on the standard three, no `sorry`. L95 moving to proved is right, and every repair r1533 and r1534 asked for is made. Four wording gaps remain: L95.lean's header still quotes the bispectral text this commit deleted, the bispectral block does not label r615's equality case as untyped beside "Kernel-checked", the L94/L95 row calls the cross-check kernel-checked when only its two premises are, and one residual $\operatorname{tr}(L_e^2)$ survives in L161Link's module docstring.
+
+| item | claim | verdict |
+| --- | --- | --- |
+| A-1 | `kappaSq_CP`: $\kappa^2(W_{\mathbb{CP}^m})=\tfrac3{m+1}\lVert M\rVert_F^2$ is L95 in L94Statement's normalisation, scaled by `normM2` | **CONFIRMED** |
+| A-2 | `rotate_Wcp`: `conjJ R J` $=RJR^{\mathsf T}$ with `rotate`'s index order | **CONFIRMED** |
+| A-3 | `IsCx.conj` under `IsFrame` (orthonormal rows) alone | **CONFIRMED** |
+| A-4 | `IsCx.sum4_le`: $\sum A^4\le\sum A^2=n$ | **CONFIRMED** |
+| A-5 | `frobK_le` and `kappaSq_CP` close both halves, the $m=1$ edge included | **CONFIRMED** ($m=1$ is vacuous, $W=0$, and harmless) |
+| A-6 | L95.lean's module docstring | **CONFIRMED WITH GAP** (lines 8–9 quote the bispectral text this commit replaced) |
+| A-7 | the bispectral L95 block is a replacement quoting r615 faithfully, the equality case labelled | **CONFIRMED WITH GAP** (a replacement, faithful to r615, but the equality case sits unlabelled beside "Kernel-checked") |
+| A-8 | the L94/L95 row: "the cross-check is kernel-checked in both halves" | **CONFIRMED WITH GAP** (both premises are, the cross-check's conclusion is not a theorem) |
+| A-9 | L95 moves to proved | **CONFIRMED** |
+| B | build, audit, no `sorry` | **CONFIRMED** (8727 jobs, 36/36 and 2/2 on the standard three, no `sorry`) |
+| C-1533-A5 | the finding reversed | **CONFIRMED** |
+| C-1533-CA7 | the L254 row's "The first two are computations" | **CONFIRMED** |
+| C-1533-D | the three splices in the L94/L95 and L95 rows | **CONFIRMED** |
+| C-1534-A4 | L161Link's docstrings name `trLe2` and its range | **CONFIRMED WITH GAP** (lines 14–16 and 29–30 repaired, line 9 keeps the old wording) |
+| C-1534-A5 | the L161 row | **CONFIRMED** |
+| C-95 | INDEX-results row 95 | **CONFIRMED** (one pre-existing stray `**`, noted) |
+| D | style of the new text | **CONFIRMED** |
+
+**Summary: CONFIRMED WITH GAPS. `kappaSq_CP` soundly proves $\kappa^2(\mathbb{CP}^m)=\tfrac3{m+1}\lVert M\rVert_F^2$ at every $m\ge1$ by r615's argument (36/36 on the standard three, no `sorry`), L95 is rightly proved and all r1533 and r1534 repairs land, with four wording gaps: a stale verbatim quote in L95.lean, the untyped equality case unlabelled in bispectral.md, an overstated "kernel-checked" cross-check in the L94/L95 row, and one residual $\operatorname{tr}(L_e^2)$ in L161Link.lean.**
+
+## A. Fidelity
+
+- **A-1. Normalisation** ([L95.lean:464–465](../lean/HamiltonsCubic/Results/L95.lean), [L94Statement.lean:98–99](../lean/HamiltonsCubic/Results/L94Statement.lean)). `kappaSq` is the unnormalised supremum of `frobK` over frames and `normM2` is the operator norm on $\Lambda^2$, one term per ordered pair of $2$-forms. Both are homogeneous of degree $2$ in $W$, so the record's unit-norm $\kappa^2=3/(m+1)$ is exactly the scaled statement $\kappa^2=\tfrac3{m+1}\lVert M\rVert_F^2$, and scaling by `normM2` is the right reading: it holds for `Wcp` at its natural scale without a normalisation hypothesis. The values match r615 and r101: `frobK_std` at $n=2m$ is $36m(m-1)/(2m-1)$ and `full4_std` is $48m(m-1)(m+1)/(2m-1)=4\lVert M\rVert_F^2$, whose ratio is $3/(m+1)$.
+- **A-2. Index order** ([L95.lean:305](../lean/HamiltonsCubic/Results/L95.lean), 330–342, 363–370). `rotate R W a b c d` is $\sum R_{ai}R_{bj}R_{ck}R_{dl}W_{ijkl}$ ([L94Statement.lean:79–80](../lean/HamiltonsCubic/Results/L94Statement.lean)), so the frame vectors are the rows of $R$. `conjJ R J a b` $=\sum R_{ai}R_{bj}J_{ij}=(RJR^{\mathsf T})_{ab}$, the same placement, and r615's $A=F^{\mathsf T}JF$ with the frame in the columns of $F$ is this with $R=F^{\mathsf T}$. `rotate_T` factors each monomial of $T$ into two `conjJ` entries with the right index pairs ($ik/jl$, $il/jk$, $ij/kl$), and `rotate_G` uses `IsFrame` in the form $\sum_iR_{xi}R_{yi}=\delta_{xy}$, which is the row condition the definition states. Correct.
+- **A-3. `IsCx.conj`** ([L95.lean:373–415](../lean/HamiltonsCubic/Results/L95.lean)). Skewness needs nothing of $R$. The square $(RJR^{\mathsf T})^2=RJ(R^{\mathsf T}R)JR^{\mathsf T}$ needs $R^{\mathsf T}R=I$, which `cols_of_rows` ([L94Statement.lean:129](../lean/HamiltonsCubic/Results/L94Statement.lean)) derives from the row condition for a square matrix, used at step2, and then $RR^{\mathsf T}=I$ from `hR a d` at the end. `IsFrame` is enough.
+- **A-4. `IsCx.sum4_le`** ([L95.lean:418–426](../lean/HamiltonsCubic/Results/L95.lean)). Each row of a complex structure is a unit vector (`IsCx.row`), so $0\le J_{ab}^2\le1$ and $J_{ab}^4\le J_{ab}^2$ termwise, summing to $\sum J^4\le\sum J^2=n$ (`IsCx.sumSq`). This is r615's inequality ([REVIEW_r615.md:84](REVIEW_r615.md)).
+- **A-5. Both halves, and $m=1$** ([L95.lean:429–473](../lean/HamiltonsCubic/Results/L95.lean)). `frobK_gen` is r615's $t_F=9Q_4-18m/(2m-1)$ at $n=2m$ (the diagonal $K_{aa}=0$ and the $c^2$ term counts the $n(n-1)$ off-diagonal pairs). `frobK_le` rewrites every frame to the identity frame on `Wcp (conjJ R J)` and bounds by `sum4_le`. `kappaSq_CP` combines `kappaSq_le_of_forall` with `kappaSq_CP_ge`, so it is a genuine equality. At $m=1$, $n=2$ and $3/(n-1)=3$: $T_{0101}=3=3G_{0101}$, so `Wcp (stdJ 1)` $=0$ and both sides are $0$. No division by zero occurs ($n-1=1$), the statement is true and vacuous, and nothing in the record uses it: bispectral.md states $m\ge2$ and the L94/L95 row's cross-check is stated at $m\ge2$.
+- **A-6. L95.lean's header quotes deleted text** ([L95.lean:8–9](../lean/HamiltonsCubic/Results/L95.lean)). **Gap.** The docstring quotes bispectral.md's Lemma L95 verbatim as *"`κ²(ℂℙᵐ) = 3/(m+1)`, to `10⁻¹⁵` at `m = 2,…,7`, with a closed-form derivation supplied by Reviewer 101."* This commit replaced that sentence at [bispectral.md:229](../findings/bispectral.md) with "Closed form, proved: … at every $m\ge2$", so the quote no longer matches its source. The remainder of the header (lines 10–24) is accurate, and line 24 labels the equality case as untyped.
+- **A-7. The bispectral block** ([bispectral.md:229](../findings/bispectral.md)). A replacement, not an annotation: the $10^{-15}$ confirmation is gone and the line states r615's proof. The quotation is faithful to [REVIEW_r615.md:76–86](REVIEW_r615.md), formula for formula, including r615's own shorthand $K^F_{ab}=3A_{ab}^2-\frac3{2m-1}$, which holds for $a\ne b$ (the diagonal is $0$), as r615's line 80 makes explicit and the block's $\lVert K^F\rVert_F^2$ correctly reflects. **Gap.** The italic proof ends "with equality exactly at the $J$-adapted frames", and the next sentences are "The adapted frame gives … **Kernel-checked** as `kappaSq_CP`". Nothing there says the equality case is r615's and untyped, so a reader takes the whole italic argument as kernel-checked. L95.lean:24 and the L95 row ([lean/INDEX.md:424](../lean/INDEX.md)) label it. The block does not.
+- **A-8. "kernel-checked in both halves"** ([lean/INDEX.md:422](../lean/INDEX.md)). **Gap.** The cross-check is the inference: $\kappa^2(\mathbb{CP}^m)=\tfrac3{m+1}\lVert M\rVert_F^2<2\lVert M\rVert_F^2$, so by L94's equality case $W_{\mathbb{CP}^m}$ is coordinate-diagonal in no frame. Both premises are kernel-checked (`kappaSq_eq_iff`, `kappaSq_CP`), but no theorem states the conclusion: `Wcp` occurs only in L95.lean, which never invokes `kappaSq_eq_iff` or `CoordinateDiagonal`, and the step also needs `normM2 (Wcp (stdJ m)) ≠ 0` at $m\ge2$, which follows from `full4_std` and `normM2_quarter` but is typed nowhere. The honest wording is that both lemmas the cross-check uses are kernel-checked, and the two-line combination is not. The row's "the closed form, the maximum over frames" is now true without qualification.
+- **A-9. Proved.** L95's statement is the value of $\kappa^2(\mathbb{CP}^m)$, the maximum over frames, and `kappaSq_CP` types it in both directions at every $m$. The equality case (which frames attain) is extra to the statement and is labelled as untyped in the file and the row, so **proved** is right. `Wcp` as the Fubini–Study Weyl tensor rests on r1533 A-1, and `stdJ` is one complex structure, which is no loss since every orthogonal complex structure is a conjugate of it.
+
+## B. Soundness
+
+- `~/.elan/bin/lake build HamiltonsCubic.Results.L95 HamiltonsCubic.Results.L161Link`: completed, 8727 jobs, with only unused-variable lints in L2Operators.lean.
+- `axiom_audit.py --only L95.lean`: 36/36 clean on the standard three. `--only L161Link`: 2/2 clean.
+- `grep sorry` over L95.lean and L161Link.lean: no hits. No `native_decide`.
+
+## C. Repairs
+
+- **r1533 A-5** ([L95.lean:10](../lean/HamiltonsCubic/Results/L95.lean), [lean/INDEX.md:422](../lean/INDEX.md), 424). Reversed. The header credits the maximality to r615 §2.2, the "basin-hopping at $m\le5$" and "numerical half" clauses are gone, and the maximality is now formalised rather than relabelled. Repaired, with the side effect A-8.
+- **r1533 C-A7** ([lean/INDEX.md:373](../lean/INDEX.md)). The row now reads "The first two are computations, and on the analysis-only footing neither is started here. The third is analysis." Repaired.
+- **r1533 D** ([lean/INDEX.md:422](../lean/INDEX.md), 424). "in some frame; L95 gives" is now "in some frame, and L95 gives", "at $m=2,3,4$; and a single-start ascent" is now two sentences, and the L95 row's "in the frame; `full4_std`:" is gone. The L95 row's remaining semicolons separate the items of a list whose items carry commas (`rotate_Wcp`, …; `IsCx.conj`, …), which is the permitted use. Repaired.
+- **r1534 A-4** ([L161Link.lean:14–16](../lean/HamiltonsCubic/Results/L161Link.lean), 29–30). Both docstrings now say the factor is `trLe2`, L161's closed form, equal to $\operatorname{tr}(L_e^2)$ where L27's decomposition holds, $p,q\ge3$. **Gap (residual).** Line 9 still says "[L161.lean] proves `θ² · tr(L_e²) = (n−1)(2n−1)/4`", the wording A-4 objected to, one paragraph above the repaired lines. Line 18's owed clause softens it, but the sentence itself is unchanged.
+- **r1534 A-5** ([lean/INDEX.md:531](../lean/INDEX.md)). The row now says `kappa_at_operator` gives $\theta(W)^2$ times `trLe2`, with $\theta$ the operator's own and `trLe2` still L161's closed form, equal to $\operatorname{tr}(L_e^2)$ at $p,q\ge3$. This is r1534's suggested wording. Repaired.
+- **INDEX-results row 95** ([INDEX-results.md:109](../findings/INDEX-results.md)). The Lean clause now reads "**Lean: proved**, [both halves]", which matches the file, and the row's Gate 2 text (r615 and r616 supplying the maximality) now agrees with the Lean row. Six cells, closing pipe present. *Pre-existing, noted only*: "at every odd $m$. ** $\kappa^2(\mathbb{CP}^m)$…" carries a stray `**` followed by a space, which renders literally because no bold is open there. It was in the parent commit.
+- STATUS.md and plan-lean.md move L95 out of the coverage debt, 130 to 129 and 101 to 100 partial, consistent with the row.
+
+## D. Style
+
+- No em dashes in any added line. No backticks inside markdown link text. No `\texttt` or other broken LaTeX in the edited rows. Every edited table row closes with a pipe.
+- No hard wraps in the edited markdown: the bispectral block, the four lean/INDEX.md rows, row 95 and the new [2026-09-26-lean-L178-rigidity-plan.md](2026-09-26-lean-L178-rigidity-plan.md) are one line per paragraph or item.
+- No new semicolon splices: those in the L95, L254 and L161 rows separate list items that carry commas.
+
+## Observations, not gaps
+
+- [REVIEW_r615.md:32](REVIEW_r615.md) opens with "global maximality remains numerical" while its §2.2 (line 72) is headed "proved". The standfirst predates §2.2 and is the likely source of the finding r1533 A-5 refuted. It is a review file and is not this commit's to change.
+- The docstrings of `kappaSq_CP` and the L95 row say "at every $m\ge1$". At $m=1$ the identity is $0=0$ (A-5), which is true and harmless.
+
+**Verdict: CONFIRMED WITH GAPS.**

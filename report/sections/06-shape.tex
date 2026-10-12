@@ -1,0 +1,125 @@
+\section{The shape of the problem, and the strategies}\label{sec:shape}
+
+\subsection{The published form, and why it is the same statement}\label{sec:twoforms}
+
+The first step of the argument is a change of form, taken early because everything downstream is easier in the second form. It is a step, not a reframing: what is being proved throughout is Problem~P.
+
+One finding comes with it, and it changes what a solution would mean: \textbf{Problem~P is a known open conjecture}, not an exercise. It is \textbf{Conjecture A}, stated on \textbf{page 7} of Jan Nienhaus, \href{https://arxiv.org/abs/2311.02404}{\emph{Towards Finding the Second Best Einstein Metric in Low Dimensions}}, \href{https://arxiv.org/abs/2311.02404}{\textbf{arXiv:2311.02404}} \cite{nienhaus2023} (on \href{https://arxiv.org/pdf/2311.02404\#page=7}{page 7 of the PDF}), where it is attributed to Wilking and sits inside the B\"ohm--Wilking curvature-operator programme \cite{bw2008}. It appears once more, in a cone-invariance formulation, in Beitz's thesis \cite{beitz2018}. \textbf{No proof exists, here or in the literature.}
+
+The published statement differs from Problem~P in exactly one place, and settling that comes before anything else, because the whole argument is organised around it, and because it costs nothing. Problem~P quantifies over \emph{every} unit Weyl operator, whereas the literature quantifies over critical points only, and names the maximizer and its value explicitly. Quoted verbatim:
+
+\begin{quote}
+\small
+\textbf{Conjecture A.} Let $W\in\Weyl_n$ be a unit Weyl curvature operator that is a \textbf{critical point} of $P(R)=\langle R^2+R^{\#},R\rangle$ among $\Weyl^1_n=\{W\in\Weyl_n\mid\|W\|=1\}$. If either $n\ge12$, or $8\le n\le11$ and $W\notin SO(n).W_{\CP^2}$, we have $P(W)\le P(W^{\mathrm{crit}}_{\mathrm{sym}})$.
+\end{quote}
+
+\begin{Lem}{0}[Problem~P and Conjecture~A are the same statement]
+Problem~P holds if and only if it holds at every critical point, that is, if and only if Conjecture~A holds.
+\end{Lem}
+
+\begin{proof}
+One direction is trivial, the unit sphere's critical points being among its points. For the other, $\Weyl^1_n$ is a compact subset of a finite-dimensional vector space and $P$ is a polynomial, hence continuous, so $\max P$ is \emph{attained} at some $W^{*}$, which is then a constrained maximizer and therefore a critical point, with $\theta=P(W^{*})=\max P$. If the critical-point statement holds it bounds $\theta$ by $\theta_0(n)$, and that is the maximum over all of $\Weyl^1_n$. The equality clause transfers with it.
+\end{proof}
+
+\emph{So the report may speak of either, and does.} Two consequences run through the rest of it. First, the reduction to critical points is \textbf{free}: no hypothesis is being assumed, so the two statements may be used interchangeably and this report works with whichever is convenient. Second, and less obviously, it costs one published route its purpose: the localization theorem of \cite{nienhaus2023} exists precisely to remove the criticality hypothesis outside a tube, and the argument above removes it everywhere at no cost. That is why \S\ref{app:D} is in the appendix.
+
+There is also more available than criticality. A maximizer satisfies \emph{second-order} optimality, $\mathrm{Hess}\,P\preceq2\theta\langle\cdot,\cdot\rangle$, a constraint the attacks in \S\ref{sec:fenceposts} leave unused and which Lemma~24 turns into a sharp eigenvalue bound. The diagram below begins at exactly this point.
+
+\subsection{The reduction that is free}
+
+Lemma~0 has already done the reorganising: the reduction of Conjecture~A to its critical-point case is free, and a maximizer satisfies second-order optimality on top of criticality. What follows is what that buys.
+
+Conjecture~A is then exactly: \emph{every critical value is at most $\theta_0(n)$, with equality only on the balanced orbit}. That statement decomposes into three, of which two are settled:
+
+\begin{center}
+\begin{tabular}{@{}p{0.05\linewidth}p{0.42\linewidth}p{0.47\linewidth}@{}}
+\toprule
+& \textbf{Claim} & \textbf{State} \\
+\midrule
+(G) & Every critical point with $\theta\ge\theta_0(n)$ satisfying second-order optimality is graded & \textbf{Open: the hard thing} \\
+(H) & Every graded critical point with $\theta>\thstar$ is a sphere product & Proved on the subalgebra family at every $n$ (Lemma~23). \textbf{No threshold extends it}: the graded set is strictly wider than the family above every threshold (Lemma~58), so (H) needs a route that does not classify $\hh$, and none is named \\
+ & \emph{and} every graded critical point is nondegenerate & \textbf{Proved across the classification} (Lemmas~27, 28), which is what makes the component argument fire \\
+(I) & Sphere products obey $\theta_{k,l}\le\theta_0(n)$, equality iff balanced & \textbf{Done}: Nienhaus Proposition 2.25 plus convexity, with the equality clause from kernel-equals-orbit rigidity (Lemmas~11, 27) \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\paragraph{The mechanism fires, and the target has narrowed to one inequality.} Nondegeneracy across the graded classification means each graded orbit is open in $\Crit(P)$, which is the half of the component argument the compactness step actually needs. Closedness is a separate statement, reduced in \S\ref{sec:closedness} to a per-$n$ spectral gap and open there. What is owed is a \emph{value bound}, rather than a nondegeneracy proof or a classification. $\{S=0\}$ splits by coordinate-diagonality, the diagonal half is proved at every $n\ge4$ (Lemma~57), and what remains is
+\[
+\sup\big\{\theta:Q(W)=\theta W,\ S=0,\ W\text{ non-diagonal}\big\}\le\thstar ,
+\]
+which closes every even $n\ge12$ by itself. \textbf{That statement is well posed because ``non-diagonal'' has a frame-independent meaning}: Lemma~37 decides diagonality from $\ker\Phi_W$ alone, where every earlier test asked the question in a chosen frame. \textbf{The set was always well defined}: non-diagonality is $O(n)$-invariant by construction, and the frame-minimal off-diagonal mass decides it exactly for every $W$. \textbf{What Lemma~37 supplies is decidability without an $O(n)$ minimisation}: on the linear subspace $\ker\Phi_W$ the distinct-sums condition is the non-vanishing of a polynomial, so it either fails identically there or holds on a dense open set. \S\ref{sec:outside} records how far the bound has got: the sharp case is excluded with no enumeration, openness holds at every exhibited class, the supremum is \emph{attained} at $W_{\CP^2}$ across three independent hunts, and the falsifier is a single object.
+
+\paragraph{And it is diagonality that carries the bound, not $S$.} $(\so(2k),\so(k)+\so(k))$ is a symmetric pair whose two-eigenvalue point is exactly the Weyl tensor of $S^k\times S^k$, at $\theta_0(2k)$, so $\{S=0\}$ contains points running up to $\sqrt2$, above $\thstar$ from $k=6$ on, and what excludes them from the target is that they are diagonal. Any argument for the bound must carry the diagonality hypothesis through to the end. An argument that uses only $S=0$ is bounding a set that reaches $\sqrt2$.
+
+\paragraph{The hypothesis $\theta\ge\theta_0(n)$ in (G) is load-bearing, and dropping it makes the statement false.} $\theta$ is invariant under zero-padding, so the Weyl tensor of $\CP^2$ padded into $\R^n$ sits at $\thstar=1.2247449$ at every $n$ while $\theta_0(n)$ passes through that value at $n=6+2\sqrt7=11.29$. Below the crossover the padded point is therefore the \emph{global maximizer} and it is ungraded, at $\theta_0=1.0540926$, $1.1456439$, $1.2000000$ for $n=6,8,10$. \textbf{So ``a maximizer is graded'' holds only above the crossover, and any proof of (G) consumes it.}
+
+\paragraph{And the second-order margin is nil, not wide.} Differentiating the $O(n)$-equivariance of $Q$ gives $2W\circ(X\cdot W)=\theta\,(X\cdot W)$ for every $X\in\so(n)$, so
+\[
+L_e(X\cdot W)=\tfrac12\,(X\cdot W),
+\]
+and \textbf{the entire orbit direction is an exact $\tfrac12$-eigenspace at every critical point.} The threshold is thus a value every critical point already attains, and padded $W_{\CP^2}$ meets it exactly: ungraded, critical, $\lambda_{\max}=\tfrac12$. \emph{A criterion separating ungraded points from graded ones must therefore read strict excess above $\tfrac12$, and the wide-margin reading (ungraded points at $\lambda_{\max}\ge\tfrac34$) is false.} Two reviewers derive the tangency independently.
+
+\paragraph{Where the difficulty concentrates.} (G) is the whole problem, and the obstruction that retired the attacks before it is structural: \textbf{every tool that reaches symmetry-free critical points runs through invariant quantities, and invariance cannot see ungradedness.} The one body of literature that continues past that point is the extremal-idempotent calculus of Krasnov--Tkachev \cite{kt2018,tkachev2019}, whose objects are products of eigenvectors rather than invariants, which is why Lemma~24 arrives from there.
+
+\subsection{The five strategies}
+
+\begin{center}
+\begin{tabular}{@{}p{0.12\linewidth}p{0.24\linewidth}p{0.60\linewidth}@{}}
+\toprule
+& \textbf{Strategy} & \textbf{State} \\
+\midrule
+\emph{direct} & Direct spectral/moment estimates & \textbf{Closed with a quantified negative} (Lemma~13, fence posts 1, 2, 6, 10) \\
+\emph{landscape} & Census of the landscape & \textbf{Off the path}, \S\ref{app:census}: complete for every named family, but fence post F9 says no census can close the problem \\
+\emph{lifting} & Lift the granted diagonal proof off the diagonal locus & \textbf{Off the path}, \S\ref{app:C}: parked behind the unreachable-population problem, though its obstruction (Lemma~15) constrains every other route \\
+\emph{localization} & Localize around the rival's orbit & \textbf{Off the path}, \S\ref{app:D}: it removes a criticality hypothesis compactness gives for free, and its constant is the conjecture. Lemma~20 stands as an unconditional theorem in its own right \\
+\emph{second-order} & Constrain the unknown maximizer at second order & \textbf{The live route}, running as three attacks on one target (below): family-by-family caps, closed on the symmetric class (Lemmas~47, 48); the $\lambda$-weighted bound (Lemma~41); and Lemma~24 as an exclusion device \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\paragraph{The live route is three attacks on one target, and they are independent of one another.} The residual bound is a single inequality, but nothing about it forces a single argument, and the three on the table fail in different places, so the diagram of \S\ref{sec:diagram} branches at that point rather than continuing as a chain.
+
+\begin{center}
+\begin{tabular}{@{}p{0.05\linewidth}p{0.30\linewidth}p{0.57\linewidth}@{}}
+\toprule
+& \textbf{Attack} & \textbf{Where it stands} \\
+\midrule
+(a) & Cap each non-diagonal family analytically & \textbf{Closed on the symmetric class} (\S\ref{sec:symmetric}): every compact Einstein symmetric space of dimension $n\ge12$ obeys $\theta\le\theta_0(n)$, equality exactly at the balanced product (Lemmas~47, 48). \emph{Owed}: the $S=0$ points that are not symmetric spaces, gradedness being the broader condition \\
+(b) & The $\lambda$-weighted bound & $\theta\le|\lambda_{\min}|(4(n-1)-\Delta-G_0)/4$, sharp at all nine symmetric-space points and exactly $\theta_0(12)$ at the balanced product (Lemma~41). \emph{Blocked on}: an upper bound for $|\lambda_{\min}|$, which three literatures were assessed for and none supplies \\
+(c) & Lemma~24 as an exclusion device & Every catalogued critical point outside a short list is excluded as a global maximizer, on two reviewers' independent implementations. \emph{Owed}: that the exclusion is exhaustive rather than a list \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\paragraph{Three of the five are off the path, and the appendix says why for each.} the direct, landscape, lifting and localization strategies all produced results, and all four are recorded in full: the direct strategy's negative in \S\ref{sec:fenceposts}, the other three in the appendix, each with a statement of why it was pursued and what keeps it out of the endgame. The main line below is (E) together with the graded machinery it rests on.
+
+\subsection{Fallbacks, and the triggers that would switch to them}
+
+The live route (E) is abandoned only at a named trigger: a continuous path of critical points joining a graded point to an ungraded one, or three cycles without movement. Then certified sum-of-squares with criticality multipliers at $n=12,14$, behind a feasibility gate on the invariant-ring dimension. The lifting strategy stays parked.
+
+Each of the routes below cost one attempt rather than several, because its falsifier was written down before the work started: the extremal-idempotent fusion rule tracks primitivity rather than gradedness; the Clifford/Hurwitz--Radon cap, whose source theorem assumes a \emph{unital} algebra while $\Weyl_n$ has no unit, since $L_u=\Id$ would force $\tr(L_u)=\dim\Weyl_n>0$ against $\tr(L_x)\equiv0$; and the graphon route, whose target turned out to be the half of the diagonal problem that is already sharp.
+
+\subsection{Block induction, and how far it has climbed}\label{sec:blockinduction}
+
+The live route now carries a mechanism rather than three separate attacks on one target. Fix $J\subseteq[n]$ and let $\mathcal S_J$ be the fixed space of the sign flips off $J$: the subalgebra on which a Weyl tensor is a family of symmetric $\lvert J\rvert\times\lvert J\rvert$ blocks $M_a$, a curvature block $R_J$ fixed by $\sum_aM_a$, and an outer diagonal. \textbf{The claim at each width is the conjecture restricted to that width}, $\sup P=\Theta_n$ on the unit sphere of $\mathcal S_J$ attained at commuting blocks, and $\mathcal S_{[n]}=\Weyl_n$, so the induction closes the problem if it reaches the top.
+
+\begin{Lem}{226}[$P$ on the block subalgebra, every coupling with coefficient $3$]
+On $\mathcal S_J$,
+\[
+P=P(R_J)+\sum_a\big(\tr M_a^3+3\tr(R_J\Lambda^2M_a)\big)+\sum_{a<b}\big(K_{ab}^3+3K_{ab}\tr(M_aM_b)\big).
+\]
+\end{Lem}
+
+\noindent That every coupling carries the same coefficient is what makes the width a usable induction variable: the couplings do not proliferate as $\lvert J\rvert$ grows, they only multiply.
+
+\paragraph{Widths one and two are settled.} Lemma~57 is $\lvert J\rvert=1$. Lemma~224 is $\lvert J\rvert=2$: on $\mathcal D_n\oplus V_{jk}$ every unit $W$ has $P(W)\le\Theta_n$, with equality exactly at $e^{\varphi\xi}\cdot B$ for a Lemma~57 maximiser $B$ and a rotation of the $(j,k)$-plane. \textbf{A global maximiser lying in any such subalgebra is therefore a sphere product in another frame}, and at $4\le n\le11$ none lies there at all. Two independent audits cover it.
+
+\paragraph{Width three is open, and two strata of it are closed.} Lemma~225 bounds each block's cubic, $\tr\big((M^0)^3\big)\le\frac{k-2}{\sqrt{k(k-1)}}\lvert M^0\rvert^3$ for trace-free symmetric $M^0$, with equality exactly at $M^0=0$ and at a simple positive eigenvalue. Lemma~228 then gives $P\le\Theta_n\lVert W\rVert^3$ on $\mathcal S_J\cap\Weyl_n$ at $\lvert J\rvert=3$ and every $n\ge4$, whenever all outer blocks but one share an eigenframe, or all but two do and those two blocks' sum joins it. \emph{What is not covered is the stratum where no such frame exists}, and that is the open step.
+
+\paragraph{The four-set subalgebras carry the target's own bound.} Independently of the width induction, Lemma~220 gives $\theta\le\thstar$ at every unit critical point of $P$ in $\mathcal D_n\oplus V_Q$ with nonzero $V_Q$ component and $\theta>0$, for a four-set $Q$ and $n\ge5$, \textbf{with equality exactly at padded $W_{\mathbb{CP}^2}$}. So at $n\ge12$ the supremum on that subalgebra is $\Theta_n$ and is attained only on the diagonal. Lemma~221 extends it to pairwise disjoint four-sets, and to two four-sets sharing two indices under a sign condition on $\tau=\langle\nu_1\circ\nu_2,\nu_3\rangle$.
+
+\paragraph{The route abandons itself on a named condition.} If the width step reduces to bounding the block cubics against the couplings \emph{taken separately}, fence post~F67 fences it, and the route stops there rather than being pursued. \emph{That condition was written down before the climb started}, which is why widths one and two cost one attempt each.
+
+% ==============================================================================
+% ==============================================================================

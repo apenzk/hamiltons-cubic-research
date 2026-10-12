@@ -1,0 +1,12 @@
+n=6  dim Weyl = 84  (formula 84)
+   padded CP2  theta=1.224745  lam_max=1.000000  dim E(1)=1  dim E(1/2)=10
+   S^m x S^m   theta=1.054093  lam_max=1.000000  dim E(1)=1  dim E(1/2)=18
+   (0s)
+n=8  dim Weyl = 300  (formula 300)
+   padded CP2  theta=1.224745  lam_max=1.000000  dim E(1)=1  dim E(1/2)=18
+   S^m x S^m   theta=1.145644  lam_max=1.000000  dim E(1)=1  dim E(1/2)=16
+   (0s)
+n=12  dim Weyl = 1638  (formula 1638)
+   padded CP2  theta=1.224745  lam_max=1.000000  dim E(1)=1  dim E(1/2)=34
+   S^m x S^m   theta=1.236033  lam_max=1.000000  dim E(1)=1  dim E(1/2)=36
+   (13s)

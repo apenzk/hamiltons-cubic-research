@@ -1,0 +1,94 @@
+# Reviewer 938: Lemma L219, the reflection split
+
+Log: [agent_logs/review-r938.log](../agent_logs/review-r938.log)
+
+| # | Claim | Verdict | Reason |
+|---|---|---|---|
+| 1 | The automorphism | CONFIRMED | Λ²g conjugation preserves the trace pairing, W², the bracket hence #, and W_n, for every g in O(n) |
+| 2 | The split | CONFIRMED | three of the six terms pair even with odd, and the survivors add by total symmetry |
+| 3 | The critical equations | CONFIRMED | the parity decomposition is unique and ∘ lands in W_n by L209, though Gate 1's "projection needed" contradicts L209 |
+| 4 | Diagonality | CONFIRMED | the σ_{e_k} generate the full sign group, whose fixed space is D_n, though n−1 of the k already suffice since −I acts trivially on Λ² |
+| 5 | The block description | CONFIRMED | σ_{e_n} evaluates χ_S to −1 exactly when n∈S, and the even part's dimension matches the scalar-flat curvature tensors on u^⊥ |
+| 6 | H3 on the plane is an identity | PLAUSIBLE | H3 there reduces to θ‖c‖⁴≥0, automatic at θ>0 but no identity, and global maximality on the plane forces ‖c_u‖²≤¾ |
+| 7 | Scope | PLAUSIBLE | no unstated hypothesis in the lemma, but "n applications" is n−1, symmetric criticality is unstated, and the C3 slice and L123 go uncredited |
+
+**The record should keep L219's statement and proof as CONFIRMED and repair four sentences around them: the Gate 1 claim that the ambient product leaves W_n, "n applications" (n−1 suffice), "H3 on the plane is an identity" (it reads θ‖c‖⁴≥0, and maximality on the plane gives ‖c_u‖²≤¾), and the missing credit to the C3 slice and L123.**
+
+## 1. The automorphism
+
+**Verdict: CONFIRMED.**
+
+- **The action.** $g\in O(n)$ acts on $\Lambda^2\mathbb R^n$ by $\Lambda^2g$, an orthogonal map, and on symmetric operators by $g\cdot W=(\Lambda^2g)\,W\,(\Lambda^2g)^{\mathsf T}$. For $\sigma_u$ with $u=e_n$ this multiplies $e_i\wedge e_j$ by $\varepsilon_i\varepsilon_j$, the determinant never entering.
+- **Isometry.** The pairing $\langle A,B\rangle=\operatorname{tr}(AB)$ is conjugation-invariant under an orthogonal map, so $\langle gA,gB\rangle=\langle A,B\rangle$.
+- **The $W^2$ term.** $(gWg^{\mathsf T})^2=gW^2g^{\mathsf T}$ because $g^{\mathsf T}g=I$ on $\Lambda^2$.
+- **The $W^\#$ term.** The record's $\#$ is built from the structure constants $c_{abc}$ of $\mathfrak{so}(n)=\Lambda^2$ in an orthonormal basis ([conventions.md](../findings/conventions.md) line 77). For every $g\in O(n)$, reflections included, $\mathrm{Ad}_g A=gAg^{\mathsf T}$ satisfies $g[A,B]g^{\mathsf T}=[gAg^{\mathsf T},gBg^{\mathsf T}]$, so $\Lambda^2g$ is an orthogonal Lie algebra automorphism and carries $c_{abc}$ to itself. Hence $(g\cdot W)^\#=g\cdot W^\#$. The only orientation-dependent object on $\Lambda^2$ is the Hodge star, which $Q$ does not use.
+- **$\mathcal W_n$ is invariant.** First Bianchi and the Ricci contraction are $O(n)$-equivariant, so $g\cdot\mathcal W_n=\mathcal W_n$, and the orthogonal complement of $\mathcal W_n$ is invariant too.
+- **So $\circ$ is equivariant.** $Q(gW)=gQ(W)$, and polarisation gives $g(x\circ y)=gx\circ gy$. If the product is read with a Weyl projection, $\pi_{\mathcal W}$ commutes with $g$ by the previous bullet, and the conclusion is the same.
+- **$\sigma_u^2=1$ on $\mathcal W_n$.** $\sigma_u^2=I$ on $\mathbb R^n$ and $g\mapsto g\cdot$ is a homomorphism.
+- **The consequences drawn in the proof's opening.** The $\pm1$ eigenspaces of a self-adjoint involution are orthogonal. $\sigma(b\circ b)=\sigma b\circ\sigma b=b\circ b$, $\sigma(c\circ c)=(-c)\circ(-c)=c\circ c$, $\sigma(b\circ c)=b\circ(-c)=-b\circ c$. Each follows from the automorphism property and bilinearity.
+- **Existence of the parts inside $\mathcal W_n$.** $b=\tfrac12(W+\sigma W)$ and $c=\tfrac12(W-\sigma W)$ lie in $\mathcal W_n$ because $\sigma$ preserves it. This is the one fact the Lean section leaves to prose, and it holds.
+
+## 2. The split
+
+**Verdict: CONFIRMED.**
+
+- **The six terms.** $\langle(b+c)\circ(b+c),b+c\rangle=\langle b\circ b+2\,b\circ c+c\circ c,\ b+c\rangle$ is six pairings: $\langle b\circ b,b\rangle$, $\langle b\circ b,c\rangle$, $2\langle b\circ c,b\rangle$, $2\langle b\circ c,c\rangle$, $\langle c\circ c,b\rangle$, $\langle c\circ c,c\rangle$. The expansion uses bilinearity and commutativity of $\circ$, both immediate from polarisation.
+- **The three that vanish.** $\langle b\circ b,c\rangle$ pairs the even $b\circ b$ with the odd $c$. $\langle b\circ c,b\rangle$ pairs the odd $b\circ c$ with the even $b$. $\langle c\circ c,c\rangle$ pairs the even $c\circ c$ with the odd $c$. Each is zero by the orthogonality of section 1, which gives $\langle b\circ b,c\rangle=0$ and $P(c)=0$ as stated.
+- **The three that survive.** $P(b)+\langle c\circ c,b\rangle+2\langle b\circ c,c\rangle$. Total symmetry of $T(x,y,z)=\langle x\circ y,z\rangle$ ([L24](../findings/second-order.md), argument paragraph) gives $\langle c\circ c,b\rangle=T(c,c,b)=T(b,c,c)=\langle b\circ c,c\rangle$, so the sum is $P(b)+3\langle b\circ c,c\rangle=P(b)+3\langle L_bc,c\rangle$.
+- **Step by step.** Every line follows from the line above and from section 1. No criticality, norm or sign of $\theta$ is used, so the first display holds at every $W\in\mathcal W_n$ and every unit $u$.
+
+## 3. The critical equations
+
+**Verdict: CONFIRMED.** One inconsistency sits in the Gate 1 paragraph, and the lemma does not depend on it.
+
+- **The expansion.** $Q(b+c)=Q(b)+Q(c)+2\,b\circ c$ is the definition of the polarisation, and $Q(x)=x\circ x$ follows from it by $Q(2x)=4Q(x)$. So $Q(W)=b\circ b+c\circ c+2\,b\circ c$ follows.
+- **The parity split.** By section 1, $b\circ b+c\circ c$ is even and $2\,b\circ c$ is odd. $\theta W=\theta b+\theta c$ is the parity decomposition of the right side. The decomposition of a vector into $\pm1$ eigenvectors of an involution is unique, so the even parts agree and the odd parts agree: $b\circ b+c\circ c=\theta b$ and $2\,b\circ c=\theta c$. Both follow from the step above.
+- **In which space.** $b,c\in\mathcal W_n$ (section 1), and [Lemma L209](../findings/curvature-invariants.md) (line 143) proves $Q(\mathcal W_n)\subseteq\mathcal W_n$, hence $x\circ y\in\mathcal W_n$ for $x,y\in\mathcal W_n$ by polarisation. So the ambient polarisation and the projected product coincide on $\mathcal W_n$, and the two displayed equations are equations in $\mathcal W_n$ under either reading. Were a projection present, it commutes with $\sigma$ and the argument is unchanged.
+- **The first pairing.** Pairing $2\,b\circ c=\theta c$ with $c$ gives $2\langle L_bc,c\rangle=\theta\lVert c\rVert^2$. It follows.
+- **The second pairing.** Pairing $b\circ b+c\circ c=\theta b$ with $b$ gives $P(b)+\langle c\circ c,b\rangle=\theta\lVert b\rVert^2$, and $\langle c\circ c,b\rangle=\langle b\circ c,c\rangle=\tfrac\theta2\lVert c\rVert^2$ by total symmetry and the first pairing. Hence $P(b)=\theta(\lVert b\rVert^2-\tfrac12\lVert c\rVert^2)$. It follows. The proof writes "$P(b)+\langle b\circ c,c\rangle$" and so applies the symmetry silently, which is harmless.
+- **Scope of this half.** No norm, no sign of $\theta$, and no orthogonality hypothesis are used, the last being automatic. The Lean declaration takes $\langle b,c\rangle=0$ as a hypothesis because it works with paired criticality, and the prose derives it from the isometry.
+- **The title's "eigenvector".** $L_bc=\tfrac\theta2c$ makes $c$ an eigenvector only when $c\ne0$. At $c=0$ the equation is empty.
+
+> **THE GATE 1 PARAGRAPH CONTRADICTS L209.** The [sweep](2026-09-14b-LIT-step8-sweep.md) batch 3, quoted as this lemma's Gate 1, says the projection $\pi_{\mathcal W}$ "is needed, the ambient product leaving $\mathcal W_n$", with a residual of $0.4$ unprojected. For $b,c\in\mathcal W_n$ that cannot be the record's $\circ$: L209 puts $b\circ c$ in $\mathcal W_n$ exactly. So the screen's "ambient product" is some other bilinear map (a mis-normalised $\#$ is the obvious candidate, since $W^2+2W^\#$ has trace $-\lVert W\rVert^2$ and leaves $\mathcal W_n$), or its $b,c$ were outside $\mathcal W_n$. The analytic lemma needs neither reading. **The record should strike "the ambient product leaving $\mathcal W_n$" or reconcile the script with L209 before the screen is cited as Gate 1 in the record's convention.** I did not open the script, since the brief does not link it.
+
+## 4. Diagonality
+
+**Verdict: CONFIRMED.** The corollary holds as stated, and one of its $n$ conditions is redundant.
+
+- **Generation.** $\sigma_{e_k}=\operatorname{diag}(1,\dots,-1,\dots,1)$ with the $-1$ in slot $k$. Every $\operatorname{diag}(\varepsilon)$ is the product of the $\sigma_{e_k}$ with $\varepsilon_k=-1$, so the $n$ reflections generate the full sign group $\Gamma$ of order $2^n$ at every $n$, odd or even. The group contains elements of both determinants, so it is the group [L120](../findings/second-order.md) requires and not the determinant-one subgroup whose characters fuse.
+- **$\mathcal D_n$ is exactly the $\Gamma$-fixed subspace.** $e_{ij}\odot e_{kl}$ carries the character $\chi_S$ with $S=\{i,j\}\triangle\{k,l\}$, and $S=\varnothing$ exactly when the two pairs coincide. So the trivial character on $\mathrm{Sym}^2(\Lambda^2)$ is spanned by the pair-diagonal entries, and intersecting with the invariant $\mathcal W_n$ gives $\mathcal D_n$. This is the argument of [L123](../findings/second-order.md) (line 867). Given 1's phrasing, "a sign flip acts on the pair basis by $\varepsilon_i\varepsilon_j$, so an entry off the pair diagonal is fixed only if it vanishes", describes the action on $\Lambda^2$ and leaves the product of two such factors implicit. Its conclusion is right, and L123 is the cleaner citation.
+- **The equivalence.** $\sigma_{e_k}W=W$ for every $k$ iff $W$ is fixed by the group they generate, iff $W\in\mathcal D_n$. The $\sigma_{e_k}$-odd part is $\tfrac12(W-\sigma_{e_k}W)$, which vanishes iff $\sigma_{e_k}W=W$. Each step follows.
+- **One condition is redundant.** $\prod_k\sigma_{e_k}=-I$, and $\Lambda^2(-I)=I$, so $-I$ acts trivially on $\mathcal W_n$. Hence $\sigma_{e_n}$ acts on $\mathcal W_n$ exactly as $\sigma_{e_1}\cdots\sigma_{e_{n-1}}$, and **$W$ is coordinate-diagonal iff its $\sigma_{e_k}$-odd parts vanish for $k=1,\dots,n-1$**. The statement's "for every $k$" is true and one more than needed. The image of $\Gamma$ in $GL(\mathcal W_n)$ has order $2^{n-1}$.
+- **Odd $n$ and the determinant.** At odd $n$, $-I$ has determinant $-1$, so $\Gamma\cap SO(n)$ already maps onto the image of $\Gamma$ and has the same fixed space. At even $n$, $-I\in SO(n)$, and the determinant-one fixed space is $\mathcal D_n\oplus V_{1234}$ at $n=4$, where $\chi_{[4]}$ is trivial on $\Gamma\cap SO(4)$, and $\mathcal D_n$ again at every even $n\ge6$, since a character with $\lvert S\rvert\in\{2,4\}$ cannot equal $\chi_{[n]}$ there. None of this touches the lemma, whose reflections generate all of $\Gamma$.
+
+## 5. The block description
+
+**Verdict: CONFIRMED.**
+
+- **Against Given 2's characters.** L120's summands are $\Gamma$-isotypic with characters $1$ on $\mathcal D_n$, $\chi_{jk}=\varepsilon_j\varepsilon_k$ on $V_{jk}$ and $\chi_Q$ on $V_Q$. $\sigma_{e_n}$ evaluates $\chi_S$ to $-1$ iff $n\in S$. So the $+1$ eigenspace is $\mathcal D_n\oplus\bigoplus_{j,k<n}V_{jk}\oplus\bigoplus_{n\notin Q}V_Q$ and the $-1$ eigenspace is $\bigoplus_jV_{jn}\oplus\bigoplus_{Q\ni n}V_Q$, as printed.
+- **A trap it avoids.** $V_{jk}$ with $j,k<n$ contains the basis vector $e_{jn}\odot e_{kn}$, which involves the index $n$ twice and is even. The block is still wholly even because its character is uniform, so the description is by character and not by which indices appear.
+- **An independent dimension check, by hand.** In a frame with $e_n=u$ the even components are those in which $n$ appears zero or two times. They are an algebraic curvature tensor $R'$ on $u^\perp$ and the form $h_{ij}=W_{injn}$, and Ricci-flatness of $W$ forces $h=-\mathrm{Ric}(R')$ and $\operatorname{tr}h=0$. So the even part is isomorphic to the scalar-flat curvature tensors on $\mathbb R^{n-1}$, of dimension $\tfrac{(n-1)^2((n-1)^2-1)}{12}-1$. The block count $\tfrac{n(n-3)}2+\binom{n-1}2(n-3)+2\binom{n-1}4$ gives $5,19,49$ at $n=4,5,6$, and the formula gives $6-1$, $20-1$, $50-1$. At $n=4$ the odd part also has dimension $5$, as it must, since a reflection exchanges $\mathcal W^+$ and $\mathcal W^-$.
+
+## 6. "H3 on the plane $\{b,c\}$ is an identity"
+
+**Verdict: PLAUSIBLE.** The local test on the plane is implied by the two relations at $\theta>0$, which is the use the record makes of it. It is not an identity, the reduction printed in the source sweep is a different inequality, and the plane read globally does force something.
+
+Put $\lVert W\rVert=1$, $t=\lVert b\rVert^2$, $s=\lVert c\rVert^2$, $t+s=1$, so that $a=\langle L_bc,c\rangle=\tfrac\theta2s$ and $P(b)=\theta(t-\tfrac s2)$ by section 3.
+
+- **$P$ on the plane.** By section 2 at arbitrary coefficients, $P(xb+yc)=x^3P(b)+3xy^2a=\theta\big[x^3(t-\tfrac s2)+\tfrac32xy^2s\big]$. On the unit circle $x^2t+y^2s=1$, substituting $y^2s=1-x^2t$ gives $P=\theta\big[\tfrac32x-\tfrac12x^3(t+s)\big]$, so **on the unit circle of the plane $P=\tfrac\theta2(3x-x^3)$, independent of $s$**, with $x$ ranging over $[-t^{-1/2},t^{-1/2}]$ and $W$ at $x=1$. The two relations do determine $P$ there, as the record says.
+- **The local test.** For $s,t>0$, $x$ is a regular coordinate near $W$, and $f(x)=\tfrac\theta2(3x-x^3)$ has $f'(1)=0$, $f''(1)=-3\theta$. In [L24](../findings/second-order.md)'s form: $W^\perp$ meets the plane in $X=s\,b-t\,c$, with $\lVert X\rVert^2=st$, and $\langle L_WX,X\rangle=s^2P(b)+(t^2-2st)a=\tfrac\theta2s(t-s)$. Against $\tfrac\theta2\lVert X\rVert^2=\tfrac\theta2st$ the slack is $\tfrac\theta2s^2$. **So H3 on the plane reads $\theta\lVert c\rVert^4\ge0$.** At $\theta>0$ that holds at every critical point, with strict slack whenever $c\ne0$. The same value follows from [L214](../findings/second-order.md)'s $\langle L_WX,X\rangle=\theta t(1-t)-a$ with $D=b$, $N=c$.
+- **"Identity" is the wrong word, and the sweep's reduction is wrong.** The inequality is strict off $c=0$, so it is automatic rather than an identity. The [sweep](2026-09-14b-LIT-step8-sweep.md) batch 3 says it "reduces to $s^4\le s^2$" with $s^2=\lVert c\rVert^2$, which is $\lVert c\rVert\le1$, a different statement that happens also to be automatic at unit norm.
+- **At $\theta<0$ the plane is informative.** The second-order necessary condition $6L_W-3\theta\le0$ on $W^\perp$ at a local maximiser uses no sign of $\theta$ (L24's argument paragraph, before the division). With $\theta<0$ it forces $c_u=0$ for every unit $u$, so $W$ is fixed by every reflection, hence by $O(n)$, hence $W=0$ since $\mathcal W_n$ carries no nonzero invariant. **So a local maximiser has $\theta\ge0$ by second order on these planes**, the conclusion L24's scope paragraph reaches through L51 at fourth order. It does not reach the owed branch $\theta=0$. This is a side remark, and the lemma's consumers work at $\theta>0$.
+- **Global maximality on the plane forces $\lVert c_u\rVert^2\le\tfrac34$.** At a unit global maximiser $\theta=\max P>0$, and $t>0$ since $t=0$ gives $P(W)=P(c)=0$. The endpoint $x=-t^{-1/2}$ is the unit vector $-b/\lVert b\rVert$, where $P=\theta\,\frac{1-3t}{2t^{3/2}}$. Requiring this to be at most $\theta$ is $2t^{3/2}+3t-1\ge0$, which factors as $(2\sqrt t-1)(\sqrt t+1)^2\ge0$, that is $t\ge\tfrac14$. The other endpoint gives $(\sqrt t-1)^2(2\sqrt t+1)\ge0$, always true. **So at every unit global maximiser and every unit $u$, $\lVert b_u\rVert^2\ge\tfrac14$ and $\lVert c_u\rVert^2\le\tfrac34$**, and "the lemma alone forces nothing" holds of H3 and fails of maximality restricted to the plane. The constraint is weak, and whether it helps [I102](../plan.md) is for the record to judge. It is derived here in closed form, with no computation.
+
+## 7. Scope
+
+**Verdict: PLAUSIBLE.** The lemma's statement carries every hypothesis its proof uses. The surrounding paragraphs overcount, leave one step unstated and credit nothing on file.
+
+- **Hypotheses.** The first display needs only $W\in\mathcal W_n$ and a unit $u$. The second needs $Q(W)=\theta W$ at any real $\theta$ and any norm. Neither uses maximality, $\theta>0$ or $n\ge$ anything, and the statement asks for none of these. The title's "the odd part of a critical point has zero cubic" understates, since $P(c)=0$ holds at every $W$.
+- **"$n$ applications" is $n-1$.** By section 4, once $W$ is even under reflections in $e_1,\dots,e_{n-1}$ it is even under $\sigma_{e_n}$. The same count stands in [plan.md](../plan.md) at I102 and at the route paragraph ("applied $n$ times").
+- **Symmetric criticality is used and unstated.** The programme applies the second display to a maximiser of $P$ on $\mathrm{Fix}(H)$. That point is a critical point of $P$ on $\mathcal W_n$ because $Q(W)\in\mathrm{Fix}(H)$ by equivariance and L209, so the Lagrange condition on $\mathrm{Fix}(H)$ is already the full one. It is one line, and the record states it for $\Gamma$ at [diagonal-half.md](../findings/diagonal-half.md) line 80. "Fixed subalgebra" is correct, fixed points of automorphisms being closed under $\circ$.
+- **Prior art on file, uncredited.** The $\sigma_u$-even subspace is the C3 slice $V=\mathrm{fix}(\Lambda^2\sigma)$ of [graded-half.md](../findings/graded-half.md) (lines 317 to 362, and the table at line 430) at the involution with $q=1$. That file's sense (B-narrow) is exactly an orthogonal involution of $\mathbb R^n$, and its line 354 already records that every coordinate-diagonal Weyl tensor lies in every coordinate slice. The fixed-point description of the diagonal locus, with symmetric criticality, is at [diagonal-half.md](../findings/diagonal-half.md) line 80. The parity calculus is the $\mathbb Z_2$ quotient of [L123](../findings/second-order.md)'s character multiplication, which puts $x\circ y$ in the product character and so gives $P(c)=0$ and $\langle b\circ b,c\rangle=0$ at once. The sweep's "grep finds nothing ... so this is not on the record" searched by the word and missed these.
+- **What is new.** The split formula $P(W)=P(b)+3\langle L_bc,c\rangle$ with $P(c)=0$, the eigen-equation $L_bc=\tfrac\theta2c$ at a critical point, and the value $P(b)=\theta(\lVert b\rVert^2-\tfrac12\lVert c\rVert^2)$ appear nowhere I found under another name. The search covered [findings/](../findings/) for reflections, involutions, fixed subspaces, slices, parity and single-character arguments.
+- **"The same shape with a third term $P(N)$".** Consistent with L214 at $D=b$, $N=c$, where $\langle D\circ D,N\rangle=0$ holds by parity and $P(N)=0$.
+- **The Lean section.** Taken at its word. Its `example` instantiates every hypothesis at $T=0$, $\theta=0$ on $\mathbb R$, which shows the hypotheses consistent and nothing more.

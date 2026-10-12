@@ -1,0 +1,8 @@
+# Fox: Harmonic cubic homogeneous polynomials such that the norm-squared of the Hessian is a multiple of the Euclidean quadratic form
+
+- **Link**: [arXiv:1905.00071](https://arxiv.org/abs/1905.00071), published in [Analysis and Mathematical Physics 11 (2021)](https://link.springer.com/article/10.1007/s13324-020-00462-4).
+- **Author**: Daniel J. F. Fox.
+- **Retrieved**: 2026-09-12, as [fox-1905.00071.pdf](https://arxiv.org/abs/1905.00071), extracted to [fox-1905.00071.txt](https://arxiv.org/abs/1905.00071).
+- **Consulted for**: the class of cubics the record's $P$ belongs to on $\mathcal W_n$, since [Fox 2019](../fox-2019-nonassociative-curvature-algebra/notes.md) proves the Weyl cubic is harmonic with $|\mathrm{Hess}P|^2$ a multiple of $|x|^2$, found at the [2026-09-12 sweep](../../reviews/2026-09-12-LIT-step8-sweep.md).
+- **Statements that matter**: equation (1.1), $\Delta_hP=0$ and $|\mathrm{Hess}P|_h^2=\kappa|x|_h^2$; the introduction's line that the first equation means $P$ restricted to the unit sphere $S^{n-1}$ is a spherical harmonic with eigenvalue $3(n+1)$; Theorem 1.10, the unique conformally associative solution $P_n$ with $\kappa=n(n-1)$ and automorphism group $S_{n+1}$ permuting the critical points of $P_n$ on the sphere.
+- **Verdict**: **the classification is up to dimension four and constructions exist in all dimensions, and none is the Weyl cubic at $n\ge5$**, so it supplies the framework rather than the answer. *Two things it settles for the record: $P$ on the unit sphere of $\mathcal W_n$ is an eigenfunction of the sphere Laplacian with eigenvalue $3(D+1)$ at $D=\dim\mathcal W_n$, and the model solution $P_n$ has its critical points permuted by a finite group, which is the shape a maximiser classification takes when it exists.*

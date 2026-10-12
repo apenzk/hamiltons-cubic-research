@@ -1,0 +1,16 @@
+
+=== the plan's own numbers (run_m_falsifier.py):  n=6:1.412800  n=8:1.420500  n=10:1.425700  n=12:1.429400  n=14:1.432000
+    increments [0.0077 0.0052 0.0037 0.0026]   ratios [0.6753 0.7115 0.7027]
+    (i)   geometric, mean ratio r=0.6965  ->  limit 1.437967
+    (ii)  free power law   L=1.457509  c=0.1475  p=0.6658   rms residual 6.06e-05
+    (iii) L pinned at sqrt3   c=0.363737  p=0.073763   rms residual 5.08e-04
+          its predictions: n=6:1.413346  n=8:1.420038  n=10:1.425131  n=12:1.429231  n=14:1.432655
+          fit (iii) at n=  20: 1.440429          fit (iii) at n=  50: 1.459488          fit (iii) at n= 100: 1.473074          fit (iii) at n=1000: 1.513527
+
+=== r275's independent optimiser:  n=6:1.412822  n=8:1.420489  n=10:1.425703  n=12:1.429351
+    increments [0.007667 0.005214 0.003648]   ratios [0.6801 0.6997]
+    (i)   geometric, mean ratio r=0.6899  ->  limit 1.437469
+    (ii)  free power law   L=1.461752  c=0.1423  p=0.5958   rms residual 3.10e-05
+    (iii) L pinned at sqrt3   c=0.366226  p=0.077152   rms residual 3.29e-04
+          its predictions: n=6:1.413108  n=8:1.420109  n=10:1.425433  n=12:1.429716
+          fit (iii) at n=  20: 1.441400          fit (iii) at n=  50: 1.461237          fit (iii) at n= 100: 1.475340          fit (iii) at n=1000: 1.517123

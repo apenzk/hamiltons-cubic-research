@@ -1,0 +1,41 @@
+==============================================================================
+(a) and (b)  THE TWO CUBIC CONTRACTIONS, rank and ratio, by dimension
+
+    n  dim Weyl_n  rank(I1,I2)       I2/I1 spread over 30 samples
+    4          10            1   min +0.500000000  max +0.500000000
+    5          35            1   min +0.500000000  max +0.500000000
+    6          84            2   min -3.989510733  max +1.739303318
+    7         168            2   min -1.364554159  max +24.228725157
+    8         300            2   min -8.981137852  max +11.169001903
+   12        1638            2   min -3.488757052  max +2.858240581
+
+  READING.
+    n = 4, 5 : rank 1, and I2/I1 is pinned at exactly 1/2 -- r250's relation.
+               The degree-3 invariant dimension there is ONE.
+    n >= 6   : rank 2, and the ratio moves freely -- the two are INDEPENDENT.
+               The degree-3 invariant dimension there is TWO.
+
+  So `I_2 = I_1/2` is the n <= 5 regime, where the count is 1.  r260 measured
+  n = 6 and n = 7, where the count is 2 BECAUSE the relation has failed.  The
+  record's sentence names the relation as the reason for the number it destroys.
+
+==============================================================================
+(c)  THE SCRIPT'S ASSERT APPLIED TO V = Weyl_n
+
+  run_restitution_kernel.py asserts  rank(R_d) == dim Sym^d(V*)  where R_d
+  runs over ALL multilinear functionals.  With V = Weyl_n, d = 3:
+
+    n   dim V    dim (V*)^{x3}   dim Sym^3(V*)  measured rank
+    6      84          592,704         102,340              2
+    7     168        4,741,632         804,440              2
+   12    1638    4,394,826,072     733,813,080 see r239/r177/r237: 2
+
+  The record has only the O(n)-INVARIANT functionals -- 10,395 of the dv^3 -- so
+  the script's assert is not the statement in play.  The correct equivariant form,
+  which Remark I.2.4 does license, is
+
+      rank(R_d restricted to invariant multilinear forms) = dim (Sym^d V*)^{O(n)}
+
+  and that IS what holds: 2 = 2 at n = 6, 7.  The script tests the non-equivariant
+  version on toy V = R^2, R^3, R^4, where the two versions coincide only because
+  the group is absent.

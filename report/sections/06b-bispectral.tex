@@ -1,0 +1,186 @@
+\section{$P$ as a function of two spectra}\label{sec:bispectral}
+
+Fence post~1 says $P$ is not a function of the $\Lambda^2$-spectrum, and exhibits an isospectral family at $n=6$ on which $P$ ranges over $\{-24,0,+24\}$ to prove it. What separates that family's members is a \emph{second} spectrum, and with it $P$ becomes spectral again.
+
+\subsection{The identity}\label{sec:bispectralid}
+
+\begin{Lem}{50}[$P$ is bi-spectral]
+Let $M$ be $W$ acting on $\Lambda^2$ with $\|M\|_F=1$ and spectrum $\mu$, and let $\mathring W$ be the curvature operator of the second kind on $S^2_0$, with spectrum $\omega$, in Li's convention $(\mathring Wh)_{ij}=\sum_{k,l}W_{iklj}h_{kl}$ \cite[eq.\ (2.2)]{li2021}. Then
+\[
+\theta\;=\;\tfrac32\,p_3(\mu)\;-\;\tfrac12\,p_3(\omega),
+\qquad
+\textstyle\sum\mu=\sum\omega=0,\quad \sum\mu^2=1,\quad\sum\omega^2=3 ,
+\]
+where $p_3$ is the third power sum. The index order is load-bearing: $W_{ikjl}$ in place of $W_{iklj}$ negates $\mathring W$ and turns the $-\tfrac12$ into $+\tfrac12$.
+\end{Lem}
+
+\begin{proof}
+Dai--Fu's two cubic contractions of the curvature tensor \cite{daifu2023} are this report's two cubics. Writing
+\[
+\alpha:=W_{tpsq}W_{tpkl}W_{sqkl},\qquad \beta:=W_{tspq}W_{tjpl}W_{sjql},
+\]
+one has $\alpha=8\tr(M^3)$ and $\beta=2\langle M^{\#},M\rangle$ on $\Weyl_n$ at every $n\ge4$. For the second, write $B_{ijkl}=\sum_{p,q}W_{ipkq}W_{jplq}$; the sharp has entries $(M^{\#})_{(ij),(kl)}=B_{ijkl}-B_{ijlk}$, so with the ordered-pair doubling $\langle M^{\#},M\rangle=\tfrac14\sum W_{ijkl}(B_{ijkl}-B_{ijlk})$, and relabelling $k\leftrightarrow l$ turns the second sum into minus the first, leaving $\tfrac12\sum W_{ijkl}B_{ijkl}=\tfrac12\beta$. The first is the same expansion of $\tr(M^3)$, and neither uses the first Bianchi identity. Both are kernel-checked. Dai--Fu's Lemma 3.3, specialised to scalar curvature $s=0$ (legitimate, since a Weyl tensor is the curvature tensor of no metric but the lemma is an algebraic identity in $R$), gives $\tr(\mathring W^3)=\tfrac18\alpha-\beta$ and $\tr(\mathring W^2)=\tfrac34|W|^2$. Substituting into $\theta=\tr(M^3)+\langle M^{\#},M\rangle$ gives
+\[
+p_3(\omega)=p_3(\mu)-2\langle M^{\#},M\rangle,
+\qquad\text{hence}\qquad
+\langle M^{\#},M\rangle=\tfrac12\big(p_3(\mu)-p_3(\omega)\big),
+\]
+and adding $\tr(M^3)=p_3(\mu)$ gives the identity. The normalisations are Dai--Fu's second-order identity at $s=0$.
+\end{proof}
+
+\begin{certificate}
+The dictionary $\alpha=8\tr(M^3)$, $\beta=2\langle M^{\#},M\rangle$ holds on all of $\mathrm{Sym}^2(\Lambda^2)$, not merely on $\Weyl_n$. Residual $\le5\times10^{-16}$ on random Weyl tensors at $n=4$--$7$ and at every catalogued critical point, against this report's independent implementation of $Q$. Both Dai--Fu identities were reproduced verbatim before being used.
+\end{certificate}
+
+\paragraph{What it explains.} The $n=6$ isospectral family of post~1 ($300$ tensors, one $\Lambda^2$-spectrum, $P\in\{-24,0,+24\}$) is separated by its $S^2_0$-spectra, with extreme eigenvalue $\pm2/\sqrt3$ at $P=\pm24$. And the crossover of Lemma~2 appears without being imposed: $\theta$ is $97\%$ second-kind term at $S^6\times S^6$, $87\%$ $\Lambda^2$ term at $\CP^4$, and exactly half and half at $\CP^2$. \S\ref{sec:champions} makes that quantitative.
+
+\paragraph{The honest limit, stated before the uses.} Capping the two cubics separately by Okumura's sharp bound reaches $4.0129$ at $n=12$ against $\theta_0(12)=1.236033$: a factor $3.25$, decaying only to $3.08$ by $n=24$, so \emph{worse} than the $1.7$--$1.8\times$ of post~2. \textbf{The coupling between the two spectra is the whole problem.} What has changed is its kind: it is a coupling between the spectra of two linear images of one tensor, rather than between a spectrum and an alignment, and both images are classical operators with a literature. There is also a hard ceiling on one-sided work, and it is worth stating at the outset: $\tfrac32\max p_3(\mu)=1.4657$ already exceeds $\theta_0(12)$, so \textbf{no improvement on the $\omega$ side alone can close the conjecture in this formulation}, however sharp.
+
+\subsection{The collapse, and the dimension it truly reaches}\label{sec:lovelock}
+
+\begin{Lem}{51}[The collapse is Lovelock's identity, and it holds for $n\le5$]
+On $\Weyl_n$ for $n\le5$, and only there, $\beta=\tfrac12\alpha$ (equivalently $\langle W^{\#},W\rangle=2\tr(W^3)$ and $\theta=3\tr(W^3)$), so the cubic is a function of the $\Lambda^2$-spectrum alone. The mechanism is
+\[
+\beta-\tfrac\alpha2\;=\;-\tfrac1{64}\,\delta^{a_1\cdots a_6}_{b_1\cdots b_6}\,
+W_{a_1a_2}{}^{b_1b_2}W_{a_3a_4}{}^{b_3b_4}W_{a_5a_6}{}^{b_5b_6},
+\]
+and the generalized Kronecker delta on six indices vanishes identically when $n\le5$.
+\end{Lem}
+
+\begin{proof}
+The right-hand side is a Lovelock dimensionally-dependent identity, obtained by antisymmetrising over $n+1$ indices: a totally antisymmetric object on six upper and six lower indices has no nonzero component when only $n\le5$ values are available. The equality of the two sides is derived term by term. Of the $720$ permutations in the delta, $640$ contract some factor with itself, and summing over that index first leaves a Ricci trace, which vanishes. The remaining $80$ are $\alpha$ with signed weight $16$ and $\gamma=W_{abcd}W_{aecf}W_{bfde}$ with weight $-64$, after relabelling the summation indices and applying the pair symmetries factor by factor. First Bianchi gives $\gamma=\beta-T$ and $4T=\alpha$ for $T=W_{abcd}W_{aecf}W_{bdef}$, so the contraction is $16\alpha-64\beta+16\alpha=-64(\beta-\tfrac\alpha2)$. Every step, the collapse $\theta=3\tr(W^3)$ at $n\le5$ included, is kernel-checked in Lean. The clause \emph{only there} is one witness per dimension: a diagonal $W$ with edge weights $w_{ij}$ has $\alpha=4\sum w_{ij}^3$ and $\beta=\sum w_{ij}w_{im}w_{jm}$, and the $S^3\times S^3$ weight, $3$ inside a block and $-2$ across, padded by zeros, is a Weyl weight at every $n\ge6$ with $\beta-\tfrac\alpha2=1620-360\ne0$, also kernel-checked.
+\end{proof}
+
+\begin{certificate}
+The constant $-64$ is confirmed at $n=6,7,8,9$ from a direct $720$-term $S_6$ expansion. Two controls make the $n\le5$ statement a result rather than a coincidence of sampling: the samples behind it provably \emph{span} $\Weyl_4$ (rank $10$) and $\Weyl_5$ (rank $35$), so a deficient sample is not manufacturing the identity; and it holds over $64$ \emph{polarizations}, so it is an identity of symmetric trilinear forms rather than one on the diagonal. Sampled evaluations at $n=6,7$ agree with the proof's witness, which confines it at every $n\ge6$.
+\end{certificate}
+
+\paragraph{This corrects the reading of Lemma~49, in three separate places.} Lemma~49's collapse-space computation is right and was reproduced row by row. What fails is the inference drawn from it, that the collapse is rigidly $n=4$.
+
+\begin{itemize}[leftmargin=1.5em,nosep]
+\item \textbf{A quantifier inversion.} Lemma~49 asks which \emph{fixed} $T$ satisfies $\sum T\lambda\lambda\lambda=\kappa e_3$ for \emph{all} traceless $\lambda$. Collapse needs it only at the single $\lambda(W)$ that $T(W)$ comes with. Bianchi constrains the frame \emph{relative to} $\lambda$ ($54$ dimensions of traceless operators on $\Lambda^2\R^5$ against $\dim\Weyl_5=35$), so nineteen conditions are discarded. What Lemma~49 proves is that constant $T$ is the only $\lambda$-\emph{uniform} mechanism, and that decides no dimension.
+\item \textbf{It never computed $n=5$.} Its table lists $N=6,7,9$, while $n=5$ is $N=10$ and is absent.
+\item \textbf{Its driver is refuted.} $O(n)$-reducibility of $\Weyl_n$ is not the separating fact: $\Weyl_5$ is $O(5)$-irreducible and collapses anyway. The separating fact is the rank of the Kronecker delta.
+\end{itemize}
+
+At $n=5$ the realisable $\lambda$ are not a proper subvariety (the spectrum map's Jacobian has rank $9$ and fills the traceless hyperplane), so the slack lives in the $(\lambda,T)$ \emph{product}. The realised $T$ there is manifestly non-constant, range $[0,0.67]$ with standard deviation $0.127$, and the cubic collapses regardless. \textbf{So Huisken's constant does not travel past $n=5$ rather than past $n=4$}, and the reason is a dimension count on an antisymmetriser rather than a fact about $\so(4)$'s chirality splitting. \emph{The standing consequence for route selection is unchanged in force and sharper in statement}: a bound reaching $\theta$ through the $\Lambda^2$-spectrum alone is \emph{exact} for $n\le5$ and \emph{cannot} be sharp for $n\ge6$, the second spectrum carrying the difference.
+
+\subsection{The maximizer's position, in closed form}\label{sec:maximiserpos}
+
+A transfer inequality between $p_3(\omega)$ and $p_3(\mu)$ has to be sharp at the conjectured maximizer, so the maximizer's coordinates are the sharpness condition. They are exact rather than measured.
+
+\begin{Lem}{67}[The second-kind spectrum of the balanced product]
+At $S^m\times S^m$ with $n=2m$ and $m\ge2$, normalized to $\|W\|_F=1$ as an operator on $\Lambda^2$, the spectrum of $\mathring W$ in Li's $iklj$ order takes three values,
+\[
+\begin{array}{lll}
+mA & \text{with multiplicity} & (m-1)(m+2),\\
+-(m-1)A & & m^2,\\
+-2m(m-1)A & & 1,
+\end{array}
+\qquad A=\frac1{m\sqrt{(m-1)(2m-1)}},
+\]
+the multiplicities summing to $2m^2+m-1=\dim S^2_0(\R^{2m})$. Hence
+\[
+p_3(\mu)=\frac1{m\sqrt{(m-1)(2m-1)}},
+\qquad
+p_3(\omega)=-\frac{4m^2-6m-1}{m\sqrt{(m-1)(2m-1)}},
+\]
+and $\tfrac32p_3(\mu)-\tfrac12p_3(\omega)=\theta_0(2m)$ identically in $m$.
+\end{Lem}
+
+\begin{proof}
+Li's Theorem 1.8 \cite{li2022} gives the second-kind spectrum of an Einstein product: for $\Ric(g_i)=\rho_ig_i$, $\mathrm{spec}(\mathring R)$ on $M_1\times M_2$ is $\mathrm{spec}(\mathring R_1)\cup\mathrm{spec}(\mathring R_2)$ together with $0$ of multiplicity $n_1n_2$ and $-\tfrac{n_1\rho_2+n_2\rho_1}{n_1+n_2}$ of multiplicity one. Specialising to the balanced case and subtracting the Einstein part to pass from $R$ to $W$ gives the three values. The closing identity is symbolic: the residual radical resolves as $\sqrt{4m^4-12m^3+13m^2-6m+1}=2m^2-3m+1$.
+\end{proof}
+
+\begin{certificate}
+Li's Theorem 1.8 verified here to $1.8\times10^{-15}$ on six sphere products built from true metrics rather than from the vertex matrix. The normalisations $\sum\omega=0$ and $\sum\omega^2=3$ hold identically in $m$, which is what Lemma~50 requires. The constant $A$ is not new: it equals this report's $\tr(W^3)=2\sqrt2/(n\sqrt{(n-1)(n-2)})$ at the balanced product, difference identically zero. Symbolic in $m$ throughout, with no floating-point step.
+\end{certificate}
+
+\paragraph{What this buys.} The sharpness condition of a candidate transfer inequality can be imposed as an equation in $m$ while the inequality is being built, instead of being checked numerically afterwards. It also makes the maximizer's $\omega$-spectrum a \emph{three-value} spectrum, the same structural simplicity the $\Lambda^2$ side has.
+
+\subsection{The two cubics have different champions, and that is what the crossover is}\label{sec:champions}
+
+\begin{Obs}{53}[The champion split]
+Ascent in a direction $(a,b)$, maximizing $a\,p_3(\mu)+b\,p_3(\omega)$ over $\Weyl_n$ from six starts each:
+\begin{center}
+\begin{tabular}{@{}p{0.13\linewidth}p{0.31\linewidth}p{0.50\linewidth}@{}}
+\toprule
+direction & what it maximizes & where the ascent lands, $n=6,8,10$ \\
+\midrule
+$(0,-1)$ & the second-kind cubic alone & the \textbf{balanced sphere product}, at all three, and at $n=12$ \\
+$(\tfrac32,-\tfrac12)$ & $\theta$ itself & $W_{\CP^2}$, at $\thstar=1.224745$ \\
+$(1,0)$ & the $\Lambda^2$ cubic alone & $\theta_0(6)$ at $n=6$, and $\CP^4$'s $0.986013$ at $n=8$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{Obs}
+
+\emph{Label caution.} Ascent bounds each direction's maximum from \emph{below} only, so what is reported is multistart convergence to a named point, which is why this is an Observation and not a Lemma. The first row is the finding: at $n=6,8,10$ the maximizer of the second-kind cubic alone is the balanced sphere product, and $\theta$ evaluates there to $\theta_0(n)$ exactly: $1.054093$, $1.145644$, $1.200000$ against the closed form.
+
+\paragraph{So the two competitors are separated by which cubic they extremize}, and $\theta$ weights them $3:1$. $W_{\CP^2}$ wins the $\Lambda^2$ cubic, whereas the balanced sphere product wins the second-kind cubic. \textbf{The crossover $n=6+2\sqrt7$ of Lemma~2 is where the sphere product's advantage on the second cubic overtakes $\CP^2$'s on the first}. This is the first description on record that says what \emph{changes} there rather than only where.
+
+\begin{certificate}
+A positive control and a falsifier, both run. \emph{Control}: below the crossover the ascent in the $\theta$ direction returns $\thstar$, above $\theta_0(n)$ at $n=6,8,10$, which is the known and correct answer there and not a refutation of Conjecture~A, whose range is even $n\ge12$. \emph{The route's falsifier} was a realisable pair above the line $\tfrac32x-\tfrac12y=\theta_0(n)$ at $n=12$. At $n=12$ both directions land on the same point, $p_3(\mu)=0.022473$, $p_3(\omega)=-2.404646$, $\theta=1.236033=\theta_0(12)$, with $\dim\Weyl_{12}=1638$ and singular-value gap $1.6\times10^2$ against $2\times10^{-12}$. It did not fire. Consistency with Conjecture~A, not evidence for it.
+\end{certificate}
+
+\subsection{Both spectra majorize the same matrix, and what that settles}\label{sec:schurhorn}
+
+The two spectra are not independent of each other, and the object that ties them is the vertex matrix $K_{ab}=W_{abab}$ already used in \S\ref{sec:diagonal}. Write $t=\|K\|_F^2$.
+
+\begin{Lem}{54}[The two diagonals, and rigidity at $t=2$]
+Fix a frame $F$ and take the orthonormal basis $\{\varphi_{ij},\psi_k\}$ of $S^2_0$ whose $\varphi_{ij}$ are the off-diagonal Nienhaus--Petersen--Wink vectors and whose $\psi_k$ are an \textbf{eigenbasis of $K$ on $\mathbf1^{\perp}$}. NPW's own staircase $\psi_k$ will not serve, being fixed by the frame alone. In that basis the diagonal of $\mathring W$ on the $\varphi$-block is exactly $K$, and the $\psi$-block of $\mathring W$ is exactly $-K$ restricted to $\mathbf1^{\perp}$. The diagonal of $M$ in the $\varphi$-basis of $\Lambda^2$ is exactly $K$ as well. Consequently $\sum d_\varphi^2=t/2$ and $\sum d^2=\tfrac32t$ for the full $S^2_0$ diagonal $d$, and Schur--Horn gives $\mu\succ d_\varphi$ and $\omega\succ d$. The vertex-matrix bound $\kappa^2\le2$ gives $t_F\le2$ with equality exactly when $W$ is coordinate-diagonal in \emph{that} frame, and at $t_F=2$ majorization has equal sums \emph{and} equal norms on both sides, forcing $\mu=d_\varphi$ and $\omega=d$ outright.
+\end{Lem}
+
+\begin{certificate}
+Both diagonal identifications rebuilt from the definitions rather than quoted: the $\varphi$-diagonal of $M$ equals $K$ with residual exactly $0$; the $\psi$-block identity holds to $6\times10^{-17}$; $K\mathbf1=0$ to $10^{-17}$, so Ricci-flatness \emph{is} the vanishing of $K$'s row sums; and $\omega\succ d$ holds to $10^{-15}$.
+\end{certificate}
+
+\paragraph{The rigidity is a closure, not an opening, and the mechanism is generic.} At $t=2$ the Schur--Horn relaxation is not a relaxation at all but the exact value of $\theta$ at a coordinate-diagonal $W$, which is the granted diagonal case. The relaxation is also non-increasing in $t$, because the vertex class is a linear space and scaling $K$ down weakens every majorization constraint. Those three facts close the route in three lines: \textbf{any bound that is exact at $t=2$ and monotone in diagonal information is $\ge\theta_0(n)$ at every $t<2$}, with nothing specific to Schur--Horn or to Okumura about it. Two consequences are worth recording because each was reached the expensive way first.
+
+\begin{itemize}[leftmargin=1.5em,nosep]
+\item \textbf{A lower bound on the frame-optimized diagonal spread buys nothing.} With $d$ constrained only by $\sum d=0$ and $\|d\|^2\ge c$, the relaxation stays at $4.0129$ for every $c$ up to the hard ceiling $\|d\|^2\le\sum\omega^2=3$, \emph{including} at the maximum $t=2$. The free $p_3$-minimizer majorizes the flat competitor whenever $c\le3$, so this is provable rather than sampled. What the bound does consume is the \emph{bulk} cumulative sums $\sum_{k\le j}d^{\downarrow}_k$ at $j\approx D/2$: $37$ of $76$ constraints are active at $n=12$, and $j=40$ alone gives $3.1723$.
+\item \textbf{Monotonicity in $t$ is a theorem, so passing it is not a validity gate.} It is also one-sided (under-exploration returns spuriously \emph{low} values, which monotonicity tolerates exactly), and it did: a first sweep reported the unconstrained value at $t=2$, where the answer is \emph{forced}, because the worst-case $d$ it used violated Ricci-flatness and so was not the vertex matrix of any Weyl tensor.
+\end{itemize}
+
+\subsection{A lower bound on the vertex matrix's most negative entry}\label{sec:minentry}
+
+\begin{Lem}{55}[Min-entry bound, sharp for even $n$]
+Let $K$ be hollow, symmetric, with zero row sums and $\|K\|_F^2=t$. Then
+\[
+\Big|\min_{a\ne b}K_{ab}\Big|\;\ge\;\sqrt{\frac t{n(n-1)(n-2)}},
+\]
+and for even $n$ the bound is attained, the extremizers being exactly the perfect matchings: $K_{ab}=(n-2)c$ on a fixed-point-free involution and $-c$ elsewhere.
+\end{Lem}
+
+\begin{proof}
+Fix a row $a$, with $M=n-1$ off-diagonal entries summing to zero and $\sum_bK_{ab}^2=s_a$. For reals $y_1,\dots,y_M$ with $\sum y=0$ and $\sum y^2=s$, the configuration minimizing $|\min y|$ is $M-1$ equal negatives against a single positive, $y=(\alpha,\dots,\alpha,-(M-1)\alpha)$, giving $s=M(M-1)\alpha^2$ and hence $|\min y|\ge\sqrt{s/(M(M-1))}$. So row $a$ contains an entry of modulus at least $\sqrt{s_a/((n-1)(n-2))}$, and since $\sum_as_a=t$ some row has $s_a\ge t/n$. For the equality case, the matching configuration makes both steps tight at once and gives $\|K\|_F^2=n(n-1)(n-2)c^2$.
+\end{proof}
+
+\begin{certificate}
+The matching extremizer is a genuine coordinate-diagonal Weyl tensor, Bianchi and Ricci residual $\le8\times10^{-17}$ at $t=2.000000000000$. Sharpness fails at odd $n$, ratios $\sqrt{5/3}$, $1.16024$, $1.11153$ at $n=5,7,9$. Two independent implementations, on identical briefs, agreeing.
+\end{certificate}
+
+\paragraph{What it replaces.} It is the analytic form of a sampled feasibility sweep. Combined with the $\psi$-block identity of Lemma~54 it forces $\max d$ away from zero at \emph{every} vertex matrix, so the $\omega$-side Okumura extremizer fails majorization at $j=1$ for a reason rather than in a fixed number of sampled cells. It does so for every vertex $K$ once $t>12(n-2)/((n+2)(n^2+n-4))$, which is $0.158$ at $n=6$ and $0.056$ at $n=12$.
+
+\paragraph{Where the looseness lives, which is what a sharpening must attack.} Against random vertex matrices the ratio runs $1.93$, $2.99$, $4.83$ at $n=6,8,12$, and at the balanced sphere product's own $K$ it is \emph{exactly} $\sqrt n$. Since that product has all rows equal, the step $s_a\ge t/n$ is tight there, so \textbf{the entire loss is in the single-row step}: the row-level equality configuration (one large positive against equal negatives) is not what symmetry permits a vertex matrix to have. The sharp row-level constant, not the max-row one, is what a tightened version needs.
+
+\subsection{What the reformulation is worth}
+
+\begin{longtable}{@{}p{0.34\linewidth}p{0.62\linewidth}@{}}
+\toprule
+\textbf{Statement} & \textbf{State} \\
+\midrule
+\endhead
+The identity itself (Lemma~50) & \textbf{Proven}, two audits on identical briefs. It makes $P$ spectral in a pair, which post~1 shows it is not in one \\
+The $n\le5$ collapse (Lemma~51) & \textbf{Proven}. It corrects the reading of Lemma~49 and moves Huisken's ceiling from $n=4$ to $n=5$ \\
+The maximizer's coordinates (Lemma~67) & \textbf{Proven} symbolically in $m$. It supplies a sharpness condition as an equation \\
+The champion split (Obs.~53) & \textbf{Verified} at $n=6,8,10,12$ by multistart ascent. It explains what changes at the crossover \\
+Rigidity at $t=2$ (Lemma~54) & \textbf{Proven}, and it \emph{closes} the Schur--Horn route, by a mechanism generic to any bound exact at $t=2$ \\
+The min-entry bound (Lemma~55) & \textbf{Proven} and \textbf{sharp} for even $n$. The extremizer is a perfect matching \\
+Separate caps on the two cubics & \textbf{Closed}: factor $3.25$ at $n=12$, worse than post~2's split \\
+One-sided improvement on $\omega$ & \textbf{Closed}: $\tfrac32\max p_3(\mu)=1.4657>\theta_0(12)$ already \\
+A transfer inequality coupling $p_3(\mu)$ to $p_3(\omega)$ & \textbf{Open, and it is what the route now needs.} No candidate is in hand \\
+\bottomrule
+\end{longtable}
+
+\textbf{The route has no live lead.} What it has is a reformulation that is provably not vacuous (the supporting line $\tfrac32x-\tfrac12y=\theta_0(12)$ touches the realisable region exactly at the conjectured maximizer), together with two closures that were paid for and a correction to Lemma~49's scope. Its own falsifier did not fire.

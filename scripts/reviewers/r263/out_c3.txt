@@ -1,0 +1,26 @@
+  (1) the odd-f cells: the run's VECTOR orbit against the lemma's MAP orbit
+
+   f  n  run: span nu(D)(e_0 x cup^k)  lemma: span nu(D) c_0 (maps)  m_(1)(n)
+   3  3                             3                             3         3   agree
+   3  2                             3                             3         3   agree
+   5  2                            10                            10        10   agree
+   5  3                            15                            15        15   agree
+
+      The two agree because evaluation at e_0 is INJECTIVE on M_(1): a nonzero
+      equivariant V -> V^{tensor f} is injective (V is irreducible), so no
+      nonzero combination of the nu(D)c_0 can kill e_0.  The run's number is
+      therefore right -- for a reason the run never states, and one that fails
+      as soon as lambda is a label whose V_lambda the base vector does not span.
+
+  (2) padded_seed's missing parity guard -- a silent undershoot
+
+      padded_seed(f=4, n=3, e_0 (m=1) into an f=4 slot):  len = 27,  n^f = 81   WRONG NUMBER OF LEGS -- returned silently
+      padded_seed(f=3, n=3, scalar (m=0) into an f=3 slot):  len = 9,  n^f = 27   WRONG NUMBER OF LEGS -- returned silently
+
+      The eight tested cells all have f - m even, so the run never trips it;
+      an added cell with the wrong parity would return a shorter vector and
+      the rank comparison against m_lambda(n) would then be meaningless.
+
+  (3) the log/log inference at n = 1
+      n = 1: no error
+      padded_seed(2, 1, len-2 base) raises RuntimeWarning: divide by zero encountered in scalar divide

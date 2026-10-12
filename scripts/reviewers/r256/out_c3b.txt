@@ -1,0 +1,16 @@
+=== (1) the 'independent' pair splits across two isotypics ===
+  sample 0: tr(X - q/n delta) = 0   traceless part nonzero: True
+  sample 1: tr(X - q/n delta) = 0   traceless part nonzero: True
+  => (W.W)_ij has a nonzero lambda=(2) piece, |W|^2 delta_ij has none.
+     Orthogonal isotypics: no scheme that reads VALUES can report rank 1.
+
+=== (2) dimension of the degree-2, two-free-index covariant space ===
+  diagrams enumerated: 840
+  rank over 50 rows (all n^2 components, 2 samples) = 1
+  rank of the pure-W diagram span = 1: EVERY contraction of two Weyl
+  tensors with two free legs is a multiple of (W.W)_ij (spot check:
+  W_iabc W_jbac = (W.W)_ij / 2, the two-index form of the A = 2C identity).
+  So the validation's second covariant, |W|^2 delta_ij, is not a diagram at
+  all: it needs the metric.  Adding g the space is 2-dimensional, one
+  dimension per isotypic -- NO block of multiplicity >= 2 exists here, and
+  within-block independence is the only thing the programme must certify.

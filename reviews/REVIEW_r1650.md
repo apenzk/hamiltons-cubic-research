@@ -1,0 +1,44 @@
+# REVIEW r1650: L127DnEig.lean (the D_n eigenspaces at θ, θ(−μ) and 0) and r1649's repairs, commit de6caf42
+
+**Verdict: CONFIRMED WITH GAPS.** Every declaration in L127DnEig.lean is correct and faithful, the hypotheses `p, q ≥ 3` and `t ≠ 0` are the right ones, and the audit is 13/13 clean. r1649's G1, G2 and G4 are repaired. G3 recurs in a new form: five of the seven sibling headers now credit L127DnEig with "the eigenspaces" in general, and L127DnDim's header credits it with the `λ_p = λ_q` merge at `p = q`, which is exactly the case left owed.
+
+Reviewer: cold adversarial Gate 2, analysis only. Log: [agent_logs/review-l127dneig.log](../agent_logs/review-l127dneig.log). Screen run: `python3 scripts/misc/axiom_audit.py --only L127DnEig`, a screen of the axioms only ("13/13 clean -- resting on the standard three alone").
+
+Source: [findings/second-order.md](../findings/second-order.md), "#### Lemma L127", the `D_n` row, `σ(L_e|D_n) = {1, λ_p^{p−1}, λ_q^{q−1}, (−μ)^{(p−1)(q−1)}, 0^rest}`, in `L_e` units, so the `M ∘` values are `θ` times these with `θ = t(p + q − 1)`.
+
+## Claims
+
+| # | Claim | Verdict | Notes |
+| --- | --- | --- | --- |
+| 1a | `dnWeights` is `D_n` as a subspace | CONFIRMED | Carrier is `IsWeight` (symmetric, hollow, zero row sums, Families.lean:153), the record's `D_n`. Closure under `+`, `0`, `•` is routine and compiles. |
+| 1b | `KL_of_fox` | CONFIRMED | `K_of_fox` (L127DnExcl.lean:48) gives `Kmat w v a c = μ v a c` at `a ≠ c`, `mem_eigenspace_KL` (L127DnExcl.lean:57) closes the diagonal by hollowness of `v`. The argument order `hw hs hhw hv` matches `K_of_fox`'s. The `a = b` instances of `hf` are trivial (`phi a a = 0`), so the hypothesis is no stronger than the record's. |
+| 1c | `K_of_KL` | CONFIRMED | Reads `KL w u = ν u` at entry `(a, c)`, `a ≠ c`, where `KL` is `Kmat` by definition (L127DnExcl.lean:30). |
+| 2a | `dn_units`: `0 < λ_p < 1`, `0 < λ_q < 1`, `−μ < 0` at `p, q ≥ 3` | CONFIRMED | `λ_p = (p − 2)/(2(p − 1)) ∈ (0, ½)` at `p ≥ 3`, and `dnMu = −(p + q − 2)/(2(p − 1)(q − 1)) < 0`, the record's `−μ`. These bounds give every inequality the three eigenspace proofs use: `1` against `λ_p, λ_q, −μ, 0`; `−μ` against `1, λ_p, λ_q, 0`; `0` against `1, λ_p, λ_q, −μ`. None of the three needs `λ_p ≠ λ_q`, so the `p = q` merge does not touch them. |
+| 2b | `dnθ_ne`, `dnθ_mul_ne` | CONFIRMED | `p + q − 1 ≥ 5`, so `θ ≠ 0` iff `t ≠ 0`. `t ≠ 0` is exactly what is needed: at `t = 0` every `M ∘` value is `0`, the `0`-eigenspace on `D_n` is all of `D_n`, and `dn_eig_cross` (whose value is then `0`) and `dn_eig_zero` both fail, the cross family being nonzero at `p, q ≥ 3`. |
+| 2c | Commit body: `dn_units` shows the unit values "distinct except `λ_p = λ_q` at `p = q`" | CONFIRMED WITH GAPS | True mathematically (`λ_p` is strictly increasing in `p`), but `dn_units` does not declare `λ_p ≠ λ_q` at `p ≠ q`. It is unused here, so nothing rests on it (G3). |
+| 3a | `dn_eig_cross`, `finrank_eig_cross` | CONFIRMED | `⊆`: `dn_decomp` plus `dn_eigen_parts` (through `parts`) zero every part except the cross part, each discharge being `θ·v_i ≠ θ·(−μ)` from 2a. `⊇`: `IsCrossW.isWeight` and `cross_mem_eig` (`sphere_crossW` through `KL_of_fox`). Dimension `(p − 1)(q − 1)` from `finrank_crossSub`, the record's. |
+| 3b | `dn_eig_line`, `finrank_eig_line` | CONFIRMED | Same pattern at value `θ·1`, `⊇` from `sphereWeight_isWeight` and `sphere_line`. Dimension `1` from `finrank_sphereLine`. |
+| 3c | `dn_eig_zero`, `finrank_eig_zero` | CONFIRMED | `⊆` zeroes `c`, the two `λ` parts and the cross part by `θ·r ≠ 0` at `r = 1, λ_p, λ_q, −μ`. `⊇` from `sphere_zero`, `sphere_zero_compl` and `IsWithinW.isWeight`. Dimension `(binom p 2 − p) + (binom q 2 − q)` from `finrank_withinSub` twice and `finrank_sup_add_finrank_inf_eq`. Natural subtraction is safe (`binom p 2 ≥ p` at `p ≥ 3`) and the value equals the record's `p(p − 3)/2 + q(q − 3)/2`. |
+| 3d | `withinSub_disjoint` | CONFIRMED | At `a ∈ T`, `a ∉ Tᶜ` kills the entry through the `Tᶜ` support clause, at `a ∉ T` the `T` clause does. Needs no hypothesis, as stated. |
+| 4a | Fidelity: "the eigenspace of `M ∘` on `D_n`" as `dnWeights ⊓ (KL w).eigenspace ν` | CONFIRMED | For `u ∈ D_n`, `KL w u = ν u` is equivalent to `M ∘ diagOp u = ν diagOp u` on every `φ_ab` (`KL_of_fox`, `K_of_KL`, `foxProd_diag`), and hence on every bivector (`eig_all_of_phi`, L127DnSpan). The intersection is the eigenspace of the restriction whether or not invariance is used, and invariance holds anyway since the eigen-families span `D_n`. `KL`'s zeroed diagonal is invisible on hollow `u`. The `L_e`/`M ∘` passage (`θ` factor) is L127Le's and is stated in the header as values `θ·(unit)`. |
+| 4b | Nothing claimed in L127DnEig beyond what is declared | CONFIRMED | The header lists exactly the six eigenspace theorems plus the three support declarations, and line 13's distinctness remark is context (2c). |
+| 4c | θλ_p and θλ_q eigenspaces honestly owed | CONFIRMED WITH GAPS | L127DnEig.lean:24-25 and L127DnMult.lean:22-23 owe them with the right dimensions (`p − 1`, `q − 1`, and `2(p − 1)` at `p = q`). The INDEX row's **Owed** says only "the θλ_p- and θλ_q-eigenspaces' dimensions", omitting the eigenspace equalities (G2). |
+| 5a | r1649 G1 (`t ≠ 0`) | CONFIRMED | L127DnMult.lean header and the INDEX row now say `t ≠ 0` and that every family carries `0` at `t = 0`. |
+| 5b | r1649 G2 (eigenspace equality undeclared) | CONFIRMED | Declared for three of five values, the other two named as owed in L127DnMult and L127DnEig. |
+| 5c | r1649 G3 (one wording across the headers) | REFUTED as a repair | See G1 below: L127Dn.lean:26, L127DnUnits.lean:26, L127DnSpan.lean:31, L127DnExcl.lean:20 and L127DnDirect.lean:18 credit L127DnEig with "the eigenspaces" (Excl and Direct: "and their dimensions") without the three-of-five qualifier, while L127DnMult.lean:22-23 and L127DnEig.lean:24-25 state the qualifier. L127DnDim.lean:27-28 says L127DnEig turns the family dimensions into eigenspace dimensions "added where values coincide (`λ_p = λ_q` at `p = q` and the two zeros)", and the first of those coincidences is the owed case. The seven headers are not mutually consistent. |
+| 5d | r1649 G4 (L127Dn.lean stale spanning line) | CONFIRMED | L127Dn.lean:25 now cites L127DnSpan's spanning at `p, q ≥ 3`. |
+| 6 | Axiom audit | CONFIRMED | 13/13 clean on the standard three, matching the commit body. Import present at lean/HamiltonsCubic.lean:170. The INDEX passage omits the "13/13 on the standard three" count its siblings carry (G3). |
+
+## What would break each claim, and where I looked
+
+- **Claims 2–3**: a pair of unit values that coincide at some `p, q ≥ 3` and is used as distinct. I listed every inequality the three proofs discharge and checked each against `dn_units`'s bounds: all are sign or `< 1` separations, none is `λ_p` against `λ_q`. For `t ≠ 0`, the break is `t = 0`, where each equality fails as described in 2b.
+- **Claim 3c**: an overlap of the two zero families making the finrank sum wrong. `withinSub_disjoint` rules it out, and I checked its two support cases by hand.
+- **Claim 4a**: a vector in `dnWeights ⊓ eigenspace` that is not an `M ∘` eigenvector on bivectors, or the reverse. `KL_of_fox` and `K_of_KL` are converse directions on hollow symmetric inputs, which every weight is, and I traced both to L127DnExcl.lean.
+- **Claim 5**: any header crediting L127DnEig with a declaration it lacks. I grepped every L127Dn*.lean header for "L127DnEig" and "Not yet" and read each hit against the file's declarations.
+
+## Gaps
+
+- **G1 (prose, minor, downstream), [L127Dn.lean:26](../lean/HamiltonsCubic/Results/L127Dn.lean), [L127DnUnits.lean:26](../lean/HamiltonsCubic/Results/L127DnUnits.lean), [L127DnSpan.lean:31](../lean/HamiltonsCubic/Results/L127DnSpan.lean), [L127DnExcl.lean:20](../lean/HamiltonsCubic/Results/L127DnExcl.lean), [L127DnDirect.lean:18](../lean/HamiltonsCubic/Results/L127DnDirect.lean), [L127DnDim.lean:27-28](../lean/HamiltonsCubic/Results/L127DnDim.lean).** Each credits L127DnEig with the eigenspaces in general. Qualify each as "at `θ`, `θ(−μ)` and `0`, the `θ λ_p` and `θ λ_q` ones owed", the wording L127DnMult.lean:22-23 already uses. In L127DnDim drop or re-attribute the `λ_p = λ_q` merge, which is owed.
+- **G2 (prose, minor), [lean/INDEX.md:495](../lean/INDEX.md), the L127 row's **Owed**.** "the θλ_p- and θλ_q-eigenspaces' dimensions" should read "the θλ_p- and θλ_q-eigenspaces and their dimensions", matching L127DnEig.lean:24.
+- **G3 (prose, minor), [lean/INDEX.md:495](../lean/INDEX.md), passage "And the eigenspaces as declarations".** Add the audit count "13/13 on the standard three" as the sibling passages do.
+- **G4 (record only), commit de6caf42's body.** "dn_units ... the unit values ... are distinct except λ_p = λ_q at p = q" credits `dn_units` with a distinctness it does not declare. Nothing depends on it. Noted here since commits are not amended.

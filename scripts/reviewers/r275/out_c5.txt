@@ -1,0 +1,32 @@
+== the stationarity equation, derived symbolically ==
+   d/dk numerator  = 3*(alpha*k**2 - alpha + c*k - k**2)/(sqrt(1 - k)*sqrt(k + 1))    (paper: (1-alpha)k^2 - c k + alpha = 0)
+
+== gamma_max at c=1: closed form check against (1+alpha)sqrt(1-2alpha) ==
+   alpha=0.05000   gamma_max(c=1)=0.996117463   (1+a)sqrt(1-2a)=0.996117463   sqrt(1-2a(1+a))=0.946044396
+   alpha=0.15000   gamma_max(c=1)=0.962159031   (1+a)sqrt(1-2a)=0.962159031   sqrt(1-2a(1+a))=0.809320703
+   alpha=0.25000   gamma_max(c=1)=0.883883476   (1+a)sqrt(1-2a)=0.883883476   sqrt(1-2a(1+a))=0.612372436
+   alpha=0.33333   gamma_max(c=1)=0.769800359   (1+a)sqrt(1-2a)=0.769800359   sqrt(1-2a(1+a))=0.333333333
+
+== the closing estimate at the binding endpoint alpha = 1/3 ==
+      n   theta_0(n)   c=sqrt(2/3)theta_0    gamma_max      g1(1/3)  verdict
+     10  1.200000000          0.979795897  0.769800359 +0.000000000  FAILS (needs <0)
+     11  1.219673442          0.995859195  0.769800359 +0.000000000  FAILS (needs <0)
+   11.2915026  1.224744871          1.000000000  0.769800359 +0.000000000  FAILS (needs <0)
+     12  1.236033081          1.009216785  0.783805520 +0.006064413  FAILS (needs <0)
+     14  1.261680124          1.030157507  0.814467864 +0.019341597  FAILS (needs <0)
+     16  1.280868846          1.045825033  0.836578634 +0.028915841  FAILS (needs <0)
+     20  1.307669683          1.067707825  0.866541811 +0.041890278  FAILS (needs <0)
+    100  1.392982412          1.137365377  0.956948533 +0.081037537  FAILS (needs <0)
+
+   at c=1 exactly:  g1(1/3) = 0.0    and gamma_max(1/3,1) = 0.769800358919501  vs 4/(3 sqrt3) = 0.769800358919501
+   so the sign of the closing estimate at alpha=1/3 is EXACTLY sign(c-1),
+   and c > 1  <=>  sqrt(2/3) Theta > 1  <=>  Theta > sqrt(3/2) = P(W_CP2),
+   i.e. exactly the statement that W_CP2 has stopped being the global maximiser.
+   theta_0(n) = sqrt(3/2) at n = 6 + 2 sqrt7 = 11.291502622129181 -- the same crossover route M's link (c) uses.
+
+== how wide is the failure window in alpha? ==
+   n=  12  c=1.009216785   g1>=0 on alpha in [0.322283, 0.333333]   width 0.011050   max g1 +nan
+   n=  14  c=1.030157507   g1>=0 on alpha in [0.302467, 0.333333]   width 0.030867   max g1 +nan
+   n=  16  c=1.045825033   g1>=0 on alpha in [0.290183, 0.333333]   width 0.043150   max g1 +nan
+   n=  20  c=1.067707825   g1>=0 on alpha in [0.275033, 0.333333]   width 0.058300   max g1 +nan
+   n= 100  c=1.137365377   g1>=0 on alpha in [0.234983, 0.333333]   width 0.098350   max g1 +nan

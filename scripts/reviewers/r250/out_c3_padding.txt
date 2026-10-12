@@ -1,0 +1,63 @@
+(1)+(2) the padding inclusion, and diagram values under it
+  source Weyl tensor           n=5   Weyl checks: PASS
+  padded 5->6                  n=6   Weyl checks: PASS
+      A = WW                 5->6: EQUAL   value = 4687/12
+      C = W_abcd W_acbd      5->6: EQUAL   value = 4687/24
+      I1 = tr M^3            5->6: EQUAL   value = -42029/288
+      I2 = tr B^3            5->6: EQUAL   value = -42029/576
+      free-loop diagram      5->6: ratio 6/5 = n/m -> nonzero scalar, independence preserved
+  padded 5->7                  n=7   Weyl checks: PASS
+      A = WW                 5->7: EQUAL   value = 4687/12
+      C = W_abcd W_acbd      5->7: EQUAL   value = 4687/24
+      I1 = tr M^3            5->7: EQUAL   value = -42029/288
+      I2 = tr B^3            5->7: EQUAL   value = -42029/576
+      free-loop diagram      5->7: ratio 7/5 = n/m -> nonzero scalar, independence preserved
+  padded 5->9                  n=9   Weyl checks: PASS
+      A = WW                 5->9: EQUAL   value = 4687/12
+      C = W_abcd W_acbd      5->9: EQUAL   value = 4687/24
+      I1 = tr M^3            5->9: EQUAL   value = -42029/288
+      I2 = tr B^3            5->9: EQUAL   value = -42029/576
+      free-loop diagram      5->9: ratio 9/5 = n/m -> nonzero scalar, independence preserved
+  source Weyl tensor           n=6   Weyl checks: PASS
+  padded 6->8                  n=8   Weyl checks: PASS
+      A = WW                 6->8: EQUAL   value = 541417/480
+      C = W_abcd W_acbd      6->8: EQUAL   value = 541417/960
+      I1 = tr M^3            6->8: EQUAL   value = -120580211/57600
+      I2 = tr B^3            6->8: EQUAL   value = -57774799/230400
+      free-loop diagram      6->8: ratio 4/3 = n/m -> nonzero scalar, independence preserved
+
+(3) the direction, stated as linear algebra
+      T: Fun(W_n) -> Fun(W_m), f |-> f o iota, is linear
+      T(J_D^(n)) = J_D^(m)  (line (2))
+      {T v_i} independent => {v_i} independent   [standard]
+      so independence at m=12 => independence at every n >= 12.
+
+(4) the converse is FALSE -- exact Brauer witness, 8 legs, 105 matchings
+      n=3: 105 matchings, Gram rank 91 -> DEPENDENT
+      n=4: 105 matchings, Gram rank 105 -> independent
+      n=5: 105 matchings, Gram rank 105 -> independent
+      independence at n=4 with dependence at n=3: the downward
+      direction fails, so the direction of step 2 is load-bearing.
+
+(5) the same drop, for the very objects at issue: two REDUCED cubic
+    contraction diagrams on Weyl tensors, I1 = tr M^3 and I2 = tr B^3
+      n=4: sample rank of (I1, I2) = 1  I2/I1 = 1/2 on every sample
+      n=5: sample rank of (I1, I2) = 1  I2/I1 = 1/2 on every sample
+      n=6: sample rank of (I1, I2) = 2
+      n=7: sample rank of (I1, I2) = 2
+      DEPENDENT at n=4,5 (I2 = I1/2 identically), INDEPENDENT at n>=6:
+      two reduced diagrams independent at the larger dimension and
+      dependent at the smaller.  Downward transfer is false for the
+      exact class of objects claim 3 speaks about.
+
+(6) the ONE hypothesis the step needs, and a counterexample to dropping it
+      the carrier must have n-INDEPENDENT coefficients.  Let I1, I2 be the
+      two diagrams above, independent as functions for every n >= 6 (rank
+      is non-decreasing in n by padding itself).  Put
+          J1^(n) = I1 + (1/n) I2,      J2^(n) = I1 + (1/24) I2.
+      At n=12 these are I1 + I2/12 and I1 + I2/24: INDEPENDENT.
+      At n=24 they are the same function: DEPENDENT.
+      Nothing is wrong with the padding map; the level-12 family is simply
+      not the restriction of the level-24 family once coefficients see n.
+      Trace removal introduces exactly such coefficients (1/(n-2), 1/n),
+      so the 184 covariants must be carried by PROJECTOR-FREE diagrams.

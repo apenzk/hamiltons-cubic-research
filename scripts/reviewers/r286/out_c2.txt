@@ -1,0 +1,35 @@
+[A] n=8: W* crit residual 2.220e-16, theta 1.145643923739, theta_0(n) 1.145643923739
+
+[A] the check AT the critical point W* (what commit 10be9f8 ran):
+    for each candidate gradient G(W): predicted <G,V> vs FD dP[V], V tangential Weyl
+   TRUE   3Q(W)       pred max|.| 3.123e-17   meas max|.| 0.000e+00   max|pred-meas| 3.123e-17
+   FALSE  7Q(W)       pred max|.| 4.163e-17   meas max|.| 0.000e+00   max|pred-meas| 4.163e-17
+   FALSE  3W^2        pred max|.| 2.082e-17   meas max|.| 0.000e+00   max|pred-meas| 2.082e-17
+   FALSE  3W#         pred max|.| 5.898e-17   meas max|.| 0.000e+00   max|pred-meas| 5.898e-17
+   FALSE  0           pred max|.| 0.000e+00   meas max|.| 0.000e+00   max|pred-meas| 0.000e+00
+   FALSE  3Q(W)+W^3   pred max|.| 3.469e-17   meas max|.| 0.000e+00   max|pred-meas| 3.469e-17
+
+[A] the SAME candidates at a random NON-critical Weyl point (a test with power):
+   FD dP[V] =  2.2210586648e-02
+   TRUE   3Q(W)       pred  2.2210586650e-02   rel err 7.772e-11
+   FALSE  7Q(W)       pred  5.1824702182e-02   rel err 1.333e+00
+   FALSE  3W^2        pred  1.1348560924e-02   rel err 4.890e-01
+   FALSE  3W#         pred  1.0862025726e-02   rel err 5.110e-01
+   FALSE  0           pred  0.0000000000e+00   rel err 1.000e+00
+   FALSE  3Q(W)+W^3   pred  2.0406081290e-02   rel err 8.125e-02
+
+[B] does Q map Weyl_n into Weyl_n?
+   n= 6 sample 0: relative deviation of Q(W) from Weyl_n = 5.528e-16
+   n= 6 sample 1: relative deviation of Q(W) from Weyl_n = 4.450e-16
+   n= 8 sample 0: relative deviation of Q(W) from Weyl_n = 6.273e-16
+   n= 8 sample 1: relative deviation of Q(W) from Weyl_n = 7.253e-16
+   n=10 sample 0: relative deviation of Q(W) from Weyl_n = 7.842e-16
+   n=10 sample 1: relative deviation of Q(W) from Weyl_n = 7.388e-16
+
+[C] witness: C = R_+ W* satisfies route F's stated theorem verbatim
+   n=8: Q(W*) - theta W* = 2.220e-16  (so Q is TANGENT to the ray: the ray is invariant)
+        C cap S = {W*}, P(W*) = 1.145643923739 = theta_0(8) = 1.145643923739, so P <= theta_0 on C cap S
+        and C contains the sphere-product ray by construction.
+   n=12: Q(W*) - theta W* = 5.375e-16  (so Q is TANGENT to the ray: the ray is invariant)
+        C cap S = {W*}, P(W*) = 1.236033081183 = theta_0(12) = 1.236033081183, so P <= theta_0 on C cap S
+        and C contains the sphere-product ray by construction.

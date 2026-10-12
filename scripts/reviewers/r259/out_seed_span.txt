@@ -1,0 +1,20 @@
+====================================================================================
+steps (ii) and (iii) in miniature at f = 4, trivial label
+====================================================================================
+  n=2   dim M_triv = 3   dim e.M_triv = 1   span{nu(D) c_0} = 3   span{e nu(D) c_0} = 1   e.c_0 = 0: True   semisimple B_4(2): False
+  n=3   dim M_triv = 3   dim e.M_triv = 1   span{nu(D) c_0} = 3   span{e nu(D) c_0} = 1   e.c_0 = 0: True   semisimple B_4(3): True
+  n=4   dim M_triv = 3   dim e.M_triv = 1   span{nu(D) c_0} = 3   span{e nu(D) c_0} = 1   e.c_0 = 0: True   semisimple B_4(4): True
+  n=5   dim M_triv = 3   dim e.M_triv = 1   span{nu(D) c_0} = 3   span{e nu(D) c_0} = 1   e.c_0 = 0: True   semisimple B_4(5): True
+
+  Every row: one seed generates the whole multiplicity space, and the
+  projected seeds span the whole projected space -- INCLUDING at n = 2,
+  where n < f-1 = 3, B_4(2) is NOT semisimple, and the reviewed
+  script's own cell-module identity fails (35 against 82).
+  And the seed is annihilated by e at every row, so it lies OUTSIDE the
+  covariant space it generates.
+
+====================================================================================
+f = 6, e = A_12 A_34 A_56 -- a target of dimension > 1, both n below the threshold n >= f-1 = 5
+====================================================================================
+  n=2   dim M_triv = 10   dim e.M_triv = 0   span{nu(D) c_0} = 10   span{e nu(D) c_0} = 0   e.c_0 = 0: True   semisimple B_6(2): False
+  n=3   dim M_triv = 15   dim e.M_triv = 1   span{nu(D) c_0} = 15   span{e nu(D) c_0} = 1   e.c_0 = 0: True   semisimple B_6(3): False

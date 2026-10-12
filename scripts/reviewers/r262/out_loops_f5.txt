@@ -1,0 +1,6 @@
+  f=5: 0/945 rows, disagreements so far 0
+  f=5: 200/945 rows, disagreements so far 0
+  f=5: 400/945 rows, disagreements so far 0
+  f=5: 600/945 rows, disagreements so far 0
+  f=5: 800/945 rows, disagreements so far 0
+  f=5: 893025 ordered pairs, DISAGREEMENTS = 0

@@ -1,0 +1,6 @@
+# Li, Usevich, Comon 2018, approximate diagonalization of third-order symmetric tensors
+
+- **Source**: Jianze Li, Konstantin Usevich, Pierre Comon, *On approximate diagonalization of third order symmetric tensors by orthogonal transformations*, [arXiv:1804.01358](https://arxiv.org/abs/1804.01358) v1 (2018-04-04), Linear Algebra Appl. (2019). Retrieved 2026-09-28.
+- **Consulted for**: [I121](../../plan.md)'s node, whether a global maximiser of the diagonal mass over orthogonal frames forces structure (a lower bound on the diagonal mass, or near-diagonality) beyond stationarity, via route [R53](../../routes.md).
+- **Statements that matter**: Definition 3.8 (maximally, locally maximally and generally maximally diagonal), Theorem 3.13 (one-plane maximality as a ratio condition), Proposition 5.1 and 5.2 (equivalent forms of GMD = MD).
+- **Verdict**: agreement on the mechanism, nothing transferable on the global maximum. The one-plane finite-angle change is a rational function of $\tan\theta$ determined by its first and second derivatives at $0$, so single-plane maximality is a second-order condition, which is the record's one-plane bound in another setting. The paper characterises stationary and Jacobi-diagonal classes and leaves the structure of the global maximum open (it proves GMD = MD only at $n=2$).

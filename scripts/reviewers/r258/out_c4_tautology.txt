@@ -1,0 +1,34 @@
+blocks of multiplicity > 1 at n=5: 12; widest ((2, 2), 4)
+
+A1  rank of the m columns at each single word position t
+  lambda=(2, 2)   m=4  ranks over all 35 positions: all 4
+  lambda=(4, 2)   m=4  ranks over all 220 positions: all 4
+  lambda=(3, 2)   m=3  ranks over all 105 positions: all 3
+  lambda=(2, 0)   m=2  ranks over all 14 positions: all 2
+  lambda=(3, 0)   m=2  ranks over all 30 positions: all 2
+  lambda=(2, 1)   m=2  ranks over all 35 positions: all 2
+  lambda=(4, 0)   m=2  ranks over all 55 positions: all 2
+  lambda=(3, 1)   m=2  ranks over all 81 positions: all 2
+  lambda=(4, 1)   m=2  ranks over all 154 positions: all 2
+  lambda=(4, 4)   m=2  ranks over all 165 positions: all 2
+  lambda=(4, 3)   m=2  ranks over all 231 positions: all 2
+  lambda=(5, 2)   m=2  ranks over all 390 positions: all 2
+  positions where the read is deficient: 0
+
+A2  does the tuple branch drop anything?
+  stored coefficients: 826486;  with nonzero imaginary part: 387158
+
+A3  re-mix the copies of each block by a random invertible matrix
+  lambda=(2, 2)   m=4  rank after re-mixing: 4
+  lambda=(4, 2)   m=4  rank after re-mixing: 4
+  lambda=(3, 2)   m=3  rank after re-mixing: 3
+  lambda=(2, 0)   m=2  rank after re-mixing: 2
+
+A4  substitute NON-equivariant junk with the same shape
+  lambda=(2, 2)   m=4  rank of random vectors: 4
+  lambda=(4, 2)   m=4  rank of random vectors: 4
+  lambda=(3, 2)   m=3  rank of random vectors: 3
+  lambda=(2, 0)   m=2  rank of random vectors: 2
+
+A5  the one input that fails: a duplicated copy
+  lambda=(2, 2) with copy 1 replaced by copy 0: rank 3 of 4

@@ -1,0 +1,63 @@
+EXACT reproduction (no floats, no sample points):
+
+   dim V  d  multilinear   rank R_d  dim Sym^d      ker  V^d - Sym
+       2  2            4          3          3        1          1
+       2  3            8          4          4        4          4
+       2  4           16          5          5       11         11
+       3  2            9          6          6        3          3
+       3  3           27         10         10       17         17
+       3  4           81         15         15       66         66
+       4  2           16         10         10        6          6
+       4  3           64         20         20       44         44
+       4  4          256         35         35      221        221
+
+  rank == dim Sym^d at every cell: True
+
+WHAT THE TWO ASSERTS TEST.
+  assert 1:  r == sd
+  assert 2:  total - r == total - sd
+Assert 2 is assert 1 with `total -` applied to both sides.  Subtracting the same
+integer from both sides of an equality that the line above already asserted cannot
+fail unless assert 1 has already fired.  It is an algebraic restatement, not a
+second test.  Proof: for any ints a,b,t,  a == b  <->  t-a == t-b.
+
+WHAT ASSERT 1 TESTS.  rank(R_d) on ALL multilinear functionals equals
+dim Sym^d(V*).  This is Theorem I.2.1 (surjectivity: every degree-d polynomial IS a
+restitution) plus linear independence of monomials.  It is a fact about the FULL
+space (V^{tensor d})^*, and it is true for every finite-dimensional V and every d.
+It says nothing about a SUBSPACE of functionals, which is what the record's 10,395
+gamma_D are.
+
+EVALUATION-POINT COUNT.  The script builds a matrix with
+    V=2 d=2:  32 points x 4 columns; rank <= min = 4, needed = 3
+    V=2 d=3:  36 points x 8 columns; rank <= min = 8, needed = 4
+    V=2 d=4:  40 points x 16 columns; rank <= min = 16, needed = 5
+    V=3 d=2:  44 points x 9 columns; rank <= min = 9, needed = 6
+    V=3 d=3:  60 points x 27 columns; rank <= min = 27, needed = 10
+    V=3 d=4:  80 points x 81 columns; rank <= min = 80, needed = 15
+    V=4 d=2:  60 points x 16 columns; rank <= min = 16, needed = 10
+    V=4 d=3:  100 points x 64 columns; rank <= min = 64, needed = 20
+    V=4 d=4:  160 points x 256 columns; rank <= min = 160, needed = 35
+  rank(sampled) <= rank(true) always, so the count only ever LOWER-bounds.
+  It happens to suffice here because rank(true) = dim Sym^d(V*) <= number of points
+  by construction (4x + 20), so a full-rank sample is possible -- but the script
+  never checks the sampled rank against an upper bound it derived independently.
+  The certificate is: monomials of degree d in V variables are linearly independent,
+  which is exact and needs no points.
+
+SCALE SENSITIVITY OF `np.linalg.matrix_rank(M, tol=1e-8)` (absolute tol):
+
+   dim V  d   scale c   rank  needed
+       3  3     1e+00     10      10
+       3  3     1e-02     10      10
+       3  3     1e-03      7      10   <-- assert would FIRE on identical mathematics
+       4  4     1e+00     35      35
+       4  4     1e-02     35      35
+       4  4     1e-03      0      35   <-- assert would FIRE on identical mathematics
+
+  The mathematics is scale-invariant; the test is not.  r260's own script scales
+  the tolerance (`tol=1e-8 * max(1.0, abs(M).max())`); run_restitution_kernel.py
+  does not.  With standard normals the margin happens to be comfortable, so the
+  published table is right -- but the check is calibrated to the sampler rather
+  than to the claim.
+

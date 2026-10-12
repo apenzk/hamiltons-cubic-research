@@ -1,0 +1,51 @@
+certificate: 47 coordinates, rounding denominator 100000
+  actual coordinate denominators: 20 distinct, largest 49895950104000000
+shape [3, 3, 2, 1, 2, 1, 2, 1, 2, 2, 1, 1, 1, 1, 1, 1], sum of squares 47
+
+  block 0 (3x3): charpoly coefficients ['+1', '-0.52936', '+0.0231448', '-0.000264529']  -> positive definite True
+  block 1 (3x3): charpoly coefficients ['+1', '-1.71289', '+0.0756324', '-0.000843341']  -> positive definite True
+  block 2 (2x2): charpoly coefficients ['+1', '-16.8089', '+0.392194']  -> positive definite True
+  block 4 (2x2): charpoly coefficients ['+1', '-0.04674', '+0.000546157']  -> positive definite True
+  block 6 (2x2): charpoly coefficients ['+1', '-0.53578', '+0.0119742']  -> positive definite True
+  block 8 (2x2): charpoly coefficients ['+1', '-0.11776', '+0.00220549']  -> positive definite True
+  block 9 (2x2): charpoly coefficients ['+1', '-2.83092', '+0.508524']  -> positive definite True
+
+EVERY BLOCK POSITIVE DEFINITE (as packed): True
+EVERY BLOCK POSITIVE DEFINITE (off-diagonals halved, the form the
+  certificate actually represents): True
+
+The eigenvalues are the roots of these polynomials; all coefficients
+alternate in sign, so every root is strictly positive.  Exact over Q,
+with no elimination and no floating point anywhere in this file.
+
+WHY 40 EQUATIONS GIVE AN IDENTITY, which is the step that turns this
+point into a certificate:
+
+  The point satisfies the sextic map's equations at 40 SAMPLE POINTS.
+  That is agreement of two polynomials at 40 places, not equality --
+  unless evaluation at those points is injective on the space both
+  polynomials live in.
+
+  THE ARGUMENT THIS FILE FIRST GAVE WAS CIRCULAR, and reviewer 214 said
+  so.  It compared rank(ev . mu) with rank(mu) and called both measured;
+  only the first is.  Sampling's inequality runs rank(ev . mu) <=
+  rank(mu), so equality cannot be inferred from the sampled side alone.
+
+  REVIEWER 213'S ARGUMENT NEEDS NO STATEMENT ABOUT mu AT ALL, and it is
+  the one that belongs here.  Every row entry is an O(5)-invariant
+  sextic, and so is F_5, so both sides live in (Sym^6 Weyl_5)^O(5),
+  which is 14-dimensional -- computed by Weyl integration, by Kostant,
+  and by Sage plethysm.  Building 120 explicit invariant sextics as
+  complete contractions of six copies of W and evaluating them at the 40
+  points gives rank 14 against a cap of 14, with a 14-decade singular
+  value gap.  So evaluation at these points is injective on EVERY
+  invariant sextic, and agreement there is identity outright.
+
+  Independent of the argument, reviewer 213 ran the pipeline at 80 points
+  with the first 40 reproducing the published dump byte for byte, and
+  checked row(W).x == F_5(W) at all 80: 0 mismatches, including 0 of the
+  40 HELD OUT from the solve.  Reviewer 214 did the same at 12 fresh
+  points from an unused seed, 12 of 12.
+
+  Therefore the sextic of this Gram equals F_5 identically, and being
+  positive definite it exhibits F_5 as a sum of squares of cubics from K.

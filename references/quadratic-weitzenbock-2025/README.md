@@ -1,0 +1,7 @@
+# Wang & Yang 2025, Weitzenböck–Bochner–Kodaira formulas with quadratic curvature terms
+
+- **Link**: [arXiv:2509.00468](https://arxiv.org/abs/2509.00468)
+- **Identifier**: arXiv:2509.00468v1 [math.DG], 30 Aug 2025. 8 pages.
+- **Retrieved**: 2026-08-23 (file date of [paper.pdf](https://arxiv.org/abs/2509.00468)).
+- **Consulted for**: a pointwise-algebraic form of the Weitzenböck curvature term as a quadratic form in the curvature operator on $\Lambda^2$, in a shape a Weyl tensor can be fed to.
+- **Verdict**: **a second, cleaner exposition rather than new literature, usable for its form, worthless for a bound.** The paper is mostly Kähler; Theorem 1.8 = Theorem 6.1 is the Riemannian statement and the only part that touches this project. It writes $\langle\Delta_d\omega,\omega\rangle=\langle D^*D\omega,\omega\rangle+\langle(\mathfrak R\otimes\mathrm{Id})(\mathbb T_\omega),\mathbb T_\omega\rangle$ with $\mathbb T_\omega(\alpha,\beta)=\alpha\wedge I_{\beta^\sharp}\omega-\beta\wedge I_{\alpha^\sharp}\omega$, so positivity of $\mathfrak R$ transfers to $\Theta_p$ for every $p$ at once. **Theorem 6.2 is established in Petersen–Wink and the authors say so**, so the Riemannian half duplicates [petersen-wink-2019-bochner-technique](../petersen-wink-2019-bochner-technique/README.md). It supplies **no bound on $\theta$**: for Ricci-flat $W$, $\Theta_2=-2\mathring W$ rather than $0$, so no free constraint drops out. What it does add is the identity stated for every degree $p$ simultaneously and pointwise. Transcription in [notes.md](notes.md).

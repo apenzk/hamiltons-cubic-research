@@ -1,0 +1,11 @@
+baseline: 61 labels from the covariant logs
+  unmodified                               checks PASS   (max rows 6, threshold 12)
+  A: (2,2,2,2,2,2) removed                 ASSERT FIRES: threshold 10
+  B: 7-row label injected                  ASSERT FIRES: rows
+  C: col1+col2 = 13 label injected         ASSERT FIRES: rows
+
+D: multiplicities moved (2^6): 1 -> 7 and (4): 3 -> 99, labels untouched
+  D: multiplicity drift                    checks PASS   (max rows 6, threshold 12)
+   the file's label set is IDENTICAL under D, so no assert in it can see this.
+   what does see it: sum mult*dim_O(n) no longer equals binom(dim Weyl_n + 2, 3)
+   (real total 184 vs drifted 286)

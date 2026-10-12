@@ -1,0 +1,37 @@
+W1  is a distinct-entry basis tensor e_I inside V_lambda?
+  e_I = e_0 (x) e_1 (x) e_2 (x) e_3, distinct entries, traceless (every g-contraction is 0 since the entries differ)
+  P_(2,2) e_I == e_I ?  False   (support size 12)
+  => 'traceless hence already in V_lambda' is invalid: e_I is traceless
+     and is NOT fixed by the projector onto the (2,2) isotypic.
+
+  T = the fully antisymmetric tensor on slots 0..3:
+     T_{0123} = 1 (a distinct-entry component, so the read sees it)
+     every trace of T vanishes, so T is traceless
+     P_(2,2) T = 0 ?  True
+  So <T, e_I> = 1 while <P_(2,2) T, e_I> = 0: the distinct-entry read is
+  NOT a read of the projected object.  The read reports rank 1 for a pair
+  {0, T} whose images in V_(2,2) are equal -- r256's degree-3 hazard.
+
+  liveness at n=12.  blocks with |lambda| = 2: {(2, 0, 0, 0, 0, 0): 3}
+                     blocks with |lambda| = 4: {(4, 0, 0, 0, 0, 0): 3, (3, 1, 0, 0, 0, 0): 3, (2, 2, 0, 0, 0, 0): 8, (2, 1, 1, 0, 0, 0): 3, (1, 1, 1, 1, 0, 0): 3}
+  At |lambda| = 2 only (2) occurs, so a genuine covariant has no
+  antisymmetric part and the plan's sentence is accidentally harmless --
+  at exactly the size every refuted attempt used.  At |lambda| = 4 five
+  inequivalent shapes occur at once, so a raw covariant carries all five
+  and a distinct-entry read reads their sum.
+
+
+W2  is the highest-weight-coordinate read two-sided at a finite sample?
+  family: s^a * traceless((W.W)^k), a=0..2, k=1..4  -- 12 covariants into V_(2)
+  rank over every component of every sample: 12 of 12
+  the hw coordinate gives 8 rational conditions (4 samples x 2)
+  nullspace of the hw-read matrix: dimension 4
+  D = the corresponding covariant: nonzero at 92 (sample, component) pairs
+  D's hw reads: [[Fraction(0, 1), Fraction(0, 1)], [Fraction(0, 1), Fraction(0, 1)], [Fraction(0, 1), Fraction(0, 1)], [Fraction(0, 1), Fraction(0, 1)]]
+
+  the pair (Y, Y+D), both nonzero covariants into V_(2):
+    rank at the HIGHEST-WEIGHT COORDINATE over the 4 samples: 1
+    rank over every component of the same 4 samples:          2
+  A two-sided read cannot return 1 for an independent pair.  The
+  two-sidedness r255 derived is 'vanishing on ALL W forces F = 0'; at a
+  finite sample the hw read is exactly as one-sided as a component read.

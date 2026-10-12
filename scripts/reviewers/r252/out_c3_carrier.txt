@@ -1,0 +1,34 @@
+(A) r250's counterexample, exact, with 24 replaced by 7
+    J_1 = I_1 + I_2/n,  J_2 = I_1 + I_2/7
+    n=6: rank[I_1,I_2] = 2   rank[J_1,J_2] = 2   INDEPENDENT
+    n=7: rank[I_1,I_2] = 2   rank[J_1,J_2] = 1   DEPENDENT -- J_1 == J_2
+          J_1 == J_2 on every sample: True
+
+(A') the real pair: I_1, I_2 independent at n = 12, certified mod p
+    samples (I_1, I_2) mod p: [(988696, 496397), (738894, 479748)]
+    2x2 minor mod p = 841073  ->  NONZERO: I_1, I_2 independent at n=12 over Q
+    at n = 24: J_1 = I_1 + I_2/24 = J_2 by substitution -- IDENTICAL.
+    r250's counterexample REPRODUCES.
+
+(B) how much an n-dependent coefficient actually costs
+    A carrier matrix A(n) with entries in Q(n) whose rank is full at
+    n = 12 has full rank at every n outside the common root locus of
+    its maximal minors -- a FINITE, computable set.
+    J_1/J_2 carrier matrix det = (n - 24)/(24*n), roots = [24]
+    So r250's witness is a rank drop at a single root, not a generic
+    failure: the transfer survives as 'every n >= 12 except the roots
+    of an explicit polynomial', which Sturm/root isolation decides.
+
+(C) projector-free carriers EXIST: move the projector onto the test tensor
+    n=5: P idempotent 1.67e-16, self-adjoint 1.11e-15, fixes Weyl 1.39e-16
+          rank of {F_c = P o D_c} = 3   rank of {G_c = <D_c(.),U>} = 3   EQUAL
+          sharp case D_6 (pure Ricci image): |F_6| = 2.13e-14, |G_6| = 5.68e-14  (both vanish, as the theorem says)
+    n=6: P idempotent 2.22e-16, self-adjoint 8.88e-16, fixes Weyl 2.22e-16
+          rank of {F_c = P o D_c} = 3   rank of {G_c = <D_c(.),U>} = 3   EQUAL
+          sharp case D_6 (pure Ricci image): |F_6| = 2.13e-14, |G_6| = 1.63e-13  (both vanish, as the theorem says)
+
+(C') the G-family pads exactly, so the transfer applies to it
+    n=5: <D_3(W), U> = -22463129/864
+    padded 5->6: -22463129/864   EQUAL
+    padded 5->7: -22463129/864   EQUAL
+

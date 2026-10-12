@@ -1,0 +1,38 @@
+# Results the dependency graph does not draw, and why.
+#
+# A result is here when no dependency edge reaches it in either direction.
+# That is a claim, not an omission: every citation naming it was read and
+# found to be a duplication, correction, comparison or withdrawal note
+# rather than a dependency. check_figure_dag.py asserts that the record's
+# numbered results are exactly the drawn nodes plus this list, so a result
+# that quietly stops being drawn fails rather than disappearing.
+#
+# Regenerate the reasoning with scripts/misc/result_dag_extract.py.
+
+10
+14
+39
+45
+49
+53
+55
+56
+65
+66
+81
+95
+106
+111
+116
+118
+138
+167
+204
+206
+230
+231
+232
+248
+258
+262
+285

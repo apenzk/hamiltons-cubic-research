@@ -1,0 +1,37 @@
+starts: 800   distinct converged critical points: 137
+converged runs landing inside the sigma-cone: 39
+points passing the FULL grading test: 17
+   GRADED: theta=1.054092553 gap=0.210778977 dim m=9 sigma-grades=True
+   GRADED: theta=1.054092553 gap=0.210791752 dim m=9 sigma-grades=True
+   GRADED: theta=1.054092553 gap=0.210798059 dim m=9 sigma-grades=True
+   GRADED: theta=1.054092553 gap=0.210806999 dim m=9 sigma-grades=True
+   GRADED: theta=1.054092553 gap=0.210810707 dim m=9 sigma-grades=True
+   GRADED: theta=1.054092553 gap=0.210814089 dim m=9 sigma-grades=True
+   GRADED: theta=1.054092553 gap=0.210814881 dim m=9 sigma-grades=True
+   GRADED: theta=1.054092553 gap=0.210815192 dim m=9 sigma-grades=True
+   GRADED: theta=1.054092553 gap=0.210815589 dim m=9 sigma-grades=True
+   GRADED: theta=1.054092553 gap=0.210816246 dim m=9 sigma-grades=True
+   GRADED: theta=1.054092553 gap=0.210816449 dim m=9 sigma-grades=True
+   GRADED: theta=1.054092553 gap=0.210816746 dim m=9 sigma-grades=True
+   GRADED: theta=1.054092553 gap=0.210817210 dim m=9 sigma-grades=True
+   GRADED: theta=1.054092553 gap=0.210817352 dim m=9 sigma-grades=True
+   GRADED: theta=1.054092553 gap=0.210817361 dim m=9 sigma-grades=True
+   GRADED: theta=1.054092553 gap=0.210817566 dim m=9 sigma-grades=True
+   GRADED: theta=1.054092553 gap=0.210818231 dim m=9 sigma-grades=True
+
+        gap      theta      S_mmm      S_hhm  dim m  sig? GRADED
+ 1.4577e-09   0.566139     6.0000    14.0000      8     n no
+ 4.0872e-09   0.866025     0.0000    12.0000      7     n no
+ 8.0419e-09   0.566139     6.0000    14.0000      8     n no
+ 8.7115e-09   0.566139     6.0000    14.0000      8     n no
+ 8.9975e-09   0.566139     6.0000    14.0000      8     n no
+ 9.7241e-09   0.566139     6.0000    14.0000      8     n no
+ 1.4339e-08   0.566139     6.0000     6.0000      9     n no
+ 1.4693e-08   0.566139     6.0000     6.0000      9     n no
+ 1.5653e-08   0.566139     6.0000     6.0000      9     n no
+ 1.6573e-08   0.566139     6.0000     6.0000      9     n no
+ 1.6832e-08   0.566139     6.0000     6.0000      9     n no
+ 1.7382e-08   0.566139     6.0000     6.0000      9     n no
+ 1.7652e-08   0.566139     6.0000     6.0000      9     n no
+ 1.8550e-08   0.566139     6.0000     6.0000      9     n no
+ 1.9180e-08   0.566139     6.0000     6.0000      9     n no

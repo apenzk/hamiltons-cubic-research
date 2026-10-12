@@ -1,0 +1,10 @@
+{
+  "research": {
+    "main":     {"standing": "xhigh", "escalated": "xhigh"},
+    "subagent": {"type": "reviewer", "effort": "medium"}
+  },
+  "lean": {
+    "main":     {"standing": "high", "escalated": "high"},
+    "subagent": {"type": "reviewer", "effort": "medium"}
+  }
+}

@@ -1,0 +1,25 @@
+B2  so(5)  dim Weyl_5 = 35
+    blocks 24   sum of multiplicities 41   MAX MULTIPLICITY 4
+      (4, 2): 4
+      (2, 2): 4
+      (3, 2): 3
+      (5, 2): 2
+D4  so(8)  dim Weyl_8 = 300
+    blocks 72   sum of multiplicities 230   MAX MULTIPLICITY 13
+      (3, 2, 1, 0): 13
+      (4, 2, 2, 0): 10
+      (2, 2, 0, 0): 10
+      (4, 3, 1, 0): 8
+B4  so(9)  dim Weyl_9 = 495
+    blocks 67   sum of multiplicities 179   MAX MULTIPLICITY 9
+      (3, 2, 1, 0): 9
+      (4, 2, 2, 0): 8
+      (3, 3, 1, 1): 8
+      (2, 2, 0, 0): 8
+D5  so(10)  dim Weyl_10 = 770
+    blocks 77   sum of multiplicities 205   MAX MULTIPLICITY 9
+      (3, 2, 1, 0, 0): 9
+      (4, 2, 2, 0, 0): 8
+      (3, 3, 1, 1, 0): 8
+      (2, 2, 0, 0, 0): 8
+B5  so(11)  dim Weyl_11 = 1144

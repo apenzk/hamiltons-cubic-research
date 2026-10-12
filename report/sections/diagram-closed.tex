@@ -1,0 +1,239 @@
+\begin{sidewaysfigure}
+\centering
+% ON A LANDSCAPE PAGE the axes swap: this figure's own height becomes the
+% page's horizontal extent, so the height is what binds and scaling on it is
+% exact.  adjustbox's max totalheight does not bind inside sidewaysfigure --
+% it left the goal box clipped off the left edge -- so the cap is set on the
+% dimension that actually decides the fit.
+\resizebox{0.86\textheight}{!}{%
+\begin{tikzpicture}[
+  node distance=6mm and 9mm,
+  font=\sffamily\small,
+  spine/.style={draw=spineink, very thick, fill=spinebg, rounded corners=1pt,
+                text width=62mm, align=center, inner sep=2.6mm},
+  open/.style ={draw=openink, very thick, dashed, fill=openbg, rounded corners=1pt,
+                text width=62mm, align=center, inner sep=2.6mm},
+  stmt/.style ={draw=posedink, very thick, fill=posedbg, rounded corners=1pt,
+                text width=76mm, align=center, inner sep=2.6mm},
+  goal/.style ={draw=openink, very thick, dashed, fill=white, rounded corners=1pt,
+                text width=76mm, align=center, inner sep=2.6mm},
+  win/.style  ={draw=winink, very thick, dashed, fill=winbg, rounded corners=1pt,
+                text width=76mm, align=center, inner sep=2.6mm},
+  lem/.style  ={draw=lemink, fill=lembg, rounded corners=1pt,
+                text width=40mm, align=left, inner sep=2.2mm, font=\sffamily\scriptsize},
+  dead/.style ={draw=deadink, text=deadink, fill=deadbg, rounded corners=1pt,
+                text width=40mm, align=left, inner sep=2.2mm, font=\sffamily\scriptsize},
+  main/.style ={-{Stealth[length=2.4mm]}, spineink, very thick},
+  feed/.style ={-{Stealth[length=2mm]}, lemink, dashed, thick},
+  kill/.style ={-{Stealth[length=2mm]}, deadink, thick},
+  failline/.style ={-{Stealth[length=2.2mm]}, deadink, thick},
+  shut/.style ={draw=deadink, text=deadink, thick, fill=deadbg, rounded corners=1pt,
+                align=center, inner sep=2.2mm, font=\sffamily\scriptsize},
+  stop/.style ={draw=deadink, text=deadink, very thick, fill=deadbg!70, rounded corners=1pt,
+                align=center, inner sep=2.2mm, font=\sffamily\scriptsize},
+  side/.style ={draw=deadink, text=deadink, thick, fill=deadbg, rounded corners=1pt,
+                align=left, inner sep=2.0mm, font=\sffamily\scriptsize},
+]
+
+% ===================== the live routes (Figure 1, copied verbatim into Figure 3) =====================
+% One branch per live strategy under Conjecture A; routes that serve a single step
+% fold into that step's box, and routes held in reserve share the grey box at left.
+% Rows sit at the longest-path depth from Problem P, PITCH 43mm.
+\node[stmt, text width=52mm] (asked) at (0mm,0mm)
+      {\textbf{\color{posedink}Problem P: the goal, exactly as posed}\\[2pt]
+       for $n\ge12$, $P(W)=\langle W,W^2+W^{\#}\rangle$ on $\{\|W\|=1\}\subset\Weyl_n$ is maximized on the Weyl tensor of \emph{products of spheres}\\[2pt] {\scriptsize\S\ref{sec:problem}}};
+\node[spine, text width=52mm] (compact) at (0mm,-43mm)
+      {\textbf{Lemma L0}: the unit sphere is compact\\[1pt] so $\max P$ is attained, at a critical point with $\theta\ge\theta_0(n)$, which also obeys second-order optimality\\[2pt] {\scriptsize\S\ref{sec:twoforms}}};
+\node[spine, text width=52mm] (restate) at (0mm,-86mm)
+      {\textbf{Conjecture A}: the published form\\[1pt] every critical value is $\le\theta_0(n)$, equality only on the balanced orbit\\[2pt] {\scriptsize\S\ref{sec:twoforms}}};
+
+\node[open, text width=38mm] (reserve) at (-168mm,-129mm)
+  {\textbf{\color{openink}Routes held in reserve}\\[1pt] \color{openink}reserve, fallback or stalled: R11, R12, R16, R18, R23, R24, R56\\[1pt] registered, not started: R34, R35, R36, R50, R58, R59};
+\node[spine, text width=38mm] (lift) at (-120mm,-129mm)
+  {\textbf{The lifted diagonal proof}\\[1pt] the diagonal argument lifted off the diagonal locus, its Bianchi defect priced exactly\\[2pt] {\scriptsize L15, L17--L19, \S\ref{app:C}}};
+\node[spine, text width=38mm] (block) at (-72mm,-129mm)
+  {\textbf{Block induction}\\[1pt] $\sup P$ on the block subalgebra $\mathcal S_J$, climbing $\lvert J\rvert$: settled at $\lvert J\rvert=1,2$, and at $3$ on two strata\\[2pt] {\scriptsize L57, L224, L228, \S\ref{sec:blockinduction}}};
+\node[spine, text width=38mm] (tubes) at (-24mm,-129mm)
+  {\textbf{Value-bootstrap tubes}\\[1pt] a maximiser is excluded from an explicit tube at every gapped critical orbit, and four-set blocks are capped\\[2pt] {\scriptsize L216, L217, L220, L221}};
+\node[spine, text width=38mm] (twoval) at (36mm,-129mm)
+  {\textbf{Two eigenvalues suffice}\\[1pt] every critical point with a two-value spectrum has $\theta\le\theta_0(n)$, which closes Problem~P from there\\[2pt] {\scriptsize L105, \S\ref{sec:classsystem}}};
+
+\node[open, text width=38mm] (l16) at (-120mm,-172mm)
+  {\textbf{\color{openink}The defect-penalty inequality}\\[1pt] \color{openink}$P\le\theta_0(n)+\kappa_n\delta^2$, which settles Problem~P outright\\[2pt] {\scriptsize Conjecture L16, R17}};
+\node[open, text width=38mm] (climb) at (-72mm,-172mm)
+  {\textbf{\color{openink}The climb at general $\lvert J\rvert$}\\[1pt] \color{openink}the orthostochastic rung, settled where the blocks commute and open off that stratum\\[2pt] {\scriptsize R27, R28, I106b}};
+\node[open, text width=38mm] (far) at (-24mm,-172mm)
+  {\textbf{\color{openink}The four-set far region}\\[1pt] \color{openink}closed on the equal-$u$ ansatz, and lifting it has no method\\[2pt] {\scriptsize R25, I104, I111}};
+\node[open, text width=38mm] (i73) at (36mm,-172mm)
+  {\textbf{\color{openink}A maximiser has two eigenvalues}\\[1pt] \color{openink}case (a) settled, while case (b) and three values above $\theta_0(n)$ are blocked on an $n^{-3}$ margin at the unbalanced products\\[2pt] {\scriptsize I73, \S\ref{sec:classsystem}}};
+
+\node[open, text width=38mm] (asym) at (36mm,-215mm)
+  {\textbf{\color{openink}Case (b), and asymmetric three-value spectra}\\[1pt] \color{openink}no method, and the separation lemma reaches only off the diagonal locus\\[2pt] {\scriptsize I73, R39, R51}};
+\node[open, text width=38mm] (sym) at (100mm,-215mm)
+  {\textbf{\color{openink}The symmetric three-value family}\\[1pt] \color{openink}reduces to statement H$_\#$, a sharp norm bound for Hamilton's $\#$\\[2pt] {\scriptsize I114, L259, \S\ref{sec:statementH}}};
+
+\node[spine, text width=38mm] (hfromu) at (100mm,-258mm)
+  {\textbf{H$_\#$ follows from U$_{\mathrm s}'$}\\[1pt] uniqueness of stable positive-definite $\#$-idempotents on simple subalgebras, on the light side\\[2pt] {\scriptsize L270, I117}};
+
+\node[spine, text width=38mm] (torus) at (76mm,-301mm)
+  {\textbf{U$_{\mathrm s}'$ where it is settled}\\[1pt] the torus families of $\mathfrak{so}(k)$, $\mathfrak{su}(k)$ at $n\ge14$, $\mathfrak g_2$, $\mathfrak{sp}(2)$, $\mathfrak{sp}(3)$, and $\mathfrak f_4$ to $\mathfrak e_8$ in every embedding\\[2pt] {\scriptsize L277, L281, L282, L286, L287}};
+\node[open, text width=38mm] (offtorus) at (124mm,-301mm)
+  {\textbf{\color{openink}U$_{\mathrm s}'$ elsewhere}\\[1pt] \color{openink}$\mathfrak{sp}(k)$ off equal weights, off the torus families, and $n=12,13$\\[2pt] {\scriptsize R48, R49}};
+
+\node[open, text width=38mm] (mixgap) at (172mm,-129mm)
+  {\textbf{\color{openink}The mixing gap in the maximal frame}\\[1pt] \color{openink}a value dichotomy, (MG), which with Lemma~57 closes Problem~P at every even $n\ge12$, and is blocked on a band of moderate diagonal mass\\[2pt] {\scriptsize R52, I121, L284, \S\ref{sec:mixinggap}}};
+
+\node[open, text width=38mm] (ascent) at (220mm,-129mm)
+  {\textbf{\color{openink}An ascent direction above the threshold}\\[1pt] \color{openink}every non-diagonal critical point with $\theta\ge\theta_0(n)$ is no local maximum, and Lemma~57 finishes\\[2pt] {\scriptsize R57, I124, \S\ref{sec:close}}};
+
+\node[win, text width=50mm] (win) at (-24mm,-344mm)
+  {\textbf{\color{winink}Success: not yet reached}\\[1pt] \color{winink}any one branch closed $\Rightarrow$ \textbf{Problem~P is proved}};
+
+\draw[main] (asked) -- (compact);
+\draw[main] (compact) -- (restate);
+\draw[main] (restate.south) -- ++(0,-7mm) -| (reserve.north);
+\draw[main] (restate.south) -- ++(0,-7mm) -| (lift.north);
+\draw[main] (restate.south) -- ++(0,-7mm) -| (block.north);
+\draw[main] (restate.south) -- ++(0,-7mm) -| (tubes.north);
+\draw[main] (restate.south) -- ++(0,-7mm) -| (twoval.north);
+\draw[main] (restate.south) -- ++(0,-7mm) -| (mixgap.north);
+\draw[main] (restate.south) -- ++(0,-7mm) -| (ascent.north);
+\draw[main] (lift) -- (l16);
+\draw[main] (block) -- (climb);
+\draw[main] (tubes) -- (far);
+\draw[main] (twoval) -- (i73);
+\draw[main] (i73) -- (asym);
+\draw[main] (i73.south) -- ++(0,-6mm) -| (sym.north);
+\draw[main] (sym) -- (hfromu);
+\draw[main] (hfromu.south) -- ++(0,-6mm) -| (torus.north);
+\draw[main] (hfromu.south) -- ++(0,-6mm) -| (offtorus.north);
+\draw[main, winink] (reserve.south) |- (win.west);
+\draw[main, winink] (l16.south) |- (win.west);
+\draw[main, winink] (climb.south) |- (win.west);
+\draw[main, winink] (far) -- (win);
+\draw[main, winink] (asym.south) |- (win.east);
+\draw[main, winink] (torus.south) |- (win.east);
+\draw[main, winink] (offtorus.south) |- (win.east);
+\draw[main, winink] (mixgap.south) |- (win.east);
+\draw[main, winink] (ascent.south) |- (win.east);
+
+% ===================== the failed routes, in red =====================
+\node[shut, text width=42mm] (b1) at (-274mm,-129mm)
+  {\textbf{(B) Census the landscape}\\[1pt] compute $\theta$ on every named family \,{\scriptsize\S\ref{app:census}}};
+\node[shut, text width=42mm] (a1) at (-218mm,-129mm)
+  {\textbf{(A) Direct spectral and moment estimates}\\[1pt] bound $\theta$ from the moments of $L_W$ and the Peirce cap};
+\node[shut, text width=42mm] (c1) at (276mm,-129mm)
+  {\textbf{(C) Lift the granted diagonal proof}\\[1pt] the lifted chain and the defect penalty \,{\scriptsize\S\ref{app:C}}};
+\node[shut, text width=42mm] (d1) at (332mm,-129mm)
+  {\textbf{(D) Localize around the $\CP^2$ orbit}\\[1pt] tube exclusion and the localization estimate \,{\scriptsize\S\ref{app:D}}};
+\node[shut, text width=42mm] (b2) at (-274mm,-172mm)
+  {gives the value table, complete for the named families};
+\node[shut, text width=42mm] (a2) at (-218mm,-172mm)
+  {gives $\lambda^2(1+\tfrac{k_0}4)\le\tfrac{(n-1)(2n-1)}4$ from criticality alone \,{\scriptsize L13}};
+\node[shut, text width=42mm] (c2) at (276mm,-172mm)
+  {gives Conjecture L16, sharp at both named maximizers, and the obstruction \,{\scriptsize L15}};
+\node[shut, text width=42mm] (d2) at (332mm,-172mm)
+  {gives Lemma L20 unconditionally, and Lemma L22 for all $n\ge12$};
+\node[stop, text width=42mm] (b3) at (-274mm,-215mm)
+  {\textbf{stops: a bound is needed, not a census}\\[1pt] $20$ restarts at $n=6$ give $17$ distinct critical values, every one with trivial stabiliser \,{\scriptsize\emph{(9)}}};
+\node[stop, text width=42mm] (a3) at (-218mm,-215mm)
+  {\textbf{stops at $\lambda\le2-o(1)$ against $\sqrt2$}\\[1pt] $\tr(L_W^2)$ is constant on the sphere, so it separates no two unit tensors. Short by more than an order of magnitude at $n=12$ \,{\scriptsize\emph{(1, 2, 6, 10)}}};
+\node[stop, text width=42mm] (c3) at (276mm,-215mm)
+  {\textbf{stops once $\delta^2\gtrsim10^{-3}$}\\[1pt] the chain goes vacuous there, and the population it must control is symmetry-free \,{\scriptsize\emph{(5)}}};
+\node[stop, text width=42mm] (d3) at (332mm,-215mm)
+  {\textbf{stops: it buys what compactness gives free}\\[1pt] it removes a criticality hypothesis Lemma L0 removes anyway, and its constant is the conjecture};
+\node[side, text width=38mm] (s6) at (506mm,-129mm)
+  {\textbf{The two spectra, one side at a time}\\ separate caps on the two cubics: $3.25\times$ \emph{(26)}\\ improving $\omega$ alone: $\tfrac32\max p_3(\mu)=1.4657$ \emph{(26)}\\ Schur--Horn, exact at $t=2$ and monotone \emph{(L54)}\\ a \emph{lower} bound on the spread $\kappa$};
+\node[side, text width=38mm] (s7) at (506mm,-215mm)
+  {\textbf{Alignment relaxed into marginals}\\ splitting the cubic term by term \emph{(2, 23)}\\ the transportation LP: $1.3065$ \emph{(10, 17)}\\ $\lambda_{\max}$ from $T$'s marginals \emph{(15)}\\ per-direction caps on $g_\gamma$ \emph{(10)}};
+\node[shut, text width=42mm] (e1) at (388mm,-129mm)
+  {\textbf{Prove the maximizer diagonalizable}\\[1pt] then the granted diagonal case closes it (structural, never estimating $\theta$)};
+\node[shut, text width=42mm] (e2) at (388mm,-172mm)
+  {padded $W_{\mathbb{CP}^2}$ is a \textbf{local maximum} ($\max\operatorname{spec}=\tfrac12$, none above) \textbf{and} Pl\"ucker-obstructed};
+\node[stop, text width=42mm] (e3) at (388mm,-215mm)
+  {\textbf{Second-order data cannot separate them.} Only the \emph{value} does, so the step is a bound on $\theta$, fenced by \emph{(22)}};
+\node[shut, text width=42mm] (f1) at (444mm,-129mm)
+  {\textbf{Use the gradient flow}\\[1pt] $\nabla P=3Q(W)$, so $\dot W=Q(W)-P(W)W$ is the flow of $P/3$ on the sphere};
+\node[shut, text width=42mm] (f2) at (444mm,-172mm)
+  {seek a $Q$-invariant cone $C$ with $C\cap S\subseteq\{P\le\theta_0\}$};
+\node[stop, text width=42mm] (f3) at (444mm,-215mm)
+  {\textbf{Circular.} $C=\mathbb R_+W^\ast$ satisfies it verbatim, while only $C=\mathrm{Weyl}_n$ gives the conjecture, where invariance is vacuous};
+\node[dead, text width=56mm] (dich) at (-340mm,-129mm)
+      {\textbf{\color{deadink}The second-kind dichotomy: HOLLOW}\\[1pt]
+       \color{deadink}branch 2 is the identity $\mathrm{LOSS}=\mu(\mu-\lambda)$, and over the target set the statement reads $\lambda\le\sqrt{3/2}$, the target verbatim\\[1pt]
+       \color{deadink}what survives is the lift identity and $\mathrm{LOSS}=\mu^2/n$ at $S^p\!\times\!S^q$};
+
+\node[shut, text width=42mm] (g1) at (-410mm,-129mm)
+  {\textbf{(G) Certify by sum of squares}\\[1pt] a degree-six invariant certificate in $\mathrm{Sym}^3[2,2]$ \,{\scriptsize\S\ref{sec:sos}}};
+\node[shut, text width=42mm] (g2) at (-410mm,-172mm)
+  {gives $M(5)=\sqrt{3/2}$, the block table stable from $n=12$, and Conjecture~A at $n=12$ on an outside certificate \,{\scriptsize L61, L63, L254}};
+\node[stop, text width=42mm] (g3) at (-410mm,-215mm)
+  {\textbf{stops at the $n$ it is built for}\\[1pt] stability fixes the SDP's shape, not its constraint data \,{\scriptsize\S\ref{sec:sos12}}};
+\node[side, text width=38mm] (transferdead) at (-410mm,-301mm)
+  {\textbf{Transfer from $n=12$ upward: three closures}\\[1pt] \emph{Levin--Chandrasekaran} does not apply to $\{O_n\}$: infinite index, no presentation degree exists\\[1pt] \emph{The sharp target} is not freely described: the extension's description set is \textbf{empty}, $C-B$ vanishing at the witness\\[1pt] \emph{Writing $n$ as a trace} fails: $\mathrm{tr}(I_{n+1})=n+1$ while $\mathrm{tr}(P(I_{n+1}))=n$\,{\S\ref{sec:sos12}}};
+\node[side, text width=58mm] (rgraded) at (-246mm,-320mm)
+  {\textbf{Closed on the graded line, now in reserve}\\[3pt] \textbf{Slack alone, and gaps}\\ the middle band\\ $\{S=0\}$ closed as closedness\\ a gap uniform in $n$ \emph{(27)}\\ censusing the graded set by random start: basins of radius $<0.1$ in dimension $44$--$49$ \emph{(13)}\\ {\L}ojasiewicz \emph{(4)}\\[3pt] \textbf{Separating the graded loci: four closures}\\[1pt] the $\pp$-mass \emph{(38)}\\[1pt] the $\pp$-internal cross-block \emph{(39)}\\[1pt] uniqueness of the maximum on a slice\\[1pt] equivariance of every slice maximum\\[1pt] \emph{all fail alike}: a point carries several inequivalent gradings, so such a quantity is a function of $(W,\sigma)$ and never of $W$\\[3pt] \textbf{Off a classification}\\ Cartan's list, finitely\\ a per-class programme \emph{(L47)}\\ the bracket $3$-form\\ Clifford/Hurwitz--Radon};
+\node[side, text width=58mm] (rresid) at (-302mm,-430mm)
+  {\textbf{Closed on the residual and the non-diagonal half, now in reserve}\\[3pt] \textbf{Bounding the sharp term}\\ Cauchy--Schwarz restates $\theta\le\theta_0$ \emph{(34)}\\ its strengthening is false at every even $n\ge4$\\ loss largest where $\theta$ is small: $1.156$ at $n=12$\\ no cap closes below $n=356$ \emph{(35)}\\[3pt] \textbf{Handles carrying no value}\\ $\ker\Phi_W$ \emph{(22)}\\ the fusion rule\\ $P$ as a Rayleigh quotient\\[3pt] \textbf{Aimed at the wrong half}\\ the graphon route\\ the sharp (II)-side bound \emph{(8)}\\ dropping Ricci-flatness \emph{(14)}\\[3pt] \textbf{Eigenvalues from curvature}\\ Weitzenb\"ock/PIC2 \emph{(21)}\\ integrating $\theta$ \emph{(19)}\\ second-kind theorems\\[3pt] \textbf{Borrowed cubic bounds}\\ Cheng--Wang: $\theta$ cancels\\ the upper side is loose at the maximiser\\ so no equality case\\[3pt] \textbf{The middle band is not low}: $S^5\times S^7$ sits there at $1.228239>\sqrt{3/2}$, so slack zero alone bounds nothing and \textbf{diagonality is the load-bearing hypothesis} \,{\S\ref{sec:horns}}\\[3pt] \textbf{\color{deadink}(b) The $\lambda$-weighted bound: CLOSED}\\[1pt] \color{deadink}it is the $\lambda_{\max}$ row condition of the three per-index relations, and that whole system returns $1.3405$ against $1.2247$ at $n=6$\\[2pt] {\scriptsize\S\ref{sec:pinned}}};
+
+\draw[failline] (restate.west) -- ++(-40mm,0) -| (a1.north);
+\draw[failline] (restate.west) -- ++(-40mm,0) -| (b1.north);
+\draw[failline] (restate.east) -- ++(40mm,0) -| (c1.north);
+\draw[failline] (restate.east) -- ++(40mm,0) -| (d1.north);
+\draw[failline] (a1) -- (a2);  \draw[failline] (a2) -- (a3);
+\draw[failline] (b1) -- (b2);  \draw[failline] (b2) -- (b3);
+\draw[failline] (c1) -- (c2);  \draw[failline] (c2) -- (c3);
+\draw[failline] (d1) -- (d2);  \draw[failline] (d2) -- (d3);
+\draw[failline] (restate.east) -- ++(40mm,0) -| (e1.north);
+\draw[failline] (restate.east) -- ++(40mm,0) -| (f1.north);
+\draw[failline] (e1) -- (e2);  \draw[failline] (e2) -- (e3);
+\draw[failline] (f1) -- (f2);  \draw[failline] (f2) -- (f3);
+\draw[failline] (restate.west) -- ++(-40mm,0) -| (g1.north);
+\draw[failline] (g1) -- (g2);  \draw[failline] (g2) -- (g3);
+\draw[main] (restate.west) -- ++(-30mm,0) -| (dich.north);
+\draw[kill] (restate.east) -- ++(46mm,0) -| (s6.north);
+\draw[kill] (s6.south) -- (s7.north);
+\draw[kill] (g3.south) -- (transferdead.north);
+\draw[kill] (restate.west) -- ++(-40mm,0) -| (rgraded.north);
+\draw[kill] (restate.west) -- ++(-40mm,0) -| (rresid.north);
+
+% ---------------- legend
+\begin{scope}[shift={($(win.south)+(-88mm,-22mm)$)}, font=\sffamily\scriptsize]
+  \node[draw=black!35, fill=white, rounded corners=1pt, inner sep=3mm,
+        minimum width=176mm, minimum height=27mm, anchor=north west] (leg) at (0,0) {};
+  \node[anchor=north west, font=\sffamily\scriptsize\bfseries] at ($(leg.north west)+(3mm,-2mm)$) {Legend};
+
+  \node[draw=spineink, very thick, fill=spinebg, rounded corners=1pt,
+        minimum width=7mm, minimum height=3.6mm, anchor=west] (k1) at ($(leg.north west)+(3mm,-9mm)$) {};
+  \node[anchor=west, text width=34mm] at ($(k1.east)+(1.5mm,0)$) {a step of the main argument, \textbf{settled}};
+
+  \node[draw=openink, very thick, dashed, fill=openbg, rounded corners=1pt,
+        minimum width=7mm, minimum height=3.6mm, anchor=west] (k2) at ($(leg.north west)+(48mm,-9mm)$) {};
+  \node[anchor=west, text width=34mm] at ($(k2.east)+(1.5mm,0)$) {a step \textbf{\color{openink}not yet proven}};
+
+  \node[draw=deadink, very thick, fill=deadbg, rounded corners=1pt,
+        minimum width=7mm, minimum height=3.6mm, anchor=west] (k4) at ($(leg.north west)+(93mm,-9mm)$) {};
+  \node[anchor=west, text width=40mm] at ($(k4.east)+(1.5mm,0)$) {a \textbf{failed route}, and where it stops};
+
+
+  \node[draw=posedink, very thick, fill=posedbg, rounded corners=1pt,
+        minimum width=7mm, minimum height=3.6mm, anchor=west] (k5) at ($(leg.north west)+(3mm,-22mm)$) {};
+  \node[anchor=west, text width=42mm] at ($(k5.east)+(1.5mm,0)$) {\textbf{Problem P}: the goal, as posed};
+
+  \node[draw=winink, very thick, dashed, fill=winbg, rounded corners=1pt,
+        minimum width=7mm, minimum height=3.6mm, anchor=west] (k6) at ($(leg.north west)+(56mm,-22mm)$) {};
+  \node[anchor=west, text width=110mm] at ($(k6.east)+(1.5mm,0)$) {\textbf{success}: what closing the grey boxes would give. Dashed because it is not yet reached};
+
+
+
+  \draw[main] ($(leg.north west)+(3mm,-16mm)$) -- ++(7mm,0);
+  \node[anchor=west, text width=34mm] at ($(leg.north west)+(11.5mm,-16mm)$) {the main line};
+
+
+\end{scope}
+
+\end{tikzpicture}%
+}
+\caption{\textbf{The same map, with the failed routes in red.} The centre is Figure~\ref{fig:routes} (the live routes) together with the second-kind dichotomy, which is hollow on the target set and so appears here rather than there. Seven strategies fork from Conjecture~A as red branches, each running to what it produced and then to where it stops, and none reaches the success box. A red box beside a step is a closure that bites that one step rather than a whole route, and the two hanging from Conjecture~A collect the closures on steps of routes now held in reserve. A parenthesised number is the fence post that holds it in \S\ref{sec:fenceposts}, an $L$ the lemma. A failed route is a result: each red terminus states what a new attempt must clear. \textbf{Figure~\ref{fig:closed-dag} reads what the results named here rest on.}}
+\label{fig:closed}
+\end{sidewaysfigure}

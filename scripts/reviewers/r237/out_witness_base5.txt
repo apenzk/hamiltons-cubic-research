@@ -1,0 +1,19 @@
+=== degree-3 miniature, exact integer arithmetic ===
+  n=4: ratios q2/q1 over 6 random Weyl tensors = ['1/2']  -> rank 1
+  n=5: ratios q2/q1 over 6 random Weyl tensors = ['1/2']  -> rank 1
+  n=6: ratios q2/q1 over 6 random Weyl tensors = ['-8478505/30649708', '12726587/26622772', '1612096817/2936083252', '3681104431/4068285836', '714571693/4950716708', '81720403/127359452']  -> rank 2
+  n=7: ratios q2/q1 over 6 random Weyl tensors = ['-102045599/307244456', '-155281889/980059466', '-22834783/176549527', '171978961/33744416', '217843711/764112566', '4429441/10558646']  -> rank 2
+
+  RELATION AT n_0 = 5:  1*q1 + (-2)*q2 = 0
+    holds exactly on all 6 sampled W in W_5 (and on W_4 too: True)
+    VIOLATED on W_6: values [3427683696, 865952496, 34573245840] ... (all nonzero: True)
+
+=== fact (ii): padding, exactly ===
+  q(pad W) at n=6: (-21333312, -10666656)
+  q(W)     at n=5: (-21333312, -10666656)
+  equal -- so every relation valid at n=6 restricts to n=5: ker eps_6 subset ker eps_5, exactly as (ii) states.
+
+  CONCLUSION: ker eps_6 is strictly inside ker eps_5.  The containment
+  the lift needs (ker eps_{n_0} inside ker eps_n) FAILS at n_0 = 5,
+  while the containment the file states holds.  The two are different
+  statements and only the dimension count separates them.

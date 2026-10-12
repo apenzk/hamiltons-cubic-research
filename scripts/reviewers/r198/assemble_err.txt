@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "scripts/runs/run_n5_assemble.py", line 149, in <module>
+    print("\nmeasuring the multiplicity Gram h ...", flush=True)
+  File "scripts/runs/run_n5_assemble.py", line 107, in ip3
+    return _IPCACHE[k]
+  File "scripts/runs/run_n5_assemble.py", line 93, in to_p
+    
+TypeError: cannot unpack non-iterable G object

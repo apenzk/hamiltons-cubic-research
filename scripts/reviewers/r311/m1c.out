@@ -1,0 +1,6 @@
+S3xS3 n=  6 dimWeyl=84 theta=1.054092553 lam_max=0.500000000000 mult=18 dim(orbit)=9 2nd=0.250000000 mu_formula=0.500000000 (0s)
+S3xS5 n=  8 dimWeyl=300 theta=1.115546702 lam_max=0.500000000000 mult=15 dim(orbit)=15 2nd=0.375000000 mu_formula=0.375000000 (1s)
+S4xS4 n=  8 dimWeyl=300 theta=1.145643924 lam_max=0.500000000000 mult=16 dim(orbit)=16 2nd=0.333333333 mu_formula=0.333333333 (0s)
+S3xS7 n= 10 dimWeyl=770 theta=1.133893419 lam_max=0.500000000000 mult=21 dim(orbit)=21 2nd=0.416666667 mu_formula=0.333333333 (6s)
+S4xS6 n= 10 dimWeyl=770 theta=1.185854123 lam_max=0.500000000000 mult=24 dim(orbit)=24 2nd=0.400000000 mu_formula=0.266666667 (5s)
+S5xS5 n= 10 dimWeyl=770 theta=1.200000000 lam_max=0.500000000000 mult=25 dim(orbit)=25 2nd=0.375000000 mu_formula=0.250000000 (5s)

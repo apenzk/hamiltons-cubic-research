@@ -1,0 +1,25 @@
+baseline           ns=(4, 5, 6, 7, 8, 10, 12)  ranks=[1, 1, 2, 2, 2, 2, 2]  asserts fired: none (passes)
+
+PLANTED VIOLATIONS
+----------------------------------------------------------------------
+P1 dimensions visited in reverse order
+     ranks=[2, 2, 2, 2, 2, 1, 1]  fired: ['monotone', 'climb']
+P2 dimension list starts at n=6, above the collapse
+     ranks=[2, 2, 2, 2, 2]  fired: ['climb']
+P2' second diagram replaced by a multiple of the first
+     ranks=[1, 1, 1, 1, 1, 1, 1]  fired: ['climb']
+P3 dimension list truncated at n=6, right at the climb
+     ranks=[1, 1, 2]  fired: ['freeze']
+
+THE PLANT THE SCREEN DOES NOT CATCH
+----------------------------------------------------------------------
+P4 diagram 2 replaced by  q2 + n*q1  (a detached delta-loop, r232's control)
+     ranks=[1, 1, 2, 2, 2, 2, 2]  fired: NONE -- the screen PASSES
+
+     but the kernel of this family is a DIFFERENT line at n=4 and n=5:
+        n=4  rank 1  kernel  q1 : q2  =  -4.500000 : 1
+        n=5  rank 1  kernel  q1 : q2  =  -5.500000 : 1
+     ker eps_5 is NOT contained in ker eps_4 -- fact (ii) fails outright --
+     and the screen reports the mechanism 'visible'.
+
+ALL PLANTS BEHAVED AS PREDICTED.

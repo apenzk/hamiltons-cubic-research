@@ -1,0 +1,33 @@
+========================================================================================
+(A)+(B)  dim nu(B_f(n)) by diagram Gram rank, against the two predictions
+========================================================================================
+  pred_cell = sum over O(n)-admissible lambda of (dim Delta_lambda)^2  <- the reviewed script's
+  pred_mult = sum over lambda of m_lambda(n)^2, restricted up-down tableaux
+
+  f=2 n=1     3 diagrams  rank=    1 (2nd prime     1)  pred_cell=    1   MATCH   pred_mult=    1 ok   n>=f-1:True
+  f=2 n=2     3 diagrams  rank=    3 (2nd prime     3)  pred_cell=    3   MATCH   pred_mult=    3 ok   n>=f-1:True
+  f=2 n=3     3 diagrams  rank=    3 (2nd prime     3)  pred_cell=    3   MATCH   pred_mult=    3 ok   n>=f-1:True
+  f=2 n=4     3 diagrams  rank=    3 (2nd prime     3)  pred_cell=    3   MATCH   pred_mult=    3 ok   n>=f-1:True
+  f=2 n=5     3 diagrams  rank=    3 (2nd prime     3)  pred_cell=    3   MATCH   pred_mult=    3 ok   n>=f-1:True
+  f=2 n=6     3 diagrams  rank=    3 (2nd prime     3)  pred_cell=    3   MATCH   pred_mult=    3 ok   n>=f-1:True
+  f=2 n=7     3 diagrams  rank=    3 (2nd prime     3)  pred_cell=    3   MATCH   pred_mult=    3 ok   n>=f-1:True
+  f=2 n=8     3 diagrams  rank=    3 (2nd prime     3)  pred_cell=    3   MATCH   pred_mult=    3 ok   n>=f-1:True
+
+  f=3 n=1    15 diagrams  rank=    1 (2nd prime     1)  pred_cell=    9 differs   pred_mult=    1 ok   n>=f-1:False
+  f=3 n=2    15 diagrams  rank=   10 (2nd prime    10)  pred_cell=   10   MATCH   pred_mult=   10 ok   n>=f-1:True
+  f=3 n=3    15 diagrams  rank=   15 (2nd prime    15)  pred_cell=   15   MATCH   pred_mult=   15 ok   n>=f-1:True
+  f=3 n=4    15 diagrams  rank=   15 (2nd prime    15)  pred_cell=   15   MATCH   pred_mult=   15 ok   n>=f-1:True
+  f=3 n=5    15 diagrams  rank=   15 (2nd prime    15)  pred_cell=   15   MATCH   pred_mult=   15 ok   n>=f-1:True
+  f=3 n=6    15 diagrams  rank=   15 (2nd prime    15)  pred_cell=   15   MATCH   pred_mult=   15 ok   n>=f-1:True
+  f=3 n=7    15 diagrams  rank=   15 (2nd prime    15)  pred_cell=   15   MATCH   pred_mult=   15 ok   n>=f-1:True
+  f=3 n=8    15 diagrams  rank=   15 (2nd prime    15)  pred_cell=   15   MATCH   pred_mult=   15 ok   n>=f-1:True
+
+  f=4 n=1   105 diagrams  rank=    1 (2nd prime     1)  pred_cell=    9 differs   pred_mult=    1 ok   n>=f-1:False
+  f=4 n=2   105 diagrams  rank=   35 (2nd prime    35)  pred_cell=   82 differs   pred_mult=   35 ok   n>=f-1:False
+  f=4 n=3   105 diagrams  rank=   91 (2nd prime    91)  pred_cell=   91   MATCH   pred_mult=   91 ok   n>=f-1:True
+  f=4 n=4   105 diagrams  rank=  105 (2nd prime   105)  pred_cell=  105   MATCH   pred_mult=  105 ok   n>=f-1:True
+  f=4 n=5   105 diagrams  rank=  105 (2nd prime   105)  pred_cell=  105   MATCH   pred_mult=  105 ok   n>=f-1:True
+  f=4 n=6   105 diagrams  rank=  105 (2nd prime   105)  pred_cell=  105   MATCH   pred_mult=  105 ok   n>=f-1:True
+  f=4 n=7   105 diagrams  rank=  105 (2nd prime   105)  pred_cell=  105   MATCH   pred_mult=  105 ok   n>=f-1:True
+  f=4 n=8   105 diagrams  rank=  105 (2nd prime   105)  pred_cell=  105   MATCH   pred_mult=  105 ok   n>=f-1:True
+

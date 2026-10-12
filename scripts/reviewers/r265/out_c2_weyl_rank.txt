@@ -1,0 +1,29 @@
+STEP 0 -- the Weyl tensors are what they claim to be
+
+  n= 6  max|W|=  11.270  residuals: antisym ab 1.78e-15, antisym cd 1.78e-15, pair swap 0.00e+00, first Bianchi 2.66e-15, traceless 7.55e-15
+        dim span of 200 samples = 84, formula n(n+1)(n+2)(n-3)/12 = 84  MATCH
+  n= 7  max|W|=  11.856  residuals: antisym ab 1.78e-15, antisym cd 1.78e-15, pair swap 0.00e+00, first Bianchi 2.36e-15, traceless 7.11e-15
+        dim span of 200 samples = 168, formula n(n+1)(n+2)(n-3)/12 = 168  MATCH
+  n=12  max|W|=  13.710  residuals: antisym ab 2.66e-15, antisym cd 2.66e-15, pair swap 0.00e+00, first Bianchi 2.66e-15, traceless 1.20e-14
+        dim span of 200 samples = 200, formula n(n+1)(n+2)(n-3)/12 = 1638  MISMATCH
+
+STEP 1 -- DEGREE 2, where every one of the three numbers is computable
+
+  matchings of 8 legs (a basis of the invariants for n >= 4): 105
+  (C) orbits under the block S_2 = dim of the symmetric part: 65
+  n= 6:  (A) rank on a GENERIC 4-tensor =  60   (B) rank on a WEYL tensor =   1
+  n= 7:  (A) rank on a GENERIC 4-tensor =  60   (B) rank on a WEYL tensor =   1
+  n=12:  (A) rank on a GENERIC 4-tensor =  60   (B) rank on a WEYL tensor =   1
+
+STEP 2 -- DEGREE 3, the record's own case
+
+  matchings of 12 legs (a basis for n >= 12): 10395
+  (C) orbits under the block S_3 = dim of the symmetric part: 1779
+  n= 4:  (B) rank on a WEYL tensor, 40 samples = 1
+  n= 5:  (B) rank on a WEYL tensor, 40 samples = 1
+  n= 6:  (B) rank on a WEYL tensor, 40 samples = 2
+  n= 7:  (B) rank on a WEYL tensor, 40 samples = 2
+  n= 8:  (B) rank on a WEYL tensor, 40 samples = 2
+  n=12:  (B) rank on a WEYL tensor, 40 samples = 2
+  n= 6:  (A) rank on a GENERIC 4-tensor, 130 samples = 130  (= #samples, so this is a LOWER bound)
+  n=12:  (A) rank on a GENERIC 4-tensor, 130 samples = 130  (= #samples, so this is a LOWER bound)

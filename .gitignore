@@ -1,0 +1,16 @@
+PLAN.md
+*.pkl
+*.npy
+!scripts/data/*.npy
+*.log
+!verification/**/*.log
+!scripts/**/*.log
+__pycache__/
+*.pyc
+agent_logs/
+lean/.lake/
+.claude/research-loop-active
+.claude/lean-loop-active
+.claude/verification-active
+.claude/sessions.json
+.DS_Store

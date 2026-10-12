@@ -1,0 +1,74 @@
+# REVIEW r1460: W_CP^m is critical in Lean, commit 2f820031: `R4W`, `B4W`, `WCPm_sq`, the `frob_*` lemmas, `R4_Qop_WCPm`, `WCPm_critical`, `WCPm_critical_not_saturated`, the L70 row, the L70CPm.lean docstring and the bounds.md sentence
+
+Log [agent_logs/r1460.log](../agent_logs/r1460.log). One reviewer, working cold and adversarially. Analysis-only: `lake build HamiltonsCubic.Results.L70CPmCrit`, one scratch file for `#print` and `#print axioms` in the session scratchpad outside the repository, and the trace identity $P=\theta\lVert W\rVert^2$ worked by hand from the spectrum with an $n=4$ cross-check. No numerical screen was run. Record: [findings/bounds.md](../findings/bounds.md) Lemma L70 (line 224), the L70 row of [lean/INDEX.md](../lean/INDEX.md) (line 614). Lean: [L70CPmCrit.lean](../lean/HamiltonsCubic/Results/L70CPmCrit.lean), [L70CPm.lean](../lean/HamiltonsCubic/Results/L70CPm.lean), against `IsCritical` and `Qop` in [WeylReal.lean](../lean/HamiltonsCubic/Base/WeylReal.lean), `B4`, `sharpBil_phi_B` and `R4_sharpOp` in [L209BianchiHalf.lean](../lean/HamiltonsCubic/Results/L209BianchiHalf.lean).
+
+**Standfirst.** The file builds and `WCPm_critical`, `WCPm_critical_not_saturated`, `R4_Qop_WCPm` and `WCPm_sq` rest on `propext`, `Classical.choice` and `Quot.sound` alone. `WCPm_critical` has type `1 ≤ m → IsCritical WCPm (2 * ↑m + 2)`, and `#print` resolves `IsCritical` to `HamiltonsCubic.RealLayer.IsCritical`, the layer's `∀ i j, Qop R (phi i j) = th • R (phi i j)`, not the bilinear variant of the same name in L40Statement.lean. The multiplier $2m+2$ agrees with the trace identity worked by hand from the stated spectrum, and at $m=2$ it reproduces the four-dimensional $Q(W^+)=(W^+)^2+2\operatorname{adj}W^+=6W^+$. The proof chain is concrete throughout, the final `field_simp; ring_nf` closes a goal whose Jm entries and index indicators are free atoms, and the only linter output is eleven unused simp arguments. The record text is faithful, r1459's notation gap is repaired at both sites, and no file still calls the criticality owed. **No gap.**
+
+| Item | Verdict | Reason |
+| --- | --- | --- |
+| A. `IsCritical` is the layer's notion, $\theta=2m+2$ consistent | CONFIRMED | `#print` gives `RealLayer.IsCritical`, the definition at [WeylReal.lean:194](../lean/HamiltonsCubic/Base/WeylReal.lean). By hand, $\operatorname{tr}M^2=\tfrac{12m(m^2-1)}{2m-1}$, $\operatorname{tr}M^3=\tfrac{8(m^2-1)(8m^4-24m^2+11m)}{(2m-1)^3}$, so $\langle M^\#,M\rangle=\tfrac{8m(m^2-1)(4m^3+15m-8)}{(2m-1)^3}>0$ at $m\ge2$, and $\operatorname{tr}M^3<\theta\operatorname{tr}M^2$. At $m=2$: $48+96=144=6\cdot24$, matching $W^+=\operatorname{diag}(4,-2,-2)$ with $W^\#=2\operatorname{adj}$. |
+| B. The proof chain | CONFIRMED | `R4W` matches `WCPm_phi_apply` entry by entry, `B4W` is `B4` unfolded, `WCPm_sq` is the operator identity with $\operatorname{conj}J=J$ and $\langle J,J\rangle_F=2m$, `R4_Qop_WCPm` splits $Q=W^2+W^\#$ through `inner2_add_left` and `sharpBil_phi_B`, and `WCPm_critical` recovers the matrix from $R_4$ through `inner2_phi` on skew outputs. Nothing vacuous, no hypothesis beyond `1 ≤ m`. |
+| C. Axioms | CONFIRMED | Standard three for all four declarations. No `sorry`, no `native_decide` in either file. |
+| D. Record text | CONFIRMED | The row owes only the family conclusion. bounds.md states the scale at which $\theta=2m+2$. r1459's $\langle J,X\rangle$ is now $(\sum J_{ij}X_{ij})J$ at [lean/INDEX.md:614](../lean/INDEX.md) and [L70CPm.lean:106](../lean/HamiltonsCubic/Results/L70CPm.lean). No em dash. One semicolon candidate withdrawn (below). |
+| E. Downstream | CONFIRMED | No file under findings/, results.md, report/sections/, STATUS.md, plan-lean.md or lean/INDEX.md calls the criticality of $W_{\mathbb{CP}^m}$ owed, assumed or a hypothesis. L70CPm.lean:23 now points to the discharge. |
+
+**One-line summary: CONFIRMED.** `WCPm_critical` proves $Q(W_{\mathbb{CP}^m})=(2m+2)W_{\mathbb{CP}^m}$ in the layer's exact sense on the standard three axioms, the multiplier agrees with the trace identity by hand, and L70's $\mathbb{CP}^m$ clause now holds unconditionally with the record saying so faithfully.
+
+## A. The notion and the multiplier
+
+**The notion.** The scratch file's `#check @WCPm_critical` prints `∀ {m : ℕ}, 1 ≤ m → IsCritical WCPm (2 * ↑m + 2)`, and `#print HamiltonsCubic.RealLayer.IsCritical` prints `fun R th => ∀ (i j : ι), Qop R (phi i j) = th • R (phi i j)`. The file opens `RealLayer`, `Results` and `SecondKind`, and not `L40Statement`, whose `IsCritical` is a bilinear statement over skew pairs. So the name resolves to the definition the brief names, and `WCPm_not_saturated` consumes the same one (its `hc : IsCritical (WCPm (m := m)) θ`, [L70CPm.lean:339](../lean/HamiltonsCubic/Results/L70CPm.lean)), which is why `WCPm_critical_not_saturated` typechecks as a one-line application.
+
+**The spectrum.** `WCPm` is $X\mapsto c_AX+JXJ^{\mathsf T}+(\sum J_{ij}X_{ij})J$ with $c_A=-3/(2m-1)$. On $\omega=J$: $c_A+1+2m=\tfrac{4(m^2-1)}{2m-1}$, which is $2m+1-\tfrac3{2m-1}$. On trace-free $J$-commuting $X$ ($\operatorname{conj}X=X$, $\langle J,X\rangle_F=0$, dimension $m^2-1$): $c_A+1=\tfrac{2(m-2)}{2m-1}$. On $J$-anticommuting $X$ ($\operatorname{conj}X=-X$, dimension $m(m-1)$): $c_A-1=-\tfrac{2(m+1)}{2m-1}$. These are the brief's three values.
+
+**The trace identity.** Criticality with multiplier $\theta$ forces $P=\operatorname{tr}M^3+\langle M^\#,M\rangle=\theta\operatorname{tr}M^2$. Writing $d=2m-1$:
+
+- $d^2\operatorname{tr}M^2=16(m^2-1)^2+4(m^2-1)(m-2)^2+4m(m-1)(m+1)^2=4(m^2-1)(6m^2-3m)$, so $\operatorname{tr}M^2=12m(m^2-1)/d$.
+- $d^3\operatorname{tr}M^3=64(m^2-1)^3+8(m^2-1)(m-2)^3-8m(m-1)(m+1)^3=8(m^2-1)(8m^4-24m^2+11m)$.
+- $d^3\,\theta\operatorname{tr}M^2=24m(m+1)(m^2-1)d^2=8(m^2-1)(12m^4-9m^2+3m)$ at $\theta=2m+2$.
+- The difference is $\langle M^\#,M\rangle=8m(m^2-1)(4m^3+15m-8)/d^3$, positive at every $m\ge2$, so $\operatorname{tr}M^3<\theta\operatorname{tr}M^2$ as the brief asks.
+
+**Cross-check at $m=2$.** Here $n=4$, the spectrum is $(4,-2,-2,0,0,0)$, all on $\Lambda^+$, and $W^-=0$. With the four-dimensional form $W^\#=2\operatorname{adj}W^+$ on $\Lambda^+$, $Q(W^+)=\operatorname{diag}(16+8,\,4-16,\,4-16)=\operatorname{diag}(24,-12,-12)=6\,W^+$, so $\theta=6=2m+2$. The general formulas give $\operatorname{tr}M^2=24$, $\operatorname{tr}M^3=48$, $\langle M^\#,M\rangle=96=2\cdot3\cdot4\cdot(-2)(-2)$, and $48+96=6\cdot24$. The normalisation of $\#$ that makes $\theta=6$ at $m=2$ is the one the hand computation above implicitly uses, and the Lean statement does not depend on this check at all, since it proves the operator equation directly in the layer's own `sharpOp`.
+
+## B. The proof chain
+
+- **`R4W`.** Rewrites $R_4$ through `WCPm_R4` and `WCPm_phi_apply` (both proved in L70CPm.lean and reviewed in r1459), then matches $c_A\,MD+MC+MP$ entrywise. `MD` carries $\delta_{ik}\delta_{pq}-\delta_{kp}\delta_{iq}$, `MC` carries $J_{ik}J_{pq}+J_{kp}J_{iq}$, `MP` carries $2J_{ip}J_{kq}$. After `Jm_skew_apply` these are $-(W\varphi_{ip})_{kq}$ with $(i,p,k,q)$ in place of $(i,j,k,l)$. The `split_ifs <;> subst_vars <;> simp_all [Jm_diag] <;> ring` close is case analysis on index equalities, each branch a ring identity. Sound.
+- **`B4W`.** `B4` is $\sum_{p,q}R_4(i,p,k,q)R_4(j,p,l,q)$ ([L209BianchiHalf.lean:37](../lean/HamiltonsCubic/Results/L209BianchiHalf.lean)) and `frob` is $\sum_{p,q}A_{pq}B_{pq}$, so `unfold B4 frob; simp only [R4W]` is definitional. Sound.
+- **The `frob_*` lemmas.** Each is a two-line Finset computation. The only non-trivial one, `frob_J_vmv`, uses `dot_rowJ` ($JJ^{\mathsf T}=1$ row by row) to collapse the inner sum. `frob_single_single` finishes with a four-way case split. None depends on anything beyond `Jm_mul_transpose` and `Jm_diag`.
+- **`WCPm_sq`.** `hW` is `rfl` against the definition, since `conj Y` is `Jm * Y * Jmᵀ` by definition. The rewrites use `conj_conj`, `conj_J`, `frob_J_conj` ($\langle J,\operatorname{conj}X\rangle_F=\langle J,X\rangle_F$) and `frob_J_J` ($=2m$), after which the coefficient of $J$ is $c_A\langle J,X\rangle+\langle J,X\rangle+(c_A+1+2m)\langle J,X\rangle=(2c_A+2+2m)\langle J,X\rangle$. That is the stated form. Sound.
+- **`R4_Qop_WCPm`.** Three facts are established before the computation: `hsplit`, $R_4(Q)=R_4(W^2)+R_4(W^\#)$ from `inner2_add_left` against `Qop`'s definition `compOp R X + sharpOp R X`; `hcomp`, $R_4(W^2)=-(W(W\varphi_{ij}))_{kl}$ from `inner2_phi` on the skew matrix $W(W\varphi_{ij})$; `hsh`, $R_4(W^\#)=B_{ijkl}-B_{ijlk}$ from `R4_sharpOp` and `sharpBil_phi_B`, whose linearity, skew and self-adjointness hypotheses are supplied by `WCPm_isWeylOp`. The remainder is Frobenius arithmetic, then `field_simp` with `h2m : 2m-1 ≠ 0` in context, then `ring_nf`. **On the concern that the close rides an unintended normalisation**: after the `simp only` passes, every entry of `Jm` and every indicator `if a = b then 1 else 0` is an opaque atom to `ring_nf`, so the goal it closes is a polynomial identity in free atoms over $\mathbb Q(m)$. That is strictly harder than the true identity (which may use $J^2=-1$), so a successful close cannot be an artefact of an over-eager simp set. The `simp only` lists are explicit, and `@eq_comm` rewrites only orient index equalities. A failed `ring_nf` would leave an unsolved goal, and the build reports none.
+- **`WCPm_critical`.** Fixes $(i,j)$, takes `ext k l`, and converts both sides through `inner2_phi`: `e1` on $Q(W)\varphi_{ij}$ (skew by `Qop_isWeylOp`), `e2` on $W\varphi_{ij}$ (`WCPm_R4`). `R4_Qop_WCPm` then gives $-(Q\varphi_{ij})_{kl}=(2m+2)\cdot(-(W\varphi_{ij})_{kl})$, and `linarith` delivers $(Q\varphi_{ij})_{kl}=(2m+2)(W\varphi_{ij})_{kl}$, which is the $(k,l)$ entry of `th • R (phi i j)` after `Matrix.smul_apply`. Every $(k,l)$ is covered, so matrix equality holds, not only on the skew part. Sound.
+- **`WCPm_critical_not_saturated`.** A direct application of `WCPm_not_saturated` at $\theta=2m+2$ with `WCPm_critical (by omega)`, the spectral hypotheses passed through unchanged. It inherits r1459's reading: $\lambda_{\min}$ attained, $\lambda_{\max}$ any positive upper bound, which contains the record's.
+
+**Argued the other way, on vacuity.** `IsCritical` is a `∀ i j` over a nonempty index type at $m\ge1$, and `WCPm` is a concrete definition, not an opaque constant, so there is no way for the statement to hold trivially. The hypothesis `1 ≤ m` excludes only the empty $\operatorname{Fin}0$ case.
+
+**Linter.** The build's only warnings are eleven unused simp arguments, at [L70CPmCrit.lean:60](../lean/HamiltonsCubic/Results/L70CPmCrit.lean), 61, 66, 71, 72, 93 and 172. Cosmetic.
+
+## C. Axioms
+
+From the scratch file, after `lake build HamiltonsCubic.Results.L70CPmCrit` (8768 jobs, success):
+
+```
+'HamiltonsCubic.L70CPm.WCPm_critical' depends on axioms: [propext, Classical.choice, Quot.sound]
+'HamiltonsCubic.L70CPm.WCPm_critical_not_saturated' depends on axioms: [propext, Classical.choice, Quot.sound]
+'HamiltonsCubic.L70CPm.R4_Qop_WCPm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'HamiltonsCubic.L70CPm.WCPm_sq' depends on axioms: [propext, Classical.choice, Quot.sound]
+```
+
+`grep` finds no `sorry` and no `native_decide` in L70CPmCrit.lean or L70CPm.lean.
+
+## D. Record text
+
+- **The L70 row** ([lean/INDEX.md:614](../lean/INDEX.md)). The owed list now reads only "the family conclusion, that the balanced $\mathfrak{so}(m)\oplus\mathfrak{so}(m)$ is the only critical symmetric pair on L23's family, which rests on L23's admissibility cap and the classification of symmetric pairs". The criticality clause is removed from it and restated as **PROVED** with `WCPm_critical`, $Q(W)=(2m+2)W$, `WCPm_sq` and `R4_Qop_WCPm`. Each claim matches a declaration. Status stays **partial**, correct while the family conclusion is owed.
+- **r1459's fix.** The formula is $X\mapsto-\tfrac3{2m-1}X+JXJ^{\mathsf T}+(\sum_{ij}J_{ij}X_{ij})J$ in the row and `(∑ J_{ij} X_{ij})` in the `WCPm` docstring at [L70CPm.lean:106](../lean/HamiltonsCubic/Results/L70CPm.lean), and the row cites r1459 and its gap. Under the Frobenius reading the term contributes $2J_{ij}J_{kl}$ to $R_4$, as `WCPm_phi_apply` has it. The docstring's $\langle J,J\rangle=m$ at line 13 is the half-trace pairing and no longer collides with a displayed formula.
+- **L70CPm.lean docstring** (line 23): "The criticality of `W_{ℂPᵐ}` enters as the hypothesis `IsCritical`, discharged in L70CPmCrit.lean's `WCPm_critical`." Accurate: `WCPm_not_saturated` still takes the hypothesis, and the new file discharges it.
+- **bounds.md** (line 224). The parenthesis now reads "*machine-checked: `WCPm_not_saturated` in L70CPm.lean, the top eigenvalue … being simple with eigenvector the Kähler form, and `WCPm_critical` in L70CPmCrit.lean, $Q(W_{\mathbb{CP}^m})=(2m+2)W_{\mathbb{CP}^m}$ at the scale where the $\Lambda^2$ eigenvalue of $\omega$ is $2m+1-\tfrac3{2m-1}$*". The scale qualifier is right and needed, since $\theta$ is linear in the scale. "Machine-checked at every critical value" became "machine-checked", correct now that the critical value is fixed.
+- **Em dashes.** None in the changed lines, the row, the bounds.md paragraph or either Lean file. "Fubini–Study" in the docstrings carries an en dash, allowed in a compound name.
+- **Semicolon candidate, withdrawn.** The row's new text has "…the $B$-contraction evaluated as Frobenius pairings of per-$(i,k)$ matrices; and `WCPm_critical_not_saturated` combines it with the rest." Located at lean/INDEX.md:614. Read as prose, the semicolon joins two independent clauses. Argued the other way: the sentence is a two-item list of named declarations whose first item carries internal commas, and the row uses the same list-with-commas semicolons throughout ("…; standard three axioms"), which is the one use the house rule keeps. It fails the third test and is withdrawn.
+
+## E. Downstream
+
+A contextual search for $\mathbb{CP}^m$ (in the spellings `CP}^m`, `CP^m`, `CP^{m}`, `ℂPᵐ`, `WCPm`) within 250 characters of "owed", "assum", "hypothes", "IsCritical" or "criticality", across findings/, results.md, report/sections/, STATUS.md, plan-lean.md, lean/INDEX.md and every Lean source file, returns no statement that the criticality of $W_{\mathbb{CP}^m}$ is owed or assumed. The hits are unrelated: [findings/target.md:462](../findings/target.md) derives the same criticality by $U(m)$-equivariance (consistent with this commit), [results.md:668](../results.md) owes that the separate Kähler family's members are Weyl tensors, and [lean/INDEX.md:371](../lean/INDEX.md) owes the $\Lambda^2$ spectrum of $\mathbb{CP}^m$ for another row. The only remaining `IsCritical` hypothesis on $W_{\mathbb{CP}^m}$ is `hc` in `WCPm_not_saturated`, which the L70CPm.lean docstring now points to its discharge. The report does not mention L70's $\mathbb{CP}^m$ clause.
+
+## Verdict
+
+**CONFIRMED.** No gap.

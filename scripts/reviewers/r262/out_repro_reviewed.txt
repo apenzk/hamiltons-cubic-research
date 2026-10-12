@@ -1,0 +1,38 @@
+  Rui: B_f(n) is semisimple over a char-0 field iff n >= f - 1 (positive integer delta).
+  The theorem above needs NONE of that -- see the file docstring.  What the
+  threshold governs is whether M_lambda is the ABSTRACT cell module, and that
+  is what the two predictions below separate.
+
+   f  n  diagrams  dim nu  sum m(n)^2  sum dimDelta^2  n>=f-1
+   2  1         3       1           1               1  True
+   2  2         3       3           3               3  True
+   2  3         3       3           3               3  True
+   2  4         3       3           3               3  True
+   2  5         3       3           3               3  True
+   2  6         3       3           3               3  True
+
+   3  1        15       1           1               9  False
+   3  2        15      10          10              10  True
+   3  3        15      15          15              15  True
+   3  4        15      15          15              15  True
+   3  5        15      15          15              15  True
+   3  6        15      15          15              15  True
+
+   4  1       105       1           1               9  False
+   4  2       105      35          35              82  False
+   4  3       105      91          91              91  True
+   4  4       105     105         105             105  True
+   4  5       105     105         105             105  True
+   4  6       105     105         105             105  True
+
+   5  1       945       1           1             225  False
+   5  2       945     126         126             326  False
+   5  3       945     603         603             842  False
+   5  4       945     903         903             903  True
+   5  5       945     945         945             945  True
+   5  6       945     945         945             945  True
+
+  the cell-module form fails below the threshold at: [(3, 1), (4, 1), (4, 2), (5, 1), (5, 2), (5, 3)]
+
+  f = 12 legs.  The realisation theorem holds at every n; Rui's n >= 11
+  governs only the cell-module identification, which the theorem does not use.

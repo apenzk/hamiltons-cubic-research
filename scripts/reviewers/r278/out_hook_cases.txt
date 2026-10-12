@@ -1,0 +1,12 @@
+  _agents_running = True   <- A  corpse aged 10 min, ends in HEARTBEAT
+  _agents_running = False  <- B  corpse aged 46 min (past 45-min window)
+  _agents_running = False  <- C  LIVE reviewer, 46-min heartbeat gap
+  _agents_running = True   <- D  corpse kept warm by a leftover poller
+  _agents_running = True   <- E  closed with DONE, then one blank line
+  _agents_running = False  <- F  closed with DONE, no trailing blank
+
+--- salvage_reviewer.py: does it always close the log? ---
+   r910: reviews/REVIEW_r910.md exists and is a full report — refused
+     log tail now: 'HEARTBEAT phase 2\n'  -> closed? False
+   r911: salvaged 2 log lines -> reviews/REVIEW_r911.md (PARTIAL), log closed
+     log tail now: 'HEARTBEAT phase 2FAILED salvaged and closed by scripts/salvage_reviewer.py\n'  -> closed? False

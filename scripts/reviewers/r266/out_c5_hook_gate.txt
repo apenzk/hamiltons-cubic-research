@@ -1,0 +1,59 @@
+==============================================================================
+A.  DOES _opens_an_item DO WHAT ITS DOCSTRING SAYS?
+    docstring: "True when this commit changes plan.md AND its subject says
+                an item opened."
+    regex:      \b(reopen|reopens|reopened|reopening)\b
+
+  ok fires=True  expected=True   ae44228, the commit the gate was written for
+      subject: fix(plan): independence is REOPENED -- both reviewers refute the closure
+  ok fires=False expected=False  *** 475c32e IS IN THE RECORD: a fix( flipping an item to OPEN, plan.md staged ***
+      subject: fix(plan): the n=12 sextic count is open, and the failed attempt is recorded
+  ok fires=False expected=False  *** 62ccb44 IS IN THE RECORD: its plan.md diff reopens B0, no trigger word ***
+      subject: feat(conjecture-a): B0's rank-3 question answered, its reduction refuted
+  ok fires=False expected=False  a hyphen defeats the alternation
+      subject: fix(plan): item 1 is re-opened by the witness
+  ok fires=False expected=False  'opened' alone is not in the alternation
+      subject: fix(plan): item 1 is OPENED again
+  ok fires=False expected=False  plain English
+      subject: fix(plan): the closure was a non sequitur; the item is back on the table
+  ok fires=False expected=False  the record's own idiom for reopening
+      subject: fix(plan): r260 REFUTES the closure of item 1
+  ok fires=False expected=False  *** d46cda0, THE PRIMARY COMMIT, rewriting the reopened item ***
+      subject: feat(restitution): the 10,393 kernel is the non-symmetric complement
+
+  mismatches against my reading of the regex: 0
+
+==============================================================================
+B.  THE HEREDOC BLIND SPOT -- 'subject' is line 1 of the BASH COMMAND
+  a heredoc commit whose REAL subject does say REOPENED:
+    line 1 of the command is:  git commit -m "$(cat <<'EOF'
+    _opens_an_item -> False
+  the same message passed with -F:  _opens_an_item -> False, _searched -> None
+  -> with -F the message is not in the command at all, so neither this gate
+     nor the Deliverable gate can read it.
+
+==============================================================================
+C.  IS THE `Searched:` REGEX SATISFIABLE BY PROSE?    Searched:[ \t]*(\S.*)
+  passes=True   value=none -- the literature is silent     documented form 2
+  passes=True   value=Weyl polarization -> references/we   documented form 1
+  passes=True   value=the item was reopened blind          *** PROSE IN THE BODY, no search done ***
+  passes=True   value=yes                                  *** three characters, no slug, no reason ***
+  passes=True   value=.                                    *** one character ***
+  passes=True   value=nothing, and I am not defending it   *** an admission of no search PASSES ***
+  passes=False  value=None                                 case-sensitive -> does NOT pass
+  passes=True   value=none                                 no space -> passes, [ \t]* is optional
+
+==============================================================================
+D.  CIRCUMVENTION -- three routes, none of which needs a false trailer
+  1. use a docs( subject.  main() exits at the GATED check before the gate runs.
+     prefixes found: ['docs(plan):']
+     any startswith ('feat(', 'fix('): False   -> the gate is never reached
+  2. stage plan.md in a separate commit: with plan.md unstaged, _opens_an_item -> False
+  3. put the trailer text anywhere in the COMMAND: opens=True searched="none' ; git commit -m 'fix(plan): item 1 reopens'"
+     -> passes, and the trailer never reaches the commit message.
+
+==============================================================================
+E.  'plan.md' IS A SUBSTRING TEST OVER --name-only, NOT A PATH TEST
+  staged outside material (unpublished, held in the private record)      -> fires=True
+  staged report/plan.md.bak         -> fires=True
+  staged notes/myplan.mdx           -> fires=True

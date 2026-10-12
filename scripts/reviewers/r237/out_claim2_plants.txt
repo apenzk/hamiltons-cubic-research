@@ -1,0 +1,22 @@
+=== the lattice step, under H1 + H2 ===
+  rank eps_12 = 2, rank eps_13 = 2
+  dim ker_12 = 1, dim ker_13 = 1, kernels equal: True
+  nested + equal dimension => equal.  The step is valid.
+
+=== PLANT 1: drop H1 (nesting).  Constant dimension, different kernels ===
+  rank 2 at both n; dim ker = 1 at both n
+  ker_12 = span[['0', '0', '1']], ker_13 = span[['0', '1', '0']]
+  kernels equal: False
+  The dimension is CONSTANT and the lift is NOT well-defined: (0,0,1) is a
+  relation at the base carried to a nonzero invariant above it.  So the
+  equivalence is false without (ii).  (ii) is not decoration.
+
+=== PLANT 2: drop H2 (surjectivity).  Constant target dimension, jumping rank ===
+  dim (Sym^6 W_n)^O(n) = 2 = 2: CONSTANT
+  but rank eps_12 = 1 < rank eps_13 = 2
+  kernels nested (True) but equal: False
+  The file's counted quantity is constant and the lift still fails.  The
+  equivalence reads dimensions off the TARGET; only (i) makes that the RANK.
+
+  Both plants leave the file's stated numbers untouched, which is the point:
+  the equivalence is true, and true only because (i) and (ii) are supplied.

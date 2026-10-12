@@ -1,0 +1,51 @@
+Dickson: A semisimple over char 0  <=>  trace form tr(L_xy) nondegenerate.
+
+  f   delta   dim B_f   rank of trace form   semisimple?   Rui says (n>=f-1)
+  2       0         3                    2         False   False
+  2       1         3                    3          True    True
+  2       2         3                    3          True    True
+  2       3         3                    3          True    True
+  2       4         3                    3          True    True
+  2       5         3                    3          True    True
+  2       6         3                    3          True    True
+  2       7         3                    3          True    True
+
+  3       0        15                   15          True   False   <<< DISAGREES WITH RUI
+  3       1        15                    7         False   False
+  3       2        15                   15          True    True
+  3       3        15                   15          True    True
+  3       4        15                   15          True    True
+  3       5        15                   15          True    True
+  3       6        15                   15          True    True
+  3       7        15                   15          True    True
+
+  4       0       105                   69         False   False
+  4       1       105                   97         False   False
+  4       2       105                   58         False   False
+  4       3       105                  105          True    True
+  4       4       105                  105          True    True
+  4       5       105                  105          True    True
+  4       6       105                  105          True    True
+  4       7       105                  105          True    True
+
+
+  f = 3,  15 diagrams
+    n=2:  rank of tr_U(xy) on the 15 diagrams =   10    (Rui semisimple: True)
+    n=3:  rank of tr_U(xy) on the 15 diagrams =   15    (Rui semisimple: True)
+    n=4:  rank of tr_U(xy) on the 15 diagrams =   15    (Rui semisimple: True)
+    n=5:  rank of tr_U(xy) on the 15 diagrams =   15    (Rui semisimple: True)
+    n=6:  rank of tr_U(xy) on the 15 diagrams =   15    (Rui semisimple: True)
+
+  f = 4,  105 diagrams
+    n=2:  rank of tr_U(xy) on the 105 diagrams =   35    (Rui semisimple: False)
+    n=3:  rank of tr_U(xy) on the 105 diagrams =   91    (Rui semisimple: True)
+    n=4:  rank of tr_U(xy) on the 105 diagrams =  105    (Rui semisimple: True)
+    n=5:  rank of tr_U(xy) on the 105 diagrams =  105    (Rui semisimple: True)
+    n=6:  rank of tr_U(xy) on the 105 diagrams =  105    (Rui semisimple: True)
+
+  f = 5,  945 diagrams
+    n=2:  rank of tr_U(xy) on the 945 diagrams =  126    (Rui semisimple: False)
+    n=3:  rank of tr_U(xy) on the 945 diagrams =  603    (Rui semisimple: False)
+    n=4:  rank of tr_U(xy) on the 945 diagrams =  903    (Rui semisimple: True)
+    n=5:  rank of tr_U(xy) on the 945 diagrams =  945    (Rui semisimple: True)
+    n=6:  rank of tr_U(xy) on the 945 diagrams =  945    (Rui semisimple: True)

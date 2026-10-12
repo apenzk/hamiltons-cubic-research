@@ -1,0 +1,13 @@
+== _agents_running, 45-minute window, no PID check ==
+  _agents_running = True   <- A corpse, killed 10 min ago, log ends in a heartbeat
+  _agents_running = False  <- Same corpse, 50 min old (past the 45-min window)
+  _agents_running = False  <- Corpse closed by salvage_reviewer.py
+  _agents_running = True   <- Finished reviewer, DONE then a BLANK line
+  _agents_running = False  <- Finished reviewer, DONE last
+  _agents_running = True   <- Empty log just created
+  _agents_running = True   <- Heartbeat says 'phase3 DICKSON DONE, f=5 running'
+
+== salvage_reviewer.py: the 'refused' path skips the closing line ==
+  salvage() says: r901: reviews/REVIEW_r901.md exists and is a full report — refused
+  log tail now  : 'HEARTBEAT phase4\n'
+  ** a reviewer killed AFTER filing its report cannot be closed by the tool built to close it **

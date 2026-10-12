@@ -1,0 +1,56 @@
+ROUTE 1 -- complete polarization identity, exact over Z (0 failures wanted)
+   dim U  d  trials  failures
+       2  2       8         0
+       2  3       8         0
+       2  4       8         0
+       3  2       8         0
+       3  3       8         0
+       3  4       8         0
+       4  2       8         0
+       4  3       8         0
+       4  4       8         0
+       5  2       8         0
+       5  3       8         0
+       5  4       8         0
+
+  every generator of Sym^d(U) is an explicit signed integer sum of d-th
+  powers, so the powers SPAN.  No rank, no tolerance, no sampling.
+
+ROUTE 2 -- exact rank over Q, on the points polarization itself names
+  (every cell of run_cubes_span.py's two tables, reproduced with no float)
+   dim U  d  points   rank  dim Sym^d  match
+       2  3      33      4          4    yes
+       3  3      49     10         10    yes
+       4  3      74     20         20    yes
+       5  3     110     35         35    yes
+       6  3     159     56         56    yes
+       8  3     304    120        120    yes
+       3  2      35      6          6    yes
+       3  4      69     15         15    yes
+       4  2      44     10         10    yes
+       4  4     124     35         35    yes
+       5  2      55     15         15    yes
+       5  4     215     70         70    yes
+
+ROUTE 3 -- U = Weyl_n itself, from its defining linear conditions
+    n  dim Weyl_n  formula
+    4          10       10
+    5          35       35
+    6          84       84
+
+  3a. exact rank of cubes in Sym^3(Weyl_4), dim Weyl_4 = 10:
+      rank 220 of dim Sym^3 = 220 over 525 exact points -- spans
+
+  3b. constructive identity at dim Weyl_5 = 35 and Weyl_6 = 84,
+      exact over Z (0 failures wanted):
+      n = 5, dim U =  35, failures = 0
+      n = 6, dim U =  84, failures = 0
+
+  3c. the ambient check, no basis and no coordinates (degree 2, V^{tensor 8}):
+        n  rel err of the identity   W1+W2 off Weyl_n by
+        4                7.412e-16             3.855e-16
+        5                4.719e-16             1.441e-15
+        6                4.502e-16             1.677e-15
+
+  Being cut out by linear conditions is exactly what makes the argument
+  work: LINEAR conditions are closed under the sums polarization forms.

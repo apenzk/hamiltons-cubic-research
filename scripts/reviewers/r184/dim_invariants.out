@@ -1,0 +1,7 @@
+dim V_(2,2) = 35   (35: True )
+k = 1  dim Sym^k = 35  binom check: True  invariants: 0  [0s]
+k = 2  dim Sym^k = 630  binom check: True  invariants: 1  [0s]
+k = 3  dim Sym^k = 7770  binom check: True  invariants: 1  [0s]
+k = 4  dim Sym^k = 73815  binom check: True  invariants: 4  [0s]
+k = 5  dim Sym^k = 575757  binom check: True  invariants: 5  [1s]
+k = 6  dim Sym^k = 3838380  binom check: True  invariants: 14  [2s]

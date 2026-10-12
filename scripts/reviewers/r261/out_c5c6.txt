@@ -1,0 +1,40 @@
+(1) labels reachable in V^(tensor 12): 160
+    O(6)-admissible: 77   (so 83 labels do not exist there)
+    O(7)-admissible: 95   (so 65 labels do not exist there)
+    O(11)-admissible: 153   (so 7 labels do not exist there)
+    O(12)-admissible: 160   (so 0 labels do not exist there)
+    r = 6 + |lambda|/2 reaches 12 at |lambda| = 12; at n = 12 that is r = n.
+
+(2) 23!! = 316234143225 = 3.16e11
+    sum over ALL labels of (dim Delta)^2 at f=12: 316234143225  -- equal to 23!!: True
+
+(3) f = 12, the two predictions:
+      n   sum (dim Delta)^2 over adm    sum m_lambda(n)^2  equal
+      6                 281008201522         226603057642  False
+      9                 316125326381         315957071241  False
+     10                 316229719418         316222167677  False
+     11                 316233935213         316233935213  True
+     12                 316234143225         316234143225  True
+
+(4) Dickson's criterion on the regular trace form, built from diagram
+    multiplication here -- the ASWT 7.1(5) exception at delta = 0:
+     f  delta   rank    dim  semisimple
+     2      0      2      3  False
+     2      1      3      3  True
+     2      2      3      3  True
+     2      3      3      3  True
+     2      4      3      3  True
+     3      0     15     15  True
+     3      1      7     15  False
+     3      2     15     15  True
+     3      3     15     15  True
+     3      4     15     15  True
+     4      0     69    105  False
+     4      1     97    105  False
+     4      2     58    105  False
+     4      3    105    105  True
+     4      4    105    105  True
+    delta = 0: semisimple at f = 3, not at f = 2, 4 -- ASWT 7.1(5)'s
+    d in {1,3,5} reproduced on the range reachable here.
+    delta = n >= 1: the boundary n = f-1 is nondegenerate and n = f-2 is not,
+    which is ASWT 7.1(3), d <= delta_0 + 1.

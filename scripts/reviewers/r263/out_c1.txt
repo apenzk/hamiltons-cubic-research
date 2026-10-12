@@ -1,0 +1,18 @@
+  lambda   n   k   f   dim V_lambda   |c_0|max   cap=n^k.iota   so(n) err   reflection err   dim span{nu(D) c_0}   m_lambda(n)
+      (2,)   3   0   2             5      0.707           True    4.44e-16         3.33e-16                     1             1   OK
+      (2,)   3   1   4             5      0.707           True    4.44e-16         3.33e-16                     6             6   OK
+    (1, 1)   3   1   4             3      0.707           True    2.22e-16         1.11e-16                     6             6   OK
+    (1, 1)   2   1   4             1      0.707           True    2.22e-16         0.00e+00                     3             3   OK
+    (2, 1)   3   0   3             5      0.567           True    4.44e-16         4.36e-16                     2             2   OK
+    (2, 1)   3   1   5             5      0.567           True    4.44e-16         4.36e-16                    15            15   OK
+    (2, 2)   3   0   -- V_lambda is zero at this n (label not admissible)
+    (2, 2)   3   1   -- V_lambda is zero at this n (label not admissible)
+    (2, 2)   4   0   4            10      0.260           True    3.38e-15         2.67e-15                     2             2   OK
+  (2, 1, 1)   3   0   -- V_lambda is zero at this n (label not admissible)
+    (3, 1)   3   0   4             7      0.384           True    2.46e-15         2.22e-15                     3             3   OK
+    (3, 1)   3   1   6             7      0.384           True    2.46e-15         2.22e-15                    29            29   OK
+      (2,)   2   2   6             2      0.500           True    9.99e-16         6.11e-16                    15            15   OK
+    (2, 2)   2   0   -- V_lambda is zero at this n (label not admissible)
+
+  Every non-trivial lambda tested: c_0 is equivariant for the FULL O(n)
+  (reflection included), nonzero, and generates exactly m_lambda(n).

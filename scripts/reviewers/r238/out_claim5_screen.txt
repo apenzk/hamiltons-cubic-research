@@ -1,0 +1,43 @@
+==========================================================================
+A.  THE KERNEL DIRECTION -- the statement fact (ii) actually makes
+==========================================================================
+The screen reports dim(image).  Fact (ii) is about the KERNEL as a subspace.
+At n=4 and n=5 the rank is 1, so each kernel is a line (a:b) with a*q1+b*q2=0.
+Fact (ii) with n_0=4, n=5 demands ker eps_5 contained in ker eps_4, i.e. the
+SAME line.  Measured, from 400 samples each, normalised to b = 1:
+
+   n=4   rank 1   kernel direction  q1 : q2  =  -0.5000000000 : 1
+   n=5   rank 1   kernel direction  q1 : q2  =  -0.5000000000 : 1
+   n=6   rank 2   kernel is trivial
+   n=7   rank 2   kernel is trivial
+   n=8   rank 2   kernel is trivial
+   n=10  rank 2   kernel is trivial
+   n=12  rank 2   kernel is trivial
+
+   |ratio(n=4) - ratio(n=5)| = 4.996e-16
+   -> the two kernels are THE SAME LINE (fact (ii) holds here)
+   The screen tests NONE of this: it only compares two integers.
+
+==========================================================================
+B.  THE CEILING -- how much can the freeze assert actually reject?
+==========================================================================
+   rank sequences over 7 dimensions with at most 2 columns: 33 survive
+   of those, the FREEZE assert rejects 8
+   -> the freeze assert has 24.2% discriminating power at K=2 columns
+   The ceiling is the NUMBER OF COLUMNS, not an attained universal value.
+   Same enumeration with a wider diagram set:
+      K=2    freeze rejects 8 of 33  (24.2%)
+      K=3    freeze rejects 36 of 116  (31.0%)
+      K=5    freeze rejects 330 of 786  (42.0%)
+      K=10   freeze rejects 11440 of 19437  (58.9%)
+
+==========================================================================
+C.  IS THE CLIMB ROBUST?  exact integer Weyl tensors, no floating point
+==========================================================================
+   n=4   exact rank over Q from 12 integer samples: 1
+   n=5   exact rank over Q from 12 integer samples: 1
+   n=6   exact rank over Q from 12 integer samples: 2
+   n=7   exact rank over Q from 12 integer samples: 2
+   The climb 1 -> 2 at n=6 is real and exact.  It is the classical
+   dimension-dependent (Lovelock-type) identity among cubic Weyl
+   contractions -- dim (Sym^3 W_n)^O = 1 at n=5 and 2 at n>=6.

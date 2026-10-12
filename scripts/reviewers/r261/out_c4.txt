@@ -1,0 +1,107 @@
+(b) `loops`: reviewed traversal vs union-find components
+    f=2: 9 pairs, disagreements: 0
+    f=3: 225 pairs, disagreements: 0
+    f=4: 11025 pairs, disagreements: 0
+    f=5: 20000 random pairs, disagreements: 0
+    f=6: 20000 random pairs, disagreements: 0
+    f=4, D against itself (every edge doubled -- the fragile case): loops == f in all 105 cases: True
+
+(a) rank of the diagram Gram [n^loops] vs dim span{nu(D)}, computed apart
+     f  n  gram rank (mod p)  gram rank exact  span dim (mod p)  span exact
+     2  1                [1]                1               [1]           1
+     2  2                [3]                3               [3]           3
+     2  3                [3]                3               [3]           3
+     2  4                [3]                3               [3]           3
+     2  5                [3]                3               [3]           3
+     3  1                [1]                1               [1]           1
+     3  2               [10]               10              [10]          10
+     3  3               [15]               15              [15]          15
+     3  4               [15]               15              [15]          15
+     3  5               [15]               15              [15]          15
+     4  1                [1]                1               [1]           1
+     4  2               [35]               35              [35]          35
+     4  3               [91]               91              [91]          91
+     4  4              [105]              105             [105]         105
+     4  5              [105]              105             [105]         105
+    every cell: Gram rank == span dimension, exactly and modulo three primes
+
+(c) dim V_lambda(n) by El Samra-King -- validation on known dimensions
+    n= 3: True  ()=1  (1)=3  (2)=5  (1,1)=3  (1^n)=1  (1^(n-1))=3
+    n= 4: True  ()=1  (1)=4  (2)=9  (1,1)=6  (1^n)=1  (1^(n-1))=4
+    n= 5: True  ()=1  (1)=5  (2)=14  (1,1)=10  (1^n)=1  (1^(n-1))=5
+    n= 6: True  ()=1  (1)=6  (2)=20  (1,1)=15  (1^n)=1  (1^(n-1))=6
+    n=12: True  ()=1  (1)=12  (2)=77  (1,1)=66  (1^n)=1  (1^(n-1))=12
+
+    the identity sum_lambda m_lambda(n) . dim V_lambda(n) = n^f
+     f  n      sum m.dim            n^f    ok     with self-assoc DOUBLING    ok
+     1  1              1              1  True                            1  True
+     1  2              2              2  True                            4 False
+     1  3              3              3  True                            3  True
+     1  4              4              4  True                            4  True
+     1  5              5              5  True                            5  True
+     1  6              6              6  True                            6  True
+     1  7              7              7  True                            7  True
+     1  8              8              8  True                            8  True
+     2  1              1              1  True                            1  True
+     2  2              4              4  True                            6 False
+     2  3              9              9  True                            9  True
+     2  4             16             16  True                           22 False
+     2  5             25             25  True                           25  True
+     2  6             36             36  True                           36  True
+     2  7             49             49  True                           49  True
+     2  8             64             64  True                           64  True
+     3  1              1              1  True                            1  True
+     3  2              8              8  True                           16 False
+     3  3             27             27  True                           27  True
+     3  4             64             64  True                           96 False
+     3  5            125            125  True                          125  True
+     3  6            216            216  True                          236 False
+     3  7            343            343  True                          343  True
+     3  8            512            512  True                          512  True
+     4  1              1              1  True                            1  True
+     4  2             16             16  True                           26 False
+     4  3             81             81  True                           81  True
+     4  4            256            256  True                          402 False
+     4  5            625            625  True                          625  True
+     4  6           1296           1296  True                         1566 False
+     4  7           2401           2401  True                         2401  True
+     4  8           4096           4096  True                         4166 False
+     5  1              1              1  True                            1  True
+     5  2             32             32  True                           64 False
+     5  3            243            243  True                          243  True
+     5  4           1024           1024  True                         1656 False
+     5  5           3125           3125  True                         3125  True
+     5  6           7776           7776  True                        10188 False
+     5  7          16807          16807  True                        16807  True
+     5  8          32768          32768  True                        34560 False
+     6  1              1              1  True                            1  True
+     6  2             64             64  True                          108 False
+     6  3            729            729  True                          729  True
+     6  4           4096           4096  True                         6764 False
+     6  5          15625          15625  True                        15625  True
+     6  6          46656          46656  True                        64848 False
+     6  7         117649         117649  True                       117649  True
+     6  8         262144         262144  True                       290200 False
+
+    sum m_lambda(n)^2 vs dim nu(B_f(n)) [span dimension, no Gram]
+    f=2 n=1: sum m^2 =     1, dim nu =     1, sum dimDelta^2 =     1, n>=f-1: True
+    f=2 n=2: sum m^2 =     3, dim nu =     3, sum dimDelta^2 =     3, n>=f-1: True
+    f=2 n=3: sum m^2 =     3, dim nu =     3, sum dimDelta^2 =     3, n>=f-1: True
+    f=2 n=4: sum m^2 =     3, dim nu =     3, sum dimDelta^2 =     3, n>=f-1: True
+    f=2 n=5: sum m^2 =     3, dim nu =     3, sum dimDelta^2 =     3, n>=f-1: True
+    f=3 n=1: sum m^2 =     1, dim nu =     1, sum dimDelta^2 =     9, n>=f-1: False
+    f=3 n=2: sum m^2 =    10, dim nu =    10, sum dimDelta^2 =    10, n>=f-1: True
+    f=3 n=3: sum m^2 =    15, dim nu =    15, sum dimDelta^2 =    15, n>=f-1: True
+    f=3 n=4: sum m^2 =    15, dim nu =    15, sum dimDelta^2 =    15, n>=f-1: True
+    f=3 n=5: sum m^2 =    15, dim nu =    15, sum dimDelta^2 =    15, n>=f-1: True
+    f=4 n=1: sum m^2 =     1, dim nu =     1, sum dimDelta^2 =     9, n>=f-1: False
+    f=4 n=2: sum m^2 =    35, dim nu =    35, sum dimDelta^2 =    82, n>=f-1: False
+    f=4 n=3: sum m^2 =    91, dim nu =    91, sum dimDelta^2 =    91, n>=f-1: True
+    f=4 n=4: sum m^2 =   105, dim nu =   105, sum dimDelta^2 =   105, n>=f-1: True
+    f=4 n=5: sum m^2 =   105, dim nu =   105, sum dimDelta^2 =   105, n>=f-1: True
+
+(d) modular ranks of the f=5 Gram over a range of primes
+    f=5 n=2: N=945, sum m^2 = 126, ranks by prime: {2: 0, 3: 126, 5: 126, 7: 126, 11: 126, 101: 126, 46337: 126, 1000003: 126, 2147483647: 126, 2147483629: 126}
+    f=5 n=3: N=945, sum m^2 = 603, ranks by prime: {2: 1, 3: 0, 5: 34, 7: 353, 11: 602, 101: 603, 46337: 603, 1000003: 603, 2147483647: 603, 2147483629: 603}
+    f=5 n=4: N=945, sum m^2 = 903, ranks by prime: {2: 0, 3: 1, 5: 595, 7: 903, 11: 903, 101: 903, 46337: 903, 1000003: 903, 2147483647: 903, 2147483629: 903}
+    f=5 n=5: N=945, sum m^2 = 945, ranks by prime: {2: 1, 3: 126, 5: 0, 7: 42, 11: 909, 101: 945, 46337: 945, 1000003: 945, 2147483647: 945, 2147483629: 945}

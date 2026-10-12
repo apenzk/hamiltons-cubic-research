@@ -1,0 +1,7 @@
+# Notes: Tkachev, The universality of one half (arXiv:1808.03808)
+
+> **Theorem 1.1.** Let $A$ be a finite dimensional commutative nonassociative algebra over a field of characteristic $\ne2,3$ and let $A$ satisfy a nontrivial weighted polynomial identity $P(z)=0$ in one nonassociative indeterminate $z$. Then (A) $\tfrac12\in\sigma(P,c)$ for any idempotent $c\ne0$; (B) if additionally $c$ is semi-simple and $\lambda$ is a single root of the Peirce polynomial $\varrho(P,t)$ then $A_c(\lambda)A_c(\tfrac12)\subset A_c(\lambda)^\perp:=\bigoplus_{\nu\in\sigma(c),\nu\ne\lambda}A_c(\nu)$. (p. 2)
+
+- Section 10.1 (p. 25): a bilinear form $b$ on $A$ is *associating* if $b(xy,z)=b(x,yz)$; an algebra with a non-degenerate associating symmetric form is *metrized*. Hamilton's $\#$ on $\operatorname{Sym}^2\mathfrak g$ with the trace pairing is metrised in this sense, $F$ being fully symmetric.
+- Remark in Section 1 (p. 3): for metrised algebras, extremal properties of the Peirce number $\tfrac12$ are established in the author's [51], [52] and Proposition 6.7, the extremal idempotents (maximisers of $\langle x^2,x\rangle$ on a sphere) having every Peirce eigenvalue $\le\tfrac12$, which is the record's stability ([L264](../../findings/second-order.md) (1)).
+- **Searched for and absent**: any statement on $\operatorname{span}\{c_1,c_2\}$ for two idempotents, or on the eigenvalue of $L_{c_1}$ in the direction of $c_2$.

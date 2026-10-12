@@ -1,0 +1,30 @@
+case                                                       in-flight?  expected  ok
+corpse, warm log, no closing line                                True      True  ok
+closed reviewer with a TRAILING BLANK LINE                       True      True  ok
+closed reviewer, clean                                          False     False  ok
+corpse gone cold (45 min + 1 s)                                 False     False  ok
+cold corpse + warm JOB log beside it                            False     False  ok
+LIVE reviewer, 46-minute heartbeat gap                          False     False  ok
+gate2_NNN.log naming, warm                                       True      True  ok
+LIVE reviewer logging to r908_claim3.log                        False     False  ok
+closing line indented (regex allows \s*)                        False     False  ok
+
+== salvage_reviewer.py refuse-to-overwrite path ==
+   r910: reviews/REVIEW_r910.md exists and is a full report — not overwritten, log closed
+   log tail after salvage: 'FAILED closed by scripts/salvage_reviewer.py'
+   hook now sees in-flight: False
+
+== salvage on a reviewer that never made a log ==
+   r911: no log at agent_logs/reviewer911.log — nothing to salvage
+
+== a FULL report whose first 200 bytes contain the word PARTIAL ==
+   r912: reviews/REVIEW_r912.md exists and is a full report — not overwritten, log closed
+   report preserved: True
+   first line now: # REVIEW r912 — Gate 2, route S
+   the word REFUTED survives: True
+
+== the repaired guard, re-probed ==
+  (a) re-salvage an existing PARTIAL: r913: salvaged 2 log lines -> reviews/REVIEW_r913.md (PARTIAL), log closed
+  (b) r914: salvaged 2 log lines -> reviews/REVIEW_r914.md (PARTIAL), log closed
+      log second-to-last line: 'FAILED closed by scripts/salvage_reviewer.py' | hook in-flight: False
+  (c) r915: no log at agent_logs/reviewer915.log — nothing to salvage

@@ -1,0 +1,13 @@
+prime 1,000,000,007  (production 2,147,483,647; r221 1,000,003)
+  (6, 6, 0, 0, 0, 0)     dim        1 rows         0 nullity_p3   1  [build 0.3s rank 0.0s]
+      dim vs my own character: 1 -> True;  nullity vs m_lambda 1: True
+  (4, 4, 2, 2, 0, 0)     dim       24 rows        36 nullity_p3   2  [build 0.3s rank 0.0s]
+      dim vs my own character: 24 -> True;  nullity vs m_lambda 2: True
+  (4, 2, 2, 0, 0, 0)     dim    2,614 rows     6,545 nullity_p3   8  [build 0.3s rank 0.5s]
+      dim vs my own character: 2,614 -> True;  nullity vs m_lambda 8: True
+  (3, 3, 1, 1, 0, 0)     dim    6,137 rows    17,233 nullity_p3   8  [build 0.4s rank 2.3s]
+      dim vs my own character: 6,137 -> True;  nullity vs m_lambda 8: True
+  (4, 2, 1, 1, 0, 0)     dim    4,186 rows    10,728 nullity_p3   4  [build 0.4s rank 1.2s]
+      dim vs my own character: 4,186 -> True;  nullity vs m_lambda 4: True
+
+  5 blocks, 0 disagreements

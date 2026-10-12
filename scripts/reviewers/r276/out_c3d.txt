@@ -1,0 +1,28 @@
+
+===== n=6,  N=15,  theta_0=1.054093 =====
+ 40 random unit WEYL tensors: (tr+|M#|)/theta_0  mean 0.4754  max 0.6007 | theta/theta_0 mean +0.0154 max +0.3014
+  max (tr(M^3)+|M#|_F)/theta_0   = 1.340321   [theta there = 1.219925, |M#|=0.986098, cos phi=0.804383]  (2s)
+  max theta/theta_0              = 1.161895   [theta there = 1.224745, |M#|=1.000000, cos phi=0.816497]  (1s)
+
+===== n=8,  N=28,  theta_0=1.145644 =====
+ 40 random unit WEYL tensors: (tr+|M#|)/theta_0  mean 0.3373  max 0.3759 | theta/theta_0 mean -0.0001 max +0.0601
+  max (tr(M^3)+|M#|_F)/theta_0   = 1.239904   [theta there = 1.213205, |M#|=0.963315, cos phi=0.784822]  (3s)
+  max theta/theta_0              = 1.069045   [theta there = 1.224745, |M#|=1.000000, cos phi=0.816497]  (2s)
+
+===== n=10,  N=45,  theta_0=1.200000 =====
+ 40 random unit WEYL tensors: (tr+|M#|)/theta_0  mean 0.2630  max 0.2761 | theta/theta_0 mean +0.0023 max +0.0353
+  max (tr(M^3)+|M#|_F)/theta_0   = 1.188086   [theta there = 1.208953, |M#|=0.947931, cos phi=0.771344]  (6s)
+  max theta/theta_0              = 1.020621   [theta there = 1.224745, |M#|=1.000000, cos phi=0.816497]  (6s)
+
+===== n=12,  N=66,  theta_0=1.236033 =====
+ 40 random unit WEYL tensors: (tr+|M#|)/theta_0  mean 0.2156  max 0.2297 | theta/theta_0 mean -0.0015 max +0.0168
+  max (tr(M^3)+|M#|_F)/theta_0   = 1.156402   [theta there = 1.206055, |M#|=0.937208, cos phi=0.761743]  (19s)
+  max theta/theta_0              = 1.000000   [theta there = 1.236033, |M#|=1.219786, cos phi=0.994895]  (21s)
+n= 6  |M|=1.000000  Bianchi 2.78e-17  Ricci 5.55e-17  antisym 0.00e+00  pair-sym 0.00e+00  fixed by r276 proj 2.78e-17
+n= 8  |M|=1.000000  Bianchi 2.08e-17  Ricci 5.55e-17  antisym 0.00e+00  pair-sym 0.00e+00  fixed by r276 proj 1.39e-17
+n=10  |M|=1.000000  Bianchi 1.39e-17  Ricci 4.16e-17  antisym 0.00e+00  pair-sym 0.00e+00  fixed by r276 proj 6.94e-18
+n=12  |M|=1.000000  Bianchi 1.21e-17  Ricci 2.60e-17  antisym 0.00e+00  pair-sym 0.00e+00  fixed by r276 proj 5.20e-18
+n=5: P^2=P 1.1e-16  self-adjoint 8.9e-16  rank 35 vs (n+2)(n+1)n(n-3)/12 = 35
+n=6: P^2=P 1.7e-16  self-adjoint 0.0e+00  rank 84 vs (n+2)(n+1)n(n-3)/12 = 84
+n=7: P^2=P 2.2e-16  self-adjoint 0.0e+00  rank 168 vs (n+2)(n+1)n(n-3)/12 = 168
+n=8: P^2=P 1.7e-16  self-adjoint 3.6e-15  rank 300 vs (n+2)(n+1)n(n-3)/12 = 300

@@ -1,0 +1,45 @@
+PART 1 -- the witness C = A/2, and the hypothesis it uses
+  Weyl tensor                  n=5   Weyl checks: PASS
+      n=5: A = 12427/24, C = 12427/48, C - A/2 = 0
+            polarised on a second Weyl tensor: C(W,V) - A(W,V)/2 = 0
+  Weyl tensor                  n=6   Weyl checks: PASS
+      n=6: A = 35663/32, C = 35663/64, C - A/2 = 0
+            polarised on a second Weyl tensor: C(W,V) - A(W,V)/2 = 0
+  Weyl tensor                  n=7   Weyl checks: PASS
+      n=7: A = 27587/12, C = 27587/24, C - A/2 = 0
+            polarised on a second Weyl tensor: C(W,V) - A(W,V)/2 = 0
+      so as OPERATORS on W_n the diagram C is exactly (1/2) Id.
+
+      on a Riemann tensor (Bianchi, traces present): C - A/2 = 0
+      without the first Bianchi identity:            C - A/2 = -283/4
+      => the record's attribution to the FIRST BIANCHI IDENTITY alone
+         is exact: tracelessness is not used, Bianchi is indispensable.
+
+PART 2 -- the two Grams the record quotes
+      projector-free Brauer Gram = [[n**4, n**3], [n**3, n**4]]
+      det = n**6*(n - 1)*(n + 1)
+      nonsingular at every n >= 2 -- the record's claim, confirmed.
+
+      dim W_n = n*(n - 3)*(n + 1)*(n + 2)/12 = Riemann - Sym^2, and it is a QUARTIC POLYNOMIAL
+      values at n = 5,6,7,8: [35, 84, 168, 300] -- matches the record
+      apolar Gram with the projector = (dim/4)*[[4,2],[2,1]], det = 0
+      singular at every n, as the dependence requires -- confirmed.
+      NOTE: every entry of that Gram is a POLYNOMIAL in n.  The commit
+      message says 'the second is not polynomial'; the example it
+      offers to prove it is a quartic.  What fails is MONOMIALITY.
+
+PART 3 -- what the projector-free pairing decides
+      8 legs, n=2: Gram rank 35, true rank of the 105 matching tensors 35
+      8 legs, n=3: Gram rank 91, true rank of the 105 matching tensors 91
+      8 legs, n=4: Gram rank 105, 105 matchings
+      the projector-free Gram equals the Frobenius Gram of the diagram
+      tensors, so over R it is POSITIVE SEMIDEFINITE and its rank IS the
+      ambient rank -- exactly, with no gap.
+
+      the consequence, which the record does not state:
+        rank(restrictions to W_n) <= rank(diagrams in the ambient space)
+      so a RANK-DEFICIENT projector-free Gram over R certifies DEPENDENCE
+      of the covariants as functions on W_n.  At n=3 above, 105-91 = 14
+      independent relations are certified this way without any projector.
+      The pairing is a sound test for dependence and an unsound one for
+      independence.  Half a decision procedure, not none.

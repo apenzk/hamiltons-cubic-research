@@ -1,0 +1,119 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{tikz}
+\usetikzlibrary{positioning,arrows.meta,fit,backgrounds,calc}
+\usepackage{float}
+\usepackage{rotating}
+\usepackage{adjustbox}
+\usepackage[normalem]{ulem}
+\definecolor{spineink}{RGB}{29,78,124}
+\definecolor{spinebg}{RGB}{233,240,247}
+\definecolor{openink}{RGB}{120,120,128}
+\definecolor{openbg}{RGB}{240,240,242}
+\definecolor{lemink}{RGB}{24,98,74}
+\definecolor{lembg}{RGB}{235,244,240}
+\definecolor{deadink}{RGB}{156,55,41}
+\definecolor{deadbg}{RGB}{250,236,233}
+\definecolor{inkline}{RGB}{21,24,33}
+\definecolor{posedink}{RGB}{92,54,140}
+\definecolor{posedbg}{RGB}{243,238,250}
+\definecolor{winink}{RGB}{20,105,72}
+\definecolor{winbg}{RGB}{235,248,241}
+\usepackage{amsmath,amssymb,amsthm}
+\DeclareMathOperator{\ran}{ran}
+\DeclareMathOperator{\diag}{diag}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{longtable}
+\usepackage{xcolor}
+\definecolor{linknavy}{RGB}{20,60,110}
+\usepackage[colorlinks=true,linkcolor=linknavy,citecolor=linknavy,urlcolor=linknavy]{hyperref}
+
+% A LINK TO A ROTATED FIGURE. pdfTeX places a destination before the page is
+% rotated, so the caption's target inside sidewaysfigure sits thousands of
+% points off the page and a click on "Figure 3" goes nowhere. Inside
+% sidewaysfigure, \label also sets a Fit destination on the float's own page
+% and points the reference at it.
+\makeatletter
+\AtBeginDocument{\let\hc@origlabel\label}
+\newcommand{\hc@rotatedlabel}[1]{\pdfdest name{\@currentHref.page} fit\relax
+  \edef\@currentHref{\@currentHref.page}\hc@origlabel{#1}}
+\let\hc@sidewaysfigure\sidewaysfigure
+\def\sidewaysfigure{\hc@sidewaysfigure\let\label\hc@rotatedlabel}
+\makeatother
+
+% ---------------------------------------------------------------- theorem envs
+\theoremstyle{plain}
+\newtheorem{innerlemma}{Lemma}
+\newenvironment{Lem}[1]{\renewcommand\theinnerlemma{#1}\innerlemma}{\endinnerlemma}
+\newtheorem{innerobs}{Observation}
+\newenvironment{Obs}[1]{\renewcommand\theinnerobs{#1}\innerobs}{\endinnerobs}
+\newtheorem{innerconj}{Conjecture}
+\newtheorem{innerprob}{Problem}
+\newenvironment{Prob}[1]{\renewcommand\theinnerprob{#1}\innerprob}{\endinnerprob}
+\newenvironment{Conj}[1]{\renewcommand\theinnerconj{#1}\innerconj}{\endinnerconj}
+\theoremstyle{definition}
+\newtheorem{innerdefn}{Definition}
+\newenvironment{Defn}[1]{\renewcommand\theinnerdefn{#1}\innerdefn}{\endinnerdefn}
+\theoremstyle{remark}
+\newtheorem*{remarkstar}{Remark}
+\newtheorem*{certificate}{Verification}
+
+% ---------------------------------------------------------------- macros
+\newcommand{\Weyl}{\mathrm{Weyl}}
+\newcommand{\Alt}{\mathrm{Alt}}
+\newcommand{\Ric}{\mathrm{Ric}}
+\newcommand{\owedge}{\owedgesym}
+\newcommand{\owedgesym}{\mathbin{\bigcirc\mkern-15mu\wedge}}
+\newcommand{\scal}{\mathrm{scal}}
+\newcommand{\Crit}{\mathrm{Crit}}
+\newcommand{\Id}{\mathrm{Id}}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\CP}{\mathbb{CP}}
+\newcommand{\HP}{\mathbb{HP}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\so}{\mathfrak{so}}
+\newcommand{\su}{\mathfrak{su}}
+\newcommand{\sype}{\mathfrak{sp}}
+\newcommand{\uu}{\mathfrak{u}}
+\newcommand{\kk}{\mathfrak{k}}
+\newcommand{\mm}{\mathfrak{m}}
+\newcommand{\hh}{\mathfrak{h}}
+\newcommand{\thstar}{\theta^{*}}
+\newcommand{\ad}{\mathrm{ad}}
+\newcommand{\rr}{\mathfrak{r}}
+\newcommand{\Aut}{\mathrm{Aut}}
+\newcommand{\Out}{\mathrm{Out}}
+\newcommand{\spin}{\mathfrak{spin}}
+\newcommand{\Zt}{\mathbb{Z}_2}
+\newcommand{\pp}{\mathfrak{p}}
+
+\title{\bfseries Maximizing Hamilton's cubic over Weyl curvature operators\\[4pt]
+\large The problem as posed, the route to it, and the state of the proof}
+\author{Progress report}
+\date{4 September 2026}
+
+\begin{document}
+\maketitle
+
+\input{sections/00-abstract}
+
+\tableofcontents
+
+\input{sections/01-introduction}
+\input{sections/02-plain-language}
+\input{sections/03-setup}
+\input{sections/04-granted-hypothesis}
+\input{sections/05-landscape}
+\input{sections/06-shape}
+\input{sections/06b-bispectral}
+\input{sections/07-gradedness-split}
+\input{sections/08-fence-posts}
+\input{sections/09-status}
+
+\input{sections/90-appendix}
+
+\input{sections/99-bibliography}
+
+\end{document}

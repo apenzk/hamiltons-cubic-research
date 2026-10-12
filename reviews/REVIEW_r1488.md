@@ -1,0 +1,56 @@
+# Review r1488: the negative part to second order along any path, milestone 4 of the second-order build
+
+Gate 2 review of commit 85a2c1bf, which adds [Base/SecondAssembly.lean](../lean/HamiltonsCubic/Base/SecondAssembly.lean) (`exp2_negPart_path` and its helpers) and marks milestone 4 of the [second-order plan](2026-09-26-lean-second-order-plan.md) proved. One reviewer. Analysis-only rule inherited: the only compute was the module build (8714 jobs, no error, one lint warning) and `#print axioms` on a scratch file under `/private/tmp`, since deleted.
+
+| item | claim | verdict |
+| --- | --- | --- |
+| A | `exp2_negPart_path` is the one-sided second-order expansion L134(b) needs, with the right hypotheses and filter | CONFIRMED WITH GAP |
+| B | `star_M2`, `prodRot_unitary`, `specFn_eq_conj_gen`, `specFn_congr_op`, `exp2_negPart_blk`, `commutator_toCLM` and the final conjugation are sound, none circular or vacuous | CONFIRMED |
+| C | all thirteen declarations of the file rest on `propext`, `Classical.choice`, `Quot.sound` only | CONFIRMED |
+| D | the file docstring and the plan's milestone 4 are accurate, milestones 2 and 3 are proved inside it, punctuation clean | CONFIRMED WITH GAP |
+
+**Summary: the Lean is correct and kernel-checked on the standard axioms, and it supplies the existence of a one-sided Peano expansion $g(W(t))=g(u)+tA_1+t^2A_2+o(t^2)$ along any symmetric path, which is what L134(b)'s sign argument uses, but the record defines $c_2$ as a literal second derivative with an $O(t^3)$ remainder (route-a.md lines 182 and 203), and the plan's milestone 3 still says "Owed" beside milestone 4's claim that it is proved (plan line 11). CONFIRMED WITH GAP.**
+
+## A. Statement fidelity
+
+The statement, as `#check` prints it: for $E$ a finite-dimensional real inner product space, $u$ symmetric, $g$ with $g(x)=0$ for $x>0$, $g(x)=-x$ for $x<0$ and $g(cx)=cg(x)$ for $c\ge0$, $H$ and $G$ symmetric, $W:\mathbb R\to\operatorname{End}(E)$ with every $W(t)$ symmetric and `Exp2 W u H G`, there exist $A_1,A_2$ with `Exp2 (g ∘ W) (g u) A₁ A₂`.
+
+- **The function.** The three conditions on $g$ force $g(0)=0$ (take $c=0$) and hence $g(x)=\max(-x,0)$ (as `negPart_lipschitz` derives), the eigenvalue function of $W_-=\tfrac12(\lvert W\rvert-W)$, which is the convention route-a.md line 215 fixes for L134 and its consumers. **Correct.**
+- **The filter.** `Exp2` (Exp2.lean line 22) is little-o along `𝓝[Set.Ici 0] 0`, so both the hypothesis and the conclusion are one-sided at $0^+$. **Correct.**
+- **Symmetry of $H$ and $G$.** Required, and harmless: given $u$ and every $W(t)$ symmetric, uniqueness of the coefficients of an expansion along $[0,\infty)$ forces $H$ and $G$ symmetric anyway, so the hypotheses restrict nothing. They are what makes $M_2$ self-adjoint (`star_M2`) and $K_2$ skew.
+- **Symmetry of $W$.** Required pointwise for every real $t$ (`hWs : ∀ t`). This is stronger than the one-sided statement needs (only $t\ge0$ near $0$ is used), but every path the record feeds it, the great circle $\cos t\,u+\sin t\,H$ and the line $u+tH$, is symmetric at every $t$, so nothing is lost for L134. *A precision remark, not a gap.*
+- **Not vacuous.** $W(t)=u+tH+t^2G$ with symmetric $u,H,G$ satisfies every hypothesis, and $g=\max(-x,0)$ satisfies the three conditions.
+- **Existential conclusion.** $A_1$ and $A_2$ are not identified. For the existence claim that the plan's Goal paragraph states (plan line 5) and milestone 5 consumes, that is enough: the coefficients of a one-sided Peano expansion are unique, so $A_1$ is necessarily the first-order derivative of NegPartDeriv.lean and $A_2$ is the one number $c_2$ can be, and the expansion rules out a $t^2\log t$ term, which is the job route-a.md line 203 gives Rellich's theorem.
+
+**Gap A-1.** It is not enough for the literal wording of the record. route-a.md line 182 defines $c_2(H):=\tfrac12\tfrac{d^2}{dt^2}\big|_{t=0^+}\delta^2(\cos t\,u+\sin t\,H)$, a second derivative, and the proof of (b) (line 203) writes the remainder as $O(t^3)$. `exp2_negPart_path` supplies a Peano coefficient with an $o(t^2)$ remainder: it says nothing about $t\mapsto g(W(t))$ being differentiable at $t>0$, so it does not give a second derivative at $0^+$, and it gives $o(t^2)$ where the record says $O(t^3)$. The sign argument of (b) needs only $\Phi(t)-\theta_0=[\cdots]t^2+o(t^2)$, so the mathematics of (b) survives on what is proved. The commit message and the file docstring (SecondAssembly.lean lines 10 to 11, "This is the step the record takes from Rellich's theorem") therefore describe a weaker statement than the one the record cites Rellich for. Repair: either redefine $c_2$ at route-a.md line 182 as the $t^2$ coefficient of the one-sided expansion and read line 203's $O(t^3)$ as $o(t^2)$, or say in the docstring and the plan that the Lean supplies the expansion, which is the part of the Rellich step that (b) uses.
+
+## B. The proof's steps
+
+- **`star_M2`** (line 33). $M_2=G-(KH-HK)+\tfrac12K^2u+\tfrac12uK^2-KuK$. With $K^*=-K$ and $u,H,G$ self-adjoint: $(KH-HK)^*=H(-K)-(-K)H=KH-HK$, $(K^2u)^*=u(K^*)^2=uK^2$ so the two halves swap, and $(KuK)^*=K^*uK^*=KuK$. So $M_2^*=M_2$. **Correct.**
+- **`prodRot_unitary`** (line 41). With $S=e^{-t^2K_2}e^{-tK}$ and $R=e^{tK}e^{t^2K_2}$, $SR=e^{-t^2K_2}(e^{-tK}e^{tK})e^{t^2K_2}=1$ and $RS=1$ likewise, from `rot_neg_mul_rot` and `rot_mul_rot_neg`. This is invertibility with $S=R^{-1}$, and needs no skewness. Orthogonality proper, $R^*=S$, is `hstar` inside the main proof (line 197), from `star_rot` with $K$ and $K_2$ skew. Both are used where they are needed: $SR=RS=1$ by the conjugation identity, $R^*=S$ by the symmetry of $SWR$ (`hNs`). **Correct.**
+- **`specFn_congr_op`** (line 66). Proof irrelevance after `subst`: $g(T)$ depends only on $T$. **Correct.**
+- **`specFn_eq_conj_gen`** (line 71). Builds the linear equivalence $U=R$ with inverse $S$ and applies `specFn_conj` (SpectralFn.lean line 114), $g(U^{-1}TU)=U^{-1}g(T)U$, then conjugates back to $g(T)=R\,g(STR)\,S$. `specFn_conj` needs only invertibility, and the symmetry of $STR$ is a hypothesis supplied by `hNs`. **Correct.**
+- **`exp2_negPart_blk`** (line 110). `specFn_blk_family` (SecondOrder.lean line 62, r1486) gives, for $0\le t\le t_0$, $g(u+t(H+tH_2)_{blk})=g(u)+t\big(-(H+tH_2)_{<0}+g(P_0(H+tH_2)P_0)\big)$ exactly. Schur linearity (`schur_add_op`, `schur_smul_op`) writes $P_0(H+tH_2)P_0=D+tD_2$ with $D=P_0HP_0$, $D_2=P_0H_2P_0$, and `specFn_congr_op` transfers the proof term. The first-order theorem `hasDerivWithinAt_specFn_negPart` (NegPartDeriv.lean line 118) is stated under the section variables `{u} (hu : u.IsSymmetric)` with no other hypothesis on the base point, so instantiating it at $D$ (by `schur_isSymmetric` with `zeroφ_symm`) with direction $D_2$ is legitimate: it gives $g(D+tD_2)=g(D)+tD'+o(t)$ as a one-sided derivative, and `exp2_of_hasDerivWithinAt` turns $t\,g(D+tD_2)$ into $t\,g(D)+t^2D'+o(t^2)$. Adding the polynomial $g(u)-tH_{<0}-t^2H_{2,<0}$ (`Exp2.poly`) and matching on the eventual set $0\le t\le t_0$ (`Exp2.congr_ev`) gives the expansion with $b=-H_{<0}+g(D)$ and $c=-H_{2,<0}+D'$. $P_0XP_0$ is an operator on all of $E$ vanishing off $\ker u$, and $g(0)=0$, so reading $g$ on $E$ rather than on $\ker u$ changes nothing. **Correct.** This is milestone 2.
+- **`commutator_toCLM`** (line 156). Transports `rotGen_commutator` ($[K,u]=H-H_{blk}$, Schur.lean line 161) into `E →L[ℝ] E`, so $H-[K,u]=H_{blk}$. It is applied at $H$ and at $M_2$ (line 216, with $M_2$'s round trip through `E →ₗ[ℝ] E` closed by `rfl`). With these, `exp2_conj` (r1487) gives $S(t)W(t)R(t)=u+tH_{blk}+t^2(M_2)_{blk}+o(t^2)$. This is milestone 3's owed choice of $K$, $K_2$ as the Schur generators, now discharged.
+- **The comparison.** The exact block path $P(t)=u+t(H+tM_2)_{blk}=u+tH_{blk}+t^2(M_2)_{blk}$ (`e2`), so $SWR-P=o(t^2)$ (`hdiff`). `norm_specFn_sub_le` (NegPartDeriv.lean line 49) gives $\lVert g(SWR)-g(P)\rVert\le\sqrt n\,\lVert SWR-P\rVert$ pointwise, so $g(SWR)-g(P)=o(t^2)$ and `Exp2.of_sub` carries $g(P)$'s expansion to $g(SWR)$ (`hgN`), with $g(u)$ as constant term.
+- **The final conjugation.** $g(W)=R\,g(SWR)\,S$ (`hconj`), and `Exp2.mul` of $R=1+tK+t^2(\tfrac12K^2+K_2)+o(t^2)$, $g(SWR)$ and $S$ gives an expansion whose constant term is $1\cdot g(u)\cdot1=g(u)$. The coefficients are left existential. **Correct.**
+- **Circularity and vacuity.** The chain is SpectralFn, BlockValue, Schur, NegPartDeriv, SecondOrder, Exp2, then this file. No step assumes the second-order conclusion, and no hypothesis is unsatisfiable (every one is discharged inside the proof from `hH`, `hG`, `hu`, `hWs`, `hW`). **CONFIRMED.**
+
+## C. Axioms
+
+`#print axioms` on all thirteen declarations (`star_M2`, `prodRot_unitary`, `exp2_of_hasDerivWithinAt`, `specFn_congr_op`, `specFn_eq_conj_gen`, `Exp2.congr_ev`, `Exp2.of_sub`, `Exp2.poly`, `exp2_negPart_blk`, `star_toCLM`, `isSymmetric_of_star`, `commutator_toCLM`, `exp2_negPart_path`) returns `[propext, Classical.choice, Quot.sound]` for each. No `sorry`, no `native_decide`, no `sorryAx`. **CONFIRMED.**
+
+## D. Record accuracy
+
+- **The file docstring** (lines 5 to 22) describes the route as the proof runs it: $R(t)=\exp(tK)\exp(t^2K_2)$, $K_2$ the generator for $M_2$, the rotated path $u+tH_{blk}+t^2(M_2)_{blk}+o(t^2)$, the comparison with the exact block path, the $\sqrt n$-Lipschitz bound and the conjugation back. Accurate, apart from gap A-1's sentence.
+- **The plan's milestone 4 "Proved" sentence** (plan line 12) is accurate for `exp2_negPart_path`. Its preceding sentence credits "the Hilbert–Schmidt Lipschitz bound of SpectralFn.lean", and the bound used is `norm_specFn_sub_le` in NegPartDeriv.lean, derived from SpectralFn.lean's `hsSq_specFn_sub_le`: accurate as a pointer to the source.
+- **"Milestones 2 and 3 are proved inside it."** True in substance: milestone 2 is `exp2_negPart_blk`'s instantiation of the first-order theorem at $D$ (item B), and milestone 3's owed part is `commutator_toCLM` applied at $H$ and $M_2$.
+- **Punctuation.** No em dash in SecondAssembly.lean or the plan. No backticks inside markdown link text. The two semicolons in the docstring (lines 16 and 19) separate items of a bulleted list, not clauses of one sentence. The plan's only semicolon is inside the math $d^+g(D;D_2)$.
+
+**Gap D-1.** Plan line 11 (milestone 3) still ends "Owed: choosing $K$, $K_2$ as the generators of Schur.lean, so that both coefficients are block-diagonal." Line 12 now says milestone 3 is proved inside milestone 4, so the plan contradicts itself. Repair: replace the "Owed" sentence with a pointer to `commutator_toCLM` in SecondAssembly.lean.
+
+**Gap D-2.** Plan line 10 (milestone 2) carries no "Proved" marker or location, and it says "By homogeneity, $g(P_0(B+tB_2)P_0)=g(D+tD_2)$". That step is Schur linearity (`schur_add_op`, `schur_smul_op`), and homogeneity of $g$ enters in milestone 1's block value. Repair: mark it proved in `exp2_negPart_blk` and name linearity.
+
+**Gap D-3.** The build prints one lint warning, SecondAssembly.lean line 93 column 41: `show` changes the goal and should be `change`. [r1487](REVIEW_r1487.md) treated a surviving lint warning (its E-a) as a gap, so this one is recorded the same way.
+
+**CONFIRMED WITH GAP.**

@@ -1,0 +1,28 @@
+=== 1. full symmetry of T(X,Y,Z)=<X, Y o Z>, and P(W)=T(W,W,W) ===
+  n=5: spread over the 4 orderings = 2.776e-17, P(X)-T(X,X,X) = 0.000e+00
+  n=6: spread over the 4 orderings = 6.939e-18, P(X)-T(X,X,X) = 0.000e+00
+  n=7: spread over the 4 orderings = 6.939e-18, P(X)-T(X,X,X) = 0.000e+00
+
+=== 2. padding: Weyl_{n0} -> Weyl_n preserves norm, P, Q ===
+  4->6: Weyl residual 2.71e-16, |norm diff| 0.00e+00, |P diff| 0.00e+00, |Q-padQ| 1.11e-16
+  5->7: Weyl residual 2.69e-16, |norm diff| 0.00e+00, |P diff| 1.39e-17, |Q-padQ| 2.78e-17
+  6->8: Weyl residual 1.91e-16, |norm diff| 0.00e+00, |P diff| 0.00e+00, |Q-padQ| 0.00e+00
+
+=== 3. Weyl_4 = Lambda^+ + Lambda^-: circ-orthogonal, P additive ===
+  dim Weyl_4 = 10
+  W - (W+ + W-) = 1.25e-16   (so Weyl_4 splits)
+  ||W+ o W-||   = 8.54e-18
+  P(W)-P(W+)-P(W-) = 0.00e+00
+
+=== 4. THE ONE-LINE BOUND vs the harmonic-square law ===
+  A: ||X||^2=1.000000000000  theta=1.224744871392  criticality residual=1.65e-15
+  B: ||X||^2=1.000000000000  theta=1.224744871392  criticality residual=1.65e-15
+  A o B = 1.84e-16
+   a=0.5000 b=0.8660: P=0.948588238   a^3+b^3=0.774519053 times theta_A=0.948588238   critical? residual=1.94e-01
+   a=0.7071 b=0.7071: P=0.866025404   a^3+b^3=0.707106781 times theta_A=0.866025404   critical? residual=1.09e-15
+   a=0.8000 b=0.6000: P=0.891614266   a^3+b^3=0.728000000 times theta_A=0.891614266   critical? residual=1.18e-01
+
+=== 5. the saddle direction: every circ-summand is an E(1) eigenvector of L_e ===
+  theta=0.866025403784, ||H||^2=1.000000000000
+  ||L_e H - H|| = 1.54e-15   (eigenvalue 1, against the max-condition bound 1/2)
+  Hess = 6 theta (L_e - 1/2) on H = 2.598076211353   vs 3 theta ||H||^2 = 2.598076211353

@@ -1,0 +1,85 @@
+Sym^3 weight system: 204,205 distinct weights, dim 733,813,080  [18.1s]
+W(D6) elements: 23040
+
+recomputing all 77 block multiplicities by Racah
+  (6, 6, 0, 0, 0, 0)       wtspace       1  racah   1  cached   1
+  (6, 4, 2, 0, 0, 0)       wtspace       2  racah   1  cached   1
+  (5, 5, 1, 1, 0, 0)       wtspace       4  racah   1  cached   1
+  (6, 2, 2, 2, 0, 0)       wtspace       5  racah   1  cached   1
+  (4, 4, 4, 0, 0, 0)       wtspace       5  racah   1  cached   1
+  (6, 4, 0, 0, 0, 0)       wtspace       8  racah   1  cached   1
+  (5, 4, 2, 1, 0, 0)       wtspace       8  racah   1  cached   1
+  (5, 3, 3, 1, 0, 0)       wtspace      10  racah   1  cached   1
+  (6, 3, 1, 0, 0, 0)       wtspace      16  racah   1  cached   1
+  (6, 2, 2, 0, 0, 0)       wtspace      22  racah   1  cached   1
+  (4, 4, 2, 2, 0, 0)       wtspace      24  racah   2  cached   2
+  (5, 3, 2, 1, 1, 0)       wtspace      25  racah   1  cached   1
+  (3, 3, 3, 3, 0, 0)       wtspace      42  racah   1  cached   1
+  (4, 3, 3, 1, 1, 0)       wtspace      52  racah   1  cached   1
+  (5, 4, 1, 0, 0, 0)       wtspace      53  racah   2  cached   2
+  (4, 4, 1, 1, 1, 1)       wtspace      72  racah   1  cached   1
+  (4, 4, 1, 1, 1, -1)      wtspace      72  racah   1  cached   1
+  (4, 3, 2, 2, 1, 0)       wtspace      80  racah   1  cached   1
+  (6, 2, 0, 0, 0, 0)       wtspace      83  racah   2  cached   2
+  (5, 3, 2, 0, 0, 0)       wtspace      91  racah   2  cached   2
+  (4, 2, 2, 2, 2, 0)       wtspace     126  racah   1  cached   1
+  (4, 4, 2, 0, 0, 0)       wtspace     138  racah   3  cached   3
+  (5, 3, 1, 1, 0, 0)       wtspace     148  racah   3  cached   3
+  (4, 3, 3, 0, 0, 0)       wtspace     184  racah   1  cached   1
+  (5, 2, 2, 1, 0, 0)       wtspace     208  racah   2  cached   2
+  (4, 4, 1, 1, 0, 0)       wtspace     237  racah   1  cached   1
+  (6, 0, 0, 0, 0, 0)       wtspace     240  racah   1  cached   1
+  (3, 3, 2, 2, 1, 1)       wtspace     330  racah   1  cached   1
+  (3, 3, 2, 2, 1, -1)      wtspace     330  racah   1  cached   1
+  (5, 2, 1, 1, 1, 0)       wtspace     340  racah   1  cached   1
+  (5, 3, 0, 0, 0, 0)       wtspace     361  racah   1  cached   1
+  (4, 3, 2, 1, 0, 0)       wtspace     466  racah   5  cached   5
+  (4, 4, 0, 0, 0, 0)       wtspace     591  racah   4  cached   4
+  (3, 3, 3, 1, 0, 0)       wtspace     658  racah   2  cached   2
+  (4, 2, 2, 2, 0, 0)       wtspace     684  racah   3  cached   3
+  (5, 2, 1, 0, 0, 0)       wtspace     781  racah   4  cached   4
+  (4, 3, 1, 1, 1, 0)       wtspace     794  racah   2  cached   2
+  (2, 2, 2, 2, 2, 2)       wtspace     810  racah   1  cached   1
+  (2, 2, 2, 2, 2, -2)      wtspace     810  racah   1  cached   1
+  (3, 3, 2, 2, 0, 0)       wtspace     992  racah   1  cached   1
+  (4, 2, 2, 1, 1, 0)       wtspace   1,163  racah   2  cached   2
+  (5, 1, 1, 1, 0, 0)       wtspace   1,222  racah   2  cached   2
+  (3, 3, 2, 1, 1, 0)       wtspace   1,697  racah   3  cached   3
+  (4, 3, 1, 0, 0, 0)       wtspace   1,809  racah   6  cached   6
+  (4, 2, 1, 1, 1, 1)       wtspace   1,960  racah   1  cached   1
+  (4, 2, 1, 1, 1, -1)      wtspace   1,960  racah   1  cached   1
+  (5, 1, 0, 0, 0, 0)       wtspace   2,395  racah   1  cached   1
+  (3, 2, 2, 2, 1, 0)       wtspace   2,551  racah   2  cached   2
+  (4, 2, 2, 0, 0, 0)       wtspace   2,614  racah   8  cached   8
+  (3, 3, 2, 0, 0, 0)       wtspace   3,757  racah   2  cached   2
+  (2, 2, 2, 2, 2, 0)       wtspace   3,850  racah   1  cached   1
+  (4, 2, 1, 1, 0, 0)       wtspace   4,186  racah   4  cached   4
+  (3, 2, 2, 1, 1, 1)       wtspace   4,335  racah   1  cached   1
+  (3, 2, 2, 1, 1, -1)      wtspace   4,335  racah   1  cached   1
+  (3, 3, 1, 1, 0, 0)       wtspace   6,137  racah   8  cached   8
+  (4, 1, 1, 1, 1, 0)       wtspace   6,694  racah   2  cached   2
+  (4, 2, 0, 0, 0, 0)       wtspace   8,077  racah   7  cached   7
+  (3, 2, 2, 1, 0, 0)       wtspace   9,029  racah   6  cached   6
+  (3, 3, 0, 0, 0, 0)       wtspace  11,840  racah   2  cached   2
+  (4, 1, 1, 0, 0, 0)       wtspace  12,562  racah   4  cached   4
+  (2, 2, 2, 2, 0, 0)       wtspace  13,444  racah   4  cached   4
+  (3, 2, 1, 1, 1, 0)       wtspace  14,595  racah   4  cached   4
+  (2, 2, 2, 1, 1, 0)       wtspace  21,664  racah   1  cached   1
+  (4, 0, 0, 0, 0, 0)       wtspace  22,280  racah   3  cached   3
+  (3, 2, 1, 0, 0, 0)       wtspace  27,030  racah   9  cached   9
+  (2, 2, 1, 1, 1, 1)       wtspace  34,731  racah   2  cached   2
+  (2, 2, 1, 1, 1, -1)      wtspace  34,731  racah   2  cached   2
+  (2, 2, 2, 0, 0, 0)       wtspace  39,660  racah   6  cached   6
+  (3, 1, 1, 1, 0, 0)       wtspace  42,218  racah   6  cached   6
+  (2, 2, 1, 1, 0, 0)       wtspace  62,101  racah   3  cached   3
+  (3, 1, 0, 0, 0, 0)       wtspace  72,750  racah   3  cached   3
+  (2, 1, 1, 1, 1, 0)       wtspace  96,594  racah   2  cached   2
+  (2, 2, 0, 0, 0, 0)       wtspace 106,431  racah   8  cached   8
+  (2, 1, 1, 0, 0, 0)       wtspace 162,646  racah   3  cached   3
+  (1, 1, 1, 1, 0, 0)       wtspace 247,834  racah   3  cached   3
+  (2, 0, 0, 0, 0, 0)       wtspace 266,000  racah   3  cached   3
+  (0, 0, 0, 0, 0, 0)       wtspace 635,220  racah   2  cached   2
+
+77 blocks, 0 disagreements, total multiplicity 191 (cached 191)
+dominant weights carried by Sym^3: 122
+dominant weights with nonzero multiplicity MISSING from the block list: 0

@@ -1,0 +1,43 @@
+CHI == pickled WDIM: True
+39 blocks with weight space <= 900
+  ok (6, 6, 0, 0, 0, 0)       dim       1  A=B=C as sets, no repeats, all sorted, weight correct, = character = symmetric-function count
+  ok (6, 4, 2, 0, 0, 0)       dim       2  A=B=C as sets, no repeats, all sorted, weight correct, = character = symmetric-function count
+  ok (5, 5, 1, 1, 0, 0)       dim       4  A=B=C as sets, no repeats, all sorted, weight correct, = character = symmetric-function count
+  ok (4, 4, 4, 0, 0, 0)       dim       5  A=B=C as sets, no repeats, all sorted, weight correct, = character = symmetric-function count
+  ok (6, 2, 2, 2, 0, 0)       dim       5  A=B=C as sets, no repeats, all sorted, weight correct, = character = symmetric-function count
+  ok (5, 4, 2, 1, 0, 0)       dim       8  A=B=C as sets, no repeats, all sorted, weight correct, = character = symmetric-function count
+  ok (6, 4, 0, 0, 0, 0)       dim       8  A=B=C as sets, no repeats, all sorted, weight correct, = character = symmetric-function count
+  ok (5, 3, 3, 1, 0, 0)       dim      10  A=B=C as sets, no repeats, all sorted, weight correct, = character = symmetric-function count
+  ok (6, 3, 1, 0, 0, 0)       dim      16  A=B=C as sets, no repeats, all sorted, weight correct, = character = symmetric-function count
+  ok (6, 2, 2, 0, 0, 0)       dim      22  A=B=C as sets, no repeats, all sorted, weight correct, = character = symmetric-function count
+  ok (4, 4, 2, 2, 0, 0)       dim      24  A=B=C as sets, no repeats, all sorted, weight correct, = character = symmetric-function count
+  ok (5, 3, 2, 1, 1, 0)       dim      25  A=B=C as sets, no repeats, all sorted, weight correct, = character = symmetric-function count
+  ok (3, 3, 3, 3, 0, 0)       dim      42  A=B=C as sets, no repeats, all sorted, weight correct, = character = symmetric-function count
+  ok (4, 3, 3, 1, 1, 0)       dim      52  A=B=C as sets, no repeats, all sorted, weight correct, = character = symmetric-function count
+  ok (5, 4, 1, 0, 0, 0)       dim      53  A=B=C as sets, no repeats, all sorted, weight correct, = character = symmetric-function count
+  ok (4, 4, 1, 1, 1, -1)      dim      72  A=B=C as sets, no repeats, all sorted, weight correct, = character = symmetric-function count
+  ok (4, 4, 1, 1, 1, 1)       dim      72  A=B=C as sets, no repeats, all sorted, weight correct, = character = symmetric-function count
+  ok (4, 3, 2, 2, 1, 0)       dim      80  A=B=C as sets, no repeats, all sorted, weight correct, = character = symmetric-function count
+  ok (6, 2, 0, 0, 0, 0)       dim      83  A=B=C as sets, no repeats, all sorted, weight correct, = character = symmetric-function count
+  ok (5, 3, 2, 0, 0, 0)       dim      91  A=B=C as sets, no repeats, all sorted, weight correct, = character = symmetric-function count
+  ok (4, 2, 2, 2, 2, 0)       dim     126  A=B=C as sets, no repeats, all sorted, weight correct, = character = symmetric-function count
+  ok (4, 4, 2, 0, 0, 0)       dim     138  A=B=C as sets, no repeats, all sorted, weight correct, = character = symmetric-function count
+  ok (5, 3, 1, 1, 0, 0)       dim     148  A=B=C as sets, no repeats, all sorted, weight correct, = character = symmetric-function count
+  ok (4, 3, 3, 0, 0, 0)       dim     184  A=B=C as sets, no repeats, all sorted, weight correct, = character = symmetric-function count
+  ok (5, 2, 2, 1, 0, 0)       dim     208  A=B=C as sets, no repeats, all sorted, weight correct, = character = symmetric-function count
+  ok (4, 4, 1, 1, 0, 0)       dim     237  A=B=C as sets, no repeats, all sorted, weight correct, = character = symmetric-function count
+  ok (6, 0, 0, 0, 0, 0)       dim     240  A=B=C as sets, no repeats, all sorted, weight correct, = character = symmetric-function count
+  ok (3, 3, 2, 2, 1, -1)      dim     330  A=B=C as sets, no repeats, all sorted, weight correct, = character = symmetric-function count
+  ok (3, 3, 2, 2, 1, 1)       dim     330  A=B=C as sets, no repeats, all sorted, weight correct, = character = symmetric-function count
+  ok (5, 2, 1, 1, 1, 0)       dim     340  A=B=C as sets, no repeats, all sorted, weight correct, = character = symmetric-function count
+  ok (5, 3, 0, 0, 0, 0)       dim     361  A=B=C as sets, no repeats, all sorted, weight correct, = character = symmetric-function count
+  ok (4, 3, 2, 1, 0, 0)       dim     466  A=B=C as sets, no repeats, all sorted, weight correct, = character = symmetric-function count
+  ok (4, 4, 0, 0, 0, 0)       dim     591  A=B=C as sets, no repeats, all sorted, weight correct, = character = symmetric-function count
+  ok (3, 3, 3, 1, 0, 0)       dim     658  A=B=C as sets, no repeats, all sorted, weight correct, = character = symmetric-function count
+  ok (4, 2, 2, 2, 0, 0)       dim     684  A=B=C as sets, no repeats, all sorted, weight correct, = character = symmetric-function count
+  ok (5, 2, 1, 0, 0, 0)       dim     781  A=B=C as sets, no repeats, all sorted, weight correct, = character = symmetric-function count
+  ok (4, 3, 1, 1, 1, 0)       dim     794  A=B=C as sets, no repeats, all sorted, weight correct, = character = symmetric-function count
+  ok (2, 2, 2, 2, 2, -2)      dim     810  A=B=C as sets, no repeats, all sorted, weight correct, = character = symmetric-function count
+  ok (2, 2, 2, 2, 2, 2)       dim     810  A=B=C as sets, no repeats, all sorted, weight correct, = character = symmetric-function count
+
+39 blocks, 0 disagreements

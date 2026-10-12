@@ -1,0 +1,10 @@
+B2 = WeylCharacterRing("B2", style="coroots")
+W5 = B2(0,4); triv = B2(0,0).highest_weight()
+S3 = W5.symmetric_power(3)
+print("dim Sym^3 =", S3.degree(), flush=True)
+T = S3 * S3
+print("dim (Sym^3 x Sym^3)^SO(5) =", T.monomial_coefficients().get(triv,0), flush=True)
+A = S3.symmetric_power(2)
+print("dim Sym^2(Sym^3)^SO(5) =", A.monomial_coefficients().get(triv,0), "  deg", A.degree(), flush=True)
+E = S3.exterior_power(2)
+print("dim Lambda^2(Sym^3)^SO(5) =", E.monomial_coefficients().get(triv,0), "  deg", E.degree(), flush=True)

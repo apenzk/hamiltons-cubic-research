@@ -1,0 +1,44 @@
+# REVIEW r1803: PairIdent.lean against Lemma L222 item 2 on all of V_jk
+
+**Verdict: CONFIRMED WITH OBSERVATIONS.** All four declarations state what their docstrings and the L222 (statement) row say they state, `Q_pair` is item 2's first clause $\nu\circ\nu=G_x$ for every $\nu\in V_{jk}$ with the record's $x$ equal to the Lean's $c$, and every declaration rests on the standard three axioms. Reviewed at commit de0932d6, analysis only, with the Lean build's `#check`, `#print axioms` and [axiom_audit.py](../scripts/misc/axiom_audit.py) as the only runs.
+
+## Claim table
+
+| # | Claim | Verdict |
+|---|---|---|
+| 1 | `pairLin_eq_nuX` ([PairIdent.lean:35](../lean/HamiltonsCubic/Results/PairIdent.lean#L35)): at $j\ne k$, $c_j=c_k=0$ and skew $X$, `pairLin j k c X` $=SXD_c+D_cXS$ | CONFIRMED WITH OBSERVATIONS (O1, O2) |
+| 2 | `pair_eq_nuX` ([PairIdent.lean:92](../lean/HamiltonsCubic/Results/PairIdent.lean#L92)): every Weyl operator of character $\varepsilon_j\varepsilon_k$ is `nuX j k c` with $c_j=c_k=0$, $\sum c=0$, as an equality of `CurvOp2` | CONFIRMED |
+| 3 | `Q_pair` ([PairIdent.lean:115](../lean/HamiltonsCubic/Results/PairIdent.lean#L115)): the same $c$ has $Q(V)=$ `coordOp (Gy j k c)`, L222 item 2's first clause on all of $V_{jk}$ | CONFIRMED WITH OBSERVATIONS (O3, O4, O5) |
+| 4 | [lean/INDEX.md:152](../lean/INDEX.md#L152), the L222 (statement) row's account of PairIdent and its owed list | CONFIRMED WITH OBSERVATIONS (O6) |
+| 5 | `vy_of_zero` ([PairIdent.lean:29](../lean/HamiltonsCubic/Results/PairIdent.lean#L29)): `vy j k c = c` at $c_j=c_k=0$ | CONFIRMED |
+
+## The record, quoted
+
+From [findings/second-order.md:1591](../findings/second-order.md#L1591), the preamble: "Write $\nu\in V_{jk}$ as $\nu=\sum_ax_a\,e_{ja}\odot e_{ka}$ ($a\notin\{j,k\}$, $\sum x=0$, $\lVert\nu\rVert^2=2\lVert x\rVert^2$)". Item 2 verbatim: "$\nu\circ\nu=G_x$, the diagonal tensor with $K_{ja}=K_{ka}=x_a^2$, $K_{jk}=-\lVert x\rVert^2$, $K_{ab}=2x_ax_b$, and $\lVert G_x\rVert^2=3\lVert x\rVert^4$, so $\lVert\nu\circ\nu\rVert=\tfrac{\sqrt3}2\lVert\nu\rVert^2$."
+
+The preamble's "write $\nu$ as" is a representation claim, and `pair_eq_nuX` is exactly it: every element of $V_{jk}$ (Weyl, character $\varepsilon_j\varepsilon_k$, the reading r1787 fixed for L222Op) is $\nu_c$ with $c$ supported off $\{j,k\}$ and $\sum c=0$. `Q_pair` then gives $\nu\circ\nu=G_c$ for that same $c$, and $G_c$'s entries are DiagSquare's `Gy_ja`, `Gy_jk`, `Gy_ab` ($c_a^2$, $-\lVert c\rVert^2$, $2c_ac_b$), matching item 2's $K$.
+
+## Checks
+
+1. **Skewness is genuinely needed in `pairLin_eq_nuX`.** `pairLin` is built from $\langle\varphi,\cdot\rangle$ with $\varphi$ skew, so it vanishes on symmetric input, while $SXD_c+D_cXS$ does not. Hand screen (no run): $n=4$, $j=0$, $k=1$, $c=(0,0,1,-1)$, $X=E_{12}+E_{21}$ symmetric gives $\mathrm{pairLin}\,X=0$ but $(SXD_c)_{02}=X_{12}c_2=1$, so the entry $(0,2)$ of the right side is $1$. Dropping `hX` makes the statement false.
+2. **Sign convention.** `inner2 X (phi a c)` $=\tfrac12(X_{ca}-X_{ac})$ ([L179Statement.lean:96](../lean/HamiltonsCubic/Results/L179Statement.lean#L96)), so on skew $X$, $\langle\varphi_{ab},X\rangle=-X_{ab}$ and $\varphi_{ji}$ has $-1$ at $(j,i)$. The left side's $(j,i)$ entry is then $(-c_iX_{ki})(-1)=c_iX_{ki}$, and the right side's is $X_{ki}\,c_i$ from row $j$ of $S$ being $e_k$ and $d_j=0$. The two agree at the sample entry, consistent with the kernel's check.
+3. **Extraction of $c$ in `pair_eq_nuX`.** `pair_block_iff` gives `extendL V = pairMap j k c` with $c\in\ker(\mathrm{blockSums1}\,A)$, $A=\{i:j\ne i\wedge k\ne i\}$. `mem_ker_blockSums1` unpacks this to $c_i=0$ off $A$ and $\sum_Ac=0$. Since $j,k\notin A$ this gives $c_j=c_k=0$ ([:96](../lean/HamiltonsCubic/Results/PairIdent.lean#L96), [:97](../lean/HamiltonsCubic/Results/PairIdent.lean#L97)), and $\sum c=\sum_Ac+\sum_{A^c}c=0+0$ ([:98](../lean/HamiltonsCubic/Results/PairIdent.lean#L98)). Correct.
+4. **Equality as `CurvOp2`.** [:101](../lean/HamiltonsCubic/Results/PairIdent.lean#L101) closes `V = nuX j k c` by `ContinuousLinearMap.ext` and `Subtype.ext` on every skew $X$, rewriting $V X$ as `extend V X` through `extend_apply`, then `pairMap j k c X = pairLin j k c X` by `skewProj_skew` on $X$'s skewness. This is a full operator equality on $\Lambda^2$, and the extension's behaviour on symmetric matrices plays no part.
+5. **`Q_pair`** instantiates `Q_nuX` (r1800) at the extracted $c$, discharging its hypothesis $\sum$ `vy j k c` $=0$ by `vy_of_zero` and $\sum c=0$. The statement returns $V=\nu_c$ and $Q(V)=G_c$ with one witness, so the $G$ is indexed by the same coefficients that represent $V$.
+6. **Axioms.** `#print axioms` in a scratch file compiled with `lake env lean`: `vy_of_zero`, `pairLin_eq_nuX`, `pair_eq_nuX`, `Q_pair` each depend on `[propext, Classical.choice, Quot.sound]`. `axiom_audit.py --only PairIdent.lean`: "4/4 clean -- resting on the standard three alone".
+
+## Observations
+
+- **O1** ([PairIdent.lean:35](../lean/HamiltonsCubic/Results/PairIdent.lean#L35)). The hypotheses `hcj`, `hck` in `pairLin_eq_nuX` are sufficient and mathematically redundant: `pairLin` sums over the filter $j\ne i\wedge k\ne i$ and the right side reads $c$ through `vy`, which zeroes $j,k$, so both sides are independent of $c_j,c_k$. The Lean proof uses them to replace `vy` by $c$ and to drop the filter. Harmless, since `pair_eq_nuX` supplies them, and the stated hypothesis is the right one for its use.
+- **O2** ([PairIdent.lean:16](../lean/HamiltonsCubic/Results/PairIdent.lean#L16), [INDEX.md:152](../lean/INDEX.md#L152)). The module docstring and the INDEX row both describe `pairLin_eq_nuX` as holding "on skew matrices" and omit $j\ne k$ and $c_j=c_k=0$. The docstring at [:34](../lean/HamiltonsCubic/Results/PairIdent.lean#L34) carries the zero condition. A reader of the row alone gets a slightly stronger reading, which by O1 is still true for the $c$ condition and needs $j\ne k$.
+- **O3** ([PairIdent.lean:115](../lean/HamiltonsCubic/Results/PairIdent.lean#L115)). `Q_pair` is existential in $c$ and does not state that $c$ is determined by $\nu$. The record's "the $x$" is well defined because $\nu$ determines $x$: `nuX_phi_ja` ([PairSquare.lean:353](../lean/HamiltonsCubic/Results/PairSquare.lean#L353)) gives $\nu_c\varphi_{ja}=c_a\varphi_{ka}$, so two witnesses agree off $\{j,k\}$ and both vanish on it. The uniqueness is a one-line corollary and nothing downstream is weakened, since any witness gives the same $G_c$.
+- **O4** ([PairIdent.lean:92](../lean/HamiltonsCubic/Results/PairIdent.lean#L92)). The Lean needs only $j\ne k$ where the record assumes $n\ge4$. The generalisation is sound: at $n=3$ the single index $a$ and $\sum x=0$ force $V_{jk}=0$, and at $n=2$ the filter is empty.
+- **O5** ([DiagSquare.lean:96](../lean/HamiltonsCubic/Results/DiagSquare.lean#L96)). `Q_pair` identifies $\nu\circ\nu$ with `coordOp (Gy j k c)`, whose diagonal differs from the record's hollow $K$ and is never read by `coordOp` (r1796 O4, O5). The operator is the record's $G_x$, and the observation is inherited from DiagSquare.
+- **O6** ([INDEX.md:152](../lean/INDEX.md#L152)). The row's PairIdent paragraph matches the file exactly: `pairLin_eq_nuX`, `pair_eq_nuX` with its coefficients zero at $j,k$ and summing to zero, `Q_pair` with $\nu\circ\nu=G_c$, standard three axioms. Its owed list correctly keeps both norm clauses, $\lVert\nu_x\rVert^2=2\lVert x\rVert^2$ (the preamble's) and $\lVert G_x\rVert^2=3\lVert x\rVert^4$ (item 2's), and with them the consequence $\lVert\nu\circ\nu\rVert=\tfrac{\sqrt3}2\lVert\nu\rVert^2$ and `Sjk_pin`'s unconditional pinning. The row does not yet cite this review, and [findings/second-order.md:1589](../findings/second-order.md#L1589) marks r1803 "pending". Both need the verdict folded in. Status **partial** is right, since items 1 (rotation invariance), 2 (norms), 4 and 5 remain owed.
+
+## Falsifiers
+
+- **`pairLin_eq_nuX`**: a skew $X$ and $c$ with $c_j=c_k=0$ whose entry $(p,q)$ of `pairLin j k c X` differs from that of $SXD_c+D_cXS$. The kernel check rules this out. Without `hX` the symmetric $X$ of Check 1 is such an object.
+- **`pair_eq_nuX`**: a Weyl operator of character $\varepsilon_j\varepsilon_k$ with $\langle\nu\varphi_{ja},\varphi_{kb}\rangle\ne0$ for some $a\ne b$ off $\{j,k\}$, or with a nonzero component outside $\mathrm{span}\{\varphi_{ja}\odot\varphi_{ka}\}$, would not be any $\nu_c$.
+- **`Q_pair`**: an element of $V_{jk}$ whose square has a nonzero entry $(Q\nu)_{ja,kb}$ off the diagonal, or diagonal entries other than $c_a^2$, $-\lVert c\rVert^2$, $2c_ac_b$ at $(ja)$, $(jk)$, $(ab)$.
+- **The INDEX row**: a declaration of PairIdent it names with a different statement, or a norm clause it lists as owed that some file already proves on the operators. A grep of `lean/HamiltonsCubic/Results` for a norm of `nuX` or of `coordOp (Gy …)` finds none.

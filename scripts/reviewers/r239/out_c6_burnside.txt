@@ -1,0 +1,36 @@
+class bookkeeping: sum over classes of 1/|centralizer| must be 1
+  n=1..12: OK
+
+control: dim (Sym^d R^n)^{B_n} = #partitions of d/2 into parts <= n
+  n=2: [0, 1, 0, 2, 0, 2, 0, 3]  expected [0, 1, 0, 2, 0, 2, 0, 3]  OK
+  n=3: [0, 1, 0, 2, 0, 3, 0, 4]  expected [0, 1, 0, 2, 0, 3, 0, 4]  OK
+  n=4: [0, 1, 0, 2, 0, 3, 0, 5]  expected [0, 1, 0, 2, 0, 3, 0, 5]  OK
+  n=5: [0, 1, 0, 2, 0, 3, 0, 5]  expected [0, 1, 0, 2, 0, 3, 0, 5]  OK
+  n=6: [0, 1, 0, 2, 0, 3, 0, 5]  expected [0, 1, 0, 2, 0, 3, 0, 5]  OK
+  n=7: [0, 1, 0, 2, 0, 3, 0, 5]  expected [0, 1, 0, 2, 0, 3, 0, 5]  OK
+
+dim (Sym^d W_n^*)^{B_n}
+   n         d=1       d=2       d=3       d=4       d=5       d=6
+   4           0         3         5        14        27        67
+   5           0         3         9        60       350      2163
+   6           0         3        17       167      1989     26630
+   7           0         3        17       215      4387    111118
+   8           0         3        17       241      6014    231741
+   9           0         3        17       241      6421    309683
+  10           0         3        17       241      6511    335171
+  11           0         3        17       241      6511    339014
+  12           0         3        17       241      6511    339423
+  13           0         3        17       241      6511    339423
+  14           0         3        17       241      6511    339423
+  15           0         3        17       241      6511    339423
+  16           0         3        17       241      6511    339423
+
+STATIONARITY of each column (first n at which the column stops changing):
+  d=1: value 0, stationary from n = 4   (2d = 2)
+  d=2: value 3, stationary from n = 4   (2d = 4)
+  d=3: value 17, stationary from n = 6   (2d = 6)
+  d=4: value 241, stationary from n = 8   (2d = 8)
+  d=5: value 6511, stationary from n = 10   (2d = 10)
+  d=6: value 339423, stationary from n = 12   (2d = 12)
+
+d=6 value at n>=12: 339423   claim: 339423   MATCH

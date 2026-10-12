@@ -1,0 +1,11 @@
+(1) n=6  <W_S3xS3, W_CP2> = -1.776e-17   ||A o B||_F = 0.263523
+    theta_A = 1.054093 (res 3.6e-16)   theta_B = 1.224745 (res 8.9e-16)
+(2) same 4 coords: <A+,A-> = 2.220e-16  ||A+ o A-||_F = 2.101e-16  overlap = 0.000
+    theta+ = 1.224745 (res 4.9e-16)  theta- = 1.224745 (res 4.9e-16)
+    combined theta = 0.866025404  res 5.5e-16   harmonic prediction 0.866025404
+(3) n=8  W = (F+G)/sqrt2 : theta = 0.866025404  res 3.2e-16
+    reading A, pieces {F, +G}: theta_i = +1.224745, +1.224745  -> min theta_i = +1.224745
+    reading B, pieces {F, -G}: theta_i = +1.224745, -1.224745  -> min theta_i = -1.224745
+    |theta| = 0.866025  <  min_i |theta_i| = 1.224745   (both readings)
+    without the absolute values reading B gives +0.866025 < -1.224745 : FALSE
+    (F-G)/sqrt2 is NOT critical: res 8.66e-01, theta 0.0e+00 -- not the witness

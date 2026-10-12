@@ -1,0 +1,64 @@
+==============================================================================
+L2.  THE SHARP RANGE:  epsilon takes at most TWO slots from a Weyl factor
+==============================================================================
+    n =  5:  max |sum_{sigma in S_3} sgn(sigma) W_{sigma(abc)d}| = 0   (W_[abc]d = 0)
+    n =  6:  max |sum_{sigma in S_3} sgn(sigma) W_{sigma(abc)d}| = 0   (W_[abc]d = 0)
+    n =  7:  max |sum_{sigma in S_3} sgn(sigma) W_{sigma(abc)d}| = 0   (W_[abc]d = 0)
+
+    So an epsilon index-set meeting one Weyl factor in three or more slots
+    annihilates the whole term.  Six factors, at most two slots each:
+
+        a chiral degree-k invariant needs  n <= 2k,  and n even.
+
+    At k = 6:  n in {2, 4, 6, 8, 10, 12}.  For every n >= 13, odd or even,
+    (Sym^6 W_n)^{SO(n)} = (Sym^6 W_n)^{O(n)}.  The record's n <= 24 permits
+    chiral invariants at n = 14, 16, ..., 24, and there are none.
+
+==============================================================================
+L4.  THE MECHANISM END TO END AT DEGREE 2:  SO(4) = 2, O(4) = 1, SO(5) = 1
+==============================================================================
+    n = 4:  |W|^2 and the Pontryagin density on 6 random exact Weyl tensors
+            |W|^2 =                  11472    eps WW =                   7680
+            |W|^2 =                  81456    eps WW =                 120000
+            |W|^2 =                  49728    eps WW =                 -12096
+            |W|^2 =                  78288    eps WW =                  24960
+            |W|^2 =                  62736    eps WW =                  -3072
+            |W|^2 =                  47328    eps WW =                   1920
+    rank of the pair = 2, so the SO(4)-invariant quadratics span 2
+    dimensions while the O(4) count is 1 -- the record's 'deg 2: 1'.
+
+    under a reflection (det = -1):  |W|^2  11472 -> 11472
+                                    eps WW 7680 -> -7680
+    invariant under O(4), the chiral one flips: it is SO-only.  At n = 5
+    the same contraction needs 5 epsilon slots out of 8, leaving 3 to be
+    paired -- impossible -- so SO(5) = O(5) = 1 and the count DROPS 2 -> 1.
+
+==============================================================================
+L3.  DEGREE 6 AT n = 12:  a chiral invariant, evaluated exactly, nonzero
+==============================================================================
+    Shape.  n = 12 saturates L2: epsilon takes exactly one antisymmetric
+    pair from each of the six Weyl factors, and the six remaining pairs match
+    up among themselves.  Take the matching into three 'dumbbells',
+    M_{abcd} = W_{abef} W_{efcd}, and contract:
+
+        S(W) = eps_{a1...a12} M_{a1a2a3a4} M_{a5a6a7a8} M_{a9a10a11a12}.
+
+    Computed by splitting {1..12} into three 4-subsets: the epsilon sign is the
+    shuffle sign of the sorted blocks times the sign inside each block, so
+    S = sum over ordered set-partitions of sgn(shuffle) * P(S1) P(S2) P(S3)
+    with P(S) the full antisymmetrisation of M over the four indices of S.
+
+    S(W) = -84473527735709457235968000000
+    S(RW), R a reflection = 84473527735709457235968000000
+    S(RW) = -S(W): True      S nonzero: True
+
+    So a degree-6 invariant of W_12 exists that SO(12) preserves and O(12) does
+    not: dim(Sym^6 W_12)^{SO(12)} >= dim(Sym^6 W_12)^{O(12)} + 1 = 90.  The
+    record's chiral multiplicity 3 (r180, r182) puts it at 92; this run confirms
+    the sign of the gap from scratch, which is what the monotonicity claim turns
+    on.  Combined with L1 and L2:
+
+        SO count:  92 at n = 12,  then 89 at EVERY n >= 13.
+
+    The drop is real, it refutes monotonicity for SO(n), and it happens at
+    exactly one step -- the step out of the certificate base.

@@ -1,0 +1,2 @@
+n=4: best P over 200 ascents = 1.224466916269   sqrt(3/2)=1.224744871392   excess=-2.780e-04   crit residual=2.61e-02   F_5(best)=+6.808e-04
+n=5: best P over 200 ascents = 1.223905369247   sqrt(3/2)=1.224744871392   excess=-8.395e-04   crit residual=4.53e-02   F_5(best)=+2.056e-03

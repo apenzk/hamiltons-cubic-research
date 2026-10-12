@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "scripts/reviewers/r323/t7.py", line 7, in <module>
+    W,th,res=newton.solve(c,rng.normal(size=d),iters=80)
+  File "scripts/reviewers/r323/newton.py", line 30, in solve
+    dz,*_=np.linalg.lstsq(A,-F,rcond=None)
+  File "<site-packages>/numpy/linalg/_linalg.py", line 2508, in lstsq
+    x, resids, rank, s = gufunc(a, b, rcond, signature=signature)
+  File "<site-packages>/numpy/linalg/_linalg.py", line 116, in _raise_linalgerror_lstsq
+    raise LinAlgError("SVD did not converge in Linear Least Squares")
+numpy.linalg.LinAlgError: SVD did not converge in Linear Least Squares

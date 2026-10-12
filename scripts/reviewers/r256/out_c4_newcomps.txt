@@ -1,0 +1,12 @@
+n=5: family s^0 X^0 .. s^2 X^4  (15 covariants), rank over all n^2 components x 4 samples = 15
+       D vanishes at all 12 (component, sample) pairs: True
+       D is a NONZERO covariant somewhere else:               True
+       rank of (A, A+D) at the FILE's components  = 1   (true rank 2)
+       rank with extra components added           = 2
+       rank of the SAME pair at seed 1            = 1
+n=6: family s^0 X^0 .. s^2 X^5  (18 covariants), rank over all n^2 components x 4 samples = 18
+       D vanishes at all 12 (component, sample) pairs: True
+       D is a NONZERO covariant somewhere else:               True
+       rank of (A, A+D) at the FILE's components  = 1   (true rank 2)
+       rank with extra components added           = 2
+       rank of the SAME pair at seed 1            = 1

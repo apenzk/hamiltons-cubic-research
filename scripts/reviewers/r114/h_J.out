@@ -1,0 +1,12 @@
+[J] dim Weyl^inv = 48; Lambda^2 splits 9/6
+[J] 100/500 conv=100
+[J] 200/500 conv=199
+[J] 300/500 conv=299
+[J] 400/500 conv=398
+[J] 500/500 conv=497
+[J] converged 497/500, distinct 64, GRADED 0
+[J]   S=0 theta=0.000000000 gap=2.821887e-08 T_hhm=8.0000e+00 dims 5/5/5 graded=False
+[J]   S=0 theta=0.000000000 gap=1.496978e-08 T_hhm=2.4000e+01 dims 10/5/0 graded=False
+[J]   S=0 theta=0.000000000 gap=3.490506e-08 T_hhm=8.0000e+00 dims 5/5/5 graded=False
+[J]   S=0 theta=0.699329880 gap=1.316279e-02 T_hhm=1.6000e+01 dims 8/7/0 graded=False
+[J] theta range [0.000000,0.759555]

@@ -1,0 +1,18 @@
+=== Lovelock: is <W,W#> = 2 tr(W^3) on Weyl_n? ===
+  n=4: dim=10, max rel |<W,W#>-2tr(W^3)| = 2.837e-15
+  n=5: dim=35, max rel |<W,W#>-2tr(W^3)| = 1.932e-15
+  n=6: dim=84, max rel |<W,W#>-2tr(W^3)| = 1.276e+00
+  n=7: dim=168, max rel |<W,W#>-2tr(W^3)| = 1.136e+00
+
+=== so at n=5, is P(W) = 3 tr(W^3) and F_5 = (3/2)||W||^6 - P(W)^2 ? ===
+  ||W||^2= 39.9673  P= 6.258941  3tr(W^3)= 6.258941  F5= 9.572550e+04  (3/2)||W||^6-P^2= 9.572550e+04
+  ||W||^2= 41.0009  P=-3.942398  3tr(W^3)=-3.942398  F5= 1.033730e+05  (3/2)||W||^6-P^2= 1.033730e+05
+  ||W||^2= 24.2057  P=-6.436348  3tr(W^3)=-6.436348  F5= 2.123233e+04  (3/2)||W||^6-P^2= 2.123233e+04
+  ||W||^2= 41.1984  P=-32.814909  3tr(W^3)=-32.814909  F5= 1.038124e+05  (3/2)||W||^6-P^2= 1.038124e+05
+
+=== max P on the unit sphere of Weyl_5, by projected ascent ===
+  best P over 40 ascents = 1.224540730713   sqrt(3/2) = 1.224744871392
+  min F5 over those = 5.000e-04
+
+=== the certificate file ===
+  exists: True 1341

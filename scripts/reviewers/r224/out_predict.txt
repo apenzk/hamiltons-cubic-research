@@ -1,0 +1,5 @@
+n=11  O-blocks  70  O-mult 183  (dropped by modification: [[2, 2, 2, 2, 2, 2]])   ->  predicted SO blocks  70  SO mult 183
+n=12  O-blocks  71  O-mult 184  (dropped by modification: [])   ->  predicted SO blocks  77  SO mult 191
+n=13  O-blocks  71  O-mult 184  (dropped by modification: [])   ->  predicted SO blocks  71  SO mult 184
+n=14  O-blocks  71  O-mult 184  (dropped by modification: [])   ->  predicted SO blocks  71  SO mult 184
+n=16  O-blocks  71  O-mult 184  (dropped by modification: [])   ->  predicted SO blocks  71  SO mult 184

@@ -1,0 +1,7 @@
+# Notes: Branca–Kröncke, arXiv:2506.13248v2
+
+> **Remark 1.2.** A fundamental tool we use in this paper is the classical Bochner-Weitzenböck formula for the Weyl tensor, holding on every Einstein manifold; that is $\tfrac12\Delta\lvert W\rvert^2=\lvert\nabla W\rvert^2+\tfrac2nS\lvert W\rvert^2-2Q$, where $Q$ is a cubic term in Weyl: $Q=2W_{pqrs}W_{ptru}W_{qtsu}+\tfrac12W_{pqrs}W_{pqtu}W_{rstu}$. The constant $C(n)$ in the above theorem is such that $\lvert Q\rvert\le C(n)\lvert W\rvert^3$.
+
+(p. 2.) Inequality (2.3), p. 9: $Q\le C(n)\lvert W\rvert^3$ with $C(4)=\tfrac{\sqrt6}4$, $C(5)=\tfrac4{\sqrt{10}}$, $C(6)=\tfrac{\sqrt{70}}{2\sqrt3}$, and $C(n)=2+\tfrac12\frac{n(n-1)-4}{\sqrt{n(n-2)(n-1)(n+1)}}$ for $n\ge6$ (sic, the displayed range overlaps at $6$). *The constant for $n=4$ was obtained in [33, Lemma 3.5], for $n=5$ by Tran in [59], for $n=6$ by Huisken in [33] adapting an argument due to Tachibana [58], while the other constants are obtained using Cauchy–Schwarz inequality combined with [33, Lemma 2.4].* [33] is Huisken 1985, on file as [huisken-1985-ricci-deformation](../huisken-1985-ricci-deformation/README.md); [59] is Tran, *On closed manifolds with harmonic Weyl curvature*, Adv. Math. 322 (2017).
+
+Cited by: Theorem 1.1 (the $L^{n/2}$ gap for Ricci-flat ALE manifolds, $\lVert W\rVert_{L^{n/2}}\ge B(n)\,(\dots)\,C(n)^{-1}$), and the stability criteria of Sections 3–4, all of which improve when $C(n)$ does.
