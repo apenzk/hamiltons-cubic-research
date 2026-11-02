@@ -11,6 +11,7 @@ agent_logs/
 lean/.lake/
 references/**/*.pdf
 references/**/*.txt
+references/**/*.html
 .claude/research-loop-active
 .claude/lean-loop-active
 .claude/verification-active
