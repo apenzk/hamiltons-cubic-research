@@ -32,6 +32,18 @@ This repository is a public snapshot of a private working record, synced from it
 
 ---
 
+# Continuing the research from this repository
+
+This repository carries everything the loops need to run on their own: the record, the skills and hooks in [.claude/](.claude/), the Lean project and the scripts. Clone it and start from [plan.md](plan.md) and [STATUS.md](STATUS.md).
+
+- **Papers.** `python3 scripts/fetch-references.py` downloads the papers listed in [references/FETCH.tsv](references/FETCH.tsv) from their arXiv pages or direct links and extracts the text the notes quote by line number. Git ignores the downloads. A few sources need a manual download, and the script lists them.
+- **Lean.** `lake build` in [lean/](lean/) builds the formalisation, with Mathlib fetched on the first run.
+- **Report.** `make` in [report/](report/) rebuilds the PDF.
+- **Git hooks.** `git config core.hooksPath .githooks` switches on the commit-time checks.
+- **The $n=12$ certificate.** [Lemma L254](results.md) cites an outside sum-of-squares certificate that this repository does not hold, so its replay is unavailable here.
+
+---
+
 # License
 
 Copyright (c) 2026 apenzk. Two licenses apply, split by what the file is.

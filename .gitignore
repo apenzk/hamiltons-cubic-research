@@ -9,6 +9,8 @@ __pycache__/
 *.pyc
 agent_logs/
 lean/.lake/
+references/**/*.pdf
+references/**/*.txt
 .claude/research-loop-active
 .claude/lean-loop-active
 .claude/verification-active
