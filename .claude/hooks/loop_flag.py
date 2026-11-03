@@ -230,21 +230,21 @@ def _decision_open():
     return any(line.startswith("## ") for line in text.splitlines())
 
 
-# WITH A MANAGER SESSION RUNNING, A CALL THAT IS THE USER'S DOES NOT STOP A LOOP.  The
-# manager named in .claude/sessions.json puts it to the user and commits the answer, so
+# WITH AN ORCHESTRATOR SESSION RUNNING, A CALL THAT IS THE USER'S DOES NOT STOP A LOOP.  The
+# orchestrator named in .claude/sessions.json puts it to the user and commits the answer, so
 # the loop hands it over with SendMessage and keeps working.  `effort:` still stops:
 # only the user can change a session's effort, and only in that session.
-ROUTED_TO_MANAGER = ("decision:", "skill-changed:", "strategy:", "lean-unsupported:",
+ROUTED_TO_ORCHESTRATOR = ("decision:", "skill-changed:", "strategy:", "lean-unsupported:",
                      "lean-disagreement:")
 
 
-def _manager():
-    """The manager session's name from .claude/sessions.json, or None."""
+def _orchestrator():
+    """The orchestrator session's name from .claude/sessions.json, or None."""
     import json
     import os
     root = os.environ.get("CLAUDE_PROJECT_DIR", os.getcwd())
     try:
-        m = json.load(open(os.path.join(root, ".claude", "sessions.json"))).get("manager") or {}
+        m = json.load(open(os.path.join(root, ".claude", "sessions.json"))).get("orchestrator") or {}
     except (OSError, ValueError, AttributeError):
         return None
     name = m.get("session") if isinstance(m, dict) else None
@@ -254,9 +254,9 @@ def _manager():
 def check_stop_reason(reason):
     """Return (ok, message).  ok is True when the reason opens with a listed tag."""
     r = (reason or "").strip().lower()
-    manager = _manager()
-    if manager and r.startswith(ROUTED_TO_MANAGER):
-        return False, (f"stop REFUSED: a manager session is running ({manager}, per "
+    orchestrator = _orchestrator()
+    if orchestrator and r.startswith(ROUTED_TO_ORCHESTRATOR):
+        return False, (f"stop REFUSED: an orchestrator session is running ({orchestrator}, per "
                        ".claude/sessions.json). Send it this call with SendMessage, the first line "
                        "opening with its kind (DECISION, SKILL CHANGE, BLOCKED or DEFECT), then the "
                        "ask, a recommendation and what you do meanwhile, and continue with work that "

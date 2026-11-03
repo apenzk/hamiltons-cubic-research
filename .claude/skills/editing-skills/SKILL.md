@@ -23,7 +23,7 @@ In **learning** mode the lesson is written into the skill and **the run pauses f
 
 **A promotion commits itself. The score is the review.** Report it verbatim anyway. **AND EVERY FILING OR PROMOTION REGENERATES [STATUS.md](../../../STATUS.md) IN THE SAME COMMIT**, since its score-band table is read out of this file and goes stale the moment a row moves. *A count nobody regenerates is the failure most of the rows here are about.*
 
-**Every other skill edit pauses, and stays uncommitted until approved.** The uncommitted change is what the Stop hook sees; the pause is what the user gets. **WITH A MANAGER SESSION NAMED IN [.claude/sessions.json](../../sessions.json), A LOOP SESSION NEITHER PAUSES NOR WRITES THE EDIT: IT SENDS THE PROPOSED TEXT TO THE MANAGER, WHICH WRITES IT, REPORTS IT VERBATIM, AND COMMITS IT ON THE USER'S APPROVAL.** *The pause belongs to the session the user is talking to, and a loop that waits on it stands still.*
+**Every other skill edit pauses, and stays uncommitted until approved.** The uncommitted change is what the Stop hook sees; the pause is what the user gets. **WITH AN ORCHESTRATOR SESSION NAMED IN [.claude/sessions.json](../../sessions.json), A LOOP SESSION NEITHER PAUSES NOR WRITES THE EDIT: IT SENDS THE PROPOSED TEXT TO THE ORCHESTRATOR, WHICH WRITES IT, REPORTS IT VERBATIM, AND COMMITS IT ON THE USER'S APPROVAL.** *The pause belongs to the session the user is talking to, and a loop that waits on it stands still.*
 
 ## Report every edit verbatim
 
