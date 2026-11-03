@@ -6,7 +6,7 @@ A research record on a conjecture of Böhm and Wilking: the lemmas proved so far
 
 # Problem
 
-Let $W_n$ be the space of algebraic Weyl curvature operators in $\mathbb{R}^n$, and let $Q(W) = W^2 + W^\#$ be Hamilton's quadratic map, sending $W_n$ to itself, which is [Fox](references/fox-2019-nonassociative-curvature-algebra/notes.md)'s Lemma 5.7.
+Let $W_n$ be the space of algebraic Weyl curvature operators in $\mathbb{R}^n$, and let $`Q(W) = W^2 + W^\#`$ be Hamilton's quadratic map, sending $W_n$ to itself, which is [Fox](references/fox-2019-nonassociative-curvature-algebra/notes.md)'s Lemma 5.7.
 
 **Goal:** prove that the cubic form $P(W) = \langle W, Q(W) \rangle$, restricted to $W$ of norm 1, is maximized on the Weyl tensor of products of spheres when $n \geq 12$.
 
