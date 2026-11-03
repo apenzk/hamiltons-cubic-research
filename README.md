@@ -28,7 +28,7 @@ The curated, numbered statement of what has been proved lives in [results.md](re
 
 The research ran as AI-assisted loops in Claude Code, and the loops are part of the record: the skills, hooks and rules that drove them are in [.claude/](.claude/), every claim's adversarial review is in [reviews/](reviews/), and every lemma's independent verification is in [verification/](verification/). [plan.md](plan.md) holds the open tasks and [ATTEMPTS.md](ATTEMPTS.md) the routes tried.
 
-This repository is a public snapshot of a private working record, synced from it at intervals. The papers the record consulted are linked at their sources from [references/](references/), where each folder keeps the citation and the reading notes. A link marked *unpublished, held in the private record* names working material this snapshot carries only as a citation.
+Until 2026-11-03 this repository was a public snapshot of a private working record, synced from it at intervals. Since then the work happens here directly, as described under *Working on this repository*. The papers the record consulted are linked at their sources from [references/](references/), where each folder keeps the citation and the reading notes. A link marked *unpublished, held in the private record* names working material this snapshot carries only as a citation.
 
 ---
 
@@ -39,8 +39,23 @@ This repository carries everything the loops need to run on their own: the recor
 - **Papers.** `python3 scripts/fetch-references.py` downloads the papers listed in [references/FETCH.tsv](references/FETCH.tsv) from their arXiv pages or direct links and extracts the text the notes quote by line number. Git ignores the downloads. A few sources need a manual download, and the script lists them.
 - **Lean.** `lake build` in [lean/](lean/) builds the formalisation, with Mathlib fetched on the first run.
 - **Report.** `make` in [report/](report/) rebuilds the PDF.
-- **Git hooks.** `git config core.hooksPath .githooks` switches on the commit-time checks. On main they include [check-private.py](.githooks/check-private.py), which reads its list of private strings from `~/.config/hamiltons-cubic/forbidden.txt` and refuses every commit on main while that file is missing.
+- **Git hooks.** `git config core.hooksPath .githooks` switches on the commit-time checks, the privacy check described below among them.
 - **The $n=12$ certificate.** [Lemma L254](results.md) cites an outside sum-of-squares certificate that this repository does not hold, so its replay is unavailable here.
+
+---
+
+# Working on this repository
+
+Work happens on a local branch and reaches main as one squashed commit, checked for private material on the way.
+
+- **Work branch.** Research cycles commit on a local branch, `loop` on the maintainer's machine, which is never pushed. A pushed branch, and any pull request opened from it, keeps every intermediate commit readable on GitHub even after a squash merge and branch deletion, so intermediate work stays on the machine.
+- **Publishing.** `git checkout main && git merge --squash loop && git commit`, then `git push origin main`. Only the squashed result reaches GitHub.
+- **Privacy check.** On main, the pre-commit hook runs [check-private.py](.githooks/check-private.py) over every tracked file and refuses the commit on a forbidden string, a secret pattern such as an API key, or an email address outside the allowed ones. Work branches commit unchecked, and the squash is what gets checked.
+- **The forbidden-string list** names the private material it guards, so it lives outside every repository, in `~/.config/hamiltons-cubic/forbidden.txt`, one string per line, with `allow <file> <string>` lines waiving one string in one file. Its source of truth is the export gate in the private repository. While the file is missing, every commit on main is refused.
+- **Setup on a new computer:**
+  1. `git config core.hooksPath .githooks`, which also switches on the Lean build hook.
+  2. Copy `scripts/export-public/forbidden.txt` from the private repository to `~/.config/hamiltons-cubic/forbidden.txt`.
+  3. Run `python3 .githooks/check-private.py` once, and expect `check-private: clean`.
 
 ---
 
