@@ -39,7 +39,7 @@ This repository carries everything the loops need to run on their own: the recor
 - **Papers.** `python3 scripts/fetch-references.py` downloads the papers listed in [references/FETCH.tsv](references/FETCH.tsv) from their arXiv pages or direct links and extracts the text the notes quote by line number. Git ignores the downloads. A few sources need a manual download, and the script lists them.
 - **Lean.** `lake build` in [lean/](lean/) builds the formalisation, with Mathlib fetched on the first run.
 - **Report.** `make` in [report/](report/) rebuilds the PDF.
-- **Git hooks.** `git config core.hooksPath .githooks` switches on the commit-time checks.
+- **Git hooks.** `git config core.hooksPath .githooks` switches on the commit-time checks. On main they include [check-private.py](.githooks/check-private.py), which reads its list of private strings from `~/.config/hamiltons-cubic/forbidden.txt` and refuses every commit on main while that file is missing.
 - **The $n=12$ certificate.** [Lemma L254](results.md) cites an outside sum-of-squares certificate that this repository does not hold, so its replay is unavailable here.
 
 ---

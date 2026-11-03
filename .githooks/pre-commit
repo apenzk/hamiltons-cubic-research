@@ -1,5 +1,7 @@
 #!/bin/sh
-# Commit-time checks, kept to seconds. Nothing here refuses a commit.
+# Commit-time checks, kept to seconds. On main, a commit holding private material is
+# refused by check-private.py, so a squash of a work branch is checked before it can be
+# pushed. Every other check only reports.
 #
 # LEAN IS CHECKED AFTER THE COMMIT, NOT BEFORE IT. Sessions commit into one tree
 # at once, so a commit-time compile waited on another session's unbuilt modules
@@ -13,6 +15,9 @@
 #
 # This is git's own hook: it holds for every session and every author.
 set -u
+if [ "$(git branch --show-current)" = main ]; then
+  python3 "$(git rev-parse --show-toplevel)/.githooks/check-private.py" || exit 1
+fi
 STAGED=$(git diff --cached --name-only --diff-filter=ACM | grep '^lean/.*\.lean$' || true)
 [ -n "$STAGED" ] || exit 0
 [ -d lean ] || exit 0
