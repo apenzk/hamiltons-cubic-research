@@ -28,7 +28,7 @@ The curated, numbered statement of what has been proved lives in [results.md](re
 
 The research ran as AI-assisted loops in Claude Code, and the loops are part of the record: the skills, hooks and rules that drove them are in [.claude/](.claude/), every claim's adversarial review is in [reviews/](reviews/), and every lemma's independent verification is in [verification/](verification/). [plan.md](plan.md) holds the open tasks and [ATTEMPTS.md](ATTEMPTS.md) the routes tried.
 
-Until 2026-11-03 this repository was a public snapshot of a private working record, synced from it at intervals. Since then the work happens here directly, as described under *Working on this repository*. The papers the record consulted are linked at their sources from [references/](references/), where each folder keeps the citation and the reading notes. A link marked *unpublished, held in the private record* names working material this snapshot carries only as a citation.
+Until 2026-11-03 the work ran in a separate private repository, and this one received a copy of it at intervals, the commits titled "sync". Since then the work happens here directly, as described under *Working on this repository*. The papers the record consulted are linked at their sources from [references/](references/), where each folder keeps the citation and the reading notes. A link marked *unpublished, held in the private record* names working material this snapshot carries only as a citation.
 
 ---
 
