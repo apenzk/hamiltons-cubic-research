@@ -39,6 +39,7 @@ This repository carries everything the loops need to run on their own: the recor
 - **Papers.** `python3 scripts/fetch-references.py` downloads the papers listed in [references/FETCH.tsv](references/FETCH.tsv) from their arXiv pages or direct links and extracts the text the notes quote by line number. Git ignores the downloads. A few sources need a manual download, and the script lists them.
 - **Lean.** `lake build` in [lean/](lean/) builds the formalisation, with Mathlib fetched on the first run.
 - **Report.** `make` in [report/](report/) rebuilds the PDF.
+- **Retrieval.** The research loop searches the record with a local retrieval tool before deriving anything. Build its index with `python3 scripts/rag/registries.py . .rag/head`, `python3 scripts/rag/fetch_sources.py .rag/head/manifest.tsv .rag/papers` and `.venv/bin/python scripts/rag/rag.py index`, and rerun the last after the record changes. Usage and the evaluation are in [scripts/rag/](scripts/rag/README.md).
 - **Git hooks.** `git config core.hooksPath .githooks` switches on the commit-time checks, the privacy check described below among them.
 - **The $n=12$ certificate.** [Lemma L254](results.md) cites an outside sum-of-squares certificate that this repository does not hold, so its replay is unavailable here.
 
