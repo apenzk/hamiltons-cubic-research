@@ -10,7 +10,7 @@
 
 ## Passage B, a per-frame statement and proof on file in the same file ([findings/bispectral.md](../findings/bispectral.md) lines 480, 484 and 493, inside the block of another lemma)
 
-**Statement.** Let $W\in\mathrm{Weyl}_n$, $n\ge4$, act on $\Lambda^2$ as $M$ with $\lVert M\rVert_F=1$ and spectrum $\mu$, and let $\mathring W$ be its curvature operator of the second kind on $S^2_0$ in Li's convention, with spectrum $\omega$. Fix a frame $F$, let $K=K(F)$, $K_{ab}=W_{abab}$, and $t_F=\sum_{a\ne b}K_{ab}^2$. Take the orthonormal basis $\{\varphi_{ab}\}_{a<b}\cup\{\psi_k\}_{k<n}$ of $S^2_0$ with $\varphi_{ab}=(e_a\odot e_b)/\sqrt2$ and $\psi_k=\operatorname{diag}(v_k)$ for an orthonormal **eigenbasis** $\{v_k\}$ of $K$ on $\mathbf1^\perp$, and let $d_\varphi$, $d_\psi$, $d=(d_\varphi,d_\psi)$ be the diagonal entries of $M$ in the pair basis $\{e_a\wedge e_b\}$ and of $\mathring W$ in this basis. Then:
+**Statement.** Let $W\in\mathrm{Weyl}_n$, $n\ge4$, act on $\Lambda^2$ as $M$ with $\lVert M\rVert_F=1$ and spectrum $\mu$, and let $\mathring W$ be its curvature operator of the second kind on $S^2_0$ in Li's convention, with spectrum $\omega$. Fix a frame $F$, let $K=K(F)$, $K_{ab}=W_{abab}$, and $t_F=\sum_{a\ne b}K_{ab}^2$. Take the orthonormal basis $\{\varphi_{ab}\}_{a<b}\cup\{\psi_k\}_{k<n}$ of $S^2_0$ with $\varphi_{ab}=(e_a\odot e_b)/\sqrt2$ and $\psi_k=\mathop{\mathrm{diag}}(v_k)$ for an orthonormal **eigenbasis** $\{v_k\}$ of $K$ on $\mathbf1^\perp$, and let $d_\varphi$, $d_\psi$, $d=(d_\varphi,d_\psi)$ be the diagonal entries of $M$ in the pair basis $\{e_a\wedge e_b\}$ and of $\mathring W$ in this basis. Then:
 
 3. $t_F\le2$, with equality exactly when $W$ is coordinate-diagonal in $F$.
 

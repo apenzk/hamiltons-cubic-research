@@ -132,13 +132,13 @@ above the stated bound. This gives $\sqrt{5/3}$ at $n=5$, $\sqrt{35/26}=1.160238
 
 ## 5. "Why it matters", REFUTED by the block's own file, eleven lines above it
 
-The block justifies itself as *"the analytic replacement for the sampled feasibility sweep … Combined with the $\psi$-block identity $d_\psi=-\operatorname{spec}(K|_{\mathbf1^\perp})$ it forces $\max d$ away from zero."*
+The block justifies itself as *"the analytic replacement for the sampled feasibility sweep … Combined with the $\psi$-block identity $d_\psi=-\mathop{\mathrm{spec}}(K|_{\mathbf1^\perp})$ it forces $\max d$ away from zero."*
 
-**The same one-row extremal fact, applied to the spectrum instead of to a row, is stronger by $\sqrt n$, and [bispectral.md](../findings/bispectral.md) already states it, eleven lines above L93.** Since $K\mathbf1=0$ and $\operatorname{tr}K=0$, the $n-1$ eigenvalues on $\mathbf1^\perp$ sum to $0$ and have $\sum\mu_i^2=t$. The $M=n-1$, $s=t$ case of the very configuration lemma L93 proves gives
+**The same one-row extremal fact, applied to the spectrum instead of to a row, is stronger by $\sqrt n$, and [bispectral.md](../findings/bispectral.md) already states it, eleven lines above L93.** Since $K\mathbf1=0$ and $\mathop{\mathrm{tr}}K=0$, the $n-1$ eigenvalues on $\mathbf1^\perp$ sum to $0$ and have $\sum\mu_i^2=t$. The $M=n-1$, $s=t$ case of the very configuration lemma L93 proves gives
 $$\max d=\lvert\min_i\mu_i\rvert\ \ge\ \sqrt{\frac{t}{(n-1)(n-2)}},$$
 which is exactly the constant the preceding paragraph of that file prints, and it is $\sqrt n$ times L93's. The entry route cannot beat it: interlacing on the hollow $2\times2$ principal submatrix gives $\lambda_{\min}(K)\le-\lvert K_{ab}\rvert$, so the min-entry bound implies only the $\sqrt n$-weaker spectral statement.
 
-**So L93 is not the analytic replacement for the sweep.** The statement that does that job needs no entry bound, no hollowness, and no perfect matching, only $K\mathbf1=0$, $\operatorname{tr}K=0$ and the same extremal configuration. *The checklist item paid again: the answer was in the same file, above the block.*
+**So L93 is not the analytic replacement for the sweep.** The statement that does that job needs no entry bound, no hollowness, and no perfect matching, only $K\mathbf1=0$, $\mathop{\mathrm{tr}}K=0$ and the same extremal configuration. *The checklist item paid again: the answer was in the same file, above the block.*
 
 ---
 

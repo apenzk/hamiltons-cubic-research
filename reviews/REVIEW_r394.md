@@ -23,7 +23,7 @@
 
 ## The cold derivation, before the author's text
 
-Reconstructed from the definitions in [findings/problem.md](../findings/problem.md) alone. Write $S:=\sum_{a,b}M_{ab}^3$ (entrywise) and $T:=\operatorname{tr}M^3$ (spectral), so $\theta=\tfrac12(S+T)$, an identity, being diagonal criticality contracted against $M$.
+Reconstructed from the definitions in [findings/problem.md](../findings/problem.md) alone. Write $S:=\sum_{a,b}M_{ab}^3$ (entrywise) and $T:=\mathop{\mathrm{tr}}M^3$ (spectral), so $\theta=\tfrac12(S+T)$, an identity, being diagonal criticality contracted against $M$.
 
 **Result 1 (spectral ceiling).** $M\mathbf1=0$ puts $0$ in the spectrum, so the other $n-1$ eigenvalues carry $\sum\mu=0$, $\sum\mu^2=2$. For a spectrum with the positive value at multiplicity $p$ and the negative at $q$, $p+q=n-1$, one gets $T=2^{3/2}(q-p)/\sqrt{pq(p+q)}$, maximised at $p=1$:
 $$T\;\le\;T_{\max}(n)=\frac{2\sqrt2\,(n-3)}{\sqrt{(n-1)(n-2)}} .$$
@@ -68,11 +68,11 @@ At $m=2$ this returns $\Theta_{2c}$ exactly, the balanced sphere product. **At $
 
 **2: and now the defect.** The section opens by correctly restating the surviving clause as
 
-$$\tfrac12\notin\operatorname{spec}\big(L_e|_{\mathcal D_n\cap M^\perp}\big),$$
+$$\tfrac12\notin\mathop{\mathrm{spec}}\big(L_e|_{\mathcal D_n\cap M^\perp}\big),$$
 
 then tabulates $\lambda_{\max}$ and concludes falsity from $1.206011>\tfrac12$. **That inference is invalid, and the record says so twice.** [Lemma L128](../findings/second-order.md)'s own Gate 2 box: *"A block **above** $\tfrac12$ is possible because the hypothesis is criticality, not maximality"*, with $S^2\times S^4$ pure, critical and Morse–Bott nondegenerate while its four-set blocks sit at $\tfrac23$. And [r391](REVIEW_r391.md), quoted two entries above this section: *"a Rayleigh range is an interval and may straddle $\tfrac12$ without containing it."*
 
-**Screen, at the section's own headline witness.** The $C_5$ blow-up rebuilt from [b_c5_blowup.py](../scripts/lib/b_c5_blowup.py)'s entries (within-block $4$, adjacent $-2$, non-adjacent $+1$), normalised to $\operatorname{tr}M^2=2$; row sums $0$ exactly, off-diagonal criticality residual $1.4\times10^{-17}$, $\theta=0.670820393$. The $35$-dimensional $L_e$ spectrum on $\mathcal D_n$, radial direction removed:
+**Screen, at the section's own headline witness.** The $C_5$ blow-up rebuilt from [b_c5_blowup.py](../scripts/lib/b_c5_blowup.py)'s entries (within-block $4$, adjacent $-2$, non-adjacent $+1$), normalised to $\mathop{\mathrm{tr}}M^2=2$; row sums $0$ exactly, off-diagonal criticality residual $1.4\times10^{-17}$, $\theta=0.670820393$. The $35$-dimensional $L_e$ spectrum on $\mathcal D_n$, radial direction removed:
 
 $$\big\{-\tfrac23^{(5)},\ -0.471405^{(5)},\ -\tfrac13^{(5)},\ -0.206011^{(2)},\ 0^{(7)},\ 0.460655^{(2)},\ 0.471405^{(5)},\ 0.539345^{(2)},\ 1.206011^{(2)}\big\}$$
 
@@ -135,7 +135,7 @@ Two further instances: [post F50](../findings/INDEX-traps.md)'s equality (*the m
 
 ## 6. Measure the deficit to what? The odd case is worse than recorded
 
-**Result 3 above proves the balanced orbit is empty at odd $n$.** So $d=\operatorname{dist}(M,SO(n)\cdot M_{\text{bal}})$ is a distance to a set with no member in dimension $n$, and the deficit inequality as written is **ill-posed at odd $n$**, not merely uncovered. The base must be the unbalanced product $S^{(n-1)/2}\times S^{(n+1)/2}$, at which $\Theta_n$ is not attained.
+**Result 3 above proves the balanced orbit is empty at odd $n$.** So $d=\mathop{\mathrm{dist}}(M,SO(n)\cdot M_{\text{bal}})$ is a distance to a set with no member in dimension $n$, and the deficit inequality as written is **ill-posed at odd $n$**, not merely uncovered. The base must be the unbalanced product $S^{(n-1)/2}\times S^{(n+1)/2}$, at which $\Theta_n$ is not attained.
 
 **Screen, at four odd points.** $S^3\times S^4$, $S^4\times S^5$, $S^5\times S^6$, $S^6\times S^7$: $\theta$ matches $\sqrt{2(n-1)(n-3)/((n-2)(n+1))}$ to nine digits, and $\lambda_{\max}(L_e)=\tfrac{Q-2}{2(Q-1)}$ with $Q=\tfrac{n+1}2$, so
 
@@ -151,13 +151,13 @@ $$\text{margin}\;=\;\tfrac12-\lambda_{\max}\;=\;\frac1{2(Q-1)}\;=\;\frac1{n-1}\q
 
 ## One stale figure, sitting below its own correction
 
-[ATTEMPTS.md](../ATTEMPTS.md)'s four-set section closes with *"the spectral cap $\tfrac12\operatorname{tr}M^3\le\sqrt2(n-2)/\sqrt{n(n-1)}$, $1.2309$ against $\theta_0(12)$, so $99.6\%$ of the target comes from the spectrum alone"*. That is the superseded cap over $n$ free eigenvalues. Its own Gate 2 box, **26 lines above**, corrects it: *"ignoring the forced zero eigenvalue: the correct figure is $1.213562$, a share of $98.18\%$."* Result 1 confirms the correction from the definitions, $\tfrac12T_{\max}=\sqrt2(n-3)/\sqrt{(n-1)(n-2)}=1.213562$ at $n=12$, with $1.236033=1.213562+0.022471$ and $0.022471=\tfrac12S_{\text{bal}}$ exactly. **The paragraph should be struck.**
+[ATTEMPTS.md](../ATTEMPTS.md)'s four-set section closes with *"the spectral cap $\tfrac12\mathop{\mathrm{tr}}M^3\le\sqrt2(n-2)/\sqrt{n(n-1)}$, $1.2309$ against $\theta_0(12)$, so $99.6\%$ of the target comes from the spectrum alone"*. That is the superseded cap over $n$ free eigenvalues. Its own Gate 2 box, **26 lines above**, corrects it: *"ignoring the forced zero eigenvalue: the correct figure is $1.213562$, a share of $98.18\%$."* Result 1 confirms the correction from the definitions, $\tfrac12T_{\max}=\sqrt2(n-3)/\sqrt{(n-1)(n-2)}=1.213562$ at $n=12$, with $1.236033=1.213562+0.022471$ and $0.022471=\tfrac12S_{\text{bal}}$ exactly. **The paragraph should be struck.**
 
 ---
 
 ## What the item should do next
 
-1. **Strike the "false off the band" section** and restate: the $\mathcal D_n$ clause has no counterexample. Test $\tfrac12\in\operatorname{spec}$ at the $n=9$ witness before any claim about it is reinstated.
+1. **Strike the "false off the band" section** and restate: the $\mathcal D_n$ clause has no counterexample. Test $\tfrac12\in\mathop{\mathrm{spec}}$ at the $n=9$ witness before any claim about it is reinstated.
 2. **Pin the Hessian-to-$L_e$ constant's norm convention** before quoting $c_n$, $0.175$ or $n\approx180$ again, a factor $2$ is live in all three.
 3. **Cap $c_n$ from the global critical set, not only from the Hessian.** The $C_5$ blow-up alone beats the Hessian cap by $1.88\times$ at $n=10$; the catalogue will do better.
 4. **State the item at even $n$**, and open the odd case separately with base $S^{(n-1)/2}\times S^{(n+1)/2}$, margin $1/(n-1)$.

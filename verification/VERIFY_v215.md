@@ -71,7 +71,7 @@ $$\theta=\lambda_{\min}+(n-2)\lambda_{\max}-\frac{D(v)}{\lvert\lambda_{\min}\rve
 
 Saturation is the vanishing of the last term, hence $D(v)=0$, and since every summand is a nonnegative weight on a nonnegative factor, $c_{vab}=0$ whenever $\lambda_a\lambda_b>\lambda_{\min}\lambda_{\max}$.
 
-**When is $\lambda_a\lambda_b=\lambda_{\min}\lambda_{\max}$?** With $\lambda_{\min}<0<\lambda_{\max}$ (H5, free on $\mathcal W_n$ from $\operatorname{tr}W=0$, $W\ne0$), the value $\lambda_{\min}\lambda_{\max}$ is strictly negative, so one factor is negative and one positive; then $\lvert\lambda_a\rvert\le\lvert\lambda_{\min}\rvert$ and $\lvert\lambda_b\rvert\le\lambda_{\max}$ give $\lvert\lambda_a\lambda_b\rvert\le\lvert\lambda_{\min}\rvert\lambda_{\max}$ with equality only when both are equalities. So the support condition is exactly $\{\lambda_a,\lambda_b\}=\{\lambda_{\min},\lambda_{\max}\}$, i.e. one index in $\mathfrak m$ and one in $\mathfrak h$. **A zero eigenvalue is excluded outright**, since $0>\lambda_{\min}\lambda_{\max}$, which is how $\ker W$ gets swept into $\mathfrak r$ and killed, and it answers the $\ker W\ne0$ trap by name.
+**When is $\lambda_a\lambda_b=\lambda_{\min}\lambda_{\max}$?** With $\lambda_{\min}<0<\lambda_{\max}$ (H5, free on $\mathcal W_n$ from $\mathop{\mathrm{tr}}W=0$, $W\ne0$), the value $\lambda_{\min}\lambda_{\max}$ is strictly negative, so one factor is negative and one positive; then $\lvert\lambda_a\rvert\le\lvert\lambda_{\min}\rvert$ and $\lvert\lambda_b\rvert\le\lambda_{\max}$ give $\lvert\lambda_a\lambda_b\rvert\le\lvert\lambda_{\min}\rvert\lambda_{\max}$ with equality only when both are equalities. So the support condition is exactly $\{\lambda_a,\lambda_b\}=\{\lambda_{\min},\lambda_{\max}\}$, i.e. one index in $\mathfrak m$ and one in $\mathfrak h$. **A zero eigenvalue is excluded outright**, since $0>\lambda_{\min}\lambda_{\max}$, which is how $\ker W$ gets swept into $\mathfrak r$ and killed, and it answers the $\ker W\ne0$ trap by name.
 
 Now fix a unit $v\in\mathfrak m$, extend to an orthonormal eigenbasis containing it (so $v$ *is* a basis index and no general-$v$ form of (A)/(B) is needed), and read $c_{vab}=\langle[v,v_a],v_b\rangle$ for each placement of $v_a$:
 
@@ -110,7 +110,7 @@ The displayed containment is exactly $\mathrm{ad}(h)$ being a derivation, and it
 
 ## 4. $\mathfrak r=0$, and where simplicity enters, CONFIRMED
 
-$\mathfrak g'$ is a nonzero ideal ($\mathfrak m\ne0$, since $\operatorname{tr}W=0$ at $W\ne0$ forces $\lambda_{\min}<0$ and its eigenspace is nonempty) of $\mathfrak{so}(n)$. Simplicity gives $\mathfrak g'=\mathfrak{so}(n)$. Since $\mathfrak g'=\mathfrak m+[\mathfrak m,\mathfrak m]\subseteq\mathfrak m\oplus\mathfrak h$ and the three eigenspace summands are orthogonal, $\mathfrak r=0$ and $[\mathfrak m,\mathfrak m]=\mathfrak h$.
+$\mathfrak g'$ is a nonzero ideal ($\mathfrak m\ne0$, since $\mathop{\mathrm{tr}}W=0$ at $W\ne0$ forces $\lambda_{\min}<0$ and its eigenspace is nonempty) of $\mathfrak{so}(n)$. Simplicity gives $\mathfrak g'=\mathfrak{so}(n)$. Since $\mathfrak g'=\mathfrak m+[\mathfrak m,\mathfrak m]\subseteq\mathfrak m\oplus\mathfrak h$ and the three eigenspace summands are orthogonal, $\mathfrak r=0$ and $[\mathfrak m,\mathfrak m]=\mathfrak h$.
 
 **Simplicity, checked at the boundary.** $\mathfrak{so}(3)\cong\mathfrak{su}(2)$ simple; $\mathfrak{so}(4)\cong\mathfrak{su}(2)\oplus\mathfrak{su}(2)$ not simple; $\mathfrak{so}(5)\cong\mathfrak{sp}(2)$, $\mathfrak{so}(6)\cong\mathfrak{su}(4)$, and $\mathfrak{so}(n)$ for $n\ge7$, all simple. So the block's "holds at every $n\ge3$ except $n=4$" is exactly right.
 
@@ -142,11 +142,11 @@ That is the block's $(n-2)h=nm$, and it matches [L117](../findings/bounds.md)'s 
 
 **H11 is superfluous.** The block derives this "with $T$'s mass splitting evenly across the support". Nothing of the kind is needed or used: $\lambda_b+\lambda_c$ is constant on the support, so **every** distribution supported there returns the same expectation. The evenness claim is moreover unproved anywhere in the block. It is the brief's "hypothesis stated but never used" trap, present in the very paragraph the record wrote to repair an under-derivation.
 
-**Then tracelessness.** With $\mathfrak r=0$ and $N=\binom n2$, $\operatorname{tr}W=0$ reads $\dim\mathfrak h\cdot h=\dim\mathfrak m\cdot m$, so $\dim\mathfrak m=\tfrac n{n-2}\dim\mathfrak h$; with $\dim\mathfrak h+\dim\mathfrak m=N$,
+**Then tracelessness.** With $\mathfrak r=0$ and $N=\binom n2$, $\mathop{\mathrm{tr}}W=0$ reads $\dim\mathfrak h\cdot h=\dim\mathfrak m\cdot m$, so $\dim\mathfrak m=\tfrac n{n-2}\dim\mathfrak h$; with $\dim\mathfrak h+\dim\mathfrak m=N$,
 
 $$\dim\mathfrak h\cdot\frac{2n-2}{n-2}=\frac{n(n-1)}2\quad\Longrightarrow\quad\dim\mathfrak h=\frac{n(n-2)}4,\qquad\dim\mathfrak m=\frac{n^2}4 .$$
 
-**Non-circular.** The inputs are (A), (B), the support statement, $\operatorname{tr}W=0$ and $\mathfrak r=0$, none of which mentions $\mathfrak{so}(n/2)\oplus\mathfrak{so}(n/2)$ or the sphere product. The block's "only after $\mathfrak r=0$ does tracelessness turn that ratio into the dimensions" is exactly right, and its parenthetical check at $W_{\mathbb{CP}^2}$ (ratio holds, dimension formula does not), is the correct discriminator, since $(n-2)h=nm$ at $n=4$ reads $2h=4m$, i.e. $h/m=2$, which the $\mathbb{CP}^2$ spectrum $(0,0,0,-1,-1,2)/\sqrt6$ satisfies while $\dim\mathfrak h=1\ne 4\cdot2/4=2$.
+**Non-circular.** The inputs are (A), (B), the support statement, $\mathop{\mathrm{tr}}W=0$ and $\mathfrak r=0$, none of which mentions $\mathfrak{so}(n/2)\oplus\mathfrak{so}(n/2)$ or the sphere product. The block's "only after $\mathfrak r=0$ does tracelessness turn that ratio into the dimensions" is exactly right, and its parenthetical check at $W_{\mathbb{CP}^2}$ (ratio holds, dimension formula does not), is the correct discriminator, since $(n-2)h=nm$ at $n=4$ reads $2h=4m$, i.e. $h/m=2$, which the $\mathbb{CP}^2$ spectrum $(0,0,0,-1,-1,2)/\sqrt6$ satisfies while $\dim\mathfrak h=1\ne 4\cdot2/4=2$.
 
 ## 7. Uniqueness, the identity and the forcing, CONFIRMED
 

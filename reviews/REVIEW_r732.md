@@ -1,4 +1,4 @@
-# Review r732, Lemma L161, $\operatorname{tr}(L_W^2)=\kappa_n\lVert W\rVert^2$ at every $n\ge6$
+# Review r732, Lemma L161, $\mathop{\mathrm{tr}}(L_W^2)=\kappa_n\lVert W\rVert^2$ at every $n\ge6$
 
 **Verdict: CONFIRMED as a statement and as a proof, with the lemma's account of its own novelty REFUTED.** The citation holds at source, no hypothesis of Fox Theorem 1.3 fails against $(\mathcal W_n,\circ,\langle\cdot,\cdot\rangle)$, no unit is needed anywhere, no normalisation factor goes missing, and the evaluation is a rational-function identity in $p$ and $q$. What breaks is the sentence *"The step the record was missing is that $\kappa_n$ does not depend on $W$"*: the record owns that step, Gate 2 landed, in [second-order.md](../findings/second-order.md), whose own text says it had by then been re-derived unwittingly three times.
 
@@ -13,7 +13,7 @@
 | C5 | The $4\times$ normalisation gap costs the argument a factor | **REFUTED**, only proportionality is imported, so the factor cancels before it can be dropped |
 | C6 | The ten summands are the whole of $\mathcal W_n$ | **CONFIRMED**, the dimensions sum to $\dim\mathcal W_n$ identically in $p,q$ |
 | C7 | The ten $L_e$-values are correct, the four zeros genuinely zero | **CONFIRMED, and overdetermined**, trace-freeness forces the four zeros identically in $p,q$, and a compensated perturbation of $\lambda_m$ breaks $(p,q)$-independence |
-| C8 | $\theta^2\operatorname{tr}(L_e^2)=\frac{(n-1)(2n-1)}4$ identically in $p,q$ | **CONFIRMED symbolically** |
+| C8 | $\theta^2\mathop{\mathrm{tr}}(L_e^2)=\frac{(n-1)(2n-1)}4$ identically in $p,q$ | **CONFIRMED symbolically** |
 | C9 | *"The step the record was missing is that $\kappa_n$ does not depend on $W$"* | **REFUTED**, the step is on the record and Gate 2 landed |
 | C10 | *"Both hypotheses were already checked against this algebra in the reference notes"* | **REFUTED AS STATED**, the notes check them for $SO(n)$; Fox checks them himself, for $O(n)$, inside Theorem 1.3 |
 | C11 | The scope $n\ge6$, and $n=4$ as Fox Theorem 1.5(2) | **CONFIRMED with a normalisation trap left open**, Fox's $21/16$ is $21/4$ in this record's metric, and the lemma prints neither conversion nor value |
@@ -21,11 +21,11 @@
 
 ## C1, C2, the citation, read at source
 
-The paper text is [fox-1901.04012.txt](https://arxiv.org/abs/1901.04012). Theorem 1.3 is at line 159 and reads, verbatim: *"Let $(V,h)$ be a Euclidean vector space of dimension at least 4. The algebra $(\mathrm{MC}_W(V^*),*)$ is exact and Killing metrized. Moreover: (1) The Killing form $\tau_*(X,Y)=\operatorname{tr}L_*(X)L_*(Y)$ is a nonzero multiple of $\langle\cdot,\cdot\rangle$. (2) If $\dim V>4$, then $(\mathrm{MC}_W(V^*),*)$ is simple."*
+The paper text is [fox-1901.04012.txt](https://arxiv.org/abs/1901.04012). Theorem 1.3 is at line 159 and reads, verbatim: *"Let $(V,h)$ be a Euclidean vector space of dimension at least 4. The algebra $(\mathrm{MC}_W(V^*),*)$ is exact and Killing metrized. Moreover: (1) The Killing form $\tau_*(X,Y)=\mathop{\mathrm{tr}}L_*(X)L_*(Y)$ is a nonzero multiple of $\langle\cdot,\cdot\rangle$. (2) If $\dim V>4$, then $(\mathrm{MC}_W(V^*),*)$ is simple."*
 
 **The theorem is stated for this algebra, not for a general algebra the record must then fit.** $\mathrm{MC}_W(V^*)$ is the kernel of the Ricci trace inside the metric curvature tensors (the record's $\mathcal W_n$) and Lemma 5.7 (line 813) is what makes it a subalgebra. So the lemma's hypothesis-checking labour is Fox's, already done, and part (1) is exactly the clause L161 consumes.
 
-**No unit, anywhere.** Fox defines *exact* at line 141 ($\operatorname{tr}L_\circ(x)=0$ for all $x$) and adds in the same sentence: *"Note that an exact algebra is nonunital."* Theorem 1.3 concludes exactness, so the theorem's own conclusion forbids a unit rather than presupposing one. Reading up the chain: Theorem 1.3's proof invokes Theorem 5.4 (commutativity, metrization, $O(h)$ automorphisms), Lemma 10.1 (a nontrivial idempotent, which supplies nontriviality of the multiplication), and Theorem 3.2. **Theorem 3.2's proof, at line 440, is four lines of Schur and uses no unit, no associativity, no power-associativity and no idempotent**, the idempotent appears only in an alternative argument for $\kappa\ne0$, and even there it is an idempotent, not a unit. *The route that died on a unital hypothesis died on the Peirce/Jordan cap, a different citation, and [L13](../findings/curvature-invariants.md)'s block already records that death and its reason.*
+**No unit, anywhere.** Fox defines *exact* at line 141 ($\mathop{\mathrm{tr}}L_\circ(x)=0$ for all $x$) and adds in the same sentence: *"Note that an exact algebra is nonunital."* Theorem 1.3 concludes exactness, so the theorem's own conclusion forbids a unit rather than presupposing one. Reading up the chain: Theorem 1.3's proof invokes Theorem 5.4 (commutativity, metrization, $O(h)$ automorphisms), Lemma 10.1 (a nontrivial idempotent, which supplies nontriviality of the multiplication), and Theorem 3.2. **Theorem 3.2's proof, at line 440, is four lines of Schur and uses no unit, no associativity, no power-associativity and no idempotent**, the idempotent appears only in an alternative argument for $\kappa\ne0$, and even there it is an idempotent, not a unit. *The route that died on a unital hypothesis died on the Peirce/Jordan cap, a different citation, and [L13](../findings/curvature-invariants.md)'s block already records that death and its reason.*
 
 **The one thing the lemma leaves unsaid is that Theorem 3.2 needs no connectedness either.** Connectedness and simplicity of $G$ are hypotheses of Theorem 3.1 (simplicity of the algebra), which L161 does not consume. Since $O(n)$ is disconnected, that distinction is load-bearing and it comes out the right way.
 
@@ -49,12 +49,12 @@ Both are Fox Theorem 5.4 (line 762), proved rather than assumed: $X*Y=\widehat X
 
 ## C6, C7, the spectrum, checked against the definitions and then overdetermined
 
-With $d_m=\tfrac{m(m+1)}2-1$, $e_m=\tfrac{m(m-1)}2$, $\dim X_m=\tfrac{m(m^2-4)}3$ and $\dim\mathrm{Weyl}_m=\tfrac{m(m-3)(m+1)(m+2)}{12}$, the ten summand dimensions sum to $\dim\mathcal W_n$ **identically in $p$ and $q$**, verified symbolically. So the list is complete and the summands, being pairwise non-isomorphic irreducibles under $O(p)\times O(q)$, are orthogonal; $L_e$ is a scalar on each; and $\operatorname{tr}(L_e^2)$ is the dimension-weighted sum of squares. *The $1$ on $\langle W\rangle$ is right and is neither $\theta$ nor $1/\theta$: $L_e=\theta^{-1}L_W$ and $L_WW=Q(W)=\theta W$ at unit norm, so $L_eW=W$.*
+With $d_m=\tfrac{m(m+1)}2-1$, $e_m=\tfrac{m(m-1)}2$, $\dim X_m=\tfrac{m(m^2-4)}3$ and $\dim\mathrm{Weyl}_m=\tfrac{m(m-3)(m+1)(m+2)}{12}$, the ten summand dimensions sum to $\dim\mathcal W_n$ **identically in $p$ and $q$**, verified symbolically. So the list is complete and the summands, being pairwise non-isomorphic irreducibles under $O(p)\times O(q)$, are orthogonal; $L_e$ is a scalar on each; and $\mathop{\mathrm{tr}}(L_e^2)$ is the dimension-weighted sum of squares. *The $1$ on $\langle W\rangle$ is right and is neither $\theta$ nor $1/\theta$: $L_e=\theta^{-1}L_W$ and $L_WW=Q(W)=\theta W$ at unit norm, so $L_eW=W$.*
 
 **Two identities hold as rational functions in $p,q$ on the record's values, and each is an independent test of them.**
 
-- $\operatorname{tr}(L_e)=1+\tfrac{pq}2+d_p\lambda_p+d_q\lambda_q+(e_pe_q-d_pd_q)\mu=0$.
-- $\theta^2\operatorname{tr}(L_e^2)=\tfrac{(n-1)(2n-1)}4$.
+- $\mathop{\mathrm{tr}}(L_e)=1+\tfrac{pq}2+d_p\lambda_p+d_q\lambda_q+(e_pe_q-d_pd_q)\mu=0$.
+- $\theta^2\mathop{\mathrm{tr}}(L_e^2)=\tfrac{(n-1)(2n-1)}4$.
 
 **The four zeros are forced by the first, and not merely granted.** Carrying unknown values $a,b,c,d$ on $\mathrm{Weyl}_p$, $\mathrm{Weyl}_q$, $X_p\otimes\mathbb R^q$, $X_q\otimes\mathbb R^p$, the trace is $\tfrac1{12}\big[a(p^4-7p^2-6p)+b(q^4-7q^2-6q)+4cpq(p^2-4)+4dpq(q^2-4)\big]$, and those four polynomials are linearly independent, so vanishing identically in $p,q$ gives $a=b=c=d=0$. *This is a check the lemma's chain does not use and which its two grants (the $\mathrm{Weyl}_p$ vanishing and the $X_p\otimes\mathbb R^q$ index computation), did not have available.*
 
@@ -66,9 +66,9 @@ With $d_m=\tfrac{m(m+1)}2-1$, $e_m=\tfrac{m(m-1)}2$, $\dim X_m=\tfrac{m(m^2-4)}3
 
 Verified as an identity of rational functions in $p,q$, not at sampled splits:
 
-$$\theta^2\operatorname{tr}(L_e^2)=\frac{2(n-1)(p-1)(q-1)}{(n-2)pq}\left[1+\frac{pq}4+d_p\lambda_p^2+d_q\lambda_q^2+(d_pd_q+e_pe_q)\mu^2\right]=\frac{p^2}2+pq+\frac{q^2}2-\frac{3p}4-\frac{3q}4+\frac14,$$
+$$\theta^2\mathop{\mathrm{tr}}(L_e^2)=\frac{2(n-1)(p-1)(q-1)}{(n-2)pq}\left[1+\frac{pq}4+d_p\lambda_p^2+d_q\lambda_q^2+(d_pd_q+e_pe_q)\mu^2\right]=\frac{p^2}2+pq+\frac{q^2}2-\frac{3p}4-\frac{3q}4+\frac14,$$
 
-which is $\tfrac{n^2}2-\tfrac{3n}4+\tfrac14=\tfrac{(n-1)(2n-1)}4$. The record's collapsed display for $\operatorname{tr}(L_e^2)$ agrees with the summand-by-summand sum.
+which is $\tfrac{n^2}2-\tfrac{3n}4+\tfrac14=\tfrac{(n-1)(2n-1)}4$. The record's collapsed display for $\mathop{\mathrm{tr}}(L_e^2)$ agrees with the summand-by-summand sum.
 
 **It is an identity, and its $(p,q)$-independence is a consequence rather than a coincidence.** Fox's theorem fixes $\kappa_n$ before a split is chosen, so constancy along $p+q=n$ is *predicted*; what the computation supplies is the value as a function of $n$, which nothing in the citation determines, Fox's own Remark 1.4 says so, and points at exactly this method: *"To calculate $\kappa$ it would suffice to calculate the eigenvalues on $\mathrm{MC}_W(V^*)$ of the operator $\widehat E$ associated with a nonzero idempotent."*
 
@@ -78,7 +78,7 @@ which is $\tfrac{n^2}2-\tfrac{3n}4+\tfrac14=\tfrac{(n-1)(2n-1)}4$. The record's 
 
 **L161 writes: *"The step the record was missing is that $\kappa_n$ does not depend on $W$."* The record was not missing it.** [second-order.md](../findings/second-order.md) carries a section titled *"Fox's trace identities, re-derived here"* which states
 
-$$\operatorname{tr}(L_x)=0,\qquad\operatorname{tr}(L_xL_y)=\kappa_W\langle x,y\rangle,\qquad\kappa_W=\frac{(2n-1)(n-1)}4,$$
+$$\mathop{\mathrm{tr}}(L_x)=0,\qquad\mathop{\mathrm{tr}}(L_xL_y)=\kappa_W\langle x,y\rangle,\qquad\kappa_W=\frac{(2n-1)(n-1)}4,$$
 
 with the reason, *"the left side is an invariant form on an irreducible module"*, which is Fox's Theorem 3.2 argument, and the stamp *"Both identities are **Gate 2 landed**, audited independently by Reviewers 28 and 29"*. **Fifty lines earlier the same file writes: *"They have now been re-derived unwittingly three times in this project; the section below is the one that owns them."*** L161 is the fourth telling, and the only one that asserts the record lacked the step.
 
@@ -96,9 +96,9 @@ with the reason, *"the left side is an invariant form on an irreducible module"*
 
 ## The object that would falsify the lemma
 
-**Two nonzero $W,W'\in\mathcal W_n$, some $n\ge6$, with $\operatorname{tr}(L_W^2)/\lVert W\rVert^2\ne\operatorname{tr}(L_{W'}^2)/\lVert W'\rVert^2$.** By Fox Theorem 3.2 such a pair exists only if $\mathcal W_n$ fails to be $O(n)$-irreducible, or $\circ$ fails to land in $\mathcal W_n$, or $\langle X\circ Y,Z\rangle$ fails total symmetry, so a falsifier is a reducing subspace, a product leaving the space, or an asymmetry, and not a second tensor with a different trace.
+**Two nonzero $W,W'\in\mathcal W_n$, some $n\ge6$, with $\mathop{\mathrm{tr}}(L_W^2)/\lVert W\rVert^2\ne\mathop{\mathrm{tr}}(L_{W'}^2)/\lVert W'\rVert^2$.** By Fox Theorem 3.2 such a pair exists only if $\mathcal W_n$ fails to be $O(n)$-irreducible, or $\circ$ fails to land in $\mathcal W_n$, or $\langle X\circ Y,Z\rangle$ fails total symmetry, so a falsifier is a reducing subspace, a product leaving the space, or an asymmetry, and not a second tensor with a different trace.
 
-**Failing that, the sharp falsifier of the value is a split.** One pair $p,q\ge3$ at which $\theta^2\operatorname{tr}(L_e^2)\ne\frac{(n-1)(2n-1)}4$, which, the identity being symbolic in $p,q$, requires one of [L27](../findings/nondegeneracy.md)'s ten eigenvalues or $\theta^2$ to be wrong, and would then show up first as a disagreement between two splits of one $n$, e.g. $S^3\times S^9$ against $S^6\times S^6$ at $n=12$.
+**Failing that, the sharp falsifier of the value is a split.** One pair $p,q\ge3$ at which $\theta^2\mathop{\mathrm{tr}}(L_e^2)\ne\frac{(n-1)(2n-1)}4$, which, the identity being symbolic in $p,q$, requires one of [L27](../findings/nondegeneracy.md)'s ten eigenvalues or $\theta^2$ to be wrong, and would then show up first as a disagreement between two splits of one $n$, e.g. $S^3\times S^9$ against $S^6\times S^6$ at $n=12$.
 
 ## What the lemma should read
 

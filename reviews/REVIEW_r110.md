@@ -9,7 +9,7 @@
 | "Exploiting $g$'s internal structure cannot sharpen the recorded bound" | **REFUTED**, over-reach from one weight to a class |
 | "The bound already uses everything $g$ offers, namely $g\ge0$ and $\sum g=4(n-1)$" | **REFUTED**, false about the record's own bound, two days before post F25 was written |
 
-Independent implementation: [r110_g_collapse.py](../scripts/reviewers/r110/r110_g_collapse.py). Conventions were fixed from the brief alone ($\phi_{ij}=E_{ij}-E_{ji}$ with $\langle A,B\rangle=\tfrac12\operatorname{tr}(A^{\mathsf T}B)$, so the eigenframe is orthonormal in $\mathfrak{so}(n)$), and $g_\gamma$ was computed **directly** as $\lVert[\mathrm{ad}(v_\gamma),W]\rVert^2$ rather than through Prop 1.7, so the Prop 1.7 check is a real check.
+Independent implementation: [r110_g_collapse.py](../scripts/reviewers/r110/r110_g_collapse.py). Conventions were fixed from the brief alone ($\phi_{ij}=E_{ij}-E_{ji}$ with $\langle A,B\rangle=\tfrac12\mathop{\mathrm{tr}}(A^{\mathsf T}B)$, so the eigenframe is orthonormal in $\mathfrak{so}(n)$), and $g_\gamma$ was computed **directly** as $\lVert[\mathrm{ad}(v_\gamma),W]\rVert^2$ rather than through Prop 1.7, so the Prop 1.7 check is a real check.
 
 ## 1. The algebra: confirmed, with one scope correction
 
@@ -49,7 +49,7 @@ Prop 1.7 is $N=\binom n2$ equations, one per $\gamma$. Post F25 contracts them a
 
 $$\sum_\gamma g_\gamma=2\sum_\alpha\lambda_\alpha^2\rho_\alpha-2\sum_{\alpha\beta}\lambda_\alpha\lambda_\beta R_{\alpha\beta}=4(n-2)+4=4(n-1),$$
 
-which is **not** $\theta$'s definition and **is** one of the two facts the recorded bound runs on. Against $\lambda_\gamma^2$ one gets a third quantity matching neither ($\sum\lambda^2g=1.099$, $1.206$ at two $n=6$ points, against $\theta$, $p_3$, $\operatorname{tr}M^4$, no match). So the same substitution is *productive* at weight $0$, *tautological* at weight $1$, and *neither* at weight $2$. A tautology at one weight of a family is no obstruction at the others; the post generalises from one to all with no argument.
+which is **not** $\theta$'s definition and **is** one of the two facts the recorded bound runs on. Against $\lambda_\gamma^2$ one gets a third quantity matching neither ($\sum\lambda^2g=1.099$, $1.206$ at two $n=6$ points, against $\theta$, $p_3$, $\mathop{\mathrm{tr}}M^4$, no match). So the same substitution is *productive* at weight $0$, *tautological* at weight $1$, and *neither* at weight $2$. A tautology at one weight of a family is no obstruction at the others; the post generalises from one to all with no argument.
 
 ### 3b. The premise about the recorded bound is false, and the record refutes it two days earlier
 
@@ -92,4 +92,4 @@ Suggested replacement wording:
 ## 5. Cosmetic
 
 - The post names the first term as $\sum_{\gamma\alpha}\lambda_\gamma\lambda_\alpha^2R_{\gamma\alpha}$ without the coefficient $2$ the expansion carries, then quotes its collapsed value $-2p_3$ consistently without it. Internally consistent, but a reader reassembling $-4\theta$ has to restore the factor.
-- $p_3(\mu)$ in the post is $p_3(\lambda)=\operatorname{tr}(M^3)$ elsewhere; one symbol, two names.
+- $p_3(\mu)$ in the post is $p_3(\lambda)=\mathop{\mathrm{tr}}(M^3)$ elsewhere; one symbol, two names.

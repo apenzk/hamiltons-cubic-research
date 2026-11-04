@@ -9,7 +9,7 @@
 | 1 | Item 1's identity, and the conversion of batch 11's $K$'s | **CONFIRMED**, every sign right, cross term is $\cos(\vartheta_1-\vartheta_2)$ |
 | 2 | The claim $\Lambda>0$ and the normalisation $d_A,d_C,v_2>0$ | **CONFIRMED, with a GAP**: the normalisation is legitimate, the symmetries that make it so are never named, and the degenerate cases are never mentioned |
 | 3 | Item 2's annulus and the distance formula | **CONFIRMED**, including all three degenerate cases |
-| 4 | Item 3's "exactly when $1\notin\operatorname{int}\mathcal A$" | **CONFIRMED**, both directions, and the interior gap is strict |
+| 4 | Item 3's "exactly when $1\notin\mathop{\mathrm{int}}\mathcal A$" | **CONFIRMED**, both directions, and the interior gap is strict |
 | 5 | Item 4's coefficients and the norm segment | **CONFIRMED**, every coefficient and $B$ exact |
 | 6 | Step 5's topology | **CONFIRMED**, all four edge cases survive |
 | 7 | The quantifier in the conclusion | **GAP**: the proof gives domination, the statement asserts attainment, and the bridge is never stated |
@@ -23,7 +23,7 @@
 
 ## Item 1, the identity. CONFIRMED
 
-**The expansion.** With $w=\rho_2e^{i\vartheta_1}+\rho_1e^{i\vartheta_2}$, $\lvert1-w\rvert^2=1-2\operatorname{Re}w+\lvert w\rvert^2$. Here $\operatorname{Re}w=\rho_2\cos\vartheta_1+\rho_1\cos\vartheta_2$ and $\lvert w\rvert^2=\rho_1^2+\rho_2^2+2\operatorname{Re}\big(\rho_2e^{i\vartheta_1}\overline{\rho_1e^{i\vartheta_2}}\big)=\rho_1^2+\rho_2^2+2\rho_1\rho_2\cos(\vartheta_1-\vartheta_2)$. The conjugate is what puts the difference of phases in the cross term, and $\cos(\vartheta_1+\vartheta_2)$ would need $\rho_1e^{i\vartheta_2}$ unconjugated, which is not what a squared modulus contains. So $\Lambda\lvert1-w\rvert^2=\Lambda(1+\rho_1^2+\rho_2^2)-g$ exactly, with $g$ as item 1 writes it. **The sign the brief flags as inverting the lemma is right.**
+**The expansion.** With $w=\rho_2e^{i\vartheta_1}+\rho_1e^{i\vartheta_2}$, $\lvert1-w\rvert^2=1-2\mathop{\mathrm{Re}}w+\lvert w\rvert^2$. Here $\mathop{\mathrm{Re}}w=\rho_2\cos\vartheta_1+\rho_1\cos\vartheta_2$ and $\lvert w\rvert^2=\rho_1^2+\rho_2^2+2\mathop{\mathrm{Re}}\big(\rho_2e^{i\vartheta_1}\overline{\rho_1e^{i\vartheta_2}}\big)=\rho_1^2+\rho_2^2+2\rho_1\rho_2\cos(\vartheta_1-\vartheta_2)$. The conjugate is what puts the difference of phases in the cross term, and $\cos(\vartheta_1+\vartheta_2)$ would need $\rho_1e^{i\vartheta_2}$ unconjugated, which is not what a squared modulus contains. So $\Lambda\lvert1-w\rvert^2=\Lambda(1+\rho_1^2+\rho_2^2)-g$ exactly, with $g$ as item 1 writes it. **The sign the brief flags as inverting the lemma is right.**
 
 **The conversion from batch 11 is right, and it is the part no cited script checks.** Batch 11 has $K_1=2p\,d_A$ on $\cos2\varphi$, $K_2=2r\,d_C$ on $\cos2\chi$ and $K_{12}=-2\beta p\,v_2\,r$ on $\cos(2\varphi-2\chi)$. With $\Lambda=\frac{d_Ad_C}{\beta v_2}$, $\rho_1=\frac{\beta v_2r}{d_A}$, $\rho_2=\frac{\beta v_2p}{d_C}$:
 
@@ -41,10 +41,10 @@ The subscripts cross over, $\rho_2$ carrying $p$ against $d_C$ while $\rho_1$ ca
 
 **The normalisation is legitimate, and the block does not say why.** Batch 11's frustration condition is $K_1K_2K_{12}<0$, which is $-8\beta p^2r^2\,d_Ad_Cv_2<0$, that is $d_Ad_Cv_2>0$: a condition on the **product**, whereas the Setting takes all three factors positive. Two symmetries close that gap, and neither is named in the block:
 
-- **Swapping $e_1$ and $e_3$.** Conjugating $\hat U,V,A,C$ by that permutation preserves every trace in $\Phi$ and both norms, keeps $u_2,v_2,p,r$, sends $A\mapsto\operatorname{diag}(A_3,A_2,A_1)$ and $C$ likewise, hence $(d_A,d_C)\mapsto(-d_A,-d_C)$ with $\tilde a,\tilde c$ fixed, and carries pairs diagonal in $F$ to pairs diagonal in $F$.
-- **$V\mapsto-V$ together with $C\mapsto-C$.** $\operatorname{tr}(\hat UV^2)$ and $\lvert V\rvert$ are unchanged and $\operatorname{tr}(VC)$ is unchanged, so $\Phi$ is preserved, and it sends $(d_C,v_2)\mapsto(-d_C,-v_2)$.
+- **Swapping $e_1$ and $e_3$.** Conjugating $\hat U,V,A,C$ by that permutation preserves every trace in $\Phi$ and both norms, keeps $u_2,v_2,p,r$, sends $A\mapsto\mathop{\mathrm{diag}}(A_3,A_2,A_1)$ and $C$ likewise, hence $(d_A,d_C)\mapsto(-d_A,-d_C)$ with $\tilde a,\tilde c$ fixed, and carries pairs diagonal in $F$ to pairs diagonal in $F$.
+- **$V\mapsto-V$ together with $C\mapsto-C$.** $\mathop{\mathrm{tr}}(\hat UV^2)$ and $\lvert V\rvert$ are unchanged and $\mathop{\mathrm{tr}}(VC)$ is unchanged, so $\Phi$ is preserved, and it sends $(d_C,v_2)\mapsto(-d_C,-v_2)$.
 
-Both flip two signs at once, so the group they generate is the even subgroup acting on the sign triple $(\operatorname{sign}d_A,\operatorname{sign}d_C,\operatorname{sign}v_2)$, whose orbits are exactly the two level sets of the product. **So $d_Ad_Cv_2>0$ does reduce to all three positive**, which is what the Setting needs, and the reduction is genuinely unavailable from the product condition alone without exhibiting these maps. *Screen, seconds: both flips preserved $\Phi$ to $4\cdot10^{-14}$ over 2000 random configurations, reported as a screen of the two maps I am asserting.*
+Both flip two signs at once, so the group they generate is the even subgroup acting on the sign triple $(\mathop{\mathrm{sign}}d_A,\mathop{\mathrm{sign}}d_C,\mathop{\mathrm{sign}}v_2)$, whose orbits are exactly the two level sets of the product. **So $d_Ad_Cv_2>0$ does reduce to all three positive**, which is what the Setting needs, and the reduction is genuinely unavailable from the product condition alone without exhibiting these maps. *Screen, seconds: both flips preserved $\Phi$ to $4\cdot10^{-14}$ over 2000 random configurations, reported as a screen of the two maps I am asserting.*
 
 **The degenerate cases are never mentioned, and they are outside the whole parametrisation.** At $v_2=0$ the quantity $\Lambda$ is undefined, and at $d_A=0$ or $d_C=0$ so are $\rho_1$ or $\rho_2$, so items 1 to 4 say nothing there. Each case has $d_Ad_Cv_2=0$, hence $K_1K_2K_{12}=0\ge0$, so batch 11's unfrustrated clause applies verbatim and puts the phase maximum at $\vartheta_1,\vartheta_2\in\{0,\pi\}$, a diagonal pair at the same amplitudes. The same covers every $v_2\le0$ once the field is normalised, and $p=0$ or $r=0$ are fine inside the parametrisation. **The mathematics is complete only because batch 11 covers what L229's own proof does not**, and the block's Statement is unconditional while its proof runs only in the frustrated regime.
 
@@ -56,7 +56,7 @@ Both flip two signs at once, so the group they generate is the even subgroup act
 
 **The three degenerate cases all come out right.**
 
-| Case | The set | $\mathcal A$ as written | $\operatorname{dist}(1,\cdot)$ by the formula | Correct |
+| Case | The set | $\mathcal A$ as written | $\mathop{\mathrm{dist}}(1,\cdot)$ by the formula | Correct |
 |---|---|---|---|---|
 | $\rho_1=0$ | circle of radius $\rho_2$ | $\rho_2\le\lvert z\rvert\le\rho_2$, that circle | $\max(0,1-\rho_2,\rho_2-1)=\lvert1-\rho_2\rvert$ | yes |
 | $\rho_1=\rho_2$ | closed disc of radius $2\rho_1$ | $0\le\lvert z\rvert\le2\rho_1$ | $\max(0,1-2\rho_1,-1)$ | yes |
@@ -66,7 +66,7 @@ Both flip two signs at once, so the group they generate is the even subgroup act
 
 **One imprecision in the written justification.** The proof says "the distance from a point of modulus $1$ to $\mathcal A$", which is true for any such point by rotational invariance, but the argument only ever needs it at $z=1$ and item 3 later relies on $1$ being *real and positive*, so the generality is decorative. Not a defect.
 
-## Item 4, "exactly when $1\notin\operatorname{int}\mathcal A$". CONFIRMED
+## Item 4, "exactly when $1\notin\mathop{\mathrm{int}}\mathcal A$". CONFIRMED
 
 **The nearest point formula holds in every case.** Write $R=\rho_1+\rho_2$ and $\varrho=\lvert\rho_1-\rho_2\rvert$, so $\varrho\le R$. The claim is that the nearest point of $\mathcal A$ to $1$ is $\min(R,\max(1,\varrho))$.
 
@@ -74,11 +74,11 @@ Both flip two signs at once, so the group they generate is the even subgroup act
 - $1>R$: nearest point is $R$, and $\min(R,\max(1,\varrho))=\min(R,1)=R$.
 - $1<\varrho$: nearest point is $\varrho$, and $\min(R,\max(1,\varrho))=\min(R,\varrho)=\varrho$.
 
-**Both directions of the "exactly when" hold.** If $1\notin\operatorname{int}\mathcal A$ then $1\ge R$ or $1\le\varrho$, and the nearest point is $R$ or $\varrho$, each of which is among $\{\pm\rho_1\pm\rho_2\}$. Conversely if $1\in\operatorname{int}\mathcal A$, that is $\varrho<1<R$, then $\operatorname{dist}(1,\mathcal A)=0$ while the four distances $\lvert1-R\rvert,\lvert1+R\rvert,\lvert1-\varrho\rvert,\lvert1+\varrho\rvert$ are all **strictly** positive, the first because $R>1$, the third because $\varrho<1$, the other two because $1+R$ and $1+\varrho$ are at least $1$.
+**Both directions of the "exactly when" hold.** If $1\notin\mathop{\mathrm{int}}\mathcal A$ then $1\ge R$ or $1\le\varrho$, and the nearest point is $R$ or $\varrho$, each of which is among $\{\pm\rho_1\pm\rho_2\}$. Conversely if $1\in\mathop{\mathrm{int}}\mathcal A$, that is $\varrho<1<R$, then $\mathop{\mathrm{dist}}(1,\mathcal A)=0$ while the four distances $\lvert1-R\rvert,\lvert1+R\rvert,\lvert1-\varrho\rvert,\lvert1+\varrho\rvert$ are all **strictly** positive, the first because $R>1$, the third because $\varrho<1$, the other two because $1+R$ and $1+\varrho$ are at least $1$.
 
 **The brief's question about equality in the interior has a clean answer: it cannot happen.** The strictness is not marginal, it is the strictness of $\varrho<1<R$ that defines the interior. Had it been possible for a diagonal pair to match the cap at an interior point, step 5 would still go through, since it only ever needs agreement outside $E^\circ$, so this is a case where the proof has slack rather than a dependency.
 
-**Empty interior is handled correctly.** When $\rho_1\rho_2=0$ the annulus degenerates to a circle whose interior in $\mathbb C$ is empty, so $1\notin\operatorname{int}\mathcal A$ automatically, which is exactly what step 5 invokes at the endpoints of the norm segment.
+**Empty interior is handled correctly.** When $\rho_1\rho_2=0$ the annulus degenerates to a circle whose interior in $\mathbb C$ is empty, so $1\notin\mathop{\mathrm{int}}\mathcal A$ automatically, which is exactly what step 5 invokes at the endpoints of the norm segment.
 
 ## Item 5, item 4's coefficients. CONFIRMED
 
@@ -96,7 +96,7 @@ Parametrise $I$ by $x\in[0,B/3]$ with $y=B-3x$. Then $\rho_1=\beta v_2\sqrt{B-3x
 
 - **$E$ is closed in $I$**: it is $\{\varrho\le1\}\cap\{1\le R\}$, two weak inequalities between continuous functions. Correct as written, and $I$ compact makes $E$ compact.
 - **Components are closed subintervals**: components of any space are closed in it, $E$ is closed in $I$ which is closed in $\mathbb R$, and connected subsets of $\mathbb R$ are intervals. Bounded because $I$ is. Correct.
-- **The endpoint dichotomy holds.** Let $[s,t]$ be a component and consider $t$. If $t$ is interior to $I$, maximality plus closedness of $E$ gives points of $I\setminus E$ arbitrarily close above $t$, so at those points $1>R$ or $1<\varrho$, and continuity at $t$ combined with $t\in E$ forces $1=R$ or $1=\varrho$. Either way $1\in\partial\mathcal A$ and $1\notin\operatorname{int}\mathcal A$. Otherwise $t$ is an endpoint of $I$: at $x=B/3$ we get $y=0$ so $\rho_1=0$, and at $x=0$ we get $\rho_2=0$, and in both the annulus is a circle with empty interior. Correct in both branches.
+- **The endpoint dichotomy holds.** Let $[s,t]$ be a component and consider $t$. If $t$ is interior to $I$, maximality plus closedness of $E$ gives points of $I\setminus E$ arbitrarily close above $t$, so at those points $1>R$ or $1<\varrho$, and continuity at $t$ combined with $t\in E$ forces $1=R$ or $1=\varrho$. Either way $1\in\partial\mathcal A$ and $1\notin\mathop{\mathrm{int}}\mathcal A$. Otherwise $t$ is an endpoint of $I$: at $x=B/3$ we get $y=0$ so $\rho_1=0$, and at $x=0$ we get $\rho_2=0$, and in both the annulus is a circle with empty interior. Correct in both branches.
 - **The affine maximum.** Affine on a closed bounded interval attains its maximum at an endpoint. **The constant case the brief raises is harmless**: a constant attains its maximum at both endpoints, so "at one of its two endpoints" remains true, and step 5 needs only one such endpoint.
 
 **The four edge cases.**
@@ -108,9 +108,9 @@ Parametrise $I$ by $x\in[0,B/3]$ with $y=B-3x$. Then $\rho_1=\beta v_2\sqrt{B-3x
 | $E=I$ | the single component is $I$, whose endpoints are $I$'s, where $\rho_1\rho_2=0$ | yes |
 | $B=0$ | $I$ is the point $(0,0)$, $\rho_1=\rho_2=0$, $\mathcal A=\{0\}$ with empty interior, and the configuration is already diagonal since $p=r=0$ | yes |
 
-**A worry that does not bite.** $E$ could in principle have infinitely many components, but the argument is pointwise in $z\in E^\circ$ and uses only $z$'s own component, so the cardinality is irrelevant. Moreover $E^\circ$ is open in $I$, because $\operatorname{int}\mathcal A$ is open and $\rho_1,\rho_2$ are continuous, so the component of any $z\in E^\circ$ is non-degenerate whenever $I$ is, and no degenerate component can contain an interior point. The chain closes.
+**A worry that does not bite.** $E$ could in principle have infinitely many components, but the argument is pointwise in $z\in E^\circ$ and uses only $z$'s own component, so the cardinality is irrelevant. Moreover $E^\circ$ is open in $I$, because $\mathop{\mathrm{int}}\mathcal A$ is open and $\rho_1,\rho_2$ are continuous, so the component of any $z\in E^\circ$ is non-degenerate whenever $I$ is, and no degenerate component can contain an interior point. The chain closes.
 
-*Screen, seconds.* Over 200000 random $(\rho_1,\rho_2)$ the two distance functions agreed to $0$ exactly on the complement of $\operatorname{int}\mathcal A$, with no violation of the "exactly when" in either direction. A screen of items 3 and 4's agreement set, which is what step 5 consumes.
+*Screen, seconds.* Over 200000 random $(\rho_1,\rho_2)$ the two distance functions agreed to $0$ exactly on the complement of $\mathop{\mathrm{int}}\mathcal A$, with no violation of the "exactly when" in either direction. A screen of items 3 and 4's agreement set, which is what step 5 consumes.
 
 ## Item 7, the quantifier. GAP
 
@@ -126,7 +126,7 @@ Parametrise $I$ by $x\in[0,B/3]$ with $y=B-3x$. Then $\rho_1=\beta v_2\sqrt{B-3x
 
 **The brief predicted this and it happened again.** Read against the scripts rather than against its own wording, the clause is wrong in two places.
 
-**First, "screened against the trusted block value" is not what the cited script does.** [screen_I106_G2_commonaxis.py](../scripts/misc/screen_I106_G2_commonaxis.py) builds $\hat U,V,A,C$ as explicit $3\times3$ matrices, computes `direct` as $\alpha\operatorname{tr}\hat U^3+\beta\operatorname{tr}(\hat UV^2)+\operatorname{tr}(\hat UA)+\operatorname{tr}(VC)$, and compares it with batch 11's reduced formula. It imports `numpy` and nothing else. It never touches [curvature_operator.py](../scripts/lib/curvature_operator.py) and never forms a Weyl tensor. **So the screen is batch 11's reduction against $\Phi$'s own definition, which is itself a derived object**, batch 5's, reached from L228's item 1 through a shift and a change of variables. The two scripts in this family that do reach the trusted operator are [screen_I106.py](../scripts/misc/screen_I106.py) and [screen_I106_m3.py](../scripts/misc/screen_I106_m3.py), and both screen L228, not $\Phi$. The script's own row in [scripts/INDEX.md](../scripts/INDEX.md) describes it correctly, as "the two-block value and both norms equal the reduced formula", so the overstatement is in the Gate 1 clause alone.
+**First, "screened against the trusted block value" is not what the cited script does.** [screen_I106_G2_commonaxis.py](../scripts/misc/screen_I106_G2_commonaxis.py) builds $\hat U,V,A,C$ as explicit $3\times3$ matrices, computes `direct` as $\alpha\mathop{\mathrm{tr}}\hat U^3+\beta\mathop{\mathrm{tr}}(\hat UV^2)+\mathop{\mathrm{tr}}(\hat UA)+\mathop{\mathrm{tr}}(VC)$, and compares it with batch 11's reduced formula. It imports `numpy` and nothing else. It never touches [curvature_operator.py](../scripts/lib/curvature_operator.py) and never forms a Weyl tensor. **So the screen is batch 11's reduction against $\Phi$'s own definition, which is itself a derived object**, batch 5's, reached from L228's item 1 through a shift and a change of variables. The two scripts in this family that do reach the trusted operator are [screen_I106.py](../scripts/misc/screen_I106.py) and [screen_I106_m3.py](../scripts/misc/screen_I106_m3.py), and both screen L228, not $\Phi$. The script's own row in [scripts/INDEX.md](../scripts/INDEX.md) describes it correctly, as "the two-block value and both norms equal the reduced formula", so the overstatement is in the Gate 1 clause alone.
 
 **Second, "items 1 to 4 are checked against that reduced formula" is true of item 4 and false of items 1 and 2.** In [screen_I106_annulus.py](../scripts/misc/screen_I106_annulus.py), `check_identity` and `check_closed_form` draw $\rho_1,\rho_2,\Lambda$ **independently at random** and form $a,b,c$ from them. They never construct $d_A,d_C,v_2,p,r$ and never form $K_1,K_2,K_{12}$. So they screen the abstract identity and the abstract closed form, and they leave the conversion of batch 11's couplings entirely unexercised, which is precisely the step the brief's item 1 singles out as the one whose sign error would invert the lemma. Only `value`, used by `check_affine_and_closure`, goes through $d_A,d_C,v_2$.
 
@@ -167,7 +167,7 @@ Six on standard axioms and `sorryAx` in `diagonal_matches` alone, as the block a
 - `cap_attained_of_boundary 1 (1/2) (1/2) (Or.inl (by norm_num))` discharges the hypothesis at $r_1=r_2=\tfrac12$, on the outer circle.
 - `capValue_affine (15/4) (9/4) 0 1 1 1 0 0 1 1` discharges all six hypotheses at $\alpha=\tfrac{15}4$, $\beta=\tfrac94$, $u_2=0$, $v_2=d_A=d_C=1$, $\tilde a=\tilde c=0$ and $x=y=1$, so the $b\ne0$, $v_2\ne0$, $d_A\ne0$, $d_C\ne0$, $0\le x$, $0\le y$ hypotheses are all live and jointly satisfiable.
 
-**One imprecision, in the file's own header rather than in a theorem.** The third header bullet says the diagonal value and the cap "agree exactly on the annulus boundary". They also agree everywhere **outside** the annulus, where neither attains the cap, which is what item 3's "$1\notin\operatorname{int}\mathcal A$" covers. The theorem `cap_attained_of_boundary` is correctly scoped to the boundary, since only there does a diagonal pair attain the cap, so the theorem is right and the header sentence conflates two different agreements. Worth a word.
+**One imprecision, in the file's own header rather than in a theorem.** The third header bullet says the diagonal value and the cap "agree exactly on the annulus boundary". They also agree everywhere **outside** the annulus, where neither attains the cap, which is what item 3's "$1\notin\mathop{\mathrm{int}}\mathcal A$" covers. The theorem `cap_attained_of_boundary` is correctly scoped to the boundary, since only there does a diagonal pair attain the cap, so the theorem is right and the header sentence conflates two different agreements. Worth a word.
 
 ## Item 11, scope. CONFIRMED, with two write-up defects
 
@@ -182,7 +182,7 @@ Six on standard axioms and `sorryAx` in `diagonal_matches` alone, as the block a
 **Item 2 reproduces batch 12 in all three regimes.** With $a=2\Lambda\rho_2$, $b=2\Lambda\rho_1$, $c=2\Lambda\rho_1\rho_2$:
 
 - **The triangle condition matches.** Batch 12's condition is that $1/a,1/b,1/c$ satisfy the triangle inequalities. Scaling that triple by $2\Lambda\rho_1\rho_2>0$ turns it into $(\rho_1,\rho_2,1)$, whose triangle inequalities are $\rho_1+\rho_2\ge1$ and $\lvert\rho_1-\rho_2\rvert\le1$, which is $1\in\mathcal A$. The block's Gate 1 (b) claim is exactly right.
-- **The triangle value matches.** $ab/c=2\Lambda$, $bc/a=2\Lambda\rho_1^2$, $ca/b=2\Lambda\rho_2^2$, so $\tfrac12(ab/c+bc/a+ca/b)=\Lambda(1+\rho_1^2+\rho_2^2)$, which is item 2 at $\operatorname{dist}=0$.
+- **The triangle value matches.** $ab/c=2\Lambda$, $bc/a=2\Lambda\rho_1^2$, $ca/b=2\Lambda\rho_2^2$, so $\tfrac12(ab/c+bc/a+ca/b)=\Lambda(1+\rho_1^2+\rho_2^2)$, which is item 2 at $\mathop{\mathrm{dist}}=0$.
 - **Outside, below the annulus.** At $\rho_1+\rho_2<1$ item 2 gives $\Lambda[1+\rho_1^2+\rho_2^2-(1-\rho_1-\rho_2)^2]=2\Lambda(\rho_1+\rho_2-\rho_1\rho_2)$. Batch 12 gives $a+b+c-2\min(a,b,c)$, and there $\rho_1,\rho_2<1$ forces $\rho_1\rho_2<\min(\rho_1,\rho_2)$, so the minimum is $c$ and the value is $2\Lambda(\rho_1+\rho_2+\rho_1\rho_2)-4\Lambda\rho_1\rho_2$, the same.
 - **Outside, inside the hole.** At $\rho_1-\rho_2>1$ item 2 gives $\Lambda[1+\rho_1^2+\rho_2^2-(\rho_1-\rho_2-1)^2]=2\Lambda(\rho_1-\rho_2+\rho_1\rho_2)$. There $\rho_1>1$ makes $\rho_1\rho_2>\rho_2$ and $\rho_1>\rho_2$, so batch 12's minimum is $a$ and its value is $2\Lambda(\rho_1+\rho_2+\rho_1\rho_2)-4\Lambda\rho_2$, the same. Symmetric in the other sign.
 

@@ -14,7 +14,7 @@
 
 | object | reading adopted here | pinned at | status |
 | --- | --- | --- | --- |
-| $\langle X,Y\rangle$ | $\tfrac12\operatorname{tr}(X^{\mathsf T}Y)$ on $\mathfrak{so}(n)\cong\Lambda^2\mathbb R^n$, so $\{\varphi_{ab}\}_{a<b}$ is orthonormal | [conventions.md](../findings/conventions.md), "Norms and pairings", bullets 1–2 | the record's choice, pinned twice ([r519](REVIEW_r519.md), [r520](REVIEW_r520.md)) |
+| $\langle X,Y\rangle$ | $\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$ on $\mathfrak{so}(n)\cong\Lambda^2\mathbb R^n$, so $\{\varphi_{ab}\}_{a<b}$ is orthonormal | [conventions.md](../findings/conventions.md), "Norms and pairings", bullets 1–2 | the record's choice, pinned twice ([r519](REVIEW_r519.md), [r520](REVIEW_r520.md)) |
 | $c_{abc}$ | $\langle[v_a,v_b],v_c\rangle$, **totally antisymmetric**; $T_{abc}=c_{abc}^2$ totally symmetric | [conventions.md](../findings/conventions.md), "Structure constants" | load-bearing in §2 and §3 |
 | Killing marginal | $\sum_\beta\lVert[v_\alpha,v_\beta]\rVert^2=2(n-2)$ | [conventions.md](../findings/conventions.md), "The pair cap and the Killing marginal" | the whole of §2's first identity |
 | $N$ | $\binom n2$ | [conventions.md](../findings/conventions.md), "The objects" |, |
@@ -69,16 +69,16 @@ since $\gamma\ge0$ as a sum of squares. **No hypothesis has been used.** Note th
 
 ### 2.2 The eigenvalue input, and the record already owns it
 
-Write $P$ for the orthoprojector onto $\mathfrak m$ and $T(A)=-\sum_k\operatorname{ad}(f_k)\,A\,\operatorname{ad}(f_k)$ on $\operatorname{Sym}(\mathfrak g)$, so that $\mu=\langle T(P),P\rangle$. With $\rho(X)A=[\operatorname{ad}X,A]$ and $\sum_k\operatorname{ad}(f_k)^2=-2(n-2)\mathrm{Id}$,
+Write $P$ for the orthoprojector onto $\mathfrak m$ and $T(A)=-\sum_k\mathop{\mathrm{ad}}(f_k)\,A\,\mathop{\mathrm{ad}}(f_k)$ on $\mathop{\mathrm{Sym}}(\mathfrak g)$, so that $\mu=\langle T(P),P\rangle$. With $\rho(X)A=[\mathop{\mathrm{ad}}X,A]$ and $\sum_k\mathop{\mathrm{ad}}(f_k)^2=-2(n-2)\mathrm{Id}$,
 
-$$\textstyle\sum_k\rho(f_k)^2A=-4(n-2)A+2T(A)\quad\Longrightarrow\quad T=2(n-2)\mathrm{Id}-\tfrac12\operatorname{Cas}.$$
+$$\textstyle\sum_k\rho(f_k)^2A=-4(n-2)A+2T(A)\quad\Longrightarrow\quad T=2(n-2)\mathrm{Id}-\tfrac12\mathop{\mathrm{Cas}}.$$
 
 I recomputed all four Casimir eigenvalues by hand from $\langle\lambda,\lambda+2\rho\rangle$ in the normalisation fixed by $\Lambda^k\mathbb R^n\mapsto k(n-k)$, rather than taking them from the block:
 
-| summand of $\operatorname{Sym}(\Lambda^2\mathbb R^n)$ | highest weight | $\operatorname{Cas}$ | $T$-eigenvalue |
+| summand of $\mathop{\mathrm{Sym}}(\Lambda^2\mathbb R^n)$ | highest weight | $\mathop{\mathrm{Cas}}$ | $T$-eigenvalue |
 | --- | --- | --- | --- |
 | $\mathbb R\cdot\mathrm{Id}$ | $0$ | $0$ | $2n-4$ |
-| $\operatorname{Sym}^2_0\mathbb R^n$ | $2\epsilon_1$ | $2n$ | $n-4$ |
+| $\mathop{\mathrm{Sym}}^2_0\mathbb R^n$ | $2\epsilon_1$ | $2n$ | $n-4$ |
 | $\mathcal W_n$ | $2\epsilon_1+2\epsilon_2$ | $4n-4$ | $\mathbf{-2}$ |
 | $\Lambda^4\mathbb R^n$ | $\epsilon_1+\cdots+\epsilon_4$ | $4n-16$ | $4$ |
 
@@ -141,7 +141,7 @@ $$\boxed{\ \alpha(\mathfrak h^\perp)=6(n-2)d+2\delta(\mathfrak h)-4(n-2)N\ }\qqu
 | **principal $\mathfrak{su}(2)$** | **spin $2$**, irreducible | $\tfrac15$ | $\tfrac65$ | $126+\tfrac{12}5-120=\mathbf{8.4}$ |
 | $\mathfrak{su}(2)_L\subset\mathfrak{so}(4)$ | spin $\tfrac12$ twice $\oplus$ $1$ trivial | $2$ | $12$ | $126+24-120=\mathbf{30}$ |
 
-These are **all** of them: $\mathfrak{su}(2)$-subalgebras of $\mathfrak{so}(5)$ up to conjugacy are the $\mathfrak{sl}_2$-triples, indexed by the partitions of $5$ in which even parts have even multiplicity ($[5]$, $[3,1,1]$, $[2,2,1]$) and $\delta$ depends only on the module structure, so $\alpha\in\{8.4,\,18,\,30\}$ and **the principal embedding is the unique minimiser**. The $\lambda^2=\tfrac15$ is $\operatorname{tr}(J_z^2)=\sum_{m=-2}^{2}m^2=10$ on the spin-$2$ representation, giving $\lVert iJ_z\rVert^2=5$ under the half-trace pairing, so the normalised generators satisfy $[h_1,h_2]=-\tfrac1{\sqrt5}h_3$. The first row is an independent check: $\mathfrak m$ is then the monomial span of all edges of $K_5$ meeting $\{4,5\}$, whose only triangles are $\{i,4,5\}$ for $i=1,2,3$, giving $\alpha=3\times3!=18$ by direct count. $\mathfrak m=\mathfrak h^\perp$ in the second row is the **spin-$3$ summand** of $\Lambda^2(\text{spin }2)=\text{spin }3\oplus\text{spin }1$, of dimension $7$, and it is $\mathfrak{su}(2)$-irreducible.
+These are **all** of them: $\mathfrak{su}(2)$-subalgebras of $\mathfrak{so}(5)$ up to conjugacy are the $\mathfrak{sl}_2$-triples, indexed by the partitions of $5$ in which even parts have even multiplicity ($[5]$, $[3,1,1]$, $[2,2,1]$) and $\delta$ depends only on the module structure, so $\alpha\in\{8.4,\,18,\,30\}$ and **the principal embedding is the unique minimiser**. The $\lambda^2=\tfrac15$ is $\mathop{\mathrm{tr}}(J_z^2)=\sum_{m=-2}^{2}m^2=10$ on the spin-$2$ representation, giving $\lVert iJ_z\rVert^2=5$ under the half-trace pairing, so the normalised generators satisfy $[h_1,h_2]=-\tfrac1{\sqrt5}h_3$. The first row is an independent check: $\mathfrak m$ is then the monomial span of all edges of $K_5$ meeting $\{4,5\}$, whose only triangles are $\{i,4,5\}$ for $i=1,2,3$, giving $\alpha=3\times3!=18$ by direct count. $\mathfrak m=\mathfrak h^\perp$ in the second row is the **spin-$3$ summand** of $\Lambda^2(\text{spin }2)=\text{spin }3\oplus\text{spin }1$, of dimension $7$, and it is $\mathfrak{su}(2)$-irreducible.
 
 > **THEREFORE: $\min_{\dim\mathfrak m=7}\alpha=8.4$ AT $n=5$, ATTAINED, AND THE MINIMISER IS THE ORTHOGONAL COMPLEMENT OF THE PRINCIPAL $\mathfrak{su}(2)$ IN $\mathfrak{so}(5)$.** The floor of §2 gives $\ge$; the principal $\mathfrak{su}(2)$ gives $\le$. **The block's reinterpretation is not merely licensed, it is a theorem, and the block does not know it.**
 

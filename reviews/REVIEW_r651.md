@@ -39,7 +39,7 @@ $$\langle F,\mu(B)\rangle=\langle\mathrm{Cat}_F,B\rangle$$
 
 **CONFIRMED, and it is normalisation-free.** Fix a basis $q_1,\dots,q_N$ of $\mathrm{Sym}^3\mathcal W_5^*$ and write $B$ as a symmetric matrix in it, so that $\mu(B)=\sum_{a,b}B_{ab}q_aq_b$. Then
 
-$$\langle F,\mu(B)\rangle=\sum_{a,b}B_{ab}\,\langle F,q_aq_b\rangle=\sum_{a,b}B_{ab}\,\mathrm{Cat}_F(q_a,q_b)=\operatorname{tr}\!\big(\mathrm{Cat}_F\,B\big)=\langle\mathrm{Cat}_F,B\rangle .$$
+$$\langle F,\mu(B)\rangle=\sum_{a,b}B_{ab}\,\langle F,q_aq_b\rangle=\sum_{a,b}B_{ab}\,\mathrm{Cat}_F(q_a,q_b)=\mathop{\mathrm{tr}}\!\big(\mathrm{Cat}_F\,B\big)=\langle\mathrm{Cat}_F,B\rangle .$$
 
 That is one line, and it is **the definition of the adjoint $\mu^{*}=\mathrm{Cat}$**, not a theorem about apolarity. The word *"gives"* in "apolarity gives" is doing no work: the identity holds for **any** bilinear form on $\mathrm{Sym}^6$, provided the same form is what defines $\mathrm{Cat}_F$.
 
@@ -67,11 +67,11 @@ An adjunction between a map and its adjoint is *always* an identity between the 
 
 Write $U=\mathrm{Sym}^2(K)^{O(5)}$ for the unknowns ($\dim U=36$, [L86](../findings/sym3-blocks.md#L56)/[L87](../findings/sym3-blocks.md#L74)) and $T=(\mathrm{Sym}^6\mathcal W_5^*)^{O(5)}$ for the target ($\dim T=14$, [L85](../findings/sym3-blocks.md#L42)). The claim is about $\mu|_U:U\to T$.
 
-$$F\perp\operatorname{im}(\mu|_U)\iff\langle F,\mu(B)\rangle=0\ \forall B\in U\iff\langle\mathrm{Cat}_F,B\rangle=0\ \forall B\in U .$$
+$$F\perp\mathop{\mathrm{im}}(\mu|_U)\iff\langle F,\mu(B)\rangle=0\ \forall B\in U\iff\langle\mathrm{Cat}_F,B\rangle=0\ \forall B\in U .$$
 
 The last condition is *a priori* weaker than $\mathrm{Cat}_F(K,K)=0$, because $U$ holds only the **invariant** forms on $K$. **They are equal, and the reason is a hypothesis the block never states:** $K$ is an $O(5)$-submodule. Given that, $\mathrm{Cat}_F|_{K\times K}$ is an *invariant* symmetric form on $K$; transport it to $C\in\mathrm{Sym}^2(K)^{O(5)}=U$ by the invariant inner product on $K$; the hypothesis then allows $B=C$, giving $\lVert C\rVert^2=0$, hence $C=0$. So
 
-$$\mathrm{ANN}=\operatorname{im}(\mu|_U)^{\perp}\ \text{inside}\ T,\qquad \operatorname{rank}(\mu|_U)=14-\dim\mathrm{ANN}. \qquad\checkmark$$
+$$\mathrm{ANN}=\mathop{\mathrm{im}}(\mu|_U)^{\perp}\ \text{inside}\ T,\qquad \mathop{\mathrm{rank}}(\mu|_U)=14-\dim\mathrm{ANN}. \qquad\checkmark$$
 
 **The submodule hypothesis is on the record and is not cited here.** It is at [findings/sym3-blocks.md:130](../findings/sym3-blocks.md#L130), *"Vanishing at $W_0$ suffices for vanishing on the orbit, because the restriction cuts the copy index and leaves $V_\lambda$ whole"*, credited to reviewer 210, twenty-nine lines above L59's block. **This is the same defect [r634](REVIEW_r634.md) flagged against L62 for the dual form of the same argument.**
 
@@ -81,7 +81,7 @@ $$\mathrm{ANN}=\operatorname{im}(\mu|_U)^{\perp}\ \text{inside}\ T,\qquad \opera
 
 | space | dimension | source |
 | --- | --- | --- |
-| $\mathrm{ANN}=\operatorname{im}(\mu|_U)^{\perp}\subseteq T$ | $1$ | [L62](../findings/sym3-blocks.md#L187), measured |
+| $\mathrm{ANN}=\mathop{\mathrm{im}}(\mu|_U)^{\perp}\subseteq T$ | $1$ | [L62](../findings/sym3-blocks.md#L187), measured |
 | $\ker(\mu|_U)$, the affine family's direction space | $36-13=23$ | [findings/sym3-blocks.md:125](../findings/sym3-blocks.md#L125) |
 | $\ker(\mu|_{\mathrm{inv}})$ on the full $65$ | $65-14=51$ | [L89](../findings/sym3-blocks.md#L92) |
 
@@ -91,14 +91,14 @@ $$\mathrm{ANN}=\operatorname{im}(\mu|_U)^{\perp}\ \text{inside}\ T,\qquad \opera
 
 The injectivity claim itself is **correct**: $\mu|_{\mathrm{inv}}:\mathbb R^{65}\twoheadrightarrow\mathbb R^{14}$ ([L89](../findings/sym3-blocks.md#L92)) gives $\mu^{*}$ injective, and $\mu^{*}=\mathrm{Cat}$ by §1, so $\mathrm{Cat}$ embeds the $14$ in the $65$. $\checkmark$
 
-### 2.2 $F_5\in\operatorname{image}\iff F_5\perp\mathrm{ANN}$
+### 2.2 $F_5\in\mathop{\mathrm{image}}\iff F_5\perp\mathrm{ANN}$
 
 **CONFIRMED. Both halves check, and the brief's two worries resolve cleanly, one is automatic, the other rests on a property of the pairing the block does not name.**
 
 - **$\Rightarrow$** is immediate: $F_5=\mu(B)$ with $B\in U$ and $F\in\mathrm{ANN}$ give $\langle F,F_5\rangle=\langle\mathrm{Cat}_F,B\rangle=0$.
 - **Closedness of the image**: **automatic and requires no argument.** $U$ and $T$ are finite-dimensional ($36$ and $14$), so every linear image is a closed subspace. The brief flags this because it matters for infinite-dimensional analogues; here it is free.
-- **Non-degeneracy**: this is the real hypothesis. $(\operatorname{im})^{\perp\perp}=\operatorname{im}$ needs the form on $T$ to be non-degenerate **on $T$**, not merely on $\mathrm{Sym}^6$. The apolar pairing is **positive definite** on real forms, and the restriction of a positive definite form to any subspace is positive definite, so it is non-degenerate on $T$. $\checkmark$ **The block never says this.** Its nearest gesture is *"$\mathrm{Cat}$ is injective"*, which is a weaker statement proved a different way (from surjectivity of $\mu$) and does **not** deliver $\perp\perp$.
-- **An unstated hypothesis that is needed and is true:** the equivalence requires $F_5\in T$, i.e. that $F_5$ is an $O(5)$-invariant sextic. It is, both $\lVert W\rVert^6$ and $\operatorname{tr}(W^3)^2$ are invariants. Without it, $F_5\perp\mathrm{ANN}$ is a much weaker condition and the converse fails. **The block states $\mathrm{ANN}$'s ambient space but never $F_5$'s.**
+- **Non-degeneracy**: this is the real hypothesis. $(\mathop{\mathrm{im}})^{\perp\perp}=\mathop{\mathrm{im}}$ needs the form on $T$ to be non-degenerate **on $T$**, not merely on $\mathrm{Sym}^6$. The apolar pairing is **positive definite** on real forms, and the restriction of a positive definite form to any subspace is positive definite, so it is non-degenerate on $T$. $\checkmark$ **The block never says this.** Its nearest gesture is *"$\mathrm{Cat}$ is injective"*, which is a weaker statement proved a different way (from surjectivity of $\mu$) and does **not** deliver $\perp\perp$.
+- **An unstated hypothesis that is needed and is true:** the equivalence requires $F_5\in T$, i.e. that $F_5$ is an $O(5)$-invariant sextic. It is, both $\lVert W\rVert^6$ and $\mathop{\mathrm{tr}}(W^3)^2$ are invariants. Without it, $F_5\perp\mathrm{ANN}$ is a much weaker condition and the converse fails. **The block states $\mathrm{ANN}$'s ambient space but never $F_5$'s.**
 
 ### 2.3 The $29$, checked block by block from scratch
 
@@ -153,14 +153,14 @@ The certificate's condition in full is: **there exists $B\in\mathrm{Sym}^2(K)^{O
 
 | | condition | L59's reach |
 | --- | --- | --- |
-| linear | $F_5\in\operatorname{im}(\mu|_U)$ | **exactly this**, reduced to $F_5\perp\mathrm{ANN}$ |
+| linear | $F_5\in\mathop{\mathrm{im}}(\mu|_U)$ | **exactly this**, reduced to $F_5\perp\mathrm{ANN}$ |
 | conic | some $B$ in the resulting $23$-dimensional affine family is positive semidefinite | **untouched** |
 
 So the heading's *"the certificate's necessary condition"* is accurate as a description of scope (the linear condition genuinely is necessary) but it names *a* necessary condition as *the* necessary condition. **The definite article is the only thing wrong with the heading.**
 
 ### Is the reduction actually a reduction?
 
-**It is a dualisation, not a simplification, and the heading's "is one dimension count" oversells it.** The input is $\dim\operatorname{im}(\mu|_U)$; the output is $\dim\mathrm{ANN}$; the two are related by rank–nullity for the adjoint, so **neither is easier than the other**. What makes the route usable is that $\dim\mathrm{ANN}$ turns out to be small and one element of $\mathrm{ANN}$ is guessable ($\mathcal A(W_0^6)$), and that is [L62](../findings/sym3-blocks.md#L187)'s content, not L59's. **After L59 is granted, the necessary condition is exactly as open as before.**
+**It is a dualisation, not a simplification, and the heading's "is one dimension count" oversells it.** The input is $\dim\mathop{\mathrm{im}}(\mu|_U)$; the output is $\dim\mathrm{ANN}$; the two are related by rank–nullity for the adjoint, so **neither is easier than the other**. What makes the route usable is that $\dim\mathrm{ANN}$ turns out to be small and one element of $\mathrm{ANN}$ is guessable ($\mathcal A(W_0^6)$), and that is [L62](../findings/sym3-blocks.md#L187)'s content, not L59's. **After L59 is granted, the necessary condition is exactly as open as before.**
 
 ### Does the block slide from necessary to sufficient?
 
@@ -227,7 +227,7 @@ The block carries no other pointer. Its four uncited dependencies ([L85](../find
 
 **Yes. Unreservedly on the mathematics; the citation is what is owed.**
 
-[L62](../findings/sym3-blocks.md#L187)'s trailing note says *"$\dim\mathrm{ann}=1$ and $\operatorname{rank}=13$ are one claim, by L59's apolarity adjunction, ANN is the adjoint's kernel, not the map's"*. **Every clause of that is correct**, and §1–§2.1 above establish it independently of L62's block: the adjunction is an identity, $\mathrm{ANN}=\operatorname{im}(\mu|_U)^\perp$ inside a $14$-dimensional target, and $\operatorname{rank}=14-\dim\mathrm{ANN}$ is rank–nullity for the adjoint. So L62's *"so the rank is $13$"* and its *"$\dim\mathrm{ANN}=1$"* are the same assertion, exactly as the note says.
+[L62](../findings/sym3-blocks.md#L187)'s trailing note says *"$\dim\mathrm{ann}=1$ and $\mathop{\mathrm{rank}}=13$ are one claim, by L59's apolarity adjunction, ANN is the adjoint's kernel, not the map's"*. **Every clause of that is correct**, and §1–§2.1 above establish it independently of L62's block: the adjunction is an identity, $\mathrm{ANN}=\mathop{\mathrm{im}}(\mu|_U)^\perp$ inside a $14$-dimensional target, and $\mathop{\mathrm{rank}}=14-\dim\mathrm{ANN}$ is rank–nullity for the adjoint. So L62's *"so the rank is $13$"* and its *"$\dim\mathrm{ANN}=1$"* are the same assertion, exactly as the note says.
 
 **Three points on the shape of the dependency:**
 

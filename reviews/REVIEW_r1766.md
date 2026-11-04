@@ -22,7 +22,7 @@
 
 ## A. L260Sub.lean, da87f648
 
-**Record, L260 (4):** "Every positive-definite idempotent satisfies $\operatorname{tr}(CK)\le d$, $K=\bigoplus_ic_i\Pi_i$, with equality exactly at $\bigoplus_i\Pi_i/c_i$." Read with (2): C is a positive-definite idempotent of h's own # on h = range C.
+**Record, L260 (4):** "Every positive-definite idempotent satisfies $\mathop{\mathrm{tr}}(CK)\le d$, $K=\bigoplus_ic_i\Pi_i$, with equality exactly at $\bigoplus_i\Pi_i/c_i$." Read with (2): C is a positive-definite idempotent of h's own # on h = range C.
 
 - **A1.** `diagOp b μ Y = Σ_β μ_β ⟨b_β, Y⟩ b_β` with b orthonormal. At μ = 1[λ>0] this is Σ over the positive eigenvectors of ⟨b_β, ·⟩ b_β, the orthogonal projection onto their span. Since C b_β = λ_β b_β, range C is that span. So `diagOp b 1[λ>0]` is P_h with h = range C. The identification range C = span{b_k : λ_k > 0} is standard and stays in prose (O1).
 - **A2.** `sharpBil2 R X Y` is ⟨(R#R)X, Y⟩ by `inner2_sharpMap` (PhiTri.lean), `sharpMap R` being the operator R#R that `IsIdem` compares with R. `sharpBil2_eigen` at the eigenbasis b with eigenvalues μ = 1[λ>0] (supplied by `diagOp_basis`) gives ½ Σ_{β,γ} μ_β μ_γ ⟨b_β,[b_k,b_γ]⟩², which for λ_k > 0 is `Kh b lam k` = ½ Σ_{i,j: λ>0} ⟨b_i,[b_k,b_j]⟩². P_h is self-adjoint, so the row/column convention question of L260 (1) does not arise. For x, y ∈ h the ambient ⟨(P_h#P_h)x,y⟩ = ½ Σ_{a,b∈h} ⟨[e_a,e_b],x⟩⟨[e_a,e_b],y⟩ is h's own Casimir in the restricted Frobenius normalisation, and tr(CK) needs only the diagonal of K in C's eigenbasis, since C is diagonal there. The restriction to λ_k > 0 is harmless because λ_k weights the term.
@@ -47,7 +47,7 @@
 
 ## E. L264Sym.lean, d996fbd3
 
-**Record, L264 proof (1):** "... which is Theorem A of [Tkachev] for the metrized algebra $(\operatorname{Sym}^2\mathfrak{so}(n),\#)$; $\operatorname{Sym}^2\mathfrak h$ is closed under $\#$."
+**Record, L264 proof (1):** "... which is Theorem A of [Tkachev] for the metrized algebra $(\mathop{\mathrm{Sym}}^2\mathfrak{so}(n),\#)$; $\mathop{\mathrm{Sym}}^2\mathfrak h$ is closed under $\#$."
 
 - **E1.** `rk1_expand` is the spectral expansion A = Σ λ_k b_k b_kᵀ in an orthonormal eigenbasis, from `onb_expand`. `sharp_closed` takes h bracket-closed, A self-adjoint with A X ∈ h for all X, and concludes (A#A) X ∈ h for all X. The proof puts every b_k with λ_k ≠ 0 in h and reads `sharp_rk1_sum`, A#A = ½ Σ λ_iλ_j [b_i,b_j][b_i,b_j]ᵀ, whose images lie in span{[b_i,b_j]} ⊆ h. The other half of membership in Sym²h, that A#A kills h⊥, follows from self-adjointness of A#A (`isSelfAdjoint2_sharp`): for x ⊥ h, ⟨(A#A)x, y⟩ = ⟨x, (A#A)y⟩ = 0. So A#A ∈ Sym²h, and the theorem is the record's sentence at A#A.
 - **E2.** The layer has no two-operator A#B, only the trilinear `Ftri`. Closure of the bilinear product follows by polarisation, 2A#B = (A+B)#(A+B) − A#A − B#B, with A + B again self-adjoint with range in h, so it is one line from `sharp_closed` once such an operator is named. The reading of h's own # at the values the lemma uses, F(C,H,H) = ⟨C#H,H⟩ with C, H ∈ Sym²h, needs only that C and H are supported on h (C2), and closure plays no part in it. The polarised closure is what "Sym²h is a subalgebra of the metrized algebra", the frame in which the record applies Tkachev's Theorem A, means, and it holds by E1 and polarisation.

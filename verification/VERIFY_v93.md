@@ -32,7 +32,7 @@
 | symbol | meaning, and where it is fixed |
 |---|---|
 | $\mathcal W_n$ | the real vector space of algebraic Weyl curvature operators in dimension $n$; Nienhaus writes $\mathrm{Weyl}_n$, and $\mathrm{Weyl}^1_n=\{W\mid\lVert W\rVert=1\}$ |
-| $\langle\cdot,\cdot\rangle$ | $\langle R,S\rangle=\operatorname{tr}(R\circ S)$, so $\lVert I\rVert^2=\binom n2$, [problem.md](../findings/problem.md), "the real convention hazard" |
+| $\langle\cdot,\cdot\rangle$ | $\langle R,S\rangle=\mathop{\mathrm{tr}}(R\circ S)$, so $\lVert I\rVert^2=\binom n2$, [problem.md](../findings/problem.md), "the real convention hazard" |
 | $Q$ | $Q(R)=R^2+R^\#$, the Böhm–Wilking ODE right-hand side; $\Phi$ is its polarisation |
 | $P$ | $P(R)=\langle R^2+R^\#,R\rangle$, a homogeneous cubic, verbatim the source's definition, extraction L212 |
 | $\theta_0(n)$ | the closed form $\theta_0(n)^2=2(n-1)(n-2)/n^2$ **and nothing more**, [conventions.md](../findings/conventions.md):18 |
@@ -52,7 +52,7 @@ The block's left-hand side, $\sup\{P(W):W\in\mathcal W_n,\ \lVert W\rVert=1\}$, 
 |---|---|---|---|---|
 | H1 | $n\ge12$ | **yes**, "Fix $n\ge12$" | **no**, see §5.2 | Conjecture A's disjunctive hypothesis, extraction L212 |
 | H2 | $\mathcal W_n$ is finite-dimensional | **yes** | yes, for compactness | $\mathcal W_n\subseteq S^2(\Lambda^2\mathbb R^n)$; $\dim\mathcal W_{12}=1638$ is a Lemma on the record |
-| H3 | $\lVert\cdot\rVert$ comes from an inner product | **no** | yes, the Lagrange step needs $\{\lVert W\rVert=1\}$ *smooth*, which finite-dimensionality alone does not give | $\langle R,S\rangle=\operatorname{tr}(R\circ S)$, §0 |
+| H3 | $\lVert\cdot\rVert$ comes from an inner product | **no** | yes, the Lagrange step needs $\{\lVert W\rVert=1\}$ *smooth*, which finite-dimensionality alone does not give | $\langle R,S\rangle=\mathop{\mathrm{tr}}(R\circ S)$, §0 |
 | H4 | $P$ is smooth on $\mathcal W_n$ | **yes**, "the polynomial $P$" | yes | $P$ is a homogeneous cubic |
 | H5 | $\mathcal W_n\ne0$, so the sphere is nonempty | **no** | yes, the extreme value theorem is vacuous otherwise | true at every $n\ge4$ |
 | H6 | $\Theta_n$ is **attained** by some unit $W\in\mathcal W_n$ | **no**, asserted in the closing pull-quote, uncited | **not used by the proof, and it is the half the proof is missing** | Nienhaus Prop 2.25, §3.2 |

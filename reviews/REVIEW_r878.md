@@ -29,10 +29,10 @@ Every step of the three-line derivation and its tightness claim survives, the "w
 
 ## Conventions, quoted from the brief
 
-- $\Lambda^2\mathbb R^n$ is realised as skew matrices. $\varphi_{ab}=E_{ba}-E_{ab}$ and it is a UNIT bivector, the inner product being $\langle X,Y\rangle=\tfrac12\operatorname{tr}(X^{\mathsf T}Y)$.
+- $\Lambda^2\mathbb R^n$ is realised as skew matrices. $\varphi_{ab}=E_{ba}-E_{ab}$ and it is a UNIT bivector, the inner product being $\langle X,Y\rangle=\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$.
 - The norm on a four-index tensor is the record's: $\lVert R\rVert^2=\tfrac14\sum_{ijkl}R_{ijkl}^2$.
 - $(\omega\wedge\omega)_{ijkl}=2(\omega_{ij}\omega_{kl}-\omega_{ik}\omega_{jl}+\omega_{il}\omega_{jk})$, so the record's wedge is twice the Pfaffian.
-- $\mathcal W_n$ is the space of algebraic Weyl tensors, $\lVert W\rVert^2=\operatorname{tr}(W^2)$, and criticality on the unit sphere is $Q(W)=W^2+W^\#=\theta W$.
+- $\mathcal W_n$ is the space of algebraic Weyl tensors, $\lVert W\rVert^2=\mathop{\mathrm{tr}}(W^2)$, and criticality on the unit sphere is $Q(W)=W^2+W^\#=\theta W$.
 
 Two derived conventions are used throughout and are established in §0: $[\varphi_{ab},\varphi_{ac}]=\varphi_{bc}$, and $\varphi_{ab}$ commutes with $\varphi_{cd}$ when the index pairs are disjoint.
 
@@ -55,19 +55,19 @@ The last row is the load-bearing reading. §10 says what changes if the record's
 
 ## §0 The commutator table, and the two constants anchored on a real object
 
-From $\varphi_{ab}=E_{ba}-E_{ab}$ and $E_{ij}E_{kl}=\delta_{jk}E_{il}$: $\varphi_{ab}^2=-(E_{aa}+E_{bb})$, so $\langle\varphi_{ab},\varphi_{ab}\rangle=\tfrac12\operatorname{tr}(-\varphi_{ab}^2)=1$, confirming the unit normalisation. For $a,b,c$ distinct, expanding the four products gives $[\varphi_{ab},\varphi_{ac}]=\varphi_{bc}$, and disjoint index pairs commute.
+From $\varphi_{ab}=E_{ba}-E_{ab}$ and $E_{ij}E_{kl}=\delta_{jk}E_{il}$: $\varphi_{ab}^2=-(E_{aa}+E_{bb})$, so $\langle\varphi_{ab},\varphi_{ab}\rangle=\tfrac12\mathop{\mathrm{tr}}(-\varphi_{ab}^2)=1$, confirming the unit normalisation. For $a,b,c$ distinct, expanding the four products gives $[\varphi_{ab},\varphi_{ac}]=\varphi_{bc}$, and disjoint index pairs commute.
 
 Take the $n=4$ self-dual triple $A_1=(\varphi_{12}+\varphi_{34})/\sqrt2$, $A_2=(\varphi_{13}+\varphi_{42})/\sqrt2$, $A_3=(\varphi_{14}+\varphi_{23})/\sqrt2$, each of unit norm. Then
 
 $$[A_1,A_2]=\tfrac12\big([\varphi_{12},\varphi_{13}]+[\varphi_{12},\varphi_{42}]+[\varphi_{34},\varphi_{13}]+[\varphi_{34},\varphi_{42}]\big)=\tfrac12\big(\varphi_{23}+\varphi_{14}+\varphi_{14}+\varphi_{23}\big)=\sqrt2\,A_3 .$$
 
-So $c_{123}=\sqrt2$ and $T_{123}=2$ for the eigenbasis of $W_{\mathbb{CP}^2}$, whose operator is $\operatorname{diag}(2c,-c,-c)$ on $\Lambda^+$ and $0$ on $\Lambda^-$.
+So $c_{123}=\sqrt2$ and $T_{123}=2$ for the eigenbasis of $W_{\mathbb{CP}^2}$, whose operator is $\mathop{\mathrm{diag}}(2c,-c,-c)$ on $\Lambda^+$ and $0$ on $\Lambda^-$.
 
 This anchors both constants of the brief against an actual object, which matters because the record's $\#$ normalisation is not in the brief and a factor of two in it would move the $-2$ in (B).
 
-- **Marginal.** For $\alpha=A_1$ at $n=12$: $\operatorname{ad}(A_1)$ sends $A_2\mapsto\sqrt2A_3$ and $A_3\mapsto-\sqrt2A_2$, contributing $2+2=4$. It kills $\Lambda^-$ and $\Lambda^2\mathbb R^8$. On the $32$ elements $\varphi_{ip}$ with $i\le4<p$ it gives $[A_1,\varphi_{1p}]=\varphi_{2p}/\sqrt2$ and its kin, each of squared norm $\tfrac12$, contributing $16$. Total $20=2(n-2)$, matching Given 2 exactly.
+- **Marginal.** For $\alpha=A_1$ at $n=12$: $\mathop{\mathrm{ad}}(A_1)$ sends $A_2\mapsto\sqrt2A_3$ and $A_3\mapsto-\sqrt2A_2$, contributing $2+2=4$. It kills $\Lambda^-$ and $\Lambda^2\mathbb R^8$. On the $32$ elements $\varphi_{ip}$ with $i\le4<p$ it gives $[A_1,\varphi_{1p}]=\varphi_{2p}/\sqrt2$ and its kin, each of squared norm $\tfrac12$, contributing $16$. Total $20=2(n-2)$, matching Given 2 exactly.
 - **Relation (B).** At index $1$ the object gives $S_{12}=S_{13}=2$ (see §3), so $\sum_{\beta\gamma}\lambda_\beta T_{1\beta\gamma}=-c(2+2)=-4c=-2\lambda_1$. The constant is $-2$ and not $-1$, confirmed on the object.
-- **Cross-check on the $\tfrac12$ in Given 1.** With $T_{123}=2$, Given 1 returns $\theta=18c^3=3/\sqrt6=\sqrt{3/2}$, which is the true $\theta$ that Given 5 records independently. The classical dimension-four form $W^\#|_{\Lambda^+}=2\operatorname{diag}(\lambda_2\lambda_3,\lambda_3\lambda_1,\lambda_1\lambda_2)$ gives $\langle W^\#,W\rangle=6\lambda_1\lambda_2\lambda_3=12c^3=\tfrac12m_3$, agreeing.
+- **Cross-check on the $\tfrac12$ in Given 1.** With $T_{123}=2$, Given 1 returns $\theta=18c^3=3/\sqrt6=\sqrt{3/2}$, which is the true $\theta$ that Given 5 records independently. The classical dimension-four form $W^\#|_{\Lambda^+}=2\mathop{\mathrm{diag}}(\lambda_2\lambda_3,\lambda_3\lambda_1,\lambda_1\lambda_2)$ gives $\langle W^\#,W\rangle=6\lambda_1\lambda_2\lambda_3=12c^3=\tfrac12m_3$, agreeing.
 
 ## §1 The three-line derivation, item 1
 
@@ -268,7 +268,7 @@ Within the trace-free unit-norm set, no infeasible spectrum was found. At $m=2$ 
 
 Three further ways to be wrong, and what was done about each.
 
-1. **The normalisation of $\#$, hence the $-2$ in (B).** The brief gives the relation but not the $\#$ convention, and the natural reading of $(W\#I)_{\alpha\alpha}$ returns $-\lambda_\alpha$ rather than $-2\lambda_\alpha$, so the record's $\#$ is twice mine. Resolved by anchoring on the object: the padded $W_{\mathbb{CP}^2}$ has $S_{12}=S_{13}=2$ from $[A_1,A_2]=\sqrt2A_3$, so its row at index $1$ evaluates to $-4c=-2\lambda_1$, and the constant is $-2$ as the brief states. The marginal $2(n-2)=20$ was anchored the same way, by summing $\|\operatorname{ad}A_1\|^2$ over $\Lambda^2\mathbb R^{12}$.
+1. **The normalisation of $\#$, hence the $-2$ in (B).** The brief gives the relation but not the $\#$ convention, and the natural reading of $(W\#I)_{\alpha\alpha}$ returns $-\lambda_\alpha$ rather than $-2\lambda_\alpha$, so the record's $\#$ is twice mine. Resolved by anchoring on the object: the padded $W_{\mathbb{CP}^2}$ has $S_{12}=S_{13}=2$ from $[A_1,A_2]=\sqrt2A_3$, so its row at index $1$ evaluates to $-4c=-2\lambda_1$, and the constant is $-2$ as the brief states. The marginal $2(n-2)=20$ was anchored the same way, by summing $\|\mathop{\mathrm{ad}}A_1\|^2$ over $\Lambda^2\mathbb R^{12}$.
 2. **The $\tfrac12$ in Given 1 and the wedge factor.** Resolved by two independent agreements: Given 1 with $T_{123}=2$ returns $\sqrt{3/2}$, which Given 5 records as the object's true $\theta$, and the classical dimension-four $W^\#$ gives $\langle W^\#,W\rangle=6\lambda_1\lambda_2\lambda_3=\tfrac12m_3$. A wrong factor here would have broken both.
 3. **The realisability of the two-block spectrum.** If it were not in the admissible set the counterexample would be a statement about a relaxation of an empty problem. Resolved by exhibiting the object: the direct sum of two padded $W_{\mathbb{CP}^2}$'s is Ricci-flat, satisfies first Bianchi, and has exactly that spectrum after normalisation, with true $\theta=\sqrt3/2$.
 

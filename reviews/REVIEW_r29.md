@@ -4,7 +4,7 @@
 
 **Irreducibility CONFIRMED and stronger than needed.** The commutant is computed as $\ker\Omega$ for $\Omega(M)=-\sum_a[\rho_a,[\rho_a,M]]$, positive semidefinite with kernel exactly the commutant, by matrix-free Lanczos. $\dim\mathrm{End}_{SO(n)}=\dim\mathrm{End}_{O(n)}=1$ at $n=5\ldots10$, so $\mathcal W_n$ is absolutely irreducible of real type already under $SO(n)$; the $n=4$ control returns $2$, confirming the method detects reducibility when it is there.
 
-**T1 CONFIRMED.** $\tau=0$ to $2\times10^{-14}$ in two unrelated orthonormal bases, and $\operatorname{tr}(L_x)=0$ at random **non**-critical $x$ for $n=5\ldots12$.
+**T1 CONFIRMED.** $\tau=0$ to $2\times10^{-14}$ in two unrelated orthonormal bases, and $\mathop{\mathrm{tr}}(L_x)=0$ at random **non**-critical $x$ for $n=5\ldots12$.
 
 **T2 CONFIRMED and extended.** Exact at $n=5\ldots12$ with six independent pairs per $n$, including the dimensions the claim never tested.
 
@@ -14,7 +14,7 @@
 
 **The sharpening REFUTED.** The bound is exactly optimal for the information it uses, no further eigenvalue is forced, and the deficit tends to exactly $2$ at every $n$, with $\mathrm{bound}/\theta_0$ peaking at $1.5104$ near $n=10$ and falling to $\sqrt2$.
 
-**Two identities offered as repair, and they matter more than the claims audited.** $\kappa_W=\|T\|^2/D$ with $T$ the structure tensor and $D=\dim\mathcal W_n$, verified exactly as $315/35$, $1155/84$, $3276/168$, a route to **proving** the closed form for $\kappa_F$, which is currently fitted both here and in Fox. And $\operatorname{tr}(X^\#)=-\|X\|^2$ on $\mathcal W_n$ at $n=5\ldots8$, the general form of the constraint that killed the relaxation's witness.
+**Two identities offered as repair, and they matter more than the claims audited.** $\kappa_W=\|T\|^2/D$ with $T$ the structure tensor and $D=\dim\mathcal W_n$, verified exactly as $315/35$, $1155/84$, $3276/168$, a route to **proving** the closed form for $\kappa_F$, which is currently fitted both here and in Fox. And $\mathop{\mathrm{tr}}(X^\#)=-\|X\|^2$ on $\mathcal W_n$ at $n=5\ldots8$, the general form of the constraint that killed the relaxation's witness.
 
 **Two corrections beyond the shared ones.** The $\tfrac12$-inclusion is **proven** by differentiating $Q(gW)=gQ(W)$, with multiplicity exceeding the orbit dimension at degenerate points, $60$ against $21$ at $S^2\times S^3\times S^3$, where $m(1)=3$. And the $O(n)$-not-$SO(n)$ remark recorded with Fox's theorem is an $n=4$ statement; for odd $n$ the two groups act through the same image on $\Lambda^2$.
 

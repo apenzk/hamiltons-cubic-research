@@ -12,7 +12,7 @@
 
 > Throughout this section, we assume that $n\ge12$. Let $b_{\max}=\tfrac1{4n}$. To each $0<b\le b_{\max}$ we associate $a=\tfrac{(2+(n-2)b)^2}{2(2+(n-3)b)}\,b$, $\gamma=\tfrac{b}{2+(n-3)b}$, and $\omega^2=\tfrac{27(2+(n-2)b)}{8}\cdot\tfrac{(1-4(n-2)b^2)^4(1+(n-2)b)^2}{n^2b^2(2+(n-3)b)^2}$.
 
-> **Definition 3.1.** For $0<b\le b_{\max}$, let $E(b)$ denote the set of all curvature tensors $S$ for which there exists a tensor $T$ satisfying: (i) $T$ has all the algebraic properties of a curvature tensor except the first Bianchi identity, and $T\ge0$; (ii) $S-T\in\mathrm{PIC}$; (iii) $\mathrm{Ric}(S)_{11}+\mathrm{Ric}(S)_{22}+\tfrac{2\gamma}{n}\operatorname{scal}(S)\ge0$; (iv) for every orthonormal frame, $\mathrm{Ric}(S)_{22}-\mathrm{Ric}(S)_{11}\le\omega\operatorname{scal}(S)^{1/2}\big(\sum_{p\ge3}(T_{1p1p}+T_{2p2p})\big)^{1/2}+2(n-2)b\sum_{p\ge3}(T_{1p1p}+T_{2p2p})$. Moreover $C(b)=\ell_{a,b}(E(b))$.
+> **Definition 3.1.** For $0<b\le b_{\max}$, let $E(b)$ denote the set of all curvature tensors $S$ for which there exists a tensor $T$ satisfying: (i) $T$ has all the algebraic properties of a curvature tensor except the first Bianchi identity, and $T\ge0$; (ii) $S-T\in\mathrm{PIC}$; (iii) $\mathrm{Ric}(S)_{11}+\mathrm{Ric}(S)_{22}+\tfrac{2\gamma}{n}\mathop{\mathrm{scal}}(S)\ge0$; (iv) for every orthonormal frame, $\mathrm{Ric}(S)_{22}-\mathrm{Ric}(S)_{11}\le\omega\mathop{\mathrm{scal}}(S)^{1/2}\big(\sum_{p\ge3}(T_{1p1p}+T_{2p2p})\big)^{1/2}+2(n-2)b\sum_{p\ge3}(T_{1p1p}+T_{2p2p})$. Moreover $C(b)=\ell_{a,b}(E(b))$.
 
 > **Theorem 3.2.** For each $0<b\le b_{\max}$, the cone $C(b)$ is transversally invariant under the Hamilton ODE $\tfrac{d}{dt}R=Q(R)$.
 

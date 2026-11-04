@@ -7,7 +7,7 @@
 | # | Claim attacked | Verdict |
 | --- | --- | --- |
 | 1 | [IsSectional](../lean/HamiltonsCubic/Results/L176Statement.lean#L31) captures the coordinate-diagonal locus | **CONFIRMED AS ALGEBRA**, the three fields are exactly what the record derives, and the structure is a *superset* of the locus, so the Lean theorem is the stronger one; the containment itself is prose |
-| 2 | [(edges K).card](../lean/HamiltonsCubic/Results/L176Statement.lean#L41) counts $\Lambda^2$-rank | **CONFIRMED AS ARITHMETIC, UNPROVED AS GEOMETRY**, the `p.1 < p.2` filter counts each unordered pair once, nothing double-counted; that this equals $\operatorname{rank}(W:\Lambda^2\to\Lambda^2)$ appears in the file only as a comment |
+| 2 | [(edges K).card](../lean/HamiltonsCubic/Results/L176Statement.lean#L41) counts $\Lambda^2$-rank | **CONFIRMED AS ARITHMETIC, UNPROVED AS GEOMETRY**, the `p.1 < p.2` filter counts each unordered pair once, nothing double-counted; that this equals $\mathop{\mathrm{rank}}(W:\Lambda^2\to\Lambda^2)$ appears in the file only as a comment |
 | 3 | [four_le_card_edges](../lean/HamiltonsCubic/Results/L176Statement.lean#L546) is L176's conclusion | **CONFIRMED AS THE EDGE HALF**, it is $K\ne0\Rightarrow4\le\lvert E\rvert$ exactly; the degree half is present separately as [card_nbr_zero_or_two_le](../lean/HamiltonsCubic/Results/L176Statement.lean#L67), so both halves of the record's sentence are in the file |
 | 4 | The theorem is non-vacuous | **CONFIRMED, WITH A CLOSED-FORM WITNESS**, vacuous at $n\le3$ because no nonzero sectional matrix exists there, non-vacuous from $n=4$, and the bound is attained |
 | 5 | Every imported lemma proves what its name says | **REFUTED FOR ONE**, [card_nbr_eq_two_of_three](../lean/HamiltonsCubic/Results/L176Statement.lean#L221) is named and documented for "exactly two neighbours" and states only $\le3$; it is also dead and its hypothesis `ha` is unused |
@@ -30,7 +30,7 @@ Quoted from the brief and fixed for the whole report.
 - **Degree** of $a$ in $G$ is $\#\{b:K_{ab}\ne0\}$, which is `(nbr K a).card` in the file.
 - Lean indices run over `Fin n`, so the record's $\{1,\dots,n\}$ is the file's $\{0,\dots,n-1\}$; this is a relabelling and is used nowhere.
 - An **edge** in the file is an ordered pair `p : Fin n × Fin n` with `p.1 < p.2`, so each unordered pair has exactly one representative.
-- The record's conclusion has two clauses: **(D)** every vertex has degree $0$ or $\ge2$, and **(E)** $\lvert E\rvert\ge4$, "in particular" $\operatorname{rank}(W:\Lambda^2\to\Lambda^2)\ge4$. The record itself says only (E) is equivalent to the rank bound.
+- The record's conclusion has two clauses: **(D)** every vertex has degree $0$ or $\ge2$, and **(E)** $\lvert E\rvert\ge4$, "in particular" $\mathop{\mathrm{rank}}(W:\Lambda^2\to\Lambda^2)\ge4$. The record itself says only (E) is equivalent to the rank bound.
 
 ## 1. The hypothesis inventory
 
@@ -196,7 +196,7 @@ Clause by clause against the record's sentence.
 | "coordinate-diagonal in some orthonormal frame, with sectional matrix $K_{ab}=W_{abab}$" | `hK : IsSectional K` | the *image* of that hypothesis under a translation the file does not perform (§2) |
 | **(D)** "every vertex of $G$ has degree $0$ or degree $\ge2$" | `card_nbr_zero_or_two_le` | **present, as its own theorem** |
 | **(E)** "$G$ has at least four edges" | `4 ≤ (edges K).card` | **present, and this is the headline theorem** |
-| "in particular $\operatorname{rank}(W:\Lambda^2\to\Lambda^2)\ge4$" | absent | asserted in the docstring at [#L542](../lean/HamiltonsCubic/Results/L176Statement.lean#L542) |
+| "in particular $\mathop{\mathrm{rank}}(W:\Lambda^2\to\Lambda^2)\ge4$" | absent | asserted in the docstring at [#L542](../lean/HamiltonsCubic/Results/L176Statement.lean#L542) |
 
 **The record's own gloss, "Only the edge bound is equivalent to the rank bound; the degree statement is strictly more than it", is honoured by the file:** both clauses are theorems, (D) at line 67 and (E) at line 546. **The headline theorem alone is (E) only**, so a reader who reads `four_le_card_edges` as "L176" gets the weaker of the two clauses; but the stronger one is fifteen lines below the structure and is what (E)'s proof runs on.
 
@@ -212,7 +212,7 @@ Clause by clause against the record's sentence.
 **Exhibited concretely.** L176's conclusion, as the record states it, is a statement about a Weyl tensor: its support graph's degrees, its edge count, and *"in particular"* its $\Lambda^2$-rank. The Lean theorem's conclusion is `4 ≤ (edges K).card` for a real matrix. Two mathematical steps stand between them, both in the record's proof and neither in the file:
 
 - **the locus identity**, a coordinate-diagonal $W$ in an *orthonormal* frame has $K$ hollow, symmetric, with vanishing row sums;
-- **the rank identity**, $W(f_a\wedge f_b)=K_{ab}f_a\wedge f_b$, hence $\operatorname{rank}(W:\Lambda^2\to\Lambda^2)=\lvert E\rvert$.
+- **the rank identity**, $W(f_a\wedge f_b)=K_{ab}f_a\wedge f_b$, hence $\mathop{\mathrm{rank}}(W:\Lambda^2\to\Lambda^2)=\lvert E\rvert$.
 
 **The record already knows the second is owed, nine rows above the row that denies it.** [lean/INDEX.md#L37](../lean/INDEX.md#L37), the row for the *other* L176 file, reads: *"**Owed: … the locus identity $W(f_a\wedge f_b)=K_{ab}f_a\wedge f_b$.**"* **So the index calls one and the same step owed at line 37 and machine-checked at line 38.** The grep of §3 confirms the file's side: three geometric words, all in comments.
 

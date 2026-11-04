@@ -10,7 +10,7 @@ $\mathrm{Sym}^2_b(\wedge^2\mathbb{R}^n)$ is the space of symmetric endomorphisms
 $$\mathcal{R}_{\sec\ge k}(n) = \bigl\{R \in \mathrm{Sym}^2_b(\wedge^2\mathbb{R}^n) : \sec_R \ge k\bigr\},$$
 and similarly for $\mathcal{R}_{\sec>k}(n)$, $\mathcal{R}_{\sec\le k}(n)$, $\mathcal{R}_{\sec<k}(n)$.
 
-> **Remark 2.2** reduces every bound to $\sec\ge0$: $\overline{\mathcal{R}_{\sec>k}(n)} = \mathcal{R}_{\sec\ge k}(n)$, $\operatorname{int}\mathcal{R}_{\sec\ge k}(n) = \mathcal{R}_{\sec>k}(n)$, and $\sec_R\ge k \iff \sec_{R-k\,\mathrm{Id}}\ge0$, $\sec_R\le k \iff \sec_{k\,\mathrm{Id}-R}\ge0$, so $\mathcal{R}_{\sec\ge k}(n)$ and $\mathcal{R}_{\sec\le k}(n)$ are affine images of $\mathcal{R}_{\sec\ge0}(n)$. Consequence of linearity of $R\mapsto\sec_R$ together with $\sec_{\mathrm{Id}}\equiv1$.
+> **Remark 2.2** reduces every bound to $\sec\ge0$: $\overline{\mathcal{R}_{\sec>k}(n)} = \mathcal{R}_{\sec\ge k}(n)$, $\mathop{\mathrm{int}}\mathcal{R}_{\sec\ge k}(n) = \mathcal{R}_{\sec>k}(n)$, and $\sec_R\ge k \iff \sec_{R-k\,\mathrm{Id}}\ge0$, $\sec_R\le k \iff \sec_{k\,\mathrm{Id}-R}\ge0$, so $\mathcal{R}_{\sec\ge k}(n)$ and $\mathcal{R}_{\sec\le k}(n)$ are affine images of $\mathcal{R}_{\sec\ge0}(n)$. Consequence of linearity of $R\mapsto\sec_R$ together with $\sec_{\mathrm{Id}}\equiv1$.
 
 Under the identification of $\mathcal{R}_{\sec\ge0}(n)$ with quadratic forms on the Plücker cone (2.10): $P_{\mathrm{Gr}_2(n)} = \mathcal{R}_{\sec\ge0}(n)$, the cone of quadratic forms nonnegative on the real points of $\mathrm{Gr}_2(n)$, and $\Sigma_{\mathrm{Gr}_2(n)}$ (the sums of squares modulo the Plücker ideal), is the set of curvature operators with *strongly nonnegative curvature* in the sense of Bettiol–Mendes [BM17, BM18].
 
@@ -30,16 +30,16 @@ $$I_0\subset I_1\subset\cdots\subset I_m\subset\cdots\subset \mathcal{R}_{\sec\g
 By Theorem A the hierarchies do **not** stabilise after finitely many steps for any $n\ge5$. At $k=0$: $I_0$ is exactly strongly nonnegative curvature, $O_0$ is exactly $\mathrm{Ric}\ge0$; $I_0 = \mathcal{R}_{\sec\ge k}(n)$ iff $n\le4$, and $O_0 = \mathcal{R}_{\sec\ge k}(n)$ iff $n=2$.
 
 > **Theorem C.** *The set $\mathcal{R}_{\sec\ge k}(4)$ is an algebraic interior with minimal defining polynomial $p_k : \mathrm{Sym}^2_b(\wedge^2\mathbb{R}^4)\to\mathbb{R}$ given by*
-$$p_k(R) = \operatorname{disc}_x\bigl(\det(R - k\,\mathrm{Id} + x\,\ast)\bigr).$$
+$$p_k(R) = \mathop{\mathrm{disc}}_x\bigl(\det(R - k\,\mathrm{Id} + x\,\ast)\bigr).$$
 *More precisely $\mathcal{R}_{\sec\ge k}(4) = \overline{C_k}$, where $C_k$ is the only connected component of $\{R : p_k(R)>0\}$ with $(k+1)\mathrm{Id}\in C_k$.*
 
-Here $\ast$ is the Hodge star on $\wedge^2\mathbb{R}^4$ and $\operatorname{disc}_x$ the discriminant in $x$. **Remark 3.3**: $\operatorname{disc}_x\det(R+x\ast)$ is homogeneous of degree $30$ in the coefficients of $R$. A related result, reading (1.3) as a polynomial in $k$, is Fodor [Fod20].
+Here $\ast$ is the Hodge star on $\wedge^2\mathbb{R}^4$ and $\mathop{\mathrm{disc}}_x$ the discriminant in $x$. **Remark 3.3**: $\mathop{\mathrm{disc}}_x\det(R+x\ast)$ is homogeneous of degree $30$ in the coefficients of $R$. A related result, reading (1.3) as a polynomial in $k$, is Fodor [Fod20].
 
 ## The supporting statements
 
 > **Definition 2.5** (Helton–Vinnikov [HV07]). A closed $S\subset\mathbb{R}^n$ is an *algebraic interior* if it is the closure of a connected component of $\{x : p(x)>0\}$ for some $p\in\mathbb{R}[x_1,\dots,x_n]$, the *defining polynomial*. **Remark 2.6**: a defining polynomial of minimal degree divides every defining polynomial ([HV07, Lem. 2.1]), so it is unique up to a positive constant.
 
-> **Lemma 2.7.** *Every spectrahedron $S$ with $\operatorname{int}(S)\ne\emptyset$ is an algebraic interior whose minimal defining polynomial $p$ satisfies $p(x)\ne0$ for all $x\in\operatorname{int}(S)$.* This is what rules out "spectrahedron" in Theorem A (2), via Proposition 3.5.
+> **Lemma 2.7.** *Every spectrahedron $S$ with $\mathop{\mathrm{int}}(S)\ne\emptyset$ is an algebraic interior whose minimal defining polynomial $p$ satisfies $p(x)\ne0$ for all $x\in\mathop{\mathrm{int}}(S)$.* This is what rules out "spectrahedron" in Theorem A (2), via Proposition 3.5.
 
 **Lemma 2.10 (Finsler).** *Let $A,B\in\mathrm{Sym}^2(\mathbb{R}^d)$. The following are equivalent:*
 1. *$\langle Av,v\rangle\ge0$ for all $v\in\mathbb{R}^d\setminus\{0\}$ with $\langle Bv,v\rangle=0$;*
@@ -47,16 +47,16 @@ Here $\ast$ is the Hodge star on $\wedge^2\mathbb{R}^4$ and $\operatorname{disc}
 
 *The analogous statement with all inequalities strict also holds. Moreover, if (i) holds, there is $v\ne0$ with $\langle Av,v\rangle=\langle Bv,v\rangle=0$, and $B$ has full rank, then $x$ in (ii) is unique.* Cited to Finsler [Fin36], the paper's point is that Thorpe's trick is an instance of a result almost 100 years old, apparently unnoticed until now; Calabi [Cal64] gave an independent topological proof, and [DP06] surveys others.
 
-**Example 2.11** is the dimension count behind the $n\le4$ / $n\ge5$ split. With $\operatorname{codim}\mathrm{Gr}_2(n) = \binom n2 - 1 - 2(n-2) = \tfrac{(n-2)(n-3)}2$ and $\deg\mathrm{Gr}_2(n) = \tfrac{(2(n-2))!}{(n-2)!\,(n-1)!}$ [EH16, Ex. 4.38], one has $\deg = \operatorname{codim}+1$ iff $n\le4$. Blekherman–Smith–Velasco [BSV16, Thm. 1] then gives $\Sigma_{\mathrm{Gr}_2(n)} = P_{\mathrm{Gr}_2(n)}$ **iff $n\le4$**. For $n\ge5$ the explicit nonnegative-but-not-SOS witness is Zoltek's [Zol79]
+**Example 2.11** is the dimension count behind the $n\le4$ / $n\ge5$ split. With $\mathop{\mathrm{codim}}\mathrm{Gr}_2(n) = \binom n2 - 1 - 2(n-2) = \tfrac{(n-2)(n-3)}2$ and $\deg\mathrm{Gr}_2(n) = \tfrac{(2(n-2))!}{(n-2)!\,(n-1)!}$ [EH16, Ex. 4.38], one has $\deg = \mathop{\mathrm{codim}}+1$ iff $n\le4$. Blekherman–Smith–Velasco [BSV16, Thm. 1] then gives $\Sigma_{\mathrm{Gr}_2(n)} = P_{\mathrm{Gr}_2(n)}$ **iff $n\le4$**. For $n\ge5$ the explicit nonnegative-but-not-SOS witness is Zoltek's [Zol79]
 $$R_{\mathrm{Zol}} = x_{12}^2 + 2x_{13}^2 + 2x_{23}^2 + 2x_{14}^2 + x_{15}^2 + x_{34}^2 + 2x_{25}^2 + 2x_{45}^2 - 2x_{12}x_{34} - 2x_{12}x_{15} - 2x_{34}x_{15}.$$
 
 > **Theorem 2.14** (the criterion extracted from Scheiderer [Sch18b]; implies [Faw19, Thm. 3]). *Let $L\subset\mathbb{R}[x_1,\dots,x_n]$ be a finite-dimensional vector space with $1\in L$, and let $f$ be a nonnegative polynomial which is not a sum of squares. Suppose that for all $y\in\mathbb{R}^n$ the coefficients of $f^h(t, x_1-y_1,\dots,x_n-y_n)$, as a polynomial in $t$, belong to $L$. Then*
 $$K = \{g\in L : g(x)\ge0 \text{ for all } x\in\mathbb{R}^n\}$$
-*is not a spectrahedral shadow.* Proof: $K = C^*$ for $C=\operatorname{conv}\{\varphi_x\}$ the convex hull of evaluations; $C$ fails to be a spectrahedral shadow by [Sch18b, Lem. 4.17, Prop. 4.18, Prop. 4.19, Ex. 4.20, Rem. 4.21]; duality plus $1\in L$ transfers the failure to $K$.
+*is not a spectrahedral shadow.* Proof: $K = C^*$ for $C=\mathop{\mathrm{conv}}\{\varphi_x\}$ the convex hull of evaluations; $C$ fails to be a spectrahedral shadow by [Sch18b, Lem. 4.17, Prop. 4.18, Prop. 4.19, Ex. 4.20, Rem. 4.21]; duality plus $1\in L$ transfers the failure to $K$.
 
 **Proposition 3.1 (Thorpe's trick, [Tho72]).** *A curvature operator $R\in\mathrm{Sym}^2_b(\wedge^2\mathbb{R}^4)$ has $\sec_R\ge0$ if and only if there exists $x\in\mathbb{R}$ with $R + x\ast \succeq 0$, and analogously for $\sec_R>0$. Moreover, if $R$ has $\sec_R\ge0$ but not $\sec_R>0$, then $x$ is unique.* Immediate from Lemma 2.10 with $B=\ast$.
 
-> **Proposition 3.2.** *$p(R)=\operatorname{disc}_x(\det(R+x\ast))$ vanishes on the topological boundary $\partial\mathcal{R}_{\sec\ge0}(4)$.* The proof runs through $T=\operatorname{diag}(1,1,1,\sqrt{-1},\sqrt{-1},\sqrt{-1})$, a square root of $\ast$, giving $\operatorname{disc}_x\det(R+x\ast) = \operatorname{disc}(TRT)$ (3.3), and shows the Finsler–Thorpe $x_0$ is a root of multiplicity $\ge2$.
+> **Proposition 3.2.** *$p(R)=\mathop{\mathrm{disc}}_x(\det(R+x\ast))$ vanishes on the topological boundary $\partial\mathcal{R}_{\sec\ge0}(4)$.* The proof runs through $T=\mathop{\mathrm{diag}}(1,1,1,\sqrt{-1},\sqrt{-1},\sqrt{-1})$, a square root of $\ast$, giving $\mathop{\mathrm{disc}}_x\det(R+x\ast) = \mathop{\mathrm{disc}}(TRT)$ (3.3), and shows the Finsler–Thorpe $x_0$ is a root of multiplicity $\ge2$.
 
 > **Proposition 4.1.** *The closed convex cone $P_{\mathrm{Gr}_2(5)}$ is not a spectrahedral shadow.* This is the main step of Theorem A (1): apply Theorem 2.14 in the affine chart $x_{15}\ne0$ of $\mathrm{Gr}_2(5)$, with $f$ the restriction of a Zoltek-type $P\in P_{\mathrm{Gr}_2(5)}\setminus\Sigma_{\mathrm{Gr}_2(5)}$.
 
@@ -78,7 +78,7 @@ see [BM, Prop. 3.1].
 
 ## What it cites, for the record
 
-Scheiderer [Sch18b] and Fawzi [Faw19] for the failure of Helton–Nie; Blekherman–Smith–Velasco [BSV16] for $\Sigma_X = P_X$ iff $\deg X = \operatorname{codim}X + 1$; Zoltek [Zol79] for the explicit nonnegative non-SOS form on $\mathrm{Gr}_2(5)$; Finsler [Fin36] and Calabi [Cal64] for Lemma 2.10; Thorpe [Tho72] for Proposition 3.1; Bettiol–Mendes [BM17, BM18] for strongly nonnegative curvature and the Gray–O'Neill formula; Lasserre [Las01] and Parrilo [Par00] for the shape of the inner hierarchy; Weinstein [Wei72, p. 260] for the original quantifier-elimination observation.
+Scheiderer [Sch18b] and Fawzi [Faw19] for the failure of Helton–Nie; Blekherman–Smith–Velasco [BSV16] for $\Sigma_X = P_X$ iff $\deg X = \mathop{\mathrm{codim}}X + 1$; Zoltek [Zol79] for the explicit nonnegative non-SOS form on $\mathrm{Gr}_2(5)$; Finsler [Fin36] and Calabi [Cal64] for Lemma 2.10; Thorpe [Tho72] for Proposition 3.1; Bettiol–Mendes [BM17, BM18] for strongly nonnegative curvature and the Gray–O'Neill formula; Lasserre [Las01] and Parrilo [Par00] for the shape of the inner hierarchy; Weinstein [Wei72, p. 260] for the original quantifier-elimination observation.
 
 ## Bearing on this project
 

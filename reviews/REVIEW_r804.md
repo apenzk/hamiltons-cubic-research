@@ -16,8 +16,8 @@
 ## 0. Conventions, fixed once
 
 - $W=\sum_{i=1}^3\lambda_i\,\omega_i\otimes\omega_i$ with the $\omega_i$ orthonormal in $\Lambda^2\mathbb R^n$, every $\lambda_i\ne0$, $W$ Ricci-flat and satisfying first Bianchi. $V$ is the span of the supports.
-- A $2$-form is read as a skew matrix; $\operatorname{supp}\omega$ is its image and $\operatorname{rank}\omega=\dim\operatorname{supp}\omega$. **Decomposable** $\iff\omega\wedge\omega=0\iff\operatorname{rank}\le2$.
-- $A_i=\omega_i\omega_i^{\mathsf T}=-\omega_i^2\succeq0$, with $\operatorname{tr}A_i=2\lVert\omega_i\rVert^2=2$, as in [L180](../findings/diagonal-half.md)(1).
+- A $2$-form is read as a skew matrix; $\mathop{\mathrm{supp}}\omega$ is its image and $\mathop{\mathrm{rank}}\omega=\dim\mathop{\mathrm{supp}}\omega$. **Decomposable** $\iff\omega\wedge\omega=0\iff\mathop{\mathrm{rank}}\le2$.
+- $A_i=\omega_i\omega_i^{\mathsf T}=-\omega_i^2\succeq0$, with $\mathop{\mathrm{tr}}A_i=2\lVert\omega_i\rVert^2=2$, as in [L180](../findings/diagonal-half.md)(1).
 - On an oriented $2m$-dimensional space, $\omega^{\wedge m}=m!\,\mathrm{Pf}(\omega)\,\mathrm{vol}$ and $\det\omega=\mathrm{Pf}(\omega)^2$. Screened exactly at $m=4$ over $\mathbb Q$ on four integer skew matrices: the top coefficient equalled $24\,\mathrm{Pf}$ and the Bareiss determinant equalled $\mathrm{Pf}^2$ in every case.
 - The configuration: $\omega_1,\omega_2$ non-decomposable with opposite-signed weights, $\omega_3$ decomposable with unit plane $P_3$, and $\dim V=8$.
 
@@ -25,7 +25,7 @@
 
 Both are theorems in this branch, so nothing breaks; both are load-bearing and neither is written down.
 
-- **The sign pattern is $(+,-,-)$ with $\omega_1$ the minority form.** Claim 1 cites [L180](../findings/diagonal-half.md)(3) as putting $V=\operatorname{supp}\omega_1$, and Claim 3 writes $\lambda_1A_1=\lvert\lambda_2\rvert A_2+\lvert\lambda_3\rvert\Pi_3$; both need $\omega_1$ to carry the sign that stands alone. *That it does is one line: if $\omega_3$ carried the minority sign then [L180](../findings/diagonal-half.md)(3) would make $V=P_3$ a plane, against $\dim V\ge4$. So the minority form is one of the two non-decomposable ones, and the labelling is a relabelling.*
+- **The sign pattern is $(+,-,-)$ with $\omega_1$ the minority form.** Claim 1 cites [L180](../findings/diagonal-half.md)(3) as putting $V=\mathop{\mathrm{supp}}\omega_1$, and Claim 3 writes $\lambda_1A_1=\lvert\lambda_2\rvert A_2+\lvert\lambda_3\rvert\Pi_3$; both need $\omega_1$ to carry the sign that stands alone. *That it does is one line: if $\omega_3$ carried the minority sign then [L180](../findings/diagonal-half.md)(3) would make $V=P_3$ a plane, against $\dim V\ge4$. So the minority form is one of the two non-decomposable ones, and the labelling is a relabelling.*
 - **The opposite-signed hypothesis is itself a theorem.** *Were $\lambda_1,\lambda_2$ of one sign, Ricci would read $\lvert\lambda_3\rvert\Pi_3=\lambda_1A_1+\lambda_2A_2$ with a rank-two left side and a right side of rank at least four, $\omega_1$ being non-decomposable.* [r803](REVIEW_r803.md) records the same count.
 - **$c>0$, so $\sqrt c$ is real.** $c=-\lambda_2/\lambda_1=\lvert\lambda_2\rvert/\lambda_1>0$ under that sign pattern. *[L187](../findings/diagonal-half.md) needed only $c\ne0$ and [r803](REVIEW_r803.md) said so; L188's $\sqrt c$ genuinely needs positivity, and the block writes $\sqrt c$ without establishing it.* **The attack item is answered: $c>0$ is established, not assumed, and the block should say where.**
 - **$c<1$, unremarked and free.** The trace of Ricci is $\lambda_1=\lvert\lambda_2\rvert+\lvert\lambda_3\rvert$ with $\lambda_3\ne0$, so $c\in(0,1)$ and $\langle\alpha,\beta\rangle=1-c>0$: the two factors of Claim 2 are never orthogonal.
@@ -36,9 +36,9 @@ Both are theorems in this branch, so nothing breaks; both are load-bearing and n
 
 **Wedging with itself.** Both sides are $4$-forms and an equality of elements may be wedged with itself freely, so $\omega_1^{\wedge4}=c^2\,\omega_2^{\wedge4}$. On the oriented eight-dimensional $V$ this is $24\,\mathrm{Pf}(\omega_1)\,\mathrm{vol}=24\,c^2\,\mathrm{Pf}(\omega_2)\,\mathrm{vol}$, and the $4!$ cancels: **$\mathrm{Pf}(\omega_1)=c^2\,\mathrm{Pf}(\omega_2)$, with the constant exactly as the block states.** *The attack item asked whether $\omega^{\wedge4}\propto\mathrm{Pf}\cdot\mathrm{vol}$ carries the constant claimed; it does, because the same universal $m!$ sits on both sides.*
 
-**The [L180](../findings/diagonal-half.md)(3) import.** That lemma says the support of the minority-sign form **is** $V$; here that form is $\omega_1$ by §1, so $\operatorname{rank}\omega_1=\dim V=8$ and $\mathrm{Pf}(\omega_1)\ne0$. Then $\mathrm{Pf}(\omega_2)=c^{-2}\mathrm{Pf}(\omega_1)\ne0$ and $\operatorname{rank}\omega_2=8$. **The import is used within its hypotheses and is not circular.**
+**The [L180](../findings/diagonal-half.md)(3) import.** That lemma says the support of the minority-sign form **is** $V$; here that form is $\omega_1$ by §1, so $\mathop{\mathrm{rank}}\omega_1=\dim V=8$ and $\mathrm{Pf}(\omega_1)\ne0$. Then $\mathrm{Pf}(\omega_2)=c^{-2}\mathrm{Pf}(\omega_1)\ne0$ and $\mathop{\mathrm{rank}}\omega_2=8$. **The import is used within its hypotheses and is not circular.**
 
-**Everything restricts to $V$.** [L180](../findings/diagonal-half.md)(3)'s proof gives $\operatorname{supp}\omega_2+\operatorname{supp}\omega_3=\operatorname{supp}\omega_1=V$, so all three forms lie in $\Lambda^2V$ and both the Ricci identity and the Bianchi identity restrict to $V$ with nothing lost. *This matters for §4, where the determinant is taken on $V$ and would be zero on any larger ambient space.*
+**Everything restricts to $V$.** [L180](../findings/diagonal-half.md)(3)'s proof gives $\mathop{\mathrm{supp}}\omega_2+\mathop{\mathrm{supp}}\omega_3=\mathop{\mathrm{supp}}\omega_1=V$, so all three forms lie in $\Lambda^2V$ and both the Ricci identity and the Bianchi identity restrict to $V$ with nothing lost. *This matters for §4, where the determinant is taken on $V$ and would be zero on any larger ambient space.*
 
 **Verdict: CONFIRMED.**
 

@@ -32,7 +32,7 @@ Three qualifications, all of them limiting:
 
 ## 2. What Jacobi *does* leave on the squares: the support, and nothing else
 
-[Conti–Rossi 2019](../references/conti-rossi-2019-nice-nilpotent/notes.md) give the mechanism explicitly. Their Proposition 1.3 writes Jacobi as $\sum_{I,J}c_Ic_J\,a(E_{IJ})=0$ with $a$ the alternator, then observes that the kernel of $a$ forces terms "*to appear in pairs or triples*". A monomial $c_Ic_J$ with no partner has nothing to cancel against, so its coefficient must vanish, which is a statement about $\operatorname{supp}T$, and the squares see it. They record it as a diagram condition:
+[Conti–Rossi 2019](../references/conti-rossi-2019-nice-nilpotent/notes.md) give the mechanism explicitly. Their Proposition 1.3 writes Jacobi as $\sum_{I,J}c_Ic_J\,a(E_{IJ})=0$ with $a$ the alternator, then observes that the kernel of $a$ forces terms "*to appear in pairs or triples*". A monomial $c_Ic_J$ with no partner has nothing to cancel against, so its coefficient must vanish, which is a statement about $\mathop{\mathrm{supp}}T$, and the squares see it. They record it as a diagram condition:
 
 > **(I4)** There do not exist four different nodes $i,j,k,v$ such that exactly one of $i\xrightarrow{j,k}v$, $j\xrightarrow{k,i}v$, $k\xrightarrow{i,j}v$ is a double arrow.
 
@@ -51,13 +51,13 @@ equivalent to Payne's "no quadruples of multiplicity one", and to "$U$ carries n
 - **No "Jacobi identity in squared form" is named anywhere.** The phrase returns nothing; the nearest object is Payne's Theorem 13, which is the statement that there is no such form.
 - **The hypergraph encodings do not carry Jacobi's value content.** [Payne–Schroeder, *Uniform Lie Algebras and Uniformly Colored Graphs*](https://arxiv.org/abs/1603.00803) is the closest (structure constants of equal modulus, encoded by a coloured graph) but the algebras are two-step nilpotent, where Jacobi is nearly vacuous, so the setting is chosen to avoid the difficulty rather than to face it.
 - **No eigenframe-bracket technique beyond what the record already cites.** [Böhm–Wilking](https://arxiv.org/abs/math/0606187), [Brendle–Schoen](https://arxiv.org/abs/0706.1218) and [Wilking's Lie-algebraic cones](https://arxiv.org/abs/1011.3561) work with $\mathrm{Ad}$-invariant subsets of $\mathfrak{so}(n,\mathbb C)$ and with pinching families of cones; none manipulates the brackets of a curvature operator's eigenvectors. [Petersen–Wink Proposition 1.7](../references/petersen-wink-2019-bochner-technique/notes.md), already on the record, remains the only published identity that weights $T$ by anything other than a monomial.
-- **Nothing computes $\operatorname{tr}(\mathrm{ad}(v)W\,\mathrm{ad}(v)W)$ or $\sum\lVert[We_i,We_j]\rVert^2$.** Both appear here only through the record's own $S_{22}$.
+- **Nothing computes $\mathop{\mathrm{tr}}(\mathrm{ad}(v)W\,\mathrm{ad}(v)W)$ or $\sum\lVert[We_i,We_j]\rVert^2$.** Both appear here only through the record's own $S_{22}$.
 
 ## 5. An independent confirmation of r331's obstruction, by a route sharing nothing with it
 
-r331 located the obstruction to a fourth relation as the pair $(\mathrm{Ric}(W^2),\,(W^2)_{\Lambda^4})$, by expanding $\operatorname{tr}(S\,D_A^2)$ termwise. **The same pair falls out of Schur's lemma applied to the record's own operator**, with no expansion, and the route is disjoint enough to count as validation.
+r331 located the obstruction to a fourth relation as the pair $(\mathrm{Ric}(W^2),\,(W^2)_{\Lambda^4})$, by expanding $\mathop{\mathrm{tr}}(S\,D_A^2)$ termwise. **The same pair falls out of Schur's lemma applied to the record's own operator**, with no expansion, and the route is disjoint enough to count as validation.
 
-Let $\mathcal A(X)=\sum_{p,q}X_{pq}\,\mathrm{ad}(v_p)\mathrm{ad}(v_q)$ on $\mathrm{Sym}^2(\Lambda^2\mathbb R^n)$, the operator [isotropy-cap.md](../findings/isotropy-cap.md) already carries, scalar on each of $\mathbb R\oplus\mathrm{Sym}^2_0\oplus\mathrm{Weyl}_n\oplus\Lambda^4$ with eigenvalues $-2(n-2),\,-(n-4),\,+2,\,-4$. Because $\sum_{a,b}f(\lambda_a)g(\lambda_b)\lVert[v_a,v_b]\rVert^2=-\operatorname{tr}\big(\mathcal A(f(W))\,g(W)\big)$ for any spectral functions $f,g$, **every two-weight contraction of $T$ is determined by the four isotypic components**:
+Let $\mathcal A(X)=\sum_{p,q}X_{pq}\,\mathrm{ad}(v_p)\mathrm{ad}(v_q)$ on $\mathrm{Sym}^2(\Lambda^2\mathbb R^n)$, the operator [isotropy-cap.md](../findings/isotropy-cap.md) already carries, scalar on each of $\mathbb R\oplus\mathrm{Sym}^2_0\oplus\mathrm{Weyl}_n\oplus\Lambda^4$ with eigenvalues $-2(n-2),\,-(n-4),\,+2,\,-4$. Because $\sum_{a,b}f(\lambda_a)g(\lambda_b)\lVert[v_a,v_b]\rVert^2=-\mathop{\mathrm{tr}}\big(\mathcal A(f(W))\,g(W)\big)$ for any spectral functions $f,g$, **every two-weight contraction of $T$ is determined by the four isotypic components**:
 
 $$\sum_{a,b,c}f(\lambda_a)\,g(\lambda_b)\,T_{abc}\;=\;-\sum_{i}a_i\,\big\langle\pi_i f(W),\,\pi_i g(W)\big\rangle .$$
 
@@ -65,11 +65,11 @@ $$\sum_{a,b,c}f(\lambda_a)\,g(\lambda_b)\,T_{abc}\;=\;-\sum_{i}a_i\,\big\langle\
 
 **This re-derives the pinned/free boundary as a one-line consequence.** If $f$ or $g$ is affine, that argument is $W$ itself, which is pure Weyl, so only the Weyl scalar survives and the contraction is spectral, which is post F42's "two exponents $\le1$". The first pattern needing more is $f=g=\lambda^2$, and there $W^2$ has components in all four summands: exactly r331's $(\mathrm{Ric}(W^2),(W^2)_{\Lambda^4})$, reached as the two summands on which $\mathcal A$ is not $+2$ and $W^2$ is not zero.
 
-**The closed form it gives.** Normalising the basis to $\langle A,B\rangle=\operatorname{tr}(A^{\mathsf T}B)$, where the four scalars are $+1,-2,-(n-4)/2,-(n-2)$,
+**The closed form it gives.** Normalising the basis to $\langle A,B\rangle=\mathop{\mathrm{tr}}(A^{\mathsf T}B)$, where the four scalars are $+1,-2,-(n-4)/2,-(n-2)$,
 
-$$S_{22}\;=\;-\sum_a\lambda_a^4\;+\;3\big\lVert\pi_{\Lambda^4}(W^2)\big\rVert^2\;+\;\tfrac{n-2}{2}\big\lVert\pi_{\mathrm{Sym}^2_0}(W^2)\big\rVert^2\;+\;(n-1)\frac{(\operatorname{tr}W^2)^2}{N},$$
+$$S_{22}\;=\;-\sum_a\lambda_a^4\;+\;3\big\lVert\pi_{\Lambda^4}(W^2)\big\rVert^2\;+\;\tfrac{n-2}{2}\big\lVert\pi_{\mathrm{Sym}^2_0}(W^2)\big\rVert^2\;+\;(n-1)\frac{(\mathop{\mathrm{tr}}W^2)^2}{N},$$
 
-so the whole non-spectral content of $\{2,2,0\}$ is **two nonnegative numbers**, both bounded by $\lVert W^2\rVert^2$ minus the scalar part. Chaining that gives a spectrum-only ceiling $S_{22}\le-\sum\lambda^4+\max\!\big(3,\tfrac{n-2}{2}\big)\big(\sum\lambda^4-\tfrac{(\operatorname{tr}W^2)^2}{N}\big)+(n-1)\tfrac{(\operatorname{tr}W^2)^2}{N}$.
+so the whole non-spectral content of $\{2,2,0\}$ is **two nonnegative numbers**, both bounded by $\lVert W^2\rVert^2$ minus the scalar part. Chaining that gives a spectrum-only ceiling $S_{22}\le-\sum\lambda^4+\max\!\big(3,\tfrac{n-2}{2}\big)\big(\sum\lambda^4-\tfrac{(\mathop{\mathrm{tr}}W^2)^2}{N}\big)+(n-1)\tfrac{(\mathop{\mathrm{tr}}W^2)^2}{N}$.
 
 **And it independently confirms r331's two-eigenvalue collapse.** At a sphere product $W^2$ is an affine function of $W$, so both obstruction norms vanish identically: measured $\lVert\pi_{\Lambda^4}(W^2)\rVert^2$ and $\lVert\pi_{\mathrm{Sym}^2_0}(W^2)\rVert^2$ are $10^{-31}$ at $S^4\times S^4$ and at $S^6\times S^6$, where the spectrum-only ceiling is loose by $4.2\%$ and $1.7\%$ respectively; at the unbalanced $S^4\times S^8$ the $\mathrm{Sym}^2_0$ part is $2.0\times10^{-2}$ and the ceiling is loose by $29\%$.
 

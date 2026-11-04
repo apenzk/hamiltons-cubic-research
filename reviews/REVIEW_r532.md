@@ -37,21 +37,21 @@ with $\Phi$ the polarisation of $\#$. **Anchor check on $\Phi$:** $\mathrm{Id}^\
 
 Take $\{i,j,k,l\}=\{1,2,3,4\}$ and raw coordinates $x_1=X_{(12),(34)}$, $x_2=X_{(13),(24)}$, $x_3=X_{(14),(23)}$.
 
-- The anticommutator contributes $\tfrac12\operatorname{diag}(A,B,C)$.
+- The anticommutator contributes $\tfrac12\mathop{\mathrm{diag}}(A,B,C)$.
 - The $\Phi$ term at $\alpha=(12),\beta=(34)$: the shared index $\gamma$ must meet $\{1,2\}$ in one index and $\{3,4\}$ in one, so $\gamma\in\{(13),(14),(23),(24)\}$, and each choice forces $\delta$ and $\zeta$. Signs: $+M_{13}x_3$, $-M_{14}x_2$, $-M_{23}x_2$, $+M_{24}x_3$, giving $\tfrac12[Bx_3-Cx_2]$.
 - Rows 2 and 3 follow by transporting the same identity through the transpositions $(2\,3)$ and $(2\,4)$, which are orthogonal and so commute with $\circ$; they carry the sign $\varphi_{23}\mapsto-\varphi_{23}$ etc.
 
 Result: $L_M=\tfrac12\tilde G$ with
 $$\tilde G=\begin{pmatrix}A&-C&B\\-C&B&-A\\B&-A&C\end{pmatrix},$$
-already symmetric (as $L_M$ self-adjoint requires), and conjugating by $\operatorname{diag}(1,-1,1)$ (the flip $x_2\mapsto-x_2$), turns $\tilde G$ into the printed $G$ exactly. **So the lemma's "in signed coordinates" is load-bearing and correct, and the sign it means is $x_2\mapsto-x_2$.**
+already symmetric (as $L_M$ self-adjoint requires), and conjugating by $\mathop{\mathrm{diag}}(1,-1,1)$ (the flip $x_2\mapsto-x_2$), turns $\tilde G$ into the printed $G$ exactly. **So the lemma's "in signed coordinates" is load-bearing and correct, and the sign it means is $x_2\mapsto-x_2$.**
 
 **The same flip is the one Bianchi wants, which is why "$\mathbf 1^\perp$ automatically" is true.** With $x_1=W_{ijkl}$, $x_2=W_{ikjl}$, $x_3=W_{iljk}$, the first Bianchi identity $W_{ijkl}+W_{iklj}+W_{iljk}=0$ reads $x_1-x_2+x_3=0$, i.e. $y_1+y_2+y_3=0$ in signed coordinates. The Bianchi subspace **is** $\mathbf 1^\perp$, on the nose.
 
 ### F3, The spectrum is right, all three eigenvalues, and the two radical forms agree (P3)
 
-$\operatorname{tr}G=A+B+C$, which is also the $\mathbf 1$ eigenvalue, so the other two sum to $0$: write them $\pm\rho$. Each letter occurs three times in the Latin square, so $\operatorname{tr}(G^2)=3(A^2+B^2+C^2)$, and
+$\mathop{\mathrm{tr}}G=A+B+C$, which is also the $\mathbf 1$ eigenvalue, so the other two sum to $0$: write them $\pm\rho$. Each letter occurs three times in the Latin square, so $\mathop{\mathrm{tr}}(G^2)=3(A^2+B^2+C^2)$, and
 $$2\rho^2=3(A^2+B^2+C^2)-(A+B+C)^2=2\big(A^2+B^2+C^2-AB-BC-CA\big).$$
-Hence $\operatorname{spec}(G)=\{A+B+C,\ \pm\sqrt{A^2+B^2+C^2-AB-BC-CA}\}$ and $L_M=\tfrac12G$ gives the displayed $\pm\tfrac12\sqrt{\cdot}$ **as the whole spectrum of the $2$-dimensional $4$-set block of $\mathcal W_n$**, the third eigenvalue $\tfrac12(A+B+C)$ sits on $\mathbf 1$, which Bianchi removes, so the lemma is complete rather than missing a root. The second displayed form is the identity $\tfrac12[(A-B)^2+(B-C)^2+(C-A)^2]=A^2+B^2+C^2-AB-BC-CA$ on expansion. **Both correct.**
+Hence $\mathop{\mathrm{spec}}(G)=\{A+B+C,\ \pm\sqrt{A^2+B^2+C^2-AB-BC-CA}\}$ and $L_M=\tfrac12G$ gives the displayed $\pm\tfrac12\sqrt{\cdot}$ **as the whole spectrum of the $2$-dimensional $4$-set block of $\mathcal W_n$**, the third eigenvalue $\tfrac12(A+B+C)$ sits on $\mathbf 1$, which Bianchi removes, so the lemma is complete rather than missing a root. The second displayed form is the identity $\tfrac12[(A-B)^2+(B-C)^2+(C-A)^2]=A^2+B^2+C^2-AB-BC-CA$ on expansion. **Both correct.**
 
 ### F4, The constant $\theta^2$ is right; there is no lost factor of $2$ (P4)
 
@@ -67,7 +67,7 @@ $S^p\times S^q$ Einstein with constant $\Lambda$: sectional entries $w_1=\Lambda
 - **The value.** With $B=C$ the radicand collapses to $(A-B)^2$, and $A-B=w_1+w_2-2w_0=\Lambda\big(\tfrac1{p-1}+\tfrac1{q-1}\big)=\Lambda\tfrac{n-2}{(p-1)(q-1)}$. So the $L_M$ eigenvalue is $\tfrac\Lambda2\tfrac{n-2}{(p-1)(q-1)}$ and the $L_e$ eigenvalue is that over $\theta$.
 - **$\Lambda=\theta$, derived rather than assumed.** At $\Lambda=1$, $Q(W)=W$: checked entry by entry at $(3,3)$ and $(2,4)$ from $(W^\#)_{ab,ab}=\sum_c W_{ac}W_{bc}$. Hence $\theta=P/\lVert W\rVert^3=1/\lVert W\rVert_{\Lambda=1}=\Lambda_{\text{unit}}$, and
 $$\mu_{L_e}=\frac{n-2}{2(p-1)(q-1)},$$
-**which is L26 verbatim.** Independent anchor: $\lVert W\rVert^2_{\Lambda=1}=\tfrac{pq(n-2)}{2(n-1)(p-1)(q-1)}$ gives $\tfrac9{10}$ at $(3,3)$, so $\theta_0(6)=\sqrt{10}/3$ (the record's anchor) and $\operatorname{tr}W^\#=(0-0.9)/0.9=-1$, the record's other anchor.
+**which is L26 verbatim.** Independent anchor: $\lVert W\rVert^2_{\Lambda=1}=\tfrac{pq(n-2)}{2(n-1)(p-1)(q-1)}$ gives $\tfrac9{10}$ at $(3,3)$, so $\theta_0(6)=\sqrt{10}/3$ (the record's anchor) and $\mathop{\mathrm{tr}}W^\#=(0-0.9)/0.9=-1$, the record's other anchor.
 - **The eigenvector matches too.** For $B=C$ the $+\rho$ eigenvector is $(2,-1,-1)$ in signed coordinates, i.e. $(2,1,-1)$ raw, proportional to L26's stated coefficients $\tfrac23,\tfrac13,-\tfrac13$, whose norm $2\cdot\tfrac69=\tfrac43$ is L26's stated $\lVert X\rVert^2=\tfrac43$. **Three independent agreements (which subsets, what value, which vector and its norm).**
 - **L26's $(3,4)$ exception does not touch this.** That exception is about which eigenvalue is *second-largest* in the full spectrum at $(3,4)$; L121 only claims the $4$-set value equals $\mu$, which is unaffected.
 
@@ -77,7 +77,7 @@ $\mu=\tfrac{n-2}{2(p-1)(q-1)}=\tfrac2{n-2}$ at balanced $p=q=n/2$, hence $\tfrac
 
 ### F7, Screen (labelled as a screen, not evidence for a positive claim)
 
-Seconds of compute on objects built for the purpose: $n=5$, $\varphi_{ab}$ orthonormal, $c$ read off the brackets, $\#$ as above, and a **random diagonal $M$ that is neither critical nor Ricci-flat**. Results: $\mathrm{Id}^\#=(n-2)\mathrm{Id}$ true; off-block leakage of $L_M$ on the three $4$-set generators exactly $0$; $2L_M$ equals $\tilde G$; $\operatorname{diag}(1,-1,1)\,\tilde G\,\operatorname{diag}(1,-1,1)=G$; the eigenvalues match $\{A+B+C,\pm\rho\}/2$. Script at the session scratchpad. **This screens the hand derivation of F2/F3 and the diagonality-only scope of F8; the derivations above are what carry the claim.**
+Seconds of compute on objects built for the purpose: $n=5$, $\varphi_{ab}$ orthonormal, $c$ read off the brackets, $\#$ as above, and a **random diagonal $M$ that is neither critical nor Ricci-flat**. Results: $\mathrm{Id}^\#=(n-2)\mathrm{Id}$ true; off-block leakage of $L_M$ on the three $4$-set generators exactly $0$; $2L_M$ equals $\tilde G$; $\mathop{\mathrm{diag}}(1,-1,1)\,\tilde G\,\mathop{\mathrm{diag}}(1,-1,1)=G$; the eigenvalues match $\{A+B+C,\pm\rho\}/2$. Script at the session scratchpad. **This screens the hand derivation of F2/F3 and the diagonality-only scope of F8; the derivations above are what carry the claim.**
 
 ### F8, Hypothesis: the block and its spectrum need only diagonality; the inequality needs maximality. Both are stated correctly, but the block's opening line over-specifies (P5)
 
@@ -91,7 +91,7 @@ The block opens *"Fix a diagonal critical point $M$ with $\theta>0$ and a $4$-su
 
 My derivation (F2) never used a row sum or $Q(M)=\theta M$, and the screen confirms it on a non-critical diagonal $M$. **The conclusion sentence quantifies correctly** (it reads *"at every maximiser and every $4$-subset"*, not "at every critical point") so the trap the brief warns about (a hypothesis-free part run together with a part needing maximality) is **avoided here**. The record's strongest internal test of exactly this point is [second-order.md line 769](../findings/second-order.md): $S^2\times S^4$ is critical, is not a maximiser, and its four-set blocks sit at $\mu_{2,4}=\tfrac23>\tfrac12$, a value L121 itself prints. L121 is therefore consistent with its own example.
 
-**The over-specification is already recorded in the file, 47 lines below the block**, at line 676: *"L121 holds under **diagonality alone** (verified from the structure constants, with no row sum of $M$ entering) although this file states it for a diagonal *critical* point"*. So this is a **presentation defect, not a mathematical one**: a reader of the block alone reads a narrower lemma than the one the file elsewhere relies on (and than [DERIVE-mx1.md](DERIVE-mx1.md) needs, applying it to $\operatorname{diag}(M)$ off the eigenframe). Repair: add "criticality unused for the block and its spectrum" to the block, in the style [Lemma L120](../findings/second-order.md) already uses one heading above.
+**The over-specification is already recorded in the file, 47 lines below the block**, at line 676: *"L121 holds under **diagonality alone** (verified from the structure constants, with no row sum of $M$ entering) although this file states it for a diagonal *critical* point"*. So this is a **presentation defect, not a mathematical one**: a reader of the block alone reads a narrower lemma than the one the file elsewhere relies on (and than [DERIVE-mx1.md](DERIVE-mx1.md) needs, applying it to $\mathop{\mathrm{diag}}(M)$ off the eigenframe). Repair: add "criticality unused for the block and its spectrum" to the block, in the style [Lemma L120](../findings/second-order.md) already uses one heading above.
 
 ### F9, One wording elision inside the block
 
@@ -136,6 +136,6 @@ Checked every later passage that restates the same quantities:
 
 **VERDICT: CONFIRMED**
 
-Every mathematical claim in the block is correct as printed: the matrix $G$ (which **is** symmetric, the brief's premise to the contrary is a misreading of the printed rows), the identification of the Bianchi subspace with $\mathbf 1^\perp$, the full spectrum including the third eigenvalue that Bianchi removes, both forms of the radical, and the constant $\theta^2$ in the necessary condition (no factor of $2$ is lost; the $\tfrac12$ in $L_M=\tfrac12G$ and the $\tfrac12$ in L24's $\theta/2$ cancel). The $S^p\times S^q$ cross-check with [Lemma L26](../findings/nondegeneracy.md) is exact on three independent counts, which subsets are nonzero, the value $\tfrac{n-2}{2(p-1)(q-1)}$, and the eigenvector $(2,1,-1)$ with $\lVert X\rVert^2=\tfrac43$, and passing it required deriving $\Lambda=\theta$ at every $S^p\times S^q$, which in turn reproduced the record's anchors $\theta_0(6)=\sqrt{10}/3$ and $\operatorname{tr}W^\#=-1$.
+Every mathematical claim in the block is correct as printed: the matrix $G$ (which **is** symmetric, the brief's premise to the contrary is a misreading of the printed rows), the identification of the Bianchi subspace with $\mathbf 1^\perp$, the full spectrum including the third eigenvalue that Bianchi removes, both forms of the radical, and the constant $\theta^2$ in the necessary condition (no factor of $2$ is lost; the $\tfrac12$ in $L_M=\tfrac12G$ and the $\tfrac12$ in L24's $\theta/2$ cancel). The $S^p\times S^q$ cross-check with [Lemma L26](../findings/nondegeneracy.md) is exact on three independent counts, which subsets are nonzero, the value $\tfrac{n-2}{2(p-1)(q-1)}$, and the eigenvector $(2,1,-1)$ with $\lVert X\rVert^2=\tfrac43$, and passing it required deriving $\Lambda=\theta$ at every $S^p\times S^q$, which in turn reproduced the record's anchors $\theta_0(6)=\sqrt{10}/3$ and $\mathop{\mathrm{tr}}W^\#=-1$.
 
 **Two presentation repairs owed, neither affecting the verdict**: the block's hypothesis line over-specifies (F8, criticality is unused for the block and its spectrum, as the same file already records at line 676), and the "so … automatically" of F9 joins two facts that need two joints. **One defect found outside the block**: [plan.md line 207](../plan.md) attributes "$\mathcal D_n$ is a linear subspace" to L121, which says nothing about $\mathcal D_n$ (F11).

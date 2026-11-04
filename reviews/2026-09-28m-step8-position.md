@@ -22,5 +22,5 @@ Thirty-six sweeps from [2026-09-02](2026-09-02-LIT-step8-sweep.md) to [2026-09-2
 ## Questions for this sweep
 
 1. **Is there a comparison that reads $\theta\ge\theta_0$ and passes the products exactly, without passing through diagonality?** For instance a two-sided inequality whose equality set is the product family, or a monotone quantity along a path from any critical point toward the diagonal locus.
-2. **Can the $\#$ half and the $W^2$ half be separated sharply?** $P=\operatorname{tr}W^3+\langle W^\#,W\rangle$, and I117 bounds the second; the first is the $\Lambda^2$ cubic. If both halves are maximised at the balanced product (H for the second, a known bound for the first), P follows with no diagonality at all.
+2. **Can the $\#$ half and the $W^2$ half be separated sharply?** $P=\mathop{\mathrm{tr}}W^3+\langle W^\#,W\rangle$, and I117 bounds the second; the first is the $\Lambda^2$ cubic. If both halves are maximised at the balanced product (H for the second, a known bound for the first), P follows with no diagonality at all.
 3. **What does the programme own that the literature does not**, such that a route built only from it could meet both requirements?

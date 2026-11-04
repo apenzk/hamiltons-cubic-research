@@ -80,7 +80,7 @@ Searched by number, by the statement's signature ($3570$, the sixteen even block
 
 **What holds.** The conclusion the argument exists to supply goes through, and it genuinely repairs the defect it replaces: $L$ is built from $W_0$ and the group scheme **before any field is chosen**, so the Cayley points (elements of $SO(5,\mathbb F_p)$ that lift to nothing), are never asked to lift. *The objection that killed the original one-liner does not transfer to this one.*
 
-**The gap.** *"Fix $\mathbb Z[\tfrac12]$-bases and let $L$ be its matrix"* has no referent: $\mathbb Z[\tfrac12][SO_5]$ is not finitely generated as a module, carries no grading (the ideal $g^{\mathsf T}g-I$ is inhomogeneous), and is not shown free, so neither *"its matrix"* nor $\operatorname{rank}(L_k)$ is defined. **What must be proved: a finite free $M$ with $\operatorname{im}\Lambda\subseteq M\subseteq\mathbb Z[\tfrac12][SO_5]$.** The adjudicator named it and, correctly, did not supply it.
+**The gap.** *"Fix $\mathbb Z[\tfrac12]$-bases and let $L$ be its matrix"* has no referent: $\mathbb Z[\tfrac12][SO_5]$ is not finitely generated as a module, carries no grading (the ideal $g^{\mathsf T}g-I$ is inhomogeneous), and is not shown free, so neither *"its matrix"* nor $\mathop{\mathrm{rank}}(L_k)$ is defined. **What must be proved: a finite free $M$ with $\mathop{\mathrm{im}}\Lambda\subseteq M\subseteq\mathbb Z[\tfrac12][SO_5]$.** The adjudicator named it and, correctly, did not supply it.
 
 **Two things it corrects about the argument's own account of itself.** Reducedness is **load-bearing at $k=\mathbb Q$ and inert at $k=\mathbb F_p$**, the reverse of how the sentence attributes it; and *"characteristic $\ne2$"* also admits $p=3$, where the first link fails.
 
@@ -97,7 +97,7 @@ Searched by number, by the statement's signature ($3570$, the sixteen even block
 | field | half consumed | what supplies it |
 |---|---|---|
 | $k=\mathbb F_p$ | $\ker L_k\subseteq\{f\text{ vanishing pointwise}\}$ | unconditional, **reducedness is unused here** |
-| $k=\mathbb Q$ | the converse, giving $\operatorname{rank}(L_{\mathbb Q})\le\dim U$ | **Zariski density of $SO(5,\mathbb R)$ in $SO_{5,\mathbb C}$**, which reducedness does not give |
+| $k=\mathbb Q$ | the converse, giving $\mathop{\mathrm{rank}}(L_{\mathbb Q})\le\dim U$ | **Zariski density of $SO(5,\mathbb R)$ in $SO_{5,\mathbb C}$**, which reducedness does not give |
 
 **Both adjudicators agree on what the argument's real contribution is**, and it is the thing the block most needs: $L$ depends on the group scheme and the integral $W_0$ and **never on a sampled element**, so it is one matrix reducing both ways, the integral object the original one-liner lacked.
 
@@ -115,7 +115,7 @@ Searched by number, by the statement's signature ($3570$, the sixteen even block
 
 **A second lift route on the record.** [r681](../reviews/REVIEW_r681.md) supplies an integral Cayley lift where [r682](../reviews/REVIEW_r682.md) uses smoothness over $\mathbb Z[\tfrac12]$. **Two independent repairs exist and neither reached the lemma.**
 
-**Held out of the block, deliberately.** v78 proved two of the sixteen evaluation maps nonzero by hand, the trivial block by $\operatorname{tr}(W_0^3)=48\ne0$, and $(1,0)$ through r173's pseudovector covariant. **Two of the eight block deaths would then stand independently of every run.** That is new mathematics arriving inside a check, so it is recorded here as a lead for the research loop and **not written into the record as established**.
+**Held out of the block, deliberately.** v78 proved two of the sixteen evaluation maps nonzero by hand, the trivial block by $\mathop{\mathrm{tr}}(W_0^3)=48\ne0$, and $(1,0)$ through r173's pseudovector covariant. **Two of the eight block deaths would then stand independently of every run.** That is new mathematics arriving inside a check, so it is recorded here as a lead for the research loop and **not written into the record as established**.
 
 ## Phase 5, what changed
 

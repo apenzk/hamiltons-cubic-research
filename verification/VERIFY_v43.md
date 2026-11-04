@@ -8,7 +8,7 @@
 |---|---|---|
 | 1 | $\max_\Gamma\lvert\zeta\rvert=\lvert\lambda_-\rvert+\alpha g_n=(1+\alpha)g_n$ on the circle of radius $\alpha g_n$ about $\lambda_-$ at $W^*$ | **PROVEN**, as an equality, for every $\alpha>0$ including $\alpha\ge1$ |
 | 2 | the same identity "for any complex centre" | **BROKEN as written**; true for any centre **of modulus $g_n$**, false for any other |
-| 3 | $\lvert\lambda_-\rvert=g_n$ "by definition of the gap" | **HYPOTHESIS-DEBT**: it is a theorem at $W^*$, resting on $\operatorname{mult}(\lambda_-)>\operatorname{mult}(\lambda_+)$, not a definition |
+| 3 | $\lvert\lambda_-\rvert=g_n$ "by definition of the gap" | **HYPOTHESIS-DEBT**: it is a theorem at $W^*$, resting on $\mathop{\mathrm{mult}}(\lambda_-)>\mathop{\mathrm{mult}}(\lambda_+)$, not a definition |
 | 4 | the identity is unaffected by whether $\Gamma$ encircles $0$ | **PROVEN** (the entry does not say it; it is what [L156](../findings/second-order.md)'s citation needs, and it holds) |
 | 5 | "the numerator is set by the eigenvalue the contour **encloses**" | **withdrawn as a defect**, it is set by the centre, which is the enclosed eigenvalue for this contour only |
 | 6 | $\tfrac m{m-1}$ is $\lVert W^*\rVert_{op}/g_n$ in the second term of [r447](../reviews/REVIEW_r447.md)'s decomposition, and [r457](../reviews/REVIEW_r457.md) never estimates $\max_\Gamma\lvert\zeta\rvert$ | **CONFIRMED at source** ([r457](../reviews/REVIEW_r457.md) lines 70–76) |
@@ -24,8 +24,8 @@
 
 ## 0. Conventions, fixed once
 
-- $W^*=S^m\times S^m$, $n=2m$; $\operatorname{spec}W^*=\{\lambda_-,\lambda_+\}$ with $\lambda_-<0<\lambda_+$, multiplicities $m^2$ and $m(m-1)$ ([second-order.md](../findings/second-order.md):897).
-- $g_n$ is the absolute $\Lambda^2$ spectral gap at $0$, $\operatorname{dist}(\operatorname{spec}W^*,0)=\min_a\lvert\lambda_a\rvert$; at $W^*$ its closed form is $g_n=\sqrt{2(n-2)}/(n\sqrt{n-1})$ ([L145](../findings/second-order.md), [L147](../findings/second-order.md)).
+- $W^*=S^m\times S^m$, $n=2m$; $\mathop{\mathrm{spec}}W^*=\{\lambda_-,\lambda_+\}$ with $\lambda_-<0<\lambda_+$, multiplicities $m^2$ and $m(m-1)$ ([second-order.md](../findings/second-order.md):897).
+- $g_n$ is the absolute $\Lambda^2$ spectral gap at $0$, $\mathop{\mathrm{dist}}(\mathop{\mathrm{spec}}W^*,0)=\min_a\lvert\lambda_a\rvert$; at $W^*$ its closed form is $g_n=\sqrt{2(n-2)}/(n\sqrt{n-1})$ ([L145](../findings/second-order.md), [L147](../findings/second-order.md)).
 - $\Gamma=\{\zeta\in\mathbb C:\lvert\zeta-\lambda_-\rvert=\alpha g_n\}$, the contour of the Riesz representation $W_-=-\tfrac1{2\pi i}\oint_\Gamma\zeta(W-\zeta)^{-1}d\zeta$; $\rho=\gamma g_n/\lVert H\rVert_{op}$ is the disc radius.
 - $D=\lvert\lambda_+-\lambda_-\rvert/g_n=\tfrac{2m-1}{m-1}$ and $d=\min(\alpha,D-\alpha)$, both from [L156](../findings/second-order.md).
 - At $n=12$, $m=6$: $\lambda_+=\tfrac65g_n$, $D=\tfrac{11}5$, $\alpha^*=\tfrac{11}{10}$, $\gamma^*=\tfrac{11}{20}$.
@@ -39,11 +39,11 @@
 | import | its hypotheses | holds at the object? |
 |---|---|---|
 | $g_n$ as the analyticity radius ([L145](../findings/second-order.md)) | $\ker W^*=0$ and the spectrum two-valued | holds at $W^*$; fails at $W_{\mathbb{CP}^2}$, $\dim\ker W=3$ |
-| $\lambda_+=\tfrac m{m-1}g_n$ | $\operatorname{tr}W^*=0$ with multiplicities $m^2$, $m(m-1)$ | holds; recomputed cold in §2 |
+| $\lambda_+=\tfrac m{m-1}g_n$ | $\mathop{\mathrm{tr}}W^*=0$ with multiplicities $m^2$, $m(m-1)$ | holds; recomputed cold in §2 |
 | $C=\tfrac{1+\alpha}{\alpha-\gamma}$ ([r456](../reviews/REVIEW_r456.md)) | $\gamma<\alpha$, $\alpha+\gamma<D$, $\gamma<1$, **and $\alpha\le D/2$** | the last is neither stated by [r456](../reviews/REVIEW_r456.md) nor by this entry, the refuted half |
 | $\lVert\mathrm{Alt}\rVert_{op}\le1$ ([conventions.md](../findings/conventions.md)) | none beyond the definition | holds |
 
-**What the written argument for the surviving identity actually uses.** Exactly two things: that $\Gamma$ is a circle of radius $\alpha g_n$ centred at $\lambda_-$, and that $\lvert\lambda_-\rvert=g_n$. It uses **none** of: $\lambda_-$ real, $\lambda_-$ negative, $\alpha<1$, $\ker W^*=0$ beyond what makes $g_n>0$, $\operatorname{spec}$ two-valued, $m\ge2$, $n\ge12$, $\lVert H\rVert_{op}\le1$, or $\gamma$ at all.
+**What the written argument for the surviving identity actually uses.** Exactly two things: that $\Gamma$ is a circle of radius $\alpha g_n$ centred at $\lambda_-$, and that $\lvert\lambda_-\rvert=g_n$. It uses **none** of: $\lambda_-$ real, $\lambda_-$ negative, $\alpha<1$, $\ker W^*=0$ beyond what makes $g_n>0$, $\mathop{\mathrm{spec}}$ two-valued, $m\ge2$, $n\ge12$, $\lVert H\rVert_{op}\le1$, or $\gamma$ at all.
 
 **Hypotheses the entry uses and does not state.** $\ker W^*=0$ (without it $g_n=0$ and $\Gamma$ degenerates to a point); $\lvert\lambda_-\rvert\le\lambda_+$, which is what makes $g_n=\lvert\lambda_-\rvert$ rather than $g_n=\lambda_+$; a Neumann step bounding $\max_\Gamma\lVert(W-\zeta)^{-1}\rVert$ by $1/((\alpha-\gamma)g_n)$, which is used silently in the "Consequence"; and the smallest admissible dimension, which the entry never names.
 
@@ -64,7 +64,7 @@
 - **$\Gamma$ encircling $0$ changes nothing.** $0$ is interior to $\Gamma$ precisely when $\alpha>1$, and the derivation never asks where $0$ sits. At $\alpha=\alpha^*=\tfrac{11}{10}$, the value [L156](../findings/second-order.md) optimises to, where $0$ **is** enclosed, the identity gives $\max_\Gamma\lvert\zeta\rvert=\tfrac{21}{10}g_n$, attained at $\zeta^\star=-\tfrac{21}{10}g_n$, and $\lvert\lambda_+-\lambda_-\rvert=\tfrac{11}5g_n>\tfrac{11}{10}g_n$ keeps $\lambda_+$ outside. **This is the pre-registered question's third part, and the answer is that the citation at $\alpha>1$ is safe.**
 - **Only the $\le$ direction is ever used downstream.** [L156](../findings/second-order.md) feeds the quantity into an ML estimate as one factor of an upper bound. The equality direction (the maximiser $\zeta^\star$), is what makes the factor unimprovable, and nothing on file depends on it.
 
-**Verified cold: $\lvert\lambda_-\rvert=g_n$ at $W^*$.** With $\operatorname{tr}W^*=0$ and multiplicities $m^2$ (negative) and $m(m-1)$ (positive), $\lvert\lambda_-\rvert m^2=\lambda_+m(m-1)$, so $\lambda_+=\tfrac m{m-1}\lvert\lambda_-\rvert>\lvert\lambda_-\rvert$ for every $m\ge2$. Hence $\min_a\lvert\lambda_a\rvert=\lvert\lambda_-\rvert$, i.e. $g_n=\lvert\lambda_-\rvert$. This also gives $D=1+\tfrac m{m-1}=\tfrac{2m-1}{m-1}$, matching the entry.
+**Verified cold: $\lvert\lambda_-\rvert=g_n$ at $W^*$.** With $\mathop{\mathrm{tr}}W^*=0$ and multiplicities $m^2$ (negative) and $m(m-1)$ (positive), $\lvert\lambda_-\rvert m^2=\lambda_+m(m-1)$, so $\lambda_+=\tfrac m{m-1}\lvert\lambda_-\rvert>\lvert\lambda_-\rvert$ for every $m\ge2$. Hence $\min_a\lvert\lambda_a\rvert=\lvert\lambda_-\rvert$, i.e. $g_n=\lvert\lambda_-\rvert$. This also gives $D=1+\tfrac m{m-1}=\tfrac{2m-1}{m-1}$, matching the entry.
 
 **Verdict on question 1: PROVEN, at the generality "circle of radius $\alpha g_n$ centred at a point of modulus $g_n$, any $\alpha>0$".** It needs neither $\lambda_-$ real nor $\lambda_-$ negative; it does need $\lvert\lambda_-\rvert=g_n$; and it is indifferent to $\Gamma$ encircling $0$.
 
@@ -86,7 +86,7 @@ so the two $\zeta$-dependent factors are maximised separately, where $\max_\Gamm
 
 **The smallest admissible dimension.** The entry names none. Its objects need $m\ge2$ for $D=\tfrac{2m-1}{m-1}$ to be finite and for $\lambda_+>\lvert\lambda_-\rvert$; the programme's own range is $n\ge12$, i.e. $m\ge6$. The identity itself is dimension-free once $\lvert\lambda_-\rvert=g_n$ is granted. *Finding at the level of statement hygiene: L156 states $m\ge2$, L152 states nothing.*
 
-**$\ker W\ne0$, and the named witness.** The record's witness is $W_{\mathbb{CP}^2}$ with $\dim\ker W=3$ ([second-order.md](../findings/second-order.md):255, [second-order.md](../findings/second-order.md):1173). **This entry asserts nothing there, and could not.** At such a $W$, $g_n=\operatorname{dist}(\operatorname{spec},0)=0$, so the contour has radius $\alpha g_n=0$, no contour separates the negative spectrum from $0$, and the identity degenerates to $0=0$ with no content. That is consistent with [L147](../findings/second-order.md)'s hypothesis box, which records that $g_n$, $\rho$ and $M$ *do not exist there*. **The finding is that L152 never states $\ker W^*=0$** although its every object needs $g_n>0$, the same omission [ROUND_L147](ROUND_L147.md) corrected one entry earlier.
+**$\ker W\ne0$, and the named witness.** The record's witness is $W_{\mathbb{CP}^2}$ with $\dim\ker W=3$ ([second-order.md](../findings/second-order.md):255, [second-order.md](../findings/second-order.md):1173). **This entry asserts nothing there, and could not.** At such a $W$, $g_n=\mathop{\mathrm{dist}}(\mathop{\mathrm{spec}},0)=0$, so the contour has radius $\alpha g_n=0$, no contour separates the negative spectrum from $0$, and the identity degenerates to $0=0$ with no content. That is consistent with [L147](../findings/second-order.md)'s hypothesis box, which records that $g_n$, $\rho$ and $M$ *do not exist there*. **The finding is that L152 never states $\ker W^*=0$** although its every object needs $g_n>0$, the same omission [ROUND_L147](ROUND_L147.md) corrected one entry earlier.
 
 ## 5. Question 2, second half, and the round's centre, what is proven against what is used
 
@@ -109,7 +109,7 @@ $$\lVert W_-\rVert\;\le\;\alpha g_n\cdot(1+\alpha)g_n\cdot\frac1{(\alpha-\gamma)
 
 a quantity of size $g_n$. The "Consequence" asserts $M\le C\rho$ with $C=\tfrac{1+\alpha}{\alpha-\gamma}$, a quantity of size $\rho$. These are different objects at different scales, and the entry writes no step between them. The step that exists is [L156](../findings/second-order.md)'s: the resolvent **difference** available from $A(0)=0$, which introduces the two further factors $\lVert zH\rVert\le\gamma g_n$ and a second resolvent $1/(dg_n)$, giving $\alpha g_n\cdot(1+\alpha)g_n\cdot\tfrac1{(d-\gamma)g_n}\cdot\gamma g_n\cdot\tfrac1{dg_n}=\tfrac{\alpha(1+\alpha)}{d(d-\gamma)}\gamma g_n$, which at $d=\alpha$ is $\tfrac{1+\alpha}{\alpha-\gamma}\gamma g_n$. **So $C$ is imported from [r456](../reviews/REVIEW_r456.md) and presented as a consequence of a display that does not yield it.**
 
-**A third clause falls, and the heading does not name it.** [second-order.md](../findings/second-order.md):1467 reads *"the contour must separate $\lambda_-$ from both $0$ and $\lambda_+$, so $\alpha<1$ keeps $0$ outside and $\alpha<1+\tfrac m{m-1}$ keeps $\lambda_+$ outside, **the first binding**"*, repeated at :1473. [L156](../findings/second-order.md) rules the opposite sixteen lines above, at :1427: *"$\alpha<1$ is **not a constraint**: $\operatorname{spec}(W^*)$ is two points, so a contour enclosing $0$ adds no spectral point"*, and every value L156 records sits at $\alpha^*>1$. The sentence stands with no forward pointer, in the same file, and it is the ruling under which L156's own optimum would be inadmissible.
+**A third clause falls, and the heading does not name it.** [second-order.md](../findings/second-order.md):1467 reads *"the contour must separate $\lambda_-$ from both $0$ and $\lambda_+$, so $\alpha<1$ keeps $0$ outside and $\alpha<1+\tfrac m{m-1}$ keeps $\lambda_+$ outside, **the first binding**"*, repeated at :1473. [L156](../findings/second-order.md) rules the opposite sixteen lines above, at :1427: *"$\alpha<1$ is **not a constraint**: $\mathop{\mathrm{spec}}(W^*)$ is two points, so a contour enclosing $0$ adds no spectral point"*, and every value L156 records sits at $\alpha^*>1$. The sentence stands with no forward pointer, in the same file, and it is the ruling under which L156's own optimum would be inadmissible.
 
 **A fourth clause is unsupported.** [second-order.md](../findings/second-order.md):1471, *"Three independent computations meet at one value"*. [r456](../reviews/REVIEW_r456.md) line 74 presents $C=6$ at $(\tfrac12,\tfrac14)$ as a check of its own generalisation against [r441](../reviews/REVIEW_r441.md), whose Neumann bookkeeping it states it inherited (line 70, *"Running r441's own Neumann bookkeeping"*). One computation checked at its own special case is not three.
 
@@ -133,7 +133,7 @@ a quantity of size $g_n$. The "Consequence" asserts $M\le C\rho$ with $C=\tfrac{
 
 **C2, "$\lvert\lambda_-\rvert=g_n$ by definition of the gap". REAL.**
 *Locate*: [second-order.md](../findings/second-order.md):1459.
-*Exhibit*: $g_n$ is defined as $\operatorname{dist}(\operatorname{spec},0)=\min_a\lvert\lambda_a\rvert$. For a traceless symmetric operator with spectrum $\{-2,1\}$ one has $g=1$ and $\lvert\lambda_-\rvert=2$, so the identification is not definitional. At $W^*$ it holds because $\operatorname{mult}(\lambda_-)=m^2>m(m-1)=\operatorname{mult}(\lambda_+)$ forces $\lambda_+=\tfrac m{m-1}\lvert\lambda_-\rvert>\lvert\lambda_-\rvert$.
+*Exhibit*: $g_n$ is defined as $\mathop{\mathrm{dist}}(\mathop{\mathrm{spec}},0)=\min_a\lvert\lambda_a\rvert$. For a traceless symmetric operator with spectrum $\{-2,1\}$ one has $g=1$ and $\lvert\lambda_-\rvert=2$, so the identification is not definitional. At $W^*$ it holds because $\mathop{\mathrm{mult}}(\lambda_-)=m^2>m(m-1)=\mathop{\mathrm{mult}}(\lambda_+)$ forces $\lambda_+=\tfrac m{m-1}\lvert\lambda_-\rvert>\lvert\lambda_-\rvert$.
 *Argue the opposite*: at $W^*$ the two coincide, so the sentence is true where it is used and the word "definition" is loose rather than wrong.
 *Kept as HYPOTHESIS-DEBT*, because it is the hypothesis that fails first at any other base point, and calling it a definition is what makes it invisible.
 
@@ -145,7 +145,7 @@ a quantity of size $g_n$. The "Consequence" asserts $M\le C\rho$ with $C=\tfrac{
 
 **C4, "$\alpha<1$ … the first binding". REAL.**
 *Locate*: [second-order.md](../findings/second-order.md):1467, repeated :1473.
-*Exhibit*: at $\alpha=\alpha^*=\tfrac{11}{10}$ the disc bounded by $\Gamma$ contains $0$, and $0\notin\operatorname{spec}(W^*)$, so the enclosed spectral set is still $\{\lambda_-\}$ and $\Pi_\Gamma$ is still the negative projection; $\lvert\lambda_+-\lambda_-\rvert=\tfrac{11}5g_n$ keeps $\lambda_+$ outside. The whole of [L156](../findings/second-order.md) sits at that point.
+*Exhibit*: at $\alpha=\alpha^*=\tfrac{11}{10}$ the disc bounded by $\Gamma$ contains $0$, and $0\notin\mathop{\mathrm{spec}}(W^*)$, so the enclosed spectral set is still $\{\lambda_-\}$ and $\Pi_\Gamma$ is still the negative projection; $\lvert\lambda_+-\lambda_-\rvert=\tfrac{11}5g_n$ keeps $\lambda_+$ outside. The whole of [L156](../findings/second-order.md) sits at that point.
 *Argue the opposite*: the entry marks the range question open and attributes the three readings to their sources, so the sentence could be read as reporting rather than ruling. It cannot: it says "the first binding", flatly, four lines after its own box reports the record supporting both.
 *Kept*, and it is the one clause of L152 that a reader could act on wrongly today.
 
@@ -163,7 +163,7 @@ a quantity of size $g_n$. The "Consequence" asserts $M\le C\rho$ with $C=\tfrac{
 
 **How I looked.** Three ways, all by hand.
 
-1. **Inside the family.** For a traceless symmetric $W$ with two eigenvalues, $\lvert\lambda_-\rvert\operatorname{mult}(\lambda_-)=\lambda_+\operatorname{mult}(\lambda_+)$, so $\lvert\lambda_-\rvert>\lambda_+$ requires $\operatorname{mult}(\lambda_-)<\operatorname{mult}(\lambda_+)$. At $W^*=S^m\times S^m$ the multiplicities are $m^2$ and $m(m-1)$, and $m^2>m(m-1)$ for every $m\ge1$. **No falsifier exists at the base point the chain uses**, at any $m$.
+1. **Inside the family.** For a traceless symmetric $W$ with two eigenvalues, $\lvert\lambda_-\rvert\mathop{\mathrm{mult}}(\lambda_-)=\lambda_+\mathop{\mathrm{mult}}(\lambda_+)$, so $\lvert\lambda_-\rvert>\lambda_+$ requires $\mathop{\mathrm{mult}}(\lambda_-)<\mathop{\mathrm{mult}}(\lambda_+)$. At $W^*=S^m\times S^m$ the multiplicities are $m^2$ and $m(m-1)$, and $m^2>m(m-1)$ for every $m\ge1$. **No falsifier exists at the base point the chain uses**, at any $m$.
 2. **At a moving base point.** $\lvert\lambda_-(z)\rvert\ne g_n$ in general on the disc, and re-centring $\Gamma$ there breaks the identity by up to the factor $\tfrac{1+\gamma+\alpha}{1+\alpha}=\tfrac{53}{42}$ at the optimum (§5). I checked every citation of the clause, one, in [L156](../findings/second-order.md)'s proof, and it holds $\Gamma$ fixed about $\lambda_-(W^*)$, so no live use is exposed. **This is the falsifier that would exist if a successor re-centred, and the reason C2 matters.**
 3. **At a kernel.** $W_{\mathbb{CP}^2}$, $\dim\ker W=3$: $g_n=0$, the contour degenerates, and the identity has no content rather than a false one. Not a falsifier; recorded as the boundary of the statement.
 

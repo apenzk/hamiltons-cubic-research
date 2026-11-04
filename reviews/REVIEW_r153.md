@@ -36,7 +36,7 @@ dimensions $3+3+3+5+1=15$. Their $R$ is $\tfrac1{48}$ times $\mathrm{diag}\big(\
 | anti-diagonal, plus $\Lambda^2$-part of $\mathfrak p_1\wedge\mathfrak p_2$, plus $\mathbb R$ | $3+3+1$ | $7$ | $\tfrac4{48}=\tfrac1{12}$ | $0$ |
 | $\mathrm{Sym}^2_0$ part of $\mathfrak p_1\wedge\mathfrak p_2$ | $\mathrm{Sym}^2_0$ | $5$ | $-\tfrac2{48}=-\tfrac1{24}$ | $-\tfrac18$ |
 
-($\operatorname{tr}R=\tfrac{30}{24}$ over $15$ gives mean $\tfrac1{12}$; Einstein forces $\mathrm{Ric}_0=0$, so the Weyl part is $R$ minus that multiple of the identity.)
+($\mathop{\mathrm{tr}}R=\tfrac{30}{24}$ over $15$ gives mean $\tfrac1{12}$; Einstein forces $\mathrm{Ric}_0=0$, so the Weyl part is $R$ minus that multiple of the identity.)
 
 **The record's side.** $(\mathfrak{su}(3),\mathfrak{so}(3))$ is used as a **subalgebra pair inside $\mathfrak{so}(6)$**, via $SU(3)\curvearrowright\mathbb C^3=\mathbb R^6$, with $W=a\Pi_{\mathfrak k}+b\Pi_{\mathfrak m}$ extended by $0$. Here $\mathfrak{su}(3)=\mathfrak{so}(3)\oplus i\,\mathrm{Sym}^2_0(\mathbb R^3)$ with $p=\dim\mathfrak{so}(3)=3$, $q=5$, and the complement in $\mathfrak{so}(6)$ has dimension $15-8=7$. Restricting $SO(3)\subset SU(3)$ to $\mathbb R^6=\mathbb R^3\oplus\mathbb R^3$ (two copies of the standard representation),
 $$\mathfrak{so}(6)=\Lambda^2\mathbb R^3\oplus\Lambda^2\mathbb R^3\oplus(\mathbb R^3\otimes\mathbb R^3)=\underbrace{3+3}_{\text{adjoint}}\ \oplus\ \underbrace{\mathbb R\oplus\Lambda^2\oplus\mathrm{Sym}^2_0}_{1+3+5},$$

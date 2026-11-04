@@ -559,11 +559,11 @@
 | [review_r65_c345.py](reviewers/r65/review_r65_c345.py) | maximality by the rank criterion. Shows $\mathrm{rank}[\mathfrak m,\mathfrak m]\le\binom d2$ forces $d(d+1)/2\ge N$, so $d\le4$ can never be maximal at $n=6$, and exhibits… |
 | [review_r65_c1c6.py](reviewers/r65/review_r65_c1c6.py) | the two block identities $\alpha+2\beta+\gamma=2(n-2)d$ and $\beta+2\gamma+\delta=2(n-2)(N-d)$, verified to $10^{-14}$; these are the $6/4/2$ identity of fence post 17 in unordered-triple form. |
 | [review_r65_c6_lp.py](reviewers/r65/review_r65_c6_lp.py) | rebuilds the bracket-transportation LP independently and solves it with and without $T=0$ on all-negative triples. The $(---)$ mass is $0$ and the optima agree at every one of 40 spectra,… |
-| [review_r66_core.py](lib/review_r66_core.py) | R66: independent $\mathfrak{so}(n)$ Cartan-3-form toolkit, orthonormal $\varphi_{ij}$ basis, $\omega(x,y,z)=\langle[x,y],z\rangle=-\operatorname{tr}(xyz)$, isotropy mass, symmetric-pair… |
+| [review_r66_core.py](lib/review_r66_core.py) | R66: independent $\mathfrak{so}(n)$ Cartan-3-form toolkit, orthonormal $\varphi_{ij}$ basis, $\omega(x,y,z)=\langle[x,y],z\rangle=-\mathop{\mathrm{tr}}(xyz)$, isotropy mass, symmetric-pair… |
 | [review_r66_c2_proof.py](reviewers/r66/review_r66_c2_proof.py) | R66: every step of the centralizer induction proving $\max\dim$ isotropic $=\lfloor n^2/4\rfloor$, the alternating form $\beta_u$ with radical $c(u)$, bracket-closure of $c(u)$, and the master… |
 | [review_r66_c2_search.py](lib/review_r66_c2_search.py) | R66: Levenberg–Marquardt counterexample hunt on the Stiefel manifold with analytic Jacobian, run at $\lfloor n^2/4\rfloor+1$ with a control at $\lfloor n^2/4\rfloor$ |
 | [review_r66_c3.py](reviewers/r66/review_r66_c3.py) | R66: constructive rigidity test at the cap, the splitting of $\mathbb R^n$ is recovered from the commutant of $[\mathfrak m,\mathfrak m]$ rather than fitted, then $\mathfrak m$ is checked to have… |
-| [review_r66_c45.py](reviewers/r66/review_r66_c45.py) | R66: the maximality rank criterion $\operatorname{rank}[\mathfrak m,\mathfrak m]=N-\dim\mathfrak m$, all 211 edge-maximal triangle-free graphs on 6 labelled vertices, and the per-dimension… |
+| [review_r66_c45.py](reviewers/r66/review_r66_c45.py) | R66: the maximality rank criterion $\mathop{\mathrm{rank}}[\mathfrak m,\mathfrak m]=N-\dim\mathfrak m$, all 211 edge-maximal triangle-free graphs on 6 labelled vertices, and the per-dimension… |
 | [review_r66_c6.py](lib/review_r66_c6.py) | R66: the $6/4/2$ marginal identity with its neighbouring weight triples falsified, and the bracket-transportation LP rebuilt from nonnegativity, row marginals and pair caps, solved with and… |
 | [review_r66_c6_lambda.py](reviewers/r66/review_r66_c6_lambda.py) | R66: hill-climbs the transportation LP over unit trace-free spectra with and without $S=0$, showing the free maximiser carries $(---)$ mass $12$ and becomes infeasible under $S=0$ |
 | [review_r66_su.py](reviewers/r66/review_r66_su.py) | *(indexed 2026-08-24; no description recorded at the time it was written)* |
@@ -634,7 +634,7 @@
 | [reviewers/r103/r103_core.py](reviewers/r103/r103_core.py) | the build: Weyl sampler, $M$ on $\Lambda^2$, $\mathring W$, the vertex matrix, the relaxation solver. |
 | [reviewers/r103/r103_validate.py](reviewers/r103/r103_validate.py) | validation before any verdict. |
 | [reviewers/r103/r103_claim12.py](reviewers/r103/r103_claim12.py) | the two diagonals and the $t=2$ forcing, including the one-line proof of the iff. |
-| [reviewers/r103/r103_claim3.py](reviewers/r103/r103_claim3.py) | **upgrades the feasibility claim from 42 sampled cells to a theorem**: the $\psi$-block of $d$ is $-\operatorname{spec}(K|_{\mathbf1^\perp})$, forcing $\max d\ge\sqrt{t/((n-1)(n-2))}$, so the… |
+| [reviewers/r103/r103_claim3.py](reviewers/r103/r103_claim3.py) | **upgrades the feasibility claim from 42 sampled cells to a theorem**: the $\psi$-block of $d$ is $-\mathop{\mathrm{spec}}(K|_{\mathbf1^\perp})$, forcing $\max d\ge\sqrt{t/((n-1)(n-2))}$, so the… |
 | [reviewers/r103/r103_claim4.py](reviewers/r103/r103_claim4.py) | **beats all six recorded relaxation values** with the witness $K=\sqrt{t/2}\,K_{S^3\times S^3}$, which needs no outer search, and returns $\theta_0(6)$ exactly at $t=2$. |
 | [reviewers/r103/r103_claim1_fine.py](reviewers/r103/r103_claim1_fine.py) | the fine-grained check behind the one over-stated sentence in the diagonals claim. |
 | [reviewers/r103/r103_claim5.py](reviewers/r103/r103_claim5.py) | the circularity reading, including the single-$W$ witness $W=c\,W_{S^m\times S^m}+\sqrt{1-c^2}\,W'$ with $K(W')=0$. |
@@ -710,7 +710,7 @@
 | [reviewers/review_r1847_f81.py](reviewers/review_r1847_f81.py) | Reviewer 1847's check at F81's witness, $n=8$ and $12$: $J_{M_0}=0$, $E(M_0)=1-t^2$ against the matching inequality's slack |
 | [reviewers/review_r1849_dm.py](reviewers/review_r1849_dm.py) | Reviewer 1849's value check of the visible diagonal $D_M$ at $n=8$: $P(D_M)=24\sum_{R\subset M}XXX$ and $\lVert D_M\rVert^2=E(M)$ on a fresh random tensor |
 | [reviewers/review_r1850_check.py](reviewers/review_r1850_check.py) | Reviewer 1850's checks of the reduction: $E$ both ways at $n=6,8$, the unordered sum $\sum X^2=\tfrac38\lVert B_f\rVert^2$, and $D_M$'s identities |
-| [reviewers/review_r1851_cpm.py](reviewers/review_r1851_cpm.py) | Reviewer 1851's rebuild of $\mathbb{CP}^m$ from the Fubini–Study tensor at $m=3$ to $6$: $\theta$, $\operatorname{tr}W^3$, $E$ and L198's slack split over the spectrum |
+| [reviewers/review_r1851_cpm.py](reviewers/review_r1851_cpm.py) | Reviewer 1851's rebuild of $\mathbb{CP}^m$ from the Fubini–Study tensor at $m=3$ to $6$: $\theta$, $\mathop{\mathrm{tr}}W^3$, $E$ and L198's slack split over the spectrum |
 | [reviewers/review_r1851_split.py](reviewers/review_r1851_split.py) | Reviewer 1851's rerun of the capped four-set screen, splitting the value into $9\sum JJJ$ and $24\sum XXX$ |
 | [reviewers/review_r1852_cpm.py](reviewers/review_r1852_cpm.py) | Reviewer 1852's $\mathbb{CP}^m$ spectrum and table check, with $E(\mathbb{CP}^m)$ screened up to $m=2000$ |
 | [reviewers/review_r1852_cpm_Q.py](reviewers/review_r1852_cpm_Q.py) | Reviewer 1852's operator check that $\mathbb{CP}^m$ satisfies $Q(W)=\theta W$ at $m=3,4,6$ (residual below $4\cdot10^{-16}$) |

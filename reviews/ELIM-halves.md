@@ -2,7 +2,7 @@
 
 *Analytical only; no script was run and no number was recomputed numerically. Every figure quoted below was rebuilt in closed form from the definitions, and where a rebuild disagrees with the file it is said so.*
 
-Both files were read in full. The audit applies one test to every bound, reduction, equivalence and "what a successor needs": substitute $W^\#=\theta W-W^2$ (and, on the diagonal locus, $M^{\circ2}=\theta M-M^2+\operatorname{diag}(s)$), then ask what free variable is left. The two files fail it in different ways, [graded-half.md](../findings/graded-half.md) through quantities attached to a *grading*, [diagonal-half.md](../findings/diagonal-half.md) through quantities that look combinatorial and collapse to $(\text{spectrum},\theta)$.
+Both files were read in full. The audit applies one test to every bound, reduction, equivalence and "what a successor needs": substitute $W^\#=\theta W-W^2$ (and, on the diagonal locus, $M^{\circ2}=\theta M-M^2+\mathop{\mathrm{diag}}(s)$), then ask what free variable is left. The two files fail it in different ways, [graded-half.md](../findings/graded-half.md) through quantities attached to a *grading*, [diagonal-half.md](../findings/diagonal-half.md) through quantities that look combinatorial and collapse to $(\text{spectrum},\theta)$.
 
 ---
 
@@ -27,14 +27,14 @@ Two consequences worth carrying:
 
 On this locus the eigenvalues of $W$ **are** the entries $M_{ab}$, so the multiset $\{M_{ab}\}$ is the spectrum. Then:
 
-- $\lVert M\rVert_1=\sum|\lambda|$ and $\sum_a s_a=\operatorname{tr}M^2$ are spectral, hence carry nothing;
+- $\lVert M\rVert_1=\sum|\lambda|$ and $\sum_a s_a=\mathop{\mathrm{tr}}M^2$ are spectral, hence carry nothing;
 - $s_a=\sum_bM_{ab}^2$, $d_a^+$, $\mu_1(M)$ and $\Delta$ are **not**, they depend on which eigenvalue sits on which edge of $K_n$.
 
 That is the precise survivor for the whole B1 programme, and it says what a proof must exploit: an inequality between the multiset of edge weights and their placement. Both live reductions in the file (the entry cap $2\theta M_{ab}\le s_a+s_b$ and the counting corollary $r\le2/\theta^2$), are of exactly this type, which is why they are the two that hold up.
 
 ### S3. The counting corollary is a genuine unconditional reduction
 
-$K^2-\lambda K\succeq0$ forces every positive eigenvalue of $M$ to be $\ge\theta$, so $r\theta^2\le\operatorname{tr}M^2=2$; hence $r\ge2\Rightarrow\theta\le1<\theta_0(n)$ for every even $n\ge6$, and at the conjectured value $r=1$. Rebuilt and correct. It uses criticality (through the Laplacian identity, which needs the vertex equation at every pair), it is not the target rearranged, and it eliminates a branch outright. It is the strongest thing in either file.
+$K^2-\lambda K\succeq0$ forces every positive eigenvalue of $M$ to be $\ge\theta$, so $r\theta^2\le\mathop{\mathrm{tr}}M^2=2$; hence $r\ge2\Rightarrow\theta\le1<\theta_0(n)$ for every even $n\ge6$, and at the conjectured value $r=1$. Rebuilt and correct. It uses criticality (through the Laplacian identity, which needs the vertex equation at every pair), it is not the target rearranged, and it eliminates a branch outright. It is the strongest thing in either file.
 
 ### S4. Lemma L55 is true, sharp, and needs no criticality, but its proof is not on the record
 
@@ -52,13 +52,13 @@ The reformulation $v^{\mathsf T}(K^2-\lambda K)v=\tfrac12\sum_{a,b}(K_{ab}^2+U_{
 
 [graded-half.md](../findings/graded-half.md) records
 
-$$\theta\lVert A\rVert^2=\operatorname{tr}A^3+\langle A,W^\#\vert_{\mathfrak p}\rangle,\qquad \theta\lVert B\rVert^2=\operatorname{tr}B^3+\langle B,W^\#\vert_{\mathfrak m}\rangle,$$
+$$\theta\lVert A\rVert^2=\mathop{\mathrm{tr}}A^3+\langle A,W^\#\vert_{\mathfrak p}\rangle,\qquad \theta\lVert B\rVert^2=\mathop{\mathrm{tr}}B^3+\langle B,W^\#\vert_{\mathfrak m}\rangle,$$
 
 with *"each exact to $10^{-9}$ at $S^3\times S^5$ and at the $n=8$ non-equivariant witness"*, and concludes that **"the pair contains exactly one independent equation"**.
 
-Substitute. $W$ is block-diagonal for the splitting, so $W^2=A^2\oplus B^2$ and $W^\#\vert_{\mathfrak p}=\theta A-A^2$. Then $\langle A,W^\#\vert_{\mathfrak p}\rangle=\theta\lVert A\rVert^2-\operatorname{tr}A^3$, and equation one reads
+Substitute. $W$ is block-diagonal for the splitting, so $W^2=A^2\oplus B^2$ and $W^\#\vert_{\mathfrak p}=\theta A-A^2$. Then $\langle A,W^\#\vert_{\mathfrak p}\rangle=\theta\lVert A\rVert^2-\mathop{\mathrm{tr}}A^3$, and equation one reads
 
-$$\theta\lVert A\rVert^2=\operatorname{tr}A^3+\theta\lVert A\rVert^2-\operatorname{tr}A^3 .$$
+$$\theta\lVert A\rVert^2=\mathop{\mathrm{tr}}A^3+\theta\lVert A\rVert^2-\mathop{\mathrm{tr}}A^3 .$$
 
 $0=0$. Identically, and the same for $B$. The reason is visible without algebra: both equations are $\langle A,\,Q(W)-\theta W\rangle=0$ and $\langle B,\,Q(W)-\theta W\rangle=0$, i.e. the criticality residual paired against two test directions, and the *same block of this file* proves $N:=Q(W)-\theta W=0$ unprojected. Pairing zero against anything gives zero. The count is not "one independent equation, not two"; it is **none**, and the sum being the definition of $\theta$ is a consequence of criticality rather than a constraint on $W$. The block that corrects an earlier overstatement overstates by exactly one itself.
 
@@ -85,7 +85,7 @@ The separator is well posed only quantified (*"for every grading $W$ carries"*) 
 
 *"Which closes the mass route for arbitrary gradings and leaves it OPEN for the canonical one. Under this record's canonical choice $\mathfrak p=E_+$, r314 reports the mass bound holding at every point it tested."*
 
-With $\mathfrak p=E_+$ the block mass is $\lVert A\rVert^2=\sum_{\lambda>0}\lambda^2$, a **spectral invariant of $W$**. So the surviving open question is an inequality between $\sum_{\lambda>0}\lambda^2$, $\#\{\lambda>0\}$ and $n$, with no bracket, no isotropy and no gradedness in it. It is not empty (from $\operatorname{tr}W=0$, $\lVert W\rVert=1$ one gets $\sum_{\lambda>0}\lambda^2\ge\tfrac1{2p}$ with $p=\#\{\lambda>0\}$, which is weaker than $p/\binom{n-1}2$ in the relevant range), but it cannot possibly separate equivariant from non-equivariant points except through their spectra, which is the job it was proposed for.
+With $\mathfrak p=E_+$ the block mass is $\lVert A\rVert^2=\sum_{\lambda>0}\lambda^2$, a **spectral invariant of $W$**. So the surviving open question is an inequality between $\sum_{\lambda>0}\lambda^2$, $\#\{\lambda>0\}$ and $n$, with no bracket, no isotropy and no gradedness in it. It is not empty (from $\mathop{\mathrm{tr}}W=0$, $\lVert W\rVert=1$ one gets $\sum_{\lambda>0}\lambda^2\ge\tfrac1{2p}$ with $p=\#\{\lambda>0\}$, which is weaker than $p/\binom{n-1}2$ in the relevant range), but it cannot possibly separate equivariant from non-equivariant points except through their spectra, which is the job it was proposed for.
 
 Worse, it is not well formed as written. The right-hand side $\lVert A_{\mathrm{equiv}}\rVert^2=\frac{p^2+q^2-n}{(n-1)(n-2)}$ is indexed by a **symmetric pair**, and $E_+$ names no pair: at $n=8$, $\dim\mathfrak p=13$ belongs to both $\mathfrak{so}(3)\oplus\mathfrak{so}(5)$ and $\mathfrak{sp}(1)\oplus\mathfrak{sp}(2)$. The "live question the record had not distinguished" needs a statement before it needs a proof.
 
@@ -95,7 +95,7 @@ This is the strongest collapse in either file, because the framing is explicitly
 
 $$\sum_{i,j}M_{ij}^2\,(u_i-u_j)^2\ \ge\ \frac{2\mu_1^2}{n}.$$
 
-Contract criticality $M^{\circ2}+M^2=\theta M+\operatorname{diag}(s)$ with the top eigenvector $u$ of $M$, using $s_i\equiv2/n$ on the vertex-transitive locus:
+Contract criticality $M^{\circ2}+M^2=\theta M+\mathop{\mathrm{diag}}(s)$ with the top eigenvector $u$ of $M$, using $s_i\equiv2/n$ on the vertex-transitive locus:
 
 $$u^{\mathsf T}M^{\circ2}u=\theta\mu_1+\tfrac2n-\mu_1^2 .$$
 
@@ -114,10 +114,10 @@ So "the diagonal residual has left curvature entirely" is true, and it has left 
 ### T6. The spectral-gap form, the "tersest form", and $n\mu(\mu-\theta)\ge\mu_1^2$ are all T5 again
 
 - *"In its tightest form it is a spectral-gap statement"*: $\nu_2\big(\tfrac n2M^{\circ2}\big)\le1-\tfrac{\mu_1^2}2$.
-- *"Tersest form"*: $\mu_1(M)^2+2\nu_2\big(\tfrac n2M^{\circ2}\big)\le\operatorname{tr}M^2$.
+- *"Tersest form"*: $\mu_1(M)^2+2\nu_2\big(\tfrac n2M^{\circ2}\big)\le\mathop{\mathrm{tr}}M^2$.
 - *"The residual then reads, for whichever eigenvalue attains $\nu_2$"*: $n\mu(\mu-\theta)\ge\mu_1^2$.
 
-The file itself supplies the collapse, in the section it labels a *"rigidity worth stating on its own"*: on the vertex-transitive locus criticality **is** $M^{\circ2}=\theta M-M^2+\tfrac2nI$, so $\nu(\mu)=1+\tfrac n2\mu(\theta-\mu)$ for every eigenvalue. Substituting turns each of the three displays into $n\mu(\mu-\theta)\ge\mu_1^2$ over $\mu\in\operatorname{spec}(M)\setminus\{0_{\mathbf1}\}$ (a statement in $(\operatorname{spec}M,\theta)$ with no matrix in it) and at $\mu=\mu_1$ it is verbatim $\theta\le\frac{n-1}n\mu_1$. The chain "missing factor $\to$ Poincaré $\to$ spectral gap $\to$ tersest form" is one inequality wearing four costumes, plus companion conditions at the non-top eigenvalues. The claim **"in its tightest form"** should be struck; the file already struck the parallel claim *"the matrix form constrains the whole spectrum, not one Rayleigh quotient"* on the same grounds, and did not propagate the correction.
+The file itself supplies the collapse, in the section it labels a *"rigidity worth stating on its own"*: on the vertex-transitive locus criticality **is** $M^{\circ2}=\theta M-M^2+\tfrac2nI$, so $\nu(\mu)=1+\tfrac n2\mu(\theta-\mu)$ for every eigenvalue. Substituting turns each of the three displays into $n\mu(\mu-\theta)\ge\mu_1^2$ over $\mu\in\mathop{\mathrm{spec}}(M)\setminus\{0_{\mathbf1}\}$ (a statement in $(\mathop{\mathrm{spec}}M,\theta)$ with no matrix in it) and at $\mu=\mu_1$ it is verbatim $\theta\le\frac{n-1}n\mu_1$. The chain "missing factor $\to$ Poincaré $\to$ spectral gap $\to$ tersest form" is one inequality wearing four costumes, plus companion conditions at the non-top eigenvalues. The claim **"in its tightest form"** should be struck; the file already struck the parallel claim *"the matrix form constrains the whole spectrum, not one Rayleigh quotient"* on the same grounds, and did not propagate the correction.
 
 ### I28. The "rigidity" is criticality, and $\nu(\mu)=1+\tfrac n2\mu(\theta-\mu)$ is the record's own closed route in positive dress
 
@@ -145,7 +145,7 @@ The labelling table at the end of the same file rules: *"$\Delta=0\Rightarrow$ L
 
 **W1, the canonical mass bound rests on the catalogue.** *"r314 reports the mass bound holding at every point it tested, with r307's census supporting it."* r307's census is 18 graded critical points at $n=8$, built from symmetric constructions; that is evidence about the construction. Combined with T4 (the bound is spectral), the honest statement is that nothing has been tested that could have failed for a structural reason.
 
-**W2, the association-scheme structure theorem rests on three points.** *"So on the vertex-transitive locus a diagonal critical point carries an association scheme, and the conjectured maximiser is the 2-class case."* The derivation supplies only $M\circ M\in\operatorname{span}\{I,M,M^2\}$; full Hadamard closure of the algebra is **measured**, at $S^3\times S^3$, $S^6\times S^6$ and the $C_5$ blow-up, three highly symmetric points, with the one non-vertex-transitive control failing by $0.18$. The deduction does go through when $M$ has exactly three distinct eigenvalues (there $\operatorname{span}\{I,M,M^2\}=\operatorname{span}\{I,J,M\}$, which contains $I$ and $J$ and is $\circ$-closed by the rigidity, so Bose–Mesner applies), **that special case should be stated as the theorem**, and the general $d$-class claim demoted to what it is.
+**W2, the association-scheme structure theorem rests on three points.** *"So on the vertex-transitive locus a diagonal critical point carries an association scheme, and the conjectured maximiser is the 2-class case."* The derivation supplies only $M\circ M\in\mathop{\mathrm{span}}\{I,M,M^2\}$; full Hadamard closure of the algebra is **measured**, at $S^3\times S^3$, $S^6\times S^6$ and the $C_5$ blow-up, three highly symmetric points, with the one non-vertex-transitive control failing by $0.18$. The deduction does go through when $M$ has exactly three distinct eigenvalues (there $\mathop{\mathrm{span}}\{I,M,M^2\}=\mathop{\mathrm{span}}\{I,J,M\}$, which contains $I$ and $J$ and is $\circ$-closed by the rigidity, so Bose–Mesner applies), **that special case should be stated as the theorem**, and the general $d$-class claim demoted to what it is.
 
 **W3, "settled by enumeration" is settled to $n=24$.** *"Maximising over every feasible parameter set gives exactly $\theta_0(n)$ … at every even $n$ from $6$ to $24$."* The parameter enumeration is per-$n$ and finite; there is no argument for general $n$. "On that locus B1 is now settled by enumeration" should read "verified for $6\le n\le24$". The a-fortiori point (the enumeration runs over a superset of realisable SRGs) is sound and worth keeping.
 
@@ -153,11 +153,11 @@ The labelling table at the end of the same file rules: *"$\Delta=0\Rightarrow$ L
 
 **W5, Lemma L55's proof pointer is broken.** *"the argument is in this file under 'It does NOT survive off the diagonal locus, and the failure is systema'"*, the title is truncated, and the section it names is about $K^2-\lambda K\succeq0$ and contains no min-entry argument. See S4 for the three lines that should replace the pointer.
 
-**W6, two different $T_{\max}$ in one section.** *"$\operatorname{tr}M=0$ with $\operatorname{tr}M^2=2$ caps $\operatorname{tr}M^3$ at $2\sqrt2(n-2)/\sqrt{n(n-1)}$, so $\tfrac12\operatorname{tr}M^3\le1.2309$ at $n=12$, $99.6\%$ of the target from the spectrum alone."* That cap ignores $M\mathbf1=0$. Two paragraphs later the file uses the sharp cap $T_{\max}=2\sqrt2\,c_n$, $c_n=(n-3)/\sqrt{(n-1)(n-2)}$, which at $n=12$ gives $\tfrac12T_{\max}=1.21356$, i.e. $98.2\%$, and $E_0=2\theta_0-T_{\max}=0.044946$ is computed with the sharp one. The headline "$99.6\%$" is therefore in a superseded normalisation, and the same paragraph mixes $\theta$-scale ($1.2309$) with $2\theta$-scale ($0.0449$) figures without saying so.
+**W6, two different $T_{\max}$ in one section.** *"$\mathop{\mathrm{tr}}M=0$ with $\mathop{\mathrm{tr}}M^2=2$ caps $\mathop{\mathrm{tr}}M^3$ at $2\sqrt2(n-2)/\sqrt{n(n-1)}$, so $\tfrac12\mathop{\mathrm{tr}}M^3\le1.2309$ at $n=12$, $99.6\%$ of the target from the spectrum alone."* That cap ignores $M\mathbf1=0$. Two paragraphs later the file uses the sharp cap $T_{\max}=2\sqrt2\,c_n$, $c_n=(n-3)/\sqrt{(n-1)(n-2)}$, which at $n=12$ gives $\tfrac12T_{\max}=1.21356$, i.e. $98.2\%$, and $E_0=2\theta_0-T_{\max}=0.044946$ is computed with the sharp one. The headline "$99.6\%$" is therefore in a superseded normalisation, and the same paragraph mixes $\theta$-scale ($1.2309$) with $2\theta$-scale ($0.0449$) figures without saying so.
 
 **W7, the $\mathbb{HP}^3$ "coincidence" has no referent.** *"$\mathbb{HP}^3$ lands at $\theta=0.852943860$, which is numerically the ceiling this project's ungraded frontier measurements kept reaching … the coincidence is exact to nine digits."* The record's ungraded ceiling is stated twice in the same file as $0.900828$. Either the ceiling being matched is a different number that is not on the record, or the claim is wrong; as written it cannot be checked.
 
-**W8, the Cauchy–Schwarz floor's tightness is Schur, not the bound.** Already flagged by the file (*"that floor is worthless off the equivariant locus"*), and correctly: $\lVert A\rVert^2=\sum_i(\operatorname{tr}A_i)^2/\dim\mathfrak p_i$ is an identity whenever $A$ is scalar on each block, so equality at $S^3\times S^5$ carries no information about the inequality. Recorded here only because the paragraph appears **twice, byte-identical**, at [graded-half.md:219](../findings/graded-half.md#L219) and [graded-half.md:227](../findings/graded-half.md#L227).
+**W8, the Cauchy–Schwarz floor's tightness is Schur, not the bound.** Already flagged by the file (*"that floor is worthless off the equivariant locus"*), and correctly: $\lVert A\rVert^2=\sum_i(\mathop{\mathrm{tr}}A_i)^2/\dim\mathfrak p_i$ is an identity whenever $A$ is scalar on each block, so equality at $S^3\times S^5$ carries no information about the inequality. Recorded here only because the paragraph appears **twice, byte-identical**, at [graded-half.md:219](../findings/graded-half.md#L219) and [graded-half.md:227](../findings/graded-half.md#L227).
 
 ---
 
@@ -167,7 +167,7 @@ The labelling table at the end of the same file rules: *"$\Delta=0\Rightarrow$ L
 
 **E2, the same fence post appears twice, byte-identical**, at lines 219 and 227, with the withdrawn/live pair sandwiched between them. The section reads as three overlapping drafts stacked.
 
-**E3, cross-file collision on $0.375$, $0.3333$, $0.375$, $0.400$.** [graded-half.md:272](../findings/graded-half.md#L272) reports these as $\lambda_{\max}$ **on the slice** $V=\operatorname{fix}(\Lambda^2\sigma)$ (dimension $155$ at $n=8$) at $(3,5),(4,4),(5,5),(6,6)$, and concludes *"the point is a strict, isolated, nondegenerate local maximum there, owing nothing to third order."* [diagonal-half.md:137](../findings/diagonal-half.md#L137) and [diagonal-half.md:141](../findings/diagonal-half.md#L141) report the identical four numbers as the **diagonal-locus** $\lambda_{\max}$, with closed form $\frac{M-2}{2(M-1)}$, $M=\max(p,q)$, which reproduces all four exactly, and proves the diagonal restriction is *strictly lossy at every sphere product*, the full space reaching $0.500$ where the diagonal sees $0.375$. Either $\lambda_{\max}\vert_V$ coincides with $\lambda_{\max}\vert_{\text{diag}}$ at four distinct splits (asserted nowhere, and it would need the slice's top direction to be diagonal), or graded-half is quoting diagonal figures for the slice, in which case its local-maximum conclusion is unsupported. **This one is worth resolving before anything else in either file**, because graded-half's repair of the C3 non-sequitur rests entirely on those four numbers.
+**E3, cross-file collision on $0.375$, $0.3333$, $0.375$, $0.400$.** [graded-half.md:272](../findings/graded-half.md#L272) reports these as $\lambda_{\max}$ **on the slice** $V=\mathop{\mathrm{fix}}(\Lambda^2\sigma)$ (dimension $155$ at $n=8$) at $(3,5),(4,4),(5,5),(6,6)$, and concludes *"the point is a strict, isolated, nondegenerate local maximum there, owing nothing to third order."* [diagonal-half.md:137](../findings/diagonal-half.md#L137) and [diagonal-half.md:141](../findings/diagonal-half.md#L141) report the identical four numbers as the **diagonal-locus** $\lambda_{\max}$, with closed form $\frac{M-2}{2(M-1)}$, $M=\max(p,q)$, which reproduces all four exactly, and proves the diagonal restriction is *strictly lossy at every sphere product*, the full space reaching $0.500$ where the diagonal sees $0.375$. Either $\lambda_{\max}\vert_V$ coincides with $\lambda_{\max}\vert_{\text{diag}}$ at four distinct splits (asserted nowhere, and it would need the slice's top direction to be diagonal), or graded-half is quoting diagonal figures for the slice, in which case its local-maximum conclusion is unsupported. **This one is worth resolving before anything else in either file**, because graded-half's repair of the C3 non-sequitur rests entirely on those four numbers.
 
 **E4, $\dim\mathfrak k(W)=32$ against an algebra of dimension 31.** [graded-half.md:340](../findings/graded-half.md#L340) gives padded $W_{\mathbb{CP}^2}$ at $n=12$ as $\dim\mathfrak k(W)=32$ and names the algebra $\mathfrak{su}(2)\oplus\mathfrak{so}(8)$, which has dimension $3+28=31$. The stabiliser is $\mathfrak u(2)\oplus\mathfrak{so}(8)$, dimension $4+28=32$, consistent with the $n=8$ figure $\dim\mathfrak k=10=4+6$. The exclusion argument survives the correction (neither $\mathfrak{so}(6)\oplus\mathfrak{so}(6)$ nor $\mathfrak{so}(5)\oplus\mathfrak{so}(7)$ has a simple ideal that can map into $\mathfrak u(2)$, so both would have to sit inside $\mathfrak{so}(8)$, and $30>28$), but it is **not** the dimension count that settles $n=8$ and $n=10$, and the sentence *"the same count holds at $n=10$"* invites reading it as one.
 
@@ -184,22 +184,22 @@ Each of these I rebuilt independently; they are listed by name only.
 - **The reducible partition argument.** $f(m)=\frac m{8(m-1)}$ decreasing and convex, $kf(n/k)=\frac{kn}{8(n-k)}$ increasing in $k$, minimum at $k=2$ balanced.
 - **[Lemma L69](../findings/graded-half.md)'s split arithmetic.** $\frac1{p-1}+\frac1{q-1}-\frac1{n-1}\le\frac13$; $p=4$ gives $q\ge n$; $p=5$ gives $n^2-7n-54\ge0$, root $(7+\sqrt{265})/2=11.639$, hence $n\ge12$. Correct, and the $\tfrac18$ really does cancel.
 - **Class 3.1 Type II.** $\lVert W\rVert^2=\frac{n(n-3)}{16(n-1)}$ rebuilt from $\lambda=\tfrac14$ on $\mathfrak g$ and $c=\frac1{2(n-1)}$; $3n^2-17n+8\ge0$ from $n\ge6$; $\mathfrak{su}(3)$ at $\tfrac5{14}$, $\theta=\sqrt{7/10}$.
-- **$\lVert W\rVert^2=\lVert R\rVert^2-\frac n{8(n-1)}$** and $c=\frac1{2(n-1)}$ universal, from $\operatorname{tr}R=n/4$.
+- **$\lVert W\rVert^2=\lVert R\rVert^2-\frac n{8(n-1)}$** and $c=\frac1{2(n-1)}$ universal, from $\mathop{\mathrm{tr}}R=n/4$.
 - **The closed forms.** $\theta^2(\mathbb{CP}^m)$, $\theta^2(\mathbb{HP}^m)$ (values at $m=2,3,4$ and the limit $\sqrt2/3$), $\theta^2(\mathrm{Gr}_{\mathbb C}(p,q))$ against both tabulated values ($14/27$, $275/774$), and the elementary positivity of $34m^3-12m^2+3m+2$.
 - **$S_{\mathfrak{mmm}}=\frac{12(m-2)(m-1)(m+1)(2m+1)}m$** at $m=2,3,4,5$ against the measured $0,224,810,\tfrac{9504}5$.
 - **$\lVert A\rVert^2=\frac{\dim\mathfrak p}{\binom{n-1}2}$ at the equivariant point**, rebuilt from the Einstein normalisation at $S^3\times S^5$: $\kappa_3=\tfrac14$, $\kappa_5=\tfrac18$, $c=\tfrac1{14}$, block masses $300/630$ and $90/630$, total $13/21=0.619048$, and $\lVert W\rVert^2=45/224$ giving $\theta=1.115547$.
 - **$n=13$:** $\theta^2=120/77$ for $S^6\times S^7$ against $\theta_0^2=264/169$.
-- **Diagonal functional.** $\theta=\tfrac12(\sum_{a,b}M_{ab}^3+\operatorname{tr}M^3)$ from the triangle count.
+- **Diagonal functional.** $\theta=\tfrac12(\sum_{a,b}M_{ab}^3+\mathop{\mathrm{tr}}M^3)$ from the triangle count.
 - **[Lemma L68](../findings/diagonal-half.md)(i).** $g_{ab}=2(s_a+s_b)-4(M^2)_{ab}-4M_{ab}^2$, including the hollowness step that drops exactly $2M_{ab}^2$.
 - **Lemma L68(ii).** Twin characterisation, transitivity of linkage, block-constancy across component pairs, and Reviewer 292's singleton corollary, all correct.
 - **Lemma L68(iii), (iv).** The substitution and the summation, both exact; (iii) rebuilt as an equality at the balanced product, where $\frac{s_a}{\alpha}=\frac{\sqrt{(p-1)(2p-1)}}p=\theta_0(2p)$ exactly.
-- **The $\theta_0$ decomposition.** $\theta_0(n)=\sqrt2\,c_n+\frac{2\sqrt2}{n\sqrt{(n-1)(n-2)}}$ verified as an identity, and the second term rebuilt as $\sum_{a<b}M_{ab}^3=\frac1{p\sqrt{(2p-1)(p-1)}}$ at the balanced product, the claim that it *is* $\operatorname{tr}W^3$ there is correct.
+- **The $\theta_0$ decomposition.** $\theta_0(n)=\sqrt2\,c_n+\frac{2\sqrt2}{n\sqrt{(n-1)(n-2)}}$ verified as an identity, and the second term rebuilt as $\sum_{a<b}M_{ab}^3=\frac1{p\sqrt{(2p-1)(p-1)}}$ at the balanced product, the claim that it *is* $\mathop{\mathrm{tr}}W^3$ there is correct.
 - **$\max\sum x^3=s^{3/2}\frac{k-2}{\sqrt{k(k-1)}}$** applied spectrally ($k=n-1$) and row-wise ($k=n-1$), same $c_n$; monotonicity in $k$ makes the row-wise use a valid bound.
 - **$\mu_1\le\sqrt{2(n-2)/(n-1)}$** and $\theta_0(n)=\frac{n-1}n\mu_1^{\max}$ identically.
 - **The contraction identity** $u^{\mathsf T}M^{\circ2}u=\theta\mu_1+\sum_is_iu_i^2-\mu_1^2$ and its equivalence to $u^{\mathsf T}M^{\circ2}u\le\frac{2-\mu_1^2}n$.
 - **The counting corollary** $r\le2/\lambda^2$ and $r\ge2\Rightarrow\theta\le1$.
 - **$E$ hollow at every $W$**, and the multiplier argument $v=0$ in the Euler–Lagrange equation.
-- **The second-order operator** $\mathcal L(N)=M\circ N+\tfrac12(MN+NM)=\tfrac12D\Phi(M)[N]$, and the hollowing correction to $\tfrac12D[\Phi-\operatorname{diag}(s)]$.
+- **The second-order operator** $\mathcal L(N)=M\circ N+\tfrac12(MN+NM)=\tfrac12D\Phi(M)[N]$, and the hollowing correction to $\tfrac12D[\Phi-\mathop{\mathrm{diag}}(s)]$.
 - **The direct-sum scaling** $\theta=(\sum_i\theta_i^{-2})^{-1/2}$ and the admissibility condition $\sum_ca_c\theta_c^{-2}=0$.
 - **[Lemma L55](../findings/diagonal-half.md)**, statement and sharpness both correct (proof supplied at S4).
 - **The gap $\frac1{2(M-1)}$** between $\frac{M-2}{2(M-1)}$ and $\tfrac12$, consistent across both files.

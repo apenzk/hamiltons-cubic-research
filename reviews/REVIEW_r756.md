@@ -27,7 +27,7 @@
 
 - **The source** is [references/jaeger-2016-diagonal-case/](https://repositorium.uni-muenster.de/document/miami/820840d1-0252-4bf3-8fc7-853730eee3f5/diss_jaeger_florian.pdf), the `pdftotext -layout` extraction; line numbers below are absolute in that file. Chapter 3 runs from line 1635 to line 5106; the bibliography begins at line 5108.
 - $n=2m$ throughout, $m$ a positive integer, so **$n$ is even** and every threshold in $n$ translates to $\lceil\cdot\rceil$ in $m$: $n\ge15\iff n\ge16\iff m\ge8$.
-- $\mathfrak k=\operatorname{Im}(I_+)$, $A\subset\{(i,j):i<j\}$ with $\mathfrak k=\bigoplus_{(i,j)\in A}\langle e_i\wedge e_j\rangle$, $A_k:=\{j:e_k\wedge e_j\in\mathfrak k\}$, $\mathfrak i_k:=\bigoplus_{a,b\in A_k,\,a<b}\langle e_a\wedge e_b\rangle$, all as defined in the proof of Theorem 3.0.2 at lines 5046–5059.
+- $\mathfrak k=\mathop{\mathrm{Im}}(I_+)$, $A\subset\{(i,j):i<j\}$ with $\mathfrak k=\bigoplus_{(i,j)\in A}\langle e_i\wedge e_j\rangle$, $A_k:=\{j:e_k\wedge e_j\in\mathfrak k\}$, $\mathfrak i_k:=\bigoplus_{a,b\in A_k,\,a<b}\langle e_a\wedge e_b\rangle$, all as defined in the proof of Theorem 3.0.2 at lines 5046–5059.
 - The bracket relation used throughout is the source's own (line 5061): $[e_a\wedge e_b,e_c\wedge e_d]=\delta_{bc}e_a\wedge e_d-\delta_{ac}e_b\wedge e_d+\delta_{ad}e_b\wedge e_c-\delta_{bd}e_a\wedge e_c$.
 - All arithmetic below is over $\mathbb Z$ and exact.
 - **Notation trap.** The extraction renders the Fraktur $\mathfrak k$ of the Lie algebra and the running index $k$ identically as `k`, and the source uses both in the same sentence. Section 3 disambiguates where it matters.
@@ -77,7 +77,7 @@ So $[e_l\wedge e_a,x]=x_1\,e_l\wedge e_b$ exactly, and **the constraint on $l$ i
 
 ## 4. C3, C4, why $m\ge5$, and the premise that is not available
 
-**C4 is confirmed.** Lemma 3.6.7 (line 4797) gives $d_+=\tfrac{n(n-2)}4$, and $d_+=\operatorname{tr}I_+=\dim\mathfrak k=\#A$, so $\#A=\tfrac{2m(2m-2)}4=m(m-1)$, matching $\dim(\mathfrak{so}(m)\oplus\mathfrak{so}(m))=2\binom m2$. This is a count of **pairs**; the choice of $l$ is a choice of an **index** in $A_k$. The cited quantity is the wrong one, exactly as the finding says.
+**C4 is confirmed.** Lemma 3.6.7 (line 4797) gives $d_+=\tfrac{n(n-2)}4$, and $d_+=\mathop{\mathrm{tr}}I_+=\dim\mathfrak k=\#A$, so $\#A=\tfrac{2m(2m-2)}4=m(m-1)$, matching $\dim(\mathfrak{so}(m)\oplus\mathfrak{so}(m))=2\binom m2$. This is a count of **pairs**; the choice of $l$ is a choice of an **index** in $A_k$. The cited quantity is the wrong one, exactly as the finding says.
 
 **C3's justification does not stand where it is placed.** The sentence sits inside a branch opened four lines earlier (lines 5074–5076): *"Assume now that there exists $1\le k\le n$ with $\mathfrak i_k=\mathfrak k$. In particular, $\{(a,b)\mid a,b\in A_k\text{ and }a<b\}=A$, which implies that for every $1\le j\le n$ either $\mathfrak i_j=\mathfrak k$ or $\mathfrak i_j=\{0\}$."* That branch closes only at line 5087 with *"which is of course a contradiction to $\mathfrak k\simeq\mathfrak{so}(m)\oplus\mathfrak{so}(m)$"*, and the step *"$x_1e_l\wedge e_b\in\mathfrak i$, which implies that $\mathfrak i=\mathfrak k$"* uses precisely the branch's dichotomy, since it needs $\mathfrak i\supseteq\mathfrak i_b\ne\{0\}\Rightarrow\mathfrak i_b=\mathfrak k$. So the sentence is inside the branch.
 
@@ -89,7 +89,7 @@ Inside the branch, $A$ is $\{$all pairs from $A_k\}$, so $\binom{\lvert A_k\rver
 
 ## 5. C8, the $n\ge15$ pair, which is the claim that breaks the lemma
 
-**Lemma 3.5.6 has exactly one hypothesis** (line 4178): *"Let assumption 1 hold. Then $\operatorname{scal}\ge(n+1)\tilde\theta_0(n)$."* There is no dimension hypothesis to be *"separate"* from Assumption 1. The $n\ge15$ of its proof is a **step**, and its only warrant is $n=2m\ge16$ from Assumption 1's $m\ge8$.
+**Lemma 3.5.6 has exactly one hypothesis** (line 4178): *"Let assumption 1 hold. Then $\mathop{\mathrm{scal}}\ge(n+1)\tilde\theta_0(n)$."* There is no dimension hypothesis to be *"separate"* from Assumption 1. The $n\ge15$ of its proof is a **step**, and its only warrant is $n=2m\ge16$ from Assumption 1's $m\ge8$.
 
 Both cases of the proof reduce to the sign of a quartic and both close the same way.
 

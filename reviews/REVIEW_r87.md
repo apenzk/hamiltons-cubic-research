@@ -10,7 +10,7 @@
 
 | # | Claim | Verdict |
 | --- | --- | --- |
-| 1 | $\operatorname{tr}R=n/4$, $c=1/(2(n-1))$, $\lVert W\rVert^2=\lVert R\rVert^2-n/(8(n-1))$ | **CONFIRMED** |
+| 1 | $\mathop{\mathrm{tr}}R=n/4$, $c=1/(2(n-1))$, $\lVert W\rVert^2=\lVert R\rVert^2-n/(8(n-1))$ | **CONFIRMED** |
 | 2 | Prop 2.2 eigenvalue data; $R$ supported on $\mathfrak h\subset\Lambda^2$; multiplicities $=d_i$ | **CONFIRMED**, and provably stronger than stated |
 | 3 | Dimension Lemma, threshold $3n^2(n-1)/(2(7n-4))$, Cauchy–Schwarz direction | **CONFIRMED**, exactly |
 | 4 | Coverage of rank $\ge2$ by certificates; family $(n,\dim\mathfrak h)$; twelve exceptionals | **CONFIRMED**, one omission in the residue list |
@@ -27,26 +27,26 @@
 
 Let $M=G/H$ be a compact symmetric space, $\mathfrak g=\mathfrak h\oplus\mathfrak p$, metric $\langle\cdot,\cdot\rangle=-B_{\mathfrak g}|_{\mathfrak p}$. Write $A:\Lambda^2\mathfrak p\to\mathfrak h$, $X\wedge Y\mapsto[X,Y]$.
 
-**(i) $R=A^*A$.** With $R(X,Y)Z=-[[X,Y],Z]$ and $\langle R(X\wedge Y),Z\wedge W\rangle=R(X,Y,W,Z)$, invariance of $B$ gives $R(X,Y,W,Z)=\langle[[X,Y],Z],W\rangle=\langle A(X\wedge Y),A(Z\wedge W)\rangle$. So $R$ is positive semidefinite, $\operatorname{im}R=\operatorname{im}A^*=\iota(\mathfrak h)$ and $\ker R=\iota(\mathfrak h)^\perp$, where $\iota:\mathfrak h\hookrightarrow\mathfrak{so}(\mathfrak p)\cong\Lambda^2\mathfrak p$ is the isotropy representation. This needs only $[\mathfrak p,\mathfrak p]=\mathfrak h$ (true for irreducible pairs, and for type II where $\mathfrak p=\{(X,-X)\}$, $\mathfrak h=\Delta\mathfrak g$) and $\iota$ injective (effectiveness).
+**(i) $R=A^*A$.** With $R(X,Y)Z=-[[X,Y],Z]$ and $\langle R(X\wedge Y),Z\wedge W\rangle=R(X,Y,W,Z)$, invariance of $B$ gives $R(X,Y,W,Z)=\langle[[X,Y],Z],W\rangle=\langle A(X\wedge Y),A(Z\wedge W)\rangle$. So $R$ is positive semidefinite, $\mathop{\mathrm{im}}R=\mathop{\mathrm{im}}A^*=\iota(\mathfrak h)$ and $\ker R=\iota(\mathfrak h)^\perp$, where $\iota:\mathfrak h\hookrightarrow\mathfrak{so}(\mathfrak p)\cong\Lambda^2\mathfrak p$ is the isotropy representation. This needs only $[\mathfrak p,\mathfrak p]=\mathfrak h$ (true for irreducible pairs, and for type II where $\mathfrak p=\{(X,-X)\}$, $\mathfrak h=\Delta\mathfrak g$) and $\iota$ injective (effectiveness).
 
 **(ii) The eigenvalue on each ideal.** $A^*z=\tfrac12\sum_a e_a\wedge[z,e_a]$, so $AA^*z=-\tfrac12\sum_a[e_a,[e_a,z]]$. Splitting the adjoint Casimir $\sum_{x\in\mathfrak g}[x,[x,z]]=-z$ into $\mathfrak h$- and $\mathfrak p$-parts and writing $B_{\mathfrak h_i}=\alpha_iB_{\mathfrak g}|_{\mathfrak h_i}$ gives
 
 $$\lambda_i=\tfrac12(1-\alpha_i)\ \text{on }\mathfrak h_i,\qquad \lambda_0=\tfrac12\ \text{on the centre }(\alpha_0=0).$$
 
-**(iii) The normalisation.** $\operatorname{Ric}=-\tfrac12B|_{\mathfrak p}=\tfrac12g$, so the Einstein constant is $\tfrac12$, $\operatorname{scal}=n/2$ and $\operatorname{tr}R=\operatorname{scal}/2=n/4$.
+**(iii) The normalisation.** $\mathop{\mathrm{Ric}}=-\tfrac12B|_{\mathfrak p}=\tfrac12g$, so the Einstein constant is $\tfrac12$, $\mathop{\mathrm{scal}}=n/2$ and $\mathop{\mathrm{tr}}R=\mathop{\mathrm{scal}}/2=n/4$.
 
-This is Petersen–Stanfield Propositions 2.1 and 2.2 rederived: their 2.1 reads $R=\tfrac12(I-P)$ on $\operatorname{ad}_{\mathfrak h}|_{\mathfrak p}$, which is exactly $\lambda_i=\tfrac12(1-\alpha_i)$, and their 2.2 adds $\operatorname{scal}=2\operatorname{tr}R$ and eigenvalue $\tfrac12$ on the centre. I read those two propositions in [petersen-stanfield-2508.11236.txt](https://arxiv.org/abs/2508.11236) only after deriving them.
+This is Petersen–Stanfield Propositions 2.1 and 2.2 rederived: their 2.1 reads $R=\tfrac12(I-P)$ on $\mathop{\mathrm{ad}}_{\mathfrak h}|_{\mathfrak p}$, which is exactly $\lambda_i=\tfrac12(1-\alpha_i)$, and their 2.2 adds $\mathop{\mathrm{scal}}=2\mathop{\mathrm{tr}}R$ and eigenvalue $\tfrac12$ on the centre. I read those two propositions in [petersen-stanfield-2508.11236.txt](https://arxiv.org/abs/2508.11236) only after deriving them.
 
 ---
 
 ## 1. The constants, CONFIRMED
 
-$$c=\frac{\operatorname{tr}R}{N}=\frac{n/4}{n(n-1)/2}=\frac1{2(n-1)},\qquad \lVert W\rVert^2=\lVert R\rVert^2-2c\operatorname{tr}R+Nc^2=\lVert R\rVert^2-\frac n{8(n-1)} .$$
+$$c=\frac{\mathop{\mathrm{tr}}R}{N}=\frac{n/4}{n(n-1)/2}=\frac1{2(n-1)},\qquad \lVert W\rVert^2=\lVert R\rVert^2-2c\mathop{\mathrm{tr}}R+Nc^2=\lVert R\rVert^2-\frac n{8(n-1)} .$$
 
 Both verified symbolically to residual $0$. Two further points the write-up does not make explicit but which are needed for the statement to mean anything:
 
-- $W=R-cI$ **is** the Weyl operator, because for an Einstein metric the non-Weyl part of $R$ is the constant-curvature operator with $K=\operatorname{scal}/(n(n-1))=(n/2)/(n(n-1))=1/(2(n-1))=c$. So $c$ is not an ad-hoc trace subtraction.
-- Consistency of the whole normalisation is checkable on the round sphere: $K=1/(2(n-1))$, $\operatorname{tr}R=KN=n/4$, $\mathfrak h=\mathfrak{so}(n)$, $\dim\mathfrak h=N$, $W=0$.
+- $W=R-cI$ **is** the Weyl operator, because for an Einstein metric the non-Weyl part of $R$ is the constant-curvature operator with $K=\mathop{\mathrm{scal}}/(n(n-1))=(n/2)/(n(n-1))=1/(2(n-1))=c$. So $c$ is not an ad-hoc trace subtraction.
+- Consistency of the whole normalisation is checkable on the round sphere: $K=1/(2(n-1))$, $\mathop{\mathrm{tr}}R=KN=n/4$, $\mathfrak h=\mathfrak{so}(n)$, $\dim\mathfrak h=N$, $W=0$.
 
 ## 2. The eigenvalue data, CONFIRMED, and stronger than the author states
 
@@ -56,13 +56,13 @@ Three sub-claims, each independently checked:
 | --- | --- | --- |
 | eigenvalue is constant on each block | CONFIRMED | $AA^*$ acts on $\mathfrak h_i$ by the scalar $\tfrac12(1-\alpha_i)$; a Casimir, hence scalar on an ideal |
 | multiplicity $=d_i=\dim\mathfrak h_i$ | CONFIRMED | $\iota$ injective, so $\iota(\mathfrak h_i)$ has dimension $d_i$ |
-| $R=0$ on the other $N-\dim\mathfrak h$ directions | CONFIRMED, and it is exactly $\ker R$ | $\operatorname{im}R=\iota(\mathfrak h)$ and $R$ self-adjoint, so $\ker R=\iota(\mathfrak h)^\perp$ |
+| $R=0$ on the other $N-\dim\mathfrak h$ directions | CONFIRMED, and it is exactly $\ker R$ | $\mathop{\mathrm{im}}R=\iota(\mathfrak h)$ and $R$ self-adjoint, so $\ker R=\iota(\mathfrak h)^\perp$ |
 
 The last row is **stronger** than the write-up claims. Since $\ker R=\ker A$ and $A^*$ is injective, every $\lambda_i$ is *strictly positive*: no simple block can silently degenerate into the kernel. So $\dim\mathfrak h$ is exactly the rank of $R$, and the Cauchy–Schwarz of step 2 is over exactly the non-kernel directions, which is what makes it as strong as it is.
 
 **Independent numerical-free validation of the whole eigenvalue pipeline.** I recomputed $\lambda_i$ from Killing-form ratios for six families with no reference to the project's Casimir dictionary, and in every case $\sum_id_i\lambda_i-n/4$ simplified to $0$ symbolically:
 
-| space | $\mathfrak h$ blocks and $\lambda$ | $\operatorname{tr}R-n/4$ |
+| space | $\mathfrak h$ blocks and $\lambda$ | $\mathop{\mathrm{tr}}R-n/4$ |
 | --- | --- | --- |
 | $\mathrm{Gr}_{\mathbb C}(p,q)$ | $\tfrac12$; $\tfrac q{2(p+q)}$ on $\mathfrak{su}(p)$; $\tfrac p{2(p+q)}$ on $\mathfrak{su}(q)$ | $0$ |
 | $\mathrm{Gr}_{\mathbb R}(p,q)$ | $\tfrac12\big(1-\tfrac{p-2}{p+q-2}\big)$, $\tfrac12\big(1-\tfrac{q-2}{p+q-2}\big)$ | $0$ |
@@ -80,7 +80,7 @@ Feeding these into $\theta^2=1/(4\lVert W\rVert^2)$ reproduces, symbolically and
 - $\lVert W\rVert^2(G)=\dfrac{n(n-3)}{16(n-1)}$, whence $\theta^2=4(n-1)/(n(n-3))$ and $\lVert W\rVert^2\ge\tfrac16\iff3n^2-17n+8\ge0$;
 - the point values $\mathrm{Gr}_{\mathbb C}(2,2)=14/27$ and $\mathrm{Gr}_{\mathbb C}(2,3)=275/774$ exactly.
 
-That last pair is the sharpest test in the file: $\mathrm{Gr}_{\mathbb C}(2,3)$ is the genuine three-eigenvalue case, $\mathfrak h=\mathfrak u(1)\oplus\mathfrak{su}(2)\oplus\mathfrak{su}(3)$ with $\lambda=\tfrac12,\tfrac3{10},\tfrac15$ and $d=1,3,8$, giving $\operatorname{tr}R=3=n/4$ and $\lVert R\rVert^2=21/25$ on the nose. So the block/multiplicity reading of Prop 2.2 is right on the one family where it could plausibly have been misread.
+That last pair is the sharpest test in the file: $\mathrm{Gr}_{\mathbb C}(2,3)$ is the genuine three-eigenvalue case, $\mathfrak h=\mathfrak u(1)\oplus\mathfrak{su}(2)\oplus\mathfrak{su}(3)$ with $\lambda=\tfrac12,\tfrac3{10},\tfrac15$ and $d=1,3,8$, giving $\mathop{\mathrm{tr}}R=3=n/4$ and $\lVert R\rVert^2=21/25$ on the nose. So the block/multiplicity reading of Prop 2.2 is right on the one family where it could plausibly have been misread.
 
 **A caveat on effectiveness, which the census silently needs.** The tabulated $\dim\mathfrak h$ is the dimension of the *isotropy algebra*, and it equals the rank of $R$ only when that algebra acts faithfully on $\mathfrak p$. This fails at $\mathfrak{so}(4)/\mathfrak u(2)$ ($m=2$ in the DIII family: $\mathfrak{su}(2)$ acts trivially on $\Lambda^2\mathbb C^2$, so the formula $\dim\mathfrak h=m^2=4$ exceeds $N=\binom22=1$). The $m\ge4$ shift excludes it, so the census is unaffected, but the exclusion is doing work the write-up does not mention.
 
@@ -111,7 +111,7 @@ Note the lemma is *one-directional*: failing the dimension test says nothing. $\
 | AII | $SU(2m)/Sp(m)$ | $(m{-}1)(2m{+}1)$ | $m(2m{+}1)$ | $m-1$ | $m\ge3$ | $m=3{+}a$ |
 | DIII | $SO(2m)/U(m)$ | $m(m{-}1)$ | $m^2$ | $\lfloor m/2\rfloor$ | $m\ge4$ | $m=4{+}a$ |
 | CI | $Sp(m)/U(m)$ | $m(m{+}1)$ | $m^2$ | $m$ | $m\ge2$ | $m=2{+}a$ |
-| II | compact simple $G$ | $\dim\mathfrak g$ | $\dim\mathfrak g$ | $\operatorname{rk}\mathfrak g$ | $\mathfrak g\ne\mathfrak{su}(2)$ | $\dim\ge6$ |
+| II | compact simple $G$ | $\dim\mathfrak g$ | $\dim\mathfrak g$ | $\mathop{\mathrm{rk}}\mathfrak g$ | $\mathfrak g\ne\mathfrak{su}(2)$ | $\dim\ge6$ |
 
 Every shift threshold is exactly the rank-$\ge2$ condition, and the $p\le q$ convention is harmless by $\mathrm{Gr}(p,q)\cong\mathrm{Gr}(q,p)$. The type II shift $\dim\ge6$ is weaker than needed (the only rank-one simple algebra is $\mathfrak{su}(2)$, $\dim3$, and the next simple algebra has $\dim8$), so it is conservative and still correct. These seven classical type-I families plus type II plus the twelve exceptionals **are** Cartan's full list, so the census is structurally exhaustive.
 
@@ -169,7 +169,7 @@ So equality holds at $\mathbb{CP}^2$ and nowhere else. **The strictness was not 
 
 One further remark worth recording: equality in the *Cauchy–Schwarz* step would require all $\lambda_i$ equal, hence all equal to the centre's $\tfrac12$, hence $\dim\mathfrak h=n/2$, which $\mathbb{CP}^2$ ($\dim\mathfrak h=4$, $n=4$) does not satisfy. So the equality case of the theorem is *not* an equality case of the lemma, and no confusion between the two is possible.
 
-**$\mathbb{CP}^2$ verification, independently.** $\mathfrak h=\mathfrak u(1)\oplus\mathfrak{su}(2)$, $\lambda=\tfrac12,\tfrac16$, $d=1,3$: $\operatorname{tr}R=\tfrac12+\tfrac12=1=n/4$; $c=\tfrac16$; $\lVert W\rVert^2=(\tfrac13)^2+3(\tfrac16-\tfrac16)^2+2\cdot(\tfrac16)^2=\tfrac19+\tfrac1{18}=\tfrac16$. Matches, and it also drops out of my general $\mathrm{Gr}_{\mathbb C}(1,2)$ formula as $\theta^2=3/2$.
+**$\mathbb{CP}^2$ verification, independently.** $\mathfrak h=\mathfrak u(1)\oplus\mathfrak{su}(2)$, $\lambda=\tfrac12,\tfrac16$, $d=1,3$: $\mathop{\mathrm{tr}}R=\tfrac12+\tfrac12=1=n/4$; $c=\tfrac16$; $\lVert W\rVert^2=(\tfrac13)^2+3(\tfrac16-\tfrac16)^2+2\cdot(\tfrac16)^2=\tfrac19+\tfrac1{18}=\tfrac16$. Matches, and it also drops out of my general $\mathrm{Gr}_{\mathbb C}(1,2)$ formula as $\theta^2=3/2$.
 
 ---
 
@@ -204,7 +204,7 @@ That is the strongest available defence of the author, and I think it holds.
 
 **The overreach is one word.** The headline reads "**THE SYMMETRIC CLASS IS CLOSED**". It is not. The *irreducible* symmetric class is closed. Reducible symmetric spaces are not products of spheres only, $\mathbb{CP}^2\times S^8$, $\mathbb{HP}^2\times S^4$, $\mathbb{CP}^2\times\mathbb{CP}^2$ are all compact symmetric, all reducible, all outside the theorem, and **none of them is a product of spheres**. The Corollary's wording ("no compact irreducible symmetric space … attains the maximum") is honest; the headline and the sentence "So the irreducible symmetric class is eliminated wholesale as a competitor to the sphere products" leave the reader with a closure that has not been proved.
 
-**The repair is three lines, and I supply it.** Let $M=M_1\times\dots\times M_k$ with each $M_a$ an irreducible compact symmetric space normalised to Einstein constant $\tfrac12$ (forced, or the product is not Einstein). Then $R=\bigoplus_aR_a$, zero on the mixed part of $\Lambda^2$, so $\lVert R\rVert^2=\sum_a\lVert R_a\rVert^2$ and $\operatorname{tr}R=\sum_an_a/4=n/4$. Apply the lemma's own Cauchy–Schwarz **inside each factor**, over all of $\Lambda^2\mathbb R^{n_a}$:
+**The repair is three lines, and I supply it.** Let $M=M_1\times\dots\times M_k$ with each $M_a$ an irreducible compact symmetric space normalised to Einstein constant $\tfrac12$ (forced, or the product is not Einstein). Then $R=\bigoplus_aR_a$, zero on the mixed part of $\Lambda^2$, so $\lVert R\rVert^2=\sum_a\lVert R_a\rVert^2$ and $\mathop{\mathrm{tr}}R=\sum_an_a/4=n/4$. Apply the lemma's own Cauchy–Schwarz **inside each factor**, over all of $\Lambda^2\mathbb R^{n_a}$:
 
 $$\lVert R_a\rVert^2\ \ge\ \frac{(n_a/4)^2}{\binom{n_a}2}=\frac{n_a}{8(n_a-1)}=\lVert R_{S^{n_a}}\rVert^2,$$
 

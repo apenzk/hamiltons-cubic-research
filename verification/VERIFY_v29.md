@@ -6,7 +6,7 @@
 
 | # | Claim | Verdict |
 |---|---|---|
-| A | $d=\min(\alpha,D-\alpha)$ is $\operatorname{dist}(\Gamma,\operatorname{spec}W^*)/g_n$, and $D=\tfrac{2m-1}{m-1}$ | **CONFIRMED**, and $D$ cross-checks against an independent entry |
+| A | $d=\min(\alpha,D-\alpha)$ is $\mathop{\mathrm{dist}}(\Gamma,\mathop{\mathrm{spec}}W^*)/g_n$, and $D=\tfrac{2m-1}{m-1}$ | **CONFIRMED**, and $D$ cross-checks against an independent entry |
 | B | $C(\alpha,\gamma)=\tfrac{\alpha(1+\alpha)}{d(d-\gamma)}$ reduces to $\tfrac{1+\alpha}{\alpha-\gamma}$ on $\alpha\le D/2$ | **CONFIRMED** |
 | C | **The written proof's factor list produces $C$** | **REFUTED**, it multiplies out to $\tfrac{\alpha(1+\alpha)}{\gamma(d-\gamma)}$, which is $12$ at $(\tfrac12,\tfrac14)$ where the lemma and r441 both give $6$ |
 | D | $\min_\gamma$ at $\gamma=d/2$; $J=4\alpha(1+\alpha)/d^3$; both branches strictly monotone toward $D/2$ | **CONFIRMED** |
@@ -42,9 +42,9 @@ Every fraction below is exact. Decimals are given to the digits shown and are tr
 | Hypothesis | Where the proof uses it |
 |---|---|
 | $W^*=S^m\times S^m$ | gives *symmetric*, *two-point spectrum*, *$\ker W^*=0$*: all three are load-bearing |
-| $\Gamma$ = circle of radius $\alpha g_n$ about $\lambda_-$ | the contour length $2\pi\alpha g_n$; $\max_\Gamma\lvert\zeta\rvert=(1+\alpha)g_n$; $\operatorname{dist}(\Gamma,\lambda_-)=\alpha g_n$ |
+| $\Gamma$ = circle of radius $\alpha g_n$ about $\lambda_-$ | the contour length $2\pi\alpha g_n$; $\max_\Gamma\lvert\zeta\rvert=(1+\alpha)g_n$; $\mathop{\mathrm{dist}}(\Gamma,\lambda_-)=\alpha g_n$ |
 | $\rho=\gamma g_n/\lVert H\rVert_{op}$ | gives $\lVert W(z)-W^*\rVert\le\gamma g_n$ on $\lvert z\rvert\le\rho$, which is the whole content of the Neumann step |
-| $D=\tfrac{2m-1}{m-1}$ | $\operatorname{dist}(\Gamma,\lambda_+)=\lvert D-\alpha\rvert g_n$ |
+| $D=\tfrac{2m-1}{m-1}$ | $\mathop{\mathrm{dist}}(\Gamma,\lambda_+)=\lvert D-\alpha\rvert g_n$ |
 
 **Used by the proof, absent from the statement.** Each of these is a hypothesis, not a convention.
 
@@ -97,7 +97,7 @@ The consequence that entry draws is worth restating because §7 turns on it: $J\
 
 ### 4.1 What is true
 
-The distance from $\Gamma$ to $\operatorname{spec}W^*=\{\lambda_-,\lambda_+\}$ is $\min(\alpha,\lvert D-\alpha\rvert)g_n$; on the admissible $\alpha<D$ this is $dg_n$ with $d=\min(\alpha,D-\alpha)$, switching at $\alpha=D/2$. **Claim A confirmed.** $D$ cross-checks independently: [second-order.md:901](../findings/second-order.md) records the Daleckii–Krein mixed coefficient $\lambda_-/(\lambda_--\lambda_+)=\tfrac{m-1}{2m-1}$, whence $\lvert\lambda_+-\lambda_-\rvert=\tfrac{2m-1}{m-1}\,\lvert\lambda_-\rvert$, the same $D$, from a computation that shares nothing with the contour work.
+The distance from $\Gamma$ to $\mathop{\mathrm{spec}}W^*=\{\lambda_-,\lambda_+\}$ is $\min(\alpha,\lvert D-\alpha\rvert)g_n$; on the admissible $\alpha<D$ this is $dg_n$ with $d=\min(\alpha,D-\alpha)$, switching at $\alpha=D/2$. **Claim A confirmed.** $D$ cross-checks independently: [second-order.md:901](../findings/second-order.md) records the Daleckii–Krein mixed coefficient $\lambda_-/(\lambda_--\lambda_+)=\tfrac{m-1}{2m-1}$, whence $\lvert\lambda_+-\lambda_-\rvert=\tfrac{2m-1}{m-1}\,\lvert\lambda_-\rvert$, the same $D$, from a computation that shares nothing with the contour work.
 
 The correct estimate, which reproduces the stated $C$, runs on the resolvent **difference**. Since $A(0)=\mathrm{Alt}(W^*_-)=0$ ([second-order.md:1113](../findings/second-order.md)),
 
@@ -152,9 +152,9 @@ The as-written chain contradicts r441's $M\le6\rho$, the one value on the record
 | smallest $m$ at which the formula is defined, $m=2$ | $D=3$, $C^*=\tfrac{10}3$, $J^*=\tfrac{40}9$. Correct, and correctly flagged out of scope. **This edge has already bitten**: r711 carried $J^*=\tfrac{40}9$ into L158's threshold, and [second-order.md:1302](../findings/second-order.md) had to correct it |
 | $\ker W\ne0$, witness $W_{\mathbb{CP}^2}$, $\dim\ker W=3$ | **L156 asserts nothing there, and cannot.** See below |
 
-**$\ker W\ne0$.** The lemma is stated at $W^*=S^m\times S^m$, whose spectrum is two-valued **with no kernel** ([second-order.md:1108](../findings/second-order.md)). At $W_{\mathbb{CP}^2}$ the construction is void at the first step, not merely unproven: $0\in\operatorname{spec}$, so no circle about $\lambda_-$ separates the negative part from the rest at distance $\Theta(g_n)$, $d$ is not $\min(\alpha,D-\alpha)$, and $z\mapsto W_-(z)$ is not holomorphic at $z=0$, which removes the Cauchy estimate that defines $M$. **This is the correct answer and the entry gives it implicitly by hypothesis; recorded here because [trap W1](../findings/INDEX-traps.md) records that kernel failures are *"all invisible while working with sphere products"* and L156 is a sphere-product statement.** The exposure is in the entries that assume $\ker W^*=0$ *generally*, [ROUND_L147](ROUND_L147.md) already carries that debt, not in L156. **No finding against L156.**
+**$\ker W\ne0$.** The lemma is stated at $W^*=S^m\times S^m$, whose spectrum is two-valued **with no kernel** ([second-order.md:1108](../findings/second-order.md)). At $W_{\mathbb{CP}^2}$ the construction is void at the first step, not merely unproven: $0\in\mathop{\mathrm{spec}}$, so no circle about $\lambda_-$ separates the negative part from the rest at distance $\Theta(g_n)$, $d$ is not $\min(\alpha,D-\alpha)$, and $z\mapsto W_-(z)$ is not holomorphic at $z=0$, which removes the Cauchy estimate that defines $M$. **This is the correct answer and the entry gives it implicitly by hypothesis; recorded here because [trap W1](../findings/INDEX-traps.md) records that kernel failures are *"all invisible while working with sphere products"* and L156 is a sphere-product statement.** The exposure is in the entries that assume $\ker W^*=0$ *generally*, [ROUND_L147](ROUND_L147.md) already carries that debt, not in L156. **No finding against L156.**
 
-**The constraints, and which binds.** $\gamma<d$ is *equivalent* to the conjunction of $\gamma<\alpha$ and $\alpha+\gamma<D$: on $\alpha\le D/2$ it reads $\gamma<\alpha$, whence $\alpha+\gamma<2\alpha\le D$; on $\alpha\ge D/2$ it reads $\alpha+\gamma<D$ directly. So the entry's *"$\alpha+\gamma<D$ is real and slack"* names one face of a single constraint, not a second constraint. $\gamma<1$ is genuinely separate. At the optimum, $\gamma^*=\tfrac D4\in(\tfrac12,\tfrac34]$ for $m\ge2$, so $\gamma^*<1$ and $\gamma^*=d/2<d$: **both slack, as claimed.** And $\alpha<1$ is indeed not a constraint, $0\notin\operatorname{spec}W^*$, the integrand $\zeta(W-\zeta)^{-1}$ is regular at $\zeta=0$, and enclosing a non-spectral point changes no Riesz projection. **Claim I confirmed.**
+**The constraints, and which binds.** $\gamma<d$ is *equivalent* to the conjunction of $\gamma<\alpha$ and $\alpha+\gamma<D$: on $\alpha\le D/2$ it reads $\gamma<\alpha$, whence $\alpha+\gamma<2\alpha\le D$; on $\alpha\ge D/2$ it reads $\alpha+\gamma<D$ directly. So the entry's *"$\alpha+\gamma<D$ is real and slack"* names one face of a single constraint, not a second constraint. $\gamma<1$ is genuinely separate. At the optimum, $\gamma^*=\tfrac D4\in(\tfrac12,\tfrac34]$ for $m\ge2$, so $\gamma^*<1$ and $\gamma^*=d/2<d$: **both slack, as claimed.** And $\alpha<1$ is indeed not a constraint, $0\notin\mathop{\mathrm{spec}}W^*$, the integrand $\zeta(W-\zeta)^{-1}$ is regular at $\zeta=0$, and enclosing a non-spectral point changes no Riesz projection. **Claim I confirmed.**
 
 ## 6. The values, verified exactly
 

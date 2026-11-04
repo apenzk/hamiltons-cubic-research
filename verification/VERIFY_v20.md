@@ -40,7 +40,7 @@ Throughout, $h$ is diagonalised in an orthonormal frame of $B_1$, free, since $h
 
 | hypothesis | where the proof needs it |
 |---|---|
-| $h\in S^2_0(\mathbb R^m)$, i.e. $\operatorname{tr}h=0$ | three separate places: it kills $(\operatorname{tr}h)g_q$ in $\mathrm{Ric}$ **and** makes $\mathrm{Ric}_0=\mathrm{Ric}$ with $s=0$ (§2); it is what turns $\sum_{a\ne a'}h_ah_{a'}$ into $-\lVert h\rVert^2$ in the $\lVert H\rVert_F^2$ identity (§3); and it is the whole content of the in-block-wins inequality (§4) |
+| $h\in S^2_0(\mathbb R^m)$, i.e. $\mathop{\mathrm{tr}}h=0$ | three separate places: it kills $(\mathop{\mathrm{tr}}h)g_q$ in $\mathrm{Ric}$ **and** makes $\mathrm{Ric}_0=\mathrm{Ric}$ with $s=0$ (§2); it is what turns $\sum_{a\ne a'}h_ah_{a'}$ into $-\lVert h\rVert^2$ in the $\lVert H\rVert_F^2$ identity (§3); and it is the whole content of the in-block-wins inequality (§4) |
 | $H$ = the **Weyl image**, not $h\owedge g_q$ | the in-block eigenvalues exist only after projection; before it they are $0$ |
 | $\lVert H\rVert_F=1$ | used **only** for the numeral $1/\sqrt{m-1}$. The operator-norm formula itself is homogeneous of degree $1$ in $h$ and needs no normalisation |
 | $n=2m$ | load-bearing: $\alpha,\beta$ are $1-\frac m{n-2}$ and $\frac m{n-2}$, and only at $n=2m$ do these become $\frac{m-2}{2(m-1)},\frac m{2(m-1)}$. §7 exhibits the failure off it |
@@ -61,7 +61,7 @@ Throughout, $h$ is diagonalised in an orthonormal frame of $B_1$, free, since $h
 
 | import | hypotheses | checked? |
 |---|---|---|
-| the record's projector $P(X)=Y-\frac2{n-2}\mathrm{KN}(\rho_0)-\frac1{n(n-1)}s\,\mathrm{KN}(g)$, $Y=X-\mathrm{Alt}(X)$ ([nondegeneracy.md](../findings/nondegeneracy.md), the projector paragraph) | $\mathrm{Alt}(X)=0$ needed for $Y=X$; $s=0$ needed to drop the third term | **both hold**: $h\owedge g_q$ is a Kulkarni–Nomizu product, hence satisfies the first Bianchi identity, so $\mathrm{Alt}=0$; and $s=\operatorname{tr}\mathrm{Ric}=m\operatorname{tr}h=0$. With $\mathrm{KN}=\tfrac12(\cdot\owedge g)$ the surviving term is $\frac1{n-2}\mathrm{Ric}_0\owedge g$, the classical one |
+| the record's projector $P(X)=Y-\frac2{n-2}\mathrm{KN}(\rho_0)-\frac1{n(n-1)}s\,\mathrm{KN}(g)$, $Y=X-\mathrm{Alt}(X)$ ([nondegeneracy.md](../findings/nondegeneracy.md), the projector paragraph) | $\mathrm{Alt}(X)=0$ needed for $Y=X$; $s=0$ needed to drop the third term | **both hold**: $h\owedge g_q$ is a Kulkarni–Nomizu product, hence satisfies the first Bianchi identity, so $\mathrm{Alt}=0$; and $s=\mathop{\mathrm{tr}}\mathrm{Ric}=m\mathop{\mathrm{tr}}h=0$. With $\mathrm{KN}=\tfrac12(\cdot\owedge g)$ the surviving term is $\frac1{n-2}\mathrm{Ric}_0\owedge g$, the classical one |
 | [L27](../findings/nondegeneracy.md) and the $S^p\times S^q$ spectrum of $L_e$ | $p,q\ge3$, $(p,q)\ne(3,3)$ | holds at $p=q=m\ge5$. The summand carrying $\lambda_m=\frac{m-2}{2(m-1)}$ has multiplicity $s_m=\frac{(m+2)(m-1)}2=\dim S^2_0(\mathbb R^m)$, and it occurs **twice**, once for each of $m=p$ and $m=q$, the record's own table says two |
 | L145's $g_n=\frac2n\sqrt{\frac{n-2}{2(n-1)}}$ and the disc $g_n/\lVert H\rVert_{op}$ | analyticity of $W\mapsto W_-$; a Frobenius ball | $g_n$ re-derived exactly in §6; the disc machinery itself is outside the brief and I take it as given |
 
@@ -69,9 +69,9 @@ Throughout, $h$ is diagonalised in an orthonormal frame of $B_1$, free, since $h
 
 For symmetric $A,B$ on $\mathbb R^n$, tracing the Kulkarni–Nomizu product on the first and third slots,
 
-$$\mathrm{Ric}(A\owedge B)=(\operatorname{tr}A)\,B+(\operatorname{tr}B)\,A-AB-BA .$$
+$$\mathrm{Ric}(A\owedge B)=(\mathop{\mathrm{tr}}A)\,B+(\mathop{\mathrm{tr}}B)\,A-AB-BA .$$
 
-With $A=h$ (traceless, supported on $B_1$) and $B=g_q$ (trace $m$, supported on $B_2$): $\operatorname{tr}h=0$, and $hg_q=g_qh=0$ because the supports are orthogonal blocks. Hence $\mathrm{Ric}(h\owedge g_q)=m\,h$, which is nonzero for $h\ne0$, and $s=m\operatorname{tr}h=0$. **C1 CONFIRMED**, and the projection term does survive.
+With $A=h$ (traceless, supported on $B_1$) and $B=g_q$ (trace $m$, supported on $B_2$): $\mathop{\mathrm{tr}}h=0$, and $hg_q=g_qh=0$ because the supports are orthogonal blocks. Hence $\mathrm{Ric}(h\owedge g_q)=m\,h$, which is nonzero for $h\ne0$, and $s=m\mathop{\mathrm{tr}}h=0$. **C1 CONFIRMED**, and the projection term does survive.
 
 With $s=0$ and $\mathrm{Alt}=0$ the record's projector reduces to $H=h\owedge g_q-\frac1{n-2}(mh)\owedge g$. Splitting $g=g_p+g_q$ and using $n-2=2m-2$,
 
@@ -248,7 +248,7 @@ $$\lambda_m>\mu\iff\frac{m-2}{2(m-1)}>\frac1{m-1}\iff m-2>2\iff m\ge5 .$$
 
 ## 11. What would falsify the statement, and what I did to look for it
 
-- **For C4 (in-block always wins):** a traceless $h$ with $\frac m{m-2}\max_{a\ne a'}\lvert h_a+h_{a'}\rvert<\max_a\lvert h_a\rvert$. I solved the extremal problem in closed form, the constraint $h_j\le c-M$ for all $j\ne a^*$ summed against $\operatorname{tr}h=0$ gives $c\ge\frac{m-2}{m-1}M$, tight at the spike, and no such $h$ exists at any $m$. **Not found; provably absent.**
+- **For C4 (in-block always wins):** a traceless $h$ with $\frac m{m-2}\max_{a\ne a'}\lvert h_a+h_{a'}\rvert<\max_a\lvert h_a\rvert$. I solved the extremal problem in closed form, the constraint $h_j\le c-M$ for all $j\ne a^*$ summed against $\mathop{\mathrm{tr}}h=0$ gives $c\ge\frac{m-2}{m-1}M$, tight at the spike, and no such $h$ exists at any $m$. **Not found; provably absent.**
 - **For C5/C10 (the supremum $1/\sqrt{m-1}$):** an element of the **joint** eigenspace with $\lVert H\rVert_{op}>\lVert H\rVert_F/\sqrt{m-1}$. I computed the third branch exactly, $\sup=\frac{\sqrt{m-2}}m$, attained at $h\propto k\propto(m-1,-1,\dots,-1)$, and $(m-1)(m-2)<m^2$ closes it. **Not found; provably absent, but by a line L146 does not contain.**
 - **For the equality clause read jointly:** found, in closed form, at $m=5$ with $h=k=(1,0,0,0,-1)$, and the whole family $h=k=(1,0,\dots,0,-1)$ falsifies it for every $m\ge5$.
 - **For the transported $n$-form:** found, in closed form, at $m=5$, $p=10$, $n=20$, $h=(4,-1,-1,-1,-1)$: $\frac{\sqrt{26}}{15}>\frac13$.

@@ -4,11 +4,11 @@
 
 ## The definition this programme needs, quoted from the body
 
-> $R' = R^2 + R^\#$ where $\langle R^\#x,y\rangle=-\tfrac12\operatorname{tr}(\mathrm{ad}_x R\,\mathrm{ad}_y R)$ for $x,y\in\mathfrak g$.
+> $R' = R^2 + R^\#$ where $\langle R^\#x,y\rangle=-\tfrac12\mathop{\mathrm{tr}}(\mathrm{ad}_x R\,\mathrm{ad}_y R)$ for $x,y\in\mathfrak g$.
 
 And the step it makes available, from the paper's own Claim (p. 212 of the extraction):
 
-> If $R\in C(S,h)$ and $v\in S$ with $R(v,\bar v)=h$, then $R^2(v,\bar v)+R^\#(v,\bar v)\ge0$, via $2R^\#(v,\bar v)=-\operatorname{tr}(\mathrm{ad}_v R\,\mathrm{ad}_{\bar v}R)\ge0$.
+> If $R\in C(S,h)$ and $v\in S$ with $R(v,\bar v)=h$, then $R^2(v,\bar v)+R^\#(v,\bar v)\ge0$, via $2R^\#(v,\bar v)=-\mathop{\mathrm{tr}}(\mathrm{ad}_v R\,\mathrm{ad}_{\bar v}R)\ge0$.
 
 ## Why it matters here
 
@@ -20,6 +20,6 @@ The formula above rewrites that term through the **adjoint representation of $\m
 
 ## The target this opens
 
-> **Bound $\lvert\langle M^\#,M\rangle\rvert$ in terms of $\operatorname{tr}(M^3)$ and $\lVert M\rVert$ using the $\mathrm{ad}$-form**, sharply enough that $\theta=p_3(\mu)+\langle M^\#,M\rangle$ closes at $\theta_0(n)$.
+> **Bound $\lvert\langle M^\#,M\rangle\rvert$ in terms of $\mathop{\mathrm{tr}}(M^3)$ and $\lVert M\rVert$ using the $\mathrm{ad}$-form**, sharply enough that $\theta=p_3(\mu)+\langle M^\#,M\rangle$ closes at $\theta_0(n)$.
 
 *Separate Okumura caps on the two cubics reach $4.0129$ at $n=12$ against $\theta_0(12)=1.236$, a factor $3.25$ ([bispectral.md](../../findings/bispectral.md)). Any bound treating the two terms independently is already known to fail by that margin, so the $\mathrm{ad}$-form has to be used for the coupling and not as a second separate cap.*

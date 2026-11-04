@@ -2,15 +2,15 @@
 
 *Cold brief, Gate 2. Every claim below was re-derived from the definitions before the record was opened; the record was then read to check attribution and scope. Analysis only, as the programme's standing rule requires, the one numerical act is a screen of identities I was about to record, on sphere-product critical points I constructed and verified critical by hand first, reported as a screen and never as evidence.*
 
-**Headline.** Claims 1 and 2 are **CONFIRMED** in full, signs and factors included, and they agree with [r376](REVIEW_r376.md). Claim 3's chain is **CONFIRMED link by link**, but with two corrections that change what the entry is worth: its stated conclusion is **CORRECTED**, since "the exceptional directions are confined to $\operatorname{span}\{u,v\}$" is false and I give a hand witness; and its **novelty is CORRECTED downward**, since the headline count "at most two eigenvalues of $N$ in $(0,\theta)$" already follows in two lines from a statement the record carries verbatim, by Cauchy interlacing, with no compression needed. What the compression genuinely adds is a **rank refinement the entry did not notice**, and that refinement is strictly stronger exactly in the orbit-free blocks [I18](../plan.md) is about.
+**Headline.** Claims 1 and 2 are **CONFIRMED** in full, signs and factors included, and they agree with [r376](REVIEW_r376.md). Claim 3's chain is **CONFIRMED link by link**, but with two corrections that change what the entry is worth: its stated conclusion is **CORRECTED**, since "the exceptional directions are confined to $\mathop{\mathrm{span}}\{u,v\}$" is false and I give a hand witness; and its **novelty is CORRECTED downward**, since the headline count "at most two eigenvalues of $N$ in $(0,\theta)$" already follows in two lines from a statement the record carries verbatim, by Cauchy interlacing, with no compression needed. What the compression genuinely adds is a **rank refinement the entry did not notice**, and that refinement is strictly stronger exactly in the orbit-free blocks [I18](../plan.md) is about.
 
 ---
 
 #### Claim 1, the identity for $B$ and the $L_e$ pair block: CONFIRMED
 
-**(a) The row-sum step.** For $i\in I$, $M\mathbf1=0$ reads $\sum_{l\in I}M_{il}+M_{ij}+M_{ik}=0$, and $\sum_{l\in I}M_{il}=(N\mathbf1)_i$ exactly (the $l=i$ term is $M_{ii}=0$ on both sides). So $(N\mathbf1)_i=-u_i-v_i$, hence $\operatorname{diag}(N\mathbf1)=-\operatorname{diag}(u+v)$ and
+**(a) The row-sum step.** For $i\in I$, $M\mathbf1=0$ reads $\sum_{l\in I}M_{il}+M_{ij}+M_{ik}=0$, and $\sum_{l\in I}M_{il}=(N\mathbf1)_i$ exactly (the $l=i$ term is $M_{ii}=0$ on both sides). So $(N\mathbf1)_i=-u_i-v_i$, hence $\mathop{\mathrm{diag}}(N\mathbf1)=-\mathop{\mathrm{diag}}(u+v)$ and
 
-$$B:=\Delta^{(jk)}+(\theta+M_{jk})\mathrm{Id}=(\theta+M_{jk})\mathrm{Id}-\operatorname{diag}(u+v)-N .$$
+$$B:=\Delta^{(jk)}+(\theta+M_{jk})\mathrm{Id}=(\theta+M_{jk})\mathrm{Id}-\mathop{\mathrm{diag}}(u+v)-N .$$
 
 Ricci-flatness is the whole content of the step and the entry says so. **Confirmed.**
 
@@ -28,7 +28,7 @@ $$\tfrac12\mathrm{Id}-\tfrac1{2\theta}B=\tfrac12\mathrm{Id}-\tfrac{\Delta^{(jk)}
 
 #### Claim 2, the three exact vectors: CONFIRMED, and it agrees with r376 on the sign
 
-**(1) $B\mathbf1=(\theta+M_{jk})\mathbf1$.** $\Delta^{(jk)}\mathbf1=\operatorname{diag}(N\mathbf1)\mathbf1-N\mathbf1=0$ for any $N$. **Confirmed**, and it needs nothing beyond $\Delta$ being a Laplacian.
+**(1) $B\mathbf1=(\theta+M_{jk})\mathbf1$.** $\Delta^{(jk)}\mathbf1=\mathop{\mathrm{diag}}(N\mathbf1)\mathbf1-N\mathbf1=0$ for any $N$. **Confirmed**, and it needs nothing beyond $\Delta$ being a Laplacian.
 
 **(2) $Bu=Bv=M_{jk}(u+v)-u\circ v$, checked in the detail the brief asks for.**
 
@@ -41,7 +41,7 @@ $$(M^2)_{ij}=\underbrace{\textstyle\sum_{l\in I}M_{il}M_{lj}}_{=(Nu)_i}+\underbr
 
 *Substituting.* $(Bu)_i=(\theta+M_{jk})u_i-(u_i+v_i)u_i-(Nu)_i=M_{jk}u_i-u_iv_i+M_{jk}v_i$. So $Bu=M_{jk}(u+v)-u\circ v$. **Confirmed.**
 
-*The $j\leftrightarrow k$ swap.* **It is legitimate, and it is a genuine symmetry rather than a notational one.** The pair $\{j,k\}$ is unordered: $I$, $N$ and $\operatorname{diag}(u+v)$ are all invariant under the swap, $M_{kj}=M_{jk}$ by symmetry, so $B$ is invariant while $u\leftrightarrow v$. The identical computation returns $Bv=M_{jk}(v+u)-v\circ u$, the same vector. **Confirmed.**
+*The $j\leftrightarrow k$ swap.* **It is legitimate, and it is a genuine symmetry rather than a notational one.** The pair $\{j,k\}$ is unordered: $I$, $N$ and $\mathop{\mathrm{diag}}(u+v)$ are all invariant under the swap, $M_{kj}=M_{jk}$ by symmetry, so $B$ is invariant while $u\leftrightarrow v$. The identical computation returns $Bv=M_{jk}(v+u)-v\circ u$, the same vector. **Confirmed.**
 
 **(3) $B(u-v)=0$, and it agrees with [r376](REVIEW_r376.md) including the sign.** $o_i=M_{ki}-M_{ji}=v_i-u_i$, so $o=v-u$ and $Bo=-(Bu-Bv)=0$; equivalently $\Delta^{(jk)}o=-(\theta+M_{jk})o$. I re-derived r376's route independently and it matches term for term:
 $$(No)_i=\big[(M^2)_{ik}-u_iM_{jk}\big]-\big[(M^2)_{ij}-v_iM_{jk}\big]=o_i(\theta+M_{jk})-o_i(u_i+v_i),$$
@@ -55,7 +55,7 @@ using $u_i^2-v_i^2=-o_i(u_i+v_i)$; then $(\Delta o)_i=-(u_i+v_i)o_i-(No)_i=-(\th
 
 **Link 1: $M^2-\theta M\succeq0$ at a pure critical point.** Off the diagonal, criticality gives $(M^2-\theta M)_{il}=-M_{il}^2$; on the diagonal, hollowness gives $(M^2)_{ii}=\sum_lM_{il}^2$ and $\theta M_{ii}=0$. So
 
-$$M^2-\theta M=\operatorname{diag}\big(M^{\circ2}\mathbf1\big)-M^{\circ2}=L\big(M^{\circ2}\big),$$
+$$M^2-\theta M=\mathop{\mathrm{diag}}\big(M^{\circ2}\mathbf1\big)-M^{\circ2}=L\big(M^{\circ2}\big),$$
 
 a weighted graph Laplacian with weights $M_{il}^2\ge0$, hence PSD. **Confirmed, and the scope is right for the use.** It needs symmetry, hollowness and off-diagonal criticality; it does **not** need $M\mathbf1=0$ or $\theta>0$.
 
@@ -67,25 +67,25 @@ $$\Pi\big(M^2-\theta M\big)\Pi=N^2-\theta N+uu^\top+vv^\top .$$
 
 **Link 3: a compression of a PSD matrix is PSD.** $x^\top\Pi A\Pi x=(\Pi^\top x)^\top A(\Pi^\top x)\ge0$. **Confirmed**, and for a coordinate projection it is immediate.
 
-**Link 4: PSD-minus-rank-$r$ bounds the negative count.** Write $C=N^2-\theta N$ and $R=uu^\top+vv^\top\succeq0$, $\operatorname{rank}R=\dim\operatorname{span}\{u,v\}=:r\le2$. Let $V_-$ be the span of $C$'s negative eigenvectors, $d=\dim V_-$, $m=|I|$. If $d>r$ then $\dim(V_-\cap\ker R)\ge d+(m-r)-m=d-r\ge1$; any $0\ne x$ there has $x^\top Rx=0$ and $x^\top Cx<0$, so $x^\top(C+R)x<0$, contradicting $C+R\succeq0$. Hence $d\le r$. **Confirmed**, and note this subspace form needs no case split, whereas the Weyl-inequality form ($\lambda_{i+2}(C)\le\lambda_i(C+R)+\lambda_3(-R)$) needs $m\ge5$ for $\lambda_3(-R)=0$. The entry says "up to the interlacing" without naming an argument; the subspace argument above is the one that works.
+**Link 4: PSD-minus-rank-$r$ bounds the negative count.** Write $C=N^2-\theta N$ and $R=uu^\top+vv^\top\succeq0$, $\mathop{\mathrm{rank}}R=\dim\mathop{\mathrm{span}}\{u,v\}=:r\le2$. Let $V_-$ be the span of $C$'s negative eigenvectors, $d=\dim V_-$, $m=|I|$. If $d>r$ then $\dim(V_-\cap\ker R)\ge d+(m-r)-m=d-r\ge1$; any $0\ne x$ there has $x^\top Rx=0$ and $x^\top Cx<0$, so $x^\top(C+R)x<0$, contradicting $C+R\succeq0$. Hence $d\le r$. **Confirmed**, and note this subspace form needs no case split, whereas the Weyl-inequality form ($\lambda_{i+2}(C)\le\lambda_i(C+R)+\lambda_3(-R)$) needs $m\ge5$ for $\lambda_3(-R)=0$. The entry says "up to the interlacing" without naming an argument; the subspace argument above is the one that works.
 
 **Link 5: the translation to $(0,\theta)$.** $C=p(N)$ with $p(t)=t(t-\theta)$, a polynomial in $N$, so $C$'s eigenvalues are $p(\lambda_i(N))$ on the same eigenvectors, and $p(\lambda)<0\iff\lambda\in(0,\theta)$ given $\theta>0$. So $n_-(C)$ **is** the number of $N$-eigenvalues in $(0,\theta)$, with multiplicity. **Confirmed**; $\theta>0$ is load-bearing and is granted.
 
 ##### The stated conclusion is wrong on one clause, REFUTED, with a hand witness
 
-> *"the two exceptional directions are confined to $\operatorname{span}\{u,v\}$ up to the interlacing"*
+> *"the two exceptional directions are confined to $\mathop{\mathrm{span}}\{u,v\}$ up to the interlacing"*
 
-**What the argument gives is strictly weaker.** If $Nw=\lambda w$ with $\lambda\in(0,\theta)$ then $w^\top Cw<0$, so $w^\top Rw>0$, i.e. $(u^\top w)^2+(v^\top w)^2>0$: **$w$ has a nonzero projection onto $\operatorname{span}\{u,v\}$**. Membership does not follow, and generically fails, because $\operatorname{span}\{u,v\}$ is not $N$-invariant, $Nu=\theta u-u\circ u-M_{jk}v$ carries $u\circ u$, which leaves the plane.
+**What the argument gives is strictly weaker.** If $Nw=\lambda w$ with $\lambda\in(0,\theta)$ then $w^\top Cw<0$, so $w^\top Rw>0$, i.e. $(u^\top w)^2+(v^\top w)^2>0$: **$w$ has a nonzero projection onto $\mathop{\mathrm{span}}\{u,v\}$**. Membership does not follow, and generically fails, because $\mathop{\mathrm{span}}\{u,v\}$ is not $N$-invariant, $Nu=\theta u-u\circ u-M_{jk}v$ carries $u\circ u$, which leaves the plane.
 
 **Witness, entirely by hand.** Take $S^3\times S^4$ with cross entry $c=-1$: then $a=-qc/(p-1)=2$, $b=-pc/(q-1)=1$, $\theta=-(n-1)c=6$, and criticality and $M\mathbf1=0$ both hold exactly. Take the within-factor pair $\{j,k\}=\{1,2\}\subset F_1$, so $I=\{3\}\cup F_2$ and $u=v=(2,-1,-1,-1,-1)$. Then
 $$N=\begin{pmatrix}0&-1&-1&-1&-1\\-1&0&1&1&1\\-1&1&0&1&1\\-1&1&1&0&1\\-1&1&1&1&0\end{pmatrix},$$
-whose equitable partition gives eigenvalue $-1$ with multiplicity $4$ and, on vectors $(s;t,t,t,t)$, the block $\left(\begin{smallmatrix}0&-4\\-1&3\end{smallmatrix}\right)$ with eigenvalues $4$ and $-1$. **Exactly one eigenvalue, $\lambda=4$, lies in $(0,6)$, and its eigenvector is $w=(-1,1,1,1,1)$.** Here $\operatorname{span}\{u,v\}=\mathbb Ru$ and $w$ is **not** a multiple of $u=(2,-1,-1,-1,-1)$: the ratios are $-2$ and $-1$. The projection is nonzero as the corrected statement predicts, $\langle w,u\rangle=-6$, $\cos=6/\sqrt{40}=0.9487$, and it is not $1$. **The confinement clause is refuted.**
+whose equitable partition gives eigenvalue $-1$ with multiplicity $4$ and, on vectors $(s;t,t,t,t)$, the block $\left(\begin{smallmatrix}0&-4\\-1&3\end{smallmatrix}\right)$ with eigenvalues $4$ and $-1$. **Exactly one eigenvalue, $\lambda=4$, lies in $(0,6)$, and its eigenvector is $w=(-1,1,1,1,1)$.** Here $\mathop{\mathrm{span}}\{u,v\}=\mathbb Ru$ and $w$ is **not** a multiple of $u=(2,-1,-1,-1,-1)$: the ratios are $-2$ and $-1$. The projection is nonzero as the corrected statement predicts, $\langle w,u\rangle=-6$, $\cos=6/\sqrt{40}=0.9487$, and it is not $1$. **The confinement clause is refuted.**
 
-*Screen, reported as a screen.* I evaluated the chain at $S^3\times S^4$, $S^5\times S^7$, $S^4\times S^4$ and $S^2\times S^6$ on matrices built from the closed form above (criticality residual $\le1.8\times10^{-15}$): every identity of claims 1–3 holds to machine zero, and the projection of the exceptional eigenvector is $0.9487$, $0.9889$, $0.9818$ at the within-factor pairs (never $1$) and $1$ at the cross pairs, where $\operatorname{span}\{u,v\}$ is two-dimensional and happens to contain the eigenvector. **The screen corroborates a hand derivation; it is not the evidence for it.**
+*Screen, reported as a screen.* I evaluated the chain at $S^3\times S^4$, $S^5\times S^7$, $S^4\times S^4$ and $S^2\times S^6$ on matrices built from the closed form above (criticality residual $\le1.8\times10^{-15}$): every identity of claims 1–3 holds to machine zero, and the projection of the exceptional eigenvector is $0.9487$, $0.9889$, $0.9818$ at the within-factor pairs (never $1$) and $1$ at the cross pairs, where $\mathop{\mathrm{span}}\{u,v\}$ is two-dimensional and happens to contain the eigenvector. **The screen corroborates a hand derivation; it is not the evidence for it.**
 
 ##### The correct statement, and it is sharper than the entry's in the case I18 needs
 
-> **At every pure critical point and every pair $\{j,k\}$, the number of eigenvalues of $N=M^{(jk)}$ in $(0,\theta)$, with multiplicity, is at most $\dim\operatorname{span}\{u,v\}\le2$; and the span $E$ of the corresponding eigenvectors meets $\{u,v\}^\perp$ trivially, so orthogonal projection embeds $E$ into $\operatorname{span}\{u,v\}$.**
+> **At every pure critical point and every pair $\{j,k\}$, the number of eigenvalues of $N=M^{(jk)}$ in $(0,\theta)$, with multiplicity, is at most $\dim\mathop{\mathrm{span}}\{u,v\}\le2$; and the span $E$ of the corresponding eigenvectors meets $\{u,v\}^\perp$ trivially, so orthogonal projection embeds $E$ into $\mathop{\mathrm{span}}\{u,v\}$.**
 
 **The rank refinement is the entry's real gain and it did not claim it.** A pair block is **orbit-free** exactly when $o=v-u=0$, i.e. $u=v$; then $R=2uu^\top$ has rank $\le1$ and
 
@@ -104,13 +104,13 @@ The orbit-free blocks are precisely the ones [I18](../plan.md)'s pair clause is 
 - *The step.* I searched [findings/](../findings/), [reviews/](../reviews/) and [results.md](../results.md) for the compression to a deleted-two-rows submatrix and for the rank-two form $uu^\top+vv^\top$: **no prior occurrence.** The identity $(M^2)_{il}=(N^2)_{il}+u_iu_l+v_iv_l$ and the display $\Pi(M^2-\theta M)\Pi=N^2-\theta N+uu^\top+vv^\top$ are new here. **Confirmed new.**
 - *The conclusion.* **"At most two eigenvalues of $N$ in $(0,\theta)$" follows from the already-recorded statement in two lines, with no compression.** $N$ is a principal submatrix of $M$ of codimension $2$, so Cauchy interlacing gives $\lambda_i(M)\ge\lambda_i(N)\ge\lambda_{i+2}(M)$. Suppose $N$ had three eigenvalues in $(0,\theta)$; being an interval, they occupy consecutive positions $a,a+1,a+2$. Then $\lambda_{a+2}(M)\ge\lambda_{a+2}(N)>0$ and $\lambda_{a+2}(M)\le\lambda_a(N)<\theta$, so $\lambda_{a+2}(M)\in(0,\theta)$, contradicting *"$M$ has no eigenvalue in $(0,\theta)$"*, which [diagonal-half.md:235](../findings/diagonal-half.md) states outright. **So the boxed conclusion of the new entry was already available from the same file the entry cites for its confirmation half.**
 
-**Net accounting, then.** The entry over-credits itself on the count and under-credits itself on the structure. What the compression genuinely buys over interlacing is (i) the localisation $E\cap\{u,v\}^\perp=0$, which interlacing cannot see at all, and (ii) the rank refinement to $\dim\operatorname{span}\{u,v\}$, **strictly stronger than interlacing in exactly the orbit-free blocks**, where interlacing still permits two and the compression permits one. Those two items are the ones to record.
+**Net accounting, then.** The entry over-credits itself on the count and under-credits itself on the structure. What the compression genuinely buys over interlacing is (i) the localisation $E\cap\{u,v\}^\perp=0$, which interlacing cannot see at all, and (ii) the rank refinement to $\dim\mathop{\mathrm{span}}\{u,v\}$, **strictly stronger than interlacing in exactly the orbit-free blocks**, where interlacing still permits two and the compression permits one. Those two items are the ones to record.
 
 ---
 
 #### What still does not follow, and what I could not check
 
-- **The gap the entry itself names is real and correctly named.** $B$ carries $\operatorname{diag}(u+v)$, which is not a polynomial in $N$; the compression constrains $\sigma(N)$ and says nothing about $\sigma(B)$. Nothing in claim 3 moves $\ker B=\mathbb Ro$ or $B\succeq0$, and the entry does not pretend otherwise.
+- **The gap the entry itself names is real and correctly named.** $B$ carries $\mathop{\mathrm{diag}}(u+v)$, which is not a polynomial in $N$; the compression constrains $\sigma(N)$ and says nothing about $\sigma(B)$. Nothing in claim 3 moves $\ker B=\mathbb Ro$ or $B\succeq0$, and the entry does not pretend otherwise.
 - **The band is still unspent.** $\theta\ge\sqrt{3/2}$ enters nowhere in claims 1–3; every statement above holds at every pure critical point regardless of $\theta$ beyond $\theta>0$. The entry's closing line says the band "has not been used yet", which is correct, and the compression does not change that.
 - **Checked entirely by hand:** all of claims 1, 2 and 3, the witness, and the interlacing shortcut. **Nothing was left unchecked for want of computation.** The only claim I did not attempt to settle is whether the orbit-free one-eigenvalue bound can be pushed to a statement about $B$, that is a derivation, not a run, and it is the natural successor item.
 

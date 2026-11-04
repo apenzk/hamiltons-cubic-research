@@ -48,7 +48,7 @@ $\mathbb S_{22}(B)=V_{(2,2)}\oplus V_{(2)}\oplus V_{(0)}$, the Weyl/traceless-Ri
 
 **The record already owns the mechanism and never connected it to the row.** [route-a.md](../findings/route-a.md) line 60 says *"complement-supported directions do not couple to the competitor through the quadratic map at all"*, and [Lemma L134](../findings/route-a.md)(c) uses the same disjointness to get $\langle L_eH,H\rangle=0$ on the padded flat. That is exactly the $V_{(2,2)}$ row. **The $V_{(2,1)}$ row (the larger one, $640$ of the $940$), is new here.**
 
-**Internal check the four named rows pass.** Each tabulated block spectrum has trace zero: $-2-1+0+1+1+1=0$ (trivial), $-2+2=0$ (vector), $-\tfrac13+\tfrac13=0$ ($\Lambda^2$), $-1+1=0$ ($S^2_0$). With the two higher blocks now known to be zero, $\operatorname{tr}F_u=0$ on all of $\mathrm{Weyl}_n$, block by block.
+**Internal check the four named rows pass.** Each tabulated block spectrum has trace zero: $-2-1+0+1+1+1=0$ (trivial), $-2+2=0$ (vector), $-\tfrac13+\tfrac13=0$ ($\Lambda^2$), $-1+1=0$ ($S^2_0$). With the two higher blocks now known to be zero, $\mathop{\mathrm{tr}}F_u=0$ on all of $\mathrm{Weyl}_n$, block by block.
 
 ### 3. The $n$-stability question, DECIDED, and both divided reviewers used the wrong criterion
 
@@ -76,7 +76,7 @@ The branching is settled (§1, §3) and the higher rows are settled (§2). What 
 
 **What an exact argument would need, stated plainly.** Every tabulated eigenvalue is rational, so no eigenvector extraction and no floating point is required at all:
 
-1. For each block $\lambda$ and each claimed rational $r$, compute $\operatorname{rank}_{\mathbb Q}(F_\lambda-r\theta^*\mathrm{Id})$ exactly and check $\dim M_\lambda-\operatorname{rank}$ equals the tabulated multiplicity. Sizes are $20,20,6,10$; the certificate is a rational row-reduction. **Multiplicities summing to $\dim M_\lambda$ then close the spectrum with no further work.**
+1. For each block $\lambda$ and each claimed rational $r$, compute $\mathop{\mathrm{rank}}_{\mathbb Q}(F_\lambda-r\theta^*\mathrm{Id})$ exactly and check $\dim M_\lambda-\mathop{\mathrm{rank}}$ equals the tabulated multiplicity. Sizes are $20,20,6,10$; the certificate is a rational row-reduction. **Multiplicities summing to $\dim M_\lambda$ then close the spectrum with no further work.**
 2. For $n$-independence, carry $m$ as a symbol: the entries of $F_\lambda$ in the $m$-independent LR basis are rational functions of $m$ whose degree is bounded by the number of closed $B$-loops a product of at most four contractions can form. Agreement at three tabulated values ($m=6,8,10$) certifies constancy only up to that degree bound; **the degree bound is the missing half of the argument, and it is a finite combinatorial statement, not a numerical one.**
 3. For $\alpha\le\tfrac13$ alone, less suffices: a rational PSD certificate for $\tfrac13\theta^*\mathrm{Id}-F_u\succeq0$ on $u^\perp\cap T_u\mathcal O^\perp$, block by block.
 

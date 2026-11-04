@@ -20,13 +20,13 @@ The introduction places (1.1) as **Li's condition with $\alpha=1$**, from [Li 20
 > **Proposition 2.1.** Suppose $(M^n,g)$ is an Einstein manifold of dimension $n$. Then the scalar curvature satisfies
 > $$\mathrm{Scal}=n(n-1)\bar\lambda.\tag{2.2}$$
 
-Proof, as given: with $\{e_i\}$ orthonormal, $\{\tfrac1{\sqrt2}e_i\odot e_j\}_{i<j}\cup\{\tfrac12e_i\odot e_i\}$ is an orthonormal basis of $S^2(T_pM)$ and $\langle\bar R(\tfrac1{\sqrt2}e_i\odot e_j),\tfrac1{\sqrt2}e_i\odot e_j\rangle=R_{ijij}$, so $\operatorname{tr}(\bar R)=\sum_{i<j}R_{ijij}=\mathrm{Scal}/2$. Subtracting the $g/\sqrt n$ direction, $\operatorname{tr}(\mathring R)=\operatorname{tr}(\bar R)-\langle\bar R(g/\sqrt n),g/\sqrt n\rangle=\tfrac{\mathrm{Scal}}2+\tfrac{\mathrm{Scal}}n=\tfrac{n+2}{2n}\mathrm{Scal}$, and $\operatorname{tr}(\mathring R)=N\bar\lambda$ gives (2.2).
+Proof, as given: with $\{e_i\}$ orthonormal, $\{\tfrac1{\sqrt2}e_i\odot e_j\}_{i<j}\cup\{\tfrac12e_i\odot e_i\}$ is an orthonormal basis of $S^2(T_pM)$ and $\langle\bar R(\tfrac1{\sqrt2}e_i\odot e_j),\tfrac1{\sqrt2}e_i\odot e_j\rangle=R_{ijij}$, so $\mathop{\mathrm{tr}}(\bar R)=\sum_{i<j}R_{ijij}=\mathrm{Scal}/2$. Subtracting the $g/\sqrt n$ direction, $\mathop{\mathrm{tr}}(\mathring R)=\mathop{\mathrm{tr}}(\bar R)-\langle\bar R(g/\sqrt n),g/\sqrt n\rangle=\tfrac{\mathrm{Scal}}2+\tfrac{\mathrm{Scal}}n=\tfrac{n+2}{2n}\mathrm{Scal}$, and $\mathop{\mathrm{tr}}(\mathring R)=N\bar\lambda$ gives (2.2).
 
 **This is the load-bearing line for the record.** $\mathrm{Weyl}_n$ is Ricci-flat, hence scalar-flat, hence $\bar\lambda=0$ identically, so every second-kind condition normalised against $\bar\lambda$, this paper's (1.1) and Li's whole $C(\alpha,\theta)$ family alike, collapses on the record's class to the single condition $\lambda_1\ge0$. The authors state the consequence themselves inside the proof of Proposition 3.4:
 
 > By the curvature condition (1.2), we have $\bar\lambda\ge0$. **If $\bar\lambda=0$, then $\lambda_1=\lambda_2=\cdots=\lambda_N=0$**, and (3.6) holds trivially by (3.5). Thus, we focus on the case $\bar\lambda>0$.
 
-The agreement with [Dai–Fu Lemma 3.3](../dai-fu-2023-einstein-second-kind/notes.md), $\operatorname{tr}\mathring R=\tfrac{n+2}{2n}s$, is exact.
+The agreement with [Dai–Fu Lemma 3.3](../dai-fu-2023-einstein-second-kind/notes.md), $\mathop{\mathrm{tr}}\mathring R=\tfrac{n+2}{2n}s$, is exact.
 
 ## Lemma 3.1, the closed forms on Einstein
 

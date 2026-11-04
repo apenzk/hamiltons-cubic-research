@@ -139,7 +139,7 @@ so the ratio is $\sqrt n$ **exactly, at every even $n$**, which the block report
 
 ## 6. "Why it matters" is served, better, eight paragraphs above in the same file
 
-The block's use-claim is that with $d_\psi=-\operatorname{spec}(K|_{\mathbf1^\perp})$ the lemma "forces $\max d$ away from zero at every vertex $K$". Two problems.
+The block's use-claim is that with $d_\psi=-\mathop{\mathrm{spec}}(K|_{\mathbf1^\perp})$ the lemma "forces $\max d$ away from zero at every vertex $K$". Two problems.
 
 - **It bounds the wrong end of the spectrum.** Testing $K$ against $(e_a-e_b)/\sqrt2$ gives $\lambda_{\max}(K)\ge-K_{ab}$ for every pair, so the lemma lower-bounds $\lambda_{\max}(K)$, which is $-\min d_\psi$ under the stated convention, not $\max d_\psi=-\lambda_{\min}(K)$.
 - **The file already has the statement it wants, with a better constant.** The $n-1$ values of $d_\psi$ sum to zero and have $\sum d_i^2=t$, so the §2 polytope bound with $M=n-1$ gives $\max_i d_i\ge\sqrt{t/((n-1)(n-2))}$ directly, which is exactly what [bispectral.md](../findings/bispectral.md) states eight paragraphs above L93, in the surviving-relaxation block. That constant is **$\sqrt n$ larger** than L93's, and it needs neither hollowness nor the entries of $K$ at all.

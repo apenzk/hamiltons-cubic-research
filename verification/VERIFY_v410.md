@@ -40,10 +40,10 @@ Quoted from the brief.
 
 ### 2.1 The second-kind operator
 
-For $G^{(a)}_{ijkl}=(P_a)_{ik}(P_a)_{jl}-(P_a)_{il}(P_a)_{jk}$, the $iklj$ contraction gives $\sum_{k,l}\big((P_a)_{il}(P_a)_{kj}-(P_a)_{ij}(P_a)_{kl}\big)h_{kl}=(P_ahP_a)_{ij}-t_a(P_a)_{ij}$, using $h$ symmetric. With $P_a=I$ this is $h-\operatorname{tr}(h)I=h$ on $S^2_0$. Hence Passage A's formula $\mathring Wh=P_1hP_1+P_2hP_2-t_1P_1-t_2P_2-ch$ holds.
+For $G^{(a)}_{ijkl}=(P_a)_{ik}(P_a)_{jl}-(P_a)_{il}(P_a)_{jk}$, the $iklj$ contraction gives $\sum_{k,l}\big((P_a)_{il}(P_a)_{kj}-(P_a)_{ij}(P_a)_{kl}\big)h_{kl}=(P_ahP_a)_{ij}-t_a(P_a)_{ij}$, using $h$ symmetric. With $P_a=I$ this is $h-\mathop{\mathrm{tr}}(h)I=h$ on $S^2_0$. Hence Passage A's formula $\mathring Wh=P_1hP_1+P_2hP_2-t_1P_1-t_2P_2-ch$ holds.
 
-- Within factor $a$, $h=P_ahP_a$, $t_a=0$: the other factor's terms vanish and $t_b=\operatorname{tr}(P_bP_ahP_a)=0$, so the eigenvalue is $1-c=\frac m{2m-1}$, on a space of dimension $2\big(\frac{m(m+1)}2-1\big)=(m-1)(m+2)$.
-- Cross block, $h=P_1hP_2+P_2hP_1$: $P_ahP_a=0$ and $t_1=\operatorname{tr}(P_1hP_2)=\operatorname{tr}(P_2P_1h)=0$, likewise $t_2=0$, so the eigenvalue is $-c=-\frac{m-1}{2m-1}$, dimension $m^2$.
+- Within factor $a$, $h=P_ahP_a$, $t_a=0$: the other factor's terms vanish and $t_b=\mathop{\mathrm{tr}}(P_bP_ahP_a)=0$, so the eigenvalue is $1-c=\frac m{2m-1}$, on a space of dimension $2\big(\frac{m(m+1)}2-1\big)=(m-1)(m+2)$.
+- Cross block, $h=P_1hP_2+P_2hP_1$: $P_ahP_a=0$ and $t_1=\mathop{\mathrm{tr}}(P_1hP_2)=\mathop{\mathrm{tr}}(P_2P_1h)=0$, likewise $t_2=0$, so the eigenvalue is $-c=-\frac{m-1}{2m-1}$, dimension $m^2$.
 - Line $h=P_1-P_2$: $P_1hP_1=P_1$, $P_2hP_2=-P_2$, $t_1=m$, $t_2=-m$, so $\mathring Wh=(1-m-c)h$ with $1-m-c=-(m-1)\frac{2m}{2m-1}$.
 
 The three spaces are mutually orthogonal in the Frobenius product and their dimensions sum to $2m^2+m-1=\dim S^2_0(\mathbb R^{2m})$, so the spectrum is complete. The three values are distinct for $m\ge2$ since $\frac m{2m-1}>0>-\frac{m-1}{2m-1}>-\frac{2m(m-1)}{2m-1}$.
@@ -66,7 +66,7 @@ With $A^3m^2(m-1)(2m-1)=A\cdot A^2m^2(m-1)(2m-1)=A$, this gives $p_3(\omega)=-(4
 
 ### 2.4 The $\Lambda^2$ side
 
-Under H3, each $G^{(a)}$ acts on $\Lambda^2$ as the projection onto $\Lambda^2(\operatorname{im}P_a)$, since $G^{(a)}_{ijkl}$ for $i<j$, $k<l$ is $\delta_{ik}\delta_{jl}$ when both indices lie in factor $a$ and $0$ otherwise. $G$ acts as $\mathrm{Id}$. So $W$ has eigenvalue $1-c=\frac m{2m-1}$ on $\Lambda^2\mathbb R^m\oplus\Lambda^2\mathbb R^m$, dimension $m(m-1)$, and $-c$ on the mixed part $\mathbb R^m\wedge\mathbb R^m$, dimension $m^2$. The dimensions sum to $m(2m-1)=\dim\Lambda^2\mathbb R^{2m}$.
+Under H3, each $G^{(a)}$ acts on $\Lambda^2$ as the projection onto $\Lambda^2(\mathop{\mathrm{im}}P_a)$, since $G^{(a)}_{ijkl}$ for $i<j$, $k<l$ is $\delta_{ik}\delta_{jl}$ when both indices lie in factor $a$ and $0$ otherwise. $G$ acts as $\mathrm{Id}$. So $W$ has eigenvalue $1-c=\frac m{2m-1}$ on $\Lambda^2\mathbb R^m\oplus\Lambda^2\mathbb R^m$, dimension $m(m-1)$, and $-c$ on the mixed part $\mathbb R^m\wedge\mathbb R^m$, dimension $m^2$. The dimensions sum to $m(2m-1)=\dim\Lambda^2\mathbb R^{2m}$.
 
 Unnormalised $\sum\mu^2=\frac{m^3(m-1)+m^2(m-1)^2}{(2m-1)^2}=\frac{m^2(m-1)(2m-1)}{(2m-1)^2}=\frac{m^2(m-1)}{2m-1}$, one third of the $\omega$ sum, so the same $s$ gives $\sum\mu^2=1$. This is the consistency that makes H2 coherent: one scalar multiple of $W$ meets both of L50's normalisations at once. Also $\sum\mu=A\,m(m-1)\big[m-m\big]=0$.
 
@@ -89,7 +89,7 @@ Screen, not evidence: Passage D's remark that $A$ equals $2\sqrt2/\big(n\sqrt{(n
 Passages A and B say "normalised to $\lVert W\rVert_F=1$, which is $\sum\omega^2=3$ by Lemma L50's norm relation". Read literally with $\lVert W\rVert_F^2=\sum_{i,j,k,l}W_{ijkl}^2$, this is off by a factor. Standard mathematics:
 
 - Each unordered pair appears in two orders, so $\sum_{i,j,k,l}W_{ijkl}^2=4\sum_{i<j,\,k<l}W_{ijkl}^2=4\lVert M\rVert_F^2=4\sum\mu^2$.
-- The operator $K:h\mapsto\sum_{k,l}W_{iklj}h_{kl}$ on all $n\times n$ matrices has matrix $K_{(ij),(kl)}=W_{iklj}$, which is symmetric in the two double indices by pair symmetry, so $\operatorname{tr}K^2=\sum W^2$. $K$ commutes with transposition, kills $I$ (trace of $W$ is zero) and preserves $S^2_0$, so $\operatorname{tr}K^2=\sum\omega^2+\operatorname{tr}(K|_{\Lambda^2})^2$. On antisymmetric $h$ the Bianchi identity gives $2\sum_{k,l}W_{iklj}h_{kl}=-\sum_{k,l}W_{ijkl}h_{kl}$, and in the orthonormal basis $(E_{ij}-E_{ji})/\sqrt2$ the right side is $-2M$, so $K|_{\Lambda^2}=-M$ and $\operatorname{tr}(K|_{\Lambda^2})^2=\sum\mu^2$.
+- The operator $K:h\mapsto\sum_{k,l}W_{iklj}h_{kl}$ on all $n\times n$ matrices has matrix $K_{(ij),(kl)}=W_{iklj}$, which is symmetric in the two double indices by pair symmetry, so $\mathop{\mathrm{tr}}K^2=\sum W^2$. $K$ commutes with transposition, kills $I$ (trace of $W$ is zero) and preserves $S^2_0$, so $\mathop{\mathrm{tr}}K^2=\sum\omega^2+\mathop{\mathrm{tr}}(K|_{\Lambda^2})^2$. On antisymmetric $h$ the Bianchi identity gives $2\sum_{k,l}W_{iklj}h_{kl}=-\sum_{k,l}W_{ijkl}h_{kl}$, and in the orthonormal basis $(E_{ij}-E_{ji})/\sqrt2$ the right side is $-2M$, so $K|_{\Lambda^2}=-M$ and $\mathop{\mathrm{tr}}(K|_{\Lambda^2})^2=\sum\mu^2$.
 - Hence $\sum\omega^2=3\sum\mu^2$, which is L50's norm relation, and $\sum_{i,j,k,l}W_{ijkl}^2=4\sum\mu^2=\tfrac43\sum\omega^2$.
 
 So the entrywise $\lVert W\rVert_F=1$ gives $\sum\mu^2=\tfrac14$ and $\sum\omega^2=\tfrac34$, and L50's $\lVert M\rVert_F=1$ corresponds to entrywise $\lVert W\rVert_F=2$. At the entrywise normalisation, L50's hypothesis fails and $\theta$, being cubic in $W$, would be $\theta_0(2m)/8$.

@@ -8,7 +8,7 @@
 |---|---|---|
 | C1 | box: at $W^*=S^m\times S^m$, $n=2m$, the tube radius is $r_n=\Theta(n^{-3/2})$ | **HYPOTHESIS-DEBT**, the upper half has no argument anywhere on the record, and the entry's own step-4 row withdraws it |
 | C2 | the box's quantification over $m$ (no dimension hypothesis is stated) | **BROKEN at $m=2$ and $m=3$**, $r_4=r_6=0$ in closed form; correct hypothesis is $m\ge5$ (equivalently even $n\ge10$), and the programme's own range is $n\ge12$ |
-| C3 | step 1: the spectrum is two-valued with no kernel and $g_n=\lvert\lambda_-\rvert=\tfrac2n\sqrt{\tfrac{n-2}{2(n-1)}}=\Theta(1/n)$ | **REPRODUCED**, derived cold below from trace-freeness and $\operatorname{tr}(W^2)=1$ |
+| C3 | step 1: the spectrum is two-valued with no kernel and $g_n=\lvert\lambda_-\rvert=\tfrac2n\sqrt{\tfrac{n-2}{2(n-1)}}=\Theta(1/n)$ | **REPRODUCED**, derived cold below from trace-freeness and $\mathop{\mathrm{tr}}(W^2)=1$ |
 | C4 | step 2: $W\mapsto W_-$ is analytic on the ball of radius $g_n$ in the record's Frobenius norm, with complex radius $\rho<g_n/2$ | **REPRODUCED**, and the strictness correction is right |
 | C5 | step 3: $C_\delta=O(n)$, from $M=O(g_n)$, $\lVert A^{(k)}\rVert=O(n^{k-1})$ and $(\delta^2)'''=2\langle A''',A\rangle+6\langle A'',A'\rangle$ with $\mathrm{Alt}(W^*_-)=0$ | **ARITHMETIC REPRODUCED; GAP in what it establishes**, the vanishing is shown at the base point only, and a third-order remainder constant needs a bound on the segment |
 | C6 | step 4: $r_n=\Omega(n^{-3/2})$, being $\inf_H c(H)/C(H)$ | **HYPOTHESIS-DEBT**, no derivation in the entry; the infimum is named and never computed; the chain as written yields only $\Omega(n^{-2})$ |
@@ -23,7 +23,7 @@
 
 ## 0. Conventions, fixed once
 
-- **The norm.** $\lVert W\rVert^2=\operatorname{tr}(W^2)=\sum_\alpha\lambda_\alpha^2$ over the $\binom n2$ eigenvalues of $W$ as an operator on $\Lambda^2\mathbb R^n$, at unit norm equal to $1$, [findings/conventions.md](../findings/conventions.md):122. This is the normalisation every value below is read in, and it is the one L145's $g_n$ needs.
+- **The norm.** $\lVert W\rVert^2=\mathop{\mathrm{tr}}(W^2)=\sum_\alpha\lambda_\alpha^2$ over the $\binom n2$ eigenvalues of $W$ as an operator on $\Lambda^2\mathbb R^n$, at unit norm equal to $1$, [findings/conventions.md](../findings/conventions.md):122. This is the normalisation every value below is read in, and it is the one L145's $g_n$ needs.
 - **$\theta_0(n)$.** $\theta_0(n)=\sqrt{2(n-1)(n-2)}/n$. Fixed in this report by three independent checks against the record: it gives $\theta_0(6)^2=10/9$, the value [findings/nondegeneracy.md](../findings/nondegeneracy.md):546 records at $S^3\times S^3$; it gives $\theta_0(n)=\sqrt{3/2}$ exactly at $n^2-12n+8=0$, i.e. $n=6+2\sqrt7$, the threshold [results.md](../results.md) states; and with $c_p=3\theta_0/(n-2)$ it gives $\kappa=nc_p=3\sqrt{2(n-1)/(n-2)}$, the constant [Lemma L158](../results.md) states.
 - **$\kappa_n=9(\sqrt{3/2}-\theta_0(n))$**, from [I4](../plan.md). It is negative exactly for $n>6+2\sqrt7$.
 - **The blocks at $W^*$.** $\mathbb R^n=V_1\oplus V_2$ with $\dim V_i=m$; $\Lambda^2=\Lambda^2V_1\oplus\Lambda^2V_2\oplus(V_1\wedge V_2)$ of dimensions $\binom m2,\binom m2,m^2$.
@@ -40,7 +40,7 @@
 | input | needed for | stated in L145? | holds at the object? |
 |---|---|---|---|
 | $\lVert W^*\rVert=1$ in the $\Lambda^2$ operator norm | the numeral $g_n$ | no | yes, by convention |
-| trace-freeness of $W^*$ on $\Lambda^2$ | $\lambda_+/\lvert\lambda_-\rvert=m/(m-1)$, hence $g_n$ | no | yes, $\mathrm{Ric}(W)=0$ gives $\operatorname{tr}_{\Lambda^2}W=0$ |
+| trace-freeness of $W^*$ on $\Lambda^2$ | $\lambda_+/\lvert\lambda_-\rvert=m/(m-1)$, hence $g_n$ | no | yes, $\mathrm{Ric}(W)=0$ gives $\mathop{\mathrm{tr}}_{\Lambda^2}W=0$ |
 | $m\ge2$, so that both blocks are non-empty | the two-valued spectrum | no | fails at $m=1$; vacuous there |
 | spectral gap at $0$, i.e. $\ker W^*=0$ | analyticity of $W\mapsto W_-$ | **yes**, and correctly | yes at $W^*$; **fails at $W_{\mathbb{CP}^2}$**, see §5 |
 | $\mathrm{Alt}$ annihilates Bianchi tensors | $\mathrm{Alt}(W^*_-)=0$ | yes, by naming "three Bianchi tensors" | yes, verified in §4 |
@@ -161,7 +161,7 @@ and F60 states its outcome as a **dichotomy in $C_P$**: "*at $C_P=\Theta(n)$ the
 
 | numeral | reproduced? |
 |---|---|
-| $g_n=\tfrac2n\sqrt{\tfrac{n-2}{2(n-1)}}$ | **Yes, exactly**, §3, from trace-freeness and $\operatorname{tr}(W^2)=1$ |
+| $g_n=\tfrac2n\sqrt{\tfrac{n-2}{2(n-1)}}$ | **Yes, exactly**, §3, from trace-freeness and $\mathop{\mathrm{tr}}(W^2)=1$ |
 | $g_n=\Theta(1/n)$ | **Yes**, $g_n\to\sqrt2/n$ |
 | $\rho<g_n/2$ | **Yes**, as the strict Neumann condition at a contour at distance $g_n/2$ |
 | $\lVert A^{(k)}\rVert=O(n^{k-1})$ from $M=O(g_n)$ | **Yes**, $k!M/\rho^k$ with $\rho=\Theta(g_n)$ |

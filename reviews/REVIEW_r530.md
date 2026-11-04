@@ -86,20 +86,20 @@ The orbit's dimension is $\binom n2-\binom p2-\binom q2=pq$, matching $\dim(\mat
 
 $\mathcal W_n$ is $O(n)$-irreducible and non-trivial (label $[2,2]$), so:
 
-1. **$W\mapsto\operatorname{tr}(L_W\vert_{\mathcal W_n})$ is an $O(n)$-invariant linear functional on $\mathcal W_n$, hence identically zero.** (Robust to whether $Q$ preserves $\mathcal W_n$ or is followed by the projection $\pi$, either way the map is built $O(n)$-equivariantly.) Substituting the block's ten (value, multiplicity) pairs:
+1. **$W\mapsto\mathop{\mathrm{tr}}(L_W\vert_{\mathcal W_n})$ is an $O(n)$-invariant linear functional on $\mathcal W_n$, hence identically zero.** (Robust to whether $Q$ preserves $\mathcal W_n$ or is followed by the projection $\pi$, either way the map is built $O(n)$-equivariantly.) Substituting the block's ten (value, multiplicity) pairs:
  $$1+\tfrac{pq}2+d_p\lambda_p+d_q\lambda_q-d_pd_q\,\mu+e_pe_q\,\mu\;=\;0\quad\text{identically in }p,q,$$
  with $d_m=\dim S^2_0$, $e_m=\dim\Lambda^2$. Verified exactly. **This is one non-trivial linear relation the ten values satisfy on the nose.**
-2. **$W\mapsto\operatorname{tr}(L_W^2\vert_{\mathcal W_n})$ is an invariant quadratic form on an irreducible, hence a multiple of $\lVert W\rVert^2$**, so $\theta^2\operatorname{tr}(L_e^2)$ must depend on $n$ alone. It does:
+2. **$W\mapsto\mathop{\mathrm{tr}}(L_W^2\vert_{\mathcal W_n})$ is an invariant quadratic form on an irreducible, hence a multiple of $\lVert W\rVert^2$**, so $\theta^2\mathop{\mathrm{tr}}(L_e^2)$ must depend on $n$ alone. It does:
  $$\theta_{p,q}^2\Big(1+\tfrac{pq}4+d_p\lambda_p^2+d_q\lambda_q^2+(d_pd_q+e_pe_q)\mu^2\Big)=\frac{(n-1)(2n-1)}4,$$
  using $\theta_{p,q}^2=\frac{2(p-1)(q-1)(n-1)}{pq(n-2)}$ (Nienhaus Prop. 2.25, and $\theta_0(6)=\sqrt{10}/3$ recovers the anchor). The $p$-derivative at fixed $n$ is $0$. **And the constant is $\kappa_n=\frac{(2n-1)(n-1)}4$, the record's own "algebra's Killing constant" in [conventions.md](../findings/conventions.md)**, which the block never claims and which no arithmetic slip would produce by accident.
 
-*(The cubic analogue is not a test: invariant cubics on $\mathcal W_n$ form a space of dimension $>1$, and $\theta^2\operatorname{tr}(L_e^3)$ is duly split-dependent. Reported so the omission is not read as a suppressed failure.)*
+*(The cubic analogue is not a test: invariant cubics on $\mathcal W_n$ form a space of dimension $>1$, and $\theta^2\mathop{\mathrm{tr}}(L_e^3)$ is duly split-dependent. Reported so the omission is not read as a suppressed failure.)*
 
 ### F7, Test 1 supplies the value the record's own ledger records as unsourced.
 
 [findings/LEDGER.md](../findings/LEDGER.md) line 771: *"L27 cites L26 for '$-\mu$ and $+\mu$ on the two tensor summands', where L26 supplies **one** eigenvector on $\Lambda^2\otimes\Lambda^2$ only; … the other summand's value now has no source."* Correct, [Lemma L26](../findings/nondegeneracy.md) exhibits $X=\phi_\pi\odot\phi_\rho$ with its $\Lambda^4$ part removed, which is one vector in $\Lambda^2\otimes\Lambda^2$.
 
-**The trace identity closes that hole.** Taking the other nine values as given, $\operatorname{tr}L_e=0$ has the unique solution
+**The trace identity closes that hole.** Taking the other nine values as given, $\mathop{\mathrm{tr}}L_e=0$ has the unique solution
 $$\text{value on }S^2_0\otimes S^2_0=\frac{1-\tfrac p2-\tfrac q2}{(p-1)(q-1)}=-\frac{n-2}{2(p-1)(q-1)}=-\mu .$$
 Solved, not assumed. The same identity, run the other way with $\pm\mu$ given, forces $\lambda_m=\frac{m-2}{2(m-1)}$ uniquely: if $f$ and $\tilde f$ both satisfied $d_pf(p)+d_qf(q)=g(p,q)$ for all $p,q\ge3$ then $d_p(f-\tilde f)(p)=-d_q(f-\tilde f)(q)$ would be a constant equal to its own negative, hence $0$. **So the block's $\lambda_m$ is derived here rather than taken on trust.**
 
@@ -183,6 +183,6 @@ Three things to carry back, none of which touches the verdict:
 
 - **A defect in a later passage of the same file**, [findings/nondegeneracy.md](../findings/nondegeneracy.md) line 686, which reverses which tensor summand carries $+\mu$ (F11). Three independent arguments settle it in the block's favour.
 - **A wording defect inside the block**, "since $L_e$ is symmetric the $\mathbb C$ and $\mathbb H$ Schur cases cannot occur" (F4). Symmetry does not exclude those cases; it makes them harmless. The conclusion stands and the correct one-line reason is given.
-- **A gap the record itself flagged is now closed**: the value $-\mu$ on $S^2_0\otimes S^2_0$, which [LEDGER.md](../findings/LEDGER.md) line 771 records as having no source, is forced by $\operatorname{tr}L_e=0$ (F7), as is $\lambda_m$.
+- **A gap the record itself flagged is now closed**: the value $-\mu$ on $S^2_0\otimes S^2_0$, which [LEDGER.md](../findings/LEDGER.md) line 771 records as having no source, is forced by $\mathop{\mathrm{tr}}L_e=0$ (F7), as is $\lambda_m$.
 
 Because L27 stands, [Lemma L3](../findings/second-order.md) and [Lemma L69](../findings/graded-half.md) keep the support they take from it; both cite it inside its stated range.

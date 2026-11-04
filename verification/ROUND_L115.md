@@ -30,7 +30,7 @@
 | F6 | "what would close it is a cap on $\lambda_{\max}(L_W|_{\mathcal W_n^\perp})$" | sufficient only at level $\theta$ and with $L_e$ preserving $\mathcal W_n$, neither stated | v355 (`GAP`), v356 (`CONFIRMED AS ALGEBRA` with both additions), v357 | **phase 3**, [ADJ_L115_F6.md](ADJ_L115_F6.md) |
 | F7 | $\lambda_{\max}(M)$ as a function of $W$ | the eigenbasis is not quantified at repeated eigenvalues or a kernel | v355 (`GAP`), v357 (withdrawn, no two frames found to differ) | **phase 3**, [ADJ_L115_F7.md](ADJ_L115_F7.md) |
 | F8 | L115.lean's declarations | dimension arithmetic and two tautologies, none stating a claim of the block | v357, v355 and v356 (`CONFIRMED AS ALGEBRA`, clause 1 untyped) | **phase 3**, [ADJ_L115_F8.md](ADJ_L115_F8.md) |
-| C | $\operatorname{diag}M=\lambda$, $M\lambda=\theta\lambda$ and $\theta\le\lambda_{\max}(M)$, L24 not reaching $\mathcal D$, the by-product by the norm route, the Lean statement file's clause 2 | direct | v355, v356, v357 (`CONFIRMED`) | no finding |
+| C | $\mathop{\mathrm{diag}}M=\lambda$, $M\lambda=\theta\lambda$ and $\theta\le\lambda_{\max}(M)$, L24 not reaching $\mathcal D$, the by-product by the norm route, the Lean statement file's clause 2 | direct | v355, v356, v357 (`CONFIRMED`) | no finding |
 
 **Check 1, the brief against the source.** Every passage was copied off disk with its line asserted.
 
@@ -54,7 +54,7 @@
 
 **F1.** $\lambda_{\max}(M)=\theta\,\lambda_{\max}$ of the compression of $L_e$ to $\mathcal D$, L24 and Banach's polarisation theorem cap the Weyl part, and the Weyl and Weyl-orthogonal parts do not interact. What is missing is a cap on the Weyl-orthogonal part, where padded $W_{\mathbb{CP}^2}$ at $n\ge5$ already has a non-Weyl direction of positive Rayleigh value $\theta/3$ (v358). The equality holds at $n=4$, whose global maximisers are $W_{\mathbb{CP}^2}$, and at padded $W_{\mathbb{CP}^2}$ in every eigenframe (v359).
 
-**The defence of F2.** In the coordinate frame $q(S)=\tfrac12\sum\Lambda_{ij}S_{ij}^2+\tfrac12\operatorname{tr}(\Lambda S^2)$, the Weyl part $S\mathbf1=0$ and the complement $\{u_i+u_j\}$ carry no cross term, the complement's Rayleigh value is at most $\tfrac12\lambda_{\max}(\Lambda)<1/\sqrt2$, and L24 with $\theta\ge\sqrt{3/2}$ closes the coordinate-diagonal global maximiser. At $S^m\times S^m$ a row-wise Cauchy–Schwarz bound gives the Weyl part for every $m\ge2$ without maximality. Both refute the annotation's chain $\sqrt{3/2}\le\theta$ at $m=4,5$, where $\theta^2=21/16$ and $36/25$, and both find "$m\ge4$" used nowhere.
+**The defence of F2.** In the coordinate frame $q(S)=\tfrac12\sum\Lambda_{ij}S_{ij}^2+\tfrac12\mathop{\mathrm{tr}}(\Lambda S^2)$, the Weyl part $S\mathbf1=0$ and the complement $\{u_i+u_j\}$ carry no cross term, the complement's Rayleigh value is at most $\tfrac12\lambda_{\max}(\Lambda)<1/\sqrt2$, and L24 with $\theta\ge\sqrt{3/2}$ closes the coordinate-diagonal global maximiser. At $S^m\times S^m$ a row-wise Cauchy–Schwarz bound gives the Weyl part for every $m\ge2$ without maximality. Both refute the annotation's chain $\sqrt{3/2}\le\theta$ at $m=4,5$, where $\theta^2=21/16$ and $36/25$, and both find "$m\ge4$" used nowhere.
 
 **F3.** The target implies Conjecture A only at even $n\ge12$, the constant at odd $n$ being $\Theta_n<\theta_0(n)$. It is false at $n\le11$. The $C_5$ value $0.809017$ is below $\theta_0(n)$ at every $n\ge4$, so it witnesses no strictness.
 
@@ -62,7 +62,7 @@
 
 **The defence of F6.** $L_e$ is self-adjoint, fixes $W$ and preserves $\mathcal W_n$, so it splits into $1$ on $W$, at most $\tfrac12$ on $\mathcal W_n\cap W^\perp$ by L24, and the capped block. A cap at level $\theta$ for $L_W$ on $\mathcal W_n^\perp$, taken inside $\mathrm{Sym}(\Lambda^2)$, gives the equality, and a uniform cap $\sqrt{3/2}$ suffices at global maximisers.
 
-**F7.** $M$ is built from squared structure constants, which change under rotation inside a repeated eigenspace. v369: at $n=4$, $W^+=\operatorname{diag}(0,\tfrac1{\sqrt2},-\tfrac1{\sqrt2})$, $W^-=0$ gives $\sqrt{3/2}$ and $1$ in two eigenbases. v368: $(\operatorname{diag}(2,4,-6)\oplus\operatorname{diag}(2,-1,-1))/\sqrt{62}$ gives $\sqrt{84}/\sqrt{62}$ and $r^*/\sqrt{62}$ with $r^*\in(7,8)$, padded to every $n\ge5$.
+**F7.** $M$ is built from squared structure constants, which change under rotation inside a repeated eigenspace. v369: at $n=4$, $W^+=\mathop{\mathrm{diag}}(0,\tfrac1{\sqrt2},-\tfrac1{\sqrt2})$, $W^-=0$ gives $\sqrt{3/2}$ and $1$ in two eigenbases. v368: $(\mathop{\mathrm{diag}}(2,4,-6)\oplus\mathop{\mathrm{diag}}(2,-1,-1))/\sqrt{62}$ gives $\sqrt{84}/\sqrt{62}$ and $r^*/\sqrt{62}$ with $r^*\in(7,8)$, padded to every $n\ge5$.
 
 **F8, the split settled.** L115.lean holds dimension shares, a toy function capped on a line, and a trivial implication, none mentioning $M$, $\theta$, $\lambda$ or a maximiser. v370's `VALID` reads the step over both files, `theta_ge_diag` and `theta_gt_lambda` in L115Statement.lean, which changes its subject.
 

@@ -11,7 +11,7 @@
 | 3 | Ricci half: $\omega_i\omega_i^{\mathsf T}=\bigoplus_j M_{ij}^2\mathrm{Id}_{P_j}$ | **SOUND, NO FACTOR**, cross terms vanish because $E_jE_k=0$ for $j\ne k$; a sign convention differs from Given A and is immaterial |
 | 4 | Bianchi half: $\omega_i\wedge\omega_i=2\sum_{j<k}M_{ij}M_{ik}\varepsilon_j\wedge\varepsilon_k$, the $\varepsilon_j\wedge\varepsilon_k$ independent | **SOUND**, they are distinct members of the standard basis of $\Lambda^4$, for every $m$, with no interaction with $P_0$ |
 | 5 | $M^{\mathsf T}\Lambda M=0$ and $MM^{\mathsf T}=I_r$ give $\Lambda=0$, $M$ non-square | **SOUND, AND IT AVOIDS THE TRAP**, the step uses $MM^{\mathsf T}=I_r$ and never $M^{\mathsf T}M=I_m$, which is false whenever $r<m$; all three products conform |
-| 6 | Block-diagonality under a repeated eigenvalue | **WELL POSED**, the hypothesis is $\operatorname{im}W\subseteq\operatorname{span}(\varepsilon_j)$, which no choice of eigenbasis can affect |
+| 6 | Block-diagonality under a repeated eigenvalue | **WELL POSED**, the hypothesis is $\mathop{\mathrm{im}}W\subseteq\mathop{\mathrm{span}}(\varepsilon_j)$, which no choice of eigenbasis can affect |
 | 7 | $P_0\ne0$, odd $n$ | **HARMLESS**, the $P_0$ block of the Ricci equation is $0=0$ and is never used |
 | 8 | The kernel | **NO STEP ASSUMES $\ker W=0$**, dropping the zero eigenvalues is legitimate under both givens, and the hypothesis constrains nothing in the kernel |
 | 9a | Non-vacuity: $W_{\mathbb{CP}^2}$, "self-dual eigenforms $\tfrac1{\sqrt2}(\varepsilon_1\pm\varepsilon_2)$" | **MIS-STATED**, $\tfrac1{\sqrt2}(\varepsilon_1-\varepsilon_2)$ is anti-self-dual and lies in $\ker W_{\mathbb{CP}^2}$, so it is an eigenform but not a self-dual one |
@@ -28,10 +28,10 @@
 These are the brief's own; I add nothing beyond making two identifications explicit, both of which the brief's normalisations force.
 
 - Fix an orthonormal frame adapted to the splitting: $f_{2j-1},f_{2j}$ span $P_j$ for $j=1,\dots,m$, and the remaining $f_a$ span $P_0$. Then $\varepsilon_j=f_{2j-1}\wedge f_{2j}$, up to the sign fixed by the chosen orientation of $P_j$.
-- A $2$-form $\omega=\sum_{a<b}\omega_{ab}f_a\wedge f_b$ is read as the skew matrix with entries $\omega_{ab}$ extended antisymmetrically. Under this reading $\varepsilon_j$ is the matrix $E_j$ with $(E_j)_{2j-1,2j}=1$, $(E_j)_{2j,2j-1}=-1$ and every other entry $0$. Since $\operatorname{tr}(E_j^2)=-2$, the brief's $\lVert\omega\rVert^2=-\tfrac12\operatorname{tr}(\omega^2)$ gives $\lVert\varepsilon_j\rVert=1$, agreeing with $\{f_a\wedge f_b\}_{a<b}$ being orthonormal. **The unit area form is the $\pm1$ matrix, with no $\tfrac1{\sqrt2}$.**
+- A $2$-form $\omega=\sum_{a<b}\omega_{ab}f_a\wedge f_b$ is read as the skew matrix with entries $\omega_{ab}$ extended antisymmetrically. Under this reading $\varepsilon_j$ is the matrix $E_j$ with $(E_j)_{2j-1,2j}=1$, $(E_j)_{2j,2j-1}=-1$ and every other entry $0$. Since $\mathop{\mathrm{tr}}(E_j^2)=-2$, the brief's $\lVert\omega\rVert^2=-\tfrac12\mathop{\mathrm{tr}}(\omega^2)$ gives $\lVert\varepsilon_j\rVert=1$, agreeing with $\{f_a\wedge f_b\}_{a<b}$ being orthonormal. **The unit area form is the $\pm1$ matrix, with no $\tfrac1{\sqrt2}$.**
 - $\omega\otimes\omega$ is $\eta\mapsto\langle\omega,\eta\rangle\omega$; for orthonormal $\omega_i$ the spectral form $W=\sum_i\lambda_i\,\omega_i\otimes\omega_i$ satisfies $W\omega_i=\lambda_i\omega_i$.
-- $V:=\operatorname{span}(\varepsilon_1,\dots,\varepsilon_m)\subseteq\Lambda^2\mathbb R^n$, of dimension $m$.
-- $\Lambda=\operatorname{diag}(\lambda_1,\dots,\lambda_r)$, all $\lambda_i\ne0$; $M\in\mathbb R^{r\times m}$; $S:=M^{\mathsf T}\Lambda M\in\mathbb R^{m\times m}$, symmetric.
+- $V:=\mathop{\mathrm{span}}(\varepsilon_1,\dots,\varepsilon_m)\subseteq\Lambda^2\mathbb R^n$, of dimension $m$.
+- $\Lambda=\mathop{\mathrm{diag}}(\lambda_1,\dots,\lambda_r)$, all $\lambda_i\ne0$; $M\in\mathbb R^{r\times m}$; $S:=M^{\mathsf T}\Lambda M\in\mathbb R^{m\times m}$, symmetric.
 
 ## Hypothesis inventory
 
@@ -78,7 +78,7 @@ so $\langle\omega_i,\omega_{i'}\rangle=\delta_{ii'}$ is $MM^{\mathsf T}=I_r$. **
 
 **$M$ is real.** $W$ is a self-adjoint operator on the real inner product space $\Lambda^2\mathbb R^n$, so it has a real orthonormal eigenbasis, and the hypothesis says "real combination" in any case. Since the $\varepsilon_j$ are a basis of $V$, the coefficients are unique, and they are real.
 
-**$r\le m$ is derived, not assumed.** $MM^{\mathsf T}=I_r$ forces $\operatorname{rank}M=r$, and $\operatorname{rank}M\le\min(r,m)$, so $r\le m$. Equivalently: $r$ orthonormal vectors sit in the $m$-dimensional $V$. Note the proof never needs to invoke this (it is a consequence that becomes useful in §9) so there is no risk of it being smuggled in as a hypothesis.
+**$r\le m$ is derived, not assumed.** $MM^{\mathsf T}=I_r$ forces $\mathop{\mathrm{rank}}M=r$, and $\mathop{\mathrm{rank}}M\le\min(r,m)$, so $r\le m$. Equivalently: $r$ orthonormal vectors sit in the $m$-dimensional $V$. Note the proof never needs to invoke this (it is a consequence that becomes useful in §9) so there is no risk of it being smuggled in as a hypothesis.
 
 ## 3. The Ricci half
 
@@ -133,13 +133,13 @@ Two remarks, neither a defect. First, $r=0$ has to be read as "the empty spectra
 
 **It is well posed, and the proof does need it to be.** The reason is one line: the condition "is a real combination of the $\varepsilon_j$" is membership in the linear subspace $V$, and a subspace is closed under linear combination.
 
-Precisely. Let $E_\lambda$ be an eigenspace with $\lambda\ne0$. If *some* orthonormal basis of $E_\lambda$ lies in $V$, then $E_\lambda=\operatorname{span}$ of that basis $\subseteq V$, so *every* eigenform in $E_\lambda$ lies in $V$. Conversely if every eigenform lies in $V$ then so does any chosen basis. The existential and universal readings therefore coincide, and the hypothesis is equivalent to the basis-free statement
+Precisely. Let $E_\lambda$ be an eigenspace with $\lambda\ne0$. If *some* orthonormal basis of $E_\lambda$ lies in $V$, then $E_\lambda=\mathop{\mathrm{span}}$ of that basis $\subseteq V$, so *every* eigenform in $E_\lambda$ lies in $V$. Conversely if every eigenform lies in $V$ then so does any chosen basis. The existential and universal readings therefore coincide, and the hypothesis is equivalent to the basis-free statement
 
-$$\operatorname{im}W=\bigoplus_{\lambda\ne0}E_\lambda\subseteq V.$$
+$$\mathop{\mathrm{im}}W=\bigoplus_{\lambda\ne0}E_\lambda\subseteq V.$$
 
 So the answer to the brief's question is: **no, the hypothesis does not depend on which basis of a degenerate eigenspace is chosen**, and it would have mattered if it did, because the proof fixes one particular orthonormal eigenbasis to build $M$ and would otherwise be proving something about that choice rather than about $W$. Nothing downstream depends on the choice either: a different basis of $E_\lambda$ replaces the corresponding rows of $M$ by $QM$-rows for an orthogonal $Q$ acting within the $\lambda$-block, which preserves $MM^{\mathsf T}=I_r$ and preserves $M^{\mathsf T}\Lambda M$ because $Q$ commutes with the scalar block $\lambda I$. The conclusion $\Lambda=0$ is invariant.
 
-Two smaller degeneracy points, both clean. The multiplicity of $\lambda$ is counted in $r$, so $r=\operatorname{rank}W$ throughout. And the sign ambiguity in each $\varepsilon_j$ (the orientation of $P_j$ is not fixed by the hypothesis) flips a column of $M$: $M\mapsto MD$ for a diagonal sign matrix $D$, under which $MM^{\mathsf T}$ is unchanged and $M^{\mathsf T}\Lambda M\mapsto DM^{\mathsf T}\Lambda MD$, so both equations are unaffected.
+Two smaller degeneracy points, both clean. The multiplicity of $\lambda$ is counted in $r$, so $r=\mathop{\mathrm{rank}}W$ throughout. And the sign ambiguity in each $\varepsilon_j$ (the orientation of $P_j$ is not fixed by the hypothesis) flips a column of $M$: $M\mapsto MD$ for a diagonal sign matrix $D$, under which $MM^{\mathsf T}$ is unchanged and $M^{\mathsf T}\Lambda M\mapsto DM^{\mathsf T}\Lambda MD$, so both equations are unaffected.
 
 ## 7. $P_0$, and odd $n$
 
@@ -149,7 +149,7 @@ Two smaller degeneracy points, both clean. The multiplicity of $\lambda$ is coun
 
 ## 8. The kernel
 
-**No step assumes $\ker W=0$, and I looked at each.** The zero eigenvalues never enter: the spectral sum is over the nonzero ones by the brief's convention, the hypothesis constrains only eigenforms with $\lambda\ne0$, $M$ is built from those alone, and $r=\operatorname{rank}W$ is allowed to be anything from $0$ to $\dim\Lambda^2$.
+**No step assumes $\ker W=0$, and I looked at each.** The zero eigenvalues never enter: the spectral sum is over the nonzero ones by the brief's convention, the hypothesis constrains only eigenforms with $\lambda\ne0$, $M$ is built from those alone, and $r=\mathop{\mathrm{rank}}W$ is allowed to be anything from $0$ to $\dim\Lambda^2$.
 
 **Dropping the zero eigenvalues is legitimate under both givens.** Under Given A, a term with $\lambda_i=0$ contributes $\lambda_i\omega_i^2=0$ to a sum in $S^2(\mathbb R^n)$; under Given B, $\lambda_i\omega_i\wedge\omega_i=0$ in $\Lambda^4$, and the brief states this explicitly for B. In both cases the omitted terms are the zero vector, not terms whose smallness is being argued. So the record's recurring obstruction does not bite here.
 
@@ -163,13 +163,13 @@ This is where the block is weakest. The theorem is untouched by any of what foll
 
 Take $n=4$ with the orientation $f_1\wedge f_2\wedge f_3\wedge f_4$ and $\varepsilon_1=e_{12}$, $\varepsilon_2=e_{34}$. The Hodge star acts on $\Lambda^2\mathbb R^4$ by $*e_{12}=e_{34}$, $*e_{13}=-e_{24}$, $*e_{14}=e_{23}$, so
 
-$$\Lambda^+=\operatorname{span}\Big\{\tfrac1{\sqrt2}(e_{12}+e_{34}),\ \tfrac1{\sqrt2}(e_{13}-e_{24}),\ \tfrac1{\sqrt2}(e_{14}+e_{23})\Big\},\qquad \tfrac1{\sqrt2}(e_{12}-e_{34})\in\Lambda^-.$$
+$$\Lambda^+=\mathop{\mathrm{span}}\Big\{\tfrac1{\sqrt2}(e_{12}+e_{34}),\ \tfrac1{\sqrt2}(e_{13}-e_{24}),\ \tfrac1{\sqrt2}(e_{14}+e_{23})\Big\},\qquad \tfrac1{\sqrt2}(e_{12}-e_{34})\in\Lambda^-.$$
 
-The block says "two of its self-dual eigenforms are $\tfrac1{\sqrt2}(\varepsilon_1\pm\varepsilon_2)$". **$\tfrac1{\sqrt2}(\varepsilon_1-\varepsilon_2)=\tfrac1{\sqrt2}(e_{12}-e_{34})$ is anti-self-dual.** For $\mathbb{CP}^2$ the Weyl tensor is self-dual, $W^-=0$, so the whole of $\Lambda^-$ is in the kernel; $\tfrac1{\sqrt2}(\varepsilon_1-\varepsilon_2)$ is an eigenform, but with eigenvalue $0$, and it is not a self-dual one. **The sentence should read that one of $\tfrac1{\sqrt2}(\varepsilon_1\pm\varepsilon_2)$ is the self-dual eigenform carrying the distinguished eigenvalue, the other being anti-self-dual and in the kernel.** As it stands the record contains a false statement about $\mathbb{CP}^2$'s self-dual forms. Verdict **MIS-STATED**; the escape conclusion itself is not damaged by it, since the two forms $\tfrac1{\sqrt2}(e_{13}-e_{24})$ and $\tfrac1{\sqrt2}(e_{14}+e_{23})$ named next really are self-dual, really are eigenforms with nonzero eigenvalue, and really are not in $\operatorname{span}(e_{12},e_{34})$.
+The block says "two of its self-dual eigenforms are $\tfrac1{\sqrt2}(\varepsilon_1\pm\varepsilon_2)$". **$\tfrac1{\sqrt2}(\varepsilon_1-\varepsilon_2)=\tfrac1{\sqrt2}(e_{12}-e_{34})$ is anti-self-dual.** For $\mathbb{CP}^2$ the Weyl tensor is self-dual, $W^-=0$, so the whole of $\Lambda^-$ is in the kernel; $\tfrac1{\sqrt2}(\varepsilon_1-\varepsilon_2)$ is an eigenform, but with eigenvalue $0$, and it is not a self-dual one. **The sentence should read that one of $\tfrac1{\sqrt2}(\varepsilon_1\pm\varepsilon_2)$ is the self-dual eigenform carrying the distinguished eigenvalue, the other being anti-self-dual and in the kernel.** As it stands the record contains a false statement about $\mathbb{CP}^2$'s self-dual forms. Verdict **MIS-STATED**; the escape conclusion itself is not damaged by it, since the two forms $\tfrac1{\sqrt2}(e_{13}-e_{24})$ and $\tfrac1{\sqrt2}(e_{14}+e_{23})$ named next really are self-dual, really are eigenforms with nonzero eigenvalue, and really are not in $\mathop{\mathrm{span}}(e_{12},e_{34})$.
 
 ### 9b. "in that splitting or any other": no argument on file
 
-The block asserts that $W_{\mathbb{CP}^2}$ is block-diagonal for **no** splitting whatever. That is a quantification over every orthogonal decomposition of $\mathbb R^4$ into planes (a set with the dimension of a flag manifold) and **the block gives no argument for it at all**. Exhibiting that two particular forms fail to lie in $\operatorname{span}(e_{12},e_{34})$ settles one splitting and says nothing about the rest.
+The block asserts that $W_{\mathbb{CP}^2}$ is block-diagonal for **no** splitting whatever. That is a quantification over every orthogonal decomposition of $\mathbb R^4$ into planes (a set with the dimension of a flag manifold) and **the block gives no argument for it at all**. Exhibiting that two particular forms fail to lie in $\mathop{\mathrm{span}}(e_{12},e_{34})$ settles one splitting and says nothing about the rest.
 
 Following the brief's instruction, I do not supply the missing argument. **This claim has no argument on file: `HYPOTHESIS-DEBT`.** I will record only that the debt looks cheap rather than deep (the block's own §2 machinery bounds $r$ by $m$, and $m\le2$ at $n=4$) but cheapness is not discharge, and the sentence as written is an assertion, not a proof.
 
@@ -180,7 +180,7 @@ The block says: "A coordinate-diagonal $W$ escapes, its eigenforms being the $e_
 Two problems with the reason, in ascending order of seriousness.
 
 - **"its eigenforms being the $e_{ab}$" is not exact under degeneracy.** If two coordinate eigenvalues coincide, the eigenspace is larger than the span of one $e_{ab}$ and contains forms that are not coordinate $2$-forms. This is harmless to the conclusion, since one only needs some eigenform outside $V$, but it is loose.
-- **The hypothesis is about eigenforms with nonzero eigenvalue, and the reason given is about all $\binom n2$ of the $e_{ab}$.** These are different statements. "No splitting into $\lfloor n/2\rfloor$ planes contains all the $e_{ab}$" is true and easy, $\operatorname{span}(\varepsilon_1,\dots,\varepsilon_m)$ contains at most $m\le\lfloor n/2\rfloor$ of the $e_{ab}$ up to sign, because a rank-two form in that span must be a multiple of a single $\varepsilon_j$, while $\binom n2>\lfloor n/2\rfloor$ for $n\ge3$. But that is not what has to be ruled out. What has to be ruled out is that the $e_{ab}$ **with $\lambda_{ab}\ne0$** all lie in the span, and the block never restricts to those. The gap is real, not pedantic: the set of $e_{ab}$ with nonzero eigenvalue can be small, Given A forces $\sum_{b\ne a}\lambda_{ab}=0$ for each $a$, and a four-cycle of alternating signs, $\lambda_{12}=\lambda_{34}=t$ and $\lambda_{23}=\lambda_{14}=-t$, satisfies it with only four nonzero entries, which is fewer than $m=6$ at $n=12$. So the counting the block offers does not reach the case it needs.
+- **The hypothesis is about eigenforms with nonzero eigenvalue, and the reason given is about all $\binom n2$ of the $e_{ab}$.** These are different statements. "No splitting into $\lfloor n/2\rfloor$ planes contains all the $e_{ab}$" is true and easy, $\mathop{\mathrm{span}}(\varepsilon_1,\dots,\varepsilon_m)$ contains at most $m\le\lfloor n/2\rfloor$ of the $e_{ab}$ up to sign, because a rank-two form in that span must be a multiple of a single $\varepsilon_j$, while $\binom n2>\lfloor n/2\rfloor$ for $n\ge3$. But that is not what has to be ruled out. What has to be ruled out is that the $e_{ab}$ **with $\lambda_{ab}\ne0$** all lie in the span, and the block never restricts to those. The gap is real, not pedantic: the set of $e_{ab}$ with nonzero eigenvalue can be small, Given A forces $\sum_{b\ne a}\lambda_{ab}=0$ for each $a$, and a four-cycle of alternating signs, $\lambda_{12}=\lambda_{34}=t$ and $\lambda_{23}=\lambda_{14}=-t$, satisfies it with only four nonzero entries, which is fewer than $m=6$ at $n=12$. So the counting the block offers does not reach the case it needs.
 
 Verdict **UNDER-SPECIFIED**. The conclusion may well survive (I am not asserting a counterexample and I did not hunt for one) but the reason printed in the record does not establish it, and the record should not read as though it did.
 
@@ -204,11 +204,11 @@ The scope claim is in fact *stronger* than the record needs and worth saying so:
 
 ## What would break it, and what I did to look
 
-**The falsifier is a nonzero $W\in\mathcal W_n$ with $\operatorname{im}W\subseteq V=\operatorname{span}(\varepsilon_1,\dots,\varepsilon_m)$** for some orthogonal family of planes, equivalently, by §4, a nonzero symmetric $m\times m$ matrix $S$ arising as the matrix of $W|_V$.
+**The falsifier is a nonzero $W\in\mathcal W_n$ with $\mathop{\mathrm{im}}W\subseteq V=\mathop{\mathrm{span}}(\varepsilon_1,\dots,\varepsilon_m)$** for some orthogonal family of planes, equivalently, by §4, a nonzero symmetric $m\times m$ matrix $S$ arising as the matrix of $W|_V$.
 
 **What I did.** I did not search, sweep or run anything; the standing analysis-only rule forbids it, and here it is unnecessary, because the entry count in §4 closes the question in closed form. Ricci pins the $m$ diagonal entries of $S$, Bianchi the $\binom m2$ off-diagonal entries, and $m+\binom m2=\binom{m+1}2$ is the full dimension of the symmetric $m\times m$ matrices. There is no room left in which a falsifier could sit. **So there is nothing to look for, and that is a fact about the equations rather than the outcome of a hunt.**
 
-**The near-miss, exhibited in closed form, to show which given is load-bearing.** Take $m=r=2$, $\Lambda=\operatorname{diag}(1,-1)$ and
+**The near-miss, exhibited in closed form, to show which given is load-bearing.** Take $m=r=2$, $\Lambda=\mathop{\mathrm{diag}}(1,-1)$ and
 
 $$M=\tfrac1{\sqrt2}\begin{pmatrix}1&1\\1&-1\end{pmatrix},\qquad\text{so}\qquad M^{\mathsf T}\Lambda M=\begin{pmatrix}0&1\\1&0\end{pmatrix}.$$
 

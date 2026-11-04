@@ -29,9 +29,9 @@ Read [conventions.md](../findings/conventions.md) in full first, per the brief, 
 - **$t=\lVert K\rVert_F^2=\sum_{a\ne b}K_{ab}^2$, the ORDERED sum**, so $t=2$ on the diagonal locus and $\sum_{a<b}K_{ab}^2=1$.
 - **$\lambda$ is $\theta$**, the Lagrange multiplier of $Q(W)=\theta W$ on the unit sphere, the record's $\theta$ of [conventions.md](../findings/conventions.md). It is **not** a $\Lambda^2$ eigenvalue, not $\lambda_{\max}(L_e)$, not [stratum-two-negative.md](../findings/stratum-two-negative.md)'s $\lambda_1$, and not $\lambda_{\min}(\mathring W)$. Derived, not assumed, see §4.
 - **$K^{\circ2}$ is the Hadamard square**, $(K^{\circ2})_{ab}=K_{ab}^2$, entry by entry, with $(K^{\circ2})_{aa}=0$. **$K^2$ is the matrix square**, $(K^2)_{ab}=\sum_cK_{ac}K_{cb}$, with $(K^2)_{aa}=\sum_cK_{ac}^2\ne0$ in general. The two agree nowhere relevant, and every occurrence below is checked for which is meant.
-- **$D=\operatorname{diag}(\operatorname{diag}K^2)$**: the inner $\operatorname{diag}$ extracts the diagonal vector of $K^2$, the outer rebuilds a diagonal matrix, so $D_{aa}=\sum_bK_{ab}^2$ and $D_{ab}=0$ for $a\ne b$. Under hollowness $D$ is the **row-mass** diagonal, this is what makes it the degree matrix of the weighted graph.
+- **$D=\mathop{\mathrm{diag}}(\mathop{\mathrm{diag}}K^2)$**: the inner $\mathop{\mathrm{diag}}$ extracts the diagonal vector of $K^2$, the outer rebuilds a diagonal matrix, so $D_{aa}=\sum_bK_{ab}^2$ and $D_{ab}=0$ for $a\ne b$. Under hollowness $D$ is the **row-mass** diagonal, this is what makes it the degree matrix of the weighted graph.
 
-**The one trap in [conventions.md](../findings/conventions.md) that bears on this block**, and the block avoids it: *"On the diagonal locus the $\Lambda^2$ spectrum is the multiset of ENTRIES of $K$, not its eigenvalues."* Every spectral claim in L97 and its counting corollary is about $\operatorname{spec}(K)$, the eigenvalues of the $n\times n$ sectional matrix, and the block says so each time. Read as a $\Lambda^2$ statement the counting corollary would be false and would collide with [post F53](../findings/INDEX-traps.md), which records exactly that collision. **No defect here; recorded because the block's neighbours have paid for it.**
+**The one trap in [conventions.md](../findings/conventions.md) that bears on this block**, and the block avoids it: *"On the diagonal locus the $\Lambda^2$ spectrum is the multiset of ENTRIES of $K$, not its eigenvalues."* Every spectral claim in L97 and its counting corollary is about $\mathop{\mathrm{spec}}(K)$, the eigenvalues of the $n\times n$ sectional matrix, and the block says so each time. Read as a $\Lambda^2$ statement the counting corollary would be false and would collide with [post F53](../findings/INDEX-traps.md), which records exactly that collision. **No defect here; recorded because the block's neighbours have paid for it.**
 
 ## 1. The criticality equation. Derived, and it is the pair equation twice over
 
@@ -40,7 +40,7 @@ Read [conventions.md](../findings/conventions.md) in full first, per the brief, 
 $$(W^2)_{(ab),(ab)}+(W^{\#})_{(ab),(ab)}=\lambda K_{ab},\qquad a\ne b .$$
 
 - **$(W^2)_{(ab),(ab)}=K_{ab}^2$**, since $W$ is diagonal in this basis. Off the locus this is $K_{ab}^2+\lVert F_{(ab)}\rVert^2$, which is exactly where the lemma dies, and the block's own off-locus paragraph gets that split right.
-- **$(W^{\#})_{(ab),(ab)}=(K^2)_{ab}$.** $\operatorname{ad}_{\varphi_{ab}}$ is the infinitesimal rotation of the $(a,b)$-plane, so the transported structure constants $c_{(ab)\mu\nu}^2$ are supported exactly on the pairs $\mu=(ac)$, $\nu=(cb)$ with $c\ne a,b$, with coefficient $1$, the "$c^2$ is $1$ on triangles" that opens this file. For diagonal $W$ this gives $(W^{\#})_{(ab),(ab)}=\sum_{c\ne a,b}K_{ac}K_{cb}$, and the restriction $c\ne a,b$ is **free by hollowness**: the excluded terms carry a factor $K_{aa}$ or $K_{bb}$. So the sum is the unrestricted $(K^2)_{ab}$.
+- **$(W^{\#})_{(ab),(ab)}=(K^2)_{ab}$.** $\mathop{\mathrm{ad}}_{\varphi_{ab}}$ is the infinitesimal rotation of the $(a,b)$-plane, so the transported structure constants $c_{(ab)\mu\nu}^2$ are supported exactly on the pairs $\mu=(ac)$, $\nu=(cb)$ with $c\ne a,b$, with coefficient $1$, the "$c^2$ is $1$ on triangles" that opens this file. For diagonal $W$ this gives $(W^{\#})_{(ab),(ab)}=\sum_{c\ne a,b}K_{ac}K_{cb}$, and the restriction $c\ne a,b$ is **free by hollowness**: the excluded terms carry a factor $K_{aa}$ or $K_{bb}$. So the sum is the unrestricted $(K^2)_{ab}$.
 
 Hence the **pair equation**, one per unordered pair:
 
@@ -63,7 +63,7 @@ $$K_{ab}^2+(K^2)_{ab}=\lambda K_{ab},\qquad a\ne b. \tag{P}$$
 | **Maximality**, second-order or otherwise | **NO** | see §6 |
 | **$\lambda>0$** | **NO** for the PSD statement; **yes** for both readings of it | see §5 and §7 |
 
-**Independent corroboration, not relied on.** [r125](REVIEW_r125.md) confirms the same equation including the $D$ term (claim 1) and derives $(W^{\#})_{abab}=(K^2)_{ab}$ from the structure constants (claim 2), by a route that goes through $\langle A^a,A^b\rangle-\operatorname{tr}((B^{ab})^2)$ rather than through the triangle support. Two derivations, different intermediate objects, same equation.
+**Independent corroboration, not relied on.** [r125](REVIEW_r125.md) confirms the same equation including the $D$ term (claim 1) and derives $(W^{\#})_{abab}=(K^2)_{ab}$ from the structure constants (claim 2), by a route that goes through $\langle A^a,A^b\rangle-\mathop{\mathrm{tr}}((B^{ab})^2)$ rather than through the triangle support. Two derivations, different intermediate objects, same equation.
 
 ## 2. The first equality. Confirmed, and the diagonal terms do vanish
 
@@ -100,7 +100,7 @@ $$\sum_{a<b}K_{ab}^3+\sum_{a<b}K_{ab}(K^2)_{ab}=\lambda\sum_{a<b}K_{ab}^2 .$$
 
 The second sum is $3\sum_{a<b<c}K_{ab}K_{bc}K_{ca}$, each triangle being counted once per edge; the right side is $\lambda\cdot t/2=\lambda$ at $t=2$. So $\lambda=\sum_{a<b}w_{ab}^3+3\sum_{a<b<c}w_{ab}w_{bc}w_{ca}$, **which is verbatim this file's opening formula for $\theta(w)$**. So the block's $\lambda$ is the record's $\theta$, pinned by the block's own file and not by a naming convention, and the same computation pins the pairing, since the identification $\lambda=\theta$ holds only in the half-trace normalisation where $\sum_{a<b}w_{ab}^2=1$.
 
-**Defect, minor but real: $\lambda$ is never declared, and this file writes the same equation under $\theta$.** [diagonal-half.md](../findings/diagonal-half.md) line 171 reads *"Criticality on the diagonal locus reads $M^{\circ2}+M^2=\theta M+\operatorname{diag}(s)$"*, the identical equation, 58 lines above L97, in $\theta$ and in $M$. The block's $\lambda$ is undefined at its point of use and the letter carries at least four other objects on this record. **The fix is one clause**, not a re-derivation.
+**Defect, minor but real: $\lambda$ is never declared, and this file writes the same equation under $\theta$.** [diagonal-half.md](../findings/diagonal-half.md) line 171 reads *"Criticality on the diagonal locus reads $M^{\circ2}+M^2=\theta M+\mathop{\mathrm{diag}}(s)$"*, the identical equation, 58 lines above L97, in $\theta$ and in $M$. The block's $\lambda$ is undefined at its point of use and the letter carries at least four other objects on this record. **The fix is one clause**, not a re-derivation.
 
 ## 5. The boxed "equivalently" is a GAP. The interval statement is strictly stronger than PSD
 
@@ -108,11 +108,11 @@ The box reads
 
 $$\boxed{\ K^2-\lambda K\succeq0\ }\qquad\text{equivalently}\qquad\textbf{$K$ has no eigenvalue in }(0,\lambda] .$$
 
-**These are not equivalent.** $K^2-\lambda K$ is a polynomial in $K$, so its eigenvalues are $\kappa(\kappa-\lambda)$ over $\kappa\in\operatorname{spec}(K)$, and
+**These are not equivalent.** $K^2-\lambda K$ is a polynomial in $K$, so its eigenvalues are $\kappa(\kappa-\lambda)$ over $\kappa\in\mathop{\mathrm{spec}}(K)$, and
 
-$$K^2-\lambda K\succeq0\iff \kappa(\kappa-\lambda)\ge0\ \forall\kappa\iff \operatorname{spec}(K)\cap(0,\lambda)=\varnothing\quad(\lambda>0).$$
+$$K^2-\lambda K\succeq0\iff \kappa(\kappa-\lambda)\ge0\ \forall\kappa\iff \mathop{\mathrm{spec}}(K)\cap(0,\lambda)=\varnothing\quad(\lambda>0).$$
 
-The endpoint $\kappa=\lambda$ gives $\kappa(\kappa-\lambda)=0\ge0$ and is **permitted** by PSD. **Witness, purely linear-algebraic**: any symmetric $K$ with $\lambda\in\operatorname{spec}(K)$ satisfies the left side and fails the right. So the right side is strictly stronger and the two are joined by an implication in one direction only.
+The endpoint $\kappa=\lambda$ gives $\kappa(\kappa-\lambda)=0\ge0$ and is **permitted** by PSD. **Witness, purely linear-algebraic**: any symmetric $K$ with $\lambda\in\mathop{\mathrm{spec}}(K)$ satisfies the left side and fails the right. So the right side is strictly stronger and the two are joined by an implication in one direction only.
 
 **What repairs it is [L129](../findings/diagonal-half.md), and the block knows this**, the note directly under the box says so and attributes the endpoint to L129. **But L129 is not a restatement of PSD; it consumes a hypothesis L97 does not.** Its proof needs $K\mathbf1_{C_t}=0$ for each component indicator, which needs **$K\mathbf1=0$, i.e. Ricci-flatness** (a hypothesis §1's table records as unused by L97) and it needs $\lambda>0$ at the last step ($\lambda x=0\Rightarrow x=0$). [INDEX-results.md](../findings/INDEX-results.md) row 129 lists exactly those hypotheses.
 
@@ -127,7 +127,7 @@ The endpoint $\kappa=\lambda$ gives $\kappa(\kappa-\lambda)=0\ge0$ and is **perm
 The block defines its own comparison: *"The scalar Poincaré inequality below is the single instance $v=$ top eigenvector."* Call it
 
 - **S1** (scalar): $\mu_1(\mu_1-\lambda)\ge0$, i.e. $\mu_1\notin(0,\lambda)$;
-- **M** (matrix): $\kappa(\kappa-\lambda)\ge0$ for **every** $\kappa\in\operatorname{spec}(K)$.
+- **M** (matrix): $\kappa(\kappa-\lambda)\ge0$ for **every** $\kappa\in\mathop{\mathrm{spec}}(K)$.
 
 **M $\Rightarrow$ S1 trivially. S1 $\not\Rightarrow$ M**: a symmetric $K$ with spectrum containing $2\lambda$ and $\lambda/2$ satisfies S1 and fails M. So **M is strictly stronger than S1**, and the clause as written is correct.
 
@@ -139,7 +139,7 @@ The block defines its own comparison: *"The scalar Poincaré inequality below is
 
 ## 7. Scope
 
-- **Every diagonal critical point, not only maximisers.** The derivation reads (P) and nothing else. No second-order condition, no $\lambda_{\max}(L_e)$, no band, no $\theta>0$: the PSD statement holds at diagonal saddles and at $\theta<0$ critical points alike. **The heading is right and the derivation does not quietly use maximality.** *Caveat, and it belongs to the readings rather than to the matrix statement*: the interval form of §5 and the counting corollary $r\le2/\lambda^2$ both need $\lambda>0$, which the block does not state. At $\lambda<0$ the PSD statement reads $\operatorname{spec}(K)\cap(\lambda,0)=\varnothing$ instead.
+- **Every diagonal critical point, not only maximisers.** The derivation reads (P) and nothing else. No second-order condition, no $\lambda_{\max}(L_e)$, no band, no $\theta>0$: the PSD statement holds at diagonal saddles and at $\theta<0$ critical points alike. **The heading is right and the derivation does not quietly use maximality.** *Caveat, and it belongs to the readings rather than to the matrix statement*: the interval form of §5 and the counting corollary $r\le2/\lambda^2$ both need $\lambda>0$, which the block does not state. At $\lambda<0$ the PSD statement reads $\mathop{\mathrm{spec}}(K)\cap(\lambda,0)=\varnothing$ instead.
 - **The kernel, and consistency with the block below.** $\ker(K^2-\lambda K)=\ker K\oplus E_\lambda(K)$, and it equals $\ker L(w)$, which is spanned by the indicators $\mathbf1_{C_t}$ of the connected components of $\{K_{ab}\ne0\}$, the same graph as $\{w_{ab}>0\}$, since $w_{ab}=K_{ab}^2$. **The two statements are consistent, and their combination is a corollary worth having**: with $E_\lambda(K)=0$ by [L129](../findings/diagonal-half.md), $\ker K$ is *exactly* the component-indicator span at a diagonal critical point. That is what [L99](../findings/diagonal-half.md) and line 171's $\dim\ker M=\#\text{components}$ use, and what [L130](../findings/diagonal-half.md) leans on downstream. **No inconsistency found between L97 and the block below it.** *Note the direction of dependence*: L129's proof uses L97's identity, so the two must not be cited as independent confirmations of each other.
 - **Off the diagonal locus, in one sentence.** The pair equation acquires $\lVert F_{(ab)}\rVert^2$ from $(W^2)_{(ab),(ab)}$ and loses $(W^{\#})_{(ab),(ab)}=(K^2)_{ab}$, so the off-diagonal entry of $K^2-\lambda K$ is no longer $-K_{ab}^2$, the weights are no longer squares, and nothing keeps them non-negative, **the diagonal, being hollowness alone, survives untouched**, which is why the whole failure is carried off-diagonal, exactly as the block's $E$ paragraph states.
 
@@ -154,12 +154,12 @@ The block defines its own comparison: *"The scalar Poincaré inequality below is
 
 ## Screen, labelled as such and carrying no positive claim
 
-By hand at $S^3\times S^3$, $n=6$, to check the pair equation is not off by a constant: $K_{ab}=\alpha$ within blocks, $\beta$ across; $2\alpha+3\beta=0$ and $t=20\alpha^2=2$ give $\alpha=0.316228$, $\beta=-0.210819$, $\lambda=\theta_0(6)=1.054093$. At the within pair $(1,2)$: $K_{12}^2+(K^2)_{12}=0.1+(\alpha^2+3\beta^2)=0.333333$ against $\lambda\alpha=0.333333$. At the cross pair $(1,4)$: $0.044444+4\alpha\beta=-0.222222$ against $\lambda\beta=-0.222222$. Spectrum of $K$ is $(1.264911,\,0,\,-0.316228^{\times4})$, so $\operatorname{spec}(K^2-\lambda K)=(0.2667,\,0,\,0.4333^{\times4})\succeq0$ with a one-dimensional kernel at $\mathbf1$, $r=1$, and an empty $(0,\lambda]$. **This confirms nothing that §1–§4 did not already derive**; it is recorded because it also fixes the pairing, the same numbers under plain Frobenius would put $\lambda$ off by $\sqrt2$.
+By hand at $S^3\times S^3$, $n=6$, to check the pair equation is not off by a constant: $K_{ab}=\alpha$ within blocks, $\beta$ across; $2\alpha+3\beta=0$ and $t=20\alpha^2=2$ give $\alpha=0.316228$, $\beta=-0.210819$, $\lambda=\theta_0(6)=1.054093$. At the within pair $(1,2)$: $K_{12}^2+(K^2)_{12}=0.1+(\alpha^2+3\beta^2)=0.333333$ against $\lambda\alpha=0.333333$. At the cross pair $(1,4)$: $0.044444+4\alpha\beta=-0.222222$ against $\lambda\beta=-0.222222$. Spectrum of $K$ is $(1.264911,\,0,\,-0.316228^{\times4})$, so $\mathop{\mathrm{spec}}(K^2-\lambda K)=(0.2667,\,0,\,0.4333^{\times4})\succeq0$ with a one-dimensional kernel at $\mathbf1$, $r=1$, and an empty $(0,\lambda]$. **This confirms nothing that §1–§4 did not already derive**; it is recorded because it also fixes the pairing, the same numbers under plain Frobenius would put $\lambda$ off by $\sqrt2$.
 
 ## What the record may cite, and what it may not
 
 1. **$K^2-\lambda K=L(K_{ab}^2)\succeq0$ at every diagonal critical point**, citable as written. Hypotheses: coordinate-diagonality, the pair-diagonal entries of criticality, hollowness. **Not** Ricci-flatness, **not** maximality, **not** $\lambda>0$.
-2. **$\operatorname{spec}(K)\cap(0,\lambda)=\varnothing$ at $\lambda>0$**, citable, equivalent to 1.
-3. **$\operatorname{spec}(K)\cap(0,\lambda]=\varnothing$**, citable **through [L129](../findings/diagonal-half.md)**, which additionally needs $K\mathbf1=0$ and $\lambda>0$. **Not** as an equivalent form of 1.
+2. **$\mathop{\mathrm{spec}}(K)\cap(0,\lambda)=\varnothing$ at $\lambda>0$**, citable, equivalent to 1.
+3. **$\mathop{\mathrm{spec}}(K)\cap(0,\lambda]=\varnothing$**, citable **through [L129](../findings/diagonal-half.md)**, which additionally needs $K\mathbf1=0$ and $\lambda>0$. **Not** as an equivalent form of 1.
 4. **The counting corollary $r\le2/\lambda^2$**, and its contrapositive reducing diagonal branch 1 to $r=1$, citable; it needs 1 at every eigenvector plus $t\le2$, and $t=2$ holds on the locus. Arithmetic re-checked: $2/\theta_0(n)^2=n^2/((n-1)(n-2))<2$ iff $n>3+\sqrt5$, so at every $n\ge6$; $r\le1.309$ at $n=12$.
 5. **"Strictly stronger than the scalar one"**, citable **against the top-eigenvector instance**, which is the file's own definition. **Not** citable as "constrains the whole spectrum rather than one Rayleigh quotient" without the rider that the whole spectrum here means the eigenvector instances and nothing more.

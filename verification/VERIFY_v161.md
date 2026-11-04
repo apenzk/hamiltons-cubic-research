@@ -9,7 +9,7 @@ I read [BRIEF_L34.md](BRIEF_L34.md) cold and worked from the definitions in [con
 | 1 | **The statement.** For $m=6$ and $m=8$ there is $W\in\mathrm{Weyl}_m$ with exactly two negative eigenvalues and $\dim U=m$ | **CONFIRMED** |
 | 2 | $m=8$: spectrum $\{-1/\sqrt3\,(\times2),\ 1/(2\sqrt3)\,(\times4)\}$, $\theta=-\sqrt3/2$ | **CONFIRMED, exact** |
 | 3 | $m=6$: spectrum $(-3,-1,1,1,1,1)/\sqrt{14}$, $\theta=-1.030865$ | **CONFIRMED, exact**, closed form $-27\sqrt{14}/98$ |
-| 4 | $\operatorname{tr}W^\#=-1$ at both witnesses | **CONFIRMED**, and it is an identity at every unit $\mathrm{Weyl}_n$ element |
+| 4 | $\mathop{\mathrm{tr}}W^\#=-1$ at both witnesses | **CONFIRMED**, and it is an identity at every unit $\mathrm{Weyl}_n$ element |
 | 5 | "Both defining conditions are linear, so the sum is a $\mathrm{Weyl}_m$ element whatever the planes do" | **CONFIRMED** |
 | 6 | "each summand contributes exactly one negative eigenvalue" | **BROKEN at the $m=6$ witness**, the conclusion "exactly two" survives |
 | 7 | "the support is the union of the planes" | **CONCLUSION CONFIRMED, JUSTIFICATION FALSE** at $m=6$ |
@@ -40,7 +40,7 @@ Quoted from [conventions.md](../findings/conventions.md):
 > | $\theta$ | $P(W)/\lVert W\rVert^3$; at a critical point, $Q(W)=\theta W$ |
 > | $N$ | $\binom n2=\dim\Lambda^2\mathbb R^n$ |
 
-> **The $\tfrac12$ goes at the $\Lambda^2$ level, not the operator level.** The inner product is $\tfrac12\operatorname{tr}(X^{\mathsf T}Y)$ at the $\Lambda^2$ level and plain Frobenius on the pair matrix. *Applying the $\tfrac12$ at the operator level instead inflates every $\theta$ by $\sqrt2$*, and has cost a cycle.
+> **The $\tfrac12$ goes at the $\Lambda^2$ level, not the operator level.** The inner product is $\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$ at the $\Lambda^2$ level and plain Frobenius on the pair matrix. *Applying the $\tfrac12$ at the operator level instead inflates every $\theta$ by $\sqrt2$*, and has cost a cycle.
 
 > - **A bivector's norm**, and the record runs in the first of these: $\lVert\varphi_{ab}\rVert^2=1$ under the half-trace pairing of the bullet above, which is the one every result uses and which makes $\{\varphi_{ab}\}_{a<b}$ orthonormal
 
@@ -81,7 +81,7 @@ And from [stratum-two-negative.md](../findings/stratum-two-negative.md) itself, 
 - $\mathrm{Weyl}_4=S^2_0(\Lambda^+)\oplus S^2_0(\Lambda^-)$, hypothesis is $n=4$ exactly, satisfied by each summand before padding. Cleared.
 - $P=9(\det W^++\det W^-)$ on $\mathrm{Weyl}_4$, used by me, not by the block, and its hypothesis $n=4$ is satisfied at each summand. Cleared.
 - [Lemma L33](../findings/stratum-two-negative.md), cited in "Why the recorded equivalence fails". Its hypothesis is a **one-dimensional** eigenspace on one side, counted with multiplicity, and its exception is a complex-structure multiple on a 4-plane. The block's use is legitimate at $m\ge6$ and fails at $m=4$; see §11. **The witnesses themselves do not satisfy L33's hypothesis** (the $m=8$ witness has a 2-dimensional negative eigenspace and a 4-dimensional positive one) and the block does not claim they do.
-- The Weitzenböck identity $\sum_\alpha\lambda_\alpha\mathrm{ad}(v_\alpha)^2=2W$, from the L33 block. I use it in §4 to derive $\operatorname{tr}W^\#$. Its hypotheses are the first Bianchi identity (load-bearing) and Ricci-flatness (deletes the correction), both of which the witnesses satisfy by §5.
+- The Weitzenböck identity $\sum_\alpha\lambda_\alpha\mathrm{ad}(v_\alpha)^2=2W$, from the L33 block. I use it in §4 to derive $\mathop{\mathrm{tr}}W^\#$. Its hypotheses are the first Bianchi identity (load-bearing) and Ricci-flatness (deletes the correction), both of which the witnesses satisfy by §5.
 - **The unital-algebra trap the brief names does not arise here.** No theorem about $\mathcal W_n$ as an algebra is imported into this block; the only algebra used is $\mathfrak{so}(m)$ with its bracket, which needs no unit.
 
 ## 2. The $m=8$ witness, rebuilt cold
@@ -94,17 +94,17 @@ and $z_1,z_2,z_3$ the same on $e_5,\dots,e_8$. Put $A=q(-2u_1u_1^{\mathsf T}+u_2
 
 **The spectrum.** $\Lambda^2V_1\perp\Lambda^2V_2$ and $\langle u_i,z_j\rangle=0$ for every $i,j$, so the eigenvalues of $A+B$ are the union: $-2q$ twice and $q$ four times, with $\binom82-6=22$ zeros. Then $\lVert W\rVert^2=2(4q^2)+4q^2=12q^2$, so unit norm is $q=1/(2\sqrt3)$ and $-2q=-1/\sqrt3$. **The recorded spectrum $\{-1/\sqrt3\,(\times2),\ 1/(2\sqrt3)\,(\times4)\}$ is exactly right**, and it sums to zero and squares to $2\cdot\tfrac13+4\cdot\tfrac1{12}=1$.
 
-**$\theta$.** Write $P(X)=\operatorname{tr}(X^3)+\langle X,X\#X\rangle$. Both cubics polarise, and $\langle X,Y\#Z\rangle$ is fully symmetric, so
+**$\theta$.** Write $P(X)=\mathop{\mathrm{tr}}(X^3)+\langle X,X\#X\rangle$. Both cubics polarise, and $\langle X,Y\#Z\rangle$ is fully symmetric, so
 
-$$P(A+B)=P(A)+P(B)+3\big[\operatorname{tr}(A^2B)+\operatorname{tr}(AB^2)\big]+3\big[\langle B,A^\#\rangle+\langle A,B^\#\rangle\big].$$
+$$P(A+B)=P(A)+P(B)+3\big[\mathop{\mathrm{tr}}(A^2B)+\mathop{\mathrm{tr}}(AB^2)\big]+3\big[\langle B,A^\#\rangle+\langle A,B^\#\rangle\big].$$
 
-Here $AB=0$ because $\operatorname{im}B\subseteq\Lambda^2V_2\subseteq\ker A$, so the first bracket vanishes. $A^\#$ is supported on $\Lambda^2V_1$ because $\Lambda^2V_1=\mathfrak{so}(V_1)$ is a subalgebra, so $\langle B,A^\#\rangle=0$, and likewise $\langle A,B^\#\rangle=0$. **So $P$ is additive here, and the reason is that $\mathfrak{so}(V_1)$ and $\mathfrak{so}(V_2)$ commute**, $[u_i,z_j]=0$ for orthogonal complementary planes, which kills $A\#B$ outright. With $\lVert A\rVert=\lVert B\rVert=1/\sqrt2$ and $\theta$ at each normalised summand equal to $-\sqrt{3/2}$ (the negative of the base-case family, $P$ being odd, and padding preserving $\theta$),
+Here $AB=0$ because $\mathop{\mathrm{im}}B\subseteq\Lambda^2V_2\subseteq\ker A$, so the first bracket vanishes. $A^\#$ is supported on $\Lambda^2V_1$ because $\Lambda^2V_1=\mathfrak{so}(V_1)$ is a subalgebra, so $\langle B,A^\#\rangle=0$, and likewise $\langle A,B^\#\rangle=0$. **So $P$ is additive here, and the reason is that $\mathfrak{so}(V_1)$ and $\mathfrak{so}(V_2)$ commute**, $[u_i,z_j]=0$ for orthogonal complementary planes, which kills $A\#B$ outright. With $\lVert A\rVert=\lVert B\rVert=1/\sqrt2$ and $\theta$ at each normalised summand equal to $-\sqrt{3/2}$ (the negative of the base-case family, $P$ being odd, and padding preserving $\theta$),
 
 $$\theta(W)=P(A)+P(B)=2\cdot\Big(\tfrac1{\sqrt2}\Big)^3\big(-\sqrt{3/2}\big)=-\frac{\sqrt{3/2}}{\sqrt2}=-\frac{\sqrt3}2 .$$
 
 **Recorded $-\sqrt3/2$ confirmed**, $=-0.8660254$, matching the $-0.866025$ in the [isotropy-cap.md](../findings/isotropy-cap.md) copy's table.
 
-**$\dim U$.** The negative eigenvalue $-1/\sqrt3$ has multiplicity $2$, so $v_{N-1},v_N$ is a *choice* of orthonormal basis of $\operatorname{span}(u_1,z_1)$. For $x=au_1+bz_1$ with $a,b\ne0$ the matrix $x$ is block-diagonal with four nonzero $2\times2$ blocks, hence $\operatorname{im}x=\mathbb R^8$; and at most one member of an orthonormal basis of that plane can have $a=0$ or $b=0$. **So $\dim U=8$ for every admissible choice**, and the definition of $U$ is unambiguous here even though it names particular eigenvectors.
+**$\dim U$.** The negative eigenvalue $-1/\sqrt3$ has multiplicity $2$, so $v_{N-1},v_N$ is a *choice* of orthonormal basis of $\mathop{\mathrm{span}}(u_1,z_1)$. For $x=au_1+bz_1$ with $a,b\ne0$ the matrix $x$ is block-diagonal with four nonzero $2\times2$ blocks, hence $\mathop{\mathrm{im}}x=\mathbb R^8$; and at most one member of an orthonormal basis of that plane can have $a=0$ or $b=0$. **So $\dim U=8$ for every admissible choice**, and the definition of $U$ is unambiguous here even though it names particular eigenvectors.
 
 ## 3. The $m=6$ witness, rebuilt cold
 
@@ -117,9 +117,9 @@ $$z_1=\tfrac1{\sqrt2}(\varphi_{34}+\varphi_{56}),\ z_2=\tfrac1{\sqrt2}(\varphi_{
 
 Set $A=q(-2u_1u_1^{\mathsf T}+u_2u_2^{\mathsf T}+u_3u_3^{\mathsf T})$ and $B=q(-2z_1z_1^{\mathsf T}+z_2z_2^{\mathsf T}+z_3z_3^{\mathsf T})$, and $W=A+B$.
 
-**The spectrum.** $u_2,u_3,z_2,z_3$ are orthonormal and orthogonal to everything else, and each is annihilated by the other summand, so each is an eigenvector at $q$, four eigenvalues $q$. The plane $S=\operatorname{span}(u_1,z_1)$ is invariant: $Wu_1=-2qu_1-qz_1$ and $Wz_1=-2qz_1-qu_1$. Orthonormalise $S$ by $f_1=u_1$, $f_2=\tfrac2{\sqrt3}z_1-\tfrac1{\sqrt3}u_1$; then
+**The spectrum.** $u_2,u_3,z_2,z_3$ are orthonormal and orthogonal to everything else, and each is annihilated by the other summand, so each is an eigenvector at $q$, four eigenvalues $q$. The plane $S=\mathop{\mathrm{span}}(u_1,z_1)$ is invariant: $Wu_1=-2qu_1-qz_1$ and $Wz_1=-2qz_1-qu_1$. Orthonormalise $S$ by $f_1=u_1$, $f_2=\tfrac2{\sqrt3}z_1-\tfrac1{\sqrt3}u_1$; then
 
-$$W|_S=q\begin{pmatrix}-\tfrac52&-\tfrac{\sqrt3}2\\[2pt]-\tfrac{\sqrt3}2&-\tfrac32\end{pmatrix},\qquad \operatorname{tr}=-4q,\quad \det=q^2\Big(\tfrac{15}4-\tfrac34\Big)=3q^2,$$
+$$W|_S=q\begin{pmatrix}-\tfrac52&-\tfrac{\sqrt3}2\\[2pt]-\tfrac{\sqrt3}2&-\tfrac32\end{pmatrix},\qquad \mathop{\mathrm{tr}}=-4q,\quad \det=q^2\Big(\tfrac{15}4-\tfrac34\Big)=3q^2,$$
 
 so $\lambda^2+4q\lambda+3q^2=0$ and $\lambda=-q,-3q$. **The spectrum is $\{-3q,-q,q,q,q,q\}$ with nine zeros**; $\sum\lambda^2=14q^2=1$ fixes $q=1/\sqrt{14}$, giving $(-3,-1,1,1,1,1)/\sqrt{14}$. **Recorded spectrum confirmed**, trace zero, norm one.
 
@@ -127,11 +127,11 @@ so $\lambda^2+4q\lambda+3q^2=0$ and $\lambda=-q,-3q$. **The spectrum is $\{-3q,-
 
 $$A^\#=2\big[\alpha_2\alpha_3\,u_1u_1^{\mathsf T}+\alpha_1\alpha_3\,u_2u_2^{\mathsf T}+\alpha_1\alpha_2\,u_3u_3^{\mathsf T}\big]=2q^2\big[u_1u_1^{\mathsf T}-2u_2u_2^{\mathsf T}-2u_3u_3^{\mathsf T}\big].$$
 
-Two independent checks pin this: $\operatorname{tr}A^\#=2q^2(1-2-2)=-6q^2=-\lVert A\rVert^2$, which is §4's identity; and $\langle A,A^\#\rangle=-12q^3$ against $\operatorname{tr}A^3=-6q^3$ gives $P(A)=-18q^3$, which is exactly $9\det W^+=9(-2q)(q)(q)$ from the $\mathrm{Weyl}_4$ closed form. Equivalently $\theta$ at the normalised summand is $-18q^3/(6q^2)^{3/2}=-3/\sqrt6=-\sqrt{3/2}$, as the record states.
+Two independent checks pin this: $\mathop{\mathrm{tr}}A^\#=2q^2(1-2-2)=-6q^2=-\lVert A\rVert^2$, which is §4's identity; and $\langle A,A^\#\rangle=-12q^3$ against $\mathop{\mathrm{tr}}A^3=-6q^3$ gives $P(A)=-18q^3$, which is exactly $9\det W^+=9(-2q)(q)(q)$ from the $\mathrm{Weyl}_4$ closed form. Equivalently $\theta$ at the normalised summand is $-18q^3/(6q^2)^{3/2}=-3/\sqrt6=-\sqrt{3/2}$, as the record states.
 
 **$\theta$.** Every cross term reduces to the single overlap $\langle u_1,z_1\rangle^2=\tfrac14$, because $A^\#$, $B^\#$, $A^2$ and $B^2$ are all diagonal in their own eigen-bivectors:
 
-- $\operatorname{tr}(A^2B)=(4q^2)(-2q)\tfrac14=-2q^3$, and $\operatorname{tr}(AB^2)=-2q^3$;
+- $\mathop{\mathrm{tr}}(A^2B)=(4q^2)(-2q)\tfrac14=-2q^3$, and $\mathop{\mathrm{tr}}(AB^2)=-2q^3$;
 - $\langle B,A^\#\rangle=(2q^2)(-2q)\tfrac14=-q^3$, and $\langle A,B^\#\rangle=-q^3$.
 
 So $P(W)=2(-18q^3)+3(-4q^3)+3(-2q^3)=-54q^3$, and at $q=1/\sqrt{14}$, $\lVert W\rVert=1$:
@@ -140,29 +140,29 @@ $$\theta=-\frac{54}{14\sqrt{14}}=-\frac{27\sqrt{14}}{98}=-1.03086478\ldots$$
 
 **The recorded $-1.030865$ is this surd correctly rounded.** The block prints a decimal where a clean closed form exists; the closed form is $-27\sqrt{14}/98$, and I recommend it be recorded.
 
-**$\dim U$.** The negative eigenvalues are distinct, so $v_{14},v_{15}$ are pinned up to sign. At $-3q$: $v_{15}=(u_1+z_1)/\sqrt3=\tfrac1{\sqrt6}(\varphi_{12}+2\varphi_{34}+\varphi_{56})$, which has three nonzero $2\times2$ blocks, so $\operatorname{im}v_{15}=\mathbb R^6$ already. At $-q$: $v_{14}=u_1-z_1=\tfrac1{\sqrt2}(\varphi_{12}-\varphi_{56})$, of rank $4$ and image $\langle e_1,e_2,e_5,e_6\rangle$. Hence $\dim U=6$. **Confirmed.**
+**$\dim U$.** The negative eigenvalues are distinct, so $v_{14},v_{15}$ are pinned up to sign. At $-3q$: $v_{15}=(u_1+z_1)/\sqrt3=\tfrac1{\sqrt6}(\varphi_{12}+2\varphi_{34}+\varphi_{56})$, which has three nonzero $2\times2$ blocks, so $\mathop{\mathrm{im}}v_{15}=\mathbb R^6$ already. At $-q$: $v_{14}=u_1-z_1=\tfrac1{\sqrt2}(\varphi_{12}-\varphi_{56})$, of rank $4$ and image $\langle e_1,e_2,e_5,e_6\rangle$. Hence $\dim U=6$. **Confirmed.**
 
-## 4. $\operatorname{tr}W^\#$
+## 4. $\mathop{\mathrm{tr}}W^\#$
 
-The brief asks for this explicitly. It is not a free parameter: **for every $W\in\mathcal W_n$, $\operatorname{tr}W^\#=-\lVert W\rVert^2$.** Since $\mathrm{ad}(v_\alpha)$ is skew-adjoint, $\lVert[v_\alpha,v_\beta]\rVert^2=-\langle v_\beta,\mathrm{ad}(v_\alpha)^2v_\beta\rangle$, so with the halved $\#$,
+The brief asks for this explicitly. It is not a free parameter: **for every $W\in\mathcal W_n$, $\mathop{\mathrm{tr}}W^\#=-\lVert W\rVert^2$.** Since $\mathrm{ad}(v_\alpha)$ is skew-adjoint, $\lVert[v_\alpha,v_\beta]\rVert^2=-\langle v_\beta,\mathrm{ad}(v_\alpha)^2v_\beta\rangle$, so with the halved $\#$,
 
-$$\operatorname{tr}W^\#=\tfrac12\sum_{\alpha\beta}\lambda_\alpha\lambda_\beta\lVert[v_\alpha,v_\beta]\rVert^2=-\tfrac12\sum_\beta\lambda_\beta\Big\langle v_\beta,\Big(\sum_\alpha\lambda_\alpha\mathrm{ad}(v_\alpha)^2\Big)v_\beta\Big\rangle=-\sum_\beta\lambda_\beta^2=-\lVert W\rVert^2,$$
+$$\mathop{\mathrm{tr}}W^\#=\tfrac12\sum_{\alpha\beta}\lambda_\alpha\lambda_\beta\lVert[v_\alpha,v_\beta]\rVert^2=-\tfrac12\sum_\beta\lambda_\beta\Big\langle v_\beta,\Big(\sum_\alpha\lambda_\alpha\mathrm{ad}(v_\alpha)^2\Big)v_\beta\Big\rangle=-\sum_\beta\lambda_\beta^2=-\lVert W\rVert^2,$$
 
-using the L33 block's identity $\sum_\alpha\lambda_\alpha\mathrm{ad}(v_\alpha)^2=2W$, whose hypotheses are first Bianchi and Ricci-flatness. So $\operatorname{tr}W^\#=-1$ at both unit witnesses, which is what [r549](../reviews/REVIEW_r549.md) and [r550](../reviews/REVIEW_r550.md) recovered. I verified it independently at $m=6$ two ways: $\operatorname{tr}A^\#=\operatorname{tr}B^\#=-6q^2=-3/7$ from the explicit $A^\#$ above, and $\operatorname{tr}(A\#B)=-\langle A,B\rangle=-q^2=-1/14$ by polarising the identity across the three Weyl elements $A$, $B$, $A+B$, giving $-3/7-3/7-2/14=-1$.
+using the L33 block's identity $\sum_\alpha\lambda_\alpha\mathrm{ad}(v_\alpha)^2=2W$, whose hypotheses are first Bianchi and Ricci-flatness. So $\mathop{\mathrm{tr}}W^\#=-1$ at both unit witnesses, which is what [r549](../reviews/REVIEW_r549.md) and [r550](../reviews/REVIEW_r550.md) recovered. I verified it independently at $m=6$ two ways: $\mathop{\mathrm{tr}}A^\#=\mathop{\mathrm{tr}}B^\#=-6q^2=-3/7$ from the explicit $A^\#$ above, and $\mathop{\mathrm{tr}}(A\#B)=-\langle A,B\rangle=-q^2=-1/14$ by polarising the identity across the three Weyl elements $A$, $B$, $A+B$, giving $-3/7-3/7-2/14=-1$.
 
-**Its evidential weight is limited, and worth saying.** Because it is an identity at every Weyl tensor, recovering $\operatorname{tr}W^\#=-1$ tests only that the constructed object is in $\mathrm{Weyl}_m$ with unit norm, it cannot distinguish this witness from any other, and it is not a check on the spectrum or on $\theta$.
+**Its evidential weight is limited, and worth saying.** Because it is an identity at every Weyl tensor, recovering $\mathop{\mathrm{tr}}W^\#=-1$ tests only that the constructed object is in $\mathrm{Weyl}_m$ with unit norm, it cannot distinguish this witness from any other, and it is not a check on the spectrum or on $\theta$.
 
 ## 5. "Both defining conditions are linear, so the sum is a $\mathrm{Weyl}_m$ element whatever the planes do"
 
 **Confirmed, and the argument is complete.** The two conditions are the first Bianchi identity and Ricci-flatness; the brief asks whether both are linear "in the sense used", and they are, each is the vanishing of a fixed linear map out of $S^2(\Lambda^2\mathbb R^m)$, so $\mathrm{Weyl}_m$ is a linear subspace and closed under addition. The step the sentence leaves implicit is that each *padded* summand lies in $\mathrm{Weyl}_m$: padding onto an arbitrary 4-plane is the standard padding composed with an element of $O(m)$, and $\mathrm{Weyl}_m$ is $O(m)$-invariant, so this holds for any plane. That is the whole content of "whatever the planes do", and it is right.
 
-Concretely for the summands: $W_4(q,r)$ has $W^+=\operatorname{diag}(-(q+r),q,r)$ and $W^-=0$, so its $\Lambda^4$ component is $\operatorname{tr}W^+-\operatorname{tr}W^-=0$ (first Bianchi in dimension $4$) and its $\Lambda^+\otimes\Lambda^-$ block, which carries the trace-free Ricci, is zero, while $\operatorname{tr}W=0$ kills the scalar. Both conditions hold, and $\mathrm{Alt}(W)=0$ survives padding componentwise.
+Concretely for the summands: $W_4(q,r)$ has $W^+=\mathop{\mathrm{diag}}(-(q+r),q,r)$ and $W^-=0$, so its $\Lambda^4$ component is $\mathop{\mathrm{tr}}W^+-\mathop{\mathrm{tr}}W^-=0$ (first Bianchi in dimension $4$) and its $\Lambda^+\otimes\Lambda^-$ block, which carries the trace-free Ricci, is zero, while $\mathop{\mathrm{tr}}W=0$ kills the scalar. Both conditions hold, and $\mathrm{Alt}(W)=0$ survives padding componentwise.
 
 ## 6. "Each summand contributes exactly one negative eigenvalue", BROKEN at the $m=6$ witness
 
 **1. Located.** The Construction's second sentence, in both [results.md](../results.md) and [stratum-two-negative.md](../findings/stratum-two-negative.md): "each summand contributes exactly one negative eigenvalue, and the support is the union of the planes."
 
-**2. Exhibited.** At the $m=6$ witness the summand $A$ has its single negative eigenvalue $-2q=-2/\sqrt{14}$ at $u_1$. But $u_1$ is not an eigenvector of $W$ ($Wu_1=-2qu_1-qz_1$) and $-2/\sqrt{14}$ is not in $\operatorname{spec}(W)=\{-3q,-q,q^{\times4}\}$. Neither negative eigenvalue of the sum is contributed by either summand: they are $-3q$ and $-q$, at $(u_1+z_1)/\sqrt3$ and $u_1-z_1$, both genuinely mixed. **The sentence is a statement about a direct sum, and the $m=6$ witness is not one.** This is the brief's "claim proven on a subfamily and used in general": it is literally true at $m=8$, where the supports are orthogonal, and false at $m=6$, where they are not.
+**2. Exhibited.** At the $m=6$ witness the summand $A$ has its single negative eigenvalue $-2q=-2/\sqrt{14}$ at $u_1$. But $u_1$ is not an eigenvector of $W$ ($Wu_1=-2qu_1-qz_1$) and $-2/\sqrt{14}$ is not in $\mathop{\mathrm{spec}}(W)=\{-3q,-q,q^{\times4}\}$. Neither negative eigenvalue of the sum is contributed by either summand: they are $-3q$ and $-q$, at $(u_1+z_1)/\sqrt3$ and $u_1-z_1$, both genuinely mixed. **The sentence is a statement about a direct sum, and the $m=6$ witness is not one.** This is the brief's "claim proven on a subfamily and used in general": it is literally true at $m=8$, where the supports are orthogonal, and false at $m=6$, where they are not.
 
 **3. The opposite argued.** The charitable reading is that "contributes one" is an inertia bookkeeping claim rather than an eigenvalue claim, that each summand contributes one to the *count*. Under that reading the upper half is a theorem: $n_-(A+B)\le n_-(A)+n_-(B)=2$ by subadditivity of negative inertia, so the sum never has more than two negative eigenvalues however the planes sit. But the lower half (that the count is exactly two, not one or zero), does not follow from it, and "exactly" is the word the statement needs. At the two witnesses I settled it from the rebuilt spectra directly: $\{-3q,-q\}$ at $m=6$ and $-1/\sqrt3$ twice at $m=8$. **So the conclusion stands at both witnesses and the sentence offered for it does not.**
 
@@ -170,9 +170,9 @@ Concretely for the summands: $W_4(q,r)$ has $W^+=\operatorname{diag}(-(q+r),q,r)
 
 **1. Located.** Same sentence.
 
-**2. Exhibited.** At $m=6$, $\operatorname{im}v_{14}=\langle e_1,e_2,e_5,e_6\rangle$, which is contained in neither $V_1=\langle e_1,e_2,e_3,e_4\rangle$ nor $V_2=\langle e_3,e_4,e_5,e_6\rangle$, and is not a subset of their union. The other image, $\operatorname{im}v_{15}$, is all of $\mathbb R^6$, larger than either plane. So $U$ is not built out of the planes in the way the sentence says.
+**2. Exhibited.** At $m=6$, $\mathop{\mathrm{im}}v_{14}=\langle e_1,e_2,e_5,e_6\rangle$, which is contained in neither $V_1=\langle e_1,e_2,e_3,e_4\rangle$ nor $V_2=\langle e_3,e_4,e_5,e_6\rangle$, and is not a subset of their union. The other image, $\mathop{\mathrm{im}}v_{15}$, is all of $\mathbb R^6$, larger than either plane. So $U$ is not built out of the planes in the way the sentence says.
 
-**3. The opposite argued.** Read "the union" as "the span of the union", the only reading under which the phrase names a subspace at all, and the *conclusion* $U=\operatorname{span}(V_1\cup V_2)$ is true at both witnesses, I verified it in §2 and §3. What is available in general is only the containment $U\subseteq V_1+V_2$, since every eigen-bivector lies in $\Lambda^+(V_1)+\Lambda^+(V_2)\subseteq\Lambda^2(V_1+V_2)$; equality is a fact about the particular configuration and needs the computation. **So the finding is that the block asserts as a general mechanism something that is a per-witness computation, and it is that containment, not the equality, that the general argument gives.** The equality is what §12 then uses, correctly, to conclude silence at $m\ge10$.
+**3. The opposite argued.** Read "the union" as "the span of the union", the only reading under which the phrase names a subspace at all, and the *conclusion* $U=\mathop{\mathrm{span}}(V_1\cup V_2)$ is true at both witnesses, I verified it in §2 and §3. What is available in general is only the containment $U\subseteq V_1+V_2$, since every eigen-bivector lies in $\Lambda^+(V_1)+\Lambda^+(V_2)\subseteq\Lambda^2(V_1+V_2)$; equality is a fact about the particular configuration and needs the computation. **So the finding is that the block asserts as a general mechanism something that is a per-witness computation, and it is that containment, not the equality, that the general argument gives.** The equality is what §12 then uses, correctly, to conclude silence at $m\ge10$.
 
 ## 8. $\ker W\ne0$, what the padding does to every step
 
@@ -181,14 +181,14 @@ The brief names this as a trap and it is a real feature of both objects: **the r
 - **The statement is untouched.** "Exactly two negative eigenvalues" counts strict negatives; zeros are neither negative nor positive, and $\dim U$ is built only from the negative eigenvectors. Both claims are stable under a large kernel.
 - **The eigenvector labels are unambiguous.** With the descending order, $v_{N-1},v_N$ are the two most negative, and the $22$ or $9$ zeros sit strictly above them. No ordering ambiguity reaches $U$.
 - **The signature label is loose.** $W_4(q,r)$ is called signature $(2,1)$; as an operator on the $6$-dimensional $\Lambda^2\mathbb R^4$ its inertia is $(2,1,3)$. The record consistently means the inertia of the nonzero part, and no step uses more, but the phrase is the same one that would be wrong if a step ever counted eigenvalues rather than signs.
-- **Screens that die on a kernel are not invoked.** [conventions.md](../findings/conventions.md) warns that the gradedness slack $S(W)$ "is vacuous when $\ker W\ne0$"; the L34 block uses no such screen, so the warning does not bite. The one place a kernel could have mattered ($\operatorname{tr}W^\#=-\lVert W\rVert^2$), is insensitive to it, since zero eigenvalues drop out of both sides.
+- **Screens that die on a kernel are not invoked.** [conventions.md](../findings/conventions.md) warns that the gradedness slack $S(W)$ "is vacuous when $\ker W\ne0$"; the L34 block uses no such screen, so the warning does not bite. The one place a kernel could have mattered ($\mathop{\mathrm{tr}}W^\#=-\lVert W\rVert^2$), is insensitive to it, since zero eigenvalues drop out of both sides.
 - **The interaction with [L30](../findings/stratum-two-negative.md) is consistent.** L30 concludes that $\dim U<n$ forces at least $n-1$ zero eigenvalues; these witnesses have $\dim U=m$ and are therefore outside its hypothesis, so their large kernels are no contradiction. L30 is one-directional and nothing here tests its converse.
 
 ## 9. $q,r>0$, a hypothesis used but never stated
 
 **1. Located.** "Pad two copies of $W_4(q,r)$ onto 4-planes of $\mathbb R^m$ and add." No condition on $q,r$ appears anywhere in the L34 block, in either copy of it.
 
-**2. Exhibited.** Take $q=2$, $r=-1$. Then $W_4(2,-1)=-1\cdot w_1\otimes w_1+2\,w_2\otimes w_2-1\cdot w_3\otimes w_3$ has spectrum $\{-1,2,-1\}$ (**two** negative eigenvalues, signature $(1,2)$) and is still a perfectly good element of $\mathrm{Weyl}_4$, since $S^2_0(\Lambda^+)$ imposes only $\operatorname{tr}W^+=0$. Padding two such copies onto orthogonal 4-planes of $\mathbb R^8$ gives a $\mathrm{Weyl}_8$ element with **four** negative eigenvalues, and the statement's "exactly two" fails. So the Construction as literally written does not produce the claimed object.
+**2. Exhibited.** Take $q=2$, $r=-1$. Then $W_4(2,-1)=-1\cdot w_1\otimes w_1+2\,w_2\otimes w_2-1\cdot w_3\otimes w_3$ has spectrum $\{-1,2,-1\}$ (**two** negative eigenvalues, signature $(1,2)$) and is still a perfectly good element of $\mathrm{Weyl}_4$, since $S^2_0(\Lambda^+)$ imposes only $\mathop{\mathrm{tr}}W^+=0$. Padding two such copies onto orthogonal 4-planes of $\mathbb R^8$ gives a $\mathrm{Weyl}_8$ element with **four** negative eigenvalues, and the statement's "exactly two" fails. So the Construction as literally written does not produce the claimed object.
 
 **3. The opposite argued.** A reader of [stratum-two-negative.md](../findings/stratum-two-negative.md) in file order meets the definition of $W_4(q,r)$ 215 lines earlier with the words "signature $(2,1)$" attached, and signature $(2,1)$ does pin $q,r>0$ up to relabelling. That rescues the findings copy for a linear reader. **It does not rescue [results.md](../results.md)**, whose canonical block reproduces the Construction with no definition of $W_4(q,r)$ anywhere near it, the only mention of "signature-$(2,1)$" in that file is in the landscape bullet, 330 lines earlier. The finding survives: **the hypothesis is load-bearing, and it is stated in neither canonical block.**
 
@@ -204,7 +204,7 @@ $$\sum_{\lambda_\alpha>0}\lambda_\alpha v_\alpha v_\alpha^{\mathsf T}=b\,yy^{\ma
 
 **The identity is correct, including the notation.** Ricci-flatness is the PSD identity $\sum_\alpha\lambda_\alpha v_\alpha^{\mathsf T}v_\alpha=0$ recorded in the same file; for skew $v$ one has $vv^{\mathsf T}=-v^2=v^{\mathsf T}v$, so writing it with $vv^{\mathsf T}$ changes nothing, and moving the two negative terms across gives exactly the display with $-b,-c$ the negative eigenvalues at $y,z$.
 
-**The one-positive case.** Every term is positive semidefinite, so $\operatorname{im}(v_1v_1^{\mathsf T})=\operatorname{im}(b\,yy^{\mathsf T})+\operatorname{im}(c\,zz^{\mathsf T})$, i.e. $\operatorname{im}v_1=\operatorname{im}y+\operatorname{im}z=U$. **The block's "forces $U=\operatorname{im}v_1$" is an equality and it is right**, not merely a containment. Then $\dim U=m$ makes $v_1$ nondegenerate, and [L33](../findings/stratum-two-negative.md) applies with the positive eigenspace one-dimensional.
+**The one-positive case.** Every term is positive semidefinite, so $\mathop{\mathrm{im}}(v_1v_1^{\mathsf T})=\mathop{\mathrm{im}}(b\,yy^{\mathsf T})+\mathop{\mathrm{im}}(c\,zz^{\mathsf T})$, i.e. $\mathop{\mathrm{im}}v_1=\mathop{\mathrm{im}}y+\mathop{\mathrm{im}}z=U$. **The block's "forces $U=\mathop{\mathrm{im}}v_1$" is an equality and it is right**, not merely a containment. Then $\dim U=m$ makes $v_1$ nondegenerate, and [L33](../findings/stratum-two-negative.md) applies with the positive eigenspace one-dimensional.
 
 **Where it needs a dimension bound the block does not state.** L33's exception is a complex-structure multiple on a 4-dimensional subspace. A nondegenerate $v_1$ on $\mathbb R^m$ falls outside the exception only for $m\ge6$; at $m=4$ a full-rank $v_1$ *is* such a multiple, and the exception is realised, $-W_4(q,r)$ has spectrum $(q+r,-q,-r)$, one positive eigenvalue at a rank-$4$ eigenvector, $\dim U=4=m$, and it is not zero. **So the sentence "full support means a nondegenerate eigenvector and Lemma L33 applies" is true at $m\ge6$ and false at $m=4$, and carries no dimension restriction.** The block's own subject is $m\ge6$, so nothing downstream breaks; the clause is simply unhypothesised.
 
@@ -230,7 +230,7 @@ What *is* wrong is smaller and different: the L34 block's phrasing "4-planes in 
 
 **Refuted.** [plan.md](../plan.md) had recorded item B0 as closing iff *no element of $\mathrm{Weyl}_m$ with $\dim\mathfrak m\le2$ has $\dim U=m$*, and had recorded the rank-3 question as an equivalent form of it. Two things go:
 
-1. **The equivalence.** It holds only at one positive eigenvalue, for the reason checked in §11, the Ricci identity pins $U=\operatorname{im}v_1$ there and constrains nothing when the positive side has several eigenvalues.
+1. **The equivalence.** It holds only at one positive eigenvalue, for the reason checked in §11, the Ricci identity pins $U=\mathop{\mathrm{im}}v_1$ there and constrains nothing when the positive side has several eigenvalues.
 2. **The statement itself, at $m=6$ and $m=8$.** The two witnesses are elements of $\mathrm{Weyl}_m$ with $\dim\mathfrak m=2$ and $\dim U=m$. The universal statement is therefore false as recorded.
 
 **What survives, stated precisely.**
@@ -250,7 +250,7 @@ The L33 block says: "Counted as *one distinct value at any multiplicity*, a witn
 | the generic member of the eigenspace | **yes**, $au_1+bz_1$ with $a,b\ne0$ has rank $8$ and is no complex-structure multiple on a 4-plane, yet $W\ne0$ |
 | some member of the eigenspace | **no**, $u_1$ and $z_1$ are each complex structures on a 4-plane, so the exception applies and nothing is refuted |
 
-This is the division [INDEX-results.md](../findings/INDEX-results.md) records between [r549](../reviews/REVIEW_r549.md) and [r550](../reviews/REVIEW_r550.md), and I reach the same fork independently. **The point that matters is that L33's repair does not depend on the fork**: its primary witness is the $\mathrm{Weyl}_4$ element $W^+=W^-=\operatorname{diag}(2,-1,-1)$, whose $+2$ eigenspace contains $(w_1^++w_1^-)\propto\varphi_{12}$ of rank $2$, and a rank-$2$ bivector is not a complex-structure multiple on a 4-dimensional subspace under *any* reading of the clause. So L33's note stands on its own witness, and citing L34 alongside it adds an ambiguity rather than strength.
+This is the division [INDEX-results.md](../findings/INDEX-results.md) records between [r549](../reviews/REVIEW_r549.md) and [r550](../reviews/REVIEW_r550.md), and I reach the same fork independently. **The point that matters is that L33's repair does not depend on the fork**: its primary witness is the $\mathrm{Weyl}_4$ element $W^+=W^-=\mathop{\mathrm{diag}}(2,-1,-1)$, whose $+2$ eigenspace contains $(w_1^++w_1^-)\propto\varphi_{12}$ of rank $2$, and a rank-$2$ bivector is not a complex-structure multiple on a 4-dimensional subspace under *any* reading of the clause. So L33's note stands on its own witness, and citing L34 alongside it adds an ambiguity rather than strength.
 
 ## 16. The landscape bullet
 
@@ -293,8 +293,8 @@ Checked against [conventions.md](../findings/conventions.md), which tables neith
 | symbol | senses in play | status |
 | --- | --- | --- |
 | $q$ | an eigenvalue parameter of $W_4(q,r)$; **and** the Weitzenböck curvature term $q(R)\omega$ in the L33 block, 215 lines above, in the same file | **live collision, untabled** |
-| $r$ | an eigenvalue parameter of $W_4(q,r)$; **and** the support dimension, "the support of $W$ is exactly $\operatorname{im}v_1$, of even dimension $r$" and "the induction runs down to $n=r$", both in the same file | **live collision, untabled** |
-| $U$ | $\operatorname{im}v_{N-1}+\operatorname{im}v_N$ in L34 and in L30's statement; **and** $\sum_{\lambda_\alpha<0}\operatorname{im}v_\alpha$, the redefinition L30's own margin calls "the repair … one line" | two senses in one file; **they agree at L34's witnesses**, which have exactly two negative eigenvalues, so nothing here breaks |
+| $r$ | an eigenvalue parameter of $W_4(q,r)$; **and** the support dimension, "the support of $W$ is exactly $\mathop{\mathrm{im}}v_1$, of even dimension $r$" and "the induction runs down to $n=r$", both in the same file | **live collision, untabled** |
+| $U$ | $\mathop{\mathrm{im}}v_{N-1}+\mathop{\mathrm{im}}v_N$ in L34 and in L30's statement; **and** $\sum_{\lambda_\alpha<0}\mathop{\mathrm{im}}v_\alpha$, the redefinition L30's own margin calls "the repair … one line" | two senses in one file; **they agree at L34's witnesses**, which have exactly two negative eigenvalues, so nothing here breaks |
 | $N$ | $\binom n2$ per conventions, read at $n=m$ here | consistent; the substitution is unambiguous |
 | $m$ vs $n$ | L34 works at $m$, L30/L35 at $n$, same object | consistent |
 | $W_4(q,r)$ | defined identically in two files and tabled in neither, contrary to the record's own rule that a convention is quoted rather than restated | **two copies, currently in agreement**; the definition omits $\lVert w_i\rVert=1$, which the record's half-trace pairing supplies and which the printed spectra retroactively confirm |
@@ -307,7 +307,7 @@ Neither $-\sqrt3/2$ at $m=8$ nor $-27\sqrt{14}/98$ at $m=6$ appears in [INDEX-va
 
 **PROVEN, hypotheses corrected.**
 
-The existence claim is true at both dimensions. I rebuilt both objects from the definitions, and every number the block prints is exactly right: $(-3,-1,1,1,1,1)/\sqrt{14}$ with $\theta=-27\sqrt{14}/98=-1.0308648$, and $\{-1/\sqrt3\,(\times2),1/(2\sqrt3)\,(\times4)\}$ with $\theta=-\sqrt3/2$, both of unit norm, both with $\dim U=m$, both with $\operatorname{tr}W^\#=-1$. The corrections the hypotheses need are: **$q,r>0$**, stated nowhere and load-bearing (§9); **$q=r=q'=r'$**, which the recorded spectra require and the Construction does not say (§10); and **$m\ge6$** on the L33 citation (§11). Two of the Construction's sentences are false as mechanisms at the $m=6$ witness, "each summand contributes exactly one negative eigenvalue" (§6) and "the support is the union of the planes" (§7), while their conclusions hold there by the explicit spectra.
+The existence claim is true at both dimensions. I rebuilt both objects from the definitions, and every number the block prints is exactly right: $(-3,-1,1,1,1,1)/\sqrt{14}$ with $\theta=-27\sqrt{14}/98=-1.0308648$, and $\{-1/\sqrt3\,(\times2),1/(2\sqrt3)\,(\times4)\}$ with $\theta=-\sqrt3/2$, both of unit norm, both with $\dim U=m$, both with $\mathop{\mathrm{tr}}W^\#=-1$. The corrections the hypotheses need are: **$q,r>0$**, stated nowhere and load-bearing (§9); **$q=r=q'=r'$**, which the recorded spectra require and the Construction does not say (§10); and **$m\ge6$** on the L33 citation (§11). Two of the Construction's sentences are false as mechanisms at the $m=6$ witness, "each summand contributes exactly one negative eigenvalue" (§6) and "the support is the union of the planes" (§7), while their conclusions hold there by the explicit spectra.
 
 **Attached HYPOTHESIS-DEBT, none of it inside the statement.** What would have to be proved for the block's margins to be evidence rather than record: (i) $\theta=+0.485408612$ at $m=6$ and $+0.115574271$ at $m=8$, both marked measured and not derived; (ii) $+0.6259$ at $m=6$ and $+0.2650$ at $m=7$, the second presupposing an $m=7$ witness that is stated nowhere; (iii) "at $m\ge10$ … a structured convex screen finds every rank class infeasible and a one-parameter deformation shows the margin reaching zero only where the support degenerates", which is presented as fact with no tag and is the only thing standing where §12 shows this family provably cannot go.
 
@@ -317,9 +317,9 @@ The existence claim is true at both dimensions. I rebuilt both objects from the 
 
 **This is an existence claim, so falsifying it means proving no such $W$ exists**, a proof that every $W\in\mathrm{Weyl}_m$ with exactly two negative eigenvalues has $\dim U<m$, at $m=6$ or at $m=8$. Since I exhibited two such $W$ in closed form and verified every defining condition on them, no such proof can exist unless one of my objects fails a hypothesis. So the falsification I actually hunted was of my own construction, at the four places it could break:
 
-1. **Membership.** Checked directly, not inherited: each summand has $W^-=0$ and $W^+$ trace-free, so its $\Lambda^4$ component and its trace-free Ricci block both vanish; padding preserves both; $\mathrm{Weyl}_m$ is a linear subspace, so the sum is in it. Independently, $\operatorname{tr}W^\#=-1$ came out at both witnesses, and that identity holds only under first Bianchi and Ricci-flatness.
+1. **Membership.** Checked directly, not inherited: each summand has $W^-=0$ and $W^+$ trace-free, so its $\Lambda^4$ component and its trace-free Ricci block both vanish; padding preserves both; $\mathrm{Weyl}_m$ is a linear subspace, so the sum is in it. Independently, $\mathop{\mathrm{tr}}W^\#=-1$ came out at both witnesses, and that identity holds only under first Bianchi and Ricci-flatness.
 2. **The eigenvalue count.** The $m=6$ spectrum is the root of an explicit quadratic, $\lambda^2+4q\lambda+3q^2$, with roots $-q,-3q$, two negatives, and the discriminant $4q^2>0$ rules out a coincidence that would hide a third. The $m=8$ count is a direct sum. Subadditivity of negative inertia caps both at two independently.
 3. **$\dim U$.** Computed from the eigenvectors as skew matrices, not from the planes: $(u_1+z_1)/\sqrt3$ has three nonzero $2\times2$ blocks at $m=6$, and every orthonormal basis of the degenerate negative plane at $m=8$ has at least one member of rank $8$.
-4. **Normalisation.** The one place a factor could hide, per [conventions.md](../findings/conventions.md)'s live $\sqrt2$ trap. Both norms were computed under the half-trace pairing, $\lVert\varphi_{ab}\rVert=1$, and both cross-checked: $\sum\lambda^2=1$ at each witness, and $\theta$ at a single normalised summand came out $-\sqrt{3/2}$ by two independent routes, $\operatorname{tr}A^3+\langle A,A^\#\rangle$ and the $\mathrm{Weyl}_4$ closed form $9\det W^+$.
+4. **Normalisation.** The one place a factor could hide, per [conventions.md](../findings/conventions.md)'s live $\sqrt2$ trap. Both norms were computed under the half-trace pairing, $\lVert\varphi_{ab}\rVert=1$, and both cross-checked: $\sum\lambda^2=1$ at each witness, and $\theta$ at a single normalised summand came out $-\sqrt{3/2}$ by two independent routes, $\mathop{\mathrm{tr}}A^3+\langle A,A^\#\rangle$ and the $\mathrm{Weyl}_4$ closed form $9\det W^+$.
 
 **No numerical work of any kind was done.** I ran one comparison of two paragraphs of prose for byte-identity, which decides §18 and touches no mathematics. I did not search for further witnesses, did not repair any gap I found, and did not attempt the $m=5$, $m=7$ or $m\ge10$ questions the block leaves open.

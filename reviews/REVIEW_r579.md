@@ -30,17 +30,17 @@ Above the heading, the two lines that bear on it are [isotropy-cap.md:241](../fi
 
 ## 1. DEFECT 1 (load-bearing), $p$ has two readings and they are two different hypotheses
 
-The block's hypothesis is "$p\ge2$". $p$ is introduced once on the record, in [L32](../findings/isotropy-cap.md#L74)'s proof: *"let $\mathfrak t$ be the maximal torus spanned by $x$'s $p=m/2$ coordinate $2$-planes and $a=(a_1,\dots,a_p)$ its singular values, **all nonzero**"*, then, for degenerate $x$, *"the same argument runs inside the support"*, which resets $p$ to $\tfrac12\operatorname{rank}x$.
+The block's hypothesis is "$p\ge2$". $p$ is introduced once on the record, in [L32](../findings/isotropy-cap.md#L74)'s proof: *"let $\mathfrak t$ be the maximal torus spanned by $x$'s $p=m/2$ coordinate $2$-planes and $a=(a_1,\dots,a_p)$ its singular values, **all nonzero**"*, then, for degenerate $x$, *"the same argument runs inside the support"*, which resets $p$ to $\tfrac12\mathop{\mathrm{rank}}x$.
 
 So $p$ can be read as:
 
 - **(T) the torus rank**, $p=\lfloor m/2\rfloor$, with $a$ allowed zero entries. Then $p\ge2\iff m\ge4$.
-- **(R) the support rank**, $p=\tfrac12\operatorname{rank}x$, with $a$ having no zero entries. Then $p\ge2\iff\operatorname{rank}x\ge4$.
+- **(R) the support rank**, $p=\tfrac12\mathop{\mathrm{rank}}x$, with $a$ having no zero entries. Then $p\ge2\iff\mathop{\mathrm{rank}}x\ge4$.
 
 **These are not the same hypothesis.** (R) excludes every rank-$2$ bivector in every dimension; (T) excludes only $m\le3$. Two sentences of the block force opposite readings:
 
 - *"at $p\ge3$ it forces a zero singular value"* is **only meaningful under (T)**, under (R) the entries of $a$ are nonzero by construction, so the sentence asserts a contradiction rather than a case.
-- *"At $n\ge12$ the hypothesis is free"* is **true only under (T)** and false under (R): a rank-$2$ bivector exists in $\mathfrak{so}(n)$ at every $n$, so $\operatorname{rank}x\ge4$ is never free.
+- *"At $n\ge12$ the hypothesis is free"* is **true only under (T)** and false under (R): a rank-$2$ bivector exists in $\mathfrak{so}(n)$ at every $n$, so $\mathop{\mathrm{rank}}x\ge4$ is never free.
 - The correction's diagnosis *"the proof splits on $p\ge3$ and $p=2$ and never treats $p=1$"* points at the witness $x=e_{12}\in\mathfrak{so}(3)$, which has torus rank $1$ **and** support rank $1$, the one configuration where the two readings agree, which is why the ambiguity survived the correction.
 
 **Verdict: REPAIRED, the block must say which $p$ it means.** Under (T) the hypothesis is right up to §3; under (R) it is sound but badly over-strong.
@@ -51,7 +51,7 @@ So $p$ can be read as:
 
 Fix $x\in\mathfrak{so}(m)$, $x\ne0$, write $\mathfrak c=\mathfrak z(x)\cap x^\perp$ and $Z=\mathfrak z(\mathfrak c)\cap\mathfrak c^\perp$. Let $V=(\ker x)^\perp$ be the support, $\dim V=2r$, and $U=\ker x$, $\dim U=q=m-2r$. The pairing is the ad-invariant one of [conventions.md](../findings/conventions.md); the criterion is a statement about dimensions, so the $\tfrac12$ that file fixes at the $\Lambda^2$ level scales nothing here, **the norm convention is inert for this lemma**, which is the one convention question the block could have got wrong and did not.
 
-**Step A, $\mathfrak z(x)$ splits.** $\Lambda^2\mathbb R^m=\Lambda^2V\oplus(V\otimes U)\oplus\Lambda^2U$. On $V\otimes U$, $\operatorname{ad}(x)$ acts as $x\otimes1$, invertible because $x$ is invertible on $V$. Hence $\mathfrak z(x)=\mathfrak z_{\mathfrak{so}(V)}(x)\oplus\mathfrak{so}(U)$, with no mixed part. Since $\mathfrak{so}(U)\perp x$ and $x\in\mathfrak{so}(V)$,
+**Step A, $\mathfrak z(x)$ splits.** $\Lambda^2\mathbb R^m=\Lambda^2V\oplus(V\otimes U)\oplus\Lambda^2U$. On $V\otimes U$, $\mathop{\mathrm{ad}}(x)$ acts as $x\otimes1$, invertible because $x$ is invertible on $V$. Hence $\mathfrak z(x)=\mathfrak z_{\mathfrak{so}(V)}(x)\oplus\mathfrak{so}(U)$, with no mixed part. Since $\mathfrak{so}(U)\perp x$ and $x\in\mathfrak{so}(V)$,
 $$\mathfrak c=\big(\mathfrak z_{\mathfrak{so}(V)}(x)\cap x^\perp\big)\ \oplus\ \mathfrak{so}(U).$$
 
 **Step B, when $\mathfrak c$ vanishes.** $\mathfrak z_{\mathfrak{so}(V)}(x)\supseteq\mathfrak t_V$, the torus of $x$'s own $2$-blocks, of dimension $r$; intersecting with $x^\perp$ leaves at least $r-1$ dimensions. So $\dim\mathfrak c\ge(r-1)+\binom q2$, and this is zero exactly when $r=1$ and $q\le1$, that is, exactly at $m=2$ and $m=3$. **$\mathfrak c\ne0\iff m\ge4$**, for every nonzero $x$. This is a fact about the ambient dimension alone.
@@ -189,4 +189,4 @@ Recorded because an audit that lists only defects misprices the block.
 
 **The sharp form the record should carry:**
 
-> Let $x\in\mathfrak{so}(m)$ be nonzero, $m\ge4$, and $\mathfrak c=\mathfrak z(x)\cap x^\perp$. Then $\mathfrak z(\mathfrak c)\cap\mathfrak c^\perp$ is $\mathbb Rx$ unless $x$ is a multiple of a complex structure on a $4$-dimensional subspace, where it is a $3$-dimensional $\mathfrak{su}(2)$; no other value occurs. Equivalently, the collapse fails iff the singular-value vector of $x$ on its own support is proportional to a root of $D_r$, $2r=\operatorname{rank}x$. The hypothesis $m\ge4$ is exactly $\mathfrak c\ne0$ and is sharp: at $m=3$ the collapse fails at every nonzero $x$.
+> Let $x\in\mathfrak{so}(m)$ be nonzero, $m\ge4$, and $\mathfrak c=\mathfrak z(x)\cap x^\perp$. Then $\mathfrak z(\mathfrak c)\cap\mathfrak c^\perp$ is $\mathbb Rx$ unless $x$ is a multiple of a complex structure on a $4$-dimensional subspace, where it is a $3$-dimensional $\mathfrak{su}(2)$; no other value occurs. Equivalently, the collapse fails iff the singular-value vector of $x$ on its own support is proportional to a root of $D_r$, $2r=\mathop{\mathrm{rank}}x$. The hypothesis $m\ge4$ is exactly $\mathfrak c\ne0$ and is sharp: at $m=3$ the collapse fails at every nonzero $x$.

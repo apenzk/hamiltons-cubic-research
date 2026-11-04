@@ -16,7 +16,7 @@ $$\tfrac12(S_2-1)-(S_3-1)+\ldots\;\Rightarrow\; \tfrac{S_2}2-S_3=\frac{\theta\bi
 
 since $(n-1)(2n-1)+(5n-1)=2n^2+2n=2n(n+1)$. That is the recorded bracket verbatim. Substituting $b=\theta-a$ gives leading order $n^2(\theta+a)/(8\theta^3)$, and with $N\sim n^4/12$, $S_2\sim n^2/(2\theta^2)$ the ratio is $n^2\theta(\theta+a)/48$, again as recorded. **The commit's arithmetic is correct and the earlier $\mathrm{LHS}\sim NS_2$ intermediate was indeed wrong.**
 
-One unstated hypothesis: the leading term is $\theta+a$, so the argument needs $a=\operatorname{tr}(W^3)$ bounded away from $-\theta$. That is safe at the recorded points ($a\to0$, $b\to\theta$), but it is a hypothesis, not a fact about an unknown maximiser.
+One unstated hypothesis: the leading term is $\theta+a$, so the argument needs $a=\mathop{\mathrm{tr}}(W^3)$ bounded away from $-\theta$. That is safe at the recorded points ($a\to0$, $b\to\theta$), but it is a hypothesis, not a fact about an unknown maximiser.
 
 ### 1b. The stated mechanism, "$n^4$ degrees of freedom against $n^2$ of moment data", is the wrong measure, and a correct one-line mechanism replaces it
 
@@ -26,7 +26,7 @@ One unstated hypothesis: the leading term is $\theta+a$, so the argument needs $
 
 $$\frac{\mathrm{LHS}}{\mathrm{RHS}}=\frac{\big[\tfrac{N-1}2+1\big]\big[\tfrac{S_2-1}2-(S_3-1)\big]}{(S_2-\tfrac12)^2}\;\approx\;\frac{(N/2)(S_2/2)}{S_2^2}=\frac{c^2\,N}{S_2}=\frac{c^2}{\overline{\lambda^2}},$$
 
-where $\overline{\lambda^2}=S_2/N$ is the mean-square eigenvalue of $L_e$. Since $\operatorname{tr}L_e^2=\kappa_n/\theta^2=\Theta(n^2)$ spread over $N=\Theta(n^4)$ eigenvalues, the RMS eigenvalue is $\Theta(1/n)$. **A support constraint at the fixed threshold $c=\tfrac12$ is therefore slack by the factor $c^2/\overline{\lambda^2}=\Theta(n^2)$, the spectrum lives at scale $1/n$ and the fence is at $1/2$.** That is the whole content, it recovers the recorded exponent and the observed growth, and it is immune to the objection in the previous paragraph because it never counts degrees of freedom.
+where $\overline{\lambda^2}=S_2/N$ is the mean-square eigenvalue of $L_e$. Since $\mathop{\mathrm{tr}}L_e^2=\kappa_n/\theta^2=\Theta(n^2)$ spread over $N=\Theta(n^4)$ eigenvalues, the RMS eigenvalue is $\Theta(1/n)$. **A support constraint at the fixed threshold $c=\tfrac12$ is therefore slack by the factor $c^2/\overline{\lambda^2}=\Theta(n^2)$, the spectrum lives at scale $1/n$ and the fence is at $1/2$.** That is the whole content, it recovers the recorded exponent and the observed growth, and it is immune to the objection in the previous paragraph because it never counts degrees of freedom.
 
 This also survives the record's own caveat. A $\Theta(n^2)$-multiplicity block at $-\tfrac12$ (25 of 84 at $S^3\times S^3$) leaves $N-\Theta(n^2)=\Theta(n^4)$ eigenvalues in the bulk, so $\overline{\lambda^2}=\Theta(n^{-2})$ regardless.
 
@@ -36,11 +36,11 @@ The order-$k$ determinant scaling in cd2cd1a is arithmetically fine: with $m_0\s
 
 So the extension is (i) a re-indexing of the same $m_0$ dilution and (ii) an incomplete case analysis. **"Ratio $n^2$ at every $k$" is false as a statement about the order-$k$ PSD conditions; it is true of the full determinant only.** The commit's headline "extended to every localizing order" and plan.md's "the full moment problem, closed" both overstate what was shown.
 
-A related detail the record gets right without saying why: $m_{j\ge2}\sim n^2$ for *every* $j$, including large $j$ where a uniform-scale bulk would give $m_j\sim n^{4-j}$. The reason is that $\operatorname{mult}(\tfrac12)\ge\dim\mathcal O=\Theta(n^2)$, so a $\Theta(n^2)$ block sits *at the support boundary* and contributes $\Theta(n^2)2^{-j}$ to every moment. Worth stating, because it is what makes the sub-minor above informative rather than empty.
+A related detail the record gets right without saying why: $m_{j\ge2}\sim n^2$ for *every* $j$, including large $j$ where a uniform-scale bulk would give $m_j\sim n^{4-j}$. The reason is that $\mathop{\mathrm{mult}}(\tfrac12)\ge\dim\mathcal O=\Theta(n^2)$, so a $\Theta(n^2)$ block sits *at the support boundary* and contributes $\Theta(n^2)2^{-j}$ to every moment. Worth stating, because it is what makes the sub-minor above informative rather than empty.
 
 ### 1d. A related overclaim inside the same paragraph
 
-*"What the method would need is a lower bound on $\operatorname{mult}(\tfrac12)$, which is equivalent to Conjecture A itself."* This is asserted, not derived, and looks false. From $S_2\ge1+p/4$ with $p=\operatorname{mult}(\tfrac12)$ one gets $\theta^2\le\kappa_n/(1+p/4)$, so $\theta\le\theta_0$ needs $p\ge4(\kappa_n/\theta_0^2-1)\sim n^2$ against a maximum available orbit dimension $\binom n2\sim n^2/2$, a factor of about two short, which is the same factor $2.2$ the record records elsewhere. That is a *different and stronger* statement than Conjecture A (it demands $\tfrac12$-eigenvectors of non-group origin at roughly twice the orbit dimension), not an equivalent one.
+*"What the method would need is a lower bound on $\mathop{\mathrm{mult}}(\tfrac12)$, which is equivalent to Conjecture A itself."* This is asserted, not derived, and looks false. From $S_2\ge1+p/4$ with $p=\mathop{\mathrm{mult}}(\tfrac12)$ one gets $\theta^2\le\kappa_n/(1+p/4)$, so $\theta\le\theta_0$ needs $p\ge4(\kappa_n/\theta_0^2-1)\sim n^2$ against a maximum available orbit dimension $\binom n2\sim n^2/2$, a factor of about two short, which is the same factor $2.2$ the record records elsewhere. That is a *different and stronger* statement than Conjecture A (it demands $\tfrac12$-eigenvectors of non-group origin at roughly twice the orbit dimension), not an equivalent one.
 
 ---
 
@@ -109,7 +109,7 @@ Under the reading the record itself supplies, the rule *is* the third-order test
 
 ### 4a. The "out of sample" confirmation is degenerate at exactly the dimension used
 
-$$\operatorname{tr}(L_x^3)=-\frac{5n-1}8\langle x^2,x\rangle+\frac{n(n-5)}8\langle x^{\#}x,x\rangle,\qquad\text{fitted on }n=6\ldots9,\text{ checked at }n=5.$$
+$$\mathop{\mathrm{tr}}(L_x^3)=-\frac{5n-1}8\langle x^2,x\rangle+\frac{n(n-5)}8\langle x^{\#}x,x\rangle,\qquad\text{fitted on }n=6\ldots9,\text{ checked at }n=5.$$
 
 At $n=5$ the second coefficient is $\tfrac{n(n-5)}8=0$ **identically**. The check therefore exercises only the first term. Worse, $n=5$ is precisely where the record says the two cubic invariants are *not independent* (the Lovelock syzygy, *"the third moment is proportional to $\langle x\circ y,z\rangle$ only at $n=4,5$"*), so even the surviving coefficient is confirmed only in one linear combination. **The coefficient $n(n-5)/8$ (the structurally novel half, and the only part that makes the formula see $b$), has no out-of-sample support at all.** The commit's claim that this is *"a genuine out-of-sample confirmation, which the $\kappa_n$ fit never had"* does not hold; the two fits are in the same epistemic position.
 
@@ -117,9 +117,9 @@ At $n=5$ the second coefficient is $\tfrac{n(n-5)}8=0$ **identically**. The chec
 
 The derivation is valid: $\lambda\le\tfrac12\Rightarrow\lambda^3\le\tfrac12\lambda^2$ for all real $\lambda\le\tfrac12$ (negative $\lambda$ trivially, $0\le\lambda\le\tfrac12$ since $\lambda^3=\lambda\cdot\lambda^2$), so $S_3-1\le\tfrac12(S_2-1)$, and the rearrangement to $b\le\big(4\theta^3+4\kappa_n\theta+(5n-1)\theta\big)/(n^2-1)$ is correct.
 
-Its asymptotic content is exactly a factor of two: the right side $\to2\theta$ while $b=\theta-a\to\theta$, since $a=\operatorname{tr}(W^3)\to0$. So the recorded slack "$2.3\times$ at $n=12$" is the asymptotic constant, not an accident of that dimension.
+Its asymptotic content is exactly a factor of two: the right side $\to2\theta$ while $b=\theta-a\to\theta$, since $a=\mathop{\mathrm{tr}}(W^3)\to0$. So the recorded slack "$2.3\times$ at $n=12$" is the asymptotic constant, not an accident of that dimension.
 
-**But it is dominated by a one-line bound.** $|a|=|\operatorname{tr}W^3|\le\|\lambda\|_\infty\sum\lambda^2=\|\lambda\|_\infty$, and the record's own ceiling on $\lambda_{\max}$ over unit-norm $\mathrm{Weyl}_n$ is $\le0.89$ through $n=10$. Hence $b=\theta-a\le\theta+0.9\approx2.14$ at $n=12$, against the moment cap's $2.75$. **The three-moment constraint is strictly weaker than $b\le\theta+\|\lambda\|_\infty$, at the dimension that matters and asymptotically** (cap $\to2\theta\approx2.83$, trivial bound $\to\theta+\|\lambda\|_\infty\lesssim2.4$). It is non-vacuous as a logical statement and redundant as an instrument. *(The one number used here, $\lambda_{\max}\le0.89$, is taken from the record, not computed; the argument could not settle the comparison without a value for $\|\lambda\|_\infty$.)*
+**But it is dominated by a one-line bound.** $|a|=|\mathop{\mathrm{tr}}W^3|\le\|\lambda\|_\infty\sum\lambda^2=\|\lambda\|_\infty$, and the record's own ceiling on $\lambda_{\max}$ over unit-norm $\mathrm{Weyl}_n$ is $\le0.89$ through $n=10$. Hence $b=\theta-a\le\theta+0.9\approx2.14$ at $n=12$, against the moment cap's $2.75$. **The three-moment constraint is strictly weaker than $b\le\theta+\|\lambda\|_\infty$, at the dimension that matters and asymptotically** (cap $\to2\theta\approx2.83$, trivial bound $\to\theta+\|\lambda\|_\infty\lesssim2.4$). It is non-vacuous as a logical statement and redundant as an instrument. *(The one number used here, $\lambda_{\max}\le0.89$, is taken from the record, not computed; the argument could not settle the comparison without a value for $\|\lambda\|_\infty$.)*
 
 ---
 
@@ -143,11 +143,11 @@ Its asymptotic content is exactly a factor of two: the right side $\to2\theta$ w
 - The order-one determinant computation is a **correct derivation** (§1a) and is not a restatement, the earlier $NS_2$ route was genuinely wrong and genuinely fixed.
 - The *mechanism* offered ($n^4$ dof against $n^2$ of data), **is** essentially the dimension count restated, and it does not support the conclusion (§1b). The real mechanism is $c^2/\overline{\lambda^2}$: the spectrum of $L_e$ lives at scale $1/n$ while the fence is at $\tfrac12$.
 - The "every localizing order" extension is **not a theorem** (§1c): it addresses one minor and misses the ones without $m_0$.
-- Nothing here is a theorem *about moment methods*. It bounds slack in one family of inequalities; it does not show the full moment problem is feasible for $\theta>\theta_0(n)$, and it does not touch methods that use the pinned data ($1$ simple, $\operatorname{mult}(\tfrac12)\ge\dim\mathcal O$, $S_2=\kappa_n/\theta^2$ as an equality) rather than the localizing hierarchy.
+- Nothing here is a theorem *about moment methods*. It bounds slack in one family of inequalities; it does not show the full moment problem is feasible for $\theta>\theta_0(n)$, and it does not touch methods that use the pinned data ($1$ simple, $\mathop{\mathrm{mult}}(\tfrac12)\ge\dim\mathcal O$, $S_2=\kappa_n/\theta^2$ as an equality) rather than the localizing hierarchy.
 
 ### (c) Anything recorded as new that the record already holds, the fourth re-derivation
 
-**Found, and it is not Fox 1.3.** The fence post re-derives **fence post F6**: *"Spectral moments of $L_W$ are the wrong invariants, the Track A route closed with a quantified negative, $49.7\times$ short at $n=12$."* Since $e=W/\theta$, $\operatorname{spec}(L_e)$ and $\operatorname{spec}(L_W)$ are the same set up to scale, so this is the same object and the same conclusion, requantified. plan.md itself already notes *"a fence post, a retraction and a restoration were written before this was seen; all three described the same failure differently"*, the $n^2$ post is the fourth telling, and it was written without the value table being queried for post F6.
+**Found, and it is not Fox 1.3.** The fence post re-derives **fence post F6**: *"Spectral moments of $L_W$ are the wrong invariants, the Track A route closed with a quantified negative, $49.7\times$ short at $n=12$."* Since $e=W/\theta$, $\mathop{\mathrm{spec}}(L_e)$ and $\mathop{\mathrm{spec}}(L_W)$ are the same set up to scale, so this is the same object and the same conclusion, requantified. plan.md itself already notes *"a fence post, a retraction and a restoration were written before this was seen; all three described the same failure differently"*, the $n^2$ post is the fourth telling, and it was written without the value table being queried for post F6.
 
 Second instance, smaller: the Peirce-table thread (0a5ea55, 92f0ead) was started after plan.md had already recorded, under item 1, that *"the fusion rule itself is already closed"*; 92f0ead's conclusion (*"matching the record's verdict that it tracks primitivity"*) restates fence-posts.md §"The fusion rule tracks primitivity, not gradedness", and is refuted by §3c above.
 
@@ -162,7 +162,7 @@ Second instance, smaller: the Peirce-table thread (0a5ea55, 92f0ead) was started
 3. **c96d9c0 / plan.md**, *"the witness stands at $n=5$ alone"*, **contradicts FINDINGS.md's value table** (*"$W_{\mathbb{CP}^2}$ and every padding, $n\ge4$"*) and contradicts second-order.md's use of padded $W_{\mathbb{CP}^2}$ as a critical point at $n=8,10,12$. One of the two is wrong and it must be resolved (§2b).
 4. **second-order.md**, *"Ungraded points violate by a wide margin … $\lambda_{\max}\ge\tfrac34$ throughout"*, **false as written**, contradicted by padded $W_{\mathbb{CP}^2}$ in the same file (§2c).
 5. **second-order.md**, *"Morse–Bott nondegenerate at $n=8,10,12$ ($\dim E(\tfrac12)=\dim(\text{orbit})=18$)"*, **impossible at $n=10,12$**, where $\dim\mathcal O=26,34$ and the same file proves $\dim E(\tfrac12)\ge\dim\mathcal O$ (§2c).
-6. **second-order.md**, *"a lower bound on $\operatorname{mult}(\tfrac12)$, which is equivalent to Conjecture A itself"*, **not equivalent**; it is strictly stronger, requiring $\operatorname{mult}(\tfrac12)\sim2\dim\mathcal O$ (§1d).
+6. **second-order.md**, *"a lower bound on $\mathop{\mathrm{mult}}(\tfrac12)$, which is equivalent to Conjecture A itself"*, **not equivalent**; it is strictly stronger, requiring $\mathop{\mathrm{mult}}(\tfrac12)\sim2\dim\mathcal O$ (§1d).
 7. **92f0ead**, *"the fusion-rule tension is resolved"*, **relabelled**; its stated reason is a non sequitur, conceded later in the file but not in the commit or in plan.md (§3b).
 8. **88ab8de**, *"a genuine out-of-sample confirmation"*, **degenerate**; the tested dimension is exactly where the untested coefficient vanishes and where the two invariants are dependent (§4a).
 9. **second-order.md / 88ab8de**, the third-moment cap on $b$, **redundant**, dominated by $b\le\theta+\|\lambda\|_\infty$ (§4b).
@@ -170,7 +170,7 @@ Second instance, smaller: the Peirce-table thread (0a5ea55, 92f0ead) was started
 ## What is worth keeping
 
 - The corrected bracket $(n+1)[2n\theta-(n-1)b]/(8\theta^3)$, verified symbolically here.
-- The Peirce spectrum at $S^3\times S^3$, it reproduces both $\kappa_6/\theta_0^2$ and the recorded $\theta^2\operatorname{tr}L_e^3$ exactly, which is stronger corroboration than the file claims for it.
+- The Peirce spectrum at $S^3\times S^3$, it reproduces both $\kappa_6/\theta_0^2$ and the recorded $\theta^2\mathop{\mathrm{tr}}L_e^3$ exactly, which is stronger corroboration than the file claims for it.
 - The falsification itself, restated without the $n=5$ scoping.
 
 ## What should change in the record

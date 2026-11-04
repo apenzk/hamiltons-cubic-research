@@ -21,9 +21,9 @@
 
 ## D1, the embedding: the lemma applies the Weyl projection and then reports the pre-projection eigenvalues
 
-**The convention.** Kulkarni–Nomizu as the record uses it, $(A\owedge B)_{ijkl}=A_{ik}B_{jl}+A_{jl}B_{ik}-A_{il}B_{jk}-A_{jk}B_{il}$, whence $\mathrm{Ric}(A\owedge B)=(\operatorname{tr}A)B+(\operatorname{tr}B)A-AB-BA$ under $\mathrm{Ric}_{jl}=\sum_iR_{ijil}$, and the decomposition $R=W+\tfrac1{n-2}\mathring{\mathrm{Ric}}\owedge g+\tfrac{\mathrm{scal}}{2n(n-1)}g\owedge g$. Both normalisations check against each other: $\mathrm{Ric}(\tfrac1{n-2}\mathring{\mathrm{Ric}}\owedge g)=\mathring{\mathrm{Ric}}$ and $\mathrm{Ric}(\tfrac{\mathrm{scal}}{2n(n-1)}g\owedge g)=\tfrac{\mathrm{scal}}ng$.
+**The convention.** Kulkarni–Nomizu as the record uses it, $(A\owedge B)_{ijkl}=A_{ik}B_{jl}+A_{jl}B_{ik}-A_{il}B_{jk}-A_{jk}B_{il}$, whence $\mathrm{Ric}(A\owedge B)=(\mathop{\mathrm{tr}}A)B+(\mathop{\mathrm{tr}}B)A-AB-BA$ under $\mathrm{Ric}_{jl}=\sum_iR_{ijil}$, and the decomposition $R=W+\tfrac1{n-2}\mathring{\mathrm{Ric}}\owedge g+\tfrac{\mathrm{scal}}{2n(n-1)}g\owedge g$. Both normalisations check against each other: $\mathrm{Ric}(\tfrac1{n-2}\mathring{\mathrm{Ric}}\owedge g)=\mathring{\mathrm{Ric}}$ and $\mathrm{Ric}(\tfrac{\mathrm{scal}}{2n(n-1)}g\owedge g)=\tfrac{\mathrm{scal}}ng$.
 
-**The projection does not vanish.** With $h$ trace-free on the first block and $g_q$ the second block's identity, $hg_q=g_qh=0$ and $\operatorname{tr}h=0$, so
+**The projection does not vanish.** With $h$ trace-free on the first block and $g_q$ the second block's identity, $hg_q=g_qh=0$ and $\mathop{\mathrm{tr}}h=0$, so
 
 $$\mathrm{Ric}(h\owedge g_q)=m\,h\neq0,\qquad \mathrm{scal}=0,\qquad H:=\mathcal W(h\owedge g_q)=h\owedge g_q-\frac m{n-2}\,h\owedge g,\quad n-2=2m-2 .$$
 
@@ -49,7 +49,7 @@ $$\lVert H\rVert_F^2=\alpha^2m+\beta^2(m-2)=\frac{m(m-2)}{2(m-1)}\;\sim\;\frac m
 
 **This is a constant on the summand**, as $O(m)\times O(m)$-irreducibility demands, the lemma implicitly assumes that and is right to. But it is $\tfrac{m-2}{2(m-1)}$ times the value the proof uses, and the proof's "dividing by $\sqrt m$" is therefore short by a factor tending to $\sqrt2$.
 
-**On the counting convention the brief flags.** Both norms here are taken on the same operator on $\Lambda^2$, over an orthonormal plane basis, each unordered plane once, the record's own $\operatorname{tr}(W^2)=\sum_\alpha\lambda_\alpha^2$ from [conventions.md](../findings/conventions.md). The ratio $\lVert H\rVert_{op}/\lVert H\rVert_F$ is then convention-independent: doubling to ordered pairs scales $\lVert H\rVert_F$ by $\sqrt2$ and leaves $\lVert H\rVert_{op}$ alone, changing the ratio uniformly and not the comparison. **The lemma is internally consistent on this point**, its own $\lVert H\rVert_F^2=m$ counts the $m^2$ cross planes once each. The $\sqrt2$ the brief anticipated is real but it enters through D1, not through the counting.
+**On the counting convention the brief flags.** Both norms here are taken on the same operator on $\Lambda^2$, over an orthonormal plane basis, each unordered plane once, the record's own $\mathop{\mathrm{tr}}(W^2)=\sum_\alpha\lambda_\alpha^2$ from [conventions.md](../findings/conventions.md). The ratio $\lVert H\rVert_{op}/\lVert H\rVert_F$ is then convention-independent: doubling to ordered pairs scales $\lVert H\rVert_F$ by $\sqrt2$ and leaves $\lVert H\rVert_{op}$ alone, changing the ratio uniformly and not the comparison. **The lemma is internally consistent on this point**, its own $\lVert H\rVert_F^2=m$ counts the $m^2$ cross planes once each. The $\sqrt2$ the brief anticipated is real but it enters through D1, not through the counting.
 
 ## D3, the upper bound is false at every $m$
 

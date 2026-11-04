@@ -13,7 +13,7 @@ The brief was cold and I worked from the definitions and the quoted passages alo
 | 7 | Passage B against A, and "Li's Theorem 1.8 gives the same spectrum" | CONFIRMED | every clause matches A. Li gives $\mathrm{spec}\,\mathring R$, and $\mathring W=\mathring R-c\,\mathrm{Id}$ followed by the scale $s$ reproduces A's spectrum |
 | 8a | $\Lambda^2$ spectrum, same $s$, $p_3(\mu)=A$, $p_3(\omega)$ | CONFIRMED AS ALGEBRA | each closes by hand |
 | 8b | "with Lemma L50 the two spectra return $\theta=\theta_0(2m)$" | HYPOTHESIS-DEBT | the algebra closes, but the coefficient pair $\tfrac32,-\tfrac12$ is L50's link (a), which has no derivation on file |
-| 9 | "$A$ is not a new constant", equal to $2\sqrt2/(n\sqrt{(n-1)(n-2)})$ at $n=2m$ | CONFIRMED AS ALGEBRA | the two closed forms agree exactly. What "$\operatorname{tr}(W^3)$" denotes is left unfixed in the passages |
+| 9 | "$A$ is not a new constant", equal to $2\sqrt2/(n\sqrt{(n-1)(n-2)})$ at $n=2m$ | CONFIRMED AS ALGEBRA | the two closed forms agree exactly. What "$\mathop{\mathrm{tr}}(W^3)$" denotes is left unfixed in the passages |
 | 10 | Passage F states L67 | CONFIRMED AS ALGEBRA | Lean types the arithmetic of the proposed spectrum only. No tensor, operator or eigenvalue claim is stated |
 | 11 | boundary $m=2$, zero eigenvalues, $ikjl$ order | CONFIRMED | $m=2$ closes, there is no zero eigenvalue of $\mathring W$ or $M$ at $m\ge2$, and $ikjl$ negates the spectrum |
 
@@ -59,9 +59,9 @@ Quoted from the brief:
 - Antisymmetry in each pair gives $\sum_{ijkl}W_{ijkl}^2=4\sum_{i<j,\,k<l}W_{ijkl}^2=4\lVert M\rVert_F^2$.
 - Screen on $G$ at $n=2$: $G_{1212}=G_{2121}=1$ and $G_{1221}=G_{2112}=-1$, so the entrywise $\lVert G\rVert_F^2=4$. Meanwhile $M_G=[1]$, so $\lVert M_G\rVert_F^2=1$.
 - Screen of the quadratic relation for any algebraic Weyl tensor. Let $T(X)_{ij}=\sum_{kl}W_{iklj}X_{kl}$ act on all $n\times n$ matrices.
-  - Pair symmetries give $W_{kijl}=W_{iklj}$, so $\operatorname{tr}T^2=\sum W_{iklj}W_{kijl}=\lVert W\rVert_F^2$.
-  - $T$ commutes with transposition. It kills $I$ and preserves trace-free matrices, because $W$ is Ricci-flat. So $\operatorname{tr}_{S^2_0}T^2=\operatorname{tr}T^2-\operatorname{tr}_{\Lambda^2}T^2$.
-  - On antisymmetric $X$ the first Bianchi identity gives $W_{iklj}-W_{ilkj}=-W_{ijkl}$, hence $T(X)_{ij}=-\tfrac12\sum_{kl}W_{ijkl}X_{kl}$. In the orthonormal basis $(E_{kl}-E_{lk})/\sqrt2$ this is $-M$, so $\operatorname{tr}_{\Lambda^2}T^2=\lVert M\rVert_F^2=\tfrac14\lVert W\rVert_F^2$.
+  - Pair symmetries give $W_{kijl}=W_{iklj}$, so $\mathop{\mathrm{tr}}T^2=\sum W_{iklj}W_{kijl}=\lVert W\rVert_F^2$.
+  - $T$ commutes with transposition. It kills $I$ and preserves trace-free matrices, because $W$ is Ricci-flat. So $\mathop{\mathrm{tr}}_{S^2_0}T^2=\mathop{\mathrm{tr}}T^2-\mathop{\mathrm{tr}}_{\Lambda^2}T^2$.
+  - On antisymmetric $X$ the first Bianchi identity gives $W_{iklj}-W_{ilkj}=-W_{ijkl}$, hence $T(X)_{ij}=-\tfrac12\sum_{kl}W_{ijkl}X_{kl}$. In the orthonormal basis $(E_{kl}-E_{lk})/\sqrt2$ this is $-M$, so $\mathop{\mathrm{tr}}_{\Lambda^2}T^2=\lVert M\rVert_F^2=\tfrac14\lVert W\rVert_F^2$.
   - Hence $\sum\omega^2=\tfrac34\lVert W\rVert_F^2=3\lVert M\rVert_F^2$.
 - On the object itself: A's scaled spectrum has $\sum\omega^2=3$ (section 6), so entrywise $\lVert W\rVert_F^2=4$ and $\lVert W\rVert_F=2$. Conversely, entrywise $\lVert W\rVert_F=1$ would give $\sum\omega^2=\tfrac34$ and every eigenvalue halved: $\tfrac m2A$, $-\tfrac{m-1}2A$, $-m(m-1)A$.
 
@@ -81,17 +81,17 @@ Quoted from the brief:
 
 ## 4. Item 3, the contraction: CONFIRMED
 
-- $(\mathring G^{(a)}h)_{ij}=\sum_{kl}\big[(P_a)_{il}(P_a)_{kj}-(P_a)_{ij}(P_a)_{kl}\big]h_{kl}=(P_ahP_a)_{ji}-(P_a)_{ij}\operatorname{tr}(P_ah)$. The first term equals $(P_ahP_a)_{ij}$ by symmetry, so $\mathring G^{(a)}h=P_ahP_a-t_aP_a$.
-- $(\mathring Gh)_{ij}=h_{ji}-\delta_{ij}\operatorname{tr}h=h_{ij}$ on $S^2_0$.
+- $(\mathring G^{(a)}h)_{ij}=\sum_{kl}\big[(P_a)_{il}(P_a)_{kj}-(P_a)_{ij}(P_a)_{kl}\big]h_{kl}=(P_ahP_a)_{ji}-(P_a)_{ij}\mathop{\mathrm{tr}}(P_ah)$. The first term equals $(P_ahP_a)_{ij}$ by symmetry, so $\mathring G^{(a)}h=P_ahP_a-t_aP_a$.
+- $(\mathring Gh)_{ij}=h_{ji}-\delta_{ij}\mathop{\mathrm{tr}}h=h_{ij}$ on $S^2_0$.
 - The display then follows by linearity, with $W=G^{(1)}+G^{(2)}-cG$.
-- Output lies in $S^2_0$ with no projection needed: $\operatorname{tr}(\mathring Wh)=t_1+t_2-m(t_1+t_2)-0=(1-m)\operatorname{tr}h=0$.
+- Output lies in $S^2_0$ with no projection needed: $\mathop{\mathrm{tr}}(\mathring Wh)=t_1+t_2-m(t_1+t_2)-0=(1-m)\mathop{\mathrm{tr}}h=0$.
 - Sign check against the sources. $\mathring G=\mathrm{Id}$ on $S^2_0$ agrees with Li's Example 2.1, "$\mathring R=\kappa\,\mathrm{id}_{S^2_0}$ on $S^n(\kappa)$". Li's operator in Section 2 is $\mathring R(\varphi)_{il}=\sum R_{ijkl}\varphi_{jk}$ with $\mathring R_i(g_i)=-\mathrm{Ric}$, which is the $iklj$ pattern with $R_{ijij}$ sectional. This agrees with Passage E.
 
 ## 5. Item 4, the three summands: CONFIRMED
 
-- Within a factor, say $h=P_1hP_1$ with $t_1=\operatorname{tr}h=0$. Then $P_2hP_2=0$ and $t_2=0$, so $\mathring Wh=(1-c)h=\frac m{2m-1}h$. Dimension: $2\big(\tfrac{m(m+1)}2-1\big)=m^2+m-2=(m-1)(m+2)$.
-- Cross block, $h=P_1hP_2+P_2hP_1$. Here $P_ahP_a=0$ and $t_1=\operatorname{tr}(P_1hP_2)=\operatorname{tr}(hP_2P_1)=0$, and likewise $t_2=0$. So $\mathring Wh=-ch$, on a space of dimension $m^2$.
-- The line $h=P_1-P_2$. Here $\operatorname{tr}h=0$, $t_1=m$, $t_2=-m$, $P_1hP_1=P_1$ and $P_2hP_2=-P_2$. So $\mathring Wh=(1-m)(P_1-P_2)-ch=(1-m-c)h$, and $1-m-c=-(m-1)\frac{2m}{2m-1}$.
+- Within a factor, say $h=P_1hP_1$ with $t_1=\mathop{\mathrm{tr}}h=0$. Then $P_2hP_2=0$ and $t_2=0$, so $\mathring Wh=(1-c)h=\frac m{2m-1}h$. Dimension: $2\big(\tfrac{m(m+1)}2-1\big)=m^2+m-2=(m-1)(m+2)$.
+- Cross block, $h=P_1hP_2+P_2hP_1$. Here $P_ahP_a=0$ and $t_1=\mathop{\mathrm{tr}}(P_1hP_2)=\mathop{\mathrm{tr}}(hP_2P_1)=0$, and likewise $t_2=0$. So $\mathring Wh=-ch$, on a space of dimension $m^2$.
+- The line $h=P_1-P_2$. Here $\mathop{\mathrm{tr}}h=0$, $t_1=m$, $t_2=-m$, $P_1hP_1=P_1$ and $P_2hP_2=-P_2$. So $\mathring Wh=(1-m)(P_1-P_2)-ch=(1-m-c)h$, and $1-m-c=-(m-1)\frac{2m}{2m-1}$.
 - Invariance: each summand is an eigenspace.
 - Orthogonality in the Frobenius product: the block-diagonal and off-diagonal parts are orthogonal, and $\langle P_1-P_2,h\rangle=t_1-t_2=0$ for $h$ in the trace-free factor parts. The written proof relies on dimension count alone. Orthogonality (or distinctness of eigenvalues) supplies the independence that the count needs. It is evident from the block form but not written. No finding.
 - Distinctness at $m\ge2$: $\frac m{2m-1}>0>-\frac{m-1}{2m-1}$, and $-2m(m-1)=-(m-1)$ forces $2m=1$. So there are exactly three eigenvalues. The count $(m-1)(m+2)+m^2+1=2m^2+m-1=\frac{2m(2m+1)}2-1$ matches $\dim S^2_0(\mathbb R^{2m})$.
@@ -150,7 +150,7 @@ Passage B, clause by clause:
 ## 10. Item 9, "$A$ is not a new constant": CONFIRMED AS ALGEBRA
 
 - At $n=2m$: $\frac{2\sqrt2}{2m\sqrt{(2m-1)(2m-2)}}=\frac{2\sqrt2}{2m\sqrt2\sqrt{(2m-1)(m-1)}}=\frac1{m\sqrt{(m-1)(2m-1)}}=A$. The equality is exact.
-- 9a shows $A=p_3(\mu)=\operatorname{tr}M^3$ at $\lVert M\rVert_F=1$. The quoted "record's $\operatorname{tr}(W^3)$" matches it if $W^3$ means $M^3$ in Passage D's convention. The passages do not say what that closed form is the value of, or where it is derived, so the agreement is confirmed only as an equality of the two expressions.
+- 9a shows $A=p_3(\mu)=\mathop{\mathrm{tr}}M^3$ at $\lVert M\rVert_F=1$. The quoted "record's $\mathop{\mathrm{tr}}(W^3)$" matches it if $W^3$ means $M^3$ in Passage D's convention. The passages do not say what that closed form is the value of, or where it is derived, so the agreement is confirmed only as an equality of the two expressions.
 
 ## 11. Item 10, the Lean files: CONFIRMED AS ALGEBRA, the lemma itself is not stated
 

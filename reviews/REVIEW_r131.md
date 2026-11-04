@@ -30,8 +30,8 @@ with no criticality hypothesis. The proof is claims B and C, in the right frame,
 
 ### The proof
 
-1. Let $h$ be a unit bottom eigenvector, $\mathring Wh=-\mu h$, so $\langle h,\mathring Wh\rangle=-\mu$. It lies in $S^2_0$, so $\operatorname{tr}h=0$ and $\lVert h\rVert_F=1$.
-2. Diagonalize it: pick the orthonormal frame $F$ of eigenvectors of $h$, so $h=\operatorname{diag}(v)$ with $\sum_iv_i=0$ and $\lvert v\rvert=1$.
+1. Let $h$ be a unit bottom eigenvector, $\mathring Wh=-\mu h$, so $\langle h,\mathring Wh\rangle=-\mu$. It lies in $S^2_0$, so $\mathop{\mathrm{tr}}h=0$ and $\lVert h\rVert_F=1$.
+2. Diagonalize it: pick the orthonormal frame $F$ of eigenvectors of $h$, so $h=\mathop{\mathrm{diag}}(v)$ with $\sum_iv_i=0$ and $\lvert v\rvert=1$.
 3. In the record's own convention $(\mathring Wh)_{ij}=\sum_{kl}W_{iklj}h_{kl}$, a diagonal $h$ gives $(\mathring Wh)_{ii}=-\left(K^Fv\right)_i$, so $\langle h,\mathring Wh\rangle=-v^{\mathsf T}K^Fv$. Hence $\mu=v^{\mathsf T}K^Fv$ **exactly**, this is the equality case of claim B, and B in an arbitrary frame gives $\mu\ge\mu_1(K^F)$, so in this frame $\mu=\mu_1(K^F)$.
 4. $K^F$ is symmetric, hollow and $K^F\mathbf1=0$ in **every** frame (Weyl is totally trace-free), and $t_F=\lVert K^F\rVert_F^2\le2$ in **every** frame, because $t_F$ is twice the sum of squares of the $\Lambda^2$-diagonal of $W$ and $\lVert W\rVert_{\Lambda^2}=1$. This is the record's own "$t\le2$ at $\lvert W\rvert=1$", which is a per-frame statement.
 5. Claim C in frame $F$: $\mu=v^{\mathsf T}K^Fv\le\mu_1(K^F)\le\sqrt{t_F(n-2)/(n-1)}\le\sqrt{2(n-2)/(n-1)}$. $\square$
@@ -44,7 +44,7 @@ The passage's closing sentence poses the open question itself: *"whether any adm
 
 $$\mu=\max_{F\ \text{orthonormal frame}}\mu_1\!\left(K^F\right),$$
 
-because $\{\operatorname{diag}_F(v):F,\ v\perp\mathbf1,\ \lvert v\rvert=1\}$ is *all* of the unit sphere of $S^2_0$, every traceless symmetric $h$ is diagonal in its own eigenframe. So the lower bound is not merely improvable; in the right frame it is exact. And the cap of claim C, which applies frame by frame, then caps $\mu$ itself.
+because $\{\mathop{\mathrm{diag}}_F(v):F,\ v\perp\mathbf1,\ \lvert v\rvert=1\}$ is *all* of the unit sphere of $S^2_0$, every traceless symmetric $h$ is diagonal in its own eigenframe. So the lower bound is not merely improvable; in the right frame it is exact. And the cap of claim C, which applies frame by frame, then caps $\mu$ itself.
 
 So the object the passage calls the obstruction ("the loss is in the budget behind it rather than in the majorization"), is not a loss. It is the deliverable. What was missing was never a sharper majorization; it was the single move of evaluating in the eigenframe of $h$ instead of in the coordinate frame.
 
@@ -62,25 +62,25 @@ an outside progress report (unpublished, held in the private record) proves $\mu
 
 ### A, CONFIRMED, and stronger than recorded
 
-$\sum d_\varphi^2=\sum_{a<b}K_{ab}^2=t/2$. $K$ preserves $\mathbf1^\perp$ (symmetric, $K\mathbf1=0$), so the restriction $K|_{\mathbf1^\perp}$ is a well-defined operator whose spectrum is $\operatorname{spec}(K)$ with one $0$ deleted; $\sum d_\psi^2=t-0=t$. Total $\tfrac32t$. No diagonality of $\mathring W$ used, exactly as claimed.
+$\sum d_\varphi^2=\sum_{a<b}K_{ab}^2=t/2$. $K$ preserves $\mathbf1^\perp$ (symmetric, $K\mathbf1=0$), so the restriction $K|_{\mathbf1^\perp}$ is a well-defined operator whose spectrum is $\mathop{\mathrm{spec}}(K)$ with one $0$ deleted; $\sum d_\psi^2=t-0=t$. Total $\tfrac32t$. No diagonality of $\mathring W$ used, exactly as claimed.
 
 **The repeated-zero worry in the brief is void.** Multiplicity of $0$ never enters: the quantity is $\lVert K|_{\mathbf1^\perp}\rVert_F^2$, which is basis-free, so no choice of "the eigenvector belonging to $\mathbf1$" is required.
 
-**The record understates its own construction.** $d$ is not merely a list with the right norm, it is the actual diagonal of $\mathring W$ in the orthonormal basis $\{\varphi_{ab}\}_{a<b}\cup\{\operatorname{diag}(v^{(m)})\}$ of $S^2_0$, which has $\binom n2+(n-1)=\tfrac{n(n+1)}2-1=\dim S^2_0$ elements. Direct evaluation: $\langle\varphi_{ab},\mathring W\varphi_{ab}\rangle=K_{ab}$ and $\langle\operatorname{diag}(v),\mathring W\operatorname{diag}(v)\rangle=-v^{\mathsf T}Kv$ in the record's convention. *That* is why $\omega\succ d$ is available at all, and the passage's aside about a reimplementation "reproducing neither the identity nor the conclusion" is a sign convention, not a wrong construction: flipping $\mathring W\mapsto-\mathring W$ swaps which half of $d$ carries the minus.
+**The record understates its own construction.** $d$ is not merely a list with the right norm, it is the actual diagonal of $\mathring W$ in the orthonormal basis $\{\varphi_{ab}\}_{a<b}\cup\{\mathop{\mathrm{diag}}(v^{(m)})\}$ of $S^2_0$, which has $\binom n2+(n-1)=\tfrac{n(n+1)}2-1=\dim S^2_0$ elements. Direct evaluation: $\langle\varphi_{ab},\mathring W\varphi_{ab}\rangle=K_{ab}$ and $\langle\mathop{\mathrm{diag}}(v),\mathring W\mathop{\mathrm{diag}}(v)\rangle=-v^{\mathsf T}Kv$ in the record's convention. *That* is why $\omega\succ d$ is available at all, and the passage's aside about a reimplementation "reproducing neither the identity nor the conclusion" is a sign convention, not a wrong construction: flipping $\mathring W\mapsto-\mathring W$ swaps which half of $d$ carries the minus.
 
 Two consequences the record has separately and should have joined here: $\lVert\mathring W\rVert_F^2=3$ always (a quadratic $O(n)$-invariant of an irreducible representation, hence a multiple of $\lvert W\rvert^2$; checked at $3.000000$ on random $\mathrm{Weyl}_n$, $n=5,6,7,8$), so $\sum d^2=\tfrac32t\le3=\sum\omega^2$ with equality iff $t=2$, the majorization's necessary norm condition is automatic, and saturated exactly on the diagonal locus.
 
 ### B, CONFIRMED, scope OVERSTATED
 
-The two halves both hold. $-d_{\min}=\max\{\max_{a<b}(-K_{ab}),\ \mu_1(K)\}$: the largest eigenvalue of $K$ is attained on $\mathbf1^\perp$ because $\operatorname{tr}\left(K|_{\mathbf1^\perp}\right)=0$ forces a nonnegative eigenvalue there, for every $K\ne0$. **$K=0$ is the one exception and the record does not state it**, there $\max$ of an empty positive part collapses and the identity reads $0=0$ vacuously.
+The two halves both hold. $-d_{\min}=\max\{\max_{a<b}(-K_{ab}),\ \mu_1(K)\}$: the largest eigenvalue of $K$ is attained on $\mathbf1^\perp$ because $\mathop{\mathrm{tr}}\left(K|_{\mathbf1^\perp}\right)=0$ forces a nonnegative eigenvalue there, for every $K\ne0$. **$K=0$ is the one exception and the record does not state it**, there $\max$ of an empty positive part collapses and the identity reads $0=0$ vacuously.
 
 Majorization direction, derived rather than quoted: $\omega\succ d$ with equal totals means $\sum_{k\le j}\omega^\downarrow_k\ge\sum_{k\le j}d^\downarrow_k$ for all $j$. At $j=N-1$, subtracting from the equal totals gives $\omega_{\min}\le d_{\min}$. The majorizing sequence is the more spread one, so its minimum is the smaller. **The record has the direction right.**
 
-**But Schur–Horn is not needed and should not be claimed as the mechanism.** $\mu=-\omega_{\min}=\max_{\lVert h\rVert=1}\left(-\langle h,\mathring Wh\rangle\right)\ge-\langle\operatorname{diag}(v),\mathring W\operatorname{diag}(v)\rangle=v^{\mathsf T}Kv$ for every unit $v\perp\mathbf1$, hence $\mu\ge\mu_1(K)$. One line, no majorization, and it generalizes to every frame, which is the whole content of the defect above. Carrying it as a Schur–Horn consequence is what hid the frame as a free parameter.
+**But Schur–Horn is not needed and should not be claimed as the mechanism.** $\mu=-\omega_{\min}=\max_{\lVert h\rVert=1}\left(-\langle h,\mathring Wh\rangle\right)\ge-\langle\mathop{\mathrm{diag}}(v),\mathring W\mathop{\mathrm{diag}}(v)\rangle=v^{\mathsf T}Kv$ for every unit $v\perp\mathbf1$, hence $\mu\ge\mu_1(K)$. One line, no majorization, and it generalizes to every frame, which is the whole content of the defect above. Carrying it as a Schur–Horn consequence is what hid the frame as a free parameter.
 
 ### C, CONFIRMED
 
-$K|_{\mathbf1^\perp}$ is symmetric on $n-1$ dimensions with trace $0$ and Frobenius norm$^2$ equal to $t$. Cauchy–Schwarz on the $n-2$ non-maximal eigenvalues: $\mu_1^2=\left(\sum_{i\ge2}\lambda_i\right)^2\le(n-2)\left(t-\mu_1^2\right)$, so $\mu_1\le\sqrt{t(n-2)/(n-1)}$. Equality needs the $n-2$ remaining eigenvalues all equal to $-\mu_1/(n-2)$, which is exactly what the balanced sphere products deliver, e.g. $\operatorname{spec}\left(K|_{\mathbf1^\perp}\right)=\{1.2649,-0.3162^{(4)}\}$ at $S^3\times S^3$ with $-1.2649/4=-0.3162$.
+$K|_{\mathbf1^\perp}$ is symmetric on $n-1$ dimensions with trace $0$ and Frobenius norm$^2$ equal to $t$. Cauchy–Schwarz on the $n-2$ non-maximal eigenvalues: $\mu_1^2=\left(\sum_{i\ge2}\lambda_i\right)^2\le(n-2)\left(t-\mu_1^2\right)$, so $\mu_1\le\sqrt{t(n-2)/(n-1)}$. Equality needs the $n-2$ remaining eigenvalues all equal to $-\mu_1/(n-2)$, which is exactly what the balanced sphere products deliver, e.g. $\mathop{\mathrm{spec}}\left(K|_{\mathbf1^\perp}\right)=\{1.2649,-0.3162^{(4)}\}$ at $S^3\times S^3$ with $-1.2649/4=-0.3162$.
 
 ### D, CONFIRMED, and not a coincidence
 
@@ -111,7 +111,7 @@ and the two intra-block equations are then satisfied identically. So $x/\lvert z
 
 The *conclusion* survives untouched, and for a reason that is both simpler and general: $z=-\lambda/(n-1)\ne0$ whenever $\lambda>0$, so the support graph is the **complete** graph, hence connected, hence $\dim\ker L=1$ and the kernel is the constant direction $K\mathbf1=0$ already forces. Fix the sentence, keep the result.
 
-**The margins are right, and they are closed-form.** $\operatorname{spec}(K)=\left\{\tfrac{n\lambda}{n-1},\,0,\,(-x)^{(p-1)},\,(-y)^{(q-1)}\right\}$, so the eigenvalues of $K^2-\lambda K$ are $\kappa(\kappa-\lambda)$ and
+**The margins are right, and they are closed-form.** $\mathop{\mathrm{spec}}(K)=\left\{\tfrac{n\lambda}{n-1},\,0,\,(-x)^{(p-1)},\,(-y)^{(q-1)}\right\}$, so the eigenvalues of $K^2-\lambda K$ are $\kappa(\kappa-\lambda)$ and
 
 $$\varepsilon_1=\min\left\{\frac{n\lambda^2}{(n-1)^2},\ x(x+\lambda),\ y(y+\lambda)\right\}.$$
 
@@ -128,7 +128,7 @@ With $c_x=q/(p-1)$ and $c_y=p/(q-1)$ the last two are $\tfrac{\lambda^2}{(n-1)^2
 
 The record says *"equality at every sphere product tested"*. It is an identity, provable in closed form for all $p,q\ge2$, and the derivation is the one above:
 
-1. On the diagonal locus $\mathring W$ is block-diagonal in the $(\varphi,\psi)$ basis, $\mathring W\varphi_{ab}=K_{ab}\varphi_{ab}$ and $\mathring W\operatorname{diag}(v)=-\operatorname{diag}(Kv)$, so $\omega=d$ **exactly**, not merely $\omega\succ d$.
+1. On the diagonal locus $\mathring W$ is block-diagonal in the $(\varphi,\psi)$ basis, $\mathring W\varphi_{ab}=K_{ab}\varphi_{ab}$ and $\mathring W\mathop{\mathrm{diag}}(v)=-\mathop{\mathrm{diag}}(Kv)$, so $\omega=d$ **exactly**, not merely $\omega\succ d$.
 2. Hence $\mu=-d_{\min}=\max\left\{\lambda/(n-1),\ n\lambda/(n-1)\right\}=n\lambda/(n-1)$, using $\max_{a<b}(-K_{ab})=-z=\lambda/(n-1)$ and $\mu_1(K)=n\lambda/(n-1)$ from the spectrum above.
 3. So $\lambda=\tfrac{n-1}n\mu$ identically, at every $S^p\times S^q$, balanced or not. Branch 1 is an equality on the whole two-parameter family.
 

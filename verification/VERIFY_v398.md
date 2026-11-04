@@ -14,7 +14,7 @@ The brief was cold and I worked from its definitions and quoted passages only, o
 | 8 | Witnesses $(2,2)$ at $n=2,3$ and $(2,1,1)$ at $n=3$ are non-admissible with zero space, equality at $(2^6)$ | CONFIRMED | arithmetic exact, zero spaces rest on the "only if" half of Weyl, consistent with hand screens |
 | 9 | "The seed of every block is given in closed form and need not be searched for" (B), "constructed rather than searched for" (C) | HYPOTHESIS-DEBT | B and C drop Passage A's qualifier "relative to $\iota_\lambda$", and no passage says how $\iota_\lambda$ is obtained explicitly |
 | 10 | "The realisation theorem applies to it" | CONFIRMED | Passage A says the theorem needs one nonzero seed per block, the lemma supplies it, the theorem itself is not quoted |
-| 11 | Passages B and C state the same result as A | CONFIRMED | same hypotheses and range, "nonzero element of $\operatorname{Hom}_{O(n)}$" equals "nonzero $O(n)$-equivariant map" |
+| 11 | Passages B and C state the same result as A | CONFIRMED | same hypotheses and range, "nonzero element of $\mathop{\mathrm{Hom}}_{O(n)}$" equals "nonzero $O(n)$-equivariant map" |
 | 12 | The Lean files state L65 | HYPOTHESIS-DEBT | only arithmetic and two generic linear-algebra shapes are typed, and seed_ne_zero types iota as an endomorphism of Vlam, unlike $\iota_\lambda$ |
 
 **Summary: Lemma L65 is proven as stated for every $n\ge1$ and every $O(n)$-admissible $\lambda$ with $\lvert\lambda\rvert\in\{0,2,\dots,12\}$, given the classical Weyl theorem, and the round should act on two non-mathematical debts: restore "relative to $\iota_\lambda$" to the closed-form rider in Passages B and C, and record that the Lean files do not state the lemma (their seed_ne_zero is typed with an endomorphism iota and cannot take the contraction identity as written).**
@@ -25,7 +25,7 @@ Quoted from the brief:
 
 - "$V=\mathbb R^n$ with the standard action of $O(n)$, and $V^{\otimes m}$ with the diagonal action $g\cdot(v_1\otimes\dots\otimes v_m)=gv_1\otimes\dots\otimes gv_m$ and the induced inner product."
 - "A **block label** is a partition $\lambda$ with $\lvert\lambda\rvert\in\{0,2,\dots,12\}$. $\lambda'$ is the conjugate partition, so $\lambda'_1$ is the number of nonzero parts of $\lambda$ and $\lambda'_2$ the number of parts of size at least $2$. $\lambda$ is **$O(n)$-admissible** when $\lambda'_1+\lambda'_2\le n$."
-- "$V_\lambda$ is the $O(n)$-representation labelled by $\lambda$, and $M_\lambda=\operatorname{Hom}_{O(n)}(V_\lambda,V^{\otimes12})$."
+- "$V_\lambda$ is the $O(n)$-representation labelled by $\lambda$, and $M_\lambda=\mathop{\mathrm{Hom}}_{O(n)}(V_\lambda,V^{\otimes12})$."
 - From Passage A: $k=(12-\lvert\lambda\rvert)/2$, $\iota_\lambda:V_\lambda\hookrightarrow V^{\otimes\lvert\lambda\rvert}$ "the inclusion given by Weyl's construction of $V_\lambda$ as the traceless tensors of symmetry type $\lambda$", and $\mathrm{cup}=\sum_a e_a\otimes e_a\in V\otimes V$.
 
 Throughout, $e_1,\dots,e_n$ is the standard orthonormal basis and $ge_a=\sum_b g_{ba}e_b$.
@@ -83,7 +83,7 @@ This shows $c_0(x)\ne0$ for every $x\ne0$, which is injectivity of $c_0$. The co
 
 The contraction version: let $\epsilon_j:V^{\otimes(\lvert\lambda\rvert+2j)}\to V^{\otimes(\lvert\lambda\rvert+2j-2)}$ apply $\langle\cdot,\cdot\rangle$ to the last two slots. Then $\epsilon_j(u\otimes\mathrm{cup})=u\cdot\sum_a\langle e_a,e_a\rangle=n\,u$. Composing $\epsilon_1\circ\dots\circ\epsilon_k$ with $c_0$ gives $n^k\iota_\lambda$. Since $n\ge1$, $n^k\ge1$ is nonzero, and $\iota_\lambda\ne0$ because $V_\lambda\ne0$ and $\iota_\lambda$ is injective. At $k=0$ the composite is the identity and $n^0=1$. The algebra closes. The word "Equivalently" introduces a second argument for the same conclusion rather than an equivalent statement, which is harmless.
 
-"Nonzero in $M_\lambda$ and nonzero as a map are the same statement": $M_\lambda$ is a linear subspace of $\operatorname{Hom}_{\mathbb R}(V_\lambda,V^{\otimes12})$ whose zero is the zero map. Confirmed, and $c_0\in M_\lambda$ by section 2.
+"Nonzero in $M_\lambda$ and nonzero as a map are the same statement": $M_\lambda$ is a linear subspace of $\mathop{\mathrm{Hom}}_{\mathbb R}(V_\lambda,V^{\otimes12})$ whose zero is the zero map. Confirmed, and $c_0\in M_\lambda$ by section 2.
 
 No finding beyond 11.1.
 
@@ -100,7 +100,7 @@ Witness arithmetic: $(2,2)$ has $\lambda'_1+\lambda'_2=2+2=4>3\ge2$, and $(2,1,1
 Zero spaces, hand screens only, realising symmetry type $\lambda$ by tensors antisymmetric in the column slots (an isomorphic image of the Young symmetrizer, with tracelessness preserved):
 
 - $(2,2)$ at $n=2$: the column-antisymmetric space is $\Lambda^2\otimes\Lambda^2$, one-dimensional, spanned by $\varepsilon_{ac}\varepsilon_{bd}$. Contracting slots $a,b$ gives $\sum_i\varepsilon_{ic}\varepsilon_{id}=\delta_{cd}\ne0$. No nonzero traceless element.
-- $(2,2)$ at $n=3$: write elements as $\varepsilon_{acp}\varepsilon_{bdq}A_{pq}$ with $A$ symmetric. Contracting $a,b$ gives $\delta_{cd}\operatorname{tr}A-A_{dc}$. Vanishing forces $A=(\operatorname{tr}A)I$, so $\operatorname{tr}A=3\operatorname{tr}A$, so $A=0$.
+- $(2,2)$ at $n=3$: write elements as $\varepsilon_{acp}\varepsilon_{bdq}A_{pq}$ with $A$ symmetric. Contracting $a,b$ gives $\delta_{cd}\mathop{\mathrm{tr}}A-A_{dc}$. Vanishing forces $A=(\mathop{\mathrm{tr}}A)I$, so $\mathop{\mathrm{tr}}A=3\mathop{\mathrm{tr}}A$, so $A=0$.
 - $(2,1,1)$ at $n=3$: elements $\varepsilon_{abc}v_d$, and contracting $a,d$ gives $\varepsilon_{dbc}v_d$, the Hodge dual of $v$, nonzero for $v\ne0$.
 
 All three screens agree with "Weyl's construction gives the zero space". They are screens, and the claim rests on the classical theorem.
@@ -114,7 +114,7 @@ No finding. Candidate 11.3 on uniqueness of the equality case is withdrawn.
 ### 5.1 Candidate: the closed-form rider in B and C is unargued
 
 1. **Location.** Passage A says "every block has a seed in closed form **relative to $\iota_\lambda$**". Passage B says "so the seed of every block is given in closed form and need not be searched for". Passage C landscape says "so it is constructed rather than searched for", and C detail says "The lemma removes a search from the certificate pipeline". The qualifier "relative to $\iota_\lambda$" is dropped in B and C, and no passage states how $\iota_\lambda$ is obtained as an explicit object (a basis of $V^{[d]}\cap c_\lambda V^{\otimes d}$, or one nonzero vector of it).
-2. **Concrete exhibit.** Take $\lambda=(2^6)$ at $n=12$, so $k=0$ and $c_0=\iota_\lambda$. Passage A's own motivation says "finding a nonzero element of $\operatorname{Hom}(V_\lambda,V^{\otimes12})$ is the same construction problem the item started with". At this $\lambda$ the lemma returns exactly that element as an input, so any claim that the search is removed is exactly as strong as the claim that $\iota_\lambda$ itself is obtained without search. The passages cite Weyl for the existence and nonvanishing of the subspace and say nothing about producing its elements.
+2. **Concrete exhibit.** Take $\lambda=(2^6)$ at $n=12$, so $k=0$ and $c_0=\iota_\lambda$. Passage A's own motivation says "finding a nonzero element of $\mathop{\mathrm{Hom}}(V_\lambda,V^{\otimes12})$ is the same construction problem the item started with". At this $\lambda$ the lemma returns exactly that element as an input, so any claim that the search is removed is exactly as strong as the claim that $\iota_\lambda$ itself is obtained without search. The passages cite Weyl for the existence and nonvanishing of the subspace and say nothing about producing its elements.
 3. **Charitable reading.** "Closed form" may mean "a formula in terms of the classical object $\iota_\lambda$", which is true, and the author may regard extracting $\iota_\lambda$ from Weyl's construction as routine. Under that reading the rider is correct, but the reading needs Passage A's qualifier, which B and C omit, and the routine-ness is not argued on file.
 
 The candidate survives as `HYPOTHESIS-DEBT`, scoped to the interpretive rider and not to the lemma. What would have to be supplied: either restore "relative to $\iota_\lambda$" in B and C, or state, with an argument or a reference, that Weyl's construction yields an explicit $\iota_\lambda$ for every admissible $\lambda$ with $\lvert\lambda\rvert\le12$ by a procedure with no search.
@@ -131,11 +131,11 @@ Passage A says of it only that it "says one nonzero seed per block generates tha
 | Admissibility | stated | stated | stated | stated, plus "block label" |
 | $\lvert\lambda\rvert$ range | $\{0,2,\dots,12\}$ | same | same | same |
 | $\iota_\lambda$ | "the inclusion given by Weyl's construction" | "the inclusion" | "the inclusion" | "the inclusion of the irreducible into the tensor power" |
-| Conclusion | nonzero element of $M_\lambda$ | nonzero element of $\operatorname{Hom}_{O(n)}(V_\lambda,V^{\otimes12})$ | nonzero $O(n)$-equivariant map $V_\lambda\to V^{\otimes12}$ | nonzero element of $\operatorname{Hom}_{O(n)}(V_\lambda,V^{\otimes12})$ |
+| Conclusion | nonzero element of $M_\lambda$ | nonzero element of $\mathop{\mathrm{Hom}}_{O(n)}(V_\lambda,V^{\otimes12})$ | nonzero $O(n)$-equivariant map $V_\lambda\to V^{\otimes12}$ | nonzero element of $\mathop{\mathrm{Hom}}_{O(n)}(V_\lambda,V^{\otimes12})$ |
 | Closed-form rider | "relative to $\iota_\lambda$" | unqualified | unqualified | "removes a search" |
 | Admissibility remark | $\lvert\lambda\rvert\le n$ suffices, witnesses | holds whenever $\lvert\lambda\rvert\le n$ | same | same, with $\lambda'_1+\lambda'_2\le\lvert\lambda\rvert$ |
 
-"A nonzero element of $\operatorname{Hom}_{O(n)}$" and "a nonzero $O(n)$-equivariant map" are the same statement. C detail's one-line justification ("$\mathrm{cup}$ is $O(n)$-invariant, and a tensor product of nonzero vectors is nonzero") omits $V_\lambda\ne0$, which its final sentence supplies. The only differing qualifier with content is the rider, recorded in 5.1. The definite article in "the inclusion" is candidate 11.2, withdrawn.
+"A nonzero element of $\mathop{\mathrm{Hom}}_{O(n)}$" and "a nonzero $O(n)$-equivariant map" are the same statement. C detail's one-line justification ("$\mathrm{cup}$ is $O(n)$-invariant, and a tensor product of nonzero vectors is nonzero") omits $V_\lambda\ne0$, which its final sentence supplies. The only differing qualifier with content is the rider, recorded in 5.1. The definite article in "the inclusion" is candidate 11.2, withdrawn.
 
 ## 8. Passage D, the Lean files (brief item 10, standing item 5)
 

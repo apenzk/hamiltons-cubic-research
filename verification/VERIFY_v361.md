@@ -34,9 +34,9 @@ Cold brief ([ADJ_L115_F2.md](ADJ_L115_F2.md)), no numerical work, no scripts wri
 
 In the coordinate frame $M_{ij,ij}=\Lambda_{ij}$, and for two planes sharing one index, $M_{ij,ik}=\tfrac12\Lambda_{jk}$ (the only $\gamma$ with $c'^2_{ij,ik,\gamma}\ne0$ is $jk$). Disjoint planes give $0$. Summing the off-diagonal terms triangle by triangle, each triangle $\{i,j,k\}$ contributes $S_{ij}S_{ik}\Lambda_{jk}+S_{ij}S_{jk}\Lambda_{ik}+S_{ik}S_{jk}\Lambda_{ij}$, and $\tfrac12\sum_{j,k}\Lambda_{jk}(S^2)_{jk}$ counts each such term once (apex $i$, unordered base $\{j,k\}$, with $\Lambda$ and $S$ hollow). Hence
 
-$$q(S)=\tfrac12\sum_{i,j}\Lambda_{ij}S_{ij}^2+\tfrac12\operatorname{tr}(\Lambda S^2),\qquad b(S,T)=\tfrac12\sum_{i,j}\Lambda_{ij}S_{ij}T_{ij}+\tfrac12\operatorname{tr}(\Lambda ST)$$
+$$q(S)=\tfrac12\sum_{i,j}\Lambda_{ij}S_{ij}^2+\tfrac12\mathop{\mathrm{tr}}(\Lambda S^2),\qquad b(S,T)=\tfrac12\sum_{i,j}\Lambda_{ij}S_{ij}T_{ij}+\tfrac12\mathop{\mathrm{tr}}(\Lambda ST)$$
 
-for the associated symmetric bilinear form ($\operatorname{tr}(\Lambda ST)=\operatorname{tr}(\Lambda TS)$ by transposition). Since $q(\Lambda)=P(W)=\theta$ with $|W|=1$, and $\lambda_{\max}(M)=\sup q(S)/|D_S|^2$, the step is equivalent to
+for the associated symmetric bilinear form ($\mathop{\mathrm{tr}}(\Lambda ST)=\mathop{\mathrm{tr}}(\Lambda TS)$ by transposition). Since $q(\Lambda)=P(W)=\theta$ with $|W|=1$, and $\lambda_{\max}(M)=\sup q(S)/|D_S|^2$, the step is equivalent to
 
 $$q(S)\le\theta\,|D_S|^2\quad\text{for every hollow symmetric }S.\tag{$\ast$}$$
 
@@ -46,13 +46,13 @@ $$q(S)\le\theta\,|D_S|^2\quad\text{for every hollow symmetric }S.\tag{$\ast$}$$
 
 **Complement.** For $U_{ij}=u_i+u_j$ ($i\ne j$), $\langle D_S,D_U\rangle=\sum_{i<j}S_{ij}(u_i+u_j)=\sum_iu_i(S\mathbf 1)_i$. So $\{U\}$ is orthogonal to $\mathcal D_0=\{S\mathbf 1=0\}$. The map $u\mapsto U\mathbf 1=(n-2)u+(\textstyle\sum u)\mathbf 1$ is invertible for $n\ge3$, so $\dim\{U\}=n$ and $\mathcal D_0$ has codimension $n$. Hence $\mathcal D=\mathcal D_0\oplus\{U\}$ orthogonally. Claim 2 CONFIRMED.
 
-**Cross term.** Take $S\in\mathcal D_0$ and write $U=u\mathbf 1^T+\mathbf 1u^T-2D$ with $D=\operatorname{diag}(u)$. Using the symmetry of $\Lambda$ and $S$,
+**Cross term.** Take $S\in\mathcal D_0$ and write $U=u\mathbf 1^T+\mathbf 1u^T-2D$ with $D=\mathop{\mathrm{diag}}(u)$. Using the symmetry of $\Lambda$ and $S$,
 
 $$\tfrac12\sum_{i,j}\Lambda_{ij}S_{ij}(u_i+u_j)=\sum_iu_i\sum_j\Lambda_{ij}S_{ij}.$$
 
-For the trace term, $U\Lambda=\mathbf 1u^T\Lambda-2D\Lambda$ because $\Lambda\mathbf 1=0$, and $\operatorname{tr}(\mathbf 1u^T\Lambda S)=u^T\Lambda S\mathbf 1=0$, so
+For the trace term, $U\Lambda=\mathbf 1u^T\Lambda-2D\Lambda$ because $\Lambda\mathbf 1=0$, and $\mathop{\mathrm{tr}}(\mathbf 1u^T\Lambda S)=u^T\Lambda S\mathbf 1=0$, so
 
-$$\tfrac12\operatorname{tr}(\Lambda SU)=\tfrac12\operatorname{tr}(U\Lambda S)=-\operatorname{tr}(D\Lambda S)=-\sum_iu_i\sum_j\Lambda_{ij}S_{ji}.$$
+$$\tfrac12\mathop{\mathrm{tr}}(\Lambda SU)=\tfrac12\mathop{\mathrm{tr}}(U\Lambda S)=-\mathop{\mathrm{tr}}(D\Lambda S)=-\sum_iu_i\sum_j\Lambda_{ij}S_{ji}.$$
 
 The two cancel, so $b(S,U)=0$ and $q(S+U)=q(S)+q(U)$. This uses only $\Lambda\mathbf 1=0$ and $S\mathbf 1=0$, with no appeal to H2. Claim 5 CONFIRMED. Consequently $(\ast)$ holds iff it holds separately on $\mathcal D_0$ and on $\{U\}$.
 
@@ -61,7 +61,7 @@ The two cancel, so $b(S,U)=0$ and $q(S+U)=q(S)+q(U)$. This uses only $\Lambda\ma
 With $U$ as above and $s=\sum_iu_i$:
 
 - $\tfrac12\sum_{i,j}\Lambda_{ij}(u_i+u_j)^2=\tfrac12\sum_{i,j}\Lambda_{ij}(u_i^2+u_j^2+2u_iu_j)=u^T\Lambda u$, since $\Lambda\mathbf 1=0$ kills the square terms.
-- $\operatorname{tr}(\Lambda U^2)$: expanding $(\Lambda u\mathbf 1^T-2\Lambda D)(u\mathbf 1^T+\mathbf 1u^T-2D)$ term by term gives $0+n\,u^T\Lambda u-2u^T\Lambda u-0-2u^T\Lambda u+4\sum_i\Lambda_{ii}u_i^2=(n-4)\,u^T\Lambda u$.
+- $\mathop{\mathrm{tr}}(\Lambda U^2)$: expanding $(\Lambda u\mathbf 1^T-2\Lambda D)(u\mathbf 1^T+\mathbf 1u^T-2D)$ term by term gives $0+n\,u^T\Lambda u-2u^T\Lambda u-0-2u^T\Lambda u+4\sum_i\Lambda_{ii}u_i^2=(n-4)\,u^T\Lambda u$.
 - $|D_U|^2=\tfrac12\sum_{i\ne j}(u_i+u_j)^2=(n-2)|u|^2+s^2$.
 
 Therefore
@@ -88,17 +88,17 @@ So $q(A)\le\theta a^2+\tfrac\theta2|A'|^2\le\theta|A|^2$. On the complement, §4
 
 **The tensor.** $n=2m$ with index blocks $A,B$ of size $m$. The product curvature is $1$ on planes inside a block and $0$ on mixed planes. Removing the part $u_i+u_j$ with $u=\tfrac{m-1}{2(2m-1)}\mathbf 1$ leaves the Weyl part, proportional to $L=mE_{\rm same}-(m-1)E_{\rm mix}$, where $E_{\rm same}=G-I$, $G=\mathbf 1_A\mathbf 1_A^T+\mathbf 1_B\mathbf 1_B^T$, and $E_{\rm mix}=H=\mathbf 1\mathbf 1^T-G$. Row sums are $m(m-1)-(m-1)m=0$. The normalised Weyl part is independent of the radii, since the Weyl tensor is linear in the two sectional curvatures and vanishes for $S^m\times H^m$. Then $\sum_{i<j}L_{ij}^2=m^2(m-1)(2m-1)$, so $\Lambda=\kappa L$ with $\kappa=1/\big(m\sqrt{(m-1)(2m-1)}\big)$.
 
-**$\theta$ from $q$.** The spectrum of $L$ is $0$ on $\mathbf 1$, $2m(m-1)$ on $\mathbf 1_A-\mathbf 1_B$, and $-m$ on the $2m-2$ block-mean-zero vectors. So $\sum_{i,j}L_{ij}^3=2m^2(m-1)(2m-1)$ and $\operatorname{tr}L^3=2m^3(m-1)(2m-1)(2m-3)$, giving $q(L)=m^2(m-1)^2(2m-1)^2$ and
+**$\theta$ from $q$.** The spectrum of $L$ is $0$ on $\mathbf 1$, $2m(m-1)$ on $\mathbf 1_A-\mathbf 1_B$, and $-m$ on the $2m-2$ block-mean-zero vectors. So $\sum_{i,j}L_{ij}^3=2m^2(m-1)(2m-1)$ and $\mathop{\mathrm{tr}}L^3=2m^3(m-1)(2m-1)(2m-3)$, giving $q(L)=m^2(m-1)^2(2m-1)^2$ and
 
 $$\theta=\kappa^3q(L)=\frac{\sqrt{(m-1)(2m-1)}}{m}=\theta_0(2m),$$
 
 which matches the brief and fixes the normalisation of §0. $W$ is critical, because $Q$ is $O(n)$-equivariant and the $O(m)\times O(m)\rtimes\mathbb Z_2$-invariant symmetric operators on $\Lambda^2\mathbb R^m\oplus\Lambda^2\mathbb R^m\oplus(\mathbb R^m\otimes\mathbb R^m)$ that are Weyl form a line. The bound below does not need criticality, since $q(\Lambda)=\theta$ already exhibits $\theta$ as a Rayleigh value.
 
-**The Weyl part without L24.** Let $S=\begin{pmatrix}X&Y\\Y^T&Z\end{pmatrix}\in\mathcal D_0$, with $X,Z$ hollow symmetric. With $\theta/\kappa=(m-1)(2m-1)$, $(\ast)$ on $\mathcal D_0$ reads $F(S)\le(m-1)(2m-1)\|S\|_F^2$, where $F=\sum_{i,j}L_{ij}S_{ij}^2+\operatorname{tr}(LS^2)$.
+**The Weyl part without L24.** Let $S=\begin{pmatrix}X&Y\\Y^T&Z\end{pmatrix}\in\mathcal D_0$, with $X,Z$ hollow symmetric. With $\theta/\kappa=(m-1)(2m-1)$, $(\ast)$ on $\mathcal D_0$ reads $F(S)\le(m-1)(2m-1)\|S\|_F^2$, where $F=\sum_{i,j}L_{ij}S_{ij}^2+\mathop{\mathrm{tr}}(LS^2)$.
 
 - $\sum_{i,j}L_{ij}S_{ij}^2=m(\|X\|_F^2+\|Z\|_F^2)-2(m-1)\|Y\|_F^2$.
-- $\operatorname{tr}(\mathbf 1\mathbf 1^TS^2)=\|S\mathbf 1\|^2=0$ gives $\operatorname{tr}(HS^2)=-\operatorname{tr}(GS^2)$, hence $\operatorname{tr}(LS^2)=(2m-1)\operatorname{tr}(GS^2)-m\|S\|_F^2$.
-- $\operatorname{tr}(GS^2)=\|S\mathbf 1_A\|^2+\|S\mathbf 1_B\|^2=2\|S\mathbf 1_A\|^2=2\big(\|X\mathbf 1\|^2+\|Y^T\mathbf 1\|^2\big)$, since $S\mathbf 1_B=-S\mathbf 1_A$.
+- $\mathop{\mathrm{tr}}(\mathbf 1\mathbf 1^TS^2)=\|S\mathbf 1\|^2=0$ gives $\mathop{\mathrm{tr}}(HS^2)=-\mathop{\mathrm{tr}}(GS^2)$, hence $\mathop{\mathrm{tr}}(LS^2)=(2m-1)\mathop{\mathrm{tr}}(GS^2)-m\|S\|_F^2$.
+- $\mathop{\mathrm{tr}}(GS^2)=\|S\mathbf 1_A\|^2+\|S\mathbf 1_B\|^2=2\|S\mathbf 1_A\|^2=2\big(\|X\mathbf 1\|^2+\|Y^T\mathbf 1\|^2\big)$, since $S\mathbf 1_B=-S\mathbf 1_A$.
 
 Collecting, $F=2(2m-1)\big(\|X\mathbf 1\|^2+\|Y^T\mathbf 1\|^2-\|Y\|_F^2\big)$. The row-sum conditions $X\mathbf 1=-Y\mathbf 1$ and $Z\mathbf 1=-Y^T\mathbf 1$ let the bracket be written symmetrically, and Cauchy–Schwarz on each row ($m-1$ free entries in a hollow row, $m$ in a row of $Y$) gives
 

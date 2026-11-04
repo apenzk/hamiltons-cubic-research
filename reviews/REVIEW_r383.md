@@ -28,7 +28,7 @@ $$(No)_i+(v_i^2-u_i^2)=\theta o_i+M_{jk}o_i=To_i,$$
 
 and $v_i^2-u_i^2=(u_i+v_i)o_i$ is exactly the diagonal correction. Hence $\widetilde No=To$. **Confirmed, and it is cleaner than the record's route**: no division, no case split, and it needs only the $2(n-2)$ criticality equations in rows $j$ and $k$, hollowness, but not $M\mathbf1=0$. [r378](REVIEW_r378.md)'s $B(u-v)=0$ is the same content and is not required as an input.
 
-$\widetilde N\mathbf1=0$ also checks: $(N\mathbf1)_i=-u_i-v_i$ by the row sums and hollowness, cancelling $\operatorname{diag}(u+v)$ exactly. **Here $M\mathbf1=0$ is load-bearing.**
+$\widetilde N\mathbf1=0$ also checks: $(N\mathbf1)_i=-u_i-v_i$ by the row sums and hollowness, cancelling $\mathop{\mathrm{diag}}(u+v)$ exactly. **Here $M\mathbf1=0$ is load-bearing.**
 
 ## Step 2, $\mathbf1\perp o$
 
@@ -38,7 +38,7 @@ $\sum_{i\in I}M_{ki}=-M_{kj}-M_{kk}=-M_{jk}$ and $\sum_{i\in I}M_{ji}=-M_{jk}-M_
 
 ## Step 3, the Frobenius identity, and the eigenvalue-sum step
 
-**The identity is exact and I re-derived it rather than inheriting it.** $N$ is hollow and $\operatorname{diag}(u+v)$ is diagonal, so their supports are disjoint and $\lVert\widetilde N\rVert_F^2=\lVert N\rVert_F^2+\lVert u+v\rVert^2$. Splitting $\lVert M\rVert_F^2=2$ by index type gives $\lVert N\rVert_F^2=2-2\lVert u\rVert^2-2\lVert v\rVert^2-2M_{jk}^2$, and
+**The identity is exact and I re-derived it rather than inheriting it.** $N$ is hollow and $\mathop{\mathrm{diag}}(u+v)$ is diagonal, so their supports are disjoint and $\lVert\widetilde N\rVert_F^2=\lVert N\rVert_F^2+\lVert u+v\rVert^2$. Splitting $\lVert M\rVert_F^2=2$ by index type gives $\lVert N\rVert_F^2=2-2\lVert u\rVert^2-2\lVert v\rVert^2-2M_{jk}^2$, and
 
 $$\lVert\widetilde N\rVert_F^2=2-\lVert u\rVert^2-\lVert v\rVert^2+2\langle u,v\rangle-2M_{jk}^2=2-\lVert o\rVert^2-2M_{jk}^2 .$$
 

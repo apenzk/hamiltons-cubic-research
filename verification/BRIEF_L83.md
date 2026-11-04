@@ -4,13 +4,13 @@
 
 ## Passage A, the setting ([findings/sym3-blocks.md](../findings/sym3-blocks.md) lines 3, 7, 9 and 13)
 
-The certificate route at $n=5$ asks whether $F_5=\tfrac32\lVert W\rVert^6-9\operatorname{tr}(W^3)^2$ is a sum of squares on $\mathcal W_5$. Because $O(5)$ acts, the Gram matrix of such a certificate is block-diagonal over the isotypic components of $\mathrm{Sym}^3(\mathcal W_5)$, and this file holds that decomposition together with the objects it needs.
+The certificate route at $n=5$ asks whether $F_5=\tfrac32\lVert W\rVert^6-9\mathop{\mathrm{tr}}(W^3)^2$ is a sum of squares on $\mathcal W_5$. Because $O(5)$ acts, the Gram matrix of such a certificate is block-diagonal over the isotypic components of $\mathrm{Sym}^3(\mathcal W_5)$, and this file holds that decomposition together with the objects it needs.
 
 $\mathcal W_5$ is the $O(5)$-irreducible $[2,2]$, of dimension $35$, realised as $\Lambda^2\mathbb R^5\to\mathrm{Sym}^2(\Lambda^2)\to$ first Bianchi $\to$ Ricci-traceless. **The highest weight is $4\omega_2$ rather than $2\omega_2$**: in $B_2=\mathfrak{so}(5)$ the fundamental weight $\omega_2$ is the *spin* weight, so $[2,2]=2e_1+2e_2$ solves to $4\omega_2$. A dimension check cannot separate this from $\omega_1+2\omega_2=[2,1]$, which also has dimension $35$; the Casimir does, at $16$ against $12$.
 
 $\mathfrak{so}(5)$ acts by derivation, and the action is exact over $\mathbb Q$ in [run_n5_weyl_module.py](../scripts/runs/run_n5_weyl_module.py): the homomorphism holds on all $45$ generator pairs with residual $0$, and the Casimir is $16\cdot\mathrm{Id}$ with every off-diagonal entry exactly zero.
 
-The normalisation is $B(X,Y)=-\tfrac12\operatorname{tr}(XY)$, which is *positive* definite on the compact real form ($\operatorname{tr}(X^2)=-2$ for $X=E_{12}-E_{21}$) so $\{E_{ij}-E_{ji}\}$ is $B$-orthonormal and self-dual, each $\rho(X_a)$ is skew, and $\rho(X_a)^2$ is negative semi-definite. **The minus in $C=-\sum_a\rho(A_a)^2$ is what makes $\langle\lambda,\lambda+2\rho\rangle=+16$ come out positive.** Neighbouring conventions give $32$, $8$, $8/3$ and $4$; the $8/3$ is [Killing](conventions.md), since $B_K=(N-2)\operatorname{tr}=3\operatorname{tr}=-6B$ and the Casimir scales inversely.
+The normalisation is $B(X,Y)=-\tfrac12\mathop{\mathrm{tr}}(XY)$, which is *positive* definite on the compact real form ($\mathop{\mathrm{tr}}(X^2)=-2$ for $X=E_{12}-E_{21}$) so $\{E_{ij}-E_{ji}\}$ is $B$-orthonormal and self-dual, each $\rho(X_a)$ is skew, and $\rho(X_a)^2$ is negative semi-definite. **The minus in $C=-\sum_a\rho(A_a)^2$ is what makes $\langle\lambda,\lambda+2\rho\rangle=+16$ come out positive.** Neighbouring conventions give $32$, $8$, $8/3$ and $4$; the $8/3$ is [Killing](conventions.md), since $B_K=(N-2)\mathop{\mathrm{tr}}=3\mathop{\mathrm{tr}}=-6B$ and the Casimir scales inversely.
 
 ## Passage B, the table and its argument ([findings/sym3-blocks.md](../findings/sym3-blocks.md) lines 29-42, under the heading of Lemma L83 at line 15)
 
@@ -27,7 +27,7 @@ The table is arithmetic on the highest weights: the Weyl dimension formula for $
 
 The reconstruction closes four independent ways: $24$ blocks, $\sum m_\lambda d_\lambda=7770$ exactly, multiplicities summing to $41$, unknowns to $65$. The twelve multiplicity-$1$ dimensions sum to $4125$.
 
-**The trivial multiplicity is $1$ here and $2$ from $n\ge6$**, which is the parity-sensitive Lovelock collapse: at $n\le5$, $\langle W^\#,W\rangle=2\operatorname{tr}(W^3)$, so the cubic invariant space is one-dimensional.
+**The trivial multiplicity is $1$ here and $2$ from $n\ge6$**, which is the parity-sensitive Lovelock collapse: at $n\le5$, $\langle W^\#,W\rangle=2\mathop{\mathrm{tr}}(W^3)$, so the cubic invariant space is one-dimensional.
 
 ## Passage C, the canonical statement ([results.md](../results.md) line 284, landscape, and line 942, detail)
 

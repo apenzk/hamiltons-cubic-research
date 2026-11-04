@@ -6,7 +6,7 @@
 
 ## Phase plan
 
-0. Fix conventions against the record's anchors ($Q_{ab}$, $\operatorname{tr}W^\#=-1$, $\theta_0(6)=\sqrt{10}/3$, $\dim\mathcal W_n$).
+0. Fix conventions against the record's anchors ($Q_{ab}$, $\mathop{\mathrm{tr}}W^\#=-1$, $\theta_0(6)=\sqrt{10}/3$, $\dim\mathcal W_n$).
 1. Read L29 verbatim.
 2. Attack the hypothesis wording (the L33 multiplicity defect).
 3. Attack the constant and its normalisation ($\sqrt{3/2}$ vs $\sqrt3/2$).
@@ -30,18 +30,18 @@ All four anchors reproduce, and they pin the normalisation L29 is written in.
 | --- | --- | --- |
 | $\dim\mathcal W_n=\frac{n(n-3)(n+1)(n+2)}{12}$ | $n=4\Rightarrow 4\cdot1\cdot5\cdot6/12=10$ | holds |
 | $\theta_0(6)=\sqrt{10}/3$ | $\theta_0^2=2\cdot5\cdot4/36=10/9$ | holds |
-| $\operatorname{tr}W^\#=-1$ | with $\langle W,W^\#\rangle=\tfrac12\sum T_{\alpha\beta\gamma}\lambda_\alpha\lambda_\beta\lambda_\gamma$ and $\sum_\gamma T_{\alpha\beta\gamma}=\lVert[v_\alpha,v_\beta]\rVert^2=2-\epsilon_{\alpha\beta}$: $\operatorname{tr}W^\#=\tfrac12\sum_{\gamma\ne\delta}(2-\epsilon)\lambda_\gamma\lambda_\delta=\tfrac12\big[2((\sum\lambda)^2-\sum\lambda^2)-\sum\epsilon\lambda\lambda\big]=\tfrac12(-2-0)=-1$ | holds, and it **certifies the $\tfrac12$ in L29's expansion** |
-| bracket normalisation | $[\varphi_{ab},\varphi_{cd}]=\delta_{bc}\varphi_{ad}-\delta_{ac}\varphi_{bd}-\delta_{bd}\varphi_{ac}+\delta_{ad}\varphi_{bc}$ gives $[\varphi_{12},\varphi_{13}]=-\varphi_{23}$, norm-squared $1$ | matches the file's own "norm $1$" remark, so the file is in $\langle X,Y\rangle=\tfrac12\operatorname{tr}(X^{\mathsf T}Y)$ |
+| $\mathop{\mathrm{tr}}W^\#=-1$ | with $\langle W,W^\#\rangle=\tfrac12\sum T_{\alpha\beta\gamma}\lambda_\alpha\lambda_\beta\lambda_\gamma$ and $\sum_\gamma T_{\alpha\beta\gamma}=\lVert[v_\alpha,v_\beta]\rVert^2=2-\epsilon_{\alpha\beta}$: $\mathop{\mathrm{tr}}W^\#=\tfrac12\sum_{\gamma\ne\delta}(2-\epsilon)\lambda_\gamma\lambda_\delta=\tfrac12\big[2((\sum\lambda)^2-\sum\lambda^2)-\sum\epsilon\lambda\lambda\big]=\tfrac12(-2-0)=-1$ | holds, and it **certifies the $\tfrac12$ in L29's expansion** |
+| bracket normalisation | $[\varphi_{ab},\varphi_{cd}]=\delta_{bc}\varphi_{ad}-\delta_{ac}\varphi_{bd}-\delta_{bd}\varphi_{ac}+\delta_{ad}\varphi_{bc}$ gives $[\varphi_{12},\varphi_{13}]=-\varphi_{23}$, norm-squared $1$ | matches the file's own "norm $1$" remark, so the file is in $\langle X,Y\rangle=\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$ |
 
-The $\operatorname{tr}W^\#=-1$ derivation is the load-bearing one: it uses the file's own $\epsilon$-identity $\sum_{\alpha\ne\beta}\epsilon_{\alpha\beta}\lambda_\alpha\lambda_\beta=0$ and the pair cap, and it returns $-\lVert W\rVert^2$ only if the expansion carries $\tfrac12$ and the pair cap is $\le2$ (not $\le1$). L29's two normalisation-sensitive ingredients are therefore mutually consistent with the record.
+The $\mathop{\mathrm{tr}}W^\#=-1$ derivation is the load-bearing one: it uses the file's own $\epsilon$-identity $\sum_{\alpha\ne\beta}\epsilon_{\alpha\beta}\lambda_\alpha\lambda_\beta=0$ and the pair cap, and it returns $-\lVert W\rVert^2$ only if the expansion carries $\tfrac12$ and the pair cap is $\le2$ (not $\le1$). L29's two normalisation-sensitive ingredients are therefore mutually consistent with the record.
 
 ## Phase 1–3, the proof's algebra, re-derived line by line
 
 Every step of the canonical proof reproduces.
 
-- **$P=\operatorname{tr}W^3+\langle W,W^\#\rangle$.** With eigenvalues $(\lambda_1,-a,-b,0,\dots,0)$, $\operatorname{tr}W^3=\lambda_1^3-a^3-b^3$ exactly. Correct.
-- **$\lambda_1=a+b$.** Ricci-flatness is $\sum_\alpha\lambda_\alpha v_\alpha v_\alpha^{\mathsf T}=0$ on $\mathbb R^n$ (using $v^2=-vv^{\mathsf T}$ for skew $v$); its trace, with $\operatorname{tr}(v_\alpha v_\alpha^{\mathsf T})=2$ for each unit $v_\alpha$, gives $2\lambda_1=2a+2b$. Correct, and consistent with the weaker $\operatorname{tr}_{\Lambda^2}W=0$.
-- **Then $\operatorname{tr}W^3=(a+b)^3-a^3-b^3=3ab(a+b)=3\lambda_1ab$**, so $P\le 3\lambda_1ab+6\lambda_1ab=9ab(a+b)$, which is the file's $\theta=9qr(q+r)/\lVert W\rVert^3$.
+- **$P=\mathop{\mathrm{tr}}W^3+\langle W,W^\#\rangle$.** With eigenvalues $(\lambda_1,-a,-b,0,\dots,0)$, $\mathop{\mathrm{tr}}W^3=\lambda_1^3-a^3-b^3$ exactly. Correct.
+- **$\lambda_1=a+b$.** Ricci-flatness is $\sum_\alpha\lambda_\alpha v_\alpha v_\alpha^{\mathsf T}=0$ on $\mathbb R^n$ (using $v^2=-vv^{\mathsf T}$ for skew $v$); its trace, with $\mathop{\mathrm{tr}}(v_\alpha v_\alpha^{\mathsf T})=2$ for each unit $v_\alpha$, gives $2\lambda_1=2a+2b$. Correct, and consistent with the weaker $\mathop{\mathrm{tr}}_{\Lambda^2}W=0$.
+- **Then $\mathop{\mathrm{tr}}W^3=(a+b)^3-a^3-b^3=3ab(a+b)=3\lambda_1ab$**, so $P\le 3\lambda_1ab+6\lambda_1ab=9ab(a+b)$, which is the file's $\theta=9qr(q+r)/\lVert W\rVert^3$.
 - **The $(+--)$ count.** Six ordered triples with distinct entries $\{1,N-1,N\}$, each contributing $T_{1,N-1,N}\lambda_1ab$; times $\tfrac12$ gives $3T_{1,N-1,N}\lambda_1ab$. Correct.
 - **Unit norm.** $(a+b)^2+a^2+b^2=1\iff a^2+ab+b^2=\tfrac12$. With $b=ta$, $a=1/\sqrt{2(t^2+t+1)}$.
 - **The closed form.** $9t(1+t)a^3=\dfrac{9t(t+1)}{2^{3/2}(t^2+t+1)^{3/2}}=\dfrac{9\sqrt2\,t(t+1)}{4(t^2+t+1)^{3/2}}$, **exactly the printed $f(t)$**.
@@ -178,7 +178,7 @@ This is the same false sentence that [Lemma L33](../findings/stratum-two-negativ
 
 ## VERDICT: CONFIRMED
 
-**The statement is true and the proof is sound.** Every step reproduces from the definitions: the $\tfrac12\sum T\lambda\lambda\lambda$ expansion (certified against $\operatorname{tr}W^\#=-1$), the three structural vanishings, the $(+--)$ count of $3T_{1,N-1,N}\lambda_1ab$, $\lambda_1=a+b$ from the trace of Ricci-flatness, $f(t)=9\sqrt2\,t(t+1)/(4(t^2+t+1)^{3/2})$, its unique stationary point at $t=1$, and $f(1)=\sqrt6/2$. The constant is the un-deflated $\sqrt{3/2}=1.224745$, confirmed three independent ways. The cap is **attained**, not approached, verified both through the saturated pair cap $\lVert[\omega_1,\omega_2]\rVert^2=2$ and, separately, by checking $Q(W)=\theta W$ at $(2,-1,-1)/\sqrt6$ directly. The bound is genuinely dimension-free and survives padding.
+**The statement is true and the proof is sound.** Every step reproduces from the definitions: the $\tfrac12\sum T\lambda\lambda\lambda$ expansion (certified against $\mathop{\mathrm{tr}}W^\#=-1$), the three structural vanishings, the $(+--)$ count of $3T_{1,N-1,N}\lambda_1ab$, $\lambda_1=a+b$ from the trace of Ricci-flatness, $f(t)=9\sqrt2\,t(t+1)/(4(t^2+t+1)^{3/2})$, its unique stationary point at $t=1$, and $f(1)=\sqrt6/2$. The constant is the un-deflated $\sqrt{3/2}=1.224745$, confirmed three independent ways. The cap is **attained**, not approached, verified both through the saturated pair cap $\lVert[\omega_1,\omega_2]\rVert^2=2$ and, separately, by checking $Q(W)=\theta W$ at $(2,-1,-1)/\sqrt6$ directly. The bound is genuinely dimension-free and survives padding.
 
 **It does not carry L33's ambiguity defect**: the equality clause names a spectrum with $a=b$, so the distinct-values reading makes the statement contradict itself, and the multiplicity reading is forced wherever the statement is quoted, no travelling convention required.
 

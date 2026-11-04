@@ -25,7 +25,7 @@
 
 ## 0. Conventions, fixed once
 
-- $\mathrm{Weyl}_n\subset S^2(\Lambda^2\mathbb R^n)$ is a linear subspace, with the inner product $\langle A,B\rangle=\operatorname{tr}(AB)$ that makes $\lVert W\rVert=1$ meaningful. $Q(W)=W^2+W^\#$, $P(W)=\langle Q(W),W\rangle$, and $T$ is the polarization normalised so that $T(W,W,W)=P(W)$.
+- $\mathrm{Weyl}_n\subset S^2(\Lambda^2\mathbb R^n)$ is a linear subspace, with the inner product $\langle A,B\rangle=\mathop{\mathrm{tr}}(AB)$ that makes $\lVert W\rVert=1$ meaningful. $Q(W)=W^2+W^\#$, $P(W)=\langle Q(W),W\rangle$, and $T$ is the polarization normalised so that $T(W,W,W)=P(W)$.
 - $u=W_{\mathbb{CP}^2}$ padded into $\mathrm{Weyl}_n$, $\theta^*=\sqrt{3/2}=P(u)$, $Q(u)=\theta^*u$. $\theta_0(n)=\sqrt{2(n-1)(n-2)}/n$ and $\Theta_n$ the diagonal maximum, $=\theta_0(n)$ at even $n$ and $\sqrt{2(n-1)(n-3)/((n+1)(n-2))}$ at odd $n$, [conventions.md](../findings/conventions.md):18–19.
 - $\mathcal O=SO(n).u$, $T_u\mathcal O$ its tangent space, $F_u(h)=\tfrac12(uh+hu)+u\#h$.
 - $\varphi\in[0,\pi/2)$ throughout, so $\cos\varphi>0$, $\sin\varphi\ge0$ and $1-\sin^3\varphi>0$.
@@ -36,7 +36,7 @@
 | # | Input the written proof uses | Status |
 | --- | --- | --- |
 | H1 | $\mathrm{Weyl}_n$ finite-dimensional, so its unit sphere is compact and $\max P$ is attained | **proved here** (stated in the block) |
-| H2 | $P$ is a cubic form whose polarization $T$ is totally symmetric, and $T(u,V,V)=\langle F_uV,V\rangle$ with $F_u(h)=\tfrac12(uh+hu)+u\#h$ | **imported, source read**: Nienhaus states the symmetry of $\mathrm{tri}(R,S,T)=\operatorname{tr}((R\circ S+S\circ R+2R\#S)T)$ in the proof of Theorem 4.17, extraction L4720. In [references/](../references/). Hypotheses: none beyond $W\in S^2(\Lambda^2)$, hold at $u,V$ |
+| H2 | $P$ is a cubic form whose polarization $T$ is totally symmetric, and $T(u,V,V)=\langle F_uV,V\rangle$ with $F_u(h)=\tfrac12(uh+hu)+u\#h$ | **imported, source read**: Nienhaus states the symmetry of $\mathrm{tri}(R,S,T)=\mathop{\mathrm{tr}}((R\circ S+S\circ R+2R\#S)T)$ in the proof of Theorem 4.17, extraction L4720. In [references/](../references/). Hypotheses: none beyond $W\in S^2(\Lambda^2)$, hold at $u,V$ |
 | H3 | $P$ is $SO(n)$-invariant for the conjugation action, and the action is by isometries | **assumed, unstated in the block**; standard, and it is what licenses both the rotation to $u$ and $T_u\mathcal O\perp u$ |
 | H4 | $Q(u)=\theta^*u$ with $\theta^*=\sqrt{3/2}$, $\lVert u\rVert=1$ | **imported, source read**: Nienhaus Proposition 2.25 and Chapter 4; in [references/](../references/) |
 | H5 | The orbit $\mathcal O$ is compact, so a nearest point exists; and smooth, so $T_u\mathcal O$ exists | **used, nowhere stated**, see §3 |
@@ -59,7 +59,7 @@ $$P(W^*)=\cos^3\varphi\,P(u)+3\cos^2\varphi\sin\varphi\,T(u,u,V)+3\cos\varphi\si
 
 **The linear term vanishes.** $\nabla P(W)=3Q(W)$, because $P(W)=\langle Q(W),W\rangle$ with $Q$ the gradient direction of the same cubic; hence $T(u,u,V)=\tfrac13\langle\nabla P(u),V\rangle=\langle Q(u),V\rangle=\theta^*\langle u,V\rangle=0$ by H4 and $V\perp u$. This is exactly the block's sentence, and it is right. ✔
 
-**The quadratic term.** The $t^2$ coefficient of $P(u+tV)$ is $3T(u,V,V)$. Computing it directly: from $\operatorname{tr}((u+tV)^3)$ the $t^2$ part is $\operatorname{tr}(uVV+VuV+VVu)=3\operatorname{tr}(uV^2)=3\langle\tfrac12(uV+Vu),V\rangle$; and from $\langle W,W^\#\rangle$, whose polarization $(A,B,C)\mapsto\langle A,B\#C\rangle$ is totally symmetric, the $t^2$ part is $\langle u,V\#V\rangle+2\langle V,u\#V\rangle=3\langle u\#V,V\rangle$. Adding, $3T(u,V,V)=3\langle F_uV,V\rangle$ with $F_u(h)=\tfrac12(uh+hu)+u\#h$, the block's $F_u$, term for term. ✔ So $\alpha=\sqrt{2/3}\langle F_uV,V\rangle$ is the block's $\alpha$.
+**The quadratic term.** The $t^2$ coefficient of $P(u+tV)$ is $3T(u,V,V)$. Computing it directly: from $\mathop{\mathrm{tr}}((u+tV)^3)$ the $t^2$ part is $\mathop{\mathrm{tr}}(uVV+VuV+VVu)=3\mathop{\mathrm{tr}}(uV^2)=3\langle\tfrac12(uV+Vu),V\rangle$; and from $\langle W,W^\#\rangle$, whose polarization $(A,B,C)\mapsto\langle A,B\#C\rangle$ is totally symmetric, the $t^2$ part is $\langle u,V\#V\rangle+2\langle V,u\#V\rangle=3\langle u\#V,V\rangle$. Adding, $3T(u,V,V)=3\langle F_uV,V\rangle$ with $F_u(h)=\tfrac12(uh+hu)+u\#h$, the block's $F_u$, term for term. ✔ So $\alpha=\sqrt{2/3}\langle F_uV,V\rangle$ is the block's $\alpha$.
 
 **Consistency with the source.** Nienhaus writes the same expansion in the proof of Theorem 4.17 with $\alpha=\sqrt{2/3}\langle Q(W),W_{\mathbb{CP}^2}\rangle$ (extraction L4722). Total symmetry gives $T(u,V,V)=T(V,V,u)=\langle Q(V),u\rangle$, so the two definitions of $\alpha$ coincide. The block's expansion is Nienhaus's $f(\varphi)$ evaluated at $\varphi=d(W^*,\mathcal O)$, with $\gamma$ renamed $\gamma_V$. ✔
 

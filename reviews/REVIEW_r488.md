@@ -39,8 +39,8 @@ $$\tfrac{d^2}{dt^2}P(\gamma)\big\vert_0=D^2P_W(Y,Y)+dP_W(\ddot\gamma(0))=6\langl
 
 $L_e$ is self-adjoint iff $T(X,Y,Z)=\langle X\circ Y,Z\rangle$ is fully symmetric, and *nothing in the block says so*. It is true, term by term.
 
-- **The $W^2$ term.** Its polarisation is $\tfrac12(XY+YX)$, and $\langle\tfrac12(XY+YX),Z\rangle=\tfrac12\operatorname{tr}(XYZ+YXZ)$, which is the full $S_3$-symmetrisation of $\operatorname{tr}(XYZ)$, the trace having only the two orbits $XYZ$ and $XZY$. Symmetric. ✓
-- **The $W^{\#}$ term.** In [conventions.md](../findings/conventions.md)'s structure constants, $F(X,Y,Z)=\tfrac12c_{\alpha\gamma\delta}c_{\beta\epsilon\zeta}X_{\gamma\epsilon}Y_{\delta\zeta}Z_{\alpha\beta}$: $Z$ occupies slot 1 of both $c$'s, $X$ slot 2 of both, $Y$ slot 3 of both. Permuting the three arguments applies the **same** permutation to the slots of **both** $c$'s, and $c$ is totally antisymmetric, so the sign is $\operatorname{sgn}(\pi)^2=+1$. Fully symmetric. ✓
+- **The $W^2$ term.** Its polarisation is $\tfrac12(XY+YX)$, and $\langle\tfrac12(XY+YX),Z\rangle=\tfrac12\mathop{\mathrm{tr}}(XYZ+YXZ)$, which is the full $S_3$-symmetrisation of $\mathop{\mathrm{tr}}(XYZ)$, the trace having only the two orbits $XYZ$ and $XZY$. Symmetric. ✓
+- **The $W^{\#}$ term.** In [conventions.md](../findings/conventions.md)'s structure constants, $F(X,Y,Z)=\tfrac12c_{\alpha\gamma\delta}c_{\beta\epsilon\zeta}X_{\gamma\epsilon}Y_{\delta\zeta}Z_{\alpha\beta}$: $Z$ occupies slot 1 of both $c$'s, $X$ slot 2 of both, $Y$ slot 3 of both. Permuting the three arguments applies the **same** permutation to the slots of **both** $c$'s, and $c$ is totally antisymmetric, so the sign is $\mathop{\mathrm{sgn}}(\pi)^2=+1$. Fully symmetric. ✓
 
 Hence $L_e$ is self-adjoint and "$\lambda_{\max}$" is meaningful. **Screened**: at $n=5,6$ on random Weyl tensors the three pairings of $T(X,Y,Z)$ agree to $4\times10^{-15}$ against values of order $10$.
 

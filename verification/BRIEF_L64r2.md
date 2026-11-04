@@ -23,7 +23,7 @@ The same holds with $SO$ in place of $O$, because $B_{n_0}$ contains the reflect
 - **No finite $k_B(d)$ is on file for any $d\ge1$.** Post F32 records that Theorem 2.11's kernel and sums clauses do not apply to $\{\mathcal W_n\}$.
 - **Below the range, uniqueness fails.** $\mathcal W_3=0$, so at $n_0=3$ and $d=2$ both $0$ and $\lvert W\rvert^2$ extend $F=0$.
 
-**The lemma transfers an element and its invariance, and it carries a sign only on the padded copy.** The same mechanism on the module $\{\mathrm{Sym}^2S^n\}$ of quadratic forms on symmetric matrices, presented in degree $4$ by Levin–Chandrasekaran's Example 2.12 and Theorem 2.11, takes $F(X)=\operatorname{tr}X^2-\tfrac14(\operatorname{tr}X)^2=\operatorname{tr}\big((X-\tfrac14\operatorname{tr}X\,I_4)^2\big)\ge0$ on $S^4$ to $G(X)=\operatorname{tr}X^2-\tfrac14(\operatorname{tr}X)^2$ on $S^5$, where $G(I_5)=5-\tfrac{25}4=-\tfrac54$. **Carrying a nonnegativity certificate from $n_0$ to $n$ needs an argument of its own, and none is on file.** Post F31, above, is the instance at the balanced sphere product.
+**The lemma transfers an element and its invariance, and it carries a sign only on the padded copy.** The same mechanism on the module $\{\mathrm{Sym}^2S^n\}$ of quadratic forms on symmetric matrices, presented in degree $4$ by Levin–Chandrasekaran's Example 2.12 and Theorem 2.11, takes $F(X)=\mathop{\mathrm{tr}}X^2-\tfrac14(\mathop{\mathrm{tr}}X)^2=\mathop{\mathrm{tr}}\big((X-\tfrac14\mathop{\mathrm{tr}}X\,I_4)^2\big)\ge0$ on $S^4$ to $G(X)=\mathop{\mathrm{tr}}X^2-\tfrac14(\mathop{\mathrm{tr}}X)^2$ on $S^5$, where $G(I_5)=5-\tfrac{25}4=-\tfrac54$. **Carrying a nonnegativity certificate from $n_0$ to $n$ needs an argument of its own, and none is on file.** Post F31, above, is the instance at the balanced sphere product.
 
 ## Passage B, the canonical statement ([results.md](../results.md) line 227, landscape, and lines 794 and 796, detail)
 
@@ -292,7 +292,7 @@ end HamiltonsCubic.Transfer
 6. **$k_B(d)\ge g(d)\ge4d$.** Whether $T$ is in $\mathcal W_4$ as specified, whether "the product of $d$ copies of $T$ on disjoint blocks" is an element of the module and has the stated component, whether signed permutations and padding preserve the support argument, and whether generation degree is what that argument bounds.
 7. **"No finite $k_B(d)$ is on file for any $d\ge1$"** and what Passage C gives for it.
 8. **The $n_0=3$ edge.** Whether it lies below $k_B(2)$, and whether $0$ and $\lvert W\rvert^2$ are two extensions of the kind part 2 counts.
-9. **The $\{\mathrm{Sym}^2S^n\}$ exhibit.** Whether that module is presented in degree $4$ by Example 2.12 and Theorem 2.11 as printed, the identity $F(X)=\operatorname{tr}\big((X-\tfrac14\operatorname{tr}X\,I_4)^2\big)$, the value $G(I_5)$, and what the paragraph concludes from it.
+9. **The $\{\mathrm{Sym}^2S^n\}$ exhibit.** Whether that module is presented in degree $4$ by Example 2.12 and Theorem 2.11 as printed, the identity $F(X)=\mathop{\mathrm{tr}}\big((X-\tfrac14\mathop{\mathrm{tr}}X\,I_4)^2\big)$, the value $G(I_5)$, and what the paragraph concludes from it.
 10. **Passages B and C against Passage A**: the range of $n$ and $n_0$, the hypotheses of each part, the $SO$ clause, and every qualifier that differs.
 11. **Passage E against Passage A**: what each declaration states, and what of the lemma is and is not typed.
 12. **The boundary**: $n=n_0$, $d=1$, $n_0\le3$, and a padded $W$ with $\ker W\ne0$.

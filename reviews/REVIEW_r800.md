@@ -8,10 +8,10 @@
 |---|---|---|
 | 1 | Step 1, Ricci-flatness is $\lambda_1\omega_1\omega_1^{\mathsf T}+\lambda_2\Pi_2+\lambda_3\Pi_3=0$ in the record's own pairing | **CORRECT, EXACTLY**, the $\tfrac12$ cancels and the equation is homogeneous in the $\lambda_i$ regardless |
 | 2 | Step 2, the sign hypothesis makes both sides positive semidefinite | **CORRECT**, and **the hypothesis is a THEOREM, not an assumption**, it follows from $\sum\lambda_i=0$ by the block's own rank count, and from [L180](../findings/diagonal-half.md#lemma-l180-ricci-flatness-is-a-signed-psd-identity-and-it-names-the-support)(3) directly |
-| 3 | Step 3, non-decomposable gives $\operatorname{rank}\omega_1\ge4$, and $\dim(P_2+P_3)\le4$ | **CORRECT**, both; the upper bound holds whether or not the planes meet |
-| 4 | Step 4, $\operatorname{range}(A+B)=\operatorname{range}A+\operatorname{range}B$ for PSD $A,B$ | **CORRECT**, and provable in one line from $\ker(A+B)=\ker A\cap\ker B$ |
-| 5 | Step 5, $V=\operatorname{supp}\omega_1+P_2+P_3$, of dimension four | **CORRECT**, and it is [L179](../findings/diagonal-half.md#lemma-l179-the-support-of-a-low-rank-weyl-tensor-and-the-first-bianchi-identity-read-on-the-spectrum)(a)'s definition of $V$ |
-| 6 | Claim B's rank count, $\operatorname{rank}(aA+bB)\ge\max(\operatorname{rank}A,\operatorname{rank}B)$ for PSD $A,B$, $a,b>0$ | **CORRECT**, and positivity of BOTH weights is load-bearing |
+| 3 | Step 3, non-decomposable gives $\mathop{\mathrm{rank}}\omega_1\ge4$, and $\dim(P_2+P_3)\le4$ | **CORRECT**, both; the upper bound holds whether or not the planes meet |
+| 4 | Step 4, $\mathop{\mathrm{range}}(A+B)=\mathop{\mathrm{range}}A+\mathop{\mathrm{range}}B$ for PSD $A,B$ | **CORRECT**, and provable in one line from $\ker(A+B)=\ker A\cap\ker B$ |
+| 5 | Step 5, $V=\mathop{\mathrm{supp}}\omega_1+P_2+P_3$, of dimension four | **CORRECT**, and it is [L179](../findings/diagonal-half.md#lemma-l179-the-support-of-a-low-rank-weyl-tensor-and-the-first-bianchi-identity-read-on-the-spectrum)(a)'s definition of $V$ |
+| 6 | Claim B's rank count, $\mathop{\mathrm{rank}}(aA+bB)\ge\max(\mathop{\mathrm{rank}}A,\mathop{\mathrm{rank}}B)$ for PSD $A,B$, $a,b>0$ | **CORRECT**, and positivity of BOTH weights is load-bearing |
 | 7 | **Vacuity, Claim A (as literally stated (Ricci only)** | **NON-VACUOUS**), a closed-form witness is exhibited in section 6 |
 | 8 | **Vacuity, Claim A, in the Weyl category, which is where [I38](../plan.md) lives** | **EMPTY, AND EMPTIED BY ONE LINE OF FIRST BIANCHI**, the whole branch carries no Weyl tensor |
 | 9 | "THIS BRANCH IS NOT OPEN (IT LANDS INSIDE L178'S HYPOTHESIS" | **MISLEADING**), nothing lands anywhere, there being no rank-three Weyl tensor at this branch |
@@ -36,7 +36,7 @@ Taken from [L180](../findings/diagonal-half.md#lemma-l180-ricci-flatness-is-a-si
 
 **Exact, and the factor cancels rather than surviving.** With the operator convention $(W\eta)_{ab}=\tfrac12\sum_{cd}W_{abcd}\eta_{cd}$ and the spectral form $W\eta=\sum_i\lambda_i\langle\omega_i,\eta\rangle\,\omega_i$ read in the same $\tfrac12$-pairing, the tensor is $W_{abcd}=\sum_i\lambda_i(\omega_i)_{ab}(\omega_i)_{cd}$ with coefficient one, and [L180](../findings/diagonal-half.md#lemma-l180-ricci-flatness-is-a-signed-psd-identity-and-it-names-the-support)(1)'s contraction $\sum_bW_{abcb}=\big(\sum_i\lambda_i\omega_i\omega_i^{\mathsf T}\big)_{ac}$ follows.
 
-**And no convention can break the step**, because the equation is homogeneous: a pairing without the $\tfrac12$ scales every term by the same constant, and $\sum_i\lambda_iA_i=0$ is unchanged. What the convention does fix is $\operatorname{tr}A_i=2$, used nowhere in L186.
+**And no convention can break the step**, because the equation is homogeneous: a pairing without the $\tfrac12$ scales every term by the same constant, and $\sum_i\lambda_iA_i=0$ is unchanged. What the convention does fix is $\mathop{\mathrm{tr}}A_i=2$, used nowhere in L186.
 
 **$\omega\omega^{\mathsf T}=\Pi$ for a unit decomposable $\omega$, verified rather than imported.** For $\omega=u\wedge v$ with $u\perp v$ unit, the matrix is $uv^{\mathsf T}-vu^{\mathsf T}$, and $\omega^2=-uu^{\mathsf T}-vv^{\mathsf T}=-\Pi$, so $\omega\omega^{\mathsf T}=\Pi$; the norm is $\lVert\omega\rVert^2=\tfrac12\cdot2=1$, so "unit" and "$\Pi$" are the same normalisation. **Step 1 is correct as written.**
 
@@ -44,10 +44,10 @@ Taken from [L180](../findings/diagonal-half.md#lemma-l180-ricci-flatness-is-a-si
 
 ## 2. Step 2, the sign hypothesis is a theorem, and the block already owns the proof
 
-**Ricci-flatness gives $\sum_i\lambda_i=0$ for free** ([L180](../findings/diagonal-half.md#lemma-l180-ricci-flatness-is-a-signed-psd-identity-and-it-names-the-support)(2), the trace of (1); $\operatorname{tr}A_i=2$). With every $\lambda_i\ne0$ the signs are mixed, so exactly one weight is alone in its sign. Three patterns, and two of them die:
+**Ricci-flatness gives $\sum_i\lambda_i=0$ for free** ([L180](../findings/diagonal-half.md#lemma-l180-ricci-flatness-is-a-signed-psd-identity-and-it-names-the-support)(2), the trace of (1); $\mathop{\mathrm{tr}}A_i=2$). With every $\lambda_i\ne0$ the signs are mixed, so exactly one weight is alone in its sign. Three patterns, and two of them die:
 
 - **$\lambda_1$ alone**, L186's hypothesis, since then $\lambda_2,\lambda_3$ share the opposite sign.
-- **$\lambda_2$ alone.** Ricci-flatness becomes $\lvert\lambda_1\rvert A_1+\lvert\lambda_3\rvert\Pi_3=\lvert\lambda_2\rvert\Pi_2$. The left side is a positive combination of PSD matrices, so its rank is at least $\operatorname{rank}A_1=\operatorname{rank}\omega_1\ge4$; the right has rank $2$. **Impossible.**
+- **$\lambda_2$ alone.** Ricci-flatness becomes $\lvert\lambda_1\rvert A_1+\lvert\lambda_3\rvert\Pi_3=\lvert\lambda_2\rvert\Pi_2$. The left side is a positive combination of PSD matrices, so its rank is at least $\mathop{\mathrm{rank}}A_1=\mathop{\mathrm{rank}}\omega_1\ge4$; the right has rank $2$. **Impossible.**
 - **$\lambda_3$ alone.** Identical, with the indices swapped.
 
 **So the hypothesis "the two decomposable weights share a sign opposite to the third" is FORCED**, by exactly the rank count the block runs two paragraphs later for the two-non-decomposable case. It is one sentence and it is not written.
@@ -60,23 +60,23 @@ Taken from [L180](../findings/diagonal-half.md#lemma-l180-ricci-flatness-is-a-si
 
 ## 3. Steps 3 and 4, the two rank facts and the range identity
 
-**Non-decomposable gives rank at least four, exactly.** A real skew matrix has a normal form $\omega=\sum_{j=1}^kc_j\,f_{2j-1}\wedge f_{2j}$ with all $c_j\ne0$ and rank $2k$, and $\omega\wedge\omega=2\sum_{j<l}c_jc_l\,f_{2j-1}\wedge f_{2j}\wedge f_{2l-1}\wedge f_{2l}$, whose terms are independent in $\Lambda^4$. **So $\omega\wedge\omega=0$ iff $k\le1$ iff $\omega$ is decomposable**, and non-decomposable is $\operatorname{rank}\ge4$. Correct.
+**Non-decomposable gives rank at least four, exactly.** A real skew matrix has a normal form $\omega=\sum_{j=1}^kc_j\,f_{2j-1}\wedge f_{2j}$ with all $c_j\ne0$ and rank $2k$, and $\omega\wedge\omega=2\sum_{j<l}c_jc_l\,f_{2j-1}\wedge f_{2j}\wedge f_{2l-1}\wedge f_{2l}$, whose terms are independent in $\Lambda^4$. **So $\omega\wedge\omega=0$ iff $k\le1$ iff $\omega$ is decomposable**, and non-decomposable is $\mathop{\mathrm{rank}}\ge4$. Correct.
 
 **$\dim(P_2+P_3)\le4$ holds whether or not the planes meet**: $\dim(P_2+P_3)=4-\dim(P_2\cap P_3)$. The bound is unconditional and the equality case is exactly $P_2\cap P_3=0$, which is what the proof extracts. Correct.
 
 **The rank of the right side IS $\dim(P_2+P_3)$**, not merely bounded by it: $\lvert\lambda_2\rvert\Pi_2+\lvert\lambda_3\rvert\Pi_3$ is PSD, and $x$ is in its kernel iff $x^{\mathsf T}(\cdot)x=0$ iff $\Pi_2x=\Pi_3x=0$ iff $x\perp P_2+P_3$. So the two ends meet at four and the intersection is trivial.
 
-**The range identity is one line.** For PSD $A,B$: $x^{\mathsf T}(A+B)x=0$ forces $x^{\mathsf T}Ax=x^{\mathsf T}Bx=0$, hence $Ax=Bx=0$, so $\ker(A+B)=\ker A\cap\ker B$; taking orthogonal complements of these symmetric matrices' kernels gives $\operatorname{range}(A+B)=\operatorname{range}A+\operatorname{range}B$. **The record sources this to [Fillmore–Williams](../references/fillmore-williams-1971-operator-ranges/) at [L180](../findings/diagonal-half.md#lemma-l180-ricci-flatness-is-a-signed-psd-identity-and-it-names-the-support)(3), which is more than the finite-dimensional case needs.** Correct either way.
+**The range identity is one line.** For PSD $A,B$: $x^{\mathsf T}(A+B)x=0$ forces $x^{\mathsf T}Ax=x^{\mathsf T}Bx=0$, hence $Ax=Bx=0$, so $\ker(A+B)=\ker A\cap\ker B$; taking orthogonal complements of these symmetric matrices' kernels gives $\mathop{\mathrm{range}}(A+B)=\mathop{\mathrm{range}}A+\mathop{\mathrm{range}}B$. **The record sources this to [Fillmore–Williams](../references/fillmore-williams-1971-operator-ranges/) at [L180](../findings/diagonal-half.md#lemma-l180-ricci-flatness-is-a-signed-psd-identity-and-it-names-the-support)(3), which is more than the finite-dimensional case needs.** Correct either way.
 
 ## 4. Step 5, $V$, and whether the record defines it that way
 
-**It does.** [L179](../findings/diagonal-half.md#lemma-l179-the-support-of-a-low-rank-weyl-tensor-and-the-first-bianchi-identity-read-on-the-spectrum)(a) defines $V$ as the span of the supports of the eigenforms with $\lambda_\alpha\ne0$, so $V=\operatorname{supp}\omega_1+P_2+P_3$ is the definition and not a step. With $\operatorname{supp}\omega_1=P_2+P_3$ from step 4 and $P_2\cap P_3=0$, $V=P_2+P_3$ has dimension four. **Correct, and the conclusion is an equality rather than a bound.**
+**It does.** [L179](../findings/diagonal-half.md#lemma-l179-the-support-of-a-low-rank-weyl-tensor-and-the-first-bianchi-identity-read-on-the-spectrum)(a) defines $V$ as the span of the supports of the eigenforms with $\lambda_\alpha\ne0$, so $V=\mathop{\mathrm{supp}}\omega_1+P_2+P_3$ is the definition and not a step. With $\mathop{\mathrm{supp}}\omega_1=P_2+P_3$ from step 4 and $P_2\cap P_3=0$, $V=P_2+P_3$ has dimension four. **Correct, and the conclusion is an equality rather than a bound.**
 
 *One thing worth naming:* $V$ is basis-dependent inside a degenerate eigenspace unless one checks it is not, which [L180](../findings/diagonal-half.md#lemma-l180-ricci-flatness-is-a-signed-psd-identity-and-it-names-the-support)'s closing paragraph names as a step it owes. L186 inherits that debt and does not add to it, here the conclusion $V=P_2+P_3$ is forced for every admissible choice, since $P_2+P_3$ is the range of a matrix fixed by $W$ alone.
 
 ## 5. Claim B, the rank count, and what it is really an instance of
 
-**The inequality is true and positivity is load-bearing.** For PSD $A,B$ and $a,b>0$, $\ker(aA+bB)=\ker A\cap\ker B\subseteq\ker A$, so $\operatorname{rank}(aA+bB)\ge\operatorname{rank}A$, and symmetrically for $B$. **Where it fails is with a negative weight**: $A+(-1)A=0$ has rank $0$ against $A$'s. The sign split supplies exactly the positivity the step needs, so Claim B's use is legitimate.
+**The inequality is true and positivity is load-bearing.** For PSD $A,B$ and $a,b>0$, $\ker(aA+bB)=\ker A\cap\ker B\subseteq\ker A$, so $\mathop{\mathrm{rank}}(aA+bB)\ge\mathop{\mathrm{rank}}A$, and symmetrically for $B$. **Where it fails is with a negative weight**: $A+(-1)A=0$ has rank $0$ against $A$'s. The sign split supplies exactly the positivity the step needs, so Claim B's use is legitimate.
 
 **Applied: $\lvert\lambda_1\rvert\omega_1\omega_1^{\mathsf T}+\lvert\lambda_2\rvert\omega_2\omega_2^{\mathsf T}=\lvert\lambda_3\rvert\Pi_3$ has rank $\ge4$ on the left and exactly $2$ on the right.** Contradiction, so the two non-decomposable weights carry opposite signs. **CONFIRMED.**
 
@@ -94,7 +94,7 @@ $$\omega_1=\tfrac1{\sqrt2}\,(e_{13}-e_{24}),\qquad \omega_2=e_{12},\qquad \omega
 - **Exactly one non-decomposable.** $\omega_1\wedge\omega_1=-e_{13}\wedge e_{24}=e_{1234}\ne0$; $\omega_2,\omega_3$ are basis decomposables.
 - **The sign split holds**, $\lambda_1>0>\lambda_2,\lambda_3$, and $\sum\lambda_i=0$.
 - **Ricci-flat.** $\omega_1$ is $\tfrac1{\sqrt2}$ times a complex structure ($(e_{13}-e_{24})^2=-I_4$) so $A_1=\tfrac12I_4$ and $2\cdot\tfrac12I_4-\Pi_{\langle e_1,e_2\rangle}-\Pi_{\langle e_3,e_4\rangle}=I_4-I_4=0$.
-- **$\dim V=4$**, as the lemma concludes: $\operatorname{supp}\omega_1=\mathbb R^4$.
+- **$\dim V=4$**, as the lemma concludes: $\mathop{\mathrm{supp}}\omega_1=\mathbb R^4$.
 
 **So Claim A is not vacuous in the category it names, and the witness attains its conclusion rather than contradicting it.**
 
@@ -144,9 +144,9 @@ Line 55 is `psd_form_of_ricci`'s sign hypothesis. **This is the toolchain agreei
 
 ## 10. The falsifiers, and what was done to look for them
 
-**Claim A.** The falsifying object is a Ricci-flat orthonormal triple with every $\lambda_i\ne0$, exactly one $\omega_i$ non-decomposable, the stated sign split, and $\dim V\ne4$. **Three routes to one were tried and all close by hand.** Making $\operatorname{supp}\omega_1$ six-dimensional fails because the PSD identity puts that support at $P_2+P_3$, of dimension at most four. Making $\dim V<4$ needs $P_2\cap P_3\ne0$, which puts the common rank below four and makes $\omega_1$ decomposable. Escaping through the normalisation (a unit decomposable whose square is not a projection), fails at the computation in section 1. **No falsifier, and no search was run.**
+**Claim A.** The falsifying object is a Ricci-flat orthonormal triple with every $\lambda_i\ne0$, exactly one $\omega_i$ non-decomposable, the stated sign split, and $\dim V\ne4$. **Three routes to one were tried and all close by hand.** Making $\mathop{\mathrm{supp}}\omega_1$ six-dimensional fails because the PSD identity puts that support at $P_2+P_3$, of dimension at most four. Making $\dim V<4$ needs $P_2\cap P_3\ne0$, which puts the common rank below four and makes $\omega_1$ decomposable. Escaping through the normalisation (a unit decomposable whose square is not a projection), fails at the computation in section 1. **No falsifier, and no search was run.**
 
-**Claim B.** The falsifying object is a Ricci-flat orthonormal triple with $\omega_1,\omega_2$ non-decomposable carrying same-signed weights and $\omega_3$ decomposable. **Any such would need $\operatorname{rank}(\lvert\lambda_1\rvert A_1+\lvert\lambda_2\rvert A_2)=2$ while $\ker$ of that sum is contained in $\ker A_1$**, forcing rank at least four. The only way out is a negative coefficient, which $\sum\lambda_i=0$ with $\lambda_3$ alone in its sign forbids. **No falsifier.**
+**Claim B.** The falsifying object is a Ricci-flat orthonormal triple with $\omega_1,\omega_2$ non-decomposable carrying same-signed weights and $\omega_3$ decomposable. **Any such would need $\mathop{\mathrm{rank}}(\lvert\lambda_1\rvert A_1+\lvert\lambda_2\rvert A_2)=2$ while $\ker$ of that sum is contained in $\ker A_1$**, forcing rank at least four. The only way out is a negative coefficient, which $\sum\lambda_i=0$ with $\lambda_3$ alone in its sign forbids. **No falsifier.**
 
 **What I looked for instead, and found.** A witness for Claim A's literal statement, exhibited in closed form in section 6a; and the one-line Bianchi argument of section 6b, which empties the branch in the category [I38](../plan.md) works in. **Both were derived by hand; the only machine time spent was the Lean screen.**
 

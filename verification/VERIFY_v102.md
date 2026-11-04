@@ -44,8 +44,8 @@ Quoted from [conventions.md](../findings/conventions.md), never restated from me
 
 Two consequences I use throughout, and state once so no later line restates them:
 
-- **(N1)** Writing $\lvert S\rvert^2:=\sum_{i<j}s_{ij}^2$, the working locus $\operatorname{tr}S^2=2$ is exactly $\lvert S\rvert=1$, and it is exactly $\lVert W\rVert=1$.
-- **(N2)** $\langle Q(S),S\rangle_{\Lambda^2}=\tfrac12\langle S^{\circ2}+S^2,S\rangle_{F}=\tfrac12\lambda\operatorname{tr}S^2=\lambda$ at $\operatorname{tr}S^2=2$, the diagonal term $D$ dropping out against hollow $S$. **So $\lambda=\theta$**, and a bound on $\lambda$ *is* a bound on $\langle Q(W),W\rangle$ at $\lVert W\rVert=1$. This identification is nowhere in the L57 block; it is on file at [diagonal-half.md](../findings/diagonal-half.md):71 ("Contracting against $M$ recovers $2\theta=\langle M^{\circ2}+M^2,M\rangle$") and :247 ("$\lambda=\theta$ is derived rather than assumed").
+- **(N1)** Writing $\lvert S\rvert^2:=\sum_{i<j}s_{ij}^2$, the working locus $\mathop{\mathrm{tr}}S^2=2$ is exactly $\lvert S\rvert=1$, and it is exactly $\lVert W\rVert=1$.
+- **(N2)** $\langle Q(S),S\rangle_{\Lambda^2}=\tfrac12\langle S^{\circ2}+S^2,S\rangle_{F}=\tfrac12\lambda\mathop{\mathrm{tr}}S^2=\lambda$ at $\mathop{\mathrm{tr}}S^2=2$, the diagonal term $D$ dropping out against hollow $S$. **So $\lambda=\theta$**, and a bound on $\lambda$ *is* a bound on $\langle Q(W),W\rangle$ at $\lVert W\rVert=1$. This identification is nowhere in the L57 block; it is on file at [diagonal-half.md](../findings/diagonal-half.md):71 ("Contracting against $M$ recovers $2\theta=\langle M^{\circ2}+M^2,M\rangle$") and :247 ("$\lambda=\theta$ is derived rather than assumed").
 
 ## 1. The hypothesis inventory
 
@@ -55,9 +55,9 @@ Two consequences I use throughout, and state once so no later line restates them
 | --- | --- | --- | --- |
 | H1 | $n\ge4$ | Step 3 only, and there essentially: the circle-replacement needs one coordinate left untouched after three are moved | **stated, used, sharp**, at $n=3$ Lemma A makes $\sum v^4$ constant on the whole constraint set and uniqueness fails |
 | H2 | $W$ coordinate-diagonal in some orthonormal frame, i.e. $S\in\mathcal D_n$ | everywhere | **stated, used** |
-| H3 | $\operatorname{tr}S^2=2$ | Step 2's Cauchy–Schwarz only | **stated, used**, and discharged for the general statement by homogeneity |
+| H3 | $\mathop{\mathrm{tr}}S^2=2$ | Step 2's Cauchy–Schwarz only | **stated, used**, and discharged for the general statement by homogeneity |
 | H4 | $S$ critical: $S^{\circ2}+S^2=\lambda S+D$ | Step 1 only | **stated, used**, and supplied for a general $W$ by the bridge (§6) |
-| H5 | $S\ne0$, hence $\mu>0$ | the division by $\mu$ that turns $\lambda\mu\le\frac{n-1}n\mu^2$ into $\lambda\le\frac{n-1}n\mu$ | **UNSTATED, used**, true on the locus $\operatorname{tr}S^2=2$, since $\operatorname{tr}S=0$ and $S\ne0$ force a strictly positive eigenvalue |
+| H5 | $S\ne0$, hence $\mu>0$ | the division by $\mu$ that turns $\lambda\mu\le\frac{n-1}n\mu^2$ into $\lambda\le\frac{n-1}n\mu$ | **UNSTATED, used**, true on the locus $\mathop{\mathrm{tr}}S^2=2$, since $\mathop{\mathrm{tr}}S=0$ and $S\ne0$ force a strictly positive eigenvalue |
 | H6 | $v\perp\mathbf1$, i.e. $\sum v_i=0$ | the two contractions in Step 1, all of Step 2, all of Step 3 | **asserted rather than derived**, it follows from H5: $S\mathbf1=0$ makes $\mathbf1$ a $0$-eigenvector, and $\mu>0$ makes $v$ orthogonal to it |
 | H7 | $\lvert S\rvert_{\text{unordered}}=1$ | Step 2's $\mu=2\langle S,Z\rangle\le2\lvert S\rvert\lvert Z\rvert$ | **UNSTATED at the step**, it is H3 restated, and the block states H3 two paragraphs earlier. This is the correction in claim 3's verdict |
 | H8 | the Lagrange constraint qualification at every point of $\{\sum v=0,\sum v^2=1\}$ | Step 3 | **UNSTATED, used, and true**: the constraint gradients are $\mathbf1$ and $2v$, dependent only if $v\parallel\mathbf1$, which with $\sum v=0$ forces $v=0$ |
@@ -66,8 +66,8 @@ Two consequences I use throughout, and state once so no later line restates them
 
 | imported result | its own hypotheses | met? |
 | --- | --- | --- |
-| The criticality equation $M^{\circ2}+M^2=\theta M+\operatorname{diag}(s)$, [diagonal-half.md](../findings/diagonal-half.md):69–78 | $M$ hollow symmetric, $M\mathbf1=0$, $M$ critical for $P$ restricted to the locus, and $2n-2\ne0$ | **yes**, I re-derived it in §6.2 |
-| $Q$ preserves Ricci-flatness, [Böhm–Wilking](../references/boehm-wilking-2008-space-forms/notes.md) via [conventions.md](../findings/conventions.md)'s $\Phi$(ii) | $\operatorname{Ric}(W)=0$ | **yes**, and on this locus it needs no import: $\sum_{j\ne i}(S^{\circ2}+S^2)_{ij}=r_i-r_i=0$ |
+| The criticality equation $M^{\circ2}+M^2=\theta M+\mathop{\mathrm{diag}}(s)$, [diagonal-half.md](../findings/diagonal-half.md):69–78 | $M$ hollow symmetric, $M\mathbf1=0$, $M$ critical for $P$ restricted to the locus, and $2n-2\ne0$ | **yes**, I re-derived it in §6.2 |
+| $Q$ preserves Ricci-flatness, [Böhm–Wilking](../references/boehm-wilking-2008-space-forms/notes.md) via [conventions.md](../findings/conventions.md)'s $\Phi$(ii) | $\mathop{\mathrm{Ric}}(W)=0$ | **yes**, and on this locus it needs no import: $\sum_{j\ne i}(S^{\circ2}+S^2)_{ij}=r_i-r_i=0$ |
 | First Bianchi automatic on the coordinate-diagonal locus | none | **yes**, four distinct indices make every term of $R_{abcd}+R_{acdb}+R_{adbc}$ vanish, three distinct indices force a repeated pair the distinctness forbids |
 | Newton's identities (Lemma A) | $t_1+t_2+t_3=0$ | **yes** |
 | Compactness of the unit sphere of $\mathcal D_n$ | $\dim\mathcal D_n<\infty$ | **yes** |
@@ -83,7 +83,7 @@ The written proof uses H1–H8 and the six imports above. **It uses none of the 
 
 ### 2.1 The derivation, in full
 
-Pair $S^{\circ2}+S^2=\lambda S+D$ with $v\otimes v$, where $Sv=\mu v$ and $\lvert v\rvert=1$. The diagonal correction is forced: $S^{\circ2}$ is hollow and $(S^2)_{ii}=\sum_js_{ij}^2=:r_i$, so matching diagonals gives $D=\operatorname{diag}(r_1,\dots,r_n)$. Hence
+Pair $S^{\circ2}+S^2=\lambda S+D$ with $v\otimes v$, where $Sv=\mu v$ and $\lvert v\rvert=1$. The diagonal correction is forced: $S^{\circ2}$ is hollow and $(S^2)_{ii}=\sum_js_{ij}^2=:r_i$, so matching diagonals gives $D=\mathop{\mathrm{diag}}(r_1,\dots,r_n)$. Hence
 
 $$v^{\mathsf T}S^{\circ2}v+\mu^2=\lambda\mu+\sum_ir_iv_i^2 .$$
 
@@ -153,7 +153,7 @@ $\mu=v^{\mathsf T}Sv=\sum_{i,j}s_{ij}v_iv_j=\langle S,v\otimes v\rangle_F$. Sinc
 
 $$\mu=2\langle S,Z\rangle\le2\lvert S\rvert\,\lvert Z\rvert=2\lvert Z\rvert$$
 
-**uses $\lvert S\rvert_{\text{unordered}}=1$, i.e. $\operatorname{tr}S^2=2$, hypothesis H7, which the step does not state.** That is the whole of the "hypotheses corrected" in claim 3's verdict, and it is the normalisation trap arriving at the one step that feels it (§9).
+**uses $\lvert S\rvert_{\text{unordered}}=1$, i.e. $\mathop{\mathrm{tr}}S^2=2$, hypothesis H7, which the step does not state.** That is the whole of the "hypotheses corrected" in claim 3's verdict, and it is the normalisation trap arriving at the one step that feels it (§9).
 
 ### 3.4 The norm formula, derived in full
 
@@ -242,7 +242,7 @@ Checked line by line:
 1. $\mathcal D_n$ is a linear subspace, symmetry, hollowness and $S\mathbf1=0$ are all linear. ✓
 2. $P$ is continuous and homogeneous of degree $3$; the unit sphere of a finite-dimensional subspace is compact; the maximum is attained. ✓
 3. A maximiser satisfies the constrained Euler–Lagrange equation $P_{\mathcal D_n}Q(S_*)=\lambda S_*$. ✓
-4. **$P_{\mathcal D_n}(S^{\circ2}+S^2)=S^{\circ2}+S^2-D$ with $D=\operatorname{diag}(r)$.** This needs both halves: the result is hollow (diagonal of $S^{\circ2}+S^2$ is $0+r_i$, cancelled by $D$) *and* has zero row sums ($\sum_{j}(S^{\circ2})_{ij}=r_i$, $\sum_j(S^2)_{ij}=(S^2\mathbf1)_i=0$, and subtracting $D_{ii}=r_i$ leaves $r_i+0-r_i=0$). And the discarded part is diagonal, hence orthogonal to hollow $\mathcal D_n$, so subtracting it *is* the orthogonal projection. ✓ **So restricted criticality is exactly $S^{\circ2}+S^2=\lambda S+D$, which is what step 1 consumes.**
+4. **$P_{\mathcal D_n}(S^{\circ2}+S^2)=S^{\circ2}+S^2-D$ with $D=\mathop{\mathrm{diag}}(r)$.** This needs both halves: the result is hollow (diagonal of $S^{\circ2}+S^2$ is $0+r_i$, cancelled by $D$) *and* has zero row sums ($\sum_{j}(S^{\circ2})_{ij}=r_i$, $\sum_j(S^2)_{ij}=(S^2\mathbf1)_i=0$, and subtracting $D_{ii}=r_i$ leaves $r_i+0-r_i=0$). And the discarded part is diagonal, hence orthogonal to hollow $\mathcal D_n$, so subtracting it *is* the orthogonal projection. ✓ **So restricted criticality is exactly $S^{\circ2}+S^2=\lambda S+D$, which is what step 1 consumes.**
 5. The clause "**$Q$ preserves $\mathcal D_n$**" is, read alone, false, $S^{\circ2}+S^2$ has diagonal $r\ne0$. The same sentence corrects it ("up to the diagonal correction $D$"), and at the *Weyl-operator* level it is true without correction, the sectional matrix being hollow by definition and $D$ pure bookkeeping. **Not a defect; a sentence that would be one if the second half were deleted.**
 6. At the maximiser, $\langle Q(S_*),S_*\rangle_{\Lambda^2}=\lambda$ by (N2), so the largest critical value *is* the maximum, and homogeneity extends $\lambda\le\Theta_n$ to $\langle Q(W),W\rangle\le\Theta_n\lVert W\rVert^3$ on all of $\mathcal D_n$. ✓
 
@@ -308,15 +308,15 @@ $$Z_{ab}=-\frac1n+\frac{2n^2+2}{n(n^2-1)(n-2)}-\frac1{(n-1)(n-2)}=\frac{-n^2(n-3
 | step | what it normalises | which norm |
 | --- | --- | --- |
 | Step 1 | $\lvert v\rvert=1$ only; **nothing on $S$**, the statement is homogeneous of degree $1$ in $S$ | none |
-| Step 2, $\mu\le2\lvert Z\rvert$ | $\lvert S\rvert=1$ | **unordered pairs**, $\sum_{i<j}s_{ij}^2=1$, i.e. $\operatorname{tr}S^2=2$ |
+| Step 2, $\mu\le2\lvert Z\rvert$ | $\lvert S\rvert=1$ | **unordered pairs**, $\sum_{i<j}s_{ij}^2=1$, i.e. $\mathop{\mathrm{tr}}S^2=2$ |
 | Step 2, the $\lvert Z\rvert^2$ formula | $\sum v^2=1$ | **unordered pairs**, §3.4 derives $\langle Z,Z\rangle_F$ and halves it, and the halving is exactly what produces the printed $\frac{n^2-3n+3}{2(n-1)(n-2)}$ |
 | Step 3 | $\sum v^2=1$ | none on $S$ |
 
 **One norm is used wherever a norm is used, and it is the unordered one.** By (N1) that is exactly $\lVert W\rVert=1$, which is [conventions.md](../findings/conventions.md)'s own $\lVert K\rVert_F^2=2$ at a unit Weyl tensor. **The chaining is consistent, and the constants it delivers are the constants for $\lVert W\rVert=1$.**
 
-**The block's warning is correct and load-bearing.** Under conventions.md's stated default ("sums over pairs are over ORDERED pairs unless the line says otherwise"), the phrase "$\lvert S\rvert=1$" would read $\operatorname{tr}S^2=1$, the working locus would be $\lVert W\rVert=1/\sqrt2$, and the chain would deliver $\Theta_n/\sqrt2$. The block names the trap and writes $\operatorname{tr}S^2=2$ instead. *[r500](../reviews/REVIEW_r500.md):Finding 4 reports the same trap live in an earlier version of the block; the current text has taken the repair.*
+**The block's warning is correct and load-bearing.** Under conventions.md's stated default ("sums over pairs are over ORDERED pairs unless the line says otherwise"), the phrase "$\lvert S\rvert=1$" would read $\mathop{\mathrm{tr}}S^2=1$, the working locus would be $\lVert W\rVert=1/\sqrt2$, and the chain would deliver $\Theta_n/\sqrt2$. The block names the trap and writes $\mathop{\mathrm{tr}}S^2=2$ instead. *[r500](../reviews/REVIEW_r500.md):Finding 4 reports the same trap live in an earlier version of the block; the current text has taken the repair.*
 
-**Where the trap is still live, faintly.** §3.3's Cauchy–Schwarz is the one step that consumes the normalisation, and it does not restate it, that is H7, and it is the "hypotheses corrected" in claim 3. The reader must carry $\operatorname{tr}S^2=2$ from the block's opening line two paragraphs above.
+**Where the trap is still live, faintly.** §3.3's Cauchy–Schwarz is the one step that consumes the normalisation, and it does not restate it, that is H7, and it is the "hypotheses corrected" in claim 3. The reader must carry $\mathop{\mathrm{tr}}S^2=2$ from the block's opening line two paragraphs above.
 
 **The statement itself is safe.** Both citable forms are scale-free: $\langle Q(W),W\rangle\le\Theta_n\lVert W\rVert^3$ ([problem.md](../findings/problem.md):573) and $\theta\le\Theta_n$ ([results.md](../results.md):98) carry no normalisation to get wrong.
 
@@ -338,7 +338,7 @@ Equality in the chain forces equality at each link, since the endpoints agree:
 
 So the equality set is a single $O(n)$-orbit. **Nothing in this needs step 1's equality case**, which is a consistency check rather than a link.
 
-**At $n=4$ I checked uniqueness a second way, by hand and independently of steps 1–3.** $\mathcal D_4$ is two-dimensional and, in the matching basis $K_{12}=K_{34}=a$, $K_{13}=K_{24}=b$, $K_{14}=K_{23}=c$, is cut out by $a+b+c=0$ with $\operatorname{tr}K^2=4(a^2+b^2+c^2)=2$. The record's $\theta=18abc$ then has $e_1=0$ and $e_2=-\tfrac12p_2=-\tfrac14$, so $a,b,c$ are the roots of $t^3-\tfrac14t-e_3$, which has three real roots iff $-4(-\tfrac14)^3-27e_3^2\ge0$, i.e. $e_3^2\le\tfrac1{432}$. Hence $\max abc=\tfrac1{12\sqrt3}$ and $\max\theta=\tfrac{18}{12\sqrt3}=\tfrac{\sqrt3}2=\Theta_4$ ✓, **attained only at the double root**, $(a,b,c)=(\tfrac1{\sqrt3},-\tfrac1{2\sqrt3},-\tfrac1{2\sqrt3})$ up to permutation, which is $S^2\times S^2$, since the balanced $V$ has $x=-2z$ and $z=-\tfrac1{2\sqrt3}$. **Uniqueness at $n=4$, exactly.**
+**At $n=4$ I checked uniqueness a second way, by hand and independently of steps 1–3.** $\mathcal D_4$ is two-dimensional and, in the matching basis $K_{12}=K_{34}=a$, $K_{13}=K_{24}=b$, $K_{14}=K_{23}=c$, is cut out by $a+b+c=0$ with $\mathop{\mathrm{tr}}K^2=4(a^2+b^2+c^2)=2$. The record's $\theta=18abc$ then has $e_1=0$ and $e_2=-\tfrac12p_2=-\tfrac14$, so $a,b,c$ are the roots of $t^3-\tfrac14t-e_3$, which has three real roots iff $-4(-\tfrac14)^3-27e_3^2\ge0$, i.e. $e_3^2\le\tfrac1{432}$. Hence $\max abc=\tfrac1{12\sqrt3}$ and $\max\theta=\tfrac{18}{12\sqrt3}=\tfrac{\sqrt3}2=\Theta_4$ ✓, **attained only at the double root**, $(a,b,c)=(\tfrac1{\sqrt3},-\tfrac1{2\sqrt3},-\tfrac1{2\sqrt3})$ up to permutation, which is $S^2\times S^2$, since the balanced $V$ has $x=-2z$ and $z=-\tfrac1{2\sqrt3}$. **Uniqueness at $n=4$, exactly.**
 
 ### 10.3 [problem.md](../findings/problem.md):418, "uniquely for $n\ge5$", BROKEN
 
@@ -368,10 +368,10 @@ So the equality set is a single $O(n)$-orbit. **Nothing in this needs step 1's e
 | --- | --- | --- |
 | [problem.md](../findings/problem.md):571–579 | "$\langle Q(W),W\rangle\le\Theta_n\lVert W\rVert^3$ for every diagonal $W$ at every $n\ge4$" + both constants + "equality exactly at $S^{n/2}\times S^{n/2}$ for even $n$ and at $S^{\lfloor n/2\rfloor}\times S^{\lceil n/2\rceil}$ for odd $n$. At even $n$, $\Theta_n=\theta_0(n)$" | **correct.** Scale-free; the two equality cases are one expression written twice; "$\Theta_n=\theta_0(n)$ at even $n$" is an identity of the two printed formulas. The word "diagonal" is not qualified by "in some frame", which [conventions.md](../findings/conventions.md) fixes and which the $O(n)$-invariance of both sides makes harmless |
 | [results.md](../results.md):98 | "for every unit $W$ diagonal in some frame, $\theta\le\Theta_n$ … equality exactly at $S^{\lfloor n/2\rfloor}\times S^{\lceil n/2\rceil}$. Three steps, each proved" | **correct, and the cleanest of the three.** $\theta$ is a ratio, so no normalisation can be misread |
-| [results.md](../results.md):268 | the full statement, "with $\lVert M\rVert$ normalised to $\lVert W\rVert=1$", the three steps named, "Every step holds at both parities", "It does not reach any $W$ that is diagonal in no frame" | **correct.** The normalisation is stated in the safe direction, by naming $\lVert W\rVert=1$ rather than a number for $\operatorname{tr}M^2$. "whose kernel is explicit" is supported: step 2(b) exhibits the kernel of the projection as $\{a_i+a_j+c\}$ |
+| [results.md](../results.md):268 | the full statement, "with $\lVert M\rVert$ normalised to $\lVert W\rVert=1$", the three steps named, "Every step holds at both parities", "It does not reach any $W$ that is diagonal in no frame" | **correct.** The normalisation is stated in the safe direction, by naming $\lVert W\rVert=1$ rather than a number for $\mathop{\mathrm{tr}}M^2$. "whose kernel is explicit" is supported: step 2(b) exhibits the kernel of the projection as $\{a_i+a_j+c\}$ |
 | **a Lean form** | **none exists.** [lean/INDEX.md](../lean/INDEX.md):359 lists **L57** under "**out (needs machinery Mathlib does not have**), the classification of compact symmetric spaces" | **HYPOTHESIS-DEBT, and the bucket is wrong** |
 
-**The bucket is wrong, and this is a finding rather than a formatting note.** Nothing in L57's proof touches the classification of compact symmetric spaces. Steps 1–3 are Cauchy–Schwarz twice and a Lagrange-multiplier argument, entirely on $n\times n$ real matrices and vectors in $\mathbb R^n$; the bridge is compactness of a sphere in a finite-dimensional subspace; the equality case is the one-dimensionality of a block-constant linear system. **What the row would have to claim**, if it were written: *for every $n\ge4$ and every $S\in\mathcal D_n$, $\langle S^{\circ2}+S^2,S\rangle_F\le2\Theta_n\big(\tfrac12\operatorname{tr}S^2\big)^{3/2}$, with the equality set the $O(n)$-orbit of the block-constant matrix with blocks of size $\lfloor n/2\rfloor$ and $\lceil n/2\rceil$*, which is formalisable as stated. The part that genuinely needs machinery is not the theorem but the *interpretation* of the equality case as "the Weyl tensor of a sphere product", and that is one definition, not a classification. **L57 belongs in `ready`, or split with the interpretation clause stated and left unformalised.**
+**The bucket is wrong, and this is a finding rather than a formatting note.** Nothing in L57's proof touches the classification of compact symmetric spaces. Steps 1–3 are Cauchy–Schwarz twice and a Lagrange-multiplier argument, entirely on $n\times n$ real matrices and vectors in $\mathbb R^n$; the bridge is compactness of a sphere in a finite-dimensional subspace; the equality case is the one-dimensionality of a block-constant linear system. **What the row would have to claim**, if it were written: *for every $n\ge4$ and every $S\in\mathcal D_n$, $\langle S^{\circ2}+S^2,S\rangle_F\le2\Theta_n\big(\tfrac12\mathop{\mathrm{tr}}S^2\big)^{3/2}$, with the equality set the $O(n)$-orbit of the block-constant matrix with blocks of size $\lfloor n/2\rfloor$ and $\lceil n/2\rceil$*, which is formalisable as stated. The part that genuinely needs machinery is not the theorem but the *interpretation* of the equality case as "the Weyl tensor of a sphere product", and that is one definition, not a classification. **L57 belongs in `ready`, or split with the interpretation clause stated and left unformalised.**
 
 ## 12. The gap between what is proven and what is used, what a consumer may cite
 
@@ -379,7 +379,7 @@ So the equality set is a single $O(n)$-orbit. **Nothing in this needs step 1's e
 
 - $\langle Q(W),W\rangle\le\Theta_n\lVert W\rVert^3$ for **every** $W\in\mathcal W_n$ diagonal in some orthonormal frame, at **every** $n\ge4$, at **both** parities, with $\Theta_n^2=\frac{2(n-1)(n-2)}{n^2}$ (even) and $\frac{2(n-1)(n-3)}{(n+1)(n-2)}$ (odd). Critical points are not a hypothesis of this; the bridge removes them.
 - Equality holds, and holds exactly on the $O(n)$-orbit of the Weyl tensor of $S^{\lfloor n/2\rfloor}\times S^{\lceil n/2\rceil}$, **at every $n\ge4$, $n=4$ included**.
-- The three steps individually, each with the hypotheses of §1.1 attached, in particular step 2's Cauchy–Schwarz **only at $\operatorname{tr}S^2=2$**.
+- The three steps individually, each with the hypotheses of §1.1 attached, in particular step 2's Cauchy–Schwarz **only at $\mathop{\mathrm{tr}}S^2=2$**.
 - $\theta(S^p\times S^q)^2=\frac{2(n-1)(p-1)(q-1)}{(n-2)pq}$ for every split, and the balanced split as its strict maximum.
 
 **May NOT be cited:**
@@ -402,13 +402,13 @@ So the equality set is a single $O(n)$-orbit. **Nothing in this needs step 1's e
 
 ## 14. What would break it, and what I did to look for it
 
-**The falsifier.** A matrix $S\in\mathcal D_n$ at some $n\ge4$ with $\operatorname{tr}S^2=2$ and $\langle S^{\circ2}+S^2,S\rangle_F>2\Theta_n$, equivalently a diagonal Weyl tensor with $\theta>\Theta_n$. A weaker falsifier suffices for the equality clause alone: a unit $S\in\mathcal D_n$ with $\theta=\Theta_n$ that is not in the $O(n)$-orbit of the balanced sphere product.
+**The falsifier.** A matrix $S\in\mathcal D_n$ at some $n\ge4$ with $\mathop{\mathrm{tr}}S^2=2$ and $\langle S^{\circ2}+S^2,S\rangle_F>2\Theta_n$, equivalently a diagonal Weyl tensor with $\theta>\Theta_n$. A weaker falsifier suffices for the equality clause alone: a unit $S\in\mathcal D_n$ with $\theta=\Theta_n$ that is not in the $O(n)$-orbit of the balanced sphere product.
 
 **Where I looked, and what I found.**
 
 1. **The one place a step could run out of room.** Step 3's circle-replacement needs a coordinate untouched after three are moved. It fails at $n=3$ and only at $n=3$, which is outside the range. It also needs $\sigma>0$, which three distinct values guarantee, and needs the excluded set on the circle to be finite, which it is (at most fifteen points). **No falsifier.**
 2. **The degenerate branch of Proof II.** $m_1=m_2=m_3$ makes $u=\mathbf1\times m=0$ and the stated mechanism vacuous. I built the witness $v=(\tfrac12,\tfrac12,-\tfrac12,-\tfrac12,0,0)$ at $n=6$ by hand and evaluated $\sum v^4=\tfrac14$ against Lemma A's $\tfrac3{2n}=\tfrac14$. **A defect in the block's paraphrase; no falsifier of the lemma**, since $\tfrac14>\tfrac16=\tfrac1n$.
-3. **A normalisation at which the chain delivers a different constant.** $\operatorname{tr}S^2=1$ delivers $\Theta_n/\sqrt2$, the trap the block names, and the reason §9 exists. **Not a falsifier; a mis-citation risk, and the block has taken the repair.**
+3. **A normalisation at which the chain delivers a different constant.** $\mathop{\mathrm{tr}}S^2=1$ delivers $\Theta_n/\sqrt2$, the trap the block names, and the reason §9 exists. **Not a falsifier; a mis-citation risk, and the block has taken the repair.**
 4. **A split beating the balanced one.** $\theta(S^p\times S^q)^2=\frac{2(n-1)}{n-2}\big(1-\frac{n-1}{pq}\big)$ is strictly increasing in $pq$, and $pq$ is strictly unimodal in the integer $p$. **No falsifier, and the exclusion is exact rather than measured.**
 5. **A choice the proof makes that could be made differently.** When $\mu$ is a repeated eigenvalue, the proof picks one unit eigenvector $v$; every step holds for any choice, and the chain's bound is the same. **No falsifier.**
 6. **The sign.** $P$ is odd, so $-S_*$ realises $-\Theta_n$. This is not a falsifier of the bound; it is what refutes the clause at :416.

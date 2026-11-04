@@ -27,14 +27,14 @@
 
 **The collision is real.** [conventions.md](../findings/conventions.md), under "Norms and pairings", carries in consecutive bullets
 
-- $\langle X,X\rangle=\tfrac12\operatorname{tr}(X^{\mathsf T}X)$, and
+- $\langle X,X\rangle=\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}X)$, and
 - $\lVert\varphi_{ab}\rVert^2=2$ for $\varphi_{ab}=E_{ab}-E_{ba}$.
 
-Derived cold: $\varphi_{ab}^{\mathsf T}\varphi_{ab}=E_{aa}+E_{bb}$, so $\operatorname{tr}(\varphi^{\mathsf T}\varphi)=2$ and $\tfrac12\operatorname{tr}(\varphi^{\mathsf T}\varphi)=1$. The two bullets are two different pairings under one symbol $\lVert\cdot\rVert$, the second is plain matrix Frobenius, the first is the $\Lambda^2$ pairing. **Both numbers are true; the notation is not.**
+Derived cold: $\varphi_{ab}^{\mathsf T}\varphi_{ab}=E_{aa}+E_{bb}$, so $\mathop{\mathrm{tr}}(\varphi^{\mathsf T}\varphi)=2$ and $\tfrac12\mathop{\mathrm{tr}}(\varphi^{\mathsf T}\varphi)=1$. The two bullets are two different pairings under one symbol $\lVert\cdot\rVert$, the second is plain matrix Frobenius, the first is the $\Lambda^2$ pairing. **Both numbers are true; the notation is not.**
 
-**Which one is the record's working normalisation, settled by three independent anchors, all reproduced by hand here, all in $\lVert\varphi_{ab}\rVert^2=1$.** Take $W$ coordinate-diagonal, $W\varphi_{ab}=M_{ab}\varphi_{ab}$, $\operatorname{tr}M^2=\sum_{a\ne b}M_{ab}^2=2$ (the normalisation the section immediately above L68 works in).
+**Which one is the record's working normalisation, settled by three independent anchors, all reproduced by hand here, all in $\lVert\varphi_{ab}\rVert^2=1$.** Take $W$ coordinate-diagonal, $W\varphi_{ab}=M_{ab}\varphi_{ab}$, $\mathop{\mathrm{tr}}M^2=\sum_{a\ne b}M_{ab}^2=2$ (the normalisation the section immediately above L68 works in).
 
-1. $\operatorname{tr}W^\#=\tfrac12\sum_{\alpha\beta}c_{\gamma\alpha\beta}^2\lambda_\alpha\lambda_\beta$ summed over $\gamma$ gives $\tfrac12\sum_{a<b}M_{ab}\sum_{d\ne a,b}(M_{ad}+M_{bd})\cdot 2 = \sum_{a<b}M_{ab}(-2M_{ab})=-\sum_{a<b}M_{ab}^2=-1$, using $M\mathbf 1=0$. **$\operatorname{tr}W^\#=-1$ ✓.** Under $\lVert\varphi\rVert^2=2$ this would come out $-2$ or $-\tfrac12$ depending where the factor is placed.
+1. $\mathop{\mathrm{tr}}W^\#=\tfrac12\sum_{\alpha\beta}c_{\gamma\alpha\beta}^2\lambda_\alpha\lambda_\beta$ summed over $\gamma$ gives $\tfrac12\sum_{a<b}M_{ab}\sum_{d\ne a,b}(M_{ad}+M_{bd})\cdot 2 = \sum_{a<b}M_{ab}(-2M_{ab})=-\sum_{a<b}M_{ab}^2=-1$, using $M\mathbf 1=0$. **$\mathop{\mathrm{tr}}W^\#=-1$ ✓.** Under $\lVert\varphi\rVert^2=2$ this would come out $-2$ or $-\tfrac12$ depending where the factor is placed.
 2. $\sum_\gamma g_\gamma$: from the block's own $g_{ab}=2(s_a+s_b)-4(M^2)_{ab}-4M_{ab}^2$, summing over $a<b$ gives $4(n-1)+4-4=4(n-1)$, **exactly [bounds.md](../findings/bounds.md)'s constant $\sum_\gamma g_\gamma=4(n-1)$ ✓**.
 3. $\sum_\gamma\lambda_\gamma g_\gamma$: from (iii)'s $g_{ab}=2(s_a+s_b)-4\theta M_{ab}$, $\sum_{a<b}M_{ab}(s_a+s_b)=\sum_a s_a\sum_{b\ne a}M_{ab}=0$, leaving $-4\theta\sum_{a<b}M_{ab}^2=-4\theta$, **exactly [bounds.md](../findings/bounds.md)'s $\sum_\gamma\lambda_\gamma g_\gamma=-4\theta$ ✓**.
 
@@ -70,7 +70,7 @@ Diagonal specialisation, derived cold: $\sum_\alpha\lambda_\alpha^2R_{(ab)\alpha
 
 **(iii)** The off-diagonal criticality equation is $M_{ab}^2+(M^2)_{ab}=\theta M_{ab}$ ✓, it is the section above L68, and it also drops straight out of $Q_\gamma=2\lambda_\gamma(\theta-\lambda_\gamma)$, an independent route. Substituting cancels both quadratics, giving $g_{ab}=2(s_a+s_b)-4\theta M_{ab}$ ✓; $g_{ab}\ge0$ gives $2\theta M_{ab}\le s_a+s_b$ ✓; equality $\iff$ twins ✓; the min is correctly restricted to $M_{ab}>0$ (dividing by a negative entry flips) ✓; the exact form $\theta=\frac{s_a+s_b}{2M_{ab}}-\frac{g_{ab}}{4M_{ab}}$ ✓.
 
-**The anchor, checked by hand at the balanced product $n=2m$.** Two blocks, within-block $\alpha$, cross $\beta=-\frac{(m-1)\alpha}{m}$ from $M\mathbf1=0$; $\operatorname{tr}M^2=2$ gives $\alpha^2=\frac{2}{(n-1)(n-2)}$; then $s_a=1/m=2/n$ ✓ (the file's recorded "diagonal reading $2/n$"), criticality gives $\theta=\frac{\sqrt{(m-1)(2m-1)}}{m}=\frac{\sqrt{2(n-1)(n-2)}}{n}=\theta_0(n)$ ✓, and the cap reads $\frac{s_a+s_b}{2M_{ab}}=\frac{2/n}{\alpha}=\theta_0(n)$, **equality, exactly as (iii) and the fence claim** ✓. At $n=6$ this is $\sqrt{10}/3$ ✓.
+**The anchor, checked by hand at the balanced product $n=2m$.** Two blocks, within-block $\alpha$, cross $\beta=-\frac{(m-1)\alpha}{m}$ from $M\mathbf1=0$; $\mathop{\mathrm{tr}}M^2=2$ gives $\alpha^2=\frac{2}{(n-1)(n-2)}$; then $s_a=1/m=2/n$ ✓ (the file's recorded "diagonal reading $2/n$"), criticality gives $\theta=\frac{\sqrt{(m-1)(2m-1)}}{m}=\frac{\sqrt{2(n-1)(n-2)}}{n}=\theta_0(n)$ ✓, and the cap reads $\frac{s_a+s_b}{2M_{ab}}=\frac{2/n}{\alpha}=\theta_0(n)$, **equality, exactly as (iii) and the fence claim** ✓. At $n=6$ this is $\sqrt{10}/3$ ✓.
 
 **(iv)** $\Delta=\sum_{a<b,\,M_{ab}>0}[2(s_a+s_b)-4\theta M_{ab}]=2\sum_a d_a^+s_a-4\theta\sum_{a<b,+}M_{ab}$, and $M\mathbf1=0$ makes $\sum_{a<b,+}M_{ab}=\tfrac12\lVert M\rVert_1$, giving $\theta\lVert M\rVert_1=\sum_ad_a^+s_a-\tfrac12\Delta$ ✓ **exactly**. It is an equality at the balanced product: both sides are $2(m-1)$, checked by hand ✓. *This also settles that $\Delta$ is the UNORDERED-pair sum, against conventions.md's default "sums over pairs are over ORDERED pairs unless the line says otherwise", the line does not say otherwise, and the ordered reading breaks (iv) by a factor $2$. A second small convention debt, on the same block.*
 
@@ -128,7 +128,7 @@ Every restatement of $g_{ab}$ in [findings/](../findings/) carries the block's c
 
 **VERDICT: CONFIRMED**
 
-Parts (i), (ii), (iii) and (iv) were each re-derived from the definitions without using the block, and every constant, every equality case and every anchor came out. Four independent checks pin the arithmetic: $\operatorname{tr}W^\#=-1$, $\sum_\gamma g_\gamma=4(n-1)$, $\sum_\gamma\lambda_\gamma g_\gamma=-4\theta$, and the balanced product returning $s_a=2/n$, $\theta=\theta_0(n)$ and the cap as an equality, all by hand, all in agreement.
+Parts (i), (ii), (iii) and (iv) were each re-derived from the definitions without using the block, and every constant, every equality case and every anchor came out. Four independent checks pin the arithmetic: $\mathop{\mathrm{tr}}W^\#=-1$, $\sum_\gamma g_\gamma=4(n-1)$, $\sum_\gamma\lambda_\gamma g_\gamma=-4\theta$, and the balanced product returning $s_a=2/n$, $\theta=\theta_0(n)$ and the cap as an equality, all by hand, all in agreement.
 
 **Three repairs owed, none of which moves a number or rescales any citation:**
 

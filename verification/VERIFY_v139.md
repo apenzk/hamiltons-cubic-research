@@ -30,9 +30,9 @@
 
 Read from [conventions.md](../findings/conventions.md), lines 15, 49, 50, 59, 65, 68, and cross-checked against [problem.md](../findings/problem.md):19 (Jäger's Theorem A, quoted there verbatim as $W^2+W^\#=\theta W$) and [problem.md](../findings/problem.md):539 ($Q(I)=(n-1)I$).
 
-- **Inner product on $\Lambda^2\mathbb R^n=\mathfrak{so}(n)$:** $\langle X,Y\rangle=\tfrac12\operatorname{tr}(X^{\mathsf T}Y)$, under which $\{\varphi_{ab}=E_{ab}-E_{ba}\}_{a<b}$ is orthonormal ([conventions.md](../findings/conventions.md):65, 68). The half goes at the $\Lambda^2$ level, not the operator level.
+- **Inner product on $\Lambda^2\mathbb R^n=\mathfrak{so}(n)$:** $\langle X,Y\rangle=\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$, under which $\{\varphi_{ab}=E_{ab}-E_{ba}\}_{a<b}$ is orthonormal ([conventions.md](../findings/conventions.md):65, 68). The half goes at the $\Lambda^2$ level, not the operator level.
 - **Structure constants** $c_{abc}=\langle[\varphi_a,\varphi_b],\varphi_c\rangle$, totally antisymmetric, so $T_{abc}=c_{abc}^2$ is totally symmetric ([conventions.md](../findings/conventions.md):50).
-- **Killing row marginal** $\sum_{b,c}c_{abc}^2=\kappa=2(n-2)$ over *ordered* pairs, from $B(X,Y)=(n-2)\operatorname{tr}(XY)$ and $\operatorname{tr}(v^2)=-2$ at a unit bivector ([conventions.md](../findings/conventions.md):49; the general statement is [Lemma L153](../findings/bounds.md)).
+- **Killing row marginal** $\sum_{b,c}c_{abc}^2=\kappa=2(n-2)$ over *ordered* pairs, from $B(X,Y)=(n-2)\mathop{\mathrm{tr}}(XY)$ and $\mathop{\mathrm{tr}}(v^2)=-2$ at a unit bivector ([conventions.md](../findings/conventions.md):49; the general statement is [Lemma L153](../findings/bounds.md)).
 - **$\#$** is the halved Böhm–Wilking product, $vv^{\mathsf T}\#ww^{\mathsf T}=\tfrac12[v,w][v,w]^{\mathsf T}$ ([conventions.md](../findings/conventions.md):59). For $W$ diagonal in an orthonormal basis of $\Lambda^2$ with eigenvalues $w_a$, this gives $(W^\#)_{aa}=\tfrac12\sum_{b,c}c_{abc}^2w_bw_c$, and hence $Q(I)=(1+\kappa/2)I=(n-1)I$, matching the record.
 - **$Q(W)=W^2+W^\#$**, $\mathcal W_n\to\mathcal W_n$ ([conventions.md](../findings/conventions.md):15).
 - **$\sigma:=1+\kappa/2=n-1$**, $N=\binom n2$, $u=c(1-r/N)$, $v=-cr/N$, $c=\sqrt{N/(r(N-r))}$ so that $\lVert W_{\mathfrak h}\rVert=1$: $\lVert W_{\mathfrak h}\rVert^2=ru^2+(N-r)v^2=c^2r(N-r)/N$.
@@ -91,7 +91,7 @@ $$2S_{\mathfrak{hmm}}+S_{\mathfrak{mmm}}=\kappa(N-r).$$
 
 $W_{\mathfrak h}$ is diagonal in the adapted basis with $w_a=u$ on $\mathfrak h$ and $w_a=v$ on $\mathfrak m$. So $\langle Q(W)\varphi_a,\varphi_a\rangle=w_a^2+\tfrac12\sum_{b,c}c_{abc}^2w_bw_c$.
 
-Trace against $\Pi_{\mathfrak h}$, i.e. sum over $a\in\mathfrak h$: the $\#$-part splits exactly as in R1, giving $ru^2+\tfrac12(S_{\mathfrak{hhh}}u^2+S_{\mathfrak{hmm}}v^2)$, and the right side is $\theta\operatorname{tr}(\Pi_{\mathfrak h}W)=\theta ru$. Dividing by $r$:
+Trace against $\Pi_{\mathfrak h}$, i.e. sum over $a\in\mathfrak h$: the $\#$-part splits exactly as in R1, giving $ru^2+\tfrac12(S_{\mathfrak{hhh}}u^2+S_{\mathfrak{hmm}}v^2)$, and the right side is $\theta\mathop{\mathrm{tr}}(\Pi_{\mathfrak h}W)=\theta ru$. Dividing by $r$:
 
 $$u^2+\tfrac1{2r}\big(S_{\mathfrak{hhh}}u^2+S_{\mathfrak{hmm}}v^2\big)=\theta u.\tag{A}$$
 
@@ -141,7 +141,7 @@ $$S_{\mathfrak{mmm}}=\kappa(N-r)-2S_{\mathfrak{hmm}}=2(n-2)(N-r)-\frac{4(n-1)r(N
 
 ### 3.4 What each of the two equations actually contributes
 
-Taking the **full** trace of $Q(W)=\theta W$ gives $\operatorname{tr}(W^2)+\operatorname{tr}(W^\#)=\theta\operatorname{tr}W=0$, i.e. $\operatorname{tr}(W^\#)=-1$ at unit norm. In the coordinates of §3.2 this combination is $ru\cdot\text{(A)}+(N-r)v\cdot\text{(B)}$, which reduces to $\sigma u\tfrac N{N-r}=X\tfrac N{2r}$, **exactly the equation that produces $S_{\mathfrak{hmm}}$.** So the split is: one of the two independent consequences of the eigen-equation is its full trace, and *that* is what pins $S_{\mathfrak{hmm}}$ (equivalently, by BW08 Lemma 2.1 at [problem.md](../findings/problem.md):52, what says $W_{\mathfrak h}$ is Ricci-flat); the remaining one determines $\theta$. Nothing is wrong with the block here, the observation is that the constraint the cap rests on is a *trace* consequence, and would be available from Ricci-flatness alone without ever invoking the eigen-equation's off-trace content.
+Taking the **full** trace of $Q(W)=\theta W$ gives $\mathop{\mathrm{tr}}(W^2)+\mathop{\mathrm{tr}}(W^\#)=\theta\mathop{\mathrm{tr}}W=0$, i.e. $\mathop{\mathrm{tr}}(W^\#)=-1$ at unit norm. In the coordinates of §3.2 this combination is $ru\cdot\text{(A)}+(N-r)v\cdot\text{(B)}$, which reduces to $\sigma u\tfrac N{N-r}=X\tfrac N{2r}$, **exactly the equation that produces $S_{\mathfrak{hmm}}$.** So the split is: one of the two independent consequences of the eigen-equation is its full trace, and *that* is what pins $S_{\mathfrak{hmm}}$ (equivalently, by BW08 Lemma 2.1 at [problem.md](../findings/problem.md):52, what says $W_{\mathfrak h}$ is Ricci-flat); the remaining one determines $\theta$. Nothing is wrong with the block here, the observation is that the constraint the cap rests on is a *trace* consequence, and would be available from Ricci-flatness alone without ever invoking the eigen-equation's off-trace content.
 
 **Answer to pre-registered question 1.** The closed form follows, in full, from H1–H5 plus I1/I2; the elimination is forced by a nonzero determinant rather than selected; and the constants depend on the unit-norm choice and on the $\kappa=2(n-2)$ / $Q(\mathrm{Id})=(n-1)\mathrm{Id}$ normalisation, the latter reaching the cap itself.
 
@@ -319,11 +319,11 @@ Every entry of the block's list checks out, with the single scoping caveat of §
 
 ## 8. The slack closed form (claim 16)
 
-The block's closing paragraph states $S=\tfrac r{nN}[4(N-r)-n^2]$ on the family and gives **no derivation**; [REVIEW_r25.md](../reviews/REVIEW_r25.md) records it as *"verified against the definition on all twelve members"*, i.e. numerically. The claim is load-bearing for the sentence *"the cap is that inequality restricted here"*, so it is worth checking. With $S(W)=\lVert\mathrm{Ric}(W_-)\rVert^2+6\delta^2-\theta\operatorname{tr}(W_-)-\operatorname{tr}(W_-^2)$ ([results.md](../results.md):391), $W_-=\lvert v\rvert\Pi_{\mathfrak m}$, and a member (so $\delta^2=0$ by (F3), $\mathrm{Ric}(W_{\mathfrak h})=0$ by (F2)):
+The block's closing paragraph states $S=\tfrac r{nN}[4(N-r)-n^2]$ on the family and gives **no derivation**; [REVIEW_r25.md](../reviews/REVIEW_r25.md) records it as *"verified against the definition on all twelve members"*, i.e. numerically. The claim is load-bearing for the sentence *"the cap is that inequality restricted here"*, so it is worth checking. With $S(W)=\lVert\mathrm{Ric}(W_-)\rVert^2+6\delta^2-\theta\mathop{\mathrm{tr}}(W_-)-\mathop{\mathrm{tr}}(W_-^2)$ ([results.md](../results.md):391), $W_-=\lvert v\rvert\Pi_{\mathfrak m}$, and a member (so $\delta^2=0$ by (F3), $\mathrm{Ric}(W_{\mathfrak h})=0$ by (F2)):
 
-- $\mathrm{Ric}$ satisfies $\operatorname{tr}_{\mathbb R^n}\mathrm{Ric}(A)=2\operatorname{tr}_{\Lambda^2}A$, forced by $\mathrm{Ric}(\mathrm{Id})=(n-1)I_n$ and $\operatorname{tr}\mathrm{Id}=N$. Under (F2), $\mathrm{Ric}(\Pi_{\mathfrak h})$ is scalar, hence $=\tfrac{2r}nI_n$ and $\lVert\mathrm{Ric}(\Pi_{\mathfrak h})\rVert^2=\tfrac{4r^2}n$.
+- $\mathrm{Ric}$ satisfies $\mathop{\mathrm{tr}}_{\mathbb R^n}\mathrm{Ric}(A)=2\mathop{\mathrm{tr}}_{\Lambda^2}A$, forced by $\mathrm{Ric}(\mathrm{Id})=(n-1)I_n$ and $\mathop{\mathrm{tr}}\mathrm{Id}=N$. Under (F2), $\mathrm{Ric}(\Pi_{\mathfrak h})$ is scalar, hence $=\tfrac{2r}nI_n$ and $\lVert\mathrm{Ric}(\Pi_{\mathfrak h})\rVert^2=\tfrac{4r^2}n$.
 - Ricci-flatness gives $u\,\mathrm{Ric}(\Pi_{\mathfrak h})+v\,\mathrm{Ric}(\Pi_{\mathfrak m})=0$, so $\lvert v\rvert\mathrm{Ric}(\Pi_{\mathfrak m})=u\,\mathrm{Ric}(\Pi_{\mathfrak h})$ and $\lVert\mathrm{Ric}(W_-)\rVert^2=\tfrac{4u^2r^2}n$.
-- $\theta\operatorname{tr}(W_-)=\tfrac{(n-1)cr}N\cdot\tfrac{(N-r)cr}N$ and $\operatorname{tr}(W_-^2)=\tfrac{(N-r)c^2r^2}{N^2}$.
+- $\theta\mathop{\mathrm{tr}}(W_-)=\tfrac{(n-1)cr}N\cdot\tfrac{(N-r)cr}N$ and $\mathop{\mathrm{tr}}(W_-^2)=\tfrac{(N-r)c^2r^2}{N^2}$.
 
 Using $u=c(N-r)/N$ and factoring out $\tfrac{c^2r^2(N-r)}{N^2}$,
 

@@ -57,7 +57,7 @@ Again **verbatim**, and $t_{222}\ge0$ is $\theta\le[(n-2)u^2-2uw-w^2]/w$. **CONF
 
 ## V5, V6, V7, the normalisation, the crossing, and the missing monotonicity proof
 
-Tracelessness $ru=(N-r)w=:c$ and $\lVert\lambda\rVert^2=ru^2+(N-r)w^2=c(u+w)=c\delta=1$ give $ru\delta=1$, hence $u=\delta(N-r)/N$, $w=\delta r/N$, $\delta^2=N/(r(N-r))$ and $w=\sqrt{r/(N(N-r))}$. **CONFIRMED.** The norm is [conventions.md](../findings/conventions.md)'s $\sum_\alpha\lambda_\alpha^2=\operatorname{tr}(W^2)=1$ on $\Lambda^2$; the block is in the record's pairing.
+Tracelessness $ru=(N-r)w=:c$ and $\lVert\lambda\rVert^2=ru^2+(N-r)w^2=c(u+w)=c\delta=1$ give $ru\delta=1$, hence $u=\delta(N-r)/N$, $w=\delta r/N$, $\delta^2=N/(r(N-r))$ and $w=\sqrt{r/(N(N-r))}$. **CONFIRMED.** The norm is [conventions.md](../findings/conventions.md)'s $\sum_\alpha\lambda_\alpha^2=\mathop{\mathrm{tr}}(W^2)=1$ on $\Lambda^2$; the block is in the record's pairing.
 
 With $\rho=u/w=(N-r)/r$ one gets $w=\rho^{-1/2}/\sqrt N$, so the two branches are
 $$\text{br}_1=\frac{(n-1)\rho^{-1/2}}{\sqrt N},\qquad \text{br}_2=\frac{\rho^{-1/2}}{\sqrt N}\big[(n-2)\rho^2-2\rho-1\big],$$

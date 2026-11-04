@@ -34,7 +34,7 @@ From [conventions.md](../findings/conventions.md), read first as the brief instr
 
 Set up cold, from the definitions.
 
-An SOS certificate for $F_5=\tfrac32\lVert W\rVert^6-9\operatorname{tr}(W^3)^2$ is a positive semidefinite quadratic form $G$ on a space of cubics, whose associated sextic is $F_5$. Because $O(5)$ acts and $F_5$ is invariant, $G$ may be taken invariant. So:
+An SOS certificate for $F_5=\tfrac32\lVert W\rVert^6-9\mathop{\mathrm{tr}}(W^3)^2$ is a positive semidefinite quadratic form $G$ on a space of cubics, whose associated sextic is $F_5$. Because $O(5)$ acts and $F_5$ is invariant, $G$ may be taken invariant. So:
 
 - **the source** is $\mathrm{Sym}^2(\mathrm{Sym}^3\mathcal W_5^*)^{O(5)}$, of dimension $65$ ([L88](../findings/sym3-blocks.md)); restricted to the orbit-constrained cubics $K$ it is $36$-dimensional ([L86](../findings/sym3-blocks.md), [L59](../findings/sym3-blocks.md)'s $65=36+29$);
 - **the target** is $(\mathrm{Sym}^6\mathcal W_5^*)^{O(5)}$, of dimension $14$ ([L85](../findings/sym3-blocks.md));
@@ -45,7 +45,7 @@ The pipeline never compares coefficients in the $14$. It fixes $40$ sample tenso
 **The gap the lemma exists to close is exactly one implication:** from $\mathrm{ev}(\mu(G)-F_5)=0$ to $\mu(G)=F_5$. Two things are needed and only one is named in the heading:
 
 1. $\mu(G)-F_5$ must lie in a space on which $\mathrm{ev}$ is injective;
-2. $F_5$ must lie in that space, or $\mu(G)-F_5$ is not in $\operatorname{im}\mu$ and (1) says nothing about it.
+2. $F_5$ must lie in that space, or $\mu(G)-F_5$ is not in $\mathop{\mathrm{im}}\mu$ and (1) says nothing about it.
 
 The block supplies (2) from [L62](../findings/sym3-blocks.md)'s $\dim\mathrm{ANN}=1$, and that half is correct, I check it in §4.3. Its trouble is entirely in (1).
 
@@ -58,20 +58,20 @@ L90's proof is three sentences. I quote the load-bearing one:
 > Writing $\mu$ for the Gram-to-sextic map and $\mathrm{ev}$ for evaluation, $\ker(\mathrm{ev}\circ\mu)\supseteq\ker\mu$ always, while $\mathrm{rank}(\mathrm{ev}\circ\mu)=13=\mathrm{rank}\,\mu$ is measured at four primes. Equal dimensions force equal kernels, so $\mathrm{ev}$ is injective on the image.
 
 **The linear algebra is right.** In fact it is tighter than the block says: for any linear $\mathrm{ev}$,
-$$\operatorname{rank}(\mathrm{ev}\circ\mu)=\dim\operatorname{im}\mu-\dim(\ker\mathrm{ev}\cap\operatorname{im}\mu),$$
-so $\operatorname{rank}(\mathrm{ev}\circ\mu)=\operatorname{rank}\mu$ is *equivalent* to $\mathrm{ev}$ being injective on $\operatorname{im}\mu$. The kernel-containment sentence is not needed. No complaint here.
+$$\mathop{\mathrm{rank}}(\mathrm{ev}\circ\mu)=\dim\mathop{\mathrm{im}}\mu-\dim(\ker\mathrm{ev}\cap\mathop{\mathrm{im}}\mu),$$
+so $\mathop{\mathrm{rank}}(\mathrm{ev}\circ\mu)=\mathop{\mathrm{rank}}\mu$ is *equivalent* to $\mathrm{ev}$ being injective on $\mathop{\mathrm{im}}\mu$. The kernel-containment sentence is not needed. No complaint here.
 
 **The input is not right.** The clause *"$\mathrm{rank}(\mathrm{ev}\circ\mu)=13=\mathrm{rank}\,\mu$ is measured"* asserts a measurement of two quantities. **Only the first is measured, and the inequality sampling supplies runs the wrong way:**
-$$\operatorname{rank}(\mathrm{ev}\circ\mu)\ \le\ \operatorname{rank}\mu .$$
-A sampled rank of $13$ therefore gives $\operatorname{rank}\mu\ge13$ and nothing else. Were $\operatorname{rank}\mu=14$, the sampled rank would still be free to read $13$, and that configuration is precisely the failure mode the lemma exists to exclude, a sextic in $\operatorname{im}\mu$ agreeing with $F_5$ at the $40$ points and nowhere else. **So the block's proof assumes the thing it is proving.**
+$$\mathop{\mathrm{rank}}(\mathrm{ev}\circ\mu)\ \le\ \mathop{\mathrm{rank}}\mu .$$
+A sampled rank of $13$ therefore gives $\mathop{\mathrm{rank}}\mu\ge13$ and nothing else. Were $\mathop{\mathrm{rank}}\mu=14$, the sampled rank would still be free to read $13$, and that configuration is precisely the failure mode the lemma exists to exclude, a sextic in $\mathop{\mathrm{im}}\mu$ agreeing with $F_5$ at the $40$ points and nowhere else. **So the block's proof assumes the thing it is proving.**
 
 **This is not my discovery. It is a five-day-old retraction that never reached this file.** [r214](REVIEW_r214.md) §"Defect 1" states it in these words, of the identical text then printed by [run_n5_verify.py](../scripts/runs/run_n5_verify.py). I re-derived the objection before reading r214 and reached the same two lines.
 
 ### 3.1 The repair, which is one sentence and sits $100$ lines below in the same file
 
-Import the cap from [L62](../findings/sym3-blocks.md): every cubic of $K$ vanishes at $W_0$, so every sextic of $\operatorname{im}\mu$ vanishes at $W_0$; evaluation at $W_0$ is a **nonzero** functional on the $14$, since $\lVert W\rVert^6$ is an invariant sextic with $\lVert W_0\rVert^6=1$; hence $\operatorname{im}\mu$ lies in a $13$-dimensional subspace and $\operatorname{rank}\mu\le13$. Then
-$$13\ \le\ \operatorname{rank}(\mathrm{ev}\circ\mu)\ \le\ \operatorname{rank}\mu\ \le\ 13,$$
-all equal, and $\mathrm{ev}$ is injective on $\operatorname{im}\mu$. **One measurement and one theorem, not two measurements.**
+Import the cap from [L62](../findings/sym3-blocks.md): every cubic of $K$ vanishes at $W_0$, so every sextic of $\mathop{\mathrm{im}}\mu$ vanishes at $W_0$; evaluation at $W_0$ is a **nonzero** functional on the $14$, since $\lVert W\rVert^6$ is an invariant sextic with $\lVert W_0\rVert^6=1$; hence $\mathop{\mathrm{im}}\mu$ lies in a $13$-dimensional subspace and $\mathop{\mathrm{rank}}\mu\le13$. Then
+$$13\ \le\ \mathop{\mathrm{rank}}(\mathrm{ev}\circ\mu)\ \le\ \mathop{\mathrm{rank}}\mu\ \le\ 13,$$
+all equal, and $\mathrm{ev}$ is injective on $\mathop{\mathrm{im}}\mu$. **One measurement and one theorem, not two measurements.**
 
 So the answer to the brief's question "what forces it" is: **not a dimension count, not a Vandermonde argument, and not general position, a squeeze between a derived upper bound and a machine-measured lower bound at the actual points.**
 
@@ -83,7 +83,7 @@ The lemma's conclusion (injectivity on the $13$-dimensional image), is a *coroll
 - **[r209](REVIEW_r209.md)**, own prime, own code, own factorisation: *"unrestricted unknowns / rank: $89/14$"*, matching the shipped run at $p=1000033$;
 - **[r213](REVIEW_r213.md)** by a third construction: $120$ explicit invariant sextics, built as complete contractions of six copies of $W$ over random perfect matchings of the $24$ indices, of rank $14$ at those same $40$ points.
 
-Rank $14$ against a cap of $14$ means the $40$ evaluation functionals **span the full dual of the $14$**. So evaluation is injective on *every* invariant sextic. Under that statement the argument needs no $\mu$, no $\operatorname{rank}\mu$, no [L62](../findings/sym3-blocks.md), no cap, and no membership claim: two invariant sextics agreeing at the $40$ points are equal, full stop. **It also makes L90's heading understate its own subject**, "injective on the image" is the weak form of what holds.
+Rank $14$ against a cap of $14$ means the $40$ evaluation functionals **span the full dual of the $14$**. So evaluation is injective on *every* invariant sextic. Under that statement the argument needs no $\mu$, no $\mathop{\mathrm{rank}}\mu$, no [L62](../findings/sym3-blocks.md), no cap, and no membership claim: two invariant sextics agreeing at the $40$ points are equal, full stop. **It also makes L90's heading understate its own subject**, "injective on the image" is the weak form of what holds.
 
 ### 3.3 Where each of the three carriers stands today
 
@@ -101,7 +101,7 @@ Rank $14$ against a cap of $14$ means the $40$ evaluation functionals **span the
 
 ### 4.1 What $d$ is
 
-$d=\dim\operatorname{im}\mu=13$. Under the stronger reading of §3.2 the relevant space is the whole $14$.
+$d=\dim\mathop{\mathrm{im}}\mu=13$. Under the stronger reading of §3.2 the relevant space is the whole $14$.
 
 **So $40$ exceeds it by a factor of about three**, and under either reading the count is not close to binding. Any $13$ (resp. $14$) points at which the evaluation functionals are independent would do; the marginal value of the $15$th through $40$th point for *this* lemma is zero.
 
@@ -122,7 +122,7 @@ I checked all of the file's circulating figures and $40$ is none of them, nor a 
 | $36$ | the real-symmetric unknowns, $\sum m(m+1)/2$ | $-4$ |
 | $14$, $13$ | the target dimension and the image dimension | the ones that actually govern |
 
-**And I confirm the membership half (2) of §2 by hand.** [L59](../findings/sym3-blocks.md)'s apolarity gives $F_5\in\operatorname{im}\mu\iff F_5\perp\mathrm{ANN}$; with $\dim\mathrm{ANN}=1$ and $\mathrm{ANN}=\mathbb R\,\mathcal A(W_0^6)$, and the apolar pairing against $W_0^6$ being evaluation at $W_0$, this reduces to $F_5(W_0)=0$, which is exact over $\mathbb Z$. Equivalently and more directly: $\operatorname{im}\mu\subseteq W_{13}$ with $\dim\operatorname{im}\mu=13=\dim W_{13}$, so $\operatorname{im}\mu=W_{13}$, and $F_5$ is an invariant sextic vanishing at $W_0$, hence in $W_{13}$. **Both routes are sound and the block's is one of them.** Note that this half *does* consume $\operatorname{rank}\mu=13$, so it inherits §3.1's dependency on the same single measurement.
+**And I confirm the membership half (2) of §2 by hand.** [L59](../findings/sym3-blocks.md)'s apolarity gives $F_5\in\mathop{\mathrm{im}}\mu\iff F_5\perp\mathrm{ANN}$; with $\dim\mathrm{ANN}=1$ and $\mathrm{ANN}=\mathbb R\,\mathcal A(W_0^6)$, and the apolar pairing against $W_0^6$ being evaluation at $W_0$, this reduces to $F_5(W_0)=0$, which is exact over $\mathbb Z$. Equivalently and more directly: $\mathop{\mathrm{im}}\mu\subseteq W_{13}$ with $\dim\mathop{\mathrm{im}}\mu=13=\dim W_{13}$, so $\mathop{\mathrm{im}}\mu=W_{13}$, and $F_5$ is an invariant sextic vanishing at $W_0$, hence in $W_{13}$. **Both routes are sound and the block's is one of them.** Note that this half *does* consume $\mathop{\mathrm{rank}}\mu=13$, so it inherits §3.1's dependency on the same single measurement.
 
 ---
 
@@ -202,17 +202,17 @@ So the convention is stated in exactly one place, in a sentence about a bug rath
 
 **Badly filed, not circular. I am confident of this.**
 
-The physical arrangement is as the brief describes: [L62](../findings/sym3-blocks.md)'s proof sits inside L90's block, the "THE RESTRICTED RANK IS $13$" paragraph, the boxed display, the three caveat bullets and the "upper bound $13$" bullet, all under L90's heading, while L90's own text consumes $\operatorname{rank}\mu=13$, which is L62's conclusion. [r633](REVIEW_r633.md) and [r634](REVIEW_r634.md) both found it.
+The physical arrangement is as the brief describes: [L62](../findings/sym3-blocks.md)'s proof sits inside L90's block, the "THE RESTRICTED RANK IS $13$" paragraph, the boxed display, the three caveat bullets and the "upper bound $13$" bullet, all under L90's heading, while L90's own text consumes $\mathop{\mathrm{rank}}\mu=13$, which is L62's conclusion. [r633](REVIEW_r633.md) and [r634](REVIEW_r634.md) both found it.
 
 **Tracing the dependency to the leaves:**
 
-- L62's cap $\operatorname{rank}\mu\le13$ needs [L85](../findings/sym3-blocks.md)'s $14$ and the orbit constraint. Neither touches $\mathrm{ev}$, the $40$ points, or L90;
-- L62's lower bound $\operatorname{rank}\mu\ge13$ needs the sampled rank, i.e. $\operatorname{rank}(\mathrm{ev}\circ\mu)=13$. That is a measurement, not a consequence of L90;
+- L62's cap $\mathop{\mathrm{rank}}\mu\le13$ needs [L85](../findings/sym3-blocks.md)'s $14$ and the orbit constraint. Neither touches $\mathrm{ev}$, the $40$ points, or L90;
+- L62's lower bound $\mathop{\mathrm{rank}}\mu\ge13$ needs the sampled rank, i.e. $\mathop{\mathrm{rank}}(\mathrm{ev}\circ\mu)=13$. That is a measurement, not a consequence of L90;
 - L90 needs both of the above and nothing else.
 
 **No arc returns to L90.** The chain is acyclic and the ordering is L85 → L62 → L90.
 
-**But the structure is worth stating, because both blocks hide it.** L62 and L90 are presented as two results resting on separate evidence. They rest on **one** measurement, $\operatorname{rank}(\mathrm{ev}\circ\mu)=13$, plus **one** theorem, the cap. From those two, §3.1's squeeze delivers L62 *and* L90 together. Under that presentation **L62 becomes a corollary of the same squeeze rather than an input to L90**, and the physical filing (L62's proof inside L90's block), stops being anomalous, because the two share a proof. [r633](REVIEW_r633.md) reached the same reorganisation independently; I record that I reached it before reading r633 and by the same route.
+**But the structure is worth stating, because both blocks hide it.** L62 and L90 are presented as two results resting on separate evidence. They rest on **one** measurement, $\mathop{\mathrm{rank}}(\mathrm{ev}\circ\mu)=13$, plus **one** theorem, the cap. From those two, §3.1's squeeze delivers L62 *and* L90 together. Under that presentation **L62 becomes a corollary of the same squeeze rather than an input to L90**, and the physical filing (L62's proof inside L90's block), stops being anomalous, because the two share a proof. [r633](REVIEW_r633.md) reached the same reorganisation independently; I record that I reached it before reading r633 and by the same route.
 
 **What the filing does cost a reader** is direction: someone following a pointer to L62's proof lands inside a downstream result and cannot tell which way the arrow runs. That is a filing defect with a one-line repair, not a logical one.
 
@@ -224,14 +224,14 @@ The physical arrangement is as the brief describes: [L62](../findings/sym3-block
 
 | run | what it would decide | what each outcome would mean |
 | --- | --- | --- |
-| $\operatorname{rank}$ of the $40\times47$ matrix in the four `n5_rows_*.json` dumps, over $\mathbb F_p$ | whether $\operatorname{rank}(\mathrm{ev}\circ\mu)=13$ at the certificate's own points | $13$: the squeeze of §3.1 closes and L90's conclusion is established. $<13$: the cap is not attained, $\dim\mathrm{ANN}\ge2$, and both L62 and L90 fail. $>13$: the cap is violated, which by this file's own record means a non-equivariant copy identification, and the pipeline is broken upstream |
+| $\mathop{\mathrm{rank}}$ of the $40\times47$ matrix in the four `n5_rows_*.json` dumps, over $\mathbb F_p$ | whether $\mathop{\mathrm{rank}}(\mathrm{ev}\circ\mu)=13$ at the certificate's own points | $13$: the squeeze of §3.1 closes and L90's conclusion is established. $<13$: the cap is not attained, $\dim\mathrm{ANN}\ge2$, and both L62 and L90 fail. $>13$: the cap is violated, which by this file's own record means a non-equivariant copy identification, and the pipeline is broken upstream |
 | the same on the $89$ unrestricted columns | whether the $40$ points are unisolvent for the full $14$ | $14$: §3.2's stronger statement holds and L90 needs no $\mu$ at all. $<14$: r213's, r214's and the report's route all fail, and only the weaker image-restricted form survives |
 
 **Both are already on the record**, the first at [r214](REVIEW_r214.md) at four primes near $2^{40}$ and in the shipped run at $p=1000033$, the second at [r214](REVIEW_r214.md) and [r209](REVIEW_r209.md). I take them as recorded measurements and do not re-run them. **I record no positive claim resting on any computation of my own**; §5's screen is metadata reading, and §7.2's is a comparison of five JSON key lists.
 
 ### 9.1 "Measured at four primes", where I part from an earlier audit
 
-[r633](REVIEW_r633.md) and [r634](REVIEW_r634.md), auditing L62, found *"four primes"* unsupported, on the ground that the four primes near $2^{40}$ belong to the certificate's **row lift**, a different computation. For L62 (whose claim is about $\operatorname{rank}\mu$), I agree completely: **nothing measures $\operatorname{rank}\mu$ at any prime.**
+[r633](REVIEW_r633.md) and [r634](REVIEW_r634.md), auditing L62, found *"four primes"* unsupported, on the ground that the four primes near $2^{40}$ belong to the certificate's **row lift**, a different computation. For L62 (whose claim is about $\mathop{\mathrm{rank}}\mu$), I agree completely: **nothing measures $\mathop{\mathrm{rank}}\mu$ at any prime.**
 
 **For L90's first conjunct the finding is different, and the record does support four.** [r214](REVIEW_r214.md)'s verdict table reads *"`rank(A)` mod each of the four primes (my own Gaussian elimination over $\mathbb F_p$, self-tested on planted ranks $0,1,5,13,14,20$), $13,13,13,13$"*, and the four dumps `n5_rows_1099511627873/917/933/953.json` are on disk, each $40\times47$ with an identical block order. The row lift and the rank are **two computations on the same four dumps**, which is why the phrase looked migrated. So:
 
@@ -239,7 +239,7 @@ The physical arrangement is as the brief describes: [L62](../findings/sym3-block
 
 Two further precisions on the block's evidence line, which claims *"reviewer 209 reproduced it independently at $p=1000003$ ... with its own code, its own points"*:
 
-- **r209 used $22$ points, not $40$** ([r209](REVIEW_r209.md)'s comparison table). So r209 reproduces that $\operatorname{rank}\mu$ **attains** $13$ (a property of $\mu$, needing only *some* point set) and says nothing about the certificate's own $40$;
+- **r209 used $22$ points, not $40$** ([r209](REVIEW_r209.md)'s comparison table). So r209 reproduces that $\mathop{\mathrm{rank}}\mu$ **attains** $13$ (a property of $\mu$, needing only *some* point set) and says nothing about the certificate's own $40$;
 - **injectivity of $\mathrm{ev}$ is a property of the $40$ points**, so it rests on the single shipped run at $p=1000033$ and on r214's four dumps. r209 corroborates the neighbouring claim, not this one.
 
 ---
@@ -267,7 +267,7 @@ Two further precisions on the block's evidence line, which claims *"reviewer 209
 
 **Yes, twice, and the brief's tally rises again.**
 
-- **The repair is $100$ lines below.** [L62](../findings/sym3-blocks.md)'s body supplies the cap $\operatorname{rank}\mu\le13$, which is the single missing ingredient of §3.1. The file contains its own fix and does not connect the two.
+- **The repair is $100$ lines below.** [L62](../findings/sym3-blocks.md)'s body supplies the cap $\mathop{\mathrm{rank}}\mu\le13$, which is the single missing ingredient of §3.1. The file contains its own fix and does not connect the two.
 - **The stronger route is one grep away.** The unrestricted sampled rank of $14$ at the same $40$ points is recorded in [r209](REVIEW_r209.md), [r213](REVIEW_r213.md), [r214](REVIEW_r214.md) and the report, and it makes the whole rank-comparison unnecessary.
 
 ### Pointers
@@ -280,14 +280,14 @@ The block carries exactly one file pointer, to [run_n5_sdp.py](../scripts/runs/r
 
 ## 11. Repairs owed, in priority order
 
-1. **Replace L90's proof with r213's route**, the one [run_n5_verify.py](../scripts/runs/run_n5_verify.py) and the report have carried since 2026-08-29: every coordinate of the Gram-to-sextic map and $F_5$ alike are $O(5)$-invariant sextics in a $14$-dimensional space; the $40$ evaluation functionals attain rank $14$ there; so $\mathrm{ev}$ is injective on **every** invariant sextic and agreement is identity outright. *This retires the dependency on $\operatorname{rank}\mu$, on [L62](../findings/sym3-blocks.md) and on the cap, and it strengthens the heading.*
-2. **If the rank-comparison is kept instead, state the squeeze**, $13\le\operatorname{rank}(\mathrm{ev}\circ\mu)\le\operatorname{rank}\mu\le13$, naming [L62](../findings/sym3-blocks.md)'s cap as the third inequality. **Never write $\operatorname{rank}\mu$ as measured.**
+1. **Replace L90's proof with r213's route**, the one [run_n5_verify.py](../scripts/runs/run_n5_verify.py) and the report have carried since 2026-08-29: every coordinate of the Gram-to-sextic map and $F_5$ alike are $O(5)$-invariant sextics in a $14$-dimensional space; the $40$ evaluation functionals attain rank $14$ there; so $\mathrm{ev}$ is injective on **every** invariant sextic and agreement is identity outright. *This retires the dependency on $\mathop{\mathrm{rank}}\mu$, on [L62](../findings/sym3-blocks.md) and on the cap, and it strengthens the heading.*
+2. **If the rank-comparison is kept instead, state the squeeze**, $13\le\mathop{\mathrm{rank}}(\mathrm{ev}\circ\mu)\le\mathop{\mathrm{rank}}\mu\le13$, naming [L62](../findings/sym3-blocks.md)'s cap as the third inequality. **Never write $\mathop{\mathrm{rank}}\mu$ as measured.**
 3. **Fix the audit attribution.** Name [r213](REVIEW_r213.md) and [r214](REVIEW_r214.md) as the audits of *this* step, and say r214 withdrew the argument. Move the r211/r212 paragraph to the certificate table above it, where its subject lives.
 4. **Split the block, as [r633](REVIEW_r633.md)/[r634](REVIEW_r634.md) proposed for L62** (cap as `Lemma`, attained value as `Observation`) and note that L90 and L62 share one measurement, not two.
 5. **State the block-order convention in [conventions.md](../findings/conventions.md)**, with $m$ disambiguated as the **full** multiplicity in $\mathrm{Sym}^3\mathcal W_5$, and record $47=36+11$ beside the file's $36$.
 6. **Distinguish the two sixteens** in [L86](../findings/sym3-blocks.md), the $\lambda_2$-even blocks and the surviving blocks.
 7. **Give L90 a statement in [results.md](../results.md)**, and record a Gate 2 verdict against it in [INDEX-results.md](../findings/INDEX-results.md).
-8. **Ground or correct "four primes" at all six sites**, the fifth and sixth being [sym3-blocks.md:143](../findings/sym3-blocks.md#L143) itself, which [r633](REVIEW_r633.md)'s five-site list does not include. Per §9.1 the phrase is defensible for $\operatorname{rank}(\mathrm{ev}\circ\mu)$ with [r214](REVIEW_r214.md) cited, and indefensible for $\operatorname{rank}\mu$.
+8. **Ground or correct "four primes" at all six sites**, the fifth and sixth being [sym3-blocks.md:143](../findings/sym3-blocks.md#L143) itself, which [r633](REVIEW_r633.md)'s five-site list does not include. Per §9.1 the phrase is defensible for $\mathop{\mathrm{rank}}(\mathrm{ev}\circ\mu)$ with [r214](REVIEW_r214.md) cited, and indefensible for $\mathop{\mathrm{rank}}\mu$.
 
 ---
 

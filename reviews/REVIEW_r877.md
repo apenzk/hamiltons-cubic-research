@@ -28,10 +28,10 @@ The three-line argument at the padded $W_{\mathbb{CP}^2}$ spectrum is correct, e
 
 ## Conventions, quoted from the brief
 
-- $\Lambda^2\mathbb R^n$ is realised as skew matrices. $\varphi_{ab}=E_{ba}-E_{ab}$ and it is a UNIT bivector, the inner product being $\langle X,Y\rangle=\tfrac12\operatorname{tr}(X^{\mathsf T}Y)$.
+- $\Lambda^2\mathbb R^n$ is realised as skew matrices. $\varphi_{ab}=E_{ba}-E_{ab}$ and it is a UNIT bivector, the inner product being $\langle X,Y\rangle=\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$.
 - The norm on a four-index tensor is the record's: $\lVert R\rVert^2=\tfrac14\sum_{ijkl}R_{ijkl}^2$.
 - $(\omega\wedge\omega)_{ijkl}=2(\omega_{ij}\omega_{kl}-\omega_{ik}\omega_{jl}+\omega_{il}\omega_{jk})$, the record's wedge being twice the Pfaffian.
-- $\mathcal W_n$ is the space of algebraic Weyl tensors, $\lVert W\rVert^2=\operatorname{tr}(W^2)$, and criticality on the unit sphere is $Q(W)=W^2+W^\#=\theta W$.
+- $\mathcal W_n$ is the space of algebraic Weyl tensors, $\lVert W\rVert^2=\mathop{\mathrm{tr}}(W^2)$, and criticality on the unit sphere is $Q(W)=W^2+W^\#=\theta W$.
 
 ## Hypothesis inventory
 

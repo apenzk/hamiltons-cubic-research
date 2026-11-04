@@ -16,7 +16,7 @@ Reviewer 100, independent implementation. Machinery written from the brief's def
 
 My basis of $\mathcal W_n$ has dimension $n(n+1)(n+2)(n-3)/12$ at $n=4,\dots,12$; the tensors satisfy the pair symmetries, first Bianchi and Ricci-trace-freeness to $2\times10^{-16}$. On random Weyl tensors with $\|M\|_F=1$ I get $\sum\omega^2=3$ and
 
-$$\theta=\operatorname{tr}(M^3)+\langle M^\#,M\rangle=\tfrac32 p_3(\mu)-\tfrac12 p_3(\omega)$$
+$$\theta=\mathop{\mathrm{tr}}(M^3)+\langle M^\#,M\rangle=\tfrac32 p_3(\mu)-\tfrac12 p_3(\omega)$$
 
 to $10^{-15}$ at every $n$ tested. The record's identity is reproduced independently.
 
@@ -107,7 +107,7 @@ Claim 3 is true and, in its corrected scope, correctly kills that route.
 
 Samples span $\mathcal W_n$ in every case (coefficient-matrix rank $=\dim\mathcal W_n$: 35/35, 84/84, 168/168, 300/300), so a rank shortfall could not be a sampling artifact. Spanning **is** load-bearing here, and it holds.
 
-| $n$ | $\dim\mathcal W_n$ | rank$\{\operatorname{tr}M^4,\operatorname{tr}\mathring W^4,1\}$ | rank of the 5-set | smallest s.v. ratio (5-set) |
+| $n$ | $\dim\mathcal W_n$ | rank$\{\mathop{\mathrm{tr}}M^4,\mathop{\mathrm{tr}}\mathring W^4,1\}$ | rank of the 5-set | smallest s.v. ratio (5-set) |
 |---|---|---|---|---|
 | 5 | 35 | 3/3 | **4/5** | 0 |
 | 6 | 84 | 3/3 | 5/5 | 0.0041 |
@@ -122,9 +122,9 @@ Rank 3 and rank 5 refute *linear* relations among *those listed* invariants with
 
 1. **At degree 3 a relation exists the moment you admit $\langle W^\#,W\rangle$.** rank$\{p_3(\mu),p_3(\omega),\langle W^\#,W\rangle,1\}=3/4$ at $n=6,7,8$, with null vector $(-\tfrac12,+\tfrac12,1,0)$, that *is* the record's own $\theta$ identity. The moments of $\mu$ and $\omega$ are coupled at degree 3; the coupling is $\theta$ itself.
 2. **At $n=4,5$ the two spectra are rigidly locked.** On unnormalised samples, $\;p_3(\omega)=-3\,p_3(\mu)\;$ to $2\times10^{-13}$, failing from $n=6$ (residual $3\times10^{2}$). So $\theta=3p_3(\mu)$ there and the problem collapses to a single spectrum. This is a genuine algebraic relation coupling the two spectra at degree 3.
-3. **The $n=5$ shortfall in the 5-set has a name.** The null vector is $(-1,0,\tfrac12,-\tfrac12,0)$, i.e. $\;\operatorname{tr}M^4=\tfrac12\langle W^\#,W^\#\rangle-\tfrac12\langle W^\#,W^2\rangle$, exact to $3\times10^{-13}$ at $n=4$ and $n=5$, failing from $n=6$. The brief records the rank as "4 of 5" without identifying it.
+3. **The $n=5$ shortfall in the 5-set has a name.** The null vector is $(-1,0,\tfrac12,-\tfrac12,0)$, i.e. $\;\mathop{\mathrm{tr}}M^4=\tfrac12\langle W^\#,W^\#\rangle-\tfrac12\langle W^\#,W^2\rangle$, exact to $3\times10^{-13}$ at $n=4$ and $n=5$, failing from $n=6$. The brief records the rank as "4 of 5" without identifying it.
 
-None of this rescues the route, since the interesting range is large $n$. It does correct the record: the honest statement is *"among $\{\operatorname{tr}M^4,\operatorname{tr}\mathring W^4,\langle W^\#,W^\#\rangle,\langle W^\#,W^2\rangle,1\}$ there is no linear relation for $n\ge6$."*
+None of this rescues the route, since the interesting range is large $n$. It does correct the record: the honest statement is *"among $\{\mathop{\mathrm{tr}}M^4,\mathop{\mathrm{tr}}\mathring W^4,\langle W^\#,W^\#\rangle,\langle W^\#,W^2\rangle,1\}$ there is no linear relation for $n\ge6$."*
 
 ### The consequence does not follow, and the number is wrong
 
@@ -157,7 +157,7 @@ The claim's conclusion survives, $2.291>1.236$, so the product of marginals stil
 
 Both champions are identified beyond doubt by spectrum, not by coefficient overlap:
 
-- The $\theta$-champion at $n=6,8$ has $\operatorname{rank}M=3$ with $\mu=(2,-1,-1)/\sqrt6$ and $\omega=\{-0.8165^{(3)},0.4082^{(6)}\}$, the self-dual Weyl tensor of $\mathbb{CP}^2$ padded into $\mathbb R^n$, $\theta=\sqrt{3/2}$.
+- The $\theta$-champion at $n=6,8$ has $\mathop{\mathrm{rank}}M=3$ with $\mu=(2,-1,-1)/\sqrt6$ and $\omega=\{-0.8165^{(3)},0.4082^{(6)}\}$, the self-dual Weyl tensor of $\mathbb{CP}^2$ padded into $\mathbb R^n$, $\theta=\sqrt{3/2}$.
 - The $-p_3(\omega)$-champion at $n=8$ has $\omega$-clusters $(-1.309307,1),(-0.163663,16),(0.218218,18)$, which is Claim 2's $m=4$ prediction to six figures.
 - At $n=12$ the $\theta$-champion has the $m=6$ sphere-product spectrum exactly.
 
@@ -202,7 +202,7 @@ What the ascent genuinely adds is only the negative: **no third competitor beati
 2. $Q=\nabla\theta/3$, not $\nabla\theta$.
 3. Claim 1 is a differentiated restatement of $\theta=\tfrac32p_3(\mu)-\tfrac12p_3(\omega)$, and equivalent to it.
 4. Claim 3's ratios are over the full $S^2_0$ diagonal; and the scope is "the vertex matrix is blind", not "Schur–Horn is blind", in the $\mathring W$ eigenbasis the diagonal recovers $p_3(\omega)$ exactly.
-5. Claim 4's "no algebraic relation at degree 3 or 4" must be narrowed to "no linear relation among the five listed invariants, $n\ge6$". At degree 3 the $\theta$ identity is itself a coupling; at $n=4,5$, $p_3(\omega)=-3p_3(\mu)$ and $\operatorname{tr}M^4=\tfrac12\langle W^\#,W^\#\rangle-\tfrac12\langle W^\#,W^2\rangle$ hold exactly.
+5. Claim 4's "no algebraic relation at degree 3 or 4" must be narrowed to "no linear relation among the five listed invariants, $n\ge6$". At degree 3 the $\theta$ identity is itself a coupling; at $n=4,5$, $p_3(\omega)=-3p_3(\mu)$ and $\mathop{\mathrm{tr}}M^4=\tfrac12\langle W^\#,W^\#\rangle-\tfrac12\langle W^\#,W^2\rangle$ hold exactly.
 6. Claim 4's inference "no identity $\Rightarrow$ no sharp moments-only inequality" is unsound and should be replaced by the joint-body argument.
 7. $4.013$ is the Okumura-product bound, not the moments-only relaxation; the true-marginal product is $2.291$ at $n=12$.
 8. "Maximiser" $\to$ "best point found / strict local maximum" throughout Claim 5.
@@ -218,7 +218,7 @@ Full report: [reviews/REVIEW_r100.md](reviews/REVIEW_r100.md). Own implementatio
 
 **Where they differed, and how it resolved.** On the diagonal claim 100 returned CONFIRMED-with-scope-correction and 99 returned REFUTED. They were answering different questions and both were right: 100 asked whether $\sum d^3$ *predicts* $p_3(\omega)$ (it does not, robustly across $200$ random $O(n)$ frames) while 99 asked whether the majorization *constraint* $\omega\succ d$ cuts the feasible region, which it does, by more than half the gap. The reconciled statement is in [bispectral.md](findings/bispectral.md): the vertex matrix's cube-sum is blind, Schur–Horn is not. 100 adds the reason a one-line argument will not work, $x^3$ is not convex, so majorization supplies no sign in the needed direction, and the figures come from solving the constrained problem.
 
-**100's independent corrections.** $W^\#\notin\mathrm{Weyl}_n$, about $60\%$ of $\lVert M^\#\rVert$ lying outside, so the gradient identity needs $\mathrm{pr}$ on the left, $5.8\times10^{-16}$ projected against $0.58$ relative error unprojected. $Q=\nabla\theta/3$, ratio exactly $3.000000$ in every component. The honest moments-only figure is **$2.291$**, not $4.013$: the marginals reach only $0.726/0.977$ and $2.405/5.094$ of their caps, and the joint maximum is $54\%$ of the marginal sum, so **the two marginal maxima are not simultaneously attainable**, a realisability fact rather than a rank fact. New exact couplings at low $n$: $p_3(\omega)=-3p_3(\mu)$ at $n=4,5$, and $\operatorname{tr}M^4=\tfrac12\langle W^\#,W^\#\rangle-\tfrac12\langle W^\#,W^2\rangle$ at $n=5$; degree 3 does couple once $\langle W^\#,W\rangle$ is admitted, the null vector being the $\theta$ identity itself.
+**100's independent corrections.** $W^\#\notin\mathrm{Weyl}_n$, about $60\%$ of $\lVert M^\#\rVert$ lying outside, so the gradient identity needs $\mathrm{pr}$ on the left, $5.8\times10^{-16}$ projected against $0.58$ relative error unprojected. $Q=\nabla\theta/3$, ratio exactly $3.000000$ in every component. The honest moments-only figure is **$2.291$**, not $4.013$: the marginals reach only $0.726/0.977$ and $2.405/5.094$ of their caps, and the joint maximum is $54\%$ of the marginal sum, so **the two marginal maxima are not simultaneously attainable**, a realisability fact rather than a rank fact. New exact couplings at low $n$: $p_3(\omega)=-3p_3(\mu)$ at $n=4,5$, and $\mathop{\mathrm{tr}}M^4=\tfrac12\langle W^\#,W^\#\rangle-\tfrac12\langle W^\#,W^2\rangle$ at $n=5$; degree 3 does couple once $\langle W^\#,W\rangle$ is admitted, the null vector being the $\theta$ identity itself.
 
 **Claim 2 confirmed twice over**, 100 verifying it by direct projection of the product Riemann tensor without invoking Li Thm 1.8 at all, and separately checking Thm 1.8 on asymmetric dimensions and unequal Einstein constants.
 

@@ -8,7 +8,7 @@
 
 - **The class-level system** in $(e,m,\tau_{abc},G_{12})$: per-index rows, pair and Ky Fan caps, [L240](../findings/second-order.md)'s seven-frame cap, the Gram constraints, section 5, L235's window, [L243](../findings/second-order.md)'s Gaussian subspace cap for whole and partial classes. **Sound**: [S⁵×S⁷](../scripts/misc/control_S5S7_class_system.py) satisfies every constraint.
 - **Not enough**: at $\theta=1.2361$, 190 of 2080 triples survive (a screen, five directions each); 11 symmetric ([R38](../routes.md)'s family), **179 asymmetric**. [L241](../findings/bounds-relaxations.md) and [L242](../findings/bounds-relaxations.md) are exact class points above $\theta_0(12)$; L242 is not realisable, L241's realisability is open.
-- **Checked and inert** in class form: L31's common image at L241 (no pair cap tight); Bianchi's $\Lambda^4$ part (implied by row (B) and $\operatorname{Ric}(e)=0$); partial-class Gaussian caps up to frame size $30$.
+- **Checked and inert** in class form: L31's common image at L241 (no pair cap tight); Bianchi's $\Lambda^4$ part (implied by row (B) and $\mathop{\mathrm{Ric}}(e)=0$); partial-class Gaussian caps up to frame size $30$.
 - **So the ingredient must come from outside the class system**: data the class averages erase (per-index $T_{\alpha\beta\gamma}$, per-element spectra of $\Psi_\alpha$), or a property of an actual Weyl tensor that no averaged relation sees.
 
 ## What previous sweeps covered
@@ -18,5 +18,5 @@
 ## What this sweep is asked for
 
 1. **Eigenvalue inequalities for the Lie-algebra square $R^\#$** in terms of $R$'s eigenvalues (Hamilton, Böhm–Wilking, Brendle–Schoen), and whether any sharpen at a critical point $W^2+W^\#=\theta W$.
-2. **Critical points of cubic Weyl invariants** ($\int\operatorname{tr}W^3$, $\langle W,W^\#\rangle$) and their classification by spectrum.
+2. **Critical points of cubic Weyl invariants** ($\int\mathop{\mathrm{tr}}W^3$, $\langle W,W^\#\rangle$) and their classification by spectrum.
 3. **Structure-constant moment problems**: which squared-structure-constant arrays $c_{\alpha\beta\gamma}^2$ in an orthonormal basis of $\mathfrak{so}(n)$ are realisable, beyond class averages.

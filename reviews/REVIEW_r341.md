@@ -17,13 +17,13 @@
 
 I rebuilt the three relations from the definitions in [conventions.md](../findings/conventions.md) before reading anything else, because C3 asks for an independent verification and the relations are the whole input.
 
-**(A) is the Killing marginal**, basis-free: $\sum_{b,c}T_{abc}=\sum_b\lVert[v_a,v_b]\rVert^2=-\operatorname{tr}(\mathrm{ad}_{v_a}^2)=-(n-2)\operatorname{tr}(v_a^2)=2(n-2)$, using $B(X,Y)=(n-2)\operatorname{tr}(XY)$ and $\operatorname{tr}(v^2)=-2$ from [conventions.md](../findings/conventions.md).
+**(A) is the Killing marginal**, basis-free: $\sum_{b,c}T_{abc}=\sum_b\lVert[v_a,v_b]\rVert^2=-\mathop{\mathrm{tr}}(\mathrm{ad}_{v_a}^2)=-(n-2)\mathop{\mathrm{tr}}(v_a^2)=2(n-2)$, using $B(X,Y)=(n-2)\mathop{\mathrm{tr}}(XY)$ and $\mathop{\mathrm{tr}}(v^2)=-2$ from [conventions.md](../findings/conventions.md).
 
-**(B) is Ricci-flatness, not Bianchi**, and the brief and the derivation both leave this unsaid. Write $\Phi(W)(X,Y):=\operatorname{tr}(W\,\mathrm{ad}_X\mathrm{ad}_Y)$. Then $\sum_{b,c}\lambda_bT_{abc}=-\Phi(W)(v_a,v_a)$, so (B) says $\Phi(W)=2W$ as a quadratic form. $\Phi$ is an $O(n)$-equivariant endomorphism of $S^2(\Lambda^2\mathbb R^n)$, which for $n\ge5$ splits into the four pairwise inequivalent irreducibles $\Lambda^4\oplus\mathrm{Weyl}\oplus S^2_0\oplus\mathbb R$, so by Schur $\Phi$ is a scalar on the Weyl summand. The scalar is $2$: at a coordinate-diagonal Weyl tensor with vertex matrix $K$, $\sum_{b,c}\lambda_bT_{(12)bc}=\sum_{k\ne1,2}(K_{1k}+K_{2k})=-2K_{12}$ by the row-sum-zero condition defining $\mathcal D_n$. **This matters**, $\Phi(\mathrm{Id})(X,X)=-2(n-2)\lVert X\rVert^2$, so (B) fails badly off $\mathcal W_n$, and it is exactly what excludes the non-Ricci-flat two-eigenvalue operators that [bounds.md](../findings/bounds.md) records as having tripped two reviewers.
+**(B) is Ricci-flatness, not Bianchi**, and the brief and the derivation both leave this unsaid. Write $\Phi(W)(X,Y):=\mathop{\mathrm{tr}}(W\,\mathrm{ad}_X\mathrm{ad}_Y)$. Then $\sum_{b,c}\lambda_bT_{abc}=-\Phi(W)(v_a,v_a)$, so (B) says $\Phi(W)=2W$ as a quadratic form. $\Phi$ is an $O(n)$-equivariant endomorphism of $S^2(\Lambda^2\mathbb R^n)$, which for $n\ge5$ splits into the four pairwise inequivalent irreducibles $\Lambda^4\oplus\mathrm{Weyl}\oplus S^2_0\oplus\mathbb R$, so by Schur $\Phi$ is a scalar on the Weyl summand. The scalar is $2$: at a coordinate-diagonal Weyl tensor with vertex matrix $K$, $\sum_{b,c}\lambda_bT_{(12)bc}=\sum_{k\ne1,2}(K_{1k}+K_{2k})=-2K_{12}$ by the row-sum-zero condition defining $\mathcal D_n$. **This matters**, $\Phi(\mathrm{Id})(X,X)=-2(n-2)\lVert X\rVert^2$, so (B) fails badly off $\mathcal W_n$, and it is exactly what excludes the non-Ricci-flat two-eigenvalue operators that [bounds.md](../findings/bounds.md) records as having tripped two reviewers.
 
 **(C) is criticality plus the $\tfrac12$ in $W^\#$**: $(W^\#)_{aa}=\tfrac12\sum_{b,c}T_{abc}\lambda_b\lambda_c$, and $Q(W)=\theta W$ gives $(W^\#)_{aa}=\lambda_a(\theta-\lambda_a)$.
 
-To fix that $\tfrac12$ against the record's normalisations I rebuilt $S^{n/2}\times S^{n/2}$ by hand. With $n=2m$ the vertex matrix is $K_{ij}=m/(2m-1)$ inside a factor and $-(m-1)/(2m-1)$ across; $\lVert K\rVert_F^2=2m^2(m-1)/(2m-1)$; $P=\sum_{i<j}K_{ij}^3+\tfrac12\operatorname{tr}(K^3)=m^2(m-1)^2/(2m-1)$; and
+To fix that $\tfrac12$ against the record's normalisations I rebuilt $S^{n/2}\times S^{n/2}$ by hand. With $n=2m$ the vertex matrix is $K_{ij}=m/(2m-1)$ inside a factor and $-(m-1)/(2m-1)$ across; $\lVert K\rVert_F^2=2m^2(m-1)/(2m-1)$; $P=\sum_{i<j}K_{ij}^3+\tfrac12\mathop{\mathrm{tr}}(K^3)=m^2(m-1)^2/(2m-1)$; and
 
 $$\theta=\frac{P}{\lVert W\rVert^3}=\frac{\sqrt{(m-1)(2m-1)}}m=\frac{\sqrt{2(n-1)(n-2)}}n=\theta_0(n).$$
 
@@ -93,7 +93,7 @@ I looked for the fixed-spectrum full system in [bounds.md](../findings/bounds.md
 
 ### 6.1 The two dependencies, with the addendum's weights corrected
 
-Both come from total symmetry of $T$ plus $\operatorname{tr}W=0$, and both are identities of *functionals*, right-hand sides included:
+Both come from total symmetry of $T$ plus $\mathop{\mathrm{tr}}W=0$, and both are identities of *functionals*, right-hand sides included:
 
 $$\textbf{D1}:\quad \sum_a\lambda_a(\mathrm A_a)=\sum_a(\mathrm B_a),\qquad\textbf{D2}:\quad \sum_a\lambda_a(\mathrm B_a)=\sum_a(\mathrm C_a),$$
 
@@ -111,15 +111,15 @@ together with the three-term condition on distinct triples. Assume every $m_i\ge
 
 $$\varphi_i(x)=m_i(x-\nu_i)(\beta-\kappa x),$$
 
-a **two-parameter** family. $(\beta,\kappa)=(1,0)$ is D1 and $(0,-1)$ is D2, so the left-null space is exactly $\operatorname{span}\{D1,D2\}$ and the three-term condition is automatically satisfied. $\square$
+a **two-parameter** family. $(\beta,\kappa)=(1,0)$ is D1 and $(0,-1)$ is D2, so the left-null space is exactly $\mathop{\mathrm{span}}\{D1,D2\}$ and the three-term condition is automatically satisfied. $\square$
 
-**Consequence.** With every $m_i\ge3$, $\operatorname{rank}[M\mid v]=3d-2$ and, since both dependencies kill the $\theta$ column, $v$ lies in the column span of $M$, so $\theta$ is **non-constant** on the feasible affine set, whose dimension is $V+1-(3d-2)$ with $V$ the number of realisable types. At $m_i\ge3$, $V=\binom{d+2}3$ and the derivation's table is right: $d=2\to1$, $d=3\to4$, $d=4\to11$.
+**Consequence.** With every $m_i\ge3$, $\mathop{\mathrm{rank}}[M\mid v]=3d-2$ and, since both dependencies kill the $\theta$ column, $v$ lies in the column span of $M$, so $\theta$ is **non-constant** on the feasible affine set, whose dimension is $V+1-(3d-2)$ with $V$ the number of realisable types. At $m_i\ge3$, $V=\binom{d+2}3$ and the derivation's table is right: $d=2\to1$, $d=3\to4$, $d=4\to11$.
 
 ### 6.3 "Never forced" is REFUTED, the small-multiplicity cases
 
 The clause *"So $\max\theta$ is a genuine maximisation, never forced"* fails in both available ways, both at $d=2$, and both because $V<\binom{d+2}3$.
 
-**$m_1=2$: $\theta$ is forced.** The type $\{1,1,1\}$ is absent, so $V=3$ and the unknown count is $4$, not $5$. Condition $(\ast)$ for class $1$ is lost, and the left-null space of $M$ grows to dimension $3$; parametrising $\varphi_2(x)=(x-\nu_2)(px+q)$ and solving $(\ast\ast)$ for both orders leaves $(y^C_1,p,q)$ free, so some left-null vector has $y^{\mathsf T}v=-2\sum_iy^C_i\nu_i\ne0$ and $v\notin\operatorname{col}(M)$. Then $\operatorname{rank}[M\mid v]=4=$ the unknown count: **the equalities alone determine $(t,\theta)$ uniquely.** Note the rank is still $3d-2$; it is the variable count that moved.
+**$m_1=2$: $\theta$ is forced.** The type $\{1,1,1\}$ is absent, so $V=3$ and the unknown count is $4$, not $5$. Condition $(\ast)$ for class $1$ is lost, and the left-null space of $M$ grows to dimension $3$; parametrising $\varphi_2(x)=(x-\nu_2)(px+q)$ and solving $(\ast\ast)$ for both orders leaves $(y^C_1,p,q)$ free, so some left-null vector has $y^{\mathsf T}v=-2\sum_iy^C_i\nu_i\ne0$ and $v\notin\mathop{\mathrm{col}}(M)$. Then $\mathop{\mathrm{rank}}[M\mid v]=4=$ the unknown count: **the equalities alone determine $(t,\theta)$ uniquely.** Note the rank is still $3d-2$; it is the variable count that moved.
 
 **$m_1=1$: the system is infeasible at every $n\ge5$.** Let $a$ be the unique index of class $1$. Every $b\ne a$ has $\lambda_b=\nu_2$, so (B) at row $a$ reads $\nu_2\sum_{b,c}T_{abc}=2(n-2)\nu_2=-2\nu_1$, giving $\nu_1=-(n-2)\nu_2$. Tracelessness gives $\nu_1=-(N-1)\nu_2$. These agree only if $N=n-1$, false for every $n\ge3$. **So $\Pi(\lambda)=\varnothing$**, and since only (A) and (B) were used (both valid at every $W\in\mathcal W_n$, critical or not), this is a theorem about Weyl tensors:
 

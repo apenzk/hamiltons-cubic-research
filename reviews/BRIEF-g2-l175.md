@@ -51,7 +51,7 @@ Machine-checked at `lean/HamiltonsCubic/Results/L175.lean`.
 
 and, before the edit:
 
-> **The letter $M$ carries two objects, and their norms differ by $\sqrt2$.** $M$ (or $K$) is the $n\times n$ **sectional** matrix …, **where $\lVert K\rVert_F^2=2$ at a unit Weyl tensor**; $W$ is the operator on $\Lambda^2$, where $\operatorname{tr}(W^2)=1$.
+> **The letter $M$ carries two objects, and their norms differ by $\sqrt2$.** $M$ (or $K$) is the $n\times n$ **sectional** matrix …, **where $\lVert K\rVert_F^2=2$ at a unit Weyl tensor**; $W$ is the operator on $\Lambda^2$, where $\mathop{\mathrm{tr}}(W^2)=1$.
 
 > **The claim**: the second is the diagonal-locus value stated without its scope; $K$ captures only the entries $W_{abab}$, so $\lVert K\rVert_F^2\le2$ with equality exactly where those determine $W$. The bullet is rewritten to carry the scope.
 

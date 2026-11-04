@@ -11,11 +11,11 @@ Reviewed cold: the sharp map, the adjugate identity, the $\mathfrak{so}(4)$ chir
 | # | Claim | Verdict |
 |---|---|---|
 | 1a | $(R^\#)_{ab}=\tfrac12c_{a\gamma\delta}c_{b\varepsilon\zeta}R_{\gamma\varepsilon}R_{\delta\zeta}$ is the project's / Böhm–Wilking's $\#$ | **CONFIRMED** |
-| 1b | $\operatorname{adj}(R)_{ij}=\tfrac12\varepsilon_{iab}\varepsilon_{jcd}R_{ac}R_{bd}$, "residual exactly 0" | **CONFIRMED for symmetric $R$; false as stated for general $R$** (it is the cofactor matrix $=\operatorname{adj}(R)^{\mathsf T}$) |
+| 1b | $\mathop{\mathrm{adj}}(R)_{ij}=\tfrac12\varepsilon_{iab}\varepsilon_{jcd}R_{ac}R_{bd}$, "residual exactly 0" | **CONFIRMED for symmetric $R$; false as stated for general $R$** (it is the cofactor matrix $=\mathop{\mathrm{adj}}(R)^{\mathsf T}$) |
 | 1c | $\#$ is the adjugate $\iff c$ is the volume form | **REFUTED as stated**, normalisation-dependent, and it fails on the very algebras post F2c is about |
 | 1d | $\dots\iff\dim\mathfrak g=3$ | **CONFIRMED, by an argument the post never gives** (degree count) |
 | 1e | "$\langle W^\#,W\rangle$ is spectral exactly when the form is a volume form" | **REFUTED by the author's own $n=4$ example** |
-| 1f | Post F2c's display $\langle W^\#,W\rangle=3(\det W^++\det W^-)=\operatorname{tr}(W^3)$ | **REFUTED, out by a factor 2**, and it contradicts the next sentence of the same post |
+| 1f | Post F2c's display $\langle W^\#,W\rangle=3(\det W^++\det W^-)=\mathop{\mathrm{tr}}(W^3)$ | **REFUTED, out by a factor 2**, and it contradicts the next sentence of the same post |
 | 1g | Post F2c's two-line proof of Huisken Lemma 3.5 | **CONFIRMED** (the one unambiguously good result in this batch) |
 | 2a | Collapse criterion, sufficiency as stated | **REFUTED as stated**, needs one $t$ common to all blocks, not "constant on each block" |
 | 2b | Collapse criterion, necessity ("exactly when") | **REFUTED**, exact counterexample with full cross-block support |
@@ -38,7 +38,7 @@ Reviewed cold: the sharp map, the adjugate identity, the $\mathfrak{so}(4)$ chir
 
 Derived independently from the project's own definition in [curvature_operator.py](../scripts/curvature_operator.py), `R_sharp_quadform`:
 
-$$\langle R^\#\eta,\eta\rangle=-\tfrac12\sum_i\langle[\eta,R([\eta,R\omega_i])],\omega_i\rangle=-\tfrac12\operatorname{tr}\!\big(\mathrm{ad}_\eta R\,\mathrm{ad}_\eta R\big).$$
+$$\langle R^\#\eta,\eta\rangle=-\tfrac12\sum_i\langle[\eta,R([\eta,R\omega_i])],\omega_i\rangle=-\tfrac12\mathop{\mathrm{tr}}\!\big(\mathrm{ad}_\eta R\,\mathrm{ad}_\eta R\big).$$
 
 With $(\mathrm{ad}_\eta)_{\gamma\alpha}=\eta_\beta c_{\beta\alpha\gamma}$ this is $-\tfrac12\eta_b\eta_f\,c_{bac}c_{fed}R_{ad}R_{ec}$; relabelling and using $c_{b\varepsilon\zeta}=-c_{b\zeta\varepsilon}$ turns the sign over and gives exactly the post's
 
@@ -46,35 +46,35 @@ $$(R^\#)_{ab}=\tfrac12\,c_{a\gamma\delta}c_{b\varepsilon\zeta}R_{\gamma\varepsil
 
 Symbolic check on $\mathfrak{so}(3)$ with a fully general symmetric $R$: author-formula minus script-formula $=0$, entry by entry.
 
-It also agrees with [Böhm–Wilking](https://arxiv.org/abs/math/0606187) equation (4), $\langle(R\#S)h,h\rangle=\tfrac12\sum_{\alpha\beta}\langle[Rb_\alpha,Sb_\beta],h\rangle\langle[b_\alpha,b_\beta],h\rangle$, which expands to $(R^\#)_{ef}=\tfrac12c_{e\gamma\delta}c_{f\alpha\beta}R_{\alpha\gamma}R_{\beta\delta}$, the same index pairing. Their inner product $\langle A,B\rangle=-\tfrac12\operatorname{tr}(AB)$ is the project's, so the conventions match with no rescaling. **CONFIRMED.**
+It also agrees with [Böhm–Wilking](https://arxiv.org/abs/math/0606187) equation (4), $\langle(R\#S)h,h\rangle=\tfrac12\sum_{\alpha\beta}\langle[Rb_\alpha,Sb_\beta],h\rangle\langle[b_\alpha,b_\beta],h\rangle$, which expands to $(R^\#)_{ef}=\tfrac12c_{e\gamma\delta}c_{f\alpha\beta}R_{\alpha\gamma}R_{\beta\delta}$, the same index pairing. Their inner product $\langle A,B\rangle=-\tfrac12\mathop{\mathrm{tr}}(AB)$ is the project's, so the conventions match with no rescaling. **CONFIRMED.**
 
 ### 1b. The adjugate identity is the *cofactor* identity
 
 For a general $3\times3$ $R$, exact expansion gives
 
-$$\tfrac12\varepsilon_{iab}\varepsilon_{jcd}R_{ac}R_{bd}-\operatorname{adj}(R)^{\mathsf T}=0,\qquad \tfrac12\varepsilon_{iab}\varepsilon_{jcd}R_{ac}R_{bd}-\operatorname{adj}(R)\ne0 ,$$
+$$\tfrac12\varepsilon_{iab}\varepsilon_{jcd}R_{ac}R_{bd}-\mathop{\mathrm{adj}}(R)^{\mathsf T}=0,\qquad \tfrac12\varepsilon_{iab}\varepsilon_{jcd}R_{ac}R_{bd}-\mathop{\mathrm{adj}}(R)\ne0 ,$$
 
-the second residual being the antisymmetric part (e.g. entry $(0,1)$ is $r_{01}r_{22}-r_{02}r_{21}-r_{10}r_{22}+r_{12}r_{20}$). Harmless here because every $R$ in play is symmetric, but "verified here symbolically, residual exactly $0$" is true only under that unstated hypothesis. Fix the statement to $\operatorname{cof}(R)_{ij}$ or add "for symmetric $R$".
+the second residual being the antisymmetric part (e.g. entry $(0,1)$ is $r_{01}r_{22}-r_{02}r_{21}-r_{10}r_{22}+r_{12}r_{20}$). Harmless here because every $R$ in play is symmetric, but "verified here symbolically, residual exactly $0$" is true only under that unstated hypothesis. Fix the statement to $\mathop{\mathrm{cof}}(R)_{ij}$ or add "for symmetric $R$".
 
 ### 1c. "$\#$ is the adjugate $\iff$ the structure constants are the volume form", REFUTED as stated
 
-The forward half is fine and I confirm it: in the project's basis $E_{(ij)}$ (declared orthonormal, i.e. $\langle A,B\rangle=\tfrac12\operatorname{tr}(A^{\mathsf T}B)$), $\mathfrak{so}(3)$ has $c_{abc}=\varepsilon_{abc}$ **exactly** (max $\lvert c-\varepsilon\rvert=0$), and then $R^\#-\operatorname{adj}(R)=0$ identically on symmetric $R$.
+The forward half is fine and I confirm it: in the project's basis $E_{(ij)}$ (declared orthonormal, i.e. $\langle A,B\rangle=\tfrac12\mathop{\mathrm{tr}}(A^{\mathsf T}B)$), $\mathfrak{so}(3)$ has $c_{abc}=\varepsilon_{abc}$ **exactly** (max $\lvert c-\varepsilon\rvert=0$), and then $R^\#-\mathop{\mathrm{adj}}(R)=0$ identically on symmetric $R$.
 
-But a $3$-dimensional compact algebra with an invariant metric has $c=\lambda\varepsilon$ for *some* $\lambda$, and then $R^\#=\lambda^2\operatorname{adj}(R)$. So the middle equivalence needs $\lambda^2=1$, which is a normalisation, not a consequence of $\dim\mathfrak g=3$.
+But a $3$-dimensional compact algebra with an invariant metric has $c=\lambda\varepsilon$ for *some* $\lambda$, and then $R^\#=\lambda^2\mathop{\mathrm{adj}}(R)$. So the middle equivalence needs $\lambda^2=1$, which is a normalisation, not a consequence of $\dim\mathfrak g=3$.
 
 **This is not pedantry, it fails on exactly the algebras posts 2c and 2e2 exist to explain.** Building the chirality basis $\omega^\pm$ of $\mathfrak{so}(4)$ with the correct Hodge signs, $\omega^\pm=\tfrac1{\sqrt2}\big(E_{01}\pm E_{23}\big),\ \tfrac1{\sqrt2}\big(E_{02}\mp E_{13}\big),\ \tfrac1{\sqrt2}\big(E_{03}\pm E_{12}\big)$, the Gram matrix is $I_6$ and the structure constants are
 
 $$c^+=+\sqrt2\,\varepsilon,\qquad c^-=-\sqrt2\,\varepsilon,\qquad c(\text{mixed})=0 .$$
 
-Hence on each chirality $W^\#=\mathbf{2}\operatorname{adj}$, verified as an exact symbolic identity $W^\#|_{+}-2\operatorname{adj}(A)=0$ with $A$ a general symmetric $3\times3$. **At $n=4$ the sharp map is twice the adjugate, not the adjugate.** The post's headline is therefore false in the one case it is invoked for.
+Hence on each chirality $W^\#=\mathbf{2}\mathop{\mathrm{adj}}$, verified as an exact symbolic identity $W^\#|_{+}-2\mathop{\mathrm{adj}}(A)=0$ with $A$ a general symmetric $3\times3$. **At $n=4$ the sharp map is twice the adjugate, not the adjugate.** The post's headline is therefore false in the one case it is invoked for.
 
 ### 1d. "$\iff\dim\mathfrak g=3$", true, but for a reason the post does not give
 
-$R\mapsto R^\#$ is homogeneous of degree $2$ for every $N$; $R\mapsto\operatorname{adj}(R)$ is homogeneous of degree $N-1$. Equality of the two as maps forces $N-1=2$. That one line is the whole backward direction and it is missing from the post; what the post offers instead ("the structure constants *are* the volume form") is a restatement, not an argument, and 1c shows it is the weaker of the two.
+$R\mapsto R^\#$ is homogeneous of degree $2$ for every $N$; $R\mapsto\mathop{\mathrm{adj}}(R)$ is homogeneous of degree $N-1$. Equality of the two as maps forces $N-1=2$. That one line is the whole backward direction and it is missing from the post; what the post offers instead ("the structure constants *are* the volume form") is a restatement, not an argument, and 1c shows it is the weaker of the two.
 
 ### 1e. "It is spectral exactly when that form is a volume form", REFUTED by the author's own example
 
-This is the sentence the entire invariant-theory section is built on, and it is contradicted two paragraphs earlier in the same post. At $n=4$, $c$ is an alternating $3$-form on $N=6$ dimensions; it is **not** a volume form (a volume form on $\mathbb R^6$ is a $6$-form). Yet $\langle W^\#,W\rangle=2\operatorname{tr}(W^3)$ identically on $\mathrm{Weyl}_4$, verified below as an exact polynomial identity. So spectrality does *not* require a volume form. What it requires at $n=4$ is that $c$ decomposes into commuting $3$-dimensional ideals with a per-ideal trace condition, which is post F2f's content, and post F2f is the correct statement of the mechanism.
+This is the sentence the entire invariant-theory section is built on, and it is contradicted two paragraphs earlier in the same post. At $n=4$, $c$ is an alternating $3$-form on $N=6$ dimensions; it is **not** a volume form (a volume form on $\mathbb R^6$ is a $6$-form). Yet $\langle W^\#,W\rangle=2\mathop{\mathrm{tr}}(W^3)$ identically on $\mathrm{Weyl}_4$, verified below as an exact polynomial identity. So spectrality does *not* require a volume form. What it requires at $n=4$ is that $c$ decomposes into commuting $3$-dimensional ideals with a per-ideal trace condition, which is post F2f's content, and post F2f is the correct statement of the mechanism.
 
 The invariant statement the post should be making is: **$\mathfrak g$ is a sum of $3$-dimensional ideals** (i.e. $\mathfrak g\cong\mathfrak{su}(2)^k$), not $\dim\mathfrak g=3$. For $\mathfrak{so}(n)$ that selects $n=3,4$, which is the boundary the post wants, and it gets it only by patching "and $\mathfrak{so}(4)$ escapes by splitting" onto a criterion that does not cover it.
 
@@ -82,28 +82,28 @@ The invariant statement the post should be making is: **$\mathfrak g$ is a sum o
 
 With $A=W^+$, $B=W^-$ general symmetric $3\times3$ blocks and each trace-free:
 
-$$\langle W^\#,W\rangle-2\operatorname{tr}(W^3)=0,\qquad 3(\det A+\det B)-\operatorname{tr}(W^3)=0 ,$$
+$$\langle W^\#,W\rangle-2\mathop{\mathrm{tr}}(W^3)=0,\qquad 3(\det A+\det B)-\mathop{\mathrm{tr}}(W^3)=0 ,$$
 
 both exact. So $\langle W^\#,W\rangle=6(\det A+\det B)$, whereas post F2c displays
 
-$$\langle W^\#,W\rangle=3\big(\det W^++\det W^-\big)=\operatorname{tr}\big((W^+)^3\big)+\operatorname{tr}\big((W^-)^3\big),$$
+$$\langle W^\#,W\rangle=3\big(\det W^++\det W^-\big)=\mathop{\mathrm{tr}}\big((W^+)^3\big)+\mathop{\mathrm{tr}}\big((W^-)^3\big),$$
 
-which is $\operatorname{tr}(W^3)$, **half the truth**. The very next sentence ("Reviewer 94 fixes the constant at $\langle W^\#,W\rangle=2\operatorname{tr}(W^3)$") is correct and directly contradicts the display. The display is the residue of the "$\#=\operatorname{adj}$" error of 1c: it uses $\langle\operatorname{adj}A,A\rangle=3\det A$ where the true map is $2\operatorname{adj}$.
+which is $\mathop{\mathrm{tr}}(W^3)$, **half the truth**. The very next sentence ("Reviewer 94 fixes the constant at $\langle W^\#,W\rangle=2\mathop{\mathrm{tr}}(W^3)$") is correct and directly contradicts the display. The display is the residue of the "$\#=\mathop{\mathrm{adj}}$" error of 1c: it uses $\langle\mathop{\mathrm{adj}}A,A\rangle=3\det A$ where the true map is $2\mathop{\mathrm{adj}}$.
 
-Independent confirmation on $W_{\mathbb{CP}^2}$, $\Lambda^2$-spectrum $(2,-1,-1,0,0,0)$: exact $\langle W^\#,W\rangle=12$, $\operatorname{tr}(W^3)=6$, $P=\langle Q(W),W\rangle=18$, $\lVert W\rVert^2=6$, $\theta^2=\tfrac{18^2}{6^3}=\tfrac32$. So $\langle W^\#,W\rangle=2\operatorname{tr}(W^3)$ and $P=3\operatorname{tr}(W^3)$ both hold; the display does not.
+Independent confirmation on $W_{\mathbb{CP}^2}$, $\Lambda^2$-spectrum $(2,-1,-1,0,0,0)$: exact $\langle W^\#,W\rangle=12$, $\mathop{\mathrm{tr}}(W^3)=6$, $P=\langle Q(W),W\rangle=18$, $\lVert W\rVert^2=6$, $\theta^2=\tfrac{18^2}{6^3}=\tfrac32$. So $\langle W^\#,W\rangle=2\mathop{\mathrm{tr}}(W^3)$ and $P=3\mathop{\mathrm{tr}}(W^3)$ both hold; the display does not.
 
 ### 1g. The two-line proof of Lemma 3.5 is correct, CONFIRMED
 
-Recorded here because it is the one claim in this batch that is both new and right. Okumura at $m=3$ reads $\operatorname{tr}(A^3)\le\frac{m-2}{\sqrt{m(m-1)}}(\operatorname{tr}A^2)^{3/2}=\frac1{\sqrt6}(\operatorname{tr}A^2)^{3/2}$, with equality at $\operatorname{diag}(2,-1,-1)$ ($6=\tfrac1{\sqrt6}\cdot6\sqrt6$, exact). Then with $a=\lVert W^+\rVert^2$, $b=\lVert W^-\rVert^2$,
+Recorded here because it is the one claim in this batch that is both new and right. Okumura at $m=3$ reads $\mathop{\mathrm{tr}}(A^3)\le\frac{m-2}{\sqrt{m(m-1)}}(\mathop{\mathrm{tr}}A^2)^{3/2}=\frac1{\sqrt6}(\mathop{\mathrm{tr}}A^2)^{3/2}$, with equality at $\mathop{\mathrm{diag}}(2,-1,-1)$ ($6=\tfrac1{\sqrt6}\cdot6\sqrt6$, exact). Then with $a=\lVert W^+\rVert^2$, $b=\lVert W^-\rVert^2$,
 
-$$P=3\operatorname{tr}(W^3)\le\tfrac3{\sqrt6}\big(a^{3/2}+b^{3/2}\big)\le\tfrac3{\sqrt6}(a+b)^{3/2}=\sqrt{\tfrac32}\,\lVert W\rVert^3,$$
+$$P=3\mathop{\mathrm{tr}}(W^3)\le\tfrac3{\sqrt6}\big(a^{3/2}+b^{3/2}\big)\le\tfrac3{\sqrt6}(a+b)^{3/2}=\sqrt{\tfrac32}\,\lVert W\rVert^3,$$
 
-since $\tfrac3{\sqrt6}=\sqrt{3/2}$, with equality exactly at $b=0$ and $W^+\propto\operatorname{diag}(2,-1,-1)$, i.e. $W_{\mathbb{CP}^2}$. Clean, and it does make Huisken's Lagrange enumeration non-load-bearing.
+since $\tfrac3{\sqrt6}=\sqrt{3/2}$, with equality exactly at $b=0$ and $W^+\propto\mathop{\mathrm{diag}}(2,-1,-1)$, i.e. $W_{\mathbb{CP}^2}$. Clean, and it does make Huisken's Lagrange enumeration non-load-bearing.
 
 ### Answering the brief's 1(b) and 1(c) directly
 
 - **Could $\#$ coincide with something adjugate-like in higher dimensions?** Not with the adjugate, degree forbids it (1d). But the post's framing conceals the fact that the *relevant* higher-dimensional structure is not "a substitute for $\det$" at all: $\langle R^\#,R\rangle$ is a fixed $O(n)$-invariant cubic form and it is completely explicit ($T_{abc}=c_{abc}^2$, equal to $1$ on triangles and $0$ elsewhere in the diagonal frame, confirmed at $n=5$: all nonzero $\lvert c\rvert=1$, with exactly $10=\binom53$ of the $\binom{10}3=120$ triples nonzero). Nothing needs to be invented to play the role of $\det$.
-- **Does the conclusion follow?** No. "$\#$ is literally defined by $\tfrac12ccRR$, and $\operatorname{adj}$ is $\tfrac12\varepsilon\varepsilon RR$" is a re-reading of a definition, not a discovery, and everything the post extracts from it beyond the degree count (1e, and the whole of section 3 below) does not follow.
+- **Does the conclusion follow?** No. "$\#$ is literally defined by $\tfrac12ccRR$, and $\mathop{\mathrm{adj}}$ is $\tfrac12\varepsilon\varepsilon RR$" is a re-reading of a definition, not a discovery, and everything the post extracts from it beyond the degree count (1e, and the whole of section 3 below) does not follow.
 
 ---
 
@@ -137,7 +137,7 @@ $p_3=e_1p_2-e_2p_1+3e_3$, so $e_1=0\Rightarrow p_1=0\Rightarrow p_3=3e_3$, in an
 
 ### 2d/2e. The $\mathfrak{su}(3)$ computation, values CONFIRMED, count REFUTED
 
-Built the Gell-Mann $T_a=\lambda_a/2$ and extracted $f_{abc}=-2i\operatorname{tr}([T_a,T_b]T_c)$ exactly. The nonzero unordered triples are exactly
+Built the Gell-Mann $T_a=\lambda_a/2$ and extracted $f_{abc}=-2i\mathop{\mathrm{tr}}([T_a,T_b]T_c)$ exactly. The nonzero unordered triples are exactly
 
 $$(123),(147),(156),(246),(257),(345),(367),(458),(678)$$
 
@@ -150,7 +150,7 @@ But $\binom83=56$ and $56-9=47$. The post's "**28** of its $56$ triples carrying
 Two problems.
 
 1. **The evidence does not bear on the claim.** Condition 1 says $c_{\alpha\beta\gamma}=0$ unless all three indices lie in one block; that forces $[\,\mathrm{span}\,B,\mathrm{span}\,B\,]\subseteq\mathrm{span}\,B$ and $[\mathrm{span}\,B,\mathrm{span}\,B']=0$, i.e. **the blocks are commuting ideals**. For $\mathfrak{so}(n)$, $n\ge5$, simplicity leaves exactly one block: all of $\mathfrak g$. $\mathfrak{su}(3)$ is an ideal of no $\mathfrak{so}(n)$, so the Gell-Mann computation (however correct), is a statement about an algebra that can never occur as a block here. It is presented as "already fails for the smallest candidate"; it is not a candidate.
-2. **The claim that is actually needed is never stated, let alone proved.** For $n\ge5$ the criterion collapses to a single sharp question: *is there an orthonormal basis of $\mathfrak{so}(n)$ in which $\lvert c_{abc}\rvert$ is constant over all $\binom I3$ triples?* (Condition 2 is then automatic, since $\operatorname{tr}_{\Lambda^2}W=0$ for every Weyl tensor.) In the diagonal frame the answer is plainly no (at $n=5$ only $10$ of $120$ triples are nonzero, all with $\lvert c\rvert=1$) but the criterion quantifies over *all* eigenframes, and no frame-independent obstruction is given. The row-marginal arithmetic does not supply one: constant $T\equiv t$ would need $\binom{N-1}2t=n-2$, i.e. $t=\frac{2(n-2)}{(N-1)(N-2)}$, and the pair cap $\sum_cT_{abc}=(N-2)t=\frac{2(n-2)}{N-1}\le2$ is satisfied for every $n$. So nothing in the project's own constraint set rules it out. **UNPROVEN.**
+2. **The claim that is actually needed is never stated, let alone proved.** For $n\ge5$ the criterion collapses to a single sharp question: *is there an orthonormal basis of $\mathfrak{so}(n)$ in which $\lvert c_{abc}\rvert$ is constant over all $\binom I3$ triples?* (Condition 2 is then automatic, since $\mathop{\mathrm{tr}}_{\Lambda^2}W=0$ for every Weyl tensor.) In the diagonal frame the answer is plainly no (at $n=5$ only $10$ of $120$ triples are nonzero, all with $\lvert c\rvert=1$) but the criterion quantifies over *all* eigenframes, and no frame-independent obstruction is given. The row-marginal arithmetic does not supply one: constant $T\equiv t$ would need $\binom{N-1}2t=n-2$, i.e. $t=\frac{2(n-2)}{(N-1)(N-2)}$, and the pair cap $\sum_cT_{abc}=(N-2)t=\frac{2(n-2)}{N-1}\le2$ is satisfied for every $n$. So nothing in the project's own constraint set rules it out. **UNPROVEN.**
 
 ---
 
@@ -188,7 +188,7 @@ They are neither three boundaries at $n=4$ nor three independent arguments.
 
 | appearance | what it actually says | its boundary |
 |---|---|---|
-| $\#=\operatorname{adj}\iff\dim\mathfrak g=3$ | $\binom n2=3$ | $n=3$ |
+| $\#=\mathop{\mathrm{adj}}\iff\dim\mathfrak g=3$ | $\binom n2=3$ | $n=3$ |
 | $\frac{n^2(n^2-13)}{12}$ moduli | $-3,\ 4,\ 25,\ 69$ at $n=3,4,5,6$: moduli appear at $n=4$ | $n=3\mid4$, with $n=4$ on the **moduli** side |
 | $\Lambda^3$ orbit finiteness, $N\le8$ | $\binom n2\le8\iff n(n-1)\le16\iff n\le4$ | $n=4\mid5$ |
 
@@ -219,7 +219,7 @@ Exhaustive exact enumeration over all $3^{15}$ integer labellings, filtered to s
 
 $$P\in\{-24,\,0,\,+24\},\qquad\text{counts }60/180/60,$$
 
-all with $\lVert W\rVert^2=12$ and $\operatorname{tr}(W^3)=0$. So the pair exists (**CONFIRMED**) and the true spread is $48$, not $24$: the record quotes $0$ against $24$ but $-24$ also occurs. (Structurally: the three zero edges must form a perfect matching, so $\lambda$ is $K_6$ minus a $1$-factor $=K_{2,2,2}$, $2$-factored into a $+$ part and a $-$ part; $P=\pm24$ when the $\pm$ parts are triangle pairs, $P=0$ when they are hexagons.) I did not check the stabiliser claim; it is not needed for the conclusion, which is that no spectral function determines $P$.
+all with $\lVert W\rVert^2=12$ and $\mathop{\mathrm{tr}}(W^3)=0$. So the pair exists (**CONFIRMED**) and the true spread is $48$, not $24$: the record quotes $0$ against $24$ but $-24$ also occurs. (Structurally: the three zero edges must form a perfect matching, so $\lambda$ is $K_6$ minus a $1$-factor $=K_{2,2,2}$, $2$-factored into a $+$ part and a $-$ part; $P=\pm24$ when the $\pm$ parts are triangle pairs, $P=0$ when they are hexagons.) I did not check the stabiliser claim; it is not needed for the conclusion, which is that no spectral function determines $P$.
 
 ### 5c. The Huisken norm correction, the fact is right, the conversion as written is not
 
@@ -227,11 +227,11 @@ $\lvert W\rvert=2\lVert W\rVert$ is correct. But the note in [huisken notes](../
 
 $$\tfrac{\sqrt6}4\lvert W\rvert^3=\tfrac{\sqrt6}4\cdot8\lVert W\rVert^3=2\sqrt6\,\lVert W\rVert^3\ \ne\ \tfrac{\sqrt6}2\lVert W\rVert^3 ,$$
 
-a factor of exactly $4$ adrift. The missing factor is in the *cubic*, not the norm, and the note never says so. Supplied here: with the $4$-dimensional normal form $W^\pm=\operatorname{diag}(\lambda_i\pm\mu_i)$, $\sum\lambda=\sum\mu=0$, Huisken's
+a factor of exactly $4$ adrift. The missing factor is in the *cubic*, not the norm, and the note never says so. Supplied here: with the $4$-dimensional normal form $W^\pm=\mathop{\mathrm{diag}}(\lambda_i\pm\mu_i)$, $\sum\lambda=\sum\mu=0$, Huisken's
 
 $$P=6\{\lambda_1\lambda_2\lambda_3+\lambda_1\mu_2\mu_3+\lambda_2\mu_1\mu_3+\lambda_3\mu_1\mu_2\}+\textstyle\sum\lambda_i^3+3\sum\lambda_i\mu_i^2$$
 
-satisfies $P-\tfrac32\operatorname{tr}(W^3)=0$ **exactly**. Hence Huisken's left-hand side $=8P=12\operatorname{tr}(W^3)=4\langle Q(W),W\rangle$, and
+satisfies $P-\tfrac32\mathop{\mathrm{tr}}(W^3)=0$ **exactly**. Hence Huisken's left-hand side $=8P=12\mathop{\mathrm{tr}}(W^3)=4\langle Q(W),W\rangle$, and
 
 $$\langle Q(W),W\rangle\le\tfrac14\cdot\tfrac{\sqrt6}4\big(2\lVert W\rVert\big)^3=\tfrac{\sqrt6}2\lVert W\rVert^3=\sqrt{\tfrac32}\lVert W\rVert^3 .$$
 
@@ -241,8 +241,8 @@ The stated conclusion is therefore right and the note's independent $\mathbb{CP}
 
 ## What to change
 
-1. **Post F2c:** delete the display $\langle W^\#,W\rangle=3(\det W^++\det W^-)=\operatorname{tr}((W^+)^3)+\operatorname{tr}((W^-)^3)$; it is half the correct value and contradicts the sentence after it. Replace with $\langle W^\#,W\rangle=6(\det W^++\det W^-)=2\operatorname{tr}(W^3)$, and say that on each chirality $\#=2\operatorname{adj}$ because $c^\pm=\pm\sqrt2\,\varepsilon$. Keep 1g's two-line proof unchanged; it is correct.
-2. **Post F2e2:** replace "$\#$ is the adjugate $\iff\dim\mathfrak g=3$" by the statement that actually covers $n=4$, *$\langle R^\#,R\rangle$ is spectral when $\mathfrak g$ is a sum of $3$-dimensional ideals and $R$ is trace-free on each*, and add the missing degree argument ($\#$ quadratic, $\operatorname{adj}$ of degree $N-1$) for the backward direction. Delete "it is spectral exactly when that form is a volume form": $n=4$ refutes it.
+1. **Post F2c:** delete the display $\langle W^\#,W\rangle=3(\det W^++\det W^-)=\mathop{\mathrm{tr}}((W^+)^3)+\mathop{\mathrm{tr}}((W^-)^3)$; it is half the correct value and contradicts the sentence after it. Replace with $\langle W^\#,W\rangle=6(\det W^++\det W^-)=2\mathop{\mathrm{tr}}(W^3)$, and say that on each chirality $\#=2\mathop{\mathrm{adj}}$ because $c^\pm=\pm\sqrt2\,\varepsilon$. Keep 1g's two-line proof unchanged; it is correct.
+2. **Post F2e2:** replace "$\#$ is the adjugate $\iff\dim\mathfrak g=3$" by the statement that actually covers $n=4$, *$\langle R^\#,R\rangle$ is spectral when $\mathfrak g$ is a sum of $3$-dimensional ideals and $R$ is trace-free on each*, and add the missing degree argument ($\#$ quadratic, $\mathop{\mathrm{adj}}$ of degree $N-1$) for the backward direction. Delete "it is spectral exactly when that form is a volume form": $n=4$ refutes it.
 3. **Post F2f:** condition 3 must require **one $t$ common to all blocks**; and the "exactly when" must go, because cross-block mass of the $2{+}1$ pattern is invisible on the block-trace-free slice. State the correct criterion as the ideal membership $3\sum T\lambda\lambda\lambda-(\kappa-1)p_3\in I(L)$. Fix $28\to47$. Drop $\mathfrak{su}(3)$ as "the smallest candidate" (condition 1 forces blocks to be ideals, so it is not a candidate) and replace it with the question that is actually at stake: is there an orthonormal basis of $\mathfrak{so}(n)$ with $\lvert c_{abc}\rvert$ constant? That is open.
 4. **The invariant-theory box:** downgrade from "any argument reaching $\theta$ through a classification of $c$ cannot exist" to "normal-form enumeration of $c$ does not scale past $N=8$". $c$ is a single known form; the group is $O(N)$, not $GL_N$; and $n=4$ is itself a moduli case with a proved sharp bound.
 5. **"Third independent appearance of the $n=4$ boundary":** delete. The three land at $n=3$, $n=3\!\mid\!4$ and $n=4\!\mid\!5$, the middle one points the other way, and two of the three are the same dimension-versus-group count.

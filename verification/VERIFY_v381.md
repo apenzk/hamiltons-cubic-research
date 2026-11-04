@@ -16,7 +16,7 @@
 
 ## 0. Conventions, fixed once
 
-- $\mathcal W_n\subset\operatorname{End}(\Lambda^2\mathbb R^n)$ is the space of algebraic Weyl operators with the Frobenius inner product, as in the brief's definitions.
+- $\mathcal W_n\subset\mathop{\mathrm{End}}(\Lambda^2\mathbb R^n)$ is the space of algebraic Weyl operators with the Frobenius inner product, as in the brief's definitions.
 - $SO(n)$ acts by $g.W=\rho(g)\,W\,\rho(g)^{-1}$ with $\rho(g)=\Lambda^2g$. Its derivative at the identity along $Z\in\mathfrak{so}(n)$ is $Z.W:=\tfrac{d}{dt}\big|_{t=0}e^{tZ}.W=[\rho_*(Z),W]$.
 - $d(X,Y)=\arccos\langle X,Y\rangle$ on the unit sphere, and $d(X,\mathcal O)=\min_{Y\in\mathcal O}d(X,Y)$, as fixed in [conventions.md](../findings/conventions.md) line 81.
 - $u=W_{\mathbb{CP}^2}$ padded, $\lVert u\rVert=1$, $\mathcal O=SO(n).u$, $T_u\mathcal O$ its tangent space at $u$.
@@ -26,7 +26,7 @@
 
 Setting facts, which the lemma's statement and proof take as its setting:
 
-- **S1.** $\mathcal W_n$ is an $SO(n)$-invariant subspace of $\operatorname{End}(\Lambda^2)$. Standard: $\mathcal W_n$ is the joint kernel of the Ricci contraction and the first Bianchi map, and both are $O(n)$-equivariant.
+- **S1.** $\mathcal W_n$ is an $SO(n)$-invariant subspace of $\mathop{\mathrm{End}}(\Lambda^2)$. Standard: $\mathcal W_n$ is the joint kernel of the Ricci contraction and the first Bianchi map, and both are $O(n)$-equivariant.
 - **S2.** The inner product on $\mathcal W_n$ is $SO(n)$-invariant. Standard, see Section 2.
 - **S3.** $P(g.W)=P(W)$. Stated in the proof (line 125) as a property of the setting, since $Q$ is built from the $O(n)$-equivariant product on $\mathfrak{so}(n)$.
 - **S4.** Some unit Weyl operator has $P=\Theta_n>\sqrt{3/2}$ at every $n\ge12$. Supplied by the passage's witness and its Lean thresholds, and not under adjudication here.
@@ -40,7 +40,7 @@ The three items under adjudication:
 
 ## 2. H1 follows from S2, so it is a theorem of the setting
 
-For an orthogonal operator $R$ on a finite-dimensional inner product space $E$, conjugation $X\mapsto RXR^{-1}=RXR^{\mathsf T}$ preserves the Frobenius pairing on $\operatorname{End}(E)$: $\operatorname{tr}\big((RXR^{\mathsf T})^{\mathsf T}RYR^{\mathsf T}\big)=\operatorname{tr}(RX^{\mathsf T}YR^{\mathsf T})=\operatorname{tr}(X^{\mathsf T}Y)$.
+For an orthogonal operator $R$ on a finite-dimensional inner product space $E$, conjugation $X\mapsto RXR^{-1}=RXR^{\mathsf T}$ preserves the Frobenius pairing on $\mathop{\mathrm{End}}(E)$: $\mathop{\mathrm{tr}}\big((RXR^{\mathsf T})^{\mathsf T}RYR^{\mathsf T}\big)=\mathop{\mathrm{tr}}(RX^{\mathsf T}YR^{\mathsf T})=\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$.
 
 $\rho(g)=\Lambda^2g$ is orthogonal on $\Lambda^2$ for either normalisation of the bivector pairing in [conventions.md](../findings/conventions.md), since each is a constant multiple of the other and $\Lambda^2g$ sends an orthonormal basis $\{e_a\wedge e_b\}$ to an orthonormal set. Rescaling the operator-level pairing by a constant also preserves invariance, so the conclusion is independent of the factor $2$ the conventions table discusses.
 

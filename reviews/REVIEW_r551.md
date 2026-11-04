@@ -14,7 +14,7 @@ The block derives its decomposition from the $GL_n\subset O_{2n}$ branching rule
 
 $$S^2(\Lambda^2V)=\mathcal W\oplus S^2_0(V)\oplus\mathbb R\oplus\Lambda^4V,$$
 
-decomposing each of the four terms under $U(m)$ by the Cauchy formula and the Littlewood–Richardson rule for $V_{\alpha;\beta}$, then subtracting. The eigenvalue list I then tested against the trace identity $\operatorname{tr}_{\mathcal W_n}L_e=0$, which holds because $e\mapsto\operatorname{tr}L_e$ is an $O(n)$-invariant linear functional on the irreducible non-trivial $\mathcal W_n$.
+decomposing each of the four terms under $U(m)$ by the Cauchy formula and the Littlewood–Richardson rule for $V_{\alpha;\beta}$, then subtracting. The eigenvalue list I then tested against the trace identity $\mathop{\mathrm{tr}}_{\mathcal W_n}L_e=0$, which holds because $e\mapsto\mathop{\mathrm{tr}}L_e$ is an $O(n)$-invariant linear functional on the irreducible non-trivial $\mathcal W_n$.
 
 Notation: $V_\mathbb C=E\oplus\bar E$ with $E$ the standard $U(m)$-module of charge $+1$; $V_{\alpha;\beta}$ the $GL_m$-module of highest weight $(\alpha_1,\alpha_2,\dots,-\beta_2,-\beta_1)$, charge $q=|\alpha|-|\beta|$.
 
@@ -67,7 +67,7 @@ $$1,\quad \frac{m+2}{2(m+1)},\quad \tfrac12,\quad \frac2{m+1},\quad -\frac3{m+1}
 
 which is precisely what the *Argument* paragraph says, "$0$ on the remaining two".
 
-**Independent confirmation, by a route using no Casimir at all.** $\mathcal W_n$ is $O(n)$-irreducible and non-trivial and $e\mapsto\operatorname{tr}L_e$ is a linear $O(n)$-invariant functional on it, so $\operatorname{tr}_{\mathcal W_n}L_e=0$ at every $e$. Writing $x$ for the unknown value on $V_{(2,1);(1)}\oplus\mathrm{conj}$ and using the dimensions of Finding 2,
+**Independent confirmation, by a route using no Casimir at all.** $\mathcal W_n$ is $O(n)$-irreducible and non-trivial and $e\mapsto\mathop{\mathrm{tr}}L_e$ is a linear $O(n)$-invariant functional on it, so $\mathop{\mathrm{tr}}_{\mathcal W_n}L_e=0$ at every $e$. Writing $x$ for the unknown value on $V_{(2,1);(1)}\oplus\mathrm{conj}$ and using the dimensions of Finding 2,
 
 $$1+\frac{(m-1)(m+2)}2+\frac{m(m-1)}2+\frac{m^2(m-3)}2-\frac{m^2(m-1)}2+0+\frac{2m^2(m^2-4)}3x=\frac{2m^2(m^2-4)}3x,$$
 
@@ -83,13 +83,13 @@ That the other five values cancel to $0$ identically in $m$ is a non-trivial pol
 
 Take the block's closed form at face value,
 $$e=-\frac1{2m-1}P_{\mathfrak m}+\frac{m-2}{(m+1)(2m-1)}P_{\mathfrak{su}(m)}+\frac{2(m-1)}{2m-1}P_\omega,$$
-with $\operatorname{rank}P_{\mathfrak m}=m(m-1)$, $\operatorname{rank}P_{\mathfrak{su}(m)}=m^2-1$, $\operatorname{rank}P_\omega=1$.
+with $\mathop{\mathrm{rank}}P_{\mathfrak m}=m(m-1)$, $\mathop{\mathrm{rank}}P_{\mathfrak{su}(m)}=m^2-1$, $\mathop{\mathrm{rank}}P_\omega=1$.
 
-**Trace-free.** A Weyl operator is totally trace-free, so $\operatorname{tr}_{\Lambda^2}e=0$ is a necessary condition:
+**Trace-free.** A Weyl operator is totally trace-free, so $\mathop{\mathrm{tr}}_{\Lambda^2}e=0$ is a necessary condition:
 $$\frac1{2m-1}\Big[-m(m-1)+\frac{(m-2)(m^2-1)}{m+1}+2(m-1)\Big]=\frac{m-1}{2m-1}\big[-m+(m-2)+2\big]=0 .$$
 Passes identically in $m$.
 
-**Norm.** [conventions.md](../findings/conventions.md) puts the $\tfrac12$ at the $\Lambda^2$ level and not at the operator level, so for an operator on $\Lambda^2$ the norm is $\lVert W\rVert^2=\operatorname{tr}(W^2)$. Then
+**Norm.** [conventions.md](../findings/conventions.md) puts the $\tfrac12$ at the $\Lambda^2$ level and not at the operator level, so for an operator on $\Lambda^2$ the norm is $\lVert W\rVert^2=\mathop{\mathrm{tr}}(W^2)$. Then
 $$\lVert e\rVert^2=\frac{m-1}{(2m-1)^2(m+1)}\big[m(m+1)+(m-2)^2+4(m-1)(m+1)\big]=\frac{(m-1)\cdot3m(2m-1)}{(2m-1)^2(m+1)}=\frac{3m(m-1)}{(m+1)(2m-1)} .$$
 Since $e=W/\theta$ at $\lVert W\rVert=1$, this says $\theta^2=\frac{(m+1)(2m-1)}{3m(m-1)}$, **the block's value, recovered from its own projector coefficients and the record's norm convention.**
 
@@ -118,7 +118,7 @@ Hence $\dim(\text{orbit})=m(m-1)$ exactly.
 | $(2,1,0^{m-3},-1)\oplus$ dual | $\frac{2m^2(m^2-4)}3$ | $0$ |
 | $(2,0^{m-2},-2)$ | $\frac{m^2(m-1)(m+3)}4$ | $0$ |
 
-**both zero**, matching my Casimir computation and my trace-identity computation row for row, and matching every dimension in Finding 2. The notes also state, independently, that the seven dimensions sum to $\frac{m(m+1)(2m+1)(2m-3)}3$ identically in $m$ and that $\operatorname{tr}L_e=0$ identically in $m$.
+**both zero**, matching my Casimir computation and my trace-identity computation row for row, and matching every dimension in Finding 2. The notes also state, independently, that the seven dimensions sum to $\frac{m(m+1)(2m+1)(2m-3)}3$ identically in $m$ and that $\mathop{\mathrm{tr}}L_e=0$ identically in $m$.
 
 **So the record already holds the correct list, and [findings/nondegeneracy.md](../findings/nondegeneracy.md)'s charge table disagrees with it.** The defect is confined to the findings block; the value $4m$ appears nowhere else and belongs to no summand.
 
@@ -138,7 +138,7 @@ The same $\theta^2$ appears at [algebra.md:29](../findings/algebra.md#L29) with 
 
 Only two of the seven values are structural: $\lambda=1$ on $\langle W\rangle$ and $\lambda=\tfrac12$ on the orbit, both following from criticality alone (Finding 5). The other five are computed, and the block attests them by the charge formula plus, for the orbit row, three further routes, **which is the one row that needed no attestation.** The row that carries the "not a maximiser" conclusion, $\frac{m+2}{2(m+1)}$ on $\mathfrak{su}(m)$, has none.
 
-The trace identity supplies one. Holding the other values fixed and solving $\operatorname{tr}L_e=0$ for the unknown $y$ on $\mathfrak{su}(m)$:
+The trace identity supplies one. Holding the other values fixed and solving $\mathop{\mathrm{tr}}L_e=0$ for the unknown $y$ on $\mathfrak{su}(m)$:
 
 $$(m^2-1)y=\frac{m(m+1)}2-1=\frac{(m+2)(m-1)}2\quad\Longrightarrow\quad y=\frac{m+2}{2(m+1)} .$$
 
@@ -236,7 +236,7 @@ The note, "a slice corrector drove the criticality residual to $1.9\times10^{-13
 
 **"Canonical statement and proof."** The block carries a **Statement**, an **Argument** closing with $\square$, a **How the eigenvalues are obtained** paragraph closing with $\square$, a **What is not proved**, and **Sources**. It is a proof modulo cited inputs, and it is not one of the blocks that promise a proof and deliver assertion. What it is **not** is *canonical*, for the reason in Finding 7: a fuller and more careful version of the same proof lives at [second-order.md:262](../findings/second-order.md#L262), uncited from here.
 
-**The norm.** Checked against [conventions.md](../findings/conventions.md) rather than the block's usage. The $\tfrac12$ goes at the $\Lambda^2$ level and the operator norm on $\Lambda^2$ is $\lVert W\rVert^2=\operatorname{tr}(W^2)$. Finding 4 computes $\lVert e\rVert^2=\frac{3m(m-1)}{(m+1)(2m-1)}$ under exactly that convention and recovers the block's $\theta^2$; the $\sqrt2$-inflation trap is not tripped, and the $m=2$ anchor $\theta=\sqrt{3/2}$ (rather than $\sqrt3$), settles it independently. [graded-half.md:168](../findings/graded-half.md#L168)'s $\lVert W\rVert^2_{\mathbb{CP}^m}=\frac{3m(m-1)}{4(m+1)(2m-1)}$ is the same number under the $\lvert W\rvert^2=4\lVert W\rVert_F^2$ conversion, so the two files agree. **Clean.**
+**The norm.** Checked against [conventions.md](../findings/conventions.md) rather than the block's usage. The $\tfrac12$ goes at the $\Lambda^2$ level and the operator norm on $\Lambda^2$ is $\lVert W\rVert^2=\mathop{\mathrm{tr}}(W^2)$. Finding 4 computes $\lVert e\rVert^2=\frac{3m(m-1)}{(m+1)(2m-1)}$ under exactly that convention and recovers the block's $\theta^2$; the $\sqrt2$-inflation trap is not tripped, and the $m=2$ anchor $\theta=\sqrt{3/2}$ (rather than $\sqrt3$), settles it independently. [graded-half.md:168](../findings/graded-half.md#L168)'s $\lVert W\rVert^2_{\mathbb{CP}^m}=\frac{3m(m-1)}{4(m+1)(2m-1)}$ is the same number under the $\lvert W\rvert^2=4\lVert W\rVert_F^2$ conversion, so the two files agree. **Clean.**
 
 ---
 
@@ -249,7 +249,7 @@ The note, "a slice corrector drove the criticality residual to $1.9\times10^{-13
 | 3 | the two paragraphs give different eigenvalues | **REPAIRED, against the brief's presumption.** The *Argument* is right; **the charge table's $4m$ is the error and should be $4(m+1)$**. Confirmed four ways, and the provenance identified: it is $V_{(2,1);(1)}$'s $c_S$ with $q_S^2$ never added. The same defective list stands in [second-order.md:288](../findings/second-order.md#L288) |
 | 4 | $\theta^2$, the projector coefficients, the norm | **CONFIRMED**, trace-freeness and $\lVert e\rVert^2$ both recovered from the coefficients; $m=2$ gives $\sqrt{3/2}$, the record's measured value |
 | 5 | $\dim(\text{orbit})=m(m-1)$, and orbit versus $E(\tfrac12)$ | **CONFIRMED**, stabiliser is $\mathfrak u(m)$ by a two-line irreducibility argument; containment plus equal dimensions gives $E(\tfrac12)=T(\text{orbit})$, which is the Morse–Bott condition. The containment step is missing from the block and is worth a line |
-| 6 | $\lambda_{\max}=\frac{m+2}{2(m+1)}$, the row carrying the conclusion | **CONFIRMED**, forced by $\operatorname{tr}L_e=0$ given the other values, and measured independently at [target.md:560](../findings/target.md#L560) with the violating subspace at dimension $8=m^2-1$, naming $\mathfrak{su}(3)$ as its carrier |
+| 6 | $\lambda_{\max}=\frac{m+2}{2(m+1)}$, the row carrying the conclusion | **CONFIRMED**, forced by $\mathop{\mathrm{tr}}L_e=0$ given the other values, and measured independently at [target.md:560](../findings/target.md#L560) with the violating subspace at dimension $8=m^2-1$, naming $\mathfrak{su}(3)$ as its carrier |
 | 7 | the canonical block is a lossy copy of an uncited fuller one | **CONFIRMED, structural** |
 | 8 | "What is not proved" is incomplete | **CONFIRMED**, three unflagged dependencies; two of its two concessions can now be discharged |
 | 9 | "where its summand's dimension vanishes" at $m=3$ | **REPAIRED**, the summand is **absent**, not zero-dimensional. [results.md:142](../results.md#L142) already says "empty" |
@@ -264,7 +264,7 @@ The note, "a slice corrector drove the criticality residual to $1.9\times10^{-13
 
 $$\theta^2=\frac{(m+1)(2m-1)}{3m(m-1)},\qquad \dim E(\tfrac12)=\dim(\text{orbit})=m(m-1),\qquad \lambda_{\max}(L_e|_{W^\perp})=\frac{m+2}{2(m+1)} ,$$
 
-and Morse–Bott nondegeneracy, and non-maximality, all hold. Rebuilt here from the definitions by a route sharing nothing with the block's: the complement $\mathcal W=S^2(\Lambda^2V)\ominus S^2_0\ominus\mathbb R\ominus\Lambda^4$ decomposed by Cauchy and Littlewood–Richardson, and $\operatorname{tr}_{\mathcal W_n}L_e=0$ from $O(n)$-irreducibility. Every dimension and every eigenvalue reproduces.
+and Morse–Bott nondegeneracy, and non-maximality, all hold. Rebuilt here from the definitions by a route sharing nothing with the block's: the complement $\mathcal W=S^2(\Lambda^2V)\ominus S^2_0\ominus\mathbb R\ominus\Lambda^4$ decomposed by Cauchy and Littlewood–Richardson, and $\mathop{\mathrm{tr}}_{\mathcal W_n}L_e=0$ from $O(n)$-irreducibility. Every dimension and every eigenvalue reproduces.
 
 **Two things the audit adds to the record.** Multiplicity-freeness is now **derived** rather than cited, for every $m\ge3$ including the $m=3$ case that the stable branching rule does not reach. And $\frac{m+2}{2(m+1)}$, the value the whole "not a maximiser" conclusion rests on, and the one row the block's three attestations do not cover, is forced by the trace identity from the rest of the list.
 

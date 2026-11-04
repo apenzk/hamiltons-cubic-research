@@ -8,7 +8,7 @@
 | **1.1**, $\omega_1\wedge\omega_1=c\,(\omega_2\wedge\omega_2)$ gives $\omega_1^4=c^2\omega_2^4$, and $\omega^4=4!\,\mathrm{Pf}(\omega)\,\mathrm{vol}$ on $\mathbb R^8$ carries the constant claimed | **CONFIRMED** |
 | **2**, first Bianchi factors as $\alpha\wedge\beta=0$, with $\lVert\alpha\rVert^2=\lVert\beta\rVert^2=1+c$ and $\langle\alpha,\beta\rangle=1-c$ | **CONFIRMED**, and $c\in(0,1)$ under the lemma's own sign arrangement, so $\langle\alpha,\beta\rangle>0$ strictly |
 | **3**, $\lambda_1A_1-\lvert\lambda_2\rvert A_2$ is PSD of rank exactly two, giving $\lambda_1\lVert\omega_1x\rVert^2=\lvert\lambda_2\rvert\lVert\omega_2x\rVert^2$ on the six-dimensional $P_3^\perp\cap V$ | **CONFIRMED** |
-| **The [L180](../findings/diagonal-half.md)(3) import**, $V=\operatorname{supp}\omega_1$, $P_3\subseteq V$, $\omega_2\in\Lambda^2V$ | **CONFIRMED**, with one unstated relabelling (§2) |
+| **The [L180](../findings/diagonal-half.md)(3) import**, $V=\mathop{\mathrm{supp}}\omega_1$, $P_3\subseteq V$, $\omega_2\in\Lambda^2V$ | **CONFIRMED**, with one unstated relabelling (§2) |
 | **Inhabitation of the configuration at $\dim V=8$** | **REFUTED, the branch is EMPTY**, by Bianchi and orthonormality alone on top of L180(3); §5 |
 | **The lemma's forward framing** ("the shape the next attempt has to work with", "where the next attempt should start") | **REFUTED as a description of open ground**, the two constraints it names, used together, close the branch |
 
@@ -17,7 +17,7 @@
 ## 0. Conventions, fixed once
 
 - $W=\sum_{i=1}^3\lambda_i\,\omega_i\otimes\omega_i$, the $\omega_i$ orthonormal in $\Lambda^2\mathbb R^n$, every $\lambda_i\ne0$, $W$ Ricci-flat and satisfying first Bianchi. $V$ is the span of the supports, and $W$ is supported on $\Lambda^2V$ by [L179](../findings/diagonal-half.md)(a).
-- A $2$-form's **support** is the image of the skew map it names; $\operatorname{rank}\omega=\dim\operatorname{supp}\omega$. **Decomposable** $\iff\omega\wedge\omega=0\iff\operatorname{rank}\le2$. $\omega^j\ne0\iff j\le\tfrac12\operatorname{rank}\omega$.
+- A $2$-form's **support** is the image of the skew map it names; $\mathop{\mathrm{rank}}\omega=\dim\mathop{\mathrm{supp}}\omega$. **Decomposable** $\iff\omega\wedge\omega=0\iff\mathop{\mathrm{rank}}\le2$. $\omega^j\ne0\iff j\le\tfrac12\mathop{\mathrm{rank}}\omega$.
 - The branch: $\omega_1,\omega_2$ non-decomposable, $\omega_3$ decomposable with unit area form on the plane $P_3$, so $A_3=\omega_3\omega_3^{\mathsf T}=\Pi_3$; weights $\lambda_1>0>\lambda_2$ by [L186](../findings/diagonal-half.md)'s rank count, $\lambda_3<0$ under the lemma's arrangement, $\lambda_1=\lvert\lambda_2\rvert+\lvert\lambda_3\rvert$; $c=-\lambda_2/\lambda_1=\lvert\lambda_2\rvert/\lambda_1\in(0,1)$; $\dim V=8$.
 - On an **oriented** $2m$-dimensional inner-product space, $\mathrm{Pf}(\omega)=s_1\cdots s_m$ in a positively-oriented adapted frame and $\omega^m=m!\,\mathrm{Pf}(\omega)\,\mathrm{vol}$; $\det\omega=\mathrm{Pf}(\omega)^2$.
 - On $\mathbb R^6$, $\sigma(\omega)=\star(\omega\wedge\omega)/2$, quadratic, with $\sigma(\sigma(\omega))=\mathrm{Pf}(\omega)\,\omega$, [L187](../findings/diagonal-half.md)'s identity, signs verified by [r802](REVIEW_r802.md) and [r803](REVIEW_r803.md) and re-screened here.
@@ -42,9 +42,9 @@
 
 L180(3) says the support $V$ is the support of the **minority-sign** form, under Ricci-flatness and rank three alone, and that the other two supports sum to it. Here $\lambda_1>0>\lambda_2$, so the minority is whichever of $\omega_1,\omega_2$ disagrees in sign with $\lambda_3$. The lemma writes $\lambda_1A_1=\lvert\lambda_2\rvert A_2+\lvert\lambda_3\rvert\Pi_3$, which **fixes $\lambda_3<0$ and $\omega_1$ as the minority**; that is a relabelling of the two non-decomposable forms, legitimate because the branch is symmetric under swapping them ($c\mapsto1/c$), and **it is not stated**. With it:
 
-$$\operatorname{supp}\omega_2+\operatorname{supp}\omega_3=\operatorname{supp}\omega_1=V,\qquad \dim V=8 .$$
+$$\mathop{\mathrm{supp}}\omega_2+\mathop{\mathrm{supp}}\omega_3=\mathop{\mathrm{supp}}\omega_1=V,\qquad \dim V=8 .$$
 
-So $\operatorname{rank}\omega_1=8$, $P_3\subseteq V$ and $\omega_2\in\Lambda^2V$, the three things Claims 1 and 3 draw on, all present. *The other labelling gives $c>1$ and the same conclusions with the indices swapped, so nothing in §5 depends on the choice.*
+So $\mathop{\mathrm{rank}}\omega_1=8$, $P_3\subseteq V$ and $\omega_2\in\Lambda^2V$, the three things Claims 1 and 3 draw on, all present. *The other labelling gives $c>1$ and the same conclusions with the indices swapped, so nothing in §5 depends on the choice.*
 
 ## 3. Claim 1. CONFIRMED
 
@@ -52,7 +52,7 @@ So $\operatorname{rank}\omega_1=8$, $P_3\subseteq V$ and $\omega_2\in\Lambda^2V$
 
 **The constant.** On the oriented eight-dimensional $V$, $\omega^4=4!\,\mathrm{Pf}(\omega)\,\mathrm{vol}=24\,\mathrm{Pf}(\omega)\,\mathrm{vol}$. The $24$ appears on both sides and cancels, leaving $\mathrm{Pf}(\omega_1)=c^2\,\mathrm{Pf}(\omega_2)$ exactly as written. **Both forms lie in $\Lambda^2V$** (§2), so a single $\mathrm{Pf}$, relative to $V$'s volume, serves both, the step that would fail if $\omega_2$ left $V$.
 
-**The conclusion.** $\operatorname{rank}\omega_2<8$ gives $\omega_2^4=0$, hence $\mathrm{Pf}(\omega_2)=0$, hence $\mathrm{Pf}(\omega_1)=0$, hence $\det\omega_1=0$ and $\operatorname{rank}\omega_1<8$, against $\operatorname{rank}\omega_1=\dim V=8$. So $\operatorname{rank}\omega_2=8$. **The content of Claim 1 is entirely about $\omega_2$**: $\omega_1$'s full rank is §2's import and holds before any Pfaffian is taken. *The claim's own wording ("both … have full rank eight"), reads as if the argument delivered both, and it delivers one.*
+**The conclusion.** $\mathop{\mathrm{rank}}\omega_2<8$ gives $\omega_2^4=0$, hence $\mathrm{Pf}(\omega_2)=0$, hence $\mathrm{Pf}(\omega_1)=0$, hence $\det\omega_1=0$ and $\mathop{\mathrm{rank}}\omega_1<8$, against $\mathop{\mathrm{rank}}\omega_1=\dim V=8$. So $\mathop{\mathrm{rank}}\omega_2=8$. **The content of Claim 1 is entirely about $\omega_2$**: $\omega_1$'s full rank is §2's import and holds before any Pfaffian is taken. *The claim's own wording ("both … have full rank eight"), reads as if the argument delivered both, and it delivers one.*
 
 ## 4. Claims 2 and 3. CONFIRMED
 
@@ -80,15 +80,15 @@ $$\text{(i) } u^1_1\wedge u^2_1=c\,u^1_2\wedge u^2_2,\quad \text{(ii) } u^1_1\we
 
 ### 5.2 Both $C_i$ have rank at least four
 
-In the block form $\omega_i=\begin{pmatrix}0&B_i\\-B_i^{\mathsf T}&C_i\end{pmatrix}$ with $B_i$ of size $2\times6$ carrying the rows $u^1_i,u^2_i$, the column ranks give $\operatorname{rank}\omega_i\le2+\operatorname{rank}B_i+\operatorname{rank}C_i\le4+\operatorname{rank}C_i$. Both forms are full rank eight (§2 and Claim 1), so $\operatorname{rank}C_i\ge4$ for $i=1,2$. **In particular $C_i\wedge C_i\ne0$ and $C_i$ is not of the form $a\wedge v$**, so by exactness of $\Lambda^\bullet W_6\xrightarrow{a\wedge}\Lambda^{\bullet+1}W_6$,
+In the block form $\omega_i=\begin{pmatrix}0&B_i\\-B_i^{\mathsf T}&C_i\end{pmatrix}$ with $B_i$ of size $2\times6$ carrying the rows $u^1_i,u^2_i$, the column ranks give $\mathop{\mathrm{rank}}\omega_i\le2+\mathop{\mathrm{rank}}B_i+\mathop{\mathrm{rank}}C_i\le4+\mathop{\mathrm{rank}}C_i$. Both forms are full rank eight (§2 and Claim 1), so $\mathop{\mathrm{rank}}C_i\ge4$ for $i=1,2$. **In particular $C_i\wedge C_i\ne0$ and $C_i$ is not of the form $a\wedge v$**, so by exactness of $\Lambda^\bullet W_6\xrightarrow{a\wedge}\Lambda^{\bullet+1}W_6$,
 
 $$a\wedge C_i=0\ \Longrightarrow\ a=0\qquad\text{for }a\in W_6^* . \tag{$\ast$}$$
 
 ### 5.3 Rank six is impossible, and so is $C_1\parallel C_2$
 
-Suppose $\operatorname{rank}C_1=6$. Applying $\star$ to (iv), $\sigma(C_1)=c\,\sigma(C_2)$; applying the quadratic $\sigma$ again, $\mathrm{Pf}(C_1)\,C_1=c^2\,\mathrm{Pf}(C_2)\,C_2$, so $C_2=k\,C_1$ with $k\ne0$. Then (iv) reads $C_1\wedge C_1=ck^2\,C_1\wedge C_1$ with $C_1\wedge C_1\ne0$, forcing $ck^2=1$, i.e. $1/k=ck$. Now (ii) becomes $(u^1_1-ck\,u^1_2)\wedge C_1=0$, so $u^1_1=ck\,u^1_2$ by $(\ast)$, and likewise $u^2_1=ck\,u^2_2$; and $C_1=k^{-1}C_2=ck\,C_2$. Hence $\omega_1=ck\,\omega_2$ and $\langle\omega_1,\omega_2\rangle=ck\ne0$, **against orthonormality**. The same run with the roles of the indices exchanged excludes $\operatorname{rank}C_2=6$, and the run needs only $\operatorname{rank}C_1\ge4$ for $(\ast)$, so it **also excludes $C_2=k\,C_1$ at rank four**. Therefore
+Suppose $\mathop{\mathrm{rank}}C_1=6$. Applying $\star$ to (iv), $\sigma(C_1)=c\,\sigma(C_2)$; applying the quadratic $\sigma$ again, $\mathrm{Pf}(C_1)\,C_1=c^2\,\mathrm{Pf}(C_2)\,C_2$, so $C_2=k\,C_1$ with $k\ne0$. Then (iv) reads $C_1\wedge C_1=ck^2\,C_1\wedge C_1$ with $C_1\wedge C_1\ne0$, forcing $ck^2=1$, i.e. $1/k=ck$. Now (ii) becomes $(u^1_1-ck\,u^1_2)\wedge C_1=0$, so $u^1_1=ck\,u^1_2$ by $(\ast)$, and likewise $u^2_1=ck\,u^2_2$; and $C_1=k^{-1}C_2=ck\,C_2$. Hence $\omega_1=ck\,\omega_2$ and $\langle\omega_1,\omega_2\rangle=ck\ne0$, **against orthonormality**. The same run with the roles of the indices exchanged excludes $\mathop{\mathrm{rank}}C_2=6$, and the run needs only $\mathop{\mathrm{rank}}C_1\ge4$ for $(\ast)$, so it **also excludes $C_2=k\,C_1$ at rank four**. Therefore
 
-$$\operatorname{rank}C_1=\operatorname{rank}C_2=4,\qquad C_1,C_2\ \text{linearly independent}.$$
+$$\mathop{\mathrm{rank}}C_1=\mathop{\mathrm{rank}}C_2=4,\qquad C_1,C_2\ \text{linearly independent}.$$
 
 ### 5.4 The two blocks share a kernel
 
@@ -102,9 +102,9 @@ Split $u=u_K+u_S$ along $W_6=K\oplus S$. For $C\in\Lambda^2S$ the two pieces $u_
 
 $$p_1\,C_1=c\,p_2\,C_2,\qquad q_1\,C_1=c\,q_2\,C_2,\qquad u^1_{i,K}=p_i f^1+q_i f^2 .$$
 
-$C_1$ and $C_2$ are linearly independent by §5.3, so $p_1=p_2=q_1=q_2=0$: **$u^1_{1,K}=u^1_{2,K}=0$**, and (iii) gives $u^2_{1,K}=u^2_{2,K}=0$ the same way. So $B_i$ annihilates $K$, and $C_i$ annihilates $K$ by construction, whence $K\subseteq\ker\omega_i$ and $\operatorname{rank}\omega_i\le6$ for both $i$.
+$C_1$ and $C_2$ are linearly independent by §5.3, so $p_1=p_2=q_1=q_2=0$: **$u^1_{1,K}=u^1_{2,K}=0$**, and (iii) gives $u^2_{1,K}=u^2_{2,K}=0$ the same way. So $B_i$ annihilates $K$, and $C_i$ annihilates $K$ by construction, whence $K\subseteq\ker\omega_i$ and $\mathop{\mathrm{rank}}\omega_i\le6$ for both $i$.
 
-**That contradicts $\operatorname{rank}\omega_1=\dim V=8$.** The configuration does not exist. $\square$
+**That contradicts $\mathop{\mathrm{rank}}\omega_1=\dim V=8$.** The configuration does not exist. $\square$
 
 *Screen of the load-bearing step, on constructed data: $S=\langle f_0,\dots,f_3\rangle$, $K=\langle f_4,f_5\rangle$, $C_1=f_{01}+2f_{23}$, $C_2=f_{01}+8f_{23}$, $c=1/4$, which satisfies (iv) exactly, both sides $4f_{0123}$. Solving (ii) symbolically over the twelve unknowns returned the single family $p_0=q_0$, $p_1=q_1$, $p_2=q_2/4$, $p_3=q_3/4$, $p_4=p_5=q_4=q_5=0$: the $K$-components are forced to zero, as derived. A screen, not the argument.*
 
@@ -117,7 +117,7 @@ $C_1$ and $C_2$ are linearly independent by §5.3, so $p_1=p_2=q_1=q_2=0$: **$u^
 
 ## 6. The remaining attack items
 
-- **Anything carried from a neighbouring configuration**, the failure mode of [L187](../findings/diagonal-half.md). **Nothing found.** Every hypothesis L188 uses is discharged inside its own branch: $c>0$ from [L186](../findings/diagonal-half.md)'s rank count, $V=\operatorname{supp}\omega_1$ and $P_3\subseteq V$ from [L180](../findings/diagonal-half.md)(3) at rank three, $\operatorname{rank}\omega_1=8$ from $\dim V=8$. **In particular $\dim V\le6$ (L187's circular premise), appears nowhere**, and Claim 1 is the correct replacement for it: it derives a rank rather than assuming one.
+- **Anything carried from a neighbouring configuration**, the failure mode of [L187](../findings/diagonal-half.md). **Nothing found.** Every hypothesis L188 uses is discharged inside its own branch: $c>0$ from [L186](../findings/diagonal-half.md)'s rank count, $V=\mathop{\mathrm{supp}}\omega_1$ and $P_3\subseteq V$ from [L180](../findings/diagonal-half.md)(3) at rank three, $\mathop{\mathrm{rank}}\omega_1=8$ from $\dim V=8$. **In particular $\dim V\le6$ (L187's circular premise), appears nowhere**, and Claim 1 is the correct replacement for it: it derives a rank rather than assuming one.
 - **The [L178](../findings/diagonal-half.md) import flagged by the lemma's own note.** Not circular, and I reach the same reading as the two reviewers cited: L178's step 1 is applied under the hypothesis $\dim V=4$ to contradict "exactly two non-decomposable", which is a conditional.
 - **The Lean statement.** It builds. Two remarks on scope rather than correctness. `factor_norms` is docstringed as "the norms of the two factors" but states $(1+c)-(1-c)=2c$, an arithmetic identity that mentions no form and no norm, **the norms of Claim 2 are not typed**; and its `hc : 0 < c` is unused, as is `full_rank_of_pf`'s `hc : c ≠ 0` (the build's one lint). `factor_of_comm` and `bianchi_factors` over a `CommRing` do capture the whole of Claim 2's algebra, as the file says. **The file's own "What is NOT typed here" is accurate**, save that it should add the norms to the list.
 - **Nothing was found against Claims 1, 2 or 3 themselves.** The two wordings worth tightening are §3's "both … have full rank" (the argument delivers $\omega_2$; $\omega_1$ is imported) and §2's unstated relabelling.

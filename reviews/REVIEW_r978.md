@@ -16,13 +16,13 @@ Reviewer **r978**, Gate 2, working from [BRIEF_R28_commuting.md](BRIEF_R28_commu
 
 ## The single identity the whole round turns on
 
-Write the frame dependence with no orthostochastic language at all. With $P=(p_1,\dots,p_k)\in O(k)$, $D_1=\beta\operatorname{diag}(\nu^{\circ2})$ and $D_2=\operatorname{diag}(\nu)$,
+Write the frame dependence with no orthostochastic language at all. With $P=(p_1,\dots,p_k)\in O(k)$, $D_1=\beta\mathop{\mathrm{diag}}(\nu^{\circ2})$ and $D_2=\mathop{\mathrm{diag}}(\nu)$,
 
-$$f(P)\;=\;\sum_k\big(\beta\nu_k^2\,p_k^{\mathsf T}\hat Up_k+\nu_k\,p_k^{\mathsf T}Cp_k\big)\;=\;\operatorname{tr}\!\big(D_1P^{\mathsf T}\hat UP\big)+\operatorname{tr}\!\big(D_2P^{\mathsf T}CP\big).$$
+$$f(P)\;=\;\sum_k\big(\beta\nu_k^2\,p_k^{\mathsf T}\hat Up_k+\nu_k\,p_k^{\mathsf T}Cp_k\big)\;=\;\mathop{\mathrm{tr}}\!\big(D_1P^{\mathsf T}\hat UP\big)+\mathop{\mathrm{tr}}\!\big(D_2P^{\mathsf T}CP\big).$$
 
-Along $P(t)=Pe^{t\Omega}$ with $\Omega$ antisymmetric, $P(t)^{\mathsf T}AP(t)=e^{-t\Omega}(P^{\mathsf T}AP)e^{t\Omega}$, so $\tfrac{d}{dt}\big|_0\operatorname{tr}(DP^{\mathsf T}AP)=\operatorname{tr}(D[B,\Omega])=\operatorname{tr}([D,B]\Omega)$ with $B=P^{\mathsf T}AP$. Hence with $B_1=P^{\mathsf T}\hat UP$ and $B_2=P^{\mathsf T}CP$,
+Along $P(t)=Pe^{t\Omega}$ with $\Omega$ antisymmetric, $P(t)^{\mathsf T}AP(t)=e^{-t\Omega}(P^{\mathsf T}AP)e^{t\Omega}$, so $\tfrac{d}{dt}\big|_0\mathop{\mathrm{tr}}(DP^{\mathsf T}AP)=\mathop{\mathrm{tr}}(D[B,\Omega])=\mathop{\mathrm{tr}}([D,B]\Omega)$ with $B=P^{\mathsf T}AP$. Hence with $B_1=P^{\mathsf T}\hat UP$ and $B_2=P^{\mathsf T}CP$,
 
-$$df(P)[\Omega]=\operatorname{tr}\big(([D_1,B_1]+[D_2,B_2])\,\Omega\big),$$
+$$df(P)[\Omega]=\mathop{\mathrm{tr}}\big(([D_1,B_1]+[D_2,B_2])\,\Omega\big),$$
 
 and $[D,B]_{ab}=(d_a-d_b)B_{ab}$ is antisymmetric whenever $D$ is diagonal and $B$ symmetric, so $P$ is a critical point of $f$ on $O(k)$ if and only if
 
@@ -32,7 +32,7 @@ $$(\star)\qquad \big(\nu_a-\nu_b\big)\Big[\beta\big(\nu_a+\nu_b\big)\big(P^{\mat
 
 ## Claim 1: CONFIRMED
 
-With $\hat U=E\operatorname{diag}(\lambda)E^{\mathsf T}$, $C=F\operatorname{diag}(\mu)F^{\mathsf T}$, $R=(E^{\mathsf T}P)^{\circ2}$ and $S=(F^{\mathsf T}P)^{\circ2}$, expanding $p_k^{\mathsf T}\hat Up_k=\sum_i\lambda_iR_{ik}$ and $p_k^{\mathsf T}Cp_k=\sum_j\mu_jS_{jk}$ gives $f=\langle R,A_1\rangle+\langle S,A_2\rangle$ with
+With $\hat U=E\mathop{\mathrm{diag}}(\lambda)E^{\mathsf T}$, $C=F\mathop{\mathrm{diag}}(\mu)F^{\mathsf T}$, $R=(E^{\mathsf T}P)^{\circ2}$ and $S=(F^{\mathsf T}P)^{\circ2}$, expanding $p_k^{\mathsf T}\hat Up_k=\sum_i\lambda_iR_{ik}$ and $p_k^{\mathsf T}Cp_k=\sum_j\mu_jS_{jk}$ gives $f=\langle R,A_1\rangle+\langle S,A_2\rangle$ with
 
 $$A_1=\beta\,\lambda\,(\nu^{\circ2})^{\mathsf T},\qquad A_2=\mu\,\nu^{\mathsf T}.$$
 
@@ -61,7 +61,7 @@ The converse also holds and the block does not claim it. If $G$ is a signed perm
 
 ## Claim 4: REFUTED as an unconditional iff, CONFIRMED under simple spectra
 
-- **Forward, unconditional.** If $G$ is a signed permutation then $F=EG$, so $C=E\big(G\operatorname{diag}(\mu)G^{\mathsf T}\big)E^{\mathsf T}$ and $G\operatorname{diag}(\mu)G^{\mathsf T}$ is diagonal, the signs squaring away. Both operators are then diagonal in $E$, so $[\hat U,C]=0$. This is the direction the brief calls a one-line [Matrix.commute](../lean/HamiltonsCubic/Results/I106bFace.lean) obligation, and it is.
+- **Forward, unconditional.** If $G$ is a signed permutation then $F=EG$, so $C=E\big(G\mathop{\mathrm{diag}}(\mu)G^{\mathsf T}\big)E^{\mathsf T}$ and $G\mathop{\mathrm{diag}}(\mu)G^{\mathsf T}$ is diagonal, the signs squaring away. Both operators are then diagonal in $E$, so $[\hat U,C]=0$. This is the direction the brief calls a one-line [Matrix.commute](../lean/HamiltonsCubic/Results/I106bFace.lean) obligation, and it is.
 - **Reverse, false as stated.** $G=E^{\mathsf T}F$ is not a function of the pair $(\hat U,C)$, it is a function of a *choice* of eigenframes, and the choice is free exactly on the degenerate strata. Take $\hat U=I$ and $C$ any non-scalar symmetric matrix. Then $[\hat U,C]=0$, every orthogonal $E$ is an eigenframe of $\hat U$, $F$ is fixed by $C$, and $G=E^{\mathsf T}F$ ranges over all of $O(k)$. A generic choice is not a signed permutation. The same failure occurs whenever either spectrum has a repeated eigenvalue.
 - **Correct statement.** $[\hat U,C]=0$ if and only if $E$ and $F$ **can be chosen** with $G$ a signed permutation, indeed with $G=I$ after matching the orderings. The unconditional iff holds only when both spectra are simple, and then $G$ is determined up to column signs and the permutation matching the two orderings.
 - **Why it matters here rather than being pedantry.** The block routes its entire equivalence through $G$, so it is reasoning with a choice-dependent object while asserting a choice-free conclusion. The fix costs nothing, quantify existentially over eigenframes, but the block should carry it, because the second failure below is a real degeneracy failure and not a bookkeeping one.
@@ -93,11 +93,11 @@ Three things this buys over the block's screen.
 
 $(\star)$ imposes nothing on $(P^{\mathsf T}CP)_{ab}$ when $\nu_a=\nu_b$, and the gap is real, not a technicality. Take $k=3$, $\beta=1$, $\nu=(2,1,1)$,
 
-$$\hat U=\operatorname{diag}(5,1,0),\qquad C=\begin{pmatrix}0&0&0\\0&0.2&0.5\\0&0.5&-0.3\end{pmatrix},\qquad \lVert[\hat U,C]\rVert_F=0.7071\neq0.$$
+$$\hat U=\mathop{\mathrm{diag}}(5,1,0),\qquad C=\begin{pmatrix}0&0&0\\0&0.2&0.5\\0&0.5&-0.3\end{pmatrix},\qquad \lVert[\hat U,C]\rVert_F=0.7071\neq0.$$
 
 With $\nu_2=\nu_3=\nu$ the $k=2,3$ terms see only the projector $I-p_1p_1^{\mathsf T}$, so
 
-$$f(P)=\beta\nu^2\operatorname{tr}\hat U+\nu\operatorname{tr}C+\beta(\nu_1^2-\nu^2)\,p_1^{\mathsf T}\hat Up_1+(\nu_1-\nu)\,p_1^{\mathsf T}Cp_1,$$
+$$f(P)=\beta\nu^2\mathop{\mathrm{tr}}\hat U+\nu\mathop{\mathrm{tr}}C+\beta(\nu_1^2-\nu^2)\,p_1^{\mathsf T}\hat Up_1+(\nu_1-\nu)\,p_1^{\mathsf T}Cp_1,$$
 
 a function of the single unit vector $p_1$. The maximiser is the top eigenvector of $M=\beta(\nu_1^2-\nu^2)\hat U+(\nu_1-\nu)C=3\hat U+C$, whose $(1,1)$ entry is $15$ while the top eigenvalue of its lower block is about $3.28$, so the top eigenvector is exactly $e_1$. Hence $P=I$ is a global maximiser, $R=I$ is a permutation matrix, the frame splits, and $[\hat U,C]\neq0$. Screened: the collapse identity was asserted against $f$ at 200 random frames, the top eigenvector was asserted to be $e_1$, and 400 restarts of a retraction-based maximisation never beat $f(I)$.
 
@@ -137,4 +137,4 @@ If "splitting frame" is instead read as the **pair** $(R,S)$ being vertex, then 
 
 ## Screen
 
-One screen, eleven seconds, at $k=3,4,5$, every control an assertion. Controls: the first-order formula $df=\operatorname{tr}(([D_1,B_1]+[D_2,B_2])\Omega)$ against a central difference, the antisymmetry of that matrix, the reduction of $(\star)$ to $[\operatorname{diag}(\nu),P^{\mathsf T}CP]$ at an $\hat U$-eigenframe, and the equivalence of its vanishing with $[\hat U,C]=0$ at distinct $\nu$. The screen supports the three positive statements above that were proved by hand and supplies the maximiser values quoted for the two explicit $k=3$ instances. No positive claim here rests on it.
+One screen, eleven seconds, at $k=3,4,5$, every control an assertion. Controls: the first-order formula $df=\mathop{\mathrm{tr}}(([D_1,B_1]+[D_2,B_2])\Omega)$ against a central difference, the antisymmetry of that matrix, the reduction of $(\star)$ to $[\mathop{\mathrm{diag}}(\nu),P^{\mathsf T}CP]$ at an $\hat U$-eigenframe, and the equivalence of its vanishing with $[\hat U,C]=0$ at distinct $\nu$. The screen supports the three positive statements above that were proved by hand and supplies the maximiser values quoted for the two explicit $k=3$ instances. No positive claim here rests on it.

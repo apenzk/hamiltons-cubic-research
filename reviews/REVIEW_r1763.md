@@ -27,7 +27,7 @@ L260, the scope of U (What it gives), quoted: *"Statement H, and with it I117's 
 
 L260 (2), quoted: *"(2) The range of a PSD idempotent is a semisimple subalgebra $\mathfrak h$, on which it is a positive-definite idempotent of $\mathfrak h$'s own $\#$."* Its proof, quoted: *"(2) $C\#C=\tfrac12\sum\sigma_i\sigma_j|[v_i,v_j]\rangle\langle[v_i,v_j]|$ has range $[V,V]$, which must equal $V$, and a perfect subalgebra of a compact algebra is semisimple."*
 
-L264 (1), quoted: *"(1) Let $X$ maximise $F$ on the unit sphere of $\operatorname{Sym}^2\mathfrak{so}(n)$, taken positive semidefinite by L260 (1). Then $C=X/F(X)$ is an idempotent, positive definite on the semisimple subalgebra $\mathfrak h$ it is supported on, and* stable: $\langle C\#H,H\rangle\le\tfrac12\lVert H\rVert^2$ *for every $H\perp C$."*
+L264 (1), quoted: *"(1) Let $X$ maximise $F$ on the unit sphere of $\mathop{\mathrm{Sym}}^2\mathfrak{so}(n)$, taken positive semidefinite by L260 (1). Then $C=X/F(X)$ is an idempotent, positive definite on the semisimple subalgebra $\mathfrak h$ it is supported on, and* stable: $\langle C\#H,H\rangle\le\tfrac12\lVert H\rVert^2$ *for every $H\perp C$."*
 
 L263's statement, the witness clause, quoted: *"$$C=\tfrac9{28}P_{\mathfrak{su}(3)}+\tfrac3{28}P_{\mathfrak p}$$ is a positive-definite idempotent on $\mathfrak g_2$ other than $I/4$, so U is false."*
 

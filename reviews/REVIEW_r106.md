@@ -17,7 +17,7 @@ Cold brief, own implementation from the definitions, adversarial. Scripts in [sc
 
 Built from the brief's definitions ([r106_core.py](../scripts/reviewers/r106/r106_core.py)): random algebraic Weyl tensors by pair-symmetrisation, Bianchi projection and Kulkarni–Nomizu trace removal; $M_{(ij),(kl)}=W_{ijkl}$ over $i<j$; $K_{ab}=W_{abab}$; structure constants of $\mathfrak{so}(n)$ in the unnormalised $\varphi_{ij}=E_{ij}-E_{ji}$, and
 
-$$\theta=\operatorname{tr}(M^3)+\langle M^\#,M\rangle,\qquad M^\#_{\alpha\beta}=\tfrac12\sum c_{\alpha\gamma\delta}c_{\beta\varepsilon\zeta}M_{\gamma\varepsilon}M_{\delta\zeta}.$$
+$$\theta=\mathop{\mathrm{tr}}(M^3)+\langle M^\#,M\rangle,\qquad M^\#_{\alpha\beta}=\tfrac12\sum c_{\alpha\gamma\delta}c_{\beta\varepsilon\zeta}M_{\gamma\varepsilon}M_{\delta\zeta}.$$
 
 **The factor $\tfrac12$ is not fitted, it is forced and it is $n$-independent**: solving $\theta(S^{n/2}\times S^{n/2})=\theta_0(n)$ for the scale returns $0.50000000$ at $n=6,8,10,12$ separately ([r106_calibrate.py](../scripts/reviewers/r106/r106_calibrate.py)). Controls, all passing before anything was reviewed ([r106_anchors.py](../scripts/reviewers/r106/r106_anchors.py)):
 
@@ -133,7 +133,7 @@ The specific relaxation is strictly loose below $t=2$, independently rebuilt ([r
 
 ### The numbers are real: I rebuilt the relaxation and hit them
 
-Independent build of the both-sided relaxation ([r106_relax.py](../scripts/reviewers/r106/r106_relax.py)), the two sides decouple, so it is $\tfrac32\max\{p_3(\mu):\mu\succ\operatorname{diag}M,\ \textstyle\sum\mu=0,\sum\mu^2=1\}+\tfrac12\max\{-p_3(\omega):\omega\succ d,\ \sum\omega=0,\sum\omega^2=3\}$, each by SLSQP over sorted vectors with $12$–$20$ starts. At $K=c\,K_{S^6\times S^6}$, $n=12$:
+Independent build of the both-sided relaxation ([r106_relax.py](../scripts/reviewers/r106/r106_relax.py)), the two sides decouple, so it is $\tfrac32\max\{p_3(\mu):\mu\succ\mathop{\mathrm{diag}}M,\ \textstyle\sum\mu=0,\sum\mu^2=1\}+\tfrac12\max\{-p_3(\omega):\omega\succ d,\ \sum\omega=0,\sum\omega^2=3\}$, each by SLSQP over sorted vectors with $12$–$20$ starts. At $K=c\,K_{S^6\times S^6}$, $n=12$:
 
 | $2-t$ | $R-\theta_0(12)$ | slope | Claim 4's figure |
 |---|---|---|---|
@@ -150,7 +150,7 @@ $R$ is a *relaxation*: $\theta(W)\le R(t)$. A relaxation whose value climbs away
 
 ### The true first-order coefficient, exactly
 
-Split $M=D+\Delta$, $D=\operatorname{diag}M$ and $\Delta$ the rest. Both sit in $\mathcal W_n$: $D$ is the coordinate-diagonal tensor with $W_{abab}=K_{ab}$, and $K\mathbf1=0$ is exactly what makes it trace-free, so $\mathcal W_n=\mathcal W_n^{\mathrm{diag}}\oplus\mathcal W_n^{\mathrm{off}}$ orthogonally (dimensions $9+75=84$ at $n=6$, $20+280=300$ at $n=8$, matching $n(n-3)/2$ and $\dim\mathcal W_n$). With $\lVert M\rVert=1$: $\lVert D\rVert^2=t/2$, $\lVert\Delta\rVert^2=1-t/2$.
+Split $M=D+\Delta$, $D=\mathop{\mathrm{diag}}M$ and $\Delta$ the rest. Both sit in $\mathcal W_n$: $D$ is the coordinate-diagonal tensor with $W_{abab}=K_{ab}$, and $K\mathbf1=0$ is exactly what makes it trace-free, so $\mathcal W_n=\mathcal W_n^{\mathrm{diag}}\oplus\mathcal W_n^{\mathrm{off}}$ orthogonally (dimensions $9+75=84$ at $n=6$, $20+280=300$ at $n=8$, matching $n(n-3)/2$ and $\dim\mathcal W_n$). With $\lVert M\rVert=1$: $\lVert D\rVert^2=t/2$, $\lVert\Delta\rVert^2=1-t/2$.
 
 **The linear term vanishes identically.** $Q(D)=D^2+D^\#$ is diagonal whenever $D$ is: $D^2$ obviously, and $D^\#$ because $[\varphi_\gamma,\varphi_\delta]$ is a **multiple of a single basis element**, so $c_{\alpha\gamma\delta}c_{\beta\gamma\delta}=0$ for $\alpha\ne\beta$ and $D^\#_{\alpha\beta}=\tfrac12\sum_{\gamma\delta}c_{\alpha\gamma\delta}c_{\beta\gamma\delta}d_\gamma d_\delta$ is supported on $\alpha=\beta$. Verified at $0.0\mathrm{e}{+}00$ (exact zeros, not roundoff) at $n=5,6,7,8,10,12$ ([r106_claim4a.py](../scripts/reviewers/r106/r106_claim4a.py)). Hence $\langle Q(D),\Delta\rangle=0$ and
 
@@ -204,7 +204,7 @@ $\theta$ **falls**, tracking the prediction to $10^{-5}$, while the relaxation a
 - **Is the slope real or an artefact?** Real, reproduced to three digits, and a property of $R$ alone. As a statement about $\theta$ it is not merely unsupported, it has the wrong sign.
 - **Does it survive at $n=14,16$?** For $R$, yes, with the constant drifting ($1.30\to0.90$ over $n=8\to16$). For $\theta$, the correct coefficient survives in closed form at $n=14,16$: $-0.157710$, $-0.137236$.
 - **Is the $O(\cdot)$ uniform in $n$, and what is the constant?** The linear coefficient is $\tfrac32\theta_0(n)/(n-2)\to0$ like $3\sqrt2/(2n)$, so uniform and vanishing. The **remainder is not uniform**: the $\varepsilon^{3/2}$ term carries $M(n)=\max_{\lVert W\rVert=1}\lvert\theta\rvert$ by homogeneity alone, and $M(n)$ is bounded only by Xu's $\sqrt{(n^2-1)(n-2)/n}\sim n^{3/2}$ unless Conjecture A is granted. The linear term dominates only for $\varepsilon<8C'^2/M(n)^2$, so the window shrinks like $n^{-2}$ granting the conjecture and like $n^{-5}$ without it. The statement is a *shrinking* neighbourhood of the diagonal locus, not a band of fixed width.
-- **Is it stronger than what is known, or does it follow from the record?** It follows from the record. Ingredients: the orthogonal splitting (Reviewer 103's $t/2+\lVert M-\operatorname{diag}M\rVert^2=1$, which I re-verify to $2\times10^{-16}$), $Q(\text{diagonal})$ diagonal (one line), and the $L_e$ closed form (Lemmas of Reviewers 30–33). Nothing else is used. As *stated* ($\theta\le\theta_0+O(2-\kappa^2)$), it is true, weaker than the truth, and weaker than the point result it claims to strengthen anywhere the linear term is positive.
+- **Is it stronger than what is known, or does it follow from the record?** It follows from the record. Ingredients: the orthogonal splitting (Reviewer 103's $t/2+\lVert M-\mathop{\mathrm{diag}}M\rVert^2=1$, which I re-verify to $2\times10^{-16}$), $Q(\text{diagonal})$ diagonal (one line), and the $L_e$ closed form (Lemmas of Reviewers 30–33). Nothing else is used. As *stated* ($\theta\le\theta_0+O(2-\kappa^2)$), it is true, weaker than the truth, and weaker than the point result it claims to strengthen anywhere the linear term is positive.
 
 ### It is conditional, and at $n=12,14$ on a result the literature does not have
 

@@ -27,7 +27,7 @@
 ## Hypothesis inventory
 
 - **H1 (given).** Lemma L21 as quoted in Passage B: $\alpha\le\frac13$ for every unit $V\in u^\perp\cap T_u\mathcal O^\perp$, at every $n\ge9$. The brief makes it a given, and the landscape entry records that it carries an unproved input. The VALID verdict inherits that debt.
-- **H2 (standard).** $\langle X,Y\#Z\rangle$ is fully symmetric in $X,Y,Z$, and $\langle X,YZ\rangle=\operatorname{tr}(XYZ)$ is fully symmetric on symmetric operators. This is the Böhm–Wilking structure behind $P$ and its polarisation $T$.
+- **H2 (standard).** $\langle X,Y\#Z\rangle$ is fully symmetric in $X,Y,Z$, and $\langle X,YZ\rangle=\mathop{\mathrm{tr}}(XYZ)$ is fully symmetric on symmetric operators. This is the Böhm–Wilking structure behind $P$ and its polarisation $T$.
 - **H3 (given).** The sphere-product values $\Theta_n$ of the Definitions, each attained by a unit Weyl operator.
 - **H4 (reading).** "Maximizer" means global maximizer of $P$ on $S$. The bootstrap $\gamma_V\le m$ uses exactly this, and the argument says nothing about local maximizers or other critical points.
 - **H5 (written).** "Angular distance" is the geodesic distance of Section 0. The landscape entry says "geodesic angular", the detail entry says "angular", and both fix the reading.
@@ -43,10 +43,10 @@ Nothing else is needed. In particular Passage A's three "further hypotheses" are
 
 ## 2. The expansion is exact
 
-By H2 the polarisation of $P(W)=\operatorname{tr}(W^3)+\langle W,W\#W\rangle$ is $T(X,Y,Z)=\operatorname{tr}(XYZ)_{\mathrm{sym}}+\langle X,Y\#Z\rangle_{\mathrm{sym}}$, and reading off coefficients of $P(u+tV)$:
+By H2 the polarisation of $P(W)=\mathop{\mathrm{tr}}(W^3)+\langle W,W\#W\rangle$ is $T(X,Y,Z)=\mathop{\mathrm{tr}}(XYZ)_{\mathrm{sym}}+\langle X,Y\#Z\rangle_{\mathrm{sym}}$, and reading off coefficients of $P(u+tV)$:
 
-- linear coefficient $3\operatorname{tr}(u^2V)+3\langle u\#u,V\rangle=3\langle Q(u),V\rangle$, so $T(u,u,V)=\langle Q(u),V\rangle=\theta^*\langle u,V\rangle=0$,
-- quadratic coefficient $3\operatorname{tr}(uV^2)+\langle u,V\#V\rangle+2\langle V,u\#V\rangle=3\langle\frac12(uV+Vu)+u\#V,V\rangle$, so $T(u,V,V)=\langle F_uV,V\rangle$.
+- linear coefficient $3\mathop{\mathrm{tr}}(u^2V)+3\langle u\#u,V\rangle=3\langle Q(u),V\rangle$, so $T(u,u,V)=\langle Q(u),V\rangle=\theta^*\langle u,V\rangle=0$,
+- quadratic coefficient $3\mathop{\mathrm{tr}}(uV^2)+\langle u,V\#V\rangle+2\langle V,u\#V\rangle=3\langle\frac12(uV+Vu)+u\#V,V\rangle$, so $T(u,V,V)=\langle F_uV,V\rangle$.
 
 Cubic homogeneity then gives $P(cu+sV)=c^3P(u)+3c^2s\,T(u,u,V)+3cs^2\,T(u,V,V)+s^3P(V)$. Multiplying by $\sqrt{2/3}$ and using $\sqrt{2/3}\,P(u)=1$ yields Passage A's formula with $\alpha=\sqrt{2/3}\langle F_uV,V\rangle$ and $\gamma_V=\sqrt{2/3}\,P(V)$, with no remainder and no linear term.
 

@@ -25,7 +25,7 @@ is **false as written**; it holds under the added hypothesis $\lVert W\rVert=1$.
 
 ### The norm, CONFIRMED
 
-Checked against [conventions.md](../findings/conventions.md) rather than the block's usage. The block runs in $\sum_\alpha\lambda_\alpha^2=\operatorname{tr}(W^2)=1$ on $\Lambda^2$, which is the record's normalisation; the pair cap $\lVert[v_\alpha,v_\beta]\rVert^2\le2$ is stated there under the same half-trace pairing $\langle X,Y\rangle=\tfrac12\operatorname{tr}(X^{\mathsf T}Y)$, and the anchor above reproduces $M(4)=\sqrt{3/2}$ in it. **No $\sqrt2$ is loose anywhere in the block.** The Li/Bourguignon–Karcher index-order caveat that conventions.md attaches to this file does not reach L35: the whole argument is about the first-kind operator $W$ on $\Lambda^2$, whose spectrum is independent of the $\mathring W$ index order.
+Checked against [conventions.md](../findings/conventions.md) rather than the block's usage. The block runs in $\sum_\alpha\lambda_\alpha^2=\mathop{\mathrm{tr}}(W^2)=1$ on $\Lambda^2$, which is the record's normalisation; the pair cap $\lVert[v_\alpha,v_\beta]\rVert^2\le2$ is stated there under the same half-trace pairing $\langle X,Y\rangle=\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$, and the anchor above reproduces $M(4)=\sqrt{3/2}$ in it. **No $\sqrt2$ is loose anywhere in the block.** The Li/Bourguignon–Karcher index-order caveat that conventions.md attaches to this file does not reach L35: the whole argument is about the first-kind operator $W$ on $\Lambda^2$, whose spectrum is independent of the $\mathring W$ index order.
 
 ### Is the relaxation's feasible set really a superset of the true $T$?, CONFIRMED
 
@@ -36,7 +36,7 @@ Four conditions, each checked:
 | $T\ge0$ | $T_{\alpha\beta\gamma}=c_{\alpha\beta\gamma}^2$ |
 | totally symmetric | $c_{abc}=\langle[v_a,v_b],v_c\rangle$ is totally antisymmetric, so its square is totally symmetric |
 | pair cap $\sum_\gamma T_{\alpha\beta\gamma}\le2$ | $\sum_\gamma\langle[v_\alpha,v_\beta],v_\gamma\rangle^2=\lVert[v_\alpha,v_\beta]\rVert^2$ over an orthonormal basis, then [L31](../findings/stratum-two-negative.md) |
-| row marginal $\sum_{\beta<\gamma}T_{\alpha\beta\gamma}=m-2$ | $\sum_\beta\lVert[v_\alpha,v_\beta]\rVert^2=-B(v_\alpha,v_\alpha)=-(m-2)\operatorname{tr}(v_\alpha^2)=2(m-2)$, halved for unordered pairs |
+| row marginal $\sum_{\beta<\gamma}T_{\alpha\beta\gamma}=m-2$ | $\sum_\beta\lVert[v_\alpha,v_\beta]\rVert^2=-B(v_\alpha,v_\alpha)=-(m-2)\mathop{\mathrm{tr}}(v_\alpha^2)=2(m-2)$, halved for unordered pairs |
 
 So $\theta\le\mathrm{LP}(\lambda)$, and dropping the marginals gives $\mathrm{LP}\le G$ since a maximum over a larger set is larger. **Both relaxation steps go the safe way.**
 

@@ -17,15 +17,15 @@ Analysis only. **No run was made.** Every number below is a closed-form evaluati
 | symbol | reading adopted | authority |
 | --- | --- | --- |
 | $\mathcal W_n$ | algebraic Weyl operators on $\mathbb R^n$; the ascent runs on its **unit sphere** | [conventions.md](../findings/conventions.md) |
-| $\mu$ | $\operatorname{spec}(M)$ on $\Lambda^2$ at $\lVert M\rVert_F=1$, so $\sum\mu=0$, $\sum\mu^2=1$ | [conventions.md](../findings/conventions.md) |
-| $\omega$ | $\operatorname{spec}(\mathring W)$ on $S^2_0$, Li's $iklj$ order, $\sum\omega=0$, $\sum\omega^2=3$ | [conventions.md](../findings/conventions.md) |
+| $\mu$ | $\mathop{\mathrm{spec}}(M)$ on $\Lambda^2$ at $\lVert M\rVert_F=1$, so $\sum\mu=0$, $\sum\mu^2=1$ | [conventions.md](../findings/conventions.md) |
+| $\omega$ | $\mathop{\mathrm{spec}}(\mathring W)$ on $S^2_0$, Li's $iklj$ order, $\sum\omega=0$, $\sum\omega^2=3$ | [conventions.md](../findings/conventions.md) |
 | $p_3$ | the **power sum** $\sum x_i^3$ | **derived, see below** |
 | pairing | half-trace at the $\Lambda^2$ level, $\{\varphi_{ab}\}_{a<b}$ orthonormal | [conventions.md](../findings/conventions.md) |
 | $\theta_0(n)$ | the closed form $\sqrt{2(n-1)(n-2)}/n$ alone | [conventions.md](../findings/conventions.md) |
 
 **$\mu$ is the disambiguation the brief warns about, and L53 takes the safe one.** [conventions.md](../findings/conventions.md) records that $\mu$ carries the $\Lambda^2$ spectrum and, thirty lines later in this same file, the scalar $-\min\omega$. Inside $p_3(\mu)$ only the vector reading is grammatical, so L53 is unexposed. $\omega$ I found carrying **one** sense across [bispectral.md](../findings/bispectral.md), I did not reproduce the companion audit's second sense for it, and record the disagreement rather than resolve it.
 
-**$p_3$ has no row in [conventions.md](../findings/conventions.md)**, the file whose stated job is that every definition the record uses lives there. It is recoverable and I recovered it rather than assumed it: [bispectral.md:140](../findings/bispectral.md#L140) proves $\alpha=8\operatorname{tr}(M^3)$ and $\theta=\operatorname{tr}(M^3)+\langle M^\#,M\rangle$, and states $p_3(\omega)=p_3(\mu)-2\langle M^\#,M\rangle$; substituting gives the identity $\theta=\tfrac32p_3(\mu)-\tfrac12p_3(\omega)$ only if $p_3(x)=\sum x_i^3$. The elementary-symmetric reading $e_3$ fails the identity. **Add the row.**
+**$p_3$ has no row in [conventions.md](../findings/conventions.md)**, the file whose stated job is that every definition the record uses lives there. It is recoverable and I recovered it rather than assumed it: [bispectral.md:140](../findings/bispectral.md#L140) proves $\alpha=8\mathop{\mathrm{tr}}(M^3)$ and $\theta=\mathop{\mathrm{tr}}(M^3)+\langle M^\#,M\rangle$, and states $p_3(\omega)=p_3(\mu)-2\langle M^\#,M\rangle$; substituting gives the identity $\theta=\tfrac32p_3(\mu)-\tfrac12p_3(\omega)$ only if $p_3(x)=\sum x_i^3$. The elementary-symmetric reading $e_3$ fails the identity. **Add the row.**
 
 **$\Theta_n$ never appears in the block, so the parity trap does not bite, and it is worth saying why rather than assuming it.** $n=6,8,10,12$ are all even, so $\Theta_n=\theta_0(n)$ there and the balanced product attains the closed form; the block uses $\theta_0(n)$ only as *the value at a named point*, which is what the repaired convention licenses at even $n$. I checked the two closed forms agree at the balanced split: $\theta_{k,l}^2=2\frac{n-1}{n-2}\bigl(1-\frac{n-1}{kl}\bigr)$ at $k=l=n/2$ gives $kl=n^2/4$ and
 
@@ -69,7 +69,7 @@ $$\mu(\mathbb{CP}^m)=\frac{\bigl(4(m^2-1),\ (2m-4)^{\times(m^2-1)},\ (-2(m+1))^{
 
 **Four independent confirmations, none of them circular.**
 
-1. At $m=2$ the spectrum is $(2,-1,-1,0,0,0)/\sqrt6$ and $p_3=1/\sqrt6$, character for character the record's own exact rational build at [INDEX-values.md:19](../findings/INDEX-values.md#L19) ($\Lambda^2$ spectrum $(2,-1,-1,0^7)/\sqrt6$, $\operatorname{tr}(W_0^3)=1/\sqrt6$).
+1. At $m=2$ the spectrum is $(2,-1,-1,0,0,0)/\sqrt6$ and $p_3=1/\sqrt6$, character for character the record's own exact rational build at [INDEX-values.md:19](../findings/INDEX-values.md#L19) ($\Lambda^2$ spectrum $(2,-1,-1,0^7)/\sqrt6$, $\mathop{\mathrm{tr}}(W_0^3)=1/\sqrt6$).
 2. Trace-freeness holds identically in $m$.
 3. [bispectral.md:33](../findings/bispectral.md#L33) records, from a wholly separate line of work, that $\theta$ is *"$87\%$ $\Lambda^2$ term at $\mathbb{CP}^4$ ... and exactly half-and-half at $\mathbb{CP}^2$"*. My formula gives $\tfrac32p_3(\mu)/\theta=0.87144$ at $m=4$ and $0.50000$ at $m=2$.
 4. The same line's *"$97\%$ second-kind term at $S^6\times S^6$"*: $\tfrac32A(6)/\theta_0(12)=0.0273$, so $97.3\%$.

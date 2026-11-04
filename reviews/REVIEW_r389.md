@@ -9,8 +9,8 @@
 | 1 | $\Sigma\le\tfrac32(A^2+B^2+C^2)$ and $A^2\le2(M_{ij}^2+M_{kl}^2)$, hence $\Sigma\le3m_4$ | **BOTH STEPS TRUE, and the composite constant $3$ is SHARP.** But the first step is an *identity minus a square*, and the section threw the square away, see claim 1b |
 | 1b | *(new)* the sharp form | **$\Sigma=3m_4-\tfrac{\sigma^2}2-3\big[(M_{ij}-M_{kl})^2+(M_{ik}-M_{jl})^2+(M_{il}-M_{jk})^2\big]/2$**, $\sigma=\sum_{a<b\in S}M_{ab}$. So $\Sigma\le3m_4-\sigma^2/2$ free, **with equality on the whole two-factor family** |
 | 2 | $m_4<\theta^2/3$ suffices; in band $m_4<\tfrac12$ suffices; $S^6\times S^6$ carries $0.0869$ against $0.509$ | **Logic correct. The $S^6\times S^6$ evaluation names the WRONG four-set**, the binding one is the $(4,0)$ split at $6\alpha^2=6/55=0.1091$, not the $(2,2)$ split at $0.0869$. Ratio $4.67$, not "a factor of six" |
-| 3 | value formula $\theta=\tfrac12(\sum M_{ab}^3+\operatorname{tr}M^3)$, on record with the spectral cap and the $99.6\%$ figure | **Formula TRUE, derivation TRUE, on record TRUE. The cap quoted is the file's own SUPERSEDED one**, [diagonal-half.md:43](../findings/diagonal-half.md) ignores the forced zero eigenvalue that [diagonal-half.md:47](../findings/diagonal-half.md) uses. Correct cap $1.213562$, correct share $98.18\%$, and it is **exactly saturated** at $S^6\times S^6$. The "$0.0449$" is an un-halved quantity compared against halved ones |
-| 4 | four-set-supported $\Rightarrow$ at most four nonzero eigenvalues, cap $\tfrac12\operatorname{tr}M^3\le0.8165$; $\Theta_4=\sqrt{12}/4$ from [Lemma L57](../findings/problem.md) | **Eigenvalue count WRONG (three, not four) and the cap WRONG: $\tfrac12\operatorname{tr}M^3\le1/\sqrt3=0.577350$, attained.** $\Theta_4=\sqrt{12}/4$ is **right** per L57, but the record carries a name collision, [support-dichotomy.md:25](../findings/support-dichotomy.md) using $\Theta_4$ for $\sqrt{3/2}$. **Yes, a four-set-supported critical point exists and attains $0.866$**: padded $S^2\times S^2$, verified from the criticality equation |
+| 3 | value formula $\theta=\tfrac12(\sum M_{ab}^3+\mathop{\mathrm{tr}}M^3)$, on record with the spectral cap and the $99.6\%$ figure | **Formula TRUE, derivation TRUE, on record TRUE. The cap quoted is the file's own SUPERSEDED one**, [diagonal-half.md:43](../findings/diagonal-half.md) ignores the forced zero eigenvalue that [diagonal-half.md:47](../findings/diagonal-half.md) uses. Correct cap $1.213562$, correct share $98.18\%$, and it is **exactly saturated** at $S^6\times S^6$. The "$0.0449$" is an un-halved quantity compared against halved ones |
+| 4 | four-set-supported $\Rightarrow$ at most four nonzero eigenvalues, cap $\tfrac12\mathop{\mathrm{tr}}M^3\le0.8165$; $\Theta_4=\sqrt{12}/4$ from [Lemma L57](../findings/problem.md) | **Eigenvalue count WRONG (three, not four) and the cap WRONG: $\tfrac12\mathop{\mathrm{tr}}M^3\le1/\sqrt3=0.577350$, attained.** $\Theta_4=\sqrt{12}/4$ is **right** per L57, but the record carries a name collision, [support-dichotomy.md:25](../findings/support-dichotomy.md) using $\Theta_4$ for $\sqrt{3/2}$. **Yes, a four-set-supported critical point exists and attains $0.866$**: padded $S^2\times S^2$, verified from the criticality equation |
 | 5 | the obstacle is that $M_S$ is not zero-row-sum | **NO, there is a worse one, and it is fatal. The owed lemma is FALSE** |
 | 6 | fix by projecting $M_S$ with [Lemma L18](../findings/problem.md)(b)'s closed form | **MISATTRIBUTED and, as written, self-defeating.** The cited machinery is [Lemma L57](../findings/problem.md)'s **Step 2(b)** ([problem.md:234–250](../findings/problem.md)), not L18, which has no part (b). The orthogonality half *does* generalise; the closed form is $Z(v)$-specific. And projecting into $\mathcal D_n$ replaces $\Theta_4=0.866$ by $\Theta_n\to\sqrt2$, **above the band** |
 
@@ -26,7 +26,7 @@
 - within factor 2: identically $-\gamma(n-1)$;
 - across: $\gamma+(p-1)\alpha+(q-1)\beta=\theta$, i.e. $\gamma-q\gamma-p\gamma=-\gamma(n-1)$.
 
-So $\boxed{\theta=(n-1)\lvert\gamma\rvert}$, and $\operatorname{tr}M^2=2$ gives $\gamma^2=1/D$ with $D=\dfrac{pq^2}{2(p-1)}+\dfrac{p^2q}{2(q-1)}+pq$. *Check at $p=q=6$: $\gamma^2=5/396$, $\theta=11/\sqrt{79.2}=1.236036=\theta_0(12)$, the brief's own $\gamma^2$, recovered.*
+So $\boxed{\theta=(n-1)\lvert\gamma\rvert}$, and $\mathop{\mathrm{tr}}M^2=2$ gives $\gamma^2=1/D$ with $D=\dfrac{pq^2}{2(p-1)}+\dfrac{p^2q}{2(q-1)}+pq$. *Check at $p=q=6$: $\gamma^2=5/396$, $\theta=11/\sqrt{79.2}=1.236036=\theta_0(12)$, the brief's own $\gamma^2$, recovered.*
 
 **The four-set.** Take $S$ inside factor 1 (needs $p\ge4$). All six entries equal $\alpha$, so $m_4=6\alpha^2=6q^2\gamma^2/(p-1)^2$ and
 
@@ -34,7 +34,7 @@ $$\frac{m_4}{\theta^2}=\frac{6q^2}{(p-1)^2(p+q-1)^2},\qquad m_4\ge\frac{\theta^2
 
 At $p=5$ this reads $4(q+4)\le4.2426\,q$, i.e. $q\ge66$. At $p=6$ it reads $5(q+5)\le4.2426\,q$, never. At $p=4$ it holds from $q\ge8$, but $p=4$ is **never in band**: $\tfrac32D=q^2+6q+\tfrac{12q}{q-1}$ against $(q+3)^2=q^2+6q+9$, and $9\ge12q/(q-1)$ fails for every $q>0$, so $\theta^2<\tfrac32$ always, approaching it from below. **So $p=5$ is the unique two-factor family where the reduction fails in band**, and it fails there by a fixed margin.
 
-**The numbers** (screen, agreeing with the closed forms to every digit; criticality residual $\le2.4\times10^{-14}$, $\lVert M\mathbf1\rVert_\infty\le5.6\times10^{-16}$, $\operatorname{tr}M^2=2$):
+**The numbers** (screen, agreeing with the closed forms to every digit; criticality residual $\le2.4\times10^{-14}$, $\lVert M\mathbf1\rVert_\infty\le5.6\times10^{-16}$, $\mathop{\mathrm{tr}}M^2=2$):
 
 | point | $n$ | $\theta$ | in band? | $m_4$ (the $(4,0)$ set) | $\theta^2/3$ | $\Sigma$ |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -91,17 +91,17 @@ The budget $\theta^2/3=55/108=0.509259$ is correct. **The true margin is $4.67\t
 
 ## Claim 3, the value formula is right, the cap quoted is the record's own superseded one
 
-**Derivation, rebuilt.** Multiply $M_{ij}^2+(M^2)_{ij}=\theta M_{ij}$ by $M_{ij}$ and sum over ordered $i\ne j$. Since $M$ is hollow, $\sum_{i\ne j}M_{ij}^2=\operatorname{tr}M^2=2$ and $\sum_{i\ne j}(M^2)_{ij}M_{ij}=\sum_{i,j}(M^2)_{ij}M_{ji}=\operatorname{tr}M^3$. Hence $\sum_{i\ne j}M_{ij}^3+\operatorname{tr}M^3=2\theta$. ✓ **Correct, and $\sum_{a,b}=\sum_{i\ne j}$ since the diagonal vanishes.** On record at [diagonal-half.md:29](../findings/diagonal-half.md). ✓
+**Derivation, rebuilt.** Multiply $M_{ij}^2+(M^2)_{ij}=\theta M_{ij}$ by $M_{ij}$ and sum over ordered $i\ne j$. Since $M$ is hollow, $\sum_{i\ne j}M_{ij}^2=\mathop{\mathrm{tr}}M^2=2$ and $\sum_{i\ne j}(M^2)_{ij}M_{ij}=\sum_{i,j}(M^2)_{ij}M_{ji}=\mathop{\mathrm{tr}}M^3$. Hence $\sum_{i\ne j}M_{ij}^3+\mathop{\mathrm{tr}}M^3=2\theta$. ✓ **Correct, and $\sum_{a,b}=\sum_{i\ne j}$ since the diagonal vanishes.** On record at [diagonal-half.md:29](../findings/diagonal-half.md). ✓
 
-**The cap.** For $k$ reals with $\sum x=0$, $\sum x^2=s$, $\max\sum x^3=s^{3/2}(k-2)/\sqrt{k(k-1)}$ (one large against $k-1$ equal negatives). Applied with $k=n$ this gives $\tfrac12\operatorname{tr}M^3\le\sqrt2(n-2)/\sqrt{n(n-1)}=1.230915$ at $n=12$, the quoted figure. **But $M\mathbf1=0$ forces a zero eigenvalue**, so the correct application is $k=n-1$:
+**The cap.** For $k$ reals with $\sum x=0$, $\sum x^2=s$, $\max\sum x^3=s^{3/2}(k-2)/\sqrt{k(k-1)}$ (one large against $k-1$ equal negatives). Applied with $k=n$ this gives $\tfrac12\mathop{\mathrm{tr}}M^3\le\sqrt2(n-2)/\sqrt{n(n-1)}=1.230915$ at $n=12$, the quoted figure. **But $M\mathbf1=0$ forces a zero eigenvalue**, so the correct application is $k=n-1$:
 
-$$\tfrac12\operatorname{tr}M^3\;\le\;\frac{\sqrt2\,(n-3)}{\sqrt{(n-1)(n-2)}}\;=\;1.213562\ \ (n=12).$$
+$$\tfrac12\mathop{\mathrm{tr}}M^3\;\le\;\frac{\sqrt2\,(n-3)}{\sqrt{(n-1)(n-2)}}\;=\;1.213562\ \ (n=12).$$
 
 **The record already knows this**, [diagonal-half.md:47](../findings/diagonal-half.md) states it with $c_n=(n-3)/\sqrt{(n-1)(n-2)}$ and "$k=n-1$ after the forced zero". So [diagonal-half.md:43](../findings/diagonal-half.md), and the section quoting it, cite the file's own superseded line. **Three consequences:**
 
 1. **The share is $98.18\%$, not $99.6\%$.** $1.213562/1.236033=0.98182$.
-2. **The corrected cap is EXACTLY SATURATED at $S^6\times S^6$**, not "$98.6\%$ of the cap": $\operatorname{spec}(M)=\{10\alpha,(-\alpha)^{10},0\}$ with $\alpha=1/\sqrt{55}$ is precisely the $k=11$ extremiser, and $\tfrac12\operatorname{tr}M^3=495\alpha^3=1.2135624$. **A cleaner statement than the one on record.**
-3. **The "$0.0449$" is a normalisation collision.** $\theta_0(12)-\tfrac12\operatorname{tr}M^3=0.0224707$; $0.0449$ is the *un-halved* $\sum_{a,b}M_{ab}^3=2\theta_0-\operatorname{tr}M^3$, [diagonal-half.md:47](../findings/diagonal-half.md)'s $E_0$. As the section writes it, "$1.2309$ against $1.236033$ … the entrywise cube sum supplying $0.0449$", the three numbers do not add up ($1.2309+0.0449=1.2758$). **The correct split is $1.236033=1.213562+0.022471$, i.e. $98.18\%+1.82\%$.**
+2. **The corrected cap is EXACTLY SATURATED at $S^6\times S^6$**, not "$98.6\%$ of the cap": $\mathop{\mathrm{spec}}(M)=\{10\alpha,(-\alpha)^{10},0\}$ with $\alpha=1/\sqrt{55}$ is precisely the $k=11$ extremiser, and $\tfrac12\mathop{\mathrm{tr}}M^3=495\alpha^3=1.2135624$. **A cleaner statement than the one on record.**
+3. **The "$0.0449$" is a normalisation collision.** $\theta_0(12)-\tfrac12\mathop{\mathrm{tr}}M^3=0.0224707$; $0.0449$ is the *un-halved* $\sum_{a,b}M_{ab}^3=2\theta_0-\mathop{\mathrm{tr}}M^3$, [diagonal-half.md:47](../findings/diagonal-half.md)'s $E_0$. As the section writes it, "$1.2309$ against $1.236033$ … the entrywise cube sum supplying $0.0449$", the three numbers do not add up ($1.2309+0.0449=1.2758$). **The correct split is $1.236033=1.213562+0.022471$, i.e. $98.18\%+1.82\%$.**
 
 *The section's own claim ("recorded as a confirmation, claiming nothing"), is honest, and the screen it reports did fire. What it did not do is check which of the file's two caps it was copying.*
 
@@ -109,16 +109,16 @@ $$\tfrac12\operatorname{tr}M^3\;\le\;\frac{\sqrt2\,(n-3)}{\sqrt{(n-1)(n-2)}}\;=\
 
 **The eigenvalue count is wrong.** If $M$ is supported on $S=\{i,j,k,l\}$ then $M_S\mathbf1_4=0$ **as well**, each row sum over $S$ *is* the full row sum. So $M$ has at most **three** nonzero eigenvalues, not four.
 
-**Hence the cap is wrong.** With $k=3$: $a,-a/2,-a/2$ and $\tfrac32a^2=2$ give $a=2/\sqrt3$ and $\operatorname{tr}M^3=\tfrac34a^3$, so
+**Hence the cap is wrong.** With $k=3$: $a,-a/2,-a/2$ and $\tfrac32a^2=2$ give $a=2/\sqrt3$ and $\mathop{\mathrm{tr}}M^3=\tfrac34a^3$, so
 
-$$\tfrac12\operatorname{tr}M^3\;\le\;\tfrac1{\sqrt3}\;=\;0.577350,\qquad\text{not }0.816497 .$$
+$$\tfrac12\mathop{\mathrm{tr}}M^3\;\le\;\tfrac1{\sqrt3}\;=\;0.577350,\qquad\text{not }0.816497 .$$
 
-The section's $0.8165$ comes from $a=\sqrt{3/2}$ against three equal negatives with $\operatorname{tr}M^3=\tfrac89a^3$, the $k=4$ problem, which the zero-row-sum condition forbids. *The arithmetic inside that computation is right; the constraint set is wrong.*
+The section's $0.8165$ comes from $a=\sqrt{3/2}$ against three equal negatives with $\mathop{\mathrm{tr}}M^3=\tfrac89a^3$, the $k=4$ problem, which the zero-row-sum condition forbids. *The arithmetic inside that computation is right; the constraint set is wrong.*
 
-**And the corrected value is exactly attained.** Take $S=\{1,2,3,4\}$, $M_{12}=M_{34}=x$, the four cross entries $=-x/2$; then $x=1/\sqrt3$ from $\operatorname{tr}M^2=2$, and
+**And the corrected value is exactly attained.** Take $S=\{1,2,3,4\}$, $M_{12}=M_{34}=x$, the four cross entries $=-x/2$; then $x=1/\sqrt3$ from $\mathop{\mathrm{tr}}M^2=2$, and
 
 - **criticality holds**: at $(1,2)$, $x^2+2(x/2)^2=\tfrac13+\tfrac16=\tfrac12=\theta x$ with $\theta=\sqrt3/2$; at $(1,3)$, $x^2/4+2x(-x/2)=\tfrac1{12}-\tfrac13=-\tfrac14=\theta\cdot(-x/2)$. ✓
-- $\operatorname{spec}(M)=\{2x,-x,-x,0\}=\{2/\sqrt3,-1/\sqrt3,-1/\sqrt3,0\}$, the $k=3$ extremiser, $\tfrac12\operatorname{tr}M^3=1/\sqrt3=0.577350$;
+- $\mathop{\mathrm{spec}}(M)=\{2x,-x,-x,0\}=\{2/\sqrt3,-1/\sqrt3,-1/\sqrt3,0\}$, the $k=3$ extremiser, $\tfrac12\mathop{\mathrm{tr}}M^3=1/\sqrt3=0.577350$;
 - the entrywise half is $\sum_{a<b}M_{ab}^3=2x^3-4x^3/8=\tfrac1{2\sqrt3}=0.288675$;
 - **$\theta=0.577350+0.288675=0.866025=\sqrt3/2$.** ✓
 
@@ -130,7 +130,7 @@ The section's $0.8165$ comes from $a=\sqrt{3/2}$ against three equal negatives w
 
 The named obstacle is correct as far as it goes: $M_S$ has row sums $r_i=\sum_{j\in S}M_{ij}=-\sum_{j\notin S}M_{ij}\ne0$, so [Lemma L57](../findings/problem.md), stated on $\mathcal D_n$, does not apply to it. **Two worse things are true.**
 
-**(a) The perturbation is not small at the threshold the lemma needs.** $\lVert E\rVert^2=2(1-m_4)$, so at $m_4=\tfrac12$ we have $\lVert E\rVert=1$ against $\lVert M\rVert=\sqrt2$, **$71\%$ of the norm**. A cubic-continuity estimate $\lvert\theta(M)-\theta(M_S)\rvert\le C\lVert E\rVert$ would have to close a gap of $1.2247-0.866=0.359$ across a perturbation of that size. *The continuity step itself is sound in the only sense that matters, the value functional $V(M)=\tfrac12(\sum M_{ab}^3+\operatorname{tr}M^3)/(\lVert M\rVert^2/2)^{3/2}$ is smooth and degree-zero, and L57 bounds it on all of $\mathcal D_n$ rather than only at critical points, so applying it to a non-critical $M_S'$ is legitimate.* **The step is available and useless.**
+**(a) The perturbation is not small at the threshold the lemma needs.** $\lVert E\rVert^2=2(1-m_4)$, so at $m_4=\tfrac12$ we have $\lVert E\rVert=1$ against $\lVert M\rVert=\sqrt2$, **$71\%$ of the norm**. A cubic-continuity estimate $\lvert\theta(M)-\theta(M_S)\rvert\le C\lVert E\rVert$ would have to close a gap of $1.2247-0.866=0.359$ across a perturbation of that size. *The continuity step itself is sound in the only sense that matters, the value functional $V(M)=\tfrac12(\sum M_{ab}^3+\mathop{\mathrm{tr}}M^3)/(\lVert M\rVert^2/2)^{3/2}$ is smooth and degree-zero, and L57 bounds it on all of $\mathcal D_n$ rather than only at critical points, so applying it to a non-critical $M_S'$ is legitimate.* **The step is available and useless.**
 
 **(b) The target is false.** The counterexample above ends the question: no repair of the interpolation can prove a statement with a counterexample at $m_4=0.5766$, $\theta=1.2648$. **The true threshold for "concentration forces $\theta$ out of band" lies in $(0.6,1]$, and $\theta^2/3<2/3$ throughout the band, so any true version is too weak to feed the clause.** *The $m_4$-only criterion is dead; the $\sigma$-corrected criterion of claim 1b is not.*
 
@@ -153,4 +153,4 @@ The named obstacle is correct as far as it goes: $M_S$ has row sums $r_i=\sum_{j
 
 ---
 
-*Screen (permitted: seconds of compute on objects constructed for the check, reported as a screen and never as evidence for a positive claim). Built $M$ for $(p,q)\in\{(6,6),(5,43),(5,66),(5,200),(4,40)\}$ from the block ansatz, verified $M\mathbf1=0$ to $5.6\times10^{-16}$, $\operatorname{tr}M^2=2$, criticality residual $\max-\min$ of $(M_{ij}^2+(M^2)_{ij})/M_{ij}$ over all $i\ne j$ at $\le2.4\times10^{-14}$, and the value formula against the criticality $\theta$ to $10^{-15}$. Every entry of the table above was derived in closed form first; the screen agreed to all six digits.*
+*Screen (permitted: seconds of compute on objects constructed for the check, reported as a screen and never as evidence for a positive claim). Built $M$ for $(p,q)\in\{(6,6),(5,43),(5,66),(5,200),(4,40)\}$ from the block ansatz, verified $M\mathbf1=0$ to $5.6\times10^{-16}$, $\mathop{\mathrm{tr}}M^2=2$, criticality residual $\max-\min$ of $(M_{ij}^2+(M^2)_{ij})/M_{ij}$ over all $i\ne j$ at $\le2.4\times10^{-14}$, and the value formula against the criticality $\theta$ to $10^{-15}$. Every entry of the table above was derived in closed form first; the screen agreed to all six digits.*

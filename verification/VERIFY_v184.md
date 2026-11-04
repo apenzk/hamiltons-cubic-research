@@ -13,8 +13,8 @@ Brief read cold, from [verification/BRIEF_L28.md](BRIEF_L28.md) plus [findings/n
 | 5 | Every row's charge $c_S+q_S^2$ | **ALL SEVEN CONFIRMED**, the repaired column is correct |
 | 6 | Only $4(m-1)$ meets $2(m+1)$, at $m=3$ alone | **PROVEN** |
 | 7 | The $m=3$ absence, on the stated Young-diagram grounds | **PROVEN**, and the stated reason is the right one |
-| 8 | $\operatorname{tr}L_e=0$ identically in $m$ | **PROVEN** |
-| 9 | $\operatorname{tr}(L_e^2)=\frac{3m(m-1)(4m-1)}{4(m+1)}=\kappa_F(2m)\lVert e\rVert^2$ | **PROVEN** |
+| 8 | $\mathop{\mathrm{tr}}L_e=0$ identically in $m$ | **PROVEN** |
+| 9 | $\mathop{\mathrm{tr}}(L_e^2)=\frac{3m(m-1)(4m-1)}{4(m+1)}=\kappa_F(2m)\lVert e\rVert^2$ | **PROVEN** |
 | 10 | Fox's Theorem 1.3 applies to this algebra | **HYPOTHESIS-DEBT**, hypotheses not checked against the object on the record |
 | 11 | The trace solve returns $\frac{m+2}{2(m+1)}$ on the $\mathfrak{su}(m)$ row | **PROVEN** |
 | 12 | "Each remaining class is recovered uniquely the same way" | **PROVEN for four of five; FAILS for $V_{(1,1);(1,1)}$ at $m=3$** (degenerate coefficient) |
@@ -50,7 +50,7 @@ Quoted from [findings/second-order.md](../findings/second-order.md), the charge 
 
 Quoted from [findings/algebra.md](../findings/algebra.md):
 
-> **Fox's Theorem 1.3** gives, for this algebra, $\operatorname{tr}L(x)=0$ and $\operatorname{tr}\big(L(x)L(y)\big)=\kappa_F\langle x,y\rangle$
+> **Fox's Theorem 1.3** gives, for this algebra, $\mathop{\mathrm{tr}}L(x)=0$ and $\mathop{\mathrm{tr}}\big(L(x)L(y)\big)=\kappa_F\langle x,y\rangle$
 
 **First consistency note, resolved.** The conventions file gives $\dim\mathcal W_n=\frac{n(n-3)(n+1)(n+2)}{12}$; the block gives $\dim\mathcal W_{2m}=\frac{m(m+1)(2m+1)(2m-3)}{3}$. Substituting $n=2m$,
 $$\frac{2m(2m-3)(2m+1)(2m+2)}{12}=\frac{2m(2m-3)(2m+1)\cdot2(m+1)}{12}=\frac{m(m+1)(2m+1)(2m-3)}{3},$$
@@ -201,9 +201,9 @@ $$\lambda_4=1-\frac{m-1}{m+1}=\frac2{m+1},\qquad \lambda_5=\lambda_6=1-1=0,\qqua
 
 The brief names this as the trap that killed a previous route: *a cited theorem assumes a **unital** algebra and $\mathcal W_n$ has no unit.* I read the theorem in the source PDF text, [references/fox-2019-nonassociative-curvature-algebra/](https://arxiv.org/abs/1901.04012), lines 152–195, and quote it verbatim:
 
-> A commutative algebra $(A,\circ)$ is **exact** (called harmonic in [29]) if its multiplication endomorphisms $L_\circ:A\to\mathrm{End}(A)$ defined by $L_\circ(x)=x\circ y$ satisfy $\operatorname{tr}L_\circ(x)=0$ for all $x\in A$. **Note that an exact algebra is nonunital.** A commutative algebra $(A,\circ)$ is **Killing metrized**, if the Killing type trace form $\tau_\circ(x,y)=\operatorname{tr}L_\circ(x)L_\circ(y)$ is nondegenerate and invariant.
+> A commutative algebra $(A,\circ)$ is **exact** (called harmonic in [29]) if its multiplication endomorphisms $L_\circ:A\to\mathrm{End}(A)$ defined by $L_\circ(x)=x\circ y$ satisfy $\mathop{\mathrm{tr}}L_\circ(x)=0$ for all $x\in A$. **Note that an exact algebra is nonunital.** A commutative algebra $(A,\circ)$ is **Killing metrized**, if the Killing type trace form $\tau_\circ(x,y)=\mathop{\mathrm{tr}}L_\circ(x)L_\circ(y)$ is nondegenerate and invariant.
 
-> **Theorem 1.3.** Let $(V,h)$ be a Euclidean vector space of **dimension at least 4**. The algebra $(\mathrm{MC}_W(V^*),*)$ is exact and Killing metrized. Moreover: (1) The Killing form $\tau_*(X,Y)=\operatorname{tr}L_*(X)L_*(Y)$ is a nonzero multiple of $\langle\cdot,\cdot\rangle$. (2) If $\dim V>4$, then $(\mathrm{MC}_W(V^*),*)$ is simple.
+> **Theorem 1.3.** Let $(V,h)$ be a Euclidean vector space of **dimension at least 4**. The algebra $(\mathrm{MC}_W(V^*),*)$ is exact and Killing metrized. Moreover: (1) The Killing form $\tau_*(X,Y)=\mathop{\mathrm{tr}}L_*(X)L_*(Y)$ is a nonzero multiple of $\langle\cdot,\cdot\rangle$. (2) If $\dim V>4$, then $(\mathrm{MC}_W(V^*),*)$ is simple.
 
 **The unitality trap does not fire here, and the reason is the opposite of the worry.** Theorem 1.3's *only* hypothesis is $\dim V\ge4$. Unitality is not assumed anywhere; on the contrary, Fox states that an exact algebra **is** nonunital, so the theorem's own conclusion *entails* that $\mathrm{MC}_W(V^*)$ has no unit. **The absence of a unit is a consequence of the cited theorem, not an obstruction to citing it.** `NO DEFECT` on the named trap.
 
@@ -212,19 +212,19 @@ The brief names this as the trap that killed a previous route: *a cited theorem 
 **Two further hypotheses the block does not list, both of which hold.**
 
 - *The theorem is about $\mathrm{MC}_W(V^*)$, the Weyl tensors, not $\mathrm{MC}(V^*)$.* The object here is $\mathcal W_{2m}$, which is exactly $\mathrm{MC}_W$. ✓, but only if $e\in\mathcal W_{2m}$, which is **H7, undischarged**; see §8.
-- *The theorem is about $L_*$, and this record uses $F_u$.* [algebra.md](../findings/algebra.md) records the identification with a sign, $X*Y=-F_X(Y)$, "the sign being his curvature convention". **The sign is harmless for both identities used**: $\operatorname{tr}L_*(x)=-\operatorname{tr}F_x$ vanishes iff $\operatorname{tr}F_x$ does, and $\operatorname{tr}(L_*L_*)=\operatorname{tr}(F F)$ with the sign squared away. ✓
+- *The theorem is about $L_*$, and this record uses $F_u$.* [algebra.md](../findings/algebra.md) records the identification with a sign, $X*Y=-F_X(Y)$, "the sign being his curvature convention". **The sign is harmless for both identities used**: $\mathop{\mathrm{tr}}L_*(x)=-\mathop{\mathrm{tr}}F_x$ vanishes iff $\mathop{\mathrm{tr}}F_x$ does, and $\mathop{\mathrm{tr}}(L_*L_*)=\mathop{\mathrm{tr}}(F F)$ with the sign squared away. ✓
 
-**What Fox's theorem does NOT give, and the block writes as though it does.** The block says: *"Fox's Theorem 1.3, at [algebra.md](../findings/algebra.md), gives $\operatorname{tr}L(x)=0$ and $\operatorname{tr}(L(x)L(y))=\kappa_F\langle x,y\rangle$ with $\kappa_F(n)=\frac{(2n-1)(n-1)}4$."* Fox's Remark 1.4, verbatim:
+**What Fox's theorem does NOT give, and the block writes as though it does.** The block says: *"Fox's Theorem 1.3, at [algebra.md](../findings/algebra.md), gives $\mathop{\mathrm{tr}}L(x)=0$ and $\mathop{\mathrm{tr}}(L(x)L(y))=\kappa_F\langle x,y\rangle$ with $\kappa_F(n)=\frac{(2n-1)(n-1)}4$."* Fox's Remark 1.4, verbatim:
 
 > **Remark 1.4.** When $\dim V>4$, Theorem 1.3 does not give the value of the positive constant $\kappa$ such that $\tau_*=\kappa\langle\cdot,\cdot\rangle$.
 
 So the *form* $\tau_*=\kappa\langle\cdot,\cdot\rangle$ is Fox's; the *closed form* $\kappa_F(n)=\frac{(2n-1)(n-1)}4$ is **this project's**, and [algebra.md](../findings/algebra.md) says so plainly, *"This is a number Fox does not have: his Remark 1.4 explicitly leaves $\kappa$ uncomputed for $\dim V>4$."* The block's sentence attributes the whole package to Theorem 1.3 and should not. **This is a citation-scope defect, not a mathematical one:** the block's $\kappa_F$ is right (I confirm the anchor at $n=4$ below), but its provenance is misstated in the one sentence a reader would use to check it.
 
-**A circularity I looked for and did not find, WITHDRAWN.** Since $\kappa_F$'s closed form was established by the project rather than by Fox, I checked whether it was fitted from the $\mathbb{CP}^m$ points themselves, which would make the $\operatorname{tr}(L_e^2)$ check circular. It was not, on three counts: (i) it is anchored at $n=4$ by Fox's *own* Theorem 1.5, $\kappa=21/16$ in his metric, and $\kappa_F(4)=\frac{7\cdot3}4=\frac{21}4=4\cdot\frac{21}{16}$ matches under the recorded $4\times$ metric conversion; (ii) Theorem 1.3(1) makes $\kappa$ a function of $n$ **alone**, so *any* point at $n=2m$ determines it and the $\mathbb{CP}^m$ point is then genuinely tested against it; (iii) [algebra.md](../findings/algebra.md) records the verification set as including *"random unit Weyl operators with criticality residual $\approx1$"*, i.e. non-idempotents, which pins $\kappa$ as a property of the algebra independently of any critical point. **Candidate withdrawn: it fails the third test of the discrepancy protocol, the opposite is not merely arguable, it is what the record shows.** What survives is the weaker and correct statement: *the $\operatorname{tr}(L_e^2)$ check is a check against a numerically-established constant, not against a theorem.*
+**A circularity I looked for and did not find, WITHDRAWN.** Since $\kappa_F$'s closed form was established by the project rather than by Fox, I checked whether it was fitted from the $\mathbb{CP}^m$ points themselves, which would make the $\mathop{\mathrm{tr}}(L_e^2)$ check circular. It was not, on three counts: (i) it is anchored at $n=4$ by Fox's *own* Theorem 1.5, $\kappa=21/16$ in his metric, and $\kappa_F(4)=\frac{7\cdot3}4=\frac{21}4=4\cdot\frac{21}{16}$ matches under the recorded $4\times$ metric conversion; (ii) Theorem 1.3(1) makes $\kappa$ a function of $n$ **alone**, so *any* point at $n=2m$ determines it and the $\mathbb{CP}^m$ point is then genuinely tested against it; (iii) [algebra.md](../findings/algebra.md) records the verification set as including *"random unit Weyl operators with criticality residual $\approx1$"*, i.e. non-idempotents, which pins $\kappa$ as a property of the algebra independently of any critical point. **Candidate withdrawn: it fails the third test of the discrepancy protocol, the opposite is not merely arguable, it is what the record shows.** What survives is the weaker and correct statement: *the $\mathop{\mathrm{tr}}(L_e^2)$ check is a check against a numerically-established constant, not against a theorem.*
 
 ## 7. Both Fox identities, derived
 
-**Identity one, $\operatorname{tr}L_e=0$.** Summing $\dim_{\mathbb R}S\cdot\lambda_S$ over the seven rows:
+**Identity one, $\mathop{\mathrm{tr}}L_e=0$.** Summing $\dim_{\mathbb R}S\cdot\lambda_S$ over the seven rows:
 
 $$1\cdot1+(m^2-1)\frac{m+2}{2(m+1)}+m(m-1)\cdot\tfrac12+\frac{m^2(m+1)(m-3)}4\cdot\frac2{m+1}+0+0+\frac{m^2(m^2-1)}6\cdot\Big(-\frac3{m+1}\Big).$$
 
@@ -232,9 +232,9 @@ Term by term: $(m^2-1)\frac{m+2}{2(m+1)}=\frac{(m-1)(m+2)}2$; the $V_{(1,1);(1,1
 
 $$1+\frac{(m^2+m-2)+(m^2-m)+(m^3-3m^2)-(m^3-m^2)}2=1+\frac{-2}2=1-1=0 .$$
 
-$$\boxed{\ \operatorname{tr}L_e=0\ \text{identically in }m\ }\qquad\textbf{PROVEN.}$$
+$$\boxed{\ \mathop{\mathrm{tr}}L_e=0\ \text{identically in }m\ }\qquad\textbf{PROVEN.}$$
 
-**Identity two, $\operatorname{tr}(L_e^2)$.** Summing $\dim_{\mathbb R}S\cdot\lambda_S^2$:
+**Identity two, $\mathop{\mathrm{tr}}(L_e^2)$.** Summing $\dim_{\mathbb R}S\cdot\lambda_S^2$:
 
 $$1+\frac{(m^2-1)(m+2)^2}{4(m+1)^2}+\frac{m(m-1)}4+\frac{m^2(m+1)(m-3)}4\cdot\frac4{(m+1)^2}+0+0+\frac{m^2(m^2-1)}6\cdot\frac9{(m+1)^2}.$$
 
@@ -244,11 +244,11 @@ $$(m-1)(m+2)^2+4m^2(m-3)+6m^2(m-1)=(m^3+3m^2-4)+(4m^3-12m^2)+(6m^3-6m^2)=11m^3-1
 
 Hence
 
-$$\operatorname{tr}(L_e^2)=1+\frac{m(m-1)}4+\frac{11m^3-15m^2-4}{4(m+1)}=\frac{4(m+1)+(m^3-m)+11m^3-15m^2-4}{4(m+1)}=\frac{12m^3-15m^2+3m}{4(m+1)},$$
+$$\mathop{\mathrm{tr}}(L_e^2)=1+\frac{m(m-1)}4+\frac{11m^3-15m^2-4}{4(m+1)}=\frac{4(m+1)+(m^3-m)+11m^3-15m^2-4}{4(m+1)}=\frac{12m^3-15m^2+3m}{4(m+1)},$$
 
 and $12m^3-15m^2+3m=3m(4m^2-5m+1)=3m(4m-1)(m-1)$, so
 
-$$\boxed{\ \operatorname{tr}(L_e^2)=\frac{3m(m-1)(4m-1)}{4(m+1)}\ }\qquad\textbf{PROVEN, exactly as stated.}$$
+$$\boxed{\ \mathop{\mathrm{tr}}(L_e^2)=\frac{3m(m-1)(4m-1)}{4(m+1)}\ }\qquad\textbf{PROVEN, exactly as stated.}$$
 
 **And it equals $\kappa_F(2m)\lVert e\rVert^2$.** With $\kappa_F(n)=\frac{(2n-1)(n-1)}4$ at $n=2m$, and $\lVert e\rVert^2=1/\theta^2=\frac{3m(m-1)}{(m+1)(2m-1)}$ (proved in §8):
 
@@ -256,7 +256,7 @@ $$\kappa_F(2m)\lVert e\rVert^2=\frac{(4m-1)(2m-1)}4\cdot\frac{3m(m-1)}{(m+1)(2m-
 
 **The $(2m-1)$ cancels exactly. PROVEN.**
 
-**What the two identities do and do not certify, and this is where the block overreaches.** The block says *"Two identities check the whole list, and each fails if any single value is wrong by a rational function of $m$."* The first half of that is true: perturbing one $\lambda_S$ by any nonzero rational $\epsilon(m)$ shifts $\operatorname{tr}L_e$ by $\dim_{\mathbb R}S\cdot\epsilon(m)\ne0$. **But both identities are polynomial identities in $m$, and they therefore pass at values of $m$ where the table is known false.** At $m=2$ the table's rows read $(1,1)$, $(3,\tfrac23)$, $(2,\tfrac12)$, $(-3,\tfrac23)$, $(0,0)$, $(5,0)$, $(2,-1)$ (a **negative dimension** on row 4) and yet
+**What the two identities do and do not certify, and this is where the block overreaches.** The block says *"Two identities check the whole list, and each fails if any single value is wrong by a rational function of $m$."* The first half of that is true: perturbing one $\lambda_S$ by any nonzero rational $\epsilon(m)$ shifts $\mathop{\mathrm{tr}}L_e$ by $\dim_{\mathbb R}S\cdot\epsilon(m)\ne0$. **But both identities are polynomial identities in $m$, and they therefore pass at values of $m$ where the table is known false.** At $m=2$ the table's rows read $(1,1)$, $(3,\tfrac23)$, $(2,\tfrac12)$, $(-3,\tfrac23)$, $(0,0)$, $(5,0)$, $(2,-1)$ (a **negative dimension** on row 4) and yet
 
 $$1+3\cdot\tfrac23+2\cdot\tfrac12+(-3)\cdot\tfrac23+0+0+2\cdot(-1)=1+2+1-2-2=0 .$$
 
@@ -271,7 +271,7 @@ $$e=-\frac1{2m-1}P_{\mathfrak m}+\frac{m-2}{(m+1)(2m-1)}P_{\mathfrak{su}(m)}+\fr
 The three $U(m)$-isotypic pieces of $\Lambda^2\mathbb R^{2m}=\mathfrak{so}(2m)$ have dimensions $\dim\mathfrak m=\binom{2m}2-m^2=m(2m-1)-m^2=m(m-1)$, $\dim\mathfrak{su}(m)=m^2-1$, $\dim\omega=1$, summing to $m(m-1)+m^2-1+1=m(2m-1)=\binom{2m}2$. ✓
 
 **Tracelessness, exactly.**
-$$\operatorname{tr}e=-\frac{m(m-1)}{2m-1}+\frac{(m-2)(m^2-1)}{(m+1)(2m-1)}+\frac{2(m-1)}{2m-1}=\frac{-m(m-1)+(m-2)(m-1)+2(m-1)}{2m-1}=\frac{(m-1)\big[-m+m-2+2\big]}{2m-1}=0 .$$
+$$\mathop{\mathrm{tr}}e=-\frac{m(m-1)}{2m-1}+\frac{(m-2)(m^2-1)}{(m+1)(2m-1)}+\frac{2(m-1)}{2m-1}=\frac{-m(m-1)+(m-2)(m-1)+2(m-1)}{2m-1}=\frac{(m-1)\big[-m+m-2+2\big]}{2m-1}=0 .$$
 **PROVEN, identically in $m$.**
 
 **The norm.**
@@ -310,7 +310,7 @@ $$\boxed{\ D/\lvert\lambda_{\min}\rvert=(2m-3)\theta-\theta=(2m-4)\theta=2(m-2)\
 
 ## 10. The second route to $\lambda_{\max}$, tested beyond the displayed row
 
-**The displayed solve is correct.** Holding the other six rows fixed and writing $y$ for the $\mathfrak{su}(m)$ value, $\operatorname{tr}L_e=0$ reads
+**The displayed solve is correct.** Holding the other six rows fixed and writing $y$ for the $\mathfrak{su}(m)$ value, $\mathop{\mathrm{tr}}L_e=0$ reads
 $$1+(m^2-1)y+\frac{m(m-1)}2+\frac{m^2(m-3)}2-\frac{m^2(m-1)}2=0 .$$
 The two $m^2$ terms combine as $\frac{m^2[(m-3)-(m-1)]}2=-m^2$, so the constant is $1+\frac{m(m-1)}2-m^2=1-\frac{m(m+1)}2$, and
 $$(m^2-1)y=\frac{m^2+m-2}2=\frac{(m+2)(m-1)}2,\qquad y=\frac{(m+2)(m-1)}{2(m-1)(m+1)}=\frac{m+2}{2(m+1)} .$$
@@ -336,7 +336,7 @@ so $\frac{m^2(m+1)(m-3)}4\,z=\frac{m^2(m-3)}2$ and $z=\frac2{m+1}$, **provided $
 - **The failure, in closed form.** The solve for $y$ takes as *inputs* the values $\tfrac12$, $\frac2{m+1}$, $0$, $0$, $-\frac3{m+1}$ on rows 3–7, of which four come from the charge formula and one from equivariance. Perturb the charge formula on row 7 alone by $\epsilon(m)$, so $\lambda_7=-\frac3{m+1}+\epsilon$. Then $(m^2-1)y=\frac{(m+2)(m-1)}2-\frac{m^2(m^2-1)}6\epsilon$, i.e.
 $$y=\frac{m+2}{2(m+1)}-\frac{m^2}6\,\epsilon(m).$$
 **A single wrong charge propagates straight into $\lambda_{\max}$ with a nonzero coefficient.** The same holds for perturbations on rows 4, 5, 6, and it holds for a wrong *dimension* too. So the route does not decouple $\lambda_{\max}$ from the charge formula; it re-expresses one charge-formula output in terms of four others.
-- **Argue the opposite, honestly.** The route *is* worth something: an arithmetic slip confined to row 2 would be caught, since $y$ is then over-determined; and $\operatorname{tr}L_e=0$ is a theorem of Fox's, external to the charge formula, so the seven values are constrained by something the formula did not supply. **That is the defensible version of the sentence.** What it cannot support is independence from the charge formula, because five of the six inputs are charge-formula outputs.
+- **Argue the opposite, honestly.** The route *is* worth something: an arithmetic slip confined to row 2 would be caught, since $y$ is then over-determined; and $\mathop{\mathrm{tr}}L_e=0$ is a theorem of Fox's, external to the charge formula, so the seven values are constrained by something the formula did not supply. **That is the defensible version of the sentence.** What it cannot support is independence from the charge formula, because five of the six inputs are charge-formula outputs.
 - **All three tests cleared. Recorded.** Severity: a **claim of independence that the derivation does not establish**, in the one paragraph the block wrote to reassure a reader about the very column that was previously wrong. The arithmetic is sound; the epistemics are not. **The repair is to say "rests on more than the charge formula *at row 2*", or better, "the charge formula's seven outputs are mutually consistent under an external trace identity."**
 
 ## 11. The landscape statement, INCONSISTENT AS WRITTEN

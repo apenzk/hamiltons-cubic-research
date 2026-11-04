@@ -17,7 +17,7 @@ Transcribed 2026-09-02 from [li-2112.08465.txt](https://arxiv.org/abs/2112.08465
 > $$\mathring R:S^2_0(V)\times S^2_0(V)\to\mathbb R\tag{2.3}$$
 > by restriction to $S^2_0(V)$. Note that if all the eigenvalues of $\mathring R$ restricted to $S^2_0(V)$ are bounded from below by $\kappa\in\mathbb R$, then the sectional curvatures of $R$ are bounded from below by $\kappa$. **It should be noted that $\mathring R$ does not preserve the subspace $S^2_0(V)$ in general, but it does, for instance, when $R$ is Einstein.**
 
-Footnote 5 gives the reason the full operator cannot be used: $\operatorname{tr}\big(\mathring R:S^2(V)\to S^2(V)\big)=\tfrac S2$ and $\mathring R(g,g)=-S$.
+Footnote 5 gives the reason the full operator cannot be used: $\mathop{\mathrm{tr}}\big(\mathring R:S^2(V)\to S^2(V)\big)=\tfrac S2$ and $\mathring R(g,g)=-S$.
 
 **The parenthetical matters for this project.** $\mathrm{Weyl}_n$ is Ricci-flat, hence Einstein, so $\mathring W$ does preserve $S^2_0(V)$ and the bilinear form and the self-adjoint operator $\pi\circ\mathring R$ agree, Remark 2.1 states that equivalence:
 
@@ -53,7 +53,7 @@ Sharp: $\mathbb{CP}^2$ has five-positive curvature operator of the second kind.
 
 | example | spectrum of $\mathring R$ on $S^2_0$ |
 |---|---|
-| **2.4** $(S^n,g_0)$, constant curvature 1 | $\mathring R=\mathrm{Id}$; all eigenvalues $1$. Derived from $R_{ijkl}=g_{ik}g_{jl}-g_{il}g_{jk}$, giving $\mathring R(\varphi,\varphi)=\lvert\varphi\rvert^2-\operatorname{tr}(\varphi)^2=\lvert\varphi\rvert^2$ |
+| **2.4** $(S^n,g_0)$, constant curvature 1 | $\mathring R=\mathrm{Id}$; all eigenvalues $1$. Derived from $R_{ijkl}=g_{ik}g_{jl}-g_{il}g_{jk}$, giving $\mathring R(\varphi,\varphi)=\lvert\varphi\rvert^2-\mathop{\mathrm{tr}}(\varphi)^2=\lvert\varphi\rvert^2$ |
 | **2.5** $(\mathbb{CP}^m,g_{FS})$ | two eigenvalues: $-2$ with multiplicity $(m-1)(m+1)$, and $4$ with multiplicity $m(m+1)$. Attributed to [BK78] |
 | **2.6** $S^{n-1}\times\mathbb R$, sphere factor of curvature 1 | $\lambda_1=-\tfrac{n-2}{n}$ (mult. 1, eigenvector $\sum_{i=1}^{n-1}e_i\odot e_i-(n-1)e_n\odot e_n$); $\lambda_2=0$ (mult. $n-1$, spanned by $u\odot v$, $u$ tangent to the sphere, $v$ to $\mathbb R$); $\lambda_3=1$ (mult. $\tfrac{(n-2)(n+1)}{2}$, the traceless symmetric two-tensors on the $S^{n-1}$ factor) |
 | **2.7** $S^2\times S^2$, both factors curvature 1 | $\lambda_1=-1$ (mult. 1), $\lambda_2=0$ (mult. 4), $\lambda_3=1$ (mult. 4), attributed to [CGT21]. Eigenspaces given explicitly: $E_1=\mathrm{span}\{e_1\odot e_1+e_2\odot e_2-e_3\odot e_3-e_4\odot e_4\}$, $E_2=\mathrm{span}\{e_1\odot e_3,e_1\odot e_4,e_2\odot e_3,e_2\odot e_4\}$, $E_3=\mathrm{span}\{e_1\odot e_2,e_3\odot e_4,e_1\odot e_1-e_2\odot e_2,e_3\odot e_3-e_4\odot e_4\}$ |

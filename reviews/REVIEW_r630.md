@@ -14,12 +14,12 @@
 
 | object | reading adopted here | pinned at | status |
 | --- | --- | --- | --- |
-| $\langle X,Y\rangle$ | $\tfrac12\operatorname{tr}(X^{\mathsf T}Y)$ on $\mathfrak{so}(n)\cong\Lambda^2\mathbb R^n$, so $\{\varphi_{ab}\}_{a<b}$ is orthonormal | [conventions.md](../findings/conventions.md), "Norms and pairings", bullets 1–2 | the record's choice, pinned twice ([r519](REVIEW_r519.md), [r520](REVIEW_r520.md)) |
+| $\langle X,Y\rangle$ | $\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$ on $\mathfrak{so}(n)\cong\Lambda^2\mathbb R^n$, so $\{\varphi_{ab}\}_{a<b}$ is orthonormal | [conventions.md](../findings/conventions.md), "Norms and pairings", bullets 1–2 | the record's choice, pinned twice ([r519](REVIEW_r519.md), [r520](REVIEW_r520.md)) |
 | $N$ | $\binom n2$; $N=15$ at $n=6$, $N=6$ at $n=4$ | [conventions.md](../findings/conventions.md), "The objects" | consistent with every row of the table |
 | $\omega$ | the Cartan $3$-form $\omega(x,y,z)=\langle[x,y],z\rangle$, **totally antisymmetric** | [isotropy-cap.md:11](../findings/isotropy-cap.md); antisymmetry at [conventions.md](../findings/conventions.md), "Structure constants" | total antisymmetry is load-bearing in §2 and the block never invokes it |
 | isotropic | $\omega(u,v,w)=0$ for all $u,v,w\in\mathfrak m$ | [isotropy-cap.md:17](../findings/isotropy-cap.md), L36's statement | the only definition on the record |
-| $[\mathfrak m,\mathfrak m]$ | the **span** $\operatorname{span}\{[u,v]:u,v\in\mathfrak m\}$, a subspace of $\mathfrak{so}(n)$ | not stated in the block | the only reading under which $\perp$ and $\operatorname{rank}$ both parse |
-| $\operatorname{rank}[\mathfrak m,\mathfrak m]$ | $\dim[\mathfrak m,\mathfrak m]$, equivalently the rank of the bracket map $\Lambda^2\mathfrak m\to\mathfrak{so}(n)$ | not stated in the block | the two agree, the second being the first's image |
+| $[\mathfrak m,\mathfrak m]$ | the **span** $\mathop{\mathrm{span}}\{[u,v]:u,v\in\mathfrak m\}$, a subspace of $\mathfrak{so}(n)$ | not stated in the block | the only reading under which $\perp$ and $\mathop{\mathrm{rank}}$ both parse |
+| $\mathop{\mathrm{rank}}[\mathfrak m,\mathfrak m]$ | $\dim[\mathfrak m,\mathfrak m]$, equivalently the rank of the bracket map $\Lambda^2\mathfrak m\to\mathfrak{so}(n)$ | not stated in the block | the two agree, the second being the first's image |
 | $\mathfrak m$ | a **free variable** over subspaces of $\mathfrak{so}(n)$, L75 mentions no Weyl operator and no critical point | [conventions.md](../findings/conventions.md) tables three other senses | see **D1** |
 
 **D1, $\mathfrak m$ is used in a fourth sense and the block does not say so.** [conventions.md](../findings/conventions.md) tables three senses, all tied to a Weyl operator: $E_{\min}$ at a critical point, [L36](../findings/isotropy-cap.md)'s whole negative eigenspace, and [target.md](../findings/target.md)'s symmetric-pair odd part. L75's statement is pure Lie algebra with $\mathfrak m$ quantified over arbitrary subspaces. **This matters here rather than being pedantry**: under a reading in which "$\mathfrak m$ is isotropic" is a standing property of the ambient section, the block's chain is true; under the reading its own heading forces ($\mathfrak m$ free, "maximal isotropic" as the left-hand side of an *iff*), the third link is false. §4 shows the two readings are not interchangeable.
@@ -54,17 +54,17 @@ $$\boxed{\ \mathfrak m\ \text{maximal isotropic}\iff[\mathfrak m,\mathfrak m]^\p
 
 ## 3, The witness: the rank count holds for a non-isotropic subspace
 
-Take $n=4$, $N=\binom42=6$, and $\mathfrak m=\mathfrak{so}(3)=\operatorname{span}(\varphi_{12},\varphi_{13},\varphi_{23})$, $d=3$.
+Take $n=4$, $N=\binom42=6$, and $\mathfrak m=\mathfrak{so}(3)=\mathop{\mathrm{span}}(\varphi_{12},\varphi_{13},\varphi_{23})$, $d=3$.
 
-**Bracket span.** $\mathfrak{so}(3)$ is a simple Lie algebra, so $[\mathfrak m,\mathfrak m]=\mathfrak m$ and $\operatorname{rank}[\mathfrak m,\mathfrak m]=3$. Explicitly, with $\varphi_{ab}=E_{ab}-E_{ba}$,
+**Bracket span.** $\mathfrak{so}(3)$ is a simple Lie algebra, so $[\mathfrak m,\mathfrak m]=\mathfrak m$ and $\mathop{\mathrm{rank}}[\mathfrak m,\mathfrak m]=3$. Explicitly, with $\varphi_{ab}=E_{ab}-E_{ba}$,
 
 $$[\varphi_{12},\varphi_{13}]=-\varphi_{23},\qquad[\varphi_{12},\varphi_{23}]=\varphi_{13},\qquad[\varphi_{13},\varphi_{23}]=-\varphi_{12},$$
 
 so the span is all of $\mathfrak m$.
 
-**The rank count.** $N-\dim\mathfrak m=6-3=3=\operatorname{rank}[\mathfrak m,\mathfrak m]$. **The third condition holds.**
+**The rank count.** $N-\dim\mathfrak m=6-3=3=\mathop{\mathrm{rank}}[\mathfrak m,\mathfrak m]$. **The third condition holds.**
 
-**Isotropy.** $\langle[\varphi_{12},\varphi_{13}],\varphi_{23}\rangle=\langle-\varphi_{23},\varphi_{23}\rangle=-\lVert\varphi_{23}\rVert^2=-1\ne0$ under the half-trace pairing of [conventions.md](../findings/conventions.md). **$\mathfrak m$ is not isotropic**, and *a fortiori* not maximal isotropic. Equivalently $[\mathfrak m,\mathfrak m]^\perp=\mathfrak m^\perp=\operatorname{span}(\varphi_{14},\varphi_{24},\varphi_{34})\ne\mathfrak m$: the two sides have the same dimension and intersect in $0$.
+**Isotropy.** $\langle[\varphi_{12},\varphi_{13}],\varphi_{23}\rangle=\langle-\varphi_{23},\varphi_{23}\rangle=-\lVert\varphi_{23}\rVert^2=-1\ne0$ under the half-trace pairing of [conventions.md](../findings/conventions.md). **$\mathfrak m$ is not isotropic**, and *a fortiori* not maximal isotropic. Equivalently $[\mathfrak m,\mathfrak m]^\perp=\mathfrak m^\perp=\mathop{\mathrm{span}}(\varphi_{14},\varphi_{24},\varphi_{34})\ne\mathfrak m$: the two sides have the same dimension and intersect in $0$.
 
 **Screen.** Exact rational arithmetic over $\mathbb Q$ on the $6\times6$ coordinate structure constants, constructed here, seconds of compute: $\langle[\varphi_{12},\varphi_{13}],\varphi_{23}\rangle=-1$, $\dim[\mathfrak m,\mathfrak m]=3$, $N-d=3$. It agrees with the hand derivation above, which is the ground of the claim.
 
@@ -74,23 +74,23 @@ The same witness is already on the record twice, at [L36](../findings/isotropy-c
 
 ## 4, The third condition is strictly weaker, so the chain is false as written
 
-$\dim[\mathfrak m,\mathfrak m]^\perp=N-\operatorname{rank}[\mathfrak m,\mathfrak m]$, so
+$\dim[\mathfrak m,\mathfrak m]^\perp=N-\mathop{\mathrm{rank}}[\mathfrak m,\mathfrak m]$, so
 
-$$\operatorname{rank}[\mathfrak m,\mathfrak m]=N-\dim\mathfrak m\iff\dim[\mathfrak m,\mathfrak m]^\perp=\dim\mathfrak m .$$
+$$\mathop{\mathrm{rank}}[\mathfrak m,\mathfrak m]=N-\dim\mathfrak m\iff\dim[\mathfrak m,\mathfrak m]^\perp=\dim\mathfrak m .$$
 
 **That is a dimension equality, not a subspace equality.** Two subspaces of equal dimension coincide only when one contains the other. So:
 
 | implication | status | reason |
 | --- | --- | --- |
-| $[\mathfrak m,\mathfrak m]^\perp=\mathfrak m\Rightarrow\operatorname{rank}=N-d$ | **holds**, unconditionally | equal subspaces have equal dimension |
-| $\operatorname{rank}=N-d\Rightarrow[\mathfrak m,\mathfrak m]^\perp=\mathfrak m$ | **fails** | $\mathfrak{so}(3)\subset\mathfrak{so}(4)$, §3 |
-| $\operatorname{rank}=N-d$ **and $\mathfrak m$ isotropic** $\Rightarrow[\mathfrak m,\mathfrak m]^\perp=\mathfrak m$ | **holds** | isotropy gives $\mathfrak m\subseteq[\mathfrak m,\mathfrak m]^\perp$ by §2(a); equal dimensions then force equality |
+| $[\mathfrak m,\mathfrak m]^\perp=\mathfrak m\Rightarrow\mathop{\mathrm{rank}}=N-d$ | **holds**, unconditionally | equal subspaces have equal dimension |
+| $\mathop{\mathrm{rank}}=N-d\Rightarrow[\mathfrak m,\mathfrak m]^\perp=\mathfrak m$ | **fails** | $\mathfrak{so}(3)\subset\mathfrak{so}(4)$, §3 |
+| $\mathop{\mathrm{rank}}=N-d$ **and $\mathfrak m$ isotropic** $\Rightarrow[\mathfrak m,\mathfrak m]^\perp=\mathfrak m$ | **holds** | isotropy gives $\mathfrak m\subseteq[\mathfrak m,\mathfrak m]^\perp$ by §2(a); equal dimensions then force equality |
 
-**So the block's third condition is strictly weaker than its second, and the displayed chain of two *iff*s is false at its second link.** The heading is the sharper offender: it writes "$\mathfrak m$ maximal isotropic iff $[\mathfrak m,\mathfrak m]^\perp=\mathfrak m$ iff $\operatorname{rank}[\mathfrak m,\mathfrak m]=N-\dim\mathfrak m$" with $\mathfrak m$ unquantified, and it is the heading that is quoted, [L76](../findings/isotropy-cap.md)'s block, [INDEX-results.md:90](../findings/INDEX-results.md) and the census refutation all consume "the exact rank criterion" by that name.
+**So the block's third condition is strictly weaker than its second, and the displayed chain of two *iff*s is false at its second link.** The heading is the sharper offender: it writes "$\mathfrak m$ maximal isotropic iff $[\mathfrak m,\mathfrak m]^\perp=\mathfrak m$ iff $\mathop{\mathrm{rank}}[\mathfrak m,\mathfrak m]=N-\dim\mathfrak m$" with $\mathfrak m$ unquantified, and it is the heading that is quoted, [L76](../findings/isotropy-cap.md)'s block, [INDEX-results.md:90](../findings/INDEX-results.md) and the census refutation all consume "the exact rank criterion" by that name.
 
 **The repair.** Either attach the hypothesis,
 
-$$\text{for isotropic }\mathfrak m:\quad\mathfrak m\ \text{maximal}\iff[\mathfrak m,\mathfrak m]^\perp=\mathfrak m\iff\operatorname{rank}[\mathfrak m,\mathfrak m]=N-\dim\mathfrak m$$
+$$\text{for isotropic }\mathfrak m:\quad\mathfrak m\ \text{maximal}\iff[\mathfrak m,\mathfrak m]^\perp=\mathfrak m\iff\mathop{\mathrm{rank}}[\mathfrak m,\mathfrak m]=N-\dim\mathfrak m$$
 
 or drop the third condition and keep the unconditional two-way form of §2. The first is preferable, since **every consumer uses the rank form as a computational test** and needs to know that isotropy must be verified separately. This is precisely the omission [L77](../findings/isotropy-cap.md) was repaired for forty lines below, and the two blocks were written into the same file.
 
@@ -102,21 +102,21 @@ or drop the third condition and keep the unconditional two-way form of §2. The 
 
 Let $\mathfrak m\ne0$ be isotropic. By §2(a), $[\mathfrak m,\mathfrak m]\subseteq\mathfrak m^\perp$, hence
 
-$$\operatorname{rank}[\mathfrak m,\mathfrak m]\ \le\ \dim\mathfrak m^\perp\ =\ N-\dim\mathfrak m\ \le\ N-1 .$$
+$$\mathop{\mathrm{rank}}[\mathfrak m,\mathfrak m]\ \le\ \dim\mathfrak m^\perp\ =\ N-\dim\mathfrak m\ \le\ N-1 .$$
 
-At $n=6$, $d=6$ this reads $\operatorname{rank}\le9$, so a reported $15=N$ is impossible twice over, it exceeds the ceiling $9$ and it is full rank, which forces $[\mathfrak m,\mathfrak m]^\perp=0$ and so $\mathfrak m=0$. **The tell was sound and the block is right to keep it.** Note what it means for the table: the inequality $\operatorname{rank}\le N-d$ is automatic for every isotropic $\mathfrak m$, so **the whole table is the single question "is the ceiling attained?"**, i.e. "is the bracket map $\Lambda^2\mathfrak m\to\mathfrak m^\perp$ surjective?" That is a cleaner statement of the criterion than the one the block gives, and it makes the $d=4$ row's answer visible without a run.
+At $n=6$, $d=6$ this reads $\mathop{\mathrm{rank}}\le9$, so a reported $15=N$ is impossible twice over, it exceeds the ceiling $9$ and it is full rank, which forces $[\mathfrak m,\mathfrak m]^\perp=0$ and so $\mathfrak m=0$. **The tell was sound and the block is right to keep it.** Note what it means for the table: the inequality $\mathop{\mathrm{rank}}\le N-d$ is automatic for every isotropic $\mathfrak m$, so **the whole table is the single question "is the ceiling attained?"**, i.e. "is the bracket map $\Lambda^2\mathfrak m\to\mathfrak m^\perp$ surjective?" That is a cleaner statement of the criterion than the one the block gives, and it makes the $d=4$ row's answer visible without a run.
 
 ## 6, The table is a corollary, and $d=6$ is the only row that needs a measurement
 
-$n=6$, $N=15$. Column "free" is $N-d-\operatorname{rank}=\dim\big([\mathfrak m,\mathfrak m]^\perp/\mathfrak m\big)$, which checks: $11-6=5$ at $d=4$.
+$n=6$, $N=15$. Column "free" is $N-d-\mathop{\mathrm{rank}}=\dim\big([\mathfrak m,\mathfrak m]^\perp/\mathfrak m\big)$, which checks: $11-6=5$ at $d=4$.
 
-**$d=4$, a theorem, no run.** $\operatorname{rank}[\mathfrak m,\mathfrak m]\le\dim\Lambda^2\mathfrak m=\binom42=6<11=N-d$. So the ceiling of §5 is **unattainable for dimension reasons** and every isotropic $4$-subspace extends. Generally, a maximal isotropic satisfies $N-d\le\binom d2$, i.e. $\binom n2\le\binom{d+1}2$, i.e.
+**$d=4$, a theorem, no run.** $\mathop{\mathrm{rank}}[\mathfrak m,\mathfrak m]\le\dim\Lambda^2\mathfrak m=\binom42=6<11=N-d$. So the ceiling of §5 is **unattainable for dimension reasons** and every isotropic $4$-subspace extends. Generally, a maximal isotropic satisfies $N-d\le\binom d2$, i.e. $\binom n2\le\binom{d+1}2$, i.e.
 
 $$d\ \ge\ n-1,$$
 
 **tight**, with equality realised at $p=1$ in §7. At $n=6$ that is $d\ge5$, so the $d=4$ row is this bound at its fencepost. **Confirmed against the brief's report of the neighbouring audit.**
 
-**$d=5$ and $d=9$, closed form, via [L76](../findings/isotropy-cap.md)'s odd parts $\mathfrak p_{p,q}\cong\mathbb R^p\otimes\mathbb R^q$.** There $\operatorname{rank}=\binom p2+\binom q2=\binom n2-pq=N-d$ identically, and the singular values are $\sqrt{2p}$ with multiplicity $\binom q2$ and $\sqrt{2q}$ with multiplicity $\binom p2$.
+**$d=5$ and $d=9$, closed form, via [L76](../findings/isotropy-cap.md)'s odd parts $\mathfrak p_{p,q}\cong\mathbb R^p\otimes\mathbb R^q$.** There $\mathop{\mathrm{rank}}=\binom p2+\binom q2=\binom n2-pq=N-d$ identically, and the singular values are $\sqrt{2p}$ with multiplicity $\binom q2$ and $\sqrt{2q}$ with multiplicity $\binom p2$.
 
 | row | closed-form witness | rank | singular values predicted | block's report |
 | --- | --- | --- | --- | --- |
@@ -129,7 +129,7 @@ The $d=9$ prediction reproduces the block's sentence word for word. **So the $\s
 
 **Verdict on the table: it is a corollary of $d\ge n-1$ and of [L76](../findings/isotropy-cap.md)'s closed form for three of its four rows, and evidence for one.** Presenting it as measured evidence for the criterion inverts the dependency.
 
-**D4, the rows carry no quantifier, and read as universal two of them are false.** "$d=5$ … maximal" is false for *every* isotropic $5$-subspace: take any $5$-dimensional subspace of the cap $\mathfrak p_{3,3}$. It is isotropic (subspaces of isotropic spaces are isotropic), its bracket span lies in $\mathfrak{so}(3)\oplus\mathfrak{so}(3)$ of dimension $6$, so $\operatorname{rank}\le6<10=N-d$ and it **extends**. The same construction breaks "$d=6$ … maximal". The rows are statements about the **generic** subspace at each dimension; the caveat exists on the record (*"these rows describe the generic subspace at each dimension and are not a classification"*) but it sits in the census block sixty lines below, attached to a different table, and **the L75 table does not carry it**. This is the same failure the census block itself names: *"A caveat in the text does not weaken a claim in the heading."*
+**D4, the rows carry no quantifier, and read as universal two of them are false.** "$d=5$ … maximal" is false for *every* isotropic $5$-subspace: take any $5$-dimensional subspace of the cap $\mathfrak p_{3,3}$. It is isotropic (subspaces of isotropic spaces are isotropic), its bracket span lies in $\mathfrak{so}(3)\oplus\mathfrak{so}(3)$ of dimension $6$, so $\mathop{\mathrm{rank}}\le6<10=N-d$ and it **extends**. The same construction breaks "$d=6$ … maximal". The rows are statements about the **generic** subspace at each dimension; the caveat exists on the record (*"these rows describe the generic subspace at each dimension and are not a classification"*) but it sits in the census block sixty lines below, attached to a different table, and **the L75 table does not carry it**. This is the same failure the census block itself names: *"A caveat in the text does not weaken a claim in the heading."*
 
 **D5, "clean singular-value gaps throughout" is unearned in two ways.** *Throughout* covers four rows and gaps are quoted for two. And no normalisation of the spanning set $\{[e_a,e_b]\}$ is stated, so "a ninth of $0.436$" has no scale against which $3.5\times10^{-9}$ is clean; at the cap the gap is infinite and exact, which the closed form explains and the sentence conflates with the numerical one.
 
@@ -137,11 +137,11 @@ The $d=9$ prediction reproduces the block's sentence word for word. **So the $\s
 
 ## 7, The structural claim: the list is stale, the theorem is free, and Witt is apt
 
-**The list.** *"Maximal isotropics occur at dimensions $5$, $6$ and $9$"* is **stale against its own file**. Sixty lines below, the census refutation states *"Maximal dimensions now known at $n=6$ include $5$, $6$, $7$, $8$ and $9$"*, and gives $d=8$ as the $(2,4)$ pair with $\operatorname{rank}=7=N-8$. **The correct list at $n=6$ is $\{5,6,7,8,9\}$**, and by §6 that is the *whole* of the permitted interval $[n-1,\lfloor n^2/4\rfloor]=[5,9]$, the lower end being the $d\ge n-1$ bound and the upper end [L36](../findings/isotropy-cap.md)'s cap. **So the sharp statement available is stronger than the corrected list**: at $n=6$ every admissible dimension is realised.
+**The list.** *"Maximal isotropics occur at dimensions $5$, $6$ and $9$"* is **stale against its own file**. Sixty lines below, the census refutation states *"Maximal dimensions now known at $n=6$ include $5$, $6$, $7$, $8$ and $9$"*, and gives $d=8$ as the $(2,4)$ pair with $\mathop{\mathrm{rank}}=7=N-8$. **The correct list at $n=6$ is $\{5,6,7,8,9\}$**, and by §6 that is the *whole* of the permitted interval $[n-1,\lfloor n^2/4\rfloor]=[5,9]$, the lower end being the $d\ge n-1$ bound and the upper end [L36](../findings/isotropy-cap.md)'s cap. **So the sharp statement available is stronger than the corrected list**: at $n=6$ every admissible dimension is realised.
 
 **The varying-dimension claim is a theorem. Confirmed, at every $n\ge4$, with no numerics.**
 
-> **Claim.** For $n\ge4$ and each $1\le p\le\lfloor n/2\rfloor$ with $q=n-p$, the odd part $\mathfrak p_{p,q}=\operatorname{span}\{\varphi_{ij}:i\le p<j\}$ is a maximal isotropic subspace of $\mathfrak{so}(n)$ of dimension $pq$. Hence at least $\lfloor n/2\rfloor$ distinct dimensions carry a maximal isotropic.
+> **Claim.** For $n\ge4$ and each $1\le p\le\lfloor n/2\rfloor$ with $q=n-p$, the odd part $\mathfrak p_{p,q}=\mathop{\mathrm{span}}\{\varphi_{ij}:i\le p<j\}$ is a maximal isotropic subspace of $\mathfrak{so}(n)$ of dimension $pq$. Hence at least $\lfloor n/2\rfloor$ distinct dimensions carry a maximal isotropic.
 >
 > *Proof.* **Isotropy**: in the $\varphi$ basis $\omega$ is supported exactly on triangles of $K_n$ ([L36](../findings/isotropy-cap.md), the Mantel paragraph), and $K_{p,q}$ is triangle-free. **Bracket span**: $[\varphi_{ij},\varphi_{kj}]=\pm\varphi_{ik}$ for $i,k\le p<j$ generates $\mathfrak{so}(p)$, symmetrically $\mathfrak{so}(q)$, and brackets on four distinct indices vanish, so $[\mathfrak p_{p,q},\mathfrak p_{p,q}]=\mathfrak{so}(p)\oplus\mathfrak{so}(q)$ exactly. **Perp**: the $\varphi$ basis is orthogonal and its three index classes partition it, so $(\mathfrak{so}(p)\oplus\mathfrak{so}(q))^\perp=\mathfrak p_{p,q}$. By §2 the subspace is maximal isotropic. **Distinctness**: $p\mapsto p(n-p)$ is strictly increasing on $1\le p\le n/2$, so the $\lfloor n/2\rfloor$ dimensions $p(n-p)$ are pairwise distinct. $\square$
 
@@ -152,8 +152,8 @@ At $n=6$ this gives $5,8,9$ from $p=1,2,3$, **three distinct dimensions, two of 
 | | quadratic form | Cartan $3$-form |
 | --- | --- | --- |
 | maximality criterion | $\mathfrak m=\mathfrak m^\perp$ | $\mathfrak m=[\mathfrak m,\mathfrak m]^\perp$ |
-| dimension of the right side | $N-d$, **determined by $d$** | $N-\operatorname{rank}[\mathfrak m,\mathfrak m]$, **a free parameter** |
-| consequence | $2d=N$: one dimension, the Witt index | $d+\operatorname{rank}[\mathfrak m,\mathfrak m]=N$: many dimensions |
+| dimension of the right side | $N-d$, **determined by $d$** | $N-\mathop{\mathrm{rank}}[\mathfrak m,\mathfrak m]$, **a free parameter** |
+| consequence | $2d=N$: one dimension, the Witt index | $d+\mathop{\mathrm{rank}}[\mathfrak m,\mathfrak m]=N$: many dimensions |
 
 **One line, and it turns the contrast into an explanation.** It also shows the block's own reason for a Witt index to be unavailable is the very rank quantity its table tabulates. *(A quadratic form's maximal totally isotropic subspaces share a dimension in the degenerate case too (radical plus the nondegenerate part's Witt index) so the contrast needs no nondegeneracy caveat.)*
 

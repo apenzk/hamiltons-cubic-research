@@ -145,7 +145,7 @@ Every product is an exact multiple of 6, so the Lean file's floor division loses
 
 ## 6. The trivial multiplicity
 
-Passage B line 42: "**The trivial multiplicity is $1$ here and $2$ from $n\ge6$**, which is the parity-sensitive Lovelock collapse: at $n\le5$, $\langle W^\#,W\rangle=2\operatorname{tr}(W^3)$, so the cubic invariant space is one-dimensional."
+Passage B line 42: "**The trivial multiplicity is $1$ here and $2$ from $n\ge6$**, which is the parity-sensitive Lovelock collapse: at $n\le5$, $\langle W^\#,W\rangle=2\mathop{\mathrm{tr}}(W^3)$, so the cubic invariant space is one-dimensional."
 
 The multiplicity of (0,0) in Sym^3(W_5) is the dimension of the space of O(5)-invariant cubic forms on W_5.
 

@@ -31,7 +31,7 @@ The identity: $\tfrac12(A+B+C)^2=\tfrac12(A^2+B^2+C^2)+AB+BC+CA$, so $\tfrac32(A
 
 The six index pairs $\{ij\},\{kl\},\{ik\},\{jl\},\{il\},\{jk\}$ are the six 2-subsets of $\{i,j,k,l\}$, pairwise distinct, so their squared mass is at most $\sum_{a<b}K_{ab}^2=1$. Lean's `fourset_disc_le` states exactly this with $a,\dots,f$ for the six entries.
 
-Basis normalisation: the three pairings $e_{ij}\odot e_{kl}$, $e_{ik}\odot e_{jl}$, $e_{il}\odot e_{jk}$ are orthogonal of common norm, and the signed coordinates are the $\operatorname{diag}(1,-1,1)$ conjugate, an orthogonal change. A matrix in an orthogonal basis of common norm is the matrix of the operator, so the eigenvalues $\pm\tfrac12\sqrt E$ on $\mathbf 1^\perp$ are the operator's. The units are $L_M$ units at unit $M$, as the lemma needs. I cross-checked this against the record at $S^3\times S^3$: there $\alpha=1/\sqrt{10}$, $\gamma=-2\alpha/3$, a $(2,2)$-split has $E=4(\alpha-\gamma)^2=10/9$ and $\tfrac12\sqrt E=\sqrt{10}/6=\theta_0(6)\cdot\tfrac12$, which is L126's $\mu=\tfrac12$ in $L_e$ units. Nothing found.
+Basis normalisation: the three pairings $e_{ij}\odot e_{kl}$, $e_{ik}\odot e_{jl}$, $e_{il}\odot e_{jk}$ are orthogonal of common norm, and the signed coordinates are the $\mathop{\mathrm{diag}}(1,-1,1)$ conjugate, an orthogonal change. A matrix in an orthogonal basis of common norm is the matrix of the operator, so the eigenvalues $\pm\tfrac12\sqrt E$ on $\mathbf 1^\perp$ are the operator's. The units are $L_M$ units at unit $M$, as the lemma needs. I cross-checked this against the record at $S^3\times S^3$: there $\alpha=1/\sqrt{10}$, $\gamma=-2\alpha/3$, a $(2,2)$-split has $E=4(\alpha-\gamma)^2=10/9$ and $\tfrac12\sqrt E=\sqrt{10}/6=\theta_0(6)\cdot\tfrac12$, which is L126's $\mu=\tfrac12$ in $L_e$ units. Nothing found.
 
 ## 3. The pair bound
 
@@ -49,7 +49,7 @@ $d_i^2=(K_{ji}+K_{ki})^2\le2(K_{ji}^2+K_{ki}^2)=2X_i$. The prose puts $X=X_{i^*}
 
 ## 4. The normalisation
 
-Conventions fix $K_{ab}=W_{abab}$ and $t=\sum_{a\ne b}K_{ab}^2$ over ordered pairs, with $t=2$ at a unit coordinate-diagonal $W$. On the diagonal locus the $\Lambda^2$ operator is diagonal in the pair basis with entries $K_{ab}$, $a<b$, so $\lVert D\rVert^2=\operatorname{tr}(D^2)=\sum_{a<b}K_{ab}^2$. Unit norm is therefore $\sum_{a<b}K_{ab}^2=1$, equivalently ordered $\lVert K\rVert_F^2=2$, and the lemma uses the unordered form consistently in both blocks. Nothing found.
+Conventions fix $K_{ab}=W_{abab}$ and $t=\sum_{a\ne b}K_{ab}^2$ over ordered pairs, with $t=2$ at a unit coordinate-diagonal $W$. On the diagonal locus the $\Lambda^2$ operator is diagonal in the pair basis with entries $K_{ab}$, $a<b$, so $\lVert D\rVert^2=\mathop{\mathrm{tr}}(D^2)=\sum_{a<b}K_{ab}^2$. Unit norm is therefore $\sum_{a<b}K_{ab}^2=1$, equivalently ordered $\lVert K\rVert_F^2=2$, and the lemma uses the unordered form consistently in both blocks. Nothing found.
 
 ## 5. The lower bound at padded $S^2\times S^2$
 

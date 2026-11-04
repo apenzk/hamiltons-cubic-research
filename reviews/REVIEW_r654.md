@@ -26,7 +26,7 @@
 
 | symbol | reading I use | anchor |
 | --- | --- | --- |
-| $\lVert W\rVert$ | $\operatorname{tr}(W^2)=\sum_\alpha\lambda_\alpha^2=1$ over $\Lambda^2$, the half-trace pairing under which $\{\varphi_{ab}\}_{a<b}$ is orthonormal | the $M$ row and the "Norms and pairings" bullet of [conventions.md](../findings/conventions.md) |
+| $\lVert W\rVert$ | $\mathop{\mathrm{tr}}(W^2)=\sum_\alpha\lambda_\alpha^2=1$ over $\Lambda^2$, the half-trace pairing under which $\{\varphi_{ab}\}_{a<b}$ is orthonormal | the $M$ row and the "Norms and pairings" bullet of [conventions.md](../findings/conventions.md) |
 | $\theta$ | $P(W)/\lVert W\rVert^3$; $Q(W)=\theta W$ at a critical point | the $\theta$ row |
 | $\theta_0(n)$ | the closed form $\theta_0(n)^2=2(n-1)(n-2)/n^2$ **alone** | the repaired $\theta_0$ row |
 | $\Theta_n$ | the diagonal maximum; $=\theta_0(n)$ at even $n$ | the repaired $\Theta_n$ row |

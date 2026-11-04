@@ -30,7 +30,7 @@ Both would be off by a factor under any other reading, so the displayed sum over
 
 **And the citation is to an open item.** [I11](../plan.md) is an unchecked plan entry (*"Theorem: at every critical point and every frame $F$ … $\lVert M_F\rVert\le\lVert W\rVert$"*), grade 2, with its frame search [I11a](../plan.md) blocked on the user's approval. It is what I18 **wants built**, not what is in hand. The lemma cites it as an established input.
 
-**The citation is also unnecessary, which is the sharper point.** [I18](../plan.md) quantifies over **pure** critical points, so there is a frame in which $W$ is coordinate-diagonal and the $M_{ab}$ **are** its $\Lambda^2$ eigenvalues; then $\sum_{a<b}M_{ab}^2=\operatorname{tr}(W^2)=1$ is an identity, with equality rather than $\le$, and no lift to a general frame is needed. Spending an open item where an identity suffices is how an unproved input gets laundered into a chain.
+**The citation is also unnecessary, which is the sharper point.** [I18](../plan.md) quantifies over **pure** critical points, so there is a frame in which $W$ is coordinate-diagonal and the $M_{ab}$ **are** its $\Lambda^2$ eigenvalues; then $\sum_{a<b}M_{ab}^2=\mathop{\mathrm{tr}}(W^2)=1$ is an identity, with equality rather than $\le$, and no lift to a general frame is needed. Spending an open item where an identity suffices is how an unproved input gets laundered into a chain.
 
 ## 2, The translation from $L_M$ to $L_e$. Correct
 

@@ -13,26 +13,26 @@
 
 ## 0. Conventions, fixed once
 
-- $\mathcal W_n\subset\operatorname{Sym}^2(\Lambda^2\mathbb R^n)$, $N=\binom n2$, Frobenius inner product, $n\ge4$.
+- $\mathcal W_n\subset\mathop{\mathrm{Sym}}^2(\Lambda^2\mathbb R^n)$, $N=\binom n2$, Frobenius inner product, $n\ge4$.
 - $\{v_k\}$ an orthonormal eigenbasis of $W$ on $\Lambda^2\cong\mathfrak{so}(n)$, $Wv_k=\lambda_kv_k$, $c_{abc}=\langle[v_a,v_b],v_c\rangle$ totally antisymmetric, $T_{abc}=c_{abc}^2$.
 - $Q(W)=W^2+W^\#$, $P(W)=\langle W,Q(W)\rangle$, critical point on $\{\lVert W\rVert=1\}$ means $Q(W)=\theta W$ with $\theta=P(W)$.
-- The record's polarisation identity $\langle v,W^\#v\rangle=-\tfrac12\operatorname{tr}(\mathrm{ad}(v)W\mathrm{ad}(v)W)$, with the $\tfrac12$ of Passage B in $\#$.
+- The record's polarisation identity $\langle v,W^\#v\rangle=-\tfrac12\mathop{\mathrm{tr}}(\mathrm{ad}(v)W\mathrm{ad}(v)W)$, with the $\tfrac12$ of Passage B in $\#$.
 - Define, for every $W\in\mathcal W_n$ and every real $\theta$, the defect of the $k$-th diagonal equation $E_k:=\sum_{\alpha\beta}\lambda_\alpha\lambda_\beta T_{k\alpha\beta}-2\lambda_k(\theta-\lambda_k)$.
 
 ## 1. Hypothesis inventory
 
-- **H1 (polarisation).** $\langle v,W^\#v\rangle=-\tfrac12\operatorname{tr}(\mathrm{ad}(v)W\mathrm{ad}(v)W)$, as Passage A states it.
-- **H2 (Weyl trace).** $\operatorname{tr}W=0$ on $\Lambda^2$, which is half the scalar curvature of $W$.
+- **H1 (polarisation).** $\langle v,W^\#v\rangle=-\tfrac12\mathop{\mathrm{tr}}(\mathrm{ad}(v)W\mathrm{ad}(v)W)$, as Passage A states it.
+- **H2 (Weyl trace).** $\mathop{\mathrm{tr}}W=0$ on $\Lambda^2$, which is half the scalar curvature of $W$.
 - **H3 (normalisation).** $\lVert W\rVert=1$ and $\theta=P(W)$, as the brief's definition of a critical point fixes them.
-- **H4 (trace of $Q$).** $\operatorname{tr}Q(W)=0$ for every $W\in\mathcal W_n$. Section 3 derives it two independent ways: from the record's relation (B), and from the standard fact that $Q$ maps $\mathcal W_n$ into $\mathcal W_n$, which the brief's definition "critical point is $Q(W)=\theta W$" already presupposes (a first-order condition on a sphere in $\mathcal W_n$ reads $\operatorname{pr}_{\mathcal W_n}Q(W)=\theta W$, and it is $Q(W)=\theta W$ exactly when $Q(W)\in\mathcal W_n$).
+- **H4 (trace of $Q$).** $\mathop{\mathrm{tr}}Q(W)=0$ for every $W\in\mathcal W_n$. Section 3 derives it two independent ways: from the record's relation (B), and from the standard fact that $Q$ maps $\mathcal W_n$ into $\mathcal W_n$, which the brief's definition "critical point is $Q(W)=\theta W$" already presupposes (a first-order condition on a sphere in $\mathcal W_n$ reads $\mathop{\mathrm{pr}}_{\mathcal W_n}Q(W)=\theta W$, and it is $Q(W)=\theta W$ exactly when $Q(W)\in\mathcal W_n$).
 
 Nothing in the argument uses criticality. The two identities of Section 4 hold at every unit Weyl tensor.
 
 ## 2. The diagonal equation is the diagonal of $Q(W)-\theta W$
 
-In the basis $\{v_a\}$ the matrix of $\mathrm{ad}(v_k)$ is $(\mathrm{ad}\,v_k)_{ab}=\langle v_a,[v_k,v_b]\rangle=c_{kba}$. With $W=\operatorname{diag}(\lambda)$,
+In the basis $\{v_a\}$ the matrix of $\mathrm{ad}(v_k)$ is $(\mathrm{ad}\,v_k)_{ab}=\langle v_a,[v_k,v_b]\rangle=c_{kba}$. With $W=\mathop{\mathrm{diag}}(\lambda)$,
 
-$$M_{kk}=\operatorname{tr}(\mathrm{ad}(v_k)W\mathrm{ad}(v_k)W)=\sum_{a,b}c_{kba}\lambda_b\,c_{kab}\lambda_a=-\sum_{a,b}\lambda_a\lambda_bT_{kab},$$
+$$M_{kk}=\mathop{\mathrm{tr}}(\mathrm{ad}(v_k)W\mathrm{ad}(v_k)W)=\sum_{a,b}c_{kba}\lambda_b\,c_{kab}\lambda_a=-\sum_{a,b}\lambda_a\lambda_bT_{kab},$$
 
 by antisymmetry of $c$. H1 gives $(W^\#)_{kk}=-\tfrac12M_{kk}=\tfrac12\sum_{ab}\lambda_a\lambda_bT_{kab}$. Hence, for every $W\in\mathcal W_n$ and every $\theta$,
 
@@ -46,19 +46,19 @@ Convention check against Passage B: with $W=\mathrm{id}$ the same computation gi
 
 **Route 1, from the record's relation (B).** Relation (B), $\sum_{\beta\gamma}\lambda_\beta T_{k\beta\gamma}=-2\lambda_k$, is listed in Passage B as coming from Ricci-flatness, so it holds for every Weyl tensor. Using total symmetry of $T$,
 
-$$\operatorname{tr}W^\#=\sum_k(W^\#)_{kk}=\tfrac12\sum_{k,\alpha,\beta}\lambda_\alpha\lambda_\beta T_{k\alpha\beta}=\tfrac12\sum_\alpha\lambda_\alpha\sum_{k,\beta}\lambda_\beta T_{\alpha\beta k}=\tfrac12\sum_\alpha\lambda_\alpha(-2\lambda_\alpha)=-\lVert W\rVert^2.$$
+$$\mathop{\mathrm{tr}}W^\#=\sum_k(W^\#)_{kk}=\tfrac12\sum_{k,\alpha,\beta}\lambda_\alpha\lambda_\beta T_{k\alpha\beta}=\tfrac12\sum_\alpha\lambda_\alpha\sum_{k,\beta}\lambda_\beta T_{\alpha\beta k}=\tfrac12\sum_\alpha\lambda_\alpha(-2\lambda_\alpha)=-\lVert W\rVert^2.$$
 
-So $\operatorname{tr}Q(W)=\operatorname{tr}W^2+\operatorname{tr}W^\#=\lVert W\rVert^2-\lVert W\rVert^2=0$.
+So $\mathop{\mathrm{tr}}Q(W)=\mathop{\mathrm{tr}}W^2+\mathop{\mathrm{tr}}W^\#=\lVert W\rVert^2-\lVert W\rVert^2=0$.
 
-**Route 2, independent of (B).** The brief's definition of a critical point presupposes $Q(\mathcal W_n)\subset\mathcal W_n$ (H4's parenthesis). Every element of $\mathcal W_n$ has zero trace on $\Lambda^2$ (H2 applied to $Q(W)$), so $\operatorname{tr}Q(W)=0$.
+**Route 2, independent of (B).** The brief's definition of a critical point presupposes $Q(\mathcal W_n)\subset\mathcal W_n$ (H4's parenthesis). Every element of $\mathcal W_n$ has zero trace on $\Lambda^2$ (H2 applied to $Q(W)$), so $\mathop{\mathrm{tr}}Q(W)=0$.
 
-**Route 3, a consistency screen.** $(W_1,W_2)\mapsto\operatorname{tr}(W_1\#W_2)$ is a symmetric $O(n)$-invariant bilinear form on the irreducible representation $\mathcal W_n$, so it is $a\langle W_1,W_2\rangle$ for a universal constant $a$ (a symmetric equivariant endomorphism has invariant eigenspaces). The maximiser of $P$ on the compact unit sphere is a critical point, where $\operatorname{tr}W^\#=\theta\operatorname{tr}W-\operatorname{tr}W^2=-1$. So $a=-1$, agreeing with Routes 1 and 2.
+**Route 3, a consistency screen.** $(W_1,W_2)\mapsto\mathop{\mathrm{tr}}(W_1\#W_2)$ is a symmetric $O(n)$-invariant bilinear form on the irreducible representation $\mathcal W_n$, so it is $a\langle W_1,W_2\rangle$ for a universal constant $a$ (a symmetric equivariant endomorphism has invariant eigenspaces). The maximiser of $P$ on the compact unit sphere is a critical point, where $\mathop{\mathrm{tr}}W^\#=\theta\mathop{\mathrm{tr}}W-\mathop{\mathrm{tr}}W^2=-1$. So $a=-1$, agreeing with Routes 1 and 2.
 
 ## 4. Two identities among the $N$ equations
 
 For every $W\in\mathcal W_n$ with $\lVert W\rVert=1$ and $\theta=P(W)$, with no criticality assumed:
 
-**Identity I (trace).** $\sum_kE_k=2\operatorname{tr}Q(W)-2\theta\operatorname{tr}W=0$, by H4 and H2.
+**Identity I (trace).** $\sum_kE_k=2\mathop{\mathrm{tr}}Q(W)-2\theta\mathop{\mathrm{tr}}W=0$, by H4 and H2.
 
 **Identity II ($\lambda$-weighted).** $\sum_k\lambda_kE_k=2\sum_k\lambda_k\big(Q(W)-\theta W\big)_{kk}=2\big(\langle W,Q(W)\rangle-\theta\lVert W\rVert^2\big)=2\big(P(W)-\theta\big)=0$, by H3. The middle step uses that $W$ is diagonal in the basis, so $\langle W,X\rangle=\sum_k\lambda_kX_{kk}$ for any symmetric $X$.
 
@@ -92,4 +92,4 @@ Passage C formalises the matrix form of criticality, the strict weakness of the 
 
 ## 8. Verdict
 
-**FAILS.** The $N$ diagonal equations hold at a critical point (Section 2), but on the unit sphere of $\mathcal W_n$ with $\theta=P(W)$ their sum and their $\lambda$-weighted sum are identities (Section 4), so they are at most $N-2$ independent constraints, and at most $N-1$ even with $\theta$ free. The hypotheses the refutation uses are H1 (the record's polarisation identity), H2 ($\operatorname{tr}W=0$), H3 ($\lVert W\rVert=1$, $\theta=P(W)$) and H4 ($\operatorname{tr}Q(W)=0$, from relation (B) or from $Q(\mathcal W_n)\subset\mathcal W_n$). The strongest wording the step can carry is "$N$ equations, of which at most $N-2$ are independent". The exact number of independent constraints is the generic rank of the differential of $W\mapsto\operatorname{diag}\big(Q(W)-P(W)W\big)$ on the unit sphere, and settling it would need computation that the verdict does not require.
+**FAILS.** The $N$ diagonal equations hold at a critical point (Section 2), but on the unit sphere of $\mathcal W_n$ with $\theta=P(W)$ their sum and their $\lambda$-weighted sum are identities (Section 4), so they are at most $N-2$ independent constraints, and at most $N-1$ even with $\theta$ free. The hypotheses the refutation uses are H1 (the record's polarisation identity), H2 ($\mathop{\mathrm{tr}}W=0$), H3 ($\lVert W\rVert=1$, $\theta=P(W)$) and H4 ($\mathop{\mathrm{tr}}Q(W)=0$, from relation (B) or from $Q(\mathcal W_n)\subset\mathcal W_n$). The strongest wording the step can carry is "$N$ equations, of which at most $N-2$ are independent". The exact number of independent constraints is the generic rank of the differential of $W\mapsto\mathop{\mathrm{diag}}\big(Q(W)-P(W)W\big)$ on the unit sphere, and settling it would need computation that the verdict does not require.

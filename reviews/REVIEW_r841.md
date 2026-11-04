@@ -23,7 +23,7 @@ The block proves everything it displays and then draws its one structural conclu
 
 ## 0. Conventions, fixed once
 
-$\Lambda^2\mathbb R^n\cong\mathfrak{so}(n)$ carries $\langle X,Y\rangle=\tfrac12\operatorname{tr}(X^{\mathsf T}Y)$, $N=\dim\Lambda^2=n(n-1)/2$, and $(v_\alpha)_{\alpha=1}^N$ is an orthonormal eigenbasis of $W$ with $W v_\alpha=\lambda_\alpha v_\alpha$, $\sum_\alpha\lambda_\alpha=0$ and $\sum_\alpha\lambda_\alpha^2=1$. Write
+$\Lambda^2\mathbb R^n\cong\mathfrak{so}(n)$ carries $\langle X,Y\rangle=\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$, $N=\dim\Lambda^2=n(n-1)/2$, and $(v_\alpha)_{\alpha=1}^N$ is an orthonormal eigenbasis of $W$ with $W v_\alpha=\lambda_\alpha v_\alpha$, $\sum_\alpha\lambda_\alpha=0$ and $\sum_\alpha\lambda_\alpha^2=1$. Write
 
 $$c_{\alpha\beta\gamma}=\langle[v_\alpha,v_\beta],v_\gamma\rangle,\qquad T_{\alpha\beta\gamma}=c_{\alpha\beta\gamma}^2,\qquad R_{\alpha\beta}=\sum_\gamma T_{\alpha\beta\gamma}=\lVert[v_\alpha,v_\beta]\rVert^2 .$$
 
@@ -53,7 +53,7 @@ $$\sum_kw_k\sum_{\beta\gamma}\lambda_\beta\lambda_\gamma T_{k\beta\gamma}=2\thet
 
 *Does an eigenvector-dependent weight escape it?* A weight is a scalar attached to an index, and $v_k$ is determined by $k$, so $w_k=f(v_k)$ is admissible. It escapes the letter of the claim and not its substance. Taking $f(v)=\langle v,Xv\rangle$ for a fixed operator $X$ on $\Lambda^2$ gives
 
-$$\sum_k\langle v_k,Xv_k\rangle\cdot2\lambda_k(\theta-\lambda_k)=2\operatorname{tr}\!\big(X(\theta W-W^2)\big),$$
+$$\sum_k\langle v_k,Xv_k\rangle\cdot2\lambda_k(\theta-\lambda_k)=2\mathop{\mathrm{tr}}\!\big(X(\theta W-W^2)\big),$$
 
 which is **not** a power sum, since it sees the eigenframe. It is still a function of $W$ alone and of no bracket datum. So the accurate form of the claim is: *the right side of any contraction of (A), (B) or (C) is determined by $W$, never by $T$*. That is the statement the record needs, and it is the one [R14](../routes.md)'s circularity note already makes at [bounds.md:258](../findings/bounds.md#L258).
 
@@ -65,7 +65,7 @@ which is **not** a power sum, since it sees the eigenframe. It is still a functi
 
 $$\sum_{\beta\gamma}c_{k\beta\gamma}c_{l\beta\gamma}=0,\qquad \sum_{\beta\gamma}\lambda_\beta\,c_{k\beta\gamma}c_{l\beta\gamma}=0,\qquad \sum_{\beta\gamma}\lambda_\beta\lambda_\gamma\,c_{k\beta\gamma}c_{l\beta\gamma}=0$$
 
-whenever $\lambda_k\ne\lambda_l$, the first from $\sum_{\beta\gamma}c_{k\beta\gamma}c_{l\beta\gamma}=-\operatorname{tr}(\mathrm{ad}\,v_k\,\mathrm{ad}\,v_l)=2(n-2)\delta_{kl}$, which is the Killing form and reproduces (A) at $k=l$. These $3\times\binom N2$ relations have right side zero, so they carry **no spectral information whatsoever**, and they are invisible to $T$ because they involve the signs of $c$ rather than its squares. [I71](../plan.md#L119) asks what the rows carry beyond the spectrum; part of the answer is that the sign data of $c$ is constrained by relations the record's own $T$-formalism cannot even write down.
+whenever $\lambda_k\ne\lambda_l$, the first from $\sum_{\beta\gamma}c_{k\beta\gamma}c_{l\beta\gamma}=-\mathop{\mathrm{tr}}(\mathrm{ad}\,v_k\,\mathrm{ad}\,v_l)=2(n-2)\delta_{kl}$, which is the Killing form and reproduces (A) at $k=l$. These $3\times\binom N2$ relations have right side zero, so they carry **no spectral information whatsoever**, and they are invisible to $T$ because they involve the signs of $c$ rather than its squares. [I71](../plan.md#L119) asks what the rows carry beyond the spectrum; part of the answer is that the sign data of $c$ is constrained by relations the record's own $T$-formalism cannot even write down.
 
 ## 2. The quadratic-form reading, and what the index placement hides
 
@@ -137,7 +137,7 @@ $$\lambda_{\max}+\frac1{\lambda_{\max}}=\frac2{\sqrt6}+\frac{\sqrt6}2=\frac{4+6}
 
 **Where the sharp bound (5.1) lands at the same point**: $1/\lambda_{\max}=\sqrt6/2=1.224745=\theta$ **exactly**, and $1/\lvert\lambda_{\min}\rvert-2\lvert\lambda_{\min}\rvert=\sqrt6-2/\sqrt6=1.632993$. The first is an equality.
 
-**Why the equality is structural rather than numerical.** On the $\Lambda^+$ triple carrying $W_{\mathbb{CP}^2}$, take the orthonormal frame $X_1=(L_{12}+L_{34})/\sqrt2$, $X_2=(L_{13}+L_{42})/\sqrt2$, $X_3=(L_{14}+L_{23})/\sqrt2$ with $L_{ij}$ the standard $\mathfrak{so}(n)$ generators, orthonormal for $\langle X,Y\rangle=\tfrac12\operatorname{tr}(X^{\mathsf T}Y)$. Then $[X_1,X_2]=-\sqrt2\,X_3$, so $R_{12}=R_{13}=2$: **the pair cap is saturated on the support**, $T^{(1)}$ restricted to $\{2,3\}$ is $\begin{psmallmatrix}0&2\\2&0\end{psmallmatrix}$, and $\lambda^{\mathsf T}T^{(1)}\lambda=2\cdot2\cdot\lambda_2\lambda_3=\tfrac23=2\lambda_1(\theta-\lambda_1)$, which recovers $\theta=3/\sqrt6$ from (C) with no numerics. Every inequality used in §4 and §5 is an equality here: the cap at $R_{12}=R_{13}=2$, the termwise step (4.1) because $\lambda_2=\lambda_3$, and (4.2) because the remaining coordinates of $\lambda$ vanish. **The active set is fully saturated, so (5.1) cannot be improved to $\theta\lambda_{\max}\le c$ for any $c<1$, at any $n\ge4$**, since padding changes neither $\lambda$ nor $\theta$.
+**Why the equality is structural rather than numerical.** On the $\Lambda^+$ triple carrying $W_{\mathbb{CP}^2}$, take the orthonormal frame $X_1=(L_{12}+L_{34})/\sqrt2$, $X_2=(L_{13}+L_{42})/\sqrt2$, $X_3=(L_{14}+L_{23})/\sqrt2$ with $L_{ij}$ the standard $\mathfrak{so}(n)$ generators, orthonormal for $\langle X,Y\rangle=\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$. Then $[X_1,X_2]=-\sqrt2\,X_3$, so $R_{12}=R_{13}=2$: **the pair cap is saturated on the support**, $T^{(1)}$ restricted to $\{2,3\}$ is $\begin{psmallmatrix}0&2\\2&0\end{psmallmatrix}$, and $\lambda^{\mathsf T}T^{(1)}\lambda=2\cdot2\cdot\lambda_2\lambda_3=\tfrac23=2\lambda_1(\theta-\lambda_1)$, which recovers $\theta=3/\sqrt6$ from (C) with no numerics. Every inequality used in §4 and §5 is an equality here: the cap at $R_{12}=R_{13}=2$, the termwise step (4.1) because $\lambda_2=\lambda_3$, and (4.2) because the remaining coordinates of $\lambda$ vanish. **The active set is fully saturated, so (5.1) cannot be improved to $\theta\lambda_{\max}\le c$ for any $c<1$, at any $n\ge4$**, since padding changes neither $\lambda$ nor $\theta$.
 
 ## 7. The ceiling claim
 

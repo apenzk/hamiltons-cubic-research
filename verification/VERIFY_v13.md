@@ -152,7 +152,7 @@ since $(6/5)^2=36/25=1.44<1.5$. So $9\big(\theta_0(10)-\sqrt{3/2}\big)=\tfrac{54
 
 ### 5.1 The algebra, which is correct
 
-$g(w)=\sqrt{c+w^2}/(A+Bw)$. Then $\frac{d}{dw}\log g=\frac w{c+w^2}-\frac B{A+Bw}$, which vanishes iff $w(A+Bw)=B(c+w^2)$, iff $wA=Bc$. So $\operatorname{sign}g'=\operatorname{sign}(wA-Bc)$ ✓ and $w^*=Bc/A$ is a minimum ✓. At $w^*$: $c+w^{*2}=c(A^2+B^2c)/A^2$ and $A+Bw^*=(A^2+B^2c)/A$, so
+$g(w)=\sqrt{c+w^2}/(A+Bw)$. Then $\frac{d}{dw}\log g=\frac w{c+w^2}-\frac B{A+Bw}$, which vanishes iff $w(A+Bw)=B(c+w^2)$, iff $wA=Bc$. So $\mathop{\mathrm{sign}}g'=\mathop{\mathrm{sign}}(wA-Bc)$ ✓ and $w^*=Bc/A$ is a minimum ✓. At $w^*$: $c+w^{*2}=c(A^2+B^2c)/A^2$ and $A+Bw^*=(A^2+B^2c)/A$, so
 
 $$g(w^*)=\frac{\sqrt c}{\sqrt{A^2+B^2c}}\ \checkmark,\qquad\text{and with }A=n^{1/2},B=n,c=\kappa/n:\quad A^2+B^2c=n(1+\kappa),\quad g(w^*)=\frac1n\sqrt{\frac\kappa{1+\kappa}}\ \checkmark.$$
 

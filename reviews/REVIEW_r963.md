@@ -38,8 +38,8 @@ The three lines are right and the hypothesis count is right. With $u=q_{00}q_{01
 
 The bridge is arithmetic and checks: $(1-x-z)(1-y-w)-xy-zw=1-x-y-z-w+xw+yz$. [bridge](../lean/HamiltonsCubic/Results/I106aOrthostochastic.lean) states exactly this, and [orthostochastic_poly](../lean/HamiltonsCubic/Results/I106aOrthostochastic.lean) assumes only the two column sums rather than full bistochasticity, which matches the prose.
 
-**The correction.** "The source's sign choices $\varepsilon_1,\varepsilon_2$ are exactly the signs of $u$, $v$ and $t$" counts three signs into two slots. The source's relation is $\sqrt{xy}+\varepsilon_1\sqrt{zw}+\varepsilon_2\sqrt{ab}=0$ with $\sqrt{xy}=\lvert u\rvert$, $\sqrt{zw}=\lvert v\rvert$ and $\sqrt{ab}=\lvert t\rvert$. Dividing $u+v+t=0$ by $\operatorname{sgn}u$ gives
-$$\varepsilon_1=\operatorname{sgn}(uv),\qquad\varepsilon_2=\operatorname{sgn}(ut),$$
+**The correction.** "The source's sign choices $\varepsilon_1,\varepsilon_2$ are exactly the signs of $u$, $v$ and $t$" counts three signs into two slots. The source's relation is $\sqrt{xy}+\varepsilon_1\sqrt{zw}+\varepsilon_2\sqrt{ab}=0$ with $\sqrt{xy}=\lvert u\rvert$, $\sqrt{zw}=\lvert v\rvert$ and $\sqrt{ab}=\lvert t\rvert$. Dividing $u+v+t=0$ by $\mathop{\mathrm{sgn}}u$ gives
+$$\varepsilon_1=\mathop{\mathrm{sgn}}(uv),\qquad\varepsilon_2=\mathop{\mathrm{sgn}}(ut),$$
 the RELATIVE signs. When $u=0$ the relation reads $\lvert v\rvert=\lvert t\rvert$ and $\varepsilon_1$ is free with $\varepsilon_2=-\varepsilon_1$. Write it as the relative signs and the sentence is exactly true.
 
 ## The converse, PROVED, and the debt is dischargeable
@@ -104,15 +104,15 @@ Claims 9 and 10 could be carried, and the cheapest useful piece is the linear al
 
 ## Claim 1, CONFIRMED
 
-Pairing the $V$ equation $C=\mu V-\beta\{\hat U,V\}$ with $V$ and using $\operatorname{tr}(V\{\hat U,V\})=2\operatorname{tr}(\hat UV^2)$ gives $\mu\lvert V\rvert^2=2\beta\operatorname{tr}(\hat UV^2)+\langle V,C\rangle$. Since $\operatorname{tr}(\hat UV^2)=\langle\mathcal L_{\hat U}V,V\rangle$ and $\beta=\tfrac94>0$, batch 18's cap gives the display, dividing by $\lvert V\rvert^2>0$. **The cap itself re-screened**: over $4000$ random traceless symmetric $\hat U$, the top eigenvalue of $\mathcal L_{\hat U}$ compressed to the five-dimensional traceless symmetric space equals $\lvert\hat U\rvert/\sqrt6$ to $1.8\cdot10^{-15}$, an equality rather than an inequality.
+Pairing the $V$ equation $C=\mu V-\beta\{\hat U,V\}$ with $V$ and using $\mathop{\mathrm{tr}}(V\{\hat U,V\})=2\mathop{\mathrm{tr}}(\hat UV^2)$ gives $\mu\lvert V\rvert^2=2\beta\mathop{\mathrm{tr}}(\hat UV^2)+\langle V,C\rangle$. Since $\mathop{\mathrm{tr}}(\hat UV^2)=\langle\mathcal L_{\hat U}V,V\rangle$ and $\beta=\tfrac94>0$, batch 18's cap gives the display, dividing by $\lvert V\rvert^2>0$. **The cap itself re-screened**: over $4000$ random traceless symmetric $\hat U$, the top eigenvalue of $\mathcal L_{\hat U}$ compressed to the five-dimensional traceless symmetric space equals $\lvert\hat U\rvert/\sqrt6$ to $1.8\cdot10^{-15}$, an equality rather than an inequality.
 
 ## Claim 2, CONFIRMED
 
-Substituting the pairing back into the display gives $0\le2\beta\big(\lvert\hat U\rvert/\sqrt6-\operatorname{tr}(\hat UV^2)/\lvert V\rvert^2\big)$. **The display is EQUIVALENT to the Rayleigh inequality, not merely implied by it**, which is a sharper statement than the block makes and supports its verdict rather than weakening it.
+Substituting the pairing back into the display gives $0\le2\beta\big(\lvert\hat U\rvert/\sqrt6-\mathop{\mathrm{tr}}(\hat UV^2)/\lvert V\rvert^2\big)$. **The display is EQUIVALENT to the Rayleigh inequality, not merely implied by it**, which is a sharper statement than the block makes and supports its verdict rather than weakening it.
 
 ## Claim 3, CONFIRMED, and the block understates its own case in one direction while overstating it in another
 
-The implication is two lines and no more. $\langle V,C\rangle=\mu\lvert V\rvert^2-2\beta\operatorname{tr}(\hat UV^2)\ge\mu\lvert V\rvert^2-2\beta(\lvert\hat U\rvert/\sqrt6)\lvert V\rvert^2\ge0$, the first step by the Rayleigh cap and the second by batch 18. So the corollary carries nothing the record did not have.
+The implication is two lines and no more. $\langle V,C\rangle=\mu\lvert V\rvert^2-2\beta\mathop{\mathrm{tr}}(\hat UV^2)\ge\mu\lvert V\rvert^2-2\beta(\lvert\hat U\rvert/\sqrt6)\lvert V\rvert^2\ge0$, the first step by the Rayleigh cap and the second by batch 18. So the corollary carries nothing the record did not have.
 
 **"Implied by batch 18 alone" is slightly generous to the criticism**: it also needs the $V$ pairing, which is criticality, and the Rayleigh cap. The honest form is "implied by batch 18 and the same pairing the display came from", which is if anything a stronger statement of the redundancy.
 
@@ -120,7 +120,7 @@ The implication is two lines and no more. $\langle V,C\rangle=\mu\lvert V\rvert^
 
 ## Claim 4, CONFIRMED
 
-Reconstructing batch 28's points from the record's own parametrisation ($\hat U=\operatorname{diag}(3,1,-4)$, $V$ with diagonal $(a_1,a_2,-a_1-a_2)$, $V_{12}=0$, $V_{13}=V_{23}=1$) and refining $\mu$ from the quadratic rather than from its printed five decimals:
+Reconstructing batch 28's points from the record's own parametrisation ($\hat U=\mathop{\mathrm{diag}}(3,1,-4)$, $V$ with diagonal $(a_1,a_2,-a_1-a_2)$, $V_{12}=0$, $V_{13}=V_{23}=1$) and refining $\mu$ from the quadratic rather than from its printed five decimals:
 
 | $\mu$ | $\langle V,C\rangle$ | record |
 |---|---|---|
@@ -133,7 +133,7 @@ Both exact. **The convention was recovered rather than assumed**: the $(1,2)$ en
 
 ## Claim 5, CONFIRMED
 
-From the two pairings, $\Phi=\alpha\operatorname{tr}\hat U^3+\beta\operatorname{tr}(\hat UV^2)+\langle\hat U,A\rangle+\langle V,C\rangle=3\mu\lvert\hat U\rvert^2+\mu\lvert V\rvert^2-2P_3=2\mu T-2P_3$, using $2T=3\lvert\hat U\rvert^2+\lvert V\rvert^2$. So $\mu T-P_3=\Phi/2$ identically at every critical point, and the correction batch 34 made to batch 20 is right: comparing $\mu T-P_3$ between two points IS comparing $\Phi$.
+From the two pairings, $\Phi=\alpha\mathop{\mathrm{tr}}\hat U^3+\beta\mathop{\mathrm{tr}}(\hat UV^2)+\langle\hat U,A\rangle+\langle V,C\rangle=3\mu\lvert\hat U\rvert^2+\mu\lvert V\rvert^2-2P_3=2\mu T-2P_3$, using $2T=3\lvert\hat U\rvert^2+\lvert V\rvert^2$. So $\mu T-P_3=\Phi/2$ identically at every critical point, and the correction batch 34 made to batch 20 is right: comparing $\mu T-P_3$ between two points IS comparing $\Phi$.
 
 **What the identity does give, since the brief asks.** The replacement wording is informative and is not circular in the same way. *A priori $\Phi$ has four terms of which two involve the fields, and the identity says those two are determined by $\mu$, $T$ and $P_3$.* Concretely $\langle\hat U,A\rangle+\langle V,C\rangle=2\mu T-3P_3$, an elimination of the fields rather than a restatement of $\Phi$. **The circularity is in the USE, not in the identity**: the identity cannot rank two configurations, because obtaining $\mu$ and $P_3$ at either one requires solving for it. Both this and the block's wording are right, and they answer different questions.
 
@@ -177,7 +177,7 @@ The logic is sound and the block states it correctly. The comparison is an exist
 # What I would change in the record
 
 1. **Record the Part C converse as a proposition and type it.** It discharges the debt that [I106aOrthostochastic.lean](../lean/HamiltonsCubic/Results/I106aOrthostochastic.lean) and the [note](2026-09-16-I106a-orthostochastic.md) both name as standing, and it decides that R28's maximum over this variety is exact rather than an upper bound. Add with it the observation that the hypothesis count reverses: positivity and both sets of sums are used backwards, so the source is stating the direction that needs them.
-2. **Replace "the signs of $u$, $v$ and $t$" with the relative signs** $\varepsilon_1=\operatorname{sgn}(uv)$, $\varepsilon_2=\operatorname{sgn}(ut)$, and note that $u=0$ leaves $\varepsilon_1$ free with $\varepsilon_2=-\varepsilon_1$.
+2. **Replace "the signs of $u$, $v$ and $t$" with the relative signs** $\varepsilon_1=\mathop{\mathrm{sgn}}(uv)$, $\varepsilon_2=\mathop{\mathrm{sgn}}(ut)$, and note that $u=0$ leaves $\varepsilon_1$ free with $\varepsilon_2=-\varepsilon_1$.
 3. **Rewrite I104's heading and conclusion.** "The Gram CONSTANT is exact" in place of "The Gram route is EXHAUSTED", with the joint constraint $t\ge\sum\beta_a^2+\tfrac32\sum\alpha_a^2-\tfrac3{10}(\sum\alpha_a)^2$ recorded as what the system carries beyond the scalar, and the two recommending sentences restored with that scope. Note also that the realised cosine is $\tfrac13\cos\phi_1\cos\phi_2$, so L221 step 3's "at most $\tfrac13$" stands.
 4. **Add to batch 34 that its corollary is empty in use**, since $\langle V,C\rangle$ is positive at all three of batch 35's survivors.
 5. **Fix batch 35's "$44\%$ and $54\%$" to "$54\%$ and $44\%$"**, and scope the anti-correlation as a contrast between two clusters whose tight member is the family batch 29 already explained.

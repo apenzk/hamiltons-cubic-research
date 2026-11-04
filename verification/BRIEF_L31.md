@@ -38,7 +38,7 @@ rest zero, rank exactly $4$. Equality in $\|[X,Y]\|_F\le\|XY\|_F+\|YX\|_F\le2\|X
 forces the columns of $Y$ into $X$'s top singular subspace, which is all of $\mathrm{im}\,X$ since the
 nonzero singular values coincide, so $\mathrm{im}\,Y\subseteq\mathrm{im}\,X$ and symmetrically; and the
 triangle step with $\|XY\|_F=\|YX\|_F$ forces $XY=-YX$. Conversely, $X^2=Y^2=-P_V/2$ and $[X,Y]=2XY$ give
-$\|[X,Y]\|^2=\operatorname{tr}(Y^{\mathsf T}Y)=2$. $\square$
+$\|[X,Y]\|^2=\mathop{\mathrm{tr}}(Y^{\mathsf T}Y)=2$. $\square$
 
 **A correction carried into the statement.** An earlier derivation argued from $\|[X,Y]\|^2\le4s_1^2$ that
 the cap forces rank $4$; that step is invalid, $s^2=(0.5,0.3,0.2)$ satisfies $s_1^2\ge\tfrac12$ at rank

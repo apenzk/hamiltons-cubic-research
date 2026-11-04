@@ -7,7 +7,7 @@
 | # | Claim under audit | Verdict |
 |---|---|---|
 | 1 | $\omega_i\wedge\omega_i$ has $\Lambda^2E_j\otimes\Lambda^2E_k$ component $2\sigma_{ij}\sigma_{ik}c_jc_k$, and the $\Lambda^4E_j$ parts impose nothing extra | **BOTH CORRECT. THE $\varepsilon_j\wedge\varepsilon_j$ TERMS VANISH BECAUSE $\varepsilon_j$ IS DECOMPOSABLE, AND $\Lambda^4E_j=0$ OUTRIGHT AT $\dim E_j=2$** |
-| 2 | $\langle\omega_i,\omega_{i'}\rangle=\sum_jt_j\sigma_{ij}\sigma_{i'j}$, $\sum_jt_j=1$ is $\operatorname{tr}A=2$, and $t_j=c_j^2m_j$ in general | **ALL CORRECT, AND THE IMPLICIT $\langle J_j,J_j\rangle=m_j$ IS RIGHT UNDER THE RECORD'S $\tfrac12\operatorname{tr}(X^{\mathsf T}Y)$** |
+| 2 | $\langle\omega_i,\omega_{i'}\rangle=\sum_jt_j\sigma_{ij}\sigma_{i'j}$, $\sum_jt_j=1$ is $\mathop{\mathrm{tr}}A=2$, and $t_j=c_j^2m_j$ in general | **ALL CORRECT, AND THE IMPLICIT $\langle J_j,J_j\rangle=m_j$ IS RIGHT UNDER THE RECORD'S $\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$** |
 | 3 | The three displays force $T_{++}=T_{+-}=T_{-+}=T_{--}=\tfrac14$, so every class is nonempty | **CORRECT. THE SYSTEM IS THE $(\mathbb Z/2)^2$ CHARACTER TABLE, $HH^{\mathsf T}=4I$, SO THE SOLUTION IS UNIQUE** |
 | 4 | "At most one singleton" excludes $r=3,4,5,6$ and admits $r=7$ | **THE ENUMERATION IS CORRECT AND THE CRITERION IS THE RIGHT ONE FOR WEIGHT-EXISTENCE. IT IS FAR WEAKER THAN THE HYPOTHESES ALLOW** |
 | 5 | At $r=7$ weights exist with all seven $c_j^2$ distinct | **WEIGHTS EXIST, EXHIBITED IN CLOSED FORM. NO TRIPLE EXISTS, REFUTED IN CLOSED FORM** |
@@ -28,7 +28,7 @@
 
 | object | reading used here | source |
 |---|---|---|
-| $\langle X,Y\rangle$ on $\Lambda^2$ | $\tfrac12\operatorname{tr}(X^{\mathsf T}Y)$, so a unit form has $\operatorname{tr}(\omega\omega^{\mathsf T})=2$ and $\operatorname{tr}(\omega^2)=-2$ | [conventions.md](../findings/conventions.md), and the brief's own givens |
+| $\langle X,Y\rangle$ on $\Lambda^2$ | $\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$, so a unit form has $\mathop{\mathrm{tr}}(\omega\omega^{\mathsf T})=2$ and $\mathop{\mathrm{tr}}(\omega^2)=-2$ | [conventions.md](../findings/conventions.md), and the brief's own givens |
 | $(\omega\wedge\omega)_{ijkl}$ | $2(\omega_{ij}\omega_{kl}-\omega_{ik}\omega_{jl}+\omega_{il}\omega_{jk})$ | [conventions.md](../findings/conventions.md), [PhiSphere.lean](../lean/HamiltonsCubic/Results/PhiSphere.lean) |
 | $\varepsilon_j$ | the area form of the oriented plane $E_j$, a unit element of $\Lambda^2$ under the rule above, with $\varepsilon_j^2=-\mathrm{Id}_{E_j}$ | brief's given, "a skew map on a plane is a multiple of its area form" |
 | $\Lambda^4V$ under $V=\bigoplus_jE_j$ | the canonical splitting $\bigoplus_{\sum a_j=4}\bigotimes_j\Lambda^{a_j}E_j$, in which $\alpha\wedge\beta$ for $\alpha\in\Lambda^2E_j$, $\beta\in\Lambda^2E_k$ **is** $\alpha\otimes\beta$ | standard, and it is the whole of section 6 |
@@ -70,13 +70,13 @@ $$\sigma_{1j}\sigma_{1k}=\sigma_{2j}\sigma_{2k}=\sigma_{3j}\sigma_{3k}\qquad\tex
 
 ## 2. The weights, and the factor the block leaves implicit
 
-Distinct blocks are orthogonal, $\langle\varepsilon_j,\varepsilon_k\rangle=\tfrac12\operatorname{tr}(\varepsilon_j^{\mathsf T}\varepsilon_k)=0$ for $j\ne k$, and $\langle\varepsilon_j,\varepsilon_j\rangle=\tfrac12\operatorname{tr}(\mathrm{Id}_{E_j})=1$. So
+Distinct blocks are orthogonal, $\langle\varepsilon_j,\varepsilon_k\rangle=\tfrac12\mathop{\mathrm{tr}}(\varepsilon_j^{\mathsf T}\varepsilon_k)=0$ for $j\ne k$, and $\langle\varepsilon_j,\varepsilon_j\rangle=\tfrac12\mathop{\mathrm{tr}}(\mathrm{Id}_{E_j})=1$. So
 $$\langle\omega_i,\omega_{i'}\rangle=\sum_{j,k}\sigma_{ij}c_j\sigma_{i'k}c_k\langle\varepsilon_j,\varepsilon_k\rangle=\sum_j t_j\,\sigma_{ij}\sigma_{i'j},\qquad t_j=c_j^2,$$
-which is the block's display. Taking $i=i'$ gives $\langle\omega_i,\omega_i\rangle=\sum_jt_j$, and separately $\operatorname{tr}A=\sum_j2c_j^2=2\sum_jt_j$, so $\sum_jt_j=1$ and $\operatorname{tr}A=2$ and $\lVert\omega_i\rVert=1$ are one statement. **Confirmed, and it carries a hypothesis the block does not charge for**: since $A$ is common, $\lVert\omega_i\rVert^2=-\tfrac12\operatorname{tr}(\omega_i^2)=\tfrac12\operatorname{tr}A$ is the same number for all three $i$, so *equal norms are a consequence of the common square rather than an assumption*, and only the value $1$ is a normalisation.
+which is the block's display. Taking $i=i'$ gives $\langle\omega_i,\omega_i\rangle=\sum_jt_j$, and separately $\mathop{\mathrm{tr}}A=\sum_j2c_j^2=2\sum_jt_j$, so $\sum_jt_j=1$ and $\mathop{\mathrm{tr}}A=2$ and $\lVert\omega_i\rVert=1$ are one statement. **Confirmed, and it carries a hypothesis the block does not charge for**: since $A$ is common, $\lVert\omega_i\rVert^2=-\tfrac12\mathop{\mathrm{tr}}(\omega_i^2)=\tfrac12\mathop{\mathrm{tr}}A$ is the same number for all three $i$, so *equal norms are a consequence of the common square rather than an assumption*, and only the value $1$ is a normalisation.
 
 At general multiplicity, $\dim E_j=2m_j$, the restriction $\omega_i|_{E_j}$ is skew with square $-c_j^2\,\mathrm{Id}$, so $\omega_i|_{E_j}=c_jJ_{ij}$ with $J_{ij}$ skew and $J_{ij}^2=-\mathrm{Id}$, that is an orthogonal complex structure on $E_j$. Then
-$$\langle J_{ij},J_{ij}\rangle=\tfrac12\operatorname{tr}(J_{ij}^{\mathsf T}J_{ij})=\tfrac12\operatorname{tr}(\mathrm{Id}_{E_j})=m_j,$$
-so the block's implicit $\langle J_j,J_j\rangle=m_j$ is **correct** under the record's inner product, and $\langle\omega_i,\omega_{i'}\rangle=\sum_jc_j^2m_j\sigma_{ij}\sigma_{i'j}$ once the $J_{ij}$ are pinned to $\pm J_{1j}$. The trace check matches: $\operatorname{tr}A=\sum_j2m_jc_j^2=2\sum_jt_j$ with $t_j=c_j^2m_j$. **Item 2 is confirmed in both forms.**
+$$\langle J_{ij},J_{ij}\rangle=\tfrac12\mathop{\mathrm{tr}}(J_{ij}^{\mathsf T}J_{ij})=\tfrac12\mathop{\mathrm{tr}}(\mathrm{Id}_{E_j})=m_j,$$
+so the block's implicit $\langle J_j,J_j\rangle=m_j$ is **correct** under the record's inner product, and $\langle\omega_i,\omega_{i'}\rangle=\sum_jc_j^2m_j\sigma_{ij}\sigma_{i'j}$ once the $J_{ij}$ are pinned to $\pm J_{1j}$. The trace check matches: $\mathop{\mathrm{tr}}A=\sum_j2m_jc_j^2=2\sum_jt_j$ with $t_j=c_j^2m_j$. **Item 2 is confirmed in both forms.**
 
 ## 3. The four classes
 
@@ -132,7 +132,7 @@ Writing $J_{ij}=\eta_{ij}J_{1j}$, well defined as soon as $r\ge2$, the pair rela
 
 ## 7. The frontier, corrected
 
-**"Every eigenvalue of $A$ of multiplicity at least four" is not what is left untouched.** Section 6 empties every stratum with $r\ge2$, at all multiplicities, so a stratum such as $\dim V=8$ with $A$ of spectrum $\{a,a,a,a,b,b,b,b\}$, $a\ne b$, which has both multiplicities four and is untouched on the block's account, is in fact closed. **What survives is exactly $r=1$**, that is $A=\tfrac1m\mathrm{Id}_{2m}$ on $V=\mathbb R^{2m}$, the value being forced by $\operatorname{tr}A=2$.
+**"Every eigenvalue of $A$ of multiplicity at least four" is not what is left untouched.** Section 6 empties every stratum with $r\ge2$, at all multiplicities, so a stratum such as $\dim V=8$ with $A$ of spectrum $\{a,a,a,a,b,b,b,b\}$, $a\ne b$, which has both multiplicities four and is untouched on the block's account, is in fact closed. **What survives is exactly $r=1$**, that is $A=\tfrac1m\mathrm{Id}_{2m}$ on $V=\mathbb R^{2m}$, the value being forced by $\mathop{\mathrm{tr}}A=2$.
 
 There the question is concrete and Weyl-free:
 

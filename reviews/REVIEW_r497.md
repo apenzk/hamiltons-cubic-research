@@ -15,7 +15,7 @@
 | step | verdict |
 | --- | --- |
 | 1. the $n=14$ half, exact endpoint evaluation | **CONFIRMED**, and the interior-maximum worry is answered by Jäger himself. Independently reproduced |
-| 2. the $n=12$ corner elimination, mechanism | **CONFIRMED**. The $\operatorname{tr}S^3$ floor does force the flat spectrum |
+| 2. the $n=12$ corner elimination, mechanism | **CONFIRMED**. The $\mathop{\mathrm{tr}}S^3$ floor does force the flat spectrum |
 | 2'. the $n=12$ moment problem, as stated | **REFUTED as written.** The stated $F(v)$ has value $\approx1/\sqrt{12}$, strictly below $\varphi(v)$ on almost the whole range |
 | 3. the duality step | **CONFIRMED**, and stronger than the block claims: weak duality suffices, so no constraint qualification is owed |
 | 4. "machine-checked", "ten subintervals" | **CONFIRMED as arithmetic**, misleading as scope |
@@ -43,7 +43,7 @@ What the computations establish is **Jäger's Lemma 3.5.6 at $n=12$ and $n=14$**
 
 The brief's concern was that a quantity negative at the endpoints of a case is negative throughout only if an interior maximum is ruled out, and that the block states nothing that rules one out. **The block indeed states nothing. Jäger does.**
 
-Reading his Lemma 3.5.6 directly (extraction lines 4178–4232), the argument is: under Assumption 2 the quantity $\mathrm{RHS}$, viewed as a function of $t=\operatorname{scal}$ on $\bigl[\tfrac{8n+9}{16}\hat\theta_0(n),\,(n-3)\tilde\theta_0(n)\bigr]$, has nonnegative maximum. He then computes
+Reading his Lemma 3.5.6 directly (extraction lines 4178–4232), the argument is: under Assumption 2 the quantity $\mathrm{RHS}$, viewed as a function of $t=\mathop{\mathrm{scal}}$ on $\bigl[\tfrac{8n+9}{16}\hat\theta_0(n),\,(n-3)\tilde\theta_0(n)\bigr]$, has nonnegative maximum. He then computes
 
 $$\mathrm{RHS}''(t)=-\tfrac{263}{72}\tfrac{n-3}{n^2(n-2)}\Bigl[1-\tfrac{3t}{n\hat\theta_0(n)}\Bigr],$$
 
@@ -51,7 +51,7 @@ observes $\tfrac{3t}{n\hat\theta_0(n)}\ge\tfrac{3(8n+9)}{16n}\ge1$ on the interv
 
 **And the licence survives the lowered dimensions, which nobody in the record checks.** Convexity needs $\tfrac{3(8n+9)}{16n}\ge1$, which is $1.641$ at $n=12$ and $1.621$ at $n=14$, comfortably true, and free of the $n\ge16$ in Assumption 1. **I checked this by hand and it passes.** It should be one sentence in the block, because it is the only thing standing between "negative at two points" and "negative throughout".
 
-**Reproduced independently.** I rebuilt $\mathrm{RHS}$ from the extracted display and evaluated it at Jäger's own two endpoints with his own rounded inputs ($v=\operatorname{tr}S^4=16/(8n+9)$, $y=(\operatorname{tr}S^3)^2=1/n$, positive-term coefficient $2$):
+**Reproduced independently.** I rebuilt $\mathrm{RHS}$ from the extracted display and evaluated it at Jäger's own two endpoints with his own rounded inputs ($v=\mathop{\mathrm{tr}}S^4=16/(8n+9)$, $y=(\mathop{\mathrm{tr}}S^3)^2=1/n$, positive-term coefficient $2$):
 
 | $n$ | 12 | 13 | 14 | 15 | 16 |
 | --- | --- | --- | --- | --- | --- |
@@ -63,17 +63,17 @@ observes $\tfrac{3t}{n\hat\theta_0(n)}\ge\tfrac{3(8n+9)}{16n}\ge1$ on the interv
 
 ## 3. The $n=12$ half, the mechanism is CONFIRMED, and I can say why
 
-The brief asks which operator $S$ is, what constraints it carries, and whether the $\operatorname{tr}S^3$ floor genuinely forces a flat spectrum. **The block answers none of these.** From the source (extraction lines 1720–1760):
+The brief asks which operator $S$ is, what constraints it carries, and whether the $\mathop{\mathrm{tr}}S^3$ floor genuinely forces a flat spectrum. **The block answers none of these.** From the source (extraction lines 1720–1760):
 
 $$|W|:=W_++W_-,\qquad \mathrm{Ric}:=\mathrm{Ric}(|W|),\qquad r:=\lVert\mathrm{Ric}\rVert,\qquad S:=\mathrm{Ric}/r.$$
 
 $|W|$ is the *entrywise absolute value* of the diagonal Weyl operator, so its sectional entries are $\lvert w_{ij}\rvert\ge0$ and $\mathrm{Ric}_{ii}=\sum_{j\ne i}\lvert w_{ij}\rvert\ge0$. Hence:
 
-> **$S$ is diagonal, positive semidefinite, of rank at most $n$, with $\operatorname{tr}S^2=1$, so every eigenvalue lies in $[0,1]$.**
+> **$S$ is diagonal, positive semidefinite, of rank at most $n$, with $\mathop{\mathrm{tr}}S^2=1$, so every eigenvalue lies in $[0,1]$.**
 
-That settles the floor. With $S\succeq0$ and $\operatorname{tr}S^2=1$, Cauchy–Schwarz gives $1=(\operatorname{tr}S^2)^2=\bigl(\sum\lambda_i^{3/2}\lambda_i^{1/2}\bigr)^2\le\operatorname{tr}S^3\cdot\operatorname{tr}S$, and $\operatorname{tr}S\le\sqrt{n\operatorname{tr}S^2}=\sqrt n$, so $(\operatorname{tr}S^3)^2\ge1/n$, **which is exactly Jäger's floor**, recovered from scratch. Both Cauchy–Schwarz equalities bind simultaneously only when every $\lambda_i$ is equal and the rank is $n$, i.e. $\lambda_i=1/\sqrt n$. At that spectrum $\operatorname{tr}S^4=1/n$, its own floor, against a ceiling of $16/(8n+9)\approx2/n$.
+That settles the floor. With $S\succeq0$ and $\mathop{\mathrm{tr}}S^2=1$, Cauchy–Schwarz gives $1=(\mathop{\mathrm{tr}}S^2)^2=\bigl(\sum\lambda_i^{3/2}\lambda_i^{1/2}\bigr)^2\le\mathop{\mathrm{tr}}S^3\cdot\mathop{\mathrm{tr}}S$, and $\mathop{\mathrm{tr}}S\le\sqrt{n\mathop{\mathrm{tr}}S^2}=\sqrt n$, so $(\mathop{\mathrm{tr}}S^3)^2\ge1/n$, **which is exactly Jäger's floor**, recovered from scratch. Both Cauchy–Schwarz equalities bind simultaneously only when every $\lambda_i$ is equal and the rank is $n$, i.e. $\lambda_i=1/\sqrt n$. At that spectrum $\mathop{\mathrm{tr}}S^4=1/n$, its own floor, against a ceiling of $16/(8n+9)\approx2/n$.
 
-**So the block's sentence (*"the floor forces the flat spectrum, which drags the ceiling down with it"*), is exactly true, and it is an equality case, not an approximation.** The corner $\bigl(y=1/n,\;v=E(n)\bigr)$ really is outside the moment body. The direction is right too: with $u=(\operatorname{tr}S^3)^2$, the positive term $\sqrt{(v^2-u^2)/(1-u)}$ has $\partial_u$ numerator $u^2-2u+v^2<0$ on the range, so it is decreasing in $u$, a *lower* bound on $\operatorname{tr}S^3$ is what tightens it, which is what the certificate supplies. Jäger's own $(3.16)$ makes the same monotonicity argument.
+**So the block's sentence (*"the floor forces the flat spectrum, which drags the ceiling down with it"*), is exactly true, and it is an equality case, not an approximation.** The corner $\bigl(y=1/n,\;v=E(n)\bigr)$ really is outside the moment body. The direction is right too: with $u=(\mathop{\mathrm{tr}}S^3)^2$, the positive term $\sqrt{(v^2-u^2)/(1-u)}$ has $\partial_u$ numerator $u^2-2u+v^2<0$ on the range, so it is decreasing in $u$, a *lower* bound on $\mathop{\mathrm{tr}}S^3$ is what tightens it, which is what the certificate supplies. Jäger's own $(3.16)$ makes the same monotonicity argument.
 
 **Every load-bearing number reproduces.** Rebuilding the expression independently at $n=12$, $v=E(12)=709/4680$:
 
@@ -89,9 +89,9 @@ That settles the floor. With $S\succeq0$ and $\operatorname{tr}S^2=1$, Cauchy–
 
 This is the sharpest defect. The block writes, twice ([problem.md:388](../findings/problem.md) and [:406](../findings/problem.md)):
 
-> *"Pushing forward to $\mu=\sum\lambda_i^2\delta_{\lambda_i}$ (a probability measure since $\lVert S\rVert=1$), turns the requirement into $F(v)=\min\{\mathbb E[\lambda]:\mathbb E[\lambda^2]=v,\ \mathbb E[\lambda^{-2}]\le n\}$ … yielding the certified line $\varphi(v)=\tfrac7{10}v+\tfrac{8647}{38000}\le\operatorname{tr}S^3$."*
+> *"Pushing forward to $\mu=\sum\lambda_i^2\delta_{\lambda_i}$ (a probability measure since $\lVert S\rVert=1$), turns the requirement into $F(v)=\min\{\mathbb E[\lambda]:\mathbb E[\lambda^2]=v,\ \mathbb E[\lambda^{-2}]\le n\}$ … yielding the certified line $\varphi(v)=\tfrac7{10}v+\tfrac{8647}{38000}\le\mathop{\mathrm{tr}}S^3$."*
 
-The pushforward is right: $\mathbb E[\lambda]=\operatorname{tr}S^3$, $\mathbb E[\lambda^2]=\operatorname{tr}S^4$, and $\mathbb E[\lambda^{-2}]$ counts the nonzero eigenvalues, so $\le n$. **But the problem as written has no constraint on the support of $\mu$, and without one its value is not $\varphi$-bounded.**
+The pushforward is right: $\mathbb E[\lambda]=\mathop{\mathrm{tr}}S^3$, $\mathbb E[\lambda^2]=\mathop{\mathrm{tr}}S^4$, and $\mathbb E[\lambda^{-2}]$ counts the nonzero eigenvalues, so $\le n$. **But the problem as written has no constraint on the support of $\mu$, and without one its value is not $\varphi$-bounded.**
 
 *Screened*, $n=12$, by linear programming over measures on a grid (the problem is an LP in the masses, so this is exact up to discretisation):
 
@@ -113,7 +113,7 @@ i.e. on all but the leftmost fifth of the range $[10/81,709/4680]$ the argument 
 
 **Required repair.** Both copies of the sentence must read
 
-> $F(v)=\min\{\mathbb E[\lambda]:\operatorname{supp}\mu\subseteq(0,1],\ \mathbb E[\lambda^2]=v,\ \mathbb E[\lambda^{-2}]\le n\}$, the support bound because $S=\mathrm{Ric}(|W|)/\lVert\mathrm{Ric}(|W|)\rVert$ is positive semidefinite with $\operatorname{tr}S^2=1$,
+> $F(v)=\min\{\mathbb E[\lambda]:\mathop{\mathrm{supp}}\mu\subseteq(0,1],\ \mathbb E[\lambda^2]=v,\ \mathbb E[\lambda^{-2}]\le n\}$, the support bound because $S=\mathrm{Ric}(|W|)/\lVert\mathrm{Ric}(|W|)\rVert$ is positive semidefinite with $\mathop{\mathrm{tr}}S^2=1$,
 
 and the block must say what $S$ is. As written, step 2 asserts a false inequality about a well-defined object.
 
@@ -122,7 +122,7 @@ and the block must say what $S$ is. As written, step 2 asserts a false inequalit
 The brief asks whether convexity is of the right object, whether strong duality is invoked, and whether a constraint qualification is needed and checked. Working it out:
 
 - **The object is right.** $F$ is the value of a linear programme over measures, linear objective $\int\lambda\,d\mu$, linear constraints $\int d\mu=1$, $\int\lambda^2d\mu=v$, $\int\lambda^{-2}d\mu\le n$, over the convex cone $\mu\ge0$. The value of an LP as a function of its right-hand side is convex, so $F$ is convex **in $v$**, which is the variable the "supporting line valid at every value at once" claim is about. *A convex moment body would not have sufficed*, and the block's phrasing is loose about which; the underlying fact is the sharper one.
-- **Only weak duality is used, so no constraint qualification is owed.** Any $(\alpha,\beta,\gamma)$ with $\beta\ge0$ and $\lambda-\alpha\lambda^2+\beta\lambda^{-2}\ge\gamma$ on the support gives, on taking expectations and using $\mathbb E[\lambda^{-2}]\le n$, $\operatorname{tr}S^3\ge\gamma+\alpha v-n\beta$ for every feasible $\mu$. That is valid whatever the duality gap. **The block's step 2 does not need Slater, and it does not need $F$ to be attained.**
+- **Only weak duality is used, so no constraint qualification is owed.** Any $(\alpha,\beta,\gamma)$ with $\beta\ge0$ and $\lambda-\alpha\lambda^2+\beta\lambda^{-2}\ge\gamma$ on the support gives, on taking expectations and using $\mathbb E[\lambda^{-2}]\le n$, $\mathop{\mathrm{tr}}S^3\ge\gamma+\alpha v-n\beta$ for every feasible $\mu$. That is valid whatever the duality gap. **The block's step 2 does not need Slater, and it does not need $F$ to be attained.**
 - **Strong duality is claimed but only as commentary.** The script notes the dual optimum reproduces the primal floor to $10^{-6}$ and calls it strong duality. Nothing rests on it: it is a cross-check, and correctly so.
 - **"Supporting line" is the wrong word, harmlessly.** My screen shows $F$ has slope $\approx0.694$ across the range while $\alpha=0.7$, and the line stays $2.3$–$2.8\times10^{-3}$ strictly below $F$ everywhere on it. So it is a *valid affine minorant*, touching nowhere in the range, which is what the argument needs, and strictly safer than a supporting line would be.
 
@@ -184,7 +184,7 @@ I grepped [findings/](../findings/), [plan.md](../plan.md), [results.md](../resu
 
 ## 10. Repairs owed, in order
 
-1. **Fix the moment problem in both copies** ([problem.md:388](../findings/problem.md), [:406](../findings/problem.md)), add $\operatorname{supp}\mu\subseteq(0,1]$, and say that $S=\mathrm{Ric}(|W|)/\lVert\mathrm{Ric}(|W|)\rVert$ is positive semidefinite with $\operatorname{tr}S^2=1$. **As written the step is false.**
+1. **Fix the moment problem in both copies** ([problem.md:388](../findings/problem.md), [:406](../findings/problem.md)), add $\mathop{\mathrm{supp}}\mu\subseteq(0,1]$, and say that $S=\mathrm{Ric}(|W|)/\lVert\mathrm{Ric}(|W|)\rVert$ is positive semidefinite with $\mathop{\mathrm{tr}}S^2=1$. **As written the step is false.**
 2. **Fix the census sentence.** Say the census found a genuine $m\ge8$ use at §3.6's ideal-induction step, and that it is discharged by Result 5b, with a link, and with 5b's status (unnumbered, brute-forced at $n=4,5,6$, no Gate 2) stated.
 3. **State the two convexity/monotonicity facts** that license the endpoint evaluations: Jäger's $\mathrm{RHS}''\ge0$ in $t$, which survives at $n=12,14$ since $3(8n+9)/(16n)\ge1.62$ there, and the unargued claim that $v=E(n)$ maximises in $v$.
 4. **Credit sharpenings (1) and (2)**, the unrounded $E(n)$ and the unrounded Lemma 3.5.5 coefficient. The $n=12$ closure needs all three, not one.

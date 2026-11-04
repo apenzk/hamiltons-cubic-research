@@ -59,7 +59,7 @@ Independent enumeration (my own script, [r1202_enum.py] in scratchpad, not the a
 ## Item 6
 
 - L251 gave $p\le14$, now $p=14$ is excluded, so $p\le13$ for symmetric three-value critical points above $\theta_0(12)$. Scope matches the coupled average's hypothesis.
-- $p=13$ remark, screened: $m=66-2p=40$, $\mu_{40}=2T_{17}$, $\tau_{13}=7-\sqrt{(220/144)\cdot26}\approx0.6974$. Min of $15\operatorname{tr}x^4+\mu_{40}=30\sum s^4+2T_{17}$ on $T_{17}\le\tau_{13}$ is $22.15<24$, matching "22.2 < 24". The remark is a screen and is labelled as one.
+- $p=13$ remark, screened: $m=66-2p=40$, $\mu_{40}=2T_{17}$, $\tau_{13}=7-\sqrt{(220/144)\cdot26}\approx0.6974$. Min of $15\mathop{\mathrm{tr}}x^4+\mu_{40}=30\sum s^4+2T_{17}$ on $T_{17}\le\tau_{13}$ is $22.15<24$, matching "22.2 < 24". The remark is a screen and is labelled as one.
 
 ## Item 7
 

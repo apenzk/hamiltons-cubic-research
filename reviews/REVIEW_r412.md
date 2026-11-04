@@ -14,7 +14,7 @@
 | C4 | Polarisation $(A+B)^\#=A^\#+2A\#B+B^\#$; no normalisation factor breaks it | **CONFIRMED**, and it is Böhm–Wilking's own proof line, not a new step |
 | C5 | $\mathrm{Ric}$ annihilates $\Lambda^4$, so $\mathrm{Ric}(R_B)=\mathrm{Ric}(R)$ | **CONFIRMED** |
 | C6 | $H=2\big(\lvert W\rvert+\lvert W\rvert\#I-3\,\mathrm{Alt}(\lvert W\rvert)\big)$ | **CONFIRMED**, the factor $2$ is the $\mathrm{Ric}^*$ convention, verified by computing the adjoint |
-| C7 | "$\mathrm{Alt}$" beside $\operatorname{tr}D=6\lVert\mathrm{Alt}\rVert^2$ | **TRAP**, $\mathrm{Alt}(\lvert W\rvert)=2\,\mathrm{Alt}(W_-)$, so $\lVert\mathrm{Alt}(\lvert W\rvert)\rVert^2=4\delta^2$, not $\delta^2$ |
+| C7 | "$\mathrm{Alt}$" beside $\mathop{\mathrm{tr}}D=6\lVert\mathrm{Alt}\rVert^2$ | **TRAP**, $\mathrm{Alt}(\lvert W\rvert)=2\,\mathrm{Alt}(W_-)$, so $\lVert\mathrm{Alt}(\lvert W\rvert)\rVert^2=4\delta^2$, not $\delta^2$ |
 | C8 | "nothing in [findings/](../findings/) carries $\mathrm{Ric}(R)\wedge\mathrm{id}-(R+R\#I)$" | **REFUTED**, [isotropy-cap.md](../findings/isotropy-cap.md) L79, [stratum-two-negative.md](../findings/stratum-two-negative.md), [results.md](../results.md) |
 | C9 | "the grant is a $\#$-calculus statement plus one term **linear in the defect**" | **OVERSTATED**, the term is $\langle X_{\mathrm{inv}},\mathrm{Alt}(\lvert W\rvert)\rangle$, bilinear, with $X_{\mathrm{inv}}$ uncontrolled by $\delta$ |
 
@@ -78,7 +78,7 @@ $$\mathrm{Alt}(\lvert W\rvert)=2\,\mathrm{Alt}(W_-),\qquad \lVert\mathrm{Alt}(\l
 
 The record's own [review_r13_independent.py](../scripts/lib/review_r13_independent.py) header states it in this form: "$\delta^2=\lVert\mathrm{Alt}(\lvert W\rvert)\rVert^2_{\mathrm{op}}/4$".
 
-The section's $H$ formula is **correct**, it is an identity in $R$ applied at $R=\lvert W\rvert$, and $\delta$ never appears in it. The trap is its closing sentence, which sets the constant $3$ "beside $\operatorname{tr}D=6\lVert\mathrm{Alt}\rVert^2$". That pairing is coherent only if $\lVert\mathrm{Alt}\rVert$ there means $\lVert\mathrm{Alt}(\lvert W\rvert)\rVert_{\mathrm{op}}=2\delta$, giving $\operatorname{tr}D=24\delta^2$. **A successor who reads it as $\delta$ is off by a factor of $4$** in precisely the cancellation the sentence directs them to look for. The section should say which $\mathrm{Alt}$ it means.
+The section's $H$ formula is **correct**, it is an identity in $R$ applied at $R=\lvert W\rvert$, and $\delta$ never appears in it. The trap is its closing sentence, which sets the constant $3$ "beside $\mathop{\mathrm{tr}}D=6\lVert\mathrm{Alt}\rVert^2$". That pairing is coherent only if $\lVert\mathrm{Alt}\rVert$ there means $\lVert\mathrm{Alt}(\lvert W\rvert)\rVert_{\mathrm{op}}=2\delta$, giving $\mathop{\mathrm{tr}}D=24\delta^2$. **A successor who reads it as $\delta$ is off by a factor of $4$** in precisely the cancellation the sentence directs them to look for. The section should say which $\mathrm{Alt}$ it means.
 
 ## C8, the novelty claim is refuted
 

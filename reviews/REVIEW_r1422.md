@@ -25,7 +25,7 @@ Log [agent_logs/r1422.log](../agent_logs/r1422.log). One reviewer, statement fid
 
 ## 1. The implication
 
-The record's argument is: $\operatorname{tr}R=n/4$ and $\operatorname{rank}R\le\dim\mathfrak h$ give $\lVert R\rVert^2\ge(n/4)^2/\dim\mathfrak h$ by Cauchy–Schwarz, the Einstein normalisation gives $\lVert W\rVert^2=\lVert R\rVert^2-\frac n{8(n-1)}$, and the dimension bound then gives $\lVert W\rVert^2\ge\frac16$. `dimension_lemma` takes the first two outputs as hypotheses on reals and proves the third. That is the record's display with its inputs named, and the geometric inputs are listed as owed in the row. The proof's identity is exact:
+The record's argument is: $\mathop{\mathrm{tr}}R=n/4$ and $\mathop{\mathrm{rank}}R\le\dim\mathfrak h$ give $\lVert R\rVert^2\ge(n/4)^2/\dim\mathfrak h$ by Cauchy–Schwarz, the Einstein normalisation gives $\lVert W\rVert^2=\lVert R\rVert^2-\frac n{8(n-1)}$, and the dimension bound then gives $\lVert W\rVert^2\ge\frac16$. `dimension_lemma` takes the first two outputs as hypotheses on reals and proves the third. That is the record's display with its inputs named, and the geometric inputs are listed as owed in the row. The proof's identity is exact:
 
 $$\frac{n^2}{16D}-\frac n{8(n-1)}-\frac16=\frac{3n^2(n-1)-6nD-8D(n-1)}{48D(n-1)}=\frac{3n^2(n-1)-2(7n-4)D}{48D(n-1)}.$$
 

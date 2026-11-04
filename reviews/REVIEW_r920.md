@@ -5,24 +5,24 @@ This round read one written derivation link by link and asked of each step wheth
 | # | Item | Verdict | Reason |
 | --- | --- | --- | --- |
 | 1 | Step 1, $\lambda\ne0$ | GAP | true, and Cartan--Ambrose--Hicks is the wrong instrument for it, the work being done by the OIL decomposition plus definite Ricci on an irreducible factor |
-| 2 | Step 2 normalisation, $\lambda_i$ against the Einstein constant | CONFIRMED | the two constants are kept apart throughout, $\operatorname{sign}K=-\operatorname{sign}\lambda_i$ is right, and the type equivalence follows from $B$ being an inner product |
-| 3 | Step 2's tracing clause and strictness | CONFIRMED | the contradiction needs only $\operatorname{Ric}\ge0$ against a strictly negative $\lambda$, and strictness is available in any case |
+| 2 | Step 2 normalisation, $\lambda_i$ against the Einstein constant | CONFIRMED | the two constants are kept apart throughout, $\mathop{\mathrm{sign}}K=-\mathop{\mathrm{sign}}\lambda_i$ is right, and the type equivalence follows from $B$ being an inner product |
+| 3 | Step 2's tracing clause and strictness | CONFIRMED | the contradiction needs only $\mathop{\mathrm{Ric}}\ge0$ against a strictly negative $\lambda$, and strictness is available in any case |
 | 4 | Step 3, definiteness across factors and semisimplicity | GAP | $\beta|_{\mathfrak p}$ positive definite is true and load-bearing for step 4, resting on two inputs the block leaves unwritten, and semisimplicity needs a fifth citation, Corollary 2.1.5 |
 | 5 | Step 4, the load-bearing step | CONFIRMED | step 3 establishes exactly Corollary 2.4.7's hypothesis, 2.4.7 is stated about the transvection group, and the bundle argument is valid for a Lie group over a compact base |
 | 6 | Group against algebra compactness | CONFIRMED | the source DEFINES a compact Lie algebra as the algebra of some compact Lie group, so $G$ compact gives $\mathfrak g$ compact outright, and centres and coverings cannot reach an existential definition |
 | 7 | The hyperbolic witness | REFUTED | a closed hyperbolic manifold has constant curvature, hence $W=0$, which the record's own L48 clause states, so the named witness fails the clause it was named for |
 | 8 | Hypothesis inventory | CONFIRMED | compactness and global symmetry do enter only at step 4, $W\ne0$ only at step 1, and $\dim M>0$ is used at step 3 without appearing in the statement |
 | 9 | The reach | GAP | the Theorem quantifies over "symmetric" while L211 needs GLOBALLY symmetric, and compactness of the factors is derivable from inputs in hand yet nowhere written |
-| 10 | Already on the record? | CONFIRMED as new | the conclusion is asserted at [VERIFY_v193.md:181](../verification/VERIFY_v193.md#L181) with a FALSE reason, "compactness gives $\operatorname{Ric}\ge0$", so L211 supersedes rather than duplicates |
+| 10 | Already on the record? | CONFIRMED as new | the conclusion is asserted at [VERIFY_v193.md:181](../verification/VERIFY_v193.md#L181) with a FALSE reason, "compactness gives $\mathop{\mathrm{Ric}}\ge0$", so L211 supersedes rather than duplicates |
 | 11 | What would break it | NO FALSIFIER | a compact globally symmetric Einstein space of noncompact type, blocked structurally by 2.4.6's $G\cong K\times\mathbb R^n$, and four evasion routes checked and closed |
 
 **Summary.** The conclusion $\lambda>0$ is TRUE and the spine, steps 2 to 5, is sound, and what the block owes is step 1's instrument, two unwritten inputs behind step 3's definiteness clause, an accurate account of where its four inputs actually live, and a replacement for a tightness witness that is false.
 
 ## 1. Step 1, $\lambda\ne0$
 
-**GAP.** The conclusion is true and the named instrument does not deliver it. What step 1 needs is the pointwise algebraic statement $\operatorname{Ric}=0\Rightarrow R=0$ at a point, from which $W=0$ is immediate. Cartan--Ambrose--Hicks is a rigidity theorem about local isometry between two spaces with matching curvature under parallel transport, so its output is *this space is locally isometric to Euclidean space*, which is both more than is needed and dependent on completeness that the step never invokes.
+**GAP.** The conclusion is true and the named instrument does not deliver it. What step 1 needs is the pointwise algebraic statement $\mathop{\mathrm{Ric}}=0\Rightarrow R=0$ at a point, from which $W=0$ is immediate. Cartan--Ambrose--Hicks is a rigidity theorem about local isometry between two spaces with matching curvature under parallel transport, so its output is *this space is locally isometric to Euclidean space*, which is both more than is needed and dependent on completeness that the step never invokes.
 
-The argument that does the work is already inside the source on file. Proposition 2.1.3 splits the OIL-algebra with no hypothesis on $\lambda$ at all. On an irreducible factor, Corollary 3.1.4 with Lemma 2.1.2(b) gives $\operatorname{Ric}(X,X)=\lambda_i\sum_j\beta([X,e_j],[X,e_j])$ of one sign, and it vanishes only when $[X,\mathfrak p_i]=0$. That set is $\mathrm{ad}_{\mathfrak k}$-invariant, by the Jacobi identity, so irreducibility of the isotropy representation makes it $0$ or $\mathfrak p_i$, and $\mathfrak p_i$ would make the factor Euclidean, which irreducible excludes. So Ricci is DEFINITE on every irreducible factor, $\operatorname{Ric}=0$ leaves only $\mathfrak g_0$, and $[\mathfrak p,\mathfrak p]=0$ with Proposition 3.1.2 gives $R=0$. That route needs no topology and no theorem off the record.
+The argument that does the work is already inside the source on file. Proposition 2.1.3 splits the OIL-algebra with no hypothesis on $\lambda$ at all. On an irreducible factor, Corollary 3.1.4 with Lemma 2.1.2(b) gives $\mathop{\mathrm{Ric}}(X,X)=\lambda_i\sum_j\beta([X,e_j],[X,e_j])$ of one sign, and it vanishes only when $[X,\mathfrak p_i]=0$. That set is $\mathrm{ad}_{\mathfrak k}$-invariant, by the Jacobi identity, so irreducibility of the isotropy representation makes it $0$ or $\mathfrak p_i$, and $\mathfrak p_i$ would make the factor Euclidean, which irreducible excludes. So Ricci is DEFINITE on every irreducible factor, $\mathop{\mathrm{Ric}}=0$ leaves only $\mathfrak g_0$, and $[\mathfrak p,\mathfrak p]=0$ with Proposition 3.1.2 gives $R=0$. That route needs no topology and no theorem off the record.
 
 The block cites the parenthetical at [findings/problem.md:584](../findings/problem.md#L584), which says the same thing with the same misnaming, "flat by Cartan--Ambrose--Hicks with de Rham", so the citation is faithful to the record and the record is where the defect sits. Cartan--Ambrose--Hicks appears in no reference folder, so this is the block's only step reaching outside its sources.
 
@@ -32,13 +32,13 @@ The block cites the parenthetical at [findings/problem.md:584](../findings/probl
 
 **CONFIRMED, no finding.** I checked every occurrence of the two constants. The block writes $\lambda_i$ for Corollary 3.1.4's scaling in $B=\lambda_i\beta|_{\mathfrak p}$ and $\lambda$ for the Einstein constant, and it never substitutes one for the other. The only place they meet is the inference *the sign of $\lambda_i$ fixes the sign of $K$, and tracing carries that to $\lambda$*, which relates them without identifying them. The source's own Corollary 3.1.4 uses the letter $\lambda$ for the scaling, so renaming it $\lambda_i$ in the block is the right defensive move and it was made.
 
-$\operatorname{sign}K=-\operatorname{sign}\lambda_i$ holds: $X,Y\in\mathfrak p$ gives $[X,Y]\in\mathfrak k$ by the $\pm1$ eigenspace grading, Lemma 2.1.2(b) makes $\beta([X,Y],[X,Y])\le0$, and $K=\lambda_i\beta([X,Y],[X,Y])$ then has the sign opposite to $\lambda_i$ wherever the bracket is nonzero.
+$\mathop{\mathrm{sign}}K=-\mathop{\mathrm{sign}}\lambda_i$ holds: $X,Y\in\mathfrak p$ gives $[X,Y]\in\mathfrak k$ by the $\pm1$ eigenspace grading, Lemma 2.1.2(b) makes $\beta([X,Y],[X,Y])\le0$, and $K=\lambda_i\beta([X,Y],[X,Y])$ then has the sign opposite to $\lambda_i$ wherever the bracket is nonzero.
 
 The type equivalence holds and it turns on the clause the transcription flags as load-bearing. $B$ is an INNER PRODUCT, so positive definite, and $B=\lambda_i\beta|_{\mathfrak p}$ with $\lambda_i\ne0$ makes $\beta|_{\mathfrak p}=\lambda_i^{-1}B$ definite, negative exactly when $\lambda_i<0$. The source's definition at line 1194 of the extraction is *compact type when the Killing form is negative definite on the $-1$-eigenspace*, so $\lambda_i<0$ is compact type and $\lambda_i>0$ is noncompact type, as written. Both readings of a possible sign slip were tested against the source and neither appears.
 
 ## 3. The tracing clause and strictness
 
-**CONFIRMED, no finding, and the strictness worry does not bite.** The clause "the sign of the Einstein constant follows by tracing" is loose if read as a two-way strict statement, and the direction the proof consumes is the non-strict one: compact type gives $K\ge0$ on every 2-plane of the factor, hence $\operatorname{Ric}_i\ge0$, hence $\lambda\ge0$ by L210's shared constant, which already contradicts a strictly negative $\lambda$. Step 5 uses the mirror direction the same way, noncompact type giving $\lambda\le0$ against $\lambda>0$. So the block never needs strict positivity, and the loose phrasing costs it nothing.
+**CONFIRMED, no finding, and the strictness worry does not bite.** The clause "the sign of the Einstein constant follows by tracing" is loose if read as a two-way strict statement, and the direction the proof consumes is the non-strict one: compact type gives $K\ge0$ on every 2-plane of the factor, hence $\mathop{\mathrm{Ric}}_i\ge0$, hence $\lambda\ge0$ by L210's shared constant, which already contradicts a strictly negative $\lambda$. Step 5 uses the mirror direction the same way, noncompact type giving $\lambda\le0$ against $\lambda>0$. So the block never needs strict positivity, and the loose phrasing costs it nothing.
 
 Strictness is nevertheless available, by §1's invariant-subspace argument, which makes Ricci definite rather than semidefinite on every irreducible factor.
 
@@ -81,9 +81,9 @@ The remaining pieces of step 3 are clean. $\mathfrak p\ne0$ from $\dim M>0$ is r
 | --- | --- | --- |
 | Compact | yes | closed by hypothesis |
 | Locally symmetric | yes | constant curvature gives $\nabla R=0$ |
-| Einstein with $\lambda<0$ | yes | $\operatorname{Ric}=-(n-1)g$ at curvature $-1$ |
+| Einstein with $\lambda<0$ | yes | $\mathop{\mathrm{Ric}}=-(n-1)g$ at curvature $-1$ |
 | $W\ne0$ | **NO** | constant sectional curvature makes $R$ a multiple of the identity on $\Lambda^2$, so $W=0$ in every dimension |
-| Excluded by failing homogeneity | yes | $\operatorname{Isom}$ of a closed manifold with $\operatorname{Ric}<0$ is finite, so no transitive action |
+| Excluded by failing homogeneity | yes | $\mathop{\mathrm{Isom}}$ of a closed manifold with $\mathop{\mathrm{Ric}}<0$ is finite, so no transitive action |
 
 The record states the fourth row against itself twice within the same file. [L48](../findings/problem.md#L298) says each $\lVert W_a\rVert^2$ "vanishes exactly when that factor has constant curvature", and [L47](../findings/problem.md#L231) says $S^n$ and $\mathbb{RP}^n$ have $W=0$ for the same reason. A hyperbolic space form is constant curvature, so it is on the $W=0$ side of the record's own biconditional. I triple-checked by the three available readings: the pointwise curvature operator of a space form is $\kappa\,\mathrm{Id}$ on $\Lambda^2$ so its trace-free Weyl part is zero, conformal flatness of space forms says the same, and at $n=3$ the Weyl tensor vanishes for every metric. The witness fails in all three.
 
@@ -98,7 +98,7 @@ The record states the fourth row against itself twice within the same file. [L48
 | Hypothesis | Where it enters | Only there? |
 | --- | --- | --- |
 | Locally symmetric | steps 2 and 3, via 3.1.4 and L210 | yes |
-| $\operatorname{Ric}=\lambda g$ | steps 2, 3 and 5, and L210's shared constant | no, and it is needed throughout |
+| $\mathop{\mathrm{Ric}}=\lambda g$ | steps 2, 3 and 5, and L210's shared constant | no, and it is needed throughout |
 | $W\ne0$ | step 1 alone | yes |
 | $\lambda\ne0$ | step 3, as L210's hypothesis, supplied by step 1 | yes |
 | Compact | step 4, as the base of the bundle | yes |
@@ -119,7 +119,7 @@ So the block's location claim is accurate as far as it goes. Two refinements. Gl
 
 **New as a derivation, and the conclusion is already asserted elsewhere with a FALSE reason.** I searched [findings/](../findings/) and [verification/](../verification/) for $\lambda>0$ and compact-type statements about symmetric spaces. Two hits matter.
 
-- [VERIFY_v193.md:181](../verification/VERIFY_v193.md#L181) asserts "The universal covering of a compact symmetric space splits as $\mathbb R^j\times M_1\times\cdots\times M_r$ with $M_i$ irreducible of compact type" and closes with "**Compactness gives $\operatorname{Ric}\ge0$, so $\lambda\ne0$ and $\lambda>0$ coincide here**". The final sentence is FALSE: a closed hyperbolic manifold is compact with $\operatorname{Ric}<0$. So the record held L211's conclusion on a reason that does not hold, and L211 supersedes it. That sentence should be struck when L211 lands.
+- [VERIFY_v193.md:181](../verification/VERIFY_v193.md#L181) asserts "The universal covering of a compact symmetric space splits as $\mathbb R^j\times M_1\times\cdots\times M_r$ with $M_i$ irreducible of compact type" and closes with "**Compactness gives $\mathop{\mathrm{Ric}}\ge0$, so $\lambda\ne0$ and $\lambda>0$ coincide here**". The final sentence is FALSE: a closed hyperbolic manifold is compact with $\mathop{\mathrm{Ric}}<0$. So the record held L211's conclusion on a reason that does not hold, and L211 supersedes it. That sentence should be struck when L211 lands.
 - The L210 block's own note at [findings/problem.md:282](../findings/problem.md#L282) states the mechanism and explicitly declines to have derived it, calling $\lambda>0$ "what is genuinely owed". That is consistent with L211 being new.
 
 **The four-input citation is wrong for two of the four, and this is the block's most checkable defect.** [findings/problem.md:245](../findings/problem.md#L245) says "The inputs, all four from [Gorodski](../references/gorodski-symmetric-spaces-intro/notes.md) and none from outside it". The transcription [notes.md](../references/gorodski-symmetric-spaces-intro/notes.md) carries Corollary 3.1.4 and Lemma 2.1.2 and carries NEITHER Corollary 2.4.7 NOR Corollary 5.5.2 nor section 5.5's definition of a compact Lie algebra, and it says so itself at its *Not transcribed* section, "everything about noncompact type beyond the definition". Both statements are in the raw extraction in the same folder, at lines 1624 and 3172, which I read and quoted above, so the mathematics is sourced and the record's transcription is short by three statements. **The repair is to add 2.4.7, 5.5.2 and 5.5's definition to notes.md and to point the citation at them**, which is the same failure mode the notes file already records once, of a transcription dropping clauses its own proofs use.

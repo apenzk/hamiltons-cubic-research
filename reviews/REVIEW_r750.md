@@ -28,7 +28,7 @@
 
 The record carries a live factor-of-two hazard between the $\Lambda^2$ and $n\times n$ pairings, so I fix a convention, verify it against $\theta_0$, and use it throughout.
 
-A curvature tensor $R_{ijkl}$ acts on $\Lambda^2\mathbb R^n$ by $(R\omega)_{ij}=\tfrac12R_{ijkl}\omega_{kl}$. In the orthonormal basis $\{e_{ij}\}_{i<j}$ the operator matrix is $M_{(ij),(kl)}=R_{ijkl}$, so $\operatorname{tr}_{\Lambda^2}R=\sum_{i<j}R_{ijij}$ and $\langle X,Y\rangle=\operatorname{tr}_{\Lambda^2}(XY)$, $\lVert W\rVert^2=\operatorname{tr}(W^2)$. The sharp is
+A curvature tensor $R_{ijkl}$ acts on $\Lambda^2\mathbb R^n$ by $(R\omega)_{ij}=\tfrac12R_{ijkl}\omega_{kl}$. In the orthonormal basis $\{e_{ij}\}_{i<j}$ the operator matrix is $M_{(ij),(kl)}=R_{ijkl}$, so $\mathop{\mathrm{tr}}_{\Lambda^2}R=\sum_{i<j}R_{ijij}$ and $\langle X,Y\rangle=\mathop{\mathrm{tr}}_{\Lambda^2}(XY)$, $\lVert W\rVert^2=\mathop{\mathrm{tr}}(W^2)$. The sharp is
 
 $$R^{\#}_{ijkl}=\sum_{p,q}\bigl(R_{ipkq}R_{jplq}-R_{iplq}R_{jpkq}\bigr),\qquad (R\# S)=\tfrac12\text{-polarisation of the above.}$$
 
@@ -45,7 +45,7 @@ Throughout, $n=2m$, $\mathfrak h=\mathfrak{so}(m)\oplus\mathfrak{so}(m)$, $\Pi=\
 | Hypothesis | Where it is consumed |
 |---|---|
 | $W$ symmetric on $\Lambda^2$ | §3, spectral theorem: the two eigenspaces are orthogonal and span |
-| Ricci-flat | §1 only, and only through $\operatorname{tr}_{\Lambda^2}W=0$ |
+| Ricci-flat | §1 only, and only through $\mathop{\mathrm{tr}}_{\Lambda^2}W=0$ |
 | first Bianchi | **nowhere**, see §6 |
 | exactly two eigenvalues | §3, and §4 to write $W$ on the two-dimensional plane |
 | $\lambda_{\max}>0>\lambda_{\min}$ | §4 for the sign, and it is **derivable**, not independent: traceless and $\lVert W\rVert=1$ already force the extremes to straddle $0$ |
@@ -59,17 +59,17 @@ Throughout, $n=2m$, $\mathfrak h=\mathfrak{so}(m)\oplus\mathfrak{so}(m)$, $\Pi=\
 - **I2.** The Casimir member at $\mathfrak h$ is the unit multiple of $\Pi_{\mathfrak h}-\tfrac rN\mathrm{Id}$. Taken as a **definition**; the brief does not fix the sign, and the proof reads "the unit *positive* multiple". **Verified consistent**, §4, and §4 shows the sign is forced independently of the reading.
 - **I3.** That operator is the Weyl tensor of $S^{n/2}\times S^{n/2}$. **Verified independently**, §5, from the Einstein reduction; the trace-correction constant lands on $\tfrac rN$ exactly.
 - **I4.** $\theta=\tfrac2n\sqrt{\tfrac{rN}{N-r}}$ for the Casimir member "when it is critical". **Used, and its scope is the block's one real weakness**, §5 exhibits the formula's failure off the balanced member in closed form.
-- **I5.** The isotropy of $S^{n/2}\times S^{n/2}$ is that $\mathfrak h$ at that dimension. **Verified.** As a symmetric space $S^m\times S^m=\bigl(SO(m+1)/SO(m)\bigr)^2$, so the isotropy algebra is $\mathfrak{so}(m)\oplus\mathfrak{so}(m)$ acting on $T_p=\mathbb R^m\oplus\mathbb R^m$, of dimension $m(m-1)=r$. It coincides with the holonomy algebra and with $\operatorname{im}W=E_{\max}$, which is why the hypothesis on $E_{\max}$ is the natural one. At $m=3$: $\dim=6=r$.
+- **I5.** The isotropy of $S^{n/2}\times S^{n/2}$ is that $\mathfrak h$ at that dimension. **Verified.** As a symmetric space $S^m\times S^m=\bigl(SO(m+1)/SO(m)\bigr)^2$, so the isotropy algebra is $\mathfrak{so}(m)\oplus\mathfrak{so}(m)$ acting on $T_p=\mathbb R^m\oplus\mathbb R^m$, of dimension $m(m-1)=r$. It coincides with the holonomy algebra and with $\mathop{\mathrm{im}}W=E_{\max}$, which is why the hypothesis on $E_{\max}$ is the natural one. At $m=3$: $\dim=6=r$.
 
 ## 1. Ricci-flatness and the trace on $\Lambda^2$ (attack 1)
 
-**The derivation.** $\operatorname{Ric}(W)_{ik}=\sum_jW_{ijkj}$ and $s=\sum_i\operatorname{Ric}(W)_{ii}=\sum_{i,j}W_{ijij}=2\sum_{i<j}W_{ijij}=2\operatorname{tr}_{\Lambda^2}W$. Ricci-flat therefore gives $s=0$ and $\operatorname{tr}_{\Lambda^2}W=0$. No Bianchi identity enters: the chain is the definition of the Ricci trace and the antisymmetry $W_{ijij}=W_{jiji}$.
+**The derivation.** $\mathop{\mathrm{Ric}}(W)_{ik}=\sum_jW_{ijkj}$ and $s=\sum_i\mathop{\mathrm{Ric}}(W)_{ii}=\sum_{i,j}W_{ijij}=2\sum_{i<j}W_{ijij}=2\mathop{\mathrm{tr}}_{\Lambda^2}W$. Ricci-flat therefore gives $s=0$ and $\mathop{\mathrm{tr}}_{\Lambda^2}W=0$. No Bianchi identity enters: the chain is the definition of the Ricci trace and the antisymmetry $W_{ijij}=W_{jiji}$.
 
-**The normalisation.** The identity as displayed reads $\operatorname{tr}_{\Lambda^2}W=\tfrac12 s$ in the $\tfrac12$-at-$\Lambda^2$ convention of §0. Under the competing convention $(R\omega)_{ij}=R_{ijkl}\omega_{kl}$ the operator, its trace and $s$ all scale by $2$ together. **The factor-of-two hazard is inert here**, because the claim is that a trace *vanishes*, and vanishing is scale-invariant. The hazard is live for $\lVert W\rVert$ and for $\#$, which is why §0 pins the convention against $\theta_0$ rather than by assertion.
+**The normalisation.** The identity as displayed reads $\mathop{\mathrm{tr}}_{\Lambda^2}W=\tfrac12 s$ in the $\tfrac12$-at-$\Lambda^2$ convention of §0. Under the competing convention $(R\omega)_{ij}=R_{ijkl}\omega_{kl}$ the operator, its trace and $s$ all scale by $2$ together. **The factor-of-two hazard is inert here**, because the claim is that a trace *vanishes*, and vanishing is scale-invariant. The hazard is live for $\lVert W\rVert$ and for $\#$, which is why §0 pins the convention against $\theta_0$ rather than by assertion.
 
-**Implication, not equivalence.** $\operatorname{tr}_{\Lambda^2}W=0$ says $s=0$, which is scalar-flatness, strictly weaker than $\operatorname{Ric}=0$ as soon as $n\ge3$. The gap is not hypothetical: take $\mathfrak h=\mathfrak{so}(n-1)$ and $A=\Pi_{\mathfrak h}-\tfrac rN\mathrm{Id}$ with $r=\binom{n-1}2$. Then $\operatorname{tr}_{\Lambda^2}A=0$ by construction, while $\operatorname{Ric}(A)=(n-2)P-\tfrac{r(n-1)}{N}\delta$ with $P$ the rank-$(n-1)$ projection, which is nonzero because $P$ is not a multiple of $\delta$. At $n=4$: $\operatorname{Ric}(A)=2P-\tfrac32\delta\ne0$.
+**Implication, not equivalence.** $\mathop{\mathrm{tr}}_{\Lambda^2}W=0$ says $s=0$, which is scalar-flatness, strictly weaker than $\mathop{\mathrm{Ric}}=0$ as soon as $n\ge3$. The gap is not hypothetical: take $\mathfrak h=\mathfrak{so}(n-1)$ and $A=\Pi_{\mathfrak h}-\tfrac rN\mathrm{Id}$ with $r=\binom{n-1}2$. Then $\mathop{\mathrm{tr}}_{\Lambda^2}A=0$ by construction, while $\mathop{\mathrm{Ric}}(A)=(n-2)P-\tfrac{r(n-1)}{N}\delta$ with $P$ the rank-$(n-1)$ projection, which is nonzero because $P$ is not a multiple of $\delta$. At $n=4$: $\mathop{\mathrm{Ric}}(A)=2P-\tfrac32\delta\ne0$.
 
-**Does the argument still close? Yes, and cleanly.** The proof consumes only the forward implication, it needs $\operatorname{tr}_{\Lambda^2}W=0$ as a *consequence* of a hypothesis, never as a characterisation of one. The block's own sentence, "so it and tracelessness are the same equation read in two directions", is about the ratio hypothesis versus tracelessness, not about Ricci-flatness versus tracelessness; read that way it is correct (§6). Read the other way it would be false, and a reader could take it that way, which is worth a word in the block.
+**Does the argument still close? Yes, and cleanly.** The proof consumes only the forward implication, it needs $\mathop{\mathrm{tr}}_{\Lambda^2}W=0$ as a *consequence* of a hypothesis, never as a characterisation of one. The block's own sentence, "so it and tracelessness are the same equation read in two directions", is about the ratio hypothesis versus tracelessness, not about Ricci-flatness versus tracelessness; read that way it is correct (§6). Read the other way it would be false, and a reader could take it that way, which is worth a word in the block.
 
 ## 2. The dimension count (attack 2)
 
@@ -97,7 +97,7 @@ The concrete shape of the failure is on file in this very block: $W_{\mathbb{CP}
 
 With $\Pi:=\Pi_{E_{\max}}=\Pi_{\mathfrak h}$ after §7's normalisation,
 
-$$W=\lambda_{\max}\Pi+\lambda_{\min}(\mathrm{Id}-\Pi),\qquad \operatorname{tr}W=\lambda_{\max}r+\lambda_{\min}(N-r)=0\ \Longrightarrow\ \lambda_{\min}=-\lambda_{\max}\frac r{N-r},$$
+$$W=\lambda_{\max}\Pi+\lambda_{\min}(\mathrm{Id}-\Pi),\qquad \mathop{\mathrm{tr}}W=\lambda_{\max}r+\lambda_{\min}(N-r)=0\ \Longrightarrow\ \lambda_{\min}=-\lambda_{\max}\frac r{N-r},$$
 
 so
 
@@ -123,7 +123,7 @@ $$\frac{rN}{N-r}=\frac{n(n-2)}4\cdot\frac{n(n-1)}2\cdot\frac4{n^2}=\frac{(n-1)(n
 
 **Second, the formula is not a family identity, it is false off the balanced member.** Take $\mathfrak h=\mathfrak{so}(n-1)$, so $r=\binom{n-1}2$, $N-r=n-1$, $t=\tfrac{n-2}n$. Writing $\Pi=\Pi_{\mathfrak h}$, the three sharp identities of §5.1 below give, for this $\mathfrak h$, $\Pi^{\#}=(n-3)\Pi$ and $\Pi\#\mathrm{Id}=\tfrac{n-2}2(P\owedge\delta)-\Pi$ with $P$ the rank-$(n-1)$ projection; the operator of $P\owedge\delta$ is $\omega\mapsto P\omega+\omega P$, which equals $\Pi+\mathrm{Id}$, so $\langle A,P\owedge\delta\rangle=r(1-t)$. Assembling,
 
-$$\operatorname{tr}A^3=\frac{(n-1)(n-2)(4-n)}{n^2},\qquad \langle A,A^{\#}\rangle=\frac{(n-1)(n-2)(3n-8)}{n^2},\qquad P(A)=\frac{2(n-1)(n-2)^2}{n^2},$$
+$$\mathop{\mathrm{tr}}A^3=\frac{(n-1)(n-2)(4-n)}{n^2},\qquad \langle A,A^{\#}\rangle=\frac{(n-1)(n-2)(3n-8)}{n^2},\qquad P(A)=\frac{2(n-1)(n-2)^2}{n^2},$$
 
 $$\lVert A\rVert^2=\frac{(n-1)(n-2)}n,\qquad \boxed{\theta^2=\frac{4(n-2)}{n(n-1)}}\quad\text{against the closed form's}\quad \frac{(n-1)(n-2)}n .$$
 
@@ -143,13 +143,13 @@ Now with $A=\Pi-t\,\mathrm{Id}$ and $n=2m$, so $n-2=2(m-1)$,
 
 $$A^{\#}=\Pi^{\#}-2t\,(\Pi\#\mathrm{Id})+t^2\,\mathrm{Id}^{\#}=\bigl[(m-2)+2t\bigr]\Pi+2(m-1)t(t-1)\,\mathrm{Id},$$
 
-and since $\operatorname{tr}A=0$ and $\operatorname{tr}(A\Pi)=r(1-t)$,
+and since $\mathop{\mathrm{tr}}A=0$ and $\mathop{\mathrm{tr}}(A\Pi)=r(1-t)$,
 
 $$\langle A,A^{\#}\rangle=r(1-t)\bigl[(m-2)+2t\bigr].$$
 
 With $a=r=m(m-1)$, $b=N-r=m^2$, $N=m(2m-1)$, $t=\tfrac{m-1}{2m-1}$, $1-t=\tfrac m{2m-1}$:
 
-$$\operatorname{tr}A^3=a(1-t)^3-bt^3=\frac{ab(b-a)}{N^2}=\frac{m^2(m-1)}{(2m-1)^2},\qquad \langle A,A^{\#}\rangle=\frac{m^3(m-1)(2m-3)}{(2m-1)^2},$$
+$$\mathop{\mathrm{tr}}A^3=a(1-t)^3-bt^3=\frac{ab(b-a)}{N^2}=\frac{m^2(m-1)}{(2m-1)^2},\qquad \langle A,A^{\#}\rangle=\frac{m^3(m-1)(2m-3)}{(2m-1)^2},$$
 
 $$P(A)=\frac{m^2(m-1)}{(2m-1)^2}\bigl[1+m(2m-3)\bigr]=\frac{m^2(m-1)(2m-1)(m-1)}{(2m-1)^2}=\frac{m^2(m-1)^2}{2m-1}>0,$$
 
@@ -165,19 +165,19 @@ With $n=2m$, $\theta_0(n)^2=\tfrac{2(n-1)(n-2)}{n^2}=\tfrac{2(2m-1)\cdot2(m-1)}{
 
 **"Neither criticality nor saturation is used."** As a statement about hypotheses imposed on $W$: **correct**. Nothing in §§1–4 or §7 mentions either, and §5 above reaches $\theta_0$ without them. As a statement about the block's own route: **misleading**, because that route reaches $\theta$ through a formula whose recorded scope is critical members. The distinction worth writing into the block is that criticality of the *target* (a property of $\hat A$, not of $W$), is a fact one may invoke, whereas criticality of $W$ is a hypothesis one may not; with §5's derivation in place, neither is needed at all.
 
-**"The ratio hypothesis is not independent of tracelessness."** **Correct, and conditional.** Given the two-eigenvalue structure with multiplicities $r$ and $N-r$, the chain $\operatorname{tr}W=0\iff\lambda_{\max}r+\lambda_{\min}(N-r)=0\iff\tfrac{\lvert\lambda_{\min}\rvert}{\lambda_{\max}}=\tfrac{n-2}n$ is a genuine two-way equivalence, so the ratio is a consequence rather than an input. The equivalence consumes the multiplicities, hence C2 and C3; it is not an equivalence between tracelessness and the ratio *as free-standing conditions*, and the block should say so in the same breath, because §1 has already shown that a nearby two-way reading (Ricci-flatness against tracelessness), is false.
+**"The ratio hypothesis is not independent of tracelessness."** **Correct, and conditional.** Given the two-eigenvalue structure with multiplicities $r$ and $N-r$, the chain $\mathop{\mathrm{tr}}W=0\iff\lambda_{\max}r+\lambda_{\min}(N-r)=0\iff\tfrac{\lvert\lambda_{\min}\rvert}{\lambda_{\max}}=\tfrac{n-2}n$ is a genuine two-way equivalence, so the ratio is a consequence rather than an input. The equivalence consumes the multiplicities, hence C2 and C3; it is not an equivalence between tracelessness and the ratio *as free-standing conditions*, and the block should say so in the same breath, because §1 has already shown that a nearby two-way reading (Ricci-flatness against tracelessness), is false.
 
-**A third redundancy the block does not claim.** $\lambda_{\max}>0>\lambda_{\min}$ is derivable: $\operatorname{tr}W=0$ with $W\ne0$ forces eigenvalues of both signs. So the hypothesis list is one item longer than it needs to be.
+**A third redundancy the block does not claim.** $\lambda_{\max}>0>\lambda_{\min}$ is derivable: $\mathop{\mathrm{tr}}W=0$ with $W\ne0$ forces eigenvalues of both signs. So the hypothesis list is one item longer than it needs to be.
 
 **C15, first Bianchi is consumed nowhere.** Tracking every step: §1 uses the Ricci trace, §3 the spectral theorem, §4 linear algebra on a plane, §7 equivariance. **The conclusion "$W=\hat A$" holds for every symmetric traceless operator on $\Lambda^2\mathbb R^n$ with exactly two eigenvalues and $E_{\max}=\mathfrak h$, Bianchi or not.** Bianchi is spent only inside the membership clause $W\in\mathcal W_n$, which the lemma never has to cash. This is a strengthening the block could state and does not.
 
 ## 7. The conjugation (attack 7)
 
-$SO(n)$ acts on $\Lambda^2\mathbb R^n$ by $\Lambda^2g$, which under $\Lambda^2\mathbb R^n\cong\mathfrak{so}(n)$ is $\operatorname{Ad}_g$. "$E_{\max}$ is $SO(n)$-conjugate to $\mathfrak h$" means there is $g$ with $\Lambda^2g\,(E_{\max})=\mathfrak h$ as **subspaces of $\Lambda^2$**, which is what is needed, and what the statement says. Setting $W'=\Lambda^2g\,W\,(\Lambda^2g)^{-1}$:
+$SO(n)$ acts on $\Lambda^2\mathbb R^n$ by $\Lambda^2g$, which under $\Lambda^2\mathbb R^n\cong\mathfrak{so}(n)$ is $\mathop{\mathrm{Ad}}_g$. "$E_{\max}$ is $SO(n)$-conjugate to $\mathfrak h$" means there is $g$ with $\Lambda^2g\,(E_{\max})=\mathfrak h$ as **subspaces of $\Lambda^2$**, which is what is needed, and what the statement says. Setting $W'=\Lambda^2g\,W\,(\Lambda^2g)^{-1}$:
 
 - $E_{\max}(W')=\Lambda^2g\,(E_{\max}(W))=\mathfrak h$, and the spectrum with multiplicities is unchanged, so "exactly two eigenvalues" survives;
 - $\mathcal W_n$ is $O(n)$-invariant, first Bianchi and Ricci-flatness are tensorial conditions;
-- $\lVert\cdot\rVert$ is invariant, conjugation by an orthogonal map being an isometry for $\operatorname{tr}(XY)$;
+- $\lVert\cdot\rVert$ is invariant, conjugation by an orthogonal map being an isometry for $\mathop{\mathrm{tr}}(XY)$;
 - $\theta$ is invariant, since $W\mapsto W^{\#}$ is $O(n)$-equivariant (the index formula is built from contractions alone) and $P$ is a contraction of equivariant objects.
 
 Conjugating back is then free: the conclusion "$W$ is $SO(n)$-conjugate to $W_{S^{n/2}\times S^{n/2}}$ at unit norm" is a statement about a conjugacy class, so it transports, and $\theta$ is a class function. **Sound as written.**
@@ -188,7 +188,7 @@ The one thing worth naming: the hypothesis must be conjugacy **of the subspace $
 
 Given in full above, before §1. Every imported fact I1, I3, I5 was re-derived rather than accepted. I2 is a definition whose sign the brief leaves open and §4 closes twice over. I4 is the block's one live debt and §5 discharges it.
 
-**On I3, the derivation.** $S^m\times S^m$ with unit round factors has curvature operator $\Pi_{\mathfrak h}$ exactly: the operator is $\omega\mapsto P^1\omega P^1+P^2\omega P^2$, which is the orthogonal projection onto $\Lambda^2V_1\oplus\Lambda^2V_2=\mathfrak h$, and the mixed block $V_1\otimes V_2$ is flat. The metric is Einstein, $\operatorname{Ric}=(m-1)g$, $s=2m(m-1)$, so $R=W+\tfrac s{n(n-1)}\mathrm{Id}$ with
+**On I3, the derivation.** $S^m\times S^m$ with unit round factors has curvature operator $\Pi_{\mathfrak h}$ exactly: the operator is $\omega\mapsto P^1\omega P^1+P^2\omega P^2$, which is the orthogonal projection onto $\Lambda^2V_1\oplus\Lambda^2V_2=\mathfrak h$, and the mixed block $V_1\otimes V_2$ is flat. The metric is Einstein, $\mathop{\mathrm{Ric}}=(m-1)g$, $s=2m(m-1)$, so $R=W+\tfrac s{n(n-1)}\mathrm{Id}$ with
 
 $$\kappa=\frac s{n(n-1)}=\frac{2m(m-1)}{2m(2m-1)}=\frac{m-1}{2m-1},\qquad \frac rN=\frac{m(m-1)}{m(2m-1)}=\frac{m-1}{2m-1}.$$
 
@@ -214,7 +214,7 @@ $$\theta(W_{\mathbb{CP}^2})^2=\frac{144^2}{24^3}=\frac{20736}{13824}=\frac32\ >\
 
 **The falsifier, named.** A $W\in\mathcal W_n$, $n$ even, $\lVert W\rVert=1$, with exactly two eigenvalues $\lambda_{\max}>0>\lambda_{\min}$ and $E_{\max}$ $SO(n)$-conjugate to $\mathfrak h$, which is *not* $SO(n)$-conjugate to $\hat A$, or which is, but has $\theta\ne\theta_0(n)$.
 
-**Why none exists, argued rather than searched.** §7 normalises $E_{\max}=\mathfrak h$ at no cost. §3 then makes $E_{\min}=\mathfrak h^\perp$, so $W$ lies on the two-dimensional plane $\operatorname{span}\{\Pi_{\mathfrak h},\mathrm{Id}\}$. §1 cuts that plane with one linear equation to a line, and §4 cuts the line with the norm and the sign to a single point. **There is no free parameter left to vary**, so the first form of the falsifier is impossible; and the second is impossible because $\theta$ is a function of the operator, which is now determined. In keeping with the standing analysis-only rule I ran no search for a falsifier: the argument closes the space, so a search would have nothing to look in.
+**Why none exists, argued rather than searched.** §7 normalises $E_{\max}=\mathfrak h$ at no cost. §3 then makes $E_{\min}=\mathfrak h^\perp$, so $W$ lies on the two-dimensional plane $\mathop{\mathrm{span}}\{\Pi_{\mathfrak h},\mathrm{Id}\}$. §1 cuts that plane with one linear equation to a line, and §4 cuts the line with the norm and the sign to a single point. **There is no free parameter left to vary**, so the first form of the falsifier is impossible; and the second is impossible because $\theta$ is a function of the operator, which is now determined. In keeping with the standing analysis-only rule I ran no search for a falsifier: the argument closes the space, so a search would have nothing to look in.
 
 **Where a falsifier could hide, if a hypothesis were weakened.** Each of the following is the exact escape the corresponding hypothesis blocks, and each is worth recording because a paraphrase of the statement could open it:
 

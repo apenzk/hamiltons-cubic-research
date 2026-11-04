@@ -15,7 +15,7 @@ Brief: [BRIEF_L223_L224.md](BRIEF_L223_L224.md). Log: agent_logs/review-r946.log
 | 9 | L223 step 1 | CONFIRMED |
 | 10 | L223 step 2 | CONFIRMED |
 | 11 | L223 step 3 | CONFIRMED |
-| 12 | L223 steps 4 and 5 | PLAUSIBLE, $w=\operatorname{sign}(v)/\sqrt n$ needs a tie-break at $v_i=0$ |
+| 12 | L223 steps 4 and 5 | PLAUSIBLE, $w=\mathop{\mathrm{sign}}(v)/\sqrt n$ needs a tie-break at $v_i=0$ |
 | 13 | L223 scope | CONFIRMED, with a floor on the radius at odd $n$ recorded |
 | L | Lean, both files | PLAUSIBLE, Z_norm_sq checks the pairing and leaves the norm to the paper projection argument |
 
@@ -43,7 +43,7 @@ From $(A\circ A)_{pq}=A_{pq}^2+\sum_cA_{pc}A_{cq}$ with $Y_{ja}=y_a$, $Y_{ka}=-y
 
 - The formula is the record's $Q=W^2+W^\#$ on diagonal tensors: $(W^2)_{ab,ab}=K_{ab}^2$ and $(W^\#)_{ab,ab}=\sum_cK_{ac}K_{cb}$, the second term of the $\#$ formula vanishing on diagonal tensors. It returns $\mathrm{id}^\#=(n-2)\mathrm{id}$, so the normalisation is the record's.
 - L222's $G_x$ is computed from the same $Q$ ($\nu^2$ giving $x_a^2$ at $ja,ka$, $\nu^\#$ giving $2x_ax_b$ and $-\lVert x\rVert^2$). There is no factor of $2$ between the two squares. The item 3 screen checks both squares against a full $Q$ built from $\mathfrak{so}(n)$ structure constants.
-- $G_z$ is linear in $zz^{\mathsf T}$ entrywise ($z_a^2$, $\operatorname{tr}zz^{\mathsf T}$, $z_az_b$), so $G_y+G_x=\mathcal G(yy^{\mathsf T}+xx^{\mathsf T})$.
+- $G_z$ is linear in $zz^{\mathsf T}$ entrywise ($z_a^2$, $\mathop{\mathrm{tr}}zz^{\mathsf T}$, $z_az_b$), so $G_y+G_x=\mathcal G(yy^{\mathsf T}+xx^{\mathsf T})$.
 
 ### Item 3, the cubic: CONFIRMED
 
@@ -63,7 +63,7 @@ Expansion of $T(W,W,W)$, $W=E+D+\nu$ with $D=D^-_y$, $T$ totally symmetric:
 | $T(E,D,\nu)$ | 6 | 1 | 1 | either |
 
 - **Swap.** $\sigma\in O(n)$ and conjugation by any orthogonal matrix (determinant $-1$ included) is an automorphism of $\mathfrak{so}(n)$, so $Q(\sigma W)=\sigma Q(W)$ and $T$ is $\sigma$-invariant. $\sigma E=E$, $\sigma\nu=\nu$, $\sigma D=-D$ kill every odd-$D$ term.
-- **Character.** The flip $\operatorname{diag}(\dots,-1_j,\dots)$ fixes every diagonal tensor and sends $\nu\mapsto-\nu$ (it negates $e_{ja}$ and fixes $e_{ka}$). That is the $\varepsilon_j\varepsilon_k$ character evaluated at a group element where it is $-1$, which is what the proof cites.
+- **Character.** The flip $\mathop{\mathrm{diag}}(\dots,-1_j,\dots)$ fixes every diagonal tensor and sends $\nu\mapsto-\nu$ (it negates $e_{ja}$ and fixes $e_{ka}$). That is the $\varepsilon_j\varepsilon_k$ character evaluated at a group element where it is $-1$, which is what the proof cites.
 - **Total symmetry.** On the record by L24's argument (quoted in support-dichotomy.md), and $T(E,D,D)=\langle E,D\circ D\rangle=\langle E,G_y\rangle$, $T(E,\nu,\nu)=\langle E,G_x\rangle$.
 - **Screen, not evidence.** A script in the scratchpad built $Q=W^2+W^\#$ on full $\binom n2$-square matrices from $\mathfrak{so}(n)$ structure constants (with the $\mathrm{id}^\#=(n-2)\mathrm{id}$ assertion passing), and at $(n,j,k)=(5,0,1),(6,1,4),(6,0,5)$ with random swap-even $E\in\mathcal D_n$ and random centred $y,x$: $\max\lvert Q(D^-_y)-G_y\rvert\le2\times10^{-16}$, $\max\lvert Q(\nu_x)-G_x\rvert\le2\times10^{-16}$, and $P(W)-P(E)-3\langle E,G_y+G_x\rangle$ at most $7\times10^{-15}$ against values of order $10$. It found nothing to report against the hand derivation.
 
@@ -83,7 +83,7 @@ Expansion of $T(W,W,W)$, $W=E+D+\nu$ with $D=D^-_y$, $T$ totally symmetric:
 - **$q_E=q_{B'}$.** $G_z$ is swap-even and $D^-$ is swap-odd, so $\langle D^-,G_z\rangle=0$.
 - **The rank-one form, recomputed with $A'=A\setminus\{j\}$, $B''=B\setminus\{k\}$, blocks of any sizes.** Summing $K_{pq}(G_z)_{pq}$ over unordered pairs: pairs $(j,a)$ give $\alpha_A\sum_{A'}z^2+\gamma\sum_{B''}z^2$, pairs $(k,a)$ give $\gamma\sum_{A'}z^2+\alpha_B\sum_{B''}z^2$, pair $(j,k)$ gives $-\gamma\lVert z\rVert^2$, pairs inside $A'$ give $\alpha_A\big(S_A^2-\sum_{A'}z^2\big)$, inside $B''$ give $\alpha_B\big(S_B^2-\sum_{B''}z^2\big)$, across give $2\gamma S_AS_B$. The quadratic diagonal terms cancel exactly, leaving $\alpha_AS_A^2+\alpha_BS_B^2+2\gamma S_AS_B=(\alpha_A+\alpha_B-2\gamma)S_A^2$ with $S_B=-S_A$. This is Lean block_form term for term. Unbalanced blocks at odd $n$ change nothing, since the cancellation is per coordinate.
 - **The eigenspace.** Blocks have size at least $2$ at $n\ge4$, so $A'$ and $B''$ are nonempty and $\bar u\ne0$. On $\{\sum z=0\}$, $S_A=\langle\bar u,z\rangle$, so $q=c\langle\bar u,z\rangle^2$. With $\lambda>0$, $c>0$ is forced and the $\lambda$-eigenspace is exactly the line of $\bar u$. Equality $q(y)=\lambda\lVert y\rVert^2$ is equality in Cauchy-Schwarz, so $y$ and $x$ both lie on that line and $z_*=\pm\hat u$.
-- **The rotation.** From $\xi\cdot W=[\Lambda^2\xi,W]$ on the $\{ja,ka\}$ block with $\Lambda^2\xi=\begin{pmatrix}0&-1\\1&0\end{pmatrix}$: a diagonal block $\operatorname{diag}(d_1,d_2)$ goes to off-diagonal $d_1-d_2$, and the off-diagonal block with entry $x$ goes to $\operatorname{diag}(-2x,2x)$. $\Lambda^2\xi$ kills $e_{jk}$ and every $e_{ab}$. So $\xi\cdot E=0$, $\xi\cdot D^-_u=\nu_{2u}$, $\xi\cdot\nu_u=D^-_{-2u}$, and on $aD^-_{\hat u}+b\,\nu_{\hat u}$ the generator is $(a,b)\mapsto(-2b,2a)$, rotation at speed $2$. Hence $e^{\varphi\xi}\cdot(E+D^-_{\sqrt s\hat u})=E+\sqrt s\big(\cos2\varphi\,D^-_{\hat u}+\sin2\varphi\,\nu_{\hat u}\big)$, which is $W$ at $2\varphi=\psi$. The sign of $z_*$ is absorbed into $\psi$.
+- **The rotation.** From $\xi\cdot W=[\Lambda^2\xi,W]$ on the $\{ja,ka\}$ block with $\Lambda^2\xi=\begin{pmatrix}0&-1\\1&0\end{pmatrix}$: a diagonal block $\mathop{\mathrm{diag}}(d_1,d_2)$ goes to off-diagonal $d_1-d_2$, and the off-diagonal block with entry $x$ goes to $\mathop{\mathrm{diag}}(-2x,2x)$. $\Lambda^2\xi$ kills $e_{jk}$ and every $e_{ab}$. So $\xi\cdot E=0$, $\xi\cdot D^-_u=\nu_{2u}$, $\xi\cdot\nu_u=D^-_{-2u}$, and on $aD^-_{\hat u}+b\,\nu_{\hat u}$ the generator is $(a,b)\mapsto(-2b,2a)$, rotation at speed $2$. Hence $e^{\varphi\xi}\cdot(E+D^-_{\sqrt s\hat u})=E+\sqrt s\big(\cos2\varphi\,D^-_{\hat u}+\sin2\varphi\,\nu_{\hat u}\big)$, which is $W$ at $2\varphi=\psi$. The sign of $z_*$ is absorbed into $\psi$.
 - **Converse.** $P$ is $O(n)$-invariant and $\mathcal S_{jk}$ is preserved by $(j,k)$-rotations (L222 item 1), so every $e^{\varphi\xi}\cdot B$ is a unit element of $\mathcal S_{jk}$ with value $\Theta_n$.
 
 ### Item 6, scope and What it gives: PLAUSIBLE
@@ -112,8 +112,8 @@ The falsifier is a unit $W\in\mathcal S_{jk}$ with $P(W)>\Theta_n$, necessarily 
 
 ### Item 9, step 1: CONFIRMED
 
-- The matrix identity is $S^{\circ2}+S^2=\lambda S+E+\operatorname{diag}(r)$, $r_i=\sum_js_{ij}^2$. Pairing with $vv^{\mathsf T}$: $\sum_{i\ne j}s_{ij}^2v_iv_j+\mu^2=\lambda\mu+v^{\mathsf T}Ev+\sum_ir_iv_i^2$, and $\sum_{i<j}s_{ij}^2(v_i-v_j)^2=\sum_ir_iv_i^2-\sum_{i\ne j}s_{ij}^2v_iv_j$ gives $\lambda\mu+v^{\mathsf T}Ev=\mu^2-\sum_{i<j}s_{ij}^2(v_i-v_j)^2$. The sign of $E$ is as stated.
-- $\sum_{i<j}s_{ij}(v_i-v_j)^2=\sum_iv_i^2(\text{row sum})-v^{\mathsf T}Sv=-\mu$ and $\sum_{i<j}(v_i-v_j)^2=n\lVert v\rVert^2-(\sum v)^2=n$, using $v\perp\mathbf1$ (automatic: $\mu>0$ since $\operatorname{tr}S=0$, $S\ne0$, and $\mathbf1$ has eigenvalue $0$). Cauchy-Schwarz gives $\eta_1\ge0$, and dividing by $\mu>0$ gives the displayed inequality with $-v^{\mathsf T}Ev\le e_-$.
+- The matrix identity is $S^{\circ2}+S^2=\lambda S+E+\mathop{\mathrm{diag}}(r)$, $r_i=\sum_js_{ij}^2$. Pairing with $vv^{\mathsf T}$: $\sum_{i\ne j}s_{ij}^2v_iv_j+\mu^2=\lambda\mu+v^{\mathsf T}Ev+\sum_ir_iv_i^2$, and $\sum_{i<j}s_{ij}^2(v_i-v_j)^2=\sum_ir_iv_i^2-\sum_{i\ne j}s_{ij}^2v_iv_j$ gives $\lambda\mu+v^{\mathsf T}Ev=\mu^2-\sum_{i<j}s_{ij}^2(v_i-v_j)^2$. The sign of $E$ is as stated.
+- $\sum_{i<j}s_{ij}(v_i-v_j)^2=\sum_iv_i^2(\text{row sum})-v^{\mathsf T}Sv=-\mu$ and $\sum_{i<j}(v_i-v_j)^2=n\lVert v\rVert^2-(\sum v)^2=n$, using $v\perp\mathbf1$ (automatic: $\mu>0$ since $\mathop{\mathrm{tr}}S=0$, $S\ne0$, and $\mathbf1$ has eigenvalue $0$). Cauchy-Schwarz gives $\eta_1\ge0$, and dividing by $\mu>0$ gives the displayed inequality with $-v^{\mathsf T}Ev\le e_-$.
 - The hypothesis $E\in\mathcal D_n$ is automatic, since $Q(\mathcal D_n)\subset\mathcal D_n$.
 
 ### Item 10, step 2: CONFIRMED
@@ -125,8 +125,8 @@ The falsifier is a unit $W\in\mathcal S_{jk}$ with $P(W)>\Theta_n$, necessarily 
 
 ### Item 11, step 3: CONFIRMED
 
-- $\langle S\circ S,S\rangle=\sum_{i<j}(s_{ij}^2+(S^2)_{ij})s_{ij}=\tfrac12\sum_{i\ne j}s_{ij}^3+\tfrac12\operatorname{tr}S^3$, the second because $s_{ii}=0$.
-- $2s_{ij}=(e_i+e_j)^{\mathsf T}S(e_i+e_j)\le2\mu$. Then $s^3\le\mu s^2$ for every real $s\le\mu$ (it is $s^2(\mu-s)\ge0$), so $\tfrac12\sum_{i\ne j}s_{ij}^3\le\tfrac12\mu\cdot2=\mu$. $\operatorname{tr}S^3=\sum\lambda_i^3\le\mu\sum\lambda_i^2=2\mu$. Total at most $2\mu$.
+- $\langle S\circ S,S\rangle=\sum_{i<j}(s_{ij}^2+(S^2)_{ij})s_{ij}=\tfrac12\sum_{i\ne j}s_{ij}^3+\tfrac12\mathop{\mathrm{tr}}S^3$, the second because $s_{ii}=0$.
+- $2s_{ij}=(e_i+e_j)^{\mathsf T}S(e_i+e_j)\le2\mu$. Then $s^3\le\mu s^2$ for every real $s\le\mu$ (it is $s^2(\mu-s)\ge0$), so $\tfrac12\sum_{i\ne j}s_{ij}^3\le\tfrac12\mu\cdot2=\mu$. $\mathop{\mathrm{tr}}S^3=\sum\lambda_i^3\le\mu\sum\lambda_i^2=2\mu$. Total at most $2\mu$.
 - $\langle S\circ S,S\rangle=\lambda+\langle E,S\rangle\ge\lambda-\lvert E\rvert$ with $\lvert S\rvert=1$ in the unordered norm.
 - $e_-\le\lVert E\rVert_{\mathrm{op}}\le\lVert E\rVert_{F,\text{ordered}}=\sqrt2\lvert E\rvert$. With $\mu\ge(\lambda-\lvert E\rvert)/2>0$ this gives item 1's bound $2\sqrt2\lvert E\rvert/(\lambda-\lvert E\rvert)$.
 - Item 2's three bounds: $1-\cos\alpha\le1-r\cos\alpha$ needs $\cos\alpha\ge0$, which holds. $1-r\le1-r\cos\alpha$ needs $r\ge0$. $\eta_1\le\mu\Delta$ is $\eta_1/\mu\le\Delta$ times $\mu>0$. All match Lean chain_defects, including its $0\le c$ hypothesis.
@@ -144,7 +144,7 @@ Confirmed:
 
 The defect:
 
-- **$w=\operatorname{sign}(v)/\sqrt n$ is not unit when some $v_i=0$** under the usual $\operatorname{sign}(0)=0$. Then $p+q<n$, step 5's "for unit $v,w$" fails, and $\Pi(ww^{\mathsf T})$ is constant on more than three classes, so it is not a sphere product's vertex matrix on $n$ indices. The hypothesis of item 4 does not exclude a zero coordinate by the lemma's own bounds: a zero gives $\eta_3\ge n^{-2}$, while the hypothesis forces only $\delta<\frac1{4(n-2)}$ and so $\eta_3<\frac{n-2}{2n(n-1)}$, and $n^{-2}<\frac{n-2}{2n(n-1)}$ at every $n\ge4$.
+- **$w=\mathop{\mathrm{sign}}(v)/\sqrt n$ is not unit when some $v_i=0$** under the usual $\mathop{\mathrm{sign}}(0)=0$. Then $p+q<n$, step 5's "for unit $v,w$" fails, and $\Pi(ww^{\mathsf T})$ is constant on more than three classes, so it is not a sphere product's vertex matrix on $n$ indices. The hypothesis of item 4 does not exclude a zero coordinate by the lemma's own bounds: a zero gives $\eta_3\ge n^{-2}$, while the hypothesis forces only $\delta<\frac1{4(n-2)}$ and so $\eta_3<\frac{n-2}{2n(n-1)}$, and $n^{-2}<\frac{n-2}{2n(n-1)}$ at every $n\ge4$.
 - **Repair.** Define $w_i=+n^{-1/2}$ at $v_i=0$ (either fixed sign works). Every inequality survives: at $v_i=0$, $\lvert v_i-w_i\rvert=n^{-1/2}=\sqrt n\lvert v_i^2-\tfrac1n\rvert$, $w$ is unit, and $p+q=n$.
 
 ### Item 13, scope: CONFIRMED

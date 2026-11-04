@@ -1,6 +1,6 @@
 # Gate 2, Reviewer 122, the LOSS identity and the dichotomy branch
 
-Cold audit of the chain "$\lambda\mu=\mu^2-\mathrm{LOSS}$", worked on paper first and only then checked against an implementation written from scratch in this review (no project script was read before the algebra was done). Conventions fixed independently: $\Lambda^2$ carries $\langle A,B\rangle=-\tfrac12\operatorname{tr}(AB)$, $\{e_i\wedge e_j\}_{i<j}$ is orthonormal, $W_{ijkl}=\langle W(e_k\wedge e_l),e_i\wedge e_j\rangle$, and $\lVert W\rVert_F=1$ as an operator on $\Lambda^2$.
+Cold audit of the chain "$\lambda\mu=\mu^2-\mathrm{LOSS}$", worked on paper first and only then checked against an implementation written from scratch in this review (no project script was read before the algebra was done). Conventions fixed independently: $\Lambda^2$ carries $\langle A,B\rangle=-\tfrac12\mathop{\mathrm{tr}}(AB)$, $\{e_i\wedge e_j\}_{i<j}$ is orthonormal, $W_{ijkl}=\langle W(e_k\wedge e_l),e_i\wedge e_j\rangle$, and $\lVert W\rVert_F=1$ as an operator on $\Lambda^2$.
 
 ## Verdicts on steps 1–7
 
@@ -8,7 +8,7 @@ Cold audit of the chain "$\lambda\mu=\mu^2-\mathrm{LOSS}$", worked on paper firs
 |---|---|
 | 1 | **Correct**, and it needs one fact the chain never states, see "Q(W) is automatically Ricci-flat" below |
 | 2 | **Correct.** Rederived in full; residual $\le3\times10^{-17}$ at $n=4,5,6$ |
-| 3 | **Correct**, with a live normalisation trap: $\operatorname{tr}N=4$, not $1$ |
+| 3 | **Correct**, with a live normalisation trap: $\mathop{\mathrm{tr}}N=4$, not $1$ |
 | 4 | **Correct, normalisation included.** Pinned three independent ways |
 | 5 | **Correct**, and it holds at *every* eigenvector, not only the bottom |
 | 6 | **Correct as algebra, misleading as a reduction.** $\mathrm{LOSS}=\mu(\mu-\lambda)$ is a tautology |
@@ -26,11 +26,11 @@ $R\mapsto\mathring R$ is linear, the substitution is legitimate, and pairing at 
 
 ### Step 2, correct
 
-Rederived independently. $(W^2)_{ijkl}=\tfrac12\sum_{pq}W_{ijpq}W_{pqkl}$ is right in this convention, and $\langle(W^2)^{\!\circ}h,h\rangle=\tfrac12\sum_{pq}\operatorname{tr}((u^{pq}h)^2)$. The commutator step is right: with $S=[A,h]$ symmetric and $K=\{A,h\}$ antisymmetric, $SS^{\mathsf T}+KK^{\mathsf T}=S^2-K^2=-2(Ah^2A+hA^2h)$, so $\lVert S\rVert^2+\lVert K\rVert^2=-4\operatorname{tr}(A^2h^2)=4\lVert Ah\rVert^2$, and eliminating $K$ gives $\operatorname{tr}((Ah)^2)=\tfrac12\lVert[A,h]\rVert^2+\operatorname{tr}(A^2h^2)$. Since $\sum_{pq}(u^{pq})^2=-N$, the boxed form follows. Residual $\le3\times10^{-17}$.
+Rederived independently. $(W^2)_{ijkl}=\tfrac12\sum_{pq}W_{ijpq}W_{pqkl}$ is right in this convention, and $\langle(W^2)^{\!\circ}h,h\rangle=\tfrac12\sum_{pq}\mathop{\mathrm{tr}}((u^{pq}h)^2)$. The commutator step is right: with $S=[A,h]$ symmetric and $K=\{A,h\}$ antisymmetric, $SS^{\mathsf T}+KK^{\mathsf T}=S^2-K^2=-2(Ah^2A+hA^2h)$, so $\lVert S\rVert^2+\lVert K\rVert^2=-4\mathop{\mathrm{tr}}(A^2h^2)=4\lVert Ah\rVert^2$, and eliminating $K$ gives $\mathop{\mathrm{tr}}((Ah)^2)=\tfrac12\lVert[A,h]\rVert^2+\mathop{\mathrm{tr}}(A^2h^2)$. Since $\sum_{pq}(u^{pq})^2=-N$, the boxed form follows. Residual $\le3\times10^{-17}$.
 
 ### Step 3, correct, and the trap is the normalisation
 
-$N_{ik}=\langle v_i,v_k\rangle$ with $(v_i)_{mpq}=W_{impq}$, so $N\succeq0$, a Gram matrix, no more. But **$\operatorname{tr}N=\sum_{ijkl}W_{ijkl}^2=4\lVert W\rVert_F^2=4$** under the stated normalisation, so "$\operatorname{tr}N=\lvert W\rvert^2$" is true only when $\lvert W\rvert^2$ means the four-index sum. Anyone who reads it as $\lVert W\rVert_F^2=1$ loses a factor of four in $\lambda_{\max}(N)$. Verified $\operatorname{tr}N=4.000000$ at every point measured.
+$N_{ik}=\langle v_i,v_k\rangle$ with $(v_i)_{mpq}=W_{impq}$, so $N\succeq0$, a Gram matrix, no more. But **$\mathop{\mathrm{tr}}N=\sum_{ijkl}W_{ijkl}^2=4\lVert W\rVert_F^2=4$** under the stated normalisation, so "$\mathop{\mathrm{tr}}N=\lvert W\rvert^2$" is true only when $\lvert W\rvert^2$ means the four-index sum. Anyone who reads it as $\lVert W\rVert_F^2=1$ loses a factor of four in $\lambda_{\max}(N)$. Verified $\mathop{\mathrm{tr}}N=4.000000$ at every point measured.
 
 The withdrawal of "$N$ is a multiple of the identity" is right for $n\ge5$ and **wrong for $n=4$**: see the disagreement below.
 
@@ -41,12 +41,12 @@ Nothing downstream in the chain leans on the withdrawn claim.
 The component formula $(W^\#)_{ijkl}=\sum_{pq}(W_{ipkq}W_{jplq}-W_{iplq}W_{jpkq})$ was checked against three independent anchors, all agreeing:
 
 1. **Structure constants.** Building $c_{\alpha\gamma\zeta}=\langle[\phi_\alpha,\phi_\gamma],\phi_\zeta\rangle$ in the orthonormal $\Lambda^2$ basis and forming $\tfrac12\,c_{\alpha\gamma\zeta}c_{\beta\delta\eta}R_{\gamma\delta}R_{\zeta\eta}$ reproduces the component formula exactly (max difference $0.0$).
-2. **The classical 3-manifold ODE.** With $R=\operatorname{diag}(x,y,z)$ on $\mathfrak{so}(3)$, the formula gives $R^\#=\operatorname{diag}(yz,zx,xy)$, Hamilton's $\dot x=x^2+yz$.
+2. **The classical 3-manifold ODE.** With $R=\mathop{\mathrm{diag}}(x,y,z)$ on $\mathfrak{so}(3)$, the formula gives $R^\#=\mathop{\mathrm{diag}}(yz,zx,xy)$, Hamilton's $\dot x=x^2+yz$.
 3. **Criticality of $\mathbb{CP}^2$.** On $\Lambda^2_+$ with $W^+=a\,\mathrm{diag}(2,-1,-1)$, this sharp gives $Q(W)=3a^2\,\mathrm{diag}(2,-1,-1)=3a\,W$, i.e. $\lambda=3/\sqrt6=\sqrt{3/2}$. The doubled sharp gives $\mathrm{diag}(5,-1,-1)a^2$, which is not proportional to $W$, so $\mathbb{CP}^2$ would not even be critical.
 
 **The trap for anyone re-deriving it**: the *raw* Hamilton sum $c_{\alpha\gamma\zeta}c_{\beta\delta\eta}R_{\gamma\delta}R_{\zeta\eta}$ in this basis is **twice** the stated sharp, it yields $2(n-2)\mathrm{Id}$ at $R=\mathrm{Id}$, not $(n-2)\mathrm{Id}$. The factor $\tfrac12$ is mandatory. (Brendle's $Q$ is a further factor of two the other way: $Q_{\mathrm{Brendle}}=2(W^2+W^\#)$ in these conventions.)
 
-Given that normalisation, the identity $\langle(W^\#)^{\!\circ}h,h\rangle=\sum_{pq}[\operatorname{tr}((C^{pq}h)^2)-\langle C^{pq},h\rangle^2]$ follows by direct index bookkeeping and checks to $1.1\times10^{-16}$.
+Given that normalisation, the identity $\langle(W^\#)^{\!\circ}h,h\rangle=\sum_{pq}[\mathop{\mathrm{tr}}((C^{pq}h)^2)-\langle C^{pq},h\rangle^2]$ follows by direct index bookkeeping and checks to $1.1\times10^{-16}$.
 
 ### Step 5, correct, and it does not need the bottom
 
@@ -62,7 +62,7 @@ Everything checks. The problem is what the step claims to have achieved.
 - "$\mathrm{LOSS}\ge\mu^2/n$" and "$\lambda\le\tfrac{n-1}n\mu$" are not two statements one of which implies the other; they are one statement written twice. The equivalence in step 6 is a division by $\mu$, and that is the whole of it.
 - The value of the three-term decomposition is therefore **entirely as a proof strategy**, not as a reduction of the problem. The record's phrasing "what is owed is now one explicit inequality … in terms of three concrete quantities" is fair only in that sense.
 
-Also: dividing by $\mu$ needs $\mu>0$. That is available (since $\operatorname{tr}\mathring W=0$ on $S^2_0$ and $\mathring W\ne0$, the spectrum has a negative eigenvalue), but the chain does not say so.
+Also: dividing by $\mu$ needs $\mu>0$. That is available (since $\mathop{\mathrm{tr}}\mathring W=0$ on $S^2_0$ and $\mathring W\ne0$, the spectrum has a negative eigenvalue), but the chain does not say so.
 
 **And as a standalone lemma "$\mathrm{LOSS}\ge\mu^2/n$" is false**, step 7 supplies the counterexample itself. The brief handed to this review states step 6 without the dichotomy's other branch; [target.md](../findings/target.md) states $\mathrm{CD}_n$ correctly. A reviewer briefed from the chain alone would declare the route dead at step 7 and be wrong about which route.
 
@@ -141,7 +141,7 @@ i.e. a counterexample to $\mathrm{CD}_n$. Padded $\mathbb{CP}^2$ is **not** one:
 
 A dichotomy tight on both branches admits **no lossy step anywhere** in a proof of it.
 
-**(d2) The follow-on estimate in [target.md](../findings/target.md) is exactly maximally lossy.** The record writes "dropping the commutator mass, $-\langle(W^2)^{\!\circ}h,h\rangle\le\tfrac12\operatorname{tr}(Nh^2)\le\tfrac12\lambda_{\max}(N)$". Term-by-term measurement of $\mathrm{LOSS}=\underbrace{\tfrac14\sum\lVert[u,h]\rVert^2}_{\mathrm{comm}}+\underbrace{\sum\operatorname{tr}((Ch)^2)}_{C}\underbrace{-\tfrac12\operatorname{tr}(Nh^2)}_{N}$:
+**(d2) The follow-on estimate in [target.md](../findings/target.md) is exactly maximally lossy.** The record writes "dropping the commutator mass, $-\langle(W^2)^{\!\circ}h,h\rangle\le\tfrac12\mathop{\mathrm{tr}}(Nh^2)\le\tfrac12\lambda_{\max}(N)$". Term-by-term measurement of $\mathrm{LOSS}=\underbrace{\tfrac14\sum\lVert[u,h]\rVert^2}_{\mathrm{comm}}+\underbrace{\sum\mathop{\mathrm{tr}}((Ch)^2)}_{C}\underbrace{-\tfrac12\mathop{\mathrm{tr}}(Nh^2)}_{N}$:
 
 | point | comm | $C$ | $N$ | $\mathrm{LOSS}$ | $\mu^2/n$ |
 |---|---|---|---|---|---|
@@ -154,7 +154,7 @@ A dichotomy tight on both branches admits **no lossy step anywhere** in a proof 
 
 **At every sphere product measured, $C=-N$ exactly, so $\mathrm{LOSS}$ *is* the commutator mass, and the commutator mass *is* $\mu^2/n$.** Dropping it discards one hundred per cent of the margin on the very family where the branch has to be an equality. The estimate is valid; it cannot possibly close the branch it is aimed at.
 
-**(d3) $\mu$ is capped, so the second branch can only ever deliver so much.** From $\lVert\mathring W\rVert_F^2=\tfrac34\lvert W\rvert^2=3$ (verified $3.000000000$ at $n=4$–$7$) and $\operatorname{tr}\mathring W|_{S^2_0}=0$ with $D=\tfrac{n(n+1)}2-1$:
+**(d3) $\mu$ is capped, so the second branch can only ever deliver so much.** From $\lVert\mathring W\rVert_F^2=\tfrac34\lvert W\rvert^2=3$ (verified $3.000000000$ at $n=4$–$7$) and $\mathop{\mathrm{tr}}\mathring W|_{S^2_0}=0$ with $D=\tfrac{n(n+1)}2-1$:
 
 $$\mu\le\sqrt{3(D-1)/D}<\sqrt3 ,$$
 
@@ -162,7 +162,7 @@ so $\mathrm{CD}_n\Rightarrow\lambda\le\sqrt3$ unconditionally. Free, weak, but i
 
 **(d4) In $n=4$ the second branch is provably vacuous, the dichotomy adds nothing in the one dimension where the target is a theorem.** For $n=4$, with $a_1,a_2,a_3$ and $b_1,b_2,b_3$ the eigenvalues of $W^\pm$ on $\Lambda^2_\pm$:
 
-$$\operatorname{spec}(\mathring W|_{S^2_0})=\{-(a_i+b_j)\}_{i,j=1}^3,\qquad \theta=9(\det A+\det B),$$
+$$\mathop{\mathrm{spec}}(\mathring W|_{S^2_0})=\{-(a_i+b_j)\}_{i,j=1}^3,\qquad \theta=9(\det A+\det B),$$
 
 both verified to $10^{-16}$ on random $n=4$ Weyl tensors. Hence $\mu=a_{\max}+b_{\max}\le\sqrt{2/3}(s_a+s_b)\le 2/\sqrt3$ with $s_a^2+s_b^2=1$, so
 
@@ -194,17 +194,17 @@ Numerical maximisation of $\mu$ over unit $\mathrm{Weyl}_4$ returns $1.154701=2/
 2. **$Q(W)$ is Ricci-flat whenever $W$ is** (residual $\le7\times10^{-17}$, $n=4$–$7$). Without it, "criticality gives $Q(W)=\lambda W$" is not the criticality condition, and step 1 has a projection hole.
 3. **$W^2$ and $W^\#$ individually violate the first Bianchi identity**, only their sum is an algebraic curvature tensor. Measured Bianchi defect $1.2\times10^{-2}$–$6.1\times10^{-2}$ at random Weyl tensors, equal and opposite for the two pieces, versus $\le2\times10^{-17}$ for $Q(W)$. So neither $(W^2)^{\!\circ}$ nor $(W^\#)^{\!\circ}$ is the second-kind operator *of* anything, and no bound quoted for curvature operators of the second kind applies to either piece separately. (The quadratic forms are still legitimate: $T\mapsto\mathring T$ turns out to be self-adjoint on $S^2$ for pair-symmetric $T$ regardless, asymmetry exactly $0$, checked at $n=4,5,6$ on pair-symmetric tensors with Bianchi defect up to $1.3$.)
 4. **The sharp needs the explicit $\tfrac12$** relative to the raw structure-constant sum; the raw sum is twice the stated $W^\#$.
-5. **$\operatorname{tr}N=4$, not $1$**, under $\lVert W\rVert_F=1$.
-6. **$\lVert\mathring W\rVert_F^2=3$ and $\operatorname{tr}(\mathring W^3)=\langle W,W^2\rangle-2\langle W,W^\#\rangle$**, hence $\theta=\tfrac12\!\left(3\langle W,W^2\rangle-\operatorname{tr}(\mathring W^3)\right)$, residuals $\le7\times10^{-16}$ at $n=4$–$8$. These are **already in the record** ([bispectral.md](../findings/bispectral.md), Dai–Fu Lemma 3.3 at $s=0$), but the chain never connects to them, although they bound the very $\mu$ the chain's second branch needs.
-7. **The $n=4$ closed forms** in (d4): $\operatorname{spec}(\mathring W)=\{-(a_i+b_j)\}$ and $\theta=9(\det A+\det B)$. I did not find these in [target.md](../findings/target.md).
+5. **$\mathop{\mathrm{tr}}N=4$, not $1$**, under $\lVert W\rVert_F=1$.
+6. **$\lVert\mathring W\rVert_F^2=3$ and $\mathop{\mathrm{tr}}(\mathring W^3)=\langle W,W^2\rangle-2\langle W,W^\#\rangle$**, hence $\theta=\tfrac12\!\left(3\langle W,W^2\rangle-\mathop{\mathrm{tr}}(\mathring W^3)\right)$, residuals $\le7\times10^{-16}$ at $n=4$–$8$. These are **already in the record** ([bispectral.md](../findings/bispectral.md), Dai–Fu Lemma 3.3 at $s=0$), but the chain never connects to them, although they bound the very $\mu$ the chain's second branch needs.
+7. **The $n=4$ closed forms** in (d4): $\mathop{\mathrm{spec}}(\mathring W)=\{-(a_i+b_j)\}$ and $\theta=9(\det A+\det B)$. I did not find these in [target.md](../findings/target.md).
 8. $\mu>0$ is needed to divide in step 6; it holds, but should be said.
 
 ## Disagreements with [target.md](../findings/target.md)
 
 | claim in the record | this review |
 |---|---|
-| "$N$ … is a multiple of the identity only when $W$ has the symmetry to force it, **false** at padded $W_{\mathbb{CP}^2}$ and at random Weyl tensors" | **Wrong at $n=4$.** In dimension four $N=\tfrac14\lvert W\rvert^2 I$ for *every* Weyl tensor, the classical identity $C_{ipqr}C_{jpqr}=\tfrac14\lvert C\rvert^2\delta_{ij}$. Measured deviation $\le4\times10^{-16}$ at five random $\mathrm{Weyl}_4$ tensors and at $\mathbb{CP}^2$ itself ($\lambda_{\max}(N)=1=\operatorname{tr}N/4$). The counterexamples are $n\ge5$ only (deviations $0.196$ at $n{=}5$, $0.156$ at $n{=}6$, $0.088$ at $n{=}7$). The claim should read "$n\ge5$" |
-| "$\operatorname{tr}N=\lvert W\rvert^2$, both checked" | True only for the four-index reading; $=4$, not $1$, under the file's own $\lVert W\rVert=1$. Worth disambiguating in place |
+| "$N$ … is a multiple of the identity only when $W$ has the symmetry to force it, **false** at padded $W_{\mathbb{CP}^2}$ and at random Weyl tensors" | **Wrong at $n=4$.** In dimension four $N=\tfrac14\lvert W\rvert^2 I$ for *every* Weyl tensor, the classical identity $C_{ipqr}C_{jpqr}=\tfrac14\lvert C\rvert^2\delta_{ij}$. Measured deviation $\le4\times10^{-16}$ at five random $\mathrm{Weyl}_4$ tensors and at $\mathbb{CP}^2$ itself ($\lambda_{\max}(N)=1=\mathop{\mathrm{tr}}N/4$). The counterexamples are $n\ge5$ only (deviations $0.196$ at $n{=}5$, $0.156$ at $n{=}6$, $0.088$ at $n{=}7$). The claim should read "$n\ge5$" |
+| "$\mathop{\mathrm{tr}}N=\lvert W\rvert^2$, both checked" | True only for the four-index reading; $=4$, not $1$, under the file's own $\lVert W\rVert=1$. Worth disambiguating in place |
 | "*So the whole route now rests on the $\#$ term alone*" (after dropping the commutator mass) | The commutator mass is not a spare term: it **is** all of $\mathrm{LOSS}$ at every sphere product, and equals $\mu^2/n$ there. Dropping it forfeits the second branch entirely on its own extremal family. See (d2) |
 | "$\mathrm{LOSS}$ … with every term explicit in $W$ and $h$ and no inequality yet spent" | Accurate, but it should say that $\mathrm{LOSS}=\mu(\mu-\lambda)$ so the identity is a rewriting; otherwise the table of measured $\mathrm{LOSS}$ values reads as independent evidence when it is arithmetic |
 | "Equality at every sphere product, balanced or not, even or odd $n$" | Now **proved** for all $p,q$, not just measured. Upgrade the claim |
@@ -235,7 +235,7 @@ This reproduces the record's "$\mathbb{CP}^m$ … $\sqrt{3/2}$ only" row and sha
 1. Add "$\mathrm{LOSS}=\mu(\mu-\lambda)$" to the boxed identity in [target.md](../findings/target.md), so the table of measured values is read as arithmetic rather than as evidence.
 2. Record the criticality-free form $\mathrm{LOSS}=\mu^2+\langle Q(W)^{\!\circ}h,h\rangle$, valid at every Weyl tensor and every $\mathring W$-eigenvector; it separates the algebra from the hypothesis and makes the "control" test say what it means.
 3. Add the Ricci-flatness of $Q(W)$ as a stated lemma; step 1 needs it.
-4. Correct the $N$-is-not-scalar claim to $n\ge5$, and disambiguate $\operatorname{tr}N$.
+4. Correct the $N$-is-not-scalar claim to $n\ge5$, and disambiguate $\mathop{\mathrm{tr}}N$.
 5. Promote the sphere-product equality from measurement to theorem with the three-scalar proof above.
 6. Retire "the whole route now rests on the $\#$ term alone", the commutator mass is the entire margin on the sphere-product branch.
 

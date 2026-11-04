@@ -1,6 +1,6 @@
 # Review r313, Gate 2 audit of six claims
 
-Reviewer 313, adversarial, cold brief. Everything below was recomputed from the mathematical definitions in a fresh library, [r313_lib.py](../scripts/reviewers/r313/r313_lib.py); no repository script is imported and no repository number was taken on trust. Calibration: the padded $\mathbb{CP}^2$ operator built by hand at $n=4$ returns $\lVert W\rVert^2=1$, $\operatorname{tr}W^3=0.4082483=1/\sqrt6$, $\langle W,W^\#\rangle=0.8164966=2/\sqrt6$ and $Q(W)-\theta W$ at $2.7\times10^{-16}$ with $\theta=\sqrt{3/2}$, which fixes the sharp normalisation against the record's own exact $n=5$ datum. $\dim\mathcal W_n$ reproduces $n(n+1)(n+2)(n-3)/12$ at $n=4,5,6,8,10,12,13$.
+Reviewer 313, adversarial, cold brief. Everything below was recomputed from the mathematical definitions in a fresh library, [r313_lib.py](../scripts/reviewers/r313/r313_lib.py); no repository script is imported and no repository number was taken on trust. Calibration: the padded $\mathbb{CP}^2$ operator built by hand at $n=4$ returns $\lVert W\rVert^2=1$, $\mathop{\mathrm{tr}}W^3=0.4082483=1/\sqrt6$, $\langle W,W^\#\rangle=0.8164966=2/\sqrt6$ and $Q(W)-\theta W$ at $2.7\times10^{-16}$ with $\theta=\sqrt{3/2}$, which fixes the sharp normalisation against the record's own exact $n=5$ datum. $\dim\mathcal W_n$ reproduces $n(n+1)(n+2)(n-3)/12$ at $n=4,5,6,8,10,12,13$.
 
 | claim | verdict |
 | --- | --- |
@@ -62,7 +62,7 @@ For $\mathfrak{so}(k)\oplus\mathfrak{so}(l)$ the one-dimensionality is provable 
 
 ## M2, the B1 resolution
 
-I rebuilt the $C_5$ blow-up from scratch at $n=10$ by solving the block-constant criticality equation $M^{\circ2}+M^2=\theta M+\operatorname{diag}(s)$ on the three classes (same block / adjacent / non-adjacent) with zero row sums: $x=0.29814240$, $y=-0.14907120$, $z=0.07453560$, $\theta=0.670820393250=\sqrt{0.45}$, criticality residual $1.0\times10^{-15}$ ([r313_m2.py](../scripts/reviewers/r313/r313_m2.py)). Its full-space $\lambda_{\max}(L_e\vert_{W^\perp})=1.206011330$.
+I rebuilt the $C_5$ blow-up from scratch at $n=10$ by solving the block-constant criticality equation $M^{\circ2}+M^2=\theta M+\mathop{\mathrm{diag}}(s)$ on the three classes (same block / adjacent / non-adjacent) with zero row sums: $x=0.29814240$, $y=-0.14907120$, $z=0.07453560$, $\theta=0.670820393250=\sqrt{0.45}$, criticality residual $1.0\times10^{-15}$ ([r313_m2.py](../scripts/reviewers/r313/r313_m2.py)). Its full-space $\lambda_{\max}(L_e\vert_{W^\perp})=1.206011330$.
 
 **(a) CONFIRMED.** With $D_A$ the anticommutator action $X\mapsto AX+XA$ on $\Lambda^2$ and $H_A=D_AW+WD_A$, **all 54 directions of $\mathrm{Sym}_0(\mathbb R^{10})$ leave $\mathcal W_{10}$**, by $7.62\%$ to $50.00\%$ of norm with median $31.62\%$, the record's $7.6\%$ to $50\%$, median $32\%$, on the nose.
 
@@ -118,7 +118,7 @@ with $\dim\mathfrak m=20<\lfloor n^2/4\rfloor=25$. Every recorded number is righ
 
 ### The two senses of "graded" are being mixed, and the counterexample only works in one of them
 
-Under the brief's definition ($\mathfrak{so}(n)=\mathfrak p\oplus\mathfrak m$ a symmetric-pair grading preserved by $W$), **the $C_5$ blow-up is graded**: it is diagonal, so $\Lambda^2(g)$ is diagonal for every $g=\operatorname{diag}(\pm1)$ and commutes with it. I count **511** coordinate involutions commuting with it, one for every split. Since gradedness is $O(n)$-invariant, its conjugates are graded too. So the point refutes "ungraded $\Rightarrow S>0$" only under the *spectral* reading of ungraded, $S_{\mathfrak{hhm}}\ne0$ with $\mathfrak h=E_{\ge0}$, which is a different predicate from the one Lemma L69 and [C3](../plan.md) are stated over. **Every ungraded/graded claim in the record needs to say which predicate it means**, and the two are not interchangeable: diagonality implies graded in the grading sense and implies nothing in the spectral sense.
+Under the brief's definition ($\mathfrak{so}(n)=\mathfrak p\oplus\mathfrak m$ a symmetric-pair grading preserved by $W$), **the $C_5$ blow-up is graded**: it is diagonal, so $\Lambda^2(g)$ is diagonal for every $g=\mathop{\mathrm{diag}}(\pm1)$ and commutes with it. I count **511** coordinate involutions commuting with it, one for every split. Since gradedness is $O(n)$-invariant, its conjugates are graded too. So the point refutes "ungraded $\Rightarrow S>0$" only under the *spectral* reading of ungraded, $S_{\mathfrak{hhm}}\ne0$ with $\mathfrak h=E_{\ge0}$, which is a different predicate from the one Lemma L69 and [C3](../plan.md) are stated over. **Every ungraded/graded claim in the record needs to say which predicate it means**, and the two are not interchangeable: diagonality implies graded in the grading sense and implies nothing in the spectral sense.
 
 ### The restricted premise is FALSE as well, and the witness is already on the record
 
@@ -135,7 +135,7 @@ $\theta=\sqrt{3/2}$ **exactly**, so the point lies in $\{\theta\ge\sqrt{3/2}\}\c
 
 ### A second hole in the same step
 
-The compactness argument needs $S$ **continuous** on $\{\theta\ge t\}\cap\mathrm{Crit}$ to attain its minimum. $S_{\mathfrak{mmm}}$ is built from $\mathfrak m=\operatorname{span}\{v_\alpha:\lambda_\alpha<0\}$, which jumps in dimension wherever an eigenvalue of $W$ crosses zero, the record's own tolerance episode ($\dim\mathfrak m$ ranging over $\{3,\dots,9\}$ with $S_{\mathfrak{mmm}}$ over $[0,19]$ on one matrix) is that discontinuity showing up numerically. **So the step needs either a continuity proof on the relevant stratum or a continuous surrogate for $S$**, and neither is on the record.
+The compactness argument needs $S$ **continuous** on $\{\theta\ge t\}\cap\mathrm{Crit}$ to attain its minimum. $S_{\mathfrak{mmm}}$ is built from $\mathfrak m=\mathop{\mathrm{span}}\{v_\alpha:\lambda_\alpha<0\}$, which jumps in dimension wherever an eigenvalue of $W$ crosses zero, the record's own tolerance episode ($\dim\mathfrak m$ ranging over $\{3,\dots,9\}$ with $S_{\mathfrak{mmm}}$ over $[0,19]$ on one matrix) is that discontinuity showing up numerically. **So the step needs either a continuity proof on the relevant stratum or a continuous surrogate for $S$**, and neither is on the record.
 
 **Verdict M4: the recorded counterexample is CONFIRMED and simplifies; the premise the record leaves open is REFUTED at $\theta=\sqrt{3/2}$; and the compactness step carries a second, unstated continuity hypothesis. The route is dead as written.**
 
@@ -155,7 +155,7 @@ with the marginal identity $S_{\mathfrak{mmm}}+3S_{\mathfrak{hmm}}+3S_{\mathfrak
 
 **The closure survives for a stronger reason.** The witness does not have *a* grading; it has many. Scanning $\mathrm{Gr}(3,8)$ for $g$ with $[\Lambda^2(g),W]=0$ ([r313_gradscan.py](../scripts/reviewers/r313/r313_gradscan.py)) returns at least **eight** inequivalent $\mathfrak{so}(3)\oplus\mathfrak{so}(5)$ gradings, and the quantities the mass route wants to compare are different on each:
 
-| $\lVert A\rVert^2$ | $\operatorname{tr}A\vert_{\mathfrak{so}(3)}$ | $\lVert \mathfrak p\text{-cross}\rVert^2$ |
+| $\lVert A\rVert^2$ | $\mathop{\mathrm{tr}}A\vert_{\mathfrak{so}(3)}$ | $\lVert \mathfrak p\text{-cross}\rVert^2$ |
 | --- | --- | --- |
 | $0.319349$ | $-0.043202$ | $0.020715$ |
 | $0.332496$ | $-0.214821$ | $0.020715$ |
@@ -221,7 +221,7 @@ At 9018 the $\mathfrak m$-share drops to $0.2950$ with $\mathfrak{so}(5)$ ahead 
 ## Things the brief did not ask about
 
 - **The record's own "$\Delta=0\iff\mathrm{ad}(\mathfrak p)$-equivariant on a graded point" is grading-sensitive.** Padded $W_{\mathbb{CP}^2}$ is graded for $\mathfrak p=\mathfrak{so}(4)\oplus\mathfrak{so}(n-4)$, has $\Delta=1.2\times10^{-32}$, and has $\mathrm{ad}(\mathfrak p)$-equivariance defect $6.000000$, so it is a graded, $\Delta=0$, non-equivariant point at $\theta=\sqrt{3/2}$ with $\lambda_{\max}(L_e\vert_{W^\perp})=\tfrac12$ exactly. The equivalence is a tautology when $\mathfrak p$ is read as $E_+$ (which is what $\Delta$ is defined over) and false when $\mathfrak p$ is read as the grading. Lemma L69 needs the second reading, and [C3](../plan.md)'s split of the graded half into "equivariant, where Lemma L69 applies" and "non-equivariant, i.e. $\Delta>0$" **inherits this ambiguity and is not a partition as written**.
-- **Every diagonal Weyl tensor is graded** in the brief's sense, for every split, since $\Lambda^2(\operatorname{diag}(\pm1))$ is diagonal. The graded/ungraded split therefore does no work at all on the diagonal locus (which is exactly the locus the problem statement grants) and any statement combining "graded" with "diagonal" should be re-read with that in mind.
+- **Every diagonal Weyl tensor is graded** in the brief's sense, for every split, since $\Lambda^2(\mathop{\mathrm{diag}}(\pm1))$ is diagonal. The graded/ungraded split therefore does no work at all on the diagonal locus (which is exactly the locus the problem statement grants) and any statement combining "graded" with "diagonal" should be re-read with that in mind.
 - **All three non-diagonal $\Delta>0$ points are graded, in the grading sense**, each for several inequivalent gradings, with $\dim\mathfrak k(W)=5$ at the witness and $2$ at 9018 and 9033. Nothing on the record says the non-diagonal $\Delta>0$ population is graded; if it is, [C3](../plan.md)'s restricted V3 is the whole of V3 on the points that exist.
 - **The one-dimensionality of $\mathrm{Inv}_{\mathfrak p}(\mathcal W_n)$ is worth promoting to a lemma.** It gives "equivariant graded $\Rightarrow$ critical" for free, replaces the whole $\mathbb{CP}^m$/Wolf/Grassmannian family programme with a two-line classification, and is the honest form of the half-recorded sentence "each $W$ is the unique unit $\mathfrak h$-invariant Weyl tensor for its $\mathfrak h$".
 

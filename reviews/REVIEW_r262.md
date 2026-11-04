@@ -8,12 +8,12 @@ What is audited is the application, not the underlying theorem. Every number bel
 
 | # | Claim as applied | Verdict |
 |---|---|---|
-| 1 | The theorem is unconditional in $n$ | **THE MATHEMATICS IS CORRECT AND THE AUTHORITY CITED FOR IT FAILS AT $n=12$.** The double centraliser needs complete reducibility, absolute irreducibility of the $V_\lambda$, and $\nu(B_f(n))=\operatorname{End}_{O(n)}(V^{\otimes f})$; only the third is load-bearing and it is the one miscited. **ASWT Theorem 3.17(b), read from the source, gives surjectivity in type $B_m$ ($n$ odd) and NOT in type $D_m$ ($n$ even)**, there it gives only *injective if $n\ge d$*, isomorphism at $n\ge2d+1$, and §3.5 states *"surjectivity of $\Phi_{Br}$ fails in general for $U_1(\mathfrak{so}_{2m})$"*. The route sits at $n=12$, type $D_6$. The claim survives because ASWT's $U_1$ is $SO$ and the route's group is $O$, a distinction the record's own $92\to89$ and $77\to71$ counts depend on and this passage never makes. The associate/chirality worry is **absent for $O(n)$**: no doubling is owed, confirmed at $72$ pairs |
-| 2 | Step (iii) as now stated | **CONFIRMED, ALL THREE PARTS, AND THE SCRIPT STILL CARRIES THE REFUTED WORDING.** $e$ preserves isotypic components, $e\,M_\lambda=\operatorname{Hom}_{O(n)}(V_\lambda,\mathrm{Sym}^3\mathrm{Weyl}_n)$ exactly, and spanning follows by linearity alone, so a seed $e$ annihilates costs nothing. Explicit case built here with a genuine $\mathrm{Sym}^2$-of-an-irreducible projector: $\lVert e\,c_0\rVert\le9\times10^{-16}$ and $\operatorname{span}\{e\,\nu(D)c_0\}=e\,M_\varnothing$ at $n=3,4,5,6$. **But [run_diagram_realisation.py:26–28](../scripts/runs/run_diagram_realisation.py#L26) still says "e itself to be a diagram element, and it is" by "the SURJECTIVITY half of the SFT"**, both corrected in [brauer-pairing.md](../findings/brauer-pairing.md) by a commit forty-five minutes earlier and left standing in a file the later commit rewrote |
+| 1 | The theorem is unconditional in $n$ | **THE MATHEMATICS IS CORRECT AND THE AUTHORITY CITED FOR IT FAILS AT $n=12$.** The double centraliser needs complete reducibility, absolute irreducibility of the $V_\lambda$, and $\nu(B_f(n))=\mathop{\mathrm{End}}_{O(n)}(V^{\otimes f})$; only the third is load-bearing and it is the one miscited. **ASWT Theorem 3.17(b), read from the source, gives surjectivity in type $B_m$ ($n$ odd) and NOT in type $D_m$ ($n$ even)**, there it gives only *injective if $n\ge d$*, isomorphism at $n\ge2d+1$, and §3.5 states *"surjectivity of $\Phi_{Br}$ fails in general for $U_1(\mathfrak{so}_{2m})$"*. The route sits at $n=12$, type $D_6$. The claim survives because ASWT's $U_1$ is $SO$ and the route's group is $O$, a distinction the record's own $92\to89$ and $77\to71$ counts depend on and this passage never makes. The associate/chirality worry is **absent for $O(n)$**: no doubling is owed, confirmed at $72$ pairs |
+| 2 | Step (iii) as now stated | **CONFIRMED, ALL THREE PARTS, AND THE SCRIPT STILL CARRIES THE REFUTED WORDING.** $e$ preserves isotypic components, $e\,M_\lambda=\mathop{\mathrm{Hom}}_{O(n)}(V_\lambda,\mathrm{Sym}^3\mathrm{Weyl}_n)$ exactly, and spanning follows by linearity alone, so a seed $e$ annihilates costs nothing. Explicit case built here with a genuine $\mathrm{Sym}^2$-of-an-irreducible projector: $\lVert e\,c_0\rVert\le9\times10^{-16}$ and $\mathop{\mathrm{span}}\{e\,\nu(D)c_0\}=e\,M_\varnothing$ at $n=3,4,5,6$. **But [run_diagram_realisation.py:26–28](../scripts/runs/run_diagram_realisation.py#L26) still says "e itself to be a diagram element, and it is" by "the SURJECTIVITY half of the SFT"**, both corrected in [brauer-pairing.md](../findings/brauer-pairing.md) by a commit forty-five minutes earlier and left standing in a file the later commit rewrote |
 | 3 | The deletion of the dependency audit | **THE CORRECT THIRD IS LOST, AND THE DELETION TOOK THE ITEM'S DELIVERABLE WITH IT.** Conclusion (c) (*A3 needs the covariants BUILT, which is not the same as proving them independent*), was **confirmed by both reviewers** and is now stated nowhere in [plan.md](../plan.md), [findings/INDEX.md](../findings/INDEX.md) or [findings/](../findings/). The same rewrite deleted the item's stated theorem, *"each of the 184 constructed covariants is exhibited as an explicit combination of Brauer diagrams … it is the item's whole content"*, and nothing replaces it. [plan.md:55](../plan.md) still reads *"A3 cannot start without it"*, which is the conflation (c) named |
-| 4 | The new verification | **(a), (b), (c) CONFIRMED INDEPENDENTLY; (d)'s STATED REASON IS A NON SEQUITUR.** (a) The Gram identity is right and the reason is positive-definiteness, which the file does not give, verified against the definition, exact rational rank of $\operatorname{span}\{\nu(D)\}$, at $14$ cells. (b) `loops` is right: **zero disagreements with a union-find component count over all $11{,}025$ pairs at $f=4$ and all $893{,}025$ at $f=5$**. (c) The restricted up–down count **is** $m_\lambda(n)$, and **no doubling is owed at self-associate $\lambda$**: $\sum_\lambda m_\lambda(n)\dim V_\lambda=n^f$ at all $72$ pairs with $f\le8$, $n\le9$. (d) *"a modular rank can only understate, so agreement between two primes licenses reading it as exact"* **does not follow**, $\mathrm{rank}_p\le\mathrm{rank}_{\mathbb Q}$ for every $p$, so $k$ agreeing primes bound the rank from **below** only. Six primes agree at all $24$ cells and exact $\mathbb Q$-rank agrees at all $18$ with $f\le4$, so the table is right. Separately: [brauer-pairing.md](../findings/brauer-pairing.md)'s **"all $40$ pairs tested" matches nothing**, r259 tested $32$, the script tests $24$ |
+| 4 | The new verification | **(a), (b), (c) CONFIRMED INDEPENDENTLY; (d)'s STATED REASON IS A NON SEQUITUR.** (a) The Gram identity is right and the reason is positive-definiteness, which the file does not give, verified against the definition, exact rational rank of $\mathop{\mathrm{span}}\{\nu(D)\}$, at $14$ cells. (b) `loops` is right: **zero disagreements with a union-find component count over all $11{,}025$ pairs at $f=4$ and all $893{,}025$ at $f=5$**. (c) The restricted up–down count **is** $m_\lambda(n)$, and **no doubling is owed at self-associate $\lambda$**: $\sum_\lambda m_\lambda(n)\dim V_\lambda=n^f$ at all $72$ pairs with $f\le8$, $n\le9$. (d) *"a modular rank can only understate, so agreement between two primes licenses reading it as exact"* **does not follow**, $\mathrm{rank}_p\le\mathrm{rank}_{\mathbb Q}$ for every $p$, so $k$ agreeing primes bound the rank from **below** only. Six primes agree at all $24$ cells and exact $\mathbb Q$-rank agrees at all $18$ with $f\le4$, so the table is right. Separately: [brauer-pairing.md](../findings/brauer-pairing.md)'s **"all $40$ pairs tested" matches nothing**, r259 tested $32$, the script tests $24$ |
 | 5 | plan.md's reopened item | **CORRECT EXCEPT FOR ONE MISATTRIBUTION.** The restriction-kernel refutation, $r=6+\lvert\lambda\rvert/2$, and obligations (i) and (ii) are all faithful; $23!!=316{,}234{,}143{,}225=3.162\times10^{11}$ **exact**, and $184\to71$ is right *with* the qualifying clause the item carries. (iii)'s r242 half is verbatim. **But "r244 prices it at order $\sim89$ with entries of degree $\le6$" is r244's pricing of $\xi(n)$, the A2′ pivot minor, not of $\det\mathrm{Gram}_S$**, r260 wrote *"prices the same **shape** of obligation"* and the application dropped the hedge. r242's own $\det\mathrm{Gram}_S$ witness is a $3\times3$ Gram |
-| 6 | The reference-note corrections | **BOTH VERIFIED VERBATIM AGAINST THE PRIMARY SOURCE; THE NEW COMPARISON CONTRADICTS ITS OWN PRECEDING CLAUSE.** ASWT Theorem 7.1(3): *"$\delta_0\ne0$, $\mathrm{char}(K)=0$ and $d\le\delta_0+1$"*, with Conventions 3.11 fixing $\delta_0=\lvert\delta\rvert$, so $\delta=-2n$ gives $f\le2n+1$, exactly as the note now says. 7.1(5): *"$\delta_0=0$, $\mathrm{char}(K)=0$ and $d\in\{1,3,5\}$"*, exactly as the note now says. $n\ge12$ for injectivity of $\nu:B_{12}(n)\to\operatorname{End}_{O(n)}(V^{\otimes12})$ is **right**, and ASWT's type $D_m$ line independently gives it. **What is wrong is the sentence around it**: [notes.md:28](../references/rui-brauer-semisimplicity/notes.md) says *"neither ranking nor a shared 'slack' scale is meaningful"* and then, in the same sentence, ranks them as *"tighter than Rui's"* |
+| 6 | The reference-note corrections | **BOTH VERIFIED VERBATIM AGAINST THE PRIMARY SOURCE; THE NEW COMPARISON CONTRADICTS ITS OWN PRECEDING CLAUSE.** ASWT Theorem 7.1(3): *"$\delta_0\ne0$, $\mathrm{char}(K)=0$ and $d\le\delta_0+1$"*, with Conventions 3.11 fixing $\delta_0=\lvert\delta\rvert$, so $\delta=-2n$ gives $f\le2n+1$, exactly as the note now says. 7.1(5): *"$\delta_0=0$, $\mathrm{char}(K)=0$ and $d\in\{1,3,5\}$"*, exactly as the note now says. $n\ge12$ for injectivity of $\nu:B_{12}(n)\to\mathop{\mathrm{End}}_{O(n)}(V^{\otimes12})$ is **right**, and ASWT's type $D_m$ line independently gives it. **What is wrong is the sentence around it**: [notes.md:28](../references/rui-brauer-semisimplicity/notes.md) says *"neither ranking nor a shared 'slack' scale is meaningful"* and then, in the same sentence, ranks them as *"tighter than Rui's"* |
 
 ---
 
@@ -21,25 +21,25 @@ What is audited is the application, not the underlying theorem. Every number bel
 
 ### The hypotheses, stated
 
-The record's sentence is: *"$M_\lambda$ is a module over the **image** $\nu(B_f(n))$, and the double centraliser theorem, needing only complete reducibility of the $O(n)$-action, which holds at every $n$ in characteristic zero, makes the image $\bigoplus_\lambda\operatorname{End}(M_\lambda)$ with each $M_\lambda$ irreducible."*
+The record's sentence is: *"$M_\lambda$ is a module over the **image** $\nu(B_f(n))$, and the double centraliser theorem, needing only complete reducibility of the $O(n)$-action, which holds at every $n$ in characteristic zero, makes the image $\bigoplus_\lambda\mathop{\mathrm{End}}(M_\lambda)$ with each $M_\lambda$ irreducible."*
 
 Three hypotheses are used, and the sentence names one and a half of them.
 
 | hypothesis | status at $O(n)$, char $0$ | named in the record? |
 |---|---|---|
 | $V^{\otimes f}$ is a semisimple $O(n)$-module | true, $O(n)$ reductive in char $0$ | yes |
-| $\operatorname{End}_{O(n)}(V_\lambda)=k$, i.e. the $V_\lambda$ are absolutely irreducible | true for $O(n)$ | no |
-| $\nu(B_f(n))=\operatorname{End}_{O(n)}(V^{\otimes f})$, the FFT | true for $O(n)$ at every $n$ | yes, "plus the FFT" |
+| $\mathop{\mathrm{End}}_{O(n)}(V_\lambda)=k$, i.e. the $V_\lambda$ are absolutely irreducible | true for $O(n)$ | no |
+| $\nu(B_f(n))=\mathop{\mathrm{End}}_{O(n)}(V^{\otimes f})$, the FFT | true for $O(n)$ at every $n$ | yes, "plus the FFT" |
 
-Without the second, "the image is $\bigoplus\operatorname{End}(M_\lambda)$" reads $\bigoplus\operatorname{End}_{D_\lambda}(M_\lambda)$ over division rings, and "irreducible" is still fine but the displayed decomposition is not. It is true here and it is unstated; the run's own docstring says *"$B_{12}(12)$ is SEMISIMPLE over $\mathbb Q$"*, so the field is left ambiguous in exactly the place where it matters.
+Without the second, "the image is $\bigoplus\mathop{\mathrm{End}}(M_\lambda)$" reads $\bigoplus\mathop{\mathrm{End}}_{D_\lambda}(M_\lambda)$ over division rings, and "irreducible" is still fine but the displayed decomposition is not. It is true here and it is unstated; the run's own docstring says *"$B_{12}(12)$ is SEMISIMPLE over $\mathbb Q$"*, so the field is left ambiguous in exactly the place where it matters.
 
 ### The third hypothesis is the load-bearing one, and its citation fails at $n=12$
 
 [findings/brauer-pairing.md](../findings/brauer-pairing.md) attributes it: *"the **First** Fundamental Theorem (ASWT Theorem 3.17(b)), which holds at every $n$, with no threshold"*. I downloaded [arXiv:1507.07676](https://arxiv.org/abs/1507.07676) and read Theorem 3.17(b). It is stated **per type**:
 
-> $B_m$: $\Phi_{Br}:B_d(\delta)\twoheadrightarrow\operatorname{End}_{U_1}(T_n^d)$, and $\Phi_{Br}:B_d(\delta)\xrightarrow{\ \cong\ }\operatorname{End}_{U_1}(T_n^d)$ if $n\ge d$.
-> $C_m$: $\Phi_{Br}:B_d(\delta)\twoheadrightarrow\operatorname{End}_{U_1}(T_n^d)$, and $\cong$ if $n\ge 2d$.
-> $D_m$: $\Phi_{Br}:B_d(\delta)\hookrightarrow\operatorname{End}_{U_1}(T_n^d)$ if $n\ge d$, and $\cong$ if $n\ge2d+1$.
+> $B_m$: $\Phi_{Br}:B_d(\delta)\twoheadrightarrow\mathop{\mathrm{End}}_{U_1}(T_n^d)$, and $\Phi_{Br}:B_d(\delta)\xrightarrow{\ \cong\ }\mathop{\mathrm{End}}_{U_1}(T_n^d)$ if $n\ge d$.
+> $C_m$: $\Phi_{Br}:B_d(\delta)\twoheadrightarrow\mathop{\mathrm{End}}_{U_1}(T_n^d)$, and $\cong$ if $n\ge 2d$.
+> $D_m$: $\Phi_{Br}:B_d(\delta)\hookrightarrow\mathop{\mathrm{End}}_{U_1}(T_n^d)$ if $n\ge d$, and $\cong$ if $n\ge2d+1$.
 
 Type $B_m$ has $n=2m+1$, **odd**. Type $D_m$ has $n=2m$, **even**, and its line carries no surjection at all, only an injection. Four paragraphs later the paper says why, in its own words:
 
@@ -47,7 +47,7 @@ Type $B_m$ has $n=2m+1$, **odd**. Type $D_m$ has $n=2m$, **even**, and its line 
 
 The route is at $f=d=12$ and $n=12=2\cdot6$, type $D_6$. **At the route's own dimension the cited theorem states the opposite of what it is cited for.** r259's evidence paragraph is explicit that it read the type-$B_m$ line (*"ASWT Theorem 3.17(b), type $B_m$"*); the application kept the pointer and dropped the type.
 
-**The claim survives anyway, for a reason the record never states.** ASWT's $U_1$ is $\mathfrak{so}_{2m}$ (the connected group $SO(n)$) and $\operatorname{End}_{SO(n)}(V^{\otimes d})\supsetneq\operatorname{End}_{O(n)}(V^{\otimes d})$ at even $n$. Brauer's classical FFT for the **full** orthogonal group is surjective at every $n$, and ASWT's own Theorem 3.24 says the image is $\operatorname{End}_{\tilde U_1}$ with $\tilde U_1$ the extension by the Dynkin-diagram symmetry, which is $O$. So the right citation is Brauer 1937, as r260 said, and ASWT 3.17(b) is the wrong pointer at even $n$.
+**The claim survives anyway, for a reason the record never states.** ASWT's $U_1$ is $\mathfrak{so}_{2m}$ (the connected group $SO(n)$) and $\mathop{\mathrm{End}}_{SO(n)}(V^{\otimes d})\supsetneq\mathop{\mathrm{End}}_{O(n)}(V^{\otimes d})$ at even $n$. Brauer's classical FFT for the **full** orthogonal group is surjective at every $n$, and ASWT's own Theorem 3.24 says the image is $\mathop{\mathrm{End}}_{\tilde U_1}$ with $\tilde U_1$ the extension by the Dynkin-diagram symmetry, which is $O$. So the right citation is Brauer 1937, as r260 said, and ASWT 3.17(b) is the wrong pointer at even $n$.
 
 This is not a pedantic distinction in this record. [findings/sym3-stability.md:34](../findings/sym3-stability.md) records that at $n=12$ the $SO$ count is $77$ against $O$'s $71$, *"the six six-row labels splitting at $\ell=n/2$"*; [plan.md](../plan.md) A1 records $92\to89$ for $SO$ where $O$ is constant at $89$. The whole route depends on the group being $O$, and this passage cites a theorem about $SO$ for the step that makes the algebra the full commutant.
 
@@ -73,17 +73,17 @@ Evidence: [out_mult.txt](../scripts/reviewers/r262/out_mult.txt). **The blanket 
 
 **"$e$ preserves isotypic components."** $e$ is the orthogonal projector onto the $O(n)$-submodule $\mathrm{Sym}^3(\mathrm{Weyl}_n)\subset V^{\otimes12}$, so $e$ commutes with $O(n)$, so it preserves each isotypic component and restricts to an endomorphism of each $M_\lambda$. **Correct.**
 
-**"$e\,M_\lambda=\operatorname{Hom}_{O(n)}(V_\lambda,\mathrm{Sym}^3\mathrm{Weyl}_n)$ EXACTLY."** Post-composition with $e$ sends $\varphi:V_\lambda\to V^{\otimes12}$ to $e\varphi$, whose image lies in $\mathrm{Sym}^3\mathrm{Weyl}_n$; and every $\psi:V_\lambda\to\mathrm{Sym}^3\mathrm{Weyl}_n$ satisfies $e\psi=\psi$, so it is in the image. Equality, not inclusion. **Correct, and "exactly" is the right word.**
+**"$e\,M_\lambda=\mathop{\mathrm{Hom}}_{O(n)}(V_\lambda,\mathrm{Sym}^3\mathrm{Weyl}_n)$ EXACTLY."** Post-composition with $e$ sends $\varphi:V_\lambda\to V^{\otimes12}$ to $e\varphi$, whose image lies in $\mathrm{Sym}^3\mathrm{Weyl}_n$; and every $\psi:V_\lambda\to\mathrm{Sym}^3\mathrm{Weyl}_n$ satisfies $e\psi=\psi$, so it is in the image. Equality, not inclusion. **Correct, and "exactly" is the right word.**
 
-**"The seed need not lie in the covariant space."** The spanning claim is $\operatorname{span}\{e\,\nu(D)c_0:D\}=e\,M_\lambda$. Since $e$ is linear and the diagrams span $B_f(n)$,
-$$\operatorname{span}\{e\,\nu(D)c_0\}=e\cdot\operatorname{span}\{\nu(D)c_0\}=e\cdot\big(\nu(B_f(n))\,c_0\big)=e\,M_\lambda,$$
+**"The seed need not lie in the covariant space."** The spanning claim is $\mathop{\mathrm{span}}\{e\,\nu(D)c_0:D\}=e\,M_\lambda$. Since $e$ is linear and the diagrams span $B_f(n)$,
+$$\mathop{\mathrm{span}}\{e\,\nu(D)c_0\}=e\cdot\mathop{\mathrm{span}}\{\nu(D)c_0\}=e\cdot\big(\nu(B_f(n))\,c_0\big)=e\,M_\lambda,$$
 the last step by simplicity of $M_\lambda$ over the image and $c_0\ne0$. **$e\,c_0=0$ never enters.** It makes one member of the spanning family zero and nothing else.
 
 ### The explicit case
 
 r259 used a product of antisymmetrisers as its stand-in projector. I built the shape the route actually has ($\mathrm{Sym}^k$ of an irreducible piece of $V^{\otimes2}$) and projected rather than asserted. $f=4$; $T_n\subset V^{\otimes2}$ the symmetric traceless tensors; $e$ the orthogonal projector onto $\mathrm{Sym}^2(T_n)\subset V^{\otimes4}$, built as $P\!\otimes\!P$ composed with the swap symmetriser and verified idempotent to $10^{-9}$. Seed $c_0$: a nonzero element of the empty block chosen **inside the kernel of $e$**.
 
-| $n$ | $\operatorname{rank}e=\dim\mathrm{Sym}^2T_n$ | $t(t+1)/2$, $t=\tfrac{n(n+1)}2-1$ | $\dim e\,M_\varnothing$ | $\lVert e\,c_0\rVert$ | $\dim\operatorname{span}\{e\,\nu(D)c_0\}$ |
+| $n$ | $\mathop{\mathrm{rank}}e=\dim\mathrm{Sym}^2T_n$ | $t(t+1)/2$, $t=\tfrac{n(n+1)}2-1$ | $\dim e\,M_\varnothing$ | $\lVert e\,c_0\rVert$ | $\dim\mathop{\mathrm{span}}\{e\,\nu(D)c_0\}$ |
 |---|---|---|---|---|---|
 | 3 | 15 | 15 | 1 | $3.8\times10^{-16}$ | **1** |
 | 4 | 45 | 45 | 1 | $4.1\times10^{-16}$ | **1** |
@@ -132,17 +132,17 @@ The nearest replacement is obligation (ii), *"the seeds, 71 of them, one per blo
 
 ### (a) The Gram identity is correct, and the reason is not the one given
 
-$\dim\nu(B_f(n))=\operatorname{rank}[\,n^{\mathrm{loops}(D,E)}\,]$. The derivation is three steps.
+$\dim\nu(B_f(n))=\mathop{\mathrm{rank}}[\,n^{\mathrm{loops}(D,E)}\,]$. The derivation is three steps.
 
 1. **$\gamma_D\in V^{\otimes2f}$ spans the invariants.** By the FFT for $O(n)$, $(V^{\otimes2f})^{O(n)}$ is spanned by the products of $f$ Kronecker deltas, one per perfect matching.
 2. **The Gram entry is $n^{\mathrm{loops}}$.** $\langle\gamma_D,\gamma_E\rangle$ in the standard basis of $V^{\otimes2f}$ contracts $D$ against $E$; $D\cup E$ is $2$-regular, hence a disjoint union of cycles, and each closes to $\delta^a{}_a=n$.
-3. **The form is positive definite**, being the restriction of the standard inner product on $V^{\otimes2f}$ over $\mathbb R$. **A Gram matrix of a spanning set under a positive-definite form has rank equal to the dimension of the span.** So the rank is $\dim(V^{\otimes2f})^{O(n)}=\dim\operatorname{End}_{O(n)}(V^{\otimes f})=\dim\nu(B_f(n))$.
+3. **The form is positive definite**, being the restriction of the standard inner product on $V^{\otimes2f}$ over $\mathbb R$. **A Gram matrix of a spanning set under a positive-definite form has rank equal to the dimension of the span.** So the rank is $\dim(V^{\otimes2f})^{O(n)}=\dim\mathop{\mathrm{End}}_{O(n)}(V^{\otimes f})=\dim\nu(B_f(n))$.
 
 Step 3 is where the identity actually comes from, and the file gives no justification at all, it states the computation and moves on. Positive-definiteness is not a detail: over a field where the form degenerates on the span, the rank would understate.
 
-**Verified against the definition, not against another identity.** [r262_gram.py](../scripts/reviewers/r262/r262_gram.py) builds every $\nu(D)$ as an $n^f\times n^f$ integer matrix, flattens it to a row of length $n^{2f}$, and takes the **exact rational rank** of the resulting $ (2f-1)!!\times n^{2f}$ matrix. That is $\dim\operatorname{span}\{\nu(D)\}$ by definition, with no Gram, no loop count and no representation theory.
+**Verified against the definition, not against another identity.** [r262_gram.py](../scripts/reviewers/r262/r262_gram.py) builds every $\nu(D)$ as an $n^f\times n^f$ integer matrix, flattens it to a row of length $n^{2f}$, and takes the **exact rational rank** of the resulting $ (2f-1)!!\times n^{2f}$ matrix. That is $\dim\mathop{\mathrm{span}}\{\nu(D)\}$ by definition, with no Gram, no loop count and no representation theory.
 
-| $f$ | $n$ | $\operatorname{rank}[n^{\mathrm{loops}}]$, exact $\mathbb Q$ | $\dim\operatorname{span}\{\nu(D)\}$, exact $\mathbb Q$ | $\sum_\lambda m_\lambda(n)^2$ |
+| $f$ | $n$ | $\mathop{\mathrm{rank}}[n^{\mathrm{loops}}]$, exact $\mathbb Q$ | $\dim\mathop{\mathrm{span}}\{\nu(D)\}$, exact $\mathbb Q$ | $\sum_\lambda m_\lambda(n)^2$ |
 |---|---|---|---|---|
 | 2 | 1–5 | 1, 3, 3, 3, 3 | 1, 3, 3, 3, 3 | 1, 3, 3, 3, 3 |
 | 3 | 1–5 | 1, 10, 15, 15, 15 | 1, 10, 15, 15, 15 | 1, 10, 15, 15, 15 |
@@ -177,7 +177,7 @@ The admissibility rule `admissible` ($\lambda'_1+\lambda'_2\le n$), is the stand
 
 > *"a modular rank can only UNDERSTATE the rational one, so agreement between two unrelated primes is what licenses reading it as exact."*
 
-**The premise is true and the conclusion does not follow from it.** $\operatorname{rank}_p\le\operatorname{rank}_{\mathbb Q}$ for every $p$, so $k$ primes agreeing at $v$ establish $\operatorname{rank}_{\mathbb Q}\ge v$ and place **no upper bound at all**. Understatement is precisely why agreement between understating computations cannot certify: two primes both losing the same pivot agree with each other and disagree with $\mathbb Q$. The assertion message in the file says the same thing again (*"neither value can be read as $\dim\nu$"* on disagreement) which is right, but its converse is what the docstring claims.
+**The premise is true and the conclusion does not follow from it.** $\mathop{\mathrm{rank}}_p\le\mathop{\mathrm{rank}}_{\mathbb Q}$ for every $p$, so $k$ primes agreeing at $v$ establish $\mathop{\mathrm{rank}}_{\mathbb Q}\ge v$ and place **no upper bound at all**. Understatement is precisely why agreement between understating computations cannot certify: two primes both losing the same pivot agree with each other and disagree with $\mathbb Q$. The assertion message in the file says the same thing again (*"neither value can be read as $\dim\nu$"* on disagreement) which is right, but its converse is what the docstring claims.
 
 The numbers are nevertheless correct, and here is what actually certifies them:
 
@@ -188,7 +188,7 @@ The numbers are nevertheless correct, and here is what actually certifies them:
 
 Primes used: $2147483647$, $2147483629$, $1000003$, $999983$, $65537$, $46337$. Evidence: [out_exactrank.txt](../scripts/reviewers/r262/out_exactrank.txt), whose spectral column locates the largest multiplicative gap in the eigenvalues and is **not** a rank, since a full-rank Gram has no gap to find; the two columns that decide are the prime ranks and the exact $\mathbb Q$ rank.
 
-**And the one-sidedness is benign for this particular test**, which is worth saying because it is the reason the check is sound despite the reasoning. The theory supplies the upper bound: $\operatorname{rank}_{\mathbb Q}=\dim\operatorname{End}_{O(n)}(V^{\otimes f})=\sum_\lambda m_\lambda(n)^2$. A modular under-report can therefore only make the assert **fire spuriously**, never pass spuriously, unless every prime tried loses exactly the same rank, which is what more primes reduce. The file should say that instead of what it says.
+**And the one-sidedness is benign for this particular test**, which is worth saying because it is the reason the check is sound despite the reasoning. The theory supplies the upper bound: $\mathop{\mathrm{rank}}_{\mathbb Q}=\dim\mathop{\mathrm{End}}_{O(n)}(V^{\otimes f})=\sum_\lambda m_\lambda(n)^2$. A modular under-report can therefore only make the assert **fire spuriously**, never pass spuriously, unless every prime tried loses exactly the same rank, which is what more primes reduce. The file should say that instead of what it says.
 
 ### The reproduction
 
@@ -257,7 +257,7 @@ I downloaded [arXiv:1507.07676](https://arxiv.org/abs/1507.07676) and read §7.
 
 ### The Lehrer–Zhang comparison: the number is right, the sentence is not
 
-**$n\ge12$ is correct.** Theorem 3.4 as quoted in [lehrer-zhang notes:29](../references/lehrer-zhang-sft-orthogonal/notes.md): *"If $r\le n$ the map $\nu:B_r(n)\to\operatorname{End}_{O(V)}(V^{\otimes r})$ is an isomorphism. If $r\ge n+1$, $\ker(\nu)$ is generated as an ideal by $E$."* At $r=12$ that is injectivity iff $n\ge12$. It is independently supported by ASWT's type-$D_m$ line (*injective if $n\ge d$*) and by r259's direct count at $f=12$, where $\sum_{\text{all }\lambda}(\dim\Delta_\lambda)^2=23!!$ first at $n=12$ and falls short by $208{,}012$ at $n=11$.
+**$n\ge12$ is correct.** Theorem 3.4 as quoted in [lehrer-zhang notes:29](../references/lehrer-zhang-sft-orthogonal/notes.md): *"If $r\le n$ the map $\nu:B_r(n)\to\mathop{\mathrm{End}}_{O(V)}(V^{\otimes r})$ is an isomorphism. If $r\ge n+1$, $\ker(\nu)$ is generated as an ideal by $E$."* At $r=12$ that is injectivity iff $n\ge12$. It is independently supported by ASWT's type-$D_m$ line (*injective if $n\ge d$*) and by r259's direct count at $f=12$, where $\sum_{\text{all }\lambda}(\dim\Delta_\lambda)^2=23!!$ first at $n=12$ and falls short by $208{,}012$ at $n=11$.
 
 **"Tighter than Rui's" is where a second category error enters.** [notes.md:28](../references/rui-brauer-semisimplicity/notes.md) reads, as one sentence:
 
@@ -289,7 +289,7 @@ The first clause denies a shared scale; the second clause uses one. Both cannot 
 
 1. Fix [run_diagram_realisation.py](../scripts/runs/run_diagram_realisation.py)'s docstring, three sentences, all already corrected elsewhere in the same cycle.
 2. Restore the audit's conclusion (c) and the item's deliverable to [plan.md](../plan.md) item 1: the $71$ seeds must be exhibited **over Brauer diagrams**, that is a fact about the construction, and A3 consumes the objects rather than the theorem.
-3. Cite Brauer 1937 for surjectivity onto $\operatorname{End}_{O(n)}$, and note that ASWT 3.17(b) is a statement about $\mathfrak{so}_{2m}$ whose type-$D$ line carries no surjection.
+3. Cite Brauer 1937 for surjectivity onto $\mathop{\mathrm{End}}_{O(n)}$, and note that ASWT 3.17(b) is a statement about $\mathfrak{so}_{2m}$ whose type-$D$ line carries no surjection.
 4. Replace "$40$ pairs" with $32$, or with $24$ if the script is meant to be the evidence.
 5. Restore r260's *"the same shape of obligation"* to (iii), or price $\det\mathrm{Gram}_S$ directly.
 6. Drop *tighter* and *zero slack* from [rui notes:28](../references/rui-brauer-semisimplicity/notes.md); the sentence contradicts its own first clause, and neither threshold is consumed.

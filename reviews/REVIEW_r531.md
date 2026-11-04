@@ -30,7 +30,7 @@ The brief asserts "as printed the rows are $(A,C,B)$, $(C,B,A)$, $(B,A,C)$, whic
 
 Write $X\circ Y=\tfrac12(XY+YX)+B_\#(X,Y)$ with $B_\#(X,Y)_{\alpha\beta}=\tfrac12\sum c_{\alpha\gamma\varepsilon}c_{\beta\delta\zeta}X_{\gamma\delta}Y_{\varepsilon\zeta}$, the polarisation of $W^\#$ ([conventions.md](../findings/conventions.md), the $\circ$ bullet). Take $\{i,j,k,l\}=\{1,2,3,4\}$ and $X$ supported on the three opposite pairings, $a=X_{12,34}$, $b=X_{13,24}$, $c=X_{14,23}$.
 
-- **The commutator half.** $M$ diagonal in the pair basis gives $(MX+XM)_{\alpha\beta}=(M_\alpha+M_\beta)X_{\alpha\beta}$, so $\tfrac12(MX+XM)=\tfrac12\operatorname{diag}(A,B,C)$ in $(a,b,c)$. **That is $G$'s diagonal.**
+- **The commutator half.** $M$ diagonal in the pair basis gives $(MX+XM)_{\alpha\beta}=(M_\alpha+M_\beta)X_{\alpha\beta}$, so $\tfrac12(MX+XM)=\tfrac12\mathop{\mathrm{diag}}(A,B,C)$ in $(a,b,c)$. **That is $G$'s diagonal.**
 - **The $\#$ half.** With $M$ diagonal, $B_\#(M,X)_{\alpha\beta}=\tfrac12\sum_\gamma M_\gamma\sum_{\varepsilon\zeta}c_{\alpha\gamma\varepsilon}c_{\beta\gamma\zeta}X_{\varepsilon\zeta}$. For $\alpha=\varphi_{12}$, $\beta=\varphi_{34}$ exactly four triangles contribute, $\gamma\in\{23,24,13,14\}$. Using $[\varphi_{ab},\varphi_{bc}]=\varphi_{ac}$ the four sign products are $(+1)(-1)$, $(+1)(+1)$, $(-1)(-1)$, $(-1)(+1)$, giving
   $$B_\#(M,X)_{12,34}=\tfrac12\big[-(M_{14}+M_{23})\,b+(M_{13}+M_{24})\,c\big]=\tfrac12\big[-Cb+Bc\big].$$
 - **Bianchi fixes the signs.** $X_{ijkl}+X_{iklj}+X_{iljk}=0$ reads $a-b+c=0$ in these coordinates, so the **signed coordinates are $(\hat a,\hat b,\hat c)=(a,-b,c)$** and Bianchi becomes $\hat a+\hat b+\hat c=0$. In them the row above is $\tfrac12(A,C,B)$, **row 1 of $\tfrac12G$ exactly.**
@@ -38,11 +38,11 @@ Write $X\circ Y=\tfrac12(XY+YX)+B_\#(X,Y)$ with $B_\#(X,Y)_{\alpha\beta}=\tfrac1
 
 The record reaches the same sign convention independently at [second-order.md line 889](../findings/second-order.md): *"first Bianchi reads $T_{1234}-T_{1324}+T_{1423}=0$, so L121's signed coordinates negate the middle pairing"*.
 
-**Screen** (constructed objects, seconds; reported as a screen): built $\mathfrak{so}(6)$ structure constants and $Q(W)=W^2+W^\#$ from scratch. It reproduces four of the record's anchors, $\mathrm{Id}^\#=(n-2)\mathrm{Id}$, $\operatorname{tr}M^\#=-1$, $Q(M)=\theta M$ and $\theta(S^3\times S^3)=\sqrt{10}/3$, and $L_M$ on the $4$-set space equals $\tfrac12G$ **at all $15$ four-subsets, and also at a generic NON-critical $M\in\mathcal D_6$**.
+**Screen** (constructed objects, seconds; reported as a screen): built $\mathfrak{so}(6)$ structure constants and $Q(W)=W^2+W^\#$ from scratch. It reproduces four of the record's anchors, $\mathrm{Id}^\#=(n-2)\mathrm{Id}$, $\mathop{\mathrm{tr}}M^\#=-1$, $Q(M)=\theta M$ and $\theta(S^3\times S^3)=\sqrt{10}/3$, and $L_M$ on the $4$-set space equals $\tfrac12G$ **at all $15$ four-subsets, and also at a generic NON-critical $M\in\mathcal D_6$**.
 
 ### F3. All three eigenvalues, and the two forms of the radical, CONFIRMED
 
-$G$ is symmetric with equal row sums, so $G\mathbf 1=(A+B+C)\mathbf 1$; $\operatorname{tr}G=A+B+C$, hence the other two eigenvalues sum to zero, $\pm r$. Summing squares of entries, $\operatorname{tr}G^2=3(A^2+B^2+C^2)$, so
+$G$ is symmetric with equal row sums, so $G\mathbf 1=(A+B+C)\mathbf 1$; $\mathop{\mathrm{tr}}G=A+B+C$, hence the other two eigenvalues sum to zero, $\pm r$. Summing squares of entries, $\mathop{\mathrm{tr}}G^2=3(A^2+B^2+C^2)$, so
 $$2r^2=3\textstyle\sum A^2-(A+B+C)^2=2\big(\sum A^2-\sum AB\big),\qquad r=\sqrt{A^2+B^2+C^2-AB-BC-CA}.$$
 **The three eigenvalues of $\tfrac12G$ are $\tfrac12(A+B+C)$ on $\mathbf 1$ and $\pm\tfrac12 r$ on $\mathbf 1^\perp$**, the printed pair, plus the third the block leaves implicit because $\mathbf 1$ is the direction first Bianchi deletes. The radical identity is immediate: $\tfrac12\sum(A-B)^2=\sum A^2-\sum AB$. Determinant screen at $(A,B,C)=(1,2,3)$: $\det G=-18=-(A{+}B{+}C)r^2$.
 
@@ -76,7 +76,7 @@ Let $P=p-1$, $Q=q-1$, $n=p+q$, and let $M\in\mathcal D_n$ be $S^p\times S^q$: $M
 $$\boxed{\ \theta=(n-1)\lvert\gamma\rvert\ }$$
 which the record already holds, independently derived, at [second-order.md line 739](../findings/second-order.md): *"its value is $\theta/2$ and $\theta=(n-1)\lvert\gamma\rvert$"*.
 
-**(c) And that identity is a theorem, not a check.** For diagonal $M$, $\theta=\sum_{a<b}M_{ab}^3+\tfrac12\operatorname{tr}_n(M^3)$ (the $\#$ diagonal being $(M^\#)_{(ab)(ab)}=\sum_m M_{am}M_{bm}$). The $n\times n$ spectrum of $M$ is $\{-\alpha^{(P)},-\beta^{(Q)},0,-n\gamma\}$, so $\theta=\gamma^3\big[-\tfrac{q^3}{2P}-\tfrac{p^3}{2Q}+pq-\tfrac{n^3}{2}\big]$, and $\theta=(n-1)\lvert\gamma\rvert$ becomes the polynomial identity
+**(c) And that identity is a theorem, not a check.** For diagonal $M$, $\theta=\sum_{a<b}M_{ab}^3+\tfrac12\mathop{\mathrm{tr}}_n(M^3)$ (the $\#$ diagonal being $(M^\#)_{(ab)(ab)}=\sum_m M_{am}M_{bm}$). The $n\times n$ spectrum of $M$ is $\{-\alpha^{(P)},-\beta^{(Q)},0,-n\gamma\}$, so $\theta=\gamma^3\big[-\tfrac{q^3}{2P}-\tfrac{p^3}{2Q}+pq-\tfrac{n^3}{2}\big]$, and $\theta=(n-1)\lvert\gamma\rvert$ becomes the polynomial identity
 $$p^3(p-1)+q^3(q-1)-2pq(p-1)(q-1)+(p+q)^3(p-1)(q-1)=pq(p+q-1)^2(p+q-2).$$
 In $s=p+q$, $m=pq$ the left side collapses to $m(s^3-4s^2+5s-2)=m(s-1)^2(s-2)$, which **is** the right side. $\square$ **So L121's closed form and L26's $\mu=\frac{n-2}{2(p-1)(q-1)}$ agree at every $(p,q)$, by two independent derivations.** This is the strongest single piece of evidence in the audit, and it validates both lemmas.
 
@@ -96,7 +96,7 @@ In $s=p+q$, $m=pq$ the left side collapses to $m(s^3-4s^2+5s-2)=m(s-1)^2(s-2)$, 
 ### F8. Two presentational defects in the printed sentence (repairable, not refuting)
 
 1. **The "so" points the wrong way.** The text reads *"$G\mathbf 1=(A+B+C)\mathbf 1$, **so** the Bianchi subspace is $\mathbf 1^\perp$ automatically"*. The Bianchi subspace is $\mathbf 1^\perp$ because first Bianchi reads $\hat a+\hat b+\hat c=0$ **in the signed coordinates**, a fact about the Weyl condition and the chosen signs, which owes nothing to $G$. What $G\mathbf 1=(A+B+C)\mathbf 1$ actually buys is that $\mathbf 1^\perp$ is **$G$-invariant**, so the restriction to the Bianchi subspace is an operator rather than a compression. Suggested repair: *"first Bianchi reads $\hat a+\hat b+\hat c=0$, so the Bianchi subspace is $\mathbf 1^\perp$; and $G\mathbf 1=(A+B+C)\mathbf 1$, so $\mathbf 1^\perp$ is $G$-invariant"*.
-2. **"the block is traceless" has the wrong antecedent as printed.** $\operatorname{tr}(\tfrac12G)=\tfrac12(A+B+C)$, which is nonzero in general (it is $-0.2108$ at $S^3\times S^3$ in the screen). Only the restriction to $\mathbf 1^\perp$ is traceless. The reading is recoverable from context, and [INDEX-results.md](../findings/INDEX-results.md) row 121 inherits the same wording ("the $4$-set block in closed form, traceless, …").
+2. **"the block is traceless" has the wrong antecedent as printed.** $\mathop{\mathrm{tr}}(\tfrac12G)=\tfrac12(A+B+C)$, which is nonzero in general (it is $-0.2108$ at $S^3\times S^3$ in the screen). Only the restriction to $\mathbf 1^\perp$ is traceless. The reading is recoverable from context, and [INDEX-results.md](../findings/INDEX-results.md) row 121 inherits the same wording ("the $4$-set block in closed form, traceless, …").
 
 ### F9. The 25 citations in [second-order.md](../findings/second-order.md), what each takes
 

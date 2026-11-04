@@ -14,11 +14,11 @@ each up to a multiple of $I$, where $\{X,Y\}=XY+YX$ and $K=[\hat U,V]$. Write $\
 
 **Given, quoted verbatim from the record, batch 20:**
 
-> from the $V$ equation $\beta\{\hat U,V\}+C\equiv\mu V$, using $\operatorname{tr}\big(V\{\hat U,V\}\big)=2\operatorname{tr}(\hat UV^2)$,
-> $$2\beta\operatorname{tr}(\hat UV^2)+\langle V,C\rangle=\mu\lvert V\rvert^2 .$$
+> from the $V$ equation $\beta\{\hat U,V\}+C\equiv\mu V$, using $\mathop{\mathrm{tr}}\big(V\{\hat U,V\}\big)=2\mathop{\mathrm{tr}}(\hat UV^2)$,
+> $$2\beta\mathop{\mathrm{tr}}(\hat UV^2)+\langle V,C\rangle=\mu\lvert V\rvert^2 .$$
 
 **Given, quoted verbatim from the record, batch 21's condition.** At every local maximum, for all traceless symmetric $X,Y$ tangent to the constraint surface,
-$$6\alpha\operatorname{tr}(\hat UX^2)+4\beta\operatorname{tr}(XVY)+2\beta\operatorname{tr}(\hat UY^2)\ \le\ \mu\big(3\lvert X\rvert^2+\lvert Y\rvert^2\big).$$
+$$6\alpha\mathop{\mathrm{tr}}(\hat UX^2)+4\beta\mathop{\mathrm{tr}}(XVY)+2\beta\mathop{\mathrm{tr}}(\hat UY^2)\ \le\ \mu\big(3\lvert X\rvert^2+\lvert Y\rvert^2\big).$$
 
 **Given, quoted verbatim from the record, batch 22:**
 
@@ -32,7 +32,7 @@ $$6\alpha\operatorname{tr}(\hat UX^2)+4\beta\operatorname{tr}(XVY)+2\beta\operat
 
 > **The piece as stated.** Varying the frame $P$ moves $V$'s eigenvectors while $\hat U$, $C$ and $V$'s spectrum stay fixed, so the tangent is $\dot{\hat U}=0$, $\dot V=[\Omega,V]$ for skew $\Omega$.
 >
-> **First order is vacuous.** The frame-dependent part is $\beta\operatorname{tr}(\hat UV^2)+\operatorname{tr}(VC)$, whose variation is $\operatorname{tr}\big([\Omega,V](\beta\{\hat U,V\}+C)\big)$, so stationarity for every skew $\Omega$ is $[V,\beta\{\hat U,V\}+C]=0$. **Batch 20's own $V$ equation is $\beta\{\hat U,V\}+C\equiv\mu V$**, so the bracket is $[V,\mu V]=0$ identically.
+> **First order is vacuous.** The frame-dependent part is $\beta\mathop{\mathrm{tr}}(\hat UV^2)+\mathop{\mathrm{tr}}(VC)$, whose variation is $\mathop{\mathrm{tr}}\big([\Omega,V](\beta\{\hat U,V\}+C)\big)$, so stationarity for every skew $\Omega$ is $[V,\beta\{\hat U,V\}+C]=0$. **Batch 20's own $V$ equation is $\beta\{\hat U,V\}+C\equiv\mu V$**, so the bracket is $[V,\mu V]=0$ identically.
 >
 > **Second order is batch 21 at $X=0$.** Evaluating batch 21's joint condition at $(X,Y)=(0,[\Omega,V])$ reproduces the frame second variation exactly.
 
@@ -41,8 +41,8 @@ $$6\alpha\operatorname{tr}(\hat UX^2)+4\beta\operatorname{tr}(XVY)+2\beta\operat
 | # | claim |
 |---|---|
 | 1 | Varying $P$ alone gives tangent $\dot{\hat U}=0$, $\dot V=[\Omega,V]$, and that curve stays on the constraint surface |
-| 2 | The frame-dependent part of the value is $\beta\operatorname{tr}(\hat UV^2)+\operatorname{tr}(VC)$ |
-| 3 | Its variation is $\operatorname{tr}\big([\Omega,V](\beta\{\hat U,V\}+C)\big)$, so stationarity for every skew $\Omega$ is $[V,\beta\{\hat U,V\}+C]=0$ |
+| 2 | The frame-dependent part of the value is $\beta\mathop{\mathrm{tr}}(\hat UV^2)+\mathop{\mathrm{tr}}(VC)$ |
+| 3 | Its variation is $\mathop{\mathrm{tr}}\big([\Omega,V](\beta\{\hat U,V\}+C)\big)$, so stationarity for every skew $\Omega$ is $[V,\beta\{\hat U,V\}+C]=0$ |
 | 4 | Substituting $C$'s own form makes that bracket vanish for every $\hat U$, $V$, $\mu$, $\beta$ |
 | 5 | With a GENERIC symmetric field in place of $C$ the same bracket does NOT vanish |
 | 6 | Batch 21's condition at $(X,Y)=(0,[\Omega,V])$ reproduces the frame second variation exactly |
@@ -67,7 +67,7 @@ Every claim has a row. A cell names the declaration that types it, or the reason
 ## What to do
 
 1. **Derive, do not reimplement.** Settle claims 1 to 4 and 6 by hand or symbolically.
-2. **Claim 3 is the one to press.** The block asserts a variation without computing it in the brief. Check the trace manipulation, including whether $\operatorname{tr}(\hat UV^2)$'s variation really contributes $\{\hat U,V\}$ and whether any step needs symmetry of $\hat U$ or $V$ that is not stated.
+2. **Claim 3 is the one to press.** The block asserts a variation without computing it in the brief. Check the trace manipulation, including whether $\mathop{\mathrm{tr}}(\hat UV^2)$'s variation really contributes $\{\hat U,V\}$ and whether any step needs symmetry of $\hat U$ or $V$ that is not stated.
 3. **Claim 5 is the control**, and without it claim 4 proves nothing about the geometry. Decide whether it holds, and whether a generic field is the right control or a straw one.
 4. **Claim 6 is where a reader is most likely to be fooled.** Batch 21 quantifies over tangent $X,Y$. Check that $(0,[\Omega,V])$ is genuinely tangent, and that "reproduces exactly" is not hiding a factor or a missing term.
 5. **Claim 7 asks whether a quoted sentence reaches further than it says.** Batch 22's $a$ is a coefficient in a specific quadratic on a specific three-dimensional subspace. Decide whether that covers every $(0,Y)$ direction or only some.

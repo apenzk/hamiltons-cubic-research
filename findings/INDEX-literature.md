@@ -69,16 +69,16 @@
 | statement | what it says |
 |---|---|
 | **Definition 2.1** | Given $k\in\mathbb{R}$ and $n\ge2$, |
-| **Remark 2.2** | reduces every bound to $\sec\ge0$: $\overline{\mathcal{R}_{\sec>k}(n)} = \mathcal{R}_{\sec\ge k}(n)$, $\operatorname{int}\mathcal{R}_{\sec\ge k}(n) = \mathcal{R}_{\sec>k}(n)$, and |
+| **Remark 2.2** | reduces every bound to $\sec\ge0$: $\overline{\mathcal{R}_{\sec>k}(n)} = \mathcal{R}_{\sec\ge k}(n)$, $\mathop{\mathrm{int}}\mathcal{R}_{\sec\ge k}(n) = \mathcal{R}_{\sec>k}(n)$, and |
 | **Theorem A** | *For all $k\in\mathbb{R}$, each of the sets $\mathcal{R}_{\sec\ge k}(n)$ and $\mathcal{R}_{\sec\le k}(n)$ is:* |
 | **Theorem B** | *For all $k\in\mathbb{R}$ and $n\ge2$, there are inner and outer approximations of $\mathcal{R}_{\sec\ge k}(n)$ by nested sequences $I_m$ of spectrahedral shadows and $O_m$ of |
 | **Theorem C** | *The set $\mathcal{R}_{\sec\ge k}(4)$ is an algebraic interior with minimal defining polynomial $p_k : \mathrm{Sym}^2_b(\wedge^2\mathbb{R}^4)\to\mathbb{R}$ given by* |
 | **Definition 2.5** | (Helton–Vinnikov [HV07]). A closed $S\subset\mathbb{R}^n$ is an *algebraic interior* if it is the closure of a connected component of $\{x : p(x)>0\}$ for some |
-| **Lemma 2.7** | *Every spectrahedron $S$ with $\operatorname{int}(S)\ne\emptyset$ is an algebraic interior whose minimal defining polynomial $p$ satisfies $p(x)\ne0$ for all |
+| **Lemma 2.7** | *Every spectrahedron $S$ with $\mathop{\mathrm{int}}(S)\ne\emptyset$ is an algebraic interior whose minimal defining polynomial $p$ satisfies $p(x)\ne0$ for all |
 | **Lemma 2.10** | (Finsler). *Let $A,B\in\mathrm{Sym}^2(\mathbb{R}^d)$. The following are equivalent:* |
 | **Theorem 2.14** | (the criterion extracted from Scheiderer [Sch18b]; implies [Faw19, Thm. 3]). *Let $L\subset\mathbb{R}[x_1,\dots,x_n]$ be a finite-dimensional vector space with $1\in L$, and let $f$ be |
 | **Proposition 3.1** | (Thorpe's trick, [Tho72]). *A curvature operator $R\in\mathrm{Sym}^2_b(\wedge^2\mathbb{R}^4)$ has $\sec_R\ge0$ if and only if there exists $x\in\mathbb{R}$ with $R + x\ast \succeq 0$, |
-| **Proposition 3.2** | *$p(R)=\operatorname{disc}_x(\det(R+x\ast))$ vanishes on the topological boundary $\partial\mathcal{R}_{\sec\ge0}(4)$.* The proof runs through |
+| **Proposition 3.2** | *$p(R)=\mathop{\mathrm{disc}}_x(\det(R+x\ast))$ vanishes on the topological boundary $\partial\mathcal{R}_{\sec\ge0}(4)$.* The proof runs through |
 | **Proposition 4.1** | *The closed convex cone $P_{\mathrm{Gr}_2(5)}$ is not a spectrahedral shadow.* This is the main step of Theorem A (1): apply Theorem 2.14 in the affine chart $x_{15}\ne0$ of |
 | **Corollary 4.2** | *$P_{\mathrm{Gr}_k(n)}$ is not a spectrahedral shadow* for the stated range, by reduction to Proposition 4.1. |
 | **Definition 5.1** | (inner hierarchy). With $r=\sum_{i<j}x_{ij}^2\in\mathbb{R}[\mathrm{Gr}_2(n)]_2$ and $\varphi_m : \mathbb{R}[\mathrm{Gr}_2(n)]_2\to\mathbb{R}[\mathrm{Gr}_2(n)]_{2m+2}$, $\varphi_m(P) = |
@@ -185,7 +185,7 @@
 
 | statement | what it says |
 |---|---|
-| **Theorem 11** | Let $A,B\in M_2$. Suppose $B$ is Hermitian. Then $W_A(B)=W_{A\oplus0}(B\oplus0)$ is equivalent to $(\operatorname{tr}A)W(B)\cup(\operatorname{tr}B)W(A)\subseteq W_A(B)$. If, in |
+| **Theorem 11** | Let $A,B\in M_2$. Suppose $B$ is Hermitian. Then $W_A(B)=W_{A\oplus0}(B\oplus0)$ is equivalent to $(\mathop{\mathrm{tr}}A)W(B)\cup(\mathop{\mathrm{tr}}B)W(A)\subseteq W_A(B)$. If, in |
 
 ## [cho-2026-pic-cones-7-8](../references/cho-2026-pic-cones-7-8/notes.md)
 
@@ -213,7 +213,7 @@
 |---|---|
 | **Proposition 3.1** | (p. 5). For $T$ a harmonic algebraic curvature tensor on $(M^n,g)$, $n\ge3$: $\langle\Delta |
 | **Proposition 3.2** | (p. 6). $\langle\mathring R(T^{S^2_0}),T^{S^2_0}\rangle=\frac{2n+32}{n}R_{st}T_{sjkl}T_{tjkl}-5\alpha+4\beta-\frac{16}{n^2}s&#124;T&#124;^2$. |
-| **Lemma 3.3** | (p. 7). On an Einstein manifold: $\operatorname{tr}\mathring R=\frac{n+2}{2n}s$; $\operatorname{tr}(\mathring R^2)=\frac34&#124;R&#124;^2-\frac{s^2}{n^2}$; $\operatorname{tr}(\mathring |
+| **Lemma 3.3** | (p. 7). On an Einstein manifold: $\mathop{\mathrm{tr}}\mathring R=\frac{n+2}{2n}s$; $\mathop{\mathrm{tr}}(\mathring R^2)=\frac34&#124;R&#124;^2-\frac{s^2}{n^2}$; $\mathop{\mathrm{tr}}(\mathring |
 | **Proposition 3.4** | (p. 8). With $\{S_\alpha\}$ an orthonormal eigenbasis of $\mathring R$ and eigenvalues $\lambda_\alpha$: $3\langle\Delta R,R\rangle=\sum_\alpha\lambda_\alpha&#124;S_\alpha |
 
 ## [decomposable-subspaces-grassmann-codes](../references/decomposable-subspaces-grassmann-codes/notes.md)
@@ -335,8 +335,8 @@
 
 | statement | what it says |
 |---|---|
-| **Conjecture 1** | Let $B_1,\dots,B_m\in M(n,\mathbb R)$ satisfy $\operatorname{tr}\big(B_\alpha[B_\gamma,B_\beta]\big)=0$ for all $\alpha,\beta,\gamma$. Then |
-| **Conjecture 2** | (LW Conjecture) Let $B,B_2,\dots,B_m\in M(n,\mathbb R)$ with (i) $\operatorname{tr}(B_\alpha B_\beta^*)=0$ for $\alpha\ne\beta$ and (ii) $\operatorname{tr}(B_\alpha[B,B_\beta])=0$ for |
+| **Conjecture 1** | Let $B_1,\dots,B_m\in M(n,\mathbb R)$ satisfy $\mathop{\mathrm{tr}}\big(B_\alpha[B_\gamma,B_\beta]\big)=0$ for all $\alpha,\beta,\gamma$. Then |
+| **Conjecture 2** | (LW Conjecture) Let $B,B_2,\dots,B_m\in M(n,\mathbb R)$ with (i) $\mathop{\mathrm{tr}}(B_\alpha B_\beta^*)=0$ for $\alpha\ne\beta$ and (ii) $\mathop{\mathrm{tr}}(B_\alpha[B,B_\beta])=0$ for |
 | **Conjecture 3** | For $\lVert X\rVert=1$ and $T_X(Y)=[X^*,[X,Y]]$ with eigenvalues $\lambda_1\ge\lambda_2\ge\cdots$, $\lambda_1(T_X)+\lambda_3(T_X)\le3$. |
 | **Conjecture 4** | For $\lVert X\rVert=1$, $\sum_{i=1}^{2k}\lambda_i(T_X)\le2k+2$ for $k=1,\dots,[n^2/2]$. |
 | **Conjecture 5** | For $\lVert X\rVert=1$, the spectrum of $T_X$ is weakly majorised by $\{2^2,1^{2n-4},0^{(n-1)^2+1}\}$. |
@@ -627,7 +627,7 @@
 | statement | what it says |
 |---|---|
 | **Definition 2.1** | For $\mathcal A\in\mathcal S_n$ and $i<j$, $d_{i,j}(\mathcal A)=\mathcal A_{iii}\mathcal A_{iij}-\mathcal A_{ijj}\mathcal A_{jjj}$ and $\omega_{i,j}(\mathcal A)=\mathcal |
-| **Definition 3.8** | (i) $MD_n=\{\mathcal A: I_n\in\operatorname{argmax}_{Q\in SO_n}f(Q)\}$, the maximally diagonal tensors. (ii) $LMD_n$, those at which $I_n$ is a local maximum of $f$. (iii) |
+| **Definition 3.8** | (i) $MD_n=\{\mathcal A: I_n\in\mathop{\mathrm{argmax}}_{Q\in SO_n}f(Q)\}$, the maximally diagonal tensors. (ii) $LMD_n$, those at which $I_n$ is a local maximum of $f$. (iii) |
 | **Theorem 3.13** | Let $\mathcal A$ be stationary ($d_{i,j}=0$ for all $i<j$). Then $\mathcal A$ is Jacobi-diagonal (maximal against every single-plane rotation) if and only if the stationary diagonal |
 | **Proposition 5.1** | $O(GMD_n)=\mathcal S_n$ if and only if $GMD_n=MD_n$ (p. 12). |
 | **Proposition 5.2** | $GMD_n=MD_n$ is equivalent to: the best rank-$n$ orthogonal approximation of every symmetric tensor can be chosen symmetric, and to $d(\mathcal A,O(\mathcal D_n))=d(\mathcal |
@@ -757,7 +757,7 @@
 
 | statement | what it says |
 |---|---|
-| **Theorem 1.2** | Let $A=(A_1,\dots,A_m)$ be an $m$-tuple of $n\times n$ Hermitian matrices. Then $W_k(A)$ is convex if and only if for any $X\in\operatorname{conv}U(J_k)$ there exists $P\in U(J_k)$ so |
+| **Theorem 1.2** | Let $A=(A_1,\dots,A_m)$ be an $m$-tuple of $n\times n$ Hermitian matrices. Then $W_k(A)$ is convex if and only if for any $X\in\mathop{\mathrm{conv}}U(J_k)$ there exists $P\in U(J_k)$ so |
 | **Theorem 4.2** | Suppose $A_1,A_2,A_3$ are $n\times n$ Hermitian matrices such that $\{I,A_1,A_2,A_3\}$ is linearly independent. Then there exists an $n\times n$ Hermitian matrix $A_4$ such that |
 | **Theorem 5.1** | Let $A=(A_1,\dots,A_m)$ be an $m$-tuple of real symmetric matrices. Suppose $1\le k\le n/2$ and [the off-diagonal block condition of Theorem 2.2 holds over the reals]. Then $W_k(A)$ is |
 
@@ -916,9 +916,9 @@
 
 | statement | what it says |
 |---|---|
-| **Lemma 2.1** | (sharp Newton, cited to [6, Section 2]). Let $A\in\operatorname{End}(V^n)$ and $1\le k\le n-1$. Then $p_k(A)^2\ge p_{k-1}(A)p_{k+1}(A)$, with equality if and only if $A$ is |
-| **Proposition 2.2** | Let $\mathring A\in\operatorname{End}(V^n)$, $n\ge3$, with $p_1(\mathring A)=0$. Then $p_3(\mathring A)^2+4p_2(\mathring A)^3\le0$, with equality if and only if $\mathring A$ has an |
-| **Theorem 1.1** | Let $V$ be an $n$-dimensional inner product space, $n\ge4$, and $\mathring A\in\operatorname{End}(V)$ trace-free. Then $\lvert\mathring |
+| **Lemma 2.1** | (sharp Newton, cited to [6, Section 2]). Let $A\in\mathop{\mathrm{End}}(V^n)$ and $1\le k\le n-1$. Then $p_k(A)^2\ge p_{k-1}(A)p_{k+1}(A)$, with equality if and only if $A$ is |
+| **Proposition 2.2** | Let $\mathring A\in\mathop{\mathrm{End}}(V^n)$, $n\ge3$, with $p_1(\mathring A)=0$. Then $p_3(\mathring A)^2+4p_2(\mathring A)^3\le0$, with equality if and only if $\mathring A$ has an |
+| **Theorem 1.1** | Let $V$ be an $n$-dimensional inner product space, $n\ge4$, and $\mathring A\in\mathop{\mathrm{End}}(V)$ trace-free. Then $\lvert\mathring |
 
 ## [turan-multilinear-2026](../references/turan-multilinear-2026/notes.md)
 

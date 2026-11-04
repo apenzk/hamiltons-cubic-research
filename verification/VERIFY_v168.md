@@ -30,9 +30,9 @@ Read cold from the definitions in [conventions.md](../findings/conventions.md) a
 
 Quoted from [conventions.md](../findings/conventions.md), not restated:
 
-> **The Killing form of $\mathfrak{so}(n)$** is $B(X,Y)=(n-2)\operatorname{tr}(XY)$, with $\operatorname{tr}(v^2)=-2$ for a unit bivector
+> **The Killing form of $\mathfrak{so}(n)$** is $B(X,Y)=(n-2)\mathop{\mathrm{tr}}(XY)$, with $\mathop{\mathrm{tr}}(v^2)=-2$ for a unit bivector
 
-so the inner product in play is $\langle X,Y\rangle=-\tfrac12\operatorname{tr}(XY)$ and the coordinate bivectors $\varphi_{ij}$ are orthonormal. Also quoted, because it is the one this block's frame choice leans on:
+so the inner product in play is $\langle X,Y\rangle=-\tfrac12\mathop{\mathrm{tr}}(XY)$ and the coordinate bivectors $\varphi_{ij}$ are orthonormal. Also quoted, because it is the one this block's frame choice leans on:
 
 > **"Diagonal" means diagonal in coordinate $2$-planes $e_i\wedge e_j$** of an orthonormal frame of $\mathbb R^n$
 
@@ -40,7 +40,7 @@ And on the letters, quoted because it names this block's own collision:
 
 > *And $x$ is a bivector in L33's proof where the same letter is a vector of $\mathbb R^m$ elsewhere in the file.* **Read each from its block.**
 
-**Four of the five symbols carrying this proof are tabled nowhere.** $\mathfrak c$, $a$, $p$ and $\mathfrak t$ have no row in [conventions.md](../findings/conventions.md). $p$ is the one that has already cost a repair: [L81](../findings/isotropy-cap.md)'s own correction notice records that $p$ *"carries two readings (the torus rank $\lfloor m/2\rfloor$ and the support rank $\tfrac12\operatorname{rank}x$) which are different hypotheses"*. L32's proof uses the **torus** reading ($p=m/2$) and its scope paragraph uses the **support** reading (a padded rank-$4$ $x$ at $m=10$ is called a root of $D_p$ with $p$ read as $5$ in one sentence and $2$ in the next). A fifth collision sits inside the block itself: **$e$ is a bivector index in the refutation banner ($x=e_{12}\in\mathfrak{so}(3)$) and a weight-lattice basis vector four lines later ($\pm e_i\pm e_j$)**.
+**Four of the five symbols carrying this proof are tabled nowhere.** $\mathfrak c$, $a$, $p$ and $\mathfrak t$ have no row in [conventions.md](../findings/conventions.md). $p$ is the one that has already cost a repair: [L81](../findings/isotropy-cap.md)'s own correction notice records that $p$ *"carries two readings (the torus rank $\lfloor m/2\rfloor$ and the support rank $\tfrac12\mathop{\mathrm{rank}}x$) which are different hypotheses"*. L32's proof uses the **torus** reading ($p=m/2$) and its scope paragraph uses the **support** reading (a padded rank-$4$ $x$ at $m=10$ is called a root of $D_p$ with $p$ read as $5$ in one sentence and $2$ in the next). A fifth collision sits inside the block itself: **$e$ is a bivector index in the refutation banner ($x=e_{12}\in\mathfrak{so}(3)$) and a weight-lattice basis vector four lines later ($\pm e_i\pm e_j$)**.
 
 ## 1. The hypothesis inventory
 
@@ -72,7 +72,7 @@ $$\mathfrak z(x)=\bigoplus_{j}\mathfrak u(m_j)\ \oplus\ \mathfrak{so}(k),\qquad 
 
 (No mixed $\mathrm{im}\,x\wedge\ker x$ term survives: for $u$ in that part, $[x,u]\vert_{\ker x}=x\,u\vert_{\ker x}$ with $x$ invertible on its image, so $[x,u]=0$ forces $u=0$.) Hence
 
-$$\mathfrak c=0\iff \sum_j m_j^2+\binom k2=1\iff s=1,\ m_1=1,\ k\le1\iff m\in\{2,3\}\ \text{with}\ \operatorname{rank}x=2 .$$
+$$\mathfrak c=0\iff \sum_j m_j^2+\binom k2=1\iff s=1,\ m_1=1,\ k\le1\iff m\in\{2,3\}\ \text{with}\ \mathop{\mathrm{rank}}x=2 .$$
 
 At $m=2$ that is every nonzero $x$, and there $\mathfrak c=0$, $\mathfrak z(\mathfrak c)=\mathfrak{so}(2)=\mathbb Rx$ and $\mathfrak c^\perp=\mathfrak{so}(2)$, so $\mathfrak z(\mathfrak c)\cap\mathfrak c^\perp=\mathbb Rx$, **the conclusion holds**. At $m=3$ it fails, as recorded.
 
@@ -84,7 +84,7 @@ At $m=2$ that is every nonzero $x$, and there $\mathfrak c=0$, $\mathfrak z(\mat
 
 ## 2. The chain $\mathfrak c\supseteq\mathfrak t\cap x^\perp=a^\perp$, derived
 
-Let $x$ be nondegenerate, $m=2p$, and let $\mathfrak t=\operatorname{span}(\varphi_{12},\varphi_{34},\dots,\varphi_{2p-1,2p})$ in a frame putting $x=\sum_i a_i\varphi_{2i-1,2i}$.
+Let $x$ be nondegenerate, $m=2p$, and let $\mathfrak t=\mathop{\mathrm{span}}(\varphi_{12},\varphi_{34},\dots,\varphi_{2p-1,2p})$ in a frame putting $x=\sum_i a_i\varphi_{2i-1,2i}$.
 
 1. $\mathfrak t$ is abelian and $x\in\mathfrak t$, so $[\mathfrak t,x]=0$, i.e. $\mathfrak t\subseteq\mathfrak z(x)$.
 2. Intersecting with $x^\perp$: $\mathfrak t\cap x^\perp\subseteq\mathfrak z(x)\cap x^\perp=\mathfrak c$.
@@ -148,9 +148,9 @@ So the written degenerate branch covers $k\ge2$ and is empty at $k=1$. **The pri
 
 > *the charitable reading, re-running the roots with $a$ padded by zeros, fails the other way, since at odd $m$ the algebra is $B_p$ and "every root of $D_p$ has $p-2$ zero coordinates" is false, the centraliser of $x=\varphi_{12}\in\mathfrak{so}(5)$ has dimension $4$ where the containment allows $2$. **Corank $1$ is exactly the generic odd-$m$ case** … a concrete instance is $x=\varphi_{12}+2\varphi_{34}+3\varphi_{56}$ at $m=7$.*
 
-**1. Locate it.** The two clauses are joined but describe different objects. *"$a$ padded by zeros"* is the general degenerate case. **At corank $1$ there is no padding**: $m=2p+1$ odd and $\operatorname{rank}x=m-1=2p$, so the singular-value vector fills the whole of $\mathbb R^p=\mathfrak t$ and has **no zero coordinate**. And $x=\varphi_{12}\in\mathfrak{so}(5)$ has $\dim\ker x=3$, not $1$; it is a corank-$3$ example, imported from [L81](../findings/isotropy-cap.md)'s correction notice (c), where it is correctly deployed against the *degenerate padded* reading.
+**1. Locate it.** The two clauses are joined but describe different objects. *"$a$ padded by zeros"* is the general degenerate case. **At corank $1$ there is no padding**: $m=2p+1$ odd and $\mathop{\mathrm{rank}}x=m-1=2p$, so the singular-value vector fills the whole of $\mathbb R^p=\mathfrak t$ and has **no zero coordinate**. And $x=\varphi_{12}\in\mathfrak{so}(5)$ has $\dim\ker x=3$, not $1$; it is a corank-$3$ example, imported from [L81](../findings/isotropy-cap.md)'s correction notice (c), where it is correctly deployed against the *degenerate padded* reading.
 
-**2. Exhibit the failure concretely**, on the finding's own named instance. Take $m=7$, $x=\varphi_{12}+2\varphi_{34}+3\varphi_{56}$, so $k=1$, $p=3$, $a=(1,2,3)$. Then $\mathfrak t=\operatorname{span}(\varphi_{12},\varphi_{34},\varphi_{56})$ is a maximal torus of $\mathfrak{so}(7)$ containing $x$, and §2 gives $a^\perp\subseteq\mathfrak c$ unchanged. The roots of $B_3$ are the twelve $\pm e_i\pm e_j$ and the six $\pm e_i$; **the first have one zero coordinate and the second have two, while $a$ has none**, so no root is proportional to $a$ and §3 gives $\mathfrak z(a^\perp)=\mathfrak t$. Hence
+**2. Exhibit the failure concretely**, on the finding's own named instance. Take $m=7$, $x=\varphi_{12}+2\varphi_{34}+3\varphi_{56}$, so $k=1$, $p=3$, $a=(1,2,3)$. Then $\mathfrak t=\mathop{\mathrm{span}}(\varphi_{12},\varphi_{34},\varphi_{56})$ is a maximal torus of $\mathfrak{so}(7)$ containing $x$, and §2 gives $a^\perp\subseteq\mathfrak c$ unchanged. The roots of $B_3$ are the twelve $\pm e_i\pm e_j$ and the six $\pm e_i$; **the first have one zero coordinate and the second have two, while $a$ has none**, so no root is proportional to $a$ and §3 gives $\mathfrak z(a^\perp)=\mathfrak t$. Hence
 $$\mathfrak z(\mathfrak c)\cap\mathfrak c^\perp\subseteq\mathfrak t\cap(a^\perp)^\perp=\mathbb Rx .$$
 Independently, by §1, $\mathfrak z(x)=\mathfrak u(1)^3\oplus\mathfrak{so}(1)=\mathfrak t$, $\mathfrak c=a^\perp$ and $\mathfrak z(\mathfrak c)=\mathfrak t$, giving $\mathbb Rx$ on the nose. **The short roots of $B_p$ are not an obstruction at corank $1$; they are ruled out by the same sentence that rules out the long ones, and more easily.**
 
@@ -165,7 +165,7 @@ Independently, by §1, $\mathfrak z(x)=\mathfrak u(1)^3\oplus\mathfrak{so}(1)=\m
 
 ## 9. The exception clause, neither too wide nor too narrow
 
-The clause is *"except when $x$ is a multiple of a complex structure on a $4$-dimensional subspace"*, i.e. $\operatorname{rank}x=4$ with the two singular values equal. Checked in closed form, each case computed from §1's decomposition:
+The clause is *"except when $x$ is a multiple of a complex structure on a $4$-dimensional subspace"*, i.e. $\mathop{\mathrm{rank}}x=4$ with the two singular values equal. Checked in closed form, each case computed from §1's decomposition:
 
 | $x$ | $\mathfrak c$ | $\mathfrak z(\mathfrak c)\cap\mathfrak c^\perp$ | clause |
 | --- | --- | --- | --- |
@@ -188,7 +188,7 @@ The clause is *"except when $x$ is a multiple of a complex structure on a $4$-di
 
 > *"The criterion is the singular-value vector being proportional to a root of $D_p$, which is rank $4$ with equal singular values (so **nondegeneracy is sufficient and not necessary at $m\ge6$**), the qualifier was missing and the claim is false at $m=4,5$"*
 
-**The $D_p$ half.** A root of $D_p$ has exactly two nonzero coordinates, of equal magnitude; with $a_i\ge0$ that means $a$ has exactly two nonzero entries and they are equal, i.e. rank $4$ with equal singular values. **CONFIRMED at even $m$.** At odd $m$ the criterion is incomplete for the same reason as the proof: $a\propto$ a **short** root of $B_p$ means $a$ has exactly one nonzero entry, i.e. $\operatorname{rank}x=2$, a second configuration on which the method is inconclusive, and one which produces **no exception** (row 4 of §9's table). So the paragraph's *"criterion"* is a criterion for the exception at even $m$, and at odd $m$ it is a criterion for neither the exception nor the method's success without the short-root case being separated out. **The paragraph is silent where the proof is wrong, and by the same omission.**
+**The $D_p$ half.** A root of $D_p$ has exactly two nonzero coordinates, of equal magnitude; with $a_i\ge0$ that means $a$ has exactly two nonzero entries and they are equal, i.e. rank $4$ with equal singular values. **CONFIRMED at even $m$.** At odd $m$ the criterion is incomplete for the same reason as the proof: $a\propto$ a **short** root of $B_p$ means $a$ has exactly one nonzero entry, i.e. $\mathop{\mathrm{rank}}x=2$, a second configuration on which the method is inconclusive, and one which produces **no exception** (row 4 of §9's table). So the paragraph's *"criterion"* is a criterion for the exception at even $m$, and at odd $m$ it is a criterion for neither the exception nor the method's success without the short-root case being separated out. **The paragraph is silent where the proof is wrong, and by the same omission.**
 
 **Sufficiency at $m\ge6$.** Nondegenerate at $m\ge6$ forces $m$ even and $p\ge3$, so $a$ has $p\ge3$ nonzero coordinates and no $D_p$ root is proportional to it. **CONFIRMED.** Not necessary: rank $2$ at $m\ge5$, and $a=(1,1,2,2)$ at $m=8$, are degenerate-or-not cases outside the exception. **CONFIRMED.**
 
@@ -202,7 +202,7 @@ The block says: *"The one use on the record, in [stratum-two-negative.md](../fin
 
 **Two flaws inside the discharge as written, neither fatal.**
 
-1. The box at [stratum-two-negative.md:167](../findings/stratum-two-negative.md) still reads *"$\mathfrak z(x)$ contains the torus spanned by $x$'s own $2$-blocks, so $\dim\mathfrak z(x)\ge\lfloor n/2\rfloor$"*. The **conclusion** is true, every $x$ lies in some maximal torus, and maximal tori of $\mathfrak{so}(n)$ have dimension $\lfloor n/2\rfloor$, but **the stated reason does not give it**: the torus spanned by $x$'s *own* blocks has dimension $r=\tfrac12\operatorname{rank}x$, which is $1$ at $x=\varphi_{12}\in\mathfrak{so}(6)$. The same file says so eleven lines above, and **the refuted box was left standing verbatim beneath the correction**. A reader arriving at line 167 reads the refuted argument.
+1. The box at [stratum-two-negative.md:167](../findings/stratum-two-negative.md) still reads *"$\mathfrak z(x)$ contains the torus spanned by $x$'s own $2$-blocks, so $\dim\mathfrak z(x)\ge\lfloor n/2\rfloor$"*. The **conclusion** is true, every $x$ lies in some maximal torus, and maximal tori of $\mathfrak{so}(n)$ have dimension $\lfloor n/2\rfloor$, but **the stated reason does not give it**: the torus spanned by $x$'s *own* blocks has dimension $r=\tfrac12\mathop{\mathrm{rank}}x$, which is $1$ at $x=\varphi_{12}\in\mathfrak{so}(6)$. The same file says so eleven lines above, and **the refuted box was left standing verbatim beneath the correction**. A reader arriving at line 167 reads the refuted argument.
 2. The correction that replaces it asserts $\dim\mathfrak c\ge\lfloor m/2\rfloor-1$ and gives **no reason either**. The reason is one line ($x$ lies in a maximal torus of dimension $\lfloor m/2\rfloor$, which centralises it) and it is on file nowhere. Naming it is all this verifier does with it.
 
 ## 12. Withdrawn candidates
@@ -216,7 +216,7 @@ The block says: *"The one use on the record, in [stratum-two-negative.md](../fin
 
 **The object.** A nonzero $x\in\mathfrak{so}(m)$, $m\ne3$, which is **not** a multiple of a complex structure on a $4$-plane and for which $\dim(\mathfrak z(\mathfrak c)\cap\mathfrak c^\perp)\ge2$; or, on the other side, a multiple of a $4$-plane complex structure for which that space is not a $3$-dimensional $\mathfrak{su}(2)$.
 
-**Where I looked, by hand and in closed form.** The dimension identity $\dim\mathfrak z(x)=\sum_jm_j^2+\binom k2$ localises the search: a falsifier of the first kind needs $\mathfrak z(\mathfrak c)$ to exceed $\mathbb Rx$, which the root computation forbids unless some root of $B_p$ or $D_p$ is proportional to the padded $a$, so the candidates are exactly (i) $a$ with two equal nonzero entries, which is the exception itself, (ii) $a$ with one nonzero entry, i.e. $\operatorname{rank}x=2$, and (iii) $p\le2$. I checked (ii) at $m=4$ and at $m\ge5$ separately, and (iii) at $m=2,3,4,5$, together with the corank ladder $k=0,1,2,\ge3$ and the patterns $(1)$, $(1,1)$, $(2)$, $(1,1,1)$, $(3)$, $(2,2)$, every one is in §7 or §9. **The only falsifier is $m=3$, which the surviving hypothesis excludes.** No sweep was run, no partition census was repeated, and this paragraph is a report of reasoning, not of search.
+**Where I looked, by hand and in closed form.** The dimension identity $\dim\mathfrak z(x)=\sum_jm_j^2+\binom k2$ localises the search: a falsifier of the first kind needs $\mathfrak z(\mathfrak c)$ to exceed $\mathbb Rx$, which the root computation forbids unless some root of $B_p$ or $D_p$ is proportional to the padded $a$, so the candidates are exactly (i) $a$ with two equal nonzero entries, which is the exception itself, (ii) $a$ with one nonzero entry, i.e. $\mathop{\mathrm{rank}}x=2$, and (iii) $p\le2$. I checked (ii) at $m=4$ and at $m\ge5$ separately, and (iii) at $m=2,3,4,5$, together with the corank ladder $k=0,1,2,\ge3$ and the patterns $(1)$, $(1,1)$, $(2)$, $(1,1,1)$, $(3)$, $(2,2)$, every one is in §7 or §9. **The only falsifier is $m=3$, which the surviving hypothesis excludes.** No sweep was run, no partition census was repeated, and this paragraph is a report of reasoning, not of search.
 
 ## Verdict
 

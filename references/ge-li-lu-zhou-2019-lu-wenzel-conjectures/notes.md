@@ -4,13 +4,13 @@ Read on 2026-09-23: the introduction's conjecture statements (pp. 2–4). Proofs
 
 ## Conventions
 
-$\lVert X\rVert^2=\operatorname{tr}XX^*$, the Frobenius norm, twice the record's bivector norm on $\mathfrak{so}(n)$.
+$\lVert X\rVert^2=\mathop{\mathrm{tr}}XX^*$, the Frobenius norm, twice the record's bivector norm on $\mathfrak{so}(n)$.
 
 ## Statements
 
-> **Conjecture 1.** Let $B_1,\dots,B_m\in M(n,\mathbb R)$ satisfy $\operatorname{tr}\big(B_\alpha[B_\gamma,B_\beta]\big)=0$ for all $\alpha,\beta,\gamma$. Then $\sum_{\alpha,\beta}\lVert[B_\alpha,B_\beta]\rVert^2\le\big(\sum_\alpha\lVert B_\alpha\rVert^2\big)^2$.
+> **Conjecture 1.** Let $B_1,\dots,B_m\in M(n,\mathbb R)$ satisfy $\mathop{\mathrm{tr}}\big(B_\alpha[B_\gamma,B_\beta]\big)=0$ for all $\alpha,\beta,\gamma$. Then $\sum_{\alpha,\beta}\lVert[B_\alpha,B_\beta]\rVert^2\le\big(\sum_\alpha\lVert B_\alpha\rVert^2\big)^2$.
 
-> **Conjecture 2.** (LW Conjecture) Let $B,B_2,\dots,B_m\in M(n,\mathbb R)$ with (i) $\operatorname{tr}(B_\alpha B_\beta^*)=0$ for $\alpha\ne\beta$ and (ii) $\operatorname{tr}(B_\alpha[B,B_\beta])=0$ for $2\le\alpha,\beta\le m$. Then $\sum_{\alpha\ge2}\lVert[B,B_\alpha]\rVert^2\le\big(\max_\alpha\lVert B_\alpha\rVert^2+\sum_\alpha\lVert B_\alpha\rVert^2\big)\lVert B\rVert^2$.
+> **Conjecture 2.** (LW Conjecture) Let $B,B_2,\dots,B_m\in M(n,\mathbb R)$ with (i) $\mathop{\mathrm{tr}}(B_\alpha B_\beta^*)=0$ for $\alpha\ne\beta$ and (ii) $\mathop{\mathrm{tr}}(B_\alpha[B,B_\beta])=0$ for $2\le\alpha,\beta\le m$. Then $\sum_{\alpha\ge2}\lVert[B,B_\alpha]\rVert^2\le\big(\max_\alpha\lVert B_\alpha\rVert^2+\sum_\alpha\lVert B_\alpha\rVert^2\big)\lVert B\rVert^2$.
 
 > **Conjecture 3.** For $\lVert X\rVert=1$ and $T_X(Y)=[X^*,[X,Y]]$ with eigenvalues $\lambda_1\ge\lambda_2\ge\cdots$, $\lambda_1(T_X)+\lambda_3(T_X)\le3$.
 

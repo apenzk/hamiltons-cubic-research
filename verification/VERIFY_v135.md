@@ -13,7 +13,7 @@
 | C5 | $\tfrac12$ on $\mathbb R^p\otimes\mathbb R^q$ | **PROVEN**, the differentiation argument is complete and uses only criticality |
 | C6 | $\lambda_m=(m-2)/(2(m-1))$ on $S^2_0(\mathbb R^m)$ | **PROVEN**, derived at [second-order.md](../findings/second-order.md):593–597; **but the same file at :599–603 calls the same formula "a fit and not a proof"** |
 | C7 | $+\mu$ on $\Lambda^2\otimes\Lambda^2$ by [L26](../findings/nondegeneracy.md) | **PROVEN**, with one unstated step: that L26's eigenvector lies in that summand |
-| C8 | $-\mu$ on $S^2_0\otimes S^2_0$, forced uniquely by $\operatorname{tr}L_e=0$ given the other nine | **PROVEN**, the trace identity re-derived by hand and it closes to $0$ identically |
+| C8 | $-\mu$ on $S^2_0\otimes S^2_0$, forced uniquely by $\mathop{\mathrm{tr}}L_e=0$ given the other nine | **PROVEN**, the trace identity re-derived by hand and it closes to $0$ identically |
 | C9 | $0$ on $\mathrm{Weyl}_p$, $\mathrm{Weyl}_q$, $X_p\otimes\mathbb R^q$, $X_q\otimes\mathbb R^p$ | **PROVEN, MISATTRIBUTED**, the $X_p\otimes\mathbb R^q$ index computation is written out at [nondegeneracy.md](../findings/nondegeneracy.md):730–736 and at [r38](../reviews/REVIEW_r38.md):7, credited to Reviewers 38 and 39; the block's Sources line names 34 and 35, and [r34](../reviews/REVIEW_r34.md) records the constant as still owed |
 | C10 | $\tfrac12-\mu>0$ for $p,q\ge3$, $(p,q)\ne(3,3)$, so $\tfrac12$ is on the orbit summand alone | **PROVEN** |
 | C11 | $\dim E(\tfrac12)=pq$ **and** $\dim(\text{orbit})=pq$, and the two spaces coincide | **PROVEN**, three claims, all three present; the orbit dimension is Nienhaus 4.6(b), not the block's own |
@@ -147,9 +147,9 @@ L26 exhibits **one** eigenvector: $X=\phi_\pi\odot\phi_\rho$ with its $\Lambda^4
 
 ### 3c. $-\mu$ on $S^2_0\otimes S^2_0$, and the trace identity re-derived
 
-$\mathcal W_n$ is $O(n)$-irreducible and non-trivial, so the invariant vector $\sum_iQ(V_i)$ vanishes and $\operatorname{tr}_{\mathcal W_n}L_e=0$ unconditionally. I evaluated the trace of the ten listed values by hand. Writing $x$ for the unknown value on $S^2_0\otimes S^2_0$:
+$\mathcal W_n$ is $O(n)$-irreducible and non-trivial, so the invariant vector $\sum_iQ(V_i)$ vanishes and $\mathop{\mathrm{tr}}_{\mathcal W_n}L_e=0$ unconditionally. I evaluated the trace of the ten listed values by hand. Writing $x$ for the unknown value on $S^2_0\otimes S^2_0$:
 
-$$\operatorname{tr}L_e=1\cdot1+\tfrac12\,pq+\lambda_ps_p+\lambda_qs_q+\mu\,c_pc_q+x\,s_ps_q+0.$$
+$$\mathop{\mathrm{tr}}L_e=1\cdot1+\tfrac12\,pq+\lambda_ps_p+\lambda_qs_q+\mu\,c_pc_q+x\,s_ps_q+0.$$
 
 Three pieces, each exact:
 
@@ -163,7 +163,7 @@ $$\frac{n-2}{8}\big[pq-(p+2)(q+2)\big]=\frac{n-2}{8}\big[-2p-2q-4\big]=-\frac{(n
 
 Since $(p^2-4)+(q^2-4)-(n^2-4)=p^2+q^2-8-p^2-2pq-q^2+4=-2pq-4$,
 
-$$\operatorname{tr}L_e=1+\frac{pq}{2}+\frac{-2pq-4}{4}=1+\frac{pq}{2}-\frac{pq}{2}-1=0.$$
+$$\mathop{\mathrm{tr}}L_e=1+\frac{pq}{2}+\frac{-2pq-4}{4}=1+\frac{pq}{2}-\frac{pq}{2}-1=0.$$
 
 **The identity closes to zero identically in $p,q$, confirmed, by hand, exactly.** And since $s_ps_q\ne0$ for $p,q\ge3$ (indeed $s_m\ge5$), the equation determines $x$ uniquely given the other nine. **The block's uniqueness claim is correct.**
 

@@ -37,7 +37,7 @@ $$A^2+B^2+C^2=\sum_aP_{aa}^2\;=\;\rho^2-2\sum_{a<b}P_{ab}^2\;\le\;\rho^2,$$
 
 with equality **iff $P$ is diagonal in the opposite-pair frame**, a third hypothesis L124 never states and which does not follow from the other two. Equivalently: $\Sigma\le\tfrac32\rho^2$, and the inequality runs the wrong way for everything L124 builds on it.
 
-Note also $A+B+C=\operatorname{tr}P=\operatorname{tr}\Pi=\sum_{a<b\in S}M_{ab}$, so hypothesis (i) is exactly *within-$S$ tracelessness of the compression*. Ricci-flatness gives $\sum_bM_{ab}=0$ over **all** $b$, never within a four-subset, so (i) is a genuine extra hypothesis wherever the support of $W$ is not contained in $S$.
+Note also $A+B+C=\mathop{\mathrm{tr}}P=\mathop{\mathrm{tr}}\Pi=\sum_{a<b\in S}M_{ab}$, so hypothesis (i) is exactly *within-$S$ tracelessness of the compression*. Ricci-flatness gives $\sum_bM_{ab}=0$ over **all** $b$, never within a four-subset, so (i) is a genuine extra hypothesis wherever the support of $W$ is not contained in $S$.
 
 ### The hypothesis is vacuous in the only place L121 applies
 
@@ -76,7 +76,7 @@ What is true is that the record's constructor happens to build the adapted frame
 
 ### $\theta$ is a function of the self-dual spectrum
 
-On the half-flat cone $\{W^-=0\}$ the cubic $P(W)=\langle W,Q(W)\rangle$ restricts to an $SO(3)$-invariant cubic polynomial in the traceless symmetric $3\times3$ matrix $W^+$. The space of such polynomials is one-dimensional, spanned by $\operatorname{tr}(P^3)=3\det P$. Hence $P(W)=\alpha\det W^+$ with $\alpha$ a universal constant, and it is $n$-independent because $(W^\#)_{ab}$ for $a,b\subset S$ contracts two copies of $W$, both of which vanish off $S$. One evaluation fixes $\alpha=9$.
+On the half-flat cone $\{W^-=0\}$ the cubic $P(W)=\langle W,Q(W)\rangle$ restricts to an $SO(3)$-invariant cubic polynomial in the traceless symmetric $3\times3$ matrix $W^+$. The space of such polynomials is one-dimensional, spanned by $\mathop{\mathrm{tr}}(P^3)=3\det P$. Hence $P(W)=\alpha\det W^+$ with $\alpha$ a universal constant, and it is $n$-independent because $(W^\#)_{ab}$ for $a,b\subset S$ contracts two copies of $W$, both of which vanish off $S$. One evaluation fixes $\alpha=9$.
 
 $$\boxed{\ \theta\;=\;9\det W^+\quad\text{on unit-norm half-flat }W\ }$$
 

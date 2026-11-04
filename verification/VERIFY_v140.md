@@ -13,7 +13,7 @@
 | C5 | "**And it needs $\lVert W\rVert=1$**" ([bounds.md](../findings/bounds.md):222) | **PROVEN**, the scaling check is at §5.1 |
 | C6 | "*What the identity does **not** need*: **unit norm**, Weyl membership, $\theta>0$, or $n\ge5$" ([bounds.md](../findings/bounds.md):224) | **BROKEN**, flatly contradicts C5 two lines above it; **D1**, live |
 | C7 | "The subtracted constant $\lambda_{\min}\lambda_{\max}$ is attained only on pairs containing the row index, which $c_{vab}$'s support excludes" ([results.md](../results.md):583) | **BROKEN**, false whenever $\dim E_{\min}\ge2$; refuted on file, never applied here; **D2**, live |
-| C8 | "$\lambda_{\min}<0\le\lambda_{\max}$ by $\operatorname{tr}W=0$" as the licensing hypothesis at [results.md](../results.md):583 and :194 | **GAP**, the stated hypothesis does not license the equality clause stated beside it; **D3** |
+| C8 | "$\lambda_{\min}<0\le\lambda_{\max}$ by $\mathop{\mathrm{tr}}W=0$" as the licensing hypothesis at [results.md](../results.md):583 and :194 | **GAP**, the stated hypothesis does not license the equality clause stated beside it; **D3** |
 | C9 | saturation forces $\dim E_{\min}\ge n/2$ and $\dim E_{\max}\ge(n-2)/2$, from [L31](../findings/stratum-two-negative.md) and [L153](../findings/bounds.md) alone | **PROVEN**, argument on file at [REVIEW_r566.md](../reviews/REVIEW_r566.md) §4; rebuilt independently at §6.1 |
 | C10 | both attained at $W_{\mathbb{CP}^2}$, $n=4$, reading $2$ and $1$ | **PROVEN** |
 | C11 | on [L23](../results.md)'s two-eigenvalue family, saturation $\iff(\mathfrak{so}(n),\mathfrak h)$ symmetric pair | **PROVEN** |
@@ -28,17 +28,17 @@
 
 All quoted from [conventions.md](../findings/conventions.md); nothing here is restated from memory.
 
-- $N=\binom n2=\dim\Lambda^2\mathbb R^n=\dim\mathfrak{so}(n)$. The inner product on $\Lambda^2$ is the **half-trace** pairing $\langle X,Y\rangle=\tfrac12\operatorname{tr}(X^{\mathsf T}Y)$, under which $\{\varphi_{ab}\}_{a<b}$ is orthonormal and $\operatorname{tr}(v^2)=-2$ for a unit bivector.
+- $N=\binom n2=\dim\Lambda^2\mathbb R^n=\dim\mathfrak{so}(n)$. The inner product on $\Lambda^2$ is the **half-trace** pairing $\langle X,Y\rangle=\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$, under which $\{\varphi_{ab}\}_{a<b}$ is orthonormal and $\mathop{\mathrm{tr}}(v^2)=-2$ for a unit bivector.
 - $Q(W)=W^2+W^\#$, $P(W)=\langle W,Q(W)\rangle$, $\theta=P(W)/\lVert W\rVert^3$, and **"critical point" is $Q(W)=\theta W$, the first-order condition on $\{\lVert W\rVert=1\}$**. $\#$ is the halved Böhm–Wilking product, $vv^{\mathsf T}\#ww^{\mathsf T}=\tfrac12[v,w][v,w]^{\mathsf T}$.
 - Structure constants $c_{abc}=\langle[v_a,v_b],v_c\rangle$ are **totally antisymmetric**, the inner product being ad-invariant. $T_{abc}=c_{abc}^2$ is totally symmetric and vanishes when two indices coincide.
 - **Sums over pairs are over ORDERED pairs** unless a line says otherwise. This is the convention under which the row mass reads $2(n-2)$.
 - $\mathfrak m=E_{\min}$, $\mathfrak h=E_{\max}$, $\mathfrak r$ everything else, kernel included.
-- The Killing form of $\mathfrak{so}(n)$ is $B(X,Y)=(n-2)\operatorname{tr}(XY)$, so $\kappa=2(n-2)$ in an orthonormal basis.
+- The Killing form of $\mathfrak{so}(n)$ is $B(X,Y)=(n-2)\mathop{\mathrm{tr}}(XY)$, so $\kappa=2(n-2)$ in an orthonormal basis.
 - **Not in [conventions.md](../findings/conventions.md)**: $E_{\min}$, $E_{\max}$, $c_{vab}$ at a non-basis vector, and $m_1$. [REVIEW_r565.md](../reviews/REVIEW_r565.md) already logged the first three as undefined and they are still undefined. The extension of $c$ to a vector in the first slot is by linearity, and total antisymmetry survives it because it is linear in each slot; I use it below and flag that the record nowhere says so.
 
 ## 1. Hypothesis inventory
 
-**Carried by the block.** (H1) $W\in\mathcal W_n$; (H2) $W$ a critical point, i.e. $Q(W)=\theta W$; (H3) $\lVert W\rVert=1$; (H4) $v$ a **unit** vector in $E_{\min}(W)$; (H5) $\lambda_{\min}<0<\lambda_{\max}$ strictly, said to be supplied by $\operatorname{tr}W=0$ at $W\ne0$; (H6) the row mass $\sum_{a,b}c_{vab}^2=2(n-2)$.
+**Carried by the block.** (H1) $W\in\mathcal W_n$; (H2) $W$ a critical point, i.e. $Q(W)=\theta W$; (H3) $\lVert W\rVert=1$; (H4) $v$ a **unit** vector in $E_{\min}(W)$; (H5) $\lambda_{\min}<0<\lambda_{\max}$ strictly, said to be supplied by $\mathop{\mathrm{tr}}W=0$ at $W\ne0$; (H6) the row mass $\sum_{a,b}c_{vab}^2=2(n-2)$.
 
 **Imported results, each checked against the object it is applied to.**
 
@@ -49,15 +49,15 @@ All quoted from [conventions.md](../findings/conventions.md); nothing here is re
 | $Q$ preserves $\mathcal W_n$ | proved on the record at [problem.md](../findings/problem.md) from [BW08](../references/boehm-wilking-2008-space-forms/) eq. (6) | criticality carrying no projection | **OK, and load-bearing.** If $Q$ did not preserve $\mathcal W_n$, criticality would read $\Pi_{\mathcal W}Q(W)=\theta W$ and step (2) below would lose its $\langle v,W^\#v\rangle$. The block cites this where it is used. |
 | $I^\#=(n-2)I$ | [Böhm–Wilking](../references/boehm-wilking-2008-space-forms/notes.md) Lemma 2.1, cited at [bounds.md](../findings/bounds.md) relation (A) | the $\#$-normalisation | Read in [references/](../references/), the folder exists. I use it only as the anchor of §2 step (1). |
 
-**Which hypotheses the written proof actually uses.** (H2) at step (2); (H4) at steps (1) and (2); (H6) at step (3); (H3) at step (4), where $\theta$ is read as $P/\lVert W\rVert^3$; $\lambda_{\min}\ne0$ at step (4), where the division happens. **(H5) is used nowhere in the identity**, it enters only the sign claim (§3) and the equality clause (§4), and even there only its second half. **(H1) is used only to supply $\operatorname{tr}W=0$** (hence $\lambda_{\min}<0$) and to license the previous row.
+**Which hypotheses the written proof actually uses.** (H2) at step (2); (H4) at steps (1) and (2); (H6) at step (3); (H3) at step (4), where $\theta$ is read as $P/\lVert W\rVert^3$; $\lambda_{\min}\ne0$ at step (4), where the division happens. **(H5) is used nowhere in the identity**, it enters only the sign claim (§3) and the equality clause (§4), and even there only its second half. **(H1) is used only to supply $\mathop{\mathrm{tr}}W=0$** (hence $\lambda_{\min}<0$) and to license the previous row.
 
-**Hypotheses the block claims it does not need**, checked one at a time: **$\theta>0$** (genuinely unused, confirmed, the derivation never takes a sign of $\theta$; **$n\ge5$**), genuinely unused, and $n=4$ is a real instance, §6.2; **Weyl membership**, half true, in that the derivation runs for any symmetric $W$ on $\Lambda^2$ satisfying $Q(W)=\theta W$ with $\lambda_{\min}<0$, but then $\lambda_{\min}<0$ must be **carried as a hypothesis**, since the block's own justification for it ("supplied by $\operatorname{tr}W=0$ at $W\ne0$") is exactly the Weyl input; **unit norm**, **false**, see §5.1 and D1.
+**Hypotheses the block claims it does not need**, checked one at a time: **$\theta>0$** (genuinely unused, confirmed, the derivation never takes a sign of $\theta$; **$n\ge5$**), genuinely unused, and $n=4$ is a real instance, §6.2; **Weyl membership**, half true, in that the derivation runs for any symmetric $W$ on $\Lambda^2$ satisfying $Q(W)=\theta W$ with $\lambda_{\min}<0$, but then $\lambda_{\min}<0$ must be **carried as a hypothesis**, since the block's own justification for it ("supplied by $\mathop{\mathrm{tr}}W=0$ at $W\ne0$") is exactly the Weyl input; **unit norm**, **false**, see §5.1 and D1.
 
 ## 2. Question 1, the derivation, step by step, with the hypothesis each step consumes
 
 Fix a critical $W$, and a unit $v\in E_{\min}$. Extend $v$ to an orthonormal eigenbasis $\{\varphi_a\}_{a=1}^N$ of $\Lambda^2$ with $\varphi_1=v$, $W\varphi_a=\lambda_a\varphi_a$. Write $A=\mathrm{ad}(v)$, so $A_{ab}=\langle[v,\varphi_a],\varphi_b\rangle=c_{vab}$, and $A$ is antisymmetric.
 
-**(1) The $\#$-diagonal in the eigenbasis.** $\langle v,W^\#v\rangle=-\tfrac12\operatorname{tr}(AWAW)$ is the $\#$-convention fact the record uses. In the eigenbasis $\operatorname{tr}(AWAW)=\sum_{a,b}A_{ab}\lambda_bA_{ba}\lambda_a=-\sum_{a,b}\lambda_a\lambda_bc_{vab}^2$, using $A_{ba}=-A_{ab}$. Hence
+**(1) The $\#$-diagonal in the eigenbasis.** $\langle v,W^\#v\rangle=-\tfrac12\mathop{\mathrm{tr}}(AWAW)$ is the $\#$-convention fact the record uses. In the eigenbasis $\mathop{\mathrm{tr}}(AWAW)=\sum_{a,b}A_{ab}\lambda_bA_{ba}\lambda_a=-\sum_{a,b}\lambda_a\lambda_bc_{vab}^2$, using $A_{ba}=-A_{ab}$. Hence
 
 $$\langle v,W^\#v\rangle=\tfrac12\sum_{a,b}\lambda_a\lambda_b\,c_{vab}^2 .$$
 
@@ -108,7 +108,7 @@ The claim to check is: for every pair $(a,b)$ occurring in the sum (that is, eve
 | $\lambda_{\max}=0$ | holds | holds ($W\preceq0$, all products $\ge0=\lambda_{\min}\lambda_{\max}$) | **false**, the zero set is $\{$one index in $\ker W\}$, strictly larger than $E_{\min}\otimes E_{\max}$ |
 | all $\lambda<0$ (so $\lambda_{\max}<0$) | holds as an identity **defining** $D$ | **fails**, the termwise step is wrong | vacuous |
 
-The third row is the record's own counterexample, and it checks exactly: $\lambda=(-0.684,-0.570,-0.456)$ has $\lambda_{\min}\lambda_{\max}=(-0.684)(-0.456)=0.311904$, while the true minimum product over pairs is $\lambda_{\max}^2=(-0.456)^2=0.207936$. The block's "$0.312$ against $0.208$" is these two rounded, and it is right. **But on $\mathcal W_n$ none of the three rows can occur at $W\ne0$**: $\operatorname{tr}W=0$ with $W\ne0$ forces $\lambda_{\min}<0<\lambda_{\max}$ strictly. So the block's justification clause is correct and the whole strictness question is free on the domain the lemma is stated over.
+The third row is the record's own counterexample, and it checks exactly: $\lambda=(-0.684,-0.570,-0.456)$ has $\lambda_{\min}\lambda_{\max}=(-0.684)(-0.456)=0.311904$, while the true minimum product over pairs is $\lambda_{\max}^2=(-0.456)^2=0.207936$. The block's "$0.312$ against $0.208$" is these two rounded, and it is right. **But on $\mathcal W_n$ none of the three rows can occur at $W\ne0$**: $\mathop{\mathrm{tr}}W=0$ with $W\ne0$ forces $\lambda_{\min}<0<\lambda_{\max}$ strictly. So the block's justification clause is correct and the whole strictness question is free on the domain the lemma is stated over.
 
 **Finding D3 (recorded, no consequence).** The words *"each summand being a nonnegative weight against a nonnegative factor **provided $\lambda_{\min}<0<\lambda_{\max}$ strictly**"* attach strictness to the wrong clause. The block's very next words (*"the equality characterisation needs the strict inequality"*), attach it to the right one. Both sentences stand, adjacent, saying different things about the same hypothesis. A reader taking the bold half concludes that $D\ge0$ needs a hypothesis it does not need; a reader taking the italic half is right. **This is the round's named trap in miniature and it is the third instance of it in this one block.**
 
@@ -150,7 +150,7 @@ Let $W$ be a unit critical point, $\theta=P(W)$, and put $W_t=tW$ for $t>0$. The
 | edge | status |
 |---|---|
 | $\ker W\ne0$ | **No obstruction.** The kernel sits inside $\mathfrak r$, contributes factors $0-\lambda_{\min}\lambda_{\max}>0$, and is fully inside the sum. Witness: padded $W_{\mathbb{CP}^2}$, §6.3, where the identity holds with $D=(n-4)/3>0$. The kernel is *not* excluded from the spectrum over which $\lambda_{\min}\lambda_{\max}$ is minimal, case (i) of §3 covers it. |
-| $\lambda_{\min}=0$ | **Impossible on $\mathcal W_n\setminus\{0\}$** ($\operatorname{tr}W=0$). Were it allowed, the identity is undefined, not false. The block's hypothesis set covers this only through (H5); the canonical form at [results.md](../results.md):583 covers it through "$\lambda_{\min}<0$", which is the half that matters. |
+| $\lambda_{\min}=0$ | **Impossible on $\mathcal W_n\setminus\{0\}$** ($\mathop{\mathrm{tr}}W=0$). Were it allowed, the identity is undefined, not false. The block's hypothesis set covers this only through (H5); the canonical form at [results.md](../results.md):583 covers it through "$\lambda_{\min}<0$", which is the half that matters. |
 | smallest admissible $n$ | $\dim\mathcal W_n=n(n-3)(n+1)(n+2)/12$ is $0$ at $n=3$, so $n=4$ is the smallest. The identity holds there: $n-2=2$, row mass $2(n-2)=4$, and **two** critical points saturate (§6.2, §6.4). The block's "does not need $n\ge5$" is right, and $n=4$ is where the equality case has its two most informative instances. |
 | odd $n$ | **The identity holds unchanged**, nothing in §2 sees the parity. What is parity-sensitive is [L71](../results.md)'s *conclusion*, that no critical point saturates at odd $n\ge5$. So at odd $n$ L70's equality clause is a true statement with no instances, and L70 itself is not. **Anyone citing "L70 saturates at the balanced sphere product" at odd $n$ is citing an empty set, not a false claim.** |
 | $\dim E_{\min}>1$ | **The generic and the important case.** It is what makes the excluded-index effect void (§9, D2), and by C9 it is *forced* at saturation, $\dim E_{\min}\ge n/2\ge2$ for every $n\ge4$. |
@@ -236,7 +236,7 @@ All four agree to every digit printed. **This is a hand check of the table, not 
 | site | what it says | status |
 |---|---|---|
 | [bounds.md](../findings/bounds.md):216–240 | the boxed identity, $D\ge0$ "provided strict", "**needs $\lVert W\rVert=1$**", the excluded-index blockquote (repaired headline), the dimension theorem, the L23 reduction | **the fullest form; carries D1 and D3** |
-| [results.md](../results.md):583 (canonical) | hypothesis "$\lambda_{\min}<0\le\lambda_{\max}$ by $\operatorname{tr}W=0$"; identity; $D\ge0$; equality clause; then the **excluded-index sentence unrepaired** | **carries D2 and D3; no unit-norm clause, but "critical point" carries $\lVert W\rVert=1$ by [conventions.md](../findings/conventions.md), so the omission is benign** |
+| [results.md](../results.md):583 (canonical) | hypothesis "$\lambda_{\min}<0\le\lambda_{\max}$ by $\mathop{\mathrm{tr}}W=0$"; identity; $D\ge0$; equality clause; then the **excluded-index sentence unrepaired** | **carries D2 and D3; no unit-norm clause, but "critical point" carries $\lVert W\rVert=1$ by [conventions.md](../findings/conventions.md), so the omission is benign** |
 | [results.md](../results.md):194 (landscape) | identity, $D\ge0$, "given $\lambda_{\min}<0\le\lambda_{\max}$", equality clause | **carries D3**; otherwise a faithful compression |
 | [results.md](../results.md):39 (achievements) | "the deficiency identity … at every critical point (Lemma L70)" | drops "for every unit $v\in E_{\min}$" and $D$'s definition. Harmless as a pointer, **but a reader takes $D$ to be defined elsewhere and it is defined only at :194 and :583** |
 | [lean/INDEX.md](../lean/INDEX.md):271 | row for L70: **partial**. Three side facts formalised (strict signs make $\lambda_{\min}\lambda_{\max}$ minimal; tracelessness supplies them; the all-negative failure at $(-3,-2,-1)$), plus a point check | **carries D4**; and see below |
@@ -288,7 +288,7 @@ The round warns that this record's signature failure is a correction landing **b
 
 **The object that would falsify the identity**: a critical point $W\in\mathcal W_n$, $\lVert W\rVert=1$, with two unit vectors $v,v'\in E_{\min}$ at which $\sum_{a,b}\lambda_a\lambda_bc_{vab}^2\ne\sum_{a,b}\lambda_a\lambda_bc_{v'ab}^2$. **No such object can exist**, and the reason is one line: at a critical point $W^\#=\theta W-W^2$ is a polynomial in $W$, so $\langle v,W^\#v\rangle=\theta\lambda_{\min}-\lambda_{\min}^2$ on the whole unit sphere of $E_{\min}$. I looked for this by checking the eigenspace-constancy the record itself flags as owed, and it closes.
 
-**The object that would falsify $D\ge0$**: a $W\in\mathcal W_n\setminus\{0\}$ whose $\Lambda^2$ spectrum has a pair with $\lambda_a\lambda_b<\lambda_{\min}\lambda_{\max}$. **Impossible**: §3 exhausts the three sign cases using only $\lambda_{\min}\le0\le\lambda_{\max}$, which $\operatorname{tr}W=0$ gives. The nearest real object is the block's all-negative spectrum, which is not a traceless one.
+**The object that would falsify $D\ge0$**: a $W\in\mathcal W_n\setminus\{0\}$ whose $\Lambda^2$ spectrum has a pair with $\lambda_a\lambda_b<\lambda_{\min}\lambda_{\max}$. **Impossible**: §3 exhausts the three sign cases using only $\lambda_{\min}\le0\le\lambda_{\max}$, which $\mathop{\mathrm{tr}}W=0$ gives. The nearest real object is the block's all-negative spectrum, which is not a traceless one.
 
 **The object that would falsify the equality characterisation**: a critical $W$ with $\theta=\lambda_{\min}+(n-2)\lambda_{\max}$ and some $v\in E_{\min}$ with $\mathrm{ad}(v)$ carrying mass off $E_{\min}\otimes E_{\max}$. **Impossible** by the uniqueness of the minimising eigenvalue pair under strict signs (§3, case (iii) equality).
 

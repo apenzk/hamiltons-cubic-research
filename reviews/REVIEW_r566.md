@@ -23,7 +23,7 @@
 **Yes to the claim; the argument is present but thirty lines away and uncited.** The heading promises the identity and what saturates it; the body delivers the boxed identity, the equality characterisation, the reduction on the two-eigenvalue family, and a table.
 
 **The derivation is not in the block.** Its opening sentence, *"The bound replaces every product $\lambda_a\lambda_b$ by its minimum $\lambda_{\min}\lambda_{\max}$ over the spectrum and spends the fixed mass $\sum c_{vab}^2=2(n-2)$"*, names two ingredients and cites neither. Both sit at [bounds.md](../findings/bounds.md) line 159, under the unnumbered heading *"The walk identity at the $\lambda_{\min}$ eigenvector"*, in the display
-$$\langle v,W^\#v\rangle=\tfrac12\sum_{a,b}\lambda_a\lambda_b\,c_{1ab}^2,\qquad\sum_{a,b}c_{1ab}^2=-\operatorname{tr}(\mathrm{ad}\,v)^2=2(n-2).$$
+$$\langle v,W^\#v\rangle=\tfrac12\sum_{a,b}\lambda_a\lambda_b\,c_{1ab}^2,\qquad\sum_{a,b}c_{1ab}^2=-\mathop{\mathrm{tr}}(\mathrm{ad}\,v)^2=2(n-2).$$
 That is the same pattern the record has been catching all session: the block's dependency is in its own file, unlinked. **Repair**: L70's first sentence should link to that display.
 
 ## 2. Rebuilding the identity from the definitions
@@ -40,7 +40,7 @@ So $D(v)+(n-2)\lambda_{\min}\lambda_{\max}=\theta\lambda_{\min}-\lambda_{\min}^2
 
 **Equality.** Both inequalities above are strict unless $\lambda_a=\lambda_{\min}$ and $\lambda_b=\lambda_{\max}$, so $\lambda_a\lambda_b=\lambda_{\min}\lambda_{\max}$ holds only on $E_{\min}\times E_{\max}$ and its transpose. Hence $D(v)=0$ iff $\mathrm{ad}(v)$ is supported there. **CONFIRMED.**
 
-**D5.** That last step needs $\lambda_{\max}>0$ strictly, and the block writes the hypothesis as $\lambda_{\min}<0\le\lambda_{\max}$, as do [results.md](../results.md) lines 194 and 562. At $\lambda_{\max}=0$ the whole spectrum is non-positive, $\lambda_{\min}\lambda_{\max}=0$ is still the minimum, so $D\ge0$ survives, but the minimiser is every pair carrying a zero eigenvalue and the stated equality case is false. The hypothesis actually delivered is strict: $\operatorname{tr}W=0$ with $W\ne0$ forces $\lambda_{\min}<0<\lambda_{\max}$. **Repair**: write the strict form; it is what the trace gives and what the equality case needs.
+**D5.** That last step needs $\lambda_{\max}>0$ strictly, and the block writes the hypothesis as $\lambda_{\min}<0\le\lambda_{\max}$, as do [results.md](../results.md) lines 194 and 562. At $\lambda_{\max}=0$ the whole spectrum is non-positive, $\lambda_{\min}\lambda_{\max}=0$ is still the minimum, so $D\ge0$ survives, but the minimiser is every pair carrying a zero eigenvalue and the stated equality case is false. The hypothesis actually delivered is strict: $\mathop{\mathrm{tr}}W=0$ with $W\ne0$ forces $\lambda_{\min}<0<\lambda_{\max}$. **Repair**: write the strict form; it is what the trace gives and what the equality case needs.
 
 ## 3. D1, D2, the excluded-index blockquote
 
@@ -126,7 +126,7 @@ so for $m\ge2$ the three eigenvalues are $-\tfrac1{2m-1}<0\le\tfrac{m-2}{(m+1)(2
 
 **Yes for the block's mathematical core; no for its newest paragraph.**
 
-- **Covered.** Their brief-local L1 (the identity), L2 (the every-$v$ quantifier), L3 (the saturation set and the L23 reduction) and L5 (the Hilbert–Schmidt twin) map one-to-one onto this block's four claims, and **both CONFIRMED all four independently**, each rebuilding $\mathfrak{so}(n)$, the structure constants and $\mathcal W_n$ from the definitions. Their L4 is route R14, not this lemma. The block has since absorbed their repairs and names them: the $\operatorname{tr}W=0$ hypothesis, the withdrawal of the "control" sentence, the "carries no new information" reading, the $W^\#$-polynomial constancy, and [r324](REVIEW_r324.md)'s scoping correction on the non-Weyl rows.
+- **Covered.** Their brief-local L1 (the identity), L2 (the every-$v$ quantifier), L3 (the saturation set and the L23 reduction) and L5 (the Hilbert–Schmidt twin) map one-to-one onto this block's four claims, and **both CONFIRMED all four independently**, each rebuilding $\mathfrak{so}(n)$, the structure constants and $\mathcal W_n$ from the definitions. Their L4 is route R14, not this lemma. The block has since absorbed their repairs and names them: the $\mathop{\mathrm{tr}}W=0$ hypothesis, the withdrawal of the "control" sentence, the "carries no new information" reading, the $W^\#$-polynomial constancy, and [r324](REVIEW_r324.md)'s scoping correction on the non-Weyl rows.
 - **Not covered.** The *"AND THE SUBTRACTED CONSTANT IS THE WRONG ONE"* blockquote postdates them, it is the excluded-index effect from the [L107](../findings/bounds.md) session ([r563](REVIEW_r563.md), [r564](REVIEW_r564.md)), and neither reviewer saw it. It is where D1, D2 and D3 live. D4 they saw and both got wrong the same way.
 
 **So [INDEX-results.md](../findings/INDEX-results.md) row 70's blank should be filled with a Gate 2 keyed to [r323](REVIEW_r323.md) and [r324](REVIEW_r324.md), carrying this round's caveat on the post-dating blockquote, rather than left blank or queued for a third pair.** [LEDGER.md](../findings/LEDGER.md)'s note that L70 "wants reading rather than bookkeeping" is right, and this is the reading.
@@ -136,7 +136,7 @@ so for $m\ge2$ the three eigenvalues are $-\tfrac1{2m-1}<0\le\tfrac{m-2}{(m+1)(2
 1. **Restrict D1 and D2 to $\dim E_{\min}=1$**, in the blockquote and in [results.md](../results.md) line 560, which carries the same two sentences unconditionally.
 2. **Replace D3's population clause with §4's theorem**: saturation forces $\dim E_{\min}\ge n/2$ and $\dim E_{\max}\ge(n-2)/2$, so the sharp and weak equality cases agree at every saturating point at every $n$, and the excluded-index sharpening is void where L70 is used.
 3. **Fix D4**, name $\theta$ as the criticality eigenvalue, or restore $\lVert W\rVert=1$.
-4. **Fix D5**, the hypothesis is $\lambda_{\min}<0<\lambda_{\max}$, strict, and $\operatorname{tr}W=0$ with $W\ne0$ delivers it.
+4. **Fix D5**, the hypothesis is $\lambda_{\min}<0<\lambda_{\max}$, strict, and $\mathop{\mathrm{tr}}W=0$ with $W\ne0$ delivers it.
 5. **Fix D7**, [nondegeneracy.md](../findings/nondegeneracy.md) line 540: the saturation holds at $m=2$ alone, and the link goes to [bounds.md](../findings/bounds.md).
 6. **Close D6**, give the Killing marginal a number, or link L70's first sentence to [bounds.md](../findings/bounds.md) line 159 and to relation (A).
 7. **Label the "slack growing in $n$" clause an Observation** at $n=6,8,10,12$, and the $W^\#$ constancy a proof rather than a measurement.

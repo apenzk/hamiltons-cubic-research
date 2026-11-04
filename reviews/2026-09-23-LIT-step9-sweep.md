@@ -10,7 +10,7 @@
 
 $$W^2=\theta W-W^\#.$$
 
-**So $I73 \iff W^\#\in\operatorname{span}\{W,\mathrm{Id}\}$ at a global maximiser.** *If $W^\#=cW+d\,\mathrm{Id}$ then $W^2=(\theta-c)W-d\,\mathrm{Id}$ and the minimal polynomial has degree $2$; conversely a degree-$2$ minimal polynomial forces $W^\#$ into that span through the same equation.*
+**So $I73 \iff W^\#\in\mathop{\mathrm{span}}\{W,\mathrm{Id}\}$ at a global maximiser.** *If $W^\#=cW+d\,\mathrm{Id}$ then $W^2=(\theta-c)W-d\,\mathrm{Id}$ and the minimal polynomial has degree $2$; conversely a degree-$2$ minimal polynomial forces $W^\#$ into that span through the same equation.*
 
 **Why this is worth having**: it converts a statement about a SPECTRUM, which is a property of the whole operator and has no obvious handle, into a statement about where ONE tensor lies in a $2$-dimensional subspace. *The $\#$ operation is the programme's own object and the record holds identities for it that a spectral statement cannot use.*
 
@@ -36,7 +36,7 @@ $$W^2=\theta W-W^\#.$$
 
 $Q(R)=R^2+R^\#$ is **Hamilton's quadratic vector field**, the reaction term of the Ricci flow $\partial_tR=\Delta R+2Q(R)$. *So the programme is maximising $\langle Q(W),W\rangle$ over the Weyl part, and its $\#$ is Hamilton's $\#$.*
 
-**Two facts from the field that bear on the reframing.** *$R^2$ and $R^\#$ individually do NOT satisfy the first Bianchi identity while their sum does*, so "$W^\#\in\operatorname{span}\{W,\mathrm{Id}\}$" is a condition on an object outside the Bianchi space and cannot be read inside it without care. *And $S^2_B(\mathfrak{so}(n))=\langle\mathrm{Id}\rangle\oplus\langle\mathrm{Ric}_0\rangle\oplus\langle W\rangle$ with $Q(\mathrm{Id})=(n-1)\mathrm{Id}$.*
+**Two facts from the field that bear on the reframing.** *$R^2$ and $R^\#$ individually do NOT satisfy the first Bianchi identity while their sum does*, so "$W^\#\in\mathop{\mathrm{span}}\{W,\mathrm{Id}\}$" is a condition on an object outside the Bianchi space and cannot be read inside it without care. *And $S^2_B(\mathfrak{so}(n))=\langle\mathrm{Id}\rangle\oplus\langle\mathrm{Ric}_0\rangle\oplus\langle W\rangle$ with $Q(\mathrm{Id})=(n-1)\mathrm{Id}$.*
 
 **The live field is INVARIANT CURVATURE CONES**, Wilking's criterion and the Böhm–Wilking machinery, which ask which cones $Q$ preserves rather than how large $\langle Q(W),W\rangle$ can be. **Böhm–Wilking is already on the record**, cited in [problem.md](../findings/problem.md) for its constant $c(n-1)$, so the field is not new to the programme; what is unexplored is the cone question as a route to the VALUE bound.
 
@@ -54,11 +54,11 @@ $Q(R)=R^2+R^\#$ is **Hamilton's quadratic vector field**, the reaction term of t
 
 **Mechanism.** [I73](../plan.md) is *"the maximiser's spectrum takes two values"*, which is *"the minimal polynomial of $W$ has degree $2$"*, which given criticality $W^2=\theta W-W^\#$ is exactly
 
-$$W^\#\in\operatorname{span}\{W,\ \mathrm{Id}\}.$$
+$$W^\#\in\mathop{\mathrm{span}}\{W,\ \mathrm{Id}\}.$$
 
 **Why it is worth more than the statement it replaces.** *A spectrum is a property of the whole operator with no handle; membership of a two-dimensional span is a linear condition on ONE tensor, and $\#$ is the object this record holds identities for.* **[L105](../findings/bounds-relaxations.md) then finishes outright.**
 
-**What running it takes.** Decide whether $\langle W^\#,X\rangle=0$ for every $X\perp\operatorname{span}\{W,\mathrm{Id}\}$ follows at a maximiser, presumably from second-order information. **What falsifies it**: a critical point with $W^\#$ outside that span and $\theta>\sqrt{3/2}$, or a proof that the span condition is strictly stronger than the two-value spectrum.
+**What running it takes.** Decide whether $\langle W^\#,X\rangle=0$ for every $X\perp\mathop{\mathrm{span}}\{W,\mathrm{Id}\}$ follows at a maximiser, presumably from second-order information. **What falsifies it**: a critical point with $W^\#$ outside that span and $\theta>\sqrt{3/2}$, or a proof that the span condition is strictly stronger than the two-value spectrum.
 
 **Scored `attackable` $2$ and not $3$**, *because the reformulation is untried while the underlying question has ten spent sweeps, and the rubric scores the item rather than the restatement.* **Screened**: no hit in [findings/](../findings/) for a minimal-polynomial statement or for $W^\#$ in a two-dimensional span.
 

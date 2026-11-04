@@ -28,13 +28,13 @@ Criticality on a **within** pair is then an identity, not a second condition: $(
 
 **That sign is geometry, not convention.** The Weyl sectional curvature of the product of two unit round spheres is $1-(m-1)/(n-1)=m/(2m-1)>0$ inside a factor and $-(m-1)/(2m-1)<0$ across it, at $p=q=m$. **The within-factor entry is positive and the cross entry negative.** This is the fact claim 4 turns on.
 
-**Normalisation and $\Theta_n$.** With $\langle X,X\rangle=\tfrac12\operatorname{tr}(X^\top X)=\sum_{i<j}M_{ij}^2$, the constraint $\lVert W\rVert=1$ gives $\gamma^2=2(p-1)(q-1)/\big(pq(n-1)(n-2)\big)$ (the numerator collapsing through $p^2+q^2+2pq-3p-3q+2=(n-1)(n-2)$), hence
+**Normalisation and $\Theta_n$.** With $\langle X,X\rangle=\tfrac12\mathop{\mathrm{tr}}(X^\top X)=\sum_{i<j}M_{ij}^2$, the constraint $\lVert W\rVert=1$ gives $\gamma^2=2(p-1)(q-1)/\big(pq(n-1)(n-2)\big)$ (the numerator collapsing through $p^2+q^2+2pq-3p-3q+2=(n-1)(n-2)$), hence
 
 $$\theta_{p,q}=\sqrt{\frac{2(n-1)(p-1)(q-1)}{pq\,(n-2)}} .$$
 
 $(1-1/p)(1-1/q)$ is log-concave in $p$ at fixed $p+q$, so the balanced split maximises, giving $\Theta_n^2=2(n-1)(n-2)/n^2$ at even $n$ and $\Theta_n^2=2(n-1)(n-3)/\big((n+1)(n-2)\big)$ at odd $n$, both $\to2$. **Both match [Lemma L57](../findings/problem.md) exactly**, and $\sqrt2-\sqrt{3/2}=0.18947$ is the record's $0.189$.
 
-**The pair block, from [Lemma L122](../findings/second-order.md)'s form.** For a **within-$F_1$** pair $\{j,k\}$ the block $\tfrac12\big[\operatorname{diag}(M_{ji}+M_{ki})-M_{jk}\mathrm{Id}+M^{(jk)}\big]$ has three eigenvector types on $\mathbf1^\perp$, and $\alpha-\gamma=-\gamma(n-1)/(p-1)=\theta/(p-1)$ gives the full spectrum in $L_e$ units:
+**The pair block, from [Lemma L122](../findings/second-order.md)'s form.** For a **within-$F_1$** pair $\{j,k\}$ the block $\tfrac12\big[\mathop{\mathrm{diag}}(M_{ji}+M_{ki})-M_{jk}\mathrm{Id}+M^{(jk)}\big]$ has three eigenvector types on $\mathbf1^\perp$, and $\alpha-\gamma=-\gamma(n-1)/(p-1)=\theta/(p-1)$ gives the full spectrum in $L_e$ units:
 
 $$\Big\{\underbrace{\tfrac{p-2}{2(p-1)}}_{\text{simple}},\ 0^{\,p-3},\ \Big[-\tfrac{1}{2(n-1)}\big(2+\tfrac q{p-1}+\tfrac p{q-1}\big)\Big]^{q-1}\Big\},\qquad\text{total }n-3 .$$
 

@@ -50,7 +50,7 @@ $$\boxed{\ \frac{\mathrm d\log N}{\mathrm d\log s}\;=\;1+2\,\frac{\mathrm d\log\
 
 > **THIS SETTLES THE r713/r714 DISPUTE WITHOUT ARITHMETIC.** $N$ is **strictly increasing** in $s$, hence in $w$, for **every** $\lambda>0$, $J>0$, $\gamma>0$. *Above the kink $\Phi\equiv1$, so branch 2 there is $N/n$ and strictly rises.* **[r714](REVIEW_r714.md)'s claim that $K(w)$'s decrease can overturn the rise is refuted in general, not at $n=12$ only**, $\psi^2$ falls like $t^{-1}$ at worst, and $t\propto s$, so the product $\psi^2s$ can never fall.
 
-**Below the kink it falls, and the threshold is $c_p/a$.** With $\Phi=a+w$, $\operatorname{sign}\frac{\mathrm d}{\mathrm dw}\log(\text{branch }2)=\operatorname{sign}\big(w(a+w)-u\,(c_p+w^2)\big)$, and since $u>1$ this is negative whenever $w(a+w)\le c_p+w^2$, i.e. **whenever $w\le c_p/a=0.8292$**. The kink lies well inside that, so branch 2 is strictly decreasing on $[0,\tfrac23]$ under either envelope. *The refined envelope was checked at the tightest point, $w=\sqrt{c_p}=0.6089$: $\mathrm d\log N/\mathrm dw=0.4195$ against $\Phi'/\Phi=0.6814$.*
+**Below the kink it falls, and the threshold is $c_p/a$.** With $\Phi=a+w$, $\mathop{\mathrm{sign}}\frac{\mathrm d}{\mathrm dw}\log(\text{branch }2)=\mathop{\mathrm{sign}}\big(w(a+w)-u\,(c_p+w^2)\big)$, and since $u>1$ this is negative whenever $w(a+w)\le c_p+w^2$, i.e. **whenever $w\le c_p/a=0.8292$**. The kink lies well inside that, so branch 2 is strictly decreasing on $[0,\tfrac23]$ under either envelope. *The refined envelope was checked at the tightest point, $w=\sqrt{c_p}=0.6089$: $\mathrm d\log N/\mathrm dw=0.4195$ against $\Phi'/\Phi=0.6814$.*
 
 **So the shape claim in C2 is right and the minimiser is the kink, the correct kink.**
 

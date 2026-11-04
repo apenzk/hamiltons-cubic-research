@@ -89,7 +89,7 @@ $$c_n\ \lesssim\ \frac{3\Theta_n}{2(m-1)}\ \sim\ \frac1m,\qquad\text{hence}\qqua
 
 ## Claim 4, the Gershgorin attempt: **REFUTED**
 
-**The mechanics are all correct.** $\Delta=\operatorname{diag}(N\mathbf1)-N$ with $N=M^{(jk)}$ hollow, so $\Delta_{ii}=\sum_lN_{il}$ and $\lvert\Delta_{il}\rvert=\lvert N_{il}\rvert$; Gershgorin's lower envelope $\min_i(\Delta_{ii}-R_i)$ is a valid lower bound on **every** eigenvalue, so it bounds $\lambda_{\min}$ on $\mathbf1^\perp$ as well. **Direction correct.** And $\sum_lN_{il}-\sum_l\lvert N_{il}\rvert=(P_i-S_i)-(P_i+S_i)=-2S_i$, so $\lambda\ge-2s_i$ with $s_i$ the negative mass. **Correct.** Zero row sums give $\sum_lM_{il}=0$, hence positive mass $=$ negative mass $=\tfrac12\lVert M_i\rVert_1$ **for a row of $M$**. **Correct.**
+**The mechanics are all correct.** $\Delta=\mathop{\mathrm{diag}}(N\mathbf1)-N$ with $N=M^{(jk)}$ hollow, so $\Delta_{ii}=\sum_lN_{il}$ and $\lvert\Delta_{il}\rvert=\lvert N_{il}\rvert$; Gershgorin's lower envelope $\min_i(\Delta_{ii}-R_i)$ is a valid lower bound on **every** eigenvalue, so it bounds $\lambda_{\min}$ on $\mathbf1^\perp$ as well. **Direction correct.** And $\sum_lN_{il}-\sum_l\lvert N_{il}\rvert=(P_i-S_i)-(P_i+S_i)=-2S_i$, so $\lambda\ge-2s_i$ with $s_i$ the negative mass. **Correct.** Zero row sums give $\sum_lM_{il}=0$, hence positive mass $=$ negative mass $=\tfrac12\lVert M_i\rVert_1$ **for a row of $M$**. **Correct.**
 
 **One step is unstated and is needed.** The negative mass is taken on $N$, not $M$; the two differ by the deleted entries $M_{ij},M_{ik}$, and $\sum_lN_{il}=-M_{ij}-M_{ik}\ne0$ in general, so the exact identity does *not* hold for $N$. What holds is $s_i(N)\le s_i(M)=\tfrac12\lVert M_i\rVert_1$, deletion removing at most negative mass, which is enough for the sufficient condition, and is the step the paragraph skips.
 
@@ -107,7 +107,7 @@ I checked this against the exact spectrum rather than only the bound. The worst 
 
 ## Claim 5, the Dirichlet-form restatement and its hand check: **CORRECTED**
 
-**The identity is right, signed weights and all.** For symmetric $N$ with $\Delta=\operatorname{diag}(N\mathbf1)-N$,
+**The identity is right, signed weights and all.** For symmetric $N$ with $\Delta=\mathop{\mathrm{diag}}(N\mathbf1)-N$,
 $$x^\top\Delta x=\sum_i\Big(\sum_lN_{il}\Big)x_i^2-\sum_{i,l}N_{il}x_ix_l=\tfrac12\sum_{i,l}N_{il}\big(x_i^2+x_l^2-2x_ix_l\big)=\tfrac12\sum_{i,l}N_{il}(x_i-x_l)^2,$$
 with no positivity used. ✓ And the clause's direction is right: $\lambda_{\min}(\Delta|_{\mathbf1^\perp})>-(\theta+M_{jk})$ is exactly $\tfrac12\sum M_{il}(x_i-x_l)^2>-(\theta+M_{jk})\lVert x\rVert^2$ on $\mathbf1^\perp\setminus0$. ✓
 

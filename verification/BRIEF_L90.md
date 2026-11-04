@@ -40,7 +40,7 @@ Both Lean files are withheld, their docstrings quoting prior verdicts.
 
 ## Definitions and sources
 
-- $\mathcal W_5$ is the space of algebraic Weyl tensors on $\mathbb R^5$, $W_0$ the padded Weyl tensor of $\mathbb{CP}^2$, $F_5=\tfrac32\lVert W\rVert^6-9\operatorname{tr}(W^3)^2$. $\mu$ carries a Gram to its sextic, $\mathrm{ev}$ evaluates a sextic at the $40$ sample points, $K$ is the space of cubics with $\sigma_\lambda(W_0)=0$. $\mathcal A$ and $\mathrm{ANN}$ are as Passage A uses them.
+- $\mathcal W_5$ is the space of algebraic Weyl tensors on $\mathbb R^5$, $W_0$ the padded Weyl tensor of $\mathbb{CP}^2$, $F_5=\tfrac32\lVert W\rVert^6-9\mathop{\mathrm{tr}}(W^3)^2$. $\mu$ carries a Gram to its sextic, $\mathrm{ev}$ evaluates a sextic at the $40$ sample points, $K$ is the space of cubics with $\sigma_\lambda(W_0)=0$. $\mathcal A$ and $\mathrm{ANN}$ are as Passage A uses them.
 - **This loop does no numerical work**; a statement supported only by a script, a run or a measurement is HYPOTHESIS-DEBT. A rank computed mod a prime and reported is a measurement.
 - The lemma has **no entry in [results.md](../results.md)**.
 

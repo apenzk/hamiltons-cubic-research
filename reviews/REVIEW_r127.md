@@ -10,18 +10,18 @@ Cold review of three claims about $K^2-\lambda K$ on the diagonal locus. Machine
 
 ### (a) The algebra, checked two ways, and where $D$ comes from
 
-**Correct, and the identification of $D$ is right.** The off-diagonal criticality equation is $K_{ab}^2+(K^2)_{ab}=\lambda K_{ab}$ for $a\ne b$; $\Lambda^2$ has no $(aa)$ index, so completing it to a matrix equation requires adding back what the missing diagonal would have carried. The left side has diagonal $K_{aa}^2+(K^2)_{aa}=0+\sum_bK_{ab}^2$ and the right side has $\lambda K_{aa}=0$, so the correction is exactly $D=\operatorname{diag}(\operatorname{diag}K^2)$, $D_{aa}=\sum_bK_{ab}^2$.
+**Correct, and the identification of $D$ is right.** The off-diagonal criticality equation is $K_{ab}^2+(K^2)_{ab}=\lambda K_{ab}$ for $a\ne b$; $\Lambda^2$ has no $(aa)$ index, so completing it to a matrix equation requires adding back what the missing diagonal would have carried. The left side has diagonal $K_{aa}^2+(K^2)_{aa}=0+\sum_bK_{ab}^2$ and the right side has $\lambda K_{aa}=0$, so the correction is exactly $D=\mathop{\mathrm{diag}}(\mathop{\mathrm{diag}}K^2)$, $D_{aa}=\sum_bK_{ab}^2$.
 
 Pairing with an arbitrary $v$:
 
 $$v^{\mathsf T}Dv-v^{\mathsf T}K^{\circ2}v=\sum_{a,b}K_{ab}^2v_a^2-\sum_{a,b}K_{ab}^2v_av_b=\tfrac12\sum_{a,b}K_{ab}^2(v_a-v_b)^2\ \ge\ 0,$$
 
-the symmetrisation being legitimate because $K_{ab}^2=K_{ba}^2$. So $K^2-\lambda K\succeq0$ and $\operatorname{spec}(K)\cap(0,\lambda)=\emptyset$. Verified to $10^{-16}$ at eleven sphere products.
+the symmetrisation being legitimate because $K_{ab}^2=K_{ba}^2$. So $K^2-\lambda K\succeq0$ and $\mathop{\mathrm{spec}}(K)\cap(0,\lambda)=\emptyset$. Verified to $10^{-16}$ at eleven sphere products.
 
 **The care the brief asks for lands on a different point, and the equation survives it.** The variational problem is constrained ($W$ must stay Weyl) so the criticality condition is a priori $P_{\langle W\rangle}(Q(W))=\lambda W$, and a projector could have contributed an extra $u_a+u_b$ to every off-diagonal entry. Two independent computations say it does not:
 
-- **Direct.** Projecting a symmetric matrix onto $V=\{\text{hollow},\ K\mathbf1=0\}$ removes $\operatorname{Diag}(d)+u\mathbf1^{\mathsf T}+\mathbf1u^{\mathsf T}$; solving the two conditions for $A=K^{\circ2}+K^2$ gives $(n-2)u_a+\textstyle\sum u=0$ hence $u\equiv0$, because $A_{aa}=(A\mathbf 1)_a$ holds for this particular $A$.
-- **Structural.** $\sum_{b\ne a}K_{ab}^2=D_a$ and $\sum_{b\ne a}(K^2)_{ab}=-D_a$ since $K\mathbf1=0$, so the hollow matrix $K^{\circ2}+K^2-D$ **already** has vanishing row sums. That is $Q(W)$ being Weyl, [BW08](../references/boehm-wilking-2008-space-forms/) eq. (6), quoted in [problem.md](../findings/problem.md) as $\operatorname{scal}(Q(W))=0$. Confirmed numerically: $|\mathrm{Ric}(Q(W))|=2.5\cdot10^{-14}$ and $|b_1(Q(W))|=1.2\cdot10^{-14}$ at random Weyl tensors, $n=6$.
+- **Direct.** Projecting a symmetric matrix onto $V=\{\text{hollow},\ K\mathbf1=0\}$ removes $\mathop{\mathrm{Diag}}(d)+u\mathbf1^{\mathsf T}+\mathbf1u^{\mathsf T}$; solving the two conditions for $A=K^{\circ2}+K^2$ gives $(n-2)u_a+\textstyle\sum u=0$ hence $u\equiv0$, because $A_{aa}=(A\mathbf 1)_a$ holds for this particular $A$.
+- **Structural.** $\sum_{b\ne a}K_{ab}^2=D_a$ and $\sum_{b\ne a}(K^2)_{ab}=-D_a$ since $K\mathbf1=0$, so the hollow matrix $K^{\circ2}+K^2-D$ **already** has vanishing row sums. That is $Q(W)$ being Weyl, [BW08](../references/boehm-wilking-2008-space-forms/) eq. (6), quoted in [problem.md](../findings/problem.md) as $\mathop{\mathrm{scal}}(Q(W))=0$. Confirmed numerically: $|\mathrm{Ric}(Q(W))|=2.5\cdot10^{-14}$ and $|b_1(Q(W))|=1.2\cdot10^{-14}$ at random Weyl tensors, $n=6$.
 
 So no projector appears, and the brief's worry about $D$'s origin resolves in the claim's favour.
 
@@ -43,7 +43,7 @@ a cut identity on the weighted graph with no spectral counterpart. That is where
 
 **$t=2$ on the diagonal locus, not $t\le2$**, $\lVert M\rVert_F^2=\sum_{a<b}K_{ab}^2=t/2$ when $M$ is coordinate-diagonal, so the normalisation pins it. The record already states this ([diagonal-half.md](../findings/diagonal-half.md)), so (c)'s premise is answered there; using $t\le2$ inside the corollary is conservative rather than wrong.
 
-**Two sharpenings the record does not carry.** With $\operatorname{tr}K=0$, $t=2$ and $r=1$: writing $p$ for the single positive eigenvalue and $s$ for the number of negatives, $\sum|{\rm neg}|=p$ and $\sum{\rm neg}^2=2-p^2$, so Cauchy–Schwarz gives $p^2\le s(2-p^2)$ and
+**Two sharpenings the record does not carry.** With $\mathop{\mathrm{tr}}K=0$, $t=2$ and $r=1$: writing $p$ for the single positive eigenvalue and $s$ for the number of negatives, $\sum|{\rm neg}|=p$ and $\sum{\rm neg}^2=2-p^2$, so Cauchy–Schwarz gives $p^2\le s(2-p^2)$ and
 
 $$\lambda\ \le\ p\ <\ \sqrt2,\qquad s\ \ge\ \frac{\lambda^2}{2-\lambda^2}\ =\ 3.235\ \text{ at }\Theta_{12},\ \text{ hence }s\ge4,\ n\ge6 .$$
 
@@ -130,7 +130,7 @@ Verified to $10^{-17}$ at $\mathbb{CP}^{2..5}$, $S^3{\times}S^3$, $S^4{\times}S^
 **No, in either of its two readings, and it is worse than [post F22](../findings/INDEX.md)'s $\ker\Phi_W$ on both.**
 
 - **In a given frame** it is a property of the pair (operator, frame) rather than of $W$: it fails at $S^3\times S^3$ in $120/120$ random frames and holds at $40/40$ small rotations of the same point. A test that gives both answers at one operator classifies nothing.
-- **Frame-free**, as "$\exists$ a frame with $\operatorname{spec}(K)\cap(0,\lambda)=\emptyset$", it is satisfied by $\mathbb{CP}^2$: there is a frame in which $K$ vanishes identically ($t=9.1\cdot10^{-18}$, found by minimising $t$ over $O(4)$), and $K^2-\lambda K=0$ is PSD there vacuously. The frame optimiser reaches $\lambda_{\min}=0$ from essentially every random start by driving $K\to0$, so the existential version is degenerate.
+- **Frame-free**, as "$\exists$ a frame with $\mathop{\mathrm{spec}}(K)\cap(0,\lambda)=\emptyset$", it is satisfied by $\mathbb{CP}^2$: there is a frame in which $K$ vanishes identically ($t=9.1\cdot10^{-18}$, found by minimising $t$ over $O(4)$), and $K^2-\lambda K=0$ is PSD there vacuously. The frame optimiser reaches $\lambda_{\min}=0$ from essentially every random start by driving $K\to0$, so the existential version is degenerate.
 
 The record already holds the sharp frame-free test in the right currency: $\max_{\text{frames}}t=2$ **iff** $W$ is diagonalisable ([target.md](../findings/target.md)), a single scalar with an exact threshold and no non-convex $O(n)$ search behind it. Like $\ker\Phi_W$ it carries no $\theta$ information, so the PSD statement is strictly dominated here, same class of information, worse instrument.
 

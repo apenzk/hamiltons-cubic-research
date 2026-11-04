@@ -23,9 +23,9 @@ Cold brief ([ADJ_L115_F1.md](ADJ_L115_F1.md)), no numerical work, no scripts wri
 
 ## Hypothesis inventory
 
-- (S1) $T$ is totally symmetric on $\mathcal S$. Standard: $\langle X^2,Y\rangle=\operatorname{tr}(XXY)$, and $\langle X^\#,Y\rangle=\tfrac12\sum c_{\alpha\gamma\delta}c_{\beta\varepsilon\zeta}X_{\gamma\varepsilon}X_{\delta\zeta}Y_{\alpha\beta}$ is invariant under $(\alpha,\beta)\leftrightarrow(\gamma,\varepsilon)$ by two sign changes.
+- (S1) $T$ is totally symmetric on $\mathcal S$. Standard: $\langle X^2,Y\rangle=\mathop{\mathrm{tr}}(XXY)$, and $\langle X^\#,Y\rangle=\tfrac12\sum c_{\alpha\gamma\delta}c_{\beta\varepsilon\zeta}X_{\gamma\varepsilon}X_{\delta\zeta}Y_{\alpha\beta}$ is invariant under $(\alpha,\beta)\leftrightarrow(\gamma,\varepsilon)$ by two sign changes.
 - (S2) $Q$ maps algebraic curvature operators (Bianchi) to algebraic curvature operators, hence so does $\circ$ by polarisation. Standard (Hamilton, Böhm and Wilking).
-- (S3) $\operatorname{Ric}(Q(R))$ is linear in $\operatorname{Ric}(R)$ with coefficients linear in $R$ (the reaction term of the Ricci evolution in an Uhlenbeck frame, $2R_{acbd}\operatorname{Ric}_{cd}$). Polarised, $\operatorname{Ric}(X\circ Y)=0$ for $X,Y\in\mathcal W_n$. Standard, and the record itself uses its $X=Y=W$ case when it writes critical points as $Q(W)=\theta W$ inside $\mathcal W_n$.
+- (S3) $\mathop{\mathrm{Ric}}(Q(R))$ is linear in $\mathop{\mathrm{Ric}}(R)$ with coefficients linear in $R$ (the reaction term of the Ricci evolution in an Uhlenbeck frame, $2R_{acbd}\mathop{\mathrm{Ric}}_{cd}$). Polarised, $\mathop{\mathrm{Ric}}(X\circ Y)=0$ for $X,Y\in\mathcal W_n$. Standard, and the record itself uses its $X=Y=W$ case when it writes critical points as $Q(W)=\theta W$ inside $\mathcal W_n$.
 - (S4) Banach's theorem: a symmetric trilinear form on a real inner product space has norm equal to the sup of its cubic on the unit sphere. Standard.
 - (G) $W$ is a global maximiser, so $\theta=M(n)$. Given by the step.
 - **(H⊥), added:** $\langle Q(Z),W\rangle\le\theta\|Z\|^2$ for every $Z$ in the orthogonal projection of $\mathcal D$ onto $\mathcal W_n^\perp$ (it suffices on all of $\mathcal W_n^\perp$). This is the cap Passage A names as missing. Nowhere on the record.
@@ -56,7 +56,7 @@ Under (H⊥) the last term is at most $\theta\|D_c\|^2$, the sum is at most $\th
 
 ## 5. The cap really is needed: a non-Weyl direction of positive value (claim 5)
 
-**$\mathcal D\not\subseteq\mathcal W_n$ always:** $\operatorname{Id}\in\mathcal D$ in every frame and $\operatorname{Ric}(\operatorname{Id})\ne0$.
+**$\mathcal D\not\subseteq\mathcal W_n$ always:** $\mathop{\mathrm{Id}}\in\mathcal D$ in every frame and $\mathop{\mathrm{Ric}}(\mathop{\mathrm{Id}})\ne0$.
 
 **A direction that L24 does not see and that carries positive value.** Take padded $W_{\mathbb{CP}^2}$ in $\mathbb R^n$, $n\ge5$: eigenvalues $2a,-a,-a$ on $\omega_1,\omega_2,\omega_3$, $0$ elsewhere, $\|W\|^2=6a^2=1$. Passage B's formula gives $\sum\lambda^3=6a^3$ and $\tfrac12\cdot6\cdot2\cdot\lambda_1\lambda_2\lambda_3=12a^3$, so $P=18a^3=\sqrt{3/2}$, and $Q(W)_{\omega_1}=4a^2+2a^2=\theta\cdot2a$ gives $\theta=3a$. Consistent.
 
@@ -64,7 +64,7 @@ Complete the kernel frame with $f_i=e_i\wedge e_5$, $i=1,\dots,4$. $[f_i,f_j]=\p
 
 $$B=\frac a4\begin{pmatrix}0&2&-1&-1\\2&0&-1&-1\\-1&-1&0&2\\-1&-1&2&0\end{pmatrix},$$
 
-with eigenvectors $(1,1,1,1)$, $(1,1,-1,-1)$, $(1,-1,0,0)$, $(0,0,1,-1)$ and eigenvalues $0,a,-a/2,-a/2$. The block decouples: $[f_i,\omega_k]\in\operatorname{span}\{f_j\}$, so $c'_{f_i\,\cdot\,\omega_k}$ vanishes against every frame vector outside that span. So $D=\tfrac12(f_1^{\otimes2}+f_2^{\otimes2}-f_3^{\otimes2}-f_4^{\otimes2})\in\mathcal D$ has $\langle Q(D),W\rangle=a=\theta/3>0$, and $\operatorname{Ric}(D)_{11}=D(f_1,f_1)=\tfrac12\ne0$, so $D\notin\mathcal W_n$.
+with eigenvectors $(1,1,1,1)$, $(1,1,-1,-1)$, $(1,-1,0,0)$, $(0,0,1,-1)$ and eigenvalues $0,a,-a/2,-a/2$. The block decouples: $[f_i,\omega_k]\in\mathop{\mathrm{span}}\{f_j\}$, so $c'_{f_i\,\cdot\,\omega_k}$ vanishes against every frame vector outside that span. So $D=\tfrac12(f_1^{\otimes2}+f_2^{\otimes2}-f_3^{\otimes2}-f_4^{\otimes2})\in\mathcal D$ has $\langle Q(D),W\rangle=a=\theta/3>0$, and $\mathop{\mathrm{Ric}}(D)_{11}=D(f_1,f_1)=\tfrac12\ne0$, so $D\notin\mathcal W_n$.
 
 **Arguing the opposite.** Here the value $\theta/3$ sits below $\theta$, and the same block analysis for the $\omega$ block (eigenvalues $3a,0,-3a$) and the remaining kernel gives $\lambda_{\max}(M)=\theta$ exactly at padded $W_{\mathbb{CP}^2}$. So this is no counterexample to the statement. It shows the inference from a Weyl-space cap reaches directions outside $\mathcal W_n$, which is the gap.
 
@@ -77,7 +77,7 @@ with eigenvectors $(1,1,1,1)$, $(1,1,-1,-1)$, $(1,-1,0,0)$, $(0,0,1,-1)$ and eig
 
 ## 7. The by-product (claim 7)
 
-$\operatorname{diag}M=\lambda$ because $c'^2_{\alpha\alpha\gamma}=0$. The record's route via claim 6 is not needed: under (G), $\theta=M(n)\ge\sqrt{3/2}>1\ge|\lambda_\alpha|$ since $\|\lambda\|=1$, which is the Lean theorem theta_gt_lambda in L115Statement.lean. CONFIRMED, with strict inequality and a margin $\sqrt{3/2}-1$.
+$\mathop{\mathrm{diag}}M=\lambda$ because $c'^2_{\alpha\alpha\gamma}=0$. The record's route via claim 6 is not needed: under (G), $\theta=M(n)\ge\sqrt{3/2}>1\ge|\lambda_\alpha|$ since $\|\lambda\|=1$, which is the Lean theorem theta_gt_lambda in L115Statement.lean. CONFIRMED, with strict inequality and a margin $\sqrt{3/2}-1$.
 
 ## Verdict
 

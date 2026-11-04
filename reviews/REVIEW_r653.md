@@ -12,7 +12,7 @@ Reviewer r653, reviewer A of an independent pair on identical briefs. Cold audit
 | --- | --- | --- |
 | $\theta_0(n)$ | the closed form $\theta_0(n)^2=2(n-1)(n-2)/n^2$ **and nothing more** | [conventions.md](../findings/conventions.md), as repaired 2026-09-04 |
 | $\Theta_n$ | the diagonal maximum; $=\theta_0(n)$ at **even** $n$ | same. $n=10$ and $n=12$ are both even, so at both dimensions in this block $\Theta_n=\theta_0(n)$ and **the parity trap does not bite**, stated rather than assumed |
-| norm | $\lVert W\rVert=1$ means $\sum_\alpha\lambda_\alpha^2=\operatorname{tr}(W^2)=1$ on $\Lambda^2$ | [conventions.md](../findings/conventions.md), "the two spectra" |
+| norm | $\lVert W\rVert=1$ means $\sum_\alpha\lambda_\alpha^2=\mathop{\mathrm{tr}}(W^2)=1$ on $\Lambda^2$ | [conventions.md](../findings/conventions.md), "the two spectra" |
 | spectrum on the diagonal locus | the $\Lambda^2$ spectrum **is the multiset of entries** of the vertex matrix, with multiplicities | [conventions.md](../findings/conventions.md), the $M$/$K$ entry |
 | $S_{XYZ}$ | ordered slots | [conventions.md](../findings/conventions.md). *It plays no part below; L56 uses no $S_{XYZ}$.* |
 | section containment | I read each `####` as a **sibling section**, not nested inside the file's `##`. L56 sits under the file's top-level `#`, and the block it points at is a sibling `####` in the same file | stated because two prior audits disagreed on this |
@@ -20,7 +20,7 @@ Reviewer r653, reviewer A of an independent pair on identical briefs. Cold audit
 **"Gap", settled, and this is the first finding.** The block never says what the gap is or against what it is measured. There are two candidate readings and they give opposite orderings:
 
 - **(θ-gap)** $\Theta_n-\theta$, the distance from the family member's critical value to the target;
-- **(spectral gap)** $\min\{\lvert\lambda\rvert:\lambda\in\operatorname{spec}(W),\ \lambda\ne0\}$ at $\lVert W\rVert=1$, the distance from the nonzero spectrum to $0$.
+- **(spectral gap)** $\min\{\lvert\lambda\rvert:\lambda\in\mathop{\mathrm{spec}}(W),\ \lambda\ne0\}$ at $\lVert W\rVert=1$, the distance from the nonzero spectrum to $0$.
 
 **The intended reading is the spectral one**, and the record fixes it elsewhere: [nondegeneracy.md:172](../findings/nondegeneracy.md#L172) is the section that introduces this quantity, and it explicitly repairs "$\min\lvert\lambda\rvert$" to "the smallest **nonzero** modulus", because padding a graded point makes $\min\lvert\lambda\rvert=0$ exactly and the padded point is still graded. I adopt that. **Neither the L56 block nor [results.md:518](../results.md#L518) says any of this**, and the word "floor" in the header pulls the reader toward the θ-reading, in which the block is false, see §1.
 
@@ -108,7 +108,7 @@ So the block is not a claim that was later refuted. **It is a refuted claim re-s
 
 Under $\mathfrak u(m)\subset\mathfrak{so}(2m)$ write $\Lambda^2\mathbb R^{2m}=\mathfrak m\oplus\mathfrak{su}(m)\oplus\mathbb R\omega$ at dimensions $m^2-m$, $m^2-1$, $1$. The Fubini–Study curvature operator is $\mathrm{Id}+\Phi$ up to normalisation plus a rank-one term on $\omega$, with $\Phi(A)=-JAJ$ equal to $+1$ on $\mathfrak u(m)$ and $-1$ on $\mathfrak m$; fixing the normalisation against the record's printed $W_{\mathbb{CP}^2}$ spectrum gives $R$-eigenvalues $0$, $1$, $1+m$ on the three pieces, hence, after removing the trace,
 
-$$\operatorname{spec}(W_{\mathbb{CP}^m})=\Big\{-c^{\,(m^2-m)},\ (1-c)^{\,(m^2-1)},\ (1+m-c)^{\,(1)}\Big\},\qquad c=\frac{m+1}{2m-1},$$
+$$\mathop{\mathrm{spec}}(W_{\mathbb{CP}^m})=\Big\{-c^{\,(m^2-m)},\ (1-c)^{\,(m^2-1)},\ (1+m-c)^{\,(1)}\Big\},\qquad c=\frac{m+1}{2m-1},$$
 
 before normalisation. **Two anchors it was not built to hit**: at $m=2$ it returns $(2,-1,-1,0,0,0)$ with $\Sigma=6$, the record's own $W_{\mathbb{CP}^2}$ spectrum at [ungraded-slack.md:252](../findings/ungraded-slack.md#L252); at $m=3$ it returns multiplicities $6,8,1$ with $\ker W=0$, exactly [Lemma L58](../findings/ungraded-slack.md#L279)'s row for $\mathbb{CP}^3$. Then $\Sigma_m=3m(m^2-1)/(2m-1)$, which also reproduces [L38](../findings/ungraded-slack.md#L244)'s $\theta^2_{\mathbb{CP}^m}=(m+1)^2/\Sigma_m=\frac{(m+1)(2m-1)}{3m(m-1)}$, and
 

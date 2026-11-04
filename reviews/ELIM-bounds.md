@@ -8,11 +8,11 @@ The file's freshest material, [Lemma L70](../findings/bounds.md), [Lemma L71](..
 
 ## Survivors
 
-### S1. The per-row second moment $\sum_\alpha\lambda_\alpha^2R_{\gamma\alpha}=\lVert\mathrm{ad}(v_\gamma)W\rVert^2=-\operatorname{tr}\big((\mathrm{ad}\,v_\gamma)^2W^2\big)$
+### S1. The per-row second moment $\sum_\alpha\lambda_\alpha^2R_{\gamma\alpha}=\lVert\mathrm{ad}(v_\gamma)W\rVert^2=-\mathop{\mathrm{tr}}\big((\mathrm{ad}\,v_\gamma)^2W^2\big)$
 
 **This is the one scalar per eigenvector row that criticality does not reach, and it is the only free variable anywhere in the deficiency material.**
 
-Why it escapes, precisely. The Weyl per-row identity that fence post F18 records, $\Pi_{\mathcal W}(\mathrm{ad}(v)^2)=-2\Pi_{\mathcal W}(vv^{\mathsf T})$, equivalently $\operatorname{tr}((\mathrm{ad}\,v)^2X)=-2\langle v,Xv\rangle$, holds **only for $X\in\mathcal W_n$**. It pins the first moment, $\sum_\alpha\lambda_\alpha R_{\gamma\alpha}=-2\lambda_\gamma$, because $W\in\mathcal W_n$. It does **not** apply to $W^2$, because $W^2\notin\mathcal W_n$: the file's own Böhm–Wilking correction says the *sum* $W^2+W^\#$ preserves Bianchi while $W^\#$ alone does not, and records the nonzero cancellation $b(W^\#)=-b(W^2)$. So the second moment is unreached.
+Why it escapes, precisely. The Weyl per-row identity that fence post F18 records, $\Pi_{\mathcal W}(\mathrm{ad}(v)^2)=-2\Pi_{\mathcal W}(vv^{\mathsf T})$, equivalently $\mathop{\mathrm{tr}}((\mathrm{ad}\,v)^2X)=-2\langle v,Xv\rangle$, holds **only for $X\in\mathcal W_n$**. It pins the first moment, $\sum_\alpha\lambda_\alpha R_{\gamma\alpha}=-2\lambda_\gamma$, because $W\in\mathcal W_n$. It does **not** apply to $W^2$, because $W^2\notin\mathcal W_n$: the file's own Böhm–Wilking correction says the *sum* $W^2+W^\#$ preserves Bianchi while $W^\#$ alone does not, and records the nonzero cancellation $b(W^\#)=-b(W^2)$. So the second moment is unreached.
 
 Consistency check against the record's own closed forms, no computation required. If $W^2$ were a Weyl tensor the per-row identity would give $\sum_\alpha\lambda_\alpha^2R_{v\alpha}=2\lambda_v^2$, hence
 
@@ -142,7 +142,7 @@ Beyond T3 and T4, three more instances, all of which the file partially owns:
 
 ### W5. Fence post F20's "closed form" is forced by a dimension count
 
-$\theta=c_n\Psi_3+\tfrac5{72}\Phi$ is presented with residuals and out-of-sample confirmations as if it were an empirical discovery. On Ricci-flat $W$ the cubic invariants are a **2-plane** spanned by $\operatorname{tr}W^3$ and $\langle W,W^\#\rangle$, the file says so itself. $\theta$ is the point with $a/b=1$, $\Psi_3$ the point with $a/b=-14$, $\Phi$ the point with $a/b=-\tfrac12$. Any two distinct points of a 2-plane span it, so the existence of the closed form is automatic and only the coefficients carry information. Solving $\theta=x\Psi_3+y\Phi$ in those coordinates gives $x\,b_\Psi=-\tfrac19$ and $y\,b_\Phi=\tfrac{10}9$, so $\Phi$'s coefficient is $n$-independent exactly when $b_\Phi=16$ is, which is the fact worth recording, rather than the fit.
+$\theta=c_n\Psi_3+\tfrac5{72}\Phi$ is presented with residuals and out-of-sample confirmations as if it were an empirical discovery. On Ricci-flat $W$ the cubic invariants are a **2-plane** spanned by $\mathop{\mathrm{tr}}W^3$ and $\langle W,W^\#\rangle$, the file says so itself. $\theta$ is the point with $a/b=1$, $\Psi_3$ the point with $a/b=-14$, $\Phi$ the point with $a/b=-\tfrac12$. Any two distinct points of a 2-plane span it, so the existence of the closed form is automatic and only the coefficients carry information. Solving $\theta=x\Psi_3+y\Phi$ in those coordinates gives $x\,b_\Psi=-\tfrac19$ and $y\,b_\Phi=\tfrac{10}9$, so $\Phi$'s coefficient is $n$-independent exactly when $b_\Phi=16$ is, which is the fact worth recording, rather than the fit.
 
 **A gift back, derived by hand from the file's own three integers.** The recorded $c_n=1050,\,2310,\,4620$ at $n=6,7,8$ has a closed form:
 

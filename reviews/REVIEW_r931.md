@@ -11,7 +11,7 @@
 | 5 | Step 4, Bernstein | **CONFIRMED** | the derivative of a degree-$\le3$ polynomial is again degree $\le3$, so the iteration gives $27$ |
 | 6 | Step 5, Taylor and contradiction | **CONFIRMED** | the argument uses only the upper bound on $\phi'''$. Criticality forces $\phi'(s)=0$, so $\phi'(s)<0$ excludes it, which is the right direction |
 | 7 | Equivariance | **CONFIRMED** | $Q(gX)=gQ(X)$ gives $L_{ge}=gL_eg^{-1}$, and $g$ maps $W_0^\perp\cap T_{W_0}\mathcal O^\perp$ isometrically onto the normal space at $W_1$ |
-| 8 | Right set | **CONFIRMED** | $\mathrm{Crit}(P)\cap\{0<\operatorname{dist}(\cdot,\mathcal O)<r\}=\emptyset$ is orbit isolation, gauge copies are on $\mathcal O$. A Frobenius $\varepsilon_n$ converts through chord $\le$ arc |
+| 8 | Right set | **CONFIRMED** | $\mathrm{Crit}(P)\cap\{0<\mathop{\mathrm{dist}}(\cdot,\mathcal O)<r\}=\emptyset$ is orbit isolation, gauge copies are on $\mathcal O$. A Frobenius $\varepsilon_n$ converts through chord $\le$ arc |
 | 9 | Hypotheses | **CONFIRMED** | $\theta_0>0$ is used in step 3's sign. L143 enters at step 2 only, and maximality nowhere |
 | 10 | Exponent | **CONFIRMED** | $\theta_0(n)=\sqrt{2(n-1)(n-2)}/n\to\sqrt2$ gives $\Theta(n^{-3/2})$. The L145 match is between two lower bounds on different quantities and carries no weight |
 | 11 | Prior art | **CONFIRMED** | the record holds L145's penalised tube radius and the withdrawn L215 radius only, so "first explicit isolation radius for $P$" stands |
@@ -44,7 +44,7 @@
 
 ## 4. Step 3, the second derivative
 
-- **Gradient.** The form $\langle X,Y\circ Z\rangle$ is totally symmetric. The $W^2$ part gives $\tfrac12\operatorname{tr}(XYZ+XZY)$, which sums over all six orderings under cyclicity. The $\#$ part is the record's standard fact, and the Weyl projection is self-adjoint. So $DP_W[X]=3\langle Q(W),X\rangle$ and $D^2P_W[X,X]=6\langle X,W\circ X\rangle$. With $W_1=\theta_0e_1$, that is $6\theta_0\langle L_{e_1}H,H\rangle$, by the definition of $e$ alone.
+- **Gradient.** The form $\langle X,Y\circ Z\rangle$ is totally symmetric. The $W^2$ part gives $\tfrac12\mathop{\mathrm{tr}}(XYZ+XZY)$, which sums over all six orderings under cyclicity. The $\#$ part is the record's standard fact, and the Weyl projection is self-adjoint. So $DP_W[X]=3\langle Q(W),X\rangle$ and $D^2P_W[X,X]=6\langle X,W\circ X\rangle$. With $W_1=\theta_0e_1$, that is $6\theta_0\langle L_{e_1}H,H\rangle$, by the definition of $e$ alone.
 - **Explicit expansion**, independent of the chain rule. $T(W_1,W_1,H)=\langle Q(W_1),H\rangle=\theta_0\langle W_1,H\rangle=0$ by criticality. $T(W_1,H,H)=\langle W_1,Q(H)\rangle=\theta_0a$ with $a=\langle L_{e_1}H,H\rangle$. So $\phi=\theta_0\cos^3\sigma+3\theta_0a\cos\sigma\sin^2\sigma+P(H)\sin^3\sigma$. Near $0$, $\cos^3\sigma=1-\tfrac32\sigma^2+O(\sigma^4)$ and $\cos\sigma\sin^2\sigma=\sigma^2+O(\sigma^4)$, so $\phi''(0)=-3\theta_0+6\theta_0a$.
 - **The chain-rule form agrees.** $DP_{W_1}[c''(0)]=DP_{W_1}[-W_1]=-3P(W_1)=-3\theta_0$ by Euler's identity. The curvature term is present, negative, and has factor $3$. $\phi''(0)=6\theta_0(a-\tfrac12)\le-6\theta_0\gamma$ uses $\theta_0>0$. This is L24's $6\theta(L_e-\tfrac12)$ read on $H$.
 - **Normalisation screen.** $\lvert\langle W,Q(H)\rangle-\theta\langle L_eH,H\rangle\rvert\le3.6\times10^{-16}$ over random $H\perp W$ at $(3,4)$ and $(4,5)$, with $\langle W,Q(H)\rangle$ read off $P(W\pm H)$, so the record's $L_e$ matrix carries the factor the step assumes. **No finding.**
@@ -56,18 +56,18 @@
 ## 6. Step 5, the Taylor bound and the contradiction
 
 - $\phi'(\sigma)=\phi'(0)+\phi''(0)\sigma+\int_0^\sigma(\sigma-t)\phi'''(t)\,dt\le-6\theta_0\gamma\sigma+\tfrac{27M}2\sigma^2$ for $\sigma\ge0$. Only $\phi'''\le27M$ enters, so a one-sided bound suffices. The right side is negative on $0<\sigma<\frac{12\theta_0\gamma}{27M}=\frac{4\theta_0\gamma}{9M}=r$. The arithmetic checks.
-- $c'(s)=-\sin s\,W_1+\cos s\,H$ is a unit vector orthogonal to $c(s)$, so it is tangent to the sphere at $W$, and $\phi'(s)=DP_W[c'(s)]=\langle\nabla P(W),c'(s)\rangle=\langle\operatorname{grad}^{S}P(W),c'(s)\rangle$. A critical $W$ has zero Riemannian gradient, hence $\phi'(s)=0$.
+- $c'(s)=-\sin s\,W_1+\cos s\,H$ is a unit vector orthogonal to $c(s)$, so it is tangent to the sphere at $W$, and $\phi'(s)=DP_W[c'(s)]=\langle\nabla P(W),c'(s)\rangle=\langle\mathop{\mathrm{grad}}^{S}P(W),c'(s)\rangle$. A critical $W$ has zero Riemannian gradient, hence $\phi'(s)=0$.
 - **The direction is right.** The lemma needs "critical implies $\phi'(s)=0$", whose contrapositive is "$\phi'(s)\ne0$ implies not critical". A gradient vanishing along the circle but nonzero elsewhere would make $\phi'(s)=0$ without criticality, which is harmless because the proof never infers criticality from $\phi'=0$. **No finding.**
 
 ## 7. The equivariance clause
 
 - $O(n)$ acts on $\mathcal W_n$ by orthogonal maps, and $W\mapsto W^2$, $W\mapsto W^\#$ and the Weyl projection are equivariant, so $Q(gX)=gQ(X)$. Polarising gives $gX\circ gY=g(X\circ Y)$, and $P(gX)=\langle gX,gQ(X)\rangle=P(X)$.
 - $W_1=gW_0$ is critical with $\theta_1=\theta_0$ and $e_1=ge$. From $L_{e_1}(gY)=g(e\circ Y)$ follows $L_{ge}=gL_eg^{-1}$.
-- **The orbit-tangent condition transfers.** $g\cdot(\xi\cdot W_0)=(\operatorname{Ad}_g\xi)\cdot W_1$, so $gT_{W_0}\mathcal O=T_{W_1}\mathcal O$, and $g$ maps $W_0$ to $W_1$ isometrically. For unit $H$ normal at $W_1$, $g^{-1}H$ is unit normal at $W_0$, and $\langle L_{e_1}H,H\rangle=\langle L_eg^{-1}H,g^{-1}H\rangle\le\tfrac12-\gamma$. **No finding.**
+- **The orbit-tangent condition transfers.** $g\cdot(\xi\cdot W_0)=(\mathop{\mathrm{Ad}}_g\xi)\cdot W_1$, so $gT_{W_0}\mathcal O=T_{W_1}\mathcal O$, and $g$ maps $W_0$ to $W_1$ isometrically. For unit $H$ normal at $W_1$, $g^{-1}H$ is unit normal at $W_0$, and $\langle L_{e_1}H,H\rangle=\langle L_eg^{-1}H,g^{-1}H\rangle\le\tfrac12-\gamma$. **No finding.**
 
 ## 8. Whether the radius is about the right set
 
-- The conclusion is $\mathrm{Crit}(P)\cap\{W:0<\operatorname{dist}(W,\mathcal O)<r\}=\emptyset$, which is isolation of the whole orbit inside $\mathrm{Crit}(P)$. It applies to critical points of every value, including $\theta<0$.
+- The conclusion is $\mathrm{Crit}(P)\cap\{W:0<\mathop{\mathrm{dist}}(W,\mathcal O)<r\}=\emptyset$, which is isolation of the whole orbit inside $\mathrm{Crit}(P)$. It applies to critical points of every value, including $\theta<0$.
 - **Gauge-rotated copies are correctly allowed.** They lie on $\mathcal O$ at distance $0$, and the tube is measured from the orbit, never from a single point. This is exactly the defect r929 found in the withdrawn L215 radius, and here it is handled structurally.
 - **For the localisation route**, a statement "every critical point above the rival lies within $\varepsilon_n$ of a rigid orbit" finishes with this lemma once $\varepsilon_n<r$ in geodesic distance. If $\varepsilon_n$ is a Frobenius chord, the condition is $2\arcsin(\varepsilon_n/2)<r$, satisfied by $\varepsilon_n<r$ since arc $\ge$ chord. *The orbit here is the $O(n)$-orbit, while L145 uses $SO(n)$. The larger orbit is what isolation modulo the full gauge needs, and a consumer should keep the group consistent.* **No finding.**
 

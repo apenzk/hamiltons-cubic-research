@@ -10,12 +10,12 @@
 | --- | --- |
 | **L138(a)**, Daleckii–Krein multipliers $\{0,\tfrac13,1\}$, structure and dominant-row zeroing | **CONFIRMED in structure, REFUTED in sign.** The multipliers are $0,-\tfrac13,-1$. "$c_1$ contributes nothing to $Z$" is right; the $(K,K)$ block being carried by $D_-$ rather than a multiplier is right |
 | **L138(b)**, $\Lambda^4\mathbb R^4$ one-dimensional, $\mathrm{Alt}$ the projection onto $\star$, $\star$ block-diagonal, $E\times A$ dropping out | **CONFIRMED** |
-| **L138(b)**, $\langle Z,\star\rangle=(B_{22}+B_{33})-\operatorname{tr}(\Pi_AD_-)$ | **REFUTED in sign.** The true value is $-(B_{22}+B_{33})-\operatorname{tr}(\Pi_AD_-)=-F$ |
+| **L138(b)**, $\langle Z,\star\rangle=(B_{22}+B_{33})-\mathop{\mathrm{tr}}(\Pi_AD_-)$ | **REFUTED in sign.** The true value is $-(B_{22}+B_{33})-\mathop{\mathrm{tr}}(\Pi_AD_-)=-F$ |
 | **L138(b)**, $B_{11}=0$, $B_{33}=-B_{22}$ on $\{F=0\}$, hence $\langle Z,\star\rangle=0$ | **CONFIRMED**, and strengthened: $\Pi_AD_-=0$, not merely its trace |
 | **L138(b)**, $\lVert g_1\rVert^2\le2(\lVert c_2^{K'}\rVert^2+\lVert c_3^{K'}\rVert^2)+\lVert\mathrm{Alt}(D_-)\rVert^2$ | **REFUTED.** Two incompatible accountings are spliced; the cross term $2\langle\mathrm{Alt}(\hat C),\mathrm{Alt}(D_-)\rangle$ is dropped without justification. Separately the constant $2$ is $3\times$ loose, the sharp one is $\tfrac23$ |
 | **L138(c)**, "the $B_{12},B_{13}$ terms cancel exactly" | **REFUTED as a mechanism, and VACUOUS as a statement.** $B_{12}=B_{13}=0$ identically on $T_u\mathcal O^\perp$ |
 | **L138(c)**, the displayed $\Delta_2$ bound | **REFUTED**, inheriting [L137](../findings/route-a.md)'s three wrong coefficients. Its internal arithmetic ($2-\tfrac23=\tfrac43$; $\lVert c_1\rVert^2\le\tfrac12$) is correct |
-| **L139(a)**, $\mathrm{Alt}(N)$ supported on the distinguished $4$-set alone, hence $\mathrm{Alt}(N)=0$ on $\{F=0\}$ | **REFUTED.** The support claim is false; explicit witness inside $\{F=0\}\cap T_u\mathcal O^\perp$ at $n=8$ with $\lVert\mathrm{Alt}(N)\rVert^2=0.093$. The coefficient $-\tfrac16\operatorname{tr}(B)$ on the distinguished set is **CONFIRMED** |
+| **L139(a)**, $\mathrm{Alt}(N)$ supported on the distinguished $4$-set alone, hence $\mathrm{Alt}(N)=0$ on $\{F=0\}$ | **REFUTED.** The support claim is false; explicit witness inside $\{F=0\}\cap T_u\mathcal O^\perp$ at $n=8$ with $\lVert\mathrm{Alt}(N)\rVert^2=0.093$. The coefficient $-\tfrac16\mathop{\mathrm{tr}}(B)$ on the distinguished set is **CONFIRMED** |
 | **L139(b)** ($\lVert\mathrm{Alt}(N_-)\rVert^2\le\tfrac14\lVert N\rVert^2$ | **CONFIRMED as a conditional**), the record's proof does use Bianchi only through $\mathrm{Alt}(M)=0$, but **INAPPLICABLE**, because (a) does not supply that hypothesis |
 | **L139(c)**, the linear-programme arithmetic ($\tfrac23,\tfrac14,\tfrac16$; max $\tfrac23$) | **CONFIRMED** |
 | **L139(c)**, the dimension arithmetic ($\lvert\kappa_n\rvert\le1.1022$, $\theta_0\le1.34722$, $n\approx31.75$) | **CONFIRMED**, and the endpoint $n\le31$ is right *for those constants* |
@@ -34,7 +34,7 @@ and nothing else is consistent with the rest of the chain. Three independent anc
 
 - $g_0=\mathrm{Alt}(u_-)=a\star$ with $a=+\tfrac1{3\sqrt6}$ ([L135](../findings/route-a.md), and [r9](REVIEW_r9.md)'s hand derivation $\mathrm{Alt}(\hat\omega_i\hat\omega_i^{\mathsf T})=\tfrac16\star$). Under $x\mapsto\min(x,0)$ one gets $-a\star$.
 - [L137](../findings/route-a.md)'s Hansen–Pedersen step needs $f$ **convex** with $f(0)=0$. $\max(-x,0)$ is convex; $\min(x,0)$ is concave.
-- [L17](../findings/route-a.md)'s chain $F\ge\tfrac23\operatorname{tr}(B_+)+\tfrac13\operatorname{tr}(B_-)$ closes only with $B_\pm\succeq0$ and $\operatorname{tr}B=\operatorname{tr}B_+-\operatorname{tr}B_-$.
+- [L17](../findings/route-a.md)'s chain $F\ge\tfrac23\mathop{\mathrm{tr}}(B_+)+\tfrac13\mathop{\mathrm{tr}}(B_-)$ closes only with $B_\pm\succeq0$ and $\mathop{\mathrm{tr}}B=\mathop{\mathrm{tr}}B_+-\mathop{\mathrm{tr}}B_-$.
 
 *Screen (reported as a screen).* At $n=8$: $\lVert\star\rVert^2=6$, $\mathrm{Alt}(\hat\omega_1\hat\omega_1^{\mathsf T})$ has norm$^2$ $\tfrac16$, $\mathrm{Alt}(\star)$ has norm$^2$ $6$, and $\langle u_-,\star\rangle/6=0.136083=\tfrac1{3\sqrt6}$, all to $10^{-15}$, under $X_-\succeq0$ and no other.
 
@@ -46,7 +46,7 @@ Every entry $Z_{P,Q}$ with $P,Q$ **disjoint** planes belongs to exactly one $4$-
 
 ## 1. L138(a), the multipliers are negative
 
-With $f(x)=\max(-x,0)$ and $\operatorname{spec}(u)=\tfrac1{\sqrt6}(2,-1,-1)$ on $E$, $0$ on $K$, the divided differences $f^{[1]}(\lambda,\mu)$ are
+With $f(x)=\max(-x,0)$ and $\mathop{\mathrm{spec}}(u)=\tfrac1{\sqrt6}(2,-1,-1)$ on $E$, $0$ on $K$, the divided differences $f^{[1]}(\lambda,\mu)$ are
 
 | pair | value |
 | --- | --- |
@@ -58,7 +58,7 @@ With $f(x)=\max(-x,0)$ and $\operatorname{spec}(u)=\tfrac1{\sqrt6}(2,-1,-1)$ on 
 
 L138(a) states $+\tfrac13$ and $+1$. The record's own [r9](REVIEW_r9.md) already carries "$0$ on $(+,+)$, $-1$ on $(-,-)$ and $(-,0)$, $-\tfrac13$ on $(+,-)$, $0$ on $(+,0)$", so the lemma disagrees with the report it descends from.
 
-**Consistency check that settles it.** $\operatorname{tr}(\Pi_EZ)=0\cdot B_{11}-B_{22}-B_{33}$, so $\langle Z,\star\rangle=-(B_{22}+B_{33})-\operatorname{tr}(\Pi_AD_-)=-F$, and $d^+\delta^2=2a\langle\star,Z\rangle=-2aF$, **exactly [ATTEMPTS.md line 825](../ATTEMPTS.md)**. With L138(a)'s signs one gets $+2aF$, contradicting the record's first-order lemma. The negative signs are forced.
+**Consistency check that settles it.** $\mathop{\mathrm{tr}}(\Pi_EZ)=0\cdot B_{11}-B_{22}-B_{33}$, so $\langle Z,\star\rangle=-(B_{22}+B_{33})-\mathop{\mathrm{tr}}(\Pi_AD_-)=-F$, and $d^+\delta^2=2a\langle\star,Z\rangle=-2aF$, **exactly [ATTEMPTS.md line 825](../ATTEMPTS.md)**. With L138(a)'s signs one gets $+2aF$, contradicting the record's first-order lemma. The negative signs are forced.
 
 **What survives.** The *structure* is right, and it is the part L138 uses: the $(\hat\omega_1,K)$ multiplier is genuinely $0$, so $c_1$ contributes nothing to $Z$; and the $(K,K)$ block is genuinely carried by $D_-$ rather than by a multiplier, because $f$ has no derivative at $0$. Magnitudes $\tfrac13$ and $1$ are right, so the squares that enter $\lVert Z\rVert^2$ are unaffected.
 
@@ -74,9 +74,9 @@ L138(a) states $+\tfrac13$ and $+1$. The record's own [r9](REVIEW_r9.md) already
 
 $\Lambda^2\mathbb R^4=E\oplus A$ and $\Lambda^4\mathbb R^4$ is one-dimensional, spanned by $\star$; $\mathrm{Alt}$ restricted to $S^2(\Lambda^2\mathbb R^4)$ is the orthogonal projection onto $\star$; and $\star=\Pi_E-\Pi_A$ is block-diagonal across $E\oplus A$, so the $E\times A$ entries of $Z$ pair to zero against it. Every entry of $Z$'s $(\Lambda^2\mathbb R^4)\times(\Lambda^2\mathbb R^4)$ block therefore reaches $\mathrm{Alt}$ only through the single number $\langle Z,\star\rangle$, the lemma's stated mechanism, and it is correct.
 
-$B_{11}=0$ and $B_{33}=-B_{22}$ on the cone also hold, and the derivation is worth writing out because L138 compresses it. [L17](../findings/route-a.md)'s ingredient (d) is $\langle H,\star\rangle=0$, i.e. $H_{11}+H_{22}+H_{33}=\operatorname{tr}(B_{\mathrm{ASD}})$ with $B_{\mathrm{ASD}}=\Pi_AH\Pi_A$, together with tangency $2H_{11}=H_{22}+H_{33}$. **On $\{F=0\}$ the equality case forces $B_{\mathrm{ASD}}=0$** (both $\operatorname{tr}B_+$ and $\operatorname{tr}B_-$ vanish and both parts are PSD), hence $\operatorname{tr}(B)=H_{11}+H_{22}+H_{33}=0$; with tangency, $3H_{11}=0$ and $H_{22}+H_{33}=0$. So the indices do mean what L138 assumes, L17's $B$ is the ASD block, L138's $B$ is $H_{EE}$, and the two are correctly bridged.
+$B_{11}=0$ and $B_{33}=-B_{22}$ on the cone also hold, and the derivation is worth writing out because L138 compresses it. [L17](../findings/route-a.md)'s ingredient (d) is $\langle H,\star\rangle=0$, i.e. $H_{11}+H_{22}+H_{33}=\mathop{\mathrm{tr}}(B_{\mathrm{ASD}})$ with $B_{\mathrm{ASD}}=\Pi_AH\Pi_A$, together with tangency $2H_{11}=H_{22}+H_{33}$. **On $\{F=0\}$ the equality case forces $B_{\mathrm{ASD}}=0$** (both $\mathop{\mathrm{tr}}B_+$ and $\mathop{\mathrm{tr}}B_-$ vanish and both parts are PSD), hence $\mathop{\mathrm{tr}}(B)=H_{11}+H_{22}+H_{33}=0$; with tangency, $3H_{11}=0$ and $H_{22}+H_{33}=0$. So the indices do mean what L138 assumes, L17's $B$ is the ASD block, L138's $B$ is $H_{EE}$, and the two are correctly bridged.
 
-**A strengthening the lemma leaves on the table.** L17's equality also gives $\operatorname{tr}(\Pi_AD_-)=0$ with $D_-\succeq0$ and $\Pi_A\succeq0$, which forces $\Pi_AD_-=0$ outright, not merely its trace. So on the cone $D_-$ has no $A$-content at all: its $A\times A$ and $A\times K'$ blocks vanish. That is exactly what makes the block split below clean.
+**A strengthening the lemma leaves on the table.** L17's equality also gives $\mathop{\mathrm{tr}}(\Pi_AD_-)=0$ with $D_-\succeq0$ and $\Pi_A\succeq0$, which forces $\Pi_AD_-=0$ outright, not merely its trace. So on the cone $D_-$ has no $A$-content at all: its $A\times A$ and $A\times K'$ blocks vanish. That is exactly what makes the block split below clean.
 
 ### 2.2 The displayed inequality is refuted
 
@@ -115,11 +115,11 @@ So the $B_{12},B_{13}$ terms on **both** sides of the claimed cancellation are z
 
 **The arithmetic that is right.** $2-\tfrac23=\tfrac43$ is the correct assembly of (b)'s constant with L137's $-\tfrac23$, and $\lVert c_1\rVert^2\le\tfrac12$, $\lVert c_2\rVert^2+\lVert c_3\rVert^2\le\tfrac12$ do follow from $\lVert H\rVert^2=\lVert B\rVert^2+2\sum\lVert c_i\rVert^2+\lVert D\rVert^2=1$.
 
-**The inputs that are not.** I re-derived [L136(a)](../findings/route-a.md) from scratch and it is wrong in three separate ways, agreeing with [r425](REVIEW_r425.md) and [r426](REVIEW_r426.md), which I read only after finishing. The root cause is that $\operatorname{tr}(\Pi_EX_2)$ uses the **fixed** projector $\Pi_E$, while L136's proof evaluates the trace over the **moving** invariant subspace $E(t)$; the two differ at exactly order $t^2$, by the eigenvector tilt.
+**The inputs that are not.** I re-derived [L136(a)](../findings/route-a.md) from scratch and it is wrong in three separate ways, agreeing with [r425](REVIEW_r425.md) and [r426](REVIEW_r426.md), which I read only after finishing. The root cause is that $\mathop{\mathrm{tr}}(\Pi_EX_2)$ uses the **fixed** projector $\Pi_E$, while L136's proof evaluates the trace over the **moving** invariant subspace $E(t)$; the two differ at exactly order $t^2$, by the eigenvector tilt.
 
 *Screen, isolated unit directions at $n=8$, $t^2$-coefficients:*
 
-| $H$ | $\operatorname{tr}(\Pi_EX_2)$ | $\langle\star,X_2\rangle$ | L136(a) predicts |
+| $H$ | $\mathop{\mathrm{tr}}(\Pi_EX_2)$ | $\langle\star,X_2\rangle$ | L136(a) predicts |
 | --- | --- | --- | --- |
 | $\hat\omega_2\odot e_{45}$ (i.e. $c_2$ into $K'$) | $+0.00009$ | $+0.00009$ | $-1.224745$ |
 | $\hat\omega_2\odot\hat\eta_1$ (i.e. $c_2$ into $A$) | $+0.00009$ | $-1.224469$ | $-1.224745$ |
@@ -127,7 +127,7 @@ So the $B_{12},B_{13}$ terms on **both** sides of the claimed cancellation are z
 | $\hat\omega_1\odot e_{45}$ ($c_1$ into $K'$) | $+0.000011$ | $+0.000011$ | $0$ |
 | $\hat\omega_1\odot\hat\eta_1$ ($c_1$ into $A$) | $+0.000011$ | $-0.612338$ | $0$ |
 
-Read off: the $CC^\top$ term **does not exist** for the $K'$ part of $c_2,c_3$, the eigenvalue deepening $+\sqrt6t^2\lVert c\rVert^2$ is cancelled exactly by the eigenvector tilt $-6t^2\lVert c\rVert^2\cdot\tfrac1{\sqrt6}$, and survives only for the $A$ part, where it arrives through $-\operatorname{tr}(\Pi_AX_2)$. The $B_{12}$ term has the **opposite sign** ($+\tfrac{\sqrt6}3$, and the $2a$ conversion makes it $+\tfrac29$: deepening a negative eigenvalue *increases* the defect). And $\rho$ enters with a minus sign, so L137's $+\tfrac13\lVert c_1\rVert^2$ (its only positive term, the one the whole chain was built to fight), is spurious.
+Read off: the $CC^\top$ term **does not exist** for the $K'$ part of $c_2,c_3$, the eigenvalue deepening $+\sqrt6t^2\lVert c\rVert^2$ is cancelled exactly by the eigenvector tilt $-6t^2\lVert c\rVert^2\cdot\tfrac1{\sqrt6}$, and survives only for the $A$ part, where it arrives through $-\mathop{\mathrm{tr}}(\Pi_AX_2)$. The $B_{12}$ term has the **opposite sign** ($+\tfrac{\sqrt6}3$, and the $2a$ conversion makes it $+\tfrac29$: deepening a negative eigenvalue *increases* the defect). And $\rho$ enters with a minus sign, so L137's $+\tfrac13\lVert c_1\rVert^2$ (its only positive term, the one the whole chain was built to fight), is spurious.
 
 Consequence for L138(c): the $-\tfrac23(\lVert c_2\rVert^2+\lVert c_3\rVert^2)$ that produces the $\tfrac43$ does not exist off the $A$-component, and the $K'$-component is precisely what (b)'s term is made of. **The displayed bound is refuted.**
 
@@ -137,15 +137,15 @@ Consequence for L138(c): the $-\tfrac23(\lVert c_2\rVert^2+\lVert c_3\rVert^2)$ 
 
 **The proof step is false.** "A pairing involving $E$ needs its partner inside $\mathbb R^4$ too: the only $4$-set reached is $\{1,2,3,4\}$." A $\Lambda^4$ component pairs a plane with its **complement in the $4$-set**, and the $4$-set need not lie in $\mathbb R^4$. The plane $\{1,2\}\subset\mathbb R^4$ pairs with $\{3,5\}$ on the $4$-set $\{1,2,3,5\}$ and with $\{5,6\}$ on $\{1,2,5,6\}$. Since $e_{12}=\tfrac1{\sqrt2}(\hat\omega_1+\hat\eta_1)$ has a nonzero $E$-component, the block $\Pi_EH\Pi_{K'}$ reaches $\mathrm{Alt}$ on **every** $4$-set with three or two indices in $\mathbb R^4$.
 
-**The exact identity.** With $\mathrm{Alt}(H)=0$ and $\operatorname{tr}(B)=0$ on the cone,
+**The exact identity.** With $\mathrm{Alt}(H)=0$ and $\mathop{\mathrm{tr}}(B)=0$ on the cone,
 $$\mathrm{Alt}(N)=-\mathrm{Alt}\big(\Pi_EH\Pi_{K'}+\Pi_{K'}H\Pi_E\big),$$
 and on a $4$-set $S=\{i,j,a,b\}$ with $i,j\le4<a,b$ this reads $\alpha_S(N)=-s_{ij}\,c_{p(ij)}^{ab}$ with $s_{ij}=\pm\tfrac1{\sqrt2}$. Concretely $\alpha_{\{1,2,5,6\}}(N)=-\tfrac1{\sqrt2}c_1^{56}$. So $\mathrm{Alt}(N)=0$ would require the whole $E\times K'$ block of $H$ to have vanishing $\mathrm{Alt}$, a condition on $C$, about which $\{F=0\}$ says nothing.
 
-*Screen 1.* Random Bianchi $H$ at $n=8$ ($\max_S\lvert\alpha_S(H)\rvert=6\times10^{-16}$): $\alpha_S(N)$ matches the identity above to $10^{-15}$ on the $(2,2)$-sets $\{0,1,4,5\},\{0,2,4,5\},\{0,3,4,5\}$ and the $(3,1)$-sets $\{0,1,2,4\},\{0,1,3,4\}$, is $0$ on $\{4,5,6,7\}$, and equals $-\tfrac{\operatorname{tr}B}{6}\alpha(\star)$ on $\{0,1,2,3\}$.
+*Screen 1.* Random Bianchi $H$ at $n=8$ ($\max_S\lvert\alpha_S(H)\rvert=6\times10^{-16}$): $\alpha_S(N)$ matches the identity above to $10^{-15}$ on the $(2,2)$-sets $\{0,1,4,5\},\{0,2,4,5\},\{0,3,4,5\}$ and the $(3,1)$-sets $\{0,1,2,4\},\{0,1,3,4\}$, is $0$ on $\{4,5,6,7\}$, and equals $-\tfrac{\mathop{\mathrm{tr}}B}{6}\alpha(\star)$ on $\{0,1,2,3\}$.
 
-*Screen 2, the witness.* Solving, inside $S^2(\Lambda^2\mathbb R^8)$, the linear system {first Bianchi} $\cap$ {Ricci-flat} $\cap$ $\{\Pi_AH\Pi_A=0\}$ $\cap$ $\{\Pi_AH\Pi_K=0\}$ $\cap$ $\{B_{22}+B_{33}=0\}$ $\cap$ $\{H\perp u\}$ $\cap$ $\{H\perp T_u\mathcal O\}$ gives a **209-dimensional** space of genuine Weyl tensors on the equality cone (verified: $F=7\times10^{-17}$, $\operatorname{tr}B=4\times10^{-17}$; note $\Pi_AH\Pi_K=0$ forces $\Pi_AD_-=0$, so this is a subset of $\{F=0\}$, which is all that is needed). On it, $\max_{S\ne\{1,2,3,4\}}\lvert\alpha_S(N)\rvert=0.238$, and the extremal unit member has $\lVert\mathrm{Alt}(N)\rVert^2=0.0925$ with $\lVert N\rVert^2=0.609$.
+*Screen 2, the witness.* Solving, inside $S^2(\Lambda^2\mathbb R^8)$, the linear system {first Bianchi} $\cap$ {Ricci-flat} $\cap$ $\{\Pi_AH\Pi_A=0\}$ $\cap$ $\{\Pi_AH\Pi_K=0\}$ $\cap$ $\{B_{22}+B_{33}=0\}$ $\cap$ $\{H\perp u\}$ $\cap$ $\{H\perp T_u\mathcal O\}$ gives a **209-dimensional** space of genuine Weyl tensors on the equality cone (verified: $F=7\times10^{-17}$, $\mathop{\mathrm{tr}}B=4\times10^{-17}$; note $\Pi_AH\Pi_K=0$ forces $\Pi_AD_-=0$, so this is a subset of $\{F=0\}$, which is all that is needed). On it, $\max_{S\ne\{1,2,3,4\}}\lvert\alpha_S(N)\rvert=0.238$, and the extremal unit member has $\lVert\mathrm{Alt}(N)\rVert^2=0.0925$ with $\lVert N\rVert^2=0.609$.
 
-**What is right in (a).** The distinguished-$4$-set coefficient. $\langle\Pi_EH\Pi_E,\star\rangle=\operatorname{tr}(\Pi_EH\Pi_E)=\operatorname{tr}(B)$ using $\star\vert_E=+1$, and $\lVert\star\rVert^2=6$ gives $\mathrm{Alt}(\Pi_EH\Pi_E)=\tfrac{\operatorname{tr}B}6\star$, so $\mathrm{Alt}(N)\vert_{\{1,2,3,4\}}=-\tfrac{\operatorname{tr}B}6\star$, and it does vanish on the cone. The $E\times A$ terms are indeed killed there by $\star$'s block-diagonality. All of that is correct, it just does not exhaust $\mathrm{Alt}(N)$.
+**What is right in (a).** The distinguished-$4$-set coefficient. $\langle\Pi_EH\Pi_E,\star\rangle=\mathop{\mathrm{tr}}(\Pi_EH\Pi_E)=\mathop{\mathrm{tr}}(B)$ using $\star\vert_E=+1$, and $\lVert\star\rVert^2=6$ gives $\mathrm{Alt}(\Pi_EH\Pi_E)=\tfrac{\mathop{\mathrm{tr}}B}6\star$, so $\mathrm{Alt}(N)\vert_{\{1,2,3,4\}}=-\tfrac{\mathop{\mathrm{tr}}B}6\star$, and it does vanish on the cone. The $E\times A$ terms are indeed killed there by $\star$'s block-diagonality. All of that is correct, it just does not exhaust $\mathrm{Alt}(N)$.
 
 **Vacuity check.** The refutation is not vacuous in either direction: the cone is $209$-dimensional at $n=8$, and $\mathrm{Alt}(N)$ is nonzero on an open subset of it. Conversely the *claim* is not vacuously true, it holds on the padded flat (where $C=0$), which is exactly the family the lemma's sanity checks are run on, and fails off it.
 
@@ -196,7 +196,7 @@ The safe formulation is: *on $\{F=0\}\cap T_u\mathcal O^\perp$, $c_2(H)\le\ldots
 ## 8. Summary of corrections, in the order they should be applied
 
 1. **L138(a).** Multipliers are $0,-\tfrac13,-1$. Cite the Schur-complement/homogeneity route rather than Daleckii–Krein, which does not apply at a kernel.
-2. **L138(b).** $\langle Z,\star\rangle=-(B_{22}+B_{33})-\operatorname{tr}(\Pi_AD_-)=-F$; note the identity, it is cleaner than the two-terms-separately reading. Record $\Pi_AD_-=0$ on the cone, not just its trace. Replace the displayed inequality by $\lVert g_1\rVert\le\sqrt{\tfrac23}\gamma+\lVert\mathrm{Alt}(D_-)\rVert$ with $\gamma^2=\lVert c_2^{K'}\rVert^2+\lVert c_3^{K'}\rVert^2$, and say that the $4$-sets involved carry three or two indices in $\mathbb R^4$.
+2. **L138(b).** $\langle Z,\star\rangle=-(B_{22}+B_{33})-\mathop{\mathrm{tr}}(\Pi_AD_-)=-F$; note the identity, it is cleaner than the two-terms-separately reading. Record $\Pi_AD_-=0$ on the cone, not just its trace. Replace the displayed inequality by $\lVert g_1\rVert\le\sqrt{\tfrac23}\gamma+\lVert\mathrm{Alt}(D_-)\rVert$ with $\gamma^2=\lVert c_2^{K'}\rVert^2+\lVert c_3^{K'}\rVert^2$, and say that the $4$-sets involved carry three or two indices in $\mathbb R^4$.
 3. **L138(c).** Strike the cancellation claim. Record instead that $B_{12}=B_{13}=0$ on $T_u\mathcal O^\perp$, which makes both the L136 term and the $\lVert Z\rVert^2$ term identically zero there, a fact worth having, because it removes the $B$ block from the budget entirely.
 4. **L139(a).** Withdraw. Replace by $\mathrm{Alt}(N)=-\mathrm{Alt}(\Pi_EH\Pi_{K'}+\Pi_{K'}H\Pi_E)$ on the cone, with the $(2,2)$-set coefficient $-s_{ij}c_{p(ij)}^{ab}$.
 5. **L139(b).** Keep as a conditional, restate with the hypothesis explicit and with the degraded form $\lVert\mathrm{Alt}(N_-)\rVert\le\tfrac12(\lVert N\rVert+\lVert\mathrm{Alt}(N)\rVert)$ beside it.

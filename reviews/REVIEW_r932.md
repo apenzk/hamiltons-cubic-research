@@ -11,7 +11,7 @@ This round checked a written derivation link by link, on a cold brief identical 
 | 5 | Step 4, Bernstein iteration and 27 | CONFIRMED | $\phi'$ and $\phi''$ are again real trigonometric polynomials of degree at most $3$, so three applications give $3^3M$ |
 | 6 | Step 5, Taylor bound and contradiction | CONFIRMED | integral remainder needs only $\phi'''\le27M$, $c'(s)\perp c(s)$ makes $\phi'(s)$ the Riemannian gradient paired with a unit tangent, and the contradiction runs critical $\Rightarrow\phi'(s)=0$, the correct direction |
 | 7 | Equivariance clause | CONFIRMED | $Q(gX)=gQ(X)$ for every $g\in O(n)$, the action is isometric and $T_{gW_0}\mathcal O=g\,T_{W_0}\mathcal O$, so the whole hypothesis transports |
-| 8 | Right set for isolation | CONFIRMED | the conclusion is $\mathrm{Crit}(P)\cap\{0\le\operatorname{dist}<r\}=\mathcal O$, which is what "$\varepsilon_n<r_i$ finishes the localisation" consumes, with the distance geodesic |
+| 8 | Right set for isolation | CONFIRMED | the conclusion is $\mathrm{Crit}(P)\cap\{0\le\mathop{\mathrm{dist}}<r\}=\mathcal O$, which is what "$\varepsilon_n<r_i$ finishes the localisation" consumes, with the distance geodesic |
 | 9 | Hypothesis inventory | CONFIRMED | $\theta_0>0$ enters three times, criticality once, maximality never, L143 only through $M$, and the metrised identity is load-bearing inside "L24's Hessian formula" |
 | 10 | The exponent | CONFIRMED | $\theta_0(n)\to\sqrt2$ gives $r_n\sim\tfrac{4\sqrt2}9n^{-3/2}$, a $\Theta$ of the displayed floor and an $\Omega$ for the true radius, and the L145 exponent match shares a mechanism while measuring a different object |
 | 11 | Prior record and literature | CONFIRMED | no explicit radius for $\mathrm{Crit}(P)$ exists on the record, and L145 to L147's $P$-side branch is the same margin-over-$\sup\lvert P\rvert$ mechanism for the penalised functional, owed a credit line |
@@ -21,9 +21,9 @@ This round checked a written derivation link by link, on a cold brief identical 
 
 ## 1. Step 1, the nearest point and the normal direction
 
-- **Attainment.** $O(n)$ acts on $\mathcal W_n$ by $\Lambda^2g$-conjugation, which is Frobenius-isometric, so $\mathcal O$ is a compact subset of the unit sphere and $\operatorname{dist}(W,\cdot)$ attains its minimum on it at some $W_1=gW_0$.
+- **Attainment.** $O(n)$ acts on $\mathcal W_n$ by $\Lambda^2g$-conjugation, which is Frobenius-isometric, so $\mathcal O$ is a compact subset of the unit sphere and $\mathop{\mathrm{dist}}(W,\cdot)$ attains its minimum on it at some $W_1=gW_0$.
 - **Exactness of the circle.** For $0<s<\pi$ the minimising arc from $W_1$ to $W$ is unique, and with $H=(W-\cos s\,W_1)/\sin s$ one has $H\perp W_1$, $\lVert H\rVert=1$ and $W=\cos s\,W_1+\sin s\,H$ exactly.
-- **Normality, by a first variation the reader can check in one line.** For $\xi\in\mathfrak{so}(n)$ put $W_1(t)=\exp(t\xi)W_1\in\mathcal O$. Since $\cos\operatorname{dist}(W,W_1(t))=\langle W,W_1(t)\rangle$ is maximal at $t=0$, $0=\langle W,\xi W_1\rangle=\cos s\,\langle W_1,\xi W_1\rangle+\sin s\,\langle H,\xi W_1\rangle=\sin s\,\langle H,\xi W_1\rangle$, the first term vanishing because the action is isometric. With $\sin s\ne0$ this is $H\perp T_{W_1}\mathcal O$.
+- **Normality, by a first variation the reader can check in one line.** For $\xi\in\mathfrak{so}(n)$ put $W_1(t)=\exp(t\xi)W_1\in\mathcal O$. Since $\cos\mathop{\mathrm{dist}}(W,W_1(t))=\langle W,W_1(t)\rangle$ is maximal at $t=0$, $0=\langle W,\xi W_1\rangle=\cos s\,\langle W_1,\xi W_1\rangle+\sin s\,\langle H,\xi W_1\rangle=\sin s\,\langle H,\xi W_1\rangle$, the first term vanishing because the action is isometric. With $\sin s\ne0$ this is $H\perp T_{W_1}\mathcal O$.
 - **Why $s<\pi/2$.** Nothing forces it for a general $W$, and the proof uses $s$ only in $(0,r)$. What makes the window harmless is that $r\le2/3$ always: for any unit normal $H$, Bernstein twice gives $\lvert\phi''(0)\rvert\le9M$, and step 3 gives $\phi''(0)\le-6\theta_0\gamma$, so $\theta_0\gamma\le\tfrac32M$ and $r=4\theta_0\gamma/(9M)\le2/3<\pi/2$. The normal space is nonzero because the orbit has dimension below that of the sphere ($P$ is odd, so the orbit is a proper subset). *Suggested wording: "for $W$ with $0<s<r$", the bound $r\le2/3$ noted once.*
 - **Uniqueness of $W_1$.** Unused. Any minimiser yields a valid $(W_1,H)$ pair, and the argument runs on that pair alone, so two nearest points change nothing.
 
@@ -71,8 +71,8 @@ No finding.
 
 - **Taylor.** $\phi'(\sigma)=\phi'(0)+\sigma\phi''(0)+\int_0^\sigma(\sigma-u)\phi'''(u)\,du$. The weight $\sigma-u\ge0$ on $[0,\sigma]$, so an upper bound $\phi'''\le27M$ alone gives $\phi'(\sigma)\le-6\theta_0\gamma\sigma+\tfrac{27M}2\sigma^2$. A one-sided bound suffices.
 - **Sign.** The right side is negative for $0<\sigma<\frac{2\cdot6\theta_0\gamma}{27M}=\frac{4\theta_0\gamma}{9M}=r$.
-- **Pairing.** $\phi'(s)=\langle\nabla P(c(s)),c'(s)\rangle$ and $c'(s)=-\sin s\,W_1+\cos s\,H$ is a unit vector orthogonal to $c(s)$, so the normal component of $\nabla P$ pairs to zero and $\phi'(s)=\langle\operatorname{grad}_{S}P(W),c'(s)\rangle$.
-- **Direction of the contradiction.** A sphere-critical $W$ has $\operatorname{grad}_SP(W)=0$ (equivalently $Q(W)\parallel W$, at any value of $P(W)$), which forces $\phi'(s)=0$. The proof shows $\phi'(s)<0$, so $W$ is non-critical. A gradient vanishing in the circle's direction while nonzero elsewhere is the converse, which the proof never uses.
+- **Pairing.** $\phi'(s)=\langle\nabla P(c(s)),c'(s)\rangle$ and $c'(s)=-\sin s\,W_1+\cos s\,H$ is a unit vector orthogonal to $c(s)$, so the normal component of $\nabla P$ pairs to zero and $\phi'(s)=\langle\mathop{\mathrm{grad}}_{S}P(W),c'(s)\rangle$.
+- **Direction of the contradiction.** A sphere-critical $W$ has $\mathop{\mathrm{grad}}_SP(W)=0$ (equivalently $Q(W)\parallel W$, at any value of $P(W)$), which forces $\phi'(s)=0$. The proof shows $\phi'(s)<0$, so $W$ is non-critical. A gradient vanishing in the circle's direction while nonzero elsewhere is the converse, which the proof never uses.
 - **Wording.** "If $W=\phi$'s point at $\sigma=s$" means $W=c(s)$, and "contradicts step 5" sits inside step 5 and refers to the displayed Taylor bound. Both are presentation.
 
 No finding.
@@ -88,7 +88,7 @@ No finding.
 
 ## 8. Is the radius statement about the right set
 
-- **What it says.** For every critical $W$ on the sphere, $\operatorname{dist}(W,\mathcal O)<r$ implies $W\in\mathcal O$. That is $\mathrm{Crit}(P)\cap U_r(\mathcal O)=\mathcal O$, so $\mathcal O$ is open and closed in $\mathrm{Crit}(P)$ with an explicit collar.
+- **What it says.** For every critical $W$ on the sphere, $\mathop{\mathrm{dist}}(W,\mathcal O)<r$ implies $W\in\mathcal O$. That is $\mathrm{Crit}(P)\cap U_r(\mathcal O)=\mathcal O$, so $\mathcal O$ is open and closed in $\mathrm{Crit}(P)$ with an explicit collar.
 - **Fit to the route.** I35 ([problem.md](../findings/problem.md)) asks for $r_i$ with "$\varepsilon_n\le\min_ir_i$". The lemma's tube is open, so the consumer needs $\varepsilon_n<r$ strictly, or a closed-tube reading at $\varepsilon_n\le r'$ for any $r'<r$. Gauge-rotated copies of $W_0$ lie on $\mathcal O$ and are correctly allowed.
 - **Metric.** $r$ is geodesic. A localisation stated in Frobenius distance $\lVert W-W_1\rVert=2\sin(s/2)\le s$ converts through $\varepsilon<2\sin(r/2)$, a loss below $10^{-4}$ relative at these radii. *A consumer should state which distance its $\varepsilon_n$ uses.*
 - **Per orbit.** The lemma isolates one orbit at a time. The route needs one $r_i$ per rigid orbit, and the block's own WHAT IT DOES NOT GIVE records padded $\mathbb{CP}^2$ as owed.
@@ -141,7 +141,7 @@ Script in the session scratchpad, on the record's [g1_le_machinery.py](../script
 - **Step 3 at a random non-critical unit $W$ and unit $H\perp W$, $n=6$**: finite-difference $\phi''(0)=0.2119111$ against $6\langle W\circ H,H\rangle-3P(W)=0.2119113$, and $\phi'(0)=-0.3606425$ against $3\langle Q(W),H\rangle=-0.3606429$, agreement to the $h^2$ error. This checks the formula off criticality, which Gate 1 did not.
 - **Full $L_e$ spectrum at four splits outside Gate 1**:
 
-| $(p,q)$ | residual | $\dim E(\tfrac12)$ | $pq$ | measured gap | formula | $\operatorname{tr}L_e$ |
+| $(p,q)$ | residual | $\dim E(\tfrac12)$ | $pq$ | measured gap | formula | $\mathop{\mathrm{tr}}L_e$ |
 |---|---|---|---|---|---|---|
 | $(3,4)$ | $2.1\times10^{-15}$ | $12$ | $12$ | $0.083333333333$ | $0.083333333333$ | $0$ |
 | $(4,5)$ | $2.9\times10^{-15}$ | $20$ | $20$ | $0.125000000000$ | $0.125000000000$ | $-7\times10^{-15}$ |

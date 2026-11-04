@@ -56,7 +56,7 @@ $$\nabla f(W_0)=3\langle u,W_0\rangle^2u-3\sum_k c_k(u)\langle u_k,W_0\rangle^2u
 
 so the Jacobian of the ideal generators at $W_0$ is computable in the same 35-dimensional arithmetic. Over 400 random $u$:
 
-$$\dim\operatorname{span}\{\nabla f(W_0):f\in K\}=28,\qquad \sigma_{28}=3.9\cdot10^{1}\ \to\ \sigma_{29}=8.7\cdot10^{-10},$$
+$$\dim\mathop{\mathrm{span}}\{\nabla f(W_0):f\in K\}=28,\qquad \sigma_{28}=3.9\cdot10^{1}\ \to\ \sigma_{29}=8.7\cdot10^{-10},$$
 
 a gap of eleven orders of magnitude. Hence $\dim T_{W_0}V(K)=35-28=7$, which is **exactly** the dimension of the orbit cone ($\dim O(5)-\dim\mathrm{Stab}(W_0)+1=10-4+1=7$). The same holds at a second, independently generated orbit point.
 
@@ -74,7 +74,7 @@ Three consequences, none of them in the record:
 
 **The complex search, which the record never ran.** For $v\in\mathbb C^{35}$, $\rho_{\mathbb C}(v)=b^*G^+b/\lVert v\rVert^6$ with $b_k=\langle u_k,v\rangle^3$; $\rho_{\mathbb C}=1$ iff $v^3\in C\otimes\mathbb C$. This is the *right* ambient space: if $v^3\in C_{\mathbb C}$ then $\mathrm{Re}\,\mathcal A(v^6)$ and $\mathrm{Im}\,\mathcal A(v^6)$ are **both real** elements of ANN, because $F\mapsto\mathrm{Cat}_F$ is real-linear and $\mathrm{Cat}_F(K,K)=0$ splits into real and imaginary parts. A real variety can have a tiny real locus and a large complex one, so restricting to real $v$ could have missed everything.
 
-**A first, too-weak test, and its correction.** All 120 complex maximisers have $\mathrm{Re}\,v$ and $\mathrm{Im}\,v$ linearly independent, but that proves nothing, because $O(5,\mathbb C)$ already carries a real $W_0$ to such points. The similarity invariant is the right test: for $g\in O(5,\mathbb C)$, $\Lambda^2(g)$ is complex orthogonal, so $M=\mathrm{expand}(v)$ moves by conjugation and the spectrum is the invariant. **Seven of forty maximisers have $\operatorname{rank}M\in\{4,5\}$ while matching every trace ratio of $W_0$** ($t_3^2/t_2^3=1/6$, $t_4/t_2^2=1/2$, $t_6/t_2^3=66/216$, to $10^{-12}$), non-semisimple points with $W_0$'s characteristic polynomial, i.e. boundary points of the cone.
+**A first, too-weak test, and its correction.** All 120 complex maximisers have $\mathrm{Re}\,v$ and $\mathrm{Im}\,v$ linearly independent, but that proves nothing, because $O(5,\mathbb C)$ already carries a real $W_0$ to such points. The similarity invariant is the right test: for $g\in O(5,\mathbb C)$, $\Lambda^2(g)$ is complex orthogonal, so $M=\mathrm{expand}(v)$ moves by conjugation and the spectrum is the invariant. **Seven of forty maximisers have $\mathop{\mathrm{rank}}M\in\{4,5\}$ while matching every trace ratio of $W_0$** ($t_3^2/t_2^3=1/6$, $t_4/t_2^2=1/2$, $t_6/t_2^3=66/216$, to $10^{-12}$), non-semisimple points with $W_0$'s characteristic polynomial, i.e. boundary points of the cone.
 
 **The decisive test, which subsumes the geometry.** $\mathcal A(v^6)$ is new exactly when it is *not* proportional to $\mathcal A(W_0^6)$, and since $\langle\mathcal A(v^6),\Phi\rangle\propto\Phi(v)$ this reads: **the 14-vector $(\Phi_r(v))_r$ is not proportional to $(\Phi_r(W_0))_r$.** The locus where it *is* proportional is Zariski closed and contains the orbit cone, hence its closure, so boundary points can never separate, and no spectral bookkeeping is needed. Controls: three real orbit points separate by $2\cdot10^{-16}$, three random points by $0.40$–$0.60$. Result:
 
@@ -120,7 +120,7 @@ $$\Rightarrow\quad \text{rank}=13,\qquad \dim\mathrm{ANN}=14-13=1.$$
 - $|\cos|=0.99999994$, **0.0195 degrees**, relative distance $3.4\cdot10^{-4}$;
 - the second-smallest singular vector is orthogonal to it, $|\cos|=1.6\cdot10^{-4}$.
 
-**Consequence.** $\mathrm{ANN}=\operatorname{span}\{\mathcal A(W_0^6)\}$, and $F_5\perp\mathcal A(W_0^6)$ because $F_5(W_0)=0$. So
+**Consequence.** $\mathrm{ANN}=\mathop{\mathrm{span}}\{\mathcal A(W_0^6)\}$, and $F_5\perp\mathcal A(W_0^6)$ because $F_5(W_0)=0$. So
 
 > **$F_5$ lies in the image of the certificate map. The necessary condition the file was written to isolate is satisfied, $\text{rank}=13$, and the $n=5$ route survives to the PSD question.**
 
@@ -173,7 +173,7 @@ The same commit added the caveat to `run_n5_order2.py` ("*the family is 36 - ran
 
 ### 5d. $F_5$ in the image, checked directly rather than inferred
 
-[f5_in_image.py](../scripts/reviewers/r208/f5_in_image.py). $\text{rank}=13$ says the image is the *whole* 13-dimensional space of invariant sextics vanishing at $W_0$, so $F_5$ is in it. Rather than infer that, $F_5=\tfrac32\lVert W\rVert^6-9\operatorname{tr}(W^3)^2$ is expanded in the 14 explicit sextics (relative residual $3.4\cdot10^{-15}$, itself an independent check that the 14 really are a basis of the invariant sextics, since $F_5$ was built from a formula sharing nothing with them) and projected onto $\operatorname{span}\{\mathcal A(x_a^2)\}$:
+[f5_in_image.py](../scripts/reviewers/r208/f5_in_image.py). $\text{rank}=13$ says the image is the *whole* 13-dimensional space of invariant sextics vanishing at $W_0$, so $F_5$ is in it. Rather than infer that, $F_5=\tfrac32\lVert W\rVert^6-9\mathop{\mathrm{tr}}(W^3)^2$ is expanded in the 14 explicit sextics (relative residual $3.4\cdot10^{-15}$, itself an independent check that the 14 really are a basis of the invariant sextics, since $F_5$ was built from a formula sharing nothing with them) and projected onto $\mathop{\mathrm{span}}\{\mathcal A(x_a^2)\}$:
 
 | direction | residual after projection onto the 13-dimensional image |
 |---|---|
@@ -226,7 +226,7 @@ Three orders of magnitude of separation, so the objects being fitted do lie in t
 
 Claims 4 and 5 were attacked independently and their answers constrain each other, which is the strongest form of corroboration available here.
 
-- **Claim 5 makes claim 4's target unattainable.** $\dim\mathrm{ANN}=1$ forces $\mathrm{ANN}=\operatorname{span}\{\mathcal A(W_0^6)\}$, so *no* $v$ whatever (on the cone, off it, real or complex), can give an $\mathcal A(v^6)$ independent of $\mathcal A(W_0^6)$. The brief's "that single witness would produce a second obstruction candidate" is, given claim 5's answer, a hunt that could not have succeeded. The 160 ascents finding nothing is exactly what $\dim\mathrm{ANN}=1$ predicts.
+- **Claim 5 makes claim 4's target unattainable.** $\dim\mathrm{ANN}=1$ forces $\mathrm{ANN}=\mathop{\mathrm{span}}\{\mathcal A(W_0^6)\}$, so *no* $v$ whatever (on the cone, off it, real or complex), can give an $\mathcal A(v^6)$ independent of $\mathcal A(W_0^6)$. The brief's "that single witness would produce a second obstruction candidate" is, given claim 5's answer, a hunt that could not have succeeded. The 160 ascents finding nothing is exactly what $\dim\mathrm{ANN}=1$ predicts.
 - **Claim 4 corroborates claim 5 from the other direction.** The witness hunt is a search over $v$; the rank measurement is a linear-algebra computation over $x\in K$. They share the object $C$ and nothing else (different scripts, different quantities, different failure modes) and they agree.
 
 ## What is left open

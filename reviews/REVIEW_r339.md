@@ -106,7 +106,7 @@ $$k(\lambda-\mu)+(v-1)\mu-k^2+k=0\ \Longleftrightarrow\ k\lambda+k-k^2+\mu(v-1-k
 
 **Zero row sums.** Row sum $=ak+b(v-1-k)=ak+bw$, so $b=-ak/w$. ✓
 
-**The norm.** In this record's convention $\lVert W\rVert^2=\sum_{i<j}M_{ij}^2=\tfrac12\operatorname{tr}M^2$, consistent throughout [diagonal-half.md](../findings/diagonal-half.md), which states $\sum_{a<b}w_{ab}^2=1$ and $\operatorname{tr}M^2=2$ together. The edge count is $vk/2$ and the non-edge count is $vw/2$, so
+**The norm.** In this record's convention $\lVert W\rVert^2=\sum_{i<j}M_{ij}^2=\tfrac12\mathop{\mathrm{tr}}M^2$, consistent throughout [diagonal-half.md](../findings/diagonal-half.md), which states $\sum_{a<b}w_{ab}^2=1$ and $\mathop{\mathrm{tr}}M^2=2$ together. The edge count is $vk/2$ and the non-edge count is $vw/2$, so
 
 $$\lVert W\rVert^2=\frac{vk}2a^2+\frac{vw}2\cdot\frac{a^2k^2}{w^2}=\frac{va^2k}2\Big(1+\frac kw\Big)=\frac{a^2vk(v-1)}{2w},\qquad a^2=\frac{2w}{vk(v-1)} .$$
 

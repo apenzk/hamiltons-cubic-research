@@ -29,7 +29,7 @@ Three separate things are bundled into two lines, and they have three different 
 | piece of L61 | where it is | is it in the named section? |
 | --- | --- | --- |
 | $F_5$ is SOS of orbit-vanishing cubics | [sym3-blocks.md:106–113](../findings/sym3-blocks.md#L106), the named section | yes, as a certificate |
-| $P(W)=3\operatorname{tr}(W^3)$ on $\mathcal W_5$, hence $F_5=\tfrac32\lVert W\rVert^6-P^2$ | [sym3-blocks.md:153](../findings/sym3-blocks.md#L153), a different section; derived in [bispectral.md:118–145](../findings/bispectral.md#L118) as [Lemma L50](../findings/bispectral.md#L127) | **no** |
+| $P(W)=3\mathop{\mathrm{tr}}(W^3)$ on $\mathcal W_5$, hence $F_5=\tfrac32\lVert W\rVert^6-P^2$ | [sym3-blocks.md:153](../findings/sym3-blocks.md#L153), a different section; derived in [bispectral.md:118–145](../findings/bispectral.md#L118) as [Lemma L50](../findings/bispectral.md#L127) | **no** |
 | equality exactly on the orbit | nowhere | **no** |
 
 The second row is the whole content of the word "hence" in the lemma. The named section never mentions $\theta$.
@@ -81,28 +81,28 @@ A second uncorrected item of the same kind: reviewer 214's note in the same head
 
 This is the step the brief expects to have been assumed. It has not been; it is right, and it is short. Here it is derived without using the block.
 
-**The relation between $\operatorname{tr}(W^3)$ and $P$.** By [conventions.md](../findings/conventions.md), $P(W)=\langle W,Q(W)\rangle$ with $Q(W)=W^2+W^\#$, the pairing on the operator being plain Frobenius, so
+**The relation between $\mathop{\mathrm{tr}}(W^3)$ and $P$.** By [conventions.md](../findings/conventions.md), $P(W)=\langle W,Q(W)\rangle$ with $Q(W)=W^2+W^\#$, the pairing on the operator being plain Frobenius, so
 
-$$P(W)=\operatorname{tr}(W^3)+\langle W,W^\#\rangle .$$
+$$P(W)=\mathop{\mathrm{tr}}(W^3)+\langle W,W^\#\rangle .$$
 
 The two summands are different cubics in general. At $n=5$ they are proportional, for a reason that does not depend on either of them:
 
 - $(\mathrm{Sym}^3\mathcal W_5)^{O(5)}$ is one-dimensional, [Lemma L85](../findings/sym3-blocks.md#L42)'s degree sequence $1,1,4,5,14$ has a $1$ in degree three, computed by Weyl integration in exact Laurent polynomials and so sharing nothing with the contraction identity.
-- $\operatorname{tr}(W^3)$ and $\langle W,W^\#\rangle$ are both $O(5)$-invariant cubics, and both are nonzero at $W_0$. Hence $\langle W,W^\#\rangle=c\operatorname{tr}(W^3)$ identically on $\mathcal W_5$, for a single constant $c$.
-- **The constant is pinned by one anchor.** At $W_0$ the $\Lambda^2$ spectrum is $(2,-1,-1,0^7)/\sqrt6$: unit norm, since $(4+1+1)/6=1$, and $\operatorname{tr}(W_0^3)=(8-1-1)/6\sqrt6=1/\sqrt6$. The record's independently verified $\theta(W_{\mathbb{CP}^2})=\sqrt{3/2}=3/\sqrt6$ (result 44, rebuilt by hand from the $\mathfrak{so}(4)$ structure constants by two reviewers), gives $P(W_0)=3\operatorname{tr}(W_0^3)$, so $c=2$.
+- $\mathop{\mathrm{tr}}(W^3)$ and $\langle W,W^\#\rangle$ are both $O(5)$-invariant cubics, and both are nonzero at $W_0$. Hence $\langle W,W^\#\rangle=c\mathop{\mathrm{tr}}(W^3)$ identically on $\mathcal W_5$, for a single constant $c$.
+- **The constant is pinned by one anchor.** At $W_0$ the $\Lambda^2$ spectrum is $(2,-1,-1,0^7)/\sqrt6$: unit norm, since $(4+1+1)/6=1$, and $\mathop{\mathrm{tr}}(W_0^3)=(8-1-1)/6\sqrt6=1/\sqrt6$. The record's independently verified $\theta(W_{\mathbb{CP}^2})=\sqrt{3/2}=3/\sqrt6$ (result 44, rebuilt by hand from the $\mathfrak{so}(4)$ structure constants by two reviewers), gives $P(W_0)=3\mathop{\mathrm{tr}}(W_0^3)$, so $c=2$.
 
-Therefore $P(W)=3\operatorname{tr}(W^3)$ on $\mathcal W_5$ and
+Therefore $P(W)=3\mathop{\mathrm{tr}}(W^3)$ on $\mathcal W_5$ and
 
-$$F_5=\tfrac32\lVert W\rVert^6-9\operatorname{tr}(W^3)^2=\tfrac32\lVert W\rVert^6-P(W)^2 ,$$
+$$F_5=\tfrac32\lVert W\rVert^6-9\mathop{\mathrm{tr}}(W^3)^2=\tfrac32\lVert W\rVert^6-P(W)^2 ,$$
 
 so $F_5\ge0$ reads $P(W)^2\le\tfrac32\lVert W\rVert^6$, that is $\lvert\theta\rvert\le\sqrt{3/2}$, at every $W\ne0$ in $\mathcal W_5$, critical or not. Both sides are homogeneous of degree six, so no normalisation is needed.
 
 **Two independent confirmations that $c=2$ and not something else.**
 
 - [Lemma L50](../findings/bispectral.md#L127) derives it from Lovelock's dimensionally-dependent identity: $\beta-\tfrac\alpha2=-\tfrac1{64}\delta^{a_1\cdots a_6}_{b_1\cdots b_6}W\,W\,W$ and the generalised Kronecker delta on six indices vanishes identically for $n\le5$. Gate 2 landed, reviewers 97 and 98. This is a genuine argument and it is the one the lemma should be citing.
-- At $n=4$ on the self-dual part, $W^\#$ acts as $(W^\#)_i=c\lambda_j\lambda_k$ on a diagonal $W_+$, so $\langle W,W^\#\rangle=3c\lambda_1\lambda_2\lambda_3=c\operatorname{tr}(W^3)$ using $\sum\lambda_i=0$, the proportionality falls out of the $\mathfrak{su}(2)$ structure constants alone, independently of any dimension count.
+- At $n=4$ on the self-dual part, $W^\#$ acts as $(W^\#)_i=c\lambda_j\lambda_k$ on a diagonal $W_+$, so $\langle W,W^\#\rangle=3c\lambda_1\lambda_2\lambda_3=c\mathop{\mathrm{tr}}(W^3)$ using $\sum\lambda_i=0$, the proportionality falls out of the $\mathfrak{su}(2)$ structure constants alone, independently of any dimension count.
 
-**Normalisation check, because this record has a live $\sqrt2$ trap.** The certificate's $\lVert W\rVert$ is the operator Frobenius norm $\operatorname{tr}(W^2)$, not the tensor norm. [07-gradedness-split.tex:890](../report/sections/07-gradedness-split.tex#L890) records $\lVert W_0\rVert^2=24$ and $\operatorname{tr}(W_0^3)=48$ over $\mathbb Z$, matching the $\Lambda^2$ spectrum $(4,-2,-2,0^7)$ and giving $6\cdot48^2=13824=24^3$, the equality case of $F_5\ge0$, exactly. So $F_5$ and $\theta$ are measured in the same norm and the implication is not a normalisation accident.
+**Normalisation check, because this record has a live $\sqrt2$ trap.** The certificate's $\lVert W\rVert$ is the operator Frobenius norm $\mathop{\mathrm{tr}}(W^2)$, not the tensor norm. [07-gradedness-split.tex:890](../report/sections/07-gradedness-split.tex#L890) records $\lVert W_0\rVert^2=24$ and $\mathop{\mathrm{tr}}(W_0^3)=48$ over $\mathbb Z$, matching the $\Lambda^2$ spectrum $(4,-2,-2,0^7)$ and giving $6\cdot48^2=13824=24^3$, the equality case of $F_5\ge0$, exactly. So $F_5$ and $\theta$ are measured in the same norm and the implication is not a normalisation accident.
 
 ---
 
@@ -149,7 +149,7 @@ This is precisely warning [W5](../findings/INDEX-traps.md), and its stated cause
 
 ### What L61 licenses at $n\ge12$, and what it does not
 
-**Padding transfers upward, as a lower bound.** Let $U=\mathbb R^5\subset\mathbb R^n$. Padding by zero preserves $\operatorname{tr}(W^2)$ and $\operatorname{tr}(W^3)$ trivially, and preserves $W^\#$ because $\Lambda^2U=\mathfrak{so}(U)$ is a Lie *subalgebra* of $\mathfrak{so}(n)$: the sharp is built from structure constants $c_{\alpha\gamma\delta}$ contracted against $W$ in the last two slots, so a $W$ supported on $\Lambda^2U$ produces a $W^\#$ supported there, with the same values. The padded tensor stays Ricci-traceless. Hence $\theta$ is preserved exactly, and
+**Padding transfers upward, as a lower bound.** Let $U=\mathbb R^5\subset\mathbb R^n$. Padding by zero preserves $\mathop{\mathrm{tr}}(W^2)$ and $\mathop{\mathrm{tr}}(W^3)$ trivially, and preserves $W^\#$ because $\Lambda^2U=\mathfrak{so}(U)$ is a Lie *subalgebra* of $\mathfrak{so}(n)$: the sharp is built from structure constants $c_{\alpha\gamma\delta}$ contracted against $W$ in the last two slots, so a $W$ supported on $\Lambda^2U$ produces a $W^\#$ supported there, with the same values. The padded tensor stays Ricci-traceless. Hence $\theta$ is preserved exactly, and
 
 $$M(n)\ \ge\ M(5)\ =\ \sqrt{3/2}\qquad\text{at every }n\ge5 .$$
 
@@ -168,7 +168,7 @@ That is the direction the transfer runs. [conventions.md](../findings/convention
 | item | result |
 | --- | --- |
 | hedging clauses | *"has always been in this file"* (false; *"exact rational SOS certificate"*), exact, but "rational at denominator $10^5$" is not true of 13 of the 47 coordinates; *"Every step is exact over $\mathbb Q$"*, true of the arithmetic, and the identity step still rests on mod-$p$ ranks of machine-built matrices; *"with equality exactly on that orbit"*, asserted |
-| numbers presented as identities | $\sqrt{3/2}$, $9$, $\tfrac32$: all derived, and I reproduced them. Denominator $10^5$: observed and wrong. $c=2$ in $\langle W,W^\#\rangle=2\operatorname{tr}(W^3)$: derived in [bispectral.md](../findings/bispectral.md), uncited by the block |
+| numbers presented as identities | $\sqrt{3/2}$, $9$, $\tfrac32$: all derived, and I reproduced them. Denominator $10^5$: observed and wrong. $c=2$ in $\langle W,W^\#\rangle=2\mathop{\mathrm{tr}}(W^3)$: derived in [bispectral.md](../findings/bispectral.md), uncited by the block |
 | does the file settle it above or below | **yes, twice**: the $\theta$ step is 15 lines *below* the block's own named section, and the equality claim is contradicted 29 lines above the block |
 | do all pointers resolve | every script and JSON path resolves. The one prose pointer (the named section), does not carry the argument it claims |
 | stray defect | [sym3-blocks.md:172](../findings/sym3-blocks.md#L172) uses `\CP` and `\Weyl`, macros defined in [report.tex](../report/report.tex) and in no markdown renderer. The block was pasted from the LaTeX |

@@ -35,19 +35,19 @@ Scripts: [psd_witness.py](../scripts/reviewers/r181/psd_witness.py), [psd_fix.py
 
 Write $n=2r$, $m=r-1$, $G=O(n)$, $G^-$ the non-identity component with Haar measure normalised to total mass 1 on each component. For any representation,
 
-$$\dim V^{O(n)}=\tfrac12\Big(\int_{SO(n)}\chi_V+\int_{G^-}\chi_V\Big),\qquad \dim\operatorname{Hom}_{O(n)}(V,\det)=\tfrac12\Big(\int_{SO(n)}\chi_V-\int_{G^-}\chi_V\Big),$$
+$$\dim V^{O(n)}=\tfrac12\Big(\int_{SO(n)}\chi_V+\int_{G^-}\chi_V\Big),\qquad \dim\mathop{\mathrm{Hom}}_{O(n)}(V,\det)=\tfrac12\Big(\int_{SO(n)}\chi_V-\int_{G^-}\chi_V\Big),$$
 
 since $\det=-1$ on $G^-$. That is the "(SO count + coset integral)/2" of the record.
 
-**The coset torus.** A real orthogonal $g$ with $\det g=-1$ has eigenvalue $-1$ with odd multiplicity, hence $+1$ with odd multiplicity as well, so the generic element of $O(2r)^-$ is $SO(2r)$-conjugate to $\sigma t$ with $\sigma=\operatorname{diag}(I_{2r-2},1,-1)$ and $t$ in the maximal torus $T'$ of the $SO(2r-2)$ block. Its eigenvalues on $\mathbb{C}^{2r}$ are $t_1^{\pm1},\dots,t_m^{\pm1}$ together with $+1$ and $-1$.
+**The coset torus.** A real orthogonal $g$ with $\det g=-1$ has eigenvalue $-1$ with odd multiplicity, hence $+1$ with odd multiplicity as well, so the generic element of $O(2r)^-$ is $SO(2r)$-conjugate to $\sigma t$ with $\sigma=\mathop{\mathrm{diag}}(I_{2r-2},1,-1)$ and $t$ in the maximal torus $T'$ of the $SO(2r-2)$ block. Its eigenvalues on $\mathbb{C}^{2r}$ are $t_1^{\pm1},\dots,t_m^{\pm1}$ together with $+1$ and $-1$.
 
-**The density.** $\operatorname{Ad}$ acts on $\mathfrak{so}(2r)=\Lambda^2\mathbb{C}^{2r}$, so its eigenvalues at $\sigma t$ are the products of distinct pairs: $t^{\pm e_i\pm e_j}$ (the $D_m$ roots), $1$ with multiplicity $m$ (this is $\mathfrak{t}'$), $\pm t_i^{\pm1}$, and $-1$. Deleting the $\mathfrak{t}'$ part,
+**The density.** $\mathop{\mathrm{Ad}}$ acts on $\mathfrak{so}(2r)=\Lambda^2\mathbb{C}^{2r}$, so its eigenvalues at $\sigma t$ are the products of distinct pairs: $t^{\pm e_i\pm e_j}$ (the $D_m$ roots), $1$ with multiplicity $m$ (this is $\mathfrak{t}'$), $\pm t_i^{\pm1}$, and $-1$. Deleting the $\mathfrak{t}'$ part,
 
-$$\det\big(1-\operatorname{Ad}(\sigma t)\big)\Big|_{\mathfrak g/\mathfrak t'}=2\prod_{\alpha\in D_m}(1-t^\alpha)\prod_{i=1}^m(1-t_i^2)(1-t_i^{-2})=2\prod_{\alpha\in C_m}(1-t^\alpha),$$
+$$\det\big(1-\mathop{\mathrm{Ad}}(\sigma t)\big)\Big|_{\mathfrak g/\mathfrak t'}=2\prod_{\alpha\in D_m}(1-t^\alpha)\prod_{i=1}^m(1-t_i^2)(1-t_i^{-2})=2\prod_{\alpha\in C_m}(1-t^\alpha),$$
 
 because $(1-t_i)(1+t_i)=1-t_i^2$, and $C_m$ is exactly $D_m$ together with the long roots $\pm2e_i$. This is the docstring's assertion, and it is right.
 
-**The group.** $n=\operatorname{diag}(h,-1,1)$ with $h\in O(2r-2)$, $\det h=-1$, lies in $SO(2r)$, fixes $\sigma$, and normalises $T'$; letting $h$ range over the torus normaliser of $O(2r-2)$ realises the full signed-permutation group. So the twisted Weyl group is $W(B_m)=W(C_m)$, of order $2^mm!$.
+**The group.** $n=\mathop{\mathrm{diag}}(h,-1,1)$ with $h\in O(2r-2)$, $\det h=-1$, lies in $SO(2r)$, fixes $\sigma$, and normalises $T'$; letting $h$ range over the torus normaliser of $O(2r-2)$ realises the full signed-permutation group. So the twisted Weyl group is $W(B_m)=W(C_m)$, of order $2^mm!$.
 
 **The normalisation.** Weyl's formula gives $\int_{T'}\prod_{\alpha\in C_m}(1-t^\alpha)\,dt=|W(C_m)|$, so requiring $\int_{G^-}1=1$ fixes
 
@@ -67,15 +67,15 @@ Everything below is exact integer arithmetic except the two character checks, wh
 |---|---|---|
 | $\chi_{\mathcal W}$ on the coset torus against explicit matrices, $n=8$ and $n=12$ | the only $\mathcal W$-specific input, at the rank actually used | agrees, $\dim\mathcal W_{12}=1638$ recovered |
 | $\chi_{\mathcal W}$ on the $SO$ torus against explicit matrices, $n=8$ and $n=12$ | the $SO$ half's character | agrees |
-| $V$, $\operatorname{Sym}^2V$, $\Lambda^2V$ against their classical invariant rings, $n=4$ to $n=12$, degrees 1–6 | the whole coset pipeline at ranks $m=1{\dots}5$, both the untwisted and the twisted output | agrees everywhere |
+| $V$, $\mathop{\mathrm{Sym}}^2V$, $\Lambda^2V$ against their classical invariant rings, $n=4$ to $n=12$, degrees 1–6 | the whole coset pipeline at ranks $m=1{\dots}5$, both the untwisted and the twisted output | agrees everywhere |
 | $\mathcal W_4$ against a closed-form Hilbert series, degrees 1–14 | the actual Weyl module, in the degree direction, far past degree 6 | agrees in $SO$, $O$ and twisted counts |
 | brute full-character route against the dominant-weight recursion, $n=8$ and $n=10$ | the dominance folding and the truncation | identical |
 | truncation bound widened from $4k$ to $6k$ at $n=12$ | the one place mass could be lost at higher rank | identical: $O$ still $89$, twisted still $3$ |
 | negative controls: $\rho_B$ for $\rho_C$, $W(D_m)$ for $W(C_m)$, an identity-component element | that the battery has teeth | all three break the $\Lambda^2$ ground truth, two of them into non-integers |
 
-Two of these deserve emphasis. The $\Lambda^2$ family is a theorem, $\mathbb{C}[\mathfrak{so}(2r)]^{O(2r)}$ is free on $\operatorname{tr}X^2,\dots,\operatorname{tr}X^{2r}$, so the count is the number of partitions into even parts at most $n$, while the $SO$ ring adds the Pfaffian, which is $\det$-odd. At $n=12$, degree 6, the machinery has to report $4$ $SO$-invariants splitting as $3$ untwisted and exactly $1$ twisted, and it does. That is the coset integral being tested for both magnitude and sign at exactly the rank in dispute. The $n=4$ family is a second theorem, $\mathcal W_4=\mathcal W^+\oplus\mathcal W^-$ with $SO(4)$ acting as $SO(3)\times SO(3)$ and the reflection swapping the summands, giving Hilbert series $\tfrac12\big[(1-q^2)^{-2}(1-q^3)^{-2}\pm(1-q^4)^{-1}(1-q^6)^{-1}\big]$ for the untwisted and twisted parts. It matches in all 14 degrees.
+Two of these deserve emphasis. The $\Lambda^2$ family is a theorem, $\mathbb{C}[\mathfrak{so}(2r)]^{O(2r)}$ is free on $\mathop{\mathrm{tr}}X^2,\dots,\mathop{\mathrm{tr}}X^{2r}$, so the count is the number of partitions into even parts at most $n$, while the $SO$ ring adds the Pfaffian, which is $\det$-odd. At $n=12$, degree 6, the machinery has to report $4$ $SO$-invariants splitting as $3$ untwisted and exactly $1$ twisted, and it does. That is the coset integral being tested for both magnitude and sign at exactly the rank in dispute. The $n=4$ family is a second theorem, $\mathcal W_4=\mathcal W^+\oplus\mathcal W^-$ with $SO(4)$ acting as $SO(3)\times SO(3)$ and the reflection swapping the summands, giving Hilbert series $\tfrac12\big[(1-q^2)^{-2}(1-q^3)^{-2}\pm(1-q^4)^{-1}(1-q^6)^{-1}\big]$ for the untwisted and twisted parts. It matches in all 14 degrees.
 
-The $4k$ truncation is also provable, not merely tested: every weight of $\mathcal W$ on either torus has $\ell_1$-norm at most $4$, since $\mathcal W\subset\operatorname{Sym}^2\Lambda^2V$ and every $\Lambda^2$ weight has $\ell_1$-norm at most $2$; lookups outside the stored range return zero, which is the correct value.
+The $4k$ truncation is also provable, not merely tested: every weight of $\mathcal W$ on either torus has $\ell_1$-norm at most $4$, since $\mathcal W\subset\mathop{\mathrm{Sym}}^2\Lambda^2V$ and every $\Lambda^2$ weight has $\ell_1$-norm at most $2$; lookups outside the stored range return zero, which is the correct value.
 
 Scripts: [coset_char_matrix.py](../scripts/reviewers/r181/coset_char_matrix.py), [gt_families.py](../scripts/reviewers/r181/gt_families.py), [n4_weyl_gt.py](../scripts/reviewers/r181/n4_weyl_gt.py), [full_route.py](../scripts/reviewers/r181/full_route.py), [bound_stress.py](../scripts/reviewers/r181/bound_stress.py), [negative_control.py](../scripts/reviewers/r181/negative_control.py), [n16.py](../scripts/reviewers/r181/n16.py).
 

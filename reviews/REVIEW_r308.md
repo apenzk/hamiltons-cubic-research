@@ -16,8 +16,8 @@ Independent implementation from the definitions only, in [scripts/reviewers/r308
 
 Conventions were pinned by two facts outside this repo's code, so no constant was inherited.
 
-- $\mathfrak{so}(n)=\Lambda^2\mathbb R^n$ in the basis $\varphi_{ij}=E_{ij}-E_{ji}$, orthonormal for $\langle A,B\rangle=\tfrac12\operatorname{tr}(A^\top B)$; structure constants read off the matrix commutator.
-- $(R\# S)_{ab}=-\tfrac14\big(\operatorname{tr}(C_aRC_bS)+\operatorname{tr}(C_aSC_bR)\big)$ with $C_a=\operatorname{ad}(\varphi_a)$. The overall constant was fixed by the *published* diagonal formula $(R\#S)_{ij,ij}=\tfrac12\sum_k(r_{ik}s_{jk}+r_{jk}s_{ik})$ (Jäger 2016 / Poljsak 2022): agreement to $8.9\times10^{-16}$ on random diagonal $R,S$.
+- $\mathfrak{so}(n)=\Lambda^2\mathbb R^n$ in the basis $\varphi_{ij}=E_{ij}-E_{ji}$, orthonormal for $\langle A,B\rangle=\tfrac12\mathop{\mathrm{tr}}(A^\top B)$; structure constants read off the matrix commutator.
+- $(R\# S)_{ab}=-\tfrac14\big(\mathop{\mathrm{tr}}(C_aRC_bS)+\mathop{\mathrm{tr}}(C_aSC_bR)\big)$ with $C_a=\mathop{\mathrm{ad}}(\varphi_a)$. The overall constant was fixed by the *published* diagonal formula $(R\#S)_{ij,ij}=\tfrac12\sum_k(r_{ik}s_{jk}+r_{jk}s_{ik})$ (Jäger 2016 / Poljsak 2022): agreement to $8.9\times10^{-16}$ on random diagonal $R,S$.
 
 Controls, all at machine precision ([r308_lib.py](../scripts/reviewers/r308/r308_lib.py)):
 
@@ -38,23 +38,23 @@ Controls, all at machine precision ([r308_lib.py](../scripts/reviewers/r308/r308
 | $\mathfrak{so}(3)$-planes vs the other 25, at $S^3\times S^5$ | $15.5$ | holds, $1.1\times10^{-16}$ | holds, $0$ | **fails**, $\lVert W^\#\vert_{\mathfrak m}-2(A\#B)\vert_{\mathfrak m}\rVert=0.478$ |
 | first 5 eigenvectors vs the other 23, at the witness | $13.9$ | holds, $5.6\times10^{-17}$ | holds, $1.1\times10^{-16}$ | **fails**, $0.549$ and $0.581$ |
 
-So the recorded framing (the bracket relations sort $W^\#$ by block, *hence* criticality separates), inverts the logic. $W=A\oplus B$ gives $W^2=A^2\oplus B^2$, so $\langle A,W^2\rangle=\operatorname{tr}A^3$ with no cross terms, and $\langle A,\theta W\rangle=\theta\lVert A\rVert^2$; that is the entire hypothesis. The grading buys the *sorting*, which is a statement about what $W^\#\vert_{\mathfrak p}$ is made of, not about whether the equations separate. Confirmed at machine precision where the grading does hold: $W^\#\vert_{\mathfrak p}=(A\#A+B\#B)\vert_{\mathfrak p}$ and $W^\#\vert_{\mathfrak m}=2(A\#B)\vert_{\mathfrak m}$ to $8\times10^{-16}$ at both graded points.
+So the recorded framing (the bracket relations sort $W^\#$ by block, *hence* criticality separates), inverts the logic. $W=A\oplus B$ gives $W^2=A^2\oplus B^2$, so $\langle A,W^2\rangle=\mathop{\mathrm{tr}}A^3$ with no cross terms, and $\langle A,\theta W\rangle=\theta\lVert A\rVert^2$; that is the entire hypothesis. The grading buys the *sorting*, which is a statement about what $W^\#\vert_{\mathfrak p}$ is made of, not about whether the equations separate. Confirmed at machine precision where the grading does hold: $W^\#\vert_{\mathfrak p}=(A\#A+B\#B)\vert_{\mathfrak p}$ and $W^\#\vert_{\mathfrak m}=2(A\#B)\vert_{\mathfrak m}$ to $8\times10^{-16}$ at both graded points.
 
 **A further deflation the brief does not mention: at a critical point the block-diagonality of $W^\#$ is free.** $W^\#=\theta W-W^2$, and both terms are block-diagonal for any $W$-invariant splitting. Measured: $\lVert W^\#-W^\#\vert_{\mathfrak p}-W^\#\vert_{\mathfrak m}\rVert=2.3\times10^{-15}$ even in the badly non-graded eigen-splitting above.
 
-**The $\mathfrak m\times\mathfrak m$ term is not zero, it is the larger of the two.** At $S^3\times S^5$: $\operatorname{tr}A^3=0.206794$, $\langle A,A\#A\rangle=0.240943$, $\langle A,B\#B\rangle=0.242840$. At the witness: $0.261675$, $0.174815$, $0.244022$. The $\mathfrak m\times\mathfrak m$ contribution is the single largest term in the $\mathfrak p$-equation at both points.
+**The $\mathfrak m\times\mathfrak m$ term is not zero, it is the larger of the two.** At $S^3\times S^5$: $\mathop{\mathrm{tr}}A^3=0.206794$, $\langle A,A\#A\rangle=0.240943$, $\langle A,B\#B\rangle=0.242840$. At the witness: $0.261675$, $0.174815$, $0.244022$. The $\mathfrak m\times\mathfrak m$ contribution is the single largest term in the $\mathfrak p$-equation at both points.
 
 **The pair carries one independent scalar.** Writing $\tau:=\langle A,B\#B\rangle$, full symmetry of the trilinear form gives $\langle B,2A\#B\rangle=2\tau$ exactly, measured $0.485680=2\times0.242840$ and $0.488044=2\times0.244022$ at the two points, and $0.540244=2\times0.270122$ in the coordinate splitting. So the pair is
 
-$$\theta\lVert A\rVert^2=P(A)+\tau,\qquad \theta\lVert B\rVert^2=\operatorname{tr}B^3+2\tau,$$
+$$\theta\lVert A\rVert^2=P(A)+\tau,\qquad \theta\lVert B\rVert^2=\mathop{\mathrm{tr}}B^3+2\tau,$$
 
-with $P(A)=\operatorname{tr}A^3+\langle A,A\#A\rangle$ and $\langle B,B^\#\rangle=0$ because $B\#B$ lives in $\mathfrak p$. Their sum is $\theta=P(W)$, the definition of $\theta$. **Presenting this as two equations overstates it by exactly one.**
+with $P(A)=\mathop{\mathrm{tr}}A^3+\langle A,A\#A\rangle$ and $\langle B,B^\#\rangle=0$ because $B\#B$ lives in $\mathfrak p$. Their sum is $\theta=P(W)$, the definition of $\theta$. **Presenting this as two equations overstates it by exactly one.**
 
 **Residual content of L1**, stated positively: on a graded point, criticality contracted against the two blocks gives one scalar identity beyond $P(W)=\theta$, namely $\theta\lVert A\rVert^2=P(A)+\tau$, together with the exact sorting $W^\#\vert_{\mathfrak p}=(A\#A+B\#B)\vert_{\mathfrak p}$, $W^\#\vert_{\mathfrak m}=2(A\#B)\vert_{\mathfrak m}$, which is where the grading earns its keep.
 
 ## L2, the route claim is backwards
 
-**Its mechanism is true.** $(W\#W)\vert_{\mathfrak m}=2(A\#B)\vert_{\mathfrak m}$ holds to $8\times10^{-16}$, and it is bilinear in $A$ and $B$ through the isotropy action, exactly as claimed: for $a,b\in\mathfrak m$ both $\operatorname{ad}$'s swap the grading, so the trace picks up $A$ once and $B$ once.
+**Its mechanism is true.** $(W\#W)\vert_{\mathfrak m}=2(A\#B)\vert_{\mathfrak m}$ holds to $8\times10^{-16}$, and it is bilinear in $A$ and $B$ through the isotropy action, exactly as claimed: for $a,b\in\mathfrak m$ both $\mathop{\mathrm{ad}}$'s swap the grading, so the trace picks up $A$ once and $B$ once.
 
 **The conclusion does not follow, on three counts.**
 
@@ -62,7 +62,7 @@ with $P(A)=\operatorname{tr}A^3+\langle A,A\#A\rangle$ and $\langle B,B^\#\rangl
 2. **The coupling is not confined to the $\mathfrak m$-equation.** The same scalar $\tau$ sits in the $\mathfrak p$-equation with half the weight. There is no term that appears in one and not the other.
 3. **At matrix level the $\mathfrak m$-equation is the *least* sensitive to $A$, not the most.** The $\mathfrak m$-equation $\theta B=B^2+2(A\#B)\vert_{\mathfrak m}$ is *linear* in $A$, and that linear map has a large kernel. Over the 155-dimensional graded Weyl space at $n=8$, $(3,5)$, whose projection to $\mathrm{Sym}(\mathfrak k)$ is 85-dimensional, the rank of $H\mapsto2(H_{\mathfrak k}\#B)\vert_{\mathfrak m}$ is **50 at $S^3\times S^5$ and 62 at the witness**, so the $\mathfrak m$-equation cannot see 35, respectively 23, of the 85 $A$-directions. The $\mathfrak p$-equation carries $(A\#A)\vert_{\mathfrak p}$, quadratic in $A$, and is where $A$'s structure actually enters.
 
-**The one measurement that is kind to L2**, reported because it cuts the other way from the rest: splitting $A$ at the witness into its $\operatorname{ad}(\mathfrak k)$-equivariant part and the rest ($\lVert A_{\rm eq}\rVert=0.712915$, $\lVert A_{\rm ne}\rVert=0.341581$), the coupling does see the non-equivariant part, $\langle A_{\rm ne},B\#B\rangle=4.81\times10^{-2}$, a fifth of $\tau=0.244022$. So the claim is not vacuous, only mis-ranked: $P(A)$ moves by $0.103$ under the same replacement, a larger absolute and relative change.
+**The one measurement that is kind to L2**, reported because it cuts the other way from the rest: splitting $A$ at the witness into its $\mathop{\mathrm{ad}}(\mathfrak k)$-equivariant part and the rest ($\lVert A_{\rm eq}\rVert=0.712915$, $\lVert A_{\rm ne}\rVert=0.341581$), the coupling does see the non-equivariant part, $\langle A_{\rm ne},B\#B\rangle=4.81\times10^{-2}$, a fifth of $\tau=0.244022$. So the claim is not vacuous, only mis-ranked: $P(A)$ moves by $0.103$ under the same replacement, a larger absolute and relative change.
 
 **What a successor should do instead.** Keep the matrix pair, drop the scalar pair. Given $B$, the equation $2(A\#B)\vert_{\mathfrak m}=\theta B-B^2$ is a *linear* system for $A$: 85 unknowns against 120 equations, of rank 50–62, so it is simultaneously over-determined in its image and blind on its kernel. That is a usable handle in one direction only, it produces consistency conditions on $B$ alone, from the 58–70 dimensions of $\mathrm{Sym}(\mathfrak m)$ outside the image, and it can never determine $A$. Any route that expects the $\mathfrak m$-equation to pin the non-equivariant structure of $A$ is asking a map with a 23-dimensional kernel to be injective.
 
@@ -86,7 +86,7 @@ So $0.6249259$ *is* the coordinate $\mathfrak k$-block mass, in the frame where 
 
 **The verdict is unchanged by the correction: L3 is refuted either way.** $0.6249259\ne0.6190476$ at a criticality residual of $3\times10^{-15}$; the gap is $5.878\times10^{-3}$, i.e. $0.95\%$, some twelve orders of magnitude above the noise. $\lVert A\rVert^2$ is not pinned by $(p,q)$, the two equations do not become a two-variable system, and no extension of Lemma L8 off the equivariant locus follows. What changes is the size of the failure and the reason for it, and the record should not keep a figure that is $50\times$ too large.
 
-**A second scalar, to show the near-agreement is a coincidence of one number.** The positive trace $\operatorname{tr}A$ is $2.390457$ at $S^3\times S^5$ against $2.165992$ at the witness, a $9.4\%$ gap on the same two points whose mass split agrees to $0.95\%$. Nothing about the two graded points is nearly equal in general.
+**A second scalar, to show the near-agreement is a coincidence of one number.** The positive trace $\mathop{\mathrm{tr}}A$ is $2.390457$ at $S^3\times S^5$ against $2.165992$ at the witness, a $9.4\%$ gap on the same two points whose mass split agrees to $0.95\%$. Nothing about the two graded points is nearly equal in general.
 
 ## The search for more graded points
 

@@ -25,9 +25,9 @@
 
 ## Conventions fixed first, against the record's anchors
 
-Inner product $\langle X,Y\rangle=\tfrac12\operatorname{tr}(X^{\mathsf T}Y)$ on $\mathfrak{so}(n)$, per [conventions.md](../findings/conventions.md). Then $\{\varphi_{ij}\}_{i<j}$ is **orthonormal** ($\lVert\varphi_{ij}\rVert^2=1$), $[\varphi_{12},\varphi_{23}]=\varphi_{13}$, and the Killing marginal is $\sum_\beta\lVert[v_\alpha,v_\beta]\rVert^2=2(n-2)$ for unit $v_\alpha$, which is [conventions.md](../findings/conventions.md)'s "$\kappa=2(n-2)$ in an orthonormal basis", re-derived here as $-B_K(v,v)$ with $B_K(X,Y)=(n-2)\operatorname{tr}(XY)$ and $\operatorname{tr}(v^2)=-2$. Sums over pairs are **ordered** unless said otherwise. $N=\binom n2$, $d=\dim\mathfrak m$.
+Inner product $\langle X,Y\rangle=\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$ on $\mathfrak{so}(n)$, per [conventions.md](../findings/conventions.md). Then $\{\varphi_{ij}\}_{i<j}$ is **orthonormal** ($\lVert\varphi_{ij}\rVert^2=1$), $[\varphi_{12},\varphi_{23}]=\varphi_{13}$, and the Killing marginal is $\sum_\beta\lVert[v_\alpha,v_\beta]\rVert^2=2(n-2)$ for unit $v_\alpha$, which is [conventions.md](../findings/conventions.md)'s "$\kappa=2(n-2)$ in an orthonormal basis", re-derived here as $-B_K(v,v)$ with $B_K(X,Y)=(n-2)\mathop{\mathrm{tr}}(XY)$ and $\mathop{\mathrm{tr}}(v^2)=-2$. Sums over pairs are **ordered** unless said otherwise. $N=\binom n2$, $d=\dim\mathfrak m$.
 
-> **A convention collision I hit immediately and note for the record.** [conventions.md](../findings/conventions.md) states both "$\langle X,X\rangle=\tfrac12\operatorname{tr}(X^{\mathsf T}X)$" and "a bivector's norm: $\lVert\varphi_{ab}\rVert^2=2$" in adjacent bullets. Under the first, $\lVert\varphi_{ab}\rVert^2=1$. They are the two pairings the same file says "differ by a factor $2$", but a reader taking the second while using the first's marginal $2(n-2)$ is off by exactly the factor that decides this lemma. **The $2(n-2)$ marginal belongs to the $\tfrac12$-trace pairing**, which is the one I use throughout and the one L36's proof needs.
+> **A convention collision I hit immediately and note for the record.** [conventions.md](../findings/conventions.md) states both "$\langle X,X\rangle=\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}X)$" and "a bivector's norm: $\lVert\varphi_{ab}\rVert^2=2$" in adjacent bullets. Under the first, $\lVert\varphi_{ab}\rVert^2=1$. They are the two pairings the same file says "differ by a factor $2$", but a reader taking the second while using the first's marginal $2(n-2)$ is off by exactly the factor that decides this lemma. **The $2(n-2)$ marginal belongs to the $\tfrac12$-trace pairing**, which is the one I use throughout and the one L36's proof needs.
 
 ---
 
@@ -35,13 +35,13 @@ Inner product $\langle X,Y\rangle=\tfrac12\operatorname{tr}(X^{\mathsf T}Y)$ on 
 
 Write $P$ for the orthogonal projection of $\Lambda^2\mathbb R^n$ onto $\mathfrak m$ and $\mu=\sum_{a,b}\lVert[e_a,e_b]\rVert^2$ over an orthonormal basis of $\mathfrak m$, **ordered**.
 
-**Step L2 (holds for every subspace).** With $T(A)=-\sum_k\operatorname{ad}(f_k)A\operatorname{ad}(f_k)$ over an orthonormal basis of $\mathfrak{so}(n)$,
+**Step L2 (holds for every subspace).** With $T(A)=-\sum_k\mathop{\mathrm{ad}}(f_k)A\mathop{\mathrm{ad}}(f_k)$ over an orthonormal basis of $\mathfrak{so}(n)$,
 
-$$\langle T(P),P\rangle=-\sum_k\operatorname{tr}(\operatorname{ad}_kP\operatorname{ad}_kP)=\sum_{a,b}\sum_k\langle f_k,[e_a,e_b]\rangle^2=\mu,$$
+$$\langle T(P),P\rangle=-\sum_k\mathop{\mathrm{tr}}(\mathop{\mathrm{ad}}_kP\mathop{\mathrm{ad}}_kP)=\sum_{a,b}\sum_k\langle f_k,[e_a,e_b]\rangle^2=\mu,$$
 
 using ad-invariance $\langle[f_k,e_a],e_b\rangle=\langle f_k,[e_a,e_b]\rangle$. **This fixes $\mu$ as the ordered sum**, the file's $\sum_{a,b}$ is right and matches [conventions.md](../findings/conventions.md)'s default.
 
-$T=2(n-2)\mathrm{Id}-\tfrac12\mathrm{Cas}$ is correct: expanding $\mathrm{Cas}(A)=-\sum_k[\![f_k,[\![f_k,A]\!]]\!]=-\sum_k(\operatorname{ad}_k^2A-2\operatorname{ad}_kA\operatorname{ad}_k+A\operatorname{ad}_k^2)$ and using $-\sum_k\operatorname{ad}_k^2=2(n-2)\mathrm{Id}$ gives $\mathrm{Cas}=4(n-2)-2T$.
+$T=2(n-2)\mathrm{Id}-\tfrac12\mathrm{Cas}$ is correct: expanding $\mathrm{Cas}(A)=-\sum_k[\![f_k,[\![f_k,A]\!]]\!]=-\sum_k(\mathop{\mathrm{ad}}_k^2A-2\mathop{\mathrm{ad}}_kA\mathop{\mathrm{ad}}_k+A\mathop{\mathrm{ad}}_k^2)$ and using $-\sum_k\mathop{\mathrm{ad}}_k^2=2(n-2)\mathrm{Id}$ gives $\mathrm{Cas}=4(n-2)-2T$.
 
 **The four eigenvalues, computed independently** from $\mathrm{Cas}=\langle\lambda,\lambda+2\rho\rangle$ normalised so the adjoint ($\lambda=e_1+e_2$) carries $2n-4$:
 
@@ -60,9 +60,9 @@ $$\mu\ \ge\ (2n-4)\tfrac{d^2}N-2\Big(d-\tfrac{d^2}N\Big)=\tfrac{(2n-2)d^2}{N}-2d
 
 since $\tfrac{2n-2}{N}=\tfrac4n$. ✓ **Sanity: equality at $P=\mathrm{Id}$**, where $\mu=2(n-2)N=n(n-1)(n-2)$ and the bound reads $n(n-1)^2-n(n-1)=n(n-1)(n-2)$. The record's own $\lVert P_0\rVert^2$ column at [isotropy-cap.md:120–125](../findings/isotropy-cap.md) ($2.4,\,3.6,\,5.1429,\,8.8889$ at $(n,d)=(5,6),(6,9),(7,12),(9,20)$) reproduces $d-d^2/N$ to the digit, confirming the same normalisation.
 
-**Step L1 (this is where isotropy enters, and the block does not say so).** Marginal summed over $\mathfrak m$: $\sum_a\lVert\operatorname{ad}_{e_a}\rVert_{HS}^2=2(n-2)d$. Isotropy is $P\operatorname{ad}_XP=0$ for $X\in\mathfrak m$, so $\operatorname{ad}_{e_a}$ has three surviving blocks, and by skew-adjointness the $\mathfrak m\!\to\!\mathfrak h$ and $\mathfrak h\!\to\!\mathfrak m$ blocks carry **equal** mass, each $=\mu$:
+**Step L1 (this is where isotropy enters, and the block does not say so).** Marginal summed over $\mathfrak m$: $\sum_a\lVert\mathop{\mathrm{ad}}_{e_a}\rVert_{HS}^2=2(n-2)d$. Isotropy is $P\mathop{\mathrm{ad}}_XP=0$ for $X\in\mathfrak m$, so $\mathop{\mathrm{ad}}_{e_a}$ has three surviving blocks, and by skew-adjointness the $\mathfrak m\!\to\!\mathfrak h$ and $\mathfrak h\!\to\!\mathfrak m$ blocks carry **equal** mass, each $=\mu$:
 
-$$2\mu+\gamma=2(n-2)d,\qquad \gamma:=\sum_a\big\lVert(I-P)\operatorname{ad}_{e_a}(I-P)\big\rVert^2=\sum_{h,h'\in\mathfrak h}\big\lVert P_{\mathfrak m}[h,h']\big\rVert^2\ \ge\ 0.$$
+$$2\mu+\gamma=2(n-2)d,\qquad \gamma:=\sum_a\big\lVert(I-P)\mathop{\mathrm{ad}}_{e_a}(I-P)\big\rVert^2=\sum_{h,h'\in\mathfrak h}\big\lVert P_{\mathfrak m}[h,h']\big\rVert^2\ \ge\ 0.$$
 
 So $\mu\le(n-2)d$, and chaining, $\tfrac{4d^2}n-2d\le(n-2)d$ gives $\tfrac{4d}n\le n$, i.e. $d\le\tfrac{n^2}4$; $d$ integral gives $d\le\lfloor n^2/4\rfloor$. $\square$
 
@@ -76,11 +76,11 @@ The identity is nonetheless **correct**, and the record confirms which $\gamma$ 
 - [ungraded-slack.md:126](../findings/ungraded-slack.md#L126) derives the same marginal split in structure-constant form: $2S_{\mathfrak{hmm}}+S_{\mathfrak{mmm}}=\kappa(N-r)$ *given* $S_{\mathfrak{hhm}}=0$. Restoring that term gives $2\mu+S_{\mathfrak{hhm}}=2(n-2)d$ under isotropy. **So $\gamma=S_{\mathfrak{hhm}}$.**
 - [bounds-relaxations.md:142](../findings/bounds-relaxations.md#L142) quotes the chain as $4d^2/n-2d\le2S_{\mathfrak{mmh}}\le(n-2)d$, i.e. with $\mu=2S_{\mathfrak{mmh}}$, the same ordered convention.
 
-**Recommended fix: one clause.** Write "$\gamma:=\sum_{h,h'\in\mathfrak m^\perp}\lVert P_{\mathfrak m}[h,h']\rVert^2\ge0$, the failure of $\mathfrak m^\perp$ to be a subalgebra; the factor $2$ on $\mu$ is isotropy, which makes the two off-diagonal blocks of $\operatorname{ad}_{e_a}$ carry equal mass."
+**Recommended fix: one clause.** Write "$\gamma:=\sum_{h,h'\in\mathfrak m^\perp}\lVert P_{\mathfrak m}[h,h']\rVert^2\ge0$, the failure of $\mathfrak m^\perp$ to be a subalgebra; the factor $2$ on $\mu$ is isotropy, which makes the two off-diagonal blocks of $\mathop{\mathrm{ad}}_{e_a}$ carry equal mass."
 
 ### Two smaller imprecisions in the same block
 
-- **"$-2$ is $T$'s only negative eigenvalue" fails at $n=3$**, where $\mathrm{Weyl}_3=\Lambda^4\mathbb R^3=0$ and $\operatorname{spec}T=\{2,-1\}$, the $-1$ on $\mathrm{Sym}^2_0$. Harmless ($-2\le-1$, so the bound still holds) but "**the whole content is one eigenvalue**, and it is the Weyl space's" is untrue at the smallest $n$ the Statement claims. At $n=3$ the sharp constant comes from $\mathrm{Sym}^2_0$ and gives $d^2-d\le d$, i.e. $d\le2=\lfloor 9/4\rfloor$, sharp by a different route.
+- **"$-2$ is $T$'s only negative eigenvalue" fails at $n=3$**, where $\mathrm{Weyl}_3=\Lambda^4\mathbb R^3=0$ and $\mathop{\mathrm{spec}}T=\{2,-1\}$, the $-1$ on $\mathrm{Sym}^2_0$. Harmless ($-2\le-1$, so the bound still holds) but "**the whole content is one eigenvalue**, and it is the Weyl space's" is untrue at the smallest $n$ the Statement claims. At $n=3$ the sharp constant comes from $\mathrm{Sym}^2_0$ and gives $d^2-d\le d$, i.e. $d\le2=\lfloor 9/4\rfloor$, sharp by a different route.
 - **The integrality step is missing.** The proof ends at $d\le n^2/4$; the Statement claims $\lfloor n^2/4\rfloor$. One line, but it is the whole of the odd-$n$ statement.
 
 ---
@@ -117,9 +117,9 @@ A screen, on objects I constructed for it, of the two claims above before record
 
 The two sides are not equivalent, and the clause is doing the work of a theorem in one direction and of a conditional lemma in the other.
 
-**($\Leftarrow$) $S=0\Rightarrow$ isotropy: conditional, not definitional.** $S$ is defined at [ungraded-slack.md:286](../findings/ungraded-slack.md#L286) as $S(W)=\lVert\mathrm{Ric}(W_-)\rVert^2+6\delta^2-\theta\operatorname{tr}(W_-)-\operatorname{tr}(W_-^2)$. That is not a bracket quantity. The bridge to isotropy is the *next* display, $S=\tfrac12\sum_{i,j}\mu_i\mu_j\lVert P_{E_-}[v_i,v_j]\rVert^2$, and the same block says it in as many words: **"the identity itself is conditional on those conditions, not universal, an independent audit found generic critical points violating them, including one already in my own catalogue, where the ratio is $11.5$ rather than $\tfrac12$."** Two further conditions ride along: $\mu_i>0$ strictly, so a kernel eigenvalue assigned to $E_-$ drops out of the sum and $S=0$ constrains nothing along it, which is trap [W3](../findings/INDEX-traps.md), *"the screen is vacuous when $\ker W\ne0$"*, and it is not carried into L36's Statement.
+**($\Leftarrow$) $S=0\Rightarrow$ isotropy: conditional, not definitional.** $S$ is defined at [ungraded-slack.md:286](../findings/ungraded-slack.md#L286) as $S(W)=\lVert\mathrm{Ric}(W_-)\rVert^2+6\delta^2-\theta\mathop{\mathrm{tr}}(W_-)-\mathop{\mathrm{tr}}(W_-^2)$. That is not a bracket quantity. The bridge to isotropy is the *next* display, $S=\tfrac12\sum_{i,j}\mu_i\mu_j\lVert P_{E_-}[v_i,v_j]\rVert^2$, and the same block says it in as many words: **"the identity itself is conditional on those conditions, not universal, an independent audit found generic critical points violating them, including one already in my own catalogue, where the ratio is $11.5$ rather than $\tfrac12$."** Two further conditions ride along: $\mu_i>0$ strictly, so a kernel eigenvalue assigned to $E_-$ drops out of the sum and $S=0$ constrains nothing along it, which is trap [W3](../findings/INDEX-traps.md), *"the screen is vacuous when $\ker W\ne0$"*, and it is not carried into L36's Statement.
 
-**($\Rightarrow$) every isotropic $\mathfrak m$ is such an eigenspace: unproved, and false at $n=3$.** **Witness: $n=3$.** $\dim\mathcal W_3=\tfrac{3\cdot0\cdot4\cdot5}{12}=0$, so the only Weyl operator on $\mathbb R^3$ is $0$ and no Weyl operator has a nonzero negative eigenspace at all. Yet $\mathfrak m=\operatorname{span}\{\varphi_{12},\varphi_{13}\}\subseteq\mathfrak{so}(3)$ is isotropic (a 3-form vanishes on any 2-plane) and has $\dim=2=\lfloor 9/4\rfloor$. **So at $n=3$ the left side has a 2-dimensional example and the right side has none.** The Statement's own lower endpoint is the $n$ at which its "equivalently" breaks.
+**($\Rightarrow$) every isotropic $\mathfrak m$ is such an eigenspace: unproved, and false at $n=3$.** **Witness: $n=3$.** $\dim\mathcal W_3=\tfrac{3\cdot0\cdot4\cdot5}{12}=0$, so the only Weyl operator on $\mathbb R^3$ is $0$ and no Weyl operator has a nonzero negative eigenspace at all. Yet $\mathfrak m=\mathop{\mathrm{span}}\{\varphi_{12},\varphi_{13}\}\subseteq\mathfrak{so}(3)$ is isotropic (a 3-form vanishes on any 2-plane) and has $\dim=2=\lfloor 9/4\rfloor$. **So at $n=3$ the left side has a 2-dimensional example and the right side has none.** The Statement's own lower endpoint is the $n$ at which its "equivalently" breaks.
 
 **What survives.** The cap is proved for the *Lie-algebra* hypothesis, which is the weaker one to assume, so **everything downstream that uses the cap is safe**; the equivalence would only be needed to transport an example *from* the algebra side *to* the Weyl side. Where that transport is actually needed it happens to hold and is checked case by case: at $n=6$ [r172](REVIEW_r172.md) exhibits an exact critical Weyl tensor with $S=0$ and $d=9$; at $n=4$ the diagonal $W$ with $\lambda_{12}=\lambda_{34}=-2b>0$ and $\lambda_{13}=\lambda_{14}=\lambda_{23}=\lambda_{24}=b<0$ is traceless, Ricci-flat ($a+2b=0$) and Bianchi-flat, with negative eigenspace exactly $\mathbb R^2\otimes\mathbb R^2$ of dimension $4=\lfloor 16/4\rfloor$; for $n\ge4$ generally the two-block sphere product $S^p\times S^q$ is graded ($k\le2\Rightarrow e_3=0\Rightarrow S=0$, [ungraded-slack.md:53](../findings/ungraded-slack.md#L53)) with $\dim\mathfrak m=pq$. **The general statement "every isotropic subspace is realised" is asserted by the word "equivalently" and proved nowhere.**
 
@@ -146,7 +146,7 @@ The two sides are not equivalent, and the clause is doing the work of a theorem 
 | [findings/INDEX.md:26](../findings/INDEX.md#L26) | cap **and** equality, *"$\dim\mathfrak m=\lfloor n^2/4\rfloor$ closed at both ends"* | safe; it names the dimension, not the subspace |
 | [bounds.md:173](../findings/bounds.md#L173) | cap, with the LP optimum at $\dim\mathfrak m=\lfloor n^2/4\rfloor$ | safe |
 | [bounds-relaxations.md:142](../findings/bounds-relaxations.md#L142) | the proof's **internal** chain $4d^2/n-2d\le2S_{\mathfrak{mmh}}\le(n-2)d$ | safe, and it independently pins $\mu=2S_{\mathfrak{mmh}}$ and $\gamma=S_{\mathfrak{hhm}}$ |
-| [isotropy-cap.md:306](../findings/isotropy-cap.md#L306) | $\mu(\mathfrak m)=2\operatorname{tr}(\Pi_{\mathfrak m}^{\#})$ | safe; agrees with [r411](REVIEW_r411.md) |
+| [isotropy-cap.md:306](../findings/isotropy-cap.md#L306) | $\mu(\mathfrak m)=2\mathop{\mathrm{tr}}(\Pi_{\mathfrak m}^{\#})$ | safe; agrees with [r411](REVIEW_r411.md) |
 | [ATTEMPTS.md:2208](../ATTEMPTS.md), [:2610](../ATTEMPTS.md) | literature placement; R13's closure | safe |
 | [REVIEW_r321.md:118,126](REVIEW_r321.md) | the cap as an LP constraint | safe |
 | [REVIEW_r411.md:114–115](REVIEW_r411.md) | the $-2$ eigenvalue, and $T=2(\#I)$ | safe, and an independent confirmation of the $T$-spectrum |

@@ -29,7 +29,7 @@ Whether the Cauchy–Schwarz step $\lVert R\rVert^2\ge(n/4)^2/\dim\mathfrak h$ i
 
 **`GAP`.** *True as far as it can be checked (the load-bearing parts were re-derived cold) and the proof of its principal clause is not on the record, while its concluding universal is false as written.*
 
-**What v176 rebuilt by hand.** The Cauchy–Schwarz step, which **needs only $\operatorname{im}R\subseteq\mathfrak h$ and $\operatorname{tr}R=n/4$ and not the block-eigenvalue statement it cites**; the dimension bound's algebra, exact with no slack, sufficient and never necessary; **all eight constants**, as $P=3n^2(n-1)-2(7n-4)\dim\mathfrak h$ at each family's shift; **all twelve exceptional spaces**; and both rank-one closed forms, with strict monotonicity so no second equality case. **[Petersen–Stanfield](../references/petersen-stanfield-2025-poincare-polynomials/) Proposition 2.2 read at source says what is claimed.** *Two cross-checks fell out: $\mathbb{OP}^2$ at $\theta^2=\tfrac{45}{56}$ matches the record's separately obtained value, and $\mathrm{Gr}_{\mathbb R}(2,2)$ returns the record's $n=4$ value $\sqrt3/2$.*
+**What v176 rebuilt by hand.** The Cauchy–Schwarz step, which **needs only $\mathop{\mathrm{im}}R\subseteq\mathfrak h$ and $\mathop{\mathrm{tr}}R=n/4$ and not the block-eigenvalue statement it cites**; the dimension bound's algebra, exact with no slack, sufficient and never necessary; **all eight constants**, as $P=3n^2(n-1)-2(7n-4)\dim\mathfrak h$ at each family's shift; **all twelve exceptional spaces**; and both rank-one closed forms, with strict monotonicity so no second equality case. **[Petersen–Stanfield](../references/petersen-stanfield-2025-poincare-polynomials/) Proposition 2.2 read at source says what is claimed.** *Two cross-checks fell out: $\mathbb{OP}^2$ at $\theta^2=\tfrac{45}{56}$ matches the record's separately obtained value, and $\mathrm{Gr}_{\mathbb R}(2,2)$ returns the record's $n=4$ value $\sqrt3/2$.*
 
 | id | finding | support |
 |---|---|---|
@@ -55,7 +55,7 @@ Whether the Cauchy–Schwarz step $\lVert R\rVert^2\ge(n/4)^2/\dim\mathfrak h$ i
 
 ### Two steps do less and more than the block said
 
-**The Cauchy–Schwarz step cites the wrong sentence and needs less than it cites.** It needs $\operatorname{rank}R\le\dim\mathfrak h$ and $\operatorname{tr}R=n/4$ (not isotypy, not $R\succeq0$, and not block eigenvalues) and that rank fact is [Petersen–Stanfield](../references/petersen-stanfield-2025-poincare-polynomials/) **Proposition 2.1**'s image statement where the block cites Prop 2.2. **And it is sharp rather than merely valid**: by their Theorem C, equality holds on every simple-isotropy space, the type-II groups and $\mathbb{OP}^2$ among them.
+**The Cauchy–Schwarz step cites the wrong sentence and needs less than it cites.** It needs $\mathop{\mathrm{rank}}R\le\dim\mathfrak h$ and $\mathop{\mathrm{tr}}R=n/4$ (not isotypy, not $R\succeq0$, and not block eigenvalues) and that rank fact is [Petersen–Stanfield](../references/petersen-stanfield-2025-poincare-polynomials/) **Proposition 2.1**'s image statement where the block cites Prop 2.2. **And it is sharp rather than merely valid**: by their Theorem C, equality holds on every simple-isotropy space, the type-II groups and $\mathbb{OP}^2$ among them.
 
 ### The equality clause rests on five points
 

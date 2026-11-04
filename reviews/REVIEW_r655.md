@@ -14,7 +14,7 @@ The refutation reduces to $55>54$. $c_{12}=f(\pi/2)=\sqrt{2/3}\,\theta_0(12)=\sq
 | --- | --- | --- |
 | $\theta_0(n)$ | the closed form $\theta_0(n)^2=2(n-1)(n-2)/n^2$ **and nothing more** | [conventions.md](../findings/conventions.md), as repaired 2026-09-04 |
 | $\Theta_n$ | the diagonal maximum; $=\theta_0(n)$ at **even** $n$. $n=12$ is even, so **the parity trap does not bite at the dimension the block names**, it does bite on the generalisation, see §4 | same |
-| norm | $\lVert W\rVert^2=\operatorname{tr}(W^2)=\sum_\alpha\lambda_\alpha^2=1$ on $\Lambda^2$, the $\tfrac12$ taken at the $\Lambda^2$ level | [conventions.md](../findings/conventions.md), "norms and pairings" |
+| norm | $\lVert W\rVert^2=\mathop{\mathrm{tr}}(W^2)=\sum_\alpha\lambda_\alpha^2=1$ on $\Lambda^2$, the $\tfrac12$ taken at the $\Lambda^2$ level | [conventions.md](../findings/conventions.md), "norms and pairings" |
 | $\theta$, $P$ | $P(W)=\langle W,Q(W)\rangle$, $\theta=P/\lVert W\rVert^3$; critical means $Q(W)=\theta W$ | [conventions.md](../findings/conventions.md) |
 | padding | extension by zero; commutes with $Q$ and preserves $\lVert\cdot\rVert$ and $\theta$ | [conventions.md](../findings/conventions.md) |
 | $S_{XYZ}$ | ordered slots | [conventions.md](../findings/conventions.md). *It plays no part below; L103 uses no $S_{XYZ}$.* |
@@ -94,7 +94,7 @@ Setting that equal to $\sqrt{2/3}\,\theta_0(12)$ asserts $\max P\le\theta_0(12)$
 
 **$\langle W_1,W_{\mathbb{CP}^2}\rangle=0$, exact, in one line, and this is where the split choice is spent.** Padded $W_{\mathbb{CP}^2}$ is supported on $\Lambda^2\mathbb R^4$ for the four coordinates of the block. Those four sit inside the first factor, so $W_1$ restricted to $\Lambda^2\mathbb R^4$ is $a\cdot\mathrm{Id}$, and
 
-$$\langle W_1,W_{\mathbb{CP}^2}\rangle=\operatorname{tr}(W_1W_{\mathbb{CP}^2})=a\operatorname{tr}(W_{\mathbb{CP}^2})=0,$$
+$$\langle W_1,W_{\mathbb{CP}^2}\rangle=\mathop{\mathrm{tr}}(W_1W_{\mathbb{CP}^2})=a\mathop{\mathrm{tr}}(W_{\mathbb{CP}^2})=0,$$
 
 because every Weyl operator is trace-free on $\Lambda^2$. **The block's "exactly" is right and needs no computation.**
 
@@ -102,7 +102,7 @@ because every Weyl operator is trace-free on $\Lambda^2$. **The block's "exactly
 
 ### Is the value split-dependent? No, but admissibility is, and the block should say which
 
-$f(\pi/2)=\sqrt{2/3}\,P(W_1)$ depends only on $P(W_1)$, which is $SO(12)$-invariant, so **a conjugate split gives the same value.** Nothing in the number is split-dependent, and the brief's structural worry does not land. What the split buys is **admissibility**: if the $\mathbb{CP}^2$ block straddles the two factors, say $\{0,1\}\mid\{2,3\}$, then $W_1$ on $\Lambda^2\mathbb R^4$ is $\operatorname{diag}(a,c_{\mathrm{mix}},c_{\mathrm{mix}},c_{\mathrm{mix}},c_{\mathrm{mix}},a)$ rather than scalar, and
+$f(\pi/2)=\sqrt{2/3}\,P(W_1)$ depends only on $P(W_1)$, which is $SO(12)$-invariant, so **a conjugate split gives the same value.** Nothing in the number is split-dependent, and the brief's structural worry does not land. What the split buys is **admissibility**: if the $\mathbb{CP}^2$ block straddles the two factors, say $\{0,1\}\mid\{2,3\}$, then $W_1$ on $\Lambda^2\mathbb R^4$ is $\mathop{\mathrm{diag}}(a,c_{\mathrm{mix}},c_{\mathrm{mix}},c_{\mathrm{mix}},c_{\mathrm{mix}},a)$ rather than scalar, and
 
 $$\langle W_1,W_{\mathbb{CP}^2}\rangle=(a-c_{\mathrm{mix}})\big[(W_{\mathbb{CP}^2})_{0101}+(W_{\mathbb{CP}^2})_{2323}\big]=(a-c_{\mathrm{mix}})\cdot2\mu\ne0,$$
 
@@ -119,7 +119,7 @@ Every ingredient above is exact, so **nothing in L103 needs the `Observation` la
 | even $n\ge12$ | $S^{n/2}\times S^{n/2}$, block inside one factor | $\sqrt{\tfrac{4(n-1)(n-2)}{3n^2}}$ | yes iff $n^2-12n+8>0$, i.e. $n>6+2\sqrt7$ |
 | odd $n\ge13$ | $S^{(n-1)/2}\times S^{(n+1)/2}$, block inside the larger factor | $\sqrt{\tfrac{4(n-1)(n-3)}{3(n+1)(n-2)}}$ | yes iff $n^2-13n+18>0$, i.e. $n>\tfrac{13+\sqrt{97}}2$ |
 
-Both orthogonality proofs of §3 use only that the $\mathbb{CP}^2$ block sits inside one factor of a two-factor product (true for any $p\ge4$) and criticality holds for every $S^p\times S^q$, so $\alpha=0$ and $f(\varphi)=\cos^3\varphi+c_n\sin^3\varphi$ at every $n$. **So the refutation of the extension is not an $n=12$ phenomenon; it is every dimension the extension was wanted for**, which is what makes [post F36](../findings/fence-posts.md#L291)'s *"the $n=12$ flip is structural, its sign being exactly $\operatorname{sign}(c-1)$"* the right statement and this block the narrow one.
+Both orthogonality proofs of §3 use only that the $\mathbb{CP}^2$ block sits inside one factor of a two-factor product (true for any $p\ge4$) and criticality holds for every $S^p\times S^q$, so $\alpha=0$ and $f(\varphi)=\cos^3\varphi+c_n\sin^3\varphi$ at every $n$. **So the refutation of the extension is not an $n=12$ phenomenon; it is every dimension the extension was wanted for**, which is what makes [post F36](../findings/fence-posts.md#L291)'s *"the $n=12$ flip is structural, its sign being exactly $\mathop{\mathrm{sign}}(c-1)$"* the right statement and this block the narrow one.
 
 > **THE PARITY TRAP IS LIVE ON THE GENERALISATION AND ONLY THERE.** At odd $n$ the witness value is $\Theta_n$, **not** $\theta_0(n)$, [conventions.md](../findings/conventions.md) records that substituting the closed form there is what regrew [L0](../findings/problem.md)'s refuted constant. [ATTEMPTS.md:1486](../ATTEMPTS.md#L1486)'s table is headed $\sqrt{2/3}\,\theta_n$ but its odd columns are $\Theta_n$ ($0.9562$ at $n=9$, $0.9938$ at $n=11$, against $\theta_0$'s $0.96011$ and $0.99586$), **correct values under Nienhaus's $\theta_n$, which is the record's $\Theta_n$ and not the record's $\theta_0$.** A third symbol for one object; worth a conventions line before anyone generalises L103.
 
@@ -134,7 +134,7 @@ Both orthogonality proofs of §3 use only that the $\mathbb{CP}^2$ block sits in
 | where | form | numbered? |
 | --- | --- | --- |
 | [route-a.md:39](../findings/route-a.md#L39) | this block, $n=12$, decimal constant | **L103** |
-| [fence-posts.md:291](../findings/fence-posts.md#L291) | *general*: the flip is structural, sign $=\operatorname{sign}(c-1)$ | post F36, unnumbered |
+| [fence-posts.md:291](../findings/fence-posts.md#L291) | *general*: the flip is structural, sign $=\mathop{\mathrm{sign}}(c-1)$ | post F36, unnumbered |
 | [routes.md:20](../routes.md#L20) | the R4 register row, same sentence | no |
 | [notes.md](../references/nienhaus-2023-second-best-einstein/notes.md) | the witness restated under Theorem 4.17, same figures | no |
 

@@ -38,7 +38,7 @@ From [conventions.md](../findings/conventions.md), quoted:
 
 > The pair cap $\sum_\gamma T_{\alpha\beta\gamma}=\lVert[v_\alpha,v_\beta]\rVert^2\le2$ is **[Lemma L31](stratum-two-negative.md)**, proved with its equality case characterised. The row marginal is **[Lemma L153](bounds.md)**, in the general form $\sum_\beta\lVert[v,v_\beta]\rVert^2=2(n-2)\lVert v\rVert^2$ … **The marginal has two readings and consumers use both**: $\sum_{\beta\gamma}T_{\alpha\beta\gamma}=2(n-2)$ over ordered pairs, $\sum_{\beta<\gamma}T_{\alpha\beta\gamma}=n-2$ over unordered
 
-> A skew matrix's norm … $\langle X,X\rangle=\tfrac12\operatorname{tr}(X^{\mathsf T}X)$, singular values in pairs $s_1,s_1,s_2,s_2,\dots$ with $\sum_i s_i^2=1$.
+> A skew matrix's norm … $\langle X,X\rangle=\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}X)$, singular values in pairs $s_1,s_1,s_2,s_2,\dots$ with $\sum_i s_i^2=1$.
 
 > $\Theta_n$ | the diagonal maximum; equals $\theta_0(n)$ at even $n$ … $\theta_0(n)^2=2(n-1)(n-2)/n^2$
 
@@ -81,7 +81,7 @@ None of the imports is a unital-algebra-shaped trap: L31 and L153 are statements
 
 ## 2. The chain identity, and what it really needs
 
-$P(W)=\langle W,W^2+W^\#\rangle=\operatorname{tr}W^3+\langle W,W^\#\rangle$. In the eigenbasis, $\langle W,W^\#\rangle=\sum_\alpha\lambda_\alpha W^\#_{\alpha\alpha}=\tfrac12\sum_{\alpha,\gamma,\delta}\lambda_\alpha c_{\alpha\gamma\delta}^2\lambda_\gamma\lambda_\delta$, the sum over **ordered** triples. $T=c^2$ is totally symmetric and vanishes on repeated indices, so the ordered sum is $3!=6$ times the unordered one, and
+$P(W)=\langle W,W^2+W^\#\rangle=\mathop{\mathrm{tr}}W^3+\langle W,W^\#\rangle$. In the eigenbasis, $\langle W,W^\#\rangle=\sum_\alpha\lambda_\alpha W^\#_{\alpha\alpha}=\tfrac12\sum_{\alpha,\gamma,\delta}\lambda_\alpha c_{\alpha\gamma\delta}^2\lambda_\gamma\lambda_\delta$, the sum over **ordered** triples. $T=c^2$ is totally symmetric and vanishes on repeated indices, so the ordered sum is $3!=6$ times the unordered one, and
 
 $$\langle W,W^\#\rangle=\tfrac12\cdot6\sum_{\alpha<\beta<\gamma}T_{\alpha\beta\gamma}\lambda_\alpha\lambda_\beta\lambda_\gamma=3\sum_{\alpha<\beta<\gamma}T_{\alpha\beta\gamma}\lambda_\alpha\lambda_\beta\lambda_\gamma.$$
 

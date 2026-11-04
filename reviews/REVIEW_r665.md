@@ -39,7 +39,7 @@ in an eigenframe $\{v_\alpha\}$ of $W$ with $Wv_\alpha=\lambda_\alpha v_\alpha$.
 
 ## 1. What is free, what is content
 
-Write $L_W=W\circ(\cdot)$ on $S^2(\Lambda^2\mathbb R^n)$, $e=W/\theta$, $L_W=\theta L_e$, and let $\mathcal D=\operatorname{span}\{v_\alpha\otimes v_\alpha\}$ be the eigenframe-diagonal algebra, $\dim\mathcal D=N$. The block's own identity, which I re-derived and confirm, is
+Write $L_W=W\circ(\cdot)$ on $S^2(\Lambda^2\mathbb R^n)$, $e=W/\theta$, $L_W=\theta L_e$, and let $\mathcal D=\mathop{\mathrm{span}}\{v_\alpha\otimes v_\alpha\}$ be the eigenframe-diagonal algebra, $\dim\mathcal D=N$. The block's own identity, which I re-derived and confirm, is
 
 $$\langle x,Mx\rangle=\langle W,X^2+X^\#\rangle=\langle L_WX,X\rangle,\qquad X=\textstyle\sum_\alpha x_\alpha\,v_\alpha\otimes v_\alpha,$$
 
@@ -47,7 +47,7 @@ so $\lambda_{\max}(M)$ is the top eigenvalue of the **compression** of $L_W$ to 
 
 **Three facts, each with its own hypothesis.**
 
-1. **$\lambda_{\max}(M)\ge\theta$ at every unit $W$.** Take $x=\lambda$: $\lVert\lambda\rVert^2=\operatorname{tr}(W^2)=1$ and $\langle\lambda,M\lambda\rangle=P(W)=\theta$. **No criticality, no maximality.** This is the direction [post F15](../findings/bounds-relaxations.md) already states.
+1. **$\lambda_{\max}(M)\ge\theta$ at every unit $W$.** Take $x=\lambda$: $\lVert\lambda\rVert^2=\mathop{\mathrm{tr}}(W^2)=1$ and $\langle\lambda,M\lambda\rangle=P(W)=\theta$. **No criticality, no maximality.** This is the direction [post F15](../findings/bounds-relaxations.md) already states.
 2. **$M\lambda=\theta\lambda$ at every critical point.** $(M\lambda)_\alpha=\langle Q(W)v_\alpha,v_\alpha\rangle$, and $Q(W)=\theta W$ is diagonal in the eigenframe, so $(M\lambda)_\alpha=\theta\lambda_\alpha$. So $\theta$ is an **eigenvalue** of $M$ at every critical point; [second-order.md](../findings/second-order.md) line 537 says exactly this, and the L115 block (which needs it), does not.
 3. **The content of L115 is therefore one inequality**: $\lambda_{\max}(M)\le\theta$, equivalently "$\lambda$ is a *top* eigenvector of $M$". Everything else is free.
 
@@ -79,9 +79,9 @@ Let $W$ be coordinate-diagonal with sectional matrix $K$ ($K$ hollow, $K\mathbf1
 
 $$S(u)_{ij}=u_i+u_j\ (i\ne j),\qquad u\in\mathbb R^n,$$
 
-since $\langle S(u),Z\rangle_F=2u^{\mathsf T}(K^Z\mathbf 1)=0$ for every Weyl $Z$. On it the Rayleigh quotient is computable in closed form. With $\langle x,Mx\rangle=\tfrac12\big[\sum_{i\ne j}K_{ij}S_{ij}^2+\operatorname{tr}(KS^2)\big]$ and $\lVert x\rVert^2=\tfrac12\lVert S\rVert_F^2$, using $K\mathbf1=0$ and $K$ hollow throughout,
+since $\langle S(u),Z\rangle_F=2u^{\mathsf T}(K^Z\mathbf 1)=0$ for every Weyl $Z$. On it the Rayleigh quotient is computable in closed form. With $\langle x,Mx\rangle=\tfrac12\big[\sum_{i\ne j}K_{ij}S_{ij}^2+\mathop{\mathrm{tr}}(KS^2)\big]$ and $\lVert x\rVert^2=\tfrac12\lVert S\rVert_F^2$, using $K\mathbf1=0$ and $K$ hollow throughout,
 
-$$\sum_{i\ne j}K_{ij}S(u)_{ij}^2=2u^{\mathsf T}Ku,\qquad \operatorname{tr}\big(KS(u)^2\big)=(n-4)\,u^{\mathsf T}Ku,\qquad \lVert S(u)\rVert_F^2=2(n-2)\lVert u\rVert^2+2\sigma^2$$
+$$\sum_{i\ne j}K_{ij}S(u)_{ij}^2=2u^{\mathsf T}Ku,\qquad \mathop{\mathrm{tr}}\big(KS(u)^2\big)=(n-4)\,u^{\mathsf T}Ku,\qquad \lVert S(u)\rVert_F^2=2(n-2)\lVert u\rVert^2+2\sigma^2$$
 
 with $\sigma=\mathbf1^{\mathsf T}u$, giving
 
@@ -98,7 +98,7 @@ Two remarks this repair forces.
 
 **Hand verification at the two global maximisers the record names.**
 
-- **$n=4$, $W_{\mathbb{CP}^2}$.** In the basis $u_1,u_2,u_3$ of $\Lambda^2_+$ and $w_1,w_2,w_3$ of $\Lambda^2_-$, $\lambda=(2c,-c,-c,0,0,0)$ with $c=1/\sqrt6$, and $T_{\alpha\beta\gamma}=2$ on permutations of $(123)$ and of $(456)$, zero otherwise (from $\sum_\beta\lVert[v_\alpha,v_\beta]\rVert^2=2(n-2)=4$ split over two partners). Hence $M=cA\oplus0$ with $A=\begin{pmatrix}2&-1&-1\\-1&-1&2\\-1&2&-1\end{pmatrix}$, $\operatorname{spec}(A)=\{3,0,-3\}$ with top eigenvector $(2,-1,-1)\propto\lambda$. So $\lambda_{\max}(M)=3c=\sqrt{3/2}=\theta$ **exactly**, and $\max_\alpha\lambda_\alpha=2c=0.8165$. ✔
+- **$n=4$, $W_{\mathbb{CP}^2}$.** In the basis $u_1,u_2,u_3$ of $\Lambda^2_+$ and $w_1,w_2,w_3$ of $\Lambda^2_-$, $\lambda=(2c,-c,-c,0,0,0)$ with $c=1/\sqrt6$, and $T_{\alpha\beta\gamma}=2$ on permutations of $(123)$ and of $(456)$, zero otherwise (from $\sum_\beta\lVert[v_\alpha,v_\beta]\rVert^2=2(n-2)=4$ split over two partners). Hence $M=cA\oplus0$ with $A=\begin{pmatrix}2&-1&-1\\-1&-1&2\\-1&2&-1\end{pmatrix}$, $\mathop{\mathrm{spec}}(A)=\{3,0,-3\}$ with top eigenvector $(2,-1,-1)\propto\lambda$. So $\lambda_{\max}(M)=3c=\sqrt{3/2}=\theta$ **exactly**, and $\max_\alpha\lambda_\alpha=2c=0.8165$. ✔
 - **$n=6$, padded $W_{\mathbb{CP}^2}$.** With the eigenframe $\{u_i\},\{w_i\},\{\varphi_{i5}\},\{\varphi_{i6}\},\varphi_{56}$, every cross-block entry of $M$ vanishes because the relevant brackets land where $W$ does, and $M$ is block diagonal with tops $3c$, $0$, $\tfrac12\lambda_{\max}(K^{(4)})=c$, $c$, $0$. So $\lambda_{\max}(M)=3c=\theta$. ✔ *(This is one choice of eigenframe; see §0.)*
 
 **The repair also explains the block's own headline coincidence.** At the $C_5$ blow-up, $\lambda_{\max}(M)=0.809017>1/\sqrt2$, so the top **cannot** come from the non-Weyl part and must sit in $\mathcal D\cap\mathcal W_n$, where it equals $\theta\cdot\lambda_{\max}(L_e|_{W^\perp})=0.670820\times1.206011=0.809017$. The *"matching to seven digits"* the block reports as a corroboration is a consequence of the split it omits.
@@ -162,4 +162,4 @@ For clause 1 as repaired: $W\in\mathcal W_n$ satisfying the first Bianchi identi
 
 ---
 
-*No computation was performed for this review. Every number above, $3c=\sqrt{3/2}$, $\operatorname{spec}(A)=\{3,0,-3\}$, $\tfrac12\lambda_{\max}(K)\le1/\sqrt2$, the $S^m\times S^m$ block matrix and its eigenvalues $\{\theta,0\}$, and $0.670820\times1.206011=0.809017$, was derived by hand from the definitions in [conventions.md](../findings/conventions.md).*
+*No computation was performed for this review. Every number above, $3c=\sqrt{3/2}$, $\mathop{\mathrm{spec}}(A)=\{3,0,-3\}$, $\tfrac12\lambda_{\max}(K)\le1/\sqrt2$, the $S^m\times S^m$ block matrix and its eigenvalues $\{\theta,0\}$, and $0.670820\times1.206011=0.809017$, was derived by hand from the definitions in [conventions.md](../findings/conventions.md).*

@@ -12,12 +12,12 @@
 
 | symbol | the reading used here | why this one |
 | --- | --- | --- |
-| $\Lambda^2\mathbb R^n\cong\mathfrak{so}(n)$ | orthonormal $\{\varphi_{ab}\}_{a<b}$ under $\langle A,B\rangle=\tfrac12\operatorname{tr}(A^{\mathsf T}B)$, $N=\binom n2$ | [conventions.md](../findings/conventions.md), "a bivector's norm", the record runs in the half-trace pairing |
+| $\Lambda^2\mathbb R^n\cong\mathfrak{so}(n)$ | orthonormal $\{\varphi_{ab}\}_{a<b}$ under $\langle A,B\rangle=\tfrac12\mathop{\mathrm{tr}}(A^{\mathsf T}B)$, $N=\binom n2$ | [conventions.md](../findings/conventions.md), "a bivector's norm", the record runs in the half-trace pairing |
 | $c_{k\alpha\beta}$ | $\langle[\varphi_k,\varphi_\alpha],\varphi_\beta\rangle$, totally antisymmetric | [conventions.md](../findings/conventions.md), structure constants |
-| $W^\#$ | $W^\#_{kl}=\tfrac12\sum_{\alpha\beta\gamma\delta}c_{k\alpha\beta}c_{l\gamma\delta}W_{\alpha\gamma}W_{\beta\delta}$ | forced by the block's own polarisation, and matching [r323](REVIEW_r323.md)'s independent build $W^\#_{ab}=-\tfrac12\operatorname{tr}(\mathrm{ad}_aW\,\mathrm{ad}_bW)$ |
+| $W^\#$ | $W^\#_{kl}=\tfrac12\sum_{\alpha\beta\gamma\delta}c_{k\alpha\beta}c_{l\gamma\delta}W_{\alpha\gamma}W_{\beta\delta}$ | forced by the block's own polarisation, and matching [r323](REVIEW_r323.md)'s independent build $W^\#_{ab}=-\tfrac12\mathop{\mathrm{tr}}(\mathrm{ad}_aW\,\mathrm{ad}_bW)$ |
 | criticality | $Q(W)=W^2+W^\#=\theta W$ at $\lVert W\rVert=1$ | [conventions.md](../findings/conventions.md), "critical point" |
 | $\lambda_k$ | the eigenvalue of $W$ on $\Lambda^2$ at the eigenvector $\varphi_k$; $k$ runs over $1..N$, **not** over coordinate pairs | the block's $M_{kl}$ is indexed by an eigenbasis |
-| $M_{kl}$ | $\operatorname{tr}(\mathrm{ad}(\varphi_k)W\,\mathrm{ad}(\varphi_l)W)$ | the block's own definition |
+| $M_{kl}$ | $\mathop{\mathrm{tr}}(\mathrm{ad}(\varphi_k)W\,\mathrm{ad}(\varphi_l)W)$ | the block's own definition |
 | $m_1..m_r$ | multiplicities of the $r$ **distinct** eigenvalues of $W$ on $\Lambda^2$, $\sum_im_i=N$ | mine, for §2c |
 
 **$M_{kl}$ is not $M(n)$ and is not the sectional matrix.** [conventions.md](../findings/conventions.md) tables a bare $M$ as the sectional matrix $K$ and separately $M(n)$ as the global maximum of $P$; this block's $M_{kl}$ is a third object, an $N\times N$ Gram-type matrix on $\mathfrak{so}(n)$. The block never says so. **That is a live collision, and it is the one [conventions.md](../findings/conventions.md) warns about by name.**
@@ -30,13 +30,13 @@
 
 **The identity, on all of $\mathrm{Sym}(\Lambda^2)$ and in any orthonormal basis.** With $(\mathrm{ad}\,\varphi_k)_{\alpha\beta}=\langle\varphi_\alpha,[\varphi_k,\varphi_\beta]\rangle=c_{k\beta\alpha}$,
 
-$$\operatorname{tr}(\mathrm{ad}(\varphi_k)W\,\mathrm{ad}(\varphi_l)W)=\sum_{\alpha\beta\gamma\delta}c_{k\beta\alpha}c_{l\delta\gamma}W_{\beta\gamma}W_{\delta\alpha} =\sum_{\alpha\beta\gamma\delta}c_{k\alpha\beta}c_{l\gamma\delta}W_{\alpha\delta}W_{\beta\gamma},$$
+$$\mathop{\mathrm{tr}}(\mathrm{ad}(\varphi_k)W\,\mathrm{ad}(\varphi_l)W)=\sum_{\alpha\beta\gamma\delta}c_{k\beta\alpha}c_{l\delta\gamma}W_{\beta\gamma}W_{\delta\alpha} =\sum_{\alpha\beta\gamma\delta}c_{k\alpha\beta}c_{l\gamma\delta}W_{\alpha\delta}W_{\beta\gamma},$$
 
 relabelling $\alpha\!\leftrightarrow\!\beta$, $\gamma\!\leftrightarrow\!\delta$ and using $W$ symmetric. Against $2W^\#_{kl}=\sum c_{k\alpha\beta}c_{l\gamma\delta}W_{\alpha\gamma}W_{\beta\delta}$ the two differ by the single transposition $\gamma\!\leftrightarrow\!\delta$, which $c_{l\gamma\delta}$ answers with a sign. Hence
 
 $$\boxed{\;M_{kl}=-2\,W^\#_{kl}\;}$$
 
-identically. **No criticality, no unit norm, no trace-freeness, no Bianchi identity enters**, it is total antisymmetry of $c$ and symmetry of $W$, nothing else. In a $W$-eigenbasis this is $M_{kl}=-\sum_{\alpha\beta}\lambda_\alpha\lambda_\beta c_{k\alpha\beta}c_{l\alpha\beta}$, the block's bracket expression, and it reproduces the block's stated polarisation $\langle v,W^\#v\rangle=-\tfrac12\operatorname{tr}(\mathrm{ad}(v)W\mathrm{ad}(v)W)$ on the diagonal.
+identically. **No criticality, no unit norm, no trace-freeness, no Bianchi identity enters**, it is total antisymmetry of $c$ and symmetry of $W$, nothing else. In a $W$-eigenbasis this is $M_{kl}=-\sum_{\alpha\beta}\lambda_\alpha\lambda_\beta c_{k\alpha\beta}c_{l\alpha\beta}$, the block's bracket expression, and it reproduces the block's stated polarisation $\langle v,W^\#v\rangle=-\tfrac12\mathop{\mathrm{tr}}(\mathrm{ad}(v)W\mathrm{ad}(v)W)$ on the diagonal.
 
 **The equivalence.** In a $W$-eigenbasis $W$ and $W^2$ are diagonal with entries $\lambda_k,\lambda_k^2$, so
 

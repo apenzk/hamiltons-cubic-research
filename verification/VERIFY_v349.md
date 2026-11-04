@@ -37,7 +37,7 @@ Two readings of "both directions" exist. It may name the two clauses of the titl
 
 ## 3. What L113's statement asserts, and that it holds
 
-**The reduction (claim 1).** Under H2, every inequality L113 contemplates is a consequence of the hypotheses $\{g_k\ge0,\ \operatorname{supp}\mu\subseteq\{\lambda_k\},\ m_0,\ m_1\}$. Each of these is implied by the pinned system: $g_k\ge0$ because $T\ge0$ and $(\lambda_\alpha-\lambda_\beta)^2\ge0$, the support by construction, and $m_0$, $m_1$ from (A) and (B) with the cubic identity (Passage B). A conclusion drawn from hypotheses that the pinned system implies is implied by the pinned system. Eliminating $G_2$ between two such inequalities is a further deduction from the same hypotheses, so the eliminated conclusion also lies in the pinned class. This holds however $G_2$ enters, which is the phrase "however the free moment enters".
+**The reduction (claim 1).** Under H2, every inequality L113 contemplates is a consequence of the hypotheses $\{g_k\ge0,\ \mathop{\mathrm{supp}}\mu\subseteq\{\lambda_k\},\ m_0,\ m_1\}$. Each of these is implied by the pinned system: $g_k\ge0$ because $T\ge0$ and $(\lambda_\alpha-\lambda_\beta)^2\ge0$, the support by construction, and $m_0$, $m_1$ from (A) and (B) with the cubic identity (Passage B). A conclusion drawn from hypotheses that the pinned system implies is implied by the pinned system. Eliminating $G_2$ between two such inequalities is a further deduction from the same hypotheses, so the eliminated conclusion also lies in the pinned class. This holds however $G_2$ enters, which is the phrase "however the free moment enters".
 
 **The sharpest such conclusion, in closed form.** Two inequalities valid for every nonnegative $\mu$ on the spectrum are
 

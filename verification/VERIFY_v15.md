@@ -71,7 +71,7 @@ from $\frac{3(n-8)}{2(n-2)}-2=\frac{3n-24-4n+8}{2(n-2)}=-\frac{n+16}{2(n-2)}$.
 ## 2. Whether the conclusion at coefficient $1$ bounds the branch the inputs define
 
 **The direction is derived, not assumed.** For any $\rho>0$,
-$$\frac{\mathrm d}{\mathrm dw}\log g_\rho=\frac{\rho w}{c+\rho w^2}-\frac{B}{A+Bw},\qquad \operatorname{sign}g_\rho'=\operatorname{sign}\big[\rho w(A+Bw)-B(c+\rho w^2)\big]=\operatorname{sign}(\rho Aw-Bc),$$
+$$\frac{\mathrm d}{\mathrm dw}\log g_\rho=\frac{\rho w}{c+\rho w^2}-\frac{B}{A+Bw},\qquad \mathop{\mathrm{sign}}g_\rho'=\mathop{\mathrm{sign}}\big[\rho w(A+Bw)-B(c+\rho w^2)\big]=\mathop{\mathrm{sign}}(\rho Aw-Bc),$$
 the $\rho Bw^2$ cancelling. So $g_\rho$ is strictly decreasing on $[0,w^*_\rho)$ and strictly increasing after, with
 $$w^*_\rho=\frac{Bc}{\rho A}=\frac{\kappa}{\rho\sqrt n}.$$
 At the stationary point, $c+\rho w^{*2}=c\big(1+\tfrac{B^2c}{\rho A^2}\big)$ and $A+Bw^*=\tfrac{\rho A^2+B^2c}{\rho A}$, so
@@ -110,7 +110,7 @@ Values $3.16228$, $1.73205$, $1.24722$, $1$ at $n=10,12,14,16$, the blockquote's
 
 ## 4. What the minimum on $[0,1]$ actually is, and whether the block computes it
 
-Since $\operatorname{sign}g_\rho'=\operatorname{sign}(\rho Aw-Bc)$ has a single sign change, $g_\rho$ is unimodal, so
+Since $\mathop{\mathrm{sign}}g_\rho'=\mathop{\mathrm{sign}}(\rho Aw-Bc)$ has a single sign change, $g_\rho$ is unimodal, so
 $$\min_{[0,1]}g_\rho=\begin{cases}g_\rho(w^*_\rho)&w^*_\rho\le1\\[2pt] g_\rho(1)=\dfrac{\sqrt{c_p+\rho}}{\sqrt n+n}&w^*_\rho>1,\end{cases}$$
 and in the range of interest the second case holds throughout. Exactly, with $c_p=\kappa/n$:
 
@@ -175,7 +175,7 @@ So branch 2 is $\ge0.6156/n$ for every $n\ge12$ under either accounting. **The b
 
 ## 7. Discrepancy protocol, the four findings, each with its counter-case
 
-**D1, the proof is executed at a coefficient the block's inputs contradict.** *Located:* [line 1211](../findings/second-order.md), "With $g(w)=\sqrt{c+w^2}/(A+Bw)$". *Exhibited:* §2, $0.90360617/n$ computed against $0.78677479/n$ true at $n=12$, an overstatement of $14.85\%$, with the monotonicity of $\rho\mapsto(1/\rho+1/\kappa)^{-1/2}$ giving the direction. *Argued the other way:* the parenthetical on the same line (*"the repaired form carries $\rho_n$ on the $w^2$, treated in the blockquote above"*), is an explicit delegation, and the derivation's shape does transfer, $\operatorname{sign}g_\rho'=\operatorname{sign}(\rho Aw-Bc)$ having the same form for every $\rho$. The delegation fails only because the delegate (D2) is itself wrong at the coefficient it declares. **Reported.**
+**D1, the proof is executed at a coefficient the block's inputs contradict.** *Located:* [line 1211](../findings/second-order.md), "With $g(w)=\sqrt{c+w^2}/(A+Bw)$". *Exhibited:* §2, $0.90360617/n$ computed against $0.78677479/n$ true at $n=12$, an overstatement of $14.85\%$, with the monotonicity of $\rho\mapsto(1/\rho+1/\kappa)^{-1/2}$ giving the direction. *Argued the other way:* the parenthetical on the same line (*"the repaired form carries $\rho_n$ on the $w^2$, treated in the blockquote above"*), is an explicit delegation, and the derivation's shape does transfer, $\mathop{\mathrm{sign}}g_\rho'=\mathop{\mathrm{sign}}(\rho Aw-Bc)$ having the same form for every $\rho$. The delegation fails only because the delegate (D2) is itself wrong at the coefficient it declares. **Reported.**
 
 **D2, the blockquote's closed form is not a lower bound for the branch it defines.** *Located:* [line 1207](../findings/second-order.md), "What the closed form $\tfrac1n\sqrt{\kappa(n-8)/(3n-8)}$ remains is a **valid but lossy lower bound**". *Exhibited:* §4, $0.882764>0.860017$ at $n=14$ and $0.937182>0.898038$ at $n=16$, with the identity $\rho_n\kappa/(\rho_n+\kappa)=\kappa(n-8)/(3n-8)$ showing the closed form is the *uncorrected* branch's value. *Argued the other way:* §4's charitable reading, under which the sentence is about $\rho_n$ and is then an exact identity, but then it does not carry the conclusion it says it carries. **Reported, order-neutral.**
 

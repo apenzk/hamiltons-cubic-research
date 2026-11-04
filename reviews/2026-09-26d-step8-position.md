@@ -10,7 +10,7 @@
 
 ## The one new object: statement H
 
-H: $\langle X\#X,X\rangle\le\frac{n-2}{\sqrt N}\lVert X\rVert^3$ on $\operatorname{Sym}^2\mathfrak{so}(n)$, $n\ge9$, with equality on $I$ and every involutive automorphism. Proved outside a trace window of idempotents. It unblocks I114.
+H: $\langle X\#X,X\rangle\le\frac{n-2}{\sqrt N}\lVert X\rVert^3$ on $\mathop{\mathrm{Sym}}^2\mathfrak{so}(n)$, $n\ge9$, with equality on $I$ and every involutive automorphism. Proved outside a trace window of idempotents. It unblocks I114.
 
 ## Live items and grades
 

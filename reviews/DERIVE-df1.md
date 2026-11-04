@@ -4,7 +4,7 @@
 
 ## Setting
 
-$\Gamma=\{\operatorname{diag}(\varepsilon_1,\dots,\varepsilon_n):\varepsilon_i=\pm1\}\subset O(n)$, **the full sign group**, acting through $\mathrm{Ad}$ with kernel $\{\pm\mathrm{Id}\}$.
+$\Gamma=\{\mathop{\mathrm{diag}}(\varepsilon_1,\dots,\varepsilon_n):\varepsilon_i=\pm1\}\subset O(n)$, **the full sign group**, acting through $\mathrm{Ad}$ with kernel $\{\pm\mathrm{Id}\}$.
 
 > **THE DETERMINANT-ONE VERSION OF THIS GROUP DOES NOT WORK, AND THAT WAS THIS NOTE'S ERROR** ([r346](REVIEW_r346.md)). On $\{\det=1\}$ the character $\chi_{[n]}$ is trivial, so $\chi_S\chi_{S^{\mathsf c}}=\chi_{[n]}=1$ and **$\chi_S=\chi_{S^{\mathsf c}}$**: complementary subsets carry the same character and their blocks fuse. With $\lvert S\rvert\in\{0,2,4\}$ a fusion needs $\lvert S^{\mathsf c}\rvert\in\{0,2,4\}$ too, hence $n\le8$, and it happens at exactly $n=4$ (a $4$-set with the trivial block), $n=6$ (a $4$-set with a pair block) and $n=8$ (two complementary $4$-sets, giving a block of size $4$ rather than two of size $2$). *Verified independently by listing the complementary pairs at each $n$.* **The repair costs nothing**: $\circ$ is $O(n)$-equivariant, not merely $SO(n)$-equivariant, so the full sign group may be used, its even-subset characters are pairwise distinct at every $n$, and the proposition below then holds for all $n\ge4$. The conjecture's regime $n\ge12$ was never at risk, but the statement was wrong at three dimensions.
 
@@ -58,8 +58,8 @@ The Weyl-algebra product $\circ$ is $O(n)$-equivariant ([conventions.md](../find
 $$\tfrac12(Mf_i+f_iM)=\tfrac12\big(M_{ji}+M_{ki}\big)f_i:$$
 **the symmetrised-product half of $L_M$ is diagonal on the pair block, with entries $\tfrac12(M_{ji}+M_{ki})$.** *This is where the route's predicted $(M_{ji}+M_{ki})x_i$ comes from; the factor $\tfrac12$ is the one carried by $\circ$, and $L_e=L_M/\theta$ carries it too.*
 
-**Part two is the whole difficulty, and the definition of record is the implementation.** [Q_full](../scripts/lib/adversarial_check1.py) fixes $(W^\#)_{ab}=-\tfrac12\operatorname{tr}(A_aWA_bW)$ with $(A_a)_{bg}=c_{abg}$, i.e. $A_a=\mathrm{ad}(v_a)$ acting on $\Lambda^2$. Polarising,
-$$(M\#X)_{ab}=-\tfrac14\big[\operatorname{tr}(A_aMA_bX)+\operatorname{tr}(A_aXA_bM)\big],$$
+**Part two is the whole difficulty, and the definition of record is the implementation.** [Q_full](../scripts/lib/adversarial_check1.py) fixes $(W^\#)_{ab}=-\tfrac12\mathop{\mathrm{tr}}(A_aWA_bW)$ with $(A_a)_{bg}=c_{abg}$, i.e. $A_a=\mathrm{ad}(v_a)$ acting on $\Lambda^2$. Polarising,
+$$(M\#X)_{ab}=-\tfrac14\big[\mathop{\mathrm{tr}}(A_aMA_bX)+\mathop{\mathrm{tr}}(A_aXA_bM)\big],$$
 and evaluating this on $X=\sum_ix_if_i$ is what couples $x_i$ to $x_m$ through $M_{jm}$ and $M_{km}$. **Not attempted here.**
 
 **What remains, in order, and none of it needs approval.** *(i)* $M\#$ on the pair block in the entries of $M$, giving the $(n-3)\times(n-3)$ matrix. *(ii)* The proof that the orbit direction $x_i=\sigma_i(M_{ji}-M_{ki})$ is an eigenvector with eigenvalue $\tfrac12$, forced, since it is the tangent to the $SO(n)$-orbit in the $(j,k)$ rotation, and it fixes the normalisation. *(iii)* The nondegeneracy gap $\tfrac1{2(M-1)}$ recovered as $\tfrac12$ minus the larger of the two block maxima, checked against the recorded values at $(4,4)$, $(5,5)$ and $(3,5)$. *(iv)* The branching corollary: the locus of diagonal critical points where a $\Gamma$-nontrivial block reaches exactly $\tfrac12$, which by [Lemma L121](../findings/second-order.md) already contains $S^3\times S^3$ at $n=6$ through its nine $4$-set blocks.
@@ -85,12 +85,12 @@ $$X_{\mathrm{orb}}=[\rho(E_{jk}),M],\qquad X_{\mathrm{orb}}(e_{ki})=(M_{ki}-M_{j
 **The closed form recorded here was wrong by a factor of two on the sharp half.** *Gate 2, [r351](REVIEW_r351.md) and [r352](REVIEW_r352.md) on identical briefs, each proving the correct form from the structure constants and each refuting the recorded one three independent ways.*
 
 > **CORRECTED FORM, proved.** *For a coordinate-diagonal $M$ with sectional matrix $M_{ab}$, the pair block $\{j,k\}$ of $L_M$ in the basis $f_i=e_{ji}\odot e_{ki}$ is*
-> $$L\big|_{\{j,k\}}=\tfrac12\Big[\operatorname{diag}(M_{ji}+M_{ki})-M_{jk}\,\mathrm{Id}+M^{(jk)}\Big],\qquad L[i,i]=\tfrac12(M_{ji}+M_{ki})-\tfrac12M_{jk},\quad L[i,m]=\tfrac12M_{im},$$
+> $$L\big|_{\{j,k\}}=\tfrac12\Big[\mathop{\mathrm{diag}}(M_{ji}+M_{ki})-M_{jk}\,\mathrm{Id}+M^{(jk)}\Big],\qquad L[i,i]=\tfrac12(M_{ji}+M_{ki})-\tfrac12M_{jk},\quad L[i,m]=\tfrac12M_{im},$$
 > *with $M^{(jk)}$ the hollow submatrix of $M$ on the indices other than $j,k$. **It needs diagonality only**, not criticality, not $\theta>0$, not Ricci-flatness.*
 
-**The error.** In $(M\#X)_{\alpha\beta}=-\tfrac14[\operatorname{tr}(A_\alpha MA_\beta X)+\operatorname{tr}(A_\alpha XA_\beta M)]$ the two traces are **equal**, so the $-\tfrac14$ collapses to $-\tfrac12$. The recorded entries are the symmetrised half plus exactly *one half* of the true sharp half.
+**The error.** In $(M\#X)_{\alpha\beta}=-\tfrac14[\mathop{\mathrm{tr}}(A_\alpha MA_\beta X)+\mathop{\mathrm{tr}}(A_\alpha XA_\beta M)]$ the two traces are **equal**, so the $-\tfrac14$ collapses to $-\tfrac12$. The recorded entries are the symmetrised half plus exactly *one half* of the true sharp half.
 
-**And the $\sigma_i$ were an artefact of the wrong basis** ([r352](REVIEW_r352.md)): no sign appears in the unsorted basis $f_i=e_{ji}\odot e_{ki}$ as defined; the $\sigma_i\sigma_m$ belongs to the *sorted* basis. It is spectrum-neutral, being a $\operatorname{diag}(\pm1)$ conjugation, so it costs no result, but the $16\%$ failure that first exposed it was the screening code using sorted bivectors while the text described unsorted ones.
+**And the $\sigma_i$ were an artefact of the wrong basis** ([r352](REVIEW_r352.md)): no sign appears in the unsorted basis $f_i=e_{ji}\odot e_{ki}$ as defined; the $\sigma_i\sigma_m$ belongs to the *sorted* basis. It is spectrum-neutral, being a $\mathop{\mathrm{diag}}(\pm1)$ conjugation, so it costs no result, but the $16\%$ failure that first exposed it was the screening code using sorted bivectors while the text described unsorted ones.
 
 **Three independent refutations of the recorded form, any one decisive.**
 

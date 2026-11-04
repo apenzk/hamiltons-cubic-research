@@ -98,8 +98,8 @@ I did not re-run the $n=6$ sweep and I did not attempt to drive $\lambda_{\max}$
 
 Two invariant-theoretic identities, both free:
 
-- $\operatorname{tr}L_x\equiv0$. The record has this and uses it for claim F. It needs no computation: $x\mapsto\operatorname{tr}L_x$ is an $O(n)$-invariant linear functional on the nontrivial irreducible module $\mathrm{Weyl}_n$, hence zero.
-- $\operatorname{tr}(L_xL_y)=\kappa_n\langle x,y\rangle$ for a constant $\kappa_n$. Same argument one level up: $B(x,y)=\operatorname{tr}(L_xL_y)$ is a symmetric $O(n)$-invariant bilinear form (because $L_{g\cdot x}=gL_xg^{-1}$) on an **absolutely irreducible** module, so it is a multiple of the metric.
+- $\mathop{\mathrm{tr}}L_x\equiv0$. The record has this and uses it for claim F. It needs no computation: $x\mapsto\mathop{\mathrm{tr}}L_x$ is an $O(n)$-invariant linear functional on the nontrivial irreducible module $\mathrm{Weyl}_n$, hence zero.
+- $\mathop{\mathrm{tr}}(L_xL_y)=\kappa_n\langle x,y\rangle$ for a constant $\kappa_n$. Same argument one level up: $B(x,y)=\mathop{\mathrm{tr}}(L_xL_y)$ is a symmetric $O(n)$-invariant bilinear form (because $L_{g\cdot x}=gL_xg^{-1}$) on an **absolutely irreducible** module, so it is a multiple of the metric.
 
 At an idempotent $e=W/\theta$ these read $\sum_i\lambda_i=0$ and $\sum_i\lambda_i^2=\kappa_n/\theta^2$. Now impose second-order optimality, $\lambda=1$ simple, $\lambda=\tfrac12$ with multiplicity $m'\ge m=\dim(\text{orbit})$, all others $\le\tfrac12$. Cauchy–Schwarz on the remaining $D-1-m'$ eigenvalues, which must sum to $-(1+m'/2)$, gives
 
@@ -111,7 +111,7 @@ $$\theta^2\ \le\ \frac{\kappa_n}{\Phi\big(\dim O(n)-\dim\mathrm{Stab}(W),\,D\big
 
 **Read the other way round, this is a symmetry-forcing theorem of exactly the shape of (G):** a maximiser's orbit cannot be too large, i.e. $\dim\mathrm{Stab}(W)$ is bounded *below* by an explicit function of $\kappa_n$, $\theta$, $n$. A generic ungraded point has $\dim\mathrm{Stab}=0$ and orbit $n(n-1)/2$, roughly twice the balanced product's $n^2/4$; the bound is strictly stronger there. Whether it bites is one number, $\kappa_n$, and **the record can compute it from data it already has**: $\kappa_n=\theta^2\sum_i\lambda_i^2$ at any single idempotent, and the full $S^p\times S^q$ spectrum is in closed form at [fence-posts.md](../findings/fence-posts.md).
 
-**Two consistency checks I ran on that closed form, by hand, both passing.** With $s_m=(m+2)(m-1)/2$, $c_m=m(m-1)/2$, $\lambda_m=\frac{m-2}{2(m-1)}$, $\mu=\tfrac12-\frac{(p-2)(q-2)-1}{2(p-1)(q-1)}$, eigenvalue $-\mu$ at multiplicity $s_ps_q$ and $+\mu$ at $c_pc_q$, $\tfrac12$ at $pq$, $1$ simple, $0$ on the rest: $\sum\lambda_i=0$ **exactly** at $(3,3)$ and at $(2,4)$. That is an independent confirmation of $\operatorname{tr}L_x\equiv0$ from the record's own spectrum, and of the spectrum from the identity.
+**Two consistency checks I ran on that closed form, by hand, both passing.** With $s_m=(m+2)(m-1)/2$, $c_m=m(m-1)/2$, $\lambda_m=\frac{m-2}{2(m-1)}$, $\mu=\tfrac12-\frac{(p-2)(q-2)-1}{2(p-1)(q-1)}$, eigenvalue $-\mu$ at multiplicity $s_ps_q$ and $+\mu$ at $c_pc_q$, $\tfrac12$ at $pq$, $1$ simple, $0$ on the rest: $\sum\lambda_i=0$ **exactly** at $(3,3)$ and at $(2,4)$. That is an independent confirmation of $\mathop{\mathrm{tr}}L_x\equiv0$ from the record's own spectrum, and of the spectrum from the identity.
 
 **And a falsifiable prediction, one line to check.** $\theta^2\sum\lambda_i^2$ must be the *same* for every idempotent at fixed $n$. The spectra give $\sum\lambda_i^2=\tfrac{99}8$ at $(3,3)$ and $\tfrac{44}3$ at $(2,4)$, so with $\theta(3,3)=\theta_0(6)=\sqrt{40}/6$,
 
@@ -121,7 +121,7 @@ Likewise at $n=8$: $\sum\lambda_i^2=20$ at $(4,4)$ and $\tfrac{675}{32}$ at $(3,
 
 ## F. No unit
 
-**Confirmed, and it predates these commits.** Tkachev 2019's abstract opens *"If $V$ is a finite-dimensional unital commutative (maybe nonassociative) algebra…"*, Definition 1.1 says *"A unital Euclidean metrised algebra such that the equality in (5) attains…"*, and the conjugation $c\mapsto\bar c:=e-c$ that drives (3)–(5) needs the unit outright. A unit $u$ in $\mathrm{Weyl}_n$ would give $L_u=\mathrm{Id}$ and $\operatorname{tr}L_u=D>0$ against $\operatorname{tr}L_x\equiv0$. The record already carries this as a fence post in [fence-posts.md](../findings/fence-posts.md), with the same argument; the brief presents it as a claim of these commits, and it is not.
+**Confirmed, and it predates these commits.** Tkachev 2019's abstract opens *"If $V$ is a finite-dimensional unital commutative (maybe nonassociative) algebra…"*, Definition 1.1 says *"A unital Euclidean metrised algebra such that the equality in (5) attains…"*, and the conjugation $c\mapsto\bar c:=e-c$ that drives (3)–(5) needs the unit outright. A unit $u$ in $\mathrm{Weyl}_n$ would give $L_u=\mathrm{Id}$ and $\mathop{\mathrm{tr}}L_u=D>0$ against $\mathop{\mathrm{tr}}L_x\equiv0$. The record already carries this as a fence post in [fence-posts.md](../findings/fence-posts.md), with the same argument; the brief presents it as a claim of these commits, and it is not.
 
 The one improvement available: the trace identity itself needs no numerics, by the irreducibility argument in §E above. The recorded least-squares fit of $L_u$ to $\mathrm{Id}$ is corroboration, not the proof.
 

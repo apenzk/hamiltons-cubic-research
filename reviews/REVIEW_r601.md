@@ -105,7 +105,7 @@ $$\tfrac{4a-n}4\lVert R_I\rVert^2+a\lVert R_{\mathrm{ric}_0}\rVert^2+\big(\tfrac
 
 Every occurrence of $W$ is inside $\lVert R_W\rVert^2$. At $a=0$ this is $\tfrac{n-2}n\lVert W\rVert^2\le\lVert R_I\rVert^2$. **The constraint sees $W$ through its norm and nothing else, at every $a$**, so the reflection is valid on the whole cone family and not only at $a=0$, a free generalisation the block does not claim.
 
-**And it survives the correction a sibling audit just made.** [problem.md:495](../findings/problem.md#L495) and [results.md:276](../results.md#L276) have added the positivity clause, $\Omega_a=\{\operatorname{scal}(R)>0\}\cap F^{-1}(\cdots)$. Since $\operatorname{scal}(W)=0$, that clause is **$W$-independent**, so $cI+Y-W$ still satisfies it whenever $cI+Y+W$ does. The reflection is untouched. *This is worth recording because the correction landed after L45 was written and could have invalidated its premise.*
+**And it survives the correction a sibling audit just made.** [problem.md:495](../findings/problem.md#L495) and [results.md:276](../results.md#L276) have added the positivity clause, $\Omega_a=\{\mathop{\mathrm{scal}}(R)>0\}\cap F^{-1}(\cdots)$. Since $\mathop{\mathrm{scal}}(W)=0$, that clause is **$W$-independent**, so $cI+Y-W$ still satisfies it whenever $cI+Y+W$ does. The reflection is untouched. *This is worth recording because the correction landed after L45 was written and could have invalidated its premise.*
 
 **The right-hand side of the criterion also splits by parity**, and here the `target.md` copy is thinner than its source. Writing the criterion as $\langle R,\Phi(R)\rangle\le F(R)\langle\mathrm{ric}(R),\mathrm{ric}(\Phi(R))\rangle$:
 
@@ -147,7 +147,7 @@ Not one of the three right-hand pieces is sign-controlled or bounded by anything
 | --- | --- |
 | *"exactly one new coupling"* | **exact.** Triple #8 is the unique survivor absent at $Y=0$. Verified against the ten-row table. |
 | *"every $I$–$W$ pairing vanishes"* | **true, and incomplete**, it is 3 of the 5, and it is offered where the reader needs all 5. Defect #2. |
-| *"depends only on $\lVert W\rVert$"* | **exact**, at every $a$, and robust to the newly added $\operatorname{scal}>0$ clause. |
+| *"depends only on $\lVert W\rVert$"* | **exact**, at every $a$, and robust to the newly added $\mathop{\mathrm{scal}}>0$ clause. |
 | *"gives the two-sided bound"* | **the concealing one.** It is an equivalence to the hypothesis, not a consequence drawn from it, and it is conditional on invariance holding. Defect #3. |
 
 **Pointers.** [report/](../report/) resolves. Every citation the *source* passage makes resolves in the stored full text, Xu Prop 2.7 (p. 9), Lemma 2.6/(2.31), Lemma 2.8/(2.34), (2.5)/(2.6), (2.29), and I read each rather than trusting the note. **The block's own single pointer, its provenance note, is the one that fails.**

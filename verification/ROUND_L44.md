@@ -29,19 +29,19 @@ Whether padded $W_{\mathbb{CP}^2}$ really is critical at every $n\ge4$ with $\th
 
 **`PROVEN, hypotheses corrected`.** *The mathematics stands at every step; the defects are in the block's account of itself.*
 
-**Rebuilt clean, and in two places more strongly than the block claims.** The witness comes from the $\mathfrak{so}(4)$ structure constants with **$W\#I=-W$ forcing $\kappa^2=2$ (no free normalisation**), giving $Q(W)=\sqrt{3/2}\,W$ exactly at $(2,-1,-1)/\sqrt6$. *$W\#I_n=-W$ on the padded block holds **only because $\operatorname{tr}W^+=0$***, each $\rho(f_a)^2=-\tfrac12I_4$ collapsing the sum on $\sum_aw_a=0$. **The pinned $c$ is cross-checked by an independent route**, $F(cI+W)=\tfrac4{n-2}$ being Beitz's own $a=0$ threshold. **And the Weyl tensor is not merely off $\partial\Omega_0$, it is outside $\overline{\Omega_0}$.** [L43](../results.md)'s collapse rebuilds cold with no residue; the parity repair is correct and load-bearing, nothing from $\lVert I\rVert^2=\binom n2$ to $c(n-1)$ seeing parity.
+**Rebuilt clean, and in two places more strongly than the block claims.** The witness comes from the $\mathfrak{so}(4)$ structure constants with **$W\#I=-W$ forcing $\kappa^2=2$ (no free normalisation**), giving $Q(W)=\sqrt{3/2}\,W$ exactly at $(2,-1,-1)/\sqrt6$. *$W\#I_n=-W$ on the padded block holds **only because $\mathop{\mathrm{tr}}W^+=0$***, each $\rho(f_a)^2=-\tfrac12I_4$ collapsing the sum on $\sum_aw_a=0$. **The pinned $c$ is cross-checked by an independent route**, $F(cI+W)=\tfrac4{n-2}$ being Beitz's own $a=0$ threshold. **And the Weyl tensor is not merely off $\partial\Omega_0$, it is outside $\overline{\Omega_0}$.** [L43](../results.md)'s collapse rebuilds cold with no residue; the parity repair is correct and load-bearing, nothing from $\lVert I\rVert^2=\binom n2$ to $c(n-1)$ seeing parity.
 
 **And the elementary route's real content is sharper than stated**: *both roots lie in $(11,12)$*, $11<11.2915<11.4244<12$, which is what forces the threshold, **"no integer between them" being the weaker fact.**
 
-**Two confirmations the block does not claim.** The structure constants were cross-checked against [L31](../findings/stratum-two-negative.md)'s pair cap and [L153](../findings/bounds.md)'s row marginal; and *the Weyl tensor is off the boundary for three reasons, of which the block gives one.* **The block's use of $\operatorname{scal}(Q(W))=0$ rather than the full $\mathrm{ric}(Q(W))=0$ is correct**, $\mathrm{ric}(I)$ being a metric multiple. **And the Beitz characterisation is accurate**, its notes do give Lemma 2.3.4 in sufficiency only.
+**Two confirmations the block does not claim.** The structure constants were cross-checked against [L31](../findings/stratum-two-negative.md)'s pair cap and [L153](../findings/bounds.md)'s row marginal; and *the Weyl tensor is off the boundary for three reasons, of which the block gives one.* **The block's use of $\mathop{\mathrm{scal}}(Q(W))=0$ rather than the full $\mathrm{ric}(Q(W))=0$ is correct**, $\mathrm{ric}(I)$ being a metric multiple. **And the Beitz characterisation is accurate**, its notes do give Lemma 2.3.4 in sufficiency only.
 
 | id | finding | support |
 |---|---|---|
 | **Q1** | *"[L43](../results.md) is the block's only step"* is **false, and self-contradicted two sentences later**, a second input is named there and **four more are used silently** | v188, v189 |
 | **Q2**, **THE DEBT, AND IT IS CONFINED** | ***Invariance $\Rightarrow G\le0$ has no proof on any canonical page.*** Its promised "two lines" exist only in [reviews/](../reviews/), and the statement is **Xu's Proposition 2.2, an *iff*, in the stored full text, uncited by both [L43](../results.md) and L44 and absent from the Xu notes.** *The debt sits in the cone clause alone: **the elementary route carries the headline on its own**, needing no cone theory* | v188, v189 |
-| **Q3** | **an inherited defect, refuted once and never corrected**: [problem.md](../findings/problem.md) justifies that direction by $\tfrac{d}{dt}\operatorname{scal}=2\lVert\operatorname{ric}\rVert^2>0$, **which constrains $\operatorname{scal}$ where the claim is about $F$.** *[r92](../reviews/REVIEW_r92.md) refuted it and it stands* | v188, v189 |
+| **Q3** | **an inherited defect, refuted once and never corrected**: [problem.md](../findings/problem.md) justifies that direction by $\tfrac{d}{dt}\mathop{\mathrm{scal}}=2\lVert\mathop{\mathrm{ric}}\rVert^2>0$, **which constrains $\mathop{\mathrm{scal}}$ where the claim is about $F$.** *[r92](../reviews/REVIEW_r92.md) refuted it and it stands* | v188, v189 |
 | **Q7** | **the Xu notes drop the $\tfrac14$ from Conjecture 1 (1.1)**, *the dropped-denominator extraction failure this record warns about by name.* Harmless to L44 and a defect in the reference folder | v188 |
-| **Q8** | Xu's Proposition 2.2 needs $C$ **closed** convex, and $\Omega_0$ carries an **open** $\operatorname{scal}>0$ clause, *so discharging Q2 by citing it owes both the convexity and the closedness* | v188, v189 |
+| **Q8** | Xu's Proposition 2.2 needs $C$ **closed** convex, and $\Omega_0$ carries an **open** $\mathop{\mathrm{scal}}>0$ clause, *so discharging Q2 by citing it owes both the convexity and the closedness* | v188, v189 |
 | **Q4** | *"a rational function of $n$"* describes $\theta_0(n)^2$, **$\theta_0(11)=6\sqrt5/11$ is irrational** | v188, v189 |
 | **Q5** | **$\lVert W\rVert=1$ is dropped**, without which $\langle W,Q(W)\rangle\le c(n-1)$ is not homogeneous | v189 |
 | **Q6** | **what the Xu notes can and cannot check**: a consumer can verify H9/H10 from Proposition 2.7(3),(4), quoted there, and **cannot verify (3.1)–(3.4), Lemma 2.8's (2.34), or Proposition 2.2**, *and Prop 2.2 is the one theorem that would discharge Q2's debt.* All four verify in the stored full text | v189 |
@@ -58,18 +58,18 @@ Whether padded $W_{\mathbb{CP}^2}$ really is critical at every $n\ge4$ with $\th
 
 > *"If the sublevel sets of $F$ are invariant under (2.2), then for all $v\in C$ we have that $dF_v(\Phi(v))\le0$."*
 
-**which is exactly *invariance $\Rightarrow G\le0$***, the converse following after. Its four hypotheses ($V$ a vector space, $\Phi$ locally Lipschitz, **$C$ open**, $F$ smooth), all check against $Q$, $\{\operatorname{scal}>0\}$ and $F$. **The direction is cited, not owed.** *Verified at source in this round before landing.*
+**which is exactly *invariance $\Rightarrow G\le0$***, the converse following after. Its four hypotheses ($V$ a vector space, $\Phi$ locally Lipschitz, **$C$ open**, $F$ smooth), all check against $Q$, $\{\mathop{\mathrm{scal}}>0\}$ and $F$. **The direction is cited, not owed.** *Verified at source in this round before landing.*
 
 **And the root cause is the record's own reference note**, which paraphrases a two-directional lemma one-directionally. **That paraphrase misled the block, and it misled a verifier of this round**, who read the notes and reported the block's characterisation as accurate, while the verifier who read the source refuted it. *The rule that search-tool prose is a lead and never a citation applies to a record's own notes.*
 
-**The openness of $C$ is why this route is available at all.** Xu's Proposition 2.2 states the same direction as an *iff* but needs $C$ **closed convex**, which collides with $\Omega_0$'s open $\operatorname{scal}>0$ clause, *so the repair that looked available was the one that would have owed two unchecked conditions, and the repair that works needs none.*
+**The openness of $C$ is why this route is available at all.** Xu's Proposition 2.2 states the same direction as an *iff* but needs $C$ **closed convex**, which collides with $\Omega_0$'s open $\mathop{\mathrm{scal}}>0$ clause, *so the repair that looked available was the one that would have owed two unchecked conditions, and the repair that works needs none.*
 
 ### The repairs, all applied
 
 | finding | what changed |
 |---|---|
 | Q2 | the Beitz direction quoted from source with its four hypotheses, **and the notes repaired at the root**, the biconditional stated in both clauses, with the openness of $C$ flagged as what makes it usable |
-| Q3 | the $\tfrac{d}{dt}\operatorname{scal}$ justification **withdrawn**, it constrains $\operatorname{scal}$ where the claim is about $F$; [r91](../reviews/REVIEW_r91.md) and [r92](../reviews/REVIEW_r92.md) refuted it and it stood |
+| Q3 | the $\tfrac{d}{dt}\mathop{\mathrm{scal}}$ justification **withdrawn**, it constrains $\mathop{\mathrm{scal}}$ where the claim is about $F$; [r91](../reviews/REVIEW_r91.md) and [r92](../reviews/REVIEW_r92.md) refuted it and it stood |
 | the heading | *"not merely sufficient"* presupposed the open conjecture and is gone from both files; the malformed `· (D)` with it |
 | Q1 | the only **cited** step, with three further inputs named and the collapse recorded as an identity on the whole Einstein slice |
 | Q4, Q5 | $\theta_0(n)^2$ is what is rational, $\theta_0(11)=6\sqrt5/11$; and $\lVert W\rVert=1$ restored, without which the criterion is not homogeneous |

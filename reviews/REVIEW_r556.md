@@ -27,7 +27,7 @@ From [conventions.md](../findings/conventions.md):
 
 - **Index order** is Li's $iklj$: $(\mathring Wh)_{ij}=\sum_{k,l}W_{iklj}h_{kl}$, with $u\odot v=u\otimes v+v\otimes u$.
 - **$K$** is symmetric hollow $n\times n$, $K_{ab}=W_{abab}$ for $a\ne b$, and **$t=\lVert K\rVert_F^2=\sum_{a\ne b}K_{ab}^2$ over ORDERED pairs**.
-- **$\mu=\operatorname{spec}(M)$ on $\Lambda^2$ at $\lVert M\rVert_F=1$, so $\sum\mu^2=1$; $\omega=\operatorname{spec}(\mathring W)$, $\sum\omega^2=3$.**
+- **$\mu=\mathop{\mathrm{spec}}(M)$ on $\Lambda^2$ at $\lVert M\rVert_F=1$, so $\sum\mu^2=1$; $\omega=\mathop{\mathrm{spec}}(\mathring W)$, $\sum\omega^2=3$.**
 - **$\theta_0(n)^2=2(n-1)(n-2)/n^2$**, and **$\Theta_n$ is the DIAGONAL maximum**, equal to $\theta_0(n)$ at even $n$ and $\sqrt{2(n-1)(n-3)/((n+1)(n-2))}$ at odd $n$.
 - **$M$ carries two objects** (the $\Lambda^2$ operator and the sectional matrix) and $\mathring W$ is the $S^2_0$ operator. L54 uses $M$ in the first sense.
 
@@ -39,7 +39,7 @@ From [conventions.md](../findings/conventions.md):
 
 **The pointer is correct; the argument at the far end is not the block's.** The block at [bispectral.md:444](../findings/bispectral.md#L444) is a locator plus one sentence; the section it names, `Both-sided Schur–Horn and the vertex-matrix budget are the SAME wall`, sits at [bispectral.md:254](../findings/bispectral.md#L254), 190 lines above. That section does carry the mathematics, but the rigidity sentence itself is **not** in it. It is in the *next* section, [bispectral.md:305](../findings/bispectral.md#L305), under `Both-sided Schur–Horn: the two diagonals rebuilt`. So the block's own headline clause is proved in a section the block does not name.
 
-**And the section the block does name uses $\mu$ in a different sense than the block does.** At [bispectral.md:258](../findings/bispectral.md#L258) the section's chain reads $\mu=-\omega_{\min}\ge\mu_1(K)$, $\mu$ a **scalar**. The block's $\mu\succ d_\varphi$ and $\sum\mu^2=1$ need $\mu=\operatorname{spec}(M)$ on $\Lambda^2$, a **vector**. A block whose entire argument is a pointer sends its reader into a passage where its principal symbol means something else. [conventions.md](../findings/conventions.md) already tables this collision; L54 is the block it damages most, because L54 has nothing but the pointer.
+**And the section the block does name uses $\mu$ in a different sense than the block does.** At [bispectral.md:258](../findings/bispectral.md#L258) the section's chain reads $\mu=-\omega_{\min}\ge\mu_1(K)$, $\mu$ a **scalar**. The block's $\mu\succ d_\varphi$ and $\sum\mu^2=1$ need $\mu=\mathop{\mathrm{spec}}(M)$ on $\Lambda^2$, a **vector**. A block whose entire argument is a pointer sends its reader into a passage where its principal symbol means something else. [conventions.md](../findings/conventions.md) already tables this collision; L54 is the block it damages most, because L54 has nothing but the pointer.
 
 ## 2. The two diagonals, rebuilt from the definitions
 
@@ -53,7 +53,7 @@ the first term dying on the antisymmetry of the first index pair, and $(\mathrin
 
 **The $\Lambda^2$ side is the same computation one degree down.** $\langle M\varphi_{ab},\varphi_{ab}\rangle=W_{abab}=K_{ab}$ with $\varphi_{ab}=e_a\wedge e_b$ orthonormal under the half-trace pairing [conventions.md](../findings/conventions.md) fixes. Derived, not measured.
 
-**The diagonal block.** For $h=\operatorname{diag}(v)$ and $h'=\operatorname{diag}(w)$, $(\mathring Wh)_{ij}=\sum_kW_{ikkj}v_k$, so
+**The diagonal block.** For $h=\mathop{\mathrm{diag}}(v)$ and $h'=\mathop{\mathrm{diag}}(w)$, $(\mathring Wh)_{ij}=\sum_kW_{ikkj}v_k$, so
 
 $$\langle\mathring Wh,h'\rangle=\sum_{i,k}W_{ikki}v_kw_i=-\sum_{i,k}K_{ik}v_kw_i=-w^{\mathsf T}Kv,$$
 
@@ -87,7 +87,7 @@ against $t=2$. So $\sum d^2=\tfrac t2+\tfrac12=\tfrac32$, **not** $\tfrac32t=3$.
 
 ## 4. Finding 2, the frame quantifier. REPAIRED.
 
-The block says *"$t\le2$ with equality exactly when $W$ is coordinate-diagonal in some frame"*. What [conventions.md](../findings/conventions.md) proves is the **frame-wise** statement: $t_F=2\lVert\operatorname{diag}_FM\rVert^2\le2\lVert M\rVert_F^2=2$ by Cauchy–Schwarz, with equality iff $M$ is diagonal in the pair basis of $F$. The rigidity argument then needs $t$ and $d$ read in **one and the same** frame; substituting $t=\max_Ft_F=2$ while evaluating $d$ in an arbitrary frame is exactly the trap [conventions.md](../findings/conventions.md) records under *"$t$ IS PER-FRAME UNLESS SAID OTHERWISE"*. Write $t_F=2$ and "diagonal in **that** frame". **The conclusion survives** (the maximising frame is the one to work in) and both directions of the "exactly when" are one Cauchy–Schwarz equality case, so the two implications the brief asks about are both discharged by the same line.
+The block says *"$t\le2$ with equality exactly when $W$ is coordinate-diagonal in some frame"*. What [conventions.md](../findings/conventions.md) proves is the **frame-wise** statement: $t_F=2\lVert\mathop{\mathrm{diag}}_FM\rVert^2\le2\lVert M\rVert_F^2=2$ by Cauchy–Schwarz, with equality iff $M$ is diagonal in the pair basis of $F$. The rigidity argument then needs $t$ and $d$ read in **one and the same** frame; substituting $t=\max_Ft_F=2$ while evaluating $d$ in an arbitrary frame is exactly the trap [conventions.md](../findings/conventions.md) records under *"$t$ IS PER-FRAME UNLESS SAID OTHERWISE"*. Write $t_F=2$ and "diagonal in **that** frame". **The conclusion survives** (the maximising frame is the one to work in) and both directions of the "exactly when" are one Cauchy–Schwarz equality case, so the two implications the brief asks about are both discharged by the same line.
 
 ## 5. Finding 3, "identically in $n$" against "at EVEN $n$ only". REPAIRED.
 
@@ -103,7 +103,7 @@ reproduced here independently and matching the file digit for digit. **The wrong
 
 ## 6. Finding 4, the cap and its equality case. CONFIRMED.
 
-$K$ symmetric, $K\mathbf1=0$, $\lVert K\rVert_F^2=t$ gives $n-1$ eigenvalues on $\mathbf1^\perp$ with $\sum\lambda_i=\operatorname{tr}K=0$ and $\sum\lambda_i^2=t$. Then $\lambda_1=-\sum_{i\ge2}\lambda_i$ and Cauchy–Schwarz gives $\lambda_1^2\le(n-2)\sum_{i\ge2}\lambda_i^2=(n-2)(t-\lambda_1^2)$, so
+$K$ symmetric, $K\mathbf1=0$, $\lVert K\rVert_F^2=t$ gives $n-1$ eigenvalues on $\mathbf1^\perp$ with $\sum\lambda_i=\mathop{\mathrm{tr}}K=0$ and $\sum\lambda_i^2=t$. Then $\lambda_1=-\sum_{i\ge2}\lambda_i$ and Cauchy–Schwarz gives $\lambda_1^2\le(n-2)\sum_{i\ge2}\lambda_i^2=(n-2)(t-\lambda_1^2)$, so
 
 $$\mu_1(K)\le\sqrt{\frac{t(n-2)}{n-1}},$$
 
@@ -111,7 +111,7 @@ with **equality iff $\lambda_2=\dots=\lambda_{n-1}$**. Confirmed.
 
 **And the equality case is attained, by derivation rather than by the file's measurement.** At $S^m\times S^m$ with $n=2m$ and $W=G^{(1)}+G^{(2)}-cG$, $c=(m-1)/(2m-1)$, the sectional matrix is $K=\bigl(\begin{smallmatrix}A&B\\B&A\end{smallmatrix}\bigr)$ with $A=(1-c)(J_m-I_m)$ and $B=-cJ_m$. Its spectrum is $0$ on $(\mathbf1,\mathbf1)$, $(m-1)+c=2m(m-1)/(2m-1)$ on $(\mathbf1,-\mathbf1)$, and $-(1-c)=-m/(2m-1)$ with multiplicity $2m-2$ on $\{(u,\pm u):u\perp\mathbf1\}$. **The $2m-2$ lower eigenvalues on $\mathbf1^\perp$ are all equal**, which is exactly the equality condition, and indeed $\lVert K\rVert_F^2=2m^2(m-1)/(2m-1)$ makes $\sqrt{t(n-2)/(n-1)}=2m(m-1)/(2m-1)=\mu_1(K)$. The row sums vanish identically, which independently confirms the record's $c$.
 
-**The chain around it is correct too.** $-d_{\min}=\max\{\max_{a<b}(-K_{ab}),\mu_1(K)\}$ follows from $d_\psi=-\operatorname{spec}(K\vert_{\mathbf1^\perp})$; $\omega\succ d$ gives $\omega_{\min}\le d_{\min}$; and the five-line unconditional cap at [bispectral.md:272](../findings/bispectral.md#L272) checks out line by line, $h=\operatorname{diag}(v)$ in its own eigenframe, $\langle\mathring Wh,h\rangle=-v^{\mathsf T}K^Fv$ by §2 above, $t_F\le2$ in **every** frame, so $\mu\le\sqrt{2(n-2)/(n-1)}$ **unconditionally in $n$ and in $W$**. The identity $\mu=\max_F\mu_1(K^F)$ also holds, the $\ge$ half coming from the chain at every $F$ and the $\le$ half from the eigenframe of $h$, **and the $\ge$ half is another place the $K$-eigenvector choice of $\psi$ is load-bearing.**
+**The chain around it is correct too.** $-d_{\min}=\max\{\max_{a<b}(-K_{ab}),\mu_1(K)\}$ follows from $d_\psi=-\mathop{\mathrm{spec}}(K\vert_{\mathbf1^\perp})$; $\omega\succ d$ gives $\omega_{\min}\le d_{\min}$; and the five-line unconditional cap at [bispectral.md:272](../findings/bispectral.md#L272) checks out line by line, $h=\mathop{\mathrm{diag}}(v)$ in its own eigenframe, $\langle\mathring Wh,h\rangle=-v^{\mathsf T}K^Fv$ by §2 above, $t_F\le2$ in **every** frame, so $\mu\le\sqrt{2(n-2)/(n-1)}$ **unconditionally in $n$ and in $W$**. The identity $\mu=\max_F\mu_1(K^F)$ also holds, the $\ge$ half coming from the chain at every $F$ and the $\le$ half from the eigenframe of $h$, **and the $\ge$ half is another place the $K$-eigenvector choice of $\psi$ is load-bearing.**
 
 ## 7. The external report, and what the record owns
 
@@ -125,7 +125,7 @@ which is precisely $\tfrac{n-1}n\mu\le\Theta_n$, the form [target.md:266](../fin
 
 ## 8. What cites it, and whether the uses are inside its hypotheses
 
-Grepping the statement rather than the identifier: the operative content, $\sum d_\varphi^2=t/2$, $\sum d^2=\tfrac32t$, $\mu\succ d_\varphi$, $\omega\succ d$, $d_\psi=-\operatorname{spec}(K\vert_{\mathbf1^\perp})$, is consumed at [bispectral.md:236](../findings/bispectral.md#L236), [252](../findings/bispectral.md#L252), [256](../findings/bispectral.md#L256), [258](../findings/bispectral.md#L258), [302](../findings/bispectral.md#L302), [305](../findings/bispectral.md#L305), [337](../findings/bispectral.md#L337), [358](../findings/bispectral.md#L358); at [results.md:252](../results.md#L252), [712](../results.md#L712), [728](../results.md#L728); at [report/sections/06b-bispectral.tex:131](../report/sections/06b-bispectral.tex#L131), [135](../report/sections/06b-bispectral.tex#L135), [163](../report/sections/06b-bispectral.tex#L163); and in [REVIEW_r479](REVIEW_r479.md), [REVIEW_r480](REVIEW_r480.md), [REVIEW_r483](REVIEW_r483.md), [ELIM-stratum.md](ELIM-stratum.md).
+Grepping the statement rather than the identifier: the operative content, $\sum d_\varphi^2=t/2$, $\sum d^2=\tfrac32t$, $\mu\succ d_\varphi$, $\omega\succ d$, $d_\psi=-\mathop{\mathrm{spec}}(K\vert_{\mathbf1^\perp})$, is consumed at [bispectral.md:236](../findings/bispectral.md#L236), [252](../findings/bispectral.md#L252), [256](../findings/bispectral.md#L256), [258](../findings/bispectral.md#L258), [302](../findings/bispectral.md#L302), [305](../findings/bispectral.md#L305), [337](../findings/bispectral.md#L337), [358](../findings/bispectral.md#L358); at [results.md:252](../results.md#L252), [712](../results.md#L712), [728](../results.md#L728); at [report/sections/06b-bispectral.tex:131](../report/sections/06b-bispectral.tex#L131), [135](../report/sections/06b-bispectral.tex#L135), [163](../report/sections/06b-bispectral.tex#L163); and in [REVIEW_r479](REVIEW_r479.md), [REVIEW_r480](REVIEW_r480.md), [REVIEW_r483](REVIEW_r483.md), [ELIM-stratum.md](ELIM-stratum.md).
 
 **Nobody uses the vector reading, brief question (1) resolves benignly.** Every consumer I can find uses $\mu=d_\varphi$ and $\omega=d$ either as multiset equalities or as norm equalities:
 
@@ -133,7 +133,7 @@ Grepping the statement rather than the identifier: the operative content, $\sum 
 - [REVIEW_r480:32](REVIEW_r480.md#L32) uses only $\lVert\mathring W_{\mathrm{off}}\rVert_F^2=3-\tfrac32t=3\lVert M_{\mathrm{off}}\rVert_F^2$, a norm consequence.
 - [REVIEW_r479:59](REVIEW_r479.md#L59) runs the argument in the safe direction, deducing $t\ge2$ from $\sum(K')^2=3$ and $\sum(K')^2\le\tfrac32t$, and it is careful to write $\le$, which is the correct general statement and the one my §3 witness makes strict.
 
-**And the stronger reading, though unused, is true.** At $t_F=2$ the Cauchy–Schwarz equality case says $M$ is diagonal in the $\varphi$-basis outright, so $\mu$ and $d_\varphi$ agree entry by entry; and $\mathring W$ is then block-diagonal, since for coordinate-diagonal $W$ every $\langle\mathring W\varphi_{ab},\varphi_{cd}\rangle$ with $(a,b)\ne(c,d)$ and every $\langle\mathring W\varphi_{ab},\operatorname{diag}(v)\rangle$ vanishes on the pair-matching condition. **So the block's "outright" is true, but for a reason the block does not give**: it is the diagonality that $t_F=2$ already means, not the majorization rigidity the block cites. The Schur–Horn route reaches only the multiset. *A one-line addition would close the gap; as it stands the block asserts more than its stated argument gives.*
+**And the stronger reading, though unused, is true.** At $t_F=2$ the Cauchy–Schwarz equality case says $M$ is diagonal in the $\varphi$-basis outright, so $\mu$ and $d_\varphi$ agree entry by entry; and $\mathring W$ is then block-diagonal, since for coordinate-diagonal $W$ every $\langle\mathring W\varphi_{ab},\varphi_{cd}\rangle$ with $(a,b)\ne(c,d)$ and every $\langle\mathring W\varphi_{ab},\mathop{\mathrm{diag}}(v)\rangle$ vanishes on the pair-matching condition. **So the block's "outright" is true, but for a reason the block does not give**: it is the diagonality that $t_F=2$ already means, not the majorization rigidity the block cites. The Schur–Horn route reaches only the multiset. *A one-line addition would close the gap; as it stands the block asserts more than its stated argument gives.*
 
 **No consumer uses the cap at odd $n$**, and no residue of the withdrawn *"$\mu$ is uncapped"* claim survives, §7's retraction at [bispectral.md:272](../findings/bispectral.md#L272) is complete, and the parity restriction added later is correctly scoped as a limit on the proof rather than on the inequality.
 
@@ -147,7 +147,7 @@ $$\psi_k=\frac1{\sqrt{(n-k+1)(n-k)}}\Bigl(-k\,e^k\otimes e^k+\sum_{l=k+1}^ne^l\o
 
 ## 10. Finding 6, $t\le2$ is load-bearing and unnumbered
 
-L54's rigidity rests entirely on $t\le2$ and its equality case, and the record proves it **only inside a blockquote of [conventions.md](../findings/conventions.md)**. It appears in no numbered block and in no row of [INDEX-results.md](../findings/INDEX-results.md). The proof is two lines and correct in both directions, $t_F=2\lVert\operatorname{diag}_FM\rVert^2$, Cauchy–Schwarz against $\lVert M\rVert_F=1$, equality iff the off-diagonal mass is zero, but a conventions file is where definitions live, and this is a theorem carrying a lemma. **Recommend numbering it**, with the frame quantifier stated as §4 requires.
+L54's rigidity rests entirely on $t\le2$ and its equality case, and the record proves it **only inside a blockquote of [conventions.md](../findings/conventions.md)**. It appears in no numbered block and in no row of [INDEX-results.md](../findings/INDEX-results.md). The proof is two lines and correct in both directions, $t_F=2\lVert\mathop{\mathrm{diag}}_FM\rVert^2$, Cauchy–Schwarz against $\lVert M\rVert_F=1$, equality iff the off-diagonal mass is zero, but a conventions file is where definitions live, and this is a theorem carrying a lemma. **Recommend numbering it**, with the frame quantifier stated as §4 requires.
 
 ## Overall verdict
 

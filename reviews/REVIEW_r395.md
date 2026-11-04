@@ -82,7 +82,7 @@ $\lvert A-B\rvert=\lvert o_l-o_i\rvert\le2\lVert o\rVert_\infty\le2\lVert o\rVer
 
 The section's own arithmetic is self-consistent: $\Sigma\le\tfrac12\cdot3\cdot4\max\lVert o\rVert^2=6\max\lVert o\rVert^2$. **The second step, $\max\lVert o\rVert^2\le2$, is where it fails.**
 
-The only route to $2$ from the stated inputs is $s_j+s_k\le\sum_as_a=\operatorname{tr}M^2=2$ together with discarding $-2\theta M_{jk}$, which needs $M_{jk}\ge0$, and cross entries of a sphere product are negative.
+The only route to $2$ from the stated inputs is $s_j+s_k\le\sum_as_a=\mathop{\mathrm{tr}}M^2=2$ together with discarding $-2\theta M_{jk}$, which needs $M_{jk}\ge0$, and cross entries of a sphere product are negative.
 
 > **AND THE DISCARD IS NOT A TECHNICALITY: $\lVert o\rVert^2>s_j+s_k$ AT EVERY IN-BAND POINT ON RECORD.**
 >
@@ -108,7 +108,7 @@ Both forms evaluated at the $(2,2)$-splits, against the target $\Sigma\ne\theta^
 
 > **THE INCUMBENT SETTLES THE CLAUSE ON THIS FAMILY AND THE SUCCESSOR SETTLES NOTHING.** [Post F50](../findings/INDEX-traps.md)'s surviving identity $\Sigma=\tfrac32(A^2+B^2+C^2)-\tfrac12\sigma^2$ proves $\Sigma\ne\theta^2$ at **every** $(2,2)$-split of the two-factor family, with a factor $6$ to spare and **exactly tight at $S^6\times S^6$**, where $\alpha=\beta$ makes the AM–GM step an equality. The orbit bound clears **none** of them. Where the orbit form *is* exact (the all-twin four-sets, $\Sigma=0$), the mass identity is exact too ($3m_4-\tfrac12\sigma^2=0$ at the $(4,0)$-split, checked). **So the orbit form is tied where it wins and $7$–$10\times$ behind everywhere that matters.**
 
-**Even the crude constants go the wrong way.** $m_4\le\tfrac12\lVert M\rVert_F^2=1$ turns F50's identity into $\Sigma\le3$ with no further input. The section's crude chain reaches $12$, **a factor of $4$ worse than a bound the record already carries in one line**, and worse than [Lemma L124](../findings/second-order.md)'s $\Sigma=\tfrac32\lVert\operatorname{diag}V_+\rVert^2\le\tfrac32\rho^2$ on its own domain.
+**Even the crude constants go the wrong way.** $m_4\le\tfrac12\lVert M\rVert_F^2=1$ turns F50's identity into $\Sigma\le3$ with no further input. The section's crude chain reaches $12$, **a factor of $4$ worse than a bound the record already carries in one line**, and worse than [Lemma L124](../findings/second-order.md)'s $\Sigma=\tfrac32\lVert\mathop{\mathrm{diag}}V_+\rVert^2\le\tfrac32\rho^2$ on its own domain.
 
 **And the framing misattributes what F50 refuted.** The section says it "replaces the refuted mass criterion". [Post F50](../findings/INDEX-traps.md) refuted the $m_4$-**only** criterion ("$m_4\ge\tfrac12$ forces $\theta<\sqrt{3/2}$") and in the same breath recorded the identity as *what survives*, with the instruction "a successor uses the identity, not the mass alone". The section replaces the survivor, not the casualty.
 

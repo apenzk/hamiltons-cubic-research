@@ -29,7 +29,7 @@ The brief ([BRIEF_L65.md](BRIEF_L65.md)) was read cold. No numerical work was do
 - $\lambda$ a partition, $\lambda'$ its conjugate, so $\lambda'_1$ is the number of nonzero parts and $\lambda'_2$ the number of parts $\ge2$. Admissible means $\lambda'_1+\lambda'_2\le n$.
 - $V_\lambda$: for admissible $\lambda$, the $O(n)$-irreducible labelled by $\lambda$, realised (Weyl) as the traceless tensors in $V^{\otimes\lvert\lambda\rvert}$ lying in the image of a Young symmetriser of shape $\lambda$. For non-admissible $\lambda$ the same construction gives $0$. This is the "Weyl convention" below. Under the brief's own definition $V_\lambda$ is defined only for admissible $\lambda$.
 - $\iota_\lambda\colon V_\lambda\hookrightarrow V^{\otimes\lvert\lambda\rvert}$ any fixed equivariant embedding (the multiplicity of $V_\lambda$ in $V^{\otimes\lvert\lambda\rvert}$ can exceed one, and nothing below depends on the choice).
-- $\mathrm{cup}=\sum_a e_a\otimes e_a\in V^{\otimes2}$. $k=(12-\lvert\lambda\rvert)/2$. $M_\lambda=\operatorname{Hom}_{O(n)}(V_\lambda,V^{\otimes12})$.
+- $\mathrm{cup}=\sum_a e_a\otimes e_a\in V^{\otimes2}$. $k=(12-\lvert\lambda\rvert)/2$. $M_\lambda=\mathop{\mathrm{Hom}}_{O(n)}(V_\lambda,V^{\otimes12})$.
 - $\mathrm{cap}_{i,i+1}\colon V^{\otimes m}\to V^{\otimes(m-2)}$ applies $\langle\cdot,\cdot\rangle$ to factors $i,i+1$.
 - Quotations of [brauer-pairing.md](../findings/brauer-pairing.md) lines 1-13, 40-50, 86-98, 112-116 and [results.md](../results.md) lines 226 and 771 were checked at source and match the brief verbatim. Only those lines were displayed.
 
@@ -74,7 +74,7 @@ Exact form of I1 the argument needs: for admissible $\lambda$ there is a nonzero
 - $\mathrm{cup}$ is invariant for every $g\in O(n)$: $(g\otimes g)\mathrm{cup}=\sum_a\sum_{b,c}g_{ba}g_{ca}\,e_b\otimes e_c=\sum_{b,c}(gg^T)_{bc}\,e_b\otimes e_c=\mathrm{cup}$, using only $gg^T=I$, so $\det g=-1$ is included. The record asserts this by name, and the check is the defining relation of $O(n)$.
 - Hence $u_k$ is equivariant from the trivial module, and $g^{\otimes12}c_0(v)=g^{\otimes\lvert\lambda\rvert}\iota_\lambda(v)\otimes(g^{\otimes2})^{\otimes k}\mathrm{cup}^{\otimes k}=\iota_\lambda(gv)\otimes\mathrm{cup}^{\otimes k}=c_0(gv)$.
 
-The clause "which is exactly what the $SO$-versus-$O$ gap turns on" is commentary with no role in the lemma. For $SO(n)$ one has $M_\lambda\subseteq\operatorname{Hom}_{SO(n)}(V_\lambda,V^{\otimes12})$, and the lemma claims nothing about the chiral $SO(n)$ constituents. No finding.
+The clause "which is exactly what the $SO$-versus-$O$ gap turns on" is commentary with no role in the lemma. For $SO(n)$ one has $M_\lambda\subseteq\mathop{\mathrm{Hom}}_{SO(n)}(V_\lambda,V^{\otimes12})$, and the lemma claims nothing about the chiral $SO(n)$ constituents. No finding.
 
 **Verdict: CONFIRMED.**
 
@@ -98,7 +98,7 @@ The record's contrast, that this reason "proves *the map* nonzero rather than me
 
 ## 5. $c_0\in M_\lambda$, and the two senses of nonzero
 
-$c_0$ is linear (tensor product of linear maps), has domain $V_\lambda$ and target $V^{\otimes12}$ (Section 2), and is equivariant (Section 3), so $c_0\in\operatorname{Hom}_{O(n)}(V_\lambda,V^{\otimes12})=M_\lambda$. The zero element of $M_\lambda$ is the zero map, so "nonzero in $M_\lambda$" and "nonzero as a map" are one statement, as written. $\nu(B_{12}(n))$ acts on $M_\lambda$ by post-composition, so $c_0$ is a vector of the module in C's part 1. Whether C's theorem is true is outside this round.
+$c_0$ is linear (tensor product of linear maps), has domain $V_\lambda$ and target $V^{\otimes12}$ (Section 2), and is equivariant (Section 3), so $c_0\in\mathop{\mathrm{Hom}}_{O(n)}(V_\lambda,V^{\otimes12})=M_\lambda$. The zero element of $M_\lambda$ is the zero map, so "nonzero in $M_\lambda$" and "nonzero as a map" are one statement, as written. $\nu(B_{12}(n))$ acts on $M_\lambda$ by post-composition, so $c_0$ is a vector of the module in C's part 1. Whether C's theorem is true is outside this round.
 
 **Verdict: CONFIRMED.** No finding.
 

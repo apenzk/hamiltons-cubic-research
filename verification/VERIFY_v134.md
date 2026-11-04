@@ -10,7 +10,7 @@
 | 2 | The ten Young labels are pairwise distinct for every $p,q\ge3$, so the decomposition is multiplicity-free | **PROVEN** |
 | 3 | Schur plus symmetry make $L_e$ a scalar on each summand | **PROVEN, OVER-GENERAL**; every $O(m)$ irreducible is of real type, so symmetry is never called on |
 | 4 | The ten values are $1,\tfrac12,\lambda_p,\lambda_q,+\mu,-\mu,0,0,0,0$ | **PROVEN**, with the $-\mu$ resting on the trace identity and $\lambda_m$ on an import |
-| 5 | $\operatorname{tr}_{\mathcal W_n}L_e=0$, and the ten values satisfy it identically in $p,q$ | **PROVEN**, verified by hand as an identity, not at sample points |
+| 5 | $\mathop{\mathrm{tr}}_{\mathcal W_n}L_e=0$, and the ten values satisfy it identically in $p,q$ | **PROVEN**, verified by hand as an identity, not at sample points |
 | 6 | The swapped assignment gives $30,30,48,70$ at $(3,5),(4,4),(5,5),(5,7)$, never zero | **PROVEN**, and the general form is $(n^2-4)/2$ |
 | 7 | $\lambda_{\max}(L_e\vert_{W^\perp})=\tfrac12$ for $p,q\ge3$, $(p,q)\ne(3,3)$, attained on $\mathbb R^p\otimes\mathbb R^q$ alone | **PROVEN** |
 | 8 | $\dim E(\tfrac12)=pq$ | **PROVEN** |
@@ -134,21 +134,21 @@ The block writes: *"a symmetric element of a real division algebra of operators 
 
 ## 5. The trace identity, verified as an identity
 
-The block's check: $\mathcal W_n$ is $O(n)$-irreducible and non-trivial, $\sum_iQ(V_i)$ is an invariant vector in it, hence $0$, hence $\operatorname{tr}_{\mathcal W_n}L_e=0$.
+The block's check: $\mathcal W_n$ is $O(n)$-irreducible and non-trivial, $\sum_iQ(V_i)$ is an invariant vector in it, hence $0$, hence $\mathop{\mathrm{tr}}_{\mathcal W_n}L_e=0$.
 
-**The bridge from that to $\operatorname{tr}L_e$ is unstated, and it is the full symmetry of $T$.** For an orthonormal basis $\{V_i\}$ of $\mathcal W_n$,
-$$\operatorname{tr}L_e=\sum_i\langle e\circ V_i,V_i\rangle=\sum_iT(e,V_i,V_i)=\Big\langle e,\sum_iV_i\circ V_i\Big\rangle=\Big\langle e,\sum_iQ(V_i)\Big\rangle,$$
-using $X\circ X=Q(X)$ and the total symmetry of $T$ ([problem.md](../findings/problem.md):114). $\sum_iQ(V_i)$ is basis-independent, hence $O(n)$-invariant; its $\mathcal W_n$-component is an invariant vector in a non-trivial irreducible and vanishes; and $e\in\mathcal W_n$ kills whatever lies outside. So $\operatorname{tr}L_e=0$. **The conclusion is right; the two steps that carry it, the symmetry of $T$, and the fact that only the $\mathcal W_n$-component of $\sum_iQ(V_i)$ needs to vanish, are both absent from the block.** The second matters because [nondegeneracy.md](../findings/nondegeneracy.md):375 establishes that $L_e$ preserves $\mathcal W_n$ only *"to $1.8\times10^{-15}$"*, i.e. numerically; the argument above does not need it.
+**The bridge from that to $\mathop{\mathrm{tr}}L_e$ is unstated, and it is the full symmetry of $T$.** For an orthonormal basis $\{V_i\}$ of $\mathcal W_n$,
+$$\mathop{\mathrm{tr}}L_e=\sum_i\langle e\circ V_i,V_i\rangle=\sum_iT(e,V_i,V_i)=\Big\langle e,\sum_iV_i\circ V_i\Big\rangle=\Big\langle e,\sum_iQ(V_i)\Big\rangle,$$
+using $X\circ X=Q(X)$ and the total symmetry of $T$ ([problem.md](../findings/problem.md):114). $\sum_iQ(V_i)$ is basis-independent, hence $O(n)$-invariant; its $\mathcal W_n$-component is an invariant vector in a non-trivial irreducible and vanishes; and $e\in\mathcal W_n$ kills whatever lies outside. So $\mathop{\mathrm{tr}}L_e=0$. **The conclusion is right; the two steps that carry it, the symmetry of $T$, and the fact that only the $\mathcal W_n$-component of $\sum_iQ(V_i)$ needs to vanish, are both absent from the block.** The second matters because [nondegeneracy.md](../findings/nondegeneracy.md):375 establishes that $L_e$ preserves $\mathcal W_n$ only *"to $1.8\times10^{-15}$"*, i.e. numerically; the argument above does not need it.
 
-**Now the ten values against $\operatorname{tr}L_e=0$, by hand.** The $\pm\mu$ pair contributes
+**Now the ten values against $\mathop{\mathrm{tr}}L_e=0$, by hand.** The $\pm\mu$ pair contributes
 $$\mu\cdot\frac{pq(p-1)(q-1)}4-\mu\cdot\frac{(p+2)(p-1)(q+2)(q-1)}4=\frac{\mu(p-1)(q-1)}4\big[pq-(p+2)(q+2)\big]=-\frac{\mu(p-1)(q-1)(2n+4)}4,$$
 and with $\mu=\dfrac{n-2}{2(p-1)(q-1)}$ this is exactly $-\dfrac{(n-2)(n+2)}4=-\dfrac{n^2-4}4$, **the $(p-1)(q-1)$ cancelling identically**. The other contributions are $1$ from $\langle W\rangle$; $\tfrac12\cdot pq$ from the orbit; $\lambda_m\cdot s(m)=\tfrac{m-2}{2(m-1)}\cdot\tfrac{(m+2)(m-1)}2=\tfrac{m^2-4}4$ for $m=p,q$; and $0$ from the remaining four. So
-$$\operatorname{tr}L_e=1+\frac{pq}2+\frac{p^2-4}4+\frac{q^2-4}4-\frac{n^2-4}4=1+\frac{pq}2+\frac{p^2+q^2-n^2-4}4=1+\frac{pq}2-\frac{2pq+4}4=0,$$
+$$\mathop{\mathrm{tr}}L_e=1+\frac{pq}2+\frac{p^2-4}4+\frac{q^2-4}4-\frac{n^2-4}4=1+\frac{pq}2+\frac{p^2+q^2-n^2-4}4=1+\frac{pq}2-\frac{2pq+4}4=0,$$
 using $p^2+q^2-n^2=-2pq$. **Identically in $p,q$, PROVEN, not at sample points.**
 
-**Does it force $-\mu$ uniquely?** Yes. Treating the $S^2_0\otimes S^2_0$ value $v$ as the single unknown, $\operatorname{tr}L_e=0$ is linear in $v$ with coefficient $s(p)s(q)$, which is $\ge25$ for $p,q\ge3$ and in particular non-zero. One linear equation, one non-vanishing coefficient, one solution. **PROVEN.**
+**Does it force $-\mu$ uniquely?** Yes. Treating the $S^2_0\otimes S^2_0$ value $v$ as the single unknown, $\mathop{\mathrm{tr}}L_e=0$ is linear in $v$ with coefficient $s(p)s(q)$, which is $\ge25$ for $p,q\ge3$ and in particular non-zero. One linear equation, one non-vanishing coefficient, one solution. **PROVEN.**
 
-**Does it force $\lambda_m$ too?** **No, and [LEDGER.md](../findings/LEDGER.md):796 says it does.** That line reads *"$\operatorname{tr}L_e=0$ forces it uniquely, and forces $\lambda_m=\frac{m-2}{2(m-1)}$ with it."* A single scalar equation cannot determine three unknowns $v,\lambda_p,\lambda_q$; and requiring it to hold identically in $p,q$ does not help, because $v$ is a free function of two variables and absorbs any choice of $\lambda$. **The L27 block itself does not make this claim**, it sources $\lambda_m$ to [second-order.md](../findings/second-order.md) and only $-\mu$ to the trace, so the defect is the ledger's, not the block's. Recorded because the ledger is where a reader goes to see why the trace step is legitimate.
+**Does it force $\lambda_m$ too?** **No, and [LEDGER.md](../findings/LEDGER.md):796 says it does.** That line reads *"$\mathop{\mathrm{tr}}L_e=0$ forces it uniquely, and forces $\lambda_m=\frac{m-2}{2(m-1)}$ with it."* A single scalar equation cannot determine three unknowns $v,\lambda_p,\lambda_q$; and requiring it to hold identically in $p,q$ does not help, because $v$ is a free function of two variables and absorbs any choice of $\lambda$. **The L27 block itself does not make this claim**, it sources $\lambda_m$ to [second-order.md](../findings/second-order.md) and only $-\mu$ to the trace, so the defect is the ledger's, not the block's. Recorded because the ledger is where a reader goes to see why the trace step is legitimate.
 
 **The swap discriminant.** Reversing the two tensor summands flips the sign of the $\pm\mu$ contribution, so the trace becomes $0+2\cdot\tfrac{n^2-4}4=\tfrac{n^2-4}2$. At $(3,5)$ and $(4,4)$, $n=8$: $\tfrac{60}2=30$. At $(5,5)$, $n=10$: $\tfrac{96}2=48$. At $(5,7)$, $n=12$: $\tfrac{140}2=70$. **All four figures in the block are exact**, and the general form shows the stronger fact the block asserts without proof, $\tfrac{n^2-4}2=0$ only at $n=2$, so the swapped assignment is **never** zero for $n\ge6$. **PROVEN, and strengthened from four points to all $n$.**
 
@@ -336,7 +336,7 @@ and the second copy at [nondegeneracy.md](../findings/nondegeneracy.md):766, phr
 - $\lambda_{\max}(L_e\vert_{W^\perp})=\tfrac12$ at $W_{p,q}$, attained exactly on $\mathbb R^p\otimes\mathbb R^q$;
 - $\dim E(\tfrac12)=pq=\dim(\text{orbit})$, hence $S^p\times S^q$ is Morse–Bott nondegenerate;
 - the whole $L_e$ spectrum $\{1,\tfrac12,\lambda_p,\lambda_q,\pm\mu,0\}$ with the multiplicities of §7;
-- $\operatorname{tr}L_e=0$ as an identity in $p,q$;
+- $\mathop{\mathrm{tr}}L_e=0$ as an identity in $p,q$;
 - the gap to the second eigenvalue is $\min\{\tfrac1{2(M-1)},\tfrac12-\mu\}$, $M=\max(p,q)$, **and this equals $\tfrac1{2(M-1)}$ for every $p,q\ge3$ except $(3,4)$**, per [nondegeneracy.md](../findings/nondegeneracy.md):752, which my §7 table confirms.
 
 **May be cited for $3\le\min(p,q)\le4$, $(p,q)\ne(3,3)$, with one caveat:** everything above **except** $\dim(\text{orbit})=pq$ and, through it, the word *"nondegenerate"*. §8 records what is owed.

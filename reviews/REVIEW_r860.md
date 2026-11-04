@@ -27,11 +27,11 @@ The two-line derivation is correct and the arithmetic at $S^6\times S^6$ is corr
 
 ## Conventions, quoted from the brief
 
-- $\Lambda^2\mathbb R^n$ is realised as skew matrices, $\varphi_{ab}=E_{ba}-E_{ab}$ is a UNIT bivector, and $\langle X,Y\rangle=\tfrac12\operatorname{tr}(X^{\mathsf T}Y)$.
+- $\Lambda^2\mathbb R^n$ is realised as skew matrices, $\varphi_{ab}=E_{ba}-E_{ab}$ is a UNIT bivector, and $\langle X,Y\rangle=\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$.
 - $u\wedge v=vu^{\mathsf T}-uv^{\mathsf T}$, so at orthonormal $u,v$ this is a unit bivector and $(u\wedge v)(u\wedge v)^{\mathsf T}=uu^{\mathsf T}+vv^{\mathsf T}=\Pi_P$.
 - $P(W)=\langle W,W^2+W^\#\rangle$, $\theta=P(W)/\lVert W\rVert^3$, and criticality on the unit sphere is $Q(W)=W^2+W^\#=\theta W$.
 - $\theta_0(n)=\sqrt{2(n-1)(n-2)}/n$ and $\sqrt{3/2}=1.224745$.
-- $S_{\alpha\beta}=\operatorname{tr}(\Pi_\alpha\Pi_\beta)$ with the plain trace pairing and no factor $\tfrac12$ (given 10, given 14).
+- $S_{\alpha\beta}=\mathop{\mathrm{tr}}(\Pi_\alpha\Pi_\beta)$ with the plain trace pairing and no factor $\tfrac12$ (given 10, given 14).
 
 ## Hypothesis inventory
 
@@ -41,9 +41,9 @@ What the I76 derivation actually consumes, listed against what the block declare
 |---|---|---|
 | $S\lambda=0$, i.e. Ricci-flatness | given 14 | **Yes**, at every row |
 | $S\mathbf1=2(n-1)\mathbf1$, i.e. completeness | given 1, given 14 | **Yes**, at every row |
-| $S$ symmetric | $\operatorname{tr}(\Pi_\alpha\Pi_\beta)=\operatorname{tr}(\Pi_\beta\Pi_\alpha)$ | **Yes**, for the constant by the summation route |
+| $S$ symmetric | $\mathop{\mathrm{tr}}(\Pi_\alpha\Pi_\beta)=\mathop{\mathrm{tr}}(\Pi_\beta\Pi_\alpha)$ | **Yes**, for the constant by the summation route |
 | $\lambda$ two-valued with $\mu\ne\nu$ | hypothesis of the block | **Yes**, for the division |
-| $\operatorname{tr}W=0$ | membership of $\mathcal W_n$ | **No**, redundant and implied (section 2) |
+| $\mathop{\mathrm{tr}}W=0$ | membership of $\mathcal W_n$ | **No**, redundant and implied (section 2) |
 | $N\ne0$ | forced by $n\ge2$ | **Yes**, for the final division |
 | Criticality $W^2+W^\#=\theta W$ | hypothesis of the block | **NO. Never used anywhere** |
 | $S_{\alpha\alpha}=2$, $S_{\alpha\beta}\in[0,1]$, $S\succeq0$, decomposability, first Bianchi | givens 8, 14, 6 | **No** |
@@ -81,9 +81,9 @@ Written that way the route appears to divide by $\mu$, and the Lean proof avoids
 
 So the answer to "check what trace-freeness contributes and whether it is used" is: **it is used in the Lean proof and it is not needed**, and worse for the docstring's claim that "the weights enter only through trace-freeness", trace-freeness is a *consequence* of the other hypotheses. Pair $S\lambda=0$ with completeness:
 
-$$0=\mathbf1^{\mathsf T}S\lambda=(S\mathbf1)^{\mathsf T}\lambda=2(n-1)\sum_\alpha\lambda_\alpha=2(n-1)\operatorname{tr}W,$$
+$$0=\mathbf1^{\mathsf T}S\lambda=(S\mathbf1)^{\mathsf T}\lambda=2(n-1)\sum_\alpha\lambda_\alpha=2(n-1)\mathop{\mathrm{tr}}W,$$
 
-so $\operatorname{tr}W=0$ for every $n\ne1$. **Ricci-flatness plus completeness implies trace-freeness on this locus.** The hypothesis `htf` in [two_eigenvalue_A_regular](../lean/HamiltonsCubic/Results/L201Statement.lean#L149) is therefore removable in principle. Nothing is broken by its presence, and the prose sentence attributing the weights' role to it is wrong about which hypothesis is load-bearing: the load-bearing one is $\mu\ne\nu$.
+so $\mathop{\mathrm{tr}}W=0$ for every $n\ne1$. **Ricci-flatness plus completeness implies trace-freeness on this locus.** The hypothesis `htf` in [two_eigenvalue_A_regular](../lean/HamiltonsCubic/Results/L201Statement.lean#L149) is therefore removable in principle. Nothing is broken by its presence, and the prose sentence attributing the weights' role to it is wrong about which hypothesis is load-bearing: the load-bearing one is $\mu\ne\nu$.
 
 **At every index, not on average.** $S\lambda=0$ is a vector identity, so row $\alpha$ gives the conclusion at $\alpha$. Route B's averaging is used only to *identify* the constant, after constancy is already in hand. The block does not blur this.
 
@@ -104,7 +104,7 @@ One thing the block does not say and should: **$0<a<N$ is what makes the conclus
 
 Suppose $\nu=0$, so $\lambda=\mu\mathbf1_A$ with $\mu\ne0$. Then $S\lambda=0$ gives $S\mathbf1_A=0$, and pairing with $\mathbf1$ gives $0=\mathbf1^{\mathsf T}S\mathbf1_A=2(n-1)a$, hence $a=0$ for every $n\ge2$, hence $W=0$. The mirror case $\mu=0$ gives $a=N$ and again $W=0$.
 
-**So the derivation survives $\nu=0$ and what it then says is that the case does not occur.** A nonzero $W$ on this locus with a two-valued spectrum cannot have $0$ as one of the two values, and the signs $\mu>0>\nu$ are a consequence rather than a hypothesis: $\operatorname{tr}W=0$ with two attained values and neither zero forces opposite signs. The block states $\mu>0>\nu$ as given, which costs nothing but hides that it is free.
+**So the derivation survives $\nu=0$ and what it then says is that the case does not occur.** A nonzero $W$ on this locus with a two-valued spectrum cannot have $0$ as one of the two values, and the signs $\mu>0>\nu$ are a consequence rather than a hypothesis: $\mathop{\mathrm{tr}}W=0$ with two attained values and neither zero forces opposite signs. The block states $\mu>0>\nu$ as given, which costs nothing but hides that it is free.
 
 Note also that in this convention a $W$ with a kernel has **three or more** distinct eigenvalues, so I76 says nothing about any $W$ with a kernel. That matters for section 8.
 
@@ -120,7 +120,7 @@ At $p=6$: $\mu=6/11$ on $30$ planes and $\nu=-5/11$ on $36$ planes. Trace check:
 
 **The constant.** $n=12$, $N=\binom{12}2=66$, $a=2\binom62=30$, and $2\cdot11\cdot30/66=660/66=10$. Confirmed.
 
-**Case $\alpha\in A$.** For coordinate planes $\operatorname{tr}(\Pi_{\{i,j\}}\Pi_{\{k,l\}})=\lvert\{i,j\}\cap\{k,l\}\rvert$. Take $\alpha=e_1\wedge e_2$. The diagonal gives $2$. Within-factor planes of the first factor meeting $\{1,2\}$ in one index are $\{1,x\}$ and $\{2,x\}$ for $x\in\{3,\dots,6\}$, which is $2(p-2)=8$ planes at trace $1$. Within-factor planes of the second factor are disjoint from $\{1,2\}$ and give $0$. Total $2+8+0=10$. **The block's $2(p-2)=8$ is right.**
+**Case $\alpha\in A$.** For coordinate planes $\mathop{\mathrm{tr}}(\Pi_{\{i,j\}}\Pi_{\{k,l\}})=\lvert\{i,j\}\cap\{k,l\}\rvert$. Take $\alpha=e_1\wedge e_2$. The diagonal gives $2$. Within-factor planes of the first factor meeting $\{1,2\}$ in one index are $\{1,x\}$ and $\{2,x\}$ for $x\in\{3,\dots,6\}$, which is $2(p-2)=8$ planes at trace $1$. Within-factor planes of the second factor are disjoint from $\{1,2\}$ and give $0$. Total $2+8+0=10$. **The block's $2(p-2)=8$ is right.**
 
 **Case $\alpha\in B$.** Take $\alpha=e_1\wedge e_7$. It is not in $A$, so no diagonal term. Within-factor planes meeting it are $\{1,x\}$ with $x\in\{2,\dots,6\}$, which is $p-1=5$, and $\{7,y\}$ with $y\in\{8,\dots,12\}$, which is $q-1=5$. No within-factor plane contains both $1$ and $7$. Total $5+5=10$. **The block's $p-1$ and $q-1$ are right.**
 
@@ -151,7 +151,7 @@ with the weights $\lambda=(\tfrac12,\tfrac12,-1,-1,\tfrac12,\tfrac12)$ that give
 
 **Completeness.** $g_2g_2^{\mathsf T}+g_3g_3^{\mathsf T}=e_2e_2^{\mathsf T}+e_3e_3^{\mathsf T}$, so $\sum_\alpha\Pi_\alpha$ has $e_1$ three times (from $\Pi_1,\Pi_2,\Pi_3$), $e_4$ three times (from $\Pi_3,\Pi_5,\Pi_6$), and in the $\{e_2,e_3\}$ block $c^2+s^2+1+1=3$ on each diagonal entry with the off-diagonal $cs-sc=0$. Hence $\sum_\alpha\Pi_\alpha=3\,\mathrm{Id}=(n-1)\mathrm{Id}$.
 
-**The Gram matrix**, from $\operatorname{tr}((aa^{\mathsf T}+bb^{\mathsf T})(xx^{\mathsf T}+yy^{\mathsf T}))=(a\cdot x)^2+(a\cdot y)^2+(b\cdot x)^2+(b\cdot y)^2$ at orthonormal pairs, with $c=\cos t$ and $s=\sin t$:
+**The Gram matrix**, from $\mathop{\mathrm{tr}}((aa^{\mathsf T}+bb^{\mathsf T})(xx^{\mathsf T}+yy^{\mathsf T}))=(a\cdot x)^2+(a\cdot y)^2+(b\cdot x)^2+(b\cdot y)^2$ at orthonormal pairs, with $c=\cos t$ and $s=\sin t$:
 
 $$S=\begin{pmatrix}2&1&1&1&c^2&s^2\\ 1&2&1&1&s^2&c^2\\ 1&1&2&0&1&1\\ 1&1&0&2&1&1\\ c^2&s^2&1&1&2&1\\ s^2&c^2&1&1&1&2\end{pmatrix}$$
 
@@ -170,7 +170,7 @@ so $S\lambda=\tfrac12\cdot4-1\cdot2=0$ at every index, confirming Ricci-flatness
 
 **And integrality fails.** $S_{15}=\cos^2t$ and $S_{16}=\sin^2t$ lie strictly in $(0,1)$ whenever $\sin2t\ne0$, which is exactly given 4's hypothesis. **No common orthonormal frame carries these six planes**, by the easy direction rather than by L201: coordinate planes of a shared frame have integer overlap traces, and $\cos^2t\notin\{0,1\}$.
 
-**Everything the hoped-for implication asks of $S$ is present.** It is positive semidefinite, being a Gram matrix of the $\Pi_\alpha$ in $(\mathrm{Sym}^2\mathbb R^4,\operatorname{tr}(AB))$. It is the Gram matrix of rank-two plane projections. Its row sums are $2(n-1)=6$. Its off-diagonal entries lie in $[0,1]$. It is $A$-regular with the constant I76 predicts. **And it is not integral.** So:
+**Everything the hoped-for implication asks of $S$ is present.** It is positive semidefinite, being a Gram matrix of the $\Pi_\alpha$ in $(\mathrm{Sym}^2\mathbb R^4,\mathop{\mathrm{tr}}(AB))$. It is the Gram matrix of rank-two plane projections. Its row sums are $2(n-1)=6$. Its off-diagonal entries lie in $[0,1]$. It is $A$-regular with the constant I76 predicts. **And it is not integral.** So:
 
 > $A$-regularity of a positive semidefinite Gram matrix of rank-two plane projections, with row sums $2(n-1)$ and off-diagonal entries in $[0,1]$, **does not force integrality.**
 

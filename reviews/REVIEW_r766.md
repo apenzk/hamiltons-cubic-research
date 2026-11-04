@@ -12,7 +12,7 @@
 | **6** | the hazard is *closed*, not open | **CONFIRMED**, closed for [L174](../findings/second-order.md) and for every consumer checked |
 | **7** | *"what L174 owed was the citation rather than the argument"* | **CONFIRMED**, and it is faithful to [r762](REVIEW_r762.md), which itself wrote that conventions.md *"fences this explicitly"* |
 
-**Actionable, one line.** L174 and the brief both cite the weakest clause conventions.md offers; swap the citation for the two sentences beside it, the definition $t=\lVert K\rVert_F^2$ and the operator form $t=2\lVert\operatorname{diag}W\rVert^2$, and name the three derived identities ([L94](../findings/bispectral.md)'s constant $2$, [L54](../findings/bispectral.md)'s $\sum d_\varphi^2=t/2$, [target.md](../findings/target.md)'s $\sum R=1-t/2$) that pin the reading against rescaling.
+**Actionable, one line.** L174 and the brief both cite the weakest clause conventions.md offers; swap the citation for the two sentences beside it, the definition $t=\lVert K\rVert_F^2$ and the operator form $t=2\lVert\mathop{\mathrm{diag}}W\rVert^2$, and name the three derived identities ([L94](../findings/bispectral.md)'s constant $2$, [L54](../findings/bispectral.md)'s $\sum d_\varphi^2=t/2$, [target.md](../findings/target.md)'s $\sum R=1-t/2$) that pin the reading against rescaling.
 
 **Overall verdict: PROVEN, hypotheses corrected.** The hazard is closed and the claim's conclusion is right. One hypothesis is corrected: what closes it is the definition of $t$ as a matrix Frobenius norm together with three identities that fix the numeral, rather than the quoted sentence, which cannot do the work it is cited for.
 
@@ -21,7 +21,7 @@
 Quoted, never restated, from [conventions.md](../findings/conventions.md).
 
 - **The vertex matrix.** $K$ is the symmetric hollow $n\times n$ sectional matrix, $K_{ab}=W_{abab}$ for all $a\ne b$; $t=t_F=\lVert K(F)\rVert_F^2$ **per frame**; $\kappa^2=\max_Ft_F$.
-- **The operator.** $M$ is $W$ acting on $\Lambda^2\mathbb R^n$ in the pair basis $\{\varphi_{ab}\}_{a<b}$, and *unit* means $\lVert M\rVert_F=1$, i.e. $\operatorname{tr}(M^2)=\sum_\alpha\mu_\alpha^2=1$. On the diagonal locus the $\Lambda^2$ spectrum is the multiset of **entries** of $K$ indexed by $a<b$.
+- **The operator.** $M$ is $W$ acting on $\Lambda^2\mathbb R^n$ in the pair basis $\{\varphi_{ab}\}_{a<b}$, and *unit* means $\lVert M\rVert_F=1$, i.e. $\mathop{\mathrm{tr}}(M^2)=\sum_\alpha\mu_\alpha^2=1$. On the diagonal locus the $\Lambda^2$ spectrum is the multiset of **entries** of $K$ indexed by $a<b$.
 - **The pairing.** $\lVert\varphi_{ab}\rVert^2=1$ under the half-trace pairing, so $\{\varphi_{ab}\}_{a<b}$ is orthonormal and $\langle M\varphi_{ab},\varphi_{ab}\rangle=W_{abab}=K_{ab}$.
 - **Ordered by default.** *"this file's own default that sums run over ordered tuples unless a line says otherwise."*
 
@@ -45,7 +45,7 @@ It tables the ordered reading, in those words, under a heading of its own, *"The
 
 The quoted sentence is the next line, 138, and it is quoted **verbatim** by the claim and by [L174](../findings/second-order.md) line 1600, modulo sentence-initial capitalisation and emphasis markup:
 
-> **THE ORDERED SUM IS THE WHOLE OF THE NORMALISATION AND WAS AMBIGUOUS HERE.** Writing $K$ as $(W_{abab})_{a<b}$ reads as an index set over *unordered* pairs, whose square sum is $\tfrac t2\le1$, so the bound $t\le2$ and that reading are inconsistent. *Checked: at a unit-norm coordinate-diagonal $W$ the unordered sum is $1$ and the ordered sum is $2$, and the record's $t=2$ is the ordered one.* In operator terms $t=2\lVert\operatorname{diag}W\rVert^2$ with the diagonal taken in the pair basis, so $t\le2$ is Cauchy–Schwarz against $\lVert W\rVert=1$, with equality exactly when $W$ is diagonal.
+> **THE ORDERED SUM IS THE WHOLE OF THE NORMALISATION AND WAS AMBIGUOUS HERE.** Writing $K$ as $(W_{abab})_{a<b}$ reads as an index set over *unordered* pairs, whose square sum is $\tfrac t2\le1$, so the bound $t\le2$ and that reading are inconsistent. *Checked: at a unit-norm coordinate-diagonal $W$ the unordered sum is $1$ and the ordered sum is $2$, and the record's $t=2$ is the ordered one.* In operator terms $t=2\lVert\mathop{\mathrm{diag}}W\rVert^2$ with the diagonal taken in the pair basis, so $t\le2$ is Cauchy–Schwarz against $\lVert W\rVert=1$, with equality exactly when $W$ is diagonal.
 
 A second row tables the same object at line 23 ($t=t_F=\lVert K(F)\rVert_F^2$ per frame, $\kappa^2=\max_Ft_F$, with L94's bound attached) so the reading is tabled twice, once in the table and once in the section. **Claim 1 is confirmed with nothing subtracted.**
 
@@ -53,7 +53,7 @@ A second row tables the same object at line 23 ($t=t_F=\lVert K(F)\rVert_F^2$ pe
 
 **Located.** [conventions.md](../findings/conventions.md) line 138, the clause *"so the bound $t\le2$ and that reading are inconsistent"*, and its two citations, [L174](../findings/second-order.md) line 1600 and the claim under review.
 
-**Exhibited.** The clause has the form: *the record writes $t\le2$; the unordered reading makes the same quantity $\le1$; therefore the unordered reading is inconsistent.* The numeral $2$ in *"$t\le2$"* is not an independent fact, it is what the ordered reading of $t$ **produces**. The block's own next-but-one sentence says so: $t\le2$ is Cauchy–Schwarz against $\lVert W\rVert=1$ *given* $t=2\lVert\operatorname{diag}W\rVert^2$, and the leading $2$ there is the ordered doubling. So the argument holds the conclusion fixed as its premise. Adopt $t:=t^{\mathrm{unord}}$ throughout and the record reads $t\le1$, $t=1$ at coordinate-diagonal, $\sum d_\varphi^2=t$, $\kappa^2\le\lVert M\rVert_F^2$, every statement rescaled, none of them false. **That is a change of units, not a contradiction**, which is exactly the test the brief sets: a convention cannot be refuted by being different.
+**Exhibited.** The clause has the form: *the record writes $t\le2$; the unordered reading makes the same quantity $\le1$; therefore the unordered reading is inconsistent.* The numeral $2$ in *"$t\le2$"* is not an independent fact, it is what the ordered reading of $t$ **produces**. The block's own next-but-one sentence says so: $t\le2$ is Cauchy–Schwarz against $\lVert W\rVert=1$ *given* $t=2\lVert\mathop{\mathrm{diag}}W\rVert^2$, and the leading $2$ there is the ordered doubling. So the argument holds the conclusion fixed as its premise. Adopt $t:=t^{\mathrm{unord}}$ throughout and the record reads $t\le1$, $t=1$ at coordinate-diagonal, $\sum d_\varphi^2=t$, $\kappa^2\le\lVert M\rVert_F^2$, every statement rescaled, none of them false. **That is a change of units, not a contradiction**, which is exactly the test the brief sets: a convention cannot be refuted by being different.
 
 **Argued the opposite, the strongest reading the words support.** Read as a warning against *mixing*, take one file's $t^{\mathrm{ord}}\le2$ into another file's $t^{\mathrm{unord}}$ and you get a statement false by a factor of two, the sentence is correct and useful, and its capitalised headline (*"THE ORDERED SUM IS THE WHOLE OF THE NORMALISATION AND WAS AMBIGUOUS HERE"*) is a mixing warning. So the defect is confined to the word *"inconsistent"* doing duty as a refutation on a line that is quoted in isolation. **The finding is that the clause proves the mixing hazard, not the convention.**
 
@@ -97,14 +97,14 @@ $$t^{\mathrm{ord}}=\sum_{a\ne b}K_{ab}^2=2,\qquad t^{\mathrm{unord}}=\sum_{a<b}K
 
 ## 5. What else consumes $t$, and under which reading
 
-Searched: every occurrence of $t\le2$, $t=2$, $t_F$, $\lVert K\rVert_F^2$, $\operatorname{tr}M^2$, $\kappa^2$, $t/2$ and $t\le1$ across [findings/](../findings/), [results.md](../results.md), [README.md](../README.md) and [lean/](../lean/). **Every consumer found reads $t$ as the ordered sum. No site reads it as the unordered one.** The four that pin it rather than merely being compatible with it:
+Searched: every occurrence of $t\le2$, $t=2$, $t_F$, $\lVert K\rVert_F^2$, $\mathop{\mathrm{tr}}M^2$, $\kappa^2$, $t/2$ and $t\le1$ across [findings/](../findings/), [results.md](../results.md), [README.md](../README.md) and [lean/](../lean/). **Every consumer found reads $t$ as the ordered sum. No site reads it as the unordered one.** The four that pin it rather than merely being compatible with it:
 
 | consumer | what it says | why it pins the ordered reading |
 | --- | --- | --- |
 | [L94](../findings/bispectral.md) l. 219 | $\kappa^2\le2\lVert M\rVert_F^2$, equality at coordinate-diagonal | the constant $2$ is the doubling; the unordered lemma would have constant $1$ |
 | [L54](../findings/bispectral.md) ll. 308, 480 | $\sum d_\varphi^2=t/2$, $\sum d^2=\tfrac32t$; at $t=2$, $\sum d_\varphi^2=1=\sum\mu^2$ | $\sum d_\varphi^2$ **is** $t^{\mathrm{unord}}$ by construction, so $t=2\sum d_\varphi^2$ |
 | [target.md](../findings/target.md) l. 17 | $\sum R=1-t/2$, exact at any critical point, $R=0$ at a diagonal point | forces $t=2$ at coordinate-diagonal |
-| [diagonal-half.md](../findings/diagonal-half.md) ll. 15–27 | unit norm is $\sum_{a<b}w_{ab}^2=1$ **and** $\operatorname{tr}M^2=2$, four lines apart | the file displays both normalisations side by side and uses each in its own role |
+| [diagonal-half.md](../findings/diagonal-half.md) ll. 15–27 | unit norm is $\sum_{a<b}w_{ab}^2=1$ **and** $\mathop{\mathrm{tr}}M^2=2$, four lines apart | the file displays both normalisations side by side and uses each in its own role |
 
 Two more that are consistent without pinning: [L55](../results.md)'s min-entry bound $\lvert\min_{a\ne b}K_{ab}\rvert\ge\sqrt{t/(n(n-1)(n-2))}$, and the relaxation display $\theta\le(t_F/2)^{3/2}\Theta_n+\tfrac92C(1-t_F/2)$ at [bispectral.md](../findings/bispectral.md) line 90, whose argument $t_F/2$ ranges over $[0,1]$ only under the ordered reading.
 

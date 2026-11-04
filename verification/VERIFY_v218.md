@@ -26,15 +26,15 @@ Quoted from [conventions.md](../findings/conventions.md), not restated:
 
 > $\theta_0(n)$ | **the closed form $\theta_0(n)^2=2(n-1)(n-2)/n^2$, and nothing more.** *It is the value at the balanced sphere product **at even $n$ only**, at odd $n$ the balanced split gives $\Theta_n<\theta_0(n)$* … the target of Problem P is $\Theta_n$.
 
-> **The letter $M$ carries two objects, and their norms differ by $\sqrt2$.** $M$ (or $K$) is the $n\times n$ **sectional** matrix in [diagonal-half.md](../findings/diagonal-half.md), where $\lVert K\rVert_F^2=2$ at a unit Weyl tensor; $W$ is the operator on $\Lambda^2$, where $\sum_\alpha\lambda_\alpha^2=\operatorname{tr}(W^2)=1$.
+> **The letter $M$ carries two objects, and their norms differ by $\sqrt2$.** $M$ (or $K$) is the $n\times n$ **sectional** matrix in [diagonal-half.md](../findings/diagonal-half.md), where $\lVert K\rVert_F^2=2$ at a unit Weyl tensor; $W$ is the operator on $\Lambda^2$, where $\sum_\alpha\lambda_\alpha^2=\mathop{\mathrm{tr}}(W^2)=1$.
 
 > $\lambda_{\max}$ **CARRIES THREE SENSES INSIDE [results.md](../results.md), AT THE CLOSEST SIX LINES APART.**
 
 **The four symbols the brief names are live, and none of them is tabled.** I grepped [conventions.md](../findings/conventions.md) for table rows under $S$, $E$, $F$ and $\lambda$: there is no row for any of them, while all four are in use in L1.
 
-- **$S$.** In L1, $S=\operatorname{Ric}(\lvert W\rvert)/\lVert\operatorname{Ric}(\lvert W\rvert)\rVert$, an $n\times n$ symmetric matrix. Elsewhere on the record $S$ is [routes.md](../routes.md)'s compactness constant in *"isolated graded orbits $\Rightarrow$ ungraded part compact $\Rightarrow S\ge c>0$"*, and $S_{22}$ in [conventions.md](../findings/conventions.md)'s $g_k$ row is Hamilton's calculus. Three objects, one letter, no table row.
+- **$S$.** In L1, $S=\mathop{\mathrm{Ric}}(\lvert W\rvert)/\lVert\mathop{\mathrm{Ric}}(\lvert W\rvert)\rVert$, an $n\times n$ symmetric matrix. Elsewhere on the record $S$ is [routes.md](../routes.md)'s compactness constant in *"isolated graded orbits $\Rightarrow$ ungraded part compact $\Rightarrow S\ge c>0$"*, and $S_{22}$ in [conventions.md](../findings/conventions.md)'s $g_k$ row is Hamilton's calculus. Three objects, one letter, no table row.
 - **$E(n)$.** L1's $E(n)=(8n^2-41n+49)/(4(n+1)(n-2)(n-3))$ collides with [conventions.md](../findings/conventions.md)'s $E_{\max}$ (line 30) and with Jäger's own $e=\lVert E\rVert$ of his Notation 3.0.3, *the source object $E$ appears in the same chapter L1 is reading*, which is the collision most likely to mislead.
-- **$F$.** L1's $F(v)=\min\{\mathbb E[\lambda]:\dots\}$ collides with [Lauret–Will's](../references/lauret-will-2006-einstein-solvmanifolds-moment-map/notes.md) $F(\mu)=16\operatorname{tr}R_\mu^2/\lVert\mu\rVert^4$ and with $F_u$, $F_\lambda$ in [conventions.md](../findings/conventions.md)'s competitor bullet.
+- **$F$.** L1's $F(v)=\min\{\mathbb E[\lambda]:\dots\}$ collides with [Lauret–Will's](../references/lauret-will-2006-einstein-solvmanifolds-moment-map/notes.md) $F(\mu)=16\mathop{\mathrm{tr}}R_\mu^2/\lVert\mu\rVert^4$ and with $F_u$, $F_\lambda$ in [conventions.md](../findings/conventions.md)'s competitor bullet.
 - **$\lambda$.** In L1's moment problem $\lambda$ is an eigenvalue of $S$ and the integration variable; [conventions.md](../findings/conventions.md) records it as *"the Einstein constant against Petersen–Stanfield's block eigenvalues **inside one citation**"*, and $\lambda_{\max}$ carries three further senses.
 
 **None of these collisions changes a truth value inside L1**, the block is self-contained enough that each letter is readable from its own sentence. They are recorded because the table exists precisely so a reader need not make that judgement.
@@ -45,14 +45,14 @@ Quoted from [conventions.md](../findings/conventions.md), not restated:
 
 | # | hypothesis | stated where | used where | status |
 | --- | --- | --- | --- | --- |
-| H1 | $W\in\langle W\rangle_d$, coordinate-diagonal Weyl operator, i.e. hollow symmetric $(w_{ij})$ with vanishing row sums | Jäger Assumption 1; [notes.md](../references/jaeger-2016-diagonal-case/notes.md) | everywhere; it is what makes $\operatorname{Ric}(\lvert W\rvert)$ diagonal | **STATED AND USED** |
+| H1 | $W\in\langle W\rangle_d$, coordinate-diagonal Weyl operator, i.e. hollow symmetric $(w_{ij})$ with vanishing row sums | Jäger Assumption 1; [notes.md](../references/jaeger-2016-diagonal-case/notes.md) | everywhere; it is what makes $\mathop{\mathrm{Ric}}(\lvert W\rvert)$ diagonal | **STATED AND USED** |
 | H2 | $\lVert W\rVert=1$ and $W^2+W^\#=\theta W$ with $\theta\ge\theta_0(n)$ | Jäger Assumption 1 | Lemma 3.3.4 onward | **STATED AND USED** |
 | H3 | $n=2m$ with $m\ge8$, Assumption 1's dimension clause | Jäger Assumption 1, line 1705 | §3.6 ideal induction, line 5080 | **STATED; ITS ONLY EXPLICIT USE HAS SLACK, §10** |
-| H4 | Assumption 2, $\operatorname{scal}\le(n-3)\tilde\theta_0(n)$, the contradiction hypothesis | Jäger Assumption 2, line 2212 | Lemmas 3.3.6, 3.3.7, 3.5.5, 3.5.6 | **STATED AND USED** |
+| H4 | Assumption 2, $\mathop{\mathrm{scal}}\le(n-3)\tilde\theta_0(n)$, the contradiction hypothesis | Jäger Assumption 2, line 2212 | Lemmas 3.3.6, 3.3.7, 3.5.5, 3.5.6 | **STATED AND USED** |
 | H5 | $S\succeq0$ | the L1 block, as prose beside the moment problem, **not inside the braces of $F(v)$** | the two Cauchy–Schwarz steps and the support $(0,1]$ | **USED; SATISFIED (§7); STATED ADJACENT RATHER THAN IN THE STATEMENT** |
-| H6 | $\operatorname{tr}S^2=1$, Frobenius unit norm | the block says only *"unit norm"* | makes $\mu$ a probability measure; makes $\lambda_i\le1$; both Cauchy–Schwarz normalisations | **USED; THE NORM SENSE IS UNQUALIFIED, §7** |
-| H7 | $S$ has at most $n$ eigenvalues | nowhere in the block; in the script docstring as *"at most n eigenvalues in [0,1]"* | the constraint $\mathbb E[\lambda^{-2}]\le n$ and the floor $\operatorname{tr}S\le\sqrt n$ | **USED, STATED ONLY IN A DOCSTRING** |
-| H8 | $\mathrm{RHS}$ is convex in $t$, so its max over the $\operatorname{scal}$-interval sits at an endpoint | the block, attributed to the source | Step 2 and both scripts, which evaluate only at $t\in\{\hat\theta_0/v,\ (n-3)\tilde\theta_0\}$ | **STATED, USED, AND CONDITIONAL ON A RANGE THE RECORD NEVER NAMES, §6** |
+| H6 | $\mathop{\mathrm{tr}}S^2=1$, Frobenius unit norm | the block says only *"unit norm"* | makes $\mu$ a probability measure; makes $\lambda_i\le1$; both Cauchy–Schwarz normalisations | **USED; THE NORM SENSE IS UNQUALIFIED, §7** |
+| H7 | $S$ has at most $n$ eigenvalues | nowhere in the block; in the script docstring as *"at most n eigenvalues in [0,1]"* | the constraint $\mathbb E[\lambda^{-2}]\le n$ and the floor $\mathop{\mathrm{tr}}S\le\sqrt n$ | **USED, STATED ONLY IN A DOCSTRING** |
+| H8 | $\mathrm{RHS}$ is convex in $t$, so its max over the $\mathop{\mathrm{scal}}$-interval sits at an endpoint | the block, attributed to the source | Step 2 and both scripts, which evaluate only at $t\in\{\hat\theta_0/v,\ (n-3)\tilde\theta_0\}$ | **STATED, USED, AND CONDITIONAL ON A RANGE THE RECORD NEVER NAMES, §6** |
 | H9 | $\mathrm{RHS}$ is strictly decreasing in $y$ | the report's Step 1, attributed to the source | Step 4's *"the inequality points the safe way"* | **STATED, USED, NOT RE-DERIVED HERE OR ON THE RECORD** |
 | H10 | Result 5b, the six-line graph replacement for §3.6 after Lemma 3.6.10 | [ATTEMPTS.md:629](../ATTEMPTS.md), unnumbered | discharging H3 | **STATED; NEVER GATE 2'd; AND §10 FINDS IT UNNEEDED AT $m=6,7$** |
 | H11 | The transcription of $\mathrm{RHS}(t,v,y)$ into the scripts faithfully reproduces the end of Jäger's Lemma 3.5.5 proof | nowhere as a claim | everything downstream of Step 2 | **USED, NEVER STATED, NEVER CHECKED, §9** |
@@ -148,7 +148,7 @@ $$(8n^2-41n+49)(8n+9)-64(n+1)(n-2)(n-3)=-41n+57.$$
 
 So the cleared inequality is $41n-57\ge0$. **This is exactly Jäger's own line 2521–2523**, which prints $=-41n+57\le0$ and adds *"for all $n\ge2$"*. The record reproduces it with the sign flipped, which is the same statement.
 
-**The direction of the rounding.** $16/(8n+9)-E(n)=\dfrac{41n-57}{4(n+1)(n-2)(n-3)(8n+9)}\ \ge0$ on $n\ge4$. So $16/(8n+9)$ is the **larger** number and Jäger replaces his exact ceiling on $\operatorname{tr}S^4$ by a **weaker** one. **That is the correct direction for a rounding to cost slack rather than to be unsound**, and it means keeping $E(n)$ exact can only help. Confirmed.
+**The direction of the rounding.** $16/(8n+9)-E(n)=\dfrac{41n-57}{4(n+1)(n-2)(n-3)(8n+9)}\ \ge0$ on $n\ge4$. So $16/(8n+9)$ is the **larger** number and Jäger replaces his exact ceiling on $\mathop{\mathrm{tr}}S^4$ by a **weaker** one. **That is the correct direction for a rounding to cost slack rather than to be unsound**, and it means keeping $E(n)$ exact can only help. Confirmed.
 
 **The cost.** The record's *"costing $(41n-57)$ over a quartic"* is exactly the display above, linear numerator, quartic denominator, so $\Theta(n^{-3})$. Screen: at $n=12$ the numerator is $435$ and the denominator $4\cdot13\cdot10\cdot9\cdot105=491400$, giving $0.000885$; at $n=14$, $517/958320=0.000539$. Both reproduce the recorded figures. *Reported as a screen.*
 
@@ -167,33 +167,33 @@ So the cleared inequality is $41n-57\ge0$. **This is exactly Jäger's own line 2
 
 ## 7. The $n=12$ moment-body step, the corner, and the two hypotheses
 
-**Setup, re-derived.** $S\succeq0$ with $\operatorname{tr}S^2=1$ and at most $n$ eigenvalues. Push forward to $\mu=\sum_i\lambda_i^2\delta_{\lambda_i}$. Then $\mu$ is a **probability** measure precisely because $\sum\lambda_i^2=\operatorname{tr}S^2=1$; $\mathbb E_\mu[\lambda]=\operatorname{tr}S^3$; $\mathbb E_\mu[\lambda^2]=\operatorname{tr}S^4=v$; and
+**Setup, re-derived.** $S\succeq0$ with $\mathop{\mathrm{tr}}S^2=1$ and at most $n$ eigenvalues. Push forward to $\mu=\sum_i\lambda_i^2\delta_{\lambda_i}$. Then $\mu$ is a **probability** measure precisely because $\sum\lambda_i^2=\mathop{\mathrm{tr}}S^2=1$; $\mathbb E_\mu[\lambda]=\mathop{\mathrm{tr}}S^3$; $\mathbb E_\mu[\lambda^2]=\mathop{\mathrm{tr}}S^4=v$; and
 
-$$\mathbb E_\mu[\lambda^{-2}]=\sum_{\lambda_i\ne0}\lambda_i^2\lambda_i^{-2}=\#\{i:\lambda_i\ne0\}=\operatorname{rank}S\ \le\ n.$$
+$$\mathbb E_\mu[\lambda^{-2}]=\sum_{\lambda_i\ne0}\lambda_i^2\lambda_i^{-2}=\#\{i:\lambda_i\ne0\}=\mathop{\mathrm{rank}}S\ \le\ n.$$
 
-**This is where the $\ker W\ne0$ trap is answered, and it is answered correctly.** $\mu$ assigns zero mass to $\lambda=0$, so $\lambda^{-2}$ is $\mu$-integrable however large the kernel is; and a rank-deficient $S$ makes the true constraint *tighter* than $\le n$, so relaxing to $n$ is the safe direction. Padded objects enter nowhere: $\lvert W\rvert$ is built on the diagonal locus, where $\operatorname{Ric}(\lvert W\rvert)$ is diagonal with entries $\sum_j\lvert w_{ij}\rvert$.
+**This is where the $\ker W\ne0$ trap is answered, and it is answered correctly.** $\mu$ assigns zero mass to $\lambda=0$, so $\lambda^{-2}$ is $\mu$-integrable however large the kernel is; and a rank-deficient $S$ makes the true constraint *tighter* than $\le n$, so relaxing to $n$ is the safe direction. Padded objects enter nowhere: $\lvert W\rvert$ is built on the diagonal locus, where $\mathop{\mathrm{Ric}}(\lvert W\rvert)$ is diagonal with entries $\sum_j\lvert w_{ij}\rvert$.
 
 **The corner elimination, in full.**
 
-- **Floor for $y=(\operatorname{tr}S^3)^2$.** Cauchy–Schwarz on $(\lambda^{1/2},\lambda^{3/2})$ (legitimate because $S\succeq0$), gives $(\sum\lambda^2)^2\le(\sum\lambda)(\sum\lambda^3)$, i.e. $1\le(\operatorname{tr}S)(\operatorname{tr}S^3)$. With $\operatorname{tr}S\le\sqrt{n\operatorname{tr}S^2}=\sqrt n$ this gives $\operatorname{tr}S^3\ge1/\sqrt n$ and $y\ge1/n$. **That is Jäger's floor, and the block's second stated inequality is exactly this.**
-- **Equality forces the flat spectrum.** $\operatorname{tr}S=\sqrt n$ is equality in Cauchy–Schwarz against $\mathbf1$, so all $n$ eigenvalues are equal; with $\operatorname{tr}S^2=1$ they are $\lambda_i=1/\sqrt n$.
-- **Which drags the ceiling down.** At the flat spectrum $v=\operatorname{tr}S^4=n\cdot n^{-2}=1/n$. At $n=12$ that is $1/12=0.0833$ against the ceiling $16/105=0.1524$, or $709/4680=0.1515$ exactly. **The corner $(y,v)=(1/n,\ \text{ceiling})$ does not exist.** Confirmed.
-- **The edge itself.** Cauchy–Schwarz on $(\lambda,\lambda^2)$: $(\sum\lambda^3)^2\le(\sum\lambda^2)(\sum\lambda^4)=\operatorname{tr}S^4$. So $(\operatorname{tr}S^3)^2\le\operatorname{tr}S^4$, which is the block's *"the edge itself"*. **Equality holds iff $\lambda^2\propto\lambda$ on the support, i.e. iff all nonzero eigenvalues coincide**, the flat spectrum again, where $\operatorname{tr}S^4$ sits at its floor $1/n$ (Cauchy–Schwarz $(\sum\lambda^2)^2\le n\sum\lambda^4$). **So the block's *"a genuine equality case rather than an estimate"* is right.**
-- **The excluded box point.** $(\operatorname{tr}S^3,\operatorname{tr}S^4)=(\tfrac12,\tfrac15)$ satisfies $\tfrac1{12}\le(\tfrac12)^2=\tfrac14$ and $\tfrac15\le\tfrac{16}{105}$?, $\tfrac15=0.2>0.1524$, so it is not in the $n=12$ box; read as a schematic box point it fails the edge outright, since $(\tfrac12)^2=\tfrac14>\tfrac15$. **The exclusion the block claims holds.** *(The block does not say which $n$'s box it means; the exclusion is $n$-free, so the sentence is true under any reading.)*
+- **Floor for $y=(\mathop{\mathrm{tr}}S^3)^2$.** Cauchy–Schwarz on $(\lambda^{1/2},\lambda^{3/2})$ (legitimate because $S\succeq0$), gives $(\sum\lambda^2)^2\le(\sum\lambda)(\sum\lambda^3)$, i.e. $1\le(\mathop{\mathrm{tr}}S)(\mathop{\mathrm{tr}}S^3)$. With $\mathop{\mathrm{tr}}S\le\sqrt{n\mathop{\mathrm{tr}}S^2}=\sqrt n$ this gives $\mathop{\mathrm{tr}}S^3\ge1/\sqrt n$ and $y\ge1/n$. **That is Jäger's floor, and the block's second stated inequality is exactly this.**
+- **Equality forces the flat spectrum.** $\mathop{\mathrm{tr}}S=\sqrt n$ is equality in Cauchy–Schwarz against $\mathbf1$, so all $n$ eigenvalues are equal; with $\mathop{\mathrm{tr}}S^2=1$ they are $\lambda_i=1/\sqrt n$.
+- **Which drags the ceiling down.** At the flat spectrum $v=\mathop{\mathrm{tr}}S^4=n\cdot n^{-2}=1/n$. At $n=12$ that is $1/12=0.0833$ against the ceiling $16/105=0.1524$, or $709/4680=0.1515$ exactly. **The corner $(y,v)=(1/n,\ \text{ceiling})$ does not exist.** Confirmed.
+- **The edge itself.** Cauchy–Schwarz on $(\lambda,\lambda^2)$: $(\sum\lambda^3)^2\le(\sum\lambda^2)(\sum\lambda^4)=\mathop{\mathrm{tr}}S^4$. So $(\mathop{\mathrm{tr}}S^3)^2\le\mathop{\mathrm{tr}}S^4$, which is the block's *"the edge itself"*. **Equality holds iff $\lambda^2\propto\lambda$ on the support, i.e. iff all nonzero eigenvalues coincide**, the flat spectrum again, where $\mathop{\mathrm{tr}}S^4$ sits at its floor $1/n$ (Cauchy–Schwarz $(\sum\lambda^2)^2\le n\sum\lambda^4$). **So the block's *"a genuine equality case rather than an estimate"* is right.**
+- **The excluded box point.** $(\mathop{\mathrm{tr}}S^3,\mathop{\mathrm{tr}}S^4)=(\tfrac12,\tfrac15)$ satisfies $\tfrac1{12}\le(\tfrac12)^2=\tfrac14$ and $\tfrac15\le\tfrac{16}{105}$?, $\tfrac15=0.2>0.1524$, so it is not in the $n=12$ box; read as a schematic box point it fails the edge outright, since $(\tfrac12)^2=\tfrac14>\tfrac15$. **The exclusion the block claims holds.** *(The block does not say which $n$'s box it means; the exclusion is $n$-free, so the sentence is true under any reading.)*
 
 **The two hypotheses, and both are load-bearing and satisfied.**
 
-- **$S\succeq0$ is used four times**, for $\lambda^{1/2}$ to exist, for the support to lie in $(0,1]$, for $\operatorname{tr}S^3>0$ so that squaring the line is legitimate, and for the pointwise dual inequality to be tested on $(0,1]$ rather than on $\mathbb R$. **It is satisfied**: on the diagonal locus $\operatorname{Ric}(\lvert W\rvert)$ is the diagonal matrix with entries $\sum_j\lvert w_{ij}\rvert\ge0$.
+- **$S\succeq0$ is used four times**, for $\lambda^{1/2}$ to exist, for the support to lie in $(0,1]$, for $\mathop{\mathrm{tr}}S^3>0$ so that squaring the line is legitimate, and for the pointwise dual inequality to be tested on $(0,1]$ rather than on $\mathbb R$. **It is satisfied**: on the diagonal locus $\mathop{\mathrm{Ric}}(\lvert W\rvert)$ is the diagonal matrix with entries $\sum_j\lvert w_{ij}\rvert\ge0$.
 - **Unit norm is used** to make $\mu$ a probability measure and to force $\lambda_i^2\le\sum_j\lambda_j^2=1$, hence $\lambda_i\in(0,1]$. **It is satisfied**, $S$ being a normalisation.
 - **The record's demonstration that they are load-bearing is exact and correct.** Without the support constraint, $\delta_{-1}$ meets $\mathbb E[\lambda^2]=1$ and $\mathbb E[\lambda^{-2}]=1\le n$ and gives $\mathbb E[\lambda]=-1$ against $\varphi(1)=35247/38000$, a gap of $73247/38000>1$, larger than the range of the quantity bounded. That is [L1.lean](../lean/HamiltonsCubic/Results/L1.lean)'s `delta_refutes`, kernel-checked, and I confirm the arithmetic: $\varphi(1)=7/10+8647/38000=26600/38000+8647/38000=35247/38000$.
 
 **The defect that remains, and it is the "hypothesis stated but never used" trap in its mirror image.** The block **displays** $F(v)=\min\{\mathbb E[\lambda]:\mathbb E[\lambda^2]=v,\ \mathbb E[\lambda^{-2}]\le n\}$ (with no support constraint inside the braces) and then says in a following paragraph that two hypotheses are load-bearing. **A reader who copies the displayed formula copies the false one.** [r498](../reviews/REVIEW_r498.md)'s recommendation was *"$S\succeq0$, $\lambda\in(0,1]$ written into the moment problem"*; it has been written *beside* it. The formula still needs $\mu$ supported in $(0,1]$ in its own braces.
 
-**And "unit norm" is unqualified where the sense decides the truth.** $\lVert S\rVert=1$ in the operator sense gives neither $\operatorname{tr}S^2=1$ nor a probability measure, and the whole pushforward collapses. [conventions.md](../findings/conventions.md) records a norm collision of exactly this kind, *"$\lVert K\rVert_F^2=2$ at a unit Weyl tensor; $W$ is the operator on $\Lambda^2$, where $\sum_\alpha\lambda_\alpha^2=\operatorname{tr}(W^2)=1$"*, and asks that the sense be said. Here it is not said. **Write $\operatorname{tr}S^2=1$.**
+**And "unit norm" is unqualified where the sense decides the truth.** $\lVert S\rVert=1$ in the operator sense gives neither $\mathop{\mathrm{tr}}S^2=1$ nor a probability measure, and the whole pushforward collapses. [conventions.md](../findings/conventions.md) records a norm collision of exactly this kind, *"$\lVert K\rVert_F^2=2$ at a unit Weyl tensor; $W$ is the operator on $\Lambda^2$, where $\sum_\alpha\lambda_\alpha^2=\mathop{\mathrm{tr}}(W^2)=1$"*, and asks that the sense be said. Here it is not said. **Write $\mathop{\mathrm{tr}}S^2=1$.**
 
 ## 8. The duality step, weak duality does suffice
 
-**What is drawn from it.** A *lower* bound on $\operatorname{tr}S^3$ at every $v$ at once: the certified line $\varphi(v)=\tfrac7{10}v+\tfrac{8647}{38000}\le\operatorname{tr}S^3$.
+**What is drawn from it.** A *lower* bound on $\mathop{\mathrm{tr}}S^3$ at every $v$ at once: the certified line $\varphi(v)=\tfrac7{10}v+\tfrac{8647}{38000}\le\mathop{\mathrm{tr}}S^3$.
 
 **Derivation, from weak duality alone.** Take $\alpha\in\mathbb R$ and $\beta\ge0$, and suppose the pointwise inequality
 
@@ -201,11 +201,11 @@ $$h(\lambda):=\lambda-\alpha\lambda^2+\beta\lambda^{-2}\ \ge\ \gamma\qquad\text{
 
 Integrating against any feasible $\mu$ supported in $(0,1]$,
 
-$$\operatorname{tr}S^3-\alpha v+\beta\,\mathbb E[\lambda^{-2}]\ \ge\ \gamma,$$
+$$\mathop{\mathrm{tr}}S^3-\alpha v+\beta\,\mathbb E[\lambda^{-2}]\ \ge\ \gamma,$$
 
 and since $\beta\ge0$ and $\mathbb E[\lambda^{-2}]\le n$, the middle term obeys $\beta\mathbb E[\lambda^{-2}]\le\beta n$, so
 
-$$\operatorname{tr}S^3\ \ge\ \gamma+\alpha v-\beta n\ =:\ \varphi(v).$$
+$$\mathop{\mathrm{tr}}S^3\ \ge\ \gamma+\alpha v-\beta n\ =:\ \varphi(v).$$
 
 **Every step is one inequality applied in one direction.** No strong duality, no Slater point, no attainment, no constraint qualification, and **no convexity of $F$**, the argument never asks that the bound be tight, only that it be valid. **The block's *"weak duality alone licenses it, so no constraint qualification is owed and the convexity appealed to here is surplus"* is correct**, and the surplus convexity is visible: [run_jaeger_e5_certificate.py](../scripts/runs/run_jaeger_e5_certificate.py)'s docstring argues *"F is CONVEX in v … so a Lagrangian dual certificate computed at a single v is a supporting line valid for every v"*, and its own next paragraph then gives the weak-duality derivation that needs none of it.
 
@@ -223,7 +223,7 @@ $$\operatorname{tr}S^3\ \ge\ \gamma+\alpha v-\beta n\ =:\ \varphi(v).$$
 
 **What it assumes, in order of how much weight each carries.**
 
-1. **H11, the transcription.** The record nowhere claims the transcription is faithful, and [lean/INDEX.md:202](../lean/INDEX.md) books *"the reduction to Jäger's expression"* as **Owed**. From the `pdftotext` extraction I can confirm only the shape: line 4184ff shows $-\tfrac{263}{144}\tfrac{n-3}{n^2(n-2)}(\dots)-2\tilde\theta_0(\tfrac{2n-9}{4n^3}+\tfrac{3x}{8n^2})t+\dots+\sqrt{\tfrac{(\operatorname{tr}S^4)^2-(\operatorname{tr}S^3)^4}{1-(\operatorname{tr}S^3)^2}}$, which matches the script's `(v**2 - y**2)/(1 - y)` under $y=(\operatorname{tr}S^3)^2$ and the coefficient block term for term. **The OCR is too damaged to certify the full expression, and this is the single largest unchecked link in L1.**
+1. **H11, the transcription.** The record nowhere claims the transcription is faithful, and [lean/INDEX.md:202](../lean/INDEX.md) books *"the reduction to Jäger's expression"* as **Owed**. From the `pdftotext` extraction I can confirm only the shape: line 4184ff shows $-\tfrac{263}{144}\tfrac{n-3}{n^2(n-2)}(\dots)-2\tilde\theta_0(\tfrac{2n-9}{4n^3}+\tfrac{3x}{8n^2})t+\dots+\sqrt{\tfrac{(\mathop{\mathrm{tr}}S^4)^2-(\mathop{\mathrm{tr}}S^3)^4}{1-(\mathop{\mathrm{tr}}S^3)^2}}$, which matches the script's `(v**2 - y**2)/(1 - y)` under $y=(\mathop{\mathrm{tr}}S^3)^2$ and the coefficient block term for term. **The OCR is too damaged to certify the full expression, and this is the single largest unchecked link in L1.**
 2. **The trusted computing base**, `mpmath.iv` and Python floats at `iv.mpf([lo, hi])` construction. Not audited anywhere on the record.
 3. **The two case endpoints exhaust the maximum in $t$**, H8, Jäger's convexity, discussed below.
 4. **Termination.** `verify` returns `False` at `maxdepth` rather than raising, so a partial cover would print `NOT proved` rather than a wrong `PROVED`. **That failure mode is safe.**
@@ -240,7 +240,7 @@ $$\operatorname{tr}S^3\ \ge\ \gamma+\alpha v-\beta n\ =:\ \varphi(v).$$
 
 $$\frac{\partial^2\mathrm{RHS}}{\partial t^2}=-K\Big(2-\frac{6t}{n\hat\theta_0}\Big)\ \ge0\iff t\ \ge\ \frac{n\hat\theta_0}{3}.$$
 
-**So "convex in $t$, hence the max is at an endpoint" holds on a half-line, not everywhere**, and the licence survives only if the $\operatorname{scal}$-interval sits inside it. Screen at the two dimensions: $\tilde\theta_0(12)=\sqrt{198/130}=1.23413$, $\hat\theta_0(12)=\tfrac{10}9\tilde\theta_0=1.37126$, threshold $n\hat\theta_0/3=5.485$, against $t\in[\hat\theta_0/v,\ 9\tilde\theta_0]\subseteq[9.05,\ 11.11]$; at $n=14$, $\tilde\theta_0=\sqrt{286/180}=1.26051$, $\hat\theta_0=1.37492$, threshold $6.416$, against $t\ge\hat\theta_0/E(14)=1.37492/(1043/7920)=10.44$. **Both clear, comfortably.** *Reported as a screen.* The block's *"the licence survives at $n=12,14$"* is therefore **true**, and true for a reason the block does not give, it reads as if convexity were unconditional.
+**So "convex in $t$, hence the max is at an endpoint" holds on a half-line, not everywhere**, and the licence survives only if the $\mathop{\mathrm{scal}}$-interval sits inside it. Screen at the two dimensions: $\tilde\theta_0(12)=\sqrt{198/130}=1.23413$, $\hat\theta_0(12)=\tfrac{10}9\tilde\theta_0=1.37126$, threshold $n\hat\theta_0/3=5.485$, against $t\in[\hat\theta_0/v,\ 9\tilde\theta_0]\subseteq[9.05,\ 11.11]$; at $n=14$, $\tilde\theta_0=\sqrt{286/180}=1.26051$, $\hat\theta_0=1.37492$, threshold $6.416$, against $t\ge\hat\theta_0/E(14)=1.37492/(1043/7920)=10.44$. **Both clear, comfortably.** *Reported as a screen.* The block's *"the licence survives at $n=12,14$"* is therefore **true**, and true for a reason the block does not give, it reads as if convexity were unconditional.
 
 ## 10. Result 5b, found, and its stated necessity is unsupported at $m=6,7$
 
@@ -270,7 +270,7 @@ $$\frac{\partial^2\mathrm{RHS}}{\partial t^2}=-K\Big(2-\frac{6t}{n\hat\theta_0}\
 
 ## 11. The remaining named traps, each answered
 
-- **$\ker W\ne0$ and padded objects.** Answered in §7: the pushforward gives zero mass to zero eigenvalues, $\mathbb E[\lambda^{-2}]=\operatorname{rank}S\le n$ is the tighter true constraint, and the relaxation to $n$ is safe. Padded objects (padded $W_{\mathbb{CP}^2}$, Fox's $\mathcal S^4(\alpha)$) are off the diagonal locus and cannot enter a statement quantified over $\langle W\rangle_d$. **Nothing found.**
+- **$\ker W\ne0$ and padded objects.** Answered in §7: the pushforward gives zero mass to zero eigenvalues, $\mathbb E[\lambda^{-2}]=\mathop{\mathrm{rank}}S\le n$ is the tighter true constraint, and the relaxation to $n$ is safe. Padded objects (padded $W_{\mathbb{CP}^2}$, Fox's $\mathcal S^4(\alpha)$) are off the diagonal locus and cannot enter a statement quantified over $\langle W\rangle_d$. **Nothing found.**
 - **$n=12$.** The hardest case, and the one carrying the new mathematics. Checked in §7 and §9. The convexity licence and $\varphi^2\le v$ both hold there by margin.
 - **$n=14$.** **Weaker than $n=12$ on the record.** It rests on Step 2/Step 3's exact evaluation, i.e. on [run_jaeger_threshold.py](../scripts/lib/run_jaeger_threshold.py) and the figure $-0.01741$, and **not** on the E5/E5a certificates, which are hard-coded `N = 12`. [r498](../reviews/REVIEW_r498.md) recorded the same, *"the $n=14$ half marked as evaluated at Jäger's corner pending the E5a run at $N=14$"*. So the two dimensions L1 names are discharged by **different** machinery of **different** strength, and no statement of L1 anywhere says so; *"So both dimensions are machine-checked rather than swept"* reads as if one certificate covered both. **Recorded as a scope defect.**
 - **$n=16$.** No gap: Theorem A begins at $16$, L1 supplies $12$ and $14$, and $m\ge8$ is exactly $n=16$. The boundary abuts cleanly.
@@ -287,7 +287,7 @@ $$\frac{\partial^2\mathrm{RHS}}{\partial t^2}=-K\Big(2-\frac{6t}{n\hat\theta_0}\
 
 **`HYPOTHESIS-DEBT`.**
 
-**What holds, and I checked each by re-derivation rather than by reading.** The clearing $41n-57\ge0$ and the direction of the rounding (§6). The moment-body corner elimination, its two Cauchy–Schwarz inequalities, its equality case at the flat spectrum, and the exclusion of $(\tfrac12,\tfrac15)$ (§7). That the two hypotheses are load-bearing and are satisfied by $S=\operatorname{Ric}(\lvert W\rvert)/\lVert\operatorname{Ric}(\lvert W\rvert)\rVert$ (§7). That weak duality alone licenses the supporting line and the convexity is surplus (§8). That the endpoint licence survives at $n=12,14$ (§9). That nothing on the record depends on L1 (§3).
+**What holds, and I checked each by re-derivation rather than by reading.** The clearing $41n-57\ge0$ and the direction of the rounding (§6). The moment-body corner elimination, its two Cauchy–Schwarz inequalities, its equality case at the flat spectrum, and the exclusion of $(\tfrac12,\tfrac15)$ (§7). That the two hypotheses are load-bearing and are satisfied by $S=\mathop{\mathrm{Ric}}(\lvert W\rvert)/\lVert\mathop{\mathrm{Ric}}(\lvert W\rvert)\rVert$ (§7). That weak duality alone licenses the supporting line and the convexity is surplus (§8). That the endpoint licence survives at $n=12,14$ (§9). That nothing on the record depends on L1 (§3).
 
 **What the debt is.**
 
@@ -303,7 +303,7 @@ $$\frac{\partial^2\mathrm{RHS}}{\partial t^2}=-K\Big(2-\frac{6t}{n\hat\theta_0}\
 
 **The object.** A coordinate-diagonal Weyl operator $W\in\langle W\rangle_d$ on $\mathbb R^{12}$ or $\mathbb R^{14}$ with $\lVert W\rVert=1$ and $W^2+W^\#=\theta W$ for some $\theta\ge\theta_0(n)$, which is **not** the normalised Weyl curvature of $S^{n/2}\times S^{n/2}$. Equivalently, a hollow symmetric matrix with vanishing row sums realising such a $\theta$ off the balanced two-block form. **One such matrix at either dimension refutes L1's conclusion outright**, and, since $\theta_0(n)$ is the diagonal maximum the whole programme rests on, would refute [Lemma L57](../findings/problem.md) with it.
 
-**A second, weaker falsifier**, which would break L1's *proof* without touching its conclusion: a pair $(v,y)$ with $y$ at Jäger's floor $1/n$ and $v$ near the ceiling $E(n)$ realised by an actual PSD $S$ with $\operatorname{tr}S^2=1$, the corner §7 says does not exist. **§7 shows why none exists**: $y=1/n$ forces equality in $\operatorname{tr}S\le\sqrt n$, hence the flat spectrum, hence $v=1/n$. The equality analysis is a proof of nonexistence, not a search.
+**A second, weaker falsifier**, which would break L1's *proof* without touching its conclusion: a pair $(v,y)$ with $y$ at Jäger's floor $1/n$ and $v$ near the ceiling $E(n)$ realised by an actual PSD $S$ with $\mathop{\mathrm{tr}}S^2=1$, the corner §7 says does not exist. **§7 shows why none exists**: $y=1/n$ forces equality in $\mathop{\mathrm{tr}}S\le\sqrt n$, hence the flat spectrum, hence $v=1/n$. The equality analysis is a proof of nonexistence, not a search.
 
 **A third**: a lemma in Jäger's §§3.2–3.6 whose proof needs $m\ge7$ or more. That would restore the conditionality §10 removes and would make L1 genuinely dependent on Result 5b or on something stronger.
 
@@ -317,6 +317,6 @@ $$\frac{\partial^2\mathrm{RHS}}{\partial t^2}=-K\Big(2-\frac{6t}{n\hat\theta_0}\
 4. **[findings/LEDGER.md:52](../findings/LEDGER.md)**, *"NEVER AUDITED … Do not spend reviewers on it"* contradicts [r497](../reviews/REVIEW_r497.md)/[r498](../reviews/REVIEW_r498.md) and [INDEX-results.md:16](../findings/INDEX-results.md).
 5. **The $m\ge8$ sentence**, at all five sites in §10's list, it asserts of the source something the source's own line refutes.
 6. **"Valid at every $n\ge2$"**, at four sites, say $n\ge4$, which is what [JaegerRounding.lean](../lean/HamiltonsCubic/Results/JaegerRounding.lean)'s theorem proves and what the denominators allow.
-7. **Write $\operatorname{tr}S^2=1$ and $\operatorname{supp}\mu\subseteq(0,1]$ into the braces of $F(v)$**, rather than into the paragraph after it.
+7. **Write $\mathop{\mathrm{tr}}S^2=1$ and $\mathop{\mathrm{supp}}\mu\subseteq(0,1]$ into the braces of $F(v)$**, rather than into the paragraph after it.
 8. **Say that $n=14$ has no E5a certificate**, wherever *"both dimensions are machine-checked"* appears.
 9. **Table $S$, $E(n)$, $F$ and $\lambda$** in [conventions.md](../findings/conventions.md).

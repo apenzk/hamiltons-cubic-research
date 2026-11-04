@@ -10,16 +10,16 @@ Worked under the analysis-only footing. The one computation is a screen of objec
 
 ## Conventions fixed first, against the record's own anchors
 
-Inner product $\langle X,Y\rangle=\tfrac12\operatorname{tr}(X^{\mathsf T}Y)$ on $\mathfrak{so}(m)\cong\Lambda^2$, the form [conventions.md](../findings/conventions.md) names as "the form the stratum arguments use". Under it $\{\varphi_{ab}\}_{a<b}$ is orthonormal and $\operatorname{tr}(v^2)=-2$ for a unit bivector, both as conventions.md states.
+Inner product $\langle X,Y\rangle=\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$ on $\mathfrak{so}(m)\cong\Lambda^2$, the form [conventions.md](../findings/conventions.md) names as "the form the stratum arguments use". Under it $\{\varphi_{ab}\}_{a<b}$ is orthonormal and $\mathop{\mathrm{tr}}(v^2)=-2$ for a unit bivector, both as conventions.md states.
 
-Two anchors computed by hand before anything else, with $\Phi(R):=\sum_\alpha\lambda_\alpha\operatorname{ad}(v_\alpha)^2$:
+Two anchors computed by hand before anything else, with $\Phi(R):=\sum_\alpha\lambda_\alpha\mathop{\mathrm{ad}}(v_\alpha)^2$:
 
 | anchor | derived | record |
 | --- | --- | --- |
-| $\sum_{a<b}\operatorname{ad}(\varphi_{ab})^2$ on $\mathfrak{so}(n)$ | $-2(n-2)\,\mathrm{Id}$ | $\kappa=2(n-2)$, [conventions.md](../findings/conventions.md) |
+| $\sum_{a<b}\mathop{\mathrm{ad}}(\varphi_{ab})^2$ on $\mathfrak{so}(n)$ | $-2(n-2)\,\mathrm{Id}$ | $\kappa=2(n-2)$, [conventions.md](../findings/conventions.md) |
 | $\Phi$ on $\Lambda^4\subset S^2(\Lambda^2\mathbb R^4)$, i.e. on $\star=\Pi_{SD}-\Pi_{ASD}$ | $-4\star$ | "$\Lambda^4$ … carries eigenvalue $-4$ rather than $+2$", L33's own block |
 
-The second is the sharper check: $\mathfrak{su}(2)_\pm$ commute, so $\sum_{SD}\operatorname{ad}(v)^2=-4\,\Pi_{SD}$ and likewise for ASD, giving $\Phi(\star)=-4\Pi_{SD}+4\Pi_{ASD}=-4\star$. My normalisation therefore reproduces a number the block asserts and does not use, so a factor-of-two error would have shown up here.
+The second is the sharper check: $\mathfrak{su}(2)_\pm$ commute, so $\sum_{SD}\mathop{\mathrm{ad}}(v)^2=-4\,\Pi_{SD}$ and likewise for ASD, giving $\Phi(\star)=-4\Pi_{SD}+4\Pi_{ASD}=-4\star$. My normalisation therefore reproduces a number the block asserts and does not use, so a factor-of-two error would have shown up here.
 
 ---
 
@@ -31,7 +31,7 @@ The second is the sharper check: $\mathfrak{su}(2)_\pm$ commute, so $\sum_{SD}\o
 
 > ### D1, the statement's phrase has a second reading, and under it the Lemma is FALSE
 >
-> *"Let $W\in\mathrm{Weyl}_m$ have exactly one eigenvalue of one sign"* also parses as **one distinct eigenvalue value on one side**, at any multiplicity. Witness, in $\mathrm{Weyl}_4$: take $W^+=W^-=\operatorname{diag}(2,-1,-1)$ in the bases $w^\pm_1,w^\pm_2,w^\pm_3$ of $\Lambda^\pm$. Each block is trace-free symmetric on its own $\Lambda^\pm$, so $W\in\mathrm{Weyl}_4$; the spectrum is $(2,2,-1,-1,-1,-1)$, so **one** eigenvalue value $+2$ sits on the positive side. Its eigenspace $\operatorname{span}\{w_1^+,w_1^-\}$ contains $w_1^++w_1^-=\sqrt2\,\varphi_{12}$, of **rank $2$**, not a multiple of a complex structure on a $4$-dimensional subspace. And $W\ne0$.
+> *"Let $W\in\mathrm{Weyl}_m$ have exactly one eigenvalue of one sign"* also parses as **one distinct eigenvalue value on one side**, at any multiplicity. Witness, in $\mathrm{Weyl}_4$: take $W^+=W^-=\mathop{\mathrm{diag}}(2,-1,-1)$ in the bases $w^\pm_1,w^\pm_2,w^\pm_3$ of $\Lambda^\pm$. Each block is trace-free symmetric on its own $\Lambda^\pm$, so $W\in\mathrm{Weyl}_4$; the spectrum is $(2,2,-1,-1,-1,-1)$, so **one** eigenvalue value $+2$ sits on the positive side. Its eigenspace $\mathop{\mathrm{span}}\{w_1^+,w_1^-\}$ contains $w_1^++w_1^-=\sqrt2\,\varphi_{12}$, of **rank $2$**, not a multiple of a complex structure on a $4$-dimensional subspace. And $W\ne0$.
 >
 > The singular *"that eigenvector"* in the next sentence does disambiguate (a multiplicity-$k$ eigenvalue has an eigenspace and no distinguished eigenvector) so the statement is defensible as written. It is still one word away from a false theorem, and the record has just been through [Lemma L46](../findings/problem.md) and [Lemma L11](../findings/nondegeneracy.md) for exactly this class of defect.
 >
@@ -43,9 +43,9 @@ The second is the sharper check: $\mathfrak{su}(2)_\pm$ commute, so $\sum_{SD}\o
 
 ## 2. The Bianchi step, derived cold
 
-The block's identity is $\Phi(W)=\sum_\alpha\lambda_\alpha\operatorname{ad}(v_\alpha)^2=2W$, equivalently $\sum_\alpha\lambda_\alpha N_{v_\alpha}=0$ with $N_v=2\,v\otimes v-\operatorname{ad}(v)^2$. **It is correct in this record's normalisation.**
+The block's identity is $\Phi(W)=\sum_\alpha\lambda_\alpha\mathop{\mathrm{ad}}(v_\alpha)^2=2W$, equivalently $\sum_\alpha\lambda_\alpha N_{v_\alpha}=0$ with $N_v=2\,v\otimes v-\mathop{\mathrm{ad}}(v)^2$. **It is correct in this record's normalisation.**
 
-- **$\Phi$ is $O(m)$-equivariant and self-adjoint** on $S^2(\Lambda^2)$: $\langle\Phi(R)u,u\rangle=\langle R,\operatorname{ad}(u)^2\rangle$, because $\operatorname{ad}(v)$ is skew-adjoint for the ad-invariant form. So $\Phi$ is a scalar on each of $\mathbb R\oplus\mathrm{Sym}^2_0\oplus\mathcal W_m\oplus\Lambda^4$, and the whole claim is one number on $\mathcal W_m$.
+- **$\Phi$ is $O(m)$-equivariant and self-adjoint** on $S^2(\Lambda^2)$: $\langle\Phi(R)u,u\rangle=\langle R,\mathop{\mathrm{ad}}(u)^2\rangle$, because $\mathop{\mathrm{ad}}(v)$ is skew-adjoint for the ad-invariant form. So $\Phi$ is a scalar on each of $\mathbb R\oplus\mathrm{Sym}^2_0\oplus\mathcal W_m\oplus\Lambda^4$, and the whole claim is one number on $\mathcal W_m$.
 - **The Bianchi contraction.** For skew $\omega$ put $A_{ij}=\sum_{k,l}R_{ikjl}\omega_{kl}$. Its symmetric part vanishes identically by the pair symmetry and the skewness of $\omega$; its skew part is $\tfrac12(R_{ikjl}-R_{iljk})\omega_{kl}$, and **first Bianchi rearranges to $R_{ikjl}-R_{iljk}=R_{ijkl}$**, giving $A=\tfrac12R_{ijkl}\omega_{kl}=(R\omega)_{ij}$, the curvature operator itself. This is the load-bearing step and the block names it correctly.
 - **The constant.** With $q(R)=-\Phi(R)$ and $q(R)\omega=\mathrm{Ric}\circ\omega+\omega\circ\mathrm{Ric}-2\mathring R\omega$: Ricci-flatness kills the first two terms, the line above gives $\mathring R|_{\Lambda^2}=R$, hence $q(R)=-2R$ and $\Phi(W)=2W$. **Checked against the sphere**, which is not Ricci-flat and so tests the constants independently: $\mathrm{Ric}=(n-1)g$ and $\mathring R=\mathrm{Id}$ give $q=2(n-1)-2=2(n-2)$, matching the hand computation $\Phi(\mathrm{Id})=-2(n-2)\mathrm{Id}$ above.
 - **The pairing is with the right object.** $\langle u,N_vu\rangle=2\langle v,u\rangle^2+\lVert[v,u]\rVert^2$, so $N_v\succeq0$ with $\ker N_v=v^\perp\cap\mathfrak z(v)$, the block's line, correct. And $\sum_\alpha\lambda_\alpha N_{v_\alpha}=2W-2W=0$ is then bookkeeping.
@@ -79,7 +79,7 @@ So the exception is exactly *"$x$ a multiple of a complex structure on a $4$-dim
 
 [L32](../findings/isotropy-cap.md) was refuted as stated on 2026-09-04 and repaired with the hypothesis $\mathfrak c\ne0$. L33's block discharges it inline. **The discharge holds, with one wording repair:**
 
-- The block writes *"$\mathfrak z(x)$ contains the torus spanned by $x$'s own $2$-blocks, so $\dim\mathfrak z(x)\ge\lfloor n/2\rfloor$."* For **degenerate** $x$ that torus has dimension $p=\operatorname{rank}(x)/2<\lfloor n/2\rfloor$, so the sentence does not deliver its own bound. What does: **any maximal torus containing $x$ is abelian, hence inside $\mathfrak z(x)$, and has dimension $\lfloor n/2\rfloor$.** Then $\mathfrak c\supseteq\mathfrak t\cap x^\perp$ gives $\dim\mathfrak c\ge\lfloor n/2\rfloor-1$, vanishing only at $n\le3$, as the block says.
+- The block writes *"$\mathfrak z(x)$ contains the torus spanned by $x$'s own $2$-blocks, so $\dim\mathfrak z(x)\ge\lfloor n/2\rfloor$."* For **degenerate** $x$ that torus has dimension $p=\mathop{\mathrm{rank}}(x)/2<\lfloor n/2\rfloor$, so the sentence does not deliver its own bound. What does: **any maximal torus containing $x$ is abelian, hence inside $\mathfrak z(x)$, and has dimension $\lfloor n/2\rfloor$.** Then $\mathfrak c\supseteq\mathfrak t\cap x^\perp$ gives $\dim\mathfrak c\ge\lfloor n/2\rfloor-1$, vanishing only at $n\le3$, as the block says.
 - **And $n\le3$ costs nothing here:** $\dim\mathcal W_m=m(m-3)(m+1)(m+2)/12$ is $0$ for $m\le3$, so $\mathrm{Weyl}_m=0$ and L33's conclusion holds vacuously exactly where the hypothesis could fail. **L33 is unconditional; L32's missing hypothesis never reaches it.** The block's own hedge ("*At $n\ge12$ the bound is at least $5$*"), is weaker than the truth and can be strengthened to "at every $m$ where $\mathrm{Weyl}_m\ne0$".
 - L33 uses only the **weak** inclusion $\ker N_x\subseteq\bigcap_i\ker N_{y_i}$ and only L32's conclusion, no strengthening. The step from "the quadratic form vanishes" to "the kernel" is licensed by $N_v$ being self-adjoint and PSD, flagged as unstated in [isotropy-cap.md](../findings/isotropy-cap.md) and still unstated here, but true.
 
@@ -93,7 +93,7 @@ So the exception is exactly *"$x$ a multiple of a complex structure on a $4$-dim
 
 | word | where it comes from | verdict |
 | --- | --- | --- |
-| **rank $3$** | $\operatorname{tr}W=0$ makes the signature $(2,1)$ or $(1,2)$, so the minority side is a **simple** eigenvalue, exactly the main hypothesis | forced, but see below |
+| **rank $3$** | $\mathop{\mathrm{tr}}W=0$ makes the signature $(2,1)$ or $(1,2)$, so the minority side is a **simple** eigenvalue, exactly the main hypothesis | forced, but see below |
 | **nondegenerate** | $\ker x=0$, i.e. $x$ invertible, the sense L32's proof uses ("$p=m/2$ … singular values, all nonzero") | forced |
 | **even $m$** | an odd-dimensional skew matrix is always singular, so nondegeneracy is possible only at even $m$ | forced (and odd $m$ is vacuously covered) |
 | **$m\ge6$** | a complex structure on a $4$-dimensional subspace has rank $4$; at $m\ge6$ that is degenerate, so nondegeneracy **excludes the exception**. At $m=4$ it does not, $W_4(q,r)$ is the boundary case | forced, and sharp |
@@ -112,7 +112,7 @@ No extra input beyond the main statement. **But "rank $3$" is a needless weakeni
 >
 > The block opens: *"Moved here from [results.md](../results.md) on 2026-08-31, where the argument was the only copy."*
 >
-> At `a9e4b8c0~1`, the commit immediately before `a9e4b8c0 refactor(results): the proofs move to findings, results.md states and points`, **[findings/isotropy-cap.md](../findings/isotropy-cap.md) already carried a full account of L33**: the identity $\sum_\alpha\lambda_\alpha\operatorname{ad}(v_\alpha)^2=2W$ with the same $N_v$ (line 117), $N_v\succeq0$ and $\ker N_v=v^\perp\cap\mathfrak z(v)$ (lines 136–138), the statement under the heading "Lemma 33 (the answer to B0's recorded question, in the sharp form Reviewer 60 supplies)" (lines 158–160), and the $W_4(q,r)$ exception (line 174). So results.md was **not** the only copy. isotropy-cap.md itself still says so, at its own L33 pointer: *"what stood here was the shorter account."*
+> At `a9e4b8c0~1`, the commit immediately before `a9e4b8c0 refactor(results): the proofs move to findings, results.md states and points`, **[findings/isotropy-cap.md](../findings/isotropy-cap.md) already carried a full account of L33**: the identity $\sum_\alpha\lambda_\alpha\mathop{\mathrm{ad}}(v_\alpha)^2=2W$ with the same $N_v$ (line 117), $N_v\succeq0$ and $\ker N_v=v^\perp\cap\mathfrak z(v)$ (lines 136–138), the statement under the heading "Lemma 33 (the answer to B0's recorded question, in the sharp form Reviewer 60 supplies)" (lines 158–160), and the $W_4(q,r)$ exception (line 174). So results.md was **not** the only copy. isotropy-cap.md itself still says so, at its own L33 pointer: *"what stood here was the shorter account."*
 >
 > **And the second clause is inaccurate too.** *"That file now carries the statement and points here."* [results.md](../results.md) carries the statement **plus two full paragraphs of the argument**, the whole "The identity the proof runs on" block and the whole "This is classical and is cited, not claimed" block, verbatim. That was already true at the move commit and is true today.
 >
@@ -129,7 +129,7 @@ No extra input beyond the main statement. **But "rank $3$" is a needless weakeni
 ## 7. Cross-file sweep
 
 - **Nothing in `findings/` restates L33 with different hypotheses in a way that changes its truth.** The one variant, [isotropy-cap.md](../findings/isotropy-cap.md)'s "shorter account", is *stronger* (any rank, any number on the other side) and correct; see §5.
-- **The later sections of [stratum-two-negative.md](../findings/stratum-two-negative.md) do not contradict it.** [Lemma L34](../findings/stratum-two-negative.md) exhibits $\mathrm{Weyl}_m$ elements with full support at $m=6,8$ built from **two** padded copies of $W_4(q,r)$, **two** negative eigenvalues, outside L33's hypothesis, and the block says so in as many words ("a statement stronger than Lemma L33 settles"). Its "Why the recorded equivalence fails" paragraph cites L33 correctly, at one positive eigenvalue where Ricci-flatness forces $U=\operatorname{im}v_1$.
+- **The later sections of [stratum-two-negative.md](../findings/stratum-two-negative.md) do not contradict it.** [Lemma L34](../findings/stratum-two-negative.md) exhibits $\mathrm{Weyl}_m$ elements with full support at $m=6,8$ built from **two** padded copies of $W_4(q,r)$, **two** negative eigenvalues, outside L33's hypothesis, and the block says so in as many words ("a statement stronger than Lemma L33 settles"). Its "Why the recorded equivalence fails" paragraph cites L33 correctly, at one positive eigenvalue where Ricci-flatness forces $U=\mathop{\mathrm{im}}v_1$.
 - **The per-row balance at line 501 is consistent** and is a further independent check on the identity; see §2.
 - **[LEDGER.md](../findings/LEDGER.md) already records** that L33 was "repaired rather than cleared" by the $\mathfrak c\ne0$ discharge. That record is accurate; §4 above finds the discharge sound and, in fact, stronger than stated.
 
@@ -145,9 +145,9 @@ Built $\Lambda^2\mathbb R^4$ in the orthonormal $\varphi_{ab}$ basis and compute
 | $\Phi(\star)+4\star$ | $2.2\times10^{-15}$ |
 | $W_4(0.7,0.3)$: $\lVert\Phi(W)-2W\rVert$, $\lVert\mathrm{Ric}\rVert$, $\langle W,\star\rangle$ | $7.2\times10^{-16}$, $2.5\times10^{-16}$, $9.3\times10^{-18}$ |
 | $W_4(0.7,0.3)$ spectrum | $(-1,0,0,0,0.3,0.7)$, one negative, simple |
-| D1's witness $W^+=W^-=\operatorname{diag}(2,-1,-1)$: Weyl conditions | $\lVert\Phi(W)-2W\rVert=0$, $\lVert\mathrm{Ric}\rVert=0$ |
+| D1's witness $W^+=W^-=\mathop{\mathrm{diag}}(2,-1,-1)$: Weyl conditions | $\lVert\Phi(W)-2W\rVert=0$, $\lVert\mathrm{Ric}\rVert=0$ |
 | its spectrum, and the singular values of $\varphi_{12}$ in the $+2$ eigenspace | $(2,2,-1,-1,-1,-1)$; $(1,1,0,0)$, rank $2$, no complex structure |
-| $\operatorname{spec}N_{\varphi_{12}}$ on $\Lambda^2\mathbb R^4$ | $(0,1,1,1,1,2)$, $\mathfrak c=\mathbb R\varphi_{34}$, one-dimensional, matching the hand computation |
+| $\mathop{\mathrm{spec}}N_{\varphi_{12}}$ on $\Lambda^2\mathbb R^4$ | $(0,1,1,1,1,2)$, $\mathfrak c=\mathbb R\varphi_{34}$, one-dimensional, matching the hand computation |
 
 ---
 

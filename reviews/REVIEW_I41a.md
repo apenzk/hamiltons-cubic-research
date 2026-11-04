@@ -7,17 +7,17 @@
 **Both parts are theorems and both are proved below in closed form.** Two corrections to the record's account of them:
 
 - **(b) is false at $m=3$, and $m=3$ is the only place it fails.** There the mixed summand supplies $2$ of the $3$ dimensions of $\mathfrak z(\mathfrak c)\cap\mathfrak c^\perp$. So $m\ne3$ (already L32's sharp hypothesis), is *also* exactly the hypothesis of (b), rather than a condition inherited from elsewhere.
-- **(a) is not the fact that does the work.** It settles $\dim\ker x\ge2$ and gives nothing at $\dim\ker x=1$, where $\mathfrak{so}(\ker x)=0$. The corank-$1$ case runs on a second, independent fact, **$\mathfrak c_V$ has trivial common kernel on $\operatorname{im}x$**, which holds exactly when $\operatorname{rank}x\ge4$. The record's owed line, *"which needs the standard representation of $\mathfrak{so}(k)$ to have no invariant vector at $k\ge2$"*, is therefore a correct half of the reason and not the whole of it.
+- **(a) is not the fact that does the work.** It settles $\dim\ker x\ge2$ and gives nothing at $\dim\ker x=1$, where $\mathfrak{so}(\ker x)=0$. The corank-$1$ case runs on a second, independent fact, **$\mathfrak c_V$ has trivial common kernel on $\mathop{\mathrm{im}}x$**, which holds exactly when $\mathop{\mathrm{rank}}x\ge4$. The record's owed line, *"which needs the standard representation of $\mathfrak{so}(k)$ to have no invariant vector at $k\ge2$"*, is therefore a correct half of the reason and not the whole of it.
 
 **And (b) delivers more than the record asked for.** With the mixed summand gone the degenerate case does not merely *resemble* the maximal-rank case inside the support, it *equals* it, as an identity of subspaces (§5). That is the exact form of the one-sentence degenerate branch L32 asserts without proof.
 
 ## 1. Conventions, quoted
 
-From [conventions.md](../findings/conventions.md), *"A skew matrix's norm, in the form the stratum arguments use: $\langle X,X\rangle=\tfrac12\operatorname{tr}(X^{\mathsf T}X)$"*, and *"$\lVert\varphi_{ab}\rVert^2=1$ under the half-trace pairing of the bullet above, which is the one every result uses and which makes $\{\varphi_{ab}\}_{a<b}$ orthonormal"*.
+From [conventions.md](../findings/conventions.md), *"A skew matrix's norm, in the form the stratum arguments use: $\langle X,X\rangle=\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}X)$"*, and *"$\lVert\varphi_{ab}\rVert^2=1$ under the half-trace pairing of the bullet above, which is the one every result uses and which makes $\{\varphi_{ab}\}_{a<b}$ orthonormal"*.
 
 From the same file's row for [isotropy-cap.md](../findings/isotropy-cap.md): *"$\mathfrak c=\mathfrak z(x)\cap x^\perp$; $a$ the singular-value vector of $x$; $p=\lfloor m/2\rfloor$, the torus rank; $\mathfrak t$ the maximal torus of $x$'s coordinate $2$-planes"*.
 
-Two symbols this argument needs and the record does not carry, fixed here for the length of this report: $V:=\operatorname{im}x$ and $K:=\ker x$, with $k:=\dim K$ and $2r:=\dim V=\operatorname{rank}x$. I write $x_V\in\mathfrak{so}(V)$ for the restriction of $x$ to $V$, and $\mathfrak c_V:=\mathfrak z_{\mathfrak{so}(V)}(x_V)\cap x_V^{\perp}$ for the object $\mathfrak c$ becomes on the support. **All orthocomplements are taken inside the ambient algebra named by the subscript**, and $\perp_V$ marks one taken inside $\mathfrak{so}(V)$.
+Two symbols this argument needs and the record does not carry, fixed here for the length of this report: $V:=\mathop{\mathrm{im}}x$ and $K:=\ker x$, with $k:=\dim K$ and $2r:=\dim V=\mathop{\mathrm{rank}}x$. I write $x_V\in\mathfrak{so}(V)$ for the restriction of $x$ to $V$, and $\mathfrak c_V:=\mathfrak z_{\mathfrak{so}(V)}(x_V)\cap x_V^{\perp}$ for the object $\mathfrak c$ becomes on the support. **All orthocomplements are taken inside the ambient algebra named by the subscript**, and $\perp_V$ marks one taken inside $\mathfrak{so}(V)$.
 
 ## 2. Part (a), at every $k$
 
@@ -43,11 +43,11 @@ which is skew, hence in $\mathfrak{so}(k)$. Then $Aw=v\lVert w\rVert^2-w\langle 
 
 ## 3. The decomposition, and where $\mathfrak c$ sits in it
 
-Since $x$ is skew, $\operatorname{im}(x)^\perp=\ker(x^{\mathsf T})=\ker(-x)=\ker x$, so $\mathbb R^m=V\oplus K$ **orthogonally**, and $\operatorname{rank}x=2r$ is even with $r\ge1$ because $x\ne0$. Writing every element of $\mathfrak{so}(m)$ in blocks against that splitting, in the order $(V,K)$,
+Since $x$ is skew, $\mathop{\mathrm{im}}(x)^\perp=\ker(x^{\mathsf T})=\ker(-x)=\ker x$, so $\mathbb R^m=V\oplus K$ **orthogonally**, and $\mathop{\mathrm{rank}}x=2r$ is even with $r\ge1$ because $x\ne0$. Writing every element of $\mathfrak{so}(m)$ in blocks against that splitting, in the order $(V,K)$,
 
-$$\mathfrak{so}(m)\;=\;\underbrace{\mathfrak{so}(V)}_{\Lambda^2V}\;\oplus\;\underbrace{\Big\{\begin{pmatrix}0&C\\-C^{\mathsf T}&0\end{pmatrix}:C\in\operatorname{Hom}(K,V)\Big\}}_{V\otimes K}\;\oplus\;\underbrace{\mathfrak{so}(K)}_{\Lambda^2K},$$
+$$\mathfrak{so}(m)\;=\;\underbrace{\mathfrak{so}(V)}_{\Lambda^2V}\;\oplus\;\underbrace{\Big\{\begin{pmatrix}0&C\\-C^{\mathsf T}&0\end{pmatrix}:C\in\mathop{\mathrm{Hom}}(K,V)\Big\}}_{V\otimes K}\;\oplus\;\underbrace{\mathfrak{so}(K)}_{\Lambda^2K},$$
 
-and the three summands are mutually orthogonal for the half-trace pairing, block-diagonal and block-off-diagonal matrices having zero trace against one another. **The middle summand is the mixed one**: it is $\operatorname{Hom}(\ker x,\operatorname{im}x)$, written $V\otimes K$ in the decomposition and $V\wedge K$ at [ROUND_L32](../verification/ROUND_L32.md)'s finding J9. A single $C$ names it, the lower block being $-C^{\mathsf T}$ by skewness.
+and the three summands are mutually orthogonal for the half-trace pairing, block-diagonal and block-off-diagonal matrices having zero trace against one another. **The middle summand is the mixed one**: it is $\mathop{\mathrm{Hom}}(\ker x,\mathop{\mathrm{im}}x)$, written $V\otimes K$ in the decomposition and $V\wedge K$ at [ROUND_L32](../verification/ROUND_L32.md)'s finding J9. A single $C$ names it, the lower block being $-C^{\mathsf T}$ by skewness.
 
 **Step 3.1, $\mathfrak z(x)$ has no mixed part.** With $x=\begin{pmatrix}x_V&0\\0&0\end{pmatrix}$ and $z=\begin{pmatrix}A&C\\-C^{\mathsf T}&B\end{pmatrix}$,
 
@@ -73,7 +73,7 @@ so the lower block repeats the upper one and the three summands' conditions are 
 
 $$\textbf{(i)}\ \ \alpha C=0\ \ \text{for all }\alpha\in\mathfrak c_V, \qquad\qquad \textbf{(ii)}\ \ C\beta=0\ \ \text{for all }\beta\in\mathfrak{so}(K).$$
 
-Equivalently, **(i)** says $\operatorname{im}C\subseteq\bigcap_{\alpha\in\mathfrak c_V}\ker\alpha$, and **(ii)** says $\ker C\supseteq\sum_{\beta\in\mathfrak{so}(K)}\operatorname{im}\beta$. *Either one alone can force $C=0$, and which one does depends on the corank.*
+Equivalently, **(i)** says $\mathop{\mathrm{im}}C\subseteq\bigcap_{\alpha\in\mathfrak c_V}\ker\alpha$, and **(ii)** says $\ker C\supseteq\sum_{\beta\in\mathfrak{so}(K)}\mathop{\mathrm{im}}\beta$. *Either one alone can force $C=0$, and which one does depends on the corank.*
 
 **Step 4.2, (ii) is exactly part (a), and settles $k\ge2$.** For skew $\beta$, $C\beta=0\iff\beta C^{\mathsf T}=0$, so (ii) says every column of $C^{\mathsf T}$, that is, **every row of $C$, read as a vector of $K$**, is an invariant vector of the standard representation of $\mathfrak{so}(K)$. Proposition A gives $C=0$ whenever $k\ge2$. *This is the record's named route, and it is correct on its own range.*
 
@@ -81,7 +81,7 @@ Equivalently, **(i)** says $\operatorname{im}C\subseteq\bigcap_{\alpha\in\mathfr
 
 **Proposition B.** *Let $x_V\in\mathfrak{so}(V)$ be invertible with $\dim V=2r$ and $r\ge2$. Then $\bigcap_{\alpha\in\mathfrak c_V}\ker\alpha=0$.*
 
-**Proof.** Split $V=P_1\oplus\dots\oplus P_r$ into the orthogonal coordinate $2$-planes of $x_V$, with $\varphi_i$ the unit bivector of $P_i$ and $x_V=\sum_ia_i\varphi_i$; **every $a_i\ne0$, because $V$ is the image of $x$ and $x_V$ is invertible on it.** The torus $\mathfrak t_V=\operatorname{span}\{\varphi_1,\dots,\varphi_r\}$ is abelian and contains $x_V$, so $\mathfrak t_V\subseteq\mathfrak z_{\mathfrak{so}(V)}(x_V)$ and therefore
+**Proof.** Split $V=P_1\oplus\dots\oplus P_r$ into the orthogonal coordinate $2$-planes of $x_V$, with $\varphi_i$ the unit bivector of $P_i$ and $x_V=\sum_ia_i\varphi_i$; **every $a_i\ne0$, because $V$ is the image of $x$ and $x_V$ is invertible on it.** The torus $\mathfrak t_V=\mathop{\mathrm{span}}\{\varphi_1,\dots,\varphi_r\}$ is abelian and contains $x_V$, so $\mathfrak t_V\subseteq\mathfrak z_{\mathfrak{so}(V)}(x_V)$ and therefore
 
 $$\mathfrak c_V\;\supseteq\;\mathfrak t_V\cap x_V^{\perp}\;=\;\{\textstyle\sum_it_i\varphi_i:\ \sum_it_ia_i=0\}\;\cong\;a^\perp,$$
 
@@ -93,16 +93,16 @@ the identification using that $\{\varphi_i\}$ is orthonormal for the half-trace 
 
 | $k=\dim\ker x$ | $r$ | what forces $C=0$ |
 |---|---|---|
-| $0$ | any $r\ge1$ | **nothing to force**, $\operatorname{Hom}(K,V)=0$, the mixed summand is absent |
+| $0$ | any $r\ge1$ | **nothing to force**, $\mathop{\mathrm{Hom}}(K,V)=0$, the mixed summand is absent |
 | $1$ | $r\ge2$ | **(i) with Proposition B**, (a) is silent here, $\mathfrak{so}(1)=0$ |
 | $1$ | $r=1$ | **neither**, and this is $m=2r+1=3$ |
 | $\ge2$ | any $r\ge1$ | **(ii) with Proposition A** |
 
-**Theorem (b).** *Let $m\ne3$ and let $x\in\mathfrak{so}(m)$ be nonzero, $\mathfrak c=\mathfrak z(x)\cap x^\perp$. Then every $z\in\mathfrak z(\mathfrak c)$ has vanishing component in $\operatorname{Hom}(\ker x,\operatorname{im}x)$; in particular the mixed summand contributes nothing to $\mathfrak z(\mathfrak c)\cap\mathfrak c^\perp$.*
+**Theorem (b).** *Let $m\ne3$ and let $x\in\mathfrak{so}(m)$ be nonzero, $\mathfrak c=\mathfrak z(x)\cap x^\perp$. Then every $z\in\mathfrak z(\mathfrak c)$ has vanishing component in $\mathop{\mathrm{Hom}}(\ker x,\mathop{\mathrm{im}}x)$; in particular the mixed summand contributes nothing to $\mathfrak z(\mathfrak c)\cap\mathfrak c^\perp$.*
 
 **Proof.** The table exhausts the possibilities, $r\ge1$ holding because $x\ne0$. The only row that fails to produce $C=0$ is $(k,r)=(1,1)$, which is $m=3$ and is excluded. $\square$
 
-**And $m=3$ really is a failure of (b), not just of L32's conclusion.** At $x=\varphi_{12}\in\mathfrak{so}(3)$: $\mathfrak c_V=0$ and $\mathfrak{so}(K)=\mathfrak{so}(1)=0$, so $\mathfrak c=0$, $\mathfrak z(\mathfrak c)=\mathfrak{so}(3)$ and $\mathfrak c^\perp=\mathfrak{so}(3)$. The mixed summand $\operatorname{Hom}(K,V)=\operatorname{span}\{\varphi_{13},\varphi_{23}\}$ lies wholly inside $\mathfrak z(\mathfrak c)\cap\mathfrak c^\perp$ and **supplies two of that space's three dimensions**. So the hypothesis of (b) is sharp, and it is the same $m\ne3$ L32 already carries, *the owed line needs no hypothesis the statement does not already have.*
+**And $m=3$ really is a failure of (b), not just of L32's conclusion.** At $x=\varphi_{12}\in\mathfrak{so}(3)$: $\mathfrak c_V=0$ and $\mathfrak{so}(K)=\mathfrak{so}(1)=0$, so $\mathfrak c=0$, $\mathfrak z(\mathfrak c)=\mathfrak{so}(3)$ and $\mathfrak c^\perp=\mathfrak{so}(3)$. The mixed summand $\mathop{\mathrm{Hom}}(K,V)=\mathop{\mathrm{span}}\{\varphi_{13},\varphi_{23}\}$ lies wholly inside $\mathfrak z(\mathfrak c)\cap\mathfrak c^\perp$ and **supplies two of that space's three dimensions**. So the hypothesis of (b) is sharp, and it is the same $m\ne3$ L32 already carries, *the owed line needs no hypothesis the statement does not already have.*
 
 ## 5. What (b) actually buys, the degenerate branch becomes an identity
 

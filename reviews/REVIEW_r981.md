@@ -18,21 +18,21 @@ Reviewer **r981**, working from [BRIEF_R28_first_order.md](BRIEF_R28_first_order
 
 ## Claim 1, derived from scratch
 
-Write $A=\operatorname{diag}(a)$, $B=\operatorname{diag}(b)$, $\tilde U=P^{\mathsf T}\hat UP$, $\tilde C=P^{\mathsf T}CP$, so the value is $f(P)=\operatorname{tr}(A\tilde U)+\operatorname{tr}(B\tilde C)$.
+Write $A=\mathop{\mathrm{diag}}(a)$, $B=\mathop{\mathrm{diag}}(b)$, $\tilde U=P^{\mathsf T}\hat UP$, $\tilde C=P^{\mathsf T}CP$, so the value is $f(P)=\mathop{\mathrm{tr}}(A\tilde U)+\mathop{\mathrm{tr}}(B\tilde C)$.
 
 The tangent space to $O(k)$ at $P$ is $\{P\Omega:\Omega^{\mathsf T}=-\Omega\}$, swept by the curves $P(t)=P\exp(t\Omega)$. Along one of them $\exp(t\Omega)^{\mathsf T}=\exp(-t\Omega)$, so $\tilde U(t)=\exp(-t\Omega)\tilde U\exp(t\Omega)$ and
 
 $$\left.\frac{d}{dt}\right|_{0}\tilde U(t)=\tilde U\Omega-\Omega\tilde U=[\tilde U,\Omega],$$
 
-and likewise for $\tilde C$. By cyclicity $\operatorname{tr}(A[\tilde U,\Omega])=\operatorname{tr}(A\tilde U\Omega)-\operatorname{tr}(\tilde UA\Omega)=\operatorname{tr}([A,\tilde U]\Omega)$, so
+and likewise for $\tilde C$. By cyclicity $\mathop{\mathrm{tr}}(A[\tilde U,\Omega])=\mathop{\mathrm{tr}}(A\tilde U\Omega)-\mathop{\mathrm{tr}}(\tilde UA\Omega)=\mathop{\mathrm{tr}}([A,\tilde U]\Omega)$, so
 
-$$\left.\frac{d}{dt}\right|_{0}f(P\exp(t\Omega))=\operatorname{tr}(M\Omega),\qquad M:=[A,\tilde U]+[B,\tilde C].$$
+$$\left.\frac{d}{dt}\right|_{0}f(P\exp(t\Omega))=\mathop{\mathrm{tr}}(M\Omega),\qquad M:=[A,\tilde U]+[B,\tilde C].$$
 
 Entrywise $M_{ij}=(a_i-a_j)\tilde U_{ij}+(b_i-b_j)\tilde C_{ij}$, which is the block's left-hand side verbatim.
 
 **$M$ is antisymmetric.** $\tilde U$ and $\tilde C$ are symmetric, so $M_{ji}=(a_j-a_i)\tilde U_{ij}+(b_j-b_i)\tilde C_{ij}=-M_{ij}$, and the diagonal vanishes identically.
 
-**Criticality is $M=0$, with nothing lost in either direction.** Under $\langle X,Y\rangle=\operatorname{tr}(X^{\mathsf T}Y)$ the identity $\operatorname{tr}(M\Omega)=\langle M^{\mathsf T},\Omega\rangle$ holds, and the skew matrices are the orthogonal complement of the symmetric ones. So $\operatorname{tr}(M\Omega)=0$ for every skew $\Omega$ says exactly that $M^{\mathsf T}$ is symmetric, that is, that $M$ is symmetric. Being already antisymmetric, $M=0$. **There is no residual symmetrisation to take, because the object paired against $\Omega$ is antisymmetric before any projection.** A reader who expected a $\tfrac12(M-M^{\mathsf T})$ to appear is expecting a step that the symmetry of $\hat U$ and $C$ has already done.
+**Criticality is $M=0$, with nothing lost in either direction.** Under $\langle X,Y\rangle=\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$ the identity $\mathop{\mathrm{tr}}(M\Omega)=\langle M^{\mathsf T},\Omega\rangle$ holds, and the skew matrices are the orthogonal complement of the symmetric ones. So $\mathop{\mathrm{tr}}(M\Omega)=0$ for every skew $\Omega$ says exactly that $M^{\mathsf T}$ is symmetric, that is, that $M$ is symmetric. Being already antisymmetric, $M=0$. **There is no residual symmetrisation to take, because the object paired against $\Omega$ is antisymmetric before any projection.** A reader who expected a $\tfrac12(M-M^{\mathsf T})$ to appear is expecting a step that the symmetry of $\hat U$ and $C$ has already done.
 
 **"For all $i\ne j$" or only $i<j$.** The two are the same condition, since $M_{ji}=-M_{ij}$, so the $\binom k2$ equations indexed by $i<j$ carry the whole of it. **It does not matter, and the count is a control on the derivation**: $\binom k2=\dim O(k)$, one equation per tangent direction, which is what a gradient on a $\binom k2$-dimensional manifold must produce. Writing "for all $i\ne j$" is therefore correct and merely redundant, and a reader must not count $k(k-1)$ independent conditions from it.
 
@@ -70,7 +70,7 @@ With $\tilde U$ diagonal, $\tilde U_{ij}=0$ for every $i\ne j$, so $(\star)$ giv
 
 Diagonal matrices commute, so $[\tilde U,\tilde C]=0$. For orthogonal $P$, $\hat U=P\tilde UP^{\mathsf T}$ and $C=P\tilde CP^{\mathsf T}$, hence $[\hat U,C]=P[\tilde U,\tilde C]P^{\mathsf T}=0$. **CONFIRMED.**
 
-**Orthogonality is load-bearing.** The map $X\mapsto P^{\mathsf T}XP$ is a congruence, and congruence does not transport a commutator. It transports one only when it coincides with the similarity $X\mapsto P^{-1}XP$, which is exactly the condition $P^{\mathsf T}=P^{-1}$. For a merely invertible $P$ the step fails, and it fails on a two-by-two example: with $P=\begin{pmatrix}1&1\\0&1\end{pmatrix}$, $\hat U=P^{-\mathsf T}\operatorname{diag}(1,0)P^{-1}=\begin{pmatrix}1&-1\\-1&1\end{pmatrix}$ and $C=P^{-\mathsf T}\operatorname{diag}(0,1)P^{-1}=\operatorname{diag}(0,1)$ are congruent by $P$ to two diagonal matrices simultaneously, and $[\hat U,C]=\begin{pmatrix}0&-1\\1&0\end{pmatrix}\ne0$. So the block's one-line inference is sound and its soundness is an orthogonality fact, worth stating where the block leaves it implicit.
+**Orthogonality is load-bearing.** The map $X\mapsto P^{\mathsf T}XP$ is a congruence, and congruence does not transport a commutator. It transports one only when it coincides with the similarity $X\mapsto P^{-1}XP$, which is exactly the condition $P^{\mathsf T}=P^{-1}$. For a merely invertible $P$ the step fails, and it fails on a two-by-two example: with $P=\begin{pmatrix}1&1\\0&1\end{pmatrix}$, $\hat U=P^{-\mathsf T}\mathop{\mathrm{diag}}(1,0)P^{-1}=\begin{pmatrix}1&-1\\-1&1\end{pmatrix}$ and $C=P^{-\mathsf T}\mathop{\mathrm{diag}}(0,1)P^{-1}=\mathop{\mathrm{diag}}(0,1)$ are congruent by $P$ to two diagonal matrices simultaneously, and $[\hat U,C]=\begin{pmatrix}0&-1\\1&0\end{pmatrix}\ne0$. So the block's one-line inference is sound and its soundness is an orthogonality fact, worth stating where the block leaves it implicit.
 
 ## Claim 6, and the witness that strengthens it
 
@@ -84,7 +84,7 @@ nonzero on an open set of the block's parameters. **CONFIRMED.**
 
 **An explicit witness, and it is a GLOBAL MAXIMISER rather than merely a critical point.** Take $k=3$, $P=I$, and
 
-$$\nu=(1,-1,0),\qquad \hat U=\begin{pmatrix}\tfrac{10}3&1&0\\[2pt]1&\tfrac{10}3&0\\[2pt]0&0&-\tfrac{20}3\end{pmatrix},\qquad C=\operatorname{diag}(1,-1,0).$$
+$$\nu=(1,-1,0),\qquad \hat U=\begin{pmatrix}\tfrac{10}3&1&0\\[2pt]1&\tfrac{10}3&0\\[2pt]0&0&-\tfrac{20}3\end{pmatrix},\qquad C=\mathop{\mathrm{diag}}(1,-1,0).$$
 
 $\nu$ is pairwise distinct, $\hat U$ and $C$ are symmetric and traceless, $\nu$ is traceless, $\tilde U=\hat U$ is block diagonal on $\{1,2\}\mid\{3\}$ and is NOT diagonal, $\tilde C=C$ is diagonal, and $[\hat U,C]=\begin{pmatrix}0&-2&0\\2&0&0\\0&0&0\end{pmatrix}\ne0$.
 
@@ -92,9 +92,9 @@ $\nu$ is pairwise distinct, $\hat U$ and $C$ are symmetric and traceless, $\nu$ 
 
 *Global maximality, by hand.* With $a=\beta\nu^{\circ2}=(\tfrac94,\tfrac94,0)$ and $b=\nu$,
 
-$$f(P)=\tfrac94\big(\operatorname{tr}\hat U-p_3^{\mathsf T}\hat Up_3\big)+\big(p_1^{\mathsf T}Cp_1-p_2^{\mathsf T}Cp_2\big).$$
+$$f(P)=\tfrac94\big(\mathop{\mathrm{tr}}\hat U-p_3^{\mathsf T}\hat Up_3\big)+\big(p_1^{\mathsf T}Cp_1-p_2^{\mathsf T}Cp_2\big).$$
 
-$\operatorname{tr}\hat U=0$ and $\hat U$ has spectrum $\{\tfrac{13}3,\tfrac73,-\tfrac{20}3\}$, so $p_3^{\mathsf T}\hat Up_3\ge-\tfrac{20}3$ with equality only at $p_3=\pm e_3$, and the first term is $-\tfrac94p_3^{\mathsf T}\hat Up_3\le\tfrac94\cdot\tfrac{20}3=15$, attained exactly there. $C$ has spectrum $\{1,0,-1\}$, so $p_1^{\mathsf T}Cp_1\le1$ and $p_2^{\mathsf T}Cp_2\ge-1$, making the second term at most $2$, attained at $p_1=e_1$ and $p_2=e_2$, which are orthogonal to $e_3$ and so compatible with the first bound. Hence $f\le17$ everywhere, and $f(I)=15+2=17$. **$P=I$ is a global maximiser.** Screened over $3\cdot10^5$ Haar frames with the maximum asserted at or below $f(I)$.
+$\mathop{\mathrm{tr}}\hat U=0$ and $\hat U$ has spectrum $\{\tfrac{13}3,\tfrac73,-\tfrac{20}3\}$, so $p_3^{\mathsf T}\hat Up_3\ge-\tfrac{20}3$ with equality only at $p_3=\pm e_3$, and the first term is $-\tfrac94p_3^{\mathsf T}\hat Up_3\le\tfrac94\cdot\tfrac{20}3=15$, attained exactly there. $C$ has spectrum $\{1,0,-1\}$, so $p_1^{\mathsf T}Cp_1\le1$ and $p_2^{\mathsf T}Cp_2\ge-1$, making the second term at most $2$, attained at $p_1=e_1$ and $p_2=e_2$, which are orthogonal to $e_3$ and so compatible with the first bound. Hence $f\le17$ everywhere, and $f(I)=15+2=17$. **$P=I$ is a global maximiser.** Screened over $3\cdot10^5$ Haar frames with the maximum asserted at or below $f(I)$.
 
 **Why the block's own reading makes this reachable, and what it costs the node.** The trick is $\nu_1+\nu_2=0$, which empties the $(1,2)$ bracket exactly as a repeat would, without repeating. **So there is a global maximiser, with $\nu$ pairwise distinct, at which $\tilde U$ and $\tilde C$ are simultaneously block diagonal and $[\hat U,C]\ne0$.** Claim 6's negative half is not a caution about a corner case, it is realised at the maximum.
 
@@ -102,7 +102,7 @@ $\operatorname{tr}\hat U=0$ and $\hat U$ has spectrum $\{\tfrac{13}3,\tfrac73,-\
 
 **The invariance is real.** With $\nu_i=\nu_j$ both $a_i=a_j$ and $b_i=b_j$, so $M_{ij}=0$ identically and the pair is unconstrained. Equivalently, $a_i\tilde U_{ii}+a_j\tilde U_{jj}=a_i(\tilde U_{ii}+\tilde U_{jj})$ is the trace of $\tilde U$ on the $(p_i,p_j)$ plane, invariant under rotation of that plane, and the same for $\tilde C$.
 
-**The converse fails, with an explicit point.** Take $k=2$, $\nu=(1,1)$, $\hat U=\begin{pmatrix}0&1\\1&0\end{pmatrix}$, $C=\operatorname{diag}(1,-1)$. The value is constant on $O(2)$, so every frame is critical. At the eigenframe $P=\tfrac1{\sqrt2}\begin{pmatrix}1&1\\1&-1\end{pmatrix}$ of $\hat U$, $\tilde U=\operatorname{diag}(1,-1)$ is diagonal while $\tilde C=\begin{pmatrix}0&1\\1&0\end{pmatrix}$ is not, and $[\hat U,C]\ne0$. So claims 4 and 5 both fail without distinctness. **CONFIRMED: the hypothesis is necessary and not decorative.**
+**The converse fails, with an explicit point.** Take $k=2$, $\nu=(1,1)$, $\hat U=\begin{pmatrix}0&1\\1&0\end{pmatrix}$, $C=\mathop{\mathrm{diag}}(1,-1)$. The value is constant on $O(2)$, so every frame is critical. At the eigenframe $P=\tfrac1{\sqrt2}\begin{pmatrix}1&1\\1&-1\end{pmatrix}$ of $\hat U$, $\tilde U=\mathop{\mathrm{diag}}(1,-1)$ is diagonal while $\tilde C=\begin{pmatrix}0&1\\1&0\end{pmatrix}$ is not, and $[\hat U,C]\ne0$. So claims 4 and 5 both fail without distinctness. **CONFIRMED: the hypothesis is necessary and not decorative.**
 
 **Can $\nu$ repeat in the node's own setting?** From the register and [fence-posts.md](../findings/fence-posts.md)'s post F69, $\nu$ is the spectrum of $V$, the difference of two traceless symmetric blocks, with $\hat U$, $C$ and $V$'s spectrum held fixed while the frame $P$ carrying $V$'s eigenvectors varies. **Nothing constrains that spectrum to be simple**, so a repeat is a codimension-one but perfectly reachable configuration and the hypothesis is a genuine restriction rather than free. A successor that wants the block's conclusion at the node owes either an argument that the maximiser has simple $\nu$ or a separate treatment of the degenerate locus.
 

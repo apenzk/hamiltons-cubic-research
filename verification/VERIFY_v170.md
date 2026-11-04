@@ -163,7 +163,7 @@ so **the trace identity [L27](../findings/nondegeneracy.md) uses as its self-che
 
 **And that is exactly why it looks right and is not proved.** The polynomial $\dim\mathcal W_m$ returns $-2$ at $m=2$, where the true $\dim\mathrm{Weyl}_2=0$. The **genuine** dimensions of the ten listed spaces therefore sum to $86$, not $84$:
 $$1+0+10+8+2+9+18+6+0+32=86 .$$
-So **the list is not a decomposition of $\mathcal W_6$ at $(2,4)$**, it over-counts by exactly $2$, which is the discrepancy [L27](../findings/nondegeneracy.md) states ("the ten dimensions over-counting by $2$ at $q=2$ … at every $n$") and which [Corollary L128.1](../findings/second-order.md) states in the same numbers ("*at $p=2$ it over-counts, $86$ against $84$ at $S^2\times S^4$*"). The trace check cannot detect the over-count, because the fictitious summand carries $L_e=0$ and so contributes nothing to $\operatorname{tr}L_e$ in either reading, which is why a passing check here is worth nothing.
+So **the list is not a decomposition of $\mathcal W_6$ at $(2,4)$**, it over-counts by exactly $2$, which is the discrepancy [L27](../findings/nondegeneracy.md) states ("the ten dimensions over-counting by $2$ at $q=2$ … at every $n$") and which [Corollary L128.1](../findings/second-order.md) states in the same numbers ("*at $p=2$ it over-counts, $86$ against $84$ at $S^2\times S^4$*"). The trace check cannot detect the over-count, because the fictitious summand carries $L_e=0$ and so contributes nothing to $\mathop{\mathrm{tr}}L_e$ in either reading, which is why a passing check here is worth nothing.
 
 **What the multiplicity claim would need.** At least one listed summand fails to sit inside $\mathcal W_6$ as listed, or two of them overlap; nothing on file says which. Until that is settled:
 
@@ -252,7 +252,7 @@ The named trap is a cited theorem assuming a *unital* algebra where $\mathcal W_
 
 > **$\mu$ CARRIES TWO MEANINGS THIRTY LINES APART IN [bispectral.md](../findings/bispectral.md), AND A THIRD IN [target.md](../findings/target.md).**
 
-- **$\mu$ is a fourth meaning, untabled.** [conventions.md](../findings/conventions.md) defines "$\mu=\operatorname{spec}(M)$ on $\Lambda^2$ at $\lVert M\rVert_F=1$", a *spectrum*, not a scalar. L11 and L26's $\mu$ is the scalar by which $L_e$ acts on $\Lambda^2(\mathbb R^p)\otimes\Lambda^2(\mathbb R^q)$. It appears nowhere in [conventions.md](../findings/conventions.md). **GAP, claim 21.**
+- **$\mu$ is a fourth meaning, untabled.** [conventions.md](../findings/conventions.md) defines "$\mu=\mathop{\mathrm{spec}}(M)$ on $\Lambda^2$ at $\lVert M\rVert_F=1$", a *spectrum*, not a scalar. L11 and L26's $\mu$ is the scalar by which $L_e$ acts on $\Lambda^2(\mathbb R^p)\otimes\Lambda^2(\mathbb R^q)$. It appears nowhere in [conventions.md](../findings/conventions.md). **GAP, claim 21.**
 - **$p$ collides with a prime, six lines above the block.** The box immediately preceding L11 writes "$k\,l=\mathrm{rank}_p(\text{orbit})\le\mathrm{rank}_{\mathbb Q}(\text{orbit})\le\mathrm{nullity}_{\mathbb Q}\le\mathrm{nullity}_p=k\,l$" and "modulo two primes", with $p$ a prime, while the L11 statement three paragraphs later uses $p$ for a sphere dimension. The file evidently switches to $(k,l)$ in that region to free the letter, which is a reasonable local fix; the collision is nonetheless live within one screen.
 - **$(p,q)$ and $(k,l)$ name the same objects inside one block without a word saying so.** The bordered paragraphs use $(p,q)$; the trailing prose uses $(k,l)$ for the identical splits. A reader arriving at "For $S^k\times S^l$ the common value is $k\,l$" has no statement that $k=p$.
 - **$n$.** Consistent throughout as $p+q$ in the bordered paragraphs; the trailing prose's "up to $n=14$" and "at the same $n=6$" agree. **Cleared.**
@@ -270,7 +270,7 @@ The rest of that paragraph checks out as written. "Every known exception sits at
 
 ### 11.2 WITHDRAWN, "$\mathrm{Weyl}_2=-2$ makes the trace identity fail at $(2,4)$"
 
-The natural suspicion is that the fictitious $-2$ corrupts [L27](../findings/nondegeneracy.md)'s $\operatorname{tr}L_e=0$ self-check. It does not: that summand carries $L_e=0$, so the trace is $0$ under both the formal and the genuine reading, as computed in §4. **Withdrawn at step 2.** The observation survives in inverted form and is stronger that way, *the check passes at a pair where the decomposition is false*, so passing it is no evidence of the decomposition.
+The natural suspicion is that the fictitious $-2$ corrupts [L27](../findings/nondegeneracy.md)'s $\mathop{\mathrm{tr}}L_e=0$ self-check. It does not: that summand carries $L_e=0$, so the trace is $0$ under both the formal and the genuine reading, as computed in §4. **Withdrawn at step 2.** The observation survives in inverted form and is stronger that way, *the check passes at a pair where the decomposition is false*, so passing it is no evidence of the decomposition.
 
 ### 11.3 WITHDRAWN, "$(2,2)$ falsifies the kernel identity"
 

@@ -14,8 +14,8 @@ Brief: [2026-09-25-L244-gate2-brief.md](2026-09-25-L244-gate2-brief.md). Log: [a
 
 ## 1. The operator identity: CONFIRMED
 
-- $P(W)=\operatorname{tr}W^3+\langle W,W^\#\rangle$ has gradient $3(W^2+W^\#)$ projected to $\mathcal W_n$, because the trilinear form of $\#$ is fully symmetric. The Lagrange condition on the unit sphere is $\pi_{\mathcal W}(Q(W))=\theta W$, and pairing with $W$ gives $\theta=P(W)$.
-- $Q(\mathcal W_n)\subseteq\mathcal W_n$ (the given behind L234 step (1)) makes $\pi_{\mathcal W}Q(W)=Q(W)$, so $W^2+W^\#=\theta W$ holds exactly in $\operatorname{End}(\Lambda^2)$.
+- $P(W)=\mathop{\mathrm{tr}}W^3+\langle W,W^\#\rangle$ has gradient $3(W^2+W^\#)$ projected to $\mathcal W_n$, because the trilinear form of $\#$ is fully symmetric. The Lagrange condition on the unit sphere is $\pi_{\mathcal W}(Q(W))=\theta W$, and pairing with $W$ gives $\theta=P(W)$.
+- $Q(\mathcal W_n)\subseteq\mathcal W_n$ (the given behind L234 step (1)) makes $\pi_{\mathcal W}Q(W)=Q(W)$, so $W^2+W^\#=\theta W$ holds exactly in $\mathop{\mathrm{End}}(\Lambda^2)$.
 - $W^2$ and $W^\#$ are both taken as symmetric operators on $\Lambda^2$, the space where $\mathcal W_n$ lives. The identity is an operator identity, and it is what (i) uses when it applies both sides to a vector $x$.
 
 ## 2. The per-vector rows: CONFIRMED
@@ -24,7 +24,7 @@ Brief: [2026-09-25-L244-gate2-brief.md](2026-09-25-L244-gate2-brief.md). Log: [a
 - $B_{ab}=P_a\#P_b=\tfrac12\sum_{\gamma\in E_a,\delta\in E_b}[\psi_\gamma,\psi_\delta][\psi_\gamma,\psi_\delta]^{\mathsf T}\succeq0$ for every ordered pair, including $a\ne b$, by $vv^{\mathsf T}\#ww^{\mathsf T}=\tfrac12[v,w][v,w]^{\mathsf T}$. So $b_{ab}(x)\ge0$ and $b_{ab}=b_{ba}$.
 - Each right side ($(n-2)I$, $-W$, $\theta W-W^2$) acts on $E_c$ as the scalar $n-2$, $-\lambda_c$ or $\lambda_c(\theta-\lambda_c)$. Pairing with any unit $x\in E_c$ therefore gives the three rows at EVERY unit $x\in E_c$, basis-free.
 - The sums run over ordered pairs $(a,b)$. The Lean row `hA` writes this as $b_{00}+b_{11}+b_{22}+2(b_{01}+b_{02}+b_{12})$, which is consistent.
-- Consistency check: row (A) also follows from the caps' identity below, since $\tfrac12\operatorname{tr}(-\mathrm{ad}_x^2)=n-2$.
+- Consistency check: row (A) also follows from the caps' identity below, since $\tfrac12\mathop{\mathrm{tr}}(-\mathrm{ad}_x^2)=n-2$.
 
 ## 3. The caps: CONFIRMED
 

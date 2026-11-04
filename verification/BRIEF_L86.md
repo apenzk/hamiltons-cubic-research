@@ -37,7 +37,7 @@ The dimension and Casimir columns are arithmetic on the highest weights: the Wey
 
 The table has $24$ blocks, $\sum m_\lambda d_\lambda=7770=\binom{37}3$ exactly, multiplicities summing to $41$ and unknowns to $65$, of which only $7770$ is an external check. The twelve multiplicity-$1$ dimensions sum to $4125$.
 
-**The trivial multiplicity is $1$ here**, which agrees with the Lovelock relation $\langle W^\#,W\rangle=2\operatorname{tr}(W^3)$ on $\mathcal W_5$ ([bispectral.md](bispectral.md)): the cubic invariants are then spanned by $\operatorname{tr}(W^3)$ once the two contractions span them. *That spanning, and $\operatorname{tr}(W^3)\not\equiv0$ on $\mathcal W_5$, are owed.*
+**The trivial multiplicity is $1$ here**, which agrees with the Lovelock relation $\langle W^\#,W\rangle=2\mathop{\mathrm{tr}}(W^3)$ on $\mathcal W_5$ ([bispectral.md](bispectral.md)): the cubic invariants are then spanned by $\mathop{\mathrm{tr}}(W^3)$ once the two contractions span them. *That spanning, and $\mathop{\mathrm{tr}}(W^3)\not\equiv0$ on $\mathcal W_5$, are owed.*
 
 ## Passage C, the canonical statement ([results.md](../results.md) line 290, landscape, and line 962, detail)
 
@@ -47,7 +47,7 @@ $\dim V_\lambda^H=1$ exactly when $\lambda_2$ is even. **The lemma proves only $
 
 ## Definitions and sources
 
-- $\mathcal W_5$ is the space of algebraic Weyl tensors on $\mathbb R^5$. $W_0$ is the padded Weyl tensor of $\mathbb{CP}^2$ in $\mathcal W_5$, $H=\mathrm{Stab}_{O(5)}(W_0)$, and $V_\lambda^H$ the $H$-fixed vectors of the $O(5)$-module with highest weight $\lambda=(\lambda_1,\lambda_2)$ in the basis $\lambda_1e_1+\lambda_2e_2$. $F_5=\tfrac32\lVert W\rVert^6-9\operatorname{tr}(W^3)^2$. $\sigma_\lambda$ denotes a covariant into the block $\lambda$.
+- $\mathcal W_5$ is the space of algebraic Weyl tensors on $\mathbb R^5$. $W_0$ is the padded Weyl tensor of $\mathbb{CP}^2$ in $\mathcal W_5$, $H=\mathrm{Stab}_{O(5)}(W_0)$, and $V_\lambda^H$ the $H$-fixed vectors of the $O(5)$-module with highest weight $\lambda=(\lambda_1,\lambda_2)$ in the basis $\lambda_1e_1+\lambda_2e_2$. $F_5=\tfrac32\lVert W\rVert^6-9\mathop{\mathrm{tr}}(W^3)^2$. $\sigma_\lambda$ denotes a covariant into the block $\lambda$.
 - Branching from $\mathfrak{so}(5)$ to $\mathfrak{so}(4)$ and Frobenius reciprocity are classical and unfiled.
 - **This loop does no numerical work**; a statement supported only by a script, a run or a measurement is HYPOTHESIS-DEBT.
 

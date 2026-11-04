@@ -23,9 +23,9 @@
 
 - $W$ is an algebraic curvature tensor: $W_{ijkl}=-W_{jikl}=-W_{ijlk}=W_{klij}$, first Bianchi $W_{ijkl}+W_{iklj}+W_{iljk}=0$, and Weyl means Ricci-free, $\sum_bW_{abcb}=0$ for all $a,c$.
 - $\mathring W$ is L50's formula $(\mathring Wh)_{ij}=\sum_{k,l}W_{iklj}h_{kl}$. At source, Nienhaus–Petersen–Wink Example 1.1 uses exactly $\sum_{k,l}R_{iklj}h_{kl}$ with $R_{ijkl}=\delta_{ik}\delta_{jl}-\delta_{il}\delta_{jk}$ on the sphere, giving $\mathring R|_{S^2_0}=\mathrm{id}$. Li's introduction defines the bilinear form $\mathring R(\varphi,\psi)=R_{ijkl}\varphi_{il}\psi_{jk}$, which pairs an outer index pair with one argument and an inner pair with the other, the same placement as L50, and Li's identity $\mathring R(e_i\odot e_j,e_k\odot e_l)=2(R_{iklj}+R_{ilkj})$ (li-2209.02119.txt line 731) is what L50's formula gives (checked in section 3.3).
-- $e_a\odot e_b=e_a\otimes e_b+e_b\otimes e_a$, the unnormalised sum, as in Li ("$(e_p\odot e_q)(e_j,e_k)=\delta_{pj}\delta_{qk}+\delta_{qj}\delta_{pk}$") and NPW Proposition 3.10. So $\varphi_{ab}=(E_{ab}+E_{ba})/\sqrt2$ has norm $1$ in $\langle h,g\rangle=\operatorname{tr}(hg)$.
-- $S^2_0$ carries $\langle h,g\rangle=\operatorname{tr}(hg)$. $\Lambda^2$ carries the inner product for which $\{e_a\wedge e_b\}_{a<b}$ is orthonormal, and $M_{(ab),(cd)}=\pm W_{abcd}$ up to a fixed sign convention, whose diagonal L52 fixes as $M_{(ab),(ab)}=W_{abab}$.
-- $K$ is the $n\times n$ symmetric matrix $K_{ab}=W_{abab}$. Its diagonal is $K_{aa}=W_{aaaa}=0$, so $\operatorname{tr}K^2=\sum_{a\ne b}K_{ab}^2=t_F$.
+- $e_a\odot e_b=e_a\otimes e_b+e_b\otimes e_a$, the unnormalised sum, as in Li ("$(e_p\odot e_q)(e_j,e_k)=\delta_{pj}\delta_{qk}+\delta_{qj}\delta_{pk}$") and NPW Proposition 3.10. So $\varphi_{ab}=(E_{ab}+E_{ba})/\sqrt2$ has norm $1$ in $\langle h,g\rangle=\mathop{\mathrm{tr}}(hg)$.
+- $S^2_0$ carries $\langle h,g\rangle=\mathop{\mathrm{tr}}(hg)$. $\Lambda^2$ carries the inner product for which $\{e_a\wedge e_b\}_{a<b}$ is orthonormal, and $M_{(ab),(cd)}=\pm W_{abcd}$ up to a fixed sign convention, whose diagonal L52 fixes as $M_{(ab),(ab)}=W_{abab}$.
+- $K$ is the $n\times n$ symmetric matrix $K_{ab}=W_{abab}$. Its diagonal is $K_{aa}=W_{aaaa}=0$, so $\mathop{\mathrm{tr}}K^2=\sum_{a\ne b}K_{ab}^2=t_F$.
 - $x\succ y$ in $\mathbb R^m$: with both sorted decreasingly, $\sum_{i\le k}x_i\ge\sum_{i\le k}y_i$ for $k<m$ and equality at $k=m$.
 - Every index identity used below uses only the antisymmetries, pair symmetry and Bianchi, so each step holds under either overall sign convention for $W$ once L50's formula and $K_{ab}=W_{abab}$ are fixed.
 
@@ -40,7 +40,7 @@
 | H3 | $M$ the action on $\Lambda^2$, $\lVert M\rVert_F=1$, spectrum $\mu$ | (3), (4) |
 | H4 | $\mathring W$ on $S^2_0$ in Li's convention, spectrum $\omega$ | (1), (2), (4) |
 | H5 | orthonormal frame $F$, $K_{ab}=W_{abab}$, $t_F=\sum_{a\ne b}K_{ab}^2$ | throughout |
-| H6 | basis $\varphi_{ab}=(e_a\odot e_b)/\sqrt2$, $\psi_k=\operatorname{diag}(v_k)$ with $\{v_k\}$ an orthonormal eigenbasis of $K$ on $\mathbf1^\perp$ | (1), (2) |
+| H6 | basis $\varphi_{ab}=(e_a\odot e_b)/\sqrt2$, $\psi_k=\mathop{\mathrm{diag}}(v_k)$ with $\{v_k\}$ an orthonormal eigenbasis of $K$ on $\mathbf1^\perp$ | (1), (2) |
 | H7 | $d_\varphi$, $d_\psi$, $d$ the diagonals of $M$ in the pair basis and of $\mathring W$ in H6's basis | claims 1 to 4 |
 
 Terms the statement uses without definition: "coordinate-diagonal in $F$", which step (3) reads as every off-diagonal entry of $M$ in the pair basis of $F$ vanishing (section 5.2), and the inner products of section 0.
@@ -50,7 +50,7 @@ Terms the statement uses without definition: "coordinate-diagonal in $F$", which
 | Label | Given | Stated for | Applied to | Match |
 |---|---|---|---|---|
 | G1 | L52: $M_{(ij),(ij)}=W_{ijij}$, $\langle\mathring W\varphi_{ij},\varphi_{ij}\rangle=W_{ijij}$ | any orthonormal frame, $\varphi_{ij}=(e_i\odot e_j)/\sqrt2$ | frame $F$, same $\varphi$ | yes |
-| G2 | $\langle\mathring Wh,h\rangle=\sum_{i\ne j}W_{ijji}v_iv_j=-v^{\mathsf T}K^Fv$ | $h=\operatorname{diag}(v)$ in $h$'s own eigenframe $F$, $\sum v=0$, $\sum v^2=1$ | $\operatorname{diag}(v)$ in $F$, $v\perp\mathbf1$ | yes: $F$ is an eigenframe of every $\operatorname{diag}(v)$ in $F$, and both sides are homogeneous of degree 2, so the unit normalisation is a scaling |
+| G2 | $\langle\mathring Wh,h\rangle=\sum_{i\ne j}W_{ijji}v_iv_j=-v^{\mathsf T}K^Fv$ | $h=\mathop{\mathrm{diag}}(v)$ in $h$'s own eigenframe $F$, $\sum v=0$, $\sum v^2=1$ | $\mathop{\mathrm{diag}}(v)$ in $F$, $v\perp\mathbf1$ | yes: $F$ is an eigenframe of every $\mathop{\mathrm{diag}}(v)$ in $F$, and both sides are homogeneous of degree 2, so the unit normalisation is a scaling |
 | G3 | L50: $\sum\mu=\sum\omega=0$, $\sum\mu^2=1$, $\sum\omega^2=3$ | $W\in\mathrm{Weyl}_n$, $\lVert M\rVert_F=1$, $\mathring W$ by the formula of section 0 | the same $W$ | yes, and L50 carries no dimension restriction, so $n\ge4$ is inside its range |
 | G4 | Schur (1923): the diagonal of a real symmetric matrix in an orthonormal basis is majorized by its spectrum | real symmetric operators | $M$, and $\mathring W$ on $S^2_0$ | yes, given section 3.3's self-adjointness and section 4's orthonormality. The source is cited and not filed under references/ |
 | G5 | L94 | maximum over frames | a remark in (3), load-free | the proof uses nothing from it |
@@ -77,22 +77,22 @@ G1 gives $M_{(ab),(ab)}=W_{abab}=K_{ab}$ and $\langle\mathring W\varphi_{ab},\va
 - **Symmetric output, trace-free output.** $(\mathring Wh)_{ji}=\sum W_{jkli}h_{kl}$. Pair symmetry and then both antisymmetries give $W_{jkli}=W_{lijk}=-W_{iljk}=W_{ilkj}$. Relabelling $k\leftrightarrow l$ with $h_{kl}=h_{lk}$ gives $(\mathring Wh)_{ji}=\sum W_{iklj}h_{kl}=(\mathring Wh)_{ij}$. The trace is $\sum_{i,k,l}W_{ikli}h_{kl}=-\sum_{k,l}\big(\sum_iW_{ikil}\big)h_{kl}=0$ by H1. So $\mathring W$ maps $S^2_0$ to itself, and $\pi\circ\mathring W=\mathring W$ there, matching Li's reading of the bilinear form as the self-adjoint $\pi\circ\mathring R$.
 - **Self-adjoint.** $\langle\mathring Wh,g\rangle=\sum W_{iklj}h_{kl}g_{ij}$ and $\langle h,\mathring Wg\rangle=\sum W_{kijl}g_{ij}h_{kl}$. Antisymmetry in both pairs gives $W_{iklj}=(-1)^2W_{kijl}$, so the two agree.
 - **Li's identity.** For $h=e_k\odot e_l$, $g=e_i\odot e_j$: $\langle\mathring Wh,g\rangle=W_{iklj}+W_{ilkj}+W_{jkli}+W_{jlki}$. The first bullet gives $W_{jkli}=W_{ilkj}$ and likewise $W_{jlki}=W_{iklj}$, so the sum is $2(W_{iklj}+W_{ilkj})$, Li's line 731.
-- **The bilinear form on diagonal tensors.** $\langle\mathring W\operatorname{diag}(u),\operatorname{diag}(v)\rangle=\sum_{i,k}W_{ikki}u_kv_i=-\sum_{i\ne k}K_{ik}v_iu_k=-u^{\mathsf T}Kv$, using $W_{ikki}=-W_{ikik}$ and $K_{ii}=0$. This is the direct form of G2's first equality, and the proof's route through polarisation gives the same: $B(u,v)=\tfrac14\big(Q(u+v)-Q(u-v)\big)$ is valid because $B$ is symmetric (self-adjointness) and $-u^{\mathsf T}Kv$ is symmetric ($K$ symmetric).
-- **The whole compression.** $\psi_k=\operatorname{diag}(v_k)$ has $\lVert\psi_k\rVert^2=\sum v_k^2=1$ and $\langle\psi_j,\psi_k\rangle=v_j^{\mathsf T}v_k=\delta_{jk}$. Every entry of the $(n-1)\times(n-1)$ block is $\langle\mathring W\psi_j,\psi_k\rangle=-v_j^{\mathsf T}Kv_k=-\kappa_k\delta_{jk}$. "The $\psi$-block is diagonal" therefore holds for the whole compression to $\operatorname{span}\{\psi_k\}$, as the proof and claim 1 say. The $\varphi$-$\psi$ cross block and the $\varphi$ off-diagonal entries are claimed nowhere in claim 1, and the proof asserts nothing about them before (4).
+- **The bilinear form on diagonal tensors.** $\langle\mathring W\mathop{\mathrm{diag}}(u),\mathop{\mathrm{diag}}(v)\rangle=\sum_{i,k}W_{ikki}u_kv_i=-\sum_{i\ne k}K_{ik}v_iu_k=-u^{\mathsf T}Kv$, using $W_{ikki}=-W_{ikik}$ and $K_{ii}=0$. This is the direct form of G2's first equality, and the proof's route through polarisation gives the same: $B(u,v)=\tfrac14\big(Q(u+v)-Q(u-v)\big)$ is valid because $B$ is symmetric (self-adjointness) and $-u^{\mathsf T}Kv$ is symmetric ($K$ symmetric).
+- **The whole compression.** $\psi_k=\mathop{\mathrm{diag}}(v_k)$ has $\lVert\psi_k\rVert^2=\sum v_k^2=1$ and $\langle\psi_j,\psi_k\rangle=v_j^{\mathsf T}v_k=\delta_{jk}$. Every entry of the $(n-1)\times(n-1)$ block is $\langle\mathring W\psi_j,\psi_k\rangle=-v_j^{\mathsf T}Kv_k=-\kappa_k\delta_{jk}$. "The $\psi$-block is diagonal" therefore holds for the whole compression to $\mathop{\mathrm{span}}\{\psi_k\}$, as the proof and claim 1 say. The $\varphi$-$\psi$ cross block and the $\varphi$ off-diagonal entries are claimed nowhere in claim 1, and the proof asserts nothing about them before (4).
 
 ### 3.4 The sums
 
-$\sum d_\psi^2=\sum_k\kappa_k^2$. The spectrum of $K$ on $\mathbb R^n$ is $\{\kappa_k\}\cup\{0\}$, the $0$ from (0), so $\sum_k\kappa_k^2=\operatorname{tr}K^2=t_F$. Then $\sum d^2=t_F/2+t_F=\tfrac32t_F$. Claim 1 CONFIRMED, steps (0) and (1) CONFIRMED.
+$\sum d_\psi^2=\sum_k\kappa_k^2$. The spectrum of $K$ on $\mathbb R^n$ is $\{\kappa_k\}\cup\{0\}$, the $0$ from (0), so $\sum_k\kappa_k^2=\mathop{\mathrm{tr}}K^2=t_F$. Then $\sum d^2=t_F/2+t_F=\tfrac32t_F$. Claim 1 CONFIRMED, steps (0) and (1) CONFIRMED.
 
 ### 3.5 Withdrawn candidates
 
-- **C1a, G2 is stated for $h$'s own eigenframe with $\sum v^2=1$ and the proof applies it in an arbitrary frame to arbitrary $v\perp\mathbf1$.** (1) Located: "Every traceless symmetric $h$ is diagonal in **its own** eigenframe $F$, so $h=\mathrm{diag}(v)$ with $\sum v=0$, $\sum v^2=1$". (2) Failure sought: a frame $F$ and $v\perp\mathbf1$ where $\langle\mathring W\operatorname{diag}(v),\operatorname{diag}(v)\rangle\ne-v^{\mathsf T}Kv$. Section 3.3 derives the identity for every frame and every $v$ from L50's formula, so no such pair exists. (3) Charitable reading: $F$ is an eigenframe of every tensor diagonal in $F$, and both sides scale by $c^2$ under $v\mapsto cv$, so G2 is stated for this object. Withdrawn at (2).
+- **C1a, G2 is stated for $h$'s own eigenframe with $\sum v^2=1$ and the proof applies it in an arbitrary frame to arbitrary $v\perp\mathbf1$.** (1) Located: "Every traceless symmetric $h$ is diagonal in **its own** eigenframe $F$, so $h=\mathrm{diag}(v)$ with $\sum v=0$, $\sum v^2=1$". (2) Failure sought: a frame $F$ and $v\perp\mathbf1$ where $\langle\mathring W\mathop{\mathrm{diag}}(v),\mathop{\mathrm{diag}}(v)\rangle\ne-v^{\mathsf T}Kv$. Section 3.3 derives the identity for every frame and every $v$ from L50's formula, so no such pair exists. (3) Charitable reading: $F$ is an eigenframe of every tensor diagonal in $F$, and both sides scale by $c^2$ under $v\mapsto cv$, so G2 is stated for this object. Withdrawn at (2).
 
 ## 4. Claim 2, step (2)
 
 - $\{\varphi_{ab}\}_{a<b}\cup\{\psi_k\}_{k<n}$ is orthonormal: the $\varphi$ have disjoint off-diagonal supports, $\langle\varphi_{ab},\psi_k\rangle=0$ since $\varphi_{ab}$ has zero diagonal and $\psi_k$ zero off-diagonal, and the $\psi$ are orthonormal by section 3.3. Every element is trace-free ($\sum v_k=0$). The count is $\binom n2+n-1=\tfrac{n(n+1)}2-1=\dim S^2_0$, so it is a basis.
 - $\{e_a\wedge e_b\}_{a<b}$ is orthonormal in $\Lambda^2$ by section 0, and $M$ is symmetric by pair symmetry.
-- G4 applied to $M$ gives $\mu\succ d_\varphi$ and applied to $\mathring W$ on $S^2_0$ (self-adjoint by section 3.3) gives $\omega\succ d$. The equal totals are built into Schur's theorem ($\operatorname{tr}$ is basis-free) and agree with G3's $\sum\mu=\sum\omega=0$: $\sum d_\varphi=\tfrac12\sum_{a\ne b}K_{ab}=0$ by (0), and $\sum d_\psi=-\sum\kappa_k=-\operatorname{tr}K=0$.
+- G4 applied to $M$ gives $\mu\succ d_\varphi$ and applied to $\mathring W$ on $S^2_0$ (self-adjoint by section 3.3) gives $\omega\succ d$. The equal totals are built into Schur's theorem ($\mathop{\mathrm{tr}}$ is basis-free) and agree with G3's $\sum\mu=\sum\omega=0$: $\sum d_\varphi=\tfrac12\sum_{a\ne b}K_{ab}=0$ by (0), and $\sum d_\psi=-\sum\kappa_k=-\mathop{\mathrm{tr}}K=0$.
 
 Claim 2 and step (2) CONFIRMED. Schur's 1923 paper is cited and not filed under references/, so G4 was read as the classical theorem as quoted in the proof.
 
@@ -127,9 +127,9 @@ At $t_F=2$: claim 1 gives $\sum d_\varphi^2=1$, and $\sum\mu^2=\lVert M\rVert_F^
 
 By 5.2, $W_{iklj}\ne0$ requires $\{i,k\}=\{l,j\}$ with $i\ne k$. In $(\mathring Wh)_{ij}=\sum_{k,l}W_{iklj}h_{kl}$ this allows $(l,k)=(i,j)$ or ($i=j$ and $k=l$).
 - $i\ne j$: only $(k,l)=(j,i)$, so $(\mathring Wh)_{ij}=W_{ijij}h_{ji}=K_{ij}h_{ij}$.
-- $i=j$: the first option forces $k=i$, where $W_{iiii}=0$, so $(\mathring Wh)_{ii}=\sum_kW_{ikki}h_{kk}=-(K\operatorname{diag}(h))_i$.
+- $i=j$: the first option forces $k=i$, where $W_{iiii}=0$, so $(\mathring Wh)_{ii}=\sum_kW_{ikki}h_{kk}=-(K\mathop{\mathrm{diag}}(h))_i$.
 
-Hence $\mathring W\varphi_{ab}=K_{ab}\varphi_{ab}$, $\mathring W\operatorname{diag}(v)=\operatorname{diag}(-Kv)$, and $\mathring W\psi_k=-\kappa_k\psi_k$. $\mathring W$ is diagonal in H6's basis with diagonal $d$, and its spectrum is $d$ as a multiset. $M$ is diagonal in the pair basis by 5.1, so $\mu=d_\varphi$. The route yields $\omega=d$ as multisets, and more, the eigenvectors. CONFIRMED. Claim 4 CONFIRMED.
+Hence $\mathring W\varphi_{ab}=K_{ab}\varphi_{ab}$, $\mathring W\mathop{\mathrm{diag}}(v)=\mathop{\mathrm{diag}}(-Kv)$, and $\mathring W\psi_k=-\kappa_k\psi_k$. $\mathring W$ is diagonal in H6's basis with diagonal $d$, and its spectrum is $d$ as a multiset. $M$ is diagonal in the pair basis by 5.1, so $\mu=d_\varphi$. The route yields $\omega=d$ as multisets, and more, the eigenvectors. CONFIRMED. Claim 4 CONFIRMED.
 
 ### 6.3 Withdrawn candidates
 
@@ -166,7 +166,7 @@ Hence $\mathring W\varphi_{ab}=K_{ab}\varphi_{ab}$, $\mathring W\operatorname{di
 
 - **$n=4$.** $N=6$, $\dim S^2_0=9$. Nothing in (0) to (4) uses $n>4$, and section 7 exhibits the equality case at $n=4$. No finding.
 - **Odd $n$.** No step uses parity. The equality case of claim 3 is nonvacuous at $n=5$: extend section 7's tensor by $K_{5b}=0$, which keeps zero row sums, Bianchi and $\lVert M\rVert_F=1$. No finding.
-- **Repeated eigenvalues of $K$ on $\mathbf1^\perp$.** The eigenbasis is non-unique, and every choice gives the same multiset $d_\psi=-\{\kappa_k\}$ with multiplicity and the same diagonal block $\operatorname{diag}(-\kappa_k)$. A zero eigenvalue on $\mathbf1^\perp$ leaves section 3.4 intact, the excluded eigenvalue being the $0$ on $\mathbf1$. No finding.
+- **Repeated eigenvalues of $K$ on $\mathbf1^\perp$.** The eigenbasis is non-unique, and every choice gives the same multiset $d_\psi=-\{\kappa_k\}$ with multiplicity and the same diagonal block $\mathop{\mathrm{diag}}(-\kappa_k)$. A zero eigenvalue on $\mathbf1^\perp$ leaves section 3.4 intact, the excluded eigenvalue being the $0$ on $\mathbf1$. No finding.
 - **$t_F=0$.** $K=0$, every orthonormal basis of $\mathbf1^\perp$ is an eigenbasis, $d=0$. Claim 2 reads $\mu\succ0$, true since $\sum\mu=0$ makes every decreasing partial sum nonnegative. Claim 3 is strict, and claim 4 is vacuous. No finding.
 - **$n\le3$.** Excluded by H2, and $\mathrm{Weyl}_3=0$ makes $\lVert M\rVert_F=1$ unsatisfiable there, so H2 costs nothing.
 

@@ -18,7 +18,7 @@ $$4\lVert\nu_b\circ\nu_c\rVert^2=N\,g,\qquad g=\theta^2+3u^2-2\sqrt3\,\theta\,u_
 
 so with $h_a:=\lVert\nu_b\circ\nu_c\rVert\big/\tfrac12\sqrt{N_bN_c}$ the equality is $h_a=\sqrt{g/N}$. **The file's own band came from replacing the left side by its bound $N_bN_c$, which is $h_a\le1$.** *That replacement is where M4's freedom comes from, and it is a relaxation of an equation, not the equation.*
 
-**A lemma, derived here, that makes the left side a constraint on $\nu_b$ alone.** In the bilinear formula's coordinates the map $\nu_c\mapsto2\nu_b\circ\nu_c$ is $M$ with $M=\operatorname{diag}(a_1)\oplus\begin{pmatrix}b_1&c_1\\c_1&b_1\end{pmatrix}$, so $M^{\mathsf T}M$ has eigenvector $(1,0,0)$ at $a_1^2$, $(0,1,1)$ at $(b_1+c_1)^2=a_1^2$ by Bianchi, and $(0,1,-1)$ at $(b_1-c_1)^2$. The Bianchi plane $\mathbf1^\perp$ is spanned by $(2,-1,-1)=2(1,0,0)-(0,1,1)$ and $(0,1,-1)$, so it is invariant and
+**A lemma, derived here, that makes the left side a constraint on $\nu_b$ alone.** In the bilinear formula's coordinates the map $\nu_c\mapsto2\nu_b\circ\nu_c$ is $M$ with $M=\mathop{\mathrm{diag}}(a_1)\oplus\begin{pmatrix}b_1&c_1\\c_1&b_1\end{pmatrix}$, so $M^{\mathsf T}M$ has eigenvector $(1,0,0)$ at $a_1^2$, $(0,1,1)$ at $(b_1+c_1)^2=a_1^2$ by Bianchi, and $(0,1,-1)$ at $(b_1-c_1)^2$. The Bianchi plane $\mathbf1^\perp$ is spanned by $(2,-1,-1)=2(1,0,0)-(0,1,1)$ and $(0,1,-1)$, so it is invariant and
 
 $$\max_{\nu_c}h=\max\Big(\lvert\sin\eta_b\rvert,\ \tfrac1{\sqrt3}\lvert\cos\eta_b\rvert\Big).$$
 

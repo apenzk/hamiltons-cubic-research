@@ -23,7 +23,7 @@ Criticality off the diagonal is $M_{ij}^2+(M^2)_{ij}=\theta M_{ij}$; on the diag
 
 $$\big(M^2-\theta M\big)_{ij}=-M_{ij}^2\ (i\ne j),\qquad \big(M^2-\theta M\big)_{ii}=s_i=\sum_lM_{il}^2,$$
 
-which is exactly the graph Laplacian of the weights $M_{ij}^2\ge0$. Hence $M^2-\theta M\succeq0$, so every eigenvalue satisfies $\lambda(\lambda-\theta)\ge0$: **$\operatorname{spec}(M)\cap(0,\theta)=\varnothing$**. *Re-derived rather than taken from [diagonal-half.md](../findings/diagonal-half.md); it holds.*
+which is exactly the graph Laplacian of the weights $M_{ij}^2\ge0$. Hence $M^2-\theta M\succeq0$, so every eigenvalue satisfies $\lambda(\lambda-\theta)\ge0$: **$\mathop{\mathrm{spec}}(M)\cap(0,\theta)=\varnothing$**. *Re-derived rather than taken from [diagonal-half.md](../findings/diagonal-half.md); it holds.*
 
 Two further identities I use throughout, both one line from criticality at the pair's own entries. At $(j,k)$: $(M^2)_{jk}=\sum_{l\in I}u_lv_l=u\cdot v$, so
 
@@ -41,7 +41,7 @@ $$\widetilde N\,o=(\theta+M_{jk})\,o=T\,o. \tag{P2}$$
 
 **The counting is right.** Let $p=\#\{\lambda_i\ge\theta\}$. Each such eigenvalue contributes $\ge\theta^2$ to $\sum\lambda_i^2=\lVert M\rVert_F^2=2$, and the rest contribute $\ge0$, so $p\theta^2\le2$.
 
-**The brief's first question, does the gap exclude eigenvalues *above* $\theta$ from being numerous?** It does not, and it does not need to: the **Frobenius count** is what bounds $p$, and the gap is what converts "$p=1$" into "all others $\le0$". The two do different jobs and the section uses each for its own. With $\theta^2\ge\tfrac32$, $p\le\tfrac43$, so $p\le1$; and $\operatorname{tr}M=0$ with $M\ne0$ forces a positive eigenvalue, which the gap pushes to $\ge\theta$, so $p\ge1$. **Hence $p=1$ exactly.**
+**The brief's first question, does the gap exclude eigenvalues *above* $\theta$ from being numerous?** It does not, and it does not need to: the **Frobenius count** is what bounds $p$, and the gap is what converts "$p=1$" into "all others $\le0$". The two do different jobs and the section uses each for its own. With $\theta^2\ge\tfrac32$, $p\le\tfrac43$, so $p\le1$; and $\mathop{\mathrm{tr}}M=0$ with $M\ne0$ forces a positive eigenvalue, which the gap pushes to $\ge\theta$, so $p\ge1$. **Hence $p=1$ exactly.**
 
 **The brief's second question, does "all others $\le0$" follow, or only "$\le0$ or $\ge\theta$"?** It **follows**. The gap gives the dichotomy for each eigenvalue, and $p=1$ says exactly one takes the second branch. **No gap remains.**
 
@@ -103,7 +103,7 @@ since $\Pi K\Pi\succeq0$ as a compression of a PSD matrix. **Correct.**
 
 **The point, re-derived.** $M$ has within-factor entry $\alpha$ and cross entry $\gamma=-g$. $M\mathbf1=0$ gives $\alpha=mg/(m-1)$; criticality on a cross pair gives $(M^2)_{ij}=-2mg^2$ and hence $\theta=(2m-1)g$; criticality within a factor is then an identity. $\lVert M\rVert_F^2=2$ reads $2m^2g^2(2m-1)/(m-1)=2$, so at $m=6$, $g^2=5/(36\cdot11)=\mathbf{5/396}$. ✓
 
-$\operatorname{spec}(M)=\{2mg,\ 0,\ (-\alpha)^{(2m-2)}\}$, so $\lambda_1=12g=1.348400$, $\theta=11g=1.236033$, and the gap and $p=1$ both hold. ✓
+$\mathop{\mathrm{spec}}(M)=\{2mg,\ 0,\ (-\alpha)^{(2m-2)}\}$, so $\lambda_1=12g=1.348400$, $\theta=11g=1.236033$, and the gap and $p=1$ both hold. ✓
 
 **Every quantity, recomputed:**
 
@@ -115,7 +115,7 @@ $\operatorname{spec}(M)=\{2mg,\ 0,\ (-\alpha)^{(2m-2)}\}$, so $\lambda_1=12g=1.3
 | $\lVert D\hat w\rVert^2$ | $\tfrac1{10}[4(2.4)^2+6(2)^2]g^2=4.704g^2$, $k=2.168871g$ | $2.1689g$ | ✓ |
 | $a$, $b$, $T$ | $9.76g$, $2.4g$, $12.2g$ | same | ✓ |
 | bound | $6.08g+\sqrt{13.5424+4.704}\,g=10.351581g$ | $10.35g$ | ✓ |
-| $\operatorname{spec}\widetilde N$ | $\{10g,\ (1.2g)^{(3)},\ 0,\ (-3.2g)^{(5)}\}$, so $\lambda_{\max}=10g$ | $10g$ | ✓ |
+| $\mathop{\mathrm{spec}}\widetilde N$ | $\{10g,\ (1.2g)^{(3)},\ 0,\ (-3.2g)^{(5)}\}$, so $\lambda_{\max}=10g$ | $10g$ | ✓ |
 | $(T-a)(T-b)$ vs $k^2$ | $2.44\cdot9.8=23.912g^2$ vs $4.704g^2$ | $23.91g^2$ vs $4.70g^2$ | ✓ |
 
 *The optimal $c$ is $0.9647$, which the section rounds to $0.97$; nothing turns on it.* **All four closed forms in $m$ check out**: $\lambda_1\lVert\Pi w\rVert^2=2(m-1)g$, $q=-\alpha/(m-1)$, $\mu^+=2\alpha$, $\lVert D\hat w\rVert^2=2[(m-2)\alpha^2+mg^2]/(m-1)$. **This is the cleanest arithmetic the record has produced on this item.**
@@ -130,7 +130,7 @@ $\operatorname{spec}(M)=\{2mg,\ 0,\ (-\alpha)^{(2m-2)}\}$, so $\lambda_1=12g=1.3
 
 **Is $\lambda_1$ simple at a general pure critical point?** **In the band, yes, and it is claim 1 that says so** (strengthening (b) above). Outside the band nothing here establishes it, and the section's phrasing "when $\lambda_1$ is simple" should become "in the band $\lambda_1$ is simple, hence".
 
-**The two relations.** From $Mw=\lambda_1w$ at row $j$: $u\cdot\Pi w+M_{jk}w_0=\lambda_1w_0$, i.e. $u\cdot\Pi w=(\lambda_1-M_{jk})w_0$. ✓ At rows $i\in I$: $(N\Pi w)_i+u_iw_0+v_iw_0=\lambda_1w_i$ with $u=v$, i.e. $N\Pi w=\lambda_1\Pi w-2w_0u$. ✓ **Both confirmed, and $D=2\operatorname{diag}(u)$ with them.**
+**The two relations.** From $Mw=\lambda_1w$ at row $j$: $u\cdot\Pi w+M_{jk}w_0=\lambda_1w_0$, i.e. $u\cdot\Pi w=(\lambda_1-M_{jk})w_0$. ✓ At rows $i\in I$: $(N\Pi w)_i+u_iw_0+v_iw_0=\lambda_1w_i$ with $u=v$, i.e. $N\Pi w=\lambda_1\Pi w-2w_0u$. ✓ **Both confirmed, and $D=2\mathop{\mathrm{diag}}(u)$ with them.**
 
 ---
 
@@ -153,7 +153,7 @@ $$a-T=\frac{g}{m-1}>0\qquad\text{for every }m .$$
 
 ### Why it fails, exactly
 
-**(P2) is the mechanism.** Whenever $o\ne0$, $\widetilde No=To$, so $T\in\operatorname{spec}(\widetilde N)$ and the clause holds **with zero slack**. Any bound $B\ge\lambda_{\max}(\widetilde N)=T$ can satisfy $B\le T$ only as an **equality**, so every inequality in its derivation must be tight at the maximiser. At the balanced cross pair $\hat w\parallel o$ (the maximiser *is* $\hat w$) and
+**(P2) is the mechanism.** Whenever $o\ne0$, $\widetilde No=To$, so $T\in\mathop{\mathrm{spec}}(\widetilde N)$ and the clause holds **with zero slack**. Any bound $B\ge\lambda_{\max}(\widetilde N)=T$ can satisfy $B\le T$ only as an **equality**, so every inequality in its derivation must be tight at the maximiser. At the balanced cross pair $\hat w\parallel o$ (the maximiser *is* $\hat w$) and
 
 $$a=\hat w^\top\widetilde N\hat w+\hat w^\top K\hat w=T+\frac{g}{m-1},$$
 

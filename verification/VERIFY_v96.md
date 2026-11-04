@@ -25,11 +25,11 @@
 
 ## 0. Conventions, fixed once
 
-- $n$ is the dimension of the manifold; $\mathcal W_n=\mathrm{Weyl}_n$; $P(W)=\operatorname{tr}(W^3)+\langle W^\#,W\rangle$ and $\theta(W)=P(W)/\lVert W\rVert^3$, so $\theta$ is scale-free and $P=\theta$ on unit vectors.
+- $n$ is the dimension of the manifold; $\mathcal W_n=\mathrm{Weyl}_n$; $P(W)=\mathop{\mathrm{tr}}(W^3)+\langle W^\#,W\rangle$ and $\theta(W)=P(W)/\lVert W\rVert^3$, so $\theta$ is scale-free and $P=\theta$ on unit vectors.
 - **$\theta_0(n)$ is the closed form $\theta_0(n)^2=2(n-1)(n-2)/n^2$ and nothing more.** This is [conventions.md](../findings/conventions.md):18 verbatim, including its warning that the gloss "the value at the balanced sphere product" is what regrew [L0](../findings/problem.md)'s refuted constant. $\theta_0$ is a rational function of a real variable; the object it names exists only at even $n$.
 - **$\Theta_n$ is the diagonal maximum**, equal to $\theta_0(n)$ at even $n$ and to $\sqrt{2(n-1)(n-3)/((n+1)(n-2))}$ at odd $n$, [conventions.md](../findings/conventions.md):19. **These are the two constants the round's carried-in trap is about**, and both appear in the block; only the first is defined there.
 - $M(n)$ is the global maximum, $\Theta_n\le M(n)$, [conventions.md](../findings/conventions.md):21. L2 is about neither $M$ nor a global statement.
-- $W_{\mathbb{CP}^2}=\operatorname{diag}(0,0,0,-1,-1,2)/\sqrt6$ on $\Lambda^2\mathbb R^4$, zero-padded; $\Lambda^+\cong\mathfrak{su}(2)_+\subset\mathfrak{so}(4)\subset\mathfrak{so}(n)$.
+- $W_{\mathbb{CP}^2}=\mathop{\mathrm{diag}}(0,0,0,-1,-1,2)/\sqrt6$ on $\Lambda^2\mathbb R^4$, zero-padded; $\Lambda^+\cong\mathfrak{su}(2)_+\subset\mathfrak{so}(4)\subset\mathfrak{so}(n)$.
 - Nienhaus's convention, from [notes.md](../references/nienhaus-2023-second-best-einstein/notes.md): the split $\mathbb R^k\oplus\mathbb R^l$ gives $S^k\times S^l$ with $k+l=n$, so his $(k,l)$ are the block's $(p,q)$ with no off-by-one.
 
 ---
@@ -95,7 +95,7 @@ The block's sentence is one clause: *"The competitor has $\theta^2=\frac32$ at e
 This clause argues the **extension** and asserts the **base**. Split cleanly:
 
 - **Extension, a sketch, with the load-bearing step present and correct.** §3 below completes it in four lines. The block names the one fact that is not routine (the subalgebra property) and leaves the routine parts (that $\lVert W\rVert$ and $W^2$ are padding-stable) implicit. I count this as a proof sketch a competent reader completes, not as a citation.
-- **Base value $\theta^2=\tfrac32$ at $n=4$, no argument in the block.** I checked the reports the record cites for it before recording this, as the brief requires: [r505](../reviews/REVIEW_r505.md) §1.2 derives it from the structure constants ($\operatorname{tr}(W^3)=1/\sqrt6$, $\langle W^\#,W\rangle=2/\sqrt6$, sum $3/\sqrt6=\sqrt{3/2}$), and [r506](../reviews/REVIEW_r506.md) §F2 derives it independently by maximising $9\det W^+$ on the unit sphere of trace-free $(a,b,c)$. [CP2.lean](../lean/HamiltonsCubic/Base/CP2.lean) proves it in the kernel-plus-`native_decide` form $P(W)^2\cdot2=3\lVert W\rVert^6$. **So it is established on the record three ways and stated in the block zero ways.**
+- **Base value $\theta^2=\tfrac32$ at $n=4$, no argument in the block.** I checked the reports the record cites for it before recording this, as the brief requires: [r505](../reviews/REVIEW_r505.md) §1.2 derives it from the structure constants ($\mathop{\mathrm{tr}}(W^3)=1/\sqrt6$, $\langle W^\#,W\rangle=2/\sqrt6$, sum $3/\sqrt6=\sqrt{3/2}$), and [r506](../reviews/REVIEW_r506.md) §F2 derives it independently by maximising $9\det W^+$ on the unit sphere of trace-free $(a,b,c)$. [CP2.lean](../lean/HamiltonsCubic/Base/CP2.lean) proves it in the kernel-plus-`native_decide` form $P(W)^2\cdot2=3\lVert W\rVert^6$. **So it is established on the record three ways and stated in the block zero ways.**
 
 ### 2.3 The asymmetry between the two forms, which is the answer the question was after
 
@@ -117,7 +117,7 @@ Write $c_{\alpha\gamma\delta}=\langle[v_\gamma,v_\delta],v_\alpha\rangle$ in an 
 1. $W$ is supported on $\Lambda^+\subset\Lambda^2\mathbb R^4\subset\Lambda^2\mathbb R^n$, so $W_{\gamma\varepsilon}W_{\delta\zeta}\ne0$ forces $\gamma,\delta,\varepsilon,\zeta\in\Lambda^+$.
 2. $\Lambda^+\cong\mathfrak{su}(2)_+$ is a **subalgebra**, so $[v_\gamma,v_\delta]\in\Lambda^+$ and $c_{\alpha\gamma\delta}\ne0$ forces $\alpha\in\Lambda^+$. Hence $W^\#$ is supported on $\Lambda^+\times\Lambda^+$ and its entries are sums over $\Lambda^+$ alone, **independent of $n$**.
 3. $W^2$ and $\lVert W\rVert^2$ are supported on $\Lambda^+$ and $n$-independent for the trivial reason that padding appends zero rows and columns.
-4. Therefore $P(W)=\operatorname{tr}(W^3)+\langle W^\#,W\rangle$ and $\lVert W\rVert$ are both fixed under padding, and $\theta=P/\lVert W\rVert^3$ is **exactly** $n$-independent. The same computation gives $Q(W)=\theta W$ at every $n$, since $Q$ vanishes off $\Lambda^+$.
+4. Therefore $P(W)=\mathop{\mathrm{tr}}(W^3)+\langle W^\#,W\rangle$ and $\lVert W\rVert$ are both fixed under padding, and $\theta=P/\lVert W\rVert^3$ is **exactly** $n$-independent. The same computation gives $Q(W)=\theta W$ at every $n$, since $Q$ vanishes off $\Lambda^+$.
 
 **This agrees with [r505](../reviews/REVIEW_r505.md) §1.3 and [r506](../reviews/REVIEW_r506.md) §F2**, reached independently of both. The block's one clause is a faithful compression of it.
 

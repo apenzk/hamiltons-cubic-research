@@ -7,7 +7,7 @@
 | # | Claim | Verdict |
 | --- | --- | --- |
 | L177 (1) | Coordinate-diagonal Weyl tensors supported inside $G$ are exactly $\ker N$, of dimension $\lvert E\rvert-\lvert V\rvert+b(G)$ | **SOUND**, two hypotheses used and unstated (char $\ne2$; looplessness) |
-| L177 (1a) | $\operatorname{rank}N=\lvert V\rvert-b(G)$ | **SOUND AND SOURCED**, Zaslavsky Thm IV.1 / Ex. IV.F.2, orig. van Nuffelen |
+| L177 (1a) | $\mathop{\mathrm{rank}}N=\lvert V\rvert-b(G)$ | **SOUND AND SOURCED**, Zaslavsky Thm IV.1 / Ex. IV.F.2, orig. van Nuffelen |
 | L177 (2) | $G$ carries a tensor of support exactly $G$ **iff** $\ker N$ has a full-support vector | **SOUND BUT VACUOUS**, it is a restatement of the definition, not a criterion |
 | L177 (2a) | The reading "$\ker N\ne0$ suffices" | **REFUTED IN CLOSED FORM**, $C_4$ with a pendant edge |
 | L177 (3) | At $G=K_n$, $n\ge3$, the locus has dimension $\binom n2-n$ | **SOUND** |
@@ -16,7 +16,7 @@
 | L177 (4c) | "The smallest non-bipartite graph with $\lvert E\rvert\ge\lvert V\rvert+1$ containing an odd cycle has five edges" | **TRUE, AND NOT ATTAINED AS A SUPPORT**, $K_4-e$ realises 5 edges but its kernel is not fully supported |
 | L178 step 1 | Trace-free on a three-space is never rank one; rank $\le3$ forces a summand to vanish | **SOUND**, all nine splits checked |
 | L178 step 2 | $\gamma^2=2$ | **CONFIRMED INDEPENDENTLY, TWICE**, value right, justifying sentence loose |
-| L178 step 2' | $W^\#=\gamma^2\operatorname{cof}W$ and $\langle W,W^\#\rangle=6e_3$ | **SOUND** |
+| L178 step 2' | $W^\#=\gamma^2\mathop{\mathrm{cof}}W$ and $\langle W,W^\#\rangle=6e_3$ | **SOUND** |
 | L178 step 3 | $\#$ commutes with the zero-embedding; the anchor is read at $n=4$ | **SOUND, AND THE $n$ IS THE RIGHT ONE** |
 | L178 step 4 | $e_1=0$, Newton, $\theta=9e_3$ | **SOUND**, first Bianchi identity stated and unused |
 | L178 step 5 | $\theta\le\sqrt{3/2}$ | **SOUND** |
@@ -29,11 +29,11 @@
 
 ## 0. Conventions, fixed once
 
-Everything below uses the brief's conventions verbatim: $\mathcal W_n$ with the Riemann symmetries, first Bianchi and total trace-freeness; $W$ self-adjoint on $\Lambda^2\mathbb R^n$ with $\{f_a\wedge f_b\}_{a<b}$ orthonormal; $\lVert W\rVert^2=\operatorname{tr}(W^2)$; $\langle A,B\rangle=\operatorname{tr}(AB)$; $P=\langle W,W^2+W^\#\rangle$, $\theta=P/\lVert W\rVert^3$; $(W^\#)_{ab}=\tfrac12\sum c_{acd}c_{bef}W_{ce}W_{df}$ with $c$ the $\mathfrak{so}(n)$ structure constants in that orthonormal basis; anchor $\mathrm{id}^\#=(n-2)\mathrm{id}$.
+Everything below uses the brief's conventions verbatim: $\mathcal W_n$ with the Riemann symmetries, first Bianchi and total trace-freeness; $W$ self-adjoint on $\Lambda^2\mathbb R^n$ with $\{f_a\wedge f_b\}_{a<b}$ orthonormal; $\lVert W\rVert^2=\mathop{\mathrm{tr}}(W^2)$; $\langle A,B\rangle=\mathop{\mathrm{tr}}(AB)$; $P=\langle W,W^2+W^\#\rangle$, $\theta=P/\lVert W\rVert^3$; $(W^\#)_{ab}=\tfrac12\sum c_{acd}c_{bef}W_{ce}W_{df}$ with $c$ the $\mathfrak{so}(n)$ structure constants in that orthonormal basis; anchor $\mathrm{id}^\#=(n-2)\mathrm{id}$.
 
 Two further conventions I fix here because the checks need them, and the brief leaves them implicit.
 
-- **The realisation of $\Lambda^2\cong\mathfrak{so}(n)$.** I take $L_{ab}=E_{ab}-E_{ba}$, so $(L_{ab})_{ij}=\delta_{ai}\delta_{bj}-\delta_{bi}\delta_{aj}$, with $f_a\wedge f_b\mapsto L_{ab}$. Then $\langle A,B\rangle=-\tfrac12\operatorname{tr}(AB)$ makes $\{L_{ab}\}_{a<b}$ orthonormal, matching the brief. The bracket is $[L_{ab},L_{cd}]=\delta_{bc}L_{ad}-\delta_{ac}L_{bd}-\delta_{bd}L_{ac}+\delta_{ad}L_{bc}$. §6.1 verifies that the anchor $\mathrm{id}^\#=(n-2)\mathrm{id}$ holds in exactly this realisation, so the calibration the brief relies on is internally consistent rather than assumed.
+- **The realisation of $\Lambda^2\cong\mathfrak{so}(n)$.** I take $L_{ab}=E_{ab}-E_{ba}$, so $(L_{ab})_{ij}=\delta_{ai}\delta_{bj}-\delta_{bi}\delta_{aj}$, with $f_a\wedge f_b\mapsto L_{ab}$. Then $\langle A,B\rangle=-\tfrac12\mathop{\mathrm{tr}}(AB)$ makes $\{L_{ab}\}_{a<b}$ orthonormal, matching the brief. The bracket is $[L_{ab},L_{cd}]=\delta_{bc}L_{ad}-\delta_{ac}L_{bd}-\delta_{bd}L_{ac}+\delta_{ad}L_{bc}$. §6.1 verifies that the anchor $\mathrm{id}^\#=(n-2)\mathrm{id}$ holds in exactly this realisation, so the calibration the brief relies on is internally consistent rather than assumed.
 - **Graphs.** Finite, simple (no loops, no multiple edges), forced, since an edge is an unordered pair $\{a,b\}$ with $a\ne b$ indexing a hollow symmetric $K$. Ground field $\mathbb R$.
 
 ## Hypothesis inventory (item 1)
@@ -43,7 +43,7 @@ Two further conventions I fix here because the checks need them, and the brief l
 | Hypothesis | Status |
 | --- | --- |
 | $G$ finite and **simple** | **used, unstated.** A multi-edge would give a "bipartite cycle" of length 2 and break the $\ge4$ in §4.2; a loop breaks the rank identity's source statement. Forced by the indexing, so harmless, but it is a hypothesis. |
-| Ground field of **characteristic $\ne2$** | **used, unstated.** The odd-walk step is literally $\epsilon_v=-\epsilon_v\Rightarrow\epsilon_v=0$. Over $\mathbb F_2$ the identity is $\operatorname{rank}N=\lvert V\rvert-c$ and biparticity is invisible; the source says so explicitly (§2). $\mathbb R$ is the field here, so the identity applies. |
+| Ground field of **characteristic $\ne2$** | **used, unstated.** The odd-walk step is literally $\epsilon_v=-\epsilon_v\Rightarrow\epsilon_v=0$. Over $\mathbb F_2$ the identity is $\mathop{\mathrm{rank}}N=\lvert V\rvert-c$ and biparticity is invisible; the source says so explicitly (§2). $\mathbb R$ is the field here, so the identity applies. |
 | An edgeless component counts as **bipartite** | **used, unstated.** Needed for the formula to be insensitive to isolated vertices; true under the standard definition and under the source's (a one-vertex component is vacuously balanced). |
 | Whether $V=[n]$ or only the vertices meeting an edge | **immaterial, and worth saying so.** An isolated vertex adds $1$ to $\lvert V\rvert$ and $1$ to $b$, so $\lvert E\rvert-\lvert V\rvert+b$ is unchanged. |
 | $n\ge3$ in claim (3) | **stated and genuinely used.** It is what makes $K_n$ non-bipartite so $b=0$. It is load-bearing for the *formula* as well: at $n=2$, $\binom22-2=-1$, whereas the true dimension is $1-2+1=0$. |
@@ -54,17 +54,17 @@ Two further conventions I fix here because the checks need them, and the brief l
 | --- | --- |
 | $W\ne0$ | **used**, $\theta$ is undefined at $W=0$. Note $0\in\mathcal W_n$, so this is not idle. |
 | Support in $\Lambda^2V$, $\dim V=4$ | **used, and load-bearing**, see §13. |
-| $\operatorname{rank}W\le3$ | **used** in step 1 only. |
+| $\mathop{\mathrm{rank}}W\le3$ | **used** in step 1 only. |
 | An **orientation** on $V$ | **used, unstated.** $\Lambda^\pm$ needs one. The conclusion is orientation-blind (reversing it swaps $W^\pm$, and both summands carry $\gamma^2=2$), so this costs nothing, but the step-1 sentence presumes a choice that the statement never makes. |
 | $W\vert_V\in\mathcal W_4$ | **used, unstated, and true.** For $a,c\in V$, $\sum_{b\in[n]}W_{abcb}=\sum_{b\in V}W_{abcb}$ because every other term has an index pair outside $V$; so the restriction is totally trace-free on $V$, and the symmetries and Bianchi restrict verbatim. Without this, step 1's four-dimensional splitting would not be available. |
-| Total trace-freeness | **used twice**, for $\operatorname{tr}W=0$ in step 4, and (see §5.1) for the vanishing of the mixed $\Lambda^+\to\Lambda^-$ block in step 1. |
-| **First Bianchi identity** | **stated and unused.** The proof never invokes it. In general one needs it to force $\operatorname{tr}W^+=\operatorname{tr}W^-$ separately; here one summand is already zero, so $\operatorname{tr}W^+=\operatorname{tr}W=0$ follows from trace-freeness alone. The argument as written would go through for any trace-free self-adjoint $\ast$-commuting operator on $\Lambda^2V$. |
+| Total trace-freeness | **used twice**, for $\mathop{\mathrm{tr}}W=0$ in step 4, and (see §5.1) for the vanishing of the mixed $\Lambda^+\to\Lambda^-$ block in step 1. |
+| **First Bianchi identity** | **stated and unused.** The proof never invokes it. In general one needs it to force $\mathop{\mathrm{tr}}W^+=\mathop{\mathrm{tr}}W^-$ separately; here one summand is already zero, so $\mathop{\mathrm{tr}}W^+=\mathop{\mathrm{tr}}W=0$ follows from trace-freeness alone. The argument as written would go through for any trace-free self-adjoint $\ast$-commuting operator on $\Lambda^2V$. |
 | $n\ge12$, the conjecture's range | **not a hypothesis of L178 at all**, and correctly so, see §12. |
 | $\ker W\ne0$ | **never assumed away**, see §11. |
 
 ## 1. L177 claim (1): the locus is $\ker N$, of dimension $\lvert E\rvert-\lvert V\rvert+b$
 
-Taking as given (the brief permits it) that the coordinate-diagonal locus is exactly the hollow symmetric $K$ with $\sum_bK_{ab}=0$, "supported inside $G$" means $K_{ab}=0$ for $\{a,b\}\notin E$, so $K$ is determined by its values $x_e:=K_e$ on $E$ and the constraint at vertex $v$ reads $\sum_{e\ni v}x_e=0$, i.e. $Nx=0$. The identification of the locus with $\ker N$ is therefore exact, and linear. Then rank–nullity: $\dim\ker N=\lvert E\rvert-\operatorname{rank}N=\lvert E\rvert-\lvert V\rvert+b$.
+Taking as given (the brief permits it) that the coordinate-diagonal locus is exactly the hollow symmetric $K$ with $\sum_bK_{ab}=0$, "supported inside $G$" means $K_{ab}=0$ for $\{a,b\}\notin E$, so $K$ is determined by its values $x_e:=K_e$ on $E$ and the constraint at vertex $v$ reads $\sum_{e\ni v}x_e=0$, i.e. $Nx=0$. The identification of the locus with $\ker N$ is therefore exact, and linear. Then rank–nullity: $\dim\ker N=\lvert E\rvert-\mathop{\mathrm{rank}}N=\lvert E\rvert-\lvert V\rvert+b$.
 
 **Verdict: SOUND.** The two unstated hypotheses in the inventory (characteristic, looplessness) hold in the record's setting.
 
@@ -100,7 +100,7 @@ Zaslavsky Theorem IV.1 (attributed to Jeurissen and to Zaslavsky): for a signed 
 
 **Counterexample, exhibited in closed form.** $G$ = a 4-cycle with one pendant edge: $V=\{1,2,3,4,5\}$, $E=\{12,23,34,41,45\}$. It is connected and bipartite (parts $\{1,3,5\}$, $\{2,4\}$), so $b=1$ and
 $$\dim\ker N=\lvert E\rvert-\lvert V\rvert+b=5-5+1=1\ne0 .$$
-The vertex-5 constraint is the single equation $x_{45}=0$. Hence **every** vector of $\ker N$ vanishes on the edge $45$, and $\ker N=\operatorname{span}\{(x_{12},x_{23},x_{34},x_{41},x_{45})=(1,-1,1,-1,0)\}$, which has support $\{12,23,34,41\}$, not $E$. So $\ker N\ne0$ while no coordinate-diagonal Weyl tensor has support exactly $G$.
+The vertex-5 constraint is the single equation $x_{45}=0$. Hence **every** vector of $\ker N$ vanishes on the edge $45$, and $\ker N=\mathop{\mathrm{span}}\{(x_{12},x_{23},x_{34},x_{41},x_{45})=(1,-1,1,-1,0)\}$, which has support $\{12,23,34,41\}$, not $E$. So $\ker N\ne0$ while no coordinate-diagonal Weyl tensor has support exactly $G$.
 
 The mechanism is general and worth naming positively: a full-support vector exists iff no coordinate functional $x\mapsto x_e$ vanishes identically on $\ker N$ (a finite union of proper subspaces of $\ker N$ cannot cover it). Any pendant edge forces its own coordinate to zero, so **no graph with a pendant edge is ever an exact support**, however large its kernel.
 
@@ -146,7 +146,7 @@ So no shape beats 5, and $5\ge4$, which is all the branch owes.
 
 ### 4.3 The five is real but never attained as a support
 
-$K_4-e$ meets the graph-theoretic description at 5 edges, but it is **not** an exact support. On $V=\{1,2,3,4\}$, $E=\{12,13,14,23,24\}$: the vertex-3 and vertex-4 rows give $x_{23}=-x_{13}$ and $x_{24}=-x_{14}$; vertex 2 then gives $x_{12}=x_{13}+x_{14}$; vertex 1 gives $2(x_{13}+x_{14})=0$, so $x_{13}=-x_{14}$ and $x_{12}=0$. Hence $\ker N=\operatorname{span}\{(0,1,-1,-1,1)\}$, supported on the 4-cycle $1$–$3$–$2$–$4$–$1$, and the edge $12$ is forced to zero. This is the §3.2 phenomenon again.
+$K_4-e$ meets the graph-theoretic description at 5 edges, but it is **not** an exact support. On $V=\{1,2,3,4\}$, $E=\{12,13,14,23,24\}$: the vertex-3 and vertex-4 rows give $x_{23}=-x_{13}$ and $x_{24}=-x_{14}$; vertex 2 then gives $x_{12}=x_{13}+x_{14}$; vertex 1 gives $2(x_{13}+x_{14})=0$, so $x_{13}=-x_{14}$ and $x_{12}=0$. Hence $\ker N=\mathop{\mathrm{span}}\{(0,1,-1,-1,1)\}$, supported on the 4-cycle $1$–$3$–$2$–$4$–$1$, and the edge $12$ is forced to zero. This is the §3.2 phenomenon again.
 
 Consequently no non-bipartite component is an exact support at 5 edges: a 5-edge non-bipartite component must be $K_4-e$ by the table above (a 4-edge non-bipartite component would need $\lvert V_i\rvert\le3$, hence $\le3$ edges). The smallest that is, is the **bowtie**, two triangles sharing a vertex, $\lvert V\rvert=5$, $\lvert E\rvert=6$, $\dim\ker N=6-5+0=1$, with kernel $(x_{12},x_{13},x_{23},x_{14},x_{15},x_{45})=(1,1,-1,-1,-1,1)$, fully supported.
 
@@ -158,17 +158,17 @@ This does not damage the $\lvert E\rvert\ge4$ conclusion. It does mean the "five
 
 ### 5.1 Why $W$ is block diagonal
 
-The brief asserts the splitting without argument. It is true, and the reason is worth writing down because it identifies which hypothesis pays for it. Under $SO(4)$, $\operatorname{Sym}^2(\Lambda^2\mathbb R^4)$ (dimension 21) decomposes as $\operatorname{Sym}^2\Lambda^+\oplus\operatorname{Sym}^2\Lambda^-\oplus(\Lambda^+\otimes\Lambda^-)$ with dimensions $6+6+9$; the mixed block is the 9-dimensional summand, isomorphic to $\operatorname{Sym}^2_0\mathbb R^4$. The Ricci contraction $R\mapsto(\sum_bR_{abcb})_0$ is a nonzero $SO(4)$-map onto that irreducible 9-dimensional target, so by Schur it annihilates $\operatorname{Sym}^2\Lambda^\pm$ and is injective on the mixed block. **Total trace-freeness therefore kills the mixed block exactly**, and $W=W^+\oplus W^-$. The first Bianchi identity is not needed for this, it is what would separately force $\operatorname{tr}W^+=\operatorname{tr}W^-$, and here $\operatorname{tr}W=0$ plus $W^-=0$ already gives what step 4 wants. Recording this as a **citation debt, not a defect**: the block should say why the splitting holds.
+The brief asserts the splitting without argument. It is true, and the reason is worth writing down because it identifies which hypothesis pays for it. Under $SO(4)$, $\mathop{\mathrm{Sym}}^2(\Lambda^2\mathbb R^4)$ (dimension 21) decomposes as $\mathop{\mathrm{Sym}}^2\Lambda^+\oplus\mathop{\mathrm{Sym}}^2\Lambda^-\oplus(\Lambda^+\otimes\Lambda^-)$ with dimensions $6+6+9$; the mixed block is the 9-dimensional summand, isomorphic to $\mathop{\mathrm{Sym}}^2_0\mathbb R^4$. The Ricci contraction $R\mapsto(\sum_bR_{abcb})_0$ is a nonzero $SO(4)$-map onto that irreducible 9-dimensional target, so by Schur it annihilates $\mathop{\mathrm{Sym}}^2\Lambda^\pm$ and is injective on the mixed block. **Total trace-freeness therefore kills the mixed block exactly**, and $W=W^+\oplus W^-$. The first Bianchi identity is not needed for this, it is what would separately force $\mathop{\mathrm{tr}}W^+=\mathop{\mathrm{tr}}W^-$, and here $\mathop{\mathrm{tr}}W=0$ plus $W^-=0$ already gives what step 4 wants. Recording this as a **citation debt, not a defect**: the block should say why the splitting holds.
 
 ### 5.2 "Trace-free on a three-space, hence never rank one"
 
-$W^\pm$ is self-adjoint on a 3-dimensional space with $\operatorname{tr}W^\pm=0$ (see §5.1 and §9). If exactly one eigenvalue were nonzero the trace would equal it and be nonzero. So $\operatorname{rank}\in\{0,2,3\}$. **Correct.**
+$W^\pm$ is self-adjoint on a 3-dimensional space with $\mathop{\mathrm{tr}}W^\pm=0$ (see §5.1 and §9). If exactly one eigenvalue were nonzero the trace would equal it and be nonzero. So $\mathop{\mathrm{rank}}\in\{0,2,3\}$. **Correct.**
 
 ### 5.3 Every split, checked
 
-$\operatorname{rank}W=\operatorname{rank}W^++\operatorname{rank}W^-$ because the blocks are orthogonal.
+$\mathop{\mathrm{rank}}W=\mathop{\mathrm{rank}}W^++\mathop{\mathrm{rank}}W^-$ because the blocks are orthogonal.
 
-| $(\operatorname{rank}W^+,\operatorname{rank}W^-)$ | total | $\le3$? |
+| $(\mathop{\mathrm{rank}}W^+,\mathop{\mathrm{rank}}W^-)$ | total | $\le3$? |
 | --- | --- | --- |
 | $(0,0)$ | 0 | yes, $W=0$, excluded by hypothesis |
 | $(2,0)$, $(0,2)$ | 2 | yes |
@@ -213,12 +213,12 @@ Its value is right; its sentence is loose. The brief computes $(\mathrm{id}^\#)_
 
 ## 7. L178 step 2, the adjugate (item 7)
 
-For a $3\times3$ matrix, $\operatorname{cof}(M)_{ab}=\tfrac12\epsilon_{acd}\epsilon_{bef}M_{ce}M_{df}$, the classical cofactor identity; the normalisation is checked at $M=I$, where the right-hand side is $\tfrac12\epsilon_{acd}\epsilon_{bcd}=\delta_{ab}=\operatorname{cof}(I)_{ab}$. Substituting $c=\gamma\epsilon$ into the index formula gives exactly $\gamma^2$ times that expression, so
-$$W^\#=\gamma^2\operatorname{cof}(W)=2\operatorname{cof}(W).$$
+For a $3\times3$ matrix, $\mathop{\mathrm{cof}}(M)_{ab}=\tfrac12\epsilon_{acd}\epsilon_{bef}M_{ce}M_{df}$, the classical cofactor identity; the normalisation is checked at $M=I$, where the right-hand side is $\tfrac12\epsilon_{acd}\epsilon_{bcd}=\delta_{ab}=\mathop{\mathrm{cof}}(I)_{ab}$. Substituting $c=\gamma\epsilon$ into the index formula gives exactly $\gamma^2$ times that expression, so
+$$W^\#=\gamma^2\mathop{\mathrm{cof}}(W)=2\mathop{\mathrm{cof}}(W).$$
 This is basis-free on $\Lambda^+$ (both sides are $SO(3)$-equivariant), so the brief's restriction to "the diagonalising basis" is a convenience, not a hypothesis.
 
-$W$ is symmetric, so $\operatorname{cof}(W)=\operatorname{adj}(W)$ and $W\operatorname{adj}(W)=(\det W)\,I_3$, giving
-$$\langle W,W^\#\rangle=\operatorname{tr}(W\cdot2\operatorname{adj}W)=2\cdot3\det W=6e_3 .$$
+$W$ is symmetric, so $\mathop{\mathrm{cof}}(W)=\mathop{\mathrm{adj}}(W)$ and $W\mathop{\mathrm{adj}}(W)=(\det W)\,I_3$, giving
+$$\langle W,W^\#\rangle=\mathop{\mathrm{tr}}(W\cdot2\mathop{\mathrm{adj}}W)=2\cdot3\det W=6e_3 .$$
 The factor 3 is the trace of $I_3$, i.e. it is the dimension of $\Lambda^+$, not of $\Lambda^2\mathbb R^n$, and that is right because $W^\#$ is supported on $\Lambda^+$ (§8).
 
 **Verdict: SOUND.**
@@ -235,10 +235,10 @@ The brief's own phrasing, *"$\theta$ is an invariant of the four-dimensional pie
 
 ## 9. L178 step 4 (item 9)
 
-- **$\lVert W\rVert^2=\operatorname{tr}(W^2)$ is the norm $\theta$ is defined against.** The brief's conventions fix it: $\lVert W\rVert^2=\operatorname{tr}(W^2)=\sum_\alpha\lambda_\alpha^2$ over the $\Lambda^2$ spectrum, and $\langle A,B\rangle=\operatorname{tr}(AB)$, so $P=\langle W,Q(W)\rangle$ and the norm use the same pairing. Internally consistent. **One convention risk to flag for the parent, since I cannot check it from a cold brief:** the tensor norm $\sum_{abcd}W_{abcd}^2$ equals $4\operatorname{tr}(W^2)$ under the operator convention $M_{(ab),(cd)}=W_{abcd}$ for $a<b$, $c<d$, which the brief's own coordinate-diagonal fact $W(f_a\wedge f_b)=K_{ab}f_a\wedge f_b$ pins down. If any other block of the record measures $\lVert W\rVert$ tensorially, $\theta$ there differs from $\theta$ here by $2^{-1}$ and the two must not be compared. Nothing in L178 depends on the answer.
-- **$p_1=e_1=0$.** $\operatorname{tr}(W\vert_{\Lambda^2})=\sum_{a<b}W_{abab}=\tfrac12\sum_{a,b}W_{abab}=0$ by total trace-freeness. With $W^-=0$ this is $\operatorname{tr}W^+=e_1=0$.
+- **$\lVert W\rVert^2=\mathop{\mathrm{tr}}(W^2)$ is the norm $\theta$ is defined against.** The brief's conventions fix it: $\lVert W\rVert^2=\mathop{\mathrm{tr}}(W^2)=\sum_\alpha\lambda_\alpha^2$ over the $\Lambda^2$ spectrum, and $\langle A,B\rangle=\mathop{\mathrm{tr}}(AB)$, so $P=\langle W,Q(W)\rangle$ and the norm use the same pairing. Internally consistent. **One convention risk to flag for the parent, since I cannot check it from a cold brief:** the tensor norm $\sum_{abcd}W_{abcd}^2$ equals $4\mathop{\mathrm{tr}}(W^2)$ under the operator convention $M_{(ab),(cd)}=W_{abcd}$ for $a<b$, $c<d$, which the brief's own coordinate-diagonal fact $W(f_a\wedge f_b)=K_{ab}f_a\wedge f_b$ pins down. If any other block of the record measures $\lVert W\rVert$ tensorially, $\theta$ there differs from $\theta$ here by $2^{-1}$ and the two must not be compared. Nothing in L178 depends on the answer.
+- **$p_1=e_1=0$.** $\mathop{\mathrm{tr}}(W\vert_{\Lambda^2})=\sum_{a<b}W_{abab}=\tfrac12\sum_{a,b}W_{abab}=0$ by total trace-freeness. With $W^-=0$ this is $\mathop{\mathrm{tr}}W^+=e_1=0$.
 - **Newton.** $p_1=e_1=0$; $p_2=e_1p_1-2e_2=-2e_2$; $p_3=e_1p_2-e_2p_1+3e_3=3e_3$. Both used correctly.
-- **$\theta=9e_3$.** $P=\langle W,W^2\rangle+\langle W,W^\#\rangle=\operatorname{tr}W^3+6e_3=p_3+6e_3=3e_3+6e_3=9e_3$, and with $\lVert W\rVert=1$, $\theta=P$. ✓
+- **$\theta=9e_3$.** $P=\langle W,W^2\rangle+\langle W,W^\#\rangle=\mathop{\mathrm{tr}}W^3+6e_3=p_3+6e_3=3e_3+6e_3=9e_3$, and with $\lVert W\rVert=1$, $\theta=P$. ✓
 
 **Verdict: SOUND.**
 
@@ -262,7 +262,7 @@ $P$ is homogeneous of degree 3 and $\lVert W\rVert^3$ of degree 3 in $\lVert W\r
 $$\theta(-W)=\frac{P(-W)}{\lVert -W\rVert^3}=\frac{-P(W)}{\lVert W\rVert^3}=-\theta(W).$$
 **$\theta$ is odd.** Hence $-W_{\mathbb{CP}^2}$, whose $\Lambda^+$ spectrum is $\tfrac1{\sqrt6}(-2,1,1)$ and whose $e_3=-\tfrac1{3\sqrt6}$, has $\theta=-\sqrt{3/2}$, it satisfies the bound strictly in the sense of being far below it, and does **not** attain equality. The clause "equality exactly when $W$ is $W_{\mathbb{CP}^2}$ up to scale, sign and frame" therefore fails in the *sufficiency* direction: it names a family half of whose members miss equality by $2\sqrt{3/2}$. The *necessity* direction is fine.
 
-The same remark applies to "scale" if negative scalars are admitted: $\theta(\lambda W)=\operatorname{sgn}(\lambda)\theta(W)$, so only $\lambda>0$ preserves equality.
+The same remark applies to "scale" if negative scalars are admitted: $\theta(\lambda W)=\mathop{\mathrm{sgn}}(\lambda)\theta(W)$, so only $\lambda>0$ preserves equality.
 
 **Two clean repairs, either acceptable.** (i) Drop "sign": *equality exactly when $W$ is a positive multiple of $W_{\mathbb{CP}^2}$ up to frame.* (ii) Keep "sign" and state the two-sided bound: $\lvert\theta\rvert\le\sqrt{3/2}$, with equality exactly when $W$ is $W_{\mathbb{CP}^2}$ up to scale, sign and frame.
 
@@ -276,7 +276,7 @@ The same remark applies to "scale" if negative scalars are admitted: $\theta(\la
 
 $W$ has an enormous kernel: $\Lambda^2\mathbb R^n$ has dimension $\binom n2$ (66 at $n=12$), $W$ is supported on a 6-dimensional $\Lambda^2V$, of which one 3-dimensional summand is zero, and the surviving block has rank 3 at most. **No step assumes $\ker W=0$**, and the places where it might have bitten all survive:
 
-- $p_2=\operatorname{tr}(W^2)$ and $p_3=\operatorname{tr}(W^3)$ over $\Lambda^2\mathbb R^n$ equal the same power sums of the three block eigenvalues, since power sums are blind to adjoined zeros.
+- $p_2=\mathop{\mathrm{tr}}(W^2)$ and $p_3=\mathop{\mathrm{tr}}(W^3)$ over $\Lambda^2\mathbb R^n$ equal the same power sums of the three block eigenvalues, since power sums are blind to adjoined zeros.
 - $e_1,e_2,e_3$ likewise: elementary symmetric functions are unchanged by adjoining zeros (every monomial involving a zero eigenvalue vanishes). So no ambiguity arises from whether they are read on the block or on the whole spectrum.
 - Step 5 does need the **characteristic polynomial of the $3\times3$ block**, not of the whole operator, the whole operator's is $x^{\binom n2-3}(x^3-\tfrac12x-e_3)$, and the discriminant argument applies to the cubic factor. The brief leaves this implicit; it is correct, but it is the one place where "almost all kernel" could have been misread, and it deserves a clause.
 - $\langle W,W^\#\rangle$ picks up only the $\Lambda^+$ block because $W^\#$ is supported there (§8), which is what makes the factor $3=\dim\Lambda^+$ in §7 right.

@@ -20,7 +20,7 @@ Cold Gate 2 review of [second-order.md](../findings/second-order.md)'s L274, on 
 
 ## Step by step
 
-**(1).** With zero diagonal, $\operatorname{tr}W^3=\sum_{i\ne j}W_{ij}(W^2)_{ij}$ and $(W^2)_{ij}=\sum_{k\ne i,j}W_{ik}W_{kj}$, the terms $k=i$ and $k=j$ vanishing because $W_{ii}=W_{jj}=0$. Cauchy–Schwarz over $k$ gives $|(W^2)_{ij}|\le\sqrt{(D_i-x_{ij})(D_j-x_{ij})}$, since $\sum_{k\ne i,j}W_{ik}^2=D_i-x_{ij}$. A vertex with $D_i=0$ has every $x_{ij}=0$ and contributes nothing. Correct.
+**(1).** With zero diagonal, $\mathop{\mathrm{tr}}W^3=\sum_{i\ne j}W_{ij}(W^2)_{ij}$ and $(W^2)_{ij}=\sum_{k\ne i,j}W_{ik}W_{kj}$, the terms $k=i$ and $k=j$ vanishing because $W_{ii}=W_{jj}=0$. Cauchy–Schwarz over $k$ gives $|(W^2)_{ij}|\le\sqrt{(D_i-x_{ij})(D_j-x_{ij})}$, since $\sum_{k\ne i,j}W_{ik}^2=D_i-x_{ij}$. A vertex with $D_i=0$ has every $x_{ij}=0$ and contributes nothing. Correct.
 
 **(2).** For $x_{ij}>0$ both $D_i,D_j>0$, and $x_{ij}(D_i-x_{ij})(D_j-x_{ij})=x_{ij}(1-p_{ij})(1-p_{ji})D_iD_j$. Terms with $x_{ij}=0$ (non-edges and every pair at an isolated vertex) are zero on both sides, so the undefined $p$ there carries weight zero. Cauchy–Schwarz over ordered pairs $i\ne j$ with $a_{ij}=\sqrt{x_{ij}(1-p_{ij})(1-p_{ji})}$, $b_{ij}=\sqrt{D_iD_j}$: $\sum a_{ij}^2=S\,\mathbb E_{x/S}[(1-p_{ij})(1-p_{ji})]$ and $\sum_{i\ne j}D_iD_j=S^2-\sum D_i^2$. Correct. The statement divides by $\sqrt S$, so it presumes $W\ne0$, while the Lean form multiplies through and covers $W=0$ (G3).
 
@@ -34,9 +34,9 @@ Cold Gate 2 review of [second-order.md](../findings/second-order.md)'s L274, on 
 
 ## Equality, containment, translation to J1
 
-- $W=J-I$: $\operatorname{tr}W^3=(m-1)^3-(m-1)=m(m-1)(m-2)$, $S=m(m-1)$, $S^2-\sum D_i^2=m(m-1)^3$, and the right side is $\frac{\sqrt m(m-2)}{(m-1)^{3/2}}\cdot\frac{m(m-1)^3}{\sqrt{m(m-1)}}=m(m-1)(m-2)$. Equality holds.
-- Containment: $\sum D_i^2\ge S^2/m$ gives right side $\le K_m\frac{m-1}mS^{3/2}=\frac{m-2}{\sqrt{m(m-1)}}S^{3/2}$. **G3 (wording):** this recovers the traceless cubic bound for zero-diagonal $W$. For a general traceless symmetric matrix it needs one more sentence: such a matrix is orthogonally similar to a zero-diagonal one, and $\operatorname{tr}W^3$, $\lVert W\rVert$ are orthogonal invariants. The statement should also say $W\ne0$ (or take the multiplied form, as the Lean does).
-- J1 at $Q=0$: L271 gives $d_i=\sum_l(U_{il}^2+V_{il}^2)=\frac12\sum_l(P_{il}^2+Q_{il}^2)$, so $d_i=D_i/2$ at $Q=0$. $A_\mu$ has diagonal $d$ and off-diagonal $-P_{ij}Q_{ij}=0$, so $g^2=\sum d_i^2=\sum D_i^2/4$. With $S=2$: $T=\frac12\operatorname{tr}P^3\le\frac{K_m(4-\sum D_i^2)}{2\sqrt2}=\sqrt2K_m(1-g^2)=\lambda_m(1-g^2)$, and $\sqrt2K_m=\frac{\sqrt{2m}(m-2)}{(m-1)^{3/2}}=\lambda_m$. That is J1 at $Q=0$. Correct.
+- $W=J-I$: $\mathop{\mathrm{tr}}W^3=(m-1)^3-(m-1)=m(m-1)(m-2)$, $S=m(m-1)$, $S^2-\sum D_i^2=m(m-1)^3$, and the right side is $\frac{\sqrt m(m-2)}{(m-1)^{3/2}}\cdot\frac{m(m-1)^3}{\sqrt{m(m-1)}}=m(m-1)(m-2)$. Equality holds.
+- Containment: $\sum D_i^2\ge S^2/m$ gives right side $\le K_m\frac{m-1}mS^{3/2}=\frac{m-2}{\sqrt{m(m-1)}}S^{3/2}$. **G3 (wording):** this recovers the traceless cubic bound for zero-diagonal $W$. For a general traceless symmetric matrix it needs one more sentence: such a matrix is orthogonally similar to a zero-diagonal one, and $\mathop{\mathrm{tr}}W^3$, $\lVert W\rVert$ are orthogonal invariants. The statement should also say $W\ne0$ (or take the multiplied form, as the Lean does).
+- J1 at $Q=0$: L271 gives $d_i=\sum_l(U_{il}^2+V_{il}^2)=\frac12\sum_l(P_{il}^2+Q_{il}^2)$, so $d_i=D_i/2$ at $Q=0$. $A_\mu$ has diagonal $d$ and off-diagonal $-P_{ij}Q_{ij}=0$, so $g^2=\sum d_i^2=\sum D_i^2/4$. With $S=2$: $T=\frac12\mathop{\mathrm{tr}}P^3\le\frac{K_m(4-\sum D_i^2)}{2\sqrt2}=\sqrt2K_m(1-g^2)=\lambda_m(1-g^2)$, and $\sqrt2K_m=\frac{\sqrt{2m}(m-2)}{(m-1)^{3/2}}=\lambda_m$. That is J1 at $Q=0$. Correct.
 
 ## What it gives
 

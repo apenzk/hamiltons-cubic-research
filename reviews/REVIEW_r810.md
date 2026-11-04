@@ -50,7 +50,7 @@ The row closes *"which is what [L178]'s step 1 needs to call $W^\pm$ trace-free 
 
 1. that $\Lambda^2V$ splits as $\Lambda^+\oplus\Lambda^-$ and that $W$ is block-diagonal for the splitting, which is a Weyl fact and is typed nowhere.
 2. that each summand is three-dimensional, which is what a proof of the spanning plus independence would give.
-3. that each summand is **trace-free**, which step 1 gets from total tracelessness giving $\operatorname{tr}W^++\operatorname{tr}W^-=0$ **and first Bianchi giving $\operatorname{tr}W^+-\operatorname{tr}W^-=0$**, the block being explicit that *"it takes both to make each summand trace-free on its own three-space"*.
+3. that each summand is **trace-free**, which step 1 gets from total tracelessness giving $\mathop{\mathrm{tr}}W^++\mathop{\mathrm{tr}}W^-=0$ **and first Bianchi giving $\mathop{\mathrm{tr}}W^+-\mathop{\mathrm{tr}}W^-=0$**, the block being explicit that *"it takes both to make each summand trace-free on its own three-space"*.
 4. that a self-adjoint trace-free operator on a three-space has rank $0$, $2$ or $3$ and never $1$, which is the step's actual conclusion.
 
 **The spanning supplies item 2 and nothing else.** The row's phrasing puts item 3 inside its own scope, and item 3 is the half the record says consumes first Bianchi exactly once. *This is not a wrong theorem, it is a row that a later reader would cite for a step it does not carry, which is the failure mode [L187](../findings/diagonal-half.md) was refuted for.*

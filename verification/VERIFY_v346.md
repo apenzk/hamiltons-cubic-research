@@ -23,7 +23,7 @@ Cold brief ([BRIEF_L113.md](BRIEF_L113.md)). No numerical work, no scripts writt
 - $W\in\mathcal W_n$ is a symmetric operator on $\Lambda^2\mathbb R^n\cong\mathfrak{so}(n)$, $N=n(n-1)/2$, $\{v_k\}$ an orthonormal eigenbasis with eigenvalues $\lambda_k$, $c_{abc}=\langle[v_a,v_b],v_c\rangle$, $T_{abc}=c_{abc}^2$, totally symmetric and $\ge0$.
 - $g_k=\sum_{\alpha\beta}(\lambda_\alpha-\lambda_\beta)^2T_{k\alpha\beta}$, $m_j=\sum_k\lambda_k^jg_k$, $G_2=m_2$.
 - $\lambda_{\min}$, $\lambda_{\max}$ are the extreme eigenvalues and $\Delta=\lambda_{\max}-\lambda_{\min}$.
-- An algebraic Weyl tensor is trace-free on $\Lambda^2$, so $\operatorname{tr}W=\sum_k\lambda_k=0$, which gives $\lambda_{\min}\le0\le\lambda_{\max}$, with both strict when $W\ne0$. $\mathcal W_n=0$ for $n\le3$, so the smallest admissible dimension is $n=4$, $N=6$.
+- An algebraic Weyl tensor is trace-free on $\Lambda^2$, so $\mathop{\mathrm{tr}}W=\sum_k\lambda_k=0$, which gives $\lambda_{\min}\le0\le\lambda_{\max}$, with both strict when $W\ne0$. $\mathcal W_n=0$ for $n\le3$, so the smallest admissible dimension is $n=4$, $N=6$.
 - $\mathcal G(\lambda,c,s)=\{g\in\mathbb R^N:\ g\ge0,\ \sum_kg_k=c,\ \sum_k\lambda_kg_k=s\}$. At a unit critical point $c=4(n-1)$ and $s=-4\theta$.
 
 ## Hypothesis inventory
@@ -71,7 +71,7 @@ Which ingredients give what:
 - $g_k\ge0$: none of (A), (B), (C). It is a squared norm, and equally $T\ge0$ with $(\lambda_\alpha-\lambda_\beta)^2\ge0$. Holds at every $W$.
 - Support in $\{\lambda_k\}$: none. The measure $\sum_kg_k\delta_{\lambda_k}$ is supported on the spectrum by definition.
 - $m_0$: $\sum_{k\alpha\beta}(\lambda_\alpha^2-2\lambda_\alpha\lambda_\beta+\lambda_\beta^2)T_{k\alpha\beta}$. By total symmetry the two square terms are equal, and each is $\sum_\alpha\lambda_\alpha^2\sum_{k\beta}T_{\alpha k\beta}=2(n-2)\lVert W\rVert^2$ by (A). The cross term is $\sum_\alpha\lambda_\alpha\sum_{k\beta}\lambda_\beta T_{\alpha k\beta}=-2\lVert W\rVert^2$ by (B). So $m_0=4(n-2)\lVert W\rVert^2+4\lVert W\rVert^2=4(n-1)\lVert W\rVert^2$. Uses (A), (B), symmetry. Followed and confirmed.
-- $m_1$: $2\sum\lambda_k\lambda_\alpha^2T_{k\alpha\beta}=2\sum_\alpha\lambda_\alpha^2(-2\lambda_\alpha)=-4\operatorname{tr}W^3$ by (B), and $-2\sum\lambda_k\lambda_\alpha\lambda_\beta T_{k\alpha\beta}=-4\langle W,W^\#\rangle$ by the cubic identity. So $m_1=-4P(W)$. Uses (B) and the cubic identity. Confirmed as algebra under the record's normalisation of $\#$.
+- $m_1$: $2\sum\lambda_k\lambda_\alpha^2T_{k\alpha\beta}=2\sum_\alpha\lambda_\alpha^2(-2\lambda_\alpha)=-4\mathop{\mathrm{tr}}W^3$ by (B), and $-2\sum\lambda_k\lambda_\alpha\lambda_\beta T_{k\alpha\beta}=-4\langle W,W^\#\rangle$ by the cubic identity. So $m_1=-4P(W)$. Uses (B) and the cubic identity. Confirmed as algebra under the record's normalisation of $\#$.
 - (C) and criticality enter none of the four.
 
 **Wording note, candidate withdrawn.** Positivity is a consequence of the definition, not of the spectrum, and $m_1$ needs $P(W)$, which is not a spectral function at a general $W$. The sentence claims only positivity and support, and both hold with no data at all, so "the spectrum alone" is loose but not false. There is no failing object to exhibit, so the candidate is withdrawn.

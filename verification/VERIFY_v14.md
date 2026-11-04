@@ -35,7 +35,7 @@ Every symbol below is the record's, taken from the places named, and none is int
 | $\kappa_n$ | $9(\sqrt{3/2}-\theta_0(n))$, so $\lvert\kappa_n\rvert=9\lvert\theta_0-\sqrt{3/2}\rvert$ | [line 893](../findings/second-order.md), [problem.md](../findings/problem.md) |
 | $\rho_n$ | $3\theta_0\frac{n-8}{2(n-2)}$, the margin coefficient before the penalty | L149's margin bullet, in $m$; L149's blockquote, in $n$ |
 | $\rho_n^{\mathrm{eff}}$ | $\rho_n-\tfrac29\lvert\kappa_n\rvert$ | L149's blockquote |
-| $g_n$ | $\sqrt{2(n-2)}/(n\sqrt{n-1})$, the gap from $0$ to $\operatorname{spec}W^*$ | [line 893](../findings/second-order.md), and $1/g_n=n^2c_p/6$ at [L158](../findings/second-order.md) |
+| $g_n$ | $\sqrt{2(n-2)}/(n\sqrt{n-1})$, the gap from $0$ to $\mathop{\mathrm{spec}}W^*$ | [line 893](../findings/second-order.md), and $1/g_n=n^2c_p/6$ at [L158](../findings/second-order.md) |
 | $g_\rho(w)$ | $\sqrt{c_p+\rho w^2}/(A+Bw)$, $A=n^{1/2}$, $B=n$ as L149 writes them | L149's "Proof of the uniformity" |
 
 **Two symbols collide inside the block and are unrelated.** $\kappa$ is $nc_p\approx4.45$; $\kappa_n$ is the defect-penalty constant, $\lvert\kappa_{12}\rvert=0.1015$. L158 records the collision explicitly; L149 does not, and the proof's $c=\kappa/n$ is never said to be $c_p$.
@@ -95,7 +95,7 @@ So: bullet at $\rho_n$, blockquote at $\rho_n^{\mathrm{eff}}$, chain and proof a
 ## 2. The direction of the error, derived rather than assumed
 
 Write $g_\rho(w)=\sqrt{c+\rho w^2}/(A+Bw)$ on $w\ge0$, with $c,\rho,A,B>0$. Differentiating and clearing the positive factor $\sqrt{c+\rho w^2}(A+Bw)^2$,
-$$\operatorname{sign}g_\rho'(w)=\operatorname{sign}\Big[\rho w(A+Bw)-B(c+\rho w^2)\Big]=\operatorname{sign}\big(\rho Aw-Bc\big),$$
+$$\mathop{\mathrm{sign}}g_\rho'(w)=\mathop{\mathrm{sign}}\Big[\rho w(A+Bw)-B(c+\rho w^2)\Big]=\mathop{\mathrm{sign}}\big(\rho Aw-Bc\big),$$
 the $\rho Bw^2$ terms cancelling. So $g_\rho$ falls then rises, with its single stationary point at
 $$w^*_\rho=\frac{Bc}{\rho A},\qquad c+\rho w^{*2}_\rho=c\,\frac{\rho A^2+B^2c}{\rho A^2},\qquad A+Bw^*_\rho=\frac{\rho A^2+B^2c}{\rho A},$$
 whence

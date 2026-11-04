@@ -32,7 +32,7 @@
 
 Read from [conventions.md](../findings/conventions.md), not from memory.
 
-- $\Lambda^2\mathbb R^n=\mathfrak{so}(n)$, $N=\binom n2$, with $\{\varphi_a\}$ an **orthonormal basis of $\Lambda^2$**; $\lVert W\rVert^2=\operatorname{tr}_{\Lambda^2}(W^2)=1$ at a unit operator.
+- $\Lambda^2\mathbb R^n=\mathfrak{so}(n)$, $N=\binom n2$, with $\{\varphi_a\}$ an **orthonormal basis of $\Lambda^2$**; $\lVert W\rVert^2=\mathop{\mathrm{tr}}_{\Lambda^2}(W^2)=1$ at a unit operator.
 - $Q(W)=W^2+W^\#$ with $\#$ the **halved** Böhm–Wilking product, $vv^{\mathsf T}\#ww^{\mathsf T}=\tfrac12[v,w][v,w]^{\mathsf T}$ ([conventions.md](../findings/conventions.md):59). So for $W=\sum_\alpha\lambda_\alpha v_\alpha v_\alpha^{\mathsf T}$ in an orthonormal eigenbasis, $(W^\#)_{\gamma\gamma}=\tfrac12\sum_{\alpha\beta}\lambda_\alpha\lambda_\beta T_{\alpha\beta\gamma}$ with $T_{\alpha\beta\gamma}=\langle[v_\alpha,v_\beta],v_\gamma\rangle^2$. **This is the identity every trace below runs on.**
 - $T$ is **totally symmetric**, because $\langle[x,y],z\rangle$ is totally antisymmetric under an invariant form and the square kills the sign. Every "$S_{\mathfrak{hmm}}$" is therefore a well-defined sum over ordered triples with a fixed index pattern, and the three patterns with two $\mathfrak m$'s agree.
 - The **Killing row marginal** is [Lemma L153](../findings/bounds.md), quoted rather than reproved: $\sum_\beta\lVert[v,v_\beta]\rVert^2=2(n-2)\lVert v\rVert^2$, i.e. $\sum_{b,c}T_{abc}=2(n-2)=\kappa$ per unit $a$ in the **ordered** reading, the reading [conventions.md](../findings/conventions.md):100 warns must be converted before constants are compared. The block's $\kappa$ is the ordered one, consistently.
@@ -207,11 +207,11 @@ The full list is §1. Restated as an answer to the question: the derivation asks
 
 **Verifier's apparatus, declared as such.** To test membership I use one identity I derived for the purpose. It is a *restatement of the block's own necessary condition*, not a repair of anything, and it is used only to decide which candidate algebras can satisfy H5.
 
-For an orthonormal basis of $\mathfrak g\subseteq\mathfrak{so}(n)$ and $X\in\mathfrak g$, ad-antisymmetry gives $\sum_{b\in\mathfrak g}\lVert[X,\varphi_b]\rVert^2=-\operatorname{tr}_{\mathfrak g}(\mathrm{ad}X)^2=-B_{\mathfrak g}(X,X)$, while $\lVert X\rVert^2_{\Lambda^2}=-\tfrac12\operatorname{tr}_{\mathbb R^n}(X^2)$ under $e_i\wedge e_j\leftrightarrow E_{ij}-E_{ji}$. Hence the subalgebra's own Killing constant is
+For an orthonormal basis of $\mathfrak g\subseteq\mathfrak{so}(n)$ and $X\in\mathfrak g$, ad-antisymmetry gives $\sum_{b\in\mathfrak g}\lVert[X,\varphi_b]\rVert^2=-\mathop{\mathrm{tr}}_{\mathfrak g}(\mathrm{ad}X)^2=-B_{\mathfrak g}(X,X)$, while $\lVert X\rVert^2_{\Lambda^2}=-\tfrac12\mathop{\mathrm{tr}}_{\mathbb R^n}(X^2)$ under $e_i\wedge e_j\leftrightarrow E_{ij}-E_{ji}$. Hence the subalgebra's own Killing constant is
 
-$$c_{\mathfrak h}=\frac{2B_{\mathfrak h}(X,X)}{\operatorname{tr}_{\mathbb R^n}(X^2)},\qquad S_{\mathfrak{hhh}}=c_{\mathfrak h}r .$$
+$$c_{\mathfrak h}=\frac{2B_{\mathfrak h}(X,X)}{\mathop{\mathrm{tr}}_{\mathbb R^n}(X^2)},\qquad S_{\mathfrak{hhh}}=c_{\mathfrak h}r .$$
 
-Sanity check on $\mathfrak g=\mathfrak{so}(n)$ itself, where $B(X,Y)=(n-2)\operatorname{tr}_{\mathbb R^n}(XY)$ per [conventions.md](../findings/conventions.md): $c=2(n-2)=\kappa$, agreeing with [Lemma L153](../findings/bounds.md). Combining $S_{\mathfrak{hhh}}=\kappa r-S_{\mathfrak{hmm}}$ with the block's $S_{\mathfrak{hmm}}=2(n-1)r(N-r)/N$ and $2(n-1)/N=4/n$ gives the **membership test**
+Sanity check on $\mathfrak g=\mathfrak{so}(n)$ itself, where $B(X,Y)=(n-2)\mathop{\mathrm{tr}}_{\mathbb R^n}(XY)$ per [conventions.md](../findings/conventions.md): $c=2(n-2)=\kappa$, agreeing with [Lemma L153](../findings/bounds.md). Combining $S_{\mathfrak{hhh}}=\kappa r-S_{\mathfrak{hmm}}$ with the block's $S_{\mathfrak{hmm}}=2(n-1)r(N-r)/N$ and $2(n-1)/N=4/n$ gives the **membership test**
 
 $$c_{\mathfrak h}=\frac{4r}n-2 .$$
 
@@ -237,7 +237,7 @@ Abelian $\mathfrak h$ has $c_{\mathfrak h}=0$, so the test reads $r=n/2$: **a ma
 
 ### 6.3 $\mathfrak{su}(m)$, in both embeddings the record uses
 
-**$\mathrm{ad}(\mathfrak{su}(3))\subset\mathfrak{so}(8)$, the bi-invariant member.** Here $\mathbb R^8=\mathfrak{su}(3)$ and $X$ acts as $\mathrm{ad}X$, so $\operatorname{tr}_{\mathbb R^8}(X^2)=B_{\mathfrak{su}(3)}(X,X)$ and $c_{\mathfrak h}=2$. The test wants $\tfrac{4\cdot8}8-2=2$. **Passes**, so $S_{\mathfrak{hhh}}=16$, $S_{\mathfrak{hmm}}=\kappa r-16=96-16=80$, which is exactly the block's $2(n-1)r(N-r)/N=\tfrac{2\cdot7\cdot8\cdot20}{28}=80$. **The closed form then reads $\theta^2=\tfrac4{64}\cdot\tfrac{8\cdot28}{20}=\tfrac{56}{80}=\tfrac7{10}$, i.e. $\theta=\sqrt{7/10}$**, the record's $0.836660$, recovered here from the Killing form of $\mathfrak{su}(3)$ alone. $r=8$ against a cap of $12$, so it is a member strictly inside.
+**$\mathrm{ad}(\mathfrak{su}(3))\subset\mathfrak{so}(8)$, the bi-invariant member.** Here $\mathbb R^8=\mathfrak{su}(3)$ and $X$ acts as $\mathrm{ad}X$, so $\mathop{\mathrm{tr}}_{\mathbb R^8}(X^2)=B_{\mathfrak{su}(3)}(X,X)$ and $c_{\mathfrak h}=2$. The test wants $\tfrac{4\cdot8}8-2=2$. **Passes**, so $S_{\mathfrak{hhh}}=16$, $S_{\mathfrak{hmm}}=\kappa r-16=96-16=80$, which is exactly the block's $2(n-1)r(N-r)/N=\tfrac{2\cdot7\cdot8\cdot20}{28}=80$. **The closed form then reads $\theta^2=\tfrac4{64}\cdot\tfrac{8\cdot28}{20}=\tfrac{56}{80}=\tfrac7{10}$, i.e. $\theta=\sqrt{7/10}$**, the record's $0.836660$, recovered here from the Killing form of $\mathfrak{su}(3)$ alone. $r=8$ against a cap of $12$, so it is a member strictly inside.
 
 **$\mathfrak{su}(m)\subset\mathfrak{so}(2m)$, the Berger entry.** $r=m^2-1$ against a cap of $m(m-1)=m^2-m$: **exceeds for every $m\ge2$**, by $m-1$.
 
@@ -258,7 +258,7 @@ $\mathfrak{spin}(7)$: $r=21$, $n=8$, $N=28$, cap $=12$; $S_{\mathfrak{mmm}}$ wou
 | $\mathfrak g_2$ | $7$ | $14$ | $35/4$ | yes |
 | $\mathfrak{spin}(7)$ | $8$ | $21$ | $12$ | yes |
 
-**So two Berger entries sit below the cap** and are not excluded by it: $\mathfrak{sp}(m)$ for $m\ge2$ and $\mathfrak{sp}(m)\oplus\mathfrak{sp}(1)$ for $m\ge3$. Screened against the membership test at the first of each: $\mathfrak{sp}(2)\subset\mathfrak{so}(8)$ has $c_{\mathfrak h}=2m+2=6$ from $B_{\mathfrak{sp}(m)}=(2m+2)\operatorname{tr}_{\mathbb C^{2m}}$ and $\operatorname{tr}_{\mathbb R^{4m}}=2\operatorname{tr}_{\mathbb C^{2m}}$, against a required $\tfrac{4\cdot10}8-2=3$, **fails**. And $\mathfrak{sp}(3)\oplus\mathfrak{sp}(1)\subset\mathfrak{so}(12)$ has $S_{\mathfrak{hhh}}=21\cdot8+3\cdot\tfrac43=172$ (using $c_{\mathfrak{sp}(1)\text{ on }\mathbb H^m}=4/m$) against a required $(\tfrac{4\cdot24}{12}-2)\cdot24=144$, **fails**. *Both screens are mine, not the record's*; see §7 for what the record does and does not say about these two entries.
+**So two Berger entries sit below the cap** and are not excluded by it: $\mathfrak{sp}(m)$ for $m\ge2$ and $\mathfrak{sp}(m)\oplus\mathfrak{sp}(1)$ for $m\ge3$. Screened against the membership test at the first of each: $\mathfrak{sp}(2)\subset\mathfrak{so}(8)$ has $c_{\mathfrak h}=2m+2=6$ from $B_{\mathfrak{sp}(m)}=(2m+2)\mathop{\mathrm{tr}}_{\mathbb C^{2m}}$ and $\mathop{\mathrm{tr}}_{\mathbb R^{4m}}=2\mathop{\mathrm{tr}}_{\mathbb C^{2m}}$, against a required $\tfrac{4\cdot10}8-2=3$, **fails**. And $\mathfrak{sp}(3)\oplus\mathfrak{sp}(1)\subset\mathfrak{so}(12)$ has $S_{\mathfrak{hhh}}=21\cdot8+3\cdot\tfrac43=172$ (using $c_{\mathfrak{sp}(1)\text{ on }\mathbb H^m}=4/m$) against a required $(\tfrac{4\cdot24}{12}-2)\cdot24=144$, **fails**. *Both screens are mine, not the record's*; see §7 for what the record does and does not say about these two entries.
 
 ## 7. Discrepancies, each with its three steps
 
@@ -267,7 +267,7 @@ $\mathfrak{spin}(7)$: $r=21$, $n=8$, $N=28$, cap $=12$; $S_{\mathfrak{mmm}}$ wou
 **Locate.** [results.md](../results.md):134, the landscape line: *"**Lemma L23 (landscape). Conjecture A on the subalgebra family, with gradedness doing the separating.** For $W\propto\Pi_{\mathfrak h}-\tfrac rN\mathrm{Id}$ the value depends on $\dim\mathfrak h$ alone; a sum of squares caps that dimension at $n(n-2)/4$, where the value is $\theta_0(n)$ and $W$ is graded."* There is no "if $Q(W_{\mathfrak h})=\theta W_{\mathfrak h}$" anywhere in the sentence, and no "critical".
 
 **Exhibit.** $\mathfrak h=\mathfrak{so}(5)\subset\mathfrak{so}(6)$: a subalgebra, $n=6$, $r=10$, $N=15$, so $0<r<N$ and the sentence's hypotheses are met in full. Its dimension is $10$, and $n(n-2)/4=6$. **The cap is violated by $4$.** For the same reason "the value depends on $\dim\mathfrak h$ alone" fails: reading "the value" as $P(W)=\langle W,Q(W)\rangle$, which is defined at every $W$, this object has $S_{\mathfrak{hhh}}=60$, $S_{\mathfrak{hmm}}=20$, $S_{\mathfrak{mmm}}=0$, $c=\sqrt{3/10}$, $u=c/3$, $v=-2c/3$, and
-$$P=\operatorname{tr}W^3+\tfrac12\big[u^3S_{\mathfrak{hhh}}+3uv^2S_{\mathfrak{hmm}}+v^3S_{\mathfrak{mmm}}\big]=\frac{-30+150}{27}c^3=\frac{40c^3}9=\frac2{15}\sqrt{30},$$
+$$P=\mathop{\mathrm{tr}}W^3+\tfrac12\big[u^3S_{\mathfrak{hhh}}+3uv^2S_{\mathfrak{hmm}}+v^3S_{\mathfrak{mmm}}\big]=\frac{-30+150}{27}c^3=\frac{40c^3}9=\frac2{15}\sqrt{30},$$
 against the closed form's $\tfrac13\sqrt{30}$. **Exactly two fifths of it.**
 
 **Argue the opposite.** The most charitable reading is that "the subalgebra family" in the heading is a defined term meaning *the critical members*, so the hypothesis rides in the noun. That reading is available, [results.md](../results.md):395 states the lemma in full, correctly, sixty lines earlier, but it does not survive the way the line is used: [results.md](../results.md):318 cites "Lemma L23 shows they are its maximum" and [results.md](../results.md):38 cites "the subalgebra family is capped at $\theta_0(n)$ **by a dimension count**", which is precisely the reading the block's own withdrawal note declares false and withdrawn. **The candidate stands.**

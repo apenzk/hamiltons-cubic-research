@@ -23,7 +23,7 @@
 ## Definitions
 
 - $\mathcal W_N$: symmetric operators on $\Lambda^2\mathbb R^N$ satisfying first Bianchi and Ricci-flat.
-- $\langle X,Y\rangle=\tfrac12\operatorname{tr}(X^{\mathsf T}Y)$ on skew matrices, so $\lVert e_i\wedge e_j\rVert=1$; $x\wedge y$ is the operator $z\mapsto\langle x,z\rangle y-\langle y,z\rangle x$.
+- $\langle X,Y\rangle=\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$ on skew matrices, so $\lVert e_i\wedge e_j\rVert=1$; $x\wedge y$ is the operator $z\mapsto\langle x,z\rangle y-\langle y,z\rangle x$.
 - $W_{\mathbb{CP}^2}\in\mathcal W_4$ is supported on one of $\Lambda^\pm\subset\Lambda^2\mathbb R^4$ with eigenvalues proportional to $(2,-1,-1)$ there and zero on the other summand.
 - $u$ is $W_{\mathbb{CP}^2}$ padded by zero from $\mathbb R^4$ into $\mathbb R^n$, $n=4+m$. $\rho(A)$ is the derivation of $\Lambda^2\mathbb R^n$ induced by $A\in\mathfrak{so}(n)$, and $\mathfrak{stab}(u)=\{A:[\rho(A),u]=0\}$.
 
@@ -48,7 +48,7 @@
 2. **The expansion $\rho(A)\omega=-\sum_j(\omega v_j)\wedge f_j$.** Derive it from $\rho(A)(x\wedge y)=Ax\wedge y+x\wedge Ay$, tracking every sign against the stated wedge convention. **A sign error here is invisible to the conclusion**, so say so if you find one.
 3. **Independence of the $f_j$.** The decomposition $A=\sum v_j\wedge f_j$ with $\{f_j\}$ orthonormal, is it always available, and does it lose generality? What if some $v_j$ coincide or vanish?
 4. **Invertibility of $\Lambda^\pm$ elements.** Is $\omega^2=-\lVert\omega\rVert^2\mathrm{Id}$ right in the stated normalisation, or off by a factor? Verify on a concrete $\omega$ and on a general one.
-5. **$\operatorname{im}u=\Lambda^\pm$.** Does the eigenvalue pattern $(2,-1,-1)$ give a full image on that summand, and is $W_{\mathbb{CP}^2}$ really supported on one summand rather than both? What if it is supported on both, does the argument survive?
+5. **$\mathop{\mathrm{im}}u=\Lambda^\pm$.** Does the eigenvalue pattern $(2,-1,-1)$ give a full image on that summand, and is $W_{\mathbb{CP}^2}$ really supported on one summand rather than both? What if it is supported on both, does the argument survive?
 6. **The stabiliser addition.** Check each of the three contributions: that $\mathfrak{so}(m)$ acts trivially on $u$; that the complementary $\Lambda^\mp$ commutes with an operator supported on $\Lambda^\pm$; and that the stabiliser of $\mathrm{diag}(2,-1,-1)$ under $\mathfrak{so}(3)$ is one-dimensional, **is that eigenvalue pattern's stabiliser really $\mathfrak{so}(2)$, or larger?** Then check $\binom n2-\binom{n-4}2-4=4n-14$.
 7. **$\mathfrak{stab}(u)=\mathfrak u(2)\oplus\mathfrak{so}(m)$** is stated as an equality of Lie algebras, while the proof computes a dimension. Is the identification with $\mathfrak u(2)$ argued anywhere, or only its dimension?
 8. **Hypothesis inventory**, and which hypotheses go unused.

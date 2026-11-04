@@ -26,7 +26,7 @@
 
 ## Conventions
 
-- $\Lambda^2\mathbb R^n\cong\mathfrak{so}(n)$ with $\langle X,Y\rangle=\tfrac12\operatorname{tr}(X^{\mathsf T}Y)=-\tfrac12\operatorname{tr}(XY)$, the record's normalisation from [conventions.md](../findings/conventions.md). Throughout, $N:=\binom n2$.
+- $\Lambda^2\mathbb R^n\cong\mathfrak{so}(n)$ with $\langle X,Y\rangle=\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)=-\tfrac12\mathop{\mathrm{tr}}(XY)$, the record's normalisation from [conventions.md](../findings/conventions.md). Throughout, $N:=\binom n2$.
 - $\{v_\alpha\}$ is an orthonormal eigenbasis of $W$ with $Wv_\alpha=\lambda_\alpha v_\alpha$, $\sum_\alpha\lambda_\alpha=0$ and $\sum_\alpha\lambda_\alpha^2=\lVert W\rVert^2=1$.
 - $c_{\alpha\beta\gamma}:=\langle[v_\alpha,v_\beta],v_\gamma\rangle$ is totally antisymmetric, by ad-invariance of the form together with antisymmetry of the bracket, so $T_{\alpha\beta\gamma}:=c_{\alpha\beta\gamma}^2$ is totally symmetric, nonnegative, and **zero whenever any two indices coincide**. That last property is the hollowness [conventions.md](../findings/conventions.md) tables for a $3$-tensor, and it is load-bearing throughout section 4 below.
 - $M:=T^{(k)}$, the symmetric $N\times N$ matrix $M_{\alpha\gamma}=T_{\alpha k\gamma}$ at a fixed $k$; $R_\alpha:=\sum_\gamma M_{\alpha\gamma}$ its row sums; $\mathbf 1$ the all-ones vector; $m:=\lvert\lambda_{\min}\rvert$.
@@ -40,7 +40,7 @@
 | $Q(W)=\theta W$ as operators on $\Lambda^2$ | relation (C), which is that equation's diagonal | stated, and correct |
 | $Q$ maps $\mathcal W_n$ into itself | the Lagrange condition carries no $\mathcal W_n$-projection, so (C) is the full diagonal | used silently, and this is the only place first Bianchi enters the block |
 | $\lVert W\rVert=1$ | the constant $2\lVert\lambda\rVert^2=2$, hence the $1$ in $\lvert\lambda_k(\theta-\lambda_k)\rvert\le1$, and the $1-\lambda_k^2$ of the repair | assumed and unstated, and the display is not scale-consistent, $\theta$ being degree $0$ and $\lambda_{\max}+1/\lambda_{\max}$ neither homogeneous nor invariant |
-| $\operatorname{tr}W=0$ with $W\ne0$ | $\lambda_{\max}>0$, without which the division at the last step is illegal | undischarged, and true |
+| $\mathop{\mathrm{tr}}W=0$ with $W\ne0$ | $\lambda_{\max}>0$, without which the division at the last step is illegal | undischarged, and true |
 | $T$ hollow | nowhere in the block, and it is what the block is missing | absent |
 | pair cap $\lVert[v_\alpha,v_\beta]\rVert^2\le2$ | the row-sum bound, and it holds at every $n$, on all of $\mathfrak{so}(n)$, with no Weyl input | stated, and correctly attributed |
 | relation (A) | quoted in the diagnosis, used in no step | correctly described as discarded |

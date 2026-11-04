@@ -33,7 +33,7 @@ I read [findings/conventions.md](../findings/conventions.md) first and adopt the
 | $K$ | the cubics vanishing on the $O(5)$-orbit of $W_0$, $\dim K=4200$ | [sym3-blocks.md:205](../findings/sym3-blocks.md) and [r204](REVIEW_r204.md) line 131 |
 | the restricted map | $\mathrm{Sym}^2(K)^{O(5)}\to(\mathrm{Sym}^6\mathcal W_5^*)^{O(5)}$, i.e. $36\to14$ | the certificate is a Gram on $K$ |
 | ground field | $\mathbb R$, the certificate being a real PSD Gram; the group is the **compact** $O(5,\mathbb R)$ | the SOS problem |
-| $B$ | **not used here.** [conventions.md](../findings/conventions.md) tables three objects under it and this file adds $B(X,Y)=-\tfrac12\operatorname{tr}(XY)$; the $B_{ij}$ of the retired task are a fifth. I write $B_{ij}$ only inside quotation. | the standing collision |
+| $B$ | **not used here.** [conventions.md](../findings/conventions.md) tables three objects under it and this file adds $B(X,Y)=-\tfrac12\mathop{\mathrm{tr}}(XY)$; the $B_{ij}$ of the retired task are a fifth. I write $B_{ij}$ only inside quotation. | the standing collision |
 
 Two conventions I checked do **not** bite here. The $\theta_0$ repair and the ordered-slot reading of $S_{XYZ}$ touch nothing in this block, no $\theta$, no $S$, no norm and no pairing enters it, which is unusual for this record and is why the block is comparatively safe.
 
@@ -94,8 +94,8 @@ The block: *"reviewer 200's observation that rank $14$ implies consistency colla
 
 [r200](REVIEW_r200.md) §5, line 142, in full force:
 
-- **The implication is right, and conditional.** *"$\operatorname{rank}(A)=14$ means the $B_{ij}$ span the whole space, so $F_5$ lies in the span... The consistency test... cannot fail **once rank 14 is observed**."* I re-derive it: if the columns of $A$ span the $14$-dimensional target, every right-hand side is in the column space, $F_5$ included, Rouché–Capelli with full row rank.
-- **And r200 immediately limits it.** *"the direction that matters is only half available mod $p$: $\operatorname{rank}_p\le\operatorname{rank}_{\mathbb Q}$... Inconsistency mod $p$ does refute over $\mathbb Q$; **consistency mod $p$ is a screen**."*
+- **The implication is right, and conditional.** *"$\mathop{\mathrm{rank}}(A)=14$ means the $B_{ij}$ span the whole space, so $F_5$ lies in the span... The consistency test... cannot fail **once rank 14 is observed**."* I re-derive it: if the columns of $A$ span the $14$-dimensional target, every right-hand side is in the column space, $F_5$ included, Rouché–Capelli with full row rank.
+- **And r200 immediately limits it.** *"the direction that matters is only half available mod $p$: $\mathop{\mathrm{rank}}_p\le\mathop{\mathrm{rank}}_{\mathbb Q}$... Inconsistency mod $p$ does refute over $\mathbb Q$; **consistency mod $p$ is a screen**."*
 
 **"Both are now theorems" is a strengthening of a source that says one of the two is a screen.** The correcting paragraph below restores r200's reading (*"the sampled rank check is not retired"*), so the block holds both the inflated sentence and its correction, unreconciled, in adjacent paragraphs.
 
@@ -123,13 +123,13 @@ That is four unreconciled strata in one file, of which L89 carries the oldest. [
 
 The brief asks for this explicitly, so here it is in the form I would put on the record.
 
-**The map.** $K\subset\mathrm{Sym}^3\mathcal W_5^*$ is the subspace of cubics vanishing on the $O(5)$-orbit of $W_0$. It is an $O(5)$-submodule, a point the file proves only at [line 156](../findings/sym3-blocks.md), by the observation that the orbit condition is $p\perp\operatorname{span}\{(gW_0)^3\}$ and that span is a submodule. The restricted map is
+**The map.** $K\subset\mathrm{Sym}^3\mathcal W_5^*$ is the subspace of cubics vanishing on the $O(5)$-orbit of $W_0$. It is an $O(5)$-submodule, a point the file proves only at [line 156](../findings/sym3-blocks.md), by the observation that the orbit condition is $p\perp\mathop{\mathrm{span}}\{(gW_0)^3\}$ and that span is a submodule. The restricted map is
 
 $$\mu_K:=\mu\vert_{\mathrm{Sym}^2(K)}\colon\ \mathrm{Sym}^2(K)^{O(5)}\ \longrightarrow\ (\mathrm{Sym}^6\mathcal W_5^*)^{O(5)},\qquad 36\longrightarrow14 .$$
 
-**Why exactness does not settle it, and the block's phrasing is imprecise about which half fails.** Exactness *does* apply to $\mu_K$: it gives $\mathrm{Sym}^2(K)^{O(5)}\twoheadrightarrow(\operatorname{im}\mu_K)^{O(5)}$, so
+**Why exactness does not settle it, and the block's phrasing is imprecise about which half fails.** Exactness *does* apply to $\mu_K$: it gives $\mathrm{Sym}^2(K)^{O(5)}\twoheadrightarrow(\mathop{\mathrm{im}}\mu_K)^{O(5)}$, so
 
-$$\mathrm{rank}(\mu_K\vert_{\mathrm{inv}})=\dim(\operatorname{im}\mu_K)^{O(5)}.$$
+$$\mathrm{rank}(\mu_K\vert_{\mathrm{inv}})=\dim(\mathop{\mathrm{im}}\mu_K)^{O(5)}.$$
 
 The functor works perfectly. **What is missing is the input hypothesis: $\mu_K$ is not onto $\mathrm{Sym}^6\mathcal W_5^*$**, because every element of its image vanishes at $W_0$ while $\lVert W\rVert^6$ does not. The block's *"the argument does not carry"* is true but reads as though the functor failed. It did not; the surjection it was fed is gone, and the surjectivity of $\mu_K$ onto the vanishing hyperplane is exactly the open statement. [r204](REVIEW_r204.md) line 147 puts the same thing in ideal-theoretic terms: the restricted rank is $13$ iff *the degree-$6$ part of the ideal of the orbit cone is generated by its degree-$3$ part, on invariants*. **That is a generation-in-degree statement, and no exactness argument reaches it.**
 
@@ -165,7 +165,7 @@ The two measured links the companion audit found in [L87](../findings/sym3-block
 | link | what measures it | does L89 reach it? |
 | --- | --- | --- |
 | the $36$, via the rank-one step, every even block's evaluation map is nonzero | [L87](../findings/sym3-blocks.md)'s mod-$\mathbb F_{46337}$ Gram rank of $3570$ on $3700$ orbit points, meeting the $\sum d_\lambda$ cap | **No.** This is a statement about which cubics vanish at $W_0$. Exactness of $(-)^{O(5)}$ says nothing about the evaluation functional at a point, and $\mu$ does not appear in it. |
-| $\mathrm{rank}(\mu_K\vert_{\mathrm{inv}})\ge13$, hence $\dim\mathrm{ANN}=1$ and $F_5\in\operatorname{image}$ | [L62](../findings/sym3-blocks.md)'s sampled mod-$p$ rank attaining the proved cap of $13$ | **No.** The cap is a theorem already; the *lower* bound is what is measured, and a lower bound on a restricted rank needs surjectivity onto the hyperplane, which is the open question §5 names. |
+| $\mathrm{rank}(\mu_K\vert_{\mathrm{inv}})\ge13$, hence $\dim\mathrm{ANN}=1$ and $F_5\in\mathop{\mathrm{image}}$ | [L62](../findings/sym3-blocks.md)'s sampled mod-$p$ rank attaining the proved cap of $13$ | **No.** The cap is a theorem already; the *lower* bound is what is measured, and a lower bound on a restricted rank needs surjectivity onto the hyperplane, which is the open question §5 names. |
 
 **And the transversality route, which is the only place L89's numbers touch the restricted problem, does not get there either.** Inside the $65$, the kernel of $\mu\vert_{\mathrm{inv}}$ has dimension $51$ and $\mathrm{Sym}^2(K)^{O(5)}$ has dimension $36$, so
 

@@ -14,10 +14,10 @@ Verdicts are appended below as they are reached.
 
 Read [findings/conventions.md](../findings/conventions.md) in full, including today's rows for $M(n)$, $d$/$d_\varphi$/$d_\psi$, $t$/$\kappa$, $\Pi$, $B$, $b$/$B^+$, and warning [W5](../findings/INDEX-traps.md).
 
-- **The letter $M$.** In [diagonal-half.md](../findings/diagonal-half.md) $M$ is the $n\times n$ **sectional** matrix, not the global maximum $M(n)$ of the $M(n)$ row and not the $\Lambda^2$ operator. Unit Weyl norm is $\operatorname{tr}M^2=\sum_{a\ne b}M_{ab}^2=t=2$, the **ordered** sum. L99 is consistent with this throughout.
+- **The letter $M$.** In [diagonal-half.md](../findings/diagonal-half.md) $M$ is the $n\times n$ **sectional** matrix, not the global maximum $M(n)$ of the $M(n)$ row and not the $\Lambda^2$ operator. Unit Weyl norm is $\mathop{\mathrm{tr}}M^2=\sum_{a\ne b}M_{ab}^2=t=2$, the **ordered** sum. L99 is consistent with this throughout.
 - **The ambient set** is $\mathcal D_n=\{S\ \text{symmetric},\ \text{hollow},\ S\mathbf1=0\}$, the vertex matrices of the coordinate-diagonal Weyl operators, per the $\mathcal D_n$ row.
 - **The pairings.** $\langle\cdot,\cdot\rangle_{\Lambda^2}$ is half the $n\times n$ Frobenius pairing over both index orders. Every orthogonality statement below is insensitive to the choice; every *constant* below is stated in the pairing named.
-- **$L_e=\mathcal L/\theta$** with $\mathcal L=\tfrac12D[\Phi-\operatorname{diag}(s)]$, $\Phi(M)=M^{\circ2}+M^2$, the file's own corrected operator, hollowed. [Lemma L24](../results.md) is the criterion: at a maximiser with $\theta>0$, $\lambda_{\max}(L_e\vert_{W^\perp})\le\tfrac12$.
+- **$L_e=\mathcal L/\theta$** with $\mathcal L=\tfrac12D[\Phi-\mathop{\mathrm{diag}}(s)]$, $\Phi(M)=M^{\circ2}+M^2$, the file's own corrected operator, hollowed. [Lemma L24](../results.md) is the criterion: at a maximiser with $\theta>0$, $\lambda_{\max}(L_e\vert_{W^\perp})\le\tfrac12$.
 
 ### Symbols the block leans on that are defined nowhere
 
@@ -29,19 +29,19 @@ Read [findings/conventions.md](../findings/conventions.md) in full, including to
 
 **The block asserts it from a census**: *"$\dim\ker M$ is the NUMBER OF CONNECTED COMPONENTS, not $1$, verified to $10^{-15}$ over some $400$ exact critical points."* It is two lines from the criticality equation the file itself derives.
 
-Let $M\in\mathcal D_n$ satisfy the diagonal criticality equation $M^{\circ2}+M^2=\theta M+\operatorname{diag}(s)$, $s_a=\sum_bM_{ab}^2$. Let $G(M)$ be the support graph (vertices $1,\dots,n$, edge $ab$ iff $M_{ab}\ne0$), with $k$ connected components $c_1,\dots,c_k$. Put
+Let $M\in\mathcal D_n$ satisfy the diagonal criticality equation $M^{\circ2}+M^2=\theta M+\mathop{\mathrm{diag}}(s)$, $s_a=\sum_bM_{ab}^2$. Let $G(M)$ be the support graph (vertices $1,\dots,n$, edge $ab$ iff $M_{ab}\ne0$), with $k$ connected components $c_1,\dots,c_k$. Put
 
-$$L\ :=\ \operatorname{diag}(s)-M^{\circ2}.$$
+$$L\ :=\ \mathop{\mathrm{diag}}(s)-M^{\circ2}.$$
 
 $M^{\circ2}$ is entrywise nonnegative, hollow, with row sums $s$, so **$L$ is exactly the Laplacian of the weighted graph with weights $w_{ab}=M_{ab}^2$**, whose support is $G(M)$. Hence $L\succeq0$, $u^{\mathsf T}Lu=\tfrac12\sum_{a,b}M_{ab}^2(u_a-u_b)^2$, and $\ker L$ is spanned by the component indicators $\mathbf1_{c_1},\dots,\mathbf1_{c_k}$, the standard fact, with $\dim\ker L=k$.
 
 **$\ker M\subseteq\ker L$.** If $Mu=0$ then $M^2u=0$, and applying the criticality equation to $u$,
 
-$$M^{\circ2}u+\underbrace{M^2u}_{=0}=\theta\underbrace{Mu}_{=0}+\operatorname{diag}(s)u\quad\Longrightarrow\quad Lu=\big(\operatorname{diag}(s)-M^{\circ2}\big)u=0 .$$
+$$M^{\circ2}u+\underbrace{M^2u}_{=0}=\theta\underbrace{Mu}_{=0}+\mathop{\mathrm{diag}}(s)u\quad\Longrightarrow\quad Lu=\big(\mathop{\mathrm{diag}}(s)-M^{\circ2}\big)u=0 .$$
 
 **$\ker L\subseteq\ker M$.** For a component $c$, row $a$ of $M\mathbf1_c$ is $\sum_{b\in c}M_{ab}$. If $a\in c$ this is $\sum_bM_{ab}=0$, since $M_{ab}=0$ for $b\notin c$; if $a\notin c$ every term vanishes. So $M\mathbf1_c=0$.
 
-$$\boxed{\ \ker M=\ker L=\operatorname{span}\{\mathbf1_{c_1},\dots,\mathbf1_{c_k}\},\qquad \dim\ker M=\#\text{components}.\ }$$
+$$\boxed{\ \ker M=\ker L=\mathop{\mathrm{span}}\{\mathbf1_{c_1},\dots,\mathbf1_{c_k}\},\qquad \dim\ker M=\#\text{components}.\ }$$
 
 **Hypotheses used**: criticality, hollowness, $M\mathbf1=0$. Nothing else, no $\theta>0$, no normalisation, no connectedness, no dimension. **The statement is stronger than the block's**: it identifies $\ker M$, not only its dimension, and that identification is what the deformation family below actually needs.
 
@@ -49,17 +49,17 @@ $$\boxed{\ \ker M=\ker L=\operatorname{span}\{\mathbf1_{c_1},\dots,\mathbf1_{c_k
 
 ## Derivation B, the scaling law and the harmonic-square law, both directions
 
-**Construction direction.** Let $M_i\in\mathcal D_{n_i}$ be diagonal critical points with $\operatorname{tr}M_i^2=2$ and values $\theta_i$, and set $M=\bigoplus_i\lambda_iM_i$ on $n=\sum n_i$ coordinates. Blocks meet in no index, so $M^{\circ2}=\bigoplus\lambda_i^2M_i^{\circ2}$ and $M^2=\bigoplus\lambda_i^2M_i^2$, giving
+**Construction direction.** Let $M_i\in\mathcal D_{n_i}$ be diagonal critical points with $\mathop{\mathrm{tr}}M_i^2=2$ and values $\theta_i$, and set $M=\bigoplus_i\lambda_iM_i$ on $n=\sum n_i$ coordinates. Blocks meet in no index, so $M^{\circ2}=\bigoplus\lambda_i^2M_i^{\circ2}$ and $M^2=\bigoplus\lambda_i^2M_i^2$, giving
 
-$$M^{\circ2}+M^2=\bigoplus_i\lambda_i^2\big(\theta_iM_i+\operatorname{diag}(s^{(i)})\big).$$
+$$M^{\circ2}+M^2=\bigoplus_i\lambda_i^2\big(\theta_iM_i+\mathop{\mathrm{diag}}(s^{(i)})\big).$$
 
-The diagonal matches for free, since $s\vert_{c_i}=\lambda_i^2s^{(i)}$. Off-diagonally, criticality $=\theta M+\operatorname{diag}(s)$ reads $\lambda_i^2\theta_iM_i=\theta\lambda_iM_i$, so at every $\lambda_i\ne0$ with $M_i\ne0$,
+The diagonal matches for free, since $s\vert_{c_i}=\lambda_i^2s^{(i)}$. Off-diagonally, criticality $=\theta M+\mathop{\mathrm{diag}}(s)$ reads $\lambda_i^2\theta_iM_i=\theta\lambda_iM_i$, so at every $\lambda_i\ne0$ with $M_i\ne0$,
 
 $$\lambda_i\theta_i=\theta .$$
 
-Unit norm is $\operatorname{tr}M^2=2\sum\lambda_i^2=2$, i.e. $\sum\lambda_i^2=1$, so $\theta^2\sum_i\theta_i^{-2}=1$ and $\theta=\big(\sum_i\theta_i^{-2}\big)^{-1/2}$. **Consistency of the value**: contracting the criticality equation against $M$ (which kills $\operatorname{diag}(s)$, $M$ being hollow) gives $2\theta=\langle M^{\circ2}+M^2,M\rangle=\sum_i\lambda_i^3\cdot2\theta_i$, hence $\theta=\theta^3\sum\theta_i^{-2}=\theta$. No new information, and no contradiction.
+Unit norm is $\mathop{\mathrm{tr}}M^2=2\sum\lambda_i^2=2$, i.e. $\sum\lambda_i^2=1$, so $\theta^2\sum_i\theta_i^{-2}=1$ and $\theta=\big(\sum_i\theta_i^{-2}\big)^{-1/2}$. **Consistency of the value**: contracting the criticality equation against $M$ (which kills $\mathop{\mathrm{diag}}(s)$, $M$ being hollow) gives $2\theta=\langle M^{\circ2}+M^2,M\rangle=\sum_i\lambda_i^3\cdot2\theta_i$, hence $\theta=\theta^3\sum\theta_i^{-2}=\theta$. No new information, and no contradiction.
 
-**Analysis direction, which the block needs and never states.** Given *any* diagonal critical point $M$ with support components $c$, restrict the criticality equation to the diagonal block $M\vert_c$: it is the same equation with the same $\theta$. Put $\lambda_c^2=\tfrac12\operatorname{tr}\big((M\vert_c)^2\big)$ and $M_c=(M\vert_c)/\lambda_c$; then $M_c\in\mathcal D_{|c|}$ is critical at $\theta_c=\theta/\lambda_c$. So the decomposition into scaled critical summands is **automatic** rather than a hypothesis, $\sum_c\lambda_c^2=1$, and the harmonic-square law follows for every disconnected diagonal critical point.
+**Analysis direction, which the block needs and never states.** Given *any* diagonal critical point $M$ with support components $c$, restrict the criticality equation to the diagonal block $M\vert_c$: it is the same equation with the same $\theta$. Put $\lambda_c^2=\tfrac12\mathop{\mathrm{tr}}\big((M\vert_c)^2\big)$ and $M_c=(M\vert_c)/\lambda_c$; then $M_c\in\mathcal D_{|c|}$ is critical at $\theta_c=\theta/\lambda_c$. So the decomposition into scaled critical summands is **automatic** rather than a hypothesis, $\sum_c\lambda_c^2=1$, and the harmonic-square law follows for every disconnected diagonal critical point.
 
 **Verdict on this part: CONFIRMED, and the numerics are surplus.** The block's own sentence carries the reason (*"since $\lambda_i\theta_i=\theta$ is what makes each block satisfy the same equation, and unit norm then gives"*), so the *"verified to $10^{-17}$"* at three points is a check on an argument already given in the line above it. **The record also holds the law twice over, derived**: [second-order.md](../findings/second-order.md) proves it in one line from $\circ$-orthogonality, and [nondegeneracy.md](../findings/nondegeneracy.md) states $\tfrac1{\theta^2}=\sum_i\tfrac1{\theta_i^2}$ with $|\theta|<\min_i|\theta_i|$. **The brief's reading is right: a measurement stands where a proof was available and the proof is one file away.** The repair is a cross-reference, not new mathematics.
 
@@ -84,7 +84,7 @@ $$\boxed{\ \mathcal LN=\theta N\ \text{ exactly},\qquad L_eN=N.\ }$$
 
 ## Derivation D, admissibility, and why "two components carrying an edge" is exactly right
 
-Write $\tau_c:=\operatorname{tr}\big((M\vert_c)^2\big)=2\lambda_c^2=2\theta^2/\theta_c^2$, which is $>0$ iff the component carries an edge. Then
+Write $\tau_c:=\mathop{\mathrm{tr}}\big((M\vert_c)^2\big)=2\lambda_c^2=2\theta^2/\theta_c^2$, which is $>0$ iff the component carries an edge. Then
 
 $$\langle N,M\rangle_F=\sum_{a\ne b}N_{ab}M_{ab}=\sum_ca_c\!\!\sum_{a,b\in c}\!\!M_{ab}^2=\sum_ca_c\tau_c=2\theta^2\sum_c\frac{a_c}{\theta_c^2},$$
 
@@ -109,7 +109,7 @@ $$\textbf{Lemma L99, proved.}\ \textit{Let }M\in\mathcal D_n\textit{ be a diagon
 
 ## Defect 1, the body claims the lemma for **every disconnected** point, and the file refutes that two paragraphs above
 
-> *"So every disconnected diagonal critical point with $\theta>0$ has $\lambda_{\max}\ge\theta>\theta/2$ and fails second-order maximality"* … *"every disconnected diagonal critical point with $\theta>0$ fails second-order maximality, at eigenvalue exactly $\theta$"* … *"the $A=\operatorname{diag}(a)$ family is **live at every disconnected point**"*.
+> *"So every disconnected diagonal critical point with $\theta>0$ has $\lambda_{\max}\ge\theta>\theta/2$ and fails second-order maximality"* … *"every disconnected diagonal critical point with $\theta>0$ fails second-order maximality, at eigenvalue exactly $\theta$"* … *"the $A=\mathop{\mathrm{diag}}(a)$ family is **live at every disconnected point**"*.
 
 All three sentences take **disconnected**, i.e. $k\ge2$. The correct hypothesis is $k^+\ge2$. The gap is exactly padding, and the file states the counterexample **at line 155, eight lines earlier**:
 
@@ -140,11 +140,11 @@ Two errors in one clause, both already diagnosed inside the same file, ten and t
 
 ## Cross-check of Derivation C against the record, by a route sharing nothing with L99
 
-[second-order.md](../findings/second-order.md) carries a *derived* identity for the same family, obtained without the component decomposition: for $A=\operatorname{diag}(a)$ the deformation is $N_{ij}=2M_{ij}(a_i+a_j)$ and
+[second-order.md](../findings/second-order.md) carries a *derived* identity for the same family, obtained without the component decomposition: for $A=\mathop{\mathrm{diag}}(a)$ the deformation is $N_{ij}=2M_{ij}(a_i+a_j)$ and
 
-$$(L_WH_A)_{ij}=(a_i+a_j)\big[M_{ij}^2+\theta M_{ij}\big]+2\big(M\operatorname{diag}(a)M\big)_{ij}.$$
+$$(L_WH_A)_{ij}=(a_i+a_j)\big[M_{ij}^2+\theta M_{ij}\big]+2\big(M\mathop{\mathrm{diag}}(a)M\big)_{ij}.$$
 
-Rebuilt from the definitions: $M_{ij}N_{ij}=2M_{ij}^2(a_i+a_j)$ and $\tfrac12(MN+NM)_{ij}=2(M\operatorname{diag}(a)M)_{ij}+(a_i+a_j)(M^2)_{ij}$, and substituting $(M^2)_{ij}=\theta M_{ij}-M_{ij}^2$ reproduces the recorded right-hand side exactly. **Specialising to $a$ constant on components**, where $a_i+a_j=2a_c$ on an edge and $(M\operatorname{diag}(a)M)_{ij}=a_c(M^2)_{ij}$ by the same adjacency remark, gives $4a_c\theta M_{ij}=\theta N_{ij}$. **Derivation C confirmed, from a formula on the record that was derived rather than measured, and that never mentions components.**
+Rebuilt from the definitions: $M_{ij}N_{ij}=2M_{ij}^2(a_i+a_j)$ and $\tfrac12(MN+NM)_{ij}=2(M\mathop{\mathrm{diag}}(a)M)_{ij}+(a_i+a_j)(M^2)_{ij}$, and substituting $(M^2)_{ij}=\theta M_{ij}-M_{ij}^2$ reproduces the recorded right-hand side exactly. **Specialising to $a$ constant on components**, where $a_i+a_j=2a_c$ on an edge and $(M\mathop{\mathrm{diag}}(a)M)_{ij}=a_c(M^2)_{ij}$ by the same adjacency remark, gives $4a_c\theta M_{ij}=\theta N_{ij}$. **Derivation C confirmed, from a formula on the record that was derived rather than measured, and that never mentions components.**
 
 ## The "algebraic candidates" identity is also a two-line derivation
 
@@ -152,10 +152,10 @@ Rebuilt from the definitions: $M_{ij}N_{ij}=2M_{ij}^2(a_i+a_j)$ and $\tfrac12(MN
 
 Take $\mathrm{proj}$ to be the orthogonal projection onto the admissible space $V=\{N\in\mathcal D_n:N\perp M\}$, the reading the statement needs, and the one the block does not supply. Project the criticality equation:
 
-- $\operatorname{diag}(s)$ is purely diagonal and every element of $V$ is hollow, so $\mathrm{proj}(\operatorname{diag}(s))=0$;
+- $\mathop{\mathrm{diag}}(s)$ is purely diagonal and every element of $V$ is hollow, so $\mathrm{proj}(\mathop{\mathrm{diag}}(s))=0$;
 - $M\in\mathcal D_n$ and $V\perp M$, so $\mathrm{proj}(\theta M)=0$.
 
-Hence $\mathrm{proj}(M^{\circ2})+\mathrm{proj}(M^2)=\mathrm{proj}(\theta M+\operatorname{diag}(s))=0$. $\square$
+Hence $\mathrm{proj}(M^{\circ2})+\mathrm{proj}(M^2)=\mathrm{proj}(\theta M+\mathop{\mathrm{diag}}(s))=0$. $\square$
 
 **CONFIRMED, and the numerics are again surplus.** The derivation also explains the reported figures without a run: it forces $\lVert\mathrm{proj}(M^{\circ2})\rVert=\lVert\mathrm{proj}(M^2)\rVert$, which is the repeated $0.211$, $0.211$ at the $C_5$ blow-up and the *"$0.059$ twice"* at the $n=9$ witness. **And it shows why $\mathrm{proj}$ had to be defined**: drop the $\perp M$ condition and the image is $\theta M\ne0$, so the identity is false for the projection onto $\mathcal D_n$.
 

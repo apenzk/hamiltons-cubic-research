@@ -7,7 +7,7 @@
 **Phase plan**
 
 1. Read the target block verbatim.
-2. Fix conventions against the record's anchors ($\operatorname{tr}W^\#=-1$, $\mathrm{Id}^\#=(n-2)\mathrm{Id}$, $\theta_0(6)=\sqrt{10}/3$, $\lVert\varphi_{ab}\rVert^2=1$).
+2. Fix conventions against the record's anchors ($\mathop{\mathrm{tr}}W^\#=-1$, $\mathrm{Id}^\#=(n-2)\mathrm{Id}$, $\theta_0(6)=\sqrt{10}/3$, $\lVert\varphi_{ab}\rVert^2=1$).
 3. Attack point 1: the truncated pointer, does the named section exist and hold the argument?
 4. Attack point 2: the witnesses, graded, critical, three-or-more eigenvalues, each checked.
 5. Attack point 3: which sense of "graded", against `findings/graded-half.md`.
@@ -23,13 +23,13 @@
 
 ### Conventions fixed, by independent reconstruction (screen)
 
-I rebuilt $\Lambda^2\mathbb R^6$ in the basis $\varphi_{ab}=E_{ab}-E_{ba}$ under the half-trace pairing $\langle X,Y\rangle=\tfrac12\operatorname{tr}(X^{\mathsf T}Y)$ and computed $\#$ from structure constants as $(W^\#)_{\alpha\beta}=\tfrac12\sum c_{\alpha\gamma\epsilon}c_{\beta\delta\zeta}W_{\gamma\delta}W_{\epsilon\zeta}$. All four of the brief's anchors reproduce, to machine zero:
+I rebuilt $\Lambda^2\mathbb R^6$ in the basis $\varphi_{ab}=E_{ab}-E_{ba}$ under the half-trace pairing $\langle X,Y\rangle=\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$ and computed $\#$ from structure constants as $(W^\#)_{\alpha\beta}=\tfrac12\sum c_{\alpha\gamma\epsilon}c_{\beta\delta\zeta}W_{\gamma\delta}W_{\epsilon\zeta}$. All four of the brief's anchors reproduce, to machine zero:
 
 | anchor | reproduced |
 | --- | --- |
 | $\lVert\varphi_{ab}\rVert^2=1$ | Gram matrix $=\mathrm{Id}_{15}$, deviation $0.0$ |
 | $\mathrm{Id}^\#=(n-2)\mathrm{Id}$ | deviation $0.0$ at $n=6$ |
-| $\operatorname{tr}W^\#=-1$ | $-1.0$ at the unit-norm $W_{\mathbb{CP}^3}$ |
+| $\mathop{\mathrm{tr}}W^\#=-1$ | $-1.0$ at the unit-norm $W_{\mathbb{CP}^3}$ |
 | $\theta_0(6)=\sqrt{10}/3$ | $1.0540925533894598$, matching the block's $1.054092553$ |
 
 *This is a screen on objects I constructed for the purpose, run in seconds, and is reported as a screen. It is not offered as evidence for a positive claim; each positive claim below has an argument.*

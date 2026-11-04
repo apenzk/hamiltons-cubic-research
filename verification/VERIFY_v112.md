@@ -69,7 +69,7 @@ $$p_3(\mu)\ \le\ p_3(K)+3M_+\big(1-p_2(K)\big).$$
 
 **The combination.** $\theta=\tfrac32p_3(\mu)-\tfrac12p_3(\omega)$; the $+\tfrac32$ multiplies an **upper** bound and the $-\tfrac12$ multiplies a **lower** bound, so both push upward. The display follows. *The direction of every convexity claim is right, and each is asserted on the range where it holds and nowhere else.*
 
-**The Jensen route, which the block says makes Karamata unnecessary.** Write $M=U\operatorname{diag}(\mu)U^*$; then $K_i=M_{ii}=\sum_j\lvert U_{ij}\rvert^2\mu_j=\sum_jP_{ij}\mu_j$ with $P_{ij}=\lvert U_{ij}\rvert^2$ doubly stochastic. For convex $g$, each row is Jensen, $g(K_i)\le\sum_jP_{ij}g(\mu_j)$; summing over $i$ and exchanging the order,
+**The Jensen route, which the block says makes Karamata unnecessary.** Write $M=U\mathop{\mathrm{diag}}(\mu)U^*$; then $K_i=M_{ii}=\sum_j\lvert U_{ij}\rvert^2\mu_j=\sum_jP_{ij}\mu_j$ with $P_{ij}=\lvert U_{ij}\rvert^2$ doubly stochastic. For convex $g$, each row is Jensen, $g(K_i)\le\sum_jP_{ij}g(\mu_j)$; summing over $i$ and exchanging the order,
 $$\sum_ig(K_i)\ \le\ \sum_j\Big(\sum_iP_{ij}\Big)g(\mu_j)\ =\ \sum_jg(\mu_j),$$
 the collapse being by the **column** sums, exactly as the block says. No sorting, no Abel summation, no majorization theory. **This is correct and it is a complete substitute for I3 in the inequality**, applied with $g=f$ on the $\omega$ side and $g=-h$ on the $\mu$ side. *One scope note the block does not make: the Jensen route needs $g$ convex only on an interval containing $\mu$ (and hence $K$, being convex combinations), which is precisely the interval Karamata would have needed, so the substitution loses nothing.*
 

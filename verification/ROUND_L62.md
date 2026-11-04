@@ -116,7 +116,7 @@ Searched three ways, by number (`L62`, `Lemma~62`, `Lemma 62`), by the statement
 
 **L62 discharges L59's necessary condition, and L59 is consumed by nothing further.** The chain the record draws is $\text{L87}\to\text{L59}\to\text{L62}\to$ *"the certificate is feasible"*.
 
-**That chain terminates in a claim the record establishes a second way, by exhibition.** L59 is a **necessary** condition for the certificate to exist; [L61](ROUND_L61.md) produces the certificate (an explicit positive-definite rational Gram whose sextic is $F_5$) and an exhibited object proves its own existence without the dimension count that predicted it. **So $F_5\in\operatorname{image}$, the boxed conclusion at [sym3-blocks.md:227](../findings/sym3-blocks.md), is reached independently of $\dim\mathrm{ANN}=1$.**
+**That chain terminates in a claim the record establishes a second way, by exhibition.** L59 is a **necessary** condition for the certificate to exist; [L61](ROUND_L61.md) produces the certificate (an explicit positive-definite rational Gram whose sextic is $F_5$) and an exhibited object proves its own existence without the dimension count that predicted it. **So $F_5\in\mathop{\mathrm{image}}$, the boxed conclusion at [sym3-blocks.md:227](../findings/sym3-blocks.md), is reached independently of $\dim\mathrm{ANN}=1$.**
 
 **This bounds the impact before any adjudication returns.** Whatever phase 3 says of the squeeze, the conclusion it supports is on the record by another route, which is the definition of `CONTAINED`. What L62 uniquely carries is narrower and worth stating exactly:
 
@@ -139,11 +139,11 @@ Searched three ways, by number (`L62`, `Lemma~62`, `Lemma 62`), by the statement
 
 [v69](VERIFY_v69.md) and [v70](VERIFY_v70.md), independently, `VALID AS WRITTEN`.
 
-**The defence, which is the strongest case for the text as it stands.** $\operatorname{im}\mu_K$ is a subspace of the $14$-dimensional $(\mathrm{Sym}^6\mathcal W_5^*)^{O(5)}$ and $\mathrm{ANN}$ is its annihilator there, so $\mathrm{rank}=14-\dim\mathrm{ANN}$ is rank–nullity for the adjoint, and $F_5\in\operatorname{image}\iff F_5\perp\mathrm{ANN}$ is the double-annihilator theorem on a space carrying a definite pairing. **The adjunction is the definition of the adjoint rather than an imported theorem**, so it brings no hypotheses of its own.
+**The defence, which is the strongest case for the text as it stands.** $\mathop{\mathrm{im}}\mu_K$ is a subspace of the $14$-dimensional $(\mathrm{Sym}^6\mathcal W_5^*)^{O(5)}$ and $\mathrm{ANN}$ is its annihilator there, so $\mathrm{rank}=14-\dim\mathrm{ANN}$ is rank–nullity for the adjoint, and $F_5\in\mathop{\mathrm{image}}\iff F_5\perp\mathrm{ANN}$ is the double-annihilator theorem on a space carrying a definite pairing. **The adjunction is the definition of the adjoint rather than an imported theorem**, so it brings no hypotheses of its own.
 
 **One hypothesis is genuinely absent and is true.** Passing from *"$\mathrm{Cat}_F$ kills the invariant Grams"* to $\mathrm{Cat}_F(K,K)=0$ is a Reynolds average, $K$ is an $O(5)$-submodule, $\mathrm{Cat}_F$ is invariant when $F$ is, and an invariant functional vanishing on the invariants vanishes outright. Three lines, needing no positivity.
 
-**And in the record's actual configuration that step is bypassed**: the inclusion $\mathrm{ANN}\subseteq(\operatorname{im}\mu_K)^{\perp}$ is free, $\mathcal A(W_0^6)$ is a nonzero element of $\mathrm{ANN}$, the order-one cap forces the codimension to be at least $1$, and the rank $13$ closes it to exactly $1$, so the two one-dimensional spaces coincide. **The Reynolds route is unconditional where the configuration inherits the rank**, which is the reason to write it down rather than rely on the coincidence.
+**And in the record's actual configuration that step is bypassed**: the inclusion $\mathrm{ANN}\subseteq(\mathop{\mathrm{im}}\mu_K)^{\perp}$ is free, $\mathcal A(W_0^6)$ is a nonzero element of $\mathrm{ANN}$, the order-one cap forces the codimension to be at least $1$, and the rank $13$ closes it to exactly $1$, so the two one-dimensional spaces coincide. **The Reynolds route is unconditional where the configuration inherits the rank**, which is the reason to write it down rather than rely on the coincidence.
 
 **Both adjudicators reached the same repair independently, and it is a word.** L59's sentence writes $\mu$ for the restricted map and, one sentence later, for the unrestricted one; crossing them gives $14=13$. **The fix is the word *restricted* in each half, and it moves no number.**
 
@@ -157,9 +157,9 @@ Searched three ways, by number (`L62`, `Lemma~62`, `Lemma 62`), by the statement
 
 ### D1, **withdrawn**
 
-[v67](VERIFY_v67.md) and [v68](VERIFY_v68.md), independently, `VALID AS WRITTEN`. **The pipeline's number is not $\operatorname{rank}(\mu_K)$, and the sentence does not claim it is.** It is $\operatorname{rank}_{\mathbb F_p}(\mathrm{ev}_{40}\circ\mu_K)$, and every link moves the way the squeeze needs:
+[v67](VERIFY_v67.md) and [v68](VERIFY_v68.md), independently, `VALID AS WRITTEN`. **The pipeline's number is not $\mathop{\mathrm{rank}}(\mu_K)$, and the sentence does not claim it is.** It is $\mathop{\mathrm{rank}}_{\mathbb F_p}(\mathrm{ev}_{40}\circ\mu_K)$, and every link moves the way the squeeze needs:
 
-$$13=\operatorname{rank}_{\mathbb F_p}(\mathrm{ev}_{40}\circ\mu_K)\le\operatorname{rank}_{\mathbb Q}\le\operatorname{rank}(\mathrm{ev}_{40}\circ\mu_K)\le\operatorname{rank}(\mu_K)\le13.$$
+$$13=\mathop{\mathrm{rank}}_{\mathbb F_p}(\mathrm{ev}_{40}\circ\mu_K)\le\mathop{\mathrm{rank}}_{\mathbb Q}\le\mathop{\mathrm{rank}}(\mathrm{ev}_{40}\circ\mu_K)\le\mathop{\mathrm{rank}}(\mu_K)\le13.$$
 
 **The dimension mismatch is real and costs no rank.** For real $v$ a Hermitian form and its real part agree, so the $11$-dimensional $\Lambda^2(K)^{O(5)}$ lies in the kernel and $47=36+11$ leaves the image unchanged.
 
@@ -182,7 +182,7 @@ $$13=\operatorname{rank}_{\mathbb F_p}(\mathrm{ev}_{40}\circ\mu_K)\le\operatorna
 
 **`PROVEN, hypotheses corrected`**, impact **`CONTAINED`**, with one **`HYPOTHESIS-DEBT`** recorded.
 
-- the cap $\operatorname{rank}(\mu_K)\le13$ is a theorem in six lines;
+- the cap $\mathop{\mathrm{rank}}(\mu_K)\le13$ is a theorem in six lines;
 - the value $13$ is an exact rank under that cap, which is a proof and not a measurement;
 - the hypotheses the chain uses are now written into the statement, except the $47\to36$ step, which is owed.
 

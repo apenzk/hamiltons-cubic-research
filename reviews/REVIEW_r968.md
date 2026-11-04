@@ -19,7 +19,7 @@ Reviewer **r968**, working from [BRIEF_I106a_norm_trade.md](BRIEF_I106a_norm_tra
 
 ## Claims 1, 2 and 3: the first order, and why it is vacuous
 
-**Claim 1 is immediate and needs no criticality.** $\lambda\hat U$ and $\kappa V$ are traceless symmetric because $\hat U$ and $V$ are, and $3\operatorname{tr}(\hat UX)+\operatorname{tr}(VY)=3\lambda\operatorname{tr}\hat U^2+\kappa\operatorname{tr}V^2=3\lambda n_U+\kappa n_V=0$ by hypothesis. The one thing it uses beyond substitution is $\lvert M\rvert^2=\operatorname{tr}M^2$, which holds because both matrices are symmetric. Batch 21 quantifies over all such pairs, so it applies with nothing added.
+**Claim 1 is immediate and needs no criticality.** $\lambda\hat U$ and $\kappa V$ are traceless symmetric because $\hat U$ and $V$ are, and $3\mathop{\mathrm{tr}}(\hat UX)+\mathop{\mathrm{tr}}(VY)=3\lambda\mathop{\mathrm{tr}}\hat U^2+\kappa\mathop{\mathrm{tr}}V^2=3\lambda n_U+\kappa n_V=0$ by hypothesis. The one thing it uses beyond substitution is $\lvert M\rvert^2=\mathop{\mathrm{tr}}M^2$, which holds because both matrices are symmetric. Batch 21 quantifies over all such pairs, so it applies with nothing added.
 
 **Claim 2 is correct, and the equality is the stationarity condition times a positive number.** Writing $\hat U\mapsto s\hat U$, $V\mapsto tV$ gives $\Phi=\alpha s^3p_3+\beta st^2q+s\langle\hat U,A\rangle+t\langle V,C\rangle$, and with $a=s\lvert\hat U\rvert$, $b=t\lvert V\rvert$ the condition $b\,\partial_a\Phi=3a\,\partial_b\Phi$ at $s=t=1$ reads
 
@@ -44,12 +44,12 @@ which is the displayed equality multiplied by $3\lvert\hat U\rvert\lvert V\rvert
 
 | batch 21 term | at $X=\lambda\hat U$, $Y=\kappa V$ | what it uses |
 |---|---|---|
-| $\operatorname{tr}(\hat UX^2)$ | $\lambda^2\operatorname{tr}(\hat U\hat U\hat U)=\lambda^2p_3$ | scalar homogeneity |
-| $\operatorname{tr}(XVY)$ | $\lambda\kappa\operatorname{tr}(\hat UVV)=\lambda\kappa q$ | scalar homogeneity |
-| $\operatorname{tr}(\hat UY^2)$ | $\kappa^2\operatorname{tr}(\hat UVV)=\kappa^2q$ | scalar homogeneity |
-| $\lvert X\rvert^2$, $\lvert Y\rvert^2$ | $\lambda^2n_U$, $\kappa^2n_V$ | symmetry, for $\lvert M\rvert^2=\operatorname{tr}M^2$ |
+| $\mathop{\mathrm{tr}}(\hat UX^2)$ | $\lambda^2\mathop{\mathrm{tr}}(\hat U\hat U\hat U)=\lambda^2p_3$ | scalar homogeneity |
+| $\mathop{\mathrm{tr}}(XVY)$ | $\lambda\kappa\mathop{\mathrm{tr}}(\hat UVV)=\lambda\kappa q$ | scalar homogeneity |
+| $\mathop{\mathrm{tr}}(\hat UY^2)$ | $\kappa^2\mathop{\mathrm{tr}}(\hat UVV)=\kappa^2q$ | scalar homogeneity |
+| $\lvert X\rvert^2$, $\lvert Y\rvert^2$ | $\lambda^2n_U$, $\kappa^2n_V$ | symmetry, for $\lvert M\rvert^2=\mathop{\mathrm{tr}}M^2$ |
 
-No factor is ever moved around a trace. I confirmed the whole substitution symbolically as an identity of polynomials in the entries. **The contrast with `orbit_equals_batch21` is the point**: there $X=[W,\hat U]$ and $Y=[W,V]$ are *different* matrices from $\hat U$ and $V$, so collapsing the $\beta$ terms genuinely needs $\operatorname{tr}(XYV)=\operatorname{tr}(XVY)$ and the symmetry behind it. Here they are multiples, and the step is a `simp` over scalar multiplication. **So the recommendation is to type it rather than to record it as a gap**: the missing declaration is a few lines, and pairing it with the orbit's `sorry` overstates what is open by putting a routine step in the same class as a real one. The only hypothesis it carries is symmetry of $\hat U$ and $V$, which the setting states.
+No factor is ever moved around a trace. I confirmed the whole substitution symbolically as an identity of polynomials in the entries. **The contrast with `orbit_equals_batch21` is the point**: there $X=[W,\hat U]$ and $Y=[W,V]$ are *different* matrices from $\hat U$ and $V$, so collapsing the $\beta$ terms genuinely needs $\mathop{\mathrm{tr}}(XYV)=\mathop{\mathrm{tr}}(XVY)$ and the symmetry behind it. Here they are multiples, and the step is a `simp` over scalar multiplication. **So the recommendation is to type it rather than to record it as a gap**: the missing declaration is a few lines, and pairing it with the orbit's `sorry` overstates what is open by putting a routine step in the same class as a real one. The only hypothesis it carries is symmetry of $\hat U$ and $V$, which the setting states.
 
 ## Claims 5 and 6: what the bound says, and the numbers
 
@@ -73,7 +73,7 @@ All three thresholds agree with the block. Each point is non-commuting, $\lVert[
 
 **At the three points the claim is right**, every threshold being negative against a large positive $\mu$.
 
-**The block's stated ground does not support the general reading.** The threshold is not sign-definite. Screening it on configurations I constructed for the purpose, at $\hat U=\operatorname{diag}(2,-1,-1)$ with $V=\varepsilon\hat U$ it is $+3.00$, $+4.33$, $+4.48$ and $+4.498$ as $\varepsilon$ runs $1,0.3,0.1,0.03$, approaching $2\beta=4.5$, which is batch 18's own value at that configuration, the point where the record records batch 18's constant as sharp. So "its threshold is NEGATIVE, so it excludes nothing" is a fact about the three points and reads as a fact about the bound. *That is a screen on constructed objects and not evidence about critical points.*
+**The block's stated ground does not support the general reading.** The threshold is not sign-definite. Screening it on configurations I constructed for the purpose, at $\hat U=\mathop{\mathrm{diag}}(2,-1,-1)$ with $V=\varepsilon\hat U$ it is $+3.00$, $+4.33$, $+4.48$ and $+4.498$ as $\varepsilon$ runs $1,0.3,0.1,0.03$, approaching $2\beta=4.5$, which is batch 18's own value at that configuration, the point where the record records batch 18's constant as sharp. So "its threshold is NEGATIVE, so it excludes nothing" is a fact about the three points and reads as a fact about the bound. *That is a screen on constructed objects and not evidence about critical points.*
 
 **The general statement is nevertheless true, by an argument the block does not give.** The radial pair is one admissible tangent inside batch 21's quantifier, which is claim 1. Batch 21's full condition therefore implies the trade bound at every point where batch 21 holds, so **the trade bound can exclude no configuration that batch 21's full condition does not already exclude**, everywhere and not merely at the three survivors. This is the same upgrade the record applied to batch 33's orbit, and it makes the redundancy a theorem and demotes the three-point table to a confirmation.
 

@@ -20,19 +20,19 @@
 
 ## 0. Conventions, fixed once
 
-Throughout, $W$ is a maximiser of $P$ on the unit sphere of $\mathcal W_n$, $\theta$ its critical value with $Q(W)=\theta W$ and $e=W/\theta$. A frame $F$ is an orthonormal frame of $\mathbb R^n$; $M_{ab}=\langle W\varphi_{ab},\varphi_{ab}\rangle$ is the frame-diagonal (sectional) part and $R=W-\operatorname{diag}(M)$ the rest, so $R$ has zero diagonal in $F$. For a $4$-subset $S=\{i,j,k,l\}$, $A=M_{ij}+M_{kl}$, $B=M_{ik}+M_{jl}$, $C=M_{il}+M_{jk}$ and
+Throughout, $W$ is a maximiser of $P$ on the unit sphere of $\mathcal W_n$, $\theta$ its critical value with $Q(W)=\theta W$ and $e=W/\theta$. A frame $F$ is an orthonormal frame of $\mathbb R^n$; $M_{ab}=\langle W\varphi_{ab},\varphi_{ab}\rangle$ is the frame-diagonal (sectional) part and $R=W-\mathop{\mathrm{diag}}(M)$ the rest, so $R$ has zero diagonal in $F$. For a $4$-subset $S=\{i,j,k,l\}$, $A=M_{ij}+M_{kl}$, $B=M_{ik}+M_{jl}$, $C=M_{il}+M_{jk}$ and
 
 $$\Sigma:=A^2+B^2+C^2-AB-BC-CA=\tfrac12\big[(A-B)^2+(B-C)^2+(C-A)^2\big]\ \ge\ 0 .$$
 
-The frame budget is $t_F=\lVert K(F)\rVert_F^2=\sum_{a\ne b}K_{ab}^2$ over **ordered** pairs, $K=(W_{abab})$, and $\kappa^2=\max_Ft_F$ ([conventions.md](../findings/conventions.md), the $t,\kappa$ row). The norm on $\Lambda^2$ is $\lVert W\rVert=1$, in which $\lVert\operatorname{diag}(M)\rVert^2=t_F/2$ and $\lVert R\rVert^2=1-t_F/2$. Write $c=\langle X,W\rangle$ for a test direction $X$ in the $4$-set character space $V_{ijkl}$.
+The frame budget is $t_F=\lVert K(F)\rVert_F^2=\sum_{a\ne b}K_{ab}^2$ over **ordered** pairs, $K=(W_{abab})$, and $\kappa^2=\max_Ft_F$ ([conventions.md](../findings/conventions.md), the $t,\kappa$ row). The norm on $\Lambda^2$ is $\lVert W\rVert=1$, in which $\lVert\mathop{\mathrm{diag}}(M)\rVert^2=t_F/2$ and $\lVert R\rVert^2=1-t_F/2$. Write $c=\langle X,W\rangle$ for a test direction $X$ in the $4$-set character space $V_{ijkl}$.
 
-**The two nouns the audit turns on, kept apart.** *The block and its spectrum* is the closed form $L_{\operatorname{diag}(M)}\vert_{V_{ijkl}}=\tfrac12G$ with eigenvalues $\pm\tfrac12\sqrt\Sigma$. *The necessary condition* is the inequality $\Sigma\le\theta^2$ obtained by feeding that spectrum to [Lemma L24](../findings/second-order.md). They have different hypotheses, and [Lemma L121](../findings/second-order.md) says so in its own opening.
+**The two nouns the audit turns on, kept apart.** *The block and its spectrum* is the closed form $L_{\mathop{\mathrm{diag}}(M)}\vert_{V_{ijkl}}=\tfrac12G$ with eigenvalues $\pm\tfrac12\sqrt\Sigma$. *The necessary condition* is the inequality $\Sigma\le\theta^2$ obtained by feeding that spectrum to [Lemma L24](../findings/second-order.md). They have different hypotheses, and [Lemma L121](../findings/second-order.md) says so in its own opening.
 
 ## Hypothesis inventory
 
 | statement | hypotheses it actually carries |
 | --- | --- |
-| [L121](../findings/second-order.md), the block and its spectrum | $M$ pair-diagonal. **Diagonality alone**, no criticality, no row sum, no maximiser. Transfers to $\operatorname{diag}(M)$ in any frame |
+| [L121](../findings/second-order.md), the block and its spectrum | $M$ pair-diagonal. **Diagonality alone**, no criticality, no row sum, no maximiser. Transfers to $\mathop{\mathrm{diag}}(M)$ in any frame |
 | [L121](../findings/second-order.md), the necessary condition $\Sigma\le\theta^2$ | the above, **plus a maximiser, through [L24](../findings/second-order.md)**, and L24 supplies its bound on $W^\perp$, so the top eigenvector must satisfy $X\perp W$ |
 | [L24](../findings/second-order.md) | $W$ a maximiser; $\lambda_{\max}(L_e\vert_{W^\perp})\le\tfrac12$. **The restriction to $W^\perp$ is not optional**, $L_ee=e$ makes the unrestricted claim vacuous ([L120](../findings/second-order.md)'s boxed note) |
 | [L123](../findings/second-order.md) | $X$ in a single $\Gamma$-character space, $R$ zero-diagonal. Kills $\langle X,L_RX\rangle$ **and nothing else** |
@@ -47,11 +47,11 @@ The closure's premise (1) is that [second-order.md](../findings/second-order.md)
 
 > **Consequently [Lemma L24] gives, at every maximiser and every $4$-subset, $A^2+B^2+C^2-AB-BC-CA\le\theta^2$.**
 
-**It carries no frame quantifier.** The closure supplies one, by borrowing it from the *preceding* sentence, L121's scope clause, which is about the block: *"the block and its spectrum need diagonality alone … which is what makes them applicable to $\operatorname{diag}(M)$ in a frame where $W$ is not diagonal."* That clause is immediately followed, in the same lemma, by its own disclaimer: *"**The necessary condition below is the part that needs a maximiser**, through Lemma L24."* The closure attached the scope of the first sentence to the claim of the second.
+**It carries no frame quantifier.** The closure supplies one, by borrowing it from the *preceding* sentence, L121's scope clause, which is about the block: *"the block and its spectrum need diagonality alone … which is what makes them applicable to $\mathop{\mathrm{diag}}(M)$ in a frame where $W$ is not diagonal."* That clause is immediately followed, in the same lemma, by its own disclaimer: *"**The necessary condition below is the part that needs a maximiser**, through Lemma L24."* The closure attached the scope of the first sentence to the claim of the second.
 
-**Exhibited concretely.** L24 bounds $\lambda_{\max}(L_e\vert_{W^\perp})$. To read $\Sigma\le\theta^2$ one applies it to the top eigenvector $X_+\in V_{ijkl}$ of $\tfrac12G$, which requires $X_+\perp W$. Since $X_+$ has zero diagonal and $\operatorname{diag}(M)$ is the trivial character,
+**Exhibited concretely.** L24 bounds $\lambda_{\max}(L_e\vert_{W^\perp})$. To read $\Sigma\le\theta^2$ one applies it to the top eigenvector $X_+\in V_{ijkl}$ of $\tfrac12G$, which requires $X_+\perp W$. Since $X_+$ has zero diagonal and $\mathop{\mathrm{diag}}(M)$ is the trivial character,
 
-$$c=\langle X_+,W\rangle=\langle X_+,\operatorname{diag}(M)\rangle+\langle X_+,R\rangle=0+\langle X_+,R\rangle=\langle X_+,R\rangle .$$
+$$c=\langle X_+,W\rangle=\langle X_+,\mathop{\mathrm{diag}}(M)\rangle+\langle X_+,R\rangle=0+\langle X_+,R\rangle=\langle X_+,R\rangle .$$
 
 At a coordinate-diagonal $W$, $R=0$ and $c=0$ identically, the hypothesis is free. **Off that locus $R\ne0$ and $c$ is the $4$-set component of $W$ itself**, so nothing makes it vanish. The correct conclusion, from [r353](REVIEW_r353.md)'s projection $X'=(X-cW)/\sqrt{1-c^2}$ with $L_eW=W$ and $L_e$ self-adjoint, is
 $$\langle X',L_eX'\rangle=\frac{\langle X,L_eX\rangle-c^2}{1-c^2}\le\tfrac12\quad\Longrightarrow\quad\langle X,L_eX\rangle\le\tfrac{1+c^2}2\quad\Longrightarrow\quad\Sigma\le\theta^2(1+c^2)^2,$$
@@ -69,7 +69,7 @@ sharp at $X=W$ where both sides are $1$. The uncorrected form is the $c=0$ case.
 
 ## 2. Attack 2, the two $\Sigma$'s are the same, and the factor of two does not bite
 
-Both $\Sigma$'s are $A^2+B^2+C^2-AB-BC-CA$ in the opposite-pair sums of the **sectional matrix of the frame**. [L121](../findings/second-order.md) fixes a pair-diagonal $M$; [DERIVE-mx1](DERIVE-mx1.md) applies it to $\operatorname{diag}(M)$ with $M_{ab}=\langle W\varphi_{ab},\varphi_{ab}\rangle$, which is pair-diagonal in $F$ whatever $W$ is. Same object.
+Both $\Sigma$'s are $A^2+B^2+C^2-AB-BC-CA$ in the opposite-pair sums of the **sectional matrix of the frame**. [L121](../findings/second-order.md) fixes a pair-diagonal $M$; [DERIVE-mx1](DERIVE-mx1.md) applies it to $\mathop{\mathrm{diag}}(M)$ with $M_{ab}=\langle W\varphi_{ab},\varphi_{ab}\rangle$, which is pair-diagonal in $F$ whatever $W$ is. Same object.
 
 **No normalisation differs, and here is why the live hazard cannot reach.** [conventions.md](../findings/conventions.md) records $\lVert Z\rVert_F^2=2\lVert Z\rVert^2$ and warns that "the letter $M$ carries two objects, and their norms differ by $\sqrt2$". **$\Sigma$ contains no norm.** It is a fixed quadratic polynomial in six entries $M_{ab}$, and both sides of $\Sigma\le\theta^2(\cdot)^2$ scale as (entry)$^2$: $\Sigma$ manifestly, and $\theta^2$ because $\theta$ is homogeneous of degree $1$ in $W$ at $\lVert W\rVert=1$ fixed. The record confirms the calibration independently, [DERIVE-mx1](DERIVE-mx1.md): *"at $S^3\times S^3$ the rival convention gives $\Sigma=40/9>\theta^2$ and would violate [Lemma L121](../findings/second-order.md)"*, so the normalisation is forced rather than chosen.
 

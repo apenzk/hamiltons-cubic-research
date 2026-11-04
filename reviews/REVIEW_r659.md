@@ -27,7 +27,7 @@ The block states none of these, and [conventions.md](../findings/conventions.md)
 
 | symbol | reading adopted | where it comes from |
 | --- | --- | --- |
-| pairing on $\Lambda^2$ | $\langle X,Y\rangle=\tfrac12\operatorname{tr}(X^{\mathsf T}Y)$, so $\{\varphi_{ab}\}_{a<b}$ orthonormal and $\operatorname{tr}(v^2)=-2$ at a unit bivector | [conventions.md](../findings/conventions.md), "Norms and pairings", the record's settled choice |
+| pairing on $\Lambda^2$ | $\langle X,Y\rangle=\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$, so $\{\varphi_{ab}\}_{a<b}$ orthonormal and $\mathop{\mathrm{tr}}(v^2)=-2$ at a unit bivector | [conventions.md](../findings/conventions.md), "Norms and pairings", the record's settled choice |
 | $\#$ | Böhm–Wilking equation (4) **with its $\tfrac12$**: $\langle(R\#S)h,h\rangle=\tfrac12\sum_{\alpha\beta}\langle[Rb_\alpha,Sb_\beta],h\rangle\langle[b_\alpha,b_\beta],h\rangle$; equivalently $(R^\#)_{\mu\nu}=\tfrac12c_{\gamma\delta\mu}c_{\alpha\beta\nu}R_{\gamma\alpha}R_{\delta\beta}$ | [boehm-wilking notes](../references/boehm-wilking-2008-space-forms/notes.md), transcribed from p. 3–4 |
 | $b$ | the orthogonal projection $S^2(\Lambda^2\mathbb R^n)\to\Lambda^4\mathbb R^n$, i.e. a positive multiple of the tabled $\mathrm{Alt}$ | forced by Böhm–Wilking's own decomposition, §1 |
 | $\wedge$ | the exterior product $\Lambda^2\times\Lambda^2\to\Lambda^4$, with $\langle\cdot,\cdot\rangle_{\Lambda^4}=\tfrac1{4!}\sum_{ijkl}$ | the only reading under which $v_\alpha\wedge v_\alpha$ is a nonzero object |
@@ -35,7 +35,7 @@ The block states none of these, and [conventions.md](../findings/conventions.md)
 **Two of these carry real content.**
 
 - **$\wedge$ cannot be the wedge on $\Lambda^2(\mathfrak{so}(n))$**, because $v\wedge v=0$ there for every vector and the closed form would read $0=0$. It has to be the exterior product of $2$-forms landing in $\Lambda^4\mathbb R^n$, where $v\wedge v\ne0$ exactly when $v$ is **indecomposable**, see §3. The block never says which, and one of the two readings makes its own headline vacuous.
-- **The $\tfrac12$ in $\#$ is load-bearing and the claim breaks without it.** Böhm–Wilking say the $\tfrac12$ "stems from the fact that we are using the scalar product $-\tfrac12\operatorname{tr}(AB)$ instead of $-\operatorname{tr}(AB)$", so the $\tfrac12$ and the half-trace pairing are one package. Take the pairing apart and the structure constants rescale: under **plain Frobenius**, the orthonormal bivectors are $\varphi/\sqrt2$, so $\tilde c=c/\sqrt2$, so $\tilde c^2=c^2/2$ and $R^\#$ **halves**. The identity then reads $b(R^\#)=-\tfrac12 b(R^2)$ and the display as written is **false**. So the block's headline is pinned to conventions.md's tabled pairing and says so nowhere.
+- **The $\tfrac12$ in $\#$ is load-bearing and the claim breaks without it.** Böhm–Wilking say the $\tfrac12$ "stems from the fact that we are using the scalar product $-\tfrac12\mathop{\mathrm{tr}}(AB)$ instead of $-\mathop{\mathrm{tr}}(AB)$", so the $\tfrac12$ and the half-trace pairing are one package. Take the pairing apart and the structure constants rescale: under **plain Frobenius**, the orthonormal bivectors are $\varphi/\sqrt2$, so $\tilde c=c/\sqrt2$, so $\tilde c^2=c^2/2$ and $R^\#$ **halves**. The identity then reads $b(R^\#)=-\tfrac12 b(R^2)$ and the display as written is **false**. So the block's headline is pinned to conventions.md's tabled pairing and says so nowhere.
 
 **And $b$ collides with a tabled symbol.** [conventions.md](../findings/conventions.md)'s only $b$ entry is *"in the orbit calculus $b:=z\circ z$, the **vector** appearing as $B(\Pi u)=b$"*, a different object entirely, with the table's own note that a third $b$ (a scalar) sits in [second-order.md](../findings/second-order.md). The Bianchi map $b$ of this Lemma is a **fourth** use, and it is undefined anywhere on the record. That belongs in the table.
 
@@ -96,30 +96,30 @@ $$b(W^\#)=-b(W^2)\iff b(W^2+W^\#)=0\iff Q(W)\in S^2_B .$$
 ### 3b. Complete derivation at $n=4$, with the sharp hypothesis
 
 At $n=4$ the whole computation closes by hand. $\Lambda^2\mathbb R^4=\Lambda^+\oplus\Lambda^-$, $\mathfrak{so}(4)=\mathfrak{su}(2)_+\oplus\mathfrak{su}(2)_-$, $\Lambda^4\mathbb R^4$ is one-dimensional, and the projection onto it is a nonzero multiple of
-$$\beta(A):=\operatorname{tr}(A|_{\Lambda^+})-\operatorname{tr}(A|_{\Lambda^-}),$$
+$$\beta(A):=\mathop{\mathrm{tr}}(A|_{\Lambda^+})-\mathop{\mathrm{tr}}(A|_{\Lambda^-}),$$
 since $\Lambda^4$ is spanned by $\star=\Pi_{SD}-\Pi_{ASD}$ ([conventions.md](../findings/conventions.md), "Structure constants, brackets and padding").
 
 **Structure constants.** From $A=E_{12}-E_{21}$, $B=E_{13}-E_{31}$ one gets $[\varphi_{12},\varphi_{13}]=-\varphi_{23}$, hence $[\varphi_{ab},\varphi_{ac}]=-\varphi_{bc}$. With $u^\pm_1=\tfrac1{\sqrt2}(\varphi_{12}\pm\varphi_{34})$, $u^\pm_2=\tfrac1{\sqrt2}(\varphi_{13}\pm\varphi_{42})$, $u^\pm_3=\tfrac1{\sqrt2}(\varphi_{14}\pm\varphi_{23})$, four bracket terms give
 $$[u^+_1,u^+_2]=-\sqrt2\,u^+_3,\qquad c_{\alpha\beta\gamma}=-\sqrt2\,\epsilon_{\alpha\beta\gamma}\ \text{ on }\mathfrak{su}(2)_\pm .$$
 *Control:* $\sum_\gamma T_{\alpha\beta\gamma}=\lVert[u_1,u_2]\rVert^2=2$, the equality case of the tabled pair cap; and $\tfrac12\sum_{\gamma\delta}c^2_{\gamma\delta\mu}=n-2=2$, the tabled relation (A). Both match [conventions.md](../findings/conventions.md) with no rescaling.
 
-**Write a general $R\in S^2(\mathfrak{so}(4))$ in blocks**, $R=\begin{pmatrix}A&C\\C^{\mathsf T}&B\end{pmatrix}$ against $\Lambda^+\oplus\Lambda^-$. Then $b(R)=0\iff\operatorname{tr}A=\operatorname{tr}B$.
+**Write a general $R\in S^2(\mathfrak{so}(4))$ in blocks**, $R=\begin{pmatrix}A&C\\C^{\mathsf T}&B\end{pmatrix}$ against $\Lambda^+\oplus\Lambda^-$. Then $b(R)=0\iff\mathop{\mathrm{tr}}A=\mathop{\mathrm{tr}}B$.
 
-- **Square.** $\beta(R^2)=\operatorname{tr}(A^2+CC^{\mathsf T})-\operatorname{tr}(B^2+C^{\mathsf T}C)=\operatorname{tr}A^2-\operatorname{tr}B^2$; the off-diagonal block cancels.
+- **Square.** $\beta(R^2)=\mathop{\mathrm{tr}}(A^2+CC^{\mathsf T})-\mathop{\mathrm{tr}}(B^2+C^{\mathsf T}C)=\mathop{\mathrm{tr}}A^2-\mathop{\mathrm{tr}}B^2$; the off-diagonal block cancels.
 - **Sharp.** In $(R^\#)_{\mu\mu}=\tfrac12c_{\gamma\delta\mu}c_{\alpha\beta\mu}R_{\gamma\alpha}R_{\delta\beta}$ with $\mu\in\Lambda^+$, both $c$'s force all four indices into $\Lambda^+$, so **only $A$ enters** and $\#$ is computed inside $\mathfrak{su}(2)$. With $c=-\sqrt2\epsilon$,
-$$A^\#=\epsilon_{\gamma\delta\mu}\epsilon_{\alpha\beta\nu}A_{\gamma\alpha}A_{\delta\beta}=2\operatorname{cof}(A),\qquad\operatorname{tr}(A^\#)=2e_2(A)=(\operatorname{tr}A)^2-\operatorname{tr}(A^2).$$
+$$A^\#=\epsilon_{\gamma\delta\mu}\epsilon_{\alpha\beta\nu}A_{\gamma\alpha}A_{\delta\beta}=2\mathop{\mathrm{cof}}(A),\qquad\mathop{\mathrm{tr}}(A^\#)=2e_2(A)=(\mathop{\mathrm{tr}}A)^2-\mathop{\mathrm{tr}}(A^2).$$
 
 Subtracting the two blocks and adding:
 
-$$\boxed{\ b(R^2)+b(R^\#)\ \propto\ (\operatorname{tr}A)^2-(\operatorname{tr}B)^2=\operatorname{tr}(R)\cdot b(R)\ }\qquad(n=4,\ \text{every }R\in S^2(\mathfrak{so}(4))).$$
+$$\boxed{\ b(R^2)+b(R^\#)\ \propto\ (\mathop{\mathrm{tr}}A)^2-(\mathop{\mathrm{tr}}B)^2=\mathop{\mathrm{tr}}(R)\cdot b(R)\ }\qquad(n=4,\ \text{every }R\in S^2(\mathfrak{so}(4))).$$
 
 Three things fall out.
 
 1. **The identity is CONFIRMED at $n=4$**: $b(R)=0$ kills the right-hand side, so $b(R^\#)=-b(R^2)$ on every curvature operator.
-2. **The hypothesis is wider than the heading.** $\operatorname{tr}(R)=0$ kills it just as well, so the identity holds on $\{b(R)=0\}\cup\{\operatorname{tr}R=0\}$, a strictly larger set than $S^2_B$, and the union of two linear subspaces neither of which contains the other. [D6]
-3. **Some hypothesis is genuinely needed, with a witness.** Take $R=\Pi_+$: $A=I_3$, $B=0$, so $\beta(R^2)=3$, $A^\#=2I_3$, $\beta(R^\#)=6$, sum $9\ne0$, matching $\operatorname{tr}(R)b(R)=3\cdot3$. So the Lemma is **not** an identity of all self-adjoint endomorphisms of $\mathfrak{so}(n)$, and the qualifier "curvature operator" is doing real work.
+2. **The hypothesis is wider than the heading.** $\mathop{\mathrm{tr}}(R)=0$ kills it just as well, so the identity holds on $\{b(R)=0\}\cup\{\mathop{\mathrm{tr}}R=0\}$, a strictly larger set than $S^2_B$, and the union of two linear subspaces neither of which contains the other. [D6]
+3. **Some hypothesis is genuinely needed, with a witness.** Take $R=\Pi_+$: $A=I_3$, $B=0$, so $\beta(R^2)=3$, $A^\#=2I_3$, $\beta(R^\#)=6$, sum $9\ne0$, matching $\mathop{\mathrm{tr}}(R)b(R)=3\cdot3$. So the Lemma is **not** an identity of all self-adjoint endomorphisms of $\mathfrak{so}(n)$, and the qualifier "curvature operator" is doing real work.
 
-**Both sides are nonzero exactly when $\lVert W^+\rVert\ne\lVert W^-\rVert$**, since for Weyl $W$ (so $\operatorname{tr}W^\pm=0$) the two displays read $\beta(W^2)=\lVert W^+\rVert^2-\lVert W^-\rVert^2$ and $\beta(W^\#)=-\lVert W^+\rVert^2+\lVert W^-\rVert^2$. At $\mathbb{CP}^2$, $W^-=0$ and the defect is maximal. This is the block's "genuinely nonzero" claim, proved rather than measured, at a point one dimension below the ones it quotes.
+**Both sides are nonzero exactly when $\lVert W^+\rVert\ne\lVert W^-\rVert$**, since for Weyl $W$ (so $\mathop{\mathrm{tr}}W^\pm=0$) the two displays read $\beta(W^2)=\lVert W^+\rVert^2-\lVert W^-\rVert^2$ and $\beta(W^\#)=-\lVert W^+\rVert^2+\lVert W^-\rVert^2$. At $\mathbb{CP}^2$, $W^-=0$ and the defect is maximal. This is the block's "genuinely nonzero" claim, proved rather than measured, at a point one dimension below the ones it quotes.
 
 ### 3c. General $n$: true, and the record owes a proof or a citation
 
@@ -149,17 +149,17 @@ a **positive** multiple. So $b(W^2)=+\sum_\alpha\lambda_\alpha^2(v_\alpha\wedge 
 ### 4c. What the object actually is, and a sharper statement of the block's own claim
 
 The block says the identity is *"a relation between $\lambda$ and the frame that no marginal of $T$ can see"*. That is right, and it can be made exact. For $u,v\in\Lambda^2\mathbb R^n$ skew, expanding $(u\wedge u)_{ijkl}=2(u_{ij}u_{kl}+u_{ik}u_{lj}+u_{il}u_{jk})$ against the same for $v$ and collecting the $3$ aligned and $6$ crossed contractions gives
-$$\langle u\wedge u,\ v\wedge v\rangle_{\Lambda^4}=\tfrac12\operatorname{tr}(uv)^2-\operatorname{tr}(uvuv).$$
-With $\operatorname{tr}(v_\alpha v_\beta)=-2\delta_{\alpha\beta}$ and $\operatorname{tr}(uvuv)=\operatorname{tr}(u^2v^2)-\lVert[u,v]\rVert^2$, and $\lVert[v_\alpha,v_\beta]\rVert^2=\sum_\gamma T_{\alpha\beta\gamma}$,
-$$\langle v_\alpha\wedge v_\alpha,\ v_\beta\wedge v_\beta\rangle=2\delta_{\alpha\beta}+\sum_\gamma T_{\alpha\beta\gamma}-\operatorname{tr}(v_\alpha^2v_\beta^2),$$
-$$\boxed{\ \lVert b(W^2)\rVert^2=2\sum_\alpha\lambda_\alpha^4+\sum_{\alpha\beta\gamma}\lambda_\alpha^2\lambda_\beta^2\,T_{\alpha\beta\gamma}-\sum_{\alpha\beta}\lambda_\alpha^2\lambda_\beta^2\operatorname{tr}(v_\alpha^2v_\beta^2)\ }$$
+$$\langle u\wedge u,\ v\wedge v\rangle_{\Lambda^4}=\tfrac12\mathop{\mathrm{tr}}(uv)^2-\mathop{\mathrm{tr}}(uvuv).$$
+With $\mathop{\mathrm{tr}}(v_\alpha v_\beta)=-2\delta_{\alpha\beta}$ and $\mathop{\mathrm{tr}}(uvuv)=\mathop{\mathrm{tr}}(u^2v^2)-\lVert[u,v]\rVert^2$, and $\lVert[v_\alpha,v_\beta]\rVert^2=\sum_\gamma T_{\alpha\beta\gamma}$,
+$$\langle v_\alpha\wedge v_\alpha,\ v_\beta\wedge v_\beta\rangle=2\delta_{\alpha\beta}+\sum_\gamma T_{\alpha\beta\gamma}-\mathop{\mathrm{tr}}(v_\alpha^2v_\beta^2),$$
+$$\boxed{\ \lVert b(W^2)\rVert^2=2\sum_\alpha\lambda_\alpha^4+\sum_{\alpha\beta\gamma}\lambda_\alpha^2\lambda_\beta^2\,T_{\alpha\beta\gamma}-\sum_{\alpha\beta}\lambda_\alpha^2\lambda_\beta^2\mathop{\mathrm{tr}}(v_\alpha^2v_\beta^2)\ }$$
 
 **Two exact checks, both by hand, both passing.**
 
-- *Decomposability.* At $\alpha=\beta$, hollowness of $T$ gives $\lVert v\wedge v\rVert^2=2-\operatorname{tr}(v^4)=2(1-\sum_is_i^4)$ at singular values $s$ with $\sum s_i^2=1$, zero exactly when $v$ is decomposable, the classical criterion. At $v=\varphi_{12}$ it returns $0$; at $v=\tfrac1{\sqrt2}(\varphi_{12}+\varphi_{34})$ it returns $1$, and directly $v\wedge v=e_{1234}$ of norm $1$.
-- *$b(\mathrm{Id})=0$.* Summing over a full orthonormal basis, $\sum_\alpha v_\alpha^2=-(n-1)\mathrm{Id}$ gives $\sum_{\alpha\beta}\operatorname{tr}(v_\alpha^2v_\beta^2)=n(n-1)^2$, while $2N=n(n-1)$ and $\sum_{\alpha\beta\gamma}T=n(n-1)(n-2)$. The three cancel identically: $n(n-1)[1+(n-2)-(n-1)]=0$. This tests both coefficients of the pairing formula at once, at every $n$.
+- *Decomposability.* At $\alpha=\beta$, hollowness of $T$ gives $\lVert v\wedge v\rVert^2=2-\mathop{\mathrm{tr}}(v^4)=2(1-\sum_is_i^4)$ at singular values $s$ with $\sum s_i^2=1$, zero exactly when $v$ is decomposable, the classical criterion. At $v=\varphi_{12}$ it returns $0$; at $v=\tfrac1{\sqrt2}(\varphi_{12}+\varphi_{34})$ it returns $1$, and directly $v\wedge v=e_{1234}$ of norm $1$.
+- *$b(\mathrm{Id})=0$.* Summing over a full orthonormal basis, $\sum_\alpha v_\alpha^2=-(n-1)\mathrm{Id}$ gives $\sum_{\alpha\beta}\mathop{\mathrm{tr}}(v_\alpha^2v_\beta^2)=n(n-1)^2$, while $2N=n(n-1)$ and $\sum_{\alpha\beta\gamma}T=n(n-1)(n-2)$. The three cancel identically: $n(n-1)[1+(n-2)-(n-1)]=0$. This tests both coefficients of the pairing formula at once, at every $n$.
 
-**What this sharpens.** The block's "no marginal of $T$ can see it" is true but understates the structure: the $T$-dependence enters through the *full* tensor, and the **only ingredient outside $T$ altogether is the Gram data $\operatorname{tr}(v_\alpha^2v_\beta^2)$**. That, and not $b(W^2)$ in the abstract, is the handle fence post [F15](../findings/bounds-relaxations.md#L240) says is missing, a statement a successor can act on, unlike the block's. *This is a positive extension, not a defect charge.*
+**What this sharpens.** The block's "no marginal of $T$ can see it" is true but understates the structure: the $T$-dependence enters through the *full* tensor, and the **only ingredient outside $T$ altogether is the Gram data $\mathop{\mathrm{tr}}(v_\alpha^2v_\beta^2)$**. That, and not $b(W^2)$ in the abstract, is the handle fence post [F15](../findings/bounds-relaxations.md#L240) says is missing, a statement a successor can act on, unlike the block's. *This is a positive extension, not a defect charge.*
 
 ### 4d. The hypothesis in the heading
 
@@ -188,7 +188,7 @@ $$\boxed{\ \lVert b(W^2)\rVert^2=2\sum_\alpha\lambda_\alpha^4+\sum_{\alpha\beta\
 - **Provenance [D1].** The trailing note at [:286](../findings/bounds-relaxations.md#L286) reads *"Re-filed here 2026-09-02 from second-order.md"*. `git show 2d66938e --stat` for that date lists `bounds.md -418`, `bounds-relaxations.md +350`, `curvature-invariants.md +81` and **does not touch second-order.md at all**; `git grep -l "Lemma L116" 2d66938e^` returns `findings/bounds.md`. **The note is false**, and the likely cause is visible two lines below, where the *next* section correctly names second-order.md as its source. One more confirmed copy for the brief's tally.
 - **Hedges.** *"the literature forces"*, half true, §2b/§2c. *"before it was used"*, false as priority, §2d; true as a statement about this file only. *"on every curvature operator"*, true, not sharp, §4d.
 - **Does the file settle it elsewhere?** Partly, and against the block's framing: the same file's [F15](../findings/bounds-relaxations.md#L240) is what the Lemma claims to supply a handle for, and the two sit adjacent with no cross-reference from F15 forward.
-- **Duplication.** No second **numbered** statement of the identity. But three unnumbered statements of the same fact predate or accompany it, [README.md:14](../README.md#L14) and [conventions.md](../findings/conventions.md)'s $Q$ entry as a premise, [r122](REVIEW_r122.md) as a measurement, [bispectral.md:112](../findings/bispectral.md#L112) as a working caveat. [r358](REVIEW_r358.md) correctly reads L116 as the trace identity $\operatorname{tr}(W^2)+\operatorname{tr}(W^\#)=0$ "one level finer", which is a **different** summand and not a duplicate.
+- **Duplication.** No second **numbered** statement of the identity. But three unnumbered statements of the same fact predate or accompany it, [README.md:14](../README.md#L14) and [conventions.md](../findings/conventions.md)'s $Q$ entry as a premise, [r122](REVIEW_r122.md) as a measurement, [bispectral.md:112](../findings/bispectral.md#L112) as a working caveat. [r358](REVIEW_r358.md) correctly reads L116 as the trace identity $\mathop{\mathrm{tr}}(W^2)+\mathop{\mathrm{tr}}(W^\#)=0$ "one level finer", which is a **different** summand and not a duplicate.
 - **Pointers.** [b_rayleigh_identities.py](../scripts/route-b/b_rayleigh_identities.py) and [the Böhm–Wilking notes](../references/boehm-wilking-2008-space-forms/notes.md) both resolve. The notes pointer resolves to a circular target, §2c.
 - **Indexing.** [INDEX-results.md](../findings/INDEX-results.md) row **116** reads *"Gate 2: no verdict on the record"*, this review is the first. [results.md](../results.md) carries **no L116 row** (zero matches), the file-wide backlog [r574](REVIEW_r574.md) and [r614](REVIEW_r614.md) already charge for L104, L105, L107, L109, L110, L114, L115 and L119.
 - **Heading shape.** The L116 heading carries no body; the body sits under the next `####`. [r594](REVIEW_r594.md) already grades this a house pattern of this file, so it is not charged here.
@@ -200,5 +200,5 @@ $$\boxed{\ \lVert b(W^2)\rVert^2=2\sum_\alpha\lambda_\alpha^4+\sum_{\alpha\beta\
 2. **Replace the circular citation** with Hamilton's theorem, or with [README.md:14](../README.md#L14), the premise the programme already grants. Drop *"the literature forces"*, which the paper does not do for the negative half.
 3. **Fix the sign in [ELIM-bounds.md](ELIM-bounds.md) §S3** and its closing instruction, or state a normalisation under which both are true. There is none.
 4. **Table $b$, $\#$ and $\wedge$ in [conventions.md](../findings/conventions.md)**, noting that $b$ is a fourth use of that letter and that the identity halves under the plain-Frobenius bivector norm.
-5. **Say what the hypothesis is** (Bianchi, in Böhm–Wilking's sense, needing neither trace-freeness nor Ricci-flatness) and add the $n=4$ refinement $b(Q(R))=\operatorname{tr}(R)\,b(R)$, which contains the Lemma and a witness for its necessity.
-6. **Promote §4c's norm formula**, which turns *"no marginal of $T$ can see it"* into a named object, $\operatorname{tr}(v_\alpha^2v_\beta^2)$.
+5. **Say what the hypothesis is** (Bianchi, in Böhm–Wilking's sense, needing neither trace-freeness nor Ricci-flatness) and add the $n=4$ refinement $b(Q(R))=\mathop{\mathrm{tr}}(R)\,b(R)$, which contains the Lemma and a witness for its necessity.
+6. **Promote §4c's norm formula**, which turns *"no marginal of $T$ can see it"* into a named object, $\mathop{\mathrm{tr}}(v_\alpha^2v_\beta^2)$.

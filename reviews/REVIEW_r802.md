@@ -24,19 +24,19 @@ which is the adjugate on pair spectra exactly as the block says. **The identity 
 
 ## 2. The one step that fails: $\dim V\le6$ is the conclusion assumed
 
-**The block's whole justification is the parenthesis "$\operatorname{supp}\omega_1=\operatorname{supp}\omega_2+P_3$ and a plane adds two".** That gives
+**The block's whole justification is the parenthesis "$\mathop{\mathrm{supp}}\omega_1=\mathop{\mathrm{supp}}\omega_2+P_3$ and a plane adds two".** That gives
 
-$$\dim V=\dim\operatorname{supp}\omega_1\ \le\ \operatorname{rank}\omega_2+2,$$
+$$\dim V=\dim\mathop{\mathrm{supp}}\omega_1\ \le\ \mathop{\mathrm{rank}}\omega_2+2,$$
 
-and $\operatorname{rank}\omega_2\ge4$ is all that non-decomposability supplies. **So "$\dim V\le6$" is precisely "$\operatorname{rank}\omega_2\le4$", which is half of what the lemma sets out to prove.** *The bound is not a standing fact of the setting either: [L180](../findings/diagonal-half.md)'s own closing note states "$\dim V\ge6$ is the whole of what remains", i.e. $\dim V$ is a priori unbounded above, and [plan.md](../plan.md)'s I38 entry says in as many words that "nothing above reaches $\dim V\ge8$".*
+and $\mathop{\mathrm{rank}}\omega_2\ge4$ is all that non-decomposability supplies. **So "$\dim V\le6$" is precisely "$\mathop{\mathrm{rank}}\omega_2\le4$", which is half of what the lemma sets out to prove.** *The bound is not a standing fact of the setting either: [L180](../findings/diagonal-half.md)'s own closing note states "$\dim V\ge6$ is the whole of what remains", i.e. $\dim V$ is a priori unbounded above, and [plan.md](../plan.md)'s I38 entry says in as many words that "nothing above reaches $\dim V\ge8$".*
 
 **The gap is fatal to the method, not merely to a bound.** For $\dim V>6$ the map $\sigma$ is not defined at all: $\star(\omega\wedge\omega)$ is an $(n-4)$-form, so $\sigma:\Lambda^2\to\Lambda^2$ exists only in six dimensions. *The premise is what makes the operator exist, and it is assumed.*
 
-**A second, smaller defect in the same sentence.** $\operatorname{supp}\omega_1=\operatorname{supp}\omega_2+P_3$ holds only after a relabelling that puts the minority weight on $\omega_1$; the sign pattern also permits $\operatorname{supp}\omega_2=\operatorname{supp}\omega_1+P_3$. *The relabelling is harmless (both forms are non-decomposable and $c\ne0$ either way) but it is unstated, and the block reads as though one containment were forced.*
+**A second, smaller defect in the same sentence.** $\mathop{\mathrm{supp}}\omega_1=\mathop{\mathrm{supp}}\omega_2+P_3$ holds only after a relabelling that puts the minority weight on $\omega_1$; the sign pattern also permits $\mathop{\mathrm{supp}}\omega_2=\mathop{\mathrm{supp}}\omega_1+P_3$. *The relabelling is harmless (both forms are non-decomposable and $c\ne0$ either way) but it is unstated, and the block reads as though one containment were forced.*
 
 ## 3. What the $\sigma$ computation actually proves, and it is not what is claimed
 
-Granting the algebra and reading it at $\dim V=6$: $V=\operatorname{supp}\omega_1$ has dimension six, so $\mathrm{Pf}(\omega_1)\ne0$, while the computation returns $\mathrm{Pf}(\omega_1)=0$. **So the content is $\dim V\ne6$, not $\dim V=4$.** *Stated as "$\dim V=4$" the lemma describes a surviving configuration; what the argument yields is the exclusion of a dimension.*
+Granting the algebra and reading it at $\dim V=6$: $V=\mathop{\mathrm{supp}}\omega_1$ has dimension six, so $\mathrm{Pf}(\omega_1)\ne0$, while the computation returns $\mathrm{Pf}(\omega_1)=0$. **So the content is $\dim V\ne6$, not $\dim V=4$.** *Stated as "$\dim V=4$" the lemma describes a surviving configuration; what the argument yields is the exclusion of a dimension.*
 
 **And the residue at $\dim V=4$ is empty**, by the import Claim B itself makes: at $\dim V=4$ rank $\le3$ forces one of $W^\pm$ to vanish, all three eigenforms lie in the surviving $\Lambda^\pm$, and a nonzero (anti-)self-dual $2$-form on $\mathbb R^4$ has $\omega\wedge\omega=\pm\lVert\omega\rVert^2\mathrm{vol}\ne0$, hence rank four. **So at $\dim V=4$ all three forms are non-decomposable and the two-non-decomposable configuration cannot sit there.**
 
@@ -52,7 +52,7 @@ $$\tau\circ\tau=\mathrm{Pf}^{\,m-2}\cdot\mathrm{id}.$$
 
 *Checks: $m=2$ gives $\tau=\star$ and $\tau\circ\tau=\mathrm{id}$, which is $\star\star=\mathrm{id}$ on $\Lambda^2\mathbb R^4$; $m=3$ gives $\tau=\sigma$ and the record's identity.*
 
-**For $m$ ODD the record's argument runs verbatim.** $m-1$ is then even, so first Bianchi's $\omega_1\wedge\omega_1=c\,\omega_2\wedge\omega_2$ raises to $\omega_1^{m-1}=c^{(m-1)/2}\omega_2^{m-1}$, hence $\tau(\omega_1)=c^{(m-1)/2}\tau(\omega_2)$, hence $\mathrm{Pf}(\omega_1)^{m-2}\omega_1=c^{(m-1)^2/2}\mathrm{Pf}(\omega_2)^{m-2}\omega_2$, and independence forces $\mathrm{Pf}(\omega_1)=0$ against $\operatorname{rank}\omega_1=\dim V$. **So the branch is empty at $\dim V\in\{6,10,14,\dots\}$, and at $\dim V=4$ by §3.**
+**For $m$ ODD the record's argument runs verbatim.** $m-1$ is then even, so first Bianchi's $\omega_1\wedge\omega_1=c\,\omega_2\wedge\omega_2$ raises to $\omega_1^{m-1}=c^{(m-1)/2}\omega_2^{m-1}$, hence $\tau(\omega_1)=c^{(m-1)/2}\tau(\omega_2)$, hence $\mathrm{Pf}(\omega_1)^{m-2}\omega_1=c^{(m-1)^2/2}\mathrm{Pf}(\omega_2)^{m-2}\omega_2$, and independence forces $\mathrm{Pf}(\omega_1)=0$ against $\mathop{\mathrm{rank}}\omega_1=\dim V$. **So the branch is empty at $\dim V\in\{6,10,14,\dots\}$, and at $\dim V=4$ by §3.**
 
 **For $m$ EVEN the route stops.** $\omega^{m-1}$ is an odd power and is not a function of $\omega\wedge\omega$; the only relation the top power gives is $\mathrm{Pf}(\omega_1)=c^{m/2}\mathrm{Pf}(\omega_2)$, which is consistent, it says both forms have full rank $2m$ and nothing more. **So the honest state of the two-non-decomposable branch is: empty except possibly at $\dim V\in\{8,12,16,\dots\}$.** *That is a real advance on the block as written, and it is still not the block's claim.*
 
@@ -83,7 +83,7 @@ $$\tau\circ\tau=\mathrm{Pf}^{\,m-2}\cdot\mathrm{id}.$$
 
 - **[L186](../findings/diagonal-half.md)'s block disagrees with itself.** One paragraph says "AND THE TWO-CASE IS EMPTY TOO, BY L178'S OWN STEP 1"; a later paragraph in the same block says "**two is open** and is what L187 attacks". Both cannot stand.
 - **[L187](../findings/diagonal-half.md)'s block disagrees with [L186](../findings/diagonal-half.md)'s.** L187 says "the survivor is this lemma" and "every branch lands inside L178's hypothesis"; L186 says the two-case is empty and three is the only case left.
-- **[L187](../findings/diagonal-half.md)'s block disagrees with its own proof.** Its closing note says "the TWO-non-decomposable case, where $\operatorname{supp}\omega_1=\operatorname{supp}\omega_2+P_3$ can have dimension six and nothing here rules it out", while the proof above it asserts $\dim V\le6$ and concludes $\dim V=4$. *It also still says the sign hypothesis is owed, which L186's block records as discharged.*
+- **[L187](../findings/diagonal-half.md)'s block disagrees with its own proof.** Its closing note says "the TWO-non-decomposable case, where $\mathop{\mathrm{supp}}\omega_1=\mathop{\mathrm{supp}}\omega_2+P_3$ can have dimension six and nothing here rules it out", while the proof above it asserts $\dim V\le6$ and concludes $\dim V=4$. *It also still says the sign hypothesis is owed, which L186's block records as discharged.*
 
 *[plan.md](../plan.md)'s I38 row, by contrast, reads L187 correctly as emptying the two-case. **The plan and the finding say different things about the same lemma.***
 
@@ -97,7 +97,7 @@ $$\tau\circ\tau=\mathrm{Pf}^{\,m-2}\cdot\mathrm{id}.$$
 
 | Claim | What would falsify it | What I did |
 | --- | --- | --- |
-| **A**, the configuration has both ranks four and $\dim V=4$ | (i) an instance with $\dim V\ge6$; (ii) a demonstration that the premise $\dim V\le6$ is unavailable | (ii) succeeded: traced the premise to $\operatorname{rank}\omega_2\le4$, the conclusion's own content, and confirmed against [L180](../findings/diagonal-half.md)'s and [plan.md](../plan.md)'s statements that $\dim V$ is a priori unbounded. For (i) I derived the $\tau$ generalisation, which closes every odd $m$ and leaves $\dim V\in\{8,12,\dots\}$ un-excluded; I built no witness there. |
+| **A**, the configuration has both ranks four and $\dim V=4$ | (i) an instance with $\dim V\ge6$; (ii) a demonstration that the premise $\dim V\le6$ is unavailable | (ii) succeeded: traced the premise to $\mathop{\mathrm{rank}}\omega_2\le4$, the conclusion's own content, and confirmed against [L180](../findings/diagonal-half.md)'s and [plan.md](../plan.md)'s statements that $\dim V$ is a priori unbounded. For (i) I derived the $\tau$ generalisation, which closes every odd $m$ and leaves $\dim V\in\{8,12,\dots\}$ un-excluded; I built no witness there. |
 | **A**'s $\sigma$ identity | a wrong Hodge sign, or frame dependence | Computed $\star e_{1234},\star e_{1256},\star e_{3456}$ from $\alpha\wedge\star\beta=\langle\alpha,\beta\rangle\mathrm{vol}$; checked orientation-reversal consistency of $\sigma\circ\sigma=\mathrm{Pf}\cdot\mathrm{id}$; validated the general $\tau$ formula against $m=2$ and $m=3$. **No defect.** |
 | **A**'s independence step | a case where $a\omega_1=b\omega_2$ with $a,b$ not both zero | Orthonormality gives independence outright; $c\ne0$ suffices. **No defect.** |
 | **B**, the census collapses to three non-decomposable | a two-non-decomposable instance, or a broken deduction | The deduction is sound but conditional on Claim A; with Claim A withdrawn, the two-case is open at $\dim V\equiv0\pmod4,\ \ge8$. Enumeration re-checked as exhaustive. |

@@ -79,11 +79,11 @@ $$W_{p,q}=\frac{q}{p-1}\,\Pi_{\Lambda^2A}+\frac{p}{q-1}\,\Pi_{\Lambda^2B}-\Pi_M,
 
 $|W_{p,q}|^2=x^2\tfrac{p(p-1)}2+y^2\tfrac{q(q-1)}2+pq=\tfrac{pq}2\,(x+y+2)$.
 
-$\operatorname{tr}W^3=x^3\tfrac{p(p-1)}2+y^3\tfrac{q(q-1)}2-pq$. For $\operatorname{tr}(W\,W^\#)=\tfrac12\sum_{\alpha,\beta}w_\alpha w_\beta w_{[\alpha,\beta]}$ over ordered basis pairs sharing one index (signs square out), the brackets satisfy $[\Lambda^2A,\Lambda^2A]\subset\Lambda^2A$, $[\Lambda^2A,M]\subset M$, $[M,M]\subset\Lambda^2A\oplus\Lambda^2B$, $[\Lambda^2A,\Lambda^2B]=0$, and the ordered pairs count as follows: type $(A,A\to A)$, $p(p-1)(p-2)$ pairs, weight $x^3$; types $(A,M\to M)$ and $(M,A\to M)$, $2p(p-1)q$ pairs, weight $xz^2$; type $(M,M\to A)$, pairs $(X_{ib},X_{jb})$, $p(p-1)q$ pairs, weight $z^2x$; and the same with $A,B$ exchanged. So
+$\mathop{\mathrm{tr}}W^3=x^3\tfrac{p(p-1)}2+y^3\tfrac{q(q-1)}2-pq$. For $\mathop{\mathrm{tr}}(W\,W^\#)=\tfrac12\sum_{\alpha,\beta}w_\alpha w_\beta w_{[\alpha,\beta]}$ over ordered basis pairs sharing one index (signs square out), the brackets satisfy $[\Lambda^2A,\Lambda^2A]\subset\Lambda^2A$, $[\Lambda^2A,M]\subset M$, $[M,M]\subset\Lambda^2A\oplus\Lambda^2B$, $[\Lambda^2A,\Lambda^2B]=0$, and the ordered pairs count as follows: type $(A,A\to A)$, $p(p-1)(p-2)$ pairs, weight $x^3$; types $(A,M\to M)$ and $(M,A\to M)$, $2p(p-1)q$ pairs, weight $xz^2$; type $(M,M\to A)$, pairs $(X_{ib},X_{jb})$, $p(p-1)q$ pairs, weight $z^2x$; and the same with $A,B$ exchanged. So
 
-$$\operatorname{tr}(W\,W^\#)=\tfrac12\big[p(p-1)(p-2)x^3+q(q-1)(q-2)y^3+3p(p-1)q\,xz^2+3q(q-1)p\,yz^2\big].$$
+$$\mathop{\mathrm{tr}}(W\,W^\#)=\tfrac12\big[p(p-1)(p-2)x^3+q(q-1)(q-2)y^3+3p(p-1)q\,xz^2+3q(q-1)p\,yz^2\big].$$
 
-At $x=y=z=1$ this is $\tfrac12\cdot3pq(n-2)+\tfrac12[p(p-1)(p-2)+q(q-1)(q-2)]$, which equals $\operatorname{tr}(I\#I)=(n-2)\tfrac{n(n-1)}2$ (checked at $(p,q)=(2,2)$: $12=12$). With the values of 4.1, $(p-1)x=q$ and $(q-1)y=p$ give
+At $x=y=z=1$ this is $\tfrac12\cdot3pq(n-2)+\tfrac12[p(p-1)(p-2)+q(q-1)(q-2)]$, which equals $\mathop{\mathrm{tr}}(I\#I)=(n-2)\tfrac{n(n-1)}2$ (checked at $(p,q)=(2,2)$: $12=12$). With the values of 4.1, $(p-1)x=q$ and $(q-1)y=p$ give
 
 $$P(W_{p,q})=\tfrac12\Big[\frac{pq^3}{p-1}+\frac{qp^3}{q-1}\Big]+pq\Big(\frac{3n}2-1\Big)>0,$$
 
@@ -96,7 +96,7 @@ Both agree with the brief's $\Theta_n$, which fixes the identification of the wi
 
 ### 4.3 Compression to an orbit point's plane
 
-An orbit point $g.u$ is supported on $\Lambda^2E$ for the 4-plane $E=g(E_0)$, so $\langle W,g.u\rangle=\operatorname{tr}\big((\Pi_{\Lambda^2E}W\Pi_{\Lambda^2E})\,g.u\big)$. Let $h=\pi_E\pi_A|_E$, symmetric with eigenvalues $\lambda_i\in[0,1]$. By 4.1, $\langle\Pi_{\Lambda^2A}(v\wedge w),v'\wedge w'\rangle=\langle hv\wedge hw,v'\wedge w'\rangle$ for $v,w,v',w'\in E$, so $\Pi_{\Lambda^2A}$ compresses to $\Lambda^2h$, $\Pi_{\Lambda^2B}$ to $\Lambda^2(I-h)=I-D_h+\Lambda^2h$ with $D_h(v\wedge w)=hv\wedge w+v\wedge hw$, and $\Pi_M$ to $I-\Lambda^2h-\Lambda^2(I-h)$. For a Weyl operator $w$ on $E$, $\operatorname{tr}(Iw)=0$ and, in the eigenframe of $h$, $\operatorname{tr}(D_hw)=\sum_{i<j}(\lambda_i+\lambda_j)w_{ij,ij}=\sum_i\lambda_i\operatorname{Ric}(w)_{ii}=0$. Writing $T=\operatorname{tr}(\Lambda^2h\cdot g.u)$,
+An orbit point $g.u$ is supported on $\Lambda^2E$ for the 4-plane $E=g(E_0)$, so $\langle W,g.u\rangle=\mathop{\mathrm{tr}}\big((\Pi_{\Lambda^2E}W\Pi_{\Lambda^2E})\,g.u\big)$. Let $h=\pi_E\pi_A|_E$, symmetric with eigenvalues $\lambda_i\in[0,1]$. By 4.1, $\langle\Pi_{\Lambda^2A}(v\wedge w),v'\wedge w'\rangle=\langle hv\wedge hw,v'\wedge w'\rangle$ for $v,w,v',w'\in E$, so $\Pi_{\Lambda^2A}$ compresses to $\Lambda^2h$, $\Pi_{\Lambda^2B}$ to $\Lambda^2(I-h)=I-D_h+\Lambda^2h$ with $D_h(v\wedge w)=hv\wedge w+v\wedge hw$, and $\Pi_M$ to $I-\Lambda^2h-\Lambda^2(I-h)$. For a Weyl operator $w$ on $E$, $\mathop{\mathrm{tr}}(Iw)=0$ and, in the eigenframe of $h$, $\mathop{\mathrm{tr}}(D_hw)=\sum_{i<j}(\lambda_i+\lambda_j)w_{ij,ij}=\sum_i\lambda_i\mathop{\mathrm{Ric}}(w)_{ii}=0$. Writing $T=\mathop{\mathrm{tr}}(\Lambda^2h\cdot g.u)$,
 
 $$\langle W_{p,q},g.u\rangle=(x+y-2z)\,T=(x+y+2)\,T.$$
 
@@ -106,7 +106,7 @@ For $n\ge5$ every orthonormal frame of every 4-plane is the image of the standar
 
 $$T=c\Big[\tfrac32\big(a^2\sigma_1+b^2\sigma_2+c'^2\sigma_3\big)-\tfrac12(\sigma_1+\sigma_2+\sigma_3)\Big],\quad\sigma_1=\lambda_1\lambda_2+\lambda_3\lambda_4,\ \sigma_2=\lambda_1\lambda_3+\lambda_2\lambda_4,\ \sigma_3=\lambda_1\lambda_4+\lambda_2\lambda_3.$$
 
-Maximising over $\omega$ gives $c\max_i(\sigma_i-\tfrac12\sigma_j-\tfrac12\sigma_k)$. For $i=1$, with $S=\lambda_1+\lambda_2$ and $R=\lambda_3+\lambda_4$ in $[0,2]$, $\sigma_1-\tfrac12(\sigma_2+\sigma_3)=\lambda_1\lambda_2+\lambda_3\lambda_4-\tfrac12SR\le\tfrac{S^2}4+\tfrac{R^2}4-\tfrac{SR}2=\tfrac{(S-R)^2}4\le1$, and the other $i$ are the same after relabelling. Equality holds at $\lambda=(1,1,0,0)$, $\omega\propto f_{12}+f_{34}$, which is realised when $p,q\ge2$ by $E=\operatorname{span}(a_1,a_2,b_1,b_2)$. Since $x+y+2>0$,
+Maximising over $\omega$ gives $c\max_i(\sigma_i-\tfrac12\sigma_j-\tfrac12\sigma_k)$. For $i=1$, with $S=\lambda_1+\lambda_2$ and $R=\lambda_3+\lambda_4$ in $[0,2]$, $\sigma_1-\tfrac12(\sigma_2+\sigma_3)=\lambda_1\lambda_2+\lambda_3\lambda_4-\tfrac12SR\le\tfrac{S^2}4+\tfrac{R^2}4-\tfrac{SR}2=\tfrac{(S-R)^2}4\le1$, and the other $i$ are the same after relabelling. Equality holds at $\lambda=(1,1,0,0)$, $\omega\propto f_{12}+f_{34}$, which is realised when $p,q\ge2$ by $E=\mathop{\mathrm{span}}(a_1,a_2,b_1,b_2)$. Since $x+y+2>0$,
 
 $$\cos d(\hat S,\mathcal O)=\frac{c\,(x+y+2)}{|W_{p,q}|}=\frac{x+y+2}{\sqrt6\,\sqrt{\tfrac{pq}2(x+y+2)}}=\sqrt{\frac{x+y+2}{3pq}}.$$
 

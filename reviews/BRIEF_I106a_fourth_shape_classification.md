@@ -8,18 +8,18 @@ You are an adversarial reviewer. **Work from the definitions below and from the 
 
 $\hat U,V$ are real traceless symmetric $3\times3$ matrices, and
 
-$$\Phi(\hat U,V)=\alpha\operatorname{tr}\hat U^3+\beta\operatorname{tr}(\hat UV^2)+\langle\hat U,A\rangle+\langle V,C\rangle,\qquad\alpha=\tfrac{15}4,\ \beta=\tfrac94,$$
+$$\Phi(\hat U,V)=\alpha\mathop{\mathrm{tr}}\hat U^3+\beta\mathop{\mathrm{tr}}(\hat UV^2)+\langle\hat U,A\rangle+\langle V,C\rangle,\qquad\alpha=\tfrac{15}4,\ \beta=\tfrac94,$$
 
 with $T=\tfrac32\lvert\hat U\rvert^2+\tfrac12\lvert V\rvert^2$ the constraint. The Lagrange fields, **given and not under review**, are $A\equiv3\mu\hat U-3\alpha\hat U^2-\beta V^2$ and $C\equiv\mu V-\beta\{\hat U,V\}$, each up to a multiple of $I$. **$A$ and $C$ are FIXED matrices in $\Phi$**, not functions of the point at which $\Phi$ is evaluated.
 
-**Given, from batch 21, verbatim from the record.** At every local maximum, for all traceless symmetric $X,Y$ with $3\operatorname{tr}(\hat UX)+\operatorname{tr}(VY)=0$,
-$$6\alpha\operatorname{tr}(\hat UX^2)+4\beta\operatorname{tr}(XVY)+2\beta\operatorname{tr}(\hat UY^2)\ \le\ \mu\big(3\lvert X\rvert^2+\lvert Y\rvert^2\big).$$
+**Given, from batch 21, verbatim from the record.** At every local maximum, for all traceless symmetric $X,Y$ with $3\mathop{\mathrm{tr}}(\hat UX)+\mathop{\mathrm{tr}}(VY)=0$,
+$$6\alpha\mathop{\mathrm{tr}}(\hat UX^2)+4\beta\mathop{\mathrm{tr}}(XVY)+2\beta\mathop{\mathrm{tr}}(\hat UY^2)\ \le\ \mu\big(3\lvert X\rvert^2+\lvert Y\rvert^2\big).$$
 
 **Given, the great-circle identity, validated at $2.3\cdot10^{-13}$ over $4000$ critical points.** Along $\gamma(\theta)=\cos\theta\,p+\sin\theta\,Z$ with $Z$ tangent and $\lVert Z\rVert=\lVert p\rVert$, writing $c=\cos\theta$, $s=\sin\theta$, $p=(\hat U,V)$ and $Z=(X,Y)$,
 
 $$\Phi(\gamma(\theta))-\Phi(p)=-\tfrac12\Phi(p)(c-1)^2(c+2)+\tfrac12cs^2Q(Z)+s^3\big(\Xi(Z)-S(Z)\big),$$
 
-where **$Q$ is batch 21's expression INCLUDING its $-\mu(3\lvert X\rvert^2+\lvert Y\rvert^2)$ term**, $\Xi(Z)=\alpha\operatorname{tr}X^3+\beta\operatorname{tr}(XY^2)$ is the cubic form at the direction, and $S(Z)=-(\langle A,X\rangle+\langle C,Y\rangle)$, checked to $1.1\cdot10^{-13}$.
+where **$Q$ is batch 21's expression INCLUDING its $-\mu(3\lvert X\rvert^2+\lvert Y\rvert^2)$ term**, $\Xi(Z)=\alpha\mathop{\mathrm{tr}}X^3+\beta\mathop{\mathrm{tr}}(XY^2)$ is the cubic form at the direction, and $S(Z)=-(\langle A,X\rangle+\langle C,Y\rangle)$, checked to $1.1\cdot10^{-13}$.
 
 **Given, from batch 33**: $\Phi$ VARIES along the conjugation orbit $X=[\Omega,\hat U]$, $Y=[\Omega,V]$, through the term $\langle\hat U,A\rangle+\langle V,C\rangle$.
 

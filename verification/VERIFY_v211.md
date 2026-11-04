@@ -25,13 +25,13 @@
 | 15 | the crossover $n=6+2\sqrt7$ bears on this lemma | **REFUTED**, the argument is dimension-free and the crossover never enters |
 | 16 | symbol collisions ($U$, $v_\alpha$, $\lambda$, $N$, $q$, $r$, $\mathring R$, $x$) | **CLEARED** for the block, with two recorded below |
 
-**One line.** The identity and the whole descent are correct, and correct for any number of negative eigenvalues once $U$ is read as $\sum_{\lambda_\alpha<0}\operatorname{im}v_\alpha$, but the statement's third conclusion, *"with the same norm and the same $\theta$"*, has no argument in the block that [results.md](../results.md) names as its proof, so **the verdict is `GAP`**.
+**One line.** The identity and the whole descent are correct, and correct for any number of negative eigenvalues once $U$ is read as $\sum_{\lambda_\alpha<0}\mathop{\mathrm{im}}v_\alpha$, but the statement's third conclusion, *"with the same norm and the same $\theta$"*, has no argument in the block that [results.md](../results.md) names as its proof, so **the verdict is `GAP`**.
 
 ## 0. Conventions, fixed once
 
 Quoted from [conventions.md](../findings/conventions.md), not restated:
 
-- The pairing the whole argument runs in: *"**This record's norm is $\lVert Z\rVert^2=\tfrac12\operatorname{tr}(Z^{\mathsf T}Z)$**, so $\lVert Z\rVert_F^2=2\lVert Z\rVert^2$"*; and *"A skew matrix's norm, in the form the stratum arguments use: $\langle X,X\rangle=\tfrac12\operatorname{tr}(X^{\mathsf T}X)$ … Equivalent to $\operatorname{tr}(v^2)=-2$ above."*
+- The pairing the whole argument runs in: *"**This record's norm is $\lVert Z\rVert^2=\tfrac12\mathop{\mathrm{tr}}(Z^{\mathsf T}Z)$**, so $\lVert Z\rVert_F^2=2\lVert Z\rVert^2$"*; and *"A skew matrix's norm, in the form the stratum arguments use: $\langle X,X\rangle=\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}X)$ … Equivalent to $\mathop{\mathrm{tr}}(v^2)=-2$ above."*
 - The bivector normalisation that pins the constant in claim 1: *"**A bivector's norm**, and the record runs in the first of these: $\lVert\varphi_{ab}\rVert^2=1$ under the half-trace pairing of the bullet above, which is the one every result uses and which makes $\{\varphi_{ab}\}_{a<b}$ orthonormal."*
 - What $\mathrm{Ric}$ is: *"$\mathrm{Ric}$ is the adjoint of $\cdot\wedge\mathrm{id}$, with $\lVert\mathrm{Ric}\rVert$ the Frobenius norm of the resulting symmetric matrix."* The block's own file gives the working form $34$ lines above L30: *"$\mathrm{Ric}(u,u)=\sum_j\langle W(u\wedge f_j),u\wedge f_j\rangle$ for $\{f_j\}$ an orthonormal basis of $u^\perp$."*
 - What $\theta$ is: *"$\theta$ | $P(W)/\lVert W\rVert^3$; at a critical point, $Q(W)=\theta W$"*, with *"$Q(W)$ | Hamilton's quadratic map $W^2+W^\#$"* and *"$P(W)$ | the cubic form $\langle W,Q(W)\rangle$"*.
@@ -45,7 +45,7 @@ Quoted from [conventions.md](../findings/conventions.md), not restated:
 | --- | --- | --- | --- |
 | $W\in\mathrm{Weyl}_n$, i.e. $\mathrm{Ric}(W)=0$ | statement | the first sentence, and again at the restriction step | **used, load-bearing** |
 | $W$ self-adjoint on $\Lambda^2$ with an orthonormal eigenbasis $\{v_\alpha\}$ | implicit in "$v_{N-1},v_N$ read as skew matrices" | the identity, and the invariance of $\Lambda^2U$ under $W$ | **used, unstated** |
-| "at most two negative eigenvalues" | statement | **only** in making $U=\operatorname{im}v_{N-1}+\operatorname{im}v_N$ coincide with $\operatorname{im}A_-$ | **used once, and only definitionally** |
+| "at most two negative eigenvalues" | statement | **only** in making $U=\mathop{\mathrm{im}}v_{N-1}+\mathop{\mathrm{im}}v_N$ coincide with $\mathop{\mathrm{im}}A_-$ | **used once, and only definitionally** |
 | $\dim U<n$ | statement | the existence of a $u\perp U$; nothing else | **used, load-bearing** |
 | $\dim U\ge4$ | **nowhere** | needed for "$\mathrm{Weyl}_{\dim U}$ tensor" to be a nonzero object | **unstated, but automatic** (§7) |
 | $\Lambda^2U=\mathfrak{so}(U)$ is a Lie subalgebra | **nowhere in the block**, only in the blockquote above it | would be needed for the $\theta$ half of clause 9 | **the debt** (§6) |
@@ -61,7 +61,7 @@ Write $W=\sum_\alpha\lambda_\alpha\,v_\alpha\otimes v_\alpha$ in an orthonormal 
 
 For skew $v$ and any $x,e\in\mathbb R^n$, with $X=xe^{\mathsf T}-ex^{\mathsf T}$,
 
-$$\langle v,X\rangle=\tfrac12\operatorname{tr}(v^{\mathsf T}X)=-\tfrac12\big(e^{\mathsf T}vx-x^{\mathsf T}ve\big)=-e^{\mathsf T}vx,$$
+$$\langle v,X\rangle=\tfrac12\mathop{\mathrm{tr}}(v^{\mathsf T}X)=-\tfrac12\big(e^{\mathsf T}vx-x^{\mathsf T}ve\big)=-e^{\mathsf T}vx,$$
 
 the last step because $x^{\mathsf T}ve=(x^{\mathsf T}ve)^{\mathsf T}=e^{\mathsf T}v^{\mathsf T}x=-e^{\mathsf T}vx$. **Anchor**: $v=\varphi_{12}$, $x=e_1$, $e=e_2$ gives $\langle\varphi_{12},\varphi_{12}\rangle=1$ on the left and $-e_2^{\mathsf T}\varphi_{12}e_1=-e_2^{\mathsf T}(-e_2)=1$ on the right.
 
@@ -73,7 +73,7 @@ $$\mathrm{Ric}(W)(x,x)=\sum_j\langle W(x\wedge e_j),x\wedge e_j\rangle=\sum_\alp
 
 Polarising, $\mathrm{Ric}(W)=\sum_\alpha\lambda_\alpha v_\alpha^{\mathsf T}v_\alpha$ as a symmetric matrix, with each $v_\alpha^{\mathsf T}v_\alpha\succeq0$. So Ricci-flatness is exactly $\sum_\alpha\lambda_\alpha v_\alpha^{\mathsf T}v_\alpha=0$. **Claim 1 holds.**
 
-**Index conventions checked against [conventions.md](../findings/conventions.md).** The identity needs three of them and gets all three: the half-trace pairing, the $\varphi_{ab}$-orthonormal bivector normalisation, and $\mathrm{Ric}$ as the frame sum. It needs *none* of the ones this file flags as dangerous, the $\mathring R$ index order (Li's $iklj$ against BK's $ikjl$), the $\operatorname{scal}=2\operatorname{tr}$ convention, and the $\lvert W\rvert^2=4\lVert W\rVert_F^2$ conversion all sit outside the argument. **This matters**, because [conventions.md](../findings/conventions.md) records that *"[stratum-two-negative.md](../findings/stratum-two-negative.md) is written throughout in BK's $ikjl$"* and that *"its operator is $-\mathring W$, so its $\lambda_{\max}(\mathring R)\le1$ statements read $\lambda_{\min}(\mathring W)\ge-1$ in the record's order"*, with the conversion *"queued for a verification round"*. **L30 is untouched by that queue**: it uses $W$ as an operator on $\Lambda^2$ and $\mathrm{Ric}$, and never the second-kind operator.
+**Index conventions checked against [conventions.md](../findings/conventions.md).** The identity needs three of them and gets all three: the half-trace pairing, the $\varphi_{ab}$-orthonormal bivector normalisation, and $\mathrm{Ric}$ as the frame sum. It needs *none* of the ones this file flags as dangerous, the $\mathring R$ index order (Li's $iklj$ against BK's $ikjl$), the $\mathop{\mathrm{scal}}=2\mathop{\mathrm{tr}}$ convention, and the $\lvert W\rvert^2=4\lVert W\rVert_F^2$ conversion all sit outside the argument. **This matters**, because [conventions.md](../findings/conventions.md) records that *"[stratum-two-negative.md](../findings/stratum-two-negative.md) is written throughout in BK's $ikjl$"* and that *"its operator is $-\mathring W$, so its $\lambda_{\max}(\mathring R)\le1$ statements read $\lambda_{\min}(\mathring W)\ge-1$ in the record's order"*, with the conversion *"queued for a verification round"*. **L30 is untouched by that queue**: it uses $W$ as an operator on $\Lambda^2$ and $\mathrm{Ric}$, and never the second-kind operator.
 
 **Robustness.** Had the record run in plain Frobenius instead, the identity would carry a positive constant. Every use L30 makes of it (that the two sides are equal, that the terms are PSD), is invariant under a positive rescale. So the block's silence about which normalisation it is in costs it nothing here.
 
@@ -83,23 +83,23 @@ Set $A_+=\sum_{\lambda_\alpha>0}\lambda_\alpha v_\alpha^{\mathsf T}v_\alpha\succ
 
 **First half, "the positive and negative sides are the same matrix."** §1 gives $A_+-A_-=0$. This is a rearrangement of the identity, not a step, and it is correct. **Claim 2a holds.**
 
-**Second half, part one, the image is in $U$.** For skew $v$, $\ker(v^{\mathsf T}v)=\ker v$ and so $\operatorname{im}(v^{\mathsf T}v)=(\ker v)^\perp=\operatorname{im}v$. For a finite sum of PSD matrices the image is the sum of the images, so
+**Second half, part one, the image is in $U$.** For skew $v$, $\ker(v^{\mathsf T}v)=\ker v$ and so $\mathop{\mathrm{im}}(v^{\mathsf T}v)=(\ker v)^\perp=\mathop{\mathrm{im}}v$. For a finite sum of PSD matrices the image is the sum of the images, so
 
-$$\operatorname{im}A_-=\sum_{\lambda_\alpha<0}\operatorname{im}v_\alpha .$$
+$$\mathop{\mathrm{im}}A_-=\sum_{\lambda_\alpha<0}\mathop{\mathrm{im}}v_\alpha .$$
 
 Under "at most two negative eigenvalues", $v_{N-1},v_N$ exhaust the negative spectrum and this is exactly $U$. **So the image is not merely contained in $U$, it equals $U$.** The block's weaker phrasing is true and is all the argument needs. **Claim 2b holds.**
 
-*A well-definedness check the block does not make and passes.* Under a repeated negative eigenvalue the pair $v_{N-1},v_N$ is not determined by $W$, but $U$ is: for any $v=av_{N-1}+bv_N$, $\operatorname{im}v\subseteq\operatorname{im}v_{N-1}+\operatorname{im}v_N$, so $\sum_{v\in\mathfrak m}\operatorname{im}v=U$ for every orthonormal basis of the negative eigenspace $\mathfrak m$. **$U$ is a function of $W$ alone.** This is what makes the block's own "Scope, stated" paragraph (*"under a repeated negative eigenvalue those are not determined by $W$"*), a remark about the *ranks* and not about $U$, which is the correct reading.
+*A well-definedness check the block does not make and passes.* Under a repeated negative eigenvalue the pair $v_{N-1},v_N$ is not determined by $W$, but $U$ is: for any $v=av_{N-1}+bv_N$, $\mathop{\mathrm{im}}v\subseteq\mathop{\mathrm{im}}v_{N-1}+\mathop{\mathrm{im}}v_N$, so $\sum_{v\in\mathfrak m}\mathop{\mathrm{im}}v=U$ for every orthonormal basis of the negative eigenspace $\mathfrak m$. **$U$ is a function of $W$ alone.** This is what makes the block's own "Scope, stated" paragraph (*"under a repeated negative eigenvalue those are not determined by $W$"*), a remark about the *ranks* and not about $U$, which is the correct reading.
 
-**Second half, part two, every $\operatorname{im}v_\alpha$ with $\lambda_\alpha\ne0$ sits inside $U$.** If $A_+x=0$ then $0=x^{\mathsf T}A_+x=\sum_{\lambda_\beta>0}\lambda_\beta\lVert v_\beta x\rVert^2$, a sum of nonnegative terms with strictly positive weights, so $v_\beta x=0$ for every $\beta$ with $\lambda_\beta>0$. Hence $\ker A_+\subseteq\ker v_\beta$, and taking orthogonal complements with $\operatorname{im}v_\beta=(\ker v_\beta)^\perp$ (valid because $v_\beta$ is skew),
+**Second half, part two, every $\mathop{\mathrm{im}}v_\alpha$ with $\lambda_\alpha\ne0$ sits inside $U$.** If $A_+x=0$ then $0=x^{\mathsf T}A_+x=\sum_{\lambda_\beta>0}\lambda_\beta\lVert v_\beta x\rVert^2$, a sum of nonnegative terms with strictly positive weights, so $v_\beta x=0$ for every $\beta$ with $\lambda_\beta>0$. Hence $\ker A_+\subseteq\ker v_\beta$, and taking orthogonal complements with $\mathop{\mathrm{im}}v_\beta=(\ker v_\beta)^\perp$ (valid because $v_\beta$ is skew),
 
-$$\operatorname{im}v_\beta\subseteq(\ker A_+)^\perp=\operatorname{im}A_+=\operatorname{im}A_-=U .$$
+$$\mathop{\mathrm{im}}v_\beta\subseteq(\ker A_+)^\perp=\mathop{\mathrm{im}}A_+=\mathop{\mathrm{im}}A_-=U .$$
 
 For $\lambda_\alpha<0$ the containment is definitional. **Claim 2c holds.** The positivity of the weights is exactly where "$\lambda_\alpha\ne0$" earns its place: a zero weight carries no information about its term.
 
 ## 3. The descent, and $W$ vanishing on $u\wedge u^\perp$
 
-Let $u\perp U$. Then $u\perp\operatorname{im}v_\alpha=(\ker v_\alpha)^\perp$ for every $\alpha$ with $\lambda_\alpha\ne0$, so $u\in\ker v_\alpha$, i.e. $v_\alpha u=0$. By §1's pairing formula, $\langle v_\alpha,u\wedge w\rangle=-w^{\mathsf T}v_\alpha u=0$ for every $w$. Therefore
+Let $u\perp U$. Then $u\perp\mathop{\mathrm{im}}v_\alpha=(\ker v_\alpha)^\perp$ for every $\alpha$ with $\lambda_\alpha\ne0$, so $u\in\ker v_\alpha$, i.e. $v_\alpha u=0$. By §1's pairing formula, $\langle v_\alpha,u\wedge w\rangle=-w^{\mathsf T}v_\alpha u=0$ for every $w$. Therefore
 
 $$W(u\wedge w)=\sum_\alpha\lambda_\alpha\langle v_\alpha,u\wedge w\rangle\,v_\alpha=0,$$
 
@@ -109,29 +109,29 @@ the terms with $\lambda_\alpha\ne0$ dying by the pairing and the terms with $\la
 
 **The trap is live in both directions here, because the lemma is about paddings.** The block anticipates it and the anticipation is correct.
 
-**The witness holds.** Padded $W_{\mathbb{CP}^2}$ in $\mathcal W_{10}$: the tensor is supported on $\Lambda^2\operatorname{span}(e_1,\dots,e_4)$, its two negative eigenvectors are self-dual forms of rank $4$, so $U=\operatorname{span}(e_1,\dots,e_4)$ and $\dim U=4<10$. Every bivector outside $\Lambda^2\mathbb R^4$ is a $0$-eigenvector; $\varphi_{9,10}=e_9\wedge e_{10}$ is one. Take $u=e_9$, which is orthogonal to $U$. Then
+**The witness holds.** Padded $W_{\mathbb{CP}^2}$ in $\mathcal W_{10}$: the tensor is supported on $\Lambda^2\mathop{\mathrm{span}}(e_1,\dots,e_4)$, its two negative eigenvectors are self-dual forms of rank $4$, so $U=\mathop{\mathrm{span}}(e_1,\dots,e_4)$ and $\dim U=4<10$. Every bivector outside $\Lambda^2\mathbb R^4$ is a $0$-eigenvector; $\varphi_{9,10}=e_9\wedge e_{10}$ is one. Take $u=e_9$, which is orthogonal to $U$. Then
 
 $$\varphi_{9,10}\,e_9=(E_{9,10}-E_{10,9})e_9=-e_{10}\ne0 ,$$
 
-and $\operatorname{im}\varphi_{9,10}=\operatorname{span}(e_9,e_{10})\not\subseteq U$. **So "$v_\alpha u=0$ for all $\alpha$" is false as an unrestricted claim, and the bolded $\lambda_\alpha\ne0$ qualifier is necessary rather than decorative.** Claim 4 holds.
+and $\mathop{\mathrm{im}}\varphi_{9,10}=\mathop{\mathrm{span}}(e_9,e_{10})\not\subseteq U$. **So "$v_\alpha u=0$ for all $\alpha$" is false as an unrestricted claim, and the bolded $\lambda_\alpha\ne0$ qualifier is necessary rather than decorative.** Claim 4 holds.
 
-**And a presentational defect inside the witness, which I record because the next reader will hit it.** The record names $e_9\wedge e_{10}$ and **does not name $u$**. The reader's natural choice, following the block's own scope paragraph, is $u=e_5$ (the first coordinate orthogonal to $U$) and there $\varphi_{9,10}e_5=0$, so the witness appears to fail. The witness needs a $u$ inside $\operatorname{im}\varphi_{9,10}$, i.e. $u\in\operatorname{span}(e_9,e_{10})$. *Discrepancy protocol*: located (the parenthesis in the block's proof); exhibited ($\varphi_{9,10}e_5=0$ in closed form); opposite argued, the claim being refuted is universally quantified over $u\perp U$, so one $u$ suffices and $e_9$ supplies it, and the record's sentence is therefore **true as written and incomplete as an exhibit**. Reported as a presentational note, not as a discrepancy against the mathematics.
+**And a presentational defect inside the witness, which I record because the next reader will hit it.** The record names $e_9\wedge e_{10}$ and **does not name $u$**. The reader's natural choice, following the block's own scope paragraph, is $u=e_5$ (the first coordinate orthogonal to $U$) and there $\varphi_{9,10}e_5=0$, so the witness appears to fail. The witness needs a $u$ inside $\mathop{\mathrm{im}}\varphi_{9,10}$, i.e. $u\in\mathop{\mathrm{span}}(e_9,e_{10})$. *Discrepancy protocol*: located (the parenthesis in the block's proof); exhibited ($\varphi_{9,10}e_5=0$ in closed form); opposite argued, the claim being refuted is universally quantified over $u\perp U$, so one $u$ suffices and $e_9$ supplies it, and the record's sentence is therefore **true as written and incomplete as an exhibit**. Reported as a presentational note, not as a discrepancy against the mathematics.
 
 ## 5. "At most two", the hypothesis is inert, and the blockquote is right twice over
 
-**It is used nowhere except in the definition of $U$.** Tracing §§1–3: the identity uses no count; $\operatorname{im}A_-=\sum_{\lambda_\alpha<0}\operatorname{im}v_\alpha$ uses no count; the $\ker A_+$ argument uses no count; the descent uses no count. The single place the count enters is the step $\operatorname{im}A_-=U$, which needs the two named eigenvectors to exhaust the negative spectrum.
+**It is used nowhere except in the definition of $U$.** Tracing §§1–3: the identity uses no count; $\mathop{\mathrm{im}}A_-=\sum_{\lambda_\alpha<0}\mathop{\mathrm{im}}v_\alpha$ uses no count; the $\ker A_+$ argument uses no count; the descent uses no count. The single place the count enters is the step $\mathop{\mathrm{im}}A_-=U$, which needs the two named eigenvectors to exhaust the negative spectrum.
 
 **The correct statement, stated.** With
 
-$$U:=\sum_{\lambda_\alpha<0}\operatorname{im}v_\alpha,$$
+$$U:=\sum_{\lambda_\alpha<0}\mathop{\mathrm{im}}v_\alpha,$$
 
 every step of §§1–3 goes through verbatim for **any** number of negative eigenvalues, with no degradation and with $\dim U=n-1$ admitted. So the corrected statement is:
 
-> Let $W\in\mathrm{Weyl}_n$ and set $U:=\sum_{\lambda_\alpha<0}\operatorname{im}v_\alpha$. If $\dim U<n$ then $W$ vanishes on $u\wedge u^\perp$ for every $u\perp U$, and $W$ is a padding of a $\mathrm{Weyl}_{\dim U}$ tensor.
+> Let $W\in\mathrm{Weyl}_n$ and set $U:=\sum_{\lambda_\alpha<0}\mathop{\mathrm{im}}v_\alpha$. If $\dim U<n$ then $W$ vanishes on $u\wedge u^\perp$ for every $u\perp U$, and $W$ is a padding of a $\mathrm{Weyl}_{\dim U}$ tensor.
 
-**And the count is genuinely necessary as the block defines $U$.** I checked the blockquote's own witness rather than taking it: $\mathrm{pad}_{V_1}(W_{\mathbb{CP}^2})+\mathrm{pad}_{V_2}(W_{\mathbb{CP}^2})$ on $\mathbb R^8$, with $V_1=\operatorname{span}(e_1,\dots,e_4)$ and $V_2=\operatorname{span}(e_5,\dots,e_8)$, lies in $\mathcal W_8$ because $\mathcal W_8$ is a linear space and each summand is a padding of a $\mathcal W_4$ element. Each summand contributes two negative eigenvalues, so there are four. Reading $U$ off the two from $V_1$ gives $\dim U=4<8$, while $e_5\perp U$ and $W(e_5\wedge e_6)\ne0$ because $e_5\wedge e_6$ is a positive-eigenvalue direction of the second summand. **So the two annotations do not contradict each other**: the count is inert to the *argument* and necessary to the *definition*, and the one-line redefinition removes both problems at once. **Claim 5 is refuted in the form the brief poses it**, the hypothesis is used nowhere else.
+**And the count is genuinely necessary as the block defines $U$.** I checked the blockquote's own witness rather than taking it: $\mathrm{pad}_{V_1}(W_{\mathbb{CP}^2})+\mathrm{pad}_{V_2}(W_{\mathbb{CP}^2})$ on $\mathbb R^8$, with $V_1=\mathop{\mathrm{span}}(e_1,\dots,e_4)$ and $V_2=\mathop{\mathrm{span}}(e_5,\dots,e_8)$, lies in $\mathcal W_8$ because $\mathcal W_8$ is a linear space and each summand is a padding of a $\mathcal W_4$ element. Each summand contributes two negative eigenvalues, so there are four. Reading $U$ off the two from $V_1$ gives $\dim U=4<8$, while $e_5\perp U$ and $W(e_5\wedge e_6)\ne0$ because $e_5\wedge e_6$ is a positive-eigenvalue direction of the second summand. **So the two annotations do not contradict each other**: the count is inert to the *argument* and necessary to the *definition*, and the one-line redefinition removes both problems at once. **Claim 5 is refuted in the form the brief poses it**, the hypothesis is used nowhere else.
 
-*A second, smaller under-specification the word "at most" creates.* If $W$ has exactly **one** negative eigenvalue, then $v_{N-1}$ is not a negative eigenvector at all; in the eigenvalue ordering it carries $\lambda_{N-1}=0$ whenever $W$ has a kernel, and a kernel eigenvector is not determined by $W$. Then $U$ depends on an arbitrary choice and $\dim U$ (hence the dimension of the tensor the padding descends to), is not a function of $W$. **The conclusion does not fail**, because the chosen $U$ always contains $\operatorname{im}A_-$ and a larger $U$ only weakens both clauses. But it is a second reason the redefinition is the right repair, and it is not among the four the blockquote records.
+*A second, smaller under-specification the word "at most" creates.* If $W$ has exactly **one** negative eigenvalue, then $v_{N-1}$ is not a negative eigenvector at all; in the eigenvalue ordering it carries $\lambda_{N-1}=0$ whenever $W$ has a kernel, and a kernel eigenvector is not determined by $W$. Then $U$ depends on an arbitrary choice and $\dim U$ (hence the dimension of the tensor the padding descends to), is not a function of $W$. **The conclusion does not fail**, because the chosen $U$ always contains $\mathop{\mathrm{im}}A_-$ and a larger $U$ only weakens both clauses. But it is a second reason the redefinition is the right repair, and it is not among the four the blockquote records.
 
 ## 6. "With the same norm and the same $\theta$", the gap
 
@@ -143,7 +143,7 @@ every step of §§1–3 goes through verbatim for **any** number of negative eig
 
 1. **$W'$ is an element of $\mathrm{Weyl}_{\dim U}$**, not merely a Ricci-flat symmetric operator: the pair symmetries and the **first Bianchi identity** must be shown to restrict from $\mathbb R^n$ to $U$. *The block proves the Ricci-flatness half and states neither of the others.*
 2. **$\lVert W\rVert=\lVert W'\rVert$**, where the left norm is taken in $\mathcal W_n$ and the right in $\mathcal W_{\dim U}$. What has to be shown is that the inclusion $\Lambda^2U\hookrightarrow\Lambda^2\mathbb R^n$ is an isometry for the record's half-trace pairing, so that an orthonormal basis of $\Lambda^2U$ extends to one of $\Lambda^2\mathbb R^n$ and $W$'s matrix in it is $W'\oplus0$.
-3. **$P(W)=P(W')$**, hence $\theta(W)=\theta(W')$. This splits: $\langle W,W^2\rangle=\operatorname{tr}(W^3)$ needs only that padding adds zero eigenvalues; $\langle W,W^\#\rangle$ needs that $\#$, computed with the structure constants of $\mathfrak{so}(n)$, agrees with $\#$ computed with those of $\mathfrak{so}(\dim U)$.
+3. **$P(W)=P(W')$**, hence $\theta(W)=\theta(W')$. This splits: $\langle W,W^2\rangle=\mathop{\mathrm{tr}}(W^3)$ needs only that padding adds zero eigenvalues; $\langle W,W^\#\rangle$ needs that $\#$, computed with the structure constants of $\mathfrak{so}(n)$, agrees with $\#$ computed with those of $\mathfrak{so}(\dim U)$.
 
 **I am not supplying these.** What the brief does ask me to settle is whether the two ingredients the annotation names are the *right* ones, and they are:
 
@@ -181,7 +181,7 @@ The three versions scope the same thing: the $n$ at which padded $W_{\mathbb{CP}
 | condition | source | range |
 | --- | --- | --- |
 | padded $W_{\mathbb{CP}^2}$ exists in $\mathcal W_n$ | it is a padding of a $\mathcal W_4$ element | $n\ge4$ |
-| the lemma's hypothesis $\dim U<n$ holds, with $\dim U=4$ | both negative eigenvectors are rank-$4$ self-dual forms, so $U=\operatorname{span}(e_1,\dots,e_4)$ | $n\ge5$ |
+| the lemma's hypothesis $\dim U<n$ holds, with $\dim U=4$ | both negative eigenvectors are rank-$4$ self-dual forms, so $U=\mathop{\mathrm{span}}(e_1,\dots,e_4)$ | $n\ge5$ |
 | the rank-sum form fails, $4+4=8\ge n$ | the block's own sentence | $n\le8$ |
 
 **The intersection is $n\in\{5,6,7,8\}$.**
@@ -198,7 +198,7 @@ The three versions scope the same thing: the $n$ at which padded $W_{\mathbb{CP}
 
 | symbol | the live senses [conventions.md](../findings/conventions.md) records | what L30's block does |
 | --- | --- | --- |
-| $U$ | **tabled nowhere**, and defined inline in two blocks of this file; [LEDGER.md](../findings/LEDGER.md) records that its two readings *"once produced two verdicts on one statement"* | uses $\operatorname{im}v_{N-1}+\operatorname{im}v_N$ throughout, consistently; the redefinition $\sum_{\lambda_\alpha<0}\operatorname{im}v_\alpha$ lives only in the annotation. **The two agree under the block's own hypothesis and part without it (§5).** *The letter should be tabled.* |
+| $U$ | **tabled nowhere**, and defined inline in two blocks of this file; [LEDGER.md](../findings/LEDGER.md) records that its two readings *"once produced two verdicts on one statement"* | uses $\mathop{\mathrm{im}}v_{N-1}+\mathop{\mathrm{im}}v_N$ throughout, consistently; the redefinition $\sum_{\lambda_\alpha<0}\mathop{\mathrm{im}}v_\alpha$ lives only in the annotation. **The two agree under the block's own hypothesis and part without it (§5).** *The letter should be tabled.* |
 | $v_\alpha$ | the eigenframe of $W$ on $\Lambda^2$, as in $T_{\alpha\beta\gamma}=\langle[v_\alpha,v_\beta],v_\gamma\rangle^2$ | one sense only. **Cleared** |
 | $\lambda$ | the Einstein constant in [L47](../findings/problem.md); $\lambda_{\max}$ carries three senses across [results.md](../results.md); $\lambda_m$ the summand value | L30 uses $\lambda_\alpha$ for $W$'s $\Lambda^2$ eigenvalues only, and never $\lambda_{\max}$. **Cleared** |
 | $N$ | $\binom n2$ in the table; $N_v:=2v\otimes v-\mathrm{ad}(v)^2$ in [L33](../findings/stratum-two-negative.md), **sixty lines above in this same file** | L30 writes $N$ bare, in the tabled sense. **Cleared, and the collision is already recorded** |
@@ -243,4 +243,4 @@ The three versions scope the same thing: the $n$ at which padded $W_{\mathbb{CP}
 1. **The scope paragraph should read $n=5,6,7,8$.** The block's $6,7,8$ omits $n=5$; the development form's *"below $n=9$"* admits $n=4$, where the hypothesis is vacuous.
 2. **The kernel witness names $e_9\wedge e_{10}$ and not the $u$ that goes with it**, and the reader's natural $u=e_5$ does not work. Naming $u=e_9$ is one word.
 
-**And one repair the annotations do not carry.** With $U$ read as $\sum_{\lambda_\alpha<0}\operatorname{im}v_\alpha$, the count hypothesis is unnecessary; left as written, *"at most"* also lets the one-negative case pick $U$ from an undetermined kernel eigenvector, so $\dim U$ (the dimension the padding descends to), is not a function of $W$. **The redefinition fixes both, and only the first is on record.**
+**And one repair the annotations do not carry.** With $U$ read as $\sum_{\lambda_\alpha<0}\mathop{\mathrm{im}}v_\alpha$, the count hypothesis is unnecessary; left as written, *"at most"* also lets the one-negative case pick $U$ from an undetermined kernel eigenvector, so $\dim U$ (the dimension the padding descends to), is not a function of $W$. **The redefinition fixes both, and only the first is on record.**

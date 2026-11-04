@@ -21,7 +21,7 @@
 - $c_{abc}=\langle[v_a,v_b],v_c\rangle$ in an orthonormal basis, totally antisymmetric.
 - $(W^\#)_{ab}=\tfrac12\sum c_{acd}c_{bef}W_{ce}W_{df}$ (Passage B), $Q(W)=W^2+W^\#$.
 - Critical means $Q(W)=\theta W$ for some $\theta\in\mathbb R$ (Passage B). On $\{\lVert W\rVert=1\}$ pairing with $W$ forces $\theta=P(W)$. Section 4 also treats the projected reading $\pi_{\mathcal W_n}Q(W)=\theta W$.
-- $\{\varphi_k\}$ is an orthonormal eigenbasis of $W$, $W\varphi_k=\lambda_k\varphi_k$, and $M_{kl}=\operatorname{tr}(\mathrm{ad}(\varphi_k)W\,\mathrm{ad}(\varphi_l)W)$.
+- $\{\varphi_k\}$ is an orthonormal eigenbasis of $W$, $W\varphi_k=\lambda_k\varphi_k$, and $M_{kl}=\mathop{\mathrm{tr}}(\mathrm{ad}(\varphi_k)W\,\mathrm{ad}(\varphi_l)W)$.
 - A coordinate-diagonal operator has $W(e_i\wedge e_j)=w_{ij}\,e_i\wedge e_j$, with $w_{ij}=w_{ji}$ and the convention $w_{ii}=0$.
 
 ## Hypothesis inventory
@@ -33,7 +33,7 @@
 
 ## 1. The bracket form is $[W,Q(W)]=0$
 
-In the eigenbasis, $(\mathrm{ad}\,v)_{\alpha\beta}=\langle\varphi_\alpha,[v,\varphi_\beta]\rangle=\sum_a v_a c_{a\beta\alpha}$. Hence $\operatorname{tr}(\mathrm{ad}(v)W\mathrm{ad}(v)W)=\sum_{a,b,\alpha,\beta}v_av_b\,c_{a\beta\alpha}c_{b\alpha\beta}\lambda_\alpha\lambda_\beta=-\sum v_av_b\,c_{a\alpha\beta}c_{b\alpha\beta}\lambda_\alpha\lambda_\beta=-2\langle v,W^\#v\rangle$, which is Passage A's identity. $M$ is symmetric by cyclicity of the trace, so polarising gives
+In the eigenbasis, $(\mathrm{ad}\,v)_{\alpha\beta}=\langle\varphi_\alpha,[v,\varphi_\beta]\rangle=\sum_a v_a c_{a\beta\alpha}$. Hence $\mathop{\mathrm{tr}}(\mathrm{ad}(v)W\mathrm{ad}(v)W)=\sum_{a,b,\alpha,\beta}v_av_b\,c_{a\beta\alpha}c_{b\alpha\beta}\lambda_\alpha\lambda_\beta=-\sum v_av_b\,c_{a\alpha\beta}c_{b\alpha\beta}\lambda_\alpha\lambda_\beta=-2\langle v,W^\#v\rangle$, which is Passage A's identity. $M$ is symmetric by cyclicity of the trace, so polarising gives
 
 $$M_{kl}=-2(W^\#)_{kl}=-\sum_{\alpha\beta}\lambda_\alpha\lambda_\beta c_{k\alpha\beta}c_{l\alpha\beta}.$$
 

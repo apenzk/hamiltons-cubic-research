@@ -1,6 +1,6 @@
 # ELIM-canon, elimination audit of the canon and three findings files
 
-*Auditor ELIM-canon, 2026-09-01. Assigned: [results.md](../results.md), [findings/isotropy-cap.md](../findings/isotropy-cap.md), [findings/ungraded-slack.md](../findings/ungraded-slack.md), [findings/route-a.md](../findings/route-a.md). All four read in full. **No numerical work was done**: every substitution below is hand algebra from $W^\#=\theta W-W^2$, $\mathrm{Ric}(W)=0$, first Bianchi, $\operatorname{tr}W=0$, $\lVert W\rVert=1$.*
+*Auditor ELIM-canon, 2026-09-01. Assigned: [results.md](../results.md), [findings/isotropy-cap.md](../findings/isotropy-cap.md), [findings/ungraded-slack.md](../findings/ungraded-slack.md), [findings/route-a.md](../findings/route-a.md). All four read in full. **No numerical work was done**: every substitution below is hand algebra from $W^\#=\theta W-W^2$, $\mathrm{Ric}(W)=0$, first Bianchi, $\mathop{\mathrm{tr}}W=0$, $\lVert W\rVert=1$.*
 
 The test applied to every bound, reduction, equivalence and "the conjecture becomes" in the four files: substitute criticality, then ask what free variable survives. Survivors first, because they are what changes future cycles.
 
@@ -18,14 +18,14 @@ Hamilton's $\#$ in the eigenframe gives $(W^\#)_{aa}=\tfrac12\sum_{b,c}c_{abc}^2
 
 $$\boxed{\ \Delta_a=2B_a-4\lambda_a(\theta-\lambda_a)\ },\qquad B_a=\sum_b\lambda_b^2\lVert[v_a,v_b]\rVert^2 .$$
 
-Summing over the whole eigenbasis, using $\sum_b\lVert[v_a,v_b]\rVert^2=\kappa=2(n-2)$ (the Killing constant this record already uses in [Lemma L23](../findings/ungraded-slack.md)), $\sum\lambda_b^2=1$ and $\operatorname{tr}(W^\#)=\theta\operatorname{tr}W-\operatorname{tr}W^2=-1$:
+Summing over the whole eigenbasis, using $\sum_b\lVert[v_a,v_b]\rVert^2=\kappa=2(n-2)$ (the Killing constant this record already uses in [Lemma L23](../findings/ungraded-slack.md)), $\sum\lambda_b^2=1$ and $\mathop{\mathrm{tr}}(W^\#)=\theta\mathop{\mathrm{tr}}W-\mathop{\mathrm{tr}}W^2=-1$:
 
-$$\boxed{\ \sum_a\Delta_a=2\kappa-4\operatorname{tr}(W^\#)=4(n-2)+4=4(n-1)\ }$$
+$$\boxed{\ \sum_a\Delta_a=2\kappa-4\mathop{\mathrm{tr}}(W^\#)=4(n-2)+4=4(n-1)\ }$$
 
 at **every** unit critical point, with no further hypothesis. Three consequences, and they are the deliverable of this audit.
 
 - **The constant $4(n-1)$ in the $\lambda$-weighted bound $\theta\le\lvert\lambda_{\min}\rvert(4(n-1)-\Delta-G_0)/4$ is this budget.** So $4(n-1)-\Delta-G_0$ is not an independent quantity: it is the residual share of a fixed total after the positive-eigenspace share $\Delta$ and the share $G_0$ are removed. A bound linear in it is a bound on how the fixed defect mass partitions, never on its size. This is why the bound is "sharp at every symmetric-space point and slack only where $\Delta>0$", sharpness is the partition degenerating, not the estimate biting.
-- **$\Delta$'s entire alignment content is $B_+:=\sum_{\delta\in\mathfrak p}B_\delta$.** From the boxed identity, $\Delta=2B_+-4\big(\theta\operatorname{tr}W_+-\operatorname{tr}W_+^2\big)$, and the subtracted term is a pure function of $(\text{spectrum},\theta)$. **So "convert positive defect into a deficit in $\theta$" is, after substitution, exactly "convert a large $B_+$ into a deficit in $\theta$", and nothing else.** A successor writing an estimate in $\Delta$ is writing one in $B_+$ with a spectral term added to both sides (the R14 shape), unless the estimate is genuinely nonlinear in the spectrum.
+- **$\Delta$'s entire alignment content is $B_+:=\sum_{\delta\in\mathfrak p}B_\delta$.** From the boxed identity, $\Delta=2B_+-4\big(\theta\mathop{\mathrm{tr}}W_+-\mathop{\mathrm{tr}}W_+^2\big)$, and the subtracted term is a pure function of $(\text{spectrum},\theta)$. **So "convert positive defect into a deficit in $\theta$" is, after substitution, exactly "convert a large $B_+$ into a deficit in $\theta$", and nothing else.** A successor writing an estimate in $\Delta$ is writing one in $B_+$ with a spectral term added to both sides (the R14 shape), unless the estimate is genuinely nonlinear in the spectrum.
 - $B_+$ is a *genuine* survivor: it weights the bracket masses $\lVert[v_\delta,v_b]\rVert^2$ by $\lambda_b^2$, and only its total $B_++B_-=\kappa=2(n-2)$ is fixed. That total is precisely the marginal [fence post F41](../findings/INDEX.md) says buys nothing, which is consistent and which localises the remaining freedom to the *weighting*.
 
 **Recommended framing for the live target**: state it in $B_+$, not $\Delta$. The two differ by a spectral identity, and only one of them can be estimated without re-deriving the target.
@@ -68,21 +68,21 @@ The algebra:
 
 $$\mathrm dG(V)=-\kappa_n\,D_V(\delta^2)\qquad\text{identically},$$
 
-and "first-order protection for every $n\ge12$" is exactly "$D_V(\delta^2)\ge0$ for every tangent $V$", multiplied by a positive constant. The reported sign reversal below the crossover ("the identical formula flips sign and reproduces the observed escape"), is $\operatorname{sign}(\kappa_n)$ and nothing else; it carries no information about $P$, $n$, or the escape mechanism.
+and "first-order protection for every $n\ge12$" is exactly "$D_V(\delta^2)\ge0$ for every tangent $V$", multiplied by a positive constant. The reported sign reversal below the crossover ("the identical formula flips sign and reproduces the observed escape"), is $\mathop{\mathrm{sign}}(\kappa_n)$ and nothing else; it carries no information about $P$, $n$, or the escape mechanism.
 
 The consequence for the route matters: **the same reduction happens at every critical point with $\delta^2>0$**, so Lemma L17 tests none of the interaction between $P$ and the penalty, which is the only thing Conjecture L16 needs. The genuine content, that $W_{\mathbb{CP}^2}$ one-sidedly minimises $\delta^2$ along the sphere, via the self-dual/anti-self-dual trace balance, is a real result and should be stated as such, about $\delta^2$, with the $P$ half deleted.
 
 ### T3. The slack-gap reformulation transposes a definition, and then needs something strictly harder than the target
 
-[findings/ungraded-slack.md](../findings/ungraded-slack.md) opens the reformulation with *"The exact $\theta$ formula proven here reads $\theta\operatorname{tr}(W_-)=\lVert\mathrm{Ric}(W_-)\rVert^2+6\delta^2-\operatorname{tr}(W_-^2)-S$, so the slack enters with a minus sign: ungradedness mechanically subtracts from $\theta$."*
+[findings/ungraded-slack.md](../findings/ungraded-slack.md) opens the reformulation with *"The exact $\theta$ formula proven here reads $\theta\mathop{\mathrm{tr}}(W_-)=\lVert\mathrm{Ric}(W_-)\rVert^2+6\delta^2-\mathop{\mathrm{tr}}(W_-^2)-S$, so the slack enters with a minus sign: ungradedness mechanically subtracts from $\theta$."*
 
-[Observation L12](../results.md) *defines* $S:=\lVert\mathrm{Ric}(W_-)\rVert^2+6\delta^2-\theta\operatorname{tr}(W_-)-\operatorname{tr}(W_-^2)$. The display is that definition moved across the equals sign. Nothing is proven and the minus sign is the definition's own.
+[Observation L12](../results.md) *defines* $S:=\lVert\mathrm{Ric}(W_-)\rVert^2+6\delta^2-\theta\mathop{\mathrm{tr}}(W_-)-\mathop{\mathrm{tr}}(W_-^2)$. The display is that definition moved across the equals sign. Nothing is proven and the minus sign is the definition's own.
 
-The inference is worse than a tautology, it is a strengthening presented as a weakening. Write $R:=\lVert\mathrm{Ric}(W_-)\rVert^2+6\delta^2-\operatorname{tr}(W_-^2)$, so $\theta=\big(R-S\big)/\operatorname{tr}(W_-)$. The claimed conclusion, *"if $S\ge c>0$ then $\theta$ falls $c/\operatorname{tr}(W_-)$ below the graded ceiling, which the enumeration already bounds"*, needs
+The inference is worse than a tautology, it is a strengthening presented as a weakening. Write $R:=\lVert\mathrm{Ric}(W_-)\rVert^2+6\delta^2-\mathop{\mathrm{tr}}(W_-^2)$, so $\theta=\big(R-S\big)/\mathop{\mathrm{tr}}(W_-)$. The claimed conclusion, *"if $S\ge c>0$ then $\theta$ falls $c/\mathop{\mathrm{tr}}(W_-)$ below the graded ceiling, which the enumeration already bounds"*, needs
 
-$$\frac{R}{\operatorname{tr}(W_-)}\ \le\ \text{(the graded ceiling)} .$$
+$$\frac{R}{\mathop{\mathrm{tr}}(W_-)}\ \le\ \text{(the graded ceiling)} .$$
 
-But $R/\operatorname{tr}(W_-)=\theta+S/\operatorname{tr}(W_-)\ \ge\ \theta$ at every ungraded point. **So the missing hypothesis is a bound on a quantity that is provably larger than $\theta$, strictly harder than the conjecture on that set.** The enumeration bounds $\theta$ at points where $S=0$; it says nothing about $R/\operatorname{tr}(W_-)$ where $S>0$. This is the R14 shape exactly: the same terms subtracted from both sides.
+But $R/\mathop{\mathrm{tr}}(W_-)=\theta+S/\mathop{\mathrm{tr}}(W_-)\ \ge\ \theta$ at every ungraded point. **So the missing hypothesis is a bound on a quantity that is provably larger than $\theta$, strictly harder than the conjecture on that set.** The enumeration bounds $\theta$ at points where $S=0$; it says nothing about $R/\mathop{\mathrm{tr}}(W_-)$ where $S>0$. This is the R14 shape exactly: the same terms subtracted from both sides.
 
 Two further defects in the same paragraph. *"Since the gap to close is $0.324$ wide, **any** positive $c$ suffices"* is false even granting the step: the drop must exceed $\theta_0(n)-\sqrt{3/2}$, which is $0.011288$ at $n=12$ and rises to $\sqrt2-\sqrt{3/2}=0.189527$ as $n\to\infty$, positive, $n$-dependent, and unquantified in the text. And the compactness half ("if the graded set is a union of connected components, $S$ is bounded below by compactness alone, with no estimate required") inherits the hole: it delivers $c>0$ into an implication that does not carry.
 
@@ -140,7 +140,7 @@ Two readings of the same point coexist in [ungraded-slack.md](../findings/ungrad
 ## Clean, passes the substitution test, one line each
 
 - **Lemma L7**, the surviving quantities $\lVert\mathrm{Ric}(W_-)\rVert^2$, $\delta^2$ are not spectrum-determined; the equality class is mechanism.
-- **Lemma L13**, the ceiling comes from $\operatorname{tr}(L_W^2)$ being constant in $W$; a structural closure, not a fit.
+- **Lemma L13**, the ceiling comes from $\mathop{\mathrm{tr}}(L_W^2)$ being constant in $W$; a structural closure, not a fit.
 - **Lemma L20**, bootstrap on the attained maximum, transverse directions consumed, contradiction with the value.
 - **Lemma L21**, the multiplicity spaces absorb multiplicities; a fixed finite computation on four blocks.
 - **Lemma L26**, states plainly that criticality is unused and that it bounds $\lambda_{\max}$ from below only.
@@ -217,7 +217,7 @@ Canon: *"It is the first place where the graded/ungraded split does the separati
 
 ## What a successor should take from this
 
-1. **Restate the live target in $B_+=\sum_{\delta\in\mathfrak p}\sum_b\lambda_b^2\lVert[v_\delta,v_b]\rVert^2$, not in $\Delta$.** They differ by $4(\theta\operatorname{tr}W_+-\operatorname{tr}W_+^2)$, a spectral identity, and $\sum_a\Delta_a=4(n-1)$ is fixed, so any estimate written in $\Delta$ and a total is an estimate on a partition of a constant.
+1. **Restate the live target in $B_+=\sum_{\delta\in\mathfrak p}\sum_b\lambda_b^2\lVert[v_\delta,v_b]\rVert^2$, not in $\Delta$.** They differ by $4(\theta\mathop{\mathrm{tr}}W_+-\mathop{\mathrm{tr}}W_+^2)$, a spectral identity, and $\sum_a\Delta_a=4(n-1)$ is fixed, so any estimate written in $\Delta$ and a total is an estimate on a partition of a constant.
 2. **Delete the sharpness arguments for Conjecture L16 and Lemma L17 from the evidence column.** One is a one-parameter fit; the other is $D_V(\delta^2)\ge0$ with $P$'s contribution identically zero at a critical point. Keep both results, stated as what they are.
-3. **Repair the slack-gap reformulation or retire it.** As written it needs a bound on $R/\operatorname{tr}(W_-)\ge\theta$, which is strictly harder than the conjecture on the ungraded set.
+3. **Repair the slack-gap reformulation or retire it.** As written it needs a bound on $R/\mathop{\mathrm{tr}}(W_-)\ge\theta$, which is strictly harder than the conjecture on the ungraded set.
 4. **Bring the canon to the index before the next cycle chooses a route on it**, the $1.83$-versus-$1.12$ margin, the $\ker W$ vacuity, and the three senses of "graded" all change what the remaining problem is.

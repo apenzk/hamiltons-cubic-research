@@ -24,9 +24,9 @@ Recomputed from [Lemma L133](../findings/second-order.md)'s setting without read
 - **Multiplicities.** $m(m-1)+m^2=m(2m-1)=\binom{2m}2=\binom n2$. They exhaust $\Lambda^2\mathbb R^n$ **exactly**, so there is no hidden eigenvalue and no kernel. This is the check the brief asked for and it passes.
 - **Trace.** $m(m-1)\lambda_++m^2\lambda_-=\tfrac{a\,m^2(m-1)-a\,m^2(m-1)}{2m-1}=0$.
 - **Normalisation.** $\sum\lambda^2=a^2m^2(m-1)/(2m-1)=1$ forces $a=\sqrt{2m-1}/(m\sqrt{m-1})$, whence $\lambda_+=1/\sqrt{(m-1)(2m-1)}$ and $\lvert\lambda_-\rvert=\tfrac1m\sqrt{(m-1)/(2m-1)}$, the item's values. The item's own check $\tfrac m{2m-1}+\tfrac{m-1}{2m-1}=1$ is the same statement and is right.
-- **Which side is the gap.** $\lvert\lambda_-\rvert/\lambda_+=(m-1)/m<1$, so $\operatorname{dist}(0,\operatorname{spec})=\lvert\lambda_-\rvert$. Substituting $m=n/2$: $g_n=\tfrac2n\sqrt{\tfrac{n-2}{2(n-1)}}\to\sqrt2/n$, and $g_{12}=\tfrac16\sqrt{5/11}=0.11237$. All as stated.
+- **Which side is the gap.** $\lvert\lambda_-\rvert/\lambda_+=(m-1)/m<1$, so $\mathop{\mathrm{dist}}(0,\mathop{\mathrm{spec}})=\lvert\lambda_-\rvert$. Substituting $m=n/2$: $g_n=\tfrac2n\sqrt{\tfrac{n-2}{2(n-1)}}\to\sqrt2/n$, and $g_{12}=\tfrac16\sqrt{5/11}=0.11237$. All as stated.
 
-The normalisation is the record's own, [conventions.md](../findings/conventions.md) puts the $\tfrac12$ at the $\Lambda^2$ level and leaves the operator at plain Frobenius, $\operatorname{tr}(W^2)=\sum\lambda_\alpha^2=1$.
+The normalisation is the record's own, [conventions.md](../findings/conventions.md) puts the $\tfrac12$ at the $\Lambda^2$ level and leaves the operator at plain Frobenius, $\mathop{\mathrm{tr}}(W^2)=\sum\lambda_\alpha^2=1$.
 
 **One observation the item never makes, and it is the key to D3.** A two-valued spectrum with $\sum\lambda^2=1$ over $N=\binom n2$ eigenvalues forces every $\lvert\lambda\rvert\asymp N^{-1/2}$. So
 

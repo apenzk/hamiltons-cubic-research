@@ -29,7 +29,7 @@ traceless as required. In the normalisation of [conventions.md](../findings/conv
 
 $$\langle W^\#,W\rangle=3\sum_{i<j<k}\lambda_{ij}\lambda_{ik}\lambda_{jk}.$$
 
-Counting triangles by how they split across the two factors and adding $\operatorname{tr}(W^3)$:
+Counting triangles by how they split across the two factors and adding $\mathop{\mathrm{tr}}(W^3)$:
 
 $$\lVert W\rVert^2=\frac{pq(n-1)(n-2)}{2(p-1)(q-1)},\qquad P(W)=\frac{pq\,(n-1)^2(n-2)}{2(p-1)(q-1)},$$
 
@@ -41,7 +41,7 @@ $$\boxed{\ \theta(S^p\times S^q)^2=\frac{P^2}{\lVert W\rVert^6}=\frac{2(n-1)(p-1
 
 ### 1.2 The competitor's value, derived, and the normalisation trap checked
 
-$W_{\mathbb{CP}^2}=\operatorname{diag}(0,0,0,-1,-1,2)/\sqrt6$, the last three entries on $\Lambda^+\subset\Lambda^2\mathbb R^4$. Then $\lVert W\rVert^2=1$ and $\operatorname{tr}(W^3)=6/6^{3/2}=1/\sqrt6$. For $\Lambda^+=\mathfrak{su}(2)_+$ with orthonormal $a_1,a_2,a_3$, a direct bracket computation gives $[a_1,a_2]=-(v_{14}+v_{23})=-\sqrt2\,a_3$, so $\gamma^2=2$ and $\langle W^\#,W\rangle=3\gamma^2w_1w_2w_3=12/6^{3/2}=2/\sqrt6$. Hence
+$W_{\mathbb{CP}^2}=\mathop{\mathrm{diag}}(0,0,0,-1,-1,2)/\sqrt6$, the last three entries on $\Lambda^+\subset\Lambda^2\mathbb R^4$. Then $\lVert W\rVert^2=1$ and $\mathop{\mathrm{tr}}(W^3)=6/6^{3/2}=1/\sqrt6$. For $\Lambda^+=\mathfrak{su}(2)_+$ with orthonormal $a_1,a_2,a_3$, a direct bracket computation gives $[a_1,a_2]=-(v_{14}+v_{23})=-\sqrt2\,a_3$, so $\gamma^2=2$ and $\langle W^\#,W\rangle=3\gamma^2w_1w_2w_3=12/6^{3/2}=2/\sqrt6$. Hence
 
 $$P(W_{\mathbb{CP}^2})=\tfrac1{\sqrt6}+\tfrac2{\sqrt6}=\tfrac3{\sqrt6}=\sqrt{3/2}=1.2247\ldots$$
 
@@ -49,7 +49,7 @@ $$P(W_{\mathbb{CP}^2})=\tfrac1{\sqrt6}+\tfrac2{\sqrt6}=\tfrac3{\sqrt6}=\sqrt{3/2
 
 ### 1.3 $n$-independence, and criticality at every $n$, proved, not assumed
 
-$\lVert W\rVert$ and $\operatorname{tr}(W^3)$ are untouched by zero-padding. For $\langle W^\#,W\rangle$: $W$ is supported on $\Lambda^+$, and $\mathfrak{su}(2)_+$ is a **subalgebra** of $\mathfrak{so}(n)$, so $c_{\alpha\gamma\delta}=\langle[v_\gamma,v_\delta],v_\alpha\rangle$ vanishes unless $\alpha\in\Lambda^+$ whenever $\gamma,\delta\in\Lambda^+$. Hence $W^\#$ is supported on $\Lambda^+\times\Lambda^+$, is unchanged by the padding, and $\theta$ is **exactly** $n$-independent. The same argument gives $Q(W)=\theta W$ exactly: on $\Lambda^+$, $W^2=(\frac16,\frac16,\frac23)$ and $W^\#=(-\frac23,-\frac23,\frac13)$, so $Q=(-\frac12,-\frac12,1)=\sqrt{3/2}\cdot(-1,-1,2)/\sqrt6$; off $\Lambda^+$ both terms vanish. **Fox's $\mathcal S^4(\alpha)$ enters the crossing as a genuine critical point at every $n\ge4$, at a value that does not move with $n$**, which is what makes "overtakes at $n=11.29$" a one-sided computation rather than a race between two moving quantities.
+$\lVert W\rVert$ and $\mathop{\mathrm{tr}}(W^3)$ are untouched by zero-padding. For $\langle W^\#,W\rangle$: $W$ is supported on $\Lambda^+$, and $\mathfrak{su}(2)_+$ is a **subalgebra** of $\mathfrak{so}(n)$, so $c_{\alpha\gamma\delta}=\langle[v_\gamma,v_\delta],v_\alpha\rangle$ vanishes unless $\alpha\in\Lambda^+$ whenever $\gamma,\delta\in\Lambda^+$. Hence $W^\#$ is supported on $\Lambda^+\times\Lambda^+$, is unchanged by the padding, and $\theta$ is **exactly** $n$-independent. The same argument gives $Q(W)=\theta W$ exactly: on $\Lambda^+$, $W^2=(\frac16,\frac16,\frac23)$ and $W^\#=(-\frac23,-\frac23,\frac13)$, so $Q=(-\frac12,-\frac12,1)=\sqrt{3/2}\cdot(-1,-1,2)/\sqrt6$; off $\Lambda^+$ both terms vanish. **Fox's $\mathcal S^4(\alpha)$ enters the crossing as a genuine critical point at every $n\ge4$, at a value that does not move with $n$**, which is what makes "overtakes at $n=11.29$" a one-sided computation rather than a race between two moving quantities.
 
 ### 1.4 The threshold, and both integers by hand
 
@@ -69,7 +69,7 @@ Nothing rounds. $\theta_0(n)^2=2(1-\frac1n)(1-\frac2n)$ is strictly increasing, 
 
 ### 1.5 Screen (seconds; a screen, not evidence)
 
-Structure constants of $\mathfrak{so}(n)$ built directly from $E_{ab}-E_{ba}$, $P(W)=\operatorname{tr}(W^3)+\langle W^\#,W\rangle$ evaluated with no closed form used as input:
+Structure constants of $\mathfrak{so}(n)$ built directly from $E_{ab}-E_{ba}$, $P(W)=\mathop{\mathrm{tr}}(W^3)+\langle W^\#,W\rangle$ evaluated with no closed form used as input:
 
 - $\theta(S^p\times S^q)^2$ reproduces §1.1's formula to $\le1.8\times10^{-15}$ at **every** split $2\le p\le n/2$ for $n=6,8,9,10,11,12$.
 - $\theta(W_{\mathbb{CP}^2})=1.224744871392=\sqrt{3/2}$ at $n=4,6,8,10,12$, with $\lVert Q(W)-\theta W\rVert\le1.6\times10^{-16}$ at each.
@@ -97,7 +97,7 @@ Both sides carry the *same* factor $\tfrac14$, Fox's $\tfrac16$-scalar conventio
 | 2 | the coordinate-level Tachibana-trick computation ([ATTEMPTS.md](../ATTEMPTS.md), "Tachibana-trick estimate extension") | yes, from Kulkarni–Nomizu in coordinates, exact fraction arithmetic | **no** | **no** |
 | 3 | the from-scratch explicit-tensor construction ([ATTEMPTS.md](../ATTEMPTS.md), "4. The actual persistent competitor…") | yes, by hand from Kulkarni–Nomizu, then cross-checked *against* route 2 | yes, from an explicit Ricci-flat $s:t=1:-1$ combination on a $4$-plane | **yes** |
 
-**Route 2 never touches the competitor.** Its entry's own confidence paragraph says the diagnosis "rests on the sphere-product example only, it is not yet shown that $\operatorname{tr}(W^3)$ stays negligible for *all* competitors (e.g. **was not checked for the $\mathbb{CP}^2$-type tensor**)". It produces $\theta_0(n)^2=\frac{2(n-1)(n-2)}{n^2}$ and stops. **So the block's "all derive the identical equation $n^2-12n+8=0$" is false for one of the three.**
+**Route 2 never touches the competitor.** Its entry's own confidence paragraph says the diagnosis "rests on the sphere-product example only, it is not yet shown that $\mathop{\mathrm{tr}}(W^3)$ stays negligible for *all* competitors (e.g. **was not checked for the $\mathbb{CP}^2$-type tensor**)". It produces $\theta_0(n)^2=\frac{2(n-1)(n-2)}{n^2}$ and stops. **So the block's "all derive the identical equation $n^2-12n+8=0$" is false for one of the three.**
 
 **And routes 1 and 3 share their weak input.** Route 3's sphere-product value is explicitly "cross-validated in Step 1", i.e. against route 2; and route 3's own entry concedes that its absolute $P$ is $2\times$ Fox's, so it does not independently pin $\sqrt{3/2}$ in the record's normalisation, only the ratio. **What the record actually holds is: three independent computations of $\theta_0(n)$, and two of $\theta(\mathcal S^4)$.**
 

@@ -4,7 +4,7 @@
 
 ## Calibration of the independent implementation
 
-Basis $A_{ij}=e_ie_j^\top-e_je_i^\top$ of $\mathfrak{so}(n)\cong\Lambda^2$, orthonormal for $\langle X,Y\rangle=\tfrac12\operatorname{tr}(X^\top Y)$; structure constants $c_{abc}=\langle[A_a,A_b],A_c\rangle$; $W^\#_{\alpha\beta}=\tfrac12\sum c_{cd\alpha}c_{ab\beta}W_{ca}W_{db}$; $Q=W^2+W^\#$; $P=\langle W,Q(W)\rangle$. Sign convention fixed by $\mathrm{Id}^\#=(n-2)\,\mathrm{Id}$, verified at $n=4,5,6,8$.
+Basis $A_{ij}=e_ie_j^\top-e_je_i^\top$ of $\mathfrak{so}(n)\cong\Lambda^2$, orthonormal for $\langle X,Y\rangle=\tfrac12\mathop{\mathrm{tr}}(X^\top Y)$; structure constants $c_{abc}=\langle[A_a,A_b],A_c\rangle$; $W^\#_{\alpha\beta}=\tfrac12\sum c_{cd\alpha}c_{ab\beta}W_{ca}W_{db}$; $Q=W^2+W^\#$; $P=\langle W,Q(W)\rangle$. Sign convention fixed by $\mathrm{Id}^\#=(n-2)\,\mathrm{Id}$, verified at $n=4,5,6,8$.
 
 | point | my $\theta$ | record | $\lVert Q(W)-\theta W\rVert$ |
 |---|---|---|---|
@@ -15,7 +15,7 @@ Basis $A_{ij}=e_ie_j^\top-e_je_i^\top$ of $\mathfrak{so}(n)\cong\Lambda^2$, orth
 | $\mathbb{CP}^2$ | $1.224744871392$ | $\sqrt{3/2}$ | $2.7\times10^{-16}$ |
 | $\mathbb{CP}^3$, $\mathbb{CP}^4$ | $1.054092553$, $0.986013297$ | same | $\le1.5\times10^{-16}$ |
 
-Ricci-flatness, first Bianchi and $\operatorname{tr}W=0$ hold to $\le9\times10^{-16}$ at every one. The machinery agrees with the record everywhere it is checkable, which is what makes the disagreements below meaningful.
+Ricci-flatness, first Bianchi and $\mathop{\mathrm{tr}}W=0$ hold to $\le9\times10^{-16}$ at every one. The machinery agrees with the record everywhere it is checkable, which is what makes the disagreements below meaningful.
 
 ---
 
@@ -138,7 +138,7 @@ So **the sense that saves the premise disarms the step above it.** That is the t
 
 ### The $n=8$ witness, re-verified, and what it adds
 
-Read from [w_n8_nondiagonal_witness.npy](../scripts/data/w_n8_nondiagonal_witness.npy) and re-tested with my own machinery: Ricci $5.1\times10^{-16}$, Bianchi $2.6\times10^{-16}$, $\operatorname{tr}W=-4.0\times10^{-16}$, $\theta=1.088948053$, $\lVert Q(W)-\theta W\rVert=2.8\times10^{-15}$, $\dim(E_+,E_-,\ker)=(13,15,0)$, $S_{\mathfrak{mmm}}=1.4\times10^{-28}$, $S_{\mathfrak{mpp}}=1.2\times10^{-28}$, $\Delta=1.512231$. **Every recorded figure reproduced.** It is (A) and not (C), which is the second half of the incomparability in O1. The $\mathrm{GF}(2)$ enumerator also settles the record's *"at least eight slice gradings"*: the witness carries exactly **seven non-identity involutions**, of fixed dimensions $12,13,13,13,16,16,21$, i.e. $\mathfrak{so}(4)^{\oplus2}$, $\mathfrak{so}(3)\oplus\mathfrak{so}(5)$ (three of them), $\mathfrak{so}(2)\oplus\mathfrak{so}(6)$ (two) and $\mathfrak{so}(7)$, **all of $\mathbb R^n$-involution type** (symmetric-commutant $2$), each commuting with $W$ to $\le2.2\times10^{-16}$. Its own sign splitting is the $13$-dimensional one. So the witness is (B) in the narrow sense as well, with seven witnesses. It also kills *"$S>0$ off (C)"* as a general fact, though at $\theta=1.088948<\sqrt{3/2}$ it is a near-miss for the C2 premise rather than a refutation of it.
+Read from [w_n8_nondiagonal_witness.npy](../scripts/data/w_n8_nondiagonal_witness.npy) and re-tested with my own machinery: Ricci $5.1\times10^{-16}$, Bianchi $2.6\times10^{-16}$, $\mathop{\mathrm{tr}}W=-4.0\times10^{-16}$, $\theta=1.088948053$, $\lVert Q(W)-\theta W\rVert=2.8\times10^{-15}$, $\dim(E_+,E_-,\ker)=(13,15,0)$, $S_{\mathfrak{mmm}}=1.4\times10^{-28}$, $S_{\mathfrak{mpp}}=1.2\times10^{-28}$, $\Delta=1.512231$. **Every recorded figure reproduced.** It is (A) and not (C), which is the second half of the incomparability in O1. The $\mathrm{GF}(2)$ enumerator also settles the record's *"at least eight slice gradings"*: the witness carries exactly **seven non-identity involutions**, of fixed dimensions $12,13,13,13,16,16,21$, i.e. $\mathfrak{so}(4)^{\oplus2}$, $\mathfrak{so}(3)\oplus\mathfrak{so}(5)$ (three of them), $\mathfrak{so}(2)\oplus\mathfrak{so}(6)$ (two) and $\mathfrak{so}(7)$, **all of $\mathbb R^n$-involution type** (symmetric-commutant $2$), each commuting with $W$ to $\le2.2\times10^{-16}$. Its own sign splitting is the $13$-dimensional one. So the witness is (B) in the narrow sense as well, with seven witnesses. It also kills *"$S>0$ off (C)"* as a general fact, though at $\theta=1.088948<\sqrt{3/2}$ it is a near-miss for the C2 premise rather than a refutation of it.
 
 ### The useful reading, which the brief asked for
 

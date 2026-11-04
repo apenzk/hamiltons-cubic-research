@@ -53,7 +53,7 @@ $$\theta\,\lVert M\rVert_1=\sum_a d_a^+s_a-\tfrac12\Delta .$$
 | # | clause attacked | mechanism | support |
 |---|---|---|---|
 | **C1** | **(iv)'s hypothesis list** | the identity needs $M\mathbf1=0$ and says so nowhere. **It is false by a factor of two without it**: $M=c(J-I)$ is symmetric, hollow, unit-norm and satisfies the boxed criticality equation, part (iii) holds at it exactly, and (iv) reads $3$ against $6$ at $n=4$ | v113, v114, v115 |
-| **C2** | **(iii)'s hypothesis list** | "the cap needs criticality and hollowness" omits symmetry, $M\mathbf1=0$ upstream (which kills the Ricci multiplier and is what makes the off-diagonal equation the one written) and $\operatorname{tr}M^2=2$, without which $\theta$ is a scale-dependent multiplier | v113, v114, v115 |
+| **C2** | **(iii)'s hypothesis list** | "the cap needs criticality and hollowness" omits symmetry, $M\mathbf1=0$ upstream (which kills the Ricci multiplier and is what makes the off-diagonal equation the one written) and $\mathop{\mathrm{tr}}M^2=2$, without which $\theta$ is a scale-dependent multiplier | v113, v114, v115 |
 | **C3** | "equality exactly at twin pairs" | true both ways **only** in the off-pair sense; under the equal-rows reading the forward direction is false, and hollowness makes the clause empty at every positive edge, which is where the cap is used. (ii) defines the right sense eight lines and a display earlier | v113, v114, v115 |
 | **C4** | $\Delta$'s pairing | summed over **unordered** positive pairs, against [conventions.md](../findings/conventions.md)'s ordered default, under which $\Delta$ doubles and (iv) carries $\tfrac14\Delta$. Two earlier reviewers asked for this label and it was never applied | v113, v114 |
 | **C5** | the round's own premise | **"single-audited" is false**, [r519](../reviews/REVIEW_r519.md) and [r520](../reviews/REVIEW_r520.md) both confirmed on identical briefs. Four status lines were stale, including this round's brief | v113, v114 |
@@ -80,7 +80,7 @@ $$\theta\,\lVert M\rVert_1=\sum_a d_a^+s_a-\tfrac12\Delta .$$
 **Verdict: `PROVEN, hypotheses corrected`. Impact: `CONTAINED`**, every clause is true under its corrected hypotheses, and **(iv), the part whose list was wrong, has no consumer on the record**, so nothing downstream inherited the gap.
 
 - **(iv) now names $M\mathbf1=0$ and criticality at the step**, with the factor-of-two failure at $M=c(J-I)$ written in beside it, and $\Delta$ labelled as the unordered positive-pair sum with the ordered alternative's $\tfrac14$ given.
-- **(iii)'s list is completed**, criticality, symmetry, hollowness, $M\mathbf1=0$, with $\operatorname{tr}M^2=2$ named as what fixes the coefficient, and the $\theta>0$ guard identified as needed only to divide.
+- **(iii)'s list is completed**, criticality, symmetry, hollowness, $M\mathbf1=0$, with $\mathop{\mathrm{tr}}M^2=2$ named as what fixes the coefficient, and the $\theta>0$ guard identified as needed only to divide.
 - **"Twin" is disambiguated at the point of use**, with the reason the equal-rows reading fails.
 - **[results.md](../results.md):777 carries the full hypothesis list**, the corrected equality clause, and the witness; "single-audited" is gone from it, from [LEDGER.md](../findings/LEDGER.md) and from [plan.md](../plan.md), **whose pointer also named the wrong findings file**.
 - **[L130](../findings/diagonal-half.md)'s "unconditional" restatement now carries L68's hypotheses**, and the $R/Q$ pointer is corrected.

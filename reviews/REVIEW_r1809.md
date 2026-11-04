@@ -64,7 +64,7 @@ The file states two inequalities and `charOne_diag`, no equality, no attainment 
 
 **Hand evaluation, $n=4$, tight.** Take $\nu=0$ (character $\varepsilon_j\varepsilon_k$ and Weyl trivially) and $D=$ `restrict (diagOp w)` with $w$ the $S^2\times S^2$ vertex matrix, blocks $\{1,2\},\{3,4\}$, $w_{ab}=2$ inside a block and $-1$ across. Row sums $2-1-1=0$, hollow, symmetric.
 - $\sum_{a,b}w_{ab}^3=4\cdot8+8\cdot(-1)=24$.
-- $w$ has eigenvalues $0,-2,-2,4$ (on $\mathbf1$, on $(1,-1,0,0)$ and $(0,0,1,-1)$, on $(1,1,-1,-1)$), so $\operatorname{tr}w^3=-8-8+64=48$.
+- $w$ has eigenvalues $0,-2,-2,4$ (on $\mathbf1$, on $(1,-1,0,0)$ and $(0,0,1,-1)$, on $(1,1,-1,-1)$), so $\mathop{\mathrm{tr}}w^3=-8-8+64=48$.
 - `diagP` ([Families.lean:666](../lean/HamiltonsCubic/Base/Families.lean#L666)) gives $P=\tfrac12(24+48)=36$.
 - `diagOp_normSq` gives $\lVert D\rVert^2=\tfrac12(4\cdot4+8\cdot1)=12$.
 - $P/\lVert D\rVert^3=36/(12\sqrt{12})=3/\sqrt{12}=\sqrt{12}/4=\theta_0(4)=\Theta_4\approx0.866$, the conventions table's $\Theta_4=0.866$.

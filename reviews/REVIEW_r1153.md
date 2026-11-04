@@ -7,7 +7,7 @@ Brief: [2026-09-25-kappa-r-gate2-brief.md](2026-09-25-kappa-r-gate2-brief.md). C
 ## Item 1, the slot spectrum: CONFIRMED
 
 - The prose matches `slotμ` and `pairMu` in [L240SlotBasis.lean](../lean/HamiltonsCubic/Results/L240SlotBasis.lean#L603): a cross-block index pair carries $(s_c+s_d)^2$ or $(s_c-s_d)^2$, each on two slots per block pair, a block-free index pair carries $s_a^2$ (two per block and free index, one per side $p_a,q_a$), and Cartan and free-free pairs carry $0$.
-- Trace check by hand: $\sum_{a<b}4(s_a^2+s_b^2)+2(n-2k)\sum_a s_a^2=(4k-4)+(2n-4k)=2(n-2)$, which is $\operatorname{tr}(-\mathrm{ad}_X^2)$ for unit $X$ under $\langle X,Y\rangle=-\tfrac12\operatorname{tr}XY$.
+- Trace check by hand: $\sum_{a<b}4(s_a^2+s_b^2)+2(n-2k)\sum_a s_a^2=(4k-4)+(2n-4k)=2(n-2)$, which is $\mathop{\mathrm{tr}}(-\mathrm{ad}_X^2)$ for unit $X$ under $\langle X,Y\rangle=-\tfrac12\mathop{\mathrm{tr}}XY$.
 - Screen (seconds, $n=5,6,7$, random normal forms): the listed values agree with the eigenvalues of the matrix of $-\mathrm{ad}_X^2$ on the $\varphi_{ij}$ basis, and the remainder is zero.
 - Wording note: the prose calls the block-free slots "kernel slots", following the Lean comment's naming, although their eigenvalue is $s_c^2$ and not $0$. The argument is unaffected. Calling them "block-free slots" would read more clearly.
 

@@ -42,7 +42,7 @@ Throughout, $d=2m-1$ and $m\ge2$.
 
 ### 2.1 The Weyl tensor
 
-With $P_1+P_2=I$ and an adapted basis, $\mathrm{Ric}(G^{(a)})_{ik}=\sum_j G^{(a)}_{ijkj}=(P_a)_{ik}\operatorname{tr}P_a-(P_a)_{ik}=(m-1)(P_a)_{ik}$, so $\mathrm{Ric}(R)=(m-1)I$ and $\mathrm{scal}=2m(m-1)$. $G$ has $\mathrm{Ric}=(2m-1)I$. A curvature tensor with pure-trace Ricci has Weyl part $R-\frac{\mathrm{scal}}{n(n-1)}G$ (standard Weyl decomposition), and $\frac{2m(m-1)}{2m(2m-1)}=c$. Each $G^{(a)}$ and $G$ is an algebraic curvature tensor, so $W$ has the symmetries and first Bianchi identity, and $\mathrm{Ric}(W)=(m-1)I-c(2m-1)I=0$.
+With $P_1+P_2=I$ and an adapted basis, $\mathrm{Ric}(G^{(a)})_{ik}=\sum_j G^{(a)}_{ijkj}=(P_a)_{ik}\mathop{\mathrm{tr}}P_a-(P_a)_{ik}=(m-1)(P_a)_{ik}$, so $\mathrm{Ric}(R)=(m-1)I$ and $\mathrm{scal}=2m(m-1)$. $G$ has $\mathrm{Ric}=(2m-1)I$. A curvature tensor with pure-trace Ricci has Weyl part $R-\frac{\mathrm{scal}}{n(n-1)}G$ (standard Weyl decomposition), and $\frac{2m(m-1)}{2m(2m-1)}=c$. Each $G^{(a)}$ and $G$ is an algebraic curvature tensor, so $W$ has the symmetries and first Bianchi identity, and $\mathrm{Ric}(W)=(m-1)I-c(2m-1)I=0$.
 
 ### 2.2 The $\Lambda^2$ spectrum (H2)
 
@@ -51,10 +51,10 @@ $$\sum\mu^2=\frac{m^3(m-1)+m^2(m-1)^2}{d^2}=\frac{m^2(m-1)(2m-1)}{d^2}=\frac{m^2
 
 ### 2.3 The $\omega$ spectrum (H5)
 
-$G^{(a)}_{iklj}=(P_a)_{il}(P_a)_{kj}-(P_a)_{ij}(P_a)_{kl}$, so $\sum_{kl}G^{(a)}_{iklj}h_{kl}=(P_ahP_a)_{ij}-t_a(P_a)_{ij}$ with $t_a=\operatorname{tr}(P_ah)$, and $\mathring Gh=h-(\operatorname{tr}h)I=h$ on $S^2_0$. This is Passage A's operator. On its three summands:
+$G^{(a)}_{iklj}=(P_a)_{il}(P_a)_{kj}-(P_a)_{ij}(P_a)_{kl}$, so $\sum_{kl}G^{(a)}_{iklj}h_{kl}=(P_ahP_a)_{ij}-t_a(P_a)_{ij}$ with $t_a=\mathop{\mathrm{tr}}(P_ah)$, and $\mathring Gh=h-(\mathop{\mathrm{tr}}h)I=h$ on $S^2_0$. This is Passage A's operator. On its three summands:
 
 - $h=P_ahP_a$, $t_a=0$: $P_1hP_1+P_2hP_2=h$, both $t$ vanish, eigenvalue $1-c=\frac md$, multiplicity $2\big(\binom{m+1}2-1\big)=(m-1)(m+2)$.
-- $h=P_1hP_2+P_2hP_1$: $P_ahP_a=0$ and $t_a=\operatorname{tr}(P_ahP_a)=0$, eigenvalue $-\frac{m-1}d$, multiplicity $m^2$.
+- $h=P_1hP_2+P_2hP_1$: $P_ahP_a=0$ and $t_a=\mathop{\mathrm{tr}}(P_ahP_a)=0$, eigenvalue $-\frac{m-1}d$, multiplicity $m^2$.
 - $h=P_1-P_2$: $P_1hP_1+P_2hP_2=h$, $t_1=m$, $t_2=-m$, so $-t_1P_1-t_2P_2=-mh$, eigenvalue $1-m-c=\frac{(1-m)d-(m-1)}d=-\frac{2m(m-1)}d$, multiplicity $1$.
 
 Dimensions: $(m-1)(m+2)+m^2+1=2m^2+m-1=\binom{2m+1}2-1$, so the summands fill $S^2_0$. Sum: $\frac{m(m-1)}d\big((m+2)-m-2\big)=0$. Squares:
@@ -87,7 +87,7 @@ This is a hand screen on the object in hand, reported as a screen. It reads $Q(W
 
 Let $\mathfrak h=\mathfrak{so}(m)\oplus\mathfrak{so}(m)$ and $\mathfrak m$ the mixed part, with $[\mathfrak h,\mathfrak h]\subset\mathfrak h$, $[\mathfrak h,\mathfrak m]\subset\mathfrak m$, $[\mathfrak m,\mathfrak m]\subset\mathfrak h$. For $M=x$ on $\mathfrak h$ and $y$ on $\mathfrak m$, the diagonal entry of $M^\#$ at a basis element of one $\mathfrak{so}(m)$ collects $(m-2)x^2$ from pairs inside that $\mathfrak{so}(m)$ and $\big((n-2)-(m-2)\big)y^2=my^2$ from pairs in $\mathfrak m$. At a basis element of $\mathfrak m$ it collects $(n-2)xy=(2m-2)xy$. So
 $$\langle M^\#,M\rangle=m(m-1)\,x\big((m-2)x^2+my^2\big)+m^2\,y\,(2m-2)xy .$$
-With $x=\frac md$, $y=-\frac{m-1}d$: the first term is $\frac{m^3(m-1)(2m^2-4m+1)}{d^3}$, the second $\frac{2m^3(m-1)^3}{d^3}$, total $\frac{m^3(m-1)(4m^2-8m+3)}{d^3}=\frac{m^3(m-1)(2m-3)}{d^2}$. With $\operatorname{tr}M^3=\frac{m^2(m-1)}{d^2}$ from 2.5, the unnormalised total is $\frac{m^2(m-1)}{d^2}\big(1+m(2m-3)\big)=\frac{m^2(m-1)^2}d$. Multiplying by $s^3=\frac{d^{3/2}}{m^3(m-1)^{3/2}}$ gives $\frac{\sqrt{(m-1)(2m-1)}}m=\theta_0(2m)$.
+With $x=\frac md$, $y=-\frac{m-1}d$: the first term is $\frac{m^3(m-1)(2m^2-4m+1)}{d^3}$, the second $\frac{2m^3(m-1)^3}{d^3}$, total $\frac{m^3(m-1)(4m^2-8m+3)}{d^3}=\frac{m^3(m-1)(2m-3)}{d^2}$. With $\mathop{\mathrm{tr}}M^3=\frac{m^2(m-1)}{d^2}$ from 2.5, the unnormalised total is $\frac{m^2(m-1)}{d^2}\big(1+m(2m-3)\big)=\frac{m^2(m-1)^2}d$. Multiplying by $s^3=\frac{d^{3/2}}{m^3(m-1)^{3/2}}$ gives $\frac{\sqrt{(m-1)(2m-1)}}m=\theta_0(2m)$.
 
 The screen agrees with Section 2, and at this point it also reproduces L50's coefficients: $p_3(\mu)-2\langle M^\#,M\rangle=\big(1-2m(2m-3)\big)A=-(4m^2-6m-1)A=p_3(\omega)$, which is the relation $\theta=p_3(\mu)+\langle M^\#,M\rangle=\tfrac32p_3(\mu)-\tfrac12p_3(\omega)$. So at the balanced product the value does not depend on L50's recorded debts, under this reading of $Q$.
 

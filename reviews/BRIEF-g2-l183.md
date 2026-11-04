@@ -9,7 +9,7 @@
 ## Conventions and constants, everything the checklist names
 
 - $\mathcal W_n$ is the space of algebraic Weyl tensors on $\mathbb R^n$: the Riemann symmetries, the first Bianchi identity, and total trace-freeness $\sum_bW_{abcb}=0$. **It is a linear subspace, so $0\in\mathcal W_n$.**
-- $\Lambda^2\mathbb R^n$ has $\{f_a\wedge f_b\}_{a<b}$ orthonormal; a $2$-form is also read as a skew matrix, and $\lVert\omega\rVert^2=-\tfrac12\operatorname{tr}(\omega^2)$. A $2$-form's **support** is the image of that skew matrix.
+- $\Lambda^2\mathbb R^n$ has $\{f_a\wedge f_b\}_{a<b}$ orthonormal; a $2$-form is also read as a skew matrix, and $\lVert\omega\rVert^2=-\tfrac12\mathop{\mathrm{tr}}(\omega^2)$. A $2$-form's **support** is the image of that skew matrix.
 - $W$ acts self-adjointly on $\Lambda^2$; **in spectral form $W=\sum_i\lambda_i\,\omega_i\otimes\omega_i$** over an orthonormal eigenbasis, $\omega\otimes\omega$ meaning $\eta\mapsto\langle\omega,\eta\rangle\omega$, the sum over the **nonzero** eigenvalues.
 - **The conjecture's range is even $n\ge12$**, its threshold $\sqrt{3/2}=1.224745$, $\theta_0(12)=1.236033$, and the crossover $n=6+2\sqrt7=11.2915$. **None should appear in this proof; say so if one does.**
 
@@ -33,7 +33,7 @@
 
 > **AND IT EXPLAINS WHY $n=4$ IS EASY: THERE THE THREE IMAGES COINCIDE.** *On the self-dual forms of $\mathbb R^4$ every $\omega_i^2=-\tfrac12\mathrm{Id}_4$ and every $\omega_i\wedge\omega_i=f_{1234}$*, so $\Phi_1=\Phi_2=\Phi_3$ and **every** weight vector summing to zero gives a Weyl tensor, which is why [L178](../findings/diagonal-half.md#lemma-l178-every-weyl-tensor-of-lambda2-rank-at-most-three-has-thetalesqrt32-with-equality-exactly-at-w_mathbbcp2)'s family is a whole $2$-parameter set rather than isolated points, and why $\theta$ there is a function of the weights alone.
 
-> **WHAT IT ASKS AT $\dim V=6$, WHICH IS [I38](../plan.md)'S REMAINING CASE.** *The coincident sub-case is the one to try first, being what $n=4$ does: three orthonormal $\omega_i$ with equal $\omega_i^2$ and equal $\omega_i\wedge\omega_i$.* **Equal squares at full rank forces each $\omega_i$ to be a scaled complex structure** ($\omega\omega^{\mathsf T}=cI_6$ says $\omega/\sqrt c$ is both orthogonal and skew), *so that sub-case asks for three complex structures on $\mathbb R^6$, pairwise orthogonal in the sense $\operatorname{tr}(J_iJ_j)=0$, sharing a common $J\wedge J$.* **The first two conditions are the quaternionic relations, which need a dimension divisible by four**; whether the weaker trace condition can be met on $\mathbb R^6$ together with the shared $4$-form is the question. *Unaudited, and the non-coincident sub-case is untouched.*
+> **WHAT IT ASKS AT $\dim V=6$, WHICH IS [I38](../plan.md)'S REMAINING CASE.** *The coincident sub-case is the one to try first, being what $n=4$ does: three orthonormal $\omega_i$ with equal $\omega_i^2$ and equal $\omega_i\wedge\omega_i$.* **Equal squares at full rank forces each $\omega_i$ to be a scaled complex structure** ($\omega\omega^{\mathsf T}=cI_6$ says $\omega/\sqrt c$ is both orthogonal and skew), *so that sub-case asks for three complex structures on $\mathbb R^6$, pairwise orthogonal in the sense $\mathop{\mathrm{tr}}(J_iJ_j)=0$, sharing a common $J\wedge J$.* **The first two conditions are the quaternionic relations, which need a dimension divisible by four**; whether the weaker trace condition can be met on $\mathbb R^6$ together with the shared $4$-form is the question. *Unaudited, and the non-coincident sub-case is untouched.*
 
 ## What to attack, and answer every item in writing
 
@@ -46,7 +46,7 @@
 5. **The orthonormality of the $\omega_i$** is a hypothesis of the statement. **Is it used anywhere in the proof?** If not, say so, the equivalence may hold without it, and that would be a stronger statement the block does not make.
 6. **The claim that tracelessness "adds $\sum\lambda_i=0$ rather than a further constraint".** Verify it is the trace of Given A and not independent.
 7. **The $n=4$ coincidence.** Are $\omega_i^2=-\tfrac12\mathrm{Id}_4$ and $\omega_i\wedge\omega_i=f_{1234}$ correct for the self-dual forms, in this brief's normalisation? **Check both, and check the claim that the family is therefore two-parameter.**
-8. **The complex-structure reduction.** Does $\omega\omega^{\mathsf T}=cI$ force $\omega/\sqrt c$ to be a complex structure, and does "equal squares at full rank" really give equal $c$ across the three? **Is $\operatorname{tr}(J_iJ_j)=0$ the right rendering of orthonormality here, with the right constant?**
+8. **The complex-structure reduction.** Does $\omega\omega^{\mathsf T}=cI$ force $\omega/\sqrt c$ to be a complex structure, and does "equal squares at full rank" really give equal $c$ across the three? **Is $\mathop{\mathrm{tr}}(J_iJ_j)=0$ the right rendering of orthonormality here, with the right constant?**
 9. **The quaternionic remark.** Is it true that pairwise trace-orthogonal complex structures want a dimension divisible by four, or is that a statement about *anticommuting* ones? **These are not the same condition and the block may be conflating them.**
 10. **The kernel.** $\ker W\ne0$ is this record's recurring obstruction. Does any step assume otherwise?
 11. **The boundary.** $n=4$, $n=5$, $n=6$, odd $n$, and $n$ below the conjecture's range.

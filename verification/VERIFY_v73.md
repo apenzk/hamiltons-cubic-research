@@ -20,7 +20,7 @@
 | $1099511627917$ | [n5_rows_1099511627917.json](../scripts/runs/n5_rows_1099511627917.json) | the pipeline, then [rank_modp.py](../scripts/reviewers/r214/rank_modp.py) | rank $13$ |
 | $1099511627933$ | [n5_rows_1099511627933.json](../scripts/runs/n5_rows_1099511627933.json) | the pipeline, then [rank_modp.py](../scripts/reviewers/r214/rank_modp.py) | rank $13$ |
 | $1099511627953$ | [n5_rows_1099511627953.json](../scripts/runs/n5_rows_1099511627953.json) and [assemble_p4.log](../scripts/reviewers/r211/assemble_p4.log) | the pipeline, then [rank_modp.py](../scripts/reviewers/r214/rank_modp.py) | rank $13$ |
-|, | [check_exact_rank.py](../scripts/reviewers/r211/check_exact_rank.py), [REVIEW_r211.md:49](../reviews/REVIEW_r211.md) | reviewer 211 | $\operatorname{rank}_{\mathbb Q}(A)=13$ **exactly over $\mathbb Q$**, from three of the four |
+|, | [check_exact_rank.py](../scripts/reviewers/r211/check_exact_rank.py), [REVIEW_r211.md:49](../reviews/REVIEW_r211.md) | reviewer 211 | $\mathop{\mathrm{rank}}_{\mathbb Q}(A)=13$ **exactly over $\mathbb Q$**, from three of the four |
 
 All four moduli sit just above $2^{40}=1099511627776$; the four dumps carry an identical `rhs` vector and identical `blocks` and `shape`, so they are four reductions of one rational system, not four systems.
 
@@ -43,11 +43,11 @@ assert rr <= 13, (...)
 
 That print is preserved verbatim for the fourth prime in [assemble_p4.log](../scripts/reviewers/r211/assemble_p4.log): *"RESTRICTED sampled rank at 40 points, mod 1099511627953: 13"*, immediately under *"rank(A) = 13, rank([A|F_5]) = 13"* and *"rows dumped to n5_rows_1099511627953.json"*. So the fourth prime's rank is on the record in prose, not only by inference from the dump's existence.
 
-**The matrix is the right one.** Each dump holds $40$ rows of $47$ columns over the $16$-block restricted shape `[3,3,2,1,2,1,2,1,2,2,1,1,1,1,1,1]`, and [REVIEW_r214.md:31](../reviews/REVIEW_r214.md) checks that the $47$ columns of the sampled matrix and the $47$ coordinates of the Gram parametrisation are the same space, so the quantity ranked is $\operatorname{rank}(\mathrm{ev}\circ\mu_K)$, the very number L62 squeezes against its cap.
+**The matrix is the right one.** Each dump holds $40$ rows of $47$ columns over the $16$-block restricted shape `[3,3,2,1,2,1,2,1,2,2,1,1,1,1,1,1]`, and [REVIEW_r214.md:31](../reviews/REVIEW_r214.md) checks that the $47$ columns of the sampled matrix and the $47$ coordinates of the Gram parametrisation are the same space, so the quantity ranked is $\mathop{\mathrm{rank}}(\mathrm{ev}\circ\mu_K)$, the very number L62 squeezes against its cap.
 
 **An independent re-ranking exists.** [REVIEW_r214.md:21–22](../reviews/REVIEW_r214.md) tabulates `rank(A)` and `rank([A | F_5])` *"mod each of the four primes"* as $13,13,13,13$ and $13,13,13,13$, by a reviewer's own Gaussian elimination over $\mathbb F_p$, self-tested first on planted ranks $0,1,5,13,14,20$. That code reads the dumps and shares no elimination routine with the pipeline.
 
-**And a stronger result than any of them.** [REVIEW_r211.md:49](../reviews/REVIEW_r211.md) records $\operatorname{rank}_{\mathbb Q}(A)=13$ decided exactly over $\mathbb Q$, with two controls that fail, adding $1$ to a single entry raises the exact rank to $14$, and replacing one entry by $7/13$ raises it to $14$. **A single exact rational rank of $13$ subsumes every mod-$p$ rank in the table**, and no citing site quotes it.
+**And a stronger result than any of them.** [REVIEW_r211.md:49](../reviews/REVIEW_r211.md) records $\mathop{\mathrm{rank}}_{\mathbb Q}(A)=13$ decided exactly over $\mathbb Q$, with two controls that fail, adding $1$ to a single entry raises the exact rank to $14$, and replacing one entry by $7/13$ raises it to $14$. **A single exact rational rank of $13$ subsumes every mod-$p$ rank in the table**, and no citing site quotes it.
 
 ## 3. Where the phrase "four" came from, and one stale docstring
 
@@ -57,7 +57,7 @@ That print is preserved verbatim for the fourth prime in [assemble_p4.log](../sc
 
 ## 4. What a second, third or fourth prime adds, redundancy, not breadth
 
-**Nothing mathematical.** The direction of every inequality in play is one-way: $\operatorname{rank}_{\mathbb F_p}(A\bmod p)\le\operatorname{rank}_{\mathbb Q}(A)\le\operatorname{rank}\mu_K\le13$, the last step being the cap proved separately by order-one vanishing at $W_0$. **A single prime returning $13$ already closes the squeeze**, because it forces $\operatorname{rank}_{\mathbb Q}\ge13$ and the cap supplies $\le13$. A second prime returning $13$ adds no new inequality; it repeats one.
+**Nothing mathematical.** The direction of every inequality in play is one-way: $\mathop{\mathrm{rank}}_{\mathbb F_p}(A\bmod p)\le\mathop{\mathrm{rank}}_{\mathbb Q}(A)\le\mathop{\mathrm{rank}}\mu_K\le13$, the last step being the cap proved separately by order-one vanishing at $W_0$. **A single prime returning $13$ already closes the squeeze**, because it forces $\mathop{\mathrm{rank}}_{\mathbb Q}\ge13$ and the cap supplies $\le13$. A second prime returning $13$ adds no new inequality; it repeats one.
 
 **Nor is the repetition independent in the way the phrase suggests.** [run_n5_assemble.py:1245](../scripts/runs/run_n5_assemble.py) states it outright: *"The sample points are regenerated identically from the fixed seed at every prime, so the rows correspond entry for entry."* The four runs share the sample, the construction of $K$, the adapted basis, the restriction and the elimination. What varies is one integer, the modulus.
 
@@ -89,6 +89,6 @@ That print is preserved verbatim for the fourth prime in [assemble_p4.log](../sc
 **What is owed, in order of value:**
 
 1. **Withdraw the standing verdict.** *"'FOUR PRIMES' IS UNSUPPORTED"* stands live at [findings/sym3-blocks.md:339](../findings/sym3-blocks.md) and [findings/INDEX-results.md:76](../findings/INDEX-results.md), refuted by four readers and unrepaired.
-2. **Quote the exact rank instead.** $\operatorname{rank}_{\mathbb Q}(A)=13$ from [r211](../reviews/REVIEW_r211.md) is strictly stronger than any mod-$p$ count and appears at no citing site.
+2. **Quote the exact rank instead.** $\mathop{\mathrm{rank}}_{\mathbb Q}(A)=13$ from [r211](../reviews/REVIEW_r211.md) is strictly stronger than any mod-$p$ count and appears at no citing site.
 3. **Name the primes once, and say the four are one sample reduced four ways.** The plural currently reads as breadth and is redundancy.
 4. **Fix [run_n5_lift.py](../scripts/runs/run_n5_lift.py)'s docstring**, which still says three primes and $123$ bits while the script consumes four.

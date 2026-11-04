@@ -16,7 +16,7 @@ VERDICT: **CONFIRMED**
 
 ### What `conventions.md` actually fixes
 
-[conventions.md](../findings/conventions.md) gives the $\Lambda^2$ inner product as $\langle X,Y\rangle=\tfrac12\operatorname{tr}(X^{\mathsf T}Y)$, "equivalent to $\operatorname{tr}(v^2)=-2$ for a unit bivector". For $\varphi_{ab}=E_{ab}-E_{ba}$, $\operatorname{tr}(\varphi_{ab}^{\mathsf T}\varphi_{ab})=2$, so
+[conventions.md](../findings/conventions.md) gives the $\Lambda^2$ inner product as $\langle X,Y\rangle=\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$, "equivalent to $\mathop{\mathrm{tr}}(v^2)=-2$ for a unit bivector". For $\varphi_{ab}=E_{ab}-E_{ba}$, $\mathop{\mathrm{tr}}(\varphi_{ab}^{\mathsf T}\varphi_{ab})=2$, so
 
 $$\langle\varphi_{ab},\varphi_{ab}\rangle=\tfrac12\cdot2=1 .$$
 
@@ -27,7 +27,7 @@ So $\varphi_{ab}$ **is** a unit bivector, and the sibling bullet *"$\lVert\varph
 Three checks pin it, and they agree:
 
 - **The file's own opening.** Line 13 of [diagonal-half.md](../findings/diagonal-half.md) says the transported $c^2_{\alpha\beta\gamma}$ *is $1$ on triangles*. Since $[\varphi_{ab},\varphi_{bd}]=\varphi_{ad}$ exactly (checked below), $c_{(ab)(bd)(ad)}=\langle\varphi_{ad},\varphi_{ad}\rangle=\lVert\varphi_{ad}\rVert^2$. That is $1$ under the half-trace and $2$ under Frobenius. **The file is in the half-trace, eighty lines above L68.**
-- **$\operatorname{tr}W^\#=-1$.** On the diagonal locus $(W^\#)_{(ab)(ab)}=\tfrac12\sum_{\gamma\delta}c^2_{(ab)\gamma\delta}M_{\gamma\gamma}M_{\delta\delta}=\sum_{d\ne a,b}M_{ad}M_{bd}=(M^2)_{ab}$, so $\operatorname{tr}W^\#=\sum_{a<b}(M^2)_{ab}=\tfrac12\big(\mathbf1^{\mathsf T}M^2\mathbf1-\operatorname{tr}M^2\big)=\tfrac12(0-2)=-1$. The trace is over the $\binom n2$ basis elements $\{\varphi_{ab}\}_{a<b}$, **which the count requires to be orthonormal**.
+- **$\mathop{\mathrm{tr}}W^\#=-1$.** On the diagonal locus $(W^\#)_{(ab)(ab)}=\tfrac12\sum_{\gamma\delta}c^2_{(ab)\gamma\delta}M_{\gamma\gamma}M_{\delta\delta}=\sum_{d\ne a,b}M_{ad}M_{bd}=(M^2)_{ab}$, so $\mathop{\mathrm{tr}}W^\#=\sum_{a<b}(M^2)_{ab}=\tfrac12\big(\mathbf1^{\mathsf T}M^2\mathbf1-\mathop{\mathrm{tr}}M^2\big)=\tfrac12(0-2)=-1$. The trace is over the $\binom n2$ basis elements $\{\varphi_{ab}\}_{a<b}$, **which the count requires to be orthonormal**.
 - **$\mathrm{Id}^\#=(n-2)\mathrm{Id}$.** $(\mathrm{Id}^\#)_{\alpha\alpha}=\tfrac12\sum_{\gamma\delta}c^2_{\alpha\gamma\delta}=\tfrac12\kappa=\tfrac12\cdot2(n-2)=n-2$, the same $\#$ convention (with its $\tfrac12$) and the same orthonormal pair basis.
 
 The other two anchors reproduce with no work: $\dim\mathcal W_n=\frac{n(n-3)(n+1)(n+2)}{12}$ gives $10,84,1638$ at $n=4,6,12$; and $\theta_0(6)^2=2\cdot5\cdot4/36=10/9$, so $\theta_0(6)=\sqrt{10}/3=1.05409255\ldots$
@@ -77,7 +77,7 @@ The middle step: $\lVert M_a-M_b\rVert^2$ runs over all $n$ coordinates, of whic
 
 - **Hollowness is not a hypothesis.** $M$ is *defined* as the symmetric zero-diagonal matrix of edge weights of $K_n$ (line 27 of the file). Hollowness is the encoding, not a condition on $W$.
 - **Ricci-flatness $M\mathbf1=0$ is not used** anywhere in (i).
-- **The normalisation $\operatorname{tr}M^2=2$ is not used.**
+- **The normalisation $\mathop{\mathrm{tr}}M^2=2$ is not used.**
 - **Criticality is not used.**
 
 What (i) does need, and does not say: **$W$ diagonal in the coordinate pair basis**, which is the locus, so it is a scope and not a hypothesis. **The "no hypothesis at all" label is correct.** This is the opposite of the failure mode the brief warned about, and it agrees with r292's C1 note.
@@ -129,7 +129,7 @@ with **equality iff $g_{ab}=0$, i.e. iff $a$ and $b$ are twins outside their own
 
 **F1, the justifying clause is false in the normalisation the formula lives in.** *"so with $\lVert\varphi\rVert^2=2$ throughout"* (line 90). The formula is right; this reason is not, and taken literally it halves $g_{ab}$ and breaks (iv) and every citation. **Repair:** replace with *"the two families $\varphi_{ad},\varphi_{bd}$ contributing equally"*, and quote the half-trace normalisation from [conventions.md](../findings/conventions.md) rather than restating a norm. Severity: **prose, load-bearing on a reader's reconstruction, zero numerical impact.**
 
-**F2, `conventions.md` carries the collision that produced F1.** Its bullet *"A bivector's norm: $\lVert\varphi_{ab}\rVert^2=2$"* sits in the $\Lambda^2$ list one line below *"$\langle X,X\rangle=\tfrac12\operatorname{tr}(X^{\mathsf T}X)$ ... equivalent to $\operatorname{tr}(v^2)=-2$"*, which gives $1$. Both numbers are true, in different pairings, under one symbol. **Repair:** label it, e.g. *"$\lVert\varphi_{ab}\rVert^2_{\Lambda^2}=1$ and $\lVert\varphi_{ab}\rVert^2_F=2$; the pair basis $\{\varphi_{ab}\}_{a<b}$ is orthonormal for the $\Lambda^2$ pairing, which is what makes $\operatorname{tr}W^\#=-1$ and $\mathrm{Id}^\#=(n-2)\mathrm{Id}$ come out."* This is the same class as the file's own tabled $B$, $M$ and $\mu$ collisions.
+**F2, `conventions.md` carries the collision that produced F1.** Its bullet *"A bivector's norm: $\lVert\varphi_{ab}\rVert^2=2$"* sits in the $\Lambda^2$ list one line below *"$\langle X,X\rangle=\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}X)$ ... equivalent to $\mathop{\mathrm{tr}}(v^2)=-2$"*, which gives $1$. Both numbers are true, in different pairings, under one symbol. **Repair:** label it, e.g. *"$\lVert\varphi_{ab}\rVert^2_{\Lambda^2}=1$ and $\lVert\varphi_{ab}\rVert^2_F=2$; the pair basis $\{\varphi_{ab}\}_{a<b}$ is orthonormal for the $\Lambda^2$ pairing, which is what makes $\mathop{\mathrm{tr}}W^\#=-1$ and $\mathrm{Id}^\#=(n-2)\mathrm{Id}$ come out."* This is the same class as the file's own tabled $B$, $M$ and $\mu$ collisions.
 
 **F3, (iv) omits its hypothesis.** The identity $\theta\lVert M\rVert_1=\sum_a d_a^+s_a-\tfrac12\Delta$ is **false at a non-critical diagonal point**; it inherits criticality from (iii), which its heading *"Traced over $\mathfrak p$"* does not say. It also uses $M\mathbf1=0$, which on this locus is automatic. **Repair:** *"(iv) Traced over $\mathfrak p$ at a critical point"*. No citation currently takes (iv), so nothing propagates.
 

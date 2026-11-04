@@ -8,7 +8,7 @@ You are an adversarial reviewer. **Work from the definitions below and from the 
 
 > the $V$-frame dependence of the value is $\sum_k\big(\beta\nu_k^2\,p_k^{\mathsf T}\hat Up_k+\nu_k\,p_k^{\mathsf T}Cp_k\big)$ over an orthonormal frame
 
-$\hat U$ and $C$ are fixed real symmetric $k\times k$ matrices, $\nu\in\mathbb R^k$ is fixed, $\beta=\tfrac94$, and $P$ ranges over $O(k)$ with columns $p_k$. Write $\tilde U=P^{\mathsf T}\hat UP$, $\tilde C=P^{\mathsf T}CP$, $a=\beta\nu^{\circ2}$ and $b=\nu$, so the value is $\operatorname{tr}(\operatorname{diag}(a)\tilde U)+\operatorname{tr}(\operatorname{diag}(b)\tilde C)$.
+$\hat U$ and $C$ are fixed real symmetric $k\times k$ matrices, $\nu\in\mathbb R^k$ is fixed, $\beta=\tfrac94$, and $P$ ranges over $O(k)$ with columns $p_k$. Write $\tilde U=P^{\mathsf T}\hat UP$, $\tilde C=P^{\mathsf T}CP$, $a=\beta\nu^{\circ2}$ and $b=\nu$, so the value is $\mathop{\mathrm{tr}}(\mathop{\mathrm{diag}}(a)\tilde U)+\mathop{\mathrm{tr}}(\mathop{\mathrm{diag}}(b)\tilde C)$.
 
 **Given, and NOT under review**: `Splits` is the record's two-sided block condition, a proper nonempty row set $R$ and an equinumerous column set $C$ with the matrix vanishing on $R\times C^{\mathsf c}$ and on $R^{\mathsf c}\times C$, rows and columns permuted independently.
 

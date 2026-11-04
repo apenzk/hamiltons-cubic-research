@@ -18,7 +18,7 @@ What fails is the block's account of itself, on four counts: **"Weyl integration
 | block extent | a `####` block runs to the next `####`, absorbing any `##` between | L88 has no content otherwise; flagged because two audits have read this boundary two ways |
 | $\mathbb Q(i)$ basis | a $\mathbb C$-basis $c=Rr$ of $U_{\mathbb C}$ with $R\in GL$ **not** real | this is exactly reviewer 204's point, and it is what makes the coordinate question non-trivial |
 
-**The three conventions repaired in [conventions.md](../findings/conventions.md) on 2026-09-04 ($\theta_0(n)$, $\Theta_n$, $S_{XYZ}$), do not appear in L88 and do not bear on it.** The one convention entry that does bear is **"THE LETTER $B$ MEANS TWO THINGS, live"**, since the real-type argument runs through $B(X,Y)=-\tfrac12\operatorname{tr}(XY)$ on $\mathfrak{so}(5)$ rather than the Killing form; the block inherits the section header's normalisation and is consistent with it.
+**The three conventions repaired in [conventions.md](../findings/conventions.md) on 2026-09-04 ($\theta_0(n)$, $\Theta_n$, $S_{XYZ}$), do not appear in L88 and do not bear on it.** The one convention entry that does bear is **"THE LETTER $B$ MEANS TWO THINGS, live"**, since the real-type argument runs through $B(X,Y)=-\tfrac12\mathop{\mathrm{tr}}(XY)$ on $\mathfrak{so}(5)$ rather than the Killing form; the block inherits the section header's normalisation and is consistent with it.
 
 ## 1. The derivation, by hand, with no Weyl integration
 
@@ -78,7 +78,7 @@ $$\boxed{\ \dim\mathrm{Sym}^2=65,\qquad \dim\Lambda^2=24,\qquad \sum m^2=89.\ }$
 
 **The transformation the word "gauge" names, which the block does not name.** It is the additive action of the abelian group $\Lambda^2(U)^{O(5)}\cong\mathbb R^{24}$ by translation, $G\mapsto G+A$, on the $89$-dimensional space of invariant bilinear forms. $\mu$ is constant on its orbits. **So the word is earned for $\mu$**, this is a derivation, compressed to a clause, rather than an assertion.
 
-**And the dimension is basis-independent, which is the half of reviewer 204's finding the block leaves implicit.** Let $r$ be a real basis of $U$ and $c=Rr$ the $\mathbb Q(i)$ basis, $R$ invertible and not real. Then $\bar c_ac_b=\sum_{j,k}\bar R_{aj}R_{bk}\,r_jr_k$, so the sextic attached to a Hermitian $H$ is $\sum_{j,k}(R^\dagger HR)_{jk}r_jr_k$ and depends on $H$ **only through $\operatorname{Re}(R^\dagger HR)$**, the real part of a Hermitian matrix being symmetric. The kernel is $\{H:R^\dagger HR=iA,\ A\text{ real antisymmetric}\}$, of real dimension $\sum\binom{m_\lambda}2=24$ **for every invertible $R$**. **So the count $24$ survives any change of basis and only the coordinates move, which is precisely reviewer 204's verdict, now with a derivation behind it rather than a sampling experiment over $4000$ bases.** *That derivation belongs in the block; it makes 204's refutation a theorem rather than a measurement.*
+**And the dimension is basis-independent, which is the half of reviewer 204's finding the block leaves implicit.** Let $r$ be a real basis of $U$ and $c=Rr$ the $\mathbb Q(i)$ basis, $R$ invertible and not real. Then $\bar c_ac_b=\sum_{j,k}\bar R_{aj}R_{bk}\,r_jr_k$, so the sextic attached to a Hermitian $H$ is $\sum_{j,k}(R^\dagger HR)_{jk}r_jr_k$ and depends on $H$ **only through $\mathop{\mathrm{Re}}(R^\dagger HR)$**, the real part of a Hermitian matrix being symmetric. The kernel is $\{H:R^\dagger HR=iA,\ A\text{ real antisymmetric}\}$, of real dimension $\sum\binom{m_\lambda}2=24$ **for every invertible $R$**. **So the count $24$ survives any change of basis and only the coordinates move, which is precisely reviewer 204's verdict, now with a derivation behind it rather than a sampling experiment over $4000$ bases.** *That derivation belongs in the block; it makes 204's refutation a theorem rather than a measurement.*
 
 ### Where "gauge" over-reaches, and it is the one place a builder would be misled
 
@@ -86,13 +86,13 @@ $$\boxed{\ \dim\mathrm{Sym}^2=65,\qquad \dim\Lambda^2=24,\qquad \sum m^2=89.\ }$
 
 $H=S+iA$ Hermitian is positive semidefinite **strictly more often false** than $S\succeq0$. Witness, at $m=2$:
 
-$$S=\begin{pmatrix}1&0\\0&1\end{pmatrix},\qquad A=\begin{pmatrix}0&t\\-t&0\end{pmatrix},\qquad H=\begin{pmatrix}1&it\\-it&1\end{pmatrix},\quad \operatorname{spec}H=\{1-t,\,1+t\}.$$
+$$S=\begin{pmatrix}1&0\\0&1\end{pmatrix},\qquad A=\begin{pmatrix}0&t\\-t&0\end{pmatrix},\qquad H=\begin{pmatrix}1&it\\-it&1\end{pmatrix},\quad \mathop{\mathrm{spec}}H=\{1-t,\,1+t\}.$$
 
 $S\succeq0$ always; $H\succeq0$ **iff $\lvert t\rvert\le1$**. So the fibre of the "gauge" direction over a feasible symmetric point is a bounded convex set containing $0$, not a copy of $\mathbb R$. **The feasible set of the Hermitian problem is not a product of the real feasible set with $\mathbb R^{24}$**, and a reader told flatly that "the $24$ are gauge" would expect it to be.
 
-**The saving statement, which the record nowhere makes.** Congruence preserves positivity, so $H\succeq0\Rightarrow R^\dagger HR\succeq0\Rightarrow\operatorname{Re}(R^\dagger HR)\succeq0$. Hence
+**The saving statement, which the record nowhere makes.** Congruence preserves positivity, so $H\succeq0\Rightarrow R^\dagger HR\succeq0\Rightarrow\mathop{\mathrm{Re}}(R^\dagger HR)\succeq0$. Hence
 
-$$H\ \text{Hermitian PSD with}\ \mu(H)=F_5\quad\Longmapsto\quad \operatorname{Re}(R^\dagger HR)\ \text{real symmetric PSD with the same sextic},$$
+$$H\ \text{Hermitian PSD with}\ \mu(H)=F_5\quad\Longmapsto\quad \mathop{\mathrm{Re}}(R^\dagger HR)\ \text{real symmetric PSD with the same sextic},$$
 
 and conversely any real symmetric PSD solution is Hermitian PSD with $A=0$. **The two problems are equivalent for solvability, so a Hermitian certificate is a sound certificate for a real SOS.** *That sentence is what closes the alarm [L61](../findings/sym3-blocks.md) raises, and it is absent from both blocks.*
 
@@ -124,7 +124,7 @@ $$\boxed{\ \text{unrestricted } 65+24=89;\qquad \text{restricted } 36+11=47.\ }$
 
 [n5_certificate.json](../scripts/runs/n5_certificate.json) carries `"shape": [3,3,2,1,2,1,2,1,2,2,1,1,1,1,1,1]` against `"blocks": [[2,2],[4,2],[3,2],[2,0],[2,1],[3,0],[3,1],[4,0],[4,1],[4,3],[4,4],[5,2],[3,3],[5,1],[5,3],[6,3]]`, and its `point` array has **exactly $47$ coordinates**. **Every one of the sixteen block labels and every one of the sixteen multiplicities matches what I derived by hand from [L83](../findings/sym3-blocks.md) plus [L86](../findings/sym3-blocks.md), with no exceptions**: the two $3$'s are the even mult-$4$ blocks $(2,2)$ and $(4,2)$, the five $2$'s are the even mult-$3$ block $(3,2)$ together with the four odd mult-$2$ blocks $(2,1),(3,1),(4,1),(4,3)$, and the nine $1$'s are the five even mult-$2$ blocks and the four odd mult-$1$ blocks.
 
-**So the answer the brief asks for, stated plainly: the certificate's $47$ Hermitian parameters are CONSISTENT with this block's $65$, and no reconciliation problem exists.** $65$ counts real symmetric invariant forms on all of $\mathrm{Sym}^3\mathcal W_5$, over $\mathbb R$; $36$ counts them on the orbit-constrained subspace $K$, over $\mathbb R$; $47$ counts **Hermitian** forms on the same $K$, over $\mathbb C$. The field is $\mathbb R$ for the first two and $\mathbb C$ for the third, and **$\mathbb R$ is the right field for an SOS certificate over $\mathbb R$**, with §4's projection $\operatorname{Re}(R^\dagger HR)$ showing that the $\mathbb C$ computation loses nothing.
+**So the answer the brief asks for, stated plainly: the certificate's $47$ Hermitian parameters are CONSISTENT with this block's $65$, and no reconciliation problem exists.** $65$ counts real symmetric invariant forms on all of $\mathrm{Sym}^3\mathcal W_5$, over $\mathbb R$; $36$ counts them on the orbit-constrained subspace $K$, over $\mathbb R$; $47$ counts **Hermitian** forms on the same $K$, over $\mathbb C$. The field is $\mathbb R$ for the first two and $\mathbb C$ for the third, and **$\mathbb R$ is the right field for an SOS certificate over $\mathbb R$**, with §4's projection $\mathop{\mathrm{Re}}(R^\dagger HR)$ showing that the $\mathbb C$ computation loses nothing.
 
 ### An independent confirmation from the record's own two kernel dimensions
 
@@ -180,11 +180,11 @@ $$47-13=34,\qquad 36-13=23,\qquad 34-23=\mathbf{11}=\sum\binom{m'}2.$$
 | 1 | $65$, $24$, $89$ all **CONFIRMED**, hand-derived in four lines from the multiplicity multiset and real type |, |
 | 2 | **The certificate's $47$ is consistent with $65$ and with $36$**: $47=\sum m'^2$, $36=\sum\binom{m'+1}2$, $11=\sum\binom{m'}2$ on the restricted shape, verified block-for-block against [n5_certificate.json](../scripts/runs/n5_certificate.json) |, |
 | 3 | The record's own $34$ and $23$ differ by exactly $11$, confirming finding 2 from two figures written for unrelated purposes |, |
-| 4 | **"the $24$ are gauge" is false of the PSD cone**, $H=S+iA\succeq0$ is strictly stronger than $S\succeq0$; witness $\operatorname{spec}=\{1\pm t\}$ | GAP, load-bearing |
+| 4 | **"the $24$ are gauge" is false of the PSD cone**, $H=S+iA\succeq0$ is strictly stronger than $S\succeq0$; witness $\mathop{\mathrm{spec}}=\{1\pm t\}$ | GAP, load-bearing |
 | 5 | **"Weyl integration settles it" sends the reader to a run** where [L59](../findings/sym3-blocks.md)'s note, 105 lines below, records two reviewers deriving $65$ by hand | GAP |
 | 6 | **$89=65+24$ is the termwise identity $\binom{m+1}2+\binom m2=m^2$**, the three displayed numbers are two moments and a tautology, and all three are blind to which block carries which multiplicity | GAP |
 | 7 | **L83's "$24$-block table" and L88's $\dim\Lambda^2=24$ are different objects agreeing by coincidence**, $89$ lines apart, unflagged anywhere | GAP, collision hazard |
 | 8 | **The $O(5)$-versus-$SO(5)$ step is unstated**, correct at odd $n$ by $\det(-I)=-1$, false at even $n$; third unstated sighting in this file | GAP |
 | 9 | **[L61](../findings/sym3-blocks.md)'s $47$-against-$36$ alarm is dissolved by L88's own mechanism**, and neither block says so | GAP, cross-block |
-| 10 | The basis-independence of the count $24$ has a two-line proof via $\operatorname{Re}(R^\dagger HR)$, which would promote reviewer 204's numerical refutation to a theorem | improvement |
+| 10 | The basis-independence of the count $24$ has a two-line proof via $\mathop{\mathrm{Re}}(R^\dagger HR)$, which would promote reviewer 204's numerical refutation to a theorem | improvement |
 | 11 | Provenance **clean** at all four touching commits; the single pointer resolves; **no numbered result is cited** | mixed |

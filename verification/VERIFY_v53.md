@@ -169,7 +169,7 @@ At $m=4$ that is $-\tfrac23$ against the entry's $\alpha=+\tfrac13$: **wrong in 
 - **"The conclusion is wider than the entry claims: $\mathrm{Alt}(W(t)_-)=0$ for every real $t$."** The boxed LEMMA already says "for every $t$", so the scope box appears to correct a claim its own entry does not make. **Withdrawn**: the natural reading is that "the entry" names the pre-repair text, which the brief strips. Not a discrepancy in the mathematics.
 - **"$m\ge5$ is needed for the word 'margin'."** At $m=4$ the two summands **tie**, so $S^2_0\oplus S^2_0$ is still *a* minimum-margin summand and the word is defensible there. **Withdrawn as a finding** and recorded as a reading: $m\ge5$ is where the minimum is *unique*.
 - **"C2 is a `HYPOTHESIS-DEBT`."** The step "coordinate-diagonal $\Rightarrow\mathrm{Alt}=0$" carries no argument in the entry, which would ordinarily be the finding. **Withdrawn**: the record holds the argument at [ATTEMPTS.md](../ATTEMPTS.md):702 Result 1(a), reached three independent ways. It is a missing citation for the entry's only non-trivial implication, recorded as C2's verdict rather than as a debt.
-- **"$m=2$ is unaddressed."** At $m=2$, $\alpha=0$ and the in-block eigenvalue is $-\beta(h_1+h_2)=-\beta\operatorname{tr}h=0$, so L146's embedding sends every $h\in S^2_0(\mathbb R^2)$ to $H=0$ and the statement is vacuous. **Withdrawn**: the floor $m\ge3$ excludes it, correctly.
+- **"$m=2$ is unaddressed."** At $m=2$, $\alpha=0$ and the in-block eigenvalue is $-\beta(h_1+h_2)=-\beta\mathop{\mathrm{tr}}h=0$, so L146's embedding sends every $h\in S^2_0(\mathbb R^2)$ to $H=0$ and the statement is vacuous. **Withdrawn**: the floor $m\ge3$ excludes it, correctly.
 
 ---
 

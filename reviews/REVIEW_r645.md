@@ -22,8 +22,8 @@
 
 | symbol | reading I use | why this one |
 | --- | --- | --- |
-| $\theta$ | $P(W)/\lVert W\rVert^3$ with $P(W)=\langle W,W^2+W^\#\rangle$, $\lVert W\rVert^2=\operatorname{tr}(W^2)$ over $\Lambda^2$ | the conventions table, and it is the reading under which $\theta_0(n)^2=2(n-1)(n-2)/n^2$ comes out at the balanced product |
-| $P(W)$ in block coordinates | $P=\operatorname{tr}(W^3)+\tfrac12\sum_{\alpha\beta\gamma}T_{\alpha\beta\gamma}\lambda_\alpha\lambda_\beta\lambda_\gamma$, $T_{\alpha\beta\gamma}=c_{\alpha\beta\gamma}^2$, sum over **ordered** triples | **not assumed, calibrated in §1 below**, from the subalgebra-family theorem, two equations in one unknown |
+| $\theta$ | $P(W)/\lVert W\rVert^3$ with $P(W)=\langle W,W^2+W^\#\rangle$, $\lVert W\rVert^2=\mathop{\mathrm{tr}}(W^2)$ over $\Lambda^2$ | the conventions table, and it is the reading under which $\theta_0(n)^2=2(n-1)(n-2)/n^2$ comes out at the balanced product |
+| $P(W)$ in block coordinates | $P=\mathop{\mathrm{tr}}(W^3)+\tfrac12\sum_{\alpha\beta\gamma}T_{\alpha\beta\gamma}\lambda_\alpha\lambda_\beta\lambda_\gamma$, $T_{\alpha\beta\gamma}=c_{\alpha\beta\gamma}^2$, sum over **ordered** triples | **not assumed, calibrated in §1 below**, from the subalgebra-family theorem, two equations in one unknown |
 | $S_{XYZ}$ | ordered-slot block contraction of $T$ | conventions.md's row adopted 2026-09-04; and it is the reading my §1 calibration independently forces, since the $1{:}3$ weight in [L39](../findings/target.md) is the multinomial $\binom31$ |
 | $\mathfrak k$, $\mathfrak m$ | the **symmetric-pair** sense: $\mathfrak g=\mathfrak k\oplus\mathfrak m$, $[\mathfrak k,\mathfrak k]\subseteq\mathfrak k$, $[\mathfrak k,\mathfrak m]\subseteq\mathfrak m$, $[\mathfrak m,\mathfrak m]\subseteq\mathfrak k$ | forced by the block's own $p=\dim\mathfrak k=\binom m2=\dim\mathfrak{so}(m)$ and $q=\dim\mathfrak m$, $p+q=m^2-1=\dim\mathfrak{su}(m)$. **This is the third of the three senses conventions.md tables for $\mathfrak m$**, [target.md](../findings/target.md)'s odd part, and not the $E_{\min}$ sense |
 | $p$, $q$ | $\dim\mathfrak k$, $\dim\mathfrak m$, as the block says |, |
@@ -32,11 +32,11 @@
 
 ## 1. Calibrating the cubic form before using it
 
-The block coordinates need one constant fixed: $P=\operatorname{tr}(W^3)+\beta\sum T\lambda\lambda\lambda$. I fix $\beta$ from the subalgebra-family theorem ([ungraded-slack.md](../findings/ungraded-slack.md) line 73, Gate-2 passed), which is independent of everything L38 asserts.
+The block coordinates need one constant fixed: $P=\mathop{\mathrm{tr}}(W^3)+\beta\sum T\lambda\lambda\lambda$. I fix $\beta$ from the subalgebra-family theorem ([ungraded-slack.md](../findings/ungraded-slack.md) line 73, Gate-2 passed), which is independent of everything L38 asserts.
 
 Take $W_{\mathfrak h}=c(\Pi_{\mathfrak h}-\tfrac rN\mathrm{Id})$, $t=r/N$, $u=c(1-t)$ on $\mathfrak h$, $v=-ct$ on $\mathfrak m$, $c=\sqrt{N/(r(N-r))}$. With that theorem's $S_{\mathfrak{hmm}}=2(n-1)r(N-r)/N$ and $S_{\mathfrak{mmm}}=(N-r)[2(n-2)-4(n-1)r/N]$, and $S_{\mathfrak{hhh}}=\kappa r-S_{\mathfrak{hmm}}$ with $\kappa=2(n-2)$:
 
-$$\operatorname{tr}(W^3)=c^3Nt(1-t)(1-2t),\qquad \sum T\lambda\lambda\lambda=c^3Nt(1-t)\big[(2n+2)t-2\big],$$
+$$\mathop{\mathrm{tr}}(W^3)=c^3Nt(1-t)(1-2t),\qquad \sum T\lambda\lambda\lambda=c^3Nt(1-t)\big[(2n+2)t-2\big],$$
 
 the second after the $t^3$ and $t^2$ coefficients cancel identically. Since $c^3Nt(1-t)=\big(Nt(1-t)\big)^{-1/2}$,
 
@@ -44,9 +44,9 @@ $$P=\frac{(1-2t)+\beta\big[(2n+2)t-2\big]}{\sqrt{Nt(1-t)}},\qquad \theta=\frac2n
 
 Matching in $t$ gives **two** equations for the single unknown: the constant term forces $\beta=\tfrac12$, and the linear term then reads $-2+(n+1)=n-1$, which holds. **Two conditions, one unknown, both met, this is a check, not a fit.** So
 
-$$\boxed{\,P(W)=\operatorname{tr}(W^3)+\tfrac12\textstyle\sum_{\alpha\beta\gamma}T_{\alpha\beta\gamma}\lambda_\alpha\lambda_\beta\lambda_\gamma\,}$$
+$$\boxed{\,P(W)=\mathop{\mathrm{tr}}(W^3)+\tfrac12\textstyle\sum_{\alpha\beta\gamma}T_{\alpha\beta\gamma}\lambda_\alpha\lambda_\beta\lambda_\gamma\,}$$
 
-in the ordered reading, agreeing with [L39](../findings/target.md)'s $\theta=\operatorname{tr}(W^3)+\tfrac12[a^3S_{\mathfrak{kkk}}+3ab^2S_{\mathfrak{kmm}}]$.
+in the ordered reading, agreeing with [L39](../findings/target.md)'s $\theta=\mathop{\mathrm{tr}}(W^3)+\tfrac12[a^3S_{\mathfrak{kkk}}+3ab^2S_{\mathfrak{kmm}}]$.
 
 ## 2. The $\mathbb{CP}^m$ closed form, DERIVED, CONFIRMED
 
@@ -71,7 +71,7 @@ The last says $\mathfrak{su}(m)\subset\mathfrak{so}(2m)$ has Killing constant $c
 
 **Assembly.** With $\mu=1/(2m-1)$:
 
-$$\lVert W\rVert^2=\frac{12m(m^2-1)}{2m-1},\qquad \operatorname{tr}(W^3)=8\mu^3m(m^2-1)(8m^3-24m+11),$$
+$$\lVert W\rVert^2=\frac{12m(m^2-1)}{2m-1},\qquad \mathop{\mathrm{tr}}(W^3)=8\mu^3m(m^2-1)(8m^3-24m+11),$$
 $$\sum T\lambda\lambda\lambda=16\mu^3m(m^2-1)(4m^3+15m-8),$$
 $$P=8\mu^3m(m^2-1)\big(12m^3-9m+3\big)=24\mu^3m(m^2-1)(m+1)(2m-1)^2=\frac{24m(m^2-1)(m+1)}{2m-1},$$
 

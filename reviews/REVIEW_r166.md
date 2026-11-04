@@ -4,7 +4,7 @@
 
 | claim | verdict |
 | --- | --- |
-| 1. $C=-40\operatorname{tr}(W^3)+8\langle W^{\#},W\rangle$, $\theta=6\operatorname{tr}(W^3)+\tfrac18C$, upper bound operative | **CONFIRMED**, derived here from the round sphere, and both $C$ values reproduced by hand |
+| 1. $C=-40\mathop{\mathrm{tr}}(W^3)+8\langle W^{\#},W\rangle$, $\theta=6\mathop{\mathrm{tr}}(W^3)+\tfrac18C$, upper bound operative | **CONFIRMED**, derived here from the round sphere, and both $C$ values reproduced by hand |
 | 1. $1.79781$ ($1.45\times$) and $2.66678$ ($2.17\times$) | **BOTH VERIFIED**, $1.79784$ and $2.66688$ from the second-kind spectra derived below |
 | 1. "no uniform sign flip explains one positive and one negative" | **sound in its labelled form, vacuous in the brief's paraphrase**, see §1.3 |
 | 2. D1 is a control | right about the *exclusion*, **under-credited** as evidence for item 1's own target; and it left the one question the record had asked of it unanswered |
@@ -18,7 +18,7 @@
 
 ## Setup, what I derive everything from
 
-$Q(W)=W^2+W^{\#}$, criticality $Q(W)=\theta W$ at $\lVert W\rVert=1$, $\theta=\operatorname{tr}(W^3)+\langle W^{\#},W\rangle$. For a $\Lambda^2$-diagonal tensor with vertex matrix $M_{pq}$ ($M_{pp}=0$), $\operatorname{tr}(W^3)=\sum_{p<q}M_{pq}^3$ and $\langle W^{\#},W\rangle=3\sum_{p<q<r}M_{pq}M_{pr}M_{qr}=\tfrac12\operatorname{tr}(M^3)$, the second from $(W^{\#})_{pq,pq}=\sum_{r}M_{pr}M_{qr}$, which follows from $c^{pq}_{\gamma\delta}\ne0$ only for $\{\gamma,\delta\}=\{(p,r),(r,q)\}$. $\lVert W\rVert^2=\sum_{p<q}M_{pq}^2$.
+$Q(W)=W^2+W^{\#}$, criticality $Q(W)=\theta W$ at $\lVert W\rVert=1$, $\theta=\mathop{\mathrm{tr}}(W^3)+\langle W^{\#},W\rangle$. For a $\Lambda^2$-diagonal tensor with vertex matrix $M_{pq}$ ($M_{pp}=0$), $\mathop{\mathrm{tr}}(W^3)=\sum_{p<q}M_{pq}^3$ and $\langle W^{\#},W\rangle=3\sum_{p<q<r}M_{pq}M_{pr}M_{qr}=\tfrac12\mathop{\mathrm{tr}}(M^3)$, the second from $(W^{\#})_{pq,pq}=\sum_{r}M_{pr}M_{qr}$, which follows from $c^{pq}_{\gamma\delta}\ne0$ only for $\{\gamma,\delta\}=\{(p,r),(r,q)\}$. $\lVert W\rVert^2=\sum_{p<q}M_{pq}^2$.
 
 ## CLAIM 1, the sign, derived rather than assumed
 
@@ -26,7 +26,7 @@ $Q(W)=W^2+W^{\#}$, criticality $Q(W)=\theta W$ at $\lVert W\rVert=1$, $\theta=\o
 
 The brief's formula and the record's differ in index order, and they are negatives of each other, that is the trap, so both are computed here. With $R_{ijkl}=\delta_{ik}\delta_{jl}-\delta_{il}\delta_{jk}$ on the unit sphere and $\varphi$ trace-free:
 
-- $R_{ikjl}\varphi_{kl}=\delta_{ij}\operatorname{tr}\varphi-\varphi_{ij}=-\varphi_{ij}$, this is the **brief's** order, and it gives $-\mathrm{Id}$.
+- $R_{ikjl}\varphi_{kl}=\delta_{ij}\mathop{\mathrm{tr}}\varphi-\varphi_{ij}=-\varphi_{ij}$, this is the **brief's** order, and it gives $-\mathrm{Id}$.
 - $R_{iklj}\varphi_{kl}=+\varphi_{ij}$, this is **[nondegeneracy.md](../findings/nondegeneracy.md) line 223's** order, and it gives $+\mathrm{Id}$.
 
 The literature's convention is $\mathring R=\mathrm{Id}$ on the round sphere (it is what makes Nishikawa's conjecture a positivity statement), so the record's index order is the right one. It then forces the eigenvalue on $E_{pq}$: for $\varphi_{kl}=\delta_{kp}\delta_{lq}+\delta_{kq}\delta_{lp}$ and $W$ $\Lambda^2$-diagonal,
@@ -45,7 +45,7 @@ $$4\cdot2\sum_{p<q}\sum_x M_{pq}M_{px}M_{qx}=8\cdot3\!\!\sum_{p<q<x}\!\!M_{pq}M_
 
 ### 1.2a A LIVE CONTRADICTION: the file states $C$ and $-C$ two lines apart
 
-Line 206 reads *"On the $\Lambda^2$-diagonal tensors $C=40\sum_{i<j}M_{ij}^3-4\operatorname{tr}(M^3)$"*. Since $\operatorname{tr}(M^3)=2\langle W^{\#},W\rangle$, that is $C=+40\operatorname{tr}(W^3)-8\langle W^{\#},W\rangle$, **the exact negative of the boxed formula two lines above it**, and it evaluates to $-8.809541$ at $S^6\times S^6$ against the boxed $+8.809545$. The two ingredients quoted on that same line are correct and imply the *boxed* sign, as §1.2 shows. **The sentence is a survivor of the pre-flip text: its ingredients were repaired and its conclusion was not.** This is the fourth appearance of the same inversion and it is the one still on the page.
+Line 206 reads *"On the $\Lambda^2$-diagonal tensors $C=40\sum_{i<j}M_{ij}^3-4\mathop{\mathrm{tr}}(M^3)$"*. Since $\mathop{\mathrm{tr}}(M^3)=2\langle W^{\#},W\rangle$, that is $C=+40\mathop{\mathrm{tr}}(W^3)-8\langle W^{\#},W\rangle$, **the exact negative of the boxed formula two lines above it**, and it evaluates to $-8.809541$ at $S^6\times S^6$ against the boxed $+8.809545$. The two ingredients quoted on that same line are correct and imply the *boxed* sign, as §1.2 shows. **The sentence is a survivor of the pre-flip text: its ingredients were repaired and its conclusion was not.** This is the fourth appearance of the same inversion and it is the one still on the page.
 
 ### 1.3 Is the "one positive, one negative" argument sound?
 
@@ -62,13 +62,13 @@ The second-kind spectrum, from §1.1, at $\lVert W\rVert=1$, $n=12$:
 
 ($\sum\mu^2=3=4\cdot\tfrac34\lVert W\rVert^2$, Lemma 3.1 in the $(0,4)$ normalisation, an independent check on the spectra.) With $T=\sum_j\lvert S^jW\rvert^2=\kappa\lvert W\rvert^2_{(0,4)}=\tfrac{74}3\cdot4=98.6667$:
 
-$$\theta\ \le\ 6\operatorname{tr}(W^3)+\tfrac18\cdot\tfrac{\mu_{N-1}+\mu_N}2\,T$$
+$$\theta\ \le\ 6\mathop{\mathrm{tr}}(W^3)+\tfrac18\cdot\tfrac{\mu_{N-1}+\mu_N}2\,T$$
 
 gives $0.134842+1.663=\mathbf{1.79784}$ at $S^6\times S^6$ ($1.4545\times$) and $0.256831+2.41008=\mathbf{2.66688}$ at $S^5\times S^7$ ($2.171\times$). **Both recorded figures confirmed.** I also reproduce $C$ from its definition $\sum_j\mu_j\lvert S^jW\rvert^2$ term by term at $S^6\times S^6$: $E$-block $+9.5279$, diagonal block $-0.7193$, total $\mathbf{+8.8086}$ against the recorded $8.809545$, agreement limited by my six-digit inputs.
 
 ### 1.5 The table's caption does not match its entries
 
-The header reads $6\operatorname{tr}(W^3)-\tfrac18\cdot\tfrac{\mu_1+\mu_2}2T$. Evaluated literally with $\mu_1,\mu_2$ the two **smallest** ($-1.348391$ and $-0.112366$, sum $-1.460757$) it returns $\mathbf{9.1428}$, precisely the figure the record has withdrawn. The entries $1.79781$ and $2.66678$ come from the two **largest** with a **plus**. **The caption is the discarded formula sitting above the corrected numbers.**
+The header reads $6\mathop{\mathrm{tr}}(W^3)-\tfrac18\cdot\tfrac{\mu_1+\mu_2}2T$. Evaluated literally with $\mu_1,\mu_2$ the two **smallest** ($-1.348391$ and $-0.112366$, sum $-1.460757$) it returns $\mathbf{9.1428}$, precisely the figure the record has withdrawn. The entries $1.79781$ and $2.66678$ come from the two **largest** with a **plus**. **The caption is the discarded formula sitting above the corrected numbers.**
 
 ### 1.6 A REGRESSION introduced by commit `260a804`
 
@@ -119,11 +119,11 @@ Two. §3.1's padding argument, held verbatim in [nondegeneracy.md](../findings/n
 
 ### (b) The 159/160 re-attribution, CORRECT, verified
 
-$(-48,+8)$ is a fit of $C$ against $\big(\operatorname{tr}(W^3),\theta\big)$, not against the two cubics: $-40\operatorname{tr}(W^3)+8\langle W^{\#},W\rangle=-48\operatorname{tr}(W^3)+8\theta$. Checked at both points: $-48(0.0224736)+8(1.236033)=+8.80955$ and $-48(0.277663)+8(1.141798)=-4.19295$. **160's recorded coefficients already carried the corrected sign**, so the earlier "159 and 160 agreed" was the error and the re-attribution restores it. Note the consequence: **the right sign was sitting in the record's own parenthesis for three commits**, in a form no one read as a sign statement.
+$(-48,+8)$ is a fit of $C$ against $\big(\mathop{\mathrm{tr}}(W^3),\theta\big)$, not against the two cubics: $-40\mathop{\mathrm{tr}}(W^3)+8\langle W^{\#},W\rangle=-48\mathop{\mathrm{tr}}(W^3)+8\theta$. Checked at both points: $-48(0.0224736)+8(1.236033)=+8.80955$ and $-48(0.277663)+8(1.141798)=-4.19295$. **160's recorded coefficients already carried the corrected sign**, so the earlier "159 and 160 agreed" was the error and the re-attribution restores it. Note the consequence: **the right sign was sitting in the record's own parenthesis for three commits**, in a form no one read as a sign statement.
 
 ### (c) Closures whose stated ground does not hold, THREE
 
-**1. Item 3a, closed on a withdrawn number.** [plan.md](../plan.md) reads *"**CLOSED on the tight-at-the-extremum test.** … the bound with exact inputs gives $9.14$ there against the true $1.236$, loose"*. That $9.14$ is withdrawn; the figure is $1.798$. The same paragraph still carries $C=40\operatorname{tr}(W^3)-8\langle W^{\#},W\rangle$, $\theta=6\operatorname{tr}(W^3)-\tfrac18C$ and *"the operative side is the **lower** bound on $C$"*, **all three withdrawn in [nondegeneracy.md](../findings/nondegeneracy.md), all three still live in the ranking file a reader consults first.** The verdict survives on the corrected number, but two further things are wrong with it: (i) the closure reaches only the *named estimate*, since $8\theta=C+48\operatorname{tr}(W^3)$ is an **identity** and any tight bound on $C$ still closes the route; (ii) the honest statement of the deficit is that Cheng–Wang's top-pair estimate gives $C\le0.134839\times98.667=13.30$ against the true $8.8095$, **a factor of $1.51$ on $C$**, not a structural obstruction. The record has over-closed this item once already (*"Non-proportionality closes nothing, and the route never needed it"*).
+**1. Item 3a, closed on a withdrawn number.** [plan.md](../plan.md) reads *"**CLOSED on the tight-at-the-extremum test.** … the bound with exact inputs gives $9.14$ there against the true $1.236$, loose"*. That $9.14$ is withdrawn; the figure is $1.798$. The same paragraph still carries $C=40\mathop{\mathrm{tr}}(W^3)-8\langle W^{\#},W\rangle$, $\theta=6\mathop{\mathrm{tr}}(W^3)-\tfrac18C$ and *"the operative side is the **lower** bound on $C$"*, **all three withdrawn in [nondegeneracy.md](../findings/nondegeneracy.md), all three still live in the ranking file a reader consults first.** The verdict survives on the corrected number, but two further things are wrong with it: (i) the closure reaches only the *named estimate*, since $8\theta=C+48\mathop{\mathrm{tr}}(W^3)$ is an **identity** and any tight bound on $C$ still closes the route; (ii) the honest statement of the deficit is that Cheng–Wang's top-pair estimate gives $C\le0.134839\times98.667=13.30$ against the true $8.8095$, **a factor of $1.51$ on $C$**, not a structural obstruction. The record has over-closed this item once already (*"Non-proportionality closes nothing, and the route never needed it"*).
 
 **2. Item 3b, retired on a computation outside its scope.** The ground is *"Morse–Bott nondegeneracy gives the component structure at $W_{\mathbb{CP}^2}$ directly"*, resting on RESULT 1, verified at **$n=6,8,10$**. The target it serves is a statement at $n\ge12$, and the padded point's Morse–Bott status is on record nowhere in that range. Worse, the argument runs *"the orbit of interest is a union of components, at the point where the supremum is attained"*, and which point attains the supremum is the conclusion, so the retirement is at minimum owed a non-circular attainment step.
 
@@ -131,12 +131,12 @@ $(-48,+8)$ is a fit of $C$ against $\big(\operatorname{tr}(W^3),\theta\big)$, no
 
 ### (c-adjacent) A FALSE QUANTIFIER on a boxed identity, introduced in the fold-in
 
-[nondegeneracy.md](../findings/nondegeneracy.md) boxes $\operatorname{tr}(W^3)/\theta=2/\big((n-1)(n-2)\big)$ *"exactly at **every sphere product**"*. **It is false off the balanced product**, and the counterexample is the next paragraph of the same file: at $S^3\times S^9$, $n=12$, the ratio is $0.277663/1.141798=\mathbf{0.2432}$ against $2/110=0.01818$, a factor of $13.4$. At $S^5\times S^7$ it is $0.03485$. The source reviewer's own text says *"the ratio is for the **balanced product only**"* and *"nothing here bounds $\operatorname{tr}(W^3)/\theta$ at an unknown maximiser"*; **the fold-in dropped both scope statements and promoted the quantifier.** The downstream sentence, *"so problem.md item 5 is a theorem rather than an observation at one point"*, survives, because item 5 concerns the maximiser only. Fix the quantifier, restore the caveat.
+[nondegeneracy.md](../findings/nondegeneracy.md) boxes $\mathop{\mathrm{tr}}(W^3)/\theta=2/\big((n-1)(n-2)\big)$ *"exactly at **every sphere product**"*. **It is false off the balanced product**, and the counterexample is the next paragraph of the same file: at $S^3\times S^9$, $n=12$, the ratio is $0.277663/1.141798=\mathbf{0.2432}$ against $2/110=0.01818$, a factor of $13.4$. At $S^5\times S^7$ it is $0.03485$. The source reviewer's own text says *"the ratio is for the **balanced product only**"* and *"nothing here bounds $\mathop{\mathrm{tr}}(W^3)/\theta$ at an unknown maximiser"*; **the fold-in dropped both scope statements and promoted the quantifier.** The downstream sentence, *"so problem.md item 5 is a theorem rather than an observation at one point"*, survives, because item 5 concerns the maximiser only. Fix the quantifier, restore the caveat.
 
 ## What is owed
 
 1. **Repair line 206**, it states $-C$. Its two ingredients are correct and imply the boxed sign.
-2. **Repair the tight-at-extremum table's caption**, it is the withdrawn $9.14$ formula sitting above the corrected entries. Correct: $6\operatorname{tr}(W^3)+\tfrac18\cdot\tfrac{\mu_{N-1}+\mu_N}2T$, top pair, plus.
+2. **Repair the tight-at-extremum table's caption**, it is the withdrawn $9.14$ formula sitting above the corrected entries. Correct: $6\mathop{\mathrm{tr}}(W^3)+\tfrac18\cdot\tfrac{\mu_{N-1}+\mu_N}2T$, top pair, plus.
 3. **Restore r163's $\mu_1+\mu_2=-1.460757$ diagnosis** and drop $\{-12,-1\}$, which matches no normalisation of $\mathring W$ at that point.
 4. **Compute $\lambda_{\max}(L_e|_{W^\perp})$ for padded $W_{\mathbb{CP}^2}$ at $n=12$.** One eigenvalue at one known point, it is [plan.md](../plan.md)'s own D3, and it is the *only* thing that decides claim 3's consequence. Until then the $n\ge12$ hatch is untested rather than closed.
 5. **Fix the "every sphere product" quantifier** and restore the balanced-product scope.

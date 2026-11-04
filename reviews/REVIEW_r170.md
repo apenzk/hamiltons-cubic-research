@@ -21,7 +21,7 @@ The weight arithmetic in `dca494d` is right. In $B_2$, $\omega_1=e_1$ and $\omeg
 
 $$[2,2]:\ \dim\mathrm{Sym}^k(\cdot)^{O(5)}=1,1,4,5,14\ (k=2..6),\qquad [2,1]:\ 1,\mathbf{0},5,4 .$$
 
-$[2,1]$ carries **no** cubic invariant at all, while $\mathrm{Weyl}_5$ demonstrably carries exactly one ($\operatorname{tr}W^3$, the $n\le5$ collapse of [fence post F2g](../findings/fence-posts.md)). So the identification rests on a proved fact about $\mathrm{Weyl}_5$ rather than on solving for the label. The plan reaches the same place via "trivial multiplicity $1$ at $n=5$ against $2$ at $n=12$", which is the same observation used as a consistency check rather than as the discriminator it is.
+$[2,1]$ carries **no** cubic invariant at all, while $\mathrm{Weyl}_5$ demonstrably carries exactly one ($\mathop{\mathrm{tr}}W^3$, the $n\le5$ collapse of [fence post F2g](../findings/fence-posts.md)). So the identification rests on a proved fact about $\mathrm{Weyl}_5$ rather than on solving for the label. The plan reaches the same place via "trivial multiplicity $1$ at $n=5$ against $2$ at $n=12$", which is the same observation used as a consistency check rather than as the discriminator it is.
 
 **Block data, reproduced exactly.** `WeylCharacterRing("B2")(2,2).symmetric_power(3)`: degree $7770=\binom{37}3$, **24 blocks**, multiplicities $1..4$ summing to $41$, $\sum m(m{+}1)/2=\mathbf{65}$, largest block $4\times4$, trivial multiplicity $1$. Every figure matches.
 
@@ -63,15 +63,15 @@ $$\{W\in\mathrm{Weyl}_5:\ \Lambda^2\text{-spectrum has}\ \ge3\ \text{negative ei
 
 *Second, and specific to this problem: $F$ has zeros, so the Gram spectrahedron is a proper face, never full-dimensional.* Write the invariant Gram as $G=\bigoplus_\lambda G_\lambda\otimes\mathrm{Id}_{\dim\lambda}$ and $F(W)=\sum_\lambda\langle G_\lambda,B_\lambda(W)\rangle$ with $B_\lambda(W)\succeq0$ the block moment matrix of the $\lambda$-covariants. At $W_0=W_{\mathbb{CP}^2}$, $F=0$ and every summand is $\ge0$, so **every** summand vanishes and
 
-$$G_\lambda\,B_\lambda(W_0)=0\quad\text{for every }\lambda,\qquad\text{i.e.}\qquad \operatorname{rank}G_\lambda\le m_\lambda-\operatorname{rank}B_\lambda(W_0).$$
+$$G_\lambda\,B_\lambda(W_0)=0\quad\text{for every }\lambda,\qquad\text{i.e.}\qquad \mathop{\mathrm{rank}}G_\lambda\le m_\lambda-\mathop{\mathrm{rank}}B_\lambda(W_0).$$
 
 Two consequences, one exact and one measured.
 
-**Exact: the trivial block is forced to zero.** $m_{\mathrm{triv}}=1$ and $B_{\mathrm{triv}}(W_0)\propto\operatorname{tr}(W_0^3)^2=1/6\neq0$, so $G_{\mathrm{triv}}=0$. One of the $65$ unknowns is gone before any solver starts.
+**Exact: the trivial block is forced to zero.** $m_{\mathrm{triv}}=1$ and $B_{\mathrm{triv}}(W_0)\propto\mathop{\mathrm{tr}}(W_0^3)^2=1/6\neq0$, so $G_{\mathrm{triv}}=0$. One of the $65$ unknowns is gone before any solver starts.
 
 **Measured: the orbit kills $3570$ of $7770$ dimensions.** The zero set contains the cone over $O(5)\cdot W_0$ (a $6$-dimensional orbit, $\dim\mathfrak{so}(5)-\dim(\mathfrak u(2)\oplus\mathfrak{so}(1))=10-4$), and $O(5)\cdot W_0=SO(5)\cdot W_0$ because $-I$ acts trivially. Evaluating the $7770$ cubic monomials at $5200$ random orbit points and taking the rank of the $5200\times5200$ Gram gives, cleanly and identically at tolerances $10^{-8}$, $10^{-10}$, $10^{-12}$,
 
-$$\dim\operatorname{span}\{v(W):W\in O(5)\!\cdot\!W_0\}=3570\quad\Longrightarrow\quad \operatorname{rank}G\le7770-3570=4200 .$$
+$$\dim\mathop{\mathrm{span}}\{v(W):W\in O(5)\!\cdot\!W_0\}=3570\quad\Longrightarrow\quad \mathop{\mathrm{rank}}G\le7770-3570=4200 .$$
 
 So **$45.9\%$ of $\mathrm{Sym}^3(\mathrm{Weyl}_5)$ is forced into $\ker G$** by a constraint the $65$-versus-$14$ count cannot see. Feeding $\sum_\lambda r_\lambda\dim\lambda=3570$, $0\le r_\lambda\le m_\lambda$, $r_{\mathrm{triv}}=1$ into the exact block table (24 blocks, dimensions $810,770,625,455,455,429,390,\dots,14,5,1$) and optimising $\sum(m_\lambda-r_\lambda)(m_\lambda-r_\lambda+1)/2$ over integer profiles:
 
@@ -79,19 +79,19 @@ $$\boxed{\ \textbf{9}\ \le\ \text{surviving free parameters}\ \le\ \textbf{56}\ 
 
 The lower end is **below the 14 constraints**. So the honest statement is not "51 degrees of freedom, no obstruction" but "somewhere between an over-determined system and 42 degrees of freedom, and which one is not known until the isotypic projections exist". Pinning $r_\lambda$ requires exactly the projections the plan lists as the outstanding step, so the degree-of-freedom claim and the outstanding step are the same unknown, and the claim was made as though it were not.
 
-*Scope of that number.* $3570$ is measured on the $SO(5)$ orbit of one point; the true zero set may be larger (it contains $-W_0$'s orbit, and any further equality points), so $4200$ is an upper bound on $\operatorname{rank}G$ that can only fall.
+*Scope of that number.* $3570$ is measured on the $SO(5)$ orbit of one point; the true zero set may be larger (it contains $-W_0$'s orbit, and any further equality points), so $4200$ is an upper bound on $\mathop{\mathrm{rank}}G$ that can only fall.
 
 ## Claim 4, the identity holds, the conclusion is right, the stated ground is wrong
 
 **The identity, reproduced.** With an independent Weyl projector and $\Lambda^2$-matrix conversion, on random unit $\mathrm{Weyl}_n$ tensors:
 
-| $n$ | $\max\lvert\langle W^\#,W\rangle-2\operatorname{tr}W^3\rvert$ | $\theta/\operatorname{tr}W^3$ |
+| $n$ | $\max\lvert\langle W^\#,W\rangle-2\mathop{\mathrm{tr}}W^3\rvert$ | $\theta/\mathop{\mathrm{tr}}W^3$ |
 | --- | --- | --- |
 | 4 | $2.8\times10^{-16}$ | $3.000000000$ |
 | 5 | $1.7\times10^{-16}$ | $3.000000000$ |
 | 6 | $8.6\times10^{-2}$ | $-0.17,\ 2.90,\ 4.21$ (wanders) |
 
-So $\theta=3\operatorname{tr}(W^3)$ at $n\le5$ and $F=\tfrac32\lVert W\rVert^6-9\operatorname{tr}(W^3)^2$ is a function of the $\Lambda^2$ spectrum. Confirmed.
+So $\theta=3\mathop{\mathrm{tr}}(W^3)$ at $n\le5$ and $F=\tfrac32\lVert W\rVert^6-9\mathop{\mathrm{tr}}(W^3)^2$ is a function of the $\Lambda^2$ spectrum. Confirmed.
 
 **But "$F$ is spectral" and "$F\ge0$ is a spectral theorem" are different statements, and only the first is true.** The inequality $\tfrac32(\sum\mu_i^2)^3\ge9(\sum\mu_i^3)^2$ is **false** for a general traceless unit operator on $\Lambda^2\mathbb R^5$: Okumura gives $\sup p_3=0.8432740$ at $(9,-1^9)/\sqrt{90}$, i.e. $\theta\le2.5298$, against $\sqrt{3/2}=1.2247$. What closes that $2.07\times$ gap is nothing about the spectrum, it is which spectra $\mathrm{Weyl}_5$ realises, i.e. [fence post F10](../findings/fence-posts.md)'s frame-realisability, the original problem in new coordinates. So $100\%$ of the content of $F\ge0$ at $n=5$ lives in the Weyl structure, and an SOS certificate is a statement about that structure.
 
@@ -113,7 +113,7 @@ That is a real deliverable, and it is more than "evidence about machinery and de
 
 **(a) Asserted as new, already on the record.** Four items:
 
-- $\theta=3\operatorname{tr}(W^3)$ at $n\le5$ and its consequence that the problem is single-spectrum there, [fence post F2g](../findings/fence-posts.md) as rewritten 2026-08-26, and the paragraph above it ("*At $n=4,5$: $p_3(\omega)=-3p_3(\mu)$ exactly, so $\theta=3p_3(\mu)$ and the problem is single-spectrum*"). The plan cites 2g for the identity but presents the single-spectrum consequence as the new step.
+- $\theta=3\mathop{\mathrm{tr}}(W^3)$ at $n\le5$ and its consequence that the problem is single-spectrum there, [fence post F2g](../findings/fence-posts.md) as rewritten 2026-08-26, and the paragraph above it ("*At $n=4,5$: $p_3(\omega)=-3p_3(\mu)$ exactly, so $\theta=3p_3(\mu)$ and the problem is single-spectrum*"). The plan cites 2g for the identity but presents the single-spectrum consequence as the new step.
 - Independence of the two cubics from $n=6$, 2g's "*All fail from $n=6$*"; the plan's $9.2\times10^{-2}$ is a re-measurement.
 - $\theta=\sqrt{3/2}$ at padded $W_{\mathbb{CP}^2}$, $n=5$, [ATTEMPTS.md](../ATTEMPTS.md) records the exact match "*checked at $n=4,5,6,8,10$*" with residual literally zero.
 - Ascent basin dominance for the $\mathcal S^4(\alpha)$ attractor, [ATTEMPTS.md](../ATTEMPTS.md) Result 1, $470$ restarts at $n=6,7,8$, $100/99.3/95.8\%$.

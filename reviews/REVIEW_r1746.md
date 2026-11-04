@@ -7,17 +7,17 @@ Scope: both files as committed in 376954fe and 4023688a (identical to the workin
 ## (1) The conjugation identities and `blockP_conj`
 
 - `conj_mul` needs only $FF^{\mathsf T}=1$: $F^{\mathsf T}AF\,F^{\mathsf T}BF=F^{\mathsf T}A(FF^{\mathsf T})BF$. Correct.
-- `trace_conj`: $\operatorname{tr}(F^{\mathsf T}AF)=\operatorname{tr}(FF^{\mathsf T}A)$ by cyclicity. Correct.
+- `trace_conj`: $\mathop{\mathrm{tr}}(F^{\mathsf T}AF)=\mathop{\mathrm{tr}}(FF^{\mathsf T}A)$ by cyclicity. Correct.
 - `det_conj`: $\det F^{\mathsf T}\det A\det F=\det A\,(\det F)^2$ and $(\det F)^2=1$ from $F^{\mathsf T}F=1$. Correct.
-- `adj_formula` is Cayley–Hamilton at size 3, $\operatorname{adj}A=A^2-(\operatorname{tr}A)A+e_2(A)I$ with $e_2=\tfrac12((\operatorname{tr}A)^2-\operatorname{tr}A^2)$, proved entrywise. Correct for every $3\times3$ $A$, symmetric or not.
+- `adj_formula` is Cayley–Hamilton at size 3, $\mathop{\mathrm{adj}}A=A^2-(\mathop{\mathrm{tr}}A)A+e_2(A)I$ with $e_2=\tfrac12((\mathop{\mathrm{tr}}A)^2-\mathop{\mathrm{tr}}A^2)$, proved entrywise. Correct for every $3\times3$ $A$, symmetric or not.
 - `adj_conj` pushes the formula through `conj_mul` and `trace_conj`, and the identity term uses $F^{\mathsf T}\cdot1\cdot F=1$. Correct.
-- `blockP_conj`: `blockP` is `cubicJ S` (trace of the cube and $3\det$), $\operatorname{tr}M_a^3+3\operatorname{tr}(S\operatorname{adj}M_a)$, $\operatorname{tr}(M_aM_b)$ and scalars in $K$. The adjugate term becomes $\operatorname{tr}(F^{\mathsf T}SF\,F^{\mathsf T}\operatorname{adj}(M_a)F)=\operatorname{tr}(S\operatorname{adj}M_a)$. Every term is covered. `normSq_conj` likewise.
-- Falsifier: a real $3\times3$ $A$ and orthogonal $F$ with $\operatorname{adj}(F^{\mathsf T}AF)\ne F^{\mathsf T}\operatorname{adj}(A)F$, or a $(S,M,K)$ whose `blockP` changes under the rotation.
+- `blockP_conj`: `blockP` is `cubicJ S` (trace of the cube and $3\det$), $\mathop{\mathrm{tr}}M_a^3+3\mathop{\mathrm{tr}}(S\mathop{\mathrm{adj}}M_a)$, $\mathop{\mathrm{tr}}(M_aM_b)$ and scalars in $K$. The adjugate term becomes $\mathop{\mathrm{tr}}(F^{\mathsf T}SF\,F^{\mathsf T}\mathop{\mathrm{adj}}(M_a)F)=\mathop{\mathrm{tr}}(S\mathop{\mathrm{adj}}M_a)$. Every term is covered. `normSq_conj` likewise.
+- Falsifier: a real $3\times3$ $A$ and orthogonal $F$ with $\mathop{\mathrm{adj}}(F^{\mathsf T}AF)\ne F^{\mathsf T}\mathop{\mathrm{adj}}(A)F$, or a $(S,M,K)$ whose `blockP` changes under the rotation.
 
 ## (2) `ricci_conj`
 
-- `ricciFlat_iff` characterises Ricci-flatness of `blockOp S M K` (symmetric $S$, $M_a$, symmetric hollow $K$) as $(\operatorname{tr}S)I-S+\sum_aM_a=0$ and $\operatorname{tr}M_a+\sum_bK_{ab}=0$.
-- The J condition is conjugated as a whole: $F^{\mathsf T}(\dots)F=0$, expanded with $F^{\mathsf T}F=1$ on the identity term and `trace_conj` on $\operatorname{tr}S$. The outer condition only sees $\operatorname{tr}M_a$, which is invariant. `isSymm_conj` supplies the symmetry hypotheses on the rotated side. Sound.
+- `ricciFlat_iff` characterises Ricci-flatness of `blockOp S M K` (symmetric $S$, $M_a$, symmetric hollow $K$) as $(\mathop{\mathrm{tr}}S)I-S+\sum_aM_a=0$ and $\mathop{\mathrm{tr}}M_a+\sum_bK_{ab}=0$.
+- The J condition is conjugated as a whole: $F^{\mathsf T}(\dots)F=0$, expanded with $F^{\mathsf T}F=1$ on the identity term and `trace_conj` on $\mathop{\mathrm{tr}}S$. The outer condition only sees $\mathop{\mathrm{tr}}M_a$, which is invariant. `isSymm_conj` supplies the symmetry hypotheses on the rotated side. Sound.
 - Falsifier: a Ricci-flat `blockOp S M K` with $F^{\mathsf T}SF$, $F^{\mathsf T}M_aF$ giving a non-Ricci-flat operator.
 
 ## (3) `L57_block_conj`
@@ -30,11 +30,11 @@ Scope: both files as committed in 376954fe and 4023688a (identical to the workin
 ## (4) `L228_item3`
 
 - **Hypothesis.** `DiagIn F A` is $F^{\mathsf T}AF$ diagonal, i.e. $A$ diagonal in the orthonormal frame of $F$'s columns. `hdiag : ∀ i, DiagIn F (Xs i.succ)` is the record's "the blocks $X_c$, $c\ne a$, simultaneously diagonal in one orthonormal frame" at $a=0$, no more. The operator is `blockOp` with $S=X-\tfrac12\mu I$, $M_a=t_aI+X_a$, traceless symmetric $X_a$, symmetric hollow $K$, plus full Ricci-flatness. The fixed form of $S$ is what the J rows force (`L228_item1_ricci`), so this is the record's $W\in\mathcal S_J\cap\mathcal W_n$ in L226's parametrisation, nothing added. Non-vacuous: $t=0$, $K=0$ and any traceless symmetric $X_a$ satisfy both Ricci conditions.
-- **$\ell'$ diagonal in $F$.** $R$, $T=\sum X_c^2$, $\sum\beta_{0c}X_c$ and $R^2$ are, by `diagIn_sum`, `diagIn_mul` (which uses $FF^{\mathsf T}=1$ correctly) and `diagIn_smul`, and `eq_inFrame` writes $\ell'=F\operatorname{diag}(l)F^{\mathsf T}$. Matches the record.
-- **Alignment.** `align_to_frame` gives $Y'=F\operatorname{diag}(y)F^{\mathsf T}$ with the same $\operatorname{tr}Y$, $\operatorname{tr}Y^2$, $\operatorname{tr}Y^3$ and $\operatorname{tr}(Y\ell')\le\operatorname{tr}(Y'\ell')$.
-- **$W'$.** `Xs' = Fin.cons (Y' − ½R) (Xs ∘ succ)` keeps the other blocks, $t$ and $K$. $X'_0$ is traceless ($\operatorname{tr}Y'=\operatorname{tr}Y=\operatorname{tr}X_0+\tfrac12\operatorname{tr}R$) and symmetric. Applying `L228_item2` to `Xs'` gives the same $R$, $T$, $\ell'$, `cA`, `nA` (all functions of `Xs' ∘ succ = Xs ∘ succ`) and $Y$-slot $Y'$ after `sub_add_cancel`.
-- **$P(W')\ge P(W)$** by $\operatorname{tr}Y'^3=\operatorname{tr}Y^3$ and the pairing, **same norm** by $\operatorname{tr}Y'^2=\operatorname{tr}Y^2$. Correct.
-- **Ricci-flat.** J rows: `N_shift` gives $S'=N'-\tfrac12(\operatorname{tr}N')I$ for $N'=\sum M'_a$, and `ricciJ_inverse` turns that into $(\operatorname{tr}S')I-S'=-N'$. Outer rows: $\operatorname{tr}M'_a=3t_a=\operatorname{tr}M_a$, so the old condition transfers. Correct and matches the record.
+- **$\ell'$ diagonal in $F$.** $R$, $T=\sum X_c^2$, $\sum\beta_{0c}X_c$ and $R^2$ are, by `diagIn_sum`, `diagIn_mul` (which uses $FF^{\mathsf T}=1$ correctly) and `diagIn_smul`, and `eq_inFrame` writes $\ell'=F\mathop{\mathrm{diag}}(l)F^{\mathsf T}$. Matches the record.
+- **Alignment.** `align_to_frame` gives $Y'=F\mathop{\mathrm{diag}}(y)F^{\mathsf T}$ with the same $\mathop{\mathrm{tr}}Y$, $\mathop{\mathrm{tr}}Y^2$, $\mathop{\mathrm{tr}}Y^3$ and $\mathop{\mathrm{tr}}(Y\ell')\le\mathop{\mathrm{tr}}(Y'\ell')$.
+- **$W'$.** `Xs' = Fin.cons (Y' − ½R) (Xs ∘ succ)` keeps the other blocks, $t$ and $K$. $X'_0$ is traceless ($\mathop{\mathrm{tr}}Y'=\mathop{\mathrm{tr}}Y=\mathop{\mathrm{tr}}X_0+\tfrac12\mathop{\mathrm{tr}}R$) and symmetric. Applying `L228_item2` to `Xs'` gives the same $R$, $T$, $\ell'$, `cA`, `nA` (all functions of `Xs' ∘ succ = Xs ∘ succ`) and $Y$-slot $Y'$ after `sub_add_cancel`.
+- **$P(W')\ge P(W)$** by $\mathop{\mathrm{tr}}Y'^3=\mathop{\mathrm{tr}}Y^3$ and the pairing, **same norm** by $\mathop{\mathrm{tr}}Y'^2=\mathop{\mathrm{tr}}Y^2$. Correct.
+- **Ricci-flat.** J rows: `N_shift` gives $S'=N'-\tfrac12(\mathop{\mathrm{tr}}N')I$ for $N'=\sum M'_a$, and `ricciJ_inverse` turns that into $(\mathop{\mathrm{tr}}S')I-S'=-N'$. Outer rows: $\mathop{\mathrm{tr}}M'_a=3t_a=\mathop{\mathrm{tr}}M_a$, so the old condition transfers. Correct and matches the record.
 - **Every block diagonal in $F$.** $X'_0$ by `diagIn_inFrame` and `diagIn_sub`, the rest by hypothesis, $S'$ and $M'_a$ by closure with `diagIn_one`. Then `L57_block_conj` at $m+1\ge1$ and `hPle.trans` close it.
 - Falsifier of the typed statement: a Ricci-flat $W$ in the family with $X_1,\dots,X_m$ diagonal in one $F$ and $P(W)>\theta_0(m+4)\lVert W\rVert^3$. **The conclusion is the record's item 3 exactly when $n=m+4$ is even.** At odd $n$ it is the weaker $\theta_0$ bound, per (3).
 - Not typed and not listed as owed: the record's sentences "In items 3 and 4 the value $\Theta_n$ is attained in $\mathcal D_n\subseteq\mathcal S_J$" and "At $m\le2$ item 3 covers every $W$".

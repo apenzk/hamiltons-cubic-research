@@ -15,12 +15,12 @@ The brief ([BRIEF_L09_repair.md](BRIEF_L09_repair.md)) was read cold. No numeric
 
 ## 0. Conventions, fixed once
 
-- $\mathfrak g=\mathfrak{so}(8)=\Lambda^2\mathbb R^8$ with an $\mathrm{Ad}$-invariant inner product $\langle A,B\rangle=-\tfrac12\operatorname{tr}(AB)$. $\mathrm{Sym}^2(\mathfrak g)$ is the space of symmetric operators on $\mathfrak g$ with the Frobenius inner product.
+- $\mathfrak g=\mathfrak{so}(8)=\Lambda^2\mathbb R^8$ with an $\mathrm{Ad}$-invariant inner product $\langle A,B\rangle=-\tfrac12\mathop{\mathrm{tr}}(AB)$. $\mathrm{Sym}^2(\mathfrak g)$ is the space of symmetric operators on $\mathfrak g$ with the Frobenius inner product.
 - $\tau$ is a Lie algebra automorphism of $\mathfrak g$ in a triality class. $\hat\tau(S)=\tau S\tau^{-1}$ on $\mathrm{Sym}^2(\mathfrak g)$.
 - The infinitesimal $\mathfrak{so}(8)$-action on $\mathrm{Sym}^2(\mathfrak g)$ is $\rho(X)S=[\mathrm{ad}_X,S]$. The $O(8)$-action is $g\cdot S=\mathrm{Ad}_gS\mathrm{Ad}_g^{-1}$.
 - $W=W_{3,5}$ is the unit Weyl tensor of $S^3\times S^5$ with $P(W)>0$, $\theta=P(W)$, $e=W/\theta$, $W'=\hat\tau W$, $e'=\hat\tau e$.
 - $\Sigma$ is the unit sphere of $\mathcal W_8$. $\mathcal O_X=O(8)\cdot X$ and $N_X$ is the orthogonal complement of $T_X\mathcal O_X$ in $T_X\Sigma=X^\perp\cap\mathcal W_8$.
-- $Q(S)=S^2+S^\#$ with $S^\#=S\#S$, $R\#S(v,w)=-\tfrac12\operatorname{tr}(\mathrm{ad}_v R\,\mathrm{ad}_w S)$ ([Nienhaus, Definition 2.11](https://arxiv.org/abs/2311.02404), extraction L1060). $X\circ Y$ is the polarisation of $Q$.
+- $Q(S)=S^2+S^\#$ with $S^\#=S\#S$, $R\#S(v,w)=-\tfrac12\mathop{\mathrm{tr}}(\mathrm{ad}_v R\,\mathrm{ad}_w S)$ ([Nienhaus, Definition 2.11](https://arxiv.org/abs/2311.02404), extraction L1060). $X\circ Y$ is the polarisation of $Q$.
 
 ## Hypothesis inventory
 
@@ -34,7 +34,7 @@ The brief ([BRIEF_L09_repair.md](BRIEF_L09_repair.md)) was read cold. No numeric
 | L24 | $W$ critical on the unit sphere of $\mathcal W_n$, $\theta=P(W)>0$ | Hessian formula $6\theta(L_{e'}-\tfrac12)$ at $W'$ | yes, by Section 2 |
 | L27 | $p,q\ge3$, $(p,q)\ne(3,3)$, $n=p+q$ | $(p,q)=(3,5)$, $n=8$ | yes |
 | Nienhaus 2.25 | $k+l=n$, $S_{k,l}=S^k\times S^l_r$, $W_{S_{k,l}}$ normalised | $(k,l)=(3,5)$ | yes, normalisation at extraction L1443–1450 |
-| Classical C1 | an automorphism of $\mathfrak{so}(8)$ preserves the Killing form $6\operatorname{tr}(XY)$, hence is orthogonal | "$\tau$ is an orthogonal automorphism" | correct, asserted without reason, not located in a filed note |
+| Classical C1 | an automorphism of $\mathfrak{so}(8)$ preserves the Killing form $6\mathop{\mathrm{tr}}(XY)$, hence is orthogonal | "$\tau$ is an orthogonal automorphism" | correct, asserted without reason, not located in a filed note |
 | Classical C2 | $\mathrm{Sym}^2(\Lambda^2\mathbb R^n)=\langle\mathrm{Id}\rangle\oplus S^2_0(\mathbb R^n)\oplus\mathrm{Weyl}_n\oplus\Lambda^4(\mathbb R^n)$, invariant, orthogonal | the coarse form of the display | correct, filed: [Nienhaus, Proposition 2.9](https://arxiv.org/abs/2311.02404), extraction L969 |
 | Classical C3 | $\Lambda^4\mathbb R^8=\Lambda^4_+\oplus\Lambda^4_-$ as $\mathfrak{so}(8)$-modules with $\Lambda^4_\pm\cong S^2_0(8_s),S^2_0(8_c)$ | the labels $35_s,35_c$ | correct, no filed source |
 | Classical C4 | triality permutes $8_v,8_s,8_c$ | the permutation of the $35_x$ | correct. Filed: existence and $S_3$ ([Yokota, Theorem 1.3.5](../references/yokota-2009-exceptional-lie-groups/notes.md)), $\mathrm{Sym}(D_4)=S_3$ ([Ziller, Proposition 4.43, Example 4.45](../references/ziller-2010-lie-groups-symmetric-spaces/notes.md)), the three 8-dimensional irreps inequivalent with outer equivalence promised ([Ziller extraction L5052](https://www2.math.upenn.edu/~wziller/math650/LieGroupsReps.pdf)). The permutation itself is printed in no filed source |
@@ -47,7 +47,7 @@ The brief ([BRIEF_L09_repair.md](BRIEF_L09_repair.md)) was read cold. No numeric
 
 **The written chain.** (a) $\tau$ preserves the bracket and inner product. (b) Triality permutes $8_v,8_s,8_c$, hence the three $35_x=S^2_0(8_x)$ in the display. (c) It fixes the trivial summand. (d) Being orthogonal, it preserves the complement of their sum, which is $\mathcal W_8$.
 
-**Link (a).** Every automorphism of a semisimple Lie algebra preserves the Killing form $B(X,Y)=\operatorname{tr}(\mathrm{ad}_X\mathrm{ad}_Y)$, since $\mathrm{ad}_{\tau X}=\tau\mathrm{ad}_X\tau^{-1}$. On $\mathfrak{so}(8)$, $B(X,Y)=(n-2)\operatorname{tr}(XY)=6\operatorname{tr}(XY)=-12\langle X,Y\rangle$, so $\tau$ is orthogonal. Then $\hat\tau$ is orthogonal for Frobenius, $\langle\tau S\tau^{-1},\tau T\tau^{-1}\rangle=\operatorname{tr}(\tau ST\tau^{-1})=\langle S,T\rangle$ with $\tau^{-1}=\tau^{\mathsf T}$, and $\hat\tau$ sends symmetric operators to symmetric operators.
+**Link (a).** Every automorphism of a semisimple Lie algebra preserves the Killing form $B(X,Y)=\mathop{\mathrm{tr}}(\mathrm{ad}_X\mathrm{ad}_Y)$, since $\mathrm{ad}_{\tau X}=\tau\mathrm{ad}_X\tau^{-1}$. On $\mathfrak{so}(8)$, $B(X,Y)=(n-2)\mathop{\mathrm{tr}}(XY)=6\mathop{\mathrm{tr}}(XY)=-12\langle X,Y\rangle$, so $\tau$ is orthogonal. Then $\hat\tau$ is orthogonal for Frobenius, $\langle\tau S\tau^{-1},\tau T\tau^{-1}\rangle=\mathop{\mathrm{tr}}(\tau ST\tau^{-1})=\langle S,T\rangle$ with $\tau^{-1}=\tau^{\mathsf T}$, and $\hat\tau$ sends symmetric operators to symmetric operators.
 
 **The display.** Dimensions: $\dim\mathrm{Sym}^2(\Lambda^2\mathbb R^8)=\tfrac{28\cdot29}2=406$. $\dim\mathcal W_8=\tfrac{n^2(n^2-1)}{12}-\tfrac{n(n+1)}2=336-36=300$. $\dim\Lambda^4\mathbb R^8=70=35+35$. $\dim S^2_0(\mathbb R^8)=35$. So $406=300+1+35+70$, matching $300+1+3\cdot35$. C2 (filed, Nienhaus 2.9) gives the coarse decomposition. C3 refines $\Lambda^4\mathbb R^8$ under $\mathfrak{so}(8)$: $S^2(8_s)=1\oplus\Lambda^4_+$ and $S^2(8_c)=1\oplus\Lambda^4_-$ ($36=1+35$), while $S^2_0(8_v)=S^2_0(\mathbb R^8)$. The highest weights are $2\omega_1$ ($35_v$), $2\omega_3,2\omega_4$ ($35_s,35_c$), $2\omega_2$ ($\mathcal W_8$) and $0$, where $\omega_2$ labels the central node of $D_4$. All five are distinct, so the display is multiplicity-free. The statement is correct and is used as an $\mathfrak{so}(8)$-decomposition. Under $O(8)$ the two summands $35_s,35_c$ are swapped, which leaves their sum invariant and plays no role here.
 
@@ -62,7 +62,7 @@ The brief ([BRIEF_L09_repair.md](BRIEF_L09_repair.md)) was read cold. No numeric
 ## 2. Criticality and $\theta$ (brief item 2): CONFIRMED
 
 **$\hat\tau$ commutes with $Q$.** $(\hat\tau S)^2=\tau S^2\tau^{-1}=\hat\tau(S^2)$. For $\#$, with $v'=\tau v$, $w'=\tau w$:
-$$(\hat\tau R)\#(\hat\tau S)(v',w')=-\tfrac12\operatorname{tr}\big(\mathrm{ad}_{\tau v}\,\tau R\tau^{-1}\,\mathrm{ad}_{\tau w}\,\tau S\tau^{-1}\big)=-\tfrac12\operatorname{tr}\big(\tau\,\mathrm{ad}_vR\,\mathrm{ad}_wS\,\tau^{-1}\big)=R\#S(v,w).$$
+$$(\hat\tau R)\#(\hat\tau S)(v',w')=-\tfrac12\mathop{\mathrm{tr}}\big(\mathrm{ad}_{\tau v}\,\tau R\tau^{-1}\,\mathrm{ad}_{\tau w}\,\tau S\tau^{-1}\big)=-\tfrac12\mathop{\mathrm{tr}}\big(\tau\,\mathrm{ad}_vR\,\mathrm{ad}_wS\,\tau^{-1}\big)=R\#S(v,w).$$
 Read as operators through the orthogonal $\tau$, this is $(\hat\tau R)\#(\hat\tau S)=\hat\tau(R\#S)$. So $Q\hat\tau=\hat\tau Q$, and $P(\hat\tau S)=\langle\hat\tau S,\hat\tau Q(S)\rangle=P(S)$.
 
 **Criticality.** Nienhaus 2.25 gives $Q(W)=\theta W$ exactly, with $P(W)=\theta$ and $W$ normalised (extraction L1443–1450), so $\|W\|=1$. Then $Q(W')=\hat\tau Q(W)=\theta W'$, $\|W'\|=1$, and $W'\in\mathcal W_8$ by Section 1. The Riemannian gradient of $P$ on $\Sigma$ is $3(\pi_{\mathcal W_8}Q(W')-\theta W')=0$. So $W'$ is a unit critical point with $P(W')=\theta$.
@@ -177,7 +177,7 @@ Withdrawn at step 1.
 **W5. Orthogonality of $\tau$ is asserted without reason (Section 1, C1).**
 1. Locate: "$\tau$ is an orthogonal automorphism of $\mathfrak{so}(8)$: it preserves the bracket and the inner product".
 2. Exhibit: no reason is written and no filed note carries it.
-3. Charitable reading: invariance of the Killing form under automorphisms, together with $B=6\operatorname{tr}$ on $\mathfrak{so}(8)$, is the classical one-line fact. Every other orthogonality use in the programme (the $O(n)$-action) rests on the same fact.
+3. Charitable reading: invariance of the Killing form under automorphisms, together with $B=6\mathop{\mathrm{tr}}$ on $\mathfrak{so}(8)$, is the classical one-line fact. Every other orthogonality use in the programme (the $O(n)$-action) rests on the same fact.
 
 Withdrawn at step 3.
 

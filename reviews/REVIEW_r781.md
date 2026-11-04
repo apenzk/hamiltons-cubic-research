@@ -7,14 +7,14 @@
 | # | Claim as written | Verdict |
 |---|---|---|
 | 2a | $\omega_i$ commutes with $\omega_i^2$, hence preserves every eigenspace of $A$ | SOUND |
-| 2b | $A$ is positive definite of trace $2$ on $V$, and $\dim V=6$ gives it | SOUND, VIA AN UNSTATED STEP ($V=\operatorname{im}A$) |
+| 2b | $A$ is positive definite of trace $2$ on $V$, and $\dim V=6$ gives it | SOUND, VIA AN UNSTATED STEP ($V=\mathop{\mathrm{im}}A$) |
 | 2c | $A$'s eigenvalues are doubled | SOUND (every multiplicity is even) |
 | 3a | A skew map preserving a plane is a multiple of its area form | SOUND |
 | 3b | Case 1 makes all three $\omega_i$ block-diagonal for **one** splitting | SOUND |
 | 3c | Case 1's appeal to [L181](../findings/diagonal-half.md) closes the case | SOUND FOR EVEN $n$; HYPOTHESIS-DEBT FOR ODD $n$ |
 | 4a | $\star(J\wedge J)=2\epsilon_JJ$ on $\mathbb R^6$, $\epsilon_J=\pm1$ by orientation | SOUND, derived independently below |
 | 4b | Equal $J_i\wedge J_i$ forces $\epsilon_iJ_i$ all equal | SOUND ($\star$ is an isomorphism) |
-| 4c | $\operatorname{tr}(K^2)=-6$, so orthogonality fails | SOUND |
+| 4c | $\mathop{\mathrm{tr}}(K^2)=-6$, so orthogonality fails | SOUND |
 | 4d | The $\star$ of Case 2 is the star of which space? | UNSTATED AND FALSE IF READ ON $\mathbb R^n$, $n>6$ |
 | 4e | *Addition:* the contradiction is linear independence, not the trace | SOUND, AND STRICTLY BETTER THAN THE TRACE ROUTE |
 | 4f | *Addition:* $\epsilon_J$ is well defined because $U(3)\subset SO(6)$ is connected | SOUND |
@@ -26,7 +26,7 @@
 | 6a | The wedge splits into a $\Lambda^4Q$ part and a $\Lambda^2Q\wedge\Lambda^2P$ cross term | SOUND (direct summands) |
 | 6b | Equating cross terms forces $\tau_iJ_i$ all equal, hence $J_i=\sigma_iJ$ | SOUND, VIA AN UNSTATED INJECTIVITY |
 | 6c | The $\Lambda^4Q$ condition is then automatic | SOUND, BUT ORDER-DEPENDENT, see §6.3 |
-| 7a | $\operatorname{tr}(\omega_i\omega_j)=-4a\sigma_i\sigma_j-2b\tau_i\tau_j$, both constants | SOUND |
+| 7a | $\mathop{\mathrm{tr}}(\omega_i\omega_j)=-4a\sigma_i\sigma_j-2b\tau_i\tau_j$, both constants | SOUND |
 | 7b | Three signs with all pairwise products equal force the product $+1$ | SOUND |
 | 7c | $4a=-2b$, impossible | SOUND, and REDUNDANT, see §7.3 |
 | 8 | The three cases are exhaustive | SOUND, derived independently below |
@@ -40,7 +40,7 @@
 ## 0. Conventions, fixed once
 
 - $Q\perp P$ are the eigenspaces of $A$; $V=Q\oplus P$, $\dim V=6$. Orientations of $V$, $Q$ and $P$ are chosen once and never varied.
-- A skew matrix $\omega$ and its $2$-form are identified throughout; $\varepsilon_j$ denotes the unit area form of an oriented plane, $e^{kl}$ the monomial $e^k\wedge e^l$, and $\lVert\omega\rVert^2=-\tfrac12\operatorname{tr}(\omega^2)$, so orthonormality of the $\omega_i$ reads $\operatorname{tr}(\omega_i\omega_j)=-2\delta_{ij}$.
+- A skew matrix $\omega$ and its $2$-form are identified throughout; $\varepsilon_j$ denotes the unit area form of an oriented plane, $e^{kl}$ the monomial $e^k\wedge e^l$, and $\lVert\omega\rVert^2=-\tfrac12\mathop{\mathrm{tr}}(\omega^2)$, so orthonormality of the $\omega_i$ reads $\mathop{\mathrm{tr}}(\omega_i\omega_j)=-2\delta_{ij}$.
 - A *complex structure on a Euclidean space* means an orthogonal skew $J$ with $J^2=-\mathrm{Id}$; skewness plus $J^2=-\mathrm{Id}$ already gives $J^{\mathsf T}J=-J^2=\mathrm{Id}$, so orthogonality is free and never has to be assumed.
 - **None of the programme's constants appears in this block.** No $\sqrt{3/2}$, no $\theta_0(12)=1.236033$, no $6+2\sqrt7$, no restriction to even $n\ge12$. The block is pure linear algebra plus one citation, and that is as it should be.
 
@@ -48,7 +48,7 @@
 
 **Used and stated.** Orthonormality of $\omega_1,\omega_2,\omega_3$; the coincidence $\omega_1^2=\omega_2^2=\omega_3^2$; the coincidence $\omega_1\wedge\omega_1=\omega_2\wedge\omega_2=\omega_3\wedge\omega_3$; $\dim V=6$; rank exactly three, i.e. $\lambda_i\ne0$, which is what makes $\{\omega_i\}$ *the* set of eigen-$2$-forms with nonzero eigenvalue that Given C quantifies over.
 
-**Used and unstated.** (i) $V=\operatorname{im}A$, the three supports coincide because $\operatorname{im}\omega_i=\operatorname{im}(\omega_i\omega_i^{\mathsf T})=\operatorname{im}A$ for each $i$, and only this turns "$\dim V=6$" into "$A$ has rank $6$", which the whole spectral analysis rests on. One line, missing. (ii) The injectivity of $\alpha\mapsto\alpha\wedge\varepsilon_P$ in Case 3 (§6.2). (iii) The ambient space of $\star$ in Case 2 (§4.3).
+**Used and unstated.** (i) $V=\mathop{\mathrm{im}}A$, the three supports coincide because $\mathop{\mathrm{im}}\omega_i=\mathop{\mathrm{im}}(\omega_i\omega_i^{\mathsf T})=\mathop{\mathrm{im}}A$ for each $i$, and only this turns "$\dim V=6$" into "$A$ has rank $6$", which the whole spectral analysis rests on. One line, missing. (ii) The injectivity of $\alpha\mapsto\alpha\wedge\varepsilon_P$ in Case 3 (§6.2). (iii) The ambient space of $\star$ in Case 2 (§4.3).
 
 **Stated and unused.** The wedge coincidence is never used in Case 1, the case is closed on $\omega_i^2$ coincidence plus Given C alone. Givens A and B are used only inside Given C; the block invokes no Weyl condition of its own. Consequently **Cases 2 and 3 prove something strictly stronger than stated**: no orthonormal triple in $\Lambda^2\mathbb R^n$ with coincident $\Phi$-images and $\dim V=6$ exists at all, Weyl or not. Given D is stated and correctly unused: nothing here is a $\dim V=4$ finding.
 
@@ -56,7 +56,7 @@
 
 **2.1 Commuting.** $\omega_i$ commutes with $\omega_i^2=-A$ trivially, and any operator commuting with $A$ preserves each eigenspace of $A$. The step is sound, and it is precisely here that the $\omega^2$-coincidence does its work: $A$ is *one* operator, so *all three* $\omega_i$ commute with it and *one* eigenspace decomposition serves all three. That is the hinge of the whole lemma, and the block states it correctly.
 
-**2.2 Positive definiteness.** $A=\omega_i\omega_i^{\mathsf T}$ is positive semidefinite on $\mathbb R^n$ with $\operatorname{tr}A=-\operatorname{tr}(\omega_i^2)=2\lVert\omega_i\rVert^2=2$. Its restriction to its own image is positive definite by construction, and $\operatorname{im}A=V$ by the unstated step above, so $A|_V$ is positive definite of rank $6$ and trace $2$. **Verdict: true, and $\dim V=6$ does give it, but only through $V=\operatorname{im}A$, which the block should write down.**
+**2.2 Positive definiteness.** $A=\omega_i\omega_i^{\mathsf T}$ is positive semidefinite on $\mathbb R^n$ with $\mathop{\mathrm{tr}}A=-\mathop{\mathrm{tr}}(\omega_i^2)=2\lVert\omega_i\rVert^2=2$. Its restriction to its own image is positive definite by construction, and $\mathop{\mathrm{im}}A=V$ by the unstated step above, so $A|_V$ is positive definite of rank $6$ and trace $2$. **Verdict: true, and $\dim V=6$ does give it, but only through $V=\mathop{\mathrm{im}}A$, which the block should write down.**
 
 **2.3 Doubling.** On an eigenspace $E_\mu$ of $A|_V$ with $\mu>0$, $\omega_i|_{E_\mu}$ is skew with square $-\mu\,\mathrm{Id}$, so $\mu^{-1/2}\omega_i|_{E_\mu}$ is a complex structure and $\dim E_\mu$ is even. Hence **every multiplicity of $A|_V$ is even**, which is exactly what licenses writing the spectrum as $\{c_1^2,c_1^2,c_2^2,c_2^2,c_3^2,c_3^2\}$. Sound.
 
@@ -64,7 +64,7 @@
 
 **3.1 The plane restriction.** The skew $2\times2$ matrices form a one-dimensional space spanned by the area form, so a skew map preserving a plane restricts there to a multiple of $\varepsilon_j$. With $\omega_i|_{P_j}^2=-c_j^2\mathrm{Id}$ the multiple is exactly $\pm c_j$, and $c_j\ne0$ by positive definiteness. Sound.
 
-**3.2 One splitting for all three.** Yes, and for the reason in §2.1: $P_1,P_2,P_3$ are the eigenplanes of the *common* $A$, and preserving each eigenplane while vanishing on $V^\perp$ makes each $\omega_i$ block-diagonal with no cross terms. So all three lie in $\operatorname{span}_{\mathbb R}\{\varepsilon_1,\varepsilon_2,\varepsilon_3\}$, which is the hypothesis Given C asks for. Sound.
+**3.2 One splitting for all three.** Yes, and for the reason in §2.1: $P_1,P_2,P_3$ are the eigenplanes of the *common* $A$, and preserving each eigenplane while vanishing on $V^\perp$ makes each $\omega_i$ block-diagonal with no cross terms. So all three lie in $\mathop{\mathrm{span}}_{\mathbb R}\{\varepsilon_1,\varepsilon_2,\varepsilon_3\}$, which is the hypothesis Given C asks for. Sound.
 
 **3.3 The citation.** Given C is stated for an orthogonal decomposition of **$\mathbb R^n$** into planes. For even $n$ one extends $P_1,P_2,P_3$ by any plane decomposition of the $(n-6)$-dimensional $V^\perp$ and the citation is exact. **For odd $n$ no such decomposition of $\mathbb R^n$ exists**, so Given C as stated is unavailable and the block, which quantifies over all $n$, has no argument on file for odd $n$. Verdict `HYPOTHESIS-DEBT`, narrow: it is a citation-scope defect, not a mathematical doubt, and I decline to write the repair.
 
@@ -82,11 +82,11 @@ Reversing the ambient orientation negates $\star$ and leaves $\omega_J\wedge\ome
 
 **4.2 The forcing.** $\star:\Lambda^4V\to\Lambda^2V$ is a linear isomorphism, so equality of the $J_i\wedge J_i$ gives equality of the $\epsilon_iJ_i$, exactly and not merely up to something weaker. Setting $K=\epsilon_1J_1$ gives $J_i=\epsilon_iK$, i.e. $J_i=\pm K$. Sound.
 
-**4.3 The contradiction.** $K^2=-\mathrm{Id}_V$ with $\dim V=6$ gives $\operatorname{tr}(K^2)=-6$; the block's value is right. With $A=cI_6$ on $V$ and $\operatorname{tr}A=2$ we get $c=1/3$, and $\operatorname{tr}(\omega_i\omega_j)=c\,\epsilon_i\epsilon_j\operatorname{tr}(K^2)=-2\epsilon_i\epsilon_j=\pm2\ne0$, against $\operatorname{tr}(\omega_i\omega_j)=0$. Sound. The block drops the factor $c$ when it writes "$\operatorname{tr}(J_iJ_j)=\pm6$ against orthogonality"; harmless, since $c>0$ is all that is needed.
+**4.3 The contradiction.** $K^2=-\mathrm{Id}_V$ with $\dim V=6$ gives $\mathop{\mathrm{tr}}(K^2)=-6$; the block's value is right. With $A=cI_6$ on $V$ and $\mathop{\mathrm{tr}}A=2$ we get $c=1/3$, and $\mathop{\mathrm{tr}}(\omega_i\omega_j)=c\,\epsilon_i\epsilon_j\mathop{\mathrm{tr}}(K^2)=-2\epsilon_i\epsilon_j=\pm2\ne0$, against $\mathop{\mathrm{tr}}(\omega_i\omega_j)=0$. Sound. The block drops the factor $c$ when it writes "$\mathop{\mathrm{tr}}(J_iJ_j)=\pm6$ against orthogonality"; harmless, since $c>0$ is all that is needed.
 
 **4.4 The one real defect in Case 2.** $\star$ is never said to be the Hodge star **of $V$**. Read on $\mathbb R^n$ with $n>6$ the identity is false on its face, $\star(J\wedge J)$ then lies in $\Lambda^{n-4}$, not $\Lambda^2$. The mathematics is fine because $\omega_i\in\Lambda^2V$ and the whole computation lives in $\Lambda^\bullet V$, but the block must say so, and must also record that an orientation of $V$ is chosen (any one; $\epsilon_J$ flips with it and the conclusion does not).
 
-**4.5 The addition: the contradiction is linear independence, and it is the better one.** Correct, and I would put it ahead of the trace route. $\star$ is an isomorphism, so equal wedges give $\epsilon_iJ_i$ all equal *exactly*, hence $J_i=\pm K$ and $\omega_i=\pm\sqrt c\,K$: the three forms span a line. A rank-three $W$ has three linearly independent eigen-$2$-forms with nonzero eigenvalue, so this alone closes the case, and $\operatorname{tr}(J_iJ_j)=\pm6$ was never needed. Two reasons to prefer it: it consumes only **linear independence**, a strictly weaker hypothesis than orthonormality, so the case closes for any independent triple; and it drops the constants $c=1/3$ and $\operatorname{tr}(K^2)=-6$, which are the only places a numerical slip could hide. §4.3 above stands as a valid but redundant route, and it is the same collinearity that closes Cases 1 and 3 (§3.4, §6.4).
+**4.5 The addition: the contradiction is linear independence, and it is the better one.** Correct, and I would put it ahead of the trace route. $\star$ is an isomorphism, so equal wedges give $\epsilon_iJ_i$ all equal *exactly*, hence $J_i=\pm K$ and $\omega_i=\pm\sqrt c\,K$: the three forms span a line. A rank-three $W$ has three linearly independent eigen-$2$-forms with nonzero eigenvalue, so this alone closes the case, and $\mathop{\mathrm{tr}}(J_iJ_j)=\pm6$ was never needed. Two reasons to prefer it: it consumes only **linear independence**, a strictly weaker hypothesis than orthonormality, so the case closes for any independent triple; and it drops the constants $c=1/3$ and $\mathop{\mathrm{tr}}(K^2)=-6$, which are the only places a numerical slip could hide. §4.3 above stands as a valid but redundant route, and it is the same collinearity that closes Cases 1 and 3 (§3.4, §6.4).
 
 **4.6 The addition: $\epsilon_J$ is well defined.** Correct, and the reason given is the right one. The $J$-adapted orthonormal frames form a torsor under the group of orthogonal maps commuting with $J$, which is $U(3)$; $U(3)$ is connected and lands in $SO(6)$ since a complex-linear map has real determinant $\lvert\det_{\mathbb C}\rvert^2>0$. A connected family of frames cannot change orientation class, so every $J$-adapted frame induces the same orientation of $V$ and $\epsilon_J=\pm1$ depends on $J$ alone, not on the frame used to read it. This is the step my §4.1 left implicit by computing in one chosen frame, and the addition supplies it correctly.
 
@@ -122,19 +122,19 @@ so the three forms are collinear, $\omega_i=\pm\omega_1$. This is the same mecha
 
 ## 7. Case 3, the sign identity (brief item 7)
 
-**7.1 The trace formula and both constants.** $J^2=-\mathrm{Id}_Q$ with $\dim Q=4$ gives $\operatorname{tr}(J^2)=-4$; $\varepsilon_P^2=-\mathrm{Id}_P$ with $\dim P=2$ gives $\operatorname{tr}(\varepsilon_P^2)=-2$. The two blocks are orthogonal, so
-$$\operatorname{tr}(\omega_i\omega_j)=a\,\sigma_i\sigma_j\operatorname{tr}(J^2)+b\,\tau_i\tau_j\operatorname{tr}(\varepsilon_P^2)=-4a\,\sigma_i\sigma_j-2b\,\tau_i\tau_j.$$
+**7.1 The trace formula and both constants.** $J^2=-\mathrm{Id}_Q$ with $\dim Q=4$ gives $\mathop{\mathrm{tr}}(J^2)=-4$; $\varepsilon_P^2=-\mathrm{Id}_P$ with $\dim P=2$ gives $\mathop{\mathrm{tr}}(\varepsilon_P^2)=-2$. The two blocks are orthogonal, so
+$$\mathop{\mathrm{tr}}(\omega_i\omega_j)=a\,\sigma_i\sigma_j\mathop{\mathrm{tr}}(J^2)+b\,\tau_i\tau_j\mathop{\mathrm{tr}}(\varepsilon_P^2)=-4a\,\sigma_i\sigma_j-2b\,\tau_i\tau_j.$$
 **Both constants check.**
 
-**7.2 The three-signs step.** Orthogonality at all three pairs gives $\sigma_i\sigma_j/(\tau_i\tau_j)=\rho_i\rho_j=-b/(2a)=:k$, one constant. From $\rho_1\rho_2=\rho_1\rho_3$ follows $\rho_2=\rho_3$, and likewise all three $\rho_i$ agree, so $k=\rho_i^2=+1$. (Equivalently $(\rho_1\rho_2\rho_3)^2=k^3$ gives $k^3=1$ with $k=\pm1$, so $k=+1$.) Then $4a=-2b$ with $a,b>0$ is impossible, doubly so, since $4a+2b=\operatorname{tr}A=2$ would additionally force $0=2$. **Sound.**
+**7.2 The three-signs step.** Orthogonality at all three pairs gives $\sigma_i\sigma_j/(\tau_i\tau_j)=\rho_i\rho_j=-b/(2a)=:k$, one constant. From $\rho_1\rho_2=\rho_1\rho_3$ follows $\rho_2=\rho_3$, and likewise all three $\rho_i$ agree, so $k=\rho_i^2=+1$. (Equivalently $(\rho_1\rho_2\rho_3)^2=k^3$ gives $k^3=1$ with $k=\pm1$, so $k=+1$.) Then $4a=-2b$ with $a,b>0$ is impossible, doubly so, since $4a+2b=\mathop{\mathrm{tr}}A=2$ would additionally force $0=2$. **Sound.**
 
-**7.3 It is redundant, and the block should say which route it is taking.** By §6.4 the wedge hypothesis alone already fixes $\rho_i=\tau_1$ for all $i$, so the "three signs with all pairwise products equal" lemma is proving something the previous step has handed over. Worse for the reader, presenting $\sigma_i$ and $\tau_i$ as independent signs at this point *discards* information the argument has already earned. It is safe (a contradiction from less information is still a contradiction) but the honest short route is $\omega_i=\pm\omega_1$ against $\operatorname{tr}(\omega_i\omega_j)=0$, which needs neither trace constant. I flag this as presentation, not as error.
+**7.3 It is redundant, and the block should say which route it is taking.** By §6.4 the wedge hypothesis alone already fixes $\rho_i=\tau_1$ for all $i$, so the "three signs with all pairwise products equal" lemma is proving something the previous step has handed over. Worse for the reader, presenting $\sigma_i$ and $\tau_i$ as independent signs at this point *discards* information the argument has already earned. It is safe (a contradiction from less information is still a contradiction) but the honest short route is $\omega_i=\pm\omega_1$ against $\mathop{\mathrm{tr}}(\omega_i\omega_j)=0$, which needs neither trace constant. I flag this as presentation, not as error.
 
 ## 8. Exhaustiveness (brief item 8), derived independently
 
 By §2.3 every eigenvalue multiplicity of $A|_V$ is even, and they sum to $6$. The partitions of $6$ into even parts are
 $$6=2+2+2,\qquad 6=4+2,\qquad 6=6,$$
-and these are precisely: three distinct values (Case 1, three eigenplanes), two distinct values (Case 3, a $4$-plane and a plane, with $a$ naming whichever value has multiplicity $4$, so both assignments are covered), one value (Case 2, $A=cI_6$). Read through the block's own parameterisation $\{c_1^2,c_1^2,c_2^2,c_2^2,c_3^2,c_3^2\}$, the possible agreement patterns among $c_1^2,c_2^2,c_3^2$ are: none, exactly two, all three, and "exactly two agree" is a single case up to relabelling. **The three cases are exhaustive and I find no configuration missed.** The one thing that makes it exhaustive is the evenness of the multiplicities, which is a theorem (§2.3) and not an assumption, and which in turn needs $A$ positive definite on $V$, a zero eigenvalue would be free to have odd multiplicity, and is excluded only because $V=\operatorname{im}A$.
+and these are precisely: three distinct values (Case 1, three eigenplanes), two distinct values (Case 3, a $4$-plane and a plane, with $a$ naming whichever value has multiplicity $4$, so both assignments are covered), one value (Case 2, $A=cI_6$). Read through the block's own parameterisation $\{c_1^2,c_1^2,c_2^2,c_2^2,c_3^2,c_3^2\}$, the possible agreement patterns among $c_1^2,c_2^2,c_3^2$ are: none, exactly two, all three, and "exactly two agree" is a single case up to relabelling. **The three cases are exhaustive and I find no configuration missed.** The one thing that makes it exhaustive is the evenness of the multiplicities, which is a theorem (§2.3) and not an assumption, and which in turn needs $A$ positive definite on $V$, a zero eigenvalue would be free to have odd multiplicity, and is excluded only because $V=\mathop{\mathrm{im}}A$.
 
 ## 9. The kernel (brief item 9)
 
@@ -166,7 +166,7 @@ What the block does entail is the narrower and still worthwhile statement: **at 
 
 **The construction is correct.** Take the three pairwise edge-disjoint perfect matchings of $\{1,\dots,6\}$
 $$M_1=\{12,34,56\},\qquad M_2=\{13,25,46\},\qquad M_3=\{14,26,35\},$$
-and let $J_k=\sum_{ab\in M_k}e^{ab}$. Each $M_k$ is a perfect matching, so $J_k$ is block-diagonal with three $2\times2$ rotation generators and $J_k^2=-\mathrm{Id}_6$, giving $A_k=\mathrm{Id}$ for all three, the squares coincide. Edge-disjointness makes the matrix supports disjoint, so $\operatorname{tr}(J_kJ_l)=-\sum_{a,b}(J_k)_{ab}(J_l)_{ab}=0$ termwise for $k\ne l$. Each has $\lVert J_k\rVert^2=3$, so $\{J_k/\sqrt3\}$ is orthonormal with common $A=\tfrac13\mathrm{Id}$ of trace $2$, exactly the Case 2 setup. **So neither the equal squares nor orthonormality obstructs anything at $\dim V=6$, and the entire force of Case 2 is the wedge condition.** The witness is right and it is the honest thing to record: it shows the case is not closed by a hypothesis that costs nothing.
+and let $J_k=\sum_{ab\in M_k}e^{ab}$. Each $M_k$ is a perfect matching, so $J_k$ is block-diagonal with three $2\times2$ rotation generators and $J_k^2=-\mathrm{Id}_6$, giving $A_k=\mathrm{Id}$ for all three, the squares coincide. Edge-disjointness makes the matrix supports disjoint, so $\mathop{\mathrm{tr}}(J_kJ_l)=-\sum_{a,b}(J_k)_{ab}(J_l)_{ab}=0$ termwise for $k\ne l$. Each has $\lVert J_k\rVert^2=3$, so $\{J_k/\sqrt3\}$ is orthonormal with common $A=\tfrac13\mathrm{Id}$ of trace $2$, exactly the Case 2 setup. **So neither the equal squares nor orthonormality obstructs anything at $\dim V=6$, and the entire force of Case 2 is the wedge condition.** The witness is right and it is the honest thing to record: it shows the case is not closed by a hypothesis that costs nothing.
 
 **They do fail equal wedges, verified in closed form.** For $\omega=e^{ab}+e^{cd}+e^{ef}$ over a matching, $\omega\wedge\omega=2\left(e^{ab}\!\wedge e^{cd}+e^{ab}\!\wedge e^{ef}+e^{cd}\!\wedge e^{ef}\right)$, each term a single sorted monomial up to sign:
 $$J_1\wedge J_1=2\left(e^{1234}+e^{1256}+e^{3456}\right),$$
@@ -188,4 +188,4 @@ The signs come from sorting: $e^{13}\wedge e^{25}=-e^{1235}$ and $e^{25}\wedge e
 
 **On the two additions received mid-review:** both are right. The linear-independence route through $\star$ replaces the trace computation and should become Case 2's argument of record, since it consumes only independence of the eigenforms (§4.5); the $U(3)$ connectedness argument correctly supplies the well-definedness of $\epsilon_J$ that my own frame computation left implicit (§4.6); the "nothing outside $n=6$" remark is right about the mechanism but should say $\dim V$, not $n$ (§4.7); and the matching triple is a genuine witness that squares and orthonormality obstruct nothing at $\dim V=6$, I verified in closed form that its three wedges are pairwise orthogonal, so it fails the wedge condition and leaves Case 2 intact (§12A).
 
-Two smaller debts, both one line: $V=\operatorname{im}A$ (§1), and the injectivity of $\alpha\mapsto\alpha\wedge\varepsilon_P$ (§6.2). And one credit the block is not claiming: **Cases 2 and 3 use no Weyl condition at all**, so they close the configuration for any orthonormal triple in $\Lambda^2\mathbb R^n$, not merely for Weyl tensors.
+Two smaller debts, both one line: $V=\mathop{\mathrm{im}}A$ (§1), and the injectivity of $\alpha\mapsto\alpha\wedge\varepsilon_P$ (§6.2). And one credit the block is not claiming: **Cases 2 and 3 use no Weyl condition at all**, so they close the configuration for any orthonormal triple in $\Lambda^2\mathbb R^n$, not merely for Weyl tensors.

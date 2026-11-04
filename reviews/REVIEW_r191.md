@@ -83,7 +83,7 @@ Written through the code's own three routines this is $\sum_t \mathrm{cube}(w)[t
 
 ## 4. Where the factor $3!$ becomes visible, and a normalisation that is not yet fixed
 
-$B_{ij}=\bar c^{\,i\,T}M_\lambda c^{j}$ is homogeneous of degree one in $M_\lambda$, so replacing the metric by $6M$ scales every $B$ by $6$ and $G$ by $1/6$. Positivity of $G$ is a congruence-invariant property, so **the certificate is untouched**. The file's *own* named falsifier is the exception: "on the trivial block, must reproduce $144^2\operatorname{tr}(W^3)^2$".
+$B_{ij}=\bar c^{\,i\,T}M_\lambda c^{j}$ is homogeneous of degree one in $M_\lambda$, so replacing the metric by $6M$ scales every $B$ by $6$ and $G$ by $1/6$. Positivity of $G$ is a congruence-invariant property, so **the certificate is untouched**. The file's *own* named falsifier is the exception: "on the trivial block, must reproduce $144^2\mathop{\mathrm{tr}}(W^3)^2$".
 
 On the trivial block $\lambda=(0,0)$ the multiplicity is one, so $B_{11}=|\langle W^3,u\rangle_M|^2/\langle u,u\rangle_M$. [claim1_invariant_cubic.py](../scripts/reviewers/r191/claim1_invariant_cubic.py) evaluates every piece exactly:
 
@@ -91,7 +91,7 @@ On the trivial block $\lambda=(0,0)$ the multiplicity is one, so $B_{11}=|\langl
 - $\langle W^3,u\rangle_{\text{code}}=6\,P_1$ exactly, at every sample, the apolarity identity again;
 - $B_{11}/|P_1|^2=1/120960=3!/725760$, the same rational at every sample.
 
-So $B_{11}$ does **not** come out as $|P_1|^2=144^2\operatorname{tr}(W^3)^2$; it comes out as $3!\,|P_1|^2/\lVert u\rVert^2_{\text{induced}}$. The missing ingredient is not the metric but the **normalisation of $u$**: the cached highest-weight vectors are raw `nullspace_G` output, carrying whatever scale the echelon happened to produce. *The falsifier the docstring names cannot be run until the word basis is normalised, and once it is, the target value moves with that choice.* This belongs in [plan.md](../plan.md)'s table alongside the checks that could not fail, for a different reason: this one cannot be evaluated at all as stated.
+So $B_{11}$ does **not** come out as $|P_1|^2=144^2\mathop{\mathrm{tr}}(W^3)^2$; it comes out as $3!\,|P_1|^2/\lVert u\rVert^2_{\text{induced}}$. The missing ingredient is not the metric but the **normalisation of $u$**: the cached highest-weight vectors are raw `nullspace_G` output, carrying whatever scale the echelon happened to produce. *The falsifier the docstring names cannot be run until the word basis is normalised, and once it is, the target value moves with that choice.* This belongs in [plan.md](../plan.md)'s table alongside the checks that could not fail, for a different reason: this one cannot be evaluated at all as stated.
 
 ## 5. A trap between the two routes: $w$ and $r$ are different vectors
 

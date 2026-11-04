@@ -29,7 +29,7 @@
 - **Everything is carried in units of $a$.** (A) is rational; (B) is homogeneous of degree $1$ and I divide it by $a$; (C) is homogeneous of degree $2$ and I divide it by $a^2$, writing $\Theta:=\theta/a$. The witness claim is $\Theta=7$.
 - $\mu^{(i)}_j=m_j-\delta_{ij}$ for a row, $\mu^{(ij)}_k=m_k-\delta_{ik}-\delta_{jk}$ for a pair.
 - $\theta_0(n)=\sqrt{2(n-1)(n-2)}/n$ ([problem.md](../findings/problem.md), line 549), so $\theta_0(12)^2=\tfrac{220}{144}=\tfrac{55}{36}$.
-- **Norm.** $\lVert Z\rVert^2=\tfrac12\operatorname{tr}(Z^{\mathsf T}Z)$ on $\mathfrak{so}(n)$, the record's, which is the normalisation the constant $2$ in the pair cap rests on ([conventions.md](../findings/conventions.md), line 29).
+- **Norm.** $\lVert Z\rVert^2=\tfrac12\mathop{\mathrm{tr}}(Z^{\mathsf T}Z)$ on $\mathfrak{so}(n)$, the record's, which is the normalisation the constant $2$ in the pair cap rests on ([conventions.md](../findings/conventions.md), line 29).
 - The witness: $t_{112}=\tfrac23$, $t_{222}=2$, $t_{133}=t_{233}=\tfrac4{1711}$, $t_{333}=\tfrac{178}{32509}$, and $t_{111}=t_{113}=t_{122}=t_{123}=t_{223}=0$.
 
 ## Hypothesis inventory
@@ -120,18 +120,18 @@ $(7a)^2=49\cdot\tfrac3{28}=\tfrac{147}{28}=\tfrac{21}4$, so $7a=\tfrac{\sqrt{21}
 
 **What the relaxation does give, and it is the strongest positive statement available.** Contract (C$_i$) against $m_i\nu_i$ and sum over $i$:
 
-$$\sum_{\alpha\beta\gamma}\lambda_\alpha\lambda_\beta\lambda_\gamma T_{\alpha\beta\gamma}=\sum_im_i\nu_i\cdot2\nu_i(\theta-\nu_i)=2\theta\lVert W\rVert^2-2\operatorname{tr}W^3=2\theta-2\operatorname{tr}W^3,$$
+$$\sum_{\alpha\beta\gamma}\lambda_\alpha\lambda_\beta\lambda_\gamma T_{\alpha\beta\gamma}=\sum_im_i\nu_i\cdot2\nu_i(\theta-\nu_i)=2\theta\lVert W\rVert^2-2\mathop{\mathrm{tr}}W^3=2\theta-2\mathop{\mathrm{tr}}W^3,$$
 
-which rearranges to $\theta=\operatorname{tr}W^3+\tfrac12\sum\lambda\lambda\lambda\,T$, **exactly the record's cubic identity for $P(W)$** ([bounds.md](../findings/bounds.md) line 444, which notes the two are one equation). So the abstract $\theta$ is precisely the number $P(W)$ *would* take if the triple were realized by an actual unit critical $W$. At this witness $\operatorname{tr}W^3=\tfrac{28}9a^3=\tfrac a3$, and the identity closes on $\theta=7a$ tautologically.
+which rearranges to $\theta=\mathop{\mathrm{tr}}W^3+\tfrac12\sum\lambda\lambda\lambda\,T$, **exactly the record's cubic identity for $P(W)$** ([bounds.md](../findings/bounds.md) line 444, which notes the two are one equation). So the abstract $\theta$ is precisely the number $P(W)$ *would* take if the triple were realized by an actual unit critical $W$. At this witness $\mathop{\mathrm{tr}}W^3=\tfrac{28}9a^3=\tfrac a3$, and the identity closes on $\theta=7a$ tautologically.
 
 **So the identification is exactly conditional on realizability, and that condition is not idle here. I can settle it: the witness is not realizable.**
 
 **Derivation.** Suppose some unit critical $W\in\mathcal W_n$ has this spectrum and class-averages to this $t$. Write $U$ for the $\nu_1$-eigenspace ($\dim4$), $\mathfrak h$ for the $\nu_2$-eigenspace ($\dim3$), $Z$ for the kernel, with orthonormal eigenvectors $u_1,\dots,u_4$ and $w_1,w_2,w_3$ in $\mathfrak{so}(n)$ under the record's norm.
 
 1. **Every individual cap inside $U\cup\mathfrak h$ is tight.** Each individual $\lVert[v_\alpha,v_\beta]\rVert^2\le2$ by [Lemma L31](../findings/stratum-two-negative.md), and the class-averaged caps $(1,1)$, $(1,2)$, $(2,2)$ all equal $2$. An average of numbers $\le2$ equalling $2$ forces every one of them to be $2$. So **all $6+12+3=21$ pairs drawn from the seven vectors are tight.**
-2. **L31's equality case then applies to each.** Its statement: equality forces both arguments to have **rank $4$**, all nonzero singular values $1/\sqrt2$, and **$\operatorname{im}X=\operatorname{im}Y$**.
+2. **L31's equality case then applies to each.** Its statement: equality forces both arguments to have **rank $4$**, all nonzero singular values $1/\sqrt2$, and **$\mathop{\mathrm{im}}X=\mathop{\mathrm{im}}Y$**.
 3. **Transitivity across the tight pairs.** $u_1$ is tight against $u_2,u_3,u_4,w_1,w_2,w_3$, so all seven share one common $4$-dimensional image $V\subset\mathbb R^n$.
-4. **The contradiction, by dimension.** A skew-symmetric $Z$ with $\operatorname{im}Z=V$ satisfies $\ker Z\supseteq V^\perp$ and $Z(V)\subseteq V$, so $Z\in\mathfrak{so}(V)$, a space of dimension $\binom42=6$. But $u_1,\dots,u_4,w_1,w_2,w_3$ are orthonormal, hence **seven linearly independent** elements of a $6$-dimensional space. Impossible. $\square$
+4. **The contradiction, by dimension.** A skew-symmetric $Z$ with $\mathop{\mathrm{im}}Z=V$ satisfies $\ker Z\supseteq V^\perp$ and $Z(V)\subseteq V$, so $Z\in\mathfrak{so}(V)$, a space of dimension $\binom42=6$. But $u_1,\dots,u_4,w_1,w_2,w_3$ are orthonormal, hence **seven linearly independent** elements of a $6$-dimensional space. Impossible. $\square$
 
 **This uses only L31's equality case, the vanishing pattern of the witness and $T\ge0$**, no numerics, and nothing beyond what the record already carries.
 

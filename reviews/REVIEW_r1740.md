@@ -48,12 +48,12 @@ Read from the working tree: [L105Eq.lean](../lean/HamiltonsCubic/Results/L105Eq.
 ## (6) L261's promotion
 
 - **Justified.**
-  - `coordOp a` sends a skew $X$ to $\operatorname{skew}(a\odot X)$. For symmetric $a$ that sends $e_{ik}$ to $a_{ik}e_{ik}$, which is $C=\sum_{i<k}a_{ik}e_{ik}e_{ik}^{\mathsf T}$, and the diagonal of $a$ is inert (`coordOp_offDiag`).
+  - `coordOp a` sends a skew $X$ to $\mathop{\mathrm{skew}}(a\odot X)$. For symmetric $a$ that sends $e_{ik}$ to $a_{ik}e_{ik}$, which is $C=\sum_{i<k}a_{ik}e_{ik}e_{ik}^{\mathsf T}$, and the diagonal of $a$ is inert (`coordOp_offDiag`).
   - The hypotheses `ha : aᵀ = a` and `hpos : ∀ i ≠ j, 0 < a i j` are the record's "every $a_{ik}>0$" in symmetric encoding, with no loss because $a_{ki}$ is the same weight.
   - `IsIdem (coordOp a)` is $C\#C=C$.
   - The conclusion `coordOp a = (1/(n-2)) • idOp` is $C=I/(n-2)$, and $n\ge3$ is the record's implicit range.
 - The file's only `sorry` sits at line 1977 (`L254_conjA_12`), declared after `L261_coord_diag` at line 1586, so it cannot be a dependency. That is consistent with the author's standard-three axiom audit, which I did not rerun.
-- Falsifier: a symmetric $a$ with positive off-diagonal entries at some $n\ge3$ with $\operatorname{coordOp}(a)\#\operatorname{coordOp}(a)=\operatorname{coordOp}(a)\ne I/(n-2)$.
+- Falsifier: a symmetric $a$ with positive off-diagonal entries at some $n\ge3$ with $\mathop{\mathrm{coordOp}}(a)\#\mathop{\mathrm{coordOp}}(a)=\mathop{\mathrm{coordOp}}(a)\ne I/(n-2)$.
 
 ## (7) The updated L105 row
 

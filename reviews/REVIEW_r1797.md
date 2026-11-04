@@ -28,16 +28,16 @@ Brief: [BRIEF_I121_double_rotation.md](BRIEF_I121_double_rotation.md). Claims as
 - $g=R_{12}(\theta_1)R_{34}(\theta_2)$. Under $\hat g$:
   - $e_{12}$, $e_{34}$ and $e_{mn}$ ($m,n\ge5$) are fixed;
   - $(e_{1m},e_{2m})$ rotates by $\theta_1$ and $(e_{3m},e_{4m})$ by $\theta_2$ for $m\ge5$;
-  - $\operatorname{span}\{e_{13},e_{14},e_{23},e_{24}\}=V_{12}\otimes V_{34}$ through $e_a\wedge e_b\leftrightarrow e_a\otimes e_b$ ($a\in\{1,2\}$, $b\in\{3,4\}$, always $a<b$, so there are no orientation signs), acted on by $R(\theta_1)\otimes R(\theta_2)$.
+  - $\mathop{\mathrm{span}}\{e_{13},e_{14},e_{23},e_{24}\}=V_{12}\otimes V_{34}$ through $e_a\wedge e_b\leftrightarrow e_a\otimes e_b$ ($a\in\{1,2\}$, $b\in\{3,4\}$, always $a<b$, so there are no orientation signs), acted on by $R(\theta_1)\otimes R(\theta_2)$.
 - So the only diagonal entries that change are those of $e_{13},e_{14},e_{23},e_{24}$ and of $e_{1m},e_{2m},e_{3m},e_{4m}$ for $m\ge5$. Each depends only on its invariant block, as in §1. **Confirmed.**
 - Signs. In the ordered basis $(13,14,23,24)$, the entries are $M_{03}=W_{13,24}=v$ and $M_{12}=W_{14,23}=w$, and $M_{01}=W_{13,14}=W(e_3\wedge e_1,e_4\wedge e_1)=x^{34}_1$ after two sign flips. Likewise $M_{23}=W_{23,24}=x^{34}_2$, $M_{02}=W_{13,23}=x^{12}_3$ and $M_{13}=W_{14,24}=x^{12}_4$. **All consistent with the stated orientation.**
 - **O4, one wrong sentence in the first-attempt section.** "moves the diagonal entries of the **six** pairs in $\{i,j,k,l\}$" is false: $e_{ij}$ and $e_{kl}$ are fixed, so four of the six move. The double-rotation section itself gets this right. "Degree two in each angle" should read degree two in $(\cos2\theta,\sin2\theta)$.
 
 ## 3. The formula at $(\pi/4,\pi/4)$
 
-- Symmetric $4\times4$ matrices have dimension 10: $\{I,Z,X\}^{\otimes2}$ and $J\otimes J$, all mutually orthogonal with $\operatorname{tr}(P^{\mathsf T}P)=4$. $RZR^{\mathsf T}$ and $RXR^{\mathsf T}$ rotate in the $(Z,X)$ plane by $2\theta$, while $RIR^{\mathsf T}=I$ and $RJR^{\mathsf T}=J$. The diagonal is $\alpha_{II}\pm\alpha_{IZ}\pm\alpha_{ZI}\pm\alpha_{ZZ}$ over the four sign patterns, which gives mass $4(\alpha_{II}^2+\alpha_{IZ}^2+\alpha_{ZI}^2+\alpha_{ZZ}^2)$. **Confirmed.**
+- Symmetric $4\times4$ matrices have dimension 10: $\{I,Z,X\}^{\otimes2}$ and $J\otimes J$, all mutually orthogonal with $\mathop{\mathrm{tr}}(P^{\mathsf T}P)=4$. $RZR^{\mathsf T}$ and $RXR^{\mathsf T}$ rotate in the $(Z,X)$ plane by $2\theta$, while $RIR^{\mathsf T}=I$ and $RJR^{\mathsf T}=J$. The diagonal is $\alpha_{II}\pm\alpha_{IZ}\pm\alpha_{ZI}\pm\alpha_{ZZ}$ over the four sign patterns, which gives mass $4(\alpha_{II}^2+\alpha_{IZ}^2+\alpha_{ZI}^2+\alpha_{ZZ}^2)$. **Confirmed.**
 - At $2\theta_1=2\theta_2=\pi/2$ the new coefficients are $\alpha_{IZ}\to\pm\alpha_{IX}$, $\alpha_{ZI}\to\pm\alpha_{XI}$ and $\alpha_{ZZ}\to\pm\alpha_{XX}$. The block change is $4(\alpha_{XX}^2-\alpha_{ZZ}^2+\alpha_{IX}^2-\alpha_{IZ}^2+\alpha_{XI}^2-\alpha_{ZI}^2)$.
-- The coefficients, from $\alpha_{PQ}=\tfrac14\operatorname{tr}(M\,P\otimes Q)$:
+- The coefficients, from $\alpha_{PQ}=\tfrac14\mathop{\mathrm{tr}}(M\,P\otimes Q)$:
   - $\alpha_{ZZ}=\tfrac14\square$ and $\alpha_{XX}=\tfrac12(v+w)$, giving $(v+w)^2-\tfrac14\square^2$;
   - $\alpha_{IX}=\tfrac12(x^{34}_1+x^{34}_2)$ and $\alpha_{IZ}=\tfrac14(a_{13}-a_{14}+a_{23}-a_{24})=\tfrac12(\delta^{34}_1+\delta^{34}_2)$;
   - $\alpha_{XI}=\tfrac12(x^{12}_3+x^{12}_4)$ and $\alpha_{ZI}=\tfrac12(\delta^{12}_3+\delta^{12}_4)$.

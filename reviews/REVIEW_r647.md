@@ -21,7 +21,7 @@ Four defects, all repairable in place, none touching the mathematics: an undefin
 
 Everything below is in the conventions of [findings/conventions.md](../findings/conventions.md), with the readings named because the brief asks for them.
 
-- **The pairing** is the half-trace one, $\langle X,Y\rangle=\tfrac12\operatorname{tr}(X^{\mathsf T}Y)$ at the $\Lambda^2$ level, under which $\{\varphi_{ab}\}_{a<b}$ is orthonormal, the [Norms and pairings](../findings/conventions.md) row, "the one every result uses".
+- **The pairing** is the half-trace one, $\langle X,Y\rangle=\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$ at the $\Lambda^2$ level, under which $\{\varphi_{ab}\}_{a<b}$ is orthonormal, the [Norms and pairings](../findings/conventions.md) row, "the one every result uses".
 - **Structure constants** $c_{ijk}=\langle[f_i,f_j],f_k\rangle$, totally antisymmetric, so $T_{ijk}=c_{ijk}^2$ is totally symmetric, the [Structure constants](../findings/conventions.md) bullet.
 - **$S_{XYZ}$ in the ORDERED-slot reading**, as fixed in [conventions.md](../findings/conventions.md) on 2026-09-04: $S_{\mathfrak{mmh}}=\sum_{a,b\in\mathfrak m}\sum_{h\in\mathfrak h}c^2_{abh}$, and so on. I use no other reading anywhere.
 - **The Killing marginal** $\sum_\beta\lVert[v_\alpha,v_\beta]\rVert^2=2(n-2)$, from the [pair cap](../findings/conventions.md) bullet.
@@ -43,11 +43,11 @@ the **ordered-slot** mass, six times the sum over $a<b<c$.
 
 ### 1.1 The exact identity the floor is a slackening of
 
-For any subspace $\mathfrak m$ with orthonormal basis $\{e_a\}$, write $\operatorname{ad}(e_a)$ in the block form of $\mathfrak g=\mathfrak m\oplus\mathfrak h$:
+For any subspace $\mathfrak m$ with orthonormal basis $\{e_a\}$, write $\mathop{\mathrm{ad}}(e_a)$ in the block form of $\mathfrak g=\mathfrak m\oplus\mathfrak h$:
 
-$$\operatorname{ad}(e_a)=\begin{pmatrix}A_a&-B_a^{\mathsf T}\\ B_a&C_a\end{pmatrix},$$
+$$\mathop{\mathrm{ad}}(e_a)=\begin{pmatrix}A_a&-B_a^{\mathsf T}\\ B_a&C_a\end{pmatrix},$$
 
-skewness fixing the top-right block. Reading off entries, $\sum_a\lVert A_a\rVert^2=S_{\mathfrak{mmm}}=\alpha$, $\sum_a\lVert B_a\rVert^2=S_{\mathfrak{mmh}}$, $\sum_a\lVert C_a\rVert^2=S_{\mathfrak{mhh}}$. The Killing marginal summed over $\{e_a\}$ is $\sum_a\lVert\operatorname{ad}(e_a)\rVert_F^2=2(n-2)d$, so
+skewness fixing the top-right block. Reading off entries, $\sum_a\lVert A_a\rVert^2=S_{\mathfrak{mmm}}=\alpha$, $\sum_a\lVert B_a\rVert^2=S_{\mathfrak{mmh}}$, $\sum_a\lVert C_a\rVert^2=S_{\mathfrak{mhh}}$. The Killing marginal summed over $\{e_a\}$ is $\sum_a\lVert\mathop{\mathrm{ad}}(e_a)\rVert_F^2=2(n-2)d$, so
 
 $$\boxed{\;\alpha+2S_{\mathfrak{mmh}}+S_{\mathfrak{mhh}}=2(n-2)d\;}$$
 
@@ -57,16 +57,16 @@ $$\alpha\;=\;2\mu-2(n-2)d+S_{\mathfrak{mhh}},\qquad S_{\mathfrak{mhh}}\ge0\ \tex
 
 ### 1.2 The lower bound on $\mu$, rebuilt
 
-$\mu=\langle T(P),P\rangle$ with $P$ the orthoprojector onto $\mathfrak m$ and $T(A)=-\sum_k\operatorname{ad}(f_k)A\operatorname{ad}(f_k)$: skewness of $\operatorname{ad}$ turns $-\operatorname{tr}(\operatorname{ad}(f_k)P\operatorname{ad}(f_k)P)$ into $\sum_{a,b}c^2_{kab}$, and summing over $k$ gives $\mu$. Expanding $\rho(X)A=[\operatorname{ad}X,A]$ against $\sum_k\operatorname{ad}(f_k)^2=-2(n-2)\mathrm{Id}$ gives $\operatorname{Cas}(A)=-\sum_k\rho(f_k)^2A=4(n-2)A-2T(A)$, i.e.
+$\mu=\langle T(P),P\rangle$ with $P$ the orthoprojector onto $\mathfrak m$ and $T(A)=-\sum_k\mathop{\mathrm{ad}}(f_k)A\mathop{\mathrm{ad}}(f_k)$: skewness of $\mathop{\mathrm{ad}}$ turns $-\mathop{\mathrm{tr}}(\mathop{\mathrm{ad}}(f_k)P\mathop{\mathrm{ad}}(f_k)P)$ into $\sum_{a,b}c^2_{kab}$, and summing over $k$ gives $\mu$. Expanding $\rho(X)A=[\mathop{\mathrm{ad}}X,A]$ against $\sum_k\mathop{\mathrm{ad}}(f_k)^2=-2(n-2)\mathrm{Id}$ gives $\mathop{\mathrm{Cas}}(A)=-\sum_k\rho(f_k)^2A=4(n-2)A-2T(A)$, i.e.
 
-$$T=2(n-2)\mathrm{Id}-\tfrac12\operatorname{Cas}.$$
+$$T=2(n-2)\mathrm{Id}-\tfrac12\mathop{\mathrm{Cas}}.$$
 
 I rebuilt the four Casimir eigenvalues from $\langle\lambda,\lambda+2\rho\rangle$ with $\rho_i=(n-2i)/2$, the normalisation pinned by the adjoint $\lambda=e_1+e_2$ giving $2(n-2)$:
 
-| summand | highest weight | $\operatorname{Cas}$ | $T=2(n-2)-\operatorname{Cas}/2$ |
+| summand | highest weight | $\mathop{\mathrm{Cas}}$ | $T=2(n-2)-\mathop{\mathrm{Cas}}/2$ |
 | --- | --- | --- | --- |
 | $\mathbb R\cdot\mathrm{Id}$ | $0$ | $0$ | $2n-4$ |
-| $\operatorname{Sym}^2_0\mathbb R^n$ | $2e_1$ | $2n$ | $n-4$ |
+| $\mathop{\mathrm{Sym}}^2_0\mathbb R^n$ | $2e_1$ | $2n$ | $n-4$ |
 | $\mathrm{Weyl}_n$ | $2e_1+2e_2$ | $4n-4$ | $-2$ |
 | $\Lambda^4\mathbb R^n$ | $e_1+e_2+e_3+e_4$ | $4n-16$ | $4$ |
 
@@ -99,21 +99,21 @@ The brief asks because a floor matched at one point is weak evidence. Equality i
 - **(E1)** $S_{\mathfrak{mhh}}=0$, i.e. $\langle[\mathfrak h,\mathfrak h],\mathfrak m\rangle=0$, i.e. **$\mathfrak h=\mathfrak m^\perp$ is a subalgebra**;
 - **(E2)** $P_0=P_{\mathfrak m}-\frac dN\mathrm{Id}$ lies **entirely in $\mathrm{Weyl}_n$**, the $-2$ eigenspace.
 
-Given (E1), $P_{\mathfrak h}$ commutes with $\operatorname{Ad}(\mathfrak h)$, so each of its $O(n)$-isotypic components is an $\mathfrak h$-invariant vector of that summand. Hence a clean **sufficient criterion**:
+Given (E1), $P_{\mathfrak h}$ commutes with $\mathop{\mathrm{Ad}}(\mathfrak h)$, so each of its $O(n)$-isotypic components is an $\mathfrak h$-invariant vector of that summand. Hence a clean **sufficient criterion**:
 
-> **Criterion.** If $\mathfrak h\subseteq\mathfrak{so}(n)$ is a subalgebra with $(\operatorname{Sym}^2_0\mathbb R^n)^{\mathfrak h}=0$ and $(\Lambda^4\mathbb R^n)^{\mathfrak h}=0$, then $\mathfrak m=\mathfrak h^\perp$ attains the floor at $d=N-\dim\mathfrak h$.
+> **Criterion.** If $\mathfrak h\subseteq\mathfrak{so}(n)$ is a subalgebra with $(\mathop{\mathrm{Sym}}^2_0\mathbb R^n)^{\mathfrak h}=0$ and $(\Lambda^4\mathbb R^n)^{\mathfrak h}=0$, then $\mathfrak m=\mathfrak h^\perp$ attains the floor at $d=N-\dim\mathfrak h$.
 
 Three families follow.
 
 | family | $n$, $d$ | why (E1) and (E2) hold | floor $=\alpha$ |
 | --- | --- | --- | --- |
 | $\mathfrak m=\mathfrak{so}(n)$ | any $n$, $d=N$ | $\mathfrak h=0$, so $P_0=0$ and (2) is an equality | $n(n-1)(n-2)$, and $\alpha=2(n-2)N$ is the same number |
-| balanced symmetric pair | even $n$, $d=n^2/4$ | $\mathfrak h=\mathfrak{so}(\frac n2)\oplus\mathfrak{so}(\frac n2)$; the file's own isotypic table gives $\operatorname{Sym}^2_0=\Lambda^4=0$ at $n=6$ | $0$, and $\alpha=0$ by isotropy |
+| balanced symmetric pair | even $n$, $d=n^2/4$ | $\mathfrak h=\mathfrak{so}(\frac n2)\oplus\mathfrak{so}(\frac n2)$; the file's own isotypic table gives $\mathop{\mathrm{Sym}}^2_0=\Lambda^4=0$ at $n=6$ | $0$, and $\alpha=0$ by isotropy |
 | **principal $\mathfrak{so}(3)$** | $n=5$, $d=7$ | §3 | $42/5=\mathbf{8.4}$ |
 
-The middle row is already in [isotropy-cap.md](../findings/isotropy-cap.md), thirteen lines above L78's heading: the isotypic table records $\lVert P_0\rVert^2=3.6$ with $\operatorname{Sym}^2_0=\mathbf 0$ and $\Lambda^4=0$ at $n=6$, $d=9$, and the block above it calls "at even $n$ the traceless part lies entirely in $\mathrm{Weyl}_n$" a **theorem**. That is (E2), stated as a theorem, one screen above a lemma that needed it and did not look. **The answer to "is it tight anywhere else" was in the same file, sixteen lines up.**
+The middle row is already in [isotropy-cap.md](../findings/isotropy-cap.md), thirteen lines above L78's heading: the isotypic table records $\lVert P_0\rVert^2=3.6$ with $\mathop{\mathrm{Sym}}^2_0=\mathbf 0$ and $\Lambda^4=0$ at $n=6$, $d=9$, and the block above it calls "at even $n$ the traceless part lies entirely in $\mathrm{Weyl}_n$" a **theorem**. That is (E2), stated as a theorem, one screen above a lemma that needed it and did not look. **The answer to "is it tight anywhere else" was in the same file, sixteen lines up.**
 
-At odd $n$ and $d=\frac{n^2-1}4$ the floor is $-2d/n<0$ while $\alpha=0$, so it is *not* tight, the same parity asymmetry the file's $\operatorname{Sym}^2_0$ row records.
+At odd $n$ and $d=\frac{n^2-1}4$ the floor is $-2d/n<0$ while $\alpha=0$, so it is *not* tight, the same parity asymmetry the file's $\mathop{\mathrm{Sym}}^2_0$ row records.
 
 ## 3. The reinterpretation, licensed, and provable, though not for the block's reason
 
@@ -125,10 +125,10 @@ The claim *"that search was not stalling; it had found the true global minimum"*
 
 ### 3.2 The minimiser, in closed form
 
-**Take $\mathfrak h$ to be the principal $\mathfrak{so}(3)\subset\mathfrak{so}(5)$**, the image of $\mathfrak{so}(3)$ under its irreducible $5$-dimensional representation $V_5\cong\operatorname{Sym}^2_0(\mathbb R^3)$, and $\mathfrak m=\mathfrak h^\perp$, of dimension $10-3=7$. Under this $\mathfrak{so}(3)$, $\Lambda^2V_5=V_7\oplus V_3$ with $V_3=\mathfrak h$, so **$\mathfrak m$ is the $V_7$-isotypic piece of $\mathfrak{so}(5)$**, the spin-$3$ summand.
+**Take $\mathfrak h$ to be the principal $\mathfrak{so}(3)\subset\mathfrak{so}(5)$**, the image of $\mathfrak{so}(3)$ under its irreducible $5$-dimensional representation $V_5\cong\mathop{\mathrm{Sym}}^2_0(\mathbb R^3)$, and $\mathfrak m=\mathfrak h^\perp$, of dimension $10-3=7$. Under this $\mathfrak{so}(3)$, $\Lambda^2V_5=V_7\oplus V_3$ with $V_3=\mathfrak h$, so **$\mathfrak m$ is the $V_7$-isotypic piece of $\mathfrak{so}(5)$**, the spin-$3$ summand.
 
 - **(E1)** holds: $\mathfrak h$ is a subalgebra by construction.
-- **(E2)** holds, and needs only two branching rules. $\operatorname{Sym}^2V_5=V_9\oplus V_5\oplus V_1$, so $\operatorname{Sym}^2_0(\mathbb R^5)=V_9\oplus V_5$ carries **no trivial summand**; and $\Lambda^4\mathbb R^5\cong\mathbb R^5=V_5$ carries none either. Both invariant spaces vanish, so both components of $P_{\mathfrak h}$ vanish and $P_0\in\mathrm{Weyl}_5$.
+- **(E2)** holds, and needs only two branching rules. $\mathop{\mathrm{Sym}}^2V_5=V_9\oplus V_5\oplus V_1$, so $\mathop{\mathrm{Sym}}^2_0(\mathbb R^5)=V_9\oplus V_5$ carries **no trivial summand**; and $\Lambda^4\mathbb R^5\cong\mathbb R^5=V_5$ carries none either. Both invariant spaces vanish, so both components of $P_{\mathfrak h}$ vanish and $P_0\in\mathrm{Weyl}_5$.
 
 Then (2) is an equality: $\mu=6\cdot\frac{49}{10}-2\bigl(7-\frac{49}{10}\bigr)=29.4-4.2=25.2$, and (1) gives
 
@@ -151,7 +151,7 @@ $$\alpha(\mathfrak m)=2(25.2)-2\cdot3\cdot7+0=50.4-42=\frac{42}5=\mathbf{8.4}\ \
 
 **The floor is matched at one of four points tested and misses at the other three, and the block reports only the matched one.** It quotes "$8.4$ and $16.6$, not marginal" side by side, as though the pair told one story; $16.6$ is a number that *exceeds* its floor by a quarter, and [r66](REVIEW_r66.md#L106) independently got $18.0$ there, so even the upper half is unsettled at $n=6$. **Whatever the block's $16.6$ is evidence of, it is not that the floor is tight.**
 
-The criterion explains the pattern. Equality at $d=\lfloor n^2/4\rfloor+1$ needs a subalgebra $\mathfrak h$ of dimension $N-d$ with no invariants in $\operatorname{Sym}^2_0\mathbb R^n$, which forces $\mathfrak h$ to act **absolutely irreducibly** on $\mathbb R^n$, hence (Schur) to be **semisimple**, since a nonzero centre would act by skew endomorphisms commuting with $\mathfrak h$ and so by zero.
+The criterion explains the pattern. Equality at $d=\lfloor n^2/4\rfloor+1$ needs a subalgebra $\mathfrak h$ of dimension $N-d$ with no invariants in $\mathop{\mathrm{Sym}}^2_0\mathbb R^n$, which forces $\mathfrak h$ to act **absolutely irreducibly** on $\mathbb R^n$, hence (Schur) to be **semisimple**, since a nonzero centre would act by skew endomorphisms commuting with $\mathfrak h$ and so by zero.
 
 - $n=6$, $d=10$: $\dim\mathfrak h=5$, and **$5$ is not the dimension of any compact semisimple algebra**.
 - $n=7$, $d=13$: $\dim\mathfrak h=8$, forcing $\mathfrak{su}(3)$, which has **no $7$-dimensional real irreducible representation** ($1,6,8,\dots$).

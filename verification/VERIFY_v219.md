@@ -27,11 +27,11 @@ Cold read of [BRIEF_L01.md](BRIEF_L01.md) by verifier v219, against [problem.md]
 Quoted from [conventions.md](../findings/conventions.md), not restated.
 
 - $\theta_0(n)$: *"**the closed form $\theta_0(n)^2=2(n-1)(n-2)/n^2$, and nothing more.** … the target of Problem P is $\Theta_n$."*
-- Norm: *"**This record's norm is $\lVert Z\rVert^2=\tfrac12\operatorname{tr}(Z^{\mathsf T}Z)$, so $\lVert Z\rVert_F^2=2\lVert Z\rVert^2$**."*
+- Norm: *"**This record's norm is $\lVert Z\rVert^2=\tfrac12\mathop{\mathrm{tr}}(Z^{\mathsf T}Z)$, so $\lVert Z\rVert_F^2=2\lVert Z\rVert^2$**."*
 - $\mathcal D_n$: *"$\{S$ symmetric, hollow, $S\mathbf 1=0\}$ (the vertex matrices of coordinate-diagonal W…"*), **this is a different $S$ from L1's.**
 - *"Theorem A"*: *"**names four distinct objects on this record.** … **Always name the file.**"*, L1's is [Jäger's](../references/jaeger-2016-diagonal-case/README.md), a fifth sense, and the table does not list it.
 
-From the source, [diss_jaeger_florian.txt:1741-1760](https://repositorium.uni-muenster.de/document/miami/820840d1-0252-4bf3-8fc7-853730eee3f5/diss_jaeger_florian.pdf), verbatim: *"$|W| := W_+ + W_-$, $\mathrm{Ric} := \mathrm{Ric}(|W|)$ … $r := \lVert\mathrm{Ric}\rVert$ … $S := \mathrm{Ric}/r$."* So L1's $S$ is Jäger's normalised Ricci, and its normalisation is **Frobenius**: $\operatorname{tr}S^2=1$.
+From the source, [diss_jaeger_florian.txt:1741-1760](https://repositorium.uni-muenster.de/document/miami/820840d1-0252-4bf3-8fc7-853730eee3f5/diss_jaeger_florian.pdf), verbatim: *"$|W| := W_+ + W_-$, $\mathrm{Ric} := \mathrm{Ric}(|W|)$ … $r := \lVert\mathrm{Ric}\rVert$ … $S := \mathrm{Ric}/r$."* So L1's $S$ is Jäger's normalised Ricci, and its normalisation is **Frobenius**: $\mathop{\mathrm{tr}}S^2=1$.
 
 ## 1. The hypothesis inventory
 
@@ -43,9 +43,9 @@ A pass with no inventory is not a pass. Every hypothesis L1's argument consumes,
 | H2 | $m\ge8$, i.e. $n\ge16$ | Jäger's Assumption 1, [txt:1705](https://repositorium.uni-muenster.de/document/miami/820840d1-0252-4bf3-8fc7-853730eee3f5/diss_jaeger_florian.pdf) | §3.6 ideal induction, [txt:5080](https://repositorium.uni-muenster.de/document/miami/820840d1-0252-4bf3-8fc7-853730eee3f5/diss_jaeger_florian.pdf) | **Yes**, and L1 must *remove* it; Result 5b is the removal |
 | H3 | $\lVert W\rVert=1$, $W^2+W^\#=\theta W$, $\theta\ge\theta_0(n)$ | Jäger's Assumption 1 | everywhere | Yes |
 | H4 | $k\ge12$ in Lemma 3.5.4 | [txt:3894](https://repositorium.uni-muenster.de/document/miami/820840d1-0252-4bf3-8fc7-853730eee3f5/diss_jaeger_florian.pdf) | Lemma 3.5.5's chain, instantiated at $k=n$ | **Yes, and binds exactly at the target $n=12$** |
-| H5 | $x=n\operatorname{tr}S^4-1\in[0,\tfrac{n-2}n]$ | Lemma 3.5.4's statement | same | Yes, and it needs $n\ge9$ (§5 below) |
+| H5 | $x=n\mathop{\mathrm{tr}}S^4-1\in[0,\tfrac{n-2}n]$ | Lemma 3.5.4's statement | same | Yes, and it needs $n\ge9$ (§5 below) |
 | H6 | $S\succeq0$ | the block; **not in the printed moment problem** | the support $(0,1]$ | **Yes, the block says so and is right** |
-| H7 | $\operatorname{tr}S^2=1$ | the block, as *"unit norm"* | $\mu$ is a probability measure, and $\lambda\le1$ | **Yes** |
+| H7 | $\mathop{\mathrm{tr}}S^2=1$ | the block, as *"unit norm"* | $\mu$ is a probability measure, and $\lambda\le1$ | **Yes** |
 | H8 | $\beta\ge0$ in the dual certificate | the script's docstring only | the step $\mathbb E[\lambda^{-2}]\le n\Rightarrow\beta\mathbb E[\lambda^{-2}]\le n\beta$ | **Yes, and it is stated in no findings file** |
 | H9 | Lemmas 3.6.7–3.6.8 survive at $n=12,14$ | [ATTEMPTS.md:629](../ATTEMPTS.md) | Result 5b *"replaces §3.6 after Lemma 3.6.10"* | **Yes, and it holds; see §10** |
 | H10 | Result 5b itself | [ATTEMPTS.md:629](../ATTEMPTS.md), unnumbered | discharging H2 | **Yes, this is the debt** |
@@ -116,7 +116,7 @@ Both are the reference card a future reader consults first.
 
 ## 6. The rounding-slack account, derived independently
 
-The block: $\operatorname{tr}S^4\le E(n)=(8n^2-41n+49)/(4(n+1)(n-2)(n-3))$ rounded to $16/(8n+9)$, *"valid at every $n\ge2$ since the cleared inequality is $41n-57\ge0$"*.
+The block: $\mathop{\mathrm{tr}}S^4\le E(n)=(8n^2-41n+49)/(4(n+1)(n-2)(n-3))$ rounded to $16/(8n+9)$, *"valid at every $n\ge2$ since the cleared inequality is $41n-57\ge0$"*.
 
 **Source check.** [txt:2529](https://repositorium.uni-muenster.de/document/miami/820840d1-0252-4bf3-8fc7-853730eee3f5/diss_jaeger_florian.pdf), Lemma 3.3.6, ends: *"where the last inequality follows from $(8n^2-41n+49)(8n+9)-64(n+1)(n-2)(n-3)=-41n+57\le0$ for all $n\ge2$."* Same polynomial, same root, opposite sign convention.
 
@@ -143,20 +143,20 @@ linear over a quartic. At $n=12$: numerator $492-57=435$; denominator $4\cdot13\
 
 ## 7. The $n=12$ moment-body step
 
-**The claim.** Jäger bounds $\operatorname{tr}S^3$ and $\operatorname{tr}S^4$ separately; the worst case wants $\operatorname{tr}S^4$ at its ceiling with $\operatorname{tr}S^3$ at its floor; *"that corner does not exist"*.
+**The claim.** Jäger bounds $\mathop{\mathrm{tr}}S^3$ and $\mathop{\mathrm{tr}}S^4$ separately; the worst case wants $\mathop{\mathrm{tr}}S^4$ at its ceiling with $\mathop{\mathrm{tr}}S^3$ at its floor; *"that corner does not exist"*.
 
-**The shape is right.** Reading Lemma 3.5.5's right-hand side at [txt:3990](https://repositorium.uni-muenster.de/document/miami/820840d1-0252-4bf3-8fc7-853730eee3f5/diss_jaeger_florian.pdf), the term $2\sqrt{\operatorname{tr}S^4+\sqrt{((\operatorname{tr}S^4)^2-(\operatorname{tr}S^3)^4)/(1-(\operatorname{tr}S^3)^2)}}$ grows with $\operatorname{tr}S^4$ and shrinks with $\operatorname{tr}S^3$, so the adversarial corner is exactly (ceiling, floor). A lower bound on $\operatorname{tr}S^3$ that *rises with* $\operatorname{tr}S^4$ is what deletes it. That is what $\varphi(v)=\tfrac7{10}v+\tfrac{8647}{38000}$ is.
+**The shape is right.** Reading Lemma 3.5.5's right-hand side at [txt:3990](https://repositorium.uni-muenster.de/document/miami/820840d1-0252-4bf3-8fc7-853730eee3f5/diss_jaeger_florian.pdf), the term $2\sqrt{\mathop{\mathrm{tr}}S^4+\sqrt{((\mathop{\mathrm{tr}}S^4)^2-(\mathop{\mathrm{tr}}S^3)^4)/(1-(\mathop{\mathrm{tr}}S^3)^2)}}$ grows with $\mathop{\mathrm{tr}}S^4$ and shrinks with $\mathop{\mathrm{tr}}S^3$, so the adversarial corner is exactly (ceiling, floor). A lower bound on $\mathop{\mathrm{tr}}S^3$ that *rises with* $\mathop{\mathrm{tr}}S^4$ is what deletes it. That is what $\varphi(v)=\tfrac7{10}v+\tfrac{8647}{38000}$ is.
 
-**The two Cauchy–Schwarz relations are correct.** With $\operatorname{tr}S^2=1$ and eigenvalues $\lambda_i$:
+**The two Cauchy–Schwarz relations are correct.** With $\mathop{\mathrm{tr}}S^2=1$ and eigenvalues $\lambda_i$:
 
-$$(\operatorname{tr}S^3)^2=\Big(\sum\lambda_i\cdot\lambda_i^2\Big)^2\le\Big(\sum\lambda_i^2\Big)\Big(\sum\lambda_i^4\Big)=\operatorname{tr}S^4,$$
-$$1=(\operatorname{tr}S^2)^2=\Big(\sum\lambda_i^{1/2}\cdot\lambda_i^{3/2}\Big)^2\le(\operatorname{tr}S)(\operatorname{tr}S^3)\quad(\lambda_i\ge0).$$
+$$(\mathop{\mathrm{tr}}S^3)^2=\Big(\sum\lambda_i\cdot\lambda_i^2\Big)^2\le\Big(\sum\lambda_i^2\Big)\Big(\sum\lambda_i^4\Big)=\mathop{\mathrm{tr}}S^4,$$
+$$1=(\mathop{\mathrm{tr}}S^2)^2=\Big(\sum\lambda_i^{1/2}\cdot\lambda_i^{3/2}\Big)^2\le(\mathop{\mathrm{tr}}S)(\mathop{\mathrm{tr}}S^3)\quad(\lambda_i\ge0).$$
 
-Both as the block states, and the second needs $S\succeq0$ for the half-powers to exist, H6 again. The box point $(\operatorname{tr}S^3,\operatorname{tr}S^4)=(\tfrac12,\tfrac15)$ is excluded because $(\tfrac12)^2=\tfrac14>\tfrac15$. ✓ Equality in the first holds at the flat spectrum: $\lambda_i=n^{-1/2}$ gives $\operatorname{tr}S^3=n^{-1/2}$, $\operatorname{tr}S^4=n^{-1}$, and $(n^{-1/2})^2=n^{-1}$. ✓
+Both as the block states, and the second needs $S\succeq0$ for the half-powers to exist, H6 again. The box point $(\mathop{\mathrm{tr}}S^3,\mathop{\mathrm{tr}}S^4)=(\tfrac12,\tfrac15)$ is excluded because $(\tfrac12)^2=\tfrac14>\tfrac15$. ✓ Equality in the first holds at the flat spectrum: $\lambda_i=n^{-1/2}$ gives $\mathop{\mathrm{tr}}S^3=n^{-1/2}$, $\mathop{\mathrm{tr}}S^4=n^{-1}$, and $(n^{-1/2})^2=n^{-1}$. ✓
 
-**But the stated mechanism does not close $n=12$, and this is the round's substantive finding.** The two Cauchy–Schwarz relations alone give, with $\operatorname{tr}S\le\sqrt{n\operatorname{tr}S^2}=\sqrt n$,
+**But the stated mechanism does not close $n=12$, and this is the round's substantive finding.** The two Cauchy–Schwarz relations alone give, with $\mathop{\mathrm{tr}}S\le\sqrt{n\mathop{\mathrm{tr}}S^2}=\sqrt n$,
 
-$$\operatorname{tr}S^3\ \ge\ \frac1{\operatorname{tr}S}\ \ge\ \frac1{\sqrt n}=\frac1{\sqrt{12}}=0.288675\ldots$$
+$$\mathop{\mathrm{tr}}S^3\ \ge\ \frac1{\mathop{\mathrm{tr}}S}\ \ge\ \frac1{\sqrt n}=\frac1{\sqrt{12}}=0.288675\ldots$$
 
 The record's own documented requirement for the contradiction at $n=12$ is $0.31517$ ([run_jaeger_e5_certificate.py](../scripts/runs/run_jaeger_e5_certificate.py), *"requirement for the contradiction 0.31517"*). And $\tfrac1{\sqrt{12}}<0.31517$ because $\tfrac1{12}=0.08\overline{3}<0.099332=0.31517^2$. **The edge falls short by about $0.027$.** What clears the requirement is the certified line: at $v=E(12)=709/4680$,
 
@@ -168,17 +168,17 @@ which clears $0.31517$ with about $0.018$ to spare. So the closure rests on the 
 
 *Discrepancy protocol.* Located: [problem.md:481](../findings/problem.md). Exhibited: $1/\sqrt{12}=0.288675<0.31517$, closed form, no computation. Argued opposite: one could read *"the corner elimination"* as naming only the qualitative fact that the box is strictly larger than the moment body, which the $(\tfrac12,\tfrac15)$ witness establishes and which is true. **I keep the finding**, because the sentence sits where a reader takes it as the reason $n=12$ closes, and the record has no other sentence saying the dual is load-bearing.
 
-**And the narrative sentence conflates two floors.** *"The floor forces the flat spectrum, which drags the ceiling down with it"*, the floor that forces the flat spectrum is $\operatorname{tr}S^4\ge1/n$, a floor on the *fourth* moment; the corner at issue puts the *third* moment at its floor. Two different floors, one sentence.
+**And the narrative sentence conflates two floors.** *"The floor forces the flat spectrum, which drags the ceiling down with it"*, the floor that forces the flat spectrum is $\mathop{\mathrm{tr}}S^4\ge1/n$, a floor on the *fourth* moment; the corner at issue puts the *third* moment at its floor. Two different floors, one sentence.
 
 ## 8. The two hypotheses, and whether they are load-bearing
 
 **Both are, and the block is right about both.**
 
-**H7, unit norm.** $\mu:=\sum_i\lambda_i^2\delta_{\lambda_i}$ has total mass $\sum\lambda_i^2=\operatorname{tr}S^2$, so $\mu$ is a probability measure **iff $\operatorname{tr}S^2=1$**. And $\lambda_i^2\le\sum_j\lambda_j^2=1$ gives $\lambda_i\le1$. So unit norm delivers both *"probability measure"* and the right-hand endpoint of $(0,1]$.
+**H7, unit norm.** $\mu:=\sum_i\lambda_i^2\delta_{\lambda_i}$ has total mass $\sum\lambda_i^2=\mathop{\mathrm{tr}}S^2$, so $\mu$ is a probability measure **iff $\mathop{\mathrm{tr}}S^2=1$**. And $\lambda_i^2\le\sum_j\lambda_j^2=1$ gives $\lambda_i\le1$. So unit norm delivers both *"probability measure"* and the right-hand endpoint of $(0,1]$.
 
-> **The block says "positive semidefinite of unit norm" and the norm is not named.** Under the operator norm $\lVert S\rVert_{\mathrm{op}}=1$ the support statement still holds but $\mu$ is **not** a probability measure and $\mathbb E[\lambda^2]=v$ is not $\operatorname{tr}S^4$. The next sentence of the block repairs it (*"$S\succeq0$ with $\operatorname{tr}S^2=1$"*) and [conventions.md:29](../findings/conventions.md) makes the ambiguity a live one on this record. **Name the norm in the summary sentence, not only in the sentence after.**
+> **The block says "positive semidefinite of unit norm" and the norm is not named.** Under the operator norm $\lVert S\rVert_{\mathrm{op}}=1$ the support statement still holds but $\mu$ is **not** a probability measure and $\mathbb E[\lambda^2]=v$ is not $\mathop{\mathrm{tr}}S^4$. The next sentence of the block repairs it (*"$S\succeq0$ with $\mathop{\mathrm{tr}}S^2=1$"*) and [conventions.md:29](../findings/conventions.md) makes the ambiguity a live one on this record. **Name the norm in the summary sentence, not only in the sentence after.**
 
-**H6, positive semidefiniteness.** It delivers the left-hand end: $\lambda_i\ge0$, so $\operatorname{supp}\mu\subseteq[0,1]$, and $\mu$ gives zero mass to $\lambda=0$, so $\operatorname{supp}\mu\subseteq(0,1]$. The block's demonstration that it is load-bearing is correct and I reproduce its arithmetic: $\delta_{-1}$ is feasible for the printed problem at $v=1$ and gives $\mathbb E[\lambda]=-1$, against
+**H6, positive semidefiniteness.** It delivers the left-hand end: $\lambda_i\ge0$, so $\mathop{\mathrm{supp}}\mu\subseteq[0,1]$, and $\mu$ gives zero mass to $\lambda=0$, so $\mathop{\mathrm{supp}}\mu\subseteq(0,1]$. The block's demonstration that it is load-bearing is correct and I reproduce its arithmetic: $\delta_{-1}$ is feasible for the printed problem at $v=1$ and gives $\mathbb E[\lambda]=-1$, against
 
 $$\varphi(1)=\tfrac7{10}+\tfrac{8647}{38000}=\tfrac{26600}{38000}+\tfrac{8647}{38000}=\tfrac{35247}{38000},$$
 
@@ -250,7 +250,7 @@ A margin of $3/38000$ at the right endpoint, **thin, but positive, and exact.** 
 | The expression coded in `rhs_enclosure` **is** Jäger's Lemma 3.5.5 RHS at $n=12$ | nowhere; the reduction is listed as *"Owed"* in [lean/INDEX.md:202](../lean/INDEX.md) |
 | The max-over-cases really is over $t\in\{\hat\theta_0/v,\ (n-3)\tilde\theta_0\}$ only, that the two endpoints bound the interior | the block calls this *"licensed by the source's own convexity, $\mathrm{RHS}''\ge0$"*; **no derivation of $\mathrm{RHS}''\ge0$ is on the record** |
 | The lower limit $10/81=(n-2)/(n-3)^2$ is where Assumption 2 is already contradicted | the script's docstring only |
-| $\varphi$ is a valid lower bound on $\operatorname{tr}S^3$, i.e. §9's certificate | the block; the root isolation is not on file |
+| $\varphi$ is a valid lower bound on $\mathop{\mathrm{tr}}S^3$, i.e. §9's certificate | the block; the root isolation is not on file |
 
 **The certificate is not on file.** The block says *"ten subintervals, each with a proven negative bound"*, but the script computes the subdivision at run time and prints only a count and a worst-case bound. **There is no list of ten intervals with ten bounds anywhere in the record.** A validated-interval proof is exactly its certificate; without the certificate the record has the *claim* that a certificate exists, which is a different thing and is not independently checkable. Re-running the script is not a check, it is a re-assertion by the same code.
 
@@ -269,7 +269,7 @@ The brief names this as the import whose hypotheses were never checked. I checke
 | $\lVert W\rVert=1$ | matches |
 | $W^2+W^\#=\theta W$ with $\theta\ge\theta_0(n)$ | matches [conventions.md](../findings/conventions.md)'s $\theta$ and $\theta_0(n)$ |
 
-**And the derived object.** $S=\mathrm{Ric}(\lvert W\rvert)/r$ with $r=\lVert\mathrm{Ric}\rVert$ (Frobenius), giving $\operatorname{tr}S^2=1$ and $S\succeq0$, which is precisely H6 and H7. **The import's hypotheses hold of the object, and the normalisation the moment problem needs is the source's own.** This is the one trap on the brief's list where the record comes out clean.
+**And the derived object.** $S=\mathrm{Ric}(\lvert W\rvert)/r$ with $r=\lVert\mathrm{Ric}\rVert$ (Frobenius), giving $\mathop{\mathrm{tr}}S^2=1$ and $S\succeq0$, which is precisely H6 and H7. **The import's hypotheses hold of the object, and the normalisation the moment problem needs is the source's own.** This is the one trap on the brief's list where the record comes out clean.
 
 **A loose invocation at the one place $m\ge8$ is used.** At [txt:5080](https://repositorium.uni-muenster.de/document/miami/820840d1-0252-4bf3-8fc7-853730eee3f5/diss_jaeger_florian.pdf) the justification is *"choose $l\in A_k$ with $l\notin\{a,b,c,d\}$ which is possible because $m\ge8$"*, but the combinatorial need is only $\#A_k\ge5$. So the printed reason appears far stronger than the step requires. **I do not build a finding on this**: the extraction is lossy ([txt:2539](https://repositorium.uni-muenster.de/document/miami/820840d1-0252-4bf3-8fc7-853730eee3f5/diss_jaeger_florian.pdf) carries a spurious factor $\tfrac14$ on the very identity §6 verifies), and Result 5b removes the step regardless, so nothing in L1 turns on it. *Reported as `withdrawn` under the discrepancy protocol, with the reason.*
 
@@ -289,7 +289,7 @@ The brief names this as the import whose hypotheses were never checked. I checke
 
 ## 14. The remaining traps, each answered
 
-- **$\ker W\ne0$ and padded objects.** *Not a trap here, and worth stating why.* Under $\mu=\sum\lambda_i^2\delta_{\lambda_i}$, zero eigenvalues carry zero mass, and $\mathbb E[\lambda^{-2}]=\sum_{\lambda_i\ne0}\lambda_i^2\lambda_i^{-2}=\#\{i:\lambda_i\ne0\}=\operatorname{rank}S$. **So the constraint $\mathbb E[\lambda^{-2}]\le n$ is literally "$S$ has at most $n$ nonzero eigenvalues" (automatic) and a kernel makes it slack, which only helps.** The record nowhere says this, and it is the cleanest reading of the third constraint.
+- **$\ker W\ne0$ and padded objects.** *Not a trap here, and worth stating why.* Under $\mu=\sum\lambda_i^2\delta_{\lambda_i}$, zero eigenvalues carry zero mass, and $\mathbb E[\lambda^{-2}]=\sum_{\lambda_i\ne0}\lambda_i^2\lambda_i^{-2}=\#\{i:\lambda_i\ne0\}=\mathop{\mathrm{rank}}S$. **So the constraint $\mathbb E[\lambda^{-2}]\le n$ is literally "$S$ has at most $n$ nonzero eigenvalues" (automatic) and a kernel makes it slack, which only helps.** The record nowhere says this, and it is the cleanest reading of the third constraint.
 - **Odd $n$.** Untouched, and correctly so: Jäger's Assumption 1 fixes $n=2m$, so nothing in Chapter 3 is available at odd $n$ and L1 claims nothing there. [notes.md](../references/jaeger-2016-diagonal-case/notes.md) records the source's own remark at [txt:4176](https://repositorium.uni-muenster.de/document/miami/820840d1-0252-4bf3-8fc7-853730eee3f5/diss_jaeger_florian.pdf): *"if the odd dimensional version of the theorem is also true, then better estimates will be needed."* **No defect.**
 - **$n=12$.** The tightest boundary on the record. Lemma 3.5.4's $k\ge12$ binds with zero margin; the quartic certificate's endpoint margin is $3/38000$; the requirement is cleared by $0.018$. **All three positive, all three thin, and only the first is recorded outside a script.**
 - **$n=14$.** Reached by exact endpoint evaluation, not by the interval run, §11. **The block does not say so.**
@@ -324,7 +324,7 @@ The brief names this as the import whose hypotheses were never checked. I checke
 2. **Number Result 5b, give it the two-line graph argument as its warrant, and link it from L1's block by file and line**, the label currently resolves to two different objects.
 3. **Record the ten subintervals.** A validated-interval proof is its certificate.
 4. **Derive $\mathrm{RHS}''\ge0$**, or drop the claim that endpoint evaluation is licensed.
-5. **State $\beta\ge0$** in the moment problem, beside $S\succeq0$ and $\operatorname{tr}S^2=1$, and **name the norm** in the summary sentence.
+5. **State $\beta\ge0$** in the moment problem, beside $S\succeq0$ and $\mathop{\mathrm{tr}}S^2=1$, and **name the norm** in the summary sentence.
 6. **Soften *"a genuine equality case rather than an estimate"***: the Cauchy–Schwarz edge gives $1/\sqrt{12}=0.2887$ against a requirement of $0.3152$; the dual certificate is what closes $n=12$.
 7. **Say that $n=14$ has no interval run**, and add Lemma 3.5.4's $k\ge12$ to the block.
 8. **Reconcile the four status statements**, [problem.md:450](../findings/problem.md), [LEDGER.md:52](../findings/LEDGER.md), [LEDGER.md:19](../findings/LEDGER.md), and [INDEX.md:19](../findings/INDEX.md), against the one the mathematics supports: **audited, conditional on Result 5b, and not load-bearing for the programme.**

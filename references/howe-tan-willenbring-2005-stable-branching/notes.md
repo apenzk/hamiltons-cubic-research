@@ -31,7 +31,7 @@ The ten highest weights, and the $L_e$ eigenvalue each carries at $W_{\mathbb{CP
 | $(2,1,0^{m-3},-1)\oplus$ dual | $\frac{2m^2(m^2-4)}{3}$ | $0$ |
 | $(2,0^{m-2},-2)$ | $\frac{m^2(m-1)(m+3)}{4}$ | $0$ |
 
-The seven real dimensions sum to $\dim\mathrm{Weyl}_{2m}=\frac{m(m+1)(2m+1)(2m-3)}{3}$ identically in $m$ (checked symbolically), and the eigenvalues satisfy $\operatorname{tr}L_e=0$ identically in $m$. At $m=3$ the fourth summand has dimension $0$, which is exactly where its eigenvalue $2/(m+1)$ would have collided with $\tfrac12$.
+The seven real dimensions sum to $\dim\mathrm{Weyl}_{2m}=\frac{m(m+1)(2m+1)(2m-3)}{3}$ identically in $m$ (checked symbolically), and the eigenvalues satisfy $\mathop{\mathrm{tr}}L_e=0$ identically in $m$. At $m=3$ the fourth summand has dimension $0$, which is exactly where its eigenvalue $2/(m+1)$ would have collided with $\tfrac12$.
 
 ## Related literature located but not stored
 

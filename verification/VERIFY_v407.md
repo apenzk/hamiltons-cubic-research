@@ -14,7 +14,7 @@ The brief was cold and I worked from the definitions it quotes. No numerical wor
 | 7b | "Li's Theorem 1.8 gives the same spectrum as a product rule" | CONFIRMED AS ALGEBRA | Li gives the spectrum of $\mathring R$, and it matches only after the shift by $-c$ and the scale $s$, a step Passage D writes and Passages A and B leave out |
 | 8a | $\Lambda^2$ spectrum, "the same scale $s$ normalises both", $p_3(\mu)=A$, $p_3(\omega)$, the radical, $\tfrac32p_3(\mu)-\tfrac12p_3(\omega)=\theta_0(2m)$ | CONFIRMED AS ALGEBRA | each closes by hand from the displayed spectra |
 | 8b | "with Lemma L50 the two spectra return $\theta=\theta_0(2m)$", read as $\langle W,Q(W)\rangle$ | HYPOTHESIS-DEBT | this uses L50's coefficient pair, which is link (a) $\beta=2\langle M^\#,M\rangle$, underived on the record |
-| 9 | $A$ equals $2\sqrt2/\big(n\sqrt{(n-1)(n-2)}\big)$ at $n=2m$ | CONFIRMED AS ALGEBRA | the closed form reduces to $A$ identically, and the passages never define $\operatorname{tr}(W^3)$ |
+| 9 | $A$ equals $2\sqrt2/\big(n\sqrt{(n-1)(n-2)}\big)$ at $n=2m$ | CONFIRMED AS ALGEBRA | the closed form reduces to $A$ identically, and the passages never define $\mathop{\mathrm{tr}}(W^3)$ |
 | 10 | Passage F against Passage A | CONFIRMED AS ALGEBRA | Lean types the arithmetic of the list (sum, trace, normalisation, positivity, order) and nothing about $W$, $\mathring W$ or the eigenspaces |
 | 11 | boundary: $m=2$, zero eigenvalues, $ikjl$ order | CONFIRMED | the $m=2$ screen closes, no eigenvalue of $\mathring W$ or $M$ vanishes at $m\ge2$, and $ikjl$ negates the spectrum, as the proof's fixed order anticipates |
 
@@ -93,7 +93,7 @@ No hypothesis is stated and left unused, apart from the symbol $\lVert W\rVert_F
 ## 2. The curvature of the product (brief item 2)
 
 - $G^{(a)}_{ijij}=(P_a)_{ii}(P_a)_{jj}-(P_a)_{ij}^2$ equals $1$ for $i\ne j$ both in factor $a$, and $0$ otherwise. So $G^{(a)}$ is the curvature of the unit sphere on factor $a$, extended by zero. Mixed sectional curvatures of $G^{(1)}+G^{(2)}$ vanish, as a Riemannian product requires (Li's equation (2.2)). The symmetries and first Bianchi identity hold for $G^{(a)}$ because it has the form $B_{ik}B_{jl}-B_{il}B_{jk}$ with $B$ symmetric.
-- Ricci: $\sum_iG^{(a)}_{ijil}=\operatorname{tr}(P_a)(P_a)_{jl}-(P_a^2)_{jl}=(m-1)(P_a)_{jl}$. Summing gives $(m-1)(P_1+P_2)=(m-1)I$. For $G$ the same computation gives $(2m-1)I$. Confirmed.
+- Ricci: $\sum_iG^{(a)}_{ijil}=\mathop{\mathrm{tr}}(P_a)(P_a)_{jl}-(P_a^2)_{jl}=(m-1)(P_a)_{jl}$. Summing gives $(m-1)(P_1+P_2)=(m-1)I$. For $G$ the same computation gives $(2m-1)I$. Confirmed.
 - $\mathrm{Ric}(R-cG)=(m-1)I-c(2m-1)I=0$ at $c=\frac{m-1}{2m-1}$. Confirmed.
 - *That $R-cG$ is the Weyl tensor.* The proof writes "since $G$ has Ricci tensor $(2m-1)I$", which shows $R-cG$ is Ricci-free, and leaves implicit that a Ricci-free algebraic curvature tensor differing from $R$ by a multiple of $g\owedge g$ is the Weyl part. The explicit decomposition gives the same answer. With $\mathrm{Ric}=(m-1)g$ the traceless Ricci term vanishes, $\mathrm{scal}=2m(m-1)$, and $(g\owedge g)_{ijkl}=2G_{ijkl}$, so $W=R-\frac{\mathrm{scal}}{2n(n-1)}g\owedge g=R-\frac{2m(m-1)}{2\cdot2m(2m-1)}\cdot2G=R-\frac{m-1}{2m-1}G$. Confirmed.
 
@@ -101,15 +101,15 @@ No finding.
 
 ## 3. The contraction in the $iklj$ order (brief item 3)
 
-- $(\mathring G^{(a)}h)_{ij}=\sum_{k,l}\big[(P_a)_{il}(P_a)_{kj}-(P_a)_{ij}(P_a)_{kl}\big]h_{kl}$. The first term is $\sum_{k,l}(P_a)_{il}h_{lk}(P_a)_{kj}=(P_ahP_a)_{ij}$ by the symmetry of $h$. The second is $(P_a)_{ij}\operatorname{tr}(P_ah)$. So $\mathring G^{(a)}h=P_ahP_a-t_aP_a$. Confirmed.
-- $(\mathring Gh)_{ij}=h_{ji}-\delta_{ij}\operatorname{tr}h$, which is $h$ on $S^2_0$. Confirmed. The sign agrees with Li 2022 Example 2.1 ($\mathring R=\kappa\,\mathrm{id}$ on $S^n(\kappa)$) and with $\mathring G(I)=-(n-1)I=-\mathrm{Ric}$, Li's relation $\mathring R_i(g_i)=-\mathrm{Ric}$.
-- *The output lies in $S^2_0$.* $\operatorname{tr}(P_ahP_a-t_aP_a)=(1-m)t_a$, and $t_1+t_2=\operatorname{tr}h=0$, so $\mathring Wh$ is trace-free without Li's projection $\pi$. The proof does not say this. It follows, and it is the reason the formula is the operator on $S^2_0$. No finding.
+- $(\mathring G^{(a)}h)_{ij}=\sum_{k,l}\big[(P_a)_{il}(P_a)_{kj}-(P_a)_{ij}(P_a)_{kl}\big]h_{kl}$. The first term is $\sum_{k,l}(P_a)_{il}h_{lk}(P_a)_{kj}=(P_ahP_a)_{ij}$ by the symmetry of $h$. The second is $(P_a)_{ij}\mathop{\mathrm{tr}}(P_ah)$. So $\mathring G^{(a)}h=P_ahP_a-t_aP_a$. Confirmed.
+- $(\mathring Gh)_{ij}=h_{ji}-\delta_{ij}\mathop{\mathrm{tr}}h$, which is $h$ on $S^2_0$. Confirmed. The sign agrees with Li 2022 Example 2.1 ($\mathring R=\kappa\,\mathrm{id}$ on $S^n(\kappa)$) and with $\mathring G(I)=-(n-1)I=-\mathrm{Ric}$, Li's relation $\mathring R_i(g_i)=-\mathrm{Ric}$.
+- *The output lies in $S^2_0$.* $\mathop{\mathrm{tr}}(P_ahP_a-t_aP_a)=(1-m)t_a$, and $t_1+t_2=\mathop{\mathrm{tr}}h=0$, so $\mathring Wh$ is trace-free without Li's projection $\pi$. The proof does not say this. It follows, and it is the reason the formula is the operator on $S^2_0$. No finding.
 - *Screens on components at $m=2$, not evidence.* For $h=E_{11}-E_{22}$: $(\mathring Wh)_{11}=-W_{1221}=W_{1212}=\tfrac23$, and $(\mathring Wh)_{33}=W_{3113}-W_{3223}=\tfrac13-\tfrac13=0$. Both agree with $(1-c)h$. For $h=P_1-P_2$: $(\mathring Wh)_{11}=W_{1221}-W_{1331}-W_{1441}=-\tfrac23-\tfrac13-\tfrac13=-\tfrac43=(1-m-c)$. For $h=E_{13}+E_{31}$: $(\mathring Wh)_{13}=W_{1313}=-\tfrac13=-c$.
 
 ## 4. The three summands (brief item 4)
 
-- *Within factor $a$*, $h=P_ahP_a$ with $t_a=0$. For $b\ne a$, $P_bhP_b=0$ and $t_b=\operatorname{tr}(P_bP_ahP_a)=0$. So $\mathring Wh=h-ch=\frac m{2m-1}h$. The dimension per factor is $\binom{m+1}2-1$, and twice that is $m^2+m-2=(m-1)(m+2)$. Confirmed.
-- *Cross block*, $h=P_1hP_2+P_2hP_1$. Here $P_ahP_a=0$ and $t_a=\operatorname{tr}(P_1hP_2)=\operatorname{tr}(hP_2P_1)=0$. So $\mathring Wh=-ch$, and the dimension is $m^2$ (the free $m\times m$ block). Confirmed.
+- *Within factor $a$*, $h=P_ahP_a$ with $t_a=0$. For $b\ne a$, $P_bhP_b=0$ and $t_b=\mathop{\mathrm{tr}}(P_bP_ahP_a)=0$. So $\mathring Wh=h-ch=\frac m{2m-1}h$. The dimension per factor is $\binom{m+1}2-1$, and twice that is $m^2+m-2=(m-1)(m+2)$. Confirmed.
+- *Cross block*, $h=P_1hP_2+P_2hP_1$. Here $P_ahP_a=0$ and $t_a=\mathop{\mathrm{tr}}(P_1hP_2)=\mathop{\mathrm{tr}}(hP_2P_1)=0$. So $\mathring Wh=-ch$, and the dimension is $m^2$ (the free $m\times m$ block). Confirmed.
 - *Line*, $h=P_1-P_2$, with $t_1=m$, $t_2=-m$, $P_1hP_1=P_1$, $P_2hP_2=-P_2$. So $\mathring Wh=(1-m-c)h$, and $1-m-c=-(m-1)\big(1+\tfrac1{2m-1}\big)=-\frac{2m(m-1)}{2m-1}$. Confirmed.
 - *Invariance.* Each summand is an eigenspace, so it is invariant.
 - *Filling $S^2_0$.* The proof gives only the dimension count. The count needs the sum to be direct, which the proof does not state. It holds because the summands are mutually Frobenius-orthogonal. The two within-factor pieces and the cross block have disjoint supports, and $\langle h,P_1-P_2\rangle=t_1-t_2=0$ on the within-factor pieces. Also $(m-1)(m+2)+m^2+1=2m^2+m-1=\frac{2m(2m+1)}2-1$. Confirmed.
@@ -179,7 +179,7 @@ Confirmed.
 
 ## 9. "$A$ is not a new constant" (brief item 9)
 
-At $n=2m$, $\frac{2\sqrt2}{n\sqrt{(n-1)(n-2)}}=\frac{2\sqrt2}{2m\sqrt{(2m-1)\cdot2(m-1)}}=\frac1{m\sqrt{(2m-1)(m-1)}}=A$, using $\sqrt{2(m-1)}=\sqrt2\sqrt{m-1}$ for $m\ge1$. Confirmed as algebra. The passages never define "$\operatorname{tr}(W^3)$". If it means $\operatorname{tr}(M^3)=p_3(\mu)$ at $\lVert M\rVert_F=1$, it agrees with section 8's $p_3(\mu)=A$. That the record's closed form is correct in its own context is outside this brief. The support on file is "checked to be identically zero difference", and the hand reduction above follows the displayed expressions.
+At $n=2m$, $\frac{2\sqrt2}{n\sqrt{(n-1)(n-2)}}=\frac{2\sqrt2}{2m\sqrt{(2m-1)\cdot2(m-1)}}=\frac1{m\sqrt{(2m-1)(m-1)}}=A$, using $\sqrt{2(m-1)}=\sqrt2\sqrt{m-1}$ for $m\ge1$. Confirmed as algebra. The passages never define "$\mathop{\mathrm{tr}}(W^3)$". If it means $\mathop{\mathrm{tr}}(M^3)=p_3(\mu)$ at $\lVert M\rVert_F=1$, it agrees with section 8's $p_3(\mu)=A$. That the record's closed form is correct in its own context is outside this brief. The support on file is "checked to be identically zero difference", and the hand reduction above follows the displayed expressions.
 
 ## 10. Passage F against Passage A (brief item 10)
 
@@ -229,7 +229,7 @@ The Lean proofs were not built, because building them would be computation. I au
 
 - **Candidate 2** (Li's Theorem 1.8 gives the spectrum of $\mathring R$, not that of $\mathring W$). Withdrawn at step 3: the shift by $-c$ via $\mathring Gh=h$ and the scale $s$ reproduce the stated spectrum on the same eigenspaces, and Passage D writes out that shift. Recorded in section 7b.
 - **Candidate 3** ("exactly three eigenvalues" without an argument that they are distinct). Withdrawn at step 3: the displayed values $mA>0>-(m-1)A>-2m(m-1)A$ exhibit distinctness at $m\ge2$ by inspection, and Lean's `spec_strict_order` types it. Recorded in section 4.
-- **Candidate 4** ($\mathring Wh$ may leave $S^2_0$, so Li's projection $\pi$ would be needed). Withdrawn at step 2: $\operatorname{tr}\mathring Wh=(1-m)(t_1+t_2)-c\operatorname{tr}h=0$ for every $h\in S^2_0$, so no failure can be exhibited. Recorded in section 3.
+- **Candidate 4** ($\mathring Wh$ may leave $S^2_0$, so Li's projection $\pi$ would be needed). Withdrawn at step 2: $\mathop{\mathrm{tr}}\mathring Wh=(1-m)(t_1+t_2)-c\mathop{\mathrm{tr}}h=0$ for every $h\in S^2_0$, so no failure can be exhibited. Recorded in section 3.
 
 Candidate 1 (the normalisation) survives and is graded HYPOTHESIS-DEBT in section 1.
 

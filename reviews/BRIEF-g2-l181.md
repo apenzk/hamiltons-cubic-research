@@ -9,7 +9,7 @@
 ## Conventions and constants, fixed once
 
 - $\mathcal W_n$ is the space of algebraic Weyl tensors on $\mathbb R^n$: the Riemann symmetries, the first Bianchi identity, and total trace-freeness $\sum_bW_{abcb}=0$. **It is a linear subspace, so $0\in\mathcal W_n$.**
-- $\Lambda^2\mathbb R^n$ carries the inner product making $\{f_a\wedge f_b\}_{a<b}$ orthonormal; a $2$-form is also read as a skew matrix, and $\lVert\omega\rVert^2=-\tfrac12\operatorname{tr}(\omega^2)$.
+- $\Lambda^2\mathbb R^n$ carries the inner product making $\{f_a\wedge f_b\}_{a<b}$ orthonormal; a $2$-form is also read as a skew matrix, and $\lVert\omega\rVert^2=-\tfrac12\mathop{\mathrm{tr}}(\omega^2)$.
 - $W$ acts self-adjointly on $\Lambda^2$, and **in spectral form $W=\sum_i\lambda_i\,\omega_i\otimes\omega_i$** over an orthonormal eigenbasis, $\omega\otimes\omega$ meaning $\eta\mapsto\langle\omega,\eta\rangle\omega$. The sum runs over the **nonzero** eigenvalues, $r$ of them.
 - **The conjecture's range is $n\ge12$**, its threshold is $\sqrt{3/2}=1.224745$, $\theta_0(12)=1.236033$, and the crossover the record watches is $n=6+2\sqrt7$. **None of these should appear in the proof; say so if one does.**
 
@@ -23,9 +23,9 @@
 
 Fix an orthogonal decomposition $\mathbb R^n=P_1\oplus\dots\oplus P_m\oplus P_0$ with each $P_j$ a plane, and let $\varepsilon_j$ be the unit area-form of $P_j$. Call $W\in\mathcal W_n$ **simultaneously block-diagonal** for this splitting when every eigen-$2$-form with nonzero eigenvalue is a real combination of the $\varepsilon_j$. **Then $W=0$.**
 
-**Proof as written.** Write $\omega_i=\sum_{j=1}^mM_{ij}\varepsilon_j$ for the $r$ eigenforms with $\lambda_i\ne0$, and $\Lambda=\operatorname{diag}(\lambda)$. Orthonormality of the $\omega_i$ is $MM^{\mathsf T}=I_r$, the $\varepsilon_j$ being orthonormal.
+**Proof as written.** Write $\omega_i=\sum_{j=1}^mM_{ij}\varepsilon_j$ for the $r$ eigenforms with $\lambda_i\ne0$, and $\Lambda=\mathop{\mathrm{diag}}(\lambda)$. Orthonormality of the $\omega_i$ is $MM^{\mathsf T}=I_r$, the $\varepsilon_j$ being orthonormal.
 
-*Ricci is the diagonal.* As a skew matrix $\varepsilon_j$ is supported on $P_j$, so $\omega_i\omega_i^{\mathsf T}$ is block-diagonal with $M_{ij}^2\,\mathrm{Id}_{P_j}$ on the $j$-th plane. Given A then reads $\sum_i\lambda_iM_{ij}^2=0$ for each $j$, which is $\operatorname{diag}(M^{\mathsf T}\Lambda M)=0$.
+*Ricci is the diagonal.* As a skew matrix $\varepsilon_j$ is supported on $P_j$, so $\omega_i\omega_i^{\mathsf T}$ is block-diagonal with $M_{ij}^2\,\mathrm{Id}_{P_j}$ on the $j$-th plane. Given A then reads $\sum_i\lambda_iM_{ij}^2=0$ for each $j$, which is $\mathop{\mathrm{diag}}(M^{\mathsf T}\Lambda M)=0$.
 
 *Bianchi is the off-diagonal.* $\varepsilon_j\wedge\varepsilon_j=0$, so $\omega_i\wedge\omega_i=2\sum_{j<k}M_{ij}M_{ik}\,\varepsilon_j\wedge\varepsilon_k$, and the $\varepsilon_j\wedge\varepsilon_k$ are linearly independent in $\Lambda^4$. Given B then reads $\sum_i\lambda_iM_{ij}M_{ik}=0$ for each $j<k$, which is $(M^{\mathsf T}\Lambda M)_{j\ne k}=0$.
 

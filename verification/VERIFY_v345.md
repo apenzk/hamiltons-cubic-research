@@ -21,8 +21,8 @@
 
 - $\mathcal W_n$ algebraic Weyl tensors as symmetric operators on $\Lambda^2\mathbb R^n\cong\mathfrak{so}(n)$, $N=n(n-1)/2$, orthonormal eigenbasis $v_k$ with eigenvalues $\lambda_k$, $c_{abc}=\langle[v_a,v_b],v_c\rangle$, $T_{abc}=c_{abc}^2\ge0$ totally symmetric.
 - $g_k=\sum_{\alpha\beta}(\lambda_\alpha-\lambda_\beta)^2T_{k\alpha\beta}$, $\mu:=\sum_kg_k\,\delta_{\lambda_k}$ the $g$-distribution, $m_j=\sum_k\lambda_k^jg_k$, $G_2=m_2$.
-- $P(W)=\langle W,W^2+W^\#\rangle$, and at a unit critical point $\theta=P(W)$. The "cubic identity" is read as $\sum_{kab}\lambda_k\lambda_a\lambda_bT_{kab}=2\operatorname{tr}(WW^\#)$, which is what makes $m_1=-4P(W)$ come out, and which I checked against the $n=4$ example of §6.
-- $\operatorname{tr}W=0$ on $\mathcal W_n$ (zero scalar curvature), so $W\ne0$ gives $\lambda_{\min}<0<\lambda_{\max}$.
+- $P(W)=\langle W,W^2+W^\#\rangle$, and at a unit critical point $\theta=P(W)$. The "cubic identity" is read as $\sum_{kab}\lambda_k\lambda_a\lambda_bT_{kab}=2\mathop{\mathrm{tr}}(WW^\#)$, which is what makes $m_1=-4P(W)$ come out, and which I checked against the $n=4$ example of §6.
+- $\mathop{\mathrm{tr}}W=0$ on $\mathcal W_n$ (zero scalar curvature), so $W\ne0$ gives $\lambda_{\min}<0<\lambda_{\max}$.
 - $\mathcal W_n=0$ for $n\le3$, so the smallest admissible dimension is $n=4$, $N=6$.
 - In $n=4$, $\mathfrak{so}(4)=\Lambda^2_+\oplus\Lambda^2_-$ with both summands ideals isomorphic to $\mathfrak{so}(3)$, so $c_{abc}=0$ unless $a,b,c$ lie in one summand, and $W\in\mathcal W_4$ exactly when $W=W_+\oplus W_-$ with $W_\pm$ trace-free symmetric on $\Lambda^2_\pm$. Relation (A) with $n=4$ then forces $T_{123}=2$ inside a summand.
 
@@ -40,7 +40,7 @@
 | L109 (given) | $T\ge0$, row marginal (A) | each $g_\gamma$ | yes | not used by L113, and it contradicts claim 6 |
 | Post F42 | the census (at least two of $p,q,r\le1$ pinned) | the "pinned data" | its conclusion is withdrawn (Passage D) | imported by name as the base of an "extension" |
 | feasible_iff | Fin N nonempty, $0<c$ | $c=4(n-1)$ | yes for $n\ge2$ | all used |
-| feasible_iff_theta | $2\le n$, $0\le\theta$, $\inf\lambda\le0$, $0\le\sup\lambda$ | $\lambda$ = spectrum | $\inf\le0\le\sup$ from $\operatorname{tr}W=0$, $\theta\ge0$ only at nonnegative critical points | all used: hmin in the absolute value, hθ and hmax and hn in the reverse direction |
+| feasible_iff_theta | $2\le n$, $0\le\theta$, $\inf\lambda\le0$, $0\le\sup\lambda$ | $\lambda$ = spectrum | $\inf\le0\le\sup$ from $\mathop{\mathrm{tr}}W=0$, $\theta\ge0$ only at nonnegative critical points | all used: hmin in the absolute value, hθ and hmax and hn in the reverse direction |
 | reachable_convex | hα, hα' | α | n/a | **unused** by its proof (`rw` with linearity alone) |
 
 ## 1. Is the bold sentence a proposition (GAP)
@@ -51,7 +51,7 @@
 
 **Two readings.**
 - *Tautological reading.* A pinned conclusion is any statement in $(\lambda,\theta,n)$. Once every free moment is eliminated, what remains is in those variables by construction, so the sentence is empty. Every bound on $\theta$ in terms of the spectrum, including any that Jacobi or Bianchi might one day give, is "pinned" in this sense.
-- *Substantive reading.* Fix $\lambda$ and $\theta$ with $\lVert W\rVert=1$. Every conclusion in $(\lambda,\theta)$ that follows from "$\mu\ge0$, $\operatorname{supp}\mu\subseteq\{\lambda_k\}$, $m_0=4(n-1)$, $m_1=-4\theta$", with $m_2,m_3,\dots$ existentially eliminated, is implied by $-(n-1)\lambda_{\max}\le\theta\le(n-1)\lvert\lambda_{\min}\rvert$.
+- *Substantive reading.* Fix $\lambda$ and $\theta$ with $\lVert W\rVert=1$. Every conclusion in $(\lambda,\theta)$ that follows from "$\mu\ge0$, $\mathop{\mathrm{supp}}\mu\subseteq\{\lambda_k\}$, $m_0=4(n-1)$, $m_1=-4\theta$", with $m_2,m_3,\dots$ existentially eliminated, is implied by $-(n-1)\lambda_{\max}\le\theta\le(n-1)\lvert\lambda_{\min}\rvert$.
 
 **The substantive reading is true, and its proof is not on file in Passage A.** What would have to be written is this paragraph. For fixed $\lambda$, let $F$ be the set of $(m_0,m_1)$ realised by some $g\ge0$ on the atoms $\lambda_k$. By feasible_iff, $F=\{\lambda_{\min}m_0\le m_1\le\lambda_{\max}m_0\}$. Every $(m_0,m_1)\in F$ is realised by an actual $g$ (the two-atom witness), and that $g$ has some $m_2,m_3,\dots$. So any system of inequalities valid for all $g\ge0$ on the atoms, whatever number of free moments it involves, is satisfied by a completion of every point of $F$, and its projection to $(m_0,m_1)$ contains $F$. The projection is contained in $F$ because $F$ is itself a consequence. Hence the projection equals $F$.
 
@@ -62,9 +62,9 @@
 ## 2. Positivity, support, $m_0$, $m_1$, and whether (C) enters (CONFIRMED, wording corrected)
 
 - **Positivity.** $g_k=\sum_{\alpha\beta}(\lambda_\alpha-\lambda_\beta)^2T_{k\alpha\beta}\ge0$ from $T=c^2\ge0$ alone, equivalently from $g_k=\lVert[\mathrm{ad}(v_k),W]\rVert^2$ (Prop 1.7 with $L=v_k$). No relation among (A), (B), (C) is used, and criticality is not used.
-- **Support.** $\operatorname{supp}\mu\subseteq\{\lambda_k\}\subseteq[\lambda_{\min},\lambda_{\max}]$ by the definition of $\mu$.
+- **Support.** $\mathop{\mathrm{supp}}\mu\subseteq\{\lambda_k\}\subseteq[\lambda_{\min},\lambda_{\max}]$ by the definition of $\mu$.
 - **$m_0$.** $m_0=2\sum_a\lambda_a^2\sum_{kb}T_{kab}-2\sum_a\lambda_a\sum_{bk}\lambda_bT_{abk}=2\cdot2(n-2)\lVert W\rVert^2-2\sum_a\lambda_a(-2\lambda_a)=4(n-1)\lVert W\rVert^2$. Uses (A) and (B), not the cubic identity.
-- **$m_1$.** $m_1=2\sum_a\lambda_a^2\sum_{kb}\lambda_kT_{akb}-2\sum\lambda_k\lambda_a\lambda_bT_{kab}=-4\operatorname{tr}W^3-4\operatorname{tr}(WW^\#)=-4P(W)$. Uses (B) and the cubic identity, not (A).
+- **$m_1$.** $m_1=2\sum_a\lambda_a^2\sum_{kb}\lambda_kT_{akb}-2\sum\lambda_k\lambda_a\lambda_bT_{kab}=-4\mathop{\mathrm{tr}}W^3-4\mathop{\mathrm{tr}}(WW^\#)=-4P(W)$. Uses (B) and the cubic identity, not (A).
 - **(C).** Enters neither. It first enters $m_2=2\sum_{ka}\lambda_k^2\lambda_a^2\rho_{ka}-2\sum_k\lambda_k^2\sum_{ab}\lambda_a\lambda_bT_{kab}$, where the second term is $-4\sum_k\lambda_k^3(\theta-\lambda_k)$ by (C) and the first, with $\rho_{ka}=\sum_bT_{kab}$, is the free content. This agrees with Passage B's "all free content sits at $G_2$ and above".
 - **Wording.** Positivity is a consequence of $T\ge0$, not of the spectrum. The values $m_0,m_1$ are functions of $(\lVert W\rVert,P(W))$, and $P(W)$ is a spectral function only in the sense that $\theta$ is carried as a parameter. The charitable reading, "positivity and support impose nothing that depends on $W$ beyond $(\lambda,\theta)$", is correct, so the claim is CONFIRMED under that reading, and the sentence should say it.
 
@@ -101,11 +101,11 @@ A statement about inequalities needs a set of conclusions or the feasible set th
 
 **The counter-source on the table.** Passage E, L109: $g_\gamma\le2(n-2)(\lambda_{\max}-\lambda_{\min})^2$. Following the step's own algebra: $g_\gamma=\sum_{\alpha\beta}(\lambda_\alpha-\lambda_\beta)^2T_{\gamma\alpha\beta}\le(\lambda_{\max}-\lambda_{\min})^2\sum_{\alpha\beta}T_{\gamma\alpha\beta}=2(n-2)(\lambda_{\max}-\lambda_{\min})^2$. It uses $T\ge0$, (A) at row $\gamma$, and Prop 1.7 (the formula for $g_\gamma$, whose hypotheses, orthonormal eigenbasis and $L=v_\gamma\in\mathfrak{so}(n)$, hold). It uses neither Jacobi nor Bianchi, and it constrains $g$ through row data that positivity and support do not see.
 
-**Closed-form witness that the cap is not implied by positivity and support, and sharpens the conclusion.** Take $n=4$, $W_+=\operatorname{diag}(s,0,-s)$ on an oriented orthonormal basis of $\Lambda^2_+$, $W_-=0$, $s=1/\sqrt2$. Then $W\in\mathcal W_4$, $\lVert W\rVert^2=2s^2=1$, the spectrum is $(s,0,-s,0,0,0)$, $\lambda_{\min}=-s$ is simple, $\lambda_{\max}=s$.
+**Closed-form witness that the cap is not implied by positivity and support, and sharpens the conclusion.** Take $n=4$, $W_+=\mathop{\mathrm{diag}}(s,0,-s)$ on an oriented orthonormal basis of $\Lambda^2_+$, $W_-=0$, $s=1/\sqrt2$. Then $W\in\mathcal W_4$, $\lVert W\rVert^2=2s^2=1$, the spectrum is $(s,0,-s,0,0,0)$, $\lambda_{\min}=-s$ is simple, $\lambda_{\max}=s$.
 - Cap: $2(n-2)(2s)^2=16s^2=8$. Mass: $m_0=4(n-1)=12$.
 - The vector $g^\ast=(0,0,12,0,0,0)$ satisfies $g^\ast\ge0$, support in the spectrum, $m_0=12$, $m_1=-12s=-4\theta$ at $\theta=3s=(n-1)\lvert\lambda_{\min}\rvert$. So it is admissible to positivity, support and the pinned moments at the L107 extremum, and it violates the cap, $12>8$.
 - With the cap, $\min\sum_k\lambda_kg_k$ over $0\le g_k\le8$, $\sum g_k=12$ is $8\cdot(-s)+4\cdot0=-8s$, so $\theta\le2s=\sqrt2$, strictly below L107's $3s=3/\sqrt2$.
-- Consistency check that the witness respects L109: with $T_{123}=2$ inside $\Lambda^2_+$, $g=(4(\lambda_2-\lambda_3)^2,4(\lambda_1-\lambda_3)^2,4(\lambda_1-\lambda_2)^2,0,0,0)=(2,8,2,0,0,0)$, so $\sum g=12$ ✓, $\sum\lambda g=0=-4P(W)$ ✓ ($P=\operatorname{tr}W^3+6\lambda_1\lambda_2\lambda_3=0$), and $g_2=8$ meets the cap with equality.
+- Consistency check that the witness respects L109: with $T_{123}=2$ inside $\Lambda^2_+$, $g=(4(\lambda_2-\lambda_3)^2,4(\lambda_1-\lambda_3)^2,4(\lambda_1-\lambda_2)^2,0,0,0)=(2,8,2,0,0,0)$, so $\sum g=12$ ✓, $\sum\lambda g=0=-4P(W)$ ✓ ($P=\mathop{\mathrm{tr}}W^3+6\lambda_1\lambda_2\lambda_3=0$), and $g_2=8$ meets the cap with equality.
 
 The cap also bounds $G_2$ differently from positivity and support (at this spectrum they allow $G_2=12s^2$ with all mass at $-s$, which the cap forbids), so it is a source of exactly the kind the sentence says only Jacobi and Bianchi can supply.
 
@@ -117,7 +117,7 @@ With $c=4(n-1)>0$ and $s=-4\theta$, feasible_iff gives feasibility iff $4(n-1)\l
 
 $$-(n-1)\lambda_{\max}\ \le\ \theta\ \le\ (n-1)\lvert\lambda_{\min}\rvert\qquad(\lambda_{\min}\le0).$$
 
-- **Sign conditions used.** $n\ge2$ for $c>0$. $\lambda_{\min}\le0$ to write $-\lambda_{\min}=\lvert\lambda_{\min}\rvert$, automatic from $\operatorname{tr}W=0$. $\theta\ge0$ together with $\lambda_{\max}\ge0$ to discharge the left inequality. $\lVert W\rVert=1$ for $m_0=4(n-1)$.
+- **Sign conditions used.** $n\ge2$ for $c>0$. $\lambda_{\min}\le0$ to write $-\lambda_{\min}=\lvert\lambda_{\min}\rvert$, automatic from $\mathop{\mathrm{tr}}W=0$. $\theta\ge0$ together with $\lambda_{\max}\ge0$ to discharge the left inequality. $\lVert W\rVert=1$ for $m_0=4(n-1)$.
 - **"Exactly when $\theta\le(n-1)\lvert\lambda_{\min}\rvert$" fails without $\theta\ge0$.** Located: brief item 7 phrasing, and the hypothesis hθ in feasible_iff_theta, which is what saves the Lean. Closed form: at the §6 spectrum with $n=4$ and $\theta=-3$, the right side $-3\le3/\sqrt2$ holds, and feasibility needs $-4\theta=12\le12\lambda_{\max}=12/\sqrt2$, false. Charitable reading: at a genuine $W$ the system is always feasible (the actual $g$ witnesses it), so the equivalence matters only for abstract $(\lambda,\theta)$. The abstract equivalence is what is claimed, so the reading does not rescue it.
 - **The negative-$\theta$ side is L107 for $-W$.** $Q(-W)=Q(W)=(-\theta)(-W)$, so $-W$ is critical with $\theta'=-\theta$ and spectrum $-\lambda$. The left inequality for $-W$ is $\theta\le(n-1)\lvert\lambda_{\min}\rvert$ for $W$. Negative-$\theta$ critical points exist whenever positive ones do, so the hypothesis $\theta\ge0$ has content.
 - **Against Passage C.** The system implies L107 at every unit-norm $W$ with $\theta:=P(W)$, criticality unused, which is what line 566 says, read on the unit sphere (§9).
@@ -133,11 +133,11 @@ $$-(n-1)\lambda_{\max}\ \le\ \theta\ \le\ (n-1)\lvert\lambda_{\min}\rvert\qquad(
 
 None mentions $W$, $T$, $g$, moments of the $g$-distribution, a pinned class or elimination.
 
-**"A convex image cannot separate a non-convex class from its complement".** The phrase appears in no declaration as quoted (docstrings were removed), so it is untyped. Its truth depends on the reading. If it means "a convex set containing a non-convex class $K$ meets $K^c$", it is true: the convex set contains $\operatorname{conv}K\supsetneq K$. If it means "a linear map sends $K$ and $K^c$ to disjoint sets", it is false: $K=\{0,2\}\subset\mathbb R$ with the identity map. Neither reading is stated on the record.
+**"A convex image cannot separate a non-convex class from its complement".** The phrase appears in no declaration as quoted (docstrings were removed), so it is untyped. Its truth depends on the reading. If it means "a convex set containing a non-convex class $K$ meets $K^c$", it is true: the convex set contains $\mathop{\mathrm{conv}}K\supsetneq K$. If it means "a linear map sends $K$ and $K^c$ to disjoint sets", it is false: $K=\{0,2\}\subset\mathbb R$ with the identity map. Neither reading is stated on the record.
 
 **L113Statement.lean (CONFIRMED AS ALGEBRA).**
 - Feasible and feasible_iff: for nonempty Fin N and $c>0$, a nonnegative $g$ with $\sum g=c$ and $\sum\lambda g=s$ exists iff $c\min\lambda\le s\le c\max\lambda$. I followed the proof. The forward direction is two monotone sum bounds. The reverse handles $\min=\max$ with a one-atom witness, where $s=c\min$ is forced by the two inequalities. Otherwise it uses the two-atom witness $t=(s-c\lambda_{\min})/(\lambda_{\max}-\lambda_{\min})\in[0,c]$ at the argmax and $c-t$ at the argmin, with $\lambda_{\max}t+\lambda_{\min}(c-t)=s$. The mathematics is correct. I did not compile it.
-- feasible_iff_theta: the §7 equivalence with $2\le n$, $0\le\theta$, $\inf\lambda\le0\le\sup\lambda$, all four used. $N$ and $n$ are independent and the sign hypotheses are assumed rather than derived from $\operatorname{tr}W=0$. Both are harmless, since the theorem is universal in $N$.
+- feasible_iff_theta: the §7 equivalence with $2\le n$, $0\le\theta$, $\inf\lambda\le0\le\sup\lambda$, all four used. $N$ and $n$ are independent and the sign hypotheses are assumed rather than derived from $\mathop{\mathrm{tr}}W=0$. Both are harmless, since the theorem is universal in $N$.
 - moment, moment_add, moment_smul: `moment` matches $m_j=\sum_k\lambda_k^j\sum_{ab}(\lambda_a-\lambda_b)^2T_{kab}$, and it is additive and homogeneous in $T$. True, and nothing uses it towards the claim.
 - The example: $g=(2,2)$ for $\lambda=(1,-1)$, $c=4$, $s=0$. True.
 
@@ -145,7 +145,7 @@ None mentions $W$, $T$, $g$, moments of the $g$-distribution, a pinned class or 
 
 ## 9. The boundary (CONFIRMED, unit norm made explicit)
 
-- **$\lVert W\rVert\ne1$.** $m_0=4(n-1)\lVert W\rVert^2$, so the system with $4(n-1)$ is the unit-sphere system. The scale-free consequence is $P(W)\le(n-1)\lVert W\rVert^2\lvert\lambda_{\min}\rvert$, homogeneous of degree 3. Example: $n=4$, $W_+=\operatorname{diag}(2,-1,-1)t$, $W_-=0$ gives $g=(0,36t^2,36t^2,0,0,0)$, $m_0=72t^2=4\cdot3\cdot6t^2$ ✓, $m_1=-72t^3$, $P=18t^3$, and $(n-1)\lVert W\rVert^2\lvert\lambda_{\min}\rvert=3\cdot6t^2\cdot t=18t^3$, equality at every scale. At $6t^2=4$ (norm 2) the unscaled form $P\le3\lvert\lambda_{\min}\rvert$ reads $18t^3\le3t$, false.
+- **$\lVert W\rVert\ne1$.** $m_0=4(n-1)\lVert W\rVert^2$, so the system with $4(n-1)$ is the unit-sphere system. The scale-free consequence is $P(W)\le(n-1)\lVert W\rVert^2\lvert\lambda_{\min}\rvert$, homogeneous of degree 3. Example: $n=4$, $W_+=\mathop{\mathrm{diag}}(2,-1,-1)t$, $W_-=0$ gives $g=(0,36t^2,36t^2,0,0,0)$, $m_0=72t^2=4\cdot3\cdot6t^2$ ✓, $m_1=-72t^3$, $P=18t^3$, and $(n-1)\lVert W\rVert^2\lvert\lambda_{\min}\rvert=3\cdot6t^2\cdot t=18t^3$, equality at every scale. At $6t^2=4$ (norm 2) the unscaled form $P\le3\lvert\lambda_{\min}\rvert$ reads $18t^3\le3t$, false.
 - **Repeated eigenvalues, simple $\lambda_{\min}$.** The feasibility interval depends only on the values $\lambda_{\min},\lambda_{\max}$, and the two-atom witness sits on one index of each. The case $\lambda_{\min}=\lambda_{\max}$ forces $W=0$ on $\mathcal W_n$, which is off the unit sphere. Simple $\lambda_{\min}$ is exactly where the L109 cap bites (§6), since the extremal mass $4(n-1)$ must sit on one atom.
 - **$\ker W\ne0$.** Zero eigenvalues are atoms at $0$ and change nothing. Padding $W\in\mathcal W_n$ by zero to $\mathbb R^{n+1}$ keeps Ricci and Bianchi, so it gives an element of $\mathcal W_{n+1}$ with the same $\lambda_{\min}$, while (A) becomes $2(n-1)$ and the bound loosens to $\theta\le n\lvert\lambda_{\min}\rvert$ in the padded normalisation. All relations are stated in the ambient $n$, so nothing breaks.
 - **Small $n$.** $n=4$ is the smallest admissible dimension, and the §6 and §9 examples are at $n=4$. The Lean hypothesis $2\le n$ admits $n=2,3$, where $\mathcal W_n=0$ and the application is vacuous.
@@ -153,7 +153,7 @@ None mentions $W$, $T$, $g$, moments of the $g$-distribution, a pinned class or 
 
 ## Quantifier order and scope
 
-- The correct order is $\forall n\ge4$, $\forall\lambda$ (a spectrum with $\operatorname{tr}=0$, $\sum\lambda^2=1$), $\forall\theta\ge0$: [$\exists g\ge0$ on the atoms with $m_0=4(n-1)$, $m_1=-4\theta$] $\iff\theta\le(n-1)\lvert\lambda_{\min}\rvert$. The projection statement of §1 then quantifies over all inequality families for that fixed $\lambda$. Passage A's "any pair … can only return" has the right shape once "pair" becomes "family" and the class of admissible inequalities is fixed.
+- The correct order is $\forall n\ge4$, $\forall\lambda$ (a spectrum with $\mathop{\mathrm{tr}}=0$, $\sum\lambda^2=1$), $\forall\theta\ge0$: [$\exists g\ge0$ on the atoms with $m_0=4(n-1)$, $m_1=-4\theta$] $\iff\theta\le(n-1)\lvert\lambda_{\min}\rvert$. The projection statement of §1 then quantifies over all inequality families for that fixed $\lambda$. Passage A's "any pair … can only return" has the right shape once "pair" becomes "family" and the class of admissible inequalities is fixed.
 - Passage A does not say whether it quantifies over critical points or all unit $W$. Since (C) does not enter $m_0,m_1$, it holds for all unit $W$ with $\theta:=P(W)$.
 - A claim proven on a subfamily and stated in general: F42's scope (all pinned relaxations) against L113's scope ($g$-moments). L113 is the narrower claim, which is why "extension" fails (§5).
 
@@ -168,8 +168,8 @@ None mentions $W$, $T$, $g$, moments of the $g$-distribution, a pinned class or 
 
 ## The falsifying object, and the search
 
-- **For the substantive bold claim (§1):** a spectrum $\lambda$ and $\theta$ in $[-(n-1)\lambda_{\max},(n-1)\lvert\lambda_{\min}\rvert]$ for which no nonnegative $g$ on the atoms has $m_0=4(n-1)$, $m_1=-4\theta$. The two-atom witness excludes it for every $\lambda$, so no diagonal, padded, sphere-product or $\mathbb{CP}^m$ Weyl tensor can falsify it. The search is closed by the argument, not by examples. I checked the two $n=4$ self-dual examples ($\operatorname{diag}(s,0,-s)$, $\operatorname{diag}(2,-1,-1)t$) and the padded case by hand.
-- **For "the only sources … single open door" (§6):** a constraint on $g$ drawn from the record's non-Jacobi data that is not implied by positivity and support and strictly sharpens the conclusion. **Found:** the L109 row cap at $n=4$, $W_+=\operatorname{diag}(1,0,-1)/\sqrt2$, $W_-=0$, giving $\theta\le\sqrt2$ against $3/\sqrt2$.
+- **For the substantive bold claim (§1):** a spectrum $\lambda$ and $\theta$ in $[-(n-1)\lambda_{\max},(n-1)\lvert\lambda_{\min}\rvert]$ for which no nonnegative $g$ on the atoms has $m_0=4(n-1)$, $m_1=-4\theta$. The two-atom witness excludes it for every $\lambda$, so no diagonal, padded, sphere-product or $\mathbb{CP}^m$ Weyl tensor can falsify it. The search is closed by the argument, not by examples. I checked the two $n=4$ self-dual examples ($\mathop{\mathrm{diag}}(s,0,-s)$, $\mathop{\mathrm{diag}}(2,-1,-1)t$) and the padded case by hand.
+- **For "the only sources … single open door" (§6):** a constraint on $g$ drawn from the record's non-Jacobi data that is not implied by positivity and support and strictly sharpens the conclusion. **Found:** the L109 row cap at $n=4$, $W_+=\mathop{\mathrm{diag}}(1,0,-1)/\sqrt2$, $W_-=0$, giving $\theta\le\sqrt2$ against $3/\sqrt2$.
 - **For "extension of F42" (§5):** the withdrawal note at fence-posts.md line 423 together with the strict gap above.
 
 ## Overall verdict: GAP

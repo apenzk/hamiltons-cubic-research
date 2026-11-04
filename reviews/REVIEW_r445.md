@@ -38,9 +38,9 @@ I searched [findings/](../findings/) for every recorded upper bound on $\sup_{\l
 
 **So the answer to the brief's question is no**: at $n=12$, $1+\sqrt{10}=4.162$ is *not* below every recorded bound. Post F10's LP sits at $2.53$ and the deficiency LP at $2.840$.
 
-**And post F10 is not merely a stronger number, it is a fence post against exactly this route.** Its title is *"Marginal relaxations of the bracket tensor cannot bound $P$"*, and its content is that imposing nonnegativity, total symmetry, the row marginal $2(n-2)$, the pair cap $2$ **and** $\operatorname{tr}(W^\#)=-1$ still leaves an optimum near $0.80\sqrt{n-2}$. L143's own summary sentence (*"The two marginals are the whole of its input, which is why it stops at $O(\sqrt n)$"*), is post F10's conclusion, discovered a second time by hand and landing $25\%$ above post F10's measured constant.
+**And post F10 is not merely a stronger number, it is a fence post against exactly this route.** Its title is *"Marginal relaxations of the bracket tensor cannot bound $P$"*, and its content is that imposing nonnegativity, total symmetry, the row marginal $2(n-2)$, the pair cap $2$ **and** $\mathop{\mathrm{tr}}(W^\#)=-1$ still leaves an optimum near $0.80\sqrt{n-2}$. L143's own summary sentence (*"The two marginals are the whole of its input, which is why it stops at $O(\sqrt n)$"*), is post F10's conclusion, discovered a second time by hand and landing $25\%$ above post F10's measured constant.
 
-**The domination is logical, not just numerical.** L143's feasible set is a *superset* of the F10 LP's (it drops $\operatorname{tr}(W^\#)=-1$), and $\lambda_{\max}p+B_5\ge P$ holds pointwise on that set, so $\mathrm{LP}(n)\le1+\sqrt{n-2}$ is forced. L143 cannot be stronger than post F10 anywhere; it can only be a closed form where post F10 has a table.
+**The domination is logical, not just numerical.** L143's feasible set is a *superset* of the F10 LP's (it drops $\mathop{\mathrm{tr}}(W^\#)=-1$), and $\lambda_{\max}p+B_5\ge P$ holds pointwise on that set, so $\mathrm{LP}(n)\le1+\sqrt{n-2}$ is forced. L143 cannot be stronger than post F10 anywhere; it can only be a closed form where post F10 has a table.
 
 **What survives the screen, and it is real.** Post F10's values are per-$n$ measurements and the law $0.80\sqrt{n-2}$ is a fit; L143 is a proved closed form valid at every $n$, and this programme is on an analysis-only footing precisely because derivations outlast figures. **That is L143's whole residual value, and the lemma never claims it.**
 
@@ -68,7 +68,7 @@ The paragraph compares L143 against $n-1$ and against $1.5449$ only. It omits po
 
 $$P=\langle\lambda,M(\lambda)\lambda\rangle,\qquad M(\lambda)_{\alpha\beta}=\delta_{\alpha\beta}\lambda_\alpha+\tfrac12\sum_\gamma T_{\alpha\beta\gamma}\lambda_\gamma,\qquad\text{hence}\qquad\theta\le\lambda_{\max}\big(M(\lambda)\big).$$
 
-Write $M=\operatorname{diag}(\lambda)+\tfrac12u$ with $u_{\alpha\beta}=\sum_\gamma T_{\alpha\beta\gamma}\lambda_\gamma$. Since $T$ vanishes whenever two indices coincide ([conventions.md](../findings/conventions.md)), $u$ is **hollow**, so the two summands are Frobenius-orthogonal and $\lVert M\rVert_F^2=1+\tfrac14\sum_{\alpha\beta}u_{\alpha\beta}^2$. Cauchy–Schwarz with the weights $T_{\alpha\beta\cdot}\ge0$, then the pair cap, then the Killing row mass:
+Write $M=\mathop{\mathrm{diag}}(\lambda)+\tfrac12u$ with $u_{\alpha\beta}=\sum_\gamma T_{\alpha\beta\gamma}\lambda_\gamma$. Since $T$ vanishes whenever two indices coincide ([conventions.md](../findings/conventions.md)), $u$ is **hollow**, so the two summands are Frobenius-orthogonal and $\lVert M\rVert_F^2=1+\tfrac14\sum_{\alpha\beta}u_{\alpha\beta}^2$. Cauchy–Schwarz with the weights $T_{\alpha\beta\cdot}\ge0$, then the pair cap, then the Killing row mass:
 
 $$u_{\alpha\beta}^2\le\Big(\sum_\gamma T_{\alpha\beta\gamma}\Big)\Big(\sum_\gamma T_{\alpha\beta\gamma}\lambda_\gamma^2\Big)\le2\sum_\gamma T_{\alpha\beta\gamma}\lambda_\gamma^2,\qquad \sum_{\alpha\beta}u_{\alpha\beta}^2\le2\sum_\gamma\lambda_\gamma^2\sum_{\alpha\beta}T_{\alpha\beta\gamma}=4(n-2).$$
 
@@ -78,7 +78,7 @@ $$\theta\;\le\;\lambda_{\max}(M)\;\le\;\lVert M\rVert_2\;\le\;\lVert M\rVert_F\;
 
 **Same two marginals, same normalisation, no new instrument, and strictly stronger at every $n$**, since $(1+\sqrt{n-2})^2=(n-1)+2\sqrt{n-2}$. At $n=12$: $3.317$ against $4.162$.
 
-**The relation between the two is exact and diagnostic.** Applying the *triangle* inequality to the same split gives $\lambda_{\max}(M)\le\lambda_{\max}+\tfrac12\lVert u\rVert_2\le1+\sqrt{n-2}$, which is L143 on the nose. **L143 is the triangle-inequality reading of a split whose Pythagorean reading is available for free**, because $\operatorname{diag}(\lambda)$ and $u$ are orthogonal.
+**The relation between the two is exact and diagnostic.** Applying the *triangle* inequality to the same split gives $\lambda_{\max}(M)\le\lambda_{\max}+\tfrac12\lVert u\rVert_2\le1+\sqrt{n-2}$, which is L143 on the nose. **L143 is the triangle-inequality reading of a split whose Pythagorean reading is available for free**, because $\mathop{\mathrm{diag}}(\lambda)$ and $u$ are orthogonal.
 
 *This is offered as a repair, not as a lemma of mine, it needs its own Gate 2.*
 
@@ -117,16 +117,16 @@ $P$ is a homogeneous cubic, hence odd; $\mathcal W_n$ is a linear subspace, henc
 
 I checked [second-order.md](../findings/second-order.md)'s statement of $\theta\le\lambda_{\max}p+B_5$ for hypotheses. **There are none**, no diagonality, no gradedness, no kernel-freeness, no criticality. The two ingredients are:
 
-- $\operatorname{tr}W^3=\sum_\alpha\lambda_\alpha^3\le\sum_{\lambda>0}\lambda_\alpha^3\le\lambda_{\max}\sum_{\lambda>0}\lambda_\alpha^2=\lambda_{\max}p$, pointwise;
+- $\mathop{\mathrm{tr}}W^3=\sum_\alpha\lambda_\alpha^3\le\sum_{\lambda>0}\lambda_\alpha^3\le\lambda_{\max}\sum_{\lambda>0}\lambda_\alpha^2=\lambda_{\max}p$, pointwise;
 - $\langle W,W^\#\rangle=\tfrac12\sum\lambda_\alpha\lambda_\beta\lambda_\gamma T_{\alpha\beta\gamma}\le\tfrac12\sum_\alpha\mu_\alpha\langle T_\alpha\mu,\mu\rangle\le\tfrac12\big(\sum_\alpha\langle T_\alpha\mu,\mu\rangle^2\big)^{1/2}=B_5$, the last step Cauchy–Schwarz against $\sum\mu_\alpha^2=1$, pointwise.
 
-Their sum is $P=\langle W,W^2+W^\#\rangle$ under the record's normalisation, where $\lVert W\rVert^2=\operatorname{tr}(W^2)=\sum\lambda_\alpha^2$ ([conventions.md](../findings/conventions.md)). **No borrowed quantity is used outside its domain.**
+Their sum is $P=\langle W,W^2+W^\#\rangle$ under the record's normalisation, where $\lVert W\rVert^2=\mathop{\mathrm{tr}}(W^2)=\sum\lambda_\alpha^2$ ([conventions.md](../findings/conventions.md)). **No borrowed quantity is used outside its domain.**
 
 The one transported object is $T=c'^2$ in an eigenbasis of $W$. That eigenbasis is an orthonormal basis of $\Lambda^2\mathbb R^n\cong\mathfrak{so}(n)$, and both marginals below are true in *every* orthonormal basis, so the transport is legitimate.
 
 ### Step 3, CONFIRMED
 
-$p=\sum_{\lambda>0}\lambda_\alpha^2\le\sum_\alpha\lambda_\alpha^2=1$ and $\lambda_{\max}\le\lVert\lambda\rVert_2=1$. **Correct, and close to the best available from this term alone**: $\sup\operatorname{tr}W^3\to1$ over trace-free unit spectra as $N\to\infty$, so the $1$ is nearly attained by the term it bounds even though it is nowhere near attained jointly with $B_5$.
+$p=\sum_{\lambda>0}\lambda_\alpha^2\le\sum_\alpha\lambda_\alpha^2=1$ and $\lambda_{\max}\le\lVert\lambda\rVert_2=1$. **Correct, and close to the best available from this term alone**: $\sup\mathop{\mathrm{tr}}W^3\to1$ over trace-free unit spectra as $N\to\infty$, so the $1$ is nearly attained by the term it bounds even though it is nowhere near attained jointly with $B_5$.
 
 ### Step 4, CONFIRMED, and I re-derived both marginals rather than inheriting them
 
@@ -138,9 +138,9 @@ $$\langle T_\alpha\mu,\mu\rangle=\sum_{\beta\gamma}T_{\alpha\beta\gamma}\mu_\bet
 
 $\sum_\gamma T_{\alpha\beta\gamma}$ **is** the pair cap for the pair $(\alpha,\beta)$: expanding $[v_\alpha,v_\beta]$ in the orthonormal basis gives $\lVert[v_\alpha,v_\beta]\rVert^2=\sum_\gamma c'^2_{\alpha\beta\gamma}$. **The brief's factor-2 worry (ordered versus unordered), does not bite**: both marginals are full sums over all values of the summed indices, matching [conventions.md](../findings/conventions.md)'s standing rule that sums over pairs are ordered unless stated otherwise, and matching the way the cap and the row mass are written there.
 
-**I verified the cap value $2$ independently, because a factor $\sqrt2$ here would change the result.** For unit $X\in\mathfrak{so}(n)$ with angles $s_1,s_2,\dots$ and $\sum_js_j^2=1$, $\operatorname{ad}_X$ is skew, hence normal, and its eigenvalues on $\Lambda^2$ are $i(\pm s_j\pm s_k)$; so $\lVert\operatorname{ad}_X\rVert_{\mathrm{op}}=\max_{j\ne k}(s_j+s_k)\le\sqrt2$ by Cauchy–Schwarz on two terms, giving $\lVert[v_\alpha,v_\beta]\rVert^2\le2$. **It is attained**: in $\mathfrak{so}(4)$ the self-dual pair $X=(\varphi_{12}+\varphi_{34})/\sqrt2$, $Y=(\varphi_{13}+\varphi_{42})/\sqrt2$ has $[X,Y]=(\varphi_{14}+\varphi_{23})$ of squared norm $2$. *The generic commutator estimate (Böttcher–Wenzel, or $\lVert XY\rVert_F\le\lVert X\rVert_{\mathrm{op}}\lVert Y\rVert_F$), gives only $4$ here, so the record's $2$ is doing real work and is right; a successor who re-derives it the crude way will get $1+\sqrt{2(n-2)}$ and think the lemma wrong.*
+**I verified the cap value $2$ independently, because a factor $\sqrt2$ here would change the result.** For unit $X\in\mathfrak{so}(n)$ with angles $s_1,s_2,\dots$ and $\sum_js_j^2=1$, $\mathop{\mathrm{ad}}_X$ is skew, hence normal, and its eigenvalues on $\Lambda^2$ are $i(\pm s_j\pm s_k)$; so $\lVert\mathop{\mathrm{ad}}_X\rVert_{\mathrm{op}}=\max_{j\ne k}(s_j+s_k)\le\sqrt2$ by Cauchy–Schwarz on two terms, giving $\lVert[v_\alpha,v_\beta]\rVert^2\le2$. **It is attained**: in $\mathfrak{so}(4)$ the self-dual pair $X=(\varphi_{12}+\varphi_{34})/\sqrt2$, $Y=(\varphi_{13}+\varphi_{42})/\sqrt2$ has $[X,Y]=(\varphi_{14}+\varphi_{23})$ of squared norm $2$. *The generic commutator estimate (Böttcher–Wenzel, or $\lVert XY\rVert_F\le\lVert X\rVert_{\mathrm{op}}\lVert Y\rVert_F$), gives only $4$ here, so the record's $2$ is doing real work and is right; a successor who re-derives it the crude way will get $1+\sqrt{2(n-2)}$ and think the lemma wrong.*
 
-Finally, $\sum_\beta\mu_\beta^2=1$ **is** $\lVert W\rVert=1$ in the record's convention: [conventions.md](../findings/conventions.md) fixes $\sum_\alpha\lambda_\alpha^2=\operatorname{tr}(W^2)=1$ for the operator on $\Lambda^2$. *The file's live trap here is the $n\times n$ sectional matrix $K$, where $\lVert K\rVert_F^2=2$ at a unit Weyl tensor, L143 uses the $\Lambda^2$ spectrum throughout and does not touch $K$, so the trap does not fire.*
+Finally, $\sum_\beta\mu_\beta^2=1$ **is** $\lVert W\rVert=1$ in the record's convention: [conventions.md](../findings/conventions.md) fixes $\sum_\alpha\lambda_\alpha^2=\mathop{\mathrm{tr}}(W^2)=1$ for the operator on $\Lambda^2$. *The file's live trap here is the $n\times n$ sectional matrix $K$, where $\lVert K\rVert_F^2=2$ at a unit Weyl tensor, L143 uses the $\Lambda^2$ spectrum throughout and does not touch $K$, so the trap does not fire.*
 
 ### Step 5, CONFIRMED, both uses
 
@@ -148,7 +148,7 @@ Finally, $\sum_\beta\mu_\beta^2=1$ **is** $\lVert W\rVert=1$ in the record's con
 
 **Second use.** $\sum_\alpha f_\alpha=\sum_{\alpha\beta\gamma}T_{\alpha\beta\gamma}\mu_\beta\mu_\gamma\le\sum_{\alpha\beta\gamma}T_{\alpha\beta\gamma}\mu_\beta^2=\sum_\beta\mu_\beta^2\sum_{\alpha\gamma}T_{\alpha\beta\gamma}=2(n-2)$, the middle step being the same AM–GM plus $\beta\leftrightarrow\gamma$ symmetry.
 
-**The free index is the right one.** [conventions.md](../findings/conventions.md) states the row mass as $\sum_\beta\lVert[v_\alpha,v_\beta]\rVert^2=2(n-2)$, free index $\alpha$; L143 needs it with free index $\beta$, and total symmetry of $T$ makes them the same statement. I re-derived the value: $\sum_\beta\lVert[X,v_\beta]\rVert^2=-\operatorname{tr}(\operatorname{ad}_X^2)=-B(X,X)=-(n-2)\operatorname{tr}(X^2)=2(n-2)$ for unit $X$, using the record's Killing normalisation $B(X,Y)=(n-2)\operatorname{tr}(XY)$ and $\operatorname{tr}(X^2)=-2$. **Correct.**
+**The free index is the right one.** [conventions.md](../findings/conventions.md) states the row mass as $\sum_\beta\lVert[v_\alpha,v_\beta]\rVert^2=2(n-2)$, free index $\alpha$; L143 needs it with free index $\beta$, and total symmetry of $T$ makes them the same statement. I re-derived the value: $\sum_\beta\lVert[X,v_\beta]\rVert^2=-\mathop{\mathrm{tr}}(\mathop{\mathrm{ad}}_X^2)=-B(X,X)=-(n-2)\mathop{\mathrm{tr}}(X^2)=2(n-2)$ for unit $X$, using the record's Killing normalisation $B(X,Y)=(n-2)\mathop{\mathrm{tr}}(XY)$ and $\mathop{\mathrm{tr}}(X^2)=-2$. **Correct.**
 
 Hence $\sum_\alpha f_\alpha^2\le4(n-2)$ and $B_5\le\tfrac12\sqrt{4(n-2)}=\sqrt{n-2}$, and with step 3, $\sup\lvert P\rvert\le1+\sqrt{n-2}$. **The inequality stands.**
 

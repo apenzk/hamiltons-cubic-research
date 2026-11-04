@@ -81,7 +81,7 @@ The $\mathcal D_6$ row is the one nothing on the record prints; I obtained it fr
 
 **So $\dim E(\tfrac12)\cap W^\perp=8=pq=\dim\mathcal O$: the point is Morse–Bott nondegenerate.** Three independent cross-checks, none of which was used to build the table:
 
-1. $\operatorname{tr}L_e=0$ exactly: $0-2-2+4=0$.
+1. $\mathop{\mathrm{tr}}L_e=0$ exactly: $0-2-2+4=0$.
 2. Dimensions: $9+30+45=84=\dim\mathcal W_6$.
 3. **Multiplicities reproduce [Lemma L27](../findings/nondegeneracy.md)'s summands**, including its known failure: $18$ eigenvectors at $-\mu=-\tfrac23$ against $\dim(S^2_0(\mathbb R^2)\otimes S^2_0(\mathbb R^4))=18$; $9$ at $\lambda_4=\tfrac13$ against $\dim S^2_0(\mathbb R^4)=9$; $6$ at $+\mu$ against $\dim(\Lambda^2\otimes\Lambda^2)=6$; $8$ at $\tfrac12$ against $\dim(\mathbb R^2\otimes\mathbb R^4)=8$. Summing L27's ten dimensions gives $86$, **exactly the $86$-against-$84$ over-count [Lemma L126](../findings/second-order.md) records at $p=2$**, and my table locates the surplus $2$ precisely at $S^2_0(\mathbb R^2)$, which drops out of $\mathcal W_n$.
 

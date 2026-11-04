@@ -4,7 +4,7 @@ Read on 2026-09-23: the statement and equality case of Theorem 1.1 and the surro
 
 ## Conventions
 
-$\lVert B\rVert^2=\operatorname{tr}(B^tB)=-\operatorname{tr}(B^2)$ for real skew $B$, the ordinary Frobenius norm on $\mathfrak{so}(n)$, **not** the record's $\langle X,Y\rangle=-\tfrac12\operatorname{tr}(XY)$ bivector normalisation. The factor two matters: any constant carried from Theorem 1.1 into a record computation must be converted first, and none has been.
+$\lVert B\rVert^2=\mathop{\mathrm{tr}}(B^tB)=-\mathop{\mathrm{tr}}(B^2)$ for real skew $B$, the ordinary Frobenius norm on $\mathfrak{so}(n)$, **not** the record's $\langle X,Y\rangle=-\tfrac12\mathop{\mathrm{tr}}(XY)$ bivector normalisation. The factor two matters: any constant carried from Theorem 1.1 into a record computation must be converted first, and none has been.
 
 ## Theorem 1.1, in full
 

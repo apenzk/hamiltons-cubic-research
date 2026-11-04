@@ -19,12 +19,12 @@ Log: agent_logs/r1727.log
 - In an orthonormal basis adapted to su(k) + su(k)^perp, $F(\hat C)=\tfrac12\sum C_{\alpha\beta}c_\alpha^{\gamma\delta}c_\beta^{\varepsilon\zeta}C_{\gamma\varepsilon}C_{\delta\zeta}$ is non-zero only when all six indices lie in su(k), since each is a row or column index of $\hat C$.
 - For $\alpha,\gamma,\delta$ in su(k), $c_\alpha^{\gamma\delta}=\langle[e_\gamma,e_\delta],e_\alpha\rangle$ is su(k)'s own structure constant because su(k) is closed under the bracket and carries the restricted inner product. So $F(\hat C)=F_{\mathfrak{su}(k)}(C)$ and $\lVert\hat C\rVert=\lVert C\rVert$.
 - Hypotheses used: orthonormality of the adapted basis and closure of the subalgebra. Nothing else.
-- Normalisation check: $\tfrac12\operatorname{tr}_{\mathbb R}(X^{\mathsf T}Y)=-\operatorname{Re}\operatorname{tr}_{\mathbb C}(XY)$ on u(k), which is batch 1's $-\operatorname{tr}XY$, so batch 1's slice and this one agree.
+- Normalisation check: $\tfrac12\mathop{\mathrm{tr}}_{\mathbb R}(X^{\mathsf T}Y)=-\mathop{\mathrm{Re}}\mathop{\mathrm{tr}}_{\mathbb C}(XY)$ on u(k), which is batch 1's $-\mathop{\mathrm{tr}}XY$, so batch 1's slice and this one agree.
 
 ## 2. (b) Torus invariance
 
 - $T$ (diagonal unitaries) is a $k$-torus in $SO(2k)$, whose rank is $k$, so it is maximal. It is the standard torus of rotations in the coordinate planes.
-- $\operatorname{diag}(e^{i\theta_j})=e^{i\varphi}\operatorname{diag}(e^{i(\theta_j-\varphi)})$ with $k\varphi=\sum\theta_j$, so $T=T'Z$.
+- $\mathop{\mathrm{diag}}(e^{i\theta_j})=e^{i\varphi}\mathop{\mathrm{diag}}(e^{i(\theta_j-\varphi)})$ with $k\varphi=\sum\theta_j$, so $T=T'Z$.
 - $Z$ is central in $U(k)$, so $\mathrm{Ad}(Z)$ is the identity on u(k), hence on su(k). Being orthogonal, it preserves su(k)^perp. $\mathrm{Ad}(T')$ preserves su(k) and su(k)^perp for the same reason. $\hat C$ is zero on su(k)^perp and commutes with both on su(k), so it is $T$-invariant.
 
 ## 3. (c)

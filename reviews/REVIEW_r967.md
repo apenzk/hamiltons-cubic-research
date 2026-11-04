@@ -9,8 +9,8 @@ Log: [agent_logs/r967-fencing.log](../agent_logs/r967-fencing.log)
 | # | claim | verdict |
 |---|---|---|
 | 1 | Varying $P$ alone gives tangent $\dot{\hat U}=0$, $\dot V=[\Omega,V]$, and that curve stays on the constraint surface | **CONFIRMED**, with the degenerate-$V$ scope below |
-| 2 | The frame-dependent part of the value is $\beta\operatorname{tr}(\hat UV^2)+\operatorname{tr}(VC)$ | **CONFIRMED** against the record's own $\Phi$ |
-| 3 | Its variation is $\operatorname{tr}\big([\Omega,V](\beta\{\hat U,V\}+C)\big)$, so stationarity for every skew $\Omega$ is $[V,\beta\{\hat U,V\}+C]=0$ | **CONFIRMED**, one unstated hypothesis named |
+| 2 | The frame-dependent part of the value is $\beta\mathop{\mathrm{tr}}(\hat UV^2)+\mathop{\mathrm{tr}}(VC)$ | **CONFIRMED** against the record's own $\Phi$ |
+| 3 | Its variation is $\mathop{\mathrm{tr}}\big([\Omega,V](\beta\{\hat U,V\}+C)\big)$, so stationarity for every skew $\Omega$ is $[V,\beta\{\hat U,V\}+C]=0$ | **CONFIRMED**, one unstated hypothesis named |
 | 4 | Substituting $C$'s own form makes that bracket vanish for every $\hat U$, $V$, $\mu$, $\beta$ | **CONFIRMED**, exact |
 | 5 | With a GENERIC symmetric field in place of $C$ the same bracket does NOT vanish | **CONFIRMED** as a fact, **the control is weak** |
 | 6 | Batch 21's condition at $(X,Y)=(0,[\Omega,V])$ reproduces the frame second variation exactly | **CONFIRMED**, exact, no factor and no missing term |
@@ -27,19 +27,19 @@ The constraint is the single quadratic $T=\tfrac32\lvert\hat U\rvert^2+\tfrac12\
 
 ## Claim 2: which part of the value moves
 
-**CONFIRMED**, and the reading matters. The record's value is $\Phi=\alpha\operatorname{tr}\hat U^3+\beta\operatorname{tr}(\hat UV^2)+\operatorname{tr}(\hat UA)+\operatorname{tr}(VC)$ with $A$ and $C$ **given external data** diagonal in a frame $F$ ([batch 5](2026-09-15-I106-m3-derivation.md), [L229](../results.md)). Under the frame curve $\alpha\operatorname{tr}\hat U^3$ and $\operatorname{tr}(\hat UA)$ are fixed because $\hat U$ is, and $T$ is fixed by claim 1, so exactly $\beta\operatorname{tr}(\hat UV^2)+\operatorname{tr}(VC)$ moves.
+**CONFIRMED**, and the reading matters. The record's value is $\Phi=\alpha\mathop{\mathrm{tr}}\hat U^3+\beta\mathop{\mathrm{tr}}(\hat UV^2)+\mathop{\mathrm{tr}}(\hat UA)+\mathop{\mathrm{tr}}(VC)$ with $A$ and $C$ **given external data** diagonal in a frame $F$ ([batch 5](2026-09-15-I106-m3-derivation.md), [L229](../results.md)). Under the frame curve $\alpha\mathop{\mathrm{tr}}\hat U^3$ and $\mathop{\mathrm{tr}}(\hat UA)$ are fixed because $\hat U$ is, and $T$ is fixed by claim 1, so exactly $\beta\mathop{\mathrm{tr}}(\hat UV^2)+\mathop{\mathrm{tr}}(VC)$ moves.
 
-**The distinction worth keeping.** Had $\Phi$ meant the cubic part alone, the frame-dependent part would be $\beta\operatorname{tr}(\hat UV^2)$ and claim 6 would be false, as the screen below shows. The claim is right because the record's $\Phi$ carries the field pairings, and because $A$ and $C$ are data rather than multipliers to be re-solved along the curve.
+**The distinction worth keeping.** Had $\Phi$ meant the cubic part alone, the frame-dependent part would be $\beta\mathop{\mathrm{tr}}(\hat UV^2)$ and claim 6 would be false, as the screen below shows. The claim is right because the record's $\Phi$ carries the field pairings, and because $A$ and $C$ are data rather than multipliers to be re-solved along the curve.
 
 ## Claim 3: the variation, and the one hypothesis that is doing work
 
 **CONFIRMED.** Symbolically exact over generic traceless symmetric $\hat U$, $V$ and generic skew $\Omega$, residual $0$ in both steps:
 
-$$\beta\operatorname{tr}\big(\hat U(\dot VV+V\dot V)\big)+\operatorname{tr}(\dot VC)=\operatorname{tr}\big(\dot V(\beta\{\hat U,V\}+C)\big),\qquad \operatorname{tr}\big([\Omega,V]M\big)=\operatorname{tr}\big(\Omega[V,M]\big).$$
+$$\beta\mathop{\mathrm{tr}}\big(\hat U(\dot VV+V\dot V)\big)+\mathop{\mathrm{tr}}(\dot VC)=\mathop{\mathrm{tr}}\big(\dot V(\beta\{\hat U,V\}+C)\big),\qquad \mathop{\mathrm{tr}}\big([\Omega,V]M\big)=\mathop{\mathrm{tr}}\big(\Omega[V,M]\big).$$
 
-**The trace step needs no symmetry of $\hat U$.** The brief asks whether $\operatorname{tr}(\hat UV^2)$'s variation really contributes $\{\hat U,V\}$ and whether symmetry is smuggled in. It does, by cyclicity alone: repeating the step with a fully generic nonsymmetric $\hat U$ leaves residual $0$. So that half is a ring identity.
+**The trace step needs no symmetry of $\hat U$.** The brief asks whether $\mathop{\mathrm{tr}}(\hat UV^2)$'s variation really contributes $\{\hat U,V\}$ and whether symmetry is smuggled in. It does, by cyclicity alone: repeating the step with a fully generic nonsymmetric $\hat U$ leaves residual $0$. So that half is a ring identity.
 
-**Symmetry is load-bearing one step later, and the block does not say so.** Passing from $\operatorname{tr}(\Omega[V,M])=0$ for every skew $\Omega$ to $[V,M]=0$ needs $[V,M]$ to be skew, since the skew matrices annihilate exactly the symmetric ones under the trace form. With $V$ and $M=\beta\{\hat U,V\}+C$ both symmetric, $[V,M]^{\mathsf T}=-[V,M]$ and the conclusion follows. Verified: $[V,M]+[V,M]^{\mathsf T}=0$ identically with a symmetric field, and **not** identically zero with a nonsymmetric one. Were $C$ allowed to be nonsymmetric, stationarity would give only the weaker $\operatorname{skew}[V,M]=0$. Symmetry of $C$ is in the setting, so the block's conclusion stands, and the step should be named rather than left silent.
+**Symmetry is load-bearing one step later, and the block does not say so.** Passing from $\mathop{\mathrm{tr}}(\Omega[V,M])=0$ for every skew $\Omega$ to $[V,M]=0$ needs $[V,M]$ to be skew, since the skew matrices annihilate exactly the symmetric ones under the trace form. With $V$ and $M=\beta\{\hat U,V\}+C$ both symmetric, $[V,M]^{\mathsf T}=-[V,M]$ and the conclusion follows. Verified: $[V,M]+[V,M]^{\mathsf T}=0$ identically with a symmetric field, and **not** identically zero with a nonsymmetric one. Were $C$ allowed to be nonsymmetric, stationarity would give only the weaker $\mathop{\mathrm{skew}}[V,M]=0$. Symmetry of $C$ is in the setting, so the block's conclusion stands, and the step should be named rather than left silent.
 
 ## Claim 4: the substituted bracket
 
@@ -66,27 +66,27 @@ At $C=0$ this is $\beta[V^2,\hat U]$, nonzero whenever $\hat U$ fails to commute
 
 **CONFIRMED**, exactly, with no factor and no missing term. Symbolic residual $0$ for
 
-$$\ddot\Phi(0)\ =\ 2\beta\operatorname{tr}(\hat UY^2)-\mu\lvert Y\rvert^2,\qquad Y=[\Omega,V],$$
+$$\ddot\Phi(0)\ =\ 2\beta\mathop{\mathrm{tr}}(\hat UY^2)-\mu\lvert Y\rvert^2,\qquad Y=[\Omega,V],$$
 
 which is batch 21's left side minus its right side at $(X,Y)=(0,[\Omega,V])$. Numerically $0.52801314$ against $0.52801315$.
 
-**Tangency holds identically.** Batch 21 quantifies over $3\operatorname{tr}(\hat UX)+\operatorname{tr}(VY)=0$, and at $X=0$ that is $\operatorname{tr}(V[\Omega,V])=\operatorname{tr}(\Omega[V,V])=0$ for every $\Omega$. So the specialisation is legitimate for the whole three-dimensional frame family, with no side condition.
+**Tangency holds identically.** Batch 21 quantifies over $3\mathop{\mathrm{tr}}(\hat UX)+\mathop{\mathrm{tr}}(VY)=0$, and at $X=0$ that is $\mathop{\mathrm{tr}}(V[\Omega,V])=\mathop{\mathrm{tr}}(\Omega[V,V])=0$ for every $\Omega$. So the specialisation is legitimate for the whole three-dimensional frame family, with no side condition.
 
-**Two inputs the word "reproduces" hides, and both are sound.** The curve is not a straight line, so its acceleration $\ddot V=[\Omega,[\Omega,V]]$ contributes through the first-order gradient. That contribution is turned into the right side by the $V$ equation together with $\operatorname{tr}(\ddot VV)=-\lvert Y\rvert^2$, which is isospectrality differentiated twice, residual $0$. So claim 6 consumes the first-order system and is not a bare identity. Batch 21's own stated premise, that at a critical point the second derivative along **any** curve on the constraint surface is $D^2(\Phi-\mu T)$ on the tangent alone, gives the same result in one line and is the cleaner route.
+**Two inputs the word "reproduces" hides, and both are sound.** The curve is not a straight line, so its acceleration $\ddot V=[\Omega,[\Omega,V]]$ contributes through the first-order gradient. That contribution is turned into the right side by the $V$ equation together with $\mathop{\mathrm{tr}}(\ddot VV)=-\lvert Y\rvert^2$, which is isospectrality differentiated twice, residual $0$. So claim 6 consumes the first-order system and is not a bare identity. Batch 21's own stated premise, that at a critical point the second derivative along **any** curve on the constraint surface is $D^2(\Phi-\mu T)$ on the tangent alone, gives the same result in one line and is the cleaner route.
 
-**The term that must not be dropped.** Computing the second variation of the cubic part alone, without $\operatorname{tr}(VC)$, gives a different number: $-0.4466$ against $0.5280$, a miss of $-0.9747$, and the gap is exactly $-\operatorname{tr}(C\ddot V)$, confirmed symbolically at residual $0$. Claim 6 is true for the record's $\Phi$ and false for the cubic part alone, which is the same point claim 2 turns on.
+**The term that must not be dropped.** Computing the second variation of the cubic part alone, without $\mathop{\mathrm{tr}}(VC)$, gives a different number: $-0.4466$ against $0.5280$, a miss of $-0.9747$, and the gap is exactly $-\mathop{\mathrm{tr}}(C\ddot V)$, confirmed symbolically at residual $0$. Claim 6 is true for the record's $\Phi$ and false for the cubic part alone, which is the same point claim 2 turns on.
 
 ## Claim 7: what batch 22's sentence reaches
 
-**REFUTED.** Batch 22's quadratic $at^2+bt+c$ is built from the line $(Z,tZ)$, which is tangent for **every** $t$ only when $\operatorname{tr}(\hat UZ)=\operatorname{tr}(VZ)=0$. Its coefficients, including $a=2\beta\operatorname{tr}(\hat UZ^2)-\mu\lvert Z\rvert^2$, are therefore defined only for $Z$ in the three-dimensional subspace $W=\{Z:\operatorname{tr}(\hat UZ)=\operatorname{tr}(VZ)=0\}$.
+**REFUTED.** Batch 22's quadratic $at^2+bt+c$ is built from the line $(Z,tZ)$, which is tangent for **every** $t$ only when $\mathop{\mathrm{tr}}(\hat UZ)=\mathop{\mathrm{tr}}(VZ)=0$. Its coefficients, including $a=2\beta\mathop{\mathrm{tr}}(\hat UZ^2)-\mu\lvert Z\rvert^2$, are therefore defined only for $Z$ in the three-dimensional subspace $W=\{Z:\mathop{\mathrm{tr}}(\hat UZ)=\mathop{\mathrm{tr}}(VZ)=0\}$.
 
 The frame directions meet one of those two conditions and not the other. Symbolically, at residual $0$,
 
-$$\operatorname{tr}(V[\Omega,V])=0\ \text{ for every }\Omega,\qquad \operatorname{tr}(\hat U[\Omega,V])=-\operatorname{tr}(\Omega K),\quad K=[\hat U,V].$$
+$$\mathop{\mathrm{tr}}(V[\Omega,V])=0\ \text{ for every }\Omega,\qquad \mathop{\mathrm{tr}}(\hat U[\Omega,V])=-\mathop{\mathrm{tr}}(\Omega K),\quad K=[\hat U,V].$$
 
 So $[\Omega,V]\in W$ if and only if $\Omega$ is orthogonal to $K$ in the trace form. **On the non-commuting stratum that is a two-dimensional slice of the three-dimensional family**, and batch 22's $a$ says nothing about the missing direction. The one place where it covers the whole family is $K=0$, which is the stratum the programme is trying to reach rather than one it may assume.
 
-**The conclusion survives, the citation does not.** Batch 21 at $X=0$ needs only $\operatorname{tr}(VY)=0$, which every frame direction satisfies identically, so the direction genuinely is already extracted. The repair is to cite batch 21's $X=0$ specialisation directly, together with batch 21's own closing line that such specialisations are "all that has been extracted from it so far", and to drop the appeal to batch 22.
+**The conclusion survives, the citation does not.** Batch 21 at $X=0$ needs only $\mathop{\mathrm{tr}}(VY)=0$, which every frame direction satisfies identically, so the direction genuinely is already extracted. The repair is to cite batch 21's $X=0$ specialisation directly, together with batch 21's own closing line that such specialisations are "all that has been extracted from it so far", and to drop the appeal to batch 22.
 
 **How far this reaches.** This is a finding about one citation of batch 22 in one block about one direction. Batch 22's inequality is untouched, its subspace $W$ is correctly described where it is stated, and nothing here bears on other appeals to it.
 
@@ -103,7 +103,7 @@ Batch 21 states, as the standing justification for its own condition: *"At a cri
 **Three near neighbours that are genuinely distinct, and should not be folded together.**
 
 - [orbit_first_order_vacuous](../lean/HamiltonsCubic/Results/I106Criticality.lean), batch 33, is $[\hat U,A]+[V,C]=0$ for the **joint** conjugation. It is the same phenomenon in a different direction, and the block is right that the two directions differ.
-- Batch 20's $2\beta\operatorname{tr}(\hat UV^2)+\langle V,C\rangle=\mu\lvert V\rvert^2$ is the **same equation contracted against $V$**, where the frame condition is the same equation bracketed with $V$. Different components, so neither states the other.
+- Batch 20's $2\beta\mathop{\mathrm{tr}}(\hat UV^2)+\langle V,C\rangle=\mu\lvert V\rvert^2$ is the **same equation contracted against $V$**, where the frame condition is the same equation bracketed with $V$. Different components, so neither states the other.
 - Post F69's fourth instance, batch 34, reaches the post through a field pairing rather than through a restated condition, and is not this.
 
 **So the honest form of the record's sentence** is that the frame direction's first order is a fresh instance of post F69 in a direction not previously taken, whose vacuity was already implied by batch 21's standing premise. The instance is worth posting. Claim 8 as written is too strong.
@@ -112,14 +112,14 @@ Batch 21 states, as the standing justification for its own condition: *"At a cri
 
 1. **Drop the batch 22 citation for the second-order half** in [fence-posts.md](../findings/fence-posts.md) post F69's fifth instance, in [INDEX-traps.md](../findings/INDEX-traps.md) row 69, and in [routes.md](../routes.md)'s R28 row, all three of which say the second order "is batch 21 at $X=0$, which batch 22 already records as known to be at most zero". Batch 22's $a$ covers the frame directions only for $\Omega\perp K$. Cite batch 21's $X=0$ specialisation instead, which covers them all.
 2. **Hedge the control's reach** in the same three places. The generic-field contrast shows the expression is not identically zero. It does not show the collapse is "the substitution rather than the geometry", because the substituted point is the critical one and the generic point is not.
-3. **Name the symmetry step** in claim 3, at the block and at the [frame_first_order_vacuous](../lean/HamiltonsCubic/Results/I106Criticality.lean) docstring: stationarity gives $[V,M]=0$ rather than $\operatorname{skew}[V,M]=0$ because $V$ and $M$ are symmetric. The trace step itself needs only cyclicity, and the docstring may say so.
+3. **Name the symmetry step** in claim 3, at the block and at the [frame_first_order_vacuous](../lean/HamiltonsCubic/Results/I106Criticality.lean) docstring: stationarity gives $[V,M]=0$ rather than $\mathop{\mathrm{skew}}[V,M]=0$ because $V$ and $M$ are symmetric. The trace step itself needs only cyclicity, and the docstring may say so.
 4. **The cited screen is not filed.** Post F69's fifth instance cites figures of $23.79$ and $3.7\cdot10^{-15}$ over twenty thousand triples with no script behind them, where the post's own earlier instance cites [screen_I106_commutator.py](../scripts/misc/screen_I106_commutator.py). Either file it or replace the figures with the exact identity of claim 5, which is stronger and needs no run.
 
 ## The Lean table, two rows that can be improved
 
 | # | brief's row | r967 |
 |---|---|---|
-| 3 | none for the unsubstituted condition, the layer has no differential | Agreed for the variation. The **algebraic** half is typeable and untyped: that $\operatorname{tr}([\Omega,V]M)=\operatorname{tr}(\Omega[V,M])$ and that $[V,M]$ is skew for symmetric $V$, $M$, which is where symmetry enters |
+| 3 | none for the unsubstituted condition, the layer has no differential | Agreed for the variation. The **algebraic** half is typeable and untyped: that $\mathop{\mathrm{tr}}([\Omega,V]M)=\mathop{\mathrm{tr}}(\Omega[V,M])$ and that $[V,M]$ is skew for symmetric $V$, $M$, which is where symmetry enters |
 | 5 | none, a non-vanishing claim needs an explicit witness and none is typed | The witness exists and is cheap. Type the hypothesis-free identity $[V,\beta\{\hat U,V\}+C]=\beta[V^2,\hat U]+[V,C]$, which closes by `noncomm_ring`, and evaluate it at one explicit pair with $[\hat U,V^2]\ne0$ |
 
 Rows 1, 2, 4, 6, 7 and 8 I agree with as written.

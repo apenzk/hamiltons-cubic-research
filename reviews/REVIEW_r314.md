@@ -236,7 +236,7 @@ and Reviewer 307's census, quoted at [graded-half.md:217](../findings/graded-hal
 
 **One identity worth recording, which makes that a one-variable question.** For any orthogonal $\mathbb R^n=U\oplus U^\perp$ and any Ricci-flat $W$,
 
-$$\operatorname{tr}\big(W|_{\Lambda^2U}\big)=\operatorname{tr}\big(W|_{\Lambda^2U^\perp}\big)=-\tfrac12\operatorname{tr}\big(W|_{U\wedge U^\perp}\big),$$
+$$\mathop{\mathrm{tr}}\big(W|_{\Lambda^2U}\big)=\mathop{\mathrm{tr}}\big(W|_{\Lambda^2U^\perp}\big)=-\tfrac12\mathop{\mathrm{tr}}\big(W|_{U\wedge U^\perp}\big),$$
 
 by summing $\mathrm{Ric}_{ii}=0$ over each factor. It holds in both gradings above, $+1.082996$ twice in $G_1$, $-0.214821$ twice in $G_2$, $-0.199205$ twice at $S^3\times S^5$'s second grading, so the two factor traces in the floor are a *single* unknown, not two.
 
@@ -328,7 +328,7 @@ To find the extra gradings, minimise $\lVert W_{[\mathfrak p,\mathfrak m]}\rVert
 
 **3. Two identities that fell out and are worth keeping.**
 
-- For **any** orthogonal splitting $\mathbb R^n=U\oplus U^\perp$ and any Ricci-flat $W$, $\operatorname{tr}\big(W|_{\Lambda^2U}\big)=\operatorname{tr}\big(W|_{\Lambda^2U^\perp}\big)$, both equal to $-\tfrac12\operatorname{tr}\big(W|_{U\wedge U^\perp}\big)$. It follows in one line from summing $\mathrm{Ric}_{ii}=0$ over each factor, it is confirmed in all three gradings measured here, and it means the two factor traces in the Cauchy–Schwarz floor are a *single* unknown, not two, which is what turns the mass route into a one-variable question.
+- For **any** orthogonal splitting $\mathbb R^n=U\oplus U^\perp$ and any Ricci-flat $W$, $\mathop{\mathrm{tr}}\big(W|_{\Lambda^2U}\big)=\mathop{\mathrm{tr}}\big(W|_{\Lambda^2U^\perp}\big)$, both equal to $-\tfrac12\mathop{\mathrm{tr}}\big(W|_{U\wedge U^\perp}\big)$. It follows in one line from summing $\mathrm{Ric}_{ii}=0$ over each factor, it is confirmed in all three gradings measured here, and it means the two factor traces in the Cauchy–Schwarz floor are a *single* unknown, not two, which is what turns the mass route into a one-variable question.
 - $\mathrm{Ric}(W^2)$ is the frame-independent padding certificate: $O(n)$-covariant, PSD, trace $2\lVert W\rVert^2$, and $\mathrm{rank}=$ the true ambient dimension. It reproduces the record's rank verdict on all four r305 points, and it costs one $n\times n$ eigendecomposition.
 - The $\mathfrak p$-internal cross-block direction lies exactly $2/3$ inside $\mathcal W_n$ by squared norm, the recorded $57.7\%$ leak is $1/\sqrt3$ exactly, at every point I tried.
 

@@ -22,9 +22,9 @@
 
 $X$ is the parameter space the note counts: orthonormal triples $(\omega_1,\omega_2,\omega_3)$ in $\Lambda^2\mathbb R^6$ together with a unit weight vector $\lambda$ with $\sum_i\lambda_i=0$ and every $\lambda_i\ne0$. $F:X\to S^2_0\mathbb R^6\oplus\Lambda^4\mathbb R^6\cong\mathbb R^{35}$ is $F(\omega,\lambda)=\bigl(\sum_i\lambda_i\omega_i^2,\ \sum_i\lambda_i\,\omega_i\wedge\omega_i\bigr)$, and $S=F^{-1}(0)$.
 
-Conventions are [L180](../findings/diagonal-half.md)'s: $\langle\omega,\eta\rangle=\sum_{a<b}\omega_{ab}\eta_{ab}$, so $\operatorname{tr}(\omega\eta)=-2\langle\omega,\eta\rangle$ and $A_i=-\omega_i^2$ is positive semidefinite of trace $2$.
+Conventions are [L180](../findings/diagonal-half.md)'s: $\langle\omega,\eta\rangle=\sum_{a<b}\omega_{ab}\eta_{ab}$, so $\mathop{\mathrm{tr}}(\omega\eta)=-2\langle\omega,\eta\rangle$ and $A_i=-\omega_i^2$ is positive semidefinite of trace $2$.
 
-**The branch under discussion is $S\cap U$, where $U=\{\dim(\operatorname{im}\omega_1+\operatorname{im}\omega_2+\operatorname{im}\omega_3)=6\}$.** By [L180](../findings/diagonal-half.md) that span is a single form's image, so $U=\{\operatorname{rank}\omega_{i_0}=6\}$ either way. **$U$ is OPEN in $X$**, the rank of a matrix being lower semicontinuous and $6$ the maximum. This is used in §5 and it is the whole of the matter.
+**The branch under discussion is $S\cap U$, where $U=\{\dim(\mathop{\mathrm{im}}\omega_1+\mathop{\mathrm{im}}\omega_2+\mathop{\mathrm{im}}\omega_3)=6\}$.** By [L180](../findings/diagonal-half.md) that span is a single form's image, so $U=\{\mathop{\mathrm{rank}}\omega_{i_0}=6\}$ either way. **$U$ is OPEN in $X$**, the rank of a matrix being lower semicontinuous and $6$ the maximum. This is used in §5 and it is the whole of the matter.
 
 ## 1. The count's arithmetic: three numbers, all correct
 
@@ -32,7 +32,7 @@ Conventions are [L180](../findings/diagonal-half.md)'s: $\langle\omega,\eta\rang
 
 $\dim V_3(\mathbb R^{15})=3\cdot15-\tfrac{3\cdot4}{2}=45-6=39$, which is the note's $45-6$. The unit traceless weights are a circle in the plane $\sum\lambda_i=0$, dimension $1$, giving $40$.
 
-The $S^2$ target has dimension $21$ and its trace is automatic: $\operatorname{tr}(\sum_i\lambda_i\omega_i^2)=-\sum_i\lambda_i\lVert\omega_i\rVert^2_{\mathrm F}=-2\sum_i\lambda_i=0$, which uses **both** unit norms and traceless weights and so is genuine on $X$. That leaves $20$. The $\Lambda^4$ target has $\binom64=15$. Total $35$, and $40-35=5$.
+The $S^2$ target has dimension $21$ and its trace is automatic: $\mathop{\mathrm{tr}}(\sum_i\lambda_i\omega_i^2)=-\sum_i\lambda_i\lVert\omega_i\rVert^2_{\mathrm F}=-2\sum_i\lambda_i=0$, which uses **both** unit norms and traceless weights and so is genuine on $X$. That leaves $20$. The $\Lambda^4$ target has $\binom64=15$. Total $35$, and $40-35=5$.
 
 **I looked for a fourth automatic dependency and found none.** A further linear functional annihilating the image of $F$ would have to be $O(6)$-natural and vanish identically on $X$. In $S^2$ the only $O(6)$-invariant functional is the trace, already spent. In $\Lambda^4$, transporting by $\star$ to $\Lambda^2$ turns Bianchi into $2\sum_i\lambda_i\,\mathrm{Padj}(\omega_i)$, and the candidate pairings are $\langle\mathrm{Padj}(\omega_i),\omega_j\rangle$, which is $3\,\mathrm{Pf}(\omega_i)$ at $i=j$ by [L187](../findings/diagonal-half.md)'s `inner_sigma_self` and is unconstrained at $i\ne j$. Pairing with the volume form gives $2\sum_i\lambda_i\mathrm{Pf}(\omega_i)$, which vanishes on no locus forced by $X$.
 
@@ -68,7 +68,7 @@ $$8+3+1=\mathbf{12}.$$
 4. **$0$ is a fixed point of the target action**, so $S$ is the full preimage of a fixed point and is invariant. ✓
 
 **Then the conclusion follows from a curve and needs no tangent space to $S$.** For $A\in\mathfrak{so}(6)$, $t\mapsto F(\exp(tA)\cdot p)$ is identically $0$, so differentiating at $t=0$ gives $dF_p(\widehat A_p)=0$ where $\widehat A_p=\tfrac{d}{dt}\big|_0\exp(tA)\cdot p$. The span of these is $T_p(G\cdot p)$, of dimension $\dim G-\dim G_p$. Hence
-$$\operatorname{rank}dF_p\le 40-\dim(G\cdot p).$$
+$$\mathop{\mathrm{rank}}dF_p\le 40-\dim(G\cdot p).$$
 
 **The refutation's phrase *"the orbit is tangent to the zero set"* is the loose part.** $S$ carries no tangent space where it is singular, and singular is exactly where this argument says it is. The repair is one word: the orbit lies **inside** the zero set, and differentiating along it gives the kernel statement. The inequality the refutation actually uses is correct as written.
 
@@ -78,7 +78,7 @@ $$\operatorname{rank}dF_p\le 40-\dim(G\cdot p).$$
 
 **The refutation's own argument checks out.** A connected subgroup of $SO(6)$ of dimension $\ge10$ lies in a maximal connected proper one. Through $Spin(6)\cong SU(4)$ those are $Sp(2)=Spin(5)\to SO(5)$ (dimension $10$), $S(U(3)\times U(1))\to U(3)$ (dimension $\mathbf 9$, which the brief asks to check and which is right), $S(U(2)\times U(2))\to SO(4)\times SO(2)$ ($7$), $SO(4)\to SO(3)\times SO(3)$ ($6$), and $SO(3)$ ($3$). The maximal proper subgroups of $SO(5)$ top out at $SO(4)$, dimension $6$. So dimension $\ge10$ leaves $SO(6)$ and $SO(5)$ alone, as claimed. Neither fixes a nonzero $2$-form: $\Lambda^2\mathbb R^6=\mathfrak{so}(6)$ is the adjoint, irreducible and nontrivial, and under $SO(5)$ acting as $5+1$ it is $\Lambda^2\mathbb R^5\oplus\mathbb R^5=\mathfrak{so}(5)\oplus\mathbb R^5$, two nontrivial irreducibles.
 
-**But the refutation stops one step short, and the sharp bound is much better.** $\Lambda^2\mathbb R^6$ **is** the adjoint representation, so for a connected $H$ the fixed forms are the centraliser: $(\Lambda^2\mathbb R^6)^H=\mathfrak z_{\mathfrak{so}(6)}(\mathfrak h)$. The stabiliser of the triple fixes each $\omega_i$, so with $\mathfrak a=\operatorname{span}(\omega_1,\omega_2,\omega_3)$, a genuine $3$-plane by orthonormality,
+**But the refutation stops one step short, and the sharp bound is much better.** $\Lambda^2\mathbb R^6$ **is** the adjoint representation, so for a connected $H$ the fixed forms are the centraliser: $(\Lambda^2\mathbb R^6)^H=\mathfrak z_{\mathfrak{so}(6)}(\mathfrak h)$. The stabiliser of the triple fixes each $\omega_i$, so with $\mathfrak a=\mathop{\mathrm{span}}(\omega_1,\omega_2,\omega_3)$, a genuine $3$-plane by orthonormality,
 $$\mathfrak g_p=\mathfrak z_{\mathfrak{so}(6)}(\mathfrak a).$$
 
 **Claim: $\dim\mathfrak z(\mathfrak a)\le4$ for every $3$-plane $\mathfrak a\subset\mathfrak{so}(6)$.** Put $\mathfrak h=\mathfrak z(\mathfrak a)$, so $\mathfrak a\subseteq\mathfrak z(\mathfrak h)$ and $\dim\mathfrak z(\mathfrak h)\ge3$. Subalgebras of a compact algebra are reductive, and I ran the list:
@@ -97,7 +97,7 @@ The $\mathfrak u(3)$ row is the one to check by hand: $\Lambda^2\mathbb R^6\otim
 **So $\dim\mathfrak h\ge5$ forces $\dim\mathfrak z(\mathfrak h)\le2<3$, and therefore $\dim\mathfrak g_p\le4$.** The bound is attained: $\mathfrak a=\Lambda^+P$ has $\mathfrak z(\mathfrak a)=\mathfrak{su}(2)_-\oplus\mathfrak{so}(2)$, dimension $4$, which is exactly the padded family of §2.
 
 **The consequences, all stronger than the refutation's.**
-$$\dim(G\cdot p)\ge\mathbf{11},\qquad \operatorname{rank}dF_p\le\mathbf{29},\qquad \#\{\text{dependencies among the }35\}\ \ge\ \mathbf 6 .$$
+$$\dim(G\cdot p)\ge\mathbf{11},\qquad \mathop{\mathrm{rank}}dF_p\le\mathbf{29},\qquad \#\{\text{dependencies among the }35\}\ \ge\ \mathbf 6 .$$
 The refutation's $6/34/1$ becomes $11/29/6$. **The refutation's "finite stabiliser" case never occurs at all**: no triple in $\Lambda^2\mathbb R^6$ has a finite stabiliser, so its own "$15$-dimensional orbit, rank $\le25$" paragraph describes an empty case, as does the note's.
 
 **The clean form of the inequality, which is the note and the refutation read at two rows.** Writing $d=\dim(G\cdot p)$, the corank of $dF_p$ in the $35$-dimensional target is at least $d-5$. **The note's "$5$" is precisely the amount of orbit the target can absorb before the constraints must be dependent.** The note read the inequality as a contradiction and the refutation read it as an escape, and it is one inequality.
@@ -120,7 +120,7 @@ The refutation's $6/34/1$ becomes $11/29/6$. **The refutation's "finite stabilis
 
 ## 6. R4 and R5, two internal defects of the refutation
 
-**R4, the inference $\dim S\ge40-34=6$, runs the wrong way.** For smooth $F$ with $\operatorname{rank}dF_p=r$, some $r$ components have independent differentials at $p$, so near $p$ the set $S$ is **contained** in a submanifold of codimension $r$. That is $\dim_pS\le40-r$, an upper bound. The lower bound the refutation writes is false in general: $F(x)=\lVert x\rVert^2$ on $\mathbb R^{40}$ has rank $0$ at the origin and a single point for its zero set, and the equivariant version fails too, $F(x)=(\lVert x\rVert^2-1)^2$ on $\mathbb R^2$ with $SO(2)$ having rank $0$ at every solution and a $1$-dimensional zero set against the claimed $2$.
+**R4, the inference $\dim S\ge40-34=6$, runs the wrong way.** For smooth $F$ with $\mathop{\mathrm{rank}}dF_p=r$, some $r$ components have independent differentials at $p$, so near $p$ the set $S$ is **contained** in a submanifold of codimension $r$. That is $\dim_pS\le40-r$, an upper bound. The lower bound the refutation writes is false in general: $F(x)=\lVert x\rVert^2$ on $\mathbb R^{40}$ has rank $0$ at the origin and a single point for its zero set, and the equivariant version fails too, $F(x)=(\lVert x\rVert^2-1)^2$ on $\mathbb R^2$ with $SO(2)$ having rank $0$ at every solution and a $1$-dimensional zero set against the claimed $2$.
 
 **The conclusion survives for a trivial reason and should be written that way.** $G\cdot p\subseteq S$ and $G\cdot p$ is a manifold, so $\dim_pS\ge\dim(G\cdot p)\ge11$. **No rank argument is involved, and the correct constant is $11$ rather than $6$.**
 
@@ -154,10 +154,10 @@ Keep the refutation's core and replace three sentences.
 
 | Claim I record | What would falsify it | What I did |
 |---|---|---|
-| $\dim S\ge12$ at $\dim V=6$ (§2) | A failure of $\omega^2=-\tfrac12\Pi_P$ or $\omega\wedge\omega=\mathrm{vol}_P$ at some unit $\omega\in\Lambda^+P$, or the embedding $\Lambda^2P\hookrightarrow\Lambda^2\mathbb R^6$ failing to be isometric, or a hidden redundancy collapsing $8+3+1$ | Verified both identities in an adapted frame and again by $SO(4)$-equivariance into the trivial $\Lambda^4P$, checked the norm convention against [L180](../findings/diagonal-half.md)'s $\operatorname{tr}(\omega\omega^{\mathsf T})=2\lVert\omega\rVert^2$, and checked the count against the orbit decomposition, $11+1=12$ with the orbit dimension computed independently in §4 |
+| $\dim S\ge12$ at $\dim V=6$ (§2) | A failure of $\omega^2=-\tfrac12\Pi_P$ or $\omega\wedge\omega=\mathrm{vol}_P$ at some unit $\omega\in\Lambda^+P$, or the embedding $\Lambda^2P\hookrightarrow\Lambda^2\mathbb R^6$ failing to be isometric, or a hidden redundancy collapsing $8+3+1$ | Verified both identities in an adapted frame and again by $SO(4)$-equivariance into the trivial $\Lambda^4P$, checked the norm convention against [L180](../findings/diagonal-half.md)'s $\mathop{\mathrm{tr}}(\omega\omega^{\mathsf T})=2\lVert\omega\rVert^2$, and checked the count against the orbit decomposition, $11+1=12$ with the orbit dimension computed independently in §4 |
 | $\dim\mathfrak z(\mathfrak a)\le4$ for every $3$-plane (§4) | A reductive $\mathfrak h\subseteq\mathfrak{so}(6)$ with $\dim\mathfrak h\ge5$ and $\dim\mathfrak z(\mathfrak h)\ge3$ | Enumerated reductive subalgebras of dimension $5$ through $10$ through the $\mathfrak{su}(4)$ picture and computed each centraliser, the two nontrivial rows being $\mathfrak u(3)$ by weights and $\mathfrak{su}(2)_\alpha\oplus\ker\alpha$ by roots. Checked attainment at $\mathfrak a=\Lambda^+P$, where the bound is met |
 | The equivariance step (§3) | Any of the four hypotheses failing here, or the conclusion needing $S$ to be smooth | Checked all four against this $X$, $F$ and action, and replaced the tangent-space route with the curve route, which needs none of it |
-| R4 is backwards (§6) | A theorem making $\dim_pS\ge n-\operatorname{rank}dF_p$ true for smooth maps, equivariant or not | Exhibited two counterexamples, one of them $SO(2)$-equivariant with orbits of positive dimension, which is the case the refutation is in |
+| R4 is backwards (§6) | A theorem making $\dim_pS\ge n-\mathop{\mathrm{rank}}dF_p$ true for smooth maps, equivariant or not | Exhibited two counterexamples, one of them $SO(2)$-equivariant with orbits of positive dimension, which is the case the refutation is in |
 | No count can settle the branch (§5) | A parameter count that distinguishes $S\cap U$ from $S$, or a proof that $U$ is closed in $S$ | $U$ is a maximal-rank locus, hence open, and open conditions are invisible to dimension counts. I tried the slice count and it misses the known answer by seven at the padded locus |
 | R8's second half is dishonest (§7) | A $\dim V=6$ result in the record pointing toward the branch being inhabited | Read the rank-three census and the rank-two line. Every decided sub-case at $\dim V=6$ is an emptiness, and the only inhabited family the record holds anywhere in this problem is at $\dim V=4$ |
 

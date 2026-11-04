@@ -179,25 +179,25 @@ That this is an eigenvalue coincidence rather than representation mixing is also
 
 Both boundaries are therefore load-bearing and correctly drawn.
 
-### F11, a repair: $\operatorname{tr}L_e=0$ is unconditional, the ten values satisfy it identically in $p,q$, and at $p=q$ it *forces* $\lambda_m$
+### F11, a repair: $\mathop{\mathrm{tr}}L_e=0$ is unconditional, the ten values satisfy it identically in $p,q$, and at $p=q$ it *forces* $\lambda_m$
 
 This is the finding I would most like folded into the block. It is analytic, cheap, and it closes most of F9.
 
-**Claim.** For every $e\in\mathcal W_n$ with $n\ge5$, $\operatorname{tr}_{\mathcal W_n}(L_e)=0$.
+**Claim.** For every $e\in\mathcal W_n$ with $n\ge5$, $\mathop{\mathrm{tr}}_{\mathcal W_n}(L_e)=0$.
 
 **Proof.** Let $\{V_i\}$ be an orthonormal basis of $\mathcal W_n$. The trilinear form $T(X,Y,Z)=\langle X\circ Y,Z\rangle$ is totally symmetric (it is $\tfrac16D^3P$; the record checks the symmetry independently), so $\langle L_eV_i,V_i\rangle=T(e,V_i,V_i)=T(V_i,V_i,e)=\langle Q(V_i),e\rangle$ and
 
-$$\operatorname{tr}L_e=\Big\langle e,\ \sum_iQ(V_i)\Big\rangle .$$
+$$\mathop{\mathrm{tr}}L_e=\Big\langle e,\ \sum_iQ(V_i)\Big\rangle .$$
 
-$Q$ is $O(n)$-equivariant, so for $g\in O(n)$, $\sum_iQ(gV_i)=g\sum_iQ(V_i)$; but $\{gV_i\}$ is another orthonormal basis and $\sum_iQ(V_i)$ is basis-independent, so $\sum_iQ(V_i)$ is an $O(n)$-invariant vector of $\mathcal W_n$. $\mathcal W_n$ is $O(n)$-irreducible and non-trivial, so it contains none but $0$. Hence $\sum_iQ(V_i)=0$ and $\operatorname{tr}L_e=0$. $\square$
+$Q$ is $O(n)$-equivariant, so for $g\in O(n)$, $\sum_iQ(gV_i)=g\sum_iQ(V_i)$; but $\{gV_i\}$ is another orthonormal basis and $\sum_iQ(V_i)$ is basis-independent, so $\sum_iQ(V_i)$ is an $O(n)$-invariant vector of $\mathcal W_n$. $\mathcal W_n$ is $O(n)$-irreducible and non-trivial, so it contains none but $0$. Hence $\sum_iQ(V_i)=0$ and $\mathop{\mathrm{tr}}L_e=0$. $\square$
 
 **The ten values pass it identically in $p,q$.** With $s_m=\tfrac{(m+2)(m-1)}2$ and $c_m=\tfrac{m(m-1)}2$,
 
-$$\operatorname{tr}L_e=1+\tfrac{pq}2+\lambda_ps_p+\lambda_qs_q-\mu\,s_ps_q+\mu\,c_pc_q .$$
+$$\mathop{\mathrm{tr}}L_e=1+\tfrac{pq}2+\lambda_ps_p+\lambda_qs_q-\mu\,s_ps_q+\mu\,c_pc_q .$$
 
 Now $\lambda_ms_m=\tfrac{(m-2)(m+2)}4=\tfrac{m^2-4}4$, and $s_ps_q-c_pc_q=\tfrac{(p-1)(q-1)}4\big[(p+2)(q+2)-pq\big]=\tfrac{(p-1)(q-1)(n+2)}2$, so $\mu(s_ps_q-c_pc_q)=\tfrac{(n-2)(n+2)}4=\tfrac{n^2-4}4$ and
 
-$$\operatorname{tr}L_e=1+\tfrac{pq}2+\tfrac{p^2-4}4+\tfrac{q^2-4}4-\tfrac{n^2-4}4=\tfrac{4+2pq+p^2+q^2-8-n^2+4}{4}=0 .$$
+$$\mathop{\mathrm{tr}}L_e=1+\tfrac{pq}2+\tfrac{p^2-4}4+\tfrac{q^2-4}4-\tfrac{n^2-4}4=\tfrac{4+2pq+p^2+q^2-8-n^2+4}{4}=0 .$$
 
 Screened symbolically as well: sympy returns $0$. **This is a non-trivial constraint**, it couples all ten multiplicities to the four non-zero values, and a wrong $\lambda_m$ or a wrong sign on $S^2_0\otimes S^2_0$ breaks it.
 
@@ -243,7 +243,7 @@ The residue of F9 is therefore **one** unsourced value in the block, not two, an
 
 ### F15, and that last value is forced, uniquely, by F11's trace identity
 
-With the other nine values now each carrying a derivation, $1$ (immediate), $\tfrac12$ (F4), $\lambda_p,\lambda_q$ (F14), $+\mu$ (L26), four zeros ([nondegeneracy.md:708,716](../findings/nondegeneracy.md#L708)), the identity $\operatorname{tr}L_e=0$ of F11 is one linear equation in the single remaining unknown $\nu$, the scalar on $S^2_0\otimes S^2_0$:
+With the other nine values now each carrying a derivation, $1$ (immediate), $\tfrac12$ (F4), $\lambda_p,\lambda_q$ (F14), $+\mu$ (L26), four zeros ([nondegeneracy.md:708,716](../findings/nondegeneracy.md#L708)), the identity $\mathop{\mathrm{tr}}L_e=0$ of F11 is one linear equation in the single remaining unknown $\nu$, the scalar on $S^2_0\otimes S^2_0$:
 
 $$\nu\,s_ps_q=-\Big[1+\tfrac{pq}2+\tfrac{p^2-4}4+\tfrac{q^2-4}4+\mu\,c_pc_q\Big]=-\tfrac{n^2-4}4-\mu\,c_pc_q,$$
 
@@ -278,7 +278,7 @@ Also: L26's eigenvector $X=\phi_\pi\odot\phi_\rho$ with $\pi\subset P$, $\rho\su
 | $\tfrac12$ on the orbit tangent | **derived independently**; and the constrained Hessian is $6\theta(L_e-\tfrac12)$, so the spectral statement and Morse–Bott nondegeneracy are the same statement (F4) |
 | $+\mu$ on $\Lambda^2\otimes\Lambda^2$ | Lemma L26, and its $\varepsilon$-values reproduce Nienhaus Prop 2.25's $\theta_{k,l}$ exactly (F3) |
 | $\lambda_m$ on $S^2_0(\mathbb R^m)$ | **derived on the record** at [second-order.md:589](../findings/second-order.md#L589), which I re-derived cold and which matches my independent reconstruction (F6, F14) |
-| $-\mu$ on $S^2_0\otimes S^2_0$ | **forced uniquely** by $\operatorname{tr}L_e=0$ given the other nine (F11, F15) |
+| $-\mu$ on $S^2_0\otimes S^2_0$ | **forced uniquely** by $\mathop{\mathrm{tr}}L_e=0$ given the other nine (F11, F15) |
 | nothing exceeds or ties $\tfrac12$ off the orbit | **confirmed**: $\lambda_m<\tfrac12$ always, $-\mu<0$, and $+\mu<\tfrac12\iff(p-2)(q-2)\ge2$ (F10) |
 | $(3,3)$ excluded, $\dim E(\tfrac12)=18$ against orbit $9$ | **confirmed from the ten values**; full spectrum $-\tfrac12^{25},0^{30},\tfrac14^{10},\tfrac12^{18},1^1$ summing to $84$ (F10) |
 | $p\ge3$ needed | **confirmed twice over**: $\mu=\tfrac12+\tfrac1{2(n-3)}>\tfrac12$ at $p=2$, and the summand list over-counts by $2$ there (F10) |
@@ -287,7 +287,7 @@ Also: L26's eigenvector $X=\phi_\pi\odot\phi_\rho$ with $\pi\subset P$, $\rho\su
 
 ### Two defects, neither touching the conclusion
 
-1. **Citation defect (in the block, unrepaired).** *"$-\mu$ and $+\mu$ on the two tensor summands, by Lemma L26"*, L26 supplies one eigenvector, on $\Lambda^2\otimes\Lambda^2$ only. Already logged at [LEDGER.md:771](../findings/LEDGER.md#L771). **Suggested repair**: replace the attribution with L26 for $+\mu$ and $\operatorname{tr}L_e=0$ for $-\mu$, quoting F11's two-line proof, and add the $\lambda_m$ pointer to [second-order.md:589](../findings/second-order.md#L589), which the block also omits.
+1. **Citation defect (in the block, unrepaired).** *"$-\mu$ and $+\mu$ on the two tensor summands, by Lemma L26"*, L26 supplies one eigenvector, on $\Lambda^2\otimes\Lambda^2$ only. Already logged at [LEDGER.md:771](../findings/LEDGER.md#L771). **Suggested repair**: replace the attribution with L26 for $+\mu$ and $\mathop{\mathrm{tr}}L_e=0$ for $-\mu$, quoting F11's two-line proof, and add the $\lambda_m$ pointer to [second-order.md:589](../findings/second-order.md#L589), which the block also omits.
 2. **Wording defect (in the block and at line 700).** *"since $L_e$ is symmetric the $\mathbb C$ and $\mathbb H$ Schur cases cannot occur"*. Read as naming Schur's *outcomes* it is true; read as naming the representations it is false, since symmetry of an operator cannot change a representation's type. **Suggested repair**: "a symmetric element of a real division algebra of operators has a real eigenvalue, so it is a real scalar, which covers all three Schur cases at once."
 
 ### One text defect elsewhere in the file

@@ -18,7 +18,7 @@
 
 ## 0. Conventions, fixed once
 
-$\mathcal W_n$ is the space of algebraic Weyl tensors read as symmetric operators on $\Lambda^2\mathbb R^n$ with the Frobenius pairing; $\lVert\cdot\rVert$ is that norm and $\lVert\cdot\rVert_{op}$ the operator norm. $W^*$ is the unit-norm Weyl tensor of $S^m\times S^m$, $n=2m$, with $\operatorname{spec}W^*=\{\lambda_-,\lambda_+\}$, $\lvert\lambda_-\rvert=g_n=\tfrac2n\sqrt{\tfrac{n-2}{2(n-1)}}$, $\lambda_+=\tfrac m{m-1}g_n$, and $D=\tfrac{2m-1}{m-1}=\lvert\lambda_+-\lambda_-\rvert/g_n$ ([L145](../findings/second-order.md), [L156](../findings/second-order.md)). $\Sigma$ is the joint $\lambda_m$-eigenspace, **both** $S^2_0(\mathbb R^m)$ copies, of dimension $(m+2)(m-1)$ ([L148](../findings/second-order.md)).
+$\mathcal W_n$ is the space of algebraic Weyl tensors read as symmetric operators on $\Lambda^2\mathbb R^n$ with the Frobenius pairing; $\lVert\cdot\rVert$ is that norm and $\lVert\cdot\rVert_{op}$ the operator norm. $W^*$ is the unit-norm Weyl tensor of $S^m\times S^m$, $n=2m$, with $\mathop{\mathrm{spec}}W^*=\{\lambda_-,\lambda_+\}$, $\lvert\lambda_-\rvert=g_n=\tfrac2n\sqrt{\tfrac{n-2}{2(n-1)}}$, $\lambda_+=\tfrac m{m-1}g_n$, and $D=\tfrac{2m-1}{m-1}=\lvert\lambda_+-\lambda_-\rvert/g_n$ ([L145](../findings/second-order.md), [L156](../findings/second-order.md)). $\Sigma$ is the joint $\lambda_m$-eigenspace, **both** $S^2_0(\mathbb R^m)$ copies, of dimension $(m+2)(m-1)$ ([L148](../findings/second-order.md)).
 
 $\Gamma$ is a circle of radius $\alpha g_n$ about $\lambda_-$, $d=\min(\alpha,D-\alpha)$, and
 
@@ -78,7 +78,7 @@ $$W(z)_-=\sum_{a\in I}(\lambda_a+zh_a)\,P_a ,$$
 
 ### 3.1 What L156 supplies
 
-L156 supplies separation on the closed disc of radius $\rho=\gamma g_n/\lVert H\rVert_{op}$, for $0<\gamma<\min(d,1)$, at the affine family, under $m\ge2$, $\ker W^*=0$ and $\operatorname{spec}W^*$ two-valued. That is section 2.4's inequality $\gamma<d$, and it is genuinely what its *"$\gamma<d$ keeps the perturbed resolvent finite"* means. **On the affine family the derivation's import is sound.**
+L156 supplies separation on the closed disc of radius $\rho=\gamma g_n/\lVert H\rVert_{op}$, for $0<\gamma<\min(d,1)$, at the affine family, under $m\ge2$, $\ker W^*=0$ and $\mathop{\mathrm{spec}}W^*$ two-valued. That is section 2.4's inequality $\gamma<d$, and it is genuinely what its *"$\gamma<d$ keeps the perturbed resolvent finite"* means. **On the affine family the derivation's import is sound.**
 
 The apparent clash with [r447](REVIEW_r447.md):90's $\rho<g_n/2$ is not one: that is the same condition $\gamma<d$ evaluated at $\alpha=\tfrac12$, where $d=\tfrac12$. L156's larger $\gamma^*=D/4$ is admissible only because $\alpha^*>1$ is, which L156 established.
 

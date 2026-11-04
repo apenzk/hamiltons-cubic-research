@@ -10,7 +10,7 @@
 - ← **[R25](../routes.md)**, PRIMARY, carrying [L217](../findings/second-order.md) and [L220](../findings/second-order.md).
 - ← **[I104](../plan.md)**, its far region, a $0.0148$ deficit.
 - ← **[I110](../plan.md)**, SETTLED: the binding corner is excluded, proved twice.
-- ← **[I73](../plan.md)**, grade 3, route [R30](../routes.md): a global maximiser's spectrum takes two values, equivalently $W^\#\in\operatorname{span}\{W,\mathrm{Id}\}$ through criticality. **[L105](../findings/bounds-relaxations.md) then closes P outright.** `attackable` 1: sub-step (ii) is open and **what is owed is an instrument**.
+- ← **[I73](../plan.md)**, grade 3, route [R30](../routes.md): a global maximiser's spectrum takes two values, equivalently $W^\#\in\mathop{\mathrm{span}}\{W,\mathrm{Id}\}$ through criticality. **[L105](../findings/bounds-relaxations.md) then closes P outright.** `attackable` 1: sub-step (ii) is open and **what is owed is an instrument**.
 
 ## The impasse, measured rather than described
 

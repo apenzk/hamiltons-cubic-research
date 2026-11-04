@@ -130,7 +130,7 @@ Derivation. Fix a sigma-real basis of M_lambda that is orthonormal for the invar
 
 Three-step record.
 
-(1) Location. [findings/sym3-blocks.md](../findings/sym3-blocks.md) line 128, "the kernel direction is the imaginary coordinate iff $\operatorname{Im}h=0$".
+(1) Location. [findings/sym3-blocks.md](../findings/sym3-blocks.md) line 128, "the kernel direction is the imaginary coordinate iff $\mathop{\mathrm{Im}}h=0$".
 
 (2) Failure exhibited in closed form. P = Q = diag(1, i). Then h = Q* Q = I, so Im h = 0. The kernel direction is K = i Q* J Q. Here J Q = [[0, i],[-1, 0]] and Q* J Q = diag(1, -i) · [[0, i],[-1, 0]] = [[0, i],[i, 0]], so K = [[0, -1],[-1, 0]]. That is real symmetric, with imaginary coordinate 0, and it is not a multiple of iJ.
 

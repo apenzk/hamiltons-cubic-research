@@ -28,7 +28,7 @@
 
 ## Conventions, quoted from the brief
 
-- $\Lambda^2\mathbb R^n$ is realised as skew matrices. $\varphi_{ab}=E_{ba}-E_{ab}$ and it is a UNIT bivector. The inner product is $\langle X,Y\rangle=\tfrac12\operatorname{tr}(X^{\mathsf T}Y)$.
+- $\Lambda^2\mathbb R^n$ is realised as skew matrices. $\varphi_{ab}=E_{ba}-E_{ab}$ and it is a UNIT bivector. The inner product is $\langle X,Y\rangle=\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$.
 - $u\wedge v=vu^{\mathsf T}-uv^{\mathsf T}$, and at orthonormal $u,v$ this is a unit bivector with $(u\wedge v)(u\wedge v)^{\mathsf T}=\Pi_P$.
 - $\mathcal W_n$ is the space of algebraic Weyl tensors: symmetric operators on $\Lambda^2\mathbb R^n$, first Bianchi, Ricci-flat, trace-free. $P(W)=\langle W,W^2+W^\#\rangle$, $\theta=P(W)/\lVert W\rVert^3$, criticality on the unit sphere is $Q(W)=W^2+W^\#=\theta W$.
 - $\sqrt{3/2}=1.224745$ and $\theta_0(n)=\sqrt{2(n-1)(n-2)}/n$. $N=\binom n2$.
@@ -42,7 +42,7 @@ What each piece of the block actually needs, separated so that a later reader ca
 |---|---|
 | $\sum_{\beta\gamma}T_{\alpha\beta\gamma}=2(n-2)$ (the marginal, [Lemma L153](../findings/bounds.md)) | Orthonormality of the basis alone. It is the diagonal of $\mathrm{Id}\#\mathrm{Id}=(n-2)\mathrm{Id}$, true of every orthonormal basis of $\Lambda^2\mathbb R^n$ and of no property of $W$ |
 | Relation (B), $\sum_{\beta\gamma}\lambda_\beta T_{\alpha\beta\gamma}=-2\lambda_\alpha$ | An orthonormal eigenbasis, plus $W\#\mathrm{Id}=-W$, which is first Bianchi together with Ricci-flatness |
-| $m_1=0$ | The marginal, plus $\operatorname{tr}_{\Lambda^2}W=0$, which is itself the trace of given 2 |
+| $m_1=0$ | The marginal, plus $\mathop{\mathrm{tr}}_{\Lambda^2}W=0$, which is itself the trace of given 2 |
 | $m_2=-2$ | Relation (B) plus unit norm. Nothing else |
 | The objective $\theta=\sum_ia_i\mu_i^3+\tfrac12m_3$ | Given 14, that is the definition of $\#$ as the Lie-algebra square in the brief's normalisation, plus unit norm. Criticality is NOT needed |
 | The class factors $\tfrac13,\tfrac13,1,\tfrac13,\tfrac16$ | Total symmetry of $T$ and nothing else. They are counting identities |
@@ -58,7 +58,7 @@ the block sum of $T$ over level sets. This is the only reading of $t_{ijk}$ unde
 
 The $\tfrac12$ is the constant in the definition of $\#$, not a symmetry factor for double counting, and this is the place where a factor of two is most easily lost. With $R$ diagonal in the eigenbasis, the Lie-algebra square $(R^\#)_{kk}=\tfrac12\sum_{c,d,e,f}c_{kce}c_{kdf}R_{cd}R_{ef}$ collapses to $\tfrac12\sum_{\beta\gamma}\lambda_\beta\lambda_\gamma T_{k\beta\gamma}$, the double sum running over ALL ordered pairs with hollowness killing $\beta=\gamma$. Equivalently $(W^\#)_{kk}=\sum_{\beta<\gamma}\lambda_\beta\lambda_\gamma T_{k\beta\gamma}$: a reader who restricts to unordered pairs must drop the $\tfrac12$, and a reader who keeps ordered pairs must keep it. I checked the same normalisation reproduces the two other diagonals the record uses. Polarising, $(W\#\mathrm{Id})_{kk}=\tfrac12\cdot\tfrac12\sum_{cd}T_{kcd}(\lambda_c+\lambda_d)=\tfrac12\sum_{\beta\gamma}\lambda_\beta T_{k\beta\gamma}$, so $W\#\mathrm{Id}=-W$ is exactly relation (B) with its $-2$, and $(\mathrm{Id}\#\mathrm{Id})_{kk}=\tfrac12\cdot2(n-2)=n-2$ is exactly $\mathrm{Id}\#\mathrm{Id}=(n-2)\mathrm{Id}$. All three constants are the same constant, so the $\tfrac12$ cannot be adjusted in one place alone.
 
-Independent confirmation on the record's own extremal object, computed from matrices rather than from the record's numbers. With $\varphi_{ab}=E_{ba}-E_{ab}$ and $\langle X,Y\rangle=\tfrac12\operatorname{tr}(X^{\mathsf T}Y)$, the self-dual basis $u_1=(\varphi_{12}+\varphi_{34})/\sqrt2$, $u_2=(\varphi_{13}+\varphi_{42})/\sqrt2$, $u_3=(\varphi_{14}+\varphi_{23})/\sqrt2$ is orthonormal, and by direct expansion of the commutator, using $[\varphi_{ab},\varphi_{ac}]=\varphi_{bc}$ in this convention,
+Independent confirmation on the record's own extremal object, computed from matrices rather than from the record's numbers. With $\varphi_{ab}=E_{ba}-E_{ab}$ and $\langle X,Y\rangle=\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$, the self-dual basis $u_1=(\varphi_{12}+\varphi_{34})/\sqrt2$, $u_2=(\varphi_{13}+\varphi_{42})/\sqrt2$, $u_3=(\varphi_{14}+\varphi_{23})/\sqrt2$ is orthonormal, and by direct expansion of the commutator, using $[\varphi_{ab},\varphi_{ac}]=\varphi_{bc}$ in this convention,
 $$[u_1,u_2]=\tfrac12(\varphi_{23}+\varphi_{14}+\varphi_{14}+\varphi_{23})=\varphi_{23}+\varphi_{14}=\sqrt2\,u_3,$$
 so $T_{u_1u_2u_3}=2$, and the same on $\Lambda^-$, with all cross-chirality structure constants zero. For $W_{\mathbb{CP}^2}$, spectrum $(2c,-c,-c,0,0,0)$ with $c=1/\sqrt6$ from unit norm, this gives $m_3=24c^3$ and $\theta=6c^3+12c^3=18c^3=3/\sqrt6=\sqrt{3/2}$, matching given 5 exactly. With the $\tfrac12$ removed one would get $30c^3=2.041$, and with it doubled $12c^3=0.8165$. The objective's constant is therefore pinned by an established value of the record and is right.
 
@@ -70,7 +70,7 @@ I re-derived the marginal from the structure constants rather than citing it. In
 
 Summing over the level set, $\sum_{jk}t_{ijk}=\sum_{\alpha\in I_i}\sum_{\beta\gamma}T_{\alpha\beta\gamma}=2(n-2)a_i$, as claimed. Hence $m_0=\sum_i2(n-2)a_i=2(n-2)N$ and
 $$m_1=\sum_i\mu_i\sum_{jk}t_{ijk}=2(n-2)\sum_ia_i\mu_i=0.$$
-The only extra input is $\sum_ia_i\mu_i=0$, which is $\operatorname{tr}_{\Lambda^2}W=0$. That needs nothing beyond Ricci-flatness: taking the trace of given 2 gives $\sum_\mu\lambda_\mu\cdot2\dim E_\mu=2\operatorname{tr}W=0$. So $m_1=0$ needs the marginal and Ricci-flatness, and in particular no decomposability, no criticality and no unit norm. **CONFIRMED.**
+The only extra input is $\sum_ia_i\mu_i=0$, which is $\mathop{\mathrm{tr}}_{\Lambda^2}W=0$. That needs nothing beyond Ricci-flatness: taking the trace of given 2 gives $\sum_\mu\lambda_\mu\cdot2\dim E_\mu=2\mathop{\mathrm{tr}}W=0$. So $m_1=0$ needs the marginal and Ricci-flatness, and in particular no decomposability, no criticality and no unit norm. **CONFIRMED.**
 
 ## 3. $m_2=-2$
 

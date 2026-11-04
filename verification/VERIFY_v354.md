@@ -24,7 +24,7 @@ Cold brief [ADJ_L113_E6.md](ADJ_L113_E6.md). No numerical work, no scripts writt
 
 - **H1 (relaxation).** "Moment inequalities built from positivity and support" are inequalities valid for every vector $g\in\mathbb R^N_{\ge0}$ whose measure $\sum_kg_k\delta_{\lambda_k}$ carries the pinned $m_0,m_1$. The structure of $g$ as a contraction of $T$ is forgotten.
 - **H2 (normalisation).** $\lVert W\rVert=1$, so $m_0=4(n-1)$, and $n\ge2$, so $m_0>0$.
-- **H3 (trace).** $\operatorname{tr}W=0$ on $\Lambda^2$, giving $\lambda_{\min}\le0\le\lambda_{\max}$.
+- **H3 (trace).** $\mathop{\mathrm{tr}}W=0$ on $\Lambda^2$, giving $\lambda_{\min}\le0\le\lambda_{\max}$.
 - **H4 (sign).** $\theta\ge0$, the branch on which the upper feasibility inequality is automatic.
 - **H5 (no cap).** The inequality family excludes the per-coordinate cap of Lemma L109, $g_\gamma\le2(n-2)(\lambda_{\max}-\lambda_{\min})^2$, which is built from $T\ge0$ and the row marginal rather than from positivity of $g$ and support.
 
@@ -103,4 +103,4 @@ The `N` and `n` of `feasible_iff_theta` are independent, a harmless generalisati
 
 ## 6. Verdict
 
-**FAILS.** The step says the declarations of L113.lean state and prove Lemma L113 or a component of it. The five declarations of that file are true but are scalar identities over `ℝ`, a singleton convexity check, propositional weakening in the direction opposite to elimination, and an unrelated existence statement over `Set ℕ`, and none can be instantiated at $g$, $T$ or the moments $m_j$. The component the lemma actually uses (feasibility of the pinned first two moments is exactly $c\lambda_{\min}\le s\le c\lambda_{\max}$, with a two-atom witness, specialising to L107) is stated and proved in L113Statement.lean, and a reading that counts that file would be VALID for the component clause only, under H1 (positivity and support alone), H2 (unit norm, $n\ge2$), H3 ($\operatorname{tr}W=0$), H4 ($\theta\ge0$) and H5 (no L109 cap), with the elimination bridge supplied outside Lean.
+**FAILS.** The step says the declarations of L113.lean state and prove Lemma L113 or a component of it. The five declarations of that file are true but are scalar identities over `ℝ`, a singleton convexity check, propositional weakening in the direction opposite to elimination, and an unrelated existence statement over `Set ℕ`, and none can be instantiated at $g$, $T$ or the moments $m_j$. The component the lemma actually uses (feasibility of the pinned first two moments is exactly $c\lambda_{\min}\le s\le c\lambda_{\max}$, with a two-atom witness, specialising to L107) is stated and proved in L113Statement.lean, and a reading that counts that file would be VALID for the component clause only, under H1 (positivity and support alone), H2 (unit norm, $n\ge2$), H3 ($\mathop{\mathrm{tr}}W=0$), H4 ($\theta\ge0$) and H5 (no L109 cap), with the elimination bridge supplied outside Lean.

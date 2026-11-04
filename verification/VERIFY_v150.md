@@ -25,8 +25,8 @@
 
 Quoted from [conventions.md](../findings/conventions.md), not restated from memory.
 
-- $N=\binom n2=\dim\Lambda^2\mathbb R^n$, and $\Lambda^2\mathbb R^n\cong\mathfrak{so}(n)$ under $\langle X,Y\rangle=\tfrac12\operatorname{tr}(X^{\mathsf T}Y)$, the half-trace pairing, under which $\{\varphi_{ab}\}_{a<b}$ is orthonormal and $\operatorname{tr}(v^2)=-2$ for a unit bivector.
-- $Q(W)=W^2+W^\#$, $P(W)=\langle W,Q(W)\rangle$, $\theta=P(W)/\lVert W\rVert^3$. At $\lVert W\rVert=1$, $\theta=P(W)=\operatorname{tr}W^3+\langle W,W^\#\rangle$.
+- $N=\binom n2=\dim\Lambda^2\mathbb R^n$, and $\Lambda^2\mathbb R^n\cong\mathfrak{so}(n)$ under $\langle X,Y\rangle=\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$, the half-trace pairing, under which $\{\varphi_{ab}\}_{a<b}$ is orthonormal and $\mathop{\mathrm{tr}}(v^2)=-2$ for a unit bivector.
+- $Q(W)=W^2+W^\#$, $P(W)=\langle W,Q(W)\rangle$, $\theta=P(W)/\lVert W\rVert^3$. At $\lVert W\rVert=1$, $\theta=P(W)=\mathop{\mathrm{tr}}W^3+\langle W,W^\#\rangle$.
 - $\#$ is the halved Böhm–Wilking product, $vv^{\mathsf T}\#ww^{\mathsf T}=\tfrac12[v,w][v,w]^{\mathsf T}$.
 - Structure constants $c_{\alpha\beta\gamma}=\langle[v_\alpha,v_\beta],v_\gamma\rangle$ are **totally antisymmetric**, so $T_{\alpha\beta\gamma}=c_{\alpha\beta\gamma}^2$ is totally symmetric and **hollow**, it vanishes whenever two indices coincide.
 - **Sums over pairs and triples are over ORDERED tuples** unless the line says otherwise. L29's display carries an explicit $\tfrac12$ and is in the ordered reading; [L35](../findings/stratum-two-negative.md)'s display carries a $3$ and is over $\alpha<\beta<\gamma$. Both are the same number.
@@ -43,7 +43,7 @@ Quoted from [conventions.md](../findings/conventions.md), not restated from memo
 | --- | --- | --- |
 | H1 | $W\in\mathrm{Weyl}_n$ | *the bound uses only H2–H4*; H1 is used only by the two addenda (Ricci-flatness for the support argument, and for the equality-forces-$r=4$ clause) |
 | H2 | $\lVert W\rVert=1$ | the norm equation $\lambda_1^2+a^2+b^2=1$, and the definition of $\theta$ as $P/\lVert W\rVert^3$ |
-| H3 | $\operatorname{tr}W=0$ | $\lambda_1=a+b$ |
+| H3 | $\mathop{\mathrm{tr}}W=0$ | $\lambda_1=a+b$ |
 | H4 | exactly one positive and two negative eigenvalues, **counted with multiplicity**, all others zero | the vanishing of $(+++)$, $(++-)$, $(---)$; and H3, H2 as three-term equations |
 
 **H3 is not stated and is imported silently.** The block says "$W\in\mathrm{Weyl}_n$" and then "Trace-freeness gives $\lambda_1=a+b$". Trace-freeness is a consequence of $W$ being a Weyl operator, so this is sound, but it is the *only* Weyl property the inequality uses, and saying so is what makes the strengthening in §8 visible. [L35](../findings/stratum-two-negative.md)'s block states exactly this for its own chain ("never uses the first Bianchi identity, so it holds for any trace-free symmetric operator on $\Lambda^2$"); L29's block does not.
@@ -76,9 +76,9 @@ This reproduces the block's coefficient exactly.
 
 **Step 4, the pair cap.** $T_{1,N-1,N}$ is one nonnegative term of $\sum_\gamma T_{N-1,N,\gamma}=\lVert[v_{N-1},v_N]\rVert^2\le2$, so $T_{1,N-1,N}\le2$ and $\langle W,W^\#\rangle\le6\lambda_1ab$.
 
-**Step 5, the exact part.** $\operatorname{tr}W^3=\lambda_1^3-(a^3+b^3)$, exactly.
+**Step 5, the exact part.** $\mathop{\mathrm{tr}}W^3=\lambda_1^3-(a^3+b^3)$, exactly.
 
-**Step 6, the two constraints.** $\operatorname{tr}W=0$ gives $\lambda_1=a+b$; $\lVert W\rVert=1$ gives $(a+b)^2+a^2+b^2=1$, i.e.
+**Step 6, the two constraints.** $\mathop{\mathrm{tr}}W=0$ gives $\lambda_1=a+b$; $\lVert W\rVert=1$ gives $(a+b)^2+a^2+b^2=1$, i.e.
 $$a^2+ab+b^2=\tfrac12 .$$
 
 **Step 7, the collapse.** With $\lambda_1=a+b$, $(a+b)^3-a^3-b^3=3ab(a+b)$, so
@@ -139,7 +139,7 @@ The single inequality of the proof is an equality at this point.
 
 | route | evaluation |
 | --- | --- |
-| the block's own split | $\operatorname{tr}W^3=(8-1-1)/6^{3/2}=6/6^{3/2}=1/\sqrt6$; $\langle W,W^\#\rangle=3\cdot2\cdot\tfrac2{\sqrt6}\cdot\tfrac1{\sqrt6}\cdot\tfrac1{\sqrt6}=\tfrac2{\sqrt6}$; sum $3/\sqrt6=\sqrt{3/2}$ |
+| the block's own split | $\mathop{\mathrm{tr}}W^3=(8-1-1)/6^{3/2}=6/6^{3/2}=1/\sqrt6$; $\langle W,W^\#\rangle=3\cdot2\cdot\tfrac2{\sqrt6}\cdot\tfrac1{\sqrt6}\cdot\tfrac1{\sqrt6}=\tfrac2{\sqrt6}$; sum $3/\sqrt6=\sqrt{3/2}$ |
 | the closed form $9ab(a+b)$ | $a=b=1/\sqrt6$: $9\cdot\tfrac16\cdot\tfrac2{\sqrt6}=\tfrac3{\sqrt6}=\sqrt{3/2}$ |
 | the record's $\mathrm{Weyl}_4$ identity $P=9(\det W^++\det W^-)$ | $\det W^+=2/6^{3/2}$, so $P=18/6^{3/2}=3/\sqrt6=\sqrt{3/2}$ |
 
@@ -149,7 +149,7 @@ A fourth, from a different file: [L28](../findings/nondegeneracy.md)'s closed fo
 
 **What the kernel does to the hypothesis.** At $n=12$ the kernel is $63$ of $66$ ([post W4](../findings/INDEX-traps.md)).
 
-1. **It is required, not tolerated.** H4 says "exactly one positive and two negative eigenvalues"; every other eigenvalue must therefore be zero, and that is precisely what makes $\operatorname{tr}W=0$ read $\lambda_1=a+b$ and $\lVert W\rVert=1$ read $\lambda_1^2+a^2+b^2=1$. A stratum member with a large kernel is the generic case above $n=4$, not an edge case.
+1. **It is required, not tolerated.** H4 says "exactly one positive and two negative eigenvalues"; every other eigenvalue must therefore be zero, and that is precisely what makes $\mathop{\mathrm{tr}}W=0$ read $\lambda_1=a+b$ and $\lVert W\rVert=1$ read $\lambda_1^2+a^2+b^2=1$. A stratum member with a large kernel is the generic case above $n=4$, not an edge case.
 2. **It does not make the eigenbasis ill-posed.** The kernel eigenvectors are arbitrary, and the negative eigenspace at the attaining object is $2$-dimensional with a repeated eigenvalue, so $v_2,v_3$ are determined only up to $O(2)$. Neither matters: the cubic sum touches no kernel index, and under a rotation of the negative $2$-plane the bracket $[v_2,v_3]$ is multiplied by the determinant, so $T_{1,N-1,N}$ is invariant. **The proof is well posed at the attaining object despite both degeneracies.**
 3. **It empties the block's own motivating sentence, correctly.** The block opens by saying the sharpest competitor "sits where the hypothesis defining that residual is vacuous", the slack being $S(W)=\sum_{\lambda<0}c'^2$. That is [post W4](../findings/INDEX-traps.md) verbatim, the gradedness screen is vacuous when $\ker W\ne0$. The block uses this as the *reason for* the lemma rather than reporting $S=0$ as evidence, which is the correct use. **No finding.**
 
@@ -205,7 +205,7 @@ The claim under test: *no unit $W$ with exactly one positive and two negative ei
 
 **Only one structured family the record names has signature $(1,2)$**, and it is the self-dual one; the record's own support argument explains why, since at $r=4$ that family exhausts the stratum. Every member evaluates at or below the cap, with equality exactly at $q=r$, matching $f(t)$'s equality set $t=1$.
 
-**And the search extends past $\mathrm{Weyl}_n$.** §2.1 uses only $\lVert W\rVert=1$, $\operatorname{tr}W=0$ and the sign pattern, so a falsifier need not be a Weyl operator: any trace-free symmetric operator on $\Lambda^2\mathbb R^n$ of the form $\lambda_1u_1u_1^{\mathsf T}-au_2u_2^{\mathsf T}-bu_3u_3^{\mathsf T}$, for an orthonormal triple $u_i\in\mathfrak{so}(n)$, is admissible for the argument. **The bound holds on that wider class too**, and no falsifier exists there either, for the reason in §10.
+**And the search extends past $\mathrm{Weyl}_n$.** §2.1 uses only $\lVert W\rVert=1$, $\mathop{\mathrm{tr}}W=0$ and the sign pattern, so a falsifier need not be a Weyl operator: any trace-free symmetric operator on $\Lambda^2\mathbb R^n$ of the form $\lambda_1u_1u_1^{\mathsf T}-au_2u_2^{\mathsf T}-bu_3u_3^{\mathsf T}$, for an orthonormal triple $u_i\in\mathfrak{so}(n)$, is admissible for the argument. **The bound holds on that wider class too**, and no falsifier exists there either, for the reason in §10.
 
 ## 7. Comparing the forms on file
 
@@ -229,7 +229,7 @@ The claim under test: *no unit $W$ with exactly one positive and two negative ei
 2. The same, for **any** trace-free symmetric operator on $\Lambda^2\mathbb R^n$ with that sign pattern, no first Bianchi, no Ricci-flatness. *The block does not claim this; [L35](../findings/stratum-two-negative.md)'s block claims it for its own chain, and the identical remark applies here.*
 3. The cap is attained: at $(2,-1,-1)/\sqrt6$, i.e. padded $W_{\mathbb{CP}^2}$, at every $n\ge4$. Exact, by four routes.
 4. Equality $\Rightarrow$ $b/a=1$ $\Rightarrow$ spectrum $(2,-1,-1)/\sqrt6$. **This is a consequence of the lemma's own proof**, from the uniqueness of $t=1$, and needs neither L31 nor L72. §9, candidate A.
-5. Equality $\Rightarrow$ $T_{1,N-1,N}=2$ $\Rightarrow$ $\lVert[v_{N-1},v_N]\rVert^2=2$ $\Rightarrow$ (L31) $\operatorname{im}v_{N-1}=\operatorname{im}v_N$ of dimension $4$ $\Rightarrow$ (Ricci-flatness) support $r=4$. **This is strictly stronger than (4) and is where H1 is genuinely spent**, a consumer working in the wider class of (2) may cite (4) but not (5).
+5. Equality $\Rightarrow$ $T_{1,N-1,N}=2$ $\Rightarrow$ $\lVert[v_{N-1},v_N]\rVert^2=2$ $\Rightarrow$ (L31) $\mathop{\mathrm{im}}v_{N-1}=\mathop{\mathrm{im}}v_N$ of dimension $4$ $\Rightarrow$ (Ricci-flatness) support $r=4$. **This is strictly stronger than (4) and is where H1 is genuinely spent**, a consumer working in the wider class of (2) may cite (4) but not (5).
 
 **Not proven, and not citable.**
 

@@ -13,7 +13,7 @@
 
 ## Item 1: the slot spectrum
 
-- With $\varphi_{pq}$ of norm $1$ under $\langle X,Y\rangle=-\tfrac12\operatorname{tr}XY$, the unit condition is $\sum_cs_c^2=1$.
+- With $\varphi_{pq}$ of norm $1$ under $\langle X,Y\rangle=-\tfrac12\mathop{\mathrm{tr}}XY$, the unit condition is $\sum_cs_c^2=1$.
 - On the four-dimensional span of $E$-slots between blocks $a<b$, $\mathrm{ad}_X$ has eigenvalues $\pm i(s_a+s_b)$ and $\pm i(s_a-s_b)$, so $-\mathrm{ad}_X^2$ has $(s_a+s_b)^2$ twice and $(s_a-s_b)^2$ twice.
 - On the two-dimensional span between block $a$ and a free index, $\mathrm{ad}_X$ is a rotation at rate $s_a$, so $-\mathrm{ad}_X^2=s_a^2$ with multiplicity $2$. The Cartan and free-free slots are $0$. The dimension count is $\binom n2$.
 - Clarification: the claim's first sentence says "$s_a^2$ per block and free index" where the givens say "twice". The proof treats each such slot individually (coefficient $a_c^2$ per chosen slot, counted once in $r$), so the multiplicity is used correctly and nothing depends on the wording.

@@ -12,7 +12,7 @@ Claim audited: [Lemma L17](../findings/route-a.md), the first-order statement at
 
 The closed formula and its four ingredients live in [ATTEMPTS.md](../ATTEMPTS.md), Result 6:
 
-$$d^+\delta^2(H)=-2a\,F(H),\qquad F(H)=H_{22}+H_{33}+\operatorname{tr}\!\big(\Pi_{ASD}(P_0HP_0)_-\big)\;\ge\;\tfrac23\operatorname{tr}(B_+)+\tfrac13\operatorname{tr}(B_-)\;\ge\;0 .$$
+$$d^+\delta^2(H)=-2a\,F(H),\qquad F(H)=H_{22}+H_{33}+\mathop{\mathrm{tr}}\!\big(\Pi_{ASD}(P_0HP_0)_-\big)\;\ge\;\tfrac23\mathop{\mathrm{tr}}(B_+)+\tfrac13\mathop{\mathrm{tr}}(B_-)\;\ge\;0 .$$
 
 **So the record's own "canonical proof" location is empty**, and every downstream lemma that quotes "L17's $d^+\delta^2=-2aF$", [conventions.md](../findings/conventions.md) and [Lemma L136](../findings/route-a.md) both do, quotes a formula that appears nowhere in [findings/](../findings/). This is a structural defect, not a mathematical one, but it is why the two errors in §3 and §4 below survived.
 
@@ -25,17 +25,17 @@ All of the following was re-derived here, not read off.
 | step | independent check | verdict |
 | --- | --- | --- |
 | $u$'s data: $\lVert u\rVert=1$, spectrum $\tfrac1{\sqrt6}(2,-1,-1)$ on the self-dual $3$-space $E$, kernel elsewhere | $\sum\lambda^2=6/6=1$ | holds |
-| $\theta^*=P(u)=\sqrt{3/2}$ | $\operatorname{tr}(u^3)=1/\sqrt6$; $\langle u,u^\#\rangle=\tfrac12\cdot6\cdot T_{123}\lambda_1\lambda_2\lambda_3=2/\sqrt6$ with $T_{123}=c_{123}^2=2$ from $[A_1,A_2]=-\sqrt2A_3$ on the self-dual triple; total $3/\sqrt6=\sqrt{3/2}$ | holds, **exactly** |
+| $\theta^*=P(u)=\sqrt{3/2}$ | $\mathop{\mathrm{tr}}(u^3)=1/\sqrt6$; $\langle u,u^\#\rangle=\tfrac12\cdot6\cdot T_{123}\lambda_1\lambda_2\lambda_3=2/\sqrt6$ with $T_{123}=c_{123}^2=2$ from $[A_1,A_2]=-\sqrt2A_3$ on the self-dual triple; total $3/\sqrt6=\sqrt{3/2}$ | holds, **exactly** |
 | $\mathrm{Alt}(u_-)=a\star$, $a=\tfrac1{3\sqrt6}$ | $u_-$ is supported in $\Lambda^2\mathbb R^4$, so its $\Lambda^4$ part lies on the line $\mathbb R\star$; $a=\langle u_-,\star\rangle/\lVert\star\rVert^2=(2/\sqrt6)/6$ | holds |
 | $\delta^2(u)=\tfrac19$ | $a^2\lVert\star\rVert^2=\tfrac1{54}\cdot6$ | holds |
 | $\mathrm{Alt}(u_-)\rvert_{\ker u}=-a\Pi_{ASD}$ | $\star=\Pi_{SD}-\Pi_{ASD}$ restricted to $\ker u=A\oplus K'$ | holds |
 | the $\tfrac13$ in $\mathrm{Alt}$ | $\mathrm{Alt}(\epsilon)_{ijkl}=\tfrac13(\epsilon_{ijkl}+\epsilon_{iklj}+\epsilon_{iljk})=\epsilon_{ijkl}$, since $ijkl\to iklj$ is a $3$-cycle on $\{j,k,l\}$ and hence even, so $\mathrm{Alt}$ is idempotent on $\star$ and the orthogonal-projection formula used above is the right one | holds |
 | smooth branch $\Rightarrow-(H_{22}+H_{33})$ | $d^+\delta^2=2\langle\mathrm{Alt}(u_-),\mathrm{Alt}(\dot W_-)\rangle=2a\langle\star,\dot W_-\rangle$ (Alt self-adjoint idempotent, $\mathrm{Alt}\star=\star$); $\star$ is block-diagonal for $E\oplus A\oplus K'$, so only diagonal blocks survive and all Daleckii–Krein off-diagonal and $E$–$K$ tilt terms pair to zero **without needing any claim about eigenvector rotations**; $f(x)=x_-$ gives $f'(2/\sqrt6)=0$, $f'(-1/\sqrt6)=-1$ | holds |
-| kink branch $\Rightarrow-\operatorname{tr}(\Pi_A(P_0HP_0)_-)$ | kernel eigenvalues move as $t\cdot\operatorname{spec}(P_0HP_0)$; $\star\rvert_A=-\Pi_{ASD}$; the trace is basis-free so the degeneracy of $\ker u$ costs nothing | holds |
-| Bianchi: $H_{11}+H_{22}+H_{33}=\operatorname{tr}(B)$, $B=\Pi_{ASD}H\Pi_{ASD}$ | $\star\in\Lambda^4$, so $\langle H,\star\rangle=\langle\mathrm{Alt}H,\star\rangle=0$ for Weyl $H$ | holds |
-| tangency: $2H_{11}=H_{22}+H_{33}$, hence $H_{22}+H_{33}=\tfrac23\operatorname{tr}(B)$ | $\langle H,u\rangle=\tfrac1{\sqrt6}(2H_{11}-H_{22}-H_{33})$ | holds |
-| Jensen/Hansen–Pedersen: $\operatorname{tr}(\Pi_A N_-)\ge\operatorname{tr}(B_-)$ | $f(x)=x_-$ convex with $f(0)=0$, $\Pi_A\le P_0$ a contraction, $B=V^*NV$ | holds, **direction correct** |
-| the chain $F\ge\tfrac23\operatorname{tr}B_++\tfrac13\operatorname{tr}B_-\ge0$ | $\tfrac23(\operatorname{tr}B_+-\operatorname{tr}B_-)+\operatorname{tr}B_-$ | holds |
+| kink branch $\Rightarrow-\mathop{\mathrm{tr}}(\Pi_A(P_0HP_0)_-)$ | kernel eigenvalues move as $t\cdot\mathop{\mathrm{spec}}(P_0HP_0)$; $\star\rvert_A=-\Pi_{ASD}$; the trace is basis-free so the degeneracy of $\ker u$ costs nothing | holds |
+| Bianchi: $H_{11}+H_{22}+H_{33}=\mathop{\mathrm{tr}}(B)$, $B=\Pi_{ASD}H\Pi_{ASD}$ | $\star\in\Lambda^4$, so $\langle H,\star\rangle=\langle\mathrm{Alt}H,\star\rangle=0$ for Weyl $H$ | holds |
+| tangency: $2H_{11}=H_{22}+H_{33}$, hence $H_{22}+H_{33}=\tfrac23\mathop{\mathrm{tr}}(B)$ | $\langle H,u\rangle=\tfrac1{\sqrt6}(2H_{11}-H_{22}-H_{33})$ | holds |
+| Jensen/Hansen–Pedersen: $\mathop{\mathrm{tr}}(\Pi_A N_-)\ge\mathop{\mathrm{tr}}(B_-)$ | $f(x)=x_-$ convex with $f(0)=0$, $\Pi_A\le P_0$ a contraction, $B=V^*NV$ | holds, **direction correct** |
+| the chain $F\ge\tfrac23\mathop{\mathrm{tr}}B_++\tfrac13\mathop{\mathrm{tr}}B_-\ge0$ | $\tfrac23(\mathop{\mathrm{tr}}B_+-\mathop{\mathrm{tr}}B_-)+\mathop{\mathrm{tr}}B_-$ | holds |
 
 Assembling: $u$ is a critical point of $P\rvert_S$ ($Q(u)=\theta^*u$), so $dP=0$ on $T_uS$ and
 
@@ -45,7 +45,7 @@ $$d^+\Phi(u;H)\;=\;-\kappa_n\,d^+\delta^2(u;H)\;=\;2a\,\kappa_n\,F(H)\;\le\;0\qu
 
 ## 2. The sign of $W_-$, the expected break point, and it does not break
 
-Under the record's convention $W_-=\tfrac12(\lvert W\rvert-W)\succeq0$ everything above is as displayed: $a>0$, $F\ge0$, $\operatorname{tr}(B_\pm)\ge0$, the Hansen–Pedersen inequality points the stated way, and $\tfrac23\operatorname{tr}B_++\tfrac13\operatorname{tr}B_-\ge0$.
+Under the record's convention $W_-=\tfrac12(\lvert W\rvert-W)\succeq0$ everything above is as displayed: $a>0$, $F\ge0$, $\mathop{\mathrm{tr}}(B_\pm)\ge0$, the Hansen–Pedersen inequality points the stated way, and $\tfrac23\mathop{\mathrm{tr}}B_++\tfrac13\mathop{\mathrm{tr}}B_-\ge0$.
 
 **Under the opposite convention the lemma's conclusion is unchanged.** $\delta^2=\lVert\mathrm{Alt}(W_-)\rVert^2$ is a *square*, so flipping $W_-\mapsto-W_-$ leaves $\delta^2$, $d^+\delta^2$ and $d^+\Phi$ pointwise identical; what flips is $a\mapsto-a$ **and** $F\mapsto-F$ together, the product $-2aF$ being invariant. So:
 
@@ -56,11 +56,11 @@ Under the record's convention $W_-=\tfrac12(\lvert W\rvert-W)\succeq0$ everythin
 
 L136 records: *"the claim that $\mathcal E_D$ exists nowhere on $\{F=0\}$ because the equality case forces $A\subseteq\ker D$. **It does not**: $F=0$ forces $\Pi_AD_-=0$, which puts $A$ in $D$'s nonnegative spectral subspace, not in its kernel, witness $D=\varepsilon\Pi_A\oplus D'$ with $\varepsilon>0$ ([r429](REVIEW_r429.md))."*
 
-**The witness is not on the cone.** For $D=\varepsilon\Pi_A\oplus D'$ the anti-self-dual compression is $B=\Pi_AD\Pi_A=\varepsilon\Pi_A$, so $\operatorname{tr}(B)=3\varepsilon$ and $\Pi_AD_-=0$, giving
+**The witness is not on the cone.** For $D=\varepsilon\Pi_A\oplus D'$ the anti-self-dual compression is $B=\Pi_AD\Pi_A=\varepsilon\Pi_A$, so $\mathop{\mathrm{tr}}(B)=3\varepsilon$ and $\Pi_AD_-=0$, giving
 
-$$F=\tfrac23\operatorname{tr}(B)+\operatorname{tr}(\Pi_AD_-)=2\varepsilon>0 .$$
+$$F=\tfrac23\mathop{\mathrm{tr}}(B)+\mathop{\mathrm{tr}}(\Pi_AD_-)=2\varepsilon>0 .$$
 
-The withdrawal used only *half* of what $F=0$ delivers. $F=0$ forces the whole chain to be tight, hence **both** $\operatorname{tr}(B_+)=\operatorname{tr}(B_-)=0$ (so $B=0$, a positive-semidefinite pair with zero trace), **and** $\operatorname{tr}(\Pi_AD_-)=\operatorname{tr}(B_-)=0$, so $\Pi_AD_-=0$. For $v\in A$ the second gives $D_-v=0$, hence $Dv=D_+v$; the first gives $\langle D_+v,v\rangle=0$ with $D_+\succeq0$, hence $D_+v=0$. **So $A\subseteq\ker D$ after all.**
+The withdrawal used only *half* of what $F=0$ delivers. $F=0$ forces the whole chain to be tight, hence **both** $\mathop{\mathrm{tr}}(B_+)=\mathop{\mathrm{tr}}(B_-)=0$ (so $B=0$, a positive-semidefinite pair with zero trace), **and** $\mathop{\mathrm{tr}}(\Pi_AD_-)=\mathop{\mathrm{tr}}(B_-)=0$, so $\Pi_AD_-=0$. For $v\in A$ the second gives $D_-v=0$, hence $Dv=D_+v$; the first gives $\langle D_+v,v\rangle=0$ with $D_+\succeq0$, hence $D_+v=0$. **So $A\subseteq\ker D$ after all.**
 
 *Consequences.* [route-a.md](../findings/route-a.md) still cites the withdrawn fact, "on $\{F=0\}$ it is void anyway by Lemma L136's own finding that $\mathcal E_D$ never exists there", so the record currently contains a claim and its retraction, and **the claim is the correct one**. Nothing breaks either way: L136's own bound uses only the weaker $\Pi_AD_-=0$, and using less information can only weaken an upper bound.
 
@@ -88,7 +88,7 @@ This is a substantive correction to the canon. [results.md](../results.md) prese
 
 ## 7. SCREEN, "$F$ is convex" is false, and unneeded
 
-[ATTEMPTS.md](../ATTEMPTS.md) justifies the numerical certification of $\inf F=0$ by "*$F$ is convex and $1$-homogeneous on the tangent space, so directed subgradient descent certifies the sign globally*". $1$-homogeneity holds. Convexity does not: $N\mapsto\operatorname{tr}(\Pi N_-)$ for a fixed projector $\Pi$ is **not** convex, $x\mapsto x_-$ is convex but not *operator* convex, and a weighted trace needs the latter. *Screen, reported as a screen*: over $2\times10^4$ random symmetric $4\times4$ pairs with $\Pi$ of rank $2$, the largest violation $f(\tfrac{A+B}2)-\tfrac12(f(A)+f(B))$ was $+0.175$. The screen is on unrestricted symmetric $N$; whether the Weyl restriction happens to restore convexity is unchecked. **Nothing depends on it**, $F\ge0$ is proved analytically by the chain in §1, so the subgradient argument is redundant rather than load-bearing.
+[ATTEMPTS.md](../ATTEMPTS.md) justifies the numerical certification of $\inf F=0$ by "*$F$ is convex and $1$-homogeneous on the tangent space, so directed subgradient descent certifies the sign globally*". $1$-homogeneity holds. Convexity does not: $N\mapsto\mathop{\mathrm{tr}}(\Pi N_-)$ for a fixed projector $\Pi$ is **not** convex, $x\mapsto x_-$ is convex but not *operator* convex, and a weighted trace needs the latter. *Screen, reported as a screen*: over $2\times10^4$ random symmetric $4\times4$ pairs with $\Pi$ of rank $2$, the largest violation $f(\tfrac{A+B}2)-\tfrac12(f(A)+f(B))$ was $+0.175$. The screen is on unrestricted symmetric $N$; whether the Weyl restriction happens to restore convexity is unchecked. **Nothing depends on it**, $F\ge0$ is proved analytically by the chain in §1, so the subgradient argument is redundant rather than load-bearing.
 
 ---
 

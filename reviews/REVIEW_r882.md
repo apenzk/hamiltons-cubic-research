@@ -7,14 +7,14 @@ Reviewer r882, adversarial, cold brief. Log: [../agent_logs/review-r882-witness.
 | # | Claim | Verdict | Decisive evidence |
 |---|---|---|---|
 | C1 | Every reported figure reproduces from the witness file | **Confirmed** | All six figures reproduce to the digits quoted |
-| C2 | The object lies in $\mathcal W_5$ | **Confirmed** | $\operatorname{tr}W = 8\cdot10^{-17}$, $\lVert\mathrm{Ric}\rVert = 1.9\cdot10^{-11}$, $\max\lvert\mathrm{Alt}(W)\rvert = 2.6\cdot10^{-12}$ from the contraction definitions, and exactly zero after the polish |
+| C2 | The object lies in $\mathcal W_5$ | **Confirmed** | $\mathop{\mathrm{tr}}W = 8\cdot10^{-17}$, $\lVert\mathrm{Ric}\rVert = 1.9\cdot10^{-11}$, $\max\lvert\mathrm{Alt}(W)\rvert = 2.6\cdot10^{-12}$ from the contraction definitions, and exactly zero after the polish |
 | C3 | It has two eigenvalues, $\pm 1/\sqrt{10}$, each of multiplicity five | **Confirmed** | Spectrum computed, and $\lVert W\rVert^2 = 1.000000000000000$ |
-| C4 | It is not coordinate-diagonal in any frame | **Confirmed** | $\operatorname{tr}(\Pi_1\Pi_2) = 0.498509755736202811\ldots$ to 45 digits, and that quantity is an $O(5)$ invariant |
+| C4 | It is not coordinate-diagonal in any frame | **Confirmed** | $\mathop{\mathrm{tr}}(\Pi_1\Pi_2) = 0.498509755736202811\ldots$ to 45 digits, and that quantity is an $O(5)$ invariant |
 | C5 | The proof of non-coordinacy runs through L201 | **Refuted as stated** | Only the easy direction is used: the pairwise trace is an invariant and coordinate planes force values in $\{0,1\}$. L201 is never needed |
 | C6 | $A^\perp$ admits an orthonormal decomposable basis | **Confirmed** | Five forms exhibited, max Pfaffian $2.8\cdot10^{-17}$, $\lVert\Theta(A^\perp)-2\,\mathrm{Id}\rVert = 3.3\cdot10^{-16}$ |
 | C7 | The $10^{-11}$ residual could hide a coordinate exact solution | **Refuted** | Polished to $\lVert F\rVert = 3.6\cdot10^{-61}$, and the solution moved by $2\cdot10^{-10}$ and the defect moved by $8\cdot10^{-11}$ |
 | C8 | It is a rotation of the coordinate pentagon | **Refuted** | Trace multisets differ, and the singular values of $\mathrm{span}\{\Pi_\alpha\}$ are $(2,1.6081,1.3924,0.99999,0.6895)$ against the pentagon's $(2,\varphi,\varphi,\varphi^{-1},\varphi^{-1})$ |
-| C9 | Its $\theta$ is one of $\sqrt{24}/5$, $\sqrt{3/2}$ | **Refuted** | $\operatorname{tr}W^3 = 0$ and $\langle W,W^\#\rangle = 0$, so $P(W) = 0$ and $\theta = 0$ |
+| C9 | Its $\theta$ is one of $\sqrt{24}/5$, $\sqrt{3/2}$ | **Refuted** | $\mathop{\mathrm{tr}}W^3 = 0$ and $\langle W,W^\#\rangle = 0$, so $P(W) = 0$ and $\theta = 0$ |
 | C10 | It is a critical point of $P$ on the unit sphere of $\mathcal W_5$ | **Confirmed, at critical value zero** | $\Pi_{\mathcal W_5}\bigl(3(W^2+W^\#)\bigr) = 1.2\cdot10^{-15}$ |
 | C11 | The derivational argument for first Bianchi is valid | **Valid but stronger than needed** | $\mathrm{Alt}(\mathrm{Id}) = 0$ exactly, so $\mathrm{Alt}(\Pi_{A^\perp}) = -\mathrm{Alt}(\Pi_A) = 0$ and $A^\perp$ need not be decomposable |
 | C12 | The refutation extends past $n = 5$ | **Confirmed for $n = 5$ and every $n \ge 8$** | $n = 8, 9, 10, 12$ built and verified, while $n = 6, 7$ are out of reach of this padding |
@@ -25,12 +25,12 @@ The witness is what it is claimed to be, so the statement "every two-eigenvalue 
 
 ## Conventions
 
-I used the brief's conventions unchanged: $\langle X,Y\rangle = \tfrac12\operatorname{tr}(X^{\mathsf T}Y)$ on skew matrices, $u\wedge v = vu^{\mathsf T}-uv^{\mathsf T}$, $\varphi_{ij} = E_{ji}-E_{ij}$ as the orthonormal basis of $\Lambda^2\mathbb R^5$. Coordinates of a form are $c_{ij}(\omega) = \langle\omega,\varphi_{ij}\rangle = \omega_{ji}$, which I verified rather than assumed. The curvature 4-tensor of an operator $W$ on $\Lambda^2$ is $R_{ijkl} = \langle W\varphi_{ij},\varphi_{kl}\rangle$ extended antisymmetrically, Ricci is $\mathrm{Ric}_{ik} = \sum_j R_{ijkj}$, and first Bianchi is $R_{ijkl}+R_{iklj}+R_{iljk} = 0$ on the five quadruples.
+I used the brief's conventions unchanged: $\langle X,Y\rangle = \tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$ on skew matrices, $u\wedge v = vu^{\mathsf T}-uv^{\mathsf T}$, $\varphi_{ij} = E_{ji}-E_{ij}$ as the orthonormal basis of $\Lambda^2\mathbb R^5$. Coordinates of a form are $c_{ij}(\omega) = \langle\omega,\varphi_{ij}\rangle = \omega_{ji}$, which I verified rather than assumed. The curvature 4-tensor of an operator $W$ on $\Lambda^2$ is $R_{ijkl} = \langle W\varphi_{ij},\varphi_{kl}\rangle$ extended antisymmetrically, Ricci is $\mathrm{Ric}_{ik} = \sum_j R_{ijkj}$, and first Bianchi is $R_{ijkl}+R_{iklj}+R_{iljk} = 0$ on the five quadruples.
 
 Two conventions the brief leaves open, which I fixed and calibrated:
 
 - **The sharp operator.** $[X,Y] = XY-YX$, and $(W^\#)_{\alpha\beta} = \tfrac12\sum C^{\gamma\delta}_{\alpha}C^{\varepsilon\zeta}_{\beta}W_{\gamma\varepsilon}W_{\delta\zeta}$ with $C^{\alpha\beta}_{\gamma} = \langle[\varphi_\alpha,\varphi_\beta],\varphi_\gamma\rangle$. Calibration: $\mathrm{Id}^\# = (n-2)\,\mathrm{Id}$ holds to exactly zero, which is the standard Hamilton normalisation. Equivalently $\langle W,W^\#\rangle = \tfrac12\sum_{\alpha\beta}\langle W[b_\alpha,b_\beta],[Wb_\alpha,Wb_\beta]\rangle$, and in an eigenbasis $\langle W,W^\#\rangle = \tfrac12\sum_{\alpha\beta\gamma}\lambda_\alpha\lambda_\beta\lambda_\gamma(C^{\alpha\beta}_\gamma)^2$. If the record uses a different factor, my $\theta$ scales but stays zero.
-- **$\lVert W\rVert$.** Hilbert-Schmidt on operators, $\lVert W\rVert^2 = \operatorname{tr}W^2$. This is what makes $\lambda = 1/\sqrt{10}$ put $W$ on the unit sphere, which it does to 15 digits, so the intended convention is not in doubt.
+- **$\lVert W\rVert$.** Hilbert-Schmidt on operators, $\lVert W\rVert^2 = \mathop{\mathrm{tr}}W^2$. This is what makes $\lambda = 1/\sqrt{10}$ put $W$ on the unit sphere, which it does to 15 digits, so the intended convention is not in doubt.
 
 ## Hypothesis inventory
 
@@ -55,14 +55,14 @@ Nothing failed to reproduce. The ten pairwise traces are
 
 $$0.028968,\ 0.029141,\ 0.058109,\ 0.469542,\ 0.472349,\ 0.498510,\ 0.501490,\ 0.941891,\ 1,\ 1 .$$
 
-Two of them are exactly $1$, so $P_0\cap P_3$ and $P_2\cap P_4$ are lines. One structural check worth recording: $\Theta(A) = 2\,\mathrm{Id}$ forces $\sum_{\beta\ne\alpha}\operatorname{tr}(\Pi_\alpha\Pi_\beta) = \operatorname{tr}(\Pi_\alpha\Theta)-2 = 2$ for each $\alpha$, and every row of the trace matrix does sum to $2.000000$. That is an independent consistency test on the reported figures and it passes.
+Two of them are exactly $1$, so $P_0\cap P_3$ and $P_2\cap P_4$ are lines. One structural check worth recording: $\Theta(A) = 2\,\mathrm{Id}$ forces $\sum_{\beta\ne\alpha}\mathop{\mathrm{tr}}(\Pi_\alpha\Pi_\beta) = \mathop{\mathrm{tr}}(\Pi_\alpha\Theta)-2 = 2$ for each $\alpha$, and every row of the trace matrix does sum to $2.000000$. That is an independent consistency test on the reported figures and it passes.
 
 ## 2. Membership in $\mathcal W_5$, from the definitions
 
 I built $W$ as a $10\times10$ matrix in the $\varphi$ basis as $\lambda(2\Pi_A-\mathrm{Id})$ and contracted by hand.
 
 - **Symmetry**: $\lVert W-W^{\mathsf T}\rVert = 0$ by construction.
-- **Trace**: $\operatorname{tr}W = 8.3\cdot10^{-17}$. The spectrum is five values $+0.3162278$ and five $-0.3162278$, so the $5+5$ split and $\lambda_\pm = \pm1/\sqrt{10}$ are exact, and $\operatorname{tr}W^2 = 1.000000000000000$.
+- **Trace**: $\mathop{\mathrm{tr}}W = 8.3\cdot10^{-17}$. The spectrum is five values $+0.3162278$ and five $-0.3162278$, so the $5+5$ split and $\lambda_\pm = \pm1/\sqrt{10}$ are exact, and $\mathop{\mathrm{tr}}W^2 = 1.000000000000000$.
 - **Ricci**: contracting $\mathrm{Ric}_{ik} = \sum_j R_{ijkj}$ gives $\lVert\mathrm{Ric}\rVert = 1.86\cdot10^{-11}$, which is the isotropy residual and nothing more, and after the polish of section 5 it is zero to 60 digits.
 - **First Bianchi**: the five components of $\mathrm{Alt}(W)$ have max modulus $2.59\cdot10^{-12}$.
 
@@ -74,7 +74,7 @@ The Bianchi argument is where the brief overshoots. It says every eigenform is d
 
 ## 3. Non-coordinacy
 
-**The claim holds, and the stated proof is stronger than necessary.** For $g\in O(5)$ one has $\Pi_{gP} = g\Pi_Pg^{\mathsf T}$, hence $\operatorname{tr}(\Pi_{gP}\Pi_{gP'}) = \operatorname{tr}(\Pi_P\Pi_{P'})$: the pairwise plane trace is a frame invariant. If all five planes were coordinate planes of some frame, then in that frame every $\Pi_\alpha$ is a $0/1$ diagonal of trace two, so every pairwise trace is the number of shared indices, an element of $\{0,1\}$ for distinct planes. The witness has $\operatorname{tr}(\Pi_1\Pi_2) = 0.4985097557\ldots$, so no frame exists. **L201 is not used.** L201 is the converse, that traces in $\{0,1\}$ force coordinate planes, and nothing here needs it. This matters: the refutation of I76 does not inherit L201's risk.
+**The claim holds, and the stated proof is stronger than necessary.** For $g\in O(5)$ one has $\Pi_{gP} = g\Pi_Pg^{\mathsf T}$, hence $\mathop{\mathrm{tr}}(\Pi_{gP}\Pi_{gP'}) = \mathop{\mathrm{tr}}(\Pi_P\Pi_{P'})$: the pairwise plane trace is a frame invariant. If all five planes were coordinate planes of some frame, then in that frame every $\Pi_\alpha$ is a $0/1$ diagonal of trace two, so every pairwise trace is the number of shared indices, an element of $\{0,1\}$ for distinct planes. The witness has $\mathop{\mathrm{tr}}(\Pi_1\Pi_2) = 0.4985097557\ldots$, so no frame exists. **L201 is not used.** L201 is the converse, that traces in $\{0,1\}$ force coordinate planes, and nothing here needs it. This matters: the refutation of I76 does not inherit L201's risk.
 
 **The search the brief asked for.** I parametrised $g = \exp(X)$, $X\in\mathfrak{so}(5)$, and minimised the coordinateness residual $\sum_\alpha\bigl(\sum_{i<j}M^\alpha_{ij}{}^2+\sum_i(M^\alpha_{ii}(1-M^\alpha_{ii}))^2\bigr)$ with $M^\alpha = g^{\mathsf T}\Pi_\alpha g$, over 3000 random starts of Levenberg-Marquardt. Best residual $8.218\cdot10^{-1}$. The same code on the coordinate pentagon reaches $1.08\cdot10^{-28}$ in 40 starts and recovers the pentagon's incidence pattern exactly, so the search is capable of finding a frame when one exists. The best frame found leaves diagonals such as $(0.842, 0, 0.144, 1, 0.014)$, nowhere near integral. This is a search and therefore establishes nothing on its own. The invariant argument above is what carries the verdict.
 
@@ -112,7 +112,7 @@ Their five $4\times4$ Pfaffians are at most $2.8\cdot10^{-17}$ each, computed di
 
 Quadratic convergence to the working precision, so the file sits next to an honest solution and not near a fold. The solution moved by $\lVert x-x_0\rVert = 2.0\cdot10^{-10}$ and the traces moved by at most $7.8\cdot10^{-11}$:
 
-$$\operatorname{tr}(\Pi_1\Pi_2):\quad 0.49850975568505662\ \longrightarrow\ 0.498509755736202811499657983651257164559162939 .$$
+$$\mathop{\mathrm{tr}}(\Pi_1\Pi_2):\quad 0.49850975568505662\ \longrightarrow\ 0.498509755736202811499657983651257164559162939 .$$
 
 The exact defect is $0.4985097557362028114996579836512571645591629\ldots$, which is $1.49\cdot10^{-3}$ below $\tfrac12$ and $0.4985$ away from the nearest integer. Imprecision of order $10^{-11}$ cannot account for a gap of $0.4985$: the nearby exact solution is non-coordinate by four hundred million times the residual.
 
@@ -129,13 +129,13 @@ The exact defect is $0.4985097557362028114996579836512571645591629\ldots$, which
 | Sorted pairwise traces | $0.0290, 0.0291, 0.0581, 0.4695, 0.4723, 0.4985, 0.5015, 0.9419, 1, 1$ | $0,0,0,0,0,1,1,1,1,1$ |
 | Gram spectrum of $\{\omega_\alpha\}$ | $1,1,1,1,1$ | $1,1,1,1,1$ |
 | Singular values of $\{\Pi_\alpha\}$ stacked | $2,\ 1.608078765,\ 1.392386619,\ 0.999995558,\ 0.689457083$ | $2,\ \varphi,\ \varphi,\ \varphi^{-1},\ \varphi^{-1}$ with $\varphi = 1.618033989$ |
-| $\operatorname{rank}\,\mathrm{span}\{\Pi_\alpha\}$ | 5 | 5 |
+| $\mathop{\mathrm{rank}}\,\mathrm{span}\{\Pi_\alpha\}$ | 5 | 5 |
 
 The Gram spectrum is useless as a separator, since orthonormality forces it to be all ones for any configuration of this kind, and I note that so the record does not treat its agreement as evidence of anything. The trace multiset and the $\{\Pi_\alpha\}$ spectrum both separate the two. The pentagon's golden-ratio spectrum reflects its $C_5$ adjacency matrix. The witness has no such structure, and its fourth singular value $0.999995558$ differs from $1$ by $4.4\cdot10^{-6}$, far outside the $10^{-15}$ accuracy of the polished input, so that near-miss is a real feature and not rounding.
 
 ## 7. Its $\theta$, and criticality
 
-$\operatorname{tr}W^3 = 0$ exactly, because the spectrum is $\pm\lambda$ with equal multiplicities. And $\langle W,W^\#\rangle = 0$ to machine precision. So
+$\mathop{\mathrm{tr}}W^3 = 0$ exactly, because the spectrum is $\pm\lambda$ with equal multiplicities. And $\langle W,W^\#\rangle = 0$ to machine precision. So
 
 $$P(W) = 0,\qquad \theta = P(W)/\lVert W\rVert^3 = 0,$$
 
@@ -166,7 +166,7 @@ Each is trace-free to $10^{-16}$, has $\lVert W\rVert^2 = 1$, exactly two eigenv
 
 ## 9. $\kappa$ and the $\kappa=1$ theorem
 
-The brief does not define $\kappa$, so I read it off the equivalence it states. "$\kappa = 1$ iff $a = n/2$" together with $\operatorname{tr}\Theta = 2a$ and $\Theta = \kappa\,\mathrm{Id}_n$ gives $\kappa = 2a/n$. Here $a = 5$, $n = 5$, so **$\kappa = 2$**. The alternative reading, $\Theta(A) = \kappa\,\mathrm{Id}$ directly, gives $\kappa = 2$ as well, so the conclusion does not depend on which is meant.
+The brief does not define $\kappa$, so I read it off the equivalence it states. "$\kappa = 1$ iff $a = n/2$" together with $\mathop{\mathrm{tr}}\Theta = 2a$ and $\Theta = \kappa\,\mathrm{Id}_n$ gives $\kappa = 2a/n$. Here $a = 5$, $n = 5$, so **$\kappa = 2$**. The alternative reading, $\Theta(A) = \kappa\,\mathrm{Id}$ directly, gives $\kappa = 2$ as well, so the conclusion does not depend on which is meant.
 
 The $\kappa=1$ theorem asserts that $a = n/2$ forces the planes to be mutually orthogonal, hence all pairwise traces zero. It cannot apply here: $a = n/2$ needs $n$ even, and $n = 5$ is odd. **No contradiction.** I also checked the theorem's conclusion is genuinely violated at $\kappa=2$, as it must be: the witness has traces $0.4985$ and $1$, and even the coordinate pentagon has five traces equal to one, so mutual orthogonality already fails for the coordinate case at $\kappa = 2$. The theorem's hypothesis is doing real work and the witness is on the other side of it.
 

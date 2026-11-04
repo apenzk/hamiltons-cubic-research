@@ -1,6 +1,6 @@
 # Review r369, Gate 2 on Lemma L126 and Lemma L127
 
-*Reviewer r369, cold brief, analysis-only. Every value below was re-derived by hand from the definitions before any code was run; the code appears only as a screen of claims I was about to record, run on objects I built for that purpose, and is reported as a screen. Conventions taken from [adversarial_check1.py](../scripts/lib/adversarial_check1.py): $W$ is the operator on $\Lambda^2$ diagonal in the coordinate-plane basis with entries $\lambda_{ij}=M_{ij}$, $\langle X,Y\rangle=\operatorname{tr}(XY)$ with coordinate planes orthonormal, $Q(W)=W^2+W^\#$, $P(W)=\langle W,Q(W)\rangle$, $X\circ Y=\tfrac12[Q(X+Y)-Q(X)-Q(Y)]$.*
+*Reviewer r369, cold brief, analysis-only. Every value below was re-derived by hand from the definitions before any code was run; the code appears only as a screen of claims I was about to record, run on objects I built for that purpose, and is reported as a screen. Conventions taken from [adversarial_check1.py](../scripts/lib/adversarial_check1.py): $W$ is the operator on $\Lambda^2$ diagonal in the coordinate-plane basis with entries $\lambda_{ij}=M_{ij}$, $\langle X,Y\rangle=\mathop{\mathrm{tr}}(XY)$ with coordinate planes orthonormal, $Q(W)=W^2+W^\#$, $P(W)=\langle W,Q(W)\rangle$, $X\circ Y=\tfrac12[Q(X+Y)-Q(X)-Q(Y)]$.*
 
 ## Verdicts
 

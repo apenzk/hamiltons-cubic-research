@@ -9,10 +9,10 @@ The brief ([BRIEF_L46.md](BRIEF_L46.md)) was read cold. No numerical work was do
 | C3 | Steps (B), (B$'$), (C): $Q(W)=\lambda W$ | CONFIRMED |
 | C4 | $\theta(W/\lVert W\rVert)=\lambda/\lVert W\rVert$, and "$W/\lVert W\rVert$ is critical", under the hypothesis $\lambda\ne0$ (Passages A, B, C, D, E) | REFUTED AS STATED |
 | C5 | The $\lambda=0$ exclusion: a locally symmetric Ricci-flat space is flat (Passage B, first paragraph) | HYPOTHESIS-DEBT |
-| C6 | $\lVert W\rVert^2=\lVert R\rVert^2-(\operatorname{tr}R)^2/N$ and $\theta^2=1/(4(\lVert R\rVert^2-(\operatorname{tr}R)^2/N))$ at $\lambda=\tfrac12$ (Passages A, C, E) | CONFIRMED |
+| C6 | $\lVert W\rVert^2=\lVert R\rVert^2-(\mathop{\mathrm{tr}}R)^2/N$ and $\theta^2=1/(4(\lVert R\rVert^2-(\mathop{\mathrm{tr}}R)^2/N))$ at $\lambda=\tfrac12$ (Passages A, C, E) | CONFIRMED |
 | C7 | The same $\theta^2$ display in Passage D, printed before any normalisation of $\lambda$ | REFUTED AS STATED |
 | C8 | Compactness is not used by the proof (Passages A, B, C), against Passage D's "compact" | CONFIRMED |
-| C9 | Passage D's reformulation: $\operatorname{tr}R=n/4$, $c=\frac1{2(n-1)}$, $\theta\le\theta_0(n)\iff\lVert W\rVert^2\ge\frac1{4\theta_0(n)^2}$, $\tfrac9{55}$ at $S^6\times S^6$, $n^2-12n+8$, $6+2\sqrt7$ | CONFIRMED AS ALGEBRA |
+| C9 | Passage D's reformulation: $\mathop{\mathrm{tr}}R=n/4$, $c=\frac1{2(n-1)}$, $\theta\le\theta_0(n)\iff\lVert W\rVert^2\ge\frac1{4\theta_0(n)^2}$, $\tfrac9{55}$ at $S^6\times S^6$, $n^2-12n+8$, $6+2\sqrt7$ | CONFIRMED AS ALGEBRA |
 | C10 | Petersen-Stanfield: $\lambda=\tfrac12$ for every compact irreducible symmetric space in their normalisation | CONFIRMED |
 | C11 | Lean (Passage F): the three theorems type what their docstrings say they type | CONFIRMED AS ALGEBRA |
 | C12 | Lean (Passage F) prose: the "verbatim" record quotation, the non-vacuity claim, and "no operator $Q$ with $P(R)=\langle Q(R),R\rangle$" | REFUTED AS STATED |
@@ -22,15 +22,15 @@ The brief ([BRIEF_L46.md](BRIEF_L46.md)) was read cold. No numerical work was do
 
 ## 0. Conventions, fixed once
 
-- $\Lambda^2\mathbb R^n$ carries $\langle R,S\rangle=\operatorname{tr}(RS)$ with $e_i\wedge e_j$ ($i<j$) orthonormal, $N=\binom n2=\lVert I\rVert^2$. The round sphere of radius one has $R=I$ (Böhm-Wilking p. 2, "the curvature operator of the round sphere of radius one is the identity").
-- Ricci: $\langle\rho(R)x,y\rangle=\sum_i\langle R(x\wedge e_i),y\wedge e_i\rangle$, and scalar curvature is $2\operatorname{tr}R$ (Richard-Seshadri, txt L182-L187). Petersen-Stanfield's Proposition 2.2 uses the same relation, $\mathrm{scal}=2\operatorname{tr}R$ (txt L346-L350).
+- $\Lambda^2\mathbb R^n$ carries $\langle R,S\rangle=\mathop{\mathrm{tr}}(RS)$ with $e_i\wedge e_j$ ($i<j$) orthonormal, $N=\binom n2=\lVert I\rVert^2$. The round sphere of radius one has $R=I$ (Böhm-Wilking p. 2, "the curvature operator of the round sphere of radius one is the identity").
+- Ricci: $\langle\rho(R)x,y\rangle=\sum_i\langle R(x\wedge e_i),y\wedge e_i\rangle$, and scalar curvature is $2\mathop{\mathrm{tr}}R$ (Richard-Seshadri, txt L182-L187). Petersen-Stanfield's Proposition 2.2 uses the same relation, $\mathrm{scal}=2\mathop{\mathrm{tr}}R$ (txt L346-L350).
 - $Q(R)=R^2+R^\#$ with $\#$ as in Böhm-Wilking (4). This is Richard-Seshadri's $Q$ (txt L266-L268) and the brief's.
 - $X\circ Y=\tfrac12(XY+YX)+X\#Y$, the symmetric polarisation, so $Q(X+Y)=Q(X)+2\,X\circ Y+Q(Y)$ and $X\circ X=Q(X)$. $P(W)=\langle W,Q(W)\rangle$, $\theta(W)=P(W)/\lVert W\rVert^3$.
 - Einstein, $\mathrm{Ric}=\lambda g$: $R=cI+W$, $c=\lambda/(n-1)$, $W$ Weyl. This is Böhm-Wilking (3), $R_I=\frac{\bar\lambda}{n-1}\,\mathrm{id}\wedge\mathrm{id}$ with $\bar\lambda=\lambda$ and $R_{\mathrm{Ric}_0}=0$, together with $\mathrm{id}\wedge\mathrm{id}=I$ (Böhm-Wilking Lemma 2.1 at $R=I$ gives $I+I\#I=(n-1)R_I$ and $=\mathrm{Ric}\wedge\mathrm{id}=(n-1)\,\mathrm{id}\wedge\mathrm{id}$, with $R_I=I$).
 - Closed-form objects used below, basis $e_{12},e_{13},e_{14},e_{23},e_{24},e_{34}$ at $n=4$:
   - $\mathbb S^n$ of radius one: $R=I$, $\lambda=n-1$, $c=1$, $W=0$.
-  - $S^2\times S^2$ with unit factors: $R=\operatorname{diag}(1,0,0,0,0,1)$, $\lambda=1$. Since only $e_{12}$ and $e_{34}$ carry curvature and $[e_{12},e_{34}]=0$, every bracket in (4) vanishes and $R^\#=0$. So $Q(R)=R^2=R=\lambda R$.
-  - $H^2\times H^2$ with factors of curvature $-1$: $R=-\operatorname{diag}(1,0,0,0,0,1)$, $\lambda=-1$, $R^\#=0$ by the same bracket, $Q(R)=R^2=-R=\lambda R$. Its sectional curvature on $e_{12}$ is $-1$.
+  - $S^2\times S^2$ with unit factors: $R=\mathop{\mathrm{diag}}(1,0,0,0,0,1)$, $\lambda=1$. Since only $e_{12}$ and $e_{34}$ carry curvature and $[e_{12},e_{34}]=0$, every bracket in (4) vanishes and $R^\#=0$. So $Q(R)=R^2=R=\lambda R$.
+  - $H^2\times H^2$ with factors of curvature $-1$: $R=-\mathop{\mathrm{diag}}(1,0,0,0,0,1)$, $\lambda=-1$, $R^\#=0$ by the same bracket, $Q(R)=R^2=-R=\lambda R$. Its sectional curvature on $e_{12}$ is $-1$.
 
 ## 1. Hypothesis inventory
 
@@ -50,7 +50,7 @@ The brief ([BRIEF_L46.md](BRIEF_L46.md)) was read cold. No numerical work was do
 | Its proof: Brendle [Bre10a] Proposition 3 | source L526 | **not filed**, so its hypotheses cannot be read | imported by the cited route only |
 | Hamilton's evolution $\partial_tR=\Delta R+2Q(R)$ | Richard-Seshadri txt L258-L262, "If $(M,g(t))$ is a Ricci flow", no compactness | the explicit homothetic family (C2) | yes, flow reading |
 | Böhm-Wilking Lemma 2.1: $R\in S^2_B(\mathfrak{so}(n))$, no other hypothesis | source L216-L218 | $W$ Weyl, and $I$ | yes: $W\#I=-W$, $I^\#=(n-2)I$ |
-| Böhm-Wilking (5): $\operatorname{tr}((R_1\#R_2)R_3)$ totally symmetric | source L186-L191 | any operators | yes, criticality and the $\operatorname{tr}W^\#$ consistency line |
+| Böhm-Wilking (5): $\mathop{\mathrm{tr}}((R_1\#R_2)R_3)$ totally symmetric | source L186-L191 | any operators | yes, criticality and the $\mathop{\mathrm{tr}}W^\#$ consistency line |
 | Petersen-Stanfield: compact **simply connected** $G/H$, $G$ compact semisimple, metric from $-B_{\mathfrak g}$ | source L36-L42 | record says "every compact irreducible" (C10) | yes, the value $\tfrac12$ |
 
 ## 2. C1, step (A) as worded against Richard-Seshadri Lemma 4.1
@@ -97,9 +97,9 @@ A wording slip in Passage E, "the metric shrinks homothetically", is true only f
 - **(B$'$).** $X\circ I=\tfrac12(XI+IX)+X\#I=X+X\#I$, so $W\circ I$ and $W\#I$ differ by $+W$. ✓
 - **(C).** Böhm-Wilking Lemma 2.1 (txt L216-L218): $R+R\#I=(n-1)R_I+\frac{n-2}2R_{\mathrm{Ric}_0}=\mathrm{Ric}\wedge\mathrm{id}$ for every $R\in S^2_B(\mathfrak{so}(n))$. For $W$ Weyl, $R_I=R_{\mathrm{Ric}_0}=0$, so $W\#I=-W$. The source's proof checks $n=4$ directly and reaches $n\ge5$ by embedding. At $n=3$, $\mathcal W_3=0$. ✓ Hence $W\circ I=0$ and $Q(W)=\lambda W$. ✓
 - The Casimir expansion in (C), "$W\#I=-\tfrac12\sum_\alpha\mathrm{ad}(v_\alpha)W\,\mathrm{ad}(v_\alpha)$", and its "$-2$ eigenvalue" are not derived in the brief. The step does not depend on them, since Böhm-Wilking gives $W\#I=-W$ at source.
-- *Consistency line.* $\operatorname{tr}(W^\#)=\langle W\#W,I\rangle=\langle W\#I,W\rangle$ by Böhm-Wilking (5), and this equals $-\lVert W\rVert^2$. ✓
+- *Consistency line.* $\mathop{\mathrm{tr}}(W^\#)=\langle W\#W,I\rangle=\langle W\#I,W\rangle$ by Böhm-Wilking (5), and this equals $-\lVert W\rVert^2$. ✓
 - *Passage E's route.* $R\#I=\lambda I-R$ follows from Lemma 2.1 with $\mathrm{Ric}\wedge\mathrm{id}=\lambda\,\mathrm{id}\wedge\mathrm{id}=\lambda I$, so $R\circ I=\lambda I$. With $Q(R)=\lambda R$ and $Q(I)=(n-1)I$: $Q(W)=Q(R)-2c\,R\circ I+c^2Q(I)=\lambda R-2c\lambda I+c\lambda I=\lambda W$. ✓
-- *Criticality.* By the total symmetry of Böhm-Wilking (5) and of $\operatorname{tr}(XYZ+YXZ)$, the gradient of $P$ is $3Q(W)$. $Q(W)=\lambda W$ therefore makes $W/\lVert W\rVert$ critical on the unit sphere of $\mathcal W_n$ and of $S^2_B$ alike, whenever $W\ne0$.
+- *Criticality.* By the total symmetry of Böhm-Wilking (5) and of $\mathop{\mathrm{tr}}(XYZ+YXZ)$, the gradient of $P$ is $3Q(W)$. $Q(W)=\lambda W$ therefore makes $W/\lVert W\rVert$ critical on the unit sphere of $\mathcal W_n$ and of $S^2_B$ alike, whenever $W\ne0$.
 
 **Verdict: CONFIRMED.**
 
@@ -115,7 +115,7 @@ A wording slip in Passage E, "the metric shrinks homothetically", is true only f
    - Unit $\mathbb S^n$, $n\ge3$: locally symmetric, Einstein, $\lambda=n-1\ne0$, $c=1$, $W=R-cI=0$. $W/\lVert W\rVert$ is $0/0$, $\theta$ is undefined, and there is no point on the unit sphere to be critical.
    - The same holds for $\mathbb{RP}^n$ and for $H^n$ ($R=-I$, $\lambda=-(n-1)$).
    - It holds at every instance with $n=3$.
-   - At Petersen-Stanfield's normalisation, $S^n$ is a compact irreducible symmetric space with $\lambda=\tfrac12$ and $\lVert R\rVert^2=(\operatorname{tr}R)^2/N$. Passage A's second display then reads $\theta^2=1/0$.
+   - At Petersen-Stanfield's normalisation, $S^n$ is a compact irreducible symmetric space with $\lambda=\tfrac12$ and $\lVert R\rVert^2=(\mathop{\mathrm{tr}}R)^2/N$. Passage A's second display then reads $\theta^2=1/0$.
 3. *Charitable reading.* The expression $\theta(W/\lVert W\rVert)$ presupposes $W\ne0$, so the lemma might be read as silently restricted. Two things block this. Passage B names $\lambda\ne0$ as the hypothesis that makes $\theta$ defined. Passage C quantifies over spaces ("spaces with $\lambda\ne0$ are critical"), which includes $S^n$. The record's own annotation at problem.md line 624 concedes "the conclusion needs $W\ne0$ and neither the block nor the canon says so", and the statement at lines 628-635 was not changed. The Lean file takes `hpos : 0 < norm R`, which is $W\ne0$. **The finding stands.**
 
 **Correction owed:** the $\theta$ and criticality clauses need $W\ne0$, that is, the space is not of constant curvature (never satisfied at $n=3$). The proof of the $\theta$ clause uses $W\ne0$ and nothing about $\lambda$. $Q(W)=\lambda W$ itself holds at $W=0$ trivially.
@@ -134,17 +134,17 @@ A wording slip in Passage E, "the metric shrinks homothetically", is true only f
 ## 7. C6 and C7, the $\theta^2$ display
 
 **C6.**
-- $\lVert W\rVert^2=\lVert R-cI\rVert^2=\lVert R\rVert^2-2c\operatorname{tr}R+c^2N$.
-- $W$ Weyl is orthogonal to $I$, so $\operatorname{tr}R=cN$, and $\lVert W\rVert^2=\lVert R\rVert^2-c^2N=\lVert R\rVert^2-(\operatorname{tr}R)^2/N$. ✓
-- With $W\ne0$, $\theta^2=\lambda^2/(\lVert R\rVert^2-(\operatorname{tr}R)^2/N)$, which is the display exactly when $\lambda^2=\tfrac14$.
+- $\lVert W\rVert^2=\lVert R-cI\rVert^2=\lVert R\rVert^2-2c\mathop{\mathrm{tr}}R+c^2N$.
+- $W$ Weyl is orthogonal to $I$, so $\mathop{\mathrm{tr}}R=cN$, and $\lVert W\rVert^2=\lVert R\rVert^2-c^2N=\lVert R\rVert^2-(\mathop{\mathrm{tr}}R)^2/N$. ✓
+- With $W\ne0$, $\theta^2=\lambda^2/(\lVert R\rVert^2-(\mathop{\mathrm{tr}}R)^2/N)$, which is the display exactly when $\lambda^2=\tfrac14$.
 - Where each passage places it: Passage A at "Petersen–Stanfield's normalisation … $\lambda=\tfrac12$" ✓. Passage C "under the Einstein normalisation", value unnamed there and $\tfrac12$ by D ✓. Passage E "since $\lambda=\tfrac12$ … $\theta=\frac1{2\lVert W\rVert}$" ✓.
-- *Screen.* $S^2\times S^2$ at $\lambda=\tfrac12$ (factor curvature $\tfrac12$): $\lVert R\rVert^2=\tfrac12$, $\operatorname{tr}R=1=n/4$, $\lVert W\rVert^2=\tfrac12-\tfrac16=\tfrac13$, display $\tfrac34=\lambda^2/\lVert W\rVert^2$. ✓
+- *Screen.* $S^2\times S^2$ at $\lambda=\tfrac12$ (factor curvature $\tfrac12$): $\lVert R\rVert^2=\tfrac12$, $\mathop{\mathrm{tr}}R=1=n/4$, $\lVert W\rVert^2=\tfrac12-\tfrac16=\tfrac13$, display $\tfrac34=\lambda^2/\lVert W\rVert^2$. ✓
 
 **Verdict: CONFIRMED** (at $\lambda=\pm\tfrac12$, $W\ne0$).
 
 **C7.**
-1. *Location.* Passage D: "Then $Q(W)=W^2+W^\#=\lambda W$ for a scalar $\lambda$, … and its value is $\theta=\lambda/\lVert W\rVert$ with $\theta^2=\frac1{4(\lVert R\rVert^2-(\operatorname{tr}R)^2/N)}$." The normalisation arrives only in the next sentence.
-2. *Closed form.* $S^2\times S^2$ with unit factors: $\lambda=1$, $\lVert R\rVert^2=2$, $\operatorname{tr}R=2$, $N=6$, $\lVert W\rVert^2=2-\tfrac46=\tfrac43$. Then $\theta^2=\lambda^2/\lVert W\rVert^2=\tfrac34$, while D's display gives $\frac1{4\cdot4/3}=\tfrac3{16}$, and $\tfrac34\ne\tfrac3{16}$. More generally $\theta$ is scale-invariant and the display scales like $\lVert W\rVert^{-2}$.
+1. *Location.* Passage D: "Then $Q(W)=W^2+W^\#=\lambda W$ for a scalar $\lambda$, … and its value is $\theta=\lambda/\lVert W\rVert$ with $\theta^2=\frac1{4(\lVert R\rVert^2-(\mathop{\mathrm{tr}}R)^2/N)}$." The normalisation arrives only in the next sentence.
+2. *Closed form.* $S^2\times S^2$ with unit factors: $\lambda=1$, $\lVert R\rVert^2=2$, $\mathop{\mathrm{tr}}R=2$, $N=6$, $\lVert W\rVert^2=2-\tfrac46=\tfrac43$. Then $\theta^2=\lambda^2/\lVert W\rVert^2=\tfrac34$, while D's display gives $\frac1{4\cdot4/3}=\tfrac3{16}$, and $\tfrac34\ne\tfrac3{16}$. More generally $\theta$ is scale-invariant and the display scales like $\lVert W\rVert^{-2}$.
 3. *Charitable reading.* D may intend the normalisation of its following sentence throughout. That sentence is introduced as a further step ("Normalising to Einstein constant $\tfrac12$ makes …"), and "for a scalar $\lambda$" leaves $\lambda$ free, so this reading does not hold. **The finding stands. Correction: "at $\lambda=\tfrac12$".**
 
 **Verdict: REFUTED AS STATED.**
@@ -160,16 +160,16 @@ A wording slip in Passage E, "the metric shrinks homothetically", is true only f
 
 ## 9. C9, Passage D's reformulation
 
-1. At $\lambda=\tfrac12$: $\operatorname{tr}R=cN=\frac{\lambda}{n-1}\cdot\frac{n(n-1)}2=\frac{\lambda n}2=\frac n4$ ✓, and $c=\frac1{2(n-1)}$ ✓. Petersen-Stanfield Prop. 2.2 agrees: $\tfrac12\dim M=\mathrm{scal}=2\operatorname{tr}R$.
+1. At $\lambda=\tfrac12$: $\mathop{\mathrm{tr}}R=cN=\frac{\lambda}{n-1}\cdot\frac{n(n-1)}2=\frac{\lambda n}2=\frac n4$ ✓, and $c=\frac1{2(n-1)}$ ✓. Petersen-Stanfield Prop. 2.2 agrees: $\tfrac12\dim M=\mathrm{scal}=2\mathop{\mathrm{tr}}R$.
 2. For $W\ne0$ and $\theta_0(n)>0$: $\theta=\frac1{2\lVert W\rVert}>0$, so $\theta\le\theta_0\iff\frac1{4\lVert W\rVert^2}\le\theta_0^2\iff\lVert W\rVert^2\ge\frac1{4\theta_0^2}$ ✓. The equivalence needs C4's $W\ne0$.
 3. $S^6\times S^6$ at $\lambda=\tfrac12$:
    - factor curvature $\kappa$ with $5\kappa=\tfrac12$, so $\kappa=\tfrac1{10}$
    - $30$ curved planes, $N=66$
-   - $\lVert R\rVert^2=\tfrac3{10}$, $\operatorname{tr}R=3=\tfrac{12}4$ ✓
+   - $\lVert R\rVert^2=\tfrac3{10}$, $\mathop{\mathrm{tr}}R=3=\tfrac{12}4$ ✓
    - $\lVert W\rVert^2=\tfrac3{10}-\tfrac9{66}=\tfrac{33-15}{110}=\tfrac9{55}$ ✓, and $\tfrac9{55}<\tfrac16\iff54<55$ ✓
 4. $\theta_0(n)$ is not defined in the brief. D's last sentence identifies the floor $\frac1{4\theta_0(n)^2}$ with $\frac{n^2}{8(n-1)(n-2)}$, that is, $\theta_0(n)^2=\frac{2(n-1)(n-2)}{n^2}$.
    - At $n=12$ the floor is $\frac{144}{880}=\frac9{55}$, the $S^6\times S^6$ value, consistent with "attaining $\theta_0(12)$ exactly".
-   - For balanced $S^m\times S^m$, $n=2m$, $\lambda=\tfrac12$: $\kappa=\frac1{2(m-1)}$, $m(m-1)$ planes, $\lVert R\rVert^2=\frac m{4(m-1)}$, $\operatorname{tr}R=\frac m2$, $N=m(2m-1)$. This gives $\lVert W\rVert^2=\frac m{4(m-1)}-\frac m{4(2m-1)}=\frac{m^2}{4(m-1)(2m-1)}=\frac{n^2}{8(n-1)(n-2)}$ ✓.
+   - For balanced $S^m\times S^m$, $n=2m$, $\lambda=\tfrac12$: $\kappa=\frac1{2(m-1)}$, $m(m-1)$ planes, $\lVert R\rVert^2=\frac m{4(m-1)}$, $\mathop{\mathrm{tr}}R=\frac m2$, $N=m(2m-1)$. This gives $\lVert W\rVert^2=\frac m{4(m-1)}-\frac m{4(2m-1)}=\frac{m^2}{4(m-1)(2m-1)}=\frac{n^2}{8(n-1)(n-2)}$ ✓.
 5. For $n\ge3$: $\tfrac16\ge\frac{n^2}{8(n-1)(n-2)}\iff8(n-1)(n-2)\ge6n^2\iff2n^2-24n+16\ge0\iff n^2-12n+8\ge0$ ✓.
    - The roots are $6\pm2\sqrt7$. $28$ is not a square, so both are irrational, and $6-2\sqrt7\in(0,1)$ because $25<28<36$.
    - The inequality holds for integers $n\ge12$ ($12^2-144+8=8$) and fails for $3\le n\le11$ ($11^2-132+8=-3$). ✓
@@ -201,10 +201,10 @@ The file matches the brief line for line (`wc -l` gives 151, and the brief's "15
   - *What the hypotheses exclude.* `hn` excludes $n=1$ only, and admits $n=0$, which is harmless algebra. `hQI` and `hWI` hold for curvature operators by Böhm-Wilking Lemma 2.1 (C3). `hcrit` is step (A). Nothing geometric is excluded.
 - **`theta_of_eigenvalue`.**
   - *Binders.* `R` is an arbitrary map on matrices, needing neither linearity nor the Weyl property.
-  - `hnn : 0 ≤ normSq R` excludes nothing. `normSq R = innerOp R R` $=\tfrac12\sum_{i,j}$ `inner2 (R φ) (R φ)`, and `inner2 X X` $=\tfrac12\operatorname{tr}(X^{\mathsf T}X)\ge0$ (WeylReal.lean L39, L135-L136, L173).
+  - `hnn : 0 ≤ normSq R` excludes nothing. `normSq R = innerOp R R` $=\tfrac12\sum_{i,j}$ `inner2 (R φ) (R φ)`, and `inner2 X X` $=\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}X)\ge0$ (WeylReal.lean L39, L135-L136, L173).
   - `hpos : 0 < norm R` is $W\ne0$. That is the correct hypothesis, and it is not the record's $\lambda\ne0$ (C4). The docstring's "the record's $\lambda\ne0$ clause in the form it is actually needed" names two different conditions as one.
   - *Proof.* $\theta=P/\lVert R\rVert^3$ (L180), $\lVert R\rVert^2=$ `normSq` by `Real.sq_sqrt`, so $\theta=\lambda\lVert R\rVert^2/\lVert R\rVert^3=\lambda/\lVert R\rVert$ ✓.
-- **`petersen_stanfield`.** Pure real algebra. `hw` ($\lVert W\rVert^2=\lVert R\rVert^2-(\operatorname{tr}R)^2/N$) and `hth` ($\theta=\tfrac12/w$) are hypotheses, and the conclusion follows ✓. `hwpos` excludes $W=0$, consistent with C4. `hNN` is used only for $N\ne0$.
+- **`petersen_stanfield`.** Pure real algebra. `hw` ($\lVert W\rVert^2=\lVert R\rVert^2-(\mathop{\mathrm{tr}}R)^2/N$) and `hth` ($\theta=\tfrac12/w$) are hypotheses, and the conclusion follows ✓. `hwpos` excludes $W=0$, consistent with C4. `hNN` is used only for $N\ne0$.
 - *Gap to the lemma.* The three theorems are not chained, and the file's docstring declares this. `hcrit`, `hQI` and `hWI` are hypotheses. `theta_of_eigenvalue`'s `hP` is not derived from `shift_kills_remainder`'s conclusion. $\theta$ is read at $W$ rather than at $W/\lVert W\rVert$. `hw` is assumed rather than derived. The file types the algebra of step (B), the division in the first display, and the arithmetic of the second.
 
 **Verdict: CONFIRMED AS ALGEBRA.**

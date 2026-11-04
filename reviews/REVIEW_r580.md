@@ -58,7 +58,7 @@ And L32 gives strictly **more**: the exceptional value ($3$-dimensional $\mathfr
 | reading | $p\ge2$ means | status |
 | --- | --- | --- |
 | $p=\lfloor m/2\rfloor$ (the ambient torus, zeros included) | $m\ge4$ | sufficient, sharp but for $m=2$ |
-| $p=\operatorname{rank}(x)/2$ (blocks in the support) | $\operatorname{rank}x\ge4$ | sufficient, and **excludes true cases** |
+| $p=\mathop{\mathrm{rank}}(x)/2$ (blocks in the support) | $\mathop{\mathrm{rank}}x\ge4$ | sufficient, and **excludes true cases** |
 
 Under the second reading the hypothesis throws away every rank-$2$ $x$ in $\mathfrak{so}(m)$, $m\ge4$, where the criterion holds, by Step 4 above and by the screen. The record's own source says so: [r463](REVIEW_r463.md)'s verdict reads *"the hypothesis it actually needs is $m\ge4$ (equivalently: $\mathfrak c\ne\{0\}$, equivalently $x$ has effective rank $p\ge2$ **or** $\dim\ker x\ge2$)"*. **The installed heading kept the first disjunct and dropped the second**, which is the disjunct that covers $e_{12}\in\mathfrak{so}(6)$.
 
@@ -68,7 +68,7 @@ Under the second reading the hypothesis throws away every rank-$2$ $x$ in $\math
 
 The block's hedges are three, and two fail.
 
-1. *"At $n\ge12$ the hypothesis is free."*, true under $p=\lfloor m/2\rfloor$, **false** under $p=\operatorname{rank}(x)/2$: a simple bivector $e_{ab}\in\mathfrak{so}(12)$ has effective rank $p=1$ at any ambient dimension, and simple bivectors are exactly the eigenvectors a coordinate-diagonal Weyl operator supplies. So the ambiguity in D2 is load-bearing rather than cosmetic: one reading makes the hypothesis over-strong, the other makes this hedge false, and the record does not say which is meant. The clause also writes $n$ where the lemma quantifies over $\mathfrak{so}(m)$.
+1. *"At $n\ge12$ the hypothesis is free."*, true under $p=\lfloor m/2\rfloor$, **false** under $p=\mathop{\mathrm{rank}}(x)/2$: a simple bivector $e_{ab}\in\mathfrak{so}(12)$ has effective rank $p=1$ at any ambient dimension, and simple bivectors are exactly the eigenvectors a coordinate-diagonal Weyl operator supplies. So the ambiguity in D2 is load-bearing rather than cosmetic: one reading makes the hypothesis over-strong, the other makes this hedge false, and the record does not say which is meant. The clause also writes $n$ where the lemma quantifies over $\mathfrak{so}(m)$.
 2. *"So nondegeneracy at $m\ge6$ is sufficient and not necessary"*, **correct**, and the $m\ge6$ is doing real work: at $m=4$ and $m=5$ a nondegenerate $x$ can have equal singular values and be the exception. *L32's version of the same sentence omits the $m\ge6$ and is false at $m=4,5$ for that reason*, adjacent to this audit, in the same file.
 3. *"a rank-4 $J$ padded into $\mathbb R^6,\mathbb R^8,\mathbb R^{10}$ returns $3$ every time"*, **correct**, and Step 4 shows it returns $3$ at every $m\ge4$, odd $m$ included, so the three listed dimensions understate it.
 
@@ -87,7 +87,7 @@ The brief's *"cited 33 times"* is a raw-string count of `L81`. Of the 32 hits ou
 ## What the block leans on that is undefined
 
 - **$p$**, the hypothesis's own symbol, absent from [conventions.md](../findings/conventions.md) and from the block. This is the defect at D2.
-- **"the singular-value vector"**, whether the zeros are included is the same ambiguity, and it decides whether *"a root of $D_p$"* names $D_{m/2}$ or $D_{\operatorname{rank}/2}$.
+- **"the singular-value vector"**, whether the zeros are included is the same ambiguity, and it decides whether *"a root of $D_p$"* names $D_{m/2}$ or $D_{\mathop{\mathrm{rank}}/2}$.
 - **"$D_p$" at odd $m$**, the root system of $\mathfrak{so}(m)$ is $B_p$ there. The criterion survives the mis-citation; the proof does not. This is D5.
 - **"nondegeneracy" at odd $m$**, the block's hedge 2 needs it to mean rank $m-1$; the record never says.
 - $\mathfrak c$ and $\mathfrak z$ are defined only inside L32's block, not in [conventions.md](../findings/conventions.md).

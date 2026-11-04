@@ -18,7 +18,7 @@ A maximal torus of $G_2$ has rank two. The operators on $\mathfrak g_2$ commutin
 
 ## Screen: its positive-definite idempotents (seconds, [g2 torus screen](../scripts/misc/screen_I117_g2_torus.py))
 
-Least squares on $C^\#C=C$ over the family from $300$ positive starts near $I/c$, with $\mathfrak g_2$ built as the stabiliser of the 3-form in $\mathfrak{so}(7)$ and the record's $\#$ restricted to it ($c=4$ recovered). Stability is the top eigenvalue of $X\mapsto C^\#X$ on $C^\perp$ in all of $\operatorname{Sym}^2\mathfrak g_2$ ([L264](../findings/second-order.md) (1)).
+Least squares on $C^\#C=C$ over the family from $300$ positive starts near $I/c$, with $\mathfrak g_2$ built as the stabiliser of the 3-form in $\mathfrak{so}(7)$ and the record's $\#$ restricted to it ($c=4$ recovered). Stability is the top eigenvalue of $X\mapsto C^\#X$ on $C^\perp$ in all of $\mathop{\mathrm{Sym}}^2\mathfrak g_2$ ([L264](../findings/second-order.md) (1)).
 
 | $\lVert C\rVert^2$ | top eigenvalue on $C^\perp$ | reading |
 |---|---|---|
@@ -60,13 +60,13 @@ Vert^2$ | identified |
 
 ## Givens, quoted from the record
 
-- **Hamilton's sharp** in the record's normalisation: $(A^\#B)_{\alpha\beta}=\tfrac12\sum c_{\alpha\gamma\delta}c_{\beta\varepsilon\zeta}A_{\gamma\varepsilon}B_{\delta\zeta}$, $c$ the structure constants of $\mathfrak{so}(m)$ in the orthonormal basis $e_{ij}=E_{ij}-E_{ji}$ (inner product $\tfrac12\operatorname{tr}X^{\mathsf T}Y$), so $I^\#I=(m-2)I$. A $\#$-idempotent is $C^\#C=C$.
+- **Hamilton's sharp** in the record's normalisation: $(A^\#B)_{\alpha\beta}=\tfrac12\sum c_{\alpha\gamma\delta}c_{\beta\varepsilon\zeta}A_{\gamma\varepsilon}B_{\delta\zeta}$, $c$ the structure constants of $\mathfrak{so}(m)$ in the orthonormal basis $e_{ij}=E_{ij}-E_{ji}$ (inner product $\tfrac12\mathop{\mathrm{tr}}X^{\mathsf T}Y$), so $I^\#I=(m-2)I$. A $\#$-idempotent is $C^\#C=C$.
 - **[L263](../findings/second-order.md)** (Gate 2 r1555, r1556): at $SU(3)\subset G_2$, $C=\tfrac9{28}P_{\mathfrak{su}(3)}+\tfrac3{28}P_{\mathfrak p}$ is a positive-definite idempotent on $\mathfrak g_2$ other than $I/4$, squared norm $\tfrac{351}{392}$; and at the symmetric pair $SO(4)\subset G_2$, $\tfrac{11}{29}P_L+\tfrac5{29}P_S+\sqrt{77/1682}\,P_{\mathfrak p}$, squared norm $\tfrac{746}{841}$.
-- **[L264](../findings/second-order.md) (1)**: stability of an idempotent $C$ is $\langle C^\#H,H\rangle\le\tfrac12\lVert H\rVert^2$ for $H\perp C$ in $\operatorname{Sym}^2\mathfrak h$. **[L270](../findings/second-order.md) (3)**: U$_{\mathrm s}'$, every stable positive-definite idempotent on a compact simple $\mathfrak h$ has $\lVert C\rVert^2\ge d/c^2$.
+- **[L264](../findings/second-order.md) (1)**: stability of an idempotent $C$ is $\langle C^\#H,H\rangle\le\tfrac12\lVert H\rVert^2$ for $H\perp C$ in $\mathop{\mathrm{Sym}}^2\mathfrak h$. **[L270](../findings/second-order.md) (3)**: U$_{\mathrm s}'$, every stable positive-definite idempotent on a compact simple $\mathfrak h$ has $\lVert C\rVert^2\ge d/c^2$.
 
 ## Items
 
-1. **The family.** Is the commutant of a maximal torus of $G_2$ in $\operatorname{Sym}^2\mathfrak g_2$ exactly a symmetric $2\times2$ block on the Cartan plus one scalar per positive root plane (nine dimensions), and is it closed under $\#$?
+1. **The family.** Is the commutant of a maximal torus of $G_2$ in $\mathop{\mathrm{Sym}}^2\mathfrak g_2$ exactly a symmetric $2\times2$ block on the Cartan plus one scalar per positive root plane (nine dimensions), and is it closed under $\#$?
 2. **The product table.** Are $A^\#A=0$, $A^\#P_\alpha=\tfrac12(\alpha^{\mathsf T}A\alpha)P_\alpha$, $P_\alpha^\#P_\alpha=\alpha\alpha^{\mathsf T}$, and the mixed products ($\tfrac12$, and $\tfrac23$ for two short roots onto a short one) right, with $\lvert\alpha\rvert^2=2$ and $\tfrac23$ in the record's metric? Check from $\mathfrak g_2$'s structure constants, by hand or by your own construction.
 3. **The system.** Does $C^\#C=C$ reduce to $A=\sum w_\alpha^2\alpha\alpha^{\mathsf T}$ and the six cubics, with positive definiteness exactly $w>0$?
 4. **The stabiliser types.** Is the Weyl group's action on the six planes through $S_3$, compatibly on long and short with each long root orthogonal to one short, so that the stabiliser of a solution is $S_3$, a reflection or trivial?

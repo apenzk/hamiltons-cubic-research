@@ -20,7 +20,7 @@ Original source of the unsigned statement: **C. van Nuffelen, *On the rank of th
 
 ## The three side conditions this pins down
 
-1. **Characteristic.** The identity is a real-field (more generally $\operatorname{char}k\ne2$) statement; over $\mathbb F_2$ the rank is $n-c$, so every component counts and biparticity is invisible. L177 works over $\mathbb R$, so the identity applies, but the hypothesis is used and unstated.
+1. **Characteristic.** The identity is a real-field (more generally $\mathop{\mathrm{char}}k\ne2$) statement; over $\mathbb F_2$ the rank is $n-c$, so every component counts and biparticity is invisible. L177 works over $\mathbb R$, so the identity applies, but the hypothesis is used and unstated.
 2. **Looplessness.** Footnote 3: "Usually, negative loops would be allowed; but that is not so suitable to the matrix theory." The theorem is stated for loopless signed graphs. L177's graphs are supports of a hollow $K$, indexed by unordered pairs $\{a,b\}$ with $a\ne b$, so they are loopless.
 3. **Edgeless components count.** $b$ counts balanced components, and a one-vertex edgeless component is balanced vacuously, so it contributes $1$ to both $n_i$ and $b_i$ and $0$ to the rank. Isolated vertices are therefore harmless in $\lvert V\rvert-b$, the identity is insensitive to whether the support graph is taken on $[n]$ or only on the vertices meeting an edge.
 

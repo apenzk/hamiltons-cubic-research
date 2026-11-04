@@ -6,7 +6,7 @@ Target: [bispectral.md](../findings/bispectral.md) `#### Lemma L67` (line 450); 
 
 ## The claim
 
-At $S^m\times S^m$, $n=2m$, normalised to $\lVert W\rVert_F=1$, $\operatorname{spec}(\mathring W)$ is $mA$ at multiplicity $(m-1)(m+2)$, $-(m-1)A$ at $m^2$, $-2m(m-1)A$ at $1$, with $A=1/\big(m\sqrt{(m-1)(2m-1)}\big)$ supplied by the earlier unlabelled section of the same file.
+At $S^m\times S^m$, $n=2m$, normalised to $\lVert W\rVert_F=1$, $\mathop{\mathrm{spec}}(\mathring W)$ is $mA$ at multiplicity $(m-1)(m+2)$, $-(m-1)A$ at $m^2$, $-2m(m-1)A$ at $1$, with $A=1/\big(m\sqrt{(m-1)(2m-1)}\big)$ supplied by the earlier unlabelled section of the same file.
 
 ## 1. Multiplicities sum to the dimension, HOLDS
 
@@ -25,9 +25,9 @@ $$W=R-\tfrac{S}{n(n-1)}\,G,\qquad \tfrac{S}{n(n-1)}=\tfrac{2m(m-1)}{2m(2m-1)}=\t
 
 In [conventions.md](../findings/conventions.md)'s settled Li order $(\mathring Wh)_{ij}=\sum_{k,l}W_{iklj}h_{kl}$ one gets $\mathring G=+\mathrm{Id}$ on $S^2_0$ (this is the same one-line check that anchors the order), and
 
-$$\mathring{G^{(i)}}h=P_ihP_i-\operatorname{tr}(P_ih)\,P_i,\qquad\text{so}\qquad \mathring Wh=P_1hP_1+P_2hP_2-t_1P_1-t_2P_2-c\,h .$$
+$$\mathring{G^{(i)}}h=P_ihP_i-\mathop{\mathrm{tr}}(P_ih)\,P_i,\qquad\text{so}\qquad \mathring Wh=P_1hP_1+P_2hP_2-t_1P_1-t_2P_2-c\,h .$$
 
-Writing $h=\begin{pmatrix}X&B\\B^{\mathsf T}&Y\end{pmatrix}$ with $\operatorname{tr}X+\operatorname{tr}Y=0$, the three invariant summands are read off directly:
+Writing $h=\begin{pmatrix}X&B\\B^{\mathsf T}&Y\end{pmatrix}$ with $\mathop{\mathrm{tr}}X+\mathop{\mathrm{tr}}Y=0$, the three invariant summands are read off directly:
 
 | eigenspace | dimension | eigenvalue | normalised |
 | --- | --- | --- | --- |
@@ -37,7 +37,7 @@ Writing $h=\begin{pmatrix}X&B\\B^{\mathsf T}&Y\end{pmatrix}$ with $\operatorname
 
 The unnormalised ratios are exactly $m:-(m-1):-2m(m-1)$, all over $2m-1$. **Every eigenvalue and every multiplicity of L67 is reproduced.**
 
-Li's Theorem 1.8 as quoted at [bispectral.md](../findings/bispectral.md) line 173 gives the same thing, $\operatorname{spec}(\mathring R_i)=\{1\}$ at $\tfrac{m(m+1)}2-1$ from Li Example 2.4, $0$ at $n_1n_2=m^2$, and $-\tfrac{n_1\rho_2+n_2\rho_1}{n_1+n_2}=-(m-1)$, so the lemma's stated route and the direct route agree.
+Li's Theorem 1.8 as quoted at [bispectral.md](../findings/bispectral.md) line 173 gives the same thing, $\mathop{\mathrm{spec}}(\mathring R_i)=\{1\}$ at $\tfrac{m(m+1)}2-1$ from Li Example 2.4, $0$ at $n_1n_2=m^2$, and $-\tfrac{n_1\rho_2+n_2\rho_1}{n_1+n_2}=-(m-1)$, so the lemma's stated route and the direct route agree.
 
 ## 3. Normalisation, HOLDS, and it is cross-checked on the $\Lambda^2$ side
 
@@ -69,7 +69,7 @@ The normalisation fixes $A^2$, **not $A$**. Both $\sum\omega=0$ and $\sum\omega^
 
 The block reads "*The argument is the surrounding material in this file*". Nothing surrounds it: the material is at lines 169–193, some $260$ lines earlier, behind two intervening Post F26 sections, and the pointer names no heading. This is the pattern the brief warns about, in its milder form, the block is headed as a lemma and carries a locator instead of a proof.
 
-Worse, the pointed-to material is not a derivation. Its whole specialisation step is one clause, "Specialising to the balanced $S^m\times S^m$ at $n=2m$ and subtracting the Einstein part to reach the Weyl tensor, the $\omega$-spectrum is three values", followed by the table. It states neither $c$, nor $\operatorname{spec}(\mathring R_{S^m})$, nor which eigenspace carries which multiplicity; what stands beside it is a numerical verification of Li's Theorem 1.8 to $1.8\times10^{-15}$, which is a check of the *input*, not of the specialisation.
+Worse, the pointed-to material is not a derivation. Its whole specialisation step is one clause, "Specialising to the balanced $S^m\times S^m$ at $n=2m$ and subtracting the Einstein part to reach the Weyl tensor, the $\omega$-spectrum is three values", followed by the table. It states neither $c$, nor $\mathop{\mathrm{spec}}(\mathring R_{S^m})$, nor which eigenspace carries which multiplicity; what stands beside it is a numerical verification of Li's Theorem 1.8 to $1.8\times10^{-15}$, which is a check of the *input*, not of the specialisation.
 
 **This is a shallow gap, not a hole.** Every input is already on the record, Li's Theorem 1.8 quoted at line 173, Li Example 2.4 quoted in [conventions.md](../findings/conventions.md), and §2 above closes it in three lines. **Fix: put those three lines in the block.**
 

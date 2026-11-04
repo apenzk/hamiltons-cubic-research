@@ -43,7 +43,7 @@ Quoted from [conventions.md](../findings/conventions.md), not restated:
 
 > **A bivector's norm**, and the record runs in the first of these: $\lVert\varphi_{ab}\rVert^2=1$ under the half-trace pairing of the bullet above, which is the one every result uses and which makes $\{\varphi_{ab}\}_{a<b}$ orthonormal
 
-> **The $\tfrac12$ goes at the $\Lambda^2$ level, not the operator level.** The inner product is $\tfrac12\operatorname{tr}(X^{\mathsf T}Y)$ at the $\Lambda^2$ level and plain Frobenius on the pair matrix.
+> **The $\tfrac12$ goes at the $\Lambda^2$ level, not the operator level.** The inner product is $\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$ at the $\Lambda^2$ level and plain Frobenius on the pair matrix.
 
 > **$\mathrm{Alt}$ is the ORTHOGONAL PROJECTION of $S^2(\Lambda^2)$ onto $\Lambda^4$**, carrying its $\tfrac13$: $\mathrm{Alt}(R)_{ijkl}=\tfrac13(R_{ijkl}+R_{iklj}+R_{iljk})$. So … $\mathrm{Alt}$ is self-adjoint and idempotent, and $\mathrm{Alt}(H)=0$ for every $H$ satisfying the first Bianchi identity
 
@@ -265,7 +265,7 @@ $$\frac{q-2}{2(q-1)}<\frac{p+q-2}{2(p-1)(q-1)}\iff(q-2)(p-1)<p+q-2\iff pq-3p-2q+
 
 ## 11. Nienhaus, and the one imported hypothesis
 
-The Sources line grants the summand identification *"for $p,q\ge5$"*. [L27](../findings/nondegeneracy.md) consumes it at $p,q\ge3$, and it is exactly at $p=3$, $q\in\{3,4\}$ that the exceptions live, so the narrow range is not idle. The debt is discharged inside L27, which supplies *"exact $O(m)$-commutant computation at $m=3,4$"*. So the chain closes, but not inside L26, and L26's Sources line does not say so. A one-clause note would fix it. Separately, [L27](../findings/nondegeneracy.md) once cited L26 for *"$-\mu$ and $+\mu$ on the two tensor summands"* where L26 supplies **one** eigenvector on $\Lambda^2\!\otimes\!\Lambda^2$ only; [LEDGER.md:772](../findings/LEDGER.md) and [LEDGER.md:810](../findings/LEDGER.md) record that this was caught and re-credited to the trace identity $\operatorname{tr}L_e=0$. **That repair is in place in the text I read**, L27 now says *"L26 supplying only the first of the two"*. Confirmed closed.
+The Sources line grants the summand identification *"for $p,q\ge5$"*. [L27](../findings/nondegeneracy.md) consumes it at $p,q\ge3$, and it is exactly at $p=3$, $q\in\{3,4\}$ that the exceptions live, so the narrow range is not idle. The debt is discharged inside L27, which supplies *"exact $O(m)$-commutant computation at $m=3,4$"*. So the chain closes, but not inside L26, and L26's Sources line does not say so. A one-clause note would fix it. Separately, [L27](../findings/nondegeneracy.md) once cited L26 for *"$-\mu$ and $+\mu$ on the two tensor summands"* where L26 supplies **one** eigenvector on $\Lambda^2\!\otimes\!\Lambda^2$ only; [LEDGER.md:772](../findings/LEDGER.md) and [LEDGER.md:810](../findings/LEDGER.md) record that this was caught and re-credited to the trace identity $\mathop{\mathrm{tr}}L_e=0$. **That repair is in place in the text I read**, L27 now says *"L26 supplying only the first of the two"*. Confirmed closed.
 
 ## 12. The $\lambda_{\max}$ collision, and it is material
 

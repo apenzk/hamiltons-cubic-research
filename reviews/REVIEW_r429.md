@@ -12,7 +12,7 @@
 
 $S^2(\Lambda^2\mathbb R^n)=\ker b\oplus\Lambda^4$ is an orthogonal, $GL(n)$-irreducible-summand decomposition, the two summands being non-isomorphic, so the $O(n)$-invariant complement is unique and $\mathrm{Alt}$ is the orthogonal projection onto $\Lambda^4$. A Weyl tensor lies in $\ker b$ by first Bianchi, so $\mathrm{Alt}(H)=0$ and $\lVert\mathrm{Alt}(X)\rVert\le\lVert X\rVert$. Both steps of "$g_1=\mathrm{Alt}(Z+\mu H)$ for every $\mu$, hence $\lVert g_1\rVert\le\inf_\mu\lVert Z+\mu H\rVert$" are legitimate. $Z+\tfrac12H$ is symmetric, so it is in the domain where this holds.
 
-**Pinned against the record's own constants rather than taken on trust.** $u_-=\tfrac1{\sqrt6}(\Pi_2+\Pi_3)$; $\star$ is $+1$ on $E$, $-1$ on $A$, so $\operatorname{tr}(u_-\star)=\tfrac2{\sqrt6}$ and the orthogonal projection of $u_-$ onto $\operatorname{span}(\star)$ is $\tfrac{2/\sqrt6}{6}\star=\tfrac1{3\sqrt6}\star$. That reproduces [Lemma L135](../findings/route-a.md)'s $g_0=a\star$, $a=\tfrac1{3\sqrt6}$, $\lVert\star\rVert^2=6$, $\delta^2(u)=\tfrac19$ **exactly**, so the record's $\mathrm{Alt}$ is the orthogonal projection in the record's own normalisation, and not a Bianchi sum with a stray factor.
+**Pinned against the record's own constants rather than taken on trust.** $u_-=\tfrac1{\sqrt6}(\Pi_2+\Pi_3)$; $\star$ is $+1$ on $E$, $-1$ on $A$, so $\mathop{\mathrm{tr}}(u_-\star)=\tfrac2{\sqrt6}$ and the orthogonal projection of $u_-$ onto $\mathop{\mathrm{span}}(\star)$ is $\tfrac{2/\sqrt6}{6}\star=\tfrac1{3\sqrt6}\star$. That reproduces [Lemma L135](../findings/route-a.md)'s $g_0=a\star$, $a=\tfrac1{3\sqrt6}$, $\lVert\star\rVert^2=6$, $\delta^2(u)=\tfrac19$ **exactly**, so the record's $\mathrm{Alt}$ is the orthogonal projection in the record's own normalisation, and not a Bianchi sum with a stray factor.
 
 ### 1.2 Every multiplier, recomputed from $f$ and $u$'s spectrum
 
@@ -30,14 +30,14 @@ All five in $[-1,0]$, so $\lvert m+\tfrac12\rvert\le\tfrac12$. **The table is co
 
 ### 1.3 $Z$ is the first-order coefficient, re-derived independently, and the moving eigenvectors are fully counted
 
-This is the step where root cause (ii) would live, so I derived $Z$ from scratch rather than reading it. Block-diagonalise $W(t)=u+tH$ by $T=e^{tS}$ with $S$ skew and off-diagonal, $S_{EK}=-\Lambda^{-1}C$. Then $W_-=T\operatorname{diag}\big((\tilde W_{EE})_-,(\tilde W_{KK})_-\big)T^{\mathsf T}$, and with $M=\operatorname{diag}(\Lambda_-,0)$ the $t$-coefficient is
+This is the step where root cause (ii) would live, so I derived $Z$ from scratch rather than reading it. Block-diagonalise $W(t)=u+tH$ by $T=e^{tS}$ with $S$ skew and off-diagonal, $S_{EK}=-\Lambda^{-1}C$. Then $W_-=T\mathop{\mathrm{diag}}\big((\tilde W_{EE})_-,(\tilde W_{KK})_-\big)T^{\mathsf T}$, and with $M=\mathop{\mathrm{diag}}(\Lambda_-,0)$ the $t$-coefficient is
 $$Z=\begin{pmatrix}\mathcal D_\Lambda[B]&0\\0&D_-\end{pmatrix}+\big(SM+MS^{\mathsf T}\big),\qquad SM+MS^{\mathsf T}=\begin{pmatrix}0&\Lambda_-\Lambda^{-1}C\\ C^{\mathsf T}\Lambda^{-1}\Lambda_-&0\end{pmatrix}.$$
 
-- $\Lambda_-\Lambda^{-1}=\operatorname{diag}(0,-1,-1)$. **The conjugation's contribution, the eigenvectors' tilt, i.e. exactly the thing the previous refutation said had been dropped, reproduces the cross-block multipliers $0,-1,-1$ on the nose.** It is not an omitted term; it *is* the $(\hat\omega_i,K)$ column of the table.
+- $\Lambda_-\Lambda^{-1}=\mathop{\mathrm{diag}}(0,-1,-1)$. **The conjugation's contribution, the eigenvectors' tilt, i.e. exactly the thing the previous refutation said had been dropped, reproduces the cross-block multipliers $0,-1,-1$ on the nose.** It is not an omitted term; it *is* the $(\hat\omega_i,K)$ column of the table.
 - $(SM+MS^{\mathsf T})_{EE}=0$ because $S_{EE}=0$, so $Z_{EE}=\mathcal D_\Lambda[B]$ with $\Lambda$'s spectrum away from $0$ and $f$ analytic there.
 - $(SM+MS^{\mathsf T})_{KK}=0$ because $M_{KK}=0$, and $t[W,S]_{KK}=O(t^2)$, so **$Z_{KK}=D_-$ exactly, not merely to leading order.** The brief's question here has a clean answer: the Schur term $C^{\mathsf T}\Lambda^{-1}C$ that muddies the $K$-block enters at $t^2$, and a first-order coefficient never sees it.
 
-**Screen (seconds of compute, objects constructed for the purpose, reported as a screen and not as evidence).** In four random orthonormal bases of a $15$-dimensional $\Lambda^2$ with $u=\operatorname{diag}(2,-1,-1,0,\dots)/\sqrt6$ and random unit symmetric $H$, $\big\lVert\big((u+tH)_--u_-\big)/t-Z\big\rVert\approx2\times10^{-7}$ at $t=10^{-6}$, falling linearly in $t$. The stated $Z$ is the one-sided first-order coefficient. The same screen returned $\lVert Z+\tfrac12H\rVert\in[0.4935,0.499994]$ against the bound $0.5$.
+**Screen (seconds of compute, objects constructed for the purpose, reported as a screen and not as evidence).** In four random orthonormal bases of a $15$-dimensional $\Lambda^2$ with $u=\mathop{\mathrm{diag}}(2,-1,-1,0,\dots)/\sqrt6$ and random unit symmetric $H$, $\big\lVert\big((u+tH)_--u_-\big)/t-Z\big\rVert\approx2\times10^{-7}$ at $t=10^{-6}$, falling linearly in $t$. The stated $Z$ is the one-sided first-order coefficient. The same screen returned $\lVert Z+\tfrac12H\rVert\in[0.4935,0.499994]$ against the bound $0.5$.
 
 ### 1.4 The Frobenius bookkeeping
 
@@ -60,8 +60,8 @@ Under $W_-=\tfrac12(W-\lvert W\rvert)$: $f$ has slopes $0$ and $+1$, every divid
 
 Not strictly my target, but the conclusion rests on it, so I screened [Lemma L136](../findings/route-a.md)'s two corrected identities on constructed objects ($N=12$, $E$ = coords $0$–$2$, $A$ = $3$–$5$, $K'$ = $6$–$11$, $X_2$ by Richardson from $t=4\cdot10^{-3}$ down to $5\cdot10^{-4}$):
 
-- $\operatorname{tr}(\Pi_EX_2)=\tfrac{\sqrt6}3(B_{12}^2+B_{13}^2)$: predicted $0.020256$, measured $0.020271\to0.020256$ as $t\downarrow$. Sign **and** coefficient confirmed; with $B_{12}=B_{13}=0$ it returns $0$ to $5\times10^{-5}$.
-- $\operatorname{tr}(\Pi_AX_2)-\sqrt6(\lVert\Pi_Ac_2\rVert^2+\lVert\Pi_Ac_3\rVert^2)=\mathcal K$ came out **positive and convergent in all five trials** ($+0.111$, $+0.010$, $+0.117$, $+0.008$, $+0.030$), consistent with $\mathcal K\ge0$. And $2a\sqrt6=\tfrac23$, matching the boxed $-\tfrac23(\lVert\Pi_Ac_2\rVert^2+\lVert\Pi_Ac_3\rVert^2)$ exactly.
+- $\mathop{\mathrm{tr}}(\Pi_EX_2)=\tfrac{\sqrt6}3(B_{12}^2+B_{13}^2)$: predicted $0.020256$, measured $0.020271\to0.020256$ as $t\downarrow$. Sign **and** coefficient confirmed; with $B_{12}=B_{13}=0$ it returns $0$ to $5\times10^{-5}$.
+- $\mathop{\mathrm{tr}}(\Pi_AX_2)-\sqrt6(\lVert\Pi_Ac_2\rVert^2+\lVert\Pi_Ac_3\rVert^2)=\mathcal K$ came out **positive and convergent in all five trials** ($+0.111$, $+0.010$, $+0.117$, $+0.008$, $+0.030$), consistent with $\mathcal K\ge0$. And $2a\sqrt6=\tfrac23$, matching the boxed $-\tfrac23(\lVert\Pi_Ac_2\rVert^2+\lVert\Pi_Ac_3\rVert^2)$ exactly.
 
 So the cross term's **sign** (the thing that inverted last time), screens clean, and $\Delta_2\le\lVert g_1\rVert^2$ follows on $T_u\mathcal O^\perp$ as claimed. *This is a screen, not a proof of L136, which is still Gate 2 owed.*
 
@@ -73,7 +73,7 @@ So the cross term's **sign** (the thing that inverted last time), screens clean,
 
 The header says the lemma uses no perturbation theory. The entire content of $Z$ (the multiplier table and $Z_{KK}=D_-$), **is** the first-order perturbation expansion of $W\mapsto W_-$ at a point with a kernel. The statement's phrasing, "let $g_1=\mathrm{Alt}(\mathcal D_u[H]+D_-)$ **be** the first-order coefficient", asserts that identity rather than proving it; the proof of it is [Lemma L135](../findings/route-a.md)(c), which is Gate 2 owed. I re-derived it in §1.3 and it holds, so no number moves, but the previous chain died on assembly, and "no perturbation theory is used" is exactly the sentence under which an imported step goes unchecked.
 
-**Correction.** State it as: *the bound is unconditional given $Z$; the identification of $Z$ as the first-order coefficient is [Lemma L135](../findings/route-a.md)(c), and the eigenvector tilt enters it as the cross-block multipliers $\Lambda_-\Lambda^{-1}=\operatorname{diag}(0,-1,-1)$ rather than as a separate term.* The last clause is the sentence that actually answers root cause (ii), and it is missing.
+**Correction.** State it as: *the bound is unconditional given $Z$; the identification of $Z$ as the first-order coefficient is [Lemma L135](../findings/route-a.md)(c), and the eigenvector tilt enters it as the cross-block multipliers $\Lambda_-\Lambda^{-1}=\mathop{\mathrm{diag}}(0,-1,-1)$ rather than as a separate term.* The last clause is the sentence that actually answers root cause (ii), and it is missing.
 
 ### C2, root cause (i) is still live in [Lemma L135](../findings/route-a.md)(c), the source of $g_1$
 
@@ -87,7 +87,7 @@ L138 is withdrawn but the record says its structural halves stand: "the Daleckii
 
 ### C4, "$A\subseteq\ker D$, so $D$ is singular there always" is false
 
-[Lemma L136](../findings/route-a.md)'s surviving structural fact. From §1.3 the first-order coefficient of $\delta^2$ is $2\langle g_0,g_1\rangle=2a\big[\operatorname{tr}_E Z-\operatorname{tr}_A Z\big]=-2a\big[(B_{22}+B_{33})+\operatorname{tr}(\Pi_AD_-)\big]$, so $F(H)=(B_{22}+B_{33})+\operatorname{tr}(\Pi_AD_-)$, which independently confirms L136's convention paragraph. On the cone with $B_{22}+B_{33}=0$, $F=0$ forces $\operatorname{tr}(\Pi_AD_-)=0$ with $D_-\succeq0$, hence $\Pi_AD_-=0$: **$A$ lies in $D$'s nonnegative spectral subspace, not in its kernel.** Witness: $D=\varepsilon\Pi_A\oplus D'$ with $\varepsilon>0$ has $F=0$ and $A\cap\ker D=0$. Nothing in L140 depends on this, and L136 itself says so.
+[Lemma L136](../findings/route-a.md)'s surviving structural fact. From §1.3 the first-order coefficient of $\delta^2$ is $2\langle g_0,g_1\rangle=2a\big[\mathop{\mathrm{tr}}_E Z-\mathop{\mathrm{tr}}_A Z\big]=-2a\big[(B_{22}+B_{33})+\mathop{\mathrm{tr}}(\Pi_AD_-)\big]$, so $F(H)=(B_{22}+B_{33})+\mathop{\mathrm{tr}}(\Pi_AD_-)$, which independently confirms L136's convention paragraph. On the cone with $B_{22}+B_{33}=0$, $F=0$ forces $\mathop{\mathrm{tr}}(\Pi_AD_-)=0$ with $D_-\succeq0$, hence $\Pi_AD_-=0$: **$A$ lies in $D$'s nonnegative spectral subspace, not in its kernel.** Witness: $D=\varepsilon\Pi_A\oplus D'$ with $\varepsilon>0$ has $F=0$ and $A\cap\ker D=0$. Nothing in L140 depends on this, and L136 itself says so.
 
 ---
 

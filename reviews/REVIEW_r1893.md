@@ -18,7 +18,7 @@ Reviewer r1893, Gate 2, one of two independent readers. Log: [agent_logs/r1893-s
 ## 1. Lean against the statement
 
 - `TorusRows` has symmetric $P,Q$ with zero diagonal, `ha` equal to the $a_i$ definition, `hlong` equal to the long row, and `hp`/`hq` equal to the $p$- and $q$-rows with $X^\mp_{ij}=\tfrac12(a_i+a_j)\mp\tfrac12(q_{ij}^2-p_{ij}^2)$. The sums run over all of `Fin k`. With zero diagonal, the $l=i$ and $l=j$ terms in the $p$/$q$ rows are the same as in the note. $A_{ij}$ appears only through $q^2-p^2$, as in the note.
-- `plus_block`: $(P+Q+\operatorname{diag}(a+2u-1))^2=\operatorname{diag}(1-2u+a^2)-(P+Q)\circ(P-Q)\circ(P-Q)$. This is $(S+A_d+2U-I)^2=\dots-S\circ D\circ D$ exactly. `minus_block` is the second identity exactly.
+- `plus_block`: $(P+Q+\mathop{\mathrm{diag}}(a+2u-1))^2=\mathop{\mathrm{diag}}(1-2u+a^2)-(P+Q)\circ(P-Q)\circ(P-Q)$. This is $(S+A_d+2U-I)^2=\dots-S\circ D\circ D$ exactly. `minus_block` is the second identity exactly.
 - `#print axioms`: both depend on `[propext, Classical.choice, Quot.sound]` only. The scratch copy compiles with no errors.
 
 ## 2. "Equivalent"
@@ -48,18 +48,18 @@ With $A=P+A_d$ and $B=Q+2U$, $\hat W=\begin{pmatrix}A&B\\B&A\end{pmatrix}$.
 
 ## 5. Attempt 1
 
-- The first block is $S-H$, $H=\operatorname{diag}(h)$, $h_i=1-2u_i-a_i$. Let $v$ be $S$'s Perron vector. $S$ is nonnegative and irreducible with positive off-diagonal entries ($k\ge2$), so $v>0$.
+- The first block is $S-H$, $H=\mathop{\mathrm{diag}}(h)$, $h_i=1-2u_i-a_i$. Let $v$ be $S$'s Perron vector. $S$ is nonnegative and irreducible with positive off-diagonal entries ($k\ge2$), so $v>0$.
 - $(S-H)v=((\rho-h_i)v_i)_i$, so $v^{\mathsf T}(S-H)^2v=\sum_i(\rho-h_i)^2v_i^2$. The displayed identity follows, and $-v^{\mathsf T}(S\circ D\circ D)v\le0$ because $S\circ D\circ D\ge0$ entrywise and $v\ge0$.
 - Some $i$ therefore has $(\rho-h_i)^2\le1-2u_i+a_i^2$, so $\rho\le h_i+\sqrt{1-2u_i+a_i^2}\le\max_i(\cdot)$. CONFIRMED.
 - The companion bounds also hold.
   - $\lambda_{\max}(D)\le\rho(\lvert D\rvert)<\rho(S)$ holds, because $\lvert d_{ij}\rvert<s_{ij}$ entrywise and $S$ is irreducible.
-  - $\lambda_{\max}(D)\ge\min_{i\ne j}F_{ij}$ at $D\ne0$, with $F_{ij}=g_i+g_j-s_{ij}^2=2B_{ij}$, follows from $\operatorname{tr}D^3=\sum_{i\ne j}F_{ij}d_{ij}^2$ and $\operatorname{tr}D^3\le\lambda_{\max}\lVert D\rVert_F^2$.
+  - $\lambda_{\max}(D)\ge\min_{i\ne j}F_{ij}$ at $D\ne0$, with $F_{ij}=g_i+g_j-s_{ij}^2=2B_{ij}$, follows from $\mathop{\mathrm{tr}}D^3=\sum_{i\ne j}F_{ij}d_{ij}^2$ and $\mathop{\mathrm{tr}}D^3\le\lambda_{\max}\lVert D\rVert_F^2$.
 - The off-diagonal forms $(D^2)_{ij}=d_{ij}(g_i+g_j-s_{ij}^2)$ and $(S^2)_{ij}=s_{ij}(h_i+h_j-d_{ij}^2)$ come directly from the blocks. $h=g-4u$ holds.
 - **Margin at $I/c$.** Here $u=p=q=a=\tfrac1c$, $c=k+1$. This gives $\min F=2+\tfrac2c-\tfrac4{c^2}$ and $\max(h+\sqrt{\cdot})=2-\tfrac4c$ (which equals $\rho(S)$ there). The margin is $\tfrac6c-\tfrac4{c^2}$, so "order $\tfrac6c$" is CONFIRMED.
 
 ## 6. Attempt 3
 
-- **$Z^2=X$.** The second block's matrix is $M=D+A_d-2U-I=D-G$, so $Z=G-D=-M$ and $Z^2=M^2=X$. The sign does not affect the square. It is the right choice for the $\lambda_{\min}$ hypothesis: at $D=0$, $a=u$ gives $Z=G=\operatorname{diag}(1+u_i)=R$.
+- **$Z^2=X$.** The second block's matrix is $M=D+A_d-2U-I=D-G$, so $Z=G-D=-M$ and $Z^2=M^2=X$. The sign does not affect the square. It is the right choice for the $\lambda_{\min}$ hypothesis: at $D=0$, $a=u$ gives $Z=G=\mathop{\mathrm{diag}}(1+u_i)=R$.
 - **$Z^2-R^2=RE+EZ$.** $R(Z-R)+(Z-R)Z=Z^2-R^2$. CONFIRMED.
 - **Self-adjointness.** $\langle F,RE+EZ\rangle=\langle RF+FZ,E\rangle$, using $R,Z$ symmetric. The map is $R\otimes I+I\otimes Z$, with eigenvalues $r_i+z_j$ on $e_iw_j^{\mathsf T}$. CONFIRMED.
 - **Chain.**
@@ -86,7 +86,7 @@ With $A=P+A_d$ and $B=Q+2U$, $\hat W=\begin{pmatrix}A&B\\B&A\end{pmatrix}$.
 ## 8. Attempts 1 and 2 as obstacles
 
 - Attempt 1 is framed as an obstacle, and its quantitative claims hold (item 5). "Cross when $u_i$ is small against $a_i$ and $s_{ij}^2$" is a heuristic, which is acceptable in an obstacle note.
-- **Attempt 2 states a result without an argument**: "This excludes $D\ne0$ when the factor's spread and the row sums are small". The clustering near $\{0,2\}$ and $\operatorname{tr}D=0$ do not by themselves exclude a small $D\ne0$.
-  - A completion would argue that with $F\approx2$ one has $2D\approx D^2-\operatorname{diag}(D^2)$, so $\lVert D\rVert\lesssim\lVert D\rVert^2$, and hence $D=0$ or $D$ is large. That needs explicit constants.
+- **Attempt 2 states a result without an argument**: "This excludes $D\ne0$ when the factor's spread and the row sums are small". The clustering near $\{0,2\}$ and $\mathop{\mathrm{tr}}D=0$ do not by themselves exclude a small $D\ne0$.
+  - A completion would argue that with $F\approx2$ one has $2D\approx D^2-\mathop{\mathrm{diag}}(D^2)$, so $\lVert D\rVert\lesssim\lVert D\rVert^2$, and hence $D=0$ or $D$ is large. That needs explicit constants.
   - **Correction**: mark it "(sketch)" or supply the bound.
 - The "open regime" bullet's "$\sum_jd_{ij}^2$ nearly equals $\sum_js_{ij}^2$ when $a\gg u$" is right: the difference is $4u_i(1-2a_i)$. The claims that none of the three bounds reaches the faces, and that the system degenerates to $\mathfrak u(k)$'s there, are prose without an argument. They are presented as the open problem, which is acceptable.

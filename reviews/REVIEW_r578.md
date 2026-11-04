@@ -17,7 +17,7 @@ Reviewer r578, cold brief, analysis only. Report opened before any mathematics; 
 
 ## What the block leans on that is undefined in it
 
-- **$\varphi_g$ and $W_{gh}$.** The basis is never named in the block. [conventions.md](../findings/conventions.md) fixes it, $\varphi_{ab}=E_{ab}-E_{ba}$, orthonormal under $\langle X,Y\rangle=\tfrac12\operatorname{tr}(X^{\mathsf T}Y)$, and this is exactly the datum the constants depend on (D1).
+- **$\varphi_g$ and $W_{gh}$.** The basis is never named in the block. [conventions.md](../findings/conventions.md) fixes it, $\varphi_{ab}=E_{ab}-E_{ba}$, orthonormal under $\langle X,Y\rangle=\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$, and this is exactly the datum the constants depend on (D1).
 - **That $\mathcal A$ maps $S^2(\Lambda^2)$ to itself.** "Eigenvalue on a summand of $\mathrm{Sym}^2(\Lambda^2)$" does not typecheck until one knows $\mathcal A(W)$ is again symmetric. It is: with $W$ symmetric, $\mathcal A(W)=\tfrac12\sum W_{gh}(\mathrm{ad}_g\mathrm{ad}_h+\mathrm{ad}_h\mathrm{ad}_g)$ and each $\mathrm{ad}_g$ is skew-adjoint. Unstated.
 - **The decomposition itself**, which four summands, and how $S^2_0$ and $\Lambda^4$ sit inside $S^2(\Lambda^2)$. The $S^2_0$ embedding is $S\mapsto\rho(S)$, $\rho(S)(x\wedge y)=\tfrac12(Sx\wedge y+x\wedge Sy)$; the eigenvalue is independent of how that map is normalised, so nothing breaks, but the block never says which map it means.
 - **Multiplicity-freeness.** Schur gives a scalar on an irreducible summand only when that summand occurs once. $S^2(\Lambda^2)$ is multiplicity-free under $O(m)$, which is what makes the step work, and is precisely what fails under $SO(4)$ (D3).
@@ -37,15 +37,15 @@ so the sum is $\tfrac{m(m-1)(m^2-m+2)}8=\tfrac{N(N+1)}2=\dim S^2(\Lambda^2\mathb
 
 Write $A_g=\mathrm{ad}(\varphi_g)$ and $c_{ghk}=\langle[\varphi_g,\varphi_h],\varphi_k\rangle$, totally antisymmetric ([conventions.md](../findings/conventions.md)). The kernel of $\mathcal A$ on $V\otimes V$ is $T^{gh}_{pq}=(A_gA_h)_{pq}$, and the trace over the symmetric part is $\tfrac12\sum_{p,q}\big(T^{pq}_{pq}+T^{pq}_{qp}\big)$. The first sum vanishes term by term, since $(A_p)_{pr}=c_{prp}=0$; the second is $\sum_{p,q,r}c_{prq}c_{qpr}=\sum c_{prq}^2$ by cyclic invariance. Hence
 
-$$\operatorname{tr}\mathcal A=\tfrac12\lVert c\rVert^2 .$$
+$$\mathop{\mathrm{tr}}\mathcal A=\tfrac12\lVert c\rVert^2 .$$
 
 Each triangle $\{i,j\},\{j,k\},\{i,k\}$ contributes six ordered triples with $c^2=1$, so $\lVert c\rVert^2=6\binom m3=m(m-1)(m-2)$ and
 
-$$\boxed{\operatorname{tr}\mathcal A=\binom m2(m-2)}$$
+$$\boxed{\mathop{\mathrm{tr}}\mathcal A=\binom m2(m-2)}$$
 
 which is the brief's value, and matches $\sum\dim\times$eigenvalue from the table: $2A-4C=m^3-3m^2$, and adding $-(m-4)(B-1)-2(m-2)$ gives $\tfrac{m^3-3m^2+2m}2$. **The table passes its own trace test at every $m$, not at samples.**
 
-**The record already held this.** [conventions.md](../findings/conventions.md)'s Killing marginal $\sum_\beta\lVert[v_\alpha,v_\beta]\rVert^2=2(m-2)$ is $\lVert c\rVert^2=2(m-2)N$, so $\operatorname{tr}\mathcal A$ is the marginal times $N/2$, the identity sat one file away from the block that needed it, which is the pattern the brief warns about.
+**The record already held this.** [conventions.md](../findings/conventions.md)'s Killing marginal $\sum_\beta\lVert[v_\alpha,v_\beta]\rVert^2=2(m-2)$ is $\lVert c\rVert^2=2(m-2)N$, so $\mathop{\mathrm{tr}}\mathcal A$ is the marginal times $N/2$, the identity sat one file away from the block that needed it, which is the pattern the brief warns about.
 
 ## (2b) The trace pins the Weyl row, and a second route proves all four
 
@@ -55,17 +55,17 @@ Three eigenvalues fall out directly, and the fourth is then forced by the trace.
 
 **$S^2_0$.** For $S=\mathrm{diag}(s_1,\dots,s_m)$, $\rho(S)$ is diagonal with entry $\tfrac{s_i+s_j}2$ on $\varphi_{ij}$. Taking $h=\varphi_{12}$, the only non-vanishing brackets are $[\varphi_{12},\varphi_{1j}]=-\varphi_{2j}$ and $[\varphi_{12},\varphi_{2j}]=\varphi_{1j}$ for $j\ge3$, so
 
-$$\operatorname{tr}\big(\rho(S)\mathrm{ad}(h)^2\big)=-\tfrac12\Big[(m-2)(s_1+s_2)+2\textstyle\sum_{j\ge3}s_j\Big] .$$
+$$\mathop{\mathrm{tr}}\big(\rho(S)\mathrm{ad}(h)^2\big)=-\tfrac12\Big[(m-2)(s_1+s_2)+2\textstyle\sum_{j\ge3}s_j\Big] .$$
 
 With $S$ traceless the bracket is $(m-4)(s_1+s_2)$, against $\langle\rho(S)h,h\rangle=\tfrac{s_1+s_2}2$. **$-(m-4)$ confirmed.** The same line at $S=\mathrm{Id}$ returns $-2(m-2)$, so the two rows cross-check each other.
 
-**$\Lambda^4$.** Take $R=\varphi_{12}\odot\varphi_{34}-\varphi_{13}\odot\varphi_{24}+\varphi_{14}\odot\varphi_{23}$ and $h=\varphi_{12}+\varphi_{34}$, so $Rh=h$ and $\langle Rh,h\rangle=2$. Computing $\mathrm{ad}(h)^2\varphi_{24}=2\varphi_{13}-2\varphi_{24}$ and $\mathrm{ad}(h)^2\varphi_{23}=-2\varphi_{23}-2\varphi_{14}$ gives $\operatorname{tr}(R\,\mathrm{ad}(h)^2)=2[0-2-2]=-8$. **$-4$ confirmed**, using only four indices, so it holds already at $m=4$.
+**$\Lambda^4$.** Take $R=\varphi_{12}\odot\varphi_{34}-\varphi_{13}\odot\varphi_{24}+\varphi_{14}\odot\varphi_{23}$ and $h=\varphi_{12}+\varphi_{34}$, so $Rh=h$ and $\langle Rh,h\rangle=2$. Computing $\mathrm{ad}(h)^2\varphi_{24}=2\varphi_{13}-2\varphi_{24}$ and $\mathrm{ad}(h)^2\varphi_{23}=-2\varphi_{23}-2\varphi_{14}$ gives $\mathop{\mathrm{tr}}(R\,\mathrm{ad}(h)^2)=2[0-2-2]=-8$. **$-4$ confirmed**, using only four indices, so it holds already at $m=4$.
 
 **$\mathrm{Weyl}_m$.** The trace now forces it: $\lambda_{\mathcal W}\dim\mathcal W=\binom m2(m-2)+(m-4)\big(\tfrac{m(m+1)}2-1\big)+2(m-2)+4\binom m4=2\dim\mathcal W$, so **$+2$** whenever $\dim\mathcal W>0$, i.e. $m\ge4$.
 
 The quadratic form each of these consumes is one identity: $\mathrm{ad}$ is skew-adjoint and $A_gh=-\mathrm{ad}(h)\varphi_g$, whence
 
-$$\langle\mathcal A(R)h,h\rangle=\operatorname{tr}\big(R\,\mathrm{ad}(h)^2\big).$$
+$$\langle\mathcal A(R)h,h\rangle=\mathop{\mathrm{tr}}\big(R\,\mathrm{ad}(h)^2\big).$$
 
 **A second, independent route to all four.** The same identity applied to $\sum_gA_gRA_g$ gives the *same* quadratic form, and both operators are symmetric, so
 
@@ -81,9 +81,9 @@ With $\mathrm{Cas}=\langle\lambda,\lambda+2\rho\rangle$ normalised by the adjoin
 
 ## D1, the constants are pairing-dependent and the block names no pairing
 
-**CONFIRMED, and it is the one load-bearing defect.** $\mathcal A$ scales as $1/s$ under $\langle\cdot,\cdot\rangle\mapsto s\langle\cdot,\cdot\rangle$: the trace derivation above returns $\operatorname{tr}\mathcal A=\binom m2(m-2)\kappa^2$ for $\varphi_g=\kappa(E_{ij}-E_{ji})$, so under plain Frobenius ($\kappa=1/\sqrt2$) every entry of the table halves, $+1$, $-\tfrac{m-4}2$, $-(m-2)$, $-2$. The table is true in exactly one normalisation, and the block states none.
+**CONFIRMED, and it is the one load-bearing defect.** $\mathcal A$ scales as $1/s$ under $\langle\cdot,\cdot\rangle\mapsto s\langle\cdot,\cdot\rangle$: the trace derivation above returns $\mathop{\mathrm{tr}}\mathcal A=\binom m2(m-2)\kappa^2$ for $\varphi_g=\kappa(E_{ij}-E_{ji})$, so under plain Frobenius ($\kappa=1/\sqrt2$) every entry of the table halves, $+1$, $-\tfrac{m-4}2$, $-(m-2)$, $-2$. The table is true in exactly one normalisation, and the block states none.
 
-[conventions.md](../findings/conventions.md) fixes it, $\lVert\varphi_{ab}\rVert^2=1$ under $\tfrac12\operatorname{tr}(X^{\mathsf T}Y)$, "the one every result uses", and the trace identity above independently pins the table to that choice, so **there is no error, only an unstated hypothesis**. [r471](REVIEW_r471.md) reached the same conclusion and recommended naming the pairing at this line; the recommendation was not applied. Under [conventions.md](../findings/conventions.md)'s own rule that a file needing a convention cites it, the repair is one clause:
+[conventions.md](../findings/conventions.md) fixes it, $\lVert\varphi_{ab}\rVert^2=1$ under $\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$, "the one every result uses", and the trace identity above independently pins the table to that choice, so **there is no error, only an unstated hypothesis**. [r471](REVIEW_r471.md) reached the same conclusion and recommended naming the pairing at this line; the recommendation was not applied. Under [conventions.md](../findings/conventions.md)'s own rule that a file needing a convention cites it, the repair is one clause:
 
 > The map $\mathcal A(W)=\sum_{g,h}W_{gh}\,\mathrm{ad}(\varphi_g)\mathrm{ad}(\varphi_h)$, in the pairing of [conventions.md](conventions.md) under which $\{\varphi_{ab}\}_{a<b}$ is orthonormal, is linear and $O(m)$-equivariant …
 
@@ -151,7 +151,7 @@ Solving the six coincidences: the four values are pairwise distinct at every $m\
 
 **Three facts settling this lemma sat inside the record already**, in the pattern the brief names:
 
-1. [conventions.md](../findings/conventions.md)'s Killing marginal $\sum_\beta\lVert[v_\alpha,v_\beta]\rVert^2=2(m-2)$ **is** the $\mathbb R\cdot\mathrm{Id}$ row, and $\tfrac N2$ times it is $\operatorname{tr}\mathcal A$.
+1. [conventions.md](../findings/conventions.md)'s Killing marginal $\sum_\beta\lVert[v_\alpha,v_\beta]\rVert^2=2(m-2)$ **is** the $\mathbb R\cdot\mathrm{Id}$ row, and $\tfrac N2$ times it is $\mathop{\mathrm{tr}}\mathcal A$.
 2. [bounds-relaxations.md:110](../findings/bounds-relaxations.md) carries the Casimir values $4(n-1)$ on $\mathcal W_n$, $2n$ on $\mathrm{Sym}^2_0$ and $0$ on the scalar, which are exactly $2(\mathcal A+2(n-2))$ on those three summands, so that file and this table are the same operator read twice.
 3. [r518](REVIEW_r518.md)'s $T=2(n-2)\mathrm{Id}-\tfrac12\mathrm{Cas}$ is $-\mathcal A$, i.e. the identity of §2b, derived in a review of a different lemma in the same file.
 

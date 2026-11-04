@@ -4,7 +4,7 @@ The brief ([BRIEF_L90.md](BRIEF_L90.md)) was read cold. No numerical work was do
 
 | # | Claim | Verdict |
 |---|---|---|
-| C1 | Kernel algebra: $\ker(\mathrm{ev}\circ\mu)\supseteq\ker\mu$, equal ranks force equal kernels, so $\mathrm{ev}$ is injective on $\operatorname{im}\mu$ and an image element agreeing with $F_5$ at the points is $F_5$ | CONFIRMED AS ALGEBRA |
+| C1 | Kernel algebra: $\ker(\mathrm{ev}\circ\mu)\supseteq\ker\mu$, equal ranks force equal kernels, so $\mathrm{ev}$ is injective on $\mathop{\mathrm{im}}\mu$ and an image element agreeing with $F_5$ at the points is $F_5$ | CONFIRMED AS ALGEBRA |
 | C2 | The step's input: $\mathrm{rank}(\mathrm{ev}\circ\mu)=13=\mathrm{rank}\,\mu$ "measured at four primes", at "those $40$" points | HYPOTHESIS-DEBT |
 | C3 | Restricted rank $13$: "attaining the cap forces equality", headlined as a theorem | HYPOTHESIS-DEBT |
 | C4 | Display algebra: rank $13$ and the ambient $14$ give $\dim\mathrm{ANN}=1$, $\mathrm{ANN}=\mathbb R\,\mathcal A(W_0^6)$, and $F_5(W_0)=0$ gives $F_5$ in the image | CONFIRMED AS ALGEBRA |
@@ -24,12 +24,12 @@ Summary: every algebraic implication in Passage A holds, but the load-bearing in
 
 ## 0. Conventions, fixed once
 
-- $\mathcal W_5$: algebraic Weyl tensors on $\mathbb R^5$, $\dim\mathcal W_5=35$. $W_0$: the padded Weyl tensor of $\mathbb{CP}^2$. $F_5=\tfrac32\lVert W\rVert^6-9\operatorname{tr}(W^3)^2$.
+- $\mathcal W_5$: algebraic Weyl tensors on $\mathbb R^5$, $\dim\mathcal W_5=35$. $W_0$: the padded Weyl tensor of $\mathbb{CP}^2$. $F_5=\tfrac32\lVert W\rVert^6-9\mathop{\mathrm{tr}}(W^3)^2$.
 - $I_6:=(\mathrm{Sym}^6\mathcal W_5^*)^{O(5)}$, of dimension $14$ by Observation L85 as carried in Lemma L89.
 - $K\subseteq\mathrm{Sym}^3\mathcal W_5^*$: the cubics with $\sigma_\lambda(W_0)=0$ (brief). $D:=$ the restricted Gram space on which the certificate ranges, of dimension $36$ per line 169.
 - $\mu_K:D\to I_6$ the Gram-to-sextic map on $D$. $\mu_{89}:\mathrm{Sym}^2(\mathrm{Sym}^3\mathcal W_5^*)^{O(5)}\to I_6$ the map of Lemma L89, onto, rank $14$.
 - $P=\{x_1,\dots,x_{40}\}$ a sample, over a field $k$. $\mathrm{ev}_P:I_6\otimes k\to k^{40}$ evaluation. "Sampled rank" means $\mathrm{rank}_k(\mathrm{ev}_P\circ\mu_K)$.
-- $\mathcal A$: the $O(5)$-average, so $\mathcal A(W_0^6)\in I_6^*$ pairs with invariant $f$ as a positive multiple of $f(W_0)$. $\mathrm{ANN}\subseteq I_6^*$: the annihilator of $\operatorname{im}\mu_K$.
+- $\mathcal A$: the $O(5)$-average, so $\mathcal A(W_0^6)\in I_6^*$ pairs with invariant $f$ as a positive multiple of $f(W_0)$. $\mathrm{ANN}\subseteq I_6^*$: the annihilator of $\mathop{\mathrm{im}}\mu_K$.
 - The loop's rule: a rank computed mod a prime and reported is a measurement, and a statement resting only on one is HYPOTHESIS-DEBT.
 
 ## Hypothesis inventory
@@ -51,9 +51,9 @@ Summary: every algebraic implication in Passage A holds, but the load-bearing in
 
 For linear maps $\mu:D\to V$ and $\mathrm{ev}:V\to k^{40}$ on finite-dimensional spaces, $\mu(x)=0$ implies $\mathrm{ev}(\mu(x))=0$, so $\ker\mu\subseteq\ker(\mathrm{ev}\circ\mu)$. Rank-nullity gives $\dim\ker(\mathrm{ev}\circ\mu)-\dim\ker\mu=\mathrm{rank}\,\mu-\mathrm{rank}(\mathrm{ev}\circ\mu)$. If the ranks are equal, the nested kernels have equal dimension and coincide.
 
-Equal kernels give injectivity on the image: if $v=\mu(x)\in\operatorname{im}\mu$ and $\mathrm{ev}(v)=0$, then $x\in\ker(\mathrm{ev}\circ\mu)=\ker\mu$, so $v=0$. Conversely injectivity on the image gives equal ranks, so the step is an equivalence: $\mathrm{rank}(\mathrm{ev}\circ\mu)=\mathrm{rank}\,\mu$ if and only if $\mathrm{ev}$ is injective on $\operatorname{im}\mu$.
+Equal kernels give injectivity on the image: if $v=\mu(x)\in\mathop{\mathrm{im}}\mu$ and $\mathrm{ev}(v)=0$, then $x\in\ker(\mathrm{ev}\circ\mu)=\ker\mu$, so $v=0$. Conversely injectivity on the image gives equal ranks, so the step is an equivalence: $\mathrm{rank}(\mathrm{ev}\circ\mu)=\mathrm{rank}\,\mu$ if and only if $\mathrm{ev}$ is injective on $\mathop{\mathrm{im}}\mu$.
 
-Uniqueness: if $F_5\in\operatorname{im}\mu$ and $g\in\operatorname{im}\mu$ with $\mathrm{ev}(g)=\mathrm{ev}(F_5)$, then $g-F_5\in\operatorname{im}\mu\cap\ker\mathrm{ev}=0$. Each link holds, and all three happen over one field $k$ with one point set.
+Uniqueness: if $F_5\in\mathop{\mathrm{im}}\mu$ and $g\in\mathop{\mathrm{im}}\mu$ with $\mathrm{ev}(g)=\mathrm{ev}(F_5)$, then $g-F_5\in\mathop{\mathrm{im}}\mu\cap\ker\mathrm{ev}=0$. Each link holds, and all three happen over one field $k$ with one point set.
 
 ## 2. C2, the input to the load-bearing step (HYPOTHESIS-DEBT)
 
@@ -64,7 +64,7 @@ Uniqueness: if $F_5\in\operatorname{im}\mu$ and $g\in\operatorname{im}\mu$ with 
 **Candidate S1: injectivity is a property of the point set, and the passage never fixes it.**
 
 1. Location. Line 163: "$\mathrm{rank}(\mathrm{ev}\circ\mu)=13=\mathrm{rank}\,\mu$ is measured at four primes ... a sextic there is pinned by those $40$ values". Line 167: "reviewer 209 reproduced it independently at $p=1000003$ ... with its own code, its own points".
-2. Failure exhibited. Take $P$ to be $40$ points on the ray-orbit $\mathbb R_{>0}\cdot O(5)W_0$. Every element of $\operatorname{im}\mu_K$ vanishes at $W_0$ (C8), hence on the orbit (C7c), hence on the ray by homogeneity, so $\mathrm{ev}_P\circ\mu_K=0$ and its rank is $0$, while $\mathrm{rank}\,\mu_K$ is unchanged. More simply, $40$ copies of one point give rank at most $1$. So a rank measured at one point set says nothing about injectivity at another, and the record's two measurements used different point sets. A measurement at random points of $\mathbb F_p$ establishes $\mathrm{rank}\,\mu_K\ge13$, but "pinned by those $40$ values" is a claim about the specific set at which $F_5$'s equations are imposed.
+2. Failure exhibited. Take $P$ to be $40$ points on the ray-orbit $\mathbb R_{>0}\cdot O(5)W_0$. Every element of $\mathop{\mathrm{im}}\mu_K$ vanishes at $W_0$ (C8), hence on the orbit (C7c), hence on the ray by homogeneity, so $\mathrm{ev}_P\circ\mu_K=0$ and its rank is $0$, while $\mathrm{rank}\,\mu_K$ is unchanged. More simply, $40$ copies of one point give rank at most $1$. So a rank measured at one point set says nothing about injectivity at another, and the record's two measurements used different point sets. A measurement at random points of $\mathbb F_p$ establishes $\mathrm{rank}\,\mu_K\ge13$, but "pinned by those $40$ values" is a claim about the specific set at which $F_5$'s equations are imposed.
 3. Charitable reading. The $40$ points are rational points, the certificate imposes its equations at exactly those points, and the mod-$1000033$ computation sampled their reductions. Then $\mathrm{rank}_{\mathbb F_p}\ge13$ lifts to $\mathrm{rank}_{\mathbb Q}\ge13$ at those points, which holds over $\mathbb R$, and the step goes through. Reviewer 209's reproduction on its own points then corroborates $\mathrm{rank}\,\mu_K\ge13$ only. The passage states none of this.
 
 Survives. What would have to be proved: that $\mathrm{rank}(\mathrm{ev}_P\circ\mu_K)=13$ at the certificate's own $40$ points, over $\mathbb Q$ (or over $\mathbb F_p$ for reductions of those rational points, with $p$ dividing no denominator of the matrix). Even so stated it is a measurement under the loop's rule, so the verdict is HYPOTHESIS-DEBT rather than GAP.
@@ -83,17 +83,17 @@ Survives as debt. What would have to be proved: $\mathrm{rank}\,\mu_K\ge13$ by a
 
 ## 4. C4, the display algebra (CONFIRMED AS ALGEBRA)
 
-Given $\mathrm{rank}\,\mu_K=13$ and $\dim I_6=14$: $\dim\mathrm{ANN}=14-13=1$. Every element of $\operatorname{im}\mu_K$ is a sum $\sum G_{ij}k_ik_j$ with $k_i\in K$, so it vanishes at $W_0$, and $\mathcal A(W_0^6)$ pairs with invariant $f$ as a positive multiple of $f(W_0)$. Hence $\mathcal A(W_0^6)\in\mathrm{ANN}$.
+Given $\mathrm{rank}\,\mu_K=13$ and $\dim I_6=14$: $\dim\mathrm{ANN}=14-13=1$. Every element of $\mathop{\mathrm{im}}\mu_K$ is a sum $\sum G_{ij}k_ik_j$ with $k_i\in K$, so it vanishes at $W_0$, and $\mathcal A(W_0^6)$ pairs with invariant $f$ as a positive multiple of $f(W_0)$. Hence $\mathcal A(W_0^6)\in\mathrm{ANN}$.
 
-$\mathcal A(W_0^6)\neq0$ on $I_6$: $\lVert W\rVert^6\in I_6$ and $\lVert W_0\rVert^6>0$ because $W_0\neq0$. So $\mathrm{ANN}=\mathbb R\,\mathcal A(W_0^6)$. An element $f\in I_6$ lies in $\operatorname{im}\mu_K$ if and only if $\mathrm{ANN}$ kills it (finite dimension, image equals double annihilator), that is if and only if $f(W_0)=0$. With $F_5\in I_6$ ($\lVert W\rVert$ and $\operatorname{tr}W^3$ are $O(5)$-invariant) and $F_5(W_0)=0$, $F_5\in\operatorname{im}\mu_K$.
+$\mathcal A(W_0^6)\neq0$ on $I_6$: $\lVert W\rVert^6\in I_6$ and $\lVert W_0\rVert^6>0$ because $W_0\neq0$. So $\mathrm{ANN}=\mathbb R\,\mathcal A(W_0^6)$. An element $f\in I_6$ lies in $\mathop{\mathrm{im}}\mu_K$ if and only if $\mathrm{ANN}$ kills it (finite dimension, image equals double annihilator), that is if and only if $f(W_0)=0$. With $F_5\in I_6$ ($\lVert W\rVert$ and $\mathop{\mathrm{tr}}W^3$ are $O(5)$-invariant) and $F_5(W_0)=0$, $F_5\in\mathop{\mathrm{im}}\mu_K$.
 
 Inputs carried: the rank $13$ (C3, debt), the $14$ with Observation L85's standing (unstated in L90), $F_5(W_0)=0$ (C5).
 
 ## 5. C5, $F_5(W_0)=0$ (HYPOTHESIS-DEBT)
 
-The only support in the passage is "exact over $\mathbb Z$ in both normalisations" (line 169), a computation. No argument is on file, so the finding is debt: what would have to be proved is $6\operatorname{tr}(W_0^3)^2=\lVert W_0\rVert^6$ in each normalisation used.
+The only support in the passage is "exact over $\mathbb Z$ in both normalisations" (line 169), a computation. No argument is on file, so the finding is debt: what would have to be proved is $6\mathop{\mathrm{tr}}(W_0^3)^2=\lVert W_0\rVert^6$ in each normalisation used.
 
-Falsifier search, reported as a screen and not as evidence. On $\Lambda^2\mathbb R^5$ the padded tensor acts as $W_0^+\oplus0$ with $W_0^+$ of Kähler spectrum $(2a,-a,-a)$, so $\operatorname{tr}_{\Lambda^2}W^2=6a^2$ and $\operatorname{tr}_{\Lambda^2}W^3=6a^3$. With $\lVert W\rVert^2=c\operatorname{tr}_{\Lambda^2}W^2$ and $\operatorname{tr}W^3=d\operatorname{tr}_{\Lambda^2}W^3$, $F_5(W_0)=324(c^3-d^2)a^6$. Both $(c,d)=(1,1)$ and the full tensor contraction $(c,d)=(4,8)$ satisfy $c^3=d^2$. No failure found.
+Falsifier search, reported as a screen and not as evidence. On $\Lambda^2\mathbb R^5$ the padded tensor acts as $W_0^+\oplus0$ with $W_0^+$ of Kähler spectrum $(2a,-a,-a)$, so $\mathop{\mathrm{tr}}_{\Lambda^2}W^2=6a^2$ and $\mathop{\mathrm{tr}}_{\Lambda^2}W^3=6a^3$. With $\lVert W\rVert^2=c\mathop{\mathrm{tr}}_{\Lambda^2}W^2$ and $\mathop{\mathrm{tr}}W^3=d\mathop{\mathrm{tr}}_{\Lambda^2}W^3$, $F_5(W_0)=324(c^3-d^2)a^6$. Both $(c,d)=(1,1)$ and the full tensor contraction $(c,d)=(4,8)$ satisfy $c^3=d^2$. No failure found.
 
 ## 6. C6, the affine family $36-13=23$ (HYPOTHESIS-DEBT)
 
@@ -119,7 +119,7 @@ With $(g\cdot m)(W)=m(g^{-1}W)$: if $M$ is a submodule and every $m\in M$ vanish
 
 ## 8. C8, the order-$1$ upper bound (CONFIRMED AS ALGEBRA)
 
-$\operatorname{im}\mu_K\subseteq\{f\in I_6: f(W_0)=0\}=\ker(\mathrm{ev}_{W_0}|_{I_6})$, since each product of two elements of $K$ vanishes at $W_0$. $\mathrm{ev}_{W_0}$ is nonzero on $I_6$ ($\lVert W\rVert^6$, §4), so its kernel has dimension $13$ and $\mathrm{rank}\,\mu_K\le13$. Hypotheses: elements of $K$ vanish at $W_0$ (definition), $\dim I_6=14$ (L85 standing). The lower end $1$ of $[1,13]$ additionally needs $K\neq0$, unstated.
+$\mathop{\mathrm{im}}\mu_K\subseteq\{f\in I_6: f(W_0)=0\}=\ker(\mathrm{ev}_{W_0}|_{I_6})$, since each product of two elements of $K$ vanishes at $W_0$. $\mathrm{ev}_{W_0}$ is nonzero on $I_6$ ($\lVert W\rVert^6$, §4), so its kernel has dimension $13$ and $\mathrm{rank}\,\mu_K\le13$. Hypotheses: elements of $K$ vanish at $W_0$ (definition), $\dim I_6=14$ (L85 standing). The lower end $1$ of $[1,13]$ additionally needs $K\neq0$, unstated.
 
 ## 9. C9, order-$2$ vanishing is free (HYPOTHESIS-DEBT)
 

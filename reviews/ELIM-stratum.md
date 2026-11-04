@@ -2,7 +2,7 @@
 
 Auditor ELIM-stratum. Both files read in full (476 + 437 lines). Pure algebra; no script was run, nothing was evaluated numerically. Every substitution below is written out and was derived twice by hand.
 
-The test applied to every bound, reduction, equivalence and "what a successor needs": substitute $W^\#=\theta W-W^2$ (criticality), $\operatorname{Ric}(W)=0$, first Bianchi, $\operatorname{tr}W=0$, then ask what free variable survives.
+The test applied to every bound, reduction, equivalence and "what a successor needs": substitute $W^\#=\theta W-W^2$ (criticality), $\mathop{\mathrm{Ric}}(W)=0$, first Bianchi, $\mathop{\mathrm{tr}}W=0$, then ask what free variable survives.
 
 ---
 
@@ -14,7 +14,7 @@ At a critical point $W^\#$ is diagonal in $W$'s eigenbasis with $(W^\#)_{\beta\b
 
 $$\tfrac12\sum_{p,q}T_{\beta pq}\,\lambda_p\lambda_q\;=\;\lambda_\beta(\theta-\lambda_\beta)\qquad\text{for every }\beta. \tag{$\ast$}$$
 
-That is $N$ linear equations on $T$. Their contraction against $\lambda_\beta$ is exactly $\langle W,W^\#\rangle=\theta-\operatorname{tr}W^3$, the known tautology. **The other $N-1$ are new, and neither file uses a single one of them.**
+That is $N$ linear equations on $T$. Their contraction against $\lambda_\beta$ is exactly $\langle W,W^\#\rangle=\theta-\mathop{\mathrm{tr}}W^3$, the known tautology. **The other $N-1$ are new, and neither file uses a single one of them.**
 
 The survivor is precisely $T$ modulo $(\ast)$, and the boundary is sharp. With $r$ nonzero eigenvalues the live entries of $T$ number $\binom r3$ against $r$ equations:
 
@@ -32,7 +32,7 @@ This needs no criticality. The record's own operator identity (Lemma L33 in [str
 
 $$-\sum_\alpha\lambda_\alpha\lVert[v_\alpha,v_\beta]\rVert^2=2\lambda_\beta .$$
 
-Substituting $\epsilon_{\alpha\beta}=2-\lVert[v_\alpha,v_\beta]\rVert^2$ and $\operatorname{tr}W=0$ gives $\sum_\alpha\lambda_\alpha\epsilon_{\alpha\beta}=2\lambda_\beta$, and $\epsilon_{\beta\beta}=2$ absorbs the right side:
+Substituting $\epsilon_{\alpha\beta}=2-\lVert[v_\alpha,v_\beta]\rVert^2$ and $\mathop{\mathrm{tr}}W=0$ gives $\sum_\alpha\lambda_\alpha\epsilon_{\alpha\beta}=2\lambda_\beta$, and $\epsilon_{\beta\beta}=2$ absorbs the right side:
 
 $$\boxed{\ \sum_{\alpha\ne\beta}\lambda_\alpha\,\epsilon_{\alpha\beta}=0\quad\textbf{for every }\beta.\ }$$
 
@@ -58,7 +58,7 @@ At $r=4$ (two positive $\lambda_1,\lambda_2$, two negative $-a,-b$) the live ent
 
 $$\begin{aligned} -a\lambda_2T_{123}-b\lambda_2T_{124}+ab\,T_{134}&=\lambda_1(\theta-\lambda_1)\\ -a\lambda_1T_{123}-b\lambda_1T_{124}+ab\,T_{234}&=\lambda_2(\theta-\lambda_2)\\ \lambda_1\lambda_2T_{123}-b\lambda_1T_{134}-b\lambda_2T_{234}&=-a(\theta+a)\\ \lambda_1\lambda_2T_{124}-a\lambda_1T_{134}-a\lambda_2T_{234}&=-b(\theta+b) \end{aligned}$$
 
-Solve, then impose $T\ge0$ and the pair caps $\sum_\gamma T_{\alpha\beta\gamma}\le2$. The entire $k=2$ stratum at critical points becomes an explicit semialgebraic condition on $(\lambda_1,\lambda_2,a,b,\theta)$ with $\operatorname{tr}W=0$ and $\lVert W\rVert=1$, no $f(t)$ maximisation, no LP relaxation, no grid. This is the analytic replacement for the file's asserted-not-proved $k=2$ extension (see W4).
+Solve, then impose $T\ge0$ and the pair caps $\sum_\gamma T_{\alpha\beta\gamma}\le2$. The entire $k=2$ stratum at critical points becomes an explicit semialgebraic condition on $(\lambda_1,\lambda_2,a,b,\theta)$ with $\mathop{\mathrm{tr}}W=0$ and $\lVert W\rVert=1$, no $f(t)$ maximisation, no LP relaxation, no grid. This is the analytic replacement for the file's asserted-not-proved $k=2$ extension (see W4).
 
 ---
 
@@ -76,7 +76,7 @@ Three expressions for one number. (ii)$=$(iii) gives $a^2(\theta+a)=b^2(\theta+b
 
 $$T=\frac{a\cdot\big(-b^2/(a+b)\big)}{\lambda_1 b}=-\frac{ab}{\lambda_1^2}<0,$$
 
-**impossible**, since $T=c'^2\ge0$. So $a=b$. Then $\operatorname{tr}W=0$ gives $\lambda_1=2a$, and (i) with (ii) gives $a^2(\theta+a)=\lambda_1^2(\theta-\lambda_1)=4a^2(\theta-2a)$, hence $\theta=3a$ and $T=(\theta+a)/\lambda_1=2$. Unit norm $6a^2=1$ then forces
+**impossible**, since $T=c'^2\ge0$. So $a=b$. Then $\mathop{\mathrm{tr}}W=0$ gives $\lambda_1=2a$, and (i) with (ii) gives $a^2(\theta+a)=\lambda_1^2(\theta-\lambda_1)=4a^2(\theta-2a)$, hence $\theta=3a$ and $T=(\theta+a)/\lambda_1=2$. Unit norm $6a^2=1$ then forces
 
 $$a=b=1/\sqrt6,\quad\lambda_1=2/\sqrt6,\quad\theta=3/\sqrt6=\sqrt{3/2}.$$
 
@@ -110,7 +110,7 @@ The unknown alignment scalar $\langle M^\#,M\rangle$ has become the unknown spec
 
 $$\tfrac32p_3(\mu)-\tfrac12p_3(\omega)-\theta_0(2m)=0\quad\text{identically in }m$$
 
-is **forced** the moment $p_3(\mu)=\operatorname{tr}W^3$ and $\theta=\theta_0(2m)$ at the balanced product are known, both already on the record. It is a transcription check on Li Theorem 1.8, valuable as that, and it is not evidence about the conjecture. The heading "the identity closes symbolically" reads as a result; it is a consistency test.
+is **forced** the moment $p_3(\mu)=\mathop{\mathrm{tr}}W^3$ and $\theta=\theta_0(2m)$ at the balanced product are known, both already on the record. It is a transcription check on Li Theorem 1.8, valuable as that, and it is not evidence about the conjecture. The heading "the identity closes symbolically" reads as a result; it is a consistency test.
 
 *I verified the underlying spectrum by hand and it is correct:* multiplicities sum to $2m^2+m-1=\dim S^2_0$; $\sum\omega=A(m-1)[m(m+2)-m^2-2m]=0$; $\sum\omega^2=3A^2m^2(m-1)(2m-1)=3$; and $p_3(\omega)=A^3m^2(m-1)(-8m^3+16m^2-4m-1)$ which equals the file's $-(4m^2-6m-1)/(m\sqrt{(m-1)(2m-1)})$ since $-(4m^2-6m-1)(2m-1)=-8m^3+16m^2-4m-1$. The mathematics is right; the framing overstates it.
 
@@ -175,12 +175,12 @@ $\mu$ is the $\Lambda^2$ spectrum throughout the file, then redefined as a scala
 
 Claims that pass the substitution, listed by name. Where I re-derived the algebra by hand it is noted.
 
-- **Lemma L29's $f(t)$ algebra.** $\lambda_1=a+b$, $6a^2(t^2+t+1)/3\cdot$…, re-derived: $a^2=1/(2(t^2+t+1))$, $\operatorname{tr}W^3+6\lambda_1ab=9ab(a+b)=9ta^3(1+t)$, giving $f(t)=9\sqrt2\,t(t+1)/(4(t^2+t+1)^{3/2})$ and $f(1)=\sqrt6/2$. Correct.
+- **Lemma L29's $f(t)$ algebra.** $\lambda_1=a+b$, $6a^2(t^2+t+1)/3\cdot$…, re-derived: $a^2=1/(2(t^2+t+1))$, $\mathop{\mathrm{tr}}W^3+6\lambda_1ab=9ab(a+b)=9ta^3(1+t)$, giving $f(t)=9\sqrt2\,t(t+1)/(4(t^2+t+1)^{3/2})$ and $f(1)=\sqrt6/2$. Correct.
 - **Lemma L30**, small negative eigenspace forces small support. The PSD identity $\sum_\alpha\lambda_\alpha v_\alpha^{\mathsf T}v_\alpha=0$ and the invariant $\dim U<n$ hypothesis; the stated scope correction against the rank-sum form is right.
 - **Lemma L31**, the bracket cap characterised, via $\max_{\lVert Y\rVert=1}\lVert[X,Y]\rVert^2=(s_1+s_2)^2$ from the root system, Cauchy–Schwarz, and the two equality steps. The recorded retraction of the $4s_1^2$ argument is correct and the replacement is sound.
 - **Lemma L33**, one eigenvalue of one sign forces vanishing, via $\ker N_x\subseteq\bigcap\ker N_{y_i}$ and Lemma L32. The attribution to Besse §1.143 / Petersen–Wink 1.6 is honest about what is cited and what is new.
 - **Lemma L34**, full-support witnesses at $m=6,8$ by summing two padded $W_4(q,r)$; linearity of both defining conditions is the whole proof and it holds. The consequence stated (that B0's descent is *unproved* rather than differently proved), is the right conclusion to draw.
-- **$\operatorname{tr}(W^\#)=-\lVert W\rVert^2$.** Re-derived from Lemma L33's operator identity: contract $-\sum_\alpha\lambda_\alpha\lVert[v_\alpha,v_\beta]\rVert^2=2\lambda_\beta$ against $\lambda_\beta$. The file's justification ("$Q$ preserves the trace-free Weyl space") is weaker than the fact; the fact is right.
+- **$\mathop{\mathrm{tr}}(W^\#)=-\lVert W\rVert^2$.** Re-derived from Lemma L33's operator identity: contract $-\sum_\alpha\lambda_\alpha\lVert[v_\alpha,v_\beta]\rVert^2=2\lambda_\beta$ against $\lambda_\beta$. The file's justification ("$Q$ preserves the trace-free Weyl space") is weaker than the fact; the fact is right.
 - **The Killing marginal** $\sum_\beta\epsilon_{\alpha\beta}=2(N-n+1)$ for $\beta\ne\alpha$. Re-derived: $2N-2(n-2)-2$; matches $20,42,72$ at $n=6,8,10$. Provable, so "verified at" understates it.
 - **The coordinate-diagonal half of the stratum**, by the negative-edges-cover-the-support counting argument, together with the recorded correction that routing through $\max_{\mathrm{Weyl}_4}\theta$ is lossy (the true value there is $0$).
 - **$\lambda_{\max}(\mathring R_W)=\max_{\text{frames}}\lambda_{\max}(K)$, $K$ hollow with vanishing row sums, $\lVert K\rVert_F^2\le2$ with equality iff coordinate-diagonal.**
@@ -200,7 +200,7 @@ Claims that pass the substitution, listed by name. Where I re-derived the algebr
 
 ## What a successor should take from this
 
-1. **Use $(\ast)$.** Criticality gives $N$ equations on $T$, of which $N-1$ are unused. They determine $T$ completely when $\operatorname{rank}W\le4$ and are informative for every $r$.
+1. **Use $(\ast)$.** Criticality gives $N$ equations on $T$, of which $N-1$ are unused. They determine $T$ completely when $\mathop{\mathrm{rank}}W\le4$ and are informative for every $r$.
 2. **Use the row form of the deficit identity** (S2), not its contraction. It is $N$ equations, it needs no criticality, it saturates the pair caps in the $k=1$ stratum in three lines, and it gives $\sigma\delta$ as an exact weighted mean of the positive-side deficits, the bridge across $0<\delta<0.005$ that the file says is missing.
 3. **Retire item (iii) in its current form.** Its evidence is an $O(n)$-orbit eigenvalue that is $\tfrac12$ at every critical point by symmetry, measured at one point that is not a maximiser at $n=12$.
 4. **Stop quoting $p_3(\omega)$ as information.** At a critical point it is $3p_3(\mu)-2\theta$. Quote $\min\omega$ and the cumulative sums instead.

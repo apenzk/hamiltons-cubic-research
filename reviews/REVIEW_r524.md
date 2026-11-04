@@ -46,10 +46,10 @@ Matches [beitz notes](../references/beitz-2018-bianchi-convexity/notes.md) and t
 | input | check |
 |---|---|
 | $\Phi(I)=(n-1)I$ | $I^2=\mathrm{Id}$ and $\mathrm{Id}^\#=(n-2)\mathrm{Id}$, the record's anchor |
-| $\Phi(I,W)=W+W\#I=0$ | [BW08 Lemma 2.1](../references/boehm-wilking-2008-space-forms/notes.md), $\langle W\rangle$ in the kernel, so $W\#I=-W$; cross-checked by $\operatorname{tr}W^\#=\langle W\#I,W\rangle=-1$ at unit norm |
+| $\Phi(I,W)=W+W\#I=0$ | [BW08 Lemma 2.1](../references/boehm-wilking-2008-space-forms/notes.md), $\langle W\rangle$ in the kernel, so $W\#I=-W$; cross-checked by $\mathop{\mathrm{tr}}W^\#=\langle W\#I,W\rangle=-1$ at unit norm |
 | $\mathrm{scal}(Q(W))=0$ | $\mathrm{scal}(R^2+R^\#)=2\lVert\mathrm{ric}(R)\rVert^2$, Hamilton via [Beitz Example 2.3.5](../references/beitz-2018-bianchi-convexity/notes.md) |
 
-**The two sides.** $\Phi(R)=c^2(n-1)I+Q(W)$. Then $\langle R,\Phi(R)\rangle=c^3(n-1)\lVert I\rVert^2+c\operatorname{tr}Q(W)+c^2(n-1)\operatorname{tr}W+\langle W,Q(W)\rangle$, and the two middle terms vanish by tracelessness of $W$ and $\mathrm{scal}(Q(W))=0$. On the right $\mathrm{ric}(R)=c\,\mathrm{ric}(I)$ is **pure trace**, so $\langle\mathrm{ric}(R),\mathrm{ric}(\Phi(R))\rangle=c^3(n-1)\lVert\mathrm{ric}(I)\rVert^2$, again by $\mathrm{scal}(Q(W))=0$ alone. With $F(R)=(c^2\lVert I\rVert^2+\lVert W\rVert^2)/(c^2\lVert\mathrm{ric}(I)\rVert^2)$ the $\lVert\mathrm{ric}(I)\rVert^2$ cancels and the criterion is
+**The two sides.** $\Phi(R)=c^2(n-1)I+Q(W)$. Then $\langle R,\Phi(R)\rangle=c^3(n-1)\lVert I\rVert^2+c\mathop{\mathrm{tr}}Q(W)+c^2(n-1)\mathop{\mathrm{tr}}W+\langle W,Q(W)\rangle$, and the two middle terms vanish by tracelessness of $W$ and $\mathrm{scal}(Q(W))=0$. On the right $\mathrm{ric}(R)=c\,\mathrm{ric}(I)$ is **pure trace**, so $\langle\mathrm{ric}(R),\mathrm{ric}(\Phi(R))\rangle=c^3(n-1)\lVert\mathrm{ric}(I)\rVert^2$, again by $\mathrm{scal}(Q(W))=0$ alone. With $F(R)=(c^2\lVert I\rVert^2+\lVert W\rVert^2)/(c^2\lVert\mathrm{ric}(I)\rVert^2)$ the $\lVert\mathrm{ric}(I)\rVert^2$ cancels and the criterion is
 $$c^3(n-1)\lVert I\rVert^2+\langle W,Q(W)\rangle\ \le\ c^3(n-1)\lVert I\rVert^2+c(n-1)\lVert W\rVert^2 .$$
 
 **"No residue" is TRUE, and it is exact rather than approximate.** The $c^3(n-1)\lVert I\rVert^2$ term is identical on both sides and cancels; nothing else survives. Symbolic screen (sympy, seconds, on the objects above): LHS $-$ RHS simplifies to exactly $\langle W,Q(W)\rangle-c(n-1)\lVert W\rVert^2$. **Confirmed.**

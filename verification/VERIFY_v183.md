@@ -16,11 +16,11 @@ Verifier v183. The brief was read cold. **No numerical work was done**: no scrip
 | 6 | Every row's charge $c_S+q_S^2$ | **CONFIRMED, all seven recomputed from the weights** |
 | 7 | $\lambda_S=\tfrac12\iff c_S+q_S^2=2(m+1)$, met only by $4(m-1)$ at $m=3$ | **CONFIRMED** |
 | 8 | The $m=3$ absence, on its own terms | **CONFIRMED, and the continuation disclaimer is correct** |
-| 9 | $\operatorname{tr}L_e=0$ | **CONFIRMED, exact** |
-| 10 | $\operatorname{tr}(L_e^2)=\frac{3m(m-1)(4m-1)}{4(m+1)}=\kappa_F(2m)\lVert e\rVert^2$ | **CONFIRMED, exact, both sides** |
+| 9 | $\mathop{\mathrm{tr}}L_e=0$ | **CONFIRMED, exact** |
+| 10 | $\mathop{\mathrm{tr}}(L_e^2)=\frac{3m(m-1)(4m-1)}{4(m+1)}=\kappa_F(2m)\lVert e\rVert^2$ | **CONFIRMED, exact, both sides** |
 | 11 | Fox's Theorem 1.3 as an import: hypotheses checked at source | **HYPOTHESES SATISFIED, and the unital trap is inverted; but $\kappa_F$'s closed form is not Fox's: HYPOTHESIS-DEBT** |
-| 12 | Second route: $\operatorname{tr}L_e=0$ recovers each class uniquely | **CONFIRMED for four of five; FAILS AT $m=3$ FOR ONE ROW, harmlessly** |
-| 13 | Closed form for $e$; $\operatorname{tr}e=0$; $\lVert e\rVert^2=1/\theta^2$ | **CONFIRMED, exact, and it re-derives $\theta^2$** |
+| 12 | Second route: $\mathop{\mathrm{tr}}L_e=0$ recovers each class uniquely | **CONFIRMED for four of five; FAILS AT $m=3$ FOR ONE ROW, harmlessly** |
+| 13 | Closed form for $e$; $\mathop{\mathrm{tr}}e=0$; $\lVert e\rVert^2=1/\theta^2$ | **CONFIRMED, exact, and it re-derives $\theta^2$** |
 | 14 | Slack against L70, exactly $2(m-2)\theta$, vanishing only at $m=2$ | **CONFIRMED, exact, by three independent routes** |
 | 15 | Landscape line "Only $\tfrac2{m+1}$ reaches $\tfrac12$" vs the table's orbit row | **INCONSISTENT AS WRITTEN, confirmed discrepancy, §12** |
 | 16 | The duplicate table at second-order.md | **THE TABLES AGREE ROW FOR ROW; one gloss beside it is a confirmed defect, §13a** |
@@ -153,7 +153,7 @@ The block gives two things and is careful to say which is the reason.
 
 ## 9. Both Fox identities, and the import's hypotheses
 
-### 9a. $\operatorname{tr}L_e=0$
+### 9a. $\mathop{\mathrm{tr}}L_e=0$
 
 $\sum_S(\dim S)\lambda_S$, row by row: $1\cdot1=1$; $(m^2-1)\frac{m+2}{2(m+1)}=\frac{(m-1)(m+2)}2=\frac{m^2+m-2}2$; $m(m-1)\cdot\frac12=\frac{m^2-m}2$; $\frac{m^2(m+1)(m-3)}4\cdot\frac2{m+1}=\frac{m^2(m-3)}2$; $0$; $0$; $\frac{m^2(m^2-1)}6\cdot\left(-\frac3{m+1}\right)=-\frac{m^2(m-1)}2$.
 
@@ -161,7 +161,7 @@ Sum $=1+\frac{(m^2+m-2)+(m^2-m)+m^2(m-3)-m^2(m-1)}2=1+\frac{2m^2-2+m^3-3m^2-m^3+
 
 **Exactly zero, identically in $m$. CONFIRMED.**
 
-### 9b. $\operatorname{tr}(L_e^2)$
+### 9b. $\mathop{\mathrm{tr}}(L_e^2)$
 
 $\sum_S(\dim S)\lambda_S^2$, over the common denominator $4(m+1)$:
 
@@ -174,14 +174,14 @@ $\sum_S(\dim S)\lambda_S^2$, over the common denominator $4(m+1)$:
 | $(2,2,0^{m-2})$ | $\frac{3m^2(m-1)}{2(m+1)}$ | $6m^3-6m^2$ |
 
 Numerator $=12m^3-15m^2+3m=3m(4m^2-5m+1)=3m(4m-1)(m-1)$, so
-$$\operatorname{tr}(L_e^2)=\frac{3m(m-1)(4m-1)}{4(m+1)} .$$
+$$\mathop{\mathrm{tr}}(L_e^2)=\frac{3m(m-1)(4m-1)}{4(m+1)} .$$
 **Matches the block exactly. CONFIRMED.**
 
 And the right-hand side: $\kappa_F(2m)=\frac{(4m-1)(2m-1)}4$, $\lVert e\rVert^2=\theta^{-2}=\frac{3m(m-1)}{(m+1)(2m-1)}$, so
 $$\kappa_F(2m)\lVert e\rVert^2=\frac{(4m-1)(2m-1)}4\cdot\frac{3m(m-1)}{(m+1)(2m-1)}=\frac{3m(m-1)(4m-1)}{4(m+1)},$$
 the $(2m-1)$ cancelling. **The two sides agree identically in $m$. CONFIRMED.**
 
-*How much of a check is this?* Genuine but not independent of everything. Both identities are linear/quadratic functionals of the seven $(\dim,\lambda)$ pairs, so they test the pairs jointly; a single $\lambda$ wrong by a rational function of $m$ fails both, as the block claims. But §9a is used *twice over* (as a check here and as the derivation in §10) and a quantity cannot be both the derivation of a value and an independent check on it. The block is aware of this and says so ("the trace identity derives the row the conclusion rests on"), so the honest count is: **one independent identity ($\operatorname{tr}L_e^2$) plus one derivation ($\operatorname{tr}L_e$)**, not two independent checks. The block's opening sentence "Two identities check the whole list" overstates by one; its own later paragraph corrects it.
+*How much of a check is this?* Genuine but not independent of everything. Both identities are linear/quadratic functionals of the seven $(\dim,\lambda)$ pairs, so they test the pairs jointly; a single $\lambda$ wrong by a rational function of $m$ fails both, as the block claims. But §9a is used *twice over* (as a check here and as the derivation in §10) and a quantity cannot be both the derivation of a value and an independent check on it. The block is aware of this and says so ("the trace identity derives the row the conclusion rests on"), so the honest count is: **one independent identity ($\mathop{\mathrm{tr}}L_e^2$) plus one derivation ($\mathop{\mathrm{tr}}L_e$)**, not two independent checks. The block's opening sentence "Two identities check the whole list" overstates by one; its own later paragraph corrects it.
 
 ### 9c. Fox's Theorem 1.3: the import's hypotheses, checked at source
 
@@ -191,14 +191,14 @@ the $(2m-1)$ cancelling. **The two sides agree identically in $m$. CONFIRMED.**
 
 From [fox-1901.04012.txt](https://arxiv.org/abs/1901.04012), lines 151–162, verbatim:
 
-> A commutative algebra $(A,\circ)$ is *exact* (called *harmonic* in [29]) if its multiplication endomorphisms $L_\circ$ satisfy $\operatorname{tr}L_\circ(x)=0$ for all $x\in A$. **Note that an exact algebra is nonunital.** […]
-> **Theorem 1.3.** Let $(V,h)$ be a Euclidean vector space of dimension at least $4$. The algebra $(\mathrm{MC}_W(V^*),*)$ is exact and Killing metrized. Moreover: (1) The Killing form $\tau_*(X,Y)=\operatorname{tr}L_*(X)L_*(Y)$ is a nonzero multiple of $\langle\cdot,\cdot\rangle$. (2) If $\dim V>4$, then $(\mathrm{MC}_W(V^*),*)$ is simple.
+> A commutative algebra $(A,\circ)$ is *exact* (called *harmonic* in [29]) if its multiplication endomorphisms $L_\circ$ satisfy $\mathop{\mathrm{tr}}L_\circ(x)=0$ for all $x\in A$. **Note that an exact algebra is nonunital.** […]
+> **Theorem 1.3.** Let $(V,h)$ be a Euclidean vector space of dimension at least $4$. The algebra $(\mathrm{MC}_W(V^*),*)$ is exact and Killing metrized. Moreover: (1) The Killing form $\tau_*(X,Y)=\mathop{\mathrm{tr}}L_*(X)L_*(Y)$ is a nonzero multiple of $\langle\cdot,\cdot\rangle$. (2) If $\dim V>4$, then $(\mathrm{MC}_W(V^*),*)$ is simple.
 
 Three things follow, and each disarms a different form of the trap.
 
 1. **Theorem 1.3 is not a general theorem being imported onto an object; it is a theorem *about this object*.** Its subject is $(\mathrm{MC}_W(V^*),*)$ by name. There is nothing to check beyond the identification of the record's algebra with Fox's, and one hypothesis: $\dim V\ge4$. Here $\dim V=2m\ge6$. **Discharged.**
 2. **Unitality is a *conclusion*, not a hypothesis, and it goes the record's way.** Fox proves the algebra exact, and his own sentence says an exact algebra is nonunital. So Theorem 1.3 does not merely survive $\mathcal W_n$'s lack of a unit, it proves it. This is the exact opposite of [Tkachev's Theorem 1.2](../references/tkachev-2019-clifford-extremal/README.md), whose "**unital** Euclidean metrised algebra" hypothesis the record correctly records as barring that route ([fence-posts.md](../findings/fence-posts.md)). **The two imports are not the same kind of import, and the record does not confuse them.**
-3. **The identification $X*Y=-F_X(Y)$ carries a sign, and both identities are blind to it.** [algebra.md](../findings/algebra.md) records the identification as verified numerically at residual $2\times10^{-16}$, "the sign being his curvature convention". $\operatorname{tr}L_e=0$ is unchanged under $L\mapsto-L$, and $\operatorname{tr}(L_e^2)$ is unchanged under $L\mapsto-L$. **So the one soft joint in the identification is inert for exactly the two facts L28 uses.** The normalisation is likewise reconciled: Fox's metric is $4\times$ Frobenius, and at $n=4$ his $\kappa=21/16$ is the record's $\kappa_F(4)=\frac{7\cdot3}4=\frac{21}4$ divided by $4$. **The anchor checks.**
+3. **The identification $X*Y=-F_X(Y)$ carries a sign, and both identities are blind to it.** [algebra.md](../findings/algebra.md) records the identification as verified numerically at residual $2\times10^{-16}$, "the sign being his curvature convention". $\mathop{\mathrm{tr}}L_e=0$ is unchanged under $L\mapsto-L$, and $\mathop{\mathrm{tr}}(L_e^2)$ is unchanged under $L\mapsto-L$. **So the one soft joint in the identification is inert for exactly the two facts L28 uses.** The normalisation is likewise reconciled: Fox's metric is $4\times$ Frobenius, and at $n=4$ his $\kappa=21/16$ is the record's $\kappa_F(4)=\frac{7\cdot3}4=\frac{21}4$ divided by $4$. **The anchor checks.**
 
 ### 9d. What the second identity does **not** establish, the one real debt
 
@@ -206,22 +206,22 @@ Three things follow, and each disarms a different form of the trap.
 
 > When $\dim V>4$, Theorem 1.3 does not give the value of the positive constant $\kappa$ such that $\tau_*=\kappa h\langle\cdot,\cdot\rangle$.
 
-So $\kappa_F(n)=\frac{(2n-1)(n-1)}4$ is **the record's own closed form, not Fox's**, obtained as a fit anchored at $n=4$ and corroborated numerically ([algebra.md](../findings/algebra.md): "roughly 90 points", "This is a number Fox does not have"). The L28 block writes "Fox's Theorem 1.3 […] gives $\operatorname{tr}L(x)=0$ and $\operatorname{tr}(L(x)L(y))=\kappa_F\langle x,y\rangle$ with $\kappa_F(n)=\frac{(2n-1)(n-1)}4$", which **attributes the closed form to Fox**. [algebra.md](../findings/algebra.md) is scrupulous about this; the L28 block, read alone, is not.
+So $\kappa_F(n)=\frac{(2n-1)(n-1)}4$ is **the record's own closed form, not Fox's**, obtained as a fit anchored at $n=4$ and corroborated numerically ([algebra.md](../findings/algebra.md): "roughly 90 points", "This is a number Fox does not have"). The L28 block writes "Fox's Theorem 1.3 […] gives $\mathop{\mathrm{tr}}L(x)=0$ and $\mathop{\mathrm{tr}}(L(x)L(y))=\kappa_F\langle x,y\rangle$ with $\kappa_F(n)=\frac{(2n-1)(n-1)}4$", which **attributes the closed form to Fox**. [algebra.md](../findings/algebra.md) is scrupulous about this; the L28 block, read alone, is not.
 
-**And this changes the direction of the inference.** What Theorem 1.3 supplies is that $\operatorname{tr}(L_x^2)/\lVert x\rVert^2$ is a constant $\kappa(n)$ *depending on $n$ alone*. L28's own table then **computes** that constant at $n=2m$:
-$$\kappa(2m)=\frac{\operatorname{tr}(L_e^2)}{\lVert e\rVert^2}=\frac{3m(m-1)(4m-1)}{4(m+1)}\cdot\frac{(m+1)(2m-1)}{3m(m-1)}=\frac{(4m-1)(2m-1)}4=\frac{(2n-1)(n-1)}4 .$$
+**And this changes the direction of the inference.** What Theorem 1.3 supplies is that $\mathop{\mathrm{tr}}(L_x^2)/\lVert x\rVert^2$ is a constant $\kappa(n)$ *depending on $n$ alone*. L28's own table then **computes** that constant at $n=2m$:
+$$\kappa(2m)=\frac{\mathop{\mathrm{tr}}(L_e^2)}{\lVert e\rVert^2}=\frac{3m(m-1)(4m-1)}{4(m+1)}\cdot\frac{(m+1)(2m-1)}{3m(m-1)}=\frac{(4m-1)(2m-1)}4=\frac{(2n-1)(n-1)}4 .$$
 That the answer is a function of $m$ alone is automatic and carries **no information about the table**. The identity acquires content only against a *second* point at the same $n$, and the record has one, at [algebra.md](../findings/algebra.md): the balanced sphere product at $n=8$ returning $\kappa_F(8)=26.25=\frac{15\cdot7}4$. **That comparison is a real check, and it is numerical and at one dimension.**
 
 **So the honest accounting of "two identities check the whole list":**
 
 | | what it is |
 |---|---|
-| $\operatorname{tr}L_e=0$ | **a genuine constraint on the list, and the block itself uses it as the *derivation* of the $\mathfrak{su}(m)$ row.** A quantity cannot be both the derivation of a value and an independent check on it. |
-| $\operatorname{tr}(L_e^2)=\kappa_F(2m)\lVert e\rVert^2$ | **a derivation of $\kappa_F$ at even $n$ from the table, not a check of the table by $\kappa_F$**, unless $\kappa_F(2m)$ is known from a different point at the same $n$, which the record has numerically at $n=8$ alone. |
+| $\mathop{\mathrm{tr}}L_e=0$ | **a genuine constraint on the list, and the block itself uses it as the *derivation* of the $\mathfrak{su}(m)$ row.** A quantity cannot be both the derivation of a value and an independent check on it. |
+| $\mathop{\mathrm{tr}}(L_e^2)=\kappa_F(2m)\lVert e\rVert^2$ | **a derivation of $\kappa_F$ at even $n$ from the table, not a check of the table by $\kappa_F$**, unless $\kappa_F(2m)$ is known from a different point at the same $n$, which the record has numerically at $n=8$ alone. |
 
 **Verdict on the import: the hypotheses of Fox's Theorem 1.3 are checked at source and are satisfied. The closed form $\kappa_F(n)$ attached to it in the L28 block is not Fox's and is not proved on the record for $n>4$, `HYPOTHESIS-DEBT`, borne by the *check*, not by the lemma.** The lemma's conclusion does not depend on it: §5–§7 establish the seven eigenvalues from the charge formula, and §12 gives an independent recovery of five of them.
 
-*Nothing in §9's arithmetic is disturbed. What is disturbed is the block's sentence "Two identities check the whole list, and each fails if any single value is wrong by a rational function of $m$." The **first** clause overstates the independence, and the block's own later paragraph concedes half of it. The **second** clause is true of $\operatorname{tr}L_e$ taken alone: perturbing exactly one $\lambda_S$ by $\varepsilon(m)\ne0$ changes $\operatorname{tr}L_e$ by $(\dim S)\varepsilon(m)\ne0$, since every $\dim S$ is a nonzero polynomial on $m\ge3$ (the fourth being nonzero on $m\ge4$, its range).*
+*Nothing in §9's arithmetic is disturbed. What is disturbed is the block's sentence "Two identities check the whole list, and each fails if any single value is wrong by a rational function of $m$." The **first** clause overstates the independence, and the block's own later paragraph concedes half of it. The **second** clause is true of $\mathop{\mathrm{tr}}L_e$ taken alone: perturbing exactly one $\lambda_S$ by $\varepsilon(m)\ne0$ changes $\mathop{\mathrm{tr}}L_e$ by $(\dim S)\varepsilon(m)\ne0$, since every $\dim S$ is a nonzero polynomial on $m\ge3$ (the fourth being nonzero on $m\ge4$, its range).*
 
 ## 10. The closed form for $e$, its tracelessness, and $\lVert e\rVert^2$
 
@@ -230,7 +230,7 @@ $$e=-\frac1{2m-1}P_{\mathfrak m}+\frac{m-2}{(m+1)(2m-1)}P_{\mathfrak{su}(m)}+\fr
 The three $U(m)$-isotypic pieces of $\Lambda^2\mathbb R^{2m}\cong\mathfrak{so}(2m)$ have ranks $\dim\mathfrak m=m(m-1)$, $\dim\mathfrak{su}(m)=m^2-1$, $\dim\mathbb R\omega=1$, summing to $m(2m-1)=\dim\mathfrak{so}(2m)$ ✓.
 
 **Tracelessness.**
-$$\operatorname{tr}e=\frac1{2m-1}\Big[-m(m-1)+\frac{(m-2)(m^2-1)}{m+1}+2(m-1)\Big]=\frac{-m^2+m+(m^2-3m+2)+2m-2}{2m-1}=\frac{0}{2m-1}=0 .$$
+$$\mathop{\mathrm{tr}}e=\frac1{2m-1}\Big[-m(m-1)+\frac{(m-2)(m^2-1)}{m+1}+2(m-1)\Big]=\frac{-m^2+m+(m^2-3m+2)+2m-2}{2m-1}=\frac{0}{2m-1}=0 .$$
 **Exact, identically in $m$. CONFIRMED.**
 
 **Norm.**
@@ -302,11 +302,11 @@ The charge row $0,2m,2(m+1),4(m-1),4(m+1),4(m+1),4(m+4)$ likewise appears in bot
 
 > Both $V_{(2,1);(1)}\oplus\text{conj}$ and $V_{(2);(2)}$ carry $c_S+q_S^2=4(m+1)$, hence $L_e=0$; **the trace identity forces it, since the other five values already sum to zero against their dimensions.**
 
-**The premise is right and the second reason is not.** §12 confirms that rows $1,2,3,4,7$ sum to zero against their dimensions, so $\operatorname{tr}L_e=0$ reduces to
+**The premise is right and the second reason is not.** §12 confirms that rows $1,2,3,4,7$ sum to zero against their dimensions, so $\mathop{\mathrm{tr}}L_e=0$ reduces to
 $$\tfrac{2m^2(m^2-4)}3\lambda_5+\tfrac{m^2(m-1)(m+3)}4\lambda_6=0 .$$
 **That is one equation in two unknowns and forces neither to vanish.** A closed-form family satisfying it, for any $s\in\mathbb R$:
 $$\lambda_5=\frac{3s}{2m^2(m^2-4)},\qquad \lambda_6=-\frac{4s}{m^2(m-1)(m+3)} ,$$
-which reproduces $\operatorname{tr}L_e=0$ identically in $m$ for every $s$, and is the true table only at $s=0$. **So the trace identity does not force $L_e=0$ on the two rows; it forces one linear relation between them.**
+which reproduces $\mathop{\mathrm{tr}}L_e=0$ identically in $m$ for every $s$, and is the true table only at $s=0$. **So the trace identity does not force $L_e=0$ on the two rows; it forces one linear relation between them.**
 
 *Discrepancy protocol, all three cleared.* **Located**: [second-order.md](../findings/second-order.md) line 279, the clause after the semicolon. **Exhibited**: the one-parameter family above, in closed form, no computation. **Opposite argued**: the sentence's *first* clause already gives a valid reason, equal charges give $\lambda_5=\lambda_6$ by the charge formula, and then $(\dim_5+\dim_6)\lambda=0$ does force $\lambda=0$. So the intended argument is sound and the repair is one clause: **"equal by their shared charge, hence zero by the trace"** rather than "the trace identity forces it". **Confirmed as a stated-reason defect in [second-order.md](../findings/second-order.md).**
 
@@ -326,7 +326,7 @@ which reproduces $\operatorname{tr}L_e=0$ identically in $m$ for every $s$, and 
 
 **6. An imported theorem whose hypotheses were never checked against the object.** *Answered in full at §9c, at source.* **Fox's Theorem 1.3 is a theorem about $(\mathrm{MC}_W(V^*),*)$ itself, its only hypothesis is $\dim V\ge4$, and it *concludes* nonunitality rather than assuming it.** The trap the brief names is real on this record but belongs to Tkachev's Theorem 1.2, which the record already bars for exactly that reason. **The debt that does exist is $\kappa_F$'s closed form (§9d), which is an over-attribution rather than a failed hypothesis.**
 
-**7. A universal claim with no witness.** *One candidate, and it survives inspection.* "The seven real dimensions sum to $\dim\mathcal W_{2m}$ identically in $m$" is universal over $m\ge3$, **§3 supplies the polynomial identity, so it is proved rather than sampled.** Likewise "$\operatorname{tr}L_e=0$" and the $\operatorname{tr}L_e^2$ value (§9). *The one genuinely unwitnessed universal is multiplicity-freeness at $m\ge4$, which rests on the citation (§2); at $m=3$ it is proved here.*
+**7. A universal claim with no witness.** *One candidate, and it survives inspection.* "The seven real dimensions sum to $\dim\mathcal W_{2m}$ identically in $m$" is universal over $m\ge3$, **§3 supplies the polynomial identity, so it is proved rather than sampled.** Likewise "$\mathop{\mathrm{tr}}L_e=0$" and the $\mathop{\mathrm{tr}}L_e^2$ value (§9). *The one genuinely unwitnessed universal is multiplicity-freeness at $m\ge4$, which rests on the citation (§2); at $m=3$ it is proved here.*
 
 **8. Symbol collisions.** *Checked against [conventions.md](../findings/conventions.md), and three are live in this block.*
 - **$c$**, $c_S$ is the Casimir charge here, while [bounds.md](../findings/bounds.md)'s $c_{vab}$ are the bracket structure constants **in the very identity §11 compares against**, and [conventions.md](../findings/conventions.md) flags a third sense at [L47](../findings/problem.md). *Both senses appear within one paragraph of each other at [nondegeneracy.md](../findings/nondegeneracy.md) line 548.* **Read $c_S$ only with its subscript.**
@@ -366,7 +366,7 @@ The sentence quantifies over the summands with no exclusion, immediately after n
 | 2 | **The scope hypothesis H2 (native dimension $n=2m$, no padding), is used and stated nowhere in the block.** | §14.1 |
 | 3 | **A confirmed statement defect at [results.md](../results.md) line 142**: "Only $\tfrac2{m+1}$ reaches $\tfrac12$" contradicts the orbit row and, taken literally, contradicts its own lemma. Repair is three words. | §15 |
 | 4 | **A confirmed stated-reason defect at [second-order.md](../findings/second-order.md) line 279**: the trace identity forces one linear relation between the two zero rows, not their vanishing. The valid reason is the shared charge. | §13a |
-| 5 | "Two identities check the whole list" **overstates by one**, $\operatorname{tr}L_e$ is the block's own derivation of the $\mathfrak{su}(m)$ row and cannot also be an independent check on it. The block's later paragraph concedes this. | §9 |
+| 5 | "Two identities check the whole list" **overstates by one**, $\mathop{\mathrm{tr}}L_e$ is the block's own derivation of the $\mathfrak{su}(m)$ row and cannot also be an independent check on it. The block's later paragraph concedes this. | §9 |
 | 6 | **The final clause is [L24](../findings/second-order.md) and cites nothing** ($\lambda_{\max}>\tfrac12\Rightarrow$ not a maximiser). | §14.5 |
 | 7 | Under-citations, no mathematics at risk: the $m=3$ absence uses $\ell(\lambda)+\ell(\mu)\le m$ without naming it (§8); "uniquely from the other four" is empty at $m=3$ for row four (§12); $P$ as an isotypic projector is a fourth untabled sense (§14.8). | §8, §12, §14.8 |
 

@@ -62,25 +62,25 @@ That matters because the lemma **already withdrew one over-reading of this same 
 
 **The operative convention, re-derived here from scratch rather than taken from L136.** $u$ has spectrum $\tfrac1{\sqrt6}(2,-1,-1)$ on the self-dual $3$-space $E$ and $0$ on $K$. With $W_-:=\tfrac12(\lvert W\rvert-W)\succeq0$:
 
-$$\lvert u\rvert=\tfrac1{\sqrt6}\operatorname{diag}(2,1,1),\qquad u_-=\tfrac12(\lvert u\rvert-u)=\tfrac1{\sqrt6}\operatorname{diag}(0,1,1)\ \succeq0 .$$
+$$\lvert u\rvert=\tfrac1{\sqrt6}\mathop{\mathrm{diag}}(2,1,1),\qquad u_-=\tfrac12(\lvert u\rvert-u)=\tfrac1{\sqrt6}\mathop{\mathrm{diag}}(0,1,1)\ \succeq0 .$$
 
-$\mathrm{Alt}$ restricted to $S^2(\Lambda^2\mathbb R^4)$ is the orthogonal projection onto the line spanned by the Hodge operator $\star=\Pi_{SD}-\Pi_{ASD}$, with $\lVert\star\rVert^2=\operatorname{tr}(\star^2)=6$; so $\mathrm{Alt}(\star)=\star$, and $\langle g_0,\mathrm{Alt}(X)\rangle=a\langle\star,X\rangle$ for every $X$, **the two hypotheses the brief asks about are both satisfied**, and the second follows from $g_0$ being an $\mathrm{Alt}$-image rather than being an extra assumption. Then
+$\mathrm{Alt}$ restricted to $S^2(\Lambda^2\mathbb R^4)$ is the orthogonal projection onto the line spanned by the Hodge operator $\star=\Pi_{SD}-\Pi_{ASD}$, with $\lVert\star\rVert^2=\mathop{\mathrm{tr}}(\star^2)=6$; so $\mathrm{Alt}(\star)=\star$, and $\langle g_0,\mathrm{Alt}(X)\rangle=a\langle\star,X\rangle$ for every $X$, **the two hypotheses the brief asks about are both satisfied**, and the second follows from $g_0$ being an $\mathrm{Alt}$-image rather than being an extra assumption. Then
 
-$$\langle u_-,\star\rangle=\operatorname{tr}(u_-\star)=\tfrac1{\sqrt6}(0+1+1)=\tfrac2{\sqrt6},\qquad g_0=\mathrm{Alt}(u_-)=\tfrac{\langle u_-,\star\rangle}{6}\,\star=\tfrac1{3\sqrt6}\,\star=+a\star,$$
+$$\langle u_-,\star\rangle=\mathop{\mathrm{tr}}(u_-\star)=\tfrac1{\sqrt6}(0+1+1)=\tfrac2{\sqrt6},\qquad g_0=\mathrm{Alt}(u_-)=\tfrac{\langle u_-,\star\rangle}{6}\,\star=\tfrac1{3\sqrt6}\,\star=+a\star,$$
 
 and $\delta^2(u)=6a^2=\tfrac6{54}=\tfrac19$. **Every constant in the Setting is confirmed, and confirmed only under $W_-=\tfrac12(\lvert W\rvert-W)$.**
 
-**(c) prints the other convention.** Its words are: *"the line being affine, $W_-=\tfrac12(W-\lvert W\rvert)$ puts the entire second order into $\lvert W\rvert$"*. Under that sign, $u_-=-\tfrac1{\sqrt6}\operatorname{diag}(0,1,1)$ and $g_0=-a\star$, contradicting L135's own Setting one paragraph above.
+**(c) prints the other convention.** Its words are: *"the line being affine, $W_-=\tfrac12(W-\lvert W\rvert)$ puts the entire second order into $\lvert W\rvert$"*. Under that sign, $u_-=-\tfrac1{\sqrt6}\mathop{\mathrm{diag}}(0,1,1)$ and $g_0=-a\star$, contradicting L135's own Setting one paragraph above.
 
 **And the contradiction is not cosmetic, it inverts the cross term.** With $V(t)=u+tH$ affine and $\lvert V(t)\rvert=\lvert u\rvert+tY_1+t^2Y_2+O(t^3)$, the $V$ term contributes nothing at second order, so
 
 $$X_2=\tfrac12Y_2\quad\text{(operative)},\qquad\text{hence}\qquad 2\langle g_0,g_2\rangle=2a\langle\star,X_2\rangle=+a\langle\star,Y_2\rangle .$$
 
-L135(c) writes $-a\langle\star,Y_2\rangle$, which is what $X_2=-\tfrac12Y_2$ gives, the printed, wrong convention. A minimal check of the sign of $X_2$ against $Y_2$, done by hand on a $2\times2$ block: $u=\operatorname{diag}(1,-1)$, $H$ the off-diagonal swap $H_{12}=H_{21}=1$ gives $\lvert u+tH\rvert=\sqrt{1+t^2}\,I$, so $Y_2=\tfrac12I$; and $(u+tH)_-=\tfrac12(\sqrt{1+t^2}\,I-(u+tH))$ has $t^2$-coefficient $\tfrac14I=\tfrac12Y_2$. **REFUTED.**
+L135(c) writes $-a\langle\star,Y_2\rangle$, which is what $X_2=-\tfrac12Y_2$ gives, the printed, wrong convention. A minimal check of the sign of $X_2$ against $Y_2$, done by hand on a $2\times2$ block: $u=\mathop{\mathrm{diag}}(1,-1)$, $H$ the off-diagonal swap $H_{12}=H_{21}=1$ gives $\lvert u+tH\rvert=\sqrt{1+t^2}\,I$, so $Y_2=\tfrac12I$; and $(u+tH)_-=\tfrac12(\sqrt{1+t^2}\,I-(u+tH))$ has $t^2$-coefficient $\tfrac14I=\tfrac12Y_2$. **REFUTED.**
 
 **This is the same collision that refuted [L137](REVIEW_r425.md).** [r426](REVIEW_r426.md) §1 named it in L135 explicitly; [L136](../findings/route-a.md#lemma-l136-the-competitor-cross-term-is-nonpositive-on-the-equality-cone-so-delta_2lelvert-g_1rvert2) was then corrected and now opens with the convention "stated first because the refutation turned on it", **and L135 was left as it was.** Its statement (c) is the piece a successor picks up when it goes after the cross term, and it hands them the wrong sign for the one quantity [L136](../findings/route-a.md#lemma-l136-the-competitor-cross-term-is-nonpositive-on-the-equality-cone-so-delta_2lelvert-g_1rvert2) exists to sign.
 
-**Impact is local.** [L136](../findings/route-a.md#lemma-l136-the-competitor-cross-term-is-nonpositive-on-the-equality-cone-so-delta_2lelvert-g_1rvert2) writes $\Delta_2=\lVert g_1\rVert^2+2a\langle\star,X_2\rangle$ (the correct sign) and works through $\operatorname{tr}(\Pi_EX_2)$ and $\operatorname{tr}(\Pi_AX_2)$, never through $Y_2$. [L140](../findings/route-a.md#lemma-l140-lvert-g_1rvert2letfrac14-for-every-unit-weyl-direction-and-i3-closes-for-every-nge12) uses only $\mathrm{Alt}(H)=0$ and the multiplier range. **Nothing inherits the error.**
+**Impact is local.** [L136](../findings/route-a.md#lemma-l136-the-competitor-cross-term-is-nonpositive-on-the-equality-cone-so-delta_2lelvert-g_1rvert2) writes $\Delta_2=\lVert g_1\rVert^2+2a\langle\star,X_2\rangle$ (the correct sign) and works through $\mathop{\mathrm{tr}}(\Pi_EX_2)$ and $\mathop{\mathrm{tr}}(\Pi_AX_2)$, never through $Y_2$. [L140](../findings/route-a.md#lemma-l140-lvert-g_1rvert2letfrac14-for-every-unit-weyl-direction-and-i3-closes-for-every-nge12) uses only $\mathrm{Alt}(H)=0$ and the multiplier range. **Nothing inherits the error.**
 
 **Everything else in (c) that I could check is right.** $\Delta_2=\lVert g_1\rVert^2+2\langle g_0,g_2\rangle$ is the $t^2$ coefficient of $\lVert g_0+tg_1+t^2g_2+\cdots\rVert^2$; the Schur complement is standard second-order degenerate perturbation theory, $tD+(tC)^\top(0-\Lambda)^{-1}(tC)=t\big(D-tC^\top\Lambda^{-1}C\big)$; the $K$-block's negative part is $t(D_s)_-$ for $t>0$ by degree-one homogeneity; and the statement that on an affine line the whole second order sits in $\lvert W\rvert$ is true, once the sign is fixed.
 
@@ -114,7 +114,7 @@ using $\sum(\lambda_i)_-=\tfrac12\lVert\lambda\rVert_1$ when $\sum\lambda_i=0$. 
 
 **The class is inside $\{F=0\}$ and off the orbit, so this is not vacuous.** For $H$ in the ansatz with $H\perp u$: trace-freeness gives $H_{11}+H_{22}+H_{33}=0$ and $\langle H,u\rangle=\tfrac1{\sqrt6}(2H_{11}-H_{22}-H_{33})=0$, so $H_{11}=0$ and $H_{22}+H_{33}=0$; and $P_0HP_0=0$ since $u$ is nonsingular on $E$, killing the kink branch. So $F(H)=0$. Orbit tangents $[\xi,u]$ have zero diagonal in $u$'s eigenbasis, so the spectrum-deforming direction is orthogonal to $T_u\mathcal O$. **Both hypotheses of [L134](../findings/route-a.md#lemma-l134-the-competitor-side-second-order-margin-and-i3-reduced-to-one-bound-on-the-defect)(d) hold.**
 
-**The exact coefficient, which the lemma leaves as an inequality.** Take $H=\tfrac1{\sqrt2}\operatorname{diag}(0,1,-1)$. Along the great circle, $\lambda(t)=\cos t\,\tfrac1{\sqrt6}(2,-1,-1)+\sin t\,\tfrac1{\sqrt2}(0,1,-1)$ has $\lambda_2<0$ for $0<t<\pi/6$, so $\lVert\lambda(t)\rVert_1=\tfrac4{\sqrt6}\cos t$ and
+**The exact coefficient, which the lemma leaves as an inequality.** Take $H=\tfrac1{\sqrt2}\mathop{\mathrm{diag}}(0,1,-1)$. Along the great circle, $\lambda(t)=\cos t\,\tfrac1{\sqrt6}(2,-1,-1)+\sin t\,\tfrac1{\sqrt2}(0,1,-1)$ has $\lambda_2<0$ for $0<t<\pi/6$, so $\lVert\lambda(t)\rVert_1=\tfrac4{\sqrt6}\cos t$ and
 
 $$\delta^2(t)=\tfrac19\cos^2t\quad\Longrightarrow\quad c_2=-\tfrac19 .$$
 
@@ -134,7 +134,7 @@ Along the straight line, $\lambda=\big(\tfrac2{\sqrt6},\,-\tfrac1{\sqrt6}+\tfrac
 
 So concavity is impossible in every direction where it would have said something new, and where it is not excluded it delivers the bound for free. This is line-specific, needs no evenness, and is what F59's bullet should say. Grade: **conclusion CONFIRMED by replacement, printed proof REFUTED as a fence.**
 
-The convexity half is right as stated ($f$ convex with $f'(0)=0$ gives $\Delta_2\ge0$ and no upper bound) and the operator-convexity remark is right in kind, since $\operatorname{tr}(\Pi f(W))$ needs $f$ operator convex where $\operatorname{tr}f(W)$ needs only scalar convexity. F59's "need not be convex" is the correct hedge; [L135](../findings/route-a.md#lemma-l135-the-competitors-second-order-defect-coefficient-is-a-straight-line-quantity-minus-tfrac19-and-the-target-is-the-records-own-universal-ceiling)'s parallel sentence hardens it to "is not convex", which is not demonstrated anywhere.
+The convexity half is right as stated ($f$ convex with $f'(0)=0$ gives $\Delta_2\ge0$ and no upper bound) and the operator-convexity remark is right in kind, since $\mathop{\mathrm{tr}}(\Pi f(W))$ needs $f$ operator convex where $\mathop{\mathrm{tr}}f(W)$ needs only scalar convexity. F59's "need not be convex" is the correct hedge; [L135](../findings/route-a.md#lemma-l135-the-competitors-second-order-defect-coefficient-is-a-straight-line-quantity-minus-tfrac19-and-the-target-is-the-records-own-universal-ceiling)'s parallel sentence hardens it to "is not convex", which is not demonstrated anywhere.
 
 ## 7. F59's other two bullets, and where it over-reaches
 

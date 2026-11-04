@@ -29,7 +29,7 @@
 
 **(a) $\widetilde No=To$.** For $i\in I$, criticality at $(i,k)$ reads $v_i^2+\sum_{l\in I}M_{il}v_l+u_iM_{jk}=\theta v_i$, because $(M^2)_{ik}=\sum_{l\in I}M_{il}v_l+u_iM_{jk}$ once $M_{kk}=0$ is used; the same at $(i,j)$ with $u\leftrightarrow v$. Subtracting,
 $$\sum_{l\in I}M_{il}o_l=(\theta+M_{jk})o_i-(u_i+v_i)o_i,$$
-and adding $\operatorname{diag}(u+v)$ back gives $(\widetilde No)_i=To_i$. **Criticality at the $n-2$ pairs $(i,j)$ and the $n-2$ pairs $(i,k)$ is the whole input; the equation at $(j,k)$ is not used here.**
+and adding $\mathop{\mathrm{diag}}(u+v)$ back gives $(\widetilde No)_i=To_i$. **Criticality at the $n-2$ pairs $(i,j)$ and the $n-2$ pairs $(i,k)$ is the whole input; the equation at $(j,k)$ is not used here.**
 
 **(b) $\sum_io_i=0$, and $\widetilde N\mathbf1=0$.** Row $j$ of $M\mathbf1=0$ gives $\sum_Iu_i=-M_{jk}$, row $k$ gives $\sum_Iv_i=-M_{jk}$, so $\sum_Io_i=0$. The same two row sums give $(\widetilde N\mathbf1)_i=\sum_{l\in I}M_{il}+u_i+v_i=(0-u_i-v_i)+u_i+v_i=0$.
 

@@ -11,7 +11,7 @@
 | D3 | The quotation of Beitz Remark 6.3.15 (:32) | **ELIDES THE $n\ge12$ HYPOTHESIS present in the source** |
 | D4 | *"It is Böhm–Wilking's 'Conjecture A' … attributed to a PhD thesis by Beitz"* (:11) | **MISATTRIBUTED, the name and the statement are Nienhaus's, and they differ** |
 | D5 | *"also referred to as 'Conjecture L1' in the surrounding literature"* (:11) | **RESTS ON AN UNREAD SOURCE, no such name anywhere in [references/](../references/)** |
-| D6 | The $a=0$ cone, as printed (:47–:57, :61–:75) | **HYPOTHESIS DROPPED: $\operatorname{scal}(R)>0$, hence the sign of $c$** |
+| D6 | The $a=0$ cone, as printed (:47–:57, :61–:75) | **HYPOTHESIS DROPPED: $\mathop{\mathrm{scal}}(R)>0$, hence the sign of $c$** |
 | D7 | *"this **is** the diagonal-case maximization result"* (:21) | **STEP NOT NAMED: needs $Q(\mathcal D_n)\subseteq\mathcal D_n$; the argument is on file 301 lines below** |
 | D8 | *"$n=12$ and $n=14$ are open **even in the diagonal case**"* (:24) and *"the gap it papers over … sits exactly at the threshold under study"* (:29) | **STALE in the record's own terms, [Lemma L57](../findings/problem.md) closes both parities at every $n\ge4$** |
 | D9 | *"What is settled is that the target constant is right"* (:94) | **CITATION HAZARD, false at odd $n$ read alone, scoped correctly 26 lines above** |
@@ -25,7 +25,7 @@
 
 - $\Lambda^2=\mathfrak{so}(n)$, $I$ the identity operator on it, $\lVert I\rVert^2=\dim\Lambda^2=\binom n2=\tfrac{n(n-1)}2$. This is the block's convention at :73 and I adopt it throughout.
 - $Q(X)=X^2+X^\#$; $\Phi=Q$; $\Phi(A,B)=\tfrac12(AB+BA)+A\#B$ is its polarization, so $Q(A+B)=Q(A)+2\Phi(A,B)+Q(B)$.
-- $P(W)=\langle W,Q(W)\rangle$, this project's normalisation. [Böhm–Wilking](../references/boehm-wilking-2008-space-forms/) write $P(R)=\tfrac13\operatorname{tr}(R^3+RR^\#)=\tfrac16\operatorname{tri}(R,R,R)$ (read at extraction line 198) so theirs is a third of this one. The block records the factor at :96.
+- $P(W)=\langle W,Q(W)\rangle$, this project's normalisation. [Böhm–Wilking](../references/boehm-wilking-2008-space-forms/) write $P(R)=\tfrac13\mathop{\mathrm{tr}}(R^3+RR^\#)=\tfrac16\mathop{\mathrm{tri}}(R,R,R)$ (read at extraction line 198) so theirs is a third of this one. The block records the factor at :96.
 - $\theta_0(n)=\sqrt{2(n-1)(n-2)}/n$. $\Theta_n$ is [conventions.md](../findings/conventions.md)'s **diagonal maximum**: $\Theta_n=\theta_0(n)$ at even $n$, $\Theta_n=\sqrt{2(n-1)(n-3)/((n+1)(n-2))}$ at odd $n$. **The block under review never names $\Theta_n$.**
 - $R=R_I+R_{\mathrm{ric}_0}+R_W$; $Y:=R_{\mathrm{ric}_0}$; $F(R)=\lVert R\rVert^2/\lVert\mathrm{ric}(R)\rVert^2$; $G(R)=dF_R(\Phi(R))$.
 - $\mathcal D_n$ is the diagonal locus; Jäger's $\langle W\rangle_d$ is its counterpart, defined in the source as the operators diagonal **with respect to the standard basis** $e_1\wedge e_2,\dots,e_{n-1}\wedge e_n$.
@@ -53,8 +53,8 @@ A pass without this is not a pass, so it comes before the sections.
 | --- | --- | --- |
 | [BW08](../references/boehm-wilking-2008-space-forms/) Lemma 2.1 (extraction :216), *"$R+R\#I=(n-1)R_I+\tfrac{n-2}2R_{\mathrm{Ric}_0}=\mathrm{Ric}\wedge\mathrm{id}$"* | $R\in S^2_B(\mathfrak{so}(n))$, the **Bianchi** subspace | Yes; $W$ and $I$ are both Bianchi |
 | [BW08](../references/boehm-wilking-2008-space-forms/) eq. (6) (:203) | Stated for the $\mathrm{Ric}$-eigenbasis $e_1,\dots,e_n$ | Yes; $\mathrm{Ric}(W)=0$ makes the frame vacuous |
-| [BW08](../references/boehm-wilking-2008-space-forms/) eq. (5) (:186), $\operatorname{tri}(R_1,R_2,R_3)=\operatorname{tr}((R_1R_2+R_2R_1+2R_1\#R_2)R_3)$ | none beyond $S^2_B$ | Yes, and the block correctly says at :85 that this symmetry is **not** load-bearing here |
-| [Beitz](../references/beitz-2018-bianchi-convexity/notes.md) cone, p. 96 | $\Omega_a=\{R\in\mathcal A_n:(\tfrac{n-2}4+a)\lVert R\rVert^2\le\lVert\mathrm{ric}(R)\rVert^2$ **and** $\operatorname{scal}(R)>0\}$ | **The second clause is dropped by the block**, D6 |
+| [BW08](../references/boehm-wilking-2008-space-forms/) eq. (5) (:186), $\mathop{\mathrm{tri}}(R_1,R_2,R_3)=\mathop{\mathrm{tr}}((R_1R_2+R_2R_1+2R_1\#R_2)R_3)$ | none beyond $S^2_B$ | Yes, and the block correctly says at :85 that this symmetry is **not** load-bearing here |
+| [Beitz](../references/beitz-2018-bianchi-convexity/notes.md) cone, p. 96 | $\Omega_a=\{R\in\mathcal A_n:(\tfrac{n-2}4+a)\lVert R\rVert^2\le\lVert\mathrm{ric}(R)\rVert^2$ **and** $\mathop{\mathrm{scal}}(R)>0\}$ | **The second clause is dropped by the block**, D6 |
 | [Beitz](../references/beitz-2018-bianchi-convexity/notes.md) Lemma 2.3.4 | gives $G\le0\Rightarrow$ invariance | The block needs the converse and says so, :83, no debt |
 | [Xu](../references/xu-2024-ricci-flow-invariant-conditions/notes.md) Prop. 2.7, Lemma 2.8 (extraction :491, :519) | $R\in S^2(\mathfrak{so}(n))$ | Yes |
 | [Jäger](../references/jaeger-2016-diagonal-case/) Theorem A (extraction :113) | $n\ge16$ **even**; $W\in\langle W\rangle_d$; $\lVert W\rVert=1$; **$W^2+W^\#=\theta W$**, i.e. criticality; $\theta\ge\theta_0(n)$ | Diagonality and criticality are both hypotheses; see D7 |
@@ -103,7 +103,7 @@ I record this in full because a pass has to show what it checked.
 
 **(d) The cubic collapses.** $\Phi(cI+W)=c^2(n-1)I+2c\Phi(I,W)+Q(W)=c^2(n-1)I+Q(W)$. Hence
 $$\langle R,\Phi(R)\rangle=c^3(n-1)\lVert I\rVert^2+c^2(n-1)\langle W,I\rangle+c\langle I,Q(W)\rangle+\langle W,Q(W)\rangle,$$
-and $\langle W,I\rangle=\operatorname{tr}W=0$ while $\langle I,Q(W)\rangle=\operatorname{tr}Q(W)=0$ because $Q(W)$ is again Weyl by eq. (6). **Two terms die, as printed.**
+and $\langle W,I\rangle=\mathop{\mathrm{tr}}W=0$ while $\langle I,Q(W)\rangle=\mathop{\mathrm{tr}}Q(W)=0$ because $Q(W)$ is again Weyl by eq. (6). **Two terms die, as printed.**
 
 **(e) The right-hand side, and the cancellation.** $\mathrm{ric}(R)=c\,\mathrm{ric}(I)$ and $\mathrm{ric}(\Phi(R))=c^2(n-1)\mathrm{ric}(I)$, so $\langle\mathrm{ric}(R),\mathrm{ric}(\Phi(R))\rangle=c^3(n-1)\lVert\mathrm{ric}(I)\rVert^2$; and $F(R)=(c^2\lVert I\rVert^2+\lVert W\rVert^2)/(c^2\lVert\mathrm{ric}(I)\rVert^2)$. Their product is $c(n-1)(c^2\lVert I\rVert^2+\lVert W\rVert^2)$, **$\lVert\mathrm{ric}(I)\rVert^2$ cancels identically**, which is exactly the block's claim at :69 and the reason the Beitz/BW08 factor-$\tfrac12$ on $\mathrm{ric}$ costs nothing here. Subtracting, the criterion is
 $$\langle W,Q(W)\rangle\ \le\ c(n-1)\lVert W\rVert^2,$$
@@ -210,11 +210,11 @@ In the block it is a **conclusion**: :66 derives that $\Omega_0$ is non-invarian
 
 **Stands**, as a claim resting on a source the record has not read.
 
-### D6, the cone's $\operatorname{scal}(R)>0$ clause is dropped, and with it the sign of $c$
+### D6, the cone's $\mathop{\mathrm{scal}}(R)>0$ clause is dropped, and with it the sign of $c$
 
 **Locate.** :47–:57 print the cone only through the decomposition inequality; :61–:75 derive $c$ from $c^2=\tfrac{2(n-2)}{n^2(n-1)}$ and take the positive root without comment.
 
-**Exhibit.** Beitz's own definition, transcribed at [references/beitz-2018-bianchi-convexity/notes.md](../references/beitz-2018-bianchi-convexity/notes.md) line 11, is $\Omega_a:=\{R\in\mathcal A_n\mid(\tfrac{n-2}4+a)\lVert R\rVert^2\le\lVert\mathrm{ric}(R)\rVert^2\ \text{and}\ \operatorname{scal}(R)>0\}$. Without the second clause $F$ is even in $R$, the sublevel set is a double cone, and the $c<0$ nappe runs the same derivation to $\langle W,Q(W)\rangle\le-\theta_0(n)\lVert W\rVert^3$, **false at every sphere product**, since $\theta_{p,q}^2=\tfrac{2(n-1)(p-1)(q-1)}{(n-2)pq}>0$ for all $p,q\ge2$ and every member of the family has $\theta>0$. [Lemma L43](../findings/problem.md) records exactly this, and [L43.lean](../lean/HamiltonsCubic/Results/L43.lean) machine-checks the nappe violation. **The block under review carries neither the clause nor the warning.**
+**Exhibit.** Beitz's own definition, transcribed at [references/beitz-2018-bianchi-convexity/notes.md](../references/beitz-2018-bianchi-convexity/notes.md) line 11, is $\Omega_a:=\{R\in\mathcal A_n\mid(\tfrac{n-2}4+a)\lVert R\rVert^2\le\lVert\mathrm{ric}(R)\rVert^2\ \text{and}\ \mathop{\mathrm{scal}}(R)>0\}$. Without the second clause $F$ is even in $R$, the sublevel set is a double cone, and the $c<0$ nappe runs the same derivation to $\langle W,Q(W)\rangle\le-\theta_0(n)\lVert W\rVert^3$, **false at every sphere product**, since $\theta_{p,q}^2=\tfrac{2(n-1)(p-1)(q-1)}{(n-2)pq}>0$ for all $p,q\ge2$ and every member of the family has $\theta>0$. [Lemma L43](../findings/problem.md) records exactly this, and [L43.lean](../lean/HamiltonsCubic/Results/L43.lean) machine-checks the nappe violation. **The block under review carries neither the clause nor the warning.**
 
 **Argue the opposite.** A reader who takes $\Omega_0$ to consist of curvature operators of positive scalar curvature (which the notation $\mathcal A_n$ and the name suggest), supplies $c>0$ without being told. But the block never names $\mathcal A_n$, prints the cone in a form from which the clause has been removed, and is the section [Lemma L43](../findings/problem.md) points at as its argument.
 
@@ -254,7 +254,7 @@ In the block it is a **conclusion**: :66 derives that $\Omega_0$ is non-invarian
 
 - *"$n\ge12$ IS NECESSARY, NOT MERELY SUFFICIENT"* (:66) reads, alone, as though sufficiency were established. **Withdrawn**: the phrase is a comparison of two roles a hypothesis can play, and no sentence of the paragraph claims sufficiency. It fails step three.
 - *"the same polynomial a fifth time"* (:66) against the record's second threshold polynomial $n^2-13n+18$. **Withdrawn**: the block's subject is cone non-invariance, where $\theta_0$ is what the criterion demands at both parities, so $n^2-12n+8$ is the right polynomial and the count is about that one.
-- The factor-3 tension between :96 (*"BW08 defines $P=\tfrac13\langle R,Q(R)\rangle$"*) and :104 (*"$P$ **is** the left-hand side"*). **Withdrawn**: verified at [boehm-wilking-math0606187.txt](https://arxiv.org/abs/math/0606187) line 198 that BW08's $P$ is $\tfrac13\operatorname{tr}(R^3+RR^\#)$; the criterion's left-hand side is $\langle R,\Phi(R)\rangle$, this project's $P$, and the note eight lines above warns of the difference. Consistent when read together.
+- The factor-3 tension between :96 (*"BW08 defines $P=\tfrac13\langle R,Q(R)\rangle$"*) and :104 (*"$P$ **is** the left-hand side"*). **Withdrawn**: verified at [boehm-wilking-math0606187.txt](https://arxiv.org/abs/math/0606187) line 198 that BW08's $P$ is $\tfrac13\mathop{\mathrm{tr}}(R^3+RR^\#)$; the criterion's left-hand side is $\langle R,\Phi(R)\rangle$, this project's $P$, and the note eight lines above warns of the difference. Consistent when read together.
 - *"Invariance is $G\le0$"* (:100), which should say *on the boundary*. **Withdrawn**: nothing downstream uses more than the boundary, and step two (a concrete failure), cannot be exhibited.
 
 ## 7. What a reader may take from this block
@@ -262,7 +262,7 @@ In the block it is a **conclusion**: :66 derives that $\Omega_0$ is non-invarian
 **Takeable, and I checked each by hand or against the stored source:**
 
 1. Jäger's Theorem A verbatim, with its four hypotheses, and the sentence leaving $n\ge12$ conjectural.
-2. The $a=0$ collapse to $\langle W,Q(W)\rangle\le\theta_0(n)\lVert W\rVert^3$, at both parities, **once $\operatorname{scal}(R)>0$ is restored**, §4.
+2. The $a=0$ collapse to $\langle W,Q(W)\rangle\le\theta_0(n)\lVert W\rVert^3$, at both parities, **once $\mathop{\mathrm{scal}}(R)>0$ is restored**, §4.
 3. $\Omega_0$ is non-invariant for $4\le n\le11$, witnessed by padded $W_{\mathbb{CP}^2}$, the witness being Nienhaus's.
 4. The agreement with Xu Lemma 2.8, term for term including $\tfrac3{n-2}$, and Xu's own attribution of it to Huisken.
 5. The convention accounting between Beitz, Xu and BW08, and the fact that it cancels in this derivation only.
@@ -283,4 +283,4 @@ In the block it is a **conclusion**: :66 derives that $\Omega_0$ is non-invarian
 
 ---
 
-**Verdict: `GAP`.** The mathematics reproduces exactly and the sources are quoted faithfully with one elision (D3). What is missing is the argument for the block's headline: the identity of the two statements is asserted in a heading and a closing sentence, denied twelve lines earlier by the same block, and settled against the block by the source it cites. Five hypotheses of the imported statements, criticality, the $8\le n\le11$ clause, $\operatorname{scal}(R)>0$, $c>0$, and $Q(\mathcal D_n)\subseteq\mathcal D_n$, appear nowhere in it, four of them discharged elsewhere on the record and none pointed at from here.
+**Verdict: `GAP`.** The mathematics reproduces exactly and the sources are quoted faithfully with one elision (D3). What is missing is the argument for the block's headline: the identity of the two statements is asserted in a heading and a closing sentence, denied twelve lines earlier by the same block, and settled against the block by the source it cites. Five hypotheses of the imported statements, criticality, the $8\le n\le11$ clause, $\mathop{\mathrm{scal}}(R)>0$, $c>0$, and $Q(\mathcal D_n)\subseteq\mathcal D_n$, appear nowhere in it, four of them discharged elsewhere on the record and none pointed at from here.

@@ -6,8 +6,8 @@
 
 | claim | verdict |
 | --- | --- |
-| 1a. $C=40\operatorname{tr}(W^3)-8\langle W^{\#},W\rangle$, negative at $S^6\times S^6$ | **REFUTED.** $C=-40\operatorname{tr}(W^3)+8\langle W^{\#},W\rangle=+8.8095$, and $\theta=6\operatorname{tr}(W^3)+\tfrac18C$ |
-| 1b. "$\theta=6\operatorname{tr}(W^3)-\tfrac18C$ reproduces $\theta$ **with the negative $C$**, so the identity and the coefficients are confirmed" | **VACUOUS.** A rearrangement of the definition of $C$; it holds for either sign and never evaluates $C$ |
+| 1a. $C=40\mathop{\mathrm{tr}}(W^3)-8\langle W^{\#},W\rangle$, negative at $S^6\times S^6$ | **REFUTED.** $C=-40\mathop{\mathrm{tr}}(W^3)+8\langle W^{\#},W\rangle=+8.8095$, and $\theta=6\mathop{\mathrm{tr}}(W^3)+\tfrac18C$ |
+| 1b. "$\theta=6\mathop{\mathrm{tr}}(W^3)-\tfrac18C$ reproduces $\theta$ **with the negative $C$**, so the identity and the coefficients are confirmed" | **VACUOUS.** A rearrangement of the definition of $C$; it holds for either sign and never evaluates $C$ |
 | 1c. "the script returns $+\lvert C\rvert$ … the fault is isolated to the eigen-decomposition step" | **REFUTED by the record's own $S^3\times S^9$ row**, where the script returns a **negative** number |
 | 1d. "the factor of $5$ follows from $C$'s sign" | **REFUTED**, and the wrong side was adopted. Correct: $1.79781$ at $S^6\times S^6$, $2.66678$ at $S^5\times S^7$ |
 | 2. the $1.8\%$ figure | reading correct, support inadequate, [fence-posts.md](../findings/fence-posts.md) already proves it as an identity |
@@ -18,33 +18,33 @@
 
 ## Setup, the definitions everything below is argued from
 
-$Q(W)=W^2+W^{\#}$, $P(W)=\langle Q(W),W\rangle$, criticality is $Q(W)=\theta W$ at $\lVert W\rVert=1$ with $\theta=P(W)$. **$\theta=\operatorname{tr}(W^3)+\langle W^{\#},W\rangle$ with no factor**, and the record's own row closes it: $0.022473+1.213560=1.236033$. *That answers the brief's third bullet.*
+$Q(W)=W^2+W^{\#}$, $P(W)=\langle Q(W),W\rangle$, criticality is $Q(W)=\theta W$ at $\lVert W\rVert=1$ with $\theta=P(W)$. **$\theta=\mathop{\mathrm{tr}}(W^3)+\langle W^{\#},W\rangle$ with no factor**, and the record's own row closes it: $0.022473+1.213560=1.236033$. *That answers the brief's third bullet.*
 
-For the two-block product, in the record's $\theta>0$ convention, the vertex matrix is $M_{ij}=+q/(p-1)$ inside the first block, $+p/(q-1)$ inside the second, $-1$ across, $M_{ii}=0$; then $\operatorname{tr}(W^3)=\sum_{i<j}M_{ij}^3/s^3$ and $\langle W^{\#},W\rangle=\tfrac12\operatorname{tr}(M^3)/s^3$ with $s=\lVert M\rVert$. At $(6,6)$: $s^2=79.2$, $\sum_{i<j}M^3=15.84$, $\operatorname{tr}(M^3)=1710.72$, giving $0.0224736$ and $1.2135606$, the record's two columns to seven digits. **The $\Lambda^2$ picture and the $(0,4)$ picture the coefficients were derived in carry the same normalisation, so the brief's first bullet finds no discrepancy there.**
+For the two-block product, in the record's $\theta>0$ convention, the vertex matrix is $M_{ij}=+q/(p-1)$ inside the first block, $+p/(q-1)$ inside the second, $-1$ across, $M_{ii}=0$; then $\mathop{\mathrm{tr}}(W^3)=\sum_{i<j}M_{ij}^3/s^3$ and $\langle W^{\#},W\rangle=\tfrac12\mathop{\mathrm{tr}}(M^3)/s^3$ with $s=\lVert M\rVert$. At $(6,6)$: $s^2=79.2$, $\sum_{i<j}M^3=15.84$, $\mathop{\mathrm{tr}}(M^3)=1710.72$, giving $0.0224736$ and $1.2135606$, the record's two columns to seven digits. **The $\Lambda^2$ picture and the $(0,4)$ picture the coefficients were derived in carry the same normalisation, so the brief's first bullet finds no discrepancy there.**
 
 ## CLAIM 1, the resolution is inverted, and the record refutes it twice over
 
 ### 1b. The confirmation is a tautology
 
-$C$ is *defined* in the resolution's own table as $40\operatorname{tr}(W^3)-8\langle W^{\#},W\rangle$. Substituting:
+$C$ is *defined* in the resolution's own table as $40\mathop{\mathrm{tr}}(W^3)-8\langle W^{\#},W\rangle$. Substituting:
 
-$$6\operatorname{tr}(W^3)-\tfrac18\big(40\operatorname{tr}(W^3)-8\langle W^{\#},W\rangle\big)=6\operatorname{tr}-5\operatorname{tr}+\langle W^{\#},W\rangle=\theta .$$
+$$6\mathop{\mathrm{tr}}(W^3)-\tfrac18\big(40\mathop{\mathrm{tr}}(W^3)-8\langle W^{\#},W\rangle\big)=6\mathop{\mathrm{tr}}-5\mathop{\mathrm{tr}}+\langle W^{\#},W\rangle=\theta .$$
 
-**An identity in two variables, true before any point is evaluated.** For $C=a\operatorname{tr}(W^3)+b\langle W^{\#},W\rangle$ the pair in $\theta=\alpha\operatorname{tr}(W^3)+\beta C$ is forced to $\big(1-\tfrac ab,\tfrac1b\big)$, which at $(40,-8)$ is exactly $(6,-\tfrac18)$ and at $(-40,+8)$ is exactly $(6,+\tfrac18)$. **Both sign packages reproduce $\theta$ to machine precision**, because neither ever touches $C=\sum_j\mu_j\lvert S^jW\rvert^2$, the one definition under suspicion. The check confirms neither the coefficients, nor the identity, nor the sign.
+**An identity in two variables, true before any point is evaluated.** For $C=a\mathop{\mathrm{tr}}(W^3)+b\langle W^{\#},W\rangle$ the pair in $\theta=\alpha\mathop{\mathrm{tr}}(W^3)+\beta C$ is forced to $\big(1-\tfrac ab,\tfrac1b\big)$, which at $(40,-8)$ is exactly $(6,-\tfrac18)$ and at $(-40,+8)$ is exactly $(6,+\tfrac18)$. **Both sign packages reproduce $\theta$ to machine precision**, because neither ever touches $C=\sum_j\mu_j\lvert S^jW\rvert^2$, the one definition under suspicion. The check confirms neither the coefficients, nor the identity, nor the sign.
 
 ### 1c. The record's own $S^3\times S^9$ row refutes "the script returns $+\lvert C\rvert$"
 
-Two paragraphs below the resolution the same file records *"[run_second_kind_cubic.py](../scripts/runs/run_second_kind_cubic.py) reproduces $C(S^3\times S^9)=-4.19351$ … a **sign change** across the family."* At $(3,9)$, $n=12$: $s^2=92.8125$, $\sum_{i<j}M^3=248.2734$, $\operatorname{tr}(M^3)=1545.328$, so $\operatorname{tr}(W^3)=0.277663$, $\langle W^{\#},W\rangle=0.864135$, and $\theta=1.141798$, matching $\theta_0(3,9)=\sqrt{352/270}$ to six digits. Then
+Two paragraphs below the resolution the same file records *"[run_second_kind_cubic.py](../scripts/runs/run_second_kind_cubic.py) reproduces $C(S^3\times S^9)=-4.19351$ … a **sign change** across the family."* At $(3,9)$, $n=12$: $s^2=92.8125$, $\sum_{i<j}M^3=248.2734$, $\mathop{\mathrm{tr}}(M^3)=1545.328$, so $\mathop{\mathrm{tr}}(W^3)=0.277663$, $\langle W^{\#},W\rangle=0.864135$, and $\theta=1.141798$, matching $\theta_0(3,9)=\sqrt{352/270}$ to six digits. Then
 
-$$-40\operatorname{tr}(W^3)+8\langle W^{\#},W\rangle=-11.10652+6.91308=\mathbf{-4.19344},$$
+$$-40\mathop{\mathrm{tr}}(W^3)+8\langle W^{\#},W\rangle=-11.10652+6.91308=\mathbf{-4.19344},$$
 
-against the script's $-4.19351$; and at $S^6\times S^6$ the same expression gives $-0.89892+9.70848=\mathbf{+8.80956}$ against the script's $+8.809545$. **The script matches $C=-40\operatorname{tr}(W^3)+8\langle W^{\#},W\rangle$ in sign and magnitude at both points, including across the sign change.** A uniform "$+\lvert C\rvert$" flip is impossible: it would require the script to return $+4.19$ at $S^3\times S^9$, and the record says it returns $-4.19$. *The refutation needs no convention argument and no new evaluation, only the two rows the same section already carries.*
+against the script's $-4.19351$; and at $S^6\times S^6$ the same expression gives $-0.89892+9.70848=\mathbf{+8.80956}$ against the script's $+8.809545$. **The script matches $C=-40\mathop{\mathrm{tr}}(W^3)+8\langle W^{\#},W\rangle$ in sign and magnitude at both points, including across the sign change.** A uniform "$+\lvert C\rvert$" flip is impossible: it would require the script to return $+4.19$ at $S^3\times S^9$, and the record says it returns $-4.19$. *The refutation needs no convention argument and no new evaluation, only the two rows the same section already carries.*
 
 ### 1a. The convention, pinned from the round sphere
 
 The remaining question is which sign of the second-kind operator the coefficients belong to, and that is fixed by the model case. With $\mathring R(\varphi)_{ij}=R_{ikjl}\varphi_{kl}$ and $R_{ikki}=K(e_i,e_k)$, the unit round sphere has $R_{ikjl}=g_{il}g_{kj}-g_{ij}g_{kl}$, so
 
-$$\mathring R(\varphi)_{ij}=\varphi_{ij}-g_{ij}\operatorname{tr}\varphi=\varphi_{ij}\ \text{ on }S^2_0,\qquad \mathring R_{S^n}=+\mathrm{Id}.$$
+$$\mathring R(\varphi)_{ij}=\varphi_{ij}-g_{ij}\mathop{\mathrm{tr}}\varphi=\varphi_{ij}\ \text{ on }S^2_0,\qquad \mathring R_{S^n}=+\mathrm{Id}.$$
 
 **That is the convention Cheng–Wang's hypothesis needs**: their cone condition is $\lambda_1+\lambda_2\ge0$, which the model case must satisfy, and the record's own shift construction takes $R_1$ with $\mathring R_1=\mathrm{Id}$.
 
@@ -52,19 +52,19 @@ Under it, for a coordinate-diagonal $W$ the second-kind eigenvectors are the off
 
 $$\big(+\tfrac65\big)^{40},\quad(-1)^{36},\quad(-12)^1\qquad(77\ \text{values, summing to }0).$$
 
-With the record's own weights $\lvert E_{pq}W\rvert^2=4\sum_{x\ne p,q}(M_{px}+M_{qx})^2$ and $\lvert DW\rvert^2=16\,d^{\mathsf T}(\operatorname{diag}(r)+A)d$, $47.04$ per within-block plane, $0.4$ per cross plane, $230.4$ and $10\times188.16$ on the two diagonal eigenspaces, the weighted sum is
+With the record's own weights $\lvert E_{pq}W\rvert^2=4\sum_{x\ne p,q}(M_{px}+M_{qx})^2$ and $\lvert DW\rvert^2=16\,d^{\mathsf T}(\mathop{\mathrm{diag}}(r)+A)d$, $47.04$ per within-block plane, $0.4$ per cross plane, $230.4$ and $10\times188.16$ on the two diagonal eigenspaces, the weighted sum is
 
 $$s^3C=4\big[30(1.2)(47.04)+36(-1)(0.4)\big]+\big[(-12)(230.4)+(1.2)(1881.6)\big]=6716.16-506.88=6209.28,$$
 
-which is exactly $-40\sum_{i<j}M^3+8\cdot\tfrac12\operatorname{tr}(M^3)=-633.6+6842.88$. **Hence $C(S^6\times S^6)=+8.8093$ and $\theta=6\operatorname{tr}(W^3)+\tfrac18C$.** *Three routes agree: the closed form, the diagonal form, and the eigenvalue-weighted sum.*
+which is exactly $-40\sum_{i<j}M^3+8\cdot\tfrac12\mathop{\mathrm{tr}}(M^3)=-633.6+6842.88$. **Hence $C(S^6\times S^6)=+8.8093$ and $\theta=6\mathop{\mathrm{tr}}(W^3)+\tfrac18C$.** *Three routes agree: the closed form, the diagonal form, and the eigenvalue-weighted sum.*
 
-*And [nondegeneracy.md](../findings/nondegeneracy.md) mis-reports reviewer 160.* The recorded fit, "slopes $-48.00000$, intercepts $8.00000$", is the coefficient pair of $C$ in the basis $(\operatorname{tr}(W^3),\theta)$, since $\theta=6\operatorname{tr}+\tfrac18C$ inverts to $C=8\theta-48\operatorname{tr}(W^3)$. It reproduces all three of the record's rows: $8(1.236033)-48(0.022473)=8.8096$, $8(1.228239)-48(0.042802)=7.7714$, $8(1.201561)-48(0.113394)=4.1696$. **So 160 measured the correct $C$ and 159's derived sign is the inverted one**, the two did not independently agree, and presenting them as agreeing is what let the inversion stand.
+*And [nondegeneracy.md](../findings/nondegeneracy.md) mis-reports reviewer 160.* The recorded fit, "slopes $-48.00000$, intercepts $8.00000$", is the coefficient pair of $C$ in the basis $(\mathop{\mathrm{tr}}(W^3),\theta)$, since $\theta=6\mathop{\mathrm{tr}}+\tfrac18C$ inverts to $C=8\theta-48\mathop{\mathrm{tr}}(W^3)$. It reproduces all three of the record's rows: $8(1.236033)-48(0.022473)=8.8096$, $8(1.228239)-48(0.042802)=7.7714$, $8(1.201561)-48(0.113394)=4.1696$. **So 160 measured the correct $C$ and 159's derived sign is the inverted one**, the two did not independently agree, and presenting them as agreeing is what let the inversion stand.
 
 ### 1d. The factor of $5$ is the wrong tail of the spectrum, and the correct bound is $1.798$
 
-$\theta=6\operatorname{tr}(W^3)+\tfrac18C$ has a **positive** coefficient on $C$, so bounding $\theta$ above needs $C$ bounded **above**, reviewer 158's free upgrade $C\le\tfrac{\mu_{N-1}+\mu_N}2T$, which that reviewer already called *"the side that could ever bound $\theta$"*. The two largest second-kind eigenvalues at $S^6\times S^6$ are both $+\tfrac65/s$, so with $T=\sum_j\lvert S^jW\rvert^2=98.667$:
+$\theta=6\mathop{\mathrm{tr}}(W^3)+\tfrac18C$ has a **positive** coefficient on $C$, so bounding $\theta$ above needs $C$ bounded **above**, reviewer 158's free upgrade $C\le\tfrac{\mu_{N-1}+\mu_N}2T$, which that reviewer already called *"the side that could ever bound $\theta$"*. The two largest second-kind eigenvalues at $S^6\times S^6$ are both $+\tfrac65/s$, so with $T=\sum_j\lvert S^jW\rvert^2=98.667$:
 
-$$\theta\ \le\ 6\operatorname{tr}(W^3)+\tfrac18\cdot\tfrac{1.2}{s}\,T\ =\ 0.134838+\tfrac{13.3038}8\ =\ \mathbf{1.79781},\qquad\text{loss }1.4545\times .$$
+$$\theta\ \le\ 6\mathop{\mathrm{tr}}(W^3)+\tfrac18\cdot\tfrac{1.2}{s}\,T\ =\ 0.134838+\tfrac{13.3038}8\ =\ \mathbf{1.79781},\qquad\text{loss }1.4545\times .$$
 
 At $S^5\times S^7$ the two largest are $+1.75/s$ twice, giving $0.256812+\tfrac{19.2797}8=\mathbf{2.66678}$, loss $2.1712\times$. **The recorded $9.142899$ and $9.208072$ come from the *bottom* pair $\{-12,-1\}$ fed into the negated identity**: $-\tfrac{13}2/s\cdot T=-72.0645$ gives $0.134838+9.00807=9.14291$, and $-\tfrac{13}2/8.9559\cdot T=-71.610$ gives $0.256812+8.95124=9.20805$. Both recorded figures reproduced to five digits under one hypothesis, the wrong tail with the wrong-signed identity. *So the factor of $5.09$ is not $C$'s sign: flipping $C$ turns $1.798$ into $-1.528$, not into $9.143$.*
 
@@ -76,11 +76,11 @@ At $S^5\times S^7$ the two largest are $+1.75/s$ twice, giving $0.256812+\tfrac{
 
 **One $n$ cannot support an asymptotic claim, and none is needed.** At $S^m\times S^m$, $n=2m$: $\sum_{i<j}M^3=m^2(2m-1)/(m-1)^2$ and $\lVert M\rVert^2=m^2(2m-1)/(m-1)$, so
 
-$$\operatorname{tr}(W^3)=\frac1{m\sqrt{(m-1)(2m-1)}},\qquad \theta_0(n)=\frac{\sqrt{(m-1)(2m-1)}}m,\qquad \frac{\operatorname{tr}(W^3)}{\theta_0}=\frac1{(m-1)(2m-1)}=\frac2{(n-1)(n-2)} .$$
+$$\mathop{\mathrm{tr}}(W^3)=\frac1{m\sqrt{(m-1)(2m-1)}},\qquad \theta_0(n)=\frac{\sqrt{(m-1)(2m-1)}}m,\qquad \frac{\mathop{\mathrm{tr}}(W^3)}{\theta_0}=\frac1{(m-1)(2m-1)}=\frac2{(n-1)(n-2)} .$$
 
 At $m=6$ the first is $1/(6\sqrt{55})=0.0224736$, the record's $0.022473$, and the ratio is $2/110=1.8182\%$, decaying like $2/n^2$.
 
-**And it was already on the record, stronger.** [fence-posts.md](../findings/fence-posts.md) post F1 carries *"$\operatorname{tr}(W^3)/P=\frac2{(n-1)(n-2)}$ at $S^{n/2}\times S^{n/2}$, proved as an identity rather than scanned."* The commit presents the same content as a measurement at the one $n$ where the identity was already available. *That is question (a)'s clearest instance.* `d91c389` has since boxed the identity into [nondegeneracy.md](../findings/nondegeneracy.md) without citing the fence post that held it.
+**And it was already on the record, stronger.** [fence-posts.md](../findings/fence-posts.md) post F1 carries *"$\mathop{\mathrm{tr}}(W^3)/P=\frac2{(n-1)(n-2)}$ at $S^{n/2}\times S^{n/2}$, proved as an identity rather than scanned."* The commit presents the same content as a measurement at the one $n$ where the identity was already available. *That is question (a)'s clearest instance.* `d91c389` has since boxed the identity into [nondegeneracy.md](../findings/nondegeneracy.md) without citing the fence post that held it.
 
 ## CLAIM 3, the four folded corrections, each verified independently
 
@@ -90,7 +90,7 @@ At $m=6$ the first is $1/(6\sqrt{55})=0.0224736$, the record's $0.022473$, and t
 
 **(iii) Excess $0$ does not imply graded, CONFIRMED, and the witness is sound.** Padded $W_{\mathbb{CP}^2}$ is ungraded at every $n>4$ by $S_{\mathfrak{hhm}}=4(n-4)$, and its isotropy $\mathfrak u(2)\oplus\mathfrak{so}(n-4)$ gives $\dim\mathcal O=\binom n2-4-\binom{n-4}2$, i.e. $10$ at $n=6$ and $18$ at $n=8$, **exactly RESULT 1's two numbers, recovered from the isotropy without measurement.** *A transcription defect, not a defect in the correction:* [second-order.md](../findings/second-order.md) states the nondegeneracy at $n=8,10,12$ with the single parenthetical $\dim E(\tfrac12)=\dim(\text{orbit})=18$, while the orbit is $18,26,34$ there.
 
-**(iv) A lower bound on $\mathrm{mult}(\tfrac12)$ is equivalent to Conjecture A, CONFIRMED as quoted, and the true obstruction is stronger.** $\operatorname{tr}(L_e^2)=\kappa_n/\theta^2$ at every critical point, so a counterexample is *exactly* $\operatorname{tr}(L_e^2)<R(n)=\kappa_n/\theta_0(n)^2$, and excluding it needs $\operatorname{tr}(L_e^2)\ge R(n)$. From $\mathrm{mult}(\tfrac12)\ge m$ alone one gets only $\operatorname{tr}(L_e^2)\ge1+\tfrac m4$. At $n=12$ the ten-summand spectrum gives $R(12)=1+9+6.4+9+16=41.4$, so $m\ge162$ would be needed, while the conjectured maximiser has $\mathrm{mult}(\tfrac12)=36$, and even the largest conceivable orbit $\binom{12}2=66$ yields $17.5$. **So an unconditional lower bound of the required strength is not merely circular, it is false at the maximiser**; only the conditional form is as hard as Conjecture A. r161's and r162's conclusion is right with more room under it than they claimed.
+**(iv) A lower bound on $\mathrm{mult}(\tfrac12)$ is equivalent to Conjecture A, CONFIRMED as quoted, and the true obstruction is stronger.** $\mathop{\mathrm{tr}}(L_e^2)=\kappa_n/\theta^2$ at every critical point, so a counterexample is *exactly* $\mathop{\mathrm{tr}}(L_e^2)<R(n)=\kappa_n/\theta_0(n)^2$, and excluding it needs $\mathop{\mathrm{tr}}(L_e^2)\ge R(n)$. From $\mathrm{mult}(\tfrac12)\ge m$ alone one gets only $\mathop{\mathrm{tr}}(L_e^2)\ge1+\tfrac m4$. At $n=12$ the ten-summand spectrum gives $R(12)=1+9+6.4+9+16=41.4$, so $m\ge162$ would be needed, while the conjectured maximiser has $\mathrm{mult}(\tfrac12)=36$, and even the largest conceivable orbit $\binom{12}2=66$ yields $17.5$. **So an unconditional lower bound of the required strength is not merely circular, it is false at the maximiser**; only the conditional form is as hard as Conjecture A. r161's and r162's conclusion is right with more room under it than they claimed.
 
 ## Questions
 
@@ -115,7 +115,7 @@ $W_{\mathbb{CP}^2}$ is critical in its native $n_0=4$: $P=9(\det W^++\det W^-)$ 
 
 | asserted in `82a93ac` | already on the record |
 | --- | --- |
-| $\operatorname{tr}(W^3)$ is $1.8\%$ of $\theta$ at the maximiser, "the bottleneck as a measurement" | [fence-posts.md](../findings/fence-posts.md) post F1, as the proved identity $2/\big((n-1)(n-2)\big)$ |
+| $\mathop{\mathrm{tr}}(W^3)$ is $1.8\%$ of $\theta$ at the maximiser, "the bottleneck as a measurement" | [fence-posts.md](../findings/fence-posts.md) post F1, as the proved identity $2/\big((n-1)(n-2)\big)$ |
 | $\langle W^{\#},W\rangle$ carries the rest, through alignment rather than spectrum | [problem.md](../findings/problem.md) item 5, and the same fence post |
 | that a sign convention differs between the $C$ column and the $\theta$ column | stated in the paragraph directly below the new table, and under *"The sign of $W$ is part of the definition of $S$"* |
 | that the upper bound on $C$ is the operative side | reviewer 158's free upgrade, *"this is the side that could ever bound $\theta$"*, which `82a93ac` overturned and `d91c389` restored |
@@ -130,9 +130,9 @@ $W_{\mathbb{CP}^2}$ is critical in its native $n_0=4$: $P=9(\det W^++\det W^-)$ 
 
 The inversion is folded, but the same section now carries both signs:
 
-1. **The boxed identity above the fold still reads $\theta=6\operatorname{tr}(W^3)-\tfrac18C$ with $C=40\operatorname{tr}(W^3)-8\langle W^{\#},W\rangle$.** It contradicts the corrected box eight paragraphs below.
+1. **The boxed identity above the fold still reads $\theta=6\mathop{\mathrm{tr}}(W^3)-\tfrac18C$ with $C=40\mathop{\mathrm{tr}}(W^3)-8\langle W^{\#},W\rangle$.** It contradicts the corrected box eight paragraphs below.
 2. **"The operative side is the LOWER bound, not the upper" still stands**, with *"The record briefly had this backwards"* attached to the reading that is now correct. Reviewer 158's free upgrade is the operative side.
-3. **The tight-at-extremum table still reads $9.142899$ / $7.397\times$ and $9.208072$ / $7.497\times$**, directly above the paragraph withdrawing them. The corrected entries are $\mathbf{1.79781}$ / $1.4545\times$ and $\mathbf{2.66678}$ / $2.1712\times$ (*the second row's corrected value is not yet anywhere on the record*) and the column head should read $6\operatorname{tr}(W^3)+\tfrac18\cdot\tfrac{\mu_{N-1}+\mu_N}2T$.
+3. **The tight-at-extremum table still reads $9.142899$ / $7.397\times$ and $9.208072$ / $7.497\times$**, directly above the paragraph withdrawing them. The corrected entries are $\mathbf{1.79781}$ / $1.4545\times$ and $\mathbf{2.66678}$ / $2.1712\times$ (*the second row's corrected value is not yet anywhere on the record*) and the column head should read $6\mathop{\mathrm{tr}}(W^3)+\tfrac18\cdot\tfrac{\mu_{N-1}+\mu_N}2T$.
 4. **The attribution "159 and 160, independently" is what allowed the inversion to stand.** 160's $(-48,+8)$ is the corrected $C$; 159's derivation is the inverted one. As written the record says two reviewers agreed where they disagreed.
 5. **State the norm convention on $\lvert S^jW\rvert$.** $T=4\kappa$ at $\lVert W\rVert_{\Lambda^2}=1$; *"the absence of a factor on $S$"* reads as denying exactly this, and the bound is wrong by $4\times$ without it.
 6. **Delete the $n=6,7$ non-criticality parenthetical from [second-order.md](../findings/second-order.md)**, replacing it with the padding lemma, and drop the $n\ge12$ restriction as a route for the gap theorem.

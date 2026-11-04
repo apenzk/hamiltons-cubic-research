@@ -7,8 +7,8 @@ Independent build from the brief's definitions only, in [scripts/reviewers/r121/
 | Step | Statement audited | Verdict |
 |---|---|---|
 | 1 | linearity of $R\mapsto\mathring R$ gives $\lambda\mu=-\langle(W^2)^{\!\circ}h,h\rangle-\langle(W^\#)^{\!\circ}h,h\rangle$ | **CONFIRMED**, and the silent hypothesis it needs is **true** (see below) |
-| 2 | $\langle(W^2)^{\!\circ}h,h\rangle=\tfrac14\sum\lVert[u^{pq},h]\rVert^2-\tfrac12\operatorname{tr}(Nh^2)$ | **CONFIRMED** on paper and to $2\times10^{-16}$ |
-| 3 | $N\succeq0$, $\operatorname{tr}N=\lvert W\rvert^2$; the "$N\propto I$" withdrawal | **CONFIRMED**; withdrawal correct; nothing else leans on it. One norm-convention slip |
+| 2 | $\langle(W^2)^{\!\circ}h,h\rangle=\tfrac14\sum\lVert[u^{pq},h]\rVert^2-\tfrac12\mathop{\mathrm{tr}}(Nh^2)$ | **CONFIRMED** on paper and to $2\times10^{-16}$ |
+| 3 | $N\succeq0$, $\mathop{\mathrm{tr}}N=\lvert W\rvert^2$; the "$N\propto I$" withdrawal | **CONFIRMED**; withdrawal correct; nothing else leans on it. One norm-convention slip |
 | 4 | $(W^\#)_{ijkl}=\sum_{pq}(W_{ipkq}W_{jplq}-W_{iplq}W_{jpkq})$ and the $\#$-ring formula | **CONFIRMED exactly** against a structure-constant build, $\lVert\cdot\rVert\le6\times10^{-17}$ |
 | 5 | $\langle C^{pq},h\rangle=-(\mathring Wh)_{pq}$, so $\sum\langle C^{pq},h\rangle^2=\mu^2$ | **CONFIRMED**; holds for **any** eigenvector, bottom not required |
 | 6 | $\mathrm{LOSS}\ge\mu^2/n\iff\lambda\le\tfrac{n-1}n\mu$ | **CONFIRMED**, needing $\mu>0$, which is automatic and should be said |
@@ -24,9 +24,9 @@ Nothing in the chain is wrong. What the chain does not say is where the review's
 
 **Steps 2, 3, 5** reproduce on paper exactly as written. The commutator/anticommutator elimination is right, $\sum_{pq}(u^{pq})^2=-N$ is right, and $W_{pklq}=-C^{pq}_{kl}$ gives step 5 with the stated sign. Residuals $\le2\times10^{-16}$ at $n=4,5,6,7$.
 
-**One convention slip in step 3.** With $\lVert W\rVert_F=1$ *as an operator on $\Lambda^2$* (the brief's own normalisation), $\operatorname{tr}N=\sum_{ijkl}W_{ijkl}^2=4$, not $1$. The statement "$\operatorname{tr}N=\lvert W\rvert^2$" is true only for the tensor norm, and the two norms differ by the factor $\lVert W\rVert_F=\tfrac12\lvert W\rvert$. Harmless here because only $\lambda_{\max}(N)$ is used downstream, but a brief that fixes one normalisation and quotes the other invites a factor-4 error in any reader who reuses it.
+**One convention slip in step 3.** With $\lVert W\rVert_F=1$ *as an operator on $\Lambda^2$* (the brief's own normalisation), $\mathop{\mathrm{tr}}N=\sum_{ijkl}W_{ijkl}^2=4$, not $1$. The statement "$\mathop{\mathrm{tr}}N=\lvert W\rvert^2$" is true only for the tensor norm, and the two norms differ by the factor $\lVert W\rVert_F=\tfrac12\lvert W\rvert$. Harmless here because only $\lambda_{\max}(N)$ is used downstream, but a brief that fixes one normalisation and quotes the other invites a factor-4 error in any reader who reuses it.
 
-**$N$ is not a multiple of the identity, and the withdrawal is right.** Measured deviation $\lVert N-\tfrac{\operatorname{tr}N}nI\rVert_\infty$: $2\times10^{-16}$ at $n=4$ (where it is forced), $0.21$, $0.13$, $0.16$ at $n=5,6,7$ on random Weyl tensors. Nothing else in the chain uses it.
+**$N$ is not a multiple of the identity, and the withdrawal is right.** Measured deviation $\lVert N-\tfrac{\mathop{\mathrm{tr}}N}nI\rVert_\infty$: $2\times10^{-16}$ at $n=4$ (where it is forced), $0.21$, $0.13$, $0.16$ at $n=5,6,7$ on random Weyl tensors. Nothing else in the chain uses it.
 
 ## Two identities the chain omits, and they change what the chain means
 
@@ -40,7 +40,7 @@ Verified to $10^{-16}$ at $n=4,5,6,7$ on random $W$ and random $h$ ([r121_genera
 
 $$\mathrm{LOSS}(W,h)=\nu(\nu+\lambda),\qquad\text{hence}\qquad \sum_{\alpha}\mathrm{LOSS}(W,h^\alpha)=\lVert\mathring W\rVert_F^2$$
 
-over any orthonormal eigenbasis of $S^2_0$ (using $\operatorname{tr}\mathring W|_{S^2_0}=0$, itself a consequence of $\mathrm{Ric}(W)=0$). Verified to $1.6\times10^{-15}$ across the **whole** spectrum at every critical point tested, and $\sum_\alpha\mathrm{LOSS}=\lVert\mathring W\rVert_F^2=3.000000$ at padded $\mathbb{CP}^2$ ([r121_loss_identity.py](../scripts/reviewers/r121/r121_loss_identity.py)).
+over any orthonormal eigenbasis of $S^2_0$ (using $\mathop{\mathrm{tr}}\mathring W|_{S^2_0}=0$, itself a consequence of $\mathrm{Ric}(W)=0$). Verified to $1.6\times10^{-15}$ across the **whole** spectrum at every critical point tested, and $\sum_\alpha\mathrm{LOSS}=\lVert\mathring W\rVert_F^2=3.000000$ at padded $\mathbb{CP}^2$ ([r121_loss_identity.py](../scripts/reviewers/r121/r121_loss_identity.py)).
 
 This is the sharpest thing to say about the chain. **On the critical set, $\mathrm{LOSS}\ge\mu^2/n$ and $\lambda\le\tfrac{n-1}n\mu$ are not related by an inequality, they are the same sentence**, and the whole of steps 1–6 is an exact change of variables for $\mathrm{CD}_n$. [findings/target.md](../findings/target.md) already says as much ("this is the dichotomy written in quantities that can be attacked"), and that framing is honest; the sum rule and the $\nu(\nu+\lambda)$ form make it exact rather than rhetorical. The route's content therefore sits entirely in whether the three terms admit a **criticality-free** lower bound, and (d) below says they do not.
 
@@ -77,7 +77,7 @@ The problem is elsewhere, and it is threefold.
 
 *Stated honestly, with the frequency I actually measured*: this point appears in $1$ of $3$ distinct critical values found at $n=5$ and in none of the $50$ found at $n=6$, and one seed's first $250$ starts miss it entirely while $300$ and $400$ starts from two seeds find it, so the census counts mean nothing either way, exactly as the record already warns. What the witness establishes is qualitative and enough: **branch 1 is not "a near-theorem with one exception at $\mathbb{CP}^2$"**, and every point where it fails is a point where the whole burden sits on the $\sqrt{3/2}$ branch, which is the target itself.
 
-**3. The relaxation the record proposes next is provably dead at both equality cases.** [findings/target.md](../findings/target.md) drops the commutator mass ("so the whole route now rests on the $\#$ term alone"), giving $\lambda\mu\le\tfrac12\operatorname{tr}(Nh^2)-\langle(W^\#)^{\!\circ}h,h\rangle\le\tfrac12\lambda_{\max}(N)-\langle(W^\#)^{\!\circ}h,h\rangle$. Evaluated at the points where it must be tight ([r121_commutator_drop.py](../scripts/reviewers/r121/r121_commutator_drop.py)):
+**3. The relaxation the record proposes next is provably dead at both equality cases.** [findings/target.md](../findings/target.md) drops the commutator mass ("so the whole route now rests on the $\#$ term alone"), giving $\lambda\mu\le\tfrac12\mathop{\mathrm{tr}}(Nh^2)-\langle(W^\#)^{\!\circ}h,h\rangle\le\tfrac12\lambda_{\max}(N)-\langle(W^\#)^{\!\circ}h,h\rangle$. Evaluated at the points where it must be tight ([r121_commutator_drop.py](../scripts/reviewers/r121/r121_commutator_drop.py)):
 
 | point | true $\lambda$ | after dropping $\tfrac14\sum\lVert[u,h]\rVert^2$ | overshoot |
 |---|---|---|---|
@@ -87,16 +87,16 @@ The problem is elsewhere, and it is threefold.
 | $S^4\times S^4$ | $1.145644$ | $1.309307$ | $+14.3\%$ |
 | $S^6\times S^6$ | $1.236033$ | $1.348400$ | $+9.1\%$ |
 
-At every sphere product $\mathrm{LOSS}$ *is* the commutator mass ($\sum\operatorname{tr}((C^{pq}h)^2)=\tfrac12\operatorname{tr}(Nh^2)$ exactly, checked to $10^{-16}$), so dropping it gives precisely $\lambda\le\mu$, overshooting $\theta_0(n)$ by $\tfrac1{n-1}$, never closing at any $n$. At padded $\mathbb{CP}^2$ it gives $\sqrt{8/3}$ against a target of $\sqrt{3/2}$, and both $\tfrac12\operatorname{tr}(Nh^2)=\tfrac12\lambda_{\max}(N)=\tfrac12$, so the second inequality is free and all the loss is the commutator. **The commutator mass is load-bearing at both equality families, and "the route rests on the $\#$ term alone" is the step that kills it.**
+At every sphere product $\mathrm{LOSS}$ *is* the commutator mass ($\sum\mathop{\mathrm{tr}}((C^{pq}h)^2)=\tfrac12\mathop{\mathrm{tr}}(Nh^2)$ exactly, checked to $10^{-16}$), so dropping it gives precisely $\lambda\le\mu$, overshooting $\theta_0(n)$ by $\tfrac1{n-1}$, never closing at any $n$. At padded $\mathbb{CP}^2$ it gives $\sqrt{8/3}$ against a target of $\sqrt{3/2}$, and both $\tfrac12\mathop{\mathrm{tr}}(Nh^2)=\tfrac12\lambda_{\max}(N)=\tfrac12$, so the second inequality is free and all the loss is the commutator. **The commutator mass is load-bearing at both equality families, and "the route rests on the $\#$ term alone" is the step that kills it.**
 
-A fourth remark for whoever attacks the three terms: at padded $\mathbb{CP}^2$ the split is $\tfrac14\sum\lVert[u,h]\rVert^2=+\tfrac13$, $\sum\operatorname{tr}((C^{pq}h)^2)=-\tfrac16$, $-\tfrac12\operatorname{tr}(Nh^2)=-\tfrac12$. **The middle term is negative**, so no term-by-term positivity argument is available; the two negative terms must be beaten by the commutator mass alone.
+A fourth remark for whoever attacks the three terms: at padded $\mathbb{CP}^2$ the split is $\tfrac14\sum\lVert[u,h]\rVert^2=+\tfrac13$, $\sum\mathop{\mathrm{tr}}((C^{pq}h)^2)=-\tfrac16$, $-\tfrac12\mathop{\mathrm{tr}}(Nh^2)=-\tfrac12$. **The middle term is negative**, so no term-by-term positivity argument is available; the two negative terms must be beaten by the commutator mass alone.
 
 ## What the chain does not mention
 
 - $Q$ maps $\mathcal W_n$ to $\mathcal W_n$ (Bianchi *and* Ricci-flat), which is what makes step 1's unprojected equation legitimate. The chain asserts linearity, which is the easy half.
 - $\mathrm{LOSS}=\nu(\nu+\lambda)$ over the whole spectrum, and $\sum_\alpha\mathrm{LOSS}=\lVert\mathring W\rVert_F^2$, a free consistency check on any future implementation, and the statement that fixes how much the reformulation buys.
 - The criticality-free version $\langle(Q(W))^{\!\circ}h,h\rangle=\mathrm{LOSS}-\lVert\mathring Wh\rVert^2$, valid for arbitrary $h\in S^2_0$.
-- $\mu>0$, needed for step 6's division, and free from $\operatorname{tr}\mathring W|_{S^2_0}=0$.
+- $\mu>0$, needed for step 6's division, and free from $\mathop{\mathrm{tr}}\mathring W|_{S^2_0}=0$.
 - The brief states step 6 as the single inequality $\mathrm{LOSS}\ge\mu^2/n$. The record states the **disjunction** $\mathrm{CD}_n$. Read as the brief writes it, step 6's conclusion $\lambda\le\tfrac{n-1}n\mu$ is **false**, padded $\mathbb{CP}^2$ has $\lambda=1.224745$ against $\tfrac{n-1}n\mu<\mu=0.816497$ at every $n$ ($0.612$ at $n=4$, $0.714$ at $n=8$), i.e. $\lambda=\tfrac32\mu$ there. Any brief handed to a reviewer must carry the $\max$.
 - The Newton scan reproduces the record's own warning at [findings/target.md](../findings/target.md): $250$–$300$ random starts reach a maximum of $0.828$ at $n=5$ and $0.572$ at $n=6$, never $\mathbb{CP}^m$ or the products. Random-start solving is evidence of nothing here, in either direction, including of my own failure to find a $\mathrm{CD}_n$ counterexample.
 

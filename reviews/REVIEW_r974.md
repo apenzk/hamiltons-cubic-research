@@ -13,7 +13,7 @@ Reviewer **r974**, working from [BRIEF_L230_singular_locus.md](BRIEF_L230_singul
 | 3 | image dimension $\le(k-1)^2-k$, hence non-injective at every $k\ge3$ | mathematics | **REFUTED**. The bound is right and tight, the quantifier is wrong: the inequality holds at $k=3,4$ and fails at every $k\ge5$, where the conclusion is false outright |
 | 4 | at $k=3$ no zero-diagonal orthogonal matrix has all off-diagonal entries nonzero | mathematics | **CONFIRMED**, and stronger than stated |
 | 5 | the $4\times4$ $M$ satisfies $MM^{\mathsf T}=3I$, zero diagonal, all else nonzero | mathematics | **CONFIRMED** by hand |
-| 6 | $\Omega=\operatorname{diag}(-1,1,1,1)M$ is skew, nonzero, and kills the differential | mathematics | **CONFIRMED** by hand, kernel exactly one-dimensional, rank exactly $5$ |
+| 6 | $\Omega=\mathop{\mathrm{diag}}(-1,1,1,1)M$ is skew, nonzero, and kills the differential | mathematics | **CONFIRMED** by hand, kernel exactly one-dimensional, rank exactly $5$ |
 | 7 | the witness does not split | mathematics | **CONFIRMED**, by a direct argument. The block's stated route needs the BIPARTITE support graph, which is the reading the block does not name |
 | 8 | "singular implies splits" false at $k=4$, and R28's boundary-to-split step fails from $\lvert J\rvert=4$ | about a route | **PLAUSIBLE**. The $k=4$ half is true and is already contained in the block's own given. The route half needs a reading of R28's dichotomy the block does not state, and "from $\lvert J\rvert=4$" is established AT $\lvert J\rvert=4$ and nowhere above it |
 
@@ -37,7 +37,7 @@ This is the load-bearing step, and it splits into a bound that is correct and a 
 
 ### The bound is correct and tight
 
-The brief asks whether the $k$ zero-diagonal conditions are independent of the row-sum and column-sum conditions and of each other. **They are, at every $k\ge3$.** Let $V=\{A:\text{all row sums }0,\text{ all column sums }0\}$, of dimension $(k-1)^2$. A dependency among the restrictions $\ell_i(A)=A_{ii}$ to $V$ is a nonzero $\lambda$ with $\sum_i\lambda_i\ell_i$ in the span of the row and column functionals, that is, a matrix identity $\operatorname{diag}(\lambda)=(a_i+b_j)_{ij}$ under the trace pairing. Off the diagonal this forces $a_i+b_j=0$ for all $i\ne j$. For $k\ge3$, given any $i$ there are two distinct $j,l\ne i$, so $b_j=b_l=-a_i$, and varying $i$ makes every $b_j$ equal to a single $b$ and every $a_i$ equal to $-b$. Then $\lambda_i=a_i+b_i=0$. Hence the $k$ functionals are independent on $V$ and
+The brief asks whether the $k$ zero-diagonal conditions are independent of the row-sum and column-sum conditions and of each other. **They are, at every $k\ge3$.** Let $V=\{A:\text{all row sums }0,\text{ all column sums }0\}$, of dimension $(k-1)^2$. A dependency among the restrictions $\ell_i(A)=A_{ii}$ to $V$ is a nonzero $\lambda$ with $\sum_i\lambda_i\ell_i$ in the span of the row and column functionals, that is, a matrix identity $\mathop{\mathrm{diag}}(\lambda)=(a_i+b_j)_{ij}$ under the trace pairing. Off the diagonal this forces $a_i+b_j=0$ for all $i\ne j$. For $k\ge3$, given any $i$ there are two distinct $j,l\ne i$, so $b_j=b_l=-a_i$, and varying $i$ makes every $b_j$ equal to a single $b$ and every $a_i$ equal to $-b$. Then $\lambda_i=a_i+b_i=0$. Hence the $k$ functionals are independent on $V$ and
 
 $$\dim\{A\in V:A_{ii}=0\ \forall i\}=(k-1)^2-k\qquad(k\ge3).$$
 
@@ -74,7 +74,7 @@ $$\tfrac1N\,(0,\;1,\;-\tfrac{1+\sqrt3}2,\;1,\;1+\sqrt3),\qquad N^2=7+\tfrac52\sq
 
 Orthogonality of a circulant is the vanishing of the autocorrelations, which for a first row $(0,p,q,r,s)$ read $pq+qr+rs=0$ and $pr+qs+sp=0$. With $p=r=1$ and $q=-s/2$ the first is identically zero and the second is $1+s-\tfrac{s^2}2=0$, that is $s^2-2s-2=0$, solved by $s=1+\sqrt3$. The diagonal is zero by $c_0=0$ and every other entry is nonzero.
 
-**It is a regular point.** For a circulant, $Q_{i,i+1}=c_1=1$ and $Q_{i+1,i}=c_4=s$, so the pair equation on consecutive indices is $d_i+s\,d_{i+1}=0$, hence $d_{i+1}=-d_i/s$ around the whole $5$-cycle. Five steps return to the start and give $d_i=(-1/s)^5d_i=-d_i/s^5$, and $s>0$ makes $1+s^{-5}\ne0$, so $d=0$. **The kernel is trivial and $d\varphi_r$ is injective at $Q$.** Confirmed symbolically in sympy: $QQ^{\mathsf T}=I$ exactly, zero diagonal, all off-diagonal entries nonzero, pair-system rank $5$ of $5$, and $\operatorname{rank}d\varphi_r=10=\dim O(5)$.
+**It is a regular point.** For a circulant, $Q_{i,i+1}=c_1=1$ and $Q_{i+1,i}=c_4=s$, so the pair equation on consecutive indices is $d_i+s\,d_{i+1}=0$, hence $d_{i+1}=-d_i/s$ around the whole $5$-cycle. Five steps return to the start and give $d_i=(-1/s)^5d_i=-d_i/s^5$, and $s>0$ makes $1+s^{-5}\ne0$, so $d=0$. **The kernel is trivial and $d\varphi_r$ is injective at $Q$.** Confirmed symbolically in sympy: $QQ^{\mathsf T}=I$ exactly, zero diagonal, all off-diagonal entries nonzero, pair-system rank $5$ of $5$, and $\mathop{\mathrm{rank}}d\varphi_r=10=\dim O(5)$.
 
 Consistency note, not part of the proof: this $Q$ has all off-diagonal entries nonzero, so it does not split, and Theorem 2.2 is respected rather than contradicted.
 
@@ -100,11 +100,11 @@ The brief asks whether orthogonality of the whole matrix is needed. **It is not.
 
 **CONFIRMED by hand, and the kernel is exactly one-dimensional.**
 
-$\Omega=\operatorname{diag}(-1,1,1,1)M$ has rows $(0,-1,-1,-1)$, $(1,0,-1,1)$, $(1,1,0,-1)$, $(1,-1,1,0)$. Checking the six pairs: $(\Omega_{12},\Omega_{21})=(-1,1)$, $(\Omega_{13},\Omega_{31})=(-1,1)$, $(\Omega_{14},\Omega_{41})=(-1,1)$, $(\Omega_{23},\Omega_{32})=(-1,1)$, $(\Omega_{24},\Omega_{42})=(1,-1)$, $(\Omega_{34},\Omega_{43})=(-1,1)$. Skew, with a zero diagonal, and manifestly nonzero. Computing $M\Omega$ column by column gives $\operatorname{diag}(3,-3,-3,-3)$, so $M\circ(M\Omega)=0$ because $M$ has zero diagonal and $M\Omega$ has nothing off it. The witness is singular.
+$\Omega=\mathop{\mathrm{diag}}(-1,1,1,1)M$ has rows $(0,-1,-1,-1)$, $(1,0,-1,1)$, $(1,1,0,-1)$, $(1,-1,1,0)$. Checking the six pairs: $(\Omega_{12},\Omega_{21})=(-1,1)$, $(\Omega_{13},\Omega_{31})=(-1,1)$, $(\Omega_{14},\Omega_{41})=(-1,1)$, $(\Omega_{23},\Omega_{32})=(-1,1)$, $(\Omega_{24},\Omega_{42})=(1,-1)$, $(\Omega_{34},\Omega_{43})=(-1,1)$. Skew, with a zero diagonal, and manifestly nonzero. Computing $M\Omega$ column by column gives $\mathop{\mathrm{diag}}(3,-3,-3,-3)$, so $M\circ(M\Omega)=0$ because $M$ has zero diagonal and $M\Omega$ has nothing off it. The witness is singular.
 
-**Is the derivation valid, or one solution among many?** It is valid and the solution is unique up to scale. Via the pair system of claim 3, the three equations from $i=1$ read $d_1+d_2=0$, $d_1+d_3=0$, $d_1+d_4=0$, which already pin $d=d_1(1,-1,-1,-1)$, and the remaining three, $-d_2+d_3=0$, $d_2-d_4=0$, $-d_3+d_4=0$, are then satisfied. So the kernel is exactly one-dimensional and $\operatorname{rank}d\varphi_r=6-1=5$, which is the block's number and also the claim-3 bound, so the bound is attained.
+**Is the derivation valid, or one solution among many?** It is valid and the solution is unique up to scale. Via the pair system of claim 3, the three equations from $i=1$ read $d_1+d_2=0$, $d_1+d_3=0$, $d_1+d_4=0$, which already pin $d=d_1(1,-1,-1,-1)$, and the remaining three, $-d_2+d_3=0$, $d_2-d_4=0$, $-d_3+d_4=0$, are then satisfied. So the kernel is exactly one-dimensional and $\mathop{\mathrm{rank}}d\varphi_r=6-1=5$, which is the block's number and also the claim-3 bound, so the bound is attained.
 
-**One correction of phrasing.** The block says skewness "pins $D=3\operatorname{diag}(1,-1,-1,-1)$". Skewness pins $D$ only up to a scalar, the kernel being a line. The factor $3$ is a normalisation that makes $\Omega$ integral, not a consequence. This is harmless, but "pins" should read "pins up to scale", and stating the kernel dimension is worth more than the particular representative.
+**One correction of phrasing.** The block says skewness "pins $D=3\mathop{\mathrm{diag}}(1,-1,-1,-1)$". Skewness pins $D$ only up to a scalar, the kernel being a line. The factor $3$ is a normalisation that makes $\Omega$ integral, not a consequence. This is harmless, but "pins" should read "pins up to scale", and stating the kernel dimension is worth more than the particular representative.
 
 ## Claim 7, non-splitting
 
@@ -151,6 +151,6 @@ Even granting the reading, **"fails from $\lvert J\rvert=4$" is established AT $
 All of it on objects constructed for the purpose, seconds each, under the screening allowance.
 
 - An exact rank count of the row-sum, column-sum and diagonal functionals at $k=2,\dots,7$, confirming the independence proved by hand.
-- Symbolic verification in sympy of the $k=5$ circulant: orthogonality, zero diagonal, all off-diagonal entries nonzero, pair-system rank $5$, and $\operatorname{rank}d\varphi_r=10$. This is exact, so it is cited as proof rather than as a screen.
+- Symbolic verification in sympy of the $k=5$ circulant: orthogonality, zero diagonal, all off-diagonal entries nonzero, pair-system rank $5$, and $\mathop{\mathrm{rank}}d\varphi_r=10$. This is exact, so it is cited as proof rather than as a screen.
 - Numerical verification of the $k=4$ witness, its kernel dimension and its rank $5$, all of which were also done by hand above.
 - A least-squares screen at $k=5,6,7$, $400$ starts each, reported in claim 3 as a screen only.

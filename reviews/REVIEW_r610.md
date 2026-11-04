@@ -14,7 +14,7 @@ The block quotes nothing, so every convention it needs had to be pinned from out
 
 | object | what the block needs | where it is pinned | verdict |
 | --- | --- | --- | --- |
-| inner product | $\langle X,Y\rangle=\tfrac12\operatorname{tr}(X^{\mathsf T}Y)$, so $\{\varphi_{ab}\}_{a<b}$ orthonormal | [conventions.md](../findings/conventions.md), "Norms and pairings" | ✓ |
+| inner product | $\langle X,Y\rangle=\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$, so $\{\varphi_{ab}\}_{a<b}$ orthonormal | [conventions.md](../findings/conventions.md), "Norms and pairings" | ✓ |
 | $c_{\alpha\beta\gamma}=\langle[v_\alpha,v_\beta],v_\gamma\rangle$ | **totally** antisymmetric; $T_{\alpha\beta\gamma}=c^2$ totally symmetric, zero on repeated indices | [conventions.md](../findings/conventions.md), "Structure constants" | ✓ |
 | row marginal $2(n-2)$ | $\sum_\beta\lVert[v_\alpha,v_\beta]\rVert^2=2(n-2)$ | [conventions.md](../findings/conventions.md), "The pair cap and the Killing marginal" | ✓, see below |
 | $\mathfrak m$ | **L36's sense**: an isotropic subspace of $\mathfrak{so}(n)$, the negative eigenspace at an $S=0$ point | [conventions.md](../findings/conventions.md) tables three senses and names this one | ✓ |
@@ -24,11 +24,11 @@ The block quotes nothing, so every convention it needs had to be pinned from out
 
 ### The row marginal is the Killing-form fact, not a coincidence
 
-Asked for by the brief, and it checks. $\operatorname{ad}$ is skew for an ad-invariant inner product, so for unit $v$
+Asked for by the brief, and it checks. $\mathop{\mathrm{ad}}$ is skew for an ad-invariant inner product, so for unit $v$
 
-$$\sum_\beta\lVert[v,v_\beta]\rVert^2=\operatorname{tr}\!\big(\operatorname{ad}(v)^{\mathsf T}\operatorname{ad}(v)\big)=-\operatorname{tr}\operatorname{ad}(v)^2=-B(v,v),$$
+$$\sum_\beta\lVert[v,v_\beta]\rVert^2=\mathop{\mathrm{tr}}\!\big(\mathop{\mathrm{ad}}(v)^{\mathsf T}\mathop{\mathrm{ad}}(v)\big)=-\mathop{\mathrm{tr}}\mathop{\mathrm{ad}}(v)^2=-B(v,v),$$
 
-and [conventions.md](../findings/conventions.md) fixes $B(X,Y)=(n-2)\operatorname{tr}(XY)$ with $\operatorname{tr}(v^2)=-2$ for a unit bivector, giving $-B(v,v)=2(n-2)$. **Same constant, same fact.** Hand-check at $n=3$: $[\varphi_{12},\varphi_{13}]=-\varphi_{23}$ and $[\varphi_{12},\varphi_{23}]=\varphi_{13}$, each of norm $1$, total $2=2(n-2)$. ✓
+and [conventions.md](../findings/conventions.md) fixes $B(X,Y)=(n-2)\mathop{\mathrm{tr}}(XY)$ with $\mathop{\mathrm{tr}}(v^2)=-2$ for a unit bivector, giving $-B(v,v)=2(n-2)$. **Same constant, same fact.** Hand-check at $n=3$: $[\varphi_{12},\varphi_{13}]=-\varphi_{23}$ and $[\varphi_{12},\varphi_{23}]=\varphi_{13}$, each of norm $1$, total $2=2(n-2)$. ✓
 
 ---
 
@@ -60,7 +60,7 @@ This is the block's identity, and the derivation reproduces its two intermediate
 
 ## 3, REFUTED as stated: the witness
 
-Take $n=4$, $\mathfrak m=\mathfrak{so}(3)=\operatorname{span}(\varphi_{12},\varphi_{13},\varphi_{23})$, $d=3$, $\mathfrak h=\mathfrak m^\perp=\operatorname{span}(\varphi_{14},\varphi_{24},\varphi_{34})$. Everything is a two-line hand computation.
+Take $n=4$, $\mathfrak m=\mathfrak{so}(3)=\mathop{\mathrm{span}}(\varphi_{12},\varphi_{13},\varphi_{23})$, $d=3$, $\mathfrak h=\mathfrak m^\perp=\mathop{\mathrm{span}}(\varphi_{14},\varphi_{24},\varphi_{34})$. Everything is a two-line hand computation.
 
 | quantity | value | how |
 | --- | --- | --- |
@@ -141,9 +141,9 @@ The rigidity-chain paragraph at line 124 reads *"the cap forces $S_{\mathfrak{mh
 
 The brief asks whether the third bracket relation is free. **It is neither free nor an extra assumption: it is the same condition as the first**, and total antisymmetry is why.
 
-Let $\sigma=\operatorname{id}_{\mathfrak h}\oplus(-\operatorname{id}_{\mathfrak m})$. Since $\sigma$ is orthogonal, $\sigma$ is a Lie-algebra automorphism iff $c_{\sigma\alpha,\sigma\beta,\sigma\gamma}=c_{\alpha\beta\gamma}$, and $\sigma$ multiplies $c_{\alpha\beta\gamma}$ by $(-1)^{\#\{\text{indices in }\mathfrak m\}}$. Of the four index types only $\mathfrak{mmm}$ and $\mathfrak{mhh}$ have an odd count, so
+Let $\sigma=\mathop{\mathrm{id}}_{\mathfrak h}\oplus(-\mathop{\mathrm{id}}_{\mathfrak m})$. Since $\sigma$ is orthogonal, $\sigma$ is a Lie-algebra automorphism iff $c_{\sigma\alpha,\sigma\beta,\sigma\gamma}=c_{\alpha\beta\gamma}$, and $\sigma$ multiplies $c_{\alpha\beta\gamma}$ by $(-1)^{\#\{\text{indices in }\mathfrak m\}}$. Of the four index types only $\mathfrak{mmm}$ and $\mathfrak{mhh}$ have an odd count, so
 
-$$\sigma\in\operatorname{Aut}(\mathfrak{so}(n))\iff S_{\mathfrak{mmm}}=S_{\mathfrak{mhh}}=0,$$
+$$\sigma\in\mathop{\mathrm{Aut}}(\mathfrak{so}(n))\iff S_{\mathfrak{mmm}}=S_{\mathfrak{mhh}}=0,$$
 
 **two scalar conditions, not three.** Concretely $[\mathfrak h,\mathfrak m]\subseteq\mathfrak m$ says $\langle[f_i,e_a],f_j\rangle=0$, and $c_{iaj}=-c_{aij}$ is the *same structure constant* that $[\mathfrak h,\mathfrak h]\subseteq\mathfrak h$ kills. The equivalence runs both ways, so **"exactly" is earned**, the one place in this block where a hedging clause survives the check. The block never gives the reason, and a reader who counts three conditions against two masses will stall exactly where the brief did; **one sentence of repair is owed.**
 
@@ -157,13 +157,13 @@ Two things are missing, and the second is the one the brief flags.
 
 **(a) The list has a second family, and the block never eliminates it.** Cartan's involutions of $\mathfrak{so}(n)$ are BDI, $\mathfrak h=\mathfrak{so}(p)\oplus\mathfrak{so}(q)$ with $\dim\mathfrak m=pq$, **and DIII**, $\mathfrak h=\mathfrak u(n/2)$ with $\dim\mathfrak m=\binom n2-\tfrac{n^2}4=\tfrac{n^2-2n}4<\tfrac{n^2}4$. So DIII never reaches the cap, and among BDI, $pq\le n^2/4$ with equality only at $p=q$. **The balanced split does follow, by a dimension count the block does not perform.** The record carries the full list at [bounds-relaxations.md:174](../findings/bounds-relaxations.md) and at [trap W2](../findings/INDEX-traps.md); L77 cites neither.
 
-**(b) $\operatorname{Aut}(\mathfrak g)$ against $SO(n)$-conjugacy.** The chain **does** consume $SO(n)$-conjugacy: the downstream claim is that $W$ is the balanced sphere product, which is a statement about a frame of $\mathbb R^n$, not about an abstract involution. Cartan supplies conjugacy under $\operatorname{Aut}(\mathfrak g)$ only, and [conventions.md](../findings/conventions.md) records that these differ at $n=8$ by triality. **The bridge is missing from the block. It closes as follows, $n=8$ included:**
+**(b) $\mathop{\mathrm{Aut}}(\mathfrak g)$ against $SO(n)$-conjugacy.** The chain **does** consume $SO(n)$-conjugacy: the downstream claim is that $W$ is the balanced sphere product, which is a statement about a frame of $\mathbb R^n$, not about an abstract involution. Cartan supplies conjugacy under $\mathop{\mathrm{Aut}}(\mathfrak g)$ only, and [conventions.md](../findings/conventions.md) records that these differ at $n=8$ by triality. **The bridge is missing from the block. It closes as follows, $n=8$ included:**
 
 1. Let $\mathfrak m$ be isotropic with $\dim\mathfrak m=n^2/4$ and $\gamma=0$, and $\sigma$ its involution.
-2. $\operatorname{Aut}$-conjugacy to $\sigma_{n/2,n/2}$ follows from the list, since $\dim\mathfrak m$ is an $\operatorname{Aut}$-invariant and $n^2/4$ occurs once on it. At $n=8$ the triality extras, $\mathfrak{spin}(7)$ and $\mathfrak{sp}(1)\oplus\mathfrak{sp}(2)$, dimensions $21$ and $13$ by [trap W2](../findings/INDEX-traps.md), give $\dim\mathfrak m=7$ and $15$, **neither equal to $16$**, so the cap dimension is a singleton triality orbit.
-3. $\operatorname{Inn}$ is normal in $\operatorname{Aut}$, and $\sigma_{n/2,n/2}=\operatorname{Ad}(\operatorname{diag}(I_{n/2},-I_{n/2}))$ is inner whenever $n/2$ is even; in general $\sigma$ lies in $\operatorname{Ad}(O(n))$, and conjugating by an outer automorphism keeps it there. So $\sigma=\operatorname{Ad}(g)$, $g\in O(n)$, $g^2=\pm I$.
-4. $g^2=-I$ is DIII, excluded at step (a) by dimension. $g^2=I$ gives $g\sim\operatorname{diag}(I_p,-I_q)$ and $\dim\mathfrak m=pq=n^2/4$ forces $p=q$.
-5. $O(n)$-conjugacy upgrades to $SO(n)$: $\operatorname{diag}(r,I_{n/2})$ with $r\in O(n/2)$, $\det r=-1$, preserves the standard split and has determinant $-1$ in $O(n)$.
+2. $\mathop{\mathrm{Aut}}$-conjugacy to $\sigma_{n/2,n/2}$ follows from the list, since $\dim\mathfrak m$ is an $\mathop{\mathrm{Aut}}$-invariant and $n^2/4$ occurs once on it. At $n=8$ the triality extras, $\mathfrak{spin}(7)$ and $\mathfrak{sp}(1)\oplus\mathfrak{sp}(2)$, dimensions $21$ and $13$ by [trap W2](../findings/INDEX-traps.md), give $\dim\mathfrak m=7$ and $15$, **neither equal to $16$**, so the cap dimension is a singleton triality orbit.
+3. $\mathop{\mathrm{Inn}}$ is normal in $\mathop{\mathrm{Aut}}$, and $\sigma_{n/2,n/2}=\mathop{\mathrm{Ad}}(\mathop{\mathrm{diag}}(I_{n/2},-I_{n/2}))$ is inner whenever $n/2$ is even; in general $\sigma$ lies in $\mathop{\mathrm{Ad}}(O(n))$, and conjugating by an outer automorphism keeps it there. So $\sigma=\mathop{\mathrm{Ad}}(g)$, $g\in O(n)$, $g^2=\pm I$.
+4. $g^2=-I$ is DIII, excluded at step (a) by dimension. $g^2=I$ gives $g\sim\mathop{\mathrm{diag}}(I_p,-I_q)$ and $\dim\mathfrak m=pq=n^2/4$ forces $p=q$.
+5. $O(n)$-conjugacy upgrades to $SO(n)$: $\mathop{\mathrm{diag}}(r,I_{n/2})$ with $r\in O(n/2)$, $\det r=-1$, preserves the standard split and has determinant $-1$ in $O(n)$.
 
 **So $n=8$ is not affected**, and the chain is sound, but as written it asserts across a gap the record itself has flagged as a place it has already paid once.
 
@@ -173,9 +173,9 @@ Two things are missing, and the second is the one the brief flags.
 
 The table is presented as a decomposition performed at four values of $n$, of which **exactly one is even**. I rebuilt it in closed form without computation.
 
-Let $P$ be the orthogonal projection onto $\mathfrak m$ and $P_0=P-\tfrac dN\operatorname{Id}$, decomposed over $\mathbb R\oplus\operatorname{Sym}^2_0\oplus\mathrm{Weyl}_n\oplus\Lambda^4$ with component norms $s,w,\ell$.
+Let $P$ be the orthogonal projection onto $\mathfrak m$ and $P_0=P-\tfrac dN\mathop{\mathrm{Id}}$, decomposed over $\mathbb R\oplus\mathop{\mathrm{Sym}}^2_0\oplus\mathrm{Weyl}_n\oplus\Lambda^4$ with component norms $s,w,\ell$.
 
-**Column 3.** $\operatorname{tr}P^2=\operatorname{tr}P=d$, so $\lVert P_0\rVert^2=d-d^2/N$. At the four rows: $6-3.6=2.4$; $9-5.4=3.6$; $12-\tfrac{144}{21}=5.1429$; $20-\tfrac{400}{36}=8.8889$. **All four reproduce exactly.**
+**Column 3.** $\mathop{\mathrm{tr}}P^2=\mathop{\mathrm{tr}}P=d$, so $\lVert P_0\rVert^2=d-d^2/N$. At the four rows: $6-3.6=2.4$; $9-5.4=3.6$; $12-\tfrac{144}{21}=5.1429$; $20-\tfrac{400}{36}=8.8889$. **All four reproduce exactly.**
 
 **Columns 4–6.** With $\mu=\langle T(P),P\rangle$ and $T$'s spectrum $2n-4,\ n-4,\ -2,\ 4$, eliminating $w$ gives the **exact** identity
 
@@ -185,13 +185,13 @@ which is Lemma L2 **plus its slack in closed form**, and confirms the block's cl
 
 $$\boxed{\ \gamma=\frac{2d(n^2-4d)}{n}-2(n-2)\lVert P_s\rVert^2-12\lVert P_\lambda\rVert^2\ }$$
 
-At a symmetric pair $\gamma=0$ and $\ell=0$ (the projection is diagonal in the $\varphi$ basis, so $\operatorname{Alt}(P)=0$ termwise), giving
+At a symmetric pair $\gamma=0$ and $\ell=0$ (the projection is diagonal in the $\varphi$ basis, so $\mathop{\mathrm{Alt}}(P)=0$ termwise), giving
 
 $$\lVert P_s\rVert^2=\frac{d(n^2-4d)}{n(n-2)}:\qquad \tfrac{6}{15}=0.4,\quad 0,\quad \tfrac{12}{35}=0.342857,\quad \tfrac{20}{63}=0.31746 .$$
 
 **All four match the table to the digit**, and the $\mathrm{Weyl}$ column follows by subtraction ($2.0$, $3.6$, $4.8$, $8.5714$). **The table is a closed form, not a measurement.**
 
-**Is "at even $n$" supported by the table, derivable, or an extrapolation from $n=6$?** It is **derivable, in one line, and the record's warrant for it is the single row $n=6$.** The direct reason: $P$ is diagonal in the $\varphi$ basis with $K_{ij}=1$ on mixed pairs, so its Ricci is $\operatorname{diag}(r_i)$ with $r_i$ the row sums, $q$ on the $p$-block and $p$ on the $q$-block. **The traceless Ricci vanishes iff $p=q$**, which is available only at even $n$. So the claim is true at every even $n$; the block asserts it from one data point and gives no reason. *Per the brief's instruction, the label is the finding: the statement is sound, its stated warrant is not.*
+**Is "at even $n$" supported by the table, derivable, or an extrapolation from $n=6$?** It is **derivable, in one line, and the record's warrant for it is the single row $n=6$.** The direct reason: $P$ is diagonal in the $\varphi$ basis with $K_{ij}=1$ on mixed pairs, so its Ricci is $\mathop{\mathrm{diag}}(r_i)$ with $r_i$ the row sums, $q$ on the $p$-block and $p$ on the $q$-block. **The traceless Ricci vanishes iff $p=q$**, which is available only at even $n$. So the claim is true at every even $n$; the block asserts it from one data point and gives no reason. *Per the brief's instruction, the label is the finding: the statement is sound, its stated warrant is not.*
 
 ---
 
@@ -232,7 +232,7 @@ The exact identity of §7 converts the debt into a single equality. At $n$ odd, 
 
 $$\gamma=0\iff (n-2)\lVert P_s\rVert^2+6\lVert P_\lambda\rVert^2=\frac{n^2-1}{4n},$$
 
-with $\gamma\ge0$ giving the inequality $\le$ for free. **So the debt is not to bound the $\operatorname{Sym}^2_0$ component but to force it to a prescribed exact value**, every isotropic subspace at the odd cap must carry precisely the $\operatorname{Sym}^2_0$ mass the symmetric pair carries, $\lVert P_s\rVert^2=\frac{n^2-1}{4n(n-2)}$ when $\ell=0$.
+with $\gamma\ge0$ giving the inequality $\le$ for free. **So the debt is not to bound the $\mathop{\mathrm{Sym}}^2_0$ component but to force it to a prescribed exact value**, every isotropic subspace at the odd cap must carry precisely the $\mathop{\mathrm{Sym}}^2_0$ mass the symmetric pair carries, $\lVert P_s\rVert^2=\frac{n^2-1}{4n(n-2)}$ when $\ell=0$.
 
 **Is it reachable?** The equality form is a rigidity statement of the same shape as the even-$n$ one, and it is strictly harder: at even $n$ the inequality alone closes it, while at odd $n$ an *equality* must be forced from a strict inequality, which needs an ingredient the $T$-spectrum does not carry. **The honest reading is that the debt is open and no argument in the block reduces it.** *A computation that would decide the shape of the answer, and which I do not have approval to run:* a census of $\lVert P_s\rVert^2$ and $\lVert P_\lambda\rVert^2$ over isotropic subspaces at $d=(n^2-1)/4$ for $n=5,7$. **Finding the pair spread over a range would refute the equality and so refute odd-$n$ rigidity outright; finding it pinned to a point would say the debt is a rigidity theorem awaiting a proof rather than a false claim.** As things stand the block's ten samples are consistent with the second and cannot distinguish it from the first, since it does not report the two components.
 
@@ -249,7 +249,7 @@ with $\gamma\ge0$ giving the inequality $\le$ for free. **So the debt is not to 
 | $\gamma\le2d(n^2-4d)/n$, vanishing at $d=n^2/4$ | **CONFIRMED**, both parities |
 | odd allowance $(n^2-1)/(2n)$ | **CONFIRMED for $\gamma$**; the block attaches it to $S_{\mathfrak{mhh}}$, which is half that (D1) |
 | "exactly a $\mathbb Z_2$-grading" | **CONFIRMED**, both directions; the reason (total antisymmetry collapsing three relations to two), is absent from the block |
-| "hence Cartan's list, hence the balanced split" | **GAP**, closed here: DIII eliminated by dimension, $\operatorname{Aut}\to SO(n)$ bridged, $n=8$ unaffected |
+| "hence Cartan's list, hence the balanced split" | **GAP**, closed here: DIII eliminated by dimension, $\mathop{\mathrm{Aut}}\to SO(n)$ bridged, $n=8$ unaffected |
 | the isotypic table | **CONFIRMED and derivable in closed form**, all four rows; presented as measurement |
 | "at even $n$, entirely in $\mathrm{Weyl}_n$" | **true and derivable at every even $n$**; the record's warrant is the single row $n=6$ |
 | the odd-$n$ debt | **open**, restated as an exact equality (§9) |

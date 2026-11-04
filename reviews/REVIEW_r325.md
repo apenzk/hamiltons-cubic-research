@@ -2,7 +2,7 @@
 
 Reviewer 325, adversarial, cold brief. Everything below was recomputed from the definitions in a fresh library, [lib325.py](../scripts/reviewers/r325/lib325.py) and [lp325.py](../scripts/reviewers/r325/lp325.py); no repository script is imported and no repository number was taken on trust. [Lemma L70](../findings/bounds.md) is taken as given, per the brief, and what was built on it is what is audited.
 
-**Calibration.** The normalisation was fixed independently, by requiring $\sum_{a,b}c_{vab}^2=2(n-2)$ for unit $v$, which forces $\Lambda^2\mathbb R^n=\mathfrak{so}(n)$ with $\varphi_{ij}=E_{ij}-E_{ji}$, $\langle X,Y\rangle=-\tfrac12\operatorname{tr}(XY)$ and the matrix commutator, and it then reproduces $\theta_0(n)$ at the balanced sphere products to $10^{-16}$ with no further tuning. Every catalogued point was rebuilt: $\mathfrak{so}(m)\oplus\mathfrak{so}(m)$, the maximal torus, $\mathrm{ad}(\mathfrak{su}(3))\subset\mathfrak{so}(8)$, padded $W_{\mathbb{CP}^2}$, $\mathbb{CP}^m$ from the Kähler curvature tensor, and the Einstein products $S^p\times S^q$. All pass the $\mathrm{Weyl}_n$ screen (Bianchi and Ricci residuals $\le9\times10^{-16}$) and all reproduce the record's $\theta$: $0.645497/0.540062/0.474342/0.428174$ at the tori, $0.836660$ at $\mathrm{ad}(\mathfrak{su}(3))$, $1.115547$ at $S^3\times S^5$, $1.228239$ at $S^5\times S^7$, $1.224745$ at padded $W_{\mathbb{CP}^2}$.
+**Calibration.** The normalisation was fixed independently, by requiring $\sum_{a,b}c_{vab}^2=2(n-2)$ for unit $v$, which forces $\Lambda^2\mathbb R^n=\mathfrak{so}(n)$ with $\varphi_{ij}=E_{ij}-E_{ji}$, $\langle X,Y\rangle=-\tfrac12\mathop{\mathrm{tr}}(XY)$ and the matrix commutator, and it then reproduces $\theta_0(n)$ at the balanced sphere products to $10^{-16}$ with no further tuning. Every catalogued point was rebuilt: $\mathfrak{so}(m)\oplus\mathfrak{so}(m)$, the maximal torus, $\mathrm{ad}(\mathfrak{su}(3))\subset\mathfrak{so}(8)$, padded $W_{\mathbb{CP}^2}$, $\mathbb{CP}^m$ from the Kähler curvature tensor, and the Einstein products $S^p\times S^q$. All pass the $\mathrm{Weyl}_n$ screen (Bianchi and Ricci residuals $\le9\times10^{-16}$) and all reproduce the record's $\theta$: $0.645497/0.540062/0.474342/0.428174$ at the tori, $0.836660$ at $\mathrm{ad}(\mathfrak{su}(3))$, $1.115547$ at $S^3\times S^5$, $1.228239$ at $S^5\times S^7$, $1.224745$ at padded $W_{\mathbb{CP}^2}$.
 
 | claim | verdict |
 | --- | --- |
@@ -128,7 +128,7 @@ Two consequences.
 | $10$ | $14190$ | $1.200000000$ | $1.200000000$ | $-0.420000000$ | $-0.420000000$ |
 | $12$ | $45760$ | $1.236033081$ | $1.236033081$ | $-0.576815438$ | $-0.576815438$ |
 
-Variable counts match, and $\binom I3$ is the right count because $T_{k\alpha\beta}=c_{k\alpha\beta}^2$ is totally symmetric and hollow, $c$ being totally antisymmetric for the ad-invariant $-\tfrac12\operatorname{tr}(XY)$.
+Variable counts match, and $\binom I3$ is the right count because $T_{k\alpha\beta}=c_{k\alpha\beta}^2$ is totally symmetric and hollow, $c$ being totally antisymmetric for the ad-invariant $-\tfrac12\mathop{\mathrm{tr}}(XY)$.
 
 ### Is the maximum exactly $\theta_0$, or merely close? **Exactly**, and here is the proof
 
@@ -156,7 +156,7 @@ The record offers the LP minima as evidence that the maximum is not a trivial pi
 
 ### The matrix identity is criticality verbatim, and the record's own self-assessment is right
 
-Polarising $\langle v,W^\#v\rangle=-\tfrac12\operatorname{tr}(\mathrm{ad}(v)W\,\mathrm{ad}(v)W)$ gives $M_{kl}=-2W^\#_{kl}$ as an identity on all symmetric operators, checked at the balanced product ($1.9\times10^{-16}$) and at a **random** symmetric operator with no Weyl or criticality structure ($4.6\times10^{-14}$). Hence in an eigenbasis of $W$,
+Polarising $\langle v,W^\#v\rangle=-\tfrac12\mathop{\mathrm{tr}}(\mathrm{ad}(v)W\,\mathrm{ad}(v)W)$ gives $M_{kl}=-2W^\#_{kl}$ as an identity on all symmetric operators, checked at the balanced product ($1.9\times10^{-16}$) and at a **random** symmetric operator with no Weyl or criticality structure ($4.6\times10^{-14}$). Hence in an eigenbasis of $W$,
 
 $$M_{kl}=2\lambda_k(\lambda_k-\theta)\delta_{kl}\iff W^\#_{kl}=(\theta\lambda_k-\lambda_k^2)\delta_{kl}\iff W^\#=\theta W-W^2\iff Q(W)=\theta W.$$
 
@@ -219,7 +219,7 @@ The last sentence is not a demotion of the rewriting: the diagonal half's $N$ pi
 
 ### Is it a valid relaxation? Yes, every constraint is proved, and the row cap is correct and sharp
 
-- **Total $\sum_{a,b}C_{ab}=2(n-2)$.** With $\langle X,Y\rangle=-\tfrac12\operatorname{tr}(XY)$ and $\operatorname{tr}(\mathrm{ad}\,x\,\mathrm{ad}\,y)=(n-2)\operatorname{tr}(xy)$, $\lVert\mathrm{ad}(v)\rVert_{HS}^2=2(n-2)$. Measured exactly at every point.
+- **Total $\sum_{a,b}C_{ab}=2(n-2)$.** With $\langle X,Y\rangle=-\tfrac12\mathop{\mathrm{tr}}(XY)$ and $\mathop{\mathrm{tr}}(\mathrm{ad}\,x\,\mathrm{ad}\,y)=(n-2)\mathop{\mathrm{tr}}(xy)$, $\lVert\mathrm{ad}(v)\rVert_{HS}^2=2(n-2)$. Measured exactly at every point.
 - **Zero diagonal.** $c_{vaa}=0$.
 - **Row cap $m_a\le2$.** For unit $v$, $\lVert v\rVert_F^2=2$, so its matrix eigenvalues $\pm ia_j$ satisfy $\sum a_j^2=1$; $\mathrm{ad}(v)$ has eigenvalues $i(\pm a_j\pm a_k)$ and $\pm ia_j$, and $\max_{j\ne k}(a_j+a_k)\le\sqrt{2(a_j^2+a_k^2)}\le\sqrt2$. So $\lVert\mathrm{ad}(v)\rVert_{op}\le\sqrt2$ and $m_a\le2$, sharp at $v=(\varphi_{12}+\varphi_{34})/\sqrt2$. **Proved and correctly applied.** The cap is attained *in situ*: the measured row maximum is exactly $2.000000$ at padded $W_{\mathbb{CP}^2}$ and $1.000000$ at the balanced products and tori, $0.920395$ at $\mathrm{ad}(\mathfrak{su}(3))$.
 - **The true $C$ is feasible at every point**, checked directly against the true bracket data, and $D(v)\ge D_{\min}\ge0$ everywhere, with $D(v)$ constant over $E_{\min}$ to $\le3\times10^{-16}$. So there is no analogue of the greedy defect: the LP value is an upper bound on $\theta$ at every row, by construction and in measurement.

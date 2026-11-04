@@ -30,7 +30,7 @@ Delete (C) and replace it with the operator-level obligation, that the identity 
 
 ## CONVENTIONS, QUOTED FROM THE BRIEF
 
-- The inner product on $\Lambda^2$ is $\tfrac12\operatorname{tr}(X^{\mathsf T}Y)$, so $\{\varphi_{ab}\}_{a<b}$ is orthonormal and $\varphi_{ab}=E_{ba}-E_{ab}$.
+- The inner product on $\Lambda^2$ is $\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$, so $\{\varphi_{ab}\}_{a<b}$ is orthonormal and $\varphi_{ab}=E_{ba}-E_{ab}$.
 - "Diagonal" means diagonal in the coordinate $2$-planes $e_i\wedge e_j$ of an orthonormal frame, and not diagonal as an operator on $\Lambda^2$.
 - A $2$-form is decomposable iff $\omega\wedge\omega=0$ iff $\omega=u\wedge v$, and its support is the plane $\langle u,v\rangle$.
 - **L180**, the statement as quoted: for $W=\sum_i\lambda_i\,\omega_i\otimes\omega_i$ a nonzero element of $\mathcal W_n$ in spectral form with the $\omega_i$ orthonormal and every $\lambda_i\ne0$, and with $A_i=-\omega_i^2=\omega_i\omega_i^{\mathsf T}$, Ricci-flatness is exactly $\sum_i\lambda_i\,\omega_i^2=0$ in $S^2(\mathbb R^n)$, equivalently $\sum_i\lambda_iA_i=0$ with every $A_i$ positive semidefinite of trace $2$. Its proof: the Ricci contraction is $\sum_bW_{abcb}=\sum_i\lambda_i\sum_b(\omega_i)_{ab}(\omega_i)_{cb}=(\sum_i\lambda_i\omega_i\omega_i^{\mathsf T})_{ac}$.
@@ -62,7 +62,7 @@ $$\omega^2=(vu^{\mathsf T}-uv^{\mathsf T})(vu^{\mathsf T}-uv^{\mathsf T})=v(u^{\
 
 using $u^{\mathsf T}v=0$ and $u^{\mathsf T}u=v^{\mathsf T}v=1$. Since $\omega^{\mathsf T}=-\omega$ this gives $\omega\omega^{\mathsf T}=-\omega^2=uu^{\mathsf T}+vv^{\mathsf T}$, which is the orthogonal projection onto $\langle u,v\rangle$ because $u,v$ are an orthonormal basis of that plane. So the algebra of (A) is right.
 
-**The normalisation is the whole content, and the trace clause is the check.** Under this convention $\lVert\omega\rVert^2=\tfrac12\operatorname{tr}(\omega^{\mathsf T}\omega)=\tfrac12\cdot2=1$, so $\omega$ is a unit $2$-form and $\operatorname{tr}(\omega\omega^{\mathsf T})=2$, matching L180's trace-$2$ clause exactly. Under the competing convention $u\wedge v=\tfrac1{\sqrt2}(vu^{\mathsf T}-uv^{\mathsf T})$ the same computation returns $\omega\omega^{\mathsf T}=\tfrac12\Pi_P$ of trace $1$, and L180's clause fails, so the identity $\sum_\alpha\lambda_\alpha\Pi_{P_\alpha}=0$ would be off by a global factor of two. That global factor is harmless for the vanishing statement, and it is fatal for any argument that reads absolute values off the diagonal, such as the row-sum reading in section 5. The block does not name the normalisation, and it should, because the record's convention is the one that works and a reader who imports the more common $1/\sqrt2$ wedge gets a projection multiple rather than a projection.
+**The normalisation is the whole content, and the trace clause is the check.** Under this convention $\lVert\omega\rVert^2=\tfrac12\mathop{\mathrm{tr}}(\omega^{\mathsf T}\omega)=\tfrac12\cdot2=1$, so $\omega$ is a unit $2$-form and $\mathop{\mathrm{tr}}(\omega\omega^{\mathsf T})=2$, matching L180's trace-$2$ clause exactly. Under the competing convention $u\wedge v=\tfrac1{\sqrt2}(vu^{\mathsf T}-uv^{\mathsf T})$ the same computation returns $\omega\omega^{\mathsf T}=\tfrac12\Pi_P$ of trace $1$, and L180's clause fails, so the identity $\sum_\alpha\lambda_\alpha\Pi_{P_\alpha}=0$ would be off by a global factor of two. That global factor is harmless for the vanishing statement, and it is fatal for any argument that reads absolute values off the diagonal, such as the row-sum reading in section 5. The block does not name the normalisation, and it should, because the record's convention is the one that works and a reader who imports the more common $1/\sqrt2$ wedge gets a projection multiple rather than a projection.
 
 **Verdict: CONFIRMED AS ALGEBRA**, with the normalisation clause owed.
 
@@ -170,9 +170,9 @@ That is (C) refuted as written, with the identity satisfied. This reproduces the
 
 ## 9. (E)'s construction, the derivation that replaces its screen, and why step four is not free
 
-**The wedge inner product, derived once.** With $u\wedge v=vu^{\mathsf T}-uv^{\mathsf T}$ and $\langle X,Y\rangle=\tfrac12\operatorname{tr}(X^{\mathsf T}Y)$,
+**The wedge inner product, derived once.** With $u\wedge v=vu^{\mathsf T}-uv^{\mathsf T}$ and $\langle X,Y\rangle=\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$,
 
-$$\langle u\wedge v,p\wedge q\rangle=\tfrac12\operatorname{tr}\big((uv^{\mathsf T}-vu^{\mathsf T})(qp^{\mathsf T}-pq^{\mathsf T})\big)=\tfrac12\big[(v\cdot q)(p\cdot u)-(v\cdot p)(q\cdot u)-(u\cdot q)(p\cdot v)+(u\cdot p)(q\cdot v)\big],$$
+$$\langle u\wedge v,p\wedge q\rangle=\tfrac12\mathop{\mathrm{tr}}\big((uv^{\mathsf T}-vu^{\mathsf T})(qp^{\mathsf T}-pq^{\mathsf T})\big)=\tfrac12\big[(v\cdot q)(p\cdot u)-(v\cdot p)(q\cdot u)-(u\cdot q)(p\cdot v)+(u\cdot p)(q\cdot v)\big],$$
 
 which is $(u\cdot p)(v\cdot q)-(u\cdot q)(v\cdot p)$. At $u=p$, $v=q$ orthonormal this is $1$, confirming section 1's unit norm.
 

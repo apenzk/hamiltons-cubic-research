@@ -70,7 +70,7 @@ The brief ([BRIEF_L59.md](BRIEF_L59.md)) was read cold. No numerical work was do
 ### 1.W Withdrawn candidates
 
 - **1.W1, the Lean docstring's "ANN is ker Cat" as a contradiction with injectivity.** (1) Lean docstring: "`ANN` is `ker Cat`", and theorem `cat_injective_of_mu_surjective` proves `Cat` injective. (2) If both `Cat` were one map, $\mathrm{ANN}=\ker\mathrm{Cat}=0$ identically. (3) In the Lean file each `Cat` is a variable bound in its own theorem: the adjoint of `muK` in the rank theorem and the adjoint of the unrestricted `mu` in the injectivity theorem. In the record the first is $\mu_K^*$, the projection of $\mathrm{Cat}_F$ onto $S$, and the second is $\mathrm{Cat}$ itself. No statement is wrong. Withdrawn, noted as a naming hazard.
-- **1.W2, the symbol $B$.** (1) Passage D: "The normalisation is $B(X,Y)=-\tfrac12\operatorname{tr}(XY)$", and Passage A: "$\langle F,\mu(B)\rangle$". (2) One file uses one letter for a form on $\mathfrak{so}(5)$ and for a tensor on $\mathrm{Sym}^3$. (3) The two sit under different headings, one near the top of the file and one under L59's, and $\mu(B)$ cannot take a form on $\mathfrak{so}(5)$. No mathematical consequence. Withdrawn.
+- **1.W2, the symbol $B$.** (1) Passage D: "The normalisation is $B(X,Y)=-\tfrac12\mathop{\mathrm{tr}}(XY)$", and Passage A: "$\langle F,\mu(B)\rangle$". (2) One file uses one letter for a form on $\mathfrak{so}(5)$ and for a tensor on $\mathrm{Sym}^3$. (3) The two sit under different headings, one near the top of the file and one under L59's, and $\mu(B)$ cannot take a form on $\mathfrak{so}(5)$. No mathematical consequence. Withdrawn.
 
 ## 2. rank(mu_K) = 14 - dim ANN: CONFIRMED AS ALGEBRA
 

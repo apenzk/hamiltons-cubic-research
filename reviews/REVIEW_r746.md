@@ -10,7 +10,7 @@
 | D | $A=\sum_j v_j\wedge f_j$ with $\{f_j\}$ orthonormal is always available and loses no generality; coincident or vanishing $v_j$ are harmless | **CONFIRMED** |
 | E | $\omega^2=-\lVert\omega\rVert^2\mathrm{Id}$ on $\Lambda^\pm$ in the stated normalisation | **REFUTED, off by a factor $2$; the truth is $\omega^2=-\tfrac12\lVert\omega\rVert^2\mathrm{Id}$** |
 | E' | every nonzero $\omega\in\Lambda^\pm$ is invertible (the use to which E is put) | **CONFIRMED, the slip is invisible to the conclusion** |
-| F | $\operatorname{im}u=\Lambda^\pm$, and the argument survives support on both summands | **CONFIRMED** |
+| F | $\mathop{\mathrm{im}}u=\Lambda^\pm$, and the argument survives support on both summands | **CONFIRMED** |
 | G | $\mathfrak{stab}(u)\cap(\mathbb R^4\otimes\mathbb R^m)=0$ (first display) | **PROVEN** |
 | H | $\mathfrak{so}(m)$ stabilises $u$ entirely | **CONFIRMED** |
 | I | $\Lambda^\mp$ commutes with $u$, contributing $3$ | **CONFIRMED** |
@@ -27,13 +27,13 @@
 
 Throughout, $n=4+m$, and $\mathbb R^n=\mathbb R^4\oplus\mathbb R^m$ with $e_1,\dots,e_4$ spanning the first summand and $f_1,\dots,f_m$ the standard orthonormal basis of the second.
 
-$\langle X,Y\rangle=\tfrac12\operatorname{tr}(X^{\mathsf T}Y)$ on skew matrices, and $x\wedge y$ is the operator $z\mapsto\langle x,z\rangle y-\langle y,z\rangle x$. In matrices, $x\wedge y=yx^{\mathsf T}-xy^{\mathsf T}$. The normalisation checks: $e_1\wedge e_2$ sends $e_1\mapsto e_2$, $e_2\mapsto-e_1$ and kills $e_3,e_4$, so $\operatorname{tr}(X^{\mathsf T}X)=2$ and $\lVert e_1\wedge e_2\rVert=1$, as the brief states.
+$\langle X,Y\rangle=\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$ on skew matrices, and $x\wedge y$ is the operator $z\mapsto\langle x,z\rangle y-\langle y,z\rangle x$. In matrices, $x\wedge y=yx^{\mathsf T}-xy^{\mathsf T}$. The normalisation checks: $e_1\wedge e_2$ sends $e_1\mapsto e_2$, $e_2\mapsto-e_1$ and kills $e_3,e_4$, so $\mathop{\mathrm{tr}}(X^{\mathsf T}X)=2$ and $\lVert e_1\wedge e_2\rVert=1$, as the brief states.
 
 **$\rho$ is the adjoint action.** For $A\in\mathfrak{so}(n)$ and $\xi=x\wedge y$, the derivation $\rho(A)\xi=Ax\wedge y+x\wedge Ay$ equals the commutator $[A,\xi]$ of skew operators. Applying $A\xi-\xi A$ to $z$ and using $\langle x,Az\rangle=-\langle Ax,z\rangle$:
 
 $$(A\xi-\xi A)z=\langle x,z\rangle Ay-\langle y,z\rangle Ax+\langle Ax,z\rangle y-\langle Ay,z\rangle x=(Ax\wedge y+x\wedge Ay)z .$$
 
-I use $\rho(A)=\operatorname{ad}_A$ freely below; it is the only place the wedge convention enters, and it enters with no sign.
+I use $\rho(A)=\mathop{\mathrm{ad}}_A$ freely below; it is the only place the wedge convention enters, and it enters with no sign.
 
 **The three blocks.** $\Lambda^2\mathbb R^n=V_2\oplus V_1\oplus V_0$ with $V_2=\Lambda^2\mathbb R^4$, $V_1=\mathbb R^4\wedge\mathbb R^m$, $V_0=\Lambda^2\mathbb R^m$; the subscript counts $\mathbb R^4$-factors. The same decomposition read on $\mathfrak{so}(n)=\Lambda^2\mathbb R^n$ is the split $\mathfrak{so}(4)\oplus(\mathbb R^4\otimes\mathbb R^m)\oplus\mathfrak{so}(m)$ of the statement; the middle summand is $V_1$, of dimension $4m$. Dimensions add: $6+4m+\binom m2=6+\tfrac{7m+m^2}2=\binom{4+m}2$.
 
@@ -53,7 +53,7 @@ I use $\rho(A)=\operatorname{ad}_A$ freely below; it is the only place the wedge
 **Present in the definitions and never used.**
 
 - **First Bianchi and Ricci-flatness of $\mathcal W_N$.** Neither is invoked at any step. They are what places $W_{\mathbb{CP}^2}$ in $\mathcal W_4$ and what forces the trace of $(2,-1,-1)$ to vanish, but the argument reads the eigenvalues off the definition rather than deriving them, so it never touches either hypothesis.
-- **Symmetry of $u$.** Unused in sections 1–5. It is used implicitly nowhere: the mixed-block argument needs only $u|_{V_1}=0$ and one invertible element of $\operatorname{im}u$.
+- **Symmetry of $u$.** Unused in sections 1–5. It is used implicitly nowhere: the mixed-block argument needs only $u|_{V_1}=0$ and one invertible element of $\mathop{\mathrm{im}}u$.
 - **The ratio $2:-1:-1$ itself.** Every step survives replacing it by any $(a,b,b)$ with $a\ne b$ and $(a,b)\ne(0,0)$, and by any $(a,b,c)$ at all for the first display, which needs only $u|_{\Lambda^\pm}\ne0$. The specific ratio is load-bearing only in that it is *not* $(a,a,a)$, which is what makes the $\Lambda^+$-contribution $1$ rather than $3$.
 
 ## 1. The one-term reduction (claims A, B)
@@ -118,29 +118,29 @@ $$\boxed{\ \omega^2=-\tfrac12\lVert\omega\rVert^2\,\mathrm{Id}\ }\qquad\text{for
 
 and the proof's $\omega^2=-\lVert\omega\rVert^2\mathrm{Id}$ is **false by a factor of $2$** in its own stated convention. The cleanest witness is the concrete one the brief asked for: $\omega=e_{12}+e_{34}$ has $\omega^2=-\mathrm{Id}$ and $\lVert\omega\rVert^2=1+1=2$, so $-\lVert\omega\rVert^2\mathrm{Id}=-2\,\mathrm{Id}\ne\omega^2$.
 
-*Screen.* I ran one exact symbolic check, $\omega=aI+bJ+cK$ built from the matrix form $x\wedge y=yx^{\mathsf T}-xy^{\mathsf T}$, with $\langle X,Y\rangle=\tfrac12\operatorname{tr}(X^{\mathsf T}Y)$, returning $\omega^2+(a^2+b^2+c^2)\mathrm{Id}=0$ and $\lVert\omega\rVert^2=2a^2+2b^2+2c^2$, and confirming $[\Lambda^+,\Lambda^-]=0$ on all nine basis pairs. This is a screen of the claim above, not its evidence; the evidence is the closed-form derivation in this section.
+*Screen.* I ran one exact symbolic check, $\omega=aI+bJ+cK$ built from the matrix form $x\wedge y=yx^{\mathsf T}-xy^{\mathsf T}$, with $\langle X,Y\rangle=\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$, returning $\omega^2+(a^2+b^2+c^2)\mathrm{Id}=0$ and $\lVert\omega\rVert^2=2a^2+2b^2+2c^2$, and confirming $[\Lambda^+,\Lambda^-]=0$ on all nine basis pairs. This is a screen of the claim above, not its evidence; the evidence is the closed-form derivation in this section.
 
-**Arguing the opposite.** The formula would be right under the *other* common normalisation, $\lVert X\rVert^2=\operatorname{tr}(X^{\mathsf T}X)$ with $\lVert e_{ab}\rVert^2=2$, no; that doubles the norm again and makes it worse. It would be right if $\Lambda^\pm$ were normalised so that a unit $\omega$ is a complex structure, i.e. if $\lVert e_{ab}\rVert=1/\sqrt2$. The brief fixes $\lVert e_{ab}\rVert=1$ explicitly, so there is no reading of the stated conventions under which the displayed identity holds. It is a genuine slip.
+**Arguing the opposite.** The formula would be right under the *other* common normalisation, $\lVert X\rVert^2=\mathop{\mathrm{tr}}(X^{\mathsf T}X)$ with $\lVert e_{ab}\rVert^2=2$, no; that doubles the norm again and makes it worse. It would be right if $\Lambda^\pm$ were normalised so that a unit $\omega$ is a complex structure, i.e. if $\lVert e_{ab}\rVert=1/\sqrt2$. The brief fixes $\lVert e_{ab}\rVert=1$ explicitly, so there is no reading of the stated conventions under which the displayed identity holds. It is a genuine slip.
 
 **Invisible to the conclusion.** What the proof extracts is that a nonzero $\omega\in\Lambda^\pm$ is invertible, and $\omega^2=-c\,\mathrm{Id}$ with $c=a^2+b^2+c^2>0$ gives $\omega^{-1}=-\omega/c$ immediately. The scalar is never used again. So claim E' stands and the mixed-block argument is unaffected; the repair is to write $-\tfrac12\lVert\omega\rVert^2$, or simply to say "$\omega^2$ is a negative multiple of the identity".
 
-Worth recording: the restriction to $\Lambda^\pm$ is essential and the proof is right to make it. A general element of $\Lambda^2\mathbb R^4$ is *not* invertible ($e_1\wedge e_2$ has $\ker=\operatorname{span}(e_3,e_4)$) so the argument genuinely needs $\operatorname{im}u$ to sit inside a self-duality summand.
+Worth recording: the restriction to $\Lambda^\pm$ is essential and the proof is right to make it. A general element of $\Lambda^2\mathbb R^4$ is *not* invertible ($e_1\wedge e_2$ has $\ker=\mathop{\mathrm{span}}(e_3,e_4)$) so the argument genuinely needs $\mathop{\mathrm{im}}u$ to sit inside a self-duality summand.
 
-## 5. $\operatorname{im}u=\Lambda^\pm$ (claim F)
+## 5. $\mathop{\mathrm{im}}u=\Lambda^\pm$ (claim F)
 
-$u|_{\Lambda^\pm}$ has eigenvalues proportional to $(2,-1,-1)$, all three nonzero, so it is an invertible endomorphism of the $3$-space $\Lambda^\pm$ and its image is that whole $3$-space. **Correct.** Note that the argument needs far less: a single nonzero element of $\operatorname{im}u$ lying inside $\Lambda^+$ or inside $\Lambda^-$.
+$u|_{\Lambda^\pm}$ has eigenvalues proportional to $(2,-1,-1)$, all three nonzero, so it is an invertible endomorphism of the $3$-space $\Lambda^\pm$ and its image is that whole $3$-space. **Correct.** Note that the argument needs far less: a single nonzero element of $\mathop{\mathrm{im}}u$ lying inside $\Lambda^+$ or inside $\Lambda^-$.
 
 **Is $W_{\mathbb{CP}^2}$ really supported on one summand?** Yes, and it is forced by the definitions the brief gives rather than assumed: the space of algebraic Weyl tensors in dimension $4$ (symmetric, first Bianchi, trace-free), is $S^2_0(\Lambda^+)\oplus S^2_0(\Lambda^-)$, and $\mathbb{CP}^2$ with its Fubini–Study metric is self-dual, so one summand vanishes; the surviving block is trace-free, consistent with $(2,-1,-1)$ summing to $0$. The definition in the brief stipulates the one-summand support directly, so nothing turns on this.
 
-**If it were supported on both** (the brief's hypothetical), the argument survives, because every element of $S^2_0(\Lambda^+)\oplus S^2_0(\Lambda^-)$ preserves the splitting $\Lambda^2\mathbb R^4=\Lambda^+\oplus\Lambda^-$. Hence $\operatorname{im}u=\operatorname{im}(u|_{\Lambda^+})\oplus\operatorname{im}(u|_{\Lambda^-})$, and if $u\ne0$ at least one of those two contains a nonzero element, which lies in a single self-duality summand and is invertible by section 4. Only the choice of witness changes. (What would *not* survive is a hypothetical $u$ whose image met $\Lambda^\pm$ only in sums $\omega^++\omega^-$; block-diagonality of Weyl tensors in dimension $4$ rules that out.)
+**If it were supported on both** (the brief's hypothetical), the argument survives, because every element of $S^2_0(\Lambda^+)\oplus S^2_0(\Lambda^-)$ preserves the splitting $\Lambda^2\mathbb R^4=\Lambda^+\oplus\Lambda^-$. Hence $\mathop{\mathrm{im}}u=\mathop{\mathrm{im}}(u|_{\Lambda^+})\oplus\mathop{\mathrm{im}}(u|_{\Lambda^-})$, and if $u\ne0$ at least one of those two contains a nonzero element, which lies in a single self-duality summand and is invertible by section 4. Only the choice of witness changes. (What would *not* survive is a hypothetical $u$ whose image met $\Lambda^\pm$ only in sums $\omega^++\omega^-$; block-diagonality of Weyl tensors in dimension $4$ rules that out.)
 
 ## 6. The three contributions (claims H, I, J)
 
 **$\mathfrak{so}(m)$ acts trivially.** For $B\in\mathfrak{so}(m)$ padded into $\mathfrak{so}(n)$, $\rho(B)$ preserves each of $V_2,V_1,V_0$ and vanishes identically on $V_2$ (both terms of $Bx\wedge y+x\wedge By$ die for $x,y\in\mathbb R^4$). On $V_2$: $\rho(B)u\xi=0$ since $u\xi\in V_2$, and $u\rho(B)\xi=u(0)=0$. On $V_1\oplus V_0$: $u$ vanishes there and $\rho(B)$ preserves it, so both terms vanish. Hence $[\rho(B),u]=0$ for every $B$, contributing $\binom m2$. **Confirmed.**
 
-**$\Lambda^\mp$ commutes with $u$.** Say $u$ is supported on $\Lambda^+$. For $A\in\Lambda^-$, $\rho(A)=\operatorname{ad}_A$ annihilates $\Lambda^+$ (commuting ideals; screened on all nine basis pairs in section 4) and preserves $\Lambda^-$, and it preserves $V_1$ and $V_0$. On $\Lambda^+$: $\rho(A)u\xi=0$ because $u\xi\in\Lambda^+$, and $u\rho(A)\xi=u(0)=0$. On $\Lambda^-$: $u\xi=0$ and $\rho(A)\xi\in\Lambda^-$ so $u\rho(A)\xi=0$. On $V_1\oplus V_0$: $u$ vanishes and $\rho(A)$ preserves. Hence all of $\Lambda^-$ stabilises, contributing $3$. **Confirmed.**
+**$\Lambda^\mp$ commutes with $u$.** Say $u$ is supported on $\Lambda^+$. For $A\in\Lambda^-$, $\rho(A)=\mathop{\mathrm{ad}}_A$ annihilates $\Lambda^+$ (commuting ideals; screened on all nine basis pairs in section 4) and preserves $\Lambda^-$, and it preserves $V_1$ and $V_0$. On $\Lambda^+$: $\rho(A)u\xi=0$ because $u\xi\in\Lambda^+$, and $u\rho(A)\xi=u(0)=0$. On $\Lambda^-$: $u\xi=0$ and $\rho(A)\xi\in\Lambda^-$ so $u\rho(A)\xi=0$. On $V_1\oplus V_0$: $u$ vanishes and $\rho(A)$ preserves. Hence all of $\Lambda^-$ stabilises, contributing $3$. **Confirmed.**
 
-**The $\Lambda^+$ contribution is $1$, and no larger.** $\operatorname{ad}:\Lambda^+\to\mathfrak{so}(\Lambda^+)$ is the adjoint representation of $\mathfrak{su}(2)\cong\mathfrak{so}(3)$ on its own $3$-dimensional underlying space, i.e. the vector representation, hence an isomorphism onto $\mathfrak{so}(3)$. So the $\Lambda^+$-part of the stabiliser is $\{X\in\mathfrak{so}(3):[X,S]=0\}$ with $S=\mathrm{diag}(2,-1,-1)$ in an eigenbasis. Splitting $\mathbb R^3=\mathbb R\oplus\mathbb R^2$ by the eigenvalues, the commutant of $S$ in $\mathfrak{gl}(3)$ is $\mathfrak{gl}(1)\oplus\mathfrak{gl}(2)$, and intersecting with $\mathfrak{so}(3)$ gives $\mathfrak{so}(1)\oplus\mathfrak{so}(2)$, of dimension $0+1=1$. **Confirmed, and it is not larger**: it would be all of $\mathfrak{so}(3)$ only for a scalar $S$, and $(2,-1,-1)$ is not scalar, which is exactly the content of the eigenvalue pattern being used. Concretely, the surviving generator is the rotation of the $(-1)$-eigenplane.
+**The $\Lambda^+$ contribution is $1$, and no larger.** $\mathop{\mathrm{ad}}:\Lambda^+\to\mathfrak{so}(\Lambda^+)$ is the adjoint representation of $\mathfrak{su}(2)\cong\mathfrak{so}(3)$ on its own $3$-dimensional underlying space, i.e. the vector representation, hence an isomorphism onto $\mathfrak{so}(3)$. So the $\Lambda^+$-part of the stabiliser is $\{X\in\mathfrak{so}(3):[X,S]=0\}$ with $S=\mathrm{diag}(2,-1,-1)$ in an eigenbasis. Splitting $\mathbb R^3=\mathbb R\oplus\mathbb R^2$ by the eigenvalues, the commutant of $S$ in $\mathfrak{gl}(3)$ is $\mathfrak{gl}(1)\oplus\mathfrak{gl}(2)$, and intersecting with $\mathfrak{so}(3)$ gives $\mathfrak{so}(1)\oplus\mathfrak{so}(2)$, of dimension $0+1=1$. **Confirmed, and it is not larger**: it would be all of $\mathfrak{so}(3)$ only for a scalar $S$, and $(2,-1,-1)$ is not scalar, which is exactly the content of the eigenvalue pattern being used. Concretely, the surviving generator is the rotation of the $(-1)$-eigenplane.
 
 **The $\mathfrak{so}(4)$-total is $3+1=4$, and this much is legitimate**, because $[\rho(A^++A^-),u]=[\rho(A^+),u]$ by the previous paragraph, so $A\in\mathfrak{so}(4)$ stabilises iff its $\Lambda^+$-part does; the stabiliser inside $\mathfrak{so}(4)$ is $\Lambda^-\oplus\mathfrak{so}(2)$, a genuine direct sum of dimension $4$.
 
@@ -196,9 +196,9 @@ Two smaller points on the same clause. First, $\mathfrak{stab}(u)=\mathfrak u(2)
 
 **The falsifier.** The first display fails exactly if there exists $A=\sum_jv_j\wedge f_j\ne0$ in the mixed block with $[\rho(A),u]=0$ on all of $\Lambda^2\mathbb R^n$. By sections 1–3 such an $A$ must in particular satisfy $(u\xi)v_j=0$ for every $\xi\in\Lambda^2\mathbb R^4$ and every $j$, that is, every $v_j$ must lie in
 
-$$\bigcap_{\omega\in\operatorname{im}u}\ker\omega .$$
+$$\bigcap_{\omega\in\mathop{\mathrm{im}}u}\ker\omega .$$
 
-**Why none exists, in closed form.** $\operatorname{im}u=\Lambda^+$ contains the invertible element $I=e_{12}+e_{34}$ (section 4: $I^2=-\mathrm{Id}$), so the intersection above is contained in $\ker I=0$. Hence every $v_j=0$ and $A=0$. There is nowhere for a falsifier to live, and the containment is strict enough that no perturbation of $u$ within its stated class creates one: any nonzero Weyl tensor in dimension $4$ has an invertible element in its image, by section 5.
+**Why none exists, in closed form.** $\mathop{\mathrm{im}}u=\Lambda^+$ contains the invertible element $I=e_{12}+e_{34}$ (section 4: $I^2=-\mathrm{Id}$), so the intersection above is contained in $\ker I=0$. Hence every $v_j=0$ and $A=0$. There is nowhere for a falsifier to live, and the containment is strict enough that no perturbation of $u$ within its stated class creates one: any nonzero Weyl tensor in dimension $4$ has an invertible element in its image, by section 5.
 
 **What I did to look.** Analysis only, per the standing rule of the brief: I characterised the falsifier as an element of a common kernel and computed that kernel in closed form. **No search, sweep, census or falsifier hunt was run**, and none is needed, the common kernel is $0$ by a one-line argument, so the falsifier set is empty by proof rather than by absence of evidence. The single machine call in this report is the screen recorded in section 4.
 

@@ -16,11 +16,11 @@
 
 **The prose still says "Gate 2 passed" while an annotation says that clause was contradicted by the index's own row.** *The brief carries both, because a self-contradicting provenance claim is the round's material rather than something to redact around.*
 
-**Three defects the annotations name and the prose does not carry.** *"At most two"* is said to be inert, the argument going through for any number of negative eigenvalues under $U:=\sum_{\lambda_\alpha<0}\operatorname{im}v_\alpha$; *"with the same norm and the same $\theta$"* is said to be asserted and never proved, **and it is the clause the lemma exists for**, since it is what lets a bound at $\dim U$ govern every $n$; and the scope is given three ways ($6,7,8$ in the block, *"below $n=9$"* thirty-four lines above, and $5,6,7,8$ in an annotation), **each with one endpoint wrong.**
+**Three defects the annotations name and the prose does not carry.** *"At most two"* is said to be inert, the argument going through for any number of negative eigenvalues under $U:=\sum_{\lambda_\alpha<0}\mathop{\mathrm{im}}v_\alpha$; *"with the same norm and the same $\theta$"* is said to be asserted and never proved, **and it is the clause the lemma exists for**, since it is what lets a bound at $\dim U$ govern every $n$; and the scope is given three ways ($6,7,8$ in the block, *"below $n=9$"* thirty-four lines above, and $5,6,7,8$ in an annotation), **each with one endpoint wrong.**
 
 ## What the verifiers are asked beyond the standing list
 
-Whether Ricci-flatness really is the identity $\sum_\alpha\lambda_\alpha v_\alpha^{\mathsf T}v_\alpha=0$ and whether the step from it to $\operatorname{im}\subseteq U$ is sound; whether *"at most two"* is used anywhere but in defining $U$; **whether the norm and $\theta$ are preserved under the padding, and by what argument**; whether the restriction to $\Lambda^2(U)$ is Ricci-flat for the reason given; and **which scope is right, endpoint by endpoint, at $n=4$ and at $n=5$.**
+Whether Ricci-flatness really is the identity $\sum_\alpha\lambda_\alpha v_\alpha^{\mathsf T}v_\alpha=0$ and whether the step from it to $\mathop{\mathrm{im}}\subseteq U$ is sound; whether *"at most two"* is used anywhere but in defining $U$; **whether the norm and $\theta$ are preserved under the padding, and by what argument**; whether the restriction to $\Lambda^2(U)$ is Ricci-flat for the reason given; and **which scope is right, endpoint by endpoint, at $n=4$ and at $n=5$.**
 
 **And the standing question**: [L34](../findings/stratum-two-negative.md) and the padding reduction below this block both consume it, say what each may cite, and whether the $\theta$-preservation clause is what they need.
 
@@ -48,7 +48,7 @@ Whether Ricci-flatness really is the identity $\sum_\alpha\lambda_\alpha v_\alph
 
 ### C3, C4 and C5, the counting hypothesis was the defect, not the abbreviation
 
-**Three verifiers confirmed the $\mathbb R^8$ witness independently**: $\mathrm{pad}_{V_1}(W_{\mathbb{CP}^2})+\mathrm{pad}_{V_2}(W_{\mathbb{CP}^2})$ lies in $\mathrm{Weyl}_8$, has one distinct negative eigenvalue of multiplicity four, satisfies *"at most two distinct"*, and has $W(e_5\wedge e_6)\ne0$ at $e_5\perp U$. **And one found the other end**: read as *"at most"*, a single negative eigenvalue leaves $U$ built partly from an undetermined kernel eigenvector, so $\dim U$ is not a function of $W$. *Both failures are of the counting form and neither touches the argument.* **The statement now hypothesises $\dim U<n$ with $U=\sum_{\lambda_\alpha<0}\operatorname{im}v_\alpha$ and counts nothing**, which is what the block's own three steps prove, restated rather than extended.
+**Three verifiers confirmed the $\mathbb R^8$ witness independently**: $\mathrm{pad}_{V_1}(W_{\mathbb{CP}^2})+\mathrm{pad}_{V_2}(W_{\mathbb{CP}^2})$ lies in $\mathrm{Weyl}_8$, has one distinct negative eigenvalue of multiplicity four, satisfies *"at most two distinct"*, and has $W(e_5\wedge e_6)\ne0$ at $e_5\perp U$. **And one found the other end**: read as *"at most"*, a single negative eigenvalue leaves $U$ built partly from an undetermined kernel eigenvector, so $\dim U$ is not a function of $W$. *Both failures are of the counting form and neither touches the argument.* **The statement now hypothesises $\dim U<n$ with $U=\sum_{\lambda_\alpha<0}\mathop{\mathrm{im}}v_\alpha$ and counts nothing**, which is what the block's own three steps prove, restated rather than extended.
 
 ### C7, and the scope was being read as the lemma's range
 

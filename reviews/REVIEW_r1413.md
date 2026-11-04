@@ -20,7 +20,7 @@ Log [agent_logs/r1413.log](../agent_logs/r1413.log). One reviewer, statement fid
 
 ## 1. `diag_doublyStochastic`
 
-The proof sets `U := hA.eigenvectorUnitary`, reads `U * star U = 1` and `star U * U = 1` from `unitaryGroup` membership, and takes `P i x := U i x ^ 2`. Nonnegativity is `sq_nonneg`. Row sums come from the $(i,i)$ entry of $UU^*=1$ and column sums from the $(x,x)$ entry of $U^*U=1$, with `star` on a real matrix the transpose. The representation comes from the $(i,i)$ entry of `hA.spectral_theorem`, $A=U\operatorname{diag}(\lambda)U^*$, giving $A_{ii}=\sum_xU_{ix}\lambda_xU_{ix}$. This is the record's "$K_i=\sum_j\lvert U_{ij}\rvert^2\mu_j$ with $(\lvert U_{ij}\rvert^2)$ doubly stochastic", real case.
+The proof sets `U := hA.eigenvectorUnitary`, reads `U * star U = 1` and `star U * U = 1` from `unitaryGroup` membership, and takes `P i x := U i x ^ 2`. Nonnegativity is `sq_nonneg`. Row sums come from the $(i,i)$ entry of $UU^*=1$ and column sums from the $(x,x)$ entry of $U^*U=1$, with `star` on a real matrix the transpose. The representation comes from the $(i,i)$ entry of `hA.spectral_theorem`, $A=U\mathop{\mathrm{diag}}(\lambda)U^*$, giving $A_{ii}=\sum_xU_{ix}\lambda_xU_{ix}$. This is the record's "$K_i=\sum_j\lvert U_{ij}\rvert^2\mu_j$ with $(\lvert U_{ij}\rvert^2)$ doubly stochastic", real case.
 
 The spectrum is Mathlib's `IsHermitian.eigenvalues`, a function on the index type `N`, so a repeated eigenvalue appears once per basis vector. This is the record's $\mu$ "with multiplicity", and the index sets of diagonal and spectrum coincide, which is what Jensen row by row needs.
 

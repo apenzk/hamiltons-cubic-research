@@ -8,7 +8,7 @@ Adversarial Gate 2 audit of commits `2293bc0` and `e852c66`. Everything below is
 
 ## Independent implementation and its calibration
 
-Basis of $\Lambda^2(\mathbb R^n)$: the orthonormal $\varphi_{ab}=e_a\wedge e_b$, realised as $E_{ab}-E_{ba}$ with $\langle A,B\rangle=\tfrac12\operatorname{tr}(A^{\mathsf T}B)$, structure constants $c_{\alpha\beta\gamma}=\langle[\varphi_\alpha,\varphi_\beta],\varphi_\gamma\rangle$ computed by matrix commutator. Sharp taken as $(R\#S)_{\alpha\beta}=\tfrac12\sum c_{\alpha\gamma\delta}c_{\beta\varepsilon\zeta}R_{\gamma\varepsilon}S_{\delta\zeta}$, $Q(W)=W^2+W^{\#}$, $P(W)=\langle W,Q(W)\rangle$, $L_WH=\tfrac12(WH+HW)+W\#H$, $L_e=L_W/\theta$. Weyl space built as the null space of (first Bianchi, Ricci) on $\mathrm{Sym}(\Lambda^2)$, dimensions came out $10,35,84,168,300$ at $n=4,\dots,8$, matching $n(n+1)(n+2)(n-3)/12$.
+Basis of $\Lambda^2(\mathbb R^n)$: the orthonormal $\varphi_{ab}=e_a\wedge e_b$, realised as $E_{ab}-E_{ba}$ with $\langle A,B\rangle=\tfrac12\mathop{\mathrm{tr}}(A^{\mathsf T}B)$, structure constants $c_{\alpha\beta\gamma}=\langle[\varphi_\alpha,\varphi_\beta],\varphi_\gamma\rangle$ computed by matrix commutator. Sharp taken as $(R\#S)_{\alpha\beta}=\tfrac12\sum c_{\alpha\gamma\delta}c_{\beta\varepsilon\zeta}R_{\gamma\varepsilon}S_{\delta\zeta}$, $Q(W)=W^2+W^{\#}$, $P(W)=\langle W,Q(W)\rangle$, $L_WH=\tfrac12(WH+HW)+W\#H$, $L_e=L_W/\theta$. Weyl space built as the null space of (first Bianchi, Ricci) on $\mathrm{Sym}(\Lambda^2)$, dimensions came out $10,35,84,168,300$ at $n=4,\dots,8$, matching $n(n+1)(n+2)(n-3)/12$.
 
 Calibration, all reproduced without reference to the record:
 
@@ -16,7 +16,7 @@ Calibration, all reproduced without reference to the record:
 |---|---|
 | $\theta$ at $S^3\!\times\!S^3$, $S^6\!\times\!S^6$ | $1.054092553$, $1.236033081$, equal to the closed form $\sqrt2c_n+2\sqrt2/(n\sqrt{(n-1)(n-2)})$ |
 | criticality $Q(W)=\theta W$ at five sphere products | residual $\le1.7\times10^{-16}$ |
-| graph formula $\theta=\tfrac12(\sum M_{ab}^3+\operatorname{tr}M^3)$ | agrees with $\langle W,Q(W)\rangle$ to $10^{-16}$ |
+| graph formula $\theta=\tfrac12(\sum M_{ab}^3+\mathop{\mathrm{tr}}M^3)$ | agrees with $\langle W,Q(W)\rangle$ to $10^{-16}$ |
 | symmetry defect: $\Lambda^2$ definition vs. the closed form $g_{ab}=2\sum_{d}(M_{ad}-M_{bd})^2$ | agree to $10^{-12}$ at a random diagonal $W$ ($\Delta=4.757638162981$ both ways) |
 
 That fixes the normalisation before any claim is tested.
@@ -76,7 +76,7 @@ I also re-derived the combinatorial reason rather than measuring it: $c_{\alpha\
 
 ## D3, THE DISCONNECTED-LEMMA REPAIR. **CONFIRMED**, and the repaired statement is a theorem, not just an unbroken guess.
 
-**The counterexamples reproduce exactly.** Padding a sphere product with isolated vertices preserves criticality (the padded rows are identically zero, so both sides of the off-diagonal equation vanish) and preserves $\theta$ (it does not change $\operatorname{tr}M^2$):
+**The counterexamples reproduce exactly.** Padding a sphere product with isolated vertices preserves criticality (the padded rows are identically zero, so both sides of the off-diagonal equation vanish) and preserves $\theta$ (it does not change $\mathop{\mathrm{tr}}M^2$):
 
 | point | $n$ | $\theta$ | crit. residual | $\dim\ker M$ | components | $\Delta$ | $\lambda_{\max}(L_e)$ diag = full | record |
 |---|---|---|---|---|---|---|---|---|
@@ -102,7 +102,7 @@ Verified numerically at six direct sums, including ones padded with 1, 2 and 3 i
 
 ## D4, ADMISSIBILITY. **CONFIRMED**, with the constant's convention needing to be named.
 
-**The inner product, derived.** With $M=\bigoplus_c M^{(c)}$ and $\lVert M^{(c)}\rVert_F^2=2\theta^2/\theta_c^2$ (criticality forces the block scaling $\theta/\theta_c$, and each unit block has $\operatorname{tr}M_c^2=2$),
+**The inner product, derived.** With $M=\bigoplus_c M^{(c)}$ and $\lVert M^{(c)}\rVert_F^2=2\theta^2/\theta_c^2$ (criticality forces the block scaling $\theta/\theta_c$, and each unit block has $\mathop{\mathrm{tr}}M_c^2=2$),
 
 $$\Big\langle \sum_ca_cM^{(c)},\,M\Big\rangle_F=\sum_ca_c\lVert M^{(c)}\rVert_F^2=2\theta^2\sum_c\frac{a_c}{\theta_c^{2}} .$$
 
@@ -118,7 +118,7 @@ $$\Big\langle \sum_ca_cM^{(c)},\,M\Big\rangle_F=\sum_ca_c\lVert M^{(c)}\rVert_F^
 
 So $8$ is correct for the $\Lambda^2$-level anticommutator with the induced diagonal operator, measured with the $n\times n$ Frobenius pairing, a natural reading, but one of three, and the sanity check $a_c\equiv1$ pins it instantly ($N=2M$ at the $\Lambda^2$ level, $\langle N,M\rangle_F=8$, $\theta^2\sum\theta_c^{-2}=1$). I mark this CONFIRMED rather than refuted, with the recommendation that the definition of $N$ be written next to the formula.
 
-**Which family the record used, settled from its own numbers.** The three cosines quoted for the earlier inadmissible deformation reproduce on my code only for $A=\mathrm{diag}(a)$ with $a$ constant on components and $\operatorname{tr}A=0$ (vertex-weighted, not $\sum_ca_c=0$):
+**Which family the record used, settled from its own numbers.** The three cosines quoted for the earlier inadmissible deformation reproduce on my code only for $A=\mathrm{diag}(a)$ with $a$ constant on components and $\mathop{\mathrm{tr}}A=0$ (vertex-weighted, not $\sum_ca_c=0$):
 
 | sum | my $\cos(N,M)$ | record |
 |---|---|---|

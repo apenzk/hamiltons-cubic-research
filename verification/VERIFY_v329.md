@@ -23,7 +23,7 @@
 
 ## 0. Conventions, fixed once
 
-- $\Lambda^2\mathbb R^n\cong\mathfrak{so}(n)$ with the ad-invariant inner product $\langle X,Y\rangle=-\tfrac12\operatorname{tr}(XY)$, so $e_i\wedge e_j\mapsto E_{ij}-E_{ji}$ is orthonormal. This normalisation is the one [conventions.md line 61](../findings/conventions.md#L61) and relation (A) at [bounds.md line 262](../findings/bounds.md#L262) require: $\sum_{\beta\gamma}c_{k\beta\gamma}^2=-\operatorname{tr}_{\Lambda^2}\mathrm{ad}(v_k)^2=-(n-2)\operatorname{tr}(v_k^2)=2(n-2)$.
+- $\Lambda^2\mathbb R^n\cong\mathfrak{so}(n)$ with the ad-invariant inner product $\langle X,Y\rangle=-\tfrac12\mathop{\mathrm{tr}}(XY)$, so $e_i\wedge e_j\mapsto E_{ij}-E_{ji}$ is orthonormal. This normalisation is the one [conventions.md line 61](../findings/conventions.md#L61) and relation (A) at [bounds.md line 262](../findings/bounds.md#L262) require: $\sum_{\beta\gamma}c_{k\beta\gamma}^2=-\mathop{\mathrm{tr}}_{\Lambda^2}\mathrm{ad}(v_k)^2=-(n-2)\mathop{\mathrm{tr}}(v_k^2)=2(n-2)$.
 - $\{\varphi_k\}$ is an orthonormal eigenbasis of the symmetric operator $W$ on $\Lambda^2$, $W\varphi_k=\lambda_k\varphi_k$, and $c_{abc}=\langle[\varphi_a,\varphi_b],\varphi_c\rangle$ is totally antisymmetric.
 - $(W^\#)_{ab}=\tfrac12\sum c_{acd}c_{bef}W_{ce}W_{df}$ ([conventions.md line 77](../findings/conventions.md#L77)). Then $\mathrm{id}^\#=\tfrac12\cdot2(n-2)\,\mathrm{id}=(n-2)\,\mathrm{id}$, as that line pins.
 - $\mathrm{ad}(v)$ has matrix $(\mathrm{ad}\,v)_{dc}=\sum_a x_ac_{acd}$ for $v=\sum_ax_a\varphi_a$. All traces in $M_{kl}$ are over $\Lambda^2$ ($N\times N$).
@@ -37,12 +37,12 @@
 |---|---|---|---|
 | $W$ symmetric on $\Lambda^2$ | brief definitions | $W\in\mathcal W_n$ | Yes. $W_{fd}=W_{df}$ in the polarisation step, and existence of an orthonormal eigenbasis |
 | Orthonormal eigenbasis | brief definitions ("eigenbasis" in line 656 without "orthonormal") | $\{\varphi_k\}$ | Yes. Total antisymmetry of $c$ needs orthonormality |
-| Ad-invariance of $\langle\cdot,\cdot\rangle$ | conventions line 61 | $\mathfrak{so}(n)$ with $-\tfrac12\operatorname{tr}$ | Yes. $c_{bfe}=-c_{bef}$ in the polarisation step |
+| Ad-invariance of $\langle\cdot,\cdot\rangle$ | conventions line 61 | $\mathfrak{so}(n)$ with $-\tfrac12\mathop{\mathrm{tr}}$ | Yes. $c_{bfe}=-c_{bef}$ in the polarisation step |
 | Normalisation of $\#$ with the $\tfrac12$ | conventions line 77 | index formula | Yes. It fixes the factor 2 in $M=-2W^\#$ |
 | $W$ Weyl (Bianchi and Ricci-flat) | brief definitions | $W$ | **No** for claims 1 to 5. The identity $M=-2W^\#$ and the equivalence hold for every symmetric operator on $\Lambda^2$. Used only to place the witnesses of claims 6 and 7 in $\mathcal W_n$ |
 | $\lVert W\rVert=1$, $\theta=P(W)$ | brief definitions | $W$ | Only to identify $\theta$. On the unit sphere $Q(W)=\theta'W$ forces $\theta'=\langle W,Q(W)\rangle=P(W)$. Requires $W\ne0$ |
 | $Q(\mathcal W_n)\subset\mathcal W_n$ (so that $Q=\theta W$ is the first-order condition) | implicit in conventions line 151 | $Q(W)$ | Not used. L111 takes $Q(W)=\theta W$ as the definition of critical |
-| The polarised identity $\langle v,W^\#v\rangle=-\tfrac12\operatorname{tr}(\mathrm{ad}(v)W\mathrm{ad}(v)W)$ | line 656, no citation, no derivation | $W$, $v\in\Lambda^2$ | Yes. It is the whole argument. Checked in section 1 |
+| The polarised identity $\langle v,W^\#v\rangle=-\tfrac12\mathop{\mathrm{tr}}(\mathrm{ad}(v)W\mathrm{ad}(v)W)$ | line 656, no citation, no derivation | $W$, $v\in\Lambda^2$ | Yes. It is the whole argument. Checked in section 1 |
 | Relation (C) | line 262 | $W$ critical | Cited in line 662, checked against $M_{kk}$ in section 5 |
 | Jacobi identity | line 662 | $c$ | Named, never used in an argument |
 | "Diagonal" | line 660, conventions 151, undefined at those lines | the witness family | Used but undefined at the record. Only the coordinate-diagonal reading makes 7a true, since every symmetric $W$ is diagonal in its own eigenbasis |
@@ -52,15 +52,15 @@ Findings from the inventory: the Weyl hypothesis is stated but unused in claims 
 
 ## 1. The polarised identity and the factor 2
 
-**Record, line 656:** "Polarising $\langle v,W^\#v\rangle=-\tfrac12\operatorname{tr}(\mathrm{ad}(v)W\mathrm{ad}(v)W)$ and substituting $W^\#=\theta W-W^2$ gives exactly that."
+**Record, line 656:** "Polarising $\langle v,W^\#v\rangle=-\tfrac12\mathop{\mathrm{tr}}(\mathrm{ad}(v)W\mathrm{ad}(v)W)$ and substituting $W^\#=\theta W-W^2$ gives exactly that."
 
 The identity is not derived on file. Following its algebra from the index formula:
 
-$\operatorname{tr}(\mathrm{ad}(v)W\mathrm{ad}(v)W)=\sum(\mathrm{ad}\,v)_{dc}W_{ce}(\mathrm{ad}\,v)_{ef}W_{fd}=\sum x_ax_b\,c_{acd}c_{bfe}W_{ce}W_{fd}$.
+$\mathop{\mathrm{tr}}(\mathrm{ad}(v)W\mathrm{ad}(v)W)=\sum(\mathrm{ad}\,v)_{dc}W_{ce}(\mathrm{ad}\,v)_{ef}W_{fd}=\sum x_ax_b\,c_{acd}c_{bfe}W_{ce}W_{fd}$.
 
 Antisymmetry gives $c_{bfe}=-c_{bef}$ and symmetry of $W$ gives $W_{fd}=W_{df}$, so this is $-\sum x_ax_bc_{acd}c_{bef}W_{ce}W_{df}=-2\langle v,W^\#v\rangle$. The identity holds.
 
-Both sides are quadratic forms of symmetric bilinear forms: $(u,v)\mapsto\langle u,W^\#v\rangle$ is symmetric because $W^\#$ is, and $(u,v)\mapsto\operatorname{tr}(\mathrm{ad}(u)W\mathrm{ad}(v)W)$ is symmetric by cyclicity of the trace. Polarisation is therefore valid, and directly in index form $M_{kl}=\sum c_{kcd}W_{ce}c_{lfe}W_{fd}=-\sum c_{kcd}c_{lef}W_{ce}W_{df}=-2(W^\#)_{kl}$.
+Both sides are quadratic forms of symmetric bilinear forms: $(u,v)\mapsto\langle u,W^\#v\rangle$ is symmetric because $W^\#$ is, and $(u,v)\mapsto\mathop{\mathrm{tr}}(\mathrm{ad}(u)W\mathrm{ad}(v)W)$ is symmetric by cyclicity of the trace. Polarisation is therefore valid, and directly in index form $M_{kl}=\sum c_{kcd}W_{ce}c_{lfe}W_{fd}=-\sum c_{kcd}c_{lef}W_{ce}W_{df}=-2(W^\#)_{kl}$.
 
 In the eigenbasis $W_{ce}=\lambda_c\delta_{ce}$, so $M_{kl}=-\sum_{\alpha\beta}\lambda_\alpha\lambda_\beta c_{k\alpha\beta}c_{l\alpha\beta}$ and $(W^\#)_{kl}=\tfrac12\sum_{\alpha\beta}\lambda_\alpha\lambda_\beta c_{k\alpha\beta}c_{l\alpha\beta}$.
 
@@ -70,7 +70,7 @@ Hypotheses used: symmetry of $W$, orthonormality of the basis, ad-invariance. No
 
 ## 2. Criticality is equivalent to the matrix form
 
-$Q(W)=\theta W\iff W^\#=\theta W-W^2$. In the orthonormal eigenbasis $\theta W-W^2=\operatorname{diag}(\theta\lambda_k-\lambda_k^2)$. Since $M=-2W^\#$ identically, $W^\#=\theta W-W^2\iff M=\operatorname{diag}(2\lambda_k^2-2\theta\lambda_k)=\big(2\lambda_k(\lambda_k-\theta)\delta_{kl}\big)$.
+$Q(W)=\theta W\iff W^\#=\theta W-W^2$. In the orthonormal eigenbasis $\theta W-W^2=\mathop{\mathrm{diag}}(\theta\lambda_k-\lambda_k^2)$. Since $M=-2W^\#$ identically, $W^\#=\theta W-W^2\iff M=\mathop{\mathrm{diag}}(2\lambda_k^2-2\theta\lambda_k)=\big(2\lambda_k(\lambda_k-\theta)\delta_{kl}\big)$.
 
 Both directions are the same line read each way, since $M\mapsto-\tfrac12M$ is a bijection. The $\delta_{kl}$ is part of the equation on both sides: in the forward direction it is a conclusion (the off-diagonal entries of $W^\#$ vanish because $\theta W-W^2$ is diagonal), and in the converse it is a hypothesis carrying $N(N-1)/2$ scalar equations.
 
@@ -98,7 +98,7 @@ Criticality gives $W^\#=\theta W-W^2$, diagonal in every orthonormal eigenbasis,
 
 $M_{kk}=-\sum_{\alpha\beta}\lambda_\alpha\lambda_\beta c_{k\alpha\beta}^2=-\sum_{\alpha\beta}\lambda_\alpha\lambda_\beta T_{k\alpha\beta}$. The matrix form's diagonal is $M_{kk}=2\lambda_k(\lambda_k-\theta)$, which is $\sum\lambda_\alpha\lambda_\beta T_{k\alpha\beta}=2\lambda_k(\theta-\lambda_k)$, relation (C) at [bounds.md line 262](../findings/bounds.md#L262), and the line 662 statement "$\sum\lambda_\alpha\lambda_\beta c_{k\alpha\beta}^2=2\lambda_k(\theta-\lambda_k)$". The sign flip is the single minus from antisymmetry in section 1. One statement, signs consistent.
 
-A consistency check on the trace: $\sum_k\lambda_k\cdot(\text{C})_k$ reads $2\langle W,W^\#\rangle=2\theta\sum\lambda_k^2-2\sum\lambda_k^3$, which on $\lVert W\rVert=1$ is $P(W)=\operatorname{tr}W^3+\langle W,W^\#\rangle=\theta$. Verdict CONFIRMED.
+A consistency check on the trace: $\sum_k\lambda_k\cdot(\text{C})_k$ reads $2\langle W,W^\#\rangle=2\theta\sum\lambda_k^2-2\sum\lambda_k^3$, which on $\lVert W\rVert=1$ is $P(W)=\mathop{\mathrm{tr}}W^3+\langle W,W^\#\rangle=\theta$. Verdict CONFIRMED.
 
 ## 6. "The bracket form is strictly weaker"
 

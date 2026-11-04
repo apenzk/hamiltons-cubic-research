@@ -37,7 +37,7 @@ Then adding $\binom m4$:
 $$\frac{m^2(m^2-1)}{12}+\frac{m(m-1)(m-2)(m-3)}{24}=\frac{m(m-1)}{24}\big[2m(m+1)+(m-2)(m-3)\big]=\frac{m(m-1)\cdot3(m^2-m+2)}{24},$$
 which is the left side. **Exact in $m$, not at samples.**
 
-**But the identity holds formally past the range where it is a decomposition.** At $m=2$ the Weyl dimension formula returns $-2$, and the map $S^2_0\to S^2(\Lambda^2\mathbb R^2)$ is identically zero, since $h\omega+\omega h=(\operatorname{tr}h)\omega=0$ on the one-dimensional $\Lambda^2\mathbb R^2$. The polynomial identity survives only because the two errors cancel. **So the decomposition is a decomposition for $m\ge3$**, with $\mathcal W_3=\Lambda^4\mathbb R^3=0$ and the remaining two rows correct there.
+**But the identity holds formally past the range where it is a decomposition.** At $m=2$ the Weyl dimension formula returns $-2$, and the map $S^2_0\to S^2(\Lambda^2\mathbb R^2)$ is identically zero, since $h\omega+\omega h=(\mathop{\mathrm{tr}}h)\omega=0$ on the one-dimensional $\Lambda^2\mathbb R^2$. The polynomial identity survives only because the two errors cancel. **So the decomposition is a decomposition for $m\ge3$**, with $\mathcal W_3=\Lambda^4\mathbb R^3=0$ and the remaining two rows correct there.
 
 ## (2) The trace identity, CONFIRMED, and derived independently of the table
 
@@ -45,11 +45,11 @@ Take the orthonormal basis $E_{gg}=\varphi_g\varphi_g^{\mathsf T}$ and $E_{gh}=\
 
 Diagonal terms vanish: $\mathcal A(E_{gg})=\mathrm{ad}_g^2$ and $\langle\mathrm{ad}_g^2\varphi_g,\varphi_g\rangle=-\lVert[\varphi_g,\varphi_g]\rVert^2=0$.
 
-Off-diagonal: $\mathcal A(E_{gh})=\tfrac1{\sqrt2}(\mathrm{ad}_g\mathrm{ad}_h+\mathrm{ad}_h\mathrm{ad}_g)$, and for symmetric $S$, $\operatorname{tr}(SE_{gh})=\sqrt2\,\langle S\varphi_g,\varphi_h\rangle$. The $\mathrm{ad}_h\mathrm{ad}_g$ half dies on $\mathrm{ad}_g\varphi_g=0$, and the other half gives $\langle\mathrm{ad}_g\mathrm{ad}_h\varphi_g,\varphi_h\rangle=-\langle\mathrm{ad}_h\varphi_g,\mathrm{ad}_g\varphi_h\rangle=\lVert[\varphi_g,\varphi_h]\rVert^2$. So each off-diagonal basis element contributes exactly $\lVert[\varphi_g,\varphi_h]\rVert^2$ and
-$$\operatorname{tr}\mathcal A=\sum_{g<h}\lVert[\varphi_g,\varphi_h]\rVert^2=\tfrac12\sum_{g,h}\lVert[\varphi_g,\varphi_h]\rVert^2 .$$
+Off-diagonal: $\mathcal A(E_{gh})=\tfrac1{\sqrt2}(\mathrm{ad}_g\mathrm{ad}_h+\mathrm{ad}_h\mathrm{ad}_g)$, and for symmetric $S$, $\mathop{\mathrm{tr}}(SE_{gh})=\sqrt2\,\langle S\varphi_g,\varphi_h\rangle$. The $\mathrm{ad}_h\mathrm{ad}_g$ half dies on $\mathrm{ad}_g\varphi_g=0$, and the other half gives $\langle\mathrm{ad}_g\mathrm{ad}_h\varphi_g,\varphi_h\rangle=-\langle\mathrm{ad}_h\varphi_g,\mathrm{ad}_g\varphi_h\rangle=\lVert[\varphi_g,\varphi_h]\rVert^2$. So each off-diagonal basis element contributes exactly $\lVert[\varphi_g,\varphi_h]\rVert^2$ and
+$$\mathop{\mathrm{tr}}\mathcal A=\sum_{g<h}\lVert[\varphi_g,\varphi_h]\rVert^2=\tfrac12\sum_{g,h}\lVert[\varphi_g,\varphi_h]\rVert^2 .$$
 
-[conventions.md](../findings/conventions.md)'s Killing marginal $\sum_\beta\lVert[v_\alpha,v_\beta]\rVert^2=2(m-2)$, itself $-\operatorname{tr}(\mathrm{ad}_\alpha^2)=-(m-2)\operatorname{tr}(v_\alpha^2)$ with $\operatorname{tr}(v^2)=-2$, closes it:
-$$\boxed{\operatorname{tr}\mathcal A=\tfrac12\binom m2\cdot2(m-2)=\binom m2(m-2).}$$
+[conventions.md](../findings/conventions.md)'s Killing marginal $\sum_\beta\lVert[v_\alpha,v_\beta]\rVert^2=2(m-2)$, itself $-\mathop{\mathrm{tr}}(\mathrm{ad}_\alpha^2)=-(m-2)\mathop{\mathrm{tr}}(v_\alpha^2)$ with $\mathop{\mathrm{tr}}(v^2)=-2$, closes it:
+$$\boxed{\mathop{\mathrm{tr}}\mathcal A=\tfrac12\binom m2\cdot2(m-2)=\binom m2(m-2).}$$
 
 Against the table, $\sum\dim\times\lambda$ is $m^2(m-3)$ from the Weyl and $\Lambda^4$ rows together and $\tfrac{-m^3+3m^2+2m}2$ from the other two, summing to $\tfrac{m(m-1)(m-2)}2$. **The table passes the trace test at every $m$, not at three samples.**
 
@@ -79,11 +79,11 @@ The normalisation is pinned internally: on $\Lambda^2$ itself the Casimir is $-\
 
 ### The elementary route, per row, and what each consumes
 
-**$\mathbb R\cdot\mathrm{Id}$, $-2(m-2)$.** $\mathcal A(\mathrm{Id})=\sum_g\mathrm{ad}_g^2$, whose trace is $\binom m2\cdot(m-2)\operatorname{tr}(v^2)=-2(m-2)\binom m2$ and which is scalar by ad-invariance. *Consumes*: $\mathrm{ad}$ skew-adjoint, the Killing normalisation $B(X,X)=(m-2)\operatorname{tr}(X^2)$, and $\operatorname{tr}(v^2)=-2$.
+**$\mathbb R\cdot\mathrm{Id}$, $-2(m-2)$.** $\mathcal A(\mathrm{Id})=\sum_g\mathrm{ad}_g^2$, whose trace is $\binom m2\cdot(m-2)\mathop{\mathrm{tr}}(v^2)=-2(m-2)\binom m2$ and which is scalar by ad-invariance. *Consumes*: $\mathrm{ad}$ skew-adjoint, the Killing normalisation $B(X,X)=(m-2)\mathop{\mathrm{tr}}(X^2)$, and $\mathop{\mathrm{tr}}(v^2)=-2$.
 
 **$\Lambda^4$, $-4$.** For the generator $\star_{1234}$ the three surviving component pairs commute, so $\mathcal A(\star_{1234})=2[\mathrm{ad}_{12}\mathrm{ad}_{34}-\mathrm{ad}_{13}\mathrm{ad}_{24}+\mathrm{ad}_{14}\mathrm{ad}_{23}]$. On $\varphi_{12}$: the first term dies on $[\varphi_{34},\varphi_{12}]=0$, the second gives $-\varphi_{34}$ and the third gives $-\varphi_{34}$, so $\mathcal A(\star)\varphi_{12}=-4\varphi_{34}=-4\,\star\varphi_{12}$. On $\varphi_{15}$ or $\varphi_{56}$ with indices outside the 4-plane, every one of the three terms has its inner bracket vanish, so both sides are $0$. Decomposable $4$-forms span $\Lambda^4$, so **$-4$ at every $m\ge4$, with no appeal to Schur at all.** *Consumes*: $[\varphi_{ab},\varphi_{bc}]=\varphi_{ac}$ and vanishing on disjoint supports.
 
-**$\mathrm{Weyl}_m$, $+2$.** At $m=4$ take $R=\omega_1\omega_1^{\mathsf T}-\omega_2\omega_2^{\mathsf T}$ with $\omega_i$ the standard self-dual basis. It is Bianchi (block-diagonal with traceless blocks, so $\operatorname{tr}(\star R)=0$) and Ricci-flat, hence in $\mathrm{Weyl}_4$. From $[\omega_1,\omega_2]=-\sqrt2\,\omega_3$ and its cyclic partners, $\mathrm{ad}(\omega_i)^2=-2(P_+-\omega_i\omega_i^{\mathsf T})$, so
+**$\mathrm{Weyl}_m$, $+2$.** At $m=4$ take $R=\omega_1\omega_1^{\mathsf T}-\omega_2\omega_2^{\mathsf T}$ with $\omega_i$ the standard self-dual basis. It is Bianchi (block-diagonal with traceless blocks, so $\mathop{\mathrm{tr}}(\star R)=0$) and Ricci-flat, hence in $\mathrm{Weyl}_4$. From $[\omega_1,\omega_2]=-\sqrt2\,\omega_3$ and its cyclic partners, $\mathrm{ad}(\omega_i)^2=-2(P_+-\omega_i\omega_i^{\mathsf T})$, so
 $$\mathcal A(R)=\mathrm{ad}(\omega_1)^2-\mathrm{ad}(\omega_2)^2=2\omega_1\omega_1^{\mathsf T}-2\omega_2\omega_2^{\mathsf T}=2R.$$
 Padding into $\mathbb R^m$ keeps it in $\mathrm{Weyl}_m$ and the identity holds off the 4-plane too, on $\varphi_{15}$ both $\mathrm{ad}(\omega_1)^2$ and $\mathrm{ad}(\omega_2)^2$ return $-\tfrac12\varphi_{15}$ and cancel. With $\mathrm{Weyl}_m$ irreducible under $O(m)$ this pins $+2$ at every $m\ge4$. *Consumes*: the $\mathfrak{su}(2)$ bracket relations and $[\Lambda^2_+,\Lambda^2_-]=0$.
 
@@ -126,7 +126,7 @@ I found no surviving *"$SO(m)$-equivariant"* reading of $\mathcal A$ anywhere in
 
 **Does the block state its heading's claim, and is the argument present?** It states the claim. **The argument is absent.** What is present is Schur, which establishes that there are four scalars, plus an attribution, *"the four constants are exact (Reviewers 60 and 61)"*. Not one of the four values is derived in the block. [L131](../findings/isotropy-cap.md#L312)(i) supplies a route 104 lines below, but routes it through [Böhm–Wilking's Lemma 2.1](../references/boehm-wilking-2008-space-forms/notes.md), which by [ATTEMPTS.md](../ATTEMPTS.md)'s own reading cannot reach $\Lambda^4$ at all, plus *"the Casimir on $\Lambda^4$"* named and not carried out. **So the $-4$ has no written derivation anywhere on the record.** The two above are offered to fill it.
 
-**The norm.** The definition presupposes $\{\varphi_g\}$ orthonormal and **never says for which pairing**, in a record whose [conventions.md](../findings/conventions.md) flags exactly this as live: $\lVert\varphi_{ab}\rVert^2=1$ under the half-trace pairing and $2$ under plain Frobenius. The choice is not cosmetic. Rescaling the $\Lambda^2$ pairing by $c$ rescales unit bivectors by $c^{-1/2}$ and leaves $W$'s eigenvalues alone, so $\mathcal A$ scales by $c^{-1}$: **under plain Frobenius the whole table halves**, to $+1,\,-\tfrac{m-4}2,\,-(m-2),\,-2$. The table as printed is the half-trace one, which is the record's ([conventions.md](../findings/conventions.md): *"the one every result uses"*), and it is consistent with $\operatorname{tr}(v^2)=-2$ throughout my derivations, but the block relies on the reader supplying it.
+**The norm.** The definition presupposes $\{\varphi_g\}$ orthonormal and **never says for which pairing**, in a record whose [conventions.md](../findings/conventions.md) flags exactly this as live: $\lVert\varphi_{ab}\rVert^2=1$ under the half-trace pairing and $2$ under plain Frobenius. The choice is not cosmetic. Rescaling the $\Lambda^2$ pairing by $c$ rescales unit bivectors by $c^{-1/2}$ and leaves $W$'s eigenvalues alone, so $\mathcal A$ scales by $c^{-1}$: **under plain Frobenius the whole table halves**, to $+1,\,-\tfrac{m-4}2,\,-(m-2),\,-2$. The table as printed is the half-trace one, which is the record's ([conventions.md](../findings/conventions.md): *"the one every result uses"*), and it is consistent with $\mathop{\mathrm{tr}}(v^2)=-2$ throughout my derivations, but the block relies on the reader supplying it.
 
 *A consequence worth recording: the factor $2$ in [L131](../findings/isotropy-cap.md#L307)'s $\mathcal A=-2(\cdot\#I)$ is exactly this normalisation. Under plain Frobenius the identity reads $\mathcal A=-(\cdot\#I)$. Stating the constant without stating the pairing is the trap [conventions.md](../findings/conventions.md) already names.*
 
@@ -168,7 +168,7 @@ $\mathrm{Weyl}_n$ is $\mathcal A$'s $+2$ eigenspace and $T$'s $-2$ eigenspace, $
 | --- | --- | --- |
 | 1 | the four eigenvalues $+2$, $-(m-4)$, $-2(m-2)$, $-4$ | **CONFIRMED**, all four, by two routes sharing nothing with the block's |
 | 2 | the decomposition closes | **CONFIRMED** as an exact polynomial identity in $m$, for $m\ge3$ |
-| 3 | $\operatorname{tr}\mathcal A=\binom m2(m-2)$ | **CONFIRMED**, derived from the Killing marginal, independent of the table |
+| 3 | $\mathop{\mathrm{tr}}\mathcal A=\binom m2(m-2)$ | **CONFIRMED**, derived from the Killing marginal, independent of the table |
 | 4 | $O(m)$-equivariance, and the $m=8$ residue | **CONFIRMED**; the correction is textually complete and carries **no numerical residue** at $m=8$ or $m=4$ |
 | 5 | Ricci-flatness alone fails because $\Lambda^4$ is Ricci-flat | **CONFIRMED** for $m\ge4$ |
 | 6 | Bianchi alone gives the Weitzenböck form | **CONFIRMED**; the framing understates, Bianchi alone failing on $\mathbb R\cdot\mathrm{Id}$ just as Ricci-flatness fails on $\Lambda^4$ |

@@ -82,7 +82,7 @@ $\dim\mathcal W_n=n(n+1)(n+2)(n-3)/12$ vanishes for $n\le3$, so a nonzero critic
 
 ### The $n_i=4$ base case, CONFIRMED exactly
 
-$\mathfrak{so}(4)=\mathfrak{so}(3)\oplus\mathfrak{so}(3)$ splits $W$ into chiralities, each a trace-free symmetric $3\times3$ operator; $\#$ restricts to $2\,\mathrm{adj}$ on each ([post F2c](../findings/fence-posts.md)), and $\langle\mathrm{adj}A,A\rangle=3\det A=\operatorname{tr}(A^3)$ for trace-free $3\times3$, giving $P=3\operatorname{tr}(W^3)=9(\det W^++\det W^-)$. Okumura at $m=3$ puts $\max\det=2/6^{3/2}$ at $\lambda=(2,-1,-1)/\sqrt6$, so $\max P=9\cdot2\cdot6^{-3/2}=\sqrt{3/2}=1.224744871$, attained at one chirality, i.e. at $W_{\mathbb{CP}^2}$. Reproduced to $10^{-16}$.
+$\mathfrak{so}(4)=\mathfrak{so}(3)\oplus\mathfrak{so}(3)$ splits $W$ into chiralities, each a trace-free symmetric $3\times3$ operator; $\#$ restricts to $2\,\mathrm{adj}$ on each ([post F2c](../findings/fence-posts.md)), and $\langle\mathrm{adj}A,A\rangle=3\det A=\mathop{\mathrm{tr}}(A^3)$ for trace-free $3\times3$, giving $P=3\mathop{\mathrm{tr}}(W^3)=9(\det W^++\det W^-)$. Okumura at $m=3$ puts $\max\det=2/6^{3/2}$ at $\lambda=(2,-1,-1)/\sqrt6$, so $\max P=9\cdot2\cdot6^{-3/2}=\sqrt{3/2}=1.224744871$, attained at one chirality, i.e. at $W_{\mathbb{CP}^2}$. Reproduced to $10^{-16}$.
 
 ### But that base case REFUTES the induction the file states
 

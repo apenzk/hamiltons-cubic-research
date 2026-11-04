@@ -31,7 +31,7 @@ Item 3's proof (line 1587) closes the odd clause with "$G_x$ is swap-even, and $
 ## Check 1: $\sigma$
 
 - swapM j k has entry $1$ at $(a,b)$ exactly when $a=s(b)$, $s=(j\,k)$ ([L222Swap.lean:35](../lean/HamiltonsCubic/Results/L222Swap.lean)), so $Me_b=e_{s b}$ and $M^{\mathsf T}=M=M^{-1}$ (swapM_T, swapM_sq).
-- [FrameOp2.lean:54](../lean/HamiltonsCubic/Results/FrameOp2.lean)'s rotR_coe gives $(\operatorname{rotR}U\,V)(X)=U\,V(U^{\mathsf T}XU)\,U^{\mathsf T}$.
+- [FrameOp2.lean:54](../lean/HamiltonsCubic/Results/FrameOp2.lean)'s rotR_coe gives $(\mathop{\mathrm{rotR}}U\,V)(X)=U\,V(U^{\mathsf T}XU)\,U^{\mathsf T}$.
 - With phi a b $=E_{ba}-E_{ab}$ ([WeylReal.lean:45](../lean/HamiltonsCubic/Base/WeylReal.lean)), $M\varphi_{ab}M^{\mathsf T}$ has entry $(p,q)$ equal to $(\varphi_{ab})_{sp,sq}$, which is $\varphi_{sa,sb}$. This is swapM_phi at line 65, derived from swapM_entry.
 - Hence $(\sigma V)(\varphi_{sa,sb})=M\,V(\varphi_{ab})\,M$, the push-forward of $V$ by the permutation, and $\sigma(\varphi_{ab}\odot\varphi_{cd})=\varphi_{sa,sb}\odot\varphi_{sc,sd}$. On a diagonal $D$ the sectional matrix transforms as $K'_{ab}=K_{sa,sb}$, so the odd part $\tfrac12(K-K\circ s)$ has $K^-_{ja}=-K^-_{ka}$ and vanishes at $jk$ and at $ab$, which is the record's description of $D^-$. $M$ is the reflection in $e_j-e_k$, the same $\sigma$ L224's step 3 names.
 

@@ -23,7 +23,7 @@
 
 ## What the verifiers are asked beyond the standing list
 
-Which of the three status claims the mathematics supports, and whether anything on the record actually depends on L1; whether **two** dimension constraints carry Jäger's Theorem A and whether the rounding-slack account of the threshold is right, including $\operatorname{tr}S^4\le E(n)$ rounded to $16/(8n+9)$ and the clearing $41n-57\ge0$; **whether the $n=12$ moment-body step is sound** (that the floor of one moment forces the other off its ceiling) and whether its two hypotheses are load-bearing as claimed; whether weak duality alone licenses the supporting line, and whether the convexity appealed to is genuinely surplus; and **what Result 5b is, where it is, and what L1 loses without it.**
+Which of the three status claims the mathematics supports, and whether anything on the record actually depends on L1; whether **two** dimension constraints carry Jäger's Theorem A and whether the rounding-slack account of the threshold is right, including $\mathop{\mathrm{tr}}S^4\le E(n)$ rounded to $16/(8n+9)$ and the clearing $41n-57\ge0$; **whether the $n=12$ moment-body step is sound** (that the floor of one moment forces the other off its ceiling) and whether its two hypotheses are load-bearing as claimed; whether weak duality alone licenses the supporting line, and whether the convexity appealed to is genuinely surplus; and **what Result 5b is, where it is, and what L1 loses without it.**
 
 ## Adjudication
 
@@ -50,7 +50,7 @@ Which of the three status claims the mathematics supports, and whether anything 
 | **C2** | *"valid at every $n\ge2$"* | fails at $n=\tfrac52$, undefined at $n=2,3$ | 1/3 | `CONFIRMED`, corrected to integer $n\ge4$ |
 | **C3** | weak duality sufficing, convexity surplus | | 3/3 | `CONFIRMED`, and it returns a minorant, not a supporting line |
 | **C4** | the two moment hypotheses | | 3/3 | `CONFIRMED`, **and sharper than stated**: without $\lambda\le1$ the dual collapses to $-\infty$ |
-| **C5** | *"the edge itself is $(\operatorname{tr}S^3)^2\le\operatorname{tr}S^4$"* | that edge **admits** the corner | 2/3 | **`REFUTED`**, see below |
+| **C5** | *"the edge itself is $(\mathop{\mathrm{tr}}S^3)^2\le\mathop{\mathrm{tr}}S^4$"* | that edge **admits** the corner | 2/3 | **`REFUTED`**, see below |
 | **C6** | *"a genuine equality case rather than an estimate"* | the corner elimination does not reach the requirement | 2/3 | `CONFIRMED`, overstated |
 | **C7** | *"both dimensions are machine-checked"* | the script runs at $n=12$ only | 2/3 | **`REFUTED`**, $n=14$ has no certificate |
 | **C8** | *"ten subintervals"* | adaptive, counted at run time | 2/3 | `CONFIRMED`, a run artefact, not a checkable object |
@@ -59,11 +59,11 @@ Which of the three status claims the mathematics supports, and whether anything 
 
 ### C5, refuted and screened
 
-The block named $(\operatorname{tr}S^3)^2\le\operatorname{tr}S^4$ as the edge excluding the corner. **It admits it.** Screened exactly at $n=12$: the corner has $(\operatorname{tr}S^3)^2=\tfrac1{12}=0.0833$ against $E(12)=\tfrac{709}{4680}=0.1515$, so the inequality holds there, *and Jäger already prints it.* **The edge that does the work is $1\le(\operatorname{tr}S)(\operatorname{tr}S^3)$ with $\operatorname{tr}S\le\sqrt n$**, giving $\operatorname{tr}S^3\ge1/\sqrt n$. The misattribution stood in three files including the Lean docstring, and all three are corrected.
+The block named $(\mathop{\mathrm{tr}}S^3)^2\le\mathop{\mathrm{tr}}S^4$ as the edge excluding the corner. **It admits it.** Screened exactly at $n=12$: the corner has $(\mathop{\mathrm{tr}}S^3)^2=\tfrac1{12}=0.0833$ against $E(12)=\tfrac{709}{4680}=0.1515$, so the inequality holds there, *and Jäger already prints it.* **The edge that does the work is $1\le(\mathop{\mathrm{tr}}S)(\mathop{\mathrm{tr}}S^3)$ with $\mathop{\mathrm{tr}}S\le\sqrt n$**, giving $\mathop{\mathrm{tr}}S^3\ge1/\sqrt n$. The misattribution stood in three files including the Lean docstring, and all three are corrected.
 
 ### C6, where two verifiers arrived by different routes at one conclusion
 
-**The corner elimination is not what closes $n=12$.** One verifier reached it numerically-by-hand, the edge yields $\operatorname{tr}S^3\ge1/\sqrt{12}=0.2887$ against a requirement of $0.3152$, while the dual certificate gives $0.3336$. The other reached it structurally, by identifying which edge excludes the corner at all. *They are the same finding: the mechanism the block names is real and insufficient, and the dual is what carries the dimension.* **The Lean index already carried the honest version**, which is where the record disagreed with itself.
+**The corner elimination is not what closes $n=12$.** One verifier reached it numerically-by-hand, the edge yields $\mathop{\mathrm{tr}}S^3\ge1/\sqrt{12}=0.2887$ against a requirement of $0.3152$, while the dual certificate gives $0.3336$. The other reached it structurally, by identifying which edge excludes the corner at all. *They are the same finding: the mechanism the block names is real and insufficient, and the dual is what carries the dimension.* **The Lean index already carried the honest version**, which is where the record disagreed with itself.
 
 ### C10, and the restraint that makes it a debt rather than a repair
 
@@ -71,5 +71,5 @@ The block named $(\operatorname{tr}S^3)^2\le\operatorname{tr}S^4$ as the edge ex
 
 ### What is not repaired here
 
-**The four steps with no argument on file are recorded in the block and filed in [plan.md](../plan.md)**: the reduction to Jäger's expression, the dual construction behind $\varphi$, the interval certificate, and Result 5b itself. Three further conditions used and never stated are now stated: $\operatorname{rank}S\le n$, Jäger's (3.16) monotonicity, and the convexity range.
+**The four steps with no argument on file are recorded in the block and filed in [plan.md](../plan.md)**: the reduction to Jäger's expression, the dual construction behind $\varphi$, the interval certificate, and Result 5b itself. Three further conditions used and never stated are now stated: $\mathop{\mathrm{rank}}S\le n$, Jäger's (3.16) monotonicity, and the convexity range.
 

@@ -13,7 +13,7 @@ Log [agent_logs/r1405.log](../agent_logs/r1405.log). One reviewer, statement fid
 | 2c. INDEX "Not typed" list | CONFIRMED WITH GAP | The three listed items (Weyl closure, the Hessian as an operator identity, sharpness along the orbit) are correct and are not typed. The two steps of 2b are missing from the list. Nothing the record claims is silently dropped beyond those. |
 | 3. `L24_simple` is "1 is a simple eigenvalue" | CONFIRMED | With `Le_self`, the $1$-eigenspace of $L_e$ inside the Weyl operators is exactly $\mathbb Ra$. The record's $L_e$ acts on $\mathrm{Weyl}_n$, so restricting eigenvectors to Weyl $v$ is the record's domain, and $v$ ranges over all Weyl operators, including the $a$ direction. For a self-adjoint operator geometric and algebraic multiplicity agree, so geometric simplicity is the record's "simple". |
 | 4. `Le_self` derives $\lambda=P(a)$ | CONFIRMED | `Pcubic2_eq_innerOp2` gives $P(a)=\langle a,Q(a)\rangle=\langle a,\lambda a\rangle=\lambda\lVert a\rVert^2=\lambda$ by `ha`. Then $L_ea=\theta^{-1}Q(a)=\theta^{-1}\lambda a=a$. The free `lam` is pinned, and `Le_self` needs neither Weyl nor maximality. |
-| 5. Non-vacuity | CONFIRMED WITH GAP | No object satisfying the hypotheses is exhibited, which the INDEX row says. At `Fintype.card ι ≤ 3` the Weyl space is zero and the hypotheses are unsatisfiable. Existence of a maximiser is typed only abstractly (`SphereAttains.exists_max` on a `NormedSpace`), never for `Pcubic2` on the `normSq2` Weyl sphere, and exact criticality $Q(a)=\lambda a$ at it needs the off-file $\operatorname{Ric}(Q(W))=0$. See section 5. |
+| 5. Non-vacuity | CONFIRMED WITH GAP | No object satisfying the hypotheses is exhibited, which the INDEX row says. At `Fintype.card ι ≤ 3` the Weyl space is zero and the hypotheses are unsatisfiable. Existence of a maximiser is typed only abstractly (`SphereAttains.exists_max` on a `NormedSpace`), never for `Pcubic2` on the `normSq2` Weyl sphere, and exact criticality $Q(a)=\lambda a$ at it needs the off-file $\mathop{\mathrm{Ric}}(Q(W))=0$. See section 5. |
 | 6. Axioms | CONFIRMED | `L24_eigen`, `L24_simple`, `Le_self`: `[propext, Classical.choice, Quot.sound]`. |
 
 **One-line summary: CONFIRMED WITH GAP.** The three theorems say what the record says, eigenvector by eigenvector and on the Weyl operators, and the INDEX row's "Not typed" list should add the invariance of $W^\perp$ under $L_e$ and the spectral step from per-eigenvector bounds to $\lambda_{\max}$.
@@ -48,7 +48,7 @@ The record's $L_e$ acts on $\mathrm{Weyl}_n$ ("the unit sphere of $\mathrm{Weyl}
 
 `hcrit : Qop2 a = lam • a` leaves `lam` free. `Le_self` rewrites `Pcubic2 a` as `innerOp2 a (Qop2 a)`, substitutes `hcrit`, pulls the scalar out and uses `normSq2 a = 1`, giving `Pcubic2 a = lam`. The inverse `(Pcubic2 a)⁻¹` is then cancelled against `lam` using `hθ`. This is the record's $\theta=P(W)$ at a unit critical point, derived rather than assumed, and it is correct.
 
-The exact form $Q(a)=\lambda a$ is the record's criticality equation. The record notes (closing paragraph of the first-variation derivation) that turning "critical on the Weyl sphere" into $Q(W)=\theta W$ rather than $\operatorname{proj}_{\mathcal W}Q(W)=\theta W$ needs $\operatorname{Ric}(Q(W))=0$, which is off file. So `hcrit` is an extra hypothesis relative to local maximality alone, carried unchanged from `L24_weyl` (r1194), and it matches the record's "Let $W$ be a critical point".
+The exact form $Q(a)=\lambda a$ is the record's criticality equation. The record notes (closing paragraph of the first-variation derivation) that turning "critical on the Weyl sphere" into $Q(W)=\theta W$ rather than $\mathop{\mathrm{proj}}_{\mathcal W}Q(W)=\theta W$ needs $\mathop{\mathrm{Ric}}(Q(W))=0$, which is off file. So `hcrit` is an extra hypothesis relative to local maximality alone, carried unchanged from `L24_weyl` (r1194), and it matches the record's "Let $W$ be a critical point".
 
 ## 5. Non-vacuity
 
@@ -56,7 +56,7 @@ The file exhibits no object. A witness would need a unit Weyl operator that is a
 
 - **At `Fintype.card ι ≤ 3`** the Weyl space is zero, so `normSq2 a = 1 ∧ IsWeyl2 a` is unsatisfiable and both theorems are vacuous there. This matches the record, whose lemma concerns $n\ge4$.
 - **Existence by compactness is not typed for this problem.** `SphereAttains.exists_max` is generic over a finite-dimensional `NormedSpace`, and [Bivectors2.lean](../lean/HamiltonsCubic/Base/Bivectors2.lean) records that the `normSq2` norm on `CurvOp2` is not registered as an instance. No theorem in the layer produces an `a` with `IsLocalMaxOn Pcubic2 {R | normSq2 R = 1 ∧ IsWeyl2 R} a` (grep over `exists_isMaxOn`, `IsCompact.exists`, `IsLocalMaxOn Pcubic2`).
-- **Exact criticality at a maximiser** needs the off-file $\operatorname{Ric}(Q(W))=0$ (section 4). A compactness argument alone would give `hmax` but not `hcrit`.
+- **Exact criticality at a maximiser** needs the off-file $\mathop{\mathrm{Ric}}(Q(W))=0$ (section 4). A compactness argument alone would give `hmax` but not `hcrit`.
 
 So `L24_eigen` and `L24_simple` are vacuous exactly if no such $a$ exists. The record asserts maximisers exist by compactness and that $\theta>0$ at a global one, which makes the hypotheses satisfiable in the record's mathematics at $n\ge4$, but nothing in Lean shows it. The INDEX row's sentence "No object satisfying `L24_weyl`'s hypotheses is exhibited in Lean" is accurate, and could add that the existence of a maximiser with exact criticality is untyped.
 
@@ -75,4 +75,4 @@ No `sorryAx`, no `native_decide` axiom.
 ## 7. Recommended repairs
 
 1. Add to the L24 row's "Not typed" list, and to the module docstring of [L24Eigen.lean](../lean/HamiltonsCubic/Results/L24Eigen.lean): the $L_e$-invariance of $W^\perp$ (Lemma L125's step, two lines from `Le_self` and `foxTri2_symm_right`), and the spectral step from per-eigenvector bounds to $\lambda_{\max}$ of the self-adjoint restriction.
-2. Add to the row's non-vacuity sentence that existence of a local maximiser of `Pcubic2` on the Weyl sphere is untyped, and that exact criticality there rests on the off-file $\operatorname{Ric}(Q(W))=0$.
+2. Add to the row's non-vacuity sentence that existence of a local maximiser of `Pcubic2` on the Weyl sphere is untyped, and that exact criticality there rests on the off-file $\mathop{\mathrm{Ric}}(Q(W))=0$.

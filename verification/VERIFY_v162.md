@@ -9,7 +9,7 @@ I read [BRIEF_L34.md](BRIEF_L34.md) cold and worked from [conventions.md](../fin
 | 1 | **The canonical statement.** For $m=6$ and $m=8$ there is a $W\in\mathrm{Weyl}_m$ with exactly two negative eigenvalues and $\dim U=m$ | **PROVEN** |
 | 2 | $m=8$, orthogonal planes: spectrum $\{-1/\sqrt3\ (\times2),\ 1/(2\sqrt3)\ (\times4)\}$ and $\theta=-\sqrt3/2$ | **CONFIRMED, EXACT** |
 | 3 | $m=6$, planes meeting in a 2-plane: spectrum $(-3,-1,1,1,1,1)/\sqrt{14}$ and $\theta=-1.030865$ | **CONFIRMED, EXACT**, the closed form is $\theta=-27\sqrt{14}/98$ |
-| 4 | $\operatorname{tr}W^\#=-\lVert W\rVert^2$ at both witnesses | **CONFIRMED, EXACT**, $-12$ and $-14$ |
+| 4 | $\mathop{\mathrm{tr}}W^\#=-\lVert W\rVert^2$ at both witnesses | **CONFIRMED, EXACT**, $-12$ and $-14$ |
 | 5 | "Both defining conditions are linear, so the sum is a $\mathrm{Weyl}_m$ element whatever the planes do" | **HOLDS**, with one unstated step: that padding preserves membership |
 | 6 | "each summand contributes exactly one negative eigenvalue" as the reason the sum has exactly two | **NON SEQUITUR at the $m=6$ witness**; the conclusion holds, by the exhibited spectrum |
 | 7 | "the support is the union of the planes" as the reason $\dim U=m$ | **NON SEQUITUR**; the conclusion holds, by a reason the block does not give |
@@ -26,7 +26,7 @@ I read [BRIEF_L34.md](BRIEF_L34.md) cold and worked from [conventions.md](../fin
 
 ## One-line summary
 
-**The existence statement is true and both exhibited objects are exactly as recorded, I rebuilt each in closed form and reproduced both spectra, both $\theta$ values and both $\operatorname{tr}W^\#$, while two of the three reasons the construction paragraph gives are non sequiturs whose conclusions happen to hold, three hypotheses the construction uses are stated nowhere, the "conflict" the block records against [isotropy-cap.md](../findings/isotropy-cap.md) does not exist, and the landscape bullet's $+0.485$ is contradicted by the record's own figures.**
+**The existence statement is true and both exhibited objects are exactly as recorded, I rebuilt each in closed form and reproduced both spectra, both $\theta$ values and both $\mathop{\mathrm{tr}}W^\#$, while two of the three reasons the construction paragraph gives are non sequiturs whose conclusions happen to hold, three hypotheses the construction uses are stated nowhere, the "conflict" the block records against [isotropy-cap.md](../findings/isotropy-cap.md) does not exist, and the landscape bullet's $+0.485$ is contradicted by the record's own figures.**
 
 ## 0. Conventions, fixed once
 
@@ -36,9 +36,9 @@ Quoted from [conventions.md](../findings/conventions.md) rather than restated.
 - $Q(W)$ is "Hamilton's quadratic map $W^2+W^\#$, sending $\mathcal W_n$ to itself"; $P(W)$ is "the cubic form $\langle W,Q(W)\rangle$"; $\theta$ is "$P(W)/\lVert W\rVert^3$".
 - $T$, third sense: "the fully symmetric trilinear form $T(X,Y,Z)=\langle X\circ Y,Z\rangle$ on $\mathcal W_n$", and the $\circ$ product is "$X\circ Y=\tfrac12(Q(X+Y)-Q(X)-Q(Y))$".
 - "$\#$ is the halved Böhm–Wilking product, $vv^{\mathsf T}\#ww^{\mathsf T}=\tfrac12[v,w][v,w]^{\mathsf T}$".
-- "**The $\tfrac12$ goes at the $\Lambda^2$ level, not the operator level.** The inner product is $\tfrac12\operatorname{tr}(X^{\mathsf T}Y)$ at the $\Lambda^2$ level and plain Frobenius on the pair matrix."
+- "**The $\tfrac12$ goes at the $\Lambda^2$ level, not the operator level.** The inner product is $\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$ at the $\Lambda^2$ level and plain Frobenius on the pair matrix."
 - "A bivector's norm, and the record runs in the first of these: $\lVert\varphi_{ab}\rVert^2=1$ under the half-trace pairing of the bullet above, which is the one every result uses and which makes $\{\varphi_{ab}\}_{a<b}$ orthonormal".
-- "$W$ is the operator on $\Lambda^2$, where $\sum_\alpha\lambda_\alpha^2=\operatorname{tr}(W^2)=1$."
+- "$W$ is the operator on $\Lambda^2$, where $\sum_\alpha\lambda_\alpha^2=\mathop{\mathrm{tr}}(W^2)=1$."
 - "**Padding commutes with $Q$**, and preserves both the norm and $\theta$. The stratum reduction turns on this."
 - "**Structure constants** $c_{abc}=\langle[v_a,v_b],v_c\rangle$ are **totally antisymmetric**… so $T_{abc}=c_{abc}^2$ is totally symmetric and vanishes when two indices coincide."
 - $\mathfrak m$: "**$\mathfrak m$ carries three incompatible senses across the record**, this one, [Lemma L36](../findings/isotropy-cap.md)'s whole negative eigenspace, and [target.md](../findings/target.md)'s symmetric-pair odd part, so read it from context." The refuted B0 statement uses the second.
@@ -89,7 +89,7 @@ The statement is **purely existential**, there are no antecedent hypotheses on $
 
 ## 2. The $m=8$ witness, rebuilt cold
 
-Take $V_1=\langle e_1,e_2,e_3,e_4\rangle$ and $V_2=\langle e_5,e_6,e_7,e_8\rangle$, orthogonal 4-planes of $\mathbb R^8$. Write $\varphi_{ab}=E_{ab}-E_{ba}$, so $\lVert\varphi_{ab}\rVert^2=\tfrac12\operatorname{tr}(\varphi^{\mathsf T}\varphi)=1$ and $\{\varphi_{ab}\}_{a<b}$ is orthonormal, as [conventions.md](../findings/conventions.md) fixes. The self-dual basis of $\Lambda^+(V_1)$ is
+Take $V_1=\langle e_1,e_2,e_3,e_4\rangle$ and $V_2=\langle e_5,e_6,e_7,e_8\rangle$, orthogonal 4-planes of $\mathbb R^8$. Write $\varphi_{ab}=E_{ab}-E_{ba}$, so $\lVert\varphi_{ab}\rVert^2=\tfrac12\mathop{\mathrm{tr}}(\varphi^{\mathsf T}\varphi)=1$ and $\{\varphi_{ab}\}_{a<b}$ is orthonormal, as [conventions.md](../findings/conventions.md) fixes. The self-dual basis of $\Lambda^+(V_1)$ is
 
 $$a=\tfrac1{\sqrt2}(\varphi_{12}+\varphi_{34}),\qquad c=\tfrac1{\sqrt2}(\varphi_{13}-\varphi_{24}),\qquad d=\tfrac1{\sqrt2}(\varphi_{14}+\varphi_{23}),$$
 
@@ -109,9 +109,9 @@ Take $q=r=1$, so $W_1=-2\,aa^{\mathsf T}+cc^{\mathsf T}+dd^{\mathsf T}$ on $\Lam
 
 $$W_1^\#=2\lambda_a\lambda_c\,dd^{\mathsf T}+2\lambda_c\lambda_d\,aa^{\mathsf T}+2\lambda_d\lambda_a\,cc^{\mathsf T}=-4\,dd^{\mathsf T}+2\,aa^{\mathsf T}-4\,cc^{\mathsf T}.$$
 
-Then $\operatorname{tr}W_1^\#=-4+2-4=-6=-\lVert W_1\rVert^2$, which is the record's $\operatorname{tr}(W^\#)=-\lVert W\rVert^2$, an independent confirmation that the padded $W_4(1,1)$ really is in $\mathcal W_m$, since that identity holds "because $Q$ preserves the trace-free Weyl space". And
+Then $\mathop{\mathrm{tr}}W_1^\#=-4+2-4=-6=-\lVert W_1\rVert^2$, which is the record's $\mathop{\mathrm{tr}}(W^\#)=-\lVert W\rVert^2$, an independent confirmation that the padded $W_4(1,1)$ really is in $\mathcal W_m$, since that identity holds "because $Q$ preserves the trace-free Weyl space". And
 
-$$P(W_1)=\operatorname{tr}W_1^3+\langle W_1,W_1^\#\rangle=(-8+1+1)+\big((-2)(2)+(1)(-4)+(1)(-4)\big)=-6-12=-18,$$
+$$P(W_1)=\mathop{\mathrm{tr}}W_1^3+\langle W_1,W_1^\#\rangle=(-8+1+1)+\big((-2)(2)+(1)(-4)+(1)(-4)\big)=-6-12=-18,$$
 
 against $\lVert W_1\rVert^3=6^{3/2}$, giving $\theta(W_1)=-18/6^{3/2}=-\sqrt{3/2}$. That is the record's "its negative is the B0 base-case family at $\theta=+\sqrt{3/2}$", confirmed independently: $W_4(1,1)=-W_{\mathbb{CP}^2}$ padded.
 
@@ -119,7 +119,7 @@ against $\lVert W_1\rVert^3=6^{3/2}$, giving $\theta(W_1)=-18/6^{3/2}=-\sqrt{3/2
 
 $\Lambda^2V_1\perp\Lambda^2V_2$, since no basis bivector has indices in both planes, so $\langle W_1,W_2\rangle=0$ and $\lVert W\rVert^2=6+6=12$. The spectrum is the union of the two: $\{-2,-2,1,1,1,1\}$ together with $22$ zeros in the remaining $28-6$ dimensions of $\Lambda^2\mathbb R^8$. Normalising by $\sqrt{12}$,
 
-$$\operatorname{spec}(W)/\lVert W\rVert=\{-2/\sqrt{12}\ (\times2),\ 1/\sqrt{12}\ (\times4)\}=\{-1/\sqrt3\ (\times2),\ 1/(2\sqrt3)\ (\times4)\}. \qquad\textbf{Confirmed.}$$
+$$\mathop{\mathrm{spec}}(W)/\lVert W\rVert=\{-2/\sqrt{12}\ (\times2),\ 1/\sqrt{12}\ (\times4)\}=\{-1/\sqrt3\ (\times2),\ 1/(2\sqrt3)\ (\times4)\}. \qquad\textbf{Confirmed.}$$
 
 Norm check: $2\cdot\tfrac13+4\cdot\tfrac1{12}=\tfrac23+\tfrac13=1$. Trace check: $-2/\sqrt3+4/(2\sqrt3)=0$.
 
@@ -127,7 +127,7 @@ $P$ is additive here. $W_1^2$ and $W_1^\#$ are both supported on $\Lambda^2V_1$ 
 
 $$\theta=\frac{-36}{12^{3/2}}=\frac{-3}{\sqrt{12}}=-\frac{\sqrt3}{2}.\qquad\textbf{Confirmed, exactly.}$$
 
-$\operatorname{tr}W^\#$: $[\mathfrak{so}(V_1),\mathfrak{so}(V_2)]=0$ so $W_1\#W_2=0$, and $\operatorname{tr}W^\#=-6-6=-12=-\lVert W\rVert^2$. **Confirmed.**
+$\mathop{\mathrm{tr}}W^\#$: $[\mathfrak{so}(V_1),\mathfrak{so}(V_2)]=0$ so $W_1\#W_2=0$, and $\mathop{\mathrm{tr}}W^\#=-6-6=-12=-\lVert W\rVert^2$. **Confirmed.**
 
 ### 2d. $\dim U=8$, checked rather than taken on trust
 
@@ -146,21 +146,21 @@ Reading off coefficients in the orthonormal $\{\varphi_{ij}\}$: the only nonzero
 
 $$\langle a,b\rangle=\tfrac12\langle\varphi_{12}+\varphi_{34},\ \varphi_{34}+\varphi_{56}\rangle=\tfrac12,$$
 
-every other cross pairing being zero. So $\Lambda^+(V_1)$ and $\Lambda^+(V_2)$ meet only at $0$, and their correlation matrix in these bases is $\operatorname{diag}(\tfrac12,0,0)$.
+every other cross pairing being zero. So $\Lambda^+(V_1)$ and $\Lambda^+(V_2)$ meet only at $0$, and their correlation matrix in these bases is $\mathop{\mathrm{diag}}(\tfrac12,0,0)$.
 
 ### 3b. The spectrum
 
 With $q=r=1$ on both planes, $W=W_1+W_2$ with $W_1=-2aa^{\mathsf T}+cc^{\mathsf T}+dd^{\mathsf T}$ and $W_2=-2bb^{\mathsf T}+c'c'^{\mathsf T}+d'd'^{\mathsf T}$. Since $c,d,c',d'$ are mutually orthonormal and orthogonal to $S:=\mathrm{span}(a,b)$, the operator splits: eigenvalue $1$ on each of $c,d,c',d'$, and $-2(aa^{\mathsf T}+bb^{\mathsf T})$ on $S$. For unit $a,b$ with $\langle a,b\rangle=\tfrac12$, the vectors $a\pm b$ are eigenvectors of $aa^{\mathsf T}+bb^{\mathsf T}$ with eigenvalues $1\pm\tfrac12$, so $-2(aa^{\mathsf T}+bb^{\mathsf T})$ has eigenvalues $-3$ and $-1$. Hence
 
-$$\operatorname{spec}(W)=\{-3,-1,1,1,1,1\}\ \cup\ \{0^{\times9}\}\ \text{ in }\ \Lambda^2\mathbb R^6\ (\dim 15).$$
+$$\mathop{\mathrm{spec}}(W)=\{-3,-1,1,1,1,1\}\ \cup\ \{0^{\times9}\}\ \text{ in }\ \Lambda^2\mathbb R^6\ (\dim 15).$$
 
 $\lVert W\rVert^2=9+1+4=14$, so normalised the spectrum is $(-3,-1,1,1,1,1)/\sqrt{14}$. **Confirmed.** Trace $-3-1+4=0$; norm $14/14=1$.
 
-The norm is also reachable the other way, which is a cross-check on $\langle a,b\rangle$: $\lVert W_1+W_2\rVert^2=6+6+2\langle W_1,W_2\rangle$ with $\langle W_1,W_2\rangle=\operatorname{tr}(W_1W_2)=(-2)(-2)\langle a,b\rangle^2=1$, giving $14$.
+The norm is also reachable the other way, which is a cross-check on $\langle a,b\rangle$: $\lVert W_1+W_2\rVert^2=6+6+2\langle W_1,W_2\rangle$ with $\langle W_1,W_2\rangle=\mathop{\mathrm{tr}}(W_1W_2)=(-2)(-2)\langle a,b\rangle^2=1$, giving $14$.
 
 ### 3c. $\theta$, in closed form
 
-The cross terms are live here, so I compute them. $W_1^2=4aa^{\mathsf T}+cc^{\mathsf T}+dd^{\mathsf T}$ and, from §2b, $W_1^\#=2aa^{\mathsf T}-4cc^{\mathsf T}-4dd^{\mathsf T}$. Since $c,d\perp\operatorname{supp}W_2$ and $\langle a,W_2a\rangle=-2\langle a,b\rangle^2=-\tfrac12$,
+The cross terms are live here, so I compute them. $W_1^2=4aa^{\mathsf T}+cc^{\mathsf T}+dd^{\mathsf T}$ and, from §2b, $W_1^\#=2aa^{\mathsf T}-4cc^{\mathsf T}-4dd^{\mathsf T}$. Since $c,d\perp\mathop{\mathrm{supp}}W_2$ and $\langle a,W_2a\rangle=-2\langle a,b\rangle^2=-\tfrac12$,
 
 $$\langle W_1^2,W_2\rangle=4\big(-\tfrac12\big)=-2,\qquad \langle W_1^\#,W_2\rangle=2\big(-\tfrac12\big)=-1,\qquad \langle Q(W_1),W_2\rangle=-3.$$
 
@@ -172,7 +172,7 @@ $$\theta=\frac{-54}{14^{3/2}}=-\frac{27}{7\sqrt{14}}=-\frac{27\sqrt{14}}{98}=-1.
 
 which is the record's $-1.030865$ to every printed digit. **Confirmed, exactly, and the closed form $-27\sqrt{14}/98$ is new to the record, the block prints only the decimal.**
 
-$\operatorname{tr}W^\#$: polarising $\operatorname{tr}(X^\#)=-\lVert X\rVert^2$ gives $\operatorname{tr}(X\#Y)=-\langle X,Y\rangle$, so $\operatorname{tr}W^\#=-6-6+2(-1)=-14=-\lVert W\rVert^2$. **Confirmed.**
+$\mathop{\mathrm{tr}}W^\#$: polarising $\mathop{\mathrm{tr}}(X^\#)=-\lVert X\rVert^2$ gives $\mathop{\mathrm{tr}}(X\#Y)=-\langle X,Y\rangle$, so $\mathop{\mathrm{tr}}W^\#=-6-6+2(-1)=-14=-\lVert W\rVert^2$. **Confirmed.**
 
 ### 3d. $\dim U=6$
 
@@ -190,7 +190,7 @@ $-W$ at $m=6$ lies in $\mathrm{Weyl}_6$ with $\theta=+1.0308648$, which must sit
 
 **The two conditions are first Bianchi and Ricci-flatness**, alongside the pair symmetries that make $W$ an operator on $\Lambda^2$ at all. First Bianchi is $\mathrm{Alt}(W)=0$, and [conventions.md](../findings/conventions.md) fixes $\mathrm{Alt}$ as "the ORTHOGONAL PROJECTION of $S^2(\Lambda^2)$ onto $\Lambda^4$", a linear map, so its kernel is a subspace. Ricci-flatness is $\mathrm{Ric}(W)=0$ with $\mathrm{Ric}$ "the adjoint of $\cdot\wedge\mathrm{id}$", again linear. So $\mathrm{Weyl}_m$ is a linear subspace and is closed under addition **with no hypothesis relating the summands**, which is precisely what "whatever the planes do" needs. **The argument is complete for what it argues, and both conditions are linear in the sense used.**
 
-**What it does not argue is that each padded summand is in $\mathrm{Weyl}_m$ to begin with.** That is a separate fact and it is not in the block. It is one line: extending $W_{ijkl}$ by zero outside $V$, first Bianchi holds because all four indices lie in $V$ or all three terms vanish, and $\widetilde{\mathrm{Ric}}_{ik}=\sum_j\widetilde W_{ijkj}$ is the $V$-internal Ricci when $i,k\in V$ and zero otherwise. The record has it at [conventions.md](../findings/conventions.md) ("Padding commutes with $Q$") and at [lean/INDEX.md](../lean/INDEX.md) row L34, machine-checked. **Recorded as an unstated step, not a defect.** I independently confirmed it holds for these objects in §2b, where the padded $W_4(1,1)$ satisfies $\operatorname{tr}W_1^\#=-\lVert W_1\rVert^2$.
+**What it does not argue is that each padded summand is in $\mathrm{Weyl}_m$ to begin with.** That is a separate fact and it is not in the block. It is one line: extending $W_{ijkl}$ by zero outside $V$, first Bianchi holds because all four indices lie in $V$ or all three terms vanish, and $\widetilde{\mathrm{Ric}}_{ik}=\sum_j\widetilde W_{ijkj}$ is the $V$-internal Ricci when $i,k\in V$ and zero otherwise. The record has it at [conventions.md](../findings/conventions.md) ("Padding commutes with $Q$") and at [lean/INDEX.md](../lean/INDEX.md) row L34, machine-checked. **Recorded as an unstated step, not a defect.** I independently confirmed it holds for these objects in §2b, where the padded $W_4(1,1)$ satisfies $\mathop{\mathrm{tr}}W_1^\#=-\lVert W_1\rVert^2$.
 
 ## 5. The two non sequiturs
 
@@ -208,11 +208,11 @@ $-W$ at $m=6$ lies in $\mathrm{Weyl}_6$ with $\theta=+1.0308648$, which must sit
 
 **Located.** Same sentence. The block's only support for $\dim U=m$.
 
-**The failure, concretely.** The support of $W$ and $U=\mathrm{im}\,v_{N-1}+\mathrm{im}\,v_N$ are different objects, and $U\subseteq\operatorname{supp}W$ can be strict. **The record carries the witness in the same file**: [stratum-two-negative.md:212](../findings/stratum-two-negative.md) exhibits $\mathrm{pad}_{V_1}(W_{\mathbb{CP}^2})+\mathrm{pad}_{V_2}(W_{\mathbb{CP}^2})$ on $\mathbb R^8$ (the sign-flip of L34's own $m=8$ object), whose support is all of $\mathbb R^8$ while "$U$ built from two of them has $\dim U=4<8$". So "support $=$ union of planes" demonstrably does not deliver $\dim U=m$.
+**The failure, concretely.** The support of $W$ and $U=\mathrm{im}\,v_{N-1}+\mathrm{im}\,v_N$ are different objects, and $U\subseteq\mathop{\mathrm{supp}}W$ can be strict. **The record carries the witness in the same file**: [stratum-two-negative.md:212](../findings/stratum-two-negative.md) exhibits $\mathrm{pad}_{V_1}(W_{\mathbb{CP}^2})+\mathrm{pad}_{V_2}(W_{\mathbb{CP}^2})$ on $\mathbb R^8$ (the sign-flip of L34's own $m=8$ object), whose support is all of $\mathbb R^8$ while "$U$ built from two of them has $\dim U=4<8$". So "support $=$ union of planes" demonstrably does not deliver $\dim U=m$.
 
 Two secondary points on the same phrase: the union of two planes is not a subspace, and what is meant is their **span**; and $N$ is $\binom m2$ here while [conventions.md](../findings/conventions.md) tables $N=\binom n2$, so the statement runs its index convention in $n$ while its dimension is $m$.
 
-**The most charitable reading.** With **exactly** two negative eigenvalues, $U$ is the sum of the images of the whole negative eigenspace, and one can ask whether that forces $U=\operatorname{supp}W$. It does not follow from the block's sentence either way; what actually delivers it is that each summand's negative eigenvector is a self-dual form on its 4-plane, hence a complex structure, hence invertible on that plane. **That reason exists on the record, [lean/INDEX.md](../lean/INDEX.md) row L34, "the negative eigenvector is a complex structure, so `-a` inverts it and it has no kernel, hence its image is the whole 4-plane", and it is not in the block.** The same row records "Also owed: `dim U = m` and the `θ` values".
+**The most charitable reading.** With **exactly** two negative eigenvalues, $U$ is the sum of the images of the whole negative eigenspace, and one can ask whether that forces $U=\mathop{\mathrm{supp}}W$. It does not follow from the block's sentence either way; what actually delivers it is that each summand's negative eigenvector is a self-dual form on its 4-plane, hence a complex structure, hence invertible on that plane. **That reason exists on the record, [lean/INDEX.md](../lean/INDEX.md) row L34, "the negative eigenvector is a complex structure, so `-a` inverts it and it has no kernel, hence its image is the whole 4-plane", and it is not in the block.** The same row records "Also owed: `dim U = m` and the `θ` values".
 
 **Verdict: the reason is a non sequitur; the conclusion holds, and I verified it directly at both witnesses in §2d and §3d.** Repair is one clause.
 
@@ -339,7 +339,7 @@ I considered reporting the block's provenance note ("the duplication having been
 
 # PROVEN, hypotheses corrected
 
-**The statement is true and I rebuilt both witnesses from the definitions in closed form.** At $m=8$: two copies of $W_4(1,1)$ on orthogonal 4-planes, spectrum $\{-1/\sqrt3\,(\times2),\,1/(2\sqrt3)\,(\times4)\}$, $\theta=-\sqrt3/2$, $\operatorname{tr}W^\#=-12$, $\dim U=8$ under every basis of the degenerate eigenplane. At $m=6$: two copies on planes meeting in $\langle e_3,e_4\rangle$ under the order-preserving identification, spectrum $(-3,-1,1,1,1,1)/\sqrt{14}$, $P=-54$, $\theta=-27\sqrt{14}/98=-1.0308648\ldots$, $\operatorname{tr}W^\#=-14$, $\dim U=6$. **Every printed value in the statement is exactly right.**
+**The statement is true and I rebuilt both witnesses from the definitions in closed form.** At $m=8$: two copies of $W_4(1,1)$ on orthogonal 4-planes, spectrum $\{-1/\sqrt3\,(\times2),\,1/(2\sqrt3)\,(\times4)\}$, $\theta=-\sqrt3/2$, $\mathop{\mathrm{tr}}W^\#=-12$, $\dim U=8$ under every basis of the degenerate eigenplane. At $m=6$: two copies on planes meeting in $\langle e_3,e_4\rangle$ under the order-preserving identification, spectrum $(-3,-1,1,1,1,1)/\sqrt{14}$, $P=-54$, $\theta=-27\sqrt{14}/98=-1.0308648\ldots$, $\mathop{\mathrm{tr}}W^\#=-14$, $\dim U=6$. **Every printed value in the statement is exactly right.**
 
 "Hypotheses corrected" rather than plain "proven" because the construction paragraph is not a proof of what it says as it stands, and four things must be added before it is:
 
@@ -354,6 +354,6 @@ I considered reporting the block's provenance note ("the duplication having been
 
 **The statement is existential, so falsifying it means proving that no $W\in\mathrm{Weyl}_m$ with exactly two negative eigenvalues has $\dim U=m$, at $m=6$ or at $m=8$.** A proof of that shape would have to be an obstruction argument: the natural one is the route [isotropy-cap.md:370](../findings/isotropy-cap.md) reports for $m\ge10$, a convex feasibility screen over rank classes of the two negative eigenvectors, showing the class $(4,4)$ with equal singular values is the only near-feasible one and then closing it.
 
-**What I did.** I attacked it from the other side, since one valid witness ends the question: I rebuilt both objects from the definitions rather than from the record's description of them, and checked every clause independently, membership through the linear conditions and through the independent identity $\operatorname{tr}W^\#=-\lVert W\rVert^2$; the count from the exact spectra rather than from the summands; $\dim U$ from the images of the eigenvectors as skew matrices rather than from the support. **Every check passed, and two of them (the $m=6$ spectrum and its $\theta$) came out as exact closed forms the record prints only as decimals.** I also looked for the falsifier where it would most likely hide (at the overlapping-plane witness, where the block's own reasoning breaks) and found the conclusion holds there even though the reason does not.
+**What I did.** I attacked it from the other side, since one valid witness ends the question: I rebuilt both objects from the definitions rather than from the record's description of them, and checked every clause independently, membership through the linear conditions and through the independent identity $\mathop{\mathrm{tr}}W^\#=-\lVert W\rVert^2$; the count from the exact spectra rather than from the summands; $\dim U$ from the images of the eigenvectors as skew matrices rather than from the support. **Every check passed, and two of them (the $m=6$ spectrum and its $\theta$) came out as exact closed forms the record prints only as decimals.** I also looked for the falsifier where it would most likely hide (at the overlapping-plane witness, where the block's own reasoning breaks) and found the conclusion holds there even though the reason does not.
 
 **Where a falsifier could still live, and it is not at $m=6$ or $m=8$.** The screen [isotropy-cap.md:370](../findings/isotropy-cap.md) reports is "exhaustive over all 19 admissible rank classes" at $m=10$ and every one infeasible, which is the shape a real obstruction at $m\ge10$ would take. **That is where the statement's converse would have to be argued, and this round says nothing about it.** I ran nothing numerical; the screen is quoted, not repeated.

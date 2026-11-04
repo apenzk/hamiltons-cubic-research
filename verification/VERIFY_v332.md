@@ -32,7 +32,7 @@
 ## 1. The bracket expression for $M$
 
 With $A=\mathrm{ad}(v_k)$, $B=\mathrm{ad}(v_l)$ and $W=\mathrm{diag}(\lambda)$ in the eigenbasis,
-$$M_{kl}=\operatorname{tr}(AWBW)=\sum_{a,b}A_{ab}\lambda_bB_{ba}\lambda_a=\sum_{a,b}c_{kba}\,c_{lab}\,\lambda_a\lambda_b=-\sum_{a,b}\lambda_a\lambda_b\,c_{kab}c_{lab}=-S_{kl},$$
+$$M_{kl}=\mathop{\mathrm{tr}}(AWBW)=\sum_{a,b}A_{ab}\lambda_bB_{ba}\lambda_a=\sum_{a,b}c_{kba}\,c_{lab}\,\lambda_a\lambda_b=-\sum_{a,b}\lambda_a\lambda_b\,c_{kab}c_{lab}=-S_{kl},$$
 using $c_{kba}=-c_{kab}$. The index formula gives $(W^\#)_{kl}=\tfrac12\sum_{cd}c_{kcd}c_{lcd}\lambda_c\lambda_d=\tfrac12S_{kl}$. So $\langle v_k,W^\#v_l\rangle=-\tfrac12M_{kl}$, which is the polarised identity quoted in Passage A, with the $\tfrac12$ of Passage B in place. $M$ is symmetric by cyclicity of the trace. Claim 1 holds.
 
 ## 2. LHS is criticality

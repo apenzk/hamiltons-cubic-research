@@ -8,7 +8,7 @@
 
 **K1 CONFIRMED, and the moral drawn from it was wrong.** The generic $V$ was a fair representative and the identity does fail on the raw support block. But the brief concluded that any proof must therefore use the Weyl conditions, and that is false: the raw $(pp,\mathrm{mix})$ block is **invariant** under $\mathrm{sharp\_bilin}(I_p,\cdot)$, the operator is exactly symmetric there, and the block splits as $\Lambda^2(\mathbb R^p)\otimes\mathbb R^p\otimes\mathbb R^q=(\Lambda^3\oplus X_p\oplus\mathbb R^p)\otimes\mathbb R^q$ with eigenvalues $1$, $-\tfrac12$ and $\tfrac{p-2}2$, verified $p=3\ldots7$. So a support-block computation does reach the constant, with Schur applied in the ambient block and nothing needed about $\mathrm{Weyl}_n$. The Weyl conditions then cut that block **exactly along the isotypic split**: $\Lambda^3\otimes\mathbb R^q$ carries all the Bianchi obstruction, $\mathbb R^p\otimes\mathbb R^q$ all the Ricci obstruction, and $X_p\otimes\mathbb R^q$ is precisely their intersection.
 
-**K2 CONFIRMED and strengthened, the kernel is redundant.** $X_p\otimes\mathbb R^q=\{V\in\mathrm{Weyl}_n:\operatorname{supp}V\subseteq(pp,\mathrm{mix})\}$ at all twelve splits to $n=15$, so the summand has a description with no representation theory and no $\ker L_e$ in it. Dimensions confirmed at 17 splits, $n=6\ldots11$.
+**K2 CONFIRMED and strengthened, the kernel is redundant.** $X_p\otimes\mathbb R^q=\{V\in\mathrm{Weyl}_n:\mathop{\mathrm{supp}}V\subseteq(pp,\mathrm{mix})\}$ at all twelve splits to $n=15$, so the summand has a description with no representation theory and no $\ker L_e$ in it. Dimensions confirmed at 17 splits, $n=6\ldots11$.
 
 **K3 CONFIRMED**, over full orthonormal bases to $6.7\times10^{-15}$, pushed to $n=15$.
 

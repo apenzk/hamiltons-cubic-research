@@ -61,7 +61,7 @@ Quoted from [findings/conventions.md](../findings/conventions.md), not restated.
 ## 1. The corrected embedding, claim 1, re-derived
 
 For $A,B$ diagonal in a common frame, $(A\owedge B)_{ijij}=a_ib_j+a_jb_i$ and every other component with $\{i,j\}\ne\{k,l\}$ vanishes, so $A\owedge B$ is coordinate-diagonal with $w_{ij}=a_ib_j+a_jb_i$. Also
-$$\mathrm{Ric}(A\owedge B)=(\operatorname{tr}A)B+(\operatorname{tr}B)A-AB-BA .$$
+$$\mathrm{Ric}(A\owedge B)=(\mathop{\mathrm{tr}}A)B+(\mathop{\mathrm{tr}}B)A-AB-BA .$$
 
 **The pre-projection object.** $\mathrm{Ric}(h\owedge g_q)=0\cdot g_q+m\,h-0-0=m\,h\ne0$: the entry's opening sentence, confirmed. Its pair matrix is $h_a$ on cross planes and $0$ on both in-block families, which is exactly the eigenvalue list the entry attributes to the withdrawn first version. **The entry's diagnosis of its own earlier error is correct.**
 

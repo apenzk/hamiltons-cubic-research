@@ -11,7 +11,7 @@ Reviewer **r977**, working from [BRIEF_I106b_face.md](BRIEF_I106b_face.md) and t
 | 3 | maximising over the image is maximising $f$ over the group | mathematics | **CONFIRMED**, and the argmax correspondence is exact in both directions |
 | 4 | $\mathrm df_Q[Q\Omega]=2\langle Q^{\mathsf T}(A\circ Q),\Omega\rangle$ | mathematics | **CONFIRMED**, re-derived |
 | 5 | criticality is exactly symmetry of $Q^{\mathsf T}(A\circ Q)$ | mathematics | **CONFIRMED**, it is an equivalence and not one-way |
-| 6 | $\{\operatorname{tr}=0\}$ is a face relative to the affine hull | mathematics | **PLAUSIBLE**, the word "face" is used of a nonconvex set and needs a repair that is available |
+| 6 | $\{\mathop{\mathrm{tr}}=0\}$ is a face relative to the affine hull | mathematics | **PLAUSIBLE**, the word "face" is used of a nonconvex set and needs a repair that is available |
 | 7 | the second-order condition is batch 21 transported | a shape | **PLAUSIBLE but empty as stated**, and the condition itself is derived below |
 | 8 | avoidance is false, so the hand-down statement is what R28 needs | mixed | **REFUTED as reasoning**, the conclusion being true unconditionally and for a reason the block does not give |
 
@@ -20,13 +20,13 @@ Reviewer **r977**, working from [BRIEF_I106b_face.md](BRIEF_I106b_face.md) and t
 **The convex hull of the orthostochastic set is the whole Birkhoff polytope, so the maximum of $\langle R,A\rangle$ over $X_k$ is attained at a permutation matrix.** Three lines.
 
 1. $X_k\subseteq B_k$, because the rows and columns of $Q\in O(k)$ are unit vectors, so $Q^{\circ2}$ has nonnegative entries with all row and column sums $1$.
-2. Every permutation matrix lies in $X_k$, being $\varphi_r$ of itself, so $\operatorname{conv}(X_k)\supseteq\operatorname{conv}\{\text{permutations}\}=B_k$ by Birkhoff and von Neumann. With 1, $\operatorname{conv}(X_k)=B_k$.
+2. Every permutation matrix lies in $X_k$, being $\varphi_r$ of itself, so $\mathop{\mathrm{conv}}(X_k)\supseteq\mathop{\mathrm{conv}}\{\text{permutations}\}=B_k$ by Birkhoff and von Neumann. With 1, $\mathop{\mathrm{conv}}(X_k)=B_k$.
 3. A linear functional attains the same maximum on a set and on its convex hull, and on the polytope $B_k$ it attains it at a vertex. Hence $\max_{R\in X_k}\langle R,A\rangle=\max_{\sigma}\sum_k A_{\sigma(k)k}$, a linear assignment problem, attained **inside $X_k$** at the optimal permutation matrix.
 
 Four consequences, in descending order of how much they cost the block.
 
 - **R28's remaining obligation is discharged outright, not conditionally.** A permutation matrix splits in the source's two-sided sense: take the row set $\{\sigma(0)\}$ and the column set $\{0\}$, which is nonempty and proper for $k\ge2$ and satisfies both vanishing conditions. So *the maximum over the image is always attained at a splitting point*, with no hypothesis about the face at all.
-- **The face is not load-bearing.** The block's own theorem is the correct thing to want, and it is true, but the route to it runs through Birkhoff rather than through any property of $\{\operatorname{tr}=0\}$. Claim 6 becomes a true remark rather than a step.
+- **The face is not load-bearing.** The block's own theorem is the correct thing to want, and it is true, but the route to it runs through Birkhoff rather than through any property of $\{\mathop{\mathrm{tr}}=0\}$. Claim 6 becomes a true remark rather than a step.
 - **"The image never has to be parametrised" is right for a stronger reason than the block gives.** Neither the image nor the group has to be searched: the optimal frame is computed by the Hungarian algorithm in $O(k^3)$, exactly, for every $k$ at once.
 - **The optimal frame is a signed permutation of the field frame.** That is a statement about R28 worth more than the face: the extremal frame is the aligned one, up to a relabelling that the assignment names.
 
@@ -42,14 +42,14 @@ $p_k^{\mathsf T}\hat Up_k=\sum_iu_i(p_k)_i^2=(R^{\mathsf T}u)_k$ with $R=P^{\cir
 
 ## Claim 2, CONFIRMED, with the equality case
 
-$A=u(\beta\nu^{\circ2})^{\mathsf T}+c\nu^{\mathsf T}$ is a sum of two outer products, so $\operatorname{rank}A\le2$. Equality holds exactly when $u,c$ are independent **and** $\beta\nu^{\circ2},\nu$ are independent, and the second fails exactly when every $\nu_k$ lies in $\{0,\lambda\}$ for one $\lambda$.
+$A=u(\beta\nu^{\circ2})^{\mathsf T}+c\nu^{\mathsf T}$ is a sum of two outer products, so $\mathop{\mathrm{rank}}A\le2$. Equality holds exactly when $u,c$ are independent **and** $\beta\nu^{\circ2},\nu$ are independent, and the second fails exactly when every $\nu_k$ lies in $\{0,\lambda\}$ for one $\lambda$.
 
 **What breaks if the screens were run at generic $A$.** The rank matters in two places. The assignment optimum of a rank-$2$ $A$ of this shape is a rearrangement-type optimum and its statistics are not those of a generic cost matrix, so a face-landing frequency measured at generic $A$ answers a different question. In my own screen, the optimal $\sigma$ was a derangement in 5, 2 and 4 of 12 instances at $k=4,5,6$ drawn from R28's own two-outer-product family. A number drawn from a different ensemble would not be comparable, and the block's counts carry no statement about which ensemble produced them.
 
 ## Claim 3, CONFIRMED, and the quantifier is safe
 
 The value-level equality is immediate from $\varphi_r(O(k))=X_k$. The stronger statement the block actually uses is also true: since $f=\langle A,\cdot\rangle\circ\varphi_r$ with $\varphi_r$ onto $X_k$,
-$$\operatorname*{argmax}_{O(k)}f=\varphi_r^{-1}\Big(\operatorname*{argmax}_{X_k}\langle\cdot,A\rangle\Big),$$
+$$\mathop{\mathrm{argmax}}_{O(k)}f=\varphi_r^{-1}\Big(\mathop{\mathrm{argmax}}_{X_k}\langle\cdot,A\rangle\Big),$$
 so a maximiser of one gives a maximiser of the other in both directions, and every preimage of a maximiser is a maximiser. Fibres cause no trouble for this.
 
 **Where the fibres do cause trouble, and it is worth saying.** $\varphi_r^{-1}(R)=\{Q'\in O(k):\lvert Q'\rvert=\lvert Q\rvert\ \text{entrywise}\}$, which is generally strictly larger than the sign orbit $\{D_1QD_2\}$ (at $k=4$ the Hadamard point admits permuted sign patterns that are not sign flips of one another). More to the point, $\varphi_r$ fails to be a submersion exactly where an entry of $Q$ vanishes, which is where the face lives, so **a critical point of $f$ on $O(k)$ does not translate into a tangency statement about $X_k$**. That is the same obstruction the singular-locus route met, and the block should not be read as having restored the transfer.
@@ -59,7 +59,7 @@ so a maximiser of one gives a maximiser of the other in both directions, and eve
 $f(Q)=\sum_{i,k}A_{ik}Q_{ik}^2$, so for any matrix direction $Z$, $\mathrm df_Q[Z]=2\sum_{i,k}A_{ik}Q_{ik}Z_{ik}=2\langle A\circ Q,Z\rangle$. Both steps the brief asks about:
 
 - $\langle A,Q\circ Z\rangle=\sum_{i,k}A_{ik}Q_{ik}Z_{ik}=\langle A\circ Q,Z\rangle$, because the Hadamard product is entrywise and the pairing is a sum over entries. The Hadamard factor moves across the Frobenius pairing freely, and this needs nothing about $Q$.
-- $\langle M,Q\Omega\rangle=\operatorname{tr}(M^{\mathsf T}Q\Omega)=\langle Q^{\mathsf T}M,\Omega\rangle$, since $\langle Q^{\mathsf T}M,\Omega\rangle=\operatorname{tr}\big((Q^{\mathsf T}M)^{\mathsf T}\Omega\big)=\operatorname{tr}(M^{\mathsf T}Q\Omega)$. This needs nothing about $Q$ either, in particular not orthogonality.
+- $\langle M,Q\Omega\rangle=\mathop{\mathrm{tr}}(M^{\mathsf T}Q\Omega)=\langle Q^{\mathsf T}M,\Omega\rangle$, since $\langle Q^{\mathsf T}M,\Omega\rangle=\mathop{\mathrm{tr}}\big((Q^{\mathsf T}M)^{\mathsf T}\Omega\big)=\mathop{\mathrm{tr}}(M^{\mathsf T}Q\Omega)$. This needs nothing about $Q$ either, in particular not orthogonality.
 
 So $\mathrm df_Q[Q\Omega]=2\langle Q^{\mathsf T}(A\circ Q),\Omega\rangle$ as claimed.
 
@@ -79,13 +79,13 @@ Two riders. First, "criticality" means criticality of $f$ **restricted to $O(k)$
 
 ## Claim 6, PLAUSIBLE, with the word doing unlicensed work
 
-The three facts are correct. $\operatorname{tr}(Q^{\circ2})=\sum_iQ_{ii}^2\ge0$, vanishes exactly when $Q$ has zero diagonal, and is nonconstant on $X_k$ for $k\ge2$ (the identity gives $k$, any derangement gives $0$). The Lean triple `trace_image_eq`, `trace_image_nonneg` and `trace_image_eq_zero_iff` types them correctly and needs no hypothesis, as the brief says.
+The three facts are correct. $\mathop{\mathrm{tr}}(Q^{\circ2})=\sum_iQ_{ii}^2\ge0$, vanishes exactly when $Q$ has zero diagonal, and is nonconstant on $X_k$ for $k\ge2$ (the identity gives $k$, any derangement gives $0$). The Lean triple `trace_image_eq`, `trace_image_nonneg` and `trace_image_eq_zero_iff` types them correctly and needs no hypothesis, as the brief says.
 
-**The inference is where the block is loose.** "Face" is a notion for convex sets, and $X_k$ is not convex for $k\ge3$, so "a face of $X_k$" is undefined as written. The inference also needs $\operatorname{tr}$ nonconstant on $\operatorname{aff}(X_k)$ rather than on $X_k$, which is a different set. Both repairs are available and the conclusion survives either way.
+**The inference is where the block is loose.** "Face" is a notion for convex sets, and $X_k$ is not convex for $k\ge3$, so "a face of $X_k$" is undefined as written. The inference also needs $\mathop{\mathrm{tr}}$ nonconstant on $\mathop{\mathrm{aff}}(X_k)$ rather than on $X_k$, which is a different set. Both repairs are available and the conclusion survives either way.
 
-- $\operatorname{aff}(X_k)=\operatorname{aff}(B_k)$ by the hull computation above, which is the affine space of matrices with all row and column sums $1$, of dimension $(k-1)^2$. $\operatorname{tr}$ is linear, hence affine there, and nonconstant there for $k\ge2$. So the block's own inference goes through once the hull is computed, and **the hull computation is the missing step**.
-- The property the induction would want holds directly: if a point of $\{\operatorname{tr}=0\}\cap X_k$ is a convex combination with positive weights of points of $X_k$, then linearity and nonnegativity of $\operatorname{tr}$ force every one of them onto the face. So the set is an exposed, extreme subset even read on the nonconvex $X_k$.
-- Cleanest statement: $\{\operatorname{tr}=0\}\cap B_k$ is a genuine face of the Birkhoff polytope, the zero-diagonal face whose vertices are the derangement matrices, and the set under discussion is its intersection with $X_k$.
+- $\mathop{\mathrm{aff}}(X_k)=\mathop{\mathrm{aff}}(B_k)$ by the hull computation above, which is the affine space of matrices with all row and column sums $1$, of dimension $(k-1)^2$. $\mathop{\mathrm{tr}}$ is linear, hence affine there, and nonconstant there for $k\ge2$. So the block's own inference goes through once the hull is computed, and **the hull computation is the missing step**.
+- The property the induction would want holds directly: if a point of $\{\mathop{\mathrm{tr}}=0\}\cap X_k$ is a convex combination with positive weights of points of $X_k$, then linearity and nonnegativity of $\mathop{\mathrm{tr}}$ force every one of them onto the face. So the set is an exposed, extreme subset even read on the nonconvex $X_k$.
+- Cleanest statement: $\{\mathop{\mathrm{tr}}=0\}\cap B_k$ is a genuine face of the Birkhoff polytope, the zero-diagonal face whose vertices are the derangement matrices, and the set under discussion is its intersection with $X_k$.
 
 **Vacuity.** The claim would be empty if the face were empty, which it is at $k=1$. For $k\ge2$ a derangement permutation matrix sits in it, so it is nonempty, and at $k=2$ it is the single point $\bigl(\begin{smallmatrix}0&1\\1&0\end{smallmatrix}\bigr)$. The block should carry $k\ge2$ explicitly.
 
@@ -94,13 +94,13 @@ The three facts are correct. $\operatorname{tr}(Q^{\circ2})=\sum_iQ_{ii}^2\ge0$,
 **The block is correct to refuse to grade this as a theorem, and I do not grade it as one.** What follows is the derivation the brief asked for, which is worth more than the verdict.
 
 Along the one-parameter subgroup $Q(t)=Q\exp(t\Omega)$, which is a geodesic of $O(k)$ in the bi-invariant metric, write $Q'=Q\Omega$ and $Q''=Q\Omega^2$. From $\tfrac{\mathrm d^2}{\mathrm dt^2}Q_{ik}^2=2(Q'_{ik})^2+2Q_{ik}Q''_{ik}$,
-$$\operatorname{Hess}f(\Omega,\Omega)=2\sum_{i,k}A_{ik}\big[(Q\Omega)_{ik}\big]^2+2\big\langle Q^{\mathsf T}(A\circ Q),\Omega^2\big\rangle .$$
-With $S=Q^{\mathsf T}(A\circ Q)$ and $\Omega^2=-\Omega^{\mathsf T}\Omega$, the second term is $-2\operatorname{tr}(\Omega S\Omega^{\mathsf T})$, so **the second-order necessary condition at a maximiser is**
-$$\boxed{\ \sum_{i,k}A_{ik}\big[(Q\Omega)_{ik}\big]^2\ \le\ \operatorname{tr}\big(\Omega S\Omega^{\mathsf T}\big)\quad\text{for every skew }\Omega,\qquad S=Q^{\mathsf T}(A\circ Q)\ \text{symmetric}. }$$
+$$\mathop{\mathrm{Hess}}f(\Omega,\Omega)=2\sum_{i,k}A_{ik}\big[(Q\Omega)_{ik}\big]^2+2\big\langle Q^{\mathsf T}(A\circ Q),\Omega^2\big\rangle .$$
+With $S=Q^{\mathsf T}(A\circ Q)$ and $\Omega^2=-\Omega^{\mathsf T}\Omega$, the second term is $-2\mathop{\mathrm{tr}}(\Omega S\Omega^{\mathsf T})$, so **the second-order necessary condition at a maximiser is**
+$$\boxed{\ \sum_{i,k}A_{ik}\big[(Q\Omega)_{ik}\big]^2\ \le\ \mathop{\mathrm{tr}}\big(\Omega S\Omega^{\mathsf T}\big)\quad\text{for every skew }\Omega,\qquad S=Q^{\mathsf T}(A\circ Q)\ \text{symmetric}. }$$
 
 Two remarks on its shape. The left side is the objective's own quadratic form evaluated at the tangent matrix, and the right side is the multiplier $S$ contracted against the constraint's curvature. That is the Lagrangian shape every constrained problem has, objective Hessian minus multiplier times constraint Hessian, and in particular **the two-condition shape is what maximising any entrywise-quadratic functional on $O(k)$ produces**, whatever the record's $\lvert J\rvert=3$ computation looked like. So the correspondence the block asserts is plausible and, as stated, carries no information: a transport claim earns its keep only by naming which multiplier and which tangent form correspond to which objects at $\lvert J\rvert=3$, and the block names neither. I cannot check the comparison with batch 21 without the note, and I flag that the block is asking a reviewer to take the resemblance on trust.
 
-**The collapse at a permutation, which is the part worth keeping.** At $Q=P_\sigma$ with $Q_{\sigma(j)j}=1$, $S=\operatorname{diag}\big(A_{\sigma(k)k}\big)$ and the Hessian becomes $2\sum_{j,k}\Omega_{jk}^2\big[A_{\sigma(j)k}-A_{\sigma(k)k}\big]$. Pairing $(j,k)$ with $(k,j)$, the second-order condition reads
+**The collapse at a permutation, which is the part worth keeping.** At $Q=P_\sigma$ with $Q_{\sigma(j)j}=1$, $S=\mathop{\mathrm{diag}}\big(A_{\sigma(k)k}\big)$ and the Hessian becomes $2\sum_{j,k}\Omega_{jk}^2\big[A_{\sigma(j)k}-A_{\sigma(k)k}\big]$. Pairing $(j,k)$ with $(k,j)$, the second-order condition reads
 $$A_{\sigma(j)k}+A_{\sigma(k)j}\ \le\ A_{\sigma(j)j}+A_{\sigma(k)k}\qquad\text{for all }j,k,$$
 which is **exactly the no-improving-2-swap test for the assignment problem**. The manifold condition and the combinatorial one are the same inequality, which is independent confirmation of the reduction in the first section, and it also shows what the second-order condition cannot do: 2-swap optimality is necessary and not sufficient for the assignment optimum, so second order alone never certifies the global maximum.
 
@@ -124,7 +124,7 @@ With that fix the open content is smaller than the file suggests: the witness is
 
 ## What I would change in the block
 
-1. **Replace the face argument with the hull argument.** State $\operatorname{conv}(X_k)=B_k$ and conclude that the maximum is attained at a permutation frame. It proves more, in fewer lines, with no numerics.
+1. **Replace the face argument with the hull argument.** State $\mathop{\mathrm{conv}}(X_k)=B_k$ and conclude that the maximum is attained at a permutation frame. It proves more, in fewer lines, with no numerics.
 2. **Carry $k\ge2$**, in the prose, in the face claim, and in `face_hands_down`.
 3. **Name the nondegeneracy hypothesis**, that $\nu$ is nonconstant and that $u,c$ are not both constant, without which the value is frame-independent and the item is empty.
 4. **Say which quantity the counts 8, 4 and 1 are counting**, and prefer the Hungarian algorithm over random starts for the question they were meant to answer.

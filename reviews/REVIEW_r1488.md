@@ -13,7 +13,7 @@ Gate 2 review of commit 85a2c1bf, which adds [Base/SecondAssembly.lean](../lean/
 
 ## A. Statement fidelity
 
-The statement, as `#check` prints it: for $E$ a finite-dimensional real inner product space, $u$ symmetric, $g$ with $g(x)=0$ for $x>0$, $g(x)=-x$ for $x<0$ and $g(cx)=cg(x)$ for $c\ge0$, $H$ and $G$ symmetric, $W:\mathbb R\to\operatorname{End}(E)$ with every $W(t)$ symmetric and `Exp2 W u H G`, there exist $A_1,A_2$ with `Exp2 (g ∘ W) (g u) A₁ A₂`.
+The statement, as `#check` prints it: for $E$ a finite-dimensional real inner product space, $u$ symmetric, $g$ with $g(x)=0$ for $x>0$, $g(x)=-x$ for $x<0$ and $g(cx)=cg(x)$ for $c\ge0$, $H$ and $G$ symmetric, $W:\mathbb R\to\mathop{\mathrm{End}}(E)$ with every $W(t)$ symmetric and `Exp2 W u H G`, there exist $A_1,A_2$ with `Exp2 (g ∘ W) (g u) A₁ A₂`.
 
 - **The function.** The three conditions on $g$ force $g(0)=0$ (take $c=0$) and hence $g(x)=\max(-x,0)$ (as `negPart_lipschitz` derives), the eigenvalue function of $W_-=\tfrac12(\lvert W\rvert-W)$, which is the convention route-a.md line 215 fixes for L134 and its consumers. **Correct.**
 - **The filter.** `Exp2` (Exp2.lean line 22) is little-o along `𝓝[Set.Ici 0] 0`, so both the hypothesis and the conclusion are one-sided at $0^+$. **Correct.**

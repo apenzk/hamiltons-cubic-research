@@ -19,9 +19,9 @@
 ## 0. Conventions, fixed once
 
 - $W=\sum_{i=1}^3\lambda_i\,\omega_i\otimes\omega_i$ on $\mathbb R^n$, the $\omega_i$ orthonormal in $\Lambda^2$, every $\lambda_i\ne0$, $W$ Ricci-flat and satisfying first Bianchi; $V$ the span of the supports.
-- **The inner product is $\langle\omega,\eta\rangle=\sum_{a<b}\omega_{ab}\eta_{ab}$**, which is the convention [L180](../findings/diagonal-half.md) fixes by $\operatorname{tr}(\omega\omega^{\mathsf T})=2\lVert\omega\rVert^2$ and the one `inner2` carries in [Families.lean](../lean/HamiltonsCubic/Base/Families.lean) (`gram` returns $2$ on $a=e_{01}+e_{23}$). Every constant below is in this convention.
+- **The inner product is $\langle\omega,\eta\rangle=\sum_{a<b}\omega_{ab}\eta_{ab}$**, which is the convention [L180](../findings/diagonal-half.md) fixes by $\mathop{\mathrm{tr}}(\omega\omega^{\mathsf T})=2\lVert\omega\rVert^2$ and the one `inner2` carries in [Families.lean](../lean/HamiltonsCubic/Base/Families.lean) (`gram` returns $2$ on $a=e_{01}+e_{23}$). Every constant below is in this convention.
 - $\mathrm{Pf}$ on an oriented $2m$-space is fixed by $\omega^{\wedge m}=m!\,\mathrm{Pf}(\omega)\,\mathrm{vol}$; $\det\omega=\mathrm{Pf}(\omega)^2$, so $\det(\omega\omega^{\mathsf T})=\mathrm{Pf}(\omega)^4$.
-- Decomposable $\iff\omega\wedge\omega=0\iff\operatorname{rank}\omega\le2$; $A_i=\omega_i\omega_i^{\mathsf T}=-\omega_i^2$, PSD of trace $2$.
+- Decomposable $\iff\omega\wedge\omega=0\iff\mathop{\mathrm{rank}}\omega\le2$; $A_i=\omega_i\omega_i^{\mathsf T}=-\omega_i^2$, PSD of trace $2$.
 - The rescaling: $N=\sqrt{\lambda_1}\,\omega_1$, $M_2=\sqrt{\lvert\lambda_2\rvert}\,\omega_2$, $M_3=\sqrt{\lvert\lambda_3\rvert}\,\omega_3$ under $\lambda_1>0>\lambda_2,\lambda_3$.
 
 ## 1. Claim A, the witness, checked hypothesis by hypothesis
@@ -37,7 +37,7 @@
 | Ricci-flat | $\sum_i\lambda_iA_i=\tfrac12(2-1-1)\mathrm{Id}=0$ | $a,b,c$ are the quaternionic triple, $aa^{\mathsf T}=bb^{\mathsf T}=cc^{\mathsf T}=\mathrm{Id}$; `bivA_gram_row` and its two siblings give exactly this, entrywise |
 | First Bianchi | $\sum_i\lambda_i\,\omega_i\wedge\omega_i=(2-1-1)\,e_{0123}=0$ | $a\wedge a=b\wedge b=c\wedge c=2e_{0123}$ by hand, the two orientation-sign checks are $e_{02}\wedge e_{31}=e_{0231}=e_{0123}$ and $e_{03}\wedge e_{12}=e_{0312}=e_{0123}$, both even permutations |
 | All three non-decomposable | $\omega_i\wedge\omega_i=e_{0123}\ne0$; equivalently $\omega_i^2=-\tfrac12\mathrm{Id}$, invertible | §2 |
-| $\dim V=4$ | each $\omega_i$ invertible, so $\operatorname{supp}\omega_i=\mathbb R^4$ | immediate |
+| $\dim V=4$ | each $\omega_i$ invertible, so $\mathop{\mathrm{supp}}\omega_i=\mathbb R^4$ | immediate |
 
 **Padding changes none of it.** Ricci-flatness and first Bianchi are the identities $\sum\lambda_i\omega_i^2=0$ in $S^2$ and $\sum\lambda_i\,\omega_i\wedge\omega_i=0$ in $\Lambda^4$; with every $\omega_i$ supported in the $4$-block both read block-wise, and every entry outside the block is zero on both sides. $V$ is the same four-space. **So the padded tensor is in $\mathcal W_n$ for every $n\ge4$, with $\dim V=4$.**
 

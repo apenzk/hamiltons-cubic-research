@@ -68,19 +68,19 @@ R14 is not sterile. Applied to the **equality case** rather than to the bound it
 
 ### 2.1 The unboxed identity is true, and much more general than claimed
 
-$$\langle v,W^{\#}v\rangle=-\tfrac14\lVert[\operatorname{ad}(v),W]\rVert^2-\tfrac12\operatorname{tr}\big((\operatorname{ad}v)^2W^2\big)$$
+$$\langle v,W^{\#}v\rangle=-\tfrac14\lVert[\mathop{\mathrm{ad}}(v),W]\rVert^2-\tfrac12\mathop{\mathrm{tr}}\big((\mathop{\mathrm{ad}}v)^2W^2\big)$$
 
-holds to $\le2\times10^{-16}$ for **every symmetric operator on $\Lambda^2$** (random non-Weyl, Weyl, kernel-forced) for **every** $v$, unit or not ($\lVert v\rVert=2.3$ tested), eigenvector or not ([t_hyp.py](../scripts/reviewers/r324/t_hyp.py), $n=5,6,7$). The record's "an identity on all of $\mathcal W_n$" understates it: $\mathcal W_n$ plays no role. Both terms behave as stated, $-\tfrac12\operatorname{tr}((\operatorname{ad}v)^2W^2)=\tfrac12\lVert\operatorname{ad}(v)W\rVert^2\ge0$, reproduced to $10^{-9}$ at every point tested.
+holds to $\le2\times10^{-16}$ for **every symmetric operator on $\Lambda^2$** (random non-Weyl, Weyl, kernel-forced) for **every** $v$, unit or not ($\lVert v\rVert=2.3$ tested), eigenvector or not ([t_hyp.py](../scripts/reviewers/r324/t_hyp.py), $n=5,6,7$). The record's "an identity on all of $\mathcal W_n$" understates it: $\mathcal W_n$ plays no role. Both terms behave as stated, $-\tfrac12\mathop{\mathrm{tr}}((\mathop{\mathrm{ad}}v)^2W^2)=\tfrac12\lVert\mathop{\mathrm{ad}}(v)W\rVert^2\ge0$, reproduced to $10^{-9}$ at every point tested.
 
 ### 2.2 It is L1's own sum, re-partitioned. There is no second statement
 
-Write $t_{ab}=T_{vab}=c_{vab}^2$. Then $g_v=\sum(\lambda_a-\lambda_b)^2t_{ab}=2\sum\lambda_a^2t_{ab}-2\sum\lambda_a\lambda_bt_{ab}$ and $\lVert\operatorname{ad}(v)W\rVert^2=\sum\lambda_a^2t_{ab}$, so
+Write $t_{ab}=T_{vab}=c_{vab}^2$. Then $g_v=\sum(\lambda_a-\lambda_b)^2t_{ab}=2\sum\lambda_a^2t_{ab}-2\sum\lambda_a\lambda_bt_{ab}$ and $\lVert\mathop{\mathrm{ad}}(v)W\rVert^2=\sum\lambda_a^2t_{ab}$, so
 
-$$-\tfrac14g_v+\tfrac12\lVert\operatorname{ad}(v)W\rVert^2=\tfrac12\sum_{ab}\lambda_a\lambda_bt_{ab}=\langle v,W^{\#}v\rangle .$$
+$$-\tfrac14g_v+\tfrac12\lVert\mathop{\mathrm{ad}}(v)W\rVert^2=\tfrac12\sum_{ab}\lambda_a\lambda_bt_{ab}=\langle v,W^{\#}v\rangle .$$
 
 That is the polarisation identity $(\lambda_a-\lambda_b)^2=\lambda_a^2+\lambda_b^2-2\lambda_a\lambda_b$ applied to the same measure L1 already sums. The bridge to L1 is explicit and hypothesis-free:
 
-$$D(v)+(n-2)\lambda_{\min}\lambda_{\max}+\tfrac14g_v-\tfrac12\lVert\operatorname{ad}(v)W\rVert^2=0,$$
+$$D(v)+(n-2)\lambda_{\min}\lambda_{\max}+\tfrac14g_v-\tfrac12\lVert\mathop{\mathrm{ad}}(v)W\rVert^2=0,$$
 
 residual $\le1.7\times10^{-15}$ at $S^3\times S^3$, the $n=8$ torus, $W_{\mathbb{CP}^2}$ at $n=4$ **and at random non-Weyl symmetric operators**. So L1 and L5 are one equation (criticality evaluated at $v$), recorded in two commits.
 
@@ -90,11 +90,11 @@ The record argues: L5's boxed form fails by $0.46$ off criticality "so criticali
 
 ### 2.4 Is $g_v$ the same $g$? Yes
 
-$\lVert[\operatorname{ad}(v),W]\rVert^2$ and $\sum_{\alpha\beta}(\lambda_\alpha-\lambda_\beta)^2T_{v\alpha\beta}$ agree to $\le3.6\times10^{-15}$ ($S^3\times S^3$: $2.222222222222$; $n=8$ torus: $1.166666666667$; $W_{\mathbb{CP}^2}$ at $n=4$: $6.000000000000$), so it is [Petersen–Wink](../references/petersen-wink-2019-bochner-technique/notes.md) Prop 1.7's quantity and the record's $\Delta$ ingredient. Both known contractions reproduce independently: $\sum_\gamma g_\gamma=4(n-1)$ ($20.000000000$ at $n=6$, $28.000000000$ at $n=8$) and $\sum_\gamma\lambda_\gamma g_\gamma=-4\theta$ ($-4.216370214$ at $S^3\times S^3$, $-2.160246899$ at the $n=8$ torus).
+$\lVert[\mathop{\mathrm{ad}}(v),W]\rVert^2$ and $\sum_{\alpha\beta}(\lambda_\alpha-\lambda_\beta)^2T_{v\alpha\beta}$ agree to $\le3.6\times10^{-15}$ ($S^3\times S^3$: $2.222222222222$; $n=8$ torus: $1.166666666667$; $W_{\mathbb{CP}^2}$ at $n=4$: $6.000000000000$), so it is [Petersen–Wink](../references/petersen-wink-2019-bochner-technique/notes.md) Prop 1.7's quantity and the record's $\Delta$ ingredient. Both known contractions reproduce independently: $\sum_\gamma g_\gamma=4(n-1)$ ($20.000000000$ at $n=6$, $28.000000000$ at $n=8$) and $\sum_\gamma\lambda_\gamma g_\gamma=-4\theta$ ($-4.216370214$ at $S^3\times S^3$, $-2.160246899$ at the $n=8$ torus).
 
 ### 2.5 Consequence of, or stronger than, the two contractions? **Neither**
 
-- It is **not a consequence** of $\sum g_\gamma=4(n-1)$ and $\sum\lambda_\gamma g_\gamma=-4\theta$: those are two linear functionals of the vector $(g_\gamma)$, and the per-$v$ statement involves one index plus a second quantity $\lVert\operatorname{ad}(v)W\rVert^2$ that neither contraction sees. The record's sentence "no contraction against a $\gamma$-independent or $\lambda$-weight recovers it" is correct.
+- It is **not a consequence** of $\sum g_\gamma=4(n-1)$ and $\sum\lambda_\gamma g_\gamma=-4\theta$: those are two linear functionals of the vector $(g_\gamma)$, and the per-$v$ statement involves one index plus a second quantity $\lVert\mathop{\mathrm{ad}}(v)W\rVert^2$ that neither contraction sees. The record's sentence "no contraction against a $\gamma$-independent or $\lambda$-weight recovers it" is correct.
 - It is **not new information** either, because it is L1 (§2.2), and L1 is criticality applied to $v$. The correct framing is that *both* are elementary: at a critical point $W^{\#}=\theta W-W^2$, so $\langle\varphi_\gamma,W^{\#}\varphi_\gamma\rangle=\theta\lambda_\gamma-\lambda_\gamma^2$ for **every** eigenvector, and the per-$v$ form is that one line with $\langle v,W^{\#}v\rangle$ expanded. The distinguished status of $v\in E_{\min}$ is a choice of which eigenvalue to divide by, not extra content.
 
 *Reproduced en route:* $g_v=16(n-1)/n^2$ at the balanced products, $2.222222$, $1.750000$, $1.440000$ at $n=6,8,10$.
@@ -103,7 +103,7 @@ $\lVert[\operatorname{ad}(v),W]\rVert^2$ and $\sum_{\alpha\beta}(\lambda_\alpha-
 
 ## 3. L1, the deficiency identity. CONFIRMED, with the hypothesis list corrected
 
-**Exactness.** $\theta-\big[\lambda_{\min}+(n-2)\lambda_{\max}-D(v)/\lvert\lambda_{\min}\rvert\big]$ is $\le1.1\times10^{-15}$ at every critical point I built: balanced products $n=6,8,10,12$; maximal tori $n=6,8,10,12$; $\operatorname{ad}(\mathfrak{su}(3))\subset\mathfrak{so}(8)$; $\mathbb{CP}^m$ Weyl parts $m=2,\dots,5$; padded $W_{\mathbb{CP}^2}$ at $n=4,5,6,7,9,11,12$; and 90 critical points found by Newton on $Q(W)=W$ at $n=6$.
+**Exactness.** $\theta-\big[\lambda_{\min}+(n-2)\lambda_{\max}-D(v)/\lvert\lambda_{\min}\rvert\big]$ is $\le1.1\times10^{-15}$ at every critical point I built: balanced products $n=6,8,10,12$; maximal tori $n=6,8,10,12$; $\mathop{\mathrm{ad}}(\mathfrak{su}(3))\subset\mathfrak{so}(8)$; $\mathbb{CP}^m$ Weyl parts $m=2,\dots,5$; padded $W_{\mathbb{CP}^2}$ at $n=4,5,6,7,9,11,12$; and 90 critical points found by Newton on $Q(W)=W$ at $n=6$.
 
 **Which hypotheses it actually needs.** The identity is $\lambda_{\min}^2+\langle v,W^{\#}v\rangle=\theta\lambda_{\min}$ with the left side re-expressed, so it needs exactly:
 
@@ -119,7 +119,7 @@ $\lVert[\operatorname{ad}(v),W]\rVert^2$ and $\sum_{\alpha\beta}(\lambda_\alpha-
 
 *Weyl membership does become load-bearing one step later*, the rigidity of §5 needs it, and that is where the record should place it.
 
-**$D\ge0$, termwise, kernel included.** For $\lambda_{\min}<0<\lambda_{\max}$ and any $\lambda_a,\lambda_b$ in $[\lambda_{\min},\lambda_{\max}]$: like signs give $\lambda_a\lambda_b\ge0>\lambda_{\min}\lambda_{\max}$; a zero gives $0>\lambda_{\min}\lambda_{\max}$; opposite signs give $\lambda_a\lambda_b=-\lvert\lambda_a\rvert\lambda_b\ge-\lvert\lambda_{\min}\rvert\lambda_{\max}$. **And the minimiser is unique**: equality in the last line forces $\lambda_a=\lambda_{\min}$ and $\lambda_b=\lambda_{\max}$. So "$\lambda_{\min}\lambda_{\max}$ is not the unique minimiser" cannot happen, and $D=0$ really is equivalent to support on $E_{\min}\otimes E_{\max}$. $\lambda_{\min}<0<\lambda_{\max}$ itself follows from $\operatorname{tr}W=0$, $W\ne0$, the one place Weyl membership enters L1, and only through the trace.
+**$D\ge0$, termwise, kernel included.** For $\lambda_{\min}<0<\lambda_{\max}$ and any $\lambda_a,\lambda_b$ in $[\lambda_{\min},\lambda_{\max}]$: like signs give $\lambda_a\lambda_b\ge0>\lambda_{\min}\lambda_{\max}$; a zero gives $0>\lambda_{\min}\lambda_{\max}$; opposite signs give $\lambda_a\lambda_b=-\lvert\lambda_a\rvert\lambda_b\ge-\lvert\lambda_{\min}\rvert\lambda_{\max}$. **And the minimiser is unique**: equality in the last line forces $\lambda_a=\lambda_{\min}$ and $\lambda_b=\lambda_{\max}$. So "$\lambda_{\min}\lambda_{\max}$ is not the unique minimiser" cannot happen, and $D=0$ really is equivalent to support on $E_{\min}\otimes E_{\max}$. $\lambda_{\min}<0<\lambda_{\max}$ itself follows from $\mathop{\mathrm{tr}}W=0$, $W\ne0$, the one place Weyl membership enters L1, and only through the trace.
 
 ---
 
@@ -127,7 +127,7 @@ $\lVert[\operatorname{ad}(v),W]\rVert^2$ and $\sum_{\alpha\beta}(\lambda_\alpha-
 
 **"For every $v$" follows; it is not an extra hypothesis and not a coincidence.** At a critical point $W^{\#}=\theta W-W^2$ is a *polynomial in $W$*. Hence $W^{\#}$ acts on the $\lambda$-eigenspace as the scalar $\theta\lambda-\lambda^2$, so $\langle v,W^{\#}v\rangle$ (and therefore $D(v)$), is **constant on the unit sphere of every eigenspace**, not merely of $E_{\min}$. Equality for one $v\in E_{\min}$ is equality for all.
 
-Measured: $D(v)$ over three random unit $v\in E_{\min}$ agrees to $\le10^{-16}$ at every point with $\dim E_{\min}>1$, $9,16,25$ at the balanced products, $12,24,40,60$ at the tori, $20$ at $\operatorname{ad}(\mathfrak{su}(3))$, $2$ at $W_{\mathbb{CP}^2}$. **No search for a one-$v$/other-$v$ split is warranted**, and this discharges the record's own eigenspace-constancy obligation for this statistic.
+Measured: $D(v)$ over three random unit $v\in E_{\min}$ agrees to $\le10^{-16}$ at every point with $\dim E_{\min}>1$, $9,16,25$ at the balanced products, $12,24,40,60$ at the tori, $20$ at $\mathop{\mathrm{ad}}(\mathfrak{su}(3))$, $2$ at $W_{\mathbb{CP}^2}$. **No search for a one-$v$/other-$v$ split is warranted**, and this discharges the record's own eigenspace-constancy obligation for this statistic.
 
 ---
 
@@ -139,13 +139,13 @@ Measured: $D(v)$ over three random unit $v\in E_{\min}$ agrees to $\le10^{-16}$ 
 > **(a)** $\lambda_{\max}=\dfrac{n\lvert\lambda_{\min}\rvert}{n-2}$ and $\theta=(n-1)\lvert\lambda_{\min}\rvert>0$;
 > **(b)** $\theta\ge\theta_0(n)$, with equality **iff** $W$ has exactly two eigenvalues, in which case $n$ is even and the multiplicities are forced: $\dim E_{\min}=n^2/4$, $\dim E_{\max}=n(n-2)/4$, the balanced sphere product's own data.
 
-*Proof.* Saturation puts the whole mass $2(n-2)$ on $E_{\min}\times E_{\max}$ (§3, uniqueness of the minimiser), split $(n-2)/(n-2)$ by the symmetry of $t$. Its first moment is therefore $(n-2)(\lambda_{\min}+\lambda_{\max})$. The Weyl input is $\operatorname{tr}\!\big(W\operatorname{ad}(v)^2\big)=2\langle Wv,v\rangle$, i.e. $\sum_{ab}\lambda_at_{ab}=-2\lambda_{\min}$; **derived, not sampled**: with $A$ the matrix of $v$, the $\Lambda^2$ derivation gives $\operatorname{tr}(W\operatorname{ad}(v)^2)=\operatorname{tr}(A^2\mathrm{Ric})+\sum_{ijkl}R_{ijkl}A_{ik}A_{jl}$, the first term dies on $\mathrm{Ric}=0$ and the first Bianchi identity gives $\sum R_{ijkl}A_{ik}A_{jl}=\tfrac12\sum R_{ijkl}A_{ij}A_{kl}=2\langle Wv,v\rangle$. Equating, $(n-2)\lambda_{\max}=-n\lambda_{\min}$, whence (a) via $\theta=\lambda_{\min}+(n-2)\lambda_{\max}$. For (b), $(\lambda_a-\lambda_{\min})(\lambda_{\max}-\lambda_a)\ge0$ summed over the spectrum with $\operatorname{tr}W=0$ gives $1=\sum\lambda_a^2\le-N\lambda_{\min}\lambda_{\max}=\frac{Nn}{n-2}\lambda_{\min}^2=\frac{n^2\theta^2}{2(n-1)(n-2)}$, i.e. $\theta^2\ge\theta_0(n)^2$. Equality forces every $\lambda_a\in\{\lambda_{\min},\lambda_{\max}\}$; $\operatorname{tr}W=0$ with $\lambda_{\max}=n\lvert\lambda_{\min}\rvert/(n-2)$ then pins $d_{\max}=n(n-2)/4$ and $d_{\min}=n^2/4$. $\square$
+*Proof.* Saturation puts the whole mass $2(n-2)$ on $E_{\min}\times E_{\max}$ (§3, uniqueness of the minimiser), split $(n-2)/(n-2)$ by the symmetry of $t$. Its first moment is therefore $(n-2)(\lambda_{\min}+\lambda_{\max})$. The Weyl input is $\mathop{\mathrm{tr}}\!\big(W\mathop{\mathrm{ad}}(v)^2\big)=2\langle Wv,v\rangle$, i.e. $\sum_{ab}\lambda_at_{ab}=-2\lambda_{\min}$; **derived, not sampled**: with $A$ the matrix of $v$, the $\Lambda^2$ derivation gives $\mathop{\mathrm{tr}}(W\mathop{\mathrm{ad}}(v)^2)=\mathop{\mathrm{tr}}(A^2\mathrm{Ric})+\sum_{ijkl}R_{ijkl}A_{ik}A_{jl}$, the first term dies on $\mathrm{Ric}=0$ and the first Bianchi identity gives $\sum R_{ijkl}A_{ik}A_{jl}=\tfrac12\sum R_{ijkl}A_{ij}A_{kl}=2\langle Wv,v\rangle$. Equating, $(n-2)\lambda_{\max}=-n\lambda_{\min}$, whence (a) via $\theta=\lambda_{\min}+(n-2)\lambda_{\max}$. For (b), $(\lambda_a-\lambda_{\min})(\lambda_{\max}-\lambda_a)\ge0$ summed over the spectrum with $\mathop{\mathrm{tr}}W=0$ gives $1=\sum\lambda_a^2\le-N\lambda_{\min}\lambda_{\max}=\frac{Nn}{n-2}\lambda_{\min}^2=\frac{n^2\theta^2}{2(n-1)(n-2)}$, i.e. $\theta^2\ge\theta_0(n)^2$. Equality forces every $\lambda_a\in\{\lambda_{\min},\lambda_{\max}\}$; $\mathop{\mathrm{tr}}W=0$ with $\lambda_{\max}=n\lvert\lambda_{\min}\rvert/(n-2)$ then pins $d_{\max}=n(n-2)/4$ and $d_{\min}=n^2/4$. $\square$
 
 *Independent checks.* The per-row identity holds to $10^{-9}$ for **arbitrary** unit $v$ on $\mathcal W_n$ at $n=5,6,7$ (eigenvector or not, critical or not) and **fails off $\mathcal W_n$** by $0.19$–$2.0$, which is the control that Weyl membership is what carries it. $\lambda_{\max}(n-2)/(n\lvert\lambda_{\min}\rvert)=1.000000$ at every saturating point and $0.77$–$6.40$ at every non-saturating one. $\theta=(n-1)\lvert\lambda_{\min}\rvert$ is **not** an identity at critical points, ratio $0.31$–$0.42$ at random $n=6$ critical points, so (a) is content, not a rewrite.
 
 ### 5.2 What this does to L3's hunt
 
-**Any critical point with $\theta<\theta_0(n)$ cannot saturate; nor can one at $\theta=\theta_0(n)$ with more than two eigenvalues.** That disposes of the whole list the brief asks about, analytically: the $C_5$ blow-up ($0.670820$, $n=10$), the $n=8$ non-diagonal witness ($1.088948<1.145644$) and its siblings, the diagonal $S=0$ ceiling ($0.716134$, $n=12$), $S^3\times S^5$, $S^5\times S^7$ ($1.228239<1.236033$), $\mathbb{CP}^4$ and $\mathbb{CP}^5$, $\operatorname{ad}(\mathfrak{su}(3))$, every maximal torus, and $S^{11}\times S^{13}$ ($1.324617<1.325498$). $\mathbb{CP}^3$ sits *at* $\theta_0(6)=1.054092553$ and is excluded by the equality clause instead, it has three eigenvalues (measured slack $2.108185107$). Corroborated by search: 90 genuine critical points at $n=6$ (criticality $\le8.5\times10^{-16}$, Weyl $\le1.2\times10^{-15}$), $\theta\in[0.390895,0.742003]$, slack $\in[0.577346,1.089611]$, none saturating.
+**Any critical point with $\theta<\theta_0(n)$ cannot saturate; nor can one at $\theta=\theta_0(n)$ with more than two eigenvalues.** That disposes of the whole list the brief asks about, analytically: the $C_5$ blow-up ($0.670820$, $n=10$), the $n=8$ non-diagonal witness ($1.088948<1.145644$) and its siblings, the diagonal $S=0$ ceiling ($0.716134$, $n=12$), $S^3\times S^5$, $S^5\times S^7$ ($1.228239<1.236033$), $\mathbb{CP}^4$ and $\mathbb{CP}^5$, $\mathop{\mathrm{ad}}(\mathfrak{su}(3))$, every maximal torus, and $S^{11}\times S^{13}$ ($1.324617<1.325498$). $\mathbb{CP}^3$ sits *at* $\theta_0(6)=1.054092553$ and is excluded by the equality clause instead, it has three eigenvalues (measured slack $2.108185107$). Corroborated by search: 90 genuine critical points at $n=6$ (criticality $\le8.5\times10^{-16}$, Weyl $\le1.2\times10^{-15}$), $\theta\in[0.390895,0.742003]$, slack $\in[0.577346,1.089611]$, none saturating.
 
 **Consequence worth recording.** On the saturating set, Conjecture A is *equivalent* to "saturation forces exactly two eigenvalues", and the $\ge$ half is now proved.
 
@@ -165,7 +165,7 @@ It is a genuine critical Weyl tensor, it saturates Lemma L70, it is not a sphere
 | --- | --- | --- | --- |
 | $\mathfrak{so}(m)\oplus\mathfrak{so}(m)$, $n=6,8,10,12$ | $\le3.1\times10^{-16}$ | $0.000000000$ | $0$ of $72,192,400,720$ |
 | maximal torus, $n=6,8,10,12$ | $\le1.7\times10^{-16}$ | $1.290994449$, $2.160246899$, $2.846049894$, $3.425395354$ | $\tfrac12,\tfrac23,\tfrac34,\tfrac45=\tfrac{m-2}{m-1}$ |
-| $\operatorname{ad}(\mathfrak{su}(3))\subset\mathfrak{so}(8)$ | $2.1\times10^{-16}$ | $0.836660027$ | $80$ of $240$ |
+| $\mathop{\mathrm{ad}}(\mathfrak{su}(3))\subset\mathfrak{so}(8)$ | $2.1\times10^{-16}$ | $0.836660027$ | $80$ of $240$ |
 
 All independently reproduced, digit for digit, including the $\mathbb{CP}^3$ overshoot $2.108185107$. The reduction of saturation on the family to $[\mathfrak m,\mathfrak m]\perp\mathfrak m$ is correct: $\langle v,[\mathfrak h,\mathfrak h]\rangle=0$ because $\mathfrak h$ is a subalgebra and $\mathfrak m\perp\mathfrak h$, and with two eigenvalues the only remaining block is $\mathfrak m\times\mathfrak m$.
 
@@ -178,7 +178,7 @@ All independently reproduced, digit for digit, including the $\mathbb{CP}^3$ ove
 1. **The theorem of §5.1**, which is T4's $\ge$ half with the two-eigenvalue hypothesis dropped, plus the $n=4$ counterexample that fixes T4's statement.
 2. **Withdraw the "control" sentence** in the Hilbert–Schmidt section (§2.3) and record L5 as L1 re-partitioned, with the bridge identity of §2.2.
 3. **Re-grade T3.** Its attackability rested on raw material with a measured ceiling of $1.49$/$1.93$ at $n=5,6$ (capped) and $2.04$/$2.76$/$4.19$ at $n=5,6,8$ (uncapped) against $\theta_0$.
-4. **Correct L1's hypothesis list** (§3): Weyl membership enters only through $\operatorname{tr}W=0$; unit norm, $\theta>0$, $n\ge5$ and $\ker W=0$ are not needed.
+4. **Correct L1's hypothesis list** (§3): Weyl membership enters only through $\mathop{\mathrm{tr}}W=0$; unit norm, $\theta>0$, $n\ge5$ and $\ker W=0$ are not needed.
 5. **L2 needs no check**, $W^{\#}=\theta W-W^2$ makes it immediate on every eigenspace.
 
 **Scripts:** [scripts/reviewers/r324/](../scripts/reviewers/r324/), [core.py](../scripts/reviewers/r324/core.py), [points.py](../scripts/reviewers/r324/points.py), [kahler.py](../scripts/reviewers/r324/kahler.py), [t_l1_l5.py](../scripts/reviewers/r324/t_l1_l5.py), [t_hyp.py](../scripts/reviewers/r324/t_hyp.py), [t_moment.py](../scripts/reviewers/r324/t_moment.py), [t_sat.py](../scripts/reviewers/r324/t_sat.py), [t_search.py](../scripts/reviewers/r324/t_search.py), [t_lp.py](../scripts/reviewers/r324/t_lp.py), [t_lp2.py](../scripts/reviewers/r324/t_lp2.py). Log: [agent_logs/r324-lemma70.log](../agent_logs/r324-lemma70.log).

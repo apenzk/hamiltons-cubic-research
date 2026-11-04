@@ -8,7 +8,7 @@
 
 | # | Claim | Verdict |
 |---|---|---|
-| 0 | $\operatorname{tr}\widetilde N=-2M_{jk}$ and $\lVert\widetilde N\rVert_F^2=2-\lVert o\rVert^2-2M_{jk}^2$ | **CONFIRMED**, both re-derived independently, exact |
+| 0 | $\mathop{\mathrm{tr}}\widetilde N=-2M_{jk}$ and $\lVert\widetilde N\rVert_F^2=2-\lVert o\rVert^2-2M_{jk}^2$ | **CONFIRMED**, both re-derived independently, exact |
 | 1a | $(\dagger)$ clears at $S^6\times S^6$ with slack $0.0709$ | **CONFIRMED**, $1.299956$ against $1.370873$ |
 | 1b | "*it clears asymptotically … with margin of order $1/n$*" | **REFUTED**, the margin is $\tfrac{11\sqrt2}{2n^2}\approx7.78/n^2$, and the reasoning asserts $\sqrt2\le\theta+M_{jk}$, which is false at every $S^m\times S^m$ |
 | 1c | the ceiling is a strong instrument at $S^6\times S^6$ | **REFUTED**, it spends $71.3\%$ of the true slack at $m=6$, $95.5\%$ at $m=32$, $99.87\%$ at $m=1024$ |
@@ -23,7 +23,7 @@
 
 ## 0. The two moments, re-derived
 
-$N$ is a principal submatrix of a hollow $M$, so $\operatorname{tr}N=0$; row $j$ of $M$ sums to zero, so $\sum_{i\in I}u_i=-M_{jk}$ and likewise for $v$. Hence $\operatorname{tr}\widetilde N=\sum_i(u_i+v_i)=-2M_{jk}$.
+$N$ is a principal submatrix of a hollow $M$, so $\mathop{\mathrm{tr}}N=0$; row $j$ of $M$ sums to zero, so $\sum_{i\in I}u_i=-M_{jk}$ and likewise for $v$. Hence $\mathop{\mathrm{tr}}\widetilde N=\sum_i(u_i+v_i)=-2M_{jk}$.
 
 Splitting $\lVert M\rVert_F^2=2$ over the blocks gives $\lVert N\rVert_F^2=2-2\lVert u\rVert^2-2\lVert v\rVert^2-2M_{jk}^2$, and adding the diagonal $\lVert u+v\rVert^2$ collapses the cross terms:
 $$\lVert\widetilde N\rVert_F^2=2-\big(\lVert u\rVert^2+\lVert v\rVert^2-2u\!\cdot\!v\big)-2M_{jk}^2=2-\lVert o\rVert^2-2M_{jk}^2 .$$
@@ -33,7 +33,7 @@ Both agree with the record exactly. The Wolkowicz–Styan form quoted is the sha
 ## 1. The ceiling at $S^6\times S^6$: right number, wrong reading, wrong asymptotics
 
 **The exact spectrum is available and the record never takes it.** At $S^m\times S^m$ with $\alpha=-m\gamma/(m-1)$, $\gamma^2=(m-1)/(m^2(2m-1))$, $\theta=\sqrt{(m-1)(2m-1)}/m$, a **within-factor** pair has $u=v$ exactly, and $\widetilde N$ decomposes over the equitable partition $\{A\setminus\{j,k\},\ B\}$ into
-$$\operatorname{spec}\widetilde N=\{\underbrace{\alpha}_{m-3},\ \underbrace{2\gamma-\alpha}_{m-1},\ 0,\ -2(m-1)\gamma\},$$
+$$\mathop{\mathrm{spec}}\widetilde N=\{\underbrace{\alpha}_{m-3},\ \underbrace{2\gamma-\alpha}_{m-1},\ 0,\ -2(m-1)\gamma\},$$
 the $2\times2$ symmetric-vector block having determinant identically zero. So
 $$\lambda_{\max}(\widetilde N)=2(m-1)\lvert\gamma\rvert,\qquad \textbf{true slack}=\theta+\alpha-\lambda_{\max}=\frac{\theta}{m-1}\ \ \text{exactly}.$$
 
@@ -90,7 +90,7 @@ $$\lambda_{\max}(\widetilde N)\;\ge\;\theta+M_{jk},$$
 and the pair clause holds there only as an **equality**. Wolkowicz–Styan is strict unless the lower $d-1$ eigenvalues coincide, so $(\dagger)$ must fail at every such pair whose spectrum is not of that degenerate shape.
 
 The **cross** pair of $S^m\times S^m$ is the demonstration, and it is the programme's own reference critical point. With $j\in A$, $k\in B$, $M_{jk}=\gamma<0$, $\lVert o\rVert^2=2(m-1)(\alpha-\gamma)^2>0$:
-$$\operatorname{spec}\widetilde N=\{\underbrace{\gamma}_{2m-4},\ 0,\ -2(m-1)\gamma\},\qquad \lambda_{\max}=2(m-1)\lvert\gamma\rvert=\theta+\gamma\ \textbf{ exactly}.$$
+$$\mathop{\mathrm{spec}}\widetilde N=\{\underbrace{\gamma}_{2m-4},\ 0,\ -2(m-1)\gamma\},\qquad \lambda_{\max}=2(m-1)\lvert\gamma\rvert=\theta+\gamma\ \textbf{ exactly}.$$
 The true slack is **zero at every $m$**, the lower eigenvalues $\{\gamma,0\}$ are distinct, and $(\dagger)$ overshoots by $+0.004577$ at $m=6$ ($\theta=1.236033\ge\sqrt{3/2}$), $+0.001195$ at $m=12$, $+0.000436$ at $m=20$. *Screen: exact eigenvalues reproduce the closed forms to $10^{-16}$.*
 
 **Consequence for the record.** $(\dagger)$ is written as a ceiling "in $(\theta,M_{jk},\lVert o\rVert,n)$ alone" and is offered as implying "the pair clause". It implies the clause only on the orbit-free subset $\lVert o\rVert=0$; on its complement it is guaranteed to fail. [I18](../plan.md)'s declared scope is orbit-free blocks, so this is a scope statement rather than a refutation of the item, **but $(\dagger)$'s statement must carry $\lVert o\rVert=0$ as a hypothesis rather than as a variable**, otherwise it invites exactly the failure exhibited above.
@@ -107,19 +107,19 @@ and the pair clause is a step *toward* the live target. **"Unconditionally true"
 
 ## 4. $\theta\le\sqrt2$: valid, and redundant twice over
 
-The derivation is correct. $\operatorname{tr}M=0$ with $M\ne0$ gives $\lambda_{\max}(M)>0$; the recorded gap $\operatorname{spec}(M)\cap(0,\theta)=\varnothing$ (from $M^2-\theta M=\Delta_{M^{\circ2}}\succeq0$) upgrades that to $\lambda_{\max}(M)\ge\theta$; and $\lambda_{\max}(M)^2\le\sum_i\lambda_i^2=\lVert M\rVert_F^2=2$. **CONFIRMED.**
+The derivation is correct. $\mathop{\mathrm{tr}}M=0$ with $M\ne0$ gives $\lambda_{\max}(M)>0$; the recorded gap $\mathop{\mathrm{spec}}(M)\cap(0,\theta)=\varnothing$ (from $M^2-\theta M=\Delta_{M^{\circ2}}\succeq0$) upgrades that to $\lambda_{\max}(M)\ge\theta$; and $\lambda_{\max}(M)^2\le\sum_i\lambda_i^2=\lVert M\rVert_F^2=2$. **CONFIRMED.**
 
 Three notes on its standing.
 
-- **It is weaker than the record twice, not once.** The record's own remark that it is weaker than [Lemma L57](../findings/problem.md) is right. It is also weaker than what $\operatorname{tr}M=0$ already buys: Wolkowicz–Styan with $\mu=0$ gives $\lambda_{\max}(M)\le\sqrt{2(n-1)/n}$, hence $\theta\le\sqrt{2(n-1)/n}$, $1.354$ at $n=12$, and that number is on the record as [fence post F14](../findings/second-order.md), where it appears as the value of the same relaxation. The trace is invoked in the derivation and then not spent.
-- **The sharper free consequence is also already recorded.** Let $p=\#\{\lambda_i\ge\theta\}$. With $\operatorname{tr}M=0$ and $\sum_+\lambda=S$, Cauchy–Schwarz on the negatives gives $2\ge p\theta^2+S^2/(n-p)\ge p\theta^2 n/(n-p)$, so $\theta^2\le2(n-p)/(pn)$; $p\ge2$ forces $\theta\le\sqrt{(n-2)/n}<1<\sqrt{3/2}$. **In the band, $M$ has exactly one positive eigenvalue.** [diagonal-half.md](../findings/diagonal-half.md) already carries this ("*the vertex matrix of a diagonal critical point at the conjectured value has exactly one positive eigenvalue*", $r\le1.309$ at $\lambda=\theta_0(12)$); the version here is marginally wider, holding at every $\theta>1$ rather than at the conjectured value.
+- **It is weaker than the record twice, not once.** The record's own remark that it is weaker than [Lemma L57](../findings/problem.md) is right. It is also weaker than what $\mathop{\mathrm{tr}}M=0$ already buys: Wolkowicz–Styan with $\mu=0$ gives $\lambda_{\max}(M)\le\sqrt{2(n-1)/n}$, hence $\theta\le\sqrt{2(n-1)/n}$, $1.354$ at $n=12$, and that number is on the record as [fence post F14](../findings/second-order.md), where it appears as the value of the same relaxation. The trace is invoked in the derivation and then not spent.
+- **The sharper free consequence is also already recorded.** Let $p=\#\{\lambda_i\ge\theta\}$. With $\mathop{\mathrm{tr}}M=0$ and $\sum_+\lambda=S$, Cauchy–Schwarz on the negatives gives $2\ge p\theta^2+S^2/(n-p)\ge p\theta^2 n/(n-p)$, so $\theta^2\le2(n-p)/(pn)$; $p\ge2$ forces $\theta\le\sqrt{(n-2)/n}<1<\sqrt{3/2}$. **In the band, $M$ has exactly one positive eigenvalue.** [diagonal-half.md](../findings/diagonal-half.md) already carries this ("*the vertex matrix of a diagonal critical point at the conjectured value has exactly one positive eigenvalue*", $r\le1.309$ at $\lambda=\theta_0(12)$); the version here is marginally wider, holding at every $\theta>1$ rather than at the conjectured value.
 - **Verdict 1b turns on this bound.** Since $\theta\le\sqrt2$ is now on the record, the assertion "$\sqrt2\le\theta+M_{jk}$" in the same file's next section is an assertion that $M_{jk}\ge\sqrt2-\theta\ge0$, i.e. exactly the unproved lower bound the section closes by admitting it lacks.
 
 ## 5. The diagnosis "a lower bound on $M_{jk}$ is the remaining gap"
 
 **$M_{jk}$ is not uncontrolled, it is pinned to a quadratic, and its sign is already forced.** In an orbit-free block $u=v$, so $u\!\cdot\!v=\lVert u\rVert^2\ge0$, and [r378](REVIEW_r378.md)'s identity reads
 $$\theta M_{jk}=M_{jk}^2+\lVert u\rVert^2\;\ge\;0 .$$
-With $\theta>0$ this gives $M_{jk}\ge0$, and $M_{jk}=0$ forces $u=v=0$, so rows $j$ and $k$ vanish entirely, excluded by the connectedness of $\operatorname{supp}(M)$ that the same section already lists among its hypotheses. **So $M_{jk}>0$ strictly, and moreover $M_{jk}=\tfrac12\big(\theta\pm\sqrt{\theta^2-4\lVert u\rVert^2}\big)$ with $\lVert u\rVert\le\theta/2$ on both branches.** The record's "$M_{jk}$ is not yet controlled" understates what its own identity gives, and the answer to whether $M_{jk}$ is guaranteed positive in an orbit-free block is **yes**.
+With $\theta>0$ this gives $M_{jk}\ge0$, and $M_{jk}=0$ forces $u=v=0$, so rows $j$ and $k$ vanish entirely, excluded by the connectedness of $\mathop{\mathrm{supp}}(M)$ that the same section already lists among its hypotheses. **So $M_{jk}>0$ strictly, and moreover $M_{jk}=\tfrac12\big(\theta\pm\sqrt{\theta^2-4\lVert u\rVert^2}\big)$ with $\lVert u\rVert\le\theta/2$ on both branches.** The record's "$M_{jk}$ is not yet controlled" understates what its own identity gives, and the answer to whether $M_{jk}$ is guaranteed positive in an orbit-free block is **yes**.
 
 **But the diagnosis is still the wrong one, for two reasons.**
 
@@ -138,7 +138,7 @@ With $\theta>0$ this gives $M_{jk}\ge0$, and $M_{jk}=0$ forces $u=v=0$, so rows 
 | S4 | real-analyticity of $P$ (Łojasiewicz), for convergence of ascent to a single point | the variational section |
 | S5 | $V_{jk}\subseteq T_WS$, and a perturbed start $W+tx$ rather than $W$ | the variational section |
 | S6 | the live target itself, and $S=0$ at the ascent endpoint $W'$ | "the clause is unconditionally true at $\theta=\Theta_n$" |
-| S7 | $\theta>0$ and connectedness of $\operatorname{supp}(M)$, for $M_{jk}>0$ | not used, but they are what makes verdict 5's positivity available |
+| S7 | $\theta>0$ and connectedness of $\mathop{\mathrm{supp}}(M)$, for $M_{jk}>0$ | not used, but they are what makes verdict 5's positivity available |
 
 ## What the item should carry forward
 

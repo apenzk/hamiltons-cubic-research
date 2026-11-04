@@ -27,7 +27,7 @@
 
 ## 0. Conventions, fixed once
 
-Line numbers cite the layout extraction [diss_jaeger_florian.txt](https://repositorium.uni-muenster.de/document/miami/820840d1-0252-4bf3-8fc7-853730eee3f5/diss_jaeger_florian.pdf). Chapter 3 begins at line 1635 and ends at line 5107, the bibliography starting at line 5108. $m$ and $n$ are the source's, tied by $n=2m$ from Assumption 1 onward, this tie is the axis of the whole review. $\mathfrak k=\operatorname{Im}(I_+)$, $A\subset\{(1,2),\dots,(n-1,n)\}$ is the index set with $\mathfrak k=\bigoplus_{(i,j)\in A}\langle e_i\wedge e_j\rangle$ (line 5046), and $A_k:=\{j\in\{1,\dots,n\}\mid e_k\wedge e_j\in\mathfrak k\}$ (line 5052). The bracket is the source's own (line 5061):
+Line numbers cite the layout extraction [diss_jaeger_florian.txt](https://repositorium.uni-muenster.de/document/miami/820840d1-0252-4bf3-8fc7-853730eee3f5/diss_jaeger_florian.pdf). Chapter 3 begins at line 1635 and ends at line 5107, the bibliography starting at line 5108. $m$ and $n$ are the source's, tied by $n=2m$ from Assumption 1 onward, this tie is the axis of the whole review. $\mathfrak k=\mathop{\mathrm{Im}}(I_+)$, $A\subset\{(1,2),\dots,(n-1,n)\}$ is the index set with $\mathfrak k=\bigoplus_{(i,j)\in A}\langle e_i\wedge e_j\rangle$ (line 5046), and $A_k:=\{j\in\{1,\dots,n\}\mid e_k\wedge e_j\in\mathfrak k\}$ (line 5052). The bracket is the source's own (line 5061):
 
 $$[e_a\wedge e_b,\;e_c\wedge e_d]=\delta_{bc}\,e_a\wedge e_d-\delta_{ac}\,e_b\wedge e_d+\delta_{ad}\,e_b\wedge e_c-\delta_{bd}\,e_a\wedge e_c.$$
 
@@ -41,7 +41,7 @@ The lemma under review is a statement *about* Jäger's Chapter 3, so its hypothe
 | $n=2m$ | Assumption 1, line 1705 | **Yes, it is what converts every $n$-constraint in Chapter 3 into an $m$-constraint, and the lemma's census ignores it** |
 | $\theta\ge\theta_0(n)$ | Assumption 1 | Yes, at the end of §3.5 and in §3.6 |
 | $W\in\langle\mathcal W\rangle^n_d$, $\lVert W\rVert=1$, $W^2+W^\#=\theta W$ | Assumption 1 | Yes throughout |
-| Assumption 2 ($\operatorname{scal}\le(n-3)\tilde\theta_0(n)$) | line 2212 | Yes, the contradiction hypothesis of §§3.3–3.5 |
+| Assumption 2 ($\mathop{\mathrm{scal}}\le(n-3)\tilde\theta_0(n)$) | line 2212 | Yes, the contradiction hypothesis of §§3.3–3.5 |
 
 Unused by the lemma as the record states it: **$n=2m$**. That omission is the whole defect.
 
@@ -49,7 +49,7 @@ Unused by the lemma as the record states it: **$n=2m$**. That omission is the wh
 
 The record's census is of the literal string $m\ge8$, and as a census of that string it is accurate. I checked it: across lines 1635–5107 the string occurs at exactly three places, Theorem 3.0.2 (line 1668), Assumption 1 (line 1705), and the choice of $l$ inside the proof of Theorem 3.0.2 (line 5080). There is no fourth occurrence, and the extraction renders the inequality consistently, so the string search is not defeated by typography.
 
-**But Chapter 3 is not written in $m$.** From Notation 3.0.3 onward the entire apparatus, $\theta_0(n)$, $\tilde\theta_0(n)$, $\hat\theta_0(n)$, $\operatorname{tr}S^3$, $\operatorname{tr}S^4$, $\bar\lambda$, every estimate of §§3.2–3.5, is written in $n$. Assumption 1 supplies $n=2m$ as a standing identity, so **every dimension threshold Chapter 3 asserts in $n$ is a threshold in $m$**, consumed silently by every result that says "let assumption 1 hold". The record's own brief anticipates exactly this trap (*"enumerate what Chapter 3's results assume, not what its prose spells"*) and the census does not do it.
+**But Chapter 3 is not written in $m$.** From Notation 3.0.3 onward the entire apparatus, $\theta_0(n)$, $\tilde\theta_0(n)$, $\hat\theta_0(n)$, $\mathop{\mathrm{tr}}S^3$, $\mathop{\mathrm{tr}}S^4$, $\bar\lambda$, every estimate of §§3.2–3.5, is written in $n$. Assumption 1 supplies $n=2m$ as a standing identity, so **every dimension threshold Chapter 3 asserts in $n$ is a threshold in $m$**, consumed silently by every result that says "let assumption 1 hold". The record's own brief anticipates exactly this trap (*"enumerate what Chapter 3's results assume, not what its prose spells"*) and the census does not do it.
 
 Enumerating the thresholds instead of the spellings, the $n$-constraints Chapter 3 actually consumes are, in ascending order of what they cost in $m$:
 
@@ -70,7 +70,7 @@ Claims 1 and 5 are **REFUTED**.
 
 The record's scope clause says the $n\ge15$ pair *"is a different hypothesis and is untouched"*. Lemma 3.5.6 reads, at line 4178:
 
-> **Lemma 3.5.6.** Let assumption 1 hold. Then $\operatorname{scal}\ge(n+1)\tilde\theta_0(n)$.
+> **Lemma 3.5.6.** Let assumption 1 hold. Then $\mathop{\mathrm{scal}}\ge(n+1)\tilde\theta_0(n)$.
 
 **It has exactly one hypothesis: Assumption 1.** There is no separate hypothesis to be different from. The $n\ge15$ appears inside the proof, as the range on which the two quartics are negative, and the only thing in scope that could supply it is $m\ge8$ together with $n=2m$. Reading it as "different and untouched" inverts the logical relation: it is not a side condition sitting beside $m\ge8$, it is **the consumption of $m\ge8$**, and it is the only one in the chapter.
 

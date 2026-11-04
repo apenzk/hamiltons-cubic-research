@@ -4,7 +4,7 @@ You are an adversarial reviewer. **Work from the definitions below and from the 
 
 ## The setting, as a given
 
-$P$, $E$, $F$ are real $3\times3$ orthogonal matrices. $\hat U=E\operatorname{diag}(u)E^{\mathsf T}$ and $C=F\operatorname{diag}(c)F^{\mathsf T}$ are symmetric, $P$ carries a third matrix's eigenvectors. Define
+$P$, $E$, $F$ are real $3\times3$ orthogonal matrices. $\hat U=E\mathop{\mathrm{diag}}(u)E^{\mathsf T}$ and $C=F\mathop{\mathrm{diag}}(c)F^{\mathsf T}$ are symmetric, $P$ carries a third matrix's eigenvectors. Define
 
 $$R:=(E^{\mathsf T}P)^{\circ2},\qquad S:=(F^{\mathsf T}P)^{\circ2},\qquad G:=E^{\mathsf T}F,$$
 

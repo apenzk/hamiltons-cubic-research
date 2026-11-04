@@ -4,8 +4,8 @@
 
 | # | Claim | Verdict |
 |---|---|---|
-| C1 | $\operatorname{diag}M(\lambda)=\lambda$ and $\langle x,M(\lambda)x\rangle=\langle X,W\circ X\rangle$ for $X=\sum x_\alpha v_\alpha\otimes v_\alpha$ | CONFIRMED |
-| C2 | (ii) as an implication: $\operatorname{diag}M=\lambda$ and $\lambda_{\max}(M)\le\theta$ give $\lambda_\alpha\le\theta$ for every $\alpha$ | CONFIRMED AS ALGEBRA |
+| C1 | $\mathop{\mathrm{diag}}M(\lambda)=\lambda$ and $\langle x,M(\lambda)x\rangle=\langle X,W\circ X\rangle$ for $X=\sum x_\alpha v_\alpha\otimes v_\alpha$ | CONFIRMED |
+| C2 | (ii) as an implication: $\mathop{\mathrm{diag}}M=\lambda$ and $\lambda_{\max}(M)\le\theta$ give $\lambda_\alpha\le\theta$ for every $\alpha$ | CONFIRMED AS ALGEBRA |
 | C3 | (ii)'s premise $\lambda_{\max}(M)=\theta$ is available at every global maximiser from the passages | REFUTED AS STATED |
 | C4 | (ii)'s conclusion $\theta\ge\max_\alpha\lambda_\alpha$ at every global maximiser | CONFIRMED (by a different route, $\theta=M(n)\ge\sqrt{3/2}>1\ge\lambda_\alpha$) |
 | C5 | (i), forward half: $\lambda_{\max}(M)\le\theta_0$ at a global maximiser implies $M(n)\le\theta_0(n)$ | CONFIRMED |
@@ -27,7 +27,7 @@
 
 | Label | Hypothesis | Where it is needed | Status on the passages |
 |---|---|---|---|
-| A1 | $c'$ totally antisymmetric in an orthonormal basis | $\operatorname{diag}M=\lambda$ (C1) | Standard: $\mathrm{ad}$ is skew for the invariant inner product on $\mathfrak{so}(n)$ |
+| A1 | $c'$ totally antisymmetric in an orthonormal basis | $\mathop{\mathrm{diag}}M=\lambda$ (C1) | Standard: $\mathrm{ad}$ is skew for the invariant inner product on $\mathfrak{so}(n)$ |
 | A2 | $\sum_\alpha\lambda_\alpha^2=1$ | Boxed bound $\theta\le\lambda_{\max}(M)$, and C4 | Given (Frobenius norm, unit $W$) |
 | A3 | $M(n)\ge\sqrt{3/2}$ | C4 | Given (padded $W_{\mathbb{CP}^2}$) |
 | H | $\lambda_{\max}(M)=\theta$ at every global maximiser | C2's premise, C6 | **Not available.** Passage A (line 288) certifies it only at coordinate-diagonal global maximisers and at $S^m\times S^m$, $m\ge4$, and says "The unrestricted form is not citable" |
@@ -36,7 +36,7 @@
 
 ## 1. The matrix $M$ is the compression of $L_W$ to $\mathcal D$, and its diagonal is $\lambda$
 
-For $X=\sum_\alpha x_\alpha v_\alpha\otimes v_\alpha\in\mathcal D$, the trilinear form $\langle A,B\circ C\rangle=\tfrac12\operatorname{tr}(ABC+ACB)+\langle A,B\#C\rangle$ is totally symmetric, so $\langle X,W\circ X\rangle=\langle W,X\circ X\rangle=\langle W,X^2\rangle+\langle W,X^\#\rangle$.
+For $X=\sum_\alpha x_\alpha v_\alpha\otimes v_\alpha\in\mathcal D$, the trilinear form $\langle A,B\circ C\rangle=\tfrac12\mathop{\mathrm{tr}}(ABC+ACB)+\langle A,B\#C\rangle$ is totally symmetric, so $\langle X,W\circ X\rangle=\langle W,X\circ X\rangle=\langle W,X^2\rangle+\langle W,X^\#\rangle$.
 
 With $W$ and $X$ both diagonal in $\{v_\alpha\}$, $\langle W,X^2\rangle=\sum_\alpha\lambda_\alpha x_\alpha^2$ and $(X^\#)_{\gamma\gamma}=\tfrac12\sum_{\alpha\beta}c'^2_{\alpha\beta\gamma}x_\alpha x_\beta$, so $\langle X,W\circ X\rangle=\sum_\alpha\lambda_\alpha x_\alpha^2+\tfrac12\sum c'^2_{\alpha\beta\gamma}x_\alpha x_\beta\lambda_\gamma=\langle x,M(\lambda)x\rangle$. At $x=\lambda$ this is Passage B's $P=\langle\lambda,M\lambda\rangle$.
 
@@ -48,7 +48,7 @@ By A2, $\theta=\langle\lambda,M\lambda\rangle\le\lambda_{\max}(M)$, which is Pas
 
 **The implication is sound.** Let $e_\alpha$ be the $\alpha$-th coordinate vector. Then $\lambda_\alpha=M_{\alpha\alpha}=\langle e_\alpha,Me_\alpha\rangle\le\lambda_{\max}(M)$. If $\lambda_{\max}(M)\le\theta$, then $\lambda_\alpha\le\theta$ for every $\alpha$. Only the upper half of $H$ is used. This is exactly [theta_ge_diag](../lean/HamiltonsCubic/Results/L115Statement.lean) in Passage D, whose hypothesis IsTopRayleigh encodes $\lambda_{\max}(A)\le\theta$. **C2 CONFIRMED AS ALGEBRA.**
 
-**The premise is not available as written.** The sentence reads "since $\operatorname{diag}M=\lambda$ and $\lambda_{\max}(M)=\theta$ at a maximiser". The only source for $\lambda_{\max}(M)=\theta$ is Lemma L115 itself, and Passage A's second heading restricts it: "$\lambda_{\max}(M)=\theta$ at every COORDINATE-DIAGONAL global maximiser, and at every $S^m\times S^m,\ m\ge4$. **The unrestricted form is not citable**". The boxed bound gives only $\lambda_{\max}(M)\ge\theta$, which points the wrong way for (ii). So at a general global maximiser the stated derivation has no premise. **C3 REFUTED AS STATED.**
+**The premise is not available as written.** The sentence reads "since $\mathop{\mathrm{diag}}M=\lambda$ and $\lambda_{\max}(M)=\theta$ at a maximiser". The only source for $\lambda_{\max}(M)=\theta$ is Lemma L115 itself, and Passage A's second heading restricts it: "$\lambda_{\max}(M)=\theta$ at every COORDINATE-DIAGONAL global maximiser, and at every $S^m\times S^m,\ m\ge4$. **The unrestricted form is not citable**". The boxed bound gives only $\lambda_{\max}(M)\ge\theta$, which points the wrong way for (ii). So at a general global maximiser the stated derivation has no premise. **C3 REFUTED AS STATED.**
 
 **The conclusion holds anyway, at every global maximiser.** By A2, $\lambda_\alpha^2\le\sum_\beta\lambda_\beta^2=1$, so $\lambda_\alpha\le1$. By A3, $\theta=M(n)\ge\sqrt{3/2}$, and $\sqrt{3/2}>1$ because $3/2>1$. Hence $\theta-\lambda_\alpha\ge\sqrt{3/2}-1>0$ for every $\alpha$, strictly. This is [theta_gt_lambda](../lean/HamiltonsCubic/Results/L115Statement.lean) in Passage D. It uses neither $M$ nor $H$, and it holds at every $n\ge4$. **C4 CONFIRMED.**
 
@@ -80,7 +80,7 @@ since $(n-2)^2(n+1)=n^3-3n^2+4$ and $n^2(n-3)=n^3-3n^2$ differ by $4$. At $n=13$
 
 **Could $H$ be derived at a global maximiser without the missing cap?** Global maximality is second-order information along curves inside the unit sphere of $\mathcal W_n$. Every such variation is a Weyl tensor, so it tests $L_W$ only on $\mathcal W_n$, which L24 already covers. The directions in $\mathcal D$ that carry $\lambda_{\max}(M)$ leave $\mathcal W_n$ and are invisible to any optimality condition on $\mathcal W_n$. The passages hold no other route, and Passage A explicitly records that none is on the record.
 
-**Could the failure be exhibited as a false conclusion?** It cannot from the passages. A closed-form global maximiser with $\lambda_{\max}(M)>\theta$ would need the global maximisers at some $n\ge12$ to be known, and that is Conjecture A. The defect is a missing premise, located at Passage A line 294 ("since $\operatorname{diag}M=\lambda$ and $\lambda_{\max}(M)=\theta$ at a maximiser") against line 290 ("The unrestricted form is not citable"), and for (i) at the same line's "The equivalent target is the pointwise statement at maximisers".
+**Could the failure be exhibited as a false conclusion?** It cannot from the passages. A closed-form global maximiser with $\lambda_{\max}(M)>\theta$ would need the global maximisers at some $n\ge12$ to be known, and that is Conjecture A. The defect is a missing premise, located at Passage A line 294 ("since $\mathop{\mathrm{diag}}M=\lambda$ and $\lambda_{\max}(M)=\theta$ at a maximiser") against line 290 ("The unrestricted form is not citable"), and for (i) at the same line's "The equivalent target is the pointwise statement at maximisers".
 
 **Is the author's restricted scope enough?** Reading "at a maximiser" as "at a coordinate-diagonal global maximiser" makes (ii)'s derivation valid there. It does not rescue (i): the pointwise statement over coordinate-diagonal maximisers is equivalent to "$M(n)\le\Theta_n$ or no global maximiser is coordinate-diagonal", which is Conjecture A only if some global maximiser is known to be coordinate-diagonal. That is again open. So the strongest reading that makes (i) an equivalence is the full $H$.
 

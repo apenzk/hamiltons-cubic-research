@@ -104,7 +104,7 @@ so $L_M$ maps the Bianchi hyperplane to itself and maps its complement off it, t
 **The block.** Eliminating $x_2=x_1+x_3$ and using $(x_1,x_3)$ as coordinates on $V_{ijkl}$,
 $$L_M\big|_{V_{ijkl}}=\frac12\begin{pmatrix}p_1-p_3 & p_2-p_3\\[2pt] p_2-p_1 & p_3-p_1\end{pmatrix},$$
 which is **traceless**, so the spectrum is $\pm\lambda$ with $\lambda^2=-\det$. Writing $a=p_1-p_2$, $b=p_2-p_3$, the determinant is $-\tfrac14(a^2+ab+b^2)$, hence
-$$\operatorname{spec}\Big(L_e\big|_{V_{ijkl}}\Big)=\pm\frac1{2\theta}\sqrt{\tfrac12\big[(p_1-p_2)^2+(p_2-p_3)^2+(p_3-p_1)^2\big]}=\pm\frac1{2\theta}\sqrt{\tfrac32\textstyle\sum_r(p_r-\bar p)^2}.$$
+$$\mathop{\mathrm{spec}}\Big(L_e\big|_{V_{ijkl}}\Big)=\pm\frac1{2\theta}\sqrt{\tfrac12\big[(p_1-p_2)^2+(p_2-p_3)^2+(p_3-p_1)^2\big]}=\pm\frac1{2\theta}\sqrt{\tfrac32\textstyle\sum_r(p_r-\bar p)^2}.$$
 **The block sees only the variance of the three opposite-pair sums**; it is blind to $p_1+p_2+p_3$, i.e. to the total mass of the $4$-set.
 
 **Screen** (seconds, on operators built here for the purpose, reported as transcription insurance and not as evidence): against $\circ$ assembled from the structure constants, at $n=5,6,7$ with random $M\in\mathcal D_n$ and random $X\in V_{1234}$, the closed form reproduces $L_MX$ to $2\times10^{-16}$; the output stays on the Bianchi hyperplane to $4\times10^{-16}$; and leakage out of the $4$-set support is exactly $0$, which is the support half of E4.

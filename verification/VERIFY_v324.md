@@ -15,7 +15,7 @@ The brief [ADJ_L101_B2.md](ADJ_L101_B2.md) was taken cold. No numerical work was
 
 ## 0. Conventions, fixed once
 
-- $\mathcal W_n$ is the space of algebraic Weyl tensors on $\mathbb R^n$, read as symmetric operators on $\Lambda^2\mathbb R^n$, with the Frobenius inner product $\langle X,Y\rangle=\operatorname{tr}(XY)$.
+- $\mathcal W_n$ is the space of algebraic Weyl tensors on $\mathbb R^n$, read as symmetric operators on $\Lambda^2\mathbb R^n$, with the Frobenius inner product $\langle X,Y\rangle=\mathop{\mathrm{tr}}(XY)$.
 - $SO(n)$ acts by $g\cdot W=\rho(g)W\rho(g)^{-1}$, and $A\in\mathfrak{so}(n)$ acts by $A\cdot W=[\rho(A),W]$.
 - $Q(W)=W^2+W^\#$ (projected to $\mathcal W_n$), $X\circ Y=\tfrac12(Q(X+Y)-Q(X)-Q(Y))$, $T(X,Y,Z)=\langle X\circ Y,Z\rangle$, $P(W)=\langle W,Q(W)\rangle$.
 - $u=W_{\mathbb{CP}^2}$ padded, $|u|=1$, $\theta^*=P(u)=\sqrt{3/2}$, $F_u(h)=\tfrac12(uh+hu)+u\#h$.
@@ -40,7 +40,7 @@ Differentiating along $g_t=\exp(tA)$ at $t=0$:
 
 $$T(A\cdot x,y,z)+T(x,A\cdot y,z)+T(x,y,A\cdot z)=0.$$
 
-Skewness (H2): for symmetric $X,Y$ and skew $R=\rho(A)$, $\langle[R,X],Y\rangle=\operatorname{tr}(RXY)-\operatorname{tr}(RYX)$ and $\langle X,[R,Y]\rangle=\operatorname{tr}(RYX)-\operatorname{tr}(RXY)$, which sum to zero.
+Skewness (H2): for symmetric $X,Y$ and skew $R=\rho(A)$, $\langle[R,X],Y\rangle=\mathop{\mathrm{tr}}(RXY)-\mathop{\mathrm{tr}}(RYX)$ and $\langle X,[R,Y]\rangle=\mathop{\mathrm{tr}}(RYX)-\mathop{\mathrm{tr}}(RXY)$, which sum to zero.
 
 ## 2. The general form (claims 1 and 2)
 
@@ -58,7 +58,7 @@ This is the displayed general form under H5. At $\lambda=\mu$ the prefactor is $
 
 ## 3. Attainment of $0.91$ (claims 3 and 4)
 
-**3.1. $F_u$ is not a scalar.** From $T(g\cdot u,h,k)=T(u,g^{-1}\cdot h,g^{-1}\cdot k)$ one gets $F_{g\cdot u}=gF_ug^{-1}$, so $u\mapsto\operatorname{tr}F_u$ is a linear $SO(n)$-invariant functional on $\mathcal W_n$. It equals $\langle u,w_0\rangle$ for an invariant $w_0\in\mathcal W_n$, and H3 forces $w_0=0$. Hence $\operatorname{tr}F_u=0$. If $F_u=c\,\mathrm{Id}$ then $c\dim\mathcal W_n=0$, so $c=0$ and $\theta^*=\langle F_uu,u\rangle=0$, contradicting H4. So $F_u$ has at least two distinct eigenvalues. (Passage C gives the same conclusion from the multiplicities of $+1$ and $+\tfrac12$.)
+**3.1. $F_u$ is not a scalar.** From $T(g\cdot u,h,k)=T(u,g^{-1}\cdot h,g^{-1}\cdot k)$ one gets $F_{g\cdot u}=gF_ug^{-1}$, so $u\mapsto\mathop{\mathrm{tr}}F_u$ is a linear $SO(n)$-invariant functional on $\mathcal W_n$. It equals $\langle u,w_0\rangle$ for an invariant $w_0\in\mathcal W_n$, and H3 forces $w_0=0$. Hence $\mathop{\mathrm{tr}}F_u=0$. If $F_u=c\,\mathrm{Id}$ then $c\dim\mathcal W_n=0$, so $c=0$ and $\theta^*=\langle F_uu,u\rangle=0$, contradicting H4. So $F_u$ has at least two distinct eigenvalues. (Passage C gives the same conclusion from the multiplicities of $+1$ and $+\tfrac12$.)
 
 **3.2. Some eigenspace is moved off itself.** Take any eigenvalue $\lambda$. Then $V_\lambda$ is a nonzero proper subspace by 3.1. If $A\cdot V_\lambda\subseteq V_\lambda$ for every $A\in\mathfrak{so}(n)$, then $V_\lambda$ is invariant under $\exp(\mathfrak{so}(n))$, which generates the connected group $SO(n)$, contradicting H3. So there are $A\in\mathfrak{so}(n)$ and $x\in V_\lambda$ with $A\cdot x\notin V_\lambda$. Decompose $A\cdot x=\sum_\nu w_\nu$ with $w_\nu\in V_\nu$. Some $\mu\ne\lambda$ has $w_\mu\ne0$. Put $y=w_\mu$. By orthogonality $\langle A\cdot x,y\rangle=|w_\mu|^2>0$.
 
@@ -78,7 +78,7 @@ exactly. Replacing $0.91$ by any real $r$ gives $r$ the same way. So the set of 
 
 $$\sup\big\{\,|(\lambda-\mu)\theta^*\langle A\cdot x,y\rangle|\ :\ \lambda\ne\mu,\ x\in V_\lambda,\ y\in V_\mu,\ |x|=|y|=1,\ \|A\|=1\big\}=0.91 .$$
 
-The passages name no norm on $\mathfrak{so}(n)$, and the answer depends on the choice. For the witness of 3.4 with $x=u$ and $y=A\cdot u/|A\cdot u|$, the value is $\tfrac12\theta^*|A\cdot u|$, homogeneous of degree one in $A$. The matrix norm $\operatorname{tr}(A^{\mathsf T}A)^{1/2}$ on $\mathbb R^n$ and the Frobenius norm of $\rho(A)$ on $\Lambda^2\mathbb R^n$ differ by the exact factor $\sqrt{n-2}$ (the Dynkin index of $\Lambda^2$ relative to the vector representation, $\operatorname{tr}_{\Lambda^2}\rho(A)^{\mathsf T}\rho(A)=(n-2)\operatorname{tr}A^{\mathsf T}A$), and the half-trace convention differs by $\sqrt2$. A single decimal with no $n$ attached cannot hold under both of the first two norms for every $n\ge9$. The passages also give no witness $(x,y,A)$ and no closed form for the supremum.
+The passages name no norm on $\mathfrak{so}(n)$, and the answer depends on the choice. For the witness of 3.4 with $x=u$ and $y=A\cdot u/|A\cdot u|$, the value is $\tfrac12\theta^*|A\cdot u|$, homogeneous of degree one in $A$. The matrix norm $\mathop{\mathrm{tr}}(A^{\mathsf T}A)^{1/2}$ on $\mathbb R^n$ and the Frobenius norm of $\rho(A)$ on $\Lambda^2\mathbb R^n$ differ by the exact factor $\sqrt{n-2}$ (the Dynkin index of $\Lambda^2$ relative to the vector representation, $\mathop{\mathrm{tr}}_{\Lambda^2}\rho(A)^{\mathsf T}\rho(A)=(n-2)\mathop{\mathrm{tr}}A^{\mathsf T}A$), and the half-trace convention differs by $\sqrt2$. A single decimal with no $n$ attached cannot hold under both of the first two norms for every $n\ge9$. The passages also give no witness $(x,y,A)$ and no closed form for the supremum.
 
 **4.3. What would settle it.** Fix the norm on $\mathfrak{so}(n)$ and $n$. The exact quantity is $\max_{\lambda\ne\mu}|\lambda-\mu|\,\theta^*\,\sigma_{\lambda\mu}$ with $\sigma_{\lambda\mu}=\max_{\|A\|=1}\|\pi_\mu\,\mathrm{ad}_{\rho(A)}\,\iota_\lambda\|_{\mathrm{op}}$, where $\iota_\lambda$ is the inclusion of $V_\lambda$ and $\pi_\mu$ the orthogonal projection to $V_\mu$. Its value equal to $\tfrac{91}{100}$ to two places would confirm the normalised reading, and any other value would refute it. It needs the spectrum and eigenspaces of $F_u$ at $u=W_{\mathbb{CP}^2}$, which is computation outside this brief.
 

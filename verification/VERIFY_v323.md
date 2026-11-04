@@ -15,7 +15,7 @@ The brief ([ADJ_L101_B2.md](ADJ_L101_B2.md)) was read cold. No numerical work wa
 
 ## 0. Conventions, fixed once
 
-- $\mathcal W_n$ carries the Frobenius product $\langle X,Y\rangle=\operatorname{tr}(XY)$ on symmetric operators of $\Lambda^2\mathbb R^n$.
+- $\mathcal W_n$ carries the Frobenius product $\langle X,Y\rangle=\mathop{\mathrm{tr}}(XY)$ on symmetric operators of $\Lambda^2\mathbb R^n$.
 - $Q(W)=W^2+W^\#$ with $W^\#=W\#W$ for a symmetric bilinear $\#$, so polarisation gives $X\circ Y=\tfrac12(XY+YX)+X\#Y$. Where $Q$ is followed by orthogonal projection onto $\mathcal W_n$, pairing with an element of $\mathcal W_n$ removes the projection, and $F_u$ is read as the projected operator $h\mapsto\pi_{\mathcal W_n}\big(\tfrac12(uh+hu)+u\#h\big)$ on $\mathcal W_n$.
 - $A\in\mathfrak{so}(n)$ acts by $A\cdot X=[\rho(A),X]$ with $\rho(A)$ skew on $\Lambda^2\mathbb R^n$. The first display's $[A,u]$ is the same object as $[\rho(A),u]$.
 - $V_\lambda=\{x\in\mathcal W_n: F_ux=\lambda\theta^*x\}$, the normalisation of Passage C, where $F_uW_1=\tfrac13\theta^*W_1$ defines $V_{1/3}$ and $\mathrm{mult}(+1)$, $\mathrm{mult}(+\tfrac12)$ are counted on this scale. Under the unnormalised convention $F_ux=\lambda x$ the factor $\theta^*$ drops from the general form, and nothing below changes.
@@ -31,7 +31,7 @@ The brief ([ADJ_L101_B2.md](ADJ_L101_B2.md)) was read cold. No numerical work wa
 
 ## 1. The form $T(\cdot,\cdot,u)$ is the quadratic form of $F_u$
 
-For $X,Y\in\mathcal W_n$, $\langle\tfrac12(XY+YX),u\rangle=\tfrac12\big(\operatorname{tr}(XYu)+\operatorname{tr}(YXu)\big)$ and $\langle\tfrac12(uX+Xu),Y\rangle=\tfrac12\big(\operatorname{tr}(uXY)+\operatorname{tr}(XuY)\big)$. Cyclicity gives $\operatorname{tr}(XYu)=\operatorname{tr}(uXY)$ and $\operatorname{tr}(YXu)=\operatorname{tr}(XuY)$, so the two agree.
+For $X,Y\in\mathcal W_n$, $\langle\tfrac12(XY+YX),u\rangle=\tfrac12\big(\mathop{\mathrm{tr}}(XYu)+\mathop{\mathrm{tr}}(YXu)\big)$ and $\langle\tfrac12(uX+Xu),Y\rangle=\tfrac12\big(\mathop{\mathrm{tr}}(uXY)+\mathop{\mathrm{tr}}(XuY)\big)$. Cyclicity gives $\mathop{\mathrm{tr}}(XYu)=\mathop{\mathrm{tr}}(uXY)$ and $\mathop{\mathrm{tr}}(YXu)=\mathop{\mathrm{tr}}(XuY)$, so the two agree.
 
 The $\#$ part is symmetric under permutation of the three slots by H1, so $\langle X\#Y,u\rangle=\langle u\#X,Y\rangle$. Hence $T(X,Y,u)=\langle F_uX,Y\rangle$, and $F_u$ is symmetric because $T$ is. Claim 1 is CONFIRMED.
 
@@ -39,7 +39,7 @@ The $\#$ part is symmetric under permutation of the three slots by H1, so $\lang
 
 Differentiating $T(g\cdot x,g\cdot y,g\cdot z)=T(x,y,z)$ along $g=\exp(tA)$ at $t=0$ (H2) gives $T(A\cdot x,y,z)+T(x,A\cdot y,z)+T(x,y,A\cdot z)=0$.
 
-The derivation $X\mapsto[a,X]$ with $a=\rho(A)$ skew maps symmetric operators to symmetric operators, and it is Frobenius-skew: $\langle[a,X],Y\rangle=\operatorname{tr}(aXY)-\operatorname{tr}(aYX)=-\langle X,[a,Y]\rangle$.
+The derivation $X\mapsto[a,X]$ with $a=\rho(A)$ skew maps symmetric operators to symmetric operators, and it is Frobenius-skew: $\langle[a,X],Y\rangle=\mathop{\mathrm{tr}}(aXY)-\mathop{\mathrm{tr}}(aYX)=-\langle X,[a,Y]\rangle$.
 
 Take $z=u$, $x\in V_\lambda$, $y\in V_\mu$. By section 1 and symmetry of $F_u$,
 

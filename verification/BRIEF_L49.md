@@ -367,7 +367,7 @@ end HamiltonsCubic.L49Statement
 
 - $\mathcal W_n$ is the space of algebraic Weyl tensors on $\mathbb R^n$, viewed as symmetric operators on $\Lambda^2\mathbb R^n\cong\mathfrak{so}(n)$, $N=\binom n2$. $P(W)=\langle W,W^2+W^\#\rangle$ and, at unit norm, $\theta=P(W)$.
 - An eigenframe of $W$ is an orthonormal eigenbasis $\{v_\alpha\}_{\alpha=1}^N$ of $\mathfrak{so}(n)$ with eigenvalues $\lambda_\alpha$; $T_{\alpha\beta\gamma}=\langle[v_\alpha,v_\beta],v_\gamma\rangle^2$.
-- "Trace conditions" are the linear conditions on the spectrum $(\lambda_\alpha)$ that every $W\in\mathcal W_n$ obeys; for instance $\sum_\alpha\lambda_\alpha=\operatorname{tr}W=0$.
+- "Trace conditions" are the linear conditions on the spectrum $(\lambda_\alpha)$ that every $W\in\mathcal W_n$ obeys; for instance $\sum_\alpha\lambda_\alpha=\mathop{\mathrm{tr}}W=0$.
 
 ## What to attack, beyond the standing list
 

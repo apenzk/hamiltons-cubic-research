@@ -47,7 +47,7 @@ The brief ([BRIEF_L84.md](BRIEF_L84.md)) was read cold. No numerical work was do
 **Used but unstated.**
 
 - U1. $C_4\notin\mathbb C[C_2]$, equivalently $C_2,C_4$ generate $Z(U(\mathfrak g))$, equivalently the $e_2$-coefficient of $\gamma(C_4)$ is nonzero. The argument needs it and the heading omits it (claim 1).
-- U2. In the leading-term route only: the non-leading part of $\gamma(C_4)$ lies in $\operatorname{span}\{1,p_2\}$. No sentence addresses it (claim 5).
+- U2. In the leading-term route only: the non-leading part of $\gamma(C_4)$ lies in $\mathop{\mathrm{span}}\{1,p_2\}$. No sentence addresses it (claim 5).
 - U3. The $24$ labels are pairwise distinct. True by reading Passage B.
 
 ## 1. The heading: the pair $(C_2,C_4)$ separates all $24$
@@ -97,7 +97,7 @@ Observation, no finding: strict dominance is more than the recovery step needs. 
 2. Exhibit. (a) For $C_2^2$, a degree-four central element, $\gamma(C_2^2)=(p_2-\tfrac52)^2$ has leading term $p_2^2$, which is a different quartic from $p_4$. So the statement holds at most for an unnamed family. (b) A leading term does not fix the eigenvalue: $C_4'=C_4+C_2$ has the same leading term as $C_4$, and on $V_{(1,0)}$ its eigenvalue exceeds $C_4$'s by $c_2(1,0)=4$. Reading the $C_4'$ eigenvalue as $p_4$ in $e_2=(p_2^2-p_4)/2$ returns the wrong $e_2$.
 3. Argue the opposite. The lower-degree part of any $\gamma(z)$ is a $W$-invariant of degree below $4$, and those are spanned by $1$ and $p_2$, so a leading term $\kappa p_4$ with $\kappa\ne0$ does make $(\chi(C_2),\chi(C_4))$ determine $(p_2,p_4)$. That fact is not on the page, nor is a definition of "the higher Casimirs" or a source for their leading terms. The "Equivalently" sentence (claim 4) carries the separation without this route.
 
-**Verdict: HYPOTHESIS-DEBT.** To discharge it, the record would have to name the family (for example the trace invariants in the vector representation) and prove or cite that the top homogeneous part of its $\gamma$-image is a nonzero multiple of $p_{2k}$. For $k=2$ it would also have to record that the remaining terms lie in $\operatorname{span}\{1,p_2\}$. The lemma survives without it under the corrected hypothesis of claim 1, so the debt is not load-bearing.
+**Verdict: HYPOTHESIS-DEBT.** To discharge it, the record would have to name the family (for example the trace invariants in the vector representation) and prove or cite that the top homogeneous part of its $\gamma$-image is a nonzero multiple of $p_{2k}$. For $k=2$ it would also have to record that the remaining terms lie in $\mathop{\mathrm{span}}\{1,p_2\}$. The lemma survives without it under the corrected hypothesis of claim 1, so the debt is not load-bearing.
 
 ## 6. "The quartic generator"
 

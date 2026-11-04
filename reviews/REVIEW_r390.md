@@ -12,7 +12,7 @@
 | **4** "a pure critical point in the band cannot concentrate its mass on a four-set" | **REFUTED, with witness.** $S^5\times S^{43}$ at $n=48$: in band at $\theta=1.263631$, with a four-subset carrying $m_4=0.501203$ |
 | **5** the owed lemma, "$m_4(S)\ge\tfrac12$ at some four-subset forces $\theta$ below $\sqrt{3/2}$" | **REFUTED by the same witness. This lemma is false and no proof of it exists.** The sufficiency itself fails from $S^5\times S^{66}$ ($n=71$), where $3m_4>\theta^2$ |
 | **6** $\Theta_4=\sqrt{12}/4=0.866$, the four-support endpoint | **CONFIRMED**, derived independently and attained at $S^2\times S^2$ |
-| **7** "$\operatorname{tr}M^3=\tfrac89a^3=1.633$, so $\tfrac12\operatorname{tr}M^3=0.8165$" | **REFUTED twice over.** The spectrum is unreachable (zero row sums put $0$ in it); the true maximum is $2/\sqrt3=1.1547$. And $\theta\ne\tfrac12\operatorname{tr}M^3$, the entrywise cube term is missing. The two errors partly cancel |
+| **7** "$\mathop{\mathrm{tr}}M^3=\tfrac89a^3=1.633$, so $\tfrac12\mathop{\mathrm{tr}}M^3=0.8165$" | **REFUTED twice over.** The spectrum is unreachable (zero row sums put $0$ in it); the true maximum is $2/\sqrt3=1.1547$. And $\theta\ne\tfrac12\mathop{\mathrm{tr}}M^3$, the entrywise cube term is missing. The two errors partly cancel |
 | **8** "[Lemma L18](../findings/problem.md)(b) already computes the $\mathcal D_n$ projection in closed form" | **REFUTED as a citation**, there is no L18(b); the formula is Step 2(b) of the *candidate diagonal theorem*, a different result. The general formula is one line away but is not on the record |
 | **9** the proposed fix, project $M_S$ back onto the zero-row-sum slice and price it | **REFUTED on its merits, by a dichotomy.** Either projection is available and vacuous, or useful and identically zero on the extremal concentrator |
 | **10** the interpolation plan's well-posedness, is "$\theta(M_S)$" meaningful? | **CORRECTED, then REFUTED.** Malformed as written, repairable in one line exactly as the brief proposes, and the repaired plan dies on an **exact equality**: $\theta(M_S)=\sqrt{3/2}$ at the maximal concentrator |
@@ -23,13 +23,13 @@
 
 ## 0. The setting, rebuilt from the definitions
 
-$M$ hollow symmetric on $[n]$, $M\mathbf1=0$, $M_{ij}^2+(M^2)_{ij}=\theta M_{ij}$ for $i\ne j$, $\theta>0$, $\operatorname{tr}M^2=2$. For a four-subset $S=\{i,j,k,l\}$ write the six entries as $x=M_{ij}$, $x'=M_{kl}$, $y=M_{ik}$, $y'=M_{jl}$, $z=M_{il}$, $z'=M_{jk}$, so $A=x+x'$, $B=y+y'$, $C=z+z'$ and $m_4(S)=x^2+x'^2+y^2+y'^2+z^2+z'^2$.
+$M$ hollow symmetric on $[n]$, $M\mathbf1=0$, $M_{ij}^2+(M^2)_{ij}=\theta M_{ij}$ for $i\ne j$, $\theta>0$, $\mathop{\mathrm{tr}}M^2=2$. For a four-subset $S=\{i,j,k,l\}$ write the six entries as $x=M_{ij}$, $x'=M_{kl}$, $y=M_{ik}$, $y'=M_{jl}$, $z=M_{il}$, $z'=M_{jk}$, so $A=x+x'$, $B=y+y'$, $C=z+z'$ and $m_4(S)=x^2+x'^2+y^2+y'^2+z^2+z'^2$.
 
-**$\theta$ as a cubic, derived and then checked against the record.** Multiplying criticality by $M_{ij}$ and summing over $i\ne j$, using $\sum_{i\ne j}(M^2)_{ij}M_{ij}=\operatorname{tr}M^3$ (the diagonal drops because $M$ is hollow):
+**$\theta$ as a cubic, derived and then checked against the record.** Multiplying criticality by $M_{ij}$ and summing over $i\ne j$, using $\sum_{i\ne j}(M^2)_{ij}M_{ij}=\mathop{\mathrm{tr}}M^3$ (the diagonal drops because $M$ is hollow):
 
-$$\sum_{i\ne j}M_{ij}^3+\operatorname{tr}M^3=\theta\operatorname{tr}M^2=2\theta,\qquad\text{so}\qquad \theta=\tfrac12 P(M),\quad P(M):=\langle M,Q(M)\rangle .$$
+$$\sum_{i\ne j}M_{ij}^3+\mathop{\mathrm{tr}}M^3=\theta\mathop{\mathrm{tr}}M^2=2\theta,\qquad\text{so}\qquad \theta=\tfrac12 P(M),\quad P(M):=\langle M,Q(M)\rangle .$$
 
-This is [ad-form-attempt.md](../findings/ad-form-attempt.md)'s $\theta=\operatorname{tr}(M^3)+\langle M^\#,M\rangle$ in the present normalisation. **It is the identity §7 needs and does not use**, and the omission of the entrywise term is the error in claim 7.
+This is [ad-form-attempt.md](../findings/ad-form-attempt.md)'s $\theta=\mathop{\mathrm{tr}}(M^3)+\langle M^\#,M\rangle$ in the present normalisation. **It is the identity §7 needs and does not use**, and the omission of the entrywise term is the error in claim 7.
 
 **$S^p\times S^q$, derived rather than quoted.** With $a$ within the first block, $b$ within the second, $c$ across, hollowness and $M\mathbf1=0$ give $a=-qc/(p-1)$ and $b=-pc/(q-1)$, and criticality across the blocks collapses to $c(1-n)=\theta$. Setting $t=\theta/(n-1)$:
 
@@ -51,7 +51,7 @@ $$\Sigma\;\le\;3\,m_4(S),$$
 
 > **Lemma (four-support structure).** A hollow symmetric matrix supported on exactly four indices with all row sums zero satisfies $M_{ij}=M_{kl}$, $M_{ik}=M_{jl}$, $M_{il}=M_{jk}$, and the three common values sum to zero. Conversely every such matrix is zero-row-sum. *Proof.* The four row-sum equations are $x+y+z=0$, $x+y'+z'=0$, $y+x'+z'=0$, $z+x'+y'=0$. Differencing the first two and the last two gives $y-y'=z'-z$ and $y-y'=z-z'$, so $z=z'$ and $y=y'$; the first and third then give $x=x'$. The map has rank $4$ on the six entries, so the solution space is two-dimensional. $\square$ *(Screen: the rank and null basis check numerically, and the basis vectors have exactly this twin form.)*
 
-**So the equality locus of $\Sigma\le3m_4$ is precisely the four-supported zero-row-sum slice**, the fully concentrated configurations the route is trying to exclude. On that slice, with $\operatorname{tr}M^2=2$, one gets $m_4=1$ and $\Sigma=3$ identically. The reduction is at its lossiest exactly at the object it is aimed at, which is a warning the section does not carry.
+**So the equality locus of $\Sigma\le3m_4$ is precisely the four-supported zero-row-sum slice**, the fully concentrated configurations the route is trying to exclude. On that slice, with $\mathop{\mathrm{tr}}M^2=2$, one gets $m_4=1$ and $\Sigma=3$ identically. The reduction is at its lossiest exactly at the object it is aimed at, which is a warning the section does not carry.
 
 ---
 
@@ -115,15 +115,15 @@ $$m_4^{(4,0)}\;\longrightarrow\;\frac{12}{p(p-1)},\qquad \theta^2\;\longrightarr
 
 ## 4. Claim 7, two independent errors in one sentence, and one was visible without arithmetic
 
-The section writes: "$\operatorname{tr}M=0$, $\operatorname{tr}M^2=2$ maximise $\operatorname{tr}M^3$ at one large eigenvalue against three equal negatives: $a=\sqrt{3/2}$, $\operatorname{tr}M^3=\tfrac89a^3=1.633$, so $\tfrac12\operatorname{tr}M^3=0.8165$."
+The section writes: "$\mathop{\mathrm{tr}}M=0$, $\mathop{\mathrm{tr}}M^2=2$ maximise $\mathop{\mathrm{tr}}M^3$ at one large eigenvalue against three equal negatives: $a=\sqrt{3/2}$, $\mathop{\mathrm{tr}}M^3=\tfrac89a^3=1.633$, so $\tfrac12\mathop{\mathrm{tr}}M^3=0.8165$."
 
-**Error (a), the spectrum is unreachable.** $M\mathbf1=0$ puts $0$ in the spectrum with eigenvector $\mathbf1_4$, so the four eigenvalues cannot be $(a,-a/3,-a/3,-a/3)$; at most three are nonzero and they sum to zero. On the actual slice (the two-dimensional family of §1), Newton's identities with $e_1=0$, $e_2=-\tfrac14$ give $\operatorname{tr}M^3=24xyz$ and $\lvert xyz\rvert\le1/(12\sqrt3)$ from the discriminant, so
+**Error (a), the spectrum is unreachable.** $M\mathbf1=0$ puts $0$ in the spectrum with eigenvector $\mathbf1_4$, so the four eigenvalues cannot be $(a,-a/3,-a/3,-a/3)$; at most three are nonzero and they sum to zero. On the actual slice (the two-dimensional family of §1), Newton's identities with $e_1=0$, $e_2=-\tfrac14$ give $\mathop{\mathrm{tr}}M^3=24xyz$ and $\lvert xyz\rvert\le1/(12\sqrt3)$ from the discriminant, so
 
-$$\max\operatorname{tr}M^3=\frac2{\sqrt3}=1.154701,$$
+$$\max\mathop{\mathrm{tr}}M^3=\frac2{\sqrt3}=1.154701,$$
 
 attained at $(x,y,z)=\big(1/\sqrt3,-1/(2\sqrt3),-1/(2\sqrt3)\big)$, which **is** a critical point, and **is** $S^2\times S^2$ at $n=4$. The figure $1.633$ overstates it by $41\%$.
 
-**Error (b), the functional is wrong.** By §0, $\theta=\tfrac12\big(\sum_{i\ne j}M_{ij}^3+\operatorname{tr}M^3\big)$; the entrywise term is dropped. At the same extremiser $\sum_{i\ne j}M_{ij}^3=1/\sqrt3$, so $\theta=\tfrac12(1.154701+0.577350)=0.866025=\Theta_4$ **exactly**.
+**Error (b), the functional is wrong.** By §0, $\theta=\tfrac12\big(\sum_{i\ne j}M_{ij}^3+\mathop{\mathrm{tr}}M^3\big)$; the entrywise term is dropped. At the same extremiser $\sum_{i\ne j}M_{ij}^3=1/\sqrt3$, so $\theta=\tfrac12(1.154701+0.577350)=0.866025=\Theta_4$ **exactly**.
 
 **The two errors partly cancel, which is why $0.8165$ looked plausible.** But the sentence is self-refuting on its own page: it prints $0.8165$ as a maximisation, then prints the exact value $0.866$ two lines later. A quantity derived as a maximum cannot be below the value it is being compared with. **No computation was needed to catch this, the section contains its own falsifier.**
 
@@ -165,11 +165,11 @@ Take $M_S$ the restriction to pairs inside $S$, and ask what the projection buys
 
 **But it is repairable in one line, and the record already contains the repair.** Define
 
-$$\theta(M)\;:=\;\frac{\sqrt2\,P(M)}{\lVert M\rVert_F^3},\qquad P(M)=\langle M,Q(M)\rangle=\sum_{i\ne j}M_{ij}^3+\operatorname{tr}M^3 .$$
+$$\theta(M)\;:=\;\frac{\sqrt2\,P(M)}{\lVert M\rVert_F^3},\qquad P(M)=\langle M,Q(M)\rangle=\sum_{i\ne j}M_{ij}^3+\mathop{\mathrm{tr}}M^3 .$$
 
-This is homogeneous of degree $0$, defined at every nonzero hollow symmetric matrix, real-analytic, and by §0 it agrees with the eigenvalue at every critical point with $\operatorname{tr}M^2=2$. **And it is already the functional [Lemma L57](../findings/problem.md) bounds**, L57 is stated as $\langle Q(W),W\rangle\le\Theta_n\lVert W\rVert^3$ on the *whole* diagonal locus, with no criticality hypothesis. So the well-posed object the brief asks for is on the record; only [ATTEMPTS.md](../ATTEMPTS.md)'s wording is loose. **The plan should be restated in $P$ on the unit sphere, as the brief proposes.**
+This is homogeneous of degree $0$, defined at every nonzero hollow symmetric matrix, real-analytic, and by §0 it agrees with the eigenvalue at every critical point with $\mathop{\mathrm{tr}}M^2=2$. **And it is already the functional [Lemma L57](../findings/problem.md) bounds**, L57 is stated as $\langle Q(W),W\rangle\le\Theta_n\lVert W\rVert^3$ on the *whole* diagonal locus, with no criticality hypothesis. So the well-posed object the brief asks for is on the record; only [ATTEMPTS.md](../ATTEMPTS.md)'s wording is loose. **The plan should be restated in $P$ on the unit sphere, as the brief proposes.**
 
-**Restating it kills it, by an exact equality.** Evaluate the repaired functional at the maximal concentrator, the constant block, all six entries $a>0$. Then $\lVert M_S\rVert_F^2=12a^2$, $\sum_{i\ne j}M_{ij}^3=12a^3$, $\operatorname{tr}M^3=24a^3$, so $P=36a^3$ and
+**Restating it kills it, by an exact equality.** Evaluate the repaired functional at the maximal concentrator, the constant block, all six entries $a>0$. Then $\lVert M_S\rVert_F^2=12a^2$, $\sum_{i\ne j}M_{ij}^3=12a^3$, $\mathop{\mathrm{tr}}M^3=24a^3$, so $P=36a^3$ and
 
 $$\theta(M_S)=\frac{\sqrt2\cdot36a^3}{(12a^2)^{3/2}}=\frac32\sqrt{\frac23}=\sqrt{\frac32}=1.224744871\ldots$$
 

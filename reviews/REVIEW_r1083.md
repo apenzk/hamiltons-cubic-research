@@ -19,9 +19,9 @@
 
 **The index contraction, derived here from the definition.** With $c_{abc}=\langle[\psi_a,\psi_b],\psi_c\rangle$ totally antisymmetric and the record's $\tfrac12$-carrying index formula $(X^{\#})_{ab}=\tfrac12\sum c_{acd}c_{bef}X_{ce}X_{df}$, polarisation gives $\mathrm{sharpBil}(X,Y)_{ab}=\tfrac12\sum c_{acd}c_{bpq}X_{cp}Y_{dq}$, the two cross terms coinciding after the relabelling $(c\leftrightarrow d,\ p\leftrightarrow q)$ at sign $(-1)^2$. Writing $(\mathrm{ad}_c)_{da}=c_{cad}=-c_{acd}$ and evaluating in $E$'s own eigenbasis,
 
-$$\langle Y,\mathrm{sharpBil}(E,Y)\rangle=\tfrac12\sum_\gamma\varepsilon_\gamma\operatorname{tr}\big(\mathrm{ad}_{\psi_\gamma}Y\,\mathrm{ad}_{\psi_\gamma}^{\mathsf T}Y\big)=-\tfrac12\sum_\gamma\varepsilon_\gamma\operatorname{tr}\big((\mathrm{ad}_{\psi_\gamma}Y)^2\big),$$
+$$\langle Y,\mathrm{sharpBil}(E,Y)\rangle=\tfrac12\sum_\gamma\varepsilon_\gamma\mathop{\mathrm{tr}}\big(\mathrm{ad}_{\psi_\gamma}Y\,\mathrm{ad}_{\psi_\gamma}^{\mathsf T}Y\big)=-\tfrac12\sum_\gamma\varepsilon_\gamma\mathop{\mathrm{tr}}\big((\mathrm{ad}_{\psi_\gamma}Y)^2\big),$$
 
-**which is the block's identity with the block's sign and the block's $\tfrac12$.** *The normalisation was checked before use, as [conventions.md](../findings/conventions.md) requires: at $E=Y=\mathrm{id}$ the right side is $-\tfrac12\sum_\gamma B(\psi_\gamma,\psi_\gamma)=(n-2)\binom n2=\langle\mathrm{id},\mathrm{id}^{\#}\rangle$, using $\operatorname{tr}(\mathrm{ad}_a\mathrm{ad}_b)=-2(n-2)\delta_{ab}$, which is the same $2(n-2)$ [StructureConstants.lean](../lean/HamiltonsCubic/Base/StructureConstants.lean)'s `sum_inner2_ad2` proves.*
+**which is the block's identity with the block's sign and the block's $\tfrac12$.** *The normalisation was checked before use, as [conventions.md](../findings/conventions.md) requires: at $E=Y=\mathrm{id}$ the right side is $-\tfrac12\sum_\gamma B(\psi_\gamma,\psi_\gamma)=(n-2)\binom n2=\langle\mathrm{id},\mathrm{id}^{\#}\rangle$, using $\mathop{\mathrm{tr}}(\mathrm{ad}_a\mathrm{ad}_b)=-2(n-2)\delta_{ab}$, which is the same $2(n-2)$ [StructureConstants.lean](../lean/HamiltonsCubic/Base/StructureConstants.lean)'s `sum_inner2_ad2` proves.*
 
 **Then K3's trace and K2's square assemble the box exactly.** $-\tfrac12\sum_\gamma\varepsilon_\gamma\cdot\tfrac12(u\!\cdot\!\mathrm{ad}_{\psi_\gamma}v)^2=-\tfrac14\sum_\gamma\varepsilon_\gamma\langle\psi_\gamma,[u,v]\rangle^2$, since $u\!\cdot\!\mathrm{ad}_{\psi_\gamma}v=-\langle\psi_\gamma,[u,v]\rangle$ by cyclicity. Adding $\tfrac14(\varepsilon_\alpha+\varepsilon_\beta)$ and dividing by $\lVert Y_0\rVert^2=\tfrac12$ gives the box.
 
@@ -35,7 +35,7 @@ $\sum_\gamma\varepsilon_\gamma\langle\psi_\gamma,[u,v]\rangle^2=\langle[u,v],\,e
 
 ## K2, K3, K5: CONFIRMED
 
-- **K2.** $Y_0^2=\tfrac14\big(u(v\!\cdot\!v)u^{\mathsf T}+v(u\!\cdot\!u)v^{\mathsf T}+(v\!\cdot\!u)(uv^{\mathsf T}+vu^{\mathsf T})\big)$ collapses to $\tfrac14(uu^{\mathsf T}+vv^{\mathsf T})$ at orthonormal $u,v$, and $\langle Y_0,\tfrac12(eY_0+Y_0e)\rangle=\operatorname{tr}(eY_0^2)$ by cyclicity, giving $\tfrac14(\varepsilon_\alpha+\varepsilon_\beta)$.
+- **K2.** $Y_0^2=\tfrac14\big(u(v\!\cdot\!v)u^{\mathsf T}+v(u\!\cdot\!u)v^{\mathsf T}+(v\!\cdot\!u)(uv^{\mathsf T}+vu^{\mathsf T})\big)$ collapses to $\tfrac14(uu^{\mathsf T}+vv^{\mathsf T})$ at orthonormal $u,v$, and $\langle Y_0,\tfrac12(eY_0+Y_0e)\rangle=\mathop{\mathrm{tr}}(eY_0^2)$ by cyclicity, giving $\tfrac14(\varepsilon_\alpha+\varepsilon_\beta)$.
 - **K3.** $AY_0=\tfrac12(Au\,v^{\mathsf T}+Av\,u^{\mathsf T})$, the two cross terms carry $u\!\cdot\!Au$ and $v\!\cdot\!Av$ and die, and the survivors are $\tfrac14\big((v\!\cdot\!Au)^2+(u\!\cdot\!Av)^2\big)=\tfrac12(u\!\cdot\!Av)^2$. **Antisymmetry alone**, as claimed.
 - **K5.** $\langle W,Y_0\rangle=\tfrac\theta2(v\!\cdot\!eu+u\!\cdot\!ev)=\tfrac\theta2(\varepsilon_\alpha+\varepsilon_\beta)\langle u,v\rangle=0$. **The hypothesis consumed is $u\perp v$, not $\alpha\ne\beta$**: at $\varepsilon_\alpha\ne\varepsilon_\beta$ orthogonality is automatic, and inside one eigenspace it is supplied by the statement's own choice of an orthonormal eigenbasis. *The block's "automatically at $\alpha\ne\beta$" attributes it to the wrong hypothesis.*
 
@@ -85,7 +85,7 @@ $\sum_\gamma\varepsilon_\gamma\langle\psi_\gamma,[u,v]\rangle^2=\langle[u,v],\,e
 
 `pairDir_sq`, `trace_mul_pairDir_sq` and `trace_pairDir_sq` carry $u\cdot u=1$, $v\cdot v=1$, $u\cdot v=0$ and nothing else, so **orthonormality is the hypothesis of the anticommutator half, as the block says**, and `trace_mul_pairDir_sq` is in fact stated at every `E`, eigenvector-freely. `trace_sq_pair_direction` carries $A^{\mathsf T}=-A$ and nothing else, so **antisymmetry is the only hypothesis of K3, as the block says**, and the identity is stated at every `Fintype` over $\mathbb R$.
 
-*One step of the anticommutator half sits outside the file: $\langle Y,\tfrac12(EY+YE)\rangle=\operatorname{tr}(EY^2)$, cyclicity plus symmetry of `Y`, is used by the block and typed nowhere. It is two lines and it is not what the trailer names as blocked.*
+*One step of the anticommutator half sits outside the file: $\langle Y,\tfrac12(EY+YE)\rangle=\mathop{\mathrm{tr}}(EY^2)$, cyclicity plus symmetry of `Y`, is used by the block and typed nowhere. It is two lines and it is not what the trailer names as blocked.*
 
 ## K8, the blocked trailer: the blocker is real, the diagnosis is not
 
@@ -95,7 +95,7 @@ $\sum_\gamma\varepsilon_\gamma\langle\psi_\gamma,[u,v]\rangle^2=\langle[u,v],\,e
 
 `sharpQF R η = -(1/4) * ∑ i, ∑ j, inner2 (br η (R (br η (R (phi i j))))) (phi i j)`,
 
-which over ordered pairs is $-\tfrac12\operatorname{tr}\big((\mathrm{ad}_\eta R)^2\big)$, **the block's per-$\gamma$ term verbatim at $R=Y_0$, $\eta=\psi_\gamma$**. *[StructureConstants.lean](../lean/HamiltonsCubic/Base/StructureConstants.lean)'s own docstring records [r797](REVIEW_r797.md) deriving that identity by hand, and `sharpQF_id` discharges its normalisation at every $n$.*
+which over ordered pairs is $-\tfrac12\mathop{\mathrm{tr}}\big((\mathrm{ad}_\eta R)^2\big)$, **the block's per-$\gamma$ term verbatim at $R=Y_0$, $\eta=\psi_\gamma$**. *[StructureConstants.lean](../lean/HamiltonsCubic/Base/StructureConstants.lean)'s own docstring records [r797](REVIEW_r797.md) deriving that identity by hand, and `sharpQF_id` discharges its normalisation at every $n$.*
 
 **What is actually missing, and it should be named instead.** Two things, neither of which is a general-$n$ `#`: (i) the polarisation in the **operator** slot, `sharpOpBil R S := (1/2)•(sharpOp (R+S) - sharpOp R - sharpOp S)`, three lines, the real-layer mirror of what `sharpBilin` already is over $\mathbb Q$; and (ii) the **full symmetry of $\langle X\#Y,Z\rangle$ in the three operator slots**, which is what turns $\langle Y,\mathrm{sharpBil}(E,Y)\rangle$ into $\langle E,Y^{\#}\rangle=\sum_\gamma\varepsilon_\gamma\,$`sharpQF Y (ψ γ)`. *[conventions.md](../findings/conventions.md) asserts (ii) in one clause and no declaration holds it.* **(i) the cycle could plainly have built; (ii) is a round of its own.** So the trailer is honest that the assembly is untyped and wrong about why, and the entry a successor reads points at the wrong file.
 

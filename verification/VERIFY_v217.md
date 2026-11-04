@@ -55,7 +55,7 @@ And:
 | --- | --- | --- |
 | $W$ a critical point, $Q(W)=\theta W$ | yes | relation (C), i.e. the saturation equation itself |
 | $\lVert W\rVert=1$ | **no** | [L70](../findings/bounds.md)'s identity is scale-dependent by its own text; and $\theta=\theta_0(n)$ needs it |
-| $W\in\mathcal W_n$, first Bianchi and Ricci-flatness | **no** | relation (B); and $\operatorname{tr}W=0$, which gives $\lambda_{\min}<0<\lambda_{\max}$ |
+| $W\in\mathcal W_n$, first Bianchi and Ricci-flatness | **no** | relation (B); and $\mathop{\mathrm{tr}}W=0$, which gives $\lambda_{\min}<0<\lambda_{\max}$ |
 | $n\ge5$ | yes | simplicity of $\mathfrak{so}(n)$; and excluding the vacuous $n=3$ |
 | saturation $\theta=\lambda_{\min}+(n-2)\lambda_{\max}$ | yes | the three bracket relations |
 | $\mathfrak m\ne0$ | yes | $\mathfrak g'\ne0$, so the ideal is everything |
@@ -76,7 +76,7 @@ $$\theta=\lambda_{\min}+(n-2)\lambda_{\max}-\frac{D(v)}{\lvert\lambda_{\min}\rve
 
 for every unit $v\in E_{\min}$, so the scalar hypothesis $\theta=\lambda_{\min}+(n-2)\lambda_{\max}$ is exactly $D(v)=0$ for every such $v$.
 
-**Every summand is a nonnegative weight against a nonnegative factor**, so $D(v)=0$ forces $c_{vab}=0$ whenever $\lambda_a\lambda_b>\lambda_{\min}\lambda_{\max}$. **The equality set of the factor is exactly the corner pairs.** Take $x,y\in[\lambda_{\min},\lambda_{\max}]$ with $\lambda_{\min}<0<\lambda_{\max}$, strict, from $\operatorname{tr}W=0$ at $W\ne0$, which the L70 block itself supplies. If $xy=\lambda_{\min}\lambda_{\max}<0$ then one of them is negative, say $x<0<y$; then $xy\ge\lambda_{\min}y\ge\lambda_{\min}\lambda_{\max}$, the first step because $x\ge\lambda_{\min}$ and $y>0$, the second because $\lambda_{\min}<0$ and $y\le\lambda_{\max}$. Equality in both forces $x=\lambda_{\min}$ and $y=\lambda_{\max}$. **So $c_{vab}=0$ unless one of $a,b$ lies in $\mathfrak m$ and the other in $\mathfrak h$**, the block's "$\mathrm{ad}(v)$ supported on $E_{\min}\otimes E_{\max}$".
+**Every summand is a nonnegative weight against a nonnegative factor**, so $D(v)=0$ forces $c_{vab}=0$ whenever $\lambda_a\lambda_b>\lambda_{\min}\lambda_{\max}$. **The equality set of the factor is exactly the corner pairs.** Take $x,y\in[\lambda_{\min},\lambda_{\max}]$ with $\lambda_{\min}<0<\lambda_{\max}$, strict, from $\mathop{\mathrm{tr}}W=0$ at $W\ne0$, which the L70 block itself supplies. If $xy=\lambda_{\min}\lambda_{\max}<0$ then one of them is negative, say $x<0<y$; then $xy\ge\lambda_{\min}y\ge\lambda_{\min}\lambda_{\max}$, the first step because $x\ge\lambda_{\min}$ and $y>0$, the second because $\lambda_{\min}<0$ and $y\le\lambda_{\max}$. Equality in both forces $x=\lambda_{\min}$ and $y=\lambda_{\max}$. **So $c_{vab}=0$ unless one of $a,b$ lies in $\mathfrak m$ and the other in $\mathfrak h$**, the block's "$\mathrm{ad}(v)$ supported on $E_{\min}\otimes E_{\max}$".
 
 Reading $c_{vab}=\langle[v,e_a],e_b\rangle$ off that, for every $v\in\mathfrak m$ (linearity in $v$ extends the unit-vector statement to all of $\mathfrak m$):
 
@@ -152,7 +152,7 @@ $$(\lambda_{\min}+\lambda_{\max})S=2m\ \Longrightarrow\ (h-m)(n-2)=2m\ \Longrigh
 
 **CONFIRMED.** Independent cross-check by relation (C) at the same row: $\sum\lambda_\beta\lambda_\gamma T_{a\beta\gamma}=2S\lambda_{\min}\lambda_{\max}=-2(n-2)mh$, against $2\lambda_a(\theta-\lambda_a)=-2m(\theta+m)$, giving $\theta=(n-2)h-m$, **which is the saturation equation itself.** So (C) at an $\mathfrak m$-row *is* the hypothesis, and (A) and (B) are the two independent inputs. Combining, $\theta=nm-m=(n-1)m$, reproducing [L117](../findings/bounds.md)'s converse $\theta=(n-1)\lvert\lambda_{\min}\rvert$ from a different direction.
 
-**Then, and only then, tracelessness.** With $\mathfrak r=0$ there are exactly two eigenvalues and $\operatorname{tr}W=0$ reads $\dim\mathfrak h\cdot h=\dim\mathfrak m\cdot m$. With $h/m=n/(n-2)$ and $\dim\mathfrak h+\dim\mathfrak m=N=\tfrac{n(n-1)}2$:
+**Then, and only then, tracelessness.** With $\mathfrak r=0$ there are exactly two eigenvalues and $\mathop{\mathrm{tr}}W=0$ reads $\dim\mathfrak h\cdot h=\dim\mathfrak m\cdot m$. With $h/m=n/(n-2)$ and $\dim\mathfrak h+\dim\mathfrak m=N=\tfrac{n(n-1)}2$:
 
 $$\dim\mathfrak h\Big(1+\frac{n}{n-2}\Big)=\frac{n(n-1)}2\ \Longrightarrow\ \dim\mathfrak h=\frac{n(n-2)}4,\qquad \dim\mathfrak m=\frac{n^2}4 .$$
 

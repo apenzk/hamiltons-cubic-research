@@ -24,11 +24,11 @@ The linear algebra of I76 is right and the tightness check is right, but the ite
 
 ## Conventions, quoted from the brief
 
-- $\Lambda^2\mathbb R^n$ is realised as skew matrices, $\varphi_{ab}=E_{ba}-E_{ab}$ is a UNIT bivector, and $\langle X,Y\rangle=\tfrac12\operatorname{tr}(X^{\mathsf T}Y)$.
+- $\Lambda^2\mathbb R^n$ is realised as skew matrices, $\varphi_{ab}=E_{ba}-E_{ab}$ is a UNIT bivector, and $\langle X,Y\rangle=\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$.
 - $u\wedge v=vu^{\mathsf T}-uv^{\mathsf T}$, and at orthonormal $u,v$ this is a unit bivector with $(u\wedge v)(u\wedge v)^{\mathsf T}=\Pi_P$.
 - $P(W)=\langle W,W^2+W^\#\rangle$, $\theta=P(W)/\lVert W\rVert^3$, and criticality on the unit sphere is $Q(W)=W^2+W^\#=\theta W$.
 - $\theta_0(n)=\sqrt{2(n-1)(n-2)}/n$ and $\sqrt{3/2}=1.224745$.
-- The inner product on the $\Pi_\alpha$ is the plain $\operatorname{tr}(AB)$ with no factor $\tfrac12$ (Given 10).
+- The inner product on the $\Pi_\alpha$ is the plain $\mathop{\mathrm{tr}}(AB)$ with no factor $\tfrac12$ (Given 10).
 
 ## Hypothesis inventory
 
@@ -50,7 +50,7 @@ What the derivation actually consumes:
 | first Bianchi | **no**, and it is free on this locus | section 3 |
 | $S$ positive semidefinite | **no** for the identity, **yes** in section 4 | section 4 |
 
-Two hypotheses of the quoted block are therefore decoration, criticality and the signs of $\mu$ and $\nu$, and one apparent hypothesis, trace-freeness, is a consequence of the other two: $\mathbf1^{\mathsf T}S\lambda=0$ and $S\mathbf1=2(n-1)\mathbf1$ give $2(n-1)\sum_\alpha\lambda_\alpha=0$, so $\operatorname{tr}W=0$ for every $n\ge2$.
+Two hypotheses of the quoted block are therefore decoration, criticality and the signs of $\mu$ and $\nu$, and one apparent hypothesis, trace-freeness, is a consequence of the other two: $\mathbf1^{\mathsf T}S\lambda=0$ and $S\mathbf1=2(n-1)\mathbf1$ give $2(n-1)\sum_\alpha\lambda_\alpha=0$, so $\mathop{\mathrm{tr}}W=0$ for every $n\ge2$.
 
 ## 1. The subtraction
 
@@ -72,9 +72,9 @@ Had $\mu=\nu$ been allowed, the identity would read $0=-2(n-1)\nu\mathbf1$, forc
 
 Sum the vector identity against $\mathbf1$. The left side is $c\,\mathbf1^{\mathsf T}\mathbf1=cN$. The right side is
 
-$$\mathbf1^{\mathsf T}S\mathbf1_A=\sum_{\beta\in A}\sum_{\alpha}\operatorname{tr}(\Pi_\alpha\Pi_\beta)=\sum_{\beta\in A}\operatorname{tr}\Big(\big(\textstyle\sum_\alpha\Pi_\alpha\big)\Pi_\beta\Big)=\sum_{\beta\in A}\operatorname{tr}\big((n-1)\Pi_\beta\big)=2(n-1)a,$$
+$$\mathbf1^{\mathsf T}S\mathbf1_A=\sum_{\beta\in A}\sum_{\alpha}\mathop{\mathrm{tr}}(\Pi_\alpha\Pi_\beta)=\sum_{\beta\in A}\mathop{\mathrm{tr}}\Big(\big(\textstyle\sum_\alpha\Pi_\alpha\big)\Pi_\beta\Big)=\sum_{\beta\in A}\mathop{\mathrm{tr}}\big((n-1)\Pi_\beta\big)=2(n-1)a,$$
 
-using $\operatorname{tr}\Pi_\beta=2$. So $c=2(n-1)a/N$, which is the block's value. **CORRECT.** The column-sum route above needs no symmetry of $S$, and in any case $S$ is symmetric because $\operatorname{tr}(AB)=\operatorname{tr}(BA)$.
+using $\mathop{\mathrm{tr}}\Pi_\beta=2$. So $c=2(n-1)a/N$, which is the block's value. **CORRECT.** The column-sum route above needs no symmetry of $S$, and in any case $S$ is symmetric because $\mathop{\mathrm{tr}}(AB)=\mathop{\mathrm{tr}}(BA)$.
 
 **At every index, not on average.** This is the point the phrasing risks blurring and it survives inspection: constancy of $\sum_{\beta\in A}S_{\alpha\beta}$ in $\alpha$ comes from the vector identity of section 1, and the average is used only to name the constant. The block's "at EVERY index $\alpha$" is therefore earned.
 
@@ -99,7 +99,7 @@ Finally, $N\ne0$ is needed to divide. It is met whenever the setting is, since t
 
 The derivation survives it formally and the case is impossible. Suppose $\nu=0$. Then $\lambda=\mu\mathbf1_A$ with $\mu\ne0$, so $S\lambda=0$ gives $S\mathbf1_A=0$, and then
 
-$$0=\mathbf1_A^{\mathsf T}S\mathbf1_A=\sum_{\alpha,\beta\in A}\operatorname{tr}(\Pi_\alpha\Pi_\beta)=\operatorname{tr}\Big(\big(\textstyle\sum_{\alpha\in A}\Pi_\alpha\big)^2\Big)=\Big\lVert\textstyle\sum_{\alpha\in A}\Pi_\alpha\Big\rVert_F^2,$$
+$$0=\mathbf1_A^{\mathsf T}S\mathbf1_A=\sum_{\alpha,\beta\in A}\mathop{\mathrm{tr}}(\Pi_\alpha\Pi_\beta)=\mathop{\mathrm{tr}}\Big(\big(\textstyle\sum_{\alpha\in A}\Pi_\alpha\big)^2\Big)=\Big\lVert\textstyle\sum_{\alpha\in A}\Pi_\alpha\Big\rVert_F^2,$$
 
 so $\sum_{\alpha\in A}\Pi_\alpha=0$. Each $\Pi_\alpha$ is positive semidefinite of trace $2$, so the sum has trace $2a$, and it vanishes only for $a=0$. That contradicts $\mu$ being attained. The symmetric argument rules out $\mu=0$. So **a two-eigenvalue $W$ of this kind has no kernel among its two values**, and the block's $\mu>0>\nu$ is a theorem rather than an assumption.
 
@@ -107,7 +107,7 @@ This is the one place where the planes are load-bearing: the argument uses posit
 
 ## 5. The tightness check at $S^6\times S^6$, verified independently
 
-Take $n=12$, $p=q=6$, the standard frame, $\Pi_{ij}=E_{ii}+E_{jj}$, and $\operatorname{tr}(\Pi_{ij}\Pi_{kl})=\lvert\{i,j\}\cap\{k,l\}\rvert$.
+Take $n=12$, $p=q=6$, the standard frame, $\Pi_{ij}=E_{ii}+E_{jj}$, and $\mathop{\mathrm{tr}}(\Pi_{ij}\Pi_{kl})=\lvert\{i,j\}\cap\{k,l\}\rvert$.
 
 **The configuration is the coordinate one.** By Given 15 the product's curvature operator is diagonal on the coordinate plane basis, so the eigenbasis is $\{e_i\wedge e_j\}$, which is orthonormal, decomposable, and of size $\binom{12}2=66=N$. Completeness holds: $\sum_{i<j}(E_{ii}+E_{jj})=11\,\mathrm{Id}$, matching Given 1.
 
@@ -151,7 +151,7 @@ since $\theta_0(2p)=\sqrt{2(2p-1)(2p-2)}/(2p)=\sqrt{(2p-1)(p-1)}/p$. At $p=6$ th
 
 $$S\lambda=2(n-1)\Big(\nu+(\mu-\nu)\frac aN\Big)\mathbf1=2(n-1)\Big(-a+N\cdot\frac aN\Big)\mathbf1=0.$$
 
-So $A$-regularity for some proper non-empty $A$ is **equivalent** to the existence of a two-valued vector in $\ker S$, and the item's condition is exactly a statement about $\ker S$. Since $S$ is the Gram matrix of the $\Pi_\alpha$ its rank is $\dim\operatorname{span}\{\Pi_\alpha\}\le\binom{n+1}2$, and for the coordinate configuration the rank is $n$ (the $\Pi_{ij}=E_{ii}+E_{jj}$ span the diagonal matrices), matching the multiplicity $\binom n2-n$ of the eigenvalue $-2$ in Given 11. The kernel is large, so such subsets are plentiful. See section 11.
+So $A$-regularity for some proper non-empty $A$ is **equivalent** to the existence of a two-valued vector in $\ker S$, and the item's condition is exactly a statement about $\ker S$. Since $S$ is the Gram matrix of the $\Pi_\alpha$ its rank is $\dim\mathop{\mathrm{span}}\{\Pi_\alpha\}\le\binom{n+1}2$, and for the coordinate configuration the rank is $n$ (the $\Pi_{ij}=E_{ii}+E_{jj}$ span the diagonal matrices), matching the multiplicity $\binom n2-n$ of the eigenvalue $-2$ in Given 11. The kernel is large, so such subsets are plentiful. See section 11.
 
 **And the weights are determined, which the block misses.** Trace-freeness is implied, and it gives $\mu:\nu=(N-a):(-a)$, so on a fixed configuration with a fixed $A$ the two-eigenvalue Ricci-flat tensor is unique up to scale. The claim "the eigenvalues cancel" is therefore weaker than the truth, which is that they are pinned by $a$ and $N$.
 
@@ -171,7 +171,7 @@ Take Given 4 verbatim: $g_2=\cos t\,e_2+\sin t\,e_3$, $g_3=-\sin t\,e_2+\cos t\,
 
 $$\omega_1=e_1\wedge g_2,\quad\omega_2=e_1\wedge g_3,\quad\omega_3=e_1\wedge e_4,\quad\omega_4=e_2\wedge e_3,\quad\omega_5=e_2\wedge e_4,\quad\omega_6=e_3\wedge e_4,$$
 
-with the Ricci-flat weight vector Given 4 supplies, $\lambda=(\tfrac12,\tfrac12,-1,-1,\tfrac12,\tfrac12)$. **That vector is two-valued**, so $A=\{1,2,5,6\}$, $a=4$, $N=6$, $n=4$. Writing $c=\cos t$, $s=\sin t$ and using $\operatorname{tr}(\Pi_P\Pi_{P'})=\sum_{i,j}\langle u_i,v_j\rangle^2$:
+with the Ricci-flat weight vector Given 4 supplies, $\lambda=(\tfrac12,\tfrac12,-1,-1,\tfrac12,\tfrac12)$. **That vector is two-valued**, so $A=\{1,2,5,6\}$, $a=4$, $N=6$, $n=4$. Writing $c=\cos t$, $s=\sin t$ and using $\mathop{\mathrm{tr}}(\Pi_P\Pi_{P'})=\sum_{i,j}\langle u_i,v_j\rangle^2$:
 
 $$S=\begin{pmatrix}2&1&1&1&c^2&s^2\\1&2&1&1&s^2&c^2\\1&1&2&0&1&1\\1&1&0&2&1&1\\c^2&s^2&1&1&2&1\\s^2&c^2&1&1&1&2\end{pmatrix}$$
 
@@ -181,9 +181,9 @@ $$2+1+c^2+s^2=4,\quad 1+2+s^2+c^2=4,\quad 1+1+1+1=4,\quad 1+1+1+1=4,\quad c^2+s^
 
 **All six are $4$. The configuration is $A$-regular, and its Gram matrix is not integral**, since $c^2,s^2\in(0,1)$ whenever $\sin2t\ne0$. It is positive semidefinite because it is a Gram matrix, its off-diagonal entries lie in $[0,1]$ by Given 8, its row sums are $2(n-1)$, and its planes are rank-two projections. Every clause of the block's antecedent is met and the consequent fails.
 
-**The witness is a genuine critical point, not merely Ricci-flat.** Its operator is $\lambda_{12}=\lambda_{13}=\lambda_{24}=\lambda_{34}=\tfrac12$ and $\lambda_{14}=\lambda_{23}=-1$ in the coordinate plane basis, which is equal on complementary pairs, so it preserves $\Lambda^\pm$ and acts as $\mathcal A=\operatorname{diag}(\tfrac12,\tfrac12,-1)$ on each chirality, trace-free as Given 3 requires. Then $\mathcal A^2=\operatorname{diag}(\tfrac14,\tfrac14,1)$, $\operatorname{tr}(\mathcal A^2)=\tfrac32$, and Given 3 gives
+**The witness is a genuine critical point, not merely Ricci-flat.** Its operator is $\lambda_{12}=\lambda_{13}=\lambda_{24}=\lambda_{34}=\tfrac12$ and $\lambda_{14}=\lambda_{23}=-1$ in the coordinate plane basis, which is equal on complementary pairs, so it preserves $\Lambda^\pm$ and acts as $\mathcal A=\mathop{\mathrm{diag}}(\tfrac12,\tfrac12,-1)$ on each chirality, trace-free as Given 3 requires. Then $\mathcal A^2=\mathop{\mathrm{diag}}(\tfrac14,\tfrac14,1)$, $\mathop{\mathrm{tr}}(\mathcal A^2)=\tfrac32$, and Given 3 gives
 
-$$W^\#\big\vert_{\Lambda^\pm}=2\mathcal A^2-\tfrac32\mathrm{Id}=\operatorname{diag}(-1,-1,\tfrac12),\qquad Q=W^2+W^\#=\operatorname{diag}(-\tfrac34,-\tfrac34,\tfrac32)=-\tfrac32\,\mathcal A.$$
+$$W^\#\big\vert_{\Lambda^\pm}=2\mathcal A^2-\tfrac32\mathrm{Id}=\mathop{\mathrm{diag}}(-1,-1,\tfrac12),\qquad Q=W^2+W^\#=\mathop{\mathrm{diag}}(-\tfrac34,-\tfrac34,\tfrac32)=-\tfrac32\,\mathcal A.$$
 
 So $Q=-\tfrac32W$, criticality holds, $\lVert W\rVert^2=4\cdot\tfrac14+2\cdot1=3$, $P=-\tfrac92$ and $\theta=-\tfrac92/3^{3/2}=-\sqrt3/2=-\theta_0(4)$. The witness is $-\tfrac32W_{S^2\times S^2}$ for the factor split $\{e_1,e_4\},\{e_2,e_3\}$, and $P(-W)=-P(W)$ makes that critical whenever the product is, which section 5 proved for all $p$.
 
@@ -191,10 +191,10 @@ So $Q=-\tfrac32W$, criticality holds, $\lVert W\rVert^2=4\cdot\tfrac14+2\cdot1=3
 
 ### 7.3 The same falsifier at the target, $n=12$
 
-Take $W_{S^6\times S^6}$ of section 5 and replace the two within-factor forms $e_1\wedge e_2$ and $e_1\wedge e_3$ by $e_1\wedge g_2$ and $e_1\wedge g_3$ with the same $g_2,g_3$. Both lie in $\operatorname{span}\{e_1\wedge e_2,e_1\wedge e_3\}$, which sits inside the $\mu$-eigenspace, both are decomposable, and the change is orthogonal, so the result is again an orthonormal decomposable eigenbasis of the same tensor. Hence:
+Take $W_{S^6\times S^6}$ of section 5 and replace the two within-factor forms $e_1\wedge e_2$ and $e_1\wedge e_3$ by $e_1\wedge g_2$ and $e_1\wedge g_3$ with the same $g_2,g_3$. Both lie in $\mathop{\mathrm{span}}\{e_1\wedge e_2,e_1\wedge e_3\}$, which sits inside the $\mu$-eigenspace, both are decomposable, and the change is orthogonal, so the result is again an orthonormal decomposable eigenbasis of the same tensor. Hence:
 
 - $A$-regularity holds with constant exactly $10$, by section 1, with no computation.
-- The trace $\operatorname{tr}(\Pi_{e_1\wedge g_2}\Pi_{e_2\wedge e_4})=\cos^2t\notin\{0,1\}$, so the configuration is not integral.
+- The trace $\mathop{\mathrm{tr}}(\Pi_{e_1\wedge g_2}\Pi_{e_2\wedge e_4})=\cos^2t\notin\{0,1\}$, so the configuration is not integral.
 - The scalar quantity of Given 10 drops by an exact amount. Only the entries against $\Pi_{2k}$ and $\Pi_{3k}$ for $k\notin\{1,2,3\}$ move, $n-3$ of each per rotated form, from $(1,0)$ to $(\cos^2t,\sin^2t)$, so
 
 $$\Xi=n^2(n-1)-2(n-3)\sin^2 2t,$$
@@ -239,7 +239,7 @@ Built clean with `lake build HamiltonsCubic.Results.L201Statement`, 8708 jobs, t
 
 1. **Wider on the objects, correctly.** `P : Fin N → Matrix (Fin n) (Fin n) ℝ` carries only `htr : (P a).trace = 2` and `hsum : ∑ a, P a = ((n:ℝ)-1) • 1`. Nothing says the `P a` are symmetric, idempotent, positive semidefinite, or rank two. The theorem is therefore stronger than the prose and vindicates "nothing about planes is used". It also forces $N=\binom n2$ for free: taking traces of `hsum` gives $2N=n(n-1)$.
 2. **Narrower on the hypotheses.** `htf : (A.card)*μ + (N - A.card)*ν = 0` is assumed, and the Lean proof genuinely uses it, at `linear_combination (N:ℝ) * hkey - T * htf`. The prose route of section 2 does not need trace-freeness, deriving the constant from $\mathbf1^{\mathsf T}S\mathbf1_A$ instead. So the file proves a formally weaker statement by a different argument than the one the block describes, and the file's own docstring is the accurate one: "the weights enter only through trace-freeness". Since trace-freeness follows from `hricci` and `hsum` for $n\ne1$, the loss is only formal, but the block should not present the Lean theorem as the typed form of its own derivation.
-3. **The Ricci hypothesis is the right one.** `hricci : ∀ a, ∑ b, (if b ∈ A then μ else ν) * (P a * P b).trace = 0` is row-wise $S\lambda=0$ with $S_{ab}=\operatorname{tr}(P_aP_b)$, and the conclusion is universally quantified in `a`, so "at EVERY index" is what is typed, not an average.
+3. **The Ricci hypothesis is the right one.** `hricci : ∀ a, ∑ b, (if b ∈ A then μ else ν) * (P a * P b).trace = 0` is row-wise $S\lambda=0$ with $S_{ab}=\mathop{\mathrm{tr}}(P_aP_b)$, and the conclusion is universally quantified in `a`, so "at EVERY index" is what is typed, not an average.
 4. **The degenerate cases are handled where the prose is silent.** `hN : (N:ℝ) ≠ 0` covers section 3, `hne : μ ≠ ν` is exactly the division of section 1, and the sign hypotheses are absent, correctly.
 
 One further note on what the Lean file does **not** say. There is no declaration anywhere in it connecting $A$-regularity to integrality, and `integrality_forces_frame` is L201 itself, the converse direction. Nothing in the file is touched by section 7, which refutes a hoped-for implication that was never typed.

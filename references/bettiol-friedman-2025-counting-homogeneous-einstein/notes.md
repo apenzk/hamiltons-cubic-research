@@ -6,7 +6,7 @@ Read for one thing: the standard name and standard identities of the tensor the 
 
 ## The structure constants, verbatim, §2.2 (paper.txt lines 256–274)
 
-> We now introduce constants associated to a compact homogeneous space $G/H$, in order to write the homogeneous Einstein equations. Let $b_i\in\mathbb R$ be the constants so that the Cartan–Killing form $B(X,Y)=\operatorname{tr}(\mathrm{ad}_X\circ\mathrm{ad}_Y)$ satisfies
+> We now introduce constants associated to a compact homogeneous space $G/H$, in order to write the homogeneous Einstein equations. Let $b_i\in\mathbb R$ be the constants so that the Cartan–Killing form $B(X,Y)=\mathop{\mathrm{tr}}(\mathrm{ad}_X\circ\mathrm{ad}_Y)$ satisfies
 > $$B|_{\mathfrak m_i}=-b_i\,Q|_{\mathfrak m_i},$$
 > and set $d_i:=\dim\mathfrak m_i$ [...]. Next, let $\{v_\alpha\}$ be a $Q$-orthonormal basis of $\mathfrak m$ adapted to (2.1) [...]. Define the structure constants
 > $$L_{ijk}:=\sum_{\substack{v_\alpha\in\mathfrak m_i\\ v_\beta\in\mathfrak m_j\\ v_\gamma\in\mathfrak m_k}}Q([v_\alpha,v_\beta],v_\gamma)^2 .$$
@@ -25,7 +25,7 @@ Read for one thing: the standard name and standard identities of the tensor the 
 
 ## Where the record's relation (A) sits
 
-Setting $H$ trivial and $\mathfrak g=\mathfrak{so}(n)$: the Killing form is $B(X,Y)=(n-2)\operatorname{tr}(XY)=-2(n-2)\,Q(X,Y)$ for $Q=-\tfrac12\operatorname{tr}$, so $b_i=2(n-2)$ for every $i$. With trivial isotropy the Casimir term drops and the standard row-sum identity reads $\sum_{j,k}L_{ijk}=d_ib_i=2(n-2)$, **the record's relation (A), $\sum_{\beta\gamma}T_{k\beta\gamma}=2(n-2)$, exactly.**
+Setting $H$ trivial and $\mathfrak g=\mathfrak{so}(n)$: the Killing form is $B(X,Y)=(n-2)\mathop{\mathrm{tr}}(XY)=-2(n-2)\,Q(X,Y)$ for $Q=-\tfrac12\mathop{\mathrm{tr}}$, so $b_i=2(n-2)$ for every $i$. With trivial isotropy the Casimir term drops and the standard row-sum identity reads $\sum_{j,k}L_{ijk}=d_ib_i=2(n-2)$, **the record's relation (A), $\sum_{\beta\gamma}T_{k\beta\gamma}=2(n-2)$, exactly.**
 
 ## What it does not do
 

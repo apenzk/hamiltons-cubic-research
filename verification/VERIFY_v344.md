@@ -20,7 +20,7 @@
 
 ## 0. Conventions, fixed once
 
-- $W\in\mathcal W_n$ acts on $\Lambda^2\mathbb R^n\cong\mathfrak{so}(n)$, $N=n(n-1)/2$, orthonormal eigenbasis $\{v_k\}$, eigenvalues $\lambda_k$, $\lVert W\rVert^2=\sum_k\lambda_k^2$, $\operatorname{tr}W=\sum_k\lambda_k=0$, so $\lambda_{\min}\le0\le\lambda_{\max}$ for every $W$ and $\lambda_{\min}<0<\lambda_{\max}$ for $W\ne0$.
+- $W\in\mathcal W_n$ acts on $\Lambda^2\mathbb R^n\cong\mathfrak{so}(n)$, $N=n(n-1)/2$, orthonormal eigenbasis $\{v_k\}$, eigenvalues $\lambda_k$, $\lVert W\rVert^2=\sum_k\lambda_k^2$, $\mathop{\mathrm{tr}}W=\sum_k\lambda_k=0$, so $\lambda_{\min}\le0\le\lambda_{\max}$ for every $W$ and $\lambda_{\min}<0<\lambda_{\max}$ for $W\ne0$.
 - $T_{abc}=c_{abc}^2\ge0$ totally symmetric, $T_{kaa}=0$. Relations (A), (B), (C) as in Passage B.
 - $g_k=\sum_{\alpha\beta}(\lambda_\alpha-\lambda_\beta)^2T_{k\alpha\beta}$, $m_j=\sum_k\lambda_k^jg_k$, $\Delta=\lambda_{\max}-\lambda_{\min}$.
 - A critical point is $Q(W)=\theta W$ on $\lVert W\rVert=1$, $\theta=P(W)$. Since $P$ is cubic, $-W$ is critical with $-\theta$ whenever $W$ is critical with $\theta$, so both signs of $\theta$ occur.
@@ -36,7 +36,7 @@
 |---|---|---|---|
 | $W$ critical, $\lVert W\rVert=1$ | $m_0=4(n-1)$ and $m_1=-4\theta$ (otherwise $m_0=4(n-1)\lVert W\rVert^2$, $m_1=-4P(W)$) | no | yes, implicitly |
 | $\theta\ge0$ | the one-sided form $\theta\le(n-1)\lvert\lambda_{\min}\rvert$ as the complete consequence (Section 7) | no | yes, implicitly |
-| $\operatorname{tr}W=0$ | $\lambda_{\min}\le0\le\lambda_{\max}$ | no | yes, implicitly |
+| $\mathop{\mathrm{tr}}W=0$ | $\lambda_{\min}\le0\le\lambda_{\max}$ | no | yes, implicitly |
 | "moment inequality built from positivity and support" means valid for every $g\ge0$ supported in the spectrum | the elimination (Section 1) | no, undefined | yes, it is the whole scope |
 | $n\ge4$ | nonempty $\mathcal W_n$ | no | no |
 
@@ -50,7 +50,7 @@
 - **Post F42** (Passage D): cited as the parent. Its conclusion is withdrawn in both directions (Section 5).
 - **Prop 1.7** (Petersen-Wink, read at source in the notes): $\lvert LR\rvert^2=2\sum_{\alpha<\beta}(\lambda_\alpha-\lambda_\beta)^2g(L\Xi_\alpha,\Xi_\beta)^2$ for $R$ symmetric on $\Lambda^2V$ diagonalised by $\{\Xi_\alpha\}$ and every $L\in\mathfrak{so}(V)$. Applied with $L=v_\gamma$ and $R=W$. Hypotheses (orthonormal eigenbasis, $L$ skew) hold. It gives the formula for $g_\gamma$, and positivity of $g_\gamma$ as a squared norm.
 
-**Unused and unstated.** (C) is carried by the pinned system and unused, correctly. Unit norm, $\theta\ge0$ and $\operatorname{tr}W=0$ are used and unstated.
+**Unused and unstated.** (C) is carried by the pinned system and unused, correctly. Unit norm, $\theta\ge0$ and $\mathop{\mathrm{tr}}W=0$ are used and unstated.
 
 ## 1. Is Passage A a proposition
 
@@ -74,7 +74,7 @@
 
 **Positivity.** $g_k=\lVert[\mathrm{ad}(v_k),W]\rVert^2\ge0$ by Prop 1.7, or termwise from $T\ge0$. It uses none of (A), (B), (C) and no criticality. It is a structural fact about every $W$, not a consequence of the spectrum.
 
-**Support.** $\operatorname{supp}\sum_kg_k\delta_{\lambda_k}\subseteq\{\lambda_k\}$. Containment follows from the spectrum. The actual support, $\{\lambda_k:g_k>0\}$, depends on $T$ (a $v_k$ in the centraliser of $W$ has $g_k=0$). The argument needs only containment.
+**Support.** $\mathop{\mathrm{supp}}\sum_kg_k\delta_{\lambda_k}\subseteq\{\lambda_k\}$. Containment follows from the spectrum. The actual support, $\{\lambda_k:g_k>0\}$, depends on $T$ (a $v_k$ in the centraliser of $W$ has $g_k=0$). The argument needs only containment.
 
 **$m_0$.** Expand $(\lambda_\alpha-\lambda_\beta)^2$:
 $$m_0=2\sum_\alpha\lambda_\alpha^2\sum_{k\beta}T_{\alpha k\beta}-2\sum_\alpha\lambda_\alpha\sum_{k\beta}\lambda_\beta T_{\alpha\beta k}=2\cdot2(n-2)\lVert W\rVert^2-2\sum_\alpha\lambda_\alpha(-2\lambda_\alpha)=4(n-1)\lVert W\rVert^2,$$
@@ -201,5 +201,5 @@ No class in the passages is shown to be non-convex, and "pinned class" is undefi
 
 - The block is a moral with an undefined class, no definitions and no proof. The provable content (Section 1, the projection onto $(m_0,m_1)$ is the two-sided cone, so eliminated conclusions are no stronger than L107 and its mirror) is true, and `feasible_iff` proves its LP core.
 - "Moment analysis = pinned class", "extension of F42" and "the only sources are Jacobi and Bianchi, the single open door" are refuted as stated. L109 is a pinned-system constraint that positivity and support miss, strictly sharper at simple $\lambda_{\min}$, and F42 is withdrawn.
-- Hypotheses to write in: unit norm, $\theta\ge0$ for the one-sided form, $\operatorname{tr}W=0$, $n\ge4$, and the scope "valid for every $g\ge0$ supported in the spectrum".
+- Hypotheses to write in: unit norm, $\theta\ge0$ for the one-sided form, $\mathop{\mathrm{tr}}W=0$, $n\ge4$, and the scope "valid for every $g\ge0$ supported in the spectrum".
 - [L113.lean](../lean/HamiltonsCubic/Results/L113.lean) is unrelated to the claim. [L113Statement.lean](../lean/HamiltonsCubic/Results/L113Statement.lean) is correct as algebra and decoupled from Weyl tensors.

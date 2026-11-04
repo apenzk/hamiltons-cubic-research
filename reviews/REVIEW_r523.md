@@ -40,7 +40,7 @@ $$G(R)\le0\iff\langle R,\Phi(R)\rangle\le F(R)\,\langle\mathrm{ric}(R),\mathrm{r
 
 That reproduces the criterion. I also checked the cone family against itself: $F\le\tfrac4{n-2+4a}$ expands, using the stated $\lVert\mathrm{ric} R\rVert^2=\tfrac{n-1}2\lVert R_I\rVert^2+\tfrac{n-2}4\lVert R_{\mathrm{ric}_0}\rVert^2$, to exactly Beitz's p. 96 form $\tfrac{4a-n}4\lVert R_I\rVert^2+a\lVert R_{\mathrm{ric}_0}\rVert^2+(\tfrac{n-2}4+a)\lVert R_W\rVert^2\le0$, and $F(I)=\tfrac{2}{n-1}=\tfrac4{n-2+4a}\big|_{a=n/4}$. The normalisation is pinned two independent ways.
 
-**Left side.** $\Phi(cI+W)=c^2\Phi(I)+2c\Phi(I,W)+Q(W)$. From [BW08 Lemma 2.1](../references/boehm-wilking-2008-space-forms/notes.md), $I\#I=(n-2)I$ so $\Phi(I)=(n-1)I$ (which is the record's anchor $\mathrm{Id}^\#=(n-2)\mathrm{Id}$) and $W\#I=-W$ so $\Phi(I,W)=\tfrac12(IW+WI)+W\#I=W-W=0$. Then $\langle W,I\rangle=\operatorname{tr}W=0$ and $\operatorname{tr}Q(W)=0$, giving $\langle R,\Phi(R)\rangle=c^3(n-1)\lVert I\rVert^2+\langle W,Q(W)\rangle$.
+**Left side.** $\Phi(cI+W)=c^2\Phi(I)+2c\Phi(I,W)+Q(W)$. From [BW08 Lemma 2.1](../references/boehm-wilking-2008-space-forms/notes.md), $I\#I=(n-2)I$ so $\Phi(I)=(n-1)I$ (which is the record's anchor $\mathrm{Id}^\#=(n-2)\mathrm{Id}$) and $W\#I=-W$ so $\Phi(I,W)=\tfrac12(IW+WI)+W\#I=W-W=0$. Then $\langle W,I\rangle=\mathop{\mathrm{tr}}W=0$ and $\mathop{\mathrm{tr}}Q(W)=0$, giving $\langle R,\Phi(R)\rangle=c^3(n-1)\lVert I\rVert^2+\langle W,Q(W)\rangle$.
 
 **Right side.** On the slice $\mathrm{ric}(R)=c\,\mathrm{ric}(I)$, and [BW08 eq. (6)](../references/boehm-wilking-2008-space-forms/notes.md) gives $\mathrm{ric}(Q(W))=0$, so $\mathrm{ric}(\Phi(R))=c^2(n-1)\mathrm{ric}(I)$ and
 
@@ -93,7 +93,7 @@ The collapse is an **equivalence** at each slice boundary point, so:
 
 The direction the lemma actually needs (*invariance $\Rightarrow G\le0$*), is immediate and not merely asserted: if $G(R_0)>0$ at $R_0\in\partial\Omega_0$ then $F(R(t))>F(R_0)=\tfrac4{n-2}$ for small $t>0$, so $R(t)\notin\Omega_0$. [Beitz Lemma 2.3.4](../references/beitz-2018-bianchi-convexity/notes.md) supplies only the converse, and the block names this as an owed input, correctly.
 
-**Two claimed inputs are not actually needed, and the block knows it.** Bianchi-preservation by $\Phi$ is invoked at [05-landscape.tex:58](../report/sections/05-landscape.tex#L58) to justify "$\Phi(W)$ is again Weyl"; but $\langle I,Q(W)\rangle=\operatorname{tr}Q(W)$ needs only tracelessness, and Beitz's $\mathrm{scal}(R^2+R^\#)=2\lVert\mathrm{ric}(R)\rVert^2$ gives that in one line. Likewise the total symmetry of $T$. The proof's own closing sentence (*"the collapse needs only bilinearity, $\Phi(I,W)=0$ and $\mathrm{scal}(Q(W))=0$"*), is the accurate account, and it sits in mild tension with the Bianchi remark three sentences earlier.
+**Two claimed inputs are not actually needed, and the block knows it.** Bianchi-preservation by $\Phi$ is invoked at [05-landscape.tex:58](../report/sections/05-landscape.tex#L58) to justify "$\Phi(W)$ is again Weyl"; but $\langle I,Q(W)\rangle=\mathop{\mathrm{tr}}Q(W)$ needs only tracelessness, and Beitz's $\mathrm{scal}(R^2+R^\#)=2\lVert\mathrm{ric}(R)\rVert^2$ gives that in one line. Likewise the total symmetry of $T$. The proof's own closing sentence (*"the collapse needs only bilinearity, $\Phi(I,W)=0$ and $\mathrm{scal}(Q(W))=0$"*), is the accurate account, and it sits in mild tension with the Bianchi remark three sentences earlier.
 
 **Sharpness is a separate statement and is scoped correctly.** $\theta_0(n)$ is *attained* only at even $n$; [problem.md:73](../findings/problem.md#L73) says so. The lemma claims the constant is demanded, not that it is achieved, and does not overreach.
 
@@ -125,7 +125,7 @@ The direction the lemma actually needs (*invariance $\Rightarrow G\le0$*), is im
 
 ## Verdict
 
-**The statement is true, the collapse is genuinely residue-free, and $\theta_0(n)$ is derived without any sphere product.** I rebuilt every step from the definitions and reached the same constant; the three literature inputs are correctly quoted against [BW08](../references/boehm-wilking-2008-space-forms/notes.md) and [Beitz](../references/beitz-2018-bianchi-convexity/notes.md), the anchors $\mathrm{Id}^\#=(n-2)\mathrm{Id}$, $\operatorname{tr}W^\#=-1$ and $\theta_0(6)=\sqrt{10}/3$ all check, and the collapse turns out to be an identity on the whole slice rather than only on $\partial\Omega_0$.
+**The statement is true, the collapse is genuinely residue-free, and $\theta_0(n)$ is derived without any sphere product.** I rebuilt every step from the definitions and reached the same constant; the three literature inputs are correctly quoted against [BW08](../references/boehm-wilking-2008-space-forms/notes.md) and [Beitz](../references/beitz-2018-bianchi-convexity/notes.md), the anchors $\mathrm{Id}^\#=(n-2)\mathrm{Id}$, $\mathop{\mathrm{tr}}W^\#=-1$ and $\theta_0(6)=\sqrt{10}/3$ all check, and the collapse turns out to be an identity on the whole slice rather than only on $\partial\Omega_0$.
 
 Four defects, none of which touches the truth of the lemma:
 

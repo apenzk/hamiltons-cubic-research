@@ -10,7 +10,7 @@
 
 Fixed conventions independently before reading anything downstream, then derived every row of the table from the definitions, then cross-checked the whole against [Lemma L27](../findings/nondegeneracy.md)'s ten values with multiplicity.
 
-**Conventions pinned, from the anchors and not from the record's prose.** Sectional matrix $\alpha$ within $F_1$, $\beta$ within $F_2$, $\gamma$ across; Ricci-flatness $(p-1)\alpha+q\gamma=0$ and $(q-1)\beta+p\gamma=0$; unit norm in the ordered sense $\lVert K\rVert_F^2=2$ of [conventions.md](../findings/conventions.md) gives $\gamma^2=\dfrac{2(p-1)(q-1)}{pq(n-1)(n-2)}$ and hence $\theta=(n-1)\lvert\gamma\rvert=\sqrt{\dfrac{2(n-1)(p-1)(q-1)}{pq(n-2)}}$. **That reproduces $\theta_0(6)=\sqrt{10}/3$ at $(3,3)$ and $\theta_0(n)^2=2(n-1)(n-2)/n^2$ at $p=q=n/2$.** Separately, $\operatorname{tr}W^\#=\sum_{a<b}\sum_c M_{ac}M_{bc}=\tfrac12\sum_c\big[(\sum_aM_{ac})^2-\sum_aM_{ac}^2\big]=-\tfrac12\lVert K\rVert_F^2=-1$, the record's anchor. I am in the record's normalisation.
+**Conventions pinned, from the anchors and not from the record's prose.** Sectional matrix $\alpha$ within $F_1$, $\beta$ within $F_2$, $\gamma$ across; Ricci-flatness $(p-1)\alpha+q\gamma=0$ and $(q-1)\beta+p\gamma=0$; unit norm in the ordered sense $\lVert K\rVert_F^2=2$ of [conventions.md](../findings/conventions.md) gives $\gamma^2=\dfrac{2(p-1)(q-1)}{pq(n-1)(n-2)}$ and hence $\theta=(n-1)\lvert\gamma\rvert=\sqrt{\dfrac{2(n-1)(p-1)(q-1)}{pq(n-2)}}$. **That reproduces $\theta_0(6)=\sqrt{10}/3$ at $(3,3)$ and $\theta_0(n)^2=2(n-1)(n-2)/n^2$ at $p=q=n/2$.** Separately, $\mathop{\mathrm{tr}}W^\#=\sum_{a<b}\sum_c M_{ac}M_{bc}=\tfrac12\sum_c\big[(\sum_aM_{ac})^2-\sum_aM_{ac}^2\big]=-\tfrac12\lVert K\rVert_F^2=-1$, the record's anchor. I am in the record's normalisation.
 
 The polarised operator I worked in: for diagonal $M,X$, $(L_MX)_{ab}=M_{ab}X_{ab}+\tfrac12\sum_{c\ne a,b}(M_{ac}X_{bc}+M_{bc}X_{ac})$, whose fixed vector at $X=M$ is exactly criticality $M_{ab}^2+\sum_cM_{ac}M_{bc}=\theta M_{ab}$, i.e. $L_ee=e$.
 
@@ -56,7 +56,7 @@ whose top is $\lambda_p$ for $p\ge3$. The table's stated value is right; the $-\
 
 The $-\mu$ line is the one that could have failed and does not: $(p-1)(q-1)\big[\tfrac{pq}4+1+\tfrac n2\big]=(p-1)(q-1)\tfrac{(p+2)(q+2)}4$ identically. **So L127's $\mathcal D_n$ row is not merely consistent with L27, it is *forced* by L27 together with the other three rows**, which is a stronger statement than "from L27's summands" suggests and is worth saying in the block.
 
-**A second, independent check on the same table.** $\operatorname{tr}_{\mathcal W_n}L_e=0$ unconditionally ([L27](../findings/nondegeneracy.md)). Summing L127's table: $1+\tfrac{pq}2+\tfrac{p^2-4}4+\tfrac{q^2-4}4-\tfrac{n^2-4}4=0$ identically in $p,q$. ✓
+**A second, independent check on the same table.** $\mathop{\mathrm{tr}}_{\mathcal W_n}L_e=0$ unconditionally ([L27](../findings/nondegeneracy.md)). Summing L127's table: $1+\tfrac{pq}2+\tfrac{p^2-4}4+\tfrac{q^2-4}4-\tfrac{n^2-4}4=0$ identically in $p,q$. ✓
 
 **And the $(3,3)$ arithmetic in the block's closing "Agreement" line checks.** Nine cross-factor blocks each carrying one $\tfrac12$, plus nine $(2,2)$-split four-set blocks each carrying $+\mu=\tfrac12$, is $18=\dim E(\tfrac12)$; nothing else reaches it, since the within-factor blocks are $\{\tfrac14,-\tfrac12,-\tfrac12\}$ and $\mathcal D_6$ is $\{1,\tfrac14^4,(-\tfrac12)^4\}$. Six within-factor blocks among $\binom62=15$. ✓ Block dimensions total $15\cdot2+15\cdot3+9=84=\dim\mathcal W_6$. ✓
 

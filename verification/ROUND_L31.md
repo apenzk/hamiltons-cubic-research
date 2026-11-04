@@ -35,7 +35,7 @@ Whether the root-system identity $\max_{\lVert Y\rVert=1}\lVert[X,Y]\rVert^2=(s_
 | id | finding | support |
 |---|---|---|
 | **M1** | **the dead anchor is confirmed and is unique to the reassignment sentence.** All five in-file citations use the correct form; only [results.md](../results.md)'s credit for *"equality forces the support to have $r=4$"* points at a heading that does not exist | v173 |
-| **M2** | **orthogonality is stated, never used, and redundant.** The forward proof consumes only $\lVert X\rVert=\lVert Y\rVert=1$, and $XY=-YX$ gives $\operatorname{tr}(XY)=0$ by itself, *so L31 holds under a weaker hypothesis than it states* | v173 |
+| **M2** | **orthogonality is stated, never used, and redundant.** The forward proof consumes only $\lVert X\rVert=\lVert Y\rVert=1$, and $XY=-YX$ gives $\mathop{\mathrm{tr}}(XY)=0$ by itself, *so L31 holds under a weaker hypothesis than it states* | v173 |
 | **M3** | a symbol collision inside the file: [stratum-two-negative.md](../findings/stratum-two-negative.md) writes $v_{N-1},v_N$ and then $v_2,v_3$ for the same pair. **Correct only under the support labelling**; under descending order $v_2,v_3$ are kernel eigenvectors and the claim is false of them | v173 |
 | **M4** | five imprecisions: the short roots unqualified by parity, *"all singular values $1/\sqrt2$"* meaning *all nonzero*, $P_V$ and $V$ undefined, the $s_1\ge s_2$ ordering and the Cartan reduction both unstated, and the landscape entry's *"Cauchy–Schwarz forces the rest"* overstating by one clause | v173 |
 
@@ -55,7 +55,7 @@ Whether the root-system identity $\max_{\lVert Y\rVert=1}\lVert[X,Y]\rVert^2=(s_
 
 ### A hypothesis that was never a hypothesis
 
-**Orthogonality is stated and used nowhere**, in either direction. The forward proof consumes only $\lVert X\rVert=\lVert Y\rVert=1$, and $XY=-YX$ delivers $\operatorname{tr}(XY)=0$ by itself, *so orthogonality is a consequence of the equality case, and the lemma holds verbatim with "unit" in its place.* All three verifiers reached this separately.
+**Orthogonality is stated and used nowhere**, in either direction. The forward proof consumes only $\lVert X\rVert=\lVert Y\rVert=1$, and $XY=-YX$ delivers $\mathop{\mathrm{tr}}(XY)=0$ by itself, *so orthogonality is a consequence of the equality case, and the lemma holds verbatim with "unit" in its place.* All three verifiers reached this separately.
 
 ### And a conversion the whole chain rests on
 

@@ -35,7 +35,7 @@ $\theta$ is $P(W)/\lVert W\rVert^3$ ([conventions.md](../findings/conventions.md
 | # | hypothesis | where it is used | status |
 | --- | --- | --- | --- |
 | H1 | $\lVert W\rVert=1$, i.e. $\sum_im_i\nu_i^2=1$ | forces $a=\sqrt{3/28}$ | stated in the brief's setting, load-bearing |
-| H2 | $\operatorname{tr}W=0$, i.e. $\sum_im_i\nu_i=0$ | forces $b=\tfrac43a$ | stated, load-bearing |
+| H2 | $\mathop{\mathrm{tr}}W=0$, i.e. $\sum_im_i\nu_i=0$ | forces $b=\tfrac43a$ | stated, load-bearing |
 | H3 | $N=\binom{12}2=66$ | forces $m_3=59$ | stated, load-bearing |
 | H4 | $Q(W)=\theta W$ (criticality) | makes (C) a *necessary* condition on real points with the functional's $\theta$ | **unstated in the lemma's statement**, and it is what makes the conclusion mean anything, see section 7 |
 | H5 | ordered-pair reading of (A): $\sum_{\beta\gamma}T_{\alpha\beta\gamma}=2(n-2)$ | every (A$_i$) | stated in the brief; **the single most fragile input**, see section 10 |

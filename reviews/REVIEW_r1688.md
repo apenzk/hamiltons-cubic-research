@@ -9,7 +9,7 @@
 | 1c | The hypotheses are the record's $W\in\mathcal S_J$: symmetric $S$, $M_a$, $K$, each load-bearing, with and $K_{aa}=0$ is correctly omitted | **CONFIRMED** (by hand) |
 | 1d | `blockCoeff_symm` and `K_pat` state pair symmetry $C_{ijkl}=C_{klij}$ of the block coefficients | **CONFIRMED** (by hand, all six block patterns) |
 | 2 | `opOf_selfAdjoint` is true on all matrices and its use of `inner2`'s bilinearity is sound | **CONFIRMED** |
-| 3 | `Pcubic_ricciFlat` states item 3's closing formula: $S=N-\tfrac12(\operatorname{tr}N)I$ and $P(W)$ the displayed polynomial | **CONFIRMED** |
+| 3 | `Pcubic_ricciFlat` states item 3's closing formula: $S=N-\tfrac12(\mathop{\mathrm{tr}}N)I$ and $P(W)$ the displayed polynomial | **CONFIRMED** |
 | 4a | The row's new sentences claim exactly what is proved | **CONFIRMED WITH GAPS** (G1) |
 | 4b | The owed list is complete | **CONFIRMED** (with a duplication noted, O1) |
 | 4c | The record agrees with the row about what the Lean holds | **GAP** (G2) |
@@ -36,13 +36,13 @@ One line: the two new `IsWeyl` clauses and the closing formula are faithful and 
 ## Attack line 3: `Pcubic_ricciFlat` against item 3
 
 - **Hypotheses.** Those of `ricciFlat_iff` plus `hRic : ∀ i j, Ric (blockOp S M K) i j = 0`. The record's item 3 is stated on $\mathcal S_J\cap\mathcal W_n$, and Ricci-flatness is one of its clauses, so the Lean hypothesis is weaker and the theorem stronger. The record's step 5 uses only the Ricci equation to invert, so this matches the proof.
-- **First conjunct.** `S = ∑ a, M a - ((1/2) * (∑ a, M a).trace) • 1` is $S=N-\tfrac12(\operatorname{tr}N)I$ with $N=\sum_aM_a$. The proof takes item 2's $J$ condition $(\operatorname{tr}S)I-S+N=0$ from `ricciFlat_iff`, rewrites it as $(\operatorname{tr}S)I-S=-N$, and inverts by `ricciJ_inverse` ([L226Statement.lean:1246](../lean/HamiltonsCubic/Results/L226Statement.lean#L1246)), which is step 5's trace argument.
+- **First conjunct.** `S = ∑ a, M a - ((1/2) * (∑ a, M a).trace) • 1` is $S=N-\tfrac12(\mathop{\mathrm{tr}}N)I$ with $N=\sum_aM_a$. The proof takes item 2's $J$ condition $(\mathop{\mathrm{tr}}S)I-S+N=0$ from `ricciFlat_iff`, rewrites it as $(\mathop{\mathrm{tr}}S)I-S=-N$, and inverts by `ricciJ_inverse` ([L226Statement.lean:1246](../lean/HamiltonsCubic/Results/L226Statement.lean#L1246)), which is step 5's trace argument.
 - **Second conjunct.** `Pcubic (blockOp S M K) = blockP (N - ½(tr N)I) M K`, from `Pcubic_blockOp` and rewriting back with the first conjunct. `blockP` ([L226Statement.lean:50](../lean/HamiltonsCubic/Results/L226Statement.lean#L50)) against the record's display, term by term:
-  - `cubicJ S = (S*S*S).trace + 3 * S.det` is $\operatorname{tr}S^3+3\det S$.
-  - `∑ a, ((M a)^3.trace + 3 * (S * (M a).adjugate).trace)` is $\sum_a(\operatorname{tr}M_a^3+3\operatorname{tr}(S\operatorname{adj}M_a))$.
-  - `∑ a, ∑ b, if a < b then K a b ^ 3 + 3 * K a b * (M a * M b).trace else 0` is $\sum_{a<b}(K_{ab}^3+3K_{ab}\operatorname{tr}(M_aM_b))$.
+  - `cubicJ S = (S*S*S).trace + 3 * S.det` is $\mathop{\mathrm{tr}}S^3+3\det S$.
+  - `∑ a, ((M a)^3.trace + 3 * (S * (M a).adjugate).trace)` is $\sum_a(\mathop{\mathrm{tr}}M_a^3+3\mathop{\mathrm{tr}}(S\mathop{\mathrm{adj}}M_a))$.
+  - `∑ a, ∑ b, if a < b then K a b ^ 3 + 3 * K a b * (M a * M b).trace else 0` is $\sum_{a<b}(K_{ab}^3+3K_{ab}\mathop{\mathrm{tr}}(M_aM_b))$.
   - `3 * ∑ a b c, if a < b ∧ b < c then K a b * K a c * K b c else 0` is $3\sum_{a<b<c}K_{ab}K_{ac}K_{bc}$.
-- **Nothing is dropped and no coefficient differs.** The record's $\operatorname{tr}(R_J\Lambda^2M_a)=\operatorname{tr}(S\operatorname{adj}M_a)$ and $P(R_J)=\operatorname{tr}S^3+3\det S$ are absorbed into `Pcubic_blockOp`, which states item 1 at $k=3$ directly in item 3's coordinates, reviewed earlier.
+- **Nothing is dropped and no coefficient differs.** The record's $\mathop{\mathrm{tr}}(R_J\Lambda^2M_a)=\mathop{\mathrm{tr}}(S\mathop{\mathrm{adj}}M_a)$ and $P(R_J)=\mathop{\mathrm{tr}}S^3+3\det S$ are absorbed into `Pcubic_blockOp`, which states item 1 at $k=3$ directly in item 3's coordinates, reviewed earlier.
 - **Non-vacuity.** $S=M=K=0$ satisfies every hypothesis, and item 3's $m=1$ case with $M_1$ traceless and $S=M_1$ is a nonzero Ricci-flat instance by `ricciFlat_iff`, so the theorem constrains real data.
 
 ## Attack line 4: the row

@@ -14,7 +14,7 @@ Section 1 has no item with a live method. I22 is delivered ([Lemma L128](../find
 
 | node | owes | state |
 |---|---|---|
-| **L16(a)**, the grant $J_5\ge0$ | a sign for $\operatorname{tr}(X_{\mathrm{inv}}\#W_-)=\tfrac12\sum x_i\mu_j\lVert[u_i,v_j]\rVert^2$, $x_i$ **indefinite** | fenced on four sides; one of three unsigned terms |
+| **L16(a)**, the grant $J_5\ge0$ | a sign for $\mathop{\mathrm{tr}}(X_{\mathrm{inv}}\#W_-)=\tfrac12\sum x_i\mu_j\lVert[u_i,v_j]\rVert^2$, $x_i$ **indefinite** | fenced on four sides; one of three unsigned terms |
 | **L16(b)**, global closure | the compactness I5 would prove | blocked |
 | **I5** | I18 | blocked (I21 discharged) |
 | **I18** | a mechanism that is not a rearrangement of [post F47](../findings/INDEX-traps.md)'s eigen-equation | BLOCKED |
@@ -24,7 +24,7 @@ Section 1 has no item with a live method. I22 is delivered ([Lemma L128](../find
 
 - **[F54](../findings/INDEX-traps.md)**, re-bounding $H$ by trace data cannot close $J_5\ge0$.
 - **[F55](../findings/INDEX-traps.md)**, the three-term $\#$-form has zero $\Lambda^4$ content; the $\#$-trace collapses against $W$ and $I$.
-- **[F56](../findings/INDEX-traps.md)**, $\mathrm{Ric}$ is rank one on $\operatorname{span}\{W_+,W_-\}$, so the polarised scal identity returns $\tfrac{\alpha+\beta}{4}J_5$ at *every* argument there. **Any rewrite of the grant through $W$'s spectral parts is closed.**
+- **[F56](../findings/INDEX-traps.md)**, $\mathrm{Ric}$ is rank one on $\mathop{\mathrm{span}}\{W_+,W_-\}$, so the polarised scal identity returns $\tfrac{\alpha+\beta}{4}J_5$ at *every* argument there. **Any rewrite of the grant through $W$'s spectral parts is closed.**
 - **[F41](../findings/INDEX-traps.md)**, $\mathrm{ad}(v)$'s marginals buy nothing; only the Jacobi identity separates a torus from a balanced product. *Stands over every aggregate of bracket data.*
 - **[F51](../findings/INDEX-traps.md), [F52](../findings/INDEX-traps.md), [F47](../findings/INDEX-traps.md)**, the pair-clause rearrangements, all inert.
 - Refuted outright, not merely fenced: $X_{\mathrm{inv}}\succeq0$, $\mathrm{Ric}(X_{\mathrm{inv}})\succeq0$, and both congruence intermediates. **The whole ladder between the scalar target and operator positivity is closed.**

@@ -6,7 +6,7 @@
 
 | # | the clause, split | verdict | reason |
 | --- | --- | --- | --- |
-| 1 | every $W\in O(5)\cdot W_0$ attains $\theta=\sqrt{3/2}$ | **VALID AS WRITTEN** | $\theta$ is $O(5)$-invariant and $\theta(W_0)=3\operatorname{tr}(W_0^3)=3/\sqrt6=\sqrt{3/2}$ from the exact data at [INDEX-values.md:19](../findings/INDEX-values.md), though it is the evaluation, not the certificate, that supplies the sign |
+| 1 | every $W\in O(5)\cdot W_0$ attains $\theta=\sqrt{3/2}$ | **VALID AS WRITTEN** | $\theta$ is $O(5)$-invariant and $\theta(W_0)=3\mathop{\mathrm{tr}}(W_0^3)=3/\sqrt6=\sqrt{3/2}$ from the exact data at [INDEX-values.md:19](../findings/INDEX-values.md), though it is the evaluation, not the certificate, that supplies the sign |
 | 2 | every $W$ attaining $\theta=\sqrt{3/2}$ lies on $O(5)\cdot W_0$ | **FAILS** | a sum of squares gives $Z(F_5)=\bigcap_iZ(c_i)\supseteq O(5)\cdot W_0$ and nothing in the other direction; the reverse inclusion is a statement about the real radical of $\langle c_1,\dots,c_N\rangle$ that no Gram matrix carries |
 | 3 | the word "Hence", i.e. clause 2 as a consequence of the certificate | **FAILS, and unreachably** | $F_5$ is even and the $c_i$ are odd, so $Z(F_5)\supseteq O(5)\cdot(-W_0)$, a **distinct** orbit; any inference from "the summands vanish on the orbit" to "the zero set is the orbit" would prove the same for $-W_0$, where $\theta=-\sqrt{3/2}$ |
 | 4 | "exactly on that orbit" read literally, without $\lVert W\rVert=1$ | **FAILS on scaling** | $\theta$ is invariant under $W\mapsto tW$, $t>0$, while $O(5)\cdot W_0$ is norm-preserving, so $2W_0$ attains equality off the orbit. [results.md:625](../results.md) says "for every unit $W$" and is safe; the [sym3-blocks.md:326](../findings/sym3-blocks.md) form quoted in [ROUND_L61.md](ROUND_L61.md) and [results.md:204](../results.md) do not |
@@ -22,17 +22,17 @@ From [conventions.md](../findings/conventions.md):
 - $W_0$, "the $n=5$ base point of the $\mathrm{Sym}^3$ machinery … the orbit $O(5)\cdot W_0$ being the zero set a certificate must vanish on. *Cubics are odd, so vanishing on $O(5)\cdot W_0$ forces vanishing on the orbit of $-W_0$ automatically.*"
 - $\dim\mathcal W_5=\frac{5\cdot2\cdot6\cdot7}{12}=35$.
 
-From [INDEX-values.md:19](../findings/INDEX-values.md), the exact $n=5$ base point: "$\Lambda^2$ spectrum $(2,-1,-1,0^7)/\sqrt6$, $\lVert W_0\rVert^2=1$, $\operatorname{tr}(W_0^3)=1/\sqrt6$".
+From [INDEX-values.md:19](../findings/INDEX-values.md), the exact $n=5$ base point: "$\Lambda^2$ spectrum $(2,-1,-1,0^7)/\sqrt6$, $\lVert W_0\rVert^2=1$, $\mathop{\mathrm{tr}}(W_0^3)=1/\sqrt6$".
 
-From [results.md:625](../results.md), the step this report inherits rather than checks: "$P(W)=3\operatorname{tr}(W^3)$" on $\mathcal W_5$.
+From [results.md:625](../results.md), the step this report inherits rather than checks: "$P(W)=3\mathop{\mathrm{tr}}(W^3)$" on $\mathcal W_5$.
 
 The three arithmetic checks on the base point, by hand: $\tfrac{2-1-1}{\sqrt6}=0$; $\tfrac{4+1+1}{6}=1$; $\tfrac{8-1-1}{6\sqrt6}=\tfrac{1}{\sqrt6}$. The spectrum, the norm and the cube trace agree.
 
 ## 1. The identity the whole question turns on
 
-With $P=3\operatorname{tr}(W^3)$ on $\mathcal W_5$ and $\theta=P/\lVert W\rVert^3$,
+With $P=3\mathop{\mathrm{tr}}(W^3)$ on $\mathcal W_5$ and $\theta=P/\lVert W\rVert^3$,
 
-$$9\operatorname{tr}(W^3)^2=P(W)^2=\theta(W)^2\lVert W\rVert^6,\qquad\text{so}\qquad \boxed{\;F_5(W)=\lVert W\rVert^6\Big(\tfrac32-\theta(W)^2\Big).\;}$$
+$$9\mathop{\mathrm{tr}}(W^3)^2=P(W)^2=\theta(W)^2\lVert W\rVert^6,\qquad\text{so}\qquad \boxed{\;F_5(W)=\lVert W\rVert^6\Big(\tfrac32-\theta(W)^2\Big).\;}$$
 
 This is an identity on $\mathcal W_5\setminus\{0\}$, and it says exactly where the certificate's reach ends. $F_5\ge0$ is equivalent to $\lvert\theta\rvert\le\sqrt{3/2}$, and
 
@@ -45,7 +45,7 @@ Write $\mathcal E_\pm$ for the two nonzero pieces. They are disjoint because $\s
 Three lines, and none of them is the certificate.
 
 1. **$\theta$ is $O(5)$-invariant.** $g\in O(5)$ acts on curvature operators by $W\mapsto(\Lambda^2g)\,W\,(\Lambda^2g)^{-1}$ with $\Lambda^2g$ orthogonal on $\Lambda^2\mathbb R^5$. Conjugation by an orthogonal map preserves $\lVert\cdot\rVert$ and commutes with $Q$ ($Q$ is $O(n)$-equivariant, being built from $W^2$ and $W^\#$), so it preserves $P$ and hence $\theta$.
-2. **$\theta(W_0)=+\sqrt{3/2}$.** From $\operatorname{tr}(W_0^3)=1/\sqrt6$ and $\lVert W_0\rVert=1$: $\theta(W_0)=3/\sqrt6=\sqrt{9/6}=\sqrt{3/2}$.
+2. **$\theta(W_0)=+\sqrt{3/2}$.** From $\mathop{\mathrm{tr}}(W_0^3)=1/\sqrt6$ and $\lVert W_0\rVert=1$: $\theta(W_0)=3/\sqrt6=\sqrt{9/6}=\sqrt{3/2}$.
 3. Therefore $\theta\equiv\sqrt{3/2}$ on $O(5)\cdot W_0$, i.e. $O(5)\cdot W_0\subseteq\mathcal E_+$.
 
 **A note on provenance, since the clause is offered as a consequence of the certificate.** The certificate alone yields only $O(5)\cdot W_0\subseteq Z(F_5)$, hence $\theta^2=3/2$ on the orbit, hence $\theta=\pm\sqrt{3/2}$ there. It cannot choose the sign: $F_5$ does not see it. The sign comes from step 2, an evaluation, which is on the record independently at [INDEX-values.md:19](../findings/INDEX-values.md) and in $M(n)\ge\sqrt{3/2}$ at [conventions.md](../findings/conventions.md). So direction one is valid, with one named input outside the certificate.
@@ -68,11 +68,11 @@ The gap is not exotic. In two variables, $F(x,y)=(x^2-y^2)^2$ is a sum of one sq
 
 ### 3b. The parity witness, in closed form
 
-$F_5$ is even: $\lVert-W\rVert=\lVert W\rVert$ and $\operatorname{tr}((-W)^3)^2=\operatorname{tr}(W^3)^2$, so $F_5(-W)=F_5(W)$. The summands are homogeneous of degree $3$, hence odd: $c_i(-W)=-c_i(W)$. So $c_i$ vanishing on $O(5)\cdot W_0$ forces $c_i$ vanishing on $-O(5)\cdot W_0=O(5)\cdot(-W_0)$, and
+$F_5$ is even: $\lVert-W\rVert=\lVert W\rVert$ and $\mathop{\mathrm{tr}}((-W)^3)^2=\mathop{\mathrm{tr}}(W^3)^2$, so $F_5(-W)=F_5(W)$. The summands are homogeneous of degree $3$, hence odd: $c_i(-W)=-c_i(W)$. So $c_i$ vanishing on $O(5)\cdot W_0$ forces $c_i$ vanishing on $-O(5)\cdot W_0=O(5)\cdot(-W_0)$, and
 
 $$Z(F_5)\;\supseteq\;O(5)\cdot W_0\;\cup\;O(5)\cdot(-W_0).$$
 
-**These are two distinct orbits.** $\operatorname{tr}(W^3)$ is $O(5)$-invariant (§2, step 1) and takes the value $+1/\sqrt6$ at $W_0$ and $-1/\sqrt6$ at $-W_0$; the values differ, so no $g\in O(5)$ carries one to the other. Equivalently, the $\Lambda^2$ spectra $(2,-1,-1,0^7)/\sqrt6$ and $(-2,1,1,0^7)/\sqrt6$ are different multisets and the action is by orthogonal conjugation. Closed form, no computation.
+**These are two distinct orbits.** $\mathop{\mathrm{tr}}(W^3)$ is $O(5)$-invariant (§2, step 1) and takes the value $+1/\sqrt6$ at $W_0$ and $-1/\sqrt6$ at $-W_0$; the values differ, so no $g\in O(5)$ carries one to the other. Equivalently, the $\Lambda^2$ spectra $(2,-1,-1,0^7)/\sqrt6$ and $(-2,1,1,0^7)/\sqrt6$ are different multisets and the action is by orthogonal conjugation. Closed form, no computation.
 
 **What this does and does not exhibit.** $-W_0$ has $\theta=-\sqrt{3/2}$, so it is a minimiser, not a point of equality in $\theta\le\sqrt{3/2}$: it is a zero of $F_5$ off the orbit, not a counterexample to the $\theta$-clause itself. Its force is against the **inference**. Every property the certificate establishes of $O(5)\cdot W_0$, membership in the zero locus of every summand, membership in $Z(F_5)$, saturation of the bound $F_5\ge0$, holds verbatim of $O(5)\cdot(-W_0)$. So no argument that reads "the summands vanish on the orbit, therefore equality holds exactly there" can be sound: run it at $-W_0$ and it concludes $\theta(-W_0)=\sqrt{3/2}$, which is false. **The certificate cannot separate $\mathcal E_+$ from $\mathcal E_-$, and the equality clause is a statement about $\mathcal E_+$ alone.**
 
@@ -88,7 +88,7 @@ This bites the clause itself, and not only the inference, under the form of the 
 
 What the reverse inclusion would assert is a rigidity theorem: that $\mathcal E_+\cap\{\lVert W\rVert=1\}$, a compact $O(5)$-invariant set containing the orbit, is exactly one orbit. Two observations on whether it is cheap.
 
-- **Spectra do not force it.** Equality is $\operatorname{tr}(W^3)=1/\sqrt6$ at $\operatorname{tr}(W^2)=1$, $\operatorname{tr}(W)=0$ on $\Lambda^2\mathbb R^5$, which is $10$-dimensional. The maximum of the cube trace under those two constraints alone is $8/\sqrt{90}$, attained at $(9,-1^9)/\sqrt{90}$, and $64/90>1/6$, so $1/\sqrt6$ is an interior value of the spectral range and $\{\operatorname{tr}(W^3)=1/\sqrt6\}$ is a hypersurface in spectrum space, not a point. Whatever pins the equality set to one orbit is the Weyl condition, not the spectrum, and the certificate is silent on which of its zeros are Weyl-rigid.
+- **Spectra do not force it.** Equality is $\mathop{\mathrm{tr}}(W^3)=1/\sqrt6$ at $\mathop{\mathrm{tr}}(W^2)=1$, $\mathop{\mathrm{tr}}(W)=0$ on $\Lambda^2\mathbb R^5$, which is $10$-dimensional. The maximum of the cube trace under those two constraints alone is $8/\sqrt{90}$, attained at $(9,-1^9)/\sqrt{90}$, and $64/90>1/6$, so $1/\sqrt6$ is an interior value of the spectral range and $\{\mathop{\mathrm{tr}}(W^3)=1/\sqrt6\}$ is a hypersurface in spectrum space, not a point. Whatever pins the equality set to one orbit is the Weyl condition, not the spectrum, and the certificate is silent on which of its zeros are Weyl-rigid.
 - **The record carries no such rigidity that I may read.** No file among those the brief permits states uniqueness of the $n=5$ maximiser. Per the standing rule I do not supply the argument. I note only that the clause's stated ground (the word "Hence"), is the certificate, and §3a–§3b show that ground cannot bear it; whether some independent argument exists in [sym3-blocks.md](../findings/sym3-blocks.md), which this brief excludes, I make no claim about, except that it would have to be an argument of a different kind.
 
 ## 4. What does follow

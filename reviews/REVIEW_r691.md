@@ -27,7 +27,7 @@ What I did find is structural, and there are five items:
 | $\dim V_{(a,b)}$ | $\tfrac16(2a+3)(2b+1)(a-b+1)(a+b+2)$ | Weyl's formula at $B_2$ with $\rho=(3/2,1/2)$; re-derived, and it reproduces every subscript in [L83](../findings/sym3-blocks.md)'s table |
 | block extent | a `####` heading runs to the next `####` | otherwise L92 has one line and no antecedent. **The record does not fix this**, and [r633](REVIEW_r633.md)/[r634](REVIEW_r634.md) read it two ways on [L62](../findings/sym3-blocks.md). It does not change any verdict here |
 
-**No convention repaired in [conventions.md](../findings/conventions.md) bears on L92.** $\theta_0(n)$, $\Theta_n$ and $S_{XYZ}$ are metric objects and this block is pure representation theory. The one entry that touches this file, *"THE LETTER $B$ MEANS TWO THINGS"*, this file's $B(X,Y)=-\tfrac12\operatorname{tr}(XY)$ against the Killing $B_K=-6B$, does not enter L92, which never evaluates a Casimir. The [conventions.md](../findings/conventions.md) Casimir-sign entry $C=-\sum_a\rho(A_a)^2$ is what makes the $c_2$ values I use below positive, and I adopt it.
+**No convention repaired in [conventions.md](../findings/conventions.md) bears on L92.** $\theta_0(n)$, $\Theta_n$ and $S_{XYZ}$ are metric objects and this block is pure representation theory. The one entry that touches this file, *"THE LETTER $B$ MEANS TWO THINGS"*, this file's $B(X,Y)=-\tfrac12\mathop{\mathrm{tr}}(XY)$ against the Killing $B_K=-6B$, does not enter L92, which never evaluates a Casimir. The [conventions.md](../findings/conventions.md) Casimir-sign entry $C=-\sum_a\rho(A_a)^2$ is what makes the $c_2$ values I use below positive, and I adopt it.
 
 ## 1. The derivation, cold
 

@@ -20,7 +20,7 @@
 
 ## The findings from phase 0
 
-**The citation for total symmetry resolves.** Passage A's wording, "the symmetrisation of $\operatorname{tr}(XYZ)$" and "both totally antisymmetric structure constants", matches Lemma L24's argument at [second-order.md](../findings/second-order.md) line 67 in substance, where it reads "both totally antisymmetric $c$'s". Brief item 2.
+**The citation for total symmetry resolves.** Passage A's wording, "the symmetrisation of $\mathop{\mathrm{tr}}(XYZ)$" and "both totally antisymmetric structure constants", matches Lemma L24's argument at [second-order.md](../findings/second-order.md) line 67 in substance, where it reads "both totally antisymmetric $c$'s". Brief item 2.
 
 **The Lean statement file types an abstract form symmetric in two slots.** [lean/INDEX.md](../lean/INDEX.md) marks L66Statement `statement: typed` over a trilinear form symmetric in its first two slots, where Passage A names total symmetry. Brief item 10.
 
@@ -52,7 +52,7 @@
 | K2 | check 1 | **brief-induced**, no change |
 | K3 | not a defect | no change |
 
-**K1.** Both adjudicators find the non-implication true and the paragraph's only support a run with approximate values, which the paragraph itself says has no closed-form witness. **Both give the same witness independently**: at $n=4$ on $\Lambda^+$, where tracelessness of $Q$ forces $Q(A)=3A^2-\operatorname{tr}(A^2)I$, the unit pair $A=\mathrm{diag}(2,-1,-1)/\sqrt6$ and $B=(J-I)/\sqrt6$ is critical at $\theta=\tfrac{\sqrt6}2$ with $\operatorname{tr}(AB)=0$ and $A\circ B=\tfrac14M\ne0$. v402 reached the same pair as a screen in phase 1. The loop checked it by hand: $A^2=\mathrm{diag}(4,1,1)/6$ gives $Q(A)=\mathrm{diag}(1,-\tfrac12,-\tfrac12)=\tfrac{\sqrt6}2A$, the diagonal of $J-I$ is zero so $\operatorname{tr}(AB)=0$, $(AB+BA)_{ij}=(d_i+d_j)(J-I)_{ij}/6$ with $d=(2,-1,-1)$ gives $M/6$, and $\lVert M\rVert^2=12$. Normalised this way $\theta=\sqrt{3/2}$, the $\mathbb{CP}^2$ value, and $Q$ reproduces $\theta_{2,2}=\tfrac{\sqrt3}2$ (v404). The pair replaces the run.
+**K1.** Both adjudicators find the non-implication true and the paragraph's only support a run with approximate values, which the paragraph itself says has no closed-form witness. **Both give the same witness independently**: at $n=4$ on $\Lambda^+$, where tracelessness of $Q$ forces $Q(A)=3A^2-\mathop{\mathrm{tr}}(A^2)I$, the unit pair $A=\mathrm{diag}(2,-1,-1)/\sqrt6$ and $B=(J-I)/\sqrt6$ is critical at $\theta=\tfrac{\sqrt6}2$ with $\mathop{\mathrm{tr}}(AB)=0$ and $A\circ B=\tfrac14M\ne0$. v402 reached the same pair as a screen in phase 1. The loop checked it by hand: $A^2=\mathrm{diag}(4,1,1)/6$ gives $Q(A)=\mathrm{diag}(1,-\tfrac12,-\tfrac12)=\tfrac{\sqrt6}2A$, the diagonal of $J-I$ is zero so $\mathop{\mathrm{tr}}(AB)=0$, $(AB+BA)_{ij}=(d_i+d_j)(J-I)_{ij}/6$ with $d=(2,-1,-1)$ gives $M/6$, and $\lVert M\rVert^2=12$. Normalised this way $\theta=\sqrt{3/2}$, the $\mathbb{CP}^2$ value, and $Q$ reproduces $\theta_{2,2}=\tfrac{\sqrt3}2$ (v404). The pair replaces the run.
 
 ## Phase 4, dependents
 

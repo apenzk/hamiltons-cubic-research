@@ -82,7 +82,7 @@ $$v^{\mathsf T}Gv=v^{\mathsf T}G^{\mathrm{sym}}v\quad\text{for all }W,\qquad G^{
 
 Take a multiplicity-$2$ block, $S=I_2$, and the Hermitian ansatz $H=S+iA$ with $A=\begin{psmallmatrix}0&2\\-2&0\end{psmallmatrix}$:
 
-$$H=\begin{pmatrix}1&2i\\-2i&1\end{pmatrix},\qquad \operatorname{spec}(H)=\{-1,\,3\}.$$
+$$H=\begin{pmatrix}1&2i\\-2i&1\end{pmatrix},\qquad \mathop{\mathrm{spec}}(H)=\{-1,\,3\}.$$
 
 **$S\succ0$ and $S+iA$ is indefinite**, so the translation carries a feasible certificate out of the cone while leaving the sextic fixed. The $24$ therefore act freely on the *affine solution set of the linear equations* and not on the *SDP feasible set*. Calling them "gauge" without qualification claims the second.
 

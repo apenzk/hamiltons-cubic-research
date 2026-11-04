@@ -5,7 +5,7 @@
 | # | Claim | Verdict |
 |---|---|---|
 | 1a | `second_order_pointwise` is the record's $\theta\le\lambda_{\max}p+B_5$, $p=\sum_{\lambda>0}\lambda^2$, $B_5$ as L143Assembly defines it | **CONFIRMED** |
-| 1b | $\operatorname{tr}W^3=\sum\lambda^3\le\lambda_{\max}p$ termwise, $\lambda\le0$ terms included | **CONFIRMED** |
+| 1b | $\mathop{\mathrm{tr}}W^3=\sum\lambda^3\le\lambda_{\max}p$ termwise, $\lambda\le0$ terms included | **CONFIRMED** |
 | 1c | $\langle W,W^\#\rangle\le\tfrac12\sum\lvert\lambda_\gamma\rvert X_\gamma\le B_5$ via $\lvert S_\gamma\rvert\le X_\gamma$ and Cauchy–Schwarz | **CONFIRMED**, direction $\le$ at both steps |
 | 1d | `sharpPair_T`'s $\tfrac12\sum\lambda_\gamma\lambda_\alpha\lambda_\beta c^2$ is the right starting point | **CONFIRMED**, a proved identity in the normalisation of the proved marginals |
 | 2a | `L143_unconditional` is the record's headline at every $n\ge4$, on the unit Weyl sphere, no residual hypothesis | **CONFIRMED** |
@@ -25,7 +25,7 @@ One line: the record's L143 is now a kernel-checked theorem with no binder beyon
 - **Step 2b, Cauchy–Schwarz.** `Finset.sum_mul_sq_le_sq_mul_sq` gives $(\sum\lvert\lambda\rvert X)^2\le(\sum\lambda^2)(\sum X^2)=\sum X^2$, then `Real.abs_le_sqrt` and `le_abs_self` give $\sum\lvert\lambda\rvert X\le\sqrt{\sum X^2}$. This is the record's second inequality, and it uses $\sum\mu^2=1$ as the record does.
 - **Assembly.** The final `linarith` combines $h_1$, $h_2a$, $h_2b$ with the positive factor $\tfrac12$, which is linear. Every inequality points the way the record's does.
 - **Pointwise, not only at critical points.** The record says the bound "holds pointwise at every unit Weyl tensor" (bounds.md:33), and at unit norm $\theta=P$, so `Pcubic W` on the left is the record's $\theta$. The theorem is at least as strong as `hso` needs.
-- **Hand screen against the record's own number.** At $W_{\mathbb{CP}^2}$'s unit spectrum $(2,-1,-1,0,0,0)/\sqrt6$: $\operatorname{tr}W^3=6/6^{3/2}=0.4082$ and $\lambda_{\max}p=(2/\sqrt6)(4/6)=0.5443$. These are second-order.md's "0.5443 against a truth of 0.4082", so step 1's normalisation agrees with the record at a point. Reported as a screen.
+- **Hand screen against the record's own number.** At $W_{\mathbb{CP}^2}$'s unit spectrum $(2,-1,-1,0,0,0)/\sqrt6$: $\mathop{\mathrm{tr}}W^3=6/6^{3/2}=0.4082$ and $\lambda_{\max}p=(2/\sqrt6)(4/6)=0.5443$. These are second-order.md's "0.5443 against a truth of 0.4082", so step 1's normalisation agrees with the record at a point. Reported as a screen.
 
 ## Attack line 2: `L143_unconditional` against the record's block
 

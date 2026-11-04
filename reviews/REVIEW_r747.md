@@ -7,8 +7,8 @@
 | # | Claim | Verdict |
 |---|---|---|
 | 1 | $\langle F_uh,k\rangle=T(u,h,k)$, with no constant | **PROVEN**, and the constant is impossible, not merely absent |
-| 2 | $\operatorname{tr}(F_u)=0$ for all $u\in\mathcal W_n$ | **PROVEN** |
-| 3 | $\operatorname{tr}(F_u^2)=\tfrac{(n-1)(2n-1)}4\lVert u\rVert^2$ | **PROVEN, on an inherited constant** |
+| 2 | $\mathop{\mathrm{tr}}(F_u)=0$ for all $u\in\mathcal W_n$ | **PROVEN** |
+| 3 | $\mathop{\mathrm{tr}}(F_u^2)=\tfrac{(n-1)(2n-1)}4\lVert u\rVert^2$ | **PROVEN, on an inherited constant** |
 | 4 | $\lVert T\rVert^2=\tfrac{(n-1)(2n-1)}4\dim\mathcal W_n$ | **PROVEN** |
 | 5 | $\mathcal W_n$ absolutely irreducible, $F$ equivariant, at every $n\ge6$ | **PROVEN**, the $O(n)$/$SO(n)$ gap bites only at $n=4$ |
 | 6 | The six rows' multiplicities sum to $\dim M_\lambda$; block traces $4,2,\tfrac16,\tfrac12$ | **CONFIRMED**, all six rows, values and multiplicities |
@@ -16,8 +16,8 @@
 | 8 | The table holds "identically in $m$", $n\ge6$ | **CORRECTED, it fails at $m=2$ ($n=6$)**: row six's dimension reads $-2$ where the truth is $0$, and the rows then total $86$ against $\dim\mathcal W_6=84$ |
 | 9 | "Two scalars not pinning 56 eigenvalues" | **UNDERSTATED**, granting $m$-freeness the identities are 10 scalar conditions, and they *force* the two zero rows; the eigenvalues are still free, and I exhibit witnesses |
 | 10 | Blockwise first moment is "more than the identity demands" | **TRUE, BUT THIN**, the identity demands four of the five conditions; the margin is one scalar |
-| 11 | $\operatorname{tr}(F_u^3)$ is an invariant cubic **hence** a multiple of $P(u)$ | **REASON REFUTED**, Schur bounds invariant *quadratics*, not cubics; conclusion survives *a fortiori* |
-| 12 | $\operatorname{tr}(F_u^3)/\theta^{*3}=\tfrac{2n^2-15n+1}{36}$ | **CONFIRMED** |
+| 11 | $\mathop{\mathrm{tr}}(F_u^3)$ is an invariant cubic **hence** a multiple of $P(u)$ | **REASON REFUTED**, Schur bounds invariant *quadratics*, not cubics; conclusion survives *a fortiori* |
+| 12 | $\mathop{\mathrm{tr}}(F_u^3)/\theta^{*3}=\tfrac{2n^2-15n+1}{36}$ | **CONFIRMED** |
 
 **Actionable summary.** The three identities stand and the table's arithmetic is right to the last multiplicity; fix three things on the page, say that $F_u$ is $\pi_{\mathcal W_n}\!\circ B(u,\cdot)$, restrict the table's validity to $m\ge3$ because $n=6$ breaks it, and delete the "hence a multiple of $P(u)$" inference.
 
@@ -29,7 +29,7 @@ Write $\mathfrak g=\mathfrak{so}(n)\cong\Lambda^2\mathbb R^n$, with $\{\omega_\a
 $$c_{\alpha\beta\gamma}=\langle[\omega_\alpha,\omega_\beta],\omega_\gamma\rangle .$$
 The Frobenius metric on $\mathfrak{so}(n)$ is $\mathrm{Ad}$-invariant, so $c$ is **totally antisymmetric** in its three indices. This single fact carries §1.
 
-$S^2(\mathfrak g)$ is the symmetric operators on $\Lambda^2\mathbb R^n$, paired by $\langle X,Y\rangle=\operatorname{tr}(XY)$. $\mathcal W_n\subset S^2(\mathfrak g)$ is the first-Bianchi, Ricci-flat subspace, of dimension $\tfrac{n(n+1)(n+2)(n-3)}{12}$; as an $O(n)$-representation it is $V_{(2,2)}$, the Weyl tensors.
+$S^2(\mathfrak g)$ is the symmetric operators on $\Lambda^2\mathbb R^n$, paired by $\langle X,Y\rangle=\mathop{\mathrm{tr}}(XY)$. $\mathcal W_n\subset S^2(\mathfrak g)$ is the first-Bianchi, Ricci-flat subspace, of dimension $\tfrac{n(n+1)(n+2)(n-3)}{12}$; as an $O(n)$-representation it is $V_{(2,2)}$, the Weyl tensors.
 
 $B(X,Y)=\tfrac12(XY+YX)+X\#Y$ with the halved sharp, normalised so that $B(W,W)=W^2+W^\#=Q(W)$. $F_u=B(u,\cdot)$ followed by orthogonal projection to $\mathcal W_n$ (§1.3). $P(W)=\langle W,Q(W)\rangle$, and $T$ is the symmetric trilinear form with $T(W,W,W)=P(W)$. $m=n-4$ throughout. All of $\theta^*=P(u)=\sqrt{3/2}$, $\lVert u\rVert=1$ and the Killing constant are inherited from the record and are inventoried in §2.
 
@@ -42,7 +42,7 @@ $B(X,Y)=\tfrac12(XY+YX)+X\#Y$ with the halved sharp, normalised so that $B(W,W)=
 | H3 | $F$ equivariant: $F_{g\cdot u}(g\cdot h)=g\cdot F_u(h)$ | Schur, both moments | **derived for all of $O(n)$**, §5.3 |
 | H4 | $\#$ halved so $B(W,W)=Q(W)$ | the whole of §1 | **load-bearing**; a factor here is the one thing that rescales $\lVert T\rVert^2$ |
 | H5 | $F_u$ carries $\mathcal W_n$ to $\mathcal W_n$ | $F_u$ being an endomorphism at all | **needs the projection**, §1.3; harmless for $T$ |
-| H6 | $\operatorname{tr}(L_W^2)=\tfrac{(n-1)(2n-1)}4$ at unit $W$ | fixes the Schur multiple | **inherited**, not re-derived here |
+| H6 | $\mathop{\mathrm{tr}}(L_W^2)=\tfrac{(n-1)(2n-1)}4$ at unit $W$ | fixes the Schur multiple | **inherited**, not re-derived here |
 | H7 | $u=W_{\mathbb{CP}^2}$ padded, $\lVert u\rVert=1$, $\theta^*=P(u)=\sqrt{3/2}$, $Q(u)=\theta^*u$ | the whole table check | **inherited**; $\theta^{*2}=\tfrac32$ is what the check actually tests, §7.3 |
 | H8 | the six rows are the $O(m)$-isotypic decomposition of $\mathcal W_n$ under $\mathrm{Stab}(u)$ | the table | **fails at $m=2$**, §8 |
 | H9 | each $F_\lambda$ is real symmetric | §9's forcing of the zero rows | follows from H5 and orthogonality of the isotypic splitting |
@@ -53,7 +53,7 @@ $B(X,Y)=\tfrac12(XY+YX)+X\#Y$ with the halved sharp, normalised so that $B(W,W)=
 
 ### 1.1 The anticommutator half
 
-For symmetric $X,Y,Z$, $\langle\tfrac12(XY+YX),Z\rangle=\tfrac12\big(\operatorname{tr}(XYZ)+\operatorname{tr}(YXZ)\big)$. Cyclicity gives $\operatorname{tr}(YXZ)=\operatorname{tr}(XZY)$, so the value is $\tfrac12\big(\operatorname{tr}(XYZ)+\operatorname{tr}(XZY)\big)$, which is visibly symmetric in $Y\leftrightarrow Z$ and, being also symmetric in $X\leftrightarrow Y$ by construction, is totally symmetric. This uses cyclicity of the trace and nothing else, so it holds on all of $S^2(\Lambda^2)$ and *a fortiori* on $\mathcal W_n$, the brief's worry that the symmetry might be lost on the subspace is empty: passing to a subspace can only lose relations that a form fails to have, never symmetry it already has.
+For symmetric $X,Y,Z$, $\langle\tfrac12(XY+YX),Z\rangle=\tfrac12\big(\mathop{\mathrm{tr}}(XYZ)+\mathop{\mathrm{tr}}(YXZ)\big)$. Cyclicity gives $\mathop{\mathrm{tr}}(YXZ)=\mathop{\mathrm{tr}}(XZY)$, so the value is $\tfrac12\big(\mathop{\mathrm{tr}}(XYZ)+\mathop{\mathrm{tr}}(XZY)\big)$, which is visibly symmetric in $Y\leftrightarrow Z$ and, being also symmetric in $X\leftrightarrow Y$ by construction, is totally symmetric. This uses cyclicity of the trace and nothing else, so it holds on all of $S^2(\Lambda^2)$ and *a fortiori* on $\mathcal W_n$, the brief's worry that the symmetry might be lost on the subspace is empty: passing to a subspace can only lose relations that a form fails to have, never symmetry it already has.
 
 ### 1.2 The sharp half
 
@@ -71,7 +71,7 @@ So $\Phi$ is symmetric under the full $S_3$, and $\langle X\#Y,Z\rangle$ is tota
 
 $Q$ preserves first Bianchi, but Ricci-flatness of $u$ and $h$ does not by itself make $B(u,h)$ Ricci-flat, so $F_u$ must be read as $\pi_{\mathcal W_n}\circ B(u,\cdot)$ for $F_u$ to be an endomorphism of $\mathcal W_n$ at all. This is harmless and the page should simply say it: $\pi$ is orthogonal and $k\in\mathcal W_n$, so
 $$\langle F_uh,k\rangle=\langle\pi B(u,h),k\rangle=\langle B(u,h),k\rangle=T(u,h,k),$$
-unchanged. The same line makes $F_u$ self-adjoint on $\mathcal W_n$, which §3 and §9 both need. Read this way, $(\mathcal W_n,\;(X,Y)\mapsto\pi B(X,Y),\;\langle\,,\rangle)$ is a metrised commutative algebra and $F_u=L_u$ is its multiplication operator, which is what makes $\operatorname{tr}(L_XL_Y)$ the Killing form and H6 the statement it is.
+unchanged. The same line makes $F_u$ self-adjoint on $\mathcal W_n$, which §3 and §9 both need. Read this way, $(\mathcal W_n,\;(X,Y)\mapsto\pi B(X,Y),\;\langle\,,\rangle)$ is a metrised commutative algebra and $F_u=L_u$ is its multiplication operator, which is what makes $\mathop{\mathrm{tr}}(L_XL_Y)$ the Killing form and H6 the statement it is.
 
 ### 1.4 No constant is possible
 
@@ -87,18 +87,18 @@ $\mathcal W_n=V_{(2,2)}$, the traceless part of the curvature tensors. Its compl
 
 ### 2.2 Absolute irreducibility
 
-The complexification is irreducible as just described, so the real form is absolutely irreducible and $\operatorname{End}_{O(n)}(\mathcal W_n)=\mathbb R$ for $n\ge4$, $\operatorname{End}_{SO(n)}(\mathcal W_n)=\mathbb R$ for $n\ge5$. This is what the quadratic argument needs and it is correctly named in the proof.
+The complexification is irreducible as just described, so the real form is absolutely irreducible and $\mathop{\mathrm{End}}_{O(n)}(\mathcal W_n)=\mathbb R$ for $n\ge4$, $\mathop{\mathrm{End}}_{SO(n)}(\mathcal W_n)=\mathbb R$ for $n\ge5$. This is what the quadratic argument needs and it is correctly named in the proof.
 
 ### 2.3 Equivariance: $O(n)$, not merely $SO(n)$
 
-For $g\in O(n)$, $\Lambda^2g$ is orthogonal on $\Lambda^2\mathbb R^n$ and $\mathrm{Ad}(g)$ is an inner-product-preserving Lie algebra automorphism of $\mathfrak{so}(n)$, so $c_{\alpha\beta\gamma}$ is $\mathrm{Ad}(g)$-invariant for **all** of $O(n)$, reflections included. Matrix product and $\#$ are therefore both $O(n)$-natural, hence so are $B$, $\pi$ and $F$. So $u\mapsto\operatorname{tr}(F_u^k)$ is $O(n)$-invariant for every $k$.
+For $g\in O(n)$, $\Lambda^2g$ is orthogonal on $\Lambda^2\mathbb R^n$ and $\mathrm{Ad}(g)$ is an inner-product-preserving Lie algebra automorphism of $\mathfrak{so}(n)$, so $c_{\alpha\beta\gamma}$ is $\mathrm{Ad}(g)$-invariant for **all** of $O(n)$, reflections included. Matrix product and $\#$ are therefore both $O(n)$-natural, hence so are $B$, $\pi$ and $F$. So $u\mapsto\mathop{\mathrm{tr}}(F_u^k)$ is $O(n)$-invariant for every $k$.
 
 ### 2.4 What each argument needs
 
 | argument | needs | range |
 |---|---|---|
-| $\operatorname{tr}(F_u)=0$ | $\mathcal W_n$ irreducible and **not** the trivial representation | $n\ge4$, under either group |
-| $\operatorname{tr}(F_u^2)=c\lVert u\rVert^2$ | commutant $=\mathbb R$, so that invariant bilinear forms are one-dimensional | $n\ge5$ under $SO(n)$; $n\ge4$ under $O(n)$ |
+| $\mathop{\mathrm{tr}}(F_u)=0$ | $\mathcal W_n$ irreducible and **not** the trivial representation | $n\ge4$, under either group |
+| $\mathop{\mathrm{tr}}(F_u^2)=c\lVert u\rVert^2$ | commutant $=\mathbb R$, so that invariant bilinear forms are one-dimensional | $n\ge5$ under $SO(n)$; $n\ge4$ under $O(n)$ |
 
 The $O(n)$-versus-$SO(n)$ distinction therefore **does not matter anywhere in scope**. It would matter at $n=4$, where $SO(4)$ admits the two invariant quadratics $\lvert W^+\rvert^2$ and $\lvert W^-\rvert^2$ and the Schur step is simply false, and there $F$'s full $O(4)$-equivariance is what would rescue it. Worth one sentence on the page, since it is the only place the reader could be misled.
 
@@ -109,7 +109,7 @@ The multiple is then fixed by evaluating at any unit $u$, and H6 supplies it: $c
 ## 3. Attack 3, the summation
 
 With $\{u_a\}$ orthonormal in $\mathcal W_n$ and $F_u$ self-adjoint (§1.3),
-$$\operatorname{tr}(F_{u_a}^2)=\sum_b\langle F_{u_a}^2u_b,u_b\rangle=\sum_{b,c}\langle F_{u_a}u_b,u_c\rangle\langle F_{u_a}u_c,u_b\rangle=\sum_{b,c}T(u_a,u_b,u_c)\,T(u_a,u_c,u_b)=\sum_{b,c}T(u_a,u_b,u_c)^2,$$
+$$\mathop{\mathrm{tr}}(F_{u_a}^2)=\sum_b\langle F_{u_a}^2u_b,u_b\rangle=\sum_{b,c}\langle F_{u_a}u_b,u_c\rangle\langle F_{u_a}u_c,u_b\rangle=\sum_{b,c}T(u_a,u_b,u_c)\,T(u_a,u_c,u_b)=\sum_{b,c}T(u_a,u_b,u_c)^2,$$
 the last step by symmetry of $T$ in its second and third slots. Summing over $a$ gives $\sum_{a,b,c}T(u_a,u_b,u_c)^2=\lVert T\rVert^2$ on the left. On the right $\sum_a\tfrac{(n-1)(2n-1)}4\lVert u_a\rVert^2=\tfrac{(n-1)(2n-1)}4\dim\mathcal W_n$, since each $\lVert u_a\rVert=1$.
 
 Index bookkeeping: one basis, used for the trace resolution, for the insertion, and for the outer sum, and it is the same $\{u_a\}$ throughout. $\lVert T\rVert^2$ is basis-independent (it is the squared norm of $T$ in the induced inner product on $\mathcal W_n^{\otimes3}$) so the identity does not depend on the choice. Nothing to report.
@@ -120,7 +120,7 @@ Index bookkeeping: one basis, used for the trace resolution, for the insertion, 
 
 Read off row by row. Each row: multiplicities first, then the three moments.
 
-| $\lambda$ | $\sum$ mult vs $\dim M_\lambda$ | $\operatorname{tr}F_\lambda/\theta^*$ | $\operatorname{tr}F_\lambda^2/\theta^{*2}$ | $\operatorname{tr}F_\lambda^3/\theta^{*3}$ |
+| $\lambda$ | $\sum$ mult vs $\dim M_\lambda$ | $\mathop{\mathrm{tr}}F_\lambda/\theta^*$ | $\mathop{\mathrm{tr}}F_\lambda^2/\theta^{*2}$ | $\mathop{\mathrm{tr}}F_\lambda^3/\theta^{*3}$ |
 |---|---|---|---|---|
 | trivial | $2+6+6+3+2+1=20=\dim M$ ✓ | $-2-1+0+1+1+1=0$ | $2+\tfrac16+0+\tfrac13+\tfrac12+1=4$ | $-2-\tfrac1{36}+\tfrac19+\tfrac14+1=-\tfrac23$ |
 | vector | $4+12+4=20=\dim M$ ✓ | $-2+0+2=0$ | $1+0+1=2$ | $-\tfrac12+0+\tfrac12=0$ |
@@ -139,7 +139,7 @@ and $\dim\mathcal W_{m+4}=\tfrac{(m+1)(m+4)(m+5)(m+6)}{12}=\tfrac{m^4+16m^3+89m^
 
 ## 5. Attack 5, the collapse
 
-$$\sum_\lambda\dim V_\lambda\cdot\frac{\operatorname{tr}(F_\lambda^2)}{\theta^{*2}}=4+2m+\frac{m(m-1)}2\cdot\frac16+\frac{(m+2)(m-1)}2\cdot\frac12=4+2m+\frac{m(m-1)}{12}+\frac{(m+2)(m-1)}4,$$
+$$\sum_\lambda\dim V_\lambda\cdot\frac{\mathop{\mathrm{tr}}(F_\lambda^2)}{\theta^{*2}}=4+2m+\frac{m(m-1)}2\cdot\frac16+\frac{(m+2)(m-1)}2\cdot\frac12=4+2m+\frac{m(m-1)}{12}+\frac{(m+2)(m-1)}4,$$
 matching the display. Over $12$:
 $$\frac{48+24m+(m^2-m)+3(m^2+m-2)}{12}=\frac{4m^2+26m+42}{12}=\frac{2m^2+13m+21}6=\frac{(2m+7)(m+3)}6 .$$
 Substituting $m=n-4$: $2m+7=2n-1$ and $m+3=n-1$, giving $\tfrac{(2n-1)(n-1)}6$; times $\theta^{*2}=\tfrac32$ this is $\tfrac{(n-1)(2n-1)}4$. At $n=12$: $\tfrac{23\cdot11}4=\tfrac{253}4$. Every step exact, every step as printed.
@@ -148,8 +148,8 @@ Substituting $m=n-4$: $2m+7=2n-1$ and $m+3=n-1$, giving $\tfrac{(2n-1)(n-1)}6$; 
 
 ## 6. Attack 8 (value) and the third moment's arithmetic
 
-$$\sum_\lambda\dim V_\lambda\frac{\operatorname{tr}(F_\lambda^3)}{\theta^{*3}}=-\frac23+0\cdot m+\frac{m(m-1)}2\cdot\frac1{36}+\frac{(m+2)(m-1)}2\cdot\frac1{12}=\frac{-48+(m^2-m)+3(m^2+m-2)}{72}=\frac{4m^2+2m-54}{72}=\frac{2m^2+m-27}{36},$$
-and $2(n-4)^2+(n-4)-27=2n^2-15n+1$. So $\operatorname{tr}(F_u^3)=\theta^{*3}\tfrac{2n^2-15n+1}{36}$ exactly as claimed. **CONFIRMED.**
+$$\sum_\lambda\dim V_\lambda\frac{\mathop{\mathrm{tr}}(F_\lambda^3)}{\theta^{*3}}=-\frac23+0\cdot m+\frac{m(m-1)}2\cdot\frac1{36}+\frac{(m+2)(m-1)}2\cdot\frac1{12}=\frac{-48+(m^2-m)+3(m^2+m-2)}{72}=\frac{4m^2+2m-54}{72}=\frac{2m^2+m-27}{36},$$
+and $2(n-4)^2+(n-4)-27=2n^2-15n+1$. So $\mathop{\mathrm{tr}}(F_u^3)=\theta^{*3}\tfrac{2n^2-15n+1}{36}$ exactly as claimed. **CONFIRMED.**
 
 The *reason* attached to it is a different matter, §10.
 
@@ -168,7 +168,7 @@ Both are genuinely different spectra from the table for every $m\ge1$, and (sinc
 
 ### 7.2 But the assessment *understates* what the identities do pin
 
-The block reads the check as "two scalars". That is right at a single $m$. Read as holding **identically in $m$ with $m$-free block data** (which is how the table is used), each identity is a polynomial identity, and the six dimension polynomials $1,\,m,\,\tfrac{m^2-m}2,\,\tfrac{m^2+m-2}2,\,\tfrac{m^3-4m}3,\,\tfrac{m^4-7m^2-6m}{12}$ are linearly independent. Writing $a_\lambda=\operatorname{tr}(F_\lambda^2)/\theta^{*2}$ and $b_\lambda=\operatorname{tr}(F_\lambda)/\theta^*$, coefficient extraction gives five equations each:
+The block reads the check as "two scalars". That is right at a single $m$. Read as holding **identically in $m$ with $m$-free block data** (which is how the table is used), each identity is a polynomial identity, and the six dimension polynomials $1,\,m,\,\tfrac{m^2-m}2,\,\tfrac{m^2+m-2}2,\,\tfrac{m^3-4m}3,\,\tfrac{m^4-7m^2-6m}{12}$ are linearly independent. Writing $a_\lambda=\mathop{\mathrm{tr}}(F_\lambda^2)/\theta^{*2}$ and $b_\lambda=\mathop{\mathrm{tr}}(F_\lambda)/\theta^*$, coefficient extraction gives five equations each:
 
 $$\textbf{second moment:}\quad a_5=0,\quad a_4=0,\quad a_2=\tfrac23-a_3,\quad a_1=\tfrac52-a_3,\quad a_0=\tfrac72+a_3 ;$$
 $$\textbf{first moment:}\quad b_5=0,\quad b_4=0,\quad b_2=-b_3,\quad b_1=-b_3,\quad b_0=b_3 .$$
@@ -184,7 +184,7 @@ So the honest statement is a conjunction: *granting $m$-freeness, the identities
 
 ### 7.3 What the second-moment check is really testing
 
-Note where $\theta^{*2}=\tfrac32$ enters. The table records $\operatorname{spec}(F_\lambda)/\theta^*$, so the collapse yields $\operatorname{tr}(F_u^2)=\theta^{*2}\tfrac{(2n-1)(n-1)}6$, and agreement with the theorem's $\tfrac{(n-1)(2n-1)}4$ holds **iff** $\theta^{*2}=\tfrac32$. The check is therefore a genuine one-scalar consistency test between the tabulated spectral *shape* and the record's independently-obtained $\theta^*=P(u)=\sqrt{3/2}$, not a vacuous rearrangement. This is worth saying on the page, because as written the reader cannot see that $\sqrt{3/2}$ is load-bearing rather than cosmetic.
+Note where $\theta^{*2}=\tfrac32$ enters. The table records $\mathop{\mathrm{spec}}(F_\lambda)/\theta^*$, so the collapse yields $\mathop{\mathrm{tr}}(F_u^2)=\theta^{*2}\tfrac{(2n-1)(n-1)}6$, and agreement with the theorem's $\tfrac{(n-1)(2n-1)}4$ holds **iff** $\theta^{*2}=\tfrac32$. The check is therefore a genuine one-scalar consistency test between the tabulated spectral *shape* and the record's independently-obtained $\theta^*=P(u)=\sqrt{3/2}$, not a vacuous rearrangement. This is worth saying on the page, because as written the reader cannot see that $\sqrt{3/2}$ is load-bearing rather than cosmetic.
 
 ## 8. Attack 9 and the edges, where the table stops being a decomposition
 
@@ -206,15 +206,15 @@ against $\dim\mathcal W_6=\tfrac{6\cdot7\cdot8\cdot3}{12}=84$. The rows overshoo
 
 ## 9. Attack 7, the blockwise first moment
 
-The claim "more than the identity demands" is **true but thinner than it reads**. From §7.2, the first-moment identity read identically in $m$ already forces $b_4=b_5=0$ and $b_0=b_3$, $b_1=b_2=-b_3$, four independent conditions on the five-dimensional space of possible blockwise-trace vectors that could have been nonzero. What is left free is exactly **one scalar**, $b_3=\operatorname{tr}(F_{S^2_0})/\theta^*$, and blockwise tracelessness is the single point $b_3=0$ in that line. So the table's extra content, over what $\operatorname{tr}(F_u)=0$ demands, is one number and not six.
+The claim "more than the identity demands" is **true but thinner than it reads**. From §7.2, the first-moment identity read identically in $m$ already forces $b_4=b_5=0$ and $b_0=b_3$, $b_1=b_2=-b_3$, four independent conditions on the five-dimensional space of possible blockwise-trace vectors that could have been nonzero. What is left free is exactly **one scalar**, $b_3=\mathop{\mathrm{tr}}(F_{S^2_0})/\theta^*$, and blockwise tracelessness is the single point $b_3=0$ in that line. So the table's extra content, over what $\mathop{\mathrm{tr}}(F_u)=0$ demands, is one number and not six.
 
-Does anything on the record force $b_3=0$? I found no argument that does, and I did not construct one, under the brief's rule, that is the finding: **the blockwise vanishing is an observed fact with no argument on file**, and it is one dimension's worth of information. If the record wants it, what would have to be proved is $\operatorname{tr}(F_u|_{S^2_0\text{-isotypic}})=0$, whereupon the other three follow from the relations above.
+Does anything on the record force $b_3=0$? I found no argument that does, and I did not construct one, under the brief's rule, that is the finding: **the blockwise vanishing is an observed fact with no argument on file**, and it is one dimension's worth of information. If the record wants it, what would have to be proved is $\mathop{\mathrm{tr}}(F_u|_{S^2_0\text{-isotypic}})=0$, whereupon the other three follow from the relations above.
 
 ## 10. Attack 8, the third moment's reason is unsound
 
-The block writes: *"$\operatorname{tr}(F_u^3)$ is an invariant cubic, hence a multiple of $P(u)$."* The word doing the work is *hence*, and it has nothing behind it.
+The block writes: *"$\mathop{\mathrm{tr}}(F_u^3)$ is an invariant cubic, hence a multiple of $P(u)$."* The word doing the work is *hence*, and it has nothing behind it.
 
-**Located.** Schur's lemma gives one-dimensionality for invariant **bilinear** forms, because $\operatorname{End}_{O(n)}(\mathcal W_n)=\mathbb R$ transports across the inner product. There is no such transport for trilinear forms: $\dim\big(S^3\mathcal W_n^*\big)^{O(n)}$ is the multiplicity of the trivial representation in $S^3(V_{(2,2)})$, and absolute irreducibility of $V_{(2,2)}$ says nothing about it. The page uses a lemma outside its range.
+**Located.** Schur's lemma gives one-dimensionality for invariant **bilinear** forms, because $\mathop{\mathrm{End}}_{O(n)}(\mathcal W_n)=\mathbb R$ transports across the inner product. There is no such transport for trilinear forms: $\dim\big(S^3\mathcal W_n^*\big)^{O(n)}$ is the multiplicity of the trivial representation in $S^3(V_{(2,2)})$, and absolute irreducibility of $V_{(2,2)}$ says nothing about it. The page uses a lemma outside its range.
 
 **Exhibited.** $\langle W,W^2\rangle$ (the trace of the operator cube on $\Lambda^2$), is a second $O(n)$-invariant cubic on $\mathcal W_n$, built by a different contraction pattern from $P=\langle W,W^2\rangle+\langle W,W^\#\rangle$. The two are proportional only if $\langle W,W^\#\rangle$ is a multiple of $\langle W,W^2\rangle$ **as a function on $\mathcal W_n$**, which the record nowhere establishes. In tensor notation these are the two standard cubic Weyl contractions $W_{ab}{}^{cd}W_{cd}{}^{ef}W_{ef}{}^{ab}$ and $W_a{}^c{}_b{}^dW_c{}^e{}_d{}^fW_e{}^a{}_f{}^b$; the literature on curvature invariants treats them as independent in general dimension, with a dimension-dependent identity collapsing them only at $n=4$. **I flag that last sentence as cited rather than derived**, settling $\dim(S^3\mathcal W_n^*)^{O(n)}$ here would need a computation the brief does not authorise, and I did not run one.
 
@@ -224,7 +224,7 @@ The block writes: *"$\operatorname{tr}(F_u^3)$ is an invariant cubic, hence a mu
 
 ## 11. Attack 10, what would break it
 
-1. **A factor at H4.** If the sharp is not halved (if $B(W,W)$ is $W^2+2W^\#$ or $W^2+\tfrac12W^\#$) then $B$'s diagonal is not $P$, $\langle B(X,Y),Z\rangle\ne T$, and $\lVert T\rVert^2$ rescales while $\operatorname{tr}(F_u^2)$ does not. This is the single most dangerous line in the argument and the brief is right to put it first. Everything downstream is insulated once the diagonal is checked to be $P$.
+1. **A factor at H4.** If the sharp is not halved (if $B(W,W)$ is $W^2+2W^\#$ or $W^2+\tfrac12W^\#$) then $B$'s diagonal is not $P$, $\langle B(X,Y),Z\rangle\ne T$, and $\lVert T\rVert^2$ rescales while $\mathop{\mathrm{tr}}(F_u^2)$ does not. This is the single most dangerous line in the argument and the brief is right to put it first. Everything downstream is insulated once the diagonal is checked to be $P$.
 2. **The Killing constant (H6).** $\tfrac{(n-1)(2n-1)}4$ is imported. If that prior pass is ever revised, claims 3, 4 and the entire table check move with it. Nothing here re-derives it.
 3. **$\theta^{*2}\ne\tfrac32$.** The one place the numerical value of $P(u)$ enters (§7.3). A revision of $\theta^*$ or of $\lVert u\rVert=1$ turns the table check from a pass into a fail with no other change.
 4. **The projection (H5) being non-orthogonal**, or $F_u$ being defined by some other extension off $\mathcal W_n$. Then §1.3's cancellation fails and $\langle F_uh,k\rangle\ne T(u,h,k)$.

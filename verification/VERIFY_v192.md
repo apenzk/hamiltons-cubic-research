@@ -37,7 +37,7 @@ Quoted from [conventions.md](../findings/conventions.md), not restated:
 
 > $\Theta_n$ | the diagonal maximum; equals $\theta_0(n)$ at even $n$, and $\sqrt{2(n-1)(n-3)/((n+1)(n-2))}$ at odd $n$
 
-> **$\operatorname{scal}=2\operatorname{tr}$ on $\Lambda^2$.**
+> **$\mathop{\mathrm{scal}}=2\mathop{\mathrm{tr}}$ on $\Lambda^2$.**
 
 > $R_I$, $R_{\mathrm{ric}_0}$, $R_W$ | the three $O(n)$-irreducible pieces of an algebraic curvature operator, scalar, **trace-free** Ricci, and Weyl.
 
@@ -93,7 +93,7 @@ Write $c=\lambda/(n-1)=\tfrac1{2(n-1)}$ and $c_a=\lambda/(n_a-1)=\tfrac1{2(n_a-1
 $$c_m^2\binom m2=\frac1{4(m-1)^2}\cdot\frac{m(m-1)}2=\frac m{8(m-1)}=f(m).$$
 So **$f(m)$ is not an ansatz: it is $\lVert cI\rVert^2$ in dimension $m$.**
 
-Now split $\lVert W\rVert^2$ over §2's three kinds of block. On $\Lambda^2V_a$, $W=R_a-cI_a=W_a+(c_a-c)I_a$, and $\langle W_a,I_a\rangle=\operatorname{tr}W_a=\tfrac12\operatorname{scal}(W_a)=0$ because the Weyl piece is trace-free. On the mixed block, $W=-c\,\mathrm{Id}$ on a space of dimension $\sum_{a<b}n_an_b=\tfrac12(n^2-\sum_an_a^2)$. Hence
+Now split $\lVert W\rVert^2$ over §2's three kinds of block. On $\Lambda^2V_a$, $W=R_a-cI_a=W_a+(c_a-c)I_a$, and $\langle W_a,I_a\rangle=\mathop{\mathrm{tr}}W_a=\tfrac12\mathop{\mathrm{scal}}(W_a)=0$ because the Weyl piece is trace-free. On the mixed block, $W=-c\,\mathrm{Id}$ on a space of dimension $\sum_{a<b}n_an_b=\tfrac12(n^2-\sum_an_a^2)$. Hence
 $$\lVert W\rVert^2=\sum_a\Bigl[\lVert W_a\rVert^2+(c_a-c)^2\binom{n_a}2\Bigr]+\frac{c^2}2\Bigl(n^2-\sum_an_a^2\Bigr).$$
 Expand $(c_a-c)^2=c_a^2-2c_ac+c^2$ and use $c_a\binom{n_a}2=\tfrac{n_a}4$, so $\sum_ac_a\binom{n_a}2=\tfrac n4$:
 

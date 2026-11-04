@@ -4,7 +4,7 @@
 
 ## What previous sweeps covered
 
-[26](2026-09-26-LIT-step8-sweep.md) (moment maps, bracket-mass bounds, Hamilton's ODE, idempotents, great circles), [26d](2026-09-26d-LIT-step8-sweep.md) (idempotent norms in metrised algebras, cubic Weyl invariants, spinor traces), [26e](2026-09-26e-LIT-step8-sweep.md) (partial-transpose moments), [27](2026-09-27-LIT-step8-sweep.md) (homogeneous Einstein metrics' variational side, Koiso's Casimir method, nonlinear Perron–Frobenius). None reduces an invariant of $\operatorname{Sym}^2\mathfrak g$ to the torus slice.
+[26](2026-09-26-LIT-step8-sweep.md) (moment maps, bracket-mass bounds, Hamilton's ODE, idempotents, great circles), [26d](2026-09-26d-LIT-step8-sweep.md) (idempotent norms in metrised algebras, cubic Weyl invariants, spinor traces), [26e](2026-09-26e-LIT-step8-sweep.md) (partial-transpose moments), [27](2026-09-27-LIT-step8-sweep.md) (homogeneous Einstein metrics' variational side, Koiso's Casimir method, nonlinear Perron–Frobenius). None reduces an invariant of $\mathop{\mathrm{Sym}}^2\mathfrak g$ to the torus slice.
 
 ## The objects this sweep adds
 
@@ -21,7 +21,7 @@ I73 $3$, I36 $3$ (stands on I73), I117 $2$, I115 $2$, the other section 1 items 
 
 ## The questions for the sweep
 
-1. Is the $SO(n)$-action on $\operatorname{Sym}^2\mathfrak{so}(n)$, or on its Weyl part, polar, so that an invariant function's critical points can be conjugated into a section? The torus slice is the zero-weight space; a section would contain it.
+1. Is the $SO(n)$-action on $\mathop{\mathrm{Sym}}^2\mathfrak{so}(n)$, or on its Weyl part, polar, so that an invariant function's critical points can be conjugated into a section? The torus slice is the zero-weight space; a section would contain it.
 2. Is there a symmetrisation (averaging over a torus, a Steiner-type move) that does not decrease $\langle X\#X,X\rangle/\lVert X\rVert^3$?
 3. Does J1's walk machinery apply to the root-adapted bases of the other simple algebras ($\mathfrak{su}(k)$, $\mathfrak{sp}(k)$, the exceptional ones), giving U$_{\mathrm s}'$ on their torus families?
 4. For a fixed spectrum $\lambda$, is $\max$ over orthonormal bases of $\sum\lambda_a\lambda_b\lambda_cT_{abc}$ attained at a root-adapted basis (a Schur–Horn or Kostant-type statement for this cubic)?

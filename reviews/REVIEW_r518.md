@@ -15,11 +15,11 @@
 | $\mathrm{Id}^\#=(n-2)\mathrm{Id}$ | $(\mathrm{Id}^\#)_{\alpha\beta}=\tfrac12\sum_{\gamma\delta}c_{\alpha\gamma\delta}c_{\beta\gamma\delta}=\tfrac12\,\delta_{\alpha\beta}\sum_\gamma\lVert[v_\alpha,v_\gamma]\rVert^2=\tfrac12\cdot2(n-2)\,\mathrm{Id}$ | ✓ |
 | $\theta_0(6)=\sqrt{10}/3$ | $\theta_0^2=2\cdot5\cdot4/36=10/9$ | ✓ |
 | $\dim\mathcal W_n=\frac{n(n-3)(n+1)(n+2)}{12}$ | $0,10,35,84$ at $n=3,4,5,6$ | ✓ |
-| $\operatorname{tr}W^\#=-1$ | not needed by L36; not re-derived |, |
+| $\mathop{\mathrm{tr}}W^\#=-1$ | not needed by L36; not re-derived |, |
 
-**The normalisation this fixes** is the one in which $\{\varphi_{ij}\}_{i<j}$ is *orthonormal* ($\langle X,Y\rangle=\tfrac12\operatorname{tr}(X^{\mathsf T}Y)$) and the adjoint Casimir is $c_{\mathrm{adj}}=2(n-2)$, i.e. $\sum_k\lVert[e,f_k]\rVert^2=2(n-2)$ for **unit** $e$ and orthonormal $\{f_k\}$. The $\mathrm{Id}^\#$ anchor pins it exactly, and it is the normalisation L36's $2(n-2)d$ needs. **Everything below is in it.**
+**The normalisation this fixes** is the one in which $\{\varphi_{ij}\}_{i<j}$ is *orthonormal* ($\langle X,Y\rangle=\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$) and the adjoint Casimir is $c_{\mathrm{adj}}=2(n-2)$, i.e. $\sum_k\lVert[e,f_k]\rVert^2=2(n-2)$ for **unit** $e$ and orthonormal $\{f_k\}$. The $\mathrm{Id}^\#$ anchor pins it exactly, and it is the normalisation L36's $2(n-2)d$ needs. **Everything below is in it.**
 
-> **A collision noticed in passing, in [conventions.md](../findings/conventions.md) itself.** The line "**A bivector's norm**: $\lVert\varphi_{ab}\rVert^2=2$" and the line "$\langle X,X\rangle=\tfrac12\operatorname{tr}(X^{\mathsf T}X)$" disagree by a factor $2$, under the second, $\lVert\varphi_{ab}\rVert^2=1$. Under the first, $c_{\mathrm{adj}}=n-2$ and L36's $2(n-2)d$ would be wrong by $2$. **L36 is in the second convention**, consistently, and comes out right; the ambiguity is in the conventions file, not in L36. It is the same class as the $B$, $M$ and $\mu$ collisions that file already tables.
+> **A collision noticed in passing, in [conventions.md](../findings/conventions.md) itself.** The line "**A bivector's norm**: $\lVert\varphi_{ab}\rVert^2=2$" and the line "$\langle X,X\rangle=\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}X)$" disagree by a factor $2$, under the second, $\lVert\varphi_{ab}\rVert^2=1$. Under the first, $c_{\mathrm{adj}}=n-2$ and L36's $2(n-2)d$ would be wrong by $2$. **L36 is in the second convention**, consistently, and comes out right; the ambiguity is in the conventions file, not in L36. It is the same class as the $B$, $M$ and $\mu$ collisions that file already tables.
 
 ---
 
@@ -72,7 +72,7 @@ $$\boxed{\ \gamma:=\sum_{a,k,l}c_{akl}^2=\sum_{k,l}\big\lVert[f_k,f_l]_{\mathfra
 So $\gamma\ge0$ **is a theorem** (a sum of squares) and $\gamma=0$ iff $\mathfrak m^\perp$ is a subalgebra, which is the block's own equality condition and [Lemma L77](../findings/isotropy-cap.md)'s $\gamma=2S_{\mathfrak{mhh}}$. **Normalisation checks:** the RHS constant is $c_{\mathrm{adj}}d=2(n-2)d$ in the record's convention, matching [conventions.md](../findings/conventions.md)'s Killing marginal and the $\mathrm{Id}^\#$ anchor. Isotropy is used exactly once and is exactly what is needed. **Confirmed.**
 
 **Step 2, $\mu\ge 4d^2/n-2d$ for every $d$-plane.** With $P$ the orthogonal projection onto $\mathfrak m$ and $T(A)=-\sum_k\mathrm{ad}(f_k)A\,\mathrm{ad}(f_k)$ over an orthonormal basis of all of $\mathfrak{so}(n)$:
-$$\langle T(P),P\rangle=-\sum_k\operatorname{tr}(\mathrm{ad}_kP\,\mathrm{ad}_kP)=\sum_k\sum_{a,b}\langle[f_k,e_b],e_a\rangle^2=\sum_{a,b}\lVert[e_a,e_b]\rVert^2=\mu\ \checkmark$$
+$$\langle T(P),P\rangle=-\sum_k\mathop{\mathrm{tr}}(\mathrm{ad}_kP\,\mathrm{ad}_kP)=\sum_k\sum_{a,b}\langle[f_k,e_b],e_a\rangle^2=\sum_{a,b}\lVert[e_a,e_b]\rVert^2=\mu\ \checkmark$$
 (using skewness of $\mathrm{ad}_k$ for the middle sign and total symmetry of $T_{abc}$ for the last). And with $\rho(X)A=[X,A]$ on $\mathrm{End}$, $\rho(f_k)^2A=\mathrm{ad}_k^2A-2\mathrm{ad}_kA\,\mathrm{ad}_k+A\,\mathrm{ad}_k^2$, so
 $$\mathrm{Cas}(A)=-\sum_k\rho(f_k)^2A=4(n-2)A-2T(A)\quad\Longrightarrow\quad T=2(n-2)\mathrm{Id}-\tfrac12\mathrm{Cas}\ \ \checkmark$$
 exactly as the block writes it.
@@ -88,7 +88,7 @@ exactly as the block writes it.
 
 Dimensions close: $1+9+10+1=21$ at $n=4$, $1+14+35+5=55$ at $n=5$, $1+20+84+15=120$ at $n=6$, $1+5+0+0=6$ at $n=3$. **And the table cross-checks against [Lemma L79](../findings/isotropy-cap.md) in the same file**, whose $\mathcal A$-eigenvalues $(+2,\,-(n-4),\,-2(n-2),\,-4)$ on $(\mathcal W_n,\mathrm{Sym}^2_0,\mathbb R\mathrm{Id},\Lambda^4)$ are $-1$ times mine on all four summands: $T=-\mathcal A$. Via [Lemma L131](../findings/isotropy-cap.md) that table is proved at every $n$ from Böhm–Wilking, so **L36's one load-bearing eigenvalue is established twice by routes that do not share a step.**
 
-**Step 4, chaining.** $P=\tfrac dN\mathrm{Id}+P_0$ with $\lVert P_0\rVert^2=\operatorname{tr}P^2-d^2/N=d-d^2/N$, and $\lambda_{\min}(T)\ge-2$ on the non-trivial part, gives
+**Step 4, chaining.** $P=\tfrac dN\mathrm{Id}+P_0$ with $\lVert P_0\rVert^2=\mathop{\mathrm{tr}}P^2-d^2/N=d-d^2/N$, and $\lambda_{\min}(T)\ge-2$ on the non-trivial part, gives
 $$\mu\ \ge\ \frac{(2n-4)d^2}{N}-2\Big(d-\frac{d^2}{N}\Big)=\frac{(2n-2)d^2}{n(n-1)/2}-2d=\frac{4d^2}{n}-2d ,$$
 and against $\mu\le(n-2)d$: $4d/n\le n$, i.e. $d\le n^2/4$. **All arithmetic exact.**
 
@@ -143,7 +143,7 @@ What is genuinely open at odd $n$ is **uniqueness**, not attainment: $\gamma=0$ 
 | [findings/bounds.md](../findings/bounds.md) line 173 | the cap as an active constraint in a relaxation ($2.392147$ vs $2.392105$ at $n=6$) | no |
 | [findings/bounds-relaxations.md](../findings/bounds-relaxations.md) line 142 | the **proof internals**: $4d^2/n-2d\le2S_{\mathfrak{mmh}}\le(n-2)d$, both halves confirmed in F3, and $\mu=2S_{\mathfrak{mmh}}$ is the file's own count | no |
 | [plan-verification.md](../plan-verification.md) line 32 | an unchecked checklist row | no |
-| [isotropy-cap.md](../findings/isotropy-cap.md) line 306 (self) | $\mu(\mathfrak m)=2\operatorname{tr}(\Pi_{\mathfrak m}^\#)$, **checked: correct**, since $\operatorname{tr}(A^\#)=\tfrac12\sum_{\gamma\delta}A_{\gamma\gamma}A_{\delta\delta}\lVert[v_\gamma,v_\delta]\rVert^2$ | no |
+| [isotropy-cap.md](../findings/isotropy-cap.md) line 306 (self) | $\mu(\mathfrak m)=2\mathop{\mathrm{tr}}(\Pi_{\mathfrak m}^\#)$, **checked: correct**, since $\mathop{\mathrm{tr}}(A^\#)=\tfrac12\sum_{\gamma\delta}A_{\gamma\gamma}A_{\delta\delta}\lVert[v_\gamma,v_\delta]\rVert^2$ | no |
 
 **Every consumer takes the cap or the proof internals. Not one takes the equality case, and not one takes the "equivalently".** So both false clauses are contained in the two copies of the Statement, [isotropy-cap.md](../findings/isotropy-cap.md) lines 24–27 and [results.md](../results.md) line 462, and repairing them there repairs the record.
 

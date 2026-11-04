@@ -40,7 +40,7 @@
 6. **Remark (b) is the reduction's closure condition**, holding at every $n\ge12$ and failing at every $4\le n\le11$; its trailing clause about *"every one at or above the conjecture's own value"* is false there.
 7. **What the reformulation buys is narrow**: $\kappa^2$ is continuous but not differentiable; $\kappa^2\le2$ is free so only $\kappa^2\ge2$ is owed; and a constructive proof of that is the original existential again.
 8. **The strictness of $\theta>\sqrt{3/2}$ is load-bearing**, padded $W_{\mathbb{CP}^2}$ is a local maximum at $\theta=\sqrt{3/2}$ exactly with $\kappa^2=1$, so at $\theta\ge\sqrt{3/2}$ both sides are false and I36 would be false.
-9. **A cheaper citation for the constant**: [conventions.md](../findings/conventions.md)'s $t=2\lVert\operatorname{diag}W\rVert^2$.
+9. **A cheaper citation for the constant**: [conventions.md](../findings/conventions.md)'s $t=2\lVert\mathop{\mathrm{diag}}W\rVert^2$.
 
 ## What to attack
 

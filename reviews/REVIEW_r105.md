@@ -15,7 +15,7 @@ Cold brief, own implementation from the definitions, adversarial. Scripts in [sc
 
 ## The implementation
 
-Built from the brief's definitions ([r105_core.py](../scripts/reviewers/r105/r105_core.py)): random algebraic Weyl tensors by Bianchi projection then Kulkarni–Nomizu trace removal; $M$ on $\Lambda^2$ over $i<j$; $\mathring W$ on $S^2_0$ in the $\{\varphi_{ab},\psi_k\}$ basis; $K_{ab}=W_{abab}$; and $\theta=\operatorname{tr}(M^3)+\langle M^\#,M\rangle$ computed **from the brief's $\#$ convention directly**, $(M^\#)_{ijkl}=\sum_{p,q}(W_{ipkq}W_{jplq}-W_{iplq}W_{jpkq})$, never from the bi-spectral identity.
+Built from the brief's definitions ([r105_core.py](../scripts/reviewers/r105/r105_core.py)): random algebraic Weyl tensors by Bianchi projection then Kulkarni–Nomizu trace removal; $M$ on $\Lambda^2$ over $i<j$; $\mathring W$ on $S^2_0$ in the $\{\varphi_{ab},\psi_k\}$ basis; $K_{ab}=W_{abab}$; and $\theta=\mathop{\mathrm{tr}}(M^3)+\langle M^\#,M\rangle$ computed **from the brief's $\#$ convention directly**, $(M^\#)_{ijkl}=\sum_{p,q}(W_{ipkq}W_{jplq}-W_{iplq}W_{jpkq})$, never from the bi-spectral identity.
 
 Controls that passed before any claim was touched:
 
@@ -102,7 +102,7 @@ The sharp constant is established, and it is Claim 1's own bound: for even $n$ t
 
 The reason offered is: "the diagonal class is a linear space, so scaling $K$ down weakens every constraint that reads it." The step that fails is the identification of *scaling the auxiliary variable* with *moving through the class of $W$*.
 
-Under the normalisation $\lVert M\rVert_F=1$ the two are coupled: $\tfrac t2+\lVert M-\operatorname{diag}M\rVert_F^2=1$, so lowering $t$ does not relax anything, it **forces** off-diagonal mass $1-t/2$ into $M$, and the off-diagonal part is precisely what carries the unknown part of $\theta$. The classes $\{W:t(W)=\tau\}$ are disjoint slices of the unit sphere, not a nested family, and $\tau\mapsto\{W:t(W)=\tau\}$ has no inclusion in either direction. Monotonicity of a *relaxation over auxiliary spectra at fixed $K$* is a fact about the majorization feasible set (Reviewer 103 proves that correctly); it does not transfer to an arbitrary "bound that reads diagonal information", which is what Claim 3 quantifies over.
+Under the normalisation $\lVert M\rVert_F=1$ the two are coupled: $\tfrac t2+\lVert M-\mathop{\mathrm{diag}}M\rVert_F^2=1$, so lowering $t$ does not relax anything, it **forces** off-diagonal mass $1-t/2$ into $M$, and the off-diagonal part is precisely what carries the unknown part of $\theta$. The classes $\{W:t(W)=\tau\}$ are disjoint slices of the unit sphere, not a nested family, and $\tau\mapsto\{W:t(W)=\tau\}$ has no inclusion in either direction. Monotonicity of a *relaxation over auxiliary spectra at fixed $K$* is a fact about the majorization feasible set (Reviewer 103 proves that correctly); it does not transfer to an arbitrary "bound that reads diagonal information", which is what Claim 3 quantifies over.
 
 The clause "depends on $W$ only through diagonal information of size $t$" is also not well defined enough to carry a genericity claim. It has to distinguish three different things, a function of the scalar $t$; a function of the single-frame matrix $K(F)$; a function of $K(F)$ for all $F$, and Claim 3's own escape hatch ("the multi-frame family escapes") shows the boundary is doing real work while remaining unstated.
 

@@ -34,9 +34,9 @@ Then $a=b$, $\lambda_1=2a$; (i) gives $Ta=2\theta-4a$ and (ii) gives $2Ta=\theta
 
 $T=T_{1,N-1,N}=c_{1,N-1,N}^2$ with $c_{\alpha\beta\gamma}=\langle[v_\alpha,v_\beta],v_\gamma\rangle$ real, the eigenbasis of a symmetric operator being real orthonormal. It is a square. The block names the reason (*"impossible for $T=c^2$"*), tersely but correctly, and [conventions.md](../findings/conventions.md) carries $T_{abc}=c_{abc}^2$ as a standing definition. **Available, and the block says so.**
 
-## 4. The conclusion is realised, an independent anchor check that also recovers $\operatorname{tr}W^\#=-1$
+## 4. The conclusion is realised, an independent anchor check that also recovers $\mathop{\mathrm{tr}}W^\#=-1$
 
-At the solution, on the self-dual triple in $\mathfrak{so}(4)$: $T=2$ gives $W^\#=\bigl(2\lambda_2\lambda_3,\,2\lambda_1\lambda_3,\,2\lambda_1\lambda_2\bigr)=(1/3,-2/3,-2/3)$, so $\operatorname{tr}W^\#=-1$ **exactly**, the record's anchor, and
+At the solution, on the self-dual triple in $\mathfrak{so}(4)$: $T=2$ gives $W^\#=\bigl(2\lambda_2\lambda_3,\,2\lambda_1\lambda_3,\,2\lambda_1\lambda_2\bigr)=(1/3,-2/3,-2/3)$, so $\mathop{\mathrm{tr}}W^\#=-1$ **exactly**, the record's anchor, and
 $$Q(W)=W^2+W^\#=(2/3+1/3,\;1/6-2/3,\;1/6-2/3)=(1,-\tfrac12,-\tfrac12)=\sqrt{3/2}\cdot(2,-1,-1)/\sqrt6 .$$
 So $W_+(\mathbb{CP}^2)$, padded, is a genuine critical point attaining the lemma's conclusion. **The stratum is nonempty and the lemma is not vacuously true.** The cap $T=2$ is also attained: for the normalised quaternionic triple $[v_1,v_2]=\sqrt2\,v_3$, $\lVert[v_1,v_2]\rVert^2=2$, saturating the pair cap with all mass on $v_3$.
 
@@ -110,12 +110,12 @@ Taken literally, the printed rows (ii) $T\lambda_1b=a(\theta+a)$ and (iii) $T\la
 | any other statement of the three rows in [findings/](../findings/) or [results.md](../results.md) | **none.** The rows appear only at lines 494–496 of the target file; the only neighbouring $T_{1,N-1,N}$ uses are L29's $(+--)$ block and the joint cap at $k=2$, neither in conflict |
 | later sections of the same file | **no contradiction.** The one-parameter family $\mathrm{diag}(q+r,-q,-r)$ has $\theta$ varying, and the rows force $q=r$, so only its symmetric member is critical, consistent with L72 and with the family being a curve of non-critical stratum members |
 | the $n=12$ table at line 607 | $\max\theta=1.224745$ on $\dim\mathfrak m\le2$ at $n=6,8,10,12$, i.e. $\sqrt{3/2}$, consistent |
-| [trap 53](../findings/INDEX-traps.md) | independently prints $\langle v,W^\#v\rangle=\lambda(\theta-\lambda)$, the row form L72 uses, and $\operatorname{tr}Q(W)=1+(-1)=0$, the same anchor recovered in §4 |
+| [trap 53](../findings/INDEX-traps.md) | independently prints $\langle v,W^\#v\rangle=\lambda(\theta-\lambda)$, the row form L72 uses, and $\mathop{\mathrm{tr}}Q(W)=1+(-1)=0$, the same anchor recovered in §4 |
 | [Lemma L33](../findings/stratum-two-negative.md), as widened this audit | applies to the whole stratum, the positive side being one-dimensional whatever $a$ and $b$ do; it is an independent route to the four-dimensional support, and L72 does not depend on it |
 
 ## 12. One inherited dependency, named rather than charged
 
-The rows are the diagonal of $Q(W)=\theta W$ **unprojected**. If $Q$ did not preserve $\mathcal W_n$, the Euler–Lagrange condition would carry a projection whose diagonal need not vanish and rows (i)–(iii) would change. [conventions.md](../findings/conventions.md) fixes $Q:\mathcal W_n\to\mathcal W_n$ and the trace half of it is confirmed by $\operatorname{tr}W^\#=-1$, verified exactly in §4. **L72 inherits this and is entitled to; it is recorded here so the dependency is visible.**
+The rows are the diagonal of $Q(W)=\theta W$ **unprojected**. If $Q$ did not preserve $\mathcal W_n$, the Euler–Lagrange condition would carry a projection whose diagonal need not vanish and rows (i)–(iii) would change. [conventions.md](../findings/conventions.md) fixes $Q:\mathcal W_n\to\mathcal W_n$ and the trace half of it is confirmed by $\mathop{\mathrm{tr}}W^\#=-1$, verified exactly in §4. **L72 inherits this and is entitled to; it is recorded here so the dependency is visible.**
 
 ## 13. What is owed
 

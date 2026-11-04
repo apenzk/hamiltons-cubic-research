@@ -18,11 +18,11 @@ Log: agent_logs/r1728.log. Footing: analysis only, no numerics run (the chain is
 
 - From the definition, with $c_\alpha^{\gamma\delta}=\langle[e_\gamma,e_\delta],e_\alpha\rangle$ and $C$ symmetric, $F(C)=\tfrac12\sum_{\gamma,\delta,\varepsilon,\zeta}C_{\gamma\varepsilon}C_{\delta\zeta}\langle[e_\gamma,e_\delta],C[e_\varepsilon,e_\zeta]\rangle=\tfrac12\sum_{\beta,\gamma}\langle C[Ce_\beta,Ce_\gamma],[e_\beta,e_\gamma]\rangle$. This is the batch's formula.
 - In a basis adapted to $\mathfrak{su}(k)\oplus\mathfrak{su}(k)^\perp$, $\hat Ce_\beta=0$ off $\mathfrak{su}(k)$, and for $e_\beta,e_\gamma\in\mathfrak{su}(k)$ every bracket stays in $\mathfrak{su}(k)$ (closure) and every inner product is the restricted one. So $F(\hat C)=F_{\mathfrak{su}(k)}(C)$ for $\mathfrak{su}(k)$'s cubic form built in an orthonormal basis of the restricted inner product. Hypotheses used: subalgebra closure, orthogonal splitting, the restricted inner product. Nothing else.
-- Normalisation check (consistency with batch 1): for skew-Hermitian $X,Y$ realised on $\mathbb R^{2k}$, $\tfrac12\operatorname{tr}_{\mathbb R}(X^{\mathsf T}Y)=\operatorname{Re}\operatorname{tr}_{\mathbb C}(X^*Y)=-\operatorname{tr}XY$, so the restricted inner product is batch 1's $-\operatorname{tr}XY$.
+- Normalisation check (consistency with batch 1): for skew-Hermitian $X,Y$ realised on $\mathbb R^{2k}$, $\tfrac12\mathop{\mathrm{tr}}_{\mathbb R}(X^{\mathsf T}Y)=\mathop{\mathrm{Re}}\mathop{\mathrm{tr}}_{\mathbb C}(X^*Y)=-\mathop{\mathrm{tr}}XY$, so the restricted inner product is batch 1's $-\mathop{\mathrm{tr}}XY$.
 
 ## 2. (b) Torus invariance
 
-- $T$ (diagonal unitaries) $=T'\cdot Z$: $\operatorname{diag}(e^{i\theta_j})=e^{i\bar\theta}\operatorname{diag}(e^{i(\theta_j-\bar\theta)})$ with $\bar\theta$ the mean. Correct (the product map has finite kernel, which is irrelevant here).
+- $T$ (diagonal unitaries) $=T'\cdot Z$: $\mathop{\mathrm{diag}}(e^{i\theta_j})=e^{i\bar\theta}\mathop{\mathrm{diag}}(e^{i(\theta_j-\bar\theta)})$ with $\bar\theta$ the mean. Correct (the product map has finite kernel, which is irrelevant here).
 - $T=U(1)^k=SO(2)^k$ acting on the $k$ coordinate planes is the standard maximal torus of $SO(2k)$ (rank $k$).
 - $Z=\exp(\theta J)$ commutes with $\mathfrak u(k)$, so $\mathrm{Ad}(Z)=\mathrm{id}$ there. It is orthogonal and preserves $\mathfrak{su}(k)$, hence preserves $\mathfrak{su}(k)^\perp$ (it rotates the $J$-anticommuting part by $2\theta$ and fixes $\mathbb RJ$). With $x=x_1+x_2$: $\hat C\,\mathrm{Ad}(z)x=Cx_1=\mathrm{Ad}(z)\hat Cx$. For $T'$ the same splitting argument uses that $\mathrm{Ad}(T')$ preserves $\mathfrak{su}(k)$ and its complement. So $\hat C$ commutes with $\mathrm{Ad}(T)$.
 
@@ -33,7 +33,7 @@ Log: agent_logs/r1728.log. Footing: analysis only, no numerics run (the chain is
 ## 4. Coordinates
 
 - $\alpha(J)$ with $J=\sum_ph_p$: $0$ on $\varepsilon_i-\varepsilon_j$, $2$ on $\varepsilon_i+\varepsilon_j$. So the $\varepsilon_i-\varepsilon_j$ planes lie in the centraliser of $J$ ($\mathfrak u(k)$) and the $\varepsilon_i+\varepsilon_j$ planes in the $J$-anticommuting part $\mathfrak u(k)^\perp$. Dimension check: $k+k(k-1)=k^2$. The layer's `cPart`/`aPart` docstrings (I117Statements.lean) carry the same identification.
-- $\hat C$ vanishes on the anticommuting planes, so $V=0$. The $h_p$ are orthonormal ($\tfrac12\operatorname{tr}h_p^{\mathsf T}h_q=\delta_{pq}$), $J\leftrightarrow\mathbf 1$, and $\hat C J=0$ with $\hat C$ symmetric gives $A\mathbf1=0$.
+- $\hat C$ vanishes on the anticommuting planes, so $V=0$. The $h_p$ are orthonormal ($\tfrac12\mathop{\mathrm{tr}}h_p^{\mathsf T}h_q=\delta_{pq}$), $J\leftrightarrow\mathbf 1$, and $\hat C J=0$ with $\hat C$ symmetric gives $A\mathbf1=0$.
 - Converse: every $T'$-invariant symmetric $C$ on $\mathfrak{su}(k)$ is $A'\oplus\bigoplus_{i<j}\mu_{ij}I$ because the roots of $A_{k-1}$ are pairwise non-proportional and non-zero on $\mathfrak t'$, so it extends to `torusOp A U 0` with $A\mathbf1=0$ and $U_{ij}=\mu_{ij}$. This is batch 1's slice description. Correct.
 
 ## 5. What it gives

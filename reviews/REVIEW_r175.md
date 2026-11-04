@@ -12,7 +12,7 @@ Cold adversarial review of [plan.md](../plan.md) item 3c, [REVIEW_r173.md](REVIE
 | 5 | the $n\ge12$ projection is **infeasible** in dense form | **arithmetic exact, conclusion overreaches**, it prices one algorithm, and the item's own $n$-independence claim says that algorithm's coordinates are the wrong object; a symbolic route is named below at $\le140\,152$ contraction words |
 | 1 | the $\mathfrak{so}(5)$ action is a homomorphism to $2.8\times10^{-15}$, skew to $2.2\times10^{-16}$ | **the mathematics is confirmed exactly and the measurement is unreproducible**, `dd467c6` touches [plan.md](../plan.md) and nothing else, so no script in the repository produces any of its four numbers |
 
-**The result this review adds.** The eigenvalue $16$ is forced, and the reason is a clean identity worth having on the record: for $\mathfrak{so}(N)$ the bilinear form $B(X,Y)=-\tfrac12\operatorname{tr}(XY)$ makes $\{M_{ij}=E_{ij}-E_{ji}\}_{i<j}$ an **orthonormal** basis, and its dual form on $\mathfrak h^*$ is exactly the one in which $\{e_i\}$ is orthonormal. So $-\sum_{i<j}\rho(M_{ij})^2=\langle\lambda,\lambda+2\rho\rangle$ holds identically, at every $N$ and every $\lambda$, with the $e$-coordinates read literally. The agreement is structural. **What is not structural is the record's inference from it**, and what is genuinely alarming is §3.3 below.
+**The result this review adds.** The eigenvalue $16$ is forced, and the reason is a clean identity worth having on the record: for $\mathfrak{so}(N)$ the bilinear form $B(X,Y)=-\tfrac12\mathop{\mathrm{tr}}(XY)$ makes $\{M_{ij}=E_{ij}-E_{ji}\}_{i<j}$ an **orthonormal** basis, and its dual form on $\mathfrak h^*$ is exactly the one in which $\{e_i\}$ is orthonormal. So $-\sum_{i<j}\rho(M_{ij})^2=\langle\lambda,\lambda+2\rho\rangle$ holds identically, at every $N$ and every $\lambda$, with the $e$-coordinates read literally. The agreement is structural. **What is not structural is the record's inference from it**, and what is genuinely alarming is §3.3 below.
 
 ---
 
@@ -20,9 +20,9 @@ Cold adversarial review of [plan.md](../plan.md) item 3c, [REVIEW_r173.md](REVIE
 
 ### 1.1 The eigenvalue is forced, and nothing cancels
 
-Let $\mathfrak g=\mathfrak{so}(N)$ over $\mathbb R$, $M_{ij}=E_{ij}-E_{ji}$ for $i<j$, and $B(X,Y)=-\tfrac12\operatorname{tr}(XY)$. Then
+Let $\mathfrak g=\mathfrak{so}(N)$ over $\mathbb R$, $M_{ij}=E_{ij}-E_{ji}$ for $i<j$, and $B(X,Y)=-\tfrac12\mathop{\mathrm{tr}}(XY)$. Then
 
-$$B(M_{ij},M_{ij})=-\tfrac12\operatorname{tr}\big(-E_{ii}-E_{jj}\big)=1,\qquad B(M_{ij},M_{kl})=0\ \ \text{for }(ij)\ne(kl),$$
+$$B(M_{ij},M_{ij})=-\tfrac12\mathop{\mathrm{tr}}\big(-E_{ii}-E_{jj}\big)=1,\qquad B(M_{ij},M_{kl})=0\ \ \text{for }(ij)\ne(kl),$$
 
 so $\{M_{ij}\}_{i<j}$ is $B$-orthonormal and the Casimir element of $B$ is $\Omega_B=\sum_{i<j}M_{ij}^2$. Hence the record's operator is $C=-\sum_{i<j}\rho(M_{ij})^2=-\rho(\Omega_B)$, positive on the compact form, and its eigenvalue on $V_\lambda$ is $\langle\lambda,\lambda+2\rho\rangle$ in the form on $\mathfrak h^*$ dual to $B$.
 
@@ -43,22 +43,22 @@ The identity is contingent on the generator set being $\{M_{ij}\}_{i<j}$, unnorm
 | $\{E_{ij}-E_{ji}\}_{i<j}$, once per pair, **the record's, implicitly** | $16$ |
 | summed over all ordered $i\ne j$ | $32$ |
 | generators $(E_{ij}-E_{ji})/\sqrt2$ | $8$ |
-| the Killing form $\kappa(X,Y)=(N-2)\operatorname{tr}(XY)$ | $16/6=8/3$ |
+| the Killing form $\kappa(X,Y)=(N-2)\mathop{\mathrm{tr}}(XY)$ | $16/6=8/3$ |
 | $\Lambda^2$ action taken as $\tfrac12[X,\cdot\,]$ | $4$ |
 
-**"No convention factor" is therefore a claim about a convention the record does not state.** The sentence that carries the weight is *"generators $M_{ij}=E_{ij}-E_{ji}$, $i<j$, each summed once; equivalently the form $-\tfrac12\operatorname{tr}$, for which $\{e_i\}$ is orthonormal"*, five words that make the claim checkable, where the current line makes it an assertion about an unnamed setup.
+**"No convention factor" is therefore a claim about a convention the record does not state.** The sentence that carries the weight is *"generators $M_{ij}=E_{ij}-E_{ji}$, $i<j$, each summed once; equivalently the form $-\tfrac12\mathop{\mathrm{tr}}$, for which $\{e_i\}$ is orthonormal"*, five words that make the claim checkable, where the current line makes it an assertion about an unnamed setup.
 
 ### 1.3 Independent verification, exactly, with no SVD and no floating point
 
 [r175_casimir_normalisation.py](../scripts/reviewers/r175/r175_casimir_normalisation.py) builds $\mathrm{Sym}^2(\Lambda^2\mathbb R^5)$, dimension $55$, in the raw basis $\omega_{ij}=e_i\wedge e_j$, takes the $\Lambda^2$ action to be $\mathrm{ad}$, which it is: if $A=uv^{\!\top}-vu^{\!\top}$ represents $u\wedge v$ then $Xu\wedge v+u\wedge Xv=XA+AX^{\!\top}=[X,A]$ for $X$ antisymmetric, and forms $C=-\sum_{i<j}A_{ij}^2$ in integer arithmetic. Results:
 
-$$\operatorname{spec}(C)=\{\,0^{\times1},\ 4^{\times5},\ 10^{\times14},\ 16^{\times35}\,\},\qquad \text{$[X_p,X_q]$ exact on all $100$ pairs.}$$
+$$\mathop{\mathrm{spec}}(C)=\{\,0^{\times1},\ 4^{\times5},\ 10^{\times14},\ 16^{\times35}\,\},\qquad \text{$[X_p,X_q]$ exact on all $100$ pairs.}$$
 
 $\mathrm{Sym}^2(\Lambda^2\mathbb R^5)=\mathrm{Weyl}_5(35)\oplus\mathrm{Sym}^2_0(14)\oplus\Lambda^4(5)\oplus\mathbb R(1)$, and the four eigenvalues are $c(2,2)=16$, $c(2,0)=10$, $c(1,0)=4$, $c(0,0)=0$ for $c(a,b)=a^2+3a+b^2+b$. **So claim 2 reproduces, and three further labels come free as a control on the construction.**
 
 ### 1.4 "One number confirming the Weyl projector, the basis orthonormality and the $\Lambda^2$ normalisation together", the middle third is false
 
-**An eigenvalue is a similarity invariant.** $C$ is conjugated, not changed, by any change of basis of the module, so $16$ is exactly as compatible with a non-orthonormal basis as with an orthonormal one. §1.3 is the demonstration: $\{\omega_{ij}\}$ has $\operatorname{tr}(\omega^{\!\top}\omega)=2$ and the induced basis of $\mathrm{Sym}^2$ is not orthonormal either, and the spectrum is $16$ regardless.
+**An eigenvalue is a similarity invariant.** $C$ is conjugated, not changed, by any change of basis of the module, so $16$ is exactly as compatible with a non-orthonormal basis as with an orthonormal one. §1.3 is the demonstration: $\{\omega_{ij}\}$ has $\mathop{\mathrm{tr}}(\omega^{\!\top}\omega)=2$ and the induced basis of $\mathrm{Sym}^2$ is not orthonormal either, and the spectrum is $16$ regardless.
 
 **The check that does test orthonormality is the other one.** $\rho(X)$ is *skew* in a given basis precisely when that basis is orthonormal for the invariant inner product, so the $2.2\times10^{-16}$ skewness measurement is where the orthonormality evidence lives. The record has attached it to the wrong number.
 

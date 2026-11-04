@@ -241,7 +241,7 @@ The shared scratchpad for this session is written concurrently by another agent,
 - A **criticality-free** form: $\mathrm{LOSS}(h)=\mu^2+\langle Q(W)^{\!\circ}h,h\rangle$ at every Weyl tensor and every eigenvector. *The cycle's "control" tested the $\lambda\mu$ form, not the identity.*
 - $\lVert\mathring W\rVert_F^2=3$ gives $\mu<\sqrt3$, so $\mathrm{CD}_n\Rightarrow\lambda\le\sqrt3$ for free.
 
-**Corrections to the record.** $N=\tfrac14\lvert W\rvert^2I$ for **every** Weyl tensor at $n=4$ (the classical $C_{ipqr}C_{jpqr}$ identity) so the recorded counterexample holds only from $n\ge5$; confirmed here at $1.6\times10^{-16}$. And $\operatorname{tr}N=4$, not $1$, under the file's own normalisation.
+**Corrections to the record.** $N=\tfrac14\lvert W\rvert^2I$ for **every** Weyl tensor at $n=4$ (the classical $C_{ipqr}C_{jpqr}$ identity) so the recorded counterexample holds only from $n\ge5$; confirmed here at $1.6\times10^{-16}$. And $\mathop{\mathrm{tr}}N=4$, not $1$, under the file's own normalisation.
 
 **A defect in the brief, not the record.** It omitted the target's $S=0$ and non-diagonal hypotheses and stated step 6 as a standalone lemma rather than one branch of $\mathrm{CD}_n$, *the second time this session a brief narrowed the claim it was auditing.* [target.md](target.md) had both right.
 

@@ -7,7 +7,7 @@ Cold adversarial audit of G1–G5. Every number below comes from [scripts/review
 | **G1**, the averaging attempt over symmetric deformations fails | **REFUTED.** The three numbers are exact ($7/17$, $3/5$, $0.446362$) and the narrow sentence about $V=\mathrm{Sym}_0$ stands. The headline does not: averaging over the **$C_5$-edge** sub-collection of the same $H_A$ gives **exactly $2/3$** at the $C_5$ blow-up, which proves non-maximality there by averaging alone |
 | **G2**, the Weyl projection is load-bearing | **CONFIRMED.** $0.571429=4/7$ reproduced, $35.36\%$ of $\lVert H_A\rVert$ lies outside $\mathrm{Weyl}_8$. The projection **order** provably does not matter: the two projectors commute because $e\in\mathrm{Weyl}_n$ |
 | **G3**, the symmetric-deformation lead is narrower than reported | **PLAUSIBLE.** Both numbers exact; but "the violating direction" is undefined at both points (top eigenvalue has multiplicity $15$ at $\mathbb{CP}^4$ and $2$ at the $C_5$ blow-up), and the inference "a proof of V3 needs directions outside it too" does not follow, $0.820541>\tfrac12$ already closes the point |
-| **G4**, the global first moment is inert | **CONFIRMED**, with a derivation and a strengthening: $\operatorname{tr}_{\mathrm{Weyl}_n}(L_Y)=0$ for **every** symmetric $Y$ on $\Lambda^2$, needing neither criticality, nor unit norm, nor $Y\in\mathrm{Weyl}_n$. It is Fox's Theorem 1.3 for the fourth time |
+| **G4**, the global first moment is inert | **CONFIRMED**, with a derivation and a strengthening: $\mathop{\mathrm{tr}}_{\mathrm{Weyl}_n}(L_Y)=0$ for **every** symmetric $Y$ on $\Lambda^2$, needing neither criticality, nor unit norm, nor $Y\in\mathrm{Weyl}_n$. It is Fox's Theorem 1.3 for the fourth time |
 | **G5**, the reconciliation | **CONFIRMED.** The misread premise is in the record verbatim at commit `7ee03c0`, and the contradiction with Observation L25 is real, not a scoping artefact. One caveat: the orbit component $1.1\times10^{-15}$ is a **tautology**, forced by $\mathcal O\subseteq E(\tfrac12)$ and self-adjointness, so it is evidence for nothing |
 
 **No counterexample to V3 found.** An independent hunt at $n=6$ converged $58$ critical points from $60$ random starts; every one has $\Delta>0$, and $\lambda_{\max}\in[1.670152,\,96.291798]$, the ceiling reproducing Observation L25's $96.3$ from code that never read it. None has $\lambda_{\max}\le\tfrac12$.
@@ -16,9 +16,9 @@ Cold adversarial audit of G1–G5. Every number below comes from [scripts/review
 
 ## G1, REFUTED: the closure was drawn from the wrong subspace
 
-**The arithmetic is right.** With $H_A=D_AW+WD_A$ projected into $\mathrm{Weyl}_n$ and then into $e^\perp$, $\operatorname{tr}(L_e|_V)/\dim V$ is
+**The arithmetic is right.** With $H_A=D_AW+WD_A$ projected into $\mathrm{Weyl}_n$ and then into $e^\perp$, $\mathop{\mathrm{tr}}(L_e|_V)/\dim V$ is
 
-| point | $n$ | $\dim V$ | $\operatorname{tr}/\dim$ | exact | $\lambda_{\max}$ full |
+| point | $n$ | $\dim V$ | $\mathop{\mathrm{tr}}/\dim$ | exact | $\lambda_{\max}$ full |
 |---|---|---|---|---|---|
 | $S^3\times S^5$ | $8$ | $34$ | $0.411765$ | $7/17$ | $0.500000$ |
 | $\mathbb{CP}^4$ | $8$ | $15$ | $0.600000$ | $3/5$ | $0.600000$ |
@@ -35,7 +35,7 @@ So the entire weight of G1 rests on one number at one point: $0.446362$ at the $
 
 **And that number is an averaging artefact of the chosen index set.** Split $\mathrm{Sym}_0(\mathbb R^{10})$ by the block structure the blow-up already carries, and the same construction gives, at the $C_5$ blow-up:
 
-| $A$ ranges over | $\dim$ | $\operatorname{tr}(L_e\vert)/\dim$ | spectrum on the subspace |
+| $A$ ranges over | $\dim$ | $\mathop{\mathrm{tr}}(L_e\vert)/\dim$ | spectrum on the subspace |
 |---|---|---|---|
 | all of $\mathrm{Sym}_0$, the record's $V$ | $54$ | $0.446362$ | $[\,\cdot\,,0.820541]$ |
 | supported **inside** blocks | $14$ | $0.180328$ | $[\,\cdot\,,0.820541]$ |
@@ -45,7 +45,7 @@ So the entire weight of G1 rests on one number at one point: $0.446362$ at the $
 
 The $C_5$-edge family is a **$20$-dimensional exact eigenspace of $L_e$ at $\tfrac23$**, inside $\mathrm{Weyl}_{10}$ to $2.1\times10^{-15}$, orthogonal to $W$ to $3.8\times10^{-17}$, and orthogonal to the orbit tangent (largest principal cosine $0.000$). Basis-independence checked by re-running through a random $\mathrm{GL}$ change of basis inside the $A$-space: same $2/3$, same spectrum. So
 
-$$\lambda_{\max}(L_e|_{e^\perp})\ \ge\ \frac{\operatorname{tr}(L_e|_{V_{\text{edge}}})}{\dim V_{\text{edge}}}=\frac23\ >\ \frac12,$$
+$$\lambda_{\max}(L_e|_{e^\perp})\ \ge\ \frac{\mathop{\mathrm{tr}}(L_e|_{V_{\text{edge}}})}{\dim V_{\text{edge}}}=\frac23\ >\ \frac12,$$
 
 **a complete averaging proof that the $C_5$ blow-up is not a local maximum**, no eigenvector, no eigenvalue computation, no violating direction. The record's sentence "the violation at a $\Delta>0$ point is carried by particular directions and not by the average" is false at the only $\Delta>0$ point it tests.
 
@@ -82,7 +82,7 @@ Without the $\mathrm{Weyl}_n$ projection, taking the span of the raw $H_A$ insid
 
 $0.571429>0.500000$ at $S^3\times S^5$ reproduces the record's $0.571$, and the diagnosis is right: a quarter to a half of $H_A$'s norm lies outside $\mathrm{Weyl}_n$, so the object computed is not a restriction of the self-adjoint $L_e$ on $\mathrm{Weyl}_n$ and is not bounded by its top eigenvalue. The deeper reason to project is variational rather than arithmetical, the Hessian is $6\theta(L_e-\tfrac12\mathrm{Id})$ on the tangent space of the unit sphere **of $\mathrm{Weyl}_n$**, so a direction leaving $\mathrm{Weyl}_n$ is not an admissible test direction at all.
 
-**The order does not matter, and this is a one-line theorem rather than a measurement.** $P_{e^\perp}=\mathrm{Id}-\hat e\hat e^{\!\top}$ with $\hat e=W$ of unit norm, and $W\in\mathrm{Weyl}_n$, so $P_{\mathrm{Weyl}}\hat e=\hat e$; hence $P_{\mathrm{Weyl}}P_{\hat e}=\hat e\hat e^{\!\top}=P_{\hat e}P_{\mathrm{Weyl}}$ by symmetry of $P_{\mathrm{Weyl}}$, and the two projectors commute. Verified: the subspaces produced by the two orders have smallest principal cosine $1.000000000000$ at all four points, identical dimensions, and identical $\operatorname{tr}/\dim$ to twelve digits.
+**The order does not matter, and this is a one-line theorem rather than a measurement.** $P_{e^\perp}=\mathrm{Id}-\hat e\hat e^{\!\top}$ with $\hat e=W$ of unit norm, and $W\in\mathrm{Weyl}_n$, so $P_{\mathrm{Weyl}}\hat e=\hat e$; hence $P_{\mathrm{Weyl}}P_{\hat e}=\hat e\hat e^{\!\top}=P_{\hat e}P_{\mathrm{Weyl}}$ by symmetry of $P_{\mathrm{Weyl}}$, and the two projectors commute. Verified: the subspaces produced by the two orders have smallest principal cosine $1.000000000000$ at all four points, identical dimensions, and identical $\mathop{\mathrm{tr}}/\dim$ to twelve digits.
 
 ---
 
@@ -98,26 +98,26 @@ Reproduced: $\lambda_{\max}(L_e|_V)=0.600000$ against the full-space $0.600000$ 
 
 ## G4, CONFIRMED, derived, and stronger than stated
 
-**Measured first.** $\operatorname{tr}(L_X)$ on $\mathrm{Weyl}_n$ over random, deliberately **non-critical** $X$ (criticality residual $0.33$–$0.61$):
+**Measured first.** $\mathop{\mathrm{tr}}(L_X)$ on $\mathrm{Weyl}_n$ over random, deliberately **non-critical** $X$ (criticality residual $0.33$–$0.61$):
 
 | $n$ | $5$ | $6$ | $7$ | $8$ | $9$ | $10$ |
 |---|---|---|---|---|---|---|
 | $\dim\mathrm{Weyl}_n$ | $35$ | $84$ | $168$ | $300$ | $495$ | $770$ |
-| $\operatorname{tr}(L_X)$ | $-8.3\text{e}{-16}$ | $6.6\text{e}{-16}$ | $-8.9\text{e}{-16}$ | $-5.6\text{e}{-17}$ | $1.1\text{e}{-16}$ | $-5.0\text{e}{-16}$ |
-| $\operatorname{tr}(L_e|_{X^\perp})$ | $-1.000000000000$ | $-1$ | $-1$ | $-1$ | $-1$ | $-1$ |
+| $\mathop{\mathrm{tr}}(L_X)$ | $-8.3\text{e}{-16}$ | $6.6\text{e}{-16}$ | $-8.9\text{e}{-16}$ | $-5.6\text{e}{-17}$ | $1.1\text{e}{-16}$ | $-5.0\text{e}{-16}$ |
+| $\mathop{\mathrm{tr}}(L_e|_{X^\perp})$ | $-1.000000000000$ | $-1$ | $-1$ | $-1$ | $-1$ | $-1$ |
 
-and $0$ likewise at all four catalogued points. So the identity is confirmed, and the $-1$ needs **only $P(W)\ne0$**: for $\hat W$ of unit norm and $e=\hat W/P(\hat W)$, $\langle\hat W,L_e\hat W\rangle=T(e,\hat W,\hat W)=P(\hat W)/P(\hat W)=1$, so $\operatorname{tr}(L_e|_{\hat W^\perp})=\operatorname{tr}(L_e)-1=-1$ by self-adjointness. Criticality is used nowhere.
+and $0$ likewise at all four catalogued points. So the identity is confirmed, and the $-1$ needs **only $P(W)\ne0$**: for $\hat W$ of unit norm and $e=\hat W/P(\hat W)$, $\langle\hat W,L_e\hat W\rangle=T(e,\hat W,\hat W)=P(\hat W)/P(\hat W)=1$, so $\mathop{\mathrm{tr}}(L_e|_{\hat W^\perp})=\mathop{\mathrm{tr}}(L_e)-1=-1$ by self-adjointness. Criticality is used nowhere.
 
-**Derivation, as asked.** $Y\mapsto\operatorname{tr}_{\mathrm{Weyl}_n}(L_Y)=\sum_k\langle B_k,Y\circ B_k\rangle$ is a **linear** functional of $Y$, and $\circ$ is $O(n)$-equivariant with $\mathrm{Weyl}_n$ an $O(n)$-invariant subspace, so the functional is $O(n)$-invariant: it is $\langle Z,\cdot\rangle$ for some invariant $Z\in\mathrm{Sym}^2(\Lambda^2)$. $\Lambda^2\mathbb R^n$ is $O(n)$-irreducible, so the invariant symmetric operators are $\mathbb R\cdot\mathrm{Id}$ and $Z=c_n\mathrm{Id}$, giving $\operatorname{tr}(L_Y)=c_n\operatorname{tr}(Y)$. Two consequences, both checked:
+**Derivation, as asked.** $Y\mapsto\mathop{\mathrm{tr}}_{\mathrm{Weyl}_n}(L_Y)=\sum_k\langle B_k,Y\circ B_k\rangle$ is a **linear** functional of $Y$, and $\circ$ is $O(n)$-equivariant with $\mathrm{Weyl}_n$ an $O(n)$-invariant subspace, so the functional is $O(n)$-invariant: it is $\langle Z,\cdot\rangle$ for some invariant $Z\in\mathrm{Sym}^2(\Lambda^2)$. $\Lambda^2\mathbb R^n$ is $O(n)$-irreducible, so the invariant symmetric operators are $\mathbb R\cdot\mathrm{Id}$ and $Z=c_n\mathrm{Id}$, giving $\mathop{\mathrm{tr}}(L_Y)=c_n\mathop{\mathrm{tr}}(Y)$. Two consequences, both checked:
 
-- $\operatorname{tr}(Y)=0$ for $Y\in\mathrm{Weyl}_n$ (it is half the scalar curvature), so **Ricci-flatness alone gives $\operatorname{tr}(L_Y)=0$**, no criticality, no unit norm, no $\theta>0$;
-- fitted at $Y=\mathrm{Id}$, $c_n=0.000000000$ at $n=5,6,7,8$, and $\lvert\operatorname{tr}(L_Y)\rvert\le1.7\times10^{-14}$ over random symmetric $Y$ on $\Lambda^2$ with $\operatorname{tr}(Y)\ne0$. So the identity is **stronger than the record states**: the trace over $\mathrm{Weyl}_n$ of $L_Y$ vanishes for *every* symmetric $Y$, Ricci-flat or not.
+- $\mathop{\mathrm{tr}}(Y)=0$ for $Y\in\mathrm{Weyl}_n$ (it is half the scalar curvature), so **Ricci-flatness alone gives $\mathop{\mathrm{tr}}(L_Y)=0$**, no criticality, no unit norm, no $\theta>0$;
+- fitted at $Y=\mathrm{Id}$, $c_n=0.000000000$ at $n=5,6,7,8$, and $\lvert\mathop{\mathrm{tr}}(L_Y)\rvert\le1.7\times10^{-14}$ over random symmetric $Y$ on $\Lambda^2$ with $\mathop{\mathrm{tr}}(Y)\ne0$. So the identity is **stronger than the record states**: the trace over $\mathrm{Weyl}_n$ of $L_Y$ vanishes for *every* symmetric $Y$, Ricci-flat or not.
 
-**Which hypothesis is actually load-bearing: the trace space, not the argument.** Repeating the trace over the larger Bianchi-only space of algebraic curvature tensors (dimension $50$ at $n=5$, $105$ at $n=6$) and taking $Y=\mathrm{Id}/\lVert\mathrm{Id}\rVert$ (the constant-curvature tensor, $\mathrm{Ric}\ne0$), gives $\operatorname{tr}(L_Y)=+7.905694$ and $+11.618950$. Drop Ricci-flatness from the space being traced and the identity dies; drop it from $Y$ and nothing happens.
+**Which hypothesis is actually load-bearing: the trace space, not the argument.** Repeating the trace over the larger Bianchi-only space of algebraic curvature tensors (dimension $50$ at $n=5$, $105$ at $n=6$) and taking $Y=\mathrm{Id}/\lVert\mathrm{Id}\rVert$ (the constant-curvature tensor, $\mathrm{Ric}\ne0$), gives $\mathop{\mathrm{tr}}(L_Y)=+7.905694$ and $+11.618950$. Drop Ricci-flatness from the space being traced and the identity dies; drop it from $Y$ and nothing happens.
 
 **Two scope remarks.**
 
-1. It is **not new**: this is Fox's Theorem 1.3, $\operatorname{tr}(L_x)=0$, recorded in [second-order.md](../findings/second-order.md) with the note that it has been re-derived unwittingly three times. This is the fourth. What G4 adds is only the negative gloss, and that gloss is correct: a quantity independent of $W$ cannot separate maximisers from non-maximisers.
+1. It is **not new**: this is Fox's Theorem 1.3, $\mathop{\mathrm{tr}}(L_x)=0$, recorded in [second-order.md](../findings/second-order.md) with the note that it has been re-derived unwittingly three times. This is the fourth. What G4 adds is only the negative gloss, and that gloss is correct: a quantity independent of $W$ cannot separate maximisers from non-maximisers.
 2. It is **narrower than the pair G1+G4 is being used for**. G4 closes the *global* first moment; G1 was meant to close the *subspace* first moment. G1 is refuted above, so the subspace first moment is not closed, and at the $C_5$ blow-up it is, on its own, decisive. The record's "the first two moments of $L_e$ are both closed for V3" therefore holds only for the global moments.
 
 ---

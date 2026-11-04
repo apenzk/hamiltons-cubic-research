@@ -24,9 +24,9 @@ $$\mathrm{rank}(A)=\dim(\mathrm{Sym}^6\mathcal W_5)^{O(5)}=14\quad\text{exactly,
 
 ## Passage C, the canonical statement ([results.md](../results.md) line 294, landscape, and line 976, detail)
 
-- **Lemma L89 (landscape). $\operatorname{rank}(\mu|_{\mathrm{inv}})=14$, nullity $51$, by exactness.** Surjectivity of $\mu$ is elementary and the exactness step is a genuine theorem, so the rank and nullity follow without a measurement.
+- **Lemma L89 (landscape). $\mathop{\mathrm{rank}}(\mu|_{\mathrm{inv}})=14$, nullity $51$, by exactness.** Surjectivity of $\mu$ is elementary and the exactness step is a genuine theorem, so the rank and nullity follow without a measurement.
 
-$\operatorname{rank}(\mu|_{\mathrm{inv}})=14$ and the nullity is $51$, by exactness of the sequence. **Surjectivity of $\mu$ is elementary, neither imported nor measured, and the exactness step is a genuine theorem.** *But no measured link drops: the map's domain is not one the certificate route ranges over, and that route consumes $13$ rather than $14$.*
+$\mathop{\mathrm{rank}}(\mu|_{\mathrm{inv}})=14$ and the nullity is $51$, by exactness of the sequence. **Surjectivity of $\mu$ is elementary, neither imported nor measured, and the exactness step is a genuine theorem.** *But no measured link drops: the map's domain is not one the certificate route ranges over, and that route consumes $13$ rather than $14$.*
 
 ## Passage D, the Lean files
 

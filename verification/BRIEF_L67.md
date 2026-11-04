@@ -38,7 +38,7 @@ $$p_3(\mu)=\frac1{m\sqrt{(m-1)(2m-1)}},\qquad p_3(\omega)=-\frac{4m^2-6m-1}{m\sq
 
 #### $A$ is not a new constant
 
-it equals the record's $\operatorname{tr}(W^3)=2\sqrt2/\big(n\sqrt{(n-1)(n-2)}\big)$ at the balanced product, checked to be identically zero difference. And the identity closes symbolically,
+it equals the record's $\mathop{\mathrm{tr}}(W^3)=2\sqrt2/\big(n\sqrt{(n-1)(n-2)}\big)$ at the balanced product, checked to be identically zero difference. And the identity closes symbolically,
 
 $$\tfrac32p_3(\mu)-\tfrac12p_3(\omega)-\theta_0(2m)=0\quad\text{identically in }m,$$
 

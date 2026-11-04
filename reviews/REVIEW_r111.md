@@ -32,7 +32,7 @@ $$\textstyle\sum_\gamma Q_\gamma=-2\lVert W\rVert^2,\quad \sum_\gamma\lambda_\ga
 
 **The claim that the equalities carry nothing new is correct, and here is the whole chain in four lines.**
 
-- $\rho_\alpha=-\operatorname{tr}\mathrm{ad}(v_\alpha)^2=(n-2)\operatorname{tr}(v_\alpha^{\mathsf T}v_\alpha)=2(n-2)$, the Killing form of $\mathfrak{so}(n)$, no Weyl structure used.
+- $\rho_\alpha=-\mathop{\mathrm{tr}}\mathrm{ad}(v_\alpha)^2=(n-2)\mathop{\mathrm{tr}}(v_\alpha^{\mathsf T}v_\alpha)=2(n-2)$, the Killing form of $\mathfrak{so}(n)$, no Weyl structure used.
 - $g_\gamma=\sum_{\alpha\beta}T_{\gamma\alpha\beta}(\lambda_\alpha-\lambda_\beta)^2$ expands term by term into $2\sum\lambda^2R-2Q$. Algebra only.
 - $\sum_\gamma\lambda_\gamma Q_\gamma=\sum_{\alpha\beta\gamma}\lambda_\alpha\lambda_\beta\lambda_\gamma T_{\gamma\alpha\beta}=2\langle W^\#,W\rangle$ **is** the definition of $\#$ in an orthonormal basis, $(W^\#)_{\alpha\beta}=\tfrac12\sum c_{\alpha\gamma\delta}c_{\beta\epsilon\zeta}W_{\gamma\epsilon}W_{\delta\zeta}$, read in the eigenbasis. Nothing is being verified.
 - $\sum_\gamma Q_\gamma=\lambda^{\mathsf T}R\lambda=\lambda\cdot(-2\lambda)=-2\lVert W\rVert^2$, and the two contractions then give $4(n-1)$ and $-4\theta$ directly.
@@ -41,7 +41,7 @@ $$\textstyle\sum_\gamma Q_\gamma=-2\lVert W\rVert^2,\quad \sum_\gamma\lambda_\ga
 
 $$\Pi_{\mathcal W}\big(\mathrm{ad}(v)^2\big)=-2\,\Pi_{\mathcal W}\big(vv^{\mathsf T}\big)\qquad\text{for every unit }v\in\mathfrak{so}(n),$$
 
-to $3\times10^{-16}$ at $n=5,6,8$ on random unit $v$, so the per-row identity is one **linear** identity on $\mathcal W_n$, holding at every $W$, critical or not, and at every direction $v$, eigenvector or not. It is a restatement of trace-freeness. Confirmed by hand at $v=\phi_{12}$: $-\operatorname{tr}(M\,\mathrm{ad}(\phi_{12})^2)=\sum_{k\ge3}(W_{1k1k}+W_{2k2k})=-2W_{1212}$ by the Ricci trace.
+to $3\times10^{-16}$ at $n=5,6,8$ on random unit $v$, so the per-row identity is one **linear** identity on $\mathcal W_n$, holding at every $W$, critical or not, and at every direction $v$, eigenvector or not. It is a restatement of trace-freeness. Confirmed by hand at $v=\phi_{12}$: $-\mathop{\mathrm{tr}}(M\,\mathrm{ad}(\phi_{12})^2)=\sum_{k\ge3}(W_{1k1k}+W_{2k2k})=-2W_{1212}$ by the Ricci trace.
 
 ---
 

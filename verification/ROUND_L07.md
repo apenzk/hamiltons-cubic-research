@@ -20,7 +20,7 @@
 
 Compressing the criticality equation onto the negative spectral part gives, at every critical point,
 
-$$\theta\operatorname{tr}(W_-)+\operatorname{tr}(W_-^2)\;\le\;\|\mathrm{Ric}(W_-)\|^2+6\,\delta^2,$$
+$$\theta\mathop{\mathrm{tr}}(W_-)+\mathop{\mathrm{tr}}(W_-^2)\;\le\;\|\mathrm{Ric}(W_-)\|^2+6\,\delta^2,$$
 
 with $\delta^2$ the defect of [Observation L15](problem.md), and $W_\pm$ the positive and negative spectral parts **as operators on all of $\Lambda^2$**, so that $\mathrm{Ric}(W_-)$ has its usual meaning.
 
@@ -35,13 +35,13 @@ with $\delta^2$ the defect of [Observation L15](problem.md), and $W_\pm$ the pos
 | # | clause attacked | mechanism | support |
 |---|---|---|---|
 | **C1** | the inequality | *no defect, and no possible falsifier*, each of its three slack terms is the compression of a PSD operator. Rebuilt cold three times and checked as an exact equality at $W_{\mathbb{CP}^2}$, $S^3\times S^3$ and $S^2\times S^4$ | v116, v117, v118 |
-| **C2** | [bounds.md](../findings/bounds.md):51's rank-one identity | $vv^{\mathsf T}\#ww^{\mathsf T}=[v,w][v,w]^{\mathsf T}$ is off by a factor $2$. **Under it $W_{\mathbb{CP}^2}$ is not a critical point**, $\operatorname{tr}(W^\#)$ reads $-2$ against the record's $-1$, and L15's identity fails at $k=1$. The record carries the $\tfrac12$ at four other sites, and at line 187 of this same file | v116, v117, v118 |
-| **C3** | the equality clause's identification | the class is *$\operatorname{ran}W_+\oplus\operatorname{ran}W_-$ a $\mathbb Z_2$-graded subalgebra with even part $\operatorname{ran}W_+$*, a condition on $W$, not on a pair. It coincides with the headings' "compact symmetric pair with $E_+$ the isotropy algebra" **exactly on $\{\ker W=0\}$**; forward fails at $W_{\mathbb{CP}^2}$, where $\dim E_+=1$ is the even part of no involution of $\mathfrak{so}(4)$ | v116, v117, v118 |
+| **C2** | [bounds.md](../findings/bounds.md):51's rank-one identity | $vv^{\mathsf T}\#ww^{\mathsf T}=[v,w][v,w]^{\mathsf T}$ is off by a factor $2$. **Under it $W_{\mathbb{CP}^2}$ is not a critical point**, $\mathop{\mathrm{tr}}(W^\#)$ reads $-2$ against the record's $-1$, and L15's identity fails at $k=1$. The record carries the $\tfrac12$ at four other sites, and at line 187 of this same file | v116, v117, v118 |
+| **C3** | the equality clause's identification | the class is *$\mathop{\mathrm{ran}}W_+\oplus\mathop{\mathrm{ran}}W_-$ a $\mathbb Z_2$-graded subalgebra with even part $\mathop{\mathrm{ran}}W_+$*, a condition on $W$, not on a pair. It coincides with the headings' "compact symmetric pair with $E_+$ the isotropy algebra" **exactly on $\{\ker W=0\}$**; forward fails at $W_{\mathbb{CP}^2}$, where $\dim E_+=1$ is the even part of no involution of $\mathfrak{so}(4)$ | v116, v117, v118 |
 | **C4** | "it fails strictly at the low-value ones" | **false**: equality holds at $S^2\times S^4$ with $\theta^2=\tfrac{15}{16}$ and at $\mathbb{CP}^4$ with $\theta^2=\tfrac{35}{36}$, both below $1$ | v117, v118 |
-| **C5** | $\operatorname{scal}=2\operatorname{tr}$ | the convention that makes the two halves of the proof meet, and **tabled nowhere on the record**; the $6\delta^2$ coefficient is right only under it | v116, v117, v118 |
+| **C5** | $\mathop{\mathrm{scal}}=2\mathop{\mathrm{tr}}$ | the convention that makes the two halves of the proof meet, and **tabled nowhere on the record**; the $6\delta^2$ coefficient is right only under it | v116, v117, v118 |
 | **C6** | the "needs only" list | it omits criticality, Ricci-flatness and first Bianchi, and the proof also uses $W_+W_-=0$, the spectral character of $\Pi_-$, and $Q$ preserving $\mathcal W_n$ | v116, v117, v118 |
 | **C7** | the retired "modulo $\ker W$" hedge | still standing at [results.md](../results.md):122, [INDEX-results.md](../findings/INDEX-results.md):22 and [lean/INDEX.md](../lean/INDEX.md):179, the last recording it as owed formalisation work | v116, v117 |
-| **C8** | the closure clause | it needs criticality and says it needs none: the slack equals $\tfrac12\operatorname{tr}X_{\mathrm{inv}}$ only because $\operatorname{tr}(P_0W^\#)=0$ | v118 |
+| **C8** | the closure clause | it needs criticality and says it needs none: the slack equals $\tfrac12\mathop{\mathrm{tr}}X_{\mathrm{inv}}$ only because $\mathop{\mathrm{tr}}(P_0W^\#)=0$ | v118 |
 | **C9** | the box's own pointer | *"79 LINES BELOW"* lands in a different block, not on the refutation | v118 |
 | **C10** | the hypothesis count | "twice each" is right on the $\lvert W\rvert$-difference route and once each by direct polarisation, **route-dependent, not wrong**; *withdrawn as a defect by two verifiers* | v116, v117 |
 
@@ -63,7 +63,7 @@ with $\delta^2$ the defect of [Observation L15](problem.md), and $W_\pm$ the pos
 
 - **The rank-one constant is corrected to $\tfrac12$** at [bounds.md](../findings/bounds.md):51.
 - **Both headings now say "graded-subalgebra equality class"**, and the canonical statement gives the class as a condition on $W$, names $\ker W=0$ as exactly when it is a symmetric pair, exhibits $W_{\mathbb{CP}^2}$ for the forward failure, and records that equality reaches $S^2\times S^4$ and $\mathbb{CP}^4$ below $\theta=1$.
-- **The hypothesis list is stated** (criticality, Ricci-flatness, first Bianchi), with $W_+W_-=0$, the spectral $\Pi_-$ and $\operatorname{scal}=2\operatorname{tr}$ named as the properties used unnamed.
-- **$\operatorname{scal}=2\operatorname{tr}$ is now tabled in [conventions.md](../findings/conventions.md)**, with what it is load-bearing for.
+- **The hypothesis list is stated** (criticality, Ricci-flatness, first Bianchi), with $W_+W_-=0$, the spectral $\Pi_-$ and $\mathop{\mathrm{scal}}=2\mathop{\mathrm{tr}}$ named as the properties used unnamed.
+- **$\mathop{\mathrm{scal}}=2\mathop{\mathrm{tr}}$ is now tabled in [conventions.md](../findings/conventions.md)**, with what it is load-bearing for.
 - **[report/sections/07-gradedness-split.tex](../report/sections/07-gradedness-split.tex) carries both repairs**, its two sentences having been the same claims in the prose a reader would see first.
 - **The equality class is recorded as not stable under $W\mapsto-W$**, while the critical set is.

@@ -43,7 +43,7 @@
 
 ## What to attack
 
-1. **"Ricci-flatness makes $W$ traceless on $\Lambda^2$".** Derive it, and say in which normalisation, this record has a live factor-of-two hazard between the $\Lambda^2$ and $n\times n$ pairings. Is $\operatorname{tr}_{\Lambda^2}W=0$ equivalent to Ricci-flatness, or only implied by it? **If only implied, does the argument still close?**
+1. **"Ricci-flatness makes $W$ traceless on $\Lambda^2$".** Derive it, and say in which normalisation, this record has a live factor-of-two hazard between the $\Lambda^2$ and $n\times n$ pairings. Is $\mathop{\mathrm{tr}}_{\Lambda^2}W=0$ equivalent to Ricci-flatness, or only implied by it? **If only implied, does the argument still close?**
 2. **The dimension count.** $r=\tfrac{n(n-2)}4$ for $\mathfrak{so}(n/2)\oplus\mathfrak{so}(n/2)$ and $N-r=\tfrac{n^2}4$; then $\tfrac r{N-r}=\tfrac{n-2}n$. Check each.
 3. **"Exactly two eigenvalues" and $E_{\min}=E_{\max}^\perp$.** Does the hypothesis as stated force the complement to be a single eigenspace, or could $W$ have a kernel? **A zero eigenvalue is this record's recurring obstruction**, say whether "exactly two eigenvalues" excludes it and what happens if it does not.
 4. **The identification.** The proof says two unit positive multiples of one operator coincide. Is the Casimir member really the *positive* multiple, and is its $E_{\max}$ really $\mathfrak h$ rather than the complement? Check the sign of $\theta$ under the two choices.

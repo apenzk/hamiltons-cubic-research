@@ -16,14 +16,14 @@ Cold read of [BRIEF_L28.md](BRIEF_L28.md) by verifier v182. **No numerical work 
 | 7 | $V_{(1,1);(1,1)}$ is absent at $m=3$, and the vanishing of $\frac{m^2(m+1)(m-3)}4$ is the continuation agreeing rather than the reason | **PROVEN**, and the epistemic caveat is right |
 | 7b | The block attributes that absence to "the branching rule" | **GAP (attribution)**, at $m=3$ the cited rule has no content; the absence is nonetheless sound on weight grounds |
 | 8 | $\lambda_{\max}(L_e\vert_{W^\perp})=\frac{m+2}{2(m+1)}>\tfrac12$ | **PROVEN** |
-| 9 | $\operatorname{tr}L_e=0$ | **PROVEN**, and Fox's Theorem 1.3 does apply, checked at source |
-| 10 | $\operatorname{tr}(L_e^2)=\frac{3m(m-1)(4m-1)}{4(m+1)}$ | **PROVEN** |
+| 9 | $\mathop{\mathrm{tr}}L_e=0$ | **PROVEN**, and Fox's Theorem 1.3 does apply, checked at source |
+| 10 | $\mathop{\mathrm{tr}}(L_e^2)=\frac{3m(m-1)(4m-1)}{4(m+1)}$ | **PROVEN** |
 | 11 | $\ldots=\kappa_F(2m)\lVert e\rVert^2$ with $\kappa_F(n)=\frac{(2n-1)(n-1)}4$ | **PROVEN as arithmetic; HYPOTHESIS-DEBT as a check**, $\kappa_F$'s closed form is this record's numerical fit, not Fox's theorem |
-| 12 | "Two identities check the whole list" (independence of the check | **OVERSTATED**), one is theorem-backed, the other is $\kappa=\theta^2\operatorname{tr}(L_e^2)$ read backwards |
-| 13 | The $\operatorname{tr}L_e=0$ solve returns $\frac{m+2}{2(m+1)}$ on the $\mathfrak{su}(m)$ row | **PROVEN**, the block's displayed line is arithmetically exact |
+| 12 | "Two identities check the whole list" (independence of the check | **OVERSTATED**), one is theorem-backed, the other is $\kappa=\theta^2\mathop{\mathrm{tr}}(L_e^2)$ read backwards |
+| 13 | The $\mathop{\mathrm{tr}}L_e=0$ solve returns $\frac{m+2}{2(m+1)}$ on the $\mathfrak{su}(m)$ row | **PROVEN**, the block's displayed line is arithmetically exact |
 | 14 | "each remaining class is recovered uniquely the same way" | **PROVEN for $m\ge4$; vacuously false at $m=3$ on row 4** (zero coefficient) |
 | 15 | $e$'s closed form is exactly traceless | **PROVEN** |
-| 16 | $\lVert e\rVert^2=1/\theta^2$ with $\theta^2=\frac{(m+1)(2m-1)}{3m(m-1)}$ | **PROVEN**, under $\lVert X\rVert^2=\operatorname{tr}(X^2)$, and only under it |
+| 16 | $\lVert e\rVert^2=1/\theta^2$ with $\theta^2=\frac{(m+1)(2m-1)}{3m(m-1)}$ | **PROVEN**, under $\lVert X\rVert^2=\mathop{\mathrm{tr}}(X^2)$, and only under it |
 | 17 | Slack against [L70](../findings/bounds.md) is exactly $2(m-2)\theta$, vanishing only at $m=2$ | **PROVEN** |
 | 18 | The landscape line at [results.md](../results.md) line 142 against the table's orbit row | **INCONSISTENT AS WRITTEN**, the qualifier "among the rest" is dropped |
 | 19 | "the same table stands at [second-order.md](../findings/second-order.md)" | **AGREE**, row for row, dimension for dimension, value for value |
@@ -43,7 +43,7 @@ Quoted from [conventions.md](../findings/conventions.md), never restated.
 - The $\circ$ product, "$X\circ Y=\tfrac12(Q(X+Y)-Q(X)-Q(Y))$, with $e=W/\theta$ and $L_e=e\circ(\cdot)$. The whole second-order apparatus rests on it."
 - $T$, third sense, "the fully symmetric trilinear form $T(X,Y,Z)=\langle X\circ Y,Z\rangle$ on $\mathcal W_n$, whose symmetry is what makes $L_e$ self-adjoint and hence [L24](../findings/second-order.md)'s $\lambda_{\max}$ well defined at all".
 - Morse–Bott nondegeneracy, "A critical orbit is Morse–Bott nondegenerate when $\ker\mathrm{Hess}_SP$ equals the orbit tangent exactly. Via [L24](../findings/second-order.md)'s $\mathrm{Hess}_SP=6\theta(L_e-\tfrac12\mathrm{Id})$ that kernel is the eigenspace **at** $\tfrac12$, *so an eigenvalue **above** $\tfrac12$ off the orbit costs maximality and contributes nothing to the kernel, and the two failures must never be collapsed.*"
-- $\lVert\cdot\rVert$ against $\lVert\cdot\rVert_F$, "This record's norm is $\lVert Z\rVert^2=\tfrac12\operatorname{tr}(Z^{\mathsf T}Z)$, so $\lVert Z\rVert_F^2=2\lVert Z\rVert^2$". *This is stated for $\mathfrak{so}(n)$, i.e. for bivectors, and §8 below shows the L28 block runs on the un-halved $\operatorname{tr}(X^2)$ for curvature operators. Both are on the record and the block names neither.*
+- $\lVert\cdot\rVert$ against $\lVert\cdot\rVert_F$, "This record's norm is $\lVert Z\rVert^2=\tfrac12\mathop{\mathrm{tr}}(Z^{\mathsf T}Z)$, so $\lVert Z\rVert_F^2=2\lVert Z\rVert^2$". *This is stated for $\mathfrak{so}(n)$, i.e. for bivectors, and §8 below shows the L28 block runs on the un-halved $\mathop{\mathrm{tr}}(X^2)$ for curvature operators. Both are on the record and the block names neither.*
 
 Two derived facts I use and state once. **First**, $\dim\mathcal W_{2m}=\frac{2m(2m-3)(2m+1)(2m+2)}{12}=\frac{m(m+1)(2m+1)(2m-3)}3$, so the block's target polynomial is the tabled dimension and not a second convention. **Second**, $X\circ X=\tfrac12\big(Q(2X)-2Q(X)\big)=\tfrac12\big(4Q(X)-2Q(X)\big)=Q(X)$, so $L_ee=Q(e)$.
 
@@ -171,7 +171,7 @@ The block says row 4 "needs four rows of a Young diagram against the $m=3$ avail
 
 ## 6. Both Fox identities, and the import checked at source, PROVEN as arithmetic; the second is not the independent check it is billed as
 
-### 6a. $\operatorname{tr}L_e=0$, PROVEN
+### 6a. $\mathop{\mathrm{tr}}L_e=0$, PROVEN
 
 Summing $d_S\lambda_S$: $1+(m^2-1)\frac{m+2}{2(m+1)}+m(m-1)\cdot\tfrac12+\frac{m^2(m+1)(m-3)}4\cdot\frac2{m+1}+0+0+\frac{m^2(m^2-1)}6\cdot(-\frac3{m+1})$, i.e.
 
@@ -179,7 +179,7 @@ $$1+\frac{(m-1)(m+2)}2+\frac{m(m-1)}2+\frac{m^2(m-3)}2-\frac{m^2(m-1)}2 .$$
 
 The bracketed numerators are $m^2+m-2$, $m^2-m$, $m^3-3m^2$ and $-(m^3-m^2)$. The $m^3$ terms cancel; the $m^2$ terms are $1+1-3+1=0$; the $m$ terms are $+1-1=0$; the constant is $-2$. So the sum is $1+\tfrac12(-2)=\mathbf0$. **Identically in $m$.** This is also, term for term, the block's own displayed line, so its display is exact.
 
-### 6b. $\operatorname{tr}(L_e^2)$, PROVEN
+### 6b. $\mathop{\mathrm{tr}}(L_e^2)$, PROVEN
 
 Summing $d_S\lambda_S^2$ over the common denominator $4(m+1)$:
 
@@ -187,7 +187,7 @@ $$\frac{4(m+1)+(m-1)(m+2)^2+m(m-1)(m+1)+4m^2(m-3)+6m^2(m-1)}{4(m+1)} .$$
 
 Numerator: $4m+4$; $m^3+3m^2-4$; $m^3-m$; $4m^3-12m^2$; $6m^3-6m^2$. Collecting, $m^3$: $1+1+4+6=12$; $m^2$: $3-12-6=-15$; $m$: $4-1=3$; constant: $4-4=0$. So the numerator is $12m^3-15m^2+3m=3m(4m^2-5m+1)=3m(m-1)(4m-1)$ and
 
-$$\operatorname{tr}(L_e^2)=\frac{3m(m-1)(4m-1)}{4(m+1)},$$
+$$\mathop{\mathrm{tr}}(L_e^2)=\frac{3m(m-1)(4m-1)}{4(m+1)},$$
 
 **exactly as the block states.** And $\kappa_F(2m)\lVert e\rVert^2=\frac{(4m-1)(2m-1)}4\cdot\frac{3m(m-1)}{(m+1)(2m-1)}=\frac{3m(m-1)(4m-1)}{4(m+1)}$: the $(2m-1)$ cancels and **the two sides agree identically in $m$.**
 
@@ -195,7 +195,7 @@ $$\operatorname{tr}(L_e^2)=\frac{3m(m-1)(4m-1)}{4(m+1)},$$
 
 The trap named in the brief is an imported theorem whose hypotheses were never checked, "one route here died because a cited theorem assumes a *unital* algebra and $\mathcal W_n$ has no unit". I went to [references/fox-2019-nonassociative-curvature-algebra/notes.md](../references/fox-2019-nonassociative-curvature-algebra/notes.md), which transcribes the theorem verbatim:
 
-> "A nontrivial finite-dimensional Euclidean metrized commutative algebra $(A,\circ,h)$ on which a real Lie group $G$ acts irreducibly by isometric automorphisms is exact and Killing metrized with Killing form $\tau_\circ(x,y)=\operatorname{tr}L_\circ(x)L_\circ(y)$ equal to a nonzero multiple of the metric $h$."
+> "A nontrivial finite-dimensional Euclidean metrized commutative algebra $(A,\circ,h)$ on which a real Lie group $G$ acts irreducibly by isometric automorphisms is exact and Killing metrized with Killing form $\tau_\circ(x,y)=\mathop{\mathrm{tr}}L_\circ(x)L_\circ(y)$ equal to a nonzero multiple of the metric $h$."
 
 **There is no unitality hypothesis.** The five that are there, against $\mathcal W_{2m}$ at $m\ge3$:
 
@@ -207,16 +207,16 @@ The trap named in the brief is an imported theorem whose hypotheses were never c
 | Euclidean $h$ | yes, the Frobenius form is positive definite |
 | a real Lie group acting **irreducibly** by isometric automorphisms | yes, $G=O(n)$, and the notes are explicit that it must be $O(n)$ rather than $SO(n)$, "at $n=4$ the space of $SO(4)$-invariant symmetric forms on $\mathrm{MC}_W$ is two-dimensional, against one at $n=5,6$". Here $n=2m\ge6$ |
 
-**So $\operatorname{tr}L_e=0$ is theorem-backed and its hypotheses hold.** That is the one Fox import in this block that carries its own weight, and §6a shows the table satisfies it.
+**So $\mathop{\mathrm{tr}}L_e=0$ is theorem-backed and its hypotheses hold.** That is the one Fox import in this block that carries its own weight, and §6a shows the table satisfies it.
 
 ### 6d. The second identity is not an independent check, HYPOTHESIS-DEBT on $\kappa_F$
 
-The block writes "**Fox's Theorem 1.3** … gives $\operatorname{tr}L(x)=0$ and $\operatorname{tr}(L(x)L(y))=\kappa_F\langle x,y\rangle$ with $\kappa_F(n)=\frac{(2n-1)(n-1)}4$", which reads as attributing the closed form to Fox. The record says the opposite in two places. [algebra.md](../findings/algebra.md) line 19: "**This is a number Fox does not have: his Remark 1.4 explicitly leaves $\kappa$ uncomputed for $\dim V>4$.**" The reference notes agree: "**Remark 1.4 leaves $\kappa$ uncomputed for $\dim V>4$**, and **Theorem 1.5(2)** supplies the single value $\kappa=21/16$ at $\dim V=4$". Line 21 of algebra.md describes how the closed form was obtained, "**Verified far beyond the fit**", "roughly 90 points", "maximum deviation $4\times10^{-13}$". **It is a numerical fit with one analytic anchor, at $n=4$.**
+The block writes "**Fox's Theorem 1.3** … gives $\mathop{\mathrm{tr}}L(x)=0$ and $\mathop{\mathrm{tr}}(L(x)L(y))=\kappa_F\langle x,y\rangle$ with $\kappa_F(n)=\frac{(2n-1)(n-1)}4$", which reads as attributing the closed form to Fox. The record says the opposite in two places. [algebra.md](../findings/algebra.md) line 19: "**This is a number Fox does not have: his Remark 1.4 explicitly leaves $\kappa$ uncomputed for $\dim V>4$.**" The reference notes agree: "**Remark 1.4 leaves $\kappa$ uncomputed for $\dim V>4$**, and **Theorem 1.5(2)** supplies the single value $\kappa=21/16$ at $\dim V=4$". Line 21 of algebra.md describes how the closed form was obtained, "**Verified far beyond the fit**", "roughly 90 points", "maximum deviation $4\times10^{-13}$". **It is a numerical fit with one analytic anchor, at $n=4$.**
 
 Two consequences for this block.
 
-- **The identity is circular as a check.** algebra.md line 23 records "the general relation is $\kappa=\theta^2\operatorname{tr}(L_e^2)$, which is [Observation L25](../findings/second-order.md)'s $\operatorname{tr}L_e^2=\kappa_W/\theta^2$ read the other way". So §6b's identity is the *definition* of $\kappa$ evaluated on this very table, compared against a formula fitted elsewhere. It is a genuine consistency check of the seven $(d_S,\lambda_S)$ pairs against numerics taken at other points, and a single wrong value would indeed break it, but it is not a theorem constraining the table.
-- **The $n=4$ anchor is unavailable here.** $\kappa_{\rm Frob}(4)=\frac{7\cdot3}4=\frac{21}4$ and $\theta^2=\tfrac32$ at $W_{\mathbb{CP}^2}$ give $\operatorname{tr}(L_e^2)=\tfrac72$, which is what $\frac{3m(m-1)(4m-1)}{4(m+1)}$ returns at $m=2$. **That agreement is not evidence**: at $m=2$ row 4's dimension polynomial is $\frac{4\cdot3\cdot(-1)}4=-3$, so the $m=2$ evaluation is analytic continuation through a negative dimension and not an evaluation of any decomposition. [second-order.md](../findings/second-order.md) line 260 independently confirms that the table's own $\mathfrak{su}(m)$ formula is **false** at $m=2$: "*the formula gives $\tfrac23$ at $m=2$ where the true value is $\tfrac12$*".
+- **The identity is circular as a check.** algebra.md line 23 records "the general relation is $\kappa=\theta^2\mathop{\mathrm{tr}}(L_e^2)$, which is [Observation L25](../findings/second-order.md)'s $\mathop{\mathrm{tr}}L_e^2=\kappa_W/\theta^2$ read the other way". So §6b's identity is the *definition* of $\kappa$ evaluated on this very table, compared against a formula fitted elsewhere. It is a genuine consistency check of the seven $(d_S,\lambda_S)$ pairs against numerics taken at other points, and a single wrong value would indeed break it, but it is not a theorem constraining the table.
+- **The $n=4$ anchor is unavailable here.** $\kappa_{\rm Frob}(4)=\frac{7\cdot3}4=\frac{21}4$ and $\theta^2=\tfrac32$ at $W_{\mathbb{CP}^2}$ give $\mathop{\mathrm{tr}}(L_e^2)=\tfrac72$, which is what $\frac{3m(m-1)(4m-1)}{4(m+1)}$ returns at $m=2$. **That agreement is not evidence**: at $m=2$ row 4's dimension polynomial is $\frac{4\cdot3\cdot(-1)}4=-3$, so the $m=2$ evaluation is analytic continuation through a negative dimension and not an evaluation of any decomposition. [second-order.md](../findings/second-order.md) line 260 independently confirms that the table's own $\mathfrak{su}(m)$ formula is **false** at $m=2$: "*the formula gives $\tfrac23$ at $m=2$ where the true value is $\tfrac12$*".
 
 **Verdict.** The block's sentence "Two identities check the whole list, and each fails if any single value is wrong by a rational function of $m$" is true of both identities as arithmetic. Its billing of them as Fox's, "Fox's Theorem 1.3 … gives … with $\kappa_F(n)=\dots$", overstates the second: at every $n=2m$ with $m\ge3$ there is no theorem behind $\kappa_F$'s value on the record. The correct statement of what the second identity delivers is *consistency with a fitted constant*, and the block should say so.
 
@@ -242,7 +242,7 @@ $$\frac{m^2(m^2-1)}6\,y_7=-\frac{m^2(m-1)}2,\qquad y_7=-\frac{6(m-1)}{2(m^2-1)}=
 
 **Verdict: the universal claim "each remaining class is recovered uniquely the same way" holds for $m\ge4$ and is vacuous at $m=3$ on row 4**, where the summand is absent, so nothing is owed and nothing is lost. It is a scoping correction, not a break.
 
-**But the claim it supports is weaker than it sounds.** The block concludes "So $\lambda_{\max}$ rests on more than the charge formula". Each solve consumes six other values, five of which come from the charge formula, so the route recovers $\lambda_{\max}$ *given* the rest rather than independently of them. What $\operatorname{tr}L_e=0$ genuinely delivers is one scalar constraint that the whole $7$-vector satisfies, under which any single wrong entry is detected, real, and correctly described by the block's own "each fails if any single value is wrong". The stronger reading, that the $\mathfrak{su}(m)$ row has a second independent derivation, is **not** what the algebra shows.
+**But the claim it supports is weaker than it sounds.** The block concludes "So $\lambda_{\max}$ rests on more than the charge formula". Each solve consumes six other values, five of which come from the charge formula, so the route recovers $\lambda_{\max}$ *given* the rest rather than independently of them. What $\mathop{\mathrm{tr}}L_e=0$ genuinely delivers is one scalar constraint that the whole $7$-vector satisfies, under which any single wrong entry is detected, real, and correctly described by the block's own "each fails if any single value is wrong". The stronger reading, that the $\mathfrak{su}(m)$ row has a second independent derivation, is **not** what the algebra shows.
 
 ## 8. The closed form for $e$, its tracelessness and norm, and the L70 slack, all PROVEN
 
@@ -250,22 +250,22 @@ $$\frac{m^2(m^2-1)}6\,y_7=-\frac{m^2(m-1)}2,\qquad y_7=-\frac{6(m-1)}{2(m^2-1)}=
 
 $$e=\frac W\theta=-\frac1{2m-1}P_{\mathfrak m}+\frac{m-2}{(m+1)(2m-1)}P_{\mathfrak{su}(m)}+\frac{2(m-1)}{2m-1}P_\omega,\qquad\theta^2=\frac{(m+1)(2m-1)}{3m(m-1)} .$$
 
-The three projectors are complementary on $\Lambda^2\mathbb R^{2m}$: $\operatorname{rank}P_{\mathfrak m}=\dim\mathfrak{so}(2m)-\dim\mathfrak u(m)=m(2m-1)-m^2=m(m-1)$, $\operatorname{rank}P_{\mathfrak{su}(m)}=m^2-1$, $\operatorname{rank}P_\omega=1$, and $m(m-1)+(m^2-1)+1=m(2m-1)=\binom{2m}2$. ✓
+The three projectors are complementary on $\Lambda^2\mathbb R^{2m}$: $\mathop{\mathrm{rank}}P_{\mathfrak m}=\dim\mathfrak{so}(2m)-\dim\mathfrak u(m)=m(2m-1)-m^2=m(m-1)$, $\mathop{\mathrm{rank}}P_{\mathfrak{su}(m)}=m^2-1$, $\mathop{\mathrm{rank}}P_\omega=1$, and $m(m-1)+(m^2-1)+1=m(2m-1)=\binom{2m}2$. ✓
 
 ### 8a. Exact tracelessness, PROVEN
 
-$$(2m-1)\operatorname{tr}e=-m(m-1)+\frac{(m-2)(m^2-1)}{m+1}+2(m-1)=(m-1)\big[-m+(m-2)+2\big]=0 .$$
+$$(2m-1)\mathop{\mathrm{tr}}e=-m(m-1)+\frac{(m-2)(m^2-1)}{m+1}+2(m-1)=(m-1)\big[-m+(m-2)+2\big]=0 .$$
 
 **Exactly zero, identically in $m$**, with no cancellation of surds needed, the coefficients are rational in $m$ because, as the source says, "the surd in $\theta$ cancels".
 
 ### 8b. $\lVert e\rVert^2=1/\theta^2$, PROVEN, and it pins the norm convention
 
-$$(2m-1)^2(m+1)\operatorname{tr}(e^2)=(m-1)\Big[m(m+1)+(m-2)^2+4(m-1)(m+1)\Big]=(m-1)\big[m^2+m+m^2-4m+4+4m^2-4\big]$$
+$$(2m-1)^2(m+1)\mathop{\mathrm{tr}}(e^2)=(m-1)\Big[m(m+1)+(m-2)^2+4(m-1)(m+1)\Big]=(m-1)\big[m^2+m+m^2-4m+4+4m^2-4\big]$$
 $$=(m-1)(6m^2-3m)=3m(m-1)(2m-1),$$
 
-so $\operatorname{tr}(e^2)=\frac{3m(m-1)}{(2m-1)(m+1)}=1/\theta^2$. **Exact.**
+so $\mathop{\mathrm{tr}}(e^2)=\frac{3m(m-1)}{(2m-1)(m+1)}=1/\theta^2$. **Exact.**
 
-**A symbol collision worth naming.** conventions.md's norm entry reads "This record's norm is $\lVert Z\rVert^2=\tfrac12\operatorname{tr}(Z^{\mathsf T}Z)$", stated for $\mathfrak{so}(n)$, i.e. for bivectors. The identity above holds under the **un-halved** $\lVert X\rVert^2=\operatorname{tr}(X^2)$ for curvature operators, and under the halved reading it would fail by a factor $2$, taking §6b's Fox check down with it. The L28 block names neither reading. Both are on the record and the arithmetic selects the un-halved one unambiguously, so nothing here is wrong, but the block relies on a convention it does not cite, in a file whose own conventions table flags this exact letter as a live collision.
+**A symbol collision worth naming.** conventions.md's norm entry reads "This record's norm is $\lVert Z\rVert^2=\tfrac12\mathop{\mathrm{tr}}(Z^{\mathsf T}Z)$", stated for $\mathfrak{so}(n)$, i.e. for bivectors. The identity above holds under the **un-halved** $\lVert X\rVert^2=\mathop{\mathrm{tr}}(X^2)$ for curvature operators, and under the halved reading it would fail by a factor $2$, taking §6b's Fox check down with it. The L28 block names neither reading. Both are on the record and the arithmetic selects the un-halved one unambiguously, so nothing here is wrong, but the block relies on a convention it does not cite, in a file whose own conventions table flags this exact letter as a live collision.
 
 ### 8c. The slack against [L70](../findings/bounds.md) is exactly $2(m-2)\theta$, PROVEN
 
@@ -329,7 +329,7 @@ The block says "the same table stands at [second-order.md](../findings/second-or
 **What is corrected.**
 
 1. **HYPOTHESIS-DEBT, $m=3$, multiplicity-freeness.** The branching rule the block cites carries the hypothesis $m\ge4$ in the record's own reference notes, and $m=3$ is the case the headline "with **no exception**" turns on. What would have to be proved: that each of the six surviving $GL(3)$-irreps occurs in $\mathrm{Weyl}_6\otimes\mathbb C$, given occurrence, the dimension identity $1+8+6+30+27+12=84$ closes multiplicity-freeness at $m=3$ by itself. I supply no substitute argument.
-2. **HYPOTHESIS-DEBT, $\kappa_F$.** Its closed form is this record's numerical fit with a single analytic anchor at $n=4$, which the table cannot reach; the block presents it as Fox's Theorem 1.3. The first identity is theorem-backed; the second is a consistency check against a fitted constant, and is $\kappa=\theta^2\operatorname{tr}(L_e^2)$ read backwards.
+2. **HYPOTHESIS-DEBT, $\kappa_F$.** Its closed form is this record's numerical fit with a single analytic anchor at $n=4$, which the table cannot reach; the block presents it as Fox's Theorem 1.3. The first identity is theorem-backed; the second is a consistency check against a fitted constant, and is $\kappa=\theta^2\mathop{\mathrm{tr}}(L_e^2)$ read backwards.
 3. **Scope, three places.** "ten"/"seven" is nine/six at $m=3$; "each remaining class is recovered uniquely" fails on row 4 at $m=3$, vacuously; the absence at $m=3$ is attributed to a rule that has no content there.
 4. **Overstatement, one place.** "So $\lambda_{\max}$ rests on more than the charge formula", the trace solve consumes six other values, five of them from the charge formula, so it recovers $\lambda_{\max}$ given the rest rather than independently of it.
 5. **Inconsistency in [results.md](../results.md) line 142.** "Only $\tfrac2{m+1}$ reaches $\tfrac12$" needs "among the summands off the orbit"; without it the landscape line denies the table's own orbit row.

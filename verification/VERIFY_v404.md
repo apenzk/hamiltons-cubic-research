@@ -23,7 +23,7 @@ Quoted from the brief:
 - The step: "$Q(A)=\theta_AA$ and $Q(B)=\theta_BB$, with $\langle A,B\rangle=0$ and $A\circ B\ne0$".
 - "A claim supported only by a run is `HYPOTHESIS-DEBT`."
 
-Below, the Frobenius inner product on symmetric operators of $\Lambda^2\mathbb R^4$ is $\langle X,Y\rangle=\operatorname{tr}(XY)$ in an orthonormal basis of $\Lambda^2\mathbb R^4$. Criticality, orthogonality and $A\circ B\ne0$ are each unchanged when the inner product is multiplied by a positive constant (only the value of $\theta$ rescales), so the witness serves under any positive multiple of this convention.
+Below, the Frobenius inner product on symmetric operators of $\Lambda^2\mathbb R^4$ is $\langle X,Y\rangle=\mathop{\mathrm{tr}}(XY)$ in an orthonormal basis of $\Lambda^2\mathbb R^4$. Criticality, orthogonality and $A\circ B\ne0$ are each unchanged when the inner product is multiplied by a positive constant (only the value of $\theta$ rescales), so the witness serves under any positive multiple of this convention.
 
 ## 1. Hypothesis inventory
 
@@ -47,15 +47,15 @@ The strongest reading is existential: criticality of two unit Weyl tensors toget
 
 Take $n=4$ and an orthonormal basis $f_1,f_2,f_3$ of $\Lambda^+$, extended by an orthonormal basis of $\Lambda^-$. By H4, $[\Lambda^+,\Lambda^-]=0$ and $[\Lambda^+,\Lambda^+]\subset\Lambda^+$, so $c_{abc}=0$ unless $a,b,c$ all lie in the same block. Restricted to $\Lambda^+$, $c$ is a totally antisymmetric 3-tensor on a 3-dimensional space (H2), hence $c_{abc}=\kappa\,\varepsilon_{abc}$ for one real $\kappa$.
 
-Let $A$ be a symmetric traceless $3\times3$ matrix on $\Lambda^+$, extended by $0$ on $\Lambda^-$. By H4 it lies in $\mathcal W_4$. In H3 every nonzero term has $c,d,e,f\in\Lambda^+$, which forces $a,b\in\Lambda^+$, so $A^\#$ lives on $\Lambda^+$ and there $(A^\#)_{ab}=\tfrac12\kappa^2\sum\varepsilon_{acd}\varepsilon_{bef}A_{ce}A_{df}=\kappa^2\operatorname{cof}(A)_{ab}$. The identity $\sum\varepsilon_{acd}\varepsilon_{bef}A_{ce}A_{df}=2\operatorname{cof}(A)_{ab}$ is standard, and at $a=b=1$ it reads $2(A_{22}A_{33}-A_{23}A_{32})$ by direct expansion.
+Let $A$ be a symmetric traceless $3\times3$ matrix on $\Lambda^+$, extended by $0$ on $\Lambda^-$. By H4 it lies in $\mathcal W_4$. In H3 every nonzero term has $c,d,e,f\in\Lambda^+$, which forces $a,b\in\Lambda^+$, so $A^\#$ lives on $\Lambda^+$ and there $(A^\#)_{ab}=\tfrac12\kappa^2\sum\varepsilon_{acd}\varepsilon_{bef}A_{ce}A_{df}=\kappa^2\mathop{\mathrm{cof}}(A)_{ab}$. The identity $\sum\varepsilon_{acd}\varepsilon_{bef}A_{ce}A_{df}=2\mathop{\mathrm{cof}}(A)_{ab}$ is standard, and at $a=b=1$ it reads $2(A_{22}A_{33}-A_{23}A_{32})$ by direct expansion.
 
-Cayley–Hamilton for a $3\times3$ matrix with $\operatorname{tr}A=0$ gives $\operatorname{adj}(A)=A^2-\sigma_1A+\sigma_2I=A^2-\tfrac12\operatorname{tr}(A^2)\,I$, since $\sigma_1=0$ and $\sigma_2=\tfrac12\big((\operatorname{tr}A)^2-\operatorname{tr}A^2\big)$. For symmetric $A$, $\operatorname{cof}(A)=\operatorname{adj}(A)$. Hence
-$$Q(A)=(1+\kappa^2)A^2-\tfrac{\kappa^2}2\operatorname{tr}(A^2)\,I_{\Lambda^+}.$$
-By H1, $Q(A)\in\mathcal W_4$ is traceless on $\Lambda^+$, and $\operatorname{tr}Q(A)=(1+\kappa^2-\tfrac32\kappa^2)\operatorname{tr}A^2=(1-\tfrac{\kappa^2}2)\operatorname{tr}A^2$. Any $A\ne0$ forces $\kappa^2=2$, so on $S^2_0(\Lambda^+)$
-$$Q(A)=3A^2-\operatorname{tr}(A^2)\,I,\qquad X\circ Y=\tfrac32(XY+YX)-\operatorname{tr}(XY)\,I.$$
+Cayley–Hamilton for a $3\times3$ matrix with $\mathop{\mathrm{tr}}A=0$ gives $\mathop{\mathrm{adj}}(A)=A^2-\sigma_1A+\sigma_2I=A^2-\tfrac12\mathop{\mathrm{tr}}(A^2)\,I$, since $\sigma_1=0$ and $\sigma_2=\tfrac12\big((\mathop{\mathrm{tr}}A)^2-\mathop{\mathrm{tr}}A^2\big)$. For symmetric $A$, $\mathop{\mathrm{cof}}(A)=\mathop{\mathrm{adj}}(A)$. Hence
+$$Q(A)=(1+\kappa^2)A^2-\tfrac{\kappa^2}2\mathop{\mathrm{tr}}(A^2)\,I_{\Lambda^+}.$$
+By H1, $Q(A)\in\mathcal W_4$ is traceless on $\Lambda^+$, and $\mathop{\mathrm{tr}}Q(A)=(1+\kappa^2-\tfrac32\kappa^2)\mathop{\mathrm{tr}}A^2=(1-\tfrac{\kappa^2}2)\mathop{\mathrm{tr}}A^2$. Any $A\ne0$ forces $\kappa^2=2$, so on $S^2_0(\Lambda^+)$
+$$Q(A)=3A^2-\mathop{\mathrm{tr}}(A^2)\,I,\qquad X\circ Y=\tfrac32(XY+YX)-\mathop{\mathrm{tr}}(XY)\,I.$$
 The second formula follows from the first by expanding $\tfrac12\big(Q(X+Y)-Q(X)-Q(Y)\big)$.
 
-*Screen of the normalisation, not load-bearing.* With $\kappa^2=2$, $\mathrm{id}^\#$ on $\Lambda^+$ is $\kappa^2\operatorname{adj}(I_3)=2I=(n-2)\,\mathrm{id}$ at $n=4$, as the brief's convention requires. And for $S^2\times S^2$ the normalised Weyl tensor is $(A_++A_-)/\sqrt2$ with $A_\pm$ unit of eigenvalue pattern $(2,-1,-1)$ on $\Lambda^\pm$, so by §2.3 below $Q$ acts on it with factor $\tfrac{\sqrt6}2\cdot\tfrac1{\sqrt2}=\tfrac{\sqrt3}2$, which is Nienhaus's $\theta_{2,2}=\sqrt2\sqrt{\tfrac12\cdot\tfrac12\cdot\tfrac32}=\tfrac{\sqrt3}2$ from Proposition 2.25.
+*Screen of the normalisation, not load-bearing.* With $\kappa^2=2$, $\mathrm{id}^\#$ on $\Lambda^+$ is $\kappa^2\mathop{\mathrm{adj}}(I_3)=2I=(n-2)\,\mathrm{id}$ at $n=4$, as the brief's convention requires. And for $S^2\times S^2$ the normalised Weyl tensor is $(A_++A_-)/\sqrt2$ with $A_\pm$ unit of eigenvalue pattern $(2,-1,-1)$ on $\Lambda^\pm$, so by §2.3 below $Q$ acts on it with factor $\tfrac{\sqrt6}2\cdot\tfrac1{\sqrt2}=\tfrac{\sqrt3}2$, which is Nienhaus's $\theta_{2,2}=\sqrt2\sqrt{\tfrac12\cdot\tfrac12\cdot\tfrac32}=\tfrac{\sqrt3}2$ from Proposition 2.25.
 
 ### 2.3 The witness
 
@@ -63,12 +63,12 @@ Let $J$ be the $3\times3$ all-ones matrix, $E_{11}$ the matrix unit, and set, on
 $$A=\tfrac1{\sqrt6}(3E_{11}-I)=\tfrac1{\sqrt6}\mathrm{diag}(2,-1,-1),\qquad B=\tfrac1{\sqrt6}(J-I).$$
 Both are symmetric and traceless, hence in $\mathcal W_4$ by H4. Each property is checked by hand.
 
-- **Unit.** $\operatorname{tr}A^2=\tfrac16(4+1+1)=1$. Since $J^2=3J$, $B^2=\tfrac16(J^2-2J+I)=\tfrac16(J+I)$, and $\operatorname{tr}B^2=\tfrac16(3+3)=1$.
+- **Unit.** $\mathop{\mathrm{tr}}A^2=\tfrac16(4+1+1)=1$. Since $J^2=3J$, $B^2=\tfrac16(J^2-2J+I)=\tfrac16(J+I)$, and $\mathop{\mathrm{tr}}B^2=\tfrac16(3+3)=1$.
 - **$A$ is critical.** $Q(A)=3\cdot\tfrac16\mathrm{diag}(4,1,1)-I=\mathrm{diag}(1,-\tfrac12,-\tfrac12)=\tfrac{\sqrt6}2A$, so $\theta_A=\tfrac{\sqrt6}2$.
 - **$B$ is critical.** $Q(B)=3\cdot\tfrac16(J+I)-I=\tfrac12(J-I)=\tfrac{\sqrt6}2B$, so $\theta_B=\tfrac{\sqrt6}2$.
-- **Frobenius orthogonal.** $\sqrt6A$ is diagonal with diagonal $(2,-1,-1)$ and $\sqrt6B$ has zero diagonal, so $\operatorname{tr}(AB)=\tfrac16\sum_i(\sqrt6A)_{ii}(\sqrt6B)_{ii}=0$.
-- **$A\circ B\ne0$.** Write $D=\mathrm{diag}(2,-1,-1)$ and $N=J-I$. Then $(DN+ND)_{ij}=N_{ij}(d_i+d_j)$, which is $0$ on the diagonal, $2-1=1$ at $(1,2)$ and $(1,3)$, and $-1-1=-2$ at $(2,3)$. So $AB+BA=\tfrac16M$ with $M=\begin{pmatrix}0&1&1\\1&0&-2\\1&-2&0\end{pmatrix}$, and since $\operatorname{tr}(AB)=0$, $A\circ B=\tfrac32\cdot\tfrac16M=\tfrac14M\ne0$. Its norm is $\lVert A\circ B\rVert^2=\tfrac1{16}\operatorname{tr}M^2=\tfrac{12}{16}$, so $\lVert A\circ B\rVert=\tfrac{\sqrt3}2$.
-- **Cross-check against the total symmetry of $T$.** Criticality and orthogonality give $\langle A\circ B,B\rangle=\langle A,Q(B)\rangle=\theta_B\langle A,B\rangle=0$ and likewise $\langle A\circ B,A\rangle=0$. By hand, $\operatorname{tr}(MD)=0$ because $M$ has zero diagonal and $D$ is diagonal, and $\operatorname{tr}(MN)=2(1+1-2)=0$. Both agree.
+- **Frobenius orthogonal.** $\sqrt6A$ is diagonal with diagonal $(2,-1,-1)$ and $\sqrt6B$ has zero diagonal, so $\mathop{\mathrm{tr}}(AB)=\tfrac16\sum_i(\sqrt6A)_{ii}(\sqrt6B)_{ii}=0$.
+- **$A\circ B\ne0$.** Write $D=\mathrm{diag}(2,-1,-1)$ and $N=J-I$. Then $(DN+ND)_{ij}=N_{ij}(d_i+d_j)$, which is $0$ on the diagonal, $2-1=1$ at $(1,2)$ and $(1,3)$, and $-1-1=-2$ at $(2,3)$. So $AB+BA=\tfrac16M$ with $M=\begin{pmatrix}0&1&1\\1&0&-2\\1&-2&0\end{pmatrix}$, and since $\mathop{\mathrm{tr}}(AB)=0$, $A\circ B=\tfrac32\cdot\tfrac16M=\tfrac14M\ne0$. Its norm is $\lVert A\circ B\rVert^2=\tfrac1{16}\mathop{\mathrm{tr}}M^2=\tfrac{12}{16}$, so $\lVert A\circ B\rVert=\tfrac{\sqrt3}2$.
+- **Cross-check against the total symmetry of $T$.** Criticality and orthogonality give $\langle A\circ B,B\rangle=\langle A,Q(B)\rangle=\theta_B\langle A,B\rangle=0$ and likewise $\langle A\circ B,A\rangle=0$. By hand, $\mathop{\mathrm{tr}}(MD)=0$ because $M$ has zero diagonal and $D$ is diagonal, and $\mathop{\mathrm{tr}}(MN)=2(1+1-2)=0$. Both agree.
 
 The pair has a geometric reading, standard and not used above: $B=gAg^{\mathsf T}$ for any $g\in SO(3)$ with $ge_1=(1,1,1)/\sqrt3$, and $SO(4)\to SO(3)\times SO(3)$ is onto, so $B$ is an $SO(4)$-rotate of $A$. The eigenvalue pattern $(2,-1,-1)$ on $\Lambda^+$ with $W^-=0$ is that of the unit Weyl tensor of $\mathbb{CP}^2$, so the witness is two Frobenius-orthogonal copies of $W_{\mathbb{CP}^2}$ at $n=4$. The step's quantifier "for some $n\ge4$" admits $n=4$.
 

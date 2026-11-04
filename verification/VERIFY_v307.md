@@ -20,7 +20,7 @@ Summary: the linear algebra of L90 is sound for $\mu$ restricted to Grams over $
 
 ## 0. Conventions, fixed once
 
-- $\mathcal W_5$: algebraic Weyl tensors on $\mathbb R^5$. $W_0$: padded Weyl tensor of $\mathbb{CP}^2$. $F_5=\tfrac32\lVert W\rVert^6-9\operatorname{tr}(W^3)^2$.
+- $\mathcal W_5$: algebraic Weyl tensors on $\mathbb R^5$. $W_0$: padded Weyl tensor of $\mathbb{CP}^2$. $F_5=\tfrac32\lVert W\rVert^6-9\mathop{\mathrm{tr}}(W^3)^2$.
 - $K\subset\mathrm{Sym}^3\mathcal W_5^*$: the cubics with $\sigma_\lambda(W_0)=0$, read (line 178) as the copy-index cut $K=\bigoplus_\lambda V_\lambda\otimes\ker T_\lambda$ inside each isotypic component $V_\lambda\otimes\mathbb R^{m_\lambda}$.
 - $G_K:=\mathrm{Sym}^2(K)^{O(5)}$, the restricted invariant Gram space, of dimension $36$ per line 179. $G:=\mathrm{Sym}^2(\mathrm{Sym}^3\mathcal W_5^*)^{O(5)}$, of dimension $65$ per L89.
 - $S:=(\mathrm{Sym}^6\mathcal W_5^*)^{O(5)}$, of dimension $14$ per L89 (Observation L85's standing).
@@ -93,8 +93,8 @@ Row 4 is CONFIRMED AS ALGEBRA, conditional on row 3.
 
 **Row 5, closed form.** $W_0$ is the padded Fubini–Study Weyl tensor. As an operator on $\Lambda^2\mathbb R^5$ its only nonzero eigenvalues are those of $W^+$ on $\Lambda^+$, namely $(2c,-c,-c)$ for some $c\neq0$ ($W^-=0$, and the padding adds zeros).
 
-- **Operator normalisation.** $\lVert W_0\rVert^2=\operatorname{tr}W_0^2=6c^2$ and $\operatorname{tr}W_0^3=(8-1-1)c^3=6c^3$. So $F_5(W_0)=\tfrac32\cdot216c^6-9\cdot36c^6=324c^6-324c^6=0$.
-- **Index normalisation.** $W_{ijkl}W_{ijkl}=4\operatorname{tr}W^2$ and $W_{ijkl}W_{klmn}W_{mnij}=8\operatorname{tr}W^3$. Both terms scale by $64$, and the value is again $0$.
+- **Operator normalisation.** $\lVert W_0\rVert^2=\mathop{\mathrm{tr}}W_0^2=6c^2$ and $\mathop{\mathrm{tr}}W_0^3=(8-1-1)c^3=6c^3$. So $F_5(W_0)=\tfrac32\cdot216c^6-9\cdot36c^6=324c^6-324c^6=0$.
+- **Index normalisation.** $W_{ijkl}W_{ijkl}=4\mathop{\mathrm{tr}}W^2$ and $W_{ijkl}W_{klmn}W_{mnij}=8\mathop{\mathrm{tr}}W^3$. Both terms scale by $64$, and the value is again $0$.
 
 This agrees with "exact over $\mathbb Z$ in both normalisations". Row 5 is CONFIRMED. The record's own support for it is its computation. The closed form above is this verifier's check, not an argument credited to the record.
 

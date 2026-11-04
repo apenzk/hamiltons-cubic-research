@@ -1,6 +1,6 @@
 # Reviewer 327, Lemma L71: the saturation structure, the $\mathfrak r=0$ hypothesis, and the mass law
 
-**Cold brief, independent build.** Everything below is computed from $\mathfrak{so}(n)$, its structure constants, $\#$ and $\mathcal W_n$ rebuilt from the definitions in [scripts/reviewers/r327/](../scripts/reviewers/r327/); no script of the record was read or run. Validation of the build: $\dim\mathcal W_n=10,35,84,168,300$ at $n=4,\dots,8$ against $(n+2)(n+1)n(n-3)/12$; $c_{abc}$ totally antisymmetric to $0$ with row mass $\sum_{bc}c_{abc}^2=2(n-2)$ exactly; $Q$ maps $\mathcal W_n$ into $\mathcal W_n$ (relative distance $\le5\times10^{-16}$ at random Weyl tensors) with $\operatorname{tr}(W^\#)=-\operatorname{tr}(W^2)$ to $10^{-16}$; and the balanced sphere products come out as genuine Weyl tensors ($\mathrm{dist}(\mathcal W_n)\le2.5\times10^{-16}$), critical to $\le6.1\times10^{-16}$, at $\theta=\theta_0(n)$ exactly.
+**Cold brief, independent build.** Everything below is computed from $\mathfrak{so}(n)$, its structure constants, $\#$ and $\mathcal W_n$ rebuilt from the definitions in [scripts/reviewers/r327/](../scripts/reviewers/r327/); no script of the record was read or run. Validation of the build: $\dim\mathcal W_n=10,35,84,168,300$ at $n=4,\dots,8$ against $(n+2)(n+1)n(n-3)/12$; $c_{abc}$ totally antisymmetric to $0$ with row mass $\sum_{bc}c_{abc}^2=2(n-2)$ exactly; $Q$ maps $\mathcal W_n$ into $\mathcal W_n$ (relative distance $\le5\times10^{-16}$ at random Weyl tensors) with $\mathop{\mathrm{tr}}(W^\#)=-\mathop{\mathrm{tr}}(W^2)$ to $10^{-16}$; and the balanced sphere products come out as genuine Weyl tensors ($\mathrm{dist}(\mathcal W_n)\le2.5\times10^{-16}$), critical to $\le6.1\times10^{-16}$, at $\theta=\theta_0(n)$ exactly.
 
 | claim | verdict |
 | --- | --- |
@@ -19,14 +19,14 @@
 
 ### 1.1 The theorem
 
-> **Theorem (r327).** Let $n\ge5$ and let $W\neq0$ be a symmetric operator on $\Lambda^2\mathbb R^n=\mathfrak{so}(n)$ with $\operatorname{tr}W=0$, in particular any $W\in\mathcal W_n$. Write $\mathfrak m=E_{\min}(W)$, $\mathfrak h=E_{\max}(W)$, $\mathfrak r$ for the sum of the remaining eigenspaces. If $\mathrm{ad}(v)$ is supported on $E_{\min}\otimes E_{\max}$ for every $v\in\mathfrak m$, i.e. if $W$ saturates [Lemma L70](../findings/bounds.md), then
+> **Theorem (r327).** Let $n\ge5$ and let $W\neq0$ be a symmetric operator on $\Lambda^2\mathbb R^n=\mathfrak{so}(n)$ with $\mathop{\mathrm{tr}}W=0$, in particular any $W\in\mathcal W_n$. Write $\mathfrak m=E_{\min}(W)$, $\mathfrak h=E_{\max}(W)$, $\mathfrak r$ for the sum of the remaining eigenspaces. If $\mathrm{ad}(v)$ is supported on $E_{\min}\otimes E_{\max}$ for every $v\in\mathfrak m$, i.e. if $W$ saturates [Lemma L70](../findings/bounds.md), then
 > $$\mathfrak r=0,\qquad \ker W=0,\qquad [\mathfrak m,\mathfrak m]=\mathfrak h,\qquad \mathfrak{so}(n)=\mathfrak h\oplus\mathfrak m \text{ is a symmetric pair.}$$
 
 Criticality is used nowhere in the proof. It enters only to make "saturation" equivalent to $\theta=\lambda_{\min}+(n-2)\lambda_{\max}$, which is Lemma L70's business, and to feed the conclusion into Lemma L23.
 
 **Proof.**
 
-*(a) $\lambda_{\min}<0<\lambda_{\max}$.* $\operatorname{tr}W=0$ and $W\neq0$ give $\lambda_{\min}<0$ and $\lambda_{\max}>0$.
+*(a) $\lambda_{\min}<0<\lambda_{\max}$.* $\mathop{\mathrm{tr}}W=0$ and $W\neq0$ give $\lambda_{\min}<0$ and $\lambda_{\max}>0$.
 
 *(b) The minimum product is attained only on $E_{\min}\times E_{\max}$.* For eigenvalues $\lambda',\lambda''$ of $W$ with $\lambda'\lambda''=\lambda_{\min}\lambda_{\max}<0$, one of them is negative, say $\lambda'<0\le\lambda''$. Then $\lambda_{\min}\le\lambda'$ and $\lambda_{\max}\ge0$ give $\lambda_{\min}\lambda_{\max}\le\lambda'\lambda_{\max}$, and $\lambda''\le\lambda_{\max}$ with $\lambda'<0$ gives $\lambda'\lambda_{\max}\le\lambda'\lambda''$. Equality throughout forces $(\lambda_{\min}-\lambda')\lambda_{\max}=0$ and $\lambda'(\lambda_{\max}-\lambda'')=0$, hence $\lambda'=\lambda_{\min}$ and $\lambda''=\lambda_{\max}$ since $\lambda_{\max}>0$ and $\lambda'<0$. So the terms of $D(v)$ with a nonzero weight are exactly the pairs with one index in $\mathfrak m$ and one in $\mathfrak h$.
 
@@ -43,9 +43,9 @@ Criticality is used nowhere in the proof. It enters only to make "saturation" eq
 ### 1.2 What it does to the record
 
 - **The hypothesis "$\mathfrak r=0$" in Lemma L71 is discharged for every $n\ge5$.** So is the record's preferred replacement "$\ker W=0$". Both are conclusions.
-- **The conjectured multiplicity law is true but empty above $n=4$.** $\mathfrak r=0$ makes $\mathfrak r\subseteq\ker W$ trivial and $\operatorname{rk}W=N$, so $\dim\mathfrak m=n^2/4$, $\dim\mathfrak h=n(n-2)/4$, the balanced values. The formula's two "regimes" are one dimension and every other dimension.
+- **The conjectured multiplicity law is true but empty above $n=4$.** $\mathfrak r=0$ makes $\mathfrak r\subseteq\ker W$ trivial and $\mathop{\mathrm{rk}}W=N$, so $\dim\mathfrak m=n^2/4$, $\dim\mathfrak h=n(n-2)/4$, the balanced values. The formula's two "regimes" are one dimension and every other dimension.
 - **Odd $n\ge5$ carries no saturating critical point at all.** $\dim\mathfrak m=n^2/4\notin\mathbb Z$ for odd $n$; equivalently Lemma L23's cap $n(n-2)/4$ is not an integer, so no symmetric pair of $\mathfrak{so}(n)$ has the required dimension.
-- **An independent derivation of r324's saturation ratio, for $n\ge5$.** The theorem lands $W$ in Lemma L23's family; the equality case there gives $\dim\mathfrak h=n(n-2)/4$, hence $\lambda_{\max}/\lvert\lambda_{\min}\rvert=\dim\mathfrak m/\dim\mathfrak h=n/(n-2)$. This uses neither first Bianchi nor $\mathrm{Ric}=0$ beyond $\operatorname{tr}W=0$, so it is a genuine second route to that ratio, unlike the mass law of M3 (§4.2).
+- **An independent derivation of r324's saturation ratio, for $n\ge5$.** The theorem lands $W$ in Lemma L23's family; the equality case there gives $\dim\mathfrak h=n(n-2)/4$, hence $\lambda_{\max}/\lvert\lambda_{\min}\rvert=\dim\mathfrak m/\dim\mathfrak h=n/(n-2)$. This uses neither first Bianchi nor $\mathrm{Ric}=0$ beyond $\mathop{\mathrm{tr}}W=0$, so it is a genuine second route to that ratio, unlike the mass law of M3 (§4.2).
 - **Why $n=4$ escapes, exactly.** $\mathfrak{so}(4)=\mathfrak{su}(2)_+\oplus\mathfrak{su}(2)_-$ is the unique non-simple member, so step (g) fails and $\mathfrak c$ may be a whole factor. At $W_{\mathbb{CP}^2}$ it is: I measure $\dim\mathfrak z(\mathfrak m)=3$, $\dim\mathfrak g'=3$, $\dim[\mathfrak m,\mathfrak m]=1=\dim\mathfrak h$, $\lVert[\mathfrak m,\mathfrak r]\rVert=2.0\times10^{-16}$, with $(\mathfrak g',\mathfrak h_0)=(\mathfrak{su}(2),\mathfrak u(1))$ the symmetric pair and $\mathfrak c=\mathfrak r=\ker W$ the other $\mathfrak{su}(2)$. The witness is the theorem's boundary case, not evidence about general $n$.
 
 ### 1.3 $n=4$ settled completely, so the conjecture is a theorem at every $n$
@@ -99,11 +99,11 @@ One step used implicitly and worth writing: $[\mathfrak h,\mathfrak h]\subseteq\
 
 ### 3.2 Route (i) is valid, and its input hypothesis is real
 
-Two eigenvalues plus $\operatorname{tr}W=0$ give $W=(\lambda_{\max}-\lambda_{\min})\big(\Pi_{\mathfrak h}-\tfrac rN I\big)$ with $r=\dim\mathfrak h$, so $W$ is in [Lemma L23](../results.md)'s family exactly, and $W$ is critical by assumption, which is Lemma L23's hypothesis $Q(W_{\mathfrak h})=\theta W_{\mathfrak h}$. Lemma L23 then gives $r\le n(n-2)/4$ with equality iff the pair is symmetric; saturation supplies the symmetric pair, so equality holds and the balanced split follows. The only thing to flag is that $\operatorname{tr}W=0$ is doing load-bearing work and is inherited from $\mathcal W_n$, not from saturation.
+Two eigenvalues plus $\mathop{\mathrm{tr}}W=0$ give $W=(\lambda_{\max}-\lambda_{\min})\big(\Pi_{\mathfrak h}-\tfrac rN I\big)$ with $r=\dim\mathfrak h$, so $W$ is in [Lemma L23](../results.md)'s family exactly, and $W$ is critical by assumption, which is Lemma L23's hypothesis $Q(W_{\mathfrak h})=\theta W_{\mathfrak h}$. Lemma L23 then gives $r\le n(n-2)/4$ with equality iff the pair is symmetric; saturation supplies the symmetric pair, so equality holds and the balanced split follows. The only thing to flag is that $\mathop{\mathrm{tr}}W=0$ is doing load-bearing work and is inherited from $\mathcal W_n$, not from saturation.
 
 ### 3.3 Route (ii) is valid, and the classification claim is stronger than the record checks
 
-$\operatorname{tr}W=0$ with two eigenvalues gives $\dim\mathfrak m/\dim\mathfrak h=\lambda_{\max}/\lvert\lambda_{\min}\rvert=n/(n-2)$, and with $\dim\mathfrak m+\dim\mathfrak h=N$ this forces $\dim\mathfrak m=n^2/4$, $\dim\mathfrak h=n(n-2)/4$, in particular $n$ even. The classification input is the Cartan list of involutions of compact $\mathfrak{so}(n)$: $\mathfrak{so}(p)\oplus\mathfrak{so}(q)$ with $p+q=n$ (BDI) and $\mathfrak u(n/2)$ for $n$ even (DIII), together with the triality-twisted copies at $n=8$, whose fixed algebras $\mathfrak{spin}(7)$ and $\mathfrak{sp}(1)\oplus\mathfrak{sp}(2)$ have the dimensions $21$ and $13$ of $\mathfrak{so}(7)\oplus\mathfrak{so}(1)$ and $\mathfrak{so}(3)\oplus\mathfrak{so}(5)$. **The list is complete as used.** And the uniqueness is not a table to be checked at $n=6,\dots,16$; it is one line at every even $n$:
+$\mathop{\mathrm{tr}}W=0$ with two eigenvalues gives $\dim\mathfrak m/\dim\mathfrak h=\lambda_{\max}/\lvert\lambda_{\min}\rvert=n/(n-2)$, and with $\dim\mathfrak m+\dim\mathfrak h=N$ this forces $\dim\mathfrak m=n^2/4$, $\dim\mathfrak h=n(n-2)/4$, in particular $n$ even. The classification input is the Cartan list of involutions of compact $\mathfrak{so}(n)$: $\mathfrak{so}(p)\oplus\mathfrak{so}(q)$ with $p+q=n$ (BDI) and $\mathfrak u(n/2)$ for $n$ even (DIII), together with the triality-twisted copies at $n=8$, whose fixed algebras $\mathfrak{spin}(7)$ and $\mathfrak{sp}(1)\oplus\mathfrak{sp}(2)$ have the dimensions $21$ and $13$ of $\mathfrak{so}(7)\oplus\mathfrak{so}(1)$ and $\mathfrak{so}(3)\oplus\mathfrak{so}(5)$. **The list is complete as used.** And the uniqueness is not a table to be checked at $n=6,\dots,16$; it is one line at every even $n$:
 
 $$\dim\big(\mathfrak{so}(p)\oplus\mathfrak{so}(q)\big)=\frac{n(n-2)}4+\Big(\frac{p-q}2\Big)^2,\qquad \dim\mathfrak u(n/2)=\frac{n(n-2)}4+\frac n2 ,$$
 
@@ -113,7 +113,7 @@ so the target $n(n-2)/4$ is met only at $p=q$, and $n=8$ adds nothing at $12$. T
 
 | | route (i) | route (ii) |
 | --- | --- | --- |
-| source of $\dim\mathfrak h=n(n-2)/4$ | Lemma L23's sum of squares $S_{\mathfrak{mmm}}\ge0$ | $\operatorname{tr}W=0$ plus r324's ratio $n/(n-2)$ |
+| source of $\dim\mathfrak h=n(n-2)/4$ | Lemma L23's sum of squares $S_{\mathfrak{mmm}}\ge0$ | $\mathop{\mathrm{tr}}W=0$ plus r324's ratio $n/(n-2)$ |
 | classification of symmetric pairs of that dimension | used, inside Lemma L23's equality case | used, explicitly |
 | independent of the audited material? | yes | no, it consumes r324's ratio |
 
@@ -162,8 +162,8 @@ Two further points against the claim's evidential weight, both from the table ab
 
 1. **The corrections and the claims they correct are both standing in the same section.** Four paragraphs of the pre-r328 text are now false where they sit, and a reader meets them *after* the box that refutes them: "The one hypothesis, named rather than hidden: $\mathfrak r=0$ … any version of this lemma without a hypothesis excluding $\mathfrak r$ is false" (true only at $n=4$); "So the open half of Lemma L71 is precisely: does saturation force $\mathfrak r\subseteq\ker W$?" (answered); the multiplicity formula "checked at exactly one point … a conjecture with a witness, not a verified law" (empty for $n\ge5$); and "*Route (i) uses nothing from the audit; route (ii) is a check on it*", which the same section's defect (iii) withdraws. Delete them rather than leaving them to be reconciled by the reader.
 2. **The $n=6,\dots,16$ case list in the two-route paragraph** is superseded by defect (iv)'s one-line identity and should go with it.
-3. **Add the minimum-product line** of §1.1(b). Every version of this section reads $D(v)=0$ straight off as "$\mathrm{ad}(v)$ supported on $E_{\min}\otimes E_{\max}$"; that step needs $\lambda_{\min}<0<\lambda_{\max}$ and is the one place the argument touches $\operatorname{tr}W=0$.
+3. **Add the minimum-product line** of §1.1(b). Every version of this section reads $D(v)=0$ straight off as "$\mathrm{ad}(v)$ supported on $E_{\min}\otimes E_{\max}$"; that step needs $\lambda_{\min}<0<\lambda_{\max}$ and is the one place the argument touches $\mathop{\mathrm{tr}}W=0$.
 4. **Fix the mass law's premise**, per §4.1: saturation constrains the rows through $\mathfrak m$, not $T$ itself, and the residue column is the counterexample to the stronger reading.
-5. **Record the second derivation of r324's ratio** that §1.2 supplies, since the record now says explicitly that the validation owed on that ratio is still owed: for $n\ge5$, saturation lands $W$ in Lemma L23's family and its equality case returns $\dim\mathfrak h=n(n-2)/4$, hence $\lambda_{\max}/\lvert\lambda_{\min}\rvert=n/(n-2)$, using no Bianchi identity beyond $\operatorname{tr}W=0$.
+5. **Record the second derivation of r324's ratio** that §1.2 supplies, since the record now says explicitly that the validation owed on that ratio is still owed: for $n\ge5$, saturation lands $W$ in Lemma L23's family and its equality case returns $\dim\mathfrak h=n(n-2)/4$, hence $\lambda_{\max}/\lvert\lambda_{\min}\rvert=n/(n-2)$, using no Bianchi identity beyond $\mathop{\mathrm{tr}}W=0$.
 
 **Scripts.** [core.py](../scripts/reviewers/r327/core.py) (so(n), $\#$, $\mathcal W_n$, projector), [points.py](../scripts/reviewers/r327/points.py) (subalgebra points), [diag.py](../scripts/reviewers/r327/diag.py) (saturation structure and mass law), [search.py](../scripts/reviewers/r327/search.py), [run_hunt.py](../scripts/reviewers/r327/run_hunt.py), [run_targeted.py](../scripts/reviewers/r327/run_targeted.py), [run_ascent.py](../scripts/reviewers/r327/run_ascent.py). Log: [r327-lemma71.log](../agent_logs/r327-lemma71.log).

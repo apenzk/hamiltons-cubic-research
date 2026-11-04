@@ -21,17 +21,17 @@
 
 ## 0. Conventions, fixed once
 
-- The $\Lambda^2$ pairing is [inner2](../lean/HamiltonsCubic/Base/WeylReal.lean#L39), $\langle X,Y\rangle=\tfrac12\operatorname{tr}(X^{\mathsf T}Y)$. A $2$-form is a skew matrix; $\operatorname{supp}\omega$ is $\operatorname{im}\omega$.
+- The $\Lambda^2$ pairing is [inner2](../lean/HamiltonsCubic/Base/WeylReal.lean#L39), $\langle X,Y\rangle=\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$. A $2$-form is a skew matrix; $\mathop{\mathrm{supp}}\omega$ is $\mathop{\mathrm{im}}\omega$.
 - $\Pi_P$ is the orthogonal projection onto $P$. For $u,v$ orthonormal, [areaForm](../lean/HamiltonsCubic/Base/SelfDual.lean#L200) $u\wedge v$ has matrix $uv^{\mathsf T}-vu^{\mathsf T}$ up to the file's index order.
 - A **screen** is seconds of elaboration on the file under review, reported as a screen.
 
-## 1. Step 2 is exact in this record's own $\operatorname{Ric}$
+## 1. Step 2 is exact in this record's own $\mathop{\mathrm{Ric}}$
 
-**The brief warns that the pairing carries a $\tfrac12$ and asks whether that survives into $\operatorname{Ric}$. It does not, and the reason is that it is spent twice.**
+**The brief warns that the pairing carries a $\tfrac12$ and asks whether that survives into $\mathop{\mathrm{Ric}}$. It does not, and the reason is that it is spent twice.**
 
-[Ric](../lean/HamiltonsCubic/Base/WeylReal.lean#L106) is $\operatorname{Ric}(R)_{ab}=\sum_c\langle R(\varphi_{ac}),\varphi_{bc}\rangle$. For $R=\sum_i\lambda_i\,\omega_i\otimes\omega_i$ the operator is $R(X)=\sum_i\lambda_i\langle\omega_i,X\rangle\,\omega_i$, and [inner2_phi](../lean/HamiltonsCubic/Base/WeylReal.lean#L67) gives $\langle Y,\varphi_{ij}\rangle=-Y_{ij}$ at skew $Y$, *with the $\tfrac12$ already absorbed, since $\varphi_{ij}$ has two nonzero entries.* So
+[Ric](../lean/HamiltonsCubic/Base/WeylReal.lean#L106) is $\mathop{\mathrm{Ric}}(R)_{ab}=\sum_c\langle R(\varphi_{ac}),\varphi_{bc}\rangle$. For $R=\sum_i\lambda_i\,\omega_i\otimes\omega_i$ the operator is $R(X)=\sum_i\lambda_i\langle\omega_i,X\rangle\,\omega_i$, and [inner2_phi](../lean/HamiltonsCubic/Base/WeylReal.lean#L67) gives $\langle Y,\varphi_{ij}\rangle=-Y_{ij}$ at skew $Y$, *with the $\tfrac12$ already absorbed, since $\varphi_{ij}$ has two nonzero entries.* So
 
-$$\operatorname{Ric}(R)_{ab}=\sum_c\sum_i\lambda_i\big(-(\omega_i)_{ac}\big)\big(-(\omega_i)_{bc}\big)=\Big(\sum_i\lambda_i\,\omega_i\omega_i^{\mathsf T}\Big)_{ab}.$$
+$$\mathop{\mathrm{Ric}}(R)_{ab}=\sum_c\sum_i\lambda_i\big(-(\omega_i)_{ac}\big)\big(-(\omega_i)_{bc}\big)=\Big(\sum_i\lambda_i\,\omega_i\omega_i^{\mathsf T}\Big)_{ab}.$$
 
 **The two minus signs cancel and no constant is left**, matching [L180](../findings/diagonal-half.md#L652)(1) exactly. *Step 2 is confirmed against the record's own definition and not against a remembered formula, which is what the brief asked for.*
 
@@ -45,7 +45,7 @@ $$\operatorname{Ric}(R)_{ab}=\sum_c\sum_i\lambda_i\big(-(\omega_i)_{ac}\big)\big
 
 ## 3. Steps 5 and 6 hold, and the meeting-planes case is the wrong place to look
 
-$\dim(P_1+P_2+P_3)\le\dim P_1+\dim P_2+\dim P_3=6$ always, with equality **exactly** when the sum is direct. *The brief's "consider the planes meeting" is the contrapositive and confirms rather than breaks the step*: if $P_1\cap P_2\ne0$ then $\dim(P_1+P_2)\le3$ and the total span is at most $5$, so a meeting pair is already outside the hypothesis. **Step 6 is then the definition of a direct sum**, and the three summands $\lambda_1x$, $\lambda_2\Pi_2x$, $\lambda_3\Pi_3x$ are correctly placed in $P_1$, $P_2$, $P_3$, the first because $x\in P_1$, the other two because $\operatorname{im}\Pi_i=P_i$.
+$\dim(P_1+P_2+P_3)\le\dim P_1+\dim P_2+\dim P_3=6$ always, with equality **exactly** when the sum is direct. *The brief's "consider the planes meeting" is the contrapositive and confirms rather than breaks the step*: if $P_1\cap P_2\ne0$ then $\dim(P_1+P_2)\le3$ and the total span is at most $5$, so a meeting pair is already outside the hypothesis. **Step 6 is then the definition of a direct sum**, and the three summands $\lambda_1x$, $\lambda_2\Pi_2x$, $\lambda_3\Pi_3x$ are correctly placed in $P_1$, $P_2$, $P_3$, the first because $x\in P_1$, the other two because $\mathop{\mathrm{im}}\Pi_i=P_i$.
 
 **Nothing in the chain uses orthogonality of the planes, the first Bianchi identity, or the rank**, exactly as the file claims, and the Lean statement is right to be about idempotents and independent ranges rather than about planes.
 
@@ -57,7 +57,7 @@ $\dim(P_1+P_2+P_3)\le\dim P_1+\dim P_2+\dim P_3=6$ always, with equality **exact
 
 $$\lambda_1\Pi_1+\lambda_2\Pi_2=\lvert\lambda_3\rvert\,\Pi_3,$$
 
-a sum of positive semidefinite matrices with positive coefficients equal to a positive semidefinite matrix. **For PSD $A,B$ one has $\ker(A+B)=\ker A\cap\ker B$**, since $x^{\mathsf T}(A+B)x=0$ forces both terms to vanish and a PSD matrix kills its own null quadratic form; taking orthogonal complements, $\operatorname{range}(A+B)=\operatorname{range}A+\operatorname{range}B$. *This is the same fact [L180](../findings/diagonal-half.md#L652)(3) imports from [Fillmore–Williams](../references/fillmore-williams-1971-operator-ranges/), here in two lines because the matrices are finite and symmetric.* So
+a sum of positive semidefinite matrices with positive coefficients equal to a positive semidefinite matrix. **For PSD $A,B$ one has $\ker(A+B)=\ker A\cap\ker B$**, since $x^{\mathsf T}(A+B)x=0$ forces both terms to vanish and a PSD matrix kills its own null quadratic form; taking orthogonal complements, $\mathop{\mathrm{range}}(A+B)=\mathop{\mathrm{range}}A+\mathop{\mathrm{range}}B$. *This is the same fact [L180](../findings/diagonal-half.md#L652)(3) imports from [Fillmore–Williams](../references/fillmore-williams-1971-operator-ranges/), here in two lines because the matrices are finite and symmetric.* So
 
 $$P_1+P_2=P_3,$$
 
@@ -91,7 +91,7 @@ and $P_3$ is two-dimensional, so $P_1=P_2=P_3=:P$. **All three forms then lie in
 
 ## Verdict
 
-**CONFIRMED.** *The claim is true, its six steps are individually sound against this record's own $\operatorname{Ric}$ and $\Lambda^2$ pairing, and the Lean theorem is the right abstraction of it.*
+**CONFIRMED.** *The claim is true, its six steps are individually sound against this record's own $\mathop{\mathrm{Ric}}$ and $\Lambda^2$ pairing, and the Lean theorem is the right abstraction of it.*
 
 **Corrections owed, in order of weight:**
 

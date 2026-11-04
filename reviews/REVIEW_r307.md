@@ -44,7 +44,7 @@ At `S³×S⁵` that is `13/21 = 0.619047619…`, the record's `0.619048` exactly
 
 Write `C := tri(A,B,B) = ⟨A, B#B⟩`. The sorting kills two of the four cubics outright, `tri(A,A,B) = ⟨A#B, A⟩ = 0` because `A#B` lives in `m`, and `tri(B,B,B) = ⟨B#B, B⟩ = 0` because `B#B` lives in `p`, both measured at `1e-17`. So the whole content of L1 is
 
-$$\theta\|A\|^2=\operatorname{tr}A^3+\mathrm{tri}(A,A,A)+C,\qquad \theta\|B\|^2=\operatorname{tr}B^3+2C .$$
+$$\theta\|A\|^2=\mathop{\mathrm{tr}}A^3+\mathrm{tri}(A,A,A)+C,\qquad \theta\|B\|^2=\mathop{\mathrm{tr}}B^3+2C .$$
 
 Three consequences, all measured in [l2_route.py](../scripts/reviewers/r307/l2_route.py):
 

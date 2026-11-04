@@ -82,7 +82,7 @@ which is [conventions.md](../findings/conventions.md)'s definition of a critical
 
 **The block uses the right object.** It says *"a maximum of a smooth function on a smooth constraint surface is a critical point of the restriction"*, and the right-hand side of the biconditional quantifies over critical points of $P|_{\lVert W\rVert=1}$. Both are the restriction. This matters, because $W_{\max}$ is emphatically **not** a critical point of $P$ on $\mathcal W_n$, there $\nabla P=3\theta W\ne0$ whenever $\theta\ne0$, and $\theta>0$ at the maximiser since $P(-W)=-P(W)$ makes $\sup\ge0$, with $M(n)\ge\sqrt{3/2}>0$ on the record. **No defect here.** It is the one step of the proof that is both non-trivial and correctly executed.
 
-*One residue, inherited rather than new.* $\nabla P=3Q(W)$ needs $T$ fully symmetric, and this file's [Critical-point structure](../findings/problem.md) section at line 112 still justifies that by $\operatorname{tr}(XYZ)=\operatorname{tr}(ZYX)$ alone, which covers the $W^2$ half and not the $W^\#$ half. That is round L00's finding F6, recorded as `CONTAINED` and still uncorrected in the file. L0 itself does not consume it, since its right-hand side is phrased intrinsically.
+*One residue, inherited rather than new.* $\nabla P=3Q(W)$ needs $T$ fully symmetric, and this file's [Critical-point structure](../findings/problem.md) section at line 112 still justifies that by $\mathop{\mathrm{tr}}(XYZ)=\mathop{\mathrm{tr}}(ZYX)$ alone, which covers the $W^2$ half and not the $W^\#$ half. That is round L00's finding F6, recorded as `CONTAINED` and still uncorrected in the file. L0 itself does not consume it, since its right-hand side is phrased intrinsically.
 
 ## 7. Smoothness and non-degeneracy
 

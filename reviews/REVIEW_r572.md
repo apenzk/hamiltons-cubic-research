@@ -96,9 +96,9 @@ The certificate direction is right as stated. Summing the multipliers gives $\su
 
 ## D8, the block contradicts post F43, forty lines apart in one file
 
-[Post F43](../findings/bounds-relaxations.md) closes with: *"Since $\operatorname{rank}[M\mid v]=3d-2$ as well, $v$ lies in the column span of $M$, so **no combination of the equations pins $\theta$**."* It carries no multiplicity hypothesis. **The block sentence forty lines above says a class of multiplicity $2$ pins $\theta$ outright.** One of the two must be scoped, and it is post F43: at $(26,2)$, rank $M=3$ while rank $[M\mid v]=4$, so $v$ sits outside the column span and a single combination of the equalities returns $\theta$, which is how D6's value is obtained.
+[Post F43](../findings/bounds-relaxations.md) closes with: *"Since $\mathop{\mathrm{rank}}[M\mid v]=3d-2$ as well, $v$ lies in the column span of $M$, so **no combination of the equations pins $\theta$**."* It carries no multiplicity hypothesis. **The block sentence forty lines above says a class of multiplicity $2$ pins $\theta$ outright.** One of the two must be scoped, and it is post F43: at $(26,2)$, rank $M=3$ while rank $[M\mid v]=4$, so $v$ sits outside the column span and a single combination of the equalities returns $\theta$, which is how D6's value is obtained.
 
-Post F43's own subject matter is the $d=3$, $(30,20,16)$ spectrum, where every multiplicity is at least $3$ and the sentence is true. **The repair is to say so**, since the sentence is what the vertex-enumeration programme rests on: *"at every spectrum with all $m_i\ge3$, $\operatorname{rank}[M\mid v]=3d-2$, $v$ lies in the column span of $M$, and no combination of the equations pins $\theta$."*
+Post F43's own subject matter is the $d=3$, $(30,20,16)$ spectrum, where every multiplicity is at least $3$ and the sentence is true. **The repair is to say so**, since the sentence is what the vertex-enumeration programme rests on: *"at every spectrum with all $m_i\ge3$, $\mathop{\mathrm{rank}}[M\mid v]=3d-2$, $v$ lies in the column span of $M$, and no combination of the equations pins $\theta$."*
 
 ## D9, D10, the two consumers that inherit the scope
 

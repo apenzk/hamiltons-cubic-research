@@ -24,12 +24,12 @@ Quoted from the brief.
 
 - $\mathbb R^n$ with its standard inner product, and $\Lambda^2\mathbb R^n$ with $\langle\cdot,\cdot\rangle$ normalised so that the $\varphi_{ij}=e_i\wedge e_j$ for $i<j$ are orthonormal. $N:=\binom n2=\dim\Lambda^2\mathbb R^n$.
 - A **decomposable** $2$-form is $\omega=u\wedge v$. A unit decomposable $\omega$ determines a $2$-plane $P_\omega=\mathrm{span}(u,v)\subset\mathbb R^n$ and $\Pi_\omega$ is the orthogonal projection of $\mathbb R^n$ onto it.
-- For two unit decomposable forms write $S_{\alpha\beta}:=\operatorname{tr}(\Pi_\alpha\Pi_\beta)$. **Given:** $S_{\alpha\beta}=\lVert[\omega_\alpha,\omega_\beta]\rVert^2$ under the identification $\Lambda^2\mathbb R^n\cong\mathfrak{so}(n)$, $S_{\alpha\beta}\in[0,1]$ for distinct planes, $S_{\alpha\beta}=1$ exactly when the two planes share a line, and $S_{\alpha\beta}=0$ exactly when they are orthogonal.
+- For two unit decomposable forms write $S_{\alpha\beta}:=\mathop{\mathrm{tr}}(\Pi_\alpha\Pi_\beta)$. **Given:** $S_{\alpha\beta}=\lVert[\omega_\alpha,\omega_\beta]\rVert^2$ under the identification $\Lambda^2\mathbb R^n\cong\mathfrak{so}(n)$, $S_{\alpha\beta}\in[0,1]$ for distinct planes, $S_{\alpha\beta}=1$ exactly when the two planes share a line, and $S_{\alpha\beta}=0$ exactly when they are orthogonal.
 - A family $\{\omega_\alpha\}_{\alpha=1}^M$ of unit decomposable forms is **$\Lambda^2$-orthonormal** when $\langle\omega_\alpha,\omega_\beta\rangle=\delta_{\alpha\beta}$.
 
 ### 0a. A correction to the third bullet, needed before anything else is stated precisely
 
-The $\mathfrak{so}(n)$ identification I use throughout sends $\omega=\sum_{i<j}c_{ij}e_i\wedge e_j$ to the antisymmetric $A(\omega)$ with $A_{ij}=c_{ij}$, under which $\langle\omega,\omega'\rangle=-\tfrac12\operatorname{tr}(A A')$ and, for a unit decomposable $\omega$ with $u,v$ orthonormal, $A=uv^{\!\top}-vu^{\!\top}$ and $\Pi_\omega=-A^2$. Both normalisations check on $\omega=e_1\wedge e_2$: $-\tfrac12\operatorname{tr}(A^2)=1$ and $-A^2=e_1e_1^{\!\top}+e_2e_2^{\!\top}$.
+The $\mathfrak{so}(n)$ identification I use throughout sends $\omega=\sum_{i<j}c_{ij}e_i\wedge e_j$ to the antisymmetric $A(\omega)$ with $A_{ij}=c_{ij}$, under which $\langle\omega,\omega'\rangle=-\tfrac12\mathop{\mathrm{tr}}(A A')$ and, for a unit decomposable $\omega$ with $u,v$ orthonormal, $A=uv^{\!\top}-vu^{\!\top}$ and $\Pi_\omega=-A^2$. Both normalisations check on $\omega=e_1\wedge e_2$: $-\tfrac12\mathop{\mathrm{tr}}(A^2)=1$ and $-A^2=e_1e_1^{\!\top}+e_2e_2^{\!\top}$.
 
 Writing $\theta_1,\theta_2$ for the principal angles between $P_\alpha$ and $P_\beta$, two standard facts fix everything: $S_{\alpha\beta}=\cos^2\theta_1+\cos^2\theta_2$, and $\langle\omega_\alpha,\omega_\beta\rangle=\pm\cos\theta_1\cos\theta_2$ (the latter because $\langle u_1\wedge u_2,v_1\wedge v_2\rangle=\det(\langle u_i,v_j\rangle)$, evaluated in principal-vector bases).
 
@@ -37,7 +37,7 @@ Three consequences, the third of which corrects the brief.
 
 1. **$S_{\alpha\beta}\in[0,2]$ in general, and $[0,1]$ exactly under $\Lambda^2$-orthonormality.** Orthonormality forces $\cos\theta_1\cos\theta_2=0$, so one principal angle is right and $S_{\alpha\beta}=\cos^2\theta_1\in[0,1]$, with $S_{\alpha\beta}=1$ if and only if $\theta_1=0$, which is a shared line. Without orthonormality the range is $[0,2]$: take $P_1=\mathrm{span}(e_1,e_2)$ and $P_2=\mathrm{span}(e_1,\tfrac{e_2+e_3}{\sqrt2})$ in $\mathbb R^4$, which share $e_1$ and give $S=1+\tfrac12=\tfrac32$.
 2. **"$S=1$ exactly at a shared line" also fails without orthonormality.** $P_1=\mathrm{span}(e_1,e_2)$ and $P_2=\mathrm{span}(\tfrac{e_1+e_3}{\sqrt2},\tfrac{e_2+e_4}{\sqrt2})$ have both principal angles at $\tfrac\pi4$, so $S=\tfrac12+\tfrac12=1$, while $P_1\cap P_2=0$.
-3. **The commutator identity is $\lVert[\omega_\alpha,\omega_\beta]\rVert^2=S_{\alpha\beta}-2\langle\omega_\alpha,\omega_\beta\rangle^2$.** Expanding, $\lVert[A,B]\rVert^2=-\tfrac12\operatorname{tr}([A,B]^2)=\operatorname{tr}(A^2B^2)-\operatorname{tr}((AB)^2)=S_{\alpha\beta}-\operatorname{tr}((AB)^2)$, and $\operatorname{tr}((AB)^2)=\tfrac12\operatorname{tr}(AB)^2=2\langle\omega_\alpha,\omega_\beta\rangle^2$ for rank-two $A,B$. The two examples above confirm the correction numerically ($S=\tfrac32$ against $\lVert[\cdot,\cdot]\rVert^2=\tfrac12$ with $\langle\cdot,\cdot\rangle^2=\tfrac12$, and $S=1$ against $\tfrac12$ with $\langle\cdot,\cdot\rangle^2=\tfrac14$), and a screen over 1200 random plane pairs at $n=4,5,6,7$ agreed to $6\cdot10^{-16}$.
+3. **The commutator identity is $\lVert[\omega_\alpha,\omega_\beta]\rVert^2=S_{\alpha\beta}-2\langle\omega_\alpha,\omega_\beta\rangle^2$.** Expanding, $\lVert[A,B]\rVert^2=-\tfrac12\mathop{\mathrm{tr}}([A,B]^2)=\mathop{\mathrm{tr}}(A^2B^2)-\mathop{\mathrm{tr}}((AB)^2)=S_{\alpha\beta}-\mathop{\mathrm{tr}}((AB)^2)$, and $\mathop{\mathrm{tr}}((AB)^2)=\tfrac12\mathop{\mathrm{tr}}(AB)^2=2\langle\omega_\alpha,\omega_\beta\rangle^2$ for rank-two $A,B$. The two examples above confirm the correction numerically ($S=\tfrac32$ against $\lVert[\cdot,\cdot]\rVert^2=\tfrac12$ with $\langle\cdot,\cdot\rangle^2=\tfrac12$, and $S=1$ against $\tfrac12$ with $\langle\cdot,\cdot\rangle^2=\tfrac14$), and a screen over 1200 random plane pairs at $n=4,5,6,7$ agreed to $6\cdot10^{-16}$.
 
 This is bookkeeping rather than a defect in the record's own use, because the record works inside $\Lambda^2$-orthonormality throughout, where the brief's three statements are all true. It matters for one thing only, and section 4 says where: the inequality $S\le1$ that the record pairs with the simplex bound is a consequence of $\Lambda^2$-orthonormality and not a general property of $2$-planes, for which the true bound is $S\le c=2$.
 
@@ -48,18 +48,18 @@ This is bookkeeping rather than a defect in the record's own use, because the re
 | $\{U_j\}$ are $c$-dimensional subspaces of $\mathbb F^d$, $M\ge2$ | (G3) | Yes at $c=2$, $d=n$, $\mathbb F=\mathbb R$: the $P_\alpha$ are $2$-planes in $\mathbb R^n$ | Yes, and $M\ge2$ is needed for $M-1\ne0$ |
 | Tightness $\sum_jP_j=\alpha I$ | **not** a hypothesis of (G3), see [casazza-fickus-1708.08879.txt:370](https://arxiv.org/abs/1708.08879) | Irrelevant to whether the bound holds | No, and this is the asymmetry that sinks C2 |
 | Tightness $\sum_\alpha\Pi_\alpha=\kappa\,\mathrm{Id}_n$ | (G1), (G2) | Automatic at $M=\binom n2$ under $\Lambda^2$-orthonormality (section 5), and a genuine restriction for $M<\binom n2$ | Yes, essentially: (G1) has no content without it |
-| $\Lambda^2$-orthonormality $\langle\omega_\alpha,\omega_\beta\rangle=\delta_{\alpha\beta}$ | (G1) as stated | Yes by construction in the record | **No** in (G1)'s own derivation, which needs only $\sum\Pi_\beta=\kappa\mathrm{Id}$ and $\operatorname{tr}(\Pi_\alpha^2)=\operatorname{tr}(\Pi_\alpha)=2$. It **is** needed for $S\le1$ (section 0a), for $\kappa=n-1$ at $M=N$ (section 5), and for $M\le\binom n2$ |
-| Decomposability of each $\omega_\alpha$ | throughout | Yes | Yes: it is what makes $\Pi_\alpha$ a rank-two projection, so $\operatorname{tr}\Pi_\alpha^2=2$ |
-| Equi-chordality, all $\operatorname{tr}(P_jP_{j'})$ equal | (G3)'s equality case | **Fails** for the coordinate basis at every $n\ge4$ | Yes, and its omission is the defect in C3 and C4 |
+| $\Lambda^2$-orthonormality $\langle\omega_\alpha,\omega_\beta\rangle=\delta_{\alpha\beta}$ | (G1) as stated | Yes by construction in the record | **No** in (G1)'s own derivation, which needs only $\sum\Pi_\beta=\kappa\mathrm{Id}$ and $\mathop{\mathrm{tr}}(\Pi_\alpha^2)=\mathop{\mathrm{tr}}(\Pi_\alpha)=2$. It **is** needed for $S\le1$ (section 0a), for $\kappa=n-1$ at $M=N$ (section 5), and for $M\le\binom n2$ |
+| Decomposability of each $\omega_\alpha$ | throughout | Yes | Yes: it is what makes $\Pi_\alpha$ a rank-two projection, so $\mathop{\mathrm{tr}}\Pi_\alpha^2=2$ |
+| Equi-chordality, all $\mathop{\mathrm{tr}}(P_jP_{j'})$ equal | (G3)'s equality case | **Fails** for the coordinate basis at every $n\ge4$ | Yes, and its omission is the defect in C3 and C4 |
 | Equi-isoclinicity $P_{j'}P_jP_{j'}=\sigma^2P_{j'}$ | the refinement quoted in (G3) | **Fails** for every $\Lambda^2$-orthonormal family with $\sigma^2>0$ (section 7) | Only in section 7, to check the icosahedral value |
-| $\operatorname{tr}(P_jP_{j'})=\lVert\Phi_j^*\Phi_{j'}\rVert_{\mathrm{Fro}}^2$ | (G4) | Yes, basis-independent | Yes: it is the bridge from the literature's quantity to $S_{\alpha\beta}$ |
+| $\mathop{\mathrm{tr}}(P_jP_{j'})=\lVert\Phi_j^*\Phi_{j'}\rVert_{\mathrm{Fro}}^2$ | (G4) | Yes, basis-independent | Yes: it is the bridge from the literature's quantity to $S_{\alpha\beta}$ |
 | $S_{\alpha\beta}\le1$ | the record's multiplicity argument | Yes **given $\Lambda^2$-orthonormality**, false in general | Yes in section 4, where the hypothesis it needs is one the record carries |
 
 ## 1. The specialisation, derived independently
 
 Put $c=2$ and $d=n$ in (G3). The right-hand side is
 $$\frac{c(Mc-d)}{d(M-1)}=\frac{2(2M-n)}{n(M-1)},$$
-and by (G4) with $P_\alpha=\Pi_\alpha$ the left-hand side is $\max_{\alpha\ne\beta}\operatorname{tr}(\Pi_\alpha\Pi_\beta)=\max_{\alpha\ne\beta}S_{\alpha\beta}$. So the specialised bound is $\max_{\alpha\ne\beta}S_{\alpha\beta}\ge\frac{2(2M-n)}{n(M-1)}$, exactly as the record states it.
+and by (G4) with $P_\alpha=\Pi_\alpha$ the left-hand side is $\max_{\alpha\ne\beta}\mathop{\mathrm{tr}}(\Pi_\alpha\Pi_\beta)=\max_{\alpha\ne\beta}S_{\alpha\beta}$. So the specialised bound is $\max_{\alpha\ne\beta}S_{\alpha\beta}\ge\frac{2(2M-n)}{n(M-1)}$, exactly as the record states it.
 
 Now (G1) with (G2). For each fixed $\alpha$, $\sum_{\beta\ne\alpha}S_{\alpha\beta}=2(\kappa-1)$ and $\kappa=\frac{2M}n$, so
 $$\sum_{\beta\ne\alpha}S_{\alpha\beta}=2\left(\frac{2M}n-1\right)=\frac{2(2M-n)}n,$$
@@ -68,7 +68,7 @@ $$\frac1{M-1}\cdot\frac{2(2M-n)}n=\frac{2(2M-n)}{n(M-1)}.$$
 
 **The two expressions are equal, and the equality is an identity in $M$ and $n$**, not a coincidence at particular values: both are the same rational function, and the difference is identically zero on the whole domain $M\ge2$, $n\ge2$. C1 is **CONFIRMED**. Since a maximum over a finite set is at least the mean of that set, the specialised simplex bound follows from (G1) and (G2) alone, with no appeal to Theorem 5.1.
 
-I note in passing that (G1)'s own derivation, as the brief gives it, uses the completeness relation and $\operatorname{tr}(\Pi_\alpha^2)=\operatorname{tr}(\Pi_\alpha)=2$ and nothing else. $\Lambda^2$-orthonormality appears in (G1)'s statement and does no work in its proof. That is inert rather than wrong, but a reader who assumes the hypothesis is load-bearing will draw the wrong conclusion about where the record's structure comes from.
+I note in passing that (G1)'s own derivation, as the brief gives it, uses the completeness relation and $\mathop{\mathrm{tr}}(\Pi_\alpha^2)=\mathop{\mathrm{tr}}(\Pi_\alpha)=2$ and nothing else. $\Lambda^2$-orthonormality appears in (G1)'s statement and does no work in its proof. That is inert rather than wrong, but a reader who assumes the hypothesis is load-bearing will draw the wrong conclusion about where the record's structure comes from.
 
 ## 2. Quantifiers: what each side controls, and what the record's reading discards
 
@@ -90,7 +90,7 @@ Two further notes on the hypothesis side. Tightness is not free: $\sum_\alpha\Pi
 
 ## 3. The equality cases are different conditions
 
-(G3)'s equality is characterised by **both** of (i) tightness $\sum_jP_j=\alpha I$ and (ii) equi-chordality, all $\operatorname{tr}(P_jP_{j'})$ equal for $j\ne j'$, with the forced values $\alpha=\frac{Mc}d$ and $\beta=\frac{c(Mc-d)}{d(M-1)}$. (G1) requires only (i).
+(G3)'s equality is characterised by **both** of (i) tightness $\sum_jP_j=\alpha I$ and (ii) equi-chordality, all $\mathop{\mathrm{tr}}(P_jP_{j'})$ equal for $j\ne j'$, with the forced values $\alpha=\frac{Mc}d$ and $\beta=\frac{c(Mc-d)}{d(M-1)}$. (G1) requires only (i).
 
 So one direction of the record's claim is sound: **equality in the simplex bound does imply isotropy**, because (i) is part of the characterisation. The converse fails, and it fails on the most natural object in the record's own setting.
 
@@ -129,7 +129,7 @@ Confirmed, valid for $n\ge3$ where $n-2\ne0$ cancels legitimately.
 
 **$\kappa=n-1$, and it is forced rather than assumed.** (G2) gives $\kappa=\frac{2M}n=\frac{n(n-1)}n=n-1$ the moment tightness is granted. Tightness is granted for free at $M=N$, by the following argument, which is linear algebra and needs no representation theory.
 
-Under the identification of section 0a, $\langle\omega,\omega'\rangle=-\tfrac12\operatorname{tr}(AA')$, so a $\Lambda^2$-orthonormal basis of $\Lambda^2\mathbb R^n$ is an orthonormal basis of $\mathfrak{so}(n)$ for the form $B(A,A')=-\tfrac12\operatorname{tr}(AA')$. For two such bases related by $A'_\alpha=\sum_\beta O_{\alpha\beta}A_\beta$ with $O$ orthogonal,
+Under the identification of section 0a, $\langle\omega,\omega'\rangle=-\tfrac12\mathop{\mathrm{tr}}(AA')$, so a $\Lambda^2$-orthonormal basis of $\Lambda^2\mathbb R^n$ is an orthonormal basis of $\mathfrak{so}(n)$ for the form $B(A,A')=-\tfrac12\mathop{\mathrm{tr}}(AA')$. For two such bases related by $A'_\alpha=\sum_\beta O_{\alpha\beta}A_\beta$ with $O$ orthogonal,
 $$\sum_\alpha (A'_\alpha)^2=\sum_{\beta,\gamma}\Big(\sum_\alpha O_{\alpha\beta}O_{\alpha\gamma}\Big)A_\beta A_\gamma=\sum_\beta A_\beta^2,$$
 so the operator $\sum_\alpha A_\alpha^2$ on $\mathbb R^n$ is the **same** for every $\Lambda^2$-orthonormal basis. Evaluating it on the coordinate basis, where $A_{ij}^2=-(e_ie_i^{\!\top}+e_je_j^{\!\top})$ and each index appears in $n-1$ pairs, gives $\sum_\alpha A_\alpha^2=-(n-1)\mathrm{Id}_n$. For decomposable $\omega_\alpha$ we have $\Pi_\alpha=-A_\alpha^2$, hence
 
@@ -157,7 +157,7 @@ Set $\omega_\alpha:=\omega(u_\alpha,v_\alpha)$ for $\alpha=1,\dots,6$. Then for 
 $$S_{\alpha\beta}=1-\tfrac15=\tfrac45=\frac4{n+1}\Big|_{n=4}\qquad\text{for every }\alpha\ne\beta.$$
 Tightness is automatic by section 5, giving $\sum\Pi_\alpha=3\,\mathrm{Id}_4$, and equi-chordality is the display above. So this is an **equi-chordal tight fusion frame of six $2$-planes in $\mathbb R^4$ attaining the simplex bound, consisting of a $\Lambda^2$-orthonormal basis of decomposable forms**.
 
-A screen of the construction, seconds of arithmetic on the object just built, returned the $\Lambda^2$ Gram matrix equal to $I_6$, $\Pi_\alpha^2=\Pi_\alpha$ with $\operatorname{tr}\Pi_\alpha=2$ for each $\alpha$ so every form is decomposable, $\sum_\alpha\Pi_\alpha=3\,\mathrm{Id}_4$, and all thirty off-diagonal $S_{\alpha\beta}=0.8$.
+A screen of the construction, seconds of arithmetic on the object just built, returned the $\Lambda^2$ Gram matrix equal to $I_6$, $\Pi_\alpha^2=\Pi_\alpha$ with $\mathop{\mathrm{tr}}\Pi_\alpha=2$ for each $\alpha$ so every form is decomposable, $\sum_\alpha\Pi_\alpha=3\,\mathrm{Id}_4$, and all thirty off-diagonal $S_{\alpha\beta}=0.8$.
 
 **Consequences for C6.** The algebra $\frac4{n+1}$ is right, so C6 is **CONFIRMED AS ALGEBRA**. The gloss "which is far below $1$" is **REFUTED** as a reading: at $n=4$ the bound is attained, so $\frac45$ is the exact optimum of $\max_{\alpha\ne\beta}S_{\alpha\beta}$ over $\Lambda^2$-orthonormal decomposable bases of $\Lambda^2\mathbb R^4$, and the distance from $1$ measures how far the coordinate basis is from optimal rather than how weak the bound is. Whether $\frac4{n+1}$ is attained for $n\ge5$ I did not settle, and settling it is a census of equi-chordal decomposable bases, which the analysis-only rule puts out of reach here. What the $n=4$ case already establishes is that the record cannot argue from the size of $\frac4{n+1}$ to the weakness of the bound.
 

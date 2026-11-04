@@ -28,7 +28,7 @@ Residuals on random Weyl tensors at $n=5,6,7,8$ ([r103_claim12.py](../scripts/re
 
 | | $n=5$ | $n=6$ | $n=7$ | $n=8$ |
 |---|---|---|---|---|
-| $\lvert\operatorname{diag}M-K\rvert$ | $0.0$ | $0.0$ | $0.0$ | $0.0$ |
+| $\lvert\mathop{\mathrm{diag}}M-K\rvert$ | $0.0$ | $0.0$ | $0.0$ | $0.0$ |
 | $\lvert\psi\text{-block}+K\rvert_{\mathbf1^\perp}\rvert$ | $3.3\mathrm e{-16}$ | $1.3\mathrm e{-16}$ | $1.7\mathrm e{-16}$ | $8.3\mathrm e{-17}$ |
 | $\lvert\sum d^2-\tfrac32t\rvert$ | $1.1\mathrm e{-16}$ | $1.1\mathrm e{-16}$ | $5.6\mathrm e{-17}$ | $0.0$ |
 | $\lvert K\mathbf1\rvert$ | $6.9\mathrm e{-17}$ | $3.5\mathrm e{-17}$ | $3.8\mathrm e{-17}$ | $5.6\mathrm e{-17}$ |
@@ -36,20 +36,20 @@ Residuals on random Weyl tensors at $n=5,6,7,8$ ([r103_claim12.py](../scripts/re
 All four are exact identities, and each is two lines by hand rather than a measurement:
 
 - $\langle\mathring W\varphi_{ab},\varphi_{ab}\rangle=\tfrac12(W_{abab}+W_{baba})=K_{ab}$, and $M_{(ab),(ab)}=W_{abab}=K_{ab}$ by definition. The first diagonal is a **restatement of the definitions**; the content of the claim is that the *same* $K$ serves both sides.
-- For $h=\operatorname{diag}(v)$, $(\mathring Wh)_{ii}=\sum_kW_{ikki}v_k=-\sum_kK_{ik}v_k$, so the $\psi$-block is $-K|_{\mathbf1^\perp}$ exactly.
-- Hence $\sum d_\varphi^2=\sum_{a<b}K_{ab}^2=t/2$ and $\sum d_\psi^2=\operatorname{tr}(K^2)=t$, giving $\sum d^2=\tfrac32t$.
+- For $h=\mathop{\mathrm{diag}}(v)$, $(\mathring Wh)_{ii}=\sum_kW_{ikki}v_k=-\sum_kK_{ik}v_k$, so the $\psi$-block is $-K|_{\mathbf1^\perp}$ exactly.
+- Hence $\sum d_\varphi^2=\sum_{a<b}K_{ab}^2=t/2$ and $\sum d_\psi^2=\mathop{\mathrm{tr}}(K^2)=t$, giving $\sum d^2=\tfrac32t$.
 
-**The over-statement.** "$K\mathbf1=0$, i.e. Ricci-flatness is exactly the vanishing of $K$'s row sums" holds only left-to-right in a single frame. $\operatorname{Ric}_{jj}=\sum_iK_{ij}$, so vanishing row sums give only $\operatorname{diag}(\operatorname{Ric})=0$. Witness at $n=6$: the Bianchi-projected $R=\frac1{n-2}(\operatorname{Ric}_0\wedge\delta)$ (Kulkarni–Nomizu) with $\operatorname{Ric}_0=E_{12}+E_{21}$ has $K\mathbf1=0$ to $0.0$ and $\operatorname{Ric}\ne0$ (off-diagonal entry $1.000000$). The frame-invariant version ($K(F)\mathbf1=0$ for **every** frame $F$ $\iff$ $\operatorname{Ric}=0$), is correct, and the same witness has $\max_F\lvert K(F)\mathbf1\rvert=0.78$ over $30$ rotated frames.
+**The over-statement.** "$K\mathbf1=0$, i.e. Ricci-flatness is exactly the vanishing of $K$'s row sums" holds only left-to-right in a single frame. $\mathop{\mathrm{Ric}}_{jj}=\sum_iK_{ij}$, so vanishing row sums give only $\mathop{\mathrm{diag}}(\mathop{\mathrm{Ric}})=0$. Witness at $n=6$: the Bianchi-projected $R=\frac1{n-2}(\mathop{\mathrm{Ric}}_0\wedge\delta)$ (Kulkarni–Nomizu) with $\mathop{\mathrm{Ric}}_0=E_{12}+E_{21}$ has $K\mathbf1=0$ to $0.0$ and $\mathop{\mathrm{Ric}}\ne0$ (off-diagonal entry $1.000000$). The frame-invariant version ($K(F)\mathbf1=0$ for **every** frame $F$ $\iff$ $\mathop{\mathrm{Ric}}=0$), is correct, and the same witness has $\max_F\lvert K(F)\mathbf1\rvert=0.78$ over $30$ rotated frames.
 
 This is inert for the relaxation: $\{$hollow, symmetric, $K\mathbf1=0$, $\lVert K\rVert_F^2\le2\}$ is still **exactly** the set of realisable vertex matrices (see the witness under Claim 5), so the optimisation is over the right set. Only the sentence is wrong.
 
 ## Claim 2, CONFIRMED, and the iff is immediate
 
-The forcing is verified at the sphere products: at $t=2$, $\lvert\operatorname{sort}(\omega)-\operatorname{sort}(d)\rvert\le2.2\times10^{-16}$ and $\lvert\operatorname{sort}(\mu)-\operatorname{sort}(d_\varphi)\rvert\le5.6\times10^{-17}$ at $n=6,8,12$. The mechanism is standard and worth stating so nobody re-measures it: $\omega\succ d$ with $\sum\omega=\sum d$ and $\sum\omega^2=\sum d^2$ forces $\omega$ to be a permutation of $d$, because $x\mapsto x^2$ is *strictly* convex and majorization gives $\sum f(\omega)\ge\sum f(d)$ for convex $f$ with equality only at a permutation.
+The forcing is verified at the sphere products: at $t=2$, $\lvert\mathop{\mathrm{sort}}(\omega)-\mathop{\mathrm{sort}}(d)\rvert\le2.2\times10^{-16}$ and $\lvert\mathop{\mathrm{sort}}(\mu)-\mathop{\mathrm{sort}}(d_\varphi)\rvert\le5.6\times10^{-17}$ at $n=6,8,12$. The mechanism is standard and worth stating so nobody re-measures it: $\omega\succ d$ with $\sum\omega=\sum d$ and $\sum\omega^2=\sum d^2$ forces $\omega$ to be a permutation of $d$, because $x\mapsto x^2$ is *strictly* convex and majorization gives $\sum f(\omega)\ge\sum f(d)$ for convex $f$ with equality only at a permutation.
 
-**The iff direction the brief asked about is a one-liner, not a numerical question.** Since $\operatorname{diag}M=K$ over the $D=\binom n2$ coordinate $2$-planes,
+**The iff direction the brief asked about is a one-liner, not a numerical question.** Since $\mathop{\mathrm{diag}}M=K$ over the $D=\binom n2$ coordinate $2$-planes,
 
-$$\tfrac t2+\lVert M-\operatorname{diag}M\rVert_F^2=\lVert M\rVert_F^2=1 ,$$
+$$\tfrac t2+\lVert M-\mathop{\mathrm{diag}}M\rVert_F^2=\lVert M\rVert_F^2=1 ,$$
 
 verified to $5.6\times10^{-16}$ on $800$ random Weyl tensors at $n=5,\dots,8$. So $t\le2$ always, and $t=2$ **iff** every off-diagonal entry of $M$ vanishes, i.e. $W_{ijkl}=0$ unless $\{i,j\}=\{k,l\}$, precisely Jäger's $\langle W\rangle_d$. Yes, $t=2$ forces coordinate-diagonality, and the record can state it as an identity instead of a computation.
 
@@ -57,7 +57,7 @@ verified to $5.6\times10^{-16}$ on $800$ random Weyl tensors at $n=5,\dots,8$. S
 
 The brief's own worry ("does $6$ random $K$ per cell, from one distribution, support 'all $42$ cells'"), dissolves, because the $\omega$ side is provable for **every** $K$ in the vertex class ([r103_claim3.py](../scripts/reviewers/r103/r103_claim3.py)).
 
-**The proof.** The $\psi$-block of $d$ is $-\operatorname{spec}(K|_{\mathbf1^\perp})$: a zero-sum vector of length $n-1$ with sum of squares exactly $t$. A zero-sum vector of length $m$ with sum of squares $s^2$ has largest entry at least $s/\sqrt{m(m-1)}$ (the minimum is attained at one large negative entry and $m-1$ equal positives). Hence
+**The proof.** The $\psi$-block of $d$ is $-\mathop{\mathrm{spec}}(K|_{\mathbf1^\perp})$: a zero-sum vector of length $n-1$ with sum of squares exactly $t$. A zero-sum vector of length $m$ with sum of squares $s^2$ has largest entry at least $s/\sqrt{m(m-1)}$ (the minimum is attained at one large negative entry and $m-1$ equal positives). Hence
 
 $$\max d\ \ge\ \sqrt{\tfrac t{(n-1)(n-2)}} .$$
 

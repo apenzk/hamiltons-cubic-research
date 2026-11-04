@@ -28,7 +28,7 @@
 | C3 | $65+24=89$ as a check | termwise identity, true for any list | v299, v300, v301 | **stated** as checking nothing |
 | C4 | every block of real type | classical; the passage's "integral" excludes quaternionic type only, complex type needing self-duality | v299, v300 (`CONFIRMED`), v301 (the self-duality step missing) | **settled inline**: self-duality from $-1\in W(B_2)$ written |
 | C5 | "so the $24$ ... are of $\Lambda^2$ ... gauge" | inferred from a dimension match; the step owed is the $S+iA$ splitting of an invariant Hermitian form | v299, v300 (`GAP`), v301 (`CONFIRMED`) | **settled inline**: the splitting written; gauge scoped to the Gram-to-sextic map, with $I+2iJ$ showing it fails in the PSD cone |
-| C6 | "the kernel direction is the imaginary coordinate iff $\operatorname{Im}h=0$" | $Q=\mathrm{diag}(1,i)$ gives $h=I$ with a real symmetric kernel direction | v299, v300, v301 (`REFUTED AS STATED`) | **corrected** to "only if" |
+| C6 | "the kernel direction is the imaginary coordinate iff $\mathop{\mathrm{Im}}h=0$" | $Q=\mathrm{diag}(1,i)$ gives $h=I$ with a real symmetric kernel direction | v299, v300, v301 (`REFUTED AS STATED`) | **corrected** to "only if" |
 | C7 | the measured $h$, "$4000$ bases", $0.541$ | sampled measurements | v299, v300, v301 (`HYPOTHESIS-DEBT`) | **kept** as measurements, labelled so in place |
 | C8 | no [results.md](../results.md) entry | phase 0 | round | **added** |
 

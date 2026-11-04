@@ -16,7 +16,7 @@ Brief: [2026-09-25-L244-gate2-brief.md](2026-09-25-L244-gate2-brief.md). Log: [a
 
 ## 1. The operator identity: CONFIRMED
 
-- With the trace pairing on self-adjoint operators of $\Lambda^2$ and $\operatorname{tr}W^2=1$, $\tfrac{d}{dt}\operatorname{tr}(W+tH)^3=3\operatorname{tr}(W^2H)$ and, by the full symmetry of $\langle A,B\#C\rangle$ (conventions.md, $T$ third sense), $\tfrac{d}{dt}\langle W+tH,(W+tH)^\#\rangle=3\langle W^\#,H\rangle$. So the gradient on $\mathcal W_n$ is $3\pi_{\mathcal W_n}(W^2+W^\#)$.
+- With the trace pairing on self-adjoint operators of $\Lambda^2$ and $\mathop{\mathrm{tr}}W^2=1$, $\tfrac{d}{dt}\mathop{\mathrm{tr}}(W+tH)^3=3\mathop{\mathrm{tr}}(W^2H)$ and, by the full symmetry of $\langle A,B\#C\rangle$ (conventions.md, $T$ third sense), $\tfrac{d}{dt}\langle W+tH,(W+tH)^\#\rangle=3\langle W^\#,H\rangle$. So the gradient on $\mathcal W_n$ is $3\pi_{\mathcal W_n}(W^2+W^\#)$.
 - L234 step (1) gives $W^2+W^\#\in\mathcal W_n$, so the projection is the identity on it and the Lagrange condition reads $W^2+W^\#=\mu W$ in $\mathcal W_n$, which is a set of operators on $\Lambda^2$. Pairing with $W$ gives $\mu=P(W)=\theta$.
 - $W^2$ is operator composition on $\Lambda^2$ and $W^\#$ the Lie-algebraic operator; neither is separately in $\mathcal W_n$ in general, only the sum, and the identity used is the sum's. Nothing more is needed.
 - Screen: at Einstein $S^5\times S^7$ (sectional curvatures $3$, $2$, $0$ minus $12/11$, normalised), $\theta=1.2282392=\sqrt{264/175}$ and $\lVert W^2+W^\#-\theta W\rVert_\infty=8\cdot10^{-17}$.
@@ -24,14 +24,14 @@ Brief: [2026-09-25-L244-gate2-brief.md](2026-09-25-L244-gate2-brief.md). Log: [a
 ## 2. The per-vector rows: CONFIRMED
 
 - By bilinearity of $\#$: $\sum_{a,b}P_a\#P_b=I\#I$, $\sum\lambda_bP_a\#P_b=I\#W$, $\sum\lambda_a\lambda_bP_a\#P_b=W\#W=W^\#$. The givens supply $I\#I=(n-2)I$ and $I\#W=-W$.
-- Normalisation, independently: with $\psi$ orthonormal for $-\tfrac12\operatorname{tr}XY$ and invariance $\langle[\psi_\gamma,\psi_\delta],x\rangle=\langle\psi_\delta,[x,\psi_\gamma]\rangle$, $\langle(I\#I)x,x\rangle=\tfrac12\sum_\gamma\lVert[x,\psi_\gamma]\rVert^2=\tfrac12\operatorname{tr}(-\mathrm{ad}_x^2)=n-2$. So $B_{ab}=\tfrac12\sum[\psi_\gamma,\psi_\delta]\otimes[\psi_\gamma,\psi_\delta]$ is the record's $\#$, not twice it.
+- Normalisation, independently: with $\psi$ orthonormal for $-\tfrac12\mathop{\mathrm{tr}}XY$ and invariance $\langle[\psi_\gamma,\psi_\delta],x\rangle=\langle\psi_\delta,[x,\psi_\gamma]\rangle$, $\langle(I\#I)x,x\rangle=\tfrac12\sum_\gamma\lVert[x,\psi_\gamma]\rVert^2=\tfrac12\mathop{\mathrm{tr}}(-\mathrm{ad}_x^2)=n-2$. So $B_{ab}=\tfrac12\sum[\psi_\gamma,\psi_\delta]\otimes[\psi_\gamma,\psi_\delta]$ is the record's $\#$, not twice it.
 - Every right side is a scalar multiple of $x$ on $E_c$ ($(n-2)x$, $-\lambda_cx$, $(\theta\lambda_c-\lambda_c^2)x$), so the rows hold at EVERY unit $x\in E_c$, not only at basis vectors.
 - Screen: at $S^5\times S^7$, $I\#I$ and $I\#W=-W$ to $2\cdot10^{-16}$, every $B_{ab}\succeq0$, and the three rows at random unit $x$ in each eigenspace equal $10$, $-\lambda_c$, $\lambda_c(\theta-\lambda_c)$ to six printed digits.
 
 ## 3. The caps: CONFIRMED
 
 - $\sum_{\gamma\in E_a}\lVert[x,\psi_\gamma]\rVert^2=\sum_{\gamma\in E_a}\sum_{\delta}\langle[\psi_\gamma,\psi_\delta],x\rangle^2$ with $\delta$ over an orthonormal basis of all of $\Lambda^2=\bigoplus_bE_b$, which is $2\sum_bb_{ab}(x)$ (the sum over $b$ includes $b=a$).
-- The left side is $\operatorname{tr}(P_a(-\mathrm{ad}_x^2)P_a)$, at most $\kappa_{m_a}(x)$ by Ky Fan. For $a=c$, take $x$ as one basis vector of $E_c$: $[x,x]=0$, so the trace runs over $E_c\cap x^\perp$, of dimension $m_c-1$, and Ky Fan gives $\kappa_{m_c-1}(x)$.
+- The left side is $\mathop{\mathrm{tr}}(P_a(-\mathrm{ad}_x^2)P_a)$, at most $\kappa_{m_a}(x)$ by Ky Fan. For $a=c$, take $x$ as one basis vector of $E_c$: $[x,x]=0$, so the trace runs over $E_c\cap x^\perp$, of dimension $m_c-1$, and Ky Fan gives $\kappa_{m_c-1}(x)$.
 
 ## 4. The symmetric derivation (ii): CONFIRMED, with a labelling correction
 

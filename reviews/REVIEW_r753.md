@@ -8,7 +8,7 @@
 |---|---|---|
 | C1 | The closed form $V(t)=a$ for $t\le t^*$, $=\tfrac{a^2}{4\lambda t}+\lambda t$ for $t\ge t^*$, $t^*=\tfrac a{2\lambda}$ | **PROVEN on $t\ge0$; REFUTED as written on $t<0$**, the first branch's range is unbounded below and the claim fails there, in closed form, under every stated hypothesis |
 | C2 | The planar ansatz $K=\cos\varphi\,\hat q+\sin\varphi\,v$ captures the maximum | **GAP IN THE WRITE-UP, CLOSED HERE**, true for $t\ge0$, $\lambda>0$, but the proof asserts it by choosing coordinates; the missing two lines are §1 |
-| C3 | A top eigenvector is orthogonal to $q$ | **CONFIRMED, and stronger**, $q\perp\operatorname{im}M$ entirely, so the whole eigenspace $E_\lambda$ is orthogonal to $q$ at any multiplicity; the proof's $\lambda\ne0$ is exactly the needed exclusion |
+| C3 | A top eigenvector is orthogonal to $q$ | **CONFIRMED, and stronger**, $q\perp\mathop{\mathrm{im}}M$ entirely, so the whole eigenspace $E_\lambda$ is orthogonal to $q$ at any multiplicity; the proof's $\lambda\ne0$ is exactly the needed exclusion |
 | C4 | $\langle MK,K\rangle=\lambda\sin^2\varphi$, "the $\hat q$ term vanishing and the cross term with it" | **CONFIRMED**, both vanish from $M\hat q=0$ alone; symmetry is not used here, and the proof's placement of it is loose but harmless |
 | C5 | The interior point $c^*=\tfrac a{2t\lambda}$ with value $\tfrac{a^2}{4\lambda t}+\lambda t$ | **CONFIRMED as arithmetic; INCOMPLETE as an argument**, it is a maximum only when $t\lambda>0$, which the proof never says; for $t\lambda<0$ the same point is the *minimum* |
 | C6 | $c^*\le1\iff t\ge\tfrac a{2\lambda}$, and below it the max is $f(1)=a$ | **CONFIRMED**, both, exactly; $f(1)=a$ identically in $t$ and $\lambda$ |
@@ -51,7 +51,7 @@ a maximum rather than a supremum because the integrand is continuous and the uni
 
 **The reduction is nevertheless true for $t\ge0$ and $\lambda>0$, and here is the argument the block owes.**
 
-**Step 1, $q^\perp$ is $M$-invariant, indeed $\operatorname{im}M\subseteq q^\perp$.** For any $x\in E$, symmetry and $Mq=0$ give $\langle Mx,q\rangle=\langle x,Mq\rangle=0$. So every vector in the image of $M$ is orthogonal to $q$; in particular $M(q^\perp)\subseteq\operatorname{im}M\subseteq q^\perp$, and $M\vert_{q^\perp}$ is a symmetric operator on $q^\perp$ in its own right.
+**Step 1, $q^\perp$ is $M$-invariant, indeed $\mathop{\mathrm{im}}M\subseteq q^\perp$.** For any $x\in E$, symmetry and $Mq=0$ give $\langle Mx,q\rangle=\langle x,Mq\rangle=0$. So every vector in the image of $M$ is orthogonal to $q$; in particular $M(q^\perp)\subseteq\mathop{\mathrm{im}}M\subseteq q^\perp$, and $M\vert_{q^\perp}$ is a symmetric operator on $q^\perp$ in its own right.
 
 **Step 2, the decomposition of an arbitrary unit $K$.** Every unit $K\in E$ is $K=c\,\hat q+s\,w$ with $c=\langle K,\hat q\rangle\in[-1,1]$, $s=\sqrt{1-c^2}\ge0$ and $w$ a unit vector of $q^\perp$ (any $w$ when $s=0$). This is a decomposition, not an ansatz: it costs nothing.
 
@@ -63,17 +63,17 @@ since $M\hat q=0$ kills the first two brackets outright and $\langle Mw,\hat q\r
 
 **Step 4, the inner maximisation, and this is where $t\ge0$ enters.** Fix $c$. Then $t(1-c^2)\ge0$, so maximising over $w$ means maximising $\langle Mw,w\rangle$, whose maximum over the unit sphere of $q^\perp$ is $\Lambda:=\lambda_{\max}(M\vert_{q^\perp})$, attained at a top eigenvector of $M\vert_{q^\perp}$.
 
-**Step 5, $\Lambda=\lambda$ when $\lambda>0$.** By Step 1 and the spectral theorem, $E=\langle q\rangle\oplus q^\perp$ splits $M$, so $\operatorname{spec}(M)=\{0\}\cup\operatorname{spec}(M\vert_{q^\perp})$ and $\lambda=\max(0,\Lambda)$. Hence $\lambda>0$ forces $\Lambda=\lambda$, and the maximising $w$ is a top eigenvector $v$ of $M$ itself, which lies in $q^\perp$, so $K=c\hat q+sv$ is exactly the proof's $K=\cos\varphi\,\hat q+\sin\varphi\,v$.
+**Step 5, $\Lambda=\lambda$ when $\lambda>0$.** By Step 1 and the spectral theorem, $E=\langle q\rangle\oplus q^\perp$ splits $M$, so $\mathop{\mathrm{spec}}(M)=\{0\}\cup\mathop{\mathrm{spec}}(M\vert_{q^\perp})$ and $\lambda=\max(0,\Lambda)$. Hence $\lambda>0$ forces $\Lambda=\lambda$, and the maximising $w$ is a top eigenvector $v$ of $M$ itself, which lies in $q^\perp$, so $K=c\hat q+sv$ is exactly the proof's $K=\cos\varphi\,\hat q+\sin\varphi\,v$.
 
-**Conclusion.** $V(t)=\max_{c\in[-1,1]}\big[ac+t\lambda(1-c^2)\big]=\max_{c\in[-1,1]}f(c)$ for $t\ge0$ and $\lambda>0$, with the maximum attained inside $\operatorname{span}\{\hat q,v\}$. The plane is a conclusion, not a hypothesis, **but only because $q$ is an eigenvector of $M$**, which is what $Mq=0$ says, and that is exactly the fact the write-up spends and does not spend visibly. **Verdict: the ansatz is sound and the write-up is a gap.** Five lines fix it, and they should go in, because a reader cannot reconstruct them from what is on the page: the proof's sentence *"a top eigenvector $v$ … is orthogonal to $q$"* justifies the *shape* of the plane and says nothing about why the maximiser lies in it.
+**Conclusion.** $V(t)=\max_{c\in[-1,1]}\big[ac+t\lambda(1-c^2)\big]=\max_{c\in[-1,1]}f(c)$ for $t\ge0$ and $\lambda>0$, with the maximum attained inside $\mathop{\mathrm{span}}\{\hat q,v\}$. The plane is a conclusion, not a hypothesis, **but only because $q$ is an eigenvector of $M$**, which is what $Mq=0$ says, and that is exactly the fact the write-up spends and does not spend visibly. **Verdict: the ansatz is sound and the write-up is a gap.** Five lines fix it, and they should go in, because a reader cannot reconstruct them from what is on the page: the proof's sentence *"a top eigenvector $v$ … is orthogonal to $q$"* justifies the *shape* of the plane and says nothing about why the maximiser lies in it.
 
 **One remark on how much stronger this setting is than the trust-region hard case the block invokes.** The classical hard case of $\max\{\langle g,K\rangle+t\langle MK,K\rangle:\lVert K\rVert=1\}$ is $g\perp E_\lambda$, which permits $g$ to spread over the remaining eigenspaces and leaves the solution implicit in a secular equation. Here $g=q$ is itself an eigenvector of $M$, which is strictly stronger and is what collapses the secular equation to the quadratic $f$. So the block's "hard-case trust-region problem and so globally solvable" understates its own hypothesis; the closed form comes from $Mq=0$, not from hard-case theory.
 
 ## 2. $Mq=0$, the image, multiplicity, and $\lambda=0$
 
-**"Restricted how, exactly?"**, the answer is *not restricted at all*. $\langle q,Mx\rangle=\langle Mq,x\rangle=0$ for **every** $x\in E$, so $q\perp\operatorname{im}(M)$ as an operator on all of $E$, not merely on some invariant piece. This is stronger than the proof's stated consequence and is what Step 1 above uses.
+**"Restricted how, exactly?"**, the answer is *not restricted at all*. $\langle q,Mx\rangle=\langle Mq,x\rangle=0$ for **every** $x\in E$, so $q\perp\mathop{\mathrm{im}}(M)$ as an operator on all of $E$, not merely on some invariant piece. This is stronger than the proof's stated consequence and is what Step 1 above uses.
 
-**Multiplicity $>1$.** Let $E_\lambda=\ker(M-\lambda)$ with $\lambda\ne0$. Every $v\in E_\lambda$ satisfies $v=\lambda^{-1}Mv\in\operatorname{im}M$, hence $v\perp q$. So the **entire** top eigenspace is orthogonal to $q$ at any multiplicity, and the proof's choice of *a* top eigenvector is arbitrary in a harmless way, every choice gives the same $\lambda\sin^2\varphi$ and the same $V$. Degeneracy of $\lambda$ costs nothing.
+**Multiplicity $>1$.** Let $E_\lambda=\ker(M-\lambda)$ with $\lambda\ne0$. Every $v\in E_\lambda$ satisfies $v=\lambda^{-1}Mv\in\mathop{\mathrm{im}}M$, hence $v\perp q$. So the **entire** top eigenspace is orthogonal to $q$ at any multiplicity, and the proof's choice of *a* top eigenvector is arbitrary in a harmless way, every choice gives the same $\lambda\sin^2\varphi$ and the same $V$. Degeneracy of $\lambda$ costs nothing.
 
 **$\lambda=0$.** Here the proof's argument genuinely fails: $q$ is *itself* a top eigenvector, "top eigenvector $\perp q$" is false for the choice $v=\hat q$, and $t^*=a/(2\lambda)$ and $a^2/(4\lambda t)$ are undefined. The proof excludes this by writing $\lambda\ne0$, which is correct practice. The *conclusion* survives as a limit (see §11) but the *proof* does not, and the statement as displayed does not carry the $\lambda\ne0$ that the proof carries. **Move $\lambda>0$ into the statement.**
 
@@ -86,7 +86,7 @@ The expansion needs two vanishings, and both follow from $M\hat q=0$ alone:
 
 The remaining half, $\langle Mv,\hat q\rangle$, is where the two available routes differ: **either** symmetry, $\langle Mv,\hat q\rangle=\langle v,M\hat q\rangle=0$, **or** the eigenvalue relation plus §2's orthogonality, $\langle Mv,\hat q\rangle=\lambda\langle v,\hat q\rangle=0$. So the cross term dies twice over and no hypothesis beyond $Mq=0$ is needed for §3 in isolation.
 
-**Where symmetry is genuinely load-bearing** is elsewhere, and the block never says so: (i) §1's Step 1, $\operatorname{im}M\subseteq q^\perp$, which is what makes $q^\perp$ an $M$-invariant subspace and the reduction possible at all; (ii) §2's orthogonality of $E_\lambda$ to $q$; (iii) the spectral theorem behind Step 4's "the maximum of the Rayleigh quotient is the top eigenvalue, attained". Without symmetry $M$ need not be diagonalisable, $\lambda$ need not be real, and $\max_w\langle Mw,w\rangle$ is $\lambda_{\max}$ of the symmetric part rather than of $M$. **The proof's sentence attributes symmetry to the step that does not need it.** That is presentational, and I record it as such.
+**Where symmetry is genuinely load-bearing** is elsewhere, and the block never says so: (i) §1's Step 1, $\mathop{\mathrm{im}}M\subseteq q^\perp$, which is what makes $q^\perp$ an $M$-invariant subspace and the reduction possible at all; (ii) §2's orthogonality of $E_\lambda$ to $q$; (iii) the spectral theorem behind Step 4's "the maximum of the Rayleigh quotient is the top eigenvalue, attained". Without symmetry $M$ need not be diagonalisable, $\lambda$ need not be real, and $\max_w\langle Mw,w\rangle$ is $\lambda_{\max}$ of the symmetric part rather than of $M$. **The proof's sentence attributes symmetry to the step that does not need it.** That is presentational, and I record it as such.
 
 ## 4. The one-variable maximisation, with signs
 
@@ -164,7 +164,7 @@ Given above, before §1. The two findings from it:
 
 ## 11. The edges
 
-**$t<0$, the one live defect.** The statement's first branch reads "$t\le t^*$" with no lower bound, and it is **false** there. Exhibited concretely: take $E=\mathbb R^3$, $q=(1,0,0)$ so $a=1$, and $M=\operatorname{diag}(0,1,-1)$. Then $M$ is symmetric, $Mq=0$, $\lambda=\lambda_{\max}(M)=1>0$ and $t^*=a/(2\lambda)=\tfrac12$. At $t=-1\le t^*$, take $K=(\tfrac12,0,\tfrac{\sqrt3}2)$:
+**$t<0$, the one live defect.** The statement's first branch reads "$t\le t^*$" with no lower bound, and it is **false** there. Exhibited concretely: take $E=\mathbb R^3$, $q=(1,0,0)$ so $a=1$, and $M=\mathop{\mathrm{diag}}(0,1,-1)$. Then $M$ is symmetric, $Mq=0$, $\lambda=\lambda_{\max}(M)=1>0$ and $t^*=a/(2\lambda)=\tfrac12$. At $t=-1\le t^*$, take $K=(\tfrac12,0,\tfrac{\sqrt3}2)$:
 
 $$\langle q,K\rangle+t\langle MK,K\rangle=\tfrac12+(-1)\cdot\big(-\tfrac34\big)=\tfrac12+\tfrac34=\tfrac54\ >\ 1=a.$$
 

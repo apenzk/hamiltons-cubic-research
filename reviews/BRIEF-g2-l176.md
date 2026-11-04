@@ -15,7 +15,7 @@
 
 ## The claims
 
-**L176.** Let $W\ne0$ be coordinate-diagonal in some frame, and let $G$ be the graph on $\{1,\dots,n\}$ with edges $\{a,b\}$ where $K_{ab}\ne0$. Then every vertex of $G$ has degree $0$ or $\ge2$, and $\lvert E(G)\rvert\ge4$; equivalently $\operatorname{rank}(W:\Lambda^2\to\Lambda^2)\ge4$.
+**L176.** Let $W\ne0$ be coordinate-diagonal in some frame, and let $G$ be the graph on $\{1,\dots,n\}$ with edges $\{a,b\}$ where $K_{ab}\ne0$. Then every vertex of $G$ has degree $0$ or $\ge2$, and $\lvert E(G)\rvert\ge4$; equivalently $\mathop{\mathrm{rank}}(W:\Lambda^2\to\Lambda^2)\ge4$.
 
 **The proof as written.** On the locus $W(f_a\wedge f_b)=K_{ab}f_a\wedge f_b$, so the eigenvalues are the $K_{ab}$ and the rank is $\lvert E(G)\rvert$. *Degree:* a vertex $a$ of degree $1$ with sole neighbour $b$ has $0=\sum_c K_{ac}=K_{ab}$, contradiction. *Edges:* $W\ne0$ gives $\lvert E\rvert\ge1$. At $\lvert E\rvert\le2$ the degree sum is $\le4$, so at most two vertices carry support and a simple graph on two vertices has one edge, whose endpoints have degree $1$. At $\lvert E\rvert=3$ the degree sum is $6$ with every support degree $\ge2$, forcing exactly three vertices of degree exactly two, so $G=K_3$; its row sums $K_{ab}+K_{ac}=0$, $K_{ab}+K_{bc}=0$, $K_{ac}+K_{bc}=0$ give $K_{ac}=K_{bc}=-K_{ab}$ and then $K_{ab}=0$.
 

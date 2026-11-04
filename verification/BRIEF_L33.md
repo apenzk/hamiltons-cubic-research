@@ -9,7 +9,7 @@
 
 Let $W\in\mathrm{Weyl}_m$ have a **one-dimensional** eigenspace on one side, exactly one eigenvalue counted *with multiplicity*. If that eigenvector is not a multiple of a complex structure on a $4$-dimensional subspace, then $W=0$. In particular no rank-$3$ $\mathrm{Weyl}_m$ tensor at even $m\ge6$ has a nondegenerate minority-side eigenvector.
 
-**The identity the proof runs on.** Pairing the first Bianchi identity against $u\otimes u$ for arbitrary skew $u$, the term $\operatorname{tr}(u^2v_\alpha^2)$ that appears is annihilated by Ricci-flatness, leaving an operator identity on $\mathfrak{so}(m)$:
+**The identity the proof runs on.** Pairing the first Bianchi identity against $u\otimes u$ for arbitrary skew $u$, the term $\mathop{\mathrm{tr}}(u^2v_\alpha^2)$ that appears is annihilated by Ricci-flatness, leaving an operator identity on $\mathfrak{so}(m)$:
 
 $$\sum_\alpha\lambda_\alpha\,\mathrm{ad}(v_\alpha)^2=2W,\qquad\text{i.e.}\qquad \sum_\alpha\lambda_\alpha N_{v_\alpha}=0,\quad N_v:=2\,v\otimes v-\mathrm{ad}(v)^2 .$$
 
@@ -35,12 +35,12 @@ starts had failed to settle it either way.
 a multiple of a complex structure on a $4$-dimensional subspace, then $W=0$. In particular no rank-$3$
 $\mathrm{Weyl}_m$ tensor at even $m\ge6$ has a nondegenerate minority-side eigenvector.
 
-> **"Exactly one eigenvalue of one sign" was ambiguous, and the lemma is FALSE under the other reading.** Counted as *one distinct value at any multiplicity*, a witness sits already in $\mathrm{Weyl}_4$: $W^+=W^-=\operatorname{diag}(2,-1,-1)$ has spectrum $(2,2,-1,-1,-1,-1)$, its $+2$ eigenspace contains a rank-$2$ element that is no complex structure, and $W\ne0$. [Lemma L34](../findings/stratum-two-negative.md#lemma-l34-full-support-with-two-negative-eigenvalues-at-m6-and-m8-canonical-statement-and-proof) supplies a second witness at $m=8$. **This file's own convention counts with multiplicity, so the statement was correct in place**, and it is quoted in [results.md](../results.md) and in the report, where that convention does not travel. *Gate 2, [r511](../reviews/REVIEW_r511.md) and [r512](../reviews/REVIEW_r512.md) on identical briefs, both CONFIRMED, each building the witness independently.*
+> **"Exactly one eigenvalue of one sign" was ambiguous, and the lemma is FALSE under the other reading.** Counted as *one distinct value at any multiplicity*, a witness sits already in $\mathrm{Weyl}_4$: $W^+=W^-=\mathop{\mathrm{diag}}(2,-1,-1)$ has spectrum $(2,2,-1,-1,-1,-1)$, its $+2$ eigenspace contains a rank-$2$ element that is no complex structure, and $W\ne0$. [Lemma L34](../findings/stratum-two-negative.md#lemma-l34-full-support-with-two-negative-eigenvalues-at-m6-and-m8-canonical-statement-and-proof) supplies a second witness at $m=8$. **This file's own convention counts with multiplicity, so the statement was correct in place**, and it is quoted in [results.md](../results.md) and in the report, where that convention does not travel. *Gate 2, [r511](../reviews/REVIEW_r511.md) and [r512](../reviews/REVIEW_r512.md) on identical briefs, both CONFIRMED, each building the witness independently.*
 >
 > **The exception is realised and complete**, checked by cases on the degenerate ranks by both reviewers with no second family, unlike [Lemma L11](route-a.md), whose single stated exception this audit found to be two. **And [Lemma L32](isotropy-cap.md)'s missing hypothesis never reaches here**: $\mathfrak c=0$ would force $m\le3$, where $\mathrm{Weyl}_m=0$, so L33 is unconditional. *Three true clauses were dropped in the move, notably that the result covers odd $m$ and degenerate minority eigenvectors.*
 
 **The identity the proof runs on.** Pairing the first Bianchi identity against $u\otimes u$ for arbitrary skew
-$u$, the term $\operatorname{tr}(u^2v_\alpha^2)$ that appears is annihilated by Ricci-flatness, leaving an
+$u$, the term $\mathop{\mathrm{tr}}(u^2v_\alpha^2)$ that appears is annihilated by Ricci-flatness, leaving an
 operator identity on $\mathfrak{so}(m)$:
 
 $$\sum_\alpha\lambda_\alpha\,\mathrm{ad}(v_\alpha)^2=2W,\qquad\text{i.e.}\qquad

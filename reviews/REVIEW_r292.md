@@ -20,12 +20,12 @@ Cold adversarial audit of C1–C6 (original brief) and C7–C9 (addendum). Every
 
 ## Setup, fixed once
 
-$\varphi_{ab}=E_{ab}-E_{ba}$ with $\langle X,Y\rangle=\tfrac12\operatorname{tr}(X^{\mathsf T}Y)$, so $\{\varphi_{ab}\}_{a<b}$ is orthonormal and the structure constants $c_{\alpha\beta\gamma}$ are $\pm1$ on triangles $\{a,b\},\{b,d\},\{a,d\}$ and $0$ otherwise. For $W=\operatorname{diag}(M)$ the eigenvectors are the $\varphi_{ab}$ with $\lambda_{ab}=M_{ab}$.
+$\varphi_{ab}=E_{ab}-E_{ba}$ with $\langle X,Y\rangle=\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$, so $\{\varphi_{ab}\}_{a<b}$ is orthonormal and the structure constants $c_{\alpha\beta\gamma}$ are $\pm1$ on triangles $\{a,b\},\{b,d\},\{a,d\}$ and $0$ otherwise. For $W=\mathop{\mathrm{diag}}(M)$ the eigenvectors are the $\varphi_{ab}$ with $\lambda_{ab}=M_{ab}$.
 
 Two bookkeeping points the brief asked about, both settled in the affirmative:
 
 - **Which slot of `T` is traced is immaterial.** $c$ is totally antisymmetric, so $T_{abc}=c_{abc}^2$ is totally *symmetric*. The `einsum('dab,ab->d', T, ...)` may contract any two slots.
-- **The factor $2$ is pinned twice, independently.** Once by $\lVert\varphi\rVert_F^2=2$ against the $\tfrac12\operatorname{tr}$ pairing (which makes $c=\pm1$, not $\pm\sqrt2$), and once because $g_\delta$ sums over *ordered* $(\alpha,\beta)$, so each triangle contributes its two orientations. $\Delta$ itself counts each unordered pair once, since `g[p].sum()` runs over eigen-directions.
+- **The factor $2$ is pinned twice, independently.** Once by $\lVert\varphi\rVert_F^2=2$ against the $\tfrac12\mathop{\mathrm{tr}}$ pairing (which makes $c=\pm1$, not $\pm\sqrt2$), and once because $g_\delta$ sums over *ordered* $(\alpha,\beta)$, so each triangle contributes its two orientations. $\Delta$ itself counts each unordered pair once, since `g[p].sum()` runs over eigen-directions.
 
 ---
 
@@ -45,13 +45,13 @@ $$\tfrac12 g_{ab}=\lVert M_a-M_b\rVert^2-2M_{ab}^2=s_a+s_b-2(M^2)_{ab}-2M_{ab}^2
 
 ## C2, CONFIRMED
 
-$g$ is the squared norm of the linear map $x\mapsto[\operatorname{ad}(x),W]$, so its trace over the strictly positive eigenspace is basis-independent, degenerate spectra (which the diagonal locus has in abundance) do not spoil it. The positive eigenspace is spanned by the $\varphi_{ab}$ with $M_{ab}>0$, giving the claimed formula. Worst deviation $1.07\times10^{-14}$ over 40 draws at $n=4,\dots,8$.
+$g$ is the squared norm of the linear map $x\mapsto[\mathop{\mathrm{ad}}(x),W]$, so its trace over the strictly positive eigenspace is basis-independent, degenerate spectra (which the diagonal locus has in abundance) do not spoil it. The positive eigenspace is spanned by the $\varphi_{ab}$ with $M_{ab}>0$, giving the claimed formula. Worst deviation $1.07\times10^{-14}$ over 40 draws at $n=4,\dots,8$.
 
 **Caveat, load-bearing for C4.** The claim says $M_{ab}>0$; the code says $\lambda>10^{-9}$. Those differ, and the difference is not small, see the counterexample under C4.
 
 ## C3, CONFIRMED, but the attribution is wrong
 
-Summing C1 over unordered pairs, with $M_{aa}=0$ used to drop the $d=a,b$ terms and $\operatorname{tr}M^2=\sum_{a\ne b}M_{ab}^2=2$:
+Summing C1 over unordered pairs, with $M_{aa}=0$ used to drop the $d=a,b$ terms and $\mathop{\mathrm{tr}}M^2=\sum_{a\ne b}M_{ab}^2=2$:
 
 $$\sum_{a<b}g_{ab}=2(n-2)+2(n-2)-2\sum_{a\ne b}(M^2)_{ab}=4(n-2)-2\big(\lVert M\mathbf 1\rVert^2-2\big)=4(n-1)-2\lVert M\mathbf 1\rVert^2 .$$
 
@@ -59,7 +59,7 @@ So the exact statement is stronger than C3: the deficit is $2\lVert M\mathbf 1\r
 
 **"$M\mathbf 1=0$ is used exactly once", TRUE for this proof.** It enters only through $\mathbf 1^{\mathsf T}M^2\mathbf 1=\lVert M\mathbf 1\rVert^2$ in the cross term. Hollowness of $M$ is used twice and the normalisation once, but those are not the hypothesis in question.
 
-**Where it *is* hiding, and it matters, C3 is not a diagonal-locus fact.** In general $\sum_\delta g_\delta=4(n-2)-4\operatorname{tr}(W^{\#})$, and `total` $=4(n-1)$ holds at *every* Weyl tensor: random non-diagonal Weyl tensors at $n=5,6,7,8$ all return `total` $=4(n-1)$ to nine digits with $\operatorname{tr}(W^{\#})=-1.000000000$ exactly. The general identity needs **both** Ricci-flatness and first Bianchi, a symmetric operator that is Ricci-flat with Bianchi violated returns `total` $=13.65$ at $n=5$ (against $16$) and $18.18$ at $n=6$ (against $20$), with $\operatorname{tr}(W^\#)=-0.412,-0.546$. On the diagonal locus Bianchi is free, which is the *only* reason the failure there detects row sums alone. State C3 as: on the diagonal locus, where Bianchi is automatic, the failure of `total` $=4(n-1)$ detects exactly $\lVert M\mathbf 1\rVert^2$, and off it, the same identity is already available and detects the Bianchi defect too.
+**Where it *is* hiding, and it matters, C3 is not a diagonal-locus fact.** In general $\sum_\delta g_\delta=4(n-2)-4\mathop{\mathrm{tr}}(W^{\#})$, and `total` $=4(n-1)$ holds at *every* Weyl tensor: random non-diagonal Weyl tensors at $n=5,6,7,8$ all return `total` $=4(n-1)$ to nine digits with $\mathop{\mathrm{tr}}(W^{\#})=-1.000000000$ exactly. The general identity needs **both** Ricci-flatness and first Bianchi, a symmetric operator that is Ricci-flat with Bianchi violated returns `total` $=13.65$ at $n=5$ (against $16$) and $18.18$ at $n=6$ (against $20$), with $\mathop{\mathrm{tr}}(W^\#)=-0.412,-0.546$. On the diagonal locus Bianchi is free, which is the *only* reason the failure there detects row sums alone. State C3 as: on the diagonal locus, where Bianchi is automatic, the failure of `total` $=4(n-1)$ detects exactly $\lVert M\mathbf 1\rVert^2$, and off it, the same identity is already available and detects the Bianchi defect too.
 
 Structurally, C3 is C7 contracted with $w\equiv1$; the $\theta$ term drops out because $\sum_{a<b}M_{ab}=0$. That is why C3 survives without criticality while C7 does not.
 
@@ -128,7 +128,7 @@ From C1, $\tfrac12g_{ab}=s_a+s_b-2(M^2)_{ab}-2M_{ab}^2$ unconditionally. The off
 
 **Two points the brief asked for.**
 
-- **It needs criticality, and needs exactly its off-diagonal half.** The step above is reversible: C7 holds at the pair $(a,b)$ **if and only if** the vertex equation holds at $(a,b)$. C7 is not a consequence of criticality, it is criticality rewritten in defect language. Numerically, at random non-critical diagonal Weyl points at $n=6$ (criticality residual $0.22$–$0.31$) the C7 error is $0.88$–$1.24$. The *diagonal* half of the quoted equation is vacuous: $(M^{\circ2})_{aa}=0$ and $(M^2)_{aa}=s_a$, so $\operatorname{diag}(s)$ is pure bookkeeping.
+- **It needs criticality, and needs exactly its off-diagonal half.** The step above is reversible: C7 holds at the pair $(a,b)$ **if and only if** the vertex equation holds at $(a,b)$. C7 is not a consequence of criticality, it is criticality rewritten in defect language. Numerically, at random non-critical diagonal Weyl points at $n=6$ (criticality residual $0.22$–$0.31$) the C7 error is $0.88$–$1.24$. The *diagonal* half of the quoted equation is vacuous: $(M^{\circ2})_{aa}=0$ and $(M^2)_{aa}=s_a$, so $\mathop{\mathrm{diag}}(s)$ is pure bookkeeping.
 - **It is strictly stronger than $\sum_\gamma\lambda_\gamma g_\gamma=-4\theta$, not a restatement.** Contract C7 with $\lambda_{ab}=M_{ab}$: $\sum_{a<b}M_{ab}g_{ab}=2\sum_a s_a(M\mathbf 1)_a-4\theta\sum_{a<b}M_{ab}^2=-4\theta$, using $M\mathbf 1=0$ once and the normalisation once. So C7 $\Rightarrow$ the record's identity on the diagonal locus, and C7 is $\binom n2$ equations to the record's one. The converse fails on logical grounds the record itself supplies: [target.md](../findings/target.md) records that $\sum\lambda g=-4\theta$ **holds at non-critical Weyl tensors** (I reproduce this: $\le8.9\times10^{-16}$ at four non-critical diagonal points where C7 is off by $\sim1.2$), whereas C7 is equivalent to criticality. They are not the same statement in either direction of strength.
 
 Contraction dictionary, which is the useful way to file all of this: C7 with weight $w\equiv1$ gives **C3** ($\theta$ cancels, because $\sum_{a<b}M_{ab}=0$); with weight $\lambda$ it gives the record's **$-4\theta$ identity**; with weight $\mathbb 1[M_{ab}>0]$ it gives **C9**, and dropping $g\ge0$ from that gives **C8**.
@@ -188,7 +188,7 @@ which at the $n=6$ witness improves $1.080123$ to $0.732941$. Keeping all coordi
 
 ## Summary of corrections owed to the record
 
-1. C3 should be recorded as the general Weyl identity $\sum_\delta g_\delta=4(n-2)-4\operatorname{tr}(W^\#)=4(n-1)$, with the diagonal-locus deficit $-2\lVert M\mathbf 1\rVert^2$ as its specialisation, and with first Bianchi named as a second hypothesis that the diagonal restriction hides.
+1. C3 should be recorded as the general Weyl identity $\sum_\delta g_\delta=4(n-2)-4\mathop{\mathrm{tr}}(W^\#)=4(n-1)$, with the diagonal-locus deficit $-2\lVert M\mathbf 1\rVert^2$ as its specialisation, and with first Bianchi named as a second hypothesis that the diagonal restriction hides.
 2. C4's second conjunct is redundant under its own reading of "block"; and the corollary "$\Delta=0$ with $\ker W=0$ $\Rightarrow$ generalised sphere product, all blocks of size $\ge2$" should be stated, since a singleton $G^+$ block forces a zero row.
 3. C5 should be recorded quantitatively: $S_{\mathfrak{mmm}}=6\cdot\#\text{triangles}(G^-)$, and kept distinct from `S_structural = 3 x triangles`.
 4. C2/C4/C5 are statements about the exact $\Delta$; `defect()`'s $\lambda>10^{-9}$ cut breaks the "only if" of C4 by an $O(1)$ margin at a genuine Weyl point (witness above).

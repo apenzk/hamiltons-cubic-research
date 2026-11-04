@@ -14,12 +14,12 @@ Applied at L174: since $SO(n)$ acts irreducibly on $\mathrm{MC}_W(V^*)$, the alg
 
 ## Theorem 3.2 (L440), the two identities this project had not used
 
-> "A nontrivial finite-dimensional Euclidean metrized commutative algebra $(A,\circ,h)$ on which a real Lie group $G$ acts irreducibly by isometric automorphisms is exact and Killing metrized with Killing form $\tau_\circ(x,y)=\operatorname{tr}L_\circ(x)L_\circ(y)$ equal to a nonzero multiple of the metric $h$."
+> "A nontrivial finite-dimensional Euclidean metrized commutative algebra $(A,\circ,h)$ on which a real Lie group $G$ acts irreducibly by isometric automorphisms is exact and Killing metrized with Killing form $\tau_\circ(x,y)=\mathop{\mathrm{tr}}L_\circ(x)L_\circ(y)$ equal to a nonzero multiple of the metric $h$."
 
 Two consequences, both hypotheses satisfied here ($SO(n)$ acts irreducibly by isometric automorphisms):
 
-1. **$\operatorname{tr}L_\circ(x)=0$ for every $x$**, the proof observes $x\mapsto\operatorname{tr}L_\circ(x)$ is $G$-invariant, so its kernel is all of $A$ by irreducibility. Cited at L168.
-2. **$\operatorname{tr}\big(L_\circ(x)L_\circ(y)\big)=\kappa\,h(x,y)$** with $\kappa\ne0$, by Schur, since the endomorphism representing $\tau_\circ$ against $h$ is $G$-invariant and self-adjoint.
+1. **$\mathop{\mathrm{tr}}L_\circ(x)=0$ for every $x$**, the proof observes $x\mapsto\mathop{\mathrm{tr}}L_\circ(x)$ is $G$-invariant, so its kernel is all of $A$ by irreducibility. Cited at L168.
+2. **$\mathop{\mathrm{tr}}\big(L_\circ(x)L_\circ(y)\big)=\kappa\,h(x,y)$** with $\kappa\ne0$, by Schur, since the endomorphism representing $\tau_\circ$ against $h$ is $G$-invariant and self-adjoint.
 
 **Careful with normalisations.** Idempotents here are not unit vectors ($|e|=1/\theta$) so the textbook form "$\kappa=1+\sum\lambda_i^2$" does not apply as written. And Fox's metric is complete contraction, exactly $4\times$ the Frobenius metric used in this project, so $\kappa_{\text{Fox}}=\tfrac14\kappa_{\text{Frob}}$.
 

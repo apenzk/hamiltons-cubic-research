@@ -20,7 +20,7 @@ Quoted from the brief.
 
 - "$V=\mathbb R^n$ with the standard action of $O(n)$, and $V^{\otimes m}$ with the diagonal action $g\cdot(v_1\otimes\dots\otimes v_m)=gv_1\otimes\dots\otimes gv_m$ and the induced inner product."
 - "A **block label** is a partition $\lambda$ with $\lvert\lambda\rvert\in\{0,2,\dots,12\}$. $\lambda'$ is the conjugate partition, so $\lambda'_1$ is the number of nonzero parts of $\lambda$ and $\lambda'_2$ the number of parts of size at least $2$. $\lambda$ is **$O(n)$-admissible** when $\lambda'_1+\lambda'_2\le n$."
-- "$V_\lambda$ is the $O(n)$-representation labelled by $\lambda$, and $M_\lambda=\operatorname{Hom}_{O(n)}(V_\lambda,V^{\otimes12})$."
+- "$V_\lambda$ is the $O(n)$-representation labelled by $\lambda$, and $M_\lambda=\mathop{\mathrm{Hom}}_{O(n)}(V_\lambda,V^{\otimes12})$."
 - Passage A: "let $\iota_\lambda:V_\lambda\hookrightarrow V^{\otimes\lvert\lambda\rvert}$ be the inclusion given by Weyl's construction of $V_\lambda$ as the traceless tensors of symmetry type $\lambda$ (classical, unfiled), and let $\mathrm{cup}=\sum_a e_a\otimes e_a\in V\otimes V$ be the invariant metric element."
 - Passage A: "The realisation theorem says one nonzero seed per block generates that block."
 - $k=(12-\lvert\lambda\rvert)/2$.
@@ -48,7 +48,7 @@ Quoted from the brief.
 
 **C5, closed form.** The seed is the explicit formula $x\mapsto\iota_\lambda(x)\otimes\mathrm{cup}^{\otimes k}$ built from two named objects. $\mathrm{cup}$ is an explicit tensor. $\iota_\lambda$ is, under H4, the inclusion of the subspace $V^{[\lvert\lambda\rvert]}c_\lambda$, which is defined by explicit rational data: finitely many contraction equations and a Young symmetriser. Passage A qualifies the claim as "closed form relative to $\iota_\lambda$" and says that at $\lvert\lambda\rvert=12$ "the content is Weyl's construction", which is accurate. Passages B and C drop the qualifier, and the strongest reading restores it through H4, which "the inclusion" already presupposes. VALID.
 
-**C6, no search.** The obligation Passage A names is finding a nonzero element of $\operatorname{Hom}(V_\lambda,V^{\otimes12})$ "once per block". C3 exhibits one uniformly in $\lambda$ and $n$, with no enumeration of candidates and no dependence on trial. Writing $\iota_\lambda$ in coordinates, if a pipeline needs a basis of $V_\lambda$, is a finite deterministic linear-algebra step (a kernel intersected with an image), with its output guaranteed nonzero by H3 before it is run. That is computation of a determined object, and it is distinct from the search the passages rule out. VALID.
+**C6, no search.** The obligation Passage A names is finding a nonzero element of $\mathop{\mathrm{Hom}}(V_\lambda,V^{\otimes12})$ "once per block". C3 exhibits one uniformly in $\lambda$ and $n$, with no enumeration of candidates and no dependence on trial. Writing $\iota_\lambda$ in coordinates, if a pipeline needs a basis of $V_\lambda$, is a finite deterministic linear-algebra step (a kernel intersected with an image), with its output guaranteed nonzero by H3 before it is run. That is computation of a determined object, and it is distinct from the search the passages rule out. VALID.
 
 **Strongest defence attempted against, and why it does not break the step.**
 

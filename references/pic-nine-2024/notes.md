@@ -12,11 +12,11 @@
 
 > Our improvement focuses on the estimation of the two terms $\tfrac{d}{dt}(\mathrm{Ric}(S)_{11}+\mathrm{Ric}(S)_{22})$ and $\tfrac{d}{dt}(\mathrm{Ric}(S)_{11}-\mathrm{Ric}(S)_{22})$ along the evolution equation $\tfrac{d}{dt}S=Q(S)+D_{a,b}(S)$. More precisely, when estimating a lower bound for $\tfrac{d}{dt}(\mathrm{Ric}_{11}+\mathrm{Ric}_{22})$, we will encounter a term of the form $c\lvert\mathrm{Ric}_0(S)\rvert^2$ ... we could give a lower bound for $\lvert\mathrm{Ric}_0(S)\rvert^2$ in terms of $(\mathrm{Ric}_{22}-\mathrm{Ric}_{11})^2$.
 
-> $\tfrac{d}{dt}\operatorname{scal}(S)=\tfrac{2(1+(n-2)b)^2}{1+2(n-1)a}\lvert\mathrm{Ric}(S)\rvert^2+\tfrac{2((1+2(n-1)a)^2-(1+(n-2)b)^2)}{n(1+2(n-1)a)}\operatorname{scal}(S)^2=:P\lvert\mathrm{Ric}(S)\rvert^2+Q\operatorname{scal}(S)^2$, with $P+nQ=2+4(n-1)a$.
+> $\tfrac{d}{dt}\mathop{\mathrm{scal}}(S)=\tfrac{2(1+(n-2)b)^2}{1+2(n-1)a}\lvert\mathrm{Ric}(S)\rvert^2+\tfrac{2((1+2(n-1)a)^2-(1+(n-2)b)^2)}{n(1+2(n-1)a)}\mathop{\mathrm{scal}}(S)^2=:P\lvert\mathrm{Ric}(S)\rvert^2+Q\mathop{\mathrm{scal}}(S)^2$, with $P+nQ=2+4(n-1)a$.
 
 ## The theorem (p. 6)
 
-> **Theorem 1.2.** Let $9\le n\le11$. Then there exist $B=B(n)>0$ and a family of closed convex cones $\hat C(b)$, $0<b<B$, each transversally invariant under the Hamilton ODE, such that (1) for any fixed $\theta,N>0$ there is $\beta_0>0$ with $\{R:R-\theta\operatorname{scal}\,\mathrm{id}\wedge\mathrm{id}\in C_{\mathrm{PIC}}\}\cap\{R:\mathrm{Ric}_{11}+\mathrm{Ric}_{22}-\theta\operatorname{scal}+N\ge0\}\subset\{R:R+N\,\mathrm{id}\wedge\mathrm{id}\in\hat C(\beta_0)\}$, and (2) the family pinches toward PIC1.
+> **Theorem 1.2.** Let $9\le n\le11$. Then there exist $B=B(n)>0$ and a family of closed convex cones $\hat C(b)$, $0<b<B$, each transversally invariant under the Hamilton ODE, such that (1) for any fixed $\theta,N>0$ there is $\beta_0>0$ with $\{R:R-\theta\mathop{\mathrm{scal}}\,\mathrm{id}\wedge\mathrm{id}\in C_{\mathrm{PIC}}\}\cap\{R:\mathrm{Ric}_{11}+\mathrm{Ric}_{22}-\theta\mathop{\mathrm{scal}}+N\ge0\}\subset\{R:R+N\,\mathrm{id}\wedge\mathrm{id}\in\hat C(\beta_0)\}$, and (2) the family pinches toward PIC1.
 
 ## The Böhm–Wilking difference term, quoted for the record (p. 3)
 

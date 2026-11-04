@@ -75,7 +75,7 @@ That is `WCP2` entry for entry. $a,b,c$ are orthogonal of norm $\sqrt2$, so the 
 - Quantifier, the bound at every $W$: `L107_every`, `L107_every_exists`.
 - Sign remark: `signs_automatic`, from $\sum\lambda=0$ (`frame_trace`) and $\sum\lambda^2=\lVert W\rVert^2>0$. It needs `normSq W > 0`, the record's $W\ne0$. Correct by hand: all $\lambda\le0$ with zero sum forces all $\lambda=0$, against a nonzero entry.
 - Tightness at the balanced product and every Einstein $S^p\times S^q$: `sphere_lamMin`, `balanced_tight`, `sphere_tight`.
-- Equality case $\operatorname{supp}(g)\subseteq E_{\min}$: `L107_every_eq`.
+- Equality case $\mathop{\mathrm{supp}}(g)\subseteq E_{\min}$: `L107_every_eq`.
 - Row route at critical points: `L107_row`, `L107_frame`, `L107_exists`.
 - Chord bound and domination: `L107_chord`, `chord_dominates`.
 

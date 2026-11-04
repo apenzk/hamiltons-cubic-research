@@ -17,7 +17,7 @@
 
 ## 1. The lemma
 
-- $-\mathrm{ad}_{X_0}^2$ is self-adjoint and positive semidefinite for $\langle Z,Z'\rangle=\tfrac12\operatorname{tr}(Z^{\mathsf T}Z')$ because $\mathrm{ad}_{X_0}$ is skew-adjoint for that Ad-invariant pairing, so $\lVert[X_0,X_j]\rVert^2=\langle X_j,-\mathrm{ad}_{X_0}^2X_j\rangle$ and Ky Fan's maximum principle gives $\sum_{j\le r}\langle X_j,-\mathrm{ad}^2_{X_0}X_j\rangle\le$ the $r$ largest eigenvalues.
+- $-\mathrm{ad}_{X_0}^2$ is self-adjoint and positive semidefinite for $\langle Z,Z'\rangle=\tfrac12\mathop{\mathrm{tr}}(Z^{\mathsf T}Z')$ because $\mathrm{ad}_{X_0}$ is skew-adjoint for that Ad-invariant pairing, so $\lVert[X_0,X_j]\rVert^2=\langle X_j,-\mathrm{ad}_{X_0}^2X_j\rangle$ and Ky Fan's maximum principle gives $\sum_{j\le r}\langle X_j,-\mathrm{ad}^2_{X_0}X_j\rangle\le$ the $r$ largest eigenvalues.
 - **Ky Fan needs only that $X_1,\dots,X_r$ are orthonormal.** Orthogonality to $X_0$ is never used, and it would buy nothing: $\ker\mathrm{ad}_{X_0}$ contains a Cartan subalgebra, of dimension $\lfloor n/2\rfloor\ge1$, so deleting one kernel direction leaves the top $r$ eigenvalues unchanged for every $r$ the note uses. Unit $X_0$ is what makes $\kappa_r$ the right constant.
 - $\kappa_{2k-1}\le\kappa_{2k}$ holds because the eigenvalues are nonnegative.
 

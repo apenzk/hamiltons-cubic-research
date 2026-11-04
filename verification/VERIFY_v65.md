@@ -1,4 +1,4 @@
-# Verifier v65, Lemma L62: the cap $\operatorname{rank}\le13$, the sampled equality, $\dim\mathrm{ANN}=1$, $\mathrm{ANN}=\mathbb R\,A(W_0^6)$, and $F_5\perp\mathrm{ANN}$
+# Verifier v65, Lemma L62: the cap $\mathop{\mathrm{rank}}\le13$, the sampled equality, $\dim\mathrm{ANN}=1$, $\mathrm{ANN}=\mathbb R\,A(W_0^6)$, and $F_5\perp\mathrm{ANN}$
 
 The brief was cold: I worked from the two statements as quoted, from [Lemma L59](../results.md) as the setting it imports, and from the definitions at source in [conventions.md](../findings/conventions.md), [sym3-blocks.md](../findings/sym3-blocks.md) and [results.md](../results.md). **I did no numerical work of any kind, no script was run, no Sage session opened, nothing was sampled or estimated.** Every value below is exact and every value attributed to a machine run is quoted from a file already on the record, read as a source rather than executed. Where a claim has no argument on file I have said so and stopped rather than supplying one. Log: [agent_logs/verify-L62-v65.log](../agent_logs/verify-L62-v65.log).
 
@@ -7,11 +7,11 @@ The brief was cold: I worked from the two statements as quoted, from [Lemma L59]
 | # | Claim attacked | Verdict | Reason, in a clause |
 |---|---|---|---|
 | 1 | Evaluation at $W_0$ is a nonzero functional on the $14$ | **CONFIRMED** | $\lVert W\rVert^6$ lies in the $14$ and is nonzero at $W_0$ for any nonzero $W_0$ |
-| 2 | $\operatorname{image}(\mu_K)\subseteq\ker(\mathrm{ev}_{W_0})$, so the restricted rank is $\le13$ | **CONFIRMED AS ALGEBRA** | every element of $K$ vanishes at $W_0$ by $K$'s own definition, and a codimension-one kernel in a $14$-dimensional space is $13$-dimensional |
+| 2 | $\mathop{\mathrm{image}}(\mu_K)\subseteq\ker(\mathrm{ev}_{W_0})$, so the restricted rank is $\le13$ | **CONFIRMED AS ALGEBRA** | every element of $K$ vanishes at $W_0$ by $K$'s own definition, and a codimension-one kernel in a $14$-dimensional space is $13$-dimensional |
 | 3 | "A rank computed from a sample of $K$ bounds the true rank from below" | **CONFIRMED, WRONG OBJECT NAMED** | the direction is right under either reading, but the sample is of forty *evaluation points*, not of $K$ |
 | 4 | Reduction modulo $p$ can only lower the rank | **CONFIRMED** | the forty points carry integer coordinates and the entries are $p$-integral by an assert, so the $\mathbb F_p$ matrix genuinely is a reduction, unlike [L87](../findings/sym3-blocks.md)'s |
 | 5 | The sampled rank equals $13$ | **HYPOTHESIS-DEBT** | one machine rank of a machine-built matrix; the equivariant identification it rides on is nowhere in L62, and a defect landing exactly on the cap is undetectable |
-| 6 | $\dim\mathrm{ANN}=1$ follows from $\operatorname{rank}=13$ | **CONFIRMED AS ALGEBRA** | only the trivial inclusion $\mathrm{ANN}\subseteq\operatorname{image}^{\perp}$ is consumed, but nondegeneracy of the pairing on the $14$ is never stated |
+| 6 | $\dim\mathrm{ANN}=1$ follows from $\mathop{\mathrm{rank}}=13$ | **CONFIRMED AS ALGEBRA** | only the trivial inclusion $\mathrm{ANN}\subseteq\mathop{\mathrm{image}}^{\perp}$ is consumed, but nondegeneracy of the pairing on the $14$ is never stated |
 | 7 | $\mathrm{ANN}$ is spanned by $A(W_0^6)$ | **HYPOTHESIS-DEBT** | $A$ is undefined in [results.md](../results.md), and the reproducing identity $\langle F,A(W_0^6)\rangle=F(W_0)$ that carries both halves is written down nowhere |
 | 8 | $F_5\perp\mathrm{ANN}$ | **CONFIRMED AS ALGEBRA** | it is $F_5(W_0)=0$ through the same unstated identity, and $F_5(W_0)=0$ appears in no statement of L62 |
 | 9 | "It equals $13$ at four primes" | **CONFIRMED** | four row dumps near $2^{40}$ exist, each written only after `assert rk_A == 13` passed at that prime, and the record's standing objection that "four primes" is unsupported is itself refuted |
@@ -27,10 +27,10 @@ The brief was cold: I worked from the two statements as quoted, from [Lemma L59]
 Quoted from the brief and from the record rather than restated in my own words.
 
 - $\mathcal W_5$ is the space of algebraic Weyl curvature operators at $n=5$, the $O(5)$-irreducible $[2,2]$ of dimension $35$ ([sym3-blocks.md:7](../findings/sym3-blocks.md)).
-- $F_5=\tfrac32\lVert W\rVert^6-9\operatorname{tr}(W^3)^2$.
+- $F_5=\tfrac32\lVert W\rVert^6-9\mathop{\mathrm{tr}}(W^3)^2$.
 - $W_0$ is "the zero-padding into $\mathcal W_5$ of the $\mathbb{CP}^2$ Weyl operator", and $H=\mathrm{Stab}_{O(5)}(W_0)$. [conventions.md:44](../findings/conventions.md) carries both as "the $n=5$ base point of the $\mathrm{Sym}^3$ machinery and its stabiliser", with no normalisation attached.
 - $K$ is "the span of cubics cut out by the orbit constraint" ([results.md:619](../results.md)); the orbit constraint is $\sigma_\lambda(W_0)=0$ ([sym3-blocks.md:237](../findings/sym3-blocks.md)).
-- $\mu$ is multiplication $\mathrm{Sym}^2(\mathrm{Sym}^3\mathcal W_5^*)\to\mathrm{Sym}^6\mathcal W_5^*$; I write $\mu_K$ for its restriction to $\mathrm{Sym}^2(K)^{O(5)}$, the object [L91](../findings/sym3-blocks.md)'s audit names as $\operatorname{rank}(\mu\vert_{\mathrm{Sym}^2(K)^{O(5)}})$, from the $36$ to the $14$.
+- $\mu$ is multiplication $\mathrm{Sym}^2(\mathrm{Sym}^3\mathcal W_5^*)\to\mathrm{Sym}^6\mathcal W_5^*$; I write $\mu_K$ for its restriction to $\mathrm{Sym}^2(K)^{O(5)}$, the object [L91](../findings/sym3-blocks.md)'s audit names as $\mathop{\mathrm{rank}}(\mu\vert_{\mathrm{Sym}^2(K)^{O(5)}})$, from the $36$ to the $14$.
 - $\mathrm{Cat}_F$ is "the catalecticant of a sextic $F$, adjoint to the multiplication $\mu$ under apolarity: $\langle F,\mu(B)\rangle=\langle\mathrm{Cat}_F,B\rangle$" ([conventions.md:45](../findings/conventions.md)).
 - $A(\cdot)$, written $\mathcal A(\cdot)$ in [sym3-blocks.md:227](../findings/sym3-blocks.md), is "the apolarity/dual pairing's image of a power" (the brief). It has no entry in [conventions.md](../findings/conventions.md) and no definition in [results.md](../results.md).
 
@@ -53,7 +53,7 @@ Every hypothesis L62 carries or imports, checked against the object it is applie
 | H2 | $\dim(\mathrm{Sym}^6\mathcal W_5)^{O(5)}=14$ | [L85](../findings/sym3-blocks.md), one machine count | the invariant sextics at $n=5$ | **Used**; L62 cites L85 nowhere |
 | H3 | Every cubic of $K$ vanishes at $W_0$ | definitional, $K$ being cut out by $\sigma_\lambda(W_0)=0$ | $K$, **holds by construction** | **Used** |
 | H4 | $\lVert W\rVert^6$ is an $O(5)$-invariant sextic | unstated | trivially true | **Used** silently, inside H1 |
-| H5 | $\operatorname{rank}=14-\dim\mathrm{ANN}$ | [L59](../results.md) | $\mu_K$, from the $36$ to the $14$ | **Used**, and its "rank" is ambiguous between $\mu$ and $\mu_K$, see §2 |
+| H5 | $\mathop{\mathrm{rank}}=14-\dim\mathrm{ANN}$ | [L59](../results.md) | $\mu_K$, from the $36$ to the $14$ | **Used**, and its "rank" is ambiguous between $\mu$ and $\mu_K$, see §2 |
 | H6 | The apolar pairing is nondegenerate on the $14$ | **nowhere on the record** | the $14$ | **Used**, silently: without it "$14-\dim\mathrm{ANN}$" and the adjoint-rank identity have no content |
 | H7 | $\langle F,A(W_0^6)\rangle=F(W_0)$ for invariant $F$ (the reproducing property) | **nowhere on the record** as a statement; used in passing at [sym3-blocks.md:229](../findings/sym3-blocks.md) and alluded to at [sym3-blocks.md:253](../findings/sym3-blocks.md) | $A(W_0^6)$ | **Used twice**, for $A(W_0^6)\in\mathrm{ANN}$ and for $F_5\perp\mathrm{ANN}$ |
 | H8 | $A(W_0^6)\ne0$ | **nowhere** | $A(W_0^6)$ | **Used**: without it "spanned by" fails |
@@ -66,7 +66,7 @@ Every hypothesis L62 carries or imports, checked against the object it is applie
 
 **Two inventory findings, in the shape the brief names.**
 
-- **A hypothesis nobody uses.** H14. L62 opens "In the setting of Lemma L59", which imports the injectivity of $\mathrm{Cat}$, the embedding of the $14$ in the $65$, and the block-by-block count $65=36+29$. L62 consumes exactly one sentence of L59 (the adjunction $\operatorname{rank}=14-\dim\mathrm{ANN}$) and nothing else. The $29$, the $36$ and the injectivity are inert here.
+- **A hypothesis nobody uses.** H14. L62 opens "In the setting of Lemma L59", which imports the injectivity of $\mathrm{Cat}$, the embedding of the $14$ in the $65$, and the block-by-block count $65=36+29$. L62 consumes exactly one sentence of L59 (the adjunction $\mathop{\mathrm{rank}}=14-\dim\mathrm{ANN}$) and nothing else. The $29$, the $36$ and the injectivity are inert here.
 - **Steps using hypotheses nobody stated.** H1, H6, H7, H8, H9, H10, H11. Of these, H6 and H7 are load-bearing and appear on the record in no form at all: **H7 is the single identity on which both "$\mathrm{ANN}$ is spanned by $A(W_0^6)$" and "$F_5\perp\mathrm{ANN}$" rest, and the record never states it.**
 
 ## 1. Evaluation at $W_0$ is a nonzero functional on the $14$, CONFIRMED
@@ -77,7 +77,7 @@ $\lVert W\rVert^6$ is a sextic and $O(5)$-invariant, so it lies in the $14$ of H
 
 ## 2. The cap, CONFIRMED AS ALGEBRA, with the rank's name unfixed
 
-**The derivation, checked step by step.** An element of $\mathrm{Sym}^2(K)$ is a sum $\sum_i q_i\odot q_i'$ with $q_i,q_i'\in K$, so $\mu$ of it is $\sum_i q_iq_i'$. By H3 each $q_i(W_0)=0$, so every element of $\operatorname{image}(\mu_K)$ vanishes at $W_0$. By §1 the invariant sextics vanishing at $W_0$ form a $13$-dimensional subspace of the $14$. Hence $\operatorname{rank}(\mu_K)\le13$. **This closes, in the six lines the record claims for it, and I confirm it independently.**
+**The derivation, checked step by step.** An element of $\mathrm{Sym}^2(K)$ is a sum $\sum_i q_i\odot q_i'$ with $q_i,q_i'\in K$, so $\mu$ of it is $\sum_i q_iq_i'$. By H3 each $q_i(W_0)=0$, so every element of $\mathop{\mathrm{image}}(\mu_K)$ vanishes at $W_0$. By §1 the invariant sextics vanishing at $W_0$ form a $13$-dimensional subspace of the $14$. Hence $\mathop{\mathrm{rank}}(\mu_K)\le13$. **This closes, in the six lines the record claims for it, and I confirm it independently.**
 
 **Rank of what map, into what target.** The map is $\mu_K:\mathrm{Sym}^2(K)^{O(5)}\to(\mathrm{Sym}^6\mathcal W_5)^{O(5)}$, from the $36$ to the $14$; the rank is the dimension of the image inside the $14$; the kernel of $\mathrm{ev}_{W_0}$ is $13$-dimensional *in that same $14$*, which is the space the rank is measured in. The three requirements the brief asks after all line up.
 
@@ -86,16 +86,16 @@ $\lVert W\rVert^6$ is a sextic and $O(5)$-invariant, so it lies in the $14$ of H
 | site | phrase | object under the charitable reading |
 |---|---|---|
 | [results.md:619](../results.md) | "$\mathrm{rank}=14-\dim\mathrm{ANN}$" | ambiguous between $\mu$ and $\mu_K$ |
-| [results.md:631](../results.md) | "the restricted rank" | $\operatorname{rank}(\mu_K)$ |
-| [results.md:206](../results.md) | "the restricted catalecticant rank" | $\operatorname{rank}$ of $F\mapsto\mathrm{Cat}_F\vert_{K\times K}$, from the $14$ to the $36$ |
+| [results.md:631](../results.md) | "the restricted rank" | $\mathop{\mathrm{rank}}(\mu_K)$ |
+| [results.md:206](../results.md) | "the restricted catalecticant rank" | $\mathop{\mathrm{rank}}$ of $F\mapsto\mathrm{Cat}_F\vert_{K\times K}$, from the $14$ to the $36$ |
 
-The first and third agree with the second because a map and its adjoint have equal rank, but *that* needs H6 on both sides, and H6 is unstated. **The ambiguity in the first row is not idle: under the unrestricted reading [L89](../findings/sym3-blocks.md) proves $\operatorname{rank}(\mu\vert_{\mathrm{inv}})=14$ exactly, which through L59's formula gives $\dim\mathrm{ANN}=0$ and contradicts L62 outright.** What resolves it is that $\mathrm{ANN}$'s own definition mentions $K$, so the formula can only be about $\mu_K$; a reader has to notice that to avoid deriving a contradiction from two canon lemmas. This is the L59 defect already on file, and it reaches L62 unmitigated: **[results.md](../results.md) nowhere defines "restricted".**
+The first and third agree with the second because a map and its adjoint have equal rank, but *that* needs H6 on both sides, and H6 is unstated. **The ambiguity in the first row is not idle: under the unrestricted reading [L89](../findings/sym3-blocks.md) proves $\mathop{\mathrm{rank}}(\mu\vert_{\mathrm{inv}})=14$ exactly, which through L59's formula gives $\dim\mathrm{ANN}=0$ and contradicts L62 outright.** What resolves it is that $\mathrm{ANN}$'s own definition mentions $K$, so the formula can only be about $\mu_K$; a reader has to notice that to avoid deriving a contradiction from two canon lemmas. This is the L59 defect already on file, and it reaches L62 unmitigated: **[results.md](../results.md) nowhere defines "restricted".**
 
 ## 3. The direction of every inequality, and what the sample is a sample of
 
-**Sampled versus true.** Let $T$ be the $40\times47$ matrix whose $(j,k)$ entry is $\mu(B_k)(W_j)$ for the $47$ Hermitian coordinates $B_k$ and $40$ points $W_j$. Then $T$'s column space is $\mathrm{ev}_{40}(\operatorname{image}\mu_K)$, so $\operatorname{rank}T\le\operatorname{rank}\mu_K$: **sampling loses rank**, and an attained value is a lower bound for the truth. Form B's "a sampled rank is bounded above by the true one" and Form A's "bounds the true rank from below" are the same statement, and it is the right way round for the squeeze.
+**Sampled versus true.** Let $T$ be the $40\times47$ matrix whose $(j,k)$ entry is $\mu(B_k)(W_j)$ for the $47$ Hermitian coordinates $B_k$ and $40$ points $W_j$. Then $T$'s column space is $\mathrm{ev}_{40}(\mathop{\mathrm{image}}\mu_K)$, so $\mathop{\mathrm{rank}}T\le\mathop{\mathrm{rank}}\mu_K$: **sampling loses rank**, and an attained value is a lower bound for the truth. Form B's "a sampled rank is bounded above by the true one" and Form A's "bounds the true rank from below" are the same statement, and it is the right way round for the squeeze.
 
-**Modulo $p$ versus characteristic zero.** For a $p$-integral matrix, $\operatorname{rank}_{\mathbb F_p}(\bar T)\le\operatorname{rank}_{\mathbb Q}(T)$: **reduction loses rank**, again the safe direction. The conclusion consumes both correctly, $13\le\operatorname{rank}_{\mathbb F_p}\bar T\le\operatorname{rank}_{\mathbb Q}T\le\operatorname{rank}\mu_K\le13$.
+**Modulo $p$ versus characteristic zero.** For a $p$-integral matrix, $\mathop{\mathrm{rank}}_{\mathbb F_p}(\bar T)\le\mathop{\mathrm{rank}}_{\mathbb Q}(T)$: **reduction loses rank**, again the safe direction. The conclusion consumes both correctly, $13\le\mathop{\mathrm{rank}}_{\mathbb F_p}\bar T\le\mathop{\mathrm{rank}}_{\mathbb Q}T\le\mathop{\mathrm{rank}}\mu_K\le13$.
 
 **What the sample is a sample OF, and here Form A names the wrong object.** [results.md:631](../results.md) says "a rank computed from **a sample of $K$**". The computation samples neither $K$ nor the domain $\mathrm{Sym}^2K$: it samples **evaluation points**. [run_n5_assemble.py:896](../scripts/runs/run_n5_assemble.py) draws each point as `v = [Fr(randint(-4, 4)) for _ in range(35)]` pushed through the Weyl basis (forty random integer-coefficient real Weyl tensors) and the matrix has one row per point and one column per unknown. Under the literal reading ("a sample of $K$" = a subset of the domain directions) the inequality would still point the same way, which is why I do not call this a mathematical error; but the sentence describes a computation the record did not do.
 
@@ -103,7 +103,7 @@ The first and third agree with the second because a map and its adjoint have equ
 
 ## 4. $\dim\mathrm{ANN}=1$ from rank $=13$, CONFIRMED AS ALGEBRA in the direction used
 
-**What is actually consumed.** If $\mathrm{Cat}_F(K,K)=0$ then for every $B\in\mathrm{Sym}^2(K)^{O(5)}$, $\langle F,\mu(B)\rangle=\langle\mathrm{Cat}_F,B\rangle=0$, so $F\perp\operatorname{image}(\mu_K)$. That is $\mathrm{R1}\subseteq\mathrm{R2}$, the trivial inclusion, and it is the *only* direction L62's conclusion needs: with $\operatorname{rank}\mu_K=13$ and H6, $\mathrm{R2}$ has dimension $14-13=1$, so $\dim\mathrm{R1}\le1$; with $A(W_0^6)\in\mathrm{R1}$ and H8, $\dim\mathrm{R1}\ge1$. **So the "genuinely absent" step booked against L59 (the reverse inclusion), is never used by L62, and I record that as a positive: the L59 defect does not propagate into this conclusion.** Better: the squeeze forces $\mathrm{R1}=\mathrm{R2}$, so the two readings of $\mathrm{ANN}$ coincide *as a consequence* of the measured rank rather than by the missing lemma.
+**What is actually consumed.** If $\mathrm{Cat}_F(K,K)=0$ then for every $B\in\mathrm{Sym}^2(K)^{O(5)}$, $\langle F,\mu(B)\rangle=\langle\mathrm{Cat}_F,B\rangle=0$, so $F\perp\mathop{\mathrm{image}}(\mu_K)$. That is $\mathrm{R1}\subseteq\mathrm{R2}$, the trivial inclusion, and it is the *only* direction L62's conclusion needs: with $\mathop{\mathrm{rank}}\mu_K=13$ and H6, $\mathrm{R2}$ has dimension $14-13=1$, so $\dim\mathrm{R1}\le1$; with $A(W_0^6)\in\mathrm{R1}$ and H8, $\dim\mathrm{R1}\ge1$. **So the "genuinely absent" step booked against L59 (the reverse inclusion), is never used by L62, and I record that as a positive: the L59 defect does not propagate into this conclusion.** Better: the squeeze forces $\mathrm{R1}=\mathrm{R2}$, so the two readings of $\mathrm{ANN}$ coincide *as a consequence* of the measured rank rather than by the missing lemma.
 
 **Are the adjunction's hypotheses proved or asserted?** Asserted.
 
@@ -111,17 +111,17 @@ The first and third agree with the second because a map and its adjoint have equ
 - Injectivity of $\mathrm{Cat}$ on the invariant sextics follows from that surjectivity by adjointness. It is not needed by L62 (H14).
 - **Nondegeneracy of the pairing on the $14$ (H6) is needed and is nowhere on the record.** Without it, "the annihilator of a $13$-dimensional subspace of the $14$ is $1$-dimensional" does not follow, and neither does the equality of the ranks of $\mu_K$ and its adjoint. `HYPOTHESIS-DEBT: that the apolar pairing restricts to a nondegenerate form on $(\mathrm{Sym}^6\mathcal W_5)^{O(5)}$.` I do not supply the argument.
 
-## 5. $\operatorname{rank}=13$, the measured half, HYPOTHESIS-DEBT
+## 5. $\mathop{\mathrm{rank}}=13$, the measured half, HYPOTHESIS-DEBT
 
-The cap is a theorem; equality is not derived anywhere on the record. `HYPOTHESIS-DEBT: that $\operatorname{rank}(\mu_K)\ge13$, i.e. that the annihilator of the image inside the $14$ is at most one-dimensional.` The record's only support is the machine rank, and it rides on three hypotheses L62 does not carry:
+The cap is a theorem; equality is not derived anywhere on the record. `HYPOTHESIS-DEBT: that $\mathop{\mathrm{rank}}(\mu_K)\ge13$, i.e. that the annihilator of the image inside the $14$ is at most one-dimensional.` The record's only support is the machine rank, and it rides on three hypotheses L62 does not carry:
 
 - **H10, equivariance of the copy identification.** [sym3-blocks.md:233](../findings/sym3-blocks.md) records that a non-equivariant build gives a sampled rank *above* the cap, and names the multi-probe Schur test as what guards it.
 - **H11, $p$-integrality**, guarded in code, absent from the statement.
 - **Attainment is not self-validating.** [sym3-blocks.md:235](../findings/sym3-blocks.md): "A defect landing the rank exactly *on* the cap is invisible." The three wrong restrictions on record were caught only by exceeding the cap. This configuration is exactly the invisible one.
 
-**One thing I can say in the block's favour, from the record's own materials.** [ROUND_L61.md:97](ROUND_L61.md) records the *unrestricted* sampled rank at the same forty points as $14$ (the full dimension of the invariant sextics), at $1000033$, $1099511627873$ and $1099511627933$. If that holds, evaluation at those forty points is injective on the whole $14$, so $\operatorname{rank}T=\operatorname{rank}\mu_K$ with no sampling loss at all, and the inequality of §3 becomes an equality. That strengthens the measured half; it does not derive it, since it is itself measured.
+**One thing I can say in the block's favour, from the record's own materials.** [ROUND_L61.md:97](ROUND_L61.md) records the *unrestricted* sampled rank at the same forty points as $14$ (the full dimension of the invariant sextics), at $1000033$, $1099511627873$ and $1099511627933$. If that holds, evaluation at those forty points is injective on the whole $14$, so $\mathop{\mathrm{rank}}T=\mathop{\mathrm{rank}}\mu_K$ with no sampling loss at all, and the inequality of §3 becomes an equality. That strengthens the measured half; it does not derive it, since it is itself measured.
 
-**A dependency the record over-states, in L62's favour.** [L87](../findings/sym3-blocks.md)'s rank-one step (H13) is *not* consumed by the rank claim. $K$ is defined by the conditions $\sigma_\lambda(W_0)=0$ whatever the evaluation maps' ranks turn out to be, so H3 and hence the cap are untouched by L87, and the columns of $T$ lie in $\operatorname{image}(\mu_{K'})$ for whatever subspace $K'\subseteq K$ the build parametrises, so the lower bound survives too. What L87 does carry is the *dimension* $36$, hence the "$36-13=23$ dimensional affine family" at [sym3-blocks.md:229](../findings/sym3-blocks.md). So L87's unrepaired lift gap reaches the family's dimension and not L62's rank.
+**A dependency the record over-states, in L62's favour.** [L87](../findings/sym3-blocks.md)'s rank-one step (H13) is *not* consumed by the rank claim. $K$ is defined by the conditions $\sigma_\lambda(W_0)=0$ whatever the evaluation maps' ranks turn out to be, so H3 and hence the cap are untouched by L87, and the columns of $T$ lie in $\mathop{\mathrm{image}}(\mu_{K'})$ for whatever subspace $K'\subseteq K$ the build parametrises, so the lower bound survives too. What L87 does carry is the *dimension* $36$, hence the "$36-13=23$ dimensional affine family" at [sym3-blocks.md:229](../findings/sym3-blocks.md). So L87's unrepaired lift gap reaches the family's dimension and not L62's rank.
 
 ## 6. $\mathrm{ANN}$ spanned by $A(W_0^6)$, HYPOTHESIS-DEBT on the membership
 
@@ -159,7 +159,7 @@ The brief asks what the record supports. It supports four, and the four are loca
 **Two caveats that keep the correction honest.**
 
 - The referent is still unstated at all five sites, which is why the objection was raised; the repair is to name the primes, not to delete the four.
-- **Logically the four add nothing.** The same fixed seed regenerates the same forty rational points at every prime ([run_n5_assemble.py:1245](../scripts/runs/run_n5_assemble.py): "The sample points are regenerated identically from the fixed seed at every prime"), so the four are four reductions of one rational matrix, and $\operatorname{rank}_{\mathbb F_p}=13$ at a *single* prime already forces $\operatorname{rank}_{\mathbb Q}\ge13$. The repetition buys confidence against a coding error, not a stronger theorem. **"At four primes" is rhetorically weighty and logically inert.**
+- **Logically the four add nothing.** The same fixed seed regenerates the same forty rational points at every prime ([run_n5_assemble.py:1245](../scripts/runs/run_n5_assemble.py): "The sample points are regenerated identically from the fixed seed at every prime"), so the four are four reductions of one rational matrix, and $\mathop{\mathrm{rank}}_{\mathbb F_p}=13$ at a *single* prime already forces $\mathop{\mathrm{rank}}_{\mathbb Q}\ge13$. The repetition buys confidence against a coding error, not a stronger theorem. **"At four primes" is rhetorically weighty and logically inert.**
 
 ## 9. Quantifier order, scope, and citation strength, one REFUTED AS STATED
 
@@ -190,14 +190,14 @@ Each of these looked like a defect and does not survive all three of locate / ex
 
 **HYPOTHESIS-DEBT, splitting exactly where the record's own index says it splits, with one correction in the block's favour.**
 
-- **$\operatorname{rank}(\mu_K)\le13$ is a theorem** and I confirm it cold, from H1, H2 and H3 alone. The brief's named traps do not touch it.
-- **$\operatorname{rank}(\mu_K)=13$, and therefore $\dim\mathrm{ANN}=1$, $\mathrm{ANN}=\mathbb R\,A(W_0^6)$ and the content of $F_5\perp\mathrm{ANN}$, have no argument on file.** They rest on a machine rank whose three hypotheses (H10, H11, and the invisibility of a defect landing on the cap) appear nowhere in either statement of L62.
+- **$\mathop{\mathrm{rank}}(\mu_K)\le13$ is a theorem** and I confirm it cold, from H1, H2 and H3 alone. The brief's named traps do not touch it.
+- **$\mathop{\mathrm{rank}}(\mu_K)=13$, and therefore $\dim\mathrm{ANN}=1$, $\mathrm{ANN}=\mathbb R\,A(W_0^6)$ and the content of $F_5\perp\mathrm{ANN}$, have no argument on file.** They rest on a machine rank whose three hypotheses (H10, H11, and the invisibility of a defect landing on the cap) appear nowhere in either statement of L62.
 - **Two identities the conclusion cannot be checked without are absent from the whole record**: the nondegeneracy of the apolar pairing on the $14$ (H6) and the reproducing property of $A(W_0^6)$ (H7).
 - **The record understates its own evidence on "four primes"**, and [results.md:23](../results.md) overstates it on "proofs rather than measurements", in opposite directions, in the same file.
 
 ## What a counterexample would look like, and what I did to look for one
 
-**The falsifier.** L62's cap cannot be falsified, it follows from the definition of $K$. What can be falsified is the value. **The object that would refute it is an $O(5)$-invariant sextic $G$, not proportional to $A(W_0^6)$, with $\mathrm{Cat}_G(K,K)=0$**, a second annihilator. Its existence makes $\dim\mathrm{ANN}\ge2$, hence $\operatorname{rank}(\mu_K)\le12$, and it kills "$F_5\perp\mathrm{ANN}$" as a *sufficient* condition, since $F_5$ would then have to be orthogonal to a plane rather than a line.
+**The falsifier.** L62's cap cannot be falsified, it follows from the definition of $K$. What can be falsified is the value. **The object that would refute it is an $O(5)$-invariant sextic $G$, not proportional to $A(W_0^6)$, with $\mathrm{Cat}_G(K,K)=0$**, a second annihilator. Its existence makes $\dim\mathrm{ANN}\ge2$, hence $\mathop{\mathrm{rank}}(\mu_K)\le12$, and it kills "$F_5\perp\mathrm{ANN}$" as a *sufficient* condition, since $F_5$ would then have to be orthogonal to a plane rather than a line.
 
 **The structured place to find one.** The natural family of candidates is $G=A(W_1^6)$ for a point $W_1$ at which every cubic of $K$ vanishes: by the argument of §6 such a $G$ lies in $\mathrm{ANN}$ automatically. So the falsifier reduces to **a point of $\mathcal W_5$ outside the cone over $O(5)\cdot(\pm W_0)$ on which the whole of $K$ vanishes**, an unexpected component of the common zero locus of $K$.
 

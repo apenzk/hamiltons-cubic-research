@@ -6,7 +6,7 @@ You are an adversarial reviewer. **TWO reviewers on identical briefs**, because 
 
 ## The definitions, quoted so you can work from them alone
 
-On $\mathbb R^n$, $\varphi_{ij}=e_j\otimes e_i-e_i\otimes e_j$, and $\{\varphi_{ab}\}_{a<b}$ is an orthonormal basis of $\Lambda^2\mathbb R^n$ under $\langle X,Y\rangle=\tfrac12\operatorname{tr}(X^{\mathsf T}Y)$. Write $[X,Y]=XY-YX$.
+On $\mathbb R^n$, $\varphi_{ij}=e_j\otimes e_i-e_i\otimes e_j$, and $\{\varphi_{ab}\}_{a<b}$ is an orthonormal basis of $\Lambda^2\mathbb R^n$ under $\langle X,Y\rangle=\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$. Write $[X,Y]=XY-YX$.
 
 A **weight** $w$ is a real symmetric hollow $n\times n$ matrix. It acts on $\Lambda^2$ entrywise:
 

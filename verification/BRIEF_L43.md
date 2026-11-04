@@ -17,7 +17,7 @@ On the slice $R_{\mathrm{ric}_0}=0$ the invariance criterion at $a=0$ collapses 
 
 **The constant is not imported.** The inputs are [Böhm–Wilking](../references/boehm-wilking-2008-space-forms/notes.md)'s Lemma 2.1 and equation (6), Hamilton's scalar identity, [Beitz](../references/beitz-2018-bianchi-convexity/notes.md)'s cone, and $\lVert I\rVert^2=\binom n2$, **no sphere product enters at any step**, which is what makes $\theta_0(n)$ forced from outside the family it describes. And *exactly* holds in both halves: $\partial\Omega_0$ meets the slice at one ratio $c/\lVert W\rVert$, so each unit $W$ is tested against $\theta_0(n)$ and no other constant.
 
-**The slice is the EINSTEIN one.** $R_{\mathrm{ric}_0}=0$ kills the trace-free Ricci part; Ricci-flatness would additionally need $c=0$, and there $\partial\Omega_0$ forces $\lVert W\rVert=0$, so **naming this the Ricci-flat slice states as hypothesis the one value $c$ cannot take.** *The cone also carries $\operatorname{scal}(R)>0$, which the printed $F$-sublevel set omits: $F$ is even in $R$, so without that clause the set is a double cone whose $c<0$ nappe reads $\langle W,Q(W)\rangle\le-\theta_0(n)\lVert W\rVert^3$, false at every sphere product. The clause is in the source's own definition and convexity forces it independently.* *Gate 2, [r523](../reviews/REVIEW_r523.md) and [r524](../reviews/REVIEW_r524.md) on identical briefs, both CONFIRMED, each rebuilding the collapse cold.*
+**The slice is the EINSTEIN one.** $R_{\mathrm{ric}_0}=0$ kills the trace-free Ricci part; Ricci-flatness would additionally need $c=0$, and there $\partial\Omega_0$ forces $\lVert W\rVert=0$, so **naming this the Ricci-flat slice states as hypothesis the one value $c$ cannot take.** *The cone also carries $\mathop{\mathrm{scal}}(R)>0$, which the printed $F$-sublevel set omits: $F$ is even in $R$, so without that clause the set is a double cone whose $c<0$ nappe reads $\langle W,Q(W)\rangle\le-\theta_0(n)\lVert W\rVert^3$, false at every sphere product. The clause is in the source's own definition and convexity forces it independently.* *Gate 2, [r523](../reviews/REVIEW_r523.md) and [r524](../reviews/REVIEW_r524.md) on identical briefs, both CONFIRMED, each rebuilding the collapse cold.*
 So the constant of Problem P is what cone invariance requires, independently of any sphere product.
 
 ## Passage B, the canonical statement, landscape form ([results.md](../results.md) line 100)
@@ -28,7 +28,7 @@ So the constant of Problem P is what cone invariance requires, independently of 
 
 ##### Lemma L43, the invariance criterion at $a=0$ demands $\theta_0(n)$ and nothing weaker
 
-Write $R=cI+W$ on the **Einstein** slice $R_{\mathrm{ric}_0}=0$, *Ricci-flatness is $c=0$, where the boundary forces $\lVert W\rVert=0$ and the statement is vacuous*, $F=\lVert R\rVert^2/\lVert\operatorname{ric}R\rVert^2$ and $\Omega_a=\{\operatorname{scal}(R)>0\}\cap F^{-1}((-\infty,\frac4{n-2+4a}])$. The quotient-rule expansion of the invariance condition uses $\Phi(cI+W)=c^2(n-1)I+\Phi(W)$ and the $\lVert\operatorname{ric}\rVert^2$ identity, and at $a=0$ the whole condition collapses to $\langle W,Q(W)\rangle\le c(n-1)\lVert W\rVert^2$, where $c(n-1)=\theta_0(n)=\sqrt{2(n-1)(n-2)}/n$. The cone has three endpoints; Beitz proves the degenerate end $a\to n/4$ for every $n$, and $n\ge12$ enters that end nowhere. The full symmetry of the cubic's trilinear form is a theorem rather than a hypothesis of the collapse. It does not reach $a$ strictly between $0$ and $n/4$; Lemma L45 gives the two-sided bound the criterion demands off the slice.
+Write $R=cI+W$ on the **Einstein** slice $R_{\mathrm{ric}_0}=0$, *Ricci-flatness is $c=0$, where the boundary forces $\lVert W\rVert=0$ and the statement is vacuous*, $F=\lVert R\rVert^2/\lVert\mathop{\mathrm{ric}}R\rVert^2$ and $\Omega_a=\{\mathop{\mathrm{scal}}(R)>0\}\cap F^{-1}((-\infty,\frac4{n-2+4a}])$. The quotient-rule expansion of the invariance condition uses $\Phi(cI+W)=c^2(n-1)I+\Phi(W)$ and the $\lVert\mathop{\mathrm{ric}}\rVert^2$ identity, and at $a=0$ the whole condition collapses to $\langle W,Q(W)\rangle\le c(n-1)\lVert W\rVert^2$, where $c(n-1)=\theta_0(n)=\sqrt{2(n-1)(n-2)}/n$. The cone has three endpoints; Beitz proves the degenerate end $a\to n/4$ for every $n$, and $n\ge12$ enters that end nowhere. The full symmetry of the cubic's trilinear form is a theorem rather than a hypothesis of the collapse. It does not reach $a$ strictly between $0$ and $n/4$; Lemma L45 gives the two-sided bound the criterion demands off the slice.
 
 **Proof:** [problem.md](findings/problem.md)
 
@@ -56,13 +56,13 @@ which pins the normalisation to $\lVert\mathrm{ric}(R)\rVert^2=\frac{n-1}2\lVert
 |---|---|
 | [BW08](../references/boehm-wilking-2008-space-forms/) Lemma 2.1 | $R+R\#I=(n-1)R_I+\frac{n-2}2R_{\mathrm{Ric}_0}$, with $\langle W\rangle$ in the **kernel**, so $W\#I=-W$ and $\Phi(I,W)=\tfrac12(IW+WI)+W\#I=W-W=0$ |
 | [BW08](../references/boehm-wilking-2008-space-forms/) eq. (6) | $\mathrm{Ric}(\Phi(R))_{ij}=\sum_k\mathrm{Ric}_{kk}R_{kijk}$, so $\mathrm{Ric}(W)=0\Rightarrow\mathrm{Ric}(\Phi(W))=0$: **$\Phi$ preserves Weyl** |
-| [Beitz](../references/beitz-2018-bianchi-convexity/notes.md) p. 96 | $\Omega_0=\{\tfrac{n-2}n\lVert R_W\rVert^2\le\lVert R_I\rVert^2$ **and** $\operatorname{tr}(R)>0\}$, so $\partial\Omega_0:\ \tfrac{n-2}n\lVert R_W\rVert^2=\lVert R_I\rVert^2$ **on the positive-scalar nappe** |
+| [Beitz](../references/beitz-2018-bianchi-convexity/notes.md) p. 96 | $\Omega_0=\{\tfrac{n-2}n\lVert R_W\rVert^2\le\lVert R_I\rVert^2$ **and** $\mathop{\mathrm{tr}}(R)>0\}$, so $\partial\Omega_0:\ \tfrac{n-2}n\lVert R_W\rVert^2=\lVert R_I\rVert^2$ **on the positive-scalar nappe** |
 
 Hence $\Phi(cI+W)=c^2(n-1)I+\Phi(W)$, and **every cross term in the cubic vanishes**, $\langle W,\Phi(I)\rangle=(n-1)\langle W,I\rangle=0$ and $\langle I,\Phi(W)\rangle=0$ because $\Phi(W)$ is again Weyl. So $\langle R,\Phi(R)\rangle=c^3(n-1)\lVert I\rVert^2+\langle W,Q(W)\rangle$. On the right, $\lVert\mathrm{ric}(I)\rVert^2$ cancels between $F$ and the pairing, and the criterion collapses with **no residue at all** to
 
 $$\langle W,Q(W)\rangle\ \le\ c\,(n-1)\lVert W\rVert^2 .$$
 
-Normalising $\lVert W\rVert=1$, the $\partial\Omega_0$ constraint with $\lVert I\rVert^2=\dim\Lambda^2=\frac{n(n-1)}2$ gives $c=\frac1n\sqrt{\frac{2(n-2)}{n-1}}$, **the positive root, and $\operatorname{tr}(R)>0$ is what selects it.** *$F$ is even in $R$, so the inequality alone prints a double cone whose lower nappe demands $\langle W,Q(W)\rangle\le-\theta_0(n)$, false at every sphere product: at $n=12$, $R=-c_0I+W_{S^6\times S^6}$ sits on its boundary.* **Three verifiers, [ROUND_L43-arg](../verification/ROUND_L00r2.md)**, so the bound demanded is
+Normalising $\lVert W\rVert=1$, the $\partial\Omega_0$ constraint with $\lVert I\rVert^2=\dim\Lambda^2=\frac{n(n-1)}2$ gives $c=\frac1n\sqrt{\frac{2(n-2)}{n-1}}$, **the positive root, and $\mathop{\mathrm{tr}}(R)>0$ is what selects it.** *$F$ is even in $R$, so the inequality alone prints a double cone whose lower nappe demands $\langle W,Q(W)\rangle\le-\theta_0(n)$, false at every sphere product: at $n=12$, $R=-c_0I+W_{S^6\times S^6}$ sits on its boundary.* **Three verifiers, [ROUND_L43-arg](../verification/ROUND_L00r2.md)**, so the bound demanded is
 
 $$c(n-1)=\frac{\sqrt{2(n-1)(n-2)}}n=\theta_0(n).$$
 
@@ -103,7 +103,7 @@ set_option linter.style.longLine false
 > $c^3(n-1)\lVert I\rVert^2$ term is common to both sides, leaving exactly
 > $\langle W,Q(W)\rangle-c(n-1)\lVert W\rVert^2$ and nothing else.
 
-> **The slice is the EINSTEIN one.** […] *The cone also carries $\operatorname{scal}(R)>0$, which
+> **The slice is the EINSTEIN one.** […] *The cone also carries $\mathop{\mathrm{scal}}(R)>0$, which
 > the printed $F$-sublevel set omits: $F$ is even in $R$, so without that clause the set is a double
 > cone whose $c<0$ nappe reads $\langle W,Q(W)\rangle\le-\theta_0(n)\lVert W\rVert^3$, false at
 > every sphere product.*
@@ -117,7 +117,7 @@ and the derivation the block points at, from the same file:
 > $$\langle W,Q(W)\rangle\ \le\ c\,(n-1)\lVert W\rVert^2 .$$
 > Normalising $\lVert W\rVert=1$, the $\partial\Omega_0$ constraint with
 > $\lVert I\rVert^2=\dim\Lambda^2=\frac{n(n-1)}2$ gives $c=\frac1n\sqrt{\frac{2(n-2)}{n-1}}$,
-> **the positive root, and $\operatorname{tr}(R)>0$ is what selects it.**
+> **the positive root, and $\mathop{\mathrm{tr}}(R)>0$ is what selects it.**
 
 ## What is typed here
 
@@ -240,7 +240,7 @@ end HamiltonsCubic.L43Statement
 
 1. Whether the collapse follows as written: that $\Phi(cI+W)=c^2(n-1)I+\Phi(W)$, that every cross term vanishes, that $\lVert\mathrm{ric}(I)\rVert^2$ "cancels between $F$ and the pairing", and what "the invariance criterion" is, as an explicit inequality, before and after the collapse.
 2. Whether the collapsed inequality is $\langle W,Q(W)\rangle\le c(n-1)\lVert W\rVert^2$ (Passage D, Passage C) or $\langle W,Q(W)\rangle\le\theta_0(n)\lVert W\rVert^3$ (Passage A), and under what normalisation or boundary condition the two agree. **In particular, whether "the collapse is an identity on the whole slice" (Passage A) and "at $a=0$ the whole condition collapses to … where $c(n-1)=\theta_0(n)$" (Passage C) hold off $\partial\Omega_0$.**
-3. Whether "$\partial\Omega_0$ meets the slice at one ratio $c/\lVert W\rVert$" and the root selection by $\operatorname{tr}R>0$ are right.
+3. Whether "$\partial\Omega_0$ meets the slice at one ratio $c/\lVert W\rVert$" and the root selection by $\mathop{\mathrm{tr}}R>0$ are right.
 4. Every imported fact against its source: Böhm–Wilking Lemma 2.1 and equation (6) as quoted; $\Phi$ preserving Weyl (including the first Bianchi identity); Beitz p. 96's $\Omega_0$; and **the direction of Beitz Lemma 2.3.4**, where Passage D says it "supplies only the converse" and Passage E says the needed direction is its first clause.
 5. Whether the lemma's title claim, "demands $\theta_0(n)$ and nothing weaker", is established, and what "nothing weaker" quantifies over.
 6. Whether Passage F's Lean statements are faithful to what they claim to type, and whether the file's account of what it does NOT type is accurate.

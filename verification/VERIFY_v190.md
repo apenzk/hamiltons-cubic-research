@@ -32,7 +32,7 @@ Quoted from [conventions.md](../findings/conventions.md), never restated:
 - $R_I,R_{\mathrm{ric}_0},R_W$: "the three $O(n)$-irreducible pieces … $R_{\mathrm{ric}_0}=0$ makes a slice **Einstein**; Ricci-flat additionally needs the scalar part, i.e. $c=0$, *which is the one value $c$ cannot take on $\partial\Omega_0$*".
 - $\#$: "the halved Böhm–Wilking product, $vv^{\mathsf T}\#ww^{\mathsf T}=\tfrac12[v,w][v,w]^{\mathsf T}$", and $\mathrm{Ric}$ "the adjoint of $\cdot\wedge\mathrm{id}$, with $\lVert\mathrm{Ric}\rVert$ the Frobenius norm of the resulting symmetric matrix".
 - Structure constants: "$c_{abc}=\langle[v_a,v_b],v_c\rangle$ are **totally antisymmetric** … so $T_{abc}=c_{abc}^2$ is totally symmetric".
-- $\lVert\cdot\rVert$ on $\mathfrak{so}(n)$: "$\lVert Z\rVert^2=\tfrac12\operatorname{tr}(Z^{\mathsf T}Z)$".
+- $\lVert\cdot\rVert$ on $\mathfrak{so}(n)$: "$\lVert Z\rVert^2=\tfrac12\mathop{\mathrm{tr}}(Z^{\mathsf T}Z)$".
 
 Two conventions L44 and L43 consume that this file does **not** carry, and that I had to reconstruct in §3.1: the value of $\mathrm{ric}(I)$, and the $F$-threshold $\tfrac4{n-2}$ that goes with it.
 
@@ -44,15 +44,15 @@ Two conventions L44 and L43 consume that this file does **not** carry, and that 
 | H2 | $\lVert W\rVert=1$ | implicit; the block drops $\lVert W\rVert^2$ from L43's inequality | yes | yes |
 | H3 | $W$ is a critical point, $Q(W)=\theta W$ | stated in the canon and the block | **yes**, §2.2 | **no**, §9 |
 | H4 | The slice is Einstein, $R_{\mathrm{ric}_0}=0$ | [L43](../findings/problem.md):541 | yes, $R=cI+W$ | yes |
-| H5 | $c>0$, i.e. $\operatorname{scal}(R)>0$, the nappe-selecting clause | [problem.md](../findings/problem.md):60 | yes, $c=\tfrac1n\sqrt{2(n-2)/(n-1)}>0$ | yes |
+| H5 | $c>0$, i.e. $\mathop{\mathrm{scal}}(R)>0$, the nappe-selecting clause | [problem.md](../findings/problem.md):60 | yes, $c=\tfrac1n\sqrt{2(n-2)/(n-1)}>0$ | yes |
 | H6 | $\mathrm{ric}(R)\ne0$, so $F$ is defined and smooth near $R$ | never stated | yes, since $c>0$ | yes, silently |
 | H7 | $Q(I)=(n-1)I$, i.e. $I^\#=(n-2)I$ | BW08 Lemma 2.1, via [Beitz](../references/beitz-2018-bianchi-convexity/notes.md) | n/a | yes |
 | H8 | $I\#W=-W$, whence $\Phi(I,W)=0$ | [Xu](../references/xu-2024-ricci-flow-invariant-conditions/notes.md) Prop 2.7(3); [L46](../findings/problem.md) step (C) | **yes**, needs only $W$ Weyl, which padding preserves | yes |
-| H9 | $\operatorname{tr}Q(W)=0$ for Weyl $W$ | Hamilton's scalar identity, via [Beitz](../references/beitz-2018-bianchi-convexity/notes.md) | yes | yes |
+| H9 | $\mathop{\mathrm{tr}}Q(W)=0$ for Weyl $W$ | Hamilton's scalar identity, via [Beitz](../references/beitz-2018-bianchi-convexity/notes.md) | yes | yes |
 | H10 | $\lVert I\rVert^2=\binom n2$ | [L43](../findings/problem.md):539 | n/a | yes |
 | H11 | $\partial\Omega_0$ is the $F$-level set $\tfrac4{n-2}$ | [Beitz](../references/beitz-2018-bianchi-convexity/notes.md) p. 96 | yes | yes |
 | H12 | **invariance of $\Omega_0$ $\Rightarrow$ $G\le0$ at a boundary point** | **nowhere on the canonical record** |, | **yes, and it carries the whole conclusion** |
-| H13 | $\Phi$ locally Lipschitz; $C=\{\operatorname{scal}>0\}$ open; $F$ smooth on $C$, Beitz 2.3.4's own hypotheses | never checked in the block | I checked them, §7.2: all three hold | yes, silently |
+| H13 | $\Phi$ locally Lipschitz; $C=\{\mathop{\mathrm{scal}}>0\}$ open; $F$ smooth on $C$, Beitz 2.3.4's own hypotheses | never checked in the block | I checked them, §7.2: all three hold | yes, silently |
 | H14 | $\Theta_n$ is the constant of the conjecture's conclusion at both parities | [L57](../results.md), [L0](../results.md) | n/a | yes, in the **elementary** route only |
 
 **H12 and H13 are the debt.** H3 is the stated-and-unused hypothesis. H6 and H13 are steps that use a hypothesis never stated.
@@ -63,7 +63,7 @@ I did not take $\theta(W_{\mathbb{CP}^2})=\sqrt{3/2}$ from the record. I rebuilt
 
 ### 2.1 The structure constants
 
-With $L_{ij}:=E_{ij}-E_{ji}$, [conventions.md](../findings/conventions.md)'s norm "$\lVert Z\rVert^2=\tfrac12\operatorname{tr}(Z^{\mathsf T}Z)$" makes each $L_{ij}$ a unit vector, so $\{L_{ij}\}_{i<j}$ is an orthonormal basis of $\Lambda^2\mathbb R^4$ and $\lVert I\rVert^2=\binom42=6$. Direct multiplication gives $L_{12}L_{23}=E_{13}$ and $L_{23}L_{12}=E_{31}$, hence
+With $L_{ij}:=E_{ij}-E_{ji}$, [conventions.md](../findings/conventions.md)'s norm "$\lVert Z\rVert^2=\tfrac12\mathop{\mathrm{tr}}(Z^{\mathsf T}Z)$" makes each $L_{ij}$ a unit vector, so $\{L_{ij}\}_{i<j}$ is an orthonormal basis of $\Lambda^2\mathbb R^4$ and $\lVert I\rVert^2=\binom42=6$. Direct multiplication gives $L_{12}L_{23}=E_{13}$ and $L_{23}L_{12}=E_{31}$, hence
 
 $$[L_{12},L_{23}]=E_{13}-E_{31}=L_{13},$$
 
@@ -79,7 +79,7 @@ So $c_{123}=-\sqrt2$ and $T_{123}=c_{123}^2=2$, totally symmetric by [convention
 
 ### 2.2 $\theta$ and criticality
 
-$W_{\mathbb{CP}^2}$ is self-dual with $W^-=0$ and $W^+=\operatorname{diag}(2s,-s,-s)$ in the $\omega$-basis, trace-free, as a Weyl operator on $\mathbb R^4$ must be. Then $\lVert W\rVert^2=6s^2$, so $\lVert W\rVert=1$ fixes $s=1/\sqrt6$.
+$W_{\mathbb{CP}^2}$ is self-dual with $W^-=0$ and $W^+=\mathop{\mathrm{diag}}(2s,-s,-s)$ in the $\omega$-basis, trace-free, as a Weyl operator on $\mathbb R^4$ must be. Then $\lVert W\rVert^2=6s^2$, so $\lVert W\rVert=1$ fixes $s=1/\sqrt6$.
 
 With $\#$ in [conventions.md](../findings/conventions.md)'s halved form, $(W^\#)_{cc}=\tfrac12\sum_{a,b}\lambda_a\lambda_b\,T_{abc}$, giving
 
@@ -89,7 +89,7 @@ and off-diagonal and cross-chirality entries vanish because $\sum_{ab}\lambda_a\
 
 $$Q(W)=W^2+W^\#=(6s^2,-3s^2,-3s^2)=3s\cdot(2s,-s,-s)=3s\,W .$$
 
-So $W$ **is** critical, with $\theta=3s=3/\sqrt6=\sqrt{3/2}$. Independently, $\operatorname{tr}W^3=6s^3$ and $\langle W,W^\#\rangle=\tfrac12\sum_{abc}\lambda_a\lambda_b\lambda_c T_{abc}=\tfrac12\cdot6\cdot2\cdot2s^3=12s^3$, so $P(W)=18s^3=18/(6\sqrt6)=\sqrt6/2=\sqrt{3/2}$, the two routes agree, and $Q(W)$ is trace-free so it stays in $\mathcal W_4$. **Claim 1's $n=4$ case: PROVEN.**
+So $W$ **is** critical, with $\theta=3s=3/\sqrt6=\sqrt{3/2}$. Independently, $\mathop{\mathrm{tr}}W^3=6s^3$ and $\langle W,W^\#\rangle=\tfrac12\sum_{abc}\lambda_a\lambda_b\lambda_c T_{abc}=\tfrac12\cdot6\cdot2\cdot2s^3=12s^3$, so $P(W)=18s^3=18/(6\sqrt6)=\sqrt6/2=\sqrt{3/2}$, the two routes agree, and $Q(W)$ is trace-free so it stays in $\mathcal W_4$. **Claim 1's $n=4$ case: PROVEN.**
 
 ### 2.3 Padding, and this is where $\ker W\ne0$ is answered
 
@@ -101,7 +101,7 @@ Embed $\mathbb R^4\subset\mathbb R^n$ and extend $W$ by zero. Three things must 
 
 Hence $Q(W)=\sqrt{3/2}\,W$ and $\lVert W\rVert=1$ at every $n\ge4$. **Claim 1: PROVEN at every $n\ge4$.**
 
-**The $\ker W\ne0$ trap, answered step by step.** The padded witness has $\dim\ker W=\binom n2-3$ ($63$ of $66$ at $n=12$). Every step the block runs at it is either a norm ($\lVert W\rVert=1$), a linear-algebraic identity ($\mathrm{ric}=0$, $\operatorname{tr}Q(W)=0$, $\Phi(I,W)=0$), or the collapse of §4, which is a scalar identity in $\lVert W\rVert$ and $\langle W,Q(W)\rangle$. **None of them traces over eigenspaces, so none is vacuous on the kernel.** This matters because [INDEX-traps.md](../findings/INDEX-traps.md) **W4** records the one screen that *is* vacuous there, "the gradedness screen is vacuous when $\ker W\ne0$ … padded $W_{\mathbb{CP}^2}$ has kernel $63$ of $66$ at $n=12$", and L44 does not use it.
+**The $\ker W\ne0$ trap, answered step by step.** The padded witness has $\dim\ker W=\binom n2-3$ ($63$ of $66$ at $n=12$). Every step the block runs at it is either a norm ($\lVert W\rVert=1$), a linear-algebraic identity ($\mathrm{ric}=0$, $\mathop{\mathrm{tr}}Q(W)=0$, $\Phi(I,W)=0$), or the collapse of §4, which is a scalar identity in $\lVert W\rVert$ and $\langle W,Q(W)\rangle$. **None of them traces over eigenspaces, so none is vacuous on the kernel.** This matters because [INDEX-traps.md](../findings/INDEX-traps.md) **W4** records the one screen that *is* vacuous there, "the gradedness screen is vacuous when $\ker W\ne0$ … padded $W_{\mathbb{CP}^2}$ has kernel $63$ of $66$ at $n=12$", and L44 does not use it.
 
 ## 3. The boundary placement, both halves
 
@@ -121,7 +121,7 @@ With $\lVert W\rVert=1$ and $R_I=cI$, the boundary equation reads
 
 $$\tfrac{n-2}n=c^2\tbinom n2=c^2\tfrac{n(n-1)}2\ \Longrightarrow\ c^2=\tfrac{2(n-2)}{n^2(n-1)}\ \Longrightarrow\ c=\tfrac1n\sqrt{\tfrac{2(n-2)}{n-1}},$$
 
-the positive root being selected by $\operatorname{scal}(R)>0$ ([problem.md](../findings/problem.md):60: "**the positive root, and $\operatorname{tr}(R)>0$ is what selects it**"). **Claim 2: PROVEN.** And then
+the positive root being selected by $\mathop{\mathrm{scal}}(R)>0$ ([problem.md](../findings/problem.md):60: "**the positive root, and $\mathop{\mathrm{tr}}(R)>0$ is what selects it**"). **Claim 2: PROVEN.** And then
 
 $$c(n-1)=\tfrac{n-1}n\sqrt{\tfrac{2(n-2)}{n-1}}=\tfrac{\sqrt{2(n-1)(n-2)}}n=\theta_0(n)$$
 
@@ -132,7 +132,7 @@ exactly, matching [conventions.md](../findings/conventions.md)'s closed form for
 The block gives one reason. There are three, and they are independent:
 
 1. **The block's own.** $\mathrm{ric}(W)=0$, so $F(W)=\lVert W\rVert^2/0$ is undefined for $W\ne0$; $\Omega_0$ is a sublevel set of $F$ and does not reach there.
-2. **The clause the printed $F$-sublevel set omits.** $\operatorname{scal}(W)=0$, so $W$ fails $\operatorname{scal}(R)>0$ outright, and that clause is in the source's own definition ([problem.md](../findings/problem.md):54, [Beitz](../references/beitz-2018-bianchi-convexity/notes.md)).
+2. **The clause the printed $F$-sublevel set omits.** $\mathop{\mathrm{scal}}(W)=0$, so $W$ fails $\mathop{\mathrm{scal}}(R)>0$ outright, and that clause is in the source's own definition ([problem.md](../findings/problem.md):54, [Beitz](../references/beitz-2018-bianchi-convexity/notes.md)).
 3. **It is not even in the closure.** $\epsilon I+W$ lies in $\Omega_0$ only for $\epsilon^2\binom n2\ge\tfrac{n-2}n\lVert W\rVert^2$, so $\epsilon$ is bounded away from $0$ and $W\notin\overline{\Omega_0}$ for $W\ne0$. **This is the one that closes the boundary-placement question properly**, since "not on the boundary" for a set defined by a blowing-up function invites the reply "but it is a limit point". It is not.
 
 **Claim 3: PROVEN.** The repaired placement is right, and I checked all three sites the [LEDGER](../findings/LEDGER.md) says were wrong, [results.md](../results.md):102, [results.md](../results.md):282 and [problem.md](../findings/problem.md):213, each now says $cI+W$. No residual site places $W$ itself there.
@@ -153,7 +153,7 @@ Let $R=cI+W$ with $W$ Weyl. Bilinearity of $\#$, $I\#I=I^\#=(n-2)I$ and $I\#W=-W
 
 $$\Phi(cI+W)=\big(c^2I+2cW+W^2\big)+\big(c^2(n-2)I-2cW+W^\#\big)=c^2(n-1)I+Q(W),$$
 
-the $\pm2cW$ pair cancelling, this **is** the record's "$\Phi(I,W)=W-W=0$", and it is the whole reason the slice survives the flow. Then, using $\operatorname{tr}W=0$ and $\operatorname{tr}Q(W)=0$,
+the $\pm2cW$ pair cancelling, this **is** the record's "$\Phi(I,W)=W-W=0$", and it is the whole reason the slice survives the flow. Then, using $\mathop{\mathrm{tr}}W=0$ and $\mathop{\mathrm{tr}}Q(W)=0$,
 
 $$\text{LHS}=\langle R,\Phi(R)\rangle=c^3(n-1)\tbinom n2+\langle W,Q(W)\rangle,$$
 
@@ -185,7 +185,7 @@ L43 itself *does* carry the boundary placement of §3.2 ("$\partial\Omega_0$ mee
 
 ## 5. The parity claim, PROVEN, and it is the right distinction
 
-The block's repair says the criterion demands $\theta_0(n)$ at **both** parities, and that $\Theta_n$ is what the diagonal locus attains rather than what the criterion demands. **Test: I re-read my own derivation of §4 for any parity-dependent step. There is none.** The inputs are $\lVert I\rVert^2=\binom n2$, $\mathrm{ric}(I)\propto\mathrm{id}$, $I\#I=(n-2)I$, $I\#W=-W$, $\operatorname{tr}Q(W)=0$, and the boundary equation. Every one is a rational identity in $n$ valid at every integer $n\ge4$, and
+The block's repair says the criterion demands $\theta_0(n)$ at **both** parities, and that $\Theta_n$ is what the diagonal locus attains rather than what the criterion demands. **Test: I re-read my own derivation of §4 for any parity-dependent step. There is none.** The inputs are $\lVert I\rVert^2=\binom n2$, $\mathrm{ric}(I)\propto\mathrm{id}$, $I\#I=(n-2)I$, $I\#W=-W$, $\mathop{\mathrm{tr}}Q(W)=0$, and the boundary equation. Every one is a rational identity in $n$ valid at every integer $n\ge4$, and
 
 $$c(n-1)=\frac{\sqrt{2(n-1)(n-2)}}n=\theta_0(n)$$
 
@@ -234,7 +234,7 @@ The brief asks it plainly, so the answer is plain. **The two lines are on no pag
 | where | what stands |
 | --- | --- |
 | [problem.md](../findings/problem.md):215, and [LEDGER.md](../findings/LEDGER.md):1115 | the sentence *"the direction holds in two lines, by evaluating the flow's normal component at the boundary point, and is now stated rather than assumed"*, **the sentence, not the two lines** |
-| [problem.md](../findings/problem.md):70 | a *different* one-clause reason, "*it holds via $\tfrac d{dt}\mathrm{scal}=2\lVert\mathrm{ric}\rVert^2>0$*", which is not a proof of the implication (it shows $\operatorname{scal}>0$ persists, which is a side condition, not the derivative inequality) |
+| [problem.md](../findings/problem.md):70 | a *different* one-clause reason, "*it holds via $\tfrac d{dt}\mathrm{scal}=2\lVert\mathrm{ric}\rVert^2>0$*", which is not a proof of the implication (it shows $\mathop{\mathrm{scal}}>0$ persists, which is a side condition, not the derivative inequality) |
 | [REVIEW_r91](../reviews/REVIEW_r91.md):84 | the correction: *"[Xu](https://arxiv.org/abs/2412.13633) Proposition 2.2 states the **iff** … The necessity direction is therefore in hand from the same paper, and the scalar-curvature argument is not needed (nor does it, as written, establish necessity)"*, **filed in a review and never folded into the block** |
 
 So [problem.md](../findings/problem.md) carries two different justifications of H12 in two places, one of which was refuted in review without the refutation reaching the text, and the block's own version is an assertion that an argument exists. **Claim 9: HYPOTHESIS-DEBT.** What is owed is four lines of prose in the block, or one citation.
@@ -247,9 +247,9 @@ This is the finding of this round. [diss_beitz.txt:1470](https://repositorium.un
 
 The direction L44 needs (invariance $\Rightarrow G\le0$), is the lemma's **first** clause, proved in the source in four lines immediately below it ("*let $a:=F(v)$ … $0\ge\frac d{dt}\big|_0F(f(t))=dF_v(\Phi(v))$*"). The block says Beitz "**supplies only the converse**". **The two halves are swapped.**
 
-**The hypotheses, which the block never checks against the object and which I did.** $V=S^2_B(\mathfrak{so}(n))$; $\Phi=Q$ is a polynomial map, hence locally Lipschitz; $C=\{\operatorname{scal}>0\}$ is open; $F$ is smooth on $C$, [Xu](https://arxiv.org/abs/2412.13633):805 states exactly this, "*Since $\mathrm{Ric}(R)\ne0$ for all $R\in\mathrm{scal}^+$, the function $F$ is well-defined … Moreover, $F$ is smooth*". Beitz's proof also needs $f(t)$ to stay in $C$, which is free here: invariance of $\Omega_0$ puts $f(t)\in\Omega_0\subseteq C$. And it needs the sublevel set at the level $a=F(v)$; at the witness $F(R)=\tfrac4{n-2}$ exactly, so that sublevel set **is** $\Omega_0$, the one assumed invariant. **Every hypothesis holds at the padded witness.**
+**The hypotheses, which the block never checks against the object and which I did.** $V=S^2_B(\mathfrak{so}(n))$; $\Phi=Q$ is a polynomial map, hence locally Lipschitz; $C=\{\mathop{\mathrm{scal}}>0\}$ is open; $F$ is smooth on $C$, [Xu](https://arxiv.org/abs/2412.13633):805 states exactly this, "*Since $\mathrm{Ric}(R)\ne0$ for all $R\in\mathrm{scal}^+$, the function $F$ is well-defined … Moreover, $F$ is smooth*". Beitz's proof also needs $f(t)$ to stay in $C$, which is free here: invariance of $\Omega_0$ puts $f(t)\in\Omega_0\subseteq C$. And it needs the sublevel set at the level $a=F(v)$; at the witness $F(R)=\tfrac4{n-2}$ exactly, so that sublevel set **is** $\Omega_0$, the one assumed invariant. **Every hypothesis holds at the padded witness.**
 
-**Where this leaves the mathematics.** H12 is *true* and available from the record's own stored source in one citation, and separately from [Xu](https://arxiv.org/abs/2412.13633):435, Proposition 2.2, "*A closed convex $O(n)$-invariant subset $C\subset S^2_B(\mathfrak{so}(n))$ is invariant under the Hamilton ODE (2.28) **if and only if** for all $R\in\partial C$ we have $Q(R)\in T_RC$*". **Beitz 2.3.4 is the cleaner of the two here**, because Xu's needs $C$ closed and convex while $\Omega_0$ carries a strict $\operatorname{scal}>0$ and is not closed; Beitz's needs neither. **So the conclusion of L44 stands.** What fails is the block's sentence about its own source. **Claim 10: REFUTED against the source.**
+**Where this leaves the mathematics.** H12 is *true* and available from the record's own stored source in one citation, and separately from [Xu](https://arxiv.org/abs/2412.13633):435, Proposition 2.2, "*A closed convex $O(n)$-invariant subset $C\subset S^2_B(\mathfrak{so}(n))$ is invariant under the Hamilton ODE (2.28) **if and only if** for all $R\in\partial C$ we have $Q(R)\in T_RC$*". **Beitz 2.3.4 is the cleaner of the two here**, because Xu's needs $C$ closed and convex while $\Omega_0$ carries a strict $\mathop{\mathrm{scal}}>0$ and is not closed; Beitz's needs neither. **So the conclusion of L44 stands.** What fails is the block's sentence about its own source. **Claim 10: REFUTED against the source.**
 
 ## 8. Sources, and what a consumer can check from the notes alone
 
@@ -264,7 +264,7 @@ The direction L44 needs (invariance $\Rightarrow G\le0$), is the lemma's **first
 | Xu (3.1)–(3.4) | **no**, absent from the notes; the block says so and is right |
 | Xu Lemma 2.8 / Huisken's five-term expansion | **named** in the notes, not displayed; a consumer gets the pointer, not the identity |
 | $\Phi(I,W)=0$, i.e. Prop 2.7(3) | **yes**, the notes print all five items |
-| $\operatorname{scal}(Q(W))=0$ for Weyl $W$ | **yes**, the Beitz notes' identity table |
+| $\mathop{\mathrm{scal}}(Q(W))=0$ for Weyl $W$ | **yes**, the Beitz notes' identity table |
 | $n\ge12$ is stated with the conjecture, not derived | **yes**, the Beitz notes say it in those words |
 | **invariance $\Rightarrow G\le0$** | **no, and worse than no**, the [Beitz notes](../references/beitz-2018-bianchi-convexity/notes.md) print only *"a sublevel set of a function $F$ is invariant when $dF_R(\Phi(R))\le0$"*, the sufficiency half, with no hint that 2.3.4 also states the necessity half. **This is where the block's error came from.** |
 
@@ -309,10 +309,10 @@ Three candidates reached the protocol. One cleared all three tests; two are reco
 
 | the falsifier would need | what I did |
 | --- | --- |
-| padded $W_{\mathbb{CP}^2}$ to fail $\theta=\sqrt{3/2}$, or to leave $\mathcal W_n$ under padding | **rebuilt it** from the $\mathfrak{so}(4)$ structure constants, both as $Q(W)=\theta W$ and as $P(W)=\operatorname{tr}W^3+\langle W,W^\#\rangle$, and checked each of $W^2$, $W^\#$ and $\mathrm{ric}$ separately under padding (§2) |
-| $cI+W$ at the pinned $c$ to miss $\partial\Omega_0$ | re-derived $c$ from the boundary equation and confirmed the sign selection by the $\operatorname{scal}>0$ nappe (§3.2) |
+| padded $W_{\mathbb{CP}^2}$ to fail $\theta=\sqrt{3/2}$, or to leave $\mathcal W_n$ under padding | **rebuilt it** from the $\mathfrak{so}(4)$ structure constants, both as $Q(W)=\theta W$ and as $P(W)=\mathop{\mathrm{tr}}W^3+\langle W,W^\#\rangle$, and checked each of $W^2$, $W^\#$ and $\mathrm{ric}$ separately under padding (§2) |
+| $cI+W$ at the pinned $c$ to miss $\partial\Omega_0$ | re-derived $c$ from the boundary equation and confirmed the sign selection by the $\mathop{\mathrm{scal}}>0$ nappe (§3.2) |
 | a residue surviving L43's collapse | redid the collapse from the quotient rule with $\lVert W\rVert$ and $c$ both free, and found the residue is exactly zero on the whole Einstein slice, the $c^3(n-1)\binom n2$ term common, $\lVert\mathrm{ric}(I)\rVert^2$ cancelling (§4.2) |
-| invariance **not** to imply $G\le0$ at that boundary point | read Beitz's Lemma 2.3.4 at source, checked all four of its hypotheses against $Q$, $\{\operatorname{scal}>0\}$ and $F$, and found the direction is its first clause (§7.2) |
+| invariance **not** to imply $G\le0$ at that boundary point | read Beitz's Lemma 2.3.4 at source, checked all four of its hypotheses against $Q$, $\{\mathop{\mathrm{scal}}>0\}$ and $F$, and found the direction is its first clause (§7.2) |
 
 **A second object, for the other half.** An $n\ge12$ with $\Theta_n<\sqrt{3/2}$ would kill the conjecture outright and make the threshold wrong on the far side. I looked, and the monotonicity in §6 rules it out at both parities from the closed forms alone, with $\Theta_n^2\to2$.
 

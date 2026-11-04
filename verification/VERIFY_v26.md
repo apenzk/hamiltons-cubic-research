@@ -54,7 +54,7 @@
 
 **$H$ is diagonal in the eigenframe of its own $h$, and that frame is block-adapted.** The record's embedding is $h\mapsto$ Weyl projection of $h\owedge g_q$, with $h$ supported on $B_1$. Re-deriving it from the record's own projector, with $(A\owedge B)_{ijij}=A_{ii}B_{jj}+A_{jj}B_{ii}$ for $A,B$ diagonal in the frame:
 
-- $\mathrm{Ric}(h\owedge g_q)_{aa}=\sum_{j\ne a}\big(h_a(g_q)_{jj}+h_{jj}(g_q)_{aa}\big)=m\,h_a$ for $a\in B_1$, and $\mathrm{Ric}_{bb}=\operatorname{tr}h=0$ for $b\in B_2$. So $\rho_0=mh$, traceless, and the scalar-curvature term of the projector drops.
+- $\mathrm{Ric}(h\owedge g_q)_{aa}=\sum_{j\ne a}\big(h_a(g_q)_{jj}+h_{jj}(g_q)_{aa}\big)=m\,h_a$ for $a\in B_1$, and $\mathrm{Ric}_{bb}=\mathop{\mathrm{tr}}h=0$ for $b\in B_2$. So $\rho_0=mh$, traceless, and the scalar-curvature term of the projector drops.
 - $\mathrm{Alt}(h\owedge g_q)=0$, both factors being diagonal, so $Y=X$ and the projector's first term is inert.
 - $(h\owedge g_q)_{abab}=h_a$ on a cross plane, $0$ on both in-block families; $(h\owedge g)_{ijij}=h_{ii}+h_{jj}$.
 - Hence the Weyl image is $h\owedge g_q-\tfrac{m}{n-2}(h\owedge g)$, with eigenvalues $h_a\big(1-\tfrac m{2m-2}\big)=\alpha h_a$ on $e_a\wedge e_b$; $-\tfrac m{2(m-1)}(h_a+h_{a'})=-\beta(h_a+h_{a'})$ on $e_a\wedge e_{a'}$; and $0$ on $e_b\wedge e_{b'}$.

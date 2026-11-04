@@ -4,9 +4,9 @@
 
 | # | Claim | Verdict |
 |---|---|---|
-| 1a | `row X i` is the record's $\mathrm{row}_i=\sum_{j\ne i}\lVert[X_i,X_j]\rVert^2$ in $\langle X,Y\rangle=-\tfrac12\operatorname{tr}XY$ | **CONFIRMED** |
+| 1a | `row X i` is the record's $\mathrm{row}_i=\sum_{j\ne i}\lVert[X_i,X_j]\rVert^2$ in $\langle X,Y\rangle=-\tfrac12\mathop{\mathrm{tr}}XY$ | **CONFIRMED** |
 | 1b | `bracketTotal_eq_sum_row` holds by definition | **CONFIRMED** (`rfl`, the inner sum of `bracketTotal` verbatim) |
-| 2a | `ipSo_eq_inner2`: $-\tfrac12\operatorname{tr}(XY)=\tfrac12\operatorname{tr}(X^{\mathsf T}Y)$ for skew $X$ | **CONFIRMED** (only $X$ skew is needed, as stated) |
+| 2a | `ipSo_eq_inner2`: $-\tfrac12\mathop{\mathrm{tr}}(XY)=\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$ for skew $X$ | **CONFIRMED** (only $X$ skew is needed, as stated) |
 | 2b | `row_le_eight` applies $\kappa_6\le8$ correctly: partners via `Fin.succAbove`, unit $X_i$, same `inner2` and `br` | **CONFIRMED** |
 | 2c | `bracketTotal_le_56` | **CONFIRMED** |
 | 3a | The row claims the first step only, not the lemma | **CONFIRMED** |
@@ -18,12 +18,12 @@ One line: every declaration is right and the INDEX sentence is true, but it re-p
 
 ## Attack line 1: the row and the total
 
-- **Record.** [second-order.md](../findings/second-order.md), Lemma L240: statement with $\langle X,Y\rangle=-\tfrac12\operatorname{tr}XY$ and $T=\sum_{i\ne j}\lVert[X_i,X_j]\rVert^2$, proof opening "$T=56-\sum_i\delta_i$ with $\delta_i=8-\mathrm{row}_i\ge0$ (L237)". $\mathrm{row}_i$ is L239's $\sum_{j\ne i}\lVert[X_i,X_j]\rVert^2$, ordered over $j$.
-- **Lean.** [SevenFrameGap.lean:640](../lean/HamiltonsCubic/Results/SevenFrameGap.lean#L640) defines `ipSo X Y = -(1/2) * (X * Y).trace` and `bracketTotal X = ∑ i, ∑ j, if i = j then 0 else ipSo [X i, X j] [X i, X j]` with the bracket written out as `X i * X j - X j * X i`. `row X i` is exactly that inner sum, so `bracketTotal_eq_sum_row` is definitional and the file proves it by `rfl`. The norm is the record's: `ipSo B B` for skew $B$ equals $\tfrac12\lVert B\rVert_F^2$, the square norm in $-\tfrac12\operatorname{tr}$.
+- **Record.** [second-order.md](../findings/second-order.md), Lemma L240: statement with $\langle X,Y\rangle=-\tfrac12\mathop{\mathrm{tr}}XY$ and $T=\sum_{i\ne j}\lVert[X_i,X_j]\rVert^2$, proof opening "$T=56-\sum_i\delta_i$ with $\delta_i=8-\mathrm{row}_i\ge0$ (L237)". $\mathrm{row}_i$ is L239's $\sum_{j\ne i}\lVert[X_i,X_j]\rVert^2$, ordered over $j$.
+- **Lean.** [SevenFrameGap.lean:640](../lean/HamiltonsCubic/Results/SevenFrameGap.lean#L640) defines `ipSo X Y = -(1/2) * (X * Y).trace` and `bracketTotal X = ∑ i, ∑ j, if i = j then 0 else ipSo [X i, X j] [X i, X j]` with the bracket written out as `X i * X j - X j * X i`. `row X i` is exactly that inner sum, so `bracketTotal_eq_sum_row` is definitional and the file proves it by `rfl`. The norm is the record's: `ipSo B B` for skew $B$ equals $\tfrac12\lVert B\rVert_F^2$, the square norm in $-\tfrac12\mathop{\mathrm{tr}}$.
 
 ## Attack line 2: the cap and the normalisation
 
-- **`ipSo_eq_inner2`.** `inner2 X Y = ½ tr(XᵀY)` (the `RealLayer` definition, identical in form to [L82Statement.lean:182](../lean/HamiltonsCubic/Results/L82Statement.lean#L182)). With $X^{\mathsf T}=-X$, $\tfrac12\operatorname{tr}(-XY)=-\tfrac12\operatorname{tr}(XY)$. Checked by hand. The hypothesis is on the first argument only, which is the argument that is transposed.
+- **`ipSo_eq_inner2`.** `inner2 X Y = ½ tr(XᵀY)` (the `RealLayer` definition, identical in form to [L82Statement.lean:182](../lean/HamiltonsCubic/Results/L82Statement.lean#L182)). With $X^{\mathsf T}=-X$, $\tfrac12\mathop{\mathrm{tr}}(-XY)=-\tfrac12\mathop{\mathrm{tr}}(XY)$. Checked by hand. The hypothesis is on the first argument only, which is the argument that is transposed.
 - **The brackets are skew.** `hbr` derives $[X_i,X_j]^{\mathsf T}=-[X_i,X_j]$ from the two skew hypotheses, so `ipSo_eq_inner2` applies to each bracket term.
 - **The cap.** [L237SlotCounts.lean:212](../lean/HamiltonsCubic/Results/L237SlotCounts.lean#L212) states `∑ j, inner2 (br X (y j)) (br X (y j)) ≤ (r + 2) * inner2 X X` for skew $X$, $r\ge1$ skew orthonormal $y$ in `inner2`. The file instantiates $X=X_i$, $r=6$, $y_k=X_{\mathrm{succAbove}(i,k)}$. Orthonormality of $y$ follows from `hon` through `ipSo_eq_inner2` and injectivity of `Fin.succAbove i` (`Fin.succAbove_right_inj`), and unitness of $X_i$ is `hon i i`. `Fin.sum_univ_succAbove _ i` splits the row into the zero diagonal term and the six partner terms, and `Fin.succAbove_ne` discharges the `if`. The cap reads $\mathrm{row}_i\le8\cdot1$.
 - **Against the record's L237.** The record states $\kappa_6=8$ for $n\ge6$ and smaller values below. `kappa_cap_norm` is the uniform bound $r+2$ at every $n$, which is what L240 ("any $n$") needs, and at $n\le4$ no orthonormal seven-frame exists, so the hypotheses are vacuous there.
@@ -43,7 +43,7 @@ One line: every declaration is right and the INDEX sentence is true, but it re-p
 
 ## What would break the claims, and where I looked
 
-- **A second `inner2` with a different factor**, which would make `kappa_cap_norm`'s cap a statement in another norm. Looked: L240Row opens `HamiltonsCubic.RealLayer` as L237SlotCounts does, the term typechecks against `kappa_cap_norm` with no coercion, and `ipSo_eq_inner2`'s proof unfolds to $\tfrac12\operatorname{tr}(X^{\mathsf T}Y)$.
+- **A second `inner2` with a different factor**, which would make `kappa_cap_norm`'s cap a statement in another norm. Looked: L240Row opens `HamiltonsCubic.RealLayer` as L237SlotCounts does, the term typechecks against `kappa_cap_norm` with no coercion, and `ipSo_eq_inner2`'s proof unfolds to $\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$.
 - **A `row` summed over unordered pairs or over $j<i$ only**, which would halve $T$ against the record's ordered total. Looked: `row` sums over all `j : Fin 7` with the diagonal zeroed, matching `bracketTotal`.
 - **Partners that are not orthonormal after reindexing**, which would void `kappa_cap_norm`'s hypothesis. Looked: `succAbove` is injective and misses $i$, so the six partners are distinct and different from $X_i$.
 - **A seven-frame with a row above 8**, which would refute L237. None exists by the kernel-checked cap. The record's best frames total $42$, rows averaging $6$.

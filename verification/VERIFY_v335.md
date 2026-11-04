@@ -36,7 +36,7 @@
 
 Let $A=\mathrm{ad}(v_a)$, $B=\mathrm{ad}(v_b)$ in an orthonormal basis. From $[v_a,v_c]=\sum_d c_{acd}v_d$ the matrix entries are $A_{dc}=c_{acd}$ and $B_{ef}=c_{bfe}=-c_{bef}$. Then
 
-$$\operatorname{tr}(AWBW)=\sum A_{dc}W_{ce}B_{ef}W_{fd}=-\sum c_{acd}c_{bef}W_{ce}W_{fd}=-2(W^\#)_{ab},$$
+$$\mathop{\mathrm{tr}}(AWBW)=\sum A_{dc}W_{ce}B_{ef}W_{fd}=-\sum c_{acd}c_{bef}W_{ce}W_{fd}=-2(W^\#)_{ab},$$
 
 using $W_{fd}=W_{df}$. So $M_{kl}=-2(W^\#)_{kl}$, which is the definition Mmat in Passage C. In an eigenbasis $W_{ce}=\lambda_c\delta_{ce}$, and
 

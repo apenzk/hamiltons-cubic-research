@@ -25,8 +25,8 @@
 | symbol | reading adopted | where fixed |
 |---|---|---|
 | $\mathcal W_n$, $Q$, $\#$ | as tabled | [conventions.md](../findings/conventions.md) |
-| $\lVert W\rVert$ | $\lVert W\rVert^2=\operatorname{tr}(W^2)$, the $\Lambda^2$ operator trace, with $\{e_i\wedge e_j\}_{i<j}$ orthonormal, equivalently $\lvert W\rvert_4^2:=W_{ijkl}W_{ijkl}=4\lVert W\rVert^2$ | [conventions.md](../findings/conventions.md), "Norms and pairings" |
-| $\theta$ | $P(W)/\lVert W\rVert^3$ with $P=\langle W,Q(W)\rangle$, so at $\lVert W\rVert=1$: $\theta=T+C$, $T:=\operatorname{tr}(W^3)$, $C:=\langle W,W^\#\rangle$ | [conventions.md](../findings/conventions.md) |
+| $\lVert W\rVert$ | $\lVert W\rVert^2=\mathop{\mathrm{tr}}(W^2)$, the $\Lambda^2$ operator trace, with $\{e_i\wedge e_j\}_{i<j}$ orthonormal, equivalently $\lvert W\rvert_4^2:=W_{ijkl}W_{ijkl}=4\lVert W\rVert^2$ | [conventions.md](../findings/conventions.md), "Norms and pairings" |
+| $\theta$ | $P(W)/\lVert W\rVert^3$ with $P=\langle W,Q(W)\rangle$, so at $\lVert W\rVert=1$: $\theta=T+C$, $T:=\mathop{\mathrm{tr}}(W^3)$, $C:=\langle W,W^\#\rangle$ | [conventions.md](../findings/conventions.md) |
 | $\theta_0(n)$ | $\theta_0^2=2(n-1)(n-2)/n^2$; $\theta_0(6)=\sqrt{10}/3$, $\theta_0(8)=\sqrt{21}/4$ | [conventions.md](../findings/conventions.md) |
 | $\sec$ | $\sec(\Sigma)=\langle W\hat B,\hat B\rangle$ at the unit decomposable bivector $\hat B$ spanning $\Sigma$, the **Weyl** sectional curvature, not the full $R$'s | [b_third_moment_refuted.py:52](../scripts/route-b/b_third_moment_refuted.py#L52). The record's own source note says the opposite, [weingart notes](../references/weingart-2017-moments-sectional-curvature/notes.md) call $\Psi_k$ "a moment of the **full** curvature tensor", and §5 below shows by exact recomputation that what was computed is the Weyl one |
 | $\Psi_k$ | $\mathbb E_\Sigma[\sec(\Sigma)^k]$ over $G_2(\mathbb R^n)$ with the invariant measure, i.e. Weingart's Corollary 2.6 | [weingart notes](../references/weingart-2017-moments-sectional-curvature/notes.md), Corollary 2.6, **the only definition on the record; it is in [references/](../references/), not in [conventions.md](../findings/conventions.md)** |
@@ -52,7 +52,7 @@ So [INDEX-results.md:136](../findings/INDEX-results.md#L136) is right to carry *
 Three facts, none of them numerical.
 
 1. $\theta$, $\Psi_3$ and $\Phi$ are all $O(n)$-invariant polynomials of degree $3$ on $\mathcal W_n$. For $\theta$ this is [conventions.md](../findings/conventions.md)'s definition; for $\Psi_3$ and $\Phi$ it is immediate, since $\sec$ is an $O(n)$-equivariant function of $(W,\Sigma)$ and the measures on $G_2(\mathbb R^n)$ and on $(S^{n-1})^3$ are $O(n)$-invariant.
-2. The space of $O(n)$-invariant cubics on $\mathcal W_n$ is **$2$-dimensional for $n\ge6$**, spanned by $T=\operatorname{tr}(W^3)$ and $C=\langle W,W^\#\rangle$. This is the classical count of full contractions of $W^{\otimes3}$ and is the fact the record already leans on at [weingart notes:9](../references/weingart-2017-moments-sectional-curvature/notes.md#L9).
+2. The space of $O(n)$-invariant cubics on $\mathcal W_n$ is **$2$-dimensional for $n\ge6$**, spanned by $T=\mathop{\mathrm{tr}}(W^3)$ and $C=\langle W,W^\#\rangle$. This is the classical count of full contractions of $W^{\otimes3}$ and is the fact the record already leans on at [weingart notes:9](../references/weingart-2017-moments-sectional-curvature/notes.md#L9).
 3. Hence any two of $\{\theta,\Psi_3,\Phi\}$ that are linearly independent span the plane, and the third is a **determined** combination of them. Independence is exactly what the recorded ratios say: writing $\Psi_3=b_3(-14\,T+C)$ and $\Phi=b_\Phi(-\tfrac12T+C)$, the two directions differ because $-14\ne-\tfrac12$.
 
 So the existence of the identity, and the uniqueness of its two coefficients, is a spanning argument. **Nothing is fitted; a fit was used to read off constants that a contraction determines.** Given the two ratios, solving $c\,b_3(-14,1)+d\,b_\Phi(-\tfrac12,1)=(1,1)$ in the basis $(T,C)$ gives
@@ -83,7 +83,7 @@ The same statement without Weingart: for Gaussian $x,y\sim N(0,I_n)$ the plane $
 
 Hence, in full,
 
-$$\Psi_3(W)=\frac{16\big(14\operatorname{tr}(W^3)-\langle W,W^\#\rangle\big)}{(n-1)n(n+1)(n+2)(n+3)(n+4)} .$$
+$$\Psi_3(W)=\frac{16\big(14\mathop{\mathrm{tr}}(W^3)-\langle W,W^\#\rangle\big)}{(n-1)n(n+1)(n+2)(n+3)(n+4)} .$$
 
 **Checked against four independent recorded numbers, none of them used to build it:**
 
@@ -114,11 +114,11 @@ The brief asks whether this is an invariance or a coincidence. **It is forced, a
 
 The $n$-dependence of a moment of $\sec$ enters through exactly one door: the normalisation of the plane, i.e. the falling factorial $[n+2k-2]_{2k}$ that divides Weingart's $\Psi_k$. The numerator (the Gaussian/Wick contraction itself), is $n$-free, because the only source of an $n$ is a self-contraction of one $W$, and $W$ is totally trace-free. $\Phi$ is a Wick sum of the same kind: three copies of $W$, each variable $x,y,z$ appearing quadratically in two of the three factors, so every surviving pairing joins slots of **different** $W$'s and closes into a full contraction with no free loop. Hence
 
-$$\Phi=\alpha\operatorname{tr}(W^3)+\beta\langle W,W^\#\rangle\quad\text{with }\alpha,\beta\text{ absolute constants},$$
+$$\Phi=\alpha\mathop{\mathrm{tr}}(W^3)+\beta\langle W,W^\#\rangle\quad\text{with }\alpha,\beta\text{ absolute constants},$$
 
 and by §3.1, $\tfrac5{72}\Phi=\tfrac{10}9C-\tfrac59T$, i.e.
 
-$$\Phi=16\,\langle W,W^\#\rangle-8\operatorname{tr}(W^3)=8\big(2C-T\big),$$
+$$\Phi=16\,\langle W,W^\#\rangle-8\mathop{\mathrm{tr}}(W^3)=8\big(2C-T\big),$$
 
 whose ratio $\alpha/\beta=-\tfrac12$ is precisely the value [r69](REVIEW_r69.md) reports. **So the three data points are one theorem**: $\Phi$ carries no normalising falling factorial, therefore its coefficient in the identity carries no $n$; all of the identity's $n$-dependence has been pushed into $c_n$, where §3.2 computes it. That is the strongest sentence available here and the block asserts it flatly.
 
@@ -128,7 +128,7 @@ It also cuts the other way, and this is the substance of the next section: **an 
 
 The block reports a shared $\theta=1.054092553389$ "to $2\times10^{-16}$" and a $\Psi_3$ ratio "exactly $13.5$". Both agreements are closed forms, so the $2\times10^{-16}$ is a check, not a claim, and the record already knows half of this: [08-fence-posts.tex:108](../report/sections/08-fence-posts.tex#L108) says the two *"share $\theta^2=\tfrac{10}9$ exactly"*, which the findings block, which is supposed to be the canonical site, does not say.
 
-**$S^3\times S^3$.** Balanced sphere product at $n=6$: the curvature operator is $\mathrm{Id}$ on $\Lambda^2V_1\oplus\Lambda^2V_2$ and $0$ on $V_1\wedge V_2$; Einstein with $\mathrm{scal}=12$, so $W=\mathcal R-\tfrac25\mathrm{Id}$ has eigenvalues $\tfrac35$ (multiplicity $6$) and $-\tfrac25$ (multiplicity $9$). Then $\operatorname{tr}W^2=\tfrac{18}5$, $\operatorname{tr}W^3=\tfrac{18}{25}$, and after normalising, $T=\sqrt{10}/30=\theta_0(6)/10$ with $\theta_0(6)=\sqrt{10}/3$ from [conventions.md](../findings/conventions.md).
+**$S^3\times S^3$.** Balanced sphere product at $n=6$: the curvature operator is $\mathrm{Id}$ on $\Lambda^2V_1\oplus\Lambda^2V_2$ and $0$ on $V_1\wedge V_2$; Einstein with $\mathrm{scal}=12$, so $W=\mathcal R-\tfrac25\mathrm{Id}$ has eigenvalues $\tfrac35$ (multiplicity $6$) and $-\tfrac25$ (multiplicity $9$). Then $\mathop{\mathrm{tr}}W^2=\tfrac{18}5$, $\mathop{\mathrm{tr}}W^3=\tfrac{18}{25}$, and after normalising, $T=\sqrt{10}/30=\theta_0(6)/10$ with $\theta_0(6)=\sqrt{10}/3$ from [conventions.md](../findings/conventions.md).
 
 **$\mathbb{CP}^3$.** Fubini–Study with holomorphic sectional curvature $4$: $\mathcal R$ acts by $2(m+1)$ on $\mathbb R\omega$, $2$ on primitive $(1,1)$ (multiplicity $m^2-1$), $0$ on the real $(2,0)+(0,2)$ part (multiplicity $m(m-1)$), and $\mathrm{Ric}=2(m+1)g$. Subtracting $\mathrm{scal}/(n(n-1))=2(m+1)/(2m-1)$ gives the Weyl eigenvalues
 
@@ -162,7 +162,7 @@ $$\theta(\mathbb{CP}^m)^2=\frac{(m+1)(2m-1)}{3m(m-1)}=\frac{2(n+2)(n-1)}{3n(n-2)
 
 That form reproduces $\sqrt{3/2}$ at $m=2$ (which I derive independently below), $\sqrt{10}/3$ at $m=3$ and $\sqrt{35}/6=0.98601329718$ at $m=4$, the latter being [r69](REVIEW_r69.md)'s out-of-sample $0.986013297$ to all nine printed digits. Setting the two equal gives $n(n+2)=3(n-2)^2$, i.e. $n^2-7n+6=0$, i.e. $n\in\{1,6\}$. **The separating pair exists at $n=6$ and at no other dimension**, which is a sharper statement than "these two agree" and is the reason the witness could not have been found by looking at $n=7$.
 
-*Independent anchor for the $\mathbb{CP}^m$ formula.* At $m=2$ the eigenvalues are $4,0,0,0,-2,-2$, so $\operatorname{tr}W^2=24$, $\operatorname{tr}W^3=48$, $T=1/\sqrt6$; with $C=2T$ at $n=4$ (§7) this gives $\theta=3T=\sqrt{3/2}$, which is [conventions.md](../findings/conventions.md)'s recorded $\theta$ at padded $\mathbb{CP}^2$ and the record's $M(n)\ge\sqrt{3/2}$. So one of the three points the $\mathbb{CP}^m$ formula passes through is derived rather than fitted; the other two are the record's own numbers.
+*Independent anchor for the $\mathbb{CP}^m$ formula.* At $m=2$ the eigenvalues are $4,0,0,0,-2,-2$, so $\mathop{\mathrm{tr}}W^2=24$, $\mathop{\mathrm{tr}}W^3=48$, $T=1/\sqrt6$; with $C=2T$ at $n=4$ (§7) this gives $\theta=3T=\sqrt{3/2}$, which is [conventions.md](../findings/conventions.md)'s recorded $\theta$ at padded $\mathbb{CP}^2$ and the record's $M(n)\ge\sqrt{3/2}$. So one of the three points the $\mathbb{CP}^m$ formula passes through is derived rather than fitted; the other two are the record's own numbers.
 
 **A corollary worth taking.** [r69](REVIEW_r69.md)'s "exact out-of-sample" is $1.145643924$ at $S^4\times S^4$ and $0.986013297$ at $\mathbb{CP}^4$, these are $\theta_0(8)=\sqrt{21}/4$ and $\sqrt{35}/6$, **both at $n=8$**, which is one of the three dimensions used to read off $c_n$. The out-of-sample check therefore tests the spanning claim at new *points* and tests the $n$-dependence of $c_n$ at no new *dimension* at all. §3.2 is what supplies the missing test, and it passes at $n=4,5$.
 
@@ -190,9 +190,9 @@ This is $n$-free by §4's trace argument, is of the same order as its $k=2$ sibl
 
 ## 7. $n=4,5$, the identity holds there; what fails is uniqueness
 
-**The dimension count is right, for $O(n)$.** At $n=4,5$ the $O(n)$-invariant cubics on $\mathcal W_n$ are $1$-dimensional, and $C=2T$. At $n=4$ this is visible: $\mathcal W_4=\mathcal W^+\oplus\mathcal W^-$ with $[\Lambda^2_+,\Lambda^2_-]=0$, so $\#$ preserves the splitting and acts on each $\mathfrak{so}(3)$ factor as the adjugate; for trace-free $3\times3$ symmetric $A$, $\langle A,\operatorname{adj}A\rangle=3\det A=\operatorname{tr}A^3$, giving $C=2T$ in the record's normalisation. At $n=5$ it is the Lovelock-type dimensionally dependent identity from antisymmetrising six indices in five dimensions. The record's own [r597](REVIEW_r597.md) carries the same fact as $P(W)=3\operatorname{tr}(W^3)$ on $\mathcal W_5$.
+**The dimension count is right, for $O(n)$.** At $n=4,5$ the $O(n)$-invariant cubics on $\mathcal W_n$ are $1$-dimensional, and $C=2T$. At $n=4$ this is visible: $\mathcal W_4=\mathcal W^+\oplus\mathcal W^-$ with $[\Lambda^2_+,\Lambda^2_-]=0$, so $\#$ preserves the splitting and acts on each $\mathfrak{so}(3)$ factor as the adjugate; for trace-free $3\times3$ symmetric $A$, $\langle A,\mathop{\mathrm{adj}}A\rangle=3\det A=\mathop{\mathrm{tr}}A^3$, giving $C=2T$ in the record's normalisation. At $n=5$ it is the Lovelock-type dimensionally dependent identity from antisymmetrising six indices in five dimensions. The record's own [r597](REVIEW_r597.md) carries the same fact as $P(W)=3\mathop{\mathrm{tr}}(W^3)$ on $\mathcal W_5$.
 
-**The group in force is $O(n)$, and the block should say so.** $\theta$, $\Psi_3$ and $\Phi$ are all orientation-blind, so $O(n)$ is the right group and the count of $1$ is the right count *for this argument*. Stated unqualified, though, "the cubic invariants are $1$-dimensional" is false at $n=4$ under $SO(4)$: $\operatorname{tr}(W_+^3)$ and $\operatorname{tr}(W_-^3)$ are two independent $SO(4)$-invariant cubics, and $\mathcal W_4$ is $O(4)$-irreducible while splitting under $SO(4)$. The block is safe and the sentence is not; **one word, "$O(n)$-invariant", repairs it**, and this is the same confusion a neighbouring audit found elsewhere on the record.
+**The group in force is $O(n)$, and the block should say so.** $\theta$, $\Psi_3$ and $\Phi$ are all orientation-blind, so $O(n)$ is the right group and the count of $1$ is the right count *for this argument*. Stated unqualified, though, "the cubic invariants are $1$-dimensional" is false at $n=4$ under $SO(4)$: $\mathop{\mathrm{tr}}(W_+^3)$ and $\mathop{\mathrm{tr}}(W_-^3)$ are two independent $SO(4)$-invariant cubics, and $\mathcal W_4$ is $O(4)$-irreducible while splitting under $SO(4)$. The block is safe and the sentence is not; **one word, "$O(n)$-invariant", repairs it**, and this is the same confusion a neighbouring audit found elsewhere on the record.
 
 **The logic is then wrong, and the conclusion with it.** Substituting $C=2T$ and $\theta=3T$ into §3's closed forms:
 

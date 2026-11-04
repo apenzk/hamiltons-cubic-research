@@ -13,10 +13,10 @@ Brief: [2026-09-25-L245-gate2-brief.md](2026-09-25-L245-gate2-brief.md). Log: [a
 
 ## 1. The identities: CONFIRMED
 
-- Normalisation: $e_i\wedge e_j=e_ie_j^{\mathsf T}-e_je_i^{\mathsf T}$ has $-\tfrac12\operatorname{tr}(\cdot)^2=1$, so it is unit, and $(e_i\wedge e_j)(e_i\wedge e_j)^{\mathsf T}=e_ie_i^{\mathsf T}+e_je_j^{\mathsf T}$. Summed over $i<j$ each index occurs $n-1$ times: $\sum_cA_c=(n-1)I$. The sum $\sum_\alpha\psi_\alpha\psi_\alpha^{\mathsf T}$ is basis-independent on each eigenspace, so any orthonormal basis of $\Lambda^2$ adapted to the $E_c$ gives the same total.
-- $\operatorname{Ric}$ is linear in the operator and sends $\psi\otimes\psi$ to $\psi\psi^{\mathsf T}$ in this normalisation (the identity case fixes the constant at $1$), so $\operatorname{Ric}(W)=\sum_c\lambda_cA_c$, which is $0$ at a Weyl $W$.
+- Normalisation: $e_i\wedge e_j=e_ie_j^{\mathsf T}-e_je_i^{\mathsf T}$ has $-\tfrac12\mathop{\mathrm{tr}}(\cdot)^2=1$, so it is unit, and $(e_i\wedge e_j)(e_i\wedge e_j)^{\mathsf T}=e_ie_i^{\mathsf T}+e_je_j^{\mathsf T}$. Summed over $i<j$ each index occurs $n-1$ times: $\sum_cA_c=(n-1)I$. The sum $\sum_\alpha\psi_\alpha\psi_\alpha^{\mathsf T}$ is basis-independent on each eigenspace, so any orthonormal basis of $\Lambda^2$ adapted to the $E_c$ gives the same total.
+- $\mathop{\mathrm{Ric}}$ is linear in the operator and sends $\psi\otimes\psi$ to $\psi\psi^{\mathsf T}$ in this normalisation (the identity case fixes the constant at $1$), so $\mathop{\mathrm{Ric}}(W)=\sum_c\lambda_cA_c$, which is $0$ at a Weyl $W$.
 - $A_c=\sum\psi\psi^{\mathsf T}\succeq0$, so $a_c\ge0$; evaluating the two identities at unit $x$ gives the two linear equations. The solution set is a line in $\mathbb R^3$ met with the orthant, a segment, nonempty since the true $(a_c)$ lies on it.
-- *Only $\operatorname{Ric}(W)=0$ is used.* Criticality ($W^2+W^\#=\theta W$) and unit norm play no role, so the lemma holds for every Weyl tensor with three eigenvalues. The statement could say so.
+- *Only $\mathop{\mathrm{Ric}}(W)=0$ is used.* Criticality ($W^2+W^\#=\theta W$) and unit norm play no role, so the lemma holds for every Weyl tensor with three eigenvalues. The statement could say so.
 
 ## 2. The star step and the ceiling: CONFIRMED
 
@@ -37,7 +37,7 @@ Brief: [2026-09-25-L245-gate2-brief.md](2026-09-25-L245-gate2-brief.md). Log: [a
 
 Built from the definitions: $S^5(r_1)\times S^7(r_2)$ with Einstein radii $r_1^2=4$, $r_2^2=6$, curvature operator diagonal in the $e_i\wedge e_j$ basis ($1/r_1^2$ on $\Lambda^2\mathbb R^5$, $1/r_2^2$ on $\Lambda^2\mathbb R^7$, $0$ mixed), Weyl part $R-\tfrac{s}{n(n-1)}\mathrm{Id}$.
 
-- Three eigenvalues with multiplicities $(35,21,10)$ (mixed, $\Lambda^2\mathbb R^7$, $\Lambda^2\mathbb R^5$), matching L244's record. $\operatorname{Ric}(W)=0$ to $4\cdot10^{-16}$, $\sum A_c=(n-1)I$ exactly, $\sum\lambda_cA_c=0$ to $4\cdot10^{-12}$.
+- Three eigenvalues with multiplicities $(35,21,10)$ (mixed, $\Lambda^2\mathbb R^7$, $\Lambda^2\mathbb R^5$), matching L244's record. $\mathop{\mathrm{Ric}}(W)=0$ to $4\cdot10^{-16}$, $\sum A_c=(n-1)I$ exactly, $\sum\lambda_cA_c=0$ to $4\cdot10^{-12}$.
 - $h=(7,6,4)$ from item 2's formulas, and the largest eigenvalues of $A_0,A_1,A_2$ are exactly $7,6,4$. **Every direction satisfies $a_c\le h_c$ and the ceiling is attained in all three classes**, by the stars $e_1\wedge\mathbb R^7\subseteq E_0$ ($\dim7$), $e_6\wedge\mathbb R^6\subseteq E_1$ ($\dim 6$) and $e_1\wedge\mathbb R^4\subseteq E_2$ ($\dim 4$). *So the star bound is sharp on the record's own witness, a check worth recording.*
 
 ## 5. Scope of "175 of 190": PLAUSIBLE
@@ -49,8 +49,8 @@ Built from the definitions: $S^5(r_1)\times S^7(r_2)$ with Einstein radii $r_1^2
 
 ## 6. L243_min: CONFIRMED
 
-- **Statement.** The left side is $\sum_{i\ne j}-\tfrac12\operatorname{tr}([X_i,X_j]^2)=\sum_{i\ne j}\lVert[X_i,X_j]\rVert^2=T$; `hnorm` ($\operatorname{tr}X_i^2=-2$) and `horth` are orthonormality in the record norm; $\sum X_i^{\mathsf T}X_i=\sum(-X_i^2)=P$; the right side is $(1-\tfrac1r)(4k^2+2\operatorname{tr}P^2)-4k(k-1)$ with $r=\min(k,n-1)$ taken in $\mathbb R$. This is L243's frame statement with $k\ge1$ (`hk`) and $n\ge2$.
-- **`total_eq_frameT`**: $-\tfrac12\operatorname{tr}[A,B]^2=\operatorname{tr}A^2B^2-\operatorname{tr}ABAB$ by cyclicity, and the diagonal of `frameT` vanishes, so the identification is right and needs no skewness.
+- **Statement.** The left side is $\sum_{i\ne j}-\tfrac12\mathop{\mathrm{tr}}([X_i,X_j]^2)=\sum_{i\ne j}\lVert[X_i,X_j]\rVert^2=T$; `hnorm` ($\mathop{\mathrm{tr}}X_i^2=-2$) and `horth` are orthonormality in the record norm; $\sum X_i^{\mathsf T}X_i=\sum(-X_i^2)=P$; the right side is $(1-\tfrac1r)(4k^2+2\mathop{\mathrm{tr}}P^2)-4k(k-1)$ with $r=\min(k,n-1)$ taken in $\mathbb R$. This is L243's frame statement with $k\ge1$ (`hk`) and $n\ge2$.
+- **`total_eq_frameT`**: $-\tfrac12\mathop{\mathrm{tr}}[A,B]^2=\mathop{\mathrm{tr}}A^2B^2-\mathop{\mathrm{tr}}ABAB$ by cyclicity, and the diagonal of `frameT` vanishes, so the identification is right and needs no skewness.
 - **`frameP_eq`**: `frameQ` $=-X_i^2=X_i^{\mathsf T}X_i$ for skew $X_i$. Right.
 - **The $r=k$ branch**: $(1-\tfrac1k)(4k^2+2t)-4k(k-1)=2(1-\tfrac1k)t$, which is `frame_bound`'s right side.
 - **Build**: `lake build` of GaussianRankStep and L245SymmetricIsotropy succeeds; `#print axioms` on `L243_min`, `no_large_star` and `n12_star_le5` gives `propext`, `Classical.choice`, `Quot.sound`.
@@ -63,7 +63,7 @@ Built from the definitions: $S^5(r_1)\times S^7(r_2)$ with Einstein radii $r_1^2
 
 ## Corrections to fold
 
-1. State that only $\operatorname{Ric}(W)=0$ is used, and give the closed forms of $h_0,h_1,h_2$ (item 2).
+1. State that only $\mathop{\mathrm{Ric}}(W)=0$ is used, and give the closed forms of $h_0,h_1,h_2$ (item 2).
 2. Record $S^5\times S^7$ as a check: $h=(7,6,4)$, attained by stars in all three classes (item 4).
 3. Reword the 175 sentence to separate the 62 dimension-trivial cases and commit the screen (item 5).
 4. Fix the Lean docstring's "quoted" statement.

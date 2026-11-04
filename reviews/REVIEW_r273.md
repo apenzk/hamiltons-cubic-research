@@ -8,9 +8,9 @@ Nothing below imports [scripts/rsharp_basis_free.py](../scripts/rsharp_basis_fre
 
 | # | Claim | Verdict |
 |---|---|---|
-| 1 | The half-percent table | **EVERY NUMBER CONFIRMED, AND UPGRADED TO CLOSED FORM.** All four rows reproduce to $10^{-16}$ by an independent route, and each entry has an exact closed form in $m=n/2$, derived here by hand: $\operatorname{tr}(M^3)=\frac1{m\sqrt{(m-1)(2m-1)}}$, $\langle M^\#,M\rangle=\frac{2m-3}{\sqrt{(m-1)(2m-1)}}$, $\lVert M^\#\rVert_F=\frac{\sqrt{mE}}{\sqrt{m(m-1)}\,(2m-1)}$ with $E=(2m-1)\big[m(2m-3)^2+m-1\big]$. $\theta_0(n)=\sqrt{2(n-1)(n-2)}/n$ is the right comparison and $\theta$ at that point **equals** it identically in $m$. One labelling slip: the $\cos\varphi$ sequence runs over $n=6\ldots16$, not $n=6\ldots20$ |
+| 1 | The half-percent table | **EVERY NUMBER CONFIRMED, AND UPGRADED TO CLOSED FORM.** All four rows reproduce to $10^{-16}$ by an independent route, and each entry has an exact closed form in $m=n/2$, derived here by hand: $\mathop{\mathrm{tr}}(M^3)=\frac1{m\sqrt{(m-1)(2m-1)}}$, $\langle M^\#,M\rangle=\frac{2m-3}{\sqrt{(m-1)(2m-1)}}$, $\lVert M^\#\rVert_F=\frac{\sqrt{mE}}{\sqrt{m(m-1)}\,(2m-1)}$ with $E=(2m-1)\big[m(2m-3)^2+m-1\big]$. $\theta_0(n)=\sqrt{2(n-1)(n-2)}/n$ is the right comparison and $\theta$ at that point **equals** it identically in $m$. One labelling slip: the $\cos\varphi$ sequence runs over $n=6\ldots16$, not $n=6\ldots20$ |
 | 2 | The concentration claim | *pending* |
-| 3 | Is the proposed inequality the right target | **CONFIRMED, IT IS THE CONJECTURE VERBATIM, WITH ZERO REDUCTION.** And the record's own escape hatch is closed by a theorem, not a table: the strengthened form $\operatorname{tr}(M^3)+\lVert M^\#\rVert_F\le\theta_0(n)$ fails at the balanced sphere product at **every even $n\ge4$**, with exact excess $\dfrac{m}{(2m-1)\big(u+\sqrt{u^2+m^2-m}\big)}>0$, $u=m(2m-3)$ |
+| 3 | Is the proposed inequality the right target | **CONFIRMED, IT IS THE CONJECTURE VERBATIM, WITH ZERO REDUCTION.** And the record's own escape hatch is closed by a theorem, not a table: the strengthened form $\mathop{\mathrm{tr}}(M^3)+\lVert M^\#\rVert_F\le\theta_0(n)$ fails at the balanced sphere product at **every even $n\ge4$**, with exact excess $\dfrac{m}{(2m-1)\big(u+\sqrt{u^2+m^2-m}\big)}>0$, $u=m(2m-3)$ |
 | 4 | The frontier package's reach | *pending* |
 | 5 | The fence posts | *pending* |
 | 6 | The validation ledger | *pending* |
@@ -37,19 +37,19 @@ $$(M^\#)_{\text{same}}=\frac{m(2m^2-4m+1)}{(2m-1)^2},\qquad (M^\#)_{\text{mixed}
 
 Normalising ($\#$ is quadratic, so $M^\#$ scales by $\lVert M\rVert^{-2}$):
 
-$$\operatorname{tr}(M^3)=\frac1{m\sqrt{(m-1)(2m-1)}},\qquad \langle M^\#,M\rangle=\frac{2m-3}{\sqrt{(m-1)(2m-1)}},\qquad \lVert M^\#\rVert_F=\frac{\sqrt{E}}{\sqrt{m(m-1)}\,(2m-1)},$$
+$$\mathop{\mathrm{tr}}(M^3)=\frac1{m\sqrt{(m-1)(2m-1)}},\qquad \langle M^\#,M\rangle=\frac{2m-3}{\sqrt{(m-1)(2m-1)}},\qquad \lVert M^\#\rVert_F=\frac{\sqrt{E}}{\sqrt{m(m-1)}\,(2m-1)},$$
 
 $$E=8m^4-28m^3+32m^2-12m+1=(2m-1)\big[m(2m-3)^2+m-1\big].$$
 
 ### $\theta=\theta_0$ there, identically in $m$
 
-$$\theta=\operatorname{tr}(M^3)+\langle M^\#,M\rangle=\frac{1+m(2m-3)}{m\sqrt{(m-1)(2m-1)}}=\frac{(m-1)(2m-1)}{m\sqrt{(m-1)(2m-1)}}=\frac{\sqrt{(m-1)(2m-1)}}{m},$$
+$$\theta=\mathop{\mathrm{tr}}(M^3)+\langle M^\#,M\rangle=\frac{1+m(2m-3)}{m\sqrt{(m-1)(2m-1)}}=\frac{(m-1)(2m-1)}{m\sqrt{(m-1)(2m-1)}}=\frac{\sqrt{(m-1)(2m-1)}}{m},$$
 
 and $\theta_0(2m)=\frac{\sqrt{2(2m-1)(2m-2)}}{2m}=\frac{\sqrt{(m-1)(2m-1)}}{m}$. **Equal identically**, so the comparison in the table is the right one and the answer to *"does $\theta$ at that point actually equal $\theta_0$"* is yes, as an identity in $m$ rather than as four decimal agreements.
 
 ### The table, rebuilt
 
-| $n$ | $\operatorname{tr}(M^3)$ | $\lVert M^\#\rVert_F$ | sum | $\theta$ | $\theta_0(n)$ | excess | $\lVert M^\#\rVert/\lvert\langle M^\#,M\rangle\rvert$ |
+| $n$ | $\mathop{\mathrm{tr}}(M^3)$ | $\lVert M^\#\rVert_F$ | sum | $\theta$ | $\theta_0(n)$ | excess | $\lVert M^\#\rVert/\lvert\langle M^\#,M\rangle\rvert$ |
 |---|---|---|---|---|---|---|---|
 | $6$ | $0.10541$ | $0.98319$ | $1.08860$ | $1.054093$ | $1.054093$ | $+3.2738\%$ | $1.036375$ |
 | $8$ | $0.05455$ | $1.10733$ | $1.16189$ | $1.145644$ | $1.145644$ | $+1.4180\%$ | $1.014889$ |
@@ -81,19 +81,19 @@ Evidence: definitional, plus the closed form of Claim 1.
 
 The record's *"exact statement to prove"* is
 
-$$\operatorname{tr}(M^3)+\lVert M^\#\rVert_F\cos\varphi\le\theta_0(n),\qquad \cos\varphi:=\frac{\langle M^\#,M\rangle}{\lVert M^\#\rVert_F\lVert M\rVert_F}.$$
+$$\mathop{\mathrm{tr}}(M^3)+\lVert M^\#\rVert_F\cos\varphi\le\theta_0(n),\qquad \cos\varphi:=\frac{\langle M^\#,M\rangle}{\lVert M^\#\rVert_F\lVert M\rVert_F}.$$
 
-With $\lVert M\rVert_F=1$ the second term is $\lVert M^\#\rVert_F\cdot\frac{\langle M^\#,M\rangle}{\lVert M^\#\rVert_F}=\langle M^\#,M\rangle$ **identically**, so the left side is $\operatorname{tr}(M^3)+\langle M^\#,M\rangle=\theta$ and the display reads $\theta\le\theta_0(n)$. That is Conjecture A with no symbol changed. **Nothing has been reduced**; $\theta$ has been renamed. The brief's suspicion is correct.
+With $\lVert M\rVert_F=1$ the second term is $\lVert M^\#\rVert_F\cdot\frac{\langle M^\#,M\rangle}{\lVert M^\#\rVert_F}=\langle M^\#,M\rangle$ **identically**, so the left side is $\mathop{\mathrm{tr}}(M^3)+\langle M^\#,M\rangle=\theta$ and the display reads $\theta\le\theta_0(n)$. That is Conjecture A with no symbol changed. **Nothing has been reduced**; $\theta$ has been renamed. The brief's suspicion is correct.
 
 ### The escape hatch is closed by a theorem
 
 The record concedes this in effect and pivots: *"the next step is an upper bound on $\lVert M^\#\rVert_F$ over unit Weyl tensors … with $\cos\varphi\le1$ it would give a closed statement"*, i.e. the genuinely stronger
 
-$$(\star)\qquad \operatorname{tr}(M^3)+\lVert M^\#\rVert_F\le\theta_0(n).$$
+$$(\star)\qquad \mathop{\mathrm{tr}}(M^3)+\lVert M^\#\rVert_F\le\theta_0(n).$$
 
 $(\star)$ is not merely *"false as stated"* at four tabulated dimensions. From Claim 1's closed forms, at the balanced sphere product
 
-$$\frac{\operatorname{tr}(M^3)+\lVert M^\#\rVert_F}{\theta_0(n)}-1 \;=\; \frac{1+\sqrt{m\big(m(2m-3)^2+m-1\big)}-(m-1)(2m-1)}{(m-1)(2m-1)} \;=\; \frac{m}{(2m-1)\Big(u+\sqrt{u^2+m^2-m}\Big)},\qquad u:=m(2m-3),$$
+$$\frac{\mathop{\mathrm{tr}}(M^3)+\lVert M^\#\rVert_F}{\theta_0(n)}-1 \;=\; \frac{1+\sqrt{m\big(m(2m-3)^2+m-1\big)}-(m-1)(2m-1)}{(m-1)(2m-1)} \;=\; \frac{m}{(2m-1)\Big(u+\sqrt{u^2+m^2-m}\Big)},\qquad u:=m(2m-3),$$
 
 which is **strictly positive for every $m\ge1$**, hence $(\star)$ is false at every even $n\ge4$. It is not a gap that shrinks to zero and closes at some $n$: it shrinks like $\tfrac1{2n^2}$ and never changes sign.
 

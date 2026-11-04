@@ -25,7 +25,7 @@ Quoted from the brief.
 
 - $\mathbb R^n$ with its standard inner product, and $\Lambda^2\mathbb R^n$ with $\langle\cdot,\cdot\rangle$ normalised so that the $\varphi_{ij}=e_i\wedge e_j$ for $i<j$ are orthonormal. $N:=\binom n2=\dim\Lambda^2\mathbb R^n$.
 - A **decomposable** $2$-form is $\omega=u\wedge v$. A unit decomposable $\omega$ determines a $2$-plane $P_\omega=\mathrm{span}(u,v)\subset\mathbb R^n$ and $\Pi_\omega$ is the orthogonal projection of $\mathbb R^n$ onto it.
-- For two unit decomposable forms write $S_{\alpha\beta}:=\operatorname{tr}(\Pi_\alpha\Pi_\beta)$. **Given:** $S_{\alpha\beta}=\lVert[\omega_\alpha,\omega_\beta]\rVert^2$ under the identification $\Lambda^2\mathbb R^n\cong\mathfrak{so}(n)$, $S_{\alpha\beta}\in[0,1]$ for distinct planes, $S_{\alpha\beta}=1$ exactly when the two planes share a line, and $S_{\alpha\beta}=0$ exactly when they are orthogonal.
+- For two unit decomposable forms write $S_{\alpha\beta}:=\mathop{\mathrm{tr}}(\Pi_\alpha\Pi_\beta)$. **Given:** $S_{\alpha\beta}=\lVert[\omega_\alpha,\omega_\beta]\rVert^2$ under the identification $\Lambda^2\mathbb R^n\cong\mathfrak{so}(n)$, $S_{\alpha\beta}\in[0,1]$ for distinct planes, $S_{\alpha\beta}=1$ exactly when the two planes share a line, and $S_{\alpha\beta}=0$ exactly when they are orthogonal.
 - A family $\{\omega_\alpha\}_{\alpha=1}^M$ of unit decomposable forms is **$\Lambda^2$-orthonormal** when $\langle\omega_\alpha,\omega_\beta\rangle=\delta_{\alpha\beta}$.
 
 ## Hypothesis inventory
@@ -34,7 +34,7 @@ Every hypothesis of every claim and of everything imported, checked against the 
 
 | Hypothesis | Where it enters | Object it applies to | Status | Used? |
 |---|---|---|---|---|
-| $\Pi_\alpha$ is a rank-$2$ orthogonal projection | (G1), via $\operatorname{tr}\Pi_\alpha^2=\operatorname{tr}\Pi_\alpha=2$ | every family here | holds wherever the $\omega_\alpha$ are unit decomposable | **Yes, load-bearing.** This is the whole of $c=2$ |
+| $\Pi_\alpha$ is a rank-$2$ orthogonal projection | (G1), via $\mathop{\mathrm{tr}}\Pi_\alpha^2=\mathop{\mathrm{tr}}\Pi_\alpha=2$ | every family here | holds wherever the $\omega_\alpha$ are unit decomposable | **Yes, load-bearing.** This is the whole of $c=2$ |
 | $\sum_\alpha\Pi_\alpha=\kappa\,\mathrm{Id}_n$ (isotropy, tightness) | (G1) and (G3)(i) | holds for the coordinate family ($\kappa=n-1$), the icosahedral family ($\kappa=2$), the $n=4$ family of Section 6 ($\kappa=3$). **Fails** for six planes through a common line in $\mathbb R^4$ | automatic at $M=\binom n2$ (Section 5), a genuine restriction otherwise | **Yes for (G1). No for the simplex bound itself**, which is the asymmetry C2 misses |
 | $\kappa=2M/n$ | (G2), the trace of the previous row | wherever isotropy holds | derived, not independent | Yes |
 | $\Lambda^2$-orthonormality | stated in (G1) | holds for the coordinate family and for Section 6's family, **fails** for the icosahedral family with inner products $\frac15$ | a genuine restriction | **Inert in (G1)'s identity.** The two-line derivation never touches $\langle\omega_\alpha,\omega_\beta\rangle$. It is used only to force the planes distinct, to give $S_{\alpha\beta}\le1$, and to give $M\le\binom n2$ |
@@ -42,7 +42,7 @@ Every hypothesis of every claim and of everything imported, checked against the 
 | $c=2$ and $d=n$ | the specialisation of (G3) | the record's setting | holds by construction | Yes |
 | $\mathbb F=\mathbb R$ | (G3) is stated over $\mathbb F$, so $\mathbb R$ is admissible | all families here. Item 7 starts over $\mathbb C$ with $d=3$, $c=1$ and realifies to $d=6$, $c=2$ | holds under both readings, with matching numbers (Section 7) | Yes |
 | $M\ge2$ | the denominator $M-1$ of (G3) | every use | holds in the record's uses | Yes |
-| $2M\ge n$ | forced by isotropy, since $\operatorname{rank}\sum_\alpha\Pi_\alpha\le2M$ | every isotropic family | holds, and shows (G1)'s class is **empty** when $2M<n$ | Yes, in Section 8 |
+| $2M\ge n$ | forced by isotropy, since $\mathop{\mathrm{rank}}\sum_\alpha\Pi_\alpha\le2M$ | every isotropic family | holds, and shows (G1)'s class is **empty** when $2M<n$ | Yes, in Section 8 |
 | equi-chordality, all $S_{\alpha\beta}$ equal | (G3)(ii), required for equality | holds for Section 6's family and the icosahedral family, **fails** for the coordinate family at $n\ge4$ | a genuine extra restriction beyond isotropy | **Omitted by C3**, which is exactly why C3 fails |
 | equi-isoclinic, $\Pi_\beta\Pi_\alpha\Pi_\beta=\sigma^2\Pi_\beta$ | (G3)'s addendum and item 7 | holds for the icosahedral family at $\sigma^2=\frac15$ | strictly stronger than equi-chordal at $c=2$ | Yes, and incompatible with $\Lambda^2$-orthonormality unless $\sigma^2=0$ (Section 3) |
 | tightness, for the **values** $\alpha=\frac{Mc}d$ and $\sigma^2=\frac{Mc-d}{d(M-1)}$ | Theorem 5.2 of the source, suppressed in (G3)'s addendum | supplied independently in item 7 | needed, see C10 | Yes, and the brief's given is loose about it |
@@ -54,19 +54,19 @@ Put $c=2$ and $d=n$ in (G3). The right-hand side is
 
 $$\frac{c(Mc-d)}{d(M-1)}=\frac{2(2M-n)}{n(M-1)}.$$
 
-By (G4) the left-hand side is $\max_{\alpha\ne\beta}\operatorname{tr}(\Pi_\alpha\Pi_\beta)=\max_{\alpha\ne\beta}S_{\alpha\beta}$, so the specialisation is exactly $\max_{\alpha\ne\beta}S_{\alpha\beta}\ge\frac{2(2M-n)}{n(M-1)}$ as the record states.
+By (G4) the left-hand side is $\max_{\alpha\ne\beta}\mathop{\mathrm{tr}}(\Pi_\alpha\Pi_\beta)=\max_{\alpha\ne\beta}S_{\alpha\beta}$, so the specialisation is exactly $\max_{\alpha\ne\beta}S_{\alpha\beta}\ge\frac{2(2M-n)}{n(M-1)}$ as the record states.
 
 Now (G1) with (G2). For a fixed $\alpha$,
 
-$$\sum_{\beta\ne\alpha}S_{\alpha\beta}=\operatorname{tr}\!\Big(\Pi_\alpha\sum_\beta\Pi_\beta\Big)-\operatorname{tr}(\Pi_\alpha^2)=\kappa\operatorname{tr}(\Pi_\alpha)-\operatorname{tr}(\Pi_\alpha)=2(\kappa-1),$$
+$$\sum_{\beta\ne\alpha}S_{\alpha\beta}=\mathop{\mathrm{tr}}\!\Big(\Pi_\alpha\sum_\beta\Pi_\beta\Big)-\mathop{\mathrm{tr}}(\Pi_\alpha^2)=\kappa\mathop{\mathrm{tr}}(\Pi_\alpha)-\mathop{\mathrm{tr}}(\Pi_\alpha)=2(\kappa-1),$$
 
-using $\operatorname{tr}(\Pi_\alpha^2)=\operatorname{tr}(\Pi_\alpha)=2$ for a rank-$2$ orthogonal projection. With $\kappa=2M/n$ from (G2) this is $2\big(\tfrac{2M}n-1\big)=\frac{2(2M-n)}n$, and the mean over the $M-1$ partners of $\alpha$ is
+using $\mathop{\mathrm{tr}}(\Pi_\alpha^2)=\mathop{\mathrm{tr}}(\Pi_\alpha)=2$ for a rank-$2$ orthogonal projection. With $\kappa=2M/n$ from (G2) this is $2\big(\tfrac{2M}n-1\big)=\frac{2(2M-n)}n$, and the mean over the $M-1$ partners of $\alpha$ is
 
 $$\frac1{M-1}\cdot\frac{2(2M-n)}{n}=\frac{2(2M-n)}{n(M-1)}.$$
 
 **The two expressions are equal, and the equality is an identity in $M$ and $n$**, valid for all $M\ge2$ and $n\ge2$ with no numerical coincidence anywhere. It holds because both sides are the same rational function, not because they agree at particular values. C1 stands.
 
-Two remarks that matter later. First, the derivation of (G1) uses only that the $\Pi_\alpha$ are rank-$2$ orthogonal projections summing to $\kappa\,\mathrm{Id}$, so $\Lambda^2$-orthonormality is inert in it, and (G1) applies verbatim to the icosahedral family of Section 7, which is not $\Lambda^2$-orthonormal. Second, a consistency check on (G1) and (G2) together: summing over $\alpha$ gives $\sum_{\alpha,\beta}S_{\alpha\beta}=2M(\kappa-1)+2M=2M\kappa$, while directly $\sum_{\alpha,\beta}S_{\alpha\beta}=\operatorname{tr}\big((\sum_\alpha\Pi_\alpha)^2\big)=\kappa^2n$. The two agree exactly when $2M=\kappa n$, which is (G2). The system is consistent and carries no information beyond (G1) and (G2).
+Two remarks that matter later. First, the derivation of (G1) uses only that the $\Pi_\alpha$ are rank-$2$ orthogonal projections summing to $\kappa\,\mathrm{Id}$, so $\Lambda^2$-orthonormality is inert in it, and (G1) applies verbatim to the icosahedral family of Section 7, which is not $\Lambda^2$-orthonormal. Second, a consistency check on (G1) and (G2) together: summing over $\alpha$ gives $\sum_{\alpha,\beta}S_{\alpha\beta}=2M(\kappa-1)+2M=2M\kappa$, while directly $\sum_{\alpha,\beta}S_{\alpha\beta}=\mathop{\mathrm{tr}}\big((\sum_\alpha\Pi_\alpha)^2\big)=\kappa^2n$. The two agree exactly when $2M=\kappa n$, which is (G2). The system is consistent and carries no information beyond (G1) and (G2).
 
 ## 2. Quantifiers: which side says more
 
@@ -84,7 +84,7 @@ So the answer to the brief's sub-question is: the per-$\alpha$ bound is **not** 
 
 ## 3. The equality cases are not the same condition
 
-(G3)'s equality requires (i) isotropy **and** (ii) all off-diagonal $\operatorname{tr}(P_jP_{j'})$ equal. (G1) requires only (i). These are different conditions, and (i) does not imply (ii) even inside the record's class.
+(G3)'s equality requires (i) isotropy **and** (ii) all off-diagonal $\mathop{\mathrm{tr}}(P_jP_{j'})$ equal. (G1) requires only (i). These are different conditions, and (i) does not imply (ii) even inside the record's class.
 
 **Witness, closed form.** The coordinate family $\{e_i\wedge e_j\}_{i<j}$ at any $n\ge4$. It is $\Lambda^2$-orthonormal, and $\sum_{i<j}\Pi_{ij}=(n-1)\mathrm{Id}_n$ because each index $i$ occurs in exactly $n-1$ pairs, so isotropy holds with $\kappa=n-1$. But $S_{(ij),(kl)}=\lvert\{i,j\}\cap\{k,l\}\rvert\in\{0,1\}$, and at $n\ge4$ both values occur, so (ii) fails and the inequality is strict: $\max S=1$ against $B=\frac4{n+1}<1$.
 
@@ -102,7 +102,7 @@ The record's reasoning is correct as far as it goes. (G3) bounds $\max_{\alpha\n
 
 **Attack 2, $\Lambda^2$-orthonormality as the missing hypothesis.** It does supply an upper bound, $M\le\dim\Lambda^2\mathbb R^n=\binom n2$, but from the dimension count alone, with no help from (G3) and no reference to overlaps. The combination produces nothing the dimension count does not.
 
-**Attack 3, isotropy and a rank count.** $\operatorname{rank}\sum_\alpha\Pi_\alpha\le2M$, and isotropy needs rank $n$, so $2M\ge n$. That is a lower bound.
+**Attack 3, isotropy and a rank count.** $\mathop{\mathrm{rank}}\sum_\alpha\Pi_\alpha\le2M$, and isotropy needs rank $n$, so $2M\ge n$. That is a lower bound.
 
 **Attack 4, the min side of (G1), which is the only upper-bound direction available.** Write $f(M):=\frac{2(2M-n)}{n(M-1)}$. Then $\min_{\beta\ne\alpha}S_{\alpha\beta}\le f(M)$ for every $\alpha$. Suppose the route needed every overlap to be at least some $t>0$. Then $t\le f(M)$. Now
 
@@ -126,7 +126,7 @@ $$\frac{c(Mc-d)}{d(M-1)}=\frac{2n(n-2)}{n\cdot\frac{(n-2)(n+1)}2}=\frac{4(n-2)}{
 
 **Verified, with the cancellation $n^2-n-2=(n-2)(n+1)$ carrying it.** Note the cancellation is legitimate for $n>2$ and that $n=2$ is the degenerate $M=1$ case of Section 8.
 
-**Does $M=\binom n2$ with $\Lambda^2$-orthonormality force $\kappa=n-1$? Yes, and it forces isotropy itself, which is a strengthening of (G1) rather than a consistency check.** Under $\Lambda^2\mathbb R^n\cong\mathfrak{so}(n)$ send $\omega=u\wedge v$ to $A_\omega=uv^{\mathsf T}-vu^{\mathsf T}$, with $\langle A,B\rangle=\frac12\operatorname{tr}(A^{\mathsf T}B)$, which matches the brief's normalisation since $\frac12\operatorname{tr}(A_{\varphi_{ij}}^{\mathsf T}A_{\varphi_{ij}})=1$. For $u,v$ orthonormal, $A_\omega^{\mathsf T}A_\omega=-A_\omega^2=uu^{\mathsf T}+vv^{\mathsf T}=\Pi_\omega$. The map $Q:\omega\mapsto A_\omega^{\mathsf T}A_\omega$ is a quadratic form on $\Lambda^2\mathbb R^n$ with values in the symmetric matrices, so $\sum_\alpha Q(\omega_\alpha)$ over an orthonormal **basis** equals the trace of $Q$'s polarisation with respect to the inner product and is therefore independent of which orthonormal basis is used. Evaluating on the coordinate basis gives $(n-1)\mathrm{Id}_n$. Hence **every $\Lambda^2$-orthonormal family of $\binom n2$ unit decomposables satisfies $\sum_\alpha\Pi_\alpha=(n-1)\mathrm{Id}_n$ automatically**, and $\kappa=n-1=\frac{2M}n$ agrees with (G2). Consistent, and the consistency is a theorem rather than an assumption.
+**Does $M=\binom n2$ with $\Lambda^2$-orthonormality force $\kappa=n-1$? Yes, and it forces isotropy itself, which is a strengthening of (G1) rather than a consistency check.** Under $\Lambda^2\mathbb R^n\cong\mathfrak{so}(n)$ send $\omega=u\wedge v$ to $A_\omega=uv^{\mathsf T}-vu^{\mathsf T}$, with $\langle A,B\rangle=\frac12\mathop{\mathrm{tr}}(A^{\mathsf T}B)$, which matches the brief's normalisation since $\frac12\mathop{\mathrm{tr}}(A_{\varphi_{ij}}^{\mathsf T}A_{\varphi_{ij}})=1$. For $u,v$ orthonormal, $A_\omega^{\mathsf T}A_\omega=-A_\omega^2=uu^{\mathsf T}+vv^{\mathsf T}=\Pi_\omega$. The map $Q:\omega\mapsto A_\omega^{\mathsf T}A_\omega$ is a quadratic form on $\Lambda^2\mathbb R^n$ with values in the symmetric matrices, so $\sum_\alpha Q(\omega_\alpha)$ over an orthonormal **basis** equals the trace of $Q$'s polarisation with respect to the inner product and is therefore independent of which orthonormal basis is used. Evaluating on the coordinate basis gives $(n-1)\mathrm{Id}_n$. Hence **every $\Lambda^2$-orthonormal family of $\binom n2$ unit decomposables satisfies $\sum_\alpha\Pi_\alpha=(n-1)\mathrm{Id}_n$ automatically**, and $\kappa=n-1=\frac{2M}n$ agrees with (G2). Consistent, and the consistency is a theorem rather than an assumption.
 
 The same invariance gives a second derivation of (G1) at a full basis that never mentions isotropy: for fixed $\alpha$, $\omega\mapsto\lVert[\omega_\alpha,\omega]\rVert^2$ is a quadratic form, so $\sum_\beta\lVert[\omega_\alpha,\omega_\beta]\rVert^2$ is basis-independent and equals its coordinate-basis value $2(n-2)$, which with $S_{\alpha\alpha}=0$ and the brief's given $S_{\alpha\beta}=\lVert[\omega_\alpha,\omega_\beta]\rVert^2$ is exactly $\sum_{\beta\ne\alpha}S_{\alpha\beta}=2(\kappa-1)$ at $\kappa=n-1$.
 
@@ -168,14 +168,14 @@ $$\sigma^2=\frac{Mc-d}{d(M-1)}=\frac{12-6}{6\cdot5}=\frac6{30}=\frac15,\qquad\al
 
 **$\Lambda^2$-orthonormality fails, with an exact value.** By the principal-angle formula, $\langle\omega_\alpha,\omega_\beta\rangle=\pm\cos\theta_1\cos\theta_2=\pm\frac15$, and a direct computation on the real basis $(v,iv)$ of a complex line gives the determinant of the cross-Gramian as $\lvert\langle v_\alpha,v_\beta\rangle\rvert^2=\frac15$ with a consistent sign, so the $\Lambda^2$ Gram matrix of the family is $\frac45I_6+\frac15J_6$, positive definite and far from $I_6$. **Confirmed, and the failure is the one Section 3 predicts**: a $\Lambda^2$-orthonormal family cannot be equi-isoclinic with $\sigma^2>0$.
 
-A remark on the given rather than the record. (G3)'s addendum, that an equi-isoclinic family is "necessarily equi-chordal, with $\alpha=\frac{Mc}d$ and $\sigma^2=\frac{Mc-d}{d(M-1)}$", overstates its source. Theorem 5.2 lists tightness and equi-isoclinity as two separate conditions and says the two values are forced only when both hold. Equi-isoclinity alone forces equi-chordality, since $\operatorname{tr}(P_jP_{j'})=c\sigma^2$ is then constant, and it does not force the values. Witness: three coplanar lines at $60^\circ$ in $\mathbb R^3$ are equi-isoclinic with $\sigma^2=\frac14$, while $\frac{Mc-d}{d(M-1)}=\frac{3-3}{3\cdot2}=0$ and $\sum_jP_j$ is $\frac32$ times the projection onto a plane rather than a multiple of $I_3$. Item 7's configuration supplies its own tightness, so the check above is unaffected, but a later use of the addendum without checking tightness would be unsound.
+A remark on the given rather than the record. (G3)'s addendum, that an equi-isoclinic family is "necessarily equi-chordal, with $\alpha=\frac{Mc}d$ and $\sigma^2=\frac{Mc-d}{d(M-1)}$", overstates its source. Theorem 5.2 lists tightness and equi-isoclinity as two separate conditions and says the two values are forced only when both hold. Equi-isoclinity alone forces equi-chordality, since $\mathop{\mathrm{tr}}(P_jP_{j'})=c\sigma^2$ is then constant, and it does not force the values. Witness: three coplanar lines at $60^\circ$ in $\mathbb R^3$ are equi-isoclinic with $\sigma^2=\frac14$, while $\frac{Mc-d}{d(M-1)}=\frac{3-3}{3\cdot2}=0$ and $\sum_jP_j$ is $\frac32$ times the projection onto a plane rather than a multiple of $I_3$. Item 7's configuration supplies its own tightness, so the check above is unaffected, but a later use of the addendum without checking tightness would be unsound.
 
 ## 8. Boundary and degenerate cases
 
 | Case | Simplex bound | (G1) and the record's use |
 |---|---|---|
 | $M=1$ | undefined: the denominator $M-1$ vanishes and $\max_{j\ne j'}$ is over the empty set | (G1) reads $0=2(\kappa-1)$, so $\kappa=1$, and (G2) then forces $n=2$, a single plane filling $\mathbb R^2$. Consistent, and carrying no content |
-| $2M<n$, that is $Mc-d<0$ | strictly negative, hence vacuous against $S\ge0$ and unattainable | (G1)'s class is **empty**: $\operatorname{rank}\sum_\alpha\Pi_\alpha\le2M<n$ contradicts $\kappa\,\mathrm{Id}_n$. So no equi-chordal tight fusion frame exists in this range at all |
+| $2M<n$, that is $Mc-d<0$ | strictly negative, hence vacuous against $S\ge0$ and unattainable | (G1)'s class is **empty**: $\mathop{\mathrm{rank}}\sum_\alpha\Pi_\alpha\le2M<n$ contradicts $\kappa\,\mathrm{Id}_n$. So no equi-chordal tight fusion frame exists in this range at all |
 | $2M=n$ | bound is $0$ | attained exactly by $M$ mutually orthogonal planes, $\kappa=1$, every $S_{\alpha\beta}=0$, equi-isoclinic with $\sigma^2=0$. The one equality case available to a $\Lambda^2$-orthonormal family that is also equi-isoclinic |
 | $n=4$ | $\frac{2(2M-4)}{4(M-1)}=\frac{M-2}{M-1}<1$ for every $M$, so vacuous against $S\le1$ throughout | the record's "$n>4$" excludes this case unnecessarily, see C7. At $M=6$ the bound is $\frac45$ and is attained, see Section 6 |
 | odd $n$ | nothing degenerates. $\kappa=\frac{2M}n$ is rational and no integrality is used anywhere | at $M=\binom n2$, $\kappa=n-1$ is an integer for every $n$. At $n=3$, $M=3$ the bound equals $1$ exactly and is attained by the coordinate family |
@@ -189,7 +189,7 @@ A remark on the given rather than the record. (G3)'s addendum, that an equi-isoc
 | A family where the simplex bound has content and isotropy fails, breaking "the two are one statement" | constructed directly, six planes through a common line in $\mathbb R^4$ | **Found** (Section 2). C2 falls |
 | An isotropic family with strict inequality, breaking "equality is exactly isotropy" | evaluated the coordinate family, the record's own example | **Found** at every $n\ge4$ (Section 3). C3 falls |
 | An equi-chordal $\Lambda^2$-orthonormal decomposable family with $0<B<1$, breaking the appraisal that $\frac4{n+1}$ is unreachably low | derived Lemmas A and B on the $\Lambda^\pm$ splitting, then built the family from the icosahedral Gram matrix and its Seidel switching | **Found and exact** at $n=4$, $M=6$, all overlaps $\frac45$ (Section 6). The appraisal in C8 falls, the arithmetic stands |
-| An isotropic family of rank-$2$ projections violating (G1) | inspected the derivation, which uses only $\operatorname{tr}\Pi_\alpha^2=\operatorname{tr}\Pi_\alpha=2$ and linearity | **Impossible.** (G1) is unassailable, and it does not need $\Lambda^2$-orthonormality |
+| An isotropic family of rank-$2$ projections violating (G1) | inspected the derivation, which uses only $\mathop{\mathrm{tr}}\Pi_\alpha^2=\mathop{\mathrm{tr}}\Pi_\alpha=2$ and linearity | **Impossible.** (G1) is unassailable, and it does not need $\Lambda^2$-orthonormality |
 | An algebraic route from (G3) plus $S\le1$ plus $\Lambda^2$-orthonormality to an upper bound on $M$ | four attacks in Section 4, including the monotonicity of $f$ | **None exists.** Every upper-bound consequence bounds a minimum, and $f$ increasing turns each into a lower bound on $M$ |
 | A definition of the record's Ricci-flatness condition against which to test C4 | the brief carries none, and reading the record is outside this brief | **Not reached.** C4 is recorded as HYPOTHESIS-DEBT, with the warning that isotropy is automatic at a full basis |
 

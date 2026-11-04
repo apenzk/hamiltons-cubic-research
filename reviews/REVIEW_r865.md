@@ -6,14 +6,14 @@
 
 | # | Claim, as the record states it | Verdict |
 |---|---|---|
-| 1 | $\theta=\operatorname{tr}(W^3)+\tfrac12T(\lambda,\lambda,\lambda)$, with the factor $\tfrac12$ | **CORRECT** |
+| 1 | $\theta=\mathop{\mathrm{tr}}(W^3)+\tfrac12T(\lambda,\lambda,\lambda)$, with the factor $\tfrac12$ | **CORRECT** |
 | 2 | $\sum_j t_j=2N(n-2)$ | **CORRECT** |
 | 3 | $\sum_j j\,t_j=6(n-2)a$ | **CORRECT** |
 | 4 | The coefficients are positive at $j=1,3$ and negative at $j=0,2$ | **CORRECT** |
 | 5 | "The coefficients alternate in sign, **so** the optimum puts all mass on $j\in\{1,3\}$" | **NON SEQUITUR AS ARGUED, TRUE ONLY FOR $s\ge N/3$** |
 | 6 | "feasible exactly when $N/3\le s\le N$" | **TRUE OF THE VERTEX, AND READ AS THOUGH IT WERE A CONSTRAINT ON $s$** |
 | 7 | The closed form $[(N-2s)+(n-2)(N-s)(4s-N)/(2s)]/\sqrt{sN(N-s)}$ | **CORRECT** |
-| 8 | $\operatorname{tr}(W^3)=(N-2s)/\sqrt{sN(N-s)}$ | **CORRECT** |
+| 8 | $\mathop{\mathrm{tr}}(W^3)=(N-2s)/\sqrt{sN(N-s)}$ | **CORRECT** |
 | 9 | Balanced product: $t_3=240$, $t_1=1080$, $t_0=t_2=0$, and these are the vertex | **CORRECT** |
 | 10 | $330/\sqrt{71280}=\theta_0(12)$ and $6/\sqrt{48}=\theta_0(4)$ | **CORRECT AND EXACT** |
 | 11 | "it returns $\theta_0(n)$ exactly at the balanced product" | **CORRECT, AND I EXTEND IT TO EVERY $n=2p$** |
@@ -37,7 +37,7 @@ Every algebraic step the block writes down is correct and the two exact checks a
 
 ## Conventions, quoted from the brief
 
-- $\Lambda^2\mathbb R^n$ is realised as skew matrices. $\varphi_{ab}=E_{ba}-E_{ab}$ and it is a UNIT bivector. The inner product is $\langle X,Y\rangle=\tfrac12\operatorname{tr}(X^{\mathsf T}Y)$.
+- $\Lambda^2\mathbb R^n$ is realised as skew matrices. $\varphi_{ab}=E_{ba}-E_{ab}$ and it is a UNIT bivector. The inner product is $\langle X,Y\rangle=\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$.
 - $u\wedge v=vu^{\mathsf T}-uv^{\mathsf T}$. At orthonormal $u,v$ this is a unit bivector and $(u\wedge v)(u\wedge v)^{\mathsf T}=uu^{\mathsf T}+vv^{\mathsf T}=\Pi_P$, the orthogonal projection onto $P=\mathrm{span}\{u,v\}$.
 - $\omega$ is decomposable when $\omega=u\wedge v$, equivalently $\omega\wedge\omega=0$. The record's wedge is TWICE the Pfaffian.
 - $\mathcal W_n$ is the space of algebraic Weyl tensors: symmetric operators on $\Lambda^2\mathbb R^n$, first Bianchi, Ricci-flat, trace-free. $P(W)=\langle W,W^2+W^\#\rangle$, $\theta=P(W)/\lVert W\rVert^3$, and criticality on the unit sphere is $Q(W)=W^2+W^\#=\theta W$.
@@ -64,7 +64,7 @@ What the bound does **not** consume, and this is the point of section 10: decomp
 
 ## 1. The objective, and the factor $\tfrac12$
 
-At unit norm $\theta=P(W)=\langle W,W^2\rangle+\langle W,W^\#\rangle$. Given 13 fixes the operator inner product as the plain trace form, so $\langle W,W^2\rangle=\operatorname{tr}(W^3)=\sum_\alpha\lambda_\alpha^3$ in an eigenbasis, and $\langle W,W^\#\rangle=\sum_k\lambda_k(W^\#)_{kk}$ because $W$ is diagonal there. Given 14's diagonal formula then gives
+At unit norm $\theta=P(W)=\langle W,W^2\rangle+\langle W,W^\#\rangle$. Given 13 fixes the operator inner product as the plain trace form, so $\langle W,W^2\rangle=\mathop{\mathrm{tr}}(W^3)=\sum_\alpha\lambda_\alpha^3$ in an eigenbasis, and $\langle W,W^\#\rangle=\sum_k\lambda_k(W^\#)_{kk}$ because $W$ is diagonal there. Given 14's diagonal formula then gives
 
 $$\langle W,W^\#\rangle=\sum_k\lambda_k\cdot\tfrac12\sum_{\beta\gamma}\lambda_\beta\lambda_\gamma T_{k\beta\gamma}=\tfrac12 T(\lambda,\lambda,\lambda).$$
 
@@ -72,7 +72,7 @@ So $\theta=\sum_\alpha\lambda_\alpha^3+\tfrac12T(\lambda,\lambda,\lambda)$, exac
 
 Two independent pins of the $\tfrac12$, since item 1 asks for one that does not lean on the block.
 
-**First pin, from relation (C).** Contract given 12's relation (C) with $\lambda_k$: $\sum_k\lambda_k\sum_{\beta\gamma}\lambda_\beta\lambda_\gamma T_{k\beta\gamma}=\sum_k2\lambda_k^2(\theta-\lambda_k)$, that is $T(\lambda,\lambda,\lambda)=2\theta\lVert W\rVert^2-2\operatorname{tr}(W^3)$, which at unit norm reads $\operatorname{tr}(W^3)+\tfrac12T(\lambda,\lambda,\lambda)=\theta$. Any constant other than $\tfrac12$ contradicts (C). This pin holds at critical points, which is where (C) lives.
+**First pin, from relation (C).** Contract given 12's relation (C) with $\lambda_k$: $\sum_k\lambda_k\sum_{\beta\gamma}\lambda_\beta\lambda_\gamma T_{k\beta\gamma}=\sum_k2\lambda_k^2(\theta-\lambda_k)$, that is $T(\lambda,\lambda,\lambda)=2\theta\lVert W\rVert^2-2\mathop{\mathrm{tr}}(W^3)$, which at unit norm reads $\mathop{\mathrm{tr}}(W^3)+\tfrac12T(\lambda,\lambda,\lambda)=\theta$. Any constant other than $\tfrac12$ contradicts (C). This pin holds at critical points, which is where (C) lives.
 
 **Second pin, from the value at the balanced product, and it is the sharper of the two.** Section 7 shows the vertex value at $n=2p$, $s=2\binom p2$ equals $\theta_0(2p)$ **identically in $p$**. Replace $\tfrac12$ by $c$ and the vertex value at $n=12$, $s=30$ becomes $(6+648c)/\sqrt{71280}$, which equals $\theta_0(12)=330/\sqrt{71280}$ only at $c=\tfrac12$. That one datum already pins it, and the identity in $p$ pins it at every even $n$ at once.
 
@@ -126,9 +126,9 @@ $$t_1c_1+t_3c_3=(n-2)\left[3p\cdot ps^2+(2s-p)p^3\right]=(n-2)p^2\left[3s^2+2sp-
 
 using $3s-p=4s-N$ and $s+p=N$. Dividing by $2sN p$ leaves $(n-2)(N-s)(4s-N)/(2s)$, and the remaining $(sNp)^{-1/2}$ from $k^3=(sNp)^{-3/2}$ is the stated denominator. **CORRECT**, and this is precisely the identity the Lean file types.
 
-$\operatorname{tr}(W^3)$: the pinning $\mu=kp$, $\nu=-ks$ satisfies $s\mu+p\nu=0$, and $\lVert W\rVert^2=k^2(sp^2+ps^2)=k^2spN=1$ gives $k=(sNp)^{-1/2}$, matching given 18 and the block. Then
+$\mathop{\mathrm{tr}}(W^3)$: the pinning $\mu=kp$, $\nu=-ks$ satisfies $s\mu+p\nu=0$, and $\lVert W\rVert^2=k^2(sp^2+ps^2)=k^2spN=1$ gives $k=(sNp)^{-1/2}$, matching given 18 and the block. Then
 
-$$\operatorname{tr}(W^3)=k^3(sp^3-ps^3)=k^3sp(p^2-s^2)=k^3spN(N-2s)=\frac{N-2s}{\sqrt{sN(N-s)}}.$$
+$$\mathop{\mathrm{tr}}(W^3)=k^3(sp^3-ps^3)=k^3sp(p^2-s^2)=k^3spN(N-2s)=\frac{N-2s}{\sqrt{sN(N-s)}}.$$
 
 **CORRECT.**
 
@@ -179,7 +179,7 @@ So the maximum over the vertex's range is at $s=2$ and equals $\theta_0(4)$, mat
 
 $$\boxed{\ \Theta(A)=\frac{s(n-1)}{N}\mathrm{Id}=\frac{2s}{n}\mathrm{Id}_n\ }$$
 
-whose trace $2s=2\dim A$ agrees with given 1. On the decomposable locus $\Theta(A)=\sum_{i\in A}\Pi_i$ is a sum of $s$ rank-two projections, so $\operatorname{rank}\Theta(A)\le2s$, while $\frac{2s}{n}\mathrm{Id}_n$ has rank $n$. Hence
+whose trace $2s=2\dim A$ agrees with given 1. On the decomposable locus $\Theta(A)=\sum_{i\in A}\Pi_i$ is a sum of $s$ rank-two projections, so $\mathop{\mathrm{rank}}\Theta(A)\le2s$, while $\frac{2s}{n}\mathrm{Id}_n$ has rank $n$. Hence
 
 $$\frac n2\le s\le N-\frac n2,$$
 
@@ -193,7 +193,7 @@ $s=31$, $n=12$: $N-2s=4$ and $10\cdot35\cdot58/62=10150/31$, so the numerator is
 
 **a coordinate configuration carrying a two-valued Ricci-flat weighting has $A$ regular of degree $2s/n$, hence $n\mid 2s$.**
 
-At $n=12$ that forces $6\mid s$, and $2\cdot31/12=31/6$ is not an integer, so $s=31$ is impossible. This is the integrality condition, and by given 9 (L201) the coordinate configurations are exactly those whose pairwise traces are integral, so any $s=31$ configuration must carry some $\operatorname{tr}(\Pi_\alpha\Pi_\beta)\in(0,1)$. Non-coordinate configurations are not excluded by this alone, and they are not vacuous: $\Theta(\Lambda^+)=\tfrac32\mathrm{Id}_4$ at $n=4$ shows $2s/n$ need not be an integer in general, so the obstruction is genuinely restricted to the coordinate case rather than universal.
+At $n=12$ that forces $6\mid s$, and $2\cdot31/12=31/6$ is not an integer, so $s=31$ is impossible. This is the integrality condition, and by given 9 (L201) the coordinate configurations are exactly those whose pairwise traces are integral, so any $s=31$ configuration must carry some $\mathop{\mathrm{tr}}(\Pi_\alpha\Pi_\beta)\in(0,1)$. Non-coordinate configurations are not excluded by this alone, and they are not vacuous: $\Theta(\Lambda^+)=\tfrac32\mathrm{Id}_4$ at $n=4$ shows $2s/n$ need not be an integer in general, so the obstruction is genuinely restricted to the coordinate case rather than universal.
 
 **A second and sharper obstruction: the $s=31$ vertex violates relation (B).** Given 12's relation (B) reads $\sum_{\beta\gamma}\lambda_\beta T_{k\beta\gamma}=-2\lambda_k$ at every index and is the diagonal of $W\#I=-W$, so it holds at every Weyl tensor with no criticality. Sum it over $k\in A$. Total symmetry of $T$ gives $t_{AAB}=t_{ABA}=t_{BAA}=t_2/3$ and $t_{ABB}=t_1/3$, so the left side is $\mu(t_3+t_2/3)+\nu(t_2/3+t_1/3)$ and, after clearing $k$ and multiplying by $3$,
 
@@ -229,7 +229,7 @@ The first two are equalities, so the relaxation is lossless at the balanced valu
 
 **The three marginal equalities are right.** $\sum_{j,k}t_{ijk}=\sum_{\alpha\in A_i}\sum_{\beta\gamma}T_{\alpha\beta\gamma}=2(n-2)a_i$, and their sum over $i$ is $2(n-2)N=M$, as the block says. **CORRECT.**
 
-**The six cap inequalities are right, hollowness included.** $\sum_kt_{ijk}=\sum_{\alpha\in A_i,\beta\in A_j}S_{\alpha\beta}$ with $S_{\alpha\beta}=\lVert[\omega_\alpha,\omega_\beta]\rVert^2$, which given 8 makes $\operatorname{tr}(\Pi_\alpha\Pi_\beta)\le1$ on the decomposable locus. For $i\ne j$ there are $a_ia_j$ ordered pairs, giving $\le a_ia_j$. For $i=j$ the $a_i$ diagonal pairs contribute $S_{\alpha\alpha}=0$, leaving $a_i(a_i-1)$. **CORRECT**, and "exactly half the strength of the general cap" is right, $1$ against $2$. Ten types is right: multisets of size three from three labels, $\binom52=10$. The $t_{ijk}$ are symmetric in $(i,j,k)$ because $T$ is and the level sets partition the index set.
+**The six cap inequalities are right, hollowness included.** $\sum_kt_{ijk}=\sum_{\alpha\in A_i,\beta\in A_j}S_{\alpha\beta}$ with $S_{\alpha\beta}=\lVert[\omega_\alpha,\omega_\beta]\rVert^2$, which given 8 makes $\mathop{\mathrm{tr}}(\Pi_\alpha\Pi_\beta)\le1$ on the decomposable locus. For $i\ne j$ there are $a_ia_j$ ordered pairs, giving $\le a_ia_j$. For $i=j$ the $a_i$ diagonal pairs contribute $S_{\alpha\alpha}=0$, leaving $a_i(a_i-1)$. **CORRECT**, and "exactly half the strength of the general cap" is right, $1$ against $2$. Ten types is right: multisets of size three from three labels, $\binom52=10$. The $t_{ijk}$ are symmetric in $(i,j,k)$ because $T$ is and the level sets partition the index set.
 
 **The sign claim is WRONG.** With $\mu_1>0>\mu_2\ge\mu_3$ the block says "the positive coefficients are $\mu_1^3$ and $\mu_1\mu_2\mu_3$". Four of the ten monomials are positive, not two: $\mu_1^3$, $\mu_1\mu_2\mu_3$, **$\mu_1\mu_2^2$ and $\mu_1\mu_3^2$**. The block's own two-eigenvalue answer refutes it, because the type carrying $t_1=3(n-2)(N-s)$, four fifths of the total mass at $n=12$, is exactly a $\mu_1\mu_2^2$ type: one index in $A$ and two in $B$. So "the optimum loads the all-positive type and the mixed type" misdescribes where the mass wants to sit, and the two extra positive types are precisely the ones the two-eigenvalue instance says will dominate. **This needs correcting before the vertex enumeration is attempted, or the enumeration will start from the wrong guess.**
 
@@ -245,7 +245,7 @@ The first two are equalities, so the relaxation is lossless at the balanced valu
 
 $$t_3=2(n-2)s,\quad t_0=2(n-2)(N-s),\qquad \tfrac12k^3(t_0c_0+t_3c_3)=k^3(n-2)sp\,N(N-2s)=\frac{(n-2)(N-2s)}{\sqrt{sNp}},$$
 
-so, adding $\operatorname{tr}(W^3)$,
+so, adding $\mathop{\mathrm{tr}}(W^3)$,
 
 $$\theta\ \le\ \frac{(n-1)(N-2s)}{\sqrt{sN(N-s)}}\qquad (s\le N/3),$$
 
@@ -278,7 +278,7 @@ Each statement says what the prose says:
 1. **The linear programme itself.** There are no $t_j$, no marginal, no nonnegativity, no equality constraints. The file checks the vertex value's algebra, it does not derive the vertex.
 2. **The vertex forcing.** Nothing types the sign pattern, and nothing types the envelope argument that is the actual proof (section 4). The one place the prose reasons invalidly is entirely outside Lean.
 3. **The feasibility range and its scope.** `lpNumerator` takes $n$, $N$, $s$ as three unrelated reals with no $N=\binom n2$ and no $N/3\le s\le N$. Nothing in the file records that the closed form is the LP optimum only on part of the admissible range, so the file is silent exactly where section 13's gap lives.
-4. **The objective.** $P(W)=\operatorname{tr}(W^3)+\tfrac12T(\lambda,\lambda,\lambda)$, the factor $\tfrac12$, the pinning of $\mu:\nu$, $k$, and $\operatorname{tr}(W^3)=(N-2s)/\sqrt{sNp}$ are all prose.
+4. **The objective.** $P(W)=\mathop{\mathrm{tr}}(W^3)+\tfrac12T(\lambda,\lambda,\lambda)$, the factor $\tfrac12$, the pinning of $\mu:\nu$, $k$, and $\mathop{\mathrm{tr}}(W^3)=(N-2s)/\sqrt{sNp}$ are all prose.
 5. **Any Weyl tensor.** No $\mathcal W_n$, no $\Lambda^2$, no decomposability, no criticality. The theorems are four facts about real numbers.
 6. **The balanced product's counts**, including the two vanishing claims of section 6.
 

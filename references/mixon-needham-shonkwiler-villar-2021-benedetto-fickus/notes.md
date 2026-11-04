@@ -10,7 +10,7 @@
 
 *Page 6. The first-order condition is $ZZ^*z_j=-\tfrac12\lambda_jz_j$ with $\lambda_j$ the multipliers, so every column is an eigenvector of the frame operator.*
 
-**The first proof's construction, page 9, verbatim in substance.** With $J$ the columns spanning the top eigenspace $E$ (eigenvalue $\alpha$) and $E'$ another eigenspace (eigenvalue $\beta<\alpha$): select $u\in E'$ with $\lVert u\rVert=1$; since $d'<n'$ the columns in $J$ are linearly dependent, select $v$ supported on $J$ with $Zv=0$ and $\lVert v\rVert=1$; take $Y:=uv^*$. Then the constraint tangency $\mathrm{Re}\operatorname{tr}(\nabla h_j(Z)^*Y)=0$ holds for every $j$ because $v_j=0$ off $J$ and $z_j^*u=0$ on $J$, the holomorphic Hessian terms vanish because $v$ and $Z^*u$ have disjoint support, and the mixed term is
+**The first proof's construction, page 9, verbatim in substance.** With $J$ the columns spanning the top eigenspace $E$ (eigenvalue $\alpha$) and $E'$ another eigenspace (eigenvalue $\beta<\alpha$): select $u\in E'$ with $\lVert u\rVert=1$; since $d'<n'$ the columns in $J$ are linearly dependent, select $v$ supported on $J$ with $Zv=0$ and $\lVert v\rVert=1$; take $Y:=uv^*$. Then the constraint tangency $\mathrm{Re}\mathop{\mathrm{tr}}(\nabla h_j(Z)^*Y)=0$ holds for every $j$ because $v_j=0$ off $J$ and $z_j^*u=0$ on $J$, the holomorphic Hessian terms vanish because $v$ and $Z^*u$ have disjoint support, and the mixed term is
 
 $$\sum\frac{\partial^2\mathrm{FP}}{\partial Z\,\partial\bar Z}\,Y\bar Y=2\lVert Zv\rVert^2\lVert u\rVert^2+2\lVert Z^*u\rVert^2\lVert v\rVert^2=2\beta,\qquad \sum\lambda_j\lvert v_j\rvert^2=-2\alpha,$$
 

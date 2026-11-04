@@ -29,9 +29,9 @@ Replace $\tfrac13$ by $\tfrac16$ throughout the block, delete the orthonormal-ei
 
 - **$\mathrm{Alt}$** is the projection onto the $\Lambda^4$ summand of $S^2\Lambda^2$, in components $\mathrm{Alt}(R)_{ijkl}=\tfrac13(R_{ijkl}+R_{iklj}+R_{iljk})$, as used by [L131](../findings/isotropy-cap.md).
 - **$\mathfrak b:S^2\Lambda^2\to\Lambda^4$** sends $\omega\odot\eta$ to $\omega\wedge\eta$, from [L179](../findings/diagonal-half.md#L642)(b).
-- The inner product on $\Lambda^2$ is $\tfrac12\operatorname{tr}(X^{\mathsf T}Y)$, making $\{\varphi_{ab}\}_{a<b}$ orthonormal, with $\varphi_{ab}=E_{ba}-E_{ab}$. "Diagonal" means diagonal in the coordinate $2$-planes $e_i\wedge e_j$ rather than diagonal as an operator on $\Lambda^2$. Sums over pairs are over ordered pairs unless stated.
+- The inner product on $\Lambda^2$ is $\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$, making $\{\varphi_{ab}\}_{a<b}$ orthonormal, with $\varphi_{ab}=E_{ba}-E_{ab}$. "Diagonal" means diagonal in the coordinate $2$-planes $e_i\wedge e_j$ rather than diagonal as an operator on $\Lambda^2$. Sums over pairs are over ordered pairs unless stated.
 - A $2$-form satisfies $\omega\wedge\omega=0$ exactly when it is decomposable, $\omega=u\wedge v$.
-- Read off [conventions.md](../findings/conventions.md) during this review, and load-bearing below: **the norm on $\Lambda^4$ is $\lVert R\rVert^2=\tfrac14\sum_{ijkl}R_{ijkl}^2$**, in which $\mathrm{Alt}(R)$ is measured, while **$\lVert\cdot\rVert_\perp$ is the multi-index-orthonormal norm $\sum_{i<j<k<l}$, six times smaller in square on the same array**, and it is $\lVert\cdot\rVert_\perp$ that the $\Phi$-sphere identity $\operatorname{tr}(\omega^4)+\lVert\omega\wedge\omega\rVert_\perp^2=2\langle\omega,\omega\rangle^2$ carries and that the wedge routines report.
+- Read off [conventions.md](../findings/conventions.md) during this review, and load-bearing below: **the norm on $\Lambda^4$ is $\lVert R\rVert^2=\tfrac14\sum_{ijkl}R_{ijkl}^2$**, in which $\mathrm{Alt}(R)$ is measured, while **$\lVert\cdot\rVert_\perp$ is the multi-index-orthonormal norm $\sum_{i<j<k<l}$, six times smaller in square on the same array**, and it is $\lVert\cdot\rVert_\perp$ that the $\Phi$-sphere identity $\mathop{\mathrm{tr}}(\omega^4)+\lVert\omega\wedge\omega\rVert_\perp^2=2\langle\omega,\omega\rangle^2$ carries and that the wedge routines report.
 
 ## Hypothesis inventory, checked against the objects
 
@@ -68,7 +68,7 @@ def w4 (w : Matrix (Fin 6) (Fin 6) ℝ) (i j k l : Fin 6) : ℝ :=
 
 and documents it as "the $4\times4$ Pfaffian on the principal submatrix at $i<j<k<l$, **which is $(\omega\wedge\omega)_{ijkl}/2$**", with the companion sentence "$4\,\mathrm{Pf}(\omega)^2$ is $\lVert\omega\wedge\omega\rVert^2$, $\Lambda^4\mathbb R^4$ being a line spanned by the volume form and $\omega\wedge\omega$ being $2\mathrm{Pf}(\omega)$ times it". Both theorems in that file are machine-checked, and [conventions.md](../findings/conventions.md) cites it as the record's authority for the $\Phi$-sphere identity, which two reviewers agreed on.
 
-**A second, independent pin, from the arithmetic rather than from the docstring.** Take $n=4$ and $\omega$ with $\omega_{12}=\omega_{34}=1$, extended antisymmetrically. Then $\langle\omega,\omega\rangle=\tfrac12\sum_{ij}\omega_{ij}^2=2$, and $\omega^2=-\mathrm{Id}$ gives $\operatorname{tr}(\omega^4)=4$. The $\Phi$-sphere identity forces $\lVert\omega\wedge\omega\rVert_\perp^2=2\cdot4-4=4$, so $\lvert(\omega\wedge\omega)_{1234}\rvert=2$. And $\mathrm{Pf}_{1234}(\omega)=1$. So the record's wedge is twice the block's display, and the block's display is not the record's wedge.
+**A second, independent pin, from the arithmetic rather than from the docstring.** Take $n=4$ and $\omega$ with $\omega_{12}=\omega_{34}=1$, extended antisymmetrically. Then $\langle\omega,\omega\rangle=\tfrac12\sum_{ij}\omega_{ij}^2=2$, and $\omega^2=-\mathrm{Id}$ gives $\mathop{\mathrm{tr}}(\omega^4)=4$. The $\Phi$-sphere identity forces $\lVert\omega\wedge\omega\rVert_\perp^2=2\cdot4-4=4$, so $\lvert(\omega\wedge\omega)_{1234}\rvert=2$. And $\mathrm{Pf}_{1234}(\omega)=1$. So the record's wedge is twice the block's display, and the block's display is not the record's wedge.
 
 **A third pin, from the routines on disk.** [b_bianchi_constraint.py](../scripts/lib/b_bianchi_constraint.py)'s `wedge_map` sums over ordered pairs of index-pairs, so at the quad $\{1,2,3,4\}$ it collects $W_{12,34}+W_{34,12}-W_{13,24}-W_{24,13}+W_{14,23}+W_{23,14}$, which is $2\,\mathrm{Pf}$ on a rank-one $\omega\otimes\omega$. Same factor two, reached by a different road.
 
@@ -87,7 +87,7 @@ Write $S_{ijkl}=R_{ijkl}+R_{iklj}+R_{iljk}$ for $R\in S^2\Lambda^2$, so $\mathrm
 
 **$\mathrm{Alt}$ is idempotent.** On a totally antisymmetric $T$ the cyclic shift $(jkl)\to(klj)$ is a three-cycle, hence even, so $T_{iklj}=T_{ijkl}=T_{iljk}$ and $\mathrm{Alt}(T)=\tfrac13\cdot3T=T$. Combined with the previous paragraph, $\mathrm{Alt}\circ\mathrm{Alt}=\mathrm{Alt}$.
 
-**$\mathrm{Alt}$ is self-adjoint, so the projection is orthogonal.** For $T$ totally antisymmetric and any $R\in S^2\Lambda^2$, relabel $(j,k,l)\to(l,j,k)$ in $\sum_{ijkl}R_{iklj}T_{ijkl}$ to get $\sum R_{ijkl}T_{iljk}=\sum R_{ijkl}T_{ijkl}$, and likewise for the third term. Hence $\langle R,T\rangle=\langle\mathrm{Alt}(R),T\rangle$, so $\ker\mathrm{Alt}\perp\operatorname{im}\mathrm{Alt}$ in the record's $\tfrac14\sum_{ijkl}$ norm.
+**$\mathrm{Alt}$ is self-adjoint, so the projection is orthogonal.** For $T$ totally antisymmetric and any $R\in S^2\Lambda^2$, relabel $(j,k,l)\to(l,j,k)$ in $\sum_{ijkl}R_{iklj}T_{ijkl}$ to get $\sum R_{ijkl}T_{iljk}=\sum R_{ijkl}T_{ijkl}$, and likewise for the third term. Hence $\langle R,T\rangle=\langle\mathrm{Alt}(R),T\rangle$, so $\ker\mathrm{Alt}\perp\mathop{\mathrm{im}}\mathrm{Alt}$ in the record's $\tfrac14\sum_{ijkl}$ norm.
 
 So the object the identity is about is the right one, and the two sides of the claim are both totally antisymmetric arrays. What separates them is a scalar, and only a scalar. **CONFIRMED**, and this is the half of the block that stands.
 
@@ -105,7 +105,7 @@ The first and third need no flip and it is worth saying why, since the asymmetry
 
 ## 5. The zero eigenvalues
 
-$\mu_\alpha=0$ makes $\mu_\alpha\,\omega_\alpha\wedge\omega_\alpha$ the zero element of $\Lambda^4$ whatever $\omega_\alpha$ is, so the clause is true and needs nothing the block skips. The stronger reading, that the surviving count is the operator rank, is also right: the number of nonzero $\mu_\alpha$ counted with multiplicity is $\operatorname{rank}(A)$ as an operator on $\Lambda^2$. **CONFIRMED.**
+$\mu_\alpha=0$ makes $\mu_\alpha\,\omega_\alpha\wedge\omega_\alpha$ the zero element of $\Lambda^4$ whatever $\omega_\alpha$ is, so the clause is true and needs nothing the block skips. The stronger reading, that the surviving count is the operator rank, is also right: the number of nonzero $\mu_\alpha$ counted with multiplicity is $\mathop{\mathrm{rank}}(A)$ as an operator on $\Lambda^2$. **CONFIRMED.**
 
 ## 6. Re-derivation of L179(b), and both directions
 
@@ -152,7 +152,7 @@ The claimed bound is violated by a factor $\sqrt6/2$. **REFUTED.** Read instead 
 $$\mathrm{Alt}(W^2)=\tfrac16\sum_\alpha(\lambda_\alpha^2-c\lambda_\alpha)\,\omega_\alpha\wedge\omega_\alpha ,\qquad\text{so}\qquad \lVert\mathrm{Alt}(W^2)\rVert\le\tfrac16\min_c\sum_\alpha\lvert\lambda_\alpha^2-c\lambda_\alpha\rvert\,\lVert\omega_\alpha\wedge\omega_\alpha\rVert .$$
 That is a genuine gain in general and no gain on the witness above, where the two wedges are equal and the inequality is already an equality. Which is the point: **the falsifier of section 9 works because the estimate is tight there, so it isolates the constant rather than the slackness.**
 
-**And the numerical bound the block says is owed comes out in closed form.** At unit $\omega$ the $\Phi$-sphere identity gives $\lVert\omega\wedge\omega\rVert_\perp^2=2-\operatorname{tr}(\omega^4)=2(1-\sum_i\sigma_i^4)$ at singular values with $\sum\sigma_i^2=1$, and a skew form on $\mathbb R^n$ has at most $\lfloor n/2\rfloor$ nonzero singular value pairs, so $\sum\sigma_i^4\ge2/n$ by Cauchy–Schwarz. Hence $\lVert\omega\wedge\omega\rVert_\perp\le\sqrt{2(1-2/n)}$, and with the corrected constant and one named norm,
+**And the numerical bound the block says is owed comes out in closed form.** At unit $\omega$ the $\Phi$-sphere identity gives $\lVert\omega\wedge\omega\rVert_\perp^2=2-\mathop{\mathrm{tr}}(\omega^4)=2(1-\sum_i\sigma_i^4)$ at singular values with $\sum\sigma_i^2=1$, and a skew form on $\mathbb R^n$ has at most $\lfloor n/2\rfloor$ nonzero singular value pairs, so $\sum\sigma_i^4\ge2/n$ by Cauchy–Schwarz. Hence $\lVert\omega\wedge\omega\rVert_\perp\le\sqrt{2(1-2/n)}$, and with the corrected constant and one named norm,
 $$\lVert\mathrm{Alt}(W^2)\rVert\ \le\ \tfrac16\sqrt6\,\sqrt{2(1-2/n)}\sum_\alpha\lambda_\alpha^2\ =\ \sqrt{\frac{n-2}{3n}}\ \lVert W\rVert^2 .$$
 At $n=4$ this reads $\lVert\mathrm{Alt}(W^2)\rVert\le\lVert W\rVert^2/\sqrt6$, and the witness $A/\sqrt2$ above attains it exactly. **So the bound is sharp at $n=4$**, which is also a check on the constant $\tfrac16$: at $\tfrac13$ the same chain would produce a bound the record's own $\mathbb R^4$ Weyl tensors violate.
 

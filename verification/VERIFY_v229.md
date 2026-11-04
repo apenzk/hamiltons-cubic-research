@@ -29,7 +29,7 @@ Quoted from [conventions.md](../findings/conventions.md), not restated.
 - $g_k$: *"$g_k=\lVert[\mathrm{ad}(v_k),W]\rVert^2=\sum_{\alpha\beta}(\lambda_\alpha-\lambda_\beta)^2T_{k\alpha\beta}$, the squared **orbit-tangent** norm in direction $v_k$, manifestly $\ge0$ at every $W$"*, and in the same entry: *"**The first two moments are pinned**, $\sum_kg_k=4(n-1)\lVert W\rVert^2$ and $\sum_k\lambda_kg_k=-4P(W)$, both from (A) and (B) with the cubic identity and **neither needing criticality**"*.
 - $T$, third sense: *"the fully symmetric trilinear form"*; and $T_{\alpha\beta\gamma}=\langle[v_\alpha,v_\beta],v_\gamma\rangle^2$ from the $A,d,G,A_0$ entry.
 - $\Delta$: *"the symmetry defect. Discontinuous at eigenvalue zero-crossings, and traced over $\{\lambda>0\}$ only"*.
-- Norm: from the $M$ entry, *"$W$ is the operator on $\Lambda^2$, where $\sum_\alpha\lambda_\alpha^2=\operatorname{tr}(W^2)=1$"* at a unit Weyl tensor.
+- Norm: from the $M$ entry, *"$W$ is the operator on $\Lambda^2$, where $\sum_\alpha\lambda_\alpha^2=\mathop{\mathrm{tr}}(W^2)=1$"* at a unit Weyl tensor.
 
 The three per-index relations, quoted verbatim from [bounds.md](../findings/bounds.md) line 268:
 
@@ -50,7 +50,7 @@ Petersen–Wink Prop 1.7, quoted from the [reference notes](../references/peters
 | total symmetry of $T$ | **no** | **yes**, twice, the relabellings in §3 and §4 are where the whole argument turns | tabled at [conventions.md](../findings/conventions.md); [bounds.md](../findings/bounds.md) line 290 says the same, *"which is (B) with $f=\lambda^2$ **after relabelling under total symmetry**"* |
 | Petersen–Wink Prop 1.7 | **no** | **yes**, it is the definition of $g_\gamma$ in $T$-coordinates | cited nowhere in either copy of the block |
 | relation (A) / [L153](../findings/bounds.md) | **no** | **yes**, in claim 3 | |
-| $\lambda_{\min}\le0$ | no | yes, in the bound (to write $\lambda_{\min}=-\lvert\lambda_{\min}\rvert$) | free on $\mathcal W_n$ from $\operatorname{tr}W=0$ at $W\ne0$, as [L70](../findings/bounds.md) records |
+| $\lambda_{\min}\le0$ | no | yes, in the bound (to write $\lambda_{\min}=-\lvert\lambda_{\min}\rvert$) | free on $\mathcal W_n$ from $\mathop{\mathrm{tr}}W=0$ at $W\ne0$, as [L70](../findings/bounds.md) records |
 | $n\ge5$ | no | **no** on this route | the $n\ge5$ hedge at [bounds-relaxations.md](../findings/bounds-relaxations.md) line 118 attaches to the *Casimir* derivation of $4(n-1)$, which fails at $n=4$ because $\mathfrak{so}(4)$'s adjoint is reducible. The (A)+(B) route below is parity- and dimension-free and runs at $n=4$, which is why the same source can report the $n=4$ total *"stays pinned at $12$"* |
 
 **Two hypotheses stated but unused (criticality, and (in the canonical entry), the eigenbasis being general), two used but unstated (unit norm, orthonormality), and three inputs used but not named (Prop 1.7, relation (A), total symmetry of $T$).**
@@ -75,7 +75,7 @@ $$\sum_k\lambda_kg_k=2\underbrace{\sum_{k\alpha\beta}\lambda_k\lambda_\alpha^2T_
 
 **Line one, $M_{210}$, and this is where $A(W)=2W$ enters.** Relabel under total symmetry so the squared weight sits on the free index, then apply (B) with free index $\alpha$:
 
-$$M_{210}=\sum_\alpha\lambda_\alpha^2\sum_{k\beta}\lambda_kT_{\alpha k\beta}=\sum_\alpha\lambda_\alpha^2(-2\lambda_\alpha)=-2\operatorname{tr}(W^3).$$
+$$M_{210}=\sum_\alpha\lambda_\alpha^2\sum_{k\beta}\lambda_kT_{\alpha k\beta}=\sum_\alpha\lambda_\alpha^2(-2\lambda_\alpha)=-2\mathop{\mathrm{tr}}(W^3).$$
 
 That (B) is the diagonal of $A(W)=2W$ is one further line: [Petersen–Wink](../references/petersen-wink-2019-bochner-technique/notes.md) state the operator identity $\sum_\alpha\lambda_\alpha\mathrm{ad}(v_\alpha)^2=2W$ on $\mathrm{Weyl}_n$, and pairing it with $v_k$ on both sides gives $-\sum_{\alpha\beta}\lambda_\alpha T_{k\alpha\beta}=2\lambda_k$, using $\langle\mathrm{ad}(v_\alpha)^2v_k,v_k\rangle=-\lVert[v_\alpha,v_k]\rVert^2$.
 
@@ -83,7 +83,7 @@ That (B) is the diagonal of $A(W)=2W$ is one further line: [Petersen–Wink](../
 
 $$\langle W,W^\#\rangle=\tfrac12\sum_{\alpha\beta}\lambda_\alpha\lambda_\beta\big\langle W[v_\alpha,v_\beta],[v_\alpha,v_\beta]\big\rangle=\tfrac12\sum_{\alpha\beta\gamma}\lambda_\alpha\lambda_\beta\lambda_\gamma T_{\alpha\beta\gamma}=\tfrac12M_{111}.$$
 
-**Closing.** $\sum_k\lambda_kg_k=-4\operatorname{tr}(W^3)-4\langle W,W^\#\rangle=-4\langle W,W^2+W^\#\rangle=-4P(W)$, the last step being the definition of $P$.
+**Closing.** $\sum_k\lambda_kg_k=-4\mathop{\mathrm{tr}}(W^3)-4\langle W,W^\#\rangle=-4\langle W,W^2+W^\#\rangle=-4P(W)$, the last step being the definition of $P$.
 
 **Verdict.** The two lines are real, and the named ingredients are the load-bearing ones. What the block omits from its list is Prop 1.7 (which supplies $g$ in $T$-coordinates at all) and the total symmetry of $T$ (which is the relabelling in $M_{210}$; [bounds.md](../findings/bounds.md) line 290 states plainly that *"without (B) that moment looks free and the record's own identity looks underivable"*). The conclusion is $-4P(W)$, not $-4\theta$.
 
@@ -182,7 +182,7 @@ Two consequences the record should carry.
 | trap | answer |
 | --- | --- |
 | **$\ker W\ne0$ and padded objects** | **The live defect of this round.** $G_0$ is mass on the kernel, and §6 computes it exactly, $G_0=4(n-4)$ at every padded $\mathcal W_4$ point, in closed form, with no computation. The bound is then $n$-free there and is attained with equality at padded $W_{\mathbb{CP}^2}$, which is what refutes claim 5 |
-| **the boundary of every stated range** | $\Delta\in[0,4(n-1)]$: the lower end is attained on all of L23's family (§7), the upper end forces $\mathcal N=\mathcal Z=\emptyset$, impossible on $\mathcal W_n$ by $\operatorname{tr}W=0$. So the tabled range at [curvature-invariants.md](../findings/curvature-invariants.md) line 106 is not attained above, and is itself a silent unit-norm statement |
+| **the boundary of every stated range** | $\Delta\in[0,4(n-1)]$: the lower end is attained on all of L23's family (§7), the upper end forces $\mathcal N=\mathcal Z=\emptyset$, impossible on $\mathcal W_n$ by $\mathop{\mathrm{tr}}W=0$. So the tabled range at [curvature-invariants.md](../findings/curvature-invariants.md) line 106 is not attained above, and is itself a silent unit-norm statement |
 | **the smallest admissible $n$** | $n=4$. The (A)+(B) route runs there unchanged; the $n\ge5$ hedge in the record attaches to the *Casimir* derivation of $4(n-1)$, which fails at $n=4$ on the reducibility of $\mathfrak{so}(4)$'s adjoint. **The two derivations have different domains and the block names neither.** At $n=4$ the bound reads $\theta\le3\lvert\lambda_{\min}\rvert$ and is attained at $W_{\mathbb{CP}^2}$ |
 | **odd $n$** | No parity dependence anywhere: (A), (B), Prop 1.7 and the sign split are all parity-free. Nothing found |
 | **the crossover $n=6+2\sqrt7$** | **[Post F7](../findings/fence-posts.md) is not violated, because L41 does not claim to be a candidate inequality for Conjecture A.** It is a bound with no threshold and no $n$-dependence along padded families (§6). Since $\lvert\lambda_{\min}\rvert$ is uncontrolled, as [target.md](../findings/target.md) line 335 concedes, *"its weakness is that $\lvert\lambda_{\min}\rvert$ is uncontrolled"*, L41 cannot see the crossover, and the canon is right that *"it separates nothing there"* |

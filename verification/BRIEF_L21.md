@@ -27,11 +27,11 @@ The tube audit left one gap: $\alpha\le1/3$ is verified at four dimensions but *
 
 $$\mathrm{Weyl}_n=\bigoplus_\lambda M_\lambda\otimes V_\lambda\qquad\Longrightarrow\qquad F_u=\bigoplus_\lambda F_\lambda\otimes\mathrm{Id}_{V_\lambda},$$
 
-so $\operatorname{spec}(F_u)=\bigcup_\lambda\operatorname{spec}(F_\lambda)$. **Multiplicities are exactly what the spaces $M_\lambda$ absorb**, so Schur applies unconditionally here, this is the structural difference from the thesis's route, which works with the full stabilizer and asks each irreducible subspace to be an eigenspace.
+so $\mathop{\mathrm{spec}}(F_u)=\bigcup_\lambda\mathop{\mathrm{spec}}(F_\lambda)$. **Multiplicities are exactly what the spaces $M_\lambda$ absorb**, so Schur applies unconditionally here, this is the structural difference from the thesis's route, which works with the full stabilizer and asks each irreducible subspace to be an eigenspace.
 
 **The multiplicity spaces do not depend on $n$.** Splitting $\mathrm{Weyl}_n$ by the $SO(n-4)$ Casimir and restricting $F_u$ to each block:
 
-| $G$-type | $\dim V_\lambda$ ($n{=}10/12/14$) | $\dim M_\lambda$ | $\operatorname{spec}(F_\lambda)/\sqrt{3/2}$ |
+| $G$-type | $\dim V_\lambda$ ($n{=}10/12/14$) | $\dim M_\lambda$ | $\mathop{\mathrm{spec}}(F_\lambda)/\sqrt{3/2}$ |
 | --- | --- | --- | --- |
 | trivial | $1/1/1$ | $20/20/20$ | $-1^{\times2},\ -\tfrac16^{\times6},\ 0^{\times6},\ \tfrac13^{\times3},\ \tfrac12^{\times2},\ 1^{\times1}$ |
 | vector | $6/8/10$ | $20/20/20$ | $-\tfrac12^{\times4},\ 0^{\times12},\ \tfrac12^{\times4}$ |
@@ -59,7 +59,7 @@ This removes the last external dependency of Lemma L20. The remaining formal obl
 
 > **THE TWO UNNAMED TYPES ARE $V_{(2,1)}$ WITH MULTIPLICITY $4$ AND $V_{(2,2)}=\mathrm{Weyl}_{n-4}$ WITH MULTIPLICITY $1$.** *Branching $\mathrm{Weyl}_n=S^2(\Lambda^2\mathbb R^n)\ominus S^2\mathbb R^n\ominus\Lambda^4\mathbb R^n$ over $\Lambda^2\mathbb R^4\oplus(\mathbb R^4\otimes\mathbb R^m)\oplus\Lambda^2\mathbb R^m$, with $\dim V_{(2,1)}=\tfrac{m(m^2-1)}3-m=\tfrac{m(m-2)(m+2)}3$ (the factored form showing it vanishes at $m=2$) and $\dim V_{(2,2)}=\tfrac{m(m+1)(m+2)(m-3)}{12}$, **which is the $\dim\mathrm{Weyl}_m$ formula itself**, so $V_{(2,2)}=\mathrm{Weyl}_{n-4}$ is an equality of formulas rather than an agreement at one dimension. Both are strictly positive at every $m\ge4$, so the unnamed rows are a systematic omission and not an accident of $n=12$ ([L21.lean](../lean/HamiltonsCubic/Results/L21.lean)).* **At $n=12$: $4\cdot160+1\cdot300=940$, and $698+940=1638$ exactly**, and the sum is $\dim\mathrm{Weyl}_n$ identically in $m$. *The same branching reproduces the block's own multiplicities $20,20,6,10$, so those four are consequences rather than measurements.*
 
-> **AND "$0$ THROUGHOUT" ON THOSE $940$ IS A THEOREM WITH NO DIMENSION IN IT.** *$F_u$ preserves the $A$-index degree and vanishes on degree $\le1$: $u$ carries all four indices in $\mathbb R^4$, so $u\#h$ needs two $A$-indices from $h$ and the anticommutator dies on support.* **Both higher isotypics sit at degree $0$ and $1$, so $F_u$ annihilates them**, equivalently, from $[\mathfrak{so}(4),\mathfrak{so}(m)]=0$, $\operatorname{im}F_u\subseteq AA\oplus AB\oplus AC\oplus BB$, which carries neither type. **The bound never has to look at $940$ of the $1638$.**
+> **AND "$0$ THROUGHOUT" ON THOSE $940$ IS A THEOREM WITH NO DIMENSION IN IT.** *$F_u$ preserves the $A$-index degree and vanishes on degree $\le1$: $u$ carries all four indices in $\mathbb R^4$, so $u\#h$ needs two $A$-indices from $h$ and the anticommutator dies on support.* **Both higher isotypics sit at degree $0$ and $1$, so $F_u$ annihilates them**, equivalently, from $[\mathfrak{so}(4),\mathfrak{so}(m)]=0$, $\mathop{\mathrm{im}}F_u\subseteq AA\oplus AB\oplus AC\oplus BB$, which carries neither type. **The bound never has to look at $940$ of the $1638$.**
 
 > **A CLAIM ABOUT THE STABLE RANGE SITS HERE, AND THE SECTION ABOVE STATES THE OBLIGATION AS STILL OPEN.** *a prior audit: the governing bound is on **row length**, not tensor degree, every partition here has $\ell(\nu)\le2$, so Littlewood restriction needs $m\ge4$ and $SO(m)$-irreducibility $m\ge5$, making the decomposition valid for every $n\ge9$.* **So the $n=10$ column is inside the range and this file's stated obligation was over-strong.** *a prior audit adds the complementary point: classical stability governs the type set and $\dim M_\lambda$, and constrains no entry of $F_\lambda$.*
 
@@ -75,7 +75,7 @@ Lemma L20 rests on one external input: that the largest eigenvalue of $F_u$ tran
 
 $W_{\mathbb{CP}^2}$ is supported inside $\Lambda^2(\mathbb{R}^4)$, so the construction is equivariant for $SO(n-4)$ acting on the complementary coordinates. Decomposing $\mathrm{Weyl}_n=\bigoplus_\lambda M_\lambda\otimes V_\lambda$ into isotypic pieces, Schur gives $F_u=\bigoplus_\lambda F_\lambda\otimes\mathrm{Id}_{V_\lambda}$ **with no multiplicity-free hypothesis**, since multiplicities are exactly what the spaces $M_\lambda$ absorb. Only four types carry a nonzero eigenvalue:
 
-| type | $\dim V_\lambda$ ($n=10/12/14$) | $\dim M_\lambda$ | $\operatorname{spec}(F_\lambda)/\theta^*$ |
+| type | $\dim V_\lambda$ ($n=10/12/14$) | $\dim M_\lambda$ | $\mathop{\mathrm{spec}}(F_\lambda)/\theta^*$ |
 | --- | --- | --- | --- |
 | trivial | $1/1/1$ | $20$ | $-1^{2},\,-\tfrac16^{6},\,0^{6},\,\tfrac13^{3},\,\tfrac12^{2},\,1$ |
 | vector | $6/8/10$ | $20$ | $-\tfrac12^{4},\,0^{12},\,\tfrac12^{4}$ |

@@ -7,7 +7,7 @@
 | # | Claim under attack | Verdict |
 |---|---|---|
 | 1 | Cross term $2\sigma_{ij}\sigma_{ik}c_jc_k$ in $\Lambda^2E_j\otimes\Lambda^2E_k$; $\varepsilon_j\wedge\varepsilon_j$ vanishes; $\Lambda^4E_j$ imposes nothing | **CONFIRMED** |
-| 2 | $\langle\omega_i,\omega_{i'}\rangle=\sum_jt_j\sigma_{ij}\sigma_{i'j}$; $\sum_jt_j=1$ is $\operatorname{tr}A=2$; $\langle J_j,J_j\rangle=m_j$ | **CONFIRMED** |
+| 2 | $\langle\omega_i,\omega_{i'}\rangle=\sum_jt_j\sigma_{ij}\sigma_{i'j}$; $\sum_jt_j=1$ is $\mathop{\mathrm{tr}}A=2$; $\langle J_j,J_j\rangle=m_j$ | **CONFIRMED** |
 | 3 | The three orthogonality relations force $T_{++}=T_{+-}=T_{-+}=T_{--}=\tfrac14$, uniquely, all classes nonempty | **CONFIRMED** |
 | 4 | $r=3,4,5,6$ excluded by "at most one singleton"; $r=7$ admits $2+2+2+1$ | **CONFIRMED**, criterion necessary and not sufficient |
 | 5 | Weights exist at $r=7$ with all seven $c_j^2$ distinct | **CONFIRMED**, exhibited in closed form |
@@ -23,10 +23,10 @@
 
 ## 0. Conventions, fixed once
 
-- A $2$-form on $V$ is identified with a real skew endomorphism by $\omega(x,y)=\langle\omega x,y\rangle$, and $\langle X,Y\rangle=\tfrac12\operatorname{tr}(X^{\mathsf T}Y)$.
+- A $2$-form on $V$ is identified with a real skew endomorphism by $\omega(x,y)=\langle\omega x,y\rangle$, and $\langle X,Y\rangle=\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$.
 - $\varepsilon_j$ is the unit area form of an oriented plane $E_j$: in an adapted orthonormal frame it is $e^{2j-1}\wedge e^{2j}$, its matrix has entries $\pm1$ in that block, $\varepsilon_j^2=-\mathrm{Id}_{E_j}$ and $\langle\varepsilon_j,\varepsilon_j\rangle=1$. Each $\varepsilon_j$ is fixed only up to sign, so an individual $\sigma_{ij}$ is not canonical while the products $\sigma_{ij}\sigma_{i'j}$ are.
 - On $\Lambda^4V$ the basis $4$-forms $e^{a}\wedge e^{b}\wedge e^{c}\wedge e^{d}$, $a<b<c<d$, are taken orthonormal. Only their linear independence is used.
-- $A=-\omega_i^2$, positive definite on $V$ with $\operatorname{tr}A=2$. Its eigenspaces are $E_1,\dots,E_r$ with eigenvalues $c_1^2>0$ and $\dim E_j=2m_j$. All-simple means every $m_j=1$, so $\dim V=2r$.
+- $A=-\omega_i^2$, positive definite on $V$ with $\mathop{\mathrm{tr}}A=2$. Its eigenspaces are $E_1,\dots,E_r$ with eigenvalues $c_1^2>0$ and $\dim E_j=2m_j$. All-simple means every $m_j=1$, so $\dim V=2r$.
 - $J_{ij}$ denotes $\omega_i|_{E_j}/c_j$, a complex structure on $E_j$. In the all-simple case $J_{ij}=\sigma_{ij}\varepsilon_j$.
 - $t_j=c_j^2m_j$, which is $c_j^2$ in the all-simple case.
 
@@ -59,12 +59,12 @@ and $c_jc_k>0$ cancels. **Confirmed as written.** Note this needs $r\ge2$ for a 
 
 ## 2. The weights
 
-$\langle\omega_i,\omega_{i'}\rangle=\tfrac12\operatorname{tr}(\omega_i^{\mathsf T}\omega_{i'})=-\tfrac12\operatorname{tr}(\omega_i\omega_{i'})$. Blockwise, $\operatorname{tr}(\omega_i\omega_{i'})|_{E_j}=c_j^2\sigma_{ij}\sigma_{i'j}\operatorname{tr}(\varepsilon_j^2)=-2c_j^2\sigma_{ij}\sigma_{i'j}$, so
+$\langle\omega_i,\omega_{i'}\rangle=\tfrac12\mathop{\mathrm{tr}}(\omega_i^{\mathsf T}\omega_{i'})=-\tfrac12\mathop{\mathrm{tr}}(\omega_i\omega_{i'})$. Blockwise, $\mathop{\mathrm{tr}}(\omega_i\omega_{i'})|_{E_j}=c_j^2\sigma_{ij}\sigma_{i'j}\mathop{\mathrm{tr}}(\varepsilon_j^2)=-2c_j^2\sigma_{ij}\sigma_{i'j}$, so
 $$\langle\omega_i,\omega_{i'}\rangle=\sum_jc_j^2\,\sigma_{ij}\sigma_{i'j}=\sum_jt_j\,\sigma_{ij}\sigma_{i'j}. \qquad\checkmark$$
 
-$\operatorname{tr}A=\sum_j 2m_jc_j^2=2\sum_jt_j$, so $\operatorname{tr}A=2$ is exactly $\sum_jt_j=1$. **And it is exactly $\langle\omega_i,\omega_i\rangle=1$ as well**, since $\langle\omega_i,\omega_i\rangle=-\tfrac12\operatorname{tr}(\omega_i^2)=\tfrac12\operatorname{tr}A$. The two are the same condition, not two, which the block's phrasing leaves slightly open by attributing $\sum t_j=1$ to $\operatorname{tr}A=2$ and orthonormality separately.
+$\mathop{\mathrm{tr}}A=\sum_j 2m_jc_j^2=2\sum_jt_j$, so $\mathop{\mathrm{tr}}A=2$ is exactly $\sum_jt_j=1$. **And it is exactly $\langle\omega_i,\omega_i\rangle=1$ as well**, since $\langle\omega_i,\omega_i\rangle=-\tfrac12\mathop{\mathrm{tr}}(\omega_i^2)=\tfrac12\mathop{\mathrm{tr}}A$. The two are the same condition, not two, which the block's phrasing leaves slightly open by attributing $\sum t_j=1$ to $\mathop{\mathrm{tr}}A=2$ and orthonormality separately.
 
-**The implicit factor is right.** For a complex structure $J$ on a space of dimension $2m$, $\langle J,J\rangle=\tfrac12\operatorname{tr}(J^{\mathsf T}J)=\tfrac12\operatorname{tr}(-J^2)=\tfrac12\operatorname{tr}(\mathrm{Id}_{2m})=m$. With $J_{ij}=\sigma_{ij}J_j$ the same block computation gives $\langle\omega_i,\omega_{i'}\rangle=\sum_jc_j^2m_j\sigma_{ij}\sigma_{i'j}$, so $t_j=c_j^2m_j$ is the correct general weight and it is consistent with $\sum_jt_j=1$ from $\operatorname{tr}A=2$. **Confirmed**, including the $m_j$ the block leaves implicit.
+**The implicit factor is right.** For a complex structure $J$ on a space of dimension $2m$, $\langle J,J\rangle=\tfrac12\mathop{\mathrm{tr}}(J^{\mathsf T}J)=\tfrac12\mathop{\mathrm{tr}}(-J^2)=\tfrac12\mathop{\mathrm{tr}}(\mathrm{Id}_{2m})=m$. With $J_{ij}=\sigma_{ij}J_j$ the same block computation gives $\langle\omega_i,\omega_{i'}\rangle=\sum_jc_j^2m_j\sigma_{ij}\sigma_{i'j}$, so $t_j=c_j^2m_j$ is the correct general weight and it is consistent with $\sum_jt_j=1$ from $\mathop{\mathrm{tr}}A=2$. **Confirmed**, including the $m_j$ the block leaves implicit.
 
 ## 3. The four classes
 
@@ -110,7 +110,7 @@ against orthogonality. **This holds at every $r\ge2$.** Read inside the block's 
 $$(\omega_1\wedge\omega_1-\omega_2\wedge\omega_2)\ \text{has }\varepsilon_j\wedge\varepsilon_k\text{ coefficient }\ 2c_jc_k\big(\sigma_{1j}\sigma_{1k}-\sigma_{2j}\sigma_{2k}\big)=\pm4c_jc_k\ne0 .$$
 So the wedges are unequal and the hypothesis fails. There is no all-simple coincident triple at $r=7$, and the same line kills every $r$.
 
-**Arguing the opposite, as charitably as the words allow.** "$r=7$ is the first value not excluded" can be read as "not excluded *by this count*", which is a statement about the argument and is then true. Three things defeat that reading. The **title** says "first possible at $14$", which is a claim about the world with no hedge. The **proof's last sentence** presents the $r=7$ weights as though they were a step towards existence rather than a remark about the count. And the **header** advertises the lemma as extending [L184](../findings/diagonal-half.md#L1012)'s case 1, whose body on the same page already runs the very computation above, in three planes, to $\omega_i=\eta_i\omega_1$ and $\operatorname{tr}(\omega_1\omega_2)=\mp2$. So the charitable reading makes the lemma a strictly weaker restatement of the lemma it cites, advertised as an extension of it.
+**Arguing the opposite, as charitably as the words allow.** "$r=7$ is the first value not excluded" can be read as "not excluded *by this count*", which is a statement about the argument and is then true. Three things defeat that reading. The **title** says "first possible at $14$", which is a claim about the world with no hedge. The **proof's last sentence** presents the $r=7$ weights as though they were a step towards existence rather than a remark about the count. And the **header** advertises the lemma as extending [L184](../findings/diagonal-half.md#L1012)'s case 1, whose body on the same page already runs the very computation above, in three planes, to $\omega_i=\eta_i\omega_1$ and $\mathop{\mathrm{tr}}(\omega_1\omega_2)=\mp2$. So the charitable reading makes the lemma a strictly weaker restatement of the lemma it cites, advertised as an extension of it.
 
 **What else $r=7$ would have needed, had the count been the only obstruction.** Weights are the spectrum of $A$ alone. A triple additionally needs sign vectors $\sigma_1,\sigma_2,\sigma_3\in\{\pm1\}^7$ realising the class pattern *and* satisfying the wedge condition, plus an orientation choice per plane. The wedge condition is the one that is unsatisfiable. Existence of $t$ was never close to existence of a triple, and the block says so in the abstract while its title does not.
 
@@ -144,7 +144,7 @@ If $\omega_1+\omega_2$ is nondegenerate then, by hard Lefschetz for a symplectic
 
 **$V$ as the support is used and used correctly.** $A\succ0$ on $V$ is what makes every $c_j>0$, which is what lets $c_jc_k$ cancel in section 1 and what makes $t_j>0$ in section 3. Off $V$ the eigenvalue $0$ would give a plane on which the cross term is identically zero and carries no sign information. The statement says "multiplicity exactly two **on $V$**", which is the correct qualifier, and it is the one [L184](../findings/diagonal-half.md#L1012)'s case 1 was repaired to carry.
 
-**Orthonormality is over-spent.** The block needs all three orthogonality relations, because the four-class system has three rows. The correct argument needs one: $\omega_2=\eta\omega_1$ contradicts $\langle\omega_1,\omega_2\rangle=0$ as soon as $\omega_1\ne0$. Unit norms enter only as the normalisation $\sum t_j=1$, which is $\operatorname{tr}A=2$, and even that is dispensable, since $\langle\omega_1,\omega_2\rangle=\eta\lVert\omega_1\rVert^2$. **So the lemma as corrected is a two-form statement, not a three-form one**, which is the same observation that turned [L184](../findings/diagonal-half.md#L1002) into [L191](../findings/diagonal-half.md) and would turn this into an all-dimensions pair statement: two $2$-forms on $V$ with equal squares, equal self-wedges and $A$ having a simple eigenvalue satisfy $\omega_2=\pm\omega_1$.
+**Orthonormality is over-spent.** The block needs all three orthogonality relations, because the four-class system has three rows. The correct argument needs one: $\omega_2=\eta\omega_1$ contradicts $\langle\omega_1,\omega_2\rangle=0$ as soon as $\omega_1\ne0$. Unit norms enter only as the normalisation $\sum t_j=1$, which is $\mathop{\mathrm{tr}}A=2$, and even that is dispensable, since $\langle\omega_1,\omega_2\rangle=\eta\lVert\omega_1\rVert^2$. **So the lemma as corrected is a two-form statement, not a three-form one**, which is the same observation that turned [L184](../findings/diagonal-half.md#L1002) into [L191](../findings/diagonal-half.md) and would turn this into an all-dimensions pair statement: two $2$-forms on $V$ with equal squares, equal self-wedges and $A$ having a simple eigenvalue satisfy $\omega_2=\pm\omega_1$.
 
 ## 9. Falsification
 

@@ -30,7 +30,7 @@ The record's Weyl projector is fixed in [nondegeneracy.md](../findings/nondegene
 
 $$R=W+\tfrac1{n-2}\Big(\mathrm{Ric}-\tfrac{s}{n}g\Big)\owedge g+\tfrac{s}{2n(n-1)}\,g\owedge g,\qquad (h\owedge k)_{ijkl}=h_{ik}k_{jl}+h_{jl}k_{ik}-h_{il}k_{jk}-h_{jk}k_{il}.$$
 
-**The projection term does not vanish.** Contracting the Kulkarni–Nomizu product gives $\mathrm{Ric}(h\owedge k)=(\operatorname{tr}h)k+(\operatorname{tr}k)h-hk-kh$. With $h\in S^2_0(\mathbb R^m)$ supported on the first block $B_1$ and $k=g_q$ the metric of the second block $B_2$: $\operatorname{tr}h=0$, $\operatorname{tr}g_q=m$, and $hg_q=g_qh=0$ by disjoint support. Hence
+**The projection term does not vanish.** Contracting the Kulkarni–Nomizu product gives $\mathrm{Ric}(h\owedge k)=(\mathop{\mathrm{tr}}h)k+(\mathop{\mathrm{tr}}k)h-hk-kh$. With $h\in S^2_0(\mathbb R^m)$ supported on the first block $B_1$ and $k=g_q$ the metric of the second block $B_2$: $\mathop{\mathrm{tr}}h=0$, $\mathop{\mathrm{tr}}g_q=m$, and $hg_q=g_qh=0$ by disjoint support. Hence
 
 $$\mathrm{Ric}(h\owedge g_q)=m\,h\ \ne\ 0,\qquad s=0 .$$
 
@@ -56,7 +56,7 @@ Two consistency checks the corrected form passes and the lemma's does not. **Ric
 
 ## V2, the norms, and the convention question falls the safe way
 
-The ratio $\lVert H\rVert_{op}/\lVert H\rVert_F$ is convention-independent here, and the brief's $\sqrt2$ trap is not sprung, for a reason worth stating: **both norms are read off the same object**, the diagonal of the $\Lambda^2$ operator in the coordinate-plane basis. [conventions.md](../findings/conventions.md) puts the $\tfrac12$ at the $\Lambda^2$ level, making $e_a\wedge e_b$ unit and $\operatorname{tr}(W^2)=\sum_\alpha\lambda_\alpha^2$ a sum over **unordered** planes, once each. Any rescaling of the basis rescales both norms alike. The place a $\sqrt2$ could enter, counting ordered pairs in $\lVert H\rVert_F$ while taking $\max$ over unordered ones in $\lVert H\rVert_{op}$, is not entered by either the lemma or this audit.
+The ratio $\lVert H\rVert_{op}/\lVert H\rVert_F$ is convention-independent here, and the brief's $\sqrt2$ trap is not sprung, for a reason worth stating: **both norms are read off the same object**, the diagonal of the $\Lambda^2$ operator in the coordinate-plane basis. [conventions.md](../findings/conventions.md) puts the $\tfrac12$ at the $\Lambda^2$ level, making $e_a\wedge e_b$ unit and $\mathop{\mathrm{tr}}(W^2)=\sum_\alpha\lambda_\alpha^2$ a sum over **unordered** planes, once each. Any rescaling of the basis rescales both norms alike. The place a $\sqrt2$ could enter, counting ordered pairs in $\lVert H\rVert_F$ while taking $\max$ over unordered ones in $\lVert H\rVert_{op}$, is not entered by either the lemma or this audit.
 
 **Frobenius.** At $\lVert h\rVert^2=\sum_ah_a^2=1$, the mixed planes contribute $m(1-c)^2$ and the $B_1$ planes contribute $c^2\sum_{a<b}(h_a+h_b)^2=c^2(m-2)$, using $\sum_{a\ne b}h_ah_b=(\sum h)^2-\sum h^2=-1$. Hence
 

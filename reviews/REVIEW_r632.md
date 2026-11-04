@@ -33,8 +33,8 @@ Nothing consumes L118 (§8).
 | symbol | reading adopted | where it is fixed |
 |---|---|---|
 | $\mathcal W_n$, $Q$, $W^\#$ | as tabled | [conventions.md](../findings/conventions.md) |
-| $\lVert W\rVert^2$ | $\operatorname{tr}_{\Lambda^2}(W^2)$ with $\{e_i\wedge e_j\}_{i<j}$ orthonormal; equivalently $\lvert R\rvert^2:=\sum_{ijkl}R_{ijkl}^2=4\lVert W\rVert^2$ | [conventions.md](../findings/conventions.md), "the two spectra" and the $M$ bullet; the $t\le2$ normalisation forces it |
-| $\theta$ | $P(W)/\lVert W\rVert^3$ with $P=\langle W,Q(W)\rangle=\operatorname{tr}(W^3)+\langle W,W^\#\rangle$. Throughout I write $x:=\operatorname{tr}(W^3)$, $y:=\langle W,W^\#\rangle$, $\lVert W\rVert=1$, so $\theta=x+y$ | [conventions.md](../findings/conventions.md) + the columns of [b_third_moment_refuted.py](../scripts/route-b/b_third_moment_refuted.py), which prints $y$ as `th - tr3` |
+| $\lVert W\rVert^2$ | $\mathop{\mathrm{tr}}_{\Lambda^2}(W^2)$ with $\{e_i\wedge e_j\}_{i<j}$ orthonormal; equivalently $\lvert R\rvert^2:=\sum_{ijkl}R_{ijkl}^2=4\lVert W\rVert^2$ | [conventions.md](../findings/conventions.md), "the two spectra" and the $M$ bullet; the $t\le2$ normalisation forces it |
+| $\theta$ | $P(W)/\lVert W\rVert^3$ with $P=\langle W,Q(W)\rangle=\mathop{\mathrm{tr}}(W^3)+\langle W,W^\#\rangle$. Throughout I write $x:=\mathop{\mathrm{tr}}(W^3)$, $y:=\langle W,W^\#\rangle$, $\lVert W\rVert=1$, so $\theta=x+y$ | [conventions.md](../findings/conventions.md) + the columns of [b_third_moment_refuted.py](../scripts/route-b/b_third_moment_refuted.py), which prints $y$ as `th - tr3` |
 | $\sec(\Sigma)$ | $\langle W\xi,\xi\rangle$ for the **unit** decomposable $\xi=x\wedge y$; equals the vertex-matrix entry $K_{ab}=W_{abab}$ in an adapted frame | [conventions.md](../findings/conventions.md) "the vertex matrix"; the script's docstring says the same |
 | $\Psi_k$ | $\mathbb E[\sec^k]$ over $G_2(\mathbb R^n)$ with the Fubini–Study density. **Not in conventions.md**, defined only in the script docstring and in [Weingart Cor. 2.6](../references/weingart-2017-moments-sectional-curvature/notes.md) |, |
 | $\Phi$ | **Not in conventions.md, and not definable as the block writes it** (§5). I adopt the only reading under which the identity can hold: $\Phi=\mathbb E[N_{xy}N_{yz}N_{zx}]$ with $N$ the *unnormalised* $R(x,y,x,y)$ and $x,y,z$ i.i.d. standard Gaussian | forced in §5 |
@@ -45,7 +45,7 @@ The brief's three warnings about `conventions.md` are inert here: $\mathfrak m$,
 
 ### 1.1 The normalisation is a Wishart moment, and it is the whole of the $n$-dependence
 
-Let $x,y\sim\mathcal N(0,I_n)$ be independent, $g:=\lVert x\wedge y\rVert^2=\lvert x\rvert^2\lvert y\rvert^2-\langle x,y\rangle^2$, and $N:=R(x,y,x,y)$. Then $N=\sec(\Sigma)\cdot g$ where $\Sigma=\operatorname{span}(x,y)$. Writing the $n\times2$ Gaussian matrix as $QR$, the frame $Q$ is uniform on the Stiefel manifold and **independent** of $R$; $\Sigma$ depends only on $Q$ and $g=\det(R^{\mathsf T}R)$ only on $R$. Hence
+Let $x,y\sim\mathcal N(0,I_n)$ be independent, $g:=\lVert x\wedge y\rVert^2=\lvert x\rvert^2\lvert y\rvert^2-\langle x,y\rangle^2$, and $N:=R(x,y,x,y)$. Then $N=\sec(\Sigma)\cdot g$ where $\Sigma=\mathop{\mathrm{span}}(x,y)$. Writing the $n\times2$ Gaussian matrix as $QR$, the frame $Q$ is uniform on the Stiefel manifold and **independent** of $R$; $\Sigma$ depends only on $Q$ and $g=\det(R^{\mathsf T}R)$ only on $R$. Hence
 
 $$\mathbb E[N^k]=\Psi_k\cdot\mathbb E[g^k].$$
 
@@ -57,11 +57,11 @@ This reproduces **Weingart's own denominator** $[m+2k-2]_{2k}$ in Corollary 2.6,
 
 ### 1.2 The numerators are $n$-independent
 
-$\mathbb E[N^k]$ is a Wick sum over perfect matchings of the $x$-slots and of the $y$-slots of $k$ copies of $R$. A pairing that joins two slots of the **same** copy contracts $R$ on slots $1,3$ (or $2,4$), giving $\operatorname{Ric}=0$. So every surviving matching pairs slots **across** copies: all $4k$ slots are consumed, no free index and no closed $\delta$-loop survives, and **no factor of $n$ can appear**. The surviving terms are complete contractions of $k$ curvature tensors with fixed combinatorial multiplicities; reducing each to a basis uses only the pair symmetries and the first Bianchi identity, both $n$-free. Hence
+$\mathbb E[N^k]$ is a Wick sum over perfect matchings of the $x$-slots and of the $y$-slots of $k$ copies of $R$. A pairing that joins two slots of the **same** copy contracts $R$ on slots $1,3$ (or $2,4$), giving $\mathop{\mathrm{Ric}}=0$. So every surviving matching pairs slots **across** copies: all $4k$ slots are consumed, no free index and no closed $\delta$-loop survives, and **no factor of $n$ can appear**. The surviving terms are complete contractions of $k$ curvature tensors with fixed combinatorial multiplicities; reducing each to a basis uses only the pair symmetries and the first Bianchi identity, both $n$-free. Hence
 
 $$\mathbb E[N^k]\ \text{is an $n$-independent polynomial in the complete contractions of $k$ Weyl tensors.}$$
 
-Identical reasoning applies to $\Phi=\mathbb E[N_{xy}N_{yz}N_{zx}]$: each of $x,y,z$ occupies four slots, split $2+2$ across two different copies, and the within-copy pairing again dies on $\operatorname{Ric}=0$. **$\Phi$ carries no $n$-dependence at all**, it has no normalising denominator, because no bivector was normalised.
+Identical reasoning applies to $\Phi=\mathbb E[N_{xy}N_{yz}N_{zx}]$: each of $x,y,z$ occupies four slots, split $2+2$ across two different copies, and the within-copy pairing again dies on $\mathop{\mathrm{Ric}}=0$. **$\Phi$ carries no $n$-dependence at all**, it has no normalising denominator, because no bivector was normalised.
 
 ### 1.3 Warm-up, fully derived: $\Psi_2$
 
@@ -77,9 +77,9 @@ It returns $1/70,1/140,1/252,1/420$ at $n=5,6,7,8$, [r70](REVIEW_r70.md)'s list 
 
 ### 1.4 $\Psi_3$
 
-By §1.1–1.2, $\Psi_3=\dfrac{\alpha\,x+\beta\,y}{D_n}$ with $\alpha,\beta$ **absolute constants**. Two of the terms are already identifiable: reducing the $8\times8=64$ surviving matchings modulo the per-copy pair symmetry leaves $8$ orbits of size $8$, and the coherent orbit (the one in which each shared index pair stays a bivector), contributes $8\operatorname{tr}(W^3)$, the answer one would get if $x\wedge y$ were an isotropic Gaussian bivector on $\Lambda^2$. The remaining seven orbits are the corrections for decomposability. **I did not finish that reduction by hand** (§9); instead I pin $(\alpha,\beta)$ from the record's own exact values and then test the result five ways:
+By §1.1–1.2, $\Psi_3=\dfrac{\alpha\,x+\beta\,y}{D_n}$ with $\alpha,\beta$ **absolute constants**. Two of the terms are already identifiable: reducing the $8\times8=64$ surviving matchings modulo the per-copy pair symmetry leaves $8$ orbits of size $8$, and the coherent orbit (the one in which each shared index pair stays a bivector), contributes $8\mathop{\mathrm{tr}}(W^3)$, the answer one would get if $x\wedge y$ were an isotropic Gaussian bivector on $\Lambda^2$. The remaining seven orbits are the corrections for decomposability. **I did not finish that reduction by hand** (§9); instead I pin $(\alpha,\beta)$ from the record's own exact values and then test the result five ways:
 
-$$\Psi_3=\frac{224\operatorname{tr}(W^3)-16\langle W,W^\#\rangle}{(n-1)n(n+1)(n+2)(n+3)(n+4)} .$$
+$$\Psi_3=\frac{224\mathop{\mathrm{tr}}(W^3)-16\langle W,W^\#\rangle}{(n-1)n(n+1)(n+2)(n+3)(n+4)} .$$
 
 | check | source | prediction | recorded |
 |---|---|---|---|
@@ -99,7 +99,7 @@ $$c_n\frac{224}{D_n}+\tfrac5{72}a_\Phi=1,\qquad c_n\frac{-16}{D_n}+\tfrac5{72}b_
 
 With the block's own $a_\Phi/b_\Phi=-\tfrac12$ it has the unique solution
 
-$$c_n=\frac{D_n}{144},\qquad \Phi=-8\operatorname{tr}(W^3)+16\langle W,W^\#\rangle .$$
+$$c_n=\frac{D_n}{144},\qquad \Phi=-8\mathop{\mathrm{tr}}(W^3)+16\langle W,W^\#\rangle .$$
 
 Multiplying through by $144$ and using $\mathbb E[N^3]=D_n\Psi_3$:
 
@@ -127,7 +127,7 @@ the unknowns $c_n/D_n$ and $\kappa$ solve a linear system with $n$-free coeffici
 
 ## 4. $n=4,5$, the identity is true there. REFUTED as scoped
 
-**Dimension count.** For $n\ge6$ the cubic invariant space is $2$-dimensional. At $n=5$ it is $1$-dimensional, with $\langle W,W^\#\rangle=2\operatorname{tr}(W^3)$; this is the same collapse the record records elsewhere as $P(W)=3\operatorname{tr}(W^3)$ on $\mathcal W_5$ ([r597](REVIEW_r597.md) citing [bispectral.md](../findings/bispectral.md)). At $n=4$ it is $1$-dimensional **over $O(4)$** (see the group question below) and the relation is the same. I checked the $n=4$ relation independently at $\mathbb{CP}^2$: $W_+=\tfrac1{\sqrt6}\operatorname{diag}(2,-1,-1)$, $W_-=0$, so $\lVert W\rVert=1$, $\operatorname{tr}(W^3)=6\cdot6^{-3/2}=1/\sqrt6$, and $\theta=3/\sqrt6=\sqrt{3/2}$, the record's value, and exactly $3\operatorname{tr}(W^3)$.
+**Dimension count.** For $n\ge6$ the cubic invariant space is $2$-dimensional. At $n=5$ it is $1$-dimensional, with $\langle W,W^\#\rangle=2\mathop{\mathrm{tr}}(W^3)$; this is the same collapse the record records elsewhere as $P(W)=3\mathop{\mathrm{tr}}(W^3)$ on $\mathcal W_5$ ([r597](REVIEW_r597.md) citing [bispectral.md](../findings/bispectral.md)). At $n=4$ it is $1$-dimensional **over $O(4)$** (see the group question below) and the relation is the same. I checked the $n=4$ relation independently at $\mathbb{CP}^2$: $W_+=\tfrac1{\sqrt6}\mathop{\mathrm{diag}}(2,-1,-1)$, $W_-=0$, so $\lVert W\rVert=1$, $\mathop{\mathrm{tr}}(W^3)=6\cdot6^{-3/2}=1/\sqrt6$, and $\theta=3/\sqrt6=\sqrt{3/2}$, the record's value, and exactly $3\mathop{\mathrm{tr}}(W^3)$.
 
 **Now the logic.** Put $y=2x$, $\theta=3x$ into the closed forms:
 
@@ -138,7 +138,7 @@ $$c_n\Psi_3+\tfrac5{72}\Phi=\frac{D_n}{144}\cdot\frac{192x}{D_n}+\frac5{72}\cdot
 
 **Charitable reading, and why it does not save the sentence.** In [r69](REVIEW_r69.md), in [r70](REVIEW_r70.md) and in the script docstring, "also false at $n=4,5$" attaches to the **fence post's negative claim** ("$\theta$ lies outside the span of the moments"), which is indeed false there in the strongest way: $\theta=315\,\Psi_3$ at $n=4$ and $\theta=945\,\Psi_3$ at $n=5$, so $\theta$ *is* a moment. The block dropped the antecedent, and the sentence now sits immediately after the display with "Also" pointing at it. **Both readings need the line rewritten**, because on the true reading the block asserts the opposite of what the numbers in the same sentence prove: $\theta\propto\Psi_3$ at $n=4,5$ is precisely the statement that the identity *does* hold there, degenerately.
 
-**Which group is in force.** $O(n)$, and $n=4$ is exactly where it matters. Under $SO(4)$ the cubic invariants of $\mathcal W_4$ are **$2$-dimensional** ($\operatorname{tr}(W_+^3)$ and $\operatorname{tr}(W_-^3)$ separately) and the block's dimension claim would be false. Orientation reversal swaps $\Lambda^2_\pm$, so only the sum survives $O(4)$, giving $1$. $\theta$, $\Psi_k$ and $\Phi$ are all defined without reference to orientation (the Grassmannian average is over $O(n)$-orbits, and Weingart's $\Psi^V_k$ are stated as $O(V,g)$-invariants), so **$O(4)$ is the right group and the block's count is correct**, but it is correct for a reason the block does not give, on the one $n$ where the two groups disagree, in a record where a neighbouring audit has already caught an $O$-versus-$SO$ confusion at this exact point. The hypothesis is owed in the text.
+**Which group is in force.** $O(n)$, and $n=4$ is exactly where it matters. Under $SO(4)$ the cubic invariants of $\mathcal W_4$ are **$2$-dimensional** ($\mathop{\mathrm{tr}}(W_+^3)$ and $\mathop{\mathrm{tr}}(W_-^3)$ separately) and the block's dimension claim would be false. Orientation reversal swaps $\Lambda^2_\pm$, so only the sum survives $O(4)$, giving $1$. $\theta$, $\Psi_k$ and $\Phi$ are all defined without reference to orientation (the Grassmannian average is over $O(n)$-orbits, and Weingart's $\Psi^V_k$ are stated as $O(V,g)$-invariants), so **$O(4)$ is the right group and the block's count is correct**, but it is correct for a reason the block does not give, on the one $n$ where the two groups disagree, in a record where a neighbouring audit has already caught an $O$-versus-$SO$ confusion at this exact point. The hypothesis is owed in the text.
 
 ## 5. $\Phi$ as written cannot be what the identity uses. REFUTED
 
@@ -162,11 +162,11 @@ Consequences for the record: (i) $\Phi$ and $\Psi_k$ must be defined in [convent
 
 **The shared $\theta$ is exact, and the record already knows it.** $\theta_0(6)^2=2\cdot5\cdot4/36=10/9$, so $S^3\times S^3$ sits at $\theta=\sqrt{10}/3=1.0540925533894598$. That $\mathbb{CP}^3$ shares it exactly is stated in at least four other places in this record, [INDEX-results.md](../findings/INDEX-results.md) result 9 (*"the two sharing $\theta=\sqrt{10}/3$ exactly"*), [LEDGER.md:24](../findings/LEDGER.md#L24), [LEDGER.md:886](../findings/LEDGER.md#L886) (*"Verified here"*) and [graded-half.md:233](../findings/graded-half.md#L233). **L118 reports it as an agreement "to $2\times10^{-16}$".** That is a roundoff check on a closed form the record holds; write $\sqrt{10}/3$ and the clause becomes a theorem.
 
-**The ratio $13.5$ is exact, and is now a two-line consequence.** By §1.4, $\Psi_3\propto224x-16y=240x-16\theta$ at fixed $\theta$, so the ratio is determined by $\operatorname{tr}W^3$ alone. With $x=\theta/10$ at $S^3\times S^3$ and $x=\tfrac{31}{60}\theta$ at $\mathbb{CP}^3$,
+**The ratio $13.5$ is exact, and is now a two-line consequence.** By §1.4, $\Psi_3\propto224x-16y=240x-16\theta$ at fixed $\theta$, so the ratio is determined by $\mathop{\mathrm{tr}}W^3$ alone. With $x=\theta/10$ at $S^3\times S^3$ and $x=\tfrac{31}{60}\theta$ at $\mathbb{CP}^3$,
 
 $$\frac{\Psi_3(\mathbb{CP}^3)}{\Psi_3(S^3\times S^3)}=\frac{240\cdot\frac{31}{60}-16}{240\cdot\frac1{10}-16}=\frac{124-16}{24-16}=\frac{108}8=\frac{27}2=13.5 .$$
 
-So yes, **a theorem reported as a measurement**, and the two rational splits $(\tfrac1{10},\tfrac9{10})$ and $(\tfrac{31}{60},\tfrac{29}{60})$ of $\theta$ into $(\operatorname{tr}W^3,\langle W,W^\#\rangle)$ are worth recording in their own right: they reproduce the block's decimals $0.105409/0.948683$ and $0.544614/0.509478$ exactly and are what actually separates the two points.
+So yes, **a theorem reported as a measurement**, and the two rational splits $(\tfrac1{10},\tfrac9{10})$ and $(\tfrac{31}{60},\tfrac{29}{60})$ of $\theta$ into $(\mathop{\mathrm{tr}}W^3,\langle W,W^\#\rangle)$ are worth recording in their own right: they reproduce the block's decimals $0.105409/0.948683$ and $0.544614/0.509478$ exactly and are what actually separates the two points.
 
 ## 7. Provenance, the Gate 2 sentence is false of this result
 
@@ -186,7 +186,7 @@ What the record *does* use is the **negative** fact, and it uses it twice: the c
 
 ## 9. What I did not do
 
-- **The two integer pairs $(224,-16)$ and $(-8,16)$ are pinned from the record's exact values, not derived from scratch here.** What is derived is everything else: the factorisation $\mathbb E[N^k]=\Psi_k\mathbb E[g^k]$, $\mathbb E[g^k]=[n+2k-2]_{2k}$, the $n$-independence of both numerators, $\Psi_2$ in full, and the consequences in §2–§6. The residual is a finite, purely combinatorial Wick reduction, for $\mathbb E[N^3]$, $8$ orbits (I identify the coherent one as $8\operatorname{tr}W^3$); for $\Phi$, $2\times4$ terms, each reduced to $\{\operatorname{tr}W^3,\langle W,W^\#\rangle\}$ by first Bianchi. **It is analysis, not computation, and it is owed**; it would make L118 self-contained. I flag it rather than assert it.
+- **The two integer pairs $(224,-16)$ and $(-8,16)$ are pinned from the record's exact values, not derived from scratch here.** What is derived is everything else: the factorisation $\mathbb E[N^k]=\Psi_k\mathbb E[g^k]$, $\mathbb E[g^k]=[n+2k-2]_{2k}$, the $n$-independence of both numerators, $\Psi_2$ in full, and the consequences in §2–§6. The residual is a finite, purely combinatorial Wick reduction, for $\mathbb E[N^3]$, $8$ orbits (I identify the coherent one as $8\mathop{\mathrm{tr}}W^3$); for $\Phi$, $2\times4$ terms, each reduced to $\{\mathop{\mathrm{tr}}W^3,\langle W,W^\#\rangle\}$ by first Bianchi. **It is analysis, not computation, and it is owed**; it would make L118 self-contained. I flag it rather than assert it.
 - The five independent recorded numbers in §1.4 are checks against the record's arithmetic, not new runs.
 - **No computation was performed for this review** and none is required to decide any item above. If the programme later wants the Wick reduction confirmed rather than hand-derived, the run would be seconds, evaluate $\mathbb E[N^3]$ and $\Phi$ by exact contraction on two random $\mathcal W_6$ points and compare with $224x-16y$ and $-8x+16y$, and would decide only whether my two pinned pairs are right; every structural conclusion (§2, §3, §4, §5, §6, §7, §8) stands without it, since each follows from the $n$-free form or from the block's own printed numbers.
 
@@ -199,6 +199,6 @@ What the record *does* use is the **negative** fact, and it uses it twice: the c
 1. **Rewrite the provenance sentence** (§7): r69 constructed, r70 did not see it, the two verdicts differ, first audit is this pair. Reconcile with [INDEX-results.md](../findings/INDEX-results.md) row 118.
 2. **Fix the definition of $\Phi$** (§5), unnormalised, three i.i.d. Gaussian vectors, and add $\Psi_k$ and $\Phi$ to [conventions.md](../findings/conventions.md) with their normalisations stated. Soften "$\theta$ is an explicit closed form in sectional-curvature moments" accordingly.
 3. **Strike "Also false at $n=4,5$"** (§4) and replace with: *the identity holds at $n=4,5$ but is non-unique there, the cubic invariants being $1$-dimensional over $O(4)$/$O(5)$; what is false there is the fence post's negative claim, since $\theta=315\Psi_3$ and $\theta=945\Psi_3$.* State $O$, not $SO$.
-4. **Record the closed forms**: $c_n=[n+4]_6/144$, $\Psi_3=(224\operatorname{tr}W^3-16\langle W,W^\#\rangle)/[n+4]_6$, $\Phi=16\langle W,W^\#\rangle-8\operatorname{tr}W^3$, and the $n$-free master form $\mathbb E[N^3]+10\Phi=144\theta$; cite Weingart Cor. 2.6 for the denominator.
+4. **Record the closed forms**: $c_n=[n+4]_6/144$, $\Psi_3=(224\mathop{\mathrm{tr}}W^3-16\langle W,W^\#\rangle)/[n+4]_6$, $\Phi=16\langle W,W^\#\rangle-8\mathop{\mathrm{tr}}W^3$, and the $n$-free master form $\mathbb E[N^3]+10\Phi=144\theta$; cite Weingart Cor. 2.6 for the denominator.
 5. **Replace the two measurements by their theorems** (§6): $\theta=\sqrt{10}/3$ at both points, and $13.5=\tfrac{108}8$ from the splits $\tfrac1{10}$ and $\tfrac{31}{60}$.
 6. **State the mechanism for the $n$-independence of $\tfrac5{72}$** (§3) (one sentence) since it is currently three data points standing in for a proof.

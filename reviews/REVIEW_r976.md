@@ -13,7 +13,7 @@ Throughout I write $n$ for the size of the matrices and keep $i,k$ for indices, 
 | 3 | max over $X_n$ is max of $f(Q)=\sum A_{ik}Q_{ik}^2$ over $O(n)$ | mathematics | **CONFIRMED**, in both directions, the fibres harmless |
 | 4 | $\mathrm df_Q[Q\Omega]=2\langle Q^{\mathsf T}(A\circ Q),\Omega\rangle$ | mathematics | **CONFIRMED**, re-derived |
 | 5 | criticality is exactly symmetry of $Q^{\mathsf T}(A\circ Q)$ | mathematics | **CONFIRMED**, an equivalence and not an implication |
-| 6 | $\{\operatorname{tr}=0\}$ is a face of $X_n$ relative to its affine hull | mathematics | **REFUTED as stated, and repaired**: $X_n$ is not convex for $n\ge3$ |
+| 6 | $\{\mathop{\mathrm{tr}}=0\}$ is a face of $X_n$ relative to its affine hull | mathematics | **REFUTED as stated, and repaired**: $X_n$ is not convex for $n\ge3$ |
 | 7 | the second-order condition is batch 21 transported | a shape | **the flag is right**, the correspondence is generic rather than a transport, and the condition is derived below |
 | 8 | avoidance is false, so the hand-down is the right thing to need | mixed | **CONFIRMED**, with an exact witness replacing the counts, and the theorem strengthened to unconditional |
 
@@ -23,9 +23,9 @@ Throughout I write $n$ for the size of the matrices and keep $i,k$ for indices, 
 
 **This follows from the block's own claims 1, 3 and 6 and nothing else, and it makes the face analysis unnecessary rather than wrong.**
 
-The block establishes that the value is a linear functional on $X_n$ and stops there. One more line finishes the problem. Every $Q^{\circ2}$ is doubly stochastic, so $X_n\subseteq B_n$. Every permutation matrix is orthostochastic, being $\varphi_r$ of itself, so $\Pi_n\subseteq X_n$. Birkhoff gives $B_n=\operatorname{conv}(\Pi_n)$, so
+The block establishes that the value is a linear functional on $X_n$ and stops there. One more line finishes the problem. Every $Q^{\circ2}$ is doubly stochastic, so $X_n\subseteq B_n$. Every permutation matrix is orthostochastic, being $\varphi_r$ of itself, so $\Pi_n\subseteq X_n$. Birkhoff gives $B_n=\mathop{\mathrm{conv}}(\Pi_n)$, so
 
-$$\Pi_n\subseteq X_n\subseteq B_n=\operatorname{conv}(\Pi_n)\subseteq\operatorname{conv}(X_n)\subseteq B_n,\qquad\text{hence}\qquad \operatorname{conv}(X_n)=B_n .$$
+$$\Pi_n\subseteq X_n\subseteq B_n=\mathop{\mathrm{conv}}(\Pi_n)\subseteq\mathop{\mathrm{conv}}(X_n)\subseteq B_n,\qquad\text{hence}\qquad \mathop{\mathrm{conv}}(X_n)=B_n .$$
 
 A linear functional has the same maximum over a set and over its convex hull, so $\max_{X_n}\langle R,A\rangle=\max_{B_n}\langle R,A\rangle$, and the right-hand maximum is attained at a vertex of $B_n$, which is a permutation matrix, which lies in $X_n$. **So the maximum of R28's frame functional is attained at a permutation matrix for every $A$, and computing it is a linear assignment problem, $\max_{\sigma\in S_n}\sum_iA_{i\sigma(i)}$.**
 
@@ -38,7 +38,7 @@ Two consequences, both of which bear on the rest of the round.
 
 ## Claim 1, CONFIRMED
 
-With $R=P^{\circ2}$ one has $R_{ik}=(p_k)_i^2$, so for diagonal $\hat U=\operatorname{diag}(u)$,
+With $R=P^{\circ2}$ one has $R_{ik}=(p_k)_i^2$, so for diagonal $\hat U=\mathop{\mathrm{diag}}(u)$,
 
 $$p_k^{\mathsf T}\hat Up_k=\sum_iu_i(p_k)_i^2=\sum_iu_iR_{ik}=(R^{\mathsf T}u)_k,$$
 
@@ -50,7 +50,7 @@ The identity uses only that $\hat U$ and $C$ are diagonal in the frame the index
 
 ## Claim 2, CONFIRMED
 
-$A_{ik}=u_i\cdot\beta\nu_k^2+c_i\cdot\nu_k$ is by inspection $u(\beta\nu^{\circ2})^{\mathsf T}+c\nu^{\mathsf T}$, a sum of two rank-one matrices, so $\operatorname{rank}A\le2$. Asserted on every draw of the screen.
+$A_{ik}=u_i\cdot\beta\nu_k^2+c_i\cdot\nu_k$ is by inspection $u(\beta\nu^{\circ2})^{\mathsf T}+c\nu^{\mathsf T}$, a sum of two rank-one matrices, so $\mathop{\mathrm{rank}}A\le2$. Asserted on every draw of the screen.
 
 **When it drops below 2**: exactly when $\{u,c\}$ is linearly dependent, or $\{\nu^{\circ2},\nu\}$ is, the latter meaning $\nu_k\in\{0,\lambda\}$ for a single $\lambda$ and every $k$. Generically the rank is exactly 2.
 
@@ -62,11 +62,11 @@ $f=\langle\cdot,A\rangle\circ\varphi_r$ by construction, since $f(Q)=\langle A,Q
 
 **The quantifier the brief asks about causes no trouble, and the reason is worth stating.** $f$ is constant on the fibres of $\varphi_r$, being a function of $\varphi_r(Q)$ alone. Hence
 
-$$\operatorname*{arg\,max}_{O(n)}f=\varphi_r^{-1}\Big(\operatorname*{arg\,max}_{X_n}\langle\cdot,A\rangle\Big),$$
+$$\mathop{\mathrm{arg\,max}}_{O(n)}f=\varphi_r^{-1}\Big(\mathop{\mathrm{arg\,max}}_{X_n}\langle\cdot,A\rangle\Big),$$
 
 an exact correspondence in both directions: a maximiser of $f$ pushes to a maximiser of the linear functional, and every preimage of a maximiser of the linear functional maximises $f$. **Nothing is lost and nothing spurious is gained.** The fibre of $\varphi_r$ over $R$ consists of the sign patterns $Q\mapsto D_1QD_2$ with $D_i$ diagonal signs, together with any further coincidences, and since splitting and zero-diagonality are both properties of the entrywise absolute values, they are constant on fibres too. So the block is entitled to use the correspondence to talk about where the maximum is, not only about its value.
 
-One wording point. "Maximising a quadratic form over the group" is right in the sense that $f(Q)=\sum_kq_k^{\mathsf T}D_kq_k$ with $q_k$ the $k$-th column and $D_k=\operatorname{diag}(A_{\cdot k})$, a sum of quadratic forms in the columns. It is not a quadratic form in $Q$ of the $\operatorname{tr}(Q^{\mathsf T}BQD)$ shape that the phrase often names in this literature, and a reader may expect the latter.
+One wording point. "Maximising a quadratic form over the group" is right in the sense that $f(Q)=\sum_kq_k^{\mathsf T}D_kq_k$ with $q_k$ the $k$-th column and $D_k=\mathop{\mathrm{diag}}(A_{\cdot k})$, a sum of quadratic forms in the columns. It is not a quadratic form in $Q$ of the $\mathop{\mathrm{tr}}(Q^{\mathsf T}BQD)$ shape that the phrase often names in this literature, and a reader may expect the latter.
 
 ## Claim 4, CONFIRMED, re-derived
 
@@ -76,7 +76,7 @@ Re-derived rather than checked, as the brief asks.
 
 **The differential.** $f(Q)=\sum_{i,k}A_{ik}Q_{ik}^2$ is a polynomial on all of $\mathbb R^{n\times n}$, with $\mathrm df_Q[Z]=2\sum_{i,k}A_{ik}Q_{ik}Z_{ik}=2\langle A\circ Q,Z\rangle$ for every ambient direction $Z$.
 
-**Moving $Q$ across the pairing.** $\langle X,QY\rangle=\operatorname{tr}(X^{\mathsf T}QY)=\operatorname{tr}((Q^{\mathsf T}X)^{\mathsf T}Y)=\langle Q^{\mathsf T}X,Y\rangle$, valid for any $Q$ whatever, orthogonality unused. With $X=A\circ Q$ and $Z=Q\Omega$ this gives $\mathrm df_Q[Q\Omega]=2\langle Q^{\mathsf T}(A\circ Q),\Omega\rangle$.
+**Moving $Q$ across the pairing.** $\langle X,QY\rangle=\mathop{\mathrm{tr}}(X^{\mathsf T}QY)=\mathop{\mathrm{tr}}((Q^{\mathsf T}X)^{\mathsf T}Y)=\langle Q^{\mathsf T}X,Y\rangle$, valid for any $Q$ whatever, orthogonality unused. With $X=A\circ Q$ and $Z=Q\Omega$ this gives $\mathrm df_Q[Q\Omega]=2\langle Q^{\mathsf T}(A\circ Q),\Omega\rangle$.
 
 **Whether the tangent should be $Q\Omega$ or $\Omega Q$, and whether it matters.** Both parametrise the same tangent space, $T_QO(n)=\{Q\Omega:\Omega^{\mathsf T}=-\Omega\}=\{\Omega'Q:\Omega'^{\mathsf T}=-\Omega'\}$, related by $\Omega'=Q\Omega Q^{\mathsf T}$, which is skew when $\Omega$ is. Running the derivation the other way gives $\mathrm df_Q[\Omega'Q]=2\langle(A\circ Q)Q^{\mathsf T},\Omega'\rangle$, so the right-multiplied version produces the condition that $(A\circ Q)Q^{\mathsf T}$ be symmetric. **The two conditions are equivalent**, since $(A\circ Q)Q^{\mathsf T}=Q\big(Q^{\mathsf T}(A\circ Q)\big)Q^{\mathsf T}$ and conjugation by an orthogonal matrix preserves symmetry. So the choice is presentational.
 
@@ -94,11 +94,11 @@ The Lean row is again honest. Calling `grad_pairing` the algebraic half and decl
 
 ## Claim 6, REFUTED as stated, and repaired
 
-**The three facts about $\operatorname{tr}$ are all correct.** $\operatorname{tr}(R)=\sum_iQ_{ii}^2\ge0$ on the image, it vanishes iff every $Q_{ii}=0$, which is exactly "the image of a zero-diagonal $Q$", and it is nonconstant because $\varphi_r(I)=I$ has trace $n$ while for $n\ge2$ the swap has trace $0$. The three Lean declarations typing exactly these three facts, with no hypotheses, are correctly scoped.
+**The three facts about $\mathop{\mathrm{tr}}$ are all correct.** $\mathop{\mathrm{tr}}(R)=\sum_iQ_{ii}^2\ge0$ on the image, it vanishes iff every $Q_{ii}=0$, which is exactly "the image of a zero-diagonal $Q$", and it is nonconstant because $\varphi_r(I)=I$ has trace $n$ while for $n\ge2$ the swap has trace $0$. The three Lean declarations typing exactly these three facts, with no hypotheses, are correctly scoped.
 
 **The inference to "a face relative to the affine hull" is where it fails.** The implication "an affine functional nonnegative on $C$ and vanishing somewhere cuts out a face of $C$" is a theorem of convex geometry and uses the convexity of $C$. **$X_n$ is not convex for any $n\ge3$**, and here is a self-contained proof by dimension rather than by exhibiting a doubly stochastic non-orthostochastic matrix.
 
-- $X_n$ contains every permutation matrix, and the permutation matrices affinely span the affine hull of $B_n$, of dimension $(n-1)^2$. So $\dim\operatorname{aff}(X_n)=(n-1)^2$.
+- $X_n$ contains every permutation matrix, and the permutation matrices affinely span the affine hull of $B_n$, of dimension $(n-1)^2$. So $\dim\mathop{\mathrm{aff}}(X_n)=(n-1)^2$.
 - $X_n=\varphi_r(O(n))$ is the smooth image of a compact manifold of dimension $n(n-1)/2$, so it has Hausdorff dimension at most $n(n-1)/2$ and in particular empty interior relative to its affine hull whenever $n(n-1)/2<(n-1)^2$, that is whenever $n>2$.
 - A convex set has the dimension of its affine hull. $X_n$ does not, for $n\ge3$. So it is not convex.
 
@@ -106,10 +106,10 @@ At $n=2$ the claim is fine, $X_2=B_2$ being a segment. For $n\ge3$ the word "fac
 
 **The repair, which is what makes the headline above work.** Two true statements sit underneath the false one.
 
-1. $F=\{\operatorname{tr}=0\}\cap B_n$ is a genuine face of the Birkhoff polytope, by the convex-geometry theorem applied where its hypothesis holds, and $\operatorname{tr}$ is affine everywhere and nonconstant on $\operatorname{aff}(B_n)=\operatorname{aff}(X_n)$. The set the block cares about is $X_n\cap F$.
-2. Without any convexity, $\{\operatorname{tr}=0\}\cap X_n$ is the set of **minimisers of an affine functional over $X_n$**, which is the property any argument would actually use. This is the extended sense in which the block's instinct is right.
+1. $F=\{\mathop{\mathrm{tr}}=0\}\cap B_n$ is a genuine face of the Birkhoff polytope, by the convex-geometry theorem applied where its hypothesis holds, and $\mathop{\mathrm{tr}}$ is affine everywhere and nonconstant on $\mathop{\mathrm{aff}}(B_n)=\mathop{\mathrm{aff}}(X_n)$. The set the block cares about is $X_n\cap F$.
+2. Without any convexity, $\{\mathop{\mathrm{tr}}=0\}\cap X_n$ is the set of **minimisers of an affine functional over $X_n$**, which is the property any argument would actually use. This is the extended sense in which the block's instinct is right.
 
-**Why the failure is quiet, as the brief predicted.** Nothing downstream in the block breaks, because the block never uses a face property. It uses only that $\operatorname{tr}$ is nonnegative and vanishes exactly there. The damage is that the word "face" invites the reader to import convexity, and once convexity is imported the reader is one step from the Birkhoff argument, which is the step nobody took. **The correction is therefore productive rather than pedantic: repairing the word to "a face of $B_n$, met in $X_n$" is what exposes $\operatorname{conv}(X_n)=B_n$ and finishes the problem.**
+**Why the failure is quiet, as the brief predicted.** Nothing downstream in the block breaks, because the block never uses a face property. It uses only that $\mathop{\mathrm{tr}}$ is nonnegative and vanishes exactly there. The damage is that the word "face" invites the reader to import convexity, and once convexity is imported the reader is one step from the Birkhoff argument, which is the step nobody took. **The correction is therefore productive rather than pedantic: repairing the word to "a face of $B_n$, met in $X_n$" is what exposes $\mathop{\mathrm{conv}}(X_n)=B_n$ and finishes the problem.**
 
 ## Claim 7, the second-order condition, derived
 
@@ -119,15 +119,15 @@ The brief says deriving it is worth more than a verdict, so here it is, derived 
 
 $$g''(0)=2\big\langle A,(Q\Omega)^{\circ2}\big\rangle+2\big\langle A\circ Q,\,Q\Omega^2\big\rangle .$$
 
-**The first term, column by column.** With $\omega_k$ the $k$-th column of $\Omega$ one has $(Q\Omega)_{\cdot k}=Q\omega_k$, so with $D_k=\operatorname{diag}(A_{\cdot k})$,
+**The first term, column by column.** With $\omega_k$ the $k$-th column of $\Omega$ one has $(Q\Omega)_{\cdot k}=Q\omega_k$, so with $D_k=\mathop{\mathrm{diag}}(A_{\cdot k})$,
 
 $$\big\langle A,(Q\Omega)^{\circ2}\big\rangle=\sum_k\sum_iA_{ik}(Q\omega_k)_i^2=\sum_k\omega_k^{\mathsf T}\big(Q^{\mathsf T}D_kQ\big)\omega_k .$$
 
-**The second term.** Moving $Q$ across the pairing as in claim 4 gives $\langle A\circ Q,Q\Omega^2\rangle=\langle S,\Omega^2\rangle$ with $S=Q^{\mathsf T}(A\circ Q)$, and skewness gives $\Omega^2=-\Omega\Omega^{\mathsf T}$, so $\langle S,\Omega^2\rangle=-\operatorname{tr}(S^{\mathsf T}\Omega\Omega^{\mathsf T})=-\sum_k\omega_k^{\mathsf T}S\omega_k$. The last step uses $\omega^{\mathsf T}S^{\mathsf T}\omega=\omega^{\mathsf T}S\omega$ for a scalar, so **no symmetry of $S$ is needed** and the identity holds at every $Q$, critical or not.
+**The second term.** Moving $Q$ across the pairing as in claim 4 gives $\langle A\circ Q,Q\Omega^2\rangle=\langle S,\Omega^2\rangle$ with $S=Q^{\mathsf T}(A\circ Q)$, and skewness gives $\Omega^2=-\Omega\Omega^{\mathsf T}$, so $\langle S,\Omega^2\rangle=-\mathop{\mathrm{tr}}(S^{\mathsf T}\Omega\Omega^{\mathsf T})=-\sum_k\omega_k^{\mathsf T}S\omega_k$. The last step uses $\omega^{\mathsf T}S^{\mathsf T}\omega=\omega^{\mathsf T}S\omega$ for a scalar, so **no symmetry of $S$ is needed** and the identity holds at every $Q$, critical or not.
 
 **The condition.** At every local maximum of $f$ on $O(n)$, for every skew $\Omega$,
 
-$$\boxed{\ \sum_{k=1}^n\omega_k^{\mathsf T}\Big(Q^{\mathsf T}D_kQ-S\Big)\omega_k\ \le\ 0,\qquad D_k=\operatorname{diag}(A_{\cdot k}),\quad S=Q^{\mathsf T}(A\circ Q).\ }$$
+$$\boxed{\ \sum_{k=1}^n\omega_k^{\mathsf T}\Big(Q^{\mathsf T}D_kQ-S\Big)\omega_k\ \le\ 0,\qquad D_k=\mathop{\mathrm{diag}}(A_{\cdot k}),\quad S=Q^{\mathsf T}(A\circ Q).\ }$$
 
 Screened against a central second difference of $g$, worst relative error $1.4\cdot10^{-6}$ over 120 draws at $n=3,4,5,6$, asserted.
 
@@ -141,13 +141,13 @@ an identity at every $Q$, screened at $2.7\cdot10^{-15}$ and asserted. So **at e
 
 $$\big\langle A_{\cdot a}-A_{\cdot b},\ R_{\cdot a}-R_{\cdot b}\big\rangle\ \ge\ 0 .$$
 
-Columns $a$ and $b$ of $R$ must be similarly ordered against columns $a$ and $b$ of $A$. This is a pairwise exchange condition, and it needs no criticality hypothesis, because only $\operatorname{diag}S$ entered.
+Columns $a$ and $b$ of $R$ must be similarly ordered against columns $a$ and $b$ of $A$. This is a pairwise exchange condition, and it needs no criticality hypothesis, because only $\mathop{\mathrm{diag}}S$ entered.
 
 **Verdict on the shape.** The block is **right to flag it as a shape rather than a theorem**, and right that the flag matters. On the correspondence itself:
 
 - **Plausible at the generic level.** Both objects are a multiplier condition plus a non-positive second variation on a tangent space. Every constrained problem has that. Asserting it costs nothing and proves nothing.
 - **Not a transport, and the words "with the frame in place of $(\hat U,V)$" are the part that misleads.** The constraint manifold is $O(n)$ here and a sphere in pairs of traceless symmetric matrices there. The multiplier is a symmetric **matrix** $S$ here and a **scalar** $\mu$ there. The objective is quadratic here and cubic-plus-linear there. Most of all, the roles are exchanged: at $\lvert J\rvert=3$ the fields move and the frame is fixed, here the frame moves and the fields are fixed. Neither condition implies the other and there is no map between them on offer.
-- **Nothing batch 21 specifically contains transports.** Its content is the cross term $4\beta\operatorname{tr}(XVY)$ as the only second-order lever on non-commutativity, and the specialisation $\mu\ge\alpha\lvert u_{\min}\rvert$. There is no second matrix here to fail to commute with anything, and the analogue of that specialisation is the exchange inequality above, which bounds nothing and instead sorts two columns. The one genuine echo is that both specialisations come out as rearrangement statements.
+- **Nothing batch 21 specifically contains transports.** Its content is the cross term $4\beta\mathop{\mathrm{tr}}(XVY)$ as the only second-order lever on non-commutativity, and the specialisation $\mu\ge\alpha\lvert u_{\min}\rvert$. There is no second matrix here to fail to commute with anything, and the analogue of that specialisation is the exchange inequality above, which bounds nothing and instead sorts two columns. The one genuine echo is that both specialisations come out as rearrangement statements.
 - **The risk to name.** A shape cited later as a result is [trap 69](../findings/INDEX-traps.md) wearing different clothes. If a later rung cites "the general $\lvert J\rvert$ rung is batch 21 transported" as an input, that citation must be refused until someone writes the map down. The Lean row, "none: a claim about what a computation would resemble, which is not a proposition", is the correct refusal and should be quoted wherever the sentence is.
 
 ## Claim 8, CONFIRMED, with the counts replaced by a witness
@@ -177,7 +177,7 @@ An independent implementation, written for this review, not imported from the bl
 | control | what it asserts | result |
 |---|---|---|
 | C1 | the frame expression equals $\langle R,A\rangle$, at $n=3,4,5,6$ | $1.4\cdot10^{-14}$ |
-| C2 | $\operatorname{rank}A\le2$ on every draw | pass |
+| C2 | $\mathop{\mathrm{rank}}A\le2$ on every draw | pass |
 | C3 | the gradient identity, for **every** $W$ and not only skew, against a central difference | $4.4\cdot10^{-9}$ |
 | C4 | $\langle S,\Omega\rangle=0$ for all skew $\Omega$ iff $S$ is symmetric, over 200 random $S$ | pass |
 | C5 | the second-variation formula against a central second difference | $1.4\cdot10^{-6}$ |

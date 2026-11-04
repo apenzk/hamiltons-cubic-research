@@ -17,11 +17,11 @@
 
 **findings/sym3-blocks.md:326**,
 
-> $F_5=\tfrac32\|W\|^6-9\operatorname{tr}(W^3)^2$ is a sum of squares of cubics vanishing on the $O(5)$-orbit of $W_0$, the padded $W_{\CP^2}$. Hence $\theta\le\sqrt{3/2}$ on $\Weyl_5$, with equality exactly on that orbit.
+> $F_5=\tfrac32\|W\|^6-9\mathop{\mathrm{tr}}(W^3)^2$ is a sum of squares of cubics vanishing on the $O(5)$-orbit of $W_0$, the padded $W_{\CP^2}$. Hence $\theta\le\sqrt{3/2}$ on $\Weyl_5$, with equality exactly on that orbit.
 
 **results.md:204**,
 
-> $F_5=\tfrac32\lVert W\rVert^6-9\operatorname{tr}(W^3)^2$ is a sum of squares of cubics vanishing on the $O(5)$-orbit of padded $W_{\mathbb{CP}^2}$, **with exact rational coefficients**. Hence $\theta\le\sqrt{3/2}$ on all of $\mathcal W_5$, critical or not, with equality exactly on that orbit.
+> $F_5=\tfrac32\lVert W\rVert^6-9\mathop{\mathrm{tr}}(W^3)^2$ is a sum of squares of cubics vanishing on the $O(5)$-orbit of padded $W_{\mathbb{CP}^2}$, **with exact rational coefficients**. Hence $\theta\le\sqrt{3/2}$ on all of $\mathcal W_5$, critical or not, with equality exactly on that orbit.
 
 **results.md:23**, the status table,
 
@@ -95,7 +95,7 @@ v61 found a second computation the other four reports missed: [run_n5_assemble.p
 
 - **Same points.** [c4_ev_injective.py:26](../scripts/reviewers/r213/c4_ev_injective.py) sets `random.seed(20260829)` and draws 35 `randint(-4,4)` per sample, skipping draw 0. [run_n5_assemble.py:894](../scripts/runs/run_n5_assemble.py) sets `_r5.seed(20260829)` and `rand_weyl_tensor()` draws 35 `randint(-4,4)`, with `_probe` consuming draw 0. **Identical seed, identical draw shape, identical offset, the two point sets are the same 40 tensors.**
 - **Rank 14, exactly, at several primes.** `sampled rank at 40 points, mod 1000033: 14` and the same at `1099511627873` and `1099511627933`.
-- **The cap is exact and independent**, so $14=\operatorname{rank}_{\mathbb F_p}\le\operatorname{rank}_{\mathbb Q}\le14$ closes it. With the cap in force, injectivity is a *lower* bound, and a lower bound is exactly what a mod-$p$ reduction gives.
+- **The cap is exact and independent**, so $14=\mathop{\mathrm{rank}}_{\mathbb F_p}\le\mathop{\mathrm{rank}}_{\mathbb Q}\le14$ closes it. With the cap in force, injectivity is a *lower* bound, and a lower bound is exactly what a mod-$p$ reduction gives.
 
 **Resolution: the step is VALID. D1 is not a defect in the mathematics.** It is three defects in the record of it:
 
@@ -107,7 +107,7 @@ v61 found a second computation the other four reports missed: [run_n5_assemble.p
 
 ### D2, confirmed, and the failure is structural
 
-Both adjudicators derived the same identity independently: with $P=3\operatorname{tr}(W^3)$ on $\mathcal W_5$,
+Both adjudicators derived the same identity independently: with $P=3\mathop{\mathrm{tr}}(W^3)$ on $\mathcal W_5$,
 
 $$F_5(W)=\lVert W\rVert^6\left(\tfrac32-\theta(W)^2\right).$$
 

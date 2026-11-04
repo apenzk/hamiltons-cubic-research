@@ -22,18 +22,18 @@ Scope: the working-tree file (uncommitted), [L228Statement.lean](../lean/Hamilto
 
 ## (4) The combination, by hand
 
-- `L228_item1` gives $P=\texttt{cubicX}+\sum_{a\ne b}\beta_{ab}\operatorname{tr}(X_aX_b)+P_0$.
-- `sum_ne_succ` (symmetry of $\beta$ from `hK`, of the trace pairing from `trace_mul_comm`) splits the Gram sum as $2\sum_i\beta_{0,i+1}\operatorname{tr}(X_0X_{i+1})$ plus the pairs among the others, and `hB0` rewrites the first as $\operatorname{tr}(X_0\cdot2B)$ with $B=\sum_i\beta_{0,i+1}X_{i+1}$.
-- `cubic_split` gives $6\operatorname{tr}X_0^3+9\operatorname{tr}(X_0^2R)+\operatorname{tr}(X_0(6R^2+3T))+[2\operatorname{tr}R^3+3\operatorname{tr}(RT)+\sum\operatorname{tr}X_c^3]$. Adding, the $X_0$ part is $6\operatorname{tr}X_0^3+9\operatorname{tr}(X_0^2R)+\operatorname{tr}(X_0L)$ with $L=6R^2+3T+2B$, as briefed.
-- `complete_square Y R L` with $X_0=Y-\tfrac12R$ gives $6\operatorname{tr}Y^3+\operatorname{tr}(Y(L-\tfrac92R^2))+\tfrac32\operatorname{tr}R^3-\tfrac12\operatorname{tr}(RL)$, and $L-\tfrac92R^2=\tfrac32R^2+3T+2B=\ell'$ (`hL'`, by `module`).
-- `cA` is exactly the bracket from `cubic_split`, plus $\tfrac32\operatorname{tr}R^3-\tfrac12\operatorname{tr}(RL)$ with $L$ written out, plus the Gram pairs among the others, plus `P0`. The closing `linarith` over `hsplit`, `hsq`, `hLs`, `hB0` is the linear combination this describes.
+- `L228_item1` gives $P=\texttt{cubicX}+\sum_{a\ne b}\beta_{ab}\mathop{\mathrm{tr}}(X_aX_b)+P_0$.
+- `sum_ne_succ` (symmetry of $\beta$ from `hK`, of the trace pairing from `trace_mul_comm`) splits the Gram sum as $2\sum_i\beta_{0,i+1}\mathop{\mathrm{tr}}(X_0X_{i+1})$ plus the pairs among the others, and `hB0` rewrites the first as $\mathop{\mathrm{tr}}(X_0\cdot2B)$ with $B=\sum_i\beta_{0,i+1}X_{i+1}$.
+- `cubic_split` gives $6\mathop{\mathrm{tr}}X_0^3+9\mathop{\mathrm{tr}}(X_0^2R)+\mathop{\mathrm{tr}}(X_0(6R^2+3T))+[2\mathop{\mathrm{tr}}R^3+3\mathop{\mathrm{tr}}(RT)+\sum\mathop{\mathrm{tr}}X_c^3]$. Adding, the $X_0$ part is $6\mathop{\mathrm{tr}}X_0^3+9\mathop{\mathrm{tr}}(X_0^2R)+\mathop{\mathrm{tr}}(X_0L)$ with $L=6R^2+3T+2B$, as briefed.
+- `complete_square Y R L` with $X_0=Y-\tfrac12R$ gives $6\mathop{\mathrm{tr}}Y^3+\mathop{\mathrm{tr}}(Y(L-\tfrac92R^2))+\tfrac32\mathop{\mathrm{tr}}R^3-\tfrac12\mathop{\mathrm{tr}}(RL)$, and $L-\tfrac92R^2=\tfrac32R^2+3T+2B=\ell'$ (`hL'`, by `module`).
+- `cA` is exactly the bracket from `cubic_split`, plus $\tfrac32\mathop{\mathrm{tr}}R^3-\tfrac12\mathop{\mathrm{tr}}(RL)$ with $L$ written out, plus the Gram pairs among the others, plus `P0`. The closing `linarith` over `hsplit`, `hsq`, `hLs`, `hB0` is the linear combination this describes.
 
 ## (5) The norm
 
-- `L228_item1`'s norm with `Fin.sum_univ_succ` twice: $\lvert X_0+R\rvert^2+\lvert X_0\rvert^2+\sum_{c\ne0}\lvert X_c\rvert^2+N_0=2\lvert X_0\rvert^2+2\operatorname{tr}(X_0R)+\lvert R\rvert^2+\cdots$ (`hXX`), and `complete_square_norm` turns $2\lvert X_0\rvert^2+2\operatorname{tr}(X_0R)$ into $2\lvert Y\rvert^2-\tfrac12\lvert R\rvert^2$. Total $2\lvert Y\rvert^2+\tfrac12\lvert R\rvert^2+\sum_{c\ne0}\lvert X_c\rvert^2+N_0$, which is $2\lvert Y\rvert^2+$`nA`.
+- `L228_item1`'s norm with `Fin.sum_univ_succ` twice: $\lvert X_0+R\rvert^2+\lvert X_0\rvert^2+\sum_{c\ne0}\lvert X_c\rvert^2+N_0=2\lvert X_0\rvert^2+2\mathop{\mathrm{tr}}(X_0R)+\lvert R\rvert^2+\cdots$ (`hXX`), and `complete_square_norm` turns $2\lvert X_0\rvert^2+2\mathop{\mathrm{tr}}(X_0R)$ into $2\lvert Y\rvert^2-\tfrac12\lvert R\rvert^2$. Total $2\lvert Y\rvert^2+\tfrac12\lvert R\rvert^2+\sum_{c\ne0}\lvert X_c\rvert^2+N_0$, which is $2\lvert Y\rvert^2+$`nA`.
 - $\lvert Y\rvert^2$ is written `(Y * Y).trace`, which is the Frobenius square since $Y$ is symmetric under `hXs`.
 
-**Screen, reported as a screen only.** Exact rational arithmetic at four outer blocks, three random draws of symmetric traceless $X_c$, $t$, symmetric zero-diagonal $K$: `cubicX` plus the Gram sum minus $(6\operatorname{tr}Y^3+\operatorname{tr}(Y\ell')+c_a-P_0)$ is $0$, and the norm residual is $0$, in all three.
+**Screen, reported as a screen only.** Exact rational arithmetic at four outer blocks, three random draws of symmetric traceless $X_c$, $t$, symmetric zero-diagonal $K$: `cubicX` plus the Gram sum minus $(6\mathop{\mathrm{tr}}Y^3+\mathop{\mathrm{tr}}(Y\ell')+c_a-P_0)$ is $0$, and the norm residual is $0$, in all three.
 
 ## (6) The INDEX row
 
@@ -43,8 +43,8 @@ Scope: the working-tree file (uncommitted), [L228Statement.lean](../lean/Hamilto
 ## Falsifiers
 
 - `sum_ne_succ`: a symmetric `f` on `Fin (m + 1)` whose ordered off-diagonal sum differs from twice the pairs through `0` plus the pairs among the others.
-- `L228_item2`, value: symmetric traceless blocks, reals `t`, symmetric zero-diagonal `K` with `Pcubic (blockOp …)` different from $6\operatorname{tr}Y^3+\operatorname{tr}(Y\ell')+$`cA`.
-- `L228_item2`, norm: the same data with `normSq (blockOp …)` different from $2\operatorname{tr}Y^2+$`nA`.
+- `L228_item2`, value: symmetric traceless blocks, reals `t`, symmetric zero-diagonal `K` with `Pcubic (blockOp …)` different from $6\mathop{\mathrm{tr}}Y^3+\mathop{\mathrm{tr}}(Y\ell')+$`cA`.
+- `L228_item2`, norm: the same data with `normSq (blockOp …)` different from $2\mathop{\mathrm{tr}}Y^2+$`nA`.
 - "Free of $X_a$" (`cA`, `nA`): true by their signatures, so no object falsifies it.
 - The "for each $a$" reading: a permutation $\sigma$ of `Fin (m + 1)` with `Pcubic` or `normSq` of `blockOp` changing under the permuted data.
 

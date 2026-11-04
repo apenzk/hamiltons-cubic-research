@@ -7,14 +7,14 @@
 | Step | Verdict |
 |---|---|
 | 1. Petersen–Stanfield input | **CONFIRMED**, and re-derived without the paper |
-| 2. Weyl projection, $\mathrm{scal}=2\operatorname{tr}R$ | **CONFIRMED** |
+| 2. Weyl projection, $\mathrm{scal}=2\mathop{\mathrm{tr}}R$ | **CONFIRMED** |
 | 3. Multinomial and vanishing $S$-blocks | **CONFIRMED** |
 | 4. Block masses and $S_{333}$ | **CONFIRMED**; the brief's suspected premise does not exist |
 | The closed form | **CONFIRMED**, reproduced from an independent chain, difference $0$ |
 
 ## Steps 1–4
 
-The eigenvalues were re-derived from the symmetric pair alone: $R=\iota\circ\iota^*$, so on each simple ideal it is the scalar $t_i=\langle\cdot,\cdot\rangle_{\mathfrak{so}(4m)}/B|_{\mathfrak k_i}$. With $\mathfrak g=\mathfrak{sp}(m{+}1)$: $\mathfrak{sp}(1)$ acts by **right** quaternion multiplication ($t_1=m/(2(m+2))$), $\mathfrak{sp}(m)$ by **left** ($t_2=1/(2(m+2))$), and $t_3=0$ by Ambrose–Singer. **Absolute normalisation included, not just the ratio.** Cross-check: $\operatorname{tr}R=m$, $\mathrm{scal}=2m$, $\mathrm{Ric}=\tfrac12g$, the universal Einstein constant of the Killing metric.
+The eigenvalues were re-derived from the symmetric pair alone: $R=\iota\circ\iota^*$, so on each simple ideal it is the scalar $t_i=\langle\cdot,\cdot\rangle_{\mathfrak{so}(4m)}/B|_{\mathfrak k_i}$. With $\mathfrak g=\mathfrak{sp}(m{+}1)$: $\mathfrak{sp}(1)$ acts by **right** quaternion multiplication ($t_1=m/(2(m+2))$), $\mathfrak{sp}(m)$ by **left** ($t_2=1/(2(m+2))$), and $t_3=0$ by Ambrose–Singer. **Absolute normalisation included, not just the ratio.** Cross-check: $\mathop{\mathrm{tr}}R=m$, $\mathrm{scal}=2m$, $\mathrm{Ric}=\tfrac12g$, the universal Einstein constant of the Killing metric.
 
 Block masses verified **without index bookkeeping**, as $c_{\mathfrak k}=(-\mathrm{Killing}_{\mathfrak k})/\langle\cdot,\cdot\rangle_{\rm ambient}$: $c_{\mathfrak{sp}(1)}=8/(2m)=4/m$, $c_{\mathfrak{sp}(m)}=4(m+1)/2=2(m+1)$. At $m=1$ both describe $\mathfrak{sp}(1)$ on $\mathbb R^4$ and both return $4$.
 

@@ -46,7 +46,7 @@ $T(\hat A,\hat A,\nu)=\langle Q(\hat A),\nu\rangle=0$ kills the $\cos^2\varphi\s
 
 ## 6. The bullets
 
-- **"The ascent direction must leave $\operatorname{span}\{W,\pi_DW\}$"**: the unit tangents at $W$ in that 2-plane are $\pm u$, and the second variation is even, so no ascent direction lies in the plane. CONFIRMED, read as "is not contained in"; an ascent direction may still carry a $u$-component.
+- **"The ascent direction must leave $\mathop{\mathrm{span}}\{W,\pi_DW\}$"**: the unit tangents at $W$ in that 2-plane are $\pm u$, and the second variation is even, so no ascent direction lies in the plane. CONFIRMED, read as "is not contained in"; an ascent direction may still carry a $u$-component.
 - **The block form**: expanding with $T(\hat A,x,y)=0$ and $T(\nu,x,x)=T(x,x,\nu)=0$ gives exactly the displayed form, factors and signs correct. **It is the form on $W^\perp\ominus u$, not on $W^\perp$.** The $u$-row: using $\langle Q(W),x\rangle=0$ for $x\in D\ominus\hat A$ (so $a^2\langle Q(\hat A),x\rangle=-b^2\langle Q(\nu),x\rangle$, and along $y$, $b\langle Q(\nu),y\rangle=-2a\langle\hat A\circ\nu,y\rangle$),
 $$T(W,u,x)=\tfrac ba\langle Q(\nu),x\rangle,\qquad T(W,u,y)=(a^2-b^2)\langle\hat A\circ\nu,y\rangle+ab\langle Q(\nu),y\rangle=-\langle\hat A\circ\nu,y\rangle,$$
 both nonzero in general. So with $u$ strictly negative the full form can still have a positive eigenvalue through these couplings. The two candidate families remain valid sufficient tests (each is a sub-block of the form on $W^\perp$), but "what it leaves" is the form on all of $W^\perp$, and a complete test must carry the $u$-row. Correction: add the $u$-row to the display or say the form is on $W^\perp\ominus u$.

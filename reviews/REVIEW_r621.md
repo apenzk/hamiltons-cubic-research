@@ -6,12 +6,12 @@ Reviewer r621, independent adversarial audit, cold from the definitions in [conv
 
 ## Verdict
 
-**REFUTED as stated, the heading names the wrong half of the symmetric pair, and the object it names is a maximal isotropic subspace at no $(p,q)$ whatever.** The witness is $(p,q)=(3,1)$ at $n=4$, and the refutation is total rather than range-limited: for $\max(p,q)\ge3$ the named subspace fails *isotropy*, and for $p,q\le2$ it is isotropic but *extends*. **The block's mathematics is nonetheless entirely correct**, its own numbers ($\dim\mathfrak m=pq$, $\operatorname{rank}=N-pq$, the pair $(2,4)$ at dimension $8$) are computed on the *odd* part $\mathfrak p=\mathbb R^p\otimes\mathbb R^q$, which is the object the source reviewer named and the heading dropped. **On that object the Lemma is true at every $(p,q)$ with $p,q\ge1$, and I prove it in closed form below**, which promotes it from a check at $n=6,7,8$ to a genuine Lemma. **This is the same error [L36](../findings/isotropy-cap.md#L17)'s warning box was written to correct**, 169 lines above, in the same file, in the same words.
+**REFUTED as stated, the heading names the wrong half of the symmetric pair, and the object it names is a maximal isotropic subspace at no $(p,q)$ whatever.** The witness is $(p,q)=(3,1)$ at $n=4$, and the refutation is total rather than range-limited: for $\max(p,q)\ge3$ the named subspace fails *isotropy*, and for $p,q\le2$ it is isotropic but *extends*. **The block's mathematics is nonetheless entirely correct**, its own numbers ($\dim\mathfrak m=pq$, $\mathop{\mathrm{rank}}=N-pq$, the pair $(2,4)$ at dimension $8$) are computed on the *odd* part $\mathfrak p=\mathbb R^p\otimes\mathbb R^q$, which is the object the source reviewer named and the heading dropped. **On that object the Lemma is true at every $(p,q)$ with $p,q\ge1$, and I prove it in closed form below**, which promotes it from a check at $n=6,7,8$ to a genuine Lemma. **This is the same error [L36](../findings/isotropy-cap.md#L17)'s warning box was written to correct**, 169 lines above, in the same file, in the same words.
 
 | # | finding | verdict |
 | --- | --- | --- |
 | 1 | L75's first equivalence, $\mathfrak m$ maximal $\iff[\mathfrak m,\mathfrak m]^\perp=\mathfrak m$ | **CONFIRMED**, and the equality is *better* than the inclusion, for a reason the block does not give |
-| 2 | L75's second equivalence, $\operatorname{rank}[\mathfrak m,\mathfrak m]=N-\dim\mathfrak m$ | **CONFIRMED**; $N=\binom n2$, and "rank" and "dimension of the span" coincide by bilinearity |
+| 2 | L75's second equivalence, $\mathop{\mathrm{rank}}[\mathfrak m,\mathfrak m]=N-\dim\mathfrak m$ | **CONFIRMED**; $N=\binom n2$, and "rank" and "dimension of the span" coincide by bilinearity |
 | 3 | L76's heading, on $\mathfrak k=\mathfrak{so}(p)\oplus\mathfrak{so}(q)$ | **REFUTED at every $(p,q)$ with $n\ge3$**; witness $(3,1)$ at $n=4$ |
 | 4 | L76's content, on $\mathfrak p=\mathbb R^p\otimes\mathbb R^q$ | **CONFIRMED and PROVED** for all $p,q\ge1$, at every $n$, no dimension restriction |
 | 5 | The degenerate range | $q=0$ **fails** (the zero subspace is not maximal); $q=1$ and $q=2$ are **fine and non-vacuous** |
@@ -52,7 +52,7 @@ Let $\mathfrak m\subseteq\mathfrak{so}(n)$ be isotropic for $\omega(x,y,z)=\lang
 
 Write $\{1,\dots,n\}=A\sqcup B$ with $|A|=p$, $|B|=q$, and let
 
-$$\mathfrak k=\mathfrak{so}(p)\oplus\mathfrak{so}(q)=\operatorname{span}\{\varphi_{ab}:a<b\in A\}\oplus\operatorname{span}\{\varphi_{ij}:i<j\in B\},\qquad \dim\mathfrak k=\tbinom p2+\tbinom q2 .$$
+$$\mathfrak k=\mathfrak{so}(p)\oplus\mathfrak{so}(q)=\mathop{\mathrm{span}}\{\varphi_{ab}:a<b\in A\}\oplus\mathop{\mathrm{span}}\{\varphi_{ij}:i<j\in B\},\qquad \dim\mathfrak k=\tbinom p2+\tbinom q2 .$$
 
 $\mathfrak k$ is a subalgebra, so $[\mathfrak k,\mathfrak k]\subseteq\mathfrak k$; isotropy would then force $\langle\mathfrak k,\mathfrak k\rangle\supseteq\langle[\mathfrak k,\mathfrak k],\mathfrak k\rangle=0$ on the image, i.e. $[\mathfrak k,\mathfrak k]=0$. **An isotropic subalgebra is abelian**, and $\mathfrak{so}(p)\oplus\mathfrak{so}(q)$ is abelian exactly when $p,q\le2$.
 
@@ -60,13 +60,13 @@ $\mathfrak k$ is a subalgebra, so $[\mathfrak k,\mathfrak k]\subseteq\mathfrak k
 
 ### 2.2 And where it *is* isotropic it is never maximal, so no range saves the heading
 
-The surviving cases are $p,q\le2$, hence $n\le4$. There $\mathfrak k$ is abelian, so $[\mathfrak k,\mathfrak k]=0$ and $[\mathfrak k,\mathfrak k]^\perp=\mathfrak{so}(n)$, which equals $\mathfrak k$ only if $\mathfrak k$ is the whole algebra and the whole algebra is abelian, $n\le2$, outside the programme's range and outside any honest reading of "symmetric pair". Concretely at $n=4$, $(p,q)=(2,2)$: $\mathfrak k=\operatorname{span}\{\varphi_{12},\varphi_{34}\}$ of dimension $2$, and $\operatorname{span}\{\varphi_{12},\varphi_{34},\varphi_{13}\}$ is isotropic, the three triples evaluate to $\langle[\varphi_{12},\varphi_{34}],\varphi_{13}\rangle=0$, $\langle[\varphi_{12},\varphi_{13}],\varphi_{34}\rangle=\langle-\varphi_{23},\varphi_{34}\rangle=0$, $\langle[\varphi_{34},\varphi_{13}],\varphi_{12}\rangle=\langle-\varphi_{14},\varphi_{12}\rangle=0$, and strictly larger. **So the heading's claim is false at every $(p,q)$ at every $n\ge3$: either by failure of isotropy or by extendability. The heading's "every" cannot be repaired by attaching a range; the object has to change.**
+The surviving cases are $p,q\le2$, hence $n\le4$. There $\mathfrak k$ is abelian, so $[\mathfrak k,\mathfrak k]=0$ and $[\mathfrak k,\mathfrak k]^\perp=\mathfrak{so}(n)$, which equals $\mathfrak k$ only if $\mathfrak k$ is the whole algebra and the whole algebra is abelian, $n\le2$, outside the programme's range and outside any honest reading of "symmetric pair". Concretely at $n=4$, $(p,q)=(2,2)$: $\mathfrak k=\mathop{\mathrm{span}}\{\varphi_{12},\varphi_{34}\}$ of dimension $2$, and $\mathop{\mathrm{span}}\{\varphi_{12},\varphi_{34},\varphi_{13}\}$ is isotropic, the three triples evaluate to $\langle[\varphi_{12},\varphi_{34}],\varphi_{13}\rangle=0$, $\langle[\varphi_{12},\varphi_{13}],\varphi_{34}\rangle=\langle-\varphi_{23},\varphi_{34}\rangle=0$, $\langle[\varphi_{34},\varphi_{13}],\varphi_{12}\rangle=\langle-\varphi_{14},\varphi_{12}\rangle=0$, and strictly larger. **So the heading's claim is false at every $(p,q)$ at every $n\ge3$: either by failure of isotropy or by extendability. The heading's "every" cannot be repaired by attaching a range; the object has to change.**
 
 ### 2.3 The object the block actually computes, and the general proof
 
-Every number in the block is $pq$-flavoured: *"$\operatorname{rank}[\mathfrak m,\mathfrak m]=N-pq$ at every $(p,q)$"*, and *"the pair $(2,4)$ has $\dim\mathfrak m=8$"*, where $\binom22+\binom42=7\ne8$ but $2\cdot4=8$. **The object is the odd part**
+Every number in the block is $pq$-flavoured: *"$\mathop{\mathrm{rank}}[\mathfrak m,\mathfrak m]=N-pq$ at every $(p,q)$"*, and *"the pair $(2,4)$ has $\dim\mathfrak m=8$"*, where $\binom22+\binom42=7\ne8$ but $2\cdot4=8$. **The object is the odd part**
 
-$$\mathfrak p=\mathbb R^p\otimes\mathbb R^q=\operatorname{span}\{\varphi_{ai}:a\in A,\ i\in B\},\qquad\dim\mathfrak p=pq,\qquad\mathfrak p=\mathfrak k^\perp .$$
+$$\mathfrak p=\mathbb R^p\otimes\mathbb R^q=\mathop{\mathrm{span}}\{\varphi_{ai}:a\in A,\ i\in B\},\qquad\dim\mathfrak p=pq,\qquad\mathfrak p=\mathfrak k^\perp .$$
 
 **Theorem (the repaired L76).** *For every $n$ and every split $p+q=n$ with $p,q\ge1$, $\mathfrak p$ is a maximal isotropic subspace of $\mathfrak{so}(n)$ for the Cartan $3$-form.*
 
@@ -78,7 +78,7 @@ $$\mathfrak p=\mathbb R^p\otimes\mathbb R^q=\operatorname{span}\{\varphi_{ai}:a\
 
 **And the rank identity falls out symbolically, which is what the brief asks for in place of sample dimensions.** $\binom{p+q}2=\binom p2+\binom q2+pq$ identically, so
 
-$$\operatorname{rank}[\mathfrak p,\mathfrak p]=\dim\mathfrak k=\tbinom p2+\tbinom q2=N-pq=N-\dim\mathfrak p$$
+$$\mathop{\mathrm{rank}}[\mathfrak p,\mathfrak p]=\dim\mathfrak k=\tbinom p2+\tbinom q2=N-pq=N-\dim\mathfrak p$$
 
 at every $(p,q)$, with no arithmetic left to check at $n=6,7,8$ or anywhere else. **The record's "verified independently here at $n=6,7,8$" is a spot check on a polynomial identity.**
 
@@ -87,7 +87,7 @@ at every $(p,q)$, with no arithmetic left to check at $n=6,7,8$ or anywhere else
 | $q$ | status of $\mathfrak p$ |
 | --- | --- |
 | $0$ | $\mathfrak p=0$, isotropic but **not maximal** for $n\ge2$: $[\,0,0\,]^\perp=\mathfrak{so}(n)\ne0$. **The "every" must exclude it.** |
-| $1$ | $\mathfrak p=\operatorname{span}\{\varphi_{an}:a\in A\}$, $\dim=n-1$, $[\mathfrak p,\mathfrak p]=\mathfrak{so}(n-1)$ of dimension $\binom{n-1}2=N-(n-1)$. **Maximal, and non-vacuous**, it supplies the $d=5$ row at $n=6$. |
+| $1$ | $\mathfrak p=\mathop{\mathrm{span}}\{\varphi_{an}:a\in A\}$, $\dim=n-1$, $[\mathfrak p,\mathfrak p]=\mathfrak{so}(n-1)$ of dimension $\binom{n-1}2=N-(n-1)$. **Maximal, and non-vacuous**, it supplies the $d=5$ row at $n=6$. |
 | $2$ | $\dim\mathfrak p=2(n-2)$, $[\mathfrak p,\mathfrak p]=\mathfrak{so}(2)\oplus\mathfrak{so}(n-2)$. **Maximal.** It supplies the $d=8$ row at $n=6$, the whole point of the block. |
 
 **So the heading's "every" should carry the range $p,q\ge1$ and nothing more.** No parity condition, no lower bound on $n$, no genericity. *The block carries no range at all, and the one case that genuinely fails ($q=0$), is the one a careless reader would grant.*
@@ -96,7 +96,7 @@ at every $(p,q)$, with no arithmetic left to check at $n=6,7,8$ or anywhere else
 
 Build the bracket matrix with **ordered** pair columns, per [conventions.md](../findings/conventions.md)'s standing rule. Each ordered pair $(\varphi_{ai},\varphi_{bj})$ maps to a *single* basis vector of $\mathfrak k$ with coefficient $\pm1$, and distinct targets receive disjoint sets of columns, so the rows of the matrix are mutually orthogonal and the singular values are the row norms. Counting sources: $\varphi_{ij}$ with $i,j\in B$ receives $2p$ ordered pairs (one per $a\in A$, twice), and $\varphi_{ab}$ with $a,b\in A$ receives $2q$. Hence
 
-$$\operatorname{sing}\big([\mathfrak p,\mathfrak p]\big)=\big\{\sqrt{2p}\ \text{with multiplicity}\ \tbinom q2,\quad \sqrt{2q}\ \text{with multiplicity}\ \tbinom p2\big\}.$$
+$$\mathop{\mathrm{sing}}\big([\mathfrak p,\mathfrak p]\big)=\big\{\sqrt{2p}\ \text{with multiplicity}\ \tbinom q2,\quad \sqrt{2q}\ \text{with multiplicity}\ \tbinom p2\big\}.$$
 
 At $n=6$: $(3,3)$ gives $\sqrt6$ with multiplicity $3+3=6$, **exactly the block's "six values of exactly $\sqrt6$ then nothing"**, the word "exactly" now earned. $(2,4)$ gives $2$ six times and $\sqrt8$ once, rank $7$. $(1,5)$ gives $\sqrt2$ ten times, rank $10$. **Three of the block's measured numbers reproduced from a two-line count.** *This is the check that convinces me the block's numerics are of $\mathfrak p$ and not of $\mathfrak k$, a mislabelled object would not reproduce $\sqrt6$ with multiplicity six.*
 
@@ -113,7 +113,7 @@ At $n=6$, $N=15$. The symmetric-pair dimensions are $pq\in\{5,8,9\}$ for $p=1,2,
 
 **On the labels.** The record labels L76 a `Lemma` on the strength of a check at $n=6,7,8$, Observation-grade evidence under a Lemma heading. **That defect is now moot rather than repaired**: the corrected statement is a Lemma, proved above at every $(p,q)$. But it was a defect at the time of writing, and [INDEX-results.md](../findings/INDEX-results.md) row 76 carries the same label with the same wrong object and "Gate 2: no verdict on the record".
 
-**The rank-$15$ tell, and the brief is right that it is the strongest thing on the page.** The argument is the easy half of L75, used contrapositively: isotropy gives $[\mathfrak m,\mathfrak m]\subseteq\mathfrak m^\perp$, hence $\operatorname{rank}[\mathfrak m,\mathfrak m]\le N-\dim\mathfrak m$ **for every isotropic $\mathfrak m$, with no maximality involved**. At $n=6$, $d=6$ the ceiling is $9$; a measured $15$ says $[\mathfrak m,\mathfrak m]=\mathfrak{so}(6)$, so $[\mathfrak m,\mathfrak m]^\perp=0$, which cannot contain a nonzero $\mathfrak m$. **The candidate was therefore not isotropic to the working tolerance, and the rank measurement diagnosed it.** *This is a numerical failure caught by an inequality that costs one line, and the record should state it as a standing self-check on every isotropy computation rather than as an anecdote about one polish.*
+**The rank-$15$ tell, and the brief is right that it is the strongest thing on the page.** The argument is the easy half of L75, used contrapositively: isotropy gives $[\mathfrak m,\mathfrak m]\subseteq\mathfrak m^\perp$, hence $\mathop{\mathrm{rank}}[\mathfrak m,\mathfrak m]\le N-\dim\mathfrak m$ **for every isotropic $\mathfrak m$, with no maximality involved**. At $n=6$, $d=6$ the ceiling is $9$; a measured $15$ says $[\mathfrak m,\mathfrak m]=\mathfrak{so}(6)$, so $[\mathfrak m,\mathfrak m]^\perp=0$, which cannot contain a nonzero $\mathfrak m$. **The candidate was therefore not isotropic to the working tolerance, and the rank measurement diagnosed it.** *This is a numerical failure caught by an inequality that costs one line, and the record should state it as a standing self-check on every isotropy computation rather than as an anecdote about one polish.*
 
 **The structural claim and the Witt index.** The comparison is **apt but under-qualified, and the claim it decorates is now provable in general.**
 
@@ -155,7 +155,7 @@ At $n=6$, $N=15$. The symmetric-pair dimensions are $pq\in\{5,8,9\}$ for $p=1,2,
 1. **Rename the object in the heading of [L76](../findings/isotropy-cap.md#L200), in [INDEX-results.md](../findings/INDEX-results.md) row 76, and in [plan.md](../plan.md).** *"every symmetric pair's odd part $\mathbb R^p\otimes\mathbb R^q$, $p,q\ge1$, is a maximal isotropic subspace"*, or equivalently *"the complete bipartite subspace $K_{p,q}$"*. **One phrase, three files.**
 2. **Replace the $n=6,7,8$ verification with §2.3's proof.** Three lines, valid at every $n$, and it is what makes the `Lemma` label honest.
 3. **Record §2.5's singular-value formula.** It closes the cap row's $\sqrt6$ and the $(2,4)$ rank in closed form, and it turns "clean gaps throughout" into a statement with a proof for three of four rows.
-4. **State the rank ceiling $\operatorname{rank}[\mathfrak m,\mathfrak m]\le N-\dim\mathfrak m$ as a standing isotropy self-check**, which is what caught the rank-$15$ run; and record the free necessary condition $\binom d2\ge N-d$, which forces the $d=4$ row.
+4. **State the rank ceiling $\mathop{\mathrm{rank}}[\mathfrak m,\mathfrak m]\le N-\dim\mathfrak m$ as a standing isotropy self-check**, which is what caught the rank-$15$ run; and record the free necessary condition $\binom d2\ge N-d$, which forces the $d=4$ row.
 5. **Update L75's stale sentence** from *"dimensions $5$, $6$ and $9$"* to the general statement: at least $\lfloor n/2\rfloor$ distinct dimensions at every $n\ge4$, namely $p(n-p)$ for $1\le p\le n/2$. Qualify the quadratic form as **nondegenerate**, and say the cap is a maximum rather than a Witt index.
 6. **Cross-link [L36](../findings/isotropy-cap.md#L17)'s warning box to [L76](../findings/isotropy-cap.md#L200)**, since the box is the refutation and the block is the offence, and fix the two broken pointers in §5.
 

@@ -34,15 +34,15 @@ So every ingredient of the moved block (the identity, a proof of the vanishing, 
 
 ## D2, the mathematics of the proof. **CONFIRMED**, with one sentence literally false and three conjuncts unproved
 
-Rebuilt from the definitions, in the conventions [conventions.md](../findings/conventions.md) fixes: bivector $\leftrightarrow$ skew matrix with $x\wedge y=xy^{\mathsf T}-yx^{\mathsf T}$, pairing $\langle X,Y\rangle=\tfrac12\operatorname{tr}(X^{\mathsf T}Y)$ (the half-trace bullet, the one the record runs in).
+Rebuilt from the definitions, in the conventions [conventions.md](../findings/conventions.md) fixes: bivector $\leftrightarrow$ skew matrix with $x\wedge y=xy^{\mathsf T}-yx^{\mathsf T}$, pairing $\langle X,Y\rangle=\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$ (the half-trace bullet, the one the record runs in).
 
 **Step 1, the PSD identity is right, and it is an identity, not an implication.** For $W=\sum_\alpha\lambda_\alpha\,v_\alpha\otimes v_\alpha$ with $\{v_\alpha\}$ $\Lambda^2$-orthonormal,
-$$\langle v,x\wedge y\rangle=\tfrac12\big(\operatorname{tr}(v^{\mathsf T}xy^{\mathsf T})-\operatorname{tr}(v^{\mathsf T}yx^{\mathsf T})\big)=x^{\mathsf T}vy,$$
+$$\langle v,x\wedge y\rangle=\tfrac12\big(\mathop{\mathrm{tr}}(v^{\mathsf T}xy^{\mathsf T})-\mathop{\mathrm{tr}}(v^{\mathsf T}yx^{\mathsf T})\big)=x^{\mathsf T}vy,$$
 so $\sum_i\langle v_\alpha,x\wedge e_i\rangle^2=\lVert v_\alpha^{\mathsf T}x\rVert^2=\lVert v_\alpha x\rVert^2$ and
-$$\operatorname{Ric}(W)(x,x)=\sum_i\langle W(x\wedge e_i),x\wedge e_i\rangle=x^{\mathsf T}\Big(\sum_\alpha\lambda_\alpha v_\alpha^{\mathsf T}v_\alpha\Big)x .$$
+$$\mathop{\mathrm{Ric}}(W)(x,x)=\sum_i\langle W(x\wedge e_i),x\wedge e_i\rangle=x^{\mathsf T}\Big(\sum_\alpha\lambda_\alpha v_\alpha^{\mathsf T}v_\alpha\Big)x .$$
 The bracketed matrix is symmetric, so Ricci-flatness is **equivalent** to its vanishing. The block's first sentence is exactly this. **Correct.** *(Derived by hand; no computation run.)*
 
-**Step 2, image containment. Correct, and it gives equality.** With $P=\sum_{\lambda_\alpha>0}\lambda_\alpha v_\alpha^{\mathsf T}v_\alpha$ and $Q=\sum_{\lambda_\alpha<0}\lvert\lambda_\alpha\rvert v_\alpha^{\mathsf T}v_\alpha$, the identity is $P=Q$. For skew $v$, $\operatorname{im}(v^{\mathsf T}v)=\operatorname{im}v$, and images of positive semidefinite matrices add, so $\operatorname{im}Q=U$ and hence $\operatorname{im}P=U$, giving $\operatorname{im}v_\alpha\subseteq U$ for every $\lambda_\alpha>0$.
+**Step 2, image containment. Correct, and it gives equality.** With $P=\sum_{\lambda_\alpha>0}\lambda_\alpha v_\alpha^{\mathsf T}v_\alpha$ and $Q=\sum_{\lambda_\alpha<0}\lvert\lambda_\alpha\rvert v_\alpha^{\mathsf T}v_\alpha$, the identity is $P=Q$. For skew $v$, $\mathop{\mathrm{im}}(v^{\mathsf T}v)=\mathop{\mathrm{im}}v$, and images of positive semidefinite matrices add, so $\mathop{\mathrm{im}}Q=U$ and hence $\mathop{\mathrm{im}}P=U$, giving $\mathop{\mathrm{im}}v_\alpha\subseteq U$ for every $\lambda_\alpha>0$.
 
 **Step 3, one sentence is literally false, harmlessly.** The block writes *"For $u\perp U$ this gives $v_\alpha u=0$ **for all $\alpha$**"*. It holds only for $\alpha$ with $\lambda_\alpha\ne0$. **Witness**: at padded $W_{\mathbb{CP}^2}$ in $\mathcal W_{10}$ with $U=\mathbb R^4$, the bivector $e_9\wedge e_{10}$ is a $0$-eigenvector and $u=e_9\perp U$ has $(e_9\wedge e_{10})u=-e_{10}\ne0$. The conclusion survives because the $\lambda_\alpha=0$ terms drop out of $W(u\wedge w)=\sum_\alpha\lambda_\alpha\langle v_\alpha,u\wedge w\rangle v_\alpha$ regardless. **One-word repair**: "for every $\alpha$ with $\lambda_\alpha\ne0$".
 
@@ -54,7 +54,7 @@ The bracketed matrix is symmetric, so Ricci-flatness is **equivalent** to its va
 
 | conjunct | status inside the block |
 | --- | --- |
-| $W$ is supported on $\Lambda^2U$ | the step from "kills $u\wedge\mathbb R^n$ for each $u\perp U$" to "$\operatorname{im}W\subseteq\Lambda^2U$" needs the self-adjointness of $W$ and is not written |
+| $W$ is supported on $\Lambda^2U$ | the step from "kills $u\wedge\mathbb R^n$ for each $u\perp U$" to "$\mathop{\mathrm{im}}W\subseteq\Lambda^2U$" needs the self-adjointness of $W$ and is not written |
 | $W'$ satisfies the **first Bianchi identity**, so $W'\in\mathrm{Weyl}_{\dim U}$ | never mentioned; only Ricci-flatness of the restriction is argued |
 | "**with the same norm and the same $\theta$**" | **no line of the proof addresses either** |
 
@@ -66,13 +66,13 @@ All three are true and each is one line, supplied below, but a block headed *can
 
 Let $\iota:\Lambda^2U\hookrightarrow\Lambda^2\mathbb R^n$ be the inclusion induced by $U\subseteq\mathbb R^n$, and $W=\iota W'\iota^{\mathsf T}$.
 
-**The embedding is an isometry, in either $\Lambda^2$ normalisation.** For an orthonormal basis of $\mathbb R^n$ adapted to $U\oplus U^\perp$, the set $\{e_i\wedge e_j\}_{i<j,\ e_i,e_j\in U}$ is orthonormal for $\langle X,Y\rangle=\tfrac12\operatorname{tr}(X^{\mathsf T}Y)$ inside $\Lambda^2\mathbb R^n$ and is the corresponding basis of $\Lambda^2U$. So the padded operator has the spectrum of $W'$ together with $\binom n2-\binom{\dim U}2$ extra zeros, and $\lVert W\rVert^2=\operatorname{tr}(W^2)=\operatorname{tr}(W'^2)=\lVert W'\rVert^2$. The record's second normalisation $\lvert W\rvert^2=4\lVert W\rVert_F^2$ ([conventions.md](../findings/conventions.md), norms bullet) is a fixed scalar multiple, so the equality is normalisation-independent, **which is the check the brief asks for, and it passes against the pairing rather than against the block's usage**.
+**The embedding is an isometry, in either $\Lambda^2$ normalisation.** For an orthonormal basis of $\mathbb R^n$ adapted to $U\oplus U^\perp$, the set $\{e_i\wedge e_j\}_{i<j,\ e_i,e_j\in U}$ is orthonormal for $\langle X,Y\rangle=\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$ inside $\Lambda^2\mathbb R^n$ and is the corresponding basis of $\Lambda^2U$. So the padded operator has the spectrum of $W'$ together with $\binom n2-\binom{\dim U}2$ extra zeros, and $\lVert W\rVert^2=\mathop{\mathrm{tr}}(W^2)=\mathop{\mathrm{tr}}(W'^2)=\lVert W'\rVert^2$. The record's second normalisation $\lvert W\rvert^2=4\lVert W\rVert_F^2$ ([conventions.md](../findings/conventions.md), norms bullet) is a fixed scalar multiple, so the equality is normalisation-independent, **which is the check the brief asks for, and it passes against the pairing rather than against the block's usage**.
 
-**$Q$ commutes with padding.** $\operatorname{tr}(W^3)=\operatorname{tr}(W'^3)$ is immediate from the spectrum. For the sharp part, $W^\#=\tfrac12\sum_{\alpha\beta}\lambda_\alpha\lambda_\beta\,[v_\alpha,v_\beta]\otimes[v_\alpha,v_\beta]$ sums only over $\lambda_\alpha\ne0$, and by D2 every such $v_\alpha$ lies in $\mathfrak{so}(U)$. Since **$\mathfrak{so}(U)$ is a subalgebra**, $[v_\alpha,v_\beta]\in\mathfrak{so}(U)$, and the structure constants $\langle[v_\alpha,v_\beta],v_\gamma\rangle$ computed in $\mathfrak{so}(n)$ agree with those computed in $\mathfrak{so}(U)$ because the inner product restricts. Hence $\operatorname{im}W^\#\subseteq\Lambda^2U$ and $(\iota W'\iota^{\mathsf T})^\#=\iota(W'^\#)\iota^{\mathsf T}$.
+**$Q$ commutes with padding.** $\mathop{\mathrm{tr}}(W^3)=\mathop{\mathrm{tr}}(W'^3)$ is immediate from the spectrum. For the sharp part, $W^\#=\tfrac12\sum_{\alpha\beta}\lambda_\alpha\lambda_\beta\,[v_\alpha,v_\beta]\otimes[v_\alpha,v_\beta]$ sums only over $\lambda_\alpha\ne0$, and by D2 every such $v_\alpha$ lies in $\mathfrak{so}(U)$. Since **$\mathfrak{so}(U)$ is a subalgebra**, $[v_\alpha,v_\beta]\in\mathfrak{so}(U)$, and the structure constants $\langle[v_\alpha,v_\beta],v_\gamma\rangle$ computed in $\mathfrak{so}(n)$ agree with those computed in $\mathfrak{so}(U)$ because the inner product restricts. Hence $\mathop{\mathrm{im}}W^\#\subseteq\Lambda^2U$ and $(\iota W'\iota^{\mathsf T})^\#=\iota(W'^\#)\iota^{\mathsf T}$.
 
 Therefore $P(W)=\langle W,W^2+W^\#\rangle=P(W')$ and $\lVert W\rVert=\lVert W'\rVert$, so $\theta(W)=\theta(W')$. $\square$
 
-**The first Bianchi identity restricts** because $\operatorname{Alt}(W)_{ijkl}=\tfrac13(W_{ijkl}+W_{iklj}+W_{iljk})$ ([conventions.md](../findings/conventions.md)) is an identity per index quadruple, and the quadruples with all four indices in $U$ are a subset of those on $\mathbb R^n$.
+**The first Bianchi identity restricts** because $\mathop{\mathrm{Alt}}(W)_{ijkl}=\tfrac13(W_{ijkl}+W_{iklj}+W_{iljk})$ ([conventions.md](../findings/conventions.md)) is an identity per index quadruple, and the quadruples with all four indices in $U$ are a subset of those on $\mathbb R^n$.
 
 **This matches [conventions.md](../findings/conventions.md)'s standing line** *"Padding commutes with $Q$, and preserves both the norm and $\theta$"*, which is tabled there with **no source and no proof**. The nearest thing to an argument on the record is [nondegeneracy.md:409](../findings/nondegeneracy.md#L409), which gives the same subalgebra reason ("$[\Lambda^2\mathbb R^{n_0},\Lambda^2\mathbb R^{n_0}]\subseteq\Lambda^2\mathbb R^{n_0}$ forces $W^\#$ back into the block") alongside a numerical check. **Neither L30 nor conventions.md points at it.**
 
@@ -81,7 +81,7 @@ Therefore $P(W)=\langle W,W^2+W^\#\rangle=P(W')$ and $\lVert W\rVert=\lVert W'\r
 ## D4, the quantifier and the hypothesis "at most two". **REFUTED as a necessary hypothesis**; the lemma is strictly more general than stated
 
 **"At most two negative eigenvalues" is inert.** Nothing in D2 used the count. Set
-$$U:=\operatorname{im}\Big(\textstyle\sum_{\lambda_\alpha<0}\lvert\lambda_\alpha\rvert\,v_\alpha^{\mathsf T}v_\alpha\Big)=\sum_{\lambda_\alpha<0}\operatorname{im}v_\alpha ,$$
+$$U:=\mathop{\mathrm{im}}\Big(\textstyle\sum_{\lambda_\alpha<0}\lvert\lambda_\alpha\rvert\,v_\alpha^{\mathsf T}v_\alpha\Big)=\sum_{\lambda_\alpha<0}\mathop{\mathrm{im}}v_\alpha ,$$
 manifestly independent of the choice of eigenbasis in each negative eigenspace. Then the block's own three steps give, for **every** $W\in\mathcal W_n$ and any number of negative eigenvalues:
 
 > $W$ kills $u\wedge\mathbb R^n$ for every $u\perp U$, and $W$ is a padding of a $W'\in\mathcal W_{\dim U}$ with $\lVert W'\rVert=\lVert W\rVert$ and $\theta(W')=\theta(W)$.
@@ -93,7 +93,7 @@ manifestly independent of the choice of eigenbasis in each negative eigenspace. 
 **Two loose ends in the statement as written, both harmless.**
 
 - With **fewer than two** negative eigenvalues the symbol $v_{N-1}$ names a non-negative eigenvector, and if $\lambda_{N-1}=0$ that eigenvector is not determined by $W$, so $U$ is not well defined. The conclusion still holds for every admissible choice, because such a $U$ only contains the invariant one.
-- With a **repeated** negative eigenvalue $v_{N-1},v_N$ are individually undetermined, but $U$ is not: it is $\operatorname{im}$ of the basis-free matrix $\lvert\lambda\rvert(v_{N-1}^{\mathsf T}v_{N-1}+v_N^{\mathsf T}v_N)$. **The block's "Scope, stated" paragraph is right about this**, and it is the point that distinguishes $U$ from the individual ranks.
+- With a **repeated** negative eigenvalue $v_{N-1},v_N$ are individually undetermined, but $U$ is not: it is $\mathop{\mathrm{im}}$ of the basis-free matrix $\lvert\lambda\rvert(v_{N-1}^{\mathsf T}v_{N-1}+v_N^{\mathsf T}v_N)$. **The block's "Scope, stated" paragraph is right about this**, and it is the point that distinguishes $U$ from the individual ranks.
 
 ---
 
@@ -117,13 +117,13 @@ The block reads: *"the rank-sum form fails to apply at padded $W_{\mathbb{CP}^2}
 
 **The heading's promise is half kept.** The vanishing on $u\wedge u^\perp$ is proved (D2). The padding conjuncts (support in $\Lambda^2U$, first Bianchi for $W'$, equal norm, equal $\theta$), are asserted (D2 table); D3 supplies them.
 
-**The block's proof is [REVIEW_r58.md](REVIEW_r58.md)'s Claim 2, uncredited at this heading.** r58 wrote the PSD-identity route, the sharpened hypothesis $\dim(\operatorname{im}v_{N-1}+\operatorname{im}v_N)<n$, and the single-step conclusion to $\mathcal W_{\dim U}$; the block is that text. The development-form section above does credit "Reviewer 58" and "Reviewer 59"; the canonical block credits no one.
+**The block's proof is [REVIEW_r58.md](REVIEW_r58.md)'s Claim 2, uncredited at this heading.** r58 wrote the PSD-identity route, the sharpened hypothesis $\dim(\mathop{\mathrm{im}}v_{N-1}+\mathop{\mathrm{im}}v_N)<n$, and the single-step conclusion to $\mathcal W_{\dim U}$; the block is that text. The development-form section above does credit "Reviewer 58" and "Reviewer 59"; the canonical block credits no one.
 
 **"Gate 2 passed, both reviewers independently, each reaching the identity by its own route", false in two ways.**
 
 - **The record's own index says otherwise.** [INDEX-results.md](../findings/INDEX-results.md), the file that by its own header owns the numbering and the Gate 2 status, carries at row **30**: *"**Gate 2: no verdict on the record.** a small negative eigenspace forces a small support"*. The block and the index cannot both be read at face value.
 - **The Gate 2 that exists examined a different statement.** [r58](REVIEW_r58.md) and [r59](REVIEW_r59.md) both confirmed *"Padding reduction"*, the rank-sum Proposition now at [line 249](../findings/stratum-two-negative.md#L249), and each filed the $\dim U$ form as a **correction** to it. The $\dim U$ statement is the *output* of that Gate 2, not a statement that passed it.
-- **"Each reaching the identity"** overstates r59. [r59](REVIEW_r59.md) Claim 2 never states $\sum_\alpha\lambda_\alpha v_\alpha^{\mathsf T}v_\alpha=0$; it reaches the same conclusion through $\operatorname{Ric}(u,u)=\sum_i\langle W(u\wedge e_i),u\wedge e_i\rangle$ and a zero-sum-of-nonnegatives argument. Two routes to the **conclusion**, one route to the identity.
+- **"Each reaching the identity"** overstates r59. [r59](REVIEW_r59.md) Claim 2 never states $\sum_\alpha\lambda_\alpha v_\alpha^{\mathsf T}v_\alpha=0$; it reaches the same conclusion through $\mathop{\mathrm{Ric}}(u,u)=\sum_i\langle W(u\wedge e_i),u\wedge e_i\rangle$ and a zero-sum-of-nonnegatives argument. Two routes to the **conclusion**, one route to the identity.
 
 *One thing the record does have and does not cite: [r59](REVIEW_r59.md) Claim 2 step 6 proves the $\theta$-preservation by the same subalgebra argument as D3 above, "for a new pair $a=(i,n)$, $[\varphi_a,\varphi_m]$ lands in the span of new pairs whenever $m$ is old, so the sharp has no off-block rows". Neither L30 nor [conventions.md](../findings/conventions.md)'s standing padding line points at it.*
 
@@ -174,7 +174,7 @@ Counting in [findings/](../findings/), [results.md](../results.md) and [report/]
 Read in full before deriving. Three of the block's four load-bearing symbols are absent from it.
 
 - **"read as skew matrices".** The file fixes the *norms* under the identification $\Lambda^2\mathbb R^n\cong\mathfrak{so}(n)$, two bullets, half-trace against plain Frobenius, with the warning that both numbers are true of different pairings, but **never states the map**. $\varphi_{ab}=E_{ab}-E_{ba}$ appears only inside the plain-Frobenius half of one bullet, and the scale of $x\wedge y\mapsto xy^{\mathsf T}-yx^{\mathsf T}$ is nowhere fixed. The proof's pivot $\langle v,x\wedge y\rangle=x^{\mathsf T}vy$ (D2) is exactly where that scale would enter. **Inert here** (L30's conclusions are all "$=0$" statements and survive any positive rescaling) but the next result that carries a constant through this identification will not be so lucky.
-- **$\operatorname{im}$.** Undefined. It is used in the block for the image of a *bivector read as an $n\times n$ matrix*, a subspace of $\mathbb R^n$; the same file uses $\operatorname{im}$ for the image of $W$ as an operator on $\Lambda^2$ (line 265). The block's usage is the first and is consistent throughout.
+- **$\mathop{\mathrm{im}}$.** Undefined. It is used in the block for the image of a *bivector read as an $n\times n$ matrix*, a subspace of $\mathbb R^n$; the same file uses $\mathop{\mathrm{im}}$ for the image of $W$ as an operator on $\Lambda^2$ (line 265). The block's usage is the first and is consistent throughout.
 - **The padding relation.** [conventions.md](../findings/conventions.md) carries only *"Padding commutes with $Q$, and preserves both the norm and $\theta$. The stratum reduction turns on this."*, **an assertion with no definition of the operation, no embedding named, and no source column entry.** L30's conclusion is stated entirely in its terms. D3 supplies the derivation; [r59](REVIEW_r59.md) Claim 2 step 6 already held one.
 - **$\mathrm{Weyl}_n$ against $\mathcal W_n$.** The block and [results.md](../results.md) write $\mathrm{Weyl}_n$; the conventions table only defines $\mathcal W_n$. The identification is never stated.
 - *Inert but worth saying so a reader does not apply it*: [conventions.md](../findings/conventions.md)'s note that [stratum-two-negative.md](../findings/stratum-two-negative.md) is written throughout in Bourguignon–Karcher's $ikjl$ order, and that its $\mathring R$ statements need a sign flip to reach the record's Li order, **does not touch L30**, the block never uses the second-kind operator.
@@ -192,7 +192,7 @@ Read in full before deriving. Three of the block's four load-bearing symbols are
 | 3 | The PSD identity, image containment, vanishing on $u\wedge u^\perp$ | **CONFIRMED**, rebuilt from the definitions |
 | 4 | *"this gives $v_\alpha u=0$ for all $\alpha$"*, false for $\lambda_\alpha=0$; witness $e_9\wedge e_{10}$, $u=e_9$ at padded $W_{\mathbb{CP}^2}$ in $\mathcal W_{10}$. Two further copies in the **statement** at [results.md:146](../results.md#L146) and [07-gradedness-split.tex:1013](../report/sections/07-gradedness-split.tex#L1013) | **REPAIRED**, insert *with nonzero eigenvalue*, three sites |
 | 5 | *"with the same norm and the same $\theta$"*, the support step, and first Bianchi (asserted with no proof under a heading reading *canonical statement and proof* | **REPAIRED**), derivation in D3 |
-| 6 | *"at most two negative eigenvalues"* is inert; the lemma holds for any number of negatives with $U=\sum_{\lambda_\alpha<0}\operatorname{im}v_\alpha$, and $\dim U<n$ is a non-vacuity condition rather than a hypothesis | **REFUTED as stated hypotheses**; the true statement is stronger |
+| 6 | *"at most two negative eigenvalues"* is inert; the lemma holds for any number of negatives with $U=\sum_{\lambda_\alpha<0}\mathop{\mathrm{im}}v_\alpha$, and $\dim U<n$ is a non-vacuity condition rather than a hypothesis | **REFUTED as stated hypotheses**; the true statement is stronger |
 | 7 | *"fails to apply … for $n=6,7,8$"* omits $n=5$; [line 186](../findings/stratum-two-negative.md#L186) of the same file has the right range, *below $n=9$* | **REPAIRED** |
 | 8 | *"Gate 2 passed, both reviewers independently, each reaching the identity by its own route"* against [INDEX-results.md:45](../findings/INDEX-results.md#L45)'s *"Gate 2: no verdict on the record"*; and the Gate 2 that exists ([r58](REVIEW_r58.md), [r59](REVIEW_r59.md)) examined the **rank-sum** Proposition, filing this statement as its correction, while r59 reached the conclusion without ever stating the identity | **REFUTED** |
 | 9 | [line 176](../findings/stratum-two-negative.md#L176)'s anchor `#lemma-30--…` is dead; the slug is `lemma-l30--…` | **REPAIRED** |

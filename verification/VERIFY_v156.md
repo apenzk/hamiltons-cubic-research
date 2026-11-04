@@ -10,7 +10,7 @@ I read [BRIEF_L24.md](BRIEF_L24.md) cold, worked from the definitions in [conven
 | 2 | The multiplier contributes $-3\theta\,\mathrm{Id}$, leaving $6\theta(L_e-\tfrac12\mathrm{Id})$ | **CONFIRMED** | independent great-circle expansion returns $-3\theta+6\theta\langle L_eH,H\rangle$ exactly |
 | 3 | "The Hessian of $P$ restricted to the unit sphere" = the Riemannian Hessian | **CONFIRMED AS ALGEBRA** | the two readings differ by exactly $-3\theta\,\mathrm{Id}$; the argument's own multiplier step picks the Riemannian one, as do lines 11 and 39 of the same file |
 | 4 | $\lambda_{\max}\le\tfrac12$ needs $\theta>0$ in the direction claimed | **CONFIRMED** | $\theta>0$ enters once, at the division by $6\theta$, and the sense is the stated one |
-| 5 | $L_e$ is self-adjoint ($\mathcal W_n$ is a Euclidean metrised algebra) | **CONFIRMED** | $\tfrac14(\operatorname{tr}XYZ+\operatorname{tr}YXZ)$ is fully symmetric; the $\#$ half by [r285](../reviews/REVIEW_r285.md) Claim 1's index form, re-checked |
+| 5 | $L_e$ is self-adjoint ($\mathcal W_n$ is a Euclidean metrised algebra) | **CONFIRMED** | $\tfrac14(\mathop{\mathrm{tr}}XYZ+\mathop{\mathrm{tr}}YXZ)$ is fully symmetric; the $\#$ half by [r285](../reviews/REVIEW_r285.md) Claim 1's index form, re-checked |
 | 6 | $W^\perp$ is $L_e$-invariant, so the restriction is an operator | **CONFIRMED** | $L_ee=e$ by criticality plus self-adjointness |
 | 7 | $1$ is a simple eigenvalue of $L_e$ at a maximiser | **CONFIRMED** | immediate from the bound and $L_ee=e$ |
 | 8 | No $\circ$-orthogonal splitting into critical pieces, and criticality cannot be dropped | **CONFIRMED** | $e\circ A_j=\tfrac{a_j}\theta Q(A_j)$ closes, and criticality of $W$ forces the constant to be $\theta/a_j$ |
@@ -43,7 +43,7 @@ Quoted, not restated, from [conventions.md](../findings/conventions.md):
 - "**The $\circ$ product**: $X\circ Y=\tfrac12(Q(X+Y)-Q(X)-Q(Y))$, with $e=W/\theta$ and $L_e=e\circ(\cdot)$. The whole second-order apparatus rests on it."
 - "**\"Critical point\" is $Q(W)=\theta W$**, the first-order condition on $\{\lVert W\rVert=1\}$."
 - "$\#$ is the halved Böhm–Wilking product, $vv^{\mathsf T}\#ww^{\mathsf T}=\tfrac12[v,w][v,w]^{\mathsf T}$".
-- "**The $\tfrac12$ goes at the $\Lambda^2$ level, not the operator level.** The inner product is $\tfrac12\operatorname{tr}(X^{\mathsf T}Y)$ at the $\Lambda^2$ level".
+- "**The $\tfrac12$ goes at the $\Lambda^2$ level, not the operator level.** The inner product is $\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$ at the $\Lambda^2$ level".
 - "**Structure constants** $c_{abc}=\langle[v_a,v_b],v_c\rangle$ are **totally antisymmetric**".
 - "**Padding commutes with $Q$**, and preserves both the norm and $\theta$."
 - $M(n)$, "**the global maximum** of $P$ on the unit sphere of $\mathcal W_n$ … $M(n)>0$ at every $n\ge4$, padded $W_{\mathbb{CP}^2}$ giving $M(n)\ge\sqrt{3/2}$ … $M=\sqrt{3/2}$ against $\Theta_4=0.866$".
@@ -86,7 +86,7 @@ The brief asks this by name because a route here already died on it. **K-T Propo
 
 > "they obey a non-trivial bilinear form $\langle x;y\rangle$ which associates with multiplication, i.e. $\langle xy;z\rangle=\langle x;yz\rangle$ for all $x,y,z\in A$, (48) … We say that $A$ is a Euclidean metrised algebra if the bilinear form $\langle x;y\rangle$ is positive definite."
 
-and the proof of 6.6 consumes only $c^2=c$, the self-adjointness of $L_c$ that (48) supplies, and $D^2f(c)\le0$. No unit appears in Definition 6.4, Proposition 6.3, or the proof of 6.6. $\mathcal W_n$ has no unit, a unit $u$ would give $L_u=\mathrm{Id}$, hence $\operatorname{tr}L_u=\dim\mathcal W_n>0$ against the record's $\operatorname{tr}L_x\equiv0$, and would also force the orbit directions of any critical point to be simultaneously $1$- and $\tfrac12$-eigenvectors. **[fence-posts.md](../findings/fence-posts.md) line 189 already places L24 on the correct side of that line and is right to.** What *does* need the unit is Tkachev's minimal-algebra characterisation, and the record correctly bars that route.
+and the proof of 6.6 consumes only $c^2=c$, the self-adjointness of $L_c$ that (48) supplies, and $D^2f(c)\le0$. No unit appears in Definition 6.4, Proposition 6.3, or the proof of 6.6. $\mathcal W_n$ has no unit, a unit $u$ would give $L_u=\mathrm{Id}$, hence $\mathop{\mathrm{tr}}L_u=\dim\mathcal W_n>0$ against the record's $\mathop{\mathrm{tr}}L_x\equiv0$, and would also force the orbit directions of any critical point to be simultaneously $1$- and $\tfrac12$-eigenvectors. **[fence-posts.md](../findings/fence-posts.md) line 189 already places L24 on the correct side of that line and is right to.** What *does* need the unit is Tkachev's minimal-algebra characterisation, and the record correctly bars that route.
 
 ### 1.4 The object is an algebra of the right kind, checked, not assumed
 
@@ -116,11 +116,11 @@ Since great circles are the geodesics of the round sphere, this second derivativ
 
 The bound is a statement about $\lambda_{\max}$, which needs a real spectrum, which needs self-adjointness, which is the metrised property. The block gives it in two halves and both close.
 
-**The $W^2$ half.** $\circ$'s operator part is $X\circ_1Y=\tfrac12(XY+YX)$, and with the record's $\Lambda^2$-level pairing $\langle A,B\rangle=\tfrac12\operatorname{tr}(A^{\mathsf T}B)=\tfrac12\operatorname{tr}(AB)$ on symmetric operators,
+**The $W^2$ half.** $\circ$'s operator part is $X\circ_1Y=\tfrac12(XY+YX)$, and with the record's $\Lambda^2$-level pairing $\langle A,B\rangle=\tfrac12\mathop{\mathrm{tr}}(A^{\mathsf T}B)=\tfrac12\mathop{\mathrm{tr}}(AB)$ on symmetric operators,
 
-$$\langle X\circ_1Y,Z\rangle=\tfrac14\big(\operatorname{tr}(XYZ)+\operatorname{tr}(YXZ)\big).$$
+$$\langle X\circ_1Y,Z\rangle=\tfrac14\big(\mathop{\mathrm{tr}}(XYZ)+\mathop{\mathrm{tr}}(YXZ)\big).$$
 
-The two terms are the two cyclic classes of $\operatorname{tr}(XYZ)$, so their sum is invariant under every permutation of $X,Y,Z$: under $X\leftrightarrow Z$, $\operatorname{tr}(ZYX)=\operatorname{tr}(YXZ)$ and $\operatorname{tr}(YZX)=\operatorname{tr}(XYZ)$, and the sum is unchanged. **Fully symmetric**, and the block's phrase "the symmetrisation of $\operatorname{tr}(XYZ)$" is exact.
+The two terms are the two cyclic classes of $\mathop{\mathrm{tr}}(XYZ)$, so their sum is invariant under every permutation of $X,Y,Z$: under $X\leftrightarrow Z$, $\mathop{\mathrm{tr}}(ZYX)=\mathop{\mathrm{tr}}(YXZ)$ and $\mathop{\mathrm{tr}}(YZX)=\mathop{\mathrm{tr}}(XYZ)$, and the sum is unchanged. **Fully symmetric**, and the block's phrase "the symmetrisation of $\mathop{\mathrm{tr}}(XYZ)$" is exact.
 
 **The $\#$ half.** The block's reason is "permuting the arguments permutes the slots of both totally antisymmetric $c$'s, sign $(-1)^2$", attributed to [r285](../reviews/REVIEW_r285.md) Claim 1. Read at source, that claim gives the index form
 $$\langle X\#Y,Z\rangle=\tfrac12\sum c_{pqa}\,c_{rsb}\,X_{pr}\,Y_{qs}\,Z_{ab},$$
@@ -132,7 +132,7 @@ in which the two structure constants' first indices are contracted through $X$, 
 
 **$1$ is simple.** With $\lambda_{\max}(L_e|_{W^\perp})\le\tfrac12<1$ and $L_ee=e$, the $1$-eigenspace is exactly $\mathbb Re$. **Confirmed**, and note that this half is the one that needs maximality, since the $\le\tfrac12$ does.
 
-**The $\circ$-orthogonal-splitting clause.** With $W=\sum_ia_iA_i$ and the $A_i$ mutually $\circ$-orthogonal, $e\circ A_j=\tfrac1\theta\sum_ia_iA_i\circ A_j=\tfrac{a_j}\theta A_j\circ A_j=\tfrac{a_j}\theta Q(A_j)$, exactly as printed. This equals $A_j$ only if $Q(A_j)\propto A_j$ (the block's necessary condition) and criticality of $W$ then pins the constant: $\theta\sum_ia_iA_i=Q(W)=\sum_ia_i^2Q(A_i)$ forces $Q(A_i)=(\theta/a_i)A_i$ whenever $a_i\ne0$. So with two nonzero critical pieces, $\operatorname{span}(A_1,A_2)$ lies in the $1$-eigenspace of $L_e$, which meets $W^\perp$ in a line, giving $\lambda_{\max}(L_e|_{W^\perp})=1>\tfrac12$. **Confirmed, including the block's insistence that criticality of the pieces cannot be dropped.** I did not audit the comparative claim "strictly weaker than [Lemma L66](../findings/support-dichotomy.md)"; the record's own [LEDGER.md](../findings/LEDGER.md) warns that "an ordering between two results is among the least reliable things a block asserts", and that ordering is outside this brief.
+**The $\circ$-orthogonal-splitting clause.** With $W=\sum_ia_iA_i$ and the $A_i$ mutually $\circ$-orthogonal, $e\circ A_j=\tfrac1\theta\sum_ia_iA_i\circ A_j=\tfrac{a_j}\theta A_j\circ A_j=\tfrac{a_j}\theta Q(A_j)$, exactly as printed. This equals $A_j$ only if $Q(A_j)\propto A_j$ (the block's necessary condition) and criticality of $W$ then pins the constant: $\theta\sum_ia_iA_i=Q(W)=\sum_ia_i^2Q(A_i)$ forces $Q(A_i)=(\theta/a_i)A_i$ whenever $a_i\ne0$. So with two nonzero critical pieces, $\mathop{\mathrm{span}}(A_1,A_2)$ lies in the $1$-eigenspace of $L_e$, which meets $W^\perp$ in a line, giving $\lambda_{\max}(L_e|_{W^\perp})=1>\tfrac12$. **Confirmed, including the block's insistence that criticality of the pieces cannot be dropped.** I did not audit the comparative claim "strictly weaker than [Lemma L66](../findings/support-dichotomy.md)"; the record's own [LEDGER.md](../findings/LEDGER.md) warns that "an ordering between two results is among the least reliable things a block asserts", and that ordering is outside this brief.
 
 ## 4. Sharpness, the first repair, checked
 
@@ -234,7 +234,7 @@ $$P(W)=P(W^+)+P(W^-)=2\cdot2^{-3/2}\sqrt{3/2}=\frac{\sqrt{3/2}}{\sqrt2}=\frac{\s
 
 and $Q(W^\pm)=\tfrac12Q(\hat W^\pm)=2^{-1/2}\sqrt{3/2}\,W^\pm$, so $Q(W)=\theta W$ with the *same* $\theta=\sqrt3/2$ on both pieces, $W$ is critical. **This reproduces the record's $\Theta_4=0.866$ exactly and in closed form**, and it confirms the block's second refutation point: $0.866=\sqrt3/2$ belongs to $S^2\times S^2$, while $\mathfrak u(2)$ is $W_{\mathbb{CP}^2}$'s isotropy at $\pm\sqrt{3/2}=\pm1.2247$. The two are different numbers attached to different points.
 
-**And $\lambda_{\max}=1$ exactly.** $L_e$ preserves each factor, and on $\mathcal W^+$ it acts as $L_{\hat e^+}$: for $Y\in\mathcal W^+$, $e\circ Y=W^+\circ Y/\theta=\big(2^{-1/2}\sqrt{3/2}/\theta\big)L_{\hat e^+}Y=L_{\hat e^+}Y$, the constant being $1$ precisely because $\theta=2^{-1/2}\sqrt{3/2}$. Since $\hat W^+$ is the maximiser of the $5$-dimensional algebra $\mathcal W^+$, L24 applied *inside that factor* gives spectrum $\{1\}\cup[\,\cdot,\tfrac12]$; the same on $\mathcal W^-$. So $\operatorname{spec}L_e$ has $1$ with multiplicity $2$, spanned by $W^+$ and $W^-$, whose intersection with $W^\perp$ is the line through $W^+-W^-$. **$\lambda_{\max}(L_e|_{W^\perp})=1$, exactly, and the point is a saddle.** The block is right in every part.
+**And $\lambda_{\max}=1$ exactly.** $L_e$ preserves each factor, and on $\mathcal W^+$ it acts as $L_{\hat e^+}$: for $Y\in\mathcal W^+$, $e\circ Y=W^+\circ Y/\theta=\big(2^{-1/2}\sqrt{3/2}/\theta\big)L_{\hat e^+}Y=L_{\hat e^+}Y$, the constant being $1$ precisely because $\theta=2^{-1/2}\sqrt{3/2}$. Since $\hat W^+$ is the maximiser of the $5$-dimensional algebra $\mathcal W^+$, L24 applied *inside that factor* gives spectrum $\{1\}\cup[\,\cdot,\tfrac12]$; the same on $\mathcal W^-$. So $\mathop{\mathrm{spec}}L_e$ has $1$ with multiplicity $2$, spanned by $W^+$ and $W^-$, whose intersection with $W^\perp$ is the line through $W^+-W^-$. **$\lambda_{\max}(L_e|_{W^\perp})=1$, exactly, and the point is a saddle.** The block is right in every part.
 
 This is also the closed-form answer to the brief's item 4: **a citation of L24's bound at a mere critical point is refuted by an object the record already owns.**
 

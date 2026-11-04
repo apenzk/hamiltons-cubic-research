@@ -115,7 +115,7 @@ $$\boxed{\ H\;=\;2\big(\lvert W\rvert+\lvert W\rvert\,\#\,I\big)\ }$$
 ### Route 1, statement (A) inside the $\#$-calculus *(my pick)*
 
 - **Mechanism.** [Lemma 2.1](../references/boehm-wilking-2008-space-forms/notes.md) rewrites $H$ as $2(\lvert W\rvert+\lvert W\rvert\#I)$, turning the $J_5$ grant into $\langle 4(W_+\#W_-)-2\theta W_--2W_-^2,\ \lvert W\rvert+\lvert W\rvert\#I\rangle\ge0$, **one inequality, no Ricci, no blocks, no frames.**
-- **What it delivers.** [Conjecture L16](../findings/problem.md)'s first owed step, in the calculus with the most machinery behind it: $A\#B\succeq0$ for $A,B\succeq0$, the $\#$-block formulas, $\operatorname{tr}W^\#=-1$, $\lvert W\rvert^\#=W^\#+4W_+\#W_-$.
+- **What it delivers.** [Conjecture L16](../findings/problem.md)'s first owed step, in the calculus with the most machinery behind it: $A\#B\succeq0$ for $A,B\succeq0$, the $\#$-block formulas, $\mathop{\mathrm{tr}}W^\#=-1$, $\lvert W\rvert^\#=W^\#+4W_+\#W_-$.
 - **What it takes.** One normalisation check on Lemma 2.1's substitution, then the inequality itself.
 - **Falsifier.** The substitution failing, the lemma's $\mathrm{Ric}$ being the operator's own rather than $\mathrm{Ric}(\lvert W\rvert)$ in this normalisation. *Checkable by hand at padded $W_{\mathbb{CP}^2}$.*
 - **Screened.** [Post F54](../findings/INDEX-traps.md) fences *re-bounding $H$ by trace data*; this **rewrites** $H$ so no bound on it is needed. F51's rearrangement fence is about the pair-clause data, a different object. **Clear.**
@@ -148,7 +148,7 @@ Held in reserve behind Route 1, which reaches the same object more cheaply. *If 
 
 **Which is not a dead route but a priced one, in the currency the conjecture already uses.** $\delta^2=\lVert\mathrm{Alt}(W_-)\rVert^2$ is the failure of $\lvert W\rvert$ to be Bianchi, and it is **the same scalar [Conjecture L16](../findings/problem.md) is written in**. So the rewrite reads
 $$H\;=\;2\big(\lvert W\rvert+\lvert W\rvert\,\#\,I\big)\;+\;(\text{a correction vanishing with }\delta),$$
-and the record **already prices corrections of exactly this shape**: Result 2's identity $D(R)=\tfrac32\sum\mathrm{Alt}(R)\mathrm{Alt}(R)$, proven twice, PSD, with $\operatorname{tr}D=6\lVert\mathrm{Alt}R\rVert^2$.
+and the record **already prices corrections of exactly this shape**: Result 2's identity $D(R)=\tfrac32\sum\mathrm{Alt}(R)\mathrm{Alt}(R)$, proven twice, PSD, with $\mathop{\mathrm{tr}}D=6\lVert\mathrm{Alt}R\rVert^2$.
 
 **What the check has bought.** *Route 1 is not one inequality but two*: the $\#$-calculus statement on the Bianchi locus, plus a correction whose size is $O(\delta^2)$ and whose calculus the chain already carries. **And that is the same shape as the chain's other two corrections** ($J_4$'s Bianchi penalty and the $\tfrac32$-Gram), *so the grant would join them rather than sit outside.*
 

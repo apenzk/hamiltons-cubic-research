@@ -22,7 +22,7 @@
 
 ## 1. Cold derivations, before the text was opened
 
-**The band count, and it needs far less than the band.** If $k$ eigenvalues of $M$ are $\ge\theta$ then $k\theta^2\le\sum\lambda_i^2=\lVert M\rVert_F^2=2$, so $k\le2/\theta^2$. This is $<2$ already for $\theta>1$; at $\theta\ge\sqrt{3/2}$ it gives $k\le4/3$. **At most one eigenvalue $\ge\theta$, and its multiplicity is therefore $1$.** With the gap, which I re-derived as $M^2-\theta M=\operatorname{diag}(s)-M\!\circ\!M=L(M\!\circ\!M)\succeq0$, the weighted graph Laplacian of the Hadamard square, the identity [diagonal-half.md](../findings/diagonal-half.md) already carries, every eigenvalue is $\le0$ or $\ge\theta$, and $\operatorname{tr}M=0$ with $M\ne0$ forces $\lambda_1>0$. So $M=\lambda_1ww^\top-K$ with $K\succeq0$ and $\lambda_1$ **simple**, at every pure critical point in the band.
+**The band count, and it needs far less than the band.** If $k$ eigenvalues of $M$ are $\ge\theta$ then $k\theta^2\le\sum\lambda_i^2=\lVert M\rVert_F^2=2$, so $k\le2/\theta^2$. This is $<2$ already for $\theta>1$; at $\theta\ge\sqrt{3/2}$ it gives $k\le4/3$. **At most one eigenvalue $\ge\theta$, and its multiplicity is therefore $1$.** With the gap, which I re-derived as $M^2-\theta M=\mathop{\mathrm{diag}}(s)-M\!\circ\!M=L(M\!\circ\!M)\succeq0$, the weighted graph Laplacian of the Hadamard square, the identity [diagonal-half.md](../findings/diagonal-half.md) already carries, every eigenvalue is $\le0$ or $\ge\theta$, and $\mathop{\mathrm{tr}}M=0$ with $M\ne0$ forces $\lambda_1>0$. So $M=\lambda_1ww^\top-K$ with $K\succeq0$ and $\lambda_1$ **simple**, at every pure critical point in the band.
 
 **The split, and the closed form is the sharper one.** Write $x=s\hat w+y$, $\hat w=\Pi w/\rho$, $\rho=\lVert\Pi w\rVert$, and extend $x$ by zero to $\tilde x\in\mathbb R^n$, so $\langle\tilde x,w\rangle=\rho s$. Then $\tilde x^\top M\tilde x\le\lambda_1\rho^2s^2+\lambda_2(1-\rho^2s^2)$ and $x^\top Dx=s^2\hat w^\top D\hat w+2s\,(D\hat w)\!\cdot\!y+y^\top Dy$, where $(D\hat w)\!\cdot\!y$ is a pairing against a vector **orthogonal to $\hat w$**. Hence
 
@@ -34,7 +34,7 @@ whose maximum over $s$ is exactly $\lambda_{\max}\begin{psmallmatrix}a&q\\q&b\en
 
 | quantity | value | at $m=6$ |
 | --- | --- | --- |
-| $\operatorname{spec}(M)$ | $\{2mg,\ 0,\ -\alpha^{(2m-2)}\}$ | $\{12g,0,-1.2g^{(10)}\}$ |
+| $\mathop{\mathrm{spec}}(M)$ | $\{2mg,\ 0,\ -\alpha^{(2m-2)}\}$ | $\{12g,0,-1.2g^{(10)}\}$ |
 | $\lambda_1$, $\lambda_2$ | $2mg$ (simple), $0$ | $1.348400$, $0$ |
 | $\rho^2=\lVert\Pi w\rVert^2$ | $(m-1)/m$ | $5/6$ |
 | $\hat w^\top D\hat w$ | $-\alpha/(m-1)=-mg/(m-1)^2$ | $-0.24g$ |
@@ -140,7 +140,7 @@ All four **CONFIRMED**, re-derived from the definitions:
 
 | where | what is assumed without statement |
 | --- | --- |
-| $M=\lambda_1ww^\top-K$, $K\succeq0$ | the **gap** $\operatorname{spec}(M)\cap(0,\theta)=\varnothing$, on top of the band count. The count alone gives $\lambda_2<\theta$, not $\lambda_2\le0$ |
+| $M=\lambda_1ww^\top-K$, $K\succeq0$ | the **gap** $\mathop{\mathrm{spec}}(M)\cap(0,\theta)=\varnothing$, on top of the band count. The count alone gives $\lambda_2<\theta$, not $\lambda_2\le0$ |
 | "at most one direction can violate" | $\mu^+<T$, unproved in general (§5) |
 | $w_j=w_k$ | $P_\tau w=+w$ rather than $-w$ (§6.2) |
 | the boxed condition's usefulness | $o=0$. The section's own earlier round proved $\widetilde No=To$; the joint estimate inherits the same blindness and the text does not say so |

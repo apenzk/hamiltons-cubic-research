@@ -22,12 +22,12 @@
 
 ## Conventions, quoted from the brief
 
-- $\Lambda^2\mathbb R^n$ is realised as skew matrices. $\varphi_{ab}=E_{ba}-E_{ab}$ and it is a UNIT bivector. The inner product is $\langle X,Y\rangle=\tfrac12\operatorname{tr}(X^{\mathsf T}Y)$.
+- $\Lambda^2\mathbb R^n$ is realised as skew matrices. $\varphi_{ab}=E_{ba}-E_{ab}$ and it is a UNIT bivector. The inner product is $\langle X,Y\rangle=\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$.
 - $u\wedge v=vu^{\mathsf T}-uv^{\mathsf T}$. At orthonormal $u,v$ this is a unit bivector and $(u\wedge v)(u\wedge v)^{\mathsf T}=uu^{\mathsf T}+vv^{\mathsf T}=\Pi_P$, the orthogonal projection onto $P=\mathrm{span}\{u,v\}$. **This holds for exactly this normalisation**: the $1/\sqrt2$ convention returns $\tfrac12\Pi_P$.
 - $\omega$ is **decomposable** when $\omega=u\wedge v$, equivalently $\omega\wedge\omega=0$.
 - $\mathcal W_n$ is the space of algebraic Weyl tensors. $P(W)=\langle W,W^2+W^\#\rangle$, $\theta=P(W)/\lVert W\rVert^3$, and criticality on the unit sphere is $Q(W)=W^2+W^\#=\theta W$.
 - $\sqrt{3/2}=1.224745$ and $\theta_0(n)=\sqrt{2(n-1)(n-2)}/n$. At $n=5$, $\theta_0(5)=2\sqrt6/5=0.979796$.
-- $S_{\alpha\beta}=\operatorname{tr}(\Pi_\alpha\Pi_\beta)$, the plain trace with no factor $\tfrac12$. $N=\binom n2$, $a=\dim E=\lvert A\rvert$, $c=2a/n$.
+- $S_{\alpha\beta}=\mathop{\mathrm{tr}}(\Pi_\alpha\Pi_\beta)$, the plain trace with no factor $\tfrac12$. $N=\binom n2$, $a=\dim E=\lvert A\rvert$, $c=2a/n$.
 
 ## Hypothesis inventory
 
@@ -45,11 +45,11 @@ What the two arguments actually consume, and where.
 
 **H2 is the load-bearing hypothesis for the complement half.** For an isolated isotropic $E$ with a decomposable basis and no assumption on $E^\perp$, the argument bounds $a$ from below and says nothing from above. This is the source of defect C8.
 
-**H3's own consistency, checked.** Under H1, Ricci-flatness reads $\mu\Theta(E)+\nu\Theta(E^\perp)=0$ (given 2), and with H6 this is $(\mu-\nu)\Theta(E)=-\nu(n-1)\mathrm{Id}$, so isotropy of $E$ and of $E^\perp$ hold together, with $\operatorname{tr}\Theta(E)=2a$ (given 1) fixing $c=2a/n$. Trace-freeness $a\mu+(N-a)\nu=0$ follows rather than being assumed, since $2N=n(n-1)$. Note that this half of given 14 needs no decomposability at all: **isotropy of the complement is free, and only the complement's rank count needs H2.**
+**H3's own consistency, checked.** Under H1, Ricci-flatness reads $\mu\Theta(E)+\nu\Theta(E^\perp)=0$ (given 2), and with H6 this is $(\mu-\nu)\Theta(E)=-\nu(n-1)\mathrm{Id}$, so isotropy of $E$ and of $E^\perp$ hold together, with $\mathop{\mathrm{tr}}\Theta(E)=2a$ (given 1) fixing $c=2a/n$. Trace-freeness $a\mu+(N-a)\nu=0$ follows rather than being assumed, since $2N=n(n-1)$. Note that this half of given 14 needs no decomposability at all: **isotropy of the complement is free, and only the complement's rank count needs H2.**
 
 ## 1. The eigenvalues of $c\,\mathrm{Id}-\Pi_1$
 
-$\Pi_1$ is the orthogonal projection of $\mathbb R^n$ onto a $2$-plane (H4), so its spectrum is $1$ with multiplicity $2$ and $0$ with multiplicity $n-2$, on the orthogonal splitting $P_1\oplus P_1^\perp$. That splitting diagonalises $c\,\mathrm{Id}-\Pi_1$ too, with $c-1$ on $P_1$ and $c$ on $P_1^\perp$. So the spectrum is $c-1$ twice and $c$ with multiplicity $n-2$. **Verified.** Trace check: $nc-2=2a-2=2(a-1)$, which is $\operatorname{tr}\sum_{\alpha\ne1}\Pi_\alpha$, as given 1 requires.
+$\Pi_1$ is the orthogonal projection of $\mathbb R^n$ onto a $2$-plane (H4), so its spectrum is $1$ with multiplicity $2$ and $0$ with multiplicity $n-2$, on the orthogonal splitting $P_1\oplus P_1^\perp$. That splitting diagonalises $c\,\mathrm{Id}-\Pi_1$ too, with $c-1$ on $P_1$ and $c$ on $P_1^\perp$. So the spectrum is $c-1$ twice and $c$ with multiplicity $n-2$. **Verified.** Trace check: $nc-2=2a-2=2(a-1)$, which is $\mathop{\mathrm{tr}}\sum_{\alpha\ne1}\Pi_\alpha$, as given 1 requires.
 
 The identity $\sum_{\alpha\ne1}\Pi_\alpha=c\,\mathrm{Id}-\Pi_1$ is H3 minus one term, and $\Theta(E)=\sum_{\alpha\in A}\Pi_\alpha$ holds because $\omega_\alpha\omega_\alpha^{\mathsf T}=\Pi_\alpha$ at the brief's normalisation. **At the $1/\sqrt2$ convention it would read $\tfrac12\Pi_\alpha$ and every constant in both arguments would move.** The brief's convention is the one used throughout, consistently.
 
@@ -59,7 +59,7 @@ A sum of orthogonal projections is positive semidefinite, so $c\,\mathrm{Id}-\Pi
 
 At $c=1$ exactly, meaning $n$ even and $a=n/2$: the identity becomes $\sum_{\alpha\ne1}\Pi_\alpha=\mathrm{Id}-\Pi_1$, of rank $n-2=2(a-1)$, which saturates the rank bound of item 3 and yields no contradiction. So the case split "$c=1$, or $c>1$" is exhaustive and correct, and it is exhaustive because $c=2a/n$ takes the value $1$ only at $a=n/2$.
 
-**On the label C1b.** The block calls $c\ge1$ "the rank bound again". The honest reading is that $c\ge1$ is exactly $\operatorname{rank}(c\,\mathrm{Id})=n\le\sum_{\alpha\in A}\operatorname{rank}\Pi_\alpha=2a$, a rank count on $\Theta$ itself. That is a different statement from given 17, which bounds the rank of the *Gram matrix* of a full orthonormal decomposable basis below by $n$. The two are not the same object and the identification should not be made in a sentence a reader may cite.
+**On the label C1b.** The block calls $c\ge1$ "the rank bound again". The honest reading is that $c\ge1$ is exactly $\mathop{\mathrm{rank}}(c\,\mathrm{Id})=n\le\sum_{\alpha\in A}\mathop{\mathrm{rank}}\Pi_\alpha=2a$, a rank count on $\Theta$ itself. That is a different statement from given 17, which bounds the rank of the *Gram matrix* of a full orthonormal decomposable basis below by $n$. The two are not the same object and the identification should not be made in a sentence a reader may cite.
 
 ## 3. The rank step, and the disjunction
 
@@ -88,7 +88,7 @@ $n=5$, $N=10$, $c=2a/5$, and $c=1$ is unreachable since $5\nmid 2a$ for integer 
 
 Divisibility (H7): $5\mid 2a$ is $5\mid a$, so of $\{4,5,6\}$ only $a=5$ can be coordinate-spanned. **The falsifier candidates are $a\in\{4,6\}$.** Correct, and this is the collapse of the earlier list $\{3,4,6,7\}$: $3$ and $7$ die by §3 and §4, $4$ and $6$ survive to §9.
 
-The forced Gram data quoted in the block is right. For $\alpha\in A$, $\sum_{\beta\in A}S_{\alpha\beta}=\operatorname{tr}(\Pi_\alpha\Theta(E))=\tfrac{2a}n\operatorname{tr}\Pi_\alpha=\tfrac{4a}n$, which is $16/5$ at $a=4$. Subtracting $S_{\alpha\alpha}=2$ leaves $6/5$ across the three off-diagonal entries of each row. For $\beta\in B$ the same trace against $\Theta(E)$ gives $\sum_{\alpha\in A}S_{\beta\alpha}=\tfrac{4a}n=16/5$ as well. Both **verified**.
+The forced Gram data quoted in the block is right. For $\alpha\in A$, $\sum_{\beta\in A}S_{\alpha\beta}=\mathop{\mathrm{tr}}(\Pi_\alpha\Theta(E))=\tfrac{2a}n\mathop{\mathrm{tr}}\Pi_\alpha=\tfrac{4a}n$, which is $16/5$ at $a=4$. Subtracting $S_{\alpha\alpha}=2$ leaves $6/5$ across the three off-diagonal entries of each row. For $\beta\in B$ the same trace against $\Theta(E)$ gives $\sum_{\alpha\in A}S_{\beta\alpha}=\tfrac{4a}n=16/5$ as well. Both **verified**.
 
 ## 6. The swap
 
@@ -107,12 +107,12 @@ The consequence the block does not spell out: of the two operators $\pm W$ carri
 **The value $1/5$ is right.** At $n=5$, $a=3$ the row sum is $4a/n=12/5$, so the two off-diagonal entries in each row of the $3\times3$ Gram matrix sum to $12/5-2=2/5$. The three equations $S_{12}+S_{13}=S_{12}+S_{23}=S_{13}+S_{23}=2/5$ force $S_{12}=S_{13}=S_{23}=1/5$. **Verified.**
 
 **The pair meets both conditions.** With $P_1=\mathrm{span}\{e_1,e_2\}$ and $f_1=(e_1+2e_3)/\sqrt5$, $P_2=\mathrm{span}\{f_1,e_4\}$:
-$$S_{12}=\operatorname{tr}(\Pi_1\Pi_2)=f_1^{\mathsf T}\Pi_1f_1+e_4^{\mathsf T}\Pi_1e_4=\tfrac15+0=\tfrac15 .$$
+$$S_{12}=\mathop{\mathrm{tr}}(\Pi_1\Pi_2)=f_1^{\mathsf T}\Pi_1f_1+e_4^{\mathsf T}\Pi_1e_4=\tfrac15+0=\tfrac15 .$$
 Orthogonality in $\Lambda^2$: $\langle e_1\wedge e_2,\ f_1\wedge e_4\rangle=\det\begin{pmatrix}\langle e_1,f_1\rangle&\langle e_1,e_4\rangle\\ \langle e_2,f_1\rangle&\langle e_2,e_4\rangle\end{pmatrix}=\det\begin{pmatrix}1/\sqrt5&0\\0&0\end{pmatrix}=0$. **Both verified**, and the two principal angles are $\arccos(1/\sqrt5)$ and $\pi/2$, consistent with H5.
 
 **The third matrix.** With $D_i=e_ie_i^{\mathsf T}$, $\Pi_1=D_1+D_2$ and $\Pi_2=\tfrac15D_1+\tfrac45D_3+\tfrac25(e_1e_3^{\mathsf T}+e_3e_1^{\mathsf T})+D_4$, so $\Pi_3=\tfrac65\mathrm{Id}-\Pi_1-\Pi_2$ has diagonal $\bigl(\tfrac65-1-\tfrac15,\ \tfrac65-1,\ \tfrac65-\tfrac45,\ \tfrac65-1,\ \tfrac65\bigr)=\bigl(0,\tfrac15,\tfrac25,\tfrac15,\tfrac65\bigr)$ and single off-diagonal pair $-\tfrac25$ at $(1,3)$:
 $$\Pi_3=\tfrac15D_2+\tfrac25D_3+\tfrac15D_4+\tfrac65D_5-\tfrac25(e_1e_3^{\mathsf T}+e_3e_1^{\mathsf T}).$$
-**Exactly as quoted**, and $\operatorname{tr}\Pi_3=2$ as it must be.
+**Exactly as quoted**, and $\mathop{\mathrm{tr}}\Pi_3=2$ as it must be.
 
 **The failure.** A positive semidefinite matrix with $M_{ii}=0$ has its whole $i$th row zero, since $\lvert M_{ij}\rvert\le\sqrt{M_{ii}M_{jj}}$. Here $(\Pi_3)_{11}=0$ while $(\Pi_3)_{13}=-2/5$. **Not positive semidefinite, so not a projection.** Contradiction.
 
@@ -134,7 +134,7 @@ Now $\Pi_1+\Pi_2$ acts blockwise on $\mathrm{span}\{u_1,w\}\oplus\mathrm{span}\{
 - $z$: annihilated by both. **Eigenvalue $0$.**
 - $\mathrm{span}\{u_1,w\}$: $\Pi_1u_1=u_1$, $\Pi_1w=0$, $\Pi_2u_1=c\,v_1$, $\Pi_2w=s\,v_1$, so in the basis $(u_1,w)$ the block is $\begin{pmatrix}1+c^2&cs\\ cs&s^2\end{pmatrix}$, of trace $2$ and determinant $(1+c^2)s^2-c^2s^2=s^2$. Its eigenvalues solve $\lambda^2-2\lambda+s^2=0$, giving $\lambda=1\pm\sqrt{1-s^2}=1\pm c$.
 
-So the spectrum is $\{1+c,\ 1-c,\ 1,\ 1,\ 0\}$ with $c=\sqrt{S_{12}}\in[0,1]$, the sign fixed by $\vartheta_1\in[0,\pi/2]$. **Verified**, trace $4=2+2$ and $\operatorname{tr}\bigl((\Pi_1+\Pi_2)^2\bigr)=4+2S_{12}$ both consistent.
+So the spectrum is $\{1+c,\ 1-c,\ 1,\ 1,\ 0\}$ with $c=\sqrt{S_{12}}\in[0,1]$, the sign fixed by $\vartheta_1\in[0,\pi/2]$. **Verified**, trace $4=2+2$ and $\mathop{\mathrm{tr}}\bigl((\Pi_1+\Pi_2)^2\bigr)=4+2S_{12}$ both consistent.
 
 **Which degeneracies move the multiplicities, the formula holding as a multiset throughout:**
 
@@ -150,13 +150,13 @@ The $c=1$ row needs its own two lines, since $w$ is undefined there: $v_1=u_1$, 
 
 $a=4$, $n=5$, isotropy constant $8/5$. Subtracting §8's spectrum from $8/5$ on the same eigenframe:
 $$\tfrac85\mathrm{Id}-\Pi_1-\Pi_2\ \text{ has spectrum }\ \bigl\{\tfrac35-c,\ \tfrac35+c,\ \tfrac35,\ \tfrac35,\ \tfrac85\bigr\}.$$
-**Verified**, and the trace is $\tfrac{3+3+3+3+8}5=4$, which is $5\cdot\tfrac85-4$ and equals $\operatorname{tr}(\Pi_3+\Pi_4)=2+2$. **Verified.**
+**Verified**, and the trace is $\tfrac{3+3+3+3+8}5=4$, which is $5\cdot\tfrac85-4$ and equals $\mathop{\mathrm{tr}}(\Pi_3+\Pi_4)=2+2$. **Verified.**
 
 By isotropy that matrix is $\Pi_3+\Pi_4$.
 
 - **Positivity.** $\Pi_3+\Pi_4\succeq0$, and the only possibly negative eigenvalue is $\tfrac35-c$, so $c\le\tfrac35$. **Verified.**
-- **Rank.** $\operatorname{rank}(\Pi_3+\Pi_4)\le4<5$, so the matrix is singular and some eigenvalue vanishes. Of the five, $\tfrac35+c\ge\tfrac35>0$, $\tfrac35>0$ twice, and $\tfrac85>0$: **only $\tfrac35-c$ can supply the zero.** Verified. Hence $c=\tfrac35$ and $S_{12}=c^2=\tfrac9{25}$.
-- **Row sum.** Three off-diagonal entries at $\tfrac9{25}$ give $\tfrac{27}{25}$, against the required $\tfrac65=\tfrac{30}{25}$ from §5. **Contradiction, verified.** Equivalently $\operatorname{tr}(\Theta(E)^2)$ would be $8+12\cdot\tfrac9{25}=\tfrac{308}{25}$ while isotropy demands $5\cdot\bigl(\tfrac85\bigr)^2=\tfrac{320}{25}$.
+- **Rank.** $\mathop{\mathrm{rank}}(\Pi_3+\Pi_4)\le4<5$, so the matrix is singular and some eigenvalue vanishes. Of the five, $\tfrac35+c\ge\tfrac35>0$, $\tfrac35>0$ twice, and $\tfrac85>0$: **only $\tfrac35-c$ can supply the zero.** Verified. Hence $c=\tfrac35$ and $S_{12}=c^2=\tfrac9{25}$.
+- **Row sum.** Three off-diagonal entries at $\tfrac9{25}$ give $\tfrac{27}{25}$, against the required $\tfrac65=\tfrac{30}{25}$ from §5. **Contradiction, verified.** Equivalently $\mathop{\mathrm{tr}}(\Theta(E)^2)$ would be $8+12\cdot\tfrac9{25}=\tfrac{308}{25}$ while isotropy demands $5\cdot\bigl(\tfrac85\bigr)^2=\tfrac{320}{25}$.
 
 **A second, independent kill, which the record should record because it makes the chain robust to any slip in the row-sum bookkeeping.** By H5 applied to the orthogonal pair $\omega_3,\omega_4$, the matrix $\Pi_3+\Pi_4$ must itself have a spectrum of §8's shape, so **it must carry the eigenvalue $1$ with multiplicity at least two** (two in the generic case, four at $c'=0$, two at $c'=1$). At $c=\tfrac35$ the spectrum computed above is $\bigl\{0,\tfrac35,\tfrac35,\tfrac65,\tfrac85\bigr\}$, which contains no $1$ at all. Contradiction, without appeal to the row sum.
 
@@ -214,8 +214,8 @@ The repair is a quantifier, not new mathematics: *at $n=5$, if $W$ has exactly t
 
 | Argument | The object that would break it | What I did |
 |---|---|---|
-| One removal (§1 to §3) | A member of the basis that is not decomposable. Then $\omega\omega^{\mathsf T}$ has rank $4$ in $\Lambda^2\mathbb R^5$, positivity survives but the rank bound becomes $4(a-1)$ and $a\ge\frac n4+1$ is all that follows, which at $n=5$ excludes nothing above $a=2$ | Confirmed that H2 rules this out inside the decomposable locus, and traced which of the two steps each hypothesis feeds: positivity needs only that $\Pi_\alpha\succeq0$, the rank step needs $\operatorname{rank}\Pi_\alpha=2$ |
-| One removal | The normalisation. At the $1/\sqrt2$ convention $\omega\omega^{\mathsf T}=\tfrac12\Pi$, the isotropy constant halves, and the least eigenvalue becomes $c-\tfrac12$, giving $a\ge n/4$ and killing the enumeration | Checked the brief's convention is the one in force at every constant used, including $c=2a/n$ and $S_{\alpha\alpha}=2$, and that $\operatorname{tr}\Theta(E)=2a$ holds throughout |
+| One removal (§1 to §3) | A member of the basis that is not decomposable. Then $\omega\omega^{\mathsf T}$ has rank $4$ in $\Lambda^2\mathbb R^5$, positivity survives but the rank bound becomes $4(a-1)$ and $a\ge\frac n4+1$ is all that follows, which at $n=5$ excludes nothing above $a=2$ | Confirmed that H2 rules this out inside the decomposable locus, and traced which of the two steps each hypothesis feeds: positivity needs only that $\Pi_\alpha\succeq0$, the rank step needs $\mathop{\mathrm{rank}}\Pi_\alpha=2$ |
+| One removal | The normalisation. At the $1/\sqrt2$ convention $\omega\omega^{\mathsf T}=\tfrac12\Pi$, the isotropy constant halves, and the least eigenvalue becomes $c-\tfrac12$, giving $a\ge n/4$ and killing the enumeration | Checked the brief's convention is the one in force at every constant used, including $c=2a/n$ and $S_{\alpha\alpha}=2$, and that $\mathop{\mathrm{tr}}\Theta(E)=2a$ holds throughout |
 | One removal | A parity case where the disjunction hides a gap. It does not hide one, but at even $n$ it hides that there is no gain | Split §3 by parity and computed the gain: two values of $a$ at odd $n$, none at even $n$ |
 | Complement (§4) | An isotropic $E$ whose orthogonal complement has no decomposable orthonormal basis. Its $a$ would be bounded below only | Recorded as defect C8, and separated the free part (isotropy of $E^\perp$, which needs no decomposability) from the part that needs H2 (the rank count on $E^\perp$) |
 | $a=3$ (§7) | A pair $P_1,P_2$ with $S_{12}=1/5$ and one right principal angle that is *not* $O(5)$-equivalent to the record's. None exists, by the CS decomposition | Derived the uniqueness up to $O(5)$ and thereby upgraded the explicit computation to a complete proof, then re-derived $\Pi_3$ entry by entry and found a second failure at $(\Pi_3)_{55}=6/5>1$ |

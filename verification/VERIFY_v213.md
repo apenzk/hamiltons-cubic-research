@@ -38,7 +38,7 @@ Quoted from [findings/conventions.md](../findings/conventions.md), not restated.
 
 Section A's gloss ("every $\varphi_{ij}=e_i\wedge e_j$ an eigenvector") and section D's ("diagonal on the coordinate $2$-planes of the frame") both agree with this. The block is read against the tabled meaning throughout.
 
-> A bivector's norm, and the record runs in the first of these: $\lVert\varphi_{ab}\rVert^2=1$ under the half-trace pairing … which makes $\{\varphi_{ab}\}_{a<b}$ orthonormal; $\lVert\varphi_{ab}\rVert^2=2$ under **plain Frobenius**, $\operatorname{tr}(X^{\mathsf T}X)$, for $\varphi_{ab}=E_{ab}-E_{ba}$.
+> A bivector's norm, and the record runs in the first of these: $\lVert\varphi_{ab}\rVert^2=1$ under the half-trace pairing … which makes $\{\varphi_{ab}\}_{a<b}$ orthonormal; $\lVert\varphi_{ab}\rVert^2=2$ under **plain Frobenius**, $\mathop{\mathrm{tr}}(X^{\mathsf T}X)$, for $\varphi_{ab}=E_{ab}-E_{ba}$.
 
 So the identification of $\Lambda^2$ with skew matrices is $u\wedge v=uv^{\mathsf T}-vu^{\mathsf T}$, under which $e_i\wedge e_j=E_{ij}-E_{ji}=\varphi_{ij}$. This is the identification claim 2 needs and it is the record's.
 
@@ -103,9 +103,9 @@ Read as the standalone slogan it is bolded into, it says the distinct-sums condi
 
 **The chain "distinct $a_i$, so simple spectrum" is a false implication.**
 
-*Discrepancy protocol.* **Locate:** [findings/target.md:642](../findings/target.md), "*For $n\ge3$ that forces the $a_i$ themselves distinct, **so** $\delta_A$ has simple spectrum on $\Lambda^2$*". **Exhibit:** take $n=4$ and $A=\mathrm{diag}(0,1,2,3)$. The $a_i$ are pairwise distinct. The spectrum of $\delta_A$ on $\Lambda^2\mathbb R^4$ is $\{a_i+a_j\}_{i<j}=\{1,2,3,3,4,5\}$, with $a_1+a_4=a_2+a_3=3$. Not simple. So "distinct $a_i$" does not imply "simple spectrum", and the implication as written is false. **Argue the opposite:** the simple spectrum is immediate from the hypothesis rather than from the middle term, H3 *is* the statement that the multiset $\{a_i+a_j\}_{i<j}$, which by §1(c) is exactly $\operatorname{spec}(\delta_A)$ on $\Lambda^2$, has distinct entries. And distinct $a_i$ is not idle: it is what makes "**$A$'s eigenframe**" a well-defined frame (unique up to signs and permutation), so that the final clause names something. **The candidate survives as a defect in the written proof**, not in the lemma: a reader following the chain literally passes through a false step, and the two facts have been fused into one "so" that mis-attributes the reason for each.
+*Discrepancy protocol.* **Locate:** [findings/target.md:642](../findings/target.md), "*For $n\ge3$ that forces the $a_i$ themselves distinct, **so** $\delta_A$ has simple spectrum on $\Lambda^2$*". **Exhibit:** take $n=4$ and $A=\mathrm{diag}(0,1,2,3)$. The $a_i$ are pairwise distinct. The spectrum of $\delta_A$ on $\Lambda^2\mathbb R^4$ is $\{a_i+a_j\}_{i<j}=\{1,2,3,3,4,5\}$, with $a_1+a_4=a_2+a_3=3$. Not simple. So "distinct $a_i$" does not imply "simple spectrum", and the implication as written is false. **Argue the opposite:** the simple spectrum is immediate from the hypothesis rather than from the middle term, H3 *is* the statement that the multiset $\{a_i+a_j\}_{i<j}$, which by §1(c) is exactly $\mathop{\mathrm{spec}}(\delta_A)$ on $\Lambda^2$, has distinct entries. And distinct $a_i$ is not idle: it is what makes "**$A$'s eigenframe**" a well-defined frame (unique up to signs and permutation), so that the final clause names something. **The candidate survives as a defect in the written proof**, not in the lemma: a reader following the chain literally passes through a false step, and the two facts have been fused into one "so" that mis-attributes the reason for each.
 
-**Repair, one sentence.** *"For $n\ge3$ that forces the $a_i$ themselves distinct, so $A$'s eigenframe $\{f_i\}$ is determined up to signs and order; and the hypothesis says precisely that $\operatorname{spec}(\delta_A)=\{a_i+a_j\}_{i<j}$ is simple, with eigenlines $\mathbb R\varphi_{ij}$."*
+**Repair, one sentence.** *"For $n\ge3$ that forces the $a_i$ themselves distinct, so $A$'s eigenframe $\{f_i\}$ is determined up to signs and order; and the hypothesis says precisely that $\mathop{\mathrm{spec}}(\delta_A)=\{a_i+a_j\}_{i<j}$ is simple, with eigenlines $\mathbb R\varphi_{ij}$."*
 
 **Simple spectrum plus $[W,\delta_A]=0$ gives eigenvectors, not merely invariant lines.** The brief flags this step; it holds. If $\delta_Av=\lambda v$ and $W\delta_A=\delta_AW$ then $\delta_A(Wv)=W\delta_Av=\lambda Wv$, so $Wv\in E_\lambda(\delta_A)$. Simplicity gives $E_\lambda=\mathbb R v$, so $Wv=cv$ for some scalar $c$. **A one-dimensional invariant subspace is an eigenline in the strict sense**, "preserves the line" and "the line is spanned by an eigenvector" coincide exactly at dimension one, and the distinction the brief warns about would bite only at multiplicity $\ge2$, which simplicity excludes. Applying this to $v=\varphi_{ij}$ for every $i<j$: every $\varphi_{ij}$ of $A$'s eigenframe is an eigenvector of $W$.
 
@@ -143,7 +143,7 @@ Read as the standalone slogan it is bolded into, it says the distinct-sums condi
 2. So in the splitting $\Lambda^2=\Lambda^+\oplus\Lambda^-$ we may write $\delta_{A_0}=\begin{pmatrix}0&B\\B^{\mathsf T}&0\end{pmatrix}$.
 3. Let $W$ be **self-dual**: $W|_{\Lambda^+}=W^+$, $W|_{\Lambda^-}=0$. Then $[W,\delta_{A_0}]=\begin{pmatrix}0&W^+B\\-B^{\mathsf T}W^+&0\end{pmatrix}$, which vanishes iff $W^+B=0$.
 4. If $W^+$ is **invertible** this forces $B=0$, i.e. $\delta_{A_0}=0$, i.e. $A_0=0$ by the injectivity in §1.
-5. Splitting a general $A=\tfrac{\operatorname{tr}A}4\mathrm{Id}+A_0$ and using $\delta_{\mathrm{Id}}=2\,\mathrm{Id}_{\Lambda^2}$, we get $\ker\Phi_W=\mathbb R\cdot\mathrm{Id}$ exactly, so $\boxed{\dim\ker\Phi_W=1<4}$.
+5. Splitting a general $A=\tfrac{\mathop{\mathrm{tr}}A}4\mathrm{Id}+A_0$ and using $\delta_{\mathrm{Id}}=2\,\mathrm{Id}_{\Lambda^2}$, we get $\ker\Phi_W=\mathbb R\cdot\mathrm{Id}$ exactly, so $\boxed{\dim\ker\Phi_W=1<4}$.
 
 $W_{\mathbb{CP}^2}$ is of this shape, with $W^-=0$ and $W^+$ proportional to $\mathrm{diag}(2,-1,-1)$ (trace-free and invertible) and it lies in $\mathcal W_4$. So the corollary's non-vacuity holds **inside $\mathcal W_4$**, not merely among general operators, and the derivation agrees with the record's measured $1$ by a route that touches no numerics. *Note also what step 5 recovers independently: [findings/target.md:458](../findings/target.md)'s "$\dim\ker\Phi_W=1$ forces $\ker\Phi_W=\mathbb R\cdot\mathrm{Id}$ exactly".*
 
@@ -154,8 +154,8 @@ $W_{\mathbb{CP}^2}$ is of this shape, with $W^-=0$ and $W^+$ proportional to $\m
 **Is the condition polynomial in $A$?** The brief's objection is right that the eigenvalues $a_i$ are not polynomial functions of $A$'s entries, and the block supplies nothing in their place. The claim is nonetheless **true**, by a step the block omits:
 
 - $\delta_A$ depends **linearly** on $A$, so the coefficients of $\chi_{\delta_A}$, the characteristic polynomial of $\delta_A$ acting on $\Lambda^2$, are polynomials in the entries of $A$.
-- $\Delta(A):=\operatorname{disc}\big(\chi_{\delta_A}\big)=\prod_{\alpha<\beta}(\lambda_\alpha-\lambda_\beta)^2$ is a universal polynomial in those coefficients, hence a polynomial in $A$ (of degree $N(N-1)$ with $N=\binom n2$).
-- By §1(c), $\operatorname{spec}(\delta_A)=\{a_i+a_j\}_{i<j}$, so $\Delta(A)\ne0$ **iff** the sums are pairwise distinct.
+- $\Delta(A):=\mathop{\mathrm{disc}}\big(\chi_{\delta_A}\big)=\prod_{\alpha<\beta}(\lambda_\alpha-\lambda_\beta)^2$ is a universal polynomial in those coefficients, hence a polynomial in $A$ (of degree $N(N-1)$ with $N=\binom n2$).
+- By §1(c), $\mathop{\mathrm{spec}}(\delta_A)=\{a_i+a_j\}_{i<j}$, so $\Delta(A)\ne0$ **iff** the sums are pairwise distinct.
 
 The naive object (the product $\prod(s_{ij}-s_{kl})$ over unordered pairs-of-pairs), is only defined up to sign, since permuting the $a_i$ permutes the factors; taking the square, i.e. the discriminant, is what makes it a symmetric function and hence a polynomial in $A$. **The claim is correct; the argument is missing and is three lines.** Record as a debt, not a break.
 
@@ -175,7 +175,7 @@ Derivation. For $g\in O(n)$ and $A$ symmetric, $gAg^{-1}=gAg^{\mathsf T}$ is sym
 $$(\Lambda^2g)\,\delta_A\,(\Lambda^2g)^{-1}(u\wedge v)=(\Lambda^2g)\big(Ag^{-1}u\wedge g^{-1}v+g^{-1}u\wedge Ag^{-1}v\big)=gAg^{-1}u\wedge v+u\wedge gAg^{-1}v,$$
 so $\delta_{gAg^{-1}}=(\Lambda^2g)\,\delta_A\,(\Lambda^2g)^{-1}$. Hence
 $$\Phi_{(\Lambda^2g)W(\Lambda^2g)^{-1}}(gAg^{-1})=(\Lambda^2g)\,[W,\delta_A]\,(\Lambda^2g)^{-1},$$
-which vanishes iff $[W,\delta_A]=0$. So $\ker\Phi_{gWg^{-1}}=g(\ker\Phi_W)g^{-1}$. And $\operatorname{spec}(gAg^{-1})=\operatorname{spec}(A)$, so the distinct-sums clause transports too, as does the dimension since conjugation is a linear isomorphism. **Correct.**
+which vanishes iff $[W,\delta_A]=0$. So $\ker\Phi_{gWg^{-1}}=g(\ker\Phi_W)g^{-1}$. And $\mathop{\mathrm{spec}}(gAg^{-1})=\mathop{\mathrm{spec}}(A)$, so the distinct-sums clause transports too, as does the dimension since conjugation is a linear isomorphism. **Correct.**
 
 Unsaid, and both worth fixing:
 
@@ -215,7 +215,7 @@ Section A alone adds: "*The test is frame-independent, necessary and sufficient,
 
 ## 11. What would falsify the statement, and what I did to look for it
 
-**The object that would break it:** a linear $W$ on $\Lambda^2\mathbb R^n$, non-diagonal in every orthonormal frame, together with a symmetric $A$ such that $[W,\delta_A]=0$ and the sums $a_i+a_j$ ($i<j$) are pairwise distinct. Equivalently (since the sums are $\operatorname{spec}(\delta_A)$), an operator commuting with a **simple-spectrum** derivation $\delta_A$ while failing to be diagonal in $A$'s eigenframe.
+**The object that would break it:** a linear $W$ on $\Lambda^2\mathbb R^n$, non-diagonal in every orthonormal frame, together with a symmetric $A$ such that $[W,\delta_A]=0$ and the sums $a_i+a_j$ ($i<j$) are pairwise distinct. Equivalently (since the sums are $\mathop{\mathrm{spec}}(\delta_A)$), an operator commuting with a **simple-spectrum** derivation $\delta_A$ while failing to be diagonal in $A$'s eigenframe.
 
 **What I did to look for it.** No search, per the standing rule; the hunt was structural.
 
@@ -237,5 +237,5 @@ The equivalence, the corollary, the quantifier remark and the frame-independence
 2. **The range**, add the $n\le2$ line to the proof; leave A, B and C unrestricted, since the equivalence holds there.
 3. **[findings/target.md:640](../findings/target.md)**, scope "never a genericity obstruction" to the diagonal case, and amend the [lean/INDEX.md](../lean/INDEX.md) row that already carries it unscoped.
 4. **[findings/target.md:644](../findings/target.md)**, name the non-vacuity witness. $W_{\mathbb{CP}^2}$ works, and §5 supplies a three-step closed-form derivation of $\ker\Phi_W=\mathbb R\,\mathrm{Id}$ for any self-dual $W$ with $W^+$ invertible; the Hodge star $\star$ is the separate witness for the "$W\notin\mathcal W_n$" half.
-5. **[findings/target.md:646](../findings/target.md)**, supply the polynomiality step ($\operatorname{disc}\chi_{\delta_A}$, $\delta_A$ linear in $A$); soften "decidable" to the zero-one dichotomy that is actually proved.
+5. **[findings/target.md:646](../findings/target.md)**, supply the polynomiality step ($\mathop{\mathrm{disc}}\chi_{\delta_A}$, $\delta_A$ linear in $A$); soften "decidable" to the zero-one dichotomy that is actually proved.
 6. **Hypotheses**, drop the unused $W\in\mathcal W_n$ from A and D (or say it is not needed for either direction); state $g\in O(n)$ in the frame-independence identity; state the ambient $\mathrm{Sym}^2$ in B; and fix "carries no information about $\theta$" in A. Table $\delta_A$ in [conventions.md](../findings/conventions.md), identified with $D_A$ and with its wider domain.

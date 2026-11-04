@@ -2,7 +2,7 @@
 
 Independent implementation throughout: [scripts/review_r60_core.py](../scripts/review_r60_core.py) builds $\mathfrak{so}(m)$, the $\mathrm{Weyl}_m$ constraint system and $\mathrm{ad}$ from the stated conventions alone, and [scripts/review_r60_q.py](../scripts/review_r60_q.py) builds Hamilton's $Q(W)=W^2+W^{\#}$. Nothing under review was read or imported.
 
-**Independent calibration before any verdict.** $\dim\mathrm{Weyl}_m=10,35,84,168,300$ at $m=4,\dots,8$, matching $m(m+1)(m+2)(m-3)/12$. $Q$ reproduces the diagonal graph formula $\theta=\tfrac12(\sum_{ab}M_{ab}^3+\operatorname{tr}M^3)$ to $10^{-9}$ and returns $\theta_0(m)$ at the balanced sphere product to nine digits at $m=6,8,10,12$.
+**Independent calibration before any verdict.** $\dim\mathrm{Weyl}_m=10,35,84,168,300$ at $m=4,\dots,8$, matching $m(m+1)(m+2)(m-3)/12$. $Q$ reproduces the diagonal graph formula $\theta=\tfrac12(\sum_{ab}M_{ab}^3+\mathop{\mathrm{tr}}M^3)$ to $10^{-9}$ and returns $\theta_0(m)$ at the balanced sphere product to nine digits at $m=6,8,10,12$.
 
 | Claim | Verdict |
 | --- | --- |
@@ -156,7 +156,7 @@ Maximising $\theta$ over $\mathrm{Weyl}_m$ under a continuation penalty enforcin
 
 $$\sup\theta=+1.224744871=\sqrt{3/2}\quad\text{at every }m\text{ tested,}$$
 
-attained at $\dim U=4$, $\operatorname{rank}v_N=4$, the padded $\mathrm{Weyl}_4$ element, and nothing above it. Note this is a real constraint and not a vacuous one: $\theta_0(12)=1.236033>\sqrt{3/2}$, so the bound has to be earned at $m=12$, and it holds. **B0's conclusion survives; only the descent route and the $\theta\le0$ rationale are hit.**
+attained at $\dim U=4$, $\mathop{\mathrm{rank}}v_N=4$, the padded $\mathrm{Weyl}_4$ element, and nothing above it. Note this is a real constraint and not a vacuous one: $\theta_0(12)=1.236033>\sqrt{3/2}$, so the bound has to be earned at $m=12$, and it holds. **B0's conclusion survives; only the descent route and the $\theta\le0$ rationale are hit.**
 
 ---
 

@@ -31,7 +31,7 @@ Throughout, "$M$ symmetric" means $\langle Mx,y\rangle=\langle x,My\rangle$ for 
 
 | hypothesis | stated? | used where |
 | --- | --- | --- |
-| $M$ symmetric on $H$ | yes | §2 ($q\perp\operatorname{im}M$), §1 ($q^\perp$ invariant), §3 (cross term), spectral theorem throughout |
+| $M$ symmetric on $H$ | yes | §2 ($q\perp\mathop{\mathrm{im}}M$), §1 ($q^\perp$ invariant), §3 (cross term), spectral theorem throughout |
 | $Mq=0$ | yes | §1, §2, §3, and it is strictly stronger than the $\langle q,v\rangle=0$ the proof appears to want; see §1.3 |
 | $H$ finite-dimensional, real | implicit | attainment of the maxima; spectral theorem |
 | $K$ ranges over the unit sphere of $H$, that is, $c_0=1$ | as claim (c) | §9; the projection identity $\langle Q(W_1),K\rangle=\langle q,K\rangle$ |
@@ -50,7 +50,7 @@ Throughout, "$M$ symmetric" means $\langle Mx,y\rangle=\langle x,My\rangle$ for 
 
 **1.1 The two-block decomposition.** $Mq=0$ gives that $\mathbb Rq$ is $M$-invariant. Symmetry gives that $q^\perp\cap H$ is too: for $x\perp q$, $\langle Mx,q\rangle=\langle x,Mq\rangle=0$. So $H=\mathbb Rq\oplus(q^\perp\cap H)$ is an orthogonal decomposition into $M$-invariant blocks, and
 
-$$\operatorname{spec}(M)=\{0\}\cup\operatorname{spec}\big(M|_{q^\perp}\big),\qquad\text{hence}\qquad \lambda=\max\big(0,\ \lambda_{\max}(M|_{q^\perp})\big).$$
+$$\mathop{\mathrm{spec}}(M)=\{0\}\cup\mathop{\mathrm{spec}}\big(M|_{q^\perp}\big),\qquad\text{hence}\qquad \lambda=\max\big(0,\ \lambda_{\max}(M|_{q^\perp})\big).$$
 
 In particular $\lambda\ge0$ **automatically**, whenever $q\ne0$, a fact the page does not use and which repairs its "$\lambda\ne0$" into the "$\lambda>0$" it needs (§11.2).
 
@@ -70,9 +70,9 @@ which is the page's one-variable problem. **The reduction is valid; it is missin
 
 ## 2. The hard-case hypothesis, and orthogonality of the top eigenvector
 
-**Restricted how, exactly.** $Mq=0$ with $M$ symmetric gives $\langle q,Mx\rangle=\langle Mq,x\rangle=0$ for every $x\in H$, so **$q\perp\operatorname{im}(M)$ as an operator on $H$**, the compression's image, entirely. Nothing is asserted about the image of the ambient operator before compression, and nothing needs to be.
+**Restricted how, exactly.** $Mq=0$ with $M$ symmetric gives $\langle q,Mx\rangle=\langle Mq,x\rangle=0$ for every $x\in H$, so **$q\perp\mathop{\mathrm{im}}(M)$ as an operator on $H$**, the compression's image, entirely. Nothing is asserted about the image of the ambient operator before compression, and nothing needs to be.
 
-**Top eigenvector, $\lambda>0$.** If $Mv=\lambda v$ with $\lambda\ne0$ then $v=M(v/\lambda)\in\operatorname{im}M$, hence $\langle q,v\rangle=0$. **Multiplicity is irrelevant**: the argument applies to every vector of the $\lambda$-eigenspace, so the whole eigenspace is $\perp q$, and §1.2's maximum is attained at any unit vector of it, with the same value $\lambda$. So multiplicity $>1$ changes the set of maximisers and not $V$.
+**Top eigenvector, $\lambda>0$.** If $Mv=\lambda v$ with $\lambda\ne0$ then $v=M(v/\lambda)\in\mathop{\mathrm{im}}M$, hence $\langle q,v\rangle=0$. **Multiplicity is irrelevant**: the argument applies to every vector of the $\lambda$-eigenspace, so the whole eigenspace is $\perp q$, and §1.2's maximum is attained at any unit vector of it, with the same value $\lambda$. So multiplicity $>1$ changes the set of maximisers and not $V$.
 
 **$\lambda=0$: the claim fails.** Then $q$ is itself a top eigenvector ($Mq=0\cdot q$) and is not orthogonal to itself. The sentence "a top eigenvector is orthogonal to $q$" is false at $\lambda=0$, and the proof's own guard "$\lambda\ne0$" is exactly what excludes it, correctly, but for the wrong stated reason, since what is needed downstream is the sign, not the non-vanishing (§4). Under $q\ne0$ the two coincide by §1.1.
 
@@ -83,7 +83,7 @@ Both vanishings are needed, and both follow:
 - $\langle M\hat q,\hat q\rangle=0$, immediate from $M\hat q=0$, **no symmetry used**.
 - $\langle M\hat q,v\rangle=0$, immediate from $M\hat q=0$, **no symmetry used**.
 
-**Where symmetry is genuinely used in the cross term.** For a general (non-symmetric) $M$ the polarisation of $K\mapsto\langle MK,K\rangle$ carries the coefficient $\langle M\hat q,v\rangle+\langle Mv,\hat q\rangle$ on $\sin\varphi\cos\varphi$. The first summand dies on $M\hat q=0$; **the second dies only by symmetry**, $\langle Mv,\hat q\rangle=\langle v,M\hat q\rangle=0$. So symmetry is used exactly once here, and the page's phrase "the $\hat q$ term vanishing and the cross term with it" conflates a consequence of $M\hat q=0$ with a consequence of symmetry. Symmetry is used three further times: the invariance of $q^\perp$ (§1.1), the spectral theorem behind "$\lambda$ its top eigenvalue" and $\langle Mw,w\rangle\le\lambda$ (§1.2), and $q\perp\operatorname{im}M$ (§2). Note also that $B=T(W_1,K,K)$ reads only the symmetric part of any representing operator, so symmetry of $M$ is a normalisation available for free from $T$'s symmetry rather than an extra assumption.
+**Where symmetry is genuinely used in the cross term.** For a general (non-symmetric) $M$ the polarisation of $K\mapsto\langle MK,K\rangle$ carries the coefficient $\langle M\hat q,v\rangle+\langle Mv,\hat q\rangle$ on $\sin\varphi\cos\varphi$. The first summand dies on $M\hat q=0$; **the second dies only by symmetry**, $\langle Mv,\hat q\rangle=\langle v,M\hat q\rangle=0$. So symmetry is used exactly once here, and the page's phrase "the $\hat q$ term vanishing and the cross term with it" conflates a consequence of $M\hat q=0$ with a consequence of symmetry. Symmetry is used three further times: the invariance of $q^\perp$ (§1.1), the spectral theorem behind "$\lambda$ its top eigenvalue" and $\langle Mw,w\rangle\le\lambda$ (§1.2), and $q\perp\mathop{\mathrm{im}}M$ (§2). Note also that $B=T(W_1,K,K)$ reads only the symmetric part of any representing operator, so symmetry of $M$ is a normalisation available for free from $T$'s symmetry rather than an extra assumption.
 
 Given all four vanishings, $\langle MK,K\rangle=\sin^2\varphi\,\langle Mv,v\rangle=\lambda\sin^2\varphi$ with $\lVert v\rVert=1$. **Confirmed.**
 
@@ -171,7 +171,7 @@ The display carries **four** numerals: $\sqrt{5/6}$ (the constant branch), $\tfr
 
 **11.3 $a=0$, equivalently $q=0$.** $\hat q$ is undefined and the written proof cannot be formed. The displayed answer nonetheless holds: $t^*=0$, and for $t\ge0$ the frontier expression reads $0+\lambda t$, which is $\max_K t\langle MK,K\rangle=t\lambda$. The hypothesis $Mq=0$ is vacuous here, and $\lambda$ may then have either sign with the formula still correct.
 
-**11.4 $t<0$, the statement as written is false.** The case split reads "$t\le t^*$, $V=a$", and $t^*>0$, so every negative $t$ falls in the constant branch. It does not belong there. **Exhibited exactly**: take $H=\mathbb R^3$, $M=\operatorname{diag}(0,\tfrac23,-1)$, $q=(a,0,0)$ with $a=\sqrt{5/6}$. Then $M$ is symmetric, $Mq=0$, $\lambda=\lambda_{\max}(M)=\tfrac23$ and $t^*=\tfrac{\sqrt{30}}8$, every hypothesis of the statement holds. At $t=-2$, take $K=(c,0,\sqrt{1-c^2})$: the objective is $ac+(-2)(-1)(1-c^2)=ac+2-2c^2$, maximised at $c=a/4$ with value $2+\tfrac{a^2}8=2+\tfrac5{48}=\tfrac{101}{48}=2.10416\overline6$, against the claimed $V(-2)=a=\sqrt{5/6}=0.91287\ldots$. **The gap is a factor of $2.3$, and it is exact.** The cause is §1.2 and §4: for $t<0$ the free component is chosen to make $\langle Mw,w\rangle$ as *negative* as possible, so the relevant spectral quantity is $\min_{w\perp q}\langle Mw,w\rangle$, not $\lambda$. **Repair: state $t\ge0$.** The application supplies it ($t=\sigma/c$ with $\sigma,c\ge0$), so nothing downstream moves.
+**11.4 $t<0$, the statement as written is false.** The case split reads "$t\le t^*$, $V=a$", and $t^*>0$, so every negative $t$ falls in the constant branch. It does not belong there. **Exhibited exactly**: take $H=\mathbb R^3$, $M=\mathop{\mathrm{diag}}(0,\tfrac23,-1)$, $q=(a,0,0)$ with $a=\sqrt{5/6}$. Then $M$ is symmetric, $Mq=0$, $\lambda=\lambda_{\max}(M)=\tfrac23$ and $t^*=\tfrac{\sqrt{30}}8$, every hypothesis of the statement holds. At $t=-2$, take $K=(c,0,\sqrt{1-c^2})$: the objective is $ac+(-2)(-1)(1-c^2)=ac+2-2c^2$, maximised at $c=a/4$ with value $2+\tfrac{a^2}8=2+\tfrac5{48}=\tfrac{101}{48}=2.10416\overline6$, against the claimed $V(-2)=a=\sqrt{5/6}=0.91287\ldots$. **The gap is a factor of $2.3$, and it is exact.** The cause is §1.2 and §4: for $t<0$ the free component is chosen to make $\langle Mw,w\rangle$ as *negative* as possible, so the relevant spectral quantity is $\min_{w\perp q}\langle Mw,w\rangle$, not $\lambda$. **Repair: state $t\ge0$.** The application supplies it ($t=\sigma/c$ with $\sigma,c\ge0$), so nothing downstream moves.
 
 **11.5 $t=0$.** $V(0)=\max_{\lVert K\rVert=1}\langle q,K\rangle=a$, matching the constant branch, and $0<t^*$ whenever $a>0,\lambda>0$, so the case split assigns it correctly. The frontier expression is singular at $t=0$, which is why the split cannot be written the other way round.
 

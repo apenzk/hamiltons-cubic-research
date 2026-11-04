@@ -23,7 +23,7 @@ The brief was cold. No numerical work was done, every value below is exact and w
 - Label basis: $(a,b)$ means $\lambda=ae_1+be_2$ in the orthonormal $e$-basis of the $B_2$ weight lattice, with $a\ge b\ge0$ integers (dominant integral for $SO(5)$). This basis is not stated at the table (lines 29-42). It is fixed by two things on file: line 9 writes $[2,2]=2e_1+2e_2$ and $[2,1]=2e_1+e_2$, and line 31's $c_2(\lambda)=\lambda_1(\lambda_1+3)+\lambda_2(\lambda_2+1)$ is $\langle\lambda,\lambda+2\rho\rangle$ with $\rho=(\tfrac32,\tfrac12)$ in that basis. The $\omega$-basis reading is excluded by the table itself: $(2,2)$ in the $\omega$-basis is $3e_1+e_2$, of dimension $81$, and the table gives $(2,2)_{35}$. The Lean file states the $e$-basis in its docstring (line 28).
 - Fundamental weights: $\omega_1=e_1$, $\omega_2=\tfrac12(e_1+e_2)$.
 - Positive roots of $B_2$: $e_1$, $e_2$ (short), $e_1-e_2$, $e_1+e_2$ (long). Weyl's formula at $\lambda+\rho=(a+\tfrac32,b+\tfrac12)$ gives factors $\tfrac{2a+3}{3}$, $2b+1$, $a-b+1$, $\tfrac{a+b+2}{2}$, so $d(a,b)=\tfrac16(2a+3)(2b+1)(a-b+1)(a+b+2)$. This is the "product of four linear factors" of line 31, and the Lean `dim` at line 32. The formula is classical and unfiled.
-- Casimir: $c_2(a,b)=a(a+3)+b(b+1)$, with the inner product in which $e_1,e_2$ are orthonormal. Line 13's $B(X,Y)=-\tfrac12\operatorname{tr}(XY)$ induces exactly this (the rotation generator $E_{12}-E_{21}$ has $B$-norm $1$ and $e_1$ is dual to it). Only the ratio $16:12$ is used by the lemma.
+- Casimir: $c_2(a,b)=a(a+3)+b(b+1)$, with the inner product in which $e_1,e_2$ are orthonormal. Line 13's $B(X,Y)=-\tfrac12\mathop{\mathrm{tr}}(XY)$ induces exactly this (the rotation generator $E_{12}-E_{21}$ has $B$-norm $1$ and $e_1$ is dual to it). Only the ratio $16:12$ is used by the lemma.
 - Sources read: [findings/sym3-blocks.md](../findings/sym3-blocks.md) lines 3, 7, 9, 13, 15, 29-42 only, [results.md](../results.md) lines 284 and 942 only, and for the imported Lovelock relation [findings/bispectral.md](../findings/bispectral.md) lines 117-152. Every quotation in the brief matches its source verbatim.
 
 ## Hypothesis inventory
@@ -40,7 +40,7 @@ The brief was cold. No numerical work was done, every value below is exact and w
 | The weight list and multiplicities | lines 33-38 | everything downstream | **no argument on file**, script link only |
 | Lovelock syzygy $\beta-\tfrac\alpha2=-\tfrac1{64}\delta^{(6)}WWW$ | imported, filed at bispectral.md 121-125, 143-147 | trivial multiplicity | constant verified by script at $n=6,7,8$ only. The source file itself records the proportionality as underived |
 | Cubic invariants on $\mathcal W_n$ are spanned by $\alpha,\beta$ | used, unstated | "the cubic invariant space is one-dimensional" | **used, unstated** |
-| $\operatorname{tr}(W^3)\not\equiv0$ on $\mathcal W_5$ | used, unstated | trivial multiplicity $\ge1$ | **used, unstated** |
+| $\mathop{\mathrm{tr}}(W^3)\not\equiv0$ on $\mathcal W_5$ | used, unstated | trivial multiplicity $\ge1$ | **used, unstated** |
 
 ## 1. The dimension column
 
@@ -65,7 +65,7 @@ All 24 agree, and every product is exactly divisible by $6$, so the Lean file's 
 
 ## 2. The weight list and the multiplicity column
 
-**What would prove it.** A character identity $\operatorname{ch}\mathrm{Sym}^3V_{(2,2)}=\sum_\lambda m_\lambda\operatorname{ch}V_\lambda$ over $B_2$. It needs the weight multiplicities of $V_{(2,2)}$ and the symmetric-cube plethysm $\tfrac16(\chi(g)^3+3\chi(g^2)\chi(g)+2\chi(g^3))$ reduced to dominant characters. An explicit highest-weight-vector count would also do, as would a branching argument.
+**What would prove it.** A character identity $\mathop{\mathrm{ch}}\mathrm{Sym}^3V_{(2,2)}=\sum_\lambda m_\lambda\mathop{\mathrm{ch}}V_\lambda$ over $B_2$. It needs the weight multiplicities of $V_{(2,2)}$ and the symmetric-cube plethysm $\tfrac16(\chi(g)^3+3\chi(g^2)\chi(g)+2\chi(g^3))$ reduced to dominant characters. An explicit highest-weight-vector count would also do, as would a branching argument.
 
 **What is on file.** In the cited passages, only the link to [run_casimir_separation.py](../scripts/runs/run_casimir_separation.py) at line 31, and line 31's description, which covers the dimension and Casimir functions of a weight already given. Passage C concedes that "arithmetic on the highest weights is false of the multiplicities" and gives no replacement argument. Under the loop's rule, a statement supported only by a script is HYPOTHESIS-DEBT.
 
@@ -123,7 +123,7 @@ Any Casimir-eigenspace derivation of the multiplicities would have to resolve th
 - $\omega_1+2\omega_2=e_1+(e_1+e_2)=2e_1+e_2=[2,1]$. Correct.
 - $d(2,2)=d(2,1)=35$ (§1), so dimension does not separate them.
 - $c_2(2,2)=10+6=16$ and $c_2(2,1)=10+2=12$. Correct, and distinct under any normalisation because only the ratio matters.
-- Line 13's normalisation: for $X=E_{12}-E_{21}$, $X^2=-(E_{11}+E_{22})$ and $\operatorname{tr}X^2=-2$, so $B(X,X)=1$. The Killing form of $\mathfrak{so}(N)$ is $(N-2)\operatorname{tr}$, which is $3\operatorname{tr}=-6B$ at $N=5$. The Casimir built from a basis orthonormal for $6B$ is $\tfrac16$ of the one built for $B$: $16/6=8/3$. Correct. The other "neighbouring" values $32,8,4$ are not tied to stated conventions and carry no weight in L83.
+- Line 13's normalisation: for $X=E_{12}-E_{21}$, $X^2=-(E_{11}+E_{22})$ and $\mathop{\mathrm{tr}}X^2=-2$, so $B(X,X)=1$. The Killing form of $\mathfrak{so}(N)$ is $(N-2)\mathop{\mathrm{tr}}$, which is $3\mathop{\mathrm{tr}}=-6B$ at $N=5$. The Casimir built from a basis orthonormal for $6B$ is $\tfrac16$ of the one built for $B$: $16/6=8/3$. Correct. The other "neighbouring" values $32,8,4$ are not tied to stated conventions and carry no weight in L83.
 
 What the arithmetic does not establish: that $\mathcal W_5$ *is* $V_{(2,2)}$. The record asserts it (line 9), and it is the classical statement that algebraic Weyl tensors form the traceless $[2,2]$ module, irreducible for $n\ge5$, which is unfiled. Line 11's "$16\cdot\mathrm{Id}$" confirmation is script-only. Under the classical identification it is not needed.
 
@@ -147,18 +147,18 @@ Both are classical. Passage A states only "Because $O(5)$ acts" (line 3), and th
 
 ## 7. The trivial multiplicity
 
-**Claim** (line 42): "The trivial multiplicity is $1$ here and $2$ from $n\ge6$, which is the parity-sensitive Lovelock collapse: at $n\le5$, $\langle W^\#,W\rangle=2\operatorname{tr}(W^3)$, so the cubic invariant space is one-dimensional."
+**Claim** (line 42): "The trivial multiplicity is $1$ here and $2$ from $n\ge6$, which is the parity-sensitive Lovelock collapse: at $n\le5$, $\langle W^\#,W\rangle=2\mathop{\mathrm{tr}}(W^3)$, so the cubic invariant space is one-dimensional."
 
 **The chain as written, link by link.**
-1. *At $n\le5$, $\langle W^\#,W\rangle=2\operatorname{tr}(W^3)$.* Imported. Read at source ([bispectral.md](../findings/bispectral.md) lines 121-125, 143-147). It rests on the display $\beta-\tfrac\alpha2=-\tfrac1{64}\delta^{a_1\cdots a_6}_{b_1\cdots b_6}WWW$ together with the vanishing of the six-index generalised delta for $n\le5$. The vanishing is correct: antisymmetrising over six indices that take at most five values gives $0$. The display itself is supported by a script at $n=6,7,8$ (line 125), and the source file records at line 137 that its proportionality has "an unread source, and the whole $n\le5$ collapse rests on it". So link 1 is HYPOTHESIS-DEBT at source.
-2. *Hence the cubic invariant space is one-dimensional.* Two unstated steps are needed. (i) Every $O(5)$-invariant cubic on $\mathcal W_5$ is a combination of $\alpha$ and $\beta$ (a first-fundamental-theorem reduction of complete contractions of three Weyl tensors). This gives $\le1$ once link 1 holds. (ii) $\operatorname{tr}(W^3)\not\equiv0$ on $\mathcal W_5$, which gives $\ge1$. Neither is on file in the cited lines.
+1. *At $n\le5$, $\langle W^\#,W\rangle=2\mathop{\mathrm{tr}}(W^3)$.* Imported. Read at source ([bispectral.md](../findings/bispectral.md) lines 121-125, 143-147). It rests on the display $\beta-\tfrac\alpha2=-\tfrac1{64}\delta^{a_1\cdots a_6}_{b_1\cdots b_6}WWW$ together with the vanishing of the six-index generalised delta for $n\le5$. The vanishing is correct: antisymmetrising over six indices that take at most five values gives $0$. The display itself is supported by a script at $n=6,7,8$ (line 125), and the source file records at line 137 that its proportionality has "an unread source, and the whole $n\le5$ collapse rests on it". So link 1 is HYPOTHESIS-DEBT at source.
+2. *Hence the cubic invariant space is one-dimensional.* Two unstated steps are needed. (i) Every $O(5)$-invariant cubic on $\mathcal W_5$ is a combination of $\alpha$ and $\beta$ (a first-fundamental-theorem reduction of complete contractions of three Weyl tensors). This gives $\le1$ once link 1 holds. (ii) $\mathop{\mathrm{tr}}(W^3)\not\equiv0$ on $\mathcal W_5$, which gives $\ge1$. Neither is on file in the cited lines.
 3. *"$2$ from $n\ge6$".* This needs the independence of $\alpha$ and $\beta$ for every $n\ge6$ plus (i). Line 137 of the source records that "only there" has no argument at all. It is outside the $n=5$ table, but it is offered as the reason.
 
 **Wording.** "Parity-sensitive" names the wrong invariant. The threshold $n\le5$ against $n\ge6$ is dimensional ($2k=6$ for the cubic Lovelock term): $n=4$ (even) and $n=5$ (odd) both collapse, and $n=6$ (even) and $n=7$ (odd) would both not. Charitable reading: a slip for "dimension-sensitive". No mathematical consequence.
 
 **Consistency at the edge.** The table's $(0,0)_1$ with multiplicity $1$ agrees with the claimed value. It is a cross-check between two unproven statements, not a proof of either.
 
-**Verdict: HYPOTHESIS-DEBT.** To be proved: (1) the display at source, (2) the spanning of cubic invariants by $\alpha,\beta$, (3) $\operatorname{tr}(W^3)\not\equiv0$ on $\mathcal W_5$, and for the $n\ge6$ half (4) independence for every $n\ge6$.
+**Verdict: HYPOTHESIS-DEBT.** To be proved: (1) the display at source, (2) the spanning of cubic invariants by $\alpha,\beta$, (3) $\mathop{\mathrm{tr}}(W^3)\not\equiv0$ on $\mathcal W_5$, and for the $n\ge6$ half (4) independence for every $n\ge6$.
 
 ## 8. Passage C
 
@@ -197,7 +197,7 @@ It contains no representation, no $\mathcal W_5$, no $\mathrm{Sym}^3$, no group,
 
 ## Standing list
 
-1. **Hypothesis inventory.** See the table above. Used but unstated: the $O(5)=SO(5)$ isotypic coincidence, real type of every block, spanning of cubic invariants by $\alpha,\beta$, and $\operatorname{tr}(W^3)\not\equiv0$. The multiplicities themselves are held by a script only.
+1. **Hypothesis inventory.** See the table above. Used but unstated: the $O(5)=SO(5)$ isotypic coincidence, real type of every block, spanning of cubic invariants by $\alpha,\beta$, and $\mathop{\mathrm{tr}}(W^3)\not\equiv0$. The multiplicities themselves are held by a script only.
 2. **Quantifier order and scope.**
    - $n$: only $n=5$ is in the table. The single claim at $n\ge6$ (trivial multiplicity $2$) has no argument (§7).
    - Group: $B_2$ labels are used for an $O(5)$ statement, which is correct by §6(a) but not argued on file.
@@ -230,7 +230,7 @@ It contains no representation, no $\mathcal W_5$, no $\mathrm{Sym}^3$, no group,
    - *Multiplicities:* a dominant weight with the wrong multiplicity in $\mathrm{Sym}^3V_{(2,2)}$. Finding one requires the decomposition, which is out of scope. The necessary conditions a reader can check hold.
    - *"Four independent ways":* a second table passing all four. Exhibited.
    - *Label identification:* a second $35$-dimensional label with $c_2=16$. None exists, since $c_2(a,b)=16$ has the single dominant solution $(2,2)$ ($a=2$ forces $b(b+1)=6$, so $b=2$, while $a\ge3$ gives $a(a+3)\ge18>16$ and $a\le1$ gives $a(a+3)+b(b+1)\le4+2$).
-   - *Trivial multiplicity:* a second independent cubic invariant on $\mathcal W_5$, or the vanishing of $\operatorname{tr}(W^3)$. Neither can be exhibited from the record, and the chain's links are unproven at source.
+   - *Trivial multiplicity:* a second independent cubic invariant on $\mathcal W_5$, or the vanishing of $\mathop{\mathrm{tr}}(W^3)$. Neither can be exhibited from the record, and the chain's links are unproven at source.
 
 ## Overall verdict
 

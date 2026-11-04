@@ -29,7 +29,7 @@ $\delta_A$ is the derivation extension $u\wedge v\mapsto Au\wedge v+u\wedge Av$ 
 
 ## (a) The rest of the chain
 
-**The Sylvester step is right and is more machinery than the case needs.** With $W^-=0$ the two off-diagonal blocks read $\beta W^+=0$ and $W^+\beta^{*}=0$, so invertibility of $W^+$ gives $\beta=0$ in one line; Sylvester's criterion is the general statement and specialises correctly, $\operatorname{spec}(W^-)=\{0\}$ making disjointness of the spectra the same condition as invertibility of $W^+$. **And $W^+$ is invertible in the record's normalisation**: [findings/INDEX-values.md](../findings/INDEX-values.md) fixes the $\Lambda^2$ spectrum at $(2,-1,-1,0,0,0)/\sqrt6$, and I rebuilt the operator independently from the complex-space-form curvature tensor at holomorphic sectional curvature $4$, $\mathcal R$ has eigenvalues $2(m+1)$ on $\mathbb R\omega$, $2$ on $\Lambda^{1,1}_0$, $0$ on $[\![\Lambda^{2,0}]\!]$, and $W=\mathcal R-\tfrac{\operatorname{scal}}{n(n-1)}\mathrm{Id}$ returns $(4,-2,-2,0,0,0)$ at $m=2$, which is the record's spectrum doubled. $\Lambda^+=\mathbb R\omega\oplus[\![\Lambda^{2,0}]\!]$ carries $4,-2,-2$ and $\Lambda^-=\Lambda^{1,1}_0$ carries $0,0,0$.
+**The Sylvester step is right and is more machinery than the case needs.** With $W^-=0$ the two off-diagonal blocks read $\beta W^+=0$ and $W^+\beta^{*}=0$, so invertibility of $W^+$ gives $\beta=0$ in one line; Sylvester's criterion is the general statement and specialises correctly, $\mathop{\mathrm{spec}}(W^-)=\{0\}$ making disjointness of the spectra the same condition as invertibility of $W^+$. **And $W^+$ is invertible in the record's normalisation**: [findings/INDEX-values.md](../findings/INDEX-values.md) fixes the $\Lambda^2$ spectrum at $(2,-1,-1,0,0,0)/\sqrt6$, and I rebuilt the operator independently from the complex-space-form curvature tensor at holomorphic sectional curvature $4$, $\mathcal R$ has eigenvalues $2(m+1)$ on $\mathbb R\omega$, $2$ on $\Lambda^{1,1}_0$, $0$ on $[\![\Lambda^{2,0}]\!]$, and $W=\mathcal R-\tfrac{\mathop{\mathrm{scal}}}{n(n-1)}\mathrm{Id}$ returns $(4,-2,-2,0,0,0)$ at $m=2$, which is the record's spectrum doubled. $\Lambda^+=\mathbb R\omega\oplus[\![\Lambda^{2,0}]\!]$ carries $4,-2,-2$ and $\Lambda^-=\Lambda^{1,1}_0$ carries $0,0,0$.
 
 **Both inclusions of the equality hold.** $\supseteq$ is $\delta_{\mathrm{Id}}=2\,\mathrm{Id}_{\Lambda^2}$. For $\subseteq$: $\Phi_W$ is linear and kills $\mathrm{Id}$, so $A\in\ker$ iff $A_0\in\ker$; $\beta=0$ together with the exchange gives $\delta_{A_0}=0$ outright, since the exchange says $\delta_{A_0}$ *has* no diagonal blocks; and $\delta_{A_0}=0$ forces $a_i+a_j=0$ for all $i<j$, hence $A_0=0$ at $n\ge3$. **The step $\beta=0\Rightarrow\delta_{A_0}=0$ spends the exchange a second time and the proof does not say so.**
 
@@ -44,22 +44,22 @@ $\delta_A$ is the derivation extension $u\wedge v\mapsto Au\wedge v+u\wedge Av$ 
 **It is the special case $P\in\mathbb R\,\mathrm{Id}_m$ of a bound that is free.** Write $A=\begin{pmatrix}P&C\\C^{\mathsf T}&B\end{pmatrix}$. The diagonal-block part $\delta_{P\oplus B}$ preserves the three summands and $\delta_C$ moves $U_1\to U_2$, $U_2\to U_1\oplus U_3$, $U_3\to U_2$. Since $W$ vanishes on $U_2\oplus U_3$, every commutator block with $U_2$ or $U_3$ on both sides is zero automatically, and $[W,\delta_A]=0$ reduces to exactly three conditions:
 
 - **$U_1\to U_1$:** $[W_0,\delta_P]=0$, i.e. $P\in\ker\Phi_{W_0}$;
-- **$U_1\to U_2$:** $\delta_C$ vanishes on $\operatorname{im}W_0$;
+- **$U_1\to U_2$:** $\delta_C$ vanishes on $\mathop{\mathrm{im}}W_0$;
 - **$U_2\to U_1$:** $(\delta_CY)_{U_1}\in\ker W_0$ for every $Y\in U_2$.
 
 $B$ appears in none of them. So
 
-$$\ker\Phi_{W_0\oplus0}\;\supseteq\;\ker\Phi_{W_0}\oplus\operatorname{Sym}^2(V),\qquad \dim\ker\Phi_{W_0\oplus0}\;\ge\;\dim\ker\Phi_{W_0}+\binom{n-m+1}2 ,$$
+$$\ker\Phi_{W_0\oplus0}\;\supseteq\;\ker\Phi_{W_0}\oplus\mathop{\mathrm{Sym}}^2(V),\qquad \dim\ker\Phi_{W_0\oplus0}\;\ge\;\dim\ker\Phi_{W_0}+\binom{n-m+1}2 ,$$
 
 which contains the block's bound because $\mathbb R\,\mathrm{Id}_m\subseteq\ker\Phi_{W_0}$ always.
 
-**The inequality as stated is strict, and badly so.** Take $W_0$ diagonal in the $\varphi_{ij}$ basis of $\Lambda^2\mathbb R^4$, $W_0=\operatorname{diag}(1,\dots,6)$ serves. Every diagonal $A$ is then in the kernel, so unpadded the truth is $4$ against the block's bound $1$; padded to $n=6$ the truth is $7$ against the block's $4$, and $7=4+\binom32$ is the sharper bound on the nose. *Screened exactly.* **So the answer to *"find a $W_0$ where the inequality is strict"* is that it is strict at every diagonal $W_0$, which is the whole family L37's corollary exists to separate off.**
+**The inequality as stated is strict, and badly so.** Take $W_0$ diagonal in the $\varphi_{ij}$ basis of $\Lambda^2\mathbb R^4$, $W_0=\mathop{\mathrm{diag}}(1,\dots,6)$ serves. Every diagonal $A$ is then in the kernel, so unpadded the truth is $4$ against the block's bound $1$; padded to $n=6$ the truth is $7$ against the block's $4$, and $7=4+\binom32$ is the sharper bound on the nose. *Screened exactly.* **So the answer to *"find a $W_0$ where the inequality is strict"* is that it is strict at every diagonal $W_0$, which is the whole family L37's corollary exists to separate off.**
 
 ## When the bound is an equality, and the gap this closes
 
-**The two $C$-conditions force $C=0$ as soon as $\operatorname{im}W_0$ contains a nondegenerate $2$-form.** Writing $\gamma=C^{\mathsf T}:\mathbb R^m\to V$ with matrix $G$, the first condition unwinds to $\delta_CX=\sum_{i,\alpha}(xG^{\mathsf T})_{i\alpha}\,e_i\wedge f_\alpha$, so it says $Gx=0$ for every skew $x\in\operatorname{im}W_0$. If one such $x$ is invertible, $G=0$. Hence
+**The two $C$-conditions force $C=0$ as soon as $\mathop{\mathrm{im}}W_0$ contains a nondegenerate $2$-form.** Writing $\gamma=C^{\mathsf T}:\mathbb R^m\to V$ with matrix $G$, the first condition unwinds to $\delta_CX=\sum_{i,\alpha}(xG^{\mathsf T})_{i\alpha}\,e_i\wedge f_\alpha$, so it says $Gx=0$ for every skew $x\in\mathop{\mathrm{im}}W_0$. If one such $x$ is invertible, $G=0$. Hence
 
-> **Proposition (r737).** If $\operatorname{im}W_0\subseteq\Lambda^2\mathbb R^m$ contains an invertible skew matrix, then $\ker\Phi_{W_0\oplus0}=\ker\Phi_{W_0}\oplus\operatorname{Sym}^2(V)$ **exactly**, and $W_0\oplus0$ is diagonal in some frame of $\mathbb R^n$ if and only if $W_0$ is diagonal in some frame of $\mathbb R^m$.
+> **Proposition (r737).** If $\mathop{\mathrm{im}}W_0\subseteq\Lambda^2\mathbb R^m$ contains an invertible skew matrix, then $\ker\Phi_{W_0\oplus0}=\ker\Phi_{W_0}\oplus\mathop{\mathrm{Sym}}^2(V)$ **exactly**, and $W_0\oplus0$ is diagonal in some frame of $\mathbb R^n$ if and only if $W_0$ is diagonal in some frame of $\mathbb R^m$.
 
 The second clause follows from the first through L37: an $A=P\oplus B$ with pairwise-distinct sums needs $P$'s own sums distinct, and $P\in\ker\Phi_{W_0}$, which is diagonality of $W_0$; the converse direction extends $W_0$'s frame and puts the new planes in $\ker W$.
 
@@ -75,7 +75,7 @@ L37's block leans on two witnesses. **(a) discharges the first exactly.** The se
 
 > **(b) SUPPLIES ONE HALF OF THAT WITNESS AND ASSERTS THE OTHER.** The bound gives $\dim\ker\Phi_W\ge11>8$, which is the easy half. **Non-diagonality is stated in the same breath and proved nowhere**, and it cannot be proved from (b), because a lower bound on a kernel is consistent with the kernel containing an $A$ with pairwise-distinct sums, which by L37 is diagonality. *The corollary itself says nothing here, $11>8$ being on its silent side, so there is no fallback.*
 
-The repair is the Proposition: the kernel is *exactly* $\mathbb R\,\mathrm{Id}_4\oplus\operatorname{Sym}^2(V)$, every member has the eigenvalue $a$ with multiplicity $4$, so the sum $2a$ is repeated $\binom42=6$ times and no member has pairwise-distinct sums, **non-diagonal, by L37's equivalence**. Independently, $W_{\mathbb{CP}^2}$ itself is non-diagonal in one line: $\varphi_{12}=\tfrac12(\omega_1^++\omega_1^-)$ can be an eigenvector only if the $\Lambda^-$ component matches, forcing the eigenvalue to $0$ and then $W^+\omega_1^+=0$ against invertibility.
+The repair is the Proposition: the kernel is *exactly* $\mathbb R\,\mathrm{Id}_4\oplus\mathop{\mathrm{Sym}}^2(V)$, every member has the eigenvalue $a$ with multiplicity $4$, so the sum $2a$ is repeated $\binom42=6$ times and no member has pairwise-distinct sums, **non-diagonal, by L37's equivalence**. Independently, $W_{\mathbb{CP}^2}$ itself is non-diagonal in one line: $\varphi_{12}=\tfrac12(\omega_1^++\omega_1^-)$ can be an eigenvector only if the $\Lambda^-$ component matches, forcing the eigenvalue to $0$ and then $W^+\omega_1^+=0$ against invertibility.
 
 **This is the failure mode the brief named.** The surviving statement is the most general of the three derivations and is a strict lower bound; its consumer needs an equality. *The general form is worth keeping (it costs nothing and covers every padding) but it must be stated in the sharper form above, or the witness it exists to supply does not follow.*
 
@@ -90,7 +90,7 @@ The repair is the Proposition: the kernel is *exactly* $\mathbb R\,\mathrm{Id}_4
 | the exchange | one trace-free symmetric $A_0$ on $\mathbb R^4$ with a nonzero $\Lambda^+\to\Lambda^+$ block |
 | (a)'s equality | a symmetric $A\notin\mathbb R\,\mathrm{Id}$ with $[W_{\mathbb{CP}^2},\delta_A]=0$ |
 | $W^-=0$, $W^+$ invertible | a $\Lambda^2$ spectrum for $W_{\mathbb{CP}^2}$ other than $(2,-1,-1,0,0,0)/\sqrt6$ in this record's normalisation |
-| the Proposition's equality | a $C\ne0$ solving both $C$-conditions when $\operatorname{im}W_0$ holds an invertible skew form |
+| the Proposition's equality | a $C\ne0$ solving both $C$-conditions when $\mathop{\mathrm{im}}W_0$ holds an invertible skew form |
 | padded $W_{\mathbb{CP}^2}$ non-diagonal at $n=8$ | an orthonormal frame of $\mathbb R^8$ in which every coordinate $2$-plane is an eigenvector, equivalently, an $A$ in the $11$-dimensional kernel with pairwise-distinct sums |
 | $\ker\Phi_{W_{\mathbb{CP}^m}}=\mathbb R\,\mathrm{Id}$ at all $m$ | a coincidence among $2(m+1)-\lambda_0$, $2-\lambda_0$, $-\lambda_0$, or a symmetric $A$ whose $J$-anticommuting part preserves the type decomposition |
 

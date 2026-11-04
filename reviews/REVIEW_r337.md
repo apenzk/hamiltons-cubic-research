@@ -24,7 +24,7 @@ Row $a$ carries **two** pinned moments against the same probability measure $\mu
 
 $$\mathbb E_{\mu_a}[X]=\frac{-\lambda_a}{n-2}\quad\text{(B)},\qquad \mathbb E_{\mu_a}[Y]=\frac{\lambda_a(\theta-\lambda_a)}{n-2}\quad\text{(C)}.$$
 
-The **complete** per-row necessary condition is that the point $\big(\tfrac{-\lambda_a}{n-2},\ \tfrac{\lambda_a(\theta-\lambda_a)}{n-2}\big)$ lie in $\operatorname{conv}\{(X,Y):(b,c)\in S_a\}$. The record reads two one-dimensional shadows of it and never the thing itself:
+The **complete** per-row necessary condition is that the point $\big(\tfrac{-\lambda_a}{n-2},\ \tfrac{\lambda_a(\theta-\lambda_a)}{n-2}\big)$ lie in $\mathop{\mathrm{conv}}\{(X,Y):(b,c)\in S_a\}$. The record reads two one-dimensional shadows of it and never the thing itself:
 
 - the **family** ([bounds.md](../findings/bounds.md)) drops (B) and keeps only $\mathbb E[Y]\in[m_a,M_a]$;
 - the **$\Pi$-bound** keeps (B) but replaces $Y$ by the relaxation $Y\le X^2$ before using it.
@@ -84,11 +84,11 @@ The multiplicity objection also cuts the other way. The record's own standing ru
 
 ## U1, the closed-form block spectrum. CONFIRMED, every step
 
-**Einstein normalisation.** $S^p(r_1)\times S^q(r_2)$, $n=p+q$, sectional curvatures $k_1=r_1^{-2}$ on the first factor, $k_2=r_2^{-2}$ on the second, $0$ on mixed planes. $\operatorname{Ric}=(p-1)k_1g$ on $V_p$ and $(q-1)k_2g$ on $V_q$, so the product is Einstein **iff** $(p-1)k_1=(q-1)k_2=:\mu$, which needs $p,q\ge2$ and $\mu>0$ (at $p=1$ the condition forces $\mu=0$). Neither hypothesis is stated in the record. Then $\operatorname{scal}=n\mu$. ✓
+**Einstein normalisation.** $S^p(r_1)\times S^q(r_2)$, $n=p+q$, sectional curvatures $k_1=r_1^{-2}$ on the first factor, $k_2=r_2^{-2}$ on the second, $0$ on mixed planes. $\mathop{\mathrm{Ric}}=(p-1)k_1g$ on $V_p$ and $(q-1)k_2g$ on $V_q$, so the product is Einstein **iff** $(p-1)k_1=(q-1)k_2=:\mu$, which needs $p,q\ge2$ and $\mu>0$ (at $p=1$ the condition forces $\mu=0$). Neither hypothesis is stated in the record. Then $\mathop{\mathrm{scal}}=n\mu$. ✓
 
-**The Ricci part vanishes and $R$ kills the mixed block.** Einstein means $\operatorname{Ric}_0=0$, so the $\operatorname{Ric}_0\owedge g$ term of the Weyl decomposition is identically zero, no residual Ricci part. ✓ The curvature of a Riemannian product vanishes unless all four arguments lie in one factor, so $R_{i\alpha j\beta}=0$ for $i,j\in V_p$, $\alpha,\beta\in V_q$, and $R$ annihilates $V_p\otimes V_q$ outright. ✓
+**The Ricci part vanishes and $R$ kills the mixed block.** Einstein means $\mathop{\mathrm{Ric}}_0=0$, so the $\mathop{\mathrm{Ric}}_0\owedge g$ term of the Weyl decomposition is identically zero, no residual Ricci part. ✓ The curvature of a Riemannian product vanishes unless all four arguments lie in one factor, so $R_{i\alpha j\beta}=0$ for $i,j\in V_p$, $\alpha,\beta\in V_q$, and $R$ annihilates $V_p\otimes V_q$ outright. ✓
 
-**The scalar part and the three blocks.** A constant-curvature $k$ operator is $k\,\mathrm{Id}$ on $\Lambda^2$ with $\operatorname{scal}=n(n-1)k$, so the scalar term is $\tfrac{\operatorname{scal}}{n(n-1)}\mathrm{Id}=\tfrac{\mu}{n-1}\mathrm{Id}$ and $W=R-\tfrac{\mu}{n-1}\mathrm{Id}$. ✓ With $k_1=\tfrac{\mu}{p-1}$, $k_2=\tfrac\mu{q-1}$ and $n-p=q$, $n-q=p$:
+**The scalar part and the three blocks.** A constant-curvature $k$ operator is $k\,\mathrm{Id}$ on $\Lambda^2$ with $\mathop{\mathrm{scal}}=n(n-1)k$, so the scalar term is $\tfrac{\mathop{\mathrm{scal}}}{n(n-1)}\mathrm{Id}=\tfrac{\mu}{n-1}\mathrm{Id}$ and $W=R-\tfrac{\mu}{n-1}\mathrm{Id}$. ✓ With $k_1=\tfrac{\mu}{p-1}$, $k_2=\tfrac\mu{q-1}$ and $n-p=q$, $n-q=p$:
 
 $$\Lambda^2V_p:\ \frac{\mu(n-p)}{(p-1)(n-1)}=\frac{\mu q}{(p-1)(n-1)},\qquad \Lambda^2V_q:\ \frac{\mu p}{(q-1)(n-1)},\qquad \text{mixed}:\ -\frac{\mu}{n-1}.$$
 

@@ -5,7 +5,7 @@
 | # | claim attacked | verdict | reason |
 |---|---|---|---|
 | 1 | `IsSectional` captures the coordinate-diagonal locus | **CONFIRMED AS ALGEBRA** | the three fields are the record's three conditions and no more; the derivation of them from a Weyl tensor in an orthonormal frame is prose, so orthonormality is consumed outside Lean rather than dropped |
-| 2 | `(edges K).card` is the $\Lambda^2$-rank | **CONFIRMED AS ALGEBRA** | the `p.1 < p.2` filter counts each unordered support pair exactly once, which is the record's $\lvert E(G)\rvert$; the identification of that count with $\operatorname{rank}(W:\Lambda^2\to\Lambda^2)$ appears only in the module docstring |
+| 2 | `(edges K).card` is the $\Lambda^2$-rank | **CONFIRMED AS ALGEBRA** | the `p.1 < p.2` filter counts each unordered support pair exactly once, which is the record's $\lvert E(G)\rvert$; the identification of that count with $\mathop{\mathrm{rank}}(W:\Lambda^2\to\Lambda^2)$ appears only in the module docstring |
 | 3 | `four_le_card_edges` is L176's conclusion | **CONFIRMED, TWO CLAUSES OF THREE** | the edge bound is `four_le_card_edges` and the degree statement is `card_nbr_zero_or_two_le`, both sorry-free; the rank clause is absent because no $\Lambda^2$ exists in the file |
 | 4 | the theorem is non-vacuous | **CONFIRMED** | the four-cycle with alternating weights elaborates as `IsSectional` and nonzero at `n = 4`, attaining four edges; vacuous at `n ≤ 3`, where the record's own object vanishes too |
 | 5 | every imported lemma proves what its name and docstring say | **REFUTED FOR ONE OF TWENTY** | `card_nbr_eq_two_of_three` is named for an equality, docstringed for an argument it does not make, concludes `≤ 3`, and is called by nothing |
@@ -32,7 +32,7 @@ Every hypothesis of the record's statement, and of every Lean declaration the pr
 |---|---|---|
 | $W$ is a Weyl tensor | supplies Ricci-flatness, hence $\sum_bK_{ab}=0$ | the `rowsum` field, asserted rather than derived |
 | the frame $\{f_a\}$ is orthonormal | makes $g^{bd}W_{abcd}=0$ read as $\sum_bW_{abab}=0$, and makes $\{f_a\wedge f_b\}$ an orthogonal basis on which $W$ acts diagonally | nowhere, the file has no metric, so this hypothesis is spent in the prose bridge that produces `IsSectional` |
-| $W$ is coordinate-diagonal in that frame | gives $W(f_a\wedge f_b)=K_{ab}f_a\wedge f_b$, hence $\operatorname{rank}=\lvert E\rvert$ | nowhere, the rank clause is not typed |
+| $W$ is coordinate-diagonal in that frame | gives $W(f_a\wedge f_b)=K_{ab}f_a\wedge f_b$, hence $\mathop{\mathrm{rank}}=\lvert E\rvert$ | nowhere, the rank clause is not typed |
 | $W\ne0$ | forces $\lvert E\rvert\ge1$ | `hne : K ≠ 0`, used in `card_edges_ne_zero` |
 
 ### The Lean declarations, in dependency order
@@ -82,7 +82,7 @@ The record's sentence has three clauses. Taking them one at a time:
 
 - *"every vertex of $G$ has degree $0$ or degree $\ge2$"*, this is `card_nbr_zero_or_two_le`, whose type is `(nbr K a).card = 0 ∨ 2 ≤ (nbr K a).card`, universally quantified over `a`. `nbr K a` is the degree set of `a` in $G$, and `hollow` keeps `a` out of it, so the cardinality is the degree. **Present, proved, sorry-free.**
 - *"$G$ has at least four edges"*, this is `four_le_card_edges`, type `4 ≤ (edges K).card` under `IsSectional K` and `K ≠ 0`. **Present, proved, sorry-free.**
-- *"in particular $\operatorname{rank}(W:\Lambda^2\to\Lambda^2)\ge4$"*, **absent.** The file has no $W$, no $\Lambda^2$ and no rank.
+- *"in particular $\mathop{\mathrm{rank}}(W:\Lambda^2\to\Lambda^2)\ge4$"*, **absent.** The file has no $W$, no $\Lambda^2$ and no rank.
 
 The record itself says *"only the edge bound is equivalent to the rank bound; the degree statement is strictly more than it"*, and both of the two things it distinguishes are in the file. The degree statement is there, so the brief's worry on that point is cleared.
 
@@ -184,7 +184,7 @@ The claim that the two routes *"agree on the triangle"* is also right: both end 
 The same paragraph opens **"This lemma is machine-checked in full."** Cleared through the protocol:
 
 1. **Located.** [diagonal-half.md](../findings/diagonal-half.md) line 575, first sentence, directly beneath L176's proof.
-2. **Exhibited.** L176's statement begins *"Let $W\ne0$ be a Weyl tensor coordinate-diagonal in some orthonormal frame"* and ends *"in particular $\operatorname{rank}(W:\Lambda^2\to\Lambda^2)\ge4$"*. The elaborated type of `four_le_card_edges` is `∀ {n : ℕ} (K : Matrix (Fin n) (Fin n) ℝ), IsSectional K → K ≠ 0 → 4 ≤ (edges K).card`. It quantifies over no tensor, mentions no metric, no frame, no exterior power and no rank. Two steps of the lemma are therefore outside the machine check: that a coordinate-diagonal Weyl tensor in an orthonormal frame yields an `IsSectional` matrix, and that $\lvert E\rvert$ is the $\Lambda^2$-rank.
+2. **Exhibited.** L176's statement begins *"Let $W\ne0$ be a Weyl tensor coordinate-diagonal in some orthonormal frame"* and ends *"in particular $\mathop{\mathrm{rank}}(W:\Lambda^2\to\Lambda^2)\ge4$"*. The elaborated type of `four_le_card_edges` is `∀ {n : ℕ} (K : Matrix (Fin n) (Fin n) ℝ), IsSectional K → K ≠ 0 → 4 ≤ (edges K).card`. It quantifies over no tensor, mentions no metric, no frame, no exterior power and no rank. Two steps of the lemma are therefore outside the machine check: that a coordinate-diagonal Weyl tensor in an orthonormal frame yields an `IsSectional` matrix, and that $\lvert E\rvert$ is the $\Lambda^2$-rank.
 3. **The opposite argued.** The strongest defence is the file's own first paragraph, *"Its content needs no curvature tensor: the coordinate-diagonal locus is exactly the hollow symmetric matrices with vanishing row sums, and the $\Lambda^2$-rank is the number of nonzero entries above the diagonal. So the lemma is a statement about matrices"*, under which "the lemma" names its mathematical content and the sentence is true. That defence has real force, and it is why I grade this **REFUTED AS STATED** rather than refuted: the mathematics is fully checked and the sentence's next clause openly says the file *"carries the locus as a structure"*. What the phrase "in full" adds is a claim of completeness that the two prose steps deny, and one of those steps is where the record's own flagged-as-unstated hypothesis lives.
 
 ## The verdict

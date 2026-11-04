@@ -26,7 +26,7 @@ def P_value(W, c):
     return float(np.trace(W @ Q_full(W, c)))
 ```
 
-so $\lVert W\rVert^2=\operatorname{tr}(W^2)$ counts each off-diagonal entry of $W$ on $\Lambda^2$ **twice**, and $P(X)=\langle X,Q(X)\rangle$ with $Q$ the diagonal of the polarisation $B$. That convention is load-bearing for the $c$ computation in W6 and is the one used throughout below.
+so $\lVert W\rVert^2=\mathop{\mathrm{tr}}(W^2)$ counts each off-diagonal entry of $W$ on $\Lambda^2$ **twice**, and $P(X)=\langle X,Q(X)\rangle$ with $Q$ the diagonal of the polarisation $B$. That convention is load-bearing for the $c$ computation in W6 and is the one used throughout below.
 
 ## W2, the expansion, redone
 
@@ -97,16 +97,16 @@ One wording defect, without consequence: L125 calls $\tfrac1{2\theta}\sqrt\Sigma
 
 ## W6, $c=1/\sqrt2$ at padded $\mathbb{CP}^2$, not $1$. REFUTED.
 
-Take $W$ half-flat at $S=\{i,j,k,l\}$, supported on $S$, with $V_+=\operatorname{diag}(A,B,C)$ in the basis $\omega_1=(e_{ij}+e_{kl})/\sqrt2$, $\omega_2=(e_{ik}-e_{jl})/\sqrt2$, $\omega_3=(e_{il}+e_{jk})/\sqrt2$ of [Lemma L124](../findings/second-order.md)(ii). As an operator on $\Lambda^2\langle S\rangle$,
+Take $W$ half-flat at $S=\{i,j,k,l\}$, supported on $S$, with $V_+=\mathop{\mathrm{diag}}(A,B,C)$ in the basis $\omega_1=(e_{ij}+e_{kl})/\sqrt2$, $\omega_2=(e_{ik}-e_{jl})/\sqrt2$, $\omega_3=(e_{il}+e_{jk})/\sqrt2$ of [Lemma L124](../findings/second-order.md)(ii). As an operator on $\Lambda^2\langle S\rangle$,
 
 $$W=A\,\omega_1\omega_1^{\!\top}+B\,\omega_2\omega_2^{\!\top}+C\,\omega_3\omega_3^{\!\top},$$
 
 whose entries in the coordinate-plane basis are $W_{(ij),(ij)}=W_{(kl),(kl)}=W_{(ij),(kl)}=A/2$, and likewise $B/2$ (with the sign of the off-diagonal entry reversed) and $C/2$. So in the trace pairing:
 
-- diagonal part (trivial character, [Lemma L123](../findings/second-order.md): "the trivial character space is precisely the diagonal entries"): six entries of size $A/2,A/2,B/2,B/2,C/2,C/2$, giving $\lVert\operatorname{diag}(M)\rVert^2=\tfrac12(A^2+B^2+C^2)$;
-- four-set block (three complementary-pair entries, each counted twice by $\operatorname{tr}(XY)$): $\lVert W|_{V_S}\rVert^2=\tfrac12(A^2+B^2+C^2)$.
+- diagonal part (trivial character, [Lemma L123](../findings/second-order.md): "the trivial character space is precisely the diagonal entries"): six entries of size $A/2,A/2,B/2,B/2,C/2,C/2$, giving $\lVert\mathop{\mathrm{diag}}(M)\rVert^2=\tfrac12(A^2+B^2+C^2)$;
+- four-set block (three complementary-pair entries, each counted twice by $\mathop{\mathrm{tr}}(XY)$): $\lVert W|_{V_S}\rVert^2=\tfrac12(A^2+B^2+C^2)$.
 
-With $\lVert W\rVert^2=A^2+B^2+C^2=1$ the mass splits **exactly in half**. Two independent checks that this is the project's own arithmetic: it gives $t_F=2\lVert\operatorname{diag}(M)\rVert^2=1$, which is precisely the $t_F=1$ [DERIVE-mx1.md](DERIVE-mx1.md) records at padded $\mathbb{CP}^2$; and it gives $\lVert R\rVert^2=1-t_F/2=1/2$, which is that file's "$\rho\le\lVert R\rVert$ is exactly tight" there.
+With $\lVert W\rVert^2=A^2+B^2+C^2=1$ the mass splits **exactly in half**. Two independent checks that this is the project's own arithmetic: it gives $t_F=2\lVert\mathop{\mathrm{diag}}(M)\rVert^2=1$, which is precisely the $t_F=1$ [DERIVE-mx1.md](DERIVE-mx1.md) records at padded $\mathbb{CP}^2$; and it gives $\lVert R\rVert^2=1-t_F/2=1/2$, which is that file's "$\rho\le\lVert R\rVert$ is exactly tight" there.
 
 Hence, even when $\hat X\propto W|_{V_S}$, which is what "the top eigenvector is $(A,B,C)$ itself" means, and it is correct at $\mathbb{CP}^2$ since $G(A,B,C)^{\!\top}=(A^2+2BC,\,B^2+2AC,\,C^2+2AB)=\tfrac{\sqrt6}2(A,B,C)^{\!\top}$ at $(A,B,C)=(2,-1,-1)/\sqrt6$,
 
@@ -128,7 +128,7 @@ not $\theta^2\le\Sigma\le4\theta^2$.
 
 ### "Consistent for every member, so no member is excluded" is false
 
-On the family the middle term is a **constant**. Half-flat with $V_+$ diagonal in the $\omega$-basis gives $\Sigma=\tfrac32\lVert\operatorname{diag}V_+\rVert^2=\tfrac32\rho^2=\tfrac32$ for every member, which is L124's own withdrawn-reading (a): "$\Sigma\equiv\tfrac32$ across the family while $\theta^2$ sweeps $[0,\tfrac32]$". So the right-hand inequality $\sqrt\Sigma\le\theta(1+c^2)$ is not a constraint on $\Sigma$ at all, it is a **lower bound on $\theta$**:
+On the family the middle term is a **constant**. Half-flat with $V_+$ diagonal in the $\omega$-basis gives $\Sigma=\tfrac32\lVert\mathop{\mathrm{diag}}V_+\rVert^2=\tfrac32\rho^2=\tfrac32$ for every member, which is L124's own withdrawn-reading (a): "$\Sigma\equiv\tfrac32$ across the family while $\theta^2$ sweeps $[0,\tfrac32]$". So the right-hand inequality $\sqrt\Sigma\le\theta(1+c^2)$ is not a constraint on $\Sigma$ at all, it is a **lower bound on $\theta$**:
 
 $$\sqrt{\tfrac32}\ \le\ \theta\,(1+c^2)\ \le\ \tfrac32\,\theta\qquad\Longrightarrow\qquad \theta\ \ge\ \tfrac23\sqrt{\tfrac32}=\sqrt{\tfrac23}\approx0.8165 .$$
 

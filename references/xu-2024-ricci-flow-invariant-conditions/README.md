@@ -12,12 +12,12 @@ Partial progress toward the conjecture; source of the Tachibana-trick estimate t
 
 ## Statements that matter
 
-- The Tachibana-trick eigenvalue inequality $|\operatorname{tr}(T^3)|\le\frac{m-2}{\sqrt{m(m-1)}}\|T\|^3$ on the trace-free operator built from $W$, building on Huisken.
+- The Tachibana-trick eigenvalue inequality $|\mathop{\mathrm{tr}}(T^3)|\le\frac{m-2}{\sqrt{m(m-1)}}\|T\|^3$ on the trace-free operator built from $W$, building on Huisken.
 - The polynomial obstruction $(n+1)(n+2)(n-10)-2$, whose sign flips positive only near $n\approx11$, why his theorem needs a piecewise bound split at $n=10/11$.
 
 ## Verdict
 
-Bounds $\operatorname{tr}(W^3)$ sharply, but that term is asymptotically negligible at the conjectured maximizer, essentially all of $P$'s value sits in $\langle W^\#,W\rangle$. This is the origin of **fence post 1**: no purely eigenvalue-based inequality can close the gap.
+Bounds $\mathop{\mathrm{tr}}(W^3)$ sharply, but that term is asymptotically negligible at the conjectured maximizer, essentially all of $P$'s value sits in $\langle W^\#,W\rangle$. This is the origin of **fence post 1**: no purely eigenvalue-based inequality can close the gap.
 
 ## A claim about a later version, checked and not found
 

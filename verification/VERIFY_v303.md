@@ -150,7 +150,7 @@ One observation bears on the Lean gloss "Those never combine" and does not count
 
 No theorem mentions $\mathcal W_5$, $\mu$, $O(5)$, invariants or a rank. The file's own docstring says "The exactness argument is algebra and stays imported."
 
-**[InvariantsExact.lean](../lean/HamiltonsCubic/Results/InvariantsExact.lean)** imports Mathlib's linear maps and reals. `invariant_lift` is read link by link. From `hf w` obtain $v_0$ with $f v_0=w$. The witness $\pi_V v_0$ satisfies $\pi_V(\pi_V v_0)=\pi_V v_0$ by `hidem`, and $f(\pi_V v_0)=\pi_W(f v_0)=\pi_W w=w$ by `hcomm`, `hv₀` and `hw`. The proof is correct. The file models "invariant" as "fixed by the projection". Identifying that with $O(5)$-invariance needs $\operatorname{im}\pi=\operatorname{Fix}\pi=$ invariants, which is part of the owed existence of the Reynolds operator, as the docstring says (lines 26-27). $\pi_W$ is never required to be idempotent, which is correct and minimal.
+**[InvariantsExact.lean](../lean/HamiltonsCubic/Results/InvariantsExact.lean)** imports Mathlib's linear maps and reals. `invariant_lift` is read link by link. From `hf w` obtain $v_0$ with $f v_0=w$. The witness $\pi_V v_0$ satisfies $\pi_V(\pi_V v_0)=\pi_V v_0$ by `hidem`, and $f(\pi_V v_0)=\pi_W(f v_0)=\pi_W w=w$ by `hcomm`, `hv₀` and `hw`. The proof is correct. The file models "invariant" as "fixed by the projection". Identifying that with $O(5)$-invariance needs $\mathop{\mathrm{im}}\pi=\mathop{\mathrm{Fix}}\pi=$ invariants, which is part of the owed existence of the Reynolds operator, as the docstring says (lines 26-27). $\pi_W$ is never required to be idempotent, which is correct and minimal.
 
 **Candidate 7.1: `idempotence_is_needed` does not show idempotence is needed.**
 

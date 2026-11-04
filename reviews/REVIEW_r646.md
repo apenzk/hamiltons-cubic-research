@@ -61,7 +61,7 @@ $\mathbb{CP}^m$ is Einstein, so $W=\mathcal R-\frac{s}{n(n-1)}\mathrm{Id}$ on $\
 
 $$\lambda_1=\frac{4(m^2-1)}D\ (\times1),\qquad \lambda_2=\frac{2(m-2)}D\ (\times\,m^2-1),\qquad \lambda_3=-\frac{2(m+1)}D\ (\times\,m^2-m),$$
 
-with $\sum d_i\lambda_i=0$ identically. **At $m=2$ this is $\{4,0,0,0,-2,-2\}$, i.e. $\operatorname{diag}(0,0,0,-1,-1,2)/\sqrt6$ after normalisation**, byte-for-byte the record's $W_{\mathbb{CP}^2}$ at [report/sections/03-setup.tex](../report/sections/03-setup.tex) line 23. First independent anchor.
+with $\sum d_i\lambda_i=0$ identically. **At $m=2$ this is $\{4,0,0,0,-2,-2\}$, i.e. $\mathop{\mathrm{diag}}(0,0,0,-1,-1,2)/\sqrt6$ after normalisation**, byte-for-byte the record's $W_{\mathbb{CP}^2}$ at [report/sections/03-setup.tex](../report/sections/03-setup.tex) line 23. First independent anchor.
 
 $$\lVert W\rVert^2=\sum d_i\lambda_i^2=\frac{4}{D^2}\cdot3m(m-1)(m+1)(2m-1)=\frac{12m(m-1)(m+1)}{2m-1}.$$
 
@@ -77,9 +77,9 @@ hence $S_{\mathfrak{snn}}=2(m-1)(m-2)(m+1)$ and $S_{\mathfrak{sss}}=2m(m^2-1)$.
 
 ### 1.4 The value
 
-$$\theta=\operatorname{tr}(W^3)+\tfrac12\big[\lambda_2^3S_{\mathfrak{sss}}+3\lambda_1\lambda_3^2S_{\mathfrak{znn}}+3\lambda_2\lambda_3^2S_{\mathfrak{snn}}\big].$$
+$$\theta=\mathop{\mathrm{tr}}(W^3)+\tfrac12\big[\lambda_2^3S_{\mathfrak{sss}}+3\lambda_1\lambda_3^2S_{\mathfrak{znn}}+3\lambda_2\lambda_3^2S_{\mathfrak{snn}}\big].$$
 
-$$\operatorname{tr}(W^3)=\frac{8m(m-1)(m+1)(8m^3-24m+11)}{D^3}=\frac{8m(m-1)(m+1)(4m^2+2m-11)}{D^2},$$
+$$\mathop{\mathrm{tr}}(W^3)=\frac{8m(m-1)(m+1)(8m^3-24m+11)}{D^3}=\frac{8m(m-1)(m+1)(4m^2+2m-11)}{D^2},$$
 
 using $8m^3-24m+11=(2m-1)(4m^2+2m-11)$. The bracket term is
 
@@ -130,7 +130,7 @@ $X=m(m+1)$ gives $X-2=(m-1)(m+2)$, so $\theta^2=X/(X-2)$ identically. A third ag
 
 **First family, by derivative.** With $f(m)=\dfrac{2m^2+m-1}{3(m^2-m)}$,
 
-$$\operatorname{sign}f'(m)=\operatorname{sign}\Big[(4m+1)(m^2-m)-(2m^2+m-1)(2m-1)\Big]=\operatorname{sign}\big[-(3m^2-2m+1)\big],$$
+$$\mathop{\mathrm{sign}}f'(m)=\mathop{\mathrm{sign}}\Big[(4m+1)(m^2-m)-(2m^2+m-1)(2m-1)\Big]=\mathop{\mathrm{sign}}\big[-(3m^2-2m+1)\big],$$
 
 and $3m^2-2m+1$ has discriminant $4-12=-8<0$ with positive leading coefficient, so it is positive for every real $m$. **Hence $f'<0$ on all of $(1,\infty)$**, strictly decreasing, and not merely on integers. Limit $2/3$.
 

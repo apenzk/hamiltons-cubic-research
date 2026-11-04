@@ -21,7 +21,7 @@
 
 ## 0. Conventions, fixed once
 
-- $\varphi_{ij}=F_{ij}=E_{ij}-E_{ji}$, $i<j$, and $\langle X,Y\rangle=-\tfrac12\operatorname{tr}(XY)$, which makes $\{\varphi_{ij}\}$ orthonormal and gives $[\varphi_{12},\varphi_{23}]=\varphi_{13}$, structure constants $\pm1$, no stray factor. $N:=\dim\mathfrak{so}(n)=n(n-1)/2$.
+- $\varphi_{ij}=F_{ij}=E_{ij}-E_{ji}$, $i<j$, and $\langle X,Y\rangle=-\tfrac12\mathop{\mathrm{tr}}(XY)$, which makes $\{\varphi_{ij}\}$ orthonormal and gives $[\varphi_{12},\varphi_{23}]=\varphi_{13}$, structure constants $\pm1$, no stray factor. $N:=\dim\mathfrak{so}(n)=n(n-1)/2$.
 - $c(x,y,z)=\langle[x,y],z\rangle$ is the Cartan 3-form, totally antisymmetric. **Isotropic** means $c$ vanishes identically on $\mathfrak m^{\times3}$; since $c$ is trilinear, checking a basis suffices.
 - $\mu(\mathfrak m)=\sum_{a,b}\lVert[e_a,e_b]\rVert^2$ over an **orthonormal basis of $\mathfrak m$**, ordered pairs; $d=\dim\mathfrak m$; $\mathfrak h=\mathfrak m^\perp$ **in L36's sense**, which [conventions.md](../findings/conventions.md):28 warns is not the file's default $\mathfrak h=E_{\max}$.
 - $\mathrm{Cas}(A)=-\sum_k[\mathrm{ad}f_k,[\mathrm{ad}f_k,A]]$ on $\mathrm{Sym}(\mathfrak{so}(n))\cong\mathrm{Sym}^2(\Lambda^2\mathbb R^n)$, normalised so that its eigenvalue on the irreducible of highest weight $\lambda$ is $\langle\lambda,\lambda+2\rho\rangle$ with $\rho_i=(n-2i)/2$. **This normalisation is not assumed, it is pinned**: on $\mathbb R^n$ ($\lambda=e_1$) it gives $1+(n-2)=n-1$, and directly $-\sum_{i<j}F_{ij}^2=(n-1)\mathrm{Id}$, the two agree.
@@ -42,7 +42,7 @@
 
 | import | statement as read at source | applied here to | verdict |
 | --- | --- | --- | --- |
-| **[Lemma L153](../findings/bounds.md)**, the Killing row marginal | $\sum_\beta\lVert[v,v_\beta]\rVert^2=2(n-2)\lVert v\rVert^2$ for **any** $v\in\mathfrak{so}(n)$, any $n\ge2$ | the $d$ basis rows of $\mathfrak m$, all unit | **valid**, the general-$v$ form is wider than needed; the basis form alone suffices here. I re-derived it: $\sum_\beta\lVert\mathrm{ad}(v)v_\beta\rVert^2=-\operatorname{tr}(\mathrm{ad}(v)^2)=-B(v,v)=2(n-2)\lVert v\rVert^2$, and independently $\sum_{i<j}\lVert[\varphi_{ij},\varphi_{12}]\rVert^2=(n-2)+(n-2)=2(n-2)$, counting the pairs meeting $\{1,2\}$ in exactly one index |
+| **[Lemma L153](../findings/bounds.md)**, the Killing row marginal | $\sum_\beta\lVert[v,v_\beta]\rVert^2=2(n-2)\lVert v\rVert^2$ for **any** $v\in\mathfrak{so}(n)$, any $n\ge2$ | the $d$ basis rows of $\mathfrak m$, all unit | **valid**, the general-$v$ form is wider than needed; the basis form alone suffices here. I re-derived it: $\sum_\beta\lVert\mathrm{ad}(v)v_\beta\rVert^2=-\mathop{\mathrm{tr}}(\mathrm{ad}(v)^2)=-B(v,v)=2(n-2)\lVert v\rVert^2$, and independently $\sum_{i<j}\lVert[\varphi_{ij},\varphi_{12}]\rVert^2=(n-2)+(n-2)=2(n-2)$, counting the pairs meeting $\{1,2\}$ in exactly one index |
 | **the Casimir spectrum** on $\mathbb R\oplus\mathrm{Sym}^2_0\oplus\mathrm{Weyl}_n\oplus\Lambda^4$ | eigenvalues $2n-4,\,n-4,\,-2,\,4$ | $P$, the orthogonal projection onto $\mathfrak m$ | **valid at every $n\ge3$**, §3 derives all four, and §3.1 handles the small-$n$ degenerations of $\Lambda^4$ where the naive highest weight is unavailable |
 | the ordered/unordered reading of sums | [conventions.md](../findings/conventions.md):104, ordered by default, $2(n-2)$ vs $n-2$ | $\mu$, $\gamma$, $S_{XYZ}$ | **consistent inside L36**: $\mu$, $\gamma$ and the marginal are all ordered here. *The collision [r610](../reviews/REVIEW_r610.md) records lives in $S_{XYZ}$ and reaches L36 only through the $\gamma=2S_{\mathfrak{mhh}}$ restatement 30 lines below, not through the block* |
 | **$S=T_1+2T_2+T_3$**, $T_3=\tfrac12\sum_{ij}\mu_i\mu_j\lVert P_{E_-}[v_i,v_j]\rVert^2$ | [ATTEMPTS.md](../ATTEMPTS.md):1219, *"at **every** critical point with no hypotheses whatever"* | the bridge clause *"which the negative eigenspace … is"* | **the argument exists and is on file**, but it is stated at critical points, and the block imports it without the word. See §6 |
@@ -62,9 +62,9 @@ $$\mu=A+B,\qquad X=B+C\quad\Longrightarrow\quad \gamma:=X-\mu=C-A .$$
 
 **Isotropy is exactly $A=0$**, whence $\gamma=C\ge0$ manifestly, $\mu=B$, and $\mu+B+C=2(n-2)d$ is $2\mu+\gamma=2(n-2)d$. So $\mu\le(n-2)d$. **The identity is not a tautology and $\gamma\ge0$ is not a restatement of the conclusion**, the block's own italic caveat is honest, and the content it points at is the line $\gamma=C-A$ with $A=0$.
 
-**Step 2 (Casimir, no hypothesis).** With $P$ the orthogonal projection onto $\mathfrak m$ and $\langle A,B\rangle=\operatorname{tr}(AB)$,
+**Step 2 (Casimir, no hypothesis).** With $P$ the orthogonal projection onto $\mathfrak m$ and $\langle A,B\rangle=\mathop{\mathrm{tr}}(AB)$,
 
-$$\langle T(P),P\rangle=-\sum_k\operatorname{tr}\bigl(\mathrm{ad}(f_k)P\,\mathrm{ad}(f_k)P\bigr)=\sum_k\sum_{a,b}\langle[f_k,e_b],e_a\rangle^2=\sum_{a,b}\lVert[e_a,e_b]\rVert^2=\mu,$$
+$$\langle T(P),P\rangle=-\sum_k\mathop{\mathrm{tr}}\bigl(\mathrm{ad}(f_k)P\,\mathrm{ad}(f_k)P\bigr)=\sum_k\sum_{a,b}\langle[f_k,e_b],e_a\rangle^2=\sum_{a,b}\lVert[e_a,e_b]\rVert^2=\mu,$$
 
 the middle step using that $\mathrm{ad}(f_k)$ is skew and the last using ad-invariance, $\langle[f_k,e_b],e_a\rangle=\langle f_k,[e_b,e_a]\rangle$, then completeness of $\{f_k\}$. Decompose $P=\tfrac dN\mathrm{Id}+P_\perp$: the scalar part carries $\lVert\tfrac dN\mathrm{Id}\rVert^2=d^2/N$ at eigenvalue $2n-4$, and $\lVert P_\perp\rVert^2=d-d^2/N$ sits at eigenvalues $\ge-2$. Hence
 
@@ -93,7 +93,7 @@ $\Lambda^4\mathbb R^n$ is not the generic module below $n=8$, so its row must be
 
 ## 4. Question 1c, the claimed maximiser, and equality at both parities
 
-$\mathfrak m\cong\mathbb R^p\otimes\mathbb R^q=\operatorname{span}\{\varphi_{ij}:i\le p<j\}$, $q=n-p$.
+$\mathfrak m\cong\mathbb R^p\otimes\mathbb R^q=\mathop{\mathrm{span}}\{\varphi_{ij}:i\le p<j\}$, $q=n-p$.
 
 **It is isotropic.** $c(\varphi_{ij},\varphi_{kl},\varphi_{rs})\ne0$ forces the three index pairs to be the three edges of a triangle: the bracket of two $\varphi$'s vanishes unless they share exactly one index, and $[\varphi_{ij},\varphi_{jl}]=\pm\varphi_{il}$ pairs only with $\varphi_{il}$. The mixed planes are the edge set of the complete bipartite graph $K_{p,q}$, which is triangle-free. **So the Cartan 3-form vanishes on a basis of $\mathfrak m$, hence on $\mathfrak m$.**
 
@@ -144,7 +144,7 @@ Two remarks the block does not make and a consumer should have. **(i) The floor 
 
 **But the forward implication carries an unstated hypothesis.** The clause *"isotropic, which the negative eigenspace of a Weyl operator with $S=0$ is"* is supported by exactly one thing on the record: the decomposition at [ATTEMPTS.md](../ATTEMPTS.md):1219,
 
-$$S=T_1+2T_2+T_3,\qquad T_3=\operatorname{tr}(P_-W_-^\#P_-)=\tfrac12\sum_{i,j}\mu_i\mu_j\lVert P_{E_-}[v_i,v_j]\rVert^2,$$
+$$S=T_1+2T_2+T_3,\qquad T_3=\mathop{\mathrm{tr}}(P_-W_-^\#P_-)=\tfrac12\sum_{i,j}\mu_i\mu_j\lVert P_{E_-}[v_i,v_j]\rVert^2,$$
 
 each term a compression of a PSD operator. Since $\mu_i>0$ on $E_-$, $S=0$ forces $T_3=0$ forces $P_{E_-}[v_i,v_j]=0$, which is isotropy of $E_-$. **The argument is on file and I am not supplying it.** What the block omits is the scope: that decomposition is stated *"at **every critical point**"*, and [ungraded-slack.md](../findings/ungraded-slack.md) records in the same breath that *"$S\ge0$ is printed with $W$ free and is **false off the critical set**, the record's own witness gives margin $-0.18$ at $n=6$"*. **Off the critical set, $S=0$ does not give $T_3=0$, so it does not give isotropy.** Neither [results.md](../results.md):158, nor :489, nor the block says $W$ is critical.
 

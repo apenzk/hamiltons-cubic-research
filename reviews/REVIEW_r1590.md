@@ -17,7 +17,7 @@ Read the stated chain link by link against L271 (2) and L271 (1), (3) as given, 
 
 ## P1: part (1)
 
-With $D=\operatorname{diag}d$ and $P$ symmetric with zero diagonal, $X^2=P^2+PD+DP+D^2$. For $i\ne j$: $(X^2)_{ij}=(P^2)_{ij}+P_{ij}(d_i+d_j)$, and L271's first equation rewrites $(P^2)_{ij}=P_{ij}-P_{ij}(d_i+d_j)-2P_{ij}Q_{ij}^2$, so $(X^2)_{ij}=P_{ij}-2P_{ij}Q_{ij}^2=X_{ij}-2(P\circ Q\circ Q)_{ij}$. On the diagonal $(PD+DP)_{ii}=2P_{ii}d_i=0$, so $(X^2)_{ii}=\pi_i+d_i^2$ and $(X^2-X)_{ii}=\pi_i+d_i^2-d_i$. The positive roots are $\varepsilon_i\pm\varepsilon_j$ with $i<j$, so $x=\sum_{i<j}(U_{ij}+V_{ij})=\sum_{i<j}P_{ij}=\tfrac12\mathbf 1^{\mathsf T}P\mathbf 1$.
+With $D=\mathop{\mathrm{diag}}d$ and $P$ symmetric with zero diagonal, $X^2=P^2+PD+DP+D^2$. For $i\ne j$: $(X^2)_{ij}=(P^2)_{ij}+P_{ij}(d_i+d_j)$, and L271's first equation rewrites $(P^2)_{ij}=P_{ij}-P_{ij}(d_i+d_j)-2P_{ij}Q_{ij}^2$, so $(X^2)_{ij}=P_{ij}-2P_{ij}Q_{ij}^2=X_{ij}-2(P\circ Q\circ Q)_{ij}$. On the diagonal $(PD+DP)_{ii}=2P_{ii}d_i=0$, so $(X^2)_{ii}=\pi_i+d_i^2$ and $(X^2-X)_{ii}=\pi_i+d_i^2-d_i$. The positive roots are $\varepsilon_i\pm\varepsilon_j$ with $i<j$, so $x=\sum_{i<j}(U_{ij}+V_{ij})=\sum_{i<j}P_{ij}=\tfrac12\mathbf 1^{\mathsf T}P\mathbf 1$.
 
 ## P2: part (2)
 

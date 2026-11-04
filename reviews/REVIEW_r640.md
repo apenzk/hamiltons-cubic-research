@@ -35,17 +35,17 @@ The cost is honest and small: the memorable $6/4/2$ goes away, and roughly a doz
 
 ## 1. The derivation, from the definitions
 
-**Conventions pinned before deriving.** $\langle X,Y\rangle=\tfrac12\operatorname{tr}(X^{\mathsf T}Y)$, so $\{\varphi_{ab}\}_{a<b}$ is orthonormal ([conventions.md](../findings/conventions.md), "Norms and pairings"); $c_{abc}=\langle[v_a,v_b],v_c\rangle$ is **totally antisymmetric**, so $T_{abc}=c_{abc}^2$ is **totally symmetric and vanishes whenever two indices coincide** ([conventions.md](../findings/conventions.md), "Structure constants"). I write $M(X,Y,Z):=\sum_{a\in X}\sum_{b\in Y}\sum_{c\in Z}T_{abc}$ for the slotwise contraction, which is the ordered $S_{XYZ}$.
+**Conventions pinned before deriving.** $\langle X,Y\rangle=\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$, so $\{\varphi_{ab}\}_{a<b}$ is orthonormal ([conventions.md](../findings/conventions.md), "Norms and pairings"); $c_{abc}=\langle[v_a,v_b],v_c\rangle$ is **totally antisymmetric**, so $T_{abc}=c_{abc}^2$ is **totally symmetric and vanishes whenever two indices coincide** ([conventions.md](../findings/conventions.md), "Structure constants"). I write $M(X,Y,Z):=\sum_{a\in X}\sum_{b\in Y}\sum_{c\in Z}T_{abc}$ for the slotwise contraction, which is the ordered $S_{XYZ}$.
 
 ### 1a. The row marginal $2(n-2)$, confirmed, and it has no result number
 
 Stated in [conventions.md](../findings/conventions.md) under "The pair cap and the Killing marginal", as $\sum_\beta\lVert[v_\alpha,v_\beta]\rVert^2=2(n-2)$, beside the pair cap. **The pair cap carries a number ([Lemma L31](../findings/stratum-two-negative.md)); the marginal carries none**, I checked [INDEX-results.md](../findings/INDEX-results.md) end to end, and it appears there only as prose inside the [L70](../findings/bounds.md) and [L79](../findings/isotropy-cap.md) rows. The brief's claim is correct, and the fact is load-bearing in at least four numbered results.
 
-It is one line. $\operatorname{ad}(v)$ is skew for an ad-invariant inner product, so for unit $v$
+It is one line. $\mathop{\mathrm{ad}}(v)$ is skew for an ad-invariant inner product, so for unit $v$
 
-$$\sum_\beta\lVert[v,v_\beta]\rVert^2=\operatorname{tr}\big(\operatorname{ad}(v)^{\mathsf T}\operatorname{ad}(v)\big)=-\operatorname{tr}\operatorname{ad}(v)^2=-B(v,v)=-(n-2)\operatorname{tr}(v^2)=2(n-2),$$
+$$\sum_\beta\lVert[v,v_\beta]\rVert^2=\mathop{\mathrm{tr}}\big(\mathop{\mathrm{ad}}(v)^{\mathsf T}\mathop{\mathrm{ad}}(v)\big)=-\mathop{\mathrm{tr}}\mathop{\mathrm{ad}}(v)^2=-B(v,v)=-(n-2)\mathop{\mathrm{tr}}(v^2)=2(n-2),$$
 
-using the Killing form $B(X,Y)=(n-2)\operatorname{tr}(XY)$ and $\operatorname{tr}(v^2)=-2$ at half-trace unit norm, both from [conventions.md](../findings/conventions.md). Equivalently $\sum_{b,c}T_{abc}=2(n-2)$ for every $a$. **Hand check at $n=3$:** the total is $2N(n-2)=2\cdot3\cdot1=6$, and $\mathfrak{so}(3)$ has exactly one unordered triple with $T=1$ (from $[\varphi_{12},\varphi_{13}]=-\varphi_{23}$), so the ordered total is $3!=6$. ✓
+using the Killing form $B(X,Y)=(n-2)\mathop{\mathrm{tr}}(XY)$ and $\mathop{\mathrm{tr}}(v^2)=-2$ at half-trace unit norm, both from [conventions.md](../findings/conventions.md). Equivalently $\sum_{b,c}T_{abc}=2(n-2)$ for every $a$. **Hand check at $n=3$:** the total is $2N(n-2)=2\cdot3\cdot1=6$, and $\mathfrak{so}(3)$ has exactly one unordered triple with $T=1$ (from $[\varphi_{12},\varphi_{13}]=-\varphi_{23}$), so the ordered total is $3!=6$. ✓
 
 ### 1b. The identity
 
@@ -102,13 +102,13 @@ $$\gamma=X-\mu=S^{\mathrm{ord}}_{\mathfrak{mhh}}-S^{\mathrm{ord}}_{\mathfrak{mmm
 
 **[r609](REVIEW_r609.md) and [r610](REVIEW_r610.md) are both right**: $\gamma=S_{\mathfrak{mhh}}$ ordered, $\gamma=2S_{\mathfrak{mhh}}$ unordered, under isotropy. Eliminating $\gamma$ recovers $2\mu+\gamma=2d(n-2)$, which is [Lemma L36](../findings/isotropy-cap.md)'s form, **and expanding that in block masses is L114 itself**. So L36, L77 and L114 are three faces of one equation, and [isotropy-cap.md:118](../findings/isotropy-cap.md)'s note that L36 sits "incompatibly with the factor and correctly" $138$ lines above L77 is the same observation reached from the other side.
 
-**Hand witness for the general $\gamma$ law**, at $n=4$, $\mathfrak m=\mathfrak{so}(3)=\operatorname{span}(\varphi_{12},\varphi_{13},\varphi_{23})$, $\mathfrak h=\operatorname{span}(\varphi_{14},\varphi_{24},\varphi_{34})$: $S^{\mathrm{unord}}_{\mathfrak{mmm}}=1$; the $(\mathfrak{mhh})$ triples are $\{\varphi_{i4},\varphi_{j4},\varphi_{ij}\}$, three of them at $T=1$, so $S^{\mathrm{unord}}_{\mathfrak{mhh}}=3$; hence $\gamma=2\cdot3-6\cdot1=0$, matching [isotropy-cap.md:116](../findings/isotropy-cap.md)'s $\mu=6$, $\gamma=0$, $S_{\mathfrak{mhh}}=3$ exactly. That file is therefore **unordered** too, and $\mu=6=S^{\mathrm{ord}}_{\mathfrak{mmm}}$ confirms the $6$ once more.
+**Hand witness for the general $\gamma$ law**, at $n=4$, $\mathfrak m=\mathfrak{so}(3)=\mathop{\mathrm{span}}(\varphi_{12},\varphi_{13},\varphi_{23})$, $\mathfrak h=\mathop{\mathrm{span}}(\varphi_{14},\varphi_{24},\varphi_{34})$: $S^{\mathrm{unord}}_{\mathfrak{mmm}}=1$; the $(\mathfrak{mhh})$ triples are $\{\varphi_{i4},\varphi_{j4},\varphi_{ij}\}$, three of them at $T=1$, so $S^{\mathrm{unord}}_{\mathfrak{mhh}}=3$; hence $\gamma=2\cdot3-6\cdot1=0$, matching [isotropy-cap.md:116](../findings/isotropy-cap.md)'s $\mu=6$, $\gamma=0$, $S_{\mathfrak{mhh}}=3$ exactly. That file is therefore **unordered** too, and $\mu=6=S^{\mathrm{ord}}_{\mathfrak{mmm}}$ confirms the $6$ once more.
 
 ---
 
 ## 3. The witness that separates the two readings
 
-$n=6$, $\mathfrak h=\mathfrak{so}(3)\oplus\mathfrak{so}(3)$, $\mathfrak m=\mathfrak h^\perp=\operatorname{span}\{\varphi_{ai}:a\in\{1,2,3\},i\in\{4,5,6\}\}$, so $d=9$ and $2d(n-2)=72$. This is a symmetric pair, so $S_{\mathfrak{mmm}}=0$ and $S_{\mathfrak{mhh}}=0$.
+$n=6$, $\mathfrak h=\mathfrak{so}(3)\oplus\mathfrak{so}(3)$, $\mathfrak m=\mathfrak h^\perp=\mathop{\mathrm{span}}\{\varphi_{ai}:a\in\{1,2,3\},i\in\{4,5,6\}\}$, so $d=9$ and $2d(n-2)=72$. This is a symmetric pair, so $S_{\mathfrak{mmm}}=0$ and $S_{\mathfrak{mhh}}=0$.
 
 Counting the $(\mathfrak{mmh})$ triples by hand from $[\varphi_{ab},\varphi_{cd}]=\delta_{bc}\varphi_{ad}-\delta_{ac}\varphi_{bd}-\delta_{bd}\varphi_{ac}+\delta_{ad}\varphi_{bc}$: two elements $\varphi_{ai},\varphi_{bj}$ of $\mathfrak m$ bracket nontrivially exactly when they share one index. Shared $i=j$ with $a\ne b$ gives $-\varphi_{ab}$ ($3\times\binom32=9$ triples; shared $a=b$ with $i\ne j$ gives $\varphi_{ij}$), $3\times3=9$ triples. Each has $T=1$, so
 

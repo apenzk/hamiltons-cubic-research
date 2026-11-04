@@ -11,7 +11,7 @@
 
 Under those readings each half splits into a free inequality and one upgrade step. The free halves need nothing beyond the adjunction and nondegeneracy. The upgrade steps both need one and the same three-line argument, $K$ is an $O(5)$-submodule, $\mathrm{Cat}_F$ is $O(5)$-invariant when $F$ is, and a $G$-invariant functional vanishing on the invariants vanishes, which is **absent from the record** and is already booked as absent in L59's own Gate 2 note. It is fillable from material the record holds, so the sentence stands. Its exposition owes those three lines and a name for the pairing.
 
-A second result, which I record because it changes how much the absent step matters: **in the configuration the record is actually in, the upgrade step is bypassed entirely.** A squeeze between L62's order-one cap, the explicit witness $\mathcal A(W_0^6)$, and the measured rank forces $\mathrm{ANN}=(\operatorname{im}\mu_K)^\perp$ outright, so nothing downstream of L59 rests on the missing lines. The derivation is in §6.
+A second result, which I record because it changes how much the absent step matters: **in the configuration the record is actually in, the upgrade step is bypassed entirely.** A squeeze between L62's order-one cap, the explicit witness $\mathcal A(W_0^6)$, and the measured rank forces $\mathrm{ANN}=(\mathop{\mathrm{im}}\mu_K)^\perp$ outright, so nothing downstream of L59 rests on the missing lines. The derivation is in §6.
 
 ## 1. The spaces, fixed before anything is asserted
 
@@ -25,9 +25,9 @@ Write $V=\mathcal W_5$, the $O(5)$-irreducible $[2,2]$ of dimension $35$ ([conve
 | a sextic $F$, and $F_5$ | $T:=(\mathrm{Sym}^6V^*)^{O(5)}$ | $14$ | [L85](../findings/sym3-blocks.md#L68) |
 | $\mathrm{Cat}_F$ | $(\mathrm{Sym}^2U)^*$, i.e. an invariant symmetric bilinear form on $U$ | the invariant ones number $65$ | [L88](../findings/sym3-blocks.md#L142) |
 
-$\mu\colon\mathrm{Sym}^2U\to\mathrm{Sym}^6V^*$ is multiplication, $\mu_K$ its restriction to $S$, and $\operatorname{im}:=\mu_K(S)\subseteq T$. $F_5=\tfrac32\lVert W\rVert^6-9\operatorname{tr}(W^3)^2$ is $O(5)$-invariant of degree $6$, so $F_5\in T$; this is the one membership the second half of the sentence would be vacuous without, and it is immediate.
+$\mu\colon\mathrm{Sym}^2U\to\mathrm{Sym}^6V^*$ is multiplication, $\mu_K$ its restriction to $S$, and $\mathop{\mathrm{im}}:=\mu_K(S)\subseteq T$. $F_5=\tfrac32\lVert W\rVert^6-9\mathop{\mathrm{tr}}(W^3)^2$ is $O(5)$-invariant of degree $6$, so $F_5\in T$; this is the one membership the second half of the sentence would be vacuous without, and it is immediate.
 
-**$K$ is an $O(5)$-submodule, and this is load-bearing twice below.** The record's phrase is *"the span of cubics cut out by the orbit constraint"*, which I read as $K=\{q\in U:q\vert_{O(5)\cdot W_0}=0\}$. That set is manifestly $O(5)$-stable, and the reading is confirmed by the record's own dimension bookkeeping: the block description behind the $36$ and the $29$ is $K=\bigoplus_\lambda M'_\lambda\otimes V_\lambda$ with $M'_\lambda=M_\lambda$ at odd $\lambda_2$ and $\operatorname{codim}M'_\lambda=1$ at even $\lambda_2$, giving $\dim K=7770-3570=4200$, which is [L91](../findings/sym3-blocks.md#L253)'s figure. The competing reading, $\{q:q(W_0)=0\}$ of dimension $7769$, is not a submodule and is incompatible with every count in the file. [L90](../findings/sym3-blocks.md#L234)'s second bullet states the submodule property explicitly, so the record does carry it.
+**$K$ is an $O(5)$-submodule, and this is load-bearing twice below.** The record's phrase is *"the span of cubics cut out by the orbit constraint"*, which I read as $K=\{q\in U:q\vert_{O(5)\cdot W_0}=0\}$. That set is manifestly $O(5)$-stable, and the reading is confirmed by the record's own dimension bookkeeping: the block description behind the $36$ and the $29$ is $K=\bigoplus_\lambda M'_\lambda\otimes V_\lambda$ with $M'_\lambda=M_\lambda$ at odd $\lambda_2$ and $\mathop{\mathrm{codim}}M'_\lambda=1$ at even $\lambda_2$, giving $\dim K=7770-3570=4200$, which is [L91](../findings/sym3-blocks.md#L253)'s figure. The competing reading, $\{q:q(W_0)=0\}$ of dimension $7769$, is not a submodule and is incompatible with every count in the file. [L90](../findings/sym3-blocks.md#L234)'s second bullet states the submodule property explicitly, so the record does carry it.
 
 ## 2. The pairing, which the sentence does not name and which everything turns on
 
@@ -41,19 +41,19 @@ With $\mathrm{Cat}_F(B_1,B_2):=\langle F,B_1B_2\rangle_6$ for $B_1,B_2\in U$, th
 
 **The normalisation caveat, and why it is inert.** Whether $\langle u_1\odot u_2,w_1\odot w_2\rangle$ carries a factor $2$ from the polarisation, and whether $\mu(B_1\odot B_2)$ is $B_1B_2$ or twice it, shifts the identity by a fixed nonzero scalar $c$ uniform in $F$ and $B$. Every use below is of the form "this pairing vanishes", so $c$ cancels. The record's two Gate 2 reviewers reached the same conclusion from opposite normalisations, and no number moves.
 
-**Why the apolar reading is forced rather than chosen.** The second half of the sentence is $F_5\in\operatorname{im}\iff F_5\perp\mathrm{ANN}$. Since $\mathrm{ANN}$ is defined through $\mathrm{Cat}$, and $\mathrm{Cat}$ is the adjoint for $\langle\cdot,\cdot\rangle_6$, the equivalence can only be an equivalence if $\perp$ is $\langle\cdot,\cdot\rangle_6$-orthogonality; under any other inner product on $T$ the right-hand side names a different $13$-dimensional subspace and the biconditional is false in general. The record pins the apolar reading in two places without ever naming it: [sym3-blocks.md:253](../findings/sym3-blocks.md#L253) says *"the apolar pairing is reproducing"*, and L62's own verification of $F_5\perp\mathcal A(W_0^6)$ from $F_5(W_0)=0$ is exactly the reproducing property in use. I adopt it.
+**Why the apolar reading is forced rather than chosen.** The second half of the sentence is $F_5\in\mathop{\mathrm{im}}\iff F_5\perp\mathrm{ANN}$. Since $\mathrm{ANN}$ is defined through $\mathrm{Cat}$, and $\mathrm{Cat}$ is the adjoint for $\langle\cdot,\cdot\rangle_6$, the equivalence can only be an equivalence if $\perp$ is $\langle\cdot,\cdot\rangle_6$-orthogonality; under any other inner product on $T$ the right-hand side names a different $13$-dimensional subspace and the biconditional is false in general. The record pins the apolar reading in two places without ever naming it: [sym3-blocks.md:253](../findings/sym3-blocks.md#L253) says *"the apolar pairing is reproducing"*, and L62's own verification of $F_5\perp\mathcal A(W_0^6)$ from $F_5(W_0)=0$ is exactly the reproducing property in use. I adopt it.
 
 ## 3. The first half, $\mathrm{rank}=14-\dim\mathrm{ANN}$
 
-Read $\mathrm{rank}=\dim\operatorname{im}\mu_K$. Since $\langle\cdot,\cdot\rangle_6$ is definite on $T$,
+Read $\mathrm{rank}=\dim\mathop{\mathrm{im}}\mu_K$. Since $\langle\cdot,\cdot\rangle_6$ is definite on $T$,
 
-$$\mathrm{rank}=14-\dim\big(\operatorname{im}\mu_K\big)^{\perp_T},\qquad \big(\operatorname{im}\mu_K\big)^{\perp_T}=\{F\in T:\langle F,\mu(B)\rangle=0\ \forall B\in S\}=\{F\in T:\langle\mathrm{Cat}_F,B\rangle=0\ \forall B\in S\},$$
+$$\mathrm{rank}=14-\dim\big(\mathop{\mathrm{im}}\mu_K\big)^{\perp_T},\qquad \big(\mathop{\mathrm{im}}\mu_K\big)^{\perp_T}=\{F\in T:\langle F,\mu(B)\rangle=0\ \forall B\in S\}=\{F\in T:\langle\mathrm{Cat}_F,B\rangle=0\ \forall B\in S\},$$
 
 the second equality being the adjunction. So the identity holds **iff**
 
 $$\mathrm{ANN}=\{F\in T:\mathrm{Cat}_F(K,K)=0\}\quad\text{equals}\quad\{F\in T:\mathrm{Cat}_F\ \text{annihilates }S=(\mathrm{Sym}^2K)^{O(5)}\}.$$
 
-**The inclusion $\subseteq$ is free.** $\mathrm{Cat}_F(K,K)=0$ says $\mathrm{Cat}_F$ annihilates all of $\mathrm{Sym}^2K$, hence in particular its invariant part. So $\mathrm{ANN}\subseteq(\operatorname{im}\mu_K)^{\perp_T}$ unconditionally, and
+**The inclusion $\subseteq$ is free.** $\mathrm{Cat}_F(K,K)=0$ says $\mathrm{Cat}_F$ annihilates all of $\mathrm{Sym}^2K$, hence in particular its invariant part. So $\mathrm{ANN}\subseteq(\mathop{\mathrm{im}}\mu_K)^{\perp_T}$ unconditionally, and
 
 $$\boxed{\ \mathrm{rank}\ \le\ 14-\dim\mathrm{ANN}\ }$$
 
@@ -63,20 +63,20 @@ needs only the adjunction and definiteness.
 
 1. $\varphi$ is $O(5)$-invariant: for $g\in O(5)$, $\mathrm{Cat}_F(gB_1,gB_2)=\langle F,g\cdot(B_1B_2)\rangle_6=\langle g^{-1}F,B_1B_2\rangle_6=\mathrm{Cat}_F(B_1,B_2)$, using invariance of $\langle\cdot,\cdot\rangle_6$ and invariance of $F$. This needs $K$ to be $g$-stable for $\varphi$ to be defined on a $g$-stable domain at all, §1.
 2. Let $R$ be the Reynolds operator of the compact group $O(5)$ on $\mathrm{Sym}^2K$, the projection onto $(\mathrm{Sym}^2K)^{O(5)}=S$. For invariant $\varphi$, $\varphi(x)=\int_{O(5)}\varphi(gx)\,dg=\varphi(Rx)$.
-3. $\varphi$ vanishes on $S=\operatorname{im}R$ by hypothesis, so $\varphi=\varphi\circ R=0$, i.e. $\mathrm{Cat}_F(K,K)=0$ and $F\in\mathrm{ANN}$.
+3. $\varphi$ vanishes on $S=\mathop{\mathrm{im}}R$ by hypothesis, so $\varphi=\varphi\circ R=0$, i.e. $\mathrm{Cat}_F(K,K)=0$ and $F\in\mathrm{ANN}$.
 
-Hence $\mathrm{ANN}=(\operatorname{im}\mu_K)^{\perp_T}$ and $\mathrm{rank}=14-\dim\mathrm{ANN}$ exactly. **First half: valid.**
+Hence $\mathrm{ANN}=(\mathop{\mathrm{im}}\mu_K)^{\perp_T}$ and $\mathrm{rank}=14-\dim\mathrm{ANN}$ exactly. **First half: valid.**
 
-## 4. The second half, $F_5\in\operatorname{image}\iff F_5\perp\mathrm{ANN}$
+## 4. The second half, $F_5\in\mathop{\mathrm{image}}\iff F_5\perp\mathrm{ANN}$
 
-$F_5\in T$, $\operatorname{im}\mu_K\subseteq T$, and $\langle\cdot,\cdot\rangle_6$ is definite on the finite-dimensional $T$, so $\big((\operatorname{im}\mu_K)^{\perp_T}\big)^{\perp_T}=\operatorname{im}\mu_K$. With §3's equality $\mathrm{ANN}=(\operatorname{im}\mu_K)^{\perp_T}$,
+$F_5\in T$, $\mathop{\mathrm{im}}\mu_K\subseteq T$, and $\langle\cdot,\cdot\rangle_6$ is definite on the finite-dimensional $T$, so $\big((\mathop{\mathrm{im}}\mu_K)^{\perp_T}\big)^{\perp_T}=\mathop{\mathrm{im}}\mu_K$. With §3's equality $\mathrm{ANN}=(\mathop{\mathrm{im}}\mu_K)^{\perp_T}$,
 
-$$F_5\perp\mathrm{ANN}\iff F_5\in\mathrm{ANN}^{\perp_T}=\operatorname{im}\mu_K.$$
+$$F_5\perp\mathrm{ANN}\iff F_5\in\mathrm{ANN}^{\perp_T}=\mathop{\mathrm{im}}\mu_K.$$
 
 **The two directions cost different things, and the record consumes the expensive one.**
 
-- $\Longrightarrow$ is free: $F_5\in\operatorname{im}\mu_K$ implies $F_5\perp(\operatorname{im}\mu_K)^{\perp_T}\supseteq\mathrm{ANN}$, using only §3's free inclusion.
-- $\Longleftarrow$ requires $\mathrm{ANN}=(\operatorname{im}\mu_K)^{\perp_T}$, hence §3's Reynolds upgrade. And $\Longleftarrow$ is precisely the direction [L62](../findings/sym3-blocks.md#L329) and [L90](../findings/sym3-blocks.md#L207) use, where $F_5(W_0)=0$ is turned into $F_5\in\operatorname{image}$.
+- $\Longrightarrow$ is free: $F_5\in\mathop{\mathrm{im}}\mu_K$ implies $F_5\perp(\mathop{\mathrm{im}}\mu_K)^{\perp_T}\supseteq\mathrm{ANN}$, using only §3's free inclusion.
+- $\Longleftarrow$ requires $\mathrm{ANN}=(\mathop{\mathrm{im}}\mu_K)^{\perp_T}$, hence §3's Reynolds upgrade. And $\Longleftarrow$ is precisely the direction [L62](../findings/sym3-blocks.md#L329) and [L90](../findings/sym3-blocks.md#L207) use, where $F_5(W_0)=0$ is turned into $F_5\in\mathop{\mathrm{image}}$.
 
 So the absent step is not decorative: it carries exactly the implication the certificate route lives on. **Second half: valid**, on the same footing as the first.
 
@@ -94,12 +94,12 @@ Every one of these three uses the reproducing property, i.e. the apolar reading;
 
 The three lines of §3 are needed for the identity **as a general statement**. They are not needed for anything the record concludes, and I record the squeeze because it changes the risk profile of the gap to zero:
 
-1. $\mathrm{ANN}\subseteq(\operatorname{im}\mu_K)^{\perp_T}$, free (§3).
+1. $\mathrm{ANN}\subseteq(\mathop{\mathrm{im}}\mu_K)^{\perp_T}$, free (§3).
 2. $\dim\mathrm{ANN}\ge1$, by the explicit nonzero witness $\mathcal A(W_0^6)$ (§5).
-3. $\mathrm{rank}\le13$, L62's cap, a theorem: $\lVert W\rVert^6\in T$ has value $1$ at $W_0$, so evaluation at $W_0$ is a nonzero functional on $T$; every element of $\operatorname{im}\mu_K$ is a sum of products of two cubics of $K$ and so vanishes at $W_0$; hence $\operatorname{im}\mu_K\subseteq\ker(\mathrm{ev}_{W_0})$, of dimension $13$, and $\dim(\operatorname{im}\mu_K)^{\perp_T}\ge1$.
-4. With $\mathrm{rank}=13$ (L62's measured lower bound meeting the cap), $\dim(\operatorname{im}\mu_K)^{\perp_T}=1$, and by (1) and (2) the one-dimensional $\mathrm{ANN}$ **equals** it.
+3. $\mathrm{rank}\le13$, L62's cap, a theorem: $\lVert W\rVert^6\in T$ has value $1$ at $W_0$, so evaluation at $W_0$ is a nonzero functional on $T$; every element of $\mathop{\mathrm{im}}\mu_K$ is a sum of products of two cubics of $K$ and so vanishes at $W_0$; hence $\mathop{\mathrm{im}}\mu_K\subseteq\ker(\mathrm{ev}_{W_0})$, of dimension $13$, and $\dim(\mathop{\mathrm{im}}\mu_K)^{\perp_T}\ge1$.
+4. With $\mathrm{rank}=13$ (L62's measured lower bound meeting the cap), $\dim(\mathop{\mathrm{im}}\mu_K)^{\perp_T}=1$, and by (1) and (2) the one-dimensional $\mathrm{ANN}$ **equals** it.
 
-So $\mathrm{ANN}=(\operatorname{im}\mu_K)^{\perp_T}$ holds here by a squeeze that never invokes Reynolds, and $F_5\perp\mathrm{ANN}\Rightarrow F_5\in\operatorname{image}$ follows. The price is that this route inherits L62's measured link, where §3's route is unconditional. The two routes are worth keeping side by side for exactly that reason.
+So $\mathrm{ANN}=(\mathop{\mathrm{im}}\mu_K)^{\perp_T}$ holds here by a squeeze that never invokes Reynolds, and $F_5\perp\mathrm{ANN}\Rightarrow F_5\in\mathop{\mathrm{image}}$ follows. The price is that this route inherits L62's measured link, where §3's route is unconditional. The two routes are worth keeping side by side for exactly that reason.
 
 ## 7. Hypothesis ledger
 
@@ -123,15 +123,15 @@ So $\mathrm{ANN}=(\operatorname{im}\mu_K)^{\perp_T}$ holds here by a squeeze tha
 | $\mathrm{rank}$ | $\mathrm{rank}(\mu_K)$ from the $36$ to the $14$; or $\mathrm{rank}(\mu\vert_{\mathrm{inv}})$ from the $65$ | the restricted one. $\mathrm{ANN}$ is defined through $K$, so the unrestricted reading gives $14=14-1$, false; and L62 reads $13$ off this identity |
 | $\perp$ | apolar; or any other inner product on the $14$ | apolar, forced, since $\mathrm{ANN}$ is defined by the adjoint of $\mu$ for that pairing (§2) |
 | $K$ | cubics vanishing on the whole orbit ($4200$); or cubics vanishing at $W_0$ ($7769$) | the orbit reading, the only $O(5)$-stable one and the only one consistent with the file's $3570$ and $4200$ |
-| $\operatorname{image}$ | $\mu_K(S)$ with invariant Gram; or $\mu(\mathrm{Sym}^2K)\cap T$ | immaterial: for invariant $F$ the two coincide, by averaging a preimage against the equivariance of $\mu$. Worth stating because it also shows restricting the certificate to invariant Grams loses nothing, PSD-ness surviving the average |
+| $\mathop{\mathrm{image}}$ | $\mu_K(S)$ with invariant Gram; or $\mu(\mathrm{Sym}^2K)\cap T$ | immaterial: for invariant $F$ the two coincide, by averaging a preimage against the equivariance of $\mu$. Worth stating because it also shows restricting the certificate to invariant Grams loses nothing, PSD-ness surviving the average |
 
 ## 9. The strongest defence of the step, stated plainly
 
-The sentence is one line of linear algebra dressed as two claims, and the line is correct. Multiplication $\mu$ has an adjoint; that adjoint is the catalecticant; a subspace of a definite inner-product space is the double perp of its own annihilator. Everything else is bookkeeping about which of four spaces each object sits in. The two claims are the corank identity and the double-perp identity for one and the same subspace $\operatorname{im}\mu_K\subseteq T$, and they are the same fact read twice, which is why the record can state them in one breath.
+The sentence is one line of linear algebra dressed as two claims, and the line is correct. Multiplication $\mu$ has an adjoint; that adjoint is the catalecticant; a subspace of a definite inner-product space is the double perp of its own annihilator. Everything else is bookkeeping about which of four spaces each object sits in. The two claims are the corank identity and the double-perp identity for one and the same subspace $\mathop{\mathrm{im}}\mu_K\subseteq T$, and they are the same fact read twice, which is why the record can state them in one breath.
 
 The one place a reader can lose the argument is the passage from "annihilates the invariant Grams" to "annihilates $K\times K$", because $\mathrm{ANN}$ is defined by the second condition and the rank is governed by the first. The defence is that the gap closes on invariance alone: an invariant functional cannot see anything a Reynolds average destroys. The record has the submodule property and it has the Reynolds operator, in the same file; it has simply never joined them.
 
-Two things the sentence would be improved by, neither of which changes a number: naming the apolar pairing at the point $\perp$ first appears, and writing $\mu_K$ rather than $\mu$ where the restricted map is meant. Both are already booked in L59's Gate 2 note, and this adjudication adds nothing to that list except the observation of §6, that the missing three lines are not on any live dependency path, because the record's own squeeze reaches $\mathrm{ANN}=(\operatorname{im}\mu_K)^{\perp}$ without them.
+Two things the sentence would be improved by, neither of which changes a number: naming the apolar pairing at the point $\perp$ first appears, and writing $\mu_K$ rather than $\mu$ where the restricted map is meant. Both are already booked in L59's Gate 2 note, and this adjudication adds nothing to that list except the observation of §6, that the missing three lines are not on any live dependency path, because the record's own squeeze reaches $\mathrm{ANN}=(\mathop{\mathrm{im}}\mu_K)^{\perp}$ without them.
 
 ## 10. Where it would fail
 

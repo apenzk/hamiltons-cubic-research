@@ -18,7 +18,7 @@ $$\lambda_{\max}(M)=\theta\qquad\text{at every COORDINATE-DIAGONAL global maximi
 
 #### The Rayleigh bound is tight where it matters and slack elsewhere
 
-So $\sup_W\lambda_{\max}(M)\le\theta_0$ (B3's target as posed), is **strictly stronger than Conjecture A**: the $C_5$ blow-up carries ratio $1.206$ while its $\theta$ sits far below $\theta_0$. The equivalent target is the pointwise statement at maximisers, and that is Conjecture A rewritten, neither easier nor harder. A free by-product: since $\operatorname{diag}M=\lambda$ and $\lambda_{\max}(M)=\theta$ at a maximiser, $\theta\ge\max_\alpha\lambda_\alpha$, the largest eigenvalue of a maximiser is at most its own $\theta$.
+So $\sup_W\lambda_{\max}(M)\le\theta_0$ (B3's target as posed), is **strictly stronger than Conjecture A**: the $C_5$ blow-up carries ratio $1.206$ while its $\theta$ sits far below $\theta_0$. The equivalent target is the pointwise statement at maximisers, and that is Conjecture A rewritten, neither easier nor harder. A free by-product: since $\mathop{\mathrm{diag}}M=\lambda$ and $\lambda_{\max}(M)=\theta$ at a maximiser, $\theta\ge\max_\alpha\lambda_\alpha$, the largest eigenvalue of a maximiser is at most its own $\theta$.
 
 ## Passage B, the definition of $M$ and its first facts ([findings/second-order.md](../findings/second-order.md) lines 532-548, odd lines)
 
@@ -198,7 +198,7 @@ end HamiltonsCubic.L115Statement
 3. **The restricted display, "So $\lambda_{\max}(M)=\theta$ at every coordinate-diagonal global maximiser, and at every $S^m\times S^m$, $m\ge4$"**: what argument on file gives it, including why global maximality and $m\ge4$ are needed, and what happens at $m\le3$.
 4. **"A cap on $\lambda_{\max}(L_W|_{\mathcal W_n^\perp})$ would close it"**: whether that cap would suffice.
 5. **"$\sup_W\lambda_{\max}(M)\le\theta_0$ is strictly stronger than Conjecture A"**, against Passage B's measured suprema, $M(n)\ge\sqrt{3/2}$ at $n\le11$, and odd $n$.
-6. **The by-product, $\theta\ge\max_\alpha\lambda_\alpha$ at a maximiser**: its two routes, whether $\operatorname{diag}M=\lambda$ holds, whether the unrestricted equality it uses is available, and whether a route using only $\lVert\lambda\rVert=1$ and $M(n)\ge\sqrt{3/2}$ gives it strictly.
+6. **The by-product, $\theta\ge\max_\alpha\lambda_\alpha$ at a maximiser**: its two routes, whether $\mathop{\mathrm{diag}}M=\lambda$ holds, whether the unrestricted equality it uses is available, and whether a route using only $\lVert\lambda\rVert=1$ and $M(n)\ge\sqrt{3/2}$ gives it strictly.
 7. **"The pointwise statement at maximisers ... is Conjecture A rewritten, neither easier nor harder"**: whether it is an equivalence and what it would need.
 8. **Passage D against Passages A and B**: what each declaration states, whether any is a tautology or unrelated to the claim, whether `IsTopRayleigh` is $\lambda_{\max}$, and whether the clause-1 equality is typed.
 9. **The boundary**: $n\le11$, odd $n$, $m\le3$ in $S^m\times S^m$, repeated eigenvalues, and $\ker W\ne0$.

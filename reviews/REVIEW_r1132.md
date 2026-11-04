@@ -13,7 +13,7 @@ Brief: [2026-09-25-L245-gate2-brief.md](2026-09-25-L245-gate2-brief.md). Log: [a
 
 ## 1. The identities: CONFIRMED
 
-- With $\Psi$ the skew matrix of $\psi$ and $\lVert\psi\rVert^2=-\tfrac12\operatorname{tr}\Psi^2=\tfrac12\lVert\Psi\rVert_F^2$, the basis $e_i\wedge e_j\mapsto E_{ij}-E_{ji}$ is orthonormal and $(E_{ij}-E_{ji})(E_{ij}-E_{ji})^{\mathsf T}=E_{ii}+E_{jj}$. Summing over $i<j$ gives $(n-1)I$, and $A_c$ is independent of the orthonormal basis of $E_c$ (it is a contraction of the eigenprojection), so $\sum_cA_c=(n-1)I$.
+- With $\Psi$ the skew matrix of $\psi$ and $\lVert\psi\rVert^2=-\tfrac12\mathop{\mathrm{tr}}\Psi^2=\tfrac12\lVert\Psi\rVert_F^2$, the basis $e_i\wedge e_j\mapsto E_{ij}-E_{ji}$ is orthonormal and $(E_{ij}-E_{ji})(E_{ij}-E_{ji})^{\mathsf T}=E_{ii}+E_{jj}$. Summing over $i<j$ gives $(n-1)I$, and $A_c$ is independent of the orthonormal basis of $E_c$ (it is a contraction of the eigenprojection), so $\sum_cA_c=(n-1)I$.
 - $\sum_\alpha\lambda_\alpha(\Psi_\alpha\Psi_\alpha^{\mathsf T})_{ik}=\sum_jW_{ijkj}$, the Ricci contraction of $W=\sum\lambda_\alpha\psi_\alpha\otimes\psi_\alpha$, which is zero for a Weyl tensor. Scaling $W$ versus $e=W/\theta$ does not matter since the right side is $0$.
 - $a_c=\langle A_cx,x\rangle=\sum_{\alpha\in c}\lvert\Psi_\alpha x\rvert^2\ge0$. The segment is the intersection of the line $\{\sum a=n-1,\ \sum\lambda a=0\}$ with the nonnegative orthant, nonempty since the actual $a$ lies on it.
 - Only the Weyl property is used; criticality and unit norm are not needed for this part.
@@ -33,8 +33,8 @@ Brief: [2026-09-25-L245-gate2-brief.md](2026-09-25-L245-gate2-brief.md). Log: [a
 
 ## 4. $S^5\times S^7$: CONFIRMED, and the ceiling is attained in every class
 
-- By hand: $A_{\Lambda^2\mathbb R^5}=4P_5$, $A_{\Lambda^2\mathbb R^7}=6P_7$, $A_{\mathrm{mix}}=7P_5+5P_7$, summing to $11I$. $\operatorname{Ric}(W)=0$ forces $\lambda_{\Lambda^2\mathbb R^5}=-\tfrac74\lambda_{\mathrm{mix}}$, $\lambda_{\Lambda^2\mathbb R^7}=-\tfrac56\lambda_{\mathrm{mix}}$, traceless as required. The ceilings are $h=(7,6,4)$ for (mix, $\Lambda^2\mathbb R^7$, $\Lambda^2\mathbb R^5$), equal to the top eigenvalues of the $A_c$.
-- Screen (seconds, constructed object): Weyl part of the product curvature at $n=12$, unit; spectrum $(-0.1117,0.0930,0.1954)$ with multiplicities $(35,21,10)$; $\lVert\sum A_c-11I\rVert=0$, $\lVert\sum\lambda_cA_c\rVert=4\cdot10^{-10}$ (eigenvalue rounding); $\operatorname{tr}A_c=2m_c$; exact $h_c=(7,6,4)$ equal to $\lambda_{\max}(A_c)$; 2000 random unit $x$ stay below.
+- By hand: $A_{\Lambda^2\mathbb R^5}=4P_5$, $A_{\Lambda^2\mathbb R^7}=6P_7$, $A_{\mathrm{mix}}=7P_5+5P_7$, summing to $11I$. $\mathop{\mathrm{Ric}}(W)=0$ forces $\lambda_{\Lambda^2\mathbb R^5}=-\tfrac74\lambda_{\mathrm{mix}}$, $\lambda_{\Lambda^2\mathbb R^7}=-\tfrac56\lambda_{\mathrm{mix}}$, traceless as required. The ceilings are $h=(7,6,4)$ for (mix, $\Lambda^2\mathbb R^7$, $\Lambda^2\mathbb R^5$), equal to the top eigenvalues of the $A_c$.
+- Screen (seconds, constructed object): Weyl part of the product curvature at $n=12$, unit; spectrum $(-0.1117,0.0930,0.1954)$ with multiplicities $(35,21,10)$; $\lVert\sum A_c-11I\rVert=0$, $\lVert\sum\lambda_cA_c\rVert=4\cdot10^{-10}$ (eigenvalue rounding); $\mathop{\mathrm{tr}}A_c=2m_c$; exact $h_c=(7,6,4)$ equal to $\lambda_{\max}(A_c)$; 2000 random unit $x$ stay below.
 - The stars it carries, $e\wedge\mathbb R^7$ in the mixed space, $e\wedge\mathbb R^6$ in $\Lambda^2\mathbb R^7$, $e\wedge\mathbb R^4$ in $\Lambda^2\mathbb R^5$, meet $\dim U=h_c$ with equality. So the lemma is sharp on the catalogued point at $\theta=1.228239<\theta_0(12)$.
 
 ## 5. Scope of "175 of 190": PLAUSIBLE, repair
@@ -47,10 +47,10 @@ Brief: [2026-09-25-L245-gate2-brief.md](2026-09-25-L245-gate2-brief.md). Log: [a
 
 ## 6. L243_min: CONFIRMED
 
-- Statement: for skew $X_i$ with $\operatorname{tr}X_i^2=-2$ and $\operatorname{tr}X_iX_j=0$, the ordered sum over $i\ne j$ of $-\tfrac12\operatorname{tr}[X_i,X_j]^2$ is at most $(1-\tfrac1{\min(k,n-1)})(4k^2+2\operatorname{tr}P^2)-4k(k-1)$ with $P=\sum X_i^{\mathsf T}X_i=\sum(-X_i^2)$. This is L243 verbatim, with $n\ge2$, $k\ge1$.
-- `total_eq_frameT`: expanding $-\tfrac12\operatorname{tr}(X_iX_j-X_jX_i)^2=\operatorname{tr}(X_i^2X_j^2)-\operatorname{tr}(X_iX_jX_iX_j)$ by cyclicity, which is `frameT`'s summand; `frameT`'s diagonal terms vanish, matching the `if i = j then 0`. Right identification.
+- Statement: for skew $X_i$ with $\mathop{\mathrm{tr}}X_i^2=-2$ and $\mathop{\mathrm{tr}}X_iX_j=0$, the ordered sum over $i\ne j$ of $-\tfrac12\mathop{\mathrm{tr}}[X_i,X_j]^2$ is at most $(1-\tfrac1{\min(k,n-1)})(4k^2+2\mathop{\mathrm{tr}}P^2)-4k(k-1)$ with $P=\sum X_i^{\mathsf T}X_i=\sum(-X_i^2)$. This is L243 verbatim, with $n\ge2$, $k\ge1$.
+- `total_eq_frameT`: expanding $-\tfrac12\mathop{\mathrm{tr}}(X_iX_j-X_jX_i)^2=\mathop{\mathrm{tr}}(X_i^2X_j^2)-\mathop{\mathrm{tr}}(X_iX_jX_iX_j)$ by cyclicity, which is `frameT`'s summand; `frameT`'s diagonal terms vanish, matching the `if i = j then 0`. Right identification.
 - `frameP_eq`: `frameQ X i = -(X i * X i)`, and $X_i^{\mathsf T}X_i=(-X_i)X_i$ for skew $X_i$. Right.
-- The $r=k$ branch: $(1-\tfrac1k)(4k^2+2\operatorname{tr}P^2)-4k(k-1)=2(1-\tfrac1k)\operatorname{tr}P^2$, the step `e`, so `frame_bound` (which needs only skewness) gives it; the $r=n-1$ branch is `L243_frame`.
+- The $r=k$ branch: $(1-\tfrac1k)(4k^2+2\mathop{\mathrm{tr}}P^2)-4k(k-1)=2(1-\tfrac1k)\mathop{\mathrm{tr}}P^2$, the step `e`, so `frame_bound` (which needs only skewness) gives it; the $r=n-1$ branch is `L243_frame`.
 - `lake build` of GaussianRankStep and L245SymmetricIsotropy succeeds; `#print axioms` on `L243_min`, `no_large_star`, `n12_star_le5` gives only `propext`, `Classical.choice`, `Quot.sound`.
 
 ## Lean note on L245

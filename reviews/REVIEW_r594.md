@@ -20,7 +20,7 @@ Three inputs, and nothing else.
 
 - **[Prop 1.7](../references/petersen-wink-2019-bochner-technique/notes.md).** For $\{\Xi_\alpha\}$ an orthonormal basis of $\Lambda^2V$ diagonalising $R\in\mathrm{Sym}^2(\Lambda^2V)$, $|LR|^2=2\sum_{\alpha<\beta}(\lambda_\alpha-\lambda_\beta)^2g(L\Xi_\alpha,\Xi_\beta)^2$ for every $L\in\mathfrak{so}(V)$. Taking $L=v_\gamma$ and reading sums over **ordered** pairs as [conventions.md](../findings/conventions.md) requires, this is $g_\gamma=\sum_{\alpha\beta}(\lambda_\alpha-\lambda_\beta)^2T_{\gamma\alpha\beta}$ with $T_{\gamma\alpha\beta}=c_{\gamma\alpha\beta}^2$.
 - **$T\ge0$**, immediate from $T_{abc}=c_{abc}^2$ and the total antisymmetry of the structure constants ([conventions.md](../findings/conventions.md)).
-- **The row marginal.** $\sum_\alpha\|[v_\gamma,v_\alpha]\|^2=-\operatorname{tr}_{\mathfrak{so}(n)}\mathrm{ad}(v_\gamma)^2=-(n-2)\operatorname{tr}(v_\gamma^2)=2(n-2)$, using the Killing form $B(X,Y)=(n-2)\operatorname{tr}(XY)$ and $\operatorname{tr}(v^2)=-2$ at unit norm in the half-trace pairing. Since $\|[v_\gamma,v_\alpha]\|^2=\sum_\beta c_{\gamma\alpha\beta}^2=R_{\gamma\alpha}$, this is $\rho_\gamma=\sum_{\alpha\beta}T_{\gamma\alpha\beta}=2(n-2)$.
+- **The row marginal.** $\sum_\alpha\|[v_\gamma,v_\alpha]\|^2=-\mathop{\mathrm{tr}}_{\mathfrak{so}(n)}\mathrm{ad}(v_\gamma)^2=-(n-2)\mathop{\mathrm{tr}}(v_\gamma^2)=2(n-2)$, using the Killing form $B(X,Y)=(n-2)\mathop{\mathrm{tr}}(XY)$ and $\mathop{\mathrm{tr}}(v^2)=-2$ at unit norm in the half-trace pairing. Since $\|[v_\gamma,v_\alpha]\|^2=\sum_\beta c_{\gamma\alpha\beta}^2=R_{\gamma\alpha}$, this is $\rho_\gamma=\sum_{\alpha\beta}T_{\gamma\alpha\beta}=2(n-2)$.
 
 Then one line of Hölder, $\ell^\infty$ against $\ell^1$:
 
@@ -162,7 +162,7 @@ The two numbers belong to two different constraint classes and are not versions 
 
 | figure | constraint set | relation to L109's cap |
 |---|---|---|
-| $1.60/2.29/2.49$ at $n=6,8,12$ | $T\ge0$, total symmetry, row marginals $2(n-2)$, pair caps $2$, $\operatorname{tr}(W^\#)=-1$, [fence-posts.md:175](../findings/fence-posts.md#L175) | **a superset** of L109's inputs, so L109's own relaxation optimises no lower than $1.60$ |
+| $1.60/2.29/2.49$ at $n=6,8,12$ | $T\ge0$, total symmetry, row marginals $2(n-2)$, pair caps $2$, $\mathop{\mathrm{tr}}(W^\#)=-1$, [fence-posts.md:175](../findings/fence-posts.md#L175) | **a superset** of L109's inputs, so L109's own relaxation optimises no lower than $1.60$ |
 | $1.413614$ at $n=6$, $2.2585$ at $n=8$ | the above **plus the vector identity** $R\lambda=-2\lambda$, [bounds-relaxations.md:92](../findings/bounds-relaxations.md#L92) | outside L109's inputs entirely; the cap is built from $T\ge0$ and the marginal and carries no per-row identity |
 
 So the block should carry $1.60/2.29/2.49$ **with the constraint set named**, and the later paragraph's charge that this is *"stale in two places"* is a class confusion rather than a correction: a tighter ceiling for a larger constraint set is not a ceiling for L109's smaller one. **What the block genuinely owes is the naming, not the number.** As written, neither paragraph says which constraints its number belongs to, which is what let the two collide.

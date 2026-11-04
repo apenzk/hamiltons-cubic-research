@@ -15,9 +15,9 @@
 
 ## Batch 3: the simplest coupling is neutral (derived, unreviewed)
 
-**The identity shift cancels between the two halves.** For a Weyl operator $W$ ($\operatorname{tr}W=0$, $\langle W,I\rangle=0$, $I^\#W=-W$ by [L265](../findings/second-order.md), $I^\#I=(n-2)I$) and $X=W+cI$,
-$$\operatorname{tr}X^3=\operatorname{tr}W^3+3c\lVert W\rVert^2+c^3N,\qquad\langle X^\#X,X\rangle=\langle W^\#W,W\rangle-3c\lVert W\rVert^2+c^3(n-2)N,$$
-so $\operatorname{tr}X^3+\langle X^\#X,X\rangle=P(W)+c^3(n-1)N$: the $\lVert W\rVert^2$ terms cancel. The $\#$ half's identity lift (I117's) gains from a shift of one sign, and the cubic half's from the other, so a bound on $G(X)=\operatorname{tr}X^3+\langle X^\#X,X\rangle$ over all of $\operatorname{Sym}^2\mathfrak{so}(n)$ reaches P only as $P\le\sup G/\lVert X\rVert^3$ at $c=0$. That supremum is at least $G(I)/\lVert I\rVert^3=(n-1)/\sqrt N=\sqrt{2(n-1)/n}$, which is $1.354$ at $n=12$ against $\theta_0(12)=1.236$. **So a coupling of the two halves cannot be a bound on $\operatorname{Sym}^2$ lifted through $I$; it has to use structure only the Weyl subspace has.** *This is [F26](../findings/INDEX-traps.md)'s fact (the halves maximised apart) seen from the lift: the two shifts that sharpen the halves pull in opposite directions.*
+**The identity shift cancels between the two halves.** For a Weyl operator $W$ ($\mathop{\mathrm{tr}}W=0$, $\langle W,I\rangle=0$, $I^\#W=-W$ by [L265](../findings/second-order.md), $I^\#I=(n-2)I$) and $X=W+cI$,
+$$\mathop{\mathrm{tr}}X^3=\mathop{\mathrm{tr}}W^3+3c\lVert W\rVert^2+c^3N,\qquad\langle X^\#X,X\rangle=\langle W^\#W,W\rangle-3c\lVert W\rVert^2+c^3(n-2)N,$$
+so $\mathop{\mathrm{tr}}X^3+\langle X^\#X,X\rangle=P(W)+c^3(n-1)N$: the $\lVert W\rVert^2$ terms cancel. The $\#$ half's identity lift (I117's) gains from a shift of one sign, and the cubic half's from the other, so a bound on $G(X)=\mathop{\mathrm{tr}}X^3+\langle X^\#X,X\rangle$ over all of $\mathop{\mathrm{Sym}}^2\mathfrak{so}(n)$ reaches P only as $P\le\sup G/\lVert X\rVert^3$ at $c=0$. That supremum is at least $G(I)/\lVert I\rVert^3=(n-1)/\sqrt N=\sqrt{2(n-1)/n}$, which is $1.354$ at $n=12$ against $\theta_0(12)=1.236$. **So a coupling of the two halves cannot be a bound on $\mathop{\mathrm{Sym}}^2$ lifted through $I$; it has to use structure only the Weyl subspace has.** *This is [F26](../findings/INDEX-traps.md)'s fact (the halves maximised apart) seen from the lift: the two shifts that sharpen the halves pull in opposite directions.*
 
 ## Phase 3a, the screen
 

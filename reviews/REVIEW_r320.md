@@ -109,7 +109,7 @@ Confirmed to $10^{-9}$ at every family member. So the proposed extension factors
 
 | candidate | verdict |
 |---|---|
-| $N\to\operatorname{rank}W$ | **fails.** $\frac2n\sqrt{r\,s/(s-r)}$, $s=r_++r_-$: $0.612372$ at $\mathbb{CP}^2$ ($n{=}4$), $0.306186$ at $n{=}8$, against $\theta=1.224745$. Also fails at every padded sphere product. |
+| $N\to\mathop{\mathrm{rank}}W$ | **fails.** $\frac2n\sqrt{r\,s/(s-r)}$, $s=r_++r_-$: $0.612372$ at $\mathbb{CP}^2$ ($n{=}4$), $0.306186$ at $n{=}8$, against $\theta=1.224745$. Also fails at every padded sphere product. |
 | $r\to N-\dim E_-$ | **valid on the catalogue but vacuous.** It agrees with post F40 on the family, and off it the kernel joins $r$, giving $7.659417$ at padded $W_{\mathbb{CP}^2}$, $n{=}12$. |
 | any $\theta\le f(\dim E_+)$ | **impossible**, proved below. |
 | restrict to $\ker W=0$ | **survives every test, and is empty of content**, see below. |

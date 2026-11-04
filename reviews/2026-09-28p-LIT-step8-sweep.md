@@ -10,7 +10,7 @@
 
 ## Batch 2: the lifts that change the functional (derived)
 
-**An extension $F$ of P to a larger space $V\supset\mathrm{Weyl}$, $F|_{\mathrm{Weyl}}=P$, bounds P only through an independent evaluation of $\max_VF$.** When the cross terms are chosen to vanish ($F(W+E)=P(W)$), $\max_VF=\max P$ and nothing is gained. When they do not, the bound on $V$ is a new statement whose maximum has to be known by some theorem other than P. The two caps the record can evaluate on all of $\operatorname{Sym}^2\mathfrak{so}(n)$ are the rank-one cap on $\operatorname{tr}X^3$ and statement H. Every combination of them read through $I$ is closed by [the third attempt](2026-09-28o-I123-coupling.md): only $s=0$ is sharp at the balanced product. The Böhm–Wilking and Beitz cone form is the fenced cone mechanism. *So the named extensions are spent.*
+**An extension $F$ of P to a larger space $V\supset\mathrm{Weyl}$, $F|_{\mathrm{Weyl}}=P$, bounds P only through an independent evaluation of $\max_VF$.** When the cross terms are chosen to vanish ($F(W+E)=P(W)$), $\max_VF=\max P$ and nothing is gained. When they do not, the bound on $V$ is a new statement whose maximum has to be known by some theorem other than P. The two caps the record can evaluate on all of $\mathop{\mathrm{Sym}}^2\mathfrak{so}(n)$ are the rank-one cap on $\mathop{\mathrm{tr}}X^3$ and statement H. Every combination of them read through $I$ is closed by [the third attempt](2026-09-28o-I123-coupling.md): only $s=0$ is sharp at the balanced product. The Böhm–Wilking and Beitz cone form is the fenced cone mechanism. *So the named extensions are spent.*
 
 ## Phase 3a, the screen
 
@@ -22,6 +22,6 @@ The candidates were grepped in [findings/](../findings/) under "coupling", "both
 |---|---|---|---|---|---|---|
 | R56, the coupling (I123) | 3 | **0** | 1 | 1 | **0** | P outright; every named mechanism is closed (the invariant linear lifts, the $s$-family, the functional change, the cone) |
 | the diagonality statement (I73, I36) | 3 | 0 | 1 | 1 | 0 | P through L57; BLOCKED under the churn cap with its two requirements |
-| H by I117 | 2 | 1 | 1 | 1 | **2** | the $\#$ half, and with it P wherever $\operatorname{tr}W^3\le t_0$ ([the third attempt](2026-09-28o-I123-coupling.md)); its owed cases are all at index one ([L287](../findings/second-order.md)) |
+| H by I117 | 2 | 1 | 1 | 1 | **2** | the $\#$ half, and with it P wherever $\mathop{\mathrm{tr}}W^3\le t_0$ ([the third attempt](2026-09-28o-I123-coupling.md)); its owed cases are all at index one ([L287](../findings/second-order.md)) |
 
 **Outcome: I123 is regraded to `attackable` $0$, every named mechanism being closed, and stays in section 1 as the destination, no route known; the pick is I117, whose owed cases are concrete.** *The rubric's own prescription for an item whose every named route is closed: it stays on the list as the destination and the work goes to whatever can move. The churn cap does not fire, since commit fdf19cdd's derivation sits between the closures.* The reach gate does not fire: I117's reach is every $n\ge9$.

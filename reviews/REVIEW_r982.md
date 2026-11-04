@@ -22,11 +22,11 @@ Reviewer r982, working from [BRIEF_R28_first_order.md](BRIEF_R28_first_order.md)
 
 The tangent space is $T_PO(k)=\{P\Omega:\Omega^{\mathsf T}=-\Omega\}$, so take $P(t)=P\exp(t\Omega)$ with $\Omega$ skew. Then $\tilde U(t)=\exp(-t\Omega)\tilde U\exp(t\Omega)$ and $\dot{\tilde U}(0)=[\tilde U,\Omega]$, and likewise for $\tilde C$.
 
-With $f(t)=\operatorname{tr}(\operatorname{diag}(a)\tilde U(t))+\operatorname{tr}(\operatorname{diag}(b)\tilde C(t))$ and the identity $\operatorname{tr}(D[M,\Omega])=\operatorname{tr}([D,M]\Omega)$,
+With $f(t)=\mathop{\mathrm{tr}}(\mathop{\mathrm{diag}}(a)\tilde U(t))+\mathop{\mathrm{tr}}(\mathop{\mathrm{diag}}(b)\tilde C(t))$ and the identity $\mathop{\mathrm{tr}}(D[M,\Omega])=\mathop{\mathrm{tr}}([D,M]\Omega)$,
 
-$$f'(0)=\operatorname{tr}(A\Omega),\qquad A:=[\operatorname{diag}(a),\tilde U]+[\operatorname{diag}(b),\tilde C],\qquad A_{ij}=(a_i-a_j)\tilde U_{ij}+(b_i-b_j)\tilde C_{ij}.$$
+$$f'(0)=\mathop{\mathrm{tr}}(A\Omega),\qquad A:=[\mathop{\mathrm{diag}}(a),\tilde U]+[\mathop{\mathrm{diag}}(b),\tilde C],\qquad A_{ij}=(a_i-a_j)\tilde U_{ij}+(b_i-b_j)\tilde C_{ij}.$$
 
-$A$ is skew-symmetric automatically, because $\tilde U$ and $\tilde C$ are symmetric while $a_i-a_j$ and $b_i-b_j$ are antisymmetric in the index pair. Testing against $\Omega=E_{ij}-E_{ji}$ gives $\operatorname{tr}(A\Omega)=A_{ji}-A_{ij}=-2A_{ij}$, so $f'(0)=0$ for every skew $\Omega$ holds if and only if $A=0$. The block's equation is exactly that.
+$A$ is skew-symmetric automatically, because $\tilde U$ and $\tilde C$ are symmetric while $a_i-a_j$ and $b_i-b_j$ are antisymmetric in the index pair. Testing against $\Omega=E_{ij}-E_{ji}$ gives $\mathop{\mathrm{tr}}(A\Omega)=A_{ji}-A_{ij}=-2A_{ij}$, so $f'(0)=0$ for every skew $\Omega$ holds if and only if $A=0$. The block's equation is exactly that.
 
 **Four things the derivation settles that the brief asked about.**
 
@@ -35,7 +35,7 @@ $A$ is skew-symmetric automatically, because $\tilde U$ and $\tilde C$ are symme
 - **"For all $i\ne j$" and "for $i<j$" define the same locus.** The $(j,i)$ equation is the negative of the $(i,j)$ equation, and the $i=j$ equation reads $0=0$. So the honest count is $\binom k2$ independent equations, which is $\dim T_PO(k)$ exactly. **This count is the control**: a characterisation of criticality on $O(k)$ must produce $k(k-1)/2$ independent scalar equations and this one does.
 - **The choice of curve does not matter.** $\exp(t\Omega)P$ sweeps the same tangent space and gives an equivalent condition on the unconjugated pair. The tilde form is the one belonging to $P\exp(t\Omega)$, and the block has them matched correctly.
 
-**Screen** (assertions, no printed expectations, a fraction of a second on objects built for the purpose): at $k=2,3,5,7$ over random symmetric $\hat U,C$, random $\nu$, random $P\in O(k)$ and random skew $\Omega$, the central difference of $f$ along $P\exp(t\Omega)$ agrees with $\operatorname{tr}(A\Omega)$ to $10^{-6}$ relative, $A$ is skew to $10^{-12}$, and $\operatorname{tr}(A(E_{ij}-E_{ji}))=-2A_{ij}$ to $10^{-12}$.
+**Screen** (assertions, no printed expectations, a fraction of a second on objects built for the purpose): at $k=2,3,5,7$ over random symmetric $\hat U,C$, random $\nu$, random $P\in O(k)$ and random skew $\Omega$, the central difference of $f$ along $P\exp(t\Omega)$ agrees with $\mathop{\mathrm{tr}}(A\Omega)$ to $10^{-6}$ relative, $A$ is skew to $10^{-12}$, and $\mathop{\mathrm{tr}}(A(E_{ij}-E_{ji}))=-2A_{ij}$ to $10^{-12}$.
 
 ## Claim 2
 
@@ -61,13 +61,13 @@ With $\tilde U$ diagonal the condition collapses to $(\nu_i-\nu_j)\tilde C_{ij}=
 
 **The vacuity that is real lives one level up.** Combining claim 4 with criticality, the set $\{P\in O(k)\ \text{critical}:\tilde U\ \text{diagonal}\}$ is exactly the set of common orthonormal eigenframes of $\hat U$ and $C$, which is empty whenever $[\hat U,C]\ne0$. So the implication is sound and its hypothesis is satisfiable only on the commuting stratum. The direction with content off that stratum is the contrapositive: **at a non-commuting pair with $\nu$ pairwise distinct, no critical point diagonalises $\hat U$.**
 
-**Screen on the node's own data.** Taking the $R28$ cell's witness $\hat U=\operatorname{diag}(1,-1,10)$, $C$ the padded $2\times2$ swap and $\nu=(0.5,1.3,2.0)$, a gradient flow along $-A$ from $60$ random frames reaches a maximiser of the brief's functional at which $\lVert A\rVert<10^{-8}$ and $\tilde U$ carries off-diagonal entries of order $1$. The value scale of the brief's reduced functional differs from the $41.64730082$ the register records, so this is a screen on the register's data and not a reproduction of that number.
+**Screen on the node's own data.** Taking the $R28$ cell's witness $\hat U=\mathop{\mathrm{diag}}(1,-1,10)$, $C$ the padded $2\times2$ swap and $\nu=(0.5,1.3,2.0)$, a gradient flow along $-A$ from $60$ random frames reaches a maximiser of the brief's functional at which $\lVert A\rVert<10^{-8}$ and $\tilde U$ carries off-diagonal entries of order $1$. The value scale of the brief's reduced functional differs from the $41.64730082$ the register records, so this is a screen on the register's data and not a reproduction of that number.
 
 ## Claim 5
 
 $\tilde U$ and $\tilde C$ diagonal in the same frame commute, and $\tilde U\tilde C=P^{\mathsf T}\hat UPP^{\mathsf T}CP=P^{\mathsf T}\hat UCP$ uses $PP^{\mathsf T}=I$. So $[\tilde U,\tilde C]=P^{\mathsf T}[\hat U,C]P$ and $P$ invertible gives $[\hat U,C]=0$.
 
-**Orthogonality is load-bearing and is not merely invertibility.** For a general invertible $P$ the map $M\mapsto P^{\mathsf T}MP$ is a congruence rather than a conjugation, and congruence does not preserve commuting: $M=I$ and $N=\begin{pmatrix}0&1\\1&0\end{pmatrix}$ commute, while under $P=\operatorname{diag}(1,2)$ their congruences $\operatorname{diag}(1,4)$ and $\begin{pmatrix}0&2\\2&0\end{pmatrix}$ have commutator entry $-6$. $P\in O(k)$ supplies what is needed, so the claim stands, and the brief's Lean row 5 calling it "one line" is right only with $P^{\mathsf T}=P^{-1}$ in hand.
+**Orthogonality is load-bearing and is not merely invertibility.** For a general invertible $P$ the map $M\mapsto P^{\mathsf T}MP$ is a congruence rather than a conjugation, and congruence does not preserve commuting: $M=I$ and $N=\begin{pmatrix}0&1\\1&0\end{pmatrix}$ commute, while under $P=\mathop{\mathrm{diag}}(1,2)$ their congruences $\mathop{\mathrm{diag}}(1,4)$ and $\begin{pmatrix}0&2\\2&0\end{pmatrix}$ have commutator entry $-6$. $P\in O(k)$ supplies what is needed, so the claim stands, and the brief's Lean row 5 calling it "one line" is right only with $P^{\mathsf T}=P^{-1}$ in hand.
 
 **The wording to fix.** "Hence $[\hat U,C]=0$" reads as a conclusion about the pair. It is a conclusion about the pair *given a critical point at which $\tilde U$ is diagonal*, and per claim 4 that hypothesis is exactly the commuting stratum. Stated unconditionally it would be circular, so the implication arrow must stay visible in the statement.
 
@@ -96,9 +96,9 @@ Two further gaps in the same clause, recorded as questions for the node rather t
 
 ## Claim 7
 
-**The invariance is real.** With $\nu_1=\nu_2=\lambda$ the first two summands combine into $\beta\lambda^2\operatorname{tr}(\hat U\Pi)+\lambda\operatorname{tr}(C\Pi)$ with $\Pi=p_1p_1^{\mathsf T}+p_2p_2^{\mathsf T}$ the projector onto $\operatorname{span}(p_1,p_2)$, and $\Pi$ is fixed by every rotation inside that plane.
+**The invariance is real.** With $\nu_1=\nu_2=\lambda$ the first two summands combine into $\beta\lambda^2\mathop{\mathrm{tr}}(\hat U\Pi)+\lambda\mathop{\mathrm{tr}}(C\Pi)$ with $\Pi=p_1p_1^{\mathsf T}+p_2p_2^{\mathsf T}$ the projector onto $\mathop{\mathrm{span}}(p_1,p_2)$, and $\Pi$ is fixed by every rotation inside that plane.
 
-**The counterexample, constructed here rather than accepted.** Take $k=2$, $\nu=(1,1)$, $\hat U=\operatorname{diag}(1,2)$ and $C=\begin{pmatrix}0&1\\1&0\end{pmatrix}$. Then $a_1=a_2$ and $b_1=b_2$, so $A\equiv0$ and **every** $P\in O(2)$ is critical. At $P=I$ the matrix $\tilde U$ is diagonal, $\tilde C=C$ is not, and $[\hat U,C]$ has entries $\pm1$. So claim 4's implication and claim 5's conclusion both fail the moment $\nu$ repeats. Verified by assertion, including that $A$ vanishes at $50$ random frames.
+**The counterexample, constructed here rather than accepted.** Take $k=2$, $\nu=(1,1)$, $\hat U=\mathop{\mathrm{diag}}(1,2)$ and $C=\begin{pmatrix}0&1\\1&0\end{pmatrix}$. Then $a_1=a_2$ and $b_1=b_2$, so $A\equiv0$ and **every** $P\in O(2)$ is critical. At $P=I$ the matrix $\tilde U$ is diagonal, $\tilde C=C$ is not, and $[\hat U,C]$ has entries $\pm1$. So claim 4's implication and claim 5's conclusion both fail the moment $\nu$ repeats. Verified by assertion, including that $A$ vanishes at $50$ random frames.
 
 **The block's word "converse" is loose.** What fails without distinctness is the forward implication of claim 4, that criticality plus $\tilde U$ diagonal gives $\tilde C$ diagonal. The sentence should name it.
 

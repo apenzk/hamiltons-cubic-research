@@ -35,7 +35,7 @@ Brief: [BRIEF_I121_closed_branch.md](BRIEF_I121_closed_branch.md). Log: agent_lo
 - Split $x$ into $y$ on $P\setminus i$ and $z$ on $Q'\setminus j$, with sums $Y+Z=0$. On $P\setminus i$ this gives $(L_EX)_m=\tfrac12(\alpha-\beta)Y$, and on $Q'\setminus j$ it gives $\tfrac12(\beta-\gamma)Y$.
 - So $L_EX=Y\,\delta$ with $\delta_m=\tfrac12(a_{im}-a_{jm})$. This is rank one, with kernel $\{Y=0\}$, which is orthogonal to $\delta$.
 - The one nonzero eigenvalue is $Y(\delta)=\tfrac{(p-1)(q-1)}{2(n-2)}$, which is $d/2$ after dividing by $\sqrt K$.
-- $\operatorname{span}\delta$ is the orbit line. The infinitesimal rotation $\xi=e_i\wedge e_j$ gives $[\operatorname{ad}\xi,e](jm\to im)=a_{jm}-a_{im}=-2\delta_m$, with the same sign for every $m$. Equivariance gives $Q(e,\xi e)=\tfrac d2\xi e$ at any $e$ with $Q(e)=de$.
+- $\mathop{\mathrm{span}}\delta$ is the orbit line. The infinitesimal rotation $\xi=e_i\wedge e_j$ gives $[\mathop{\mathrm{ad}}\xi,e](jm\to im)=a_{jm}-a_{im}=-2\delta_m$, with the same sign for every $m$. Equivariance gives $Q(e,\xi e)=\tfrac d2\xi e$ at any $e$ with $Q(e)=de$.
 - **So the orbit line is exactly what $\langle\delta,x\rangle=0$ removes.** A $\tau$-eigenvector with $\tau>0$ is proportional to $\delta$, and only when $\tau=d/2$. Then $\langle\delta,x\rangle=c\lVert\delta\rVert^2=0$ with $\delta\ne0$, so $c=0$.
 - The same formula on $W_{2,PP}$ reproduces the author's $0,-c_*,\tau_P$ with multiplicities $p-3,q-1,1$. Row 1 does not need this.
 

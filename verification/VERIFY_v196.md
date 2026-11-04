@@ -163,7 +163,7 @@ $$\langle b,B^+b\rangle=\langle\Pi b,B^+\Pi b\rangle-\tfrac2\theta\beta^2=\tfrac
 
 **Argued the opposite.** The intended object is $b=\Pi(z\circ z)$, and the record's *consumers* use that reading: [second-order.md line 165](../findings/second-order.md) writes $\lVert z\circ z\rVert^2=\tfrac{\theta^2}4+\lVert b\rVert^2$, which is the Pythagorean split of $z\circ z$ with its $W$-component $\tfrac\theta2$ removed and its $A(\tfrac12)$-component killed by the fusion rule, that is $b=\Pi(z\circ z)$, not $z\circ z$. So the defect is localised to the conventions entry and to the block's phrase "it follows from $B(\Pi u)=b$"; the downstream corollary at lines 165–169 is safe. All three protocol conditions clear.
 
-**Repair.** [conventions.md line 36](../findings/conventions.md) should read $b:=\Pi(z\circ z)$, the component of $z\circ z$ in $W^\perp$, which is also its component in $(\ker B)^\perp\cap W^\perp$ by the fusion rule. The fusion rule is then exactly the statement that $b\in\operatorname{range}B$, which is what makes $B^+b$ defined and $\langle Bw,w\rangle$ the same at every solution of $Bw=b$, and that is where the fusion rule is consumed in the fourth-order clause.
+**Repair.** [conventions.md line 36](../findings/conventions.md) should read $b:=\Pi(z\circ z)$, the component of $z\circ z$ in $W^\perp$, which is also its component in $(\ker B)^\perp\cap W^\perp$ by the fusion rule. The fusion rule is then exactly the statement that $b\in\mathop{\mathrm{range}}B$, which is what makes $B^+b$ defined and $\langle Bw,w\rangle$ the same at every solution of $Bw=b$, and that is where the fusion rule is consumed in the fourth-order clause.
 
 **Corrected, and verified on a witness.** With $b=\Pi(z\circ z)$ and the $\lVert z\rVert^4$ of §6 restored: $\langle b,B^+b\rangle=\tfrac\theta2\lVert z\rVert^4$, and $f(w^\ast)=\tfrac34\cdot\tfrac\theta2\lVert z\rVert^4-\tfrac38\theta\lVert z\rVert^4=0$. ✔
 
@@ -206,7 +206,7 @@ so $P(\cos s,\sin s)=1+\alpha s^3-\tfrac38s^4+O(s^5)$. At $\alpha\ne0$ the cubic
 
 The §10 counterexample has $G$ trivial, so $z=u=0$ and the orbit clauses are vacuous there. To exhibit the §6 and §8 defects against the *full* hypothesis set I construct a point with a genuine orbit, in exact arithmetic.
 
-**The algebra.** $V=\{A\in\mathrm{Sym}(3,\mathbb R):\operatorname{tr}A=0\}$, $\langle A,B\rangle=\operatorname{tr}(AB)$, $P(A)=\operatorname{tr}A^3$, $G=SO(3)$ acting by conjugation, compact ✔, orthogonal ✔, $P$-invariant ✔. Then $T(A,B,C)=\tfrac12\operatorname{tr}((AB+BA)C)$ and $A\circ B=\tfrac12(AB+BA)-\tfrac13\operatorname{tr}(AB)\mathrm{Id}$.
+**The algebra.** $V=\{A\in\mathrm{Sym}(3,\mathbb R):\mathop{\mathrm{tr}}A=0\}$, $\langle A,B\rangle=\mathop{\mathrm{tr}}(AB)$, $P(A)=\mathop{\mathrm{tr}}A^3$, $G=SO(3)$ acting by conjugation, compact ✔, orthogonal ✔, $P$-invariant ✔. Then $T(A,B,C)=\tfrac12\mathop{\mathrm{tr}}((AB+BA)C)$ and $A\circ B=\tfrac12(AB+BA)-\tfrac13\mathop{\mathrm{tr}}(AB)\mathrm{Id}$.
 
 **The critical point.** $W=\tfrac1{\sqrt6}\mathrm{diag}(2,-1,-1)$, so $\lVert W\rVert^2=\tfrac16\cdot6=1$ ✔ and $W\circ W=\tfrac16\mathrm{diag}(4,1,1)-\tfrac13\mathrm{Id}=\mathrm{diag}(\tfrac13,-\tfrac16,-\tfrac16)=\tfrac1{\sqrt6}W$. So $\theta=\tfrac1{\sqrt6}>0$ ✔.
 
@@ -218,7 +218,7 @@ $$z=[X,W]=-3c(E_{12}+E_{21}),\qquad u=[X,z]=-6c(E_{11}-E_{22})=-\sqrt6\,\mathrm{
 
 - $\lVert z\rVert^2=9c^2\cdot2=3$ and $\langle u,W\rangle=-6c^2(2+1)=-3$, so $\langle u,W\rangle=-\lVert z\rVert^2$ ✔.
 - $L_Wz=-\tfrac{3c^2}2(E_{12}+E_{21})=\tfrac\theta2z$ ✔ (using $\theta=c$).
-- $z\circ z=z^2-\tfrac13\operatorname{tr}(z^2)\mathrm{Id}=\tfrac32(E_{11}+E_{22})-\mathrm{Id}=\mathrm{diag}(\tfrac12,\tfrac12,-1)$; and $Bu=\tfrac\theta2u-L_Wu=\mathrm{diag}(-\tfrac12,\tfrac12,0)-\mathrm{diag}(-1,0,1)=\mathrm{diag}(\tfrac12,\tfrac12,-1)$. **$Bu=z\circ z$ ✔ exactly.**
+- $z\circ z=z^2-\tfrac13\mathop{\mathrm{tr}}(z^2)\mathrm{Id}=\tfrac32(E_{11}+E_{22})-\mathrm{Id}=\mathrm{diag}(\tfrac12,\tfrac12,-1)$; and $Bu=\tfrac\theta2u-L_Wu=\mathrm{diag}(-\tfrac12,\tfrac12,0)-\mathrm{diag}(-1,0,1)=\mathrm{diag}(\tfrac12,\tfrac12,-1)$. **$Bu=z\circ z$ ✔ exactly.**
 - $\langle z\circ z,W\rangle=c(1-\tfrac12+1)=\tfrac{3c}2=\tfrac\theta2\lVert z\rVert^2$ ✔.
 - $\langle Bu,u\rangle=\langle z\circ z,u\rangle=-6c(\tfrac12-\tfrac12)=0$ ✔, §7's missing identity, confirmed on the witness.
 - $\Pi u=u+\lVert z\rVert^2W=\sqrt6\,\mathrm{diag}(0,\tfrac12,-\tfrac12)$, which is $\perp W$ ✔, and $B(\Pi u)=\mathrm{diag}(0,\tfrac14,-\tfrac14)-\mathrm{diag}(0,-\tfrac12,\tfrac12)=\mathrm{diag}(0,\tfrac34,-\tfrac34)=\Pi(z\circ z)$ ✔.

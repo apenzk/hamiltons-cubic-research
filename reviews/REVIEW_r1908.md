@@ -60,7 +60,7 @@ Seven numbered results, L190, L199, L204, L205, L206, L207 and L229, carry a "L&
 
 ## 3. L204
 
-**Record** ([bounds.md](../findings/bounds.md), Lemma L204). *"For every positive semidefinite $A$ on $\Lambda^2\mathbb R^n$, $$\lVert\mathrm{Alt}(A)\rVert\ \le\ \sqrt{\frac{m-1}{3m}}\ \operatorname{tr}A,\qquad m=\lfloor n/2\rfloor,$$ in the record's norm $\lVert R\rVert^2=\tfrac14\sum R_{ijkl}^2$"*, together with the ruling that the m-form is the right one and *"THE CONSTANT IS OPTIMAL AND A WEYL TENSOR ATTAINS IT"*, equality at A = u⊗u for the balanced u and at W_CP2.
+**Record** ([bounds.md](../findings/bounds.md), Lemma L204). *"For every positive semidefinite $A$ on $\Lambda^2\mathbb R^n$, $$\lVert\mathrm{Alt}(A)\rVert\ \le\ \sqrt{\frac{m-1}{3m}}\ \mathop{\mathrm{tr}}A,\qquad m=\lfloor n/2\rfloor,$$ in the record's norm $\lVert R\rVert^2=\tfrac14\sum R_{ijkl}^2$"*, together with the ruling that the m-form is the right one and *"THE CONSTANT IS OPTIMAL AND A WEYL TENSOR ATTAINS IT"*, equality at A = u⊗u for the balanced u and at W_CP2.
 
 **Lean** ([L204AltBound.lean](../lean/HamiltonsCubic/Results/L204AltBound.lean)).
 
@@ -148,7 +148,7 @@ Seven numbered results, L190, L199, L204, L205, L206, L207 and L229, carry a "L&
 
 ## 7. L229
 
-**Record** ([second-order.md](../findings/second-order.md), Lemma L229). *"On the common-eigenvector stratum, $\sup\Phi$ at fixed $T$ equals the supremum over the points of that stratum at which $\hat U$ and $V$ are both diagonal in $F$, and it is attained there."* Four numbered steps follow: item 1 the deficit identity, item 2 *"$\max_\vartheta g=\Lambda\big[1+\rho_1^2+\rho_2^2-\operatorname{dist}(1,\mathcal A)^2\big]$"*, item 3 the diagonal values and *"the best diagonal value is $\Lambda\big[1+\rho_1^2+\rho_2^2-\operatorname{dist}(1,\{\pm\rho_1\pm\rho_2\})^2\big]$, and it equals $\max_\vartheta g$ exactly when $1\notin\operatorname{int}\mathcal A$"*, and item 4 affineness in (p², r²) on the segment 3x + y = B.
+**Record** ([second-order.md](../findings/second-order.md), Lemma L229). *"On the common-eigenvector stratum, $\sup\Phi$ at fixed $T$ equals the supremum over the points of that stratum at which $\hat U$ and $V$ are both diagonal in $F$, and it is attained there."* Four numbered steps follow: item 1 the deficit identity, item 2 *"$\max_\vartheta g=\Lambda\big[1+\rho_1^2+\rho_2^2-\mathop{\mathrm{dist}}(1,\mathcal A)^2\big]$"*, item 3 the diagonal values and *"the best diagonal value is $\Lambda\big[1+\rho_1^2+\rho_2^2-\mathop{\mathrm{dist}}(1,\{\pm\rho_1\pm\rho_2\})^2\big]$, and it equals $\max_\vartheta g$ exactly when $1\notin\mathop{\mathrm{int}}\mathcal A$"*, and item 4 affineness in (p², r²) on the segment 3x + y = B.
 
 **Lean** ([L229Statement.lean](../lean/HamiltonsCubic/Results/L229Statement.lean)).
 

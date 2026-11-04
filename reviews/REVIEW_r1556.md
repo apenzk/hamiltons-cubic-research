@@ -10,7 +10,7 @@ Log: agent_logs/r1556.log
 | F2 Casimir identification | CONFIRMED | $c_1=\tfrac12\mathrm{Cas}_k(k)$, $2\alpha=\mathrm{Cas}_k(p)$, $c_1+x=c$, $2\alpha+y=c$, every factor of 2 checked against the rank-one definition |
 | F3 quadratic and second root | CONFIRMED | quadratic, root $b=1/c$, product of roots, $y-x=c_1-2\alpha$ all correct; list $0,P_k/c_1,I/c,(a',b')$ complete |
 | F4 positive-definiteness condition | CONFIRMED (gap) | "only if" and the bold U-on-the-ansatz sentence hold. The iff reading of the heading and the parenthetical "it would give a second PD idempotent" need $a'>0$, unproved in the text but true: $a'=cx/(c_1y^2+4\alpha^2x)$ |
-| F5 trace form of the condition | CONFIRMED | $\operatorname{tr}_{\mathfrak g}\mathrm{Cas}_k=2c\,d_k$ since each unit $u$ has $-\operatorname{tr}\mathrm{ad}_u^2=2c$, and the rearrangement to $c_1\le 2c d_k/(N+d_k)$ is exact |
+| F5 trace form of the condition | CONFIRMED | $\mathop{\mathrm{tr}}_{\mathfrak g}\mathrm{Cas}_k=2c\,d_k$ since each unit $u$ has $-\mathop{\mathrm{tr}}\mathrm{ad}_u^2=2c$, and the rearrangement to $c_1\le 2c d_k/(N+d_k)$ is exact |
 | F6 computed cases and table | REFUTED (sharpness and boundary claims) | all eight rows and both worked cases reproduce, but "on the two-component families U is sharp, and its boundary is $G_2\subset SO(7)$" is false: $G_2/SU(3)$ has ratio $4/9$ |
 | F7 F-form of the condition | CONFIRMED (gap) | $y\,d_p=F(P_p,P_p,P_p)$, $x\,d_k=\alpha\,d_p$, equivalence with $y\le x$ exact. "$x>0$ automatic" also needs $\alpha>0$, true because $\alpha=0$ would make $\mathfrak k$ an ideal |
 | F8 Lean statements | CONFIRMED | twocomp_factor, twocomp_pd_unique and IsotropyPair.pd_unique say what the prose says, hypotheses match, file compiles |
@@ -35,7 +35,7 @@ The record asserts these relations with no argument in the quoted section, which
 
 ## F2. Constants
 
-$\langle I\#I,ww^T\rangle=\tfrac12\sum_{i,j}\langle[e_i,e_j],w\rangle^2=\tfrac12(-\operatorname{tr}\mathrm{ad}_w^2)$, so $c=\tfrac12\mathrm{Cas}_{\mathfrak g}(\mathfrak g)$. For $\mathfrak{so}(n)$ that gives $\mathrm{Cas}_{\mathfrak g}(\mathfrak g)=2(n-2)$, matching the table's trace identity. $c_1=\tfrac12\mathrm{Cas}_k(k)$ and $\alpha=\tfrac12\mathrm{Cas}_k(p)$ from F1. $c_1+x=c$ and $2\alpha+y=c$ from the $\mathfrak k$ and $\mathfrak p$ blocks of $I\#I=P_k\#P_k+2P_k\#P_p+P_p\#P_p$. The screen on $SO(7)/G_2$ returns $c=5$, $c_1=4$, $\alpha=2$, $x=y=1$ with residuals below $10^{-14}$.
+$\langle I\#I,ww^T\rangle=\tfrac12\sum_{i,j}\langle[e_i,e_j],w\rangle^2=\tfrac12(-\mathop{\mathrm{tr}}\mathrm{ad}_w^2)$, so $c=\tfrac12\mathrm{Cas}_{\mathfrak g}(\mathfrak g)$. For $\mathfrak{so}(n)$ that gives $\mathrm{Cas}_{\mathfrak g}(\mathfrak g)=2(n-2)$, matching the table's trace identity. $c_1=\tfrac12\mathrm{Cas}_k(k)$ and $\alpha=\tfrac12\mathrm{Cas}_k(p)$ from F1. $c_1+x=c$ and $2\alpha+y=c$ from the $\mathfrak k$ and $\mathfrak p$ blocks of $I\#I=P_k\#P_k+2P_k\#P_p+P_p\#P_p$. The screen on $SO(7)/G_2$ returns $c=5$, $c_1=4$, $\alpha=2$, $x=y=1$ with residuals below $10^{-14}$.
 
 ## F3. Idempotents
 
@@ -51,7 +51,7 @@ $$D-c(y-x)y=2\alpha x c\quad\Longrightarrow\quad a'=\frac{1-b'y}{2\alpha}=\frac{
 
 ## F5. Trace identity
 
-$\operatorname{tr}_{\mathfrak g}\mathrm{Cas}_k=\sum_u(-\operatorname{tr}_{\mathfrak g}\mathrm{ad}_u^2)=d_k\cdot2c$ by F2. So $d_k\,2c_1+d_p\,2\alpha=2c\,d_k$, the same as $x\,d_k=\alpha\,d_p$. Then $2\alpha\ge c_1\iff 2(c-c_1)d_k\ge c_1d_p\iff c_1\le 2c\,d_k/(N+d_k)$. Exact.
+$\mathop{\mathrm{tr}}_{\mathfrak g}\mathrm{Cas}_k=\sum_u(-\mathop{\mathrm{tr}}_{\mathfrak g}\mathrm{ad}_u^2)=d_k\cdot2c$ by F2. So $d_k\,2c_1+d_p\,2\alpha=2c\,d_k$, the same as $x\,d_k=\alpha\,d_p$. Then $2\alpha\ge c_1\iff 2(c-c_1)d_k\ge c_1d_p\iff c_1\le 2c\,d_k/(N+d_k)$. Exact.
 
 ## F6. Cases and table
 
@@ -64,20 +64,20 @@ Each row reproduced with $\ell_\rho$ = Dynkin's original index (vector of $\math
 - adjoint: $\ell=2h^\vee$, $2$, $d_k(2d_k-6)/(d_k(d_k-3)/2)=4$, $2$. $\Lambda^2\mathfrak k\ominus\mathfrak k$ is real-irreducible for every simple $\mathfrak k$ except $\mathfrak{su}(2)$, where $\mathfrak p=0$ and the row's formula reads $0/0$. The row should exclude $SU(2)$.
 - $\mathrm{Spin}(16)$ on $\mathbb R^{128}$: $\ell=32$, $h^\vee=14$, $1.75$, $120\cdot250.25/8008=3.75$, $2.14$. Sage: complement $V(\omega_6)$ of dimension $8008$.
 - $SU(8)$ on $\mathbb R^{70}$: $\ell=70\cdot18/63=20$, $h^\vee=8$, $1.6$, $63\cdot134.4/2352=3.6$, $2.25$. Sage: $\Lambda^2 70=63\oplus2352$.
-- principal $SO(3)$ on $\mathbb R^5$: direct computation with $\langle X,Y\rangle=-\tfrac12\operatorname{tr}_5XY$ gives internal mass $2/5=0.4$, and $3(6-0.4)/7=2.4$, ratio $6$. $\mathfrak{so}(5)=V_1\oplus V_3$ under the principal $\mathfrak{so}(3)$. $c=3$, $c_1=0.2$, $\alpha=1.2$, $x=2.8$, $y=0.6$, $D=16.2$, $(a',b')=(14/27,-11/27)$, all confirmed. Convention note: $\ell=10$ requires $h^\vee(\mathfrak{so}(3))=1$ in L256's formula (the $\mathfrak{so}(m)$ value $m-2$), while the $A_1$ reading gives $h^\vee=2$ with $\ell=20$. The two agree on $\mathrm{Cas}=0.4$, but the text should say which it uses.
+- principal $SO(3)$ on $\mathbb R^5$: direct computation with $\langle X,Y\rangle=-\tfrac12\mathop{\mathrm{tr}}_5XY$ gives internal mass $2/5=0.4$, and $3(6-0.4)/7=2.4$, ratio $6$. $\mathfrak{so}(5)=V_1\oplus V_3$ under the principal $\mathfrak{so}(3)$. $c=3$, $c_1=0.2$, $\alpha=1.2$, $x=2.8$, $y=0.6$, $D=16.2$, $(a',b')=(14/27,-11/27)$, all confirmed. Convention note: $\ell=10$ requires $h^\vee(\mathfrak{so}(3))=1$ in L256's formula (the $\mathfrak{so}(m)$ value $m-2$), while the $A_1$ reading gives $h^\vee=2$ with $\ell=20$. The two agree on $\mathrm{Cas}=0.4$, but the text should say which it uses.
 
 **The sharpness claims fail.** The heading ("tight at $G_2\subset SO(7)$"), the bold sentence "So on the two-component families U is sharp, and its boundary is $G_2\subset SO(7)$", and "The smallest $\mathfrak p$ relative to $\mathfrak k$ in the cases computed is $G_2$'s" are read as the minimum of the ratio over Lemma F's hypothesis class. That class is every isotropy-irreducible pair inside any compact simple $\mathfrak g$, and the table covers only $K\subset SO(n)$. Counterexample, $\mathfrak g=\mathfrak g_2\supset\mathfrak k=\mathfrak{su}(3)$, $\mathfrak p=\mathbb C^3$ realified (6-dim, real-irreducible of complex type, non-symmetric):
 
 - $\mathfrak{su}(3)$ is the long-root subalgebra (embedding index 1), so $\mathrm{Cas}_k(k)/\mathrm{Cas}_{\mathfrak g}(\mathfrak g)=h^\vee(A_2)/h^\vee(G_2)=3/4$, $\mathrm{Cas}_k(k)=\tfrac32c$, $c_1=\tfrac34c$.
 - Trace identity: $8\cdot\tfrac32c+6\,\mathrm{Cas}_k(p)=16c$, so $\mathrm{Cas}_k(p)=\tfrac23c$, and the ratio is $4/9$. Independent check: $C(\mathbf 3)/C(\mathbf 8)=(8/3)/6=4/9$ with long roots of length$^2$ 2.
 - $\alpha=c/3$, $x=c/4$, $y=c/3>x$. $D=c^3(1/12+1/9)=7c^3/36$, so $b'=3/(7c)>0$ and $a'=cx/D=9/(7c)>0$.
-- Screen (numpy, $\langle X,Y\rangle=-\tfrac12\operatorname{tr}_7$ on $\mathfrak g_2$): $c=4$, $c_1=3$, $\alpha=4/3$, $x=1$, $y=4/3$, block residuals below $3\cdot10^{-15}$, and $C=\tfrac9{28}P_k+\tfrac3{28}P_p$ gives $|C\#C-C|=2\cdot10^{-16}$.
+- Screen (numpy, $\langle X,Y\rangle=-\tfrac12\mathop{\mathrm{tr}}_7$ on $\mathfrak g_2$): $c=4$, $c_1=3$, $\alpha=4/3$, $x=1$, $y=4/3$, block residuals below $3\cdot10^{-15}$, and $C=\tfrac9{28}P_k+\tfrac3{28}P_p$ gives $|C\#C-C|=2\cdot10^{-16}$.
 
 So the claim "no isotropy-irreducible pair has ratio below $\tfrac12$" is false. The record's closing sentence (a Wolf pass "is owed before 'every two-component family' can be claimed") is honest, but it contradicts the heading and the bold sentence above it. Correction: delete "U is sharp, and its boundary is $G_2\subset SO(7)$" and "tight at $G_2\subset SO(7)$", and record $G_2/SU(3)$ as a counterexample to U.
 
 ## F7. F-form
 
-$F(P_p,P_p,P_k)=\operatorname{tr}((xP_k+yP_p)P_k)=x\,d_k$, $F(P_k,P_p,P_p)=\operatorname{tr}(\alpha P_pP_p)=\alpha\,d_p$, $F(P_p,P_p,P_p)=y\,d_p$. So $y\le x$ is exactly $F(P_p,P_p,P_p)/d_p\le F(P_p,P_p,P_k)/d_k$. The reading "the $\mathfrak p$-part of $[\mathfrak p,\mathfrak p]$ per dimension" matches $F(P_p,P_p,P_W)=\tfrac12\sum\langle[v,v'],w\rangle^2$. For symmetric pairs the left side is $0$. "$x>0$ automatic" needs $\alpha>0$ as well (F1), which the text leaves unstated. $G_2/SU(3)$: $F(ppp)/d_p=4/3>1=F(ppk)/d_k$, so the pair violates the condition, consistent with F6.
+$F(P_p,P_p,P_k)=\mathop{\mathrm{tr}}((xP_k+yP_p)P_k)=x\,d_k$, $F(P_k,P_p,P_p)=\mathop{\mathrm{tr}}(\alpha P_pP_p)=\alpha\,d_p$, $F(P_p,P_p,P_p)=y\,d_p$. So $y\le x$ is exactly $F(P_p,P_p,P_p)/d_p\le F(P_p,P_p,P_k)/d_k$. The reading "the $\mathfrak p$-part of $[\mathfrak p,\mathfrak p]$ per dimension" matches $F(P_p,P_p,P_W)=\tfrac12\sum\langle[v,v'],w\rangle^2$. For symmetric pairs the left side is $0$. "$x>0$ automatic" needs $\alpha>0$ as well (F1), which the text leaves unstated. $G_2/SU(3)$: $F(ppp)/d_p=4/3>1=F(ppk)/d_k$, so the pair violates the condition, consistent with F6.
 
 ## F8. Lean fidelity
 

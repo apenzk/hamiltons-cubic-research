@@ -79,22 +79,22 @@ The other common convention for $M$ does not rescue the identification. Take $(M
 
 - $G^{(a)}_{ijkl}=(P_a)_{ik}(P_a)_{jl}-(P_a)_{il}(P_a)_{jk}$ has $G^{(a)}_{ijij}=1$ for $i\ne j$ in factor $a$, the unit sphere with $R_{ijij}$ sectional. It is antisymmetric in each pair, symmetric under pair swap, and satisfies Bianchi, being the Kulkarni-Nomizu square of $P_a$ up to a factor.
 - $R=G^{(1)}+G^{(2)}$ is Li's (2.2)/(2.3) for the unit factors: it vanishes unless all four indices lie in one factor.
-- Ricci, with $\mathrm{Ric}_{jl}=\sum_iR_{ijil}$: $\sum_i\big((P_a)_{ii}(P_a)_{jl}-(P_a)_{il}(P_a)_{ji}\big)=m(P_a)_{jl}-(P_a)_{jl}=(m-1)(P_a)_{jl}$. The sum over $a$ is $(m-1)I$. For $G$ the same computation with $\operatorname{tr}I=2m$ gives $(2m-1)I$.
+- Ricci, with $\mathrm{Ric}_{jl}=\sum_iR_{ijil}$: $\sum_i\big((P_a)_{ii}(P_a)_{jl}-(P_a)_{il}(P_a)_{ji}\big)=m(P_a)_{jl}-(P_a)_{jl}=(m-1)(P_a)_{jl}$. The sum over $a$ is $(m-1)I$. For $G$ the same computation with $\mathop{\mathrm{tr}}I=2m$ gives $(2m-1)I$.
 - $R-cG$ has Ricci $(m-1)I-c(2m-1)I=0$ exactly at $c=\frac{m-1}{2m-1}$. The Weyl tensor is the component of $R$ orthogonal to the Kulkarni-Nomizu image of symmetric 2-tensors. $cG$ lies in that image, and $R-cG$ is totally trace-free, so $R-cG$ is that component. The proof's "since $G$ has Ricci tensor $(2m-1)I$" compresses this standard step, and the step holds. Cross-check: $\mathrm{scal}/(n(n-1))=2m(m-1)/(2m(2m-1))=c$.
 
 ## 4. The contraction in the $iklj$ order (brief item 3): no finding
 
 - $G^{(a)}_{iklj}=(P_a)_{il}(P_a)_{kj}-(P_a)_{ij}(P_a)_{kl}$.
-- So $(\mathring G^{(a)}h)_{ij}=\sum_{kl}(P_a)_{il}h_{kl}(P_a)_{kj}-(P_a)_{ij}\sum_{kl}(P_a)_{kl}h_{kl}=(P_ahP_a)_{ji}-t_a(P_a)_{ij}=(P_ahP_a-t_aP_a)_{ij}$, using the symmetry of $P_ahP_a$ and $t_a=\operatorname{tr}(P_ah)$.
-- With $P_a\to I$: $\mathring Gh=h-(\operatorname{tr}h)I=h$ on $S^2_0$.
+- So $(\mathring G^{(a)}h)_{ij}=\sum_{kl}(P_a)_{il}h_{kl}(P_a)_{kj}-(P_a)_{ij}\sum_{kl}(P_a)_{kl}h_{kl}=(P_ahP_a)_{ji}-t_a(P_a)_{ij}=(P_ahP_a-t_aP_a)_{ij}$, using the symmetry of $P_ahP_a$ and $t_a=\mathop{\mathrm{tr}}(P_ah)$.
+- With $P_a\to I$: $\mathring Gh=h-(\mathop{\mathrm{tr}}h)I=h$ on $S^2_0$.
 - The sign matches Passage E and Li's Example 2.1 ($\mathring R=\kappa\,\mathrm{id}_{S^2_0}$ on $S^n(\kappa)$).
-- $\mathring Wh$ is trace-free without projection: $\operatorname{tr}\mathring Wh=t_1+t_2-m(t_1+t_2)=(1-m)\operatorname{tr}h=0$. So the record's operator without $\pi$ agrees with Li's $\pi\circ\mathring R$ here (see withdrawn W3).
+- $\mathring Wh$ is trace-free without projection: $\mathop{\mathrm{tr}}\mathring Wh=t_1+t_2-m(t_1+t_2)=(1-m)\mathop{\mathrm{tr}}h=0$. So the record's operator without $\pi$ agrees with Li's $\pi\circ\mathring R$ here (see withdrawn W3).
 - Passage E's matrix form follows from $h=\tfrac12\sum h_{ij}e_i\odot e_j$. The output coefficient is $\sum_{ij}R_{iklj}h_{ij}$ at $(k,l)$, which is symmetric in $(k,l)$ because $R_{ilkj}=R_{kjil}$ and relabelling $i\leftrightarrow j$ returns $R_{iklj}$. Relabelled, it is $(\mathring Wh)_{ij}=\sum W_{kijl}h_{kl}$ with $W_{kijl}=W_{iklj}$.
 
 ## 5. The three summands (brief item 4): no finding
 
-- **Within factor 1** ($h=P_1hP_1$, $t_1=0$): $P_2hP_2=P_2P_1hP_1P_2=0$ and $t_2=\operatorname{tr}(P_2P_1hP_1)=0$. So $\mathring Wh=h-ch=\frac m{2m-1}h$. The space is trace-free symmetric $m\times m$, of dimension $\binom{m+1}2-1$. Factor 2 is symmetric. Total $m(m+1)-2=(m-1)(m+2)$.
-- **Cross block** ($P_1hP_1=P_2hP_2=0$): $t_a=\operatorname{tr}(P_ah)=\operatorname{tr}(P_ahP_a)=0$. So $\mathring Wh=-ch=-\frac{m-1}{2m-1}h$. The block is an arbitrary $m\times m$ matrix, dimension $m^2$.
+- **Within factor 1** ($h=P_1hP_1$, $t_1=0$): $P_2hP_2=P_2P_1hP_1P_2=0$ and $t_2=\mathop{\mathrm{tr}}(P_2P_1hP_1)=0$. So $\mathring Wh=h-ch=\frac m{2m-1}h$. The space is trace-free symmetric $m\times m$, of dimension $\binom{m+1}2-1$. Factor 2 is symmetric. Total $m(m+1)-2=(m-1)(m+2)$.
+- **Cross block** ($P_1hP_1=P_2hP_2=0$): $t_a=\mathop{\mathrm{tr}}(P_ah)=\mathop{\mathrm{tr}}(P_ahP_a)=0$. So $\mathring Wh=-ch=-\frac{m-1}{2m-1}h$. The block is an arbitrary $m\times m$ matrix, dimension $m^2$.
 - **Line** $h=P_1-P_2$: $t_1=m$, $t_2=-m$, $P_1hP_1=P_1$, $P_2hP_2=-P_2$. So $\mathring Wh=P_1-P_2-mP_1+mP_2-ch=(1-m-c)h$. And $1-m-c=(1-m)\frac{2m}{2m-1}=-\frac{2m(m-1)}{2m-1}$.
 - **Invariance** follows from the three eigen-equations.
 - **Filling.** Any $h\in S^2_0$ splits by blocks as $P_1hP_1+P_2hP_2+(P_1hP_2+P_2hP_1)$. Then $P_ahP_a=(P_ahP_a-\tfrac{t_a}mP_a)+\tfrac{t_a}mP_a$ and $t_2=-t_1$, so the two scalar parts combine to $\tfrac{t_1}m(P_1-P_2)$. The three summands are mutually orthogonal and span. The proof argues filling by the dimension count alone, which needs independence. Independence holds here, as the block splitting shows and as distinct eigenvalues also give (withdrawn W2).
@@ -167,7 +167,7 @@ Passage D supports "closes symbolically" and "identically zero difference" by po
 
 ## 10. "$A$ is not a new constant" (brief item 9): CONFIRMED AS ALGEBRA
 
-At $n=2m$: $\frac{2\sqrt2}{2m\sqrt{(2m-1)(2m-2)}}=\frac{2\sqrt2}{2m\sqrt2\sqrt{(2m-1)(m-1)}}=\frac1{m\sqrt{(m-1)(2m-1)}}=A$. The passage does not say which spectral quantity "$\operatorname{tr}(W^3)$" denotes. Reading it as $\operatorname{tr}(M^3)=p_3(\mu)$ at $\lVert M\rVert_F=1$ makes it agree with 9a. The quoted closed form is a given of the record, and its derivation is outside the brief.
+At $n=2m$: $\frac{2\sqrt2}{2m\sqrt{(2m-1)(2m-2)}}=\frac{2\sqrt2}{2m\sqrt2\sqrt{(2m-1)(m-1)}}=\frac1{m\sqrt{(m-1)(2m-1)}}=A$. The passage does not say which spectral quantity "$\mathop{\mathrm{tr}}(W^3)$" denotes. Reading it as $\mathop{\mathrm{tr}}(M^3)=p_3(\mu)$ at $\lVert M\rVert_F=1$ makes it agree with 9a. The quoted closed form is a given of the record, and its derivation is outside the brief.
 
 ## 11. Passage F against Passage A (brief item 10)
 
@@ -212,7 +212,7 @@ None of these types the operator either.
 
 - **W1. Li 2022 uses $ijkl$, so Theorem 1.8 is in a different convention.** Located at the Section 2 display on PDF page 7. It fails step 2: read literally the display is the zero operator, which contradicts Li's Example 2.1. It also fails step 3: the introduction, the Lemma 2.1-2.3 computations and $\mathring R_i(g_i)=-\mathrm{Ric}$ all use $iklj$ with $R_{ijij}=+\kappa$. The display is a typo in Li. Withdrawn.
 - **W2. "Fill $S^2_0$" is argued by dimension count alone.** Located at "which together fill $S^2_0$ since $(m-1)(m+2)+m^2+1=\dim S^2_0$". It fails step 2: no failure can be exhibited, because the three summands are eigenspaces for distinct eigenvalues at $m\ge2$ and are therefore independent. The block splitting also gives the span. The omitted sentence is immediate. Withdrawn.
-- **W3. Li's operator is $\pi\circ\mathring R$, and the record's has no projection.** It fails step 2: $\operatorname{tr}\mathring Wh=(1-m)\operatorname{tr}h=0$ on $S^2_0$, so the projection acts trivially. Withdrawn.
+- **W3. Li's operator is $\pi\circ\mathring R$, and the record's has no projection.** It fails step 2: $\mathop{\mathrm{tr}}\mathring Wh=(1-m)\mathop{\mathrm{tr}}h=0$ on $S^2_0$, so the projection acts trivially. Withdrawn.
 - **W4. `A_from_omega` is vacuous over $\mathbb Q$ and has an unused hypothesis.** This is a remark on typing, not a defect of the lemma. The implication is true, and it is used only as a rearrangement. It fails step 3 as a finding against the result. Withdrawn, and recorded in section 11.
 - **W5. $R-cG$ is not shown to be "the" Weyl tensor.** It fails step 2: trace-free together with a difference in the Kulkarni-Nomizu image determines the Weyl part uniquely (section 3). Withdrawn.
 

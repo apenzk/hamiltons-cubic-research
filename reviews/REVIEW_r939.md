@@ -41,9 +41,9 @@ Log: [agent_logs/review-r939.log](../agent_logs/review-r939.log)
 
 **The pattern, rederived independently.** On $\Lambda^2\mathbb R^Q=\Lambda^+\oplus\Lambda^-$ take $f_1=(e_{ij}+e_{kl})/\sqrt2$ and its partners, and $g_1=(e_{ij}-e_{kl})/\sqrt2$ and its partners, with the orientation signs absorbed. The bracket constant in the orthonormal $f$ basis is $\sqrt2$, so for a diagonal $d$ on $\Lambda^+$ the map is $Q(d)_1=d_1^2+2d_2d_3$ and cyclically, and $\Lambda^\pm$ do not mix under $\#$. Checks against the record's controls: $d=(2,-1,-1)/\sqrt6$ on $\Lambda^+$ alone gives $P=9d_1d_2d_3=\sqrt{3/2}$, and the same shape on both halves at total norm $1$ gives $\sqrt3/2$, which are Given 4's two anchors. In this basis:
 
-- $\Pi_Q=\{W^+=W^-=\operatorname{diag}(x,y,z)\}$,
-- $V_Q=\{W^+=\operatorname{diag}(\alpha),\ W^-=-\operatorname{diag}(\alpha),\ \operatorname{tr}\alpha=0\}$ with $\alpha=(\pm a,\pm b,\pm c)$ under $u\odot v=u\otimes v+v\otimes u$, Bianchi being $\operatorname{tr}W^+=\operatorname{tr}W^-$,
-- $\nu\circ\nu$ has both halves equal to $(2\alpha_1^2-\alpha_2^2-\alpha_3^2,\dots)$, since $\alpha_1^2+2\alpha_2\alpha_3=2\alpha_1^2-\alpha_2^2-\alpha_3^2$ on $\operatorname{tr}\alpha=0$.
+- $\Pi_Q=\{W^+=W^-=\mathop{\mathrm{diag}}(x,y,z)\}$,
+- $V_Q=\{W^+=\mathop{\mathrm{diag}}(\alpha),\ W^-=-\mathop{\mathrm{diag}}(\alpha),\ \mathop{\mathrm{tr}}\alpha=0\}$ with $\alpha=(\pm a,\pm b,\pm c)$ under $u\odot v=u\otimes v+v\otimes u$, Bianchi being $\mathop{\mathrm{tr}}W^+=\mathop{\mathrm{tr}}W^-$,
+- $\nu\circ\nu$ has both halves equal to $(2\alpha_1^2-\alpha_2^2-\alpha_3^2,\dots)$, since $\alpha_1^2+2\alpha_2\alpha_3=2\alpha_1^2-\alpha_2^2-\alpha_3^2$ on $\mathop{\mathrm{tr}}\alpha=0$.
 
 So $x=2a^2-b^2-c^2$ exactly, cyclically. The pattern is never used downstream, only the membership.
 
@@ -61,7 +61,7 @@ So $x=2a^2-b^2-c^2$ exactly, cyclically. The pattern is never used downstream, o
 
 **The arithmetic.** $E=A^2+B^2+C^2-AB-BC-CA=4(s-xy-yz-zx)$ with $s=x^2+y^2+z^2$, and $(x+y+z)^2=0$ gives $xy+yz+zx=-\tfrac s2$, so $E=6s$. Given 4 gives $\lVert q\rVert^2=\sum_{a<b}K_{ab}^2=2s$, so $E=3\lVert q\rVert^2$. This follows.
 
-**Independent check of L121's normalisation on $\Pi_Q$.** In the basis of section 2, $(u\circ w)_1=u_1w_1+u_2w_3+u_3w_2$ on each half, so $L_q$ acts on $\alpha$ by $H=\begin{pmatrix}x&z&y\\z&y&x\\y&x&z\end{pmatrix}$, which is L121's $\tfrac12G$ entry for entry. $H\mathbf 1=0$, $\operatorname{tr}H=0$ and $\operatorname{tr}H^2=3s$, so on $\mathbf 1^\perp$ the eigenvalues are $\pm\sqrt{3s/2}=\pm\tfrac{\sqrt3}2\lVert q\rVert=\pm\tfrac12\sqrt E$. The record's value and my rederivation agree, including the factor carried by $L_M=M\circ(\cdot)$.
+**Independent check of L121's normalisation on $\Pi_Q$.** In the basis of section 2, $(u\circ w)_1=u_1w_1+u_2w_3+u_3w_2$ on each half, so $L_q$ acts on $\alpha$ by $H=\begin{pmatrix}x&z&y\\z&y&x\\y&x&z\end{pmatrix}$, which is L121's $\tfrac12G$ entry for entry. $H\mathbf 1=0$, $\mathop{\mathrm{tr}}H=0$ and $\mathop{\mathrm{tr}}H^2=3s$, so on $\mathbf 1^\perp$ the eigenvalues are $\pm\sqrt{3s/2}=\pm\tfrac{\sqrt3}2\lVert q\rVert=\pm\tfrac12\sqrt E$. The record's value and my rederivation agree, including the factor carried by $L_M=M\circ(\cdot)$.
 
 **Must $\tfrac\theta2$ be the positive root?** Yes. $\nu\ne0$ is an eigenvector of $L_q\vert_{V_Q}$ with eigenvalue $\tfrac\theta2>0$. If $q=0$ then $L_q=0$, a contradiction, so $\sqrt E>0$ and the only positive eigenvalue is $+\tfrac12\sqrt E$. Hence $\tfrac\theta2=\tfrac{\sqrt3}2\lVert q\rVert$ and $\lVert q\rVert^2=\theta^2/3$. This follows.
 

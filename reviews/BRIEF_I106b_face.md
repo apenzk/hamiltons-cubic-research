@@ -14,7 +14,7 @@ over an orthonormal frame $P$ with columns $p_k$, where $\hat U$ and $C$ are **d
 
 **Given, what R28's induction does.** It excludes an interior tangency, concludes the maximum sits on the boundary, and wants that boundary to be the SPLIT locus, which is the previous rung of the induction.
 
-**Given, from [L230](../findings/second-order.md) and its Gate 2 round** ([r974](REVIEW_r974.md), [r975](REVIEW_r975.md)), and **not under review**: the singular-locus route to that conclusion fails, and the obstruction is instead the face $\{\operatorname{tr}=0\}\cap X_k$, which contains non-split points at $k=4$ and $k=6$. An orthogonal matrix **splits** when, up to **independent** row and column permutations, it is a direct sum of two smaller orthogonal matrices.
+**Given, from [L230](../findings/second-order.md) and its Gate 2 round** ([r974](REVIEW_r974.md), [r975](REVIEW_r975.md)), and **not under review**: the singular-locus route to that conclusion fails, and the obstruction is instead the face $\{\mathop{\mathrm{tr}}=0\}\cap X_k$, which contains non-split points at $k=4$ and $k=6$. An orthogonal matrix **splits** when, up to **independent** row and column permutations, it is a direct sum of two smaller orthogonal matrices.
 
 ## The block under review, quoted verbatim from disk
 
@@ -22,7 +22,7 @@ over an orthonormal frame $P$ with columns $p_k$, where $\hat U$ and $C$ are **d
 >
 > With $R=P^{\circ2}$, $p_k^{\mathsf T}\hat Up_k=(R^{\mathsf T}u)_k$ and likewise for $C$, so the value is $\langle R,A\rangle$ with $A_{ik}=\beta\nu_k^2u_i+\nu_kc_i$. **A linear functional on a compact set.**
 >
-> $\operatorname{tr}$ is nonnegative on the image, vanishes exactly on images of zero-diagonal $Q$, and is nonconstant, so $\{\operatorname{tr}=0\}$ is a face relative to the affine hull.
+> $\mathop{\mathrm{tr}}$ is nonnegative on the image, vanishes exactly on images of zero-diagonal $Q$, and is nonconstant, so $\{\mathop{\mathrm{tr}}=0\}$ is a face relative to the affine hull.
 >
 > **Maximising the value over the image is maximising a quadratic form over the group.** Writing $f(Q)=\langle A,Q\circ Q\rangle=\sum_{i,k}A_{ik}Q_{ik}^2$, the problem is $\max_{Q\in O(k)}f(Q)$, and the image never has to be parametrised.
 >
@@ -41,7 +41,7 @@ over an orthonormal frame $P$ with columns $p_k$, where $\hat U$ and $C$ are **d
 | 3 | Maximising $\langle R,A\rangle$ over $X_k$ is maximising $f(Q)=\sum_{i,k}A_{ik}Q_{ik}^2$ over $O(k)$ | mathematics |
 | 4 | $\mathrm df_Q[Q\Omega]=2\langle Q^{\mathsf T}(A\circ Q),\Omega\rangle$ | mathematics |
 | 5 | Hence criticality is exactly that $Q^{\mathsf T}(A\circ Q)$ is symmetric | mathematics |
-| 6 | $\{\operatorname{tr}=0\}$ is a face of $X_k$ relative to its affine hull | mathematics |
+| 6 | $\{\mathop{\mathrm{tr}}=0\}$ is a face of $X_k$ relative to its affine hull | mathematics |
 | 7 | The second-order condition is batch 21 transported, with the frame in place of $(\hat U,V)$ | **a shape, not a theorem** |
 | 8 | Avoidance is false, so the hand-down statement is the right thing for R28 to need | mixed |
 
@@ -56,7 +56,7 @@ Every claim has a row. A cell names the declaration that types it, or the reason
 | 3 | none: it quantifies over the IMAGE of a map between manifolds, which the base layer does not carry |
 | 4 | `grad_pairing`, stated for EVERY `W` rather than only skew ones, since the restriction to skew is what turns the identity into the condition rather than part of the identity |
 | 5 | none as an equivalence: "criticality" needs a differential, which the layer has no object for. `grad_pairing` is its algebraic half |
-| 6 | `trace_image_eq`, `trace_image_nonneg` and `trace_image_eq_zero_iff` type the three facts about $\operatorname{tr}$, none needing a hypothesis. That these three make the set a FACE is not typed, affine hulls and relative interiors being absent |
+| 6 | `trace_image_eq`, `trace_image_nonneg` and `trace_image_eq_zero_iff` type the three facts about $\mathop{\mathrm{tr}}$, none needing a hypothesis. That these three make the set a FACE is not typed, affine hulls and relative interiors being absent |
 | 7 | none: a claim about what a computation would resemble, which is not a proposition |
 | 8 | `Splits` types the source's two-sided splitting predicate and `face_hands_down` the conclusion R28 needs, with a NAMED `sorry`. That maximisers land on the face is numerical and is not a proposition |
 
@@ -65,7 +65,7 @@ Every claim has a row. A cell names the declaration that types it, or the reason
 1. **Claim 4 is the load-bearing algebra and you should re-derive it, not check it.** In particular verify the step $\langle A,Q\circ Z\rangle=\langle A\circ Q,Z\rangle$ and the step moving $Q$ across the pairing, and say whether the tangent should be $Q\Omega$ or $\Omega Q$ and whether it matters.
 2. **Claim 5 is where a reader nods.** It reads as a definition. Ask whether symmetry of $Q^{\mathsf T}(A\circ Q)$ is really equivalent to criticality or only implied by it, and in particular whether $\Omega\mapsto\langle S,\Omega\rangle$ vanishing for all skew $\Omega$ gives symmetry of $S$ or something weaker.
 3. **Claim 3 hides a quantifier.** $\max_R\langle R,A\rangle$ over the image and $\max_Q f(Q)$ over the group have the same value, but the block also uses the correspondence to talk about WHERE the maximum is. Say whether a maximiser of one gives a maximiser of the other in both directions, and whether the fibres of $\varphi_r$ cause trouble.
-4. **Claim 6 is the one whose failure would be quietest.** The three facts about $\operatorname{tr}$ are easy. The inference to "face relative to the affine hull" is not, and it needs $\operatorname{tr}$ to be affine on the affine hull and nonconstant THERE. Check it.
+4. **Claim 6 is the one whose failure would be quietest.** The three facts about $\mathop{\mathrm{tr}}$ are easy. The inference to "face relative to the affine hull" is not, and it needs $\mathop{\mathrm{tr}}$ to be affine on the affine hull and nonconstant THERE. Check it.
 5. **Claim 7 is NOT mathematics and must not be graded as one.** Decide whether the block is right to flag it as a shape, and whether the correspondence it asserts is plausible, exact, or wrong. **If you can derive the second-order condition, that is worth more than any verdict here.**
 6. **Claim 2 matters more than it looks.** A screen run at generic full-rank $A$ would answer a different question from one run at R28's own $A$. Verify the rank claim, and say what breaks if it is wrong.
 7. Return **CONFIRMED**, **PLAUSIBLE** or **REFUTED** per claim, with corrections.

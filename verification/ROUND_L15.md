@@ -6,7 +6,7 @@
 
 **Pre-registered questions.** *(Questions, not verdicts. No adjudication has run on any.)*
 
-1. **Does the identity hold, with that constant, in every dimension?** **Derive it, and check the constant $6$ and the claim that there is no cross-term. Say which normalisation of $\#$, of $\operatorname{scal}$ and of the $\Lambda^2$ inner product the constant depends on, and what it would become under the alternatives the record uses elsewhere.**
+1. **Does the identity hold, with that constant, in every dimension?** **Derive it, and check the constant $6$ and the claim that there is no cross-term. Say which normalisation of $\#$, of $\mathop{\mathrm{scal}}$ and of the $\Lambda^2$ inner product the constant depends on, and what it would become under the alternatives the record uses elsewhere.**
 2. **Is the displayed content this result's own?** *The block records the identity as something another file already carries under a different name.* **Say what is stated here that is not stated there, and what a consumer citing L15 gets that citing the other would not.**
 3. **What does the identity establish about the lifting obstruction?** *The heading claims two obstructions rather than one.* **Say which of them the displayed identity bears on, and whether the second is established here, elsewhere, or nowhere.**
 
@@ -16,7 +16,7 @@
 
 *Provenance stripped, mathematics verbatim, quoted from the current source.*
 
-$$\operatorname{scal}(R^2+R^\#)=\|\mathrm{Ric}(R)\|^2+6\|\mathrm{Alt}(R)\|^2,$$
+$$\mathop{\mathrm{scal}}(R^2+R^\#)=\|\mathrm{Ric}(R)\|^2+6\|\mathrm{Alt}(R)\|^2,$$
 
 $\mathrm{Alt}$ being the projection onto $\Lambda^4$, with the constant exactly $6$ in every dimension and no cross-term. So the invariant master inequality carries an extra $+24\|\mathrm{Alt}(W_-)\|^2$, and that term is not a technicality: at Fox's $\mathcal S^4(\alpha)$ it is exactly what makes his inequality fail, by a factor of three at a genuine critical point, while the corrected version is saturated there. Every sphere product, in any frame, has defect zero.
 
@@ -32,7 +32,7 @@ $\mathrm{Alt}$ being the projection onto $\Lambda^4$, with the constant exactly 
 |---|---|---|---|
 | **C1** | the identity, its constant, the absent cross-term | *no defect.* Derived in full three times and checked at seven objects between them; $6=2(1+c_4)$ with $c_4=2$ **rebuilt from brackets** rather than taken from the record's undisplayed Casimir route | v122, v123, v124 |
 | **C2** | **the class of $R$** | absent from both canonical copies. **Read at a curvature operator (the files' default object), $\mathrm{Alt}(R)=0$ and the identity is $0=0$**; the true class is every symmetric $R$ on $\Lambda^2\mathbb R^n$, and only [ATTEMPTS.md](../ATTEMPTS.md) carried it | v122, v123, v124 |
-| **C3** | the normalisations | the constant is a product of **four**, and the blocks named one. Under $\operatorname{scal}=\operatorname{tr}$ both right-hand constants halve; under plain Frobenius the $6$ becomes $4$; under the unnormalised Bianchi map $2/3$; **and under the other $\#$ in circulation the identity is false rather than rescaled** | v122, v123, v124 |
+| **C3** | the normalisations | the constant is a product of **four**, and the blocks named one. Under $\mathop{\mathrm{scal}}=\mathop{\mathrm{tr}}$ both right-hand constants halve; under plain Frobenius the $6$ becomes $4$; under the unnormalised Bianchi map $2/3$; **and under the other $\#$ in circulation the identity is false rather than rescaled** | v122, v123, v124 |
 | **C4** | [results.md](../results.md):645's "do not satisfy" and "with one exception" | the universal is **refuted at every sphere product by the block's own closing sentence**, and the count was withdrawn on the record. The findings copy reads "need not"; the correction reached three sites and skipped the canonical one | v122, v123, v124 |
 | **C5** | the canonical display | **truncated mid-sentence on a dangling comma**, $\mathrm{Alt}$ never defined, "exactly 6 in every dimension" and "no cross-term" both dropped | v122, v123 |
 | **C6** | "**Proof:** problem.md" | lands on a file carrying the reading and the evaluations and **no derivation**; the proof is L131 contracted, with $c_4=2$ | v123 |
@@ -50,7 +50,7 @@ $\mathrm{Alt}$ being the projection onto $\Lambda^4$, with the constant exactly 
 
 **C2 is the round.** *A statement whose natural reading makes it $0=0$ is not a weak statement, it is a different one*, and the class that makes it content-bearing appears in a file nobody cites.
 
-**C3 closes a loop opened one round earlier.** [ROUND_L07](ROUND_L07.md) corrected a $\#$ constant by a factor of two and tabled $\operatorname{scal}=2\operatorname{tr}$; this round reached the same normalisation from the other side and found that **under the alternative the identity is false, not rescaled**, which is why the correction mattered rather than being cosmetic.
+**C3 closes a loop opened one round earlier.** [ROUND_L07](ROUND_L07.md) corrected a $\#$ constant by a factor of two and tabled $\mathop{\mathrm{scal}}=2\mathop{\mathrm{tr}}$; this round reached the same normalisation from the other side and found that **under the alternative the identity is false, not rescaled**, which is why the correction mattered rather than being cosmetic.
 
 **C7 is a direction error, and it is the kind that survives review** because both statements are true and each implies the other; only the word "polarised" is wrong, and it names the step that is not taken.
 

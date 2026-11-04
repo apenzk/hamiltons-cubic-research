@@ -55,7 +55,7 @@ Rebuilt from the definitions, naming what supplies each step.
 
 **$\mathfrak g'=\mathfrak m+[\mathfrak m,\mathfrak m]$ is an ideal.** $[\mathfrak m,\mathfrak g']\subseteq[\mathfrak m,\mathfrak m]+[\mathfrak m,\mathfrak h]\subseteq\mathfrak g'$; $[\mathfrak h,\mathfrak g']\subseteq[\mathfrak h,\mathfrak m]+[\mathfrak h,[\mathfrak m,\mathfrak m]]\subseteq\mathfrak m+[\mathfrak m,\mathfrak m]=\mathfrak g'$ by Jacobi and $[\mathfrak h,\mathfrak m]\subseteq\mathfrak m$; $[\mathfrak r,\mathfrak g']=0$ by Jacobi from $[\mathfrak r,\mathfrak m]=0$. So $[\mathfrak{so}(n),\mathfrak g']\subseteq\mathfrak g'$.
 
-**$\mathfrak m\ne0$** because $\operatorname{tr}W=0$ at $W\ne0$ forces $\lambda_{\min}<0$. The block asserts it without this line; it is one line and should be there, since it is the same strictness [Lemma L70](../findings/bounds.md) was corrected for this session.
+**$\mathfrak m\ne0$** because $\mathop{\mathrm{tr}}W=0$ at $W\ne0$ forces $\lambda_{\min}<0$. The block asserts it without this line; it is one line and should be there, since it is the same strictness [Lemma L70](../findings/bounds.md) was corrected for this session.
 
 **Simplicity closes it.** $\mathfrak{so}(n)$ simple gives $\mathfrak g'=\mathfrak{so}(n)$, and since $\mathfrak g'\subseteq\mathfrak m\oplus\mathfrak h$ orthogonally, $\mathfrak r=0$ and $[\mathfrak m,\mathfrak m]=\mathfrak h$.
 
@@ -93,7 +93,7 @@ Saturation supports $T_{v\beta\gamma}$ on pairs with one index in $\mathfrak m$ 
 
 $$(n-2)h=nm,\qquad\boxed{\ \frac{\lambda_{\max}}{\lvert\lambda_{\min}\rvert}=\frac n{n-2}\ }$$
 
-Substituting into (C) gives $\theta=(n-2)h-m=(n-1)m$, which is [Lemma L117](../findings/bounds.md)'s conclusion. **Only now**, after $\mathfrak r=0$, so that $\operatorname{tr}W=0$ reads $h\dim\mathfrak h=m\dim\mathfrak m$ with no third term, does $\dim\mathfrak m/\dim\mathfrak h=h/m=n/(n-2)$ follow, and with $\dim\mathfrak m+\dim\mathfrak h=\binom n2$ it gives $\dim\mathfrak h=n(n-2)/4$ and $\dim\mathfrak m=n^2/4$.
+Substituting into (C) gives $\theta=(n-2)h-m=(n-1)m$, which is [Lemma L117](../findings/bounds.md)'s conclusion. **Only now**, after $\mathfrak r=0$, so that $\mathop{\mathrm{tr}}W=0$ reads $h\dim\mathfrak h=m\dim\mathfrak m$ with no third term, does $\dim\mathfrak m/\dim\mathfrak h=h/m=n/(n-2)$ follow, and with $\dim\mathfrak m+\dim\mathfrak h=\binom n2$ it gives $\dim\mathfrak h=n(n-2)/4$ and $\dim\mathfrak m=n^2/4$.
 
 **Two things this ordering settles that the block leaves implicit.**
 
@@ -120,7 +120,7 @@ Grepping the statement rather than the identifier, for the surviving phrases [r3
 
 The block claims the $n=4$ critical points are exactly $\pm S^2\times S^2$ and $\pm W_{\mathbb{CP}^2}$ up to $O(4)$, and that the saturating ones are $S^2\times S^2$ and $W_{\mathbb{CP}^2}$ alone. **Rebuilt from scratch and confirmed.**
 
-$Q$ acts blockwise on $\mathcal W_4=\mathcal W^+\oplus\mathcal W^-$, each block a traceless symmetric $3\times3$ with $A^\#=2\operatorname{cof}A$. With eigenvalues $a_1,a_2,a_3$ summing to zero, $Q_i=a_i^2+2a_ja_k=3a_i^2-p_2$, so criticality $Q_i=\theta a_i$ differenced over $i,j$ gives $3(a_i+a_j)=\theta$ whenever $a_i\ne a_j$, i.e. $(a_i-a_j)(3a_k+\theta)=0$, the block's equation, reproduced. All three distinct forces all three equal, a contradiction; so each block is $0$ or of type $(a,a,-2a)$, with $\theta=-3a$ read off either entry. A nonzero second block forces the same $a$, since the two blocks share $\theta$.
+$Q$ acts blockwise on $\mathcal W_4=\mathcal W^+\oplus\mathcal W^-$, each block a traceless symmetric $3\times3$ with $A^\#=2\mathop{\mathrm{cof}}A$. With eigenvalues $a_1,a_2,a_3$ summing to zero, $Q_i=a_i^2+2a_ja_k=3a_i^2-p_2$, so criticality $Q_i=\theta a_i$ differenced over $i,j$ gives $3(a_i+a_j)=\theta$ whenever $a_i\ne a_j$, i.e. $(a_i-a_j)(3a_k+\theta)=0$, the block's equation, reproduced. All three distinct forces all three equal, a contradiction; so each block is $0$ or of type $(a,a,-2a)$, with $\theta=-3a$ read off either entry. A nonzero second block forces the same $a$, since the two blocks share $\theta$.
 
 - **one block nonzero**: $6a^2=1$, $\theta=3/\sqrt6=\sqrt{3/2}$, $W_{\mathbb{CP}^2}$;
 - **both blocks nonzero**: $12a^2=1$, $\theta=3/\sqrt{12}=\sqrt3/2=0.866=\theta_0(4)$, $S^2\times S^2$.
@@ -133,7 +133,7 @@ $Q$ acts blockwise on $\mathcal W_4=\mathcal W^+\oplus\mathcal W^-$, each block 
 
 The theorem [r565](REVIEW_r565.md) and [r566](REVIEW_r566.md) proved an hour ago, *saturation forces $\dim E_{\min}\ge n/2$ and $\dim E_{\max}\ge(n-2)/2$*, from the pair cap [L31](../findings/stratum-two-negative.md) and the Killing marginal alone, bears on L71 in three places, and only the third is a gain.
 
-- **It does not shorten the proof.** The only dimension fact the chain consumes is $\mathfrak m\ne0$, which $\operatorname{tr}W=0$ at $W\ne0$ already gives in one line. Substituting $\dim\mathfrak m\ge n/2$ there replaces a one-line argument with a citation to a longer one.
+- **It does not shorten the proof.** The only dimension fact the chain consumes is $\mathfrak m\ne0$, which $\mathop{\mathrm{tr}}W=0$ at $W\ne0$ already gives in one line. Substituting $\dim\mathfrak m\ge n/2$ there replaces a one-line argument with a citation to a longer one.
 - **It does not strengthen the statement at $n\ge5$.** L71 concludes $\dim\mathfrak m=n^2/4$ and $\dim\mathfrak h=n(n-2)/4$ exactly. Against those, $n/2$ and $(n-2)/2$ are weaker by a factor of $n/2$, the new bounds are a corollary of L71's conclusion, not an input to it.
 - **It does upgrade the $n=4$ sentence, and that is worth taking.** At $W_{\mathbb{CP}^2}$ the spectrum is $(2a,-a,-a,0,0,0)$, so $\dim E_{\min}=2=n/2$ and $\dim E_{\max}=1=(n-2)/2$, **both bounds attained exactly**. The block currently says *"$n=4$ is the sole exception and it is structural: $\mathfrak{so}(4)$ is the only non-simple $\mathfrak{so}(n)$, and $W_{\mathbb{CP}^2}$ realises the exception exactly."* That sentence exhibits the exception; the dimension theorem makes it **extremal**, the exception sits at the floor of both bounds simultaneously, which is a statement about every saturating point rather than about one exhibited one.
 

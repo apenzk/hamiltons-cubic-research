@@ -1,4 +1,4 @@
-# Verifier v66, L62's cap $\operatorname{rank}\le13$, the two sampling inequalities, $\dim\mathrm{ANN}=1$, $\mathrm{ANN}=\mathbb R\,A(W_0^6)$, $F_5\perp\mathrm{ANN}$, and "at four primes"
+# Verifier v66, L62's cap $\mathop{\mathrm{rank}}\le13$, the two sampling inequalities, $\dim\mathrm{ANN}=1$, $\mathrm{ANN}=\mathbb R\,A(W_0^6)$, $F_5\perp\mathrm{ANN}$, and "at four primes"
 
 The brief was cold: I worked from the two written forms of L62 ([results.md:629](../results.md) and [sym3-blocks.md:346](../findings/sym3-blocks.md)), from L59's setting as it stands in [results.md:619](../results.md), and from the definitions at source in [sym3-blocks.md](../findings/sym3-blocks.md) and the pipeline files. **I ran nothing.** Every value in this report is exact and was either derived by hand from the record's own spectra or read off a file already on disk; the one file I opened programmatically was a stored row dump, and only for its `rows`/`shape`/`prime` metadata, which is reading the record rather than computing on it. Log: [agent_logs/verify-L62-v66.log](../agent_logs/verify-L62-v66.log).
 
@@ -7,10 +7,10 @@ The brief was cold: I worked from the two written forms of L62 ([results.md:629]
 | # | Claim attacked | Verdict | Reason |
 |---|---|---|---|
 | 1 | Hypothesis inventory complete and each hypothesis used | **HYPOTHESIS-DEBT** | L62 uses L85, L86, an unnamed pairing and a reproducing property, citing none; it imports L59 whole and uses one clause of it |
-| 2 | The cap: $\operatorname{rank}(\mu_K)\le13$ | **CONFIRMED** | image lies in $\ker\mathrm{ev}_{W_0}$, a hyperplane in L85's $14$; needs L86 for the odd blocks |
-| 3a | Sampled rank $\le$ true rank; $\operatorname{rank}_p\le\operatorname{rank}_{\mathbb Q}$ | **CONFIRMED** | both directions right, both consumed the right way round |
+| 2 | The cap: $\mathop{\mathrm{rank}}(\mu_K)\le13$ | **CONFIRMED** | image lies in $\ker\mathrm{ev}_{W_0}$, a hyperplane in L85's $14$; needs L86 for the odd blocks |
+| 3a | Sampled rank $\le$ true rank; $\mathop{\mathrm{rank}}_p\le\mathop{\mathrm{rank}}_{\mathbb Q}$ | **CONFIRMED** | both directions right, both consumed the right way round |
 | 3b | "a rank computed from a sample of $K$" | **REFUTED AS STATED** | the sample is $40$ evaluation points, not a subspace of $K$; the direction survives either reading |
-| 4 | $\operatorname{rank}=14-\dim\mathrm{ANN}$ | **CONFIRMED AS ALGEBRA** + **HYPOTHESIS-DEBT** | rank-nullity gives it for $F\mapsto\mathrm{Cat}_F|_{K\times K}$; identifying that rank with $\operatorname{rank}(\mu_K)$ needs a nondegenerate pairing on the $14$, and the record names no pairing |
+| 4 | $\mathop{\mathrm{rank}}=14-\dim\mathrm{ANN}$ | **CONFIRMED AS ALGEBRA** + **HYPOTHESIS-DEBT** | rank-nullity gives it for $F\mapsto\mathrm{Cat}_F|_{K\times K}$; identifying that rank with $\mathop{\mathrm{rank}}(\mu_K)$ needs a nondegenerate pairing on the $14$, and the record names no pairing |
 | 5 | $\mathrm{ANN}=\mathbb R\,A(W_0^6)$ | **HYPOTHESIS-DEBT** | membership follows from the reproducing property, which appears only in a reviewer script; $A$ is defined nowhere in the canon and, read literally, is not an invariant sextic |
 | 6 | $F_5\perp\mathrm{ANN}$ | **CONFIRMED** conditional on $\dim\mathrm{ANN}=1$ | $F_5(W_0)=\tfrac32-9\cdot\tfrac16=0$ exactly, from the record's own spectrum |
 | 7 | "It attains it, at four primes" | **CONFIRMED** | four dumps at primes near $2^{40}$, each from a run asserting the restricted rank is $13$, re-ranked independently in [r214](../reviews/REVIEW_r214.md); **this overturns the standing "unsupported" finding of [r633](../reviews/REVIEW_r633.md)** |
@@ -18,20 +18,20 @@ The brief was cold: I worked from the two written forms of L62 ([results.md:629]
 
 ## One-line summary
 
-**L62 is correct in every step I could check, and its "four primes" (the one numeric claim the record has on file as unsupported), is in fact supported at four dumped primes near $2^{40}$; what L62 owes is not an inequality but four unwritten hypotheses, of which the load-bearing one is that the pairing carrying $\operatorname{rank}=14-\dim\mathrm{ANN}$ is nondegenerate on the $14$.**
+**L62 is correct in every step I could check, and its "four primes" (the one numeric claim the record has on file as unsupported), is in fact supported at four dumped primes near $2^{40}$; what L62 owes is not an inequality but four unwritten hypotheses, of which the load-bearing one is that the pairing carrying $\mathop{\mathrm{rank}}=14-\dim\mathrm{ANN}$ is nondegenerate on the $14$.**
 
 ## 0. Conventions, fixed once
 
 Quoted from the brief and from the record, not restated in my own words.
 
 - $\mathcal W_5$ is the space of algebraic Weyl curvature operators at $n=5$, the $O(5)$-irreducible $[2,2]$ of dimension $35$ ([sym3-blocks.md](../findings/sym3-blocks.md), "The Weyl module and the group action").
-- $F_5=\tfrac32\lVert W\rVert^6-9\operatorname{tr}(W^3)^2$.
-- $W_0$ is the zero-padding into $\mathcal W_5$ of the $\mathbb{CP}^2$ Weyl operator. As an operator on $\Lambda^2\mathbb R^5$ its spectrum is $(2,-1,-1,0^7)/\sqrt6$, the value [sym3-blocks.md](../findings/sym3-blocks.md) records at "What the certificate would establish", so $\lVert W_0\rVert^2=(4+1+1)/6=1$ and $\operatorname{tr}(W_0^3)=(8-1-1)/6^{3/2}=1/\sqrt6$. I use these two numbers repeatedly and they are exact.
-- $K$ is "the span of cubics cut out by the orbit constraint" (L59). At source the constraint is $\sigma_\lambda(W_0)=0$, imposed **on the copy index alone**: [run_n5_assemble.py](../scripts/runs/run_n5_assemble.py) builds $T$ block by block killing one multiplicity in each $\lambda_2$-even block and keeping every $\lambda_2$-odd block whole. **I adopt the reading $K=C^\perp$ with $C=\operatorname{span}\{(gW_0)^3\}$**, equivalently $K=\{q\in\mathrm{Sym}^3\mathcal W_5^*: q\equiv0\text{ on }O(5)\cdot W_0\}$; the record admits also the reading "$q(W_0)=0$ at the single point $W_0$", and the two agree by the submodule argument recorded under L90 (the restriction cuts the copy index and leaves $V_\lambda$ whole).
+- $F_5=\tfrac32\lVert W\rVert^6-9\mathop{\mathrm{tr}}(W^3)^2$.
+- $W_0$ is the zero-padding into $\mathcal W_5$ of the $\mathbb{CP}^2$ Weyl operator. As an operator on $\Lambda^2\mathbb R^5$ its spectrum is $(2,-1,-1,0^7)/\sqrt6$, the value [sym3-blocks.md](../findings/sym3-blocks.md) records at "What the certificate would establish", so $\lVert W_0\rVert^2=(4+1+1)/6=1$ and $\mathop{\mathrm{tr}}(W_0^3)=(8-1-1)/6^{3/2}=1/\sqrt6$. I use these two numbers repeatedly and they are exact.
+- $K$ is "the span of cubics cut out by the orbit constraint" (L59). At source the constraint is $\sigma_\lambda(W_0)=0$, imposed **on the copy index alone**: [run_n5_assemble.py](../scripts/runs/run_n5_assemble.py) builds $T$ block by block killing one multiplicity in each $\lambda_2$-even block and keeping every $\lambda_2$-odd block whole. **I adopt the reading $K=C^\perp$ with $C=\mathop{\mathrm{span}}\{(gW_0)^3\}$**, equivalently $K=\{q\in\mathrm{Sym}^3\mathcal W_5^*: q\equiv0\text{ on }O(5)\cdot W_0\}$; the record admits also the reading "$q(W_0)=0$ at the single point $W_0$", and the two agree by the submodule argument recorded under L90 (the restriction cuts the copy index and leaves $V_\lambda$ whole).
 - $\mu$ is multiplication $\mathrm{Sym}^2(\mathrm{Sym}^3\mathcal W_5^*)\to\mathrm{Sym}^6\mathcal W_5^*$; $\mu_K$ is its restriction to $(\mathrm{Sym}^2K)^{O(5)}$. $\mathrm{Cat}_F$ is the adjoint, $\langle F,\mu(B)\rangle=\langle\mathrm{Cat}_F,B\rangle$.
 - $\mathrm{ANN}=\{F\in(\mathrm{Sym}^6\mathcal W_5)^{O(5)}:\mathrm{Cat}_F(K,K)=0\}$, a subspace of L85's $14$.
 - $A(\cdot)$: the brief says "the apolarity/dual pairing's image of a power". The only operative definition in the record is in [claim4_f5_at_w0.py](../scripts/reviewers/r210/claim4_f5_at_w0.py): $\langle F,A(W_0^6)\rangle$ is proportional to $F(W_0)$. **I adopt that reading** ($A(W_0^6)$ is the representative of evaluation at $W_0$) and §5 records what breaks under the literal one.
-- "restricted rank" I read as $\operatorname{rank}(\mu_K)$ throughout; §4 checks that against L59's "rank".
+- "restricted rank" I read as $\mathop{\mathrm{rank}}(\mu_K)$ throughout; §4 checks that against L59's "rank".
 
 ## Hypothesis inventory
 
@@ -43,16 +43,16 @@ Quoted from the brief and from the record, not restated in my own words.
 | H2 | $\lVert W_0\rVert\ne0$, so $\mathrm{ev}_{W_0}$ is nonzero on the $14$ | the cap | yes, as "$\lVert W\rVert^6$ is $1$ there" in the Gate-2 note; the block itself only asserts nonzero |
 | H3 | Every $q\in K$ vanishes at $W_0$ | the cap | asserted; true by construction on the $16$ even blocks, and on the $8$ odd blocks **only because $\dim V_\lambda^H=0$ for $\lambda_2$ odd** (L86) |
 | H4 | $K$ is an $O(5)$-submodule | needed for $P_{\mathrm{inv}}\mu(\mathrm{Sym}^2K)=\mu((\mathrm{Sym}^2K)^{O(5)})$, i.e. for ANN to be computed from the invariant part alone | no |
-| H5 | The pairing carrying $\langle F,\mu(B)\rangle=\langle\mathrm{Cat}_F,B\rangle$ is nondegenerate on the $14$ | $\operatorname{rank}(\mu_K)=14-\dim\mathrm{ANN}$ | no, the pairing is never named anywhere in the canon |
+| H5 | The pairing carrying $\langle F,\mu(B)\rangle=\langle\mathrm{Cat}_F,B\rangle$ is nondegenerate on the $14$ | $\mathop{\mathrm{rank}}(\mu_K)=14-\dim\mathrm{ANN}$ | no, the pairing is never named anywhere in the canon |
 | H6 | The pairing is reproducing: $\langle G,A(v^6)\rangle\propto G(v)$ | $A(W_0^6)\in\mathrm{ANN}$, and $F_5\perp A(W_0^6)$ | no, only in [claim4_f5_at_w0.py](../scripts/reviewers/r210/claim4_f5_at_w0.py) |
 | H7 | $F_5(W_0)=0$ | $F_5\perp\mathrm{ANN}$ | no, it sits in L61 and in the scripts |
-| H8 | The multiplicity copies are identified **equivariantly** in the sampled rows | the sampled rank is $\operatorname{rank}(\mathrm{ev}\circ\mu_K)$ at all; r209's $S_3$ counterexample gives sampled rank $10$ against a cap of $7$ without it | no |
-| H9 | The sampled matrix is $p$-integral, so its reduction is the reduction of something | $\operatorname{rank}_p\le\operatorname{rank}_{\mathbb Q}$ | no, guarded only by asserts inside [run_n5_assemble.py](../scripts/runs/run_n5_assemble.py) |
+| H8 | The multiplicity copies are identified **equivariantly** in the sampled rows | the sampled rank is $\mathop{\mathrm{rank}}(\mathrm{ev}\circ\mu_K)$ at all; r209's $S_3$ counterexample gives sampled rank $10$ against a cap of $7$ without it | no |
+| H9 | The sampled matrix is $p$-integral, so its reduction is the reduction of something | $\mathop{\mathrm{rank}}_p\le\mathop{\mathrm{rank}}_{\mathbb Q}$ | no, guarded only by asserts inside [run_n5_assemble.py](../scripts/runs/run_n5_assemble.py) |
 
 ### Carried, and not used
 
 - **L59's "$\mathrm{Cat}$ is injective on the invariant sextics because $\mu$ is surjective".** L62's chain never needs it; injectivity places the $14$ inside the $65$, which serves L59's own $65=36+29$ count and nothing in L62. **A hypothesis imported and unused is a finding under the brief's own item 1, and this is one.**
-- **L59's $65=36+29$.** Same: it is L59's necessary-condition count, and L62 consumes only $\operatorname{rank}=14-\dim\mathrm{ANN}$.
+- **L59's $65=36+29$.** Same: it is L59's necessary-condition count, and L62 consumes only $\mathop{\mathrm{rank}}=14-\dim\mathrm{ANN}$.
 - **L87's rank-one step and the $36$ unknowns.** §2 and §3 show both halves of L62 survive intact if some even block had evaluation rank $0$: the cap holds a fortiori, and the sampled rank stays a lower bound because a wrong-but-smaller restriction samples a subspace of $K$. L87 is load-bearing for "$36-13=23$", not for L62's stated conclusion. **The record nowhere separates these**, and [INDEX-results.md](../findings/INDEX-results.md) records the chain L87 → L59 → L62 as carrying two measured links, which overstates L62's dependence.
 - **$\mathcal W_5^H=\mathbb R W_0$.** Used only for the unimprovability remark (order-$2$ vanishing is free), not for the cap.
 
@@ -64,7 +64,7 @@ H5 and H6 are the two. H6 is the sharper omission: without "the pairing is repro
 
 The written step is: *evaluation at $W_0$ is a nonzero functional on the $14$ invariant sextics and every product of two cubics of $K$ vanishes there, so the restricted rank is at most $13$.*
 
-It closes, in this order. The map is $\mu_K\colon(\mathrm{Sym}^2K)^{O(5)}\to(\mathrm{Sym}^6\mathcal W_5)^{O(5)}$, and both the domain's invariance and the target's follow from equivariance of $\mu$. $\lVert W\rVert^6$ is an $O(5)$-invariant sextic with value $\lVert W_0\rVert^6=1$, so $\mathrm{ev}_{W_0}$ is a nonzero functional on the $14$ and $\ker\mathrm{ev}_{W_0}$ has dimension $13$. Every $B\in\mathrm{Sym}^2K$ is a sum of products $q_1q_2$ with $q_i\in K$, and $q_i(W_0)=0$, so $\mu(B)(W_0)=0$; hence $\operatorname{im}\mu_K\subseteq\ker\mathrm{ev}_{W_0}$ and $\operatorname{rank}\mu_K\le13$. **Six lines, no measurement, and the target is exactly the $14$ the rank is measured in.**
+It closes, in this order. The map is $\mu_K\colon(\mathrm{Sym}^2K)^{O(5)}\to(\mathrm{Sym}^6\mathcal W_5)^{O(5)}$, and both the domain's invariance and the target's follow from equivariance of $\mu$. $\lVert W\rVert^6$ is an $O(5)$-invariant sextic with value $\lVert W_0\rVert^6=1$, so $\mathrm{ev}_{W_0}$ is a nonzero functional on the $14$ and $\ker\mathrm{ev}_{W_0}$ has dimension $13$. Every $B\in\mathrm{Sym}^2K$ is a sum of products $q_1q_2$ with $q_i\in K$, and $q_i(W_0)=0$, so $\mu(B)(W_0)=0$; hence $\mathop{\mathrm{im}}\mu_K\subseteq\ker\mathrm{ev}_{W_0}$ and $\mathop{\mathrm{rank}}\mu_K\le13$. **Six lines, no measurement, and the target is exactly the $14$ the rank is measured in.**
 
 Two things the written form leaves out and I had to supply from elsewhere in the record to make the step true:
 
@@ -75,11 +75,11 @@ The Gate-2 note's extra claim, that the cap is unimprovable by higher-order vani
 
 ## 2. Every inequality's direction, CONFIRMED, and what the sample is OF, REFUTED AS STATED
 
-**Sampled versus true.** The measured object is a $40\times47$ matrix whose row $t$ carries the $47$ real Hermitian coordinates of the restricted Gram at the sample point $W_t$; I read the row count, the column count and the block shape straight off the stored dumps, which carry `shape` $=[3,3,2,1,2,1,2,1,2,2,1,1,1,1,1,1]$, $16$ blocks, $\sum m=25$, $\sum m^2=47$. Its rank is $\operatorname{rank}(\mathrm{ev}\circ\mu_K)$ where $\mathrm{ev}$ evaluates at those $40$ points. Post-composition can only lose rank, so $\operatorname{rank}(\mathrm{ev}\circ\mu_K)\le\operatorname{rank}(\mu_K)$. **Sampled bounds the true from below.** Both written forms say this, in opposite phrasings that mean the same thing ("bounds the true rank from below" (Form A) and "is bounded above by the true one" (Form B)) and both are right.
+**Sampled versus true.** The measured object is a $40\times47$ matrix whose row $t$ carries the $47$ real Hermitian coordinates of the restricted Gram at the sample point $W_t$; I read the row count, the column count and the block shape straight off the stored dumps, which carry `shape` $=[3,3,2,1,2,1,2,1,2,2,1,1,1,1,1,1]$, $16$ blocks, $\sum m=25$, $\sum m^2=47$. Its rank is $\mathop{\mathrm{rank}}(\mathrm{ev}\circ\mu_K)$ where $\mathrm{ev}$ evaluates at those $40$ points. Post-composition can only lose rank, so $\mathop{\mathrm{rank}}(\mathrm{ev}\circ\mu_K)\le\mathop{\mathrm{rank}}(\mu_K)$. **Sampled bounds the true from below.** Both written forms say this, in opposite phrasings that mean the same thing ("bounds the true rank from below" (Form A) and "is bounded above by the true one" (Form B)) and both are right.
 
-**Mod $p$ versus characteristic zero.** For a $p$-integral matrix, a nonzero $k\times k$ minor mod $p$ lifts to a nonzero minor over $\mathbb Q$, so $\operatorname{rank}_p\le\operatorname{rank}_{\mathbb Q}$. **Reduction can only lower.** Written correctly.
+**Mod $p$ versus characteristic zero.** For a $p$-integral matrix, a nonzero $k\times k$ minor mod $p$ lifts to a nonzero minor over $\mathbb Q$, so $\mathop{\mathrm{rank}}_p\le\mathop{\mathrm{rank}}_{\mathbb Q}$. **Reduction can only lower.** Written correctly.
 
-**The squeeze consumes both the right way round:** $13=\operatorname{rank}_p(\mathrm{ev}\circ\mu_K)\le\operatorname{rank}_{\mathbb Q}(\mathrm{ev}\circ\mu_K)\le\operatorname{rank}(\mu_K)\le13$. Attainment forces equality. No inequality is reversed.
+**The squeeze consumes both the right way round:** $13=\mathop{\mathrm{rank}}_p(\mathrm{ev}\circ\mu_K)\le\mathop{\mathrm{rank}}_{\mathbb Q}(\mathrm{ev}\circ\mu_K)\le\mathop{\mathrm{rank}}(\mu_K)\le13$. Attainment forces equality. No inequality is reversed.
 
 ### Discrepancy 2.1, "a sample of $K$" names an object the run never forms
 
@@ -89,17 +89,17 @@ The Gate-2 note's extra claim, that the cap is unimprovable by higher-order vani
 
 ## 3. $\dim\mathrm{ANN}=1$ from rank $=13$, CONFIRMED AS ALGEBRA, with one debt
 
-$\operatorname{rank}=14-\dim\mathrm{ANN}$ has two readings and they need different amounts of work.
+$\mathop{\mathrm{rank}}=14-\dim\mathrm{ANN}$ has two readings and they need different amounts of work.
 
-- **As rank-nullity.** Let $\Psi\colon(\mathrm{Sym}^6)^{O(5)}\to(\mathrm{Sym}^2K)^*$ send $F$ to $\mathrm{Cat}_F|_{K\times K}$. Then $\ker\Psi=\mathrm{ANN}$ by definition and $\operatorname{rank}\Psi=14-\dim\mathrm{ANN}$ with no hypothesis at all. **Under this reading the identity is a tautology.**
-- **As a statement about $\mu_K$**, which is what L62 needs, since $13$ is measured on $\mu_K$. Then $\operatorname{rank}\Psi=\operatorname{rank}(\mu_K)$ requires two things: that the pairing restricted to the $14$ be nondegenerate (H5), and that the invariant projection commute with $\mu$ so that pairing invariant sextics against $\mu(\mathrm{Sym}^2K)$ sees exactly $\mu((\mathrm{Sym}^2K)^{O(5)})$ (H4).
+- **As rank-nullity.** Let $\Psi\colon(\mathrm{Sym}^6)^{O(5)}\to(\mathrm{Sym}^2K)^*$ send $F$ to $\mathrm{Cat}_F|_{K\times K}$. Then $\ker\Psi=\mathrm{ANN}$ by definition and $\mathop{\mathrm{rank}}\Psi=14-\dim\mathrm{ANN}$ with no hypothesis at all. **Under this reading the identity is a tautology.**
+- **As a statement about $\mu_K$**, which is what L62 needs, since $13$ is measured on $\mu_K$. Then $\mathop{\mathrm{rank}}\Psi=\mathop{\mathrm{rank}}(\mu_K)$ requires two things: that the pairing restricted to the $14$ be nondegenerate (H5), and that the invariant projection commute with $\mu$ so that pairing invariant sextics against $\mu(\mathrm{Sym}^2K)$ sees exactly $\mu((\mathrm{Sym}^2K)^{O(5)})$ (H4).
 
 **H4 holds** and I checked it: $K$ is built as $\bigoplus_\lambda M'_\lambda\otimes V_\lambda$ with $M'_\lambda\subseteq M_\lambda$ a multiplicity subspace, so it is an $O(5)$-submodule, and the invariant projection is equivariant.
 
 ### HYPOTHESIS-DEBT 3.1, the pairing is never named, and the identity needs it nondegenerate on the $14$
 
 1. **Located.** [results.md:619](../results.md), *"Apolarity, $\langle F,\mu(B)\rangle=\langle\mathrm{Cat}_F,B\rangle$, gives $\mathrm{rank}=14-\dim\mathrm{ANN}$"*, and [results.md:629](../results.md) consuming it.
-2. **The failure.** $\langle\cdot,\cdot\rangle$ appears on both sides as an undefined symbol on two different spaces. If it were degenerate on the $14$ (a degenerate invariant symmetric form on a real $14$-dimensional space is not an exotic object) then $\operatorname{rank}\Psi$ and $\operatorname{rank}(\mu_K)$ would differ by the dimension of the radical, and the measured $13$ would not transfer to $\dim\mathrm{ANN}=1$.
+2. **The failure.** $\langle\cdot,\cdot\rangle$ appears on both sides as an undefined symbol on two different spaces. If it were degenerate on the $14$ (a degenerate invariant symmetric form on a real $14$-dimensional space is not an exotic object) then $\mathop{\mathrm{rank}}\Psi$ and $\mathop{\mathrm{rank}}(\mu_K)$ would differ by the dimension of the radical, and the measured $13$ would not transfer to $\dim\mathrm{ANN}=1$.
 3. **The opposite.** The scripts pair through their own `ip3` product, so the intended object is identifiable from the code; and the record's phrase "apolarity" points at a specific classical form. **But identifying it from code is not the record stating it**, and this is the one gap where supplying the missing sentence would change a verdict rather than a wording. **What would have to be written and proved: that the pairing intended by "apolarity" is nondegenerate on $(\mathrm{Sym}^6\mathcal W_5)^{O(5)}$.** I do not supply it.
 
 ## 4. Is "restricted rank" one number?, CONFIRMED, with one reconciliation the record does not make
@@ -108,12 +108,12 @@ Four quantities in [sym3-blocks.md](../findings/sym3-blocks.md) are called "rank
 
 | name | map | value | status |
 |---|---|---|---|
-| L89's $\operatorname{rank}(\mu\vert_{\mathrm{inv}})$ | unrestricted, $65\to14$ | $14$ | theorem (exactness of invariants) |
+| L89's $\mathop{\mathrm{rank}}(\mu\vert_{\mathrm{inv}})$ | unrestricted, $65\to14$ | $14$ | theorem (exactness of invariants) |
 | L62's, L59's, L90's restricted rank | $\mu_K$, $36\to14$ | $13$ | cap proved, value measured |
 | L91's "open in $[1,13]$" | the same $\mu_K$ | open | superseded stratum, never retracted |
-| the sampled $\operatorname{rank}(A)$ | $\mathrm{ev}\circ\mu_K$, $47\to40$ | $13$ | measured |
+| the sampled $\mathop{\mathrm{rank}}(A)$ | $\mathrm{ev}\circ\mu_K$, $47\to40$ | $13$ | measured |
 
-L59's "rank" and L62's "restricted rank" are the same number, and the sampled rank is a lower bound for it. **The reconciliation the record omits is between the $47$ Hermitian columns actually measured and the $36$ real unknowns L59 counts**: they agree because the $47-36=11$ antisymmetric invariant directions map to the zero sextic (L88's "gauge"), so the sampled matrix has rank at most $36$ and its rank is the rank of the induced map on the real $36$. Even if L88's identification of *which* $11$ were wrong, [r204](../findings/sym3-blocks.md) refutes the labelling and leaves the count, the inequality that L62 consumes is unaffected, because a rank measured on a larger coordinate set is still a lower bound for $\operatorname{rank}(\mu_K)$.
+L59's "rank" and L62's "restricted rank" are the same number, and the sampled rank is a lower bound for it. **The reconciliation the record omits is between the $47$ Hermitian columns actually measured and the $36$ real unknowns L59 counts**: they agree because the $47-36=11$ antisymmetric invariant directions map to the zero sextic (L88's "gauge"), so the sampled matrix has rank at most $36$ and its rank is the rank of the induced map on the real $36$. Even if L88's identification of *which* $11$ were wrong, [r204](../findings/sym3-blocks.md) refutes the labelling and leaves the count, the inequality that L62 consumes is unaffected, because a rank measured on a larger coordinate set is still a lower bound for $\mathop{\mathrm{rank}}(\mu_K)$.
 
 ## 5. $\mathrm{ANN}$ spanned by $A(W_0^6)$, HYPOTHESIS-DEBT
 
@@ -131,7 +131,7 @@ Two claims, and they need different things.
 
 ## 6. $F_5\perp\mathrm{ANN}$, CONFIRMED, conditional on the measured half
 
-$F_5\perp A(W_0^6)$ reduces by H6 to $F_5(W_0)=0$, and that I checked in closed form from the record's own spectrum, with no computation: $\lVert W_0\rVert^2=(4+1+1)/6=1$ and $\operatorname{tr}(W_0^3)=(8-1-1)/6^{3/2}=1/\sqrt6$, so
+$F_5\perp A(W_0^6)$ reduces by H6 to $F_5(W_0)=0$, and that I checked in closed form from the record's own spectrum, with no computation: $\lVert W_0\rVert^2=(4+1+1)/6=1$ and $\mathop{\mathrm{tr}}(W_0^3)=(8-1-1)/6^{3/2}=1/\sqrt6$, so
 $$F_5(W_0)=\tfrac32\cdot1^3-9\cdot\tfrac16=\tfrac32-\tfrac32=0 .$$
 The same number in the certificate's flat-tensor normalisation is $\tfrac32(4\cdot6)^3-9(8\cdot6)^2=20736-20736=0$, which is the identity $96t^3=576t^2$ at $t=6$ that [claim4_f5_at_w0.py](../scripts/reviewers/r210/claim4_f5_at_w0.py) records. **Both normalisations give zero, exactly, and the agreement is degree-$6$ homogeneity rather than a coincidence.**
 
@@ -149,15 +149,15 @@ This is the item where I differ from the record.
 
 [r633](../reviews/REVIEW_r633.md) §7 records that *"the four primes near $2^{40}$ belong to the certificate's row lift, a different computation"*, and [INDEX-results.md](../findings/INDEX-results.md) and [results.md](../results.md) carry that verdict. **I withdraw it, and it should be withdrawn from the record.** The row lift and the rank measurement are the same matrix: the lift's inputs are the four dumps, and the dumps are the restricted sampled rows whose rank is asserted to be $13$ at each prime before dumping. The reviewer's inference (that primes named for a lift cannot also be primes of a rank), does not survive reading the producing script.
 
-**The honest caveat, which no site states.** The four primes are four reductions of **one** $40$-point sample under **one** fixed seed, not four independent samples. For the lower bound this is redundancy against an unlucky reduction and nothing more: a single prime already gives $\operatorname{rank}(\mu_K)\ge13$, so the count four is not load-bearing. What the count does not do is broaden the sample, and the phrase "at four primes" invites the reading that it does.
+**The honest caveat, which no site states.** The four primes are four reductions of **one** $40$-point sample under **one** fixed seed, not four independent samples. For the lower bound this is redundancy against an unlucky reduction and nothing more: a single prime already gives $\mathop{\mathrm{rank}}(\mu_K)\ge13$, so the count four is not load-bearing. What the count does not do is broaden the sample, and the phrase "at four primes" invites the reading that it does.
 
 ## 8. Quantifier order, scope, and what cites L62 above its reach
 
 - **Scope of the conclusion.** $n=5$ only, and the record says why it does not lift (the Lovelock syzygy makes the cubic invariant space one-dimensional at $n\le5$ and two-dimensional from $n\ge6$). No step of L62 is quantified over $n$.
-- **The live half.** $\operatorname{rank}\ge13$, $\dim\mathrm{ANN}=1$, $\mathrm{ANN}=\mathbb R A(W_0^6)$ and $F_5\in\operatorname{image}$ all rest on the sampled mod-$p$ rank. [report/sections/09-status.tex](../report/sections/09-status.tex) now says so ("Cap proven; equality an Observation"), and [results.md:206](../results.md) does not.
+- **The live half.** $\mathop{\mathrm{rank}}\ge13$, $\dim\mathrm{ANN}=1$, $\mathrm{ANN}=\mathbb R A(W_0^6)$ and $F_5\in\mathop{\mathrm{image}}$ all rest on the sampled mod-$p$ rank. [report/sections/09-status.tex](../report/sections/09-status.tex) now says so ("Cap proven; equality an Observation"), and [results.md:206](../results.md) does not.
 - **One phrase reaches past the proof.** [results.md:23](../results.md): *"a sampled mod-$p$ rank is a rigorous lower bound, and under an exact cap a lower bound is all that is needed, so L87's rank and L62's value are proofs rather than measurements."* The **shape** of the argument is a proof; its **input** is a machine-computed rank of a machine-built matrix under hypotheses H8 and H9. L62's own closing sentence, *"The argument is exact, the sampling being a lower bound rather than a numerical estimate"*, is true and is doing the work of a stronger sentence, it distinguishes exact from floating-point, and readers take it as distinguishing derived from computed. **Nothing else I found cites L62 above what it reaches.**
 - **What L62 does not claim, and correctly.** It settles the linear necessary condition only. A certificate still owes a PSD point in the $23$-dimensional affine family, and L62 nowhere suggests otherwise.
-- **Downstream, the dependency runs the way L90's block says it does.** The certificate's identity at $40$ points needs evaluation injective on $\operatorname{im}\mu_K$, which closes as $13\le\operatorname{rank}(\mathrm{ev}\circ\mu_K)\le\operatorname{rank}\mu_K\le13$, L62's cap plus L62's measurement. So **L61, tabled as proven, transitively consumes L62's measured half** unless the record adopts r213's alternative unrestricted route, which is a different measurement rather than an escape from measurement. The two routes are both on file and neither is designated.
+- **Downstream, the dependency runs the way L90's block says it does.** The certificate's identity at $40$ points needs evaluation injective on $\mathop{\mathrm{im}}\mu_K$, which closes as $13\le\mathop{\mathrm{rank}}(\mathrm{ev}\circ\mu_K)\le\mathop{\mathrm{rank}}\mu_K\le13$, L62's cap plus L62's measurement. So **L61, tabled as proven, transitively consumes L62's measured half** unless the record adopts r213's alternative unrestricted route, which is a different measurement rather than an escape from measurement. The two routes are both on file and neither is designated.
 - **An incidental, outside L62's scope.** [results.md:23](../results.md) carries the sentence *"L90's stated proof was withdrawn as circular, its repair sitting twelve lines below it"* **twice, consecutively, verbatim**.
 
 ## 9. The named traps, each checked
@@ -172,7 +172,7 @@ This is the item where I differ from the record.
 
 ## 10. Withdrawn candidates
 
-- **"The mod-$p$ sample lives in characteristic $p$, so it is not the reduction of anything."** This is the defect the record books against L87, whose orbit points are Cayley transforms of skew matrices over $\mathrm{GF}(46337)$. **It does not apply to L62.** [run_n5_assemble.py](../scripts/runs/run_n5_assemble.py) draws sample points with integer coordinates in $\{-4,\dots,4\}^{35}$ as exact `Fraction`s, maps them through the module basis over $\mathbb Q$, and reduces; the adapted-basis coefficients are Gaussian rationals with an explicit assert that no denominator is divisible by $p$. **So the matrix reduced is a genuine $p$-integral matrix over $\mathbb Q$ and $\operatorname{rank}_p\le\operatorname{rank}_{\mathbb Q}$ is licensed.** The L87 block's claim that L62 is "identical in shape" to it is wrong on exactly this point, and in L62's favour.
+- **"The mod-$p$ sample lives in characteristic $p$, so it is not the reduction of anything."** This is the defect the record books against L87, whose orbit points are Cayley transforms of skew matrices over $\mathrm{GF}(46337)$. **It does not apply to L62.** [run_n5_assemble.py](../scripts/runs/run_n5_assemble.py) draws sample points with integer coordinates in $\{-4,\dots,4\}^{35}$ as exact `Fraction`s, maps them through the module basis over $\mathbb Q$, and reduces; the adapted-basis coefficients are Gaussian rationals with an explicit assert that no denominator is divisible by $p$. **So the matrix reduced is a genuine $p$-integral matrix over $\mathbb Q$ and $\mathop{\mathrm{rank}}_p\le\mathop{\mathrm{rank}}_{\mathbb Q}$ is licensed.** The L87 block's claim that L62 is "identical in shape" to it is wrong on exactly this point, and in L62's favour.
 - **"The measured rank is of a $47$-column Hermitian matrix, while L59's rank is of a $36$-dimensional real space."** Withdrawn: §4. Either the $11$ extra directions die (L88) and the ranks agree, or they do not and the measured rank is still a lower bound. The conclusion cannot break here.
 - **"$K$ may not be $O(5)$-stable, so ANN cannot be read off the invariant part."** Withdrawn: $K=\bigoplus M'_\lambda\otimes V_\lambda$ is a submodule by construction.
 - **"$\pm W_0$ give two obstructions, so $\dim\mathrm{ANN}\ge2$."** Withdrawn: invariant sextics are even and constant on orbits, so $\mathrm{ev}_{-W_0}=\mathrm{ev}_{gW_0}=\mathrm{ev}_{W_0}$ on the $14$ and the two points induce the same functional. I checked the one nearby candidate that could have escaped this: the opposite-orientation $\overline{\mathbb{CP}}^2$ operator is $\mathrm{diag}(-1,1,1,1,1)\cdot W_0$ with $\mathrm{diag}(-1,1,1,1,1)\in O(5)$, so it lies in the same $O(5)$-orbit and gives nothing new either.
@@ -182,15 +182,15 @@ This is the item where I differ from the record.
 
 **L62 as a whole: CONFIRMED AS ALGEBRA, with the value measured, and with five hypotheses that must be written down before the block can be checked as written.**
 
-- The cap $\operatorname{rank}\le13$ is a theorem and I re-derived it; it needs L85 and, on the odd blocks, L86, neither cited.
+- The cap $\mathop{\mathrm{rank}}\le13$ is a theorem and I re-derived it; it needs L85 and, on the odd blocks, L86, neither cited.
 - Both sampling inequalities point the right way and are consumed the right way round.
-- $\operatorname{rank}=14-\dim\mathrm{ANN}$ is rank-nullity for $\Psi$ and needs a nondegenerate pairing to become a statement about $\mu_K$, the one debt that could change a number.
+- $\mathop{\mathrm{rank}}=14-\dim\mathrm{ANN}$ is rank-nullity for $\Psi$ and needs a nondegenerate pairing to become a statement about $\mu_K$, the one debt that could change a number.
 - $A(W_0^6)\in\mathrm{ANN}$ and $F_5\perp A(W_0^6)$ both follow, from a reproducing property that lives only in a reviewer script; $F_5(W_0)=0$ is exact in both normalisations and I verified it by hand.
 - "At four primes" is **supported**, at four dumped primes near $2^{40}$ plus two more; the record's standing finding to the contrary should be withdrawn, and the caveat that should replace it is that the four are one sample reduced four ways.
 
 ## What a counterexample would look like, and what I did to find one
 
-**A falsifier is a second invariant sextic in $\mathrm{ANN}$**, an $F\in(\mathrm{Sym}^6\mathcal W_5)^{O(5)}$, not proportional to the representative of $\mathrm{ev}_{W_0}$, whose catalecticant kills $K\times K$; equivalently, whose $\mathrm{Cat}_F$ is supported on $C=\operatorname{span}\{(gW_0)^3\}$. It would make $\dim\mathrm{ANN}\ge2$, drop the rank below $13$, and (unless $F_5$ happened to be orthogonal to it too), kill the necessary condition and the certificate route with it.
+**A falsifier is a second invariant sextic in $\mathrm{ANN}$**, an $F\in(\mathrm{Sym}^6\mathcal W_5)^{O(5)}$, not proportional to the representative of $\mathrm{ev}_{W_0}$, whose catalecticant kills $K\times K$; equivalently, whose $\mathrm{Cat}_F$ is supported on $C=\mathop{\mathrm{span}}\{(gW_0)^3\}$. It would make $\dim\mathrm{ANN}\ge2$, drop the rank below $13$, and (unless $F_5$ happened to be orthogonal to it too), kill the necessary condition and the certificate route with it.
 
 **In the special form the record already reaches for**, a falsifier is a $v\in\mathcal W_5$ with $A(v^6)\in\mathrm{ANN}$ and $A(v^6)$ not proportional to $A(W_0^6)$. By H6 that is exactly $q(v)=0$ for every $q\in K$, i.e. $v^3\in C$, i.e., using the record's own reproducing identity $\Delta_K+\Delta_C=\lVert W\rVert^6$ from L91's aside, the closed condition
 $$\Delta_K(v)=0,\qquad\text{equivalently}\qquad \Delta_C(v)=\lVert v\rVert^6 ,$$

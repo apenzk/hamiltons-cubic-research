@@ -6,7 +6,7 @@
 
 **§1, the splitting.** "For an oriented Riemannian four-manifold $(M,g)$, the bundle of 2-forms over $M$ splits as the Whitney sum $\Lambda^2M=\Lambda^+ + \Lambda^-$, $\Lambda^\pm$ being the eigenspace bundles of the Hodge star operator. The Weyl conformal tensor $W$ leaves $\Lambda^\pm$ invariant, and the restriction $W^\pm$ of $W$ to $\Lambda^\pm$ may be viewed as a $(0,4)$ tensor, operating trivially on $\Lambda^\mp$. The oriented Riemannian four-manifold $(M,g)$ is said to be **self-dual** (resp., **anti-self-dual**) if $W^-=0$ (resp., $W^+=0$)." (p. 405.)
 
-**Proposition 2 (p. 415), the Kähler spectrum.** "Let $(M,g,\omega)$ be a Kähler manifold of real dimension four, oriented in the natural way. Considering $W^+$ as an endomorphism of $\Lambda^2M$, trivial on $\Lambda^-M$, we have [the displayed formula in $u$ and the parallel tensor of (36)] … Moreover, (i) $\#\operatorname{spec}_{\Lambda^+}(W^+)\le2$, i.e. the endomorphism $W^+$ of $\Lambda^+$ has, at each point, less than three distinct eigenvalues; (ii) $u^2=24\lvert W^+\rvert^2$; (iii) $u\,\delta W^+ + W^+(\nabla u,\cdot,\cdot,\cdot)=0$." Its proof opens: "Since $W(\omega)=u\omega/6$ by (11) …", $u$ being the scalar curvature.
+**Proposition 2 (p. 415), the Kähler spectrum.** "Let $(M,g,\omega)$ be a Kähler manifold of real dimension four, oriented in the natural way. Considering $W^+$ as an endomorphism of $\Lambda^2M$, trivial on $\Lambda^-M$, we have [the displayed formula in $u$ and the parallel tensor of (36)] … Moreover, (i) $\#\mathop{\mathrm{spec}}_{\Lambda^+}(W^+)\le2$, i.e. the endomorphism $W^+$ of $\Lambda^+$ has, at each point, less than three distinct eigenvalues; (ii) $u^2=24\lvert W^+\rvert^2$; (iii) $u\,\delta W^+ + W^+(\nabla u,\cdot,\cdot,\cdot)=0$." Its proof opens: "Since $W(\omega)=u\omega/6$ by (11) …", $u$ being the scalar curvature.
 
 **What that pins down.** $W^+$ is trace-free on the three-dimensional $\Lambda^+$; the Kähler form is an eigenvector with eigenvalue $u/6$; at most two distinct eigenvalues occur. Hence the spectrum is $(u/6,-u/12,-u/12)$, which is $\tfrac{u}{12}\cdot(2,-1,-1)$, the proportionality Corollary 2 asserts, with every entry nonzero exactly when $u\ne0$. The paper's own clause (ii) is the check: $(u/6)^2+2(u/12)^2=u^2/36+u^2/72=u^2/24$.
 
@@ -22,7 +22,7 @@ Take $n=2$ and the orthonormal frame $e_1,\ e_2=Je_1,\ e_3,\ e_4=Je_3$, so that 
 
 **Sectional curvatures.** $R(a,b,a,b)=1+3\langle Ja,b\rangle^2$ for orthonormal $a,b$, giving $4$ on holomorphic planes and $1$ on totally real ones, which is the stated range.
 
-**Ricci and scalar.** $\operatorname{Ric}_{11}=R_{1212}+R_{1313}+R_{1414}=4+1+1=6$, so $\operatorname{Ric}=6g$ and $u=24$.
+**Ricci and scalar.** $\mathop{\mathrm{Ric}}_{11}=R_{1212}+R_{1313}+R_{1414}=4+1+1=6$, so $\mathop{\mathrm{Ric}}=6g$ and $u=24$.
 
 **Weyl.** In dimension four an Einstein tensor of scalar curvature $u$ has $W=R-\kappa\,(g_{ac}g_{bd}-g_{ad}g_{bc})$ with $\kappa=u/12=2$, so
 

@@ -28,7 +28,7 @@ Cold brief ([ADJ_L115_F2.md](ADJ_L115_F2.md)), no numerical work, no scripts wri
 - **H1 (frame).** $M(\lambda)$ and $\mathcal D$ are formed in the coordinate eigenframe. When the spectrum of $W$ is simple this is forced up to signs, which do not change $c'^2$. When eigenvalues repeat, as at $S^m\times S^m$, another eigenframe gives another $M$, and the step is proved for the coordinate one.
 - **H2 (L24).** Passage C, a given: at a local maximiser with $\theta>0$, $\langle Y,L_eY\rangle\le\tfrac12|Y|^2$ for $Y\in\mathcal W_n\cap W^\perp$.
 - **H3 (lower bound).** $M(n)\ge\sqrt{3/2}$ (padded $W_{\mathbb{CP}^2}$, a given).
-- **H4 (standard).** The trilinear form $\langle X,Y\circ Z\rangle$ is totally symmetric on symmetric operators on $\Lambda^2$, so $L_W$ is self-adjoint. Proof: $\langle X,\tfrac12(YZ+ZY)\rangle=\tfrac12(\operatorname{tr}XYZ+\operatorname{tr}XZY)$ is invariant under every permutation for symmetric matrices, and $\langle X,Y\#Z\rangle=\tfrac12\sum c'_{\alpha\gamma\delta}c'_{\beta\varepsilon\zeta}X_{\alpha\beta}Y_{\gamma\varepsilon}Z_{\delta\zeta}$ picks up the square of one sign under a permutation of $X,Y,Z$ because $c'$ is totally antisymmetric.
+- **H4 (standard).** The trilinear form $\langle X,Y\circ Z\rangle$ is totally symmetric on symmetric operators on $\Lambda^2$, so $L_W$ is self-adjoint. Proof: $\langle X,\tfrac12(YZ+ZY)\rangle=\tfrac12(\mathop{\mathrm{tr}}XYZ+\mathop{\mathrm{tr}}XZY)$ is invariant under every permutation for symmetric matrices, and $\langle X,Y\#Z\rangle=\tfrac12\sum c'_{\alpha\gamma\delta}c'_{\beta\varepsilon\zeta}X_{\alpha\beta}Y_{\gamma\varepsilon}Z_{\delta\zeta}$ picks up the square of one sign under a permutation of $X,Y,Z$ because $c'$ is totally antisymmetric.
 - "Global" enters through H2 (a global maximiser is a local one) and through H3 (at a global maximiser $\theta=M(n)$). The $S^m\times S^m$ clause needs neither.
 
 ## 2. M is the compression of L_W to the eigenframe-diagonal algebra (C1)
@@ -41,13 +41,13 @@ using H4 for the middle step and the total symmetry of $c'^2$. Hence $\lambda_{\
 
 In the coordinate frame the same form reads, for a hollow symmetric $X$,
 
-$$q_S(X)=\sum_{i<j}S_{ij}x_{ij}^2+\tfrac12\operatorname{tr}(SX^2),$$
+$$q_S(X)=\sum_{i<j}S_{ij}x_{ij}^2+\tfrac12\mathop{\mathrm{tr}}(SX^2),$$
 
 because the ordered pairs of adjacent edges $(\{i,j\},\{j,k\})$ are in bijection with ordered distinct triples $(i,j,k)$, and hollowness removes the coincident terms. Check: $q_S(S)=\sum_{i<j}S_{ij}^3+3\sum_{\triangle}S_{ij}S_{jk}S_{ik}=P$.
 
 ## 3. The diagonal locus splits, with no cross term (C2, C3)
 
-**C2.** A coordinate-diagonal symmetric operator has no component in $\Lambda^4$, since that component is built from entries $R_{ijkl}$ with four distinct indices, all zero. So every hollow symmetric $S$ is an algebraic curvature operator, with $\operatorname{Ric}_{ii}=(S\mathbf 1)_i$ and $\operatorname{Ric}_{ij}=0$ for $i\ne j$. It is Weyl iff $S\mathbf 1=0$. The map $\rho:X\mapsto X\mathbf 1$ satisfies $\langle X\mathbf 1,u\rangle=\sum_{i<j}x_{ij}(u_i+u_j)$, so $\rho^*u=(u_i+u_j)_{i<j}$ and $\mathcal D=\mathcal D_W\oplus\mathcal D_N$ orthogonally, with $\mathcal D_W=\ker\rho$ and $\mathcal D_N=\{x_{ij}=u_i+u_j\}$.
+**C2.** A coordinate-diagonal symmetric operator has no component in $\Lambda^4$, since that component is built from entries $R_{ijkl}$ with four distinct indices, all zero. So every hollow symmetric $S$ is an algebraic curvature operator, with $\mathop{\mathrm{Ric}}_{ii}=(S\mathbf 1)_i$ and $\mathop{\mathrm{Ric}}_{ij}=0$ for $i\ne j$. It is Weyl iff $S\mathbf 1=0$. The map $\rho:X\mapsto X\mathbf 1$ satisfies $\langle X\mathbf 1,u\rangle=\sum_{i<j}x_{ij}(u_i+u_j)$, so $\rho^*u=(u_i+u_j)_{i<j}$ and $\mathcal D=\mathcal D_W\oplus\mathcal D_N$ orthogonally, with $\mathcal D_W=\ker\rho$ and $\mathcal D_N=\{x_{ij}=u_i+u_j\}$.
 
 **C3.** The annotation bounds the two pieces separately, which is legitimate only if $\langle A,L_WB\rangle=0$ for $A\in\mathcal D_W$, $B\in\mathcal D_N$. This holds. Let $T=W\circ A$ with $S\mathbf 1=A\mathbf 1=0$. For each $i$,
 
@@ -59,17 +59,17 @@ $$\lambda_{\max}(M)=\max\Big(\sup_{\mathcal D_W}\frac{q_S}{|\cdot|^2},\ \sup_{\m
 
 ## 4. The non-Weyl part, exactly (C4)
 
-Take $X=u\mathbf 1^{\mathsf T}+\mathbf 1u^{\mathsf T}-2\operatorname{diag}(u)$, the hollow matrix with $x_{ij}=u_i+u_j$, and $S$ hollow with $S\mathbf 1=0$.
+Take $X=u\mathbf 1^{\mathsf T}+\mathbf 1u^{\mathsf T}-2\mathop{\mathrm{diag}}(u)$, the hollow matrix with $x_{ij}=u_i+u_j$, and $S$ hollow with $S\mathbf 1=0$.
 
 - First term: $\sum_{i<j}S_{ij}(u_i+u_j)^2=\sum_iu_i^2(S\mathbf 1)_i+u^{\mathsf T}Su=u^{\mathsf T}Su$.
-- Second term: $SX=Su\mathbf 1^{\mathsf T}-2S\operatorname{diag}(u)$, and expanding $\operatorname{tr}(XSX)$ term by term gives $0-0+n\,u^{\mathsf T}Su-2u^{\mathsf T}Su-2u^{\mathsf T}Su+4\sum_iu_i^2S_{ii}=(n-4)\,u^{\mathsf T}Su$.
+- Second term: $SX=Su\mathbf 1^{\mathsf T}-2S\mathop{\mathrm{diag}}(u)$, and expanding $\mathop{\mathrm{tr}}(XSX)$ term by term gives $0-0+n\,u^{\mathsf T}Su-2u^{\mathsf T}Su-2u^{\mathsf T}Su+4\sum_iu_i^2S_{ii}=(n-4)\,u^{\mathsf T}Su$.
 - So $q_S(X)=\tfrac{n-2}2\,u^{\mathsf T}Su$, and $|X|^2=(n-2)|u|^2+(\mathbf 1^{\mathsf T}u)^2$.
 
 Write $u=c\mathbf 1+w$ with $w\perp\mathbf 1$. Then $u^{\mathsf T}Su=w^{\mathsf T}Sw$ and $|X|^2=(n-2)|w|^2+(2n-2)nc^2$, so
 
 $$\frac{q_S(X)}{|X|^2}=\frac{(n-2)\,w^{\mathsf T}Sw}{2\big((n-2)|w|^2+(2n-2)nc^2\big)}\le\tfrac12\lambda_{\max}(S),$$
 
-with equality at $c=0$ and $w$ a top eigenvector (which lies in $\mathbf 1^\perp$ because $\operatorname{tr}S=0$ forces $\lambda_{\max}(S)\ge0$ and $\mathbf 1$ has eigenvalue $0$). For unit $W$, $\|S\|_F^2=2$ and $\operatorname{tr}S=0$, so $\lambda_{\max}(S)^2\le\tfrac{n-1}n\cdot2$ and
+with equality at $c=0$ and $w$ a top eigenvector (which lies in $\mathbf 1^\perp$ because $\mathop{\mathrm{tr}}S=0$ forces $\lambda_{\max}(S)\ge0$ and $\mathbf 1$ has eigenvalue $0$). For unit $W$, $\|S\|_F^2=2$ and $\mathop{\mathrm{tr}}S=0$, so $\lambda_{\max}(S)^2\le\tfrac{n-1}n\cdot2$ and
 
 $$\sup_{\mathcal D_N}\frac{q_S}{|\cdot|^2}=\tfrac12\lambda_{\max}(S)\le\tfrac1{\sqrt2}\sqrt{\tfrac{n-1}n}<\tfrac1{\sqrt2}.$$
 
@@ -95,7 +95,7 @@ $$\theta=(m-1)(2m-1)s=\frac{\sqrt{(m-1)(2m-1)}}m=\frac{\sqrt{2(2m-1)(2m-2)}}{2m}
 
 **C7, non-Weyl part.** The spectrum of $S$ is $0$ on $\mathbf 1$, $s\big((2m-1)m-m\big)=2m(m-1)s$ on $\mathbf 1_{B_1}-\mathbf 1_{B_2}$, and $-ms$ on vectors summing to zero inside a block. By Section 4 the supremum is $m(m-1)s$, and $m(m-1)s<(m-1)(2m-1)s=\theta$ for every $m\ge2$.
 
-**C7, Weyl part, without L24.** Let $A\in\mathcal D_W$ and put $v=A\mathbf 1_{B_1}$. Since $JA=0$ and $A\mathbf 1_{B_2}=-v$, $\operatorname{tr}(JA^2)=0$ and $\operatorname{tr}(EA^2)=2|v|^2$. Writing $\sigma_s,\sigma_x$ for the within-block and cross-block parts of $|A|^2$,
+**C7, Weyl part, without L24.** Let $A\in\mathcal D_W$ and put $v=A\mathbf 1_{B_1}$. Since $JA=0$ and $A\mathbf 1_{B_2}=-v$, $\mathop{\mathrm{tr}}(JA^2)=0$ and $\mathop{\mathrm{tr}}(EA^2)=2|v|^2$. Writing $\sigma_s,\sigma_x$ for the within-block and cross-block parts of $|A|^2$,
 
 $$q_S(A)=s\big[m\sigma_s-(m-1)\sigma_x+(2m-1)|v|^2-m(\sigma_s+\sigma_x)\big]=(2m-1)s\,\big(|v|^2-\sigma_x\big),\qquad\frac{q_S(A)}{\theta|A|^2}=\frac{|v|^2-\sigma_x}{(m-1)|A|^2}.$$
 

@@ -12,13 +12,13 @@ You are auditing **four independent blocks** that have accumulated on the Gate 2
 
 ## Setting
 
-Real symmetric traceless $3\times3$ $\hat U,V$. $\{X,Y\}=XY+YX$, $K=[\hat U,V]$, $\langle X,Y\rangle=\operatorname{tr}(X^{\mathsf T}Y)$.
-$$\Phi=\alpha\operatorname{tr}\hat U^3+\beta\operatorname{tr}(\hat UV^2)+\langle\hat U,A\rangle+\langle V,C\rangle,\qquad\alpha=\tfrac{15}4,\ \beta=\tfrac94,$$
+Real symmetric traceless $3\times3$ $\hat U,V$. $\{X,Y\}=XY+YX$, $K=[\hat U,V]$, $\langle X,Y\rangle=\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$.
+$$\Phi=\alpha\mathop{\mathrm{tr}}\hat U^3+\beta\mathop{\mathrm{tr}}(\hat UV^2)+\langle\hat U,A\rangle+\langle V,C\rangle,\qquad\alpha=\tfrac{15}4,\ \beta=\tfrac94,$$
 maximised subject to $T=\tfrac32\lvert\hat U\rvert^2+\tfrac12\lvert V\rvert^2$ fixed, $A$ and $C$ symmetric and diagonal in one frame $F$.
 
 **Given (batch 10).** At a critical point, $A\equiv3\mu\hat U-3\alpha\hat U^2-\beta V^2$ and $C\equiv\mu V-\beta\{\hat U,V\}$, each up to an added multiple of $I$.
 
-**Given (batch 20), the boxed identity.** Pairing each Lagrange equation with its own variable gives $3\alpha\operatorname{tr}\hat U^3+\beta\operatorname{tr}(\hat UV^2)+\langle\hat U,A\rangle=3\mu\lvert\hat U\rvert^2$ and $2\beta\operatorname{tr}(\hat UV^2)+\langle V,C\rangle=\mu\lvert V\rvert^2$, whence $\Phi=2\mu T-2P_3$ with $P_3=\alpha\operatorname{tr}\hat U^3+\beta\operatorname{tr}(\hat UV^2)$.
+**Given (batch 20), the boxed identity.** Pairing each Lagrange equation with its own variable gives $3\alpha\mathop{\mathrm{tr}}\hat U^3+\beta\mathop{\mathrm{tr}}(\hat UV^2)+\langle\hat U,A\rangle=3\mu\lvert\hat U\rvert^2$ and $2\beta\mathop{\mathrm{tr}}(\hat UV^2)+\langle V,C\rangle=\mu\lvert V\rvert^2$, whence $\Phi=2\mu T-2P_3$ with $P_3=\alpha\mathop{\mathrm{tr}}\hat U^3+\beta\mathop{\mathrm{tr}}(\hat UV^2)$.
 
 **Given (batch 18).** At every global maximum $\mu\ge2\beta\lvert\hat U\rvert/\sqrt6$, from $\lambda_{\max}(\mathcal L_{\hat U})=\lvert\hat U\rvert/\sqrt6$ on traceless symmetric matrices, $\mathcal L_{\hat U}V=\tfrac12(\hat UV+V\hat U)$.
 
@@ -28,13 +28,13 @@ maximised subject to $T=\tfrac32\lvert\hat U\rvert^2+\tfrac12\lvert V\rvert^2$ f
 
 ## Block A1, batch 34, quoted verbatim
 
-> **What was tried.** Batch 20 owes an upper bound on $\mu$, and its own second pairing looks like it supplies one. That pairing is $\mu\lvert V\rvert^2=2\beta\operatorname{tr}(\hat UV^2)+\langle V,C\rangle$, and batch 18's Jordan spectrum caps the Rayleigh quotient, $\operatorname{tr}(\hat UV^2)=\langle\mathcal L_{\hat U}V,V\rangle\le(\lvert\hat U\rvert/\sqrt6)\lvert V\rvert^2$, giving
+> **What was tried.** Batch 20 owes an upper bound on $\mu$, and its own second pairing looks like it supplies one. That pairing is $\mu\lvert V\rvert^2=2\beta\mathop{\mathrm{tr}}(\hat UV^2)+\langle V,C\rangle$, and batch 18's Jordan spectrum caps the Rayleigh quotient, $\mathop{\mathrm{tr}}(\hat UV^2)=\langle\mathcal L_{\hat U}V,V\rangle\le(\lvert\hat U\rvert/\sqrt6)\lvert V\rvert^2$, giving
 > $$\mu\ \le\ \frac{2\beta\lvert\hat U\rvert}{\sqrt6}+\frac{\langle V,C\rangle}{\lvert V\rvert^2}\qquad\text{at every critical point with }V\ne0 .$$
 > **It is true, and it is not a bound**, because the term that carries it is the field pairing, and $C$ is defined by the very equation the bound came from. *Rearranged, the display is the Rayleigh inequality and nothing more.* **This is post F69 for a fourth time**, now reached from the other direction: not a condition on the fields being criticality restated, but a bound whose only non-trivial term is a field pairing.
 >
-> **The corollary it does give, and why that is not new either.** Against batch 18's lower bound the two pin $\mu$ from both sides at a global maximum and force $\langle V,C\rangle\ge0$ there. *That is a genuine necessary condition and it is not vacuous, since $\langle V,C\rangle=\mu\lvert V\rvert^2-2\beta\operatorname{tr}(\hat UV^2)$ takes both signs at critical points: at batch 28's two points it is $+65.52$ and $-18345.79$.* **But it is implied by batch 18 alone**, since $\mu\ge2\beta\lvert\hat U\rvert/\sqrt6$ and the same Rayleigh step give $\langle V,C\rangle\ge0$ in two lines, so it is strictly weaker than the bound it was derived from and adds nothing to the record.
+> **The corollary it does give, and why that is not new either.** Against batch 18's lower bound the two pin $\mu$ from both sides at a global maximum and force $\langle V,C\rangle\ge0$ there. *That is a genuine necessary condition and it is not vacuous, since $\langle V,C\rangle=\mu\lvert V\rvert^2-2\beta\mathop{\mathrm{tr}}(\hat UV^2)$ takes both signs at critical points: at batch 28's two points it is $+65.52$ and $-18345.79$.* **But it is implied by batch 18 alone**, since $\mu\ge2\beta\lvert\hat U\rvert/\sqrt6$ and the same Rayleigh step give $\langle V,C\rangle\ge0$ in two lines, so it is strictly weaker than the bound it was derived from and adds nothing to the record.
 >
-> **Gate 1.** $\mu T-P_3=\Phi/2$ follows from batch 20's boxed identity by arithmetic, and was checked symbolically; the Rayleigh cap was screened over $20000$ random traceless symmetric pairs with the largest value of $\operatorname{tr}(\hat UV^2)-(\lvert\hat U\rvert/\sqrt6)\lvert V\rvert^2$ coming out $-6.3\cdot10^{-3}$.
+> **Gate 1.** $\mu T-P_3=\Phi/2$ follows from batch 20's boxed identity by arithmetic, and was checked symbolically; the Rayleigh cap was screened over $20000$ random traceless symmetric pairs with the largest value of $\mathop{\mathrm{tr}}(\hat UV^2)-(\lvert\hat U\rvert/\sqrt6)\lvert V\rvert^2$ coming out $-6.3\cdot10^{-3}$.
 
 *The block also corrected batch 20 in place, on the ground that $\mu T-P_3=\Phi/2$ makes "a comparison of two numbers per point rather than of configurations" circular.*
 

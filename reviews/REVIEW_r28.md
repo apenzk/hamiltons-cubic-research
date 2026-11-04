@@ -2,7 +2,7 @@
 
 **The identities hold and are stronger than claimed; the reformulation carries less than claimed; and the sharpening route is closed, not merely short.** Rebuilt from definitions in [review_r28_core.py](scripts/review_r28_core.py), with the anchors $Q(\mathrm{Id})=(n-1)\mathrm{Id}$, $\dim\mathcal W_n$ as the exact nullity of (Bianchi, Ricci) at $n=4\ldots13$, and the $S^4\times S^4$ spectrum recovered with the multiplicity list already on record.
 
-**T1 CONFIRMED and understated.** $\tau=0$ in two orthonormal bases while the individual summands are $O(1)$, so it is cancellation rather than smallness, and $\operatorname{tr}L_x=0$ at random **non**-critical $x$ across $n=4\ldots13$ ($\le1.3\times10^{-15}$). The argument needs only $\mathcal W_n^{O(n)}=0$, which is weaker than irreducibility.
+**T1 CONFIRMED and understated.** $\tau=0$ in two orthonormal bases while the individual summands are $O(1)$, so it is cancellation rather than smallness, and $\mathop{\mathrm{tr}}L_x=0$ at random **non**-critical $x$ across $n=4\ldots13$ ($\le1.3\times10^{-15}$). The argument needs only $\mathcal W_n^{O(n)}=0$, which is weaker than irreducibility.
 
 **T2 CONFIRMED.** $\kappa_W=(2n-1)(n-1)/4$ exact at $n=4\ldots13$, including the dimensions the claim never tested, $19.5$ at $n=7$, $52.5$ at $n=11$, $75$ at $n=13$. At $n=4$ it returns $21/4$, matching Fox's $21/16$ under his normalisation, so it **is** $\kappa_F$. And $\mathcal W_n$ is absolutely irreducible **already for $SO(n)$** from $n=5$ on (commutant $=1$ at $n=5,6,7,8$), so the $O(n)$-versus-$SO(n)$ caveat can be dropped.
 

@@ -40,11 +40,11 @@ The family's maximum is $0.655\,\theta_0(9)$. In general at odd $n$ the imprimit
 
 **Setup.** Coordinate-diagonal $W$, vertex matrix $M$ symmetric, hollow, $M\mathbf1=0$, at $\lVert M\rVert_F^2=t=2$, the **ordered**-pair sum that [conventions.md](../findings/conventions.md) pins. From that file's own identity, $2\theta=\langle M^{\circ2}+M^2,M\rangle$, i.e.
 
-$$2\theta=\sum_{i\ne j}M_{ij}^3+\operatorname{tr}M^3 .$$
+$$2\theta=\sum_{i\ne j}M_{ij}^3+\mathop{\mathrm{tr}}M^3 .$$
 
 This reproduces the record's script formula $\theta=\sum_{a<b}w_{ab}^3+3\sum_{a<b<c}w_{ab}w_{bc}w_{ca}$ ([b_diagonal_functional.py](../scripts/route-b/b_diagonal_functional.py)) exactly, the trace contributing $6$ per triangle.
 
-**The block's displayed $\theta$ is correct.** With $M=\alpha A+\beta(J-I-A)$, each row carries $k$ entries $\alpha$ and $n-1-k$ entries $\beta$, giving $\sum_{i\ne j}M_{ij}^3=n(k\alpha^3+(n-1-k)\beta^3)$; and $\operatorname{tr}M^3=f\mu_r^3+g\mu_s^3$, the eigenvalue $0$ on $\mathbf1$ contributing nothing. That is the block's display verbatim.
+**The block's displayed $\theta$ is correct.** With $M=\alpha A+\beta(J-I-A)$, each row carries $k$ entries $\alpha$ and $n-1-k$ entries $\beta$, giving $\sum_{i\ne j}M_{ij}^3=n(k\alpha^3+(n-1-k)\beta^3)$; and $\mathop{\mathrm{tr}}M^3=f\mu_r^3+g\mu_s^3$, the eigenvalue $0$ on $\mathbf1$ contributing nothing. That is the block's display verbatim.
 
 **The weights are forced, so the maximisation is discrete.** Writing $k'=n-1-k$: zero row sums give $\beta=-k\alpha/k'$, and $\lVert M\rVert_F^2=2$ gives $\alpha^2=2k'/\big(nk(n-1)\big)$. The only residual freedom is the sign of $\alpha$, and $\theta$ is odd in $M$, so each parameter set contributes $\pm\theta$ and one takes the positive branch. **"Weighted" therefore does not mean continuous weights**, the answer to the brief's §2 question is that the family is discrete and an enumeration is the right instrument. The block says so in one clause (*"the row-sum and norm conditions fix $\alpha,\beta$ from $(n,k)$"*) and should say it in the heading's word *weighted*, which currently reads as if it meant a variational problem.
 

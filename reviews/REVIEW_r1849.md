@@ -15,9 +15,9 @@ Brief: [BRIEF_I121_Ereduction.md](BRIEF_I121_Ereduction.md). Source: [2026-09-28
 
 ## Claim 1
 
-- **Invariance.** $P(W)=\operatorname{tr}W^3+\langle W^\#,W\rangle$, so $E=\langle W^\#,W\rangle-\tfrac12\operatorname{tr}W^3$. Both terms are $O(n)$-invariant because $\#$ is equivariant and the trace is conjugation-invariant.
-- **The power-sum step.** $\lambda^3\le\lambda_{\max}\lambda^2$ is $\lambda^2(\lambda_{\max}-\lambda)\ge0$, true for every $\lambda\le\lambda_{\max}$ whatever the sign of $\lambda_{\max}$. The appeal to $\operatorname{tr}W=0$ is correct ($\sum_{i<j}W_{ij,ij}$ is half the scalar trace of the Ricci, which vanishes) and idle.
-- **The gap.** From $T:=\operatorname{tr}W^3\le\lambda_{\max}$ and $\theta\lambda_{\max}\le1$ the proof concludes $\tfrac32T\le\tfrac3{2\theta}$. That multiplies by $\theta$ and needs $\theta>0$. The claim is stated "at every unit critical point", and critical points with $\theta<0$ exist ($-W$ is critical with value $-\theta$). [crit_E_bound](../lean/HamiltonsCubic/Results/SmallMassE.lean) carries `hθ : 0 < θ`, so the Lean is right and the prose is wider than its proof.
+- **Invariance.** $P(W)=\mathop{\mathrm{tr}}W^3+\langle W^\#,W\rangle$, so $E=\langle W^\#,W\rangle-\tfrac12\mathop{\mathrm{tr}}W^3$. Both terms are $O(n)$-invariant because $\#$ is equivariant and the trace is conjugation-invariant.
+- **The power-sum step.** $\lambda^3\le\lambda_{\max}\lambda^2$ is $\lambda^2(\lambda_{\max}-\lambda)\ge0$, true for every $\lambda\le\lambda_{\max}$ whatever the sign of $\lambda_{\max}$. The appeal to $\mathop{\mathrm{tr}}W=0$ is correct ($\sum_{i<j}W_{ij,ij}$ is half the scalar trace of the Ricci, which vanishes) and idle.
+- **The gap.** From $T:=\mathop{\mathrm{tr}}W^3\le\lambda_{\max}$ and $\theta\lambda_{\max}\le1$ the proof concludes $\tfrac32T\le\tfrac3{2\theta}$. That multiplies by $\theta$ and needs $\theta>0$. The claim is stated "at every unit critical point", and critical points with $\theta<0$ exist ($-W$ is critical with value $-\theta$). [crit_E_bound](../lean/HamiltonsCubic/Results/SmallMassE.lean) carries `hθ : 0 < θ`, so the Lean is right and the prose is wider than its proof.
 - **Correction, which also covers every sign.** L198's first clause gives $\theta\lambda_k-\lambda_k^2\le1-\lambda_k^2$, so $\theta\lambda_k\le1$ at every $k$. Then $\theta\lambda_k^3=(\theta\lambda_k)\lambda_k^2\le\lambda_k^2$ termwise, and summing gives $\theta T\le1$ with no sign condition. Hence $\theta^2=\tfrac32\theta T+\theta E\le\tfrac32+\theta E$ at every unit critical point. Equivalently, $\theta E$ and $\theta^2$ are both unchanged under $W\mapsto-W$. Either repair is two lines, and the consequences are unaffected since they assume $\theta>\sqrt{3/2}>0$.
 - **The consequences.** At $\theta>\sqrt{3/2}$, $\theta E\ge\theta^2-\tfrac32>0$ gives $E>0$. At $\theta\ge\theta_0>0$, $E\ge\theta-\tfrac3{2\theta}\ge\theta_0-\tfrac3{2\theta_0}$, as $\theta-\tfrac3{2\theta}$ is increasing on $\theta>0$.
 - **Values.** With the record's $\theta_0(n)=\sqrt{2(n-1)(n-2)}/n$: $\theta_0(12)=\sqrt{220}/12=1.236033$, $\tfrac3{2\theta_0}=1.213560$, $\varepsilon_{12}=0.022473$. The limit is $\sqrt2-\tfrac3{2\sqrt2}=\tfrac1{2\sqrt2}=0.353553$. Both as stated.
@@ -25,15 +25,15 @@ Brief: [BRIEF_I121_Ereduction.md](BRIEF_I121_Ereduction.md). Source: [2026-09-28
 
 ## Claim 2
 
-- $\operatorname{tr}(A+B_f)^3=\operatorname{tr}A^3+3\operatorname{tr}(A^2B_f)+3\operatorname{tr}(AB_f^2)+\operatorname{tr}B_f^3$ by cyclicity.
-- $\operatorname{tr}(A^2B_f)=\sum_ea_e^2(B_f)_{ee}=0$: every diagonal entry $W_{e,e}$ belongs to $A$.
-- $(B_f)_{e,g}$ is nonzero only for disjoint $e,g$, where it is $J_{eg}$ up to an orientation sign, so $\operatorname{tr}(AB_f^2)=\sum_ea_e\sum_{g\cap e=\emptyset}J_{eg}^2=\sum_{\{e,g\}}(a_e+a_g)J_{eg}^2$.
-- Subtracting $\tfrac32\operatorname{tr}W^3$ from the whole-$P$ formula: the $J^2$ coefficient is $3\cdot\tfrac32-\tfrac32\cdot3=0$, the $X^2$ coefficient is $3\cdot(-2)=-6$, and the rectangle $JJJ$ coefficient is $9-\tfrac32\cdot6=0$ by $\operatorname{tr}B_f^3=6\sum_RJJJ$. The formula follows, with $P(A)-\tfrac32\operatorname{tr}A^3=E(A)$.
+- $\mathop{\mathrm{tr}}(A+B_f)^3=\mathop{\mathrm{tr}}A^3+3\mathop{\mathrm{tr}}(A^2B_f)+3\mathop{\mathrm{tr}}(AB_f^2)+\mathop{\mathrm{tr}}B_f^3$ by cyclicity.
+- $\mathop{\mathrm{tr}}(A^2B_f)=\sum_ea_e^2(B_f)_{ee}=0$: every diagonal entry $W_{e,e}$ belongs to $A$.
+- $(B_f)_{e,g}$ is nonzero only for disjoint $e,g$, where it is $J_{eg}$ up to an orientation sign, so $\mathop{\mathrm{tr}}(AB_f^2)=\sum_ea_e\sum_{g\cap e=\emptyset}J_{eg}^2=\sum_{\{e,g\}}(a_e+a_g)J_{eg}^2$.
+- Subtracting $\tfrac32\mathop{\mathrm{tr}}W^3$ from the whole-$P$ formula: the $J^2$ coefficient is $3\cdot\tfrac32-\tfrac32\cdot3=0$, the $X^2$ coefficient is $3\cdot(-2)=-6$, and the rectangle $JJJ$ coefficient is $9-\tfrac32\cdot6=0$ by $\mathop{\mathrm{tr}}B_f^3=6\sum_RJJJ$. The formula follows, with $P(A)-\tfrac32\mathop{\mathrm{tr}}A^3=E(A)$.
 - The record's check script reproduces $E(W)=-26.1123208173$ both ways at $n=6$.
 
 ## The three sources
 
-**Diagonal term.** $\lvert E(A)\rvert\le\lvert P(A)\rvert+\tfrac32\lvert\operatorname{tr}A^3\rvert\le(\Theta_n+\tfrac32)t^3$, by L57 applied to $\pm A$ and $\lvert\sum a_e^3\rvert\le t^3$. "Of size $O(t^3)$" holds with this constant.
+**Diagonal term.** $\lvert E(A)\rvert\le\lvert P(A)\rvert+\tfrac32\lvert\mathop{\mathrm{tr}}A^3\rvert\le(\Theta_n+\tfrac32)t^3$, by L57 applied to $\pm A$ and $\lvert\sum a_e^3\rvert\le t^3$. "Of size $O(t^3)$" holds with this constant.
 
 **Coupling.** Write $S_e=\sum_{f\cap e=\emptyset}X_{ef}^2$, so the coupling is $-6\sum_ea_eS_e$.
 - *Per-edge bound.* Fix $e$ (n even). Each perfect matching $M\ni e$ gives $4\sum_{f\in M\setminus e}X_{ef}^2\le E(M)\le t^2-\sum_{g\in M}a_g^2\le t^2$ by the matching inequality. Summing over the $(n-3)!!$ such matchings, each edge $f$ disjoint from $e$ lies in $(n-5)!!$ of them, so $4(n-5)!!\,S_e\le(n-3)!!\,t^2$, giving $S_e\le\tfrac{n-3}4t^2$. Correct.
@@ -53,7 +53,7 @@ Brief: [BRIEF_I121_Ereduction.md](BRIEF_I121_Ereduction.md). Source: [2026-09-28
 
 1. **The pair part is dropped, and it enters at the same order as the open term.** Claim 2 and the three-source split are at pair-free $W$. At the node, the record gives $\lVert B_p\rVert^2\le(n-1)t^2$ from single-plane maximality, and the screens two sections up locate the product's off-diagonal mass mostly in $B_p$ in matching-feasible frames. $E$'s terms linear in $B_p$ (for example $3E(B_p,B_f,B_f)$) are then of order $\sqrt n\,t$, the same scale as the visible-cubic bound. The plan line "at pair-free small mass is diagonal plus visible: **open, the visible cubic**" is accurate for pair-free $W$. For the node it should read: open, the visible cubic and every term of $E$ carrying $B_p$.
 2. **At $n=12$ the coupling and diagonal bounds do not close on their own.** The coupling bound alone is below $\varepsilon_{12}=0.02247$ only when $\tfrac32\sqrt{27}\,t^2<0.02247$, that is $t^2<0.0029$. Adding the diagonal bound with $\Theta_{12}=\theta_0(12)$ gives about $t^2<0.0028$. The obstructed $\mathbb{CP}^m$ sit at $t^2=\tfrac3{n+2}=0.21$ at $n=12$, and the pair identity is quoted in [plan.md](../plan.md) as giving $t\gtrsim n^{-1/2}$. So "what is open is the visible cubic" is right asymptotically, where the coupling bound decays like $n^{-1/2}$ at $t^2\sim1/n$ while $\varepsilon_n\to0.354$. At the dimension the conjecture starts at, all three sources are open unless $\tau_{12}$ is below about $0.003$. The note should state this threshold.
-3. **"The invisible part of $B_f$ is spent entirely by L198."** Correct in substance, since $E$ carries no $J$. It is loose in one respect: L198 bounds all of $\operatorname{tr}W^3$, including $\operatorname{tr}A^3$ and the $A$-$J$ cross terms, and the bound $\operatorname{tr}W^3\le\lambda_{\max}\le1/\theta$ is tight only at a spectrum concentrated on its top eigenvalue. That slack is where any improvement of $\sqrt{3/2}$ would have to come from, and the sentence reads as if nothing were left there.
+3. **"The invisible part of $B_f$ is spent entirely by L198."** Correct in substance, since $E$ carries no $J$. It is loose in one respect: L198 bounds all of $\mathop{\mathrm{tr}}W^3$, including $\mathop{\mathrm{tr}}A^3$ and the $A$-$J$ cross terms, and the bound $\mathop{\mathrm{tr}}W^3\le\lambda_{\max}\le1/\theta$ is tight only at a spectrum concentrated on its top eigenvalue. That slack is where any improvement of $\sqrt{3/2}$ would have to come from, and the sentence reads as if nothing were left there.
 4. **The final sentence** ("a proof has to show that a critical point cannot spread product-like visible patterns over a $\tfrac1{cn}$ fraction of all matchings") is a heuristic reading of the order-$nt$ loss, not a derived necessity. It is presented as what "a proof has to show", which is stronger than the section establishes, since a proof could also bound the visible cubic by a route that is not matching by matching.
 
 ## The screen
@@ -64,7 +64,7 @@ Brief: [BRIEF_I121_Ereduction.md](BRIEF_I121_Ereduction.md). Source: [2026-09-28
 
 ## Corrections to fold
 
-- Claim 1: add $\theta>0$ to the proof, or replace it with the termwise route $\theta\lambda_k^3\le\lambda_k^2$, which covers every sign. Drop "with $\lambda_{\max}\ge0$ from $\operatorname{tr}W=0$" as idle. Add that $\varepsilon_n\ge0$ exactly at even $n\ge12$.
+- Claim 1: add $\theta>0$ to the proof, or replace it with the termwise route $\theta\lambda_k^3\le\lambda_k^2$, which covers every sign. Drop "with $\lambda_{\max}\ge0$ from $\mathop{\mathrm{tr}}W=0$" as idle. Add that $\varepsilon_n\ge0$ exactly at even $n\ge12$.
 - Coupling: say "ordered pairs" in $\sum_{e,f}X_{ef}^2=\tfrac34\lVert B_f\rVert^2$, and "even $n$".
 - Scope: name the pair-part terms of $E$ as open alongside the visible cubic, and record that at $n=12$ the coupling bound needs $t^2<0.0029$.
 - Screen: replace "near minima" with "near critical points", and cite the script.

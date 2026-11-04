@@ -53,7 +53,7 @@ since each of the three matching-differences appears twice, once for each pair o
 
 Nothing below was read off the record. With $F_1$ of size $p$, $F_2$ of size $q$, $n=p+q$, and $M_{ab}=\alpha,\beta,\gamma$ within $F_1$, within $F_2$, across: zero row sums give $(p-1)\alpha+q\gamma=0$ and $(q-1)\beta+p\gamma=0$; the cross criticality equation collapses to $\gamma(1-n)=\theta$; and the two within-factor equations are then automatic. So
 
-$$\gamma=-\frac\theta{n-1},\qquad \alpha=\frac{\theta q}{(n-1)(p-1)},\qquad \beta=\frac{\theta p}{(n-1)(q-1)},\qquad \operatorname{tr}M^2=2\iff \theta^2=\frac{2(n-1)(p-1)(q-1)}{pq\,(n-2)} .$$
+$$\gamma=-\frac\theta{n-1},\qquad \alpha=\frac{\theta q}{(n-1)(p-1)},\qquad \beta=\frac{\theta p}{(n-1)(q-1)},\qquad \mathop{\mathrm{tr}}M^2=2\iff \theta^2=\frac{2(n-1)(p-1)(q-1)}{pq\,(n-2)} .$$
 
 At $(p,q)=(5,43)$ this gives $\theta^2=15792/9890$, $\theta=1.2636315$, and $m_4=6\alpha^2=0.5012032$ on a $(4,0)$ four-set, **the record's $1.263631$ and $0.501203$, reproduced from the definitions alone.**
 
@@ -83,7 +83,7 @@ This is worth more than the section's (iii): it is exact, it uses criticality wh
 
 **But the section misuses its own instrument.** Its chain is $\lvert A-B\rvert\le2\lVert o\rVert_\infty$, then three times the maximum. Two defects:
 
-- **The number $12$ is not proved.** It needs $\max\lVert o^{(jk)}\rVert^2\le2$, i.e. $s_j+s_k-2\theta M_{jk}\le2$, and while $s_j+s_k\le\operatorname{tr}M^2=2$ the term $-2\theta M_{jk}$ is dropped as if non-positive. **At every cross pair of every sphere product $M_{jk}=\gamma=-\theta/(n-1)<0$**, so the dropped term is positive on precisely the family the section's own witnesses come from. From $\lVert o\rVert^2\le2(s_j+s_k)\le4$ the honest crude cap is $\Sigma\le24$.
+- **The number $12$ is not proved.** It needs $\max\lVert o^{(jk)}\rVert^2\le2$, i.e. $s_j+s_k-2\theta M_{jk}\le2$, and while $s_j+s_k\le\mathop{\mathrm{tr}}M^2=2$ the term $-2\theta M_{jk}$ is dropped as if non-positive. **At every cross pair of every sphere product $M_{jk}=\gamma=-\theta/(n-1)<0$**, so the dropped term is positive on precisely the family the section's own witnesses come from. From $\lVert o\rVert^2\le2(s_j+s_k)\le4$ the honest crude cap is $\Sigma\le24$.
 - **Three-times-the-maximum is the wrong contraction.** Use the boxed six-pair form of §0 with $(o_x-o_y)^2\le2(o_x^2+o_y^2)\le2\lVert o\rVert^2$ on each pair, and [Lemma L68](../findings/diagonal-half.md) on each:
 
 $$4\Sigma\;\le\;2\sum_{\{p,q\}\subset S}\lVert o^{(pq)}\rVert^2\;=\;2\big[3\sigma_s-2\theta\sigma\big],\qquad \sigma_s:=\sum_{a\in S}s_a,$$
@@ -118,7 +118,7 @@ $$m_4-m_{\text{far}}<\tfrac23\theta\sigma\;\Longrightarrow\;\Sigma<\tfrac32\le\t
 **As written, no.** "$\Sigma$ is built from the same $n(n-1)/2$ vectors as the pair clause" is, unpacked, the statement that $A,B,C$ are built from entries of $M$, which every clause in [I18](../plan.md) is. Two specifics make it weaker than it sounds:
 
 - **Only six numbers of the family enter, and they are the six entries of $M$ on $S$.** Per four-set the claim touches three of the $n(n-1)/2$ vectors and two coordinates of each; $o^{(jk)}_l-o^{(jk)}_i$ is $M_{kl}-M_{jl}-M_{ik}+M_{ij}$, four entries inside $S$. The count $n(n-1)/2$ is doing no work.
-- **The two roles are different.** In the pair clause $o^{(jk)}$ is a **vector in the block space** $V_{jk}$ and the claim is spectral, simplicity of $T$ in $\operatorname{spec}(\widetilde N)$. In the four-set clause the same numbers are **entries of the matrix** $G$ of [Lemma L121](../findings/second-order.md) on a different block. The record has already fenced this exact species of transfer: *"L121 is about $L_M$ on $\mathrm{Sym}^2(\Lambda^2)$ and supplies no invariant plane of $W$ on $\Lambda^2$; reading one off it is a category error"* ([second-order.md](../findings/second-order.md)).
+- **The two roles are different.** In the pair clause $o^{(jk)}$ is a **vector in the block space** $V_{jk}$ and the claim is spectral, simplicity of $T$ in $\mathop{\mathrm{spec}}(\widetilde N)$. In the four-set clause the same numbers are **entries of the matrix** $G$ of [Lemma L121](../findings/second-order.md) on a different block. The record has already fenced this exact species of transfer: *"L121 is about $L_M$ on $\mathrm{Sym}^2(\Lambda^2)$ and supplies no invariant plane of $W$ on $\Lambda^2$; reading one off it is a category error"* ([second-order.md](../findings/second-order.md)).
 
 **But a real version exists, and the section walks past it.** [Post F47](../findings/INDEX-traps.md) records that $o^{(jk)}$ satisfies an **exact** eigen-equation at every pure critical point, $\Delta^{(jk)}o=-(\theta+M_{jk})o$ ([Lemma L122](../findings/second-order.md)). Reading it at the two coordinates that the four-set clause uses and subtracting:
 

@@ -11,7 +11,7 @@
 | 3 | the repaired margin bound, with $w$ the weight outside **both** copies | **CONFIRMED**, exactly, by [Lemma L27](../findings/nondegeneracy.md)'s ten eigenvalues, and the repair changes no value in the lemma (E1) |
 | 4 | $\lVert A''\rVert=O(n^{1/2}+nw)$ | **CONFIRMED**, on the inherited $M=O(\rho)$ of [r450](REVIEW_r450.md) D1 and [r451](REVIEW_r451.md) A2, re-derived here from the Riesz decomposition with $\rho$ symbolic (E3) |
 | 5 | [Lemma L146](../findings/second-order.md) survives as an input despite [Lemma L148](../findings/second-order.md) | **CONFIRMED.** L148 displaces L146's *purpose*, not its content: the operator norm is what feeds $\rho$, and it is computed whether or not the defect vanishes (E3) |
-| 6 | $\operatorname{sign}g'(w)=\operatorname{sign}(wA-Bc)$, single interior minimum at $w^*=Bc/A$ | **CONFIRMED**, by hand and by screen (E4) |
+| 6 | $\mathop{\mathrm{sign}}g'(w)=\mathop{\mathrm{sign}}(wA-Bc)$, single interior minimum at $w^*=Bc/A$ | **CONFIRMED**, by hand and by screen (E4) |
 | 7 | $g(w^*)=\tfrac1n\sqrt{\kappa/(1+\kappa)}$ | **CONFIRMED as a value; the display that produces it is corrupt in two places at once**, numerator and denominator both. Recomputed from scratch, the stated value is right (E4) |
 | 8 | the second branch is $\Theta(n^{-1})$ uniformly in $w\in[0,1]$ | **CONFIRMED.** $g$ ranges over $[0.90/n,\,2.07/n]$ on $[0,1]$ (E4) |
 | 9 | eliminating $u$ leaves two branches, validly, uniformly in $w$ | **CONFIRMED as an inequality**, the unconstrained $\min_u$ under-estimates $f(u(H))$, and $\min_w\min(b_1,b_2)=\min(\min_wb_1,\min_wb_2)$, **but the lemma drops the one thing $u$ was carrying**: the penalty term $\lvert\kappa_n\rvert u^2t^2$ that the margin must absorb (E5) |
@@ -52,7 +52,7 @@ This is the step the brief trusts least and it is the step that fails.
 
 The brief asks whether $\lVert H_s\rVert_{op}\le\Theta(n^{-1/2})$ survives $\lVert H_s\rVert_F=\sqrt{1-w^2}<1$. It does, and the reason is that [Lemma L146](../findings/second-order.md)'s two closed forms are homogeneous of the same weight in $h$: $\lVert H\rVert_{op}=\tfrac m{2(m-1)}\max_{a\ne a'}\lvert h_a+h_{a'}\rvert$ is degree one and $\lVert H\rVert_F^2=\tfrac{m(m-2)}{2(m-1)}\lVert h\rVert^2$ degree two, so the **ratio** $\lVert H\rVert_{op}/\lVert H\rVert_F\le1/\sqrt{m-1}$ is scale-invariant. Hence $\lVert H_s\rVert_{op}\le\lVert H_s\rVert_F/\sqrt{m-1}\le1/\sqrt{m-1}$, and a shorter $H_s$ makes it strictly smaller. The lemma is conservative here, which is the safe direction for a lower bound on $r$.
 
-$\lVert H_r\rVert_{op}\le\lVert H_r\rVert_F=w$ is the record's own $\lVert\cdot\rVert_{op}\le\lVert\cdot\rVert_F$ at the $\Lambda^2$-operator normalisation $\operatorname{tr}(W^2)=1$ ([conventions.md](../findings/conventions.md)), which is plain Frobenius. Nothing is spent.
+$\lVert H_r\rVert_{op}\le\lVert H_r\rVert_F=w$ is the record's own $\lVert\cdot\rVert_{op}\le\lVert\cdot\rVert_F$ at the $\Lambda^2$-operator normalisation $\mathop{\mathrm{tr}}(W^2)=1$ ([conventions.md](../findings/conventions.md)), which is plain Frobenius. Nothing is spent.
 
 **And the additive split is not applied to the nonlinear map.** The brief's worry does not land: $H=H_s+H_r$ is used only inside $\lVert\cdot\rVert_{op}$, which is a norm, and inside $c(H)$, which is a quadratic form. $W\mapsto\mathrm{Alt}(W_-)$ is never split, it is handled by a one-variable Cauchy estimate along $W^*+zH$ whose only input is $\lVert H\rVert_{op}$. *There is no additivity claim about the nonlinear map to break.*
 
@@ -68,7 +68,7 @@ $\lVert H_r\rVert_{op}\le\lVert H_r\rVert_F=w$ is the record's own $\lVert\cdot\
 
 **The sign rule.** With $g(w)=\sqrt{c+w^2}/(A+Bw)$,
 $$g'(w)=\frac{\frac w{\sqrt{c+w^2}}(A+Bw)-B\sqrt{c+w^2}}{(A+Bw)^2},$$
-and multiplying the numerator by $\sqrt{c+w^2}>0$ gives $w(A+Bw)-B(c+w^2)=wA-Bc$. So $\operatorname{sign}g'=\operatorname{sign}(wA-Bc)$, negative then positive, with the single interior minimum at $w^*=Bc/A$. **CONFIRMED as stated.** With $c=\kappa/n$, $A=n^{1/2}$, $B=n$ this is $w^*=\kappa n^{-1/2}$, as claimed.
+and multiplying the numerator by $\sqrt{c+w^2}>0$ gives $w(A+Bw)-B(c+w^2)=wA-Bc$. So $\mathop{\mathrm{sign}}g'=\mathop{\mathrm{sign}}(wA-Bc)$, negative then positive, with the single interior minimum at $w^*=Bc/A$. **CONFIRMED as stated.** With $c=\kappa/n$, $A=n^{1/2}$, $B=n$ this is $w^*=\kappa n^{-1/2}$, as claimed.
 
 **The value, recomputed from scratch.** $c+w^{*2}=\kappa/n+\kappa^2/n=\kappa(1+\kappa)/n$ and $A+Bw^*=A+B^2c/A=\sqrt n+\kappa\sqrt n=(1+\kappa)\sqrt n$, so
 $$g(w^*)=\frac{\sqrt{\kappa(1+\kappa)/n}}{(1+\kappa)\sqrt n}=\frac1n\sqrt{\frac\kappa{1+\kappa}} .$$

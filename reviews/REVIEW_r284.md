@@ -37,7 +37,7 @@ The tightness statement lives on the stratum *one positive, two negative eigenva
 
 At a critical point $Q(W)=\theta W$ the constrained Hessian is $6\theta(L_e-\tfrac12\mathrm{Id})$, $e=W/\theta$ ([second-order.md:11](../findings/second-order.md)). Measured on the full Weyl space at padded $W_{\mathbb{CP}^2}$ ([c1_local_max_witness.py](../scripts/reviewers/r284/c1_local_max_witness.py)):
 
-| $n$ | $\dim\mathcal W_n$ | $\theta$ | criticality residual | $\max\operatorname{spec}(L_e\mid W^\perp)$ | eigenvalues $>\tfrac12$ | eigenvalues $=\tfrac12$ | $\dim$ orbit |
+| $n$ | $\dim\mathcal W_n$ | $\theta$ | criticality residual | $\max\mathop{\mathrm{spec}}(L_e\mid W^\perp)$ | eigenvalues $>\tfrac12$ | eigenvalues $=\tfrac12$ | $\dim$ orbit |
 |---|---|---|---|---|---|---|---|
 | $8$ | $300$ | $1.224744871392$ | $2.1\times10^{-15}$ | $0.500000000000$ | $\mathbf0$ | $18$ | $18$ |
 | $12$ | $1638$ | $1.224744871392$ | $1.7\times10^{-15}$ | $0.500000000000$ | $\mathbf0$ | $34$ | $34$ |

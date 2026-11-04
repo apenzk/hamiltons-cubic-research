@@ -10,7 +10,7 @@
 $$A=\frac1{m\sqrt{(m-1)(2m-1)}}>0 .$$
 At $m=1$ the product is flat and $W=0$.
 
-**Proof.** Let $P_1,P_2$ be the orthogonal projections of $\mathbb R^{2m}$ onto the two factors, $G^{(a)}_{ijkl}=(P_a)_{ik}(P_a)_{jl}-(P_a)_{il}(P_a)_{jk}$ the curvature tensor of the unit sphere on factor $a$, and $G$ the same with $P_a$ replaced by the identity. Then $R=G^{(1)}+G^{(2)}$ is the curvature of the unit product, with Ricci tensor $(m-1)I$, and $W=R-cG$ with $c=\frac{m-1}{2m-1}$, since $G$ has Ricci tensor $(2m-1)I$. For $h\in S^2_0$ and $t_a=\operatorname{tr}(P_ah)$, the $iklj$ contraction gives $\mathring G^{(a)}h=P_ahP_a-t_aP_a$ and $\mathring Gh=h$, so
+**Proof.** Let $P_1,P_2$ be the orthogonal projections of $\mathbb R^{2m}$ onto the two factors, $G^{(a)}_{ijkl}=(P_a)_{ik}(P_a)_{jl}-(P_a)_{il}(P_a)_{jk}$ the curvature tensor of the unit sphere on factor $a$, and $G$ the same with $P_a$ replaced by the identity. Then $R=G^{(1)}+G^{(2)}$ is the curvature of the unit product, with Ricci tensor $(m-1)I$, and $W=R-cG$ with $c=\frac{m-1}{2m-1}$, since $G$ has Ricci tensor $(2m-1)I$. For $h\in S^2_0$ and $t_a=\mathop{\mathrm{tr}}(P_ah)$, the $iklj$ contraction gives $\mathring G^{(a)}h=P_ahP_a-t_aP_a$ and $\mathring Gh=h$, so
 $$\mathring Wh=P_1hP_1+P_2hP_2-t_1P_1-t_2P_2-ch .$$
 It has three invariant summands, which together fill $S^2_0$ since $(m-1)(m+2)+m^2+1=2m^2+m-1=\dim S^2_0$.
 - *The trace-free parts within each factor*, $h=P_ahP_a$ with $t_a=0$: $\mathring Wh=(1-c)h=\frac m{2m-1}h$, multiplicity $2\big(\binom{m+1}2-1\big)=(m-1)(m+2)$.
@@ -61,7 +61,7 @@ $$p_3(\mu)=\frac1{m\sqrt{(m-1)(2m-1)}},\qquad p_3(\omega)=-\frac{4m^2-6m-1}{m\sq
 
 #### $A$ is not a new constant
 
-it equals the record's $\operatorname{tr}(W^3)=2\sqrt2/\big(n\sqrt{(n-1)(n-2)}\big)$ at the balanced product, checked to be identically zero difference. And the identity closes symbolically,
+it equals the record's $\mathop{\mathrm{tr}}(W^3)=2\sqrt2/\big(n\sqrt{(n-1)(n-2)}\big)$ at the balanced product, checked to be identically zero difference. And the identity closes symbolically,
 
 $$\tfrac32p_3(\mu)-\tfrac12p_3(\omega)-\theta_0(2m)=0\quad\text{identically in }m,$$
 

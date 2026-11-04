@@ -41,10 +41,10 @@ Quoted, not restated.
 - $\theta_0(n)$: "***the closed form $\theta_0(n)^2=2(n-1)(n-2)/n^2$, and nothing more.** It is the value at the balanced sphere product **at even $n$ only**, at odd $n$ the balanced split gives $\Theta_n<\theta_0(n)$*". The gloss that was removed on 2026-09-04 is precisely the one L48's paragraph still leans on, which is why §5 below separates the bound from the attainment.
 - $\Theta_n$: "*the diagonal maximum; equals $\theta_0(n)$ at even $n$, and $\sqrt{2(n-1)(n-3)/((n+1)(n-2))}$ at odd $n$*".
 - $R_I$, $R_{\mathrm{ric}_0}$, $R_W$: "*the three $O(n)$-irreducible pieces of an algebraic curvature operator, scalar, **trace-free** Ricci, and Weyl. $R_{\mathrm{ric}_0}=0$ makes a slice **Einstein***". This is the line that makes §4's finding unavoidable: off the Einstein slice, $R-cI$ is not the Weyl part.
-- The pairing: "***The $\tfrac12$ goes at the $\Lambda^2$ level, not the operator level.*** *The inner product is $\tfrac12\operatorname{tr}(X^{\mathsf T}Y)$ at the $\Lambda^2$ level*". Restricting this pairing to a sub-block $\Lambda^2V_a\subset\Lambda^2\mathbb R^n$ is an isometry, so no factor of $2$ enters §3's factorwise sum.
-- $\operatorname{scal}=2\operatorname{tr}$ on $\Lambda^2$, used once, in §3, to get $\operatorname{tr}R=n/4$ at $\lambda=\tfrac12$.
+- The pairing: "***The $\tfrac12$ goes at the $\Lambda^2$ level, not the operator level.*** *The inner product is $\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$ at the $\Lambda^2$ level*". Restricting this pairing to a sub-block $\Lambda^2V_a\subset\Lambda^2\mathbb R^n$ is an isometry, so no factor of $2$ enters §3's factorwise sum.
+- $\mathop{\mathrm{scal}}=2\mathop{\mathrm{tr}}$ on $\Lambda^2$, used once, in §3, to get $\mathop{\mathrm{tr}}R=n/4$ at $\lambda=\tfrac12$.
 - $N=\binom n2=\dim\Lambda^2\mathbb R^n$.
-- The letter $B$: conventions already books **three** objects under it, the Killing form $B(X,Y)=(n-2)\operatorname{tr}(XY)$, [sym3-blocks.md](../findings/sym3-blocks.md)'s $B(X,Y)=-\tfrac12\operatorname{tr}(XY)$, and "*$B=\tfrac\theta2\mathrm{Id}-L_W$ at a critical point … **This is a third object under the letter $B$ in this record***", plus the $B$ tabled among L47's working symbols. **L48's $B$ is a scalar and is a fifth.** See §9.
+- The letter $B$: conventions already books **three** objects under it, the Killing form $B(X,Y)=(n-2)\mathop{\mathrm{tr}}(XY)$, [sym3-blocks.md](../findings/sym3-blocks.md)'s $B(X,Y)=-\tfrac12\mathop{\mathrm{tr}}(XY)$, and "*$B=\tfrac\theta2\mathrm{Id}-L_W$ at a critical point … **This is a third object under the letter $B$ in this record***", plus the $B$ tabled among L47's working symbols. **L48's $B$ is a scalar and is a fifth.** See §9.
 
 ## 1. Hypothesis inventory
 
@@ -81,11 +81,11 @@ Read on $\Lambda^2T_pM=\bigl(\bigoplus_a\Lambda^2V_a\bigr)\oplus\bigl(\bigoplus_
 
 ## 3. The closed form, two independent derivations, agreeing
 
-**Route A, the record's (from [graded-half.md](../findings/graded-half.md)).** At $\lambda=\tfrac12$, $\operatorname{scal}=n\lambda=\tfrac n2$ and $\operatorname{scal}=2\operatorname{tr}R$, so $\operatorname{tr}R=\tfrac n4$ and
+**Route A, the record's (from [graded-half.md](../findings/graded-half.md)).** At $\lambda=\tfrac12$, $\mathop{\mathrm{scal}}=n\lambda=\tfrac n2$ and $\mathop{\mathrm{scal}}=2\mathop{\mathrm{tr}}R$, so $\mathop{\mathrm{tr}}R=\tfrac n4$ and
 
-$$c=\frac{\operatorname{tr}R}N=\frac{n/4}{n(n-1)/2}=\frac1{2(n-1)}=\frac\lambda{n-1},$$
+$$c=\frac{\mathop{\mathrm{tr}}R}N=\frac{n/4}{n(n-1)/2}=\frac1{2(n-1)}=\frac\lambda{n-1},$$
 
-which is exactly [L46](../findings/problem.md)'s centring constant. Since $\operatorname{tr}W=0$, $W=R-cI$ is orthogonal to $I$ and
+which is exactly [L46](../findings/problem.md)'s centring constant. Since $\mathop{\mathrm{tr}}W=0$, $W=R-cI$ is orthogonal to $I$ and
 
 $$\lVert W\rVert^2=\lVert R\rVert^2-c^2N=\lVert R\rVert^2-\frac n{8(n-1)}.$$
 
@@ -93,7 +93,7 @@ The same identity **applied factorwise** (which is where H2 enters, since it req
 
 $$\lVert W\rVert^2=\sum_a\lVert W_a\rVert^2+\sum_af(n_a)-\frac n{8(n-1)}.$$
 
-**Route B, built cold from the blocks, as a check on Route A.** On $\Lambda^2V_a$, $W=W_a+(c_a-c)I$ with $c_a=\tfrac1{2(n_a-1)}$; on the mixed block $W=-cI$. The cross term dies because $\langle W_a,I_a\rangle=\operatorname{tr}W_a=0$. So
+**Route B, built cold from the blocks, as a check on Route A.** On $\Lambda^2V_a$, $W=W_a+(c_a-c)I$ with $c_a=\tfrac1{2(n_a-1)}$; on the mixed block $W=-cI$. The cross term dies because $\langle W_a,I_a\rangle=\mathop{\mathrm{tr}}W_a=0$. So
 
 $$B=\sum_a(c_a-c)^2N_a+c^2\cdot\frac{n^2-\sum_an_a^2}2,\qquad N_a=\frac{n_a(n_a-1)}2 .$$
 
@@ -241,7 +241,7 @@ Both halves are standard; neither is written. This is why the finding is `GAP` a
 
 ## 9. Traps, answered by name, including the ones where I found nothing
 
-- **$\ker W\ne0$ and padded objects.** *Checked, and the block is clean here.* At a $k\ge2$ product the spectrum of $W$ is $\operatorname{spec}(W_a)+(c_a-c)$ on each $\Lambda^2V_a$ and $-c$ on the mixed block. Since $n_a<n$ gives $c_a>c$, and $c>0$, **$\ker W=0$ at every all-sphere product**, in particular at the maximiser, which is what the consumer at [results.md:567](../results.md) needs for "*$\Delta=0$ certifies equivariance only where $\ker W=0$*". (At a product with a non-sphere factor, $\ker W\ne0$ is possible when an eigenvalue of $W_a$ hits $-(c_a-c)$; that costs the lemma nothing, since such factors only raise $\lVert W\rVert^2$.) **Padded objects are outside the Theorem's quantifier and correctly so**: padded $W_{\mathbb{CP}^2}$ sits at $\theta=\sqrt{3/2}$ at every $n$, but it is not the Weyl tensor of any $n$-dimensional symmetric space, the natural candidate $\mathbb{CP}^2\times T^{n-4}$ is **not Einstein**, so its Weyl part is not the padded tensor. That is the sharpest illustration of §7.1 available, and neither copy makes it.
+- **$\ker W\ne0$ and padded objects.** *Checked, and the block is clean here.* At a $k\ge2$ product the spectrum of $W$ is $\mathop{\mathrm{spec}}(W_a)+(c_a-c)$ on each $\Lambda^2V_a$ and $-c$ on the mixed block. Since $n_a<n$ gives $c_a>c$, and $c>0$, **$\ker W=0$ at every all-sphere product**, in particular at the maximiser, which is what the consumer at [results.md:567](../results.md) needs for "*$\Delta=0$ certifies equivariance only where $\ker W=0$*". (At a product with a non-sphere factor, $\ker W\ne0$ is possible when an eigenvalue of $W_a$ hits $-(c_a-c)$; that costs the lemma nothing, since such factors only raise $\lVert W\rVert^2$.) **Padded objects are outside the Theorem's quantifier and correctly so**: padded $W_{\mathbb{CP}^2}$ sits at $\theta=\sqrt{3/2}$ at every $n$, but it is not the Weyl tensor of any $n$-dimensional symmetric space, the natural candidate $\mathbb{CP}^2\times T^{n-4}$ is **not Einstein**, so its Weyl part is not the padded tensor. That is the sharpest illustration of §7.1 available, and neither copy makes it.
 - **The boundary of every stated range.** $n=12$ checked (§6, margin $\tfrac1{36}$, $n^2-12n+8=8$); $n=11$ checked and fails, so $n\ge12$ is sharp; $k=1$ against $k\ge2$ checked (§5); $m=1$ in $f$, the pole, checked (H4); $m=2,3$ in the sphere criterion checked (§7.4).
 - **The smallest admissible dimension.** $n=12$, and at it the balanced split is $(6,6)$ with $\lVert W\rVert^2=\tfrac9{55}$; both factors have $n_a=6\ge5$, consistent with the consumer's $p,q\ge5$.
 - **Odd $n$.** The bound survives, the attainment does not, and the block's *paragraph* claims attainment without a parity hypothesis while the *Theorem* below it says "when $n$ is even" (H6). **The paragraph and the Theorem in the same block disagree.** [conventions.md](../findings/conventions.md) records that exactly this gloss ("*the value at the balanced sphere product*"), "***is what regrew [L0]'s refuted constant***", so the paragraph's sentence is an instance of a failure mode the record has already paid for.

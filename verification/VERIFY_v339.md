@@ -18,14 +18,14 @@
 - $\mathcal W_n$ is the space of algebraic Weyl tensors, read as symmetric operators on $\Lambda^2\mathbb R^n\cong\mathfrak{so}(n)$, $N=\binom n2$, Frobenius inner product, $n\ge4$ so that $\mathcal W_n\ne0$.
 - $W\varphi_k=\lambda_k\varphi_k$ over an orthonormal eigenbasis, $c_{abc}=\langle[\varphi_a,\varphi_b],\varphi_c\rangle$ totally antisymmetric, $T_{abc}=c_{abc}^2$.
 - $Q(W)=W^2+W^\#$, $P(W)=\langle W,Q(W)\rangle$, critical means $Q(W)=\theta W$ on $\lVert W\rVert=1$, which forces $\theta=P(W)$.
-- $M_{kl}=\operatorname{tr}\big(\mathrm{ad}(\varphi_k)W\,\mathrm{ad}(\varphi_l)W\big)$ and, from the lemma's polarisation $\langle v,W^\#v\rangle=-\tfrac12\operatorname{tr}(\mathrm{ad}(v)W\mathrm{ad}(v)W)$, $(W^\#)_{kk}=-\tfrac12M_{kk}$.
+- $M_{kl}=\mathop{\mathrm{tr}}\big(\mathrm{ad}(\varphi_k)W\,\mathrm{ad}(\varphi_l)W\big)$ and, from the lemma's polarisation $\langle v,W^\#v\rangle=-\tfrac12\mathop{\mathrm{tr}}(\mathrm{ad}(v)W\mathrm{ad}(v)W)$, $(W^\#)_{kk}=-\tfrac12M_{kk}$.
 - The defect of the $k$-th diagonal equation is $d_k(W,\theta)=M_{kk}-2\lambda_k(\lambda_k-\theta)$. The step's equation is $d_k=0$.
 - Expanding the trace, $M_{kk}=\sum_{\alpha\beta}\lambda_\alpha\lambda_\beta c_{k\alpha\beta}c_{k\beta\alpha}=-\sum_{\alpha\beta}\lambda_\alpha\lambda_\beta c_{k\alpha\beta}^2$, so $d_k=0$ is exactly the step's display and relation (C) of Passage B.
 - $E_\mu$ is the eigenspace of eigenvalue $\mu$, $m_\mu=\dim E_\mu$, and $s$ is the number of distinct eigenvalues.
 
 ## Hypothesis inventory
 
-- **H1** $\operatorname{tr}_{\Lambda^2}W=\sum_k\lambda_k=0$. Standard for a Weyl tensor: the trace on $\Lambda^2$ is a multiple of the scalar curvature.
+- **H1** $\mathop{\mathrm{tr}}_{\Lambda^2}W=\sum_k\lambda_k=0$. Standard for a Weyl tensor: the trace on $\Lambda^2$ is a multiple of the scalar curvature.
 - **H2** $\lVert W\rVert^2=\sum_k\lambda_k^2=1$, the constraint surface of the problem.
 - **H3** The polarisation identity of the lemma with its normalisation, which is what makes $M_{kk}=-2(W^\#)_{kk}$.
 - **H4** Either relation (B) of Passage B for every Weyl tensor, or the two standard facts used in Section 2's second derivation: $\mathcal W_n$ is $O(n)$-irreducible for $n\ge4$, and $P$ attains a maximum on the compact unit sphere of $\mathcal W_n$.
@@ -47,11 +47,11 @@ using (B) at index $\alpha$. Relation (B) involves no $\theta$ and is attributed
 
 $$\sum_kd_k(W,\theta)=0\qquad\text{for every }W\in\mathcal W_n\text{ and every }\theta\in\mathbb R.$$
 
-**Second derivation, independent of (B) and of its constant.** The quantity $F(W)=\sum_k\operatorname{tr}(\mathrm{ad}(e_k)W\mathrm{ad}(e_k)W)$ is the same for every orthonormal basis $(e_k)$ of $\mathfrak{so}(n)$, and it is a quadratic form in $W$ invariant under $O(n)$, since $\mathrm{Ad}_g$ is orthogonal on $\mathfrak{so}(n)$ and $\mathrm{ad}(\mathrm{Ad}_ge)=\mathrm{Ad}_g\,\mathrm{ad}(e)\,\mathrm{Ad}_g^{-1}$. Its polar form is $\langle AW,W'\rangle$ for a self-adjoint $O(n)$-intertwiner $A$ of $\mathcal W_n$. An eigenspace of $A$ is invariant, so irreducibility (H4) gives $A=c_n\,\mathrm{id}$ and $F(W)=c_n\lVert W\rVert^2$. A maximiser of $P$ on the unit sphere is a critical point (H4), where every $d_k=0$, so $c_n=F(W)=\sum_k2\lambda_k(\lambda_k-\theta)=2$ by H1 and H2. So $\sum_kM_{kk}=2\lVert W\rVert^2$ on all of $\mathcal W_n$, the same identity. The two derivations agree, which also cross-checks the constant in (B).
+**Second derivation, independent of (B) and of its constant.** The quantity $F(W)=\sum_k\mathop{\mathrm{tr}}(\mathrm{ad}(e_k)W\mathrm{ad}(e_k)W)$ is the same for every orthonormal basis $(e_k)$ of $\mathfrak{so}(n)$, and it is a quadratic form in $W$ invariant under $O(n)$, since $\mathrm{Ad}_g$ is orthogonal on $\mathfrak{so}(n)$ and $\mathrm{ad}(\mathrm{Ad}_ge)=\mathrm{Ad}_g\,\mathrm{ad}(e)\,\mathrm{Ad}_g^{-1}$. Its polar form is $\langle AW,W'\rangle$ for a self-adjoint $O(n)$-intertwiner $A$ of $\mathcal W_n$. An eigenspace of $A$ is invariant, so irreducibility (H4) gives $A=c_n\,\mathrm{id}$ and $F(W)=c_n\lVert W\rVert^2$. A maximiser of $P$ on the unit sphere is a critical point (H4), where every $d_k=0$, so $c_n=F(W)=\sum_k2\lambda_k(\lambda_k-\theta)=2$ by H1 and H2. So $\sum_kM_{kk}=2\lVert W\rVert^2$ on all of $\mathcal W_n$, the same identity. The two derivations agree, which also cross-checks the constant in (B).
 
 ## 3. The $\lambda$-weighted sum is the definition of $\theta$
 
-By H3, $\sum_k\lambda_kM_{kk}=-2\sum_k\lambda_k(W^\#)_{kk}=-2\langle W,W^\#\rangle=-2\big(P(W)-\operatorname{tr}W^3\big)$, since $P(W)=\operatorname{tr}W^3+\langle W,W^\#\rangle$. The right-hand sides give $\sum_k2\lambda_k^2(\lambda_k-\theta)=2\operatorname{tr}W^3-2\theta$ by H2. Subtracting,
+By H3, $\sum_k\lambda_kM_{kk}=-2\sum_k\lambda_k(W^\#)_{kk}=-2\langle W,W^\#\rangle=-2\big(P(W)-\mathop{\mathrm{tr}}W^3\big)$, since $P(W)=\mathop{\mathrm{tr}}W^3+\langle W,W^\#\rangle$. The right-hand sides give $\sum_k2\lambda_k^2(\lambda_k-\theta)=2\mathop{\mathrm{tr}}W^3-2\theta$ by H2. Subtracting,
 
 $$\sum_k\lambda_kd_k(W,\theta)=2\big(\theta-P(W)\big).$$
 
@@ -69,9 +69,9 @@ a linear system with determinant $\lambda_{k_2}-\lambda_{k_1}\ne0$, so $d_{k_1}=
 
 When $m_\mu\ge2$ the eigenbasis is not determined by $W$, and the individual $d_k$ for $\varphi_k\in E_\mu$ are basis-dependent. Let $B_\mu$ be the compression of $M$ to $E_\mu$ minus $2\mu(\mu-\theta)\,\mathrm{id}$, a symmetric operator on $E_\mu$. The equations $d_k=0$ for $\varphi_k\in E_\mu$ say that $B_\mu$ has zero diagonal in the chosen basis.
 
-**Standard lemma.** A real symmetric operator $S$ on a Euclidean space of dimension $m$ with $\operatorname{tr}S=0$ has an orthonormal basis in which every diagonal entry is $0$. For $S\ne0$ the form $u\mapsto\langle Su,u\rangle$ takes both signs on the unit sphere, which is connected for $m\ge2$, so it vanishes at some unit $u$. The compression of $S$ to $u^\perp$ still has trace $0$, and induction finishes.
+**Standard lemma.** A real symmetric operator $S$ on a Euclidean space of dimension $m$ with $\mathop{\mathrm{tr}}S=0$ has an orthonormal basis in which every diagonal entry is $0$. For $S\ne0$ the form $u\mapsto\langle Su,u\rangle$ takes both signs on the unit sphere, which is connected for $m\ge2$, so it vanishes at some unit $u$. The compression of $S$ to $u^\perp$ still has trace $0$, and induction finishes.
 
-So "the diagonal equations hold in some eigenbasis" is equivalent to $\operatorname{tr}B_\mu=0$ for each of the $s$ distinct eigenvalues, which is $s$ conditions. Sections 2 and 3 are sums over eigenspaces, $\sum_\mu\operatorname{tr}B_\mu=0$ and $\sum_\mu\mu\operatorname{tr}B_\mu=0$, with independent coefficient vectors since $s\ge2$. **The basis-free content of the diagonal family is at most $s-2$ conditions.** At the multiplicity patterns the Lean file records, $3+3+9$ at $n=6$ ($N=15$, $s=3$) and $1+1+4$ at $n=4$ ($N=6$, $s=3$), that is at most one condition, against the step's $15$ and $6$.
+So "the diagonal equations hold in some eigenbasis" is equivalent to $\mathop{\mathrm{tr}}B_\mu=0$ for each of the $s$ distinct eigenvalues, which is $s$ conditions. Sections 2 and 3 are sums over eigenspaces, $\sum_\mu\mathop{\mathrm{tr}}B_\mu=0$ and $\sum_\mu\mu\mathop{\mathrm{tr}}B_\mu=0$, with independent coefficient vectors since $s\ge2$. **The basis-free content of the diagonal family is at most $s-2$ conditions.** At the multiplicity patterns the Lean file records, $3+3+9$ at $n=6$ ($N=15$, $s=3$) and $1+1+4$ at $n=4$ ($N=6$, $s=3$), that is at most one condition, against the step's $15$ and $6$.
 
 **The extreme case in closed form.** For $s=2$ the bound is $0$: every unit Weyl tensor with exactly two distinct eigenvalues admits an eigenbasis in which all $N$ diagonal equations hold with $\theta=P(W)$. Such tensors exist. At $n=4$, $\mathcal W_4\cong S^2_0(\Lambda^+)\oplus S^2_0(\Lambda^-)$, and $W^+=W^-=a\,\mathrm{diag}(2,-1,-1)$ with $a=1/\sqrt{12}$ has eigenvalues $2a$ with multiplicity $2$ and $-a$ with multiplicity $4$, norm $12a^2=1$. For it the diagonal family carries no condition at all. Whether this tensor is critical is not needed: the point is that the family is empty of content there, not that it admits a non-critical solution.
 

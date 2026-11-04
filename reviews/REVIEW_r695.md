@@ -23,23 +23,23 @@
 
 ### 1.1 The three steps
 
-Work in $\mathfrak g=\mathfrak{so}(n)$ with the record's pairing $\langle X,Y\rangle=\tfrac12\operatorname{tr}(X^{\mathsf T}Y)=-\tfrac12\operatorname{tr}(XY)$, fixed at [conventions.md](../findings/conventions.md) under "Norms and pairings".
+Work in $\mathfrak g=\mathfrak{so}(n)$ with the record's pairing $\langle X,Y\rangle=\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)=-\tfrac12\mathop{\mathrm{tr}}(XY)$, fixed at [conventions.md](../findings/conventions.md) under "Norms and pairings".
 
-**Step 1, the trace.** For a fixed $v$, write $A=\operatorname{ad}(v)$. For any orthonormal basis $\{v_\beta\}$,
+**Step 1, the trace.** For a fixed $v$, write $A=\mathop{\mathrm{ad}}(v)$. For any orthonormal basis $\{v_\beta\}$,
 
-$$\sum_\beta\lVert Av_\beta\rVert^2=\sum_\beta\langle A^{*}Av_\beta,v_\beta\rangle=\operatorname{tr}(A^{*}A).$$
+$$\sum_\beta\lVert Av_\beta\rVert^2=\sum_\beta\langle A^{*}Av_\beta,v_\beta\rangle=\mathop{\mathrm{tr}}(A^{*}A).$$
 
-**Two hypotheses enter and the block states one.** Orthonormality of $\{v_\beta\}$ is in the statement. **Ad-invariance is not mentioned anywhere in the block**, and it is what turns $\operatorname{tr}(A^{*}A)$ into $-\operatorname{tr}(A^2)$: invariance of $\langle\cdot,\cdot\rangle$ gives $\operatorname{ad}(v)^{*}=-\operatorname{ad}(v)$. The record's pairing is a multiple of the trace form and so is invariant, but the block's chain writes $=-\operatorname{tr}(\operatorname{ad}(v_\alpha)^2)$ with nothing between. **Both source reviews carry the missing step explicitly**, [r639](REVIEW_r639.md) line 33 and [r640](REVIEW_r640.md) line 46 both write $\operatorname{tr}(\operatorname{ad}(v)^{\mathsf T}\operatorname{ad}(v))$ before dropping the transpose. *The block's proof is less complete than the two reviews it was assembled from, at the one step where a reader could go wrong.*
+**Two hypotheses enter and the block states one.** Orthonormality of $\{v_\beta\}$ is in the statement. **Ad-invariance is not mentioned anywhere in the block**, and it is what turns $\mathop{\mathrm{tr}}(A^{*}A)$ into $-\mathop{\mathrm{tr}}(A^2)$: invariance of $\langle\cdot,\cdot\rangle$ gives $\mathop{\mathrm{ad}}(v)^{*}=-\mathop{\mathrm{ad}}(v)$. The record's pairing is a multiple of the trace form and so is invariant, but the block's chain writes $=-\mathop{\mathrm{tr}}(\mathop{\mathrm{ad}}(v_\alpha)^2)$ with nothing between. **Both source reviews carry the missing step explicitly**, [r639](REVIEW_r639.md) line 33 and [r640](REVIEW_r640.md) line 46 both write $\mathop{\mathrm{tr}}(\mathop{\mathrm{ad}}(v)^{\mathsf T}\mathop{\mathrm{ad}}(v))$ before dropping the transpose. *The block's proof is less complete than the two reviews it was assembled from, at the one step where a reader could go wrong.*
 
-**Step 2, the Killing form.** $-\operatorname{tr}(\operatorname{ad}(v)^2)=-B(v,v)$ is the definition of $B$, so nothing is owed here. **$B(X,Y)=(n-2)\operatorname{tr}(XY)$ is the only non-trivial input, and neither this block nor [conventions.md](../findings/conventions.md) proves it or gives it a range.** It is true at every $n\ge2$; here is the check. Diagonalise $X\in\mathfrak{so}(2m)$ to angles $\theta_1,\dots,\theta_m$, so $X$ has eigenvalues $\pm i\theta_j$ on $V\otimes\mathbb C$ and $\operatorname{tr}_V(X^2)=-2\sum_j\theta_j^2$. On $\Lambda^2V$ the eigenvalues are the pairwise sums, so
+**Step 2, the Killing form.** $-\mathop{\mathrm{tr}}(\mathop{\mathrm{ad}}(v)^2)=-B(v,v)$ is the definition of $B$, so nothing is owed here. **$B(X,Y)=(n-2)\mathop{\mathrm{tr}}(XY)$ is the only non-trivial input, and neither this block nor [conventions.md](../findings/conventions.md) proves it or gives it a range.** It is true at every $n\ge2$; here is the check. Diagonalise $X\in\mathfrak{so}(2m)$ to angles $\theta_1,\dots,\theta_m$, so $X$ has eigenvalues $\pm i\theta_j$ on $V\otimes\mathbb C$ and $\mathop{\mathrm{tr}}_V(X^2)=-2\sum_j\theta_j^2$. On $\Lambda^2V$ the eigenvalues are the pairwise sums, so
 
-$$\operatorname{tr}_{\Lambda^2}(\operatorname{ad}X)^2=\sum_{i<j}\big[(i\theta_i+i\theta_j)^2+(i\theta_i-i\theta_j)^2\big]\cdot2=-4\sum_{i<j}(\theta_i^2+\theta_j^2)=-4(m-1)\sum_k\theta_k^2,$$
+$$\mathop{\mathrm{tr}}_{\Lambda^2}(\mathop{\mathrm{ad}}X)^2=\sum_{i<j}\big[(i\theta_i+i\theta_j)^2+(i\theta_i-i\theta_j)^2\big]\cdot2=-4\sum_{i<j}(\theta_i^2+\theta_j^2)=-4(m-1)\sum_k\theta_k^2,$$
 
-the $m$ zero weights contributing nothing, and $(n-2)\operatorname{tr}(X^2)=(2m-2)\big(-2\sum\theta^2\big)$ agrees. Odd $n$ adds the weights $\pm\theta_j$ to $V$ and the pairs $\pm\theta_i\pm\theta_j$, $\pm\theta_j$ to $\Lambda^2$, and the same count closes.
+the $m$ zero weights contributing nothing, and $(n-2)\mathop{\mathrm{tr}}(X^2)=(2m-2)\big(-2\sum\theta^2\big)$ agrees. Odd $n$ adds the weights $\pm\theta_j$ to $V$ and the pairs $\pm\theta_i\pm\theta_j$, $\pm\theta_j$ to $\Lambda^2$, and the same count closes.
 
-**One trap this route avoids and a reader might not.** The shortcut *"the invariant form on a simple algebra is unique up to scale, so $B\propto\operatorname{tr}$"* **fails at $n=4$**, where $\mathfrak{so}(4)=\mathfrak{su}(2)\oplus\mathfrak{su}(2)$ carries a two-dimensional space of invariant forms. The identity survives (I confirm it below by direct count) but the argument for it does not, and $n=4$ is a dimension this programme lives in.
+**One trap this route avoids and a reader might not.** The shortcut *"the invariant form on a simple algebra is unique up to scale, so $B\propto\mathop{\mathrm{tr}}$"* **fails at $n=4$**, where $\mathfrak{so}(4)=\mathfrak{su}(2)\oplus\mathfrak{su}(2)$ carries a two-dimensional space of invariant forms. The identity survives (I confirm it below by direct count) but the argument for it does not, and $n=4$ is a dimension this programme lives in.
 
-**Step 3, the normalisation.** $\operatorname{tr}(v^2)=-2\lVert v\rVert^2$ is an identity, not a fact about bivectors: for skew $v$, $\operatorname{tr}(v^2)=-\operatorname{tr}(v^{\mathsf T}v)=-2\langle v,v\rangle$. At $\lVert v\rVert=1$ it is $-2$. So $-B(v,v)=2(n-2)$.
+**Step 3, the normalisation.** $\mathop{\mathrm{tr}}(v^2)=-2\lVert v\rVert^2$ is an identity, not a fact about bivectors: for skew $v$, $\mathop{\mathrm{tr}}(v^2)=-\mathop{\mathrm{tr}}(v^{\mathsf T}v)=-2\langle v,v\rangle$. At $\lVert v\rVert=1$ it is $-2$. So $-B(v,v)=2(n-2)$.
 
 ### 1.2 An independent check that shares nothing with the Killing form
 
@@ -58,7 +58,7 @@ $-B(v,v)=2(n-2)\lVert v\rVert^2$ for **every** $v$, so:
 
 The brief asks, and the answer is not the $\sqrt2$ that caught a singular value elsewhere today.
 
-Under $\lVert X\rVert_F^2=\operatorname{tr}(X^{\mathsf T}X)$ the orthonormal basis is $u_{ab}=\varphi_{ab}/\sqrt2$, and $\operatorname{tr}(u^2)=-1$, so $-B(u,u)=(n-2)$. Directly: $[u_{12},u_{13}]=-\tfrac12\varphi_{23}$ has $\lVert\cdot\rVert_F^2=\tfrac12$, and $2(n-2)$ partners give $(n-2)$. **The quantity is quadratic in each of two normalised vectors, so it scales by $\tfrac12\cdot2=\dots$**, concretely, $\lVert[v/\sqrt2,v'/\sqrt2]\rVert_F^2=\tfrac14\lVert[v,v']\rVert_F^2=\tfrac12\lVert[v,v']\rVert^2$. **A $\sqrt2$ is the wrong correction here; the factor is exactly $2$.**
+Under $\lVert X\rVert_F^2=\mathop{\mathrm{tr}}(X^{\mathsf T}X)$ the orthonormal basis is $u_{ab}=\varphi_{ab}/\sqrt2$, and $\mathop{\mathrm{tr}}(u^2)=-1$, so $-B(u,u)=(n-2)$. Directly: $[u_{12},u_{13}]=-\tfrac12\varphi_{23}$ has $\lVert\cdot\rVert_F^2=\tfrac12$, and $2(n-2)$ partners give $(n-2)$. **The quantity is quadratic in each of two normalised vectors, so it scales by $\tfrac12\cdot2=\dots$**, concretely, $\lVert[v/\sqrt2,v'/\sqrt2]\rVert_F^2=\tfrac14\lVert[v,v']\rVert_F^2=\tfrac12\lVert[v,v']\rVert^2$. **A $\sqrt2$ is the wrong correction here; the factor is exactly $2$.**
 
 **What this does and does not reach downstream.** The pair cap [L31](../findings/stratum-two-negative.md) reads $\le1$ under Frobenius and relation (B)'s constant halves with it, so **[L112](../findings/bounds.md)'s headline $-\tfrac1{n-2}$ is convention-free**, being the ratio of two constants that halve together, as [r650](REVIEW_r650.md) line 96 already observes from the other side. **[L109](../findings/bounds-relaxations.md)'s $2(n-2)(\lambda_{\max}-\lambda_{\min})^2$ and [L114](../findings/bounds-relaxations.md)'s $2d(n-2)$ are not**, and both would halve.
 
@@ -200,7 +200,7 @@ The block states: *"having carried at least five results with **no number anywhe
 3. **Turn [conventions.md](../findings/conventions.md)'s bullet into a pointer**, per that file's own quoting rule.
 4. **Correct the [L35](../findings/stratum-two-negative.md) entry** to say the marginal is stated in an intermediate relaxation and dropped, or remove it.
 5. **Add [L143](../findings/bounds.md), [L23](../findings/ungraded-slack.md), [L36](../findings/isotropy-cap.md), [L73](../findings/bounds.md) and [post F18](../findings/bounds-relaxations.md)** to the list, all five named by the block's own cited reviews.
-6. **Restore the invariance step**, $\operatorname{ad}(v)^{*}=-\operatorname{ad}(v)$, hence $\operatorname{tr}(A^{*}A)=-\operatorname{tr}(A^2)$, as both [r639](REVIEW_r639.md) and [r640](REVIEW_r640.md) wrote it.
+6. **Restore the invariance step**, $\mathop{\mathrm{ad}}(v)^{*}=-\mathop{\mathrm{ad}}(v)$, hence $\mathop{\mathrm{tr}}(A^{*}A)=-\mathop{\mathrm{tr}}(A^2)$, as both [r639](REVIEW_r639.md) and [r640](REVIEW_r640.md) wrote it.
 7. **Generalise the statement to any unit $v\in\mathfrak{so}(n)$** and drop "bivector", which the proof does not use.
 8. **Add the $T$-form and the Frobenius value**: $\sum_{\beta\gamma}T_{\alpha\beta\gamma}=2(n-2)$, halving to $n-2$ under $\sum_{\beta<\gamma}$, and $(n-2)$ under plain Frobenius.
 9. **Anchor the nine links**, and move the block to sit beside relation (A).

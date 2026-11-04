@@ -19,7 +19,7 @@ The unit Weyl tensors of $S^2\times S^2$ in $\mathcal W_4$ and of $S^3\times S^3
 
 #### Criticality in bracket coordinates, the form the deficiency route needs
 
-**Criticality written in the same currency as $D$.** *[post F41](../findings/fence-posts.md) holds that the marginals cannot supply the deficiency bound, and that motivation is withdrawn, [Reviewer 326](../reviews/REVIEW_r326.md) showed a marginal the post omitted supplies it exactly. The algebra below stands on its own; only the reason for reaching for it was wrong.* Polarising $\langle v,W^\#v\rangle=-\tfrac12\operatorname{tr}(\mathrm{ad}(v)W\mathrm{ad}(v)W)$ and substituting $W^\#=\theta W-W^2$ gives exactly that. Define $M_{kl}=\operatorname{tr}\big(\mathrm{ad}(\varphi_k)W\,\mathrm{ad}(\varphi_l)W\big)$ over an eigenbasis. Then **criticality is equivalent to**
+**Criticality written in the same currency as $D$.** *[post F41](../findings/fence-posts.md) holds that the marginals cannot supply the deficiency bound, and that motivation is withdrawn, [Reviewer 326](../reviews/REVIEW_r326.md) showed a marginal the post omitted supplies it exactly. The algebra below stands on its own; only the reason for reaching for it was wrong.* Polarising $\langle v,W^\#v\rangle=-\tfrac12\mathop{\mathrm{tr}}(\mathrm{ad}(v)W\mathrm{ad}(v)W)$ and substituting $W^\#=\theta W-W^2$ gives exactly that. Define $M_{kl}=\mathop{\mathrm{tr}}\big(\mathrm{ad}(\varphi_k)W\,\mathrm{ad}(\varphi_l)W\big)$ over an eigenbasis. Then **criticality is equivalent to**
 
 $$M_{kl}=2\lambda_k(\lambda_k-\theta)\,\delta_{kl},\qquad\text{i.e.}\qquad \sum_{\alpha\beta}\lambda_\alpha\lambda_\beta\,c_{k\alpha\beta}c_{l\alpha\beta}=0\ \text{ whenever }\lambda_k\ne\lambda_l,$$
 

@@ -200,7 +200,7 @@ What remains is the sweep (the 36 splits, and the exact-arithmetic list which in
 - **"The orbit dimension is not $pq$ at $p=2$."** Withdrawn: $\binom{q+2}2-\binom22-\binom q2=\frac{(q+2)(q+1)-q(q-1)}2-1=2q=pq$, and at $(2,4)$ that is $15-1-6=8$. No enlarged stabiliser is visible and the record's own count agrees.
 - **"$\mu$ could equal $\tfrac12$ at $p=2$ for large $q$."** Withdrawn: $\mu=\tfrac12+\frac1{2(n-3)}$ decreases to $\tfrac12$ and never attains it at finite $q$; the criterion is a statement per split.
 - **"$(3,4)$ breaks L27, since L26 flags it."** Withdrawn: the flag is that $\mu$ overtakes $\lambda_{\max(p,q)}$, i.e. the identity of the *second-largest* eigenvalue changes; $\tfrac12-\mu=\frac1{12}>0$, so the kernel is untouched and L27's conclusion holds.
-- **"L27's trace identity fails at $p=2$, exposing the decomposition."** Withdrawn: the repaired $(2,4)$ list has $\operatorname{tr}L_e=1+4+3+4-12=0$, and the deleted summand carried the value $0$, so the trace is blind to the defect. It cannot be used as the detector; the dimension count is the detector.
+- **"L27's trace identity fails at $p=2$, exposing the decomposition."** Withdrawn: the repaired $(2,4)$ list has $\mathop{\mathrm{tr}}L_e=1+4+3+4-12=0$, and the deleted summand carried the value $0$, so the trace is blind to the defect. It cannot be used as the detector; the dimension count is the detector.
 
 ## 13. What would break the conclusions I have reached
 

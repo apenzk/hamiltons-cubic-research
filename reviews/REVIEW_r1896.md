@@ -14,9 +14,9 @@ Log: [agent_logs/r1896-trace-threshold.log](../agent_logs/r1896-trace-threshold.
 
 ## 1. The general statement
 
-- Pairing: $\langle C^\#C,I\rangle=F(C,C,I)=F(C,I,C)=\langle C,I^\#C\rangle$ by symmetry of $F$, and $\langle C,I\rangle=\operatorname{tr}C=\tau$ in the Frobenius product. Correct.
+- Pairing: $\langle C^\#C,I\rangle=F(C,C,I)=F(C,I,C)=\langle C,I^\#C\rangle$ by symmetry of $F$, and $\langle C,I\rangle=\mathop{\mathrm{tr}}C=\tau$ in the Frobenius product. Correct.
 - Trivial part: $C_0=(\tau/d)I$, $\lVert C_0\rVert^2=\tau^2/d$, and $\langle C_0,I^\#C_0\rangle=(\tau/d)^2\,c\,d=c\tau^2/d$. Correct.
-- $I^\#$ is self-adjoint and scalar ($\gamma_V$) on each Casimir eigenspace of $\operatorname{Sym}^2\mathfrak h$, so the cross terms vanish and multiplicities do not matter. Independent check of the scalars: $\operatorname{tr}(I^\#)$ on $\operatorname{Sym}^2\mathfrak h$ is $\tfrac12\sum_k\tfrac12\operatorname{tr}(\mathrm{ad}_{e_k}^2)=-cd/2$; on $\mathfrak g_2$, $4+\tfrac53\cdot27-77=-28=-4\cdot14/2$, and on $\mathfrak{sp}(2)$, $3+2\cdot5+\tfrac12\cdot14-35=-15=-3\cdot10/2$.
+- $I^\#$ is self-adjoint and scalar ($\gamma_V$) on each Casimir eigenspace of $\mathop{\mathrm{Sym}}^2\mathfrak h$, so the cross terms vanish and multiplicities do not matter. Independent check of the scalars: $\mathop{\mathrm{tr}}(I^\#)$ on $\mathop{\mathrm{Sym}}^2\mathfrak h$ is $\tfrac12\sum_k\tfrac12\mathop{\mathrm{tr}}(\mathrm{ad}_{e_k}^2)=-cd/2$; on $\mathfrak g_2$, $4+\tfrac53\cdot27-77=-28=-4\cdot14/2$, and on $\mathfrak{sp}(2)$, $3+2\cdot5+\tfrac12\cdot14-35=-15=-3\cdot10/2$.
 - Inequality step: $\sum_V\gamma_V\lVert C_V\rVert^2\le\gamma^*\sum_V\lVert C_V\rVert^2$ uses only $\lVert C_V\rVert^2\ge0$ and $\gamma_V\le\gamma^*$, **with no sign condition on $\gamma^*$**. So the displayed inequality $\gamma^*\lVert C\rVert^2\ge\tau-(c-\gamma^*)\tau^2/d$ holds as stated for every $\gamma^*$ (the Lean core carries no sign hypothesis either).
 - Scope remark: the inequality reads as a lower bound on $\lVert C\rVert^2$ only when $\gamma^*>0$. At $\gamma^*=0$ it bounds the trace alone, and at $\gamma^*<0$ it is an upper bound on the norm. By L265's ratios, $\gamma^*=c(1-r_{\min}/2)>0$ on every compact simple $\mathfrak h$ except $\mathfrak{su}(2)$, whose only nontrivial component (spin 2, ratio 3) gives $\gamma^*=-c/2$; there the pairing is an identity, $\lVert C\rVert^2=\tau^2-2\tau/c$. Worth one clause in the statement.
 - Cauchy–Schwarz: $\tau^2=\langle C,I\rangle^2\le d\lVert C\rVert^2$. Correct.
@@ -24,7 +24,7 @@ Log: [agent_logs/r1896-trace-threshold.log](../agent_logs/r1896-trace-threshold.
 ## 2. The classification sentence
 
 - "L259 (3)'s pairing with $\mathfrak h$'s own scalars": correct. L259 (3) pairs $C^\#C=C$ with $I$ using $\mathfrak{so}(n)$'s scalars $n-2,\tfrac{n-4}2,-1,2$; this section does the same with L265's scalars on $\mathfrak h$.
-- "[L260](../findings/second-order.md)'s Lemma C": **the citation misses.** L260 in findings/second-order.md has parts (1)–(4) and no "Lemma C", and the quoted words "the norm from below only relative to the trace" appear nowhere in the finding. They are Lemma C's restated obstacle in [the class-ceiling note](2026-09-26-I73-class-ceiling.md) (batch 33, line 331), which the record carries as L260 (4), with the obstacle as the last sentence of L260's "What it gives" ("the norm from below relative to the trace ($\operatorname{tr}C\le c\lVert C\rVert^2$)"). Correction: cite "L260 (4) and its closing sentence (Lemma C of the class-ceiling note, batch 33)", or link the note. The substance of the comparison holds: the new bound refines $\tau\le c\lVert C\rVert^2$ by putting $\gamma^*<c$ in place of $I^\#$'s top eigenvalue $c$ off the trivial component.
+- "[L260](../findings/second-order.md)'s Lemma C": **the citation misses.** L260 in findings/second-order.md has parts (1)–(4) and no "Lemma C", and the quoted words "the norm from below only relative to the trace" appear nowhere in the finding. They are Lemma C's restated obstacle in [the class-ceiling note](2026-09-26-I73-class-ceiling.md) (batch 33, line 331), which the record carries as L260 (4), with the obstacle as the last sentence of L260's "What it gives" ("the norm from below relative to the trace ($\mathop{\mathrm{tr}}C\le c\lVert C\rVert^2$)"). Correction: cite "L260 (4) and its closing sentence (Lemma C of the class-ceiling note, batch 33)", or link the note. The substance of the comparison holds: the new bound refines $\tau\le c\lVert C\rVert^2$ by putting $\gamma^*<c$ in place of $I^\#$'s top eigenvalue $c$ off the trivial component.
 
 ## 3. g2
 
@@ -39,12 +39,12 @@ Log: [agent_logs/r1896-trace-threshold.log](../agent_logs/r1896-trace-threshold.
 
 - $I/4$: trace $\tfrac{14}4=\tfrac72$, norm $\tfrac78$, bound $\tfrac{21}{10}-\tfrac{49}{40}=\tfrac78$: equality. Correct.
 - L263's $SU(3)$ point, $\tfrac9{28}P_{\mathfrak{su}(3)}+\tfrac3{28}P_{\mathfrak p}$ with dimensions $8,6$: $\tau=\tfrac{72+18}{28}=\tfrac{45}{14}$, $\lVert C\rVert^2=\tfrac{648+54}{784}=\tfrac{351}{392}$, bound $\tfrac{27}{14}-\tfrac{2025}{1960}=\tfrac{1755}{1960}=\tfrac{351}{392}$. **Equality holds exactly**, so by the pairing its $\mathbf{77}$ part vanishes. Correct.
-- Other traces. $SO(4)$ point: $\tfrac{48}{29}+8\sqrt{77/1682}=3.367$. Reflection point ($x,z$ long, $u,y$ short, from the table): $\operatorname{tr}A=2(x^2+2z^2)+\tfrac23(y^2+2u^2)=0.6421$, $2\sum w=2.5726$, $\tau=3.2147$. The range $3.21$ to $3.37$ is correct. Both sit above the parabola by small margins (norms $0.8870$ vs bound $0.8866$, and $0.895440$ vs $0.895389$), consistent with $C_{\mathbf{77}}\ne0$ there.
+- Other traces. $SO(4)$ point: $\tfrac{48}{29}+8\sqrt{77/1682}=3.367$. Reflection point ($x,z$ long, $u,y$ short, from the table): $\mathop{\mathrm{tr}}A=2(x^2+2z^2)+\tfrac23(y^2+2u^2)=0.6421$, $2\sum w=2.5726$, $\tau=3.2147$. The range $3.21$ to $3.37$ is correct. Both sit above the parabola by small margins (norms $0.8870$ vs bound $0.8866$, and $0.895440$ vs $0.895389$), consistent with $C_{\mathbf{77}}\ne0$ there.
 
 ## 5. sp(k)
 
 - Metric: long roots $2\varepsilon_i$ of $\mathfrak{sp}(k)$ are roots $e_a-e_b$ of $\mathfrak{su}(2k)\subset\mathfrak{so}(4k)$, so $\lvert\alpha_{\rm long}\rvert^2=2$ and $\mathrm{Cas}(\lambda)=(\lambda,\lambda+2\rho)$ in that normalisation. Adjoint $2\varepsilon_1$ gives $2(k+1)=2c$. Correct.
-- Decomposition: $\operatorname{Sym}^2(\operatorname{Sym}^2V)=\operatorname{Sym}^4V\oplus S_{(2,2)}V$ for $GL(V)$, and under $Sp(V)$ $\operatorname{Sym}^4V=[4\omega_1]$ and $S_{(2,2)}V=[2\omega_2]\oplus[\omega_2]\oplus[0]$. Dimension check at $k=2$: $35+14+5+1=55$. Correct for $k\ge2$.
+- Decomposition: $\mathop{\mathrm{Sym}}^2(\mathop{\mathrm{Sym}}^2V)=\mathop{\mathrm{Sym}}^4V\oplus S_{(2,2)}V$ for $GL(V)$, and under $Sp(V)$ $\mathop{\mathrm{Sym}}^4V=[4\omega_1]$ and $S_{(2,2)}V=[2\omega_2]\oplus[\omega_2]\oplus[0]$. Dimension check at $k=2$: $35+14+5+1=55$. Correct for $k\ge2$.
 - Scalars, using $\lvert\varepsilon\rvert^2=1$ and halving: $[\omega_2]$ has $\tfrac12(2+4k-2)=2k$, so $\gamma=\tfrac{k+2}2$ (L265's ratio $\tfrac k{k+1}$). $[2\omega_2]$ has $\tfrac12(8+8k-4)=4k+2$, so $\gamma=\tfrac12$. $[4\omega_1]$ has $\tfrac12(16+8k)=4k+8$, so $\gamma=-1$. The trace check in item 1 passes at $k=2$. Correct.
 - Bound: $\gamma^*=\tfrac{k+2}2$, $c-\gamma^*=\tfrac k2$, $\tfrac k2\tau^2/(k(2k+1))=\tau^2/(2(2k+1))$. Correct.
 - $\tau_-$ (by hand, and by a seconds-long screen that agrees): $1.7897, 1.9108, 2.0762, 2.2911, 2.5265$ at $n=9,12,16,20,24$. $d/c$ is as listed, and the fractions are $0.537,0.364,0.288,0.250,0.227$. The listed $1.79,1.91,2.08,2.29,2.53$ and "$0.54$ to $0.23$" are correct. The upper root far exceeds $\sqrt{d\,N/(n-2)^2}$ at every $k$, so the covering argument carries over.
@@ -52,20 +52,20 @@ Log: [agent_logs/r1896-trace-threshold.log](../agent_logs/r1896-trace-threshold.
 
 ## 6. The torus-family bullet
 
-- $\operatorname{tr}C=\operatorname{tr}A+2\sum w_\alpha$ since $\operatorname{tr}P_\alpha=2$. Correct.
+- $\mathop{\mathrm{tr}}C=\mathop{\mathrm{tr}}A+2\sum w_\alpha$ since $\mathop{\mathrm{tr}}P_\alpha=2$. Correct.
 - $\hat W\ge0$ entrywise at a positive solution ($a_i\ge0$, off-diagonal entries positive). $f\ge1$ holds on every entry, as follows:
   - Long edges: $(\hat W^2)_{x,-x}=2\sum_lp_{il}q_{il}+4a_iu_i=2u_i$ by the long row, so $f=1$.
   - Short edges: $a_i<\tfrac12$ gives $p_{ij}^2+q_{ij}^2<1$, hence $\lvert A_{ij}\rvert\le\tfrac12\max(p^2,q^2)<\tfrac12$ and $f=2(1\pm A_{ij})>1$.
   - Diagonal: $2+a_i>1$.
   So $\hat W^2\ge\hat W\ge0$ entrywise. Correct for $k\ge2$.
-- $\hat W$ is symmetric, nonnegative and nonzero, so $\rho>0$; $\rho^2=\rho(\hat W^2)\ge\rho(\hat W)$ gives $\rho\ge1$. Rows $\pm\varepsilon_i$ have equal sums by the block form. The sum over $+\varepsilon_i$ is $\sum a_i+\sum_j p+\sum_j q+2\sum u$, which is $\operatorname{tr}C$, and it is at least the largest row sum, which is at least $\rho\ge1$. Correct, and correctly called short of $\tau_-$.
-- g2 long-root point, $w=\tfrac12$ on one long root $\alpha_0$. $A=\tfrac14\alpha_0\alpha_0^{\mathsf T}$ and every pair term vanishes, so each $\gamma\ne\alpha_0$ row is $0=0$ and the $\alpha_0$ row is $\tfrac12(1-\tfrac14\cdot4)=0$. It solves every row. $\operatorname{tr}C=\tfrac12+1=\tfrac32<\tfrac{12}7$. It is $I_3/2$ on the long-root $\mathfrak{su}(2)$, whose $c=\tfrac12(\alpha,2\alpha)=2$, so $\lVert C\rVert^2=\tfrac34\ge\tfrac{36}{49}$. Correct.
+- $\hat W$ is symmetric, nonnegative and nonzero, so $\rho>0$; $\rho^2=\rho(\hat W^2)\ge\rho(\hat W)$ gives $\rho\ge1$. Rows $\pm\varepsilon_i$ have equal sums by the block form. The sum over $+\varepsilon_i$ is $\sum a_i+\sum_j p+\sum_j q+2\sum u$, which is $\mathop{\mathrm{tr}}C$, and it is at least the largest row sum, which is at least $\rho\ge1$. Correct, and correctly called short of $\tau_-$.
+- g2 long-root point, $w=\tfrac12$ on one long root $\alpha_0$. $A=\tfrac14\alpha_0\alpha_0^{\mathsf T}$ and every pair term vanishes, so each $\gamma\ne\alpha_0$ row is $0=0$ and the $\alpha_0$ row is $\tfrac12(1-\tfrac14\cdot4)=0$. It solves every row. $\mathop{\mathrm{tr}}C=\tfrac12+1=\tfrac32<\tfrac{12}7$. It is $I_3/2$ on the long-root $\mathfrak{su}(2)$, whose $c=\tfrac12(\alpha,2\alpha)=2$, so $\lVert C\rVert^2=\tfrac34\ge\tfrac{36}{49}$. Correct.
 - No kernel. Taking $\alpha_0=3\alpha_1+2\alpha_2$, the Jacobian is block diagonal:
   - $\alpha_0$ row: $-2$.
   - $\alpha_1\perp\alpha_0$: $1$.
   - The pairs $\{\alpha_2,3\alpha_1+\alpha_2\}$ (long) and $\{\alpha_1+\alpha_2,2\alpha_1+\alpha_2\}$ (short), coupled through $\gamma=\alpha_0-\delta$: blocks $\begin{pmatrix}3/4&\mp1/2\\\mp1/2&3/4\end{pmatrix}$ (diagonal $1-\tfrac14(\alpha_0\cdot\gamma)^2=\tfrac34$), eigenvalues $\tfrac54,\tfrac14$.
   All are nonzero, whatever the sign convention on the coefficients (even $\tfrac23$ in place of $\tfrac12$ gives $\tfrac34\pm\tfrac23\ne0$). Isolated in the family. Correct.
-- sp(k) long-root $\mathfrak{sp}(1)$ ($u_i=\tfrac12$, the rest $0$): $a_i=\tfrac12$, the long row gives $\tfrac12(1-1)=0$, and the diagonal of $\hat W$ gives $\tfrac14+1=\tfrac54=(2+\tfrac12)\tfrac12$. It solves the rows, with $\operatorname{tr}C=\tfrac12+1=\tfrac32$. Correct.
+- sp(k) long-root $\mathfrak{sp}(1)$ ($u_i=\tfrac12$, the rest $0$): $a_i=\tfrac12$, the long row gives $\tfrac12(1-1)=0$, and the diagonal of $\hat W$ gives $\tfrac14+1=\tfrac54=(2+\tfrac12)\tfrac12$. It solves the rows, with $\mathop{\mathrm{tr}}C=\tfrac12+1=\tfrac32$. Correct.
 
 ## 7. Lean
 

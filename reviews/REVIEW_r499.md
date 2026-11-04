@@ -35,9 +35,9 @@ So: **the answer to "is there a complete proof" is no, but the shortfall is two 
 
 I rebuilt all of it from the definitions. Everything in this section is my own derivation, agreeing with the record.
 
-**Step 1.** Criticality on $\mathcal D_n\cap\{\lVert S\rVert=1\}$ reads $S^{\circ2}+S^2=\lambda S+D$. Its diagonal is forced: $(S^{\circ2})_{ii}=0$, $(S^2)_{ii}=r_i:=\sum_j s_{ij}^2$, $S_{ii}=0$, so $D=\operatorname{diag}(r_i)$. Pairing with $v\otimes v$ where $Sv=\mu v$, $\lvert v\rvert=1$, $v\perp\mathbf1$, and using $\sum_i r_iv_i^2=\tfrac12\sum_{i,j}s_{ij}^2(v_i^2+v_j^2)$:
+**Step 1.** Criticality on $\mathcal D_n\cap\{\lVert S\rVert=1\}$ reads $S^{\circ2}+S^2=\lambda S+D$. Its diagonal is forced: $(S^{\circ2})_{ii}=0$, $(S^2)_{ii}=r_i:=\sum_j s_{ij}^2$, $S_{ii}=0$, so $D=\mathop{\mathrm{diag}}(r_i)$. Pairing with $v\otimes v$ where $Sv=\mu v$, $\lvert v\rvert=1$, $v\perp\mathbf1$, and using $\sum_i r_iv_i^2=\tfrac12\sum_{i,j}s_{ij}^2(v_i^2+v_j^2)$:
 $$\lambda\mu=\mu^2-\sum_{i<j}s_{ij}^2(v_i-v_j)^2.$$
-The two contractions are $\sum_{i<j}s_{ij}(v_i-v_j)^2=-v^{\mathsf T}Sv=-\mu$ (row sums, hollowness) and $\sum_{i<j}(v_i-v_j)^2=n\sum v^2-(\sum v)^2=n$. Cauchy–Schwarz then gives $\mu^2\le n\sum_{i<j}s^2(v_i-v_j)^2$, hence $\lambda\mu\le\frac{n-1}n\mu^2$, hence $\lambda\le\frac{n-1}n\mu$ once $\mu>0$, which holds because $S$ is hollow, so $\operatorname{tr}S=0$, so a nonzero $S$ has a positive top eigenvalue. **Correct.**
+The two contractions are $\sum_{i<j}s_{ij}(v_i-v_j)^2=-v^{\mathsf T}Sv=-\mu$ (row sums, hollowness) and $\sum_{i<j}(v_i-v_j)^2=n\sum v^2-(\sum v)^2=n$. Cauchy–Schwarz then gives $\mu^2\le n\sum_{i<j}s^2(v_i-v_j)^2$, hence $\lambda\mu\le\frac{n-1}n\mu^2$, hence $\lambda\le\frac{n-1}n\mu$ once $\mu>0$, which holds because $S$ is hollow, so $\mathop{\mathrm{tr}}S=0$, so a nonzero $S$ has a positive top eigenvalue. **Correct.**
 
 **Step 2.** $\mu=v^{\mathsf T}Sv=\sum_{i\ne j}s_{ij}v_iv_j=2\sum_{i<j}s_{ij}v_iv_j=2\langle S,P\rangle$ with $P_{ij}=v_iv_j$ off-diagonal, and $\langle S,P\rangle=\langle S,Z\rangle$ since $S\in\mathcal D_n$. The record's 2(a) and 2(b) are both right: the residual $P-Z$ is $a_i+a_j+c$ off-diagonal, the constant $c$ absorbs into $a_i=c/2$, and $\sum_{i<j}(a_i+a_j)T_{ij}=\sum_ia_i\cdot(\text{row sum of }T)=0$ for every $T\in\mathcal D_n$. **Correct.**
 

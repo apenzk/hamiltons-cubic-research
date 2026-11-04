@@ -8,7 +8,7 @@
 | --- | --- | --- |
 | 1 | $\mathrm{Ric}(W)(x,x)=\sum_\alpha\lambda_\alpha\lVert v_\alpha x\rVert^2$, hence Ricci-flatness is $\sum_\alpha\lambda_\alpha v_\alpha^{\mathsf T}v_\alpha=0$ | **PROVEN**, coefficient normalisation-dependent, conclusion not |
 | 2a | the positive and negative sides are the same matrix | **PROVEN** |
-| 2b | that matrix's image sits in $U$, so every $\operatorname{im}v_\alpha$ with $\lambda_\alpha\ne0$ sits in $U$ | **PROVEN**, on one unstated step |
+| 2b | that matrix's image sits in $U$, so every $\mathop{\mathrm{im}}v_\alpha$ with $\lambda_\alpha\ne0$ sits in $U$ | **PROVEN**, on one unstated step |
 | 3 | $v_\alpha u=0$ for $u\perp U$ and $\lambda_\alpha\ne0$, hence $W(u\wedge w)=0$ | **PROVEN** |
 | 4 | the $\lambda_\alpha\ne0$ qualifier is necessary, witnessed by $e_9\wedge e_{10}$ at padded $W_{\mathbb{CP}^2}$ in $\mathcal W_{10}$ | **PROVEN**, witness checked and correct |
 | 5 | "at most two" is used only in defining $U$ | **PROVEN**, and there it is load-bearing; the blockquote's $\mathbb R^8$ witness checked and correct |
@@ -25,7 +25,7 @@
 Quoted from [conventions.md](../findings/conventions.md), not restated:
 
 - $N$: "$\binom n2=\dim\Lambda^2\mathbb R^n$". So $v_{N-1},v_N$ are the last two of a full eigenbasis of $W$ on $\Lambda^2$.
-- The norm on $\mathfrak{so}(n)$: "**This record's norm is $\lVert Z\rVert^2=\tfrac12\operatorname{tr}(Z^{\mathsf T}Z)$, so $\lVert Z\rVert_F^2=2\lVert Z\rVert^2$**".
+- The norm on $\mathfrak{so}(n)$: "**This record's norm is $\lVert Z\rVert^2=\tfrac12\mathop{\mathrm{tr}}(Z^{\mathsf T}Z)$, so $\lVert Z\rVert_F^2=2\lVert Z\rVert^2$**".
 - The bivector normalisation: "$\lVert\varphi_{ab}\rVert^2=1$ under the half-trace pairing of the bullet above, which is the one every result uses and which makes $\{\varphi_{ab}\}_{a<b}$ orthonormal".
 - $\mathrm{Ric}$: "$\mathrm{Ric}$ is the adjoint of $\cdot\wedge\mathrm{id}$, with $\lVert\mathrm{Ric}\rVert$ the Frobenius norm of the resulting symmetric matrix."
 - $\#$: "$\#$ is the halved Böhm–Wilking product, $vv^{\mathsf T}\#ww^{\mathsf T}=\tfrac12[v,w][v,w]^{\mathsf T}$".
@@ -40,13 +40,13 @@ Quoted from [conventions.md](../findings/conventions.md), not restated:
 | --- | --- | --- | --- | --- |
 | H1 | $W$ Ricci-flat | yes, via $W\in\mathrm{Weyl}_n$ | yes | step 1, and again at the restriction |
 | H2 | $W$ satisfies the first Bianchi identity and the pair symmetry | yes, via $W\in\mathrm{Weyl}_n$ | **needed and never mentioned**, it is half of "$W'\in\mathrm{Weyl}_{\dim U}$" | conclusion |
-| H3 | at most two negative eigenvalues | yes | **only** to identify $\operatorname{im}P_-$ with $U$ | step 2b |
+| H3 | at most two negative eigenvalues | yes | **only** to identify $\mathop{\mathrm{im}}P_-$ with $U$ | step 2b |
 | H4 | $v_{N-1},v_N$ read as skew matrices | yes | throughout | |
 | H5 | $\dim U<n$ | yes | only to make $U^\perp\ne0$, i.e. to make the conclusion non-empty | conclusion |
 | H6 | $\{v_\alpha\}$ is a **full** orthonormal eigenbasis of $\Lambda^2$, kernel included, orthonormal in the **half-trace** norm | **unstated** | fixes the coefficient in step 1 and makes $\sum_\alpha\lambda_\alpha v_\alpha^{\mathsf T}v_\alpha$ the object it is | step 1 |
 | H7 | $\mathrm{Ric}$ in the normalisation $\mathrm{Ric}_{ij}=\sum_kR_{ikjk}$ | **unstated** | fixes the coefficient; inert for the flatness conclusion | step 1 |
 | H8 | $\lambda_\alpha\ne0$ | yes, this is the repair that reached the prose | essential | step 3 |
-| H9 | $\operatorname{im}(A+B)=\operatorname{im}A+\operatorname{im}B$ for $A,B\succeq0$, and $\operatorname{im}(v^{\mathsf T}v)=\operatorname{im}v$ for skew $v$ | **unstated** | carries the whole of step 2b | step 2b |
+| H9 | $\mathop{\mathrm{im}}(A+B)=\mathop{\mathrm{im}}A+\mathop{\mathrm{im}}B$ for $A,B\succeq0$, and $\mathop{\mathrm{im}}(v^{\mathsf T}v)=\mathop{\mathrm{im}}v$ for skew $v$ | **unstated** | carries the whole of step 2b | step 2b |
 | H10 | $\mathfrak{so}(U)$ is a subalgebra of $\mathfrak{so}(n)$ and $\Lambda^2U\hookrightarrow\Lambda^2\mathbb R^n$ is isometric | **unstated and unused** | would carry claim 8, which is never argued | conclusion |
 | H11 | $W\ne0$ | unstated | not needed by the proof; needed to say anything about $\dim U$ at $n=4$ | §7 |
 
@@ -56,9 +56,9 @@ Quoted from [conventions.md](../findings/conventions.md), not restated:
 
 Take $\{e_i\}$ orthonormal in $\mathbb R^n$ and identify $x\wedge y$ with the skew matrix $xy^{\mathsf T}-yx^{\mathsf T}$; this is the identification under which $\varphi_{ab}=E_{ab}-E_{ba}$ and, by the quoted bivector bullet, $\{\varphi_{ab}\}_{a<b}$ is orthonormal in the half-trace pairing.
 
-First the pairing of a skew $v$ against a decomposable. Writing $\langle A,B\rangle=\tfrac12\operatorname{tr}(A^{\mathsf T}B)$ and using $v^{\mathsf T}=-v$,
+First the pairing of a skew $v$ against a decomposable. Writing $\langle A,B\rangle=\tfrac12\mathop{\mathrm{tr}}(A^{\mathsf T}B)$ and using $v^{\mathsf T}=-v$,
 
-$$\langle v,\ xy^{\mathsf T}-yx^{\mathsf T}\rangle=\tfrac12\big(\operatorname{tr}(v^{\mathsf T}xy^{\mathsf T})-\operatorname{tr}(v^{\mathsf T}yx^{\mathsf T})\big)=\tfrac12\big(-y^{\mathsf T}vx+x^{\mathsf T}vy\big)=-y^{\mathsf T}vx,$$
+$$\langle v,\ xy^{\mathsf T}-yx^{\mathsf T}\rangle=\tfrac12\big(\mathop{\mathrm{tr}}(v^{\mathsf T}xy^{\mathsf T})-\mathop{\mathrm{tr}}(v^{\mathsf T}yx^{\mathsf T})\big)=\tfrac12\big(-y^{\mathsf T}vx+x^{\mathsf T}vy\big)=-y^{\mathsf T}vx,$$
 
 the last step because $x^{\mathsf T}vy$ is a scalar, equal to its own transpose $y^{\mathsf T}v^{\mathsf T}x=-y^{\mathsf T}vx$. So
 
@@ -78,7 +78,7 @@ Since $\lVert v_\alpha x\rVert^2=x^{\mathsf T}v_\alpha^{\mathsf T}v_\alpha x$ an
 
 **A second normalisation the identity silently needs.** The right-hand side is stated in two different norms under one symbol, $\lVert v_\alpha x\rVert$ is Euclidean on $\mathbb R^n$ while the eigenbasis $\{v_\alpha\}$ is orthonormal in the half-trace norm of $\mathfrak{so}(n)$. Under the plain-Frobenius normalisation that [conventions.md](../findings/conventions.md) flags as the live alternative, the right-hand side doubles. This is H6, and it is unstated.
 
-**A free consistency check the block does not take.** Tracing $\sum_\alpha\lambda_\alpha v_\alpha^{\mathsf T}v_\alpha=0$ gives $2\sum_\alpha\lambda_\alpha=0$, i.e. $\operatorname{tr}W=0$, which is where a Weyl tensor already sits. Consistent.
+**A free consistency check the block does not take.** Tracing $\sum_\alpha\lambda_\alpha v_\alpha^{\mathsf T}v_\alpha=0$ gives $2\sum_\alpha\lambda_\alpha=0$, i.e. $\mathop{\mathrm{tr}}W=0$, which is where a Weyl tensor already sits. Consistent.
 
 ## 2. The image step, both halves, separately
 
@@ -88,25 +88,25 @@ $$P_+:=\sum_{\lambda_\alpha>0}\lambda_\alpha\,v_\alpha^{\mathsf T}v_\alpha,\qqua
 
 Kernel eigenvectors contribute nothing to $\sum_\alpha\lambda_\alpha v_\alpha^{\mathsf T}v_\alpha$, so that sum is $P_+-P_-$, and Ricci-flatness is $P_+=P_-$. Each $v^{\mathsf T}v\succeq0$ and each coefficient is positive, so both are positive semidefinite. Correct as written.
 
-**2b. "whose image is contained in $U$, and every eigenvector with nonzero eigenvalue has its image inside $U$", PROVEN, on one step the block never states.** For skew $v$, $\operatorname{im}(v^{\mathsf T}v)=\operatorname{im}v^{\mathsf T}=\operatorname{im}v$; and for $A,B\succeq0$, $\ker(A+B)=\ker A\cap\ker B$, hence $\operatorname{im}(A+B)=\operatorname{im}A+\operatorname{im}B$. Iterating,
+**2b. "whose image is contained in $U$, and every eigenvector with nonzero eigenvalue has its image inside $U$", PROVEN, on one step the block never states.** For skew $v$, $\mathop{\mathrm{im}}(v^{\mathsf T}v)=\mathop{\mathrm{im}}v^{\mathsf T}=\mathop{\mathrm{im}}v$; and for $A,B\succeq0$, $\ker(A+B)=\ker A\cap\ker B$, hence $\mathop{\mathrm{im}}(A+B)=\mathop{\mathrm{im}}A+\mathop{\mathrm{im}}B$. Iterating,
 
-$$\operatorname{im}P_-=\sum_{\lambda_\alpha<0}\operatorname{im}v_\alpha .$$
+$$\mathop{\mathrm{im}}P_-=\sum_{\lambda_\alpha<0}\mathop{\mathrm{im}}v_\alpha .$$
 
-Under H3 that sum has at most the two terms $\operatorname{im}v_{N-1}+\operatorname{im}v_N=U$, so $\operatorname{im}P_-\subseteq U$, with equality when both eigenvalues are genuinely negative. Then $P_+=P_-$ gives
+Under H3 that sum has at most the two terms $\mathop{\mathrm{im}}v_{N-1}+\mathop{\mathrm{im}}v_N=U$, so $\mathop{\mathrm{im}}P_-\subseteq U$, with equality when both eigenvalues are genuinely negative. Then $P_+=P_-$ gives
 
-$$\sum_{\lambda_\alpha>0}\operatorname{im}v_\alpha=\operatorname{im}P_+=\operatorname{im}P_-\subseteq U,$$
+$$\sum_{\lambda_\alpha>0}\mathop{\mathrm{im}}v_\alpha=\mathop{\mathrm{im}}P_+=\mathop{\mathrm{im}}P_-\subseteq U,$$
 
-so $\operatorname{im}v_\alpha\subseteq U$ for every $\lambda_\alpha>0$; for $\lambda_\alpha<0$ it holds by the definition of $U$. Both halves stand.
+so $\mathop{\mathrm{im}}v_\alpha\subseteq U$ for every $\lambda_\alpha>0$; for $\lambda_\alpha<0$ it holds by the definition of $U$. Both halves stand.
 
 **The unstated step is H9**, the two image identities above. They are elementary, but "an identity among positive semidefinite matrices" is doing no work by itself: the block's word "hence" jumps from $P_+=P_-$ to a statement about images, and the bridge is the PSD image lemma, which appears nowhere.
 
-**One infelicity in the statement, not in the proof.** $U$ is well defined even when the two negative eigenvalues coincide, because $\sum_a v_a^{\mathsf T}v_a$ over an orthonormal basis of a subspace of $\mathfrak{so}(n)$ does not depend on the basis; so the repeated-eigenvalue basis-dependence that [REVIEW_r59.md](../reviews/REVIEW_r59.md) flags for the *ranks* does not touch $U$. But the statement says "with negative eigenvectors $v_{N-1},v_N$", which presupposes exactly two. A Weyl tensor has at least one negative eigenvalue ($\operatorname{tr}W=0$, $W\ne0$), and the case of exactly one leaves $v_{N-1}$ undefined. The argument survives verbatim with $U=\operatorname{im}v_N$; the wording does not.
+**One infelicity in the statement, not in the proof.** $U$ is well defined even when the two negative eigenvalues coincide, because $\sum_a v_a^{\mathsf T}v_a$ over an orthonormal basis of a subspace of $\mathfrak{so}(n)$ does not depend on the basis; so the repeated-eigenvalue basis-dependence that [REVIEW_r59.md](../reviews/REVIEW_r59.md) flags for the *ranks* does not touch $U$. But the statement says "with negative eigenvectors $v_{N-1},v_N$", which presupposes exactly two. A Weyl tensor has at least one negative eigenvalue ($\mathop{\mathrm{tr}}W=0$, $W\ne0$), and the case of exactly one leaves $v_{N-1}$ undefined. The argument survives verbatim with $U=\mathop{\mathrm{im}}v_N$; the wording does not.
 
 ## 3. $v_\alpha u=0$, and the kernel witness, PROVEN, witness checked
 
-For $u\in U^\perp$ and $\lambda_\alpha\ne0$: $\operatorname{im}v_\alpha\subseteq U$ and $v_\alpha$ skew give $\ker v_\alpha=(\operatorname{im}v_\alpha)^\perp\supseteq U^\perp$, so $v_\alpha u=0$. Then for any $w$, by the pairing formula of §1, $\langle v_\alpha,u\wedge w\rangle=-w^{\mathsf T}v_\alpha u=0$; the terms with $\lambda_\alpha=0$ contribute nothing to $W(u\wedge w)=\sum_\alpha\lambda_\alpha\langle v_\alpha,u\wedge w\rangle v_\alpha$ regardless. So $W(u\wedge w)=0$ for **every** $w\in\mathbb R^n$, which is more than the statement's $w\perp u$ and costs nothing.
+For $u\in U^\perp$ and $\lambda_\alpha\ne0$: $\mathop{\mathrm{im}}v_\alpha\subseteq U$ and $v_\alpha$ skew give $\ker v_\alpha=(\mathop{\mathrm{im}}v_\alpha)^\perp\supseteq U^\perp$, so $v_\alpha u=0$. Then for any $w$, by the pairing formula of §1, $\langle v_\alpha,u\wedge w\rangle=-w^{\mathsf T}v_\alpha u=0$; the terms with $\lambda_\alpha=0$ contribute nothing to $W(u\wedge w)=\sum_\alpha\lambda_\alpha\langle v_\alpha,u\wedge w\rangle v_\alpha$ regardless. So $W(u\wedge w)=0$ for **every** $w\in\mathbb R^n$, which is more than the statement's $w\perp u$ and costs nothing.
 
-**The witness $e_9\wedge e_{10}$ at padded $W_{\mathbb{CP}^2}$ in $\mathcal W_{10}$, checked and correct.** Let $W=\mathrm{pad}(W_{\mathbb{CP}^2})$ with support $\Lambda^2V$, $V=\operatorname{span}(e_1,\dots,e_4)$. The Weyl tensor of $\mathbb{CP}^2$ is self-dual with $\Lambda^2$-spectrum proportional to $(2,-1,-1)$ on $\Lambda^+$ and $0$ on $\Lambda^-$, so its two negative eigenvectors are self-dual two-forms, each of rank $4$, and $U=V$ with $\dim U=4<10$. Now $\varphi_{9,10}=e_9\wedge e_{10}$ lies in $(\Lambda^2V)^\perp$, hence is an eigenvector at $\lambda=0$; and $\varphi_{9,10}\,e_9=-e_{10}\ne0$ while $e_9\perp U$. **So the unqualified "$v_\alpha u=0$ for all $\alpha$" is false at this object, and the repaired qualifier is necessary.** The witness names no $u$; the reader must supply $u\in\{e_9,e_{10}\}$.
+**The witness $e_9\wedge e_{10}$ at padded $W_{\mathbb{CP}^2}$ in $\mathcal W_{10}$, checked and correct.** Let $W=\mathrm{pad}(W_{\mathbb{CP}^2})$ with support $\Lambda^2V$, $V=\mathop{\mathrm{span}}(e_1,\dots,e_4)$. The Weyl tensor of $\mathbb{CP}^2$ is self-dual with $\Lambda^2$-spectrum proportional to $(2,-1,-1)$ on $\Lambda^+$ and $0$ on $\Lambda^-$, so its two negative eigenvectors are self-dual two-forms, each of rank $4$, and $U=V$ with $\dim U=4<10$. Now $\varphi_{9,10}=e_9\wedge e_{10}$ lies in $(\Lambda^2V)^\perp$, hence is an eigenvector at $\lambda=0$; and $\varphi_{9,10}\,e_9=-e_{10}\ne0$ while $e_9\perp U$. **So the unqualified "$v_\alpha u=0$ for all $\alpha$" is false at this object, and the repaired qualifier is necessary.** The witness names no $u$; the reader must supply $u\in\{e_9,e_{10}\}$.
 
 **A note on the blockquote, since the brief warns the repair is partial.** The fourth blockquote's closing sentence (*"$v_\alpha u=0$ for all $\alpha$" holds only for $\lambda_\alpha\ne0$*), is now **stale**: the prose already carries the qualifier in bold and the witness beside it. It should be struck as done, not left standing as an outstanding correction.
 
@@ -114,15 +114,15 @@ For $u\in U^\perp$ and $\lambda_\alpha\ne0$: $\operatorname{im}v_\alpha\subseteq
 
 ## 4. "At most two", used once, and there it is load-bearing
 
-**Where the hypothesis enters.** Exactly one place: identifying $\operatorname{im}P_-=\sum_{\lambda_\alpha<0}\operatorname{im}v_\alpha$ with the block's $U=\operatorname{im}v_{N-1}+\operatorname{im}v_N$. Steps 1, 3 and the restriction argument never see it. So the brief's suspicion is right: **the hypothesis is used nowhere but in the definition of $U$.**
+**Where the hypothesis enters.** Exactly one place: identifying $\mathop{\mathrm{im}}P_-=\sum_{\lambda_\alpha<0}\mathop{\mathrm{im}}v_\alpha$ with the block's $U=\mathop{\mathrm{im}}v_{N-1}+\mathop{\mathrm{im}}v_N$. Steps 1, 3 and the restriction argument never see it. So the brief's suspicion is right: **the hypothesis is used nowhere but in the definition of $U$.**
 
-**The generalisation.** Redefine $U:=\sum_{\lambda_\alpha<0}\operatorname{im}v_\alpha$. Then §2b's chain reads $\operatorname{im}P_-=U$ by construction and $\sum_{\lambda_\alpha>0}\operatorname{im}v_\alpha=\operatorname{im}P_+=U$, §3 is untouched, and §6 is untouched. The correct statement is therefore:
+**The generalisation.** Redefine $U:=\sum_{\lambda_\alpha<0}\mathop{\mathrm{im}}v_\alpha$. Then §2b's chain reads $\mathop{\mathrm{im}}P_-=U$ by construction and $\sum_{\lambda_\alpha>0}\mathop{\mathrm{im}}v_\alpha=\mathop{\mathrm{im}}P_+=U$, §3 is untouched, and §6 is untouched. The correct statement is therefore:
 
-> Let $W\in\mathrm{Weyl}_n$ and set $U=\sum_{\lambda_\alpha<0}\operatorname{im}v_\alpha$ over **all** negative eigenvectors. If $\dim U<n$ then $W(u\wedge w)=0$ for every $u\perp U$ and every $w$, and $W$ is a padding of a $\mathrm{Weyl}_{\dim U}$ tensor.
+> Let $W\in\mathrm{Weyl}_n$ and set $U=\sum_{\lambda_\alpha<0}\mathop{\mathrm{im}}v_\alpha$ over **all** negative eigenvectors. If $\dim U<n$ then $W(u\wedge w)=0$ for every $u\perp U$ and every $w$, and $W$ is a padding of a $\mathrm{Weyl}_{\dim U}$ tensor.
 
 with no count hypothesis at all. The blockquote's *"the block's own three steps give the conclusion verbatim for any number of negative eigenvalues"* is correct.
 
-**But the count cannot simply be deleted, and the blockquote's witness is right about that.** I checked it. Take $V_1=\operatorname{span}(e_1,\dots,e_4)$, $V_2=\operatorname{span}(e_5,\dots,e_8)$ and $W=\mathrm{pad}_{V_1}(W_{\mathbb{CP}^2})+\mathrm{pad}_{V_2}(W_{\mathbb{CP}^2})$ on $\mathbb R^8$.
+**But the count cannot simply be deleted, and the blockquote's witness is right about that.** I checked it. Take $V_1=\mathop{\mathrm{span}}(e_1,\dots,e_4)$, $V_2=\mathop{\mathrm{span}}(e_5,\dots,e_8)$ and $W=\mathrm{pad}_{V_1}(W_{\mathbb{CP}^2})+\mathrm{pad}_{V_2}(W_{\mathbb{CP}^2})$ on $\mathbb R^8$.
 
 - $W\in\mathrm{Weyl}_8$: pair symmetry and Bianchi are blockwise; $\mathrm{Ric}$ vanishes on $V_1$ and on $V_2$ blockwise, and for $x\in V_1$, $y\in V_2$ the mixed entry $\sum_k\langle W(x\wedge e_k),y\wedge e_k\rangle$ is zero because $W(x\wedge e_k)$ is nonzero only for $e_k\in V_1$, when it lies in $\Lambda^2V_1\perp V_2\wedge V_1$.
 - $W$ has **four** negative eigenvalues, two per block.
@@ -139,7 +139,7 @@ So with more than two negative eigenvalues and $U$ built from a chosen pair, the
 
 **What would have to be shown.** Write $m=\dim U$, $\iota:\Lambda^2U\hookrightarrow\Lambda^2\mathbb R^n$, and let $W'$ be the operator on $\Lambda^2U$ that the block produces, so $W=\iota W'\iota^{\mathsf T}$.
 
-1. **The norm.** $\lVert\iota W'\iota^{\mathsf T}\rVert_{\mathcal W_n}=\lVert W'\rVert_{\mathcal W_m}$. What this needs, and what nothing in the block supplies: that $\iota$ is an isometry for the record's half-trace pairing, i.e. that an orthonormal basis of $\Lambda^2U$ inside $\Lambda^2\mathbb R^n$ is an orthonormal basis of $\Lambda^2$ of the abstract $m$-space; and the two-sided support statement $W|_{(\Lambda^2U)^\perp}=0$ **and** $\operatorname{im}W\subseteq\Lambda^2U$. The block proves the first half of the support statement and gets the second only through self-adjointness, which it does not invoke.
+1. **The norm.** $\lVert\iota W'\iota^{\mathsf T}\rVert_{\mathcal W_n}=\lVert W'\rVert_{\mathcal W_m}$. What this needs, and what nothing in the block supplies: that $\iota$ is an isometry for the record's half-trace pairing, i.e. that an orthonormal basis of $\Lambda^2U$ inside $\Lambda^2\mathbb R^n$ is an orthonormal basis of $\Lambda^2$ of the abstract $m$-space; and the two-sided support statement $W|_{(\Lambda^2U)^\perp}=0$ **and** $\mathop{\mathrm{im}}W\subseteq\Lambda^2U$. The block proves the first half of the support statement and gets the second only through self-adjointness, which it does not invoke.
 2. **The cubic.** $P(\iota W'\iota^{\mathsf T})=P(W')$, i.e. $\langle W,W^2\rangle$ and $\langle W,W^\#\rangle$ each agree with their $\mathcal W_m$ counterparts. The $W^2$ term needs only the support statement. The $\#$ term needs that the structure constants $c_{\alpha\beta\gamma}=\langle[v_\alpha,v_\beta],v_\gamma\rangle$ computed in $\mathfrak{so}(n)$ agree with those computed in $\mathfrak{so}(U)$ for the eigenvectors carrying nonzero eigenvalue.
 3. Then $\theta=P/\lVert\cdot\rVert^3$ follows from 1 and 2.
 
@@ -205,7 +205,7 @@ First, what the disputed sentences are *about*. Neither is the range of validity
 1. some $u\perp U$ and some $w$ have $W(u\wedge w)\ne0$; or
 2. $W$ is supported on $\Lambda^2U$ but its core $W'\in\mathcal W_{\dim U}$ has $\lVert W'\rVert\ne\lVert W\rVert$ or $\theta(W')\ne\theta(W)$.
 
-**Horn 1 is closed by the derivation above, in contrapositive.** $W(u\wedge w)\ne0$ requires some $\alpha$ with $\lambda_\alpha\ne0$ and $\langle v_\alpha,u\wedge w\rangle=-w^{\mathsf T}v_\alpha u\ne0$, hence $v_\alpha u\ne0$, hence $u\notin\ker v_\alpha=(\operatorname{im}v_\alpha)^\perp$, hence $\operatorname{im}v_\alpha\not\subseteq U$, contradicting $\operatorname{im}P_+=\operatorname{im}P_-\subseteq U$. There is no room for such an object.
+**Horn 1 is closed by the derivation above, in contrapositive.** $W(u\wedge w)\ne0$ requires some $\alpha$ with $\lambda_\alpha\ne0$ and $\langle v_\alpha,u\wedge w\rangle=-w^{\mathsf T}v_\alpha u\ne0$, hence $v_\alpha u\ne0$, hence $u\notin\ker v_\alpha=(\mathop{\mathrm{im}}v_\alpha)^\perp$, hence $\mathop{\mathrm{im}}v_\alpha\not\subseteq U$, contradicting $\mathop{\mathrm{im}}P_+=\mathop{\mathrm{im}}P_-\subseteq U$. There is no room for such an object.
 
 **Horn 2 is where the debt lives, and it is the one I could not close from the record.** Such an object would need the inclusion $\Lambda^2U\hookrightarrow\Lambda^2\mathbb R^n$ to fail to be an isometry for the record's half-trace pairing, or the structure constants of $\mathfrak{so}(U)$ to differ from those it inherits from $\mathfrak{so}(n)$. **No proof that neither happens is on this record**, and until one is, the falsifier for horn 2 is not excluded by anything in [stratum-two-negative.md](../findings/stratum-two-negative.md).
 

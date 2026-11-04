@@ -14,8 +14,8 @@
 | 6 | "*Consistency: $\mathbf1^\top$ of both sides gives $-cn$ either way*" | **REFUTED as a check.** Both sides give $0$, not $-cn$; and the identity $\mathbf1^\top$ returns **is** the equation that defines $c$, so the check is circular and cannot see claim 2 fail |
 | 7 | the twin-pair check | **CONFIRMED but empty.** At a twin pair $\tilde o|_I=0$, so the check is run at the one family of pairs where the disputed content is identically absent |
 | 8 | "$s_j=s_k=\theta M_{jk}$ at a twin pair, by [Lemma L68](../findings/diagonal-half.md)" | **CORRECTED.** L68 gives only the *sum* $s_j+s_k=2\theta M_{jk}$; the individual equality needs $s_j=s_k$, which follows from twinness itself, not from L68 |
-| 9 | "$\tilde o$ is an approximate $M$-eigenvector, and this is more than an eigenvector of $\widetilde N$" | **REFUTED.** The corrected identity on $I$ reads $(M|_I)u=(T-p)\odot u$ with $p_a=M_{aj}+M_{ak}$, which is **exactly** [post F47](../findings/INDEX-traps.md)'s $\widetilde N o=To$, since $\widetilde N=-\Delta^{(jk)}=M|_I+\operatorname{diag}(p)$. Nothing is added; a diagonal was collapsed to a scalar |
-| 10 | the spectral bound $\operatorname{dist}(T,\operatorname{spec}M)\lVert\tilde o\rVert\le\lVert c\mathbf1+r_je_j+r_ke_k\rVert$ | **REFUTED as derived** (it rests on claim 5), and **the inequality it states is strictly stronger than the truth**: the printed right-hand side is always $\le$ the true residual norm |
+| 9 | "$\tilde o$ is an approximate $M$-eigenvector, and this is more than an eigenvector of $\widetilde N$" | **REFUTED.** The corrected identity on $I$ reads $(M|_I)u=(T-p)\odot u$ with $p_a=M_{aj}+M_{ak}$, which is **exactly** [post F47](../findings/INDEX-traps.md)'s $\widetilde N o=To$, since $\widetilde N=-\Delta^{(jk)}=M|_I+\mathop{\mathrm{diag}}(p)$. Nothing is added; a diagonal was collapsed to a scalar |
+| 10 | the spectral bound $\mathop{\mathrm{dist}}(T,\mathop{\mathrm{spec}}M)\lVert\tilde o\rVert\le\lVert c\mathbf1+r_je_j+r_ke_k\rVert$ | **REFUTED as derived** (it rests on claim 5), and **the inequality it states is strictly stronger than the truth**: the printed right-hand side is always $\le$ the true residual norm |
 | 11 | "**this bounds the norm itself by the spectral gap**" / "the first bound … from the spectral gap rather than from a norm budget" | **REFUTED, vacuous.** At every cross pair of every $S^p\times S^q$ with $n\ge5$ the inequality is implied by [Lemma L68](../findings/diagonal-half.md) alone. At the record's in-band points it is $2.5\times$–$3.2\times$ weaker than L68's **exact** value, and $4.9\times$–$5.2\times$ weaker using only what L129 guarantees |
 | 12 | "a pair with $M_{jk}<0$ … has $T$ inside the forbidden window" | **CONFIRMED but half the pairs escape it.** At $S^6\times S^6$, $30$ of $66$ pairs have $M_{jk}>0$, so $T>\theta$ and L129 gives **no** lower bound; $31$ of $66$ at $S^5\times S^7$ |
 | 13 | "the gap would force $M_{jk}\ge0$ at every pair" | **REFUTED by the record's own maximiser.** $S^6\times S^6$ has $M_{jk}=-0.112367$ at all $36$ cross pairs. The antecedent (an *exact* eigenvector at $T$), is false there, which is claim 2 again |
@@ -27,7 +27,7 @@
 
 ## §0, Derived cold, before either section was opened
 
-Hypotheses used: $M$ hollow symmetric on $[n]$, $M\mathbf1=0$, $\operatorname{tr}M^2=2$, and criticality $M_{ij}^2+(M^2)_{ij}=\theta M_{ij}$ for $i\ne j$. Write $s_a=(M^2)_{aa}=\sum_bM_{ab}^2$, $\tilde o_a=M_{ka}-M_{ja}$ on all of $[n]$, $u=\tilde o|_I$, $T=\theta+M_{jk}$.
+Hypotheses used: $M$ hollow symmetric on $[n]$, $M\mathbf1=0$, $\mathop{\mathrm{tr}}M^2=2$, and criticality $M_{ij}^2+(M^2)_{ij}=\theta M_{ij}$ for $i\ne j$. Write $s_a=(M^2)_{aa}=\sum_bM_{ab}^2$, $\tilde o_a=M_{ka}-M_{ja}$ on all of $[n]$, $u=\tilde o|_I$, $T=\theta+M_{jk}$.
 
 **Criticality is off-diagonal, and the section needs that.** On the diagonal the equation would read $0+s_i=0$, so $s_i=0$, false at any $M\ne0$. Every use of criticality below is at $i\ne j$; the two boundary rows are handled by hollowness instead.
 
@@ -55,11 +55,11 @@ $$r_j+r_k=\lVert u\rVert^2 .\tag{L68$'$}$$
 
 *The two boundary residuals carry the whole of L68 between them.* This is what makes the spectral bound vacuous in §3.
 
-**What (E2) is.** $\widetilde N=-\Delta^{(jk)}$, the pair block, acts on functions on $I$ by $(\Delta u)_i=\sum_{b\in I}M_{ib}(u_i-u_b)$, whose degree term is $\sum_{b\in I}M_{ib}=-(M_{ij}+M_{ik})=-p_i$. So $\widetilde N=M|_I+\operatorname{diag}(p)$ and (E2) reads $\widetilde Nu=Tu$, [post F47](../findings/INDEX-traps.md) exactly, re-derived from criticality with no reference to it. **The diagonal $\operatorname{diag}(p)$ is precisely the object the section replaces by a scalar.**
+**What (E2) is.** $\widetilde N=-\Delta^{(jk)}$, the pair block, acts on functions on $I$ by $(\Delta u)_i=\sum_{b\in I}M_{ib}(u_i-u_b)$, whose degree term is $\sum_{b\in I}M_{ib}=-(M_{ij}+M_{ik})=-p_i$. So $\widetilde N=M|_I+\mathop{\mathrm{diag}}(p)$ and (E2) reads $\widetilde Nu=Tu$, [post F47](../findings/INDEX-traps.md) exactly, re-derived from criticality with no reference to it. **The diagonal $\mathop{\mathrm{diag}}(p)$ is precisely the object the section replaces by a scalar.**
 
 ## §1, The witness: the residual is not constant on $I$
 
-Take $S^6\times S^6$, the conjectured maximiser, $n=12$, $\theta=\sqrt{55}/6=1.236033081$. Within a factor $M_{ab}=\alpha=1/\sqrt{55}$; across $M_{ab}=\gamma=-\sqrt{55}/66$. (Row sums $0$, $\operatorname{tr}M^2=2$, criticality residual $\le3\times10^{-17}$, screened.) Take $j\in P$, $k\in Q$, so $M_{jk}=\gamma$ and $T=\theta+\gamma=5\sqrt{55}/33$.
+Take $S^6\times S^6$, the conjectured maximiser, $n=12$, $\theta=\sqrt{55}/6=1.236033081$. Within a factor $M_{ab}=\alpha=1/\sqrt{55}$; across $M_{ab}=\gamma=-\sqrt{55}/66$. (Row sums $0$, $\mathop{\mathrm{tr}}M^2=2$, criticality residual $\le3\times10^{-17}$, screened.) Take $j\in P$, $k\in Q$, so $M_{jk}=\gamma$ and $T=\theta+\gamma=5\sqrt{55}/33$.
 
 For $a\in P\setminus\{j\}$: $q_a=\alpha+2\gamma=-2\sqrt{55}/165$ and $\tilde o_a=\gamma-\alpha=-\sqrt{55}/30$, so by (E1$'$)
 
@@ -94,25 +94,25 @@ Two further points on it. The citation *"[Lemma L68](../findings/diagonal-half.m
 
 $$\big\lVert c\mathbf1+r_je_j+r_ke_k\big\rVert\ \le\ \big\lVert M\tilde o-T\tilde o\big\rVert\quad\text{always.}$$
 
-So the section states a *sharper* inequality than $\operatorname{dist}\cdot\lVert\tilde o\rVert\le\lVert M\tilde o-T\tilde o\rVert$ delivers. It happens to hold at all four screened points, but it is not established anywhere, and it cannot be repaired by the argument given.
+So the section states a *sharper* inequality than $\mathop{\mathrm{dist}}\cdot\lVert\tilde o\rVert\le\lVert M\tilde o-T\tilde o\rVert$ delivers. It happens to hold at all four screened points, but it is not established anywhere, and it cannot be repaired by the argument given.
 
-**(b) The inequality is implied by [Lemma L68](../findings/diagonal-half.md) alone whenever $\operatorname{dist}\le\lVert u\rVert/\sqrt2$.** Apply the spectral inequality to $u$, whose residual is $-p\odot u-r_je_j+r_ke_k$ by (E2). By (L68$'$), $r_j+r_k=\lVert u\rVert^2$, so $r_j^2+r_k^2\ge\tfrac12(r_j+r_k)^2=\tfrac12\lVert u\rVert^4$ and
+**(b) The inequality is implied by [Lemma L68](../findings/diagonal-half.md) alone whenever $\mathop{\mathrm{dist}}\le\lVert u\rVert/\sqrt2$.** Apply the spectral inequality to $u$, whose residual is $-p\odot u-r_je_j+r_ke_k$ by (E2). By (L68$'$), $r_j+r_k=\lVert u\rVert^2$, so $r_j^2+r_k^2\ge\tfrac12(r_j+r_k)^2=\tfrac12\lVert u\rVert^4$ and
 
 $$\lVert Mu-Tu\rVert^2\ \ge\ \tfrac12\lVert u\rVert^4\qquad\text{unconditionally.}$$
 
-Hence $\operatorname{dist}(T,\operatorname{spec}M)\lVert u\rVert\le\lVert Mu-Tu\rVert$ is a **consequence of L68** unless $\operatorname{dist}(T,\operatorname{spec}M)>\lVert u\rVert/\sqrt2$. *That is the content test, and it uses no spectral information at all.*
+Hence $\mathop{\mathrm{dist}}(T,\mathop{\mathrm{spec}}M)\lVert u\rVert\le\lVert Mu-Tu\rVert$ is a **consequence of L68** unless $\mathop{\mathrm{dist}}(T,\mathop{\mathrm{spec}}M)>\lVert u\rVert/\sqrt2$. *That is the content test, and it uses no spectral information at all.*
 
 **(c) The test fails at every cross pair of every sphere product, $n\ge5$, no computation.** At $S^p\times S^q$ the row sums force $(p-1)\alpha_P=-q\gamma$ and $(q-1)\alpha_Q=-p\gamma$, so the non-trivial constant-on-factors eigenvalue is $\lambda_{\max}=(p-1)\alpha_P+(q-1)\alpha_Q=-n\gamma$; and $\gamma=-\theta/(n-1)$, so
 
-$$\lambda_{\max}=\frac{n\theta}{n-1},\qquad M_{jk}=\gamma=-\frac{\theta}{n-1},\qquad \operatorname{dist}(T,\operatorname{spec}M)=\lambda_{\max}-T=\frac{2\theta}{n-1}.$$
+$$\lambda_{\max}=\frac{n\theta}{n-1},\qquad M_{jk}=\gamma=-\frac{\theta}{n-1},\qquad \mathop{\mathrm{dist}}(T,\mathop{\mathrm{spec}}M)=\lambda_{\max}-T=\frac{2\theta}{n-1}.$$
 
-With $\lVert u\rVert^2=s_j+s_k+2\theta|M_{jk}|\ge2\theta^2/(n-1)$, the content test $\operatorname{dist}^2>\tfrac12\lVert u\rVert^2$ demands $4\theta^2/(n-1)^2>\theta^2/(n-1)$, i.e. $n<5$. **Vacuous at every $S^p\times S^q$ cross pair for $n\ge5$, independently of $p$ and $q$.** $\square$
+With $\lVert u\rVert^2=s_j+s_k+2\theta|M_{jk}|\ge2\theta^2/(n-1)$, the content test $\mathop{\mathrm{dist}}^2>\tfrac12\lVert u\rVert^2$ demands $4\theta^2/(n-1)^2>\theta^2/(n-1)$, i.e. $n<5$. **Vacuous at every $S^p\times S^q$ cross pair for $n\ge5$, independently of $p$ and $q$.** $\square$
 
-**(d) And a band-wide window, from $\operatorname{tr}M^2=2$ and [Lemma L129](../findings/diagonal-half.md)(i) only.** $\lambda_{\max}\le\sqrt{\operatorname{tr}M^2}=\sqrt2$, and L129(i) gives $\lambda_{\max}>\theta>T$, so $\operatorname{dist}\le\sqrt2-\theta+|M_{jk}|$. With $\lVert u\rVert^2\ge2\theta|M_{jk}|$ the content test forces $m^2+(2d-\theta)m+d^2>0$ for $m=|M_{jk}|$, $d=\sqrt2-\theta$. At $\theta=\sqrt{3/2}$ the roots are $0.044818$ and $0.800990$, and the window only widens as $\theta$ grows. **So in the band $\theta\ge\sqrt{3/2}$ the bound is vacuous at every cross pair with $0.045\le|M_{jk}|\le0.80$**, which includes every in-band cross pair the record holds.
+**(d) And a band-wide window, from $\mathop{\mathrm{tr}}M^2=2$ and [Lemma L129](../findings/diagonal-half.md)(i) only.** $\lambda_{\max}\le\sqrt{\mathop{\mathrm{tr}}M^2}=\sqrt2$, and L129(i) gives $\lambda_{\max}>\theta>T$, so $\mathop{\mathrm{dist}}\le\sqrt2-\theta+|M_{jk}|$. With $\lVert u\rVert^2\ge2\theta|M_{jk}|$ the content test forces $m^2+(2d-\theta)m+d^2>0$ for $m=|M_{jk}|$, $d=\sqrt2-\theta$. At $\theta=\sqrt{3/2}$ the roots are $0.044818$ and $0.800990$, and the window only widens as $\theta$ grows. **So in the band $\theta\ge\sqrt{3/2}$ the bound is vacuous at every cross pair with $0.045\le|M_{jk}|\le0.80$**, which includes every in-band cross pair the record holds.
 
 **(e) The numbers, screened.** Exact evaluation at the four $n=12$ splits; "$\times$ weaker" is against L68's exact $\lVert\tilde o\rVert$.
 
-| cross pair | $M_{jk}$ | $T$ | $\operatorname{dist}(T,\operatorname{spec}M)$ | $\lVert\tilde o\rVert$ exact | printed bound on $\lVert\tilde o\rVert$ | using only L129's $\operatorname{dist}\ge|M_{jk}|$ |
+| cross pair | $M_{jk}$ | $T$ | $\mathop{\mathrm{dist}}(T,\mathop{\mathrm{spec}}M)$ | $\lVert\tilde o\rVert$ exact | printed bound on $\lVert\tilde o\rVert$ | using only L129's $\mathop{\mathrm{dist}}\ge|M_{jk}|$ |
 | --- | --- | --- | --- | --- | --- | --- |
 | $S^6\times S^6$ | $-0.112367$ | $1.123666$ | $0.224733$ | $0.797724$ | $1.207719$ ($1.51\times$) | $3.028\times$ |
 | $S^5\times S^7$ | $-0.111658$ | $1.116581$ | $0.223316$ | $0.808397$ | $1.351967$ ($1.67\times$) | $3.345\times$ |
@@ -121,13 +121,13 @@ With $\lVert u\rVert^2=s_j+s_k+2\theta|M_{jk}|\ge2\theta^2/(n-1)$, the content t
 
 With the **true** residual of (E1$'$) instead of the printed one the factors are $1.56$, $1.70$, $2.15$, $3.16$ and, on L129 alone, $3.13$, $3.40$, $4.30$, $6.33$. On $u$ rather than $\tilde o$ they are $2.46$, $2.58$, $2.98$, $3.92$ and $4.92$, $5.15$, $5.95$, $7.83$. **In no reading, at no point, does the bound reach L68's exact value, let alone beat it.**
 
-**(f) It gets worse with $n$.** At $S^m\times S^m$, $\operatorname{dist}=2\theta/(n-1)\sim2\theta/n$ while $\lVert u\rVert^2=4/n+2\theta^2/(n-1)\sim7/n$, so $\operatorname{dist}\big/(\lVert u\rVert/\sqrt2)$ decays like $n^{-1/2}$. The section's phrase *"where $T$ sits far from $\operatorname{spec}M$ the orbit vector is small"* describes a regime the band does not contain.
+**(f) It gets worse with $n$.** At $S^m\times S^m$, $\mathop{\mathrm{dist}}=2\theta/(n-1)\sim2\theta/n$ while $\lVert u\rVert^2=4/n+2\theta^2/(n-1)\sim7/n$, so $\mathop{\mathrm{dist}}\big/(\lVert u\rVert/\sqrt2)$ decays like $n^{-1/2}$. The section's phrase *"where $T$ sits far from $\mathop{\mathrm{spec}}M$ the orbit vector is small"* describes a regime the band does not contain.
 
 **Verdict on the section's own framing.** *"The first bound in this item that comes from the record's spectral gap rather than from a norm budget"*, **REFUTED.** It is not a bound: at every point where the record can evaluate it, it is a consequence of [Lemma L68](../findings/diagonal-half.md), which is an exact identity for the same quantity. A relation always weaker than an incumbent exact identity for the object it bounds is worth nothing, and the failure is structural, (L68$'$) puts $\tfrac12\lVert u\rVert^4$ into the residual before the spectrum is consulted at all.
 
 ## §4, $T>\theta$: how often the window is escaped
 
-$T>\theta\iff M_{jk}>0$, and then L129 gives **no** lower bound on $\operatorname{dist}$. At a diagonal critical point with $\Delta=0$ every positive edge is a twin edge ([diagonal-half.md](../findings/diagonal-half.md)(ii)), so at the sphere products the positive edges are exactly the within-factor pairs:
+$T>\theta\iff M_{jk}>0$, and then L129 gives **no** lower bound on $\mathop{\mathrm{dist}}$. At a diagonal critical point with $\Delta=0$ every positive edge is a twin edge ([diagonal-half.md](../findings/diagonal-half.md)(ii)), so at the sphere products the positive edges are exactly the within-factor pairs:
 
 | point | pairs with $M_{jk}>0$ | share |
 | --- | --- | --- |
@@ -142,7 +142,7 @@ So **roughly half the pairs sit outside the window**, and they are exactly the p
 
 ## §5, Novelty
 
-- **The eigen-relation is already on record.** [Post F47](../findings/INDEX-traps.md) / [second-order.md](../findings/second-order.md) has $\widetilde No=To$ exactly, at every pure critical point, from $B(u-v)=0$. Corrected identity (E2) *is* that statement, since $\widetilde N=M|_I+\operatorname{diag}(p)$. **The section's "extension" is F47 with a diagonal mistaken for a scalar.**
+- **The eigen-relation is already on record.** [Post F47](../findings/INDEX-traps.md) / [second-order.md](../findings/second-order.md) has $\widetilde No=To$ exactly, at every pure critical point, from $B(u-v)=0$. Corrected identity (E2) *is* that statement, since $\widetilde N=M|_I+\mathop{\mathrm{diag}}(p)$. **The section's "extension" is F47 with a diagonal mistaken for a scalar.**
 - **The $M$-level reading at padded pairs is already on record**, [post F48](../findings/second-order.md): at a padded pair $\widetilde N=M'$ itself.
 - **What is genuinely absent from [findings/](../findings/)** is the sum-vector $p_a=M_{aj}+M_{ak}$ and the form (E1)/(E1$'$), a grep over the whole of [findings/](../findings/) returns nothing for it. That is the one thing worth recording out of these two sections, and it is a two-line consequence of criticality.
 
@@ -153,10 +153,10 @@ So **roughly half the pairs sit outside the window**, and they are exactly the p
 3. **$o$ silently replaced by $\tilde o$ inside [r396](REVIEW_r396.md)'s brackets**, which is the same substitution in a second place.
 4. **$n\ge3$** for $c=(s_j-s_k)/(n-2)$; at a padded pair with $n=2$ the constant is undefined.
 5. **$s_j=s_k$ at a twin pair is attributed to [Lemma L68](../findings/diagonal-half.md)**, which gives only the sum.
-6. **"the distance to the spectrum is bounded below by the window's own geometry"** is never made a number. It is $\min(T,\theta-T)$, which for $M_{jk}<0$ is $|M_{jk}|$, half the true distance at every sphere-product cross pair, where $\operatorname{dist}=2|M_{jk}|$ exactly.
+6. **"the distance to the spectrum is bounded below by the window's own geometry"** is never made a number. It is $\min(T,\theta-T)$, which for $M_{jk}<0$ is $|M_{jk}|$, half the true distance at every sphere-product cross pair, where $\mathop{\mathrm{dist}}=2|M_{jk}|$ exactly.
 
 ## §7, What a successor is owed
 
 1. **Correct the printed identity to (E1$'$)** ($M\tilde o=T\tilde o-q\odot\tilde o-s_je_j+s_ke_k$, $q_a=M_{aj}+M_{ak}+M_{jk}$) and record that $c$ is its mean on $I$, not its value.
-2. **Record the content test** $\operatorname{dist}(T,\operatorname{spec}M)>\lVert o^{(jk)}\rVert/\sqrt2$ as a fence post: below it, any spectral-gap bound on $\lVert o^{(jk)}\rVert$ is a corollary of [Lemma L68](../findings/diagonal-half.md). It rules the method out at every $S^p\times S^q$ cross pair for $n\ge5$, and band-wide for $0.045\le|M_{jk}|\le0.80$.
-3. **The route the identity does support** is the reverse reading: (E2) lower-bounds $\sum_{a\in I}p_a^2u_a^2$, the sum-vector-weighted orbit mass. At $S^6\times S^6$ that quantity is $3.1\times10^{-4}$ against a bound of $\operatorname{dist}^2\lVert u\rVert^2-r_j^2-r_k^2=-0.156$, so the reading is vacuous there too, but it is the only direction in which the relation is not competing with an exact identity.
+2. **Record the content test** $\mathop{\mathrm{dist}}(T,\mathop{\mathrm{spec}}M)>\lVert o^{(jk)}\rVert/\sqrt2$ as a fence post: below it, any spectral-gap bound on $\lVert o^{(jk)}\rVert$ is a corollary of [Lemma L68](../findings/diagonal-half.md). It rules the method out at every $S^p\times S^q$ cross pair for $n\ge5$, and band-wide for $0.045\le|M_{jk}|\le0.80$.
+3. **The route the identity does support** is the reverse reading: (E2) lower-bounds $\sum_{a\in I}p_a^2u_a^2$, the sum-vector-weighted orbit mass. At $S^6\times S^6$ that quantity is $3.1\times10^{-4}$ against a bound of $\mathop{\mathrm{dist}}^2\lVert u\rVert^2-r_j^2-r_k^2=-0.156$, so the reading is vacuous there too, but it is the only direction in which the relation is not competing with an exact identity.

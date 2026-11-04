@@ -26,7 +26,7 @@
 
 ## 2. Is `inner_xk` right?
 
-- By hand, with inner2 $=\tfrac12\operatorname{tr}(X^{\mathsf T}Y)=\tfrac12\sum_{pq}X_{pq}Y_{pq}$, $X=e_kx^{\mathsf T}-xe_k^{\mathsf T}$ and $Y=e_jy^{\mathsf T}-ye_j^{\mathsf T}$: the four products give $\delta_{kj}(x\cdot y)-x_jy_k-x_jy_k+\delta_{kj}(x\cdot y)$, and half of that is $\delta_{kj}(x\cdot y)-y_kx_j$. This matches the statement.
+- By hand, with inner2 $=\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)=\tfrac12\sum_{pq}X_{pq}Y_{pq}$, $X=e_kx^{\mathsf T}-xe_k^{\mathsf T}$ and $Y=e_jy^{\mathsf T}-ye_j^{\mathsf T}$: the four products give $\delta_{kj}(x\cdot y)-x_jy_k-x_jy_k+\delta_{kj}(x\cdot y)$, and half of that is $\delta_{kj}(x\cdot y)-y_kx_j$. This matches the statement.
 - Against `inner2_phi_phi` ([Families.lean](../lean/HamiltonsCubic/Base/Families.lean)): $\langle\varphi_{ij},\varphi_{kl}\rangle=[i=k\wedge j=l]-[j=k\wedge i=l]$. At $(i,j,k,l)=(a,k,b,j)$ this is $[a=b\wedge k=j]-[k=b\wedge a=j]$, which is the proof's `hterm`. Summing $x_ay_b$ against it gives $\delta_{kj}\sum_ax_ay_a-x_jy_k$.
 - Check at $x=y$ unit, $k=j$: $1-x_k^2=\lvert x\wedge e_k\rvert^2$, as it should be.
 

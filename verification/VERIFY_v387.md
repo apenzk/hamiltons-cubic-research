@@ -13,7 +13,7 @@ The brief ([BRIEF_L64r2.md](BRIEF_L64r2.md)) was cold, and this report works fro
 | 6 | $k_B(d)\ge g(d)\ge4d$, so $k_B(6)\ge24>12$ | CONFIRMED | $T\in\mathcal W_4$, the block product has a component with $4d$ distinct indices, and signed permutations preserve the count of distinct indices |
 | 7 | "No finite $k_B(d)$ is on file" and Passage C | CONFIRMED | a statement about the record, consistent with the lemma, which is conditional on $k_B(d)$ |
 | 8 | Below the range uniqueness fails ($n_0=3$, $d=2$) | CONFIRMED | $3<8\le k_B(2)$ and $0$, $\lvert W\rvert^2$ are distinct $B_n$-invariant extensions of $F=0$ |
-| 9 | The $\mathrm{Sym}^2S^n$ exhibit | CONFIRMED | presented in degree $(2-1)\cdot2+2=4$, $F=\operatorname{tr}((X-\tfrac14\operatorname{tr}X\,I_4)^2)$, $G(I_5)=-\tfrac54$ |
+| 9 | The $\mathrm{Sym}^2S^n$ exhibit | CONFIRMED | presented in degree $(2-1)\cdot2+2=4$, $F=\mathop{\mathrm{tr}}((X-\tfrac14\mathop{\mathrm{tr}}X\,I_4)^2)$, $G(I_5)=-\tfrac54$ |
 | 10 | Passages B and C against A | REFUTED AS STATED | Passage B's detail carries the SO clause unconditionally over part 1, the other differences are harmless |
 | 11a | Passage E states Lemma L64 | REFUTED | no declaration mentions $\mathcal W_n$, a form, a group, an extension or a presentation degree |
 | 11b | Passage E's declarations as arithmetic | CONFIRMED AS ALGEBRA | each is a true statement about $\mathbb N$ or $\mathbb Q$ |
@@ -135,8 +135,8 @@ $3<8\le g(2)\le k_B(2)$, so $n_0=3$ is below the range. $F=0$ on $\mathcal W_3=0
 ## 9. Brief item 9: the $\mathrm{Sym}^2S^n$ exhibit
 
 - **Presentation degree 4.** Source Table 1 gives $S^n=\mathrm{Sym}^2(\mathbb R^n)$. Example 2.12 with $B_n$: generated and presented in degree $2$. Theorem 2.11 (Sym clause, $V=\{\mathbb R^n\}$, $G_n=B_n$, $\ell=2$, $d_W=k_W=2$): $\mathrm{Sym}^2S^n$ is presented in degree $(2-1)\cdot2+2=4$. Confirmed.
-- **Identity.** $\operatorname{tr}\big((X-\tfrac t4I_4)^2\big)=\operatorname{tr}X^2-\tfrac t2\,t+\tfrac{t^2}{16}\cdot4=\operatorname{tr}X^2-\tfrac14t^2$ with $t=\operatorname{tr}X$. It is a trace of a square of a symmetric matrix, so $\ge0$. Confirmed.
-- **Value.** Padding preserves $\operatorname{tr}X$ and $\operatorname{tr}X^2$, so $G$ restricts to $F$. $G(I_5)=5-\tfrac{25}4=-\tfrac54$. Confirmed. Both contractions are pure slot pairings, so this is the mechanism of steps (i) and (ii), and $n_0=4\ge4$ makes $G$ the unique $B_5$-invariant extension.
+- **Identity.** $\mathop{\mathrm{tr}}\big((X-\tfrac t4I_4)^2\big)=\mathop{\mathrm{tr}}X^2-\tfrac t2\,t+\tfrac{t^2}{16}\cdot4=\mathop{\mathrm{tr}}X^2-\tfrac14t^2$ with $t=\mathop{\mathrm{tr}}X$. It is a trace of a square of a symmetric matrix, so $\ge0$. Confirmed.
+- **Value.** Padding preserves $\mathop{\mathrm{tr}}X$ and $\mathop{\mathrm{tr}}X^2$, so $G$ restricts to $F$. $G(I_5)=5-\tfrac{25}4=-\tfrac54$. Confirmed. Both contractions are pure slot pairings, so this is the mechanism of steps (i) and (ii), and $n_0=4\ge4$ makes $G$ the unique $B_5$-invariant extension.
 - **Conclusion drawn.** The paragraph concludes only that transferring a nonnegativity certificate needs its own argument. The exhibit supports exactly that, on a different module. The reference to "Post F31" and "the degree-6 certificate" points outside the brief and was not checked.
 
 ### 9.1 Withdrawn: "carries a sign only on the padded copy"

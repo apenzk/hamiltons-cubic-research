@@ -22,7 +22,7 @@ The brief ([BRIEF_L54.md](BRIEF_L54.md)) was read cold. No numerical work was do
 - $W$ is a Weyl tensor on $\mathbb R^n$: $W_{abcd}=-W_{bacd}=-W_{abdc}=W_{cdab}$, $W_{abcd}+W_{acdb}+W_{adbc}=0$, $\sum_aW_{abad}=0$ (the conventions typed in [L94Statement.lean](../lean/HamiltonsCubic/Results/L94Statement.lean#L63-L73)). Components are taken in the frame $F=(e_1,\dots,e_n)$. The sign is the one in which the round sphere has $R_{ijij}=1$ ([NPW](../references/nienhaus-petersen-wink-2022-betti-second-kind/README.md) Example 1.1), and $K_{ab}=W_{abab}$.
 - $M$ is Li's (2.1), $\hat W(e_i\wedge e_j)=\tfrac12\sum_{k,l}W_{ijkl}\,e_k\wedge e_l$, written in the orthonormal pair basis $\{e_a\wedge e_b\}_{a<b}$, so $M_{(ab),(cd)}=W_{abcd}$ and $\lVert M\rVert_F^2=\sum_{a<b,\,c<d}W_{abcd}^2=\tfrac14\lvert W\rvert^2$, where $\lvert W\rvert^2=\sum_{abcd}W_{abcd}^2$. This agrees with normM2 in [L94Statement.lean](../lean/HamiltonsCubic/Results/L94Statement.lean#L90-L91). $\mu$ has length $N_1=n(n-1)/2$.
 - $S^2$ carries the Frobenius inner product. $A:S^2\to S^2$ is $(Ah)_{ij}=\sum_{k,l}W_{iklj}h_{kl}$ (Passage F). Li's (2.2), $\mathring R(e_i\odot e_j)=\sum_{k,l}R_{iklj}\,e_k\odot e_l$, read at source ([li-2112.08465.txt](https://arxiv.org/abs/2112.08465)), is the same map: its matrix entry $(kl),(ij)$ is $R_{iklj}$, and the two antisymmetries give $R_{iklj}=R_{kijl}$, which is Passage F's formula relabelled. NPW's operator $h\mapsto\sum R_{\cdot kl\cdot}h_{kl}$ (section 1) is the same map again. $\mathring W$ is the compression of $A$ to $S^2_0$ (Li, Remark 2.1), with spectrum $\omega$ of length $N=(n-1)(n+2)/2$.
-- $\varphi_{ab}=(e_a\otimes e_b+e_b\otimes e_a)/\sqrt2$ for $a<b$, and $D_v=\operatorname{diag}(v)$ for a unit $v\perp\mathbf 1$. For any orthonormal basis $\{v_k\}$ of $\mathbf 1^\perp$, the set $\{\varphi_{ab}\}\cup\{D_{v_k}\}$ is an orthonormal basis of $S^2_0$: off-diagonal and diagonal supports are disjoint, and $N_1+(n-1)=N$.
+- $\varphi_{ab}=(e_a\otimes e_b+e_b\otimes e_a)/\sqrt2$ for $a<b$, and $D_v=\mathop{\mathrm{diag}}(v)$ for a unit $v\perp\mathbf 1$. For any orthonormal basis $\{v_k\}$ of $\mathbf 1^\perp$, the set $\{\varphi_{ab}\}\cup\{D_{v_k}\}$ is an orthonormal basis of $S^2_0$: off-diagonal and diagonal supports are disjoint, and $N_1+(n-1)=N$.
 - $t_F=\sum_{a\ne b}K_{ab}^2$ and $\kappa^2=\max_Ft_F$. Majorization and $x^\downarrow$ are as in the brief.
 - Two consequences of tracelessness, used below. **(W1)** $(K\mathbf 1)_b=\sum_aW_{abab}=0$. **(W2)** $\sum_kW_{ikkj}=-\sum_kW_{ikjk}=0$, so $A$ annihilates the identity $g$.
 - The quotations in Passages A, C, D, E and F match their cited lines, apart from link targets rewritten relative to verification/. Passage G is identical to [L54Statement.lean](../lean/HamiltonsCubic/Results/L54Statement.lean). Lean line numbers below are the file's own.
@@ -34,7 +34,7 @@ The brief ([BRIEF_L54.md](BRIEF_L54.md)) was read cold. No numerical work was do
 | L54 | $W$ is Weyl | By programme convention | Yes: (W1) for $\sum d_\psi^2=t$ and for "restricted to $\mathbf 1^\perp$", (W1) and (W2) for $\sum\omega^2=3$ | Absent from Passages A to C. Typed as IsWeyl in [L94Statement.lean](../lean/HamiltonsCubic/Results/L94Statement.lean#L71-L73) |
 | L54 | $\lVert M\rVert_F=1$ | Normalisation | Yes, in the rigidity | Passage F, bispectral.md line 15 |
 | L54 | Fixed orthonormal frame $F$ | Yes | Yes, throughout | Passages A and C, absent from B |
-| L54 | $\psi_k$ an eigenbasis of $K$ on $\mathbf 1^\perp$ | A choice | Only for $d_\psi=-\operatorname{spec}(K\vert_{\mathbf 1^\perp})$, hence $\sum d_\psi^2=t$ and the equality at $t_F=2$. Schur holds in every orthonormal basis | Passages A and C, absent from B |
+| L54 | $\psi_k$ an eigenbasis of $K$ on $\mathbf 1^\perp$ | A choice | Only for $d_\psi=-\mathop{\mathrm{spec}}(K\vert_{\mathbf 1^\perp})$, hence $\sum d_\psi^2=t$ and the equality at $t_F=2$. Schur holds in every orthonormal basis | Passages A and C, absent from B |
 | L54 | Range of $n$ | At $n\le3$, (W1) forces $K=0$, so $t_F=2$ is unreachable | The $t_F=2$ clauses are inhabited only for $n\ge4$ (section 7) | Unstated |
 | L54 | $t_F=2$ | Hypothesis of the rigidity | Yes | Yes |
 | Schur (half of Schur–Horn) | A real symmetric matrix in an orthonormal basis | $M$ is symmetric by pair symmetry. $\mathring W$ is a symmetric bilinear form on $S^2_0$ (Li, Remark 2.1) | Yes, both majorizations. Horn's converse half is unused | Named, source not filed under references/ |
@@ -67,7 +67,7 @@ Falsifier sought: an algebraic curvature tensor with $\langle\mathring W\varphi_
 
 **"Block" means the whole compression.** Passage D's $\Pi_{\mathrm{diag}}\mathring W\Pi_{\mathrm{diag}}=-K\vert_{\mathbf 1^\perp}$ is the operator statement, and it holds in every orthonormal basis of the diagonal subspace. In an eigenbasis it is diagonal with entries $-\lambda_k$. The lemma asserts nothing about the cross block $\langle A\varphi_{ab},D_v\rangle=-\sqrt2\sum_iW_{iaib}v_i$.
 
-**Why an eigenbasis.** Schur's $\omega\succ d$ holds with any orthonormal $\{v_k\}$. The eigenbasis is what makes $d_\psi=-\operatorname{spec}(K\vert_{\mathbf 1^\perp})$, hence $\sum d_\psi^2=t$ and the norm equality at $t_F=2$. In another basis $\sum(v_k^\top Kv_k)^2\le t$, strictly when $K\vert_{\mathbf 1^\perp}$ is not diagonal there. Section 9 exhibits the strict case for the staircase at $n=4$. The remark "a hollow nonzero $K$ is never diagonal in it" carries no argument on file. The lemma's conclusions do not depend on it.
+**Why an eigenbasis.** Schur's $\omega\succ d$ holds with any orthonormal $\{v_k\}$. The eigenbasis is what makes $d_\psi=-\mathop{\mathrm{spec}}(K\vert_{\mathbf 1^\perp})$, hence $\sum d_\psi^2=t$ and the norm equality at $t_F=2$. In another basis $\sum(v_k^\top Kv_k)^2\le t$, strictly when $K\vert_{\mathbf 1^\perp}$ is not diagonal there. Section 9 exhibits the strict case for the staircase at $n=4$. The remark "a hollow nonzero $K$ is never diagonal in it" carries no argument on file. The lemma's conclusions do not depend on it.
 
 ## 3. The diagonal of $M$ is $K$. CONFIRMED
 
@@ -78,7 +78,7 @@ Falsifier sought: a convention in which $M=-W$ on $\Lambda^2$ would give $-K$ an
 ## 4. The sums. CONFIRMED AS ALGEBRA
 
 - $\sum d_\varphi^2=\sum_{a<b}K_{ab}^2=\tfrac12\sum_{a\ne b}K_{ab}^2=t/2$, by symmetry and hollowness only.
-- $\sum d_\psi^2=\sum\lambda_k^2$ over $\operatorname{spec}(K\vert_{\mathbf 1^\perp})$. By (W1) the spectrum of $K$ is $\{0\}\cup\operatorname{spec}(K\vert_{\mathbf 1^\perp})$, so $\sum d_\psi^2=\operatorname{tr}K^2=t$, and $\sum d^2=\tfrac32t$.
+- $\sum d_\psi^2=\sum\lambda_k^2$ over $\mathop{\mathrm{spec}}(K\vert_{\mathbf 1^\perp})$. By (W1) the spectrum of $K$ is $\{0\}\cup\mathop{\mathrm{spec}}(K\vert_{\mathbf 1^\perp})$, so $\sum d_\psi^2=\mathop{\mathrm{tr}}K^2=t$, and $\sum d^2=\tfrac32t$.
 - **$K\mathbf 1=0$ is used, and it comes from the tracelessness of $W$.** Passages A to D never state it. "Restricted to $\mathbf 1^\perp$" presupposes it, and Passage D's "pure algebra" is correct given it.
 - The algebra rests on claims 1 and 2 for the identification of $d$.
 
@@ -86,7 +86,7 @@ Falsifier sought: a convention in which $M=-W$ on $\Lambda^2$ would give $-K$ an
 
 - $\mu\succ d_\varphi$: $M$ is a real symmetric $N_1\times N_1$ matrix, $d_\varphi$ is its diagonal in the orthonormal basis $\{e_a\wedge e_b\}$, and both vectors have length $N_1$.
 - $\omega\succ d$: the Gram matrix of $\mathring W$ in the orthonormal basis $\{\varphi_{ab}\}\cup\{D_{v_k}\}$ is real symmetric $N\times N$, and $d$ has length $N_1+(n-1)=N$.
-- Only Schur's half is used. Equal sums are automatic (trace): $\sum\mu=\sum_{a<b}K_{ab}=\tfrac12\mathbf 1^\top K\mathbf 1=0$, and $\sum d=0-\operatorname{tr}(K\vert_{\mathbf 1^\perp})=0$.
+- Only Schur's half is used. Equal sums are automatic (trace): $\sum\mu=\sum_{a<b}K_{ab}=\tfrac12\mathbf 1^\top K\mathbf 1=0$, and $\sum d=0-\mathop{\mathrm{tr}}(K\vert_{\mathbf 1^\perp})=0$.
 - Passage D's description "Cauchy interlacing on one compression, a single Rayleigh quotient" is a loose label for Schur's theorem. The conclusion drawn is Schur's, so no finding.
 - **Schur (1923) has no source filed under references/.**
 
@@ -196,7 +196,7 @@ Passage C's closing sentence on "the vertex-matrix budget" and "the shared-frame
 | 5 | Diagonal of a symmetric matrix outside the permutohedron of its spectrum | Schur's theorem, source not filed |
 | 6 | Weyl $W$ and frame $F$ with $t_F=2$ but not coordinate-diagonal in $F$, or the converse | Excluded for the claim. The citation fails, as the $n=4$ pair $(F,F')$ shows |
 | 7 | $x\succ y$, equal $2$-norms, $x^\downarrow\ne y^\downarrow$, or a Weyl $W$ with $\sum\omega^2\ne3$ | Classical equality case, and the norm identity screened. Excluded |
-| 8 | Coordinate-diagonal Weyl $W$ with $\mathring W$ not block-diagonal | Closed form $Ah=K\circ h-\operatorname{diag}(K\operatorname{diag}h)$. Excluded |
+| 8 | Coordinate-diagonal Weyl $W$ with $\mathring W$ not block-diagonal | Closed form $Ah=K\circ h-\mathop{\mathrm{diag}}(K\mathop{\mathrm{diag}}h)$. Excluded |
 | 9 | Staircase basis at $t_F=2$, or frame $F'$ | Exhibited at $n=4$. Found |
 | 10 | A binder that excludes a needed case, or a sorry that differs from its name | Binders read. None found. Two docstring defects found |
 

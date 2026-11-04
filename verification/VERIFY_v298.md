@@ -50,10 +50,10 @@ Overall verdict: **HYPOTHESIS-DEBT** (with a hypothesis correction to the statem
 
 **1a. HYPOTHESIS-DEBT.** Line 86: "$F_5$ vanishes on the whole $O(5)$-orbit of the padded $W_{\mathbb{CP}^2}$, so every covariant entering a certificate vanishes there". Two premises carry this sentence and neither is argued in the quoted chain.
 
-- H1, the value $F_5(W_0)=0$, that is $\tfrac32\lVert W_0\rVert^6=9\operatorname{tr}(W_0^3)^2$, is asserted without derivation or citation. $O(5)$-invariance of $F_5$ then extends it to the orbit, which is immediate since both $\lVert W\rVert$ and $\operatorname{tr}(W^3)$ are $O(5)$-invariant.
+- H1, the value $F_5(W_0)=0$, that is $\tfrac32\lVert W_0\rVert^6=9\mathop{\mathrm{tr}}(W_0^3)^2$, is asserted without derivation or citation. $O(5)$-invariance of $F_5$ then extends it to the orbit, which is immediate since both $\lVert W\rVert$ and $\mathop{\mathrm{tr}}(W^3)$ are $O(5)$-invariant.
 - H2: from "$F_5$ vanishes at a point" to "every covariant entering a certificate vanishes there" is valid only if the certificate writes $F_5$ as a sum of nonnegative terms, each a positive semidefinite form in the covariants of one block. Then each term vanishes at $W_0$, and for a Gram matrix $Q_\lambda\succeq0$ this forces $Q_\lambda^{1/2}\sigma(W_0)=0$. "Entering" must then be read as the covariants in the range of $Q_\lambda$. The brief never defines a certificate, so this is a hypothesis used and unstated.
 
-What would have to be proved: the value $F_5(W_0)=0$ for the stated normalisations of $\lVert\cdot\rVert$ and $\operatorname{tr}(W^3)$, and a definition of certificate with the positivity that carries vanishing to its covariants.
+What would have to be proved: the value $F_5(W_0)=0$ for the stated normalisations of $\lVert\cdot\rVert$ and $\mathop{\mathrm{tr}}(W^3)$, and a definition of certificate with the positivity that carries vanishing to its covariants.
 
 **1b. CONFIRMED AS ALGEBRA.** For an $O(5)$-covariant $\sigma$, $\sigma(gW_0)=g\,\sigma(W_0)$ and $g$ is invertible, so $\sigma$ vanishes on the orbit exactly when $\sigma(W_0)=0$. For $h\in H$, $h\,\sigma(W_0)=\sigma(hW_0)=\sigma(W_0)$, so $\sigma(W_0)\in V_\lambda^H$. Passage A does not write the membership, but "by equivariance" is exactly this line, and it is what makes $\mathrm{ev}_\lambda$ land in $V_\lambda^H$ in section 7.
 

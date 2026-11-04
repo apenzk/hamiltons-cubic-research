@@ -39,7 +39,7 @@ $Q$ is homogeneous quadratic, so $x\circ x=\tfrac12(Q(2x)-2Q(x))=\tfrac12(4Q(x)-
 
 For $g\in SO(n)$, $(gXg^{-1})^2=gX^2g^{-1}$, and $\#$ commutes with conjugation because $\mathrm{Ad}_g$ preserves the structure constants of $\mathfrak{so}(n)$. So $Q(g\cdot X)=g\cdot Q(X)$, hence $g\cdot X\circ g\cdot Y=g\cdot(X\circ Y)$ and $T(g\cdot X,g\cdot Y,g\cdot Z)=T(X,Y,Z)$. Differentiating at $g=\exp(tA)$, $t=0$:
 $$T(A\cdot x,y,z)+T(x,A\cdot y,z)+T(x,y,A\cdot z)=0.$$
-Put $y=x$, $z=u$ and use full symmetry: $T(x,x,A\cdot u)=-2T(A\cdot x,x,u)=-2\langle A\cdot x,u\circ x\rangle=-2\langle A\cdot x,F_ux\rangle$. If $F_ux=\lambda\theta^*x$ this equals $-2\lambda\theta^*\langle[\rho(A),x],x\rangle$. For $B=\rho(A)$ skew and $x$ symmetric, $\langle[B,x],x\rangle=\operatorname{tr}(Bx^2)-\operatorname{tr}(xBx)=0$. So $T(x,x,[\rho(A),u])=0$ for every eigenvector $x$ and every $A$. Claim 2 CONFIRMED, with H0 only.
+Put $y=x$, $z=u$ and use full symmetry: $T(x,x,A\cdot u)=-2T(A\cdot x,x,u)=-2\langle A\cdot x,u\circ x\rangle=-2\langle A\cdot x,F_ux\rangle$. If $F_ux=\lambda\theta^*x$ this equals $-2\lambda\theta^*\langle[\rho(A),x],x\rangle$. For $B=\rho(A)$ skew and $x$ symmetric, $\langle[B,x],x\rangle=\mathop{\mathrm{tr}}(Bx^2)-\mathop{\mathrm{tr}}(xBx)=0$. So $T(x,x,[\rho(A),u])=0$ for every eigenvector $x$ and every $A$. Claim 2 CONFIRMED, with H0 only.
 
 The off-diagonal form follows the same way. For $x\in V_\lambda$, $y\in V_\mu$: $T(x,y,A\cdot u)=-\langle A\cdot x,F_uy\rangle-\langle F_ux,A\cdot y\rangle=-\mu\theta^*\langle A\cdot x,y\rangle+\lambda\theta^*\langle A\cdot x,y\rangle=(\lambda-\mu)\theta^*\langle A\cdot x,y\rangle$, using skewness in the second term. The displayed identity is exact under H0.
 

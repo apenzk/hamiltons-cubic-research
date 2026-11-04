@@ -15,7 +15,7 @@
 | **Lean, "the frame-free matrix form needs a normal-form theorem the layer does not build"** | **REFUTED as written**, and it conflates statement with proof. The frame-free STATEMENT types today out of `star6`, `wedgeSelf`, `pf6` and `IsSkew`, all four in the layer, and I compiled it (§7). A normal form is one route to a PROOF and not a necessity, the identity being a polynomial identity in the fifteen entries |
 | **Scoping at $n>6$** | **ONE OMISSION.** In the record's rank-three setting $V\subseteq\mathbb R^n$, and the forms annihilate $V^\perp$, so $\mathrm{Id}_6$ must be read as $\mathrm{Id}_V$. As an $n\times n$ identity the harmonicity box is false. [L184](../findings/diagonal-half.md) is emphatic about exactly this for $\star_V$ and this block is silent |
 
-**One line.** *The Statement, its sign, the polarised form and the harmonicity box all survive intact with every constant verified, and the defects are in what the block says ABOUT its result rather than in the result: L187 does follow from L193 in five lines, the "only relation" claim is false against the record's own Lean layer, and the Lean row misstates a proof obligation as a statement obligation while resting the sign on a lemma with an empty hypothesis class. Two things are worth folding beyond the repairs. **L193 discharges the record's standing HYPOTHESIS-DEBT** $\star_V(J\wedge J)=2\epsilon_JJ$, which L184's case 2 runs on and which the layer has carried unproved. And **the TRACE of the harmonicity box is L192's scalar identity**, $\operatorname{tr}\big(\sum_i\lambda_i\omega_i\beta(\omega_i,\zeta)\big)=-2\langle\star\mathcal B,\zeta\rangle$, so the two Weyl conditions were already meeting as scalars inside this matrix identity and the box's closing claim overstates the novelty by one word.*
+**One line.** *The Statement, its sign, the polarised form and the harmonicity box all survive intact with every constant verified, and the defects are in what the block says ABOUT its result rather than in the result: L187 does follow from L193 in five lines, the "only relation" claim is false against the record's own Lean layer, and the Lean row misstates a proof obligation as a statement obligation while resting the sign on a lemma with an empty hypothesis class. Two things are worth folding beyond the repairs. **L193 discharges the record's standing HYPOTHESIS-DEBT** $\star_V(J\wedge J)=2\epsilon_JJ$, which L184's case 2 runs on and which the layer has carried unproved. And **the TRACE of the harmonicity box is L192's scalar identity**, $\mathop{\mathrm{tr}}\big(\sum_i\lambda_i\omega_i\beta(\omega_i,\zeta)\big)=-2\langle\star\mathcal B,\zeta\rangle$, so the two Weyl conditions were already meeting as scalars inside this matrix identity and the box's closing claim overstates the novelty by one word.*
 
 ## 0. Conventions, fixed once and checked against the layer
 
@@ -40,7 +40,7 @@ which is the block's $\sum_j(\prod_{k\ne j}c_k)\varepsilon_j$ with no stray fact
 
 **Argued the opposite.** For the sign to be wrong one would need either a minus in $\star e^{1256}$, which the four-transposition count excludes, or the record's $\mathrm{Pf}$ to be $-c_1c_2c_3$, which `pf6` at $1/48$ against `levi6` excludes. Neither survives.
 
-**The identity in the classical form.** $\det\omega=\mathrm{Pf}(\omega)^2$, so the display says $\operatorname{adj}(\omega)=-\mathrm{Pf}(\omega)\,\sigma(\omega)$. The block's gloss is therefore right up to the factor it does not display, and the factor is worth writing, since $\sigma$ is the adjugate divided by $-\mathrm{Pf}$ and not the adjugate.
+**The identity in the classical form.** $\det\omega=\mathrm{Pf}(\omega)^2$, so the display says $\mathop{\mathrm{adj}}(\omega)=-\mathrm{Pf}(\omega)\,\sigma(\omega)$. The block's gloss is therefore right up to the factor it does not display, and the factor is worth writing, since $\sigma$ is the adjugate divided by $-\mathrm{Pf}$ and not the adjugate.
 
 ## 2. The proof by normal form, and what it leaves unstated
 
@@ -94,9 +94,9 @@ $$2\sum_i\lambda_i\,\omega_i\,\beta(\omega_i,\zeta)+\zeta\,\star\!\mathcal B=-\b
 
 which is the box's sentence verbatim. At $\zeta\in\mathrm{span}(\omega_1,\omega_2,\omega_3)$, [L192](../findings/diagonal-half.md)'s harmonicity is $\langle\star\mathcal B,\zeta\rangle=0$, the right side vanishes, and the display follows. **CONFIRMED.**
 
-**The trace of it is L192, which the box does not notice.** For skew $X,Y$ one has $\operatorname{tr}(XY)=-2\langle X,Y\rangle$, so tracing the identity above over $\mathbb R^6$ gives $\operatorname{tr}\big(2\sum_i\lambda_i\omega_i\beta(\omega_i,\zeta)\big)=-6\langle\star\mathcal B,\zeta\rangle+2\langle\star\mathcal B,\zeta\rangle$, that is
+**The trace of it is L192, which the box does not notice.** For skew $X,Y$ one has $\mathop{\mathrm{tr}}(XY)=-2\langle X,Y\rangle$, so tracing the identity above over $\mathbb R^6$ gives $\mathop{\mathrm{tr}}\big(2\sum_i\lambda_i\omega_i\beta(\omega_i,\zeta)\big)=-6\langle\star\mathcal B,\zeta\rangle+2\langle\star\mathcal B,\zeta\rangle$, that is
 
-$$\operatorname{tr}\Big(\sum_i\lambda_i\,\omega_i\,\beta(\omega_i,\zeta)\Big)=-2\big\langle\star\mathcal B,\zeta\big\rangle .$$
+$$\mathop{\mathrm{tr}}\Big(\sum_i\lambda_i\,\omega_i\,\beta(\omega_i,\zeta)\Big)=-2\big\langle\star\mathcal B,\zeta\big\rangle .$$
 
 **So the scalar meeting of the two Weyl conditions is the trace of the matrix one**, and the box's "the first place the two Weyl conditions meet as matrices rather than as scalars" is true only if "as matrices" means the traceless part. Both sides of the box's own display are traceless on the span, which is the same observation.
 
@@ -182,6 +182,6 @@ Four machine actions, on objects I constructed for the purpose, none of them evi
 4. **The "only relation" sentence is narrowed**, and the block records that **L193 proves $\star_V(J\wedge J)=2\epsilon_JJ$ with $\epsilon_J=\mathrm{Pf}(J)$**, discharging [L184](../findings/diagonal-half.md)'s HYPOTHESIS-DEBT.
 5. **The proof names its two steps**, the real skew normal form and the $SO(6)$-equivariance of $\sigma$ and $\mathrm{Pf}$, and drops the emphasis on "simultaneously block-diagonal", which is a consequence of the line above it.
 6. **$\mathrm{Id}_6$ is read as $\mathrm{Id}_V$** wherever the ambient is $\mathbb R^n$ with $n>6$, one clause, the same one [L184](../findings/diagonal-half.md) carries for $\star_V$.
-7. **The harmonicity box records its trace**, $\operatorname{tr}\big(\sum_i\lambda_i\omega_i\beta(\omega_i,\zeta)\big)=-2\langle\star\mathcal B,\zeta\rangle$, and that under full Bianchi the unrestricted matrix condition is equivalent to Bianchi rather than stronger.
+7. **The harmonicity box records its trace**, $\mathop{\mathrm{tr}}\big(\sum_i\lambda_i\omega_i\beta(\omega_i,\zeta)\big)=-2\langle\star\mathcal B,\zeta\rangle$, and that under full Bianchi the unrestricted matrix condition is equivalent to Bianchi rather than stronger.
 
 **Verdict: CONFIRMED.** *The Statement, the sign, the polarised form and the harmonicity identity all hold as written, with every constant checked against the Lean layer's own normalisations. Four surrounding claims fail and all four are repairable in a sentence each, and the round's net gain is that L193 discharges the record's $\star_V(J\wedge J)=2\epsilon_JJ$ debt and contains L192's scalar identity as its trace.*

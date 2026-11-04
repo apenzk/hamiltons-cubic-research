@@ -30,9 +30,9 @@ since $L_e=L_M/\theta$ by bilinearity of $\circ$. **This is consistent throughou
 
 ## Finding 1, the identity, re-derived from the structure constants: **CONFIRMED exactly**
 
-Setup, fixed from [conventions.md](../findings/conventions.md): $v_{ab}=E_{ab}-E_{ba}$ is unit under $\langle X,Y\rangle=\tfrac12\operatorname{tr}(X^{\mathsf T}Y)$; $[v_{ab},v_{bc}]=v_{ac}$, so every triangle structure constant is $\pm1$ and all others vanish; $X\circ Y=\tfrac12\{X,Y\}+B(X,Y)$ with $B(X,Y)_{\alpha\beta}=\tfrac12c_{\alpha\gamma\delta}c_{\beta\epsilon\zeta}X_{\gamma\epsilon}Y_{\delta\zeta}$.
+Setup, fixed from [conventions.md](../findings/conventions.md): $v_{ab}=E_{ab}-E_{ba}$ is unit under $\langle X,Y\rangle=\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$; $[v_{ab},v_{bc}]=v_{ac}$, so every triangle structure constant is $\pm1$ and all others vanish; $X\circ Y=\tfrac12\{X,Y\}+B(X,Y)$ with $B(X,Y)_{\alpha\beta}=\tfrac12c_{\alpha\gamma\delta}c_{\beta\epsilon\zeta}X_{\gamma\epsilon}Y_{\delta\zeta}$.
 
-**The setup was validated against the record's own anchors before it was used.** It reproduces $Q_{ab}=M_{ab}^2+(M^2)_{ab}$ on the diagonal locus, gives $\operatorname{tr}W^{\#}=-1$ at a unit critical point exactly as [conventions.md](../findings/conventions.md) requires, and recovers $\theta_0(6)=\sqrt{10}/3$ at $S^3\times S^3$. It also agrees with [DERIVE-df1.md](DERIVE-df1.md)'s implementation convention $(W^{\#})_{ab}=-\tfrac12\operatorname{tr}(A_aWA_bW)$: transposing one index pair turns my $B$ into exactly that, so the two definitions coincide rather than merely resemble each other.
+**The setup was validated against the record's own anchors before it was used.** It reproduces $Q_{ab}=M_{ab}^2+(M^2)_{ab}$ on the diagonal locus, gives $\mathop{\mathrm{tr}}W^{\#}=-1$ at a unit critical point exactly as [conventions.md](../findings/conventions.md) requires, and recovers $\theta_0(6)=\sqrt{10}/3$ at $S^3\times S^3$. It also agrees with [DERIVE-df1.md](DERIVE-df1.md)'s implementation convention $(W^{\#})_{ab}=-\tfrac12\mathop{\mathrm{tr}}(A_aWA_bW)$: transposing one index pair turns my $B$ into exactly that, so the two definitions coincide rather than merely resemble each other.
 
 **The two halves.**
 
@@ -41,9 +41,9 @@ Setup, fixed from [conventions.md](../findings/conventions.md): $v_{ab}=E_{ab}-E
 
 $$\boxed{\;L_Mf_i=\tfrac12\big(M_{ji}+M_{ki}-M_{jk}\big)f_i+\tfrac12\!\!\sum_{m\notin\{i,j,k\}}\!\!M_{im}f_m\;}$$
 
-which is the printed $\tfrac12[\operatorname{diag}(M_{ji}+M_{ki})-M_{jk}\mathrm{Id}+M^{(jk)}]$, **every sign and every $\tfrac12$ confirmed**. Block-invariance is proved en route rather than assumed: the image lands in the span of the $f_m$.
+which is the printed $\tfrac12[\mathop{\mathrm{diag}}(M_{ji}+M_{ki})-M_{jk}\mathrm{Id}+M^{(jk)}]$, **every sign and every $\tfrac12$ confirmed**. Block-invariance is proved en route rather than assumed: the image lands in the span of the $f_m$.
 
-> **SCREEN.** Built $\circ$ from the structure constants at $n=6$ and compared the true block against this formula at $S^3\times S^3$, at a within-factor pair $\{0,1\}$ and a cross-factor pair $\{0,3\}$: `max|circ - formula| = 0.0` at both, exactly. Criticality residual $2.8\times10^{-17}$, $\operatorname{tr}W^2=1$, $\operatorname{tr}W^{\#}=-1$.
+> **SCREEN.** Built $\circ$ from the structure constants at $n=6$ and compared the true block against this formula at $S^3\times S^3$, at a within-factor pair $\{0,1\}$ and a cross-factor pair $\{0,3\}$: `max|circ - formula| = 0.0` at both, exactly. Criticality residual $2.8\times10^{-17}$, $\mathop{\mathrm{tr}}W^2=1$, $\mathop{\mathrm{tr}}W^{\#}=-1$.
 
 **Row sums are constant.** $\tfrac12(M_{ji}+M_{ki})-\tfrac12M_{jk}+\tfrac12\sum_{m}M_{im}=-\tfrac12M_{jk}$ using $M\mathbf1=0$, so $\mathbf1$ is an eigenvector of the uncut $(n-2)$ block and the Ricci cut is preserved, which is the test the withdrawn halved form fails. **The withdrawal note is coherent**: halving only the $\#$ part leaves row sums $\tfrac14(M_{ji}+M_{ki}-M_{jk})$, varying with $i$, exactly as the note says.
 
@@ -51,13 +51,13 @@ which is the printed $\tfrac12[\operatorname{diag}(M_{ji}+M_{ki})-M_{jk}\mathrm{
 
 ## Finding 2, the two expressions really are equal, and the missing $M_{ij},M_{ik}$ are where the brief expected: **CONFIRMED, and it is where Ricci-flatness enters**
 
-A graph Laplacian is $\Delta=\operatorname{diag}(\text{row sums})-A$. With $A=M^{(jk)}$, **the row sums of $\Delta^{(jk)}$ are**
+A graph Laplacian is $\Delta=\mathop{\mathrm{diag}}(\text{row sums})-A$. With $A=M^{(jk)}$, **the row sums of $\Delta^{(jk)}$ are**
 $$\sum_{m\notin\{j,k\}}M_{im}=(M\mathbf1)_i-M_{ij}-M_{ik}\;\overset{M\mathbf1=0}{=}\;-\big(M_{ij}+M_{ik}\big),$$
-which is exactly $-\operatorname{diag}(M_{ji}+M_{ki})$, i.e. the diagonal the identity needs. **So the deleted rows' entries $M_{ij},M_{ik}$ did not disappear, they returned as the row sums, and only Ricci-flatness puts them back.** The sign on $M^{(jk)}$ is right: $-\tfrac12\Delta^{(jk)}=-\tfrac12\operatorname{diag}(\text{row sums})+\tfrac12M^{(jk)}$, matching the $+M^{(jk)}$ inside the bracket.
+which is exactly $-\mathop{\mathrm{diag}}(M_{ji}+M_{ki})$, i.e. the diagonal the identity needs. **So the deleted rows' entries $M_{ij},M_{ik}$ did not disappear, they returned as the row sums, and only Ricci-flatness puts them back.** The sign on $M^{(jk)}$ is right: $-\tfrac12\Delta^{(jk)}=-\tfrac12\mathop{\mathrm{diag}}(\text{row sums})+\tfrac12M^{(jk)}$, matching the $+M^{(jk)}$ inside the bracket.
 
-**One wording risk, and it is live.** "the weighted graph Laplacian of $M$ with rows and columns $j,k$ deleted" admits a second reading, Laplacian of the *full* $M$, then delete. That object is $\operatorname{diag}((M\mathbf1)_i)-M^{(jk)}=-M^{(jk)}$ under Ricci-flatness, and it **does not** satisfy the identity: it is short by $\tfrac12\operatorname{diag}(M_{ji}+M_{ki})$. The intended reading is "Laplacian of [$M$ with rows and columns deleted]" and should be written unambiguously, e.g. "$\Delta^{(jk)}=\operatorname{diag}(M^{(jk)}\mathbf1)-M^{(jk)}$".
+**One wording risk, and it is live.** "the weighted graph Laplacian of $M$ with rows and columns $j,k$ deleted" admits a second reading, Laplacian of the *full* $M$, then delete. That object is $\mathop{\mathrm{diag}}((M\mathbf1)_i)-M^{(jk)}=-M^{(jk)}$ under Ricci-flatness, and it **does not** satisfy the identity: it is short by $\tfrac12\mathop{\mathrm{diag}}(M_{ji}+M_{ki})$. The intended reading is "Laplacian of [$M$ with rows and columns deleted]" and should be written unambiguously, e.g. "$\Delta^{(jk)}=\mathop{\mathrm{diag}}(M^{(jk)}\mathbf1)-M^{(jk)}$".
 
-**A free check the record does not carry**: $\operatorname{tr}\Delta^{(jk)}=2M_{jk}$, since $\sum_{i\notin\{j,k\}}(M_{ij}+M_{ik})=-2M_{jk}$ under $M\mathbf1=0$. Confirmed by screen to $10^{-16}$ at both pairs. It is a one-line transcription test for any future restatement.
+**A free check the record does not carry**: $\mathop{\mathrm{tr}}\Delta^{(jk)}=2M_{jk}$, since $\sum_{i\notin\{j,k\}}(M_{ij}+M_{ik})=-2M_{jk}$ under $M\mathbf1=0$. Confirmed by screen to $10^{-16}$ at both pairs. It is a one-line transcription test for any future restatement.
 
 ---
 
@@ -65,7 +65,7 @@ which is exactly $-\operatorname{diag}(M_{ji}+M_{ki})$, i.e. the diagonal the id
 
 $f_i=\varphi\odot\psi$ with $\varphi=v_{ji},\psi=v_{ki}$ has $\mathrm{Ric}(f_i)_{bd}=\sum_a(f_i)_{abad}=-(\varphi\psi+\psi\varphi)_{bd}$. Computing, $\varphi\psi=-E_{jk}$ and $\psi\varphi=-E_{kj}$, so
 $$\mathrm{Ric}(f_i)=E_{jk}+E_{kj}\qquad\text{for every }i.$$
-**Independent of $i$.** Hence $\mathrm{Ric}\big(\sum_ix_if_i\big)=(\sum_ix_i)(E_{jk}+E_{kj})$, the cut is $\sum_ix_i=0$ with **no weighting**, and it is a single relation, matching [Lemma L120](../findings/second-order.md)'s "one Ricci relation cuts each pair block from $n-2$ to $n-3$". Since $\Delta^{(jk)}$ is symmetric with $\Delta^{(jk)}\mathbf1=0$ (a graph Laplacian always kills $\mathbf1$; here the row sums are $-(M_{ij}+M_{ik})$ and $\operatorname{diag}$ of them cancels $M^{(jk)}\mathbf1$), $\mathbf1^\perp$ is invariant and the restricted block is $-\tfrac12\Delta^{(jk)}\vert_{\mathbf1^\perp}-\tfrac12M_{jk}\mathrm{Id}$. **The spectral consequence is exactly as advertised.**
+**Independent of $i$.** Hence $\mathrm{Ric}\big(\sum_ix_if_i\big)=(\sum_ix_i)(E_{jk}+E_{kj})$, the cut is $\sum_ix_i=0$ with **no weighting**, and it is a single relation, matching [Lemma L120](../findings/second-order.md)'s "one Ricci relation cuts each pair block from $n-2$ to $n-3$". Since $\Delta^{(jk)}$ is symmetric with $\Delta^{(jk)}\mathbf1=0$ (a graph Laplacian always kills $\mathbf1$; here the row sums are $-(M_{ij}+M_{ik})$ and $\mathop{\mathrm{diag}}$ of them cancels $M^{(jk)}\mathbf1$), $\mathbf1^\perp$ is invariant and the restricted block is $-\tfrac12\Delta^{(jk)}\vert_{\mathbf1^\perp}-\tfrac12M_{jk}\mathrm{Id}$. **The spectral consequence is exactly as advertised.**
 
 **One refinement to the record's own correction.** [Lemma L123](../findings/second-order.md)'s scope paragraph says "the identification of the Ricci cut with $\mathbf1^\perp$ ... require[s] Ricci-flatness". Strictly, $\sum_ix_i=0$ is unconditional, it is a property of the Weyl subspace and no condition on $M$ enters the computation above. What needs Ricci-flatness is calling that hyperplane **"the Laplacian's own $\mathbf1^\perp$"**, since without $M\mathbf1=0$ there is no such Laplacian. The correction is right in effect and slightly over-broad as phrased.
 
@@ -76,7 +76,7 @@ $$\mathrm{Ric}(f_i)=E_{jk}+E_{kj}\qquad\text{for every }i.$$
 **Two of the three hold.** Criticality and $\theta>0$ appear nowhere in the derivation of Finding 1, no row sum, no vertex equation, no sign of $\theta$. Confirmed.
 
 **"Not Ricci-flatness" is false for the second expression.** Setting $r_i$ for the row sums of $M^{(jk)}$,
-$$-\tfrac12\Delta^{(jk)}-\tfrac12M_{jk}\mathrm{Id}\;=\;\tfrac12\big[\operatorname{diag}(M_{ji}+M_{ki})-M_{jk}\mathrm{Id}+M^{(jk)}\big]\iff -r_i=M_{ij}+M_{ik}\iff (M\mathbf1)_i=0 .$$
+$$-\tfrac12\Delta^{(jk)}-\tfrac12M_{jk}\mathrm{Id}\;=\;\tfrac12\big[\mathop{\mathrm{diag}}(M_{ji}+M_{ki})-M_{jk}\mathrm{Id}+M^{(jk)}\big]\iff -r_i=M_{ij}+M_{ik}\iff (M\mathbf1)_i=0 .$$
 So the equality chain holds **iff** $M$ is Ricci-flat, index by index.
 
 > **WITNESS.** $n=6$, $M$ hollow and symmetric with $M_{02}=M_{20}=1$ and every other entry zero. Then $(M\mathbf1)_0=(M\mathbf1)_2=1\ne0$. At the pair $\{0,1\}$ the bracketed form is exact; the Laplacian form has diagonal $0$ against a true diagonal $(\tfrac12,0,0,0)$, **off by $\tfrac12$**.
@@ -98,13 +98,13 @@ $$-\tfrac12\lambda_{\min}\big(\Delta^{(jk)}\vert_{\mathbf1^\perp}\big)-\tfrac12M
 
 - **By hand, against criticality.** $x_i=M_{ki}-M_{ji}$ satisfies $(Ax)_m=\tfrac\theta2x_m$ exactly: the $M_{km}^2-M_{mk}^2$, $M_{mj}^2-M_{jm}^2$ and $M_{jk}M_{jm}-M_{jm}M_{jk}$ terms all cancel identically after substituting $(M^2)_{ab}=\theta M_{ab}-M_{ab}^2$. **All $M$-dependence cancels**, exactly as the block claims. Also $\sum_mx_m=0$, so it lands in the Ricci cut as it must.
 - **Consistency with [Lemma L123](../findings/second-order.md)'s tail**: eigenvalue $\theta/2$ on the block forces $\lambda_\Delta=-(\theta+M_{jk})$, which is what that paragraph prints.
-- **Consistency with [post F47](../findings/second-order.md) and [post F51](../findings/second-order.md)**: $-\Delta^{(jk)}=M^{(jk)}+\operatorname{diag}(p)$ with $p_a=M_{aj}+M_{ak}$ is exactly their $\widetilde N=M\vert_I+\operatorname{diag}(p)$, and $T=\theta+M_{jk}$ matches. **No restatement anywhere in `findings/` carries a different constant.**
+- **Consistency with [post F47](../findings/second-order.md) and [post F51](../findings/second-order.md)**: $-\Delta^{(jk)}=M^{(jk)}+\mathop{\mathrm{diag}}(p)$ with $p_a=M_{aj}+M_{ak}$ is exactly their $\widetilde N=M\vert_I+\mathop{\mathrm{diag}}(p)$, and $T=\theta+M_{jk}$ matches. **No restatement anywhere in `findings/` carries a different constant.**
 
 **The hypotheses, stated plainly, because the block does not.**
 
 | claim | needs |
 | --- | --- |
-| bracketed form $\tfrac12[\operatorname{diag}(M_{ji}+M_{ki})-M_{jk}\mathrm{Id}+M^{(jk)}]$ | $M$ coordinate-diagonal. Nothing else. |
+| bracketed form $\tfrac12[\mathop{\mathrm{diag}}(M_{ji}+M_{ki})-M_{jk}\mathrm{Id}+M^{(jk)}]$ | $M$ coordinate-diagonal. Nothing else. |
 | Ricci cut $=\sum_ix_i=0$ | nothing on $M$ at all |
 | rewriting as $-\tfrac12\Delta^{(jk)}-\tfrac12M_{jk}\mathrm{Id}$ | additionally $M\mathbf1=0$ |
 | $\lambda_{\min}(\Delta^{(jk)}\vert_{\mathbf1^\perp})\ge-(\theta+M_{jk})$ | additionally $W$ a **unit-norm maximiser** with $\theta>0$ |
@@ -125,11 +125,11 @@ Under [conventions.md](../findings/conventions.md)'s plain Frobenius pairing on 
 
 ## Finding 7, "graph Laplacian" in the heading is doing more work than it can: **REPAIR, not an error**
 
-$M\mathbf1=0$ with $M$ hollow forces both signs in $M$ unless $M=0$, so the weights of $\Delta^{(jk)}$ take both signs. It is the **Kirchhoff matrix of a signed-weight graph**, $\operatorname{diag}(\sum_mw_{im})-W$, not the $\operatorname{diag}(\sum\lvert w\rvert)-W$ that the signed-graph literature calls a Laplacian and that is PSD. **This one is indefinite**, and must be: $\operatorname{tr}\Delta^{(jk)}=2M_{jk}$ over $n-3$ dimensions of $\mathbf1^\perp$, so $M_{jk}<0$ forces a negative eigenvalue.
+$M\mathbf1=0$ with $M$ hollow forces both signs in $M$ unless $M=0$, so the weights of $\Delta^{(jk)}$ take both signs. It is the **Kirchhoff matrix of a signed-weight graph**, $\mathop{\mathrm{diag}}(\sum_mw_{im})-W$, not the $\mathop{\mathrm{diag}}(\sum\lvert w\rvert)-W$ that the signed-graph literature calls a Laplacian and that is PSD. **This one is indefinite**, and must be: $\mathop{\mathrm{tr}}\Delta^{(jk)}=2M_{jk}$ over $n-3$ dimensions of $\mathbf1^\perp$, so $M_{jk}<0$ forces a negative eigenvalue.
 
 **And the whole content of the lemma depends on that.** If $\Delta^{(jk)}$ were PSD then $\lambda_{\min}\ge0>-(\theta+M_{jk})$ and the consequence would be vacuous. **What actually transfers from "graph Laplacian" is symmetry and $\mathbf1\in\ker$, nothing else**, and both are used. [diagonal-half.md](../findings/diagonal-half.md) is careful about exactly this distinction for $K$ itself ("$K$ is a signed-graph Laplacian, with weights $-K_{ab}$"); L122's heading is not. **Repair: say "signed-weight graph Laplacian", and add the one clause that it is indefinite, which is why the bound has content.**
 
-> **SCREEN.** At $S^3\times S^3$, $\operatorname{spec}(\Delta^{(jk)}\vert_{\mathbf1^\perp})=\{-0.8433,0.7379,0.7379\}$ within-factor and $\{-0.8433,0.2108,0.2108\}$ cross-factor. Negative eigenvalues present at both.
+> **SCREEN.** At $S^3\times S^3$, $\mathop{\mathrm{spec}}(\Delta^{(jk)}\vert_{\mathbf1^\perp})=\{-0.8433,0.7379,0.7379\}$ within-factor and $\{-0.8433,0.2108,0.2108\}$ cross-factor. Negative eigenvalues present at both.
 
 ---
 
@@ -137,11 +137,11 @@ $M\mathbf1=0$ with $M$ hollow forces both signs in $M$ unless $M=0$, so the weig
 
 The sentence **"The within-factor top eigenvalue is $(p-2)/(2(p-1))$, now proved"** is in $L_e$ units, while everything else in L122 (the displayed matrix, the $\theta/2$ orbit eigenvalue, the $\lambda_{\min}$ consequence), is in $L_M$ units. The block never says so.
 
-> **SCREEN**, at $S^3\times S^3$, within-factor pair $\{0,1\}$: $\operatorname{spec}(L_M\vert_{\mathbf1^\perp})=\{-\theta/2,-\theta/2,\theta/4\}$, so $\operatorname{spec}(L_e\vert_{\mathbf1^\perp})=\{-\tfrac12,-\tfrac12,\tfrac14\}$ and the top is $\tfrac14=(p-2)/(2(p-1))$ at $p=3$, **in $L_e$**. In $L_M$ the top is $\theta/4=0.2635$. At $p=3$ the two numbers are $0.25$ and $0.2635$: close enough to be mistaken for a rounding difference.
+> **SCREEN**, at $S^3\times S^3$, within-factor pair $\{0,1\}$: $\mathop{\mathrm{spec}}(L_M\vert_{\mathbf1^\perp})=\{-\theta/2,-\theta/2,\theta/4\}$, so $\mathop{\mathrm{spec}}(L_e\vert_{\mathbf1^\perp})=\{-\tfrac12,-\tfrac12,\tfrac14\}$ and the top is $\tfrac14=(p-2)/(2(p-1))$ at $p=3$, **in $L_e$**. In $L_M$ the top is $\theta/4=0.2635$. At $p=3$ the two numbers are $0.25$ and $0.2635$: close enough to be mistaken for a rounding difference.
 
 Line 871 of the same file prints the sibling cross-factor spectrum as $\{\tfrac12,0^{n-4}\}$ (also $L_e$) so the file is consistent with itself elsewhere and only L122's own display mixes the two. **Repair: write "$(p-2)/(2(p-1))$ for $L_e$, i.e. $\theta(p-2)/(2(p-1))$ for the block above".**
 
-> **SCREEN**, cross-factor pair $\{0,3\}$: $\operatorname{spec}(L_e\vert_{\mathbf1^\perp})=\{\tfrac12,0,0\}$ with the $\tfrac12$ on the orbit direction $x\propto(-1,-1,1,1)$, and $\lambda_{\min}(\Delta\vert_{\mathbf1^\perp})=-0.84327=-(\theta+M_{jk})$ **attained exactly**; within-factor it is $-0.84327>-1.37032$, **strict**. Both match [Lemma L123](../findings/second-order.md)'s "attained on the orbit, strict only in the orbit-free blocks", and both match the block's own claim that within-factor pairs at $S^p\times S^q$ carry no orbit direction ($M_{ji}=M_{ki}$ there).
+> **SCREEN**, cross-factor pair $\{0,3\}$: $\mathop{\mathrm{spec}}(L_e\vert_{\mathbf1^\perp})=\{\tfrac12,0,0\}$ with the $\tfrac12$ on the orbit direction $x\propto(-1,-1,1,1)$, and $\lambda_{\min}(\Delta\vert_{\mathbf1^\perp})=-0.84327=-(\theta+M_{jk})$ **attained exactly**; within-factor it is $-0.84327>-1.37032$, **strict**. Both match [Lemma L123](../findings/second-order.md)'s "attained on the orbit, strict only in the orbit-free blocks", and both match the block's own claim that within-factor pairs at $S^p\times S^q$ carry no orbit direction ($M_{ji}=M_{ki}$ there).
 
 ---
 
@@ -153,7 +153,7 @@ Grepped `findings/` and `results.md` for every restatement of the identity and i
 | --- | --- | --- |
 | [INDEX-results.md](../findings/INDEX-results.md) row 122 | $\lambda_{\min}(\Delta^{(jk)}\vert_{\mathbf1^\perp})\ge-(\theta+M_{jk})$ | consistent |
 | [post F47](../findings/second-order.md) | $\widetilde N=-\Delta^{(jk)}$, $T=\theta+M_{jk}$, $\widetilde No=To$ | consistent, it is my Finding 5 restated |
-| [post F51](../findings/second-order.md) | $\widetilde N=M\vert_I+\operatorname{diag}(p)$, $p_a=M_{aj}+M_{ak}$ | consistent, equals $-\Delta^{(jk)}$ identically |
+| [post F51](../findings/second-order.md) | $\widetilde N=M\vert_I+\mathop{\mathrm{diag}}(p)$, $p_a=M_{aj}+M_{ak}$ | consistent, equals $-\Delta^{(jk)}$ identically |
 | [post F48](../findings/second-order.md) | $\lambda_{\max}(\widetilde N)\le T$ FALSE at padded pairs | **no contradiction**, because it is unrestricted and non-maximal; but see Finding 5's box, it also refutes the $\mathbf1^\perp$ form at a critical point, which the record does not say |
 | [Lemma L127](../findings/second-order.md), line 871 | cross-factor $\{\tfrac12,0^{n-4}\}$, within-factor $\tfrac{m-2}{2(m-1)}$ | consistent in $L_e$; see Finding 8 |
 | [Lemma L123](../findings/second-order.md) scope paragraph | corrects L122's "not Ricci-flatness" | **agrees with my Finding 4**, and is the only place the correction appears |
@@ -169,8 +169,8 @@ Grepped `findings/` and `results.md` for every restatement of the identity and i
 2. **State the consequence's hypotheses on the consequence.** "At a unit-norm **maximiser** with $\theta>0$" on the displayed inequality itself, with the note that [post F48](../findings/second-order.md)'s padded point is a critical point where it fails. This is what the 17 citations consume.
 3. **Say "signed-weight graph Laplacian", and that it is indefinite**, otherwise the heading imports a PSD-ness that would make the bound vacuous.
 4. **Add one clause on the basis**: pairwise orthogonal of common norm $\sqrt2$, so the display is the operator's matrix.
-5. **Disambiguate $\Delta^{(jk)}$** as $\operatorname{diag}(M^{(jk)}\mathbf1)-M^{(jk)}$; the current phrasing admits a reading that is short by $\tfrac12\operatorname{diag}(M_{ji}+M_{ki})$.
+5. **Disambiguate $\Delta^{(jk)}$** as $\mathop{\mathrm{diag}}(M^{(jk)}\mathbf1)-M^{(jk)}$; the current phrasing admits a reading that is short by $\tfrac12\mathop{\mathrm{diag}}(M_{ji}+M_{ki})$.
 6. **Mark $(p-2)/(2(p-1))$ as an $L_e$ value**, the only $L_e$ number in an $L_M$ block.
-7. *Optional, free*: record $\operatorname{tr}\Delta^{(jk)}=2M_{jk}$ as a one-line transcription test, and note that the pair block lies wholly in $W^\perp$ so L120's $\langle M\rangle$ cut never touches it.
+7. *Optional, free*: record $\mathop{\mathrm{tr}}\Delta^{(jk)}=2M_{jk}$ as a one-line transcription test, and note that the pair block lies wholly in $W^\perp$ so L120's $\langle M\rangle$ cut never touches it.
 
 ## VERDICT: CONFIRMED

@@ -184,7 +184,7 @@ $$\boxed{\;T-\lambda_{\max}(\widetilde N)\;\le\;2M_{jk}-\frac{\sum_iu_i^3}{\lVer
 
 **(c) An eigenvalue localisation.** The residual bound for symmetric matrices gives
 
-$$\operatorname{dist}\big(\theta-M_{jk},\ \operatorname{spec}\widetilde N\big)\;\le\;\frac{\lVert u\circ u\rVert}{\lVert u\rVert},$$
+$$\mathop{\mathrm{dist}}\big(\theta-M_{jk},\ \mathop{\mathrm{spec}}\widetilde N\big)\;\le\;\frac{\lVert u\circ u\rVert}{\lVert u\rVert},$$
 
 i.e. an eigenvalue of $\widetilde N$ within $0.12388$ of $1.10119$ at $S^6\times S^6$ (true: $\lambda_{\max}=1.12367$). This is a **second** located point of the spectrum, alongside $\mathbf1\mapsto0$, the record's L3294 says "what is missing is a second known eigenvector of $\widetilde N$; a twin pair supplies only $\mathbf1$", and while this supplies an approximate eigenvector rather than an exact one, an ordering argument that only needs a *lower* bound on a second eigenvalue can use it. That is the concrete next step this section should have named.
 

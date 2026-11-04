@@ -11,7 +11,7 @@ Cold review of commits `546757b`, `5da5126`, `b764ebf`, `f135fc1`, `6d0b5bf`, `2
 | **C**, $E_{ab}=[(K^2)_{ab}-(W^{\#})_{(ab),(ab)}]-\lVert F_{(ab)}\rVert^2$ at a critical point | **CONFIRMED** | rederived independently; it is the vertex equation transposed, and $\lVert F_{(ab)}\rVert^2$ *is* $R_{ab}$ by definition |
 | **D**, $(W^2)_{(ab),(ab)}=K_{ab}^2+\lVert F_{(ab)}\rVert^2$ | **CONFIRMED, and redundant** | "the diagonal of $A^2$ is the squared row norm"; no Weyl content, and claim C does not need it |
 | **E**, both brackets vanish together on the locus | **OVERSTATED** | they vanish separately, under the *single* hypothesis of diagonality, and only in the forward direction |
-| **F**, $W\#I=-W$; $\operatorname{tr}(W^{\#})=-\lVert W\rVert^2$; the summed vertex equation is vacuous | **CONFIRMED, and derivable without the citation** | I reproduce the operator identity from the structure constants plus Schur, and cross-check the lemma's constant at $R=I$ |
+| **F**, $W\#I=-W$; $\mathop{\mathrm{tr}}(W^{\#})=-\lVert W\rVert^2$; the summed vertex equation is vacuous | **CONFIRMED, and derivable without the citation** | I reproduce the operator identity from the structure constants plus Schur, and cross-check the lemma's constant at $R=I$ |
 | **G**, the PSD statement fails maximally off the locus | **CONFIRMED, but it is a restatement of an inequality already at [target.md:48](findings/target.md#L48)** | $\mu_{\max}(K)\le\sqrt t$ with $t=2-2\sum R$ forces total failure whenever $\sum R>1-\lambda^2/2$; the census measures a consequence |
 | **H**, $r\le2/\lambda^2$, forcing $r=1$ at $\theta_0(12)$ | **CONFIRMED, and needlessly narrow** | $2/\theta_0(n)^2=n^2/((n-1)(n-2))<2$ for *every* $n\ge6$; and the contrapositive gives an unconditional reduction the record does not state |
 
@@ -25,7 +25,7 @@ The derivation is right and I reproduce it. On the diagonal locus criticality re
 
 **But [diagonal-half.md:118](findings/diagonal-half.md#L118) and [diagonal-half.md:154](findings/diagonal-half.md#L154) contradict each other.** Line 118 says the off-diagonal entry is $-K_{ab}^2$ "precisely because the vertex equation holds at $(ab)$", i.e. because the point is critical. Line 154 then concludes "$K^2-\lambda K\succeq0$ is a property of the diagonal locus, not of criticality." The operative hypothesis is *diagonality **and** criticality*, and the second sentence drops half of it. This is precisely the separation commit `546757b` was written to enforce two paragraphs earlier, so the charitable reading ("of the locus, among critical points") is not available: the commit set made the distinction explicit and then left the summary line on the wrong side of it.
 
-**The wider statement is false, not merely unproved.** Every hollow symmetric $K$ with $K\mathbf1=0$ is the vertex matrix of a coordinate-diagonal Weyl tensor, first Bianchi holds vacuously for a $\Lambda^2$-diagonal operator and Ricci-flatness is exactly the row-sum condition, so the diagonal locus is that whole matrix set, and the natural reading of $\lambda$ off criticality is $\lambda=\theta(K)=\tfrac12(\sum_{a,b}K_{ab}^3+\operatorname{tr}K^3)$.
+**The wider statement is false, not merely unproved.** Every hollow symmetric $K$ with $K\mathbf1=0$ is the vertex matrix of a coordinate-diagonal Weyl tensor, first Bianchi holds vacuously for a $\Lambda^2$-diagonal operator and Ricci-flatness is exactly the row-sum condition, so the diagonal locus is that whole matrix set, and the natural reading of $\lambda$ off criticality is $\lambda=\theta(K)=\tfrac12(\sum_{a,b}K_{ab}^3+\mathop{\mathrm{tr}}K^3)$.
 
 Take $n=8$ and put a scaled copy of the four-vertex weight
 
@@ -75,13 +75,13 @@ $W\#I=-W$ does not need Böhm–Wilking. The map $A\mapsto A\#I$ is linear and $
 
 I also checked the *cited* constant independently, which the record does not. At $R=I$ the same structure-constant count gives $I\#I=(n-2)I$, so $R+R\#I=(n-1)I$, and for the round sphere $\mathrm{Ric}=(n-1)\,\mathrm{id}$ makes $\mathrm{Ric}\wedge\mathrm{id}$ act on $e_a\wedge e_b$ by $\tfrac12(\mathrm{Ric}_{aa}+\mathrm{Ric}_{bb})=n-1$. **Lemma 2.1 as quoted is consistent at $R=I$**, and setting $\mathrm{Ric}=0$ recovers $W\#I=-W$. Brief item 4's worry about hypotheses does not bite: the lemma is applied to a genuine algebraic curvature operator satisfying first Bianchi, which every Weyl tensor does.
 
-The trace bridge needs only full symmetry of $\mathrm{tri}(A,B,C)=\langle A\#B,C\rangle$, which is standard, and the one-step chain $\operatorname{tr}(W^{\#})=\mathrm{tri}(W,W,I)=\langle W\#I,W\rangle=-\lVert W\rVert^2$ is correct. The vacuity conclusion follows: $t/2+(1-t/2)-1=0$, with $\sum_{a<b}R_{ab}=1-t/2$ itself an identity.
+The trace bridge needs only full symmetry of $\mathrm{tri}(A,B,C)=\langle A\#B,C\rangle$, which is standard, and the one-step chain $\mathop{\mathrm{tr}}(W^{\#})=\mathrm{tri}(W,W,I)=\langle W\#I,W\rangle=-\lVert W\rVert^2$ is correct. The vacuity conclusion follows: $t/2+(1-t/2)-1=0$, with $\sum_{a<b}R_{ab}=1-t/2$ itself an identity.
 
-*One notational hazard.* [target.md:31](findings/target.md#L31) writes the right-hand side as $\lambda\operatorname{tr}M$. The quantity that actually vanishes is $\sum_{a<b}K_{ab}$, which is the $\Lambda^2$ trace of $W$ and vanishes by **Ricci-flatness**, not the $n\times n$ trace of $M$, which vanishes by hollowness. Elsewhere in the record $M$ is uniformly the $n\times n$ matrix, so the sentence reads as if hollowness were the reason. Right answer, wrong stated reason.
+*One notational hazard.* [target.md:31](findings/target.md#L31) writes the right-hand side as $\lambda\mathop{\mathrm{tr}}M$. The quantity that actually vanishes is $\sum_{a<b}K_{ab}$, which is the $\Lambda^2$ trace of $W$ and vanishes by **Ricci-flatness**, not the $n\times n$ trace of $M$, which vanishes by hollowness. Elsewhere in the record $M$ is uniformly the $n\times n$ matrix, so the sentence reads as if hollowness were the reason. Right answer, wrong stated reason.
 
 ## G, true, tautological, and already in closed form one file over
 
-The table is correct but it measures a consequence of an inequality the record already has. At any critical point, $\operatorname{tr}K=0$ and $\sum\mu_a^2=t=2-2\sum R$, so
+The table is correct but it measures a consequence of an inequality the record already has. At any critical point, $\mathop{\mathrm{tr}}K=0$ and $\sum\mu_a^2=t=2-2\sum R$, so
 
 $$\mu_{\max}(K)\ \le\ \sqrt{\tfrac{n-1}{n}\,t}\ \le\ \sqrt t .$$
 

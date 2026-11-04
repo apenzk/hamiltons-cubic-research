@@ -39,13 +39,13 @@ At odd $n$ the statement is false twice over, not merely ill-posed:
 
 ## 2. The maximum, derived cold, and a closed form the block does not have
 
-**Setup, quoted from [conventions.md](../findings/conventions.md) and the head of the file.** $M$ is the $n\times n$ symmetric hollow edge-weight matrix, $M\mathbf1=0$, $\operatorname{tr}M^2=2$ (the ordered-pair sum), and
-$$\theta=\tfrac12\Big(\textstyle\sum_{a,b}M_{ab}^3+\operatorname{tr}M^3\Big).$$
+**Setup, quoted from [conventions.md](../findings/conventions.md) and the head of the file.** $M$ is the $n\times n$ symmetric hollow edge-weight matrix, $M\mathbf1=0$, $\mathop{\mathrm{tr}}M^2=2$ (the ordered-pair sum), and
+$$\theta=\tfrac12\Big(\textstyle\sum_{a,b}M_{ab}^3+\mathop{\mathrm{tr}}M^3\Big).$$
 
 **The family.** A weighted 2-class association scheme is $M=\alpha A+\beta(J-I-A)$ with $A$ the adjacency matrix of a strongly regular graph on $n$ vertices with parameters $(k,\lambda,\mu)$. Two hypotheses fix $\alpha,\beta$ up to one sign:
 
 - $M\mathbf1=0$ gives $\alpha k+\beta k'=0$ with $k':=n-1-k$, so $\beta=-\alpha k/k'$;
-- $\operatorname{tr}M^2=2$ gives $\alpha^2=\dfrac{2k'}{nk(n-1)}$.
+- $\mathop{\mathrm{tr}}M^2=2$ gives $\alpha^2=\dfrac{2k'}{nk(n-1)}$.
 
 So **the family is discrete, not continuous**: the word *weighted* buys exactly one scalar, and the two constraints spend it. The maximum is an enumeration over $(n,k,\lambda,\mu)$ together with a choice of sign, and needs no variational argument. The block never says this, and the brief was right to ask.
 
@@ -70,7 +70,7 @@ on the sign branch making $\theta>0$.
 
 1. It reproduces the block's own two recorded runner-up values *exactly*, not to nine digits but in closed form: at $(12,8,4,8)=K_{4,4,4}$, $\theta^2=2\cdot11\cdot9/(12\cdot8\cdot3)=11/16$ and $\theta=0.829156$; at $(12,9,6,9)=K_{3,3,3,3}$, $\theta^2=2\cdot11\cdot4/(12\cdot9\cdot2)=11/27$ and $\theta=0.638285$.
 2. At $(n/2,0,n/2)$: $|1+0-n/2|=(n-2)/2$ and $kk'=n(n-2)/4$, giving $\theta^2=\frac{(n-2)^2}{4}\cdot\frac{8(n-1)}{n^2(n-2)}=\frac{2(n-1)(n-2)}{n^2}=\theta_0(n)^2$. **Attainment confirmed analytically at every even $n$**, with no enumeration.
-3. Splitting the same computation term by term at that point gives $\tfrac12\operatorname{tr}M^3=\sqrt2\,c_n$ and $\tfrac12\sum M_{ab}^3=\dfrac{2\sqrt2}{n\sqrt{(n-1)(n-2)}}$, **exactly the two summands of the file's own $\theta_0$ decomposition** at [diagonal-half.md:55](../findings/diagonal-half.md#L55), reached from the scheme side rather than the sphere-product side.
+3. Splitting the same computation term by term at that point gives $\tfrac12\mathop{\mathrm{tr}}M^3=\sqrt2\,c_n$ and $\tfrac12\sum M_{ab}^3=\dfrac{2\sqrt2}{n\sqrt{(n-1)(n-2)}}$, **exactly the two summands of the file's own $\theta_0$ decomposition** at [diagonal-half.md:55](../findings/diagonal-half.md#L55), reached from the scheme side rather than the sphere-product side.
 
 **And the record already has this formula, 130 lines below the block.** [L144](../findings/diagonal-half.md#L509) prints $\theta(\Gamma)=\lvert1+\lambda-\mu\rvert\sqrt{2(n-1)/(nk(n-1-k))}$ verbatim, and [L74](../findings/diagonal-half.md#L451) gives the equivalent $F$-form. **L96 states as an unanalysed "explicit function of the parameters" what two later blocks in its own file reduce to one line.**
 

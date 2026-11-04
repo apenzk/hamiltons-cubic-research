@@ -6,7 +6,7 @@ Targets: [TorusLift.lean](../lean/HamiltonsCubic/Results/TorusLift.lean) (commit
 
 | Claim | Verdict |
 | --- | --- |
-| A1. `H_torus_slice_op` is L277's "$F(C)\le\kappa\lVert C\rVert^3$ for every torus-invariant $C\in\operatorname{Sym}^2\mathfrak{so}(2m)$", $m\ge7$ | CONFIRMED |
+| A1. `H_torus_slice_op` is L277's "$F(C)\le\kappa\lVert C\rVert^3$ for every torus-invariant $C\in\mathop{\mathrm{Sym}}^2\mathfrak{so}(2m)$", $m\ge7$ | CONFIRMED |
 | A2. `H_small_even_op` is L282 (1), every even $k=2m\le2M$, $M\ge7$, constant $\kappa_{2M}$ | CONFIRMED |
 | A3. The INDEX note that L282 (2) stays over `torusOpOdd` | CONFIRMED |
 | B1. `L271_four_pos`'s $C_P$, $C_Q$ are `L271_eigen`'s and the record's | CONFIRMED |
@@ -23,14 +23,14 @@ One line: the three statement sets are faithful to the record, and what remains 
 
 ## The record
 
-- **L277, Statement, verbatim:** *"For $m\ge7$ and real symmetric zero-diagonal $m\times m$ matrices $U,V$ with $\tfrac12(\lVert P\rVert^2+\lVert Q\rVert^2)=1$, $P=U+V$, $Q=U-V$, J1 holds: $\tfrac12(\operatorname{tr}P^3+\operatorname{tr}Q^3)+\lambda_m\big(\sum_id_i^2+\sum_{i\ne j}P_{ij}^2Q_{ij}^2\big)\le\lambda_m$. Hence (L273 (3)) $F(C)\le\kappa\lVert C\rVert^3$ for every torus-invariant $C\in\operatorname{Sym}^2\mathfrak{so}(2m)$, $\kappa=2(m-1)/\sqrt{m(2m-1)}$."*
-- **L282, Statement, verbatim:** *"Let $M\ge7$ and $\kappa_{2M}=\tfrac{2(M-1)}{\sqrt{M(2M-1)}}$. (1) For $m\le M$, every torus-invariant $C\in\operatorname{Sym}^2\mathfrak{so}(2m)$ has $F(C)\le\kappa_{2M}\lVert C\rVert^3$. (2) For $m+1\le M$, every torus-invariant $C\in\operatorname{Sym}^2\mathfrak{so}(2m+1)$ has $F(C)\le\kappa_{2M}\lVert C\rVert^3$."*
-- **L271 (4), opening, verbatim:** *"For $C\ne I/c$ (so $Q\ne0$ by (3)), with $C_P=(\operatorname{diag}d,\,U=V=\tfrac12P)$ and $C_Q=(A_{\mathrm{off}},\,U=-V=\tfrac12Q)$, orthogonal with sum $C$, the second eigenvalue of $C\#\cdot$ on $\operatorname{span}(C_P,C_Q)$ is ..."*, read in the context of (3), a torus-invariant positive-definite idempotent.
-- **L273 (1), verbatim:** *"$F(X)\le3\lVert A\rVert g+T$, with equality when $A$ is a non-negative multiple of $A_\mu$, and $g\ge1/\sqrt m$"*, with $b^2=\tfrac12(\lVert P\rVert^2+\lVert Q\rVert^2)=1$, $g=\lVert A_\mu\rVert$, $T=\tfrac12(\operatorname{tr}P^3+\operatorname{tr}Q^3)$.
+- **L277, Statement, verbatim:** *"For $m\ge7$ and real symmetric zero-diagonal $m\times m$ matrices $U,V$ with $\tfrac12(\lVert P\rVert^2+\lVert Q\rVert^2)=1$, $P=U+V$, $Q=U-V$, J1 holds: $\tfrac12(\mathop{\mathrm{tr}}P^3+\mathop{\mathrm{tr}}Q^3)+\lambda_m\big(\sum_id_i^2+\sum_{i\ne j}P_{ij}^2Q_{ij}^2\big)\le\lambda_m$. Hence (L273 (3)) $F(C)\le\kappa\lVert C\rVert^3$ for every torus-invariant $C\in\mathop{\mathrm{Sym}}^2\mathfrak{so}(2m)$, $\kappa=2(m-1)/\sqrt{m(2m-1)}$."*
+- **L282, Statement, verbatim:** *"Let $M\ge7$ and $\kappa_{2M}=\tfrac{2(M-1)}{\sqrt{M(2M-1)}}$. (1) For $m\le M$, every torus-invariant $C\in\mathop{\mathrm{Sym}}^2\mathfrak{so}(2m)$ has $F(C)\le\kappa_{2M}\lVert C\rVert^3$. (2) For $m+1\le M$, every torus-invariant $C\in\mathop{\mathrm{Sym}}^2\mathfrak{so}(2m+1)$ has $F(C)\le\kappa_{2M}\lVert C\rVert^3$."*
+- **L271 (4), opening, verbatim:** *"For $C\ne I/c$ (so $Q\ne0$ by (3)), with $C_P=(\mathop{\mathrm{diag}}d,\,U=V=\tfrac12P)$ and $C_Q=(A_{\mathrm{off}},\,U=-V=\tfrac12Q)$, orthogonal with sum $C$, the second eigenvalue of $C\#\cdot$ on $\mathop{\mathrm{span}}(C_P,C_Q)$ is ..."*, read in the context of (3), a torus-invariant positive-definite idempotent.
+- **L273 (1), verbatim:** *"$F(X)\le3\lVert A\rVert g+T$, with equality when $A$ is a non-negative multiple of $A_\mu$, and $g\ge1/\sqrt m$"*, with $b^2=\tfrac12(\lVert P\rVert^2+\lVert Q\rVert^2)=1$, $g=\lVert A_\mu\rVert$, $T=\tfrac12(\mathop{\mathrm{tr}}P^3+\mathop{\mathrm{tr}}Q^3)$.
 
 ## A. TorusLift.lean
 
-**What "torus-invariant" is.** Both theorems take `C : CurvOp2 (Fin k × Fin 2)`, a continuous linear map on `skewSub`, that is on $\mathfrak{so}(2k)$. `hsa` is symmetry for `inner2` $=\tfrac12\operatorname{tr}(X^{\mathsf T}Y)$, so $C\in\operatorname{Sym}^2\mathfrak{so}(2k)$. `hT : ∀ x, derOp (cartS x) C = 0` says $[\operatorname{ad}_{J_x},C]=0$ for each $J_x=\varphi_{(x,0)(x,1)}$, the standard basis of the maximal torus's Lie algebra. The torus is connected, so commuting with its Lie algebra is invariance under the torus. That is the record's "every torus-invariant $C$", with no extra hypothesis.
+**What "torus-invariant" is.** Both theorems take `C : CurvOp2 (Fin k × Fin 2)`, a continuous linear map on `skewSub`, that is on $\mathfrak{so}(2k)$. `hsa` is symmetry for `inner2` $=\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$, so $C\in\mathop{\mathrm{Sym}}^2\mathfrak{so}(2k)$. `hT : ∀ x, derOp (cartS x) C = 0` says $[\mathop{\mathrm{ad}}_{J_x},C]=0$ for each $J_x=\varphi_{(x,0)(x,1)}$, the standard basis of the maximal torus's Lie algebra. The torus is connected, so commuting with its Lie algebra is invariance under the torus. That is the record's "every torus-invariant $C$", with no extra hypothesis.
 
 **Constants and ranges.**
 
@@ -45,8 +45,8 @@ One line: the three statement sets are faithful to the record, and what remains 
 
 **B1, the pieces.** `L271_four_pos`'s third and fourth conjuncts are the norms of
 
-- `torusOp (diagonal (dvec U V)) (½(U + V)) (½(U + V))`, which is the record's $C_P=(\operatorname{diag}d,\,U=V=\tfrac12P)$, and
-- `torusOp (Amu U V - diagonal (dvec U V)) (½(U - V)) (-(½(U - V)))`, which is $C_Q=(A_{\mathrm{off}},\,U=-V=\tfrac12Q)$, since $A_{\mathrm{off}}=A_\mu-\operatorname{diag}d$ by `Amu`'s diagonal $d_i$,
+- `torusOp (diagonal (dvec U V)) (½(U + V)) (½(U + V))`, which is the record's $C_P=(\mathop{\mathrm{diag}}d,\,U=V=\tfrac12P)$, and
+- `torusOp (Amu U V - diagonal (dvec U V)) (½(U - V)) (-(½(U - V)))`, which is $C_Q=(A_{\mathrm{off}},\,U=-V=\tfrac12Q)$, since $A_{\mathrm{off}}=A_\mu-\mathop{\mathrm{diag}}d$ by `Amu`'s diagonal $d_i$,
 
 with $U=$ `Uof C`, $V=$ `Vof C`. These are character for character the `CP` and `CQ` of `L271_eigen` in [L271Eigen.lean](../lean/HamiltonsCubic/Results/L271Eigen.lean). Summing the weights gives $U$ on $\varepsilon_i-\varepsilon_j$, $V$ on $\varepsilon_i+\varepsilon_j$ and Cartan block $A_\mu$, so $C_P+C_Q$ is the first conjunct's `torusOp (Amu U V) U V`, which is `L271_eigen`'s `C`.
 
@@ -64,9 +64,9 @@ and it typechecks. So nothing mathematical stands between a $T$-invariant self-a
 
 ## C. L273_F_eq_op and L273_g_ge_op
 
-**C1.** The hypothesis `Aof C = s • Amu (Uof C) (Vof C)` with `0 ≤ s` is "$A$ is a non-negative multiple of $A_\mu$" at the Gram values of $C$ (`Aof C` is the Cartan block on the orthonormal $J_k$, r1755 Q3). The conclusion is equality in the same expression `L273_F_bound_op` bounds by: $3\lVert A\rVert_F\,\lVert A_\mu\rVert_F+\tfrac12(\operatorname{tr}P^3+\operatorname{tr}Q^3)$. The theorem has no $b=1$ hypothesis. Both sides are homogeneous of degree 3 under $(A,U,V)\mapsto t(A,U,V)$, so this is the record's clause without its normalisation, a harmless strengthening. The proof substitutes `L268_rep` into `L273Owed.L273_F_eq`, which is stated at `torusOp (s • Amu U V) U V`.
+**C1.** The hypothesis `Aof C = s • Amu (Uof C) (Vof C)` with `0 ≤ s` is "$A$ is a non-negative multiple of $A_\mu$" at the Gram values of $C$ (`Aof C` is the Cartan block on the orthonormal $J_k$, r1755 Q3). The conclusion is equality in the same expression `L273_F_bound_op` bounds by: $3\lVert A\rVert_F\,\lVert A_\mu\rVert_F+\tfrac12(\mathop{\mathrm{tr}}P^3+\mathop{\mathrm{tr}}Q^3)$. The theorem has no $b=1$ hypothesis. Both sides are homogeneous of degree 3 under $(A,U,V)\mapsto t(A,U,V)$, so this is the record's clause without its normalisation, a harmless strengthening. The proof substitutes `L268_rep` into `L273Owed.L273_F_eq`, which is stated at `torusOp (s • Amu U V) U V`.
 
-**C2.** `L273_g_ge_op` has only `hb`, the record's $b^2=1$ written in `Uof C`, `Vof C`, and concludes $1/\sqrt m\le\lVert A_\mu(\mathrm{Uof}\,C,\mathrm{Vof}\,C)\rVert_F$, which is $g\ge1/\sqrt m$. It drops `hT` and `hsa`, and is `L273_g_ge` at the Gram weights of an arbitrary `C` (O2). At a torus-invariant $C$ this is the record's clause. The argument ($\operatorname{tr}A_\mu=\sum_id_i=b^2=1$, then Cauchy–Schwarz on the diagonal) is valid for any weights, so the generality is genuine.
+**C2.** `L273_g_ge_op` has only `hb`, the record's $b^2=1$ written in `Uof C`, `Vof C`, and concludes $1/\sqrt m\le\lVert A_\mu(\mathrm{Uof}\,C,\mathrm{Vof}\,C)\rVert_F$, which is $g\ge1/\sqrt m$. It drops `hT` and `hsa`, and is `L273_g_ge` at the Gram weights of an arbitrary `C` (O2). At a torus-invariant $C$ this is the record's clause. The argument ($\mathop{\mathrm{tr}}A_\mu=\sum_id_i=b^2=1$, then Cauchy–Schwarz on the diagonal) is valid for any weights, so the generality is genuine.
 
 **C3.** r1755 O1 asked that the equality case and $g\ge1/\sqrt m$ reach the operator. Both now do, and the L273 row names them. Every clause of L273 (1) is typed at the operator.
 
@@ -104,9 +104,9 @@ and it typechecks. So nothing mathematical stands between a $T$-invariant self-a
 
 **Falsifiers.**
 
-- `H_torus_slice_op`: for some $m\ge7$, a self-adjoint $C$ on $\mathfrak{so}(2m)$ commuting with every $\operatorname{ad}_{J_x}$ and $F(C)>\tfrac{2(m-1)}{\sqrt{m(2m-1)}}\lVert C\rVert^3$.
+- `H_torus_slice_op`: for some $m\ge7$, a self-adjoint $C$ on $\mathfrak{so}(2m)$ commuting with every $\mathop{\mathrm{ad}}_{J_x}$ and $F(C)>\tfrac{2(m-1)}{\sqrt{m(2m-1)}}\lVert C\rVert^3$.
 - `H_small_even_op`: for some $M\ge7$ and $1\le m\le M$, such a $C$ on $\mathfrak{so}(2m)$ with $F(C)>\kappa_{2M}\lVert C\rVert^3$.
 - `normSq2_pos_of_pair`: symmetric $U,V$ with $U_{ij}\ne0$ for some $i\ne j$ and `normSq2 (torusOp A U V) = 0`.
 - `L271_four_pos`: a $T$-invariant self-adjoint positive-definite idempotent $C\ne I/(2(m-1))$, $m\ge3$, whose `Uof C`, `Vof C` fail `TorusSystem`, or with $C_P=0$ or $C_Q=0$ (equivalently $U+V\equiv0$ or $U\equiv V$ off the diagonal).
 - `L273_F_eq_op`: such a torus-invariant $C$ with `Aof C` $=sA_\mu$, $s\ge0$, and $F(C)$ strictly below $3\lVert A\rVert g+T$.
-- `L273_g_ge_op`: weights with $\tfrac12(\lVert P\rVert^2+\lVert Q\rVert^2)=1$ and $\lVert A_\mu\rVert<1/\sqrt m$, impossible since $\operatorname{tr}A_\mu=1$ and $A_\mu$ has $m$ diagonal entries.
+- `L273_g_ge_op`: weights with $\tfrac12(\lVert P\rVert^2+\lVert Q\rVert^2)=1$ and $\lVert A_\mu\rVert<1/\sqrt m$, impossible since $\mathop{\mathrm{tr}}A_\mu=1$ and $A_\mu$ has $m$ diagonal entries.

@@ -8,7 +8,7 @@ Cold from the definitions in [conventions.md](../findings/conventions.md) and th
 | --- | --- | --- |
 | 1 | $\sum_\alpha\lambda_\alpha\,\mathrm{ad}(v_\alpha)^2=2W$ on $\mathrm{Weyl}_m$ | **CONFIRMED**, derived in full, §3 |
 | 2 | First Bianchi is load-bearing; Ricci-flatness only deletes a correction | **CONFIRMED**, each hypothesis used exactly once, and at an identified step, §3.3 |
-| 3 | The $\operatorname{tr}(u^2v_\alpha^2)$ term is what Ricci-flatness annihilates | **CONFIRMED**, it is the term literally present, §3.2 |
+| 3 | The $\mathop{\mathrm{tr}}(u^2v_\alpha^2)$ term is what Ricci-flatness annihilates | **CONFIRMED**, it is the term literally present, §3.2 |
 | 4 | $\Lambda^4$ is Ricci-flat and carries $-4$ rather than $+2$ | **CONFIRMED**, and at every $m\ge4$, not only $m=4$, §3.4 |
 | 5 | $\langle u,N_vu\rangle=2\langle v,u\rangle^2+\lVert[v,u]\rVert^2$ | **CONFIRMED**, §4 |
 | 6 | $N_v\succeq0$ with $\ker N_v=v^\perp\cap\mathfrak z(v)$ | **CONFIRMED**, §4 |
@@ -22,7 +22,7 @@ Cold from the definitions in [conventions.md](../findings/conventions.md) and th
 | 14 | *"In particular no rank-$3$ $\mathrm{Weyl}_m$ tensor at even $m\ge6$ has a nondegenerate minority-side eigenvector"* | **CONFIRMED**, and both the evenness and the $m\ge6$ are necessary, §9 |
 | 15 | The result covers odd $m$ | **CONFIRMED**, §10.2 |
 | 16 | The result covers degenerate minority eigenvectors | **CONFIRMED**, §6.2 |
-| 17 | The $\mathrm{Weyl}_4$ witness $W^+=W^-=\operatorname{diag}(2,-1,-1)$ | **CONFIRMED**, rebuilt cold, §11.1 |
+| 17 | The $\mathrm{Weyl}_4$ witness $W^+=W^-=\mathop{\mathrm{diag}}(2,-1,-1)$ | **CONFIRMED**, rebuilt cold, §11.1 |
 | 18 | [Lemma L34](../findings/stratum-two-negative.md) supplies a second witness at $m=8$ | **CONFIRMED**, §11.2 |
 | 19 | *"with multiplicity"* reaches [results.md](../results.md) and [report/](../report/) | **CONFIRMED at all three statement sites**; the *heading* still carries the false reading at five, §11.3 |
 | 20 | The identity *"is classical and is cited, not claimed"*, Besse §1.143 | **UNHELD CITATION**, no Besse in [references/](../references/), and §1.143 is the Lichnerowicz Laplacian on **symmetric** $2$-tensors, §12.1 |
@@ -40,13 +40,13 @@ Cold from the definitions in [conventions.md](../findings/conventions.md) and th
 
 Quoted from [conventions.md](../findings/conventions.md), not restated:
 
-> **The $\tfrac12$ goes at the $\Lambda^2$ level, not the operator level.** The inner product is $\tfrac12\operatorname{tr}(X^{\mathsf T}Y)$ at the $\Lambda^2$ level and plain Frobenius on the pair matrix.
+> **The $\tfrac12$ goes at the $\Lambda^2$ level, not the operator level.** The inner product is $\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$ at the $\Lambda^2$ level and plain Frobenius on the pair matrix.
 
-> **A skew matrix's norm**, in the form the stratum arguments use: $\langle X,X\rangle=\tfrac12\operatorname{tr}(X^{\mathsf T}X)$, singular values in pairs $s_1,s_1,s_2,s_2,\dots$ with $\sum_i s_i^2=1$. Equivalent to $\operatorname{tr}(v^2)=-2$ above.
+> **A skew matrix's norm**, in the form the stratum arguments use: $\langle X,X\rangle=\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}X)$, singular values in pairs $s_1,s_1,s_2,s_2,\dots$ with $\sum_i s_i^2=1$. Equivalent to $\mathop{\mathrm{tr}}(v^2)=-2$ above.
 
 > **A bivector's norm**, and the record runs in the first of these: $\lVert\varphi_{ab}\rVert^2=1$ under the half-trace pairing of the bullet above, which is the one every result uses and which makes $\{\varphi_{ab}\}_{a<b}$ orthonormal.
 
-> **The Killing form of $\mathfrak{so}(n)$** is $B(X,Y)=(n-2)\operatorname{tr}(XY)$, with $\operatorname{tr}(v^2)=-2$ for a unit bivector, so $\kappa=2(n-2)$ in an orthonormal basis. **Killing constants come from the definition, never from an index convention.**
+> **The Killing form of $\mathfrak{so}(n)$** is $B(X,Y)=(n-2)\mathop{\mathrm{tr}}(XY)$, with $\mathop{\mathrm{tr}}(v^2)=-2$ for a unit bivector, so $\kappa=2(n-2)$ in an orthonormal basis. **Killing constants come from the definition, never from an index convention.**
 
 > $\dim\mathcal W_n$ | $\frac{n(n-3)(n+1)(n+2)}{12}$, $10$ at $n=4$, $84$ at $n=6$, $1638$ at $n=12$
 
@@ -68,7 +68,7 @@ Two identifications I fix here because the block uses them silently, both forced
 | --- | --- | --- |
 | $W\in\mathrm{Weyl}_m$, **symmetric operator on $\Lambda^2\mathbb R^m$** | an orthonormal eigenbasis $\{v_\alpha\}$ of $\Lambda^2$ with real $\lambda_\alpha$; $W=\sum_\alpha\lambda_\alpha v_\alpha\otimes v_\alpha$ | the whole proof; the rescaling in particular needs the $y_i$ mutually orthogonal and orthogonal to $x$ |
 | $W\in\mathrm{Weyl}_m$, **first Bianchi** | $W_{abcd}+W_{acdb}+W_{adbc}=0$ | §3.3, exactly once, to evaluate $X=\sum W_{abcd}u_{ac}u_{bd}$ |
-| $W\in\mathrm{Weyl}_m$, **Ricci-flat** | $\sum_\alpha\lambda_\alpha v_\alpha^2=0$ | twice: §3.2 to delete $\operatorname{tr}(\mathrm{Ric}\,u^2)$, and §7 to close |
+| $W\in\mathrm{Weyl}_m$, **Ricci-flat** | $\sum_\alpha\lambda_\alpha v_\alpha^2=0$ | twice: §3.2 to delete $\mathop{\mathrm{tr}}(\mathrm{Ric}\,u^2)$, and §7 to close |
 | $W\in\mathrm{Weyl}_m$, trace-free | $\sum_\alpha\lambda_\alpha=0$ | implied by Ricci-flatness; used only to say a nonzero $W$ has both signs |
 | **one-dimensional eigenspace on one side** | the whole minority spectrum is a single $\lambda_x$ with a single eigenvector $x$ | §5, the rescaling to $N_x=\sum_iN_{y_i}$ |
 | $x$ **not a multiple of a complex structure on a $4$-dimensional subspace** | L32's exception is off | §6, the L32 step |
@@ -100,23 +100,23 @@ The statement is: *for every* $W\in\mathrm{Weyl}_m$ *and every* $m$, if the mino
 
 For $u,v\in\mathfrak{so}(m)$, with $P=vu$, $Q=uv$ and $\lVert X\rVert^2=\tfrac12\sum_{ij}X_{ij}^2$:
 
-$$\sum_{ij}P_{ij}^2=\operatorname{tr}(u^{\mathsf T}v^{\mathsf T}vu)=\operatorname{tr}(v^2u^2),\quad\sum_{ij}Q_{ij}^2=\operatorname{tr}(u^2v^2),\quad\sum_{ij}P_{ij}Q_{ij}=\operatorname{tr}(uvuv),$$
+$$\sum_{ij}P_{ij}^2=\mathop{\mathrm{tr}}(u^{\mathsf T}v^{\mathsf T}vu)=\mathop{\mathrm{tr}}(v^2u^2),\quad\sum_{ij}Q_{ij}^2=\mathop{\mathrm{tr}}(u^2v^2),\quad\sum_{ij}P_{ij}Q_{ij}=\mathop{\mathrm{tr}}(uvuv),$$
 
 so
 
-$$\lVert[v,u]\rVert^2=\operatorname{tr}(u^2v^2)-\operatorname{tr}(uvuv).$$
+$$\lVert[v,u]\rVert^2=\mathop{\mathrm{tr}}(u^2v^2)-\mathop{\mathrm{tr}}(uvuv).$$
 
 **The term the block names is the term that is literally there.**
 
 ### 3.2 The first term is the Ricci term
 
-$$\sum_\alpha\lambda_\alpha\operatorname{tr}(u^2v_\alpha^2)=\operatorname{tr}\Big(u^2\sum_\alpha\lambda_\alpha v_\alpha^2\Big)=-\operatorname{tr}(\mathrm{Ric}\,u^2),$$
+$$\sum_\alpha\lambda_\alpha\mathop{\mathrm{tr}}(u^2v_\alpha^2)=\mathop{\mathrm{tr}}\Big(u^2\sum_\alpha\lambda_\alpha v_\alpha^2\Big)=-\mathop{\mathrm{tr}}(\mathrm{Ric}\,u^2),$$
 
 by the identification fixed in §0. Ricci-flatness kills it and nothing else. ✔ claim 3.
 
 ### 3.3 The second term is where first Bianchi enters
 
-$$\sum_\alpha\lambda_\alpha\operatorname{tr}(uv_\alpha uv_\alpha)=\sum_{ijkl}W_{jkli}u_{ij}u_{kl}=-\sum_{abcd}W_{abcd}u_{ad}u_{bc}=\sum_{abcd}W_{abcd}u_{ac}u_{bd}=:X,$$
+$$\sum_\alpha\lambda_\alpha\mathop{\mathrm{tr}}(uv_\alpha uv_\alpha)=\sum_{ijkl}W_{jkli}u_{ij}u_{kl}=-\sum_{abcd}W_{abcd}u_{ad}u_{bc}=\sum_{abcd}W_{abcd}u_{ac}u_{bd}=:X,$$
 
 the last step by antisymmetry of $W$ in its final pair. Now contract first Bianchi $W_{abcd}+W_{acdb}+W_{adbc}=0$ against $u_{ac}u_{bd}$, writing $X+Y+Z=0$:
 
@@ -125,18 +125,18 @@ the last step by antisymmetry of $W$ in its final pair. Now contract first Bianc
 
 Hence $2X-4\langle u,Wu\rangle=0$, that is $X=2\langle u,Wu\rangle$. **Neither $Y$ nor $Z$ used Bianchi; only the closure $X+Y+Z=0$ did.** Collecting,
 
-$$\sum_\alpha\lambda_\alpha\lVert[v_\alpha,u]\rVert^2=-\operatorname{tr}(\mathrm{Ric}\,u^2)-2\langle u,Wu\rangle,$$
+$$\sum_\alpha\lambda_\alpha\lVert[v_\alpha,u]\rVert^2=-\mathop{\mathrm{tr}}(\mathrm{Ric}\,u^2)-2\langle u,Wu\rangle,$$
 
 and since $\mathrm{ad}(v)$ is skew-adjoint, $\langle u,\mathcal A(W)u\rangle=-\sum_\alpha\lambda_\alpha\lVert[v_\alpha,u]\rVert^2$ with $\mathcal A(W)=\sum_\alpha\lambda_\alpha\mathrm{ad}(v_\alpha)^2$. So in general
 
 $$\mathcal A(R)=2R-(\mathrm{Ric}\circ\omega+\omega\circ\mathrm{Ric}),$$
 
-using $\langle u,\mathrm{Ric}\,u+u\,\mathrm{Ric}\rangle=-\operatorname{tr}(\mathrm{Ric}\,u^2)$, and on $\mathrm{Weyl}_m$ the correction vanishes and $\mathcal A(W)=2W$. Both sides are quadratic forms of symmetric operators, so equality of the forms is equality of the operators. ✔ claims 1 and 2. The block's display $\mathcal A(R)=2R-(\mathrm{Ric}\cdot\omega+\omega\cdot\mathrm{Ric})$ is exactly this.
+using $\langle u,\mathrm{Ric}\,u+u\,\mathrm{Ric}\rangle=-\mathop{\mathrm{tr}}(\mathrm{Ric}\,u^2)$, and on $\mathrm{Weyl}_m$ the correction vanishes and $\mathcal A(W)=2W$. Both sides are quadratic forms of symmetric operators, so equality of the forms is equality of the operators. ✔ claims 1 and 2. The block's display $\mathcal A(R)=2R-(\mathrm{Ric}\cdot\omega+\omega\cdot\mathrm{Ric})$ is exactly this.
 
 Two independent checks of the general formula, both exact and by hand:
 
 - **$R=\mathrm{Id}$.** $\sum_A\mathrm{ad}(\varphi_A)^2$ is Casimir, and its trace is $\binom n2\cdot(-2(n-2))$ by the quoted Killing normalisation, so $\mathcal A(\mathrm{Id})=-2(n-2)\mathrm{Id}$. The formula gives $2-2(n-1)=-2(n-2)$. ✔
-- **$m=4$, $W^+=\operatorname{diag}(2,-1,-1)$, $W^-=0$.** In an orthonormal basis $a_1,a_2,a_3$ of $\Lambda^+$, $[a_1,a_2]=-\sqrt2\,a_3$ from $\varphi$-brackets, so $\mathrm{ad}(a_1)^2=\operatorname{diag}(0,-2,-2)$ on $\Lambda^+$ and $0$ on $\Lambda^-$. Then $\mathcal A(W)=2\operatorname{diag}(0,-2,-2)-\operatorname{diag}(-2,0,-2)-\operatorname{diag}(-2,-2,0)=\operatorname{diag}(4,-2,-2)=2W$ on $\Lambda^+$, and $0=2W$ on $\Lambda^-$. ✔
+- **$m=4$, $W^+=\mathop{\mathrm{diag}}(2,-1,-1)$, $W^-=0$.** In an orthonormal basis $a_1,a_2,a_3$ of $\Lambda^+$, $[a_1,a_2]=-\sqrt2\,a_3$ from $\varphi$-brackets, so $\mathrm{ad}(a_1)^2=\mathop{\mathrm{diag}}(0,-2,-2)$ on $\Lambda^+$ and $0$ on $\Lambda^-$. Then $\mathcal A(W)=2\mathop{\mathrm{diag}}(0,-2,-2)-\mathop{\mathrm{diag}}(-2,0,-2)-\mathop{\mathrm{diag}}(-2,-2,0)=\mathop{\mathrm{diag}}(4,-2,-2)=2W$ on $\Lambda^+$, and $0=2W$ on $\Lambda^-$. ✔
 
 ### 3.4 The $\Lambda^4$ witness, checked and generalised
 
@@ -149,7 +149,7 @@ For $R$ in the $\Lambda^4$ summand of $\mathrm{Sym}^2(\Lambda^2)$, $R_{ijkl}$ is
 
 ## 4. $N_v$, by hand
 
-$N_v=2\,v\otimes v-\mathrm{ad}(v)^2$ is symmetric, $v\otimes v$ is, and $\mathrm{ad}(v)^2$ is, $\mathrm{ad}(v)$ being skew. Skew-adjointness itself: for skew $u,v,w$, $\langle[v,u],w\rangle=-\tfrac12\operatorname{tr}([v,u]w)=\tfrac12\operatorname{tr}(u[v,w])=-\langle u,[v,w]\rangle$. Hence
+$N_v=2\,v\otimes v-\mathrm{ad}(v)^2$ is symmetric, $v\otimes v$ is, and $\mathrm{ad}(v)^2$ is, $\mathrm{ad}(v)$ being skew. Skew-adjointness itself: for skew $u,v,w$, $\langle[v,u],w\rangle=-\tfrac12\mathop{\mathrm{tr}}([v,u]w)=\tfrac12\mathop{\mathrm{tr}}(u[v,w])=-\langle u,[v,w]\rangle$. Hence
 
 $$\langle u,N_vu\rangle=2\langle v,u\rangle^2-\langle u,[v,[v,u]]\rangle=2\langle v,u\rangle^2+\lVert[v,u]\rVert^2\ \ge0,$$
 
@@ -181,14 +181,14 @@ Since $x\in\mathfrak z(x)$, $\dim\mathfrak c=\dim\mathfrak z(x)-1$, so $\mathfra
 
 ### 6.2 Degenerate $x$, run out
 
-L33 feeds L32 an eigenvector that may be degenerate, and L32's proof is written *"for nondegenerate $x$"*. I ran the reduction. Write $\mathbb R^m=V\oplus K$ with $V=\operatorname{im}x$, $K=\ker x$ of dimension $k$. No mixed block commutes with $x$, since the $V$–$K$ block of $[x,Z]$ is $x|_VZ_{VK}$ and $x|_V$ is invertible; so $\mathfrak z(x)=\mathfrak z_V(x|_V)\oplus\mathfrak{so}(K)$ and $\mathfrak c=(\mathfrak z_V\cap x^\perp)\oplus\mathfrak{so}(K)$, the second summand being automatically orthogonal to $x$.
+L33 feeds L32 an eigenvector that may be degenerate, and L32's proof is written *"for nondegenerate $x$"*. I ran the reduction. Write $\mathbb R^m=V\oplus K$ with $V=\mathop{\mathrm{im}}x$, $K=\ker x$ of dimension $k$. No mixed block commutes with $x$, since the $V$–$K$ block of $[x,Z]$ is $x|_VZ_{VK}$ and $x|_V$ is invertible; so $\mathfrak z(x)=\mathfrak z_V(x|_V)\oplus\mathfrak{so}(K)$ and $\mathfrak c=(\mathfrak z_V\cap x^\perp)\oplus\mathfrak{so}(K)$, the second summand being automatically orthogonal to $x$.
 
 - **$k\ge3$.** Centralising $\mathfrak{so}(K)$ forces $Z_{KK}$ central in $\mathfrak{so}(K)$, hence $0$, and $Z_{VK}A=0$ for all $A\in\mathfrak{so}(K)$, hence $Z_{VK}=0$. So $\mathfrak z(\mathfrak c)\subseteq\mathfrak{so}(V)$ and the problem is the nondegenerate one on $V$.
 - **$k=2$.** $\mathfrak{so}(2)$ is abelian so $Z_{KK}$ survives, but $\mathfrak c\supseteq\mathfrak{so}(K)$ puts that summand outside $\mathfrak c^\perp$; the intersection again reduces to $V$.
 - **$k=1$.** $\mathfrak{so}(K)=0$, so the constraint on $Z_{VK}$ must come from $\mathfrak c_V$ itself: $[A,Z]_{VK}=AZ_{VK}$ for $A\in\mathfrak c_V$, so $Z_{VK}$ lies in the common kernel of $\mathfrak c_V$ in $V$. That kernel is $0$ whenever $p\ge2$: $\mathfrak c_V\supseteq\mathfrak t\cap x^\perp$ contains $a_j\varphi_{(i)}-a_i\varphi_{(j)}$ for every pair $i\ne j$, whose kernel in $V$ is the sum of the blocks other than $i$ and $j$, and those intersect to $0$ over all pairs. And $p=1$ with $k=1$ is $m=3$, already excluded by §6.1.
 - **$k=0$** is L32's own case.
 
-**So the degenerate case reduces to the nondegenerate one on $\operatorname{im}x$ at every $m\ge4$**, and the exception is inherited unchanged. ✔ claims 9 and 16. In particular the block's dropped clause *"the result covers … degenerate minority eigenvectors"* is true.
+**So the degenerate case reduces to the nondegenerate one on $\mathop{\mathrm{im}}x$ at every $m\ge4$**, and the exception is inherited unchanged. ✔ claims 9 and 16. In particular the block's dropped clause *"the result covers … degenerate minority eigenvectors"* is true.
 
 ### 6.3 What is owed against L32, not against L33
 
@@ -208,7 +208,7 @@ Every majority eigenvalue is now zero, so $W=\lambda_x\,x\otimes x$; the block's
 
 ### 8.1 Realised
 
-At $m=4$, take $W^+=\operatorname{diag}(q+r,-q,-r)$ with $q,r>0$ and $W^-=0$, the family [stratum-two-negative.md](../findings/stratum-two-negative.md) already carries. Its positive side is the single eigenvalue $q+r$ on the single eigenvector $a_1\in\Lambda^+$, and every nonzero element of $\Lambda^+$ is a complex-structure multiple: with $a_i^2=-\tfrac12I$ and $a_ia_j=-a_ja_i$ for $i\ne j$, $(\sum c_ia_i)^2=-\tfrac12\lvert c\rvert^2I$. Padding into any $m\ge4$, odd $m$ included, keeps membership in $\mathrm{Weyl}_m$ and makes $x$ a complex structure on a $4$-plane. **So the exception is realised at every $m\ge4$, and dropping it makes L33 false at a point already on the record.** ✔ claim 12.
+At $m=4$, take $W^+=\mathop{\mathrm{diag}}(q+r,-q,-r)$ with $q,r>0$ and $W^-=0$, the family [stratum-two-negative.md](../findings/stratum-two-negative.md) already carries. Its positive side is the single eigenvalue $q+r$ on the single eigenvector $a_1\in\Lambda^+$, and every nonzero element of $\Lambda^+$ is a complex-structure multiple: with $a_i^2=-\tfrac12I$ and $a_ia_j=-a_ja_i$ for $i\ne j$, $(\sum c_ia_i)^2=-\tfrac12\lvert c\rvert^2I$. Padding into any $m\ge4$, odd $m$ included, keeps membership in $\mathrm{Weyl}_m$ and makes $x$ a complex structure on a $4$-plane. **So the exception is realised at every $m\ge4$, and dropping it makes L33 false at a point already on the record.** ✔ claim 12.
 
 ### 8.2 Complete
 
@@ -221,7 +221,7 @@ Rank $3$ and trace-free forces signature $(1,2)$ or $(2,1)$, so the minority sid
 **Both restrictions in the range are necessary, not cautious.**
 
 - **Even.** A skew matrix in odd dimension is singular, so *"nondegenerate"* is unsatisfiable at odd $m$ and the clause would be vacuous rather than false.
-- **$m\ge6$.** At $m=4$ the clause is **false**: $W^+=\operatorname{diag}(q+r,-q,-r)$, $W^-=0$ is a rank-$3$ element of $\mathrm{Weyl}_4$ whose minority eigenvector $a_1$ has rank $4=m$, hence is nondegenerate. It is the exception, which is why the general statement survives and the *"in particular"* must start at $6$. This matches [ROUND_L34](ROUND_L34.md)'s G7 independently.
+- **$m\ge6$.** At $m=4$ the clause is **false**: $W^+=\mathop{\mathrm{diag}}(q+r,-q,-r)$, $W^-=0$ is a rank-$3$ element of $\mathrm{Weyl}_4$ whose minority eigenvector $a_1$ has rank $4=m$, hence is nondegenerate. It is the exception, which is why the general statement survives and the *"in particular"* must start at $6$. This matches [ROUND_L34](ROUND_L34.md)'s G7 independently.
 
 ## 10. The traps, each answered
 
@@ -268,12 +268,12 @@ The table in §1.3 checks all three. Two hold. The third is §12.1: there is not
 
 ### 11.1 The $\mathrm{Weyl}_4$ witness, rebuilt cold
 
-Take $\Lambda^\pm$ with orthonormal bases $a_1=(\varphi_{12}+\varphi_{34})/\sqrt2$, $a_2=(\varphi_{13}+\varphi_{42})/\sqrt2$, $a_3=(\varphi_{14}+\varphi_{23})/\sqrt2$ and $b_i$ the corresponding anti-self-dual triple, $b_1=(\varphi_{12}-\varphi_{34})/\sqrt2$. Put $W^+=W^-=\operatorname{diag}(2,-1,-1)$.
+Take $\Lambda^\pm$ with orthonormal bases $a_1=(\varphi_{12}+\varphi_{34})/\sqrt2$, $a_2=(\varphi_{13}+\varphi_{42})/\sqrt2$, $a_3=(\varphi_{14}+\varphi_{23})/\sqrt2$ and $b_i$ the corresponding anti-self-dual triple, $b_1=(\varphi_{12}-\varphi_{34})/\sqrt2$. Put $W^+=W^-=\mathop{\mathrm{diag}}(2,-1,-1)$.
 
 - **$W\in\mathrm{Weyl}_4$**: each factor is trace-free on its $\Lambda^\pm$, and $\mathrm{Weyl}_4=S^2_0(\Lambda^+)\oplus S^2_0(\Lambda^-)$.
 - **Ricci-flat, checked directly**: $a_1^2=\tfrac12(\varphi_{12}^2+\varphi_{34}^2)=-\tfrac12I_4$, the cross terms vanishing on disjoint supports, and likewise $a_2^2=a_3^2=-\tfrac12I_4$. So $\sum_i\lambda_ia_i^2=(2-1-1)(-\tfrac12I)=0$, and the same on $\Lambda^-$.
 - **$W\ne0$**, spectrum $(2,2,-1,-1,-1,-1)$.
-- **The positive side has one distinct value $+2$, at multiplicity two**, on $\operatorname{span}(a_1,b_1)$.
+- **The positive side has one distinct value $+2$, at multiplicity two**, on $\mathop{\mathrm{span}}(a_1,b_1)$.
 - **That eigenspace contains a rank-$2$ element that is no complex structure**: $a_1+b_1=\sqrt2\,\varphi_{12}$, of rank $2$, a complex structure on a $2$-plane and on no $4$-plane.
 
 **So the lemma read as *one distinct value at any multiplicity* is false, and the block's witness is exact.** ✔ claim 17. Note also that under that reading the proof cannot even start, §1.2.
@@ -346,7 +346,7 @@ Reported, because [conventions.md](../findings/conventions.md) calls this index 
 **L33 is proven, and it currently has no load-bearing consumer.**
 
 - The report's own paragraph says L33 *"answers the question item B0 had been reduced to"*, and the next paragraph is headed *"And the reduction those lemmas were serving is refuted"*, with [L34](../findings/stratum-two-negative.md) as the refutation. So the route L33 was built for is dead.
-- The live use is [stratum-two-negative.md](../findings/stratum-two-negative.md) line 84, L29's equality clause, where the same line says [L31](../findings/stratum-two-negative.md) *"closes it in three lines … at every $n$ and with no numerics"* and L33 *"closes it by a second route"*. That use is legitimate, full support plus Ricci-flatness at one positive eigenvalue makes $v_1$ nondegenerate, and $U=\operatorname{im}v_1$ is even-dimensional, so the *"in particular"* applies at even $r\ge6$, but it is a **second** route to a clause already closed.
+- The live use is [stratum-two-negative.md](../findings/stratum-two-negative.md) line 84, L29's equality clause, where the same line says [L31](../findings/stratum-two-negative.md) *"closes it in three lines … at every $n$ and with no numerics"* and L33 *"closes it by a second route"*. That use is legitimate, full support plus Ricci-flatness at one positive eigenvalue makes $v_1$ nondegenerate, and $U=\mathop{\mathrm{im}}v_1$ is even-dimensional, so the *"in particular"* applies at even $r\ge6$, but it is a **second** route to a clause already closed.
 
 This is a statement about the record's shape, not a defect in the lemma. It is worth writing down because a result whose consumers are dead or redundant is one whose hypotheses stop being exercised.
 
@@ -356,7 +356,7 @@ This is a statement about the record's shape, not a defect in the lemma. It is w
 
 What I did to look for one, all in closed form and with no computation:
 
-- **Attacked the identity first**, since a false identity is the cheapest falsifier. Derived it from the definitions in §3 and checked it at two independent objects, $R=\mathrm{Id}$ and the $m=4$ tensor $W^+=\operatorname{diag}(2,-1,-1)$, and checked its failure mode at $\Lambda^4$. It holds.
+- **Attacked the identity first**, since a false identity is the cheapest falsifier. Derived it from the definitions in §3 and checked it at two independent objects, $R=\mathrm{Id}$ and the $m=4$ tensor $W^+=\mathop{\mathrm{diag}}(2,-1,-1)$, and checked its failure mode at $\Lambda^4$. It holds.
 - **Attacked the exception's completeness**, since an incomplete exception is a falsifier factory: an $x$ with $\mathfrak z(\mathfrak c)\cap\mathfrak c^\perp$ bigger than $\mathbb Rx$ and outside the excluded case would leave room for nonzero $y_i$. §8.2 shows the root-proportionality criterion admits only rank $4$ with equal singular values, and §6.2 shows padding does not create new ones. Checked by hand at every shape that could plausibly escape: rank $2$ at $m=4$ and at $m\ge5$; rank $4$ with $a_1\ne a_2$; rank $4$ equal, which is the exception; rank $2p\ge6$ nondegenerate; and each kernel dimension $k=0,1,2,\ge3$.
 - **Attacked the boundary**, $m=4$ and $m=5$, where a small $\mathrm{Weyl}$ space is the usual place a universal statement dies. At $m=4$ the hypothesis set is empty, §10.2. At $m=5$ it is not, and the argument runs unchanged.
 - **Attacked the minority side's structure**, since the whole proof turns on there being one term on the left. The two objects that would be falsifiers under the weaker reading, §11.1's $\mathrm{Weyl}_4$ tensor and §11.2's $m=8$ tensor, are both **outside** the stated hypothesis, and I confirmed that by rebuilding both rather than by reading the block.

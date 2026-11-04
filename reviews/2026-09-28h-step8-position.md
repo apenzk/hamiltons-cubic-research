@@ -14,8 +14,8 @@
 |---|---|---|
 | a bound on target.md's lift $\Phi=\mu(\theta-\mu)$ | clears the band only at $n\gtrsim68$ | $\mathbb{CP}^m$, $\Phi\sim\tfrac1m$ on the small branch |
 | the literature on the cubic | no value-sensitive estimate at moderate frame mass | |
-| $\lambda_{\max}(N)\le\tfrac14\operatorname{tr}N$ | false, $0.352$ at $n=6$ | Weyl tensors found by ascent |
-| the index step $\operatorname{tr}(W^2\#W^2)\le\tfrac18\lVert N\rVert_F^2$ | false from $n=5$, exactly $\Sigma_4\ge0$ | Weyl tensors, $\Sigma_4/\operatorname{tr}W^4=-\tfrac23$ at $n=6$ at a critical point with $\theta=0$ |
+| $\lambda_{\max}(N)\le\tfrac14\mathop{\mathrm{tr}}N$ | false, $0.352$ at $n=6$ | Weyl tensors found by ascent |
+| the index step $\mathop{\mathrm{tr}}(W^2\#W^2)\le\tfrac18\lVert N\rVert_F^2$ | false from $n=5$, exactly $\Sigma_4\ge0$ | Weyl tensors, $\Sigma_4/\mathop{\mathrm{tr}}W^4=-\tfrac23$ at $n=6$ at a critical point with $\theta=0$ |
 
 **What they share**: each is an inequality on critical points (or on all Weyl tensors) that never reads $\theta\ge\theta_0$. The $E$ route's three losses are exact or near-exact on the $\mathbb{CP}^m$, whose $\theta$ sits below $\theta_0$, so any inequality true at the $\mathbb{CP}^m$ and linear in the route's quantities stops at their scale. [28f](2026-09-28f-LIT-step8-sweep.md)'s three closures (maximality along $Z(h)$, R53's knapsack above the threshold, the $\Lambda^2$ loss) have the same shape.
 

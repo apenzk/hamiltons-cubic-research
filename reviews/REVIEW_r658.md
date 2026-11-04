@@ -12,14 +12,14 @@
 
 | symbol | reading I adopt | where it is fixed |
 | --- | --- | --- |
-| $\mu$ | the $\Lambda^2$ spectrum, $\operatorname{spec}(M)$ at $\lVert M\rVert_F=1$, $\sum\mu=0$, $\sum\mu^2=1$ | [conventions.md](../findings/conventions.md), "Norms and pairings" |
-| $\omega$ | $\operatorname{spec}(\mathring W)$ in Li's $iklj$ order, $\sum\omega=0$, $\sum\omega^2=3$ | [conventions.md](../findings/conventions.md), same bullet, and "The second-kind operator" |
-| pairing | $\tfrac12\operatorname{tr}(X^{\mathsf T}Y)$ at the $\Lambda^2$ level, so $\{\varphi_{ab}\}_{a<b}$ is orthonormal | [conventions.md](../findings/conventions.md), "Norms and pairings" |
+| $\mu$ | the $\Lambda^2$ spectrum, $\mathop{\mathrm{spec}}(M)$ at $\lVert M\rVert_F=1$, $\sum\mu=0$, $\sum\mu^2=1$ | [conventions.md](../findings/conventions.md), "Norms and pairings" |
+| $\omega$ | $\mathop{\mathrm{spec}}(\mathring W)$ in Li's $iklj$ order, $\sum\omega=0$, $\sum\omega^2=3$ | [conventions.md](../findings/conventions.md), same bullet, and "The second-kind operator" |
+| pairing | $\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$ at the $\Lambda^2$ level, so $\{\varphi_{ab}\}_{a<b}$ is orthonormal | [conventions.md](../findings/conventions.md), "Norms and pairings" |
 | $\theta_0(n)$ | the closed form $\sqrt{2(n-1)(n-2)}/n$, equal to the balanced-product value at **even** $n$ | [conventions.md](../findings/conventions.md), the objects table |
 
 Three flags, one of them material.
 
-- **$p_3$ is defined nowhere on the record.** [conventions.md](../findings/conventions.md) tables $\mu$ and $\omega$ and never says what $p_3$ is. The record fixes it only in passing, at [findings/bispectral.md:417](../findings/bispectral.md), by noting that $p_3(\mu)$ at the balanced product "is $\operatorname{tr}(W^3)$", so $p_3$ is the **power sum** $\sum_ix_i^3$, not the elementary symmetric $e_3$. The distinction is not cosmetic: under the $e_3$ reading the bi-spectral identity of [Lemma L50](../findings/bispectral.md) is false, and every number in L53's table is a different number. It belongs in the objects table.
+- **$p_3$ is defined nowhere on the record.** [conventions.md](../findings/conventions.md) tables $\mu$ and $\omega$ and never says what $p_3$ is. The record fixes it only in passing, at [findings/bispectral.md:417](../findings/bispectral.md), by noting that $p_3(\mu)$ at the balanced product "is $\mathop{\mathrm{tr}}(W^3)$", so $p_3$ is the **power sum** $\sum_ix_i^3$, not the elementary symmetric $e_3$. The distinction is not cosmetic: under the $e_3$ reading the bi-spectral identity of [Lemma L50](../findings/bispectral.md) is false, and every number in L53's table is a different number. It belongs in the objects table.
 - **$\mu$ carries a second sense in this very file and a third in [target.md](../findings/target.md)** (the scalar $-\min\omega$) which [conventions.md](../findings/conventions.md) already flags. L53 needs the spectrum sense, since $p_3$ of a scalar is meaningless; the block never says so. (For the record, the two senses are related on the $\mathbb{CP}^m$ family by $-p_3(\omega)=\tfrac3m\,\mu_{\text{scalar}}$, derived in §3, which is why they collide numerically at $m=3$.)
 - **No normalisation is stated in the block.** L53 maximises "over $\Weyl_n$". The objective $a\,p_3(\mu)+b\,p_3(\omega)$ is homogeneous of degree $3$, so over $\mathcal W_n$ itself the supremum is $+\infty$ and the statement is vacuous as printed. The constraint is the unit sphere $\lVert M\rVert_F=1$; [results.md:722](../results.md) says so, the findings block does not. Given the live cross-file normalisation trap that [conventions.md](../findings/conventions.md) records for exactly these two symbols, post F33 works at $\lvert W\rvert_4=1$ where $p_2(\omega)=\tfrac34$, this file at $\lVert M\rVert_F=1$ where $p_2(\omega)=3$, the omission is the one that costs cycles.
 
@@ -75,7 +75,7 @@ Row 3 names $\mathbb{CP}^4$ by a single scalar, $\theta=0.986013$. A one-coordin
 | $\dfrac{2(m-2)}{2m-1}$ | $m^2-1$ |
 | $-\dfrac{2(m+1)}{2m-1}$ | $m^2-m$ |
 
-The trace vanishes identically in $m$, and at $m=2$ the spectrum is $(4,0,0,0,-2,-2)$, which, normalised, is exactly the record's own $W_{\mathbb{CP}^2}=\operatorname{diag}(0,0,0,-1,-1,2)/\sqrt6$ at [report/sections/03-setup.tex:23](../report/sections/03-setup.tex). Summing gives $\sum\mu^2_{\text{raw}}=\frac{12m(m^2-1)}{2m-1}$ and $\sum\mu^3_{\text{raw}}=\frac{8m(m^2-1)(4m^2+2m-11)}{(2m-1)^2}$, so
+The trace vanishes identically in $m$, and at $m=2$ the spectrum is $(4,0,0,0,-2,-2)$, which, normalised, is exactly the record's own $W_{\mathbb{CP}^2}=\mathop{\mathrm{diag}}(0,0,0,-1,-1,2)/\sqrt6$ at [report/sections/03-setup.tex:23](../report/sections/03-setup.tex). Summing gives $\sum\mu^2_{\text{raw}}=\frac{12m(m^2-1)}{2m-1}$ and $\sum\mu^3_{\text{raw}}=\frac{8m(m^2-1)(4m^2+2m-11)}{(2m-1)^2}$, so
 
 $$\boxed{\;p_3(\mu)\big|_{\mathbb{CP}^m}=\frac{4m^2+2m-11}{3\sqrt{3m(m^2-1)(2m-1)}}\;}$$
 
@@ -98,7 +98,7 @@ recovering the record's $\theta$ closed form with no radical left over. A fourth
 
 The bolded entry is row 3's measured $0.986013$, reproduced to every digit printed. **Row 3's $n=8$ entry is now a check rather than evidence.**
 
-*Screen, reported as a screen.* I built the Fubini–Study curvature tensor at $m=2,3,4,5$, projected out the Einstein part and took eigenvalues: the raw triples match the table above exactly and $p_3(\mu)$ matches the boxed formula to nine digits at all four. The screen carries an overall sign from my contraction order, which the record's own $\operatorname{diag}(0,0,0,-1,-1,2)/\sqrt6$ settles; it is confirmation of arithmetic, and the claims rest on the derivation and on the three record agreements above.
+*Screen, reported as a screen.* I built the Fubini–Study curvature tensor at $m=2,3,4,5$, projected out the Einstein part and took eigenvalues: the raw triples match the table above exactly and $p_3(\mu)$ matches the boxed formula to nine digits at all four. The screen carries an overall sign from my contraction order, which the record's own $\mathop{\mathrm{diag}}(0,0,0,-1,-1,2)/\sqrt6$ settles; it is confirmation of arithmetic, and the claims rest on the derivation and on the three record agreements above.
 
 ---
 
@@ -158,7 +158,7 @@ The same computation gives $1.923$ at $n=8$ and $2.020$ at $n=10$ against the sa
 
 A factor of $1.65$ of unclosed room. Nothing in the block or its section says the $(1,0)$ maximum is unknown to within that factor.
 
-**A fence post the record should carry.** Linear maximisation of $\langle u,\Phi(\cdot)\rangle$ can only ever reach **exposed points of $\overline{\operatorname{conv}}\,\mathcal R_n$**. A maximiser lying in the interior of the hull, or on a non-exposed face, is invisible to the sweep **at every direction and every density**. So no refinement of the direction list can turn this Observation into a classification, and the conjectured maximiser is reachable only because the record separately claims the line $\tfrac32x-\tfrac12y=\theta_0(12)$ supports $\mathcal R_{12}$ there, a claim ascent is structurally unable to confirm, as the script's docstring states and the section at [findings/bispectral.md:440](../findings/bispectral.md) correctly repeats.
+**A fence post the record should carry.** Linear maximisation of $\langle u,\Phi(\cdot)\rangle$ can only ever reach **exposed points of $\overline{\mathop{\mathrm{conv}}}\,\mathcal R_n$**. A maximiser lying in the interior of the hull, or on a non-exposed face, is invisible to the sweep **at every direction and every density**. So no refinement of the direction list can turn this Observation into a classification, and the conjectured maximiser is reachable only because the record separately claims the line $\tfrac32x-\tfrac12y=\theta_0(12)$ supports $\mathcal R_{12}$ there, a claim ascent is structurally unable to confirm, as the script's docstring states and the section at [findings/bispectral.md:440](../findings/bispectral.md) correctly repeats.
 
 ---
 
@@ -210,7 +210,7 @@ So the boilerplate is **half-false at birth**, in the same way the brief reports
 5. **Fold in the closed forms of §2 and §3.** Four of the six table cells then become checks. The $\mathbb{CP}^m$ pair is new to the record and confirms [Lemma L50](../findings/bispectral.md) symbolically in $m$ on a second family.
 6. **Replace "the maximiser … is" at line 417 with "the ascent reaches"**, and either delete "$W_{\mathbb{CP}^2}$ wins the $\Lambda^2$ cubic" at line 421 or restrict it in writing to the two competitors, it is false as it stands, disproved by the block's own row 3.
 7. **Record §6's $n=6$ split as a derivation**, and the two conditional dimensions with the upper bound they wait on.
-8. **Record the two fence posts of §7**: only exposed points of $\overline{\operatorname{conv}}\,\mathcal R_n$ are reachable by any direction at any density; and the sweep covers one quadrant, six rays, three reported.
+8. **Record the two fence posts of §7**: only exposed points of $\overline{\mathop{\mathrm{conv}}}\,\mathcal R_n$ are reachable by any direction at any density; and the sweep covers one quadrant, six rays, three reported.
 9. **Convert the LaTeX to a markdown table, drop `\Weyl`/`\CP`/`\thstar`, fix the truncated locator, and correct the provenance note** to say the mathematics was born in `findings/live-front.md` and moved here when the live front was split.
 
 **Where I would look next.** Direction $(0,+1)$ has never been run, and it is the only extreme of the plane the record has no point for; and the $\mathbb{CP}^m$ closed forms of §3 now make the whole family a curve in the bi-spectral plane, which is a second exact sharpness locus for a candidate transfer inequality, the record currently imposes sharpness at the sphere products only.

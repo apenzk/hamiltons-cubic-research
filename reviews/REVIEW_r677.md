@@ -43,12 +43,12 @@ $$\mathcal L(N)\;=\;L_MN\;=\;M\circ N+\tfrac12(MN+NM),\qquad L_e=\mathcal L/\the
 
 That is [diagonal-half.md:126](../findings/diagonal-half.md) verbatim, reached here independently: **the operator identity is CONFIRMED.** Two immediate consequences used below:
 
-- $L_MM=M^{\circ2}+M^2$, so criticality on the locus is the file's $M^{\circ2}+M^2=\theta M+\operatorname{diag}(s)$, also confirmed;
-- writing $R_v$ for $(R_v)_{ab}=v_a+v_b$ ($a\ne b$), a two-line computation using $M\mathbf1=0$ gives $$L_MR_v=\tfrac12R_{Mv},$$ so $\mathcal D_n$ and its complement in the hollow symmetric matrices are both $L_M$-invariant and $\operatorname{tr}(L_M\vert_{\mathcal D_n})=-\tfrac12\operatorname{tr}M=0$. **The trace is zero**, so a trace argument cannot deliver the floor: the average eigenvalue on $\mathcal D_n\cap e^\perp$ is $-1/(\dim-1)$.
+- $L_MM=M^{\circ2}+M^2$, so criticality on the locus is the file's $M^{\circ2}+M^2=\theta M+\mathop{\mathrm{diag}}(s)$, also confirmed;
+- writing $R_v$ for $(R_v)_{ab}=v_a+v_b$ ($a\ne b$), a two-line computation using $M\mathbf1=0$ gives $$L_MR_v=\tfrac12R_{Mv},$$ so $\mathcal D_n$ and its complement in the hollow symmetric matrices are both $L_M$-invariant and $\mathop{\mathrm{tr}}(L_M\vert_{\mathcal D_n})=-\tfrac12\mathop{\mathrm{tr}}M=0$. **The trace is zero**, so a trace argument cannot deliver the floor: the average eigenvalue on $\mathcal D_n\cap e^\perp$ is $-1/(\dim-1)$.
 
 **Bonus confirmation, inside the L98 block.** The hand-checkable family at line 199 is exact. For $u=e_a-e_b$, $v=e_c-e_d$ and $N=uv^{\mathsf T}+vu^{\mathsf T}$: $\lVert N\rVert^2=4$, $N^2=2(uu^{\mathsf T}+vv^{\mathsf T})$, and
 
-$$\langle N,\mathcal LN\rangle=\underbrace{\textstyle\sum_{i<j}M_{ij}N_{ij}^2}_{M_{ac}+M_{ad}+M_{bc}+M_{bd}}+\underbrace{\tfrac12\operatorname{tr}(MN^2)}_{-2M_{ab}-2M_{cd}},$$
+$$\langle N,\mathcal LN\rangle=\underbrace{\textstyle\sum_{i<j}M_{ij}N_{ij}^2}_{M_{ac}+M_{ad}+M_{bc}+M_{bd}}+\underbrace{\tfrac12\mathop{\mathrm{tr}}(MN^2)}_{-2M_{ab}-2M_{cd}},$$
 
 which is the block's numerator exactly. **CONFIRMED.** One hypothesis is missing from it, though: $\langle N,M\rangle=M_{ac}-M_{ad}-M_{bc}+M_{bd}$ is **generically nonzero**, so $N\notin e^\perp$ and the quotient bounds only the *unrestricted* maximum. Since the unrestricted maximum is $\max(1,\lambda_{\max}\vert_{e^\perp})$, the family certifies a violation of the $\tfrac12$ bound **only when its value exceeds $1$, or when $\langle N,M\rangle=0$ has been checked.** The block claims it "certifies failure at $10$ of $13$ $\Delta>0$ points" without saying which of the two applies. **GAP, small and repairable.**
 
@@ -90,7 +90,7 @@ $$\lambda_{\max}\big(L_e\vert_{e^\perp}\cap\mathcal D_n\big)\;=\;\frac{p_{\max}-
 
 ### 3.3 The padding lemma, and the three padded rows
 
-*Let $M$ be a diagonal critical point at $n$ with $\theta>0$, and $M^{\mathrm{pad}}$ its padding by an isolated vertex $z$. Then $\operatorname{spec}(L_e)$ gains exactly $\{\mu/(2\theta_{\text{raw}})\}$ over the eigenvalues $\mu$ of the sectional matrix $M$, with eigenvector the star $X_{iz}=u_i$ together with $R_{-u/(n-2)}$ on the old vertices; the old spectrum is unchanged.*
+*Let $M$ be a diagonal critical point at $n$ with $\theta>0$, and $M^{\mathrm{pad}}$ its padding by an isolated vertex $z$. Then $\mathop{\mathrm{spec}}(L_e)$ gains exactly $\{\mu/(2\theta_{\text{raw}})\}$ over the eigenvalues $\mu$ of the sectional matrix $M$, with eigenvector the star $X_{iz}=u_i$ together with $R_{-u/(n-2)}$ on the old vertices; the old spectrum is unchanged.*
 
 *Proof.* $M_{iz}=0$ makes the two sectors decouple: $(L_MX)_{ij}=L_{M'}Y$ and $(L_MX)_{iz}=\tfrac12(M'u)_i$. Ricci-flatness at $z$ forces $\sum u=0$ and at $i$ forces $Y$ to have row sums $-u$, i.e. $Y=R_v+Y_0$ with $v=-u/(n-2)$, $Y_0\in\mathcal D_n$. With $M'u=\mu u$ and $L_MR_v=\tfrac12R_{Mv}$ from §2, the pair $(R_v,u)$ is an eigenvector at $\mu/2$. $\square$
 
@@ -160,9 +160,9 @@ The second row is **refuted as written by the block's own table three lines belo
 
 **Row 2 is a critical point.** The $1.1\times10^{-11}$ residual is r305's solver stopping point, not a property of the point: [r296](REVIEW_r296.md) reproduces $\theta=1.081549$ exactly on the $\mathfrak{so}(3)\oplus\mathfrak{so}(5)$ pair from an independent hunt. Row 3 is likewise genuine, [r314:162](REVIEW_r314.md) re-found it at seed 9033 with **criticality residual $1.9\times10^{-16}$** and the same $\lambda_{\max}=0.553481$, and found a further pair of eigenvalues at $0.500284$ above the bound there.
 
-**So the block's hedge is stale, and so is its headline number.** [r314](REVIEW_r314.md) certified a **new lowest** off-locus witness, $\theta=1.080092196483$, $\Delta=3.494141$, $\lambda_{\max}=0.551340110283$, margin $\mathbf{1.102680\times}$, residual $1.67\times10^{-16}$, $\operatorname{Ric}(W^2)$ of rank $8$ so not a padding, graded on $\mathfrak{so}(4)\oplus\mathfrak{so}(4)$, and wrote *"The record's $1.1070\times$ should move to $1.1027\times$"*. [07-gradedness-split.tex:447](../report/sections/07-gradedness-split.tex) has moved. **This block has not.** The report and the findings file now carry different values for the record's headline off-locus cushion, and the findings file is the one the report is supposed to follow.
+**So the block's hedge is stale, and so is its headline number.** [r314](REVIEW_r314.md) certified a **new lowest** off-locus witness, $\theta=1.080092196483$, $\Delta=3.494141$, $\lambda_{\max}=0.551340110283$, margin $\mathbf{1.102680\times}$, residual $1.67\times10^{-16}$, $\mathop{\mathrm{Ric}}(W^2)$ of rank $8$ so not a padding, graded on $\mathfrak{so}(4)\oplus\mathfrak{so}(4)$, and wrote *"The record's $1.1070\times$ should move to $1.1027\times$"*. [07-gradedness-split.tex:447](../report/sections/07-gradedness-split.tex) has moved. **This block has not.** The report and the findings file now carry different values for the record's headline off-locus cushion, and the findings file is the one the report is supposed to follow.
 
-**A third disagreement with r314.** The block excludes exactly one point as a padding; r314 reports **four of the six** sub-$0.56$ candidates at $n=8$ are paddings by the $\operatorname{Ric}(W^2)$ rank test, three of them new, all four invisible to a coordinate test. The report carries this too; the block does not.
+**A third disagreement with r314.** The block excludes exactly one point as a padding; r314 reports **four of the six** sub-$0.56$ candidates at $n=8$ are paddings by the $\mathop{\mathrm{Ric}}(W^2)$ rank test, three of them new, all four invisible to a coordinate test. The report carries this too; the block does not.
 
 **What the cushion is actually worth off the locus.** $1.1027\times$ over $\tfrac12$, on one certified point, against the $2.00\times$ the diagonal locus shows asymptotically. The diagonal-only warning **understates the damage in one respect and overstates the remaining margin in another**: the factor-two cushion is not merely diagonal-only, it is *asymptotically exact* on the diagonal locus (the floor $\to1$ means the margin over $\tfrac12$ $\to$ exactly $2$, with the margin over $\theta$ going to zero), while off the locus the best certified margin has fallen from $1.2178\times$ to $1.1027\times$ across three successive hunts and is still falling. **Nothing on the record now leans on the factor-two as slack**, the block itself withdraws it ("no slack left to spend on a proof"), [plan.md](../plan.md) carries r305's cushion as an open numerical item, and [fence-posts.md](../findings/fence-posts.md) uses the cushion points only for the $\mathfrak m$-share question.
 
@@ -211,7 +211,7 @@ The same numbering pass has already been found defective today: commit 681cdc17,
 
 ## 10. Confirmed on the way
 
-- $\mathcal L(N)=M\circ N+\tfrac12(MN+NM)$, and criticality as $M^{\circ2}+M^2=\theta M+\operatorname{diag}(s)$, both re-derived here from the cubic.
+- $\mathcal L(N)=M\circ N+\tfrac12(MN+NM)$, and criticality as $M^{\circ2}+M^2=\theta M+\mathop{\mathrm{diag}}(s)$, both re-derived here from the cubic.
 - The hand-checkable family's Rayleigh formula at line 201, exact, modulo the missing orthogonality hypothesis.
 - The diagonal $\lambda_{\max}$ column of the line-132 table, all five entries, and the attribution of $\frac{p-2}{2(p-1)}$ to the diagonal restriction with $p$ the **larger** block.
 - The three padded values at line 157, $0.600$, $0.583$, $0.5714$, from the padding lemma of §3.3.

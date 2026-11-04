@@ -75,7 +75,7 @@ where $v^{\mathsf T}A=(Av)^{\mathsf T}$ is again $A=A^{\mathsf T}$. **HOLDS**, e
 
 **(c) $\delta_A\varphi_{ij}=(a_i+a_j)\varphi_{ij}$.** Put $Af_i=a_if_i$; then (b) gives $\delta_A(f_i\wedge f_j)=a_if_i\wedge f_j+a_jf_i\wedge f_j$. **HOLDS.**
 
-*Two further facts the block does not state and later steps need.* $\delta_A$ is self-adjoint for the $\Lambda^2$ pairing: $\langle\delta_AX,Y\rangle$ and $\langle X,\delta_AY\rangle$ both equal $\tfrac12(\operatorname{tr}(X^{\mathsf T}AY)+\operatorname{tr}(AX^{\mathsf T}Y))$, so its spectrum is real and $\{a_i+a_j\}_{i<j}$ is the whole of it. And $A$ real symmetric has an **orthonormal** eigenframe by the spectral theorem, the brief's question about claim 11, answered: yes, and when the $a_i$ are distinct that frame is unique up to signs and order, so "$A$'s eigenframe" is well defined at the point the converse uses it.
+*Two further facts the block does not state and later steps need.* $\delta_A$ is self-adjoint for the $\Lambda^2$ pairing: $\langle\delta_AX,Y\rangle$ and $\langle X,\delta_AY\rangle$ both equal $\tfrac12(\mathop{\mathrm{tr}}(X^{\mathsf T}AY)+\mathop{\mathrm{tr}}(AX^{\mathsf T}Y))$, so its spectrum is real and $\{a_i+a_j\}_{i<j}$ is the whole of it. And $A$ real symmetric has an **orthonormal** eigenframe by the spectral theorem, the brief's question about claim 11, answered: yes, and when the $a_i$ are distinct that frame is unique up to signs and order, so "$A$'s eigenframe" is well defined at the point the converse uses it.
 
 ## 3. The forward direction
 
@@ -161,7 +161,7 @@ Let $n=8$, $U=\mathbb R^4\subset\mathbb R^8$, and let $W$ be $W_{\mathbb{CP}^2}$
 
 $$\big[\Lambda^2g\,W\,\Lambda^2g^{-1},\ \delta_{gAg^{\mathsf T}}\big]=\Lambda^2g\,[W,\delta_A]\,\Lambda^2g^{-1},$$
 
-whence $A\in\ker\Phi_W\iff gAg^{\mathsf T}\in\ker\Phi_{gWg^{-1}}$. The map $A\mapsto gAg^{\mathsf T}$ is a linear isomorphism, so the dimension is preserved, and $\operatorname{spec}(gAg^{\mathsf T})=\operatorname{spec}(A)$, so the distinct-sums clause is preserved. **HOLDS**, both clauses $O(n)$-invariant as claimed.
+whence $A\in\ker\Phi_W\iff gAg^{\mathsf T}\in\ker\Phi_{gWg^{-1}}$. The map $A\mapsto gAg^{\mathsf T}$ is a linear isomorphism, so the dimension is preserved, and $\mathop{\mathrm{spec}}(gAg^{\mathsf T})=\mathop{\mathrm{spec}}(A)$, so the distinct-sums clause is preserved. **HOLDS**, both clauses $O(n)$-invariant as claimed.
 
 **A notational finding inside it.** In "$\ker\Phi_{gWg^{-1}}=g(\ker\Phi_W)g^{-1}$" the left $g$ is $\Lambda^2g$ acting on $\Lambda^2\mathbb R^n$ and the right $g$ is $g$ acting on $\mathbb R^n$: **two different conjugation actions written with one symbol**, in a record whose [conventions.md](../findings/conventions.md) exists to catch exactly that. Orthogonality of $g$ is what keeps $gAg^{-1}=gAg^{\mathsf T}$ symmetric, and the block carries it in "$O(n)$-invariant"; it would be clearer stated as a hypothesis on $g$.
 

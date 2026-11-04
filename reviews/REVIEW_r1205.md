@@ -15,7 +15,7 @@ Reviewer r1205, Gate 2, adversarial, independent of r1204. Claim: the paragraph 
 
 ## (1) The half top sum
 
-At $n=12$ the spectrum of $-\mathrm{ad}_x^2$ on $\mathfrak{so}(12)$ is six zeros and each $(s_i\mp s_j)^2$ twice ($6+60=66$). The $2p$ largest entries of a list in which every value appears twice are the $p$ largest distinct-root values each taken twice, so $\tfrac12\kappa_{2p}$ is the sum of the $p$ largest of the thirty. Ties do not matter since only the sum is used. The form $\tfrac12\kappa_{2p}-3$ is L249's, which uses $2p+m=66$ and $\operatorname{tr}(-\mathrm{ad}_x^2)=2(n-2)=20$ at $\sum s^2=1$ (checked: $\sum_{i<j}2[(s_i-s_j)^2+(s_i+s_j)^2]=20\sum s^2$).
+At $n=12$ the spectrum of $-\mathrm{ad}_x^2$ on $\mathfrak{so}(12)$ is six zeros and each $(s_i\mp s_j)^2$ twice ($6+60=66$). The $2p$ largest entries of a list in which every value appears twice are the $p$ largest distinct-root values each taken twice, so $\tfrac12\kappa_{2p}$ is the sum of the $p$ largest of the thirty. Ties do not matter since only the sum is used. The form $\tfrac12\kappa_{2p}-3$ is L249's, which uses $2p+m=66$ and $\mathop{\mathrm{tr}}(-\mathrm{ad}_x^2)=2(n-2)=20$ at $\sum s^2=1$ (checked: $\sum_{i<j}2[(s_i-s_j)^2+(s_i+s_j)^2]=20\sum s^2$).
 
 ## (2) $\kappa\le p-2$ at every $n$
 

@@ -41,5 +41,5 @@ with equality exactly when $g$ is supported on the $\lambda_{\min}$ eigenspace.
 *This is a different result. It is here because of the clause in bold, and for no other reason.*
 
 ```markdown
-Let $W\in\mathcal W_n$ be a critical point **with $\lVert W\rVert=1$** (the identity holds at one scale only, its two sides being homogeneous of different degrees) so $\lambda_{\min}<0<\lambda_{\max}$ by $\operatorname{tr}W=0$ at $W\ne0$; *the sign of $D$ needs only $\lambda_{\min}\le0\le\lambda_{
+Let $W\in\mathcal W_n$ be a critical point **with $\lVert W\rVert=1$** (the identity holds at one scale only, its two sides being homogeneous of different degrees) so $\lambda_{\min}<0<\lambda_{\max}$ by $\mathop{\mathrm{tr}}W=0$ at $W\ne0$; *the sign of $D$ needs only $\lambda_{\min}\le0\le\lambda_{
 ```

@@ -6,8 +6,8 @@
 
 | # | Claim, as a consumer would read it | Where | Verdict |
 |---|---|---|---|
-| 1 | The exact identity $\theta\operatorname{tr}(W_-)+\operatorname{tr}(W_-^2)=-\operatorname{tr}(\Pi_-W^\#)$ at a critical point | [bounds.md](../findings/bounds.md):51 | **PROVEN** |
-| 2 | The inequality $\theta\operatorname{tr}(W_-)+\operatorname{tr}(W_-^2)\le\lVert\mathrm{Ric}(W_-)\rVert^2+6\delta^2$ at every critical point | [bounds.md](../findings/bounds.md):47 | **PROVEN** |
+| 1 | The exact identity $\theta\mathop{\mathrm{tr}}(W_-)+\mathop{\mathrm{tr}}(W_-^2)=-\mathop{\mathrm{tr}}(\Pi_-W^\#)$ at a critical point | [bounds.md](../findings/bounds.md):51 | **PROVEN** |
+| 2 | The inequality $\theta\mathop{\mathrm{tr}}(W_-)+\mathop{\mathrm{tr}}(W_-^2)\le\lVert\mathrm{Ric}(W_-)\rVert^2+6\delta^2$ at every critical point | [bounds.md](../findings/bounds.md):47 | **PROVEN** |
 | 3 | The coefficient $6$ is L15's, dimension-free, and sharp | [bounds.md](../findings/bounds.md):53 | **PROVEN, sharp, attained at $W_{\mathbb{CP}^2}$** |
 | 4 | Hypotheses are criticality, Ricci-flatness, first Bianchi; the last two twice each in the final step | [bounds.md](../findings/bounds.md):53 | **PROVEN, count defensible; three unnamed uses** |
 | 5 | The displayed rank-one formula $vv^{\mathsf T}\#ww^{\mathsf T}=[v,w][v,w]^{\mathsf T}$ | [bounds.md](../findings/bounds.md):51 | **BROKEN, factor $2$ wrong; inert for L7** |
@@ -26,15 +26,15 @@
 
 Everything below is in the record's own normalisation, read from [conventions.md](../findings/conventions.md) and cross-checked against [Lemma L131](../findings/isotropy-cap.md) rather than assumed.
 
-- $\Lambda^2\mathbb R^n$ carries the orthonormal basis $\{e_i\wedge e_j\}_{i<j}$; operator pairing is the plain trace, $\langle X,Y\rangle=\operatorname{tr}(XY)$ for symmetric $X,Y$, so $\operatorname{tr}(W^2)=1$ at a unit Weyl tensor.
+- $\Lambda^2\mathbb R^n$ carries the orthonormal basis $\{e_i\wedge e_j\}_{i<j}$; operator pairing is the plain trace, $\langle X,Y\rangle=\mathop{\mathrm{tr}}(XY)$ for symmetric $X,Y$, so $\mathop{\mathrm{tr}}(W^2)=1$ at a unit Weyl tensor.
 - The identification $\Lambda^2\cong\mathfrak{so}(n)$ sends $e_i\wedge e_j$ to $E_{ij}-E_{ji}$, so $\lVert\varphi\rVert^2_{\Lambda^2}=\tfrac12\lVert\Phi\rVert_F^2$ for the antisymmetric matrix $\Phi$ of $\varphi$. Brackets are matrix commutators.
-- $\mathrm{Ric}(R)_{ik}=\sum_jR_{ijkj}$ on $n\times n$ matrices with plain Frobenius pairing; $\operatorname{scal}(R)=\sum_{ij}R_{ijij}=2\operatorname{tr}_{\Lambda^2}(R)$. On a rank one $\varphi\varphi^{\mathsf T}$ this gives $\mathrm{Ric}(\varphi\varphi^{\mathsf T})=\Phi\Phi^{\mathsf T}$.
-- **Two independent checks that this is the record's normalisation and not mine.** (i) $\mathrm{Ric}(\mathrm{Id}_{\Lambda^2})=(n-1)\,\mathrm{id}$ and $\mathrm{Ric}^*(\mathrm{id})=2\,\mathrm{Id}$ ([post F54](../findings/second-order.md)'s eigenvalues $\eta_i+\eta_j$) pair as $\langle 2\mathrm{Id},\mathrm{Id}\rangle_{\Lambda^2}=n(n-1)=\langle\mathrm{id},(n-1)\mathrm{id}\rangle$, so $\mathrm{Ric}^*$ really is $\mathrm{Ric}$'s adjoint here. (ii) [L131](../findings/isotropy-cap.md)'s $\mathrm{Ric}(R)\wedge\mathrm{id}=R+R\#I-3\,\mathrm{Alt}(R)$ at $R=W$ Weyl gives $W\#I=-W$, hence $\operatorname{tr}(W^\#)=\operatorname{tr}((W\#I)W)=-1$, which is [conventions.md](../findings/conventions.md):122's recorded anchor.
-- $W_-:=\tfrac12(\lvert W\rvert-W)\succeq0$ ([conventions.md](../findings/conventions.md):95), $W_+:=\tfrac12(\lvert W\rvert+W)\succeq0$, both **as operators on all of $\Lambda^2$**; $W=W_+-W_-$, $\lvert W\rvert=W_++W_-$, $W_+W_-=0$. $\Pi_-=P_-$ is the orthogonal spectral projection onto $E_-=\operatorname{ran}W_-$, $P_+$ onto $E_+=\operatorname{ran}W_+$, $P_0$ onto $E_0=\ker W$. Throughout, $\mathfrak p=E_+$, $\mathfrak m=E_-$, $\mathfrak k=E_0$ read inside $\mathfrak{so}(n)$.
+- $\mathrm{Ric}(R)_{ik}=\sum_jR_{ijkj}$ on $n\times n$ matrices with plain Frobenius pairing; $\mathop{\mathrm{scal}}(R)=\sum_{ij}R_{ijij}=2\mathop{\mathrm{tr}}_{\Lambda^2}(R)$. On a rank one $\varphi\varphi^{\mathsf T}$ this gives $\mathrm{Ric}(\varphi\varphi^{\mathsf T})=\Phi\Phi^{\mathsf T}$.
+- **Two independent checks that this is the record's normalisation and not mine.** (i) $\mathrm{Ric}(\mathrm{Id}_{\Lambda^2})=(n-1)\,\mathrm{id}$ and $\mathrm{Ric}^*(\mathrm{id})=2\,\mathrm{Id}$ ([post F54](../findings/second-order.md)'s eigenvalues $\eta_i+\eta_j$) pair as $\langle 2\mathrm{Id},\mathrm{Id}\rangle_{\Lambda^2}=n(n-1)=\langle\mathrm{id},(n-1)\mathrm{id}\rangle$, so $\mathrm{Ric}^*$ really is $\mathrm{Ric}$'s adjoint here. (ii) [L131](../findings/isotropy-cap.md)'s $\mathrm{Ric}(R)\wedge\mathrm{id}=R+R\#I-3\,\mathrm{Alt}(R)$ at $R=W$ Weyl gives $W\#I=-W$, hence $\mathop{\mathrm{tr}}(W^\#)=\mathop{\mathrm{tr}}((W\#I)W)=-1$, which is [conventions.md](../findings/conventions.md):122's recorded anchor.
+- $W_-:=\tfrac12(\lvert W\rvert-W)\succeq0$ ([conventions.md](../findings/conventions.md):95), $W_+:=\tfrac12(\lvert W\rvert+W)\succeq0$, both **as operators on all of $\Lambda^2$**; $W=W_+-W_-$, $\lvert W\rvert=W_++W_-$, $W_+W_-=0$. $\Pi_-=P_-$ is the orthogonal spectral projection onto $E_-=\mathop{\mathrm{ran}}W_-$, $P_+$ onto $E_+=\mathop{\mathrm{ran}}W_+$, $P_0$ onto $E_0=\ker W$. Throughout, $\mathfrak p=E_+$, $\mathfrak m=E_-$, $\mathfrak k=E_0$ read inside $\mathfrak{so}(n)$.
 - $\delta^2=\lVert\mathrm{Alt}(W_-)\rVert^2$ ([results.md](../results.md):362), $\mathrm{Alt}$ the orthogonal projection onto $\Lambda^4$ carrying its $\tfrac13$; inside $\Lambda^2\mathbb R^4$, $\mathrm{Alt}=\langle\cdot,\star\rangle\star/6$ with $\star=\Pi_{SD}-\Pi_{ASD}$, $\lVert\star\rVert^2=6$.
 - Criticality is $Q(W)=W^2+W^\#=\theta W$, the equation and not the bracket form $[W,Q(W)]=0$.
 
-**One derived constant I will use and the block gets wrong.** From [L131](../findings/isotropy-cap.md) at $R=I$: $\mathrm{Ric}(I)=(n-1)\mathrm{id}$, $\mathrm{Alt}(I)=0$, $\mathrm{id}\wedge\mathrm{id}=\mathrm{Id}$, so $(n-1)I=I+I\#I$ and $I^\#=(n-2)I$. Against the rank-one law $vv^{\mathsf T}\#ww^{\mathsf T}=c\,[v,w][v,w]^{\mathsf T}$ summed over an orthonormal basis of $\mathfrak{so}(n)$, $\langle(I\#I)\xi,\xi\rangle=c\sum_{\alpha\beta}\langle[b_\alpha,b_\beta],\xi\rangle^2=c\sum_\alpha\lVert\mathrm{ad}(\xi)b_\alpha\rVert^2=-c\operatorname{tr}(\mathrm{ad}\xi)^2=c\,(n-2)\lVert\xi\rVert_F^2=2c(n-2)\lVert\xi\rVert^2$, using the Killing form $B(X,Y)=(n-2)\operatorname{tr}(XY)$ of $\mathfrak{so}(n)$. So $c=\tfrac12$, not $1$.
+**One derived constant I will use and the block gets wrong.** From [L131](../findings/isotropy-cap.md) at $R=I$: $\mathrm{Ric}(I)=(n-1)\mathrm{id}$, $\mathrm{Alt}(I)=0$, $\mathrm{id}\wedge\mathrm{id}=\mathrm{Id}$, so $(n-1)I=I+I\#I$ and $I^\#=(n-2)I$. Against the rank-one law $vv^{\mathsf T}\#ww^{\mathsf T}=c\,[v,w][v,w]^{\mathsf T}$ summed over an orthonormal basis of $\mathfrak{so}(n)$, $\langle(I\#I)\xi,\xi\rangle=c\sum_{\alpha\beta}\langle[b_\alpha,b_\beta],\xi\rangle^2=c\sum_\alpha\lVert\mathrm{ad}(\xi)b_\alpha\rVert^2=-c\mathop{\mathrm{tr}}(\mathrm{ad}\xi)^2=c\,(n-2)\lVert\xi\rVert_F^2=2c(n-2)\lVert\xi\rVert^2$, using the Killing form $B(X,Y)=(n-2)\mathop{\mathrm{tr}}(XY)$ of $\mathfrak{so}(n)$. So $c=\tfrac12$, not $1$.
 
 ---
 
@@ -48,7 +48,7 @@ Everything below is in the record's own normalisation, read from [conventions.md
 |---|---|---|---|---|
 | bilinearity of $\#$ | $(A-B)^\#=A^\#-2A\#B+B^\#$ | $A=W_+$, $B=W_-$ | $\#$ symmetric bilinear | yes, by definition |
 | rank-one positivity of $\#$ | $X,Y\succeq0\Rightarrow X\#Y\succeq0$ | $(W_+,W_+)$, $(W_-,W_-)$, $(W_+,W_-)$ | none, a theorem | yes; $W_\pm\succeq0$ by [conventions.md](../findings/conventions.md):95 |
-| [Observation L15](../findings/problem.md) | $\operatorname{scal}(R^2+R^\#)=\lVert\mathrm{Ric}(R)\rVert^2+6\lVert\mathrm{Alt}(R)\rVert^2$ | $R=W_\pm$, **polarised** | $R$ symmetric on $\Lambda^2$; **no Bianchi hypothesis** | yes, and the "no Bianchi" is load-bearing, since $W_\pm$ are exactly the objects that fail it |
+| [Observation L15](../findings/problem.md) | $\mathop{\mathrm{scal}}(R^2+R^\#)=\lVert\mathrm{Ric}(R)\rVert^2+6\lVert\mathrm{Alt}(R)\rVert^2$ | $R=W_\pm$, **polarised** | $R$ symmetric on $\Lambda^2$; **no Bianchi hypothesis** | yes, and the "no Bianchi" is load-bearing, since $W_\pm$ are exactly the objects that fail it |
 | [Lemma L131](../findings/isotropy-cap.md) | supplies L15 by depolarisation | as above | $R$ symmetric | yes |
 | [Lemma L154](../findings/bounds.md)(i), [L155](../findings/bounds.md) | used only by the **equality clause**, not by the inequality | $X_{\mathrm{inv}}$ | L154(i) needs criticality; L155 needs none | yes |
 
@@ -65,9 +65,9 @@ Everything below is in the record's own normalisation, read from [conventions.md
 
 **Three properties used and not named anywhere in the block.**
 
-1. **$W_+W_-=0$.** It kills the $\tfrac12(AB+BA)$ half of the polarised quadratic form in Step 4, and it is what makes $\operatorname{tr}(\Pi_-W^2)=\operatorname{tr}(W_-^2)$ in Step 1. It is automatic for spectral parts, so it is a fact rather than a hypothesis, but the proof does not run without it, and the block never writes it.
+1. **$W_+W_-=0$.** It kills the $\tfrac12(AB+BA)$ half of the polarised quadratic form in Step 4, and it is what makes $\mathop{\mathrm{tr}}(\Pi_-W^2)=\mathop{\mathrm{tr}}(W_-^2)$ in Step 1. It is automatic for spectral parts, so it is a fact rather than a hypothesis, but the proof does not run without it, and the block never writes it.
 2. **$\Pi_-$ is the *spectral* projection**, so $\Pi_-W=W\Pi_-=-W_-$. The block never defines $\Pi_-$ at all. Any other projection of the same rank breaks Step 1.
-3. **$\operatorname{scal}=2\operatorname{tr}_{\Lambda^2}$.** Step 3 ends at $2\operatorname{tr}(W_+\#W_-)$ and Step 4 delivers $\operatorname{scal}(W_+\#W_-)$; the two are the same number only under this convention. The factor $2$ is not decoration, it is the whole match between the two halves of the proof.
+3. **$\mathop{\mathrm{scal}}=2\mathop{\mathrm{tr}}_{\Lambda^2}$.** Step 3 ends at $2\mathop{\mathrm{tr}}(W_+\#W_-)$ and Step 4 delivers $\mathop{\mathrm{scal}}(W_+\#W_-)$; the two are the same number only under this convention. The factor $2$ is not decoration, it is the whole match between the two halves of the proof.
 
 *No finding: the block imports nothing whose own hypotheses fail at the object it is applied to.*
 
@@ -77,9 +77,9 @@ Everything below is in the record's own normalisation, read from [conventions.md
 
 ### 2.1 The identity, PROVEN
 
-$W_-$ is supported on $E_-$ and $W$ acts there as $-W_-$, so $\Pi_-W=-W_-$ and $\Pi_-W^2=W_-^2$. Applying $\operatorname{tr}(\Pi_-\,\cdot\,)$ to $W^2+W^\#=\theta W$:
+$W_-$ is supported on $E_-$ and $W$ acts there as $-W_-$, so $\Pi_-W=-W_-$ and $\Pi_-W^2=W_-^2$. Applying $\mathop{\mathrm{tr}}(\Pi_-\,\cdot\,)$ to $W^2+W^\#=\theta W$:
 
-$$\operatorname{tr}(W_-^2)+\operatorname{tr}(\Pi_-W^\#)=-\theta\operatorname{tr}(W_-),\qquad\text{i.e.}\qquad \theta\operatorname{tr}(W_-)+\operatorname{tr}(W_-^2)=-\operatorname{tr}(\Pi_-W^\#).$$
+$$\mathop{\mathrm{tr}}(W_-^2)+\mathop{\mathrm{tr}}(\Pi_-W^\#)=-\theta\mathop{\mathrm{tr}}(W_-),\qquad\text{i.e.}\qquad \theta\mathop{\mathrm{tr}}(W_-)+\mathop{\mathrm{tr}}(W_-^2)=-\mathop{\mathrm{tr}}(\Pi_-W^\#).$$
 
 Exactly as written. This is the only place criticality enters, and it enters as the *equation*: the weaker bracket form $[W,Q(W)]=0$ ([conventions.md](../findings/conventions.md):119) does not support a trace of the equation, so "at every critical point" is exact rather than loose.
 
@@ -87,22 +87,22 @@ Exactly as written. This is the only place criticality enters, and it enters as 
 
 $W^\#=W_+^\#-2\,W_+\#W_-+W_-^\#$ by bilinearity, so with $C:=W_+\#W_-$,
 
-$$-\operatorname{tr}(\Pi_-W^\#)=\underbrace{-\operatorname{tr}(\Pi_-W_+^\#)}_{\le0}\underbrace{-\operatorname{tr}(\Pi_-W_-^\#)}_{\le0}+\,2\operatorname{tr}(\Pi_-C)\;\le\;2\operatorname{tr}(C).$$
+$$-\mathop{\mathrm{tr}}(\Pi_-W^\#)=\underbrace{-\mathop{\mathrm{tr}}(\Pi_-W_+^\#)}_{\le0}\underbrace{-\mathop{\mathrm{tr}}(\Pi_-W_-^\#)}_{\le0}+\,2\mathop{\mathrm{tr}}(\Pi_-C)\;\le\;2\mathop{\mathrm{tr}}(C).$$
 
-$W_+^\#$, $W_-^\#$ and $C$ are all PSD because $\#$ preserves the PSD cone. **The two dropped terms are killed by $\Pi_-\succeq0$, not by $\Pi_-\preceq I$**; $\Pi_-\preceq I$ is what gives the last step, $\operatorname{tr}(\Pi_-C)\le\operatorname{tr}(C)$. The block's "kills two terms against $\Pi_-\preceq I$" attaches the wrong half of $0\preceq\Pi_-\preceq I$ to the wrong step. Both facts are true and both are used; nothing downstream moves.
+$W_+^\#$, $W_-^\#$ and $C$ are all PSD because $\#$ preserves the PSD cone. **The two dropped terms are killed by $\Pi_-\succeq0$, not by $\Pi_-\preceq I$**; $\Pi_-\preceq I$ is what gives the last step, $\mathop{\mathrm{tr}}(\Pi_-C)\le\mathop{\mathrm{tr}}(C)$. The block's "kills two terms against $\Pi_-\preceq I$" attaches the wrong half of $0\preceq\Pi_-\preceq I$ to the wrong step. Both facts are true and both are used; nothing downstream moves.
 
 ### 2.3 Where the $6\delta^2$ comes from, and whether the coefficient is right, PROVEN, and sharp
 
-L15's identity is a quadratic form in $R$. Its polarisation at $(A,B)$ reads $\operatorname{scal}\big(\tfrac12(AB+BA)+A\#B\big)=\langle\mathrm{Ric}A,\mathrm{Ric}B\rangle+6\langle\mathrm{Alt}A,\mathrm{Alt}B\rangle$. At $(W_+,W_-)$ the product term dies on $W_+W_-=0$, and $\mathrm{Ric}(W)=0$, $\mathrm{Alt}(W)=0$ give $\mathrm{Ric}(W_+)=\mathrm{Ric}(W_-)$ and $\mathrm{Alt}(W_+)=\mathrm{Alt}(W_-)$:
+L15's identity is a quadratic form in $R$. Its polarisation at $(A,B)$ reads $\mathop{\mathrm{scal}}\big(\tfrac12(AB+BA)+A\#B\big)=\langle\mathrm{Ric}A,\mathrm{Ric}B\rangle+6\langle\mathrm{Alt}A,\mathrm{Alt}B\rangle$. At $(W_+,W_-)$ the product term dies on $W_+W_-=0$, and $\mathrm{Ric}(W)=0$, $\mathrm{Alt}(W)=0$ give $\mathrm{Ric}(W_+)=\mathrm{Ric}(W_-)$ and $\mathrm{Alt}(W_+)=\mathrm{Alt}(W_-)$:
 
-$$2\operatorname{tr}(C)=\operatorname{scal}(W_+\#W_-)=\lVert\mathrm{Ric}(W_-)\rVert^2+6\lVert\mathrm{Alt}(W_-)\rVert^2=\lVert\mathrm{Ric}(W_-)\rVert^2+6\delta^2 .$$
+$$2\mathop{\mathrm{tr}}(C)=\mathop{\mathrm{scal}}(W_+\#W_-)=\lVert\mathrm{Ric}(W_-)\rVert^2+6\lVert\mathrm{Alt}(W_-)\rVert^2=\lVert\mathrm{Ric}(W_-)\rVert^2+6\delta^2 .$$
 
-**So the $6$ is L15's, transported by a polarisation that scales both terms of the identity alike, and it is never re-derived.** It cannot be wrong independently of L15, and L15 itself is not taken on faith here: pairing [L131](../findings/isotropy-cap.md)'s $\mathrm{Ric}(R)\wedge\mathrm{id}=R+R\#I-3\mathrm{Alt}(R)$ with $R$, using total symmetry of $\operatorname{tr}((A\#B)C)$ and idempotence of $\mathrm{Alt}$, gives $\tfrac12\lVert\mathrm{Ric}R\rVert^2=\operatorname{tr}(R^2)+\operatorname{tr}(R^\#)-3\lVert\mathrm{Alt}R\rVert^2$, which is L15 exactly. The $6$ is $2\times3$ and the $3$ is $1+c_4$ with $c_4=2$ the $\Lambda^4$ Casimir.
+**So the $6$ is L15's, transported by a polarisation that scales both terms of the identity alike, and it is never re-derived.** It cannot be wrong independently of L15, and L15 itself is not taken on faith here: pairing [L131](../findings/isotropy-cap.md)'s $\mathrm{Ric}(R)\wedge\mathrm{id}=R+R\#I-3\mathrm{Alt}(R)$ with $R$, using total symmetry of $\mathop{\mathrm{tr}}((A\#B)C)$ and idempotence of $\mathrm{Alt}$, gives $\tfrac12\lVert\mathrm{Ric}R\rVert^2=\mathop{\mathrm{tr}}(R^2)+\mathop{\mathrm{tr}}(R^\#)-3\lVert\mathrm{Alt}R\rVert^2$, which is L15 exactly. The $6$ is $2\times3$ and the $3$ is $1+c_4$ with $c_4=2$ the $\Lambda^4$ Casimir.
 
-**The coefficient is sharp, and I pinned it by hand at the block's own named point.** At $W_{\mathbb{CP}^2}$, $n=4$: $W$ is self-dual with $\operatorname{spec}=(2\varepsilon,-\varepsilon,-\varepsilon)$ on $\Lambda^2_+$ and $0$ on $\Lambda^2_-$; $\operatorname{tr}W^2=6\varepsilon^2=1$ fixes $\varepsilon=1/\sqrt6$, and $\theta=3\varepsilon=\sqrt{3/2}$.
+**The coefficient is sharp, and I pinned it by hand at the block's own named point.** At $W_{\mathbb{CP}^2}$, $n=4$: $W$ is self-dual with $\mathop{\mathrm{spec}}=(2\varepsilon,-\varepsilon,-\varepsilon)$ on $\Lambda^2_+$ and $0$ on $\Lambda^2_-$; $\mathop{\mathrm{tr}}W^2=6\varepsilon^2=1$ fixes $\varepsilon=1/\sqrt6$, and $\theta=3\varepsilon=\sqrt{3/2}$.
 
-- $\theta\operatorname{tr}(W_-)+\operatorname{tr}(W_-^2)=3\varepsilon\cdot2\varepsilon+2\varepsilon^2=8\varepsilon^2=\tfrac43$.
-- $W_+=\varepsilon\,\omega\omega^{\mathsf T}$ with $\Omega=E_{12}-E_{21}+E_{34}-E_{43}$, so $\lVert\omega\rVert^2=2$ and $\operatorname{tr}W_+=2\varepsilon$ as required; $\mathrm{Ric}(W_+)=\varepsilon\,\Omega\Omega^{\mathsf T}=\varepsilon I_4$, so $\lVert\mathrm{Ric}(W_-)\rVert^2=\lVert\mathrm{Ric}(W_+)\rVert^2=4\varepsilon^2=\tfrac23$.
+- $\theta\mathop{\mathrm{tr}}(W_-)+\mathop{\mathrm{tr}}(W_-^2)=3\varepsilon\cdot2\varepsilon+2\varepsilon^2=8\varepsilon^2=\tfrac43$.
+- $W_+=\varepsilon\,\omega\omega^{\mathsf T}$ with $\Omega=E_{12}-E_{21}+E_{34}-E_{43}$, so $\lVert\omega\rVert^2=2$ and $\mathop{\mathrm{tr}}W_+=2\varepsilon$ as required; $\mathrm{Ric}(W_+)=\varepsilon\,\Omega\Omega^{\mathsf T}=\varepsilon I_4$, so $\lVert\mathrm{Ric}(W_-)\rVert^2=\lVert\mathrm{Ric}(W_+)\rVert^2=4\varepsilon^2=\tfrac23$.
 - $\mathrm{Alt}(W_-)$: $W_-=\varepsilon\Pi_-$ with $\Pi_-$ of rank $2$ inside $\Lambda^2_+$, so $\langle W_-,\star\rangle=2\varepsilon$ and $\delta^2=(2\varepsilon)^2/6=\tfrac4{36}=\tfrac19$; $6\delta^2=\tfrac23$.
 
 $\tfrac23+\tfrac23=\tfrac43$: **equality, exactly, with $\delta^2\ne0$.** Any coefficient below $6$ makes the lemma false at $W_{\mathbb{CP}^2}$; any coefficient above it loses the equality the block claims there. **The coefficient is right and is the only one that works.**
@@ -113,21 +113,21 @@ $\tfrac23+\tfrac23=\tfrac43$: **equality, exactly, with $\delta^2\ne0$.** Any co
 
 ## 3. Question 3, which hypotheses the proof uses, and how often
 
-**Criticality: once**, at Step 1, and nowhere else. The right-hand side needs none of it: polarising L15 at $(W,W_+)$ instead gives $\lVert\mathrm{Ric}(W_-)\rVert^2+6\delta^2\ge\operatorname{tr}(W_+^2)+\operatorname{tr}(W_-^2)=\lVert W\rVert^2$ for **every** Weyl $W$, which is [ATTEMPTS.md](../ATTEMPTS.md)'s Result 3 by-product; I confirm it.
+**Criticality: once**, at Step 1, and nowhere else. The right-hand side needs none of it: polarising L15 at $(W,W_+)$ instead gives $\lVert\mathrm{Ric}(W_-)\rVert^2+6\delta^2\ge\mathop{\mathrm{tr}}(W_+^2)+\mathop{\mathrm{tr}}(W_-^2)=\lVert W\rVert^2$ for **every** Weyl $W$, which is [ATTEMPTS.md](../ATTEMPTS.md)'s Result 3 by-product; I confirm it.
 
 **Ricci-flatness and first Bianchi: "twice each in the final step" is defensible, and which count you get depends on the route.**
 
 - *Direct route*, polarising at $(W_+,W_-)$: each is used **once**, to turn a bilinear pairing into a square.
-- *$\lvert W\rvert$ route*, which is how [Theorem A](../ATTEMPTS.md) sets the algebra up: subtract L15 at $R=W$ from L15 at $R=\lvert W\rvert$. Since $\lvert W\rvert^2=W^2$ and $\lvert W\rvert^\#=W^\#+4C$, the left side is $4\operatorname{scal}(C)$; on the right, $\mathrm{Ric}(W)=0$ and $\mathrm{Alt}(W)=0$ are used **once each to delete the $R=W$ terms** and **once each again** inside $\mathrm{Ric}(\lvert W\rvert)=\mathrm{Ric}(W)+2\mathrm{Ric}(W_-)=2\mathrm{Ric}(W_-)$ and $\mathrm{Alt}(\lvert W\rvert)=2\mathrm{Alt}(W_-)$, giving $4[\lVert\mathrm{Ric}(W_-)\rVert^2+6\delta^2]$. **Twice each**, and the same conclusion.
+- *$\lvert W\rvert$ route*, which is how [Theorem A](../ATTEMPTS.md) sets the algebra up: subtract L15 at $R=W$ from L15 at $R=\lvert W\rvert$. Since $\lvert W\rvert^2=W^2$ and $\lvert W\rvert^\#=W^\#+4C$, the left side is $4\mathop{\mathrm{scal}}(C)$; on the right, $\mathrm{Ric}(W)=0$ and $\mathrm{Alt}(W)=0$ are used **once each to delete the $R=W$ terms** and **once each again** inside $\mathrm{Ric}(\lvert W\rvert)=\mathrm{Ric}(W)+2\mathrm{Ric}(W_-)=2\mathrm{Ric}(W_-)$ and $\mathrm{Alt}(\lvert W\rvert)=2\mathrm{Alt}(W_-)$, giving $4[\lVert\mathrm{Ric}(W_-)\rVert^2+6\delta^2]$. **Twice each**, and the same conclusion.
 
 *The block's count is therefore correct under the route the surrounding record uses, and the sentence would be sharper if it said which.* [isotropy-cap.md](../findings/isotropy-cap.md) already records the trap this route runs on, $\lVert\mathrm{Alt}(\lvert W\rvert)\rVert^2=4\delta^2$, so "a constant stated at $\lvert W\rvert$ is not comparable with one stated at $W_-$", and the factor $4$ above is exactly it, cancelling on both sides.
 
-**Further properties used without being named:** the three listed in §1, $W_+W_-=0$, $\Pi_-$ spectral, $\operatorname{scal}=2\operatorname{tr}$. **No finding beyond those:** I found no fourth.
+**Further properties used without being named:** the three listed in §1, $W_+W_-=0$, $\Pi_-$ spectral, $\mathop{\mathrm{scal}}=2\mathop{\mathrm{tr}}$. **No finding beyond those:** I found no fourth.
 
 **Two disclaimers checked rather than taken.**
 
-- *"No unit-norm requirement."* **True.** Under $W\mapsto tW$ criticality carries $\theta\mapsto t\theta$, and every one of $\theta\operatorname{tr}W_-$, $\operatorname{tr}W_-^2$, $\lVert\mathrm{Ric}(W_-)\rVert^2$, $\delta^2$ is homogeneous of degree $2$. The statement is scale-invariant. (An on-file report marks unit norm as "used implicitly"; the homogeneity says otherwise, and the block is right.)
-- *"No sign condition."* **True.** $\theta$ appears only in Step 1, an identity. At $\theta<0$ the left side may be negative and the bound is weak but valid; at $\theta=0$ it reduces to $\operatorname{tr}(W_-^2)\le\lVert\mathrm{Ric}(W_-)\rVert^2+6\delta^2$.
+- *"No unit-norm requirement."* **True.** Under $W\mapsto tW$ criticality carries $\theta\mapsto t\theta$, and every one of $\theta\mathop{\mathrm{tr}}W_-$, $\mathop{\mathrm{tr}}W_-^2$, $\lVert\mathrm{Ric}(W_-)\rVert^2$, $\delta^2$ is homogeneous of degree $2$. The statement is scale-invariant. (An on-file report marks unit norm as "used implicitly"; the homogeneity says otherwise, and the block is right.)
+- *"No sign condition."* **True.** $\theta$ appears only in Step 1, an identity. At $\theta<0$ the left side may be negative and the bound is weak but valid; at $\theta=0$ it reduces to $\mathop{\mathrm{tr}}(W_-^2)\le\lVert\mathrm{Ric}(W_-)\rVert^2+6\delta^2$.
 
 ---
 
@@ -135,23 +135,23 @@ $\tfrac23+\tfrac23=\tfrac43$: **equality, exactly, with $\delta^2\ne0$.** Any co
 
 ### 4.1 The slack, computed
 
-Collecting §2.2, the slack $S:=\lVert\mathrm{Ric}(W_-)\rVert^2+6\delta^2-\theta\operatorname{tr}(W_-)-\operatorname{tr}(W_-^2)$ is a sum of **three separately non-negative** traces:
+Collecting §2.2, the slack $S:=\lVert\mathrm{Ric}(W_-)\rVert^2+6\delta^2-\theta\mathop{\mathrm{tr}}(W_-)-\mathop{\mathrm{tr}}(W_-^2)$ is a sum of **three separately non-negative** traces:
 
-$$S=\operatorname{tr}(P_-W_+^\#P_-)+\operatorname{tr}(P_-W_-^\#P_-)+2\operatorname{tr}\big((P_++P_0)\,C\,(P_++P_0)\big).$$
+$$S=\mathop{\mathrm{tr}}(P_-W_+^\#P_-)+\mathop{\mathrm{tr}}(P_-W_-^\#P_-)+2\mathop{\mathrm{tr}}\big((P_++P_0)\,C\,(P_++P_0)\big).$$
 
 Each is the compression of a PSD operator, and by the rank-one law each expands as a **strictly-positively-weighted sum of squares of $\langle[\,\cdot\,,\cdot\,],\xi\rangle$** over eigenbases. Therefore $S=0$ iff each family of brackets vanishes against the relevant subspace:
 
 | term | vanishes iff |
 |---|---|
-| $\operatorname{tr}(P_-W_+^\#P_-)$ | $[\mathfrak p,\mathfrak p]\perp\mathfrak m$ |
-| $\operatorname{tr}(P_-W_-^\#P_-)$ | $[\mathfrak m,\mathfrak m]\perp\mathfrak m$ |
-| $2\operatorname{tr}((P_++P_0)C(P_++P_0))$ | $[\mathfrak p,\mathfrak m]\perp\mathfrak p$ **and** $[\mathfrak p,\mathfrak m]\perp\mathfrak k$, i.e. $[\mathfrak p,\mathfrak m]\subseteq\mathfrak m$ |
+| $\mathop{\mathrm{tr}}(P_-W_+^\#P_-)$ | $[\mathfrak p,\mathfrak p]\perp\mathfrak m$ |
+| $\mathop{\mathrm{tr}}(P_-W_-^\#P_-)$ | $[\mathfrak m,\mathfrak m]\perp\mathfrak m$ |
+| $2\mathop{\mathrm{tr}}((P_++P_0)C(P_++P_0))$ | $[\mathfrak p,\mathfrak m]\perp\mathfrak p$ **and** $[\mathfrak p,\mathfrak m]\perp\mathfrak k$, i.e. $[\mathfrak p,\mathfrak m]\subseteq\mathfrak m$ |
 
 **These are exactly the block's three displayed conditions, in the block's own order.** The clause is right as displayed, and it needs neither [L154](../findings/bounds.md) nor [L155](../findings/bounds.md) to state. *This derivation is mine; the block carries no argument for the clause, which is §7's finding, and an on-file report reaches the same three conditions independently.*
 
 ### 4.2 The closure into $\ker W$, PROVEN, and criticality is what buys it
 
-I checked the block's "the kernel closes too" rather than inheriting it. The three spectral-diagonal blocks of $X_{\mathrm{inv}}$ ([Result 5(a)](../ATTEMPTS.md)) give $\tfrac12\operatorname{tr}X_{\mathrm{inv}}=2\operatorname{tr}(P_+C)+\operatorname{tr}(P_-(W_+^\#+W_-^\#))+\tfrac12\operatorname{tr}(P_0\lvert W\rvert^\#P_0)$, while $S$ above has $2\operatorname{tr}(P_0C)$ in the third slot. At a critical point $W^\#=\theta W-W^2$ annihilates $\ker W$, so $P_0\lvert W\rvert^\#P_0=P_0(W^\#+4C)P_0=4P_0CP_0$ and the two agree: $S=\tfrac12\operatorname{tr}X_{\mathrm{inv}}$, confirming [L154](../findings/bounds.md)'s relation clause by hand.
+I checked the block's "the kernel closes too" rather than inheriting it. The three spectral-diagonal blocks of $X_{\mathrm{inv}}$ ([Result 5(a)](../ATTEMPTS.md)) give $\tfrac12\mathop{\mathrm{tr}}X_{\mathrm{inv}}=2\mathop{\mathrm{tr}}(P_+C)+\mathop{\mathrm{tr}}(P_-(W_+^\#+W_-^\#))+\tfrac12\mathop{\mathrm{tr}}(P_0\lvert W\rvert^\#P_0)$, while $S$ above has $2\mathop{\mathrm{tr}}(P_0C)$ in the third slot. At a critical point $W^\#=\theta W-W^2$ annihilates $\ker W$, so $P_0\lvert W\rvert^\#P_0=P_0(W^\#+4C)P_0=4P_0CP_0$ and the two agree: $S=\tfrac12\mathop{\mathrm{tr}}X_{\mathrm{inv}}$, confirming [L154](../findings/bounds.md)'s relation clause by hand.
 
 The same identity gives the closure directly. Writing $\lvert W\rvert^\#=W_+^\#+2C+W_-^\#$ and using $P_0W^\#P_0=0$,
 $$P_0W_+^\#P_0+P_0W_-^\#P_0=2P_0CP_0 .$$
@@ -169,7 +169,7 @@ The headings' reading is: $(\mathfrak{so}(n),E_+)$ is a compact symmetric pair, 
 - **Forward implication fails at $W_{\mathbb{CP}^2}$, $n=4$.** Equality holds there exactly (§2.3, both sides $\tfrac43$), while $\dim E_+=1$, $\dim E_-=2$, $\dim\ker W=3$. $\mathfrak p\oplus\mathfrak m=\Lambda^2_+\cong\mathfrak{so}(3)$, an ideal of $\mathfrak{so}(4)=\mathfrak{so}(3)\oplus\mathfrak{so}(3)$, graded as $(\mathfrak{so}(3),\mathfrak{so}(2))$, a symmetric pair, but of a proper $3$-dimensional subalgebra of a $6$-dimensional $\mathfrak{so}(4)$. And $E_+$ is the even part of no grading of $\mathfrak{so}(4)$: the fixed algebras of involutions of $\mathfrak{so}(4)$ have dimensions $2$ ($\mathfrak{so}(2)\oplus\mathfrak{so}(2)$), $3$ ($\mathfrak{so}(3)$), $4$ ($\mathfrak u(2)$) and $6$, and $\dim E_+=1$ is not among them. **So equality does not give a symmetric pair of $\mathfrak{so}(n)$.**
 - **Converse implication: it can only fail when $\ker W\ne0$, and I found no witness.** If $(\mathfrak{so}(n),\mathfrak p)$ is a symmetric pair but $\mathfrak m\subsetneq\mathfrak p^\perp$, the first two displayed conditions still hold ($[\mathfrak p,\mathfrak p]\subseteq\mathfrak p$ and $[\mathfrak m,\mathfrak m]\subseteq[\mathfrak p^\perp,\mathfrak p^\perp]\subseteq\mathfrak p$, both $\perp\mathfrak m$), but the third, $[\mathfrak p,\mathfrak m]\subseteq\mathfrak m$, is not supplied, the bracket may leak into $\ker W$. **That is the only gap, and no object on the record is exhibited in it.** [bounds.md](../findings/bounds.md):59's converse sentence (*"a symmetric pair gives equality only where $W$'s spectral splitting coincides with it"*), is about a different and looser reading, in which the pair is unrelated to $W$; under that reading it is trivially true, and under the sentence's own reading ("with $E_+$ the isotropy algebra") the failure is unexhibited.
 
-**Answer to question 2, in one line.** *The equality clause characterises "$\operatorname{ran}W_+\oplus\operatorname{ran}W_-$ is a $\mathbb Z_2$-graded subalgebra of $\mathfrak{so}(n)$ with even part $\operatorname{ran}W_+$". That is the symmetric-pair condition of the headings **exactly on $\{\ker W=0\}$**; off it the forward implication fails, at $W_{\mathbb{CP}^2}$, and the converse is open in one narrow case.*
+**Answer to question 2, in one line.** *The equality clause characterises "$\mathop{\mathrm{ran}}W_+\oplus\mathop{\mathrm{ran}}W_-$ is a $\mathbb Z_2$-graded subalgebra of $\mathfrak{so}(n)$ with even part $\mathop{\mathrm{ran}}W_+$". That is the symmetric-pair condition of the headings **exactly on $\{\ker W=0\}$**; off it the forward implication fails, at $W_{\mathbb{CP}^2}$, and the converse is open in one narrow case.*
 
 ---
 
@@ -182,7 +182,7 @@ The statement quantifies as: *for all $n$, for all $W\in\mathcal W_n$, for all $
 | smallest admissible $n$ | $\mathcal W_n=0$ for $n\le3$, so the first content is $n=4$, where $W_{\mathbb{CP}^2}$ lives and attains equality | fine; the block carries no dimension hypothesis and needs none |
 | odd $n$ | nothing in the proof sees parity; $S^3\times S^3\times S^3$ at $n=9$ is a critical point on the strict side (§6) | fine, **and this is the one place a defect would have been expected**, since the record's $\theta_0/\Theta_n$ collision is a parity trap. L7 states no constant in $n$, so it cannot inherit it |
 | $\ker W\ne0$ | used nowhere in the inequality; changes the *equality clause*'s content (§4.3) | fine for the inequality; the clause needs the $\ker$-aware reading |
-| $W_-=0$ | $W\succeq0$ and $\operatorname{tr}W=\tfrac12\operatorname{scal}(W)=0$ force $W=0$; then both sides are $0$ | degenerate, true, and vacuous. The only $W_-=0$ point is excluded by $\lVert W\rVert=1$ if one imposes it, and satisfied trivially if one does not |
+| $W_-=0$ | $W\succeq0$ and $\mathop{\mathrm{tr}}W=\tfrac12\mathop{\mathrm{scal}}(W)=0$ force $W=0$; then both sides are $0$ | degenerate, true, and vacuous. The only $W_-=0$ point is excluded by $\lVert W\rVert=1$ if one imposes it, and satisfied trivially if one does not |
 | $\theta\le0$ | $\theta$ enters one identity, unsigned | fine; the record's $\theta=0$ and $\theta=-0.088829$ points are covered |
 | $\lVert W\rVert\ne1$ | both sides degree $2$ under $W\mapsto tW$, $\theta\mapsto t\theta$ | fine; the block's disclaimer is correct |
 
@@ -190,7 +190,7 @@ The statement quantifies as: *for all $n$, for all $W\in\mathcal W_n$, for all $
 
 ## 6. One object from each named family, the universal claim, witnessed
 
-**A general two-block sphere-product formula, derived here and used below.** For $S^p\times S^q$, $p+q=n$, Einstein with $\Lambda=(p-1)\kappa_1=(q-1)\kappa_2$: the curvature operator is $\kappa_1\Pi_1+\kappa_2\Pi_2$ on the factor blocks and $0$ on the mixed block, and $W=R-cI$ with $c=\Lambda/(n-1)$ from $\mathrm{Ric}(I)=(n-1)\mathrm{id}$. So $\mathfrak p=\Lambda^2V_1\oplus\Lambda^2V_2=\mathfrak{so}(p)\oplus\mathfrak{so}(q)$ with eigenvalues $\kappa_i-c>0$, $\mathfrak m=V_1\otimes V_2$ with eigenvalue $-c$, and $\ker W=0$. With $\mathrm{Ric}(\varphi\varphi^{\mathsf T})=\Phi\Phi^{\mathsf T}$ and $\Phi\Phi^{\mathsf T}=e_\alpha e_\alpha^{\mathsf T}+f_\beta f_\beta^{\mathsf T}$ for $\varphi=e_\alpha\wedge f_\beta$, $\mathrm{Ric}(W_-)=c(qP_{V_1}+pP_{V_2})$, so $\lVert\mathrm{Ric}(W_-)\rVert^2=c^2pqn$; since $\delta^2=0$, L7 with equality reads $\theta\,pqc+pqc^2=c^2pqn$, i.e. $\boxed{\theta=(n-1)c}$, and normalising $\operatorname{tr}W^2=1$,
+**A general two-block sphere-product formula, derived here and used below.** For $S^p\times S^q$, $p+q=n$, Einstein with $\Lambda=(p-1)\kappa_1=(q-1)\kappa_2$: the curvature operator is $\kappa_1\Pi_1+\kappa_2\Pi_2$ on the factor blocks and $0$ on the mixed block, and $W=R-cI$ with $c=\Lambda/(n-1)$ from $\mathrm{Ric}(I)=(n-1)\mathrm{id}$. So $\mathfrak p=\Lambda^2V_1\oplus\Lambda^2V_2=\mathfrak{so}(p)\oplus\mathfrak{so}(q)$ with eigenvalues $\kappa_i-c>0$, $\mathfrak m=V_1\otimes V_2$ with eigenvalue $-c$, and $\ker W=0$. With $\mathrm{Ric}(\varphi\varphi^{\mathsf T})=\Phi\Phi^{\mathsf T}$ and $\Phi\Phi^{\mathsf T}=e_\alpha e_\alpha^{\mathsf T}+f_\beta f_\beta^{\mathsf T}$ for $\varphi=e_\alpha\wedge f_\beta$, $\mathrm{Ric}(W_-)=c(qP_{V_1}+pP_{V_2})$, so $\lVert\mathrm{Ric}(W_-)\rVert^2=c^2pqn$; since $\delta^2=0$, L7 with equality reads $\theta\,pqc+pqc^2=c^2pqn$, i.e. $\boxed{\theta=(n-1)c}$, and normalising $\mathop{\mathrm{tr}}W^2=1$,
 
 $$\theta^2=\frac{(n-1)^2}{pq\left[\dfrac{q}{2(p-1)}+\dfrac{p}{2(q-1)}+1\right]}.$$
 
@@ -202,7 +202,7 @@ At $p=q=3$ this is $25/22.5=10/9=\theta_0(6)^2$; at $(p,q)=(2,4)$ it is $25/(80/
 | **sphere products, low value** | $S^2\times S^4$, $n=6$ | $\theta^2=15/16$ from the box above, so $\theta=\sqrt{15}/4=0.9682458\ldots<1$; $\mathfrak p=\mathfrak{so}(2)\oplus\mathfrak{so}(4)$, $\mathfrak m$ mixed, $\ker=0$, $(\mathfrak{so}(6),\mathfrak{so}(2)\oplus\mathfrak{so}(4))$ symmetric | **equality at $\theta<1$** |
 | **$\mathbb{CP}^m$** | $\mathbb{CP}^4$, $n=8$ | [L10](../results.md)'s $\theta^2=(m+1)(2m-1)/(3m(m-1))=35/36$, so $\theta=0.986\ldots<1$; $\mathfrak p=\mathfrak u(4)$ (dim $16$, matching [bounds.md](../findings/bounds.md)'s table), $\ker=0$, $(\mathfrak{so}(8),\mathfrak u(4))$ symmetric | **equality at $\theta<1$** |
 | **$\ker W\ne0$** | $W_{\mathbb{CP}^2}$, $n=4$ | §2.3, in full | **equality, $\tfrac43=\tfrac23+\tfrac23$** |
-| **padded** | $W_{\mathbb{CP}^2}\oplus0$ at any $n\ge4$ | $\operatorname{tr}W_-$, $\operatorname{tr}W_-^2$ unchanged; $\mathrm{Ric}(W_-)$ gains only zero rows and columns; $\mathrm{Alt}(W_-)$ is supported on $\Lambda^4$ of the original $\mathbb R^4$, so $\delta^2=\tfrac19$ still. Kernel grows to $\binom n2-3$ | **equality, both sides $\tfrac43$, at every $n$** |
+| **padded** | $W_{\mathbb{CP}^2}\oplus0$ at any $n\ge4$ | $\mathop{\mathrm{tr}}W_-$, $\mathop{\mathrm{tr}}W_-^2$ unchanged; $\mathrm{Ric}(W_-)$ gains only zero rows and columns; $\mathrm{Alt}(W_-)$ is supported on $\Lambda^4$ of the original $\mathbb R^4$, so $\delta^2=\tfrac19$ still. Kernel grows to $\binom n2-3$ | **equality, both sides $\tfrac43$, at every $n$** |
 | **subalgebra Casimirs** | the [L4](../results.md)/[L23](../findings/ungraded-slack.md) family $W=\alpha\Pi_{\mathfrak h}-\beta\Pi_{\mathfrak h^\perp}$ | $\mathfrak p=\mathfrak h$, $\mathfrak m=\mathfrak h^\perp$, $\ker=0$; the three conditions reduce to $[\mathfrak h^\perp,\mathfrak h^\perp]\subseteq\mathfrak h$ alone, the other two holding because $\mathfrak h$ is a subalgebra and $\mathfrak h^\perp$ is $\mathrm{ad}(\mathfrak h)$-invariant | **equality exactly at the symmetric members** |
 |, its equality member | $\mathbb{HP}^2$, $n=8$, $\mathfrak h=\mathfrak{sp}(2)\oplus\mathfrak{sp}(1)$ | $\mathfrak{sp}(2)\oplus\mathfrak{sp}(1)\cong\mathfrak{so}(5)\oplus\mathfrak{so}(3)$, dim $13$, and its irreducible action on $\mathbb R^8$ is the triality image of the reducible $\mathbb R^5\oplus\mathbb R^3$, so it **is** the fixed algebra of an involution of $\mathfrak{so}(8)$. $\theta^2=56/45$ from [graded-half.md](../findings/graded-half.md)'s closed form | **equality, by hand, replacing the record's $1.4\times10^{-15}$ screen** |
 |, its strict member | $\mathfrak h=\mathfrak{su}(3)\subseteq\mathfrak{so}(8)$ | $\dim\mathfrak h=8$; the fixed algebras of involutions of $\mathfrak{so}(8)$ have dimensions $21,16,13,13,12$ only, so $\mathfrak{su}(3)$ is not one and $[\mathfrak m,\mathfrak m]\not\subseteq\mathfrak p$ | **strict** |
@@ -225,7 +225,7 @@ At $p=q=3$ this is $25/22.5=10/9=\theta_0(6)^2$; at $(p,q)=(2,4)$ it is $25/(80/
 | [report/sections/07-gradedness-split.tex](../report/sections/07-gradedness-split.tex):77 | correct | carries *"it fails strictly at the low-value ones"* | **false**, same as [results.md](../results.md):326 |
 | [lean/INDEX.md](../lean/INDEX.md):179 | row exists, status **partial** | records **owed**: the inequality itself, and *"the bracket-grading conditions hold **modulo $\ker W$**"* | **stale in the same way**, the row's own neighbour at :187 says L155 retires that hedge, so the L7 row owes something the record no longer claims |
 
-**What the Lean row would have to claim to be current.** Two obligations, not the one it names: (i) the inequality $\theta\operatorname{tr}(W_-)+\operatorname{tr}(W_-^2)\le\lVert\mathrm{Ric}(W_-)\rVert^2+6\delta^2$ at $Q(W)=\theta W$, which is genuinely owed; (ii) the equality clause in its **unhedged** form, the three bracket conditions, equivalent at a critical point to *$\operatorname{ran}W_+\oplus\operatorname{ran}W_-$ is a $\mathbb Z_2$-graded subalgebra with even part $\operatorname{ran}W_+$*, with the *symmetric pair of $\mathfrak{so}(n)$* reading recorded as holding **iff $\ker W=0$**. The row's remark that *"a scalar statement does not strengthen into an operator one"* is correct in general and does not bear on L7, whose slack **equals** $\tfrac12\operatorname{tr}X_{\mathrm{inv}}$ (§4.2), so L7 is precisely $\operatorname{scal}(X_{\mathrm{inv}})\ge0$ and nothing weaker.
+**What the Lean row would have to claim to be current.** Two obligations, not the one it names: (i) the inequality $\theta\mathop{\mathrm{tr}}(W_-)+\mathop{\mathrm{tr}}(W_-^2)\le\lVert\mathrm{Ric}(W_-)\rVert^2+6\delta^2$ at $Q(W)=\theta W$, which is genuinely owed; (ii) the equality clause in its **unhedged** form, the three bracket conditions, equivalent at a critical point to *$\mathop{\mathrm{ran}}W_+\oplus\mathop{\mathrm{ran}}W_-$ is a $\mathbb Z_2$-graded subalgebra with even part $\mathop{\mathrm{ran}}W_+$*, with the *symmetric pair of $\mathfrak{so}(n)$* reading recorded as holding **iff $\ker W=0$**. The row's remark that *"a scalar statement does not strengthen into an operator one"* is correct in general and does not bear on L7, whose slack **equals** $\tfrac12\mathop{\mathrm{tr}}X_{\mathrm{inv}}$ (§4.2), so L7 is precisely $\mathop{\mathrm{scal}}(X_{\mathrm{inv}})\ge0$ and nothing weaker.
 
 ---
 
@@ -234,7 +234,7 @@ At $p=q=3$ this is $25/22.5=10/9=\theta_0(6)^2$; at $(p,q)=(2,4)$ it is $25/(80/
 **Proven, and citable without qualification:**
 
 > At every $W\in\mathcal W_n$ with $Q(W)=\theta W$, any $n\ge4$, either parity, any sign of $\theta$, any norm, with or without kernel,
-> $$\theta\operatorname{tr}(W_-)+\operatorname{tr}(W_-^2)\;\le\;\lVert\mathrm{Ric}(W_-)\rVert^2+6\,\delta^2,$$
+> $$\theta\mathop{\mathrm{tr}}(W_-)+\mathop{\mathrm{tr}}(W_-^2)\;\le\;\lVert\mathrm{Ric}(W_-)\rVert^2+6\,\delta^2,$$
 > with $W_\pm=\tfrac12(\lvert W\rvert\pm W)$ as operators on all of $\Lambda^2$ and $\delta^2=\lVert\mathrm{Alt}(W_-)\rVert^2$. Equality holds iff $[\mathfrak p,\mathfrak p]\perp\mathfrak m$, $[\mathfrak m,\mathfrak m]\perp\mathfrak m$ and $[\mathfrak p,\mathfrak m]\subseteq\mathfrak m$, equivalently iff $\mathfrak p\oplus\mathfrak m$ is a $\mathbb Z_2$-graded subalgebra of $\mathfrak{so}(n)$ with even part $\mathfrak p$.
 
 **Not citable:**
@@ -244,9 +244,9 @@ At $p=q=3$ this is $25/22.5=10/9=\theta_0(6)^2$; at $(p,q)=(2,4)$ it is $25/(80/
 - *"modulo $\ker W$."* Retired; the class closes into the kernel.
 - *"A companion closed form pins such a point by its pair's dimensions alone"* ([results.md](../results.md):122): the closed form is [Lemma L23](../findings/ungraded-slack.md)'s $\theta=\tfrac2n\sqrt{rN/(N-r)}$ and belongs to the **subalgebra family**, not to L7's equality class; a graded point outside that family is not pinned by dimensions.
 
-**The one structural gap, restated as the block itself states it:** L7 bounds $\theta\operatorname{tr}(W_-)$ against $\lVert\mathrm{Ric}(W_-)\rVert^2$, which is not controlled by $(\theta,\delta^2)$, so the inequality alone closes nothing. **No finding:** I found no consumer citing more than the inequality plus the dichotomy.
+**The one structural gap, restated as the block itself states it:** L7 bounds $\theta\mathop{\mathrm{tr}}(W_-)$ against $\lVert\mathrm{Ric}(W_-)\rVert^2$, which is not controlled by $(\theta,\delta^2)$, so the inequality alone closes nothing. **No finding:** I found no consumer citing more than the inequality plus the dichotomy.
 
-**The equality clause has no argument in the block.** The proof paragraph closes at $\square$ before the clause appears. The support exists elsewhere, [L154](../findings/bounds.md)'s "$\tfrac12\operatorname{tr}X_{\mathrm{inv}}$ is L7's slack", then L154(i) and [L155](../findings/bounds.md), and an on-file Gate 2 report rebuilds the three conditions directly. **This is a presentation debt, not a mathematical one**, and §4.1–4.2 above is the four-line argument the block could carry.
+**The equality clause has no argument in the block.** The proof paragraph closes at $\square$ before the clause appears. The support exists elsewhere, [L154](../findings/bounds.md)'s "$\tfrac12\mathop{\mathrm{tr}}X_{\mathrm{inv}}$ is L7's slack", then L154(i) and [L155](../findings/bounds.md), and an on-file Gate 2 report rebuilds the three conditions directly. **This is a presentation debt, not a mathematical one**, and §4.1–4.2 above is the four-line argument the block could carry.
 
 ---
 
@@ -256,9 +256,9 @@ At $p=q=3$ this is $25/22.5=10/9=\theta_0(6)^2$; at $(p,q)=(2,4)$ it is $25/(80/
 
 **Locate.** [bounds.md](../findings/bounds.md):51: *"**rank-one positivity ($vv^{\mathsf T}\#ww^{\mathsf T}=[v,w][v,w]^{\mathsf T}$, a theorem rather than an assumption**), kills two terms…"*
 
-**Exhibit.** Take $v,w$ over an orthonormal basis $\{b_\alpha\}$ of $\mathfrak{so}(n)\cong\Lambda^2$ and sum: the displayed law gives $\langle(I\#I)\xi,\xi\rangle=\sum_{\alpha\beta}\langle[b_\alpha,b_\beta],\xi\rangle^2=-\operatorname{tr}(\mathrm{ad}\xi)^2=(n-2)\lVert\xi\rVert_F^2=2(n-2)\lVert\xi\rVert^2$, i.e. $I^\#=2(n-2)I$. The record's own [L131](../findings/isotropy-cap.md), at $R=I$ with $\mathrm{Ric}(I)=(n-1)\mathrm{id}$ and $\mathrm{Alt}(I)=0$, gives $I^\#=(n-2)I$. The two disagree by exactly $2$. [ATTEMPTS.md](../ATTEMPTS.md):941, the source this block was transcribed from, writes the same law **with the $\tfrac12$**: $(uu^{\mathsf T})\#(vv^{\mathsf T})=\tfrac12[u,v][u,v]^{\mathsf T}$.
+**Exhibit.** Take $v,w$ over an orthonormal basis $\{b_\alpha\}$ of $\mathfrak{so}(n)\cong\Lambda^2$ and sum: the displayed law gives $\langle(I\#I)\xi,\xi\rangle=\sum_{\alpha\beta}\langle[b_\alpha,b_\beta],\xi\rangle^2=-\mathop{\mathrm{tr}}(\mathrm{ad}\xi)^2=(n-2)\lVert\xi\rVert_F^2=2(n-2)\lVert\xi\rVert^2$, i.e. $I^\#=2(n-2)I$. The record's own [L131](../findings/isotropy-cap.md), at $R=I$ with $\mathrm{Ric}(I)=(n-1)\mathrm{id}$ and $\mathrm{Alt}(I)=0$, gives $I^\#=(n-2)I$. The two disagree by exactly $2$. [ATTEMPTS.md](../ATTEMPTS.md):941, the source this block was transcribed from, writes the same law **with the $\tfrac12$**: $(uu^{\mathsf T})\#(vv^{\mathsf T})=\tfrac12[u,v][u,v]^{\mathsf T}$.
 
-**Argue the opposite.** The most charitable reading is that the block uses a different normalisation of the bracket or of the $\Lambda^2$ identification. It cannot: the block's own proof matches $2\operatorname{tr}(W_+\#W_-)$ against $\operatorname{scal}(W_+\#W_-)$, which fixes $\operatorname{scal}=2\operatorname{tr}$, and that is the same normalisation in which $\operatorname{tr}(W^\#)=-1$ ([conventions.md](../findings/conventions.md):122) and $I^\#=(n-2)I$. One convention, two incompatible constants.
+**Argue the opposite.** The most charitable reading is that the block uses a different normalisation of the bracket or of the $\Lambda^2$ identification. It cannot: the block's own proof matches $2\mathop{\mathrm{tr}}(W_+\#W_-)$ against $\mathop{\mathrm{scal}}(W_+\#W_-)$, which fixes $\mathop{\mathrm{scal}}=2\mathop{\mathrm{tr}}$, and that is the same normalisation in which $\mathop{\mathrm{tr}}(W^\#)=-1$ ([conventions.md](../findings/conventions.md):122) and $I^\#=(n-2)I$. One convention, two incompatible constants.
 
 **Impact: none on L7.** Only the *positivity* of the law is used, and a positive constant does not change a PSD conclusion. **Impact on a consumer: total**, the block calls it "a theorem", so it reads as a citable identity, and it is used as one at [REVIEW_r515](../reviews/REVIEW_r515.md) §3 and §7.
 
@@ -298,7 +298,7 @@ At $p=q=3$ this is $25/22.5=10/9=\theta_0(6)^2$; at $(p,q)=(2,4)$ it is $25/(80/
 
 **Locate.** [bounds.md](../findings/bounds.md):51.
 
-**Exhibit.** The two terms $-\operatorname{tr}(\Pi_-W_+^\#)$ and $-\operatorname{tr}(\Pi_-W_-^\#)$ are $\le0$ because $\Pi_-\succeq0$ and $W_\pm^\#\succeq0$; $\Pi_-\preceq I$ is used only for $\operatorname{tr}(\Pi_-C)\le\operatorname{tr}(C)$ on the term that survives.
+**Exhibit.** The two terms $-\mathop{\mathrm{tr}}(\Pi_-W_+^\#)$ and $-\mathop{\mathrm{tr}}(\Pi_-W_-^\#)$ are $\le0$ because $\Pi_-\succeq0$ and $W_\pm^\#\succeq0$; $\Pi_-\preceq I$ is used only for $\mathop{\mathrm{tr}}(\Pi_-C)\le\mathop{\mathrm{tr}}(C)$ on the term that survives.
 
 **Argue the opposite.** "Against $0\preceq\Pi_-\preceq I$" would be right, and the sentence may be compressing both halves. It names only one half and attaches it to the wrong step. **Real; no consequence.**
 
@@ -313,7 +313,7 @@ At $p=q=3$ this is $25/22.5=10/9=\theta_0(6)^2$; at $(p,q)=(2,4)$ it is $25/(80/
 
 ## 10. What would break it, and what I did to look
 
-**The object that would falsify the inequality:** a $W\in\mathcal W_n$ with $Q(W)=\theta W$ and $\operatorname{tr}(P_-W_+^\#P_-)+\operatorname{tr}(P_-W_-^\#P_-)+2\operatorname{tr}((P_++P_0)C(P_++P_0))<0$. **No such object exists**, because each of the three summands is the compression of a PSD operator, and PSD-ness of $W_+^\#$, $W_-^\#$ and $W_+\#W_-$ follows from the rank-one law and $W_\pm\succeq0$. So the falsifier would have to be a failure of $\#$ to preserve the PSD cone, or of $W_\pm$ to be PSD, the first is a theorem, the second is [conventions.md](../findings/conventions.md):95's definition. **The inequality has no falsifier; it is closed.**
+**The object that would falsify the inequality:** a $W\in\mathcal W_n$ with $Q(W)=\theta W$ and $\mathop{\mathrm{tr}}(P_-W_+^\#P_-)+\mathop{\mathrm{tr}}(P_-W_-^\#P_-)+2\mathop{\mathrm{tr}}((P_++P_0)C(P_++P_0))<0$. **No such object exists**, because each of the three summands is the compression of a PSD operator, and PSD-ness of $W_+^\#$, $W_-^\#$ and $W_+\#W_-$ follows from the rank-one law and $W_\pm\succeq0$. So the falsifier would have to be a failure of $\#$ to preserve the PSD cone, or of $W_\pm$ to be PSD, the first is a theorem, the second is [conventions.md](../findings/conventions.md):95's definition. **The inequality has no falsifier; it is closed.**
 
 **The object that would falsify the equality clause:** a critical $W$ satisfying the three bracket conditions with $S>0$, or one with $S=0$ violating one of them. Neither can exist for the same reason, the three conditions are read off the vanishing of the three PSD compressions termwise, and a positive-weight sum of squares vanishes iff every term does.
 

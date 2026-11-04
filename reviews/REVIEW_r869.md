@@ -32,7 +32,7 @@ The reduction is sound and every combinatorial factor in it is right, including 
 
 ## Conventions, quoted from the brief
 
-- $\Lambda^2\mathbb R^n$ is realised as skew matrices. $\varphi_{ab}=E_{ba}-E_{ab}$ and it is a UNIT bivector. The inner product is $\langle X,Y\rangle=\tfrac12\operatorname{tr}(X^{\mathsf T}Y)$.
+- $\Lambda^2\mathbb R^n$ is realised as skew matrices. $\varphi_{ab}=E_{ba}-E_{ab}$ and it is a UNIT bivector. The inner product is $\langle X,Y\rangle=\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$.
 - $u\wedge v=vu^{\mathsf T}-uv^{\mathsf T}$. At orthonormal $u,v$ this is a unit bivector and $(u\wedge v)(u\wedge v)^{\mathsf T}=\Pi_P$.
 - $\mathcal W_n$ is the space of algebraic Weyl tensors: symmetric operators on $\Lambda^2\mathbb R^n$, first Bianchi, Ricci-flat, trace-free. $P(W)=\langle W,W^2+W^\#\rangle$, $\theta=P(W)/\lVert W\rVert^3$, and criticality on the unit sphere is $Q(W)=W^2+W^\#=\theta W$.
 - $\sqrt{3/2}=1.224745$ and $\theta_0(n)=\sqrt{2(n-1)(n-2)}/n$.
@@ -49,9 +49,9 @@ What every claim below is entitled to lean on, named once so the reader can see 
 | H4 | The marginal $\sum_{\beta\gamma}T_{\alpha\beta\gamma}=2(n-2)$ at every index, Lemma [L153](../findings/bounds.md) (given 15) | 2, 5, 8, 10, 14 |
 | H5 | Relation (B), $\sum_{\beta\gamma}\lambda_\beta T_{\alpha\beta\gamma}=-2\lambda_\alpha$ at every index, the diagonal of $W\#I=-W$ (given 12, given 15) | 3, 5, 9, 10 |
 | H6 | Relation (C), $\sum_{\beta\gamma}\lambda_\beta\lambda_\gamma T_{\alpha\beta\gamma}=2\lambda_\alpha(\theta-\lambda_\alpha)$ at a critical point (given 12, given 15) | 9 |
-| H7 | The pair cap $\sum_\gamma T_{\alpha\beta\gamma}\le2$ in general and $\le1$ on the decomposable locus (given 15), with $\sum_\gamma T_{\alpha\beta\gamma}=\operatorname{tr}(\Pi_\alpha\Pi_\beta)$ for orthogonal decomposable unit forms (given 8) | 6 |
+| H7 | The pair cap $\sum_\gamma T_{\alpha\beta\gamma}\le2$ in general and $\le1$ on the decomposable locus (given 15), with $\sum_\gamma T_{\alpha\beta\gamma}=\mathop{\mathrm{tr}}(\Pi_\alpha\Pi_\beta)$ for orthogonal decomposable unit forms (given 8) | 6 |
 | H8 | Trace-freeness $\sum_ia_i\mu_i=0$ and unit norm $\sum_ia_i\mu_i^2=1$ (given 17) | 2, 3, 8, 10 |
-| H9 | $W_{\mathbb{CP}^2}$ at $n=4$ is critical and a local maximum at $\theta=\sqrt{3/2}$ exactly, self-dual with blocks $c\,\mathrm{diag}(2,-1,-1)$ and $0$ (given 5), with $(W^\#)|_{\Lambda^\pm}=2\mathcal A^2-\operatorname{tr}(\mathcal A^2)\mathrm{Id}_3$ (given 3) | 0, 1, 3, 6, 11 |
+| H9 | $W_{\mathbb{CP}^2}$ at $n=4$ is critical and a local maximum at $\theta=\sqrt{3/2}$ exactly, self-dual with blocks $c\,\mathrm{diag}(2,-1,-1)$ and $0$ (given 5), with $(W^\#)|_{\Lambda^\pm}=2\mathcal A^2-\mathop{\mathrm{tr}}(\mathcal A^2)\mathrm{Id}_3$ (given 3) | 0, 1, 3, 6, 11 |
 | H10 | The two-value bound $(n-1)\sqrt{s/(N(N-s))}$ on $\tfrac n2\le s\le\tfrac{n(n-2)}4$, maximum $\theta_0(n)$ at the endpoint (given 16) | 10 |
 
 Notation, fixed for the rest of the report. The eigenbasis splits into level sets $L_1,\dots,L_L$ of **distinct** eigenvalues $\mu_i$ with $a_i=\lvert L_i\rvert$ and $\sum_ia_i=N=\binom n2$. Then
@@ -68,7 +68,7 @@ At $n=4$ take $f_1,f_2,f_3$ and $g_1,g_2,g_3$ with $f_i=(\varphi_{1,i+1}\pm\varp
 
 $$f_1=\tfrac{\varphi_{12}+\varphi_{34}}{\sqrt2},\quad f_2=\tfrac{\varphi_{13}+\varphi_{42}}{\sqrt2},\quad f_3=\tfrac{\varphi_{14}+\varphi_{23}}{\sqrt2},$$
 
-and the $g_i$ with the minus signs. These six are orthonormal for $\langle X,Y\rangle=\tfrac12\operatorname{tr}(X^{\mathsf T}Y)$. With $L_{ab}=E_{ab}-E_{ba}=-\varphi_{ab}$ and $[L_{ab},L_{cd}]=\delta_{bc}L_{ad}+\delta_{ad}L_{bc}-\delta_{ac}L_{bd}-\delta_{bd}L_{ac}$,
+and the $g_i$ with the minus signs. These six are orthonormal for $\langle X,Y\rangle=\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$. With $L_{ab}=E_{ab}-E_{ba}=-\varphi_{ab}$ and $[L_{ab},L_{cd}]=\delta_{bc}L_{ad}+\delta_{ad}L_{bc}-\delta_{ac}L_{bd}-\delta_{bd}L_{ac}$,
 
 $$[L_{12}+L_{34},\,L_{13}+L_{42}]=-L_{23}-L_{14}-L_{14}-L_{23}=-2(L_{14}+L_{23}),$$
 
@@ -84,9 +84,9 @@ Trace-free: $2c-2c+0=0$. Unit norm: $4c^2+2c^2=1$. Its class variables are $v_{1
 
 By H3 the pairing on symmetric operators is the plain trace, so
 
-$$\langle W,W^2\rangle=\operatorname{tr}(W^3)=\sum_\alpha\lambda_\alpha^3=\sum_ia_i\mu_i^3,$$
+$$\langle W,W^2\rangle=\mathop{\mathrm{tr}}(W^3)=\sum_\alpha\lambda_\alpha^3=\sum_ia_i\mu_i^3,$$
 
-$$\langle W,W^\#\rangle=\operatorname{tr}(WW^\#)=\sum_k\lambda_k(W^\#)_{kk}\overset{\text{H2}}{=}\tfrac12\sum_{k\beta\gamma}\lambda_k\lambda_\beta\lambda_\gamma T_{k\beta\gamma}=\tfrac12m_3 .$$
+$$\langle W,W^\#\rangle=\mathop{\mathrm{tr}}(WW^\#)=\sum_k\lambda_k(W^\#)_{kk}\overset{\text{H2}}{=}\tfrac12\sum_{k\beta\gamma}\lambda_k\lambda_\beta\lambda_\gamma T_{k\beta\gamma}=\tfrac12m_3 .$$
 
 At unit norm $\theta=P(W)$, so $\theta=\sum_ia_i\mu_i^3+\tfrac12m_3$. **CONFIRMED.**
 
@@ -96,7 +96,7 @@ The witness pins it rather than merely tolerating it. From section 0, $\sum_\alp
 
 $$m_3=\sum_{\alpha\beta\gamma}\lambda_\alpha\lambda_\beta\lambda_\gamma T_{\alpha\beta\gamma}=6\cdot2\cdot(2c)(-c)(-c)=24c^3=\frac{24}{6\sqrt6}=\frac{4}{\sqrt6},$$
 
-the $g$-triple contributing nothing because $\mu_3=0$. Then $\theta=1/\sqrt6+2/\sqrt6=3/\sqrt6=\sqrt{3/2}$, which is H9 to the last digit. With a $1$ in place of the $\tfrac12$ the same witness would give $5/\sqrt6=2.041$, contradicting given 5. Independently, H9's own route agrees: $\mathcal A=c\,\mathrm{diag}(2,-1,-1)$ gives $\mathcal A^2=c^2\mathrm{diag}(4,1,1)$ and $\operatorname{tr}(\mathcal A^2)=1$, so $W^\#|_{\Lambda^+}=\mathrm{diag}(\tfrac13,-\tfrac23,-\tfrac23)$, $W^\#|_{\Lambda^-}=0$, and $\operatorname{tr}(WW^\#)=2c=2/\sqrt6=\tfrac12m_3$.
+the $g$-triple contributing nothing because $\mu_3=0$. Then $\theta=1/\sqrt6+2/\sqrt6=3/\sqrt6=\sqrt{3/2}$, which is H9 to the last digit. With a $1$ in place of the $\tfrac12$ the same witness would give $5/\sqrt6=2.041$, contradicting given 5. Independently, H9's own route agrees: $\mathcal A=c\,\mathrm{diag}(2,-1,-1)$ gives $\mathcal A^2=c^2\mathrm{diag}(4,1,1)$ and $\mathop{\mathrm{tr}}(\mathcal A^2)=1$, so $W^\#|_{\Lambda^+}=\mathrm{diag}(\tfrac13,-\tfrac23,-\tfrac23)$, $W^\#|_{\Lambda^-}=0$, and $\mathop{\mathrm{tr}}(WW^\#)=2c=2/\sqrt6=\tfrac12m_3$.
 
 ## 2. $m_0$ and $m_1$
 
@@ -106,12 +106,12 @@ $$m_0=\sum_{ijk}t_{ijk}=2(n-2)\sum_ia_i=2(n-2)N=n(n-1)(n-2),$$
 
 and weighting by $\mu_i$,
 
-$$m_1=\sum_{ijk}\mu_it_{ijk}=2(n-2)\sum_ia_i\mu_i=2(n-2)\operatorname{tr}W=0 .$$
+$$m_1=\sum_{ijk}\mu_it_{ijk}=2(n-2)\sum_ia_i\mu_i=2(n-2)\mathop{\mathrm{tr}}W=0 .$$
 
 $m_1=0$ needs **trace-freeness of $W$ as an operator on $\Lambda^2$ and nothing more.** H4 is a statement about the structure constants of $\mathfrak{so}(n)$ in an orthonormal basis and is indifferent to $W$, so no decomposability, no Ricci-flatness and no criticality enters. Two remarks worth recording.
 
 - $m_1=0$ is not an independent constraint on the $v_S$. It is implied by the three level-set marginals contracted against $\mu_i$, which is the first half of the rank deficiency found in section 12.
-- $m_0$ cross-checks against given 10 through given 8: on the decomposable locus $\sum_\gamma T_{\alpha\beta\gamma}=\lVert[\omega_\alpha,\omega_\beta]\rVert^2=\operatorname{tr}(\Pi_\alpha\Pi_\beta)$, so $m_0=\sum_{\alpha\ne\beta}\operatorname{tr}(\Pi_\alpha\Pi_\beta)=n(n-1)(n-2)$, the fixed total given 10 states. Two independently established facts land on the same integer, which is the kind of agreement a miscounted factor of two does not survive.
+- $m_0$ cross-checks against given 10 through given 8: on the decomposable locus $\sum_\gamma T_{\alpha\beta\gamma}=\lVert[\omega_\alpha,\omega_\beta]\rVert^2=\mathop{\mathrm{tr}}(\Pi_\alpha\Pi_\beta)$, so $m_0=\sum_{\alpha\ne\beta}\mathop{\mathrm{tr}}(\Pi_\alpha\Pi_\beta)=n(n-1)(n-2)$, the fixed total given 10 states. Two independently established facts land on the same integer, which is the kind of agreement a miscounted factor of two does not survive.
 
 Witness: $m_0=v_{122}+v_{333}=24=2(n-2)N=2\cdot2\cdot6$, and $m_1=\tfrac13[\sigma_1(122)\cdot12+\sigma_1(333)\cdot12]=\tfrac13[0+0]=0$ since $\sigma_1(122)=\mu_1+2\mu_2=2c-2c=0$.
 

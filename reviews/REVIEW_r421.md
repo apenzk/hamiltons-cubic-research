@@ -6,7 +6,7 @@
 
 | # | claim | verdict |
 | --- | --- | --- |
-| 1 | $F_u(h)=\tfrac12(uh+hu)+u\#h$ **is** $u\circ h$, hence $F_u=\theta^*L_e$, and the table lists $\operatorname{spec}(L_e)$ | **CONFIRMED**, pinned four independent ways; no factor of $2$ |
+| 1 | $F_u(h)=\tfrac12(uh+hu)+u\#h$ **is** $u\circ h$, hence $F_u=\theta^*L_e$, and the table lists $\mathop{\mathrm{spec}}(L_e)$ | **CONFIRMED**, pinned four independent ways; no factor of $2$ |
 | 2 | (a) $\tfrac12\mathrm{Hess}(P\vert_S)_u[H,H]=3\theta^*(\langle L_eH,H\rangle-\tfrac12)$ | **CONFIRMED**, re-derived from the cubic, and the whole curve $t\mapsto P(\gamma(t))$ is exact, not asymptotic |
 | 3 | (a) $\le-\theta^*/2$ for every unit $H\perp T_u\mathcal O$, at every $n\ge12$ | **CONFIRMED, with a scope note**, it inherits [Lemma L21](../findings/route-a.md)'s $\tfrac13$, whose four block spectra are floating-point and whose stable-range clause the record itself lists as an open obligation |
 | 4 | (b) $\tfrac12\Phi''(0^+)\le-\theta^*/2+\lvert\kappa_n\rvert c_2(H)$ for such $H$ | **CONFIRMED**, and the $O(t^3)$ is legitimate, I supply the Rellich argument the lemma omits |
@@ -34,7 +34,7 @@ which is [Lemma L20](../findings/route-a.md)'s $F_u$ on the nose. The dangerous 
 - **[Lemma L20](../findings/route-a.md)'s own expansion.** $P$ is a cubic with polarisation $T(X,Y,Z)=\langle X\circ Y,Z\rangle$, so $P(\cos\varphi\,u+\sin\varphi\,V)=\cos^3\varphi\,\theta^*+3\cos\varphi\sin^2\varphi\,\langle u\circ V,V\rangle+\sin^3\varphi\,P(V)$ exactly. Matching against L20's $m=\cos^3\varphi+3\cos\varphi\sin^2\varphi\,\alpha+\sin^3\varphi\,\gamma_V$ with $\alpha=\sqrt{2/3}\langle F_uV,V\rangle$ reproduces $F_u=u\circ(\cdot)$ and nothing else.
 - **The padded-flat cross-check.** $\langle L_eH,H\rangle=0$ gives $\tfrac12\mathrm{Hess}=-\tfrac32\theta^*=-1.8371$, against the record's independently measured $-1.846$ at $n=12$ ([ATTEMPTS.md](../ATTEMPTS.md), the first-order-protection entry). A factor of $2$ would put the prediction at $-3.674$ or $0$.
 
-So the table's header ($\operatorname{spec}(F_\lambda)/\theta^*$), does list the spectrum of $L_e$, and $\alpha\le\tfrac13$ reads $\langle L_eV,V\rangle\le\tfrac13$. Note also that the record's own $\#$-polarisation warning in the [Lemma L22](../findings/route-a.md) block is consistent with this: $\tfrac12(Q(x+y)-Q(x-y))=2\,x\circ y$, which is the "$2T(x,y,\cdot)$, divide by four" line, and it is the same convention.
+So the table's header ($\mathop{\mathrm{spec}}(F_\lambda)/\theta^*$), does list the spectrum of $L_e$, and $\alpha\le\tfrac13$ reads $\langle L_eV,V\rangle\le\tfrac13$. Note also that the record's own $\#$-polarisation warning in the [Lemma L22](../findings/route-a.md) block is consistent with this: $\tfrac12(Q(x+y)-Q(x-y))=2\,x\circ y$, which is the "$2T(x,y,\cdot)$, divide by four" line, and it is the same convention.
 
 ## 2. Part (a), the Hessian identity is right, and stronger than stated
 

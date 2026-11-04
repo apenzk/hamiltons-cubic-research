@@ -10,7 +10,7 @@ The brief ([BRIEF_L88.md](BRIEF_L88.md)) was cold. No numerical work was done, e
 | 4 | Every one of the 24 blocks is of real type | CONFIRMED (classical, unfiled) |
 | 5 | The 24 antisymmetric directions are genuine invariants and are gauge for the Gram-to-sextic map | CONFIRMED |
 | 6 | "The identification holds only in a basis real for $\sigma$, and such a basis forces $h$ real symmetric" | HYPOTHESIS-DEBT |
-| 7 | "On a multiplicity-2 block the kernel direction is the imaginary coordinate iff $\operatorname{Im}h=0$" | REFUTED AS STATED |
+| 7 | "On a multiplicity-2 block the kernel direction is the imaginary coordinate iff $\mathop{\mathrm{Im}}h=0$" | REFUTED AS STATED |
 | 8 | "Over 4000 bases ... the relative distance never fell below 0.541" | HYPOTHESIS-DEBT |
 | 9 | The converse example $Q=\mathrm{diag}(1,i)$ gives $h=I$ with a real symmetric kernel direction | CONFIRMED |
 | 10 | Rephasing one copy by $i$ passes the Hermitian assert and $\det h\ne0$ | CONFIRMED AS ALGEBRA (the multi-probe test is undefined in the brief) |
@@ -96,13 +96,13 @@ Hand reading of Passage B's table:
 - **Application to $(2,0)$.** The conclusion "false" at $\lambda=(2,0)$ rests on the unargued first half and on the measured $h$. The $h$ quoted in the passage is Hermitian ($\overline{55i/37}=-55i/37$), with $\det h=5075/1628-3025/1369=(187775-133100)/60236=54675/60236>0$, positive definite and non-real. That is reading, and its source is a measurement.
 - **Verdict:** HYPOTHESIS-DEBT.
 
-## 7. "On a multiplicity-2 block the kernel direction is the imaginary coordinate iff $\operatorname{Im}h=0$" (claim 7, attack item 5)
+## 7. "On a multiplicity-2 block the kernel direction is the imaginary coordinate iff $\mathop{\mathrm{Im}}h=0$" (claim 7, attack item 5)
 
 **Discrepancy record.**
 
-1. **Locate.** Source line 128 (brief line 17): "On a multiplicity-$2$ block the kernel direction is the imaginary coordinate iff $\operatorname{Im}h=0$".
-2. **Exhibit.** The passage's own next sentence: "$Q=\mathrm{diag}(1,i)$ gives $h=I$ with a real symmetric kernel direction". Checked in Section 0's convention: $h=\mathrm{diag}(1,-i)\,\mathrm{diag}(1,i)=I$, so $\operatorname{Im}h=0$. $J\,\mathrm{diag}(1,i)=\begin{psmallmatrix}0&i\\-1&0\end{psmallmatrix}$, $Q^*JQ=\begin{psmallmatrix}0&i\\i&0\end{psmallmatrix}$, $iQ^*JQ=\begin{psmallmatrix}0&-1\\-1&0\end{psmallmatrix}$, real symmetric and outside $\mathbb R\,iJ$. The right side of the "iff" holds and the left fails. A second instance with no diagonal structure: $Q=\tfrac1{\sqrt2}\begin{psmallmatrix}1&i\\i&1\end{psmallmatrix}$ is unitary, so $h=I$, and $Q^*JQ=\mathrm{diag}(i,-i)$, $iQ^*JQ=\mathrm{diag}(-1,1)$, again real symmetric. The textual contradiction between "iff" and "the converse fails too" is independent of the convention.
-3. **Opposite reading.** The most charitable reading is "only if": if the kernel direction is the imaginary coordinate then $\operatorname{Im}h=0$, with "the converse fails too" retracting the other direction. That reading is consistent with the example, and is the direction used against the $(2,0)$ basis. It is not what the sentence says, and the "only if" direction carries no argument on file (it is the $m=2$ case of the debt in Section 6).
+1. **Locate.** Source line 128 (brief line 17): "On a multiplicity-$2$ block the kernel direction is the imaginary coordinate iff $\mathop{\mathrm{Im}}h=0$".
+2. **Exhibit.** The passage's own next sentence: "$Q=\mathrm{diag}(1,i)$ gives $h=I$ with a real symmetric kernel direction". Checked in Section 0's convention: $h=\mathrm{diag}(1,-i)\,\mathrm{diag}(1,i)=I$, so $\mathop{\mathrm{Im}}h=0$. $J\,\mathrm{diag}(1,i)=\begin{psmallmatrix}0&i\\-1&0\end{psmallmatrix}$, $Q^*JQ=\begin{psmallmatrix}0&i\\i&0\end{psmallmatrix}$, $iQ^*JQ=\begin{psmallmatrix}0&-1\\-1&0\end{psmallmatrix}$, real symmetric and outside $\mathbb R\,iJ$. The right side of the "iff" holds and the left fails. A second instance with no diagonal structure: $Q=\tfrac1{\sqrt2}\begin{psmallmatrix}1&i\\i&1\end{psmallmatrix}$ is unitary, so $h=I$, and $Q^*JQ=\mathrm{diag}(i,-i)$, $iQ^*JQ=\mathrm{diag}(-1,1)$, again real symmetric. The textual contradiction between "iff" and "the converse fails too" is independent of the convention.
+3. **Opposite reading.** The most charitable reading is "only if": if the kernel direction is the imaginary coordinate then $\mathop{\mathrm{Im}}h=0$, with "the converse fails too" retracting the other direction. That reading is consistent with the example, and is the direction used against the $(2,0)$ basis. It is not what the sentence says, and the "only if" direction carries no argument on file (it is the $m=2$ case of the debt in Section 6).
 
 - **Verdict:** REFUTED AS STATED. The surviving "only if" direction is HYPOTHESIS-DEBT.
 
@@ -117,7 +117,7 @@ Hand reading of Passage B's table:
 
 - **Claim 9.** Verified in closed form in Section 7, step 2. CONFIRMED.
 - **Claim 10.** With $D=\mathrm{diag}(1,i)$, rephasing sends $h\mapsto D^*hD$, which is Hermitian when $h$ is, and $\det(D^*hD)=|\det D|^2\det h=\det h$. So the Hermitian assert and $\det h\ne0$ are both blind to the rephasing, while Section 7 shows the "imaginary coordinate" split moves. The "multi-probe test" is not defined in the brief and is not assessed. CONFIRMED AS ALGEBRA.
-- **Claim 11.** A basis $e=fQ$ with $Q=cR$, $c\in\mathbb C^\times$, $R$ real, has $h=|c|^2R^{\mathsf T}R$ real. So nonzero $\operatorname{Im}h$ implies $e$ is not real, even up to a common phase. Correct as an implication. The value of $h$ is a measurement ("reproduced exactly by reviewers 201 and 202" is agreement between runs, not a derivation). CONFIRMED AS ALGEBRA.
+- **Claim 11.** A basis $e=fQ$ with $Q=cR$, $c\in\mathbb C^\times$, $R$ real, has $h=|c|^2R^{\mathsf T}R$ real. So nonzero $\mathop{\mathrm{Im}}h$ implies $e$ is not real, even up to a common phase. Correct as an implication. The value of $h$ is a measurement ("reproduced exactly by reviewers 201 and 202" is agreement between runs, not a derivation). CONFIRMED AS ALGEBRA.
 - **"They appear because the 41 highest-weight vectors were built over $\mathbb Q(i)$."** Read literally, the $24$ appear in any Hermitian ansatz, in any basis (Section 5). Candidate 9a records the charitable reading under which the sentence stands.
 
 ## 10. Scope: Passage B's multiplicities (claim 12, attack item 6)
@@ -125,7 +125,7 @@ Hand reading of Passage B's table:
 - Passage B's multiplicities come "from the character computation" in a script. By the brief's rule, a statement supported only by a script is HYPOTHESIS-DEBT.
 - Everything numeric in L88 ($65$, $24$, $89$, the $m=2$ block $(2,0)$ as the site of the non-real $h$) depends on them.
 - What is checkable by reading holds: all 24 dimensions, $\sum m d=7770=\dim U$, the multiplicity and unknown totals $41$ and $65$. These constrain the multiplicities but do not determine them (Section 3).
-- Passage B itself marks the trivial multiplicity $1$ as resting on an owed spanning statement and on $\operatorname{tr}(W^3)\not\equiv0$ on $\mathcal W_5$. That owed item feeds the $m=1$ count.
+- Passage B itself marks the trivial multiplicity $1$ as resting on an owed spanning statement and on $\mathop{\mathrm{tr}}(W^3)\not\equiv0$ on $\mathcal W_5$. That owed item feeds the $m=1$ count.
 - **Verdict:** HYPOTHESIS-DEBT.
 
 ## 11. Passage C (attack item 7)
@@ -148,7 +148,7 @@ Both Lean files are withheld by the brief and were not opened. No finding.
 | 2, 3 | An arithmetic slip in the sums | Summed by hand, no slip |
 | 4 | A weight in $U$ that is half-integral, or an irrep of complex type | All 24 weights integral in the confirmed coordinates, and complex type is impossible for $B_2$ |
 | 5 | A nonzero antisymmetric form with $A(v,v)\ne0$ | Impossible by $A(v,v)=-A(v,v)$. For the PSD cone, $H_2=I+2iJ$ exhibited |
-| 6, 7 | A basis with $\operatorname{Im}h=0$ whose kernel direction is not the imaginary coordinate | Found: $Q=\mathrm{diag}(1,i)$ (the passage's own) and $Q=\tfrac1{\sqrt2}\begin{psmallmatrix}1&i\\i&1\end{psmallmatrix}$ |
+| 6, 7 | A basis with $\mathop{\mathrm{Im}}h=0$ whose kernel direction is not the imaginary coordinate | Found: $Q=\mathrm{diag}(1,i)$ (the passage's own) and $Q=\tfrac1{\sqrt2}\begin{psmallmatrix}1&i\\i&1\end{psmallmatrix}$ |
 | 8 | A basis consistent with the measured $h$ at relative distance below $0.541$ | Not searchable without numerics. The claim is a sample |
 | 9, 10 | A failure of the closed-form example or of $\det$-invariance | Checked, none |
 

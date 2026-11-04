@@ -32,7 +32,7 @@ Here $A=M_{ij}+M_{kl}$, $B=M_{ik}+M_{jl}$, $C=M_{il}+M_{jk}$ are the opposite-pa
 
 > **Two recorded facts settle it.**
 >
-> **(1)** [second-order.md](../findings/second-order.md) carries: *"Consequently [Lemma L24] gives, at every maximiser and every $4$-subset, $A^2+B^2+C^2-AB-BC-CA\le\theta^2$."* The surrounding block fixes a **pair-diagonal** $M$ and says the block and its spectrum *"need diagonality alone, with no criticality and no row sum entering, which is what makes them applicable to $\operatorname{diag}(M)$ in a frame where $W$ is not diagonal"*, the same object I12 quantifies over.
+> **(1)** [second-order.md](../findings/second-order.md) carries: *"Consequently [Lemma L24] gives, at every maximiser and every $4$-subset, $A^2+B^2+C^2-AB-BC-CA\le\theta^2$."* The surrounding block fixes a **pair-diagonal** $M$ and says the block and its spectrum *"need diagonality alone, with no criticality and no row sum entering, which is what makes them applicable to $\mathop{\mathrm{diag}}(M)$ in a frame where $W$ is not diagonal"*, the same object I12 quantifies over.
 >
 > **(2)** [conventions.md](../findings/conventions.md) records, from [L94](../findings/bispectral.md): *"$t=t_F=\lVert K(F)\rVert_F^2$ per frame, and $\kappa^2=\max_Ft_F$. Lemma L94 gives $\kappa^2\le2\lVert M\rVert_F^2$ with equality exactly at coordinate-diagonal $W$, so $t_F\le2$ in every frame."*
 >

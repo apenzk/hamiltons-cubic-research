@@ -62,7 +62,7 @@ All five links hold under H1, H2, H3, H5. Verdict C1a: CONFIRMED, with H1 and H2
 ### 1.2 Which rank is bounded (attack item 1)
 
 - The heading says "the unconditional lower bound $1$" and never names the map. Passage B names two ranks, $\mathrm{rank}\,\mu_K$ and $\mathrm{rank}(\mathrm{ev}\circ\mu_K)$.
-- The argument exhibits $\Delta\in\operatorname{im}\mu_K$. If $\Delta\ne0$ this gives $\mathrm{rank}\,\mu_K\ge1$.
+- The argument exhibits $\Delta\in\mathop{\mathrm{im}}\mu_K$. If $\Delta\ne0$ this gives $\mathrm{rank}\,\mu_K\ge1$.
 - For $\mathrm{rank}(\mathrm{ev}\circ\mu_K)\ge1$ one needs $\Delta(s)\ne0$ for some $s\in S$. The text evaluates at "random points", which are not stated to be the certificate's $S$. Nothing on file gives that bound.
 - Bullet 3's formula $\mathrm{rank}=14-\dim\{\dots\}$ involves no point set, so within the lemma "rank" is $\mathrm{rank}\,\mu_K$. The charitable reading is forced and adopted. The statement should name $\mu_K$.
 
@@ -71,7 +71,7 @@ All five links hold under H1, H2, H3, H5. Verdict C1a: CONFIRMED, with H1 and H2
 **Candidate: the link "nonzero" is supported on file only by a sample.**
 
 1. *Location.* Line 189: "and nonzero ($\Delta/\lVert W\rVert^6\approx0.5$ at random points)".
-2. *Failure exhibited.* The parenthetical is the only reason given. A value $\approx0.5$ at unspecified random points is a floating-point measurement, which the brief's rules classify as HYPOTHESIS-DEBT. Without $\Delta\ne0$, step 2 of 1.1 gives only $\Delta\in\operatorname{im}\mu_K$, which is compatible with $\mu_K=0$ (rank $0$).
+2. *Failure exhibited.* The parenthetical is the only reason given. A value $\approx0.5$ at unspecified random points is a floating-point measurement, which the brief's rules classify as HYPOTHESIS-DEBT. Without $\Delta\ne0$, step 2 of 1.1 gives only $\Delta\in\mathop{\mathrm{im}}\mu_K$, which is compatible with $\mu_K=0$ (rank $0$).
 3. *Charitable reading.* The same sentence says $\Delta$ is "a sum of squares of cubics of $K$" over a basis. One could read "nonzero" as a consequence of that description. The text does not draw that consequence: it offers the sample as the reason, and the consequence needs H4 ($K\ne0$) and H5 (reality), neither of which the sentence invokes. The reading does not make the written chain complete.
 
 The finding stands. **What would have to be proved:** $\Delta\not\equiv0$ as a polynomial.
@@ -89,7 +89,7 @@ Relative to Passage B the adjective is accurate: the bound uses none of L90's th
 The system is $\mu_K(G)=F_5$, $G\in\mathcal G$, $\dim\mathcal G=36$.
 
 - *Linear.* The homogeneous solution set is $\ker\mu_K$, of dimension $36-\mathrm{rank}\,\mu_K$ by rank-nullity.
-- *Affine.* The inhomogeneous solution set is empty when $F_5\notin\operatorname{im}\mu_K$, and otherwise $G_0+\ker\mu_K$, an affine space of dimension $36-\mathrm{rank}\,\mu_K$. This is exactly bullet 2's claim, and consistency is equivalent to $F_5\in\operatorname{im}\mu_K$, as the bullet says. H6 is needed for this to be a question at all.
+- *Affine.* The inhomogeneous solution set is empty when $F_5\notin\mathop{\mathrm{im}}\mu_K$, and otherwise $G_0+\ker\mu_K$, an affine space of dimension $36-\mathrm{rank}\,\mu_K$. This is exactly bullet 2's claim, and consistency is equivalent to $F_5\in\mathop{\mathrm{im}}\mu_K$, as the bullet says. H6 is needed for this to be a question at all.
 - *psd set.* The set a sum-of-squares route needs is $(G_0+\ker\mu_K)\cap\{G\succeq0\}$. Its dimension is at most $36-\mathrm{rank}$, and it can be empty or lower-dimensional even when the system is consistent. The bullet speaks of "the solution set" of the linear system and calls consistency a necessary condition, never a sufficient one, so it makes no claim about the psd set.
 - *Under the given.* If L90's equality $\mathrm{rank}\,\mu_K=13$ is granted, the solution space has dimension $23$ when consistent.
 
@@ -103,10 +103,10 @@ Verdict C2: CONFIRMED.
 
 **Check of the algebra, reading H7-H9.** Let $\mathcal N=\{F\in\mathcal S:\mathrm{Cat}_F(q,q')=0\ \forall q,q'\in K\}$.
 
-1. $\operatorname{im}\mu_K\subseteq\mathcal S$, so by H8 $\dim(\operatorname{im}\mu_K)^{\perp}\cap\mathcal S=14-\mathrm{rank}\,\mu_K$.
-2. $F\in\mathcal S$ is orthogonal to $\operatorname{im}\mu_K$ iff $\sum_{a,b}G_{ab}\mathrm{Cat}_F(q_a,q_b)=0$ for every $G\in\mathcal G$.
+1. $\mathop{\mathrm{im}}\mu_K\subseteq\mathcal S$, so by H8 $\dim(\mathop{\mathrm{im}}\mu_K)^{\perp}\cap\mathcal S=14-\mathrm{rank}\,\mu_K$.
+2. $F\in\mathcal S$ is orthogonal to $\mathop{\mathrm{im}}\mu_K$ iff $\sum_{a,b}G_{ab}\mathrm{Cat}_F(q_a,q_b)=0$ for every $G\in\mathcal G$.
 3. For $F\in\mathcal S$ the form $B_F=\mathrm{Cat}_F|_{K\times K}$ is itself invariant (H1 and invariance of the pairing). Step 2 says $B_F$ is orthogonal to every element of $\mathcal G$, including $B_F$, so $B_F=0$ by definiteness of the trace pairing on real symmetric forms. Conversely $B_F=0$ gives step 2.
-4. Hence $(\operatorname{im}\mu_K)^\perp\cap\mathcal S=\mathcal N$ and $\mathrm{rank}\,\mu_K=14-\dim\mathcal N$.
+4. Hence $(\mathop{\mathrm{im}}\mu_K)^\perp\cap\mathcal S=\mathcal N$ and $\mathrm{rank}\,\mu_K=14-\dim\mathcal N$.
 
 So the formula is correct under H7 and H8. Neither is stated, and no step of 1-4 is on file.
 
@@ -135,7 +135,7 @@ Verdict C3b: HYPOTHESIS-DEBT.
 ## 4. The three bullets against Passage B (attack item 5)
 
 - **Bullet 1 against B.** B proves $\mathrm{rank}\,\mu_K\le13$ and grants $\ge13$ conditionally. L91 bullet 1 gives $\ge1$ on none of B's modular hypotheses. No conflict. It bounds $\mu_K$, not $\mathrm{ev}\circ\mu_K$ (1.2).
-- **Bullet 2 against B.** B's conclusion ("a sextic in the image agreeing with $F_5$ on $S$ is then $F_5$") never asserts $F_5\in\operatorname{im}\mu_K$, and bullet 2 calls that membership open. No conflict. Granting B's equality, $\operatorname{im}\mu_K$ is a $13$-dimensional subspace of the hyperplane $\{F\in\mathcal S:F(W_0)=0\}$, which has dimension $13$, so the two coincide and consistency becomes the single condition $F_5(W_0)=0$. Neither passage records this. It is a scope observation, not a defect.
+- **Bullet 2 against B.** B's conclusion ("a sextic in the image agreeing with $F_5$ on $S$ is then $F_5$") never asserts $F_5\in\mathop{\mathrm{im}}\mu_K$, and bullet 2 calls that membership open. No conflict. Granting B's equality, $\mathop{\mathrm{im}}\mu_K$ is a $13$-dimensional subspace of the hyperplane $\{F\in\mathcal S:F(W_0)=0\}$, which has dimension $13$, so the two coincide and consistency becomes the single condition $F_5(W_0)=0$. Neither passage records this. It is a scope observation, not a defect.
 - **Bullet 3 against B.** B's cap is $\dim\mathcal N\ge1$ in the language of 3.1, and B's conditional equality is $\dim\mathcal N=1$. "Tightness is open" matches B's "conditional on one measured rank". No conflict.
 
 No finding: the three bullets are consistent with the given as stated.
@@ -217,12 +217,12 @@ No finding against correctness: the lemma adds an unconditional nonzero-rank sta
 1. **Hypothesis inventory.** Given above. Used but unstated: H1, H2, H6, H7, H8, H9, H10, H11. H4 enters only through the imported count $36$.
 2. **Quantifier order and scope.** The bounded rank is $\mathrm{rank}\,\mu_K$ over $\mathcal G$ (the $36$ invariant forms) into $\mathcal S$ (the $14$ invariant sextics), not $\mathrm{rank}(\mathrm{ev}\circ\mu_K)$. The set in bullet 3 must be taken inside $\mathcal S$, not all sextics. Both are unstated (1.2, 3.1).
 3. **Edges.** $K=0$: excluded only by the count $36$, and then $\mu_K=0$ and C1b's gap would be a real failure. Rank $0$: excluded exactly when $\Delta\ne0$ (C1b). Rank $13$: equivalent to $\dim\mathcal N=1$, open in L91 and conditional in L90. Rank $14$: impossible, since $\mathcal N$ contains the nonzero average of $\ell_{W_0}^6$, matching L90's cap. Orbit cone: must be the two-sided cone (withdrawn candidate 2).
-4. **Proven against stated.** Proven on file: $\Delta\in\operatorname{im}\mu_K$, $\Delta$ invariant, psd, vanishing on the cone, and rank-nullity for the system. Stated beyond that: $\Delta\ne0$ (sampled), the tightness identity (no derivation), the count, the exact zero set, non-proportionality and ratio bounds (sampled), and the dying blocks (unargued).
+4. **Proven against stated.** Proven on file: $\Delta\in\mathop{\mathrm{im}}\mu_K$, $\Delta$ invariant, psd, vanishing on the cone, and rank-nullity for the system. Stated beyond that: $\Delta\ne0$ (sampled), the tightness identity (no derivation), the count, the exact zero set, non-proportionality and ratio bounds (sampled), and the dying blocks (unargued).
 5. **Brief items.** Items 1-8 are answered in 1.2, 1.3, 2, 3.1-3.2, 4, 5, 6 and 7 respectively.
 6. **Falsifiers and search.**
    - C1b: $\mu_K=0$, which requires $K=0$ or complex $q_a$. Excluded by H4 and H5 in 1.3.
    - C2: a consistent system with solution dimension $\ne36-\mathrm{rank}$. Impossible by rank-nullity.
-   - C3a: an $F\in\mathcal S$ orthogonal to $\operatorname{im}\mu_K$ with $\mathrm{Cat}_F|_K\ne0$. Excluded by step 3 of 3.1. The literal-power reading produced the withdrawn candidate.
+   - C3a: an $F\in\mathcal S$ orthogonal to $\mathop{\mathrm{im}}\mu_K$ with $\mathrm{Cat}_F|_K\ne0$. Excluded by step 3 of 3.1. The literal-power reading produced the withdrawn candidate.
    - C3b: $\dim\mathcal N\ge2$. The record contains no way to exhibit or exclude it, and it is not claimed excluded.
    - C4b: a real $W\notin\mathbb R\cdot O(5)W_0$ with $K(W)=0$, or $F_5=\lambda\Delta$. $-W_0$ was examined and withdrawn. $F_5$ is not defined in the brief, so no exact point could be evaluated.
    - C5a: a pair among the six with unequal $c$. All six were computed exactly and none exists. A collision beyond the three: all $c(a,b)$ with $a\le6$ were enumerated and none exists.

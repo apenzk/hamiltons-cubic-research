@@ -8,20 +8,20 @@ You are auditing two blocks of a research record, and one fence post drawn from 
 
 ## The setting, in full
 
-Real symmetric traceless $3\times3$ matrices $\hat U$ and $V$. Write $\{X,Y\}=XY+YX$, $[X,Y]=XY-YX$, $K=[\hat U,V]$, and $\langle X,Y\rangle=\operatorname{tr}(X^{\mathsf T}Y)$, $\lvert X\rvert^2=\langle X,X\rangle$.
+Real symmetric traceless $3\times3$ matrices $\hat U$ and $V$. Write $\{X,Y\}=XY+YX$, $[X,Y]=XY-YX$, $K=[\hat U,V]$, and $\langle X,Y\rangle=\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$, $\lvert X\rvert^2=\langle X,X\rangle$.
 
-$$\Phi=\alpha\operatorname{tr}\hat U^3+\beta\operatorname{tr}(\hat UV^2)+\langle\hat U,A\rangle+\langle V,C\rangle,\qquad \alpha=\tfrac{15}4,\quad\beta=\tfrac94,$$
+$$\Phi=\alpha\mathop{\mathrm{tr}}\hat U^3+\beta\mathop{\mathrm{tr}}(\hat UV^2)+\langle\hat U,A\rangle+\langle V,C\rangle,\qquad \alpha=\tfrac{15}4,\quad\beta=\tfrac94,$$
 
 maximised subject to $T=\tfrac32\lvert\hat U\rvert^2+\tfrac12\lvert V\rvert^2$ fixed, with $A$ and $C$ fixed real symmetric matrices, both diagonal in one frame $F$.
 
 **Given (batch 10).** At a critical point with multiplier $\mu$, $A\equiv3\mu\hat U-3\alpha\hat U^2-\beta V^2$ and $C\equiv\mu V-\beta\{\hat U,V\}$, each **up to an added multiple of the identity**.
 
-**Given (batch 7), quoted verbatim.** *"For fixed $V$, $\sup_{\hat U}\Phi=\psi(\beta V^2+A)+\operatorname{tr}(VC)$, and the supremum is attained at $\hat U$ commuting with $\beta V^2+A$, diagonal in any eigenframe of it."* Here $\psi(M)=\sup\{\alpha\operatorname{tr}U^3+\operatorname{tr}(UM):U\text{ traceless symmetric},\lvert U\rvert=p\}$, convex and $O(3)$-invariant.
+**Given (batch 7), quoted verbatim.** *"For fixed $V$, $\sup_{\hat U}\Phi=\psi(\beta V^2+A)+\mathop{\mathrm{tr}}(VC)$, and the supremum is attained at $\hat U$ commuting with $\beta V^2+A$, diagonal in any eigenframe of it."* Here $\psi(M)=\sup\{\alpha\mathop{\mathrm{tr}}U^3+\mathop{\mathrm{tr}}(UM):U\text{ traceless symmetric},\lvert U\rvert=p\}$, convex and $O(3)$-invariant.
 
 **Given (batch 18).** At every global maximum, $\mu\ge2\beta\lvert\hat U\rvert/\sqrt6$.
 
-**Given (batch 21), quoted verbatim.** *"At a critical point the first differential of $\Phi-\mu T$ vanishes, so along any curve on the constraint surface the second derivative is $D^2(\Phi-\mu T)$ applied to the tangent vector alone, with no contribution from the curve's acceleration. Hence at every local maximum, for all traceless symmetric $X,Y$ with $3\operatorname{tr}(\hat UX)+\operatorname{tr}(VY)=0$,*
-$$6\alpha\operatorname{tr}(\hat UX^2)+4\beta\operatorname{tr}(XVY)+2\beta\operatorname{tr}(\hat UY^2)\ \le\ \mu\big(3\lvert X\rvert^2+\lvert Y\rvert^2\big).$$
+**Given (batch 21), quoted verbatim.** *"At a critical point the first differential of $\Phi-\mu T$ vanishes, so along any curve on the constraint surface the second derivative is $D^2(\Phi-\mu T)$ applied to the tangent vector alone, with no contribution from the curve's acceleration. Hence at every local maximum, for all traceless symmetric $X,Y$ with $3\mathop{\mathrm{tr}}(\hat UX)+\mathop{\mathrm{tr}}(VY)=0$,*
+$$6\alpha\mathop{\mathrm{tr}}(\hat UX^2)+4\beta\mathop{\mathrm{tr}}(XVY)+2\beta\mathop{\mathrm{tr}}(\hat UY^2)\ \le\ \mu\big(3\lvert X\rvert^2+\lvert Y\rvert^2\big).$$
 *Setting $Y=0$ and $X=E_{ij}+E_{ji}$ ... gives $\mu\ge-\alpha u_k$ at every $k$, so $\mu\ge\alpha\lvert u_{\min}\rvert$."* Batch 21 also records that this bound and batch 18's are **incomparable**, neither dominating: at $u=(1,1,-2)$ they are $7.5$ and $4.5$, at $u=(2,-1,-1)$ they are $3.75$ and $4.5$.
 
 **Given (batch 29).** Eliminating $a_1,a_2$ from the criticality system at $w_3=0$, $w_1=w_2$ leaves a quadratic in $\mu$ with, writing $u_3=-u_1-u_2$, $D_1=u_2-u_3$, $D_2=u_1-u_3$:
@@ -34,7 +34,7 @@ Batch 28 records that at $w_3=0$, $w_1=w_2$ the $(1,2)$ equation reduces to $a_1
 
 > ## Batch 32, the obvious maximality input is vacuous, screened before a cycle was spent on it
 >
-> **What the new target needs.** Batch 30's equivalence is first-order plus batch 18's bound, so closing $[\hat U,C]=0$ at every global maximum needs an input that sees maximality rather than criticality. **Batch 7 appears to supply one**: for fixed $V$, $\sup_{\hat U}\Phi=\psi(\beta V^2+A)+\operatorname{tr}(VC)$, the supremum attained at $\hat U$ commuting with $\beta V^2+A$, so a maximiser satisfies $[\hat U,\beta V^2+A]=0$.
+> **What the new target needs.** Batch 30's equivalence is first-order plus batch 18's bound, so closing $[\hat U,C]=0$ at every global maximum needs an input that sees maximality rather than criticality. **Batch 7 appears to supply one**: for fixed $V$, $\sup_{\hat U}\Phi=\psi(\beta V^2+A)+\mathop{\mathrm{tr}}(VC)$, the supremum attained at $\hat U$ commuting with $\beta V^2+A$, so a maximiser satisfies $[\hat U,\beta V^2+A]=0$.
 >
 > **It carries no information, because criticality already forces it.** The $A$ Lagrange form is $A\equiv3\mu\hat U-3\alpha\hat U^2-\beta V^2$, and $\hat U$ commutes with $3\mu\hat U-3\alpha\hat U^2$, so
 > $$[\hat U,\beta V^2+A]=\beta[\hat U,V^2]+[\hat U,A]=\beta\{V,K\}-\beta\{V,K\}=0$$
@@ -46,14 +46,14 @@ Batch 28 records that at $w_3=0$, $w_1=w_2$ the $(1,2)$ equation reduces to $a_1
 
 ## Block two, batch 33, quoted verbatim from the record
 
-> **The direction batch 21 asked for.** The simultaneous conjugation $(\hat U,V)\mapsto(g\hat Ug^{\mathsf T},gVg^{\mathsf T})$ supplies a joint direction for free: it preserves $\lvert\hat U\rvert$, $\lvert V\rvert$ and the internal part $\alpha\operatorname{tr}\hat U^3+\beta\operatorname{tr}(\hat UV^2)$, so the whole curve lies in the constraint set and $\Phi$ varies along it only through $\langle\hat U,A\rangle+\langle V,C\rangle$. The tangent is $X=[\Omega,\hat U]$, $Y=[\Omega,V]$ for skew $\Omega$, which is traceless symmetric and satisfies batch 21's tangency form $3\operatorname{tr}(\hat UX)+\operatorname{tr}(VY)=0$ identically.
+> **The direction batch 21 asked for.** The simultaneous conjugation $(\hat U,V)\mapsto(g\hat Ug^{\mathsf T},gVg^{\mathsf T})$ supplies a joint direction for free: it preserves $\lvert\hat U\rvert$, $\lvert V\rvert$ and the internal part $\alpha\mathop{\mathrm{tr}}\hat U^3+\beta\mathop{\mathrm{tr}}(\hat UV^2)$, so the whole curve lies in the constraint set and $\Phi$ varies along it only through $\langle\hat U,A\rangle+\langle V,C\rangle$. The tangent is $X=[\Omega,\hat U]$, $Y=[\Omega,V]$ for skew $\Omega$, which is traceless symmetric and satisfies batch 21's tangency form $3\mathop{\mathrm{tr}}(\hat UX)+\mathop{\mathrm{tr}}(VY)=0$ identically.
 >
 > **First order is criticality restated.** Stationarity along the orbit is $[\hat U,A]+[V,C]=0$. With GENERIC symmetric fields that is a real condition, and under the Lagrange forms it is an identity, since $[V,C]=\beta\{V,K\}$ and $[\hat U,A]=-\beta\{V,K\}$.
 >
 > **Second order survives that test.** For every skew $\Omega$, at a local maximum,
-> $$Q(\Omega)=\operatorname{tr}\big([\Omega,\hat U][\Omega,A]\big)+\operatorname{tr}\big([\Omega,V][\Omega,C]\big)\ \ge\ 0,$$
+> $$Q(\Omega)=\mathop{\mathrm{tr}}\big([\Omega,\hat U][\Omega,A]\big)+\mathop{\mathrm{tr}}\big([\Omega,V][\Omega,C]\big)\ \ge\ 0,$$
 > and substituting the Lagrange forms leaves
-> $$Q(\Omega)=\mu\big(3\lvert[\Omega,\hat U]\rvert^2+\lvert[\Omega,V]\rvert^2\big)-3\alpha\operatorname{tr}\big([\Omega,\hat U][\Omega,\hat U^2]\big)-\beta\Big(\operatorname{tr}\big([\Omega,\hat U][\Omega,V^2]\big)+\operatorname{tr}\big([\Omega,V][\Omega,\{\hat U,V\}]\big)\Big),$$
+> $$Q(\Omega)=\mu\big(3\lvert[\Omega,\hat U]\rvert^2+\lvert[\Omega,V]\rvert^2\big)-3\alpha\mathop{\mathrm{tr}}\big([\Omega,\hat U][\Omega,\hat U^2]\big)-\beta\Big(\mathop{\mathrm{tr}}\big([\Omega,\hat U][\Omega,V^2]\big)+\mathop{\mathrm{tr}}\big([\Omega,V][\Omega,\{\hat U,V\}]\big)\Big),$$
 > which is **not** identically zero. The multiples of $I$ drop out, and $[\Omega,X]$ is symmetric for skew $\Omega$ and symmetric $X$, so the $\mu$ term is a positive multiple of $\mu$.
 >
 > **It is batch 21's own condition, not a new one.** Evaluating batch 21's inequality at $X=[\Omega,\hat U]$, $Y=[\Omega,V]$ gives $Q(\Omega)\ge0$ **exactly**.

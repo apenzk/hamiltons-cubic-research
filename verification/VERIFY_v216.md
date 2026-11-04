@@ -46,10 +46,10 @@ Everything the argument consumes, with where each enters and whether the stateme
 
 | hypothesis | where consumed | printed in the statement? |
 | --- | --- | --- |
-| $W\in\mathcal W_n$, $W\ne0$ | gives $\operatorname{tr}_{\Lambda^2}W=0$, hence $\lambda_{\min}<0<\lambda_{\max}$ | yes |
+| $W\in\mathcal W_n$, $W\ne0$ | gives $\mathop{\mathrm{tr}}_{\Lambda^2}W=0$, hence $\lambda_{\min}<0<\lambda_{\max}$ | yes |
 | $W$ critical, $Q(W)=\theta W$ | L70's identity; $W^\#$ a polynomial in $W$, hence $D$ eigenspace-constant | yes |
 | $\lVert W\rVert=1$ | L70's boxed identity is homogeneous of degree one on the right and scale-invariant on the left | **no, see §9** |
-| $\lambda_{\min}<0<\lambda_{\max}$ strictly | makes $\lambda_{\min}\lambda_{\max}$ the *strict* corner minimum, which is what turns $D(v)=0$ into a support statement | no; L70 supplies it from $\operatorname{tr}W=0$ |
+| $\lambda_{\min}<0<\lambda_{\max}$ strictly | makes $\lambda_{\min}\lambda_{\max}$ the *strict* corner minimum, which is what turns $D(v)=0$ into a support statement | no; L70 supplies it from $\mathop{\mathrm{tr}}W=0$ |
 | $D(v)=0$ for one unit $v\in E_{\min}$ | the whole equality case; eigenspace-constancy upgrades one $v$ to all | yes, as $\theta=\lambda_{\min}+(n-2)\lambda_{\max}$ |
 | $\mathfrak m\ne0$ | makes $\mathfrak g'$ a *nonzero* ideal | no; automatic, $E_{\min}\ne0$ at $W\ne0$ |
 | $\mathfrak{so}(n)$ simple | the ideal $\Rightarrow$ everything step | yes, via $n\ge5$ |
@@ -98,7 +98,7 @@ The hypothesis is stated for one unit $v$; L70's own blockquote establishes that
 5. $\mathfrak g'=\mathfrak m+[\mathfrak m,\mathfrak m]\subseteq\mathfrak m\oplus\mathfrak h$, so $\mathfrak m\oplus\mathfrak h=\mathfrak{so}(n)$, forcing $\mathfrak r=0$ and $[\mathfrak m,\mathfrak m]=\mathfrak h$.
 6. $\mathfrak r=0$ means every eigenvalue of $W$ is $\lambda_{\min}$ or $\lambda_{\max}$, and both eigenspaces are nonzero. **Exactly two eigenvalues.**
 
-**$\mathfrak r=0$ is never used upstream of step 5.** I traced each input backwards: step 1 uses symmetry of $W$; step 2 uses the three relations of §1, which come from $D(v)=0$ and the strict corner minimum, which come from criticality and $\operatorname{tr}W=0$; step 4 uses simplicity. Nowhere does the spectrum's length enter. **The circularity the blockquote records is genuinely removed, and the ideal step is what removes it.** The record's defect (i) is correctly diagnosed and correctly repaired.
+**$\mathfrak r=0$ is never used upstream of step 5.** I traced each input backwards: step 1 uses symmetry of $W$; step 2 uses the three relations of §1, which come from $D(v)=0$ and the strict corner minimum, which come from criticality and $\mathop{\mathrm{tr}}W=0$; step 4 uses simplicity. Nowhere does the spectrum's length enter. **The circularity the blockquote records is genuinely removed, and the ideal step is what removes it.** The record's defect (i) is correctly diagnosed and correctly repaired.
 
 *What made the old version circular is worth stating positively:* the predecessor established only that $\mathfrak r$ **centralises** $\mathfrak g'$, which leaves $\mathfrak g'$ a subalgebra of the centraliser rather than an ideal of $\mathfrak{so}(n)$; simplicity says nothing about subalgebras. The one added line ($\mathfrak h$ normalises $\mathfrak g'$), is exactly the difference between a subalgebra and an ideal, and it is free from $[\mathfrak h,\mathfrak m]\subseteq\mathfrak m$.
 
@@ -127,11 +127,11 @@ Take relation (B) at a row $k=v\in\mathfrak m$: $\sum_{\beta\gamma}\lambda_\beta
 
 $$-m(n-2)+h(n-2)=2m\quad\Longrightarrow\quad (n-2)h=nm .$$
 
-That is the block's ratio, and it is the same statement as the converse clause's $\lambda_{\max}=n\lvert\lambda_{\min}\rvert/(n-2)$. **Only now** does $\mathfrak r=0$ enter: with no third eigenvalue, $\operatorname{tr}_{\Lambda^2}W=Hh-Mm=0$, so $Hh=Mm$, so $Hn=(n-2)M$, i.e. $M=\tfrac{n}{n-2}H$. With $H+M=N=\tfrac{n(n-1)}2$,
+That is the block's ratio, and it is the same statement as the converse clause's $\lambda_{\max}=n\lvert\lambda_{\min}\rvert/(n-2)$. **Only now** does $\mathfrak r=0$ enter: with no third eigenvalue, $\mathop{\mathrm{tr}}_{\Lambda^2}W=Hh-Mm=0$, so $Hh=Mm$, so $Hn=(n-2)M$, i.e. $M=\tfrac{n}{n-2}H$. With $H+M=N=\tfrac{n(n-1)}2$,
 
 $$H\cdot\frac{2n-2}{n-2}=\frac{n(n-1)}2\quad\Longrightarrow\quad H=\frac{n(n-2)}4,\qquad M=\frac{n^2}4 .$$
 
-**Not circular.** The inputs are (A), (B), total symmetry of $T$, the support statement, $\mathfrak r=0$ and $\operatorname{tr}W=0$. The conclusion being tested (that $\mathfrak h$ is the balanced $\mathfrak{so}(n/2)\oplus\mathfrak{so}(n/2)$), appears nowhere among them. The block's sequencing warning ("only after $\mathfrak r=0$") is exactly the right one: the ratio is available before, the dimensions only after.
+**Not circular.** The inputs are (A), (B), total symmetry of $T$, the support statement, $\mathfrak r=0$ and $\mathop{\mathrm{tr}}W=0$. The conclusion being tested (that $\mathfrak h$ is the balanced $\mathfrak{so}(n/2)\oplus\mathfrak{so}(n/2)$), appears nowhere among them. The block's sequencing warning ("only after $\mathfrak r=0$") is exactly the right one: the ratio is available before, the dimensions only after.
 
 The block's own control confirms it. At $W_{\mathbb{CP}^2}$, $n=4$: $m=1/\sqrt6$, $h=2/\sqrt6$, and $(n-2)h=4/\sqrt6=nm$, **the ratio holds**. But $H=1$ against $n(n-2)/4=2$, **the dimension formula correctly fails**, because $\mathfrak r\ne0$ there and the trace step is unavailable. The control isolates precisely the step that needs $\mathfrak r=0$.
 

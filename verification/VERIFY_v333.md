@@ -37,7 +37,7 @@ In the basis $\{\varphi_\alpha\}$ the matrix of $\mathrm{ad}(\varphi_k)$ has ent
 
 $$M_{kl}=\sum_{\alpha\beta}(\mathrm{ad}\,\varphi_k)_{\alpha\beta}\,\lambda_\beta\,(\mathrm{ad}\,\varphi_l)_{\beta\alpha}\,\lambda_\alpha=\sum_{\alpha\beta}c_{k\beta\alpha}c_{l\alpha\beta}\lambda_\alpha\lambda_\beta=-S_{kl}$$
 
-by H2. From the index formula with $W_{ce}=\lambda_c\delta_{ce}$, $(W^\#)_{kl}=\tfrac12\sum_{cd}c_{kcd}c_{lcd}\lambda_c\lambda_d=\tfrac12S_{kl}$. So $M=-2W^\#$ entrywise, which agrees with the polarised identity $\langle v,W^\#v\rangle=-\tfrac12\operatorname{tr}(\mathrm{ad}(v)W\mathrm{ad}(v)W)$ and with the Lean definition `Mmat Ws k l = -2 * Ws k l`. Claim 1 CONFIRMED AS ALGEBRA.
+by H2. From the index formula with $W_{ce}=\lambda_c\delta_{ce}$, $(W^\#)_{kl}=\tfrac12\sum_{cd}c_{kcd}c_{lcd}\lambda_c\lambda_d=\tfrac12S_{kl}$. So $M=-2W^\#$ entrywise, which agrees with the polarised identity $\langle v,W^\#v\rangle=-\tfrac12\mathop{\mathrm{tr}}(\mathrm{ad}(v)W\mathrm{ad}(v)W)$ and with the Lean definition `Mmat Ws k l = -2 * Ws k l`. Claim 1 CONFIRMED AS ALGEBRA.
 
 ## 2. Criticality is the matrix form
 

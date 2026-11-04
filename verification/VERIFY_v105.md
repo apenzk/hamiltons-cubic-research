@@ -82,7 +82,7 @@ Fix $n=2m$, $m\ge2$. Let $\mathfrak h=\mathfrak{so}(m)\oplus\mathfrak{so}(m)\sub
 
 **$\Pi_{\mathfrak h}$ in the basis $\{e_i\wedge e_j\}$.** A block-diagonal antisymmetric matrix is precisely a linear combination of $\varphi_{ij}$ with $i,j$ in the same block. So
 
-$$\mathfrak h=\operatorname{span}\{\varphi_{ij}: i<j,\ \{i,j\}\subseteq A\ \text{or}\ \{i,j\}\subseteq B\},\qquad \mathfrak m=\operatorname{span}\{\varphi_{ij}: i\in A,\ j\in B\}.$$
+$$\mathfrak h=\mathop{\mathrm{span}}\{\varphi_{ij}: i<j,\ \{i,j\}\subseteq A\ \text{or}\ \{i,j\}\subseteq B\},\qquad \mathfrak m=\mathop{\mathrm{span}}\{\varphi_{ij}: i\in A,\ j\in B\}.$$
 
 $\mathfrak h$ and $\mathfrak m$ are each **spanned by a subset of the basis $\{e_i\wedge e_j\}$**, and the two subsets partition it. Therefore
 
@@ -289,7 +289,7 @@ This record's signature failure is a correction landing **beside** the statement
 
 A consumer who cites [results.md](../results.md):116 (the canonical statement, the one a paper would quote), inherits a false universal with no trace of the two corrections that exist elsewhere in the record.
 
-**And the correction beside it is itself defective.** [problem.md](../findings/problem.md):158, having conceded that some members are diagonal, offers a replacement universal: "**What holds is the weaker statement it was reaching for: their positive eigenspaces contain no decomposable bivector at all.**" At the balanced split the positive eigenspace is $\mathfrak h=\operatorname{span}\{\varphi_{ij}:i,j\text{ in the same block}\}$, and $\varphi_{12}=e_1\wedge e_2$ is **decomposable**. So the replacement universal is false at the very object the same sentence names as diagonal. *This is outside my brief's block and I record it as a spillover rather than scoring it, but it is the same failure mode one layer down: the repair was written next to the defect without being run against the defect's own witness.*
+**And the correction beside it is itself defective.** [problem.md](../findings/problem.md):158, having conceded that some members are diagonal, offers a replacement universal: "**What holds is the weaker statement it was reaching for: their positive eigenspaces contain no decomposable bivector at all.**" At the balanced split the positive eigenspace is $\mathfrak h=\mathop{\mathrm{span}}\{\varphi_{ij}:i,j\text{ in the same block}\}$, and $\varphi_{12}=e_1\wedge e_2$ is **decomposable**. So the replacement universal is false at the very object the same sentence names as diagonal. *This is outside my brief's block and I record it as a spillover rather than scoring it, but it is the same failure mode one layer down: the repair was written next to the defect without being run against the defect's own witness.*
 
 ## 11. What a consumer may cite
 

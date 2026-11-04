@@ -18,7 +18,7 @@ Verdict: the section is correct. Two statements should be tightened, and none of
 ## 1. Lean statement
 
 - `TorusRows` matches the note field by field. `ha` is $a_i=2u_i^2+\tfrac12\sum_j(p_{ij}^2+q_{ij}^2)$ and `hlong` is $u_i(1-2a_i)=\sum_jp_{ij}q_{ij}$. `hp` is $p_{ij}(1-X^-_{ij})$ with $X^-=\tfrac12(a_i+a_j)-\tfrac12(q^2-p^2)$, and `hq` is the same with $X^+$. Every sum runs over all of `Fin k`, and `diagP`/`diagQ` make that agree with the note's sums. Symmetry and the zero diagonal are hypotheses.
-- `plus_block` states $(P+Q+\operatorname{diag}(a+2u-1))^2=\operatorname{diag}(1-2u+a^2)-(P+Q)\circ(P-Q)\circ(P-Q)$, which is the note's first identity. `minus_block` states the second with $\operatorname{diag}(a-2u-1)$ and $D\circ S\circ S$. Both match.
+- `plus_block` states $(P+Q+\mathop{\mathrm{diag}}(a+2u-1))^2=\mathop{\mathrm{diag}}(1-2u+a^2)-(P+Q)\circ(P-Q)\circ(P-Q)$, which is the note's first identity. `minus_block` states the second with $\mathop{\mathrm{diag}}(a-2u-1)$ and $D\circ S\circ S$. Both match.
 - `#print axioms` on a scratch copy, run with `lake env lean`, returns `[propext, Classical.choice, Quot.sound]` for both.
 
 ## 2. The converse
@@ -35,7 +35,7 @@ Verdict: the section is correct. Two statements should be tightened, and none of
 - $(MN+NM)_{ii}=2\sum_lp_{il}q_{il}+4a_iu_i$, which the long row turns into $2u_i=\hat W_{ii'}$. So $f=1$ on long edges.
 - On the diagonal, $(M^2+N^2)_{ii}=a_i^2+2(a_i-2u_i^2)+4u_i^2=(2+a_i)a_i$. So $f_{xx}=2+a_i$, which is the $a$-definition. The bullet omits it, and it matches neither pattern: it is not $2(1\pm A_{ii})$.
 - Positivity: every off-diagonal entry is one of $p_{ij}$, $q_{ij}$ or $2u_i$, all $>0$.
-- Split: the orthogonal matrix $\tfrac1{\sqrt2}\begin{pmatrix}I&I\\I&-I\end{pmatrix}$ conjugates $\hat W$ to $\operatorname{diag}(S+A_d+2U,\;D+A_d-2U)$, and the identities are the squares of these blocks minus $I$. Screen: $(S+A_d+2U)^2_{ij}=2s+2A_{ij}d=2s-sd^2$, since $A_{ij}=-\tfrac12s_{ij}d_{ij}$. Subtracting $2s$ reproduces $-S\circ D\circ D$.
+- Split: the orthogonal matrix $\tfrac1{\sqrt2}\begin{pmatrix}I&I\\I&-I\end{pmatrix}$ conjugates $\hat W$ to $\mathop{\mathrm{diag}}(S+A_d+2U,\;D+A_d-2U)$, and the identities are the squares of these blocks minus $I$. Screen: $(S+A_d+2U)^2_{ij}=2s+2A_{ij}d=2s-sd^2$, since $A_{ij}=-\tfrac12s_{ij}d_{ij}$. Subtracting $2s$ reproduces $-S\circ D\circ D$.
 
 ## 4. Row sums
 
@@ -44,8 +44,8 @@ Verdict: the section is correct. Two statements should be tightened, and none of
 
 ## 5. Attempt 1
 
-- The $(D^2)_{ij}$ and $(S^2)_{ij}$ forms follow from the off-diagonal entries of the identities with $G=\operatorname{diag}(g)$ and $H=\operatorname{diag}(h)$, where $A_d-2U-I=-G$ and $A_d+2U-I=-H$. Also $h=g-4u$. CONFIRMED.
-- Lower bound: $\operatorname{tr}D^3=\sum_{i\ne j}d_{ij}^2(g_i+g_j-s_{ij}^2)=2\sum B_{ij}d_{ij}^2$ (consistent with the given identity). This is $\ge\min(g_i+g_j-s_{ij}^2)\lVert D\rVert_F^2$. Also $\sum\lambda^3\le\lambda_{\max}\sum\lambda^2$. Together they give $\lambda_{\max}(D)\ge\min_{i\ne j}(g_i+g_j-s_{ij}^2)$ **provided $D\ne0$**. The note leaves this proviso unstated, and the bound is used only to reach a contradiction from $D\ne0$, so the omission is harmless.
+- The $(D^2)_{ij}$ and $(S^2)_{ij}$ forms follow from the off-diagonal entries of the identities with $G=\mathop{\mathrm{diag}}(g)$ and $H=\mathop{\mathrm{diag}}(h)$, where $A_d-2U-I=-G$ and $A_d+2U-I=-H$. Also $h=g-4u$. CONFIRMED.
+- Lower bound: $\mathop{\mathrm{tr}}D^3=\sum_{i\ne j}d_{ij}^2(g_i+g_j-s_{ij}^2)=2\sum B_{ij}d_{ij}^2$ (consistent with the given identity). This is $\ge\min(g_i+g_j-s_{ij}^2)\lVert D\rVert_F^2$. Also $\sum\lambda^3\le\lambda_{\max}\sum\lambda^2$. Together they give $\lambda_{\max}(D)\ge\min_{i\ne j}(g_i+g_j-s_{ij}^2)$ **provided $D\ne0$**. The note leaves this proviso unstated, and the bound is used only to reach a contradiction from $D\ne0$, so the omission is harmless.
 - $\lambda_{\max}(D)<\rho(S)$: $|d_{ij}|<s_{ij}$ entrywise and $S$ is irreducible for $k\ge2$, so $\rho(D)\le\rho(|D|)<\rho(S)$ by Perron–Frobenius/Wielandt. CONFIRMED.
 - Upper bound: with $B_+=S-H$ and $Sv=\rho v$, $v^{\mathsf T}B_+^2v=\lVert B_+v\rVert^2=\sum(\rho-h_i)^2v_i^2$. The identity then gives the displayed equality. The right side is $\le0$ because $S\circ D\circ D\ge0$ entrywise and $v>0$. A positively weighted average $\le0$ has a term $\le0$, so $\rho\le h_i+\sqrt{1-2u_i+a_i^2}$ for some $i$. The square root is real because $u_i<\tfrac12$ (see 6). CONFIRMED.
 
@@ -70,7 +70,7 @@ Verdict: the section is correct. Two statements should be tightened, and none of
 ## 8. Unargued sentences in attempts 1 and 2
 
 - Attempt 1, "separate at $I/c$ with margin of order $\tfrac6c$": no computation is shown. Screen: at the uniform point $p=q=u=a=\tfrac1{k+1}=\tfrac1c$, the row sum forces $u=1/(k+1)$. The lower bound is $2+2u-4u^2$ and the upper bound is $2-4u$, so the margin is $6u-4u^2=\tfrac6c-\tfrac4{c^2}$. PLAUSIBLE, and the order is right. "Cross when $u_i$ is small": at $u\to0$ the gap is $\approx-a-s^2<0$. PLAUSIBLE.
-- Attempt 2, "This excludes $D\ne0$ when the factor's spread and the row sums are small": this is stated as a result, with no quantifiers and no argument. An argument does exist in outline. $D^2=D\circ F+\operatorname{diag}(\sigma)$ holds exactly, which bounds $\lambda^2-2\lambda$ and gives clustering. $\operatorname{tr}D=0$ then rules out eigenvalues near $2$. Finally $\lVert\mathrm{off}(D^2)\rVert_F\ge\min F\,\lVert D\rVert_F$ and $\lVert D^2\rVert_F\le\lVert D\rVert_2\lVert D\rVert_F$ give $D=0$ once $\lVert D\rVert_2<\min F$. PLAUSIBLE. It should be labelled as a sketch.
+- Attempt 2, "This excludes $D\ne0$ when the factor's spread and the row sums are small": this is stated as a result, with no quantifiers and no argument. An argument does exist in outline. $D^2=D\circ F+\mathop{\mathrm{diag}}(\sigma)$ holds exactly, which bounds $\lambda^2-2\lambda$ and gives clustering. $\mathop{\mathrm{tr}}D=0$ then rules out eigenvalues near $2$. Finally $\lVert\mathrm{off}(D^2)\rVert_F\ge\min F\,\lVert D\rVert_F$ and $\lVert D^2\rVert_F\le\lVert D\rVert_2\lVert D\rVert_F$ give $D=0$ once $\lVert D\rVert_2<\min F$. PLAUSIBLE. It should be labelled as a sketch.
 - The closing bullet: $\sum d^2/\sum s^2=(a-u)(1+2u)/((a+u)(1-2u))\to1$ requires both $a\gg u$ and $u$ small. The $p$/$q$ imbalance follows from $\sum_j4p_{ij}q_{ij}=4u_i(1-2a_i)$, which is small. PLAUSIBLE, and it holds in a weighted sense ("most pairs").
 
 ## Corrections owed

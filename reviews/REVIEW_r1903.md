@@ -10,7 +10,7 @@
 | 4 | Both L217 INDEX rows proved, corollary (c) the record's own conditional, nothing Lean-owed left | CONFIRMED WITH OBSERVATIONS |
 | 5 | Axioms and hypothesis inventory | CONFIRMED |
 
-**One line.** The lemma at every gapped critical orbit and corollary (b) are kernel-checked on the standard three axioms, with hypotheses that match the record once $T_u\mathcal O=\operatorname{span}\{[\mathrm{ad}_{\varphi_{jk}},u]\}$ (linearity) and $\Theta_n\le m$ (the definition of $m$) are read in.
+**One line.** The lemma at every gapped critical orbit and corollary (b) are kernel-checked on the standard three axioms, with hypotheses that match the record once $T_u\mathcal O=\mathop{\mathrm{span}}\{[\mathrm{ad}_{\varphi_{jk}},u]\}$ (linearity) and $\Theta_n\le m$ (the definition of $m$) are read in.
 
 ## Conventions
 

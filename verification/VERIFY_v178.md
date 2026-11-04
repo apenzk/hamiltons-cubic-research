@@ -8,9 +8,9 @@ The block under test is [findings/problem.md:221-234](../findings/problem.md), w
 
 | # | claim, as the record states it | verdict |
 | --- | --- | --- |
-| 1 | Cauchy–Schwarz over the isotropy blocks gives $\lVert R\rVert^2\ge(n/4)^2/\dim\mathfrak h$ | **PROVEN**, but the load-bearing import is $\operatorname{im}R\subseteq\mathfrak h$, not the block eigenvalues |
+| 1 | Cauchy–Schwarz over the isotropy blocks gives $\lVert R\rVert^2\ge(n/4)^2/\dim\mathfrak h$ | **PROVEN**, but the load-bearing import is $\mathop{\mathrm{im}}R\subseteq\mathfrak h$, not the block eigenvalues |
 | 2 | $\dim\mathfrak h\le\frac{3n^2(n-1)}{2(7n-4)}\Rightarrow\lVert W\rVert^2\ge\frac16$ | **PROVEN**, and the algebra is **exact**, an equivalence, given the bound of claim 1 |
-| 3 | Einstein $\tfrac12$ forces $\operatorname{tr}R=n/4$, $c=\frac1{2(n-1)}$, $\lVert W\rVert^2=\lVert R\rVert^2-\frac n{8(n-1)}$ | **PROVEN** |
+| 3 | Einstein $\tfrac12$ forces $\mathop{\mathrm{tr}}R=n/4$, $c=\frac1{2(n-1)}$, $\lVert W\rVert^2=\lVert R\rVert^2-\frac n{8(n-1)}$ | **PROVEN** |
 | 4 | [Petersen–Stanfield](../references/petersen-stanfield-2025-poincare-polynomials/) Prop 2.2 says what is claimed, and its hypotheses hold | **PROVEN**, with one unstated hypothesis: $H$ connected |
 | 5 | The eight constants $616,48,7200,114,3696,2192,236,84$ | **PROVEN**, all eight reproduced by hand, in the census script's row order |
 | 6 | *"each classical family … with an all-nonnegative-coefficient certificate"* is checkable from what is on file | **GAP**, no polynomial and no family in any prose file; only in [b_symmetric_dimension_lemma.py](../scripts/route-b/b_symmetric_dimension_lemma.py), which the canonical block does not cite |
@@ -39,13 +39,13 @@ On $\theta$:
 
 On the norm the block's $\lVert R\rVert^2$, $\lVert W\rVert^2$ and $\lVert I\rVert^2$ are taken in:
 
-> **The $\tfrac12$ goes at the $\Lambda^2$ level, not the operator level.** The inner product is $\tfrac12\operatorname{tr}(X^{\mathsf T}Y)$ at the $\Lambda^2$ level and plain Frobenius on the pair matrix. *Applying the $\tfrac12$ at the operator level instead inflates every $\theta$ by $\sqrt2$*, and has cost a cycle.
+> **The $\tfrac12$ goes at the $\Lambda^2$ level, not the operator level.** The inner product is $\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$ at the $\Lambda^2$ level and plain Frobenius on the pair matrix. *Applying the $\tfrac12$ at the operator level instead inflates every $\theta$ by $\sqrt2$*, and has cost a cycle.
 
 > $N$ | $\binom n2=\dim\Lambda^2\mathbb R^n$
 
-On the scalar curvature, which is what turns Einstein $\tfrac12$ into $\operatorname{tr}R=n/4$:
+On the scalar curvature, which is what turns Einstein $\tfrac12$ into $\mathop{\mathrm{tr}}R=n/4$:
 
-> **$\operatorname{scal}=2\operatorname{tr}$ on $\Lambda^2$.**
+> **$\mathop{\mathrm{scal}}=2\mathop{\mathrm{tr}}$ on $\Lambda^2$.**
 
 On $\mathfrak h$, and this is a collision, see §9:
 
@@ -53,7 +53,7 @@ On $\mathfrak h$, and this is a collision, see §9:
 
 On $B$, on the Killing form, and on the letter's ambiguity:
 
-> **THE LETTER $B$ MEANS TWO THINGS, live.** [conventions.md]'s Killing form above is $B(X,Y)=(n-2)\operatorname{tr}(XY)$ on $\mathfrak{so}(n)$; [sym3-blocks.md](../findings/sym3-blocks.md) writes $B(X,Y)=-\tfrac12\operatorname{tr}(XY)$ on $\mathfrak{so}(5)$ … **Say which you mean, every time**
+> **THE LETTER $B$ MEANS TWO THINGS, live.** [conventions.md]'s Killing form above is $B(X,Y)=(n-2)\mathop{\mathrm{tr}}(XY)$ on $\mathfrak{so}(n)$; [sym3-blocks.md](../findings/sym3-blocks.md) writes $B(X,Y)=-\tfrac12\mathop{\mathrm{tr}}(XY)$ on $\mathfrak{so}(5)$ … **Say which you mean, every time**
 
 On Cartan's classification, which is what the block's universal quantifier ranges over:
 
@@ -72,7 +72,7 @@ The block itself uses none of the three equivalence relations that line distingu
 | compact | [results.md:531](../results.md), [problem.md:221](../findings/problem.md) | **used**, [Petersen–Stanfield](../references/petersen-stanfield-2025-poincare-polynomials/)'s whole setting is $G$ compact semisimple with the metric $-B_{\mathfrak g}\vert_{\mathfrak p}$, and positive-definiteness of $-B_{\mathfrak g}$ is what makes that a metric at all |
 | irreducible | same | **used twice, in different ways**, it is the index set of the census, and it is what makes a *single* Einstein constant available. It is **not** used in the Cauchy–Schwarz step, which holds for any compact symmetric space |
 | rank $\ge2$ | same | **used only as a label.** No step in the block consumes it. It is the name of the set on which the census *asserts* $\dim\mathfrak h\le\frac{3n^2(n-1)}{2(7n-4)}$; there is no argument on file deriving the dimension bound *from* the rank |
-| normalised to Einstein constant $\tfrac12$ | same | **used**, it fixes $\operatorname{tr}R=n/4$ and $c=\frac1{2(n-1)}$, and it is what makes $\tfrac16$ the right threshold. It is also **without loss of generality**: $\theta=P(W)/\lVert W\rVert^3$ is homogeneous of degree $0$, so rescaling $g\mapsto sg$ carries $W\mapsto W/s$ and leaves $\theta$ fixed |
+| normalised to Einstein constant $\tfrac12$ | same | **used**, it fixes $\mathop{\mathrm{tr}}R=n/4$ and $c=\frac1{2(n-1)}$, and it is what makes $\tfrac16$ the right threshold. It is also **without loss of generality**: $\theta=P(W)/\lVert W\rVert^3$ is homogeneous of degree $0$, so rescaling $g\mapsto sg$ carries $W\mapsto W/s$ and leaves $\theta$ fixed |
 | $\mathbb{OP}^2$ adjoined to the rank-$\ge2$ branch | same | **used**, it is the one rank-one space that satisfies the dimension criterion, so adjoining it is not a special case but a widening of the branch |
 
 ### 1.2 Hypotheses of every imported result, and whether they were checked
@@ -99,12 +99,12 @@ Four:
 
 1. **$W\ne0$**, §8.
 2. **$H$ connected**, §1.2.
-3. **$\operatorname{im}R\subseteq\mathfrak h$**, the actual content the Cauchy–Schwarz step needs, §2. The block cites Prop 2.2 for *"the isotropy blocks, whose eigenvalues are…"*, and the eigenvalues are not what the inequality consumes.
+3. **$\mathop{\mathrm{im}}R\subseteq\mathfrak h$**, the actual content the Cauchy–Schwarz step needs, §2. The block cites Prop 2.2 for *"the isotropy blocks, whose eigenvalues are…"*, and the eigenvalues are not what the inequality consumes.
 4. **$\dim\mathfrak h$ is the isotropy algebra of the specific presentation $G/H$ used.** The criterion is a bound on a number attached to a presentation, and the block never says which. For $\mathbb{RP}^n$ against $S^n$ the presentations differ.
 
 ## 2. The Cauchy–Schwarz step, derived
 
-The claim: $\lVert R\rVert^2\ge(n/4)^2/\dim\mathfrak h$, from $\operatorname{tr}R=n/4$.
+The claim: $\lVert R\rVert^2\ge(n/4)^2/\dim\mathfrak h$, from $\mathop{\mathrm{tr}}R=n/4$.
 
 **What Petersen–Stanfield actually give.** Prop 2.1 states $R=\tfrac12(I-P)$ under the identification $\mathfrak h\simeq\mathrm{ad}_{\mathfrak h}\vert_{\mathfrak p}\subset\Lambda^2TM$, and its proof opens
 
@@ -115,18 +115,18 @@ and Prop 2.2's proof opens
 > The curvature operator of $g$ is $G$-invariant with image $\mathfrak h\subset\Lambda^2T_pM$.
 
 So $R$ is a symmetric operator on $\Lambda^2\mathbb R^n$ whose image lies in $\mathfrak h$; being symmetric, it also vanishes on $\mathfrak h^\perp$. Hence
-$$\operatorname{tr}R=\operatorname{tr}(R\vert_{\mathfrak h}),\qquad \lVert R\rVert^2=\lVert R\vert_{\mathfrak h}\rVert^2 .$$
+$$\mathop{\mathrm{tr}}R=\mathop{\mathrm{tr}}(R\vert_{\mathfrak h}),\qquad \lVert R\rVert^2=\lVert R\vert_{\mathfrak h}\rVert^2 .$$
 Cauchy–Schwarz on $\mathfrak h$ against the identity $I_{\mathfrak h}$:
-$$(\operatorname{tr}R)^2=\langle R\vert_{\mathfrak h},I_{\mathfrak h}\rangle^2\le\lVert R\vert_{\mathfrak h}\rVert^2\,\lVert I_{\mathfrak h}\rVert^2=\lVert R\rVert^2\dim\mathfrak h,$$
-and with $\operatorname{tr}R=n/4$ this is exactly the claim. **Correct.**
+$$(\mathop{\mathrm{tr}}R)^2=\langle R\vert_{\mathfrak h},I_{\mathfrak h}\rangle^2\le\lVert R\vert_{\mathfrak h}\rVert^2\,\lVert I_{\mathfrak h}\rVert^2=\lVert R\rVert^2\dim\mathfrak h,$$
+and with $\mathop{\mathrm{tr}}R=n/4$ this is exactly the claim. **Correct.**
 
-**What it does and does not need.** It needs only *symmetry of $R$* and *$\operatorname{im}R\subseteq\mathfrak h$*. It does **not** need the blocks to be the isotypic pieces, does not need Schur's lemma, and does not need any eigenvalue. The block's route, Prop 2.2's eigenvalue decomposition $\mathfrak h=\mathfrak h_0\oplus_i\mathfrak h_i$ with $R\vert_{\mathfrak h_i}=\lambda_iI$, then $(\sum_id_i\lambda_i)^2\le(\sum_id_i\lambda_i^2)(\sum_id_i)$, is the same inequality reached through a stronger hypothesis. It is sound; it is over-cited. [graded-half.md:117](../findings/graded-half.md) writes it in that weighted form, and there the citation of Prop 2.2 is apt.
+**What it does and does not need.** It needs only *symmetry of $R$* and *$\mathop{\mathrm{im}}R\subseteq\mathfrak h$*. It does **not** need the blocks to be the isotypic pieces, does not need Schur's lemma, and does not need any eigenvalue. The block's route, Prop 2.2's eigenvalue decomposition $\mathfrak h=\mathfrak h_0\oplus_i\mathfrak h_i$ with $R\vert_{\mathfrak h_i}=\lambda_iI$, then $(\sum_id_i\lambda_i)^2\le(\sum_id_i\lambda_i^2)(\sum_id_i)$, is the same inequality reached through a stronger hypothesis. It is sound; it is over-cited. [graded-half.md:117](../findings/graded-half.md) writes it in that weighted form, and there the citation of Prop 2.2 is apt.
 
-**Equality is attainable, and this is not a technicality.** Equality holds iff $R\vert_{\mathfrak h}$ is a multiple of $I_{\mathfrak h}$. That happens: at $S^n=SO(n+1)/SO(n)$, $\mathfrak h=\mathfrak{so}(n)$ has $\dim\mathfrak h=\binom n2=N$, so $\mathfrak h$ is all of $\Lambda^2$ and $R=\frac1{2(n-1)}I$, which is $\operatorname{tr}R=\frac{N}{2(n-1)}=\frac n4$, as it must be. Then $\lVert R\rVert^2=(n/4)^2/N$, equality holds, and
+**Equality is attainable, and this is not a technicality.** Equality holds iff $R\vert_{\mathfrak h}$ is a multiple of $I_{\mathfrak h}$. That happens: at $S^n=SO(n+1)/SO(n)$, $\mathfrak h=\mathfrak{so}(n)$ has $\dim\mathfrak h=\binom n2=N$, so $\mathfrak h$ is all of $\Lambda^2$ and $R=\frac1{2(n-1)}I$, which is $\mathop{\mathrm{tr}}R=\frac{N}{2(n-1)}=\frac n4$, as it must be. Then $\lVert R\rVert^2=(n/4)^2/N$, equality holds, and
 $$\lVert W\rVert^2=\frac{(n/4)^2}{N}-\frac n{8(n-1)}=\frac n{8(n-1)}-\frac n{8(n-1)}=0 .$$
 **So the one place the Cauchy–Schwarz step is sharp is the one place the conclusion fails.** That is §8, arrived at from the other side.
 
-There is a second constraint the equality case must respect, worth recording because it closes off a family of would-be witnesses. Prop 2.2 says the eigenvalue on the centre $\mathfrak h_0$ is exactly $\tfrac12$. So if $\mathfrak h_0\ne0$, equality forces every $\lambda_i=\tfrac12$, hence $P=0$ on $\mathfrak h$, hence $B_{\mathfrak h}\equiv0$, hence $\mathfrak h$ abelian, hence $\mathfrak h=\mathfrak h_0$ and $\dim\mathfrak h=n/2$ from $\operatorname{tr}R=n/4$. Then $\lVert W\rVert^2=\frac{n(n-2)}{8(n-1)}$, which equals $\tfrac16$ only at the roots of $3n^2-10n+4$, neither an integer. No such space.
+There is a second constraint the equality case must respect, worth recording because it closes off a family of would-be witnesses. Prop 2.2 says the eigenvalue on the centre $\mathfrak h_0$ is exactly $\tfrac12$. So if $\mathfrak h_0\ne0$, equality forces every $\lambda_i=\tfrac12$, hence $P=0$ on $\mathfrak h$, hence $B_{\mathfrak h}\equiv0$, hence $\mathfrak h$ abelian, hence $\mathfrak h=\mathfrak h_0$ and $\dim\mathfrak h=n/2$ from $\mathop{\mathrm{tr}}R=n/4$. Then $\lVert W\rVert^2=\frac{n(n-2)}{8(n-1)}$, which equals $\tfrac16$ only at the roots of $3n^2-10n+4$, neither an integer. No such space.
 
 ## 3. The implication, checked
 
@@ -147,13 +147,13 @@ The strict form is what earns the equality clause: if $h<\frac{3n^2(n-1)}{2(7n-4
 
 Verbatim, [petersen-stanfield-2508.11236.txt:345-350](https://arxiv.org/abs/2508.11236):
 
-> **Proposition 2.2.** The decomposition $\mathfrak h=\mathfrak h_0\oplus_i\mathfrak h_i$ is precisely the decomposition into eigenspaces for $R$ and the eigenvalue for $\mathfrak h_0$ is the Einstein constant $\tfrac12$. Consequently, if $\lambda_i$ is the eigenvalue corresponding to $\mathfrak h_i$ we obtain: $\tfrac12\dim_{\mathbb R}M=\mathrm{scal}=2\operatorname{tr}R=\dim\mathfrak h_0+2\sum_{i\ge1}\lambda_i\dim_{\mathbb R}\mathfrak h_i$.
+> **Proposition 2.2.** The decomposition $\mathfrak h=\mathfrak h_0\oplus_i\mathfrak h_i$ is precisely the decomposition into eigenspaces for $R$ and the eigenvalue for $\mathfrak h_0$ is the Einstein constant $\tfrac12$. Consequently, if $\lambda_i$ is the eigenvalue corresponding to $\mathfrak h_i$ we obtain: $\tfrac12\dim_{\mathbb R}M=\mathrm{scal}=2\mathop{\mathrm{tr}}R=\dim\mathfrak h_0+2\sum_{i\ge1}\lambda_i\dim_{\mathbb R}\mathfrak h_i$.
 
 **It says what is claimed, and it supplies more.**
 
-- $\mathrm{scal}=\tfrac12\dim M=n/2$, hence $\operatorname{tr}R=n/4$, the block's first constant, from the source, in the source's own convention $\mathrm{scal}=2\operatorname{tr}R$, which is [conventions.md](../findings/conventions.md)'s convention too. **They agree; no conversion is needed and none is hidden.**
-- The proof's first line gives $\operatorname{im}R=\mathfrak h$, which is what §2 consumes.
-- Theorem A, at [line 373-375](https://arxiv.org/abs/2508.11236), adds *"the eigenvalues for the curvature operator are between 0 and $\tfrac12$"*, **unused by L47**, and it is strictly stronger than what L47 extracts. From $\lambda_i\le\tfrac12$ one gets $\lVert R\rVert^2\le\tfrac12\operatorname{tr}R=n/8$, an upper bound the block never needs.
+- $\mathrm{scal}=\tfrac12\dim M=n/2$, hence $\mathop{\mathrm{tr}}R=n/4$, the block's first constant, from the source, in the source's own convention $\mathrm{scal}=2\mathop{\mathrm{tr}}R$, which is [conventions.md](../findings/conventions.md)'s convention too. **They agree; no conversion is needed and none is hidden.**
+- The proof's first line gives $\mathop{\mathrm{im}}R=\mathfrak h$, which is what §2 consumes.
+- Theorem A, at [line 373-375](https://arxiv.org/abs/2508.11236), adds *"the eigenvalues for the curvature operator are between 0 and $\tfrac12$"*, **unused by L47**, and it is strictly stronger than what L47 extracts. From $\lambda_i\le\tfrac12$ one gets $\lVert R\rVert^2\le\tfrac12\mathop{\mathrm{tr}}R=n/8$, an upper bound the block never needs.
 
 **Hypotheses checked against the objects here:** §1.2. They hold, with the $H$-connected caveat.
 
@@ -215,7 +215,7 @@ The brief asks for both minima and for exhaustiveness. I derived both closed for
 
 ### 6.1 $\mathbb{CP}^m$
 
-$M=SU(m+1)/S(U(1)U(m))$, $n=2m$, $\mathfrak h=\mathfrak u(1)\oplus\mathfrak{su}(m)$, $\dim\mathfrak h=m^2$. With $B_{\mathfrak{su}(k)}=2k\operatorname{tr}$ on the defining representation, $P\vert_{\mathfrak{su}(m)}=\frac{2m}{2(m+1)}=\frac m{m+1}$, so
+$M=SU(m+1)/S(U(1)U(m))$, $n=2m$, $\mathfrak h=\mathfrak u(1)\oplus\mathfrak{su}(m)$, $\dim\mathfrak h=m^2$. With $B_{\mathfrak{su}(k)}=2k\mathop{\mathrm{tr}}$ on the defining representation, $P\vert_{\mathfrak{su}(m)}=\frac{2m}{2(m+1)}=\frac m{m+1}$, so
 $$\lambda_{\mathfrak{su}(m)}=\tfrac12\Big(1-\tfrac m{m+1}\Big)=\frac1{2(m+1)},\qquad \lambda_{\mathfrak h_0}=\tfrac12 .$$
 Check against Prop 2.2's trace identity: $\tfrac12\cdot1+\frac{m^2-1}{2(m+1)}=\tfrac12+\tfrac{m-1}2=\tfrac m2=\tfrac n4$. ✓
 
@@ -225,11 +225,11 @@ which is [graded-half.md:200](../findings/graded-half.md)'s $\lVert W\rVert^2_{\
 
 At $m=2$: $\frac{3\cdot2\cdot1}{4\cdot3\cdot3}=\frac6{36}=\tfrac16$. **The minimum claim's value is confirmed.**
 
-**Independent anchor on the normalisation.** At $m=2$ the eigenvalues of $W=R-cI$ with $c=\frac1{2(n-1)}=\tfrac16$ are $\tfrac12-\tfrac16=\tfrac13$ once, $\tfrac16-\tfrac16=0$ three times, $0-\tfrac16=-\tfrac16$ twice, that is $\frac1{\sqrt6}(2,0,0,0,-1,-1)$ after unit-normalising, which is [conventions.md](../findings/conventions.md)'s and [problem.md:239](../findings/problem.md)'s $W_{\mathbb{CP}^2}=\operatorname{diag}(0,0,0,-1,-1,2)/\sqrt6$ **exactly**. So the block's norm convention is the record's, and no factor of $2$ or $\sqrt2$ is hiding in it.
+**Independent anchor on the normalisation.** At $m=2$ the eigenvalues of $W=R-cI$ with $c=\frac1{2(n-1)}=\tfrac16$ are $\tfrac12-\tfrac16=\tfrac13$ once, $\tfrac16-\tfrac16=0$ three times, $0-\tfrac16=-\tfrac16$ twice, that is $\frac1{\sqrt6}(2,0,0,0,-1,-1)$ after unit-normalising, which is [conventions.md](../findings/conventions.md)'s and [problem.md:239](../findings/problem.md)'s $W_{\mathbb{CP}^2}=\mathop{\mathrm{diag}}(0,0,0,-1,-1,2)/\sqrt6$ **exactly**. So the block's norm convention is the record's, and no factor of $2$ or $\sqrt2$ is hiding in it.
 
 ### 6.2 $\mathbb{HP}^m$
 
-$M=Sp(m+1)/(Sp(m)\times Sp(1))$, $n=4m$, $\dim\mathfrak h=m(2m+1)+3$. With $B_{\mathfrak{sp}(k)}=(4k+4)\operatorname{Re}\operatorname{tr}_{\mathbb H}$ (fixed by $\mathfrak{sp}(1)\cong\mathfrak{su}(2)$, where $B(X,X)=-8a^2$ at $X=ai$),
+$M=Sp(m+1)/(Sp(m)\times Sp(1))$, $n=4m$, $\dim\mathfrak h=m(2m+1)+3$. With $B_{\mathfrak{sp}(k)}=(4k+4)\mathop{\mathrm{Re}}\mathop{\mathrm{tr}}_{\mathbb H}$ (fixed by $\mathfrak{sp}(1)\cong\mathfrak{su}(2)$, where $B(X,X)=-8a^2$ at $X=ai$),
 $$\lambda_{\mathfrak{sp}(m)}=\tfrac12\Big(1-\tfrac{4m+4}{4m+8}\Big)=\frac1{2(m+2)},\qquad \lambda_{\mathfrak{sp}(1)}=\tfrac12\Big(1-\tfrac8{4m+8}\Big)=\frac m{2(m+2)} .$$
 Trace check: $\frac{m(2m+1)}{2(m+2)}+\frac{3m}{2(m+2)}=\frac{m(2m+4)}{2(m+2)}=m=\tfrac n4$. ✓
 

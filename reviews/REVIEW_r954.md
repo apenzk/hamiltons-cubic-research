@@ -17,7 +17,7 @@ Brief: [BRIEF_F68.md](BRIEF_F68.md). Log: [agent_logs/review-r954.log](../agent_
 
 **Batch 5 rederived by hand.** From L228 item 1 with $X=U+R$, $X_a=\tfrac12(U+V)$, $X_b=\tfrac12(U-V)$:
 
-- $\operatorname{tr}U^3$ collects $2+\tfrac32+\tfrac14=\tfrac{15}4$, $\operatorname{tr}(U^2R)$ collects $6+\tfrac32=\tfrac{15}2$, $\operatorname{tr}(UV^2)$ collects $\tfrac32+\tfrac34=\tfrac94$, and $\operatorname{tr}(V^2R)$ collects $\tfrac32$. The shift cancellations and the coefficient $1$ on $\operatorname{tr}(\hat UR^2)$ check.
+- $\mathop{\mathrm{tr}}U^3$ collects $2+\tfrac32+\tfrac14=\tfrac{15}4$, $\mathop{\mathrm{tr}}(U^2R)$ collects $6+\tfrac32=\tfrac{15}2$, $\mathop{\mathrm{tr}}(UV^2)$ collects $\tfrac32+\tfrac34=\tfrac94$, and $\mathop{\mathrm{tr}}(V^2R)$ collects $\tfrac32$. The shift cancellations and the coefficient $1$ on $\mathop{\mathrm{tr}}(\hat UR^2)$ check.
 - The norm: $\lvert\hat U+\tfrac13R\rvert^2+\tfrac12\lvert\hat U-\tfrac23R\rvert^2$ has cross coefficient $\tfrac23-\tfrac23=0$, so $\tfrac32\lvert\hat U\rvert^2+\tfrac12\lvert V\rvert^2+\text{const}$ holds.
 - The post's $\Phi(U,V)$ is batch 5's $\Phi(\hat U,V)$ with the hat dropped. That is harmless for an abstract lemma, but the post never says that its $U$ is the shifted sum.
 
@@ -31,10 +31,10 @@ Brief: [BRIEF_F68.md](BRIEF_F68.md). Log: [agent_logs/review-r954.log](../agent_
 
 Checked in exact rationals and in floating point, independently of the filed script:
 
-- **Symmetry and trace.** Both printed matrices are symmetric. $\operatorname{tr}U=0$ exactly and $\operatorname{tr}V=10^{-6}$ at six digits.
+- **Symmetry and trace.** Both printed matrices are symmetric. $\mathop{\mathrm{tr}}U=0$ exactly and $\mathop{\mathrm{tr}}V=10^{-6}$ at six digits.
 - **Norms.** $\lvert U\rvert^2-1=5.5\cdot10^{-7}$ and $\lvert V\rvert^2-1=-3.9\cdot10^{-7}$.
 - **Non-commuting.** $\max\lvert[U,V]_{ij}\rvert=0.5216$ and $\lVert[U,V]\rVert=0.738$.
-- **Value.** With $A=\operatorname{diag}(\sqrt2,-\sqrt2,0)$ and $C=\tfrac5{\sqrt2}\operatorname{diag}(0,1,-1)$, $\Phi=7.5030796752$ at the rounded matrices and $7.5030796762$ after projecting them back to traceless unit norm. Rounding moves $\Phi$ by about $10^{-9}$, against a gap of $0.117$, so **it does not change the conclusion**.
+- **Value.** With $A=\mathop{\mathrm{diag}}(\sqrt2,-\sqrt2,0)$ and $C=\tfrac5{\sqrt2}\mathop{\mathrm{diag}}(0,1,-1)$, $\Phi=7.5030796752$ at the rounded matrices and $7.5030796762$ after projecting them back to traceless unit norm. Rounding moves $\Phi$ by about $10^{-9}$, against a gap of $0.117$, so **it does not change the conclusion**.
 - **Criticality.** The tangential gradients on the two spheres have norms $3.6\cdot10^{-6}$ and $3.8\cdot10^{-6}$, and $\lvert[U,\tfrac94V^2+A]\rvert_{\max}=1.4\cdot10^{-6}$, as batch 7 predicts for the optimal $U$ at fixed $V$.
 - **Script.** The filed script reproduces $\Phi=7.5030796761576966$, grid maximum $7.385776004$, refined $7.385776767$, bound $L h=0.0393$ and gap $0.11730$. The run took 7 seconds.
 - **Fields.** Batch 8's $a=2(1,-1,0)/\sqrt2$ equals the post's $A$.
@@ -51,7 +51,7 @@ Checked in exact rationals and in floating point, independently of the filed scr
 
 ## Item 4, why it happens
 
-- **Checks against batch 7.** The chain holds as batch 7 states it: $\psi$ is convex and $O(3)$-invariant, hence Schur-convex in the spectrum. Fan gives $\lambda(\beta V^2+A)\prec\lambda^\downarrow(\beta V^2)+\lambda^\downarrow(A)$, and von Neumann orders $\operatorname{tr}(VC)$. Batch 7's two one-field cases were reread and hold at fixed $\lvert\hat U\rvert,\lvert V\rvert$.
+- **Checks against batch 7.** The chain holds as batch 7 states it: $\psi$ is convex and $O(3)$-invariant, hence Schur-convex in the spectrum. Fan gives $\lambda(\beta V^2+A)\prec\lambda^\downarrow(\beta V^2)+\lambda^\downarrow(A)$, and von Neumann orders $\mathop{\mathrm{tr}}(VC)$. Batch 7's two one-field cases were reread and hold at fixed $\lvert\hat U\rvert,\lvert V\rvert$.
 - **The witness matches the account.** $V$ has spectrum $(0.633,0.130,-0.763)$. Against $C$ (order $e_2>e_1>e_3$), von Neumann puts $0.633$ on $e_2$, $0.130$ on $e_1$ and $-0.763$ on $e_3$. Against $A$ (order $e_1>e_3>e_2$), Fan puts the largest square, from $-0.763$, on $e_1$. In the witness $0.633$ sits on $e_2$, and the eigenvector of $-0.763$ is $(0.243,0,0.970)$, about $14^\circ$ from $e_3$ towards $e_1$. So the rotation in the $(e_1,e_3)$-plane moves between von Neumann's and Fan's placement of that eigenvalue.
 - **$e_2$.** The zero pattern gives $Ue_2=-0.459487\,e_2$ and $Ve_2=0.633156\,e_2$, so the italic sentence is exact.
 - **Defects.**
@@ -63,7 +63,7 @@ Checked in exact rationals and in floating point, independently of the filed scr
 
 **The field $A$ in batch 5, and so in the post, omits $-\tfrac23\beta_{ab}R$.**
 
-- **Derivation.** The Gram term $\tfrac12\beta_{ab}\lvert U\rvert^2$ is frame-free in $U$ but not in $\hat U$. It equals $\tfrac12\beta_{ab}\big(\lvert\hat U\rvert^2-\tfrac43\operatorname{tr}(\hat UR)+\tfrac49\lvert R\rvert^2\big)$, and at fixed $\lvert\hat U\rvert$ it contributes $\operatorname{tr}\big(\hat U\cdot(-\tfrac23\beta_{ab}R)\big)$.
+- **Derivation.** The Gram term $\tfrac12\beta_{ab}\lvert U\rvert^2$ is frame-free in $U$ but not in $\hat U$. It equals $\tfrac12\beta_{ab}\big(\lvert\hat U\rvert^2-\tfrac43\mathop{\mathrm{tr}}(\hat UR)+\tfrac49\lvert R\rvert^2\big)$, and at fixed $\lvert\hat U\rvert$ it contributes $\mathop{\mathrm{tr}}\big(\hat U\cdot(-\tfrac23\beta_{ab}R)\big)$.
 - **Screen.** At $m=4$, with random symmetric $\beta$ ($\beta_{ab}=-1.584$), two random diagonal external blocks and random $\hat U,V$ rotated independently at fixed norms, the change in $P$ from L228 item 1 equalled the change in $\Phi$ with the corrected $A$ to ten digits in four trials ($+20.7809972131$ against $+20.7809972131$, for example). With the printed $A$ the changes were off by several units ($+13.7768842006$ for that trial). $C$ as printed is right, and the norm stayed unchanged to $2\cdot10^{-14}$.
 - **Effect.** The omitted term is diagonal in $F$, so the refutation for arbitrary diagonal fields is unaffected. Only the displayed formula is wrong.
 
@@ -75,9 +75,9 @@ Checked in exact rationals and in floating point, independently of the filed scr
 
 **Observation (by hand).** At $m=3$, which is $n=6$, the witness's fields cannot be realised.
 
-- With one external block $X_c$, $C$ is a multiple of $X_c$, so $X_c=x\operatorname{diag}(0,1,-1)$.
-- The traceless part of $A=4X_c^2+\kappa X_c$ is $\tfrac43x^2\operatorname{diag}(-2,1,1)+\kappa x\operatorname{diag}(0,1,-1)$.
-- The witness's $A=\operatorname{diag}(\sqrt2,-\sqrt2,0)$ needs the coefficient $-\tfrac1{\sqrt2}<0$ on $\operatorname{diag}(-2,1,1)$, which is impossible.
+- With one external block $X_c$, $C$ is a multiple of $X_c$, so $X_c=x\mathop{\mathrm{diag}}(0,1,-1)$.
+- The traceless part of $A=4X_c^2+\kappa X_c$ is $\tfrac43x^2\mathop{\mathrm{diag}}(-2,1,1)+\kappa x\mathop{\mathrm{diag}}(0,1,-1)$.
+- The witness's $A=\mathop{\mathrm{diag}}(\sqrt2,-\sqrt2,0)$ needs the coefficient $-\tfrac1{\sqrt2}<0$ on $\mathop{\mathrm{diag}}(-2,1,1)$, which is impossible.
 - This supports the post's point that the built fields are special. Realisability at $m\ge4$ was not checked.
 
 ## Item 6, what a successor must clear
@@ -105,11 +105,11 @@ The same overreach appears in batch 8's "What follows" ("no induction through bl
 **C3 (item 5), post F68, "What it does not touch", and batch 5's display in [the derivation](2026-09-15-I106-m3-derivation.md).**
 
 - Replace "$A=R^2+3T_R+\sum_c(\beta_{ac}+\beta_{bc})X_c$" with "$A=R^2+3T_R+\sum_c(\beta_{ac}+\beta_{bc})X_c-\tfrac23\beta_{ab}R$" in both places.
-- In batch 5's Gram bullet, replace "$2\beta_{ab}\operatorname{tr}(X_aX_b)=\tfrac12\beta_{ab}(\lvert U\rvert^2-\lvert V\rvert^2)$ is frame-free," with "$2\beta_{ab}\operatorname{tr}(X_aX_b)=\tfrac12\beta_{ab}(\lvert U\rvert^2-\lvert V\rvert^2)$, where $\tfrac12\beta_{ab}\lvert U\rvert^2=\tfrac12\beta_{ab}\lvert\hat U\rvert^2-\tfrac23\beta_{ab}\operatorname{tr}(\hat UR)+\text{const}$ puts $-\tfrac23\beta_{ab}R$ into $A$,".
+- In batch 5's Gram bullet, replace "$2\beta_{ab}\mathop{\mathrm{tr}}(X_aX_b)=\tfrac12\beta_{ab}(\lvert U\rvert^2-\lvert V\rvert^2)$ is frame-free," with "$2\beta_{ab}\mathop{\mathrm{tr}}(X_aX_b)=\tfrac12\beta_{ab}(\lvert U\rvert^2-\lvert V\rvert^2)$, where $\tfrac12\beta_{ab}\lvert U\rvert^2=\tfrac12\beta_{ab}\lvert\hat U\rvert^2-\tfrac23\beta_{ab}\mathop{\mathrm{tr}}(\hat UR)+\text{const}$ puts $-\tfrac23\beta_{ab}R$ into $A$,".
 
 **C4 (item 5, optional), post F68, "What it does not touch".**
 
-- After "built from the blocks held fixed and the scalars, and the maximisation runs over those too." insert "At $m=3$ the witness's fields are not realisable: $C$ is a multiple of the one external block $X_c=x\operatorname{diag}(0,1,-1)$, and the traceless part of $A$ carries $\tfrac43x^2\ge0$ on $\operatorname{diag}(-2,1,1)$ where the witness needs $-\tfrac1{\sqrt2}$."
+- After "built from the blocks held fixed and the scalars, and the maximisation runs over those too." insert "At $m=3$ the witness's fields are not realisable: $C$ is a multiple of the one external block $X_c=x\mathop{\mathrm{diag}}(0,1,-1)$, and the traceless part of $A$ carries $\tfrac43x^2\ge0$ on $\mathop{\mathrm{diag}}(-2,1,1)$ where the witness needs $-\tfrac1{\sqrt2}$."
 - Replace "at $n=5,6,7$ found commuting maximisers" with "at $n=5,6,7$ found commuting maximisers, of which $n=6,7$ have external blocks".
 
 **C5 (item 1 and item 6), post F68, "What it does not touch".** Append "It leaves $G(2)$ at fixed total norm undecided: at the witness fields with $\beta_{ab}=0$ a diagonal pair at the same total norm $2$ reaches $\Phi=10.351$, above the witness's $7.503$."

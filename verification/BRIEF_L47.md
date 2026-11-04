@@ -25,7 +25,7 @@ For a compact irreducible symmetric space of rank $\ge2$, and for $\mathbb{OP}^2
 
 *Moved here from [results.md](../results.md) on 2026-08-31, where the argument was the only copy. That file now carries the statement and points here.*
 
-**Why it was needed.** For a locally symmetric Einstein space $Q(W)=\lambda W$, so $\theta=\lambda/\lVert W\rVert$ and the cubic becomes a *quadratic* condition on $\lVert W\rVert$. Normalising to Einstein constant $\tfrac12$ forces $\operatorname{tr}R=n/4$, makes the centre constant universal at $c=\frac1{2(n-1)}$, and gives $\lVert W\rVert^2=\lVert R\rVert^2-\frac n{8(n-1)}$. What is then needed is a lower bound on $\lVert R\rVert^2$.
+**Why it was needed.** For a locally symmetric Einstein space $Q(W)=\lambda W$, so $\theta=\lambda/\lVert W\rVert$ and the cubic becomes a *quadratic* condition on $\lVert W\rVert$. Normalising to Einstein constant $\tfrac12$ forces $\mathop{\mathrm{tr}}R=n/4$, makes the centre constant universal at $c=\frac1{2(n-1)}$, and gives $\lVert W\rVert^2=\lVert R\rVert^2-\frac n{8(n-1)}$. What is then needed is a lower bound on $\lVert R\rVert^2$.
 
 **Statement and argument.** Cauchy–Schwarz over the isotropy blocks, whose eigenvalues are [Petersen–Stanfield](https://arxiv.org/abs/2508.11236) Prop 2.2, gives $\lVert R\rVert^2\ge(n/4)^2/\dim\mathfrak h$, so
 

@@ -15,7 +15,7 @@
 ## 0. Conventions, fixed once
 
 - $N=\binom n2$, $\Lambda^2=\Lambda^2\mathbb R^n\cong\mathfrak{so}(n)$ with the inner product induced from $\mathbb R^n$, which is ad-invariant, so the structure constants $c_{\alpha\beta\gamma}=\langle[v_\alpha,v_\beta],v_\gamma\rangle$ in any orthonormal basis are totally antisymmetric.
-- $\mathrm{Sym}(\Lambda^2)$ is the space of self-adjoint operators on $\Lambda^2$ with $\langle A,B\rangle=\operatorname{tr}(AB)$. It splits orthogonally as $S^2_B\oplus(S^2_B)^\perp$, where $S^2_B=\ker b$ is the kernel of the Bianchi map and $(S^2_B)^\perp\cong\Lambda^4$. Further $S^2_B=\mathcal W_n\oplus(\text{Ricci part})$.
+- $\mathrm{Sym}(\Lambda^2)$ is the space of self-adjoint operators on $\Lambda^2$ with $\langle A,B\rangle=\mathop{\mathrm{tr}}(AB)$. It splits orthogonally as $S^2_B\oplus(S^2_B)^\perp$, where $S^2_B=\ker b$ is the kernel of the Bianchi map and $(S^2_B)^\perp\cong\Lambda^4$. Further $S^2_B=\mathcal W_n\oplus(\text{Ricci part})$.
 - $\mathcal W_n^\perp$ denotes the orthogonal complement of $\mathcal W_n$ in $\mathrm{Sym}(\Lambda^2)$. It contains the Ricci part and the $\Lambda^4$ part.
 - $A\#B$ is the Böhm–Wilking bilinear product, $Q(X)=X^2+X\#X$, $X\circ Y=\tfrac12(XY+YX)+X\#Y$ its polarization, and $L_W=W\circ(\cdot)$ acts on all of $\mathrm{Sym}(\Lambda^2)$. Lemma L24's $L_e=L_W/\theta$.
 - $W$ is a unit global maximiser with eigenframe $\{v_\alpha\}$ and spectrum $\lambda$, $\theta=P(W)=M(n)$. For $x\in\mathbb R^N$, $D_x=\sum_\alpha x_\alpha\,v_\alpha\otimes v_\alpha\in\mathcal D$, so $\|D_x\|=|x|$ and $D_\lambda=W$.
@@ -33,7 +33,7 @@
 
 For diagonal $A=D_x$, $B=D_y$ the product formula of H1 gives $(D_x\#D_y)_{\alpha\beta}=\tfrac12\sum_{\gamma,\delta}c_{\alpha\gamma\delta}c_{\beta\gamma\delta}x_\gamma y_\delta$, so $\langle D_z,D_x\#D_y\rangle=\tfrac12\sum_{\alpha,\gamma,\delta}c^2_{\alpha\gamma\delta}\,z_\alpha x_\gamma y_\delta$.
 
-Also $\langle D_x,\tfrac12(WD_x+D_xW)\rangle=\operatorname{tr}(D_xWD_x)=\sum_\alpha\lambda_\alpha x_\alpha^2$ because $W=D_\lambda$. Hence
+Also $\langle D_x,\tfrac12(WD_x+D_xW)\rangle=\mathop{\mathrm{tr}}(D_xWD_x)=\sum_\alpha\lambda_\alpha x_\alpha^2$ because $W=D_\lambda$. Hence
 
 $$\langle D_x,L_WD_x\rangle=\sum_\alpha\lambda_\alpha x_\alpha^2+\tfrac12\sum_{\alpha,\beta,\gamma}c^2_{\alpha\beta\gamma}\,x_\alpha x_\beta\lambda_\gamma=\langle x,M(\lambda)x\rangle .$$
 
@@ -41,7 +41,7 @@ Since $x\mapsto D_x$ is an isometry onto $\mathcal D$, $\lambda_{\max}(M)=\max\{
 
 ## 2. $L_W$ is self-adjoint on $\mathrm{Sym}(\Lambda^2)$
 
-Böhm–Wilking (5) define $\mathrm{tri}(R_1,R_2,R_3)=\operatorname{tr}\big((R_1R_2+R_2R_1+2R_1\#R_2)R_3\big)$ and show it is symmetric in all three arguments via $\operatorname{tr}(2(R_1\#R_2)R_3)=\sum\langle[R_1b_\alpha,R_2b_\beta],R_3b_\gamma\rangle\langle[b_\alpha,b_\beta],b_\gamma\rangle$. That computation uses only self-adjointness of the $R_i$ and total antisymmetry of $c$, so it holds on all of $\mathrm{Sym}(\Lambda^2)$, with no Bianchi condition. Since $\langle Y,L_WX\rangle=\tfrac12\mathrm{tri}(W,X,Y)$, $L_W$ is self-adjoint on $\mathrm{Sym}(\Lambda^2)$.
+Böhm–Wilking (5) define $\mathrm{tri}(R_1,R_2,R_3)=\mathop{\mathrm{tr}}\big((R_1R_2+R_2R_1+2R_1\#R_2)R_3\big)$ and show it is symmetric in all three arguments via $\mathop{\mathrm{tr}}(2(R_1\#R_2)R_3)=\sum\langle[R_1b_\alpha,R_2b_\beta],R_3b_\gamma\rangle\langle[b_\alpha,b_\beta],b_\gamma\rangle$. That computation uses only self-adjointness of the $R_i$ and total antisymmetry of $c$, so it holds on all of $\mathrm{Sym}(\Lambda^2)$, with no Bianchi condition. Since $\langle Y,L_WX\rangle=\tfrac12\mathrm{tri}(W,X,Y)$, $L_W$ is self-adjoint on $\mathrm{Sym}(\Lambda^2)$.
 
 ## 3. $L_W$ preserves $\mathcal W_n$, $\mathcal W_n^\perp$ and $W^\perp$
 
@@ -65,7 +65,7 @@ Therefore
 
 $$\langle D,L_WD\rangle\le\theta a^2+\tfrac\theta2\|Y\|^2+\kappa\|Z\|^2\le\theta .$$
 
-Taking the maximum over $D$ and using Section 1, $\lambda_{\max}(M)\le\theta$. The reverse inequality is Passage B's boxed $\theta\le\lambda_{\max}(M)$, which is the case $D=W\in\mathcal D$. So $\lambda_{\max}(M)=\theta$ at every global maximiser, which is the unrestricted form of L115. The by-product $\theta\ge\max_\alpha\lambda_\alpha$ then follows from $\operatorname{diag}M=\lambda$, as the Lean theorem `theta_ge_diag` in [L115Statement.lean](../lean/HamiltonsCubic/Results/L115Statement.lean) formalizes.
+Taking the maximum over $D$ and using Section 1, $\lambda_{\max}(M)\le\theta$. The reverse inequality is Passage B's boxed $\theta\le\lambda_{\max}(M)$, which is the case $D=W\in\mathcal D$. So $\lambda_{\max}(M)=\theta$ at every global maximiser, which is the unrestricted form of L115. The by-product $\theta\ge\max_\alpha\lambda_\alpha$ then follows from $\mathop{\mathrm{diag}}M=\lambda$, as the Lean theorem `theta_ge_diag` in [L115Statement.lean](../lean/HamiltonsCubic/Results/L115Statement.lean) formalizes.
 
 ## 5. The level of the cap
 

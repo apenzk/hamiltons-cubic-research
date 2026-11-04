@@ -17,7 +17,7 @@
 | B | build, axiom audit, no `sorry` | **CONFIRMED** |
 | C-A6 | r1529 A-6: the weak box uses the first identity and Hansen–Pedersen nowhere | **CONFIRMED** |
 | C-A1 | r1529 A-1: `rightDeriv_nonneg` documented as r427's sliver form, unused by the chain | **CONFIRMED** |
-| C-A3 | r1529 A-3: F = 0 kills the first order through $\operatorname{tr}(\Pi_AD_-)=0$ | **CONFIRMED** |
+| C-A3 | r1529 A-3: F = 0 kills the first order through $\mathop{\mathrm{tr}}(\Pi_AD_-)=0$ | **CONFIRMED** |
 | C-A4 | r1529 A-4, A-7: `hΔ` in the owed lists | **CONFIRMED** |
 | C-173 | r1529 C-173: the L173 (statement) row credits bounds.md | **CONFIRMED** |
 | C-136 | r1529 C-136: rows 136 and 11 of INDEX-results carry the Lean clause in the last cell | **CONFIRMED** |
@@ -46,9 +46,9 @@
 
 ## C. r1529's repairs
 
-- **C-A6** ([lean/INDEX.md:491](../lean/INDEX.md), [L136Sign.lean:30](../lean/HamiltonsCubic/Results/L136Sign.lean)). Both now say the weak box uses the first identity for $\operatorname{tr}(\Pi_EX_2)=0$ at $B_{12}=B_{13}=0$ and Hansen–Pedersen nowhere, with the reason ($\operatorname{tr}(\Pi_Eu_-)\ne0$ puts $E$ out of the sign argument's reach). Correct, and it implicitly drops the second identity from the weak box, which is also correct since `cross_term_nonpos` takes $\operatorname{tr}(\Pi_AX_2)\ge0$ from `trA_nonneg`. Repaired.
+- **C-A6** ([lean/INDEX.md:491](../lean/INDEX.md), [L136Sign.lean:30](../lean/HamiltonsCubic/Results/L136Sign.lean)). Both now say the weak box uses the first identity for $\mathop{\mathrm{tr}}(\Pi_EX_2)=0$ at $B_{12}=B_{13}=0$ and Hansen–Pedersen nowhere, with the reason ($\mathop{\mathrm{tr}}(\Pi_Eu_-)\ne0$ puts $E$ out of the sign argument's reach). Correct, and it implicitly drops the second identity from the weak box, which is also correct since `cross_term_nonpos` takes $\mathop{\mathrm{tr}}(\Pi_AX_2)\ge0$ from `trA_nonneg`. Repaired.
 - **C-A1** ([L136Sign.lean:17](../lean/HamiltonsCubic/Results/L136Sign.lean), lean/INDEX.md:491). `rightDeriv_nonneg` is now r427's argument "on the Schur sliver", and both say the chain runs `limit_nonneg` at $k=2$ instead. The row's first sentence still introduces `rightDeriv_nonneg` as *"the record's 'from nothing else'"*, which is accurate for r427's first-order form, and the later sentence removes any suggestion that the chain uses it. Repaired.
-- **C-A3** ([L136Sign.lean:22](../lean/HamiltonsCubic/Results/L136Sign.lean), line 69). The constant order is $\operatorname{tr}(\Pi_Au_-)=0$ and the first is $\operatorname{tr}(\Pi_AD_-)$, "which F = 0 kills", in the header, the `trA_nonneg` docstring and the owed paragraph, and the row cites [route-a.md:289](../findings/route-a.md). Repaired.
+- **C-A3** ([L136Sign.lean:22](../lean/HamiltonsCubic/Results/L136Sign.lean), line 69). The constant order is $\mathop{\mathrm{tr}}(\Pi_Au_-)=0$ and the first is $\mathop{\mathrm{tr}}(\Pi_AD_-)$, "which F = 0 kills", in the header, the `trA_nonneg` docstring and the owed paragraph, and the row cites [route-a.md:289](../findings/route-a.md). Repaired.
 - **C-A4** ([L136Sign.lean:33](../lean/HamiltonsCubic/Results/L136Sign.lean), lean/INDEX.md:491). `hΔ` heads the owed list in both, "All three are hypotheses here". Repaired.
 - **C-173** ([lean/INDEX.md:232](../lean/INDEX.md)). The row credits bounds.md ((A) L153's Killing row mass, (B) $\mathcal A(W)=2W$, (C) criticality), "which L104 cites". Repaired. *Note*: the same row's opening **"No `sorry`; that the reduced system …"** is a semicolon splice that predates a536b099.
 - **C-136** ([INDEX-results.md:152](../findings/INDEX-results.md), line 26). Both rows now end *"[source] **Lean: partial**, [link], and [lean/INDEX.md](../lean/INDEX.md) says what it leaves out. |"*, the pattern of rows 10 and 135. Repaired. The pre-existing splices in both claim cells ("Gate 2 owed on the replacement; the first version", "each true of a different object; proof runs through") predate these commits.

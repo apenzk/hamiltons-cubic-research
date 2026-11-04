@@ -36,7 +36,7 @@ Quoted from [conventions.md](../findings/conventions.md), not restated:
 - $M(n)$, "**the global maximum** of $P$ on the unit sphere of $\mathcal W_n$ … padded $W_{\mathbb{CP}^2}$ giving $M(n)\ge\sqrt{3/2}$".
 - $\dim\mathcal W_n$ ("$\frac{n(n-3)(n+1)(n+2)}{12}$), $10$ at $n=4$, $84$ at $n=6$, $1638$ at $n=12$".
 - $\kappa_n$, "**two meanings and one of them falsifies a lemma** … [L17](../findings/route-a.md)'s penalty coefficient, $\kappa_n=9(\sqrt{3/2}-\theta_0(n))$, **negative exactly at $n\ge12$** … *This table's other $\kappa_n$ is the algebra's Killing constant $\tfrac{(2n-1)(n-1)}4$, which is $63.25$ at $n=12$*".
-- $B$, "$B=\tfrac\theta2\mathrm{Id}-L_W$ at a critical point … *This is a third object under the letter $B$ in this record*"; and, separately, "**THE LETTER $B$ MEANS TWO THINGS, live.** [conventions.md]'s Killing form above is $B(X,Y)=(n-2)\operatorname{tr}(XY)$ on $\mathfrak{so}(n)$; [sym3-blocks.md](../findings/sym3-blocks.md) writes $B(X,Y)=-\tfrac12\operatorname{tr}(XY)$".
+- $B$, "$B=\tfrac\theta2\mathrm{Id}-L_W$ at a critical point … *This is a third object under the letter $B$ in this record*"; and, separately, "**THE LETTER $B$ MEANS TWO THINGS, live.** [conventions.md]'s Killing form above is $B(X,Y)=(n-2)\mathop{\mathrm{tr}}(XY)$ on $\mathfrak{so}(n)$; [sym3-blocks.md](../findings/sym3-blocks.md) writes $B(X,Y)=-\tfrac12\mathop{\mathrm{tr}}(XY)$".
 - The operator the block calls $L_u$ already has a name here: "$F_u(h)=\tfrac12(uh+hu)+u\#h$", with "$u=W_{\mathbb{CP}^2}$ padded to unit norm, $\theta^*=P(u)=\sqrt{3/2}$".
 
 ## 1. Hypothesis inventory
@@ -49,7 +49,7 @@ A pass with no inventory is not a pass. The chain the block displays needs eleve
 | H2 | $W$ critical: $Q(W)=\theta W$ | yes, "from criticality alone" | yes | ok |
 | H3 | $\lVert W\rVert=1$ | no | yes, it drops the $\lVert W\rVert^2$ it had just written | **undeclared** |
 | H4 | $\theta>0$ | no | yes, twice: to keep $W$ out of the $\theta/2$-eigenspace, and to form $e=W/\theta$ | **undeclared** |
-| H5 | $L_W$ symmetric | no | yes, without it $\operatorname{tr}(L_W^2)$ is not $\sum\mu_i^2$ | **undeclared** |
+| H5 | $L_W$ symmetric | no | yes, without it $\mathop{\mathrm{tr}}(L_W^2)$ is not $\sum\mu_i^2$ | **undeclared** |
 | H6 | $Q$ is $O(n)$-equivariant | no | yes, it is the whole of the $\theta/2$ multiplicity | **undeclared** |
 | H7 | $\mathcal W_n$ irreducible, with no $O(n)$-invariant vector | no | yes, it is the whole of both trace identities | **undeclared** |
 | H8 | $W$ a **local maximum** | implied by naming a "Peirce cap" | **no** | **stated and never used** |
@@ -65,7 +65,7 @@ H8 and H11 are the two the brief named in advance, and both land.
 
 Drawn from the argument as written, and from nothing else, the canonical statement would have to be:
 
-> **Lemma L13 (spectral-moment ceiling).** Let $n\ge6$ be even, let $W\in\mathcal W_n$ satisfy $\lVert W\rVert=1$ and $Q(W)=\theta W$ with $\theta>0$, and let $L_W$ be the polarisation $L_WH=\tfrac12(WH+HW)+W\# H$, so that $P$'s symmetric trilinear form is $T(A,C,D)=\langle L_AC,D\rangle$. Then $L_W$ is symmetric, $L_WW=\theta W$, $\operatorname{tr}(L_W)=0$, $\operatorname{tr}(L_W^2)=\tfrac{(n-1)(2n-1)}4$, and every vector tangent to the orbit $O(n)\cdot W$ is an eigenvector of $L_W$ of eigenvalue exactly $\theta/2$. Consequently
+> **Lemma L13 (spectral-moment ceiling).** Let $n\ge6$ be even, let $W\in\mathcal W_n$ satisfy $\lVert W\rVert=1$ and $Q(W)=\theta W$ with $\theta>0$, and let $L_W$ be the polarisation $L_WH=\tfrac12(WH+HW)+W\# H$, so that $P$'s symmetric trilinear form is $T(A,C,D)=\langle L_AC,D\rangle$. Then $L_W$ is symmetric, $L_WW=\theta W$, $\mathop{\mathrm{tr}}(L_W)=0$, $\mathop{\mathrm{tr}}(L_W^2)=\tfrac{(n-1)(2n-1)}4$, and every vector tangent to the orbit $O(n)\cdot W$ is an eigenvector of $L_W$ of eigenvalue exactly $\theta/2$. Consequently
 > $$\theta^2\Bigl(1+\tfrac{k_0}4\Bigr)\le\frac{(n-1)(2n-1)}4,\qquad k_0=\dim\bigl(O(n)\cdot W\bigr),$$
 > and since $k_0\le\binom n2$ the smallest value the right-hand side can ever force is
 > $$\theta^2\le\frac{2(n-1)(2n-1)}{n^2-n+8}\longrightarrow4^-,$$
@@ -82,9 +82,9 @@ $P(W)=T(W,W,W)$ with $T$ symmetric, so $\nabla P=3Q(W)$ with $Q(W)=T(W,W,\cdot)^
 1. **Euler.** $L_WW=T(W,W,\cdot)^\sharp=Q(W)=\theta W$.
 2. **Equivariance.** $Q(gW)=gQ(W)$ for $g\in O(n)$. Differentiating along $g=\exp(tX)$, $X\in\mathfrak{so}(n)$, at $t=0$ with $z=X\cdot W$ gives $2L_Wz=X\cdot Q(W)=\theta z$, i.e. $L_Wz=\tfrac\theta2z$ **exactly**, at every nonzero critical point.
 
-$L_W$ preserves $W^\perp$, since $\langle L_WH,W\rangle=T(W,H,W)=\langle L_WW,H\rangle=\theta\langle W,H\rangle$. So the spectrum of $L_W$ contains $\theta$ once and $\theta/2$ with multiplicity at least $k_0=\dim(O(n)\cdot W)$, and these are distinct because $\theta>0$. Symmetry gives $\operatorname{tr}(L_W^2)=\sum_i\mu_i^2$, hence
+$L_W$ preserves $W^\perp$, since $\langle L_WH,W\rangle=T(W,H,W)=\langle L_WW,H\rangle=\theta\langle W,H\rangle$. So the spectrum of $L_W$ contains $\theta$ once and $\theta/2$ with multiplicity at least $k_0=\dim(O(n)\cdot W)$, and these are distinct because $\theta>0$. Symmetry gives $\mathop{\mathrm{tr}}(L_W^2)=\sum_i\mu_i^2$, hence
 
-$$\frac{(n-1)(2n-1)}4=\operatorname{tr}(L_W^2)\ \ge\ \theta^2+k_0\Bigl(\frac\theta2\Bigr)^2=\theta^2\Bigl(1+\frac{k_0}4\Bigr).$$
+$$\frac{(n-1)(2n-1)}4=\mathop{\mathrm{tr}}(L_W^2)\ \ge\ \theta^2+k_0\Bigl(\frac\theta2\Bigr)^2=\theta^2\Bigl(1+\frac{k_0}4\Bigr).$$
 
 **The Peirce cap is not used.** The step is a *lower* bound on a sum of squares, and it consumes only that $\theta/2$ is attained with multiplicity $\ge k_0$. An upper bound $L_W|_{W^\perp}\preceq\theta/2$ contributes nothing to it. The block writes the cap into the same sentence as the attainment, joined by "attained on", and then says the inequality follows "from criticality alone", which is true of what it uses and false of what it wrote. Section C's annotation is right on this point and right about why: the cap is the constrained second-derivative test. With multiplier $3\theta/2$ from $3Q(W)=\mu\cdot2W$, the Lagrangian Hessian is $6L_W-3\theta\,\mathrm{Id}\preceq0$ on $W^\perp$, which is the cap; it needs local maximality, the attainment does not.
 
@@ -96,7 +96,7 @@ strictly below $4$ at every $n$ and tending to $4$. Against $\theta_0(n)^2=2(n-1
 
 ## 4. $\kappa_n$, proven at even $n$, fitted at odd $n$, used at all $n$
 
-By Schur, $\operatorname{tr}(L_xL_y)$ is an $O(n)$-invariant symmetric bilinear form on an irreducible module, hence $\kappa_n\langle x,y\rangle$ for **some** constant; and $\operatorname{tr}(L_x)=\langle x,\tau\rangle$ with $\tau$ invariant, hence $0$ because $\mathcal W_n$ carries no invariant vector. That much is free at every $n$. The **value** of $\kappa_n$ is not.
+By Schur, $\mathop{\mathrm{tr}}(L_xL_y)$ is an $O(n)$-invariant symmetric bilinear form on an irreducible module, hence $\kappa_n\langle x,y\rangle$ for **some** constant; and $\mathop{\mathrm{tr}}(L_x)=\langle x,\tau\rangle$ with $\tau$ invariant, hence $0$ because $\mathcal W_n$ carries no invariant vector. That much is free at every $n$. The **value** of $\kappa_n$ is not.
 
 What the record actually holds, from [second-order.md](../findings/second-order.md):
 
@@ -113,7 +113,7 @@ Section C's annotation is therefore right, and the finding the brief anticipated
 
 - **A constant proven at even $n$ and used at all $n$.** The ceiling $\theta\le2-o(1)$ is an *asymptotic* statement; along odd $n$ it has no proof. The block states it without parity, and the annotation's own range "$n\ge12$" contains $13,15,17,\dots$.
 - Odd $n$ is verified only at $n=5,7,9,11,13$ and is **open at every odd $n\ge15$**, including the entire asymptotic regime the ceiling is about.
-- Section C's proposed closure, "$\kappa_n\dim\mathcal W_n=\lVert T\rVert^2$", is a correct identity, summing $\operatorname{tr}(L_{B_i}L_{B_i})=\kappa_n$ over an orthonormal basis gives it by total symmetry of $T$, but [second-order.md](../findings/second-order.md) already records that "**It is a corollary of the second identity, not an independent route** … so it restates the constant rather than proving it". The annotation offers as the closing lemma a thing the record has already ruled non-closing. **The closure route is the direct evaluation of $\lVert T\rVert^2$, and it is not on file.**
+- Section C's proposed closure, "$\kappa_n\dim\mathcal W_n=\lVert T\rVert^2$", is a correct identity, summing $\mathop{\mathrm{tr}}(L_{B_i}L_{B_i})=\kappa_n$ over an orthonormal basis gives it by total symmetry of $T$, but [second-order.md](../findings/second-order.md) already records that "**It is a corollary of the second identity, not an independent route** … so it restates the constant rather than proving it". The annotation offers as the closing lemma a thing the record has already ruled non-closing. **The closure route is the direct evaluation of $\lVert T\rVert^2$, and it is not on file.**
 
 **Smallest admissible $n$.** The block names none. $\mathcal W_n\ne0$ from $n=4$; the Schur step needs $O(4)$ rather than $SO(4)$ at $n=4$, the record recording "commutant $=1$ at $n=5\ldots10$, with $n=4$ returning $2$"; the $\kappa_n$ derivation starts at $n=6$. So the honest range of the displayed chain is **even $n\ge6$**, and nothing in the block says so.
 
@@ -154,7 +154,7 @@ $\lambda^2(1+k_0/4)\le\kappa_n$ is an **upper** bound on $\theta$. A critical po
 
 **And the premise is wrong too.** $1.7974$ was never produced by this inequality. [REVIEW_r596.md](../reviews/REVIEW_r596.md) records that "$49.7$ uses `bound_level3(n, N)`, the **level-3** bound … obtained by a grid search", and [second-order.md](../findings/second-order.md) displays that stronger bound outright:
 $$\theta^2\le\frac{\kappa_W}{1+\tfrac{\mathrm{orb}}4+\bigl(1+\tfrac{\mathrm{orb}}2\bigr)^2/(D-1-\mathrm{orb})},\qquad D=\dim\mathcal W_n,$$
-the extra term being the Cauchy–Schwarz cost of $\operatorname{tr}(L_W)=0$. At $n=12$ with $\mathrm{orb}=66$ and $D=1638$ the denominator is $1+16.5+\tfrac{34^2}{1571}=18.2358$, reproducing the record's own "$18.2$ against $41.4$ at $n=12$" exactly. A bound from a strictly richer relaxation is of course allowed below the level-2 ceiling; there is no contradiction to exhibit.
+the extra term being the Cauchy–Schwarz cost of $\mathop{\mathrm{tr}}(L_W)=0$. At $n=12$ with $\mathrm{orb}=66$ and $D=1638$ the denominator is $1+16.5+\tfrac{34^2}{1571}=18.2358$, reproducing the record's own "$18.2$ against $41.4$ at $n=12$" exactly. A bound from a strictly richer relaxation is of course allowed below the level-2 ceiling; there is no contradiction to exhibit.
 
 **Opposite argued.** If one read $k_0$ in that sentence as the *multiplicity of $\theta/2$* rather than the orbit dimension, then $k_0>\binom n2$ is not absurd at all, §7 shows it happens. Either way the sentence fails.
 
@@ -191,17 +191,17 @@ Section C's "refuted outright" flattens a distinction the record makes elsewhere
 
 ## 9. Completeness, and the precise sense of "wrong invariant" that survives
 
-**The mathematics of Section C's rebuttal is correct as far as it goes.** At a local maximum with $\theta>0$: $L_W$ is symmetric, $L_WW=\theta W$, $L_W$ preserves $W^\perp$, and the cap puts the rest at $\le\theta/2<\theta$. Hence $\theta=\lambda_{\max}(L_W)$. The moments $\operatorname{tr}(L_W^k)$ determine the characteristic polynomial by Newton's identities, hence the spectrum, hence $\theta$. ✔ For a **known** $L_W$, the moment sequence is a complete invariant for $\theta$.
+**The mathematics of Section C's rebuttal is correct as far as it goes.** At a local maximum with $\theta>0$: $L_W$ is symmetric, $L_WW=\theta W$, $L_W$ preserves $W^\perp$, and the cap puts the rest at $\le\theta/2<\theta$. Hence $\theta=\lambda_{\max}(L_W)$. The moments $\mathop{\mathrm{tr}}(L_W^k)$ determine the characteristic polynomial by Newton's identities, hence the spectrum, hence $\theta$. ✔ For a **known** $L_W$, the moment sequence is a complete invariant for $\theta$.
 
 **And it is irrelevant to the method, for a reason the record itself supplies.** The method never has $L_W$; it has only those moments that are the *same at every critical point*, i.e. universal identities. [second-order.md](../findings/second-order.md):
 
-> "**The moment method stops at two.** A third universal identity does not exist: $\theta^2\operatorname{tr}(L_e^3)$ takes the values $2.625$, $1.3125$, $-1.0$, $1.969$, $2.0$ and $5.906$ across the catalogue", with "$\theta^2\sum\lambda^3$ … $0.3125$ at $S^3\times S^3$ against $-1.5104$ at $\mathbb{CP}^3$, **same $n$ and same $\theta$**".
+> "**The moment method stops at two.** A third universal identity does not exist: $\theta^2\mathop{\mathrm{tr}}(L_e^3)$ takes the values $2.625$, $1.3125$, $-1.0$, $1.969$, $2.0$ and $5.906$ across the catalogue", with "$\theta^2\sum\lambda^3$ … $0.3125$ at $S^3\times S^3$ against $-1.5104$ at $\mathbb{CP}^3$, **same $n$ and same $\theta$**".
 
 Two critical points at one $n$ with one $\theta$ and different third moments is a witness that no third universal identity exists. Given that, and given "**the bound is the exact optimum of its moment problem** … no moment-based sharpening exists", the closure claim has a real argument. **So the label "wrong invariant" is neither simply right nor simply backwards.**
 
 **The statement that survives**, precisely:
 
-> The only $O(n)$-universal spectral-moment identities for $L_W$ on $\mathcal W_n$ are $\operatorname{tr}(L_W)=0$, which is vacuous, and $\operatorname{tr}(L_W^2)=\kappa_n\lVert W\rVert^2$, which is **constant on the unit sphere** and so carries nothing about $W$ beyond its norm. The exact optimum of the moment problem built from those two, together with the pinned multiplicities at $1$ and $\tfrac12$, lies above $\theta_0(n)$ at every $n$, by a factor tending to $\sqrt2$.
+> The only $O(n)$-universal spectral-moment identities for $L_W$ on $\mathcal W_n$ are $\mathop{\mathrm{tr}}(L_W)=0$, which is vacuous, and $\mathop{\mathrm{tr}}(L_W^2)=\kappa_n\lVert W\rVert^2$, which is **constant on the unit sphere** and so carries nothing about $W$ beyond its norm. The exact optimum of the moment problem built from those two, together with the pinned multiplicities at $1$ and $\tfrac12$, lies above $\theta_0(n)$ at every $n$, by a factor tending to $\sqrt2$.
 
 That is a Lemma-shaped claim resting on an Observation (the non-existence of a third identity, established by a measured pair). What does **not** survive is "spectral moments of $L_u$ are the wrong invariants for this problem" as a standalone: the moments are complete invariants; it is their *universality* that fails. Nor does "a hard ceiling that no refinement of it escapes", for two independent reasons, §8's multiplicity, and the block's own next clause, "the fourth moment reaches only $14\times$ **even granting an oracle**", which concedes that refinements move the number and merely reports where they land.
 
@@ -218,7 +218,7 @@ That is a Lemma-shaped claim resting on an Observation (the non-existence of a t
 | **Odd $n$** | **Hit, and it is the parity split.** $\kappa_n$ is proven at even $n\ge6$, verified at odd $n\le13$, open at odd $n\ge15$, so the asymptotic ceiling has no proof along odd $n$. §4. |
 | **The crossover $n=6+2\sqrt7$** | **Hit.** It is the zero of the block's undisclosed denominator; below it the "excess" is negative, and $n=12$ sits $0.71$ above it, which is why $58.9$ and $3.09$ differ by $19\times$. §7. |
 | **A claim proven on a subfamily, used in general** | **Hit twice**, $\kappa_n$ at even $n$ used at all $n$; and the "exactly $\dim(O(n)\cdot u)$" clause, verified "at two families and three dimensions", stated universally and false. §4, §8. |
-| **A hypothesis stated but never used** | **Hit.** The Peirce cap, H8, and $\operatorname{tr}(L_W)=0$, which the block displays and never consumes; the record's own level-3 bound is exactly what consuming it buys. §3, §6. |
+| **A hypothesis stated but never used** | **Hit.** The Peirce cap, H8, and $\mathop{\mathrm{tr}}(L_W)=0$, which the block displays and never consumes; the record's own level-3 bound is exactly what consuming it buys. §3, §6. |
 | **A step using a hypothesis never stated** | **Hit seven times.** H1, H3–H7 and H11 in §1. |
 | **A universal claim with no witness** | **Hit.** "a hard ceiling that no refinement of it escapes", refuted by the record's own $18>15=\binom62$ and by the block's own $14\times$ clause. §8, §9. Also [ATTEMPTS.md](../ATTEMPTS.md)'s $k_0=n-1$ witness, which is the zero Weyl operator. §7. |
 | **An imported theorem whose hypotheses were never checked** | **Hit, and it is the named one.** "Peirce cap" imports Jordan-algebra language: for an idempotent $e$ in a *unital* Jordan algebra, $\sigma(L_e)\subseteq\{1,\tfrac12,0\}$ is a theorem holding at every idempotent. Here $Q(e)=e$ for $e=W/\theta$, but $\mathcal W_n$ under $\tfrac12(xy+yx)+x\# y$ has **no unit** and is not Jordan; the eigenvalues are not confined to $\{1,\tfrac12,0\}$, [second-order.md](../findings/second-order.md)'s own table at $S^3\times S^3$ reads $1,\tfrac12,\tfrac14,0,-\tfrac12$, and the $\le\tfrac12$ bound comes from second-order optimality (Krasnov–Tkachev Prop. 6.6), not from Peirce theory. The record concedes this implicitly by saying the cap needs local maximality; a genuine Peirce statement would not. The block never states the hypothesis it silently borrows. |
@@ -226,9 +226,9 @@ That is a Lemma-shaped claim resting on an Observation (the non-existence of a t
 
 **The collisions, read in the record's senses.**
 
-- **$B$.** The block's $B(u,H)$ is the polarisation of $Q$, a **fourth** sense, and a needless one, because [conventions.md](../findings/conventions.md) already names this operator: "$F_u(h)=\tfrac12(uh+hu)+u\#h$". Worse, the sense that *typechecks* against "$B(u,H)$" is the Killing form $B(X,Y)=(n-2)\operatorname{tr}(XY)$, under which $L_u$ would be the rank-one map $H\mapsto(n-2)\operatorname{tr}(uH)$, with $\operatorname{tr}(L_u)=(n-2)\operatorname{tr}(u)$ and $\operatorname{tr}(L_u^2)=\bigl((n-2)\operatorname{tr}(u)\bigr)^2$, quartic in $u$, not quadratic. The collision is materially misleading, not cosmetic. The record's third sense, $B=\tfrac\theta2\mathrm{Id}-L_W$, is the *cap operator of this very block*, so the block and the conventions file use one letter for an object and for its own complement.
+- **$B$.** The block's $B(u,H)$ is the polarisation of $Q$, a **fourth** sense, and a needless one, because [conventions.md](../findings/conventions.md) already names this operator: "$F_u(h)=\tfrac12(uh+hu)+u\#h$". Worse, the sense that *typechecks* against "$B(u,H)$" is the Killing form $B(X,Y)=(n-2)\mathop{\mathrm{tr}}(XY)$, under which $L_u$ would be the rank-one map $H\mapsto(n-2)\mathop{\mathrm{tr}}(uH)$, with $\mathop{\mathrm{tr}}(L_u)=(n-2)\mathop{\mathrm{tr}}(u)$ and $\mathop{\mathrm{tr}}(L_u^2)=\bigl((n-2)\mathop{\mathrm{tr}}(u)\bigr)^2$, quartic in $u$, not quadratic. The collision is materially misleading, not cosmetic. The record's third sense, $B=\tfrac\theta2\mathrm{Id}-L_W$, is the *cap operator of this very block*, so the block and the conventions file use one letter for an object and for its own complement.
 - **$\lambda$.** The block's $\lambda$ is the record's $\theta$; the record's $\lambda$ is a $\Lambda^2$ eigenvalue. Read in the record's sense, "a Peirce cap at $\lambda/2$ on $u^\perp$ … $\lambda^2(1+k_0/4)\le\ldots$ … $\lambda\le2-o(1)$ against a true $\sqrt2$" is a statement about $\Lambda^2$ eigenvalues and is unrelated to the conjecture.
-- **$u$ against $W$.** The block uses **both letters for one object inside one sentence**: "the multiplication operator $L_u\colon H\mapsto B(u,H)$ gives $\operatorname{tr}(L_W)=0$, $\operatorname{tr}(L_W^2)=\ldots$, and a Peirce cap at $\lambda/2$ on $u^\perp$". Read in conventions' sense, $u$ is the padded $W_{\mathbb{CP}^2}$ at $\theta^*=\sqrt{3/2}$, a specific non-maximiser, and one that sits on the *other* side of the margin the block is computing.
+- **$u$ against $W$.** The block uses **both letters for one object inside one sentence**: "the multiplication operator $L_u\colon H\mapsto B(u,H)$ gives $\mathop{\mathrm{tr}}(L_W)=0$, $\mathop{\mathrm{tr}}(L_W^2)=\ldots$, and a Peirce cap at $\lambda/2$ on $u^\perp$". Read in conventions' sense, $u$ is the padded $W_{\mathbb{CP}^2}$ at $\theta^*=\sqrt{3/2}$, a specific non-maximiser, and one that sits on the *other* side of the margin the block is computing.
 - **$\kappa_n$.** Section C writes "$\kappa_n=(n-1)(2n-1)/4$" and confines its claim to "$n\ge12$", exactly the range in which conventions.md warns the *other* live $\kappa_n$ is negative, "same letter, same subscript, opposite sign, a factor of six hundred". Neither the block nor the annotation says which is meant.
 - **$k_0$.** Undefined in the block, and it carries two values there: the orbit dimension (which the ceiling caps at $\binom n2$) and the $\theta/2$-multiplicity (which the inequality consumes). §8.
 
@@ -238,7 +238,7 @@ That is a Lemma-shaped claim resting on an Observation (the non-existence of a t
 
 | piece | correct label |
 | --- | --- |
-| $\operatorname{tr}(L_W)=0$; $\operatorname{tr}(L_WL_{W'})=\kappa_n\langle W,W'\rangle$ for *some* $\kappa_n$ | **Lemma**, all $n\ge5$, prior art, Fox Thm 1.3 |
+| $\mathop{\mathrm{tr}}(L_W)=0$; $\mathop{\mathrm{tr}}(L_WL_{W'})=\kappa_n\langle W,W'\rangle$ for *some* $\kappa_n$ | **Lemma**, all $n\ge5$, prior art, Fox Thm 1.3 |
 | $\kappa_n=(n-1)(2n-1)/4$ | **Lemma at even $n\ge6$**; **Observation at $n=4,5,7,9,11,13$**; **open at odd $n\ge15$** |
 | Orbit tangents are exact $\theta/2$-eigenvectors, at every nonzero critical point | **Lemma**, the one thing here that is fully proved on the record |
 | $L_W|_{W^\perp}\preceq\theta/2$ at a local maximum | **Lemma**, prior art (Krasnov–Tkachev Prop. 6.6 = [L24](../findings/second-order.md)), **and not used by this block** |
@@ -252,7 +252,7 @@ That is a Lemma-shaped claim resting on an Observation (the non-existence of a t
 ## 12. What would break it, and what I did to look
 
 - **The chain.** A critical point $W$ at some even $n\ge6$ with $\theta^2\bigl(1+\tfrac{\dim(O(n)\cdot W)}4\bigr)>\tfrac{(n-1)(2n-1)}4$. It cannot exist while $\kappa_n$ holds (the derivation in §3 is four lines and uses nothing else) so the only falsifier is $\kappa_n$ itself.
-- **$\kappa_n$.** An odd $n\ge15$ at which $\operatorname{tr}(L_W^2)\ne\tfrac{(n-1)(2n-1)}4\lVert W\rVert^2$. **What I did:** read the even-$n$ derivation and found it parity-locked at its evaluation point, the balanced sphere product; read the record's own statement that a direct proof "requires evaluating $\lVert T\rVert^2$ … as a contraction" and that this is not done; read Fox's Remark 1.4 as the record quotes it, which leaves the constant open. **I ran nothing.** The debt is real and the falsifier is unexcluded.
+- **$\kappa_n$.** An odd $n\ge15$ at which $\mathop{\mathrm{tr}}(L_W^2)\ne\tfrac{(n-1)(2n-1)}4\lVert W\rVert^2$. **What I did:** read the even-$n$ derivation and found it parity-locked at its evaluation point, the balanced sphere product; read the record's own statement that a direct proof "requires evaluating $\lVert T\rVert^2$ … as a contraction" and that this is not done; read Fox's Remark 1.4 as the record quotes it, which leaves the constant open. **I ran nothing.** The debt is real and the falsifier is unexcluded.
 - **The ceiling as a claim about the method.** A critical point with $\theta$ above $\sqrt{2(n-1)(2n-1)/(n^2-n+8)}$ would falsify it; a $\theta/2$-eigenspace of dimension above $\binom n2$ falsifies the *reasoning* rather than the bound. **Found**: $\dim E(\tfrac12)=18>15=\binom62$ at $S^3\times S^3$, on the record.
 - **The ceiling as a bound the method delivers.** Any critical point with a small orbit. **Found**, in closed form: padded $W_{\mathbb{CP}^2}$ at $n=12$, orbit $34$, giving only $\theta\le\sqrt{253/38}=2.58$.
 - **"No refinement escapes".** A third universal moment identity. **Found the record's witness against one** ($S^3\times S^3$ and $\mathbb{CP}^3$, same $n$, same $\theta$, third moments $0.3125$ and $-1.5104$), so this one holds, and it is the closure argument the block should have carried instead of the one it did.

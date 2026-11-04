@@ -6,7 +6,7 @@
 
 | # | Claim under review | Verdict |
 |---|---|---|
-| 1 | The collapsed identity $\Sigma=3m_4-\tfrac12\sigma^2-6\operatorname{Var}(\rho)$ | **CONFIRMED as an identity** |
+| 1 | The collapsed identity $\Sigma=3m_4-\tfrac12\sigma^2-6\mathop{\mathrm{Var}}(\rho)$ | **CONFIRMED as an identity** |
 | 2 | It is a criticality result, the $\theta$-cancellation a discovery | **REFUTED**, pure algebra on six reals; $\theta$ *must* cancel |
 | 3 | "Strictly sharper than the incumbent", and that this helps | **CORRECTED / REFUTED**, sharper than a *weakened* incumbent; the gain is $0$ at every dangerous recorded set |
 | 4 | The chain $X=\tfrac12\sum(t_c^2-w_c)\to\lVert M\mathbf1_S\rVert^2=2\theta\sigma+E\to X=\theta\sigma-\tfrac12\sum\rho_a^2$ | **CONFIRMED**, every step, including the Laplacian factor and the $E$ cancellation |
@@ -26,9 +26,9 @@ $$\sum_{a\in S}\rho_a=2\sigma,\qquad AB+BC+CA=\tfrac12\sum_{a\in S}\rho_a^2-m_4 
 
 With $\Sigma=(A+B+C)^2-3(AB+BC+CA)$ this is
 
-$$\boxed{\ \Sigma=3m_4+\sigma^2-\tfrac32\sum_{a\in S}\rho_a^2=3m_4-\tfrac12\sigma^2-6\operatorname{Var}(\rho).\ }$$
+$$\boxed{\ \Sigma=3m_4+\sigma^2-\tfrac32\sum_{a\in S}\rho_a^2=3m_4-\tfrac12\sigma^2-6\mathop{\mathrm{Var}}(\rho).\ }$$
 
-**The hypotheses it consumes are $M$ symmetric and hollow, and nothing else.** No criticality, no $M\mathbf1=0$, no $\operatorname{tr}M^2=2$. It is an identity on six arbitrary reals, checked by hand on $a=1$; $a=a'=1$; $a=b=1$ (returning $1,4,1$) and then as exact `Fraction` equality at every four-set evaluated below.
+**The hypotheses it consumes are $M$ symmetric and hollow, and nothing else.** No criticality, no $M\mathbf1=0$, no $\mathop{\mathrm{tr}}M^2=2$. It is an identity on six arbitrary reals, checked by hand on $a=1$; $a=a'=1$; $a=b=1$ (returning $1,4,1$) and then as exact `Fraction` equality at every four-set evaluated below.
 
 **So the $\theta$-cancellation is forced, not discovered.** The endpoint is $\theta$-free by algebra; any route that reaches it through two $\theta$-carrying steps must cancel $\theta$. The section presents the cancellation as the payoff of the collapse (*"No $\theta$, no complement"*) when it is a consequence of the destination.
 
@@ -36,11 +36,11 @@ $$\boxed{\ \Sigma=3m_4+\sigma^2-\tfrac32\sum_{a\in S}\rho_a^2=3m_4-\tfrac12\sigm
 
 Put $u=M_{ij}-M_{kl}$, $v=M_{ik}-M_{jl}$, $w=M_{il}-M_{jk}$. The four deviations $\rho_a-\bar\rho$ are $\tfrac12(u{+}v{+}w),\ \tfrac12(u{-}v{-}w),\ \tfrac12({-}u{+}v{-}w),\ \tfrac12({-}u{-}v{+}w)$, whose squares sum to $u^2+v^2+w^2$ exactly. Hence
 
-$$6\operatorname{Var}(\rho)=\tfrac32\big(u^2+v^2+w^2\big)=\tfrac32\!\!\sum_{\text{opposite pairs}}\!\!\big(M_{ij}-M_{kl}\big)^2=3m_4-\tfrac32\big(A^2{+}B^2{+}C^2\big),$$
+$$6\mathop{\mathrm{Var}}(\rho)=\tfrac32\big(u^2+v^2+w^2\big)=\tfrac32\!\!\sum_{\text{opposite pairs}}\!\!\big(M_{ij}-M_{kl}\big)^2=3m_4-\tfrac32\big(A^2{+}B^2{+}C^2\big),$$
 
-which is precisely the defect in $A^2\le2(a^2+a'^2)$, the one step that turns [post F50](../findings/second-order.md)'s identity into [post F50](../findings/second-order.md)'s bound. **Both bounds are tight on the same set**, $\{u=v=w=0\}$, and $\operatorname{Var}(\rho)=0\iff a=a',\,b=b',\,c=c'$.
+which is precisely the defect in $A^2\le2(a^2+a'^2)$, the one step that turns [post F50](../findings/second-order.md)'s identity into [post F50](../findings/second-order.md)'s bound. **Both bounds are tight on the same set**, $\{u=v=w=0\}$, and $\mathop{\mathrm{Var}}(\rho)=0\iff a=a',\,b=b',\,c=c'$.
 
-**The same defect appears twice over.** Cauchy–Schwarz on the four $\rho_a$ gives $\sum\rho_a^2\ge\sigma^2$, and substituting that into the boxed identity returns $\Sigma\le3m_4-\tfrac12\sigma^2$ again. So the incumbent is reachable from the identity in the $(A,B,C)$ variables *and* in the $\rho$ variables, with the same defect $6\operatorname{Var}(\rho)$ both times.
+**The same defect appears twice over.** Cauchy–Schwarz on the four $\rho_a$ gives $\sum\rho_a^2\ge\sigma^2$, and substituting that into the boxed identity returns $\Sigma\le3m_4-\tfrac12\sigma^2$ again. So the incumbent is reachable from the identity in the $(A,B,C)$ variables *and* in the $\rho$ variables, with the same defect $6\mathop{\mathrm{Var}}(\rho)$ both times.
 
 ## 2. Novelty, REFUTED
 
@@ -66,15 +66,15 @@ which is precisely the defect in $A^2\le2(a^2+a'^2)$, the one step that turns [p
 
 **(g) The substitution into $\Sigma=3m_4+\sigma^2-3\theta\sigma+3X$.** Correct. But note the joint content: since the endpoint is an algebraic identity (§1), (f) and (g) are **equivalent to each other** given that algebra. The section derives one from the other and reports the agreement as a collapse; the two carry one piece of information between them, not two.
 
-**Variance convention.** $\sum\rho_a^2-\sigma^2=4\operatorname{Var}(\rho)$ holds with $\operatorname{Var}=\tfrac14\sum(\rho_a-\bar\rho)^2$, the population variance over the four values, $\bar\rho=\sigma/2$. The section uses it consistently. ✓
+**Variance convention.** $\sum\rho_a^2-\sigma^2=4\mathop{\mathrm{Var}}(\rho)$ holds with $\mathop{\mathrm{Var}}=\tfrac14\sum(\rho_a-\bar\rho)^2$, the population variance over the four values, $\bar\rho=\sigma/2$. The section uses it consistently. ✓
 
 ## 4. The evaluations, including the one that was owed
 
-Two-factor point $S^p\times S^q$: $\alpha$ within $F_1$, $\beta$ within $F_2$, $\gamma=-t$ across; $(p-1)\alpha+q\gamma=0$, $(q-1)\beta+p\gamma=0$, $\operatorname{tr}M^2=2$, $\theta=(n-1)t$. Exact rational arithmetic throughout.
+Two-factor point $S^p\times S^q$: $\alpha$ within $F_1$, $\beta$ within $F_2$, $\gamma=-t$ across; $(p-1)\alpha+q\gamma=0$, $(q-1)\beta+p\gamma=0$, $\mathop{\mathrm{tr}}M^2=2$, $\theta=(n-1)t$. Exact rational arithmetic throughout.
 
 **Closed forms by four-set type, derived cold:**
 
-| type | $\Sigma$ | $6\operatorname{Var}(\rho)$ = incumbent slack |
+| type | $\Sigma$ | $6\mathop{\mathrm{Var}}(\rho)$ = incumbent slack |
 |---|---|---|
 | $(4,0)$ / $(0,4)$ | $0$ | $0$, all six entries equal |
 | $(3,1)$ / $(1,3)$ | $0$ | $\tfrac92(\alpha-\gamma)^2$ |
@@ -82,7 +82,7 @@ Two-factor point $S^p\times S^q$: $\alpha$ within $F_1$, $\beta$ within $F_2$, $
 
 **The numbers:**
 
-| point | $\theta^2$ | set | $\Sigma$ | incumbent $3m_4-\tfrac12\sigma^2$ | $6\operatorname{Var}(\rho)$ | $m_4$ |
+| point | $\theta^2$ | set | $\Sigma$ | incumbent $3m_4-\tfrac12\sigma^2$ | $6\mathop{\mathrm{Var}}(\rho)$ | $m_4$ |
 |---|---|---|---|---|---|---|
 | $S^6\times S^6$ | $1.527778$ | $(4,0)$ | $0$ | $0$ | $0$ | $0.109091$ |
 | | | $(3,1)$ | $0$ | $0.275000$ | $0.275000$ | $0.092424$ |
@@ -101,13 +101,13 @@ Two-factor point $S^p\times S^q$: $\alpha$ within $F_1$, $\beta$ within $F_2$, $
 
 **The improvement vanishes exactly where the mass concentrates.**
 
-- At every $(4,0)$ set of every $S^p\times S^q$ all six entries are $\alpha$, so $\operatorname{Var}(\rho)=0$ and the incumbent is *already exact* at $0$. **This is [post F50](../findings/second-order.md)'s own witness**, $m_4=0.501203$, the configuration that killed the mass criterion. The new term contributes nothing there.
-- At every balanced $(2,2)$ split, $\alpha=\beta$, so $\operatorname{Var}(\rho)=0$ and the incumbent is exact. $S^6\times S^6$ is this case.
+- At every $(4,0)$ set of every $S^p\times S^q$ all six entries are $\alpha$, so $\mathop{\mathrm{Var}}(\rho)=0$ and the incumbent is *already exact* at $0$. **This is [post F50](../findings/second-order.md)'s own witness**, $m_4=0.501203$, the configuration that killed the mass criterion. The new term contributes nothing there.
+- At every balanced $(2,2)$ split, $\alpha=\beta$, so $\mathop{\mathrm{Var}}(\rho)=0$ and the incumbent is exact. $S^6\times S^6$ is this case.
 - The reason is symmetry, and it is structural: $\rho_a=-\sum_{c\notin S}M_{ac}$, and when the four indices of $S$ sit in one factor they have identical flows into the complement by the family's own symmetry. **The correction is annihilated by exactly the symmetry that makes $m_4$ large.**
 
-**Where the term is nonzero, nothing is decided by it.** Screen over every in-band two-factor four-set, $5\le p\le40$, $q\le200$: $\max\ (3m_4-\tfrac12\sigma^2)/\theta^2=0.28125$, at $S^5\times S^7$'s $(3,1)$ set. *The incumbent alone clears $\Sigma\ne\theta^2$ by a factor exceeding $3.5$ everywhere in the family*, so subtracting $6\operatorname{Var}(\rho)$ never changes a verdict at any recorded point.
+**Where the term is nonzero, nothing is decided by it.** Screen over every in-band two-factor four-set, $5\le p\le40$, $q\le200$: $\max\ (3m_4-\tfrac12\sigma^2)/\theta^2=0.28125$, at $S^5\times S^7$'s $(3,1)$ set. *The incumbent alone clears $\Sigma\ne\theta^2$ by a factor exceeding $3.5$ everywhere in the family*, so subtracting $6\mathop{\mathrm{Var}}(\rho)$ never changes a verdict at any recorded point.
 
-**And no unconditional lower bound on $\operatorname{Var}(\rho)$ exists.** Witness: every $(4,0)$ four-set of every $S^p\times S^q$ with $p\ge4$ has $\operatorname{Var}(\rho)=0$ exactly. A conditional bound is what would be needed ("$m_4$ large $\Rightarrow\operatorname{Var}(\rho)$ large") and the same witness refutes that too, carrying the family's *largest* $m_4$ at $\operatorname{Var}=0$. **The one hypothesis under which the identity could pay is therefore the one the family's witnesses falsify.**
+**And no unconditional lower bound on $\mathop{\mathrm{Var}}(\rho)$ exists.** Witness: every $(4,0)$ four-set of every $S^p\times S^q$ with $p\ge4$ has $\mathop{\mathrm{Var}}(\rho)=0$ exactly. A conditional bound is what would be needed ("$m_4$ large $\Rightarrow\mathop{\mathrm{Var}}(\rho)$ large") and the same witness refutes that too, carrying the family's *largest* $m_4$ at $\mathop{\mathrm{Var}}=0$. **The one hypothesis under which the identity could pay is therefore the one the family's witnesses falsify.**
 
 ## 6. What actually survives
 
@@ -127,7 +127,7 @@ $$\tfrac12\sum_{a\in S}s_a+\theta\sigma\;\ge\;\frac{2\sigma^2}{n-4}+m_4+\tfrac12
 
 > "$\Sigma\le3m_4-\tfrac12\sigma^2$, **equality on the whole two-factor family**"
 
-**This is false, and the identity of §1 says exactly why.** Equality needs $\operatorname{Var}(\rho)=0$, i.e. $\alpha=\beta$ at a $(2,2)$ split. Witnesses:
+**This is false, and the identity of §1 says exactly why.** Equality needs $\mathop{\mathrm{Var}}(\rho)=0$, i.e. $\alpha=\beta$ at a $(2,2)$ split. Witnesses:
 
 - $S^5\times S^7$, $(2,2)$: incumbent $0.277619$ against $\Sigma=0.261905$.
 - $S^5\times S^{43}$, $(2,2)$: incumbent $0.242253$ against $\Sigma=0.119712$, a factor of $2.02$.
@@ -139,12 +139,12 @@ $$\tfrac12\sum_{a\in S}s_a+\theta\sigma\;\ge\;\frac{2\sigma^2}{n-4}+m_4+\tfrac12
 
 1. **Criticality and $M\mathbf1=0$ are consumed by the derivation and unused by the conclusion.** The section's framing, the identity arriving *through* [Lemma L129](../findings/diagonal-half.md), implies the identity is a fact about critical points. It holds at every hollow symmetric matrix, and a reader who takes the framing at face value will not apply it off the critical set, where it is equally true.
 2. **Hollowness is used and unstated.** $\rho_a=\sum_{b\in S}M_{ab}$ is a three-term sum only because $M_{aa}=0$; with a diagonal the parity structure of §1 breaks and the identity fails.
-3. **$\operatorname{Var}$ is the population variance over four values.** Used correctly, never defined.
-4. **"$\operatorname{Var}(\rho)\ge0$" is offered as the source of the improvement.** The improvement's real source is a Cauchy–Schwarz defect that the record's own [post F50](../findings/second-order.md) discarded one line earlier; the positivity is not additional information.
+3. **$\mathop{\mathrm{Var}}$ is the population variance over four values.** Used correctly, never defined.
+4. **"$\mathop{\mathrm{Var}}(\rho)\ge0$" is offered as the source of the improvement.** The improvement's real source is a Cauchy–Schwarz defect that the record's own [post F50](../findings/second-order.md) discarded one line earlier; the positivity is not additional information.
 
 ## 9. What a successor must clear
 
 Any use of the $\rho$ form must beat this test, which [post F51](../findings/INDEX-traps.md)'s two checks do not catch:
 
-- **Does the correction survive the family's symmetry?** $\operatorname{Var}(\rho)$ is the spread of the four complement-flows, and it is annihilated by any symmetry acting transitively on $S$, which is what every high-$m_4$ four-set in the record has. A correction term that vanishes on the witnesses is not a correction to the witnesses.
+- **Does the correction survive the family's symmetry?** $\mathop{\mathrm{Var}}(\rho)$ is the spread of the four complement-flows, and it is annihilated by any symmetry acting transitively on $S$, which is what every high-$m_4$ four-set in the record has. A correction term that vanishes on the witnesses is not a correction to the witnesses.
 - **Compare against the identity, not the corollary.** [Post F50](../findings/second-order.md) records $\Sigma=\tfrac32(A^2+B^2+C^2)-\tfrac12\sigma^2$, exact. Nothing can be "sharper" than it; a new form must either use an input it lacks ($\theta$, the complement, the row masses) or be a change of coordinates.

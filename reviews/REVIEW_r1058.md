@@ -42,9 +42,9 @@ The two citations in one Lean file point at different posts and only one is righ
 
 **Reach: the route as a whole.** The gap is not the weight alone. Freezing the weight changes the Hessian, and it changes it in the direction that breaks the implication the item names.
 
-Write $X = \sum_{ij} q_{ij}^2 (Q\Omega)_{ij}^2 \ge 0$, $T = \operatorname{tr}(Q^{\mathsf T}Q^{\circ3}\,\Omega^2)$, and $S = Q^{\mathsf T}(A\circ Q)$.
+Write $X = \sum_{ij} q_{ij}^2 (Q\Omega)_{ij}^2 \ge 0$, $T = \mathop{\mathrm{tr}}(Q^{\mathsf T}Q^{\circ3}\,\Omega^2)$, and $S = Q^{\mathsf T}(A\circ Q)$.
 
-- **Our objective, weight frozen.** The file's own derivation gives $\tfrac12 f''(0) = \langle A, (Q\Omega)\circ(Q\Omega)\rangle + \operatorname{tr}(S\Omega^2)$. Substituting $A = Q^{\circ2}$ AT THE BASE POINT, the weight held fixed thereafter, gives $f''_{\text{frozen}} = 2X + 2T$.
+- **Our objective, weight frozen.** The file's own derivation gives $\tfrac12 f''(0) = \langle A, (Q\Omega)\circ(Q\Omega)\rangle + \mathop{\mathrm{tr}}(S\Omega^2)$. Substituting $A = Q^{\circ2}$ AT THE BASE POINT, the weight held fixed thereafter, gives $f''_{\text{frozen}} = 2X + 2T$.
 - **Jin's objective, weight moving.** [Jin's §5 formula](../references/jin-2026-l4-norm-orthogonal-group/notes.md), quoted in the notes file, is $f_r''(0) = 12X + 4T$.
 - **Therefore** $f''_{\text{Jin}} = 2\,f''_{\text{frozen}} + 8X$, with $X \ge 0$.
 

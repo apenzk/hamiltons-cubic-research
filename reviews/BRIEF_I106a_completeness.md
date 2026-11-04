@@ -6,12 +6,12 @@ You are an adversarial reviewer. **Work from the definitions below and from the 
 
 ## The setting, as a given
 
-$\hat U,V$ are real traceless symmetric $3\times3$ matrices, $\Phi(\hat U,V)=\alpha\operatorname{tr}\hat U^3+\beta\operatorname{tr}(\hat UV^2)+\langle\hat U,A\rangle+\langle V,C\rangle$ with $\alpha=\tfrac{15}4$, $\beta=\tfrac94$, and $T=\tfrac32\lvert\hat U\rvert^2+\tfrac12\lvert V\rvert^2$ the constraint. The Lagrange fields, **given and not under review**, are $A\equiv3\mu\hat U-3\alpha\hat U^2-\beta V^2$ and $C\equiv\mu V-\beta\{\hat U,V\}$, each up to a multiple of $I$.
+$\hat U,V$ are real traceless symmetric $3\times3$ matrices, $\Phi(\hat U,V)=\alpha\mathop{\mathrm{tr}}\hat U^3+\beta\mathop{\mathrm{tr}}(\hat UV^2)+\langle\hat U,A\rangle+\langle V,C\rangle$ with $\alpha=\tfrac{15}4$, $\beta=\tfrac94$, and $T=\tfrac32\lvert\hat U\rvert^2+\tfrac12\lvert V\rvert^2$ the constraint. The Lagrange fields, **given and not under review**, are $A\equiv3\mu\hat U-3\alpha\hat U^2-\beta V^2$ and $C\equiv\mu V-\beta\{\hat U,V\}$, each up to a multiple of $I$.
 
 **Given, quoted verbatim from the record, and this is the sentence the whole argument turns on.** From the derivation's **batch 21**, the paragraph headed *"The condition"*:
 
-> At a critical point the first differential of $\Phi-\mu T$ vanishes, so along any curve on the constraint surface the second derivative is $D^2(\Phi-\mu T)$ applied to the tangent vector alone, with no contribution from the curve's acceleration. Hence at every local maximum, for all traceless symmetric $X,Y$ with $3\operatorname{tr}(\hat UX)+\operatorname{tr}(VY)=0$,
-> $$6\alpha\operatorname{tr}(\hat UX^2)+4\beta\operatorname{tr}(XVY)+2\beta\operatorname{tr}(\hat UY^2)\ \le\ \mu\big(3\lvert X\rvert^2+\lvert Y\rvert^2\big).$$
+> At a critical point the first differential of $\Phi-\mu T$ vanishes, so along any curve on the constraint surface the second derivative is $D^2(\Phi-\mu T)$ applied to the tangent vector alone, with no contribution from the curve's acceleration. Hence at every local maximum, for all traceless symmetric $X,Y$ with $3\mathop{\mathrm{tr}}(\hat UX)+\mathop{\mathrm{tr}}(VY)=0$,
+> $$6\alpha\mathop{\mathrm{tr}}(\hat UX^2)+4\beta\mathop{\mathrm{tr}}(XVY)+2\beta\mathop{\mathrm{tr}}(\hat UY^2)\ \le\ \mu\big(3\lvert X\rvert^2+\lvert Y\rvert^2\big).$$
 
 **Given, from batch 33** (its own paragraph, *"What the round added"*): the conjugation orbit's tangent is $X=[\Omega,\hat U]$, $Y=[\Omega,V]$ for skew $\Omega$, and that direction is one admissible $(X,Y)$ inside the condition above.
 
@@ -59,7 +59,7 @@ Every claim has a row. A cell names the declaration that types it, or the reason
 
 1. **Claim 1 is the load-bearing given and you should test it rather than accept it.** Does the quoted sentence really give the condition at every tangent direction, or only along curves of some restricted kind? Is the "no contribution from the curve's acceleration" step correct, and what does it need?
 2. **Claim 2 is where a reader is most likely to nod.** It sounds like a definition. Ask whether a "directional lever" could compute something other than the second variation, for instance a higher-order term, a constrained extremum along the direction, or a quantity that is not a derivative at all, and whether such a thing would still be inside batch 21.
-3. **Claim 4**: verify each of the three is genuinely tangent, and check the frame direction's tangency in particular, since $\operatorname{tr}(\hat U[\Omega,V])$ is not obviously zero.
+3. **Claim 4**: verify each of the three is genuinely tangent, and check the frame direction's tangency in particular, since $\mathop{\mathrm{tr}}(\hat U[\Omega,V])$ is not obviously zero.
 4. **Claim 5**: apply post F69's own test. Are all six collapses of the same kind, or does one of them survive substitution?
 5. **Claims 6 and 7 are NOT mathematics and should not be graded as if they were.** Decide whether the block is right to call them a judgement, and whether it has drawn the line in the correct place. If you think either is actually provable, say how. If you think the block understates or overstates what it has, say which.
 6. **Claim 8**: is the value comparison genuinely outside the reach of claims 1 to 5, or does some tangent direction reproduce it?

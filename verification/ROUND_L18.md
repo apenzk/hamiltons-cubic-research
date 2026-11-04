@@ -40,7 +40,7 @@ Granting that cross-term bound off the class where it is already proven, the cha
 | **C4** | the dichotomy's grants | four to eight depending on how they are counted, and **the block names one**; among the unnamed, an E-track certificate the ledger marks *never audited* which produces the headline $c(12)$ | v125, v126, v127 |
 | **C5** | "one exactly-priced term" | the source records **three** $\delta^2$ entries, **and they do not add**: three different inequalities, one carrying a $\lambda_{\max}$ factor, one an $n=12$ figure against a dimension-free constant, so the netted $208/5$ bounds nothing | v125, v126, v127 |
 | **C6** | the quoted cost's level | the block quotes the numerator $J_4$ where the chain needs $(J_4-J_5)/\sqrt{1-e^2}$. **Witness: at the competitor $\sqrt{1-e^2}=\tfrac23$ and $J_5=0$, so the penalty is exactly $\tfrac32J_4$, the quoted ceiling is exceeded at the block's own equality point** | v125, v126, v127 |
-| **C7** | "scalar curvature at least $(n+1)\tilde\theta_0(n)$" | literally false at every critical point, where $\operatorname{scal}(W)=0$; the source means $\operatorname{scal}(\lvert W\rvert)$ | v126, v127 |
+| **C7** | "scalar curvature at least $(n+1)\tilde\theta_0(n)$" | literally false at every critical point, where $\mathop{\mathrm{scal}}(W)=0$; the source means $\mathop{\mathrm{scal}}(\lvert W\rvert)$ | v126, v127 |
 | **C8** | the master identity's leading term | $+\sqrt{1-e^2}$ asserts $\langle\lvert W\rvert,\widehat{\mathrm{Ric}\owedge\mathrm{Ric}}\rangle\ge0$, supported only by *"positive at every point tested"*, **a debt nobody had recorded**, and if it flips the chain's dominant term reverses | v125 |
 | **C9** | [results.md](../results.md):224 and :667 | present the whole result as an unconditional Lemma, naming no grant at all | v125, v126, v127 |
 | **C10** | $\tilde\theta_0$ "defined nowhere" | **it is defined**, Jäger's Notation 3.0.3, read at source by all three, just not in this record | v125, v126, v127 |
@@ -69,5 +69,5 @@ Granting that cross-term bound off the class where it is already proven, the cha
 - **The pricing proof is named and summarised** where the block said there was none, with its true hypotheses ($\mathrm{Alt}(W)=0$, no criticality) and the pairing the constant depends on.
 - **The cost level is corrected with its witness**, the competitor, where the penalty is exactly $\tfrac32J_4$.
 - **"One exactly-priced term" becomes three, with the warning that they do not add** and the netted total should not be cited.
-- **The scalar-curvature clause is qualified to $\operatorname{scal}(\lvert W\rvert)$.**
+- **The scalar-curvature clause is qualified to $\mathop{\mathrm{scal}}(\lvert W\rvert)$.**
 - **[results.md](../results.md):224 now separates the two halves** and lists the four grants; the new debt on the leading term's positivity is recorded where the chain uses it.

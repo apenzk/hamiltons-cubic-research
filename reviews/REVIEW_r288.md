@@ -69,7 +69,7 @@ Every $X\in\mathfrak g$ is a derivation: differentiating $T(e^{sX}a,e^{sX}b,e^{s
 2. **$T(XW,z_1,z_2)=0$ for every $z_1,z_2\in A(1/2)$**, strictly stronger than C4's $T(z,z,z)=0$. Proof: $T(XW,z_1,z_2)=-T(W,Xz_1,z_2)-T(W,z_1,Xz_2)=-\langle Xz_1,L_Wz_2\rangle-\tfrac\theta2\langle z_1,Xz_2\rangle=-\tfrac\theta2(\langle Xz_1,z_2\rangle+\langle z_1,Xz_2\rangle)=0$ by skewness of $X$.
 3. **$B(X^2W)=(XW)\circ(XW)$.** Apply $X$ twice to $W\circ W=\theta W$: $\theta X^2W=2(XW)\circ(XW)+2L_W(X^2W)$.
 
-Item 3 is the whole of C4's second half, and it does **not** need the orbit curve. Write $w_0=X^2W$, $c=\langle W,X^2W\rangle=-|z|^2=-1$, $w_*=P_{W^\perp}w_0$. Since $BW$ picks up only $-\tfrac\theta2W$, item 3 projects to $P_{W^\perp}(z\circ z)=Bw_*$, so $b=\Pi(z\circ z)=Bw_*\in\operatorname{ran}B\perp\ker B$ (the sup is finite for free) and
+Item 3 is the whole of C4's second half, and it does **not** need the orbit curve. Write $w_0=X^2W$, $c=\langle W,X^2W\rangle=-|z|^2=-1$, $w_*=P_{W^\perp}w_0$. Since $BW$ picks up only $-\tfrac\theta2W$, item 3 projects to $P_{W^\perp}(z\circ z)=Bw_*$, so $b=\Pi(z\circ z)=Bw_*\in\mathop{\mathrm{ran}}B\perp\ker B$ (the sup is finite for free) and
 
 $$\langle b,B^+b\rangle=\langle Bw_*,w_*\rangle=T(z,z,X^2W)+\tfrac\theta2=\tfrac\theta2,$$
 
@@ -84,7 +84,7 @@ because the derivation identity at $a=b=c=XW$ gives $3T(X^2W,XW,XW)=0$. The same
 
 Recomputed from my own basis, my own $L_W$ and my own orbit tangent ([r288_big.py](../scripts/reviewers/r288/r288_big.py), [r288_run.py](../scripts/reviewers/r288/r288_run.py)):
 
-| point | $n$ | $\theta$ | criticality | $\dim A(1/2)$ | orbit | excess | $\max\operatorname{spec}(L_W\mid W^\perp)$ |
+| point | $n$ | $\theta$ | criticality | $\dim A(1/2)$ | orbit | excess | $\max\mathop{\mathrm{spec}}(L_W\mid W^\perp)$ |
 |---|---|---|---|---|---|---|---|
 | $S^4\times S^4$ | 8 | 1.145643924 | $3.3\cdot10^{-16}$ | 16 | 16 | **0** | $\theta/2$ |
 | $S^6\times S^6$ | 12 | 1.236033081 | $4.6\cdot10^{-16}$ | 36 | 36 | **0** | $\theta/2$ |

@@ -17,7 +17,7 @@
 
 Write $D=\dfrac{\lambda_+-\lambda_-}{g_n}=1+\dfrac m{m-1}=\dfrac{2m-1}{m-1}$, so $D\in(2,3]$ and $D=\tfrac{11}5$ at $m=6$, $n=12$. Let $\Gamma=\{\lvert\zeta-\lambda_-\rvert=\alpha g_n\}$ and $\rho\lVert H\rVert_{op}=\gamma g_n$, with $\lVert H\rVert_F=1$ (the normalisation [r441](REVIEW_r441.md)'s bookkeeping spends once, and the one under which $C$ is dimensionless; L152 states neither).
 
-**The spectrum is exactly two points.** [Lemma L145](../findings/second-order.md) step 1: $W^*$ is a multiple of $R-\tfrac{m-1}{2m-1}\mathrm{id}$, positive $\propto\tfrac m{2m-1}$ with multiplicity $m(m-1)$ on $\Lambda^2V_1\oplus\Lambda^2V_2$, negative $\propto-\tfrac{m-1}{2m-1}$ with multiplicity $m^2$ on the mixed planes, and $m(m-1)m-m^2(m-1)=0$. I rebuilt the scale independently: $\sum\lambda^2=1$ gives $g_n^2=\tfrac{m-1}{m^2(2m-1)}=\tfrac{2(n-2)}{n^2(n-1)}$, agreeing with [r457](REVIEW_r457.md) R2 and the record's closed form. **So $\operatorname{spec}(W^*)=\{\lambda_-,\lambda_+\}$ with no third point and no kernel**, and $g_n=\lvert\lambda_-\rvert=\operatorname{dist}(0,\operatorname{spec}W^*)$, the two readings of "the gap" the brief asks about coincide here, so nothing turns on which is the definition.
+**The spectrum is exactly two points.** [Lemma L145](../findings/second-order.md) step 1: $W^*$ is a multiple of $R-\tfrac{m-1}{2m-1}\mathrm{id}$, positive $\propto\tfrac m{2m-1}$ with multiplicity $m(m-1)$ on $\Lambda^2V_1\oplus\Lambda^2V_2$, negative $\propto-\tfrac{m-1}{2m-1}$ with multiplicity $m^2$ on the mixed planes, and $m(m-1)m-m^2(m-1)=0$. I rebuilt the scale independently: $\sum\lambda^2=1$ gives $g_n^2=\tfrac{m-1}{m^2(2m-1)}=\tfrac{2(n-2)}{n^2(n-1)}$, agreeing with [r457](REVIEW_r457.md) R2 and the record's closed form. **So $\mathop{\mathrm{spec}}(W^*)=\{\lambda_-,\lambda_+\}$ with no third point and no kernel**, and $g_n=\lvert\lambda_-\rvert=\mathop{\mathrm{dist}}(0,\mathop{\mathrm{spec}}W^*)$, the two readings of "the gap" the brief asks about coincide here, so nothing turns on which is the definition.
 
 ## F1, the numerator identity is right, and it needs less than L152 claims
 
@@ -25,7 +25,7 @@ For any centre $c\in\mathbb C$ and radius $r$, $\max_{\lvert\zeta-c\rvert=r}\lve
 
 ## F2, the recorded $C$ silently assumes $\lambda_-$ is the spectral point nearest $\Gamma$, and that fails on exactly the region the record then optimises over
 
-$W^*$ is symmetric, so $\lVert(W^*-\zeta)^{-1}\rVert=1/\operatorname{dist}(\zeta,\operatorname{spec}W^*)$ **exactly**, and
+$W^*$ is symmetric, so $\lVert(W^*-\zeta)^{-1}\rVert=1/\mathop{\mathrm{dist}}(\zeta,\mathop{\mathrm{spec}}W^*)$ **exactly**, and
 
 $$\max_{\zeta\in\Gamma}\lVert(W^*-\zeta)^{-1}\rVert=\frac1{g_n\,d(\alpha)},\qquad d(\alpha)=\min\!\big(\alpha,\;D-\alpha\big),$$
 
@@ -67,9 +67,9 @@ so $C_{\text{Riesz}}<C_{457}\iff 1+\alpha<d+\tfrac m{m-1}$, i.e. $\alpha<\tfrac 
 
 ## F4, $\alpha<1$ is not a constraint, and L152 contradicts itself inside three paragraphs
 
-Two paragraphs apart, the same lemma says *"$0\notin\operatorname{spec}(W^*)$ … so separating the negative part from $0$ constrains nothing; $\alpha$ may exceed $1$"* and *"$\alpha<1$ keeps $0$ outside … the first binding"*. The second is wrong, and I checked every step of the chain the brief asks about:
+Two paragraphs apart, the same lemma says *"$0\notin\mathop{\mathrm{spec}}(W^*)$ … so separating the negative part from $0$ constrains nothing; $\alpha$ may exceed $1$"* and *"$\alpha<1$ keeps $0$ outside … the first binding"*. The second is wrong, and I checked every step of the chain the brief asks about:
 
-- **The integrand.** $\zeta(W-\zeta)^{-1}$ is holomorphic on and near $\Gamma$ whenever $\operatorname{spec}\cap\Gamma=\varnothing$. Regularity at $\zeta=0$ is not even needed ($0$ is an interior point of the disc, not a point of the contour) and in any case $\zeta(W-\zeta)^{-1}\to0$ there.
+- **The integrand.** $\zeta(W-\zeta)^{-1}$ is holomorphic on and near $\Gamma$ whenever $\mathop{\mathrm{spec}}\cap\Gamma=\varnothing$. Regularity at $\zeta=0$ is not even needed ($0$ is an interior point of the disc, not a point of the contour) and in any case $\zeta(W-\zeta)^{-1}\to0$ there.
 - **The identification of the projection.** $\Pi=-\tfrac1{2\pi i}\oint_\Gamma(W-\zeta)^{-1}d\zeta$ is the spectral projection onto the eigenvalues *enclosed*. Enclosing $0$, which is not an eigenvalue, adds nothing to that set, so $\Pi$ and $W_-=W\Pi$ are unchanged.
 - **The Neumann estimate.** Needs only $\gamma<d(\alpha)$. No role for $0$.
 - **The one place a "$1$" is genuinely needed, and it is a bound on $\gamma$, not $\alpha$.** For $\Pi(t)W(t)$ to *be* the negative part on the real segment, every eigenvalue enclosed by $\Gamma$ must still be negative. Bauer–Fike at condition number $1$ ([r441](REVIEW_r441.md)) moves eigenvalues by at most $\rho\lVert H\rVert_{op}=\gamma g_n$, so the descendants of $\lambda_-$ stay in $[-(1+\gamma)g_n,-(1-\gamma)g_n]$ and remain negative **iff $\gamma<1$**. [r456](REVIEW_r456.md) has this; L152 does not carry it. It is slack at the optimum ($\gamma^*\le\tfrac34$ for every $m\ge2$).
@@ -124,7 +124,7 @@ $(\alpha,\gamma)=(\tfrac12,\tfrac14)$ has $d=\min(\tfrac12,\tfrac{17}{10})=\tfra
 
 - **$\max_\Gamma\lvert\zeta\rvert=(1+\alpha)g_n$** (F1), and the fact that $\lambda_+$ does not enter the *Riesz-integral* numerator.
 - **$M=O(\rho)$ with finite $C$ on the complex circle**, which four reviewers have and nothing here disturbs.
-- **$\operatorname{spec}(W^*)=\{\lambda_-,\lambda_+\}$, $\lambda_+=\tfrac m{m-1}g_n$, $g_n^2=\tfrac{2(n-2)}{n^2(n-1)}$**, rebuilt cold from multiplicities, trace and norm.
+- **$\mathop{\mathrm{spec}}(W^*)=\{\lambda_-,\lambda_+\}$, $\lambda_+=\tfrac m{m-1}g_n$, $g_n^2=\tfrac{2(n-2)}{n^2(n-1)}$**, rebuilt cold from multiplicities, trace and norm.
 - **$\gamma=\alpha/2$ at the optimum**, and $\alpha=\gamma$ inadmissible.
 
 ## What a successor writes into the record

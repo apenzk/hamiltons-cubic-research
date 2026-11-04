@@ -5,7 +5,7 @@
 | # | Claim | Verdict |
 |---|---|---|
 | 1 | The collapse: $\Phi(cI+W)=c^2(n-1)I+\Phi(W)$, both cross terms vanish, $\lVert\mathrm{ric}(I)\rVert^2$ cancels, and $G(cI+W)\le0\iff\langle W,Q(W)\rangle\le c(n-1)\lVert W\rVert^2$ on the whole slice inside $\{\mathrm{scal}>0\}$ (Passages A, C, D) | CONFIRMED |
-| 2 | $\partial\Omega_0$ meets the slice at the one ratio $c/\lVert W\rVert=c_0:=\frac1n\sqrt{2(n-2)/(n-1)}$, selected by $\operatorname{tr}R>0$, and $c_0(n-1)=\theta_0(n)$ (Passages A, D) | CONFIRMED |
+| 2 | $\partial\Omega_0$ meets the slice at the one ratio $c/\lVert W\rVert=c_0:=\frac1n\sqrt{2(n-2)/(n-1)}$, selected by $\mathop{\mathrm{tr}}R>0$, and $c_0(n-1)=\theta_0(n)$ (Passages A, D) | CONFIRMED |
 | 3 | Passage A's display $\langle W,Q(W)\rangle\le\theta_0(n)\lVert W\rVert^3$ as the $a=0$ criterion on the slice | CONFIRMED (read on $\partial\Omega_0$, as Passage A's third paragraph places it) |
 | 4 | Passages B and C: the criterion "collapses to $\langle W,Q(W)\rangle\le c(n-1)\lVert W\rVert^2$ with/where $c(n-1)=\theta_0(n)$" | REFUTED AS STATED (true only on $\partial\Omega_0$ at $\lVert W\rVert=1$, neither of which B or C states) |
 | 5 | Imported facts: Böhm–Wilking Lemma 2.1 and eq. (6), Beitz p. 96 (Remark 6.3.10), $\Phi$ preserving the Bianchi identity, $\lVert I\rVert^2=\binom n2$ | CONFIRMED (each read at source) |
@@ -23,9 +23,9 @@
 ## 0. Conventions, fixed once
 
 - $V=\mathbb R^n$, $\Lambda^2V$ with orthonormal basis $e_i\wedge e_j$ ($i<j$), $N=\dim\Lambda^2=\binom n2$.
-- Inner product on operators $\langle R,S\rangle=\operatorname{tr}(R\circ S)$, which is Beitz Remark 1.1.7 and is Böhm–Wilking's $-\tfrac12\operatorname{tr}$ on $\mathfrak{so}(n)$ carried to $S^2$. So $\lVert I\rVert^2=N$.
+- Inner product on operators $\langle R,S\rangle=\mathop{\mathrm{tr}}(R\circ S)$, which is Beitz Remark 1.1.7 and is Böhm–Wilking's $-\tfrac12\mathop{\mathrm{tr}}$ on $\mathfrak{so}(n)$ carried to $S^2$. So $\lVert I\rVert^2=N$.
 - For $n\ge4$, $S^2_B=\langle I\rangle\oplus\langle\mathrm{Ric}_0\rangle\oplus\langle W\rangle$, orthogonal (Böhm–Wilking p. 3). On the slice $R_{\mathrm{ric}_0}=0$, $R=cI+W$ with $W\in\langle W\rangle$.
-- $\mathrm{ric}$ is Beitz's (Definition 1.1.10), one half of Böhm–Wilking's $\mathrm{Ric}$. It is linear in $R$. $\mathrm{scal}(R)=\operatorname{tr}(R)$ (Beitz Remark 1.1.11).
+- $\mathrm{ric}$ is Beitz's (Definition 1.1.10), one half of Böhm–Wilking's $\mathrm{Ric}$. It is linear in $R$. $\mathrm{scal}(R)=\mathop{\mathrm{tr}}(R)$ (Beitz Remark 1.1.11).
 - $\Phi(R)=R^2+R^\#$, $\Phi(A,B)=\tfrac12(AB+BA)+A\#B$, so $\Phi(A+B)=\Phi(A)+2\Phi(A,B)+\Phi(B)$ by bilinearity and $A\#B=B\#A$ (Böhm–Wilking p. 4). $P(W)=\langle W,Q(W)\rangle=\langle W,\Phi(W)\rangle$.
 - $C=\mathrm{scal}^+=\{\mathrm{scal}>0\}$, open. $F(R)=\lVert R\rVert^2/\lVert\mathrm{ric}(R)\rVert^2$ on $C$, smooth there because $\mathrm{scal}>0$ forces $\mathrm{ric}\ne0$. $G(R)=dF_R(\Phi(R))$. $\Omega_a=C\cap F^{-1}((-\infty,\tfrac4{n-2+4a}])$.
 - $c_0=\frac1n\sqrt{\frac{2(n-2)}{n-1}}$, $\theta_0(n)=\frac{\sqrt{2(n-1)(n-2)}}n$, $r:=\lVert\mathrm{ric}(I)\rVert^2>0$ (its value, $n(n-1)^2/4$ in Beitz's convention, is never used).
@@ -38,9 +38,9 @@
 | Böhm–Wilking Lemma 2.1 ([source](https://arxiv.org/abs/math/0606187), text lines 216–234) | $R\in S^2_B(\mathfrak{so}(n))$; the kernel statement for $\langle W\rangle$ is proved at $n=4$ and carried to $n\ge5$ by the zero-padding embedding | $I\in S^2_B$ (gives $\Phi(I)=(n-1)I$); $W\in\langle W\rangle$ (gives $W\#I=-W$); $n\ge4$ | yes, both halves | yes (Passage D table) |
 | Böhm–Wilking eq. (6) (text lines 199–206) | $R\in S^2_B$, $e_i$ an orthonormal eigenbasis of $\mathrm{Ric}$ | $W$: $\mathrm{Ric}(W)=0$, so every orthonormal basis is an eigenbasis and the right side vanishes term by term. The sign convention of $R_{kijk}$ is irrelevant to a vanishing | yes ($\mathrm{ric}\,\Phi(W)=0$) | yes |
 | Böhm–Wilking p. 4 | $\#$ symmetric and bilinear | used for $\Phi(I,W)=\tfrac12(IW+WI)+W\#I$ | yes | implicit |
-| $\Phi$ preserves $S^2_B$ | Böhm–Wilking state the ODE (1) on $S^2_B$ (text lines 64–70), and Beitz Remark 2.3.2 takes $\Phi:\mathcal A_n\to\mathcal A_n$ | needed for $V=\mathcal A_n$ in Lemma 2.3.4, and for "$\Phi(W)$ is Weyl". The collapse itself needs only $\mathrm{ric}\,\Phi(W)=0$ and $\operatorname{tr}\Phi(W)=0$ | yes (bridge), not load-bearing for the algebra | yes, as "standard Hamilton fact" (line 70), not read at a Hamilton source here |
+| $\Phi$ preserves $S^2_B$ | Böhm–Wilking state the ODE (1) on $S^2_B$ (text lines 64–70), and Beitz Remark 2.3.2 takes $\Phi:\mathcal A_n\to\mathcal A_n$ | needed for $V=\mathcal A_n$ in Lemma 2.3.4, and for "$\Phi(W)$ is Weyl". The collapse itself needs only $\mathrm{ric}\,\Phi(W)=0$ and $\mathop{\mathrm{tr}}\Phi(W)=0$ | yes (bridge), not load-bearing for the algebra | yes, as "standard Hamilton fact" (line 70), not read at a Hamilton source here |
 | Hamilton's scalar identity, Beitz Example 2.3.5 | $R\in\mathcal A_n$ | gives $\mathrm{scal}\,\Phi(W)=2\lVert\mathrm{ric}\,W\rVert^2=0$, an alternative route to $\langle I,\Phi(W)\rangle=0$ | optional | yes (Passage A) |
-| Beitz Remark 6.3.10, p. 96–97 ([source](https://repositorium.uni-muenster.de/document/miami/02bdc0a3-53ed-4ee3-a643-7d595df046a2/diss_beitz.pdf), text lines 5448–5470) | $n\ge3$, $a\in[0,\tfrac n4]$; the decomposition from Remark 1.1.16 | $\Omega_0=\{\tfrac{n-2}n\lVert R_W\rVert^2\le\lVert R_I\rVert^2,\ \operatorname{tr}R>0\}$ quoted exactly | yes | yes |
+| Beitz Remark 6.3.10, p. 96–97 ([source](https://repositorium.uni-muenster.de/document/miami/02bdc0a3-53ed-4ee3-a643-7d595df046a2/diss_beitz.pdf), text lines 5448–5470) | $n\ge3$, $a\in[0,\tfrac n4]$; the decomposition from Remark 1.1.16 | $\Omega_0=\{\tfrac{n-2}n\lVert R_W\rVert^2\le\lVert R_I\rVert^2,\ \mathop{\mathrm{tr}}R>0\}$ quoted exactly | yes | yes |
 | Beitz Lemma 2.3.4 (text lines 1470–1492) | $V$ a vector space, $\Phi$ locally Lipschitz, $C$ open, $F$ smooth on $C$, **and for the first clause: "the sublevel sets of $F$ are invariant"** | $V=\mathcal A_n$, $\Phi$ polynomial, $C=\mathrm{scal}^+$ open, $F$ smooth on $C$: all check. The invariance hypothesis does not: the object is $\Omega_0$ alone (see §7) | yes (bridge to "cone invariance requires") | first clause cited in Passage E, contradicted in Passage D |
 | $\lVert I\rVert^2=N$ | Beitz Remark 1.1.7 norm | matches the norm in Remark 6.3.10 | yes | yes |
 
@@ -53,8 +53,8 @@ Take $R=cI+W$ with $c\ne0$.
 1. $\Phi(I)=I^2+I\#I=I+(n-2)I=(n-1)I$, by Lemma 2.1 at $R=I$ where $R_I=I$ and $R_{\mathrm{Ric}_0}=0$.
 2. $\Phi(I,W)=\tfrac12(IW+WI)+W\#I=W+W\#I=0$, by the kernel statement of Lemma 2.1.
 3. So $\Phi(cI+W)=c^2(n-1)I+2c\,\Phi(I,W)+\Phi(W)=c^2(n-1)I+\Phi(W)$.
-4. $\mathrm{ric}\,\Phi(W)=0$ by eq. (6). Hence $\operatorname{tr}\Phi(W)=\mathrm{scal}\,\Phi(W)=\operatorname{tr}\mathrm{ric}\,\Phi(W)=0$.
-5. $\langle R,\Phi(R)\rangle=c^3(n-1)N+c^2(n-1)\langle W,I\rangle+c\langle I,\Phi(W)\rangle+P(W)=c^3(n-1)N+P(W)$, since $\langle W,I\rangle=\operatorname{tr}W=0$ and $\langle I,\Phi(W)\rangle=\operatorname{tr}\Phi(W)=0$.
+4. $\mathrm{ric}\,\Phi(W)=0$ by eq. (6). Hence $\mathop{\mathrm{tr}}\Phi(W)=\mathrm{scal}\,\Phi(W)=\mathop{\mathrm{tr}}\mathrm{ric}\,\Phi(W)=0$.
+5. $\langle R,\Phi(R)\rangle=c^3(n-1)N+c^2(n-1)\langle W,I\rangle+c\langle I,\Phi(W)\rangle+P(W)=c^3(n-1)N+P(W)$, since $\langle W,I\rangle=\mathop{\mathrm{tr}}W=0$ and $\langle I,\Phi(W)\rangle=\mathop{\mathrm{tr}}\Phi(W)=0$.
 6. $\mathrm{ric}(R)=c\,\mathrm{ric}(I)$ and $\mathrm{ric}\,\Phi(R)=c^2(n-1)\mathrm{ric}(I)$, so $\lVert\mathrm{ric}R\rVert^2=c^2r$, $\langle\mathrm{ric}R,\mathrm{ric}\,\Phi R\rangle=c^3(n-1)r$, and $\lVert R\rVert^2=c^2N+\lVert W\rVert^2$.
 7. By the quotient rule and linearity of $\mathrm{ric}$, $dF_R(S)=\frac{2\langle R,S\rangle}{\lVert\mathrm{ric}R\rVert^2}-\frac{2\lVert R\rVert^2\langle\mathrm{ric}R,\mathrm{ric}S\rangle}{\lVert\mathrm{ric}R\rVert^4}$. With $S=\Phi(R)$:
 $$G(cI+W)=\frac2{c^2r}\Big[c^3(n-1)N+P(W)-\frac{c^2N+\lVert W\rVert^2}{c^2r}\,c^3(n-1)r\Big]=\frac2{c^2r}\Big[P(W)-c(n-1)\lVert W\rVert^2\Big].$$
@@ -63,7 +63,7 @@ The factor $r$ cancels, the $c^3(n-1)N$ term cancels, and the prefactor $2/(c^2r
 
 ## 2. The boundary ratio and the constant (CONFIRMED)
 
-On the slice $R_I=cI$, $R_W=W$, $\operatorname{tr}R=cN$. The Remark 6.3.10 inequality at $a=0$ is $-\frac n4\lVert R_I\rVert^2+\frac{n-2}4\lVert R_W\rVert^2\le0$, and its left side equals $\frac{n-2}4\lVert R\rVert^2-\lVert\mathrm{ric}R\rVert^2$ identically (I rechecked the coefficient: $\frac{n-2}4-\frac{n-1}2=-\frac n4$), so the level set $F=\frac4{n-2}$ is its equality case. Equality reads $c^2N=\frac{n-2}n\lVert W\rVert^2$, that is $c^2=\frac{2(n-2)}{n^2(n-1)}\lVert W\rVert^2$. The clause $\operatorname{tr}R=cN>0$ selects $c=c_0\lVert W\rVert$. So for $W\ne0$ the slice meets $\partial\Omega_0\cap C$ at exactly one ratio $c/\lVert W\rVert=c_0$.
+On the slice $R_I=cI$, $R_W=W$, $\mathop{\mathrm{tr}}R=cN$. The Remark 6.3.10 inequality at $a=0$ is $-\frac n4\lVert R_I\rVert^2+\frac{n-2}4\lVert R_W\rVert^2\le0$, and its left side equals $\frac{n-2}4\lVert R\rVert^2-\lVert\mathrm{ric}R\rVert^2$ identically (I rechecked the coefficient: $\frac{n-2}4-\frac{n-1}2=-\frac n4$), so the level set $F=\frac4{n-2}$ is its equality case. Equality reads $c^2N=\frac{n-2}n\lVert W\rVert^2$, that is $c^2=\frac{2(n-2)}{n^2(n-1)}\lVert W\rVert^2$. The clause $\mathop{\mathrm{tr}}R=cN>0$ selects $c=c_0\lVert W\rVert$. So for $W\ne0$ the slice meets $\partial\Omega_0\cap C$ at exactly one ratio $c/\lVert W\rVert=c_0$.
 
 Then $c_0(n-1)=\frac{n-1}n\sqrt{\frac{2(n-2)}{n-1}}=\frac1n\sqrt{(n-1)^2\cdot\frac{2(n-2)}{n-1}}=\frac{\sqrt{2(n-1)(n-2)}}n=\theta_0(n)$, using $n-1>0$. As squares, both sides are $\frac{2(n-1)(n-2)}{n^2}$.
 
@@ -86,7 +86,7 @@ At $c=c_0\lVert W\rVert$, $c(n-1)\lVert W\rVert^2=\theta_0(n)\lVert W\rVert^3$, 
 - **Lemma 2.1** is quoted correctly: "$R+R\#I=(n-1)R_I+\frac{n-2}2R_{\mathrm{Ric}_0}=\mathrm{Ric}\wedge\mathrm{id}$", with "$\langle W\rangle$ is in the kernel of the map $R\mapsto R+R\#I$" in the proof, for $n=4$ directly and $n\ge5$ by embedding. The proof's kernel sentence is part of what the lemma asserts by its displayed formula (the right side has no $R_W$ term), so its use is a use of the statement.
 - **Eq. (6)** is quoted correctly, $\mathrm{Ric}(R^2+R^\#)_{ij}=\sum_k\mathrm{Ric}_{kk}R_{kijk}$ in a Ricci eigenbasis. The deduction $\mathrm{Ric}(W)=0\Rightarrow\mathrm{Ric}\,\Phi(W)=0$ is valid in any basis and any sign convention.
 - **$\#$ normalisation across the two sources.** Beitz's $\#$ (Definition 1.1.17) is written differently from Böhm–Wilking's (4). Beitz herself imports Lemma 2.1 in her normalisation (Lemma 6.3.16's proof, "$I^2+I^\#=(n-1)I$ (see [BW08, Lemma 2.1])", and (6.29), $\frac d{ds}\Phi(I+sR)=2(R+I\#R)=2(n-1)R_I+(n-2)R_{\mathrm{ric}_0}$, which has no $R_W$ term). So $\Phi(I,W)=0$ holds for the $\Phi$ of her ODE (2.4). See withdrawn candidate W2.
-- **Beitz p. 96.** Remark 6.3.10 prints the decomposition inequality and $\Omega_0=\{\frac{n-2}n\lVert R_W\rVert^2\le\lVert R_I\rVert^2$ and $\operatorname{tr}(R)>0\}$ exactly as Passage D quotes. The $\Omega_a$ definition (p. 97) includes $\mathrm{scal}(R)>0$, as Passage A says, and Passage C's definition carries it too.
+- **Beitz p. 96.** Remark 6.3.10 prints the decomposition inequality and $\Omega_0=\{\frac{n-2}n\lVert R_W\rVert^2\le\lVert R_I\rVert^2$ and $\mathop{\mathrm{tr}}(R)>0\}$ exactly as Passage D quotes. The $\Omega_a$ definition (p. 97) includes $\mathrm{scal}(R)>0$, as Passage A says, and Passage C's definition carries it too.
 - **Bianchi preservation.** Böhm–Wilking pose the ODE on $S^2_B$ and Beitz Remark 2.3.2 takes $\Phi:\mathcal A_n\to\mathcal A_n$. This is what Lemma 2.3.4 needs ($\Phi:V\to V$). For the collapse algebra it is not needed, since steps 4–5 of §1 use only the Ricci contraction.
 
 ## 6. Passage D's sentence on Lemma 2.3.4 (REFUTED)
@@ -128,7 +128,7 @@ Read against [L43Statement.lean](../lean/HamiltonsCubic/Results/L43Statement.lea
 
 ## 11. Edges (CONFIRMED)
 
-- **$n=3$:** $\langle W\rangle=0$, and Böhm–Wilking's decomposition is for $n\ge4$. Slice $\cap\,\partial\Omega_0\cap C$ is empty ($W=0$ forces $c=0$, excluded by $\operatorname{tr}R>0$). The lemma is vacuous. The Lean theorems at $n=3$ state true arithmetic ($c_0(3)=\frac13$, $\theta_0(3)=\frac23$) about no Weyl tensor.
+- **$n=3$:** $\langle W\rangle=0$, and Böhm–Wilking's decomposition is for $n\ge4$. Slice $\cap\,\partial\Omega_0\cap C$ is empty ($W=0$ forces $c=0$, excluded by $\mathop{\mathrm{tr}}R>0$). The lemma is vacuous. The Lean theorems at $n=3$ state true arithmetic ($c_0(3)=\frac13$, $\theta_0(3)=\frac23$) about no Weyl tensor.
 - **$n=4$:** the smallest nontrivial case, where Böhm–Wilking verify the kernel directly.
 - **Odd $n$:** no step of §1–§2 uses parity. Passage D's odd-$n$ remark (line 68) is outside the collapse. Its inequality $\frac{2(n-1)(n-3)}{(n-2)(n+1)}<\frac{2(n-1)(n-2)}{n^2}$ reduces to $n^2(n-3)<(n-2)^2(n+1)=n^3-3n^2+4$, true for every $n$, and $\frac{40}{27},\frac{120}{77},\frac{21}{13}$ are the values at $11,13,15$. The attainment claims there rest on sphere-product values I did not re-derive.
 - **$n=6+2\sqrt7$:** $\theta_0(n)^2=\frac32\iff n^2-12n+8=0\iff n=6\pm2\sqrt7$. Since $25<28<36$, $11<6+2\sqrt7<12$, so no integer sits on the crossover, and "$\le11$" in line 66 is exact for integers $n\ge4$ ($6-2\sqrt7<1$).
@@ -138,7 +138,7 @@ Read against [L43Statement.lean](../lean/HamiltonsCubic/Results/L43Statement.lea
 
 ## 12. The ROUND link sentence (REFUTED)
 
-**Location.** [problem.md line 60](../findings/problem.md#L60): "… **the positive root, and $\operatorname{tr}(R)>0$ is what selects it.** *$F$ is even in $R$, …* **Three verifiers, [ROUND_L43-arg](../verification/ROUND_L00r2.md)**, so the bound demanded is $$c(n-1)=\dots$$".
+**Location.** [problem.md line 60](../findings/problem.md#L60): "… **the positive root, and $\mathop{\mathrm{tr}}(R)>0$ is what selects it.** *$F$ is even in $R$, …* **Three verifiers, [ROUND_L43-arg](../verification/ROUND_L00r2.md)**, so the bound demanded is $$c(n-1)=\dots$$".
 
 **Failure.** "Three verifiers, [link], so the bound demanded is" has no main verb: a provenance tag has been spliced into the mathematical sentence "…gives $c=\dots$, so the bound demanded is $c(n-1)=\theta_0(n)$", severing it from its antecedent by an italic aside and a bold tag. The link text names `ROUND_L43-arg`, which does not exist in `verification/` (checked by listing, file not opened), while the target is `ROUND_L00r2.md`, which does exist (not opened).
 

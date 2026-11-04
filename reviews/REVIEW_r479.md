@@ -34,7 +34,7 @@ The gap is not rhetorical. The block itself names members of the class it leaves
 
 A negative of this shape is refuted by one coupling. There is one, and it did not have to be constructed: it is [findings/bispectral.md](../findings/bispectral.md)'s own boxed result, under "Both-sided Schur–Horn and the vertex-matrix budget are the SAME wall".
 
-Let $h$ be the unit bottom eigenvector of $\mathring W$ on $S^2_0$. Every traceless symmetric $h$ is diagonal in **its own** eigenframe $F$, so $h=\operatorname{diag}(v)$ there, and
+Let $h$ be the unit bottom eigenvector of $\mathring W$ on $S^2_0$. Every traceless symmetric $h$ is diagonal in **its own** eigenframe $F$, so $h=\mathop{\mathrm{diag}}(v)$ there, and
 
 $$\langle\mathring Wh,h\rangle=-v^{\mathsf T}K^Fv,\qquad\text{whence}\qquad -\omega_{\min}=v^{\mathsf T}K^Fv\le\mu_1(K^F)\le\sqrt{\tfrac{t_F(n-2)}{n-1}}\le\sqrt{\tfrac{2(n-2)}{n-1}}=\frac{n\,\theta_0(n)}{n-1}.$$
 

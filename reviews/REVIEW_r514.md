@@ -6,7 +6,7 @@
 
 **Phase plan.**
 
-1. Fix conventions against the known anchors ($Q_{ab}$, $\operatorname{tr}W^\#=-1$, $\theta_0(6)=\sqrt{10}/3$, $\dim\mathcal W_n$).
+1. Fix conventions against the known anchors ($Q_{ab}$, $\mathop{\mathrm{tr}}W^\#=-1$, $\theta_0(6)=\sqrt{10}/3$, $\dim\mathcal W_n$).
 2. Read the block verbatim.
 3. Attack the hypothesis: eigenvalues of what, counted how (the L33 defect).
 4. Attack the constant $\sqrt{3/2}$ vs $\sqrt3/2$ and its normalisation.
@@ -27,11 +27,11 @@ Everything below is derived in the block's own normalisation, which I pinned bef
 
 | anchor | what I derived independently | agrees |
 | --- | --- | --- |
-| inner product | $\langle X,Y\rangle=\tfrac12\operatorname{tr}(X^{\mathsf T}Y)$, so $\varphi_{ij}=E_{ij}-E_{ji}$ is a **unit** vector. The block's own sentence *"$[\varphi_{12},\varphi_{13}]=\pm\varphi_{23}$ has norm $1$"* pins this reading; I get $[\varphi_{12},\varphi_{13}]=-\varphi_{23}$ from $[\varphi_{ab},\varphi_{cd}]=\delta_{bc}\varphi_{ad}-\delta_{ac}\varphi_{bd}-\delta_{bd}\varphi_{ac}+\delta_{ad}\varphi_{bc}$ | yes |
+| inner product | $\langle X,Y\rangle=\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$, so $\varphi_{ij}=E_{ij}-E_{ji}$ is a **unit** vector. The block's own sentence *"$[\varphi_{12},\varphi_{13}]=\pm\varphi_{23}$ has norm $1$"* pins this reading; I get $[\varphi_{12},\varphi_{13}]=-\varphi_{23}$ from $[\varphi_{ab},\varphi_{cd}]=\delta_{bc}\varphi_{ad}-\delta_{ac}\varphi_{bd}-\delta_{bd}\varphi_{ac}+\delta_{ad}\varphi_{bc}$ | yes |
 | pair cap $\lVert[v_\alpha,v_\beta]\rVert^2\le2$ | $\mathrm{ad}_X$ on $\mathfrak{so}(n)$ has eigenvalues $\pm i(s_j\pm s_k)$, $j<k$ (type $D$/$B$ roots carry no $2e_j$), so $\lVert\mathrm{ad}_X\rVert_{\rm op}=\max_{j<k}(s_j+s_k)\le\sqrt{2\sum s^2}=\sqrt2$ | yes |
 | cap saturated on $\Lambda^+$ | $\omega_1=(\varphi_{12}+\varphi_{34})/\sqrt2$ etc.: $[\omega_1,\omega_2]=-\sqrt2\,\omega_3$, norm$^2=2$ **exactly** | yes |
 | $\langle W,W^\#\rangle=\tfrac12\sum T_{\alpha\beta\gamma}\lambda_\alpha\lambda_\beta\lambda_\gamma$ | from $W^\#_{\alpha\beta}=\tfrac12\sum_{\gamma\delta}c'_{\alpha\gamma\delta}c'_{\beta\gamma\delta}\lambda_\gamma\lambda_\delta$ | yes |
-| $\operatorname{tr}W^\#=-1$ | $\operatorname{tr}W^\#=\tfrac12\sum_{\gamma\ne\delta}\lVert[v_\gamma,v_\delta]\rVert^2\lambda_\gamma\lambda_\delta$; at padded $W_{\mathbb{CP}^2}$ every mixed bracket is $2$, giving $\sigma^2-p=0-1=-1$ | yes |
+| $\mathop{\mathrm{tr}}W^\#=-1$ | $\mathop{\mathrm{tr}}W^\#=\tfrac12\sum_{\gamma\ne\delta}\lVert[v_\gamma,v_\delta]\rVert^2\lambda_\gamma\lambda_\delta$; at padded $W_{\mathbb{CP}^2}$ every mixed bracket is $2$, giving $\sigma^2-p=0-1=-1$ | yes |
 | $\theta_0(6)=\sqrt{10}/3$ | reproduced from my own diagonal formula $\langle W,W^\#\rangle=3\sum_{i<j<k}K_{ij}K_{jk}K_{ik}$ on $S^3\times S^3$: $\lVert W\rVert^2=22.5$, $P=112.5$, $\theta=112.5/22.5^{3/2}=1.0540926=\sqrt{10}/3$ | yes |
 
 **The constant is the UNDEFLATED one.** $\sqrt{3/2}=1.2247449$, not $\sqrt3/2=0.8660$. The proof produces $f(1)=9\sqrt2\cdot2/(4\cdot3^{3/2})=18\sqrt2/(4\cdot3\sqrt3)=\sqrt6/2=1.2247449$, and $\sqrt6/2=\sqrt{3/2}$ identically. **No normalisation error.** Cross-check: $P=18a^3$ at $a=1/\sqrt6$ gives $18/(6\sqrt6)=3/\sqrt6=\sqrt6/2$, same number by a second route.
@@ -47,23 +47,23 @@ The brief asked whether *"one positive and two negative eigenvalues"* is ambiguo
 
 *Screen for a witness under the alternate reading, reported as a screen:* I looked at the family the alternate reading would have to be refuted by, $O(p)\times O(q)$-invariant diagonal tensors, $K=\alpha_1\Pi_1+\alpha_2\Pi_2+\beta\Pi_{12}$ with $(p-1)\alpha_1+q\beta=0$, $(q-1)\alpha_2+p\beta=0$. Taking $\beta>0$ gives exactly one distinct positive value and two distinct negative values whenever $p\ne q$, $p,q\ge2$, and $\theta$ there is **negative** ($-0.707$ at $(p,q)=(2,3)$), because it is the sign-flip of the sphere-product branch. So this family supplies no witness, and I record no claim that none exists.
 
-**One hypothesis is implicit and unstated.** *"Exactly one positive and two negative eigenvalues"* silently requires the remaining $N-3$ eigenvalues to be **zero**, i.e. $\operatorname{rank}W=3$ on $\Lambda^2$. The proof needs it (the sign split has only four blocks), and [isotropy-cap.md](../findings/isotropy-cap.md) reads the lemma exactly that way (*"Lemma L29 covers rank 3 only"*). Stating "and $N-3$ zero eigenvalues" would cost four words and remove the reading under which the lemma is about a *signature* rather than a *spectrum*.
+**One hypothesis is implicit and unstated.** *"Exactly one positive and two negative eigenvalues"* silently requires the remaining $N-3$ eigenvalues to be **zero**, i.e. $\mathop{\mathrm{rank}}W=3$ on $\Lambda^2$. The proof needs it (the sign split has only four blocks), and [isotropy-cap.md](../findings/isotropy-cap.md) reads the lemma exactly that way (*"Lemma L29 covers rank 3 only"*). Stating "and $N-3$ zero eigenvalues" would cost four words and remove the reading under which the lemma is about a *signature* rather than a *spectrum*.
 
 ## Phase 4, the constant and the algebra: re-derived line by line, correct
 
 With $b=ta$, $\lambda_1=a(1+t)$: unit norm gives $a^2\cdot2(t^2+t+1)=1$. Then
-$$\operatorname{tr}W^3+6\lambda_1ab=a^3\big[(1+t)^3-1-t^3+6t(1+t)\big]=a^3\big[3t(1+t)+6t(1+t)\big]=9a^3t(1+t),$$
+$$\mathop{\mathrm{tr}}W^3+6\lambda_1ab=a^3\big[(1+t)^3-1-t^3+6t(1+t)\big]=a^3\big[3t(1+t)+6t(1+t)\big]=9a^3t(1+t),$$
 and $9t(1+t)/(2(t^2+t+1))^{3/2}=9\sqrt2\,t(t+1)/(4(t^2+t+1)^{3/2})$, **the stated $f(t)$ exactly**.
 
 Stationarity, done by hand rather than asserted: $\frac{\rm d}{{\rm d}t}\log f=0$ gives $\frac{2t+1}{t(1+t)}=\frac{3(2t+1)}{2(t^2+t+1)}$, and since $2t+1>0$ this reduces to $2(t^2+t+1)=3t(t+1)$, i.e. $t^2+t-2=(t+2)(t-1)=0$. **Unique root $t=1$ on $t>0$.** $f$ is moreover invariant under $t\mapsto1/t$ (checked algebraically), so the domain $t\ge1$ forced by $a\le b$ and the domain $t\ge0$ the proof argues on give the same maximum, a gap that could have existed and does not.
 
 ## Phase 5, sharpness: the cap is ATTAINED, verified by hand
 
-$\mathrm{Weyl}_4=S^2_0(\Lambda^+)\oplus S^2_0(\Lambda^-)$. Take $W^+=\operatorname{diag}(2,-1,-1)/\sqrt6$, $W^-=0$.
+$\mathrm{Weyl}_4=S^2_0(\Lambda^+)\oplus S^2_0(\Lambda^-)$. Take $W^+=\mathop{\mathrm{diag}}(2,-1,-1)/\sqrt6$, $W^-=0$.
 
 - $\lVert W\rVert^2=(4+1+1)/6=1$. ✓
 - $\Lambda^2$ spectrum is $(2,-1,-1)/\sqrt6$ **together with three zeros from $\Lambda^-$**, one positive, two negative, rest zero, so the hypothesis holds. ✓
-- $\operatorname{tr}W^3=(8-1-1)/6^{3/2}=6/(6\sqrt6)=1/\sqrt6$; $\langle W,W^\#\rangle=6\lambda_1ab=6\cdot2/6^{3/2}=2/\sqrt6$; $P=3/\sqrt6=\sqrt6/2=\sqrt{3/2}$. ✓
+- $\mathop{\mathrm{tr}}W^3=(8-1-1)/6^{3/2}=6/(6\sqrt6)=1/\sqrt6$; $\langle W,W^\#\rangle=6\lambda_1ab=6\cdot2/6^{3/2}=2/\sqrt6$; $P=3/\sqrt6=\sqrt6/2=\sqrt{3/2}$. ✓
 
 So this is **a sharp theorem, not an unattained cap**. The block's separate claim that the inequality is an *identity* on the whole stratum also checks: I verified $[\omega_1,\omega_2]=-\sqrt2\omega_3$ directly, so every orthonormal pair in $\Lambda^+\cong\mathfrak{su}(2)$ saturates the pair cap, and $\theta=f(t)$ holds with equality for every $t$, not only at $t=1$.
 
@@ -124,7 +124,7 @@ So this is **a sharp theorem, not an unattained cap**. The block's separate clai
 - [stratum-two-negative.md:417](../findings/stratum-two-negative.md), 348 lines below, says *"which excludes route **R9**s sharpest competitor at every $n\ge12$"*;
 - the mechanism of the error is visible in [routes.md](../routes.md)'s own "formerly" column: **R2 was route B and R9 was route B$'$**, so a rename dropping the prime lands on exactly R2.
 
-**(e) $S(W)$ carries two different definitions in the record**, and the block uses the one that is not in the file [conventions.md](../findings/conventions.md) points at. The block's $S(W)=\sum_{\lambda<0}c'^2_{\alpha\beta\gamma}$ is [second-order.md:465](../findings/second-order.md)'s eigenbasis form; [ungraded-slack.md:286](../findings/ungraded-slack.md), the file conventions.md names as $S(W)$'s home, defines $S(W):=\lVert\mathrm{Ric}(W_-)\rVert^2+6\delta^2-\theta\operatorname{tr}(W_-)-\operatorname{tr}(W_-^2)$, and the identification of the two is recorded there as **conditional on bracket conditions that generic critical points violate** (*"the ratio is $11.5$ rather than $\tfrac12$"*). The block's use is self-contained and correct on its own definition; what is missing is the pointer saying which $S$ it means. This is the same class as the $B$, $M$ and $\mu$ collisions conventions.md already tables.
+**(e) $S(W)$ carries two different definitions in the record**, and the block uses the one that is not in the file [conventions.md](../findings/conventions.md) points at. The block's $S(W)=\sum_{\lambda<0}c'^2_{\alpha\beta\gamma}$ is [second-order.md:465](../findings/second-order.md)'s eigenbasis form; [ungraded-slack.md:286](../findings/ungraded-slack.md), the file conventions.md names as $S(W)$'s home, defines $S(W):=\lVert\mathrm{Ric}(W_-)\rVert^2+6\delta^2-\theta\mathop{\mathrm{tr}}(W_-)-\mathop{\mathrm{tr}}(W_-^2)$, and the identification of the two is recorded there as **conditional on bracket conditions that generic critical points violate** (*"the ratio is $11.5$ rather than $\tfrac12$"*). The block's use is self-contained and correct on its own definition; what is missing is the pointer saying which $S$ it means. This is the same class as the $B$, $M$ and $\mu$ collisions conventions.md already tables.
 
 ## Phase 10, the provenance line is **FALSE**, and git says so plainly
 

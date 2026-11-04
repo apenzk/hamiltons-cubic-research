@@ -23,7 +23,7 @@ Log: [agent_logs/r1123.log](../agent_logs/r1123.log). Brief: [2026-09-24-I73-sta
 ## 2. The plateau: CONFIRMED
 
 - $\delta=8-\mathrm{row}\ge8-S_6(X)$ by L237, and $S_6(X)=2\times$ (top three-slot sum). If the top configuration is non-extremal, $S_6\le2(3.733)$, so $\delta\ge0.534$ (`slot_threshold`).
-- If it is a triangle or star, `deficit_triangle` / `deficit_star` give $\delta\ge6(1-p^2)$ with $p\ge0$ the alignment with the pattern on $X$'s own planes, and $d^2=\operatorname{dist}(X,\mathrm{Ext})^2\le2-2p$, $d^2\le2$ (Ext is closed under negation), so `deficit_of_dist` gives $6d^2(1-d^2/4)$.
+- If it is a triangle or star, `deficit_triangle` / `deficit_star` give $\delta\ge6(1-p^2)$ with $p\ge0$ the alignment with the pattern on $X$'s own planes, and $d^2=\mathop{\mathrm{dist}}(X,\mathrm{Ext})^2\le2-2p$, $d^2\le2$ (Ext is closed under negation), so `deficit_of_dist` gives $6d^2(1-d^2/4)$.
 - Hence $\delta\ge\min(0.534,6d^2(1-d^2/4))$. The item 1 gap does not affect this, since the missing classes sit below $3.733$.
 
 ## 3. Normalisation and the certificate: CONFIRMED

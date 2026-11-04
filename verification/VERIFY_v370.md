@@ -15,7 +15,7 @@ Cold brief [ADJ_L115_F8.md](ADJ_L115_F8.md). No numerical work, no scripts writt
 
 ## 0. Conventions, fixed once
 
-- $W$ is a unit Weyl tensor read as a symmetric operator on $\Lambda^2\mathbb R^n$ with the Frobenius inner product $\langle A,B\rangle=\operatorname{tr}(AB)$, so its spectrum $\lambda=(\lambda_\alpha)$ satisfies $\sum_\alpha\lambda_\alpha^2=\|W\|^2=1$.
+- $W$ is a unit Weyl tensor read as a symmetric operator on $\Lambda^2\mathbb R^n$ with the Frobenius inner product $\langle A,B\rangle=\mathop{\mathrm{tr}}(AB)$, so its spectrum $\lambda=(\lambda_\alpha)$ satisfies $\sum_\alpha\lambda_\alpha^2=\|W\|^2=1$.
 - $\theta=P(W)$. At a global maximiser $\theta=M(n)$.
 - $M(\lambda)_{\alpha\beta}=\delta_{\alpha\beta}\lambda_\alpha+\tfrac12\sum_\gamma c'^2_{\alpha\beta\gamma}\lambda_\gamma$ as in Passage B, where $c'^2_{\alpha\beta\gamma}$ is the square of the structure constant $c'_{\alpha\beta\gamma}$ in the eigenbasis.
 - In Lean, IsTopRayleigh A t is the statement $x\cdot Ax\le t\,(x\cdot x)$ for all real vectors $x$. For symmetric $A$ this is exactly $\lambda_{\max}(A)\le t$ by the Rayleigh characterisation.
@@ -32,7 +32,7 @@ Cold brief [ADJ_L115_F8.md](ADJ_L115_F8.md). No numerical work, no scripts writt
 
 ## 2. theta_ge_diag is the by-product's inference
 
-Passage A, line 294: "since $\operatorname{diag}M=\lambda$ and $\lambda_{\max}(M)=\theta$ at a maximiser, $\theta\ge\max_\alpha\lambda_\alpha$".
+Passage A, line 294: "since $\mathop{\mathrm{diag}}M=\lambda$ and $\lambda_{\max}(M)=\theta$ at a maximiser, $\theta\ge\max_\alpha\lambda_\alpha$".
 
 The declaration theta_ge_diag takes hdiag ($A_{\alpha\alpha}=\lambda_\alpha$) and hlam (IsTopRayleigh $A$ $\theta$) and concludes $\lambda_\alpha\le\theta$ for all $\alpha$. The proof evaluates the Rayleigh bound at the standard basis vector $e_\alpha$ (evec), where diag_is_rayleigh gives $e_\alpha\cdot Ae_\alpha=A_{\alpha\alpha}$ and $e_\alpha\cdot e_\alpha=1$. Then $\lambda_\alpha=A_{\alpha\alpha}\le\theta$.
 
@@ -56,7 +56,7 @@ Passage A's headline is $\lambda_{\max}(M)=\theta$, citable only at coordinate-d
 
 ## 5. The declarations of L115.lean proper
 
-- lambda2_six, ambient_dim, weyl_six are natural-number identities: $30/2=15$, $240/2=120$, $1008/12=84$. They read as $\dim\Lambda^2\mathbb R^6=15$, $\dim\operatorname{Sym}^2(\Lambda^2\mathbb R^6)=120$ and $\dim\mathcal W_6=n(n+1)(n+2)(n-3)/12=84$. All true, none stated in Passage A.
+- lambda2_six, ambient_dim, weyl_six are natural-number identities: $30/2=15$, $240/2=120$, $1008/12=84$. They read as $\dim\Lambda^2\mathbb R^6=15$, $\dim\mathop{\mathrm{Sym}}^2(\Lambda^2\mathbb R^6)=120$ and $\dim\mathcal W_6=n(n+1)(n+2)(n-3)/12=84$. All true, none stated in Passage A.
 - The share lemmas: $1/120<1/100$, $1/100<1/84$, and $1/84<12/1000$ because $1000<12\cdot84=1008$. True, not in Passage A.
 - cap_on_subspace_transfers_nothing: with $f(p)=p_2$ and $c=0$, $f(t,0)=0\le0$ for all $t$, and $f(0,B+1)=B+1>B$. So a function bounded on a line can be unbounded on the plane. This is a correct abstract instance of the principle Passage A uses at line 288, that a cap proved on $\mathcal W_n\cap W^\perp$ does not transfer to $\mathcal D$. It is a model, a linear functional on $\mathbb Q^2$ in place of the Rayleigh quotient of $L_e$ on $\mathcal D$, so it shows the inference form is invalid and says nothing about whether $\lambda_{\max}(L_e|_{\mathcal D})=1$ is true. Verdict CONFIRMED AS ALGEBRA.
 - true_claim_bad_argument: from $C$ and $\neg H$ it gives $(H\to C)\wedge C$. A correct tautology, recording that a true conclusion may sit behind an unusable premise. Not a claim of Passage A.

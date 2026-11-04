@@ -10,7 +10,7 @@ One source was fetched for item 7 and filed at [references/itoh-1984-selfduality
 | --- | --- | --- |
 | A | **L176**, the statement: $W\ne0$ coordinate-diagonal $\Rightarrow$ every vertex of $G$ has degree $0$ or $\ge2$, and $\lvert E(G)\rvert\ge4$ | **CONFIRMED** |
 | B | The locus is *hollow symmetric with vanishing row sums*, first Bianchi imposes nothing further, trace-freeness is exactly $\sum_b K_{ab}=0$ | **CONFIRMED** |
-| C | The eigenvalue identity $W(f_a\wedge f_b)=K_{ab}f_a\wedge f_b$, and $\operatorname{rank}=\lvert E(G)\rvert$ | **CONFIRMED** |
+| C | The eigenvalue identity $W(f_a\wedge f_b)=K_{ab}f_a\wedge f_b$, and $\mathop{\mathrm{rank}}=\lvert E(G)\rvert$ | **CONFIRMED** |
 | D | The degree-sum counting at $\lvert E\rvert\le2$ and $\lvert E\rvert=3$ | **CONFIRMED** |
 | E | The triangle system is nonsingular and its three equations are stated correctly | **CONFIRMED** |
 | F | **Sharpness**, the four-cycle $K$ is a genuine element of $\mathcal W_n$, $n\ge4$, of $\Lambda^2$-rank exactly four | **CONFIRMED** |
@@ -62,9 +62,9 @@ Nothing breaks (the record plainly means an orthonormal frame) but the word is m
 
 **CONFIRMED**, with one wording flag.
 
-The proof is correct as written; §§2–5 verify each of its four steps independently. The flag is on *"equivalently $\operatorname{rank}(W)\ge4$"*. Two conclusions precede it (the degree condition and $\lvert E\rvert\ge4$) and the rank statement is equivalent to the **second alone**, by §3's $\operatorname{rank}=\lvert E\rvert$.
+The proof is correct as written; §§2–5 verify each of its four steps independently. The flag is on *"equivalently $\mathop{\mathrm{rank}}(W)\ge4$"*. Two conclusions precede it (the degree condition and $\lvert E\rvert\ge4$) and the rank statement is equivalent to the **second alone**, by §3's $\mathop{\mathrm{rank}}=\lvert E\rvert$.
 
-It is not equivalent to the first, and not to the conjunction in a useful sense: the degree condition on its own gives only $\lvert E\rvert\ge3$, because a graph with no degree-1 vertex and at least one edge contains a cycle, and the smallest such graph is the triangle. The triangle is eliminated in §5 by the row sums, **not** by degrees. So the degree condition is a genuinely weaker intermediate step, and "equivalently" should be attached to the edge count only. Suggested reading: *"…and $\lvert E(G)\rvert\ge4$; the latter equivalently $\operatorname{rank}(W:\Lambda^2\to\Lambda^2)\ge4$."*
+It is not equivalent to the first, and not to the conjunction in a useful sense: the degree condition on its own gives only $\lvert E\rvert\ge3$, because a graph with no degree-1 vertex and at least one edge contains a cycle, and the smallest such graph is the triangle. The triangle is eliminated in §5 by the row sums, **not** by degrees. So the degree condition is a genuinely weaker intermediate step, and "equivalently" should be attached to the edge count only. Suggested reading: *"…and $\lvert E(G)\rvert\ge4$; the latter equivalently $\mathop{\mathrm{rank}}(W:\Lambda^2\to\Lambda^2)\ge4$."*
 
 ## 2. Claim B, the locus characterisation (item 2)
 
@@ -104,7 +104,7 @@ For a coordinate-diagonal $W$ this is $K_{ab}$ when $(c,d)=(a,b)$, $-K_{ab}$ whe
 
 **No convention can change the count.** Every convention in use differs by a nonzero global scalar on $\Lambda^2$, and $\lambda\mapsto c\lambda$ with $c\ne0$ fixes the zero set. So $\#\{(a,b): a<b,\ K_{ab}\ne0\}=\lvert E(G)\rvert$ is convention-free, and since $\{f_a\wedge f_b\}_{a<b}$ is a **basis** of $\Lambda^2\mathbb R^n$ consisting of eigenvectors, the spectrum of $\mathcal W$ *with multiplicity* is exactly $\{K_{ab}\}_{a<b}$ and
 
-$$\operatorname{rank}(\mathcal W)=\lvert E(G)\rvert.$$
+$$\mathop{\mathrm{rank}}(\mathcal W)=\lvert E(G)\rvert.$$
 
 **The failure mode the brief asks about (a wrong identification of the operator), does not occur.** The one identification that would break the count is confusing $\mathcal W$ with the *second-kind* operator on $S^2\mathbb R^n$, or with the Ricci-type contraction; neither is used, and the proof's operator is pinned by the displayed formula $W(f_a\wedge f_b)=K_{ab}f_a\wedge f_b$, which as computed above holds only for the $\Lambda^2$ action.
 
@@ -174,7 +174,7 @@ $$\mathcal W_4\cap\{\text{diagonal in this frame}\}=\{(p,q,r):\ K_{12}=K_{34}=p,
 a **two-dimensional** family. The witness is $(p,q,r)=(c,0,-c)$, which lies in it. ✔ Two further facts fall out:
 
 - At $n=4$ the rank of a nonzero element of the locus is $4$ or $6$ and **never** $5$: if two of $p,q,r$ vanish the third does too, so at most one vanishes, and the ranks are $2\cdot3=6$ or $2\cdot2=4$. So L176's bound is attained on a full one-parameter subfamily, not by accident.
-- Because opposite pairs are forced equal, every diagonal $W\in\mathcal W_4$ preserves $\Lambda^\pm$, with $W^\pm$ spectra $(p,q,r)$, trace-free on each side, as it must be. For the witness, $W^+=W^-=\operatorname{diag}(c,0,-c)$, giving $2+2=4$ nonzero eigenvalues. This is an entirely independent route to the rank and it agrees.
+- Because opposite pairs are forced equal, every diagonal $W\in\mathcal W_4$ preserves $\Lambda^\pm$, with $W^\pm$ spectra $(p,q,r)$, trace-free on each side, as it must be. For the witness, $W^+=W^-=\mathop{\mathrm{diag}}(c,0,-c)$, giving $2+2=4$ nonzero eigenvalues. This is an entirely independent route to the rank and it agrees.
 
 **What was checked and what was not.** Everything above is a hand identity in the symbol $c$; no numerical work of any kind was performed, and none was needed.
 
@@ -237,19 +237,19 @@ On the anti-self-dual basis $\omega^-_1=e_{12}-e_{34},\ \omega^-_2=e_{13}+e_{24}
 
 $$\mathcal W\omega^-_1=0,\qquad \mathcal W\omega^-_2=0,\qquad \mathcal W\omega^-_3=0.$$
 
-**So $W^-=0$ and $W^+$ has spectrum $(4,-2,-2)$, proportional to $(2,-1,-1)$, trace-free as required, with no zero eigenvalue. $\operatorname{rank}(W:\Lambda^2\mathbb R^4\to\Lambda^2\mathbb R^4)=3$ exactly.** ✔
+**So $W^-=0$ and $W^+$ has spectrum $(4,-2,-2)$, proportional to $(2,-1,-1)$, trace-free as required, with no zero eigenvalue. $\mathop{\mathrm{rank}}(W:\Lambda^2\mathbb R^4\to\Lambda^2\mathbb R^4)=3$ exactly.** ✔
 
 **Cross-check 1, against the same source's own table.** [bourguignon-karcher-1978-pinching/notes.md](../references/bourguignon-karcher-1978-pinching/notes.md) §5.2 lists the spectrum of $\hat R_{\mathbb{CP}^n}$ at this normalisation: eigenvalue $4n+4$ on $\mathbb R\cdot J$ (dimension $1$), $0$ on $\{u\wedge v-Ju\wedge Jv\}$ (dimension $n(n-1)$), $4$ on $\{u\wedge v+Ju\wedge Jv\}$ (dimension $n(n-1)$), $4$ on $\{u\wedge Ju-v\wedge Jv\}$ (dimension $n-1$). At $n=2$ that is $\{12,0,0,4,4,4\}$ on a $1+2+2+1=6$-dimensional space. Their $\hat R$ is twice the operator of §0, their top eigenvalue is $12$ where the computation above gives $\mathcal R(e_{12}+e_{34})=6(e_{12}+e_{34})$, so halving gives $\{6,2,2,2,0,0\}$. The direct computation gives $\mathcal R$ eigenvalues $6$ on $\omega^+_1$, $2$ on $\omega^-_1$, $2$ on $\omega^-_2$, $2$ on $\omega^-_3$, $0$ on $\omega^+_2$, $0$ on $\omega^+_3$, the same multiset. Subtracting $\tfrac{s}{2n(n-1)}\cdot 2=2$ from each recovers $\{4,0,0,0,-2,-2\}$, i.e. $W^+=(4,-2,-2)$ and $W^-=(0,0,0)$. **Exact agreement.**
 
 **Cross-check 2, against the Kähler formula.** For a Kähler surface $W^+$ has eigenvalues $(s/6,-s/12,-s/12)$; at $s=24$ that is $(4,-2,-2)$. Agreement, but note this is the *recalled* statement and it is listed here as a check on the derivation, not as its support.
 
-**Orientation, and why it does not matter.** Which of $W^\pm$ vanishes flips with the orientation (Itoh, p. 265: *"a self-dual 4-manifold is anti-self-dual if the orientation is reversed"*). Corollary 2 depends only on $\operatorname{rank}(W)=3$, which is orientation-independent. So the corollary survives either convention, and the sentence "$\mathbb{CP}^2$ is self-dual Einstein so $W^-=0$" is a convention-dependent way of saying an orientation-free thing. Worth one clause in the record; it is not an error.
+**Orientation, and why it does not matter.** Which of $W^\pm$ vanishes flips with the orientation (Itoh, p. 265: *"a self-dual 4-manifold is anti-self-dual if the orientation is reversed"*). Corollary 2 depends only on $\mathop{\mathrm{rank}}(W)=3$, which is orientation-independent. So the corollary survives either convention, and the sentence "$\mathbb{CP}^2$ is self-dual Einstein so $W^-=0$" is a convention-dependent way of saying an orientation-free thing. Worth one clause in the record; it is not an error.
 
 ## 8. Claim J, the padding (item 8)
 
 **CONFIRMED**, in both halves.
 
-Let $V=\operatorname{span}(f_5,\dots,f_n)$ and define $\widetilde W_{abcd}=W_{abcd}$ when $a,b,c,d\le4$ and $0$ if any index exceeds $4$.
+Let $V=\mathop{\mathrm{span}}(f_5,\dots,f_n)$ and define $\widetilde W_{abcd}=W_{abcd}$ when $a,b,c,d\le4$ and $0$ if any index exceeds $4$.
 
 **It stays a Weyl tensor.** Riemann symmetries: each permutes the index set, so a component with an index $>4$ maps to another such, and both are $0$; components entirely in $\{1,\dots,4\}$ inherit the symmetries. ✔ First Bianchi: the three terms $\widetilde W_{abcd}+\widetilde W_{acdb}+\widetilde W_{adbc}$ share the *same* four indices, so either all four are $\le4$ (and the identity is the original one) or every term contains the offending index and all three vanish. ✔ Trace: $\sum_{b=1}^n \widetilde W_{abcb}$, summands with $b>4$ vanish, so the sum equals $\sum_{b=1}^4 W_{abcb}=0$ when $a,c\le4$, and is identically $0$ when $a>4$ or $c>4$. ✔
 
@@ -259,7 +259,7 @@ Let $V=\operatorname{span}(f_5,\dots,f_n)$ and define $\widetilde W_{abcd}=W_{ab
 - on $\mathbb R^4\wedge V$ and on $\Lambda^2 V$, $\widetilde{\mathcal W}$ is identically zero;
 - nothing maps *into* $(\mathbb R^4\wedge V)\oplus\Lambda^2V$, since a nonzero image coefficient $\widetilde W_{cdab}$ forces $c,d\le4$.
 
-So $\widetilde{\mathcal W}=\mathcal W\oplus 0$ as a block-diagonal operator, with **no off-diagonal block**. The spectrum is the old spectrum together with $\binom n2-6$ additional zeros, and $\operatorname{rank}\widetilde W=\operatorname{rank}W=3$. ✔
+So $\widetilde{\mathcal W}=\mathcal W\oplus 0$ as a block-diagonal operator, with **no off-diagonal block**. The spectrum is the old spectrum together with $\binom n2-6$ additional zeros, and $\mathop{\mathrm{rank}}\widetilde W=\mathop{\mathrm{rank}}W=3$. ✔
 
 **Corollary 2 therefore holds** (claim H, **CONFIRMED**), *once Corollary 1 is repaired as in §10*: padded $W_{\mathbb{CP}^2}$ is nonzero and has $\Lambda^2$-rank $3\le3$, so by the repaired Corollary 1 it is coordinate-diagonal in no orthonormal frame of $\mathbb R^n$, $n\ge4$. The defect in Corollary 1 does not touch this instance, because the hypothesis it drops is one $\mathbb{CP}^2$ satisfies.
 
@@ -272,7 +272,7 @@ So $\widetilde{\mathcal W}=\mathcal W\oplus 0$ as a block-diagonal operator, wit
 | Step | Kernel dependence |
 | --- | --- |
 | $\mathcal W(f_a\wedge f_b)=K_{ab}f_a\wedge f_b$ | None. It is an identity for each basis vector; the ones with $K_{ab}=0$ are kernel vectors and the identity is what *exhibits* them. |
-| $\operatorname{rank}=\lvert E\rvert$ | None, it is a statement *about* the kernel, of the right form: $\dim\ker\mathcal W=\binom n2-\lvert E\rvert$, computed rather than assumed. |
+| $\mathop{\mathrm{rank}}=\lvert E\rvert$ | None, it is a statement *about* the kernel, of the right form: $\dim\ker\mathcal W=\binom n2-\lvert E\rvert$, computed rather than assumed. |
 | Degree $0$ or $\ge2$ | Degree $0$ is explicitly allowed. Vertices outside the support are exactly kernel directions and the statement accommodates them by name. |
 | $\lvert E\rvert\le2$, $\lvert E\rvert=3$ counting | Bounds the number of **positive-degree** vertices; unbounded numbers of degree-$0$ vertices are harmless. Only $n\ge$ (support size) is used, never $n=$ support size. |
 | Triangle system | Uses row sums at the three support indices; rows at kernel indices are $0=0$ and are not used. |
@@ -289,7 +289,7 @@ So $\widetilde{\mathcal W}=\mathcal W\oplus 0$ as a block-diagonal operator, wit
 **The falsifier, exhibited in closed form: $W=0$.**
 
 - $W=0\in\mathcal W_n$, every symmetry, the Bianchi identity and every trace hold trivially.
-- $\operatorname{rank}(0:\Lambda^2\to\Lambda^2)=0\le3$, so it satisfies Corollary 1's hypothesis.
+- $\mathop{\mathrm{rank}}(0:\Lambda^2\to\Lambda^2)=0\le3$, so it satisfies Corollary 1's hypothesis.
 - $W=0$ **is** coordinate-diagonal, in *every* frame: the defining condition "$W_{abcd}=0$ unless $\{a,b\}=\{c,d\}$" is satisfied vacuously, and its sectional matrix $K=0$ is hollow, symmetric and has vanishing row sums, so it lies in the locus of §2.
 
 So the conclusion "coordinate-diagonal in no frame" is false for $W=0$, while the hypothesis holds. **Corollary 1 as written is false.**

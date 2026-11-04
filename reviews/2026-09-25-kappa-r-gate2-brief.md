@@ -8,7 +8,7 @@
 
 ## Givens
 
-- $\kappa_r(X)$ is the sum of the top $r$ eigenvalues of $-\mathrm{ad}_X^2$ on $\mathfrak{so}(n)$ with $\langle X,Y\rangle=-\tfrac12\operatorname{tr}XY$; $\kappa_r=\max_{\lVert X\rVert=1}\kappa_r(X)$. A unit $X$ has normal form $X=\sum_cs_c\varphi_{p_cq_c}$ with $\sum_cs_c^2=1$ ($\varphi_{pq}=e_q e_p^{\mathsf T}-e_pe_q^{\mathsf T}$ up to the record's convention).
+- $\kappa_r(X)$ is the sum of the top $r$ eigenvalues of $-\mathrm{ad}_X^2$ on $\mathfrak{so}(n)$ with $\langle X,Y\rangle=-\tfrac12\mathop{\mathrm{tr}}XY$; $\kappa_r=\max_{\lVert X\rVert=1}\kappa_r(X)$. A unit $X$ has normal form $X=\sum_cs_c\varphi_{p_cq_c}$ with $\sum_cs_c^2=1$ ($\varphi_{pq}=e_q e_p^{\mathsf T}-e_pe_q^{\mathsf T}$ up to the record's convention).
 - The spectrum of $-\mathrm{ad}_X^2$ (the slot spectrum, Lean-typed as `slotμ` with `slot_eigen`, `slot_orthonormal`, `slot_complete` in [L240SlotBasis.lean](../lean/HamiltonsCubic/Results/L240SlotBasis.lean)): per block pair $a<b$, $(s_a+s_b)^2$ twice and $(s_a-s_b)^2$ twice; per block $a$ and free index, $s_a^2$ twice (once per side $p_a,q_a$); $0$ on Cartan and free-free slots.
 - The record's values $\kappa_1,\kappa_2,\kappa_4,\kappa_6=2,4,6,8$.
 

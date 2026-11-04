@@ -15,7 +15,7 @@ Log: [agent_logs/r1100-L209-ricci.log](../agent_logs/r1100-L209-ricci.log). Sole
 
 ## Claim 1, the statement
 
-The block, verbatim: "$Q(R)=R^2+R^\#$ carries $S^2_B(\mathfrak{so}(n))$ into itself with $\operatorname{Ric}(Q(R))_{ab}=\sum_{c,d}R_{ac,bd}\operatorname{Ric}(R)_{cd}$", with conventions "$R_{ij,kl}:=\langle R\varphi_{ij},\varphi_{kl}\rangle$ [...] $\operatorname{Ric}(R)_{ab}=\sum_cR_{ac,bc}$, first Bianchi $R_{ij,kl}+R_{ik,lj}+R_{il,jk}=0$", and $\langle X,Y\rangle=\tfrac12\operatorname{tr}(X^{\mathsf T}Y)$.
+The block, verbatim: "$Q(R)=R^2+R^\#$ carries $S^2_B(\mathfrak{so}(n))$ into itself with $\mathop{\mathrm{Ric}}(Q(R))_{ab}=\sum_{c,d}R_{ac,bd}\mathop{\mathrm{Ric}}(R)_{cd}$", with conventions "$R_{ij,kl}:=\langle R\varphi_{ij},\varphi_{kl}\rangle$ [...] $\mathop{\mathrm{Ric}}(R)_{ab}=\sum_cR_{ac,bc}$, first Bianchi $R_{ij,kl}+R_{ik,lj}+R_{il,jk}=0$", and $\langle X,Y\rangle=\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$.
 
 - Lean conclusion (line 365): `Ric (Qop R) a b = ∑ c, ∑ d, R4 R a c b d * Ric R c d`. Index placement is `R4 R a c b d` = $R_{ac,bd}$, as in the block.
 - `R4 R i j k l = inner2 (R (phi i j)) (phi k l)` (line 43) is $\langle R\varphi_{ij},\varphi_{kl}\rangle$. `inner2` is `½ tr(XᵀY)` (WeylReal line 39), matching the block's pairing.

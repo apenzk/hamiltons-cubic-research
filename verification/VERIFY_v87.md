@@ -65,7 +65,7 @@ The entry states none of these. I fixed them by requiring the entry's own $\lVer
 
 ## 2. The embedding, re-derived, and C1 is broken
 
-$\mathrm{Ric}(h\owedge g_q)_{bd}=\sum_a(h\owedge g_q)_{abad}=(\operatorname{tr}h)(g_q)_{bd}+(\operatorname{tr}g_q)h_{bd}-(g_qh)_{bd}-(hg_q)_{bd}$. With $\operatorname{tr}h=0$, $\operatorname{tr}g_q=m$, and $g_qh=hg_q=h$ because $h$ is carried on $V_1$ where $g_q$ is the identity:
+$\mathrm{Ric}(h\owedge g_q)_{bd}=\sum_a(h\owedge g_q)_{abad}=(\mathop{\mathrm{tr}}h)(g_q)_{bd}+(\mathop{\mathrm{tr}}g_q)h_{bd}-(g_qh)_{bd}-(hg_q)_{bd}$. With $\mathop{\mathrm{tr}}h=0$, $\mathop{\mathrm{tr}}g_q=m$, and $g_qh=hg_q=h$ because $h$ is carried on $V_1$ where $g_q$ is the identity:
 
 $$\mathrm{Ric}(h\owedge g_q)=(m-2)\,h .$$
 
@@ -79,7 +79,7 @@ Both of the entry's constants come out, and they come out **from $(m-2)$**.
 
 > **Exhibited.** Put $\mathrm{Ric}=mh$ into the record's own projector and the subtracted coefficient is $\frac{m}{2(m-1)}=\beta$, not $\alpha$; then $H=\alpha\,h\owedge g_q-\beta\,h\owedge g_{q'}$ and the entry's displayed eigenvalue list has $\alpha$ and $\beta$ **interchanged**. The consequence is checkable in one line at $m=4$: the interchanged list gives $\lVert H\rVert_F^2=\big[m\beta^2+(m-2)\alpha^2\big]\lVert h\rVert^2=\frac{m^3+(m-2)^3}{4(m-1)^2}\lVert h\rVert^2=\frac{64+8}{36}\lVert h\rVert^2=2\lVert h\rVert^2$, against the box's own $\frac{m(m-2)}{2(m-1)}\lVert h\rVert^2=\frac43\lVert h\rVert^2$ two lines below. So the entry's own lemma refutes the entry's own Ricci.
 
-> **The opposite, argued.** The most charitable reading is that "$m$" is the surviving trace $\operatorname{tr}g_q=m$ and the two $hg_q$ terms were dropped, a slip of the pen with the right qualitative content ($\ne0$). The clause is used for nothing else: the sentence's job is to say the projection term survives. But the numeral is also the only place the entry says where $\alpha$ comes from, and at $m=2$ it says $\mathrm{Ric}\ne0$ where the truth is $\mathrm{Ric}=0$, i.e. the correct value is what makes $m\ge3$ the right floor, and the stated one hides that. **The discrepancy stands.**
+> **The opposite, argued.** The most charitable reading is that "$m$" is the surviving trace $\mathop{\mathrm{tr}}g_q=m$ and the two $hg_q$ terms were dropped, a slip of the pen with the right qualitative content ($\ne0$). The clause is used for nothing else: the sentence's job is to say the projection term survives. But the numeral is also the only place the entry says where $\alpha$ comes from, and at $m=2$ it says $\mathrm{Ric}\ne0$ where the truth is $\mathrm{Ric}=0$, i.e. the correct value is what makes $m\ge3$ the right floor, and the stated one hides that. **The discrepancy stands.**
 
 **Eigenvalues.** For $h,k$ both diagonal in one frame, $(h\owedge k)_{abcd}$ is nonzero only when $\{a,b\}=\{c,d\}$, so $H$ is diagonal on coordinate $2$-planes with $(h\owedge k)_{abab}=h_ak_b+h_bk_a$. Hence
 

@@ -24,7 +24,7 @@ These are the same question and I took them together. The deliverable is [weyl_i
 
 **First fundamental theorem for `O(n)`**: every polynomial `O(n)`-invariant of a tensor is a linear combination of complete metric contractions. So the degree-`k` invariants on `Weyl_n` are spanned by the diagram functionals `D_m(W)`, one for each perfect matching `m` of the `4k` index slots, and
 
-$$\dim(\mathrm{Sym}^k\mathcal W_n)^{O(n)}\ =\ \operatorname{rank}\big[\,D_m(W_i)\,\big]_{m,i}$$
+$$\dim(\mathrm{Sym}^k\mathcal W_n)^{O(n)}\ =\ \mathop{\mathrm{rank}}\big[\,D_m(W_i)\,\big]_{m,i}$$
 
 over enough points `W_i`. Three things make this cheap, and one makes it rigorous.
 

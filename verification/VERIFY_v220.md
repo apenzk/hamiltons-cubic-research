@@ -14,7 +14,7 @@
 | 6 | The rounding-slack account: $E(n)$, the clearing $41n-57\ge0$, the direction, the cost | **CONFIRMED, derived in full by hand**, and $E(12)=709/4680$ recovered independently |
 | 7 | *"valid at every $n\ge2$"* | **IMPRECISE, INHERITED**, true of the polynomial, false of the rational inequality below $n=4$; harmless in context |
 | 8 | The $n=12$ moment-body step, and the corner | **CONFIRMED IN SUBSTANCE**, and located at extraction line 4239ff |
-| 9 | *"**The edge itself is $(\operatorname{tr}S^3)^2\le\operatorname{tr}S^4$**"* | **REFUTED**, that edge admits the corner in question; the other one excludes it, and Jäger already prints the first |
+| 9 | *"**The edge itself is $(\mathop{\mathrm{tr}}S^3)^2\le\mathop{\mathrm{tr}}S^4$**"* | **REFUTED**, that edge admits the corner in question; the other one excludes it, and Jäger already prints the first |
 | 10 | The two load-bearing hypotheses, $S\succeq0$ and unit norm | **CONFIRMED, and load-bearing more sharply than the record says**, without the support cap the dual does not merely weaken, it collapses |
 | 11 | *"weak duality alone licenses it … the convexity appealed to here is surplus"* | **CONFIRMED**, with one wording correction: what weak duality returns is a minorant, not a supporting line |
 | 12 | *"the endpoint evaluation is licensed by the source's own convexity, $\mathrm{RHS}''\ge0$ … survives at $n=12,14$"* | **CONFIRMED VERBATIM AND DERIVED**, the licence holds at every $n\ge1$ |
@@ -39,7 +39,7 @@ Quoted from [conventions.md](../findings/conventions.md), not restated:
 
 > **"Diagonal" means diagonal in coordinate $2$-planes $e_i\wedge e_j$** of an orthonormal frame of $\mathbb R^n$, *not* diagonal as an operator on $\Lambda^2\mathbb R^n$.
 
-The third of these is what makes L1's normalisation readable at all. $S=\mathrm{Ric}(\lvert W\rvert)/\lVert\mathrm{Ric}(\lvert W\rvert)\rVert$ therefore has $\operatorname{tr}S^2=1$, **not** $\operatorname{tr}S=1$, and that is the only reading under which $\mu=\sum\lambda_i^2\delta_{\lambda_i}$ is a probability measure. The block asserts the probability claim and never says which norm; the convention supplies it.
+The third of these is what makes L1's normalisation readable at all. $S=\mathrm{Ric}(\lvert W\rvert)/\lVert\mathrm{Ric}(\lvert W\rvert)\rVert$ therefore has $\mathop{\mathrm{tr}}S^2=1$, **not** $\mathop{\mathrm{tr}}S=1$, and that is the only reading under which $\mu=\sum\lambda_i^2\delta_{\lambda_i}$ is a probability measure. The block asserts the probability claim and never says which norm; the convention supplies it.
 
 ## 1. Hypothesis inventory
 
@@ -50,12 +50,12 @@ The third of these is what makes L1's normalisation readable at all. $S=\mathrm{
 | H1 | $W\in\langle W\rangle_d$, $\lVert W\rVert=1$, $W^2+W^\#=\theta W$ | Jäger Assumption 1, extraction L1705 | throughout | stated at source, **not in the L1 block** |
 | H2 | $\theta\ge\theta_0(n)$ | Assumption 1 | §3.6 only; §§3.2–3.5 need only $\theta\ge\tilde\theta_0(n)$ | stated at source, **not in the block** |
 | H3 | $n=2m$, $m\ge8$ | Assumption 1, *both clauses* | $m\ge8$ once genuinely, at L5080; evenness at §3.6 | the block names $m\ge8$ and **never names the evenness clause** |
-| H4 | Assumption 2, $\operatorname{scal}\le(n-3)\tilde\theta_0(n)$ | extraction L2212 | the contradiction hypothesis of Lemma 3.5.6 | used, unstated in the block |
-| H5 | $S\succeq0$ | block, after r497/r498 | the dual, and $1\le(\operatorname{tr}S)(\operatorname{tr}S^3)$ | **stated and load-bearing** (§6) |
-| H6 | $\operatorname{tr}S^2=1$, hence spectrum in $[0,1]$ | block ("unit norm") | probability measure; support cap | **stated and load-bearing** (§6) |
-| H7 | $\mathbb E[\lambda^{-2}]=\operatorname{rank}S\le n$ | block, as a constraint | the dual's $-\beta n$ term | stated; its *meaning* (it is the rank) is nowhere |
-| H8 | $\operatorname{tr}S\le\sqrt n$ | **nowhere** | needed to turn $1\le(\operatorname{tr}S)(\operatorname{tr}S^3)$ into $\operatorname{tr}S^3\ge n^{-1/2}$ | **step using a hypothesis never stated** |
-| H9 | $f(y)=\frac{(\operatorname{tr}S^4)^2-y^2}{1-y}$ is decreasing in $y$ (Jäger (3.16)) | **nowhere on the record** | licenses substituting the *lower* bound $\varphi(v)^2$ for $y$ in step 3 | **step using a hypothesis never stated**, the sharpest instance |
+| H4 | Assumption 2, $\mathop{\mathrm{scal}}\le(n-3)\tilde\theta_0(n)$ | extraction L2212 | the contradiction hypothesis of Lemma 3.5.6 | used, unstated in the block |
+| H5 | $S\succeq0$ | block, after r497/r498 | the dual, and $1\le(\mathop{\mathrm{tr}}S)(\mathop{\mathrm{tr}}S^3)$ | **stated and load-bearing** (§6) |
+| H6 | $\mathop{\mathrm{tr}}S^2=1$, hence spectrum in $[0,1]$ | block ("unit norm") | probability measure; support cap | **stated and load-bearing** (§6) |
+| H7 | $\mathbb E[\lambda^{-2}]=\mathop{\mathrm{rank}}S\le n$ | block, as a constraint | the dual's $-\beta n$ term | stated; its *meaning* (it is the rank) is nowhere |
+| H8 | $\mathop{\mathrm{tr}}S\le\sqrt n$ | **nowhere** | needed to turn $1\le(\mathop{\mathrm{tr}}S)(\mathop{\mathrm{tr}}S^3)$ into $\mathop{\mathrm{tr}}S^3\ge n^{-1/2}$ | **step using a hypothesis never stated** |
+| H9 | $f(y)=\frac{(\mathop{\mathrm{tr}}S^4)^2-y^2}{1-y}$ is decreasing in $y$ (Jäger (3.16)) | **nowhere on the record** | licenses substituting the *lower* bound $\varphi(v)^2$ for $y$ in step 3 | **step using a hypothesis never stated**, the sharpest instance |
 | H10 | $\varphi(v)^2\in[\tfrac1n,\tfrac2n-\tfrac2{n^2}]$ across the swept range | **nowhere** | H9 is proved only on that interval | **unstated side condition** |
 | H11 | $\mathrm{Ric}(\lvert W\rvert)\ne0$, so the normalisation is defined | **nowhere** | the definition of $S$ | unstated; **true**, see §9 |
 | H12 | Result 5b replaces Jäger's §3.6 after Lemma 3.6.10 | [ATTEMPTS.md:629](../ATTEMPTS.md) | discharges H3's $m\ge8$ at $m=6,7$ | **unnumbered, unindexed, no Gate 2** |
@@ -98,7 +98,7 @@ That is the ideal-induction step. **So the count of two is right, and the block'
 
 **Everything else in Chapter 3 has threshold $\le12$.** The numeric hypotheses I found are: $n\ge8$ at 3541 (from $n^2-10n+18\ge0$, i.e. $n\ge5+\sqrt7$), $n\ge9$ at 4113 and 4396, $n\ge6$ at 3386, $n\ge5$ at 4626 and 4851, $n\ge4$ at 4051, 4354 and 4835, $n\ge3$ at 2602, 3579, 4375 and 4657, $n\ge2$ at 2524, 4331, 4377 and 4670, $n\ge1$ at 4260, and $k\ge12$ in Lemma 3.5.4 at 3894. All are satisfied at $n=12$ and $n=14$.
 
-**One of them is exactly tight and the block never says so.** Lemma 3.5.4 requires $k\ge12$; at its point of application (extraction 4100, *"By (3.12) and lemma 3.5.4, this can only be true if …"*) the bound variable is $k=n$, since the displayed inequality at 4088–4098 is Lemma 3.5.4's with $k\to n$ and $x=n\operatorname{tr}S^4-1$. So the entire $n=12$ repair sits on the boundary of a hypothesis of the source. It is satisfied, but had Jäger written $k\ge13$, L1's $n=12$ half would not exist, and the block records no margin at all here.
+**One of them is exactly tight and the block never says so.** Lemma 3.5.4 requires $k\ge12$; at its point of application (extraction 4100, *"By (3.12) and lemma 3.5.4, this can only be true if …"*) the bound variable is $k=n$, since the displayed inequality at 4088–4098 is Lemma 3.5.4's with $k\to n$ and $x=n\mathop{\mathrm{tr}}S^4-1$. So the entire $n=12$ repair sits on the boundary of a hypothesis of the source. It is satisfied, but had Jäger written $k\ge13$, L1's $n=12$ half would not exist, and the block records no margin at all here.
 
 I also verified Jäger's (3.13), the side condition that puts $x$ in Lemma 3.5.4's range: $16n^2-2(8n+9)(n-1)=16n^2-(16n^2+2n-18)=-2n+18\le0$ ⟺ $n\ge9$. Exact, matches the printed line.
 
@@ -122,17 +122,17 @@ Against the block's own warning at [problem.md:474](../findings/problem.md): *"T
 
 ## 6. The rounding-slack account, derived in full
 
-The claim: $\operatorname{tr}S^4\le E(n)=\dfrac{8n^2-41n+49}{4(n+1)(n-2)(n-3)}$, rounded to $\dfrac{16}{8n+9}$, the cleared inequality being $41n-57\ge0$, costing $(41n-57)$ over a quartic, $0.000885$ at $n=12$.
+The claim: $\mathop{\mathrm{tr}}S^4\le E(n)=\dfrac{8n^2-41n+49}{4(n+1)(n-2)(n-3)}$, rounded to $\dfrac{16}{8n+9}$, the cleared inequality being $41n-57\ge0$, costing $(41n-57)$ over a quartic, $0.000885$ at $n=12$.
 
-**Where it is in the source.** Lemma 3.3.6, extraction lines 2485–2524. The lemma is *"Let assumptions 1 and 2 hold. Then $\operatorname{tr}S^4\le\frac{16}{8n+9}$"*, and its proof passes through $E(n)$ exactly as the record says.
+**Where it is in the source.** Lemma 3.3.6, extraction lines 2485–2524. The lemma is *"Let assumptions 1 and 2 hold. Then $\mathop{\mathrm{tr}}S^4\le\frac{16}{8n+9}$"*, and its proof passes through $E(n)$ exactly as the record says.
 
 **The derivation of $E(n)$, in full.** Jäger reaches
 
-$$\operatorname{tr}S^4\le1-\frac{\tilde\theta_0(n)^2}{2}\left(1+\frac1{2(n-3)}\right)^2 .$$
+$$\mathop{\mathrm{tr}}S^4\le1-\frac{\tilde\theta_0(n)^2}{2}\left(1+\frac1{2(n-3)}\right)^2 .$$
 
 With $\tilde\theta_0(n)^2=\frac{2(n-1)(n-3)}{(n+1)(n-2)}$ from [conventions.md](../findings/conventions.md), the first factor is $\frac{(n-1)(n-3)}{(n+1)(n-2)}$, and $1+\frac1{2(n-3)}=\frac{2n-5}{2(n-3)}$, so
 
-$$\operatorname{tr}S^4\le1-\frac{(n-1)(n-3)}{(n+1)(n-2)}\cdot\frac{(2n-5)^2}{4(n-3)^2}=1-\frac{(n-1)(2n-5)^2}{4(n+1)(n-2)(n-3)} .$$
+$$\mathop{\mathrm{tr}}S^4\le1-\frac{(n-1)(n-3)}{(n+1)(n-2)}\cdot\frac{(2n-5)^2}{4(n-3)^2}=1-\frac{(n-1)(2n-5)^2}{4(n+1)(n-2)(n-3)} .$$
 
 Now $4(n+1)(n-2)(n-3)=4n^3-16n^2+4n+24$ and $(n-1)(2n-5)^2=(n-1)(4n^2-20n+25)=4n^3-24n^2+45n-25$; subtracting,
 
@@ -146,7 +146,7 @@ $$64\,(n+1)(n-2)(n-3)-(8n^2-41n+49)(8n+9)=41n-57 ,$$
 
 so $E(n)\le\frac{16}{8n+9}$ ⟺ $41n-57\ge0$ **whenever both denominators are positive.** This is Jäger's own line 2522, written there as $-41n+57\le0$. **The record transcribes the source correctly.**
 
-**The direction.** $E(n)\le16/(8n+9)$, so the replacement *weakens* the upper bound on $\operatorname{tr}S^4$, the rounding loses, which is what "rounding slack" must mean for the repair to consist of undoing it. **Direction correct.**
+**The direction.** $E(n)\le16/(8n+9)$, so the replacement *weakens* the upper bound on $\mathop{\mathrm{tr}}S^4$, the rounding loses, which is what "rounding slack" must mean for the repair to consist of undoing it. **Direction correct.**
 
 **The cost.**
 
@@ -156,7 +156,7 @@ linear over a quartic, matching *"costing $(41n-57)$ over a quartic"*. At $n=12$
 
 **An independent corroboration I did not expect.** $E(12)=\frac{1152-492+49}{4680}=\frac{709}{4680}$. That rational is the hard-coded upper limit `VHI` of the interval script, so the sweep's upper endpoint *is* Jäger's unrounded bound, which is precisely what *"keep Lemma 3.3.6 in the exact form he derives, before he rounds it"* has to mean. The record never says this, and the two ends meet exactly.
 
-**The one place the account is imprecise (claim 7).** *"valid at every $n\ge2$"* is true of the polynomial $41n-57\ge0$ (which holds from $n\ge57/41=1.3902$) but not of the rational inequality it clears: at $n=2$ and $n=3$ the denominator $4(n+1)(n-2)(n-3)$ vanishes and $E(n)$ does not exist, and on $2<n<3$ it is negative, which would assert $\operatorname{tr}S^4<0$. The honest range for the rounding is $n\ge4$. This is inherited verbatim from Jäger's *"for all $n\ge2$"* at line 2524 and is harmless, Assumption 1 forces $n\ge16$ at that point in his text, and $\dim\mathcal W_n=0$ for $n\le3$ here, but the block, [lean/INDEX.md:247](../lean/INDEX.md) and [JaegerRounding.lean](../lean/HamiltonsCubic/Results/JaegerRounding.lean) all repeat *"holds from $n=2$ on"* as though it were a fact about the rounding. **Recorded as imprecision, not as a defect.**
+**The one place the account is imprecise (claim 7).** *"valid at every $n\ge2$"* is true of the polynomial $41n-57\ge0$ (which holds from $n\ge57/41=1.3902$) but not of the rational inequality it clears: at $n=2$ and $n=3$ the denominator $4(n+1)(n-2)(n-3)$ vanishes and $E(n)$ does not exist, and on $2<n<3$ it is negative, which would assert $\mathop{\mathrm{tr}}S^4<0$. The honest range for the rounding is $n\ge4$. This is inherited verbatim from Jäger's *"for all $n\ge2$"* at line 2524 and is harmless, Assumption 1 forces $n\ge16$ at that point in his text, and $\dim\mathcal W_n=0$ for $n\le3$ here, but the block, [lean/INDEX.md:247](../lean/INDEX.md) and [JaegerRounding.lean](../lean/HamiltonsCubic/Results/JaegerRounding.lean) all repeat *"holds from $n=2$ on"* as though it were a fact about the rounding. **Recorded as imprecision, not as a defect.**
 
 **Not checkable from the record.** *"about a sixty-fourth of Step 2's residual there"* rests on the residual $+0.05627$ at $n=12$ and $-0.01741$ at $n=14$, which [lean/INDEX.md:247](../lean/INDEX.md) itself lists as **owed** (*"the feasible-region evaluation behind $\pm0.05627$ and $-0.01741$"*). I did not evaluate it and record it as unverified.
 
@@ -166,47 +166,47 @@ linear over a quartic, matching *"costing $(41n-57)$ over a quartic"*. At $n=12$
 
 The corner is at extraction line 4239 and the display beneath it. Jäger writes
 
-$$\tfrac1n\le(\operatorname{tr}S^3)^2\le\operatorname{tr}S^4\le\tfrac{16}{8n+9}\le\tfrac2n-\tfrac2{n^2},$$
+$$\tfrac1n\le(\mathop{\mathrm{tr}}S^3)^2\le\mathop{\mathrm{tr}}S^4\le\tfrac{16}{8n+9}\le\tfrac2n-\tfrac2{n^2},$$
 
-then introduces $f(y)=\frac{(\operatorname{tr}S^4)^2-y^2}{1-y}$ on $y\in[\frac1n,\frac2n-\frac2{n^2}]$ with $y=(\operatorname{tr}S^3)^2$, proves $f'\le0$ via (3.16), and concludes
+then introduces $f(y)=\frac{(\mathop{\mathrm{tr}}S^4)^2-y^2}{1-y}$ on $y\in[\frac1n,\frac2n-\frac2{n^2}]$ with $y=(\mathop{\mathrm{tr}}S^3)^2$, proves $f'\le0$ via (3.16), and concludes
 
-$$\sqrt{\frac{(\operatorname{tr}S^4)^2-(\operatorname{tr}S^3)^4}{1-(\operatorname{tr}S^3)^2}}\le\sqrt{\frac{\frac4{n^2}-\frac1{n^2}}{1-\frac1n}}=\sqrt{\frac3{n(n-1)}}\le\frac{\sqrt3}{n-1}.$$
+$$\sqrt{\frac{(\mathop{\mathrm{tr}}S^4)^2-(\mathop{\mathrm{tr}}S^3)^4}{1-(\mathop{\mathrm{tr}}S^3)^2}}\le\sqrt{\frac{\frac4{n^2}-\frac1{n^2}}{1-\frac1n}}=\sqrt{\frac3{n(n-1)}}\le\frac{\sqrt3}{n-1}.$$
 
-**That last step is the corner.** He evaluates at $y=\frac1n$ (the *floor* of $(\operatorname{tr}S^3)^2$) while simultaneously replacing $\operatorname{tr}S^4$ in the numerator by its *ceiling* $\frac2n$. Two independent substitutions of two extremes of one spectrum. **The record's description of the step is exactly right, and I locate it here.**
+**That last step is the corner.** He evaluates at $y=\frac1n$ (the *floor* of $(\mathop{\mathrm{tr}}S^3)^2$) while simultaneously replacing $\mathop{\mathrm{tr}}S^4$ in the numerator by its *ceiling* $\frac2n$. Two independent substitutions of two extremes of one spectrum. **The record's description of the step is exactly right, and I locate it here.**
 
 ### 7.2 The corner really is empty, confirmed
 
-With $S\succeq0$, $\operatorname{tr}S^2=1$ and at most $n$ nonzero eigenvalues:
+With $S\succeq0$, $\mathop{\mathrm{tr}}S^2=1$ and at most $n$ nonzero eigenvalues:
 
-- $(\sum\lambda_i^2)^2\le r\sum\lambda_i^4$ with $r=\operatorname{rank}S\le n$ gives $\operatorname{tr}S^4\ge\frac1n$, equality iff the nonzero spectrum is flat **and** $r=n$;
-- $(\sum\lambda_i^2)^2=(\sum\lambda_i^{1/2}\lambda_i^{3/2})^2\le(\sum\lambda_i)(\sum\lambda_i^3)$ (this needs $\lambda_i\ge0$ to take the roots at all), gives $1\le(\operatorname{tr}S)(\operatorname{tr}S^3)$, and with $\operatorname{tr}S\le\sqrt n$ (H8) gives $\operatorname{tr}S^3\ge n^{-1/2}$, i.e. $y\ge\frac1n$, equality iff flat;
-- at the flat spectrum $\lambda_i=n^{-1/2}$ one has $\operatorname{tr}S^3=n^{-1/2}$ and $\operatorname{tr}S^4=\frac1n$, **both at their floors together.**
+- $(\sum\lambda_i^2)^2\le r\sum\lambda_i^4$ with $r=\mathop{\mathrm{rank}}S\le n$ gives $\mathop{\mathrm{tr}}S^4\ge\frac1n$, equality iff the nonzero spectrum is flat **and** $r=n$;
+- $(\sum\lambda_i^2)^2=(\sum\lambda_i^{1/2}\lambda_i^{3/2})^2\le(\sum\lambda_i)(\sum\lambda_i^3)$ (this needs $\lambda_i\ge0$ to take the roots at all), gives $1\le(\mathop{\mathrm{tr}}S)(\mathop{\mathrm{tr}}S^3)$, and with $\mathop{\mathrm{tr}}S\le\sqrt n$ (H8) gives $\mathop{\mathrm{tr}}S^3\ge n^{-1/2}$, i.e. $y\ge\frac1n$, equality iff flat;
+- at the flat spectrum $\lambda_i=n^{-1/2}$ one has $\mathop{\mathrm{tr}}S^3=n^{-1/2}$ and $\mathop{\mathrm{tr}}S^4=\frac1n$, **both at their floors together.**
 
-So $y=\frac1n$ forces $\operatorname{tr}S^4=\frac1n$, never $\frac2n$. **"The floor forces the flat spectrum, which drags the ceiling down with it" is correct**, and it is the mechanism the script's own docstring states.
+So $y=\frac1n$ forces $\mathop{\mathrm{tr}}S^4=\frac1n$, never $\frac2n$. **"The floor forces the flat spectrum, which drags the ceiling down with it" is correct**, and it is the mechanism the script's own docstring states.
 
 ### 7.3 But the block names the wrong edge, REFUTED
 
-[problem.md:476](../findings/problem.md): *"**The edge itself is $(\operatorname{tr}S^3)^2\le\operatorname{tr}S^4$**, with $1\le(\operatorname{tr}S)(\operatorname{tr}S^3)$ beside it; a box bounding the two traces separately admits $(\tfrac12,\tfrac15)$, which the edge excludes."* [L1.lean](../lean/HamiltonsCubic/Results/L1.lean)'s docstring is sharper still: *"**the first** is precisely the corner elimination the record describes in words."*
+[problem.md:476](../findings/problem.md): *"**The edge itself is $(\mathop{\mathrm{tr}}S^3)^2\le\mathop{\mathrm{tr}}S^4$**, with $1\le(\mathop{\mathrm{tr}}S)(\mathop{\mathrm{tr}}S^3)$ beside it; a box bounding the two traces separately admits $(\tfrac12,\tfrac15)$, which the edge excludes."* [L1.lean](../lean/HamiltonsCubic/Results/L1.lean)'s docstring is sharper still: *"**the first** is precisely the corner elimination the record describes in words."*
 
 **Locate.** [problem.md:476](../findings/problem.md); [lean/INDEX.md:202](../lean/INDEX.md); [L1.lean](../lean/HamiltonsCubic/Results/L1.lean) header.
 
-**Exhibit, in closed form.** Take the point $(\operatorname{tr}S^3,\operatorname{tr}S^4)=\left(\tfrac1{\sqrt{12}},\ \tfrac{709}{4680}\right)$ at $n=12$, the corner Jäger's estimate actually visits, with $\operatorname{tr}S^4$ at Jäger's own exact ceiling $E(12)$.
+**Exhibit, in closed form.** Take the point $(\mathop{\mathrm{tr}}S^3,\mathop{\mathrm{tr}}S^4)=\left(\tfrac1{\sqrt{12}},\ \tfrac{709}{4680}\right)$ at $n=12$, the corner Jäger's estimate actually visits, with $\mathop{\mathrm{tr}}S^4$ at Jäger's own exact ceiling $E(12)$.
 
-- Against the named edge: $(\operatorname{tr}S^3)^2=\tfrac1{12}=\tfrac{390}{4680}\le\tfrac{709}{4680}=\operatorname{tr}S^4$. **The edge is satisfied. It does not exclude the corner.**
-- Against the other one: $1\le(\operatorname{tr}S)(\operatorname{tr}S^3)$ needs $\operatorname{tr}S\ge\sqrt{12}$, while $\operatorname{tr}S\le\sqrt{12}$ always holds; so $\operatorname{tr}S=\sqrt{12}$ exactly, which forces the flat spectrum, which forces $\operatorname{tr}S^4=\tfrac1{12}\ne\tfrac{709}{4680}$. **This edge, and only this one, excludes the corner.**
+- Against the named edge: $(\mathop{\mathrm{tr}}S^3)^2=\tfrac1{12}=\tfrac{390}{4680}\le\tfrac{709}{4680}=\mathop{\mathrm{tr}}S^4$. **The edge is satisfied. It does not exclude the corner.**
+- Against the other one: $1\le(\mathop{\mathrm{tr}}S)(\mathop{\mathrm{tr}}S^3)$ needs $\mathop{\mathrm{tr}}S\ge\sqrt{12}$, while $\mathop{\mathrm{tr}}S\le\sqrt{12}$ always holds; so $\mathop{\mathrm{tr}}S=\sqrt{12}$ exactly, which forces the flat spectrum, which forces $\mathop{\mathrm{tr}}S^4=\tfrac1{12}\ne\tfrac{709}{4680}$. **This edge, and only this one, excludes the corner.**
 
-And the illustrative point the block offers, $(\tfrac12,\tfrac15)$, violates $(\operatorname{tr}S^3)^2\le\operatorname{tr}S^4$ in the *opposite* direction ($\tfrac14>\tfrac15$): it has $\operatorname{tr}S^3$ far above its floor, which is a region the argument never visits.
+And the illustrative point the block offers, $(\tfrac12,\tfrac15)$, violates $(\mathop{\mathrm{tr}}S^3)^2\le\mathop{\mathrm{tr}}S^4$ in the *opposite* direction ($\tfrac14>\tfrac15$): it has $\mathop{\mathrm{tr}}S^3$ far above its floor, which is a region the argument never visits.
 
 **Argue the opposite, three ways, all failing.**
 1. *Perhaps "the edge" loosely names the pair.* The sentence names one *"the edge itself"* and the other *"beside it"*, and [L1.lean](../lean/HamiltonsCubic/Results/L1.lean) says *"the first"*. Every reading makes the first primary, and the first is the one that does no work here.
-2. *Perhaps $(\operatorname{tr}S^3)^2\le\operatorname{tr}S^4$ is the record's contribution regardless.* It is not: **Jäger prints it at extraction line 4239** and uses it to fix the domain of $y$. So *"Jäger bounds $\operatorname{tr}S^3$ and $\operatorname{tr}S^4$ separately"* is false if read as "he lacks the joint inequality"; it is true only if read as "he substitutes extremes of each independently inside one expression", which is the reading §7.1 confirms. The block does not say which it means, and [lean/INDEX.md:202](../lean/INDEX.md)'s *"neither is available to a box that bounds the two traces separately"* commits to the false reading for both edges.
-3. *Perhaps the equality case is what is meant.* Both edges have the flat spectrum as their equality case, so an equality-case reading does not distinguish them, but the one that *starts* from $y=\frac1n$ and *derives* flatness is the second, since the first bounds $\operatorname{tr}S^4$ from below and cannot drag it down from a ceiling. **The arrow of the first edge points the wrong way.**
+2. *Perhaps $(\mathop{\mathrm{tr}}S^3)^2\le\mathop{\mathrm{tr}}S^4$ is the record's contribution regardless.* It is not: **Jäger prints it at extraction line 4239** and uses it to fix the domain of $y$. So *"Jäger bounds $\mathop{\mathrm{tr}}S^3$ and $\mathop{\mathrm{tr}}S^4$ separately"* is false if read as "he lacks the joint inequality"; it is true only if read as "he substitutes extremes of each independently inside one expression", which is the reading §7.1 confirms. The block does not say which it means, and [lean/INDEX.md:202](../lean/INDEX.md)'s *"neither is available to a box that bounds the two traces separately"* commits to the false reading for both edges.
+3. *Perhaps the equality case is what is meant.* Both edges have the flat spectrum as their equality case, so an equality-case reading does not distinguish them, but the one that *starts* from $y=\frac1n$ and *derives* flatness is the second, since the first bounds $\mathop{\mathrm{tr}}S^4$ from below and cannot drag it down from a ceiling. **The arrow of the first edge points the wrong way.**
 
 **All three legs clear. Recorded as a defect.** It is a defect in the block's account of its own new step, not in the closure: the quantitative work is done by the certified line $\varphi$, which is neither edge.
 
 ### 7.4 What actually does the work
 
-The line $\varphi(v)=\tfrac7{10}v+\tfrac{8647}{38000}\le\operatorname{tr}S^3$ is *increasing* in $v=\operatorname{tr}S^4$, that is the whole point, and it is the property neither Cauchy–Schwarz edge has. At the ceiling $v=\tfrac16$ it returns $\varphi=\tfrac7{60}+\tfrac{8647}{38000}=\tfrac{39241}{114000}$, whose square is $\tfrac{1539855081}{12996000000}$ against the floor $\tfrac1{12}=\tfrac{1083000000}{12996000000}$, larger by a factor of about $1.42$. **That** is "the ceiling of $\operatorname{tr}S^4$ drags $\operatorname{tr}S^3$ off its floor", and it is a genuinely new inequality. The block's prose describes the qualitative mechanism through the wrong object and never says that $\varphi$ is the operative statement.
+The line $\varphi(v)=\tfrac7{10}v+\tfrac{8647}{38000}\le\mathop{\mathrm{tr}}S^3$ is *increasing* in $v=\mathop{\mathrm{tr}}S^4$, that is the whole point, and it is the property neither Cauchy–Schwarz edge has. At the ceiling $v=\tfrac16$ it returns $\varphi=\tfrac7{60}+\tfrac{8647}{38000}=\tfrac{39241}{114000}$, whose square is $\tfrac{1539855081}{12996000000}$ against the floor $\tfrac1{12}=\tfrac{1083000000}{12996000000}$, larger by a factor of about $1.42$. **That** is "the ceiling of $\mathop{\mathrm{tr}}S^4$ drags $\mathop{\mathrm{tr}}S^3$ off its floor", and it is a genuinely new inequality. The block's prose describes the qualitative mechanism through the wrong object and never says that $\varphi$ is the operative statement.
 
 I also checked [lean/INDEX.md:202](../lean/INDEX.md)'s two numerical claims exactly. $\varphi(1)=\tfrac7{10}+\tfrac{8647}{38000}=\tfrac{26600+8647}{38000}=\tfrac{35247}{38000}$ ✓, and the gap to $-1$ is $\tfrac{73247}{38000}>1$ ✓. The straddle: $\varphi(1/12)=\tfrac{32591}{114000}$ with $32591^2=1062173281<1083000000=\tfrac1{12}\cdot114000^2$, so **below** $1/\sqrt{12}$; $\varphi(1/10)=\tfrac{11307}{38000}$ with $11307^2=127848249>120333333.\overline3=\tfrac1{12}\cdot38000^2$, so **above**. ✓ Both confirmed by exact integer comparison, no radicals.
 
@@ -220,7 +220,7 @@ $$\mathbb E[\lambda]=\mathbb E\!\left[\lambda-\alpha\lambda^2+\beta\lambda^{-2}\
 
 the last step using $\beta\ge0$ with $\mathbb E[\lambda^{-2}]\le n$. This is affine in $v$ with slope $\alpha$, and it is a **lower** bound, which is the only direction the argument consumes. Weak duality is exactly the inequality just displayed; no strong duality, no Slater condition, no constraint qualification enters. **The record is right, and right for the right reason.**
 
-**The convexity is genuinely surplus, CONFIRMED, with a caveat about a second convexity.** The convexity of $F$ (as the value function of a linear programme over measures with a linear right-hand side) would be needed only to claim the dual bound is *tight*. Nothing downstream needs tightness: step 3 substitutes $\varphi(v)$ for $\operatorname{tr}S^3$ and needs only $\varphi\le F$. **But the block's other convexity appeal (Jäger's $\mathrm{RHS}''\ge0$), is not surplus at all**, and the block says so correctly in a different sentence. Two convexities, one surplus and one load-bearing, are discussed eight lines apart under the same word.
+**The convexity is genuinely surplus, CONFIRMED, with a caveat about a second convexity.** The convexity of $F$ (as the value function of a linear programme over measures with a linear right-hand side) would be needed only to claim the dual bound is *tight*. Nothing downstream needs tightness: step 3 substitutes $\varphi(v)$ for $\mathop{\mathrm{tr}}S^3$ and needs only $\varphi\le F$. **But the block's other convexity appeal (Jäger's $\mathrm{RHS}''\ge0$), is not surplus at all**, and the block says so correctly in a different sentence. Two convexities, one surplus and one load-bearing, are discussed eight lines apart under the same word.
 
 **One wording correction.** What weak duality returns is a **minorant**, not a *supporting line*: a supporting line touches. Section A calls it *"a supporting line valid at every value at once"* and the block repeats *"supporting line"*. Nothing breaks (the argument uses only $\varphi\le F$) but the word claims tightness that the licence does not provide, and tightness is exactly what strong duality would have been needed for. **The word should be "minorant" or "certified lower line".**
 
@@ -232,10 +232,10 @@ the last step using $\beta\ge0$ with $\mathbb E[\lambda^{-2}]\le n$. This is aff
 
 $S=\mathrm{Ric}(\lvert W\rvert)/\lVert\mathrm{Ric}(\lvert W\rvert)\rVert$ is Jäger's own $S$, defined at extraction line 1760 as $S:=\mathrm{Ric}/r$ with $\mathrm{Ric}=\mathrm{Ric}(\lvert W\rvert)$, $r=\lVert\mathrm{Ric}\rVert$. **The record's transcription is verbatim correct.**
 
-- **$S\succeq0$**: $\lvert W\rvert=W_++W_-\succeq0$ (Notation 3.0.3), and $\mathrm{Ric}$ maps the PSD cone into itself. On the diagonal locus this is visible: $\mathrm{Ric}(\lvert W\rvert)=\operatorname{diag}\!\left(\sum_j\lvert w_{ij}\rvert\right)$, manifestly PSD.
-- **Unit norm**: by [conventions.md](../findings/conventions.md), $\lVert\mathrm{Ric}\rVert$ is Frobenius, so $\operatorname{tr}S^2=1$, hence $\lambda_i^2\le\sum_j\lambda_j^2=1$ and the spectrum lies in $[0,1]$. Together with PSD this is the support constraint $(0,1]$ on the atoms of positive mass.
-- **The measure is a probability measure** exactly because $\sum\lambda_i^2=\operatorname{tr}S^2=1$; and $\mathbb E[\lambda^{-2}]=\#\{i:\lambda_i\ne0\}=\operatorname{rank}S\le n$, so the third constraint is the rank bound. **The record states the constraint and never says it is the rank**, which is the one line that would make it self-evidently true.
-- **$r>0$, so $S$ is defined** (H11): $\operatorname{tr}\mathrm{Ric}(\lvert W\rvert)=\operatorname{scal}(\lvert W\rvert)>0$ for $W\ne0$. Unstated everywhere; true.
+- **$S\succeq0$**: $\lvert W\rvert=W_++W_-\succeq0$ (Notation 3.0.3), and $\mathrm{Ric}$ maps the PSD cone into itself. On the diagonal locus this is visible: $\mathrm{Ric}(\lvert W\rvert)=\mathop{\mathrm{diag}}\!\left(\sum_j\lvert w_{ij}\rvert\right)$, manifestly PSD.
+- **Unit norm**: by [conventions.md](../findings/conventions.md), $\lVert\mathrm{Ric}\rVert$ is Frobenius, so $\mathop{\mathrm{tr}}S^2=1$, hence $\lambda_i^2\le\sum_j\lambda_j^2=1$ and the spectrum lies in $[0,1]$. Together with PSD this is the support constraint $(0,1]$ on the atoms of positive mass.
+- **The measure is a probability measure** exactly because $\sum\lambda_i^2=\mathop{\mathrm{tr}}S^2=1$; and $\mathbb E[\lambda^{-2}]=\#\{i:\lambda_i\ne0\}=\mathop{\mathrm{rank}}S\le n$, so the third constraint is the rank bound. **The record states the constraint and never says it is the rank**, which is the one line that would make it self-evidently true.
+- **$r>0$, so $S$ is defined** (H11): $\mathop{\mathrm{tr}}\mathrm{Ric}(\lvert W\rvert)=\mathop{\mathrm{scal}}(\lvert W\rvert)>0$ for $W\ne0$. Unstated everywhere; true.
 
 **The support cap does not merely weaken the problem, without it the dual does not exist.** The record's blockquote argues that an atom at large $\lambda$ pins the value near $1/\sqrt{12}$. The stronger and shorter statement: on $(0,\infty)$, $\min_\lambda(\lambda-\tfrac7{10}\lambda^2+\beta\lambda^{-2})=-\infty$ for every $\beta$, because $-\tfrac7{10}\lambda^2$ dominates. **So without $\lambda\le1$ there is no dual line of any slope, not just a wrong one.** The record's own witness $\delta_{-1}$ (feasible without $S\succeq0$, giving $\mathbb E[\lambda]=-1$ against $\varphi(1)=\tfrac{35247}{38000}$) is correct and I confirmed its arithmetic in §7.4.
 
@@ -247,7 +247,7 @@ $S=\mathrm{Ric}(\lvert W\rvert)/\lVert\mathrm{Ric}(\lvert W\rvert)\rVert$ is Jä
 
 **What it assumes, none of it stated on the record.**
 1. **The reduction to one dimension.** The script evaluates `RHS(v, phi(v)^2)` with `coeff = (2*sqrt(2)/TH0)*sqrt(1-v)` standing in for $\lVert\mathrm{Ric}\wedge\mathrm{Ric}\rVert$. That reduction from Jäger's (3.14) is nowhere on the record; [lean/INDEX.md:202](../lean/INDEX.md) lists *"the reduction to Jäger's expression"* as **owed**. **Everything else is downstream of an unproved reduction.**
-2. **A monotonicity that licenses the substitution (H9).** Substituting the *lower* bound $\varphi(v)^2$ for $y=(\operatorname{tr}S^3)^2$ gives an upper bound on RHS only because $f(y)$ is *decreasing* in $y$, Jäger's (3.16). Without that, the substitution is a guess in an unknown direction. **The record never states it.** I checked it holds: (3.16) is proved for all $n\ge1$ via $\tilde f(n)=-n^3+4n^2-8n+4$ with $\tilde f(1)=-1$ and $\tilde f'<0$.
+2. **A monotonicity that licenses the substitution (H9).** Substituting the *lower* bound $\varphi(v)^2$ for $y=(\mathop{\mathrm{tr}}S^3)^2$ gives an upper bound on RHS only because $f(y)$ is *decreasing* in $y$, Jäger's (3.16). Without that, the substitution is a guess in an unknown direction. **The record never states it.** I checked it holds: (3.16) is proved for all $n\ge1$ via $\tilde f(n)=-n^3+4n^2-8n+4$ with $\tilde f(1)=-1$ and $\tilde f'<0$.
 3. **A side condition on the range (H10).** (3.16) is proved on $y\in[\frac1n,\frac2n-\frac2{n^2}]=[0.08333,0.15278]$ at $n=12$. Across the swept range $\varphi(v)^2$ runs over roughly $[0.0986,0.1113]$, inside it. **Nowhere stated.**
 4. **The two "cases" are the endpoints of the $t$-interval**, which is legitimate only under Jäger's $\mathrm{RHS}''\ge0$ (§11), and the script's lower endpoint `TH0/v` is the *unrounded* form of Corollary 3.3.7's $\frac{8n+9}{16}\hat\theta_0(n)$. Shrinking a convex function's domain preserves the endpoint principle, so this is sound, but it is the second undone rounding, and the block never names it.
 5. **`VLO = 10/81`** is exactly where $\hat\theta_0/v\le(n-3)\tilde\theta_0$ becomes solvable: $v\ge\frac{n-2}{(n-3)^2}=\frac{10}{81}$ at $n=12$. I derived this by hand and it matches the docstring's stated reason. ✓
@@ -279,7 +279,7 @@ The block's most specific claim about the source is *"the endpoint evaluation is
 
 ## 13. The traps, each answered by name
 
-**$\ker W\ne0$ and padded objects.** Answered, and the trap is real but benign here. $\mathrm{Ric}(\lvert W\rvert)=\operatorname{diag}(\sum_j\lvert w_{ij}\rvert)$ has a zero eigenvalue exactly when a row of $W$ vanishes, which is precisely what padding produces, a $W$ padded from $\mathbb R^{n_0}$ into $\mathbb R^n$ gives $\operatorname{rank}S=n_0<n$. The constraint $\mathbb E[\lambda^{-2}]=\operatorname{rank}S\le n$ is then slack, so padding **relaxes** the binding constraint and the bound computed with $n$ remains valid. The floor $\operatorname{tr}S^4\ge1/\operatorname{rank}S$ *rises*, which also helps. **The trap does not bite, and the reason is nowhere on the record.**
+**$\ker W\ne0$ and padded objects.** Answered, and the trap is real but benign here. $\mathrm{Ric}(\lvert W\rvert)=\mathop{\mathrm{diag}}(\sum_j\lvert w_{ij}\rvert)$ has a zero eigenvalue exactly when a row of $W$ vanishes, which is precisely what padding produces, a $W$ padded from $\mathbb R^{n_0}$ into $\mathbb R^n$ gives $\mathop{\mathrm{rank}}S=n_0<n$. The constraint $\mathbb E[\lambda^{-2}]=\mathop{\mathrm{rank}}S\le n$ is then slack, so padding **relaxes** the binding constraint and the bound computed with $n$ remains valid. The floor $\mathop{\mathrm{tr}}S^4\ge1/\mathop{\mathrm{rank}}S$ *rises*, which also helps. **The trap does not bite, and the reason is nowhere on the record.**
 
 **The boundary of every stated range.**
 - **$n=12$**, the tightest point in the whole result. Lemma 3.5.4's hypothesis $k\ge12$ is satisfied *with equality* (§4); the crossover below makes $n=12$ the first even dimension where the hypothesis $\theta\ge\theta_0(n)$ excludes the competitor; and it is the only dimension needing the moment body. Three boundaries at one dimension, none of them flagged in the block.
@@ -292,14 +292,14 @@ The block's most specific claim about the source is *"the endpoint evaluation is
 
 **A hypothesis stated but never used.** Looked for across H1–H12; **not found**. Every stated hypothesis carries weight.
 
-**A step using a hypothesis never stated.** **Found, four times**: H8 ($\operatorname{tr}S\le\sqrt n$), H9 (the monotonicity in $y$, the sharpest, since without it step 3's substitution has no justified direction), H10 (the range condition for H9), H11 ($r>0$). See §1.
+**A step using a hypothesis never stated.** **Found, four times**: H8 ($\mathop{\mathrm{tr}}S\le\sqrt n$), H9 (the monotonicity in $y$, the sharpest, since without it step 3's substitution has no justified direction), H10 (the range condition for H9), H11 ($r>0$). See §1.
 
 **A universal claim with no witness.** **Found**: *"A census of every dimension hypothesis in Jäger's Chapter 3 confirms nothing else binds above $n=12$"*, the very sentence the block declares false, still standing at [problem.md:462](../findings/problem.md) and twice in the reference folder (§5).
 
 **An imported theorem whose hypotheses were never checked against the object.** Read at source, as instructed. Theorem A's hypotheses are $W\in\langle W\rangle_d$, $\lVert W\rVert=1$, $W^2+W^\#=\theta W$, $\theta\ge\theta_0(n)$, $n=2m$, $m\ge8$. **The L1 block states none of them.** It names $m\ge8$ only as the thing to be removed. A reader of [problem.md:468–483](../findings/problem.md) alone cannot tell that Theorem A assumes criticality, or diagonality, or $\theta\ge\theta_0(n)$, and $\theta\ge\theta_0(n)$ is exactly the hypothesis the crossover makes delicate at $n=12$. **Recorded as hypothesis debt on the import.**
 
 **Symbol collisions from [conventions.md](../findings/conventions.md).** All four named symbols are live, and none of L1's senses is tabled.
-- **$S$, the dangerous one.** [conventions.md](../findings/conventions.md) already carries $S_{XYZ}$, $S(W)$ (the gradedness slack, itself flagged as *"vacuous when $\ker W\ne0$"*, which collides with this section's own kernel trap), and $\mathcal D_n=\{S$ symmetric, hollow, $S\mathbf1=0\}$. **L1's $S$ is a fourth object, and it is incompatible with the third**: $\mathcal D_n$'s $S$ is hollow with zero row sums, so $\operatorname{tr}S=0$ and it is never PSD unless zero, whereas L1's $S$ is PSD with $\operatorname{tr}S^2=1$. A reader resolving $\operatorname{tr}S^3$, $\operatorname{tr}S^4$ against $\mathcal D_n$'s vertex matrix gets a different object with different signs. **Untabled and consequential.**
+- **$S$, the dangerous one.** [conventions.md](../findings/conventions.md) already carries $S_{XYZ}$, $S(W)$ (the gradedness slack, itself flagged as *"vacuous when $\ker W\ne0$"*, which collides with this section's own kernel trap), and $\mathcal D_n=\{S$ symmetric, hollow, $S\mathbf1=0\}$. **L1's $S$ is a fourth object, and it is incompatible with the third**: $\mathcal D_n$'s $S$ is hollow with zero row sums, so $\mathop{\mathrm{tr}}S=0$ and it is never PSD unless zero, whereas L1's $S$ is PSD with $\mathop{\mathrm{tr}}S^2=1$. A reader resolving $\mathop{\mathrm{tr}}S^3$, $\mathop{\mathrm{tr}}S^4$ against $\mathcal D_n$'s vertex matrix gets a different object with different signs. **Untabled and consequential.**
 - **$E(n)$**, collides with the eigenspaces $E_{\max}$, $E_{\min}$ and, worse, with Jäger's own $E\in S^2_{B,d}(\mathfrak{so}(n))$ of Notation 3.0.3, defined at extraction line 1748 with $e=\lVert E\rVert$. **The collision is inside the one source L1 quotes.** Untabled.
 - **$F$**, collides with $F_u(h)$, $F_\lambda$ and the cone threshold $F=\frac4{n-2+4a}$. Untabled.
 - **$\lambda$**, the table already flags three senses plus $\lambda_{\max}$'s three; L1's is an eigenvalue of $S$ and the integration variable. Untabled.
@@ -311,7 +311,7 @@ The block's most specific claim about the source is *"the endpoint evaluation is
 
 **The nearest thing to it, and why it is not one.** The padded competitors are the only catalogued objects reaching into this range, and they fail the hypothesis rather than the conclusion: at $n=12$, $\theta(W_{\mathbb{CP}^2})=\sqrt{3/2}=1.224745<1.236033=\theta_0(12)$, a margin of $0.0113$ that exists only because $12>6+2\sqrt7$. They are also not diagonal, so they are outside $\langle W\rangle_d$ twice over.
 
-**The internal falsifier, and I closed it in closed form.** A spectrum of $S$ realising the corner Jäger's estimate visits ($(\operatorname{tr}S^3)^2=\tfrac1{12}$ together with $\operatorname{tr}S^4=\tfrac{709}{4680}$), would make the moment-body step false and put the $n=12$ closure back where Jäger left it. **No such spectrum exists**: $(\operatorname{tr}S^3)^2=\tfrac1{12}$ forces equality in $1\le(\operatorname{tr}S)(\operatorname{tr}S^3)$ with $\operatorname{tr}S=\sqrt{12}$, hence the flat spectrum, hence $\operatorname{tr}S^4=\tfrac1{12}\ne\tfrac{709}{4680}$ (§7.2, §7.3). This is exact and needs no computation.
+**The internal falsifier, and I closed it in closed form.** A spectrum of $S$ realising the corner Jäger's estimate visits ($(\mathop{\mathrm{tr}}S^3)^2=\tfrac1{12}$ together with $\mathop{\mathrm{tr}}S^4=\tfrac{709}{4680}$), would make the moment-body step false and put the $n=12$ closure back where Jäger left it. **No such spectrum exists**: $(\mathop{\mathrm{tr}}S^3)^2=\tfrac1{12}$ forces equality in $1\le(\mathop{\mathrm{tr}}S)(\mathop{\mathrm{tr}}S^3)$ with $\mathop{\mathrm{tr}}S=\sqrt{12}$, hence the flat spectrum, hence $\mathop{\mathrm{tr}}S^4=\tfrac1{12}\ne\tfrac{709}{4680}$ (§7.2, §7.3). This is exact and needs no computation.
 
 **How I looked.** I read Theorem A, Assumption 1, Notation 3.0.3, Lemma 3.3.6, Corollary 3.3.7, Lemma 3.5.4, Lemma 3.5.6 and the §3.6 ideal induction at source; enumerated every `n ≥ k` and every `m ≥ 8` in the extraction; swept the record for consumers of L1; and read the three scripts and two Lean files without executing any of them. **What I could not look for, because it would need computation the round forbids: whether the certified line $\varphi$ is genuinely a minorant of $F$, and whether the ten interval boxes cover and close.** Those are §8 and §10's gaps, and they are named as gaps rather than assumed away.
 
@@ -328,7 +328,7 @@ Everything L1 says *about the thesis* survives a cold read at source: the two di
 3. **The interval certificate**, the subdivision of $[10/81,\,709/4680]$ and the negative upper bound on each box, carried on the record rather than regenerable only by rerunning a script; plus the two unstated conditions H9 and H10 that license the substitution being enclosed.
 4. **Result 5b**, numbered, indexed and through Gate 2, *or* a demonstration that Jäger's line-5080 use of $m\ge8$ does not bind at $m=6,7$, which would remove the need for it.
 
-**And one correction is owed to a sentence that is currently wrong**, §7.3: *"The edge itself is $(\operatorname{tr}S^3)^2\le\operatorname{tr}S^4$"* names an inequality that Jäger already prints and that admits the corner in question; the corner is excluded by $1\le(\operatorname{tr}S)(\operatorname{tr}S^3)$ together with $\operatorname{tr}S\le\sqrt n$. The same misattribution is in [lean/INDEX.md:202](../lean/INDEX.md) and in [L1.lean](../lean/HamiltonsCubic/Results/L1.lean)'s header.
+**And one correction is owed to a sentence that is currently wrong**, §7.3: *"The edge itself is $(\mathop{\mathrm{tr}}S^3)^2\le\mathop{\mathrm{tr}}S^4$"* names an inequality that Jäger already prints and that admits the corner in question; the corner is excluded by $1\le(\mathop{\mathrm{tr}}S)(\mathop{\mathrm{tr}}S^3)$ together with $\mathop{\mathrm{tr}}S\le\sqrt n$. The same misattribution is in [lean/INDEX.md:202](../lean/INDEX.md) and in [L1.lean](../lean/HamiltonsCubic/Results/L1.lean)'s header.
 
 **Three further repairs, in descending order of weight.**
 

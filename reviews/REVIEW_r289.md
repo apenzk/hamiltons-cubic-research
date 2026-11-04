@@ -15,7 +15,7 @@ Independent build from the brief's definitions only, in [r289.py](../scripts/rev
 
 ## Baseline, and what validates it
 
-$M_{(ij),(kl)}=W_{ijkl}$ on the pair basis; $(\mathring Wh)_{ij}=\sum_{kl}W_{iklj}h_{kl}$ on $S^2_0$; $\theta$ computed **not** from the bi-spectral identity but from its definition $\theta=\operatorname{tr}(M^3)+\langle M^\#,M\rangle$, with
+$M_{(ij),(kl)}=W_{ijkl}$ on the pair basis; $(\mathring Wh)_{ij}=\sum_{kl}W_{iklj}h_{kl}$ on $S^2_0$; $\theta$ computed **not** from the bi-spectral identity but from its definition $\theta=\mathop{\mathrm{tr}}(M^3)+\langle M^\#,M\rangle$, with
 
 $$(R^\#)_{ab}=\sum_{\gamma\delta\varepsilon\zeta}c_{a\gamma\delta}c_{b\varepsilon\zeta}R_{\gamma\varepsilon}R_{\delta\zeta},\qquad b_{(ij)}=\tfrac1{\sqrt2}(E_{ij}-E_{ji}),$$
 
@@ -27,12 +27,12 @@ By argument. With $h=\varphi_{ij}$, i.e. $h_{ij}=h_{ji}=1/\sqrt2$ and zero elsew
 
 By computation, at random Weyl tensors $n=5,6,7$:
 
-| order | $\max_{i<j}\lvert\langle\mathring W\varphi_{ij},\varphi_{ij}\rangle-W_{ijij}\rvert$ | $\theta$ from $\tfrac32p_3(\mu)-\tfrac12p_3(\omega)$ vs $\operatorname{tr}(M^3)+\langle M^\#,M\rangle$ |
+| order | $\max_{i<j}\lvert\langle\mathring W\varphi_{ij},\varphi_{ij}\rangle-W_{ijij}\rvert$ | $\theta$ from $\tfrac32p_3(\mu)-\tfrac12p_3(\omega)$ vs $\mathop{\mathrm{tr}}(M^3)+\langle M^\#,M\rangle$ |
 |---|---|---|
 | $W_{iklj}$ (Li) | $\le5.6\times10^{-17}$ | agrees to $2\times10^{-15}$ |
 | $W_{ikjl}$ | $0.25$–$0.36$ | disagrees at order one |
 
-$\lvert M_{(ij),(ij)}-W_{ijij}\rvert$ is exactly $0$ in both, since it does not involve $\mathring W$. **The same convention makes both halves of C1 true and the bi-spectral identity true**, which is what the brief asked to be checked. Also confirmed by argument: $\mathring W$ preserves $S^2_0$ on a Weyl tensor, $\mathring W(g)_{ij}=\sum_kW_{ikkj}=-\mathrm{Ric}_{ij}=0$ and $\operatorname{tr}(\mathring Wh)=-\sum W_{ikil}h_{kl}=0$, so the restriction in the claim is well posed.
+$\lvert M_{(ij),(ij)}-W_{ijij}\rvert$ is exactly $0$ in both, since it does not involve $\mathring W$. **The same convention makes both halves of C1 true and the bi-spectral identity true**, which is what the brief asked to be checked. Also confirmed by argument: $\mathring W$ preserves $S^2_0$ on a Weyl tensor, $\mathring W(g)_{ij}=\sum_kW_{ikkj}=-\mathrm{Ric}_{ij}=0$ and $\mathop{\mathrm{tr}}(\mathring Wh)=-\sum W_{ikil}h_{kl}=0$, so the restriction in the claim is well posed.
 
 ## C2, CONFIRMED, and the $\psi_k$ are a strength rather than a gap
 

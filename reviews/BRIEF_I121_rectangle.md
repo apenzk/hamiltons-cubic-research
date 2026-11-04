@@ -21,7 +21,7 @@
 
 For a four-set $Q=\{i,j,k,l\}$ and its pairing $\pi=(e|f)$, $e=\{i,j\}$, $f=\{k,l\}$, write the raw entries $a=W_{ij,kl}$, $b=W_{ik,jl}$, $c=W_{il,jk}$, with Bianchi $a=b-c$, and set
 $$J_\pi=a=W_{e,f},\qquad X_\pi=\tfrac12(b+c).$$
-**$J_\pi$ is the entry of $W$ between the matched bivectors $e_{ij}$ and $e_{kl}$**, so for a perfect matching $M\ni e,f$ it is an entry of the compression of $W$ to $U_M=\operatorname{span}\{e_g:g\in M\}$, which every rotation in $M$'s planes fixes. **$X_\pi$ is the combination $M$ sees**: $E(M)=\sum_{e<f\in M}4X_{ef}^2$ in the [matching inequality](2026-09-28b-LIT-step8-sweep.md). With $b=X+\tfrac J2$, $c=X-\tfrac J2$,
+**$J_\pi$ is the entry of $W$ between the matched bivectors $e_{ij}$ and $e_{kl}$**, so for a perfect matching $M\ni e,f$ it is an entry of the compression of $W$ to $U_M=\mathop{\mathrm{span}}\{e_g:g\in M\}$, which every rotation in $M$'s planes fixes. **$X_\pi$ is the combination $M$ sees**: $E(M)=\sum_{e<f\in M}4X_{ef}^2$ in the [matching inequality](2026-09-28b-LIT-step8-sweep.md). With $b=X+\tfrac J2$, $c=X-\tfrac J2$,
 $$\lVert\nu_Q\rVert^2=2(a^2+b^2+c^2)=4X_\pi^2+3J_\pi^2\qquad\text{for each of }Q\text{'s three pairings}\quad(\texttt{rect\_norm}).$$
 
 ## The rectangle identity
@@ -35,12 +35,12 @@ $$P(B_f)=\sum_{\text{rectangles }R}\big(9J_{12}J_{13}J_{23}+24X_{12}X_{13}X_{23}
 **Proof.**
 
 1. **Only rectangles couple.** $T$ is multilinear and invariant under the sign group, and $\nu_Q$ carries the character $\chi_Q$, so $T(\nu_{Q_1},\nu_{Q_2},\nu_{Q_3})=0$ unless $\chi_{Q_1\triangle Q_2\triangle Q_3}=1$, that is $Q_3=Q_1\triangle Q_2$ with $\lvert Q_1\cap Q_2\rvert=2$ ([L120](../findings/second-order.md)'s characters). A single block has $\chi_Q^3=\chi_Q\ne1$. So $P(B_f)=6\sum_R\tau_R$, the $6$ counting the orders of three distinct blocks, and the three pairwise intersections of a rectangle's blocks are its edges.
-2. **The $R^2$ part.** $\langle\nu^2,\nu\rangle=\operatorname{tr}\nu^3$ over the bivector basis, and the mixed terms of $\operatorname{tr}(\nu_{12}+\nu_{13}+\nu_{23})^3$ are $6\operatorname{tr}(\nu_{12}\nu_{13}\nu_{23})$. A term $\nu_{12}(x,y)\nu_{13}(y,z)\nu_{23}(z,x)$ needs $x$ inside $Q_{12}\cap Q_{23}=e_2$, so $x=e_2$, then $y=e_1$ and $z=e_3$, the complements within each block. **So the $R^2$ part is $6J_{12}J_{13}J_{23}$ and sees no crossing entry.**
+2. **The $R^2$ part.** $\langle\nu^2,\nu\rangle=\mathop{\mathrm{tr}}\nu^3$ over the bivector basis, and the mixed terms of $\mathop{\mathrm{tr}}(\nu_{12}+\nu_{13}+\nu_{23})^3$ are $6\mathop{\mathrm{tr}}(\nu_{12}\nu_{13}\nu_{23})$. A term $\nu_{12}(x,y)\nu_{13}(y,z)\nu_{23}(z,x)$ needs $x$ inside $Q_{12}\cap Q_{23}=e_2$, so $x=e_2$, then $y=e_1$ and $z=e_3$, the complements within each block. **So the $R^2$ part is $6J_{12}J_{13}J_{23}$ and sees no crossing entry.**
 3. **The $\#$ part.** In index form $\langle R^\#,R\rangle=\kappa\,I_3$ with $I_3=\sum R_{ijkl}R_{ipkq}R_{jplq}$. On a diagonal tensor $I_3=6\sum_{\text{triangles}}K_{ab}K_{bc}K_{ca}$, and $\langle D^\#,D\rangle=3\sum_{\text{triangles}}$ ([L220](../findings/second-order.md) step 7, `P_PiQ`), so $\kappa=\tfrac12$.
 4. **$I_3$ on a rectangle.** Consecutive factors share two indices, so the three factors lie in three blocks pairwise meeting in an edge, and in $R_{ijkl}$ the indices $i,k$ lie in one edge and $j,l$ in another. **So every factor is a crossing entry**, $b$ or $c$, and it is $b=X+\tfrac J2$ when the two edges are traversed in the same orientation and $c=X-\tfrac J2$ otherwise. Fixing which edge carries which index pair ($6$ ways) and summing over the $2^3$ orientation bits, the three signs multiply to $1$, so the sum is $8XXX+JJJ$ (`rect_bits`). Hence $I_3=48XXX+6JJJ$ and $\langle R^\#,R\rangle=24XXX+3JJJ$.
 5. **Sum.** $P=6JJJ+3JJJ+24XXX$, and $\tau=\tfrac16P$. $\square$
 
-**Restated through step 2**: $\operatorname{tr}B_f^3=6\sum_RJ_{12}J_{13}J_{23}$, so $P(B_f)=\tfrac32\operatorname{tr}B_f^3+24\sum_RX_{12}X_{13}X_{23}$, **the invisible part entering only through the spectrum of $B_f$ as an operator on $\Lambda^2$.** *Every raw entry of $\nu_Q$ is the $J$ of one of $Q$'s pairings, so the $J$'s over all disjoint pairs of edges are exactly $B_f$'s entries, with $\sum_\pi J_\pi^2=\tfrac12\lVert\nu_Q\rVert^2$ and $\sum_\pi4X_\pi^2=\tfrac32\lVert\nu_Q\rVert^2$ on each block.*
+**Restated through step 2**: $\mathop{\mathrm{tr}}B_f^3=6\sum_RJ_{12}J_{13}J_{23}$, so $P(B_f)=\tfrac32\mathop{\mathrm{tr}}B_f^3+24\sum_RX_{12}X_{13}X_{23}$, **the invisible part entering only through the spectrum of $B_f$ as an operator on $\Lambda^2$.** *Every raw entry of $\nu_Q$ is the $J$ of one of $Q$'s pairings, so the $J$'s over all disjoint pairs of edges are exactly $B_f$'s entries, with $\sum_\pi J_\pi^2=\tfrac12\lVert\nu_Q\rVert^2$ and $\sum_\pi4X_\pi^2=\tfrac32\lVert\nu_Q\rVert^2$ on each block.*
 
 **Check** (Gate 1 (b), a second route sharing no algebra with the proof): [check_I121_rectangle_cubic.py](../scripts/misc/check_I121_rectangle_cubic.py) evaluates $\tau$ on the eight basis triples with the record's $Q$ ($\tfrac32$ at $JJJ$, $4$ at $XXX$, $0$ at the six mixed triples, at $n=6$ and $n=8$), and $P(B_f)$ against the rectangle sum on a random four-set tensor: $20.4282301675$ both at $n=6$ ($15$ rectangles), $-207.2176848878$ both at $n=8$ ($420$).
 
@@ -58,7 +58,7 @@ $$P(W)=P(A)+3\sum_{(e,f)}\big(\tfrac32J_{ef}^2-2X_{ef}^2\big)(a_e+a_f)+\sum_R\bi
 ## The matching form, and what it does for the node
 
 Each rectangle lies in $(n-7)!!$ perfect matchings, so with $J_M$ and $X_M$ the hollow symmetric $\tfrac n2\times\tfrac n2$ matrices of $J_{ef}$ and $X_{ef}$ over $e,f\in M$,
-$$P(B_f)=\frac1{(n-7)!!}\sum_M\Big(\tfrac32\operatorname{tr}J_M^3+4\operatorname{tr}X_M^3\Big),\qquad E(M)=2\lVert X_M\rVert_F^2.$$
+$$P(B_f)=\frac1{(n-7)!!}\sum_M\Big(\tfrac32\mathop{\mathrm{tr}}J_M^3+4\mathop{\mathrm{tr}}X_M^3\Big),\qquad E(M)=2\lVert X_M\rVert_F^2.$$
 
 - **$J_M$ is invisible to $M$ and $X_M$ is what $M$ sees.** At [post F81](../findings/fence-posts.md)'s witness, $J_{M_0}=0$ for the factor matching (the torus of $M_0$ fixes $J_{M_0}$, and the product has none), so the whole four-set value sits in $X_{M_0}$, which is why the matching inequality excludes it.
 - **Every $J$ is visible elsewhere.** On one block, $J_{\pi_1}=\tfrac23(\pm X_{\pi_2}\pm X_{\pi_3})$, the $X$'s of the two crossing pairings, which crossing matchings see.

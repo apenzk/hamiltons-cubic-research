@@ -34,7 +34,7 @@ The record already holds this as a graded theorem, at [plan.md](../plan.md) item
 
 The sharper form, which also says what $S$ throws away. Every scalar built from the pair matrix by $\lambda$-weighted contraction, $\sum_{ab}f(\lambda_a,\lambda_b)S_{ab}=\sum_{abc}f(\lambda_a,\lambda_b)T_{abc}$, is a contraction of $T$ whose **third slot carries weight $\lambda^0$**. At unit norm
 
-$$\theta=P(W)=\operatorname{tr}W^3+\tfrac12\sum_{k\alpha\beta}\lambda_k\lambda_\alpha\lambda_\beta T_{k\alpha\beta},$$
+$$\theta=P(W)=\mathop{\mathrm{tr}}W^3+\tfrac12\sum_{k\alpha\beta}\lambda_k\lambda_\alpha\lambda_\beta T_{k\alpha\beta},$$
 
 whose $T$-dependence is the $\{1,1,1\}$ pattern. **$\theta$ is invisible to $S$.** The compression $T\mapsto S$ is $\binom N3\to\binom N2$ ($455\to105$ at $n=6$) and it discards exactly the contraction $\theta$ lives in.
 
@@ -87,7 +87,7 @@ Neither verdict appears in the block. The block cites r337 for the r335/r336 dis
 
 **Symmetric**: $T$ is totally symmetric, so $S_{ab}=S_{ba}$. **Non-negative**: $T_{abc}=c_{abc}^2\ge0$. **Hollow**: $c$ is totally antisymmetric, so $T$ vanishes on repeated indices and $S_{aa}=\sum_cT_{aac}=0$, this is the **3-tensor** sense of hollow, and the matrix sense for $S$ follows from it.
 
-**The row sum is $2(n-2)$, and it is the Killing marginal**, not the pair cap: $\sum_bS_{ab}=\sum_{bc}T_{abc}=2(n-2)$ is exactly (A). Directly, $\sum_b\lVert[v_a,v_b]\rVert^2=-\operatorname{tr}(\operatorname{ad}(v_a)^2)=-B(v_a,v_a)=-(n-2)\operatorname{tr}(v_a^2)=2(n-2)$ under [conventions.md](../findings/conventions.md)'s $B(X,Y)=(n-2)\operatorname{tr}(XY)$ and $\operatorname{tr}(v^2)=-2$. **The brief is right that it carries no result number**: [INDEX-results.md](../findings/INDEX-results.md) mentions it only as an input to rows 70, 79 and 143, never as a numbered result, while its companion the pair cap is [Lemma L31](../findings/stratum-two-negative.md). It is doing load-bearing work in four lemmas unnumbered.
+**The row sum is $2(n-2)$, and it is the Killing marginal**, not the pair cap: $\sum_bS_{ab}=\sum_{bc}T_{abc}=2(n-2)$ is exactly (A). Directly, $\sum_b\lVert[v_a,v_b]\rVert^2=-\mathop{\mathrm{tr}}(\mathop{\mathrm{ad}}(v_a)^2)=-B(v_a,v_a)=-(n-2)\mathop{\mathrm{tr}}(v_a^2)=2(n-2)$ under [conventions.md](../findings/conventions.md)'s $B(X,Y)=(n-2)\mathop{\mathrm{tr}}(XY)$ and $\mathop{\mathrm{tr}}(v^2)=-2$. **The brief is right that it carries no result number**: [INDEX-results.md](../findings/INDEX-results.md) mentions it only as an input to rows 70, 79 and 143, never as a numbered result, while its companion the pair cap is [Lemma L31](../findings/stratum-two-negative.md). It is doing load-bearing work in four lemmas unnumbered.
 
 With $\hat S:=S/2(n-2)$ symmetric, non-negative, hollow with unit row sums (hence doubly stochastic), relation (B) reads $\sum_b\lambda_bS_{ab}=-2\lambda_a$, i.e. $S\lambda=-2\lambda$, i.e.
 
@@ -95,7 +95,7 @@ $$\hat S\lambda=-\frac{1}{n-2}\lambda .$$
 
 **Which vector $\lambda$ is**: the vector of $\Lambda^2$-eigenvalues of $W$ in the eigenbasis indexing $S$, length $N=\binom n2$, *not* the sectional matrix's spectrum, and not indexed by $\mathbb R^n$. The $-\tfrac1{n-2}$ is the ratio of (B)'s constant $-2$ to (A)'s marginal $2(n-2)$: **the marginal, not the pair cap.**
 
-**The sign check the brief asks for, and it closes:** $\hat S\mathbf 1=\mathbf 1$, so $1$ is the Perron value; $\hat S$ is symmetric, so eigenvectors at distinct eigenvalues are orthogonal, and $-\tfrac1{n-2}\ne1$ forces $\langle\lambda,\mathbf 1\rangle=0$. **Trace-freeness of $W$ is a consequence here, not a hypothesis**, the block lists it nowhere, correctly, but the point is worth stating because the neighbouring [Lemma L70](../findings/bounds.md) does need $\operatorname{tr}W=0$ as an input.
+**The sign check the brief asks for, and it closes:** $\hat S\mathbf 1=\mathbf 1$, so $1$ is the Perron value; $\hat S$ is symmetric, so eigenvectors at distinct eigenvalues are orthogonal, and $-\tfrac1{n-2}\ne1$ forces $\langle\lambda,\mathbf 1\rangle=0$. **Trace-freeness of $W$ is a consequence here, not a hypothesis**, the block lists it nowhere, correctly, but the point is worth stating because the neighbouring [Lemma L70](../findings/bounds.md) does need $\mathop{\mathrm{tr}}W=0$ as an input.
 
 **Hypotheses, in full.** $W\in\mathcal W_n$ and $\{v_a\}$ an orthonormal eigenbasis of $W$. That is all. **No criticality**, (C) is nowhere in it. **No unit norm**, both sides of (B) are homogeneous of degree $1$ in $\lambda$, so the eigenvector relation is scale-invariant, and (A) carries no $\lambda$. **No trace-freeness as input.** The heading claims nothing beyond this, so unlike the companion audit's case the heading is not over-narrow; if anything the block under-sells it by never saying the criticality-freeness out loud, where the neighbouring [Lemma L73](../findings/bounds.md) block makes a point of it.
 

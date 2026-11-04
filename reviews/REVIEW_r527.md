@@ -12,7 +12,7 @@
 I fixed the conventions before reading the block, against the record's anchors, and every anchor came out.
 
 - $\mathrm{Id}^\#=(n-2)\mathrm{Id}$ forces the diagonal sharp formula $(W^\#)_{ab,ab}=\sum_{c\ne a,b}K_{ac}K_{bc}$ and the normalisation $R^\#_{\alpha\beta}=\tfrac12\sum c_{\alpha\gamma\delta}c_{\beta\epsilon\zeta}R_{\gamma\epsilon}R_{\delta\zeta}$, using [conventions.md](../findings/conventions.md)'s Killing marginal $\sum_\beta\lVert[v_\alpha,v_\beta]\rVert^2=2(n-2)$.
-- $\operatorname{tr}W^\#=-1$ then falls out of Ricci-flatness of the vertex matrix: $\sum_{a\ne b}\sum_{c\ne a,b}K_{ac}K_{bc}=-\lVert K\rVert_F^2=-t$, so $\operatorname{tr}W^\#=-t/2=-1$ at the ordered $t=2$. **Both anchors reproduced, so the half-trace pairing of [conventions.md](../findings/conventions.md) is the one I am working in.**
+- $\mathop{\mathrm{tr}}W^\#=-1$ then falls out of Ricci-flatness of the vertex matrix: $\sum_{a\ne b}\sum_{c\ne a,b}K_{ac}K_{bc}=-\lVert K\rVert_F^2=-t$, so $\mathop{\mathrm{tr}}W^\#=-t/2=-1$ at the ordered $t=2$. **Both anchors reproduced, so the half-trace pairing of [conventions.md](../findings/conventions.md) is the one I am working in.**
 - $\theta_0(6)=\sqrt{10}/3$ is reproduced at the end of the chain below.
 
 ### 1. The sphere product's $e$, CONFIRMED, and derived without reading it off the record

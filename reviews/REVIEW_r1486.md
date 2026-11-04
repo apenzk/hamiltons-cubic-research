@@ -10,7 +10,7 @@ Gate 2 review of commit 36b2eb1e, which adds `specFn_blk_bound` to [BlockValue.l
 | D | every new or changed theorem rests on `propext`, `Classical.choice`, `Quot.sound` only | CONFIRMED |
 | E | the second-order plan's Proved marks, SecondOrder.lean's docstring, punctuation | CONFIRMED |
 
-**Summary: the Lean is correct and kernel-checked, and the codimension repair is right where it was made but incomplete: route-a.md line 73 keeps the heading "THE CONE IS MOST OF THE TANGENT SPACE" that line 93 calls false, and results.md line 1085, L17Statement.lean lines 204 to 211 and L17.lean line 15 still state $\operatorname{codim}\{F=0\}=186$ or "about 89% of directions". CONFIRMED WITH GAP.**
+**Summary: the Lean is correct and kernel-checked, and the codimension repair is right where it was made but incomplete: route-a.md line 73 keeps the heading "THE CONE IS MOST OF THE TANGENT SPACE" that line 93 calls false, and results.md line 1085, L17Statement.lean lines 204 to 211 and L17.lean line 15 still state $\mathop{\mathrm{codim}}\{F=0\}=186$ or "about 89% of directions". CONFIRMED WITH GAP.**
 
 ## A. The block value with an explicit threshold
 

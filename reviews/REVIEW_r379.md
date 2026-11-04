@@ -11,7 +11,7 @@
 ### What survives
 
 - **"$x\in V_{jk}$ is a non-diagonal direction."** CONFIRMED. [Lemma L120](../findings/second-order.md)'s decomposition makes the four-set blocks, the pair blocks $V_{jk}$ and $\mathcal D_n$ mutually orthogonal summands, and [Lemma L128](../findings/second-order.md)(i) states that $\mathcal D_n$ carries no orbit direction. So $V_{jk}\cap\mathcal D_n=0$ and $W+\varepsilon x$ leaves the diagonal locus to first order.
-- **"$P$ increases along $x$."** CONFIRMED, but the section's wording is literally wrong. $\operatorname{grad}P(W)=0$, so the gradient flow *from $W$* is stationary and there is no ascent from a critical point. What is true: with $\operatorname{grad}P(W)=0$ and $\langle\mathrm{Hess}(P|_S)_Wx,x\rangle=6\theta(\lambda-\tfrac12)\lVert x\rVert^2>0$, $P(\exp_W(\varepsilon x))=P(W)+\tfrac{\varepsilon^2}2\langle\mathrm{Hess}\,x,x\rangle+O(\varepsilon^3)>P(W)$ for small $\varepsilon>0$. The flow must be started at that displaced point.
+- **"$P$ increases along $x$."** CONFIRMED, but the section's wording is literally wrong. $\mathop{\mathrm{grad}}P(W)=0$, so the gradient flow *from $W$* is stationary and there is no ascent from a critical point. What is true: with $\mathop{\mathrm{grad}}P(W)=0$ and $\langle\mathrm{Hess}(P|_S)_Wx,x\rangle=6\theta(\lambda-\tfrac12)\lVert x\rVert^2>0$, $P(\exp_W(\varepsilon x))=P(W)+\tfrac{\varepsilon^2}2\langle\mathrm{Hess}\,x,x\rangle+O(\varepsilon^3)>P(W)$ for small $\varepsilon>0$. The flow must be started at that displaced point.
 - **"Ascent terminates at a critical point."** CONFIRMED, and the brief's Łojasiewicz worry is unfounded, though the section owes the citation. $P$ is a cubic polynomial restricted to the unit sphere of $\mathcal W_n$, hence real-analytic on a compact real-analytic manifold, so the Łojasiewicz gradient inequality gives convergence of the flow to a *single* critical point $W'$ with $P(W')\ge P(W_\varepsilon)>P(W)$. **The section asserts this without naming the mechanism**; it should.
 - **"The endpoint cannot be diagonal when $\theta=\Theta_n$."** CONFIRMED. [Lemma L57](../findings/problem.md) is stated on the whole of $\mathcal D_n$, not only at its critical points, so $P(W')>\Theta_n$ forces $W'\notin\mathcal D_n$. The brief's question "could the ascent direction re-enter the diagonal locus?" is answered by value, not by invariance: the flow may certainly converge into $\mathcal D_n$ in general, and the section is right that this is exactly what defeats the argument strictly inside the band.
 
@@ -36,24 +36,24 @@ Row $j$ of $M$: $M_{jj}=0$ by hollowness and $M\mathbf1=0$ gives $\sum_{i\in I}M
 ### $\theta\le\sqrt2$, CONFIRMED, and the gap it uses is re-derived here
 
 The gap itself: criticality off the diagonal gives $(M^2)_{ij}=\theta M_{ij}-M_{ij}^2$, and on the diagonal $(M^2)_{ii}=s_i:=\sum_lM_{il}^2$ with $\theta M_{ii}=0$. So
-$$M^2-\theta M=\operatorname{diag}(s_i)-M^{\circ2}=L\big(M^{\circ2}\big)\succeq0,$$
-the graph Laplacian of the Hadamard square, whose weights are nonnegative. Hence $\lambda(\lambda-\theta)\ge0$ for every $\lambda\in\operatorname{spec}(M)$, i.e. $\operatorname{spec}(M)\cap(0,\theta)=\varnothing$. With $\operatorname{tr}M=0$ and $M\ne0$ some eigenvalue is positive, so $\lambda_{\max}\ge\theta$; with $\sum\lambda_i^2=\lVert M\rVert_F^2=2$, $\lambda_{\max}\le\sqrt2$. Hence $\theta\le\sqrt2$. $\square$
+$$M^2-\theta M=\mathop{\mathrm{diag}}(s_i)-M^{\circ2}=L\big(M^{\circ2}\big)\succeq0,$$
+the graph Laplacian of the Hadamard square, whose weights are nonnegative. Hence $\lambda(\lambda-\theta)\ge0$ for every $\lambda\in\mathop{\mathrm{spec}}(M)$, i.e. $\mathop{\mathrm{spec}}(M)\cap(0,\theta)=\varnothing$. With $\mathop{\mathrm{tr}}M=0$ and $M\ne0$ some eigenvalue is positive, so $\lambda_{\max}\ge\theta$; with $\sum\lambda_i^2=\lVert M\rVert_F^2=2$, $\lambda_{\max}\le\sqrt2$. Hence $\theta\le\sqrt2$. $\square$
 
 > **TWO FREE STRENGTHENINGS THE SECTION MISSED, FROM THE SAME TWO LINES.**
 >
 > **(i) $\theta\le\sqrt{2(n-1)/n}$, strictly.** Write $\lambda_1=\lambda_{\max}$. The remaining eigenvalues sum to $-\lambda_1$ and their squares to $2-\lambda_1^2$, so Cauchy–Schwarz gives $\lambda_1^2\le(n-1)(2-\lambda_1^2)$, i.e. $\theta^2\le\lambda_1^2\le2(n-1)/n$. At $n=12$ this is $1.354006$ against the section's $1.414214$. *Still weaker than $\Theta_{12}=1.236033$, so nothing downstream changes, but the section prints $\sqrt2$ as "the asymptote of $\Theta_n$", and $\sqrt{2(n-1)/n}$ is the honest finite-$n$ form of the same two lines.*
 >
-> **(ii) In the band, $M$ has EXACTLY ONE positive eigenvalue.** Let $p$ be the number of positive eigenvalues; each is $\ge\theta$ by the gap, so $p\theta^2\le\sum_{\lambda>0}\lambda^2\le2$, giving $p\le2/\theta^2$. With $\theta\ge\sqrt{3/2}$ this is $p\le4/3$, hence $p=1$. **This is a genuine ceiling-shaped consequence of criticality, contradicting the section's own fence that "every consequence of criticality on the record is a floor"**, it says $\lambda_2(M)\le0$, and therefore $\lambda_2(N)\le0$ for the compression $N=M^{(jk)}$ by interlacing. *What it does not survive is the diagonal shift: $\widetilde N=N+\operatorname{diag}(u+v)$, and a rank-$(n-2)$ diagonal perturbation destroys an eigenvalue count. So the fence's conclusion is right for the wrong reason.*
+> **(ii) In the band, $M$ has EXACTLY ONE positive eigenvalue.** Let $p$ be the number of positive eigenvalues; each is $\ge\theta$ by the gap, so $p\theta^2\le\sum_{\lambda>0}\lambda^2\le2$, giving $p\le2/\theta^2$. With $\theta\ge\sqrt{3/2}$ this is $p\le4/3$, hence $p=1$. **This is a genuine ceiling-shaped consequence of criticality, contradicting the section's own fence that "every consequence of criticality on the record is a floor"**, it says $\lambda_2(M)\le0$, and therefore $\lambda_2(N)\le0$ for the compression $N=M^{(jk)}$ by interlacing. *What it does not survive is the diagonal shift: $\widetilde N=N+\mathop{\mathrm{diag}}(u+v)$, and a rank-$(n-2)$ diagonal perturbation destroys an eigenvalue count. So the fence's conclusion is right for the wrong reason.*
 
 ---
 
 ## Claim 3, the moment identities: CONFIRMED, both re-derived independently
 
-**Trace.** $N=M^{(jk)}$ is hollow, so $\operatorname{tr}\widetilde N=\operatorname{tr}N+\sum_i(u_i+v_i)=0+(-M_{jk})+(-M_{jk})=-2M_{jk}$. $\square$
+**Trace.** $N=M^{(jk)}$ is hollow, so $\mathop{\mathrm{tr}}\widetilde N=\mathop{\mathrm{tr}}N+\sum_i(u_i+v_i)=0+(-M_{jk})+(-M_{jk})=-2M_{jk}$. $\square$
 
 **Frobenius.** Block-splitting $\lVert M\rVert_F^2=2$ with $M=\begin{psmallmatrix}N&U\\U^\top&C\end{psmallmatrix}$, $U=[u\ v]$: the two off-diagonal blocks contribute $2(\lVert u\rVert^2+\lVert v\rVert^2)$ and $C$ contributes $2M_{jk}^2$, so
 $$\lVert N\rVert_F^2=2-2\lVert u\rVert^2-2\lVert v\rVert^2-2M_{jk}^2 .$$
-$N$ hollow makes $\operatorname{diag}(u+v)$ Frobenius-orthogonal to it, so $\lVert\widetilde N\rVert_F^2=\lVert N\rVert_F^2+\sum_i(u_i+v_i)^2$, and
+$N$ hollow makes $\mathop{\mathrm{diag}}(u+v)$ Frobenius-orthogonal to it, so $\lVert\widetilde N\rVert_F^2=\lVert N\rVert_F^2+\sum_i(u_i+v_i)^2$, and
 $$\sum_i(u_i+v_i)^2-2\lVert u\rVert^2-2\lVert v\rVert^2=\lVert u\rVert^2+2u\!\cdot\!v+\lVert v\rVert^2-2\lVert u\rVert^2-2\lVert v\rVert^2=-\lVert u-v\rVert^2 .$$
 Hence $\lVert\widetilde N\rVert_F^2=2-\lVert o\rVert^2-2M_{jk}^2$. $\square$ **The disputed step is correct as written.**
 
@@ -76,7 +76,7 @@ Recomputed from scratch. Balanced product, $m=6$, $n=12$: within-factor $\alpha=
 | $\gamma^2$ | $5/396$ | $0.01262626$ | $5/396$ ✓ |
 | $\alpha=M_{jk}$ | $1/\sqrt{55}$ | $0.13483997$ | $0.134831$ (off by $9\times10^{-6}$) |
 | $\theta=(2m-1)\lvert\gamma\rvert$ | $\sqrt{605/396}$ | $1.23603308$ | $1.236033$ ✓ |
-| $t=\operatorname{tr}\widetilde N$ | $-2/\sqrt{55}$ | $-0.26967994$ | $-0.269663$ (rounding) |
+| $t=\mathop{\mathrm{tr}}\widetilde N$ | $-2/\sqrt{55}$ | $-0.26967994$ | $-0.269663$ (rounding) |
 | $f=\lVert\widetilde N\rVert_F^2$ | $2-2/55=108/55$ | $1.96363636$ | $1.963642$ (rounding) |
 | $d$ | $10$ | | $10$ ✓ |
 | Frobenius total $\theta^2+5\alpha^2+2\lVert u\rVert^2$ | $\tfrac{605}{396}+\tfrac1{11}+\tfrac{2\cdot49}{330}$ | $1.91565657$ | $1.9157$ ✓, short of $2$ by $0.08434$ |
@@ -173,7 +173,7 @@ The witness above is a tuple; the following needs no tuple and no existence ques
 | 1 | a variational argument cannot close the open band | **CONFIRMED** |
 | 2 | $\sum_iu_i=\sum_iv_i=-M_{jk}$ | **CONFIRMED** |
 | 2 | $\theta\le\sqrt2$; is it on record | **CONFIRMED** as a valid two-line derivation. The gap it rests on is on record ([diagonal-half.md](../findings/diagonal-half.md)); the conclusion $\theta\le\sqrt2$ is not indexed. **Strengthen for free to $\theta\le\sqrt{2(n-1)/n}$, and to $p=1$ positive eigenvalue in the band** |
-| 3 | $\operatorname{tr}\widetilde N=-2M_{jk}$, $\lVert\widetilde N\rVert_F^2=2-\lVert o\rVert^2-2M_{jk}^2$ | **CONFIRMED**, both re-derived; the disputed algebraic step is correct |
+| 3 | $\mathop{\mathrm{tr}}\widetilde N=-2M_{jk}$, $\lVert\widetilde N\rVert_F^2=2-\lVert o\rVert^2-2M_{jk}^2$ | **CONFIRMED**, both re-derived; the disputed algebraic step is correct |
 | 4a | Frobenius failure $\Rightarrow\theta^2+5M_{jk}^2+2\lVert u\rVert^2\ge2$ | **CONFIRMED**; equal to the one-line $(\theta+M_{jk})^2+2M_{jk}^2\ge2$ |
 | 4b | the $S^6\times S^6$ numbers | **CONFIRMED** to $10^{-5}$; exact values $\alpha=1/\sqrt{55}$, $f=108/55$, $\theta^2=605/396$, $\theta\alpha=1/m$ |
 | 4c | "clears as $n$ grows with margin of order $1/n$" | **CORRECTED**, the chain's step $\sqrt2\le\theta+M_{jk}$ is false at every finite $n$; the $1/n$ terms cancel and the margin is $1.944/m^2=7.78/n^2$; and "$t\to0,f\to2$" holds only along the balanced product |

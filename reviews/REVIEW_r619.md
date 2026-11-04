@@ -65,7 +65,7 @@ Two consequences the block does not state.
 
 ### Horn 2: the metric, and how far $0.5748$ is from vacuous
 
-The metric is **geodesic angular distance in the unit sphere of $\mathcal W_n$**, in the record's inner product ($\tfrac12\operatorname{tr}$ at the $\Lambda^2$ level, [conventions.md](../findings/conventions.md)), with distance to the orbit the minimum over the orbit. This is not stated in the block, and it is load-bearing: the parametrisation $W^*=\cos\varphi\,u+\sin\varphi\,V$ *is* the geodesic one, and [r485](REVIEW_r485.md) records that under the chord reading the same number is angle $0.5830$, where $\psi=1.00201>1$ and the argument does not reach its own radius. [Lemma L20](../findings/route-a.md)'s block already carries this correction; **L100 inherits neither the correction nor the warning.**
+The metric is **geodesic angular distance in the unit sphere of $\mathcal W_n$**, in the record's inner product ($\tfrac12\mathop{\mathrm{tr}}$ at the $\Lambda^2$ level, [conventions.md](../findings/conventions.md)), with distance to the orbit the minimum over the orbit. This is not stated in the block, and it is load-bearing: the parametrisation $W^*=\cos\varphi\,u+\sin\varphi\,V$ *is* the geodesic one, and [r485](REVIEW_r485.md) records that under the chord reading the same number is angle $0.5830$, where $\psi=1.00201>1$ and the argument does not reach its own radius. [Lemma L20](../findings/route-a.md)'s block already carries this correction; **L100 inherits neither the correction nor the warning.**
 
 Maximum possible value: $\pi$. It is attained, $-u$ is a unit Weyl operator with $d(-u,g\cdot u)=\pi-\arccos\langle u,g\cdot u\rangle\ge\pi-0$, minimised at $g=e$ to give $\pi$ exactly, and $-u$ is off the orbit since $P(-u)=-\theta^*$. So
 

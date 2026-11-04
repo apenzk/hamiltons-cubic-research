@@ -4,7 +4,7 @@
 
 | # | Claim | Verdict |
 |---|---|---|
-| 1a | `Tc v a b c = cst v a b c ^ 2` is the record's $T_{abc}=c_{abc}^2$, $c_{abc}=\langle[v_a,v_b],v_c\rangle$ in the $\tfrac12\operatorname{tr}$ pairing | **CONFIRMED** |
+| 1a | `Tc v a b c = cst v a b c ^ 2` is the record's $T_{abc}=c_{abc}^2$, $c_{abc}=\langle[v_a,v_b],v_c\rangle$ in the $\tfrac12\mathop{\mathrm{tr}}$ pairing | **CONFIRMED** |
 | 1b | `rowA_frame` is (A), $\sum_{\beta\gamma}T_{k\beta\gamma}=2(n-2)$, same constant | **CONFIRMED** |
 | 1c | `rowB_frame` is (B), $\sum_{\beta\gamma}\lambda_\beta T_{k\beta\gamma}=-2\lambda_k$, weight on the same (second) slot, same constant | **CONFIRMED** |
 | 2a | `rowB_frame`'s derivation from `aW2` (innerOp_frame, frame_quad, the swap by `cst_swap23`) | **CONFIRMED** |
@@ -20,7 +20,7 @@ One line: the two relations L112 took as hypotheses are now kernel-checked theor
 
 ## Attack line 1: the objects and the constants
 
-- **$T$.** [L41Statement.lean:721](../lean/HamiltonsCubic/Results/L41Statement.lean#L721) defines `cst v a b c := inner2 (br (v a) (v b)) (v c)`, with `inner2 X Y = ½ tr(XᵀY)` and `br X Y = XY − YX` from [WeylReal.lean](../lean/HamiltonsCubic/Base/WeylReal.lean#L39). That is [conventions.md](../findings/conventions.md)'s $c_{abc}=\langle[v_a,v_b],v_c\rangle$ in the record's $\Lambda^2$ pairing, where a unit bivector has $\operatorname{tr}(v^2)=-2$. `Tc` squares it. The normalisation is pinned independently by `killing_frame` returning exactly the record's Killing mass $2(n-2)$: a factor error in `cst` or `inner2` would move that constant.
+- **$T$.** [L41Statement.lean:721](../lean/HamiltonsCubic/Results/L41Statement.lean#L721) defines `cst v a b c := inner2 (br (v a) (v b)) (v c)`, with `inner2 X Y = ½ tr(XᵀY)` and `br X Y = XY − YX` from [WeylReal.lean](../lean/HamiltonsCubic/Base/WeylReal.lean#L39). That is [conventions.md](../findings/conventions.md)'s $c_{abc}=\langle[v_a,v_b],v_c\rangle$ in the record's $\Lambda^2$ pairing, where a unit bivector has $\mathop{\mathrm{tr}}(v^2)=-2$. `Tc` squares it. The normalisation is pinned independently by `killing_frame` returning exactly the record's Killing mass $2(n-2)$: a factor error in `cst` or `inner2` would move that constant.
 - **(A).** The record ([bounds.md](../findings/bounds.md), the three per-index relations above L198) reads $\sum_{\beta\gamma}T_{k\beta\gamma}=2(n-2)$. `rowA_frame` unfolds `Smat (Tc v) x b = ∑ c, cst v x b c ^ 2` and is `killing_frame` verbatim, $\sum_b\sum_c c_{xbc}^2=2((\#\iota)-2)$ with $\#\iota=n$.
 - **(B).** The record reads $\sum_{\beta\gamma}\lambda_\beta T_{k\beta\gamma}=-2\lambda_k$, the weight on the second slot. `rowB_frame` reads $\sum_b(\sum_c c_{xbc}^2)\lambda_b=-2\lambda_x$, the weight on the second slot. Same relation, same constant, and L112's $S\lambda=-2\lambda$ is exactly this row.
 - **$S$, $\hat S$.** `Smat T a b = ∑ c, T a b c` is the block's $S_{ab}:=\sum_cT_{abc}$, and `hatS S n = S/(2(n−2))` is the normalisation that turns row sum $2(n-2)$ into $1$ and $S\lambda=-2\lambda$ into eigenvalue $-1/(n-2)$.
@@ -51,7 +51,7 @@ One line: the two relations L112 took as hypotheses are now kernel-checked theor
 
 ## What would break the claims, and where I looked
 
-- **A normalisation mismatch in `cst`** (a factor $2$ or $\tfrac12$ against the record's $c$) would change the constants in (A) and (B). Looked: `inner2`'s $\tfrac12$, `br`'s sign, and `killing_frame` returning the record's $2(n-2)$. The record's conventions list $\operatorname{tr}(v^2)=-2$, matching.
+- **A normalisation mismatch in `cst`** (a factor $2$ or $\tfrac12$ against the record's $c$) would change the constants in (A) and (B). Looked: `inner2`'s $\tfrac12$, `br`'s sign, and `killing_frame` returning the record's $2(n-2)$. The record's conventions list $\mathop{\mathrm{tr}}(v^2)=-2$, matching.
 - **A slot mismatch in (B)** (weight on the third index where the record puts it on the second) would make `rowB_frame` a different relation. Looked: the record's display is $\sum_{\beta\gamma}\lambda_\beta T_{k\beta\gamma}$, and `rowB_frame` weights `b`, the second slot of `Smat`. The swap in the proof is the correct one.
 - **A hidden criticality hypothesis in `aW2`** would restrict L112 to critical points. Looked: its signature and the `IsWeyl` components it uses.
 - **A frame-dependent conclusion** (true at `frameVec` only) would miss eigenbases inside repeated eigenvalues. Looked: `L112_at_frame` quantifies over every `EigenFrame`.

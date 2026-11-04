@@ -79,7 +79,7 @@ Verdict: yes on the operators, with the readings below.
 
 ### 3.3 (c) $\mathrm{Rot}_{jk}(c,s)$ as $e^{\varphi\xi}$
 
-- Rot j k c s has $Re_j=c\,e_j+s\,e_k$, $Re_k=-s\,e_j+c\,e_k$ and fixes the other basis vectors (PairSquare.lean). With $\xi e_j=e_k$, $\xi e_k=-e_j$, the one-parameter group is $e^{\varphi\xi}=\mathrm{Rot}(\cos\varphi,\sin\varphi)$, and every $(c,s)$ with $c^2+s^2=1$ is $(\cos\varphi,\sin\varphi)$ for $\varphi=\operatorname{atan2}(s,c)$.
+- Rot j k c s has $Re_j=c\,e_j+s\,e_k$, $Re_k=-s\,e_j+c\,e_k$ and fixes the other basis vectors (PairSquare.lean). With $\xi e_j=e_k$, $\xi e_k=-e_j$, the one-parameter group is $e^{\varphi\xi}=\mathrm{Rot}(\cos\varphi,\sin\varphi)$, and every $(c,s)$ with $c^2+s^2=1$ is $(\cos\varphi,\sin\varphi)$ for $\varphi=\mathop{\mathrm{atan2}}(s,c)$.
 - So the set $\{\mathrm{Rot}(c,s):c^2+s^2=1\}$ is exactly $\{e^{\varphi\xi}:\varphi\in\mathbb R\}$, and the Lean's quantifier over $(c,s)$ is the Statement's quantifier over $\varphi$. Neither the exponential nor the angle is a Lean theorem (O3). The action's direction ($R$ against $R^{\mathsf T}$) changes $\varphi$ to $-\varphi$ and leaves the set unchanged, which is the record's "up to the sign convention of $\xi$". CONFIRMED WITH OBSERVATIONS.
 
 ### 3.4 (d) Even $n$ against odd $n$

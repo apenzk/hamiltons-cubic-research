@@ -26,7 +26,7 @@ Five defects, none of them mathematical:
 | $\alpha_1,\alpha_2$ | the simple roots of $B_2$, $\alpha_1=e_1-e_2$ (long), $\alpha_2=e_2$ (short), **roots, not fundamental weights** | the fundamental weights are $\omega_1=e_1=(1,0)$ and $\omega_2=\tfrac12(e_1+e_2)=(\tfrac12,\tfrac12)$, neither of which is $(1,-1)$ or $(0,1)$. So the block's vectors are the roots, as claimed |
 | $\rho$ | $(3/2,1/2)$ | positive roots $e_1-e_2,\ e_2,\ e_1,\ e_1+e_2$; half-sum $(3/2,1/2)$. Independently confirmed by $c_2$ reproducing [L84](../findings/sym3-blocks.md)'s $21$ distinct values |
 | "Casimir separation" | **degree-two separation of the $24$ blocks of $\mathrm{Sym}^3\mathcal W_5$** | the only sense under which "even that one" parses. The phrase carries three senses in this file; [r673](REVIEW_r673.md) already recorded that |
-| $B_2$ Killing normalisation | [sym3-blocks.md](../findings/sym3-blocks.md)'s $B(X,Y)=-\tfrac12\operatorname{tr}(XY)$, **not** [conventions.md](../findings/conventions.md)'s $B_K=(n-2)\operatorname{tr}$ | conventions.md tables the collision explicitly; $B_K=-6B$ here. Nothing in L92 consumes it |
+| $B_2$ Killing normalisation | [sym3-blocks.md](../findings/sym3-blocks.md)'s $B(X,Y)=-\tfrac12\mathop{\mathrm{tr}}(XY)$, **not** [conventions.md](../findings/conventions.md)'s $B_K=(n-2)\mathop{\mathrm{tr}}$ | conventions.md tables the collision explicitly; $B_K=-6B$ here. Nothing in L92 consumes it |
 
 ## 1. The derivation, cold
 

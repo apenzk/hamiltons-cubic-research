@@ -44,7 +44,7 @@ $$r(H)\;\gtrsim\;\min\!\left(\frac{c_p+w^2}{S},\ \frac{\sqrt{c_p+w^2}}{n^{1/2}+n
 > **WHAT THE COEFFICIENT DOES BUY, AND IT IS THE EXPONENT RATHER THAN THE CONSTANT.** At $\rho=0$, which is $m=4$, branch 2 degrades to $\Theta(n^{-3/2})$, *so $m\ge5$ is load-bearing for the $\Omega(n^{-1})$ conclusion itself, not merely for its constant*. **The order $\Theta(n^{-1})$ and this lemma's stated conclusion both stand.**
 
 **Proof of the uniformity.** With $g(w)=\sqrt{c+w^2}/(A+Bw)$, $c=\kappa/n$, $A=n^{1/2}$, $B=n$, *the repaired form carries $\rho_n$ on the $w^2$, treated in the blockquote above*:
-$$\operatorname{sign}g'(w)=\operatorname{sign}(wA-Bc),$$
+$$\mathop{\mathrm{sign}}g'(w)=\mathop{\mathrm{sign}}(wA-Bc),$$
 so $g$ has a single interior minimum at $w^*=Bc/A=\kappa n^{-1/2}$, where
 $$g(w^*)=\frac{\sqrt c}{\sqrt{A^2+B^2c}}=\frac1n\sqrt{\frac\kappa{1+\kappa}} .$$
 The endpoints give $\sqrt\kappa/n$ and $\asymp1/n$, so the branch never leaves that order. $\square$ *An earlier version displayed this value with $A+Bc/A$ in place of $A+B^2c/A$; the literal expression evaluates to $g(0)$ rather than the minimum, which is how both reviewers' grid screens caught it.*

@@ -10,11 +10,11 @@ The curvature tensor as a $(0,4)$-tensor satisfies $\mathrm{Rm}\in S^2(\Lambda^2
 
 $$b\,\mathrm{Rm}(x,y,z,t)=\tfrac13\big(\mathrm{Rm}(x,y,z,t)+\mathrm{Rm}(y,z,x,t)+\mathrm{Rm}(z,x,y,t)\big) \qquad (4.15)$$
 
-Then $S^2(\Lambda^2)=\ker(b)\oplus\operatorname{Im}(b)$, equation (4.16), and
+Then $S^2(\Lambda^2)=\ker(b)\oplus\mathop{\mathrm{Im}}(b)$, equation (4.16), and
 
 $$b(\alpha\odot\beta)=\tfrac16\,\alpha\wedge\beta \qquad (4.17)$$
 
-for $\alpha,\beta\in\Lambda^2$, so $\operatorname{Im}(b)=\Lambda^4T^*M$, equation (4.18). The space of curvature-like tensors is $\mathcal C=\ker(b)$, equation (4.19), giving $S^2(\Lambda^2)=\mathcal C\oplus\Lambda^4$, equation (4.20). The notes remark that $b\equiv0$ for $n=2,3$ and $\dim\operatorname{Im}(b)=1$ for $n=4$.
+for $\alpha,\beta\in\Lambda^2$, so $\mathop{\mathrm{Im}}(b)=\Lambda^4T^*M$, equation (4.18). The space of curvature-like tensors is $\mathcal C=\ker(b)$, equation (4.19), giving $S^2(\Lambda^2)=\mathcal C\oplus\Lambda^4$, equation (4.20). The notes remark that $b\equiv0$ for $n=2,3$ and $\dim\mathop{\mathrm{Im}}(b)=1$ for $n=4$.
 
 ## What this settles for the record
 

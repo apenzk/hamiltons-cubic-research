@@ -10,7 +10,7 @@ Log: agent_logs/r1555.log
 | F2 Casimir identification | CONFIRMED | $c_1=\tfrac12\mathrm{Cas}_{\mathfrak k}(\mathfrak k)$, $2\alpha=\mathrm{Cas}_{\mathfrak k}(\mathfrak p)$, $c=\tfrac12\mathrm{Cas}_{\mathfrak g}(\mathfrak g)$, and every factor of 2 checks against $(vv^T)\#(ww^T)=\tfrac12[v,w][v,w]^T$ |
 | F3 quadratic and second root | CONFIRMED | quadratic, root $1/c$, product of roots and the list $\{0,P_{\mathfrak k}/c_1,I/c,(a',b')\}$ are complete. Closed form: $a'=cx/D$, $b'=c(y-x)/D$, $D=c_1y^2+4\alpha^2x$ |
 | F4 positive-definiteness condition | CONFIRMED WITH GAP | "only if" holds. The converse (used by the heading and by "it would give a second positive-definite idempotent") is also true, because $a'=cx/D>0$ always, but the record never proves it |
-| F5 trace form of the condition | CONFIRMED | $\operatorname{tr}_{\mathfrak g}\mathrm{Cas}_{\mathfrak k}=2c\,d_{\mathfrak k}$, and $2\alpha\ge c_1\iff c_1\le 2c\,d_{\mathfrak k}/(N+d_{\mathfrak k})$ |
+| F5 trace form of the condition | CONFIRMED | $\mathop{\mathrm{tr}}_{\mathfrak g}\mathrm{Cas}_{\mathfrak k}=2c\,d_{\mathfrak k}$, and $2\alpha\ge c_1\iff c_1\le 2c\,d_{\mathfrak k}/(N+d_{\mathfrak k})$ |
 | F6 computed cases and table | REFUTED (with corrections) | all eight rows, the $G_2$ case and the principal $SO(3)$ case are arithmetically right. "U is sharp, its boundary is $G_2\subset SO(7)$" is false: $SU(3)\subset G_2$ has ratio $4/9$. The table covers only ambient $SO(n)$ |
 | F7 F-form of the condition | CONFIRMED | $y\,d_{\mathfrak p}=F(P_{\mathfrak p},P_{\mathfrak p},P_{\mathfrak p})$, $x\,d_{\mathfrak k}=F(P_{\mathfrak p},P_{\mathfrak p},P_{\mathfrak k})=\alpha d_{\mathfrak p}$, and the inequality is exactly $y\le x$ |
 | F8 Lean statements | CONFIRMED | twocomp_factor, twocomp_pd_unique and IsotropyPair.pd_unique say what the prose says. The one extra hypothesis, $b\ne0$ in twocomp_factor, matches the prose's branch |
@@ -19,7 +19,7 @@ Log: agent_logs/r1555.log
 ## Method
 
 - I read the quoted chain link by link, then derived F1 to F7 by hand from the definition of $\#$ on rank ones.
-- Screen (seconds, numpy under `sage -python`, a script in the session scratchpad, reported as a screen and never as a proof). I built $\mathfrak g_2\subset\mathfrak{so}(7)$ as the annihilator of the octonionic 3-form, $\mathfrak{su}(3)$ as the stabiliser of $e_1$ inside it, and the principal $\mathfrak{so}(3)\subset\mathfrak{so}(5)$ from the spin-2 action on traceless symmetric $3\times3$ matrices. The inner product was $-\tfrac12\operatorname{tr}$, restricted. For each pair I computed $P_U\#P_V=\tfrac12\sum[u_i,v_j][u_i,v_j]^T$ in an adapted orthonormal basis, read off $c,c_1,\alpha,x,y$ with the residuals of the block relations, and evaluated $C\#C-C$ at the second root.
+- Screen (seconds, numpy under `sage -python`, a script in the session scratchpad, reported as a screen and never as a proof). I built $\mathfrak g_2\subset\mathfrak{so}(7)$ as the annihilator of the octonionic 3-form, $\mathfrak{su}(3)$ as the stabiliser of $e_1$ inside it, and the principal $\mathfrak{so}(3)\subset\mathfrak{so}(5)$ from the spin-2 action on traceless symmetric $3\times3$ matrices. The inner product was $-\tfrac12\mathop{\mathrm{tr}}$, restricted. For each pair I computed $P_U\#P_V=\tfrac12\sum[u_i,v_j][u_i,v_j]^T$ in an adapted orthonormal basis, read off $c,c_1,\alpha,x,y$ with the residuals of the block relations, and evaluated $C\#C-C$ at the second root.
 - Screen output. The block-relation residuals are all at most $4\cdot10^{-15}$.
 
 | pair | $c$ | $c_1$ | $\alpha$ | $x$ | $y$ | ratio | $(a',b')$ | $\vert C\#C-C\vert$ |
@@ -40,7 +40,7 @@ Log: agent_logs/r1555.log
 ## F2. Constants
 
 - $c_1+x=c$ and $2\alpha+y=c$ follow by construction (F1).
-- $c=\tfrac12\mathrm{Cas}_{\mathfrak g}(\mathfrak g)$: $\langle(I\#I)w,w\rangle=\tfrac12\sum_i\vert[e_i,w]\vert^2$. For $\mathfrak{so}(n)$ with $\langle X,Y\rangle=-\tfrac12\operatorname{tr}XY$ the Killing form is $(n-2)\operatorname{tr}$, so $-\operatorname{tr}\mathrm{ad}_X^2=2(n-2)$ and $c=n-2$. The screen gives $c=5$ for $\mathfrak{so}(7)$ and $c=3$ for $\mathfrak{so}(5)$.
+- $c=\tfrac12\mathrm{Cas}_{\mathfrak g}(\mathfrak g)$: $\langle(I\#I)w,w\rangle=\tfrac12\sum_i\vert[e_i,w]\vert^2$. For $\mathfrak{so}(n)$ with $\langle X,Y\rangle=-\tfrac12\mathop{\mathrm{tr}}XY$ the Killing form is $(n-2)\mathop{\mathrm{tr}}$, so $-\mathop{\mathrm{tr}}\mathrm{ad}_X^2=2(n-2)$ and $c=n-2$. The screen gives $c=5$ for $\mathfrak{so}(7)$ and $c=3$ for $\mathfrak{so}(5)$.
 - $c_1=\tfrac12\mathrm{Cas}_{\mathfrak k}(\mathfrak k)$ and $2\alpha=\mathrm{Cas}_{\mathfrak k}(\mathfrak p)$, from F1. Every factor of 2 is correct.
 
 ## F3. The quadratic and the list
@@ -60,7 +60,7 @@ Log: agent_logs/r1555.log
 
 ## F5. Trace identity
 
-- $\operatorname{tr}_{\mathfrak g}\mathrm{Cas}_{\mathfrak k}=\sum_u(-\operatorname{tr}_{\mathfrak g}\mathrm{ad}_u^2)=d_{\mathfrak k}\cdot2c$ by F2. So $c_1d_{\mathfrak k}+\alpha d_{\mathfrak p}=c\,d_{\mathfrak k}$.
+- $\mathop{\mathrm{tr}}_{\mathfrak g}\mathrm{Cas}_{\mathfrak k}=\sum_u(-\mathop{\mathrm{tr}}_{\mathfrak g}\mathrm{ad}_u^2)=d_{\mathfrak k}\cdot2c$ by F2. So $c_1d_{\mathfrak k}+\alpha d_{\mathfrak p}=c\,d_{\mathfrak k}$.
 - Then $2\alpha\ge c_1\iff2(c-c_1)d_{\mathfrak k}\ge c_1d_{\mathfrak p}\iff c_1\le2c\,d_{\mathfrak k}/(N+d_{\mathfrak k})$. For $G_2$ the bound is $140/35=4=c_1$. Confirmed.
 
 ## F6. Cases and table
@@ -93,7 +93,7 @@ Log: agent_logs/r1555.log
 
 ## F7. F-form
 
-- $F(P_{\mathfrak p},P_{\mathfrak p},P_{\mathfrak p})=\operatorname{tr}\big((xP_{\mathfrak k}+yP_{\mathfrak p})P_{\mathfrak p}\big)=y\,d_{\mathfrak p}$.
+- $F(P_{\mathfrak p},P_{\mathfrak p},P_{\mathfrak p})=\mathop{\mathrm{tr}}\big((xP_{\mathfrak k}+yP_{\mathfrak p})P_{\mathfrak p}\big)=y\,d_{\mathfrak p}$.
 - $F(P_{\mathfrak p},P_{\mathfrak p},P_{\mathfrak k})=x\,d_{\mathfrak k}$, and by symmetry this equals $F(P_{\mathfrak k},P_{\mathfrak p},P_{\mathfrak p})=\alpha d_{\mathfrak p}$. So $x>0$.
 - The stated inequality is $y\le x$ verbatim. Confirmed. For $SU(3)\subset G_2$ the left side is $4/3$ and the right side is $1$, so the F-form correctly flags the failure.
 

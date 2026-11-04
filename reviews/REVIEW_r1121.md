@@ -26,7 +26,7 @@ Log: [agent_logs/r1121.log](../agent_logs/r1121.log). Brief: [2026-09-24-I73-sta
 
 ## 2. Step 1, the budget
 
-- With $\mu_c\ge\mu_6$ on $E$: $\sum_{c\in E}\mu_cw_c=\operatorname{tr}A|_E-\sum_{c\in E}\mu_c(1-w_c)\le\operatorname{tr}A|_E-\mu_6\sum_{c\notin E}w_c$, using $\sum_cw_c=6$ and $w_c\le1$ (Bessel for the orthonormal partners). Hence $x-y\ge\sum_{c\notin E}(\mu_6-\mu_c)w_c$. Correct.
+- With $\mu_c\ge\mu_6$ on $E$: $\sum_{c\in E}\mu_cw_c=\mathop{\mathrm{tr}}A|_E-\sum_{c\in E}\mu_c(1-w_c)\le\mathop{\mathrm{tr}}A|_E-\mu_6\sum_{c\notin E}w_c$, using $\sum_cw_c=6$ and $w_c\le1$ (Bessel for the orthonormal partners). Hence $x-y\ge\sum_{c\notin E}(\mu_6-\mu_c)w_c$. Correct.
 - The E-part weights enter only through $\mu_c\ge\mu_6$, which is exactly the top-eigenspace hypothesis.
 - $X_0$ itself lies in $\bigoplus\mathfrak{so}(\pi_k)$ (eigenvalue $0$) and is orthogonal to the partners, so it carries no weight.
 - $K$-space and $R$-space are sums of slot spaces, hence $A$-invariant, so there are no cross terms and $\sum_{c\in K}(\mu_6-\mu_c)w_c\ge g_K\sum_j\lVert K_j\rVert^2$, likewise for $R$.
@@ -55,14 +55,14 @@ Every slot space of $X_0$ outside $E$, with its class:
 
 - The three $+$ slots from $\pi_1$ to the leaves share one sign convention ($MJ_1=\mp J_iM$), so $Y=p\wedge w_1+q\wedge w_2$ with $w_2=\mp J_Lw_1$: equal length, orthogonal. $\mathrm{Gram}(w^Y)=\rho_0^2I$. Correct.
 - $K$'s images lie in the further planes and the kernel, orthogonal to the leaves, so the cross terms vanish and $\mathrm{Gram}(w)=\rho_0^2I+\mathrm{Gram}(u)$. Correct.
-- The angles of $p\wedge w_1+q\wedge w_2$ are the singular values of $[w_1\,w_2]$, so $\alpha^2-\beta^2=\lambda_1(\mathrm{Gram}\,u)-\lambda_2(\mathrm{Gram}\,u)\le\operatorname{tr}\mathrm{Gram}\,u=\lVert K\rVert^2$. Screened (random $X_0\in\mathfrak{so}(12)$ with a fifth plane and a 2-dim kernel, 2000 draws): $\max(\alpha^2-\beta^2-\lVert K\rVert^2)=-1.4\cdot10^{-6}$, so the bound is tight.
+- The angles of $p\wedge w_1+q\wedge w_2$ are the singular values of $[w_1\,w_2]$, so $\alpha^2-\beta^2=\lambda_1(\mathrm{Gram}\,u)-\lambda_2(\mathrm{Gram}\,u)\le\mathop{\mathrm{tr}}\mathrm{Gram}\,u=\lVert K\rVert^2$. Screened (random $X_0\in\mathfrak{so}(12)$ with a fifth plane and a 2-dim kernel, 2000 draws): $\max(\alpha^2-\beta^2-\lVert K\rVert^2)=-1.4\cdot10^{-6}$, so the bound is tight.
 - **Normalisation changes $\kappa$.** The alignment formula needs $\alpha^2+\beta^2=1$, so the $\kappa$ that enters $\rho(\kappa)$ is $\hat\kappa=(\alpha^2-\beta^2)/\lVert Y+K\rVert^2\le\lVert K\rVert^2/(1-m^2)$, as step 3 writes. It is not bounded by $\lVert K\rVert^2$ (a rank-one $\mathrm{Gram}\,u$ attains the ratio). The earlier section ("the counting by hand") had $\kappa_j\le\lVert K_j\rVert^2$, and step 6 still uses that version. See item 8.
 
 ## 5. Step 3, alignment
 
-- Von Neumann for real skew matrices: singular values come in pairs, so $\langle X,Z\rangle=\tfrac12\operatorname{tr}X^{\mathsf T}Z\le\sum_k\alpha_k\zeta_k$ over sorted angles. Applied to the rank-four $Y+K$ against a star $(3,1,1,1)/\sqrt{12}$ and a triangle $(1,1,1)/\sqrt3$, it gives the two branches as written.
+- Von Neumann for real skew matrices: singular values come in pairs, so $\langle X,Z\rangle=\tfrac12\mathop{\mathrm{tr}}X^{\mathsf T}Z\le\sum_k\alpha_k\zeta_k$ over sorted angles. Applied to the rank-four $Y+K$ against a star $(3,1,1,1)/\sqrt{12}$ and a triangle $(1,1,1)/\sqrt3$, it gives the two branches as written.
 - With $\alpha^2=(1+\kappa)/2$, $\beta^2=(1-\kappa)/2$, $\alpha\beta=c/2$: $\mathrm{star}^2=\tfrac5{12}+\tfrac\kappa3+\tfrac c4$, $\mathrm{tri}^2=(1+c)/3$, difference $\tfrac1{12}+\tfrac\kappa3-\tfrac c{12}\ge0$ on $[0,1]$ (`star_ge_tri`). Correct.
-- $\operatorname{dist}(Z,\mathrm{Ext})^2\ge r^2+1-2r\,\mathrm{align}\ge1-\mathrm{align}^2$ at every radius, and $\operatorname{dist}(\cdot,\mathrm{Ext})$ is 1-Lipschitz, so $\operatorname{dist}(X_j,\mathrm{Ext})\ge\rho(\hat\kappa_j)-m_j$. Correct.
+- $\mathop{\mathrm{dist}}(Z,\mathrm{Ext})^2\ge r^2+1-2r\,\mathrm{align}\ge1-\mathrm{align}^2$ at every radius, and $\mathop{\mathrm{dist}}(\cdot,\mathrm{Ext})$ is 1-Lipschitz, so $\mathop{\mathrm{dist}}(X_j,\mathrm{Ext})\ge\rho(\hat\kappa_j)-m_j$. Correct.
 - $\rho$ is not monotone ($\min0.408$ at $\hat\kappa=0.8$, back to $0.5$ at $1$). The argument applies `lam_*` at the actual $\hat\kappa_j$ and bounds afterwards, so this is harmless.
 
 ## 6. Step 4, the deficit bound

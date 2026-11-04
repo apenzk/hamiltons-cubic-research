@@ -28,7 +28,7 @@
 | the degree sequence | $\dim(\mathrm{Sym}^k\mathcal W_5)^{O(5)}$ for $k=2,\dots,6$ |
 | the stable range | $\dim(\mathrm{Sym}^k\mathcal W_n)^{O(n)}$ at $n$ large; $0,1,2,7,19,89$ for $k=1,\dots,6$, the sequence [c1_haar_moments.py](../scripts/reviewers/r239/c1_haar_moments.py) checks by Haar integration. So degrees $2$–$6$ read $1,2,7,19,89$, matching the block |
 | trivial multiplicity | the multiplicity of the trivial $O(n)$-module in $\mathrm{Sym}^3(\mathcal W_n)$, i.e. $\dim(\mathrm{Sym}^3\mathcal W_n)^{O(n)}$ |
-| $W^\#$, $Q$, $\langle\cdot,\cdot\rangle$ | [conventions.md](../findings/conventions.md)'s: $Q(W)=W^2+W^\#$, the $\tfrac12$ at the $\Lambda^2$ level, under which $\langle W,W^2\rangle=\operatorname{tr}(W^3)$. Needed only for §3 |
+| $W^\#$, $Q$, $\langle\cdot,\cdot\rangle$ | [conventions.md](../findings/conventions.md)'s: $Q(W)=W^2+W^\#$, the $\tfrac12$ at the $\Lambda^2$ level, under which $\langle W,W^2\rangle=\mathop{\mathrm{tr}}(W^3)$. Needed only for §3 |
 
 ## 2. Is the $14$ derived, imported or measured?, **measured, and the block says so**
 
@@ -53,7 +53,7 @@ That is Weyl's integration formula, correctly implemented, with **the answer com
 
 ### 3.1 The identity, and why $n=6$ breaks it
 
-$P(W)=\langle W,Q(W)\rangle=\operatorname{tr}(W^3)+\langle W^\#,W\rangle$, so the two cubic $O(n)$-invariants in play are $s=\operatorname{tr}(W^3)$ and $t=\langle W^\#,W\rangle$, the two independent complete contractions of $W^{\otimes3}$. The claim $t=2s$ at $n\le5$ is [L50](../findings/bispectral.md#L118)'s, and its mechanism is Lovelock's dimensionally-dependent identity: $t-2s$ is, up to a constant, the full contraction of the generalised Kronecker delta $\delta^{a_1\cdots a_6}_{b_1\cdots b_6}$ against $W\otimes W\otimes W$, and **a totally antisymmetric object on six indices has no nonzero component when only $n\le5$ index values exist**. At $n\ge6$ the delta is not identically zero and the two contractions separate.
+$P(W)=\langle W,Q(W)\rangle=\mathop{\mathrm{tr}}(W^3)+\langle W^\#,W\rangle$, so the two cubic $O(n)$-invariants in play are $s=\mathop{\mathrm{tr}}(W^3)$ and $t=\langle W^\#,W\rangle$, the two independent complete contractions of $W^{\otimes3}$. The claim $t=2s$ at $n\le5$ is [L50](../findings/bispectral.md#L118)'s, and its mechanism is Lovelock's dimensionally-dependent identity: $t-2s$ is, up to a constant, the full contraction of the generalised Kronecker delta $\delta^{a_1\cdots a_6}_{b_1\cdots b_6}$ against $W\otimes W\otimes W$, and **a totally antisymmetric object on six indices has no nonzero component when only $n\le5$ index values exist**. At $n\ge6$ the delta is not identically zero and the two contractions separate.
 
 **I confirm the mechanism and I do not confirm the constant by hand.** The factor $2$ sits inside the $720$-term expansion of that delta ([bispectral.md](../findings/bispectral.md#L118)'s $-\tfrac1{64}$), which is a computation and is out of scope here. What I can add is that the constant is over-determined on the record: it is fixed at $n=4$ by the conceptual $\mathrm{Sym}^2_0\Lambda^+\oplus\mathrm{Sym}^2_0\Lambda^-$ argument, and screened at $n=4,5$ against failure at $n=6,7$ by [r282](REVIEW_r282.md).
 
@@ -66,7 +66,7 @@ The complete statement is at [ATTEMPTS.md](../ATTEMPTS.md) Result 2: $0$ at $n\l
 3. **$\ge2$ at every $n\ge6$**, by zero-extension: $\mathcal W_6\subset\mathcal W_n$ and both contractions restrict, so independence is monotone upward.
 4. **$=1$ at $n=4,5$**: $\ge1$ because $s\not\equiv0$, $\le1$ by the Lovelock relation of §3.1 together with the spanning of step 1.
 
-**Steps 1 and 4 are exactly what the block's "so" omits.** The block writes *"at $n\le5$, $\langle W^\#,W\rangle=2\operatorname{tr}(W^3)$, so the cubic invariant space is one-dimensional"*. The identity alone says two named invariants are proportional; **it says nothing about a third**. Without the FFT spanning step the conclusion does not follow, and that step is on the record, in [ATTEMPTS.md](../ATTEMPTS.md), a file [conventions.md](../findings/conventions.md) elsewhere treats as citable, and not in [findings/](../findings/) at all.
+**Steps 1 and 4 are exactly what the block's "so" omits.** The block writes *"at $n\le5$, $\langle W^\#,W\rangle=2\mathop{\mathrm{tr}}(W^3)$, so the cubic invariant space is one-dimensional"*. The identity alone says two named invariants are proportional; **it says nothing about a third**. Without the FFT spanning step the conclusion does not follow, and that step is on the record, in [ATTEMPTS.md](../ATTEMPTS.md), a file [conventions.md](../findings/conventions.md) elsewhere treats as citable, and not in [findings/](../findings/) at all.
 
 ### 3.3 *"Parity-sensitive"* is the wrong word, and this record has trained its readers to misread it
 
@@ -74,7 +74,7 @@ The collapse holds at $n=4$ **and** $n=5$, and fails at $n=6$ **and** $n=7$. It 
 
 ### 3.4 Circularity against the companion audit, **none, and the record is one sentence away from manufacturing some**
 
-[r598](REVIEW_r598.md), today's [L61](../findings/sym3-blocks.md#L208) audit, runs the implication **the other way**: from L85's degree-$3$ entry $\dim(\mathrm{Sym}^3\mathcal W_5)^{O(5)}=1$ it concludes $s$ and $t$ proportional, then fixes the constant by one evaluation to get $P=3\operatorname{tr}(W^3)$. So the record now holds both arrows:
+[r598](REVIEW_r598.md), today's [L61](../findings/sym3-blocks.md#L208) audit, runs the implication **the other way**: from L85's degree-$3$ entry $\dim(\mathrm{Sym}^3\mathcal W_5)^{O(5)}=1$ it concludes $s$ and $t$ proportional, then fixes the constant by one evaluation to get $P=3\mathop{\mathrm{tr}}(W^3)$. So the record now holds both arrows:
 
 | arrow | premise's own anchor |
 | --- | --- |
@@ -177,4 +177,4 @@ $$(\mathrm{Sym}^k\mathcal W_5)^{O(5)}=(\mathrm{Sym}^k\mathcal W_5)^{SO(5)}\qquad
 
 - **An independent upper bound $\dim(\mathrm{Sym}^6\mathcal W_5)^{O(5)}\le14$.** *What a run would decide:* whether the $14$ survives replication by a second method. A Molien/Haar route on $\mathcal W_5$, [c1_haar_moments.py](../scripts/reviewers/r239/c1_haar_moments.py)'s machinery at $n=5$ instead of the stable range, shares no code with the Laurent-polynomial route. **Agreement would make the $14$ two-sourced in both directions and retire item 3 above; disagreement would move [L59](../findings/sym3-blocks.md), [L62](../findings/sym3-blocks.md), [L89](../findings/sym3-blocks.md) and the certificate's identity step together.** *Blocked: analysis-only, and this is a decomposition run.*
 - **The degree-$4$ and degree-$5$ entries, $4$ and $5$.** No hand check exists for either. *A run would decide whether the sequence's unchecked middle is right; nothing on the record currently consumes those two entries, so the stake is the credibility of the run that produced the $14$ rather than any result.* **Blocked, and lower priority than the first.**
-- **The constant $2$ in $\langle W^\#,W\rangle=2\operatorname{tr}(W^3)$.** Fixed by the $720$-term expansion of the six-index delta, already done at [L50](../findings/bispectral.md#L118). *Not re-run.*
+- **The constant $2$ in $\langle W^\#,W\rangle=2\mathop{\mathrm{tr}}(W^3)$.** Fixed by the $720$-term expansion of the six-index delta, already done at [L50](../findings/bispectral.md#L118). *Not re-run.*

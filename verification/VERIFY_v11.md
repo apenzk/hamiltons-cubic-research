@@ -177,7 +177,7 @@ The brief carries $-\tfrac29\lvert\kappa_n\rvert$ and refers the account to a se
 
 ## 8. Where $w^*$ sits, REFUTED as a claim over the stated range
 
-The algebra is right. For $g(w)=\sqrt{c+\rho w^2}/(A+Bw)$, multiplying the numerator of $g'$ by $\sqrt{c+\rho w^2}$ gives $\rho w(A+Bw)-B(c+\rho w^2)=\rho wA-Bc$, so $\operatorname{sign}g'=\operatorname{sign}(\rho wA-Bc)$ (the brief's $\operatorname{sign}(wA-Bc)$ at $\rho=1$) and $g$ falls then rises, a single interior minimum at $w^*=Bc/(\rho A)$. With $c=3\theta_0/(n-2)$, $\rho=3\theta_0\frac{n-8}{2(n-2)}$, $A=\sqrt n$, $B=n$, the $\theta_0$ cancels and
+The algebra is right. For $g(w)=\sqrt{c+\rho w^2}/(A+Bw)$, multiplying the numerator of $g'$ by $\sqrt{c+\rho w^2}$ gives $\rho w(A+Bw)-B(c+\rho w^2)=\rho wA-Bc$, so $\mathop{\mathrm{sign}}g'=\mathop{\mathrm{sign}}(\rho wA-Bc)$ (the brief's $\mathop{\mathrm{sign}}(wA-Bc)$ at $\rho=1$) and $g$ falls then rises, a single interior minimum at $w^*=Bc/(\rho A)$. With $c=3\theta_0/(n-2)$, $\rho=3\theta_0\frac{n-8}{2(n-2)}$, $A=\sqrt n$, $B=n$, the $\theta_0$ cancels and
 $$w^*=\frac{n\cdot\frac{3\theta_0}{n-2}}{3\theta_0\frac{n-8}{2(n-2)}\sqrt n}=\frac{2n}{(n-8)\sqrt n}=\frac{2\sqrt n}{n-8},$$
 which is $\sqrt{10}=3.1623$, $\sqrt3=1.7321$ and $\sqrt{14}/3=1.2472$ at $n=10,12,14$, **the brief's $3.16$, $1.73$, $1.25$, exactly**, and $=1$ at $n=16$, since $n-8=2\sqrt n$ has the unique root $\sqrt n=4$. Likewise $\kappa/\rho=2n/(n-8)$ is $6$ at $n=12$ and $\to2$; carrying the penalty gives $\kappa/\rho^{\mathrm{eff}}=4.4497/0.71904=6.188$ at $n=12$ and $3\sqrt2/1.74238=2.435$ asymptotically, **both of the brief's contrast figures, exactly.**
 

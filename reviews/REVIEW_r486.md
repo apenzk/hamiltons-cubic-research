@@ -72,7 +72,7 @@ Three checks, all passing:
 
 - **Total $=1638=\dim\mathrm{Weyl}_{12}$.** This is the block's own closing claim ("multiplicities summing to $\dim\mathrm{Weyl}_n$ exactly"). *It closes only if the $940$ sit at eigenvalue $0$*, F2 is what makes the claim true rather than lucky.
 - **$\tfrac12$ has multiplicity $2+4m=34=4n-14=\dim\mathcal O$ exactly**, so "the $\tfrac12$-eigenspace *is* the orbit tangent space" is at least dimensionally forced. This is the step [Lemma L134](../findings/route-a.md)'s scope note says carries the weight.
-- **$\operatorname{tr}F_u=0$** in these units, an independent identity the table was not fitted to.
+- **$\mathop{\mathrm{tr}}F_u=0$** in these units, an independent identity the table was not fitted to.
 
 Also: each block's tabulated multiplicities sum to its own $\dim M_\lambda$ ($20,20,6,10$). No arithmetic defect anywhere in the four named rows.
 
@@ -84,7 +84,7 @@ Also: each block's tabulated multiplicities sum to its own $\dim M_\lambda$ ($20
 
 **Where r484 overstates.** It reads the exact points at $n=6,8,10$ as wasted for being below $n=12$. They are not. Zero-padding $\mathrm{Weyl}_n\hookrightarrow\mathrm{Weyl}_{n+1}$ is isometric and commutes with $Q$ ([conventions.md](../findings/conventions.md): *"Padding commutes with $Q$"*), hence with $F_u=u\circ(\cdot)$; $F_u$ is self-adjoint, so the image and its complement are both invariant and
 
-$$\operatorname{spec}\big(F_u^{(n)}\big)\ \subseteq\ \operatorname{spec}\big(F_u^{(n+1)}\big)\quad\text{for every }n.$$
+$$\mathop{\mathrm{spec}}\big(F_u^{(n)}\big)\ \subseteq\ \mathop{\mathrm{spec}}\big(F_u^{(n+1)}\big)\quad\text{for every }n.$$
 
 So the exact $n=6,8,10$ diagonalisations **permanently certify that $\tfrac13$, $\tfrac12$ and $1$ occur at every larger $n$**, they prove *sharpness*, forever. **But spectral nesting runs upward, and $\alpha\le\tfrac13$ is an upper bound: padding is exactly the wrong direction for it.** The bound at $n\ge12$ therefore rests on the two floating-point points, as r484 says.
 
@@ -142,7 +142,7 @@ The claim is very likely true and every check I could close came out in its favo
 **What I closed, and the record can adopt:**
 
 - The exhaustion is **CONFIRMED and now provable**. The two unnamed types are $[2,1]$ (multiplicity $4$) and $[2,2]$ (multiplicity $1$); at $n=12$ they carry $4\cdot160+300=940$, and $698+940=1638$. The count is a polynomial identity in $m=n-4$, valid as a decomposition for every $m\ge4$.
-- *"$0$ throughout"* on those $940$ dimensions is **CONFIRMED and now proved**, in three lines, from the bracket grading $[\mathfrak{so}(4),\mathfrak{so}(m)]=0$: $\operatorname{im}F_u\subseteq AA\oplus AB\oplus AC\oplus BB$, none of which carries $[2,1]$ or $[2,2]$, so by equivariance and self-adjointness both isotypics lie in $\ker F_u$. **No stable-range hypothesis, no computation, every $n\ge8$.**
+- *"$0$ throughout"* on those $940$ dimensions is **CONFIRMED and now proved**, in three lines, from the bracket grading $[\mathfrak{so}(4),\mathfrak{so}(m)]=0$: $\mathop{\mathrm{im}}F_u\subseteq AA\oplus AB\oplus AC\oplus BB$, none of which carries $[2,1]$ or $[2,2]$, so by equivariance and self-adjointness both isotypics lie in $\ker F_u$. **No stable-range hypothesis, no computation, every $n\ge8$.**
 - The whole table is internally consistent (total $1638$, $\tfrac12$-multiplicity $=4n-14$, trace zero), **and closes only with the $940$ at zero.**
 
 **What remains unproved, stated as the hypotheses L21 actually needs:**

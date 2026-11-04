@@ -8,7 +8,7 @@ Adversarial Gate 2 audit of the five claims committed as 2293bc0 and e852c66 int
 
 | item | choice | check that fixed it |
 |---|---|---|
-| basis of $\Lambda^2(\mathbb R^n)$ | $\varphi_{ab}=E_{ab}=e_ae_b^{\mathsf T}-e_be_a^{\mathsf T}$, orthonormal under $\langle A,B\rangle=\tfrac12\operatorname{tr}(A^{\mathsf T}B)$ | $[\varphi_{ab},\varphi_{bd}]=\varphi_{ad}$ |
+| basis of $\Lambda^2(\mathbb R^n)$ | $\varphi_{ab}=E_{ab}=e_ae_b^{\mathsf T}-e_be_a^{\mathsf T}$, orthonormal under $\langle A,B\rangle=\tfrac12\mathop{\mathrm{tr}}(A^{\mathsf T}B)$ | $[\varphi_{ab},\varphi_{bd}]=\varphi_{ad}$ |
 | structure constants | $c_{\alpha\beta\gamma}=\langle[b_\alpha,b_\beta],b_\gamma\rangle\in\{0,\pm1\}$ | derived from $[E_{ij},E_{kl}]$ |
 | Hamilton sharp | $(R\#S)_{\alpha\beta}=\tfrac12\sum c_{\alpha\gamma\mu}c_{\beta\delta\nu}R_{\gamma\delta}S_{\mu\nu}$ | $I\#I=(n-2)I$ exactly, which is [BW08](../references/boehm-wilking-2008-space-forms/) Lemma 2.1 with $W\#I=-W$ |
 | $\mathrm{Weyl}_n$ | nullspace of first Bianchi + Ricci, orthonormalised | dimension $\tfrac{n(n+1)(n+2)(n-3)}{12}$ hit exactly: 35, 84, 168, 300 at $n=5,6,7,8$ |
@@ -104,7 +104,7 @@ Every reported figure reproduces, including $\cos(N,M)=+1.000000$ exactly, the i
 
 ### The repaired statement is a theorem, not a survivor of testing
 
-Let $M$ be a diagonal critical point with $\theta>0$ whose support graph has components $C_1,\dots,C_k$, of which $k'\ge2$ carry an edge. Writing $M_c=t_cU_c$ with $\lVert U_c\rVert=1$, criticality $M^{\circ2}+M^2=\theta M+\operatorname{diag}(s)$ restricts to each block and scales as $t_c^2$ against $t_c$, so $U_c$ is itself critical with $\theta_c=\theta/t_c>0$; unit norm gives $\theta=(\sum_c\theta_c^{-2})^{-1/2}$, the sum running over the edge-carrying components only. Take $a\in\mathbb R^{k'}$ non-zero with $\sum_ca_c\theta_c^{-2}=0$ (possible since $k'\ge2$) and set $N=\sum_ca_cM_c$. Then $N$ is hollow, symmetric, zero-row-sum, non-zero, orthogonal to $M$, **non-radial** (constant $a$ would force $a=0$), and $\mathcal LN=\theta N$ exactly. Hence $\lambda_{\max}(L_e)\ge1>\tfrac12$.
+Let $M$ be a diagonal critical point with $\theta>0$ whose support graph has components $C_1,\dots,C_k$, of which $k'\ge2$ carry an edge. Writing $M_c=t_cU_c$ with $\lVert U_c\rVert=1$, criticality $M^{\circ2}+M^2=\theta M+\mathop{\mathrm{diag}}(s)$ restricts to each block and scales as $t_c^2$ against $t_c$, so $U_c$ is itself critical with $\theta_c=\theta/t_c>0$; unit norm gives $\theta=(\sum_c\theta_c^{-2})^{-1/2}$, the sum running over the edge-carrying components only. Take $a\in\mathbb R^{k'}$ non-zero with $\sum_ca_c\theta_c^{-2}=0$ (possible since $k'\ge2$) and set $N=\sum_ca_cM_c$. Then $N$ is hollow, symmetric, zero-row-sum, non-zero, orthogonal to $M$, **non-radial** (constant $a$ would force $a=0$), and $\mathcal LN=\theta N$ exactly. Hence $\lambda_{\max}(L_e)\ge1>\tfrac12$.
 
 Tested against padded configurations, which is what broke the old statement, three of the six deliberately carry isolated vertices:
 
@@ -168,7 +168,7 @@ Both $\Delta$ values and $\lambda_{\max}=\tfrac12$ confirmed exactly, at every p
 
 **Which convention makes the record's statements true, stated precisely.**
 
-1. **$\theta>0$ is forced, and forced by Lemma L24 itself.** The constrained Hessian is $6\theta(L_e-\tfrac12\mathrm{Id})$. Its sign as a maximality condition depends on $\operatorname{sign}\theta$: at $\theta>0$ maximality reads $\lambda_{\max}(L_e|_{W^\perp})\le\tfrac12$; at $\theta<0$ the inequality reverses to $\lambda_{\min}(L_e|_{W^\perp})\ge\tfrac12$. Only the first is the record's V3.
+1. **$\theta>0$ is forced, and forced by Lemma L24 itself.** The constrained Hessian is $6\theta(L_e-\tfrac12\mathrm{Id})$. Its sign as a maximality condition depends on $\mathop{\mathrm{sign}}\theta$: at $\theta>0$ maximality reads $\lambda_{\max}(L_e|_{W^\perp})\le\tfrac12$; at $\theta<0$ the inequality reverses to $\lambda_{\min}(L_e|_{W^\perp})\ge\tfrac12$. Only the first is the record's V3.
 2. **$\lambda_{\max}(L_e)$ is branch-independent; $\Delta$ is not.** $L_{-W}=-L_W$ and $\theta_{-W}=-\theta$, so $L_e=L_W/\theta$ is *literally the same operator* on both branches. That is why the table's $\tfrac12$ appears twice. Any apparent branch-dependence of $\lambda_{\max}(L_e)$ is a sign slip from computing $\lambda_{\max}(L_{-W})/\theta_{-W}$, which is $\lambda_{\min}(L_e)$, not $\lambda_{\max}(L_e)$, the order reverses on division by a negative number. **This is a second, independent way the same trap fabricates a counterexample, and it is not on the record.**
 3. So the fabrication is exactly: read $\Delta=12$ off $-W$, read $\lambda_{\max}(L_e)=\tfrac12$ off the operator (which is branch-blind), and report a point with $\Delta>0$ and $\lambda_{\max}\le\tfrac12$. The record's diagnosis is right and its convention ($\Delta$ evaluated on the branch with $\theta>0$), is the correct repair.
 

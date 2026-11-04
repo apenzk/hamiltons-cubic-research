@@ -7,7 +7,7 @@
 | # | claim | verdict |
 | --- | --- | --- |
 | 1 | The locus characterisation, coordinate-diagonal $W\in\mathcal W_n$ $\Leftrightarrow$ $K$ hollow symmetric with vanishing row sums | **CONFIRMED** |
-| 2 | The eigenvalue identity $W(f_a\wedge f_b)=K_{ab}f_a\wedge f_b$ and $\operatorname{rank}=\lvert E(G)\rvert$ | **CONFIRMED** |
+| 2 | The eigenvalue identity $W(f_a\wedge f_b)=K_{ab}f_a\wedge f_b$ and $\mathop{\mathrm{rank}}=\lvert E(G)\rvert$ | **CONFIRMED** |
 | 3 | L176, degree part, every vertex of $G$ has degree $0$ or $\ge2$ | **CONFIRMED** |
 | 4 | L176, edge part, $\lvert E(G)\rvert\ge4$, hence $\Lambda^2$-rank $\ge4$ | **CONFIRMED** |
 | 5 | L176's word "equivalently", joining the two-part conclusion to the rank bound | **REFUTED AS STATED**, only the second conjunct is equivalent to the rank bound |
@@ -131,12 +131,12 @@ $$K_{ab}+K_{ac}=0,\qquad K_{ab}+K_{bc}=0,\qquad K_{ac}+K_{bc}=0.$$
 **As stated: "A Weyl tensor of $\Lambda^2$-rank $\le3$ is coordinate-diagonal in no frame." This is false, and the counterexample is exhibited in closed form: $W=0$.**
 
 - $\mathcal W_n$ is a linear space, so $0\in\mathcal W_n$.
-- $\operatorname{rank}(0:\Lambda^2\to\Lambda^2)=0\le3$.
+- $\mathop{\mathrm{rank}}(0:\Lambda^2\to\Lambda^2)=0\le3$.
 - $0$ satisfies "$W_{abcd}=0$ unless $\{a,b\}=\{c,d\}$" vacuously, in **every** frame.
 
 So the zero tensor has rank $\le3$ and is coordinate-diagonal in every frame. **The hypothesis $W\ne0$ that L176 carries is dropped when the corollary is formed.** With it restored the corollary is immediate and correct: if $W\ne0$ were coordinate-diagonal in some frame, L176 would give rank $\ge4$.
 
-*This is a defect of statement rather than of mathematics, the intended content, "$1\le\operatorname{rank}\le3$ excludes coordinate-diagonality", survives untouched, and the repair is two characters. It is reported because a corollary quoted downstream is quoted as written.*
+*This is a defect of statement rather than of mathematics, the intended content, "$1\le\mathop{\mathrm{rank}}\le3$ excludes coordinate-diagonality", survives untouched, and the repair is two characters. It is reported because a corollary quoted downstream is quoted as written.*
 
 ## 8. Corollary 2
 
@@ -148,7 +148,7 @@ So the zero tensor has rank $\le3$ and is coordinate-diagonal in every frame. **
 
 **Fetched and filed:** [references/derdzinski-1983-self-dual-kaehler/](../references/derdzinski-1983-self-dual-kaehler/), Andrzej Derdziński, *Self-dual Kähler manifolds and Einstein manifolds of dimension four*, [Compositio Mathematica 49 (1983), 405–433](http://www.numdam.org/item?id=CM_1983__49_3_405_0), with the PDF, a `pdftotext` extraction, a README and a [notes.md](../references/derdzinski-1983-self-dual-kaehler/notes.md) carrying the transcription and the derivation repeated here.
 
-**What Derdziński's Proposition 2 (p. 415) states.** For a Kähler manifold of real dimension four, oriented naturally, $W(\omega)=u\omega/6$ where $u$ is the scalar curvature and $\omega$ the Kähler form, and $\#\operatorname{spec}_{\Lambda^+}(W^+)\le2$. Since $W^+$ is trace-free on the three-dimensional $\Lambda^+$, the spectrum is forced to $(u/6,-u/12,-u/12)$, that is $\tfrac{u}{12}(2,-1,-1)$. His clause (ii), $u^2=24\lvert W^+\rvert^2$, is the internal check: $(u/6)^2+2(u/12)^2=u^2/24$. His Corollary 4 (p. 424) gives $W^-=0$ for any orientable, locally irreducible, locally symmetric four-manifold, which covers $\mathbb{CP}^2$.
+**What Derdziński's Proposition 2 (p. 415) states.** For a Kähler manifold of real dimension four, oriented naturally, $W(\omega)=u\omega/6$ where $u$ is the scalar curvature and $\omega$ the Kähler form, and $\#\mathop{\mathrm{spec}}_{\Lambda^+}(W^+)\le2$. Since $W^+$ is trace-free on the three-dimensional $\Lambda^+$, the spectrum is forced to $(u/6,-u/12,-u/12)$, that is $\tfrac{u}{12}(2,-1,-1)$. His clause (ii), $u^2=24\lvert W^+\rvert^2$, is the internal check: $(u/6)^2+2(u/12)^2=u^2/24$. His Corollary 4 (p. 424) gives $W^-=0$ for any orientable, locally irreducible, locally symmetric four-manifold, which covers $\mathbb{CP}^2$.
 
 **The numbers for $\mathbb{CP}^2$ itself, computed in closed form from a second source already on file.** [Bourguignon–Karcher §5.1](../references/bourguignon-karcher-1978-pinching/) gives the curvature tensor of $\mathbb{CP}^n$ outright, in the normalisation with sectional curvature in $[1,4]$:
 
@@ -157,7 +157,7 @@ $$R(a,b,c,d)=\langle a,c\rangle\langle b,d\rangle-\langle a,d\rangle\langle b,c\
 Take the orthonormal frame $e_1,\ e_2=Je_1,\ e_3,\ e_4=Je_3$, and write $\Omega_{ab}=\langle Je_a,e_b\rangle$, so $\Omega_{12}=\Omega_{34}=1$ and all other entries above the diagonal vanish.
 
 - **Sectional curvature:** $R(a,b,a,b)=1+3\langle Ja,b\rangle^2$, giving $4$ on holomorphic planes and $1$ on totally real ones, the stated range, which confirms the frame and the normalisation.
-- **Ricci and scalar:** $\operatorname{Ric}_{11}=R_{1212}+R_{1313}+R_{1414}=4+1+1=6$, so $\operatorname{Ric}=6g$ and $u=24$.
+- **Ricci and scalar:** $\mathop{\mathrm{Ric}}_{11}=R_{1212}+R_{1313}+R_{1414}=4+1+1=6$, so $\mathop{\mathrm{Ric}}=6g$ and $u=24$.
 - **Weyl:** in dimension four an Einstein tensor has $W=R-\tfrac{u}{12}(g_{ac}g_{bd}-g_{ad}g_{bc})$ with $\tfrac{u}{12}=2$, so $W(a,b,c,d)=-(g_{ac}g_{bd}-g_{ad}g_{bc})+(\Omega_{ac}\Omega_{bd}-\Omega_{ad}\Omega_{bc})+2\Omega_{ab}\Omega_{cd}$.
 - **Components:** $W_{1212}=W_{3434}=2$; $W_{1313}=W_{1414}=W_{2323}=W_{2424}=-1$; $W_{1234}=2$; $W_{1324}=1$; $W_{1423}=-1$; all others zero. Bianchi: $W_{1234}+W_{1342}+W_{1423}=2-1-1=0$. Trace: $2-1-1=0$.
 - **The operator**, in the convention of §0, is block diagonal on the three pair-planes with matrices $\begin{pmatrix}2&2\\2&2\end{pmatrix}$, $\begin{pmatrix}-1&1\\1&-1\end{pmatrix}$, $\begin{pmatrix}-1&-1\\-1&-1\end{pmatrix}$, whose eigenvalues are $\{4,0\}$, $\{-2,0\}$, $\{-2,0\}$.
@@ -194,7 +194,7 @@ So the padded tensor lies in $\mathcal W_n$.
 
 **(a) The inference is sound in the direction used; the imported clause is not on file.** To conclude strict inequality at a tensor of rank $\le3$ the argument needs *equality $\Rightarrow$ coordinate-diagonal*, contraposed against Corollary 1. The brief quotes the clause as an "iff" and uses only that half, **the half that is the substantive one**, since the converse (coordinate-diagonal $\Rightarrow$ equality) would be a computation on the locus and is not what is invoked. The block supplies no proof, no definition of $\kappa$, and no definition of $M$ or of the relation between $\lVert M\rVert_F$ and $\lVert W\rVert$. **Verdict `HYPOTHESIS-DEBT`: this claim has no argument on file.** What would have to be proved: *for every $W\in\mathcal W_n$, if $\kappa^2(W)=2\lVert W\rVert^2$ then $W$ is coordinate-diagonal in some frame*, together with the $O(n)$-invariance of $\kappa$ and $\lVert\cdot\rVert$ that lets "some frame" and "the frame at hand" be interchanged, which is asserted nowhere. **I do not supply it.**
 
-**(b) The corollary is false as stated, by the same object as §7.** At $W=0$ the quoted inequality reads $\kappa^2(0)\le0$; since $\kappa^2$ is a square it is nonnegative, so $\kappa^2(0)=0=2\lVert0\rVert^2$ and equality holds. Yet $\operatorname{rank}(0)=0\le3$. **Verdict `REFUTED AS STATED`, with the repair again the single hypothesis $W\ne0$.** *This is consistent rather than paradoxical: $W=0$ is coordinate-diagonal in every frame, so the equality clause predicts equality there, it is Corollary 1 and Corollary 3, not the clause, that forget to exclude it.*
+**(b) The corollary is false as stated, by the same object as §7.** At $W=0$ the quoted inequality reads $\kappa^2(0)\le0$; since $\kappa^2$ is a square it is nonnegative, so $\kappa^2(0)=0=2\lVert0\rVert^2$ and equality holds. Yet $\mathop{\mathrm{rank}}(0)=0\le3$. **Verdict `REFUTED AS STATED`, with the repair again the single hypothesis $W\ne0$.** *This is consistent rather than paradoxical: $W=0$ is coordinate-diagonal in every frame, so the equality clause predicts equality there, it is Corollary 1 and Corollary 3, not the clause, that forget to exclude it.*
 
 ## 13. The boundary (brief item 11)
 
@@ -210,7 +210,7 @@ So the padded tensor lies in $\mathcal W_n$.
 
 **The block claims no more than it reaches.** Its restraint about padded $W_{\mathbb{HP}^2}$ is correct and for the right reason: Corollary 1's criterion is a rank threshold at three, and $\mathbb{HP}^2$'s Weyl tensor lives on $\Lambda^2\mathbb R^8$, where the rank is far above three, Bourguignon–Karcher §5.4 already exhibits a three-dimensional eigenspace $\langle I,J,K\rangle$ inside a much larger spectrum. So L176 has nothing to say about it in either direction, and the block says so.
 
-**The one presentational over-claim is L176's own word "equivalently"** (claim 5 in the table). The stated conclusion is a conjunction (every vertex has degree $0$ or $\ge2$, **and** $\lvert E(G)\rvert\ge4$) and only the second conjunct is equivalent to $\operatorname{rank}\ge4$. The degree condition is strictly more information: a path on five vertices has four edges, hence would have rank four, while carrying two vertices of degree one. Read as an equivalence the sentence asserts that rank $\ge4$ implies the degree condition **for an arbitrary graph**, which is false; read as "in particular, $\operatorname{rank}\ge4$" it is exactly right. *The mathematics is unharmed (on the locus both conjuncts hold) but a downstream user who inverts the "equivalently" gets a false statement.*
+**The one presentational over-claim is L176's own word "equivalently"** (claim 5 in the table). The stated conclusion is a conjunction (every vertex has degree $0$ or $\ge2$, **and** $\lvert E(G)\rvert\ge4$) and only the second conjunct is equivalent to $\mathop{\mathrm{rank}}\ge4$. The degree condition is strictly more information: a path on five vertices has four edges, hence would have rank four, while carrying two vertices of degree one. Read as an equivalence the sentence asserts that rank $\ge4$ implies the degree condition **for an arbitrary graph**, which is false; read as "in particular, $\mathop{\mathrm{rank}}\ge4$" it is exactly right. *The mathematics is unharmed (on the locus both conjuncts hold) but a downstream user who inverts the "equivalently" gets a false statement.*
 
 ## Name what would break it
 

@@ -1,8 +1,8 @@
 # Notes, Poon, Convexity of the joint numerical range
 
-For an $m$-tuple $A=(A_1,\dots,A_m)$ of $n\times n$ Hermitian matrices, the $k$-th joint numerical range is $W_k(A)=\{(\operatorname{tr}(X^*A_1X),\dots,\operatorname{tr}(X^*A_mX)):X\in\mathbb C^{n\times k},X^*X=I_k\}$. $J_k$ is the rank-$k$ projection $I_k\oplus0$ and $U(J_k)$ its unitary orbit.
+For an $m$-tuple $A=(A_1,\dots,A_m)$ of $n\times n$ Hermitian matrices, the $k$-th joint numerical range is $W_k(A)=\{(\mathop{\mathrm{tr}}(X^*A_1X),\dots,\mathop{\mathrm{tr}}(X^*A_mX)):X\in\mathbb C^{n\times k},X^*X=I_k\}$. $J_k$ is the rank-$k$ projection $I_k\oplus0$ and $U(J_k)$ its unitary orbit.
 
-> **Theorem 1.2.** Let $A=(A_1,\dots,A_m)$ be an $m$-tuple of $n\times n$ Hermitian matrices. Then $W_k(A)$ is convex if and only if for any $X\in\operatorname{conv}U(J_k)$ there exists $P\in U(J_k)$ so that $\operatorname{tr}A_jP=\operatorname{tr}A_jX$ for all $j=1,\dots,m$.
+> **Theorem 1.2.** Let $A=(A_1,\dots,A_m)$ be an $m$-tuple of $n\times n$ Hermitian matrices. Then $W_k(A)$ is convex if and only if for any $X\in\mathop{\mathrm{conv}}U(J_k)$ there exists $P\in U(J_k)$ so that $\mathop{\mathrm{tr}}A_jP=\mathop{\mathrm{tr}}A_jX$ for all $j=1,\dots,m$.
 
 (page 2.) *This is the "relaxation to the convex hull is exact" statement, in the form the record's three-alignment relaxation tested and refuted at $\lvert J\rvert=3$.*
 

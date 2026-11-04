@@ -46,7 +46,7 @@ $$x_2+x_3=\tfrac9{10}(c_2+c_3)-\tfrac35c_1.$$
 | $D\in\Pi_{Q_1}\oplus\Pi_{Q_2}\oplus\Pi_{Q_3}$ | 2, 4, 5, 6, 7 | **unproved for a critical point**, see claim 8 |
 | the cross-Gram factors through each plane's first-pairing functional | 3 | given, not audited, and strictly stronger than the cosine statement it is quoted as |
 | $x_a$ read as component coefficients | 2, 3, 4 | **collides with the GIVEN's letters**, see section 0 |
-| $\operatorname{sign}(c_1)<0$ | 10 | **absent, and claim 10 is false without it** |
+| $\mathop{\mathrm{sign}}(c_1)<0$ | 10 | **absent, and claim 10 is false without it** |
 
 ## 1. The two entries of $q_1$ agree
 

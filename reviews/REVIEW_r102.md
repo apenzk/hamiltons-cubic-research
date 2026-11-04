@@ -16,9 +16,9 @@ Two corrections to the record are larger than any verdict, and both make Schur�
 
 ## The build, and why its numbers can be trusted
 
-Everything below comes from one module written from the brief's definitions: Weyl projector (Kulkarni–Nomizu trace removal after a $\Lambda^4$ projection), $M$ over pairs $i<j$, Hamilton's $\#$ from structure constants $c_{a\gamma\delta}=\tfrac12\operatorname{tr}(B_a^\top[B_\gamma,B_\delta])$ in $\phi_{ij}=E_{ij}-E_{ji}$, and $\mathring W$ on $S^2_0$ in Li's convention. Five independent checks pin the conventions:
+Everything below comes from one module written from the brief's definitions: Weyl projector (Kulkarni–Nomizu trace removal after a $\Lambda^4$ projection), $M$ over pairs $i<j$, Hamilton's $\#$ from structure constants $c_{a\gamma\delta}=\tfrac12\mathop{\mathrm{tr}}(B_a^\top[B_\gamma,B_\delta])$ in $\phi_{ij}=E_{ij}-E_{ji}$, and $\mathring W$ on $S^2_0$ in Li's convention. Five independent checks pin the conventions:
 
-- Weyl symmetries and $\operatorname{Ric}=0$ hold to $3\times10^{-16}$ at $n=5,6,8$.
+- Weyl symmetries and $\mathop{\mathrm{Ric}}=0$ hold to $3\times10^{-16}$ at $n=5,6,8$.
 - Sample rank equals $\dim\mathcal W_n=n(n+1)(n+2)(n-3)/12$ exactly at $n=5,6,7,8,11,12$, $35,84,168,300,1144,1638$, with the first discarded singular value at $10^{-13}$.
 - $\#$ on a $\phi$-diagonal operator returns $(M^\#)_{(ij)(ij)}=\sum_kw_{ik}w_{jk}$ to $2\times10^{-16}$.
 - $\theta=\tfrac32p_3(\mu)-\tfrac12p_3(\omega)$ holds to $4\times10^{-16}$ at $n=5,6,7,8$ on random Weyl tensors. This single check validates $M$, $\#$, $\mathring W$ and the normalisation simultaneously.
@@ -53,7 +53,7 @@ Two consequences, both against the record:
 - The recorded explanation, "$\sum d^2$ falls to $0.03$–$0.14$ at random Weyl tensors", **is not why the constraint fails**. It would fail identically if $\sum d^2$ were pinned at its maximum $3$.
 - Therefore the "missing ingredient" the record names, a lemma $\theta$ large $\Rightarrow\lVert K\rVert_F$ large, **would not lift the vacuity even if proved.** It supplies a norm; the constraint is moved by a shape.
 
-**And "vacuous" is the wrong word for the constraint itself.** $d$ is never an arbitrary vector: it is $(\text{off-diagonal entries of }K;\ -\operatorname{spec}K|_{\mathbf1^\perp})$ with $K$ hollow, symmetric and zero-row-sum. Holding only that structure and $\lVert K\rVert_F^2=s$ ($d$ constrained, nowhere pinned), the $n=12$ relaxation moves:
+**And "vacuous" is the wrong word for the constraint itself.** $d$ is never an arbitrary vector: it is $(\text{off-diagonal entries of }K;\ -\mathop{\mathrm{spec}}K|_{\mathbf1^\perp})$ with $K$ hollow, symmetric and zero-row-sum. Holding only that structure and $\lVert K\rVert_F^2=s$ ($d$ constrained, nowhere pinned), the $n=12$ relaxation moves:
 
 | $s=\lVert K\rVert_F^2$ | relaxation (worst $K$ found) |
 |---|---|
@@ -65,7 +65,7 @@ Two consequences, both against the record:
 
 against the unconstrained $4.0129$. That is a formulation with $d$ constrained but not pinned that bites, so the answer to the brief's question is **yes**.
 
-**A second Schur–Horn constraint is available and the record does not use it.** $\operatorname{diag}M$ in the $\phi$-basis of $\Lambda^2$ is *also* exactly $K$ (verified to $0$), so $\mu\succ d_\varphi$ as well. It bites hard because the maximiser of $p_3(\mu)$ is a single spike, which fails to majorize a spread vector: at $S^6\times S^6$ it takes $\max p_3(\mu)$ from $0.9771$ to $0.0225$. Every entry in the table above already uses it.
+**A second Schur–Horn constraint is available and the record does not use it.** $\mathop{\mathrm{diag}}M$ in the $\phi$-basis of $\Lambda^2$ is *also* exactly $K$ (verified to $0$), so $\mu\succ d_\varphi$ as well. It bites hard because the maximiser of $p_3(\mu)$ is a single spike, which fails to majorize a spread vector: at $S^6\times S^6$ it takes $\max p_3(\mu)$ from $0.9771$ to $0.0225$. Every entry in the table above already uses it.
 
 ## Claim 5, REFUTED as an inference
 
@@ -127,9 +127,9 @@ That is a defensible retirement of the lead. It rests on the $\theta$-vs-$\kappa
 
 ## Two corrections to the record, both making Schur–Horn stronger than recorded
 
-**(A) $\sum d^2=\tfrac32\lVert K\rVert_F^2$, not $\tfrac12\lVert K\rVert_F^2$, the record undercounts by a factor 3.** For diagonal $h=\operatorname{diag}(v)$, $\langle\mathring Wh,h\rangle=-v^\top Kv$, so **the $\psi$-block of $\mathring W$ in the NPW basis is exactly $-K$ restricted to $\mathbf1^\perp$** (verified to $6\times10^{-17}$ at $n=5,6,8,10$). Since $K$ has zero row sums, $K\mathbf1=0$ and $K|_{\mathbf1^\perp}$ carries the whole spectrum; taking the $\psi$'s to be its eigenvectors (a legitimate NPW basis, and Schur–Horn holds in every one), gives $\sum_\psi d^2=\lVert K\rVert_F^2$ on top of the recorded $\sum_\varphi d^2=\tfrac12\lVert K\rVert_F^2$.
+**(A) $\sum d^2=\tfrac32\lVert K\rVert_F^2$, not $\tfrac12\lVert K\rVert_F^2$, the record undercounts by a factor 3.** For diagonal $h=\mathop{\mathrm{diag}}(v)$, $\langle\mathring Wh,h\rangle=-v^\top Kv$, so **the $\psi$-block of $\mathring W$ in the NPW basis is exactly $-K$ restricted to $\mathbf1^\perp$** (verified to $6\times10^{-17}$ at $n=5,6,8,10$). Since $K$ has zero row sums, $K\mathbf1=0$ and $K|_{\mathbf1^\perp}$ carries the whole spectrum; taking the $\psi$'s to be its eigenvectors (a legitimate NPW basis, and Schur–Horn holds in every one), gives $\sum_\psi d^2=\lVert K\rVert_F^2$ on top of the recorded $\sum_\varphi d^2=\tfrac12\lVert K\rVert_F^2$.
 
-**(B) The conditional Schur–Horn bound is exact at the sphere product, not "a factor $2.4$ short".** Two further exact identities, both verified at $n=5,6,8,10$: $\operatorname{tr}\mathring W=0$ and $\lVert\mathring W\rVert_F^2=3\lVert W\rVert_F^2$. So at $\lVert K\rVert_F^2=2$ one has $\sum d^2=3=\sum\omega^2$, and majorization with equal $2$-norms forces $\omega=d$ as multisets, the second spectrum is *determined* by the vertex matrix. Running the corrected diagonal through my rebuild at $n=12$:
+**(B) The conditional Schur–Horn bound is exact at the sphere product, not "a factor $2.4$ short".** Two further exact identities, both verified at $n=5,6,8,10$: $\mathop{\mathrm{tr}}\mathring W=0$ and $\lVert\mathring W\rVert_F^2=3\lVert W\rVert_F^2$. So at $\lVert K\rVert_F^2=2$ one has $\sum d^2=3=\sum\omega^2$, and majorization with equal $2$-norms forces $\omega=d$ as multisets, the second spectrum is *determined* by the vertex matrix. Running the corrected diagonal through my rebuild at $n=12$:
 
 | | $\max p_3(\mu)$ | $\min p_3(\omega)$ | relaxation |
 |---|---|---|---|
@@ -174,4 +174,4 @@ Full report: [reviews/REVIEW_r102.md](reviews/REVIEW_r102.md). Independent build
 
 **Two corrections larger than any verdict, both of which strengthen Schur–Horn rather than weakening it.** $\sum d^2=\tfrac32\lVert K\rVert_F^2$, not $\tfrac12$, a threefold undercount, the $\psi$-block of $\mathring W$ being exactly $-K|_{\mathbf1^\perp}$ to $6\times10^{-17}$. And **the conditional bound is exact, not $2.4\times$ short**: with the corrected diagonal, $\sum d^2=3=\sum\omega^2$ at $S^6\times S^6$ forces $\omega=d$ and the relaxation returns $1.2360=\theta_0(12)$; the recorded $2.947$ was a $\varphi$-only artefact.
 
-**The unused constraint, and it is the cycle's most valuable output.** $\operatorname{diag}M$ in the $\varphi$-basis of $\Lambda^2$ is *also* exactly $K$, so $\mu\succ d_\varphi$ is a second Schur–Horn constraint the record has never used, taking $p_3(\mu)$ from $0.9771$ to $0.0225$ at $S^6\times S^6$. Against Reviewer 101's finding that $\tfrac32\max p_3(\mu)=1.4657$ alone exceeds $\theta_0(12)$, this is the difference between a hopeless formulation and a sharp one, and **both constraints run off the same $K$**, the coupling between the two spectra the route has wanted since its first cycle.
+**The unused constraint, and it is the cycle's most valuable output.** $\mathop{\mathrm{diag}}M$ in the $\varphi$-basis of $\Lambda^2$ is *also* exactly $K$, so $\mu\succ d_\varphi$ is a second Schur–Horn constraint the record has never used, taking $p_3(\mu)$ from $0.9771$ to $0.0225$ at $S^6\times S^6$. Against Reviewer 101's finding that $\tfrac32\max p_3(\mu)=1.4657$ alone exceeds $\theta_0(12)$, this is the difference between a hopeless formulation and a sharp one, and **both constraints run off the same $K$**, the coupling between the two spectra the route has wanted since its first cycle.

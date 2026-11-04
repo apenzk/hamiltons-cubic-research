@@ -63,7 +63,7 @@ The fourth-order value at the stationary corrector is $\tfrac34\langle Bu,u\rang
 
 **The block's reading wins**: the equality needs no positivity, which licenses only the word *supremum*, without it $f(\Pi u+sw_0)\to+\infty$ while $f(\Pi u)=0$ is untouched. **[results.md](../results.md)'s conditional is true, strictly weaker, and its guard is non-vacuous**, so it is brought to the block's form rather than deleted.
 
-**And the missing $\lVert z\rVert^4$ has a hard witness.** On $\mathrm{Sym}_0(3)$ with $P=\operatorname{tr}A^3$ and $SO(3)$ acting by conjugation, at $W=\tfrac1{\sqrt6}\operatorname{diag}(2,-1,-1)$ and $X=E_{12}-E_{21}$: **the printed display returns $[t^4]=\sqrt6/2>0$ on an orbit along which $P$ is constant.** The normalised one returns $0$.
+**And the missing $\lVert z\rVert^4$ has a hard witness.** On $\mathrm{Sym}_0(3)$ with $P=\mathop{\mathrm{tr}}A^3$ and $SO(3)$ acting by conjugation, at $W=\tfrac1{\sqrt6}\mathop{\mathrm{diag}}(2,-1,-1)$ and $X=E_{12}-E_{21}$: **the printed display returns $[t^4]=\sqrt6/2>0$ on an orbit along which $P$ is constant.** The normalised one returns $0$.
 
 ### The repairs, all applied
 

@@ -12,7 +12,7 @@ The brief ([BRIEF_L88.md](BRIEF_L88.md)) was cold. No numerical work was done: e
 | 4 | every block is of real type, so each $M_\lambda$ carries a real structure and the invariant form is real symmetric in a real basis | CONFIRMED (classical import unfiled, hypotheses match, conclusion routed through Passage B) |
 | 5 | "the $24$ directions a Hermitian ansatz offers beyond the $65$ are ... of $\Lambda^2$ ... and they are gauge" | GAP |
 | 5a | an antisymmetric form contributes nothing to the sextic | CONFIRMED AS ALGEBRA |
-| 6 | "On a multiplicity-$2$ block the kernel direction is the imaginary coordinate iff $\operatorname{Im}h=0$" | REFUTED AS STATED (by the passage's own example $Q=\mathrm{diag}(1,i)$) |
+| 6 | "On a multiplicity-$2$ block the kernel direction is the imaginary coordinate iff $\mathop{\mathrm{Im}}h=0$" | REFUTED AS STATED (by the passage's own example $Q=\mathrm{diag}(1,i)$) |
 | 6a | the "$4000$ bases", relative distance $\ge0.541$, and the measured $h$ on $(2,0)$ | HYPOTHESIS-DEBT |
 | 6b | $Q=\mathrm{diag}(1,i)$ gives $h=I$ with a real symmetric kernel direction | CONFIRMED AS ALGEBRA (under the reading of $h$ and $Q$ fixed in section 0) |
 
@@ -141,7 +141,7 @@ The candidate survives step 3 as a missing step, not as a false claim. **Row 5: 
 
 ### 4.3 Positive semidefiniteness
 
-The passage makes no claim about the cone. Recorded as withdrawn candidate W3, with one statement owed if the reduction from the Hermitian to the real symmetric ansatz is used anywhere for feasibility: that $H\succeq0$ implies $\operatorname{Re}H\succeq0$ in a real basis.
+The passage makes no claim about the cone. Recorded as withdrawn candidate W3, with one statement owed if the reduction from the Hermitian to the real symmetric ansatz is used anywhere for feasibility: that $H\succeq0$ implies $\mathop{\mathrm{Re}}H\succeq0$ in a real basis.
 
 **Falsifier and search.** For 5a, an antisymmetric form with a nonzero diagonal value: impossible over a field of characteristic not $2$. For C1, a coordinate complement that is not $\Lambda^2$: exhibited above, $P=\mathrm{diag}(1,i)$.
 
@@ -151,9 +151,9 @@ The passage makes no claim about the cone. Recorded as withdrawn candidate W3, w
 
 ### 5.1 Candidate C2, the "iff"
 
-1. **Location.** "On a multiplicity-$2$ block the kernel direction is the imaginary coordinate iff $\operatorname{Im}h=0$".
-2. **Failure.** Two sentences later: "$Q=\mathrm{diag}(1,i)$ gives $h=I$ with a real symmetric kernel direction". Here $\operatorname{Im}h=\operatorname{Im}I=0$, and the kernel direction is real symmetric, which is never the imaginary coordinate: a nonzero multiple of $iJ$ is purely imaginary and antisymmetric. That is a counterexample to the "if" half of the "iff" taken from the passage itself, and it does not depend on my reading of $h$. Under the section 0 reading it is also exact: $h=P^*P=\mathrm{diag}(1,-i)\,\mathrm{diag}(1,i)=I$, and the kernel direction in $v$-coordinates is $X_v=P^*(iJ)P=\mathrm{diag}(1,-i)\begin{psmallmatrix}0&i\\-i&0\end{psmallmatrix}\mathrm{diag}(1,i)=\begin{psmallmatrix}0&-1\\-1&0\end{psmallmatrix}$, real symmetric.
-3. **Charitable reading.** "iff" was meant as "only if" (kernel direction equal to the imaginary coordinate implies $\operatorname{Im}h=0$), and "The converse fails too" is the author retracting the "if" half. Under that reading the sentence is not false, but as written it asserts both halves, and the text contains both the assertion and its counterexample.
+1. **Location.** "On a multiplicity-$2$ block the kernel direction is the imaginary coordinate iff $\mathop{\mathrm{Im}}h=0$".
+2. **Failure.** Two sentences later: "$Q=\mathrm{diag}(1,i)$ gives $h=I$ with a real symmetric kernel direction". Here $\mathop{\mathrm{Im}}h=\mathop{\mathrm{Im}}I=0$, and the kernel direction is real symmetric, which is never the imaginary coordinate: a nonzero multiple of $iJ$ is purely imaginary and antisymmetric. That is a counterexample to the "if" half of the "iff" taken from the passage itself, and it does not depend on my reading of $h$. Under the section 0 reading it is also exact: $h=P^*P=\mathrm{diag}(1,-i)\,\mathrm{diag}(1,i)=I$, and the kernel direction in $v$-coordinates is $X_v=P^*(iJ)P=\mathrm{diag}(1,-i)\begin{psmallmatrix}0&i\\-i&0\end{psmallmatrix}\mathrm{diag}(1,i)=\begin{psmallmatrix}0&-1\\-1&0\end{psmallmatrix}$, real symmetric.
+3. **Charitable reading.** "iff" was meant as "only if" (kernel direction equal to the imaginary coordinate implies $\mathop{\mathrm{Im}}h=0$), and "The converse fails too" is the author retracting the "if" half. Under that reading the sentence is not false, but as written it asserts both halves, and the text contains both the assertion and its counterexample.
 
 **Row 6: REFUTED AS STATED.** Corrected form: "only if". The "only if" half has no argument on file, and I did not construct an object that refutes it.
 
@@ -174,7 +174,7 @@ No finding: both Lean files were withheld from the brief and were not opened.
 
 - **W1. "An SOS Gram is an invariant quadratic form on $\mathrm{Sym}^3(\mathcal W_5)$."** (1) Line 122 of [findings/sym3-blocks.md](../findings/sym3-blocks.md), quoted in Passage A. (2) Read literally, an invariant sextic's SOS Grams need not be invariant: the kernel of $\mathrm{Sym}^2(U)\to\mathrm{Sym}^6$ is a nonzero $G$-subrepresentation of dimension far above $65$, so it contains non-invariant elements $K$, and $G_0+\varepsilon K$ is a non-invariant Gram whenever $G_0$ is positive definite. (3) The sentence concludes "so the unknowns are $\mathrm{Sym}^2(\ldots)^{O(5)}$", a statement about the symmetry-reduced ansatz, which loses no generality by averaging (U2). **Withdrawn at step 3.** Step 2 also could not be exhibited in closed form, since no specific sextic with a positive definite Gram is on file. U2 is recorded in the inventory.
 - **W2. "The invariant form is real symmetric in a real basis"** read as any invariant Hermitian form. (1) Passage A, third paragraph. (2) $X_e=iJ$ on an $m=2$ block is invariant, Hermitian, and not real symmetric in the real basis. (3) The sentence's subject is the SOS Gram (a real quadratic form) or $h$, both real symmetric in a real basis. **Withdrawn at step 3.**
-- **W3. "They are gauge"** read as free directions of the PSD feasible set. (1) Passage A, "and they are gauge". (2) On an $m=2$ block, $X_e=I+2iJ=\begin{psmallmatrix}1&2i\\-2i&1\end{psmallmatrix}$ has eigenvalues $3$ and $-1$, so it is not positive semidefinite while $\operatorname{Re}X_e=I$ is and has the same sextic: the $\Lambda^2$ directions are not free inside the cone. (3) The sentence derives "gauge" from "nothing to the sextic", a statement about the linear map, and asserts nothing about the cone. **Withdrawn at step 3.** If the record anywhere relies on Hermitian and real symmetric feasibility coinciding, the statement owed is $H\succeq0\Rightarrow\operatorname{Re}H\succeq0$ in a real basis.
+- **W3. "They are gauge"** read as free directions of the PSD feasible set. (1) Passage A, "and they are gauge". (2) On an $m=2$ block, $X_e=I+2iJ=\begin{psmallmatrix}1&2i\\-2i&1\end{psmallmatrix}$ has eigenvalues $3$ and $-1$, so it is not positive semidefinite while $\mathop{\mathrm{Re}}X_e=I$ is and has the same sextic: the $\Lambda^2$ directions are not free inside the cone. (3) The sentence derives "gauge" from "nothing to the sextic", a statement about the linear map, and asserts nothing about the cone. **Withdrawn at step 3.** If the record anywhere relies on Hermitian and real symmetric feasibility coinciding, the statement owed is $H\succeq0\Rightarrow\mathop{\mathrm{Re}}H\succeq0$ in a real basis.
 - **W4. "Integral for $B_2$"** as a false criterion (in the Lie-theoretic sense spin weights are integral too). (1) Passage A, third paragraph. (2) $(\tfrac12,\tfrac12)$ is an integral weight of $\mathfrak{so}(5)$ and is quaternionic. (3) "The half-integral spin ones" fixes the $\varepsilon$-coordinate meaning, the one Passage B's formulas use. **Withdrawn at step 3**, recorded as U5.
 
 ## 8. Standing items
@@ -188,4 +188,4 @@ No finding: both Lean files were withheld from the brief and were not opened.
 
 ## Overall verdict
 
-**HYPOTHESIS-DEBT.** Lemma L88's two dimensions have no argument on file beyond a script and measured multiplicities, though they do follow arithmetically from Passage B. Its gauge claim holds for the sextic map but identifies the excess directions with $\Lambda^2$ through a dimension match (GAP, owed U4). Within the supporting remark, the "iff $\operatorname{Im}h=0$" is REFUTED AS STATED by the remark's own example, corrected to "only if".
+**HYPOTHESIS-DEBT.** Lemma L88's two dimensions have no argument on file beyond a script and measured multiplicities, though they do follow arithmetically from Passage B. Its gauge claim holds for the sextic map but identifies the excess directions with $\Lambda^2$ through a dimension match (GAP, owed U4). Within the supporting remark, the "iff $\mathop{\mathrm{Im}}h=0$" is REFUTED AS STATED by the remark's own example, corrected to "only if".

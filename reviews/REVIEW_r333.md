@@ -22,11 +22,11 @@ $$\lambda_a\sum_{b,c}\lambda_b\lambda_c T_{abc}\;=\;2\lambda_a^2(\theta-\lambda_
 
 Sum over $a$:
 
-$$\sum_{a,b,c}\lambda_a\lambda_b\lambda_c T_{abc}\;=\;2\theta\sum_a\lambda_a^2-2\sum_a\lambda_a^3\;=\;2\theta\lVert W\rVert^2-2\operatorname{tr}W^3\;\overset{\lVert W\rVert=1}{=}\;2\theta-2\operatorname{tr}W^3 .$$
+$$\sum_{a,b,c}\lambda_a\lambda_b\lambda_c T_{abc}\;=\;2\theta\sum_a\lambda_a^2-2\sum_a\lambda_a^3\;=\;2\theta\lVert W\rVert^2-2\mathop{\mathrm{tr}}W^3\;\overset{\lVert W\rVert=1}{=}\;2\theta-2\mathop{\mathrm{tr}}W^3 .$$
 
-The record's cubic identity is $\theta=\operatorname{tr}W^3+\tfrac12\sum_{abc}\lambda_a\lambda_b\lambda_cT_{abc}$, i.e. $\sum_{abc}\lambda_a\lambda_b\lambda_cT_{abc}=2\theta-2\operatorname{tr}W^3$. **Identical.** Substituting one into the other returns $\theta=\theta$.
+The record's cubic identity is $\theta=\mathop{\mathrm{tr}}W^3+\tfrac12\sum_{abc}\lambda_a\lambda_b\lambda_cT_{abc}$, i.e. $\sum_{abc}\lambda_a\lambda_b\lambda_cT_{abc}=2\theta-2\mathop{\mathrm{tr}}W^3$. **Identical.** Substituting one into the other returns $\theta=\theta$.
 
-For completeness, the cubic identity itself is nothing but (C) contracted: $\langle W,W^\#\rangle=\sum_a\lambda_a\langle\varphi_a,W^\#\varphi_a\rangle=\tfrac12\sum_{abc}\lambda_a\lambda_b\lambda_cT_{abc}$, and $P(W)=\operatorname{tr}W^3+\langle W,W^\#\rangle=\theta\lVert W\rVert^2$. So the record is right that the two are one relation, and right that the cubic identity is **not** an extra constraint on the pinned system. The unit-norm hypothesis is used and is present in the setting. **CONFIRMED.**
+For completeness, the cubic identity itself is nothing but (C) contracted: $\langle W,W^\#\rangle=\sum_a\lambda_a\langle\varphi_a,W^\#\varphi_a\rangle=\tfrac12\sum_{abc}\lambda_a\lambda_b\lambda_cT_{abc}$, and $P(W)=\mathop{\mathrm{tr}}W^3+\langle W,W^\#\rangle=\theta\lVert W\rVert^2$. So the record is right that the two are one relation, and right that the cubic identity is **not** an extra constraint on the pinned system. The unit-norm hypothesis is used and is present in the setting. **CONFIRMED.**
 
 ### 1.2 The inference from it is a non sequitur
 
@@ -47,7 +47,7 @@ Averaging the rows over each value class $x$ (with $n_x(\tau)$ the multiplicity 
 $$\text{(A)}_x:\ \sum_\tau n_x(\tau)M_\tau=(n-2)m_x,\qquad \text{(B)}_x:\ \sum_\tau n_x(\tau)(S_\tau-x)M_\tau=-2x\,m_x,$$
 $$\text{(C)}_x:\ 2\sum_\tau n_x(\tau)P_{\tau,x}M_\tau=2x(\theta-x)m_x .$$
 
-**Two dependencies, by hand, and both need $\operatorname{tr}W=0$.** Total symmetry of $T$ gives $\sum_{abc}\lambda_bT_{abc}=\sum_{abc}\lambda_aT_{abc}$, so $\sum_a B_a-\sum_a\lambda_aA_a$ reads $-2\sum\lambda_a=2(n-2)\sum\lambda_a$, vacuous at $\operatorname{tr}W=0$. Likewise $\sum_{abc}\lambda_a\lambda_bT_{abc}=\sum_{abc}\lambda_b\lambda_cT_{abc}$ makes $\sum_a\lambda_aB_a$ and $\sum_aC_a$ differ by $2\theta\sum\lambda_a$, vacuous again. So the expected rank is $3d-2$. *(Note that $\sum_a\lambda_aC_a$ is **not** a third dependency, it is the cubic identity of §1.1, a genuine equation. That is exactly why §1.1 buys nothing here.)*
+**Two dependencies, by hand, and both need $\mathop{\mathrm{tr}}W=0$.** Total symmetry of $T$ gives $\sum_{abc}\lambda_bT_{abc}=\sum_{abc}\lambda_aT_{abc}$, so $\sum_a B_a-\sum_a\lambda_aA_a$ reads $-2\sum\lambda_a=2(n-2)\sum\lambda_a$, vacuous at $\mathop{\mathrm{tr}}W=0$. Likewise $\sum_{abc}\lambda_a\lambda_bT_{abc}=\sum_{abc}\lambda_b\lambda_cT_{abc}$ makes $\sum_a\lambda_aB_a$ and $\sum_aC_a$ differ by $2\theta\sum\lambda_a$, vacuous again. So the expected rank is $3d-2$. *(Note that $\sum_a\lambda_aC_a$ is **not** a third dependency, it is the cubic identity of §1.1, a genuine equation. That is exactly why §1.1 buys nothing here.)*
 
 **Screened, exact rationals** ([screen_typecount.py](../scripts/reviewers/r333/screen_typecount.py)), rank $=3d-2$ at every traceless spectrum, as derived:
 
@@ -73,7 +73,7 @@ $\theta$ moves along it at rate $25/4$. What stops it is that $M_{\mathfrak{hhh}
 ### 1.4 What this means for the record and for T9
 
 - The sentence at [bounds.md](../findings/bounds.md) beginning *"That is the structural reason…"* must be **withdrawn**, together with *"r331's screen is measuring a consistency condition, not a maximisation."* It is a maximisation, and the record already held the right explanation: r331 §4's *"positivity converts the three relations into the full type distribution."*
-- **What is still free at a fixed spectrum**, precisely: $\theta$ is a linear functional of $T$; the free object is $T$ itself, ranging over a polytope of dimension $\binom I3-\operatorname{rank}$, with $\operatorname{rank}=3N-2$ at the index level. Its $G$-invariant shadow (the type masses, which is all $\theta$ sees), has nullity $\binom{d+2}{3}+1-(3d-2)$ before multiplicity caps: $1$ at $d=2$, $4$ at $d=3$, $11$ at $d=4$, $22$ at $d=5$.
+- **What is still free at a fixed spectrum**, precisely: $\theta$ is a linear functional of $T$; the free object is $T$ itself, ranging over a polytope of dimension $\binom I3-\mathop{\mathrm{rank}}$, with $\mathop{\mathrm{rank}}=3N-2$ at the index level. Its $G$-invariant shadow (the type masses, which is all $\theta$ sees), has nullity $\binom{d+2}{3}+1-(3d-2)$ before multiplicity caps: $1$ at $d=2$, $4$ at $d=3$, $11$ at $d=4$, $22$ at $d=5$.
 - **That growth is the actionable consequence.** Every spectrum r331 screened has $d\le3$. The nullity positivity must close grows like $d^3/6$ against $3d$, so **exactness at $d\le3$ is no evidence at all for $d\ge4$**, and T9 should be run first at a $d\ge4$ spectrum. The record's current reading predicts exactness everywhere and therefore predicts nothing; the positivity reading predicts the grip weakens with $d$ and is falsifiable.
 
 ---
@@ -94,7 +94,7 @@ $\theta$ moves along it at rate $25/4$. What stops it is that $M_{\mathfrak{hhh}
 
 **The deduction.** $\mathbb E_{\mu_a}[(\lambda_b+\lambda_c)/2]$ averages values in $[\lambda_{\min},\lambda_{\max}]$, so $\lambda_{\min}\le-\lambda_a/(n-2)\le\lambda_{\max}$ for every $a$. At $a=\arg\max$: $\lambda_{\min}\le-\lambda_{\max}/(n-2)$, i.e. $\lambda_{\max}\le(n-2)\lvert\lambda_{\min}\rvert$. At $a=\arg\min$: $-\lambda_{\min}/(n-2)\le\lambda_{\max}$, i.e. $\lvert\lambda_{\min}\rvert\le(n-2)\lambda_{\max}$. Both correct, and both free of $\theta$.
 
-**Is it implied by tracelessness? No, and by a wide margin.** $\operatorname{tr}W=0$ gives $\lambda_{\max}\le\sum_{\lambda<0}\lvert\lambda\rvert\le(N-1)\lvert\lambda_{\min}\rvert$ with $N=\binom n2$, and that is the best tracelessness affords, the extremal configuration $\lambda=(c,-c/(N-1),\dots)$ attains it. That configuration violates the new condition whenever $N-1>n-2$, i.e. $(n-1)(n-2)>0$, **true for every $n\ge3$.** So the condition excludes a nonempty set of traceless unit spectra at every dimension, and it is stronger than tracelessness by a factor $\sim N/n\sim n/2$.
+**Is it implied by tracelessness? No, and by a wide margin.** $\mathop{\mathrm{tr}}W=0$ gives $\lambda_{\max}\le\sum_{\lambda<0}\lvert\lambda\rvert\le(N-1)\lvert\lambda_{\min}\rvert$ with $N=\binom n2$, and that is the best tracelessness affords, the extremal configuration $\lambda=(c,-c/(N-1),\dots)$ attains it. That configuration violates the new condition whenever $N-1>n-2$, i.e. $(n-1)(n-2)>0$, **true for every $n\ge3$.** So the condition excludes a nonempty set of traceless unit spectra at every dimension, and it is stronger than tracelessness by a factor $\sim N/n\sim n/2$.
 
 **Against the catalogue** (r331's scaled data; the two columns are $\lambda_{\max}$ vs $(n-2)\lvert\lambda_{\min}\rvert$ and $\lvert\lambda_{\min}\rvert$ vs $(n-2)\lambda_{\max}$):
 
@@ -116,7 +116,7 @@ $\theta$ moves along it at rate $25/4$. What stops it is that $M_{\mathfrak{hhh}
 
 ## 4. R3, Lemma L70 relocated. CONFIRMED, and the relocation is exact rather than approximate
 
-Take (C) at an index $a$ with $\lambda_a=\lambda_{\min}$. With $\lambda_{\min}<0\le\lambda_{\max}$ (supplied by $\operatorname{tr}W=0$, the hypothesis the record already added), every product satisfies $\lambda_b\lambda_c\ge\lambda_{\min}\lambda_{\max}$: if $\lambda_b,\lambda_c$ share a sign the product is $\ge0\ge\lambda_{\min}\lambda_{\max}$; if they differ, $\lvert\lambda_b\lambda_c\rvert\le\lvert\lambda_{\min}\rvert\lambda_{\max}$ and the product is negative, so again $\ge\lambda_{\min}\lambda_{\max}$. Hence
+Take (C) at an index $a$ with $\lambda_a=\lambda_{\min}$. With $\lambda_{\min}<0\le\lambda_{\max}$ (supplied by $\mathop{\mathrm{tr}}W=0$, the hypothesis the record already added), every product satisfies $\lambda_b\lambda_c\ge\lambda_{\min}\lambda_{\max}$: if $\lambda_b,\lambda_c$ share a sign the product is $\ge0\ge\lambda_{\min}\lambda_{\max}$; if they differ, $\lvert\lambda_b\lambda_c\rvert\le\lvert\lambda_{\min}\rvert\lambda_{\max}$ and the product is negative, so again $\ge\lambda_{\min}\lambda_{\max}$. Hence
 
 $$\frac{\lambda_{\min}(\theta-\lambda_{\min})}{n-2}=\mathbb E_{\mu_a}[\lambda_b\lambda_c]\;\ge\;\lambda_{\min}\lambda_{\max}.$$
 
@@ -140,7 +140,7 @@ which rearranges to Lemma L70's boxed identity $\theta=\lambda_{\min}+(n-2)\lamb
 
 **The asymmetry. CONFIRMED.** (A), (B), (C) with $T\ge0$ are necessary conditions on every $\theta$-critical unit $W\in\mathcal W_n$, so:
 
-- *Infeasibility is conclusive.* If no $(\lambda,T)$ with $\operatorname{tr}=0$, $\lVert\lambda\rVert=1$, $T\ge0$ satisfies the rows with $\theta>\theta_0(n)$, then no critical point has $\theta>\theta_0(n)$. Combined with the standard fact that on the compact unit sphere $\nabla P=3Q(W)$, so a constrained critical point has $Q(W)=\theta W$ and $P(W)=\theta$ there, this gives $\max_{\lVert W\rVert=1}P\le\theta_0(n)$, attained at the balanced product. The conjecture closes. The domain is legitimate and compact: $\operatorname{tr}W=0$ holds on $\mathcal W_n$ by Ricci-flatness.
+- *Infeasibility is conclusive.* If no $(\lambda,T)$ with $\mathop{\mathrm{tr}}=0$, $\lVert\lambda\rVert=1$, $T\ge0$ satisfies the rows with $\theta>\theta_0(n)$, then no critical point has $\theta>\theta_0(n)$. Combined with the standard fact that on the compact unit sphere $\nabla P=3Q(W)$, so a constrained critical point has $Q(W)=\theta W$ and $P(W)=\theta$ there, this gives $\max_{\lVert W\rVert=1}P\le\theta_0(n)$, attained at the balanced product. The conjecture closes. The domain is legitimate and compact: $\mathop{\mathrm{tr}}W=0$ holds on $\mathcal W_n$ by Ricci-flatness.
 - *Feasibility is not conclusive.* A feasible $(\lambda,T)$ needs two further things the pinned system never sees: $\lambda$ must be some Weyl tensor's spectrum, and $T$ must be realizable as $\langle[v_a,v_b],v_c\rangle^2$ in that tensor's eigenbasis. Both are open. Right as recorded.
 
 **The taxonomy. REFUTED AS STATED.** The record's three cells are (i) infeasible above $\theta_0$ everywhere (closed; (ii) feasible above $\theta_0$ only at demonstrably non-realizable spectra), redirect; (iii) feasible above $\theta_0$ at a spectrum nobody can rule out, no information. Three defects:
@@ -156,7 +156,7 @@ which rearranges to Lemma L70's boxed identity $\theta=\lambda_{\min}+(n-2)\lamb
 ## 6. What the record should change
 
 1. **[bounds.md](../findings/bounds.md), "What the pinned relaxation can and cannot decide":** keep the contraction (it is correct and it does establish that the cubic identity adds nothing to (C)). **Withdraw** *"That is the structural reason the relaxation returns the true $\theta$"* and *"measuring a consistency condition, not a maximisation."* Replace with the positivity mechanism and the torus worked example of §1.3, and with the nullity table, the linear rows leave $\theta$ free at six of seven catalogued spectra.
-2. **Add the rank law** $\operatorname{rank}=3d-2$ for the value-averaged pinned system, with its two hand-derived dependencies, and the nullity $\binom{d+2}{3}+1-(3d-2)$. It is what makes r331's seven-for-seven interpretable, and it says the evidence is confined to $d\le3$.
+2. **Add the rank law** $\mathop{\mathrm{rank}}=3d-2$ for the value-averaged pinned system, with its two hand-derived dependencies, and the nullity $\binom{d+2}{3}+1-(3d-2)$. It is what makes r331's seven-for-seven interpretable, and it says the evidence is confined to $d\le3$.
 3. **[plan.md](../plan.md) T9:** the first run should be at a $d\ge4$ spectrum, where the positivity reading and the withdrawn structural reading make opposite predictions. Add cell (iii) of §5 to the outcome list, and record that outcome (i) requires a certified global bound over the spectral domain, not a solver's best point.
 4. **R2's condition deserves a number.** It is purely spectral, $\theta$-free, strictly stronger than tracelessness at every $n\ge3$, saturated at both maximal tori and at $\mathbb{CP}^3$, and its equality case reads off as $[\mathfrak h,\mathfrak h]=0$ at the torus. Record the support-restricted sharpening of §2 alongside it.
 5. **Lemma L70:** record that it spends one row of (A) and one row of (C) and drops (B) and $2(N-1)$ rows, that, rather than the tautological slack identity, is why the full system beats it by $2.1$ at $\mathbb{CP}^3$.

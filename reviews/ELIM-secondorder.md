@@ -1,6 +1,6 @@
 # ELIM-secondorder, criticality-substitution audit of [nondegeneracy.md](../findings/nondegeneracy.md) and [second-order.md](../findings/second-order.md)
 
-Both files read in full. Every bound, reduction, equivalence, "the conjecture becomes…" and "what a successor needs is…" was tested by substituting $W^\#=\theta W-W^2$, $\mathrm{Ric}(W)=0$, first Bianchi and $\operatorname{tr}W=0$. Pure algebra; nothing was run.
+Both files read in full. Every bound, reduction, equivalence, "the conjecture becomes…" and "what a successor needs is…" was tested by substituting $W^\#=\theta W-W^2$, $\mathrm{Ric}(W)=0$, first Bianchi and $\mathop{\mathrm{tr}}W=0$. Pure algebra; nothing was run.
 
 **Headline.** These two files are the *least* affected by the criticality collapse of any part of the record, and the reason is structural: the Hessian operator $L_W$ lives on $\mathrm{Sym}^2(\Lambda^2)$, not on $\Lambda^2$, and criticality pins exactly one of its matrix entries. That is the survivor and it is worth more than the refutations below. But the collapse does reach three things inside these files, the moment hierarchy, the second-kind cubic $C$, and every sentence describing $\langle W^\#,W\rangle$ as "alignment data", and separately there is a **class error in how suprema are certified** that voids at least three headline results.
 
@@ -34,7 +34,7 @@ The record reaches the same conclusion from the other side and states it well: [
 
 The **contrast that makes it precise**: the $\lambda$-weighted total structure mass *does* collapse,
 
-$$\tfrac12\sum_{\alpha\beta\gamma}c'^2_{\alpha\beta\gamma}\lambda_\alpha\lambda_\beta\lambda_\gamma=\langle W,W^\#\rangle=\theta-\operatorname{tr}(W^3),$$
+$$\tfrac12\sum_{\alpha\beta\gamma}c'^2_{\alpha\beta\gamma}\lambda_\alpha\lambda_\beta\lambda_\gamma=\langle W,W^\#\rangle=\theta-\mathop{\mathrm{tr}}(W^3),$$
 
 so a bound on the *weighted* mass is a bound on $\theta$ rearranged, while a bound on the *unweighted, sign-restricted* mass ($=S$) is new. Anything built from $c'^2$ with a full $\lambda\lambda\lambda$ weight is already spent.
 
@@ -62,33 +62,33 @@ $\dim\mathfrak m$ (the count of negative eigenvalues) *is* spectral, but the pai
 
 > [nondegeneracy.md:274](../findings/nondegeneracy.md#L274): *"the cubic that existing estimates bound sharply carries $2/((n-1)(n-2))$ of $\theta$ and vanishes quadratically, while $\langle W^{\#},W\rangle$ (which depends on eigenspace alignment rather than spectrum), carries the rest."*
 
-Substitute: $\langle W^\#,W\rangle=\langle\theta W-W^2,W\rangle=\theta\|W\|^2-\operatorname{tr}(W^3)=\theta-\operatorname{tr}(W^3)$.
+Substitute: $\langle W^\#,W\rangle=\langle\theta W-W^2,W\rangle=\theta\|W\|^2-\mathop{\mathrm{tr}}(W^3)=\theta-\mathop{\mathrm{tr}}(W^3)$.
 
-So at a critical point $\langle W^\#,W\rangle$ is $\theta$ minus a purely spectral quantity. "Carries the rest" is not an observation, it is $\theta=\operatorname{tr}(W^3)+\langle W^\#,W\rangle$ read left to right. The alignment content of $\langle W^\#,W\rangle$ is *entirely consumed* by criticality; what remains free is $\operatorname{tr}(W^3)$, which is spectral. The clause should be struck. (The closed form $\operatorname{tr}(W^3)/\theta=2/((n-1)(n-2))$ at the balanced product is a genuine computation and survives; only the "alignment" framing is the tautology.)
+So at a critical point $\langle W^\#,W\rangle$ is $\theta$ minus a purely spectral quantity. "Carries the rest" is not an observation, it is $\theta=\mathop{\mathrm{tr}}(W^3)+\langle W^\#,W\rangle$ read left to right. The alignment content of $\langle W^\#,W\rangle$ is *entirely consumed* by criticality; what remains free is $\mathop{\mathrm{tr}}(W^3)$, which is spectral. The clause should be struck. (The closed form $\mathop{\mathrm{tr}}(W^3)/\theta=2/((n-1)(n-2))$ at the balanced product is a genuine computation and survives; only the "alignment" framing is the tautology.)
 
-### T2. The whole moment hierarchy collapses to $(n,\theta,\operatorname{tr}W^3)$, including the third moment the record calls "the first to see $b$ at all".
+### T2. The whole moment hierarchy collapses to $(n,\theta,\mathop{\mathrm{tr}}W^3)$, including the third moment the record calls "the first to see $b$ at all".
 
 > [second-order.md:68](../findings/second-order.md#L68): *"With $a=\langle W^2,W\rangle$, $b=\langle W^{\#}W,W\rangle$ and $\theta=a+b$, it gives $S_3=((n^2-1)b-(5n-1)\theta)/(8\theta^3)$, the first moment to see $b$ at all."*
 
 The stated relation $\theta=a+b$ forces $b=\langle W^\#,W\rangle$ (whatever the notation $\langle x^\#x,x\rangle$ was meant to denote, **the notation is ambiguous and load-bearing, and should be fixed**). Under that reading, T1 gives $b=\theta-a$, so
 
-$$S_3=\frac{(n^2-1)(\theta-a)-(5n-1)\theta}{8\theta^3}=\frac{(n^2-5n)\theta-(n^2-1)a}{8\theta^3},\qquad a=\operatorname{tr}(W^3).$$
+$$S_3=\frac{(n^2-1)(\theta-a)-(5n-1)\theta}{8\theta^3}=\frac{(n^2-5n)\theta-(n^2-1)a}{8\theta^3},\qquad a=\mathop{\mathrm{tr}}(W^3).$$
 
-The third moment sees $\operatorname{tr}(W^3)$, not alignment. And the record's own combination collapses the same way:
+The third moment sees $\mathop{\mathrm{tr}}(W^3)$, not alignment. And the record's own combination collapses the same way:
 
 $$\tfrac12S_2-S_3=\frac{(n+1)\big[2n\theta-(n-1)b\big]}{8\theta^3}\ \xrightarrow{\ b=\theta-a\ }\ \frac{(n+1)\big[(n+1)\theta+(n-1)a\big]}{8\theta^3}.$$
 
 Consequence, stronger than the record's own closure: with $S_2=\kappa_n/\theta^2$ pinned and $S_3$ reduced to $(\theta,a)$, **the localizing-matrix inequality at [second-order.md:70](../findings/second-order.md#L70) is an inequality in the two scalars $(\theta,a)$ and the parameter $n$.** It can never separate $\theta\le\theta_0$ from $\theta>\theta_0$ unless $a$ is independently pinned. The record kills the moment method for a weaker reason ("every bound is a *lower* bound"); the real reason is that after substitution there is only one free scalar left in the entire hierarchy, and the record itself proves that scalar is asymptotically negligible ($a/\theta=2/((n-1)(n-2))$ at the conjectured maximiser). **Recommend replacing the recorded reason with this one**, it is the fence, and it is dimension-uniform.
 
-### T3. $\theta=6\operatorname{tr}(W^3)+\tfrac18C$ is the definition of $P$ rearranged, and needs no criticality at all.
+### T3. $\theta=6\mathop{\mathrm{tr}}(W^3)+\tfrac18C$ is the definition of $P$ rearranged, and needs no criticality at all.
 
-> [nondegeneracy.md:241](../findings/nondegeneracy.md#L241): *"$C(W)=-40\operatorname{tr}(W^3)+8\langle W^{\#},W\rangle$, hence $\theta=6\operatorname{tr}(W^3)+\tfrac18C$."*
+> [nondegeneracy.md:241](../findings/nondegeneracy.md#L241): *"$C(W)=-40\mathop{\mathrm{tr}}(W^3)+8\langle W^{\#},W\rangle$, hence $\theta=6\mathop{\mathrm{tr}}(W^3)+\tfrac18C$."*
 
-$P(W)=\operatorname{tr}(W^3)+\langle W^\#,W\rangle$ by definition, so $\langle W^\#,W\rangle=P-\operatorname{tr}W^3$ and
+$P(W)=\mathop{\mathrm{tr}}(W^3)+\langle W^\#,W\rangle$ by definition, so $\langle W^\#,W\rangle=P-\mathop{\mathrm{tr}}W^3$ and
 
-$$C=-40\operatorname{tr}W^3+8(P-\operatorname{tr}W^3)=8P-48\operatorname{tr}W^3\iff P=6\operatorname{tr}W^3+\tfrac18C.$$
+$$C=-40\mathop{\mathrm{tr}}W^3+8(P-\mathop{\mathrm{tr}}W^3)=8P-48\mathop{\mathrm{tr}}W^3\iff P=6\mathop{\mathrm{tr}}W^3+\tfrac18C.$$
 
-The "hence" is a division by 8. The two boxed identities are one identity. Consequently, on the critical set $C=8\theta-48\operatorname{tr}(W^3)$, i.e. $\tfrac18C=\langle W^\#,W\rangle-5\operatorname{tr}(W^3)$: **bounding $C$ above is bounding $\langle W^\#,W\rangle$ above modulo a spectral cubic**, the hard half of the target with a spectral term subtracted from both sides. This is the R14 pattern. The record closes the route for a different and also-valid reason (loose by $1.45\times$ at the extremiser), but the substitution shows it was never a reduction, and the sentence [*"$\theta$ has only to lie in the span of the two cubics, which it does"*](../findings/nondegeneracy.md#L245) is true because that span is *defined* to contain $\theta$. That sentence should not be read as support for the route.
+The "hence" is a division by 8. The two boxed identities are one identity. Consequently, on the critical set $C=8\theta-48\mathop{\mathrm{tr}}(W^3)$, i.e. $\tfrac18C=\langle W^\#,W\rangle-5\mathop{\mathrm{tr}}(W^3)$: **bounding $C$ above is bounding $\langle W^\#,W\rangle$ above modulo a spectral cubic**, the hard half of the target with a spectral term subtracted from both sides. This is the R14 pattern. The record closes the route for a different and also-valid reason (loose by $1.45\times$ at the extremiser), but the substitution shows it was never a reduction, and the sentence [*"$\theta$ has only to lie in the span of the two cubics, which it does"*](../findings/nondegeneracy.md#L245) is true because that span is *defined* to contain $\theta$. That sentence should not be read as support for the route.
 
 ### T4. "The conjecture becomes a minimisation" is a restatement, and the record says so two clauses later.
 
@@ -104,9 +104,9 @@ $\|L_e\|_F^2=\kappa_W/\theta^2$ holds at **every unit element**, critical or not
 
 [nondegeneracy.md:430](../findings/nondegeneracy.md#L430) diagnoses that the "exact $\theta$ formula" is the definition of $S$ rearranged, and that converting $S\ge c$ into $\theta\le\theta_0$ silently assumes something strictly stronger than the target. **That is the same failure mode this audit hunts, found independently, and it is the model of how it should be written up.** Credited, not re-litigated.
 
-### I28. $\operatorname{tr}(W^\#)=-1$ is tracelessness plus normalisation, and it is what makes the LP look sharp.
+### I28. $\mathop{\mathrm{tr}}(W^\#)=-1$ is tracelessness plus normalisation, and it is what makes the LP look sharp.
 
-$\operatorname{tr}(X^\#)=-\|X\|^2$ on $\mathrm{Weyl}_n$ is a universal identity ([second-order.md:194](../findings/second-order.md#L194)); at a critical point it also follows from $W^\#=\theta W-W^2$ with $\operatorname{tr}W=0$, $\operatorname{tr}W^2=1$. Either way it carries no information about $W$ beyond its norm. See W1.
+$\mathop{\mathrm{tr}}(X^\#)=-\|X\|^2$ on $\mathrm{Weyl}_n$ is a universal identity ([second-order.md:194](../findings/second-order.md#L194)); at a critical point it also follows from $W^\#=\theta W-W^2$ with $\mathop{\mathrm{tr}}W=0$, $\mathop{\mathrm{tr}}W^2=1$. Either way it carries no information about $W$ beyond its norm. See W1.
 
 ---
 
@@ -116,11 +116,11 @@ $\operatorname{tr}(X^\#)=-\|X\|^2$ on $\mathrm{Weyl}_n$ is a universal identity 
 
 > [second-order.md:180](../findings/second-order.md#L180): *"On the two-block slice the same relaxation is exactly tight… the value equals $\theta_0(n)$ to $2.2\times10^{-16}$… the LP recovers the sphere product with no geometry supplied."*
 
-Every constraint the LP carries is an $O(n)$-invariant of $c$ alone: the row marginal $\sum_{bc}T_{abc}=2(n-2)$, the pair cap $\sum_cT_{abc}\le2$, and $\operatorname{tr}(W^\#)=-1$. None of them references $W$'s eigenframe. So the LP is solving a problem in which the only free variable identified in S2 does not appear, which is exactly why "what the constraints omit is frame-realizability" is the whole story. The record's own ablation ([second-order.md:182](../findings/second-order.md#L182)) finds that the row marginals plus $\operatorname{tr}(W^\#)=-1$ return $\theta_0(n)$ on their own with every pair cap inactive; by I28 those two are tracelessness and normalisation. **The tightness is the brief's second recorded precedent recurring**, and the record caught it. Recommend the paragraph lead with the ablation rather than with "no geometry supplied".
+Every constraint the LP carries is an $O(n)$-invariant of $c$ alone: the row marginal $\sum_{bc}T_{abc}=2(n-2)$, the pair cap $\sum_cT_{abc}\le2$, and $\mathop{\mathrm{tr}}(W^\#)=-1$. None of them references $W$'s eigenframe. So the LP is solving a problem in which the only free variable identified in S2 does not appear, which is exactly why "what the constraints omit is frame-realizability" is the whole story. The record's own ablation ([second-order.md:182](../findings/second-order.md#L182)) finds that the row marginals plus $\mathop{\mathrm{tr}}(W^\#)=-1$ return $\theta_0(n)$ on their own with every pair cap inactive; by I28 those two are tracelessness and normalisation. **The tightness is the brief's second recorded precedent recurring**, and the record caught it. Recommend the paragraph lead with the ablation rather than with "no geometry supplied".
 
 ### W2. "Huisken's cap is saturated exactly" is likewise forced by tracelessness, verified by hand.
 
-> [nondegeneracy.md:43](../findings/nondegeneracy.md#L43): *"Its relaxation (drop hollowness, keep $\operatorname{tr}\Lambda=0$, $\|\Lambda\|=1$ and $\Lambda\mathbf1=0$), is already sharp: Huisken's cap $(m-2)/\sqrt{m(m-1)}$ on $\sum\mu_i^3$ is saturated exactly by the sphere product's vertex matrix."*
+> [nondegeneracy.md:43](../findings/nondegeneracy.md#L43): *"Its relaxation (drop hollowness, keep $\mathop{\mathrm{tr}}\Lambda=0$, $\|\Lambda\|=1$ and $\Lambda\mathbf1=0$), is already sharp: Huisken's cap $(m-2)/\sqrt{m(m-1)}$ on $\sum\mu_i^3$ is saturated exactly by the sphere product's vertex matrix."*
 
 The cap $(m-2)/\sqrt{m(m-1)}$ is exactly the extremum of $\sum\mu^3$ subject to $\sum\mu=0,\sum\mu^2=1$ on $m$ values, attained **only** at spectra of the shape (one extreme value, $m-1$ equal values). So saturation is equivalent to the vertex matrix having that spectral shape, nothing about the relaxation is being tested.
 
@@ -200,7 +200,7 @@ Random Weyl / random symmetric directions are used in these files to **verify id
 ## What a successor should take from this
 
 1. **Write down the off-diagonal criticality constraints** (S3). $\binom I2$ exact bilinear relations on $c'$ in $W$'s eigenframe, currently unused, in the one variable that is not already spent.
-2. **Replace the moment method's recorded epitaph with T2.** The hierarchy collapses to two scalars $(\theta,\operatorname{tr}W^3)$ and the second is $O(1/n^2)$ at the maximiser. That is dimension-uniform and final, where "only lower bounds" is not.
+2. **Replace the moment method's recorded epitaph with T2.** The hierarchy collapses to two scalars $(\theta,\mathop{\mathrm{tr}}W^3)$ and the second is $O(1/n^2)$ at the maximiser. That is dimension-uniform and final, where "only lower bounds" is not.
 3. **Downgrade every ascent-derived supremum in [second-order.md](../findings/second-order.md) to a lower bound** and reopen the two headings that claim closure (W3). This is bookkeeping, not mathematics, and it currently makes $n=6$ look settled when it is not.
 4. **Repair the four contradictions in W6 and the quantifier in Observation L25** before either file is cited again.
-5. **Stop describing $\langle W^\#,W\rangle$ as alignment data on the critical set** (T1). It is $\theta-\operatorname{tr}(W^3)$. The alignment lives in $c'$ and in $L_W|_{W^\perp}$, and nowhere else in these two files.
+5. **Stop describing $\langle W^\#,W\rangle$ as alignment data on the critical set** (T1). It is $\theta-\mathop{\mathrm{tr}}(W^3)$. The alignment lives in $c'$ and in $L_W|_{W^\perp}$, and nowhere else in these two files.

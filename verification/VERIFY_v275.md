@@ -24,18 +24,18 @@
 
 ## 0. Conventions, fixed once
 
-- $V=V_1\oplus V_2$, $\dim V_a=m$, $n=2m$, orthonormal basis adapted to the splitting. $P_a$ is the orthogonal projection onto $V_a$, so $P_1+P_2=g=I$ and $\operatorname{tr}P_a=m$.
-- For a symmetric $P$ write $G^P_{ijkl}=P_{ik}P_{jl}-P_{il}P_{jk}$. Then $G^{(a)}=G^{P_a}$, $G=G^I$, and $t_a=\operatorname{tr}(P_ah)$. **None of these symbols is defined in the passages** (brief item 2). This is the reading under which Passage B's displayed operator formula holds, and §3 shows the formula pins it.
+- $V=V_1\oplus V_2$, $\dim V_a=m$, $n=2m$, orthonormal basis adapted to the splitting. $P_a$ is the orthogonal projection onto $V_a$, so $P_1+P_2=g=I$ and $\mathop{\mathrm{tr}}P_a=m$.
+- For a symmetric $P$ write $G^P_{ijkl}=P_{ik}P_{jl}-P_{il}P_{jk}$. Then $G^{(a)}=G^{P_a}$, $G=G^I$, and $t_a=\mathop{\mathrm{tr}}(P_ah)$. **None of these symbols is defined in the passages** (brief item 2). This is the reading under which Passage B's displayed operator formula holds, and §3 shows the formula pins it.
 - **Index order.** $(\mathring Wh)_{ij}=\sum_{k,l}W_{iklj}h_{kl}$ (Passage G). Li 2022 uses the same order: the introduction's form $\mathring R(\varphi,\psi)=R_{ijkl}\varphi_{il}\psi_{jk}$ equals $\langle\psi,X\rangle$ with $X_{jk}=\sum R_{ijkl}\varphi_{il}=\sum R_{jilk}\varphi_{il}$, which is the $iklj$ pattern, and the proof of Lemma 2.1 computes $\mathring R(\xi)(e_i,e_l)=\sum R(e_i,e_j,e_k,e_l)\xi(e_j,e_k)$, the same pattern. The display at the head of Li's §2, $\mathring R(\varphi)_{ij}=\sum R_{ijkl}\varphi_{kl}$, vanishes on every symmetric $\varphi$ by antisymmetry in $(k,l)$, so it is a misprint and the computations are what the theorem proves (W5).
-- **Tensor sign.** Li's convention is $R_{ijij}=$ sectional curvature, pinned by two identities Li states: Example 2.1, $\mathring R=\kappa\,\mathrm{id}_{S^2_0}$ on $\mathbb S^n(\kappa)$, and Lemma 2.3's $\mathring R_i(g_i)=-\mathrm{Ric}(R_i)$. Derivation for $G$: $(\mathring Gh)_{ij}=\sum_{k,l}(\delta_{ik}\delta_{lj}-\delta_{ij}\delta_{kl})h_{kl}=h_{ij}-\delta_{ij}\operatorname{tr}h$. So $\mathring G=\mathrm{id}$ on $S^2_0$ and $\mathring G(g)=-(n-1)g=-\mathrm{Ric}(G)$, with $\mathrm{Ric}_{kl}=\sum_iG_{ikil}=(n-1)\delta_{kl}$. Both identities hold, so $G$ is the unit-sphere curvature in Li's sign. The opposite tensor sign gives $\mathring G=-\mathrm{id}$ and contradicts Example 2.1.
+- **Tensor sign.** Li's convention is $R_{ijij}=$ sectional curvature, pinned by two identities Li states: Example 2.1, $\mathring R=\kappa\,\mathrm{id}_{S^2_0}$ on $\mathbb S^n(\kappa)$, and Lemma 2.3's $\mathring R_i(g_i)=-\mathrm{Ric}(R_i)$. Derivation for $G$: $(\mathring Gh)_{ij}=\sum_{k,l}(\delta_{ik}\delta_{lj}-\delta_{ij}\delta_{kl})h_{kl}=h_{ij}-\delta_{ij}\mathop{\mathrm{tr}}h$. So $\mathring G=\mathrm{id}$ on $S^2_0$ and $\mathring G(g)=-(n-1)g=-\mathrm{Ric}(G)$, with $\mathrm{Ric}_{kl}=\sum_iG_{ikil}=(n-1)\delta_{kl}$. Both identities hold, so $G$ is the unit-sphere curvature in Li's sign. The opposite tensor sign gives $\mathring G=-\mathrm{id}$ and contradicts Example 2.1.
 - **$\Lambda^2$ normalisation.** $M_{(ab),(cd)}=W_{abcd}$ for $a<b$, $c<d$, so $\sum\mu^2=\lVert M\rVert_F^2=\tfrac14|W|^2$ with $|W|^2=\sum_{ijkl}W_{ijkl}^2$. This is the convention the Lean file states ($|W|^2=4\lVert M\rVert_F^2$). It is positive on the round sphere.
 - **The trace identity linking the two normalisations**, derived for every algebraic Weyl tensor $W$. Let $T$ act on all $n\times n$ matrices by $(TX)_{ij}=\sum W_{iklj}X_{kl}$.
   1. $T$ is self-adjoint for the Frobenius product: $T_{(kl)(ij)}=W_{kijl}=-W_{ikjl}=W_{iklj}=T_{(ij)(kl)}$.
-  2. $\operatorname{tr}T^2=\sum W_{iklj}W_{kijl}=-\sum W_{iklj}W_{ikjl}=\sum W_{ikjl}^2=|W|^2$.
+  2. $\mathop{\mathrm{tr}}T^2=\sum W_{iklj}W_{kijl}=-\sum W_{iklj}W_{ikjl}=\sum W_{ikjl}^2=|W|^2$.
   3. $T$ commutes with transposition: $(TX^{\mathsf T})_{ij}=\sum W_{ilkj}X_{kl}=\sum W_{jkli}X_{kl}=(TX)_{ji}$. So $T$ preserves $S^2$ and $\Lambda^2$.
-  4. On $\Lambda^2$: the Bianchi identity $W_{iklj}+W_{iljk}+W_{ijkl}=0$ and $W_{ilkj}=-W_{iljk}$ give $(TX)_{ij}=\tfrac12\sum(W_{iklj}-W_{ilkj})X_{kl}=-\tfrac12\sum W_{ijkl}X_{kl}$. In the orthonormal basis $E_{(cd)}=(e_ce_d^{\mathsf T}-e_de_c^{\mathsf T})/\sqrt2$ the map $X\mapsto\tfrac12\sum W_{ijkl}X_{kl}$ has entries $W_{abcd}$, so $T|_{\Lambda^2}=-M$ and $\operatorname{tr}(T|_{\Lambda^2})^2=\tfrac14|W|^2$.
-  5. On $S^2$: $T(g)_{ij}=\sum_kW_{ikkj}=-\mathrm{Ric}(W)_{ij}=0$, and $\operatorname{tr}(TX)=\sum W_{ikli}X_{kl}=-\sum\mathrm{Ric}(W)_{kl}X_{kl}=0$, so $T$ maps $S^2_0$ into itself and Li's projection $\pi$ acts trivially.
-  6. Hence $\sum\omega^2=\operatorname{tr}_{S^2_0}T^2=|W|^2-\tfrac14|W|^2=\tfrac34|W|^2=3\sum\mu^2$.
+  4. On $\Lambda^2$: the Bianchi identity $W_{iklj}+W_{iljk}+W_{ijkl}=0$ and $W_{ilkj}=-W_{iljk}$ give $(TX)_{ij}=\tfrac12\sum(W_{iklj}-W_{ilkj})X_{kl}=-\tfrac12\sum W_{ijkl}X_{kl}$. In the orthonormal basis $E_{(cd)}=(e_ce_d^{\mathsf T}-e_de_c^{\mathsf T})/\sqrt2$ the map $X\mapsto\tfrac12\sum W_{ijkl}X_{kl}$ has entries $W_{abcd}$, so $T|_{\Lambda^2}=-M$ and $\mathop{\mathrm{tr}}(T|_{\Lambda^2})^2=\tfrac14|W|^2$.
+  5. On $S^2$: $T(g)_{ij}=\sum_kW_{ikkj}=-\mathrm{Ric}(W)_{ij}=0$, and $\mathop{\mathrm{tr}}(TX)=\sum W_{ikli}X_{kl}=-\sum\mathrm{Ric}(W)_{kl}X_{kl}=0$, so $T$ maps $S^2_0$ into itself and Li's projection $\pi$ acts trivially.
+  6. Hence $\sum\omega^2=\mathop{\mathrm{tr}}_{S^2_0}T^2=|W|^2-\tfrac14|W|^2=\tfrac34|W|^2=3\sum\mu^2$.
   So $\lVert W\rVert_F=1$ is the same condition as $\sum\omega^2=3$.
 
 ## 1. Hypothesis inventory
@@ -62,16 +62,16 @@ No hypothesis is used and unstated except the tensor sign (carried by Passage G'
 - $R=G^{(1)}+G^{(2)}$ is Li's $R_1\oplus R_2$ of (2.2)–(2.3) with $R_a=G^{P_a}$ the unit-sphere curvature on $V_a$ (§0 sign). So it is the curvature of the unit $S^m\times S^m$.
 - $\mathrm{Ric}(G^{P_a})_{kl}=\sum_i\big((P_a)_{ii}(P_a)_{kl}-(P_a)_{il}(P_a)_{ki}\big)=m(P_a)_{kl}-(P_a)_{kl}=(m-1)(P_a)_{kl}$. So $\mathrm{Ric}(R)=(m-1)g$, Einstein with $\rho=m-1$ and scalar curvature $2m(m-1)$.
 - $\mathrm{Ric}(G)=(2m-1)g$, so $\mathrm{Ric}(R-cG)=\big((m-1)-c(2m-1)\big)g=0$ iff $c=(m-1)/(2m-1)$.
-- $R-W=cG=\tfrac c2\,g\owedge g$ is pure trace, so $W$ is the Weyl part of $R$, consistent with $\operatorname{scal}/\big(n(n-1)\big)=2m(m-1)/\big(2m(2m-1)\big)=c$.
+- $R-W=cG=\tfrac c2\,g\owedge g$ is pure trace, so $W$ is the Weyl part of $R$, consistent with $\mathop{\mathrm{scal}}/\big(n(n-1)\big)=2m(m-1)/\big(2m(2m-1)\big)=c$.
 
 CONFIRMED.
 
 ## 3. C3: the operator formula
 
 - $G^{(a)}_{iklj}=(P_a)_{ik}(P_a)_{lj}-(P_a)_{ij}(P_a)_{kl}$, so $\sum_{k,l}G^{(a)}_{iklj}h_{kl}=(P_ahP_a)_{ij}-t_a(P_a)_{ij}$.
-- $\mathring Gh=h-(\operatorname{tr}h)g$ (§0).
-- Sum: $\mathring Wh=P_1hP_1+P_2hP_2-t_1P_1-t_2P_2-ch+c(\operatorname{tr}h)g$. On $S^2_0$ the last term is $0$, which is Passage B's formula.
-- Restriction to $S^2_0$: $\operatorname{tr}(\mathring Wh)=t_1+t_2-mt_1-mt_2=(1-m)\operatorname{tr}h=0$, so the output is trace-free and no projection is needed.
+- $\mathring Gh=h-(\mathop{\mathrm{tr}}h)g$ (§0).
+- Sum: $\mathring Wh=P_1hP_1+P_2hP_2-t_1P_1-t_2P_2-ch+c(\mathop{\mathrm{tr}}h)g$. On $S^2_0$ the last term is $0$, which is Passage B's formula.
+- Restriction to $S^2_0$: $\mathop{\mathrm{tr}}(\mathring Wh)=t_1+t_2-mt_1-mt_2=(1-m)\mathop{\mathrm{tr}}h=0$, so the output is trace-free and no projection is needed.
 - The formula pins the conventions: the within-factor coefficient $+1$ on $P_ahP_a$ is the $iklj$ order with $R_{ijij}=\sec$. Either reversal negates the $G^{(a)}$ terms.
 
 CONFIRMED.
@@ -141,7 +141,7 @@ CONFIRMED.
 
 - **C8.** $p_3(\mu)=\lambda^3\dfrac{m(m-1)m^3-m^2(m-1)^3}{(2m-1)^3}=\lambda^3\dfrac{m^2(m-1)(2m-1)}{(2m-1)^3}=A^3m^2(m-1)(2m-1)=A$, using $A^2m^2(m-1)(2m-1)=1$.
 - **C8, continued.** $p_3(\omega)=A^3m^2(m-1)\big[m(m+2)-(m-1)^2-8m(m-1)^2\big]=A^3m^2(m-1)(-8m^3+16m^2-4m-1)$. Since $(2m-1)(4m^2-6m-1)=8m^3-16m^2+4m+1$, this is $-(4m^2-6m-1)A$. The same computation gives $\sum\omega=A\,m(m-1)\big[(m+2)-m-2\big]=0$. Both formulas use the $\Lambda^2$ spectrum of §6 and the convention $M=W_{abcd}$, neither displayed in the passages.
-- **C9.** At $n=2m$: $\dfrac{2\sqrt2}{2m\sqrt{(2m-1)(2m-2)}}=\dfrac{2\sqrt2}{2m\sqrt2\sqrt{(2m-1)(m-1)}}=A$. "$\operatorname{tr}(W^3)$" is not defined in the passages. If it denotes $p_3(\mu)$, the equality is C8's.
+- **C9.** At $n=2m$: $\dfrac{2\sqrt2}{2m\sqrt{(2m-1)(2m-2)}}=\dfrac{2\sqrt2}{2m\sqrt2\sqrt{(2m-1)(m-1)}}=A$. "$\mathop{\mathrm{tr}}(W^3)$" is not defined in the passages. If it denotes $p_3(\mu)$, the equality is C8's.
 - **C10.** $(2m^2-3m+1)^2=4m^4-12m^3+13m^2-6m+1$, and $2m^2-3m+1=(2m-1)(m-1)\ge0$ for $m\ge1$, so it is the principal root.
 - **C12.** From C8, $\tfrac32p_3(\mu)-\tfrac12p_3(\omega)=\tfrac A2\big(3+4m^2-6m-1\big)=A(m-1)(2m-1)=\sqrt{(m-1)(2m-1)}/m$. The share of the $\tfrac32p_3(\mu)$ term is $\dfrac{3/2}{(m-1)(2m-1)}$, which is $3/110$ at $m=6$. Since $2.97<3<3.003$, $2.7\%<3/110<2.73\%$, so "$2.7\%$" is $3/110$ rounded. The other reading, $p_3(\mu)$ against the sum, gives $1/55$, which lies between $1.8\%$ and $1.82\%$. The quoted figure matches the weighted reading only.
 

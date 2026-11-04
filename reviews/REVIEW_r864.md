@@ -12,7 +12,7 @@
 | 4 | "The coefficients alternate in sign … so the optimum puts all mass on $j\in\{1,3\}$" | **GAP**: the sign pattern alone does not force it. The conclusion is right exactly when $s\ge N/3$, by a concave-hull argument the block does not give |
 | 5 | "feasible exactly when $N/3\le s\le N$" | **CONFIRMED** for the vertex, with $s=N$ degenerate, so the live range is $N/3\le s\le N-1$ |
 | 6 | The closed form $\bigl[(N-2s)+(n-2)(N-s)(4s-N)/(2s)\bigr]/\sqrt{sN(N-s)}$ | **CONFIRMED** |
-| 7 | $\operatorname{tr}(W^3)=(N-2s)/\sqrt{sN(N-s)}$ | **CONFIRMED** |
+| 7 | $\mathop{\mathrm{tr}}(W^3)=(N-2s)/\sqrt{sN(N-s)}$ | **CONFIRMED** |
 | 8 | Balanced product at $n=12$: $t_3=240$, $t_1=1080$, $t_0=t_2=0$, and these are the vertex | **CONFIRMED** |
 | 9 | $330/\sqrt{71280}=\theta_0(12)$ and $6/\sqrt{48}=\theta_0(4)$ | **CONFIRMED** exactly |
 | 10 | "at $n=4$ the programme CLOSES the two-eigenvalue decomposable case exactly" | **OVERSTATED**: $s=1$ is outside the stated feasibility range and the programme's own optimum there is $12/\sqrt{30}=2.19$. The claim becomes true only once Ricci-flatness is used, which this block explicitly disclaims |
@@ -33,7 +33,7 @@
 
 ## Conventions, quoted from the brief
 
-- "$\Lambda^2\mathbb R^n$ is realised as skew matrices. $\varphi_{ab}=E_{ba}-E_{ab}$ and it is a UNIT bivector. The inner product is $\langle X,Y\rangle=\tfrac12\operatorname{tr}(X^{\mathsf T}Y)$."
+- "$\Lambda^2\mathbb R^n$ is realised as skew matrices. $\varphi_{ab}=E_{ba}-E_{ab}$ and it is a UNIT bivector. The inner product is $\langle X,Y\rangle=\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$."
 - "$u\wedge v=vu^{\mathsf T}-uv^{\mathsf T}$. At orthonormal $u,v$ this is a unit bivector and $(u\wedge v)(u\wedge v)^{\mathsf T}=uu^{\mathsf T}+vv^{\mathsf T}=\Pi_P$, the orthogonal projection onto $P=\mathrm{span}\{u,v\}$."
 - "$\mathcal W_n$ is the space of algebraic Weyl tensors … $P(W)=\langle W,W^2+W^\#\rangle$, $\theta=P(W)/\lVert W\rVert^3$, and criticality on the unit sphere is $Q(W)=W^2+W^\#=\theta W$."
 - "$\sqrt{3/2}=1.224745$ and $\theta_0(n)=\sqrt{2(n-1)(n-2)}/n$."
@@ -48,7 +48,7 @@ What the two-eigenvalue programme, as written, actually uses:
 |---|---|---|
 | $W$ symmetric on $\Lambda^2\mathbb R^n$, diagonal in an orthonormal basis $\omega_1,\dots,\omega_N$ | setup | the whole calculation is in that basis |
 | $\lVert W\rVert=1$ | normalisation | $\theta=P(W)$, and the scale $k$ |
-| $\operatorname{tr}W=0$ with exactly two eigenvalues | given 18 | $\mu:\nu=(N-s):(-s)$ |
+| $\mathop{\mathrm{tr}}W=0$ with exactly two eigenvalues | given 18 | $\mu:\nu=(N-s):(-s)$ |
 | $(W^\#)_{kk}=\tfrac12\sum_{\beta\gamma}\lambda_\beta\lambda_\gamma T_{k\beta\gamma}$ | given 14 | the objective |
 | $\sum_{\beta\gamma}T_{\alpha\beta\gamma}=2(n-2)$ | given 15, L153 | both linear constraints |
 | $T_{\alpha\beta\gamma}=c_{\alpha\beta\gamma}^2\ge0$, totally symmetric, hollow | given 12, given 14 | $t_j\ge0$ and the symmetrisation in constraint 2 |
@@ -57,7 +57,7 @@ Not used, and each absence matters: criticality (so the bound holds off the crit
 
 ## 1. The objective, and the factor $\tfrac12$
 
-$P(W)=\langle W,W^2+W^\#\rangle=\operatorname{tr}(W^3)+\langle W,W^\#\rangle$. In $W$'s orthonormal eigenbasis $\operatorname{tr}(W^3)=\sum_\alpha\lambda_\alpha^3$, and because the pairing is Frobenius and $W$ is diagonal there, $\langle W,W^\#\rangle=\sum_k\lambda_k(W^\#)_{kk}$. Given 14 supplies $(W^\#)_{kk}=\tfrac12\sum_{\beta\gamma}\lambda_\beta\lambda_\gamma T_{k\beta\gamma}$, so
+$P(W)=\langle W,W^2+W^\#\rangle=\mathop{\mathrm{tr}}(W^3)+\langle W,W^\#\rangle$. In $W$'s orthonormal eigenbasis $\mathop{\mathrm{tr}}(W^3)=\sum_\alpha\lambda_\alpha^3$, and because the pairing is Frobenius and $W$ is diagonal there, $\langle W,W^\#\rangle=\sum_k\lambda_k(W^\#)_{kk}$. Given 14 supplies $(W^\#)_{kk}=\tfrac12\sum_{\beta\gamma}\lambda_\beta\lambda_\gamma T_{k\beta\gamma}$, so
 
 $$P(W)=\sum_\alpha\lambda_\alpha^3+\tfrac12\sum_{\alpha\beta\gamma}\lambda_\alpha\lambda_\beta\lambda_\gamma T_{\alpha\beta\gamma}=\sum_\alpha\lambda_\alpha^3+\tfrac12T(\lambda,\lambda,\lambda),$$
 
@@ -69,7 +69,7 @@ $$\tfrac12T(\lambda,\lambda,\lambda)=\tfrac12\sum_k\lambda_k\cdot2\lambda_k(\the
 
 Substituting into the display returns $P(W)=\theta$, which is the definition of $\theta$ at unit norm. With any other constant $c$ in place of $\tfrac12$ the same contraction gives $P=\sum\lambda^3+2c(\theta-\sum\lambda^3)$, equal to $\theta$ for all admissible spectra only at $c=\tfrac12$. So the constant is pinned by relation (C) and given 14 independently of each other, and the two agree.
 
-**What a wrong constant would do.** The bound is $\operatorname{tr}(W^3)+2c\cdot(\text{vertex value})$ with the vertex value positive in the whole feasibility range, so $c=1$ would roughly double the second term: at $n=12$, $s=30$ it would give $(6+648)/\sqrt{71280}=2.4497$ instead of $\theta_0(12)$, and the exact agreement with $\theta_0$ at the balanced product would be destroyed. That agreement is therefore itself a check on the constant, and it passes.
+**What a wrong constant would do.** The bound is $\mathop{\mathrm{tr}}(W^3)+2c\cdot(\text{vertex value})$ with the vertex value positive in the whole feasibility range, so $c=1$ would roughly double the second term: at $n=12$, $s=30$ it would give $(6+648)/\sqrt{71280}=2.4497$ instead of $\theta_0(12)$, and the exact agreement with $\theta_0$ at the balanced product would be destroyed. That agreement is therefore itself a check on the constant, and it passes.
 
 ## 2. The first constraint
 
@@ -126,7 +126,7 @@ which with section 5's trace term gives the block's display exactly. **CONFIRMED
 
 **The trace term.** With $\mu=k(N-s)$ on $A$ and $\nu=-ks$ off it, $\sum\lambda^2=k^2\bigl[s(N-s)^2+(N-s)s^2\bigr]=k^2sN(N-s)$, so unit norm is $k=(sN(N-s))^{-1/2}$, and
 
-$$\operatorname{tr}(W^3)=k^3\bigl[s(N-s)^3-(N-s)s^3\bigr]=k^3s(N-s)N(N-2s)=k(N-2s)=\frac{N-2s}{\sqrt{sN(N-s)}} .$$
+$$\mathop{\mathrm{tr}}(W^3)=k^3\bigl[s(N-s)^3-(N-s)s^3\bigr]=k^3s(N-s)N(N-2s)=k(N-2s)=\frac{N-2s}{\sqrt{sN(N-s)}} .$$
 
 **CONFIRMED.**
 
@@ -176,7 +176,7 @@ so the maximum over $s\ge2$ is at $s=2$ and equals $\theta_0(4)$. **CONFIRMED as
 
 $$\Theta_A=\frac{(n-1)s}{N}\,\mathrm{Id}=\frac{2s}{n}\,\mathrm{Id}.$$
 
-The trace of this is $2s$, as given 1 demands, so there is no obstruction at the level of traces. For a coordinate configuration, however, $\Pi_\alpha$ is a coordinate $2$-plane projection and $\Theta_A=\mathrm{diag}(\deg_1,\dots,\deg_n)$ for the graph $A\subseteq K_n$. So **a two-valued Ricci-flat weighting on a coordinate configuration requires $A$ to be a regular graph of degree $d=2s/n$**, hence $s=nd/2$. At $n=12$ that is $s\in\{6,12,\dots,60\}$, and $s=31$ is not among them: $31/6$ is not an integer. The balanced product is the case $d=5$, $A=K_6\sqcup K_6$, and $s=30$. **So the excess vertex needs a genuinely non-coordinate decomposable basis**, and by given 9 (L201) such a basis must have some pair with $\operatorname{tr}(\Pi_\alpha\Pi_\beta)\in(0,1)$. Given 4 shows non-coordinate decomposable bases exist at $n=4$, and that Ricci-flatness on that family collapses back to a coordinate-diagonal operator, which is weak evidence in the same direction and nothing more.
+The trace of this is $2s$, as given 1 demands, so there is no obstruction at the level of traces. For a coordinate configuration, however, $\Pi_\alpha$ is a coordinate $2$-plane projection and $\Theta_A=\mathrm{diag}(\deg_1,\dots,\deg_n)$ for the graph $A\subseteq K_n$. So **a two-valued Ricci-flat weighting on a coordinate configuration requires $A$ to be a regular graph of degree $d=2s/n$**, hence $s=nd/2$. At $n=12$ that is $s\in\{6,12,\dots,60\}$, and $s=31$ is not among them: $31/6$ is not an integer. The balanced product is the case $d=5$, $A=K_6\sqcup K_6$, and $s=30$. **So the excess vertex needs a genuinely non-coordinate decomposable basis**, and by given 9 (L201) such a basis must have some pair with $\mathop{\mathrm{tr}}(\Pi_\alpha\Pi_\beta)\in(0,1)$. Given 4 shows non-coordinate decomposable bases exist at $n=4$, and that Ricci-flatness on that family collapses back to a coordinate-diagonal operator, which is weak evidence in the same direction and nothing more.
 
 **And it does not matter, because $s=31$ is bounded well below $\theta_0(12)$ by section 16.** The sharpened programme gives $\theta\le\dfrac{9119/31}{\sqrt{71610}}=1.09926$ at $s=31$, on any configuration, coordinate or not. So the vertex the record could not exclude is excluded, and the route is a constraint rather than a realisability census.
 
@@ -184,7 +184,7 @@ The trace of this is $2s$, as given 1 demands, so there is no obstruction at the
 
 Yes, in the range where the vertex is feasible, and the relaxation direction is right. The chain has three links. Fix $s$, and the spectrum is pinned by trace-freeness and unit norm, so the objective is an affine functional of $(t_0,t_1,t_2,t_3)$ with fixed coefficients. The true $t$-vector of any configuration with that $s$ is feasible for the programme, because both equalities hold at every orthonormal basis (sections 2 and 3) and $t_j\ge0$ holds because $T$ is a square. Therefore $\theta=\text{objective}(t^{\text{true}})\le\max_{\text{feasible}}\text{objective}=\text{vertex value}$, and maximising over a superset can only raise the maximum. **CONFIRMED.**
 
-No step needs a discarded constraint. The objective identity of section 1 holds at any $W$ diagonal in the basis, the spectrum pinning needs only $\operatorname{tr}W=0$ and two values, and the marginal holds at every orthonormal basis of $\mathfrak{so}(n)$ with no decomposability. Two consequences the block does not draw:
+No step needs a discarded constraint. The objective identity of section 1 holds at any $W$ diagonal in the basis, the spectrum pinning needs only $\mathop{\mathrm{tr}}W=0$ and two values, and the marginal holds at every orthonormal basis of $\mathfrak{so}(n)$ with no decomposability. Two consequences the block does not draw:
 
 - **Criticality is not used**, so the bound is really a statement about every unit-norm two-valued trace-free symmetric operator on $\Lambda^2\mathbb R^n$, in the stated $s$ range.
 - **Decomposability is not used either**, so the phrase "of the decomposable locus" in the quoted bound is decoration. That is exactly why the bound cannot beat L105, which is the same generality with a better conclusion.
@@ -238,7 +238,7 @@ So even with the cap the two-eigenvalue programme does not reach $\theta_0(12)$:
 2. That the substituted $(t_1,t_3)$ is the **optimum**. The concave-hull step of section 4 is nowhere, and neither is the sign pattern.
 3. The feasibility range. `lpNumerator` is a function of three real arguments with no constraint relating them, and it is negative at, for instance, $n=4$, $N=6$, $s=1$. Nothing in the file distinguishes the range where the expression bounds anything from the range where it does not.
 4. $\theta$, $W$, $P$, $\mathcal W_n$, decomposability, Ricci-flatness. **No object of the programme appears anywhere in the file.** The four theorems are identities and one inequality between real numbers, and $\theta_0(n)^2$ appears only as the literal $2(n-1)(n-2)/n^2$ with $n$ substituted.
-5. $\operatorname{tr}(W^3)=(N-2s)/\sqrt{sN(N-s)}$. The term $(N-2s)$ enters `lpNumerator` as a literal.
+5. $\mathop{\mathrm{tr}}(W^3)=(N-2s)/\sqrt{sN(N-s)}$. The term $(N-2s)$ enters `lpNumerator` as a literal.
 6. The balanced product's counts. Neither $240$ nor $1080$ occurs in the file, so the $n=12$ check tests the closed form at $s=30$ and not the claim that the product's own counts are the vertex, which is the check the block says matters.
 7. That $N=\binom n2$. `lpNumerator 12 66 30` passes $66$ as data, so a typo in $N$ would be invisible to the file and visible only to the reader.
 
@@ -248,7 +248,7 @@ So the machine-checked content is the algebra of section 5 and the arithmetic of
 
 **The object: a two-eigenvalue configuration with $s<N/3$.** It breaks the headline rather than the algebra, because the programme's own optimum there is the $\{0,3\}$ vertex and its value exceeds the record's standing bound at $n=12$. I did not have to find one to make the point: the bound is a maximum over $s$, and the record's own hypothesis list admits every $s\in[1,N-1]$, so the burden is on the claim. Still, I looked for what constrains $s$, using only the givens:
 
-- Ricci-flatness forces $\Theta_A=\frac{2s}{n}\mathrm{Id}$ (section 9). Taking Frobenius norms and using given 8, $\sum_{\alpha\ne\beta\in A}\operatorname{tr}(\Pi_\alpha\Pi_\beta)=\frac{4s^2}n-2s\ge0$, so $s\ge n/2$, and the same on $A^c$ gives $s\le N-n/2$. At $n=12$ this leaves $6\le s\le60$, so $s=6$ survives and the headline does not.
+- Ricci-flatness forces $\Theta_A=\frac{2s}{n}\mathrm{Id}$ (section 9). Taking Frobenius norms and using given 8, $\sum_{\alpha\ne\beta\in A}\mathop{\mathrm{tr}}(\Pi_\alpha\Pi_\beta)=\frac{4s^2}n-2s\ge0$, so $s\ge n/2$, and the same on $A^c$ gives $s\le N-n/2$. At $n=12$ this leaves $6\le s\le60$, so $s=6$ survives and the headline does not.
 - On coordinate configurations $s$ is a multiple of $n/2$ (section 9), which at $n=12$ leaves $s\in\{6,12,\dots,60\}$ and still admits $s=6$.
 
 **The exhibited configurations.** Two coordinate configurations at $n=12$ carry closed-form counts I could compute by hand and screen exactly: the balanced product ($A=K_6\sqcup K_6$, $s=30$, $t=(0,1080,0,240)$, $\theta=\theta_0(12)$) and the four disjoint triangles ($A=4C_3$, $s=12$, $t=(648,648,0,24)$, $\theta=132/\sqrt{42768}=0.63828$), together with the twelve-cycle ($A=C_{12}$, $s=12$, $t=(672,576,72,0)$, $\theta=0.24822$). All three are honest algebraic Weyl tensors: trace-free by construction, Ricci-flat because the graph is regular, and first Bianchi automatically because every basis element is decomposable, so $\omega_\alpha\wedge\omega_\alpha=0$ and given 6's sum vanishes term by term. The second of these is the object that makes section 16's identities checkable at a second, unbalanced $s$.
@@ -257,11 +257,11 @@ So the machine-checked content is the algebra of section 5 and the arithmetic of
 
 ## 16. The repair, which is new work and needs its own review
 
-**The constraint the block says is missing is not a realisability constraint on $s$. It is three exact equalities, and they come from Ricci-flatness plus given 8.** Write $S_{\alpha\beta}=\sum_\gamma T_{\alpha\beta\gamma}=\lVert[\omega_\alpha,\omega_\beta]\rVert^2$, which given 8 identifies with $\operatorname{tr}(\Pi_\alpha\Pi_\beta)$ on the decomposable locus, and recall $\Theta_A=\frac{2s}n\mathrm{Id}$ and $\Theta_{A^c}=\frac{2(N-s)}n\mathrm{Id}$ from section 9. Summing $S$ over each block of ordered pairs and splitting the third index by whether it lies in $A$:
+**The constraint the block says is missing is not a realisability constraint on $s$. It is three exact equalities, and they come from Ricci-flatness plus given 8.** Write $S_{\alpha\beta}=\sum_\gamma T_{\alpha\beta\gamma}=\lVert[\omega_\alpha,\omega_\beta]\rVert^2$, which given 8 identifies with $\mathop{\mathrm{tr}}(\Pi_\alpha\Pi_\beta)$ on the decomposable locus, and recall $\Theta_A=\frac{2s}n\mathrm{Id}$ and $\Theta_{A^c}=\frac{2(N-s)}n\mathrm{Id}$ from section 9. Summing $S$ over each block of ordered pairs and splitting the third index by whether it lies in $A$:
 
 $$\sum_{\alpha,\beta\in A}S_{\alpha\beta}=t_3+\tfrac13t_2,\qquad\sum_{\alpha,\beta\notin A}S_{\alpha\beta}=t_0+\tfrac13t_1,\qquad\sum_{\alpha\in A,\beta\notin A}S_{\alpha\beta}=\tfrac13t_2+\tfrac13t_1,$$
 
-the factors $\tfrac13$ because $t_1$ and $t_2$ count all three positions of the odd index while each block fixes it. The left sides are traces of products of the $\Theta$'s, less the diagonal $\operatorname{tr}(\Pi_\alpha^2)=2$ where the block is square, so
+the factors $\tfrac13$ because $t_1$ and $t_2$ count all three positions of the odd index while each block fixes it. The left sides are traces of products of the $\Theta$'s, less the diagonal $\mathop{\mathrm{tr}}(\Pi_\alpha^2)=2$ where the block is square, so
 
 $$\text{(E1)}\ \ 3t_3+t_2=\frac{12s^2}n-6s,\qquad\text{(E2)}\ \ 3t_0+t_1=\frac{12(N-s)^2}n-6(N-s),\qquad\text{(E3)}\ \ t_1+t_2=\frac{12s(N-s)}n .$$
 
@@ -288,7 +288,7 @@ $$\theta\le\theta_0(12)\ \text{ at every two-valued, unit-norm, Ricci-flat }W\te
 
 with equality forcing $s=30$ and $t=(0,1080,0,240)$, the balanced product's own counts. In particular $s=31$ gives $\frac{9119/31}{\sqrt{71610}}=1.09926$, and the record's excess vertex is gone. At $n=4$ the same system makes $s=1,3,5$ infeasible, leaves $s=2$ at $\sqrt3/2=\theta_0(4)$ and $s=4$ at $-\sqrt3/2$, so the case closes there too.
 
-**Hypotheses of the repair**, all from the brief's givens: given 1 for $\Theta$, given 2 for Ricci-flatness, given 8 for the bridge $S_{\alpha\beta}=\operatorname{tr}(\Pi_\alpha\Pi_\beta)$, given 14 for the objective, given 15 for Parseval, given 18 for the pinned spectrum. It therefore assumes more than the block's version, which is the price of the conclusion. **It does not use criticality**, so within the two-eigenvalue decomposable class it is stronger than L105 in conclusion at $n=12$ (equality only at the balanced counts) and weaker in generality (L105 needs no decomposability).
+**Hypotheses of the repair**, all from the brief's givens: given 1 for $\Theta$, given 2 for Ricci-flatness, given 8 for the bridge $S_{\alpha\beta}=\mathop{\mathrm{tr}}(\Pi_\alpha\Pi_\beta)$, given 14 for the objective, given 15 for Parseval, given 18 for the pinned spectrum. It therefore assumes more than the block's version, which is the price of the conclusion. **It does not use criticality**, so within the two-eigenvalue decomposable class it is stronger than L105 in conclusion at $n=12$ (equality only at the balanced counts) and weaker in generality (L105 needs no decomposability).
 
 **Screening, reported as a screen.** Exact rational arithmetic confirmed: (E1), (E2), (E3) at all three exhibited configurations, including $C_{12}$, whose counts $(672,576,72,0)$ are exactly the $\tau=72$ point of the segment at $s=12$ while $4C_3$'s $(648,648,0,24)$ are its $\tau=0$ point, which is a two-point check that the segment is right and that the $\tau$-monotonicity has the sign claimed; the feasible range $6\le s\le60$ at $n=12$; branch one's closed form against the segment's value at every $s$ in it; the branch values quoted above. **None of this is evidence for the repair. The derivations above are, and they should be reviewed independently before anything is recorded.**
 

@@ -11,7 +11,7 @@ Cold brief ([BRIEF_L115.md](BRIEF_L115.md)), no numerical work, no scripts writt
 | 5 | $\sup_W\lambda_{\max}(M)\le\theta_0$ is strictly stronger than Conjecture A | GAP |
 | 6 | The pointwise statement at maximisers is Conjecture A rewritten | GAP |
 | 7 | By-product $\theta\ge\max_\alpha\lambda_\alpha$ at a global maximiser | CONFIRMED (strict, by the norm route) |
-| 8 | Passage B facts used: $\operatorname{diag}M=\lambda$, $M\lambda=\theta\lambda$, $\theta\le\lambda_{\max}(M)$ | CONFIRMED AS ALGEBRA |
+| 8 | Passage B facts used: $\mathop{\mathrm{diag}}M=\lambda$, $M\lambda=\theta\lambda$, $\theta\le\lambda_{\max}(M)$ | CONFIRMED AS ALGEBRA |
 | 9 | Well-posedness of $\lambda_{\max}(M)$ at repeated eigenvalues and $\ker W\ne0$ | GAP (eigenbasis quantifier missing) |
 | 10 | Lean files against clauses 1 and 2 | CONFIRMED AS ALGEBRA (clause 2 only, clause 1 untyped) |
 
@@ -20,11 +20,11 @@ Cold brief ([BRIEF_L115.md](BRIEF_L115.md)), no numerical work, no scripts writt
 ## 0. Conventions, fixed once
 
 - $\mathcal W_n$ is the space of algebraic Weyl operators on $\Lambda^2\mathbb R^n$, $N=n(n-1)/2$, admissible for $n\ge4$. Frobenius inner product. $X\circ Y=\tfrac12(XY+YX)+X\#Y$, so $X\circ X=Q(X)=X^2+X^\#$ and $L_W X=W\circ X$.
-- The trilinear form $\langle X,Y\circ Z\rangle$ is fully symmetric on symmetric operators, since $\operatorname{tr}(X(YZ+ZY))/2$ and $\langle X,Y\#Z\rangle$ both are. Hence $L_W$ is a symmetric operator on $S^2(\Lambda^2)$.
+- The trilinear form $\langle X,Y\circ Z\rangle$ is fully symmetric on symmetric operators, since $\mathop{\mathrm{tr}}(X(YZ+ZY))/2$ and $\langle X,Y\#Z\rangle$ both are. Hence $L_W$ is a symmetric operator on $S^2(\Lambda^2)$.
 - $\{v_\alpha\}$ is an orthonormal eigenbasis of $W$, $\lambda$ its spectrum, $c'_{\alpha\beta\gamma}$ the structure constants of $\mathfrak{so}(n)$ in that basis, totally antisymmetric, and $c'^2_{\alpha\beta\gamma}=(c'_{\alpha\beta\gamma})^2$, totally symmetric. $\mathcal D=\mathcal D(\{v_\alpha\})$ is the span of $v_\alpha v_\alpha^{T}$. For $x\in\mathbb R^N$ write $X=\sum_\alpha x_\alpha v_\alpha v_\alpha^T$, so $\lVert X\rVert=\lVert x\rVert$.
 - The # convention is the one Passage B's formula for $P$ fixes: $(X\#X)_{\gamma\gamma}=\tfrac12\sum_{\alpha\beta}c'^2_{\alpha\beta\gamma}x_\alpha x_\beta$ for $X\in\mathcal D$. In the coordinate basis $e_i\wedge e_j$ this is Hamilton's $(R^\#)_{ij}=\sum_{k\ne i,j}R_{ik}R_{jk}$ ([Böhm–Wilking line 271](https://arxiv.org/abs/math/0606187)), so $c'^2=1$ exactly on triples of coordinate planes $\{ij\},\{jk\},\{ik\}$ and $0$ otherwise, and $M_{\{ij\},\{jk\}}=\tfrac12\lambda_{ik}$.
 - $\theta_0(n)=\sqrt{2(n-1)(n-2)}/n$. $\theta_0(n)<\sqrt{3/2}$ iff $4(n^2-3n+2)<3n^2$ iff $n^2-12n+8<0$ iff $n<6+2\sqrt7\approx11.29$. So $\theta_0<\sqrt{3/2}$ at $4\le n\le11$ and $\theta_0>\sqrt{3/2}$ at $n\ge12$ (check: $\theta_0(11)^2=180/121<3/2<220/144=\theta_0(12)^2$).
-- **The identity every section uses.** For $X\in\mathcal D$, $\langle X,L_WX\rangle=\operatorname{tr}(WX^2)+\langle X,W\#X\rangle=\sum_\alpha\lambda_\alpha x_\alpha^2+\langle W,X\#X\rangle=\sum_\alpha\lambda_\alpha x_\alpha^2+\tfrac12\sum c'^2_{\alpha\beta\gamma}x_\alpha x_\beta\lambda_\gamma=x^TM(\lambda)x$. So **$M(\lambda)$ is the compression of $L_W$ to $\mathcal D$**, and $\lambda_{\max}(M)=\theta\,\lambda_{\max}(P_{\mathcal D}L_e\vert_{\mathcal D})$. This is the record's own reformulation in Passage A, written out.
+- **The identity every section uses.** For $X\in\mathcal D$, $\langle X,L_WX\rangle=\mathop{\mathrm{tr}}(WX^2)+\langle X,W\#X\rangle=\sum_\alpha\lambda_\alpha x_\alpha^2+\langle W,X\#X\rangle=\sum_\alpha\lambda_\alpha x_\alpha^2+\tfrac12\sum c'^2_{\alpha\beta\gamma}x_\alpha x_\beta\lambda_\gamma=x^TM(\lambda)x$. So **$M(\lambda)$ is the compression of $L_W$ to $\mathcal D$**, and $\lambda_{\max}(M)=\theta\,\lambda_{\max}(P_{\mathcal D}L_e\vert_{\mathcal D})$. This is the record's own reformulation in Passage A, written out.
 
 ## 1. Hypothesis inventory
 
@@ -34,16 +34,16 @@ Cold brief ([BRIEF_L115.md](BRIEF_L115.md)), no numerical work, no scripts writt
 | $W$ coordinate-diagonal | restricted display | clause 1 as displayed | no argument uses it (section 3) | unused |
 | $m\ge4$ for $S^m\times S^m$ | restricted display | $S^m\times S^m$ | no argument uses it, and the claim holds at every $m\ge2$ in the coordinate eigenbasis (section 3) | unused |
 | L24: $W$ critical, $\theta=P(W)>0$, local maximiser | [second-order.md line 61](../findings/second-order.md#L61) | a global maximiser | critical by Lagrange, $\theta=M(n)\ge\sqrt{3/2}>0$, local maximiser. All hold | used, but its conclusion lives on $\mathcal W_n\cap W^\perp$ only (section 2) |
-| $Q(W)=\theta W$ with $Q$ unprojected | definitions, Passage B | $M\lambda=\theta\lambda$ | holds because $Q(\mathcal W_n)\subseteq\mathcal W_n$: [Böhm–Wilking (6)](https://arxiv.org/abs/math/0606187) gives $\operatorname{Ric}(R^2+R^\#)_{ij}=\sum_k\operatorname{Ric}_{kk}R_{kijk}$, zero for Weyl $R$ | used, unstated reason supplied here |
+| $Q(W)=\theta W$ with $Q$ unprojected | definitions, Passage B | $M\lambda=\theta\lambda$ | holds because $Q(\mathcal W_n)\subseteq\mathcal W_n$: [Böhm–Wilking (6)](https://arxiv.org/abs/math/0606187) gives $\mathop{\mathrm{Ric}}(R^2+R^\#)_{ij}=\sum_k\mathop{\mathrm{Ric}}_{kk}R_{kijk}$, zero for Weyl $R$ | used, unstated reason supplied here |
 | $\lVert\lambda\rVert=1$ | Passage B | Rayleigh bound, norm route | $\lVert W\rVert_F^2=\sum\lambda_\alpha^2$ | used |
-| $M(n)\ge\sqrt{3/2}$ (padded $W_{\mathbb{CP}^2}$) | brief, a given | norm route | at $n=4$: $W^+=\operatorname{diag}(2,-1,-1)/\sqrt6$, $P=9\lambda_1\lambda_2\lambda_3=18/(6\sqrt6)=\sqrt{3/2}$. Padding preserves Bianchi and $\operatorname{Ric}=0$ | used by the Lean route only, the prose never cites it |
+| $M(n)\ge\sqrt{3/2}$ (padded $W_{\mathbb{CP}^2}$) | brief, a given | norm route | at $n=4$: $W^+=\mathop{\mathrm{diag}}(2,-1,-1)/\sqrt6$, $P=9\lambda_1\lambda_2\lambda_3=18/(6\sqrt6)=\sqrt{3/2}$. Padding preserves Bianchi and $\mathop{\mathrm{Ric}}=0$ | used by the Lean route only, the prose never cites it |
 | a choice of eigenbasis | Passage B "in an eigenbasis of $W$" | every appearance of $M$ | $M$ depends on the choice when eigenvalues repeat (section 9) | used, never quantified |
 
 ## 2. The step from Lemma L24 to $\lambda_{\max}(L_e\vert_{\mathcal D})=1$
 
 **Located.** [bounds-relaxations.md line 288](../findings/bounds-relaxations.md#L288): "The step to $\lambda_{\max}(L_e|_{\mathcal D})=1$ reads that cap over the whole eigenframe-diagonal algebra $\mathcal D$ ... that is the step Lemma L115 grades a GAP".
 
-**Failure exhibited.** L24 ([line 61](../findings/second-order.md#L61)) bounds the Rayleigh quotient of $L_e$ on $\mathcal W_n\cap W^\perp$. $\mathcal D\not\subseteq\mathcal W_n$ for every eigenbasis: $I=\sum_\alpha v_\alpha v_\alpha^T\in\mathcal D$ and $\operatorname{Ric}(I)=(n-1)g\ne0$. In the coordinate frame $\mathcal D$ is the coordinate-diagonal operators, all Bianchi, with $\operatorname{Ric}_{ii}=\sum_jx_{ij}$, so $\mathcal D\cap\mathcal W_n=\{x:\sum_jx_{ij}=0\ \forall i\}$ of codimension $n$. The $\tfrac12$ cap itself does not survive on $\mathcal D$: at $S^m\times S^m$ (a critical point, section 3) the direction $X=I_{\Lambda^2V_1}-I_{\Lambda^2V_2}\in\mathcal D\cap W^\perp$ has $\langle X,L_eX\rangle/\lVert X\rVert^2=m/(2m-1)>\tfrac12$ for every $m$. This $X$ equals $\tfrac12\,h\owedge g$ with $h=\operatorname{diag}(I_m,-I_m)$ traceless, so it is pure $\operatorname{Ric}_0$, orthogonal to $\mathcal W_n$. Wherever $S^m\times S^m$ is a local maximiser, reading L24's cap over $\mathcal D$ is therefore false as a $\tfrac12$ cap, although the weaker $\le1$ that the step needs survives there.
+**Failure exhibited.** L24 ([line 61](../findings/second-order.md#L61)) bounds the Rayleigh quotient of $L_e$ on $\mathcal W_n\cap W^\perp$. $\mathcal D\not\subseteq\mathcal W_n$ for every eigenbasis: $I=\sum_\alpha v_\alpha v_\alpha^T\in\mathcal D$ and $\mathop{\mathrm{Ric}}(I)=(n-1)g\ne0$. In the coordinate frame $\mathcal D$ is the coordinate-diagonal operators, all Bianchi, with $\mathop{\mathrm{Ric}}_{ii}=\sum_jx_{ij}$, so $\mathcal D\cap\mathcal W_n=\{x:\sum_jx_{ij}=0\ \forall i\}$ of codimension $n$. The $\tfrac12$ cap itself does not survive on $\mathcal D$: at $S^m\times S^m$ (a critical point, section 3) the direction $X=I_{\Lambda^2V_1}-I_{\Lambda^2V_2}\in\mathcal D\cap W^\perp$ has $\langle X,L_eX\rangle/\lVert X\rVert^2=m/(2m-1)>\tfrac12$ for every $m$. This $X$ equals $\tfrac12\,h\owedge g$ with $h=\mathop{\mathrm{diag}}(I_m,-I_m)$ traceless, so it is pure $\mathop{\mathrm{Ric}}_0$, orthogonal to $\mathcal W_n$. Wherever $S^m\times S^m$ is a local maximiser, reading L24's cap over $\mathcal D$ is therefore false as a $\tfrac12$ cap, although the weaker $\le1$ that the step needs survives there.
 
 **Charitable reading.** The record does not assert the step, it grades it GAP. That grading is correct: nothing on file bounds $L_e$ on the part of $\mathcal D$ orthogonal to $\mathcal W_n$. Finding: the record's GAP stands, sharpened by the witness that the $\tfrac12$ level fails on $\mathcal D$.
 
@@ -55,7 +55,7 @@ Cold brief ([BRIEF_L115.md](BRIEF_L115.md)), no numerical work, no scripts writt
 
 **Why global maximality and $m\ge4$.** No step on file uses either. $S^m\times S^m$ at $m=4,5$ ($n=8,10$) is not a global maximiser, since $\theta_0(n)<\sqrt{3/2}\le M(n)$ there, so the second clause is a statement about particular critical points rather than an instance of the first.
 
-**The class is unwitnessed.** At $n=4$ every global maximiser is $W^\pm$ of $\mathbb{CP}^2$ type ($P=P(W^+)+P(W^-)\le\sqrt{3/2}(\lvert W^+\rvert^3+\lvert W^-\rvert^3)\le\sqrt{3/2}$, equality iff one half vanishes and the other is $\operatorname{diag}(2,-1,-1)/\sqrt6$). Its simple top eigenvector $(e_{12}+e_{34})/\sqrt2$ has $\omega\wedge\omega\ne0$, so it is not decomposable and $W$ is coordinate-diagonal in no frame. The coordinate-diagonal clause is empty at $n=4$, and no member is exhibited at any $n$. Padded $W_{\mathbb{CP}^2}$ fails coordinate-diagonality at every $n$ for the same reason.
+**The class is unwitnessed.** At $n=4$ every global maximiser is $W^\pm$ of $\mathbb{CP}^2$ type ($P=P(W^+)+P(W^-)\le\sqrt{3/2}(\lvert W^+\rvert^3+\lvert W^-\rvert^3)\le\sqrt{3/2}$, equality iff one half vanishes and the other is $\mathop{\mathrm{diag}}(2,-1,-1)/\sqrt6$). Its simple top eigenvector $(e_{12}+e_{34})/\sqrt2$ has $\omega\wedge\omega\ne0$, so it is not decomposable and $W$ is coordinate-diagonal in no frame. The coordinate-diagonal clause is empty at $n=4$, and no member is exhibited at any $n$. Padded $W_{\mathbb{CP}^2}$ fails coordinate-diagonality at every $n$ for the same reason.
 
 **Test against $S^m\times S^m$ in the coordinate eigenbasis, all $m\ge2$.** Split $\{1,\dots,2m\}=V_1\sqcup V_2$. The Weyl operator is $a$ on planes inside a factor and $b$ on mixed planes, with $a=m/(2m-1)$, $b=-(m-1)/(2m-1)$ (trace $m(m-1)a+m^2b=0$). Criticality in this scaling: on an inside plane $a^2+(m-2)a^2+mb^2=\theta a$, on a mixed plane $b^2+2(m-1)ab=\theta b$, both giving $\theta=m-1$. Normalising by $\lVert\lambda\rVert^2=m^2(m-1)/(2m-1)$ gives $\theta=\sqrt{(m-1)(2m-1)}/m=\theta_0(2m)$, matching the record. $M$ commutes with $S_m\times S_m\rtimes\mathbb Z_2$. Decomposing edge functions:
 
@@ -101,7 +101,7 @@ Dimensions sum to $3+4(m-1)+m(m-3)+(m-1)^2=m(2m-1)=N$. For the standard block, t
 
 ## 7. The by-product $\theta\ge\max_\alpha\lambda_\alpha$
 
-**Route 1, the one written** (line 294): $\operatorname{diag}M=\lambda$ and $\lambda_{\max}(M)=\theta$. $M_{\alpha\alpha}=\lambda_\alpha+\tfrac12\sum_\gamma c'^2_{\alpha\alpha\gamma}\lambda_\gamma=\lambda_\alpha$ because $c'_{\alpha\alpha\gamma}=0$ by antisymmetry, so $\lambda_\alpha=e_\alpha^TMe_\alpha\le\lambda_{\max}(M)$. The remaining inequality $\lambda_{\max}(M)\le\theta$ is clause 1, GAP. Route 1 is conditional.
+**Route 1, the one written** (line 294): $\mathop{\mathrm{diag}}M=\lambda$ and $\lambda_{\max}(M)=\theta$. $M_{\alpha\alpha}=\lambda_\alpha+\tfrac12\sum_\gamma c'^2_{\alpha\alpha\gamma}\lambda_\gamma=\lambda_\alpha$ because $c'_{\alpha\alpha\gamma}=0$ by antisymmetry, so $\lambda_\alpha=e_\alpha^TMe_\alpha\le\lambda_{\max}(M)$. The remaining inequality $\lambda_{\max}(M)\le\theta$ is clause 1, GAP. Route 1 is conditional.
 
 **Route 2, on file in the Lean** ([theta_gt_lambda](../lean/HamiltonsCubic/Results/L115Statement.lean)): $\lambda_\alpha^2\le\sum\lambda_\beta^2=1$ gives $\lambda_\alpha\le1<\sqrt{3/2}\le M(n)=\theta$ at a global maximiser. Every hypothesis holds at every $n\ge4$ with the given $M(n)\ge\sqrt{3/2}$. It is strict with margin $\theta-\lambda_\alpha\ge\sqrt{3/2}-1>0.2247$ ($1.2247^2=1.49989\le3/2$). It uses global maximality essentially: at a critical point with small $\theta$ nothing follows.
 
@@ -131,7 +131,7 @@ Dimensions sum to $3+4(m-1)+m(m-3)+(m-1)^2=m(2m-1)=N$. For the standard block, t
 ## 11. Withdrawn candidates
 
 - **Cross block defeats the proposed cap** (section 4). Located at line 292. Withdrawn at step 2: $L_e$ preserves $\mathcal W_n$ by Böhm–Wilking (6), so the cross block is zero.
-- **$\operatorname{diag}M\ne\lambda$.** Withdrawn at step 2: $c'_{\alpha\alpha\gamma}=0$.
+- **$\mathop{\mathrm{diag}}M\ne\lambda$.** Withdrawn at step 2: $c'_{\alpha\alpha\gamma}=0$.
 - **Clause 1 fails at $S^m\times S^m$ for $m\le3$.** Withdrawn at step 2: the closed-form spectrum of section 3 gives $\lambda_{\max}(M)=\theta$ at every $m\ge2$ in the coordinate eigenbasis.
 - **Clause 1 fails at the $n=4$ global maximiser.** Withdrawn at step 2: $\sqrt{3/2}\{1,0,-1\}\oplus0$ in every eigenbasis.
 - **The identity Rayleigh direction exceeds $\theta$.** Withdrawn at step 2: $L_eI=0$.

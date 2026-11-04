@@ -44,7 +44,7 @@ From [findings/conventions.md](../findings/conventions.md) line 136:
 
 From [findings/conventions.md](../findings/conventions.md) line 24, a table row:
 
-| $T$, third sense | **the fully symmetric trilinear form $T(X,Y,Z)=\langle X\circ Y,Z\rangle$ on $\mathcal W_n$**, whose symmetry is what makes $L_e$ self-adjoint and hence [L24](second-order.md)'s $\lambda_{\max}$ well defined at all, the $W^2$ part as the symmetrisation of $\operatorname{tr}(XYZ)$, the $\#$ part because permuting the arguments permutes the slots of two totally antisymmetric $c$'s at sign $(-1)^2$. **It was tabled nowhere while the letter already carried the bracket tensor $T_{\alpha\beta\gamma}$ and [L35](stratum-two-negative.md)'s cap $\tfrac{2\sqrt2}3A$** | [second-order.md](second-order.md) |
+| $T$, third sense | **the fully symmetric trilinear form $T(X,Y,Z)=\langle X\circ Y,Z\rangle$ on $\mathcal W_n$**, whose symmetry is what makes $L_e$ self-adjoint and hence [L24](second-order.md)'s $\lambda_{\max}$ well defined at all, the $W^2$ part as the symmetrisation of $\mathop{\mathrm{tr}}(XYZ)$, the $\#$ part because permuting the arguments permutes the slots of two totally antisymmetric $c$'s at sign $(-1)^2$. **It was tabled nowhere while the letter already carried the bracket tensor $T_{\alpha\beta\gamma}$ and [L35](stratum-two-negative.md)'s cap $\tfrac{2\sqrt2}3A$** | [second-order.md](second-order.md) |
 
 From [findings/second-order.md](../findings/second-order.md) line 63, its opening clause:
 

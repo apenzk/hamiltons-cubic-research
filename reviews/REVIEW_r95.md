@@ -11,7 +11,7 @@ Worked cold: the sharp map, the adjugate identity, the collapse criterion and th
 | # | Claim | Verdict |
 |---|---|---|
 | 1a | The formula $(R^\#)_{ab}=\tfrac12c_{a\gamma\delta}c_{b\varepsilon\zeta}R_{\gamma\varepsilon}R_{\delta\zeta}$ is this project's $\#$ | **CONFIRMED** |
-| 1a' | "$\operatorname{adj}(R)_{ij}=\tfrac12\varepsilon_{iab}\varepsilon_{jcd}R_{ac}R_{bd}$, residual exactly $0$" | **REFUTED as stated** (true only for symmetric $R$) |
+| 1a' | "$\mathop{\mathrm{adj}}(R)_{ij}=\tfrac12\varepsilon_{iab}\varepsilon_{jcd}R_{ac}R_{bd}$, residual exactly $0$" | **REFUTED as stated** (true only for symmetric $R$) |
 | 1b | "$\#$ **is** the adjugate $\iff$ $c$ **is** the volume form $\iff\dim\mathfrak g=3$" | **REFUTED as stated**; a corrected version is CONFIRMED |
 | 1c | "That is the whole of the $n=4$ phenomenon, at the root"; 2e2 "subsumes 2c and 2f" | **REFUTED** (over-reading; the Weyl trace-free input is missing) |
 | 2 | Post F2f collapse criterion, the "exactly when" | **REFUTED in both directions** |
@@ -20,7 +20,7 @@ Worked cold: the sharp map, the adjugate identity, the collapse criterion and th
 | 3a | Orbit-finiteness boundary $N\le8$, and the attributions | **CONFIRMED** (necessary half proved here; sufficiency from secondary sources) |
 | 3b | "Any argument reaching $\theta$ through a classification of $c$ therefore cannot exist" | **REFUTED, badly overstated** |
 | 4 | "Three independent appearances of the $n=4$ boundary" | **REFUTED** |
-| 5a | Post F2c display $\langle W^\#,W\rangle=3(\det W^++\det W^-)=\operatorname{tr}((W^+)^3)+\operatorname{tr}((W^-)^3)$ | **REFUTED**, off by a factor $2$; the stated constant $2\operatorname{tr}(W^3)$ is right |
+| 5a | Post F2c display $\langle W^\#,W\rangle=3(\det W^++\det W^-)=\mathop{\mathrm{tr}}((W^+)^3)+\mathop{\mathrm{tr}}((W^-)^3)$ | **REFUTED**, off by a factor $2$; the stated constant $2\mathop{\mathrm{tr}}(W^3)$ is right |
 | 5b | The $n=6$ isospectral pair, $P=0$ against $P=24$ | **CONFIRMED and strengthened** ($P\in\{-24,0,24\}$) |
 | 5c | $\lvert W\rvert=2\lVert W\rVert$ | **CONFIRMED** |
 | 5d | "$\tfrac{\sqrt6}4$ against $\lvert W\rvert^3$ … becomes $\tfrac{\sqrt6}2$" | **UNPROVEN** as written (factor $4$ unaccounted); the target constant is safe by an independent route |
@@ -32,51 +32,51 @@ Worked cold: the sharp map, the adjugate identity, the collapse criterion and th
 
 ### 1a. The formula is right for this project's convention, CONFIRMED
 
-Built $\mathfrak{so}(n)$ from scratch in the pair basis $b_{ij}=E_{ij}-E_{ji}$ with the Böhm–Wilking inner product $\langle X,Y\rangle=-\tfrac12\operatorname{tr}(XY)$, which makes that basis orthonormal, and set $c_{abd}=\langle[b_a,b_b],b_d\rangle$. The author's formula then reproduces the project's own gatekeeper $\mathrm{Id}^\#=(n-2)\mathrm{Id}$ **exactly**:
+Built $\mathfrak{so}(n)$ from scratch in the pair basis $b_{ij}=E_{ij}-E_{ji}$ with the Böhm–Wilking inner product $\langle X,Y\rangle=-\tfrac12\mathop{\mathrm{tr}}(XY)$, which makes that basis orthonormal, and set $c_{abd}=\langle[b_a,b_b],b_d\rangle$. The author's formula then reproduces the project's own gatekeeper $\mathrm{Id}^\#=(n-2)\mathrm{Id}$ **exactly**:
 
 | $n$ | $3$ | $4$ | $5$ | $6$ |
 |---|---|---|---|---|
 | $\mathrm{Id}^\#/\mathrm{Id}$ | $1$ | $2$ | $3$ | $4$ |
 
-with every off-diagonal entry exactly $0$. It also reproduces the diagonal identity $\langle\mathrm{Id}^\#,\mathrm{Id}\rangle=\binom n2(n-2)$ ($=60$ at $n=6$), and at $n=4$ it gives $\langle Q(W),W\rangle=3\operatorname{tr}(W^3)$ on a *fully general* $\mathrm{Weyl}_4$ (see §5a). So the formula, with the $\tfrac12$, agrees with [rsharp_basis_free.py](../scripts/rsharp_basis_free.py)'s convention and with Böhm–Wilking.
+with every off-diagonal entry exactly $0$. It also reproduces the diagonal identity $\langle\mathrm{Id}^\#,\mathrm{Id}\rangle=\binom n2(n-2)$ ($=60$ at $n=6$), and at $n=4$ it gives $\langle Q(W),W\rangle=3\mathop{\mathrm{tr}}(W^3)$ on a *fully general* $\mathrm{Weyl}_4$ (see §5a). So the formula, with the $\tfrac12$, agrees with [rsharp_basis_free.py](../scripts/rsharp_basis_free.py)'s convention and with Böhm–Wilking.
 
-**One normalisation caveat worth recording.** The prefactor $\tfrac12$ is not convention-free. Under $\langle X,Y\rangle=\operatorname{tr}(X^{\mathsf T}Y)$ (orthonormal basis $b_{ij}/\sqrt2$) the same formula gives $\mathrm{Id}^\#=\tfrac{n-2}2\mathrm{Id}$. The post does not name the metric normalisation, and the whole "$\#$ **is** the adjugate" claim turns on exactly this scale, see 1b.
+**One normalisation caveat worth recording.** The prefactor $\tfrac12$ is not convention-free. Under $\langle X,Y\rangle=\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$ (orthonormal basis $b_{ij}/\sqrt2$) the same formula gives $\mathrm{Id}^\#=\tfrac{n-2}2\mathrm{Id}$. The post does not name the metric normalisation, and the whole "$\#$ **is** the adjugate" claim turns on exactly this scale, see 1b.
 
 ### 1a'. The quoted adjugate identity is false for general $R$, REFUTED as stated
 
-The post writes "the classical identity $\operatorname{adj}(R)_{ij}=\tfrac12\varepsilon_{iab}\varepsilon_{jcd}R_{ac}R_{bd}$, verified here symbolically, residual exactly $0$". For a generic $3\times3$ $R$ the residual is **not** zero. Exactly:
+The post writes "the classical identity $\mathop{\mathrm{adj}}(R)_{ij}=\tfrac12\varepsilon_{iab}\varepsilon_{jcd}R_{ac}R_{bd}$, verified here symbolically, residual exactly $0$". For a generic $3\times3$ $R$ the residual is **not** zero. Exactly:
 
-$$\Big[\tfrac12\varepsilon_{iab}\varepsilon_{jcd}R_{ac}R_{bd}-\operatorname{adj}(R)\Big]_{01}=R_{01}R_{22}-R_{02}R_{21}-R_{10}R_{22}+R_{12}R_{20}\ne0,$$
+$$\Big[\tfrac12\varepsilon_{iab}\varepsilon_{jcd}R_{ac}R_{bd}-\mathop{\mathrm{adj}}(R)\Big]_{01}=R_{01}R_{22}-R_{02}R_{21}-R_{10}R_{22}+R_{12}R_{20}\ne0,$$
 
-and the residual matrix is antisymmetric, vanishing precisely when $R$ is symmetric. The correct general identity pairs the index slots the other way, $\operatorname{adj}(R)_{ij}=\tfrac12\varepsilon_{iab}\varepsilon_{jcd}R_{ca}R_{db}$. In context $R$ *is* symmetric, so nothing downstream breaks, but "residual exactly $0$" is true only under a hypothesis the post never states, and a reader reproducing the check with a generic matrix will not get $0$.
+and the residual matrix is antisymmetric, vanishing precisely when $R$ is symmetric. The correct general identity pairs the index slots the other way, $\mathop{\mathrm{adj}}(R)_{ij}=\tfrac12\varepsilon_{iab}\varepsilon_{jcd}R_{ca}R_{db}$. In context $R$ *is* symmetric, so nothing downstream breaks, but "residual exactly $0$" is true only under a hypothesis the post never states, and a reader reproducing the check with a generic matrix will not get $0$.
 
 ### 1b. The "iff" chain is false as written; a corrected version holds, REFUTED / repaired
 
-Three separate failures in the displayed chain $\#=\operatorname{adj}\iff c=\varepsilon\iff\dim\mathfrak g=3$.
+Three separate failures in the displayed chain $\#=\mathop{\mathrm{adj}}\iff c=\varepsilon\iff\dim\mathfrak g=3$.
 
-**(i) $\dim\mathfrak g=3$ does not give $c=\varepsilon$.** Total antisymmetry of $c$ makes it a $3$-form, so on a $3$-dimensional metric Lie algebra $c=\lambda\varepsilon$ for *some* $\lambda\in\mathbb R$, and then $R^\#=\lambda^2\operatorname{adj}(R)$. Taking $\lambda=0$ (abelian $\mathbb R^3$) gives $\#\equiv0$, which is not the adjugate. So the second "$\iff$" needs $\lambda=\pm1$, i.e. a normalisation choice, and is false without it.
+**(i) $\dim\mathfrak g=3$ does not give $c=\varepsilon$.** Total antisymmetry of $c$ makes it a $3$-form, so on a $3$-dimensional metric Lie algebra $c=\lambda\varepsilon$ for *some* $\lambda\in\mathbb R$, and then $R^\#=\lambda^2\mathop{\mathrm{adj}}(R)$. Taking $\lambda=0$ (abelian $\mathbb R^3$) gives $\#\equiv0$, which is not the adjugate. So the second "$\iff$" needs $\lambda=\pm1$, i.e. a normalisation choice, and is false without it.
 
 **(ii) The post's own headline case violates it.** The chirality subalgebras of $\mathfrak{so}(4)$ are $3$-dimensional, and in the orthonormal self-dual/anti-self-dual frame $\tfrac1{\sqrt2}(b_{01}\pm b_{23})$ etc. I computed the transported structure constants exactly:
 
 $$c_{012}^{\,\mathrm{SD}}=-\sqrt2,\qquad c_{345}^{\,\mathrm{ASD}}=+\sqrt2,\qquad\text{all cross-block }c=0 .$$
 
-Hence on each chirality block $\#=(\sqrt2)^2\operatorname{adj}=\mathbf{2\operatorname{adj}}$, verified on a general symmetric traceless $A$: $\#-2\operatorname{adj}=0$ while $\#-\operatorname{adj}\ne0$. **So at $n=4$ (the case the post exists to explain), "$\#$ is the adjugate" is literally false.** It is twice the adjugate. This is the same factor $2$ that makes post F2c's display wrong (§5a); the two errors have a single root, namely that "$c$ **is** the volume form" is being asserted where only "$c$ is *a multiple of* the volume form" holds.
+Hence on each chirality block $\#=(\sqrt2)^2\mathop{\mathrm{adj}}=\mathbf{2\mathop{\mathrm{adj}}}$, verified on a general symmetric traceless $A$: $\#-2\mathop{\mathrm{adj}}=0$ while $\#-\mathop{\mathrm{adj}}\ne0$. **So at $n=4$ (the case the post exists to explain), "$\#$ is the adjugate" is literally false.** It is twice the adjugate. This is the same factor $2$ that makes post F2c's display wrong (§5a); the two errors have a single root, namely that "$c$ **is** the volume form" is being asserted where only "$c$ is *a multiple of* the volume form" holds.
 
 **(iii) A cleaner and stronger proof of the surviving direction.** The forward implication needs no volume form at all, only a degree count:
 
-> $R\mapsto R^\#$ is homogeneous of degree $2$ in $R$ for every $\mathfrak g$; $R\mapsto\operatorname{adj}(R)$ on $N\times N$ is homogeneous of degree $N-1$ and is not identically zero. Two nonzero homogeneous polynomial maps of unequal degree cannot agree, so $\#\propto\operatorname{adj}$ forces $N-1=2$, i.e. $N=3$.
+> $R\mapsto R^\#$ is homogeneous of degree $2$ in $R$ for every $\mathfrak g$; $R\mapsto\mathop{\mathrm{adj}}(R)$ on $N\times N$ is homogeneous of degree $N-1$ and is not identically zero. Two nonzero homogeneous polynomial maps of unequal degree cannot agree, so $\#\propto\mathop{\mathrm{adj}}$ forces $N-1=2$, i.e. $N=3$.
 
 The structural reason behind the degree count is worth stating because it is the actual mechanism: $R^\#=\mathrm{ad}\circ\Lambda^2R\circ\mathrm{ad}^*$, where $\mathrm{ad}:\Lambda^2\mathfrak g\to\mathfrak g$. The adjugate is the top compound; $\#$ is the *second* compound compressed along the bracket. These coincide exactly when $\Lambda^2\mathfrak g$ and $\mathfrak g$ have the same dimension, $\binom I2=N$, i.e. $N=3$. **The correct statement is therefore**
 
-$$\#=\kappa\operatorname{adj}\text{ for some }\kappa\ne0\iff\dim\Lambda^2\mathfrak g=\dim\mathfrak g\iff\dim\mathfrak g=3,\qquad\kappa=\lambda^2 .$$
+$$\#=\kappa\mathop{\mathrm{adj}}\text{ for some }\kappa\ne0\iff\dim\Lambda^2\mathfrak g=\dim\mathfrak g\iff\dim\mathfrak g=3,\qquad\kappa=\lambda^2 .$$
 
 That is a genuine result and it is *better* than what the post claims, because it is normalisation-free.
 
 ### 1c. Could $\#$ be adjugate-like in higher dimension? Yes, and the post's own example is one
 
-The post reads its "iff" as closing off higher dimensions. It does not. $\mathfrak{so}(4)=\mathfrak{so}(3)\oplus\mathfrak{so}(3)$ has $\dim=6$ and $\#$ is *exactly* a pair of scaled adjugates. Iterating, $\mathfrak{so}(3)^{\oplus k}$ has $\dim=3k$ arbitrarily large with $\#$ block-diagonal and equal to $\lambda_i^2\operatorname{adj}$ on each factor. **So "adjugate-like" survives to every dimension.** What fails from $n\ge5$ is not dimension but **simplicity**, $\mathfrak{so}(n)$ admits no decomposition into $3$-dimensional ideals. The post gets to the right place ("$>3$ **and simple** for every $n\ge5$") but files it under a dimension criterion that its own $n=4$ example refutes.
+The post reads its "iff" as closing off higher dimensions. It does not. $\mathfrak{so}(4)=\mathfrak{so}(3)\oplus\mathfrak{so}(3)$ has $\dim=6$ and $\#$ is *exactly* a pair of scaled adjugates. Iterating, $\mathfrak{so}(3)^{\oplus k}$ has $\dim=3k$ arbitrarily large with $\#$ block-diagonal and equal to $\lambda_i^2\mathop{\mathrm{adj}}$ on each factor. **So "adjugate-like" survives to every dimension.** What fails from $n\ge5$ is not dimension but **simplicity**, $\mathfrak{so}(n)$ admits no decomposition into $3$-dimensional ideals. The post gets to the right place ("$>3$ **and simple** for every $n\ge5$") but files it under a dimension criterion that its own $n=4$ example refutes.
 
-**And the conclusion over-reaches.** "That is the whole of the $n=4$ phenomenon, at the root" and "subsumes 2c and 2f" are both too strong. $\langle\operatorname{adj}A,A\rangle=3\det A$ holds for *every* $A$; $\operatorname{tr}(A^3)=3\det A$ needs $\operatorname{tr}A=0$. The passage from "$\#$ is a scaled adjugate" to "$\theta$ is spectral" therefore consumes a second, independent ingredient: **each chirality of a Weyl tensor is separately trace-free**. That is a curvature-tensor fact (the Ricci-flatness of $\mathrm{Weyl}_4$), not a Lie-algebra fact, and 2e2 contains no trace of it. Post F2f *does* record it as its condition 2. So 2e2 does not subsume 2f; it drops one of its two hypotheses.
+**And the conclusion over-reaches.** "That is the whole of the $n=4$ phenomenon, at the root" and "subsumes 2c and 2f" are both too strong. $\langle\mathop{\mathrm{adj}}A,A\rangle=3\det A$ holds for *every* $A$; $\mathop{\mathrm{tr}}(A^3)=3\det A$ needs $\mathop{\mathrm{tr}}A=0$. The passage from "$\#$ is a scaled adjugate" to "$\theta$ is spectral" therefore consumes a second, independent ingredient: **each chirality of a Weyl tensor is separately trace-free**. That is a curvature-tensor fact (the Ricci-flatness of $\mathrm{Weyl}_4$), not a Lie-algebra fact, and 2e2 contains no trace of it. Post F2f *does* record it as its condition 2. So 2e2 does not subsume 2f; it drops one of its two hypotheses.
 
 ---
 
@@ -131,7 +131,7 @@ The Newton self-correction is right, and the correction was the right call. Writ
 
 ### 2.4. The $\mathfrak{su}(3)$ Gell-Mann computation
 
-Built $f_{abc}=-\tfrac i4\operatorname{tr}([\lambda_a,\lambda_b]\lambda_c)$ exactly from the eight Gell-Mann matrices (only $\mathbb Q$ and $\sqrt3$ appear). Total antisymmetry verified exactly.
+Built $f_{abc}=-\tfrac i4\mathop{\mathrm{tr}}([\lambda_a,\lambda_b]\lambda_c)$ exactly from the eight Gell-Mann matrices (only $\mathbb Q$ and $\sqrt3$ appear). Total antisymmetry verified exactly.
 
 - **$T=f^2$ takes the values $\{\tfrac14,\tfrac34,1\}$, CONFIRMED**, with multiplicities $6$, $2$, $1$ respectively (the standard $f_{147}$-family, $f_{458},f_{678}$, and $f_{123}$).
 - **"$28$ of its $56$ triples carrying $T=0$", REFUTED.** Of the $\binom83=56$ triples, **$47$ carry $T=0$** and only $9$ are nonzero. The figure $28$ is wrong by $19$. The error runs in the author's favour ($\mathfrak{su}(3)$ is *further* from block-constant than claimed) so the conclusion is not damaged, but the number as printed is not the number.
@@ -163,7 +163,7 @@ Five independent reasons, any one of which is fatal.
 
 **(iii) The group is wrong.** $T=c^2$ is read in an *orthonormal* eigenframe. The group acting is $O(N)$, and the symmetry actually relevant is $\mathrm{Aut}(\mathfrak{so}(n))\subset O(N)$, the $O(n)$-action on $\Lambda^2\mathbb R^n$. $GL(N)$-orbit counting is a different action on a different problem. Under $GL(N)$ the structure form is in fact *rigid* in the sense that matters here: its stabiliser contains $\mathrm{Aut}(\mathfrak{so}(n))$, so its orbit has dimension $N^2-\binom n2$, and the "moduli" are populated by forms that are not Lie brackets at all.
 
-**(iv) "Has moduli" $\ne$ "no argument". This is a category error, and the record refutes it in two places.** Moduli spaces support sharp inequalities routinely. The nearest example is the post's own: Okumura's bound $\operatorname{tr}(A^3)\le\tfrac{m-2}{\sqrt{m(m-1)}}\lVert A\rVert^3$ is a sharp inequality on traceless symmetric matrices, a space with $GL$-moduli, and it is precisely the tool post F2c uses to close $n=4$. Closer still: by the project's own arithmetic (verified exactly here) $\dim\mathrm{Weyl}_n-\dim O(n)=\tfrac{n^2(n^2-13)}{12}$, which is $4$ at $n=4$, **so $\mathrm{Weyl}_4$ has moduli, and the sharp bound on it is nonetheless proved**. And [post F2d](../findings/fence-posts.md) (Reviewer 94) already adjudicated exactly this inference: *"a spectral bound cannot suffice is a **non-sequitur**, the fibrewise supremum is itself a spectral function."* Post F2e2 re-commits the refuted inference and then cites the same moduli count as supporting evidence.
+**(iv) "Has moduli" $\ne$ "no argument". This is a category error, and the record refutes it in two places.** Moduli spaces support sharp inequalities routinely. The nearest example is the post's own: Okumura's bound $\mathop{\mathrm{tr}}(A^3)\le\tfrac{m-2}{\sqrt{m(m-1)}}\lVert A\rVert^3$ is a sharp inequality on traceless symmetric matrices, a space with $GL$-moduli, and it is precisely the tool post F2c uses to close $n=4$. Closer still: by the project's own arithmetic (verified exactly here) $\dim\mathrm{Weyl}_n-\dim O(n)=\tfrac{n^2(n^2-13)}{12}$, which is $4$ at $n=4$, **so $\mathrm{Weyl}_4$ has moduli, and the sharp bound on it is nonetheless proved**. And [post F2d](../findings/fence-posts.md) (Reviewer 94) already adjudicated exactly this inference: *"a spectral bound cannot suffice is a **non-sequitur**, the fibrewise supremum is itself a spectral function."* Post F2e2 re-commits the refuted inference and then cites the same moduli count as supporting evidence.
 
 **(v) The "boundary" is not being detected by the number $8$.** $\binom n2$ takes the values $3,6,10,15,\dots$, it never lands in $\{7,8,9\}$. **Any** threshold $N^\ast\in\{6,7,8,9\}$ yields the identical conclusion "$n\le4$". So the agreement with $n=4$ is a coincidence of a $4$-wide gap, and the claim would read the same if the true orbit-finiteness boundary were $6$ or $9$. As evidence about $n=4$ this carries almost no information.
 
@@ -177,7 +177,7 @@ They are neither three, nor independent, nor all at $n=4$.
 
 | Appearance | What it actually is | Boundary it gives |
 |---|---|---|
-| $\#=\operatorname{adj}\iff\dim\mathfrak g=3$ | $\binom n2=3$ | $n=\mathbf3$, not $4$ |
+| $\#=\mathop{\mathrm{adj}}\iff\dim\mathfrak g=3$ | $\binom n2=3$ | $n=\mathbf3$, not $4$ |
 | Orbit finiteness $\iff N\le8$ | $\binom n2\le8$ | $n\le4$ |
 | $\tfrac{n^2(n^2-13)}{12}>0$ | $\dim\mathrm{Weyl}_n>\dim O(n)$ | $n\ge4$ |
 
@@ -197,25 +197,25 @@ They are neither three, nor independent, nor all at $n=4$.
 
 The post displays
 
-$$\langle W^\#,W\rangle=3(\det W^++\det W^-)=\operatorname{tr}((W^+)^3)+\operatorname{tr}((W^-)^3)\ \propto\ \operatorname{tr}(W^3)$$
+$$\langle W^\#,W\rangle=3(\det W^++\det W^-)=\mathop{\mathrm{tr}}((W^+)^3)+\mathop{\mathrm{tr}}((W^-)^3)\ \propto\ \mathop{\mathrm{tr}}(W^3)$$
 
-and then says "Reviewer 94 fixes the constant at $\langle W^\#,W\rangle=2\operatorname{tr}(W^3)$". **The display and the sentence contradict each other**: the displayed chain evaluates to $\operatorname{tr}(W^3)$, not $2\operatorname{tr}(W^3)$.
+and then says "Reviewer 94 fixes the constant at $\langle W^\#,W\rangle=2\mathop{\mathrm{tr}}(W^3)$". **The display and the sentence contradict each other**: the displayed chain evaluates to $\mathop{\mathrm{tr}}(W^3)$, not $2\mathop{\mathrm{tr}}(W^3)$.
 
 Reviewer 94 is right and the display is wrong. On a fully general $\mathrm{Weyl}_4$ ($A$, $B$ arbitrary symmetric traceless $3\times3$ on the two chiralities, ten free parameters), I verified exactly:
 
-$$W^\#=\big(2\operatorname{adj}A,\ 2\operatorname{adj}B\big),\qquad\langle W^\#,W\rangle-2\operatorname{tr}(W^3)=0,\qquad\langle Q(W),W\rangle=3\operatorname{tr}(W^3).$$
+$$W^\#=\big(2\mathop{\mathrm{adj}}A,\ 2\mathop{\mathrm{adj}}B\big),\qquad\langle W^\#,W\rangle-2\mathop{\mathrm{tr}}(W^3)=0,\qquad\langle Q(W),W\rangle=3\mathop{\mathrm{tr}}(W^3).$$
 
-The missing $2$ is exactly the $c^{\mathrm{SD}}_{012}=-\sqrt2$ of §1b. **The correct display is $\langle W^\#,W\rangle=6(\det W^++\det W^-)=2\big[\operatorname{tr}((W^+)^3)+\operatorname{tr}((W^-)^3)\big]$.** Because 2e2's headline sentence asserts "$\#$ **is** the adjugate", and 2c's display silently uses that unscaled identity, the two posts propagate one and the same error.
+The missing $2$ is exactly the $c^{\mathrm{SD}}_{012}=-\sqrt2$ of §1b. **The correct display is $\langle W^\#,W\rangle=6(\det W^++\det W^-)=2\big[\mathop{\mathrm{tr}}((W^+)^3)+\mathop{\mathrm{tr}}((W^-)^3)\big]$.** Because 2e2's headline sentence asserts "$\#$ **is** the adjugate", and 2c's display silently uses that unscaled identity, the two posts propagate one and the same error.
 
 ### 5b. The $n=6$ isospectral pair, CONFIRMED, and stronger than stated
 
-Derived independently. A coordinate-diagonal $W\in\mathrm{Weyl}_6$ is exactly a symmetric $6\times6$ matrix $K$ with zero diagonal and all row sums zero (Bianchi is automatic, a coordinate-diagonal operator has $R_{ijkl}=0$ unless $\{i,j\}=\{k,l\}$, so every Bianchi triple vanishes termwise; Ricci-flatness is the row-sum condition). Demanding the $\Lambda^2$-spectrum $(1^6,0^3,(-1)^6)$: each vertex needs equally many $+1$ and $-1$ edges, so its nonzero degree is even, so its zero-degree is odd; the zero-degrees sum to $6$ over $6$ vertices, hence **the three zero edges must form a perfect matching**, and the support is $K_6$ minus a matching (the octahedron). Exhaustive exact enumeration over all $15\cdot2^{12}$ labellings, with $P=\operatorname{tr}(W^3)+\tfrac12\sum c_{abc}^2\lambda_a\lambda_b\lambda_c$ anchored against $\langle\mathrm{Id}^\#,\mathrm{Id}\rangle=60$:
+Derived independently. A coordinate-diagonal $W\in\mathrm{Weyl}_6$ is exactly a symmetric $6\times6$ matrix $K$ with zero diagonal and all row sums zero (Bianchi is automatic, a coordinate-diagonal operator has $R_{ijkl}=0$ unless $\{i,j\}=\{k,l\}$, so every Bianchi triple vanishes termwise; Ricci-flatness is the row-sum condition). Demanding the $\Lambda^2$-spectrum $(1^6,0^3,(-1)^6)$: each vertex needs equally many $+1$ and $-1$ edges, so its nonzero degree is even, so its zero-degree is odd; the zero-degrees sum to $6$ over $6$ vertices, hence **the three zero edges must form a perfect matching**, and the support is $K_6$ minus a matching (the octahedron). Exhaustive exact enumeration over all $15\cdot2^{12}$ labellings, with $P=\mathop{\mathrm{tr}}(W^3)+\tfrac12\sum c_{abc}^2\lambda_a\lambda_b\lambda_c$ anchored against $\langle\mathrm{Id}^\#,\mathrm{Id}\rangle=60$:
 
 | $P$ | $-24$ | $0$ | $+24$ |
 |---|---|---|---|
 | count | $60$ | $180$ | $60$ |
 
-every one with $\operatorname{tr}(W^3)=0$ and $\lVert W\rVert^2=12$. So the post's "$P=0$ against $P=24$" is right and understates the case: **the spread across one $\Lambda^2$-spectrum is $48$, not $24$**, and there is a third value. The conclusion ($P$ is provably not a function of the spectrum), is CONFIRMED, and the post should quote $\{-24,0,24\}$. ("Both with trivial stabiliser" I did not check; it is not load-bearing, since the three distinct $P$ values settle non-spectrality on their own.)
+every one with $\mathop{\mathrm{tr}}(W^3)=0$ and $\lVert W\rVert^2=12$. So the post's "$P=0$ against $P=24$" is right and understates the case: **the spread across one $\Lambda^2$-spectrum is $48$, not $24$**, and there is a third value. The conclusion ($P$ is provably not a function of the spectrum), is CONFIRMED, and the post should quote $\{-24,0,24\}$. ("Both with trivial stabiliser" I did not check; it is not load-bearing, since the three distinct $P$ values settle non-spectrality on their own.)
 
 ### 5c–d. The Huisken norm correction
 
@@ -223,7 +223,7 @@ $\lvert W\rvert=2\lVert W\rVert$ is **CONFIRMED**: the $e_i\wedge e_j$ ($i<j$) a
 
 The **conversion is not**. [notes.md](../references/huisken-1985-ricci-deformation/notes.md) says "the sharp constant is $\tfrac{\sqrt6}4$ against $\lvert W\rvert^3$ … In the project's normalisation it becomes $\tfrac{\sqrt6}2$." Substituting $\lvert W\rvert=2\lVert W\rVert$ into $\tfrac{\sqrt6}4\lvert W\rvert^3$ gives $2\sqrt6\,\lVert W\rVert^3$, a factor $4$ away from $\tfrac{\sqrt6}2\lVert W\rVert^3$. The note converts the right-hand side but never says how the *left*-hand cubic rescales, so the chain as written does not reach its conclusion. **UNPROVEN as stated.**
 
-The target constant itself is safe by an independent exact route, which the note also gives and which I reproduced: $W_{\mathbb{CP}^2}$ has $\Lambda^2$-spectrum $(2,-1,-1,0,0,0)$, so $\lVert W\rVert^2=6$, $\operatorname{tr}(W^3)=6$, and $\theta=3\cdot6/6^{3/2}=\tfrac{\sqrt6}2=\sqrt{3/2}$ exactly. **The fix is to drop the Huisken-constant conversion as the justification and keep the $\mathbb{CP}^2$ computation**, or to state the cubic form's normalisation explicitly.
+The target constant itself is safe by an independent exact route, which the note also gives and which I reproduced: $W_{\mathbb{CP}^2}$ has $\Lambda^2$-spectrum $(2,-1,-1,0,0,0)$, so $\lVert W\rVert^2=6$, $\mathop{\mathrm{tr}}(W^3)=6$, and $\theta=3\cdot6/6^{3/2}=\tfrac{\sqrt6}2=\sqrt{3/2}$ exactly. **The fix is to drop the Huisken-constant conversion as the justification and keep the $\mathbb{CP}^2$ computation**, or to state the cubic form's normalisation explicitly.
 
 ### 5e. $1+\tfrac{\sqrt3}6$ is a limit, not a floor, REFUTED where it is called a floor
 
@@ -242,7 +242,7 @@ But $f(n)<1+\tfrac{\sqrt3}6$ for $n=4,5,6$. [fence-posts.md](../findings/fence-p
 
 ## Summary of what should change
 
-1. **Post F2e2, the headline "iff".** Replace with the normalisation-free statement: $\#=\kappa\operatorname{adj}$ ($\kappa\ne0$) $\iff\dim\Lambda^2\mathfrak g=\dim\mathfrak g\iff\dim\mathfrak g=3$, with $\kappa=\lambda^2$ where $c=\lambda\varepsilon$. Note that at $n=4$, $\kappa=2$, "$\#$ **is** the adjugate" is false in the post's own key case.
+1. **Post F2e2, the headline "iff".** Replace with the normalisation-free statement: $\#=\kappa\mathop{\mathrm{adj}}$ ($\kappa\ne0$) $\iff\dim\Lambda^2\mathfrak g=\dim\mathfrak g\iff\dim\mathfrak g=3$, with $\kappa=\lambda^2$ where $c=\lambda\varepsilon$. Note that at $n=4$, $\kappa=2$, "$\#$ **is** the adjugate" is false in the post's own key case.
 2. **Post F2e2, the adjugate identity.** Add "for symmetric $R$"; the residual is nonzero otherwise.
 3. **Post F2e2, "subsumes 2c and 2f".** Remove. 2e2 lacks the trace-free ingredient that 2f supplies as condition 2.
 4. **Post F2e2, the impossibility claim.** Remove "Any argument reaching $\theta$ through a classification of $c$ therefore cannot exist". The Jacobi identity puts $c$ inside the Cartan–Killing classification, which is finite in every dimension; the relevant group is $\mathrm{Aut}(\mathfrak{so}(n))\subset O(N)$, not $GL(N)$; and the project's own $n=4$ proof is a sharp bound on a space with moduli.

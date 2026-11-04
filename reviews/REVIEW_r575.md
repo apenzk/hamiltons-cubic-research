@@ -30,29 +30,29 @@ The block claims that across its population **none satisfies $\lambda_{\max}\le\
 
 I take the point from [conventions.md](../findings/conventions.md) and the anchor at [second-order.md:296](../findings/second-order.md): $W_{\mathbb{CP}^2}=\mathrm{diag}(0,0,0,-1,-1,2)/\sqrt6$ on $\Lambda^2\mathbb R^4$, with $\theta=\sqrt{3/2}$.
 
-At $n=4$, $\Lambda^2\mathbb R^4=\Lambda^+\oplus\Lambda^-$ and $\mathcal W_4=\mathrm{Sym}_0(\Lambda^+)\oplus\mathrm{Sym}_0(\Lambda^-)$, dimension $5+5=10=\dim\mathcal W_4$. The two $\mathfrak{su}(2)$ factors commute, so no structure constant couples them and $Q$ acts blockwise. On each $3\times3$ block $\#$ is a multiple of the adjugate, since $\mathrm{adj}(X)_{ab}=\tfrac12\epsilon_{a\gamma\epsilon}\epsilon_{b\delta\zeta}X_{\gamma\delta}X_{\epsilon\zeta}$. **I pin that multiple against the record's own $\theta$ rather than assuming a normalisation.** With $\langle X,Y\rangle=\operatorname{tr}(XY)$ on operators, the pairing [conventions.md](../findings/conventions.md) fixes by $\operatorname{tr}(W^2)=1$, the $\tfrac12$ sitting at the $\Lambda^2$ level, writing $Q(W)=W^2+c\,\mathrm{adj}(W)$ blockwise gives $\operatorname{tr}(W^3)=1/\sqrt6$ and $\operatorname{tr}(W\,\mathrm{adj}(W))=3\det(W_+)=1/\sqrt6$, so $\theta=\sqrt{3/2}$ forces $c=2$:
+At $n=4$, $\Lambda^2\mathbb R^4=\Lambda^+\oplus\Lambda^-$ and $\mathcal W_4=\mathrm{Sym}_0(\Lambda^+)\oplus\mathrm{Sym}_0(\Lambda^-)$, dimension $5+5=10=\dim\mathcal W_4$. The two $\mathfrak{su}(2)$ factors commute, so no structure constant couples them and $Q$ acts blockwise. On each $3\times3$ block $\#$ is a multiple of the adjugate, since $\mathrm{adj}(X)_{ab}=\tfrac12\epsilon_{a\gamma\epsilon}\epsilon_{b\delta\zeta}X_{\gamma\delta}X_{\epsilon\zeta}$. **I pin that multiple against the record's own $\theta$ rather than assuming a normalisation.** With $\langle X,Y\rangle=\mathop{\mathrm{tr}}(XY)$ on operators, the pairing [conventions.md](../findings/conventions.md) fixes by $\mathop{\mathrm{tr}}(W^2)=1$, the $\tfrac12$ sitting at the $\Lambda^2$ level, writing $Q(W)=W^2+c\,\mathrm{adj}(W)$ blockwise gives $\mathop{\mathrm{tr}}(W^3)=1/\sqrt6$ and $\mathop{\mathrm{tr}}(W\,\mathrm{adj}(W))=3\det(W_+)=1/\sqrt6$, so $\theta=\sqrt{3/2}$ forces $c=2$:
 
 $$Q(W)=\big(W_+^2+2\,\mathrm{adj}(W_+),\ W_-^2+2\,\mathrm{adj}(W_-)\big).$$
 
 Criticality reproduces exactly: $W_+^2+2\,\mathrm{adj}(W_+)=\mathrm{diag}(-3,-3,6)/6=\mathrm{diag}(-1,-1,2)/2=\theta W_+$, and $Q_-=0=\theta W_-$.
 
-Polarising, $X\circ Y=\tfrac12(XY+YX)+2\,\mathrm{Adj}(X,Y)$ with $\mathrm{Adj}$ the polarised adjugate. For $3\times3$ matrices $\mathrm{adj}(X)=X^2-\operatorname{tr}(X)X+\tfrac12[(\operatorname{tr}X)^2-\operatorname{tr}(X^2)]I$, so $\mathrm{Adj}(X,Y)=\tfrac12(XY+YX)-\tfrac12(\operatorname{tr}(X)Y+\operatorname{tr}(Y)X)+\tfrac12[\operatorname{tr}X\operatorname{tr}Y-\operatorname{tr}(XY)]I$. Two consequences:
+Polarising, $X\circ Y=\tfrac12(XY+YX)+2\,\mathrm{Adj}(X,Y)$ with $\mathrm{Adj}$ the polarised adjugate. For $3\times3$ matrices $\mathrm{adj}(X)=X^2-\mathop{\mathrm{tr}}(X)X+\tfrac12[(\mathop{\mathrm{tr}}X)^2-\mathop{\mathrm{tr}}(X^2)]I$, so $\mathrm{Adj}(X,Y)=\tfrac12(XY+YX)-\tfrac12(\mathop{\mathrm{tr}}(X)Y+\mathop{\mathrm{tr}}(Y)X)+\tfrac12[\mathop{\mathrm{tr}}X\mathop{\mathrm{tr}}Y-\mathop{\mathrm{tr}}(XY)]I$. Two consequences:
 
 - **On $\mathrm{Sym}_0(\Lambda^-)$ the operator vanishes identically.** $e_-=0$ and $\mathrm{Adj}(0,Y)=0$, so $L_e$ is zero on a five-dimensional space.
 - **On $\mathrm{Sym}_0(\Lambda^+)$**, with $E:=e_+=W_+/\theta=\mathrm{diag}(-1,-1,2)/3$ (idempotent, since $E^2+2\,\mathrm{adj}(E)=\mathrm{diag}(-3,-3,6)/9=E$), both traces drop and
 
-$$L_E(Y)=\tfrac32(EY+YE)-\operatorname{tr}(EY)\,I .$$
+$$L_E(Y)=\tfrac32(EY+YE)-\mathop{\mathrm{tr}}(EY)\,I .$$
 
 Diagonalising with $\epsilon=(-1,-1,2)/3$: the off-diagonal $Y=E_{ab}+E_{ba}$ give $\lambda=\tfrac32(\epsilon_a+\epsilon_b)$, that is $-1$ at $(1,2)$ and $\tfrac12$ twice at $(1,3)$ and $(2,3)$; the trace-free diagonals give $\lambda=-1$ at $(1,-1,0)$ and $\lambda=1$ at $(1,1,-2)\propto E$. So
 
-$$\operatorname{spec}\big(L_e\big)=\big\{1^{(1)},\ \tfrac12^{(2)},\ 0^{(5)},\ (-1)^{(2)}\big\},\qquad \boxed{\lambda_{\max}\big(L_e\vert_{W^\perp}\big)=\tfrac12 .}$$
+$$\mathop{\mathrm{spec}}\big(L_e\big)=\big\{1^{(1)},\ \tfrac12^{(2)},\ 0^{(5)},\ (-1)^{(2)}\big\},\qquad \boxed{\lambda_{\max}\big(L_e\vert_{W^\perp}\big)=\tfrac12 .}$$
 
 ### Four checks the construction had no freedom to pass
 
 | check | source | result |
 | --- | --- | --- |
-| $\operatorname{tr}(L_e)=0$ | [second-order.md:217](../findings/second-order.md) | $1+1+0-2=0$ |
-| $\operatorname{tr}(L_e^2)=\kappa_W/\theta^2$, $\kappa_W=(2n-1)(n-1)/4$ | [second-order.md:217](../findings/second-order.md) | $1+\tfrac12+2=\tfrac72=(21/4)/(3/2)$ |
+| $\mathop{\mathrm{tr}}(L_e)=0$ | [second-order.md:217](../findings/second-order.md) | $1+1+0-2=0$ |
+| $\mathop{\mathrm{tr}}(L_e^2)=\kappa_W/\theta^2$, $\kappa_W=(2n-1)(n-1)/4$ | [second-order.md:217](../findings/second-order.md) | $1+\tfrac12+2=\tfrac72=(21/4)/(3/2)$ |
 | $\dim E(\tfrac12)=\dim\mathcal O$ | [second-order.md:241](../findings/second-order.md)'s $\binom n2-4-\binom{n-4}2$; and $\dim\mathcal O=2$ measured at [r297](REVIEW_r297.md) | $2=2$ |
 | $\dim E_+=1$, $\dim E_-=2$, $\dim\ker W=3$ | [bounds.md:59](../findings/bounds.md) | $2/\sqrt6$ once, $-1/\sqrt6$ twice, $0$ on all of $\Lambda^-$ |
 
@@ -114,7 +114,7 @@ The heading reads *"canonical statement and proof"*. **The block contains no pro
 
 **What else the block leans on that is undefined.** *Graded*, which [conventions.md](../findings/conventions.md) says carries three incomparable senses (C), (A), (B), and the sense is load-bearing here, since the block calls $W_{\mathbb{CP}^3}$ graded while its own preamble calls $W_{\mathbb{CP}^2}$ ungraded, both members of the $\mathfrak u(m)\subset\mathfrak{so}(2m)$ family. Also *converged*, *primitive* (in *"the value $1$ records that the idempotent is not primitive"*), and *structured*.
 
-**The norm is used correctly.** $\lambda_{\max}(L_e\vert_{W^\perp})$ takes $L_e=e\circ(\cdot)$ with $\circ$ as [conventions.md](../findings/conventions.md) fixes it, $W^\perp$ in sense (i) of the four objects under $\Pi$, and the operator-level pairing $\operatorname{tr}(XY)$, which is what makes $\operatorname{tr}(L_e^2)=\kappa_W/\theta^2$ come out at $\tfrac72$ in §1. No normalisation defect found.
+**The norm is used correctly.** $\lambda_{\max}(L_e\vert_{W^\perp})$ takes $L_e=e\circ(\cdot)$ with $\circ$ as [conventions.md](../findings/conventions.md) fixes it, $W^\perp$ in sense (i) of the four objects under $\Pi$, and the operator-level pairing $\mathop{\mathrm{tr}}(XY)$, which is what makes $\mathop{\mathrm{tr}}(L_e^2)=\kappa_W/\theta^2$ come out at $\tfrac72$ in §1. No normalisation defect found.
 
 ## 6. D6, the "what it does not say" list
 

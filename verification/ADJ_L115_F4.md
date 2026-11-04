@@ -4,9 +4,9 @@
 
 ## The step
 
-From the last two sentences of Passage A, "The equivalent target is the pointwise statement at maximisers, and that is Conjecture A rewritten, neither easier nor harder. A free by-product: since $\operatorname{diag}M=\lambda$ and $\lambda_{\max}(M)=\theta$ at a maximiser, $\theta\ge\max_\alpha\lambda_\alpha$".
+From the last two sentences of Passage A, "The equivalent target is the pointwise statement at maximisers, and that is Conjecture A rewritten, neither easier nor harder. A free by-product: since $\mathop{\mathrm{diag}}M=\lambda$ and $\lambda_{\max}(M)=\theta$ at a maximiser, $\theta\ge\max_\alpha\lambda_\alpha$".
 
-**The step: (i) "$\lambda_{\max}(M)\le\theta_0$ at maximisers" is equivalent to Conjecture A, and (ii) $\theta\ge\max_\alpha\lambda_\alpha$ at a maximiser follows from $\operatorname{diag}M=\lambda$ and $\lambda_{\max}(M)=\theta$ there, both as written, with their premises available from the passages.**
+**The step: (i) "$\lambda_{\max}(M)\le\theta_0$ at maximisers" is equivalent to Conjecture A, and (ii) $\theta\ge\max_\alpha\lambda_\alpha$ at a maximiser follows from $\mathop{\mathrm{diag}}M=\lambda$ and $\lambda_{\max}(M)=\theta$ there, both as written, with their premises available from the passages.**
 
 ## Passage A, the heading and the lemma as the file carries it ([findings/bounds-relaxations.md](../findings/bounds-relaxations.md) lines 268, 284, 286, 288, 290, 292 and 294)
 
@@ -24,7 +24,7 @@ $$\lambda_{\max}(M)=\theta\qquad\text{at every COORDINATE-DIAGONAL global maximi
 
 #### The Rayleigh bound is tight where it matters and slack elsewhere
 
-So $\sup_W\lambda_{\max}(M)\le\theta_0$ (B3's target as posed), is **strictly stronger than Conjecture A**: the $C_5$ blow-up carries ratio $1.206$ while its $\theta$ sits far below $\theta_0$. The equivalent target is the pointwise statement at maximisers, and that is Conjecture A rewritten, neither easier nor harder. A free by-product: since $\operatorname{diag}M=\lambda$ and $\lambda_{\max}(M)=\theta$ at a maximiser, $\theta\ge\max_\alpha\lambda_\alpha$, the largest eigenvalue of a maximiser is at most its own $\theta$.
+So $\sup_W\lambda_{\max}(M)\le\theta_0$ (B3's target as posed), is **strictly stronger than Conjecture A**: the $C_5$ blow-up carries ratio $1.206$ while its $\theta$ sits far below $\theta_0$. The equivalent target is the pointwise statement at maximisers, and that is Conjecture A rewritten, neither easier nor harder. A free by-product: since $\mathop{\mathrm{diag}}M=\lambda$ and $\lambda_{\max}(M)=\theta$ at a maximiser, $\theta\ge\max_\alpha\lambda_\alpha$, the largest eigenvalue of a maximiser is at most its own $\theta$.
 
 ## Passage B, the definition of $M$ and its first facts ([findings/second-order.md](../findings/second-order.md) lines 532-548, odd lines)
 

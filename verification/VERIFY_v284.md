@@ -29,7 +29,7 @@ Cold brief ([BRIEF_L09.md](BRIEF_L09.md)), no numerical work, every value exact,
 |---|---|---|---|---|
 | $n=8$ | A, line 485 | yes (triality exists only for $D_4$) | A and 485 yes, line 140 no | yes |
 | $\tau\in\mathrm{Aut}(\mathfrak{so}(8))$ outer, moving the vector class | A | yes | "triality", class unnamed | yes, [Yokota](../references/yokota-2009-exceptional-lie-groups/notes.md) Thm 1.3.5, [Ziller](../references/ziller-2010-lie-groups-symmetric-spaces/notes.md) Prop 4.43, Ex 4.45 |
-| Automorphisms preserve the Killing form | A ("preserves the inner product") | yes | asserted | yes, one line: $B(\sigma X,\sigma Y)=\operatorname{tr}(\sigma\,\mathrm{ad}_X\mathrm{ad}_Y\sigma^{-1})$ |
+| Automorphisms preserve the Killing form | A ("preserves the inner product") | yes | asserted | yes, one line: $B(\sigma X,\sigma Y)=\mathop{\mathrm{tr}}(\sigma\,\mathrm{ad}_X\mathrm{ad}_Y\sigma^{-1})$ |
 | The three $35$s are permuted by $\tau$ | A | yes | asserted, no argument, no filed source | standard, unfiled (Claim 2) |
 | $\mathbb{HP}^2=\tau(W_{3,5})$, same sign | A | yes, load-bearing | asserted, no argument, no filed source | unargued (Claim 3) |
 | L27: $p,q\ge3$, $(p,q)\ne(3,3)$, $n=p+q$ | D | yes | yes | holds at $(3,5)$, $n=8$ |

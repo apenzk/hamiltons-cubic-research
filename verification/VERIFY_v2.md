@@ -75,7 +75,7 @@ $n\ge3$ (so $n-2\ne0$), $v\perp\mathbf 1$, $|v|=1$; and in part (c) additionally
 
 ### Finding 5, Material A's symmetry justification covers only half of $Q$. **Stands, minor, load-bearing.**
 
-*Re-derivation.* Material A says $T$ is "made fully symmetric by the trace identity $\operatorname{tr}(XYZ)=\operatorname{tr}(ZYX)$ for self-adjoint operators". That identity does establish full symmetry of $(X,Y,Z)\mapsto\tfrac12\operatorname{tr}(X(YZ+ZY))$: cyclicity gives $\operatorname{tr}(XYZ)=\operatorname{tr}(YZX)=\operatorname{tr}(ZXY)$ and transposition gives $\operatorname{tr}(XZY)=\operatorname{tr}(ZYX)=\operatorname{tr}(YXZ)$, so the symmetrised sum is invariant under all six permutations. It says nothing whatever about $\langle X,Y\#Z\rangle$, which involves the Lie bracket structure constants of $\mathfrak{so}(n)$ and no trace of a product of the three operators.
+*Re-derivation.* Material A says $T$ is "made fully symmetric by the trace identity $\mathop{\mathrm{tr}}(XYZ)=\mathop{\mathrm{tr}}(ZYX)$ for self-adjoint operators". That identity does establish full symmetry of $(X,Y,Z)\mapsto\tfrac12\mathop{\mathrm{tr}}(X(YZ+ZY))$: cyclicity gives $\mathop{\mathrm{tr}}(XYZ)=\mathop{\mathrm{tr}}(YZX)=\mathop{\mathrm{tr}}(ZXY)$ and transposition gives $\mathop{\mathrm{tr}}(XZY)=\mathop{\mathrm{tr}}(ZYX)=\mathop{\mathrm{tr}}(YXZ)$, so the symmetrised sum is invariant under all six permutations. It says nothing whatever about $\langle X,Y\#Z\rangle$, which involves the Lie bracket structure constants of $\mathfrak{so}(n)$ and no trace of a product of the three operators.
 
 *Concrete failure.* The symmetry is load-bearing, not decorative: $dP(W)[X]=3\langle Q(W),X\rangle$ (and hence $Q(W)=\lambda W$ rather than a first-order condition mixing $Q(W)$ with $Q(W,X)$), holds precisely because $T$ is fully symmetric in all three slots. If the $\#$ half were only partially symmetric the Lagrange conclusion of Material A would change form.
 
@@ -99,7 +99,7 @@ $n\ge3$ (so $n-2\ne0$), $v\perp\mathbf 1$, $|v|=1$; and in part (c) additionally
 
 ### Withdrawn candidate, "$Q(W)$ may leave $\mathrm{Weyl}_n$, so the critical equation should read $\pi_{\mathrm{Weyl}}Q(W)=\lambda W$"
 
-*Withdrawn.* I raised this because the constrained gradient of $P$ on $\mathrm{Weyl}^1_n$ is a priori only the $\mathrm{Weyl}$-projection of $Q(W)$, and because $\operatorname{tr}Q(W)=|W|^2+\operatorname{tr}(W^{\#})$ need not obviously vanish. It is settled by Nienhaus Lemma 2.13 (line 1091, citing [AH11]): $Q$ maps $\mathrm{Weyl}_n\times\mathrm{Weyl}_n$ into $\mathrm{Weyl}_n$, so the projection is the identity on $Q(W)$ and Material A's $Q(W)=\lambda W$ is exactly right. Recorded so the next reviewer does not re-open it.
+*Withdrawn.* I raised this because the constrained gradient of $P$ on $\mathrm{Weyl}^1_n$ is a priori only the $\mathrm{Weyl}$-projection of $Q(W)$, and because $\mathop{\mathrm{tr}}Q(W)=|W|^2+\mathop{\mathrm{tr}}(W^{\#})$ need not obviously vanish. It is settled by Nienhaus Lemma 2.13 (line 1091, citing [AH11]): $Q$ maps $\mathrm{Weyl}_n\times\mathrm{Weyl}_n$ into $\mathrm{Weyl}_n$, so the projection is the identity on $Q(W)$ and Material A's $Q(W)=\lambda W$ is exactly right. Recorded so the next reviewer does not re-open it.
 
 ### Withdrawn candidate, "$\lambda=P(W)$ is a further assumption"
 

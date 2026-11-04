@@ -6,7 +6,7 @@
 
 **Closed this session (all on the symmetric three-value family, $\lambda=(-a,0,a)$, $\kappa=\theta\sqrt{2p}$):**
 - [L251](../findings/second-order.md), [L252](../findings/second-order.md), [L253](../findings/second-order.md): at $n=12$ the family above $\theta_0(12)$ has $8\le p\le13$. These rest on $n$-specific numbers and certificates.
-- $n$-uniform, and the tools that survive: $\kappa\le\min(p-2,n-5)$ (L253, L244); the general per-element ceiling at every three-value spectrum (`general_ceiling`); the coupled fourth moment at every spectrum, $(p_0+2)\mathbb E\operatorname{tr}x^4+\tfrac{4(\lambda_2-\lambda_1)}{\lambda_2-\lambda_0}\mathbb ER_1=6+\tfrac{4(\lambda_0+(n-2)\lambda_2)}{\lambda_2-\lambda_0}-\tfrac3{p_0}\lVert\Omega_0\rVert^2$ (`general_coupled`); the multi-element Eckart–Young bound.
+- $n$-uniform, and the tools that survive: $\kappa\le\min(p-2,n-5)$ (L253, L244); the general per-element ceiling at every three-value spectrum (`general_ceiling`); the coupled fourth moment at every spectrum, $(p_0+2)\mathbb E\mathop{\mathrm{tr}}x^4+\tfrac{4(\lambda_2-\lambda_1)}{\lambda_2-\lambda_0}\mathbb ER_1=6+\tfrac{4(\lambda_0+(n-2)\lambda_2)}{\lambda_2-\lambda_0}-\tfrac3{p_0}\lVert\Omega_0\rVert^2$ (`general_coupled`); the multi-element Eckart–Young bound.
 
 **What the list ran out of.** R39's $n$-uniform bounds exclude $p\le7$ and $p\gtrsim n^2/4$ only. In between, every per-vector ceiling is $\kappa=O(p)$ against a target $\kappa<\Theta_n\sqrt{2p}=O(\sqrt p)$. On the $n=12$ window a single element's per-vector system is exhausted by L249, and three follow-on routes closed (pair separation refuted by [r1206](REVIEW_r1206.md), [r1207](REVIEW_r1207.md); pencil common line; second order on single-plane directions, which gives $\pm1/\kappa$).
 
@@ -26,7 +26,7 @@ Candidate fields: moment maps and Kirwan–Ness convexity for the $O(n)$ action 
 - [F79](../findings/fence-posts.md): traced Bianchi is in the rows.
 - [F39](../findings/fence-posts.md): (b) blind.
 - [F67](../findings/fence-posts.md), [F43](../findings/bounds-relaxations.md), F15 to F18, F28: decoupled bounds, per-row families at three values, every LP and marginal relaxation.
-- **This session**: per-vector criticality rows give ceilings linear in $p$; single-element systems are exhausted by L249; averaged rigidity equals $\mathbb E\operatorname{tr}x^4\le2n/(p+2)$; pencil and pair tests do not force line-sharing at the relevant radius.
+- **This session**: per-vector criticality rows give ceilings linear in $p$; single-element systems are exhausted by L249; averaged rigidity equals $\mathbb E\mathop{\mathrm{tr}}x^4\le2n/(p+2)$; pencil and pair tests do not force line-sharing at the relevant radius.
 
 ## What previous sweeps covered
 

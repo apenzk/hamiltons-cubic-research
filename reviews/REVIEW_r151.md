@@ -53,7 +53,7 @@ This argument uses no $\theta$, no slack, no family theorem, and no convention. 
 ## 4. Conventions and the equality clause check out
 
 - **Same $Q$.** [p5_casimir_family.py](../scripts/p5_casimir_family.py) and [p3_jensen_s3s3.py](../scripts/pipelines/p3_jensen_s3s3.py) both call `Q_full` from the same module, both set $\theta=\langle W,Q(W)\rangle$ on a unit-norm $W$, and both measure criticality as $\lVert Q(W)-\theta W\rVert$. No mismatch.
-- **Same slack.** Both use $S=\lVert\mathrm{Ric}(W_-)\rVert^2+6\delta^2-\theta\operatorname{tr}(W_-)-\operatorname{tr}(W_-^2)$.
+- **Same slack.** Both use $S=\lVert\mathrm{Ric}(W_-)\rVert^2+6\delta^2-\theta\mathop{\mathrm{tr}}(W_-)-\mathop{\mathrm{tr}}(W_-^2)$.
 - **Equality clause consistent.** The theorem's clause is $S_{\mathfrak{mmm}}=0$; the family's slack is $S=\tfrac r{nN}(n^2-2n-4r)$ and $S_{\mathfrak{mmm}}=\tfrac{2(N-r)}n(n^2-2n-4r)$. Both are positive multiples of the same bracket for $0<r<N$, so on the family $S=0\iff S_{\mathfrak{mmm}}=0\iff r=n(n-2)/4$. The two senses of "graded" agree where the argument uses them.
 - **Arithmetic reproduced.** $\theta_0(6)=\sqrt{40}/6=1.054092553$; the formula at $r=6$, the $\mathfrak{so}(3)+\mathfrak{so}(3)$ member, returns $\tfrac13\sqrt{10}=1.054092553$ and $r=6$ is exactly the cap $n(n-2)/4$. Inverting: $\theta^2=\tfrac{5r}{3(15-r)}$, and $\theta^2=6/5$ gives $25r=270-18r$, $43r=270$, $r=6.2790698$, between $10/9$ at $r=6$ and $35/24$ at $r=7$. All correct.
 

@@ -49,7 +49,7 @@ Both parts are elementary and neither needs positivity, only invariance, nondege
 
 ## Half one, the rank identity
 
-Let $\mu_K\colon U_K\to S$ be multiplication restricted to the invariants supported on $K$. Its codomain is $S$ and not merely $S^6$, because $\mu$ is $O(5)$-equivariant (multiplicativity of the action) and $U_K$ consists of invariants. Write $\mathrm{rank}:=\dim\operatorname{im}\mu_K$.
+Let $\mu_K\colon U_K\to S$ be multiplication restricted to the invariants supported on $K$. Its codomain is $S$ and not merely $S^6$, because $\mu$ is $O(5)$-equivariant (multiplicativity of the action) and $U_K$ consists of invariants. Write $\mathrm{rank}:=\dim\mathop{\mathrm{im}}\mu_K$.
 
 **Step 1, the adjoint.** Part (2) of the lemma makes the apolar pairing nondegenerate on $S$, so it identifies $S^*\cong S$; likewise on $U$ and hence on $U_K$. Under those identifications the adjoint of $\mu_K$ is
 $$\mu_K^*\colon S\to U_K,\qquad \mu_K^*(F)=\Pi_{U_K}\mathrm{Cat}_F,$$
@@ -65,14 +65,14 @@ $$\ker\mu_K^*=\{F\in S:\mathrm{Cat}_F(K,K)=0\}=\mathrm{ANN}.$$
 Two remarks on what this does and does not use.
 
 - The number $14$ enters once, as $\dim S$, and it is [L85](../findings/sym3-blocks.md)'s machine count. The identity itself is dimension-agnostic: it reads $\mathrm{rank}=\dim S-\dim\mathrm{ANN}$ at any $n$.
-- The clause the sentence attaches (*"$\mathrm{Cat}$ is injective on the invariant sextics because $\mu$ is surjective"*), is **not needed** for the rank identity; it serves the $65=36+29$ picture that follows. It is nonetheless true, and more cheaply than stated: $\mathrm{Cat}_F=0$ gives $\langle F,\mu(B)\rangle=0$ for every $B$, so $F\perp\operatorname{im}\mu=S^6$ and $F=0$. Surjectivity of $\mu$ on the full space suffices; invariance is not consumed. This matches [Round L62](ROUND_L62.md)'s D10, which recorded the clause as an unused import, it is unused *here*, and it is correct.
+- The clause the sentence attaches (*"$\mathrm{Cat}$ is injective on the invariant sextics because $\mu$ is surjective"*), is **not needed** for the rank identity; it serves the $65=36+29$ picture that follows. It is nonetheless true, and more cheaply than stated: $\mathrm{Cat}_F=0$ gives $\langle F,\mu(B)\rangle=0$ for every $B$, so $F\perp\mathop{\mathrm{im}}\mu=S^6$ and $F=0$. Surjectivity of $\mu$ on the full space suffices; invariance is not consumed. This matches [Round L62](ROUND_L62.md)'s D10, which recorded the clause as an unused import, it is unused *here*, and it is correct.
 
 ## Half two, the membership equivalence
 
-$F_5=\tfrac32\lVert W\rVert^6-9\operatorname{tr}(W^3)^2$ is a sextic and is $O(5)$-invariant, both summands being invariants; so $F_5\in S$, which is what lets the question be asked inside the $14$ at all.
+$F_5=\tfrac32\lVert W\rVert^6-9\mathop{\mathrm{tr}}(W^3)^2$ is a sextic and is $O(5)$-invariant, both summands being invariants; so $F_5\in S$, which is what lets the question be asked inside the $14$ at all.
 
-$\operatorname{im}\mu_K\subseteq S$ is a subspace of a finite-dimensional space carrying a nondegenerate form (Lemma, part 2). Step 2 above says $\mathrm{ANN}=\ker\mu_K^*=(\operatorname{im}\mu_K)^{\perp}$, the orthogonal complement taken **inside $S$**. The double-annihilator theorem for a nondegenerate form on a finite-dimensional space gives $(\operatorname{im}\mu_K)^{\perp\perp}=\operatorname{im}\mu_K$, whence
-$$F_5\perp\mathrm{ANN}\iff F_5\in\mathrm{ANN}^\perp=(\operatorname{im}\mu_K)^{\perp\perp}=\operatorname{im}\mu_K.\qquad\blacksquare$$
+$\mathop{\mathrm{im}}\mu_K\subseteq S$ is a subspace of a finite-dimensional space carrying a nondegenerate form (Lemma, part 2). Step 2 above says $\mathrm{ANN}=\ker\mu_K^*=(\mathop{\mathrm{im}}\mu_K)^{\perp}$, the orthogonal complement taken **inside $S$**. The double-annihilator theorem for a nondegenerate form on a finite-dimensional space gives $(\mathop{\mathrm{im}}\mu_K)^{\perp\perp}=\mathop{\mathrm{im}}\mu_K$, whence
+$$F_5\perp\mathrm{ANN}\iff F_5\in\mathrm{ANN}^\perp=(\mathop{\mathrm{im}}\mu_K)^{\perp\perp}=\mathop{\mathrm{im}}\mu_K.\qquad\blacksquare$$
 
 The forward direction is free; the content is the reverse one, and it is exactly where nondegeneracy on $S$ is load-bearing. With the apolar inner product the form on $S$ is positive definite, so there are no isotropic subspaces and the theorem applies with room to spare; part (2) of the lemma shows it would apply for **any** invariant nondegenerate pairing, definite or not, which is why the record's silence about the pairing does not endanger this half.
 
@@ -96,7 +96,7 @@ which vanishes for $f,g\in K$ because every element of $K$ vanishes on the **who
 | H3 | $K$ is an $O(5)$-submodule of $S^3$ | the transfer from invariant forms to all of $K\times K$ | **yes**, [sym3-blocks.md:234](../findings/sym3-blocks.md): *"the restricted cubics form an $O(5)$-submodule"* |
 | H4 | Reynolds averaging over the compact $O(5)$, characteristic zero | the same transfer; also polarisation | **partly.** [L89](../findings/sym3-blocks.md) invokes the Reynolds operator on compact $O(5)$ for exactness of invariants; the transfer step itself is stated nowhere, and the [L59](../findings/sym3-blocks.md) Gate 2 note books it as *"one step genuinely absent"* |
 | H5 | $\mathrm{ANN}$ ranges over the **invariant** sextics, i.e. sits inside the $14$ | both halves | **yes at this site**, [results.md:619](../results.md) says *"the $O(5)$-invariant sextics $F$"*; booked as omitted at [L91](../findings/sym3-blocks.md)'s third bullet and at [findings/conventions.md:45](../findings/conventions.md) |
-| H6 | $\mu$ is $O(5)$-equivariant, so $\operatorname{im}\mu_K\subseteq S$ and $\mathrm{Cat}_F$ is invariant for invariant $F$ | both halves | **yes**, [sym3-blocks.md:188](../findings/sym3-blocks.md) |
+| H6 | $\mu$ is $O(5)$-equivariant, so $\mathop{\mathrm{im}}\mu_K\subseteq S$ and $\mathrm{Cat}_F$ is invariant for invariant $F$ | both halves | **yes**, [sym3-blocks.md:188](../findings/sym3-blocks.md) |
 | H7 | $F_5$ is an invariant sextic | the equivalence | **yes**, throughout [L61](../results.md) |
 | H8 | $\mathrm{rank}$ and $\mathrm{image}$ refer to the **same restricted** map $\mu_K$ whose $K$ defines $\mathrm{ANN}$ | both halves | **no at this site.** The sentence writes $\mu$ for the restricted map and, one sentence later, for the unrestricted one; settled at [findings/conventions.md:45](../findings/conventions.md) and consumed correctly by [L62](../results.md) and [L90](../findings/sym3-blocks.md) |
 | H9 | $\dim S=14$ | the numeral only | **yes**, [L85](../findings/sym3-blocks.md), a single unreplicated machine count, and the identity's only imported number |
@@ -107,7 +107,7 @@ So of the nine, four are unstated at this site (H1, H2, H4, H8) and none is fals
 
 The defence is that the sentence is not making a claim about the certificate at all, it is transcribing a single, standard fact of equivariant linear algebra into the record's notation, and the fact holds for **any** compact group, any invariant nondegenerate pairing, any submodule $K$, and any degree split. Stripped of the $n=5$ furniture it reads:
 
-> Let $G$ be compact, $\mu\colon U\to S$ a $G$-map between finite-dimensional real modules, $\langle\cdot,\cdot\rangle$ invariant and nondegenerate on each side, $K$ a submodule, and $\mu_K$ the restriction of $\mu$ to $(\mathrm{Sym}^2K)^G$. Then $\mathrm{rank}(\mu_K)=\dim S^G-\dim\ker(\mu_K^*)$, and a vector of $S^G$ lies in $\operatorname{im}\mu_K$ if and only if it is orthogonal to that kernel.
+> Let $G$ be compact, $\mu\colon U\to S$ a $G$-map between finite-dimensional real modules, $\langle\cdot,\cdot\rangle$ invariant and nondegenerate on each side, $K$ a submodule, and $\mu_K$ the restriction of $\mu$ to $(\mathrm{Sym}^2K)^G$. Then $\mathrm{rank}(\mu_K)=\dim S^G-\dim\ker(\mu_K^*)$, and a vector of $S^G$ lies in $\mathop{\mathrm{im}}\mu_K$ if and only if it is orthogonal to that kernel.
 
 Every step is forced: the adjoint exists because the pairings are nondegenerate, its kernel is the annihilator of the image because that is what an adjoint's kernel is, the annihilator computed against invariants equals the annihilator computed against everything because the Reynolds operator maps a submodule onto its invariants, and the annihilator of the annihilator returns the image because the space is finite-dimensional. **Nothing in the chain can be weakened by a normalisation, a basis choice, a real-versus-Hermitian question, or a measurement.** That is why the two [L59](../findings/sym3-blocks.md) reviewers who disagreed about the factor $2$ nonetheless agreed no downstream number moves: a global scalar on $\mathrm{Cat}$ changes neither $\ker\mu_K^*$ nor the relation $\perp$.
 

@@ -1,6 +1,6 @@
 # REVIEW_r854: the cross-eigenspace equation, the hypothesis upgrade that carries it, and what the Lean file actually proves
 
-**Cold brief, argued from the definitions.** r854 was given the blockquote at [diagonal-half.md:1136](../findings/diagonal-half.md#L1136), the file [PencilProjections.lean](../lean/HamiltonsCubic/Results/PencilProjections.lean) with its row in [INDEX.md](../lean/INDEX.md), and the definitions quoted in the brief. Every identity below was re-derived by hand from $\varphi_{ab}=E_{ba}-E_{ab}$ and the inner product $\tfrac12\operatorname{tr}(X^{\mathsf T}Y)$ before the record was read. **The standing analysis-only rule was kept**: one screen was run, on objects built for it, and it is reported as a screen at section 12 and cited for nothing positive. The Lean file was built and its axioms printed in a scratch file that was then removed.
+**Cold brief, argued from the definitions.** r854 was given the blockquote at [diagonal-half.md:1136](../findings/diagonal-half.md#L1136), the file [PencilProjections.lean](../lean/HamiltonsCubic/Results/PencilProjections.lean) with its row in [INDEX.md](../lean/INDEX.md), and the definitions quoted in the brief. Every identity below was re-derived by hand from $\varphi_{ab}=E_{ba}-E_{ab}$ and the inner product $\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$ before the record was read. **The standing analysis-only rule was kept**: one screen was run, on objects built for it, and it is reported as a screen at section 12 and cited for nothing positive. The Lean file was built and its axioms printed in a scratch file that was then removed.
 
 ## Claim table
 
@@ -14,7 +14,7 @@
 | C | *over $\Lambda^2U$'s three coordinate planes, $\sum\Pi=2\,\Pi_U$*, and the docstring's reason | **CONFIRMED, AND UNDERSTATED** | it is $\Theta(\Lambda^2U)=(\dim U-1)\Pi_U$ at $\dim U=3$, so it is the unweighted total read inside $U$, it holds for every orthonormal basis of $\Lambda^2U$ and not only the coordinate ones, and the two-of-three count is that proof |
 | D | The assembled equation follows from [L180](../findings/diagonal-half.md)(1) on this locus | **CONFIRMED** | the grouping is $\sum_\mu\lambda_\mu\Theta(E_\mu)=0$, the specialisation is applied at the one normalisation that supports it, and L180's $\lambda_i\ne0$ makes the kernel's absence from the sum correct rather than an omission |
 | E1 | *an all-decomposable eigenspace has dimension at most $n-1$, so there are at least $n/2$ eigenspaces* | **REFUTED AS STATED** | the count needs every eigenspace including the kernel to satisfy the bound, which silently imposes $\dim\ker W\le n-1$ and a rank floor of $\binom n2-n+1$, and on the reading that excludes the kernel the count is simply false |
-| E2 | *the traces give $\sum_\mu r_\mu+3\cdot\#\{\Lambda^2\text{ types}\}=\binom n2$* | **CONFIRMED AS ALGEBRA** | it is $\operatorname{tr}\Theta(E)=2\dim E$ summed, hence the dimension count $\sum_\mu\dim E_\mu=\binom n2$, and it holds only with the kernel counted as one of the summands, which the equation's own index set excludes |
+| E2 | *the traces give $\sum_\mu r_\mu+3\cdot\#\{\Lambda^2\text{ types}\}=\binom n2$* | **CONFIRMED AS ALGEBRA** | it is $\mathop{\mathrm{tr}}\Theta(E)=2\dim E$ summed, hence the dimension count $\sum_\mu\dim E_\mu=\binom n2$, and it holds only with the kernel counted as one of the summands, which the equation's own index set excludes |
 | F | $\sum_\alpha\Pi_{P_\alpha}=(n-1)\mathrm{Id}$ over any orthonormal decomposable basis | **CONFIRMED, AND UNDERSTATED** | proved in three lines for **every** orthonormal basis of $\Lambda^2\mathbb R^n$, decomposable or not, so the hypothesis is inert and the $n=4$ to $7$ screen was never needed |
 | G1 | The Lean file builds, kernel-checked, no compiler-trusting tactic | **CONFIRMED** | build succeeds with linter warnings only, and both theorems print `[propext, Classical.choice, Quot.sound]` |
 | G2 | `sum_planeProj_pencil` states (B) | **REFUTED** | it is $\sum_i(A+B_i)=r\,A+\sum_iB_i$ for arbitrary matrices, and the same proof script closes that generic statement verbatim, so neither $\Pi_{\langle f,u_i\rangle}$ nor $\Pi_{U'}$ is present |
@@ -27,7 +27,7 @@
 
 ## 1. Conventions, quoted from the brief
 
-- The inner product on $\Lambda^2$ is $\tfrac12\operatorname{tr}(X^{\mathsf T}Y)$, making $\{\varphi_{ab}\}_{a<b}$ orthonormal, and *"diagonal" means diagonal in the coordinate $2$-planes of an orthonormal frame*.
+- The inner product on $\Lambda^2$ is $\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$, making $\{\varphi_{ab}\}_{a<b}$ orthonormal, and *"diagonal" means diagonal in the coordinate $2$-planes of an orthonormal frame*.
 - The specialisation is *at a decomposable $\omega=u\wedge v$ with $u,v$ orthonormal, $\omega\omega^{\mathsf T}=uu^{\mathsf T}+vv^{\mathsf T}=\Pi_P$*, and it is *true for the normalisation $u\wedge v=vu^{\mathsf T}-uv^{\mathsf T}$, which is the record's $\varphi_{ab}=E_{ba}-E_{ab}$; the $1/\sqrt2$ wedge gives $\tfrac12\Pi_P$.*
 - [L180](../findings/diagonal-half.md)(1) is stated with *the $\omega_i$ orthonormal $2$-forms and every $\lambda_i\ne0$*.
 - [Theorem 6](../references/decomposable-subspaces-grassmann-codes/notes.md) at $\ell=2$ classifies *a subspace of $\Lambda^2V$ every element of which is decomposable*, and *at subspace dimension TWO the two types coincide*, with *Corollary 7 caps a pencil at $r\le n-1$*.
@@ -40,7 +40,7 @@
 | Every eigenspace with $\lambda\ne0$ is all-decomposable | stated, as a supposition | states a locus strictly smaller than the one I36b owes (section 3) |
 | $f_\mu$ unit | nowhere | free by rescaling, since $f\wedge u=(cf)\wedge(u/c)$ |
 | $\{u_i\}$ orthonormal and inside $f^\perp$ | nowhere | free by replacing $u_i$ with $\pi_{f^\perp}u_i$, which changes no wedge (section 4) |
-| $U'_\mu=U_\mu\cap f_\mu^\perp$, so $\dim U'_\mu=r_\mu$ | implied by *of dimension $r_\mu$* and by $\operatorname{tr}\Pi_{U'}=r$ | consistent, and the trace check $2r_\mu$ confirms it |
+| $U'_\mu=U_\mu\cap f_\mu^\perp$, so $\dim U'_\mu=r_\mu$ | implied by *of dimension $r_\mu$* and by $\mathop{\mathrm{tr}}\Pi_{U'}=r$ | consistent, and the trace check $2r_\mu$ confirms it |
 | The normalisation $u\wedge v=vu^{\mathsf T}-uv^{\mathsf T}$ | nowhere in this block | recorded twenty lines above at [diagonal-half.md:1116](../findings/diagonal-half.md#L1116) |
 | L180 extended over $\lambda=0$, or the kernel excluded from the index set | nowhere | either convention works for the equation, and the two counts silently use the other one (sections 6 and 7) |
 | $\dim\ker W\le n-1$ | nowhere | forced by the $n/2$ count and by nothing else in the block (section 7) |
@@ -59,7 +59,7 @@ What is wrong is that this is not the locus. [r852](REVIEW_r852.md) C1 and its s
 ## 4. (B) The pencil sum, and where orthonormality is used and of what
 
 Write $P=\mathrm{Id}-ff^{\mathsf T}$ for the projection off a unit $f$. From the Gram formula, which the conventions fix: with $X=a\wedge b=ba^{\mathsf T}-ab^{\mathsf T}$,
-$$\langle a\wedge b,\,c\wedge d\rangle=\tfrac12\operatorname{tr}\big((ab^{\mathsf T}-ba^{\mathsf T})(dc^{\mathsf T}-cd^{\mathsf T})\big)=\langle a,c\rangle\langle b,d\rangle-\langle a,d\rangle\langle b,c\rangle,$$
+$$\langle a\wedge b,\,c\wedge d\rangle=\tfrac12\mathop{\mathrm{tr}}\big((ab^{\mathsf T}-ba^{\mathsf T})(dc^{\mathsf T}-cd^{\mathsf T})\big)=\langle a,c\rangle\langle b,d\rangle-\langle a,d\rangle\langle b,c\rangle,$$
 and at $a=c$, $b=d$ this is $\lvert a\rvert^2\lvert b\rvert^2-\langle a,b\rangle^2$, which is $1$ on $\varphi_{ab}$ as the conventions require. Hence for unit $f$,
 $$\langle f\wedge u_i,\,f\wedge u_j\rangle=\langle u_i,u_j\rangle-\langle f,u_i\rangle\langle f,u_j\rangle=\langle Pu_i,\,Pu_j\rangle.$$
 
@@ -77,7 +77,7 @@ For a subspace $E\subseteq\Lambda^2\mathbb R^n$ set $\Theta(E):=\sum_i\omega_i\o
 
 1. **Well defined.** If $\omega_i'=\sum_jO_{ij}\omega_j$ with $O$ orthogonal then $\sum_i\omega_i'\omega_i'^{\mathsf T}=\sum_{j,k}\big(\sum_iO_{ij}O_{ik}\big)\omega_j\omega_k^{\mathsf T}=\sum_j\omega_j\omega_j^{\mathsf T}$. Equivalently, $\omega\otimes\omega\mapsto\omega\omega^{\mathsf T}$ is the diagonal of the symmetric bilinear map $(\omega,\eta)\mapsto\tfrac12(\omega\eta^{\mathsf T}+\eta\omega^{\mathsf T})$, so it extends linearly to $S^2(\Lambda^2)\to S^2(\mathbb R^n)$ and $\Theta(E)$ is its value at $\Pi_E$.
 2. **Additive.** $E=E_1\perp E_2$ gives $\Theta(E)=\Theta(E_1)+\Theta(E_2)$, by concatenating bases.
-3. **Trace.** $\operatorname{tr}\Theta(E)=2\dim E$, since $\operatorname{tr}\omega\omega^{\mathsf T}=2\lVert\omega\rVert^2$.
+3. **Trace.** $\mathop{\mathrm{tr}}\Theta(E)=2\dim E$, since $\mathop{\mathrm{tr}}\omega\omega^{\mathsf T}=2\lVert\omega\rVert^2$.
 4. **Decomposable evaluation.** If $E$ has an orthonormal decomposable basis with planes $P_i$ then $\Theta(E)=\sum_i\Pi_{P_i}$, by the specialisation.
 
 Every claim in the block is a value of $\Theta$. (B) is $\Theta(f\wedge U')=r\,ff^{\mathsf T}+\Pi_{U'}$, (C) is $\Theta(\Lambda^2U)=2\Pi_U$, (F) is $\Theta(\Lambda^2\mathbb R^n)=(n-1)\mathrm{Id}$, and the equation itself is $\sum_\mu\lambda_\mu\Theta(E_\mu)=0$. Point 1 is also what makes the eigenspace sums independent of which orthonormal decomposable basis of the eigenspace is chosen, a well-posedness question the block does not raise and needs.
@@ -98,12 +98,12 @@ Take $W$ on the block's locus and let $E_1,\dots,E_k$ be the eigenspaces with $\
 
 ## 8. (E) The two counts
 
-**The trace identity is correct and is a dimension count.** By section 5 point 3, $\operatorname{tr}\Theta(E_\mu)$ is $2\dim E_\mu$, which is $2r_\mu$ at a pencil and $6$ at a $\Lambda^2$ type, so the trace of (F) reads $\sum_\mu 2r_\mu+6\cdot\#\{\Lambda^2\}=\operatorname{tr}\big((n-1)\mathrm{Id}\big)=n(n-1)$, that is $\sum_\mu r_\mu+3\cdot\#\{\Lambda^2\}=\binom n2$. Note that it is the trace of the **unweighted** identity: the trace of the weighted equation is $\sum_\alpha\lambda_\alpha=0$, which is tracelessness and not a count. So $\binom n2$ is right **only if the index set is every eigenspace, the kernel included**, because the identity is $\sum_\mu\dim E_\mu=\dim\Lambda^2\mathbb R^n$ and nothing else. With the kernel excluded the right side is $\binom n2-\dim\ker W$ and the stated identity is false at every $W$ with a kernel. Verdict **CONFIRMED AS ALGEBRA**, with the kernel clause supplied.
+**The trace identity is correct and is a dimension count.** By section 5 point 3, $\mathop{\mathrm{tr}}\Theta(E_\mu)$ is $2\dim E_\mu$, which is $2r_\mu$ at a pencil and $6$ at a $\Lambda^2$ type, so the trace of (F) reads $\sum_\mu 2r_\mu+6\cdot\#\{\Lambda^2\}=\mathop{\mathrm{tr}}\big((n-1)\mathrm{Id}\big)=n(n-1)$, that is $\sum_\mu r_\mu+3\cdot\#\{\Lambda^2\}=\binom n2$. Note that it is the trace of the **unweighted** identity: the trace of the weighted equation is $\sum_\alpha\lambda_\alpha=0$, which is tracelessness and not a count. So $\binom n2$ is right **only if the index set is every eigenspace, the kernel included**, because the identity is $\sum_\mu\dim E_\mu=\dim\Lambda^2\mathbb R^n$ and nothing else. With the kernel excluded the right side is $\binom n2-\dim\ker W$ and the stated identity is false at every $W$ with a kernel. Verdict **CONFIRMED AS ALGEBRA**, with the kernel clause supplied.
 
 **The $n/2$ count does not survive a zero eigenspace.** The dimension bound is [r852](REVIEW_r852.md)'s reading of Corollary 7, that an all-decomposable subspace of $\Lambda^2\mathbb R^n$ has dimension at most $\max\{n-1,3\}=n-1$ for $n\ge4$, and the arithmetic $\binom n2/(n-1)=n/2$ is right. What the count needs beyond that is that the eigenspaces it divides among exhaust $\Lambda^2\mathbb R^n$ and that **each** of them meets the bound. Two readings, and both fail.
 
-- **Kernel counted.** Then $\ker W$ is an all-decomposable eigenspace, so $\dim\ker W\le n-1$ and $\operatorname{rank}W\ge\binom n2-n+1$. That is an enormous restriction, presented as free, and it is exactly the trap [W1](../findings/INDEX-traps.md) names. Padded $W_{\mathbb{CP}^2}$ at $n=5$ has $\dim\ker=7$ against $n-1=4$, so the class the record keeps as its standing counterexample generator is outside the hypothesis before any decomposability question is asked.
-- **Kernel not counted.** Then the eigenspaces sum to $\operatorname{rank}W$, not to $\binom n2$, and the division gives $\#\{\text{eigenspaces}\}\ge\operatorname{rank}W/(n-1)$, which is $2$ or more only because Ricci-flatness forces mixed signs, and $2<n/2$ for every $n\ge5$. The count is false as stated.
+- **Kernel counted.** Then $\ker W$ is an all-decomposable eigenspace, so $\dim\ker W\le n-1$ and $\mathop{\mathrm{rank}}W\ge\binom n2-n+1$. That is an enormous restriction, presented as free, and it is exactly the trap [W1](../findings/INDEX-traps.md) names. Padded $W_{\mathbb{CP}^2}$ at $n=5$ has $\dim\ker=7$ against $n-1=4$, so the class the record keeps as its standing counterexample generator is outside the hypothesis before any decomposability question is asked.
+- **Kernel not counted.** Then the eigenspaces sum to $\mathop{\mathrm{rank}}W$, not to $\binom n2$, and the division gives $\#\{\text{eigenspaces}\}\ge\mathop{\mathrm{rank}}W/(n-1)$, which is $2$ or more only because Ricci-flatness forces mixed signs, and $2<n/2$ for every $n\ge5$. The count is false as stated.
 
 Since the equation in (D) uses the second index set and the trace identity uses the first, the block asserts three things under one word *eigenspace* and needs two different meanings of it. Verdict **REFUTED AS STATED**, repairable by stating the kernel convention and dropping the $n/2$ count or its hypothesis.
 
@@ -148,7 +148,7 @@ No, on three counts.
 
 What the block has is a **reformulation of Ricci-flatness on a proper sub-locus**, in coordinates adapted to the Structure Theorem. That is worth recording. Calling it a reduction of the remaining half overstates it, and the honest version of the sentence is available: it names the shape a proof would have to argue about, on the cases the supposition keeps.
 
-The clause *it is what a proof of I36b at $n\ge5$ has to spend* is a necessity claim with no support. A proof could spend Ricci-flatness in any other form, for instance as $\operatorname{diag}(M^{\mathsf T}\Lambda M)=0$ in [L181](../findings/diagonal-half.md)'s reading.
+The clause *it is what a proof of I36b at $n\ge5$ has to spend* is a necessity claim with no support. A proof could spend Ricci-flatness in any other form, for instance as $\mathop{\mathrm{diag}}(M^{\mathsf T}\Lambda M)=0$ in [L181](../findings/diagonal-half.md)'s reading.
 
 ## 12. Item 9: what is already on the record
 

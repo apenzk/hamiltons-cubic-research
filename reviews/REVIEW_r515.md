@@ -21,7 +21,7 @@
 ## 1. The block, verbatim (`findings/bounds.md`, lines 43–50)
 
 > Compressing the criticality equation onto the negative spectral part gives, at every critical point,
-> $$\theta\operatorname{tr}(W_-)+\operatorname{tr}(W_-^2)\;\le\;\|\mathrm{Ric}(W_-)\|^2+6\,\delta^2,$$
+> $$\theta\mathop{\mathrm{tr}}(W_-)+\mathop{\mathrm{tr}}(W_-^2)\;\le\;\|\mathrm{Ric}(W_-)\|^2+6\,\delta^2,$$
 > with $\delta^2$ the defect of Observation L15; the proof needs only bilinearity of $\#$, its rank-one positivity, a partial trace, and the polarized identity of Observation L15. The value is in the equality case: equality holds precisely when the eigenspace ranges are graded by the Lie bracket, which is exactly the condition defining a compact symmetric pair with $E_+$ the isotropy algebra. …
 
 ## 2. Conventions I pinned before deriving
@@ -32,29 +32,29 @@ Two further normalisations are load-bearing for L7 and are **not** in [conventio
 
 | quantity | value forced | how pinned |
 | --- | --- | --- |
-| $\operatorname{scal}(R)$ vs $\operatorname{tr}_{\Lambda^2}(R)$ | $\operatorname{scal}=2\operatorname{tr}_{\Lambda^2}$ | $R=\mathrm{Id}_{\Lambda^2}$: $\operatorname{Ric}=(n-1)\mathrm{Id}$, $\|\mathrm{Ric}\|^2=n(n-1)^2$, and $\operatorname{scal}(R^2+R^\#)=(n-1)\operatorname{scal}(\mathrm{Id})$ matches only with the factor $2$ |
+| $\mathop{\mathrm{scal}}(R)$ vs $\mathop{\mathrm{tr}}_{\Lambda^2}(R)$ | $\mathop{\mathrm{scal}}=2\mathop{\mathrm{tr}}_{\Lambda^2}$ | $R=\mathrm{Id}_{\Lambda^2}$: $\mathop{\mathrm{Ric}}=(n-1)\mathrm{Id}$, $\|\mathrm{Ric}\|^2=n(n-1)^2$, and $\mathop{\mathrm{scal}}(R^2+R^\#)=(n-1)\mathop{\mathrm{scal}}(\mathrm{Id})$ matches only with the factor $2$ |
 | $\mathrm{Id}^\#$ | $(n-2)\mathrm{Id}$ | same anchor, $Q(\mathrm{Id})=(n-1)\mathrm{Id}$ |
 | $W_-$ | $\tfrac12(\lvert W\rvert-W)\succeq0$, as an operator on **all** of $\Lambda^2$ | [conventions.md](../findings/conventions.md); and confirmed below, the opposite sign turns the block's own equality points into strict inequalities |
 
-**I re-derived Observation L15's identity independently** rather than taking it: for $T=\Pi_{\text{mixed}}$ on $\Lambda^2\mathbb R^{2m}$ I get $\operatorname{Ric}(T)=m\,\mathrm{Id}$, $\mathrm{Alt}(T)=0$, $T^2=T$, $\operatorname{tr}(T^\#)=m^2(m-1)$, so $\operatorname{scal}(T^2+T^\#)=2m^2+2m^2(m-1)=2m^3=\|\operatorname{Ric}(T)\|^2$ ✓. For $W_{\mathbb{CP}^2}$: $\operatorname{scal}(W_-^2+W_-^\#)=2(\tfrac13)+2(\tfrac13)=\tfrac43=\tfrac23+6\cdot\tfrac19$ ✓. **The identity is confirmed, in both anchors, with the constant $6$.**
+**I re-derived Observation L15's identity independently** rather than taking it: for $T=\Pi_{\text{mixed}}$ on $\Lambda^2\mathbb R^{2m}$ I get $\mathop{\mathrm{Ric}}(T)=m\,\mathrm{Id}$, $\mathrm{Alt}(T)=0$, $T^2=T$, $\mathop{\mathrm{tr}}(T^\#)=m^2(m-1)$, so $\mathop{\mathrm{scal}}(T^2+T^\#)=2m^2+2m^2(m-1)=2m^3=\|\mathop{\mathrm{Ric}}(T)\|^2$ ✓. For $W_{\mathbb{CP}^2}$: $\mathop{\mathrm{scal}}(W_-^2+W_-^\#)=2(\tfrac13)+2(\tfrac13)=\tfrac43=\tfrac23+6\cdot\tfrac19$ ✓. **The identity is confirmed, in both anchors, with the constant $6$.**
 
 ## 3. The inequality, CONFIRMED, with the proof reconstructed cold
 
 The block gives no proof; I rebuilt one, and the four named ingredients are **exactly** the ones needed and **sufficient**. Write $\Pi_-$ for the orthogonal projection onto the negative eigenspace $E_-$, so $W_-=\lvert W\rvert\Pi_-$ and $W=W_+-W_-$ with $W_\pm\succeq0$, $W_+W_-=0$.
 
-**Step 1, the partial trace.** Apply $\operatorname{tr}(\Pi_-\,\cdot\,)$ to $Q(W)=\theta W$. Since $\operatorname{tr}(\Pi_-W)=-\operatorname{tr}(W_-)$ and $\operatorname{tr}(\Pi_-W^2)=\operatorname{tr}(W_-^2)$,
-$$\theta\operatorname{tr}(W_-)+\operatorname{tr}(W_-^2)=-\operatorname{tr}(\Pi_-W^\#).\qquad(\star)$$
+**Step 1, the partial trace.** Apply $\mathop{\mathrm{tr}}(\Pi_-\,\cdot\,)$ to $Q(W)=\theta W$. Since $\mathop{\mathrm{tr}}(\Pi_-W)=-\mathop{\mathrm{tr}}(W_-)$ and $\mathop{\mathrm{tr}}(\Pi_-W^2)=\mathop{\mathrm{tr}}(W_-^2)$,
+$$\theta\mathop{\mathrm{tr}}(W_-)+\mathop{\mathrm{tr}}(W_-^2)=-\mathop{\mathrm{tr}}(\Pi_-W^\#).\qquad(\star)$$
 *This identity is what fixes the reading of $W_-$: no other compression produces the block's left-hand side.*
 
 **Step 2, bilinearity.** $W^\#=W_+^\#-2\,W_+\#W_-+W_-^\#$, so
-$$-\operatorname{tr}(\Pi_-W^\#)=-\operatorname{tr}(\Pi_-W_+^\#)-\operatorname{tr}(\Pi_-W_-^\#)+2\operatorname{tr}\big(\Pi_-(W_+\#W_-)\big).$$
+$$-\mathop{\mathrm{tr}}(\Pi_-W^\#)=-\mathop{\mathrm{tr}}(\Pi_-W_+^\#)-\mathop{\mathrm{tr}}(\Pi_-W_-^\#)+2\mathop{\mathrm{tr}}\big(\Pi_-(W_+\#W_-)\big).$$
 
-**Step 3, rank-one positivity.** $vv^{\mathsf T}\#ww^{\mathsf T}=[v,w][v,w]^{\mathsf T}$, so $X,Y\succeq0\Rightarrow X\#Y\succeq0$. Hence the first two terms are $\le0$, and $\operatorname{tr}(\Pi_-A)\le\operatorname{tr}(A)$ for $A=W_+\#W_-\succeq0$ gives
-$$-\operatorname{tr}(\Pi_-W^\#)\;\le\;2\operatorname{tr}(W_+\#W_-)=\operatorname{scal}(W_+\#W_-).$$
+**Step 3, rank-one positivity.** $vv^{\mathsf T}\#ww^{\mathsf T}=[v,w][v,w]^{\mathsf T}$, so $X,Y\succeq0\Rightarrow X\#Y\succeq0$. Hence the first two terms are $\le0$, and $\mathop{\mathrm{tr}}(\Pi_-A)\le\mathop{\mathrm{tr}}(A)$ for $A=W_+\#W_-\succeq0$ gives
+$$-\mathop{\mathrm{tr}}(\Pi_-W^\#)\;\le\;2\mathop{\mathrm{tr}}(W_+\#W_-)=\mathop{\mathrm{scal}}(W_+\#W_-).$$
 
-**Step 4, L15 polarized, at $(W_+,W_-)$.** Polarizing $\operatorname{scal}(R^2+R^\#)=\|\operatorname{Ric}R\|^2+6\|\mathrm{Alt}R\|^2$ and using $W_+W_-=0$,
-$$\operatorname{scal}(W_+\#W_-)=\langle\operatorname{Ric}W_+,\operatorname{Ric}W_-\rangle+6\langle\mathrm{Alt}W_+,\mathrm{Alt}W_-\rangle=\|\operatorname{Ric}W_-\|^2+6\delta^2,$$
-the last step by $\operatorname{Ric}(W)=0\Rightarrow\operatorname{Ric}W_+=\operatorname{Ric}W_-$ and $\mathrm{Alt}(W)=0\Rightarrow\mathrm{Alt}W_+=\mathrm{Alt}W_-$. $\square$
+**Step 4, L15 polarized, at $(W_+,W_-)$.** Polarizing $\mathop{\mathrm{scal}}(R^2+R^\#)=\|\mathop{\mathrm{Ric}}R\|^2+6\|\mathrm{Alt}R\|^2$ and using $W_+W_-=0$,
+$$\mathop{\mathrm{scal}}(W_+\#W_-)=\langle\mathop{\mathrm{Ric}}W_+,\mathop{\mathrm{Ric}}W_-\rangle+6\langle\mathrm{Alt}W_+,\mathrm{Alt}W_-\rangle=\|\mathop{\mathrm{Ric}}W_-\|^2+6\delta^2,$$
+the last step by $\mathop{\mathrm{Ric}}(W)=0\Rightarrow\mathop{\mathrm{Ric}}W_+=\mathop{\mathrm{Ric}}W_-$ and $\mathrm{Alt}(W)=0\Rightarrow\mathrm{Alt}W_+=\mathrm{Alt}W_-$. $\square$
 
 **Rank-one positivity is a theorem here, not an assumption**, it is the standard $\#$-identity on rank-one operators plus bilinearity over a psd spectral decomposition. The block is right to list it as an ingredient rather than a hypothesis; it carries no citation, which is the one thing owed.
 
@@ -62,7 +62,7 @@ the last step by $\operatorname{Ric}(W)=0\Rightarrow\operatorname{Ric}W_+=\opera
 
 ### The two numerical anchors, both equalities
 
-| point | $\theta\operatorname{tr}W_-+\operatorname{tr}W_-^2$ | $\|\operatorname{Ric}W_-\|^2$ | $6\delta^2$ | verdict |
+| point | $\theta\mathop{\mathrm{tr}}W_-+\mathop{\mathrm{tr}}W_-^2$ | $\|\mathop{\mathrm{Ric}}W_-\|^2$ | $6\delta^2$ | verdict |
 | --- | --- | --- | --- | --- |
 | $S^m\times S^m$, $n=2m$ | $(m-1)+\frac{m-1}{2m-1}=\frac{2m(m-1)}{2m-1}$ | $\frac{2m(m-1)}{2m-1}$ | $0$ | **equality** |
 | $W_{\mathbb{CP}^2}$, $n=4$ | $1+\tfrac13=\tfrac43$ | $\tfrac23$ | $6\cdot\tfrac19=\tfrac23$ | **equality** |
@@ -77,9 +77,9 @@ the last step by $\operatorname{Ric}(W)=0\Rightarrow\operatorname{Ric}W_+=\opera
 
 The brief's worry is real but resolves cleanly, in a direction the block should state:
 
-- **$\operatorname{tr}(W_-)$ and $\operatorname{tr}(W_-^2)$ do not distinguish the two readings.** $W_-$ vanishes on $E_+\oplus E_0$, so its trace and its square's trace are the same whether taken over $\Lambda^2$ or over $E_-$.
-- **$\operatorname{Ric}(W_-)$ and $\mathrm{Alt}(W_-)$ admit only one reading.** Both are contractions of $W_-$ *as a $4$-tensor on $\mathbb R^n$*; a restriction to the subspace $E_-\subset\Lambda^2$ is not a curvature-type tensor and has no $\operatorname{Ric}$ and no $\mathrm{Alt}$. So $W_-$ must be the operator $\tfrac12(\lvert W\rvert-W)$ on all of $\Lambda^2$, which is [conventions.md](../findings/conventions.md)'s definition.
-- **Step 1 confirms it independently.** $\theta\operatorname{tr}(W_-)+\operatorname{tr}(W_-^2)$ arises from exactly one compression, $\operatorname{tr}(\Pi_-\,\cdot\,)$ against $Q(W)=\theta W$; no other produces it.
+- **$\mathop{\mathrm{tr}}(W_-)$ and $\mathop{\mathrm{tr}}(W_-^2)$ do not distinguish the two readings.** $W_-$ vanishes on $E_+\oplus E_0$, so its trace and its square's trace are the same whether taken over $\Lambda^2$ or over $E_-$.
+- **$\mathop{\mathrm{Ric}}(W_-)$ and $\mathrm{Alt}(W_-)$ admit only one reading.** Both are contractions of $W_-$ *as a $4$-tensor on $\mathbb R^n$*; a restriction to the subspace $E_-\subset\Lambda^2$ is not a curvature-type tensor and has no $\mathop{\mathrm{Ric}}$ and no $\mathrm{Alt}$. So $W_-$ must be the operator $\tfrac12(\lvert W\rvert-W)$ on all of $\Lambda^2$, which is [conventions.md](../findings/conventions.md)'s definition.
+- **Step 1 confirms it independently.** $\theta\mathop{\mathrm{tr}}(W_-)+\mathop{\mathrm{tr}}(W_-^2)$ arises from exactly one compression, $\mathop{\mathrm{tr}}(\Pi_-\,\cdot\,)$ against $Q(W)=\theta W$; no other produces it.
 
 **The block states none of this**, and does not name $\Pi_-$ at all, so a reader cannot recover Step 1 from the text. *This is the "hypothesis shared between claims of different strength" pattern only in the weak form: the two readings agree on the left side, so nothing downstream is corrupted.*
 
@@ -89,30 +89,30 @@ The brief's worry is real but resolves cleanly, in a direction the block should 
 | --- | --- | --- |
 | bilinearity of $\#$ | ✓ Step 2 | ✓ |
 | rank-one positivity of $\#$ | ✓ Step 3, three times | ✓, and it is a **theorem**, not an assumption |
-| a partial trace | ✓ Step 1, $\operatorname{tr}(\Pi_-\,\cdot\,)$ | ✓ |
+| a partial trace | ✓ Step 1, $\mathop{\mathrm{tr}}(\Pi_-\,\cdot\,)$ | ✓ |
 | L15's polarized identity | ✓ Step 4, at $(W_+,W_-)$ | ✓ |
-| $\operatorname{Ric}(W)=0$ and $\mathrm{Alt}(W)=0$ | ✓ Step 4, the whole reduction of the polarized identity to $\|\operatorname{Ric}W_-\|^2+6\delta^2$ | ✗ |
+| $\mathop{\mathrm{Ric}}(W)=0$ and $\mathrm{Alt}(W)=0$ | ✓ Step 4, the whole reduction of the polarized identity to $\|\mathop{\mathrm{Ric}}W_-\|^2+6\delta^2$ | ✗ |
 | unit norm | ✓ implicit in "critical point" per [conventions.md](../findings/conventions.md) | ✗ (acceptable, it is the record's definition) |
 
 **Criticality is all it needs beyond membership in $\mathcal W_n$.** No sign condition on the spectrum, no Ricci-flatness *beyond* what $\mathcal W_n$ already carries, no diagonality, no $n\ge12$.
 
 **Two sharpenings of the hypothesis question, both checkable and both true.**
 - **The bracket form is not enough.** [conventions.md](../findings/conventions.md) records that $[W,Q(W)]=0$ is strictly weaker than $Q(W)=\theta W$. Step 1 takes a trace of the *equation*, so the bracket form does not support it. The block's "at every critical point" is therefore exactly right and not loose.
-- **Only the left-hand side needs criticality.** Polarizing at $(W,W_+)$ instead gives $\operatorname{scal}(W_+^2+W_+^\#)=\operatorname{scal}(W_+\#W_-)$, so the right-hand side equals $\tfrac12[\operatorname{scal}(W_+^2+W_+^\#)+\operatorname{scal}(W_-^2+W_-^\#)]\ge\operatorname{tr}(W_+^2)+\operatorname{tr}(W_-^2)=\lVert W\rVert^2$ by rank-one positivity alone. *That reproduces [ATTEMPTS.md](../ATTEMPTS.md)'s Result 3 by-product, $\lVert\operatorname{Ric}(W_-)\rVert^2+6\delta^2\ge\lVert W\rVert^2$ with no criticality hypothesis, and I confirm it.*
+- **Only the left-hand side needs criticality.** Polarizing at $(W,W_+)$ instead gives $\mathop{\mathrm{scal}}(W_+^2+W_+^\#)=\mathop{\mathrm{scal}}(W_+\#W_-)$, so the right-hand side equals $\tfrac12[\mathop{\mathrm{scal}}(W_+^2+W_+^\#)+\mathop{\mathrm{scal}}(W_-^2+W_-^\#)]\ge\mathop{\mathrm{tr}}(W_+^2)+\mathop{\mathrm{tr}}(W_-^2)=\lVert W\rVert^2$ by rank-one positivity alone. *That reproduces [ATTEMPTS.md](../ATTEMPTS.md)'s Result 3 by-product, $\lVert\mathop{\mathrm{Ric}}(W_-)\rVert^2+6\delta^2\ge\lVert W\rVert^2$ with no criticality hypothesis, and I confirm it.*
 
 ## 6. The dependence on Observation L15, clean
 
-L15 was relabelled and its consequence refuted; what survives is $\operatorname{scal}(R^2+R^\#)=\|\operatorname{Ric}R\|^2+6\|\mathrm{Alt}R\|^2$.
+L15 was relabelled and its consequence refuted; what survives is $\mathop{\mathrm{scal}}(R^2+R^\#)=\|\mathop{\mathrm{Ric}}R\|^2+6\|\mathrm{Alt}R\|^2$.
 
 - **L7 uses only the surviving identity.** Step 4 needs the identity and nothing else. The refuted half, *that the Bianchi defect is the only obstruction to lifting*, the second obstruction being $X_{\mathrm{inv}}\succeq0$, is never invoked. **Confirms [LEDGER.md](../findings/LEDGER.md)'s "no Lemma rests on the refuted half".**
 - **$\delta^2$ means the same thing in both.** $\delta^2=\|\mathrm{Alt}(W_-)\|^2$, which is L15's $\|\mathrm{Alt}(R)\|^2$ at $R=W_-$; my $\mathbb{CP}^2$ row, where $\delta^2=\tfrac19$ enters and equality comes out exactly, is the check.
-- **A pleasing relation the record already spots and I confirm.** With $X_{\mathrm{inv}}=4W_+\#W_--2\theta W_--2W_-^2$, my Steps 1–4 give $\operatorname{tr}(X_{\mathrm{inv}})=2S$, so **L7 is exactly the trace shadow of the operator inequality $X_{\mathrm{inv}}\succeq0$ that L15's refuted half needed**, L7 proves the trace unconditionally, which is why the refutation upstream costs it nothing. This matches [ATTEMPTS.md](../ATTEMPTS.md) line 3962 ($S=\tfrac12\operatorname{tr}X_{\mathrm{inv}}$, $\operatorname{scal}(X_{\mathrm{inv}})=4S$) and is a third independent confirmation of $\operatorname{scal}=2\operatorname{tr}$.
+- **A pleasing relation the record already spots and I confirm.** With $X_{\mathrm{inv}}=4W_+\#W_--2\theta W_--2W_-^2$, my Steps 1–4 give $\mathop{\mathrm{tr}}(X_{\mathrm{inv}})=2S$, so **L7 is exactly the trace shadow of the operator inequality $X_{\mathrm{inv}}\succeq0$ that L15's refuted half needed**, L7 proves the trace unconditionally, which is why the refutation upstream costs it nothing. This matches [ATTEMPTS.md](../ATTEMPTS.md) line 3962 ($S=\tfrac12\mathop{\mathrm{tr}}X_{\mathrm{inv}}$, $\mathop{\mathrm{scal}}(X_{\mathrm{inv}})=4S$) and is a third independent confirmation of $\mathop{\mathrm{scal}}=2\mathop{\mathrm{tr}}$.
 
 ## 7. The equality case, where the block overstates, and where its own file contradicts it
 
 From the proof, equality holds **iff all three slack terms vanish**:
 
-$$S=T_1+2T_2+T_3,\qquad T_1=\operatorname{tr}(\Pi_-W_+^\#),\quad T_2=\operatorname{tr}\big((I-\Pi_-)(W_+\#W_-)\big),\quad T_3=\operatorname{tr}(\Pi_-W_-^\#),$$
+$$S=T_1+2T_2+T_3,\qquad T_1=\mathop{\mathrm{tr}}(\Pi_-W_+^\#),\quad T_2=\mathop{\mathrm{tr}}\big((I-\Pi_-)(W_+\#W_-)\big),\quad T_3=\mathop{\mathrm{tr}}(\Pi_-W_-^\#),$$
 
 each a compression of a psd operator. Expanding each in the eigenbasis via $vv^{\mathsf T}\#ww^{\mathsf T}=[v,w][v,w]^{\mathsf T}$:
 
@@ -129,7 +129,7 @@ each a compression of a psd operator. Expanding each in the eigenbasis via $vv^{
 Write $E_0=\ker W$. The three conditions say $[E_+,E_+]\subseteq E_+\oplus E_0$ and $[E_-,E_-]\subseteq E_+\oplus E_0$ and $[E_+,E_-]\subseteq E_-$. **They are the $\mathbb Z_2$-grading relations that involve no kernel direction, and only those.**
 
 - **When $\ker W=0$** they collapse to $[E_+,E_+]\subseteq E_+$, $[E_-,E_-]\subseteq E_+$, $[E_+,E_-]\subseteq E_-$, so $\mathfrak{so}(n)=E_+\oplus E_-$ is a $\mathbb Z_2$-grading and $(\mathfrak{so}(n),E_+)$ *is* a compact symmetric pair. **The block is exactly right here.**
-- **When $\ker W\ne0$** three further relations ($[E_+,E_0]\perp E_-$, $[E_0,E_0]\perp E_-$, $[E_0,E_-]\subseteq E_-$), are **neither implied by equality nor stated by the block**. Without them $E_+\oplus E_-$ need not even be a subalgebra, so there is no pair to speak of. Jacobi buys only $\operatorname{ad}([E_+,E_+])E_-\subseteq E_-$, which does not force the $E_0$-component to vanish.
+- **When $\ker W\ne0$** three further relations ($[E_+,E_0]\perp E_-$, $[E_0,E_0]\perp E_-$, $[E_0,E_-]\subseteq E_-$), are **neither implied by equality nor stated by the block**. Without them $E_+\oplus E_-$ need not even be a subalgebra, so there is no pair to speak of. Jacobi buys only $\mathop{\mathrm{ad}}([E_+,E_+])E_-\subseteq E_-$, which does not force the $E_0$-component to vanish.
 
 **So "precisely … which is exactly the condition defining a compact symmetric pair" is proved in one direction (graded $\Rightarrow$ equality) and, in the other, only under a hypothesis the block does not carry.**
 
@@ -163,11 +163,11 @@ And [trap W4](../findings/INDEX-traps.md) says the same of L7's own slack, which
 | [ungraded-slack.md:290](../findings/ungraded-slack.md) | "Lemma L7's inequality $S\ge0$ is untouched" | ✓ inequality only, and correct |
 | [ungraded-slack.md:288](../findings/ungraded-slack.md) (Obs. L12) | "L7 splits the critical points by whether its inequality is an equality" | ✓ the dichotomy, which survives; L12 also records that **L8 is scoped to the balanced splits** ([r503](REVIEW_r503.md), [r504](REVIEW_r504.md)), so the equality side is not settled generally |
 | [ungraded-slack.md:296](../findings/ungraded-slack.md) (L132 withdrawal) | the $T_1+2T_2+T_3$ decomposition | ✓ agrees with my derivation term for term |
-| [ungraded-slack.md:178](../findings/ungraded-slack.md) | $\theta\operatorname{tr}(W_-)=\dots-S$, "ungradedness mechanically subtracts from $\theta$" | ✓ a rearrangement of the inequality |
+| [ungraded-slack.md:178](../findings/ungraded-slack.md) | $\theta\mathop{\mathrm{tr}}(W_-)=\dots-S$, "ungradedness mechanically subtracts from $\theta$" | ✓ a rearrangement of the inequality |
 | [nondegeneracy.md:407](../findings/nondegeneracy.md) | $S=0$ at $\mathbb{CP}^3,\mathbb{CP}^4,\mathbb{CP}^5$; the $6\delta^2$ term is not droppable | ✓ inequality + equality points |
 | [nondegeneracy.md:430](../findings/nondegeneracy.md) | warns that rearranging $S$'s definition is a tautology | ✓ a correct guard |
 | [results.md:366](../results.md) | the split, the slack, "$(S^m)^3$ … on the strict side" | ✓ consistent, three-block products are ungraded, so strictness is what L7 predicts |
-| [ATTEMPTS.md:3962](../ATTEMPTS.md) | $S=\tfrac12\operatorname{tr}(X_{\mathrm{inv}})$, $\operatorname{scal}(X_{\mathrm{inv}})=4S\ge0$ | ✓ inequality, and independently confirms my normalisation |
+| [ATTEMPTS.md:3962](../ATTEMPTS.md) | $S=\tfrac12\mathop{\mathrm{tr}}(X_{\mathrm{inv}})$, $\mathop{\mathrm{scal}}(X_{\mathrm{inv}})=4S\ge0$ | ✓ inequality, and independently confirms my normalisation |
 | [report/sections/03-setup.tex:37](../report/sections/03-setup.tex) | the definition of $S$ | ✓ |
 | [results.md:122](../results.md) | **"with equality exactly on the compact symmetric pairs"** | ✗ **repeats the overstated clause of §7**, in the summary line a reader meets first |
 | [graded-half.md:201](../findings/graded-half.md) | **"matching Lemma L7's closed form, which puts it at the family's peak"** | ✗ **MISCITE, L7 contains no closed form**, and no statement about the Ricci-flat Kähler family's peak. The closed form pinning a point by its pair's dimensions is [Lemma L23](../findings/ungraded-slack.md)'s $\theta=\tfrac2n\sqrt{rN/(N-r)}$ |
@@ -180,12 +180,12 @@ And [trap W4](../findings/INDEX-traps.md) says the same of L7's own slack, which
 
 **Later sections of [bounds.md](../findings/bounds.md).** Nothing below the block contradicts the *inequality*. Line 124 contradicts the *equality sentence*, as §7b sets out, and line 130's $\theta=1.088948$ witness (graded, trivial kernel, $S_{\mathfrak{mmm}}=1.4\times10^{-28}$, pair $\mathfrak{so}(3)\oplus\mathfrak{so}(5)$) is the trivial-kernel case where the block's sentence is exactly right, which sharpens rather than weakens the diagnosis: **the sentence is true where $\ker W=0$ and false where it is not.**
 
-**Anchors re-checked at the end**, as a guard against a drifted normalisation: $\operatorname{tr}W^\#=-1$ is consistent with $\operatorname{scal}=2\operatorname{tr}$ and $\mathrm{Id}^\#=(n-2)\mathrm{Id}$ used throughout; $\theta_0(6)=\sqrt{10}/3$; $\dim\mathcal W_6=84$; $Q_{ab}=M_{ab}^2+(M^2)_{ab}$ on the diagonal locus is not touched by this block.
+**Anchors re-checked at the end**, as a guard against a drifted normalisation: $\mathop{\mathrm{tr}}W^\#=-1$ is consistent with $\mathop{\mathrm{scal}}=2\mathop{\mathrm{tr}}$ and $\mathrm{Id}^\#=(n-2)\mathrm{Id}$ used throughout; $\theta_0(6)=\sqrt{10}/3$; $\dim\mathcal W_6=84$; $Q_{ab}=M_{ab}^2+(M^2)_{ab}$ on the diagonal locus is not touched by this block.
 
 ## 10. What is owed
 
 1. **Split the equality sentence in two.** *"Equality holds iff $[E_+,E_+]\perp E_-$, $[E_-,E_-]\perp E_-$ and $[E_+,E_-]\subseteq E_-$. When $\ker W=0$ these say $\mathfrak{so}(n)=E_+\oplus E_-$ is a $\mathbb Z_2$-grading and $(\mathfrak{so}(n),E_+)$ is a compact symmetric pair; when $\ker W\ne0$ they certify a grading of the span of the nonzero eigenvectors only ([trap W4](../findings/INDEX-traps.md), [bounds.md:124](../findings/bounds.md))."*
-2. **Add the missing hypothesis to the ingredient list**: $\operatorname{Ric}(W)=0$ and $\mathrm{Alt}(W)=0$ are used in Step 4, and are what reduce the polarized identity to $\|\operatorname{Ric}W_-\|^2+6\delta^2$.
+2. **Add the missing hypothesis to the ingredient list**: $\mathop{\mathrm{Ric}}(W)=0$ and $\mathrm{Alt}(W)=0$ are used in Step 4, and are what reduce the polarized identity to $\|\mathop{\mathrm{Ric}}W_-\|^2+6\delta^2$.
 3. **Put the proof in the block.** The heading says "canonical statement and proof" and there is no proof; §3 above is four lines and can be transcribed.
 4. **Name $W_-$ and $\Pi_-$**, quoting [conventions.md](../findings/conventions.md), so Step 1 is recoverable.
 5. **Fix [graded-half.md:201](../findings/graded-half.md)** to cite [Lemma L23](../findings/ungraded-slack.md) rather than L7's non-existent closed form.

@@ -9,7 +9,7 @@
 ## Items
 
 1. **Statement fidelity.** Is each declaration the claim its docstring names? `vertex_quad_sq_le` (hollow $K$, zero row sums, $\sum e=0$ give $(e^{\mathsf T}Ke)^2\le\lVert K\rVert_F^2\tfrac{n-2}{n-1}(\sum e^2)^2$); `rowsum_secK`; `ringW_sub_smul_one`, `frob_ringW_traceless`, `frob_traceless_le`; `neg_frob_ringW_le_traceless`, `neg_frob_ringW_le_sharp`; `E_le_tmax_sharp`. In particular: is the Ricci-flat hypothesis the record's (`Ric R a b = 0` for all $a,b$), and is $n>1$ the only size hypothesis needed?
-2. **The prose follows the Lean.** Does the Cauchy–Schwarz against $ee^{\mathsf T}-c(I-J/n)$ at $c=\sum e^2/(n-1)$ give exactly $\tfrac{n-2}{n-1}$, and is the trace-free reduction (replace $h$ by $h-\tfrac{\operatorname{tr}h}n I$) valid at a Ricci-flat operator?
+2. **The prose follows the Lean.** Does the Cauchy–Schwarz against $ee^{\mathsf T}-c(I-J/n)$ at $c=\sum e^2/(n-1)$ give exactly $\tfrac{n-2}{n-1}$, and is the trace-free reduction (replace $h$ by $h-\tfrac{\mathop{\mathrm{tr}}h}n I$) valid at a Ricci-flat operator?
 3. **Agreement with the record's cap.** Is `E_le_tmax_sharp` the record's cap from bispectral.md read at $t_F\le2t_{\max}^2$, and not something weaker or stronger?
 4. **Axioms.** The audit script reported "8/8 clean -- resting on the standard three alone" on `SecondKindSharp`. Cite it, or rerun `python3 scripts/misc/axiom_audit.py --only SecondKindSharp` if the toolchain is free (check `pgrep -f '\.elan/toolchains/[^ ]*/bin/(lake (build|env|exe)|lean /)'` first, background it, and do not wait more than ten minutes).
 

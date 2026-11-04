@@ -56,7 +56,7 @@ So $f''=3\big[p(2cs^2-c^3)+r(2c^3-7cs^2)+q(2c^2s-s^3)\big]=3E$ at $(c,s)=(a,b)$.
 
 ## 6. The bullets
 
-- **"The ascent direction must leave $\operatorname{span}\{W,\pi_DW\}$."** Take $a>0$. Then the span is $\operatorname{span}\{\hat A,\nu\}$, and its intersection with $T_W=W^\perp$ is the line $\mathbb Ru$. Batch 1 makes the Hessian negative on that line, so no tangent ascent direction lies in the plane. **CONFIRMED.**
+- **"The ascent direction must leave $\mathop{\mathrm{span}}\{W,\pi_DW\}$."** Take $a>0$. Then the span is $\mathop{\mathrm{span}}\{\hat A,\nu\}$, and its intersection with $T_W=W^\perp$ is the line $\mathbb Ru$. Batch 1 makes the Hessian negative on that line, so no tangent ascent direction lies in the plane. **CONFIRMED.**
 - **Block form: signs and factors are right.** With $v=x+y$, $x\in D\ominus\hat A$, $y\in D^\perp\ominus\nu$, the expansion $T(W,v,v)=aT(\hat A,v,v)+bT(\nu,v,v)$ gives the following terms:
   - $T(\hat A,x,y)=0$ by closure.
   - $T(\nu,x,x)=\langle x\circ x,\nu\rangle=0$.
@@ -68,7 +68,7 @@ So $f''=3\big[p(2cs^2-c^3)+r(2c^3-7cs^2)+q(2c^2s-s^3)\big]=3E$ at $(c,s)=(a,b)$.
 
   Both are generically nonzero. An ascent direction may therefore mix $u$ with $x+y$, and a negative block on $\{x+y\}$ together with the negative $u$ entry would not rule ascent out. The bullet should say that the displayed form is the restriction to $u^\perp\cap W^\perp$. The two candidate families lie inside that subspace, so they stand as candidates.
 - **Diagonal block alone.** With $y=0$ the form is $a\langle\hat A\circ x,x\rangle-\tfrac\theta2\lvert x\rvert^2$, so ascent holds iff $a$ times the top of the compression $\pi_{D\ominus\hat A}L_{\hat A}|_{D\ominus\hat A}$ exceeds $\tfrac\theta2$. **Minor:** $D\ominus\hat A$ is invariant under $L_{\hat A}$ only when $Q(\hat A)\parallel\hat A$, so "$\lambda_{\max}(L_{\hat A}|_{D\ominus\hat A})$" should be read as the compression. Here $L_{\hat A}=\hat A\circ\cdot$ is unnormalised, unlike $L_e=\theta^{-1}W\circ\cdot$. **CONFIRMED** with that reading.
-- **$X\cdot\hat A\in D^\perp$.** For $x'\in D$, $\langle[\mathrm{ad}_X,\hat A],x'\rangle=\operatorname{tr}(\mathrm{ad}_X(\hat Ax'-x'\hat A))=0$, because $\hat A$ and $x'$ are both diagonal in the $\varphi$ basis and so commute. **CONFIRMED.**
+- **$X\cdot\hat A\in D^\perp$.** For $x'\in D$, $\langle[\mathrm{ad}_X,\hat A],x'\rangle=\mathop{\mathrm{tr}}(\mathrm{ad}_X(\hat Ax'-x'\hat A))=0$, because $\hat A$ and $x'$ are both diagonal in the $\varphi$ basis and so commute. **CONFIRMED.**
 - **The maximal frame's first-order condition.** $\tfrac{d}{ds}\lVert\pi_D(e^{-sX}\cdot W)\rVert^2|_0=-2a\langle\hat A,X\cdot W\rangle=2a\langle X\cdot\hat A,W\rangle=2ab\langle X\cdot\hat A,\nu\rangle$, using skewness and $\langle X\cdot\hat A,\hat A\rangle=0$. The maximum exists because $O(n)$ is compact, and $a>0$ there by item 5. So the condition is $\langle X\cdot\hat A,\nu\rangle=0$, and together with $X\cdot\hat A\perp D$ this gives $X\cdot\hat A\perp W$, in fact $X\cdot\hat A\in D^\perp\ominus\nu$. **CONFIRMED.** This is the "first-order condition" already used in R53 ([r1816](REVIEW_r1816.md), [r1817](REVIEW_r1817.md)).
 
 ## 7. Lean

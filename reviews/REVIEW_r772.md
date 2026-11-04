@@ -7,7 +7,7 @@ Gate 2, adversarial. The brief [BRIEF-g2-l177-l178.md](BRIEF-g2-l177-l178.md) wa
 | # | Claim | Verdict |
 | --- | --- | --- |
 | L177(1) | Coordinate-diagonal Weyl tensors inside $G$ are $\ker N$, of dimension $\lvert E\rvert-\lvert V\rvert+b(G)$ | CORRECT |
-| L177 rank | $\operatorname{rank}N=\lvert V\rvert-b(G)$ | CORRECT, with two hypotheses used and unstated |
+| L177 rank | $\mathop{\mathrm{rank}}N=\lvert V\rvert-b(G)$ | CORRECT, with two hypotheses used and unstated |
 | L177(2) | Support exactly $G$ iff $\ker N$ has a full-support vector | CORRECT BUT VACUOUS, it restates the definition and decides nothing |
 | L177(2)′ | The converse a reader will reach for, $\ker N\ne0$ gives a full-support vector | FALSE, refuted in closed form |
 | L177(3) | At $K_n$, $n\ge3$, the locus has dimension $\binom n2-n$ | CORRECT |
@@ -16,7 +16,7 @@ Gate 2, adversarial. The brief [BRIEF-g2-l177-l178.md](BRIEF-g2-l177-l178.md) wa
 | L177 edges, the five | Smallest non-bipartite graph with $\lvert E\rvert\ge\lvert V\rvert+1$ has five edges | CORRECT as a lower bound; the five is **not attained** as a support |
 | L178 step 1 | Trace-free on a 3-space is never rank one; rank $\le3$ kills a summand | CORRECT, every split checked |
 | L178 step 2, $\gamma^2=2$ | The structure constant | CORRECT, derived independently two ways, and corroborated by the record's own $6+2\sqrt7$ |
-| L178 step 2, adjugate | $W^\#=\gamma^2\operatorname{cof}W$ and $\langle W,W^\#\rangle=6e_3$ | CORRECT, and true in any orthonormal basis, not only the diagonalising one |
+| L178 step 2, adjugate | $W^\#=\gamma^2\mathop{\mathrm{cof}}W$ and $\langle W,W^\#\rangle=6e_3$ | CORRECT, and true in any orthonormal basis, not only the diagonalising one |
 | L178 step 3, padding | $\#$ commutes with the zero-embedding; $\theta$ unchanged | CONCLUSION CORRECT, STATED REASON A NON-SEQUITUR |
 | L178 step 4 | $e_1=0$, Newton, $\theta=9e_3$, the norm | CORRECT |
 | L178 step 5, the bound | $\theta\le\sqrt{3/2}$ | CORRECT |
@@ -28,10 +28,10 @@ Gate 2, adversarial. The brief [BRIEF-g2-l177-l178.md](BRIEF-g2-l177-l178.md) wa
 ## 0. Conventions, fixed once
 
 - $\mathcal W_n$: algebraic Weyl tensors on $\mathbb R^n$, Riemann symmetries, first Bianchi $W_{abcd}+W_{acdb}+W_{adbc}=0$, total trace-freeness $\sum_bW_{abcb}=0$. A linear subspace, so $0\in\mathcal W_n$ and $-W\in\mathcal W_n$ whenever $W\in\mathcal W_n$. That closure under negation is used against the equality clause in §10.
-- $W$ acts self-adjointly on $\Lambda^2\mathbb R^n$ with $\{f_a\wedge f_b\}_{a<b}$ orthonormal; $\lVert W\rVert^2=\operatorname{tr}(W^2)=\sum_\alpha\lambda_\alpha^2$ over the $\Lambda^2$ spectrum; $\langle A,B\rangle=\operatorname{tr}(AB)$.
-- $P(W)=\langle W,W^2+W^\#\rangle$, $\theta=P/\lVert W\rVert^3$. $P$ is homogeneous of degree three, $\lVert W\rVert^3$ of degree three in $\lvert t\rvert$; so $\theta(tW)=\operatorname{sgn}(t)\,\theta(W)$. **$\theta$ is odd, not even.**
+- $W$ acts self-adjointly on $\Lambda^2\mathbb R^n$ with $\{f_a\wedge f_b\}_{a<b}$ orthonormal; $\lVert W\rVert^2=\mathop{\mathrm{tr}}(W^2)=\sum_\alpha\lambda_\alpha^2$ over the $\Lambda^2$ spectrum; $\langle A,B\rangle=\mathop{\mathrm{tr}}(AB)$.
+- $P(W)=\langle W,W^2+W^\#\rangle$, $\theta=P/\lVert W\rVert^3$. $P$ is homogeneous of degree three, $\lVert W\rVert^3$ of degree three in $\lvert t\rvert$; so $\theta(tW)=\mathop{\mathrm{sgn}}(t)\,\theta(W)$. **$\theta$ is odd, not even.**
 - $(W^\#)_{\alpha\beta}=\tfrac12\sum c_{\alpha\gamma\delta}c_{\beta\epsilon\zeta}W_{\gamma\epsilon}W_{\delta\zeta}$, Greek indices running over an orthonormal $\Lambda^2$ basis, $c$ the $\mathfrak{so}(n)\cong\Lambda^2$ structure constants. Anchor $\mathrm{id}^\#=(n-2)\,\mathrm{id}$.
-- The concrete model I compute in: $f_a\wedge f_b\leftrightarrow L_{ab}=E_{ab}-E_{ba}$, with $\langle X,Y\rangle_{\mathfrak{so}}=-\tfrac12\operatorname{tr}(XY)$, under which $\{L_{ab}\}_{a<b}$ is orthonormal and $c_{\alpha\beta\gamma}=\langle[e_\alpha,e_\beta],e_\gamma\rangle$ is **totally antisymmetric**. This model reproduces the anchor, so it is the record's convention and not a substitute for it (§6).
+- The concrete model I compute in: $f_a\wedge f_b\leftrightarrow L_{ab}=E_{ab}-E_{ba}$, with $\langle X,Y\rangle_{\mathfrak{so}}=-\tfrac12\mathop{\mathrm{tr}}(XY)$, under which $\{L_{ab}\}_{a<b}$ is orthonormal and $c_{\alpha\beta\gamma}=\langle[e_\alpha,e_\beta],e_\gamma\rangle$ is **totally antisymmetric**. This model reproduces the anchor, so it is the record's convention and not a substitute for it (§6).
 - Coordinate-diagonal: $W_{abcd}=0$ unless $\{a,b\}=\{c,d\}$; $K_{ab}=W_{abab}$; the locus is the hollow symmetric $K$ with vanishing row sums, taken as given.
 - $\theta_0(n)=\sqrt{2(n-1)(n-2)}/n$; $\theta_0(12)=\sqrt{55}/6=1.236033\ldots$; the threshold $\sqrt{3/2}=1.224745\ldots$; the crossover $6+2\sqrt7=11.2915\ldots$
 
@@ -51,13 +51,13 @@ Gate 2, adversarial. The brief [BRIEF-g2-l177-l178.md](BRIEF-g2-l177-l178.md) wa
 
 ### L178
 
-**Used and stated.** $W\in\mathcal W_n$ nonzero (needed for $\lVert W\rVert\ne0$, so $\theta$ is defined at all); support in $\Lambda^2V$ with $\dim V=4$; $\operatorname{rank}(W)\le3$.
+**Used and stated.** $W\in\mathcal W_n$ nonzero (needed for $\lVert W\rVert\ne0$, so $\theta$ is defined at all); support in $\Lambda^2V$ with $\dim V=4$; $\mathop{\mathrm{rank}}(W)\le3$.
 
 **Used and unstated, five.**
 
 1. **$n\ge4$**, implied by the existence of a four-dimensional subspace, never written.
 2. **An orientation on $V$**, without which $\Lambda^\pm$ is not defined. Harmless (every four-space has one, and the two choices swap the labels) but step 1 opens with a splitting that presupposes it.
-3. **The first Bianchi identity**, once, and precisely located. Step 1 asserts two things without naming a source: that $W|_{\Lambda^2V}$ is block-diagonal with no $\Lambda^+\!\to\!\Lambda^-$ part, and that $\operatorname{tr}W^+=\operatorname{tr}W^-=0$ **separately** rather than only in sum. They have different provenance. The off-diagonal block needs no Bianchi: on $\operatorname{Sym}^2(\Lambda^2\mathbb R^4)$ it is the summand $\Lambda^+\otimes\Lambda^-$, which is $SO(4)$-irreducible of dimension $9$, and the Ricci map carries it by a nonzero equivariant map onto $\operatorname{Sym}^2_0\mathbb R^4$, also of dimension $9$, so by Schur the map is an isomorphism and total trace-freeness alone kills the block. The separate traces do need it: $\operatorname{tr}W^++\operatorname{tr}W^-=\operatorname{tr}W=0$ is trace-freeness, but $\operatorname{tr}W^+-\operatorname{tr}W^-$ is the $\Lambda^4$ component, proportional to $\epsilon^{abcd}W_{abcd}$, which is exactly the first Bianchi identity's failure and vanishes only because Bianchi holds. So **Bianchi is used once, for the difference of the traces**, and it is the largest unstated hypothesis in L178. For a self-adjoint operator on $\Lambda^2\mathbb R^4$ with zero total trace but no Bianchi, the summands are block-diagonal with traces $\pm\tau$ for some $\tau\ne0$, the never-rank-one lemma fails on both, and step 1 collapses. *(Disclosure: I attributed the block-diagonality to Bianchi as well in my first draft. I saw the claim that Bianchi is unused there while looking up [reviews/INDEX.md](INDEX.md)'s row format, checked the Schur argument myself, found it right, and corrected this paragraph. Everything else in this report is my own cold work.)*
+3. **The first Bianchi identity**, once, and precisely located. Step 1 asserts two things without naming a source: that $W|_{\Lambda^2V}$ is block-diagonal with no $\Lambda^+\!\to\!\Lambda^-$ part, and that $\mathop{\mathrm{tr}}W^+=\mathop{\mathrm{tr}}W^-=0$ **separately** rather than only in sum. They have different provenance. The off-diagonal block needs no Bianchi: on $\mathop{\mathrm{Sym}}^2(\Lambda^2\mathbb R^4)$ it is the summand $\Lambda^+\otimes\Lambda^-$, which is $SO(4)$-irreducible of dimension $9$, and the Ricci map carries it by a nonzero equivariant map onto $\mathop{\mathrm{Sym}}^2_0\mathbb R^4$, also of dimension $9$, so by Schur the map is an isomorphism and total trace-freeness alone kills the block. The separate traces do need it: $\mathop{\mathrm{tr}}W^++\mathop{\mathrm{tr}}W^-=\mathop{\mathrm{tr}}W=0$ is trace-freeness, but $\mathop{\mathrm{tr}}W^+-\mathop{\mathrm{tr}}W^-$ is the $\Lambda^4$ component, proportional to $\epsilon^{abcd}W_{abcd}$, which is exactly the first Bianchi identity's failure and vanishes only because Bianchi holds. So **Bianchi is used once, for the difference of the traces**, and it is the largest unstated hypothesis in L178. For a self-adjoint operator on $\Lambda^2\mathbb R^4$ with zero total trace but no Bianchi, the summands are block-diagonal with traces $\pm\tau$ for some $\tau\ne0$, the never-rank-one lemma fails on both, and step 1 collapses. *(Disclosure: I attributed the block-diagonality to Bianchi as well in my first draft. I saw the claim that Bianchi is unused there while looking up [reviews/INDEX.md](INDEX.md)'s row format, checked the Schur argument myself, found it right, and corrected this paragraph. Everything else in this report is my own cold work.)*
 4. **"Supported on $\Lambda^2V$" means $W_{abcd}=0$ unless all four indices lie in $V$**, not merely that the operator's image and kernel are adapted. Step 3's support argument reads the strong version.
 5. **Positive scaling** in the normalisation $\lVert W\rVert^2=1$. $\theta$ is invariant under $t>0$ and changes sign under $t<0$; the normalisation is legitimate only because one may take $t>0$. This is the same defect that surfaces in the equality clause (§10).
 
@@ -103,7 +103,7 @@ The failure the brief is pointing at is the next step, which claim (2) invites a
 
 > $\ker N\ne0$, therefore $G$ carries a tensor of support exactly $G$.
 
-**This is false.** Closed-form refutation: let $G$ be the four-cycle $1$–$2$–$3$–$4$–$1$ with one pendant edge $\{1,5\}$. Then $\lvert V\rvert=5$, $\lvert E\rvert=5$, $G$ is connected and bipartite, so $b=1$, $\operatorname{rank}N=4$ and $\dim\ker N=5-5+1=1$, nonzero. But vertex $5$ has degree one, so its row reads $x_{15}=0$, and every kernel vector kills that edge. The kernel is spanned by
+**This is false.** Closed-form refutation: let $G$ be the four-cycle $1$–$2$–$3$–$4$–$1$ with one pendant edge $\{1,5\}$. Then $\lvert V\rvert=5$, $\lvert E\rvert=5$, $G$ is connected and bipartite, so $b=1$, $\mathop{\mathrm{rank}}N=4$ and $\dim\ker N=5-5+1=1$, nonzero. But vertex $5$ has degree one, so its row reads $x_{15}=0$, and every kernel vector kills that edge. The kernel is spanned by
 
 $$x_{12}=t,\quad x_{23}=-t,\quad x_{34}=t,\quad x_{41}=-t,\quad x_{15}=0,$$
 
@@ -147,15 +147,15 @@ The first branch is sound: if every component is bipartite then $b=c$, the globa
 
 The "otherwise" branch does not follow. The global inequality $\lvert E\rvert-\lvert V\rvert+b\ge1$ says **some** component has positive surplus; it does not say the non-bipartite one does. Closed-form refutation, at the level of the inference: let $G=C_4\sqcup K_3$, on $\{1,2,3,4\}$ and $\{5,6,7\}$. Then $\lvert V\rvert=7$, $\lvert E\rvert=7$, $b=1$ (the $C_4$ alone), so $\lvert E\rvert-\lvert V\rvert+b=1\ge1$, the branch's premise holds and the graph is not all-bipartite, so the brief routes it to "otherwise". But the non-bipartite component is the triangle, with $\lvert E_i\rvert=3=\lvert V_i\rvert$, **not** $\ge\lvert V_i\rvert+1$. The asserted implication fails on an explicit graph.
 
-The conclusion is unharmed, $C_4\sqcup K_3$ has seven edges, and in any case it is not a support graph, since $\operatorname{rank}N=6$, $\dim\ker N=1$, and the kernel is the $C_4$ alternation with all three triangle edges zero. But the brief's premise is the **global** $\lvert E\rvert\ge\lvert V\rvert-b+1$, which is exactly the condition $C_4\sqcup K_3$ satisfies, so the counterexample is a counterexample to the inference as the brief licenses it. The repair is the per-component argument of §4a, which derives $\ker N_i\ne0$ for every component from full support rather than from a global count. **The looser form is not sound as written; it reaches a true conclusion through a step that is false.**
+The conclusion is unharmed, $C_4\sqcup K_3$ has seven edges, and in any case it is not a support graph, since $\mathop{\mathrm{rank}}N=6$, $\dim\ker N=1$, and the kernel is the $C_4$ alternation with all three triangle edges zero. But the brief's premise is the **global** $\lvert E\rvert\ge\lvert V\rvert-b+1$, which is exactly the condition $C_4\sqcup K_3$ satisfies, so the counterexample is a counterexample to the inference as the brief licenses it. The repair is the per-component argument of §4a, which derives $\ker N_i\ne0$ for every component from full support rather than from a global count. **The looser form is not sound as written; it reaches a true conclusion through a step that is false.**
 
 ## 5. L178 step 1
 
 **Verdict: CORRECT, all splits checked.**
 
-**Never rank one.** A self-adjoint rank-one operator on a three-space has spectrum $(\lambda,0,0)$ with $\lambda\ne0$; trace-freeness gives $\lambda=0$, a contradiction. So $\operatorname{rank}W^\pm\in\{0,2,3\}$. Correct, and it depends on trace-freeness of **each summand separately**, the one place the first Bianchi identity is genuinely spent, as §1 sets out.
+**Never rank one.** A self-adjoint rank-one operator on a three-space has spectrum $(\lambda,0,0)$ with $\lambda\ne0$; trace-freeness gives $\lambda=0$, a contradiction. So $\mathop{\mathrm{rank}}W^\pm\in\{0,2,3\}$. Correct, and it depends on trace-freeness of **each summand separately**, the one place the first Bianchi identity is genuinely spent, as §1 sets out.
 
-**The splitting.** $W$ restricted to $V$ is an algebraic Weyl tensor of $\mathbb R^4$ (first Bianchi inherited, and $\sum_{b\in V}W_{abcb}=\sum_{b=1}^nW_{abcb}=0$) so it is block diagonal on $\Lambda^+\oplus\Lambda^-$ with $\operatorname{tr}W^+=\operatorname{tr}W^-=0$. Correct, source unnamed, and the two halves have different sources: block-diagonality is Schur against the irreducible $\Lambda^+\otimes\Lambda^-$ and costs only trace-freeness, while the separate traces cost the first Bianchi identity, as §1 sets out.
+**The splitting.** $W$ restricted to $V$ is an algebraic Weyl tensor of $\mathbb R^4$ (first Bianchi inherited, and $\sum_{b\in V}W_{abcb}=\sum_{b=1}^nW_{abcb}=0$) so it is block diagonal on $\Lambda^+\oplus\Lambda^-$ with $\mathop{\mathrm{tr}}W^+=\mathop{\mathrm{tr}}W^-=0$. Correct, source unnamed, and the two halves have different sources: block-diagonality is Schur against the irreducible $\Lambda^+\otimes\Lambda^-$ and costs only trace-freeness, while the separate traces cost the first Bianchi identity, as §1 sets out.
 
 **Every split, arithmetically.** With $r_\pm\in\{0,2,3\}$ and $r_++r_-\le3$:
 
@@ -204,23 +204,23 @@ Hence $c_{ijk}=-\sqrt2\,\epsilon_{ijk}$ in this orientation, so $\gamma=\mp\sqrt
 
 With $c_{ijk}=\gamma\epsilon_{ijk}$ on the three-space,
 
-$$(W^\#)_{ab}=\tfrac{\gamma^2}{2}\sum\epsilon_{acd}\epsilon_{bef}W_{ce}W_{df}=\gamma^2\operatorname{cof}(W)_{ab},$$
+$$(W^\#)_{ab}=\tfrac{\gamma^2}{2}\sum\epsilon_{acd}\epsilon_{bef}W_{ce}W_{df}=\gamma^2\mathop{\mathrm{cof}}(W)_{ab},$$
 
-the second equality being the standard $3\times3$ cofactor identity $\operatorname{cof}(W)_{ab}=\tfrac12\epsilon_{acd}\epsilon_{bef}W_{ce}W_{df}$, which checks at $W=I$ as $\tfrac12\epsilon_{acd}\epsilon_{bcd}=\delta_{ab}=\operatorname{cof}(I)_{ab}$. So $W^\#=2\operatorname{cof}(W)$.
+the second equality being the standard $3\times3$ cofactor identity $\mathop{\mathrm{cof}}(W)_{ab}=\tfrac12\epsilon_{acd}\epsilon_{bef}W_{ce}W_{df}$, which checks at $W=I$ as $\tfrac12\epsilon_{acd}\epsilon_{bcd}=\delta_{ab}=\mathop{\mathrm{cof}}(I)_{ab}$. So $W^\#=2\mathop{\mathrm{cof}}(W)$.
 
 The block says this holds "on the diagonalising basis". It holds in **any** orthonormal basis of the three-space (both sides are basis-covariant under $SO(3)$) so the qualifier is over-cautious rather than wrong. Restricting to the diagonalising basis is harmless but costs generality that step 3 later wants back.
 
-Then, $W$ symmetric so $\operatorname{cof}(W)=\operatorname{adj}(W)^{\mathsf T}=\operatorname{adj}(W)$, and $W\operatorname{adj}(W)=\det(W)I$ **without any invertibility hypothesis**:
+Then, $W$ symmetric so $\mathop{\mathrm{cof}}(W)=\mathop{\mathrm{adj}}(W)^{\mathsf T}=\mathop{\mathrm{adj}}(W)$, and $W\mathop{\mathrm{adj}}(W)=\det(W)I$ **without any invertibility hypothesis**:
 
-$$\langle W,W^\#\rangle=2\operatorname{tr}(W\operatorname{adj}W)=2\cdot3\det W=6e_3.$$
+$$\langle W,W^\#\rangle=2\mathop{\mathrm{tr}}(W\mathop{\mathrm{adj}}W)=2\cdot3\det W=6e_3.$$
 
-Or diagonally, $\langle\operatorname{diag}(\lambda_i),2\operatorname{diag}(\lambda_j\lambda_k)\rangle=6\lambda_1\lambda_2\lambda_3$. Correct.
+Or diagonally, $\langle\mathop{\mathrm{diag}}(\lambda_i),2\mathop{\mathrm{diag}}(\lambda_j\lambda_k)\rangle=6\lambda_1\lambda_2\lambda_3$. Correct.
 
 ## 8. Step 3, the padding, the conclusion is right and the reason is not
 
 **Verdict: CONCLUSION CORRECT, STATED REASON A NON-SEQUITUR.** This is the item the brief flags for the $n$-dependence, and there is something real here.
 
-**The conclusion.** For $\alpha\notin\Lambda^2V$ and $W$ supported on $\Lambda^2V$, the $\#$ sum forces $\gamma,\delta,\epsilon,\zeta\in\Lambda^2V$ through the factors $W_{\gamma\epsilon}W_{\delta\zeta}$, leaving $c_{\alpha\gamma\delta}$ with $\gamma,\delta\in\Lambda^2V$. Total antisymmetry gives $c_{\alpha\gamma\delta}=c_{\gamma\delta\alpha}=\langle[e_\gamma,e_\delta],e_\alpha\rangle$, and $[e_\gamma,e_\delta]\in\mathfrak{so}(V)$ because $\mathfrak{so}(V)$ is a subalgebra, so the component along $e_\alpha\perp\mathfrak{so}(V)$ vanishes. Hence $W^\#$ is supported on $\Lambda^2V$ and is computed there by $\mathfrak{so}(4)$'s own constants. Both parts of the claim hold, and $\theta$ is unchanged by padding because $\lVert W\rVert^2$, $\operatorname{tr}W^3$ and $\langle W,W^\#\rangle$ all read off the $\Lambda^2V$ block alone. The same argument, applied inside $\mathfrak{so}(4)$, is what confines $W^\#$ to $\Lambda^+$ when $W$ lives on $\Lambda^+$, which step 2 needs in order to treat $W^\#$ as a $3\times3$ cofactor at all, and which the block never says.
+**The conclusion.** For $\alpha\notin\Lambda^2V$ and $W$ supported on $\Lambda^2V$, the $\#$ sum forces $\gamma,\delta,\epsilon,\zeta\in\Lambda^2V$ through the factors $W_{\gamma\epsilon}W_{\delta\zeta}$, leaving $c_{\alpha\gamma\delta}$ with $\gamma,\delta\in\Lambda^2V$. Total antisymmetry gives $c_{\alpha\gamma\delta}=c_{\gamma\delta\alpha}=\langle[e_\gamma,e_\delta],e_\alpha\rangle$, and $[e_\gamma,e_\delta]\in\mathfrak{so}(V)$ because $\mathfrak{so}(V)$ is a subalgebra, so the component along $e_\alpha\perp\mathfrak{so}(V)$ vanishes. Hence $W^\#$ is supported on $\Lambda^2V$ and is computed there by $\mathfrak{so}(4)$'s own constants. Both parts of the claim hold, and $\theta$ is unchanged by padding because $\lVert W\rVert^2$, $\mathop{\mathrm{tr}}W^3$ and $\langle W,W^\#\rangle$ all read off the $\Lambda^2V$ block alone. The same argument, applied inside $\mathfrak{so}(4)$, is what confines $W^\#$ to $\Lambda^+$ when $W$ lives on $\Lambda^+$, which step 2 needs in order to treat $W^\#$ as a $3\times3$ cofactor at all, and which the block never says.
 
 **The ingredient that is missing.** The step's stated reason is "$\mathfrak{so}(V)$ is a subalgebra, so a $\#$-term needs all four structure-constant slots inside it". Being a subalgebra gives $[\mathfrak{so}(V),\mathfrak{so}(V)]\subseteq\mathfrak{so}(V)$, which is a statement about $c_{\gamma\delta\alpha}$; converting it into the statement about $c_{\alpha\gamma\delta}$ that the $\#$ formula actually contains requires **total antisymmetry of $c$**, which holds in an orthonormal basis with an ad-invariant form but is nowhere asserted. Without it the step is a hope. With it the step is a proof. One clause.
 
@@ -238,12 +238,12 @@ The two agree only at $n=4$. So a reader who takes the block's stated reason at 
 
 **Verdict: CORRECT.**
 
-- **$e_1=0$.** $\operatorname{tr}_{\Lambda^2}W=\sum_{a<b}W_{abab}=\tfrac12\sum_{a,b}W_{abab}=0$ by total trace-freeness. On the relevant three-space, $e_1=p_1=\operatorname{tr}W^+=0$ by the separate trace-freeness of §5. Both hold; the block uses the second and cites the first.
-- **Newton.** $p_3=e_1p_2-e_2p_1+3e_3$; with $e_1=p_1=0$ this is $p_3=3e_3$. The identity is correctly quoted and correctly specialised. Note that $p_3=\operatorname{tr}W^3$ over the whole of $\Lambda^2\mathbb R^n$ equals $p_3$ of the three nonzero eigenvalues, since every other eigenvalue is zero.
-- **The norm.** $\lVert W\rVert^2=\operatorname{tr}(W^2)=\sum_\alpha\lambda_\alpha^2=p_2$, which is the norm $\theta$ is defined against by the stated convention. Setting $p_2=1$ is a positive rescaling, admissible by the degree-zero homogeneity of $\theta$ under $t>0$.
-- **The assembly.** $P=\langle W,W^2\rangle+\langle W,W^\#\rangle=\operatorname{tr}W^3+6e_3=3e_3+6e_3=9e_3$, and $\theta=P$ at $\lVert W\rVert=1$. Correct.
+- **$e_1=0$.** $\mathop{\mathrm{tr}}_{\Lambda^2}W=\sum_{a<b}W_{abab}=\tfrac12\sum_{a,b}W_{abab}=0$ by total trace-freeness. On the relevant three-space, $e_1=p_1=\mathop{\mathrm{tr}}W^+=0$ by the separate trace-freeness of §5. Both hold; the block uses the second and cites the first.
+- **Newton.** $p_3=e_1p_2-e_2p_1+3e_3$; with $e_1=p_1=0$ this is $p_3=3e_3$. The identity is correctly quoted and correctly specialised. Note that $p_3=\mathop{\mathrm{tr}}W^3$ over the whole of $\Lambda^2\mathbb R^n$ equals $p_3$ of the three nonzero eigenvalues, since every other eigenvalue is zero.
+- **The norm.** $\lVert W\rVert^2=\mathop{\mathrm{tr}}(W^2)=\sum_\alpha\lambda_\alpha^2=p_2$, which is the norm $\theta$ is defined against by the stated convention. Setting $p_2=1$ is a positive rescaling, admissible by the degree-zero homogeneity of $\theta$ under $t>0$.
+- **The assembly.** $P=\langle W,W^2\rangle+\langle W,W^\#\rangle=\mathop{\mathrm{tr}}W^3+6e_3=3e_3+6e_3=9e_3$, and $\theta=P$ at $\lVert W\rVert=1$. Correct.
 
-**One convention hazard to record, though L178 does not trip it.** The operator norm here is a quarter of the tensor norm: $\sum_{abcd}W_{abcd}^2=4\sum_{a<b,c<d}W_{abcd}^2=4\operatorname{tr}(W_{\Lambda^2}^2)$. Since $\theta$ is a ratio of a cubic to a cube, switching conventions rescales $\theta$ by $1/8$, $\sqrt{3/2}$ would become $\sqrt{3/2}/8$. The brief's conventions are internally consistent and the anchor is a theorem in them (§6, route two), so L178 is safe; but any imported inequality stated in the tensor norm would arrive wrong by a factor of eight.
+**One convention hazard to record, though L178 does not trip it.** The operator norm here is a quarter of the tensor norm: $\sum_{abcd}W_{abcd}^2=4\sum_{a<b,c<d}W_{abcd}^2=4\mathop{\mathrm{tr}}(W_{\Lambda^2}^2)$. Since $\theta$ is a ratio of a cubic to a cube, switching conventions rescales $\theta$ by $1/8$, $\sqrt{3/2}$ would become $\sqrt{3/2}/8$. The brief's conventions are internally consistent and the anchor is a theorem in them (§6, route two), so L178 is safe; but any imported inequality stated in the tensor norm would arrive wrong by a factor of eight.
 
 ## 10. Step 5
 
@@ -258,7 +258,7 @@ The two agree only at $n=4$. So a reader who takes the block's stated reason at 
 **Where it fails: "up to scale, sign and frame".**
 
 - **"Sign" is false.** $P$ is homogeneous of degree three and $\lVert W\rVert^3$ is even, so $\theta(-W)=-\theta(W)$. Since $\mathcal W_n$ is a linear subspace, $-W_{\mathbb{CP}^2}\in\mathcal W_n$, is supported on the same $\Lambda^2V$, has the same rank $3$, and has spectrum $\tfrac1{\sqrt6}(-2,1,1)$, $e_3=-\tfrac1{3\sqrt6}$, hence $\theta=-\sqrt{3/2}$. **It attains the minimum of the same family, not the maximum**, and including it in the equality set of an upper bound is an error. It is the reflected root of the same discriminant condition, which is presumably how it got in.
-- **"Scale" must be positive.** $\theta(tW)=\operatorname{sgn}(t)\theta(W)$, so negative scaling is sign flipping under another name; unqualified "up to scale" reintroduces the same false case.
+- **"Scale" must be positive.** $\theta(tW)=\mathop{\mathrm{sgn}}(t)\theta(W)$, so negative scaling is sign flipping under another name; unqualified "up to scale" reintroduces the same false case.
 - **"Frame" is right, provided the frame group is $O(n)$ and not $SO(n)$.** The anti-self-dual mirror ($W^+=0$ with $W^-$ carrying $\tfrac1{\sqrt6}(2,-1,-1)$, that is $\overline{\mathbb{CP}^2}$), has the same $\Lambda^2$ spectrum, hence the same $p_2$, $e_3$ and $\theta=\sqrt{3/2}$, so it **is** in the equality set and must be covered. An orientation-reversing orthogonal change of frame on $V$ swaps $\Lambda^+\leftrightarrow\Lambda^-$, so "up to frame" covers it under $O(n)$ and fails to cover it under $SO(n)$. The word "frame" is unqualified in the statement, so this is an ambiguity to close rather than a refuted claim, but the two readings differ on whether $\overline{\mathbb{CP}^2}$ is in the equality set, and the true answer is that it is.
 
 **Repaired clause:** equality holds exactly when $W$ is a **positive** multiple of $W_{\mathbb{CP}^2}$ in some orthonormal frame of $V$, either orientation, equivalently, up to positive scale and $O(n)$ frame change; and $\theta=-\sqrt{3/2}$ is attained exactly on the negatives of those.
@@ -269,7 +269,7 @@ The two agree only at $n=4$. So a reader who takes the block's stated reason at 
 
 Every object here is almost all kernel: $W$ kills $\Lambda^2\mathbb R^n\ominus\Lambda^2V$, of dimension $\binom n2-6$, and kills one of $\Lambda^\pm$ entirely, and in the rank-two branch kills a further line. The places this could bite:
 
-- **The cofactor.** $\operatorname{cof}$ and $\operatorname{adj}$ are polynomial in the entries and $W\operatorname{adj}(W)=\det(W)I$ needs no invertibility, so §7 survives $\det W=0$. In the rank-two branch $\operatorname{cof}(W)$ has rank one and $\langle W,W^\#\rangle=6e_3=0$ consistently.
+- **The cofactor.** $\mathop{\mathrm{cof}}$ and $\mathop{\mathrm{adj}}$ are polynomial in the entries and $W\mathop{\mathrm{adj}}(W)=\det(W)I$ needs no invertibility, so §7 survives $\det W=0$. In the rank-two branch $\mathop{\mathrm{cof}}(W)$ has rank one and $\langle W,W^\#\rangle=6e_3=0$ consistently.
 - **Newton and the discriminant.** Both are polynomial identities in the eigenvalues; a zero eigenvalue is an ordinary point of the family, sitting at $e_3=0$ inside the interval $\lvert e_3\rvert\le\tfrac1{3\sqrt6}$ rather than at its edge.
 - **Treating $W^\#$ as a $3\times3$ object.** This is where a kernel assumption could have hidden, and it does not: as shown in §8, $W^\#$ vanishes off the block $W$ lives on, so the reduction to $3\times3$ is a theorem rather than a convenience.
 - **The normalisation $\lVert W\rVert=1$.** Needs $W\ne0$ only, which is hypothesised.
@@ -296,7 +296,7 @@ The hypothesis is used four times over and cannot be weakened inside this argume
 
 For support of dimension $m\ne4$ there is no splitting, $\Lambda^2$ has dimension $\binom m2$, and no step transfers.
 
-**L178 does not claim that rank $\le3$ implies four-dimensional support**, and it should not be read as doing so; the hypothesis is in the statement. The failure mode is one level up: if a parent block disposes of "the rank $\le3$ case" by citing L178, it needs $\operatorname{rank}(W)\le3\Rightarrow\dim\operatorname{supp}W=4$ as a separate result. **I looked for that implication in the material I was given and there is none, the brief supplies no argument for it, and I decline to supply one.** If the record relies on it anywhere, that reliance is `HYPOTHESIS-DEBT`; if the record only ever applies L178 with the support hypothesis independently verified, there is no debt. On the evidence in front of me I can say only that L178 itself is clean and that the gap is real if it is ever crossed.
+**L178 does not claim that rank $\le3$ implies four-dimensional support**, and it should not be read as doing so; the hypothesis is in the statement. The failure mode is one level up: if a parent block disposes of "the rank $\le3$ case" by citing L178, it needs $\mathop{\mathrm{rank}}(W)\le3\Rightarrow\dim\mathop{\mathrm{supp}}W=4$ as a separate result. **I looked for that implication in the material I was given and there is none, the brief supplies no argument for it, and I decline to supply one.** If the record relies on it anywhere, that reliance is `HYPOTHESIS-DEBT`; if the record only ever applies L178 with the support hypothesis independently verified, there is no debt. On the evidence in front of me I can say only that L178 itself is clean and that the gap is real if it is ever crossed.
 
 ## 14. What would break each claim, and what I did to look
 
@@ -304,7 +304,7 @@ For support of dimension $m\ne4$ there is no splitting, $\Lambda^2$ has dimensio
 
 | Claim | The object that would break it | Found? |
 | --- | --- | --- |
-| L177 rank identity | A graph over $\mathbb R$ with $\operatorname{rank}N\ne\lvert V\rvert-b$ | No. Read at Zaslavsky Theorem IV.1 and Example IV.F.2; the identity is a theorem, and the only escapes are characteristic 2 and loops, both excluded here |
+| L177 rank identity | A graph over $\mathbb R$ with $\mathop{\mathrm{rank}}N\ne\lvert V\rvert-b$ | No. Read at Zaslavsky Theorem IV.1 and Example IV.F.2; the identity is a theorem, and the only escapes are characteristic 2 and loops, both excluded here |
 | L177 claim (2) as an iff | Nothing, it is a definitional restatement | Not applicable; the claim cannot fail and cannot decide anything |
 | The converse "$\ker N\ne0\Rightarrow$ full support" | A graph with nonzero kernel where some edge is forced to zero | **Found**: $C_4$ plus a pendant edge, kernel one-dimensional and spanned by $(t,-t,t,-t,0)$ |
 | L177 whole-graph edge split | A graph meeting the global surplus whose non-bipartite component has $\lvert E_i\rvert=\lvert V_i\rvert$ | **Found**: $C_4\sqcup K_3$, surplus $7-7+1=1$, triangle at $3=3$ |
@@ -315,7 +315,7 @@ For support of dimension $m\ne4$ there is no splitting, $\Lambda^2$ has dimensio
 | The equality clause | A tensor in the stated equality set with $\theta\ne\sqrt{3/2}$ | **Found**: $-W_{\mathbb{CP}^2}$, admitted by "up to sign", has $\theta=-\sqrt{3/2}$ |
 | Step 3's padding conclusion | A padded $W$ whose $\#$ leaks off $\Lambda^2V$ | Cannot happen, by total antisymmetry of $c$ and closure of $\mathfrak{so}(V)$; and the ambient anchor's failure on the padded identity ($2$, not $n-2$) shows the *reason* the block gives is unavailable even though the conclusion holds |
 
-**The screen, stated in full for the record.** Exact symbolic arithmetic, no floating point, on objects I constructed: the four graph kernels above; the $\{L_{ab}\}$ structure constants at $n=4$ and $n=6$, confirming orthonormality under $-\tfrac12\operatorname{tr}$, total antisymmetry of $c$, $\mathrm{id}^\#=2\,\mathrm{id}$ at $n=4$ and $4\,\mathrm{id}$ at $n=6$; $[\omega_i,\omega_j]=\mp\sqrt2\,\epsilon_{ijk}\omega_k$; the padded $(\mathrm{id}_{\Lambda^2V})^\#=2\,\mathrm{id}_{\Lambda^2V}$ inside $\mathfrak{so}(6)$; and, for the $\mathbb{CP}^2$ spectrum inside $\mathfrak{so}(6)$, $\lVert W\rVert^2=1$, $\operatorname{tr}W^3=\sqrt6/6$, $\langle W,W^\#\rangle=\sqrt6/3$, $\theta=\sqrt6/2=\sqrt{3/2}$, and $W^\#$ supported on $\Lambda^2V$. Every one of these was derived by hand first and every one agreed. **None of it is offered as evidence for any positive claim in this report; the derivations above stand alone.**
+**The screen, stated in full for the record.** Exact symbolic arithmetic, no floating point, on objects I constructed: the four graph kernels above; the $\{L_{ab}\}$ structure constants at $n=4$ and $n=6$, confirming orthonormality under $-\tfrac12\mathop{\mathrm{tr}}$, total antisymmetry of $c$, $\mathrm{id}^\#=2\,\mathrm{id}$ at $n=4$ and $4\,\mathrm{id}$ at $n=6$; $[\omega_i,\omega_j]=\mp\sqrt2\,\epsilon_{ijk}\omega_k$; the padded $(\mathrm{id}_{\Lambda^2V})^\#=2\,\mathrm{id}_{\Lambda^2V}$ inside $\mathfrak{so}(6)$; and, for the $\mathbb{CP}^2$ spectrum inside $\mathfrak{so}(6)$, $\lVert W\rVert^2=1$, $\mathop{\mathrm{tr}}W^3=\sqrt6/6$, $\langle W,W^\#\rangle=\sqrt6/3$, $\theta=\sqrt6/2=\sqrt{3/2}$, and $W^\#$ supported on $\Lambda^2V$. Every one of these was derived by hand first and every one agreed. **None of it is offered as evidence for any positive claim in this report; the derivations above stand alone.**
 
 ## Overall verdict
 

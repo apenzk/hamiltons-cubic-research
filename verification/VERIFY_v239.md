@@ -161,7 +161,7 @@ Screen: S^2 × S^2 at k = 1/2 (PS-scaled). ‖R‖^2 = 1/2, tr R = 1 = n/4, (tr 
 
 ### Finding 6. The theta^2 display is asserted at an unnormalised lambda (REFUTED AS STATED)
 
-1. **Location.** results.md line 390: "Then $Q(W)=W^2+W^\#=\lambda W$ for a scalar $\lambda$, so ... its value is $\theta=\lambda/\lVert W\rVert$ with $\theta^2=\frac1{4(\lVert R\rVert^2-(\operatorname{tr}R)^2/N)}$. Normalising to Einstein constant $\tfrac12$ makes ..."
+1. **Location.** results.md line 390: "Then $Q(W)=W^2+W^\#=\lambda W$ for a scalar $\lambda$, so ... its value is $\theta=\lambda/\lVert W\rVert$ with $\theta^2=\frac1{4(\lVert R\rVert^2-(\mathop{\mathrm{tr}}R)^2/N)}$. Normalising to Einstein constant $\tfrac12$ makes ..."
 2. **Closed-form failure.** S^2 × S^2 with both factors of curvature 1/4: compact, symmetric, Einstein with lambda = 1/4, R = diag(1/4, 1/4, 0, 0, 0, 0). ‖R‖^2 = 1/8, tr R = 1/2, (tr R)^2/N = 1/24, ‖W‖^2 = 1/12. Passage D's own value theta = lambda/‖W‖ = (1/4)·sqrt(12) = sqrt(3)/2 gives theta^2 = 3/4. Passage D's display gives 1/(4 · 1/12) = 3. The two conclusions of the same sentence disagree, 3/4 != 3.
 3. **Charitable reading.** The next sentence normalises to lambda = 1/2, so the author may have meant the display under that normalisation. The display sits in the "Then" clause before the normalisation is introduced, with lambda declared "a scalar", so as written it asserts the display at every lambda. **The candidate survives.**
 

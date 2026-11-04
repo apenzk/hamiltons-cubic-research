@@ -19,19 +19,19 @@
 
 ## 0. Conventions, fixed once
 
-- $\langle\omega,\eta\rangle=\sum_{a<b}\omega_{ab}\eta_{ab}$, the convention [L180](../findings/diagonal-half.md) fixes by $\operatorname{tr}(\omega\omega^{\mathsf T})=2\lVert\omega\rVert^2$ and the one `inner2` carries in [SelfDual.lean](../lean/HamiltonsCubic/Base/SelfDual.lean). In it, $\langle\omega_1,\omega_2\rangle=-\tfrac12\operatorname{tr}(\omega_1\omega_2)$, so **orthogonality is exactly $\operatorname{tr}(\omega_1\omega_2)=0$** and L184's contradictions $\operatorname{tr}(\omega_1\omega_2)=\mp2$ are stated in it correctly.
+- $\langle\omega,\eta\rangle=\sum_{a<b}\omega_{ab}\eta_{ab}$, the convention [L180](../findings/diagonal-half.md) fixes by $\mathop{\mathrm{tr}}(\omega\omega^{\mathsf T})=2\lVert\omega\rVert^2$ and the one `inner2` carries in [SelfDual.lean](../lean/HamiltonsCubic/Base/SelfDual.lean). In it, $\langle\omega_1,\omega_2\rangle=-\tfrac12\mathop{\mathrm{tr}}(\omega_1\omega_2)$, so **orthogonality is exactly $\mathop{\mathrm{tr}}(\omega_1\omega_2)=0$** and L184's contradictions $\mathop{\mathrm{tr}}(\omega_1\omega_2)=\mp2$ are stated in it correctly.
 - $A=-\omega_1^2=-\omega_2^2=\omega_i\omega_i^{\mathsf T}$, positive semidefinite of trace $2$ on $\mathbb R^n$ and positive definite on $V$.
 - $\varepsilon_j$ is the unit area form of a plane $P_j$, fixed up to sign. $J$ names both a complex structure and its $2$-form $\omega_J(x,y)=\langle Jx,y\rangle$.
-- $\operatorname{supp}\omega=\operatorname{im}\omega$. For skew $\omega$, $\ker\omega=(\operatorname{im}\omega)^\perp$ and $\ker A=\ker\omega$, so $\operatorname{supp}\omega=\operatorname{range}A$.
+- $\mathop{\mathrm{supp}}\omega=\mathop{\mathrm{im}}\omega$. For skew $\omega$, $\ker\omega=(\mathop{\mathrm{im}}\omega)^\perp$ and $\ker A=\ker\omega$, so $\mathop{\mathrm{supp}}\omega=\mathop{\mathrm{range}}A$.
 
 ## 1. The setup for a pair, and why the fold is legal at all
 
-**Located.** The hypotheses are $\omega_1,\omega_2\in\Lambda^2\mathbb R^n$ skew, $\langle\omega_i,\omega_j\rangle=\delta_{ij}$, $\operatorname{supp}\omega_1=\operatorname{supp}\omega_2=V$ with $\dim V=6$, $\omega_1^2=\omega_2^2$ and $\omega_1\wedge\omega_1=\omega_2\wedge\omega_2$.
+**Located.** The hypotheses are $\omega_1,\omega_2\in\Lambda^2\mathbb R^n$ skew, $\langle\omega_i,\omega_j\rangle=\delta_{ij}$, $\mathop{\mathrm{supp}}\omega_1=\mathop{\mathrm{supp}}\omega_2=V$ with $\dim V=6$, $\omega_1^2=\omega_2^2$ and $\omega_1\wedge\omega_1=\omega_2\wedge\omega_2$.
 
 Three one-form facts carry the setup, and none of them wants a third index.
 
-1. $\operatorname{supp}\omega_i=V$ gives $\ker\omega_i=V^\perp$, so **both forms lie in $\Lambda^2V$** and both self-wedges lie in $\Lambda^4V$. Equality of the self-wedges in $\Lambda^4\mathbb R^n$ and in $\Lambda^4V$ is the same statement.
-2. $\omega_1$ is skew and invertible on $V$, so its eigenvalues on $V\otimes\mathbb C$ are $\pm\mathrm ic_1,\pm\mathrm ic_2,\pm\mathrm ic_3$ with every $c_j>0$, and **$A|_V$ has spectrum $\{c_1^2,c_1^2,c_2^2,c_2^2,c_3^2,c_3^2\}$**. Off $V$ the eigenvalue is $0$ with multiplicity $n-6$, which is the caveat the case-1 body already carries. $\operatorname{tr}A=2$ gives $c_1^2+c_2^2+c_3^2=1$.
+1. $\mathop{\mathrm{supp}}\omega_i=V$ gives $\ker\omega_i=V^\perp$, so **both forms lie in $\Lambda^2V$** and both self-wedges lie in $\Lambda^4V$. Equality of the self-wedges in $\Lambda^4\mathbb R^n$ and in $\Lambda^4V$ is the same statement.
+2. $\omega_1$ is skew and invertible on $V$, so its eigenvalues on $V\otimes\mathbb C$ are $\pm\mathrm ic_1,\pm\mathrm ic_2,\pm\mathrm ic_3$ with every $c_j>0$, and **$A|_V$ has spectrum $\{c_1^2,c_1^2,c_2^2,c_2^2,c_3^2,c_3^2\}$**. Off $V$ the eigenvalue is $0$ with multiplicity $n-6$, which is the caveat the case-1 body already carries. $\mathop{\mathrm{tr}}A=2$ gives $c_1^2+c_2^2+c_3^2=1$.
 3. **Each $\omega_i$ commutes with $\omega_i^2=-A$, hence preserves every eigenspace of $A$.** Since the two squares are equal, *both* forms preserve *the same* eigenspaces.
 
 **Point 3 is the whole of why the fold works, and it is where a careless fold would break.** The planes and the $4$-plane below are eigenspaces of $A$, which is a canonical object attached to the pair, and not the normal-form planes of $\omega_1$, which the second form would have no reason to respect. The L184 block defines them from $A$, and so the second form respects them for a reason and not by inheritance. **This is the [L187](../findings/diagonal-half.md) failure mode checked for and not found.**
@@ -46,7 +46,7 @@ $$\omega_i=\textstyle\sum_j s_{ij}c_j\varepsilon_j,\qquad s_{ij}=\pm1 .$$
 
 $\varepsilon_j\wedge\varepsilon_j=0$, so $\omega_i\wedge\omega_i=2\sum_{j<k}s_{ij}s_{ik}c_jc_k\,\varepsilon_j\wedge\varepsilon_k$, and the $\varepsilon_j\wedge\varepsilon_k$ are the distinct basis $4$-forms $e_{2j-1,2j,2k-1,2k}$, independent by debt item (i). Equal self-wedges give $s_{1j}s_{1k}c_jc_k=s_{2j}s_{2k}c_jc_k$ at each of the three pairs, and **$c_jc_k>0$ cancels because $A$ is positive definite on $V$**, which is the six-dimensional support hypothesis and not a decoration.
 
-Multiplying $s_{1j}s_{1k}=s_{2j}s_{2k}$ through by $s_{1j}s_{1k}$ and setting $u_j=s_{1j}s_{2j}$ gives $u_ju_k=1$ at all three pairs. On signs $u_ju_k=1$ is $u_j=u_k$, so all three $u_j$ equal one $\eta=\pm1$, whence $s_{2j}=\eta s_{1j}$ for every $j$ and $\omega_2=\eta\omega_1$ exactly. Then $\operatorname{tr}(\omega_1\omega_2)=\eta\operatorname{tr}(\omega_1^2)=-2\eta\ne0$, against orthogonality.
+Multiplying $s_{1j}s_{1k}=s_{2j}s_{2k}$ through by $s_{1j}s_{1k}$ and setting $u_j=s_{1j}s_{2j}$ gives $u_ju_k=1$ at all three pairs. On signs $u_ju_k=1$ is $u_j=u_k$, so all three $u_j$ equal one $\eta=\pm1$, whence $s_{2j}=\eta s_{1j}$ for every $j$ and $\omega_2=\eta\omega_1$ exactly. Then $\mathop{\mathrm{tr}}(\omega_1\omega_2)=\eta\mathop{\mathrm{tr}}(\omega_1^2)=-2\eta\ne0$, against orthogonality.
 
 **CONFIRMED, and the box's arithmetic remark is right.** Read as ratios it looks like two free ratios against three constraints. In the $u_j$ variables it is three equations in three signs with only the all-equal solutions, and in fact **two of the three equations already force it**, so case 1 has slack rather than being tight. $u_j$ is canonical where $s_{ij}$ is not, since flipping $\varepsilon_j$ flips $s_{1j}$ and $s_{2j}$ together.
 
@@ -54,9 +54,9 @@ Multiplying $s_{1j}s_{1k}=s_{2j}s_{2k}$ through by $s_{1j}s_{1k}$ and setting $u
 
 ## 3. Case 2, $A|_V=cI_6$
 
-$\omega_i/\sqrt c$ is skew with square $-\mathrm{Id}$, hence orthogonal: a compatible complex structure $J_i$ on $V$. Unit norm gives $6c=\operatorname{tr}A=2$, so $c=\tfrac13$, though the pair contradiction never needs the value.
+$\omega_i/\sqrt c$ is skew with square $-\mathrm{Id}$, hence orthogonal: a compatible complex structure $J_i$ on $V$. Unit norm gives $6c=\mathop{\mathrm{tr}}A=2$, so $c=\tfrac13$, though the pair contradiction never needs the value.
 
-Equal self-wedges give $J_1\wedge J_1=J_2\wedge J_2$ in $\Lambda^4V$. **Apply $\star_V$ to both sides and evaluate each side by the identity:** $2\epsilon_1J_1=2\epsilon_2J_2$, so $J_2=(\epsilon_1\epsilon_2)J_1=\pm J_1$ and $\omega_2=\pm\omega_1$, whence $\operatorname{tr}(\omega_1\omega_2)=\mp2\ne0$ against orthogonality.
+Equal self-wedges give $J_1\wedge J_1=J_2\wedge J_2$ in $\Lambda^4V$. **Apply $\star_V$ to both sides and evaluate each side by the identity:** $2\epsilon_1J_1=2\epsilon_2J_2$, so $J_2=(\epsilon_1\epsilon_2)J_1=\pm J_1$ and $\omega_2=\pm\omega_1$, whence $\mathop{\mathrm{tr}}(\omega_1\omega_2)=\mp2\ne0$ against orthogonality.
 
 **The box is right on both readings.** Only that $\star_V$ is a well-defined linear map is used, so debt item (iii)'s "isomorphism" is true and stronger than needed, and the block's "injective" was the wrong reason rather than a wrong fact. And the triple version's closing, linear independence against three forms spanning a line, has nothing to bite on for a pair, so **the rank argument is genuinely inert and orthogonality genuinely replaces it**. That substitution is the one the observation box says lives only there, and it is valid.
 
@@ -88,7 +88,7 @@ the $\varepsilon_P\wedge\varepsilon_P$ term vanishing. The two summands lie in c
 
 $$\omega_2=\tau_1\tau_2\sqrt a\,J_1+\tau_2\sqrt b\,\varepsilon_P=\tau_1\tau_2\Big(\sqrt a\,J_1+\tau_1\sqrt b\,\varepsilon_P\Big)=\tau_1\tau_2\,\omega_1 ,$$
 
-so $\operatorname{tr}(\omega_1\omega_2)=\mp2\ne0$ against orthogonality. **CONFIRMED, and this is the box's $\omega_2=\tau_2\tau_1\omega_1$ exactly.**
+so $\mathop{\mathrm{tr}}(\omega_1\omega_2)=\mp2\ne0$ against orthogonality. **CONFIRMED, and this is the box's $\omega_2=\tau_2\tau_1\omega_1$ exactly.**
 
 **The three-signs count really is false for two, and the record is right to say so.** With $J_i=\sigma_iJ$ for a fixed $J$ and $\rho_i=\sigma_i\tau_i$, orthogonality reads $4a\,\sigma_1\sigma_2=-2b\,\tau_1\tau_2$, that is $\rho_1\rho_2\cdot 4a=-2b$. At three forms the pairwise products $\rho_i\rho_j$ are all equal, which on signs forces $+1$ and gives the impossible $4a=-2b$. **At two forms there is one product and no such forcing**, and $\rho_1\rho_2=-1$ gives $b=2a$, which is satisfiable. So the triple version's closing step must be rewritten and not folded.
 
@@ -96,7 +96,7 @@ so $\operatorname{tr}(\omega_1\omega_2)=\mp2\ne0$ against orthogonality. **CONFI
 
 ## 5. The $\rho_1\rho_2=-1$ configuration, exhibited in closed form
 
-**Constructed for this audit to test the claim I am about to record, and it is a near-miss and not a counterexample.** Take $V=Q\oplus P=\mathbb R^4\oplus\mathbb R^2$, $J=\varepsilon_1+\varepsilon_2$ on $Q$, $a=\tfrac14$, $b=\tfrac12$, so $b=2a$ and $\operatorname{tr}A=4a+2b=2$:
+**Constructed for this audit to test the claim I am about to record, and it is a near-miss and not a counterexample.** Take $V=Q\oplus P=\mathbb R^4\oplus\mathbb R^2$, $J=\varepsilon_1+\varepsilon_2$ on $Q$, $a=\tfrac14$, $b=\tfrac12$, so $b=2a$ and $\mathop{\mathrm{tr}}A=4a+2b=2$:
 
 $$\omega_1=\tfrac12J+\tfrac1{\sqrt2}\varepsilon_P,\qquad \omega_2=-\tfrac12J+\tfrac1{\sqrt2}\varepsilon_P .$$
 
@@ -117,11 +117,11 @@ $$\omega_1=\tfrac12J+\tfrac1{\sqrt2}\varepsilon_P,\qquad \omega_2=-\tfrac12J+\tf
 
 **Both readings are correct.**
 
-- $W=\lambda_1\omega_1\otimes\omega_1+\lambda_2\omega_2\otimes\omega_2$ nonzero in spectral form with the $\omega_i$ orthonormal and both $\lambda_i\ne0$. **$\lambda_2=-\lambda_1$ follows**, by [L180](../findings/diagonal-half.md)(2): tracelessness is the trace of Ricci-flatness, $\operatorname{tr}(\omega_i^2)=-2\lVert\omega_i\rVert^2=-2$, so the trace of $\sum\lambda_i\omega_i^2=0$ is $-2(\lambda_1+\lambda_2)$. Unit norm is consumed here, and orthonormality supplies it.
+- $W=\lambda_1\omega_1\otimes\omega_1+\lambda_2\omega_2\otimes\omega_2$ nonzero in spectral form with the $\omega_i$ orthonormal and both $\lambda_i\ne0$. **$\lambda_2=-\lambda_1$ follows**, by [L180](../findings/diagonal-half.md)(2): tracelessness is the trace of Ricci-flatness, $\mathop{\mathrm{tr}}(\omega_i^2)=-2\lVert\omega_i\rVert^2=-2$, so the trace of $\sum\lambda_i\omega_i^2=0$ is $-2(\lambda_1+\lambda_2)$. Unit norm is consumed here, and orthonormality supplies it.
 - **Ricci.** [L180](../findings/diagonal-half.md)(1) is $\sum\lambda_i\omega_i^2=0$, which at $\lambda_2=-\lambda_1\ne0$ is $\omega_1^2=\omega_2^2$. **This half is already in the record**, in L180's own rank-two note as $A_1=A_2$.
 - **Bianchi.** [L179](../findings/diagonal-half.md)(b) is $\sum\lambda_i\,\omega_i\wedge\omega_i=0$ over the nonzero spectrum, which at $\lambda_2=-\lambda_1\ne0$ is $\omega_1\wedge\omega_1=\omega_2\wedge\omega_2$. **This half is new here**, and it is correct. L180's note stops at Ricci and never draws it.
 - **Orthonormality** is the spectral hypothesis. It is not a choice at rank two: the eigenvalues are $\pm\lambda_1$, distinct and each simple, so the eigenforms are canonical up to sign. **The degenerate-eigenspace worry [L180](../findings/diagonal-half.md)(3) raises for rank three does not arise here.**
-- **The common support is derived, and it is $V$.** $A_1=A_2$ gives equal ranges, and $\operatorname{range}A_i=\operatorname{supp}\omega_i$ by $A_i$'s self-adjointness together with $\ker A=\ker\omega$. By [L179](../findings/diagonal-half.md)(a), $V$ is the span of the supports of the nonzero eigenforms, which is that one space.
+- **The common support is derived, and it is $V$.** $A_1=A_2$ gives equal ranges, and $\mathop{\mathrm{range}}A_i=\mathop{\mathrm{supp}}\omega_i$ by $A_i$'s self-adjointness together with $\ker A=\ker\omega$. By [L179](../findings/diagonal-half.md)(a), $V$ is the span of the supports of the nonzero eigenforms, which is that one space.
 
 **So the rank-two configuration meets orthonormality and a common support, and it meets Claim P's remaining two hypotheses exactly. Claim E is CONFIRMED.**
 

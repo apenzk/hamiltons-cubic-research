@@ -13,7 +13,7 @@ I read [BRIEF_L33.md](BRIEF_L33.md), the canonical block at [stratum-two-negativ
 | C5 | $\mathfrak c\ne0$ holds automatically, because $\mathfrak c=0$ forces $m\le3$ | **CONFIRMED, $\dim\mathfrak c\ge\lfloor m/2\rfloor-1$** |
 | C6 | every $y_i\in\mathfrak z(\mathfrak c)\cap\mathfrak c^\perp=\mathbb Rx$, hence $y_i=0$ | **CONFIRMED given L32** |
 | C7 | $W=\pm x\otimes x$ and Ricci-flatness forces $x=0$ | **CONFIRMED, via the trace, which the block does not name** |
-| C8 | the $\mathrm{Weyl}_4$ ambiguity witness $W^+=W^-=\operatorname{diag}(2,-1,-1)$ | **CONFIRMED, rebuilt cold, every clause of it holds** |
+| C8 | the $\mathrm{Weyl}_4$ ambiguity witness $W^+=W^-=\mathop{\mathrm{diag}}(2,-1,-1)$ | **CONFIRMED, rebuilt cold, every clause of it holds** |
 | C9 | *"with multiplicity"* reaches every quoted copy | **CONFIRMED, all three sites carry it; no live copy of the false reading remains** |
 | C10 | the *"in particular"* clause at even $m\ge6$ follows from the main statement | **CONFIRMED, and $m\ge6$ is sharp** |
 | C11 | the statement is safe at $\ker W\ne0$ | **CONFIRMED, zero eigenvalues drop out of the identity and the hypothesis is about signs** |
@@ -37,7 +37,7 @@ Quoted, not restated. From [conventions.md](../findings/conventions.md):
 
 $\mathfrak c$ and $x$ are tabled nowhere; both are defined inline, identically, in [L32](../findings/isotropy-cap.md) and in L33, $\mathfrak c=\mathfrak z(x)\cap x^\perp$, $x$ a bivector.
 
-For the computations below I fix the only normalisation the block's algebra is consistent with: $\langle A,B\rangle=-\tfrac12\operatorname{tr}(AB)$ on $\mathfrak{so}(m)$, under which $\{E_{ij}\}_{i<j}$ with $(E_{ij})_{kl}=\delta_{ik}\delta_{jl}-\delta_{il}\delta_{jk}$ is orthonormal and $\mathfrak{so}(m)\cong\Lambda^2\mathbb R^m$ carries $E_{ij}\leftrightarrow e_i\wedge e_j$. The inner product is $\mathrm{ad}$-invariant, so $\mathrm{ad}(v)$ is skew-adjoint, the one fact C3 turns on. Structure constants: $[E_{ij},E_{jk}]=E_{ik}$ for distinct $i,j,k$, and $[E_{ij},E_{kl}]=0$ when $\{i,j\}\cap\{k,l\}=\emptyset$.
+For the computations below I fix the only normalisation the block's algebra is consistent with: $\langle A,B\rangle=-\tfrac12\mathop{\mathrm{tr}}(AB)$ on $\mathfrak{so}(m)$, under which $\{E_{ij}\}_{i<j}$ with $(E_{ij})_{kl}=\delta_{ik}\delta_{jl}-\delta_{il}\delta_{jk}$ is orthonormal and $\mathfrak{so}(m)\cong\Lambda^2\mathbb R^m$ carries $E_{ij}\leftrightarrow e_i\wedge e_j$. The inner product is $\mathrm{ad}$-invariant, so $\mathrm{ad}(v)$ is skew-adjoint, the one fact C3 turns on. Structure constants: $[E_{ij},E_{jk}]=E_{ik}$ for distinct $i,j,k$, and $[E_{ij},E_{kl}]=0$ when $\{i,j\}\cap\{k,l\}=\emptyset$.
 
 ## 1. Hypothesis inventory
 
@@ -47,7 +47,7 @@ For the computations below I fix the only normalisation the block's algebra is c
 | --- | --- | --- |
 | $W\in\mathrm{Weyl}_m$, first Bianchi | kills the $\Lambda^4$ summand of $\mathrm{Sym}^2(\Lambda^2)$, so $\Phi(R)=2R-(\mathrm{Ric}\circ\omega+\omega\circ\mathrm{Ric})$ | the operator identity; **load-bearing, and the block says so** |
 | $W\in\mathrm{Weyl}_m$, Ricci-flat | deletes the Ricci correction | the operator identity |
-| $W\in\mathrm{Weyl}_m$, trace-free | $\operatorname{tr}_{\Lambda^2}W=\tfrac12\mathrm{scal}=0$ | **the closing step**, where the block writes only *"Ricci-flatness forces $x=0$"* |
+| $W\in\mathrm{Weyl}_m$, trace-free | $\mathop{\mathrm{tr}}_{\Lambda^2}W=\tfrac12\mathrm{scal}=0$ | **the closing step**, where the block writes only *"Ricci-flatness forces $x=0$"* |
 | $W$ symmetric on $\Lambda^2$ | an orthonormal eigenbasis, hence $y_i\perp x$ | the last line of the proof |
 | **one-dimensional** eigenspace on one side, with multiplicity | after rescaling, exactly one $N$-term on the left and every other on the right | the sign split $N_x=\sum_iN_{y_i}$ and, through it, C4 |
 | $x$ not a multiple of a complex structure on a $4$-plane | removes L32's stated exception | the L32 step |
@@ -83,7 +83,7 @@ Write $\Phi(R):=\sum_\alpha\lambda_\alpha\mathrm{ad}(v_\alpha)^2$. Two observati
 
 So $\Phi$ is an equivariant endomorphism of $\mathrm{Sym}^2(\Lambda^2\mathbb R^m)=\mathbb R\oplus\mathrm{Sym}^2_0\oplus\mathcal W_m\oplus\Lambda^4$. The four summands have pairwise distinct highest weights, trivial, $2\epsilon_1$, $2\epsilon_1+2\epsilon_2$, $\epsilon_1+\epsilon_2+\epsilon_3+\epsilon_4$, so $\Phi$ preserves each and acts on $\mathcal W_m$ by a scalar $c_m$. **It therefore suffices to evaluate $\Phi$ at one nonzero Weyl tensor.**
 
-**The test object: padded $W_{\mathbb{CP}^2}$, at every $m\ge4$.** On the $4$-plane $\operatorname{span}(e_1,\dots,e_4)$ set
+**The test object: padded $W_{\mathbb{CP}^2}$, at every $m\ge4$.** On the $4$-plane $\mathop{\mathrm{span}}(e_1,\dots,e_4)$ set
 
 $$s_1=\tfrac1{\sqrt2}(E_{12}+E_{34}),\quad s_2=\tfrac1{\sqrt2}(E_{13}-E_{24}),\quad s_3=\tfrac1{\sqrt2}(E_{14}+E_{23}),$$
 
@@ -93,7 +93,7 @@ the orthonormal self-dual basis, and $a_1,a_2,a_3$ the anti-self-dual one with t
 
 $$\textstyle\sum_\alpha\lambda_\alpha v_\alpha^2=2s_1^2-s_2^2-s_3^2=\big(-1+\tfrac12+\tfrac12\big)\mathrm{Id}_4=0,$$
 
-which is exactly Ricci-flatness. First Bianchi holds because the $\Lambda^4$ component of a $*$-commuting operator on $\Lambda^2\mathbb R^4$ is $\operatorname{tr}(W|_{\Lambda^2_+})-\operatorname{tr}(W|_{\Lambda^2_-})=0-0=0$, and padding adds no components. $W\ne0$.
+which is exactly Ricci-flatness. First Bianchi holds because the $\Lambda^4$ component of a $*$-commuting operator on $\Lambda^2\mathbb R^4$ is $\mathop{\mathrm{tr}}(W|_{\Lambda^2_+})-\mathop{\mathrm{tr}}(W|_{\Lambda^2_-})=0-0=0$, and padding adds no components. $W\ne0$.
 
 *The brackets.* Direct from $[E_{ij},E_{jk}]=E_{ik}$:
 
@@ -118,7 +118,7 @@ So $c_m=2$ at every $m\ge4$: $\Phi(W)=2W$. **C1 CONFIRMED.** At $m=4$, $\mathcal
 
 **The $\mathbb R$ summand pins the shape of the correction.** $\Phi(\mathrm{Id}_{\Lambda^2})=\sum_{i<j}\mathrm{ad}(E_{ij})^2$, and on $E_{12}$ only the $2(m-2)$ pairs meeting $\{1,2\}$ in exactly one index contribute, each by $[E_{1k},[E_{1k},E_{12}]]=[E_{1k},E_{2k}]=-E_{12}$. So $\Phi=-2(m-2)$ there. Against the block's stated form $\mathcal A(R)=2R-(\mathrm{Ric}\circ\omega+\omega\circ\mathrm{Ric})$: $\mathrm{Id}_{\Lambda^2}$ has $\mathrm{Ric}=(m-1)g$, giving $2-2(m-1)=-2(m-2)$. **The two agree exactly**, so the block's attribution of the correction term is right.
 
-**The $\Lambda^4$ witness, rebuilt.** Take $\eta=e_1\wedge e_2\wedge e_3\wedge e_4$, whose associated operator on $\Lambda^2$ is $A_\eta=*$ on $\Lambda^2\mathbb R^4$ and $0$ elsewhere: eigenvalue $+1$ on $\operatorname{span}(s_i)$, $-1$ on $\operatorname{span}(a_i)$. Then, writing $\Sigma_\pm$ for the two half-sums,
+**The $\Lambda^4$ witness, rebuilt.** Take $\eta=e_1\wedge e_2\wedge e_3\wedge e_4$, whose associated operator on $\Lambda^2$ is $A_\eta=*$ on $\Lambda^2\mathbb R^4$ and $0$ elsewhere: eigenvalue $+1$ on $\mathop{\mathrm{span}}(s_i)$, $-1$ on $\mathop{\mathrm{span}}(a_i)$. Then, writing $\Sigma_\pm$ for the two half-sums,
 
 $$\Sigma_+E_{12}=\tfrac1{\sqrt2}\Sigma_+s_1=\tfrac1{\sqrt2}(-4s_1)=-2(E_{12}+E_{34}),\qquad \Sigma_-E_{12}=\tfrac1{\sqrt2}(-4a_1)=-2(E_{12}-E_{34}),$$
 
@@ -164,7 +164,7 @@ $$\boxed{\ \langle u,N_vu\rangle=2\langle v,u\rangle^2+\lVert[v,u]\rVert^2\ }$$
 
 **The padded case, checked, since L33 lives at $m\ge6$.** At $x=E_{12}+E_{34}\in\mathfrak{so}(m)$, $m\ge6$: $\mathfrak c=\mathfrak{su}(2)^-\oplus\mathfrak{so}(\ker x)$; the commutant of $\mathfrak{su}(2)^-$ in $\mathfrak{so}(m)$ is $\mathfrak{su}(2)^+\oplus\mathfrak{so}(\ker x)$ because $\mathbb R^4$ is $\mathbb H$-isotypic and $\ker x$ is trivial for it; intersecting with the commutant of $\mathfrak{so}(\ker x)$ and then with $\mathfrak c^\perp$ leaves $\mathfrak{su}(2)^+$, dimension $3$. **This reproduces L32's *"returns $3$ every time"* for padding into $\mathbb R^6,\mathbb R^8,\mathbb R^{10}$.**
 
-**The exception is complete, and the derivation is L33's own.** In the excepted case $y_i\in\mathfrak{su}(2)^+\cap x^\perp=\operatorname{span}(s_2,s_3)$, so $W=x\otimes x-\sum_iy_i\otimes y_i$ is supported on $\Lambda^2_+$ of the $4$-plane: **the padded $\mathrm{Weyl}_4$ family, self-dual half only**. The block's claim that the exception is *"realised and complete … with no second family"* is therefore right, and one notch sharper than it states.
+**The exception is complete, and the derivation is L33's own.** In the excepted case $y_i\in\mathfrak{su}(2)^+\cap x^\perp=\mathop{\mathrm{span}}(s_2,s_3)$, so $W=x\otimes x-\sum_iy_i\otimes y_i$ is supported on $\Lambda^2_+$ of the $4$-plane: **the padded $\mathrm{Weyl}_4$ family, self-dual half only**. The block's claim that the exception is *"realised and complete … with no second family"* is therefore right, and one notch sharper than it states.
 
 ## 7. The gap, C12, and the only live finding
 
@@ -176,8 +176,8 @@ $$\boxed{\ \langle u,N_vu\rangle=2\langle v,u\rangle^2+\lVert[v,u]\rVert^2\ }$$
 
 **2. The failure, in closed form.** Two branches, and the corank-1 case falls between them.
 
-- *The literal reading* (restrict to the support $V$ and add the constraint from $\mathfrak{so}(\ker x)$), works when $\dim\ker x\ge2$: for $k\ge3$ the commutant of $\mathfrak{so}(k)$ in $\mathfrak{so}(m)$ is $\mathfrak{so}(V)$, and for $k=2$ the mixing part $V\otimes\ker x$ carries only weights $\pm1$ under $\mathfrak{so}(2)_{\ker}$ and so has no invariants. It supplies **nothing** at $k=1$, where $\mathfrak{so}(\ker x)=\mathfrak{so}(1)=0$. Take $m=7$ and $x$ with singular values $(1,2,3)$ and $\ker x=\mathbb Re_7$: the added input is the zero subalgebra, and the written argument says nothing about whether $\mathfrak z(\mathfrak c)$ meets the six-dimensional mixing space $\operatorname{span}(E_{i7})$.
-- *The charitable reading* (re-run the root computation in $\mathfrak{so}(m)$ with $a$ padded by zeros), breaks in the opposite direction. At odd $m=2p+1$ the algebra is $B_p$, not $D_p$, and its short roots $\pm e_i$ have $p-1$ zero coordinates, so the sentence *"every root of $D_p$ is $\pm e_i\pm e_j$ and so has $p-2$ zero coordinates"* is simply false there. Concretely, at $x=e_{12}\in\mathfrak{so}(5)$ the centraliser of $\mathfrak t\cap a^\perp=\mathbb RE_{34}$ is $\operatorname{span}(E_{12},E_{34},E_{15},E_{25})$, of dimension $4$, where the displayed containment allows $2$. [LEDGER.md](../findings/LEDGER.md):1592 records exactly this against [L81](../findings/isotropy-cap.md) and prescribes the $\mathfrak{so}(\ker x)$ clause as the fix, *"the degenerate clause names $\mathfrak{so}(\ker x)$ and never uses it, and that is what closes the case"*, **which is the branch that is empty at $k=1$.**
+- *The literal reading* (restrict to the support $V$ and add the constraint from $\mathfrak{so}(\ker x)$), works when $\dim\ker x\ge2$: for $k\ge3$ the commutant of $\mathfrak{so}(k)$ in $\mathfrak{so}(m)$ is $\mathfrak{so}(V)$, and for $k=2$ the mixing part $V\otimes\ker x$ carries only weights $\pm1$ under $\mathfrak{so}(2)_{\ker}$ and so has no invariants. It supplies **nothing** at $k=1$, where $\mathfrak{so}(\ker x)=\mathfrak{so}(1)=0$. Take $m=7$ and $x$ with singular values $(1,2,3)$ and $\ker x=\mathbb Re_7$: the added input is the zero subalgebra, and the written argument says nothing about whether $\mathfrak z(\mathfrak c)$ meets the six-dimensional mixing space $\mathop{\mathrm{span}}(E_{i7})$.
+- *The charitable reading* (re-run the root computation in $\mathfrak{so}(m)$ with $a$ padded by zeros), breaks in the opposite direction. At odd $m=2p+1$ the algebra is $B_p$, not $D_p$, and its short roots $\pm e_i$ have $p-1$ zero coordinates, so the sentence *"every root of $D_p$ is $\pm e_i\pm e_j$ and so has $p-2$ zero coordinates"* is simply false there. Concretely, at $x=e_{12}\in\mathfrak{so}(5)$ the centraliser of $\mathfrak t\cap a^\perp=\mathbb RE_{34}$ is $\mathop{\mathrm{span}}(E_{12},E_{34},E_{15},E_{25})$, of dimension $4$, where the displayed containment allows $2$. [LEDGER.md](../findings/LEDGER.md):1592 records exactly this against [L81](../findings/isotropy-cap.md) and prescribes the $\mathfrak{so}(\ker x)$ clause as the fix, *"the degenerate clause names $\mathfrak{so}(\ker x)$ and never uses it, and that is what closes the case"*, **which is the branch that is empty at $k=1$.**
 
 **So neither the written proof nor the record's own prescribed repair covers $m$ odd with $x$ of corank exactly $1$**, and that is the generic odd-$m$ configuration, the one L33's box advertises.
 
@@ -189,10 +189,10 @@ $$\boxed{\ \langle u,N_vu\rangle=2\langle v,u\rangle^2+\lVert[v,u]\rVert^2\ }$$
 
 ## 8. The ambiguity, and the $\mathrm{Weyl}_4$ witness rebuilt cold
 
-$W\in\mathcal W_4$ is exactly a symmetric operator on $\Lambda^2\mathbb R^4$ commuting with $*$ and trace-free on each of $\Lambda^2_\pm$. Set $W|_{\Lambda^2_+}=\operatorname{diag}(2,-1,-1)$ in $(s_1,s_2,s_3)$ and $W|_{\Lambda^2_-}=\operatorname{diag}(2,-1,-1)$ in $(a_1,a_2,a_3)$.
+$W\in\mathcal W_4$ is exactly a symmetric operator on $\Lambda^2\mathbb R^4$ commuting with $*$ and trace-free on each of $\Lambda^2_\pm$. Set $W|_{\Lambda^2_+}=\mathop{\mathrm{diag}}(2,-1,-1)$ in $(s_1,s_2,s_3)$ and $W|_{\Lambda^2_-}=\mathop{\mathrm{diag}}(2,-1,-1)$ in $(a_1,a_2,a_3)$.
 
 - **It is in $\mathrm{Weyl}_4$**: each block is trace-free on its own half, and $\dim\mathcal W_4=10=5+5$ is exactly $\mathrm{Sym}^2_0\Lambda^2_+\oplus\mathrm{Sym}^2_0\Lambda^2_-$. **CONFIRMED.**
-- **Spectrum $(2,2,-1,-1,-1,-1)$**: eigenvalue $+2$ on $\operatorname{span}(s_1,a_1)$, $-1$ on the other four. **CONFIRMED.**
+- **Spectrum $(2,2,-1,-1,-1,-1)$**: eigenvalue $+2$ on $\mathop{\mathrm{span}}(s_1,a_1)$, $-1$ on the other four. **CONFIRMED.**
 - **One distinct value on the positive side, and its eigenspace is two-dimensional.** So the object satisfies the *distinct-value* reading and violates the *with-multiplicity* one. **CONFIRMED.**
 - **Its $+2$ eigenspace contains a rank-$2$ element that is no complex structure**: $s_1+a_1=\sqrt2\,E_{12}$, of rank $2$, and a complex structure on a $4$-plane has rank $4$. **CONFIRMED.**
 - **$W\ne0$.** **CONFIRMED.**
@@ -211,7 +211,7 @@ $W\in\mathcal W_4$ is exactly a symmetric operator on $\Lambda^2\mathbb R^4$ com
 
 ## 9. The closing step
 
-With every $y_i=0$, every non-minority eigenvalue vanishes and $W=\pm x\otimes x$, the sign being that of the minority side. Then $\operatorname{tr}_{\Lambda^2}W=\pm\lVert x\rVert^2$. A Weyl operator has $\operatorname{tr}_{\Lambda^2}W=\sum_{i<j}W_{ijij}=\tfrac12\mathrm{scal}=0$, so $\lVert x\rVert^2=0$ and $x=0$, hence $W=0$. **C7 CONFIRMED.** The block's *"Ricci-flatness forces $x=0$"* is correct ($\mathrm{Ric}=0\Rightarrow\mathrm{scal}=0$) but the step that actually runs is the trace, and the block never says which pairing it takes. Screened against padded $W_{\mathbb{CP}^2}$: eigenvalues $2,-1,-1,0,\dots,0$ sum to $0$, as required.
+With every $y_i=0$, every non-minority eigenvalue vanishes and $W=\pm x\otimes x$, the sign being that of the minority side. Then $\mathop{\mathrm{tr}}_{\Lambda^2}W=\pm\lVert x\rVert^2$. A Weyl operator has $\mathop{\mathrm{tr}}_{\Lambda^2}W=\sum_{i<j}W_{ijij}=\tfrac12\mathrm{scal}=0$, so $\lVert x\rVert^2=0$ and $x=0$, hence $W=0$. **C7 CONFIRMED.** The block's *"Ricci-flatness forces $x=0$"* is correct ($\mathrm{Ric}=0\Rightarrow\mathrm{scal}=0$) but the step that actually runs is the trace, and the block never says which pairing it takes. Screened against padded $W_{\mathbb{CP}^2}$: eigenvalues $2,-1,-1,0,\dots,0$ sum to $0$, as required.
 
 ## 10. The edges
 
@@ -225,7 +225,7 @@ With every $y_i=0$, every non-minority eigenvalue vanishes and $W=\pm x\otimes x
 
 **$\ker W\ne0$, the trap, answered.** Zero eigenvalues sit on neither side, contribute nothing to $\sum_\alpha\lambda_\alpha N_{v_\alpha}=0$, and are untouched by the rescaling. **The statement is neither vacuous nor broken at a padded object**: padded $W_{\mathbb{CP}^2}$ at $m\ge6$ has $\ker W$ of dimension $\binom m2-3$, a one-dimensional $+2$ eigenspace, and its eigenvector $s_1$ **is** a $4$-plane complex structure multiple, so it lands squarely in the exception rather than refuting anything. This is the *"padded $\mathrm{Weyl}_4$ family is the only boundary case"* of the landscape entry, and §6 derives that it is the whole of the boundary. *Compare [conventions.md](../findings/conventions.md), where $S(W)$ carries the warning that its screen is vacuous when $\ker W\ne0$; L33 has no such defect.*
 
-**The *"in particular"* clause, and $m\ge6$ is sharp.** A rank-$3$ $W$ has three nonzero eigenvalues summing to $0$, so the signs are mixed and the minority side carries exactly one eigenvalue at multiplicity one, whatever the coincidences among the other two. A nondegenerate bivector at even $m\ge6$ has rank $m\ge6$ and so is not a rank-$4$ complex structure, so the exception is off and L33 gives $W=0$, contradicting rank $3$. **CONFIRMED.** Both restrictions are needed: at odd $m$ no bivector is nondegenerate, so the clause would be vacuous; at $m=4$ it would be **false**, the object $W|_{\Lambda^2_+}=\operatorname{diag}(2,-1,-1)$, $W|_{\Lambda^2_-}=0$ being a rank-$3$ $\mathcal W_4$ tensor whose nondegenerate minority eigenvector $s_1$ exists. **C10 CONFIRMED, with $m\ge6$ sharp.**
+**The *"in particular"* clause, and $m\ge6$ is sharp.** A rank-$3$ $W$ has three nonzero eigenvalues summing to $0$, so the signs are mixed and the minority side carries exactly one eigenvalue at multiplicity one, whatever the coincidences among the other two. A nondegenerate bivector at even $m\ge6$ has rank $m\ge6$ and so is not a rank-$4$ complex structure, so the exception is off and L33 gives $W=0$, contradicting rank $3$. **CONFIRMED.** Both restrictions are needed: at odd $m$ no bivector is nondegenerate, so the clause would be vacuous; at $m=4$ it would be **false**, the object $W|_{\Lambda^2_+}=\mathop{\mathrm{diag}}(2,-1,-1)$, $W|_{\Lambda^2_-}=0$ being a rank-$3$ $\mathcal W_4$ tensor whose nondegenerate minority eigenvector $s_1$ exists. **C10 CONFIRMED, with $m\ge6$ sharp.**
 
 ## 11. Imported theorems, checked against the object
 
@@ -238,14 +238,14 @@ Only one theorem is imported into the proof body: **L32**, and §5-§7 check its
 | $\mathfrak c$ | untabled in [conventions.md](../findings/conventions.md), defined inline and **identically** in L32 and L33 as $\mathfrak z(x)\cap x^\perp$. I found no competing sense anywhere. **Clear.** |
 | $q$ | **live and tabled.** $q(R)$ is the Weitzenböck operator inside the L33 block and a scalar parameter of $W_4(q,r)$ twenty-four lines below it, in the same file. The table already names it. **Clear because tabled.** |
 | $r$ | two senses in the same file, neither of them used inside the L33 block. **No impact.** |
-| $N$ | **live and untabled.** [conventions.md](../findings/conventions.md) fixes $N=\binom n2$; the L33 block introduces the operator $N_v$ at [stratum-two-negative.md](../findings/stratum-two-negative.md):47, and [L34](../findings/stratum-two-negative.md) fifty lines later writes $U=\operatorname{im}\,v_{N-1}+\operatorname{im}\,v_N$ in the tabled sense. The subscript separates them, and nothing on the record does. **The one collision this round adds.** |
+| $N$ | **live and untabled.** [conventions.md](../findings/conventions.md) fixes $N=\binom n2$; the L33 block introduces the operator $N_v$ at [stratum-two-negative.md](../findings/stratum-two-negative.md):47, and [L34](../findings/stratum-two-negative.md) fifty lines later writes $U=\mathop{\mathrm{im}}\,v_{N-1}+\mathop{\mathrm{im}}\,v_N$ in the tabled sense. The subscript separates them, and nothing on the record does. **The one collision this round adds.** |
 | $x$ | one sense throughout, but the statement's $x$ is the unit eigenvector and the proof's is $\sqrt{|\lambda_0|}\,v_0$. The transfer is legitimate because the exception is a property of the line $\mathbb Rx$; the block never says so. **Clear on inspection.** |
 
 ## 13. Withdrawn candidates
 
 Each of these I raised and then dropped, with the reason.
 
-- **W1, *"Ricci-flatness forces $x=0$"* names the wrong hypothesis.** The step is the vanishing trace. **Withdrawn**: $\mathrm{Ric}=0\Rightarrow\mathrm{scal}=0\Rightarrow\operatorname{tr}_{\Lambda^2}W=0$, so the words are true under the charitable reading, and the record already carries the unnamed-pairing debt at [LEDGER.md](../findings/LEDGER.md):288.
+- **W1, *"Ricci-flatness forces $x=0$"* names the wrong hypothesis.** The step is the vanishing trace. **Withdrawn**: $\mathrm{Ric}=0\Rightarrow\mathrm{scal}=0\Rightarrow\mathop{\mathrm{tr}}_{\Lambda^2}W=0$, so the words are true under the charitable reading, and the record already carries the unnamed-pairing debt at [LEDGER.md](../findings/LEDGER.md):288.
 - **W2, L32 is stated with $m\ne3$ in [results.md](../results.md) and with $\mathfrak c\ne0$ in [isotropy-cap.md](../findings/isotropy-cap.md).** **Withdrawn**: the two are equivalent for nonzero $x$, since $\dim\mathfrak c\ge\lfloor m/2\rfloor-1$ and $\mathfrak c=0$ at $m=3$ exactly. [LEDGER.md](../findings/LEDGER.md):1584 already says so.
 - **W3, the report's L32 drops *"nonzero"* from $x$.** **Withdrawn**: at $x=0$ one gets $\mathfrak c=\mathfrak{so}(m)$, $\mathfrak z(\mathfrak c)=0$ for $m\ne2$, and $\mathbb Rx=0$, so the conclusion holds anyway. No failure to exhibit.
 - **W4, L33 is vacuous at $m=4$, so the statement's range is overstated.** **Withdrawn**: vacuity is not falsity, the statement remains true there, and [stratum-two-negative.md](../findings/stratum-two-negative.md):398 already records the $m\ge6$ guard for consumers.

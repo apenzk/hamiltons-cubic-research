@@ -19,7 +19,7 @@ Cold brief ([ADJ_L113_E3.md](ADJ_L113_E3.md)). No numerical work was done and no
 - $g_k=\sum_{\alpha\beta}(\lambda_\alpha-\lambda_\beta)^2T_{k\alpha\beta}$ and $m_j=\sum_k\lambda_k^jg_k$, with $G_2=m_2$.
 - From Passage B: $m_0=4(n-1)\lVert W\rVert^2=4(n-1)$ and $m_1=-4P(W)=-4\theta$.
 - A real quantity is **pinned** when at every critical point it is a function of $(n,\text{spectrum},\theta)$. This is the sense of the last sentence of [fence-posts.md](../findings/fence-posts.md) line 419. A **pinned conclusion** is a statement whose only free symbols are $n$, the spectrum and $\theta$.
-- $\lambda_{\min},\lambda_{\max}$ are the extreme eigenvalues, and $\lambda_{\min}\le0\le\lambda_{\max}$ since $\sum_k\lambda_k=\operatorname{tr}W=0$ on $\Lambda^2$ for an algebraic Weyl tensor.
+- $\lambda_{\min},\lambda_{\max}$ are the extreme eigenvalues, and $\lambda_{\min}\le0\le\lambda_{\max}$ since $\sum_k\lambda_k=\mathop{\mathrm{tr}}W=0$ on $\Lambda^2$ for an algebraic Weyl tensor.
 - Passage D is split into three parts. D1 is the heading claim, "no route through the pinned data can close the conjecture". D2 is the census definition of the pinned data (line 419). D3 is the withdrawal notice (line 423).
 
 ## Hypothesis inventory

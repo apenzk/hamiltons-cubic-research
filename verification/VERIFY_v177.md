@@ -6,7 +6,7 @@ Read cold from the definitions in [conventions.md](../findings/conventions.md) a
 
 | # | claim, as written | verdict |
 |---|---|---|
-| 1 | The normalisation: Einstein constant $\tfrac12$ forces $\operatorname{tr}R=n/4$, $c=\frac1{2(n-1)}$, $\lVert W\rVert^2=\lVert R\rVert^2-\frac n{8(n-1)}$ | **CONFIRMED**, re-derived, and it is PS's own normalisation, not an extra hypothesis |
+| 1 | The normalisation: Einstein constant $\tfrac12$ forces $\mathop{\mathrm{tr}}R=n/4$, $c=\frac1{2(n-1)}$, $\lVert W\rVert^2=\lVert R\rVert^2-\frac n{8(n-1)}$ | **CONFIRMED**, re-derived, and it is PS's own normalisation, not an extra hypothesis |
 | 2 | Cauchy–Schwarz over the isotropy blocks gives $\lVert R\rVert^2\ge(n/4)^2/\dim\mathfrak h$ | **CONFIRMED**, but its real input is the *rank* fact, and the block cites the wrong proposition for it |
 | 3 | $\dim\mathfrak h\le\frac{3n^2(n-1)}{2(7n-4)}\Rightarrow\lVert W\rVert^2\ge\tfrac16$ | **CONFIRMED, the algebra is exact and reversible**; the loss sits entirely at claim 2 |
 | 4 | Equality in claim 2 is attainable | **CONFIRMED, and attained on a large family**, every simple-isotropy space, $\mathbb{OP}^2$ and all type-II groups included |
@@ -27,7 +27,7 @@ Quoted from [conventions.md](../findings/conventions.md), not restated.
 
 > $\theta$ | $P(W)/\lVert W\rVert^3$; at a critical point, $Q(W)=\theta W$
 
-> **$\operatorname{scal}=2\operatorname{tr}$ on $\Lambda^2$.**
+> **$\mathop{\mathrm{scal}}=2\mathop{\mathrm{tr}}$ on $\Lambda^2$.**
 
 > **A bivector's norm**, and the record runs in the first of these: $\lVert\varphi_{ab}\rVert^2=1$ under the half-trace pairing of the bullet above, which is the one every result uses and which makes $\{\varphi_{ab}\}_{a<b}$ orthonormal
 
@@ -55,7 +55,7 @@ The relevant reading of the last four rows is §9 below: **L47 uses $\mathfrak h
 | **irreducible** | selects the index set the census runs over; and supplies $[\mathfrak p,\mathfrak p]=\mathfrak h$, which is what makes $\mathfrak h\to\Lambda^2T M$ injective (§3.2) | **used, load-bearing, and one of its two uses is unstated** |
 | **rank $\ge2$** | it is exactly the parameter restriction that shifts each family past the rank-one members, which are precisely the members where the dimension bound fails (§7.3) | **used, load-bearing, this is not a decorative hypothesis** |
 | **and for $\mathbb{OP}^2$** | $\mathbb{OP}^2$ is rank one and passes the bound anyway, at ratio $0.675$, the tightest of the whole C–S branch | **used; and the singling-out is earned** |
-| **normalised to Einstein constant $\tfrac12$** | fixes $\operatorname{tr}R=n/4$ and $c$; it is PS's metric $-B_{\mathfrak g}$ and therefore a *choice of representative*, not a restriction | **used; and it costs nothing, since $\theta$ is scale-invariant** |
+| **normalised to Einstein constant $\tfrac12$** | fixes $\mathop{\mathrm{tr}}R=n/4$ and $c$; it is PS's metric $-B_{\mathfrak g}$ and therefore a *choice of representative*, not a restriction | **used; and it costs nothing, since $\theta$ is scale-invariant** |
 
 ### 1.2 Hypotheses imported with [L46](../findings/problem.md), and which of them L47 discharges
 
@@ -69,7 +69,7 @@ The relevant reading of the last four rows is §9 below: **L47 uses $\mathfrak h
 
 ### 1.3 Hypotheses the proof uses and never states
 
-1. **$\operatorname{rank}R=\dim\mathfrak h$**, the actual input to Cauchy–Schwarz. The block gestures at it with the words *"over the isotropy blocks"* and cites Prop 2.2 for *"eigenvalues"*. §3.
+1. **$\mathop{\mathrm{rank}}R=\dim\mathfrak h$**, the actual input to Cauchy–Schwarz. The block gestures at it with the words *"over the isotropy blocks"* and cites Prop 2.2 for *"eigenvalues"*. §3.
 2. **$[\mathfrak p,\mathfrak p]=\mathfrak h$ (effectiveness)**, without it the map $\mathfrak h\to\Lambda^2TM$ need not be injective and $\dim\mathfrak h$ overcounts the rank. PS prove injectivity from it explicitly.
 3. **$p\le q$ in the three Grassmannian families**, the script imposes it by writing $q=2+a+b$; it is legitimate because $\mathrm{Gr}(p,q)\cong\mathrm{Gr}(q,p)$, and that symmetry is nowhere stated.
 4. **Locality**, $\lVert W\rVert^2$ and $\theta$ are local invariants, which is the only reason the census over simply-connected pairs settles $\mathbb{RP}^n$ and the other finite quotients. The block names $\mathbb{RP}^n$ and so is quantifying over the non-simply-connected class, while PS's Prop 2.1 is stated with $H$ the *identity* component of a fixed-point subgroup.
@@ -80,19 +80,19 @@ The relevant reading of the last four rows is §9 below: **L47 uses $\mathfrak h
 
 ## 2. The normalisation, re-derived
 
-With $\lambda=\tfrac12$ and $\operatorname{scal}=2\operatorname{tr}$ on $\Lambda^2$: $\operatorname{scal}=n\lambda=n/2$, so $\operatorname{tr}R=n/4$. With $c=\lambda/(n-1)=\frac1{2(n-1)}$ and $W=R-cI$, $\lVert I\rVert^2=N=\binom n2$:
+With $\lambda=\tfrac12$ and $\mathop{\mathrm{scal}}=2\mathop{\mathrm{tr}}$ on $\Lambda^2$: $\mathop{\mathrm{scal}}=n\lambda=n/2$, so $\mathop{\mathrm{tr}}R=n/4$. With $c=\lambda/(n-1)=\frac1{2(n-1)}$ and $W=R-cI$, $\lVert I\rVert^2=N=\binom n2$:
 
-$$\lVert W\rVert^2=\lVert R\rVert^2-2c\operatorname{tr}R+c^2N=\lVert R\rVert^2-\frac n{4(n-1)}+\frac n{8(n-1)}=\lVert R\rVert^2-\frac n{8(n-1)} .$$
+$$\lVert W\rVert^2=\lVert R\rVert^2-2c\mathop{\mathrm{tr}}R+c^2N=\lVert R\rVert^2-\frac n{4(n-1)}+\frac n{8(n-1)}=\lVert R\rVert^2-\frac n{8(n-1)} .$$
 
-Identical to L46's display $\lVert R\rVert^2-(\operatorname{tr}R)^2/N$, since $(n/4)^2\big/\tfrac{n(n-1)}2=\frac n{8(n-1)}$. **Claim 1 confirmed.**
+Identical to L46's display $\lVert R\rVert^2-(\mathop{\mathrm{tr}}R)^2/N$, since $(n/4)^2\big/\tfrac{n(n-1)}2=\frac n{8(n-1)}$. **Claim 1 confirmed.**
 
-Petersen–Stanfield's own line is the same, at source: *"$\tfrac12\dim_{\mathbb R}M=\operatorname{scal}=2\operatorname{tr}R$"*, so their $\operatorname{scal}=2\operatorname{tr}$ agrees with [conventions.md](../findings/conventions.md) and their Einstein constant is $\tfrac12$ by construction. **No conversion is owed at the import.**
+Petersen–Stanfield's own line is the same, at source: *"$\tfrac12\dim_{\mathbb R}M=\mathop{\mathrm{scal}}=2\mathop{\mathrm{tr}}R$"*, so their $\mathop{\mathrm{scal}}=2\mathop{\mathrm{tr}}$ agrees with [conventions.md](../findings/conventions.md) and their Einstein constant is $\tfrac12$ by construction. **No conversion is owed at the import.**
 
 ## 3. The Cauchy–Schwarz step, derived, and what it actually needs
 
 ### 3.1 The derivation
 
-Let $\mathfrak g=\mathfrak h\oplus\mathfrak p$ with the metric $-B_{\mathfrak g}$, and let $\beta:\Lambda^2\mathfrak p\to\mathfrak h$, $X\wedge Y\mapsto[X,Y]$. Since $R(X,Y)Z=-[[X,Y],Z]$, ad-invariance gives $\langle R(X\wedge Y),Z\wedge W\rangle=\langle[X,Y],[Z,W]\rangle$, i.e. $R=\beta^{*}\beta$. Hence $\operatorname{im}R\subseteq\operatorname{im}\beta^{*}$ and $\operatorname{rank}R\le\dim\mathfrak h$. Writing the nonzero spectrum as $\{\lambda_i\}$ with multiplicities $d_i$, $\sum_id_i\le\dim\mathfrak h$ and $\sum_id_i\lambda_i=\operatorname{tr}R=n/4$, so
+Let $\mathfrak g=\mathfrak h\oplus\mathfrak p$ with the metric $-B_{\mathfrak g}$, and let $\beta:\Lambda^2\mathfrak p\to\mathfrak h$, $X\wedge Y\mapsto[X,Y]$. Since $R(X,Y)Z=-[[X,Y],Z]$, ad-invariance gives $\langle R(X\wedge Y),Z\wedge W\rangle=\langle[X,Y],[Z,W]\rangle$, i.e. $R=\beta^{*}\beta$. Hence $\mathop{\mathrm{im}}R\subseteq\mathop{\mathrm{im}}\beta^{*}$ and $\mathop{\mathrm{rank}}R\le\dim\mathfrak h$. Writing the nonzero spectrum as $\{\lambda_i\}$ with multiplicities $d_i$, $\sum_id_i\le\dim\mathfrak h$ and $\sum_id_i\lambda_i=\mathop{\mathrm{tr}}R=n/4$, so
 
 $$\Big(\tfrac n4\Big)^2=\Big(\sum_id_i\lambda_i\Big)^2\le\Big(\sum_id_i\Big)\Big(\sum_id_i\lambda_i^2\Big)\le\dim\mathfrak h\cdot\lVert R\rVert^2 .$$
 
@@ -100,7 +100,7 @@ $$\Big(\tfrac n4\Big)^2=\Big(\sum_id_i\lambda_i\Big)^2\le\Big(\sum_id_i\Big)\Big
 
 ### 3.2 What it needs, and it is less than the block says
 
-It needs **only** $\operatorname{rank}R\le\dim\mathfrak h$ and $\operatorname{tr}R=n/4$. It does **not** need the blocks to be the isotypic pieces, it does not need $R\succeq0$, and it does not need any eigenvalue to be known. The isotypic decomposition is what lets one *evaluate* $\lVert R\rVert^2$ exactly (which the residue and the exceptional rows do use) but it is strictly more than Cauchy–Schwarz consumes.
+It needs **only** $\mathop{\mathrm{rank}}R\le\dim\mathfrak h$ and $\mathop{\mathrm{tr}}R=n/4$. It does **not** need the blocks to be the isotypic pieces, it does not need $R\succeq0$, and it does not need any eigenvalue to be known. The isotypic decomposition is what lets one *evaluate* $\lVert R\rVert^2$ exactly (which the residue and the exceptional rows do use) but it is strictly more than Cauchy–Schwarz consumes.
 
 The rank fact **is** on file at source, in PS Prop 2.1 and in the proof of Prop 2.2: *"The curvature operator of $\mathfrak g$ is $G$-invariant with image $\mathfrak h\subset\Lambda^2T_pM$."* The block cites Prop 2.2 *"whose eigenvalues are Petersen–Stanfield Prop 2.2"*, i.e. it cites the proposition that gives the eigenvalues rather than the one that gives the image. **The step is sound; the citation points at the wrong sentence.**
 
@@ -110,7 +110,7 @@ Equality holds iff all nonzero $\lambda_i$ coincide **and** $\sum d_i=\dim\mathf
 
 Two consequences worth recording:
 
-- **Type II, the compact simple Lie groups.** $\mathfrak h=\Delta\mathfrak g$ so $\dim\mathfrak h=n$, and $B_{\mathfrak g\oplus\mathfrak g}\vert_{\Delta}=2B_{\mathfrak g}$ gives $\lambda=\tfrac12(1-\tfrac12)=\tfrac14$, whence $\operatorname{tr}R=n/4$ exactly and $\lVert R\rVert^2=n/16=(n/4)^2/n$. Equality. Then $\lVert W\rVert^2=\frac n{16}-\frac n{8(n-1)}=\frac{n(n-3)}{16(n-1)}$, **which is exactly the closed form [graded-half.md](../findings/graded-half.md) prints for this class**, reached here from PS Prop 2.1 alone.
+- **Type II, the compact simple Lie groups.** $\mathfrak h=\Delta\mathfrak g$ so $\dim\mathfrak h=n$, and $B_{\mathfrak g\oplus\mathfrak g}\vert_{\Delta}=2B_{\mathfrak g}$ gives $\lambda=\tfrac12(1-\tfrac12)=\tfrac14$, whence $\mathop{\mathrm{tr}}R=n/4$ exactly and $\lVert R\rVert^2=n/16=(n/4)^2/n$. Equality. Then $\lVert W\rVert^2=\frac n{16}-\frac n{8(n-1)}=\frac{n(n-3)}{16(n-1)}$, **which is exactly the closed form [graded-half.md](../findings/graded-half.md) prints for this class**, reached here from PS Prop 2.1 alone.
 - **$\mathbb{OP}^2=F_4/\mathrm{Spin}(9)$.** $\mathfrak h=\mathfrak{so}(9)$ is simple, so $\lambda=\tfrac14\cdot\tfrac{16}{36}=\tfrac19$, $\lVert R\rVert^2=36/81=\tfrac49$, and $\lVert W\rVert^2=\tfrac49-\tfrac{16}{120}=\tfrac{14}{45}$. Equality again, so the C–S branch loses nothing at the one rank-one space it keeps.
 
 **So the answer to "is equality attainable" is yes, on an infinite family, and the step is sharp rather than merely valid.** Claim 4 confirmed.
@@ -213,7 +213,7 @@ All twelve pass **strictly**. The EVIII row reproduces [graded-half.md](../findi
 
 The lemma has two layers, and only the first is uniform:
 
-1. **Uniform, at every space at once**: $\operatorname{tr}R=n/4$, $\operatorname{rank}R\le\dim\mathfrak h$, Cauchy–Schwarz, and the exact rearrangement of §4. Nothing here refers to a classification.
+1. **Uniform, at every space at once**: $\mathop{\mathrm{tr}}R=n/4$, $\mathop{\mathrm{rank}}R\le\dim\mathfrak h$, Cauchy–Schwarz, and the exact rearrangement of §4. Nothing here refers to a classification.
 2. **Case by case, over a list**: the hypothesis $\dim\mathfrak h\le\frac{3n^2(n-1)}{2(7n-4)}$ is verified eight families at a time plus twelve singletons.
 
 **So at a space not on the list a reader may cite nothing.** The conclusion $\lVert W\rVert^2\ge\tfrac16$ is not a theorem about symmetric spaces in general; it is a theorem about the members of a specific enumeration. That is not a defect of the argument, but it means the lemma's strength is exactly the strength of §10's sourcing.
@@ -232,13 +232,13 @@ The lemma has two layers, and only the first is uniform:
 
 From PS Prop 2.1 by hand, at Einstein constant $\tfrac12$.
 
-**$\mathbb{CP}^m$**, $n=2m$, $\mathfrak h=\mathfrak u(m)$: eigenvalue $\tfrac12$ on the centre and $\frac1{2(m+1)}$ on $\mathfrak{su}(m)$ (from $s=\frac{m+1}m$), rest zero. Then $\operatorname{tr}R=\tfrac12+\frac{m^2-1}{2(m+1)}=\frac m2=\frac n4$ ✓, $\lVert R\rVert^2=\frac m{2(m+1)}$, and
+**$\mathbb{CP}^m$**, $n=2m$, $\mathfrak h=\mathfrak u(m)$: eigenvalue $\tfrac12$ on the centre and $\frac1{2(m+1)}$ on $\mathfrak{su}(m)$ (from $s=\frac{m+1}m$), rest zero. Then $\mathop{\mathrm{tr}}R=\tfrac12+\frac{m^2-1}{2(m+1)}=\frac m2=\frac n4$ ✓, $\lVert R\rVert^2=\frac m{2(m+1)}$, and
 
 $$\lVert W\rVert^2=\frac m{2(m+1)}-\frac{2m}{8(2m-1)}=\frac{3m(m-1)}{4(m+1)(2m-1)} .$$
 
 At $m=2$ this is $\tfrac6{36}=\tfrac16$ **exactly**, and $\theta^2=1/(4\lVert W\rVert^2)=\frac{(m+1)(2m-1)}{3m(m-1)}$, **the record's own $\mathbb{CP}^m$ formula, reproduced independently.** It is strictly increasing: $\frac{d}{dm}\frac{m^2-m}{2m^2+m-1}$ has numerator $3m^2-2m+1>0$.
 
-**$\mathbb{HP}^m$**, $n=4m$, $\mathfrak h=\mathfrak{sp}(m)\oplus\mathfrak{sp}(1)$: from $s_1=\frac{m+2}{m+1}$ and $s_2=\frac{m+2}2$ the eigenvalues are $\frac1{2(m+2)}$ on $\mathfrak{sp}(m)$ and $\frac m{2(m+2)}$ on $\mathfrak{sp}(1)$. Then $\operatorname{tr}R=\frac{m(2m+1)+3m}{2(m+2)}=m=\frac n4$ ✓, $\lVert R\rVert^2=\frac{m(5m+1)}{4(m+2)^2}$, and since $(5m+1)(4m-1)-2(m+2)^2=9(2m+1)(m-1)$,
+**$\mathbb{HP}^m$**, $n=4m$, $\mathfrak h=\mathfrak{sp}(m)\oplus\mathfrak{sp}(1)$: from $s_1=\frac{m+2}{m+1}$ and $s_2=\frac{m+2}2$ the eigenvalues are $\frac1{2(m+2)}$ on $\mathfrak{sp}(m)$ and $\frac m{2(m+2)}$ on $\mathfrak{sp}(1)$. Then $\mathop{\mathrm{tr}}R=\frac{m(2m+1)+3m}{2(m+2)}=m=\frac n4$ ✓, $\lVert R\rVert^2=\frac{m(5m+1)}{4(m+2)^2}$, and since $(5m+1)(4m-1)-2(m+2)^2=9(2m+1)(m-1)$,
 
 $$\lVert W\rVert^2=\frac{9m(2m+1)(m-1)}{4(m+2)^2(4m-1)} .$$
 
@@ -295,7 +295,7 @@ Yes, relative to the eight families and the twelve pairs. Working the rank-one m
   |---|---|---|
   | $\mathfrak h$ | $E_{\max}$ at a critical point | the isotropy algebra of the symmetric pair |
   | $\lambda$ | $\lambda_\alpha$, the $\Lambda^2$ spectrum | the Einstein constant, while [graded-half.md](../findings/graded-half.md) writes $\lambda_i$ for the isotropy-block eigenvalues **in the same three lines**, so the letter carries two senses inside one derivation |
-  | $c$ | the Killing constant of a subalgebra, $c=2h^\vee/I_\rho$ | the centre constant $\frac1{2(n-1)}$, and [graded-half.md](../findings/graded-half.md)'s type-II paragraph uses **both senses in one file**, writing $c_{\rm hol}=2$ and $c=\operatorname{tr}R/N$ |
+  | $c$ | the Killing constant of a subalgebra, $c=2h^\vee/I_\rho$ | the centre constant $\frac1{2(n-1)}$, and [graded-half.md](../findings/graded-half.md)'s type-II paragraph uses **both senses in one file**, writing $c_{\rm hol}=2$ and $c=\mathop{\mathrm{tr}}R/N$ |
   | $R$ | $\mathring R$ (two index orders) and the triple $R_I,R_{\mathrm{ric}_0},R_W$ | the first-kind curvature operator on $\Lambda^2$, untabled under the bare letter |
   | $B$ | flagged as carrying two senses already, both on $\mathfrak{so}(n)$ | the Killing form of $\mathfrak g$, a third algebra and a third sense, and the whole imported argument runs on it |
   | $P$ | **$P(W)=\langle W,Q(W)\rangle$, the cubic form, the programme's central object** | PS's auxiliary operator $B_{\mathfrak g}(P\cdot,\cdot)=B_{\mathfrak h}$, *and* the certificate polynomial $P(n,h)$. **Three objects under the record's most loaded letter, inside one lemma.** |

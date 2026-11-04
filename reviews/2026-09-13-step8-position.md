@@ -30,7 +30,7 @@
 
 **The two trace identities' machinery now exists.** $\mathcal W_n$ is a submodule of the linear operators on bivectors, all four Weyl conditions being linear in $R$, and the trace on its operators follows without an explicit basis. *The blocker six commits had called impossible was a representation problem: bare functions on matrices are infinite-dimensional, and bundling linearity into the arrow is the whole step.*
 
-**Closure of the Fox product on $\mathcal W_n$ is settled and was never open.** It is Fox's Lemma 5.7, that $\ker\rho$ is a subalgebra, and it is BW08 eq. (6) read at $\operatorname{Ric}(R)=0$. **The content is a cancellation**: neither $\operatorname{Ric}(X^2)$ nor $\operatorname{Ric}(X^\#)$ vanishes alone, and on $\mathcal W_n$ they are exact negatives. *A screen that checks each half separately concludes closure fails, which a cycle did.*
+**Closure of the Fox product on $\mathcal W_n$ is settled and was never open.** It is Fox's Lemma 5.7, that $\ker\rho$ is a subalgebra, and it is BW08 eq. (6) read at $\mathop{\mathrm{Ric}}(R)=0$. **The content is a cancellation**: neither $\mathop{\mathrm{Ric}}(X^2)$ nor $\mathop{\mathrm{Ric}}(X^\#)$ vanishes alone, and on $\mathcal W_n$ they are exact negatives. *A screen that checks each half separately concludes closure fails, which a cycle did.*
 
 **Lemma L208** derives the Ricci half on the coordinate-diagonal locus in this record's own normalisation, typed with its own witness, and **Lemma L206** is the trace-form bound, sharp and attained at $S^2\times S^2$.
 

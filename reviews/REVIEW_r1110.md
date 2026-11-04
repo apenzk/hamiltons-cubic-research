@@ -13,7 +13,7 @@
 
 ## 1. The lemma
 
-- **The identity.** The record's pairing $\langle Z,Z'\rangle=\tfrac12\operatorname{tr}(Z^{\mathsf T}Z')$ is Ad-invariant, so $\mathrm{ad}_{X_0}$ is skew-adjoint and $\lVert[X_0,X_j]\rVert^2=\langle X_j,-\mathrm{ad}_{X_0}^2X_j\rangle$ with $-\mathrm{ad}_{X_0}^2\succeq0$ symmetric. Ky Fan's maximum principle gives $\sum_{j=1}^r\langle X_j,AX_j\rangle\le\lambda_1(A)+\dots+\lambda_r(A)$ for orthonormal $X_1,\dots,X_r$, and the maximum over unit $X_0$ is $\kappa_r$.
+- **The identity.** The record's pairing $\langle Z,Z'\rangle=\tfrac12\mathop{\mathrm{tr}}(Z^{\mathsf T}Z')$ is Ad-invariant, so $\mathrm{ad}_{X_0}$ is skew-adjoint and $\lVert[X_0,X_j]\rVert^2=\langle X_j,-\mathrm{ad}_{X_0}^2X_j\rangle$ with $-\mathrm{ad}_{X_0}^2\succeq0$ symmetric. Ky Fan's maximum principle gives $\sum_{j=1}^r\langle X_j,AX_j\rangle\le\lambda_1(A)+\dots+\lambda_r(A)$ for orthonormal $X_1,\dots,X_r$, and the maximum over unit $X_0$ is $\kappa_r$.
 - **What is consumed.** Only $\lVert X_0\rVert=1$ and orthonormality of $X_1,\dots,X_r$ among themselves. Orthogonality to $X_0$ is never used. Restricting $A$ to $X_0^\perp$ deletes one zero eigenvalue ($X_0\in\ker\mathrm{ad}_{X_0}$) and leaves the top $r$ unchanged whenever $r$ is at most the number of nonzero eigenvalues, so it buys nothing. The stated hypothesis (all of $X_0,\dots,X_r$ orthonormal) is correct and harmlessly stronger than needed, and it is what eigenvectors of $W$ supply.
 - **$r=1$** is L31's cap: $\lambda_1(-\mathrm{ad}_X^2)=(s_1+s_2)^2\le2$.
 

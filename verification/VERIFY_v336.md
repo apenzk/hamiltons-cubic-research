@@ -15,7 +15,7 @@
 ## 0. Conventions, fixed once
 
 - $\mathcal W_n\subset\mathrm{Sym}(\Lambda^2\mathbb R^n)$, Frobenius inner product, $N=\binom n2$. $Q(W)=W^2+W^\#$, $P(W)=\langle W,Q(W)\rangle$. Critical on the unit sphere means $Q(W)=\theta W$ with $\theta=P(W)$, as Passage B fixes it.
-- $\Lambda^2\mathbb R^n\cong\mathfrak{so}(n)$ with $E_{ij}=e_ie_j^{\mathsf T}-e_je_i^{\mathsf T}$ ($i<j$) and $\langle A,B\rangle=-\tfrac12\operatorname{tr}(AB)$, so $\{E_{ij}\}$ is orthonormal. For distinct $i,j,k$ one has $[E_{ij},E_{jk}]=E_{ik}$, brackets of disjoint planes vanish, so every nonzero structure constant in this basis is $c_{abc}=\pm1$.
+- $\Lambda^2\mathbb R^n\cong\mathfrak{so}(n)$ with $E_{ij}=e_ie_j^{\mathsf T}-e_je_i^{\mathsf T}$ ($i<j$) and $\langle A,B\rangle=-\tfrac12\mathop{\mathrm{tr}}(AB)$, so $\{E_{ij}\}$ is orthonormal. For distinct $i,j,k$ one has $[E_{ij},E_{jk}]=E_{ik}$, brackets of disjoint planes vanish, so every nonzero structure constant in this basis is $c_{abc}=\pm1$.
 - The index formula carries the $\tfrac12$ of Passage B: $(W^\#)_{ab}=\tfrac12\sum c_{acd}c_{bef}W_{ce}W_{df}$. This normalisation is the one that returns $\mathrm{id}^\#=(n-2)\mathrm{id}$ and relation (A), $\sum_{\beta\gamma}T_{k\beta\gamma}=2(n-2)$, because the plane $E_{ij}$ is the bracket of exactly the $2(n-2)$ ordered pairs $(E_{ik},E_{jk})$, $(E_{jk},E_{ik})$ with $k\notin\{i,j\}$.
 - A coordinate-diagonal Weyl tensor is $W E_{ij}=\mu_{ij}E_{ij}$. Encode it as the symmetric $n\times n$ matrix $\mu$ with zero diagonal. $\mu^2$ denotes the matrix square of $\mu$, and $\mathbf 1$ the all-ones vector.
 - The criticality residual of a unit $W$ is $\rho(W)=\lVert Q(W)-P(W)W\rVert$. Section 2 shows $Q(W)\in\mathcal W_n$ on the diagonal family, so $\rho$ is the norm of the tangential part of $Q(W)$ and $\rho(W)=0$ is exactly criticality.
@@ -72,7 +72,7 @@ Both are coordinate-diagonal, both satisfy the bracket form by Section 2, and bo
 
 ### 3.3 Robustness under H2
 
-If $\#$ were doubled, $Q'(W)=W^2+2W^\#$ has trace $\tfrac12\lVert\mu\rVert_F^2+\big(\mathbf 1^{\mathsf T}\mu^2\mathbf 1-\operatorname{tr}\mu^2\big)=\tfrac12\lVert\mu\rVert_F^2-\lVert\mu\rVert_F^2=-\tfrac12\lVert\mu\rVert_F^2\neq0$, so $Q'(W)\notin\mathcal W_n$ and criticality means $Q'(W)-c\,\mathrm{id}=\theta W$ for some $c$. For $S^2\times S^2$ with $\mu$ values $(2,-1)$: $q'_{\text{same}}=4+2\cdot2=8$, $q'_{\text{cross}}=1-8=-7$, and $c=-2$ gives $10=5\cdot2$, $-5=5\cdot(-1)$. The object is critical under either normalisation once criticality is the first-order condition on $\mathcal W_n$. The refutation does not rest on H2.
+If $\#$ were doubled, $Q'(W)=W^2+2W^\#$ has trace $\tfrac12\lVert\mu\rVert_F^2+\big(\mathbf 1^{\mathsf T}\mu^2\mathbf 1-\mathop{\mathrm{tr}}\mu^2\big)=\tfrac12\lVert\mu\rVert_F^2-\lVert\mu\rVert_F^2=-\tfrac12\lVert\mu\rVert_F^2\neq0$, so $Q'(W)\notin\mathcal W_n$ and criticality means $Q'(W)-c\,\mathrm{id}=\theta W$ for some $c$. For $S^2\times S^2$ with $\mu$ values $(2,-1)$: $q'_{\text{same}}=4+2\cdot2=8$, $q'_{\text{cross}}=1-8=-7$, and $c=-2$ gives $10=5\cdot2$, $-5=5\cdot(-1)$. The object is critical under either normalisation once criticality is the first-order condition on $\mathcal W_n$. The refutation does not rest on H2.
 
 ## 4. "Nowhere near critical" fails quantitatively (D3c): the whole of $\mathcal W_4$'s diagonal circle
 

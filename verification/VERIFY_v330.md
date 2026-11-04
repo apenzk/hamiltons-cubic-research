@@ -4,7 +4,7 @@
 
 | # | Claim (source) | Verdict |
 |---|---|---|
-| 1 | Polarising $\langle v,W^\#v\rangle=-\tfrac12\operatorname{tr}(\mathrm{ad}(v)W\mathrm{ad}(v)W)$ gives $M_{kl}=-2(W^\#)_{kl}$ (bounds 656) | CONFIRMED |
+| 1 | Polarising $\langle v,W^\#v\rangle=-\tfrac12\mathop{\mathrm{tr}}(\mathrm{ad}(v)W\mathrm{ad}(v)W)$ gives $M_{kl}=-2(W^\#)_{kl}$ (bounds 656) | CONFIRMED |
 | 2 | Criticality is equivalent to $M_{kl}=2\lambda_k(\lambda_k-\theta)\delta_{kl}$ (heading 636, display 658) | CONFIRMED |
 | 3a | "i.e." $\sum\lambda_\alpha\lambda_\beta c_{k\alpha\beta}c_{l\alpha\beta}=0$ whenever $\lambda_k\ne\lambda_l$, as an equivalent of the matrix form (display 658) | REFUTED AS STATED (the record's own blockquote at 662 already retracts it, the display still carries the "i.e.") |
 | 3b | The bracket form is exactly $[W,Q(W)]=0$, and the restriction $\lambda_k\ne\lambda_l$ is lost information, since criticality forces vanishing for all $k\ne l$ in every orthonormal eigenbasis (662, conventions 151) | CONFIRMED AS ALGEBRA |
@@ -24,11 +24,11 @@
 
 ## 0. Conventions, fixed once
 
-- $\mathfrak{so}(n)\cong\Lambda^2\mathbb R^n$ with $\langle A,B\rangle=-\tfrac12\operatorname{tr}(AB)$, so $e_i\wedge e_j=E_{ij}-E_{ji}$ is orthonormal. $N=\binom n2$.
+- $\mathfrak{so}(n)\cong\Lambda^2\mathbb R^n$ with $\langle A,B\rangle=-\tfrac12\mathop{\mathrm{tr}}(AB)$, so $e_i\wedge e_j=E_{ij}-E_{ji}$ is orthonormal. $N=\binom n2$.
 - $\{v_a\}$ orthonormal, $c_{abc}=\langle[v_a,v_b],v_c\rangle$, totally antisymmetric (conventions 61). The matrix of $\mathrm{ad}(v_k)$ is $(\mathrm{ad}\,v_k)_{\alpha\beta}=c_{k\beta\alpha}$, antisymmetric.
 - $(W^\#)_{ab}=\tfrac12\sum c_{acd}c_{bef}W_{ce}W_{df}$ (conventions 77). With this factor $\mathrm{id}^\#=(n-2)\mathrm{id}$, since $\sum_{cd}c_{acd}c_{bcd}=2(n-2)\delta_{ab}$, which is relation (A).
 - $Q(W)=W^2+W^\#$, $P(W)=\langle W,Q(W)\rangle$, critical means $Q(W)=\theta W$ on $\lVert W\rVert=1$, whence $\theta=P(W)$ (conventions 151, brief definitions).
-- In an orthonormal eigenbasis $\{\varphi_k\}$, $W_{\alpha\beta}=\lambda_\alpha\delta_{\alpha\beta}$ and $M_{kl}=\operatorname{tr}(\mathrm{ad}(\varphi_k)W\mathrm{ad}(\varphi_l)W)$.
+- In an orthonormal eigenbasis $\{\varphi_k\}$, $W_{\alpha\beta}=\lambda_\alpha\delta_{\alpha\beta}$ and $M_{kl}=\mathop{\mathrm{tr}}(\mathrm{ad}(\varphi_k)W\mathrm{ad}(\varphi_l)W)$.
 - **Coordinate-diagonal:** $W(e_i\wedge e_j)=w_{ij}\,e_i\wedge e_j$. For such $W$ the only nonzero structure constants in the coordinate basis are $c_{(ij)(jm)(im)}=\pm1$ for distinct $i,j,m$, and $W$ is Weyl iff $\sum_{j\ne i}w_{ij}=0$ for every $i$ (Bianchi holds automatically, as every term of $R_{ijkl}+R_{jkil}+R_{kijl}$ with a nonzero diagonal entry cancels in pairs, and trace-freeness follows from the vertex sums).
 - From the index formula, for coordinate-diagonal $W$: $(W^\#)_{(ij)(ij)}=\sum_{m\ne i,j}w_{im}w_{jm}$.
 
@@ -36,13 +36,13 @@
 
 | Hypothesis | Where stated | Used by | Checked against the object |
 |---|---|---|---|
-| H1. $\{\varphi_k\}$ orthonormal for an ad-invariant inner product | brief definitions, conventions 61 | claim 1 (antisymmetry of $\mathrm{ad}(v)$), claim 2 (the M matrix is the matrix of $W^\#$) | holds for $-\tfrac12\operatorname{tr}$ on $\mathfrak{so}(n)$ |
+| H1. $\{\varphi_k\}$ orthonormal for an ad-invariant inner product | brief definitions, conventions 61 | claim 1 (antisymmetry of $\mathrm{ad}(v)$), claim 2 (the M matrix is the matrix of $W^\#$) | holds for $-\tfrac12\mathop{\mathrm{tr}}$ on $\mathfrak{so}(n)$ |
 | H2. $W$ symmetric on $\Lambda^2$ | brief definitions | claim 1 (the step $W_{df}=W_{fd}$), existence of the eigenbasis (spectral theorem) | holds on $\mathcal W_n$ |
 | H3. The $\tfrac12$ in the index formula for $\#$ | conventions 77 | claim 1, fixes the factor $2$ in $M=-2W^\#$ | checked by $\mathrm{id}^\#=(n-2)\mathrm{id}$ |
 | H4. $\lVert W\rVert=1$ | brief definitions, conventions 151 | only to identify the $\theta$ of the matrix form with $P(W)$ | not stated on lines 636 to 662, supplied by the convention |
 | H5. $W\in\mathcal W_n$ (Bianchi, Ricci-flat, trace-free) | heading, "Weyl tensor" | **not used by claims 1, 2, 3b, 4, 8.** Used by 6a to 6c and 7a | every identity in claims 1 to 4 holds for any symmetric operator on $\mathfrak{so}(n)$ |
-| H6 (imported). $Q(\mathcal W_n)\subseteq\mathcal W_n$ | presupposed by conventions 151, where $Q(W)=\theta W$ is the first-order condition with no projection | 7a (gives $\operatorname{tr}Q(W)=0$) | standard for the Böhm–Wilking product. On the coordinate-diagonal family it is checked in closed form in section 7 |
-| H7 (imported). Killing form of $\mathfrak{so}(n)$ is $(n-2)\operatorname{tr}$ | behind relation (A) | 0 (factor check) only | $\sum_{cd}c_{acd}c_{bcd}=-\operatorname{tr}(\mathrm{ad}v_a\mathrm{ad}v_b)=2(n-2)\delta_{ab}$ |
+| H6 (imported). $Q(\mathcal W_n)\subseteq\mathcal W_n$ | presupposed by conventions 151, where $Q(W)=\theta W$ is the first-order condition with no projection | 7a (gives $\mathop{\mathrm{tr}}Q(W)=0$) | standard for the Böhm–Wilking product. On the coordinate-diagonal family it is checked in closed form in section 7 |
+| H7 (imported). Killing form of $\mathfrak{so}(n)$ is $(n-2)\mathop{\mathrm{tr}}$ | behind relation (A) | 0 (factor check) only | $\sum_{cd}c_{acd}c_{bcd}=-\mathop{\mathrm{tr}}(\mathrm{ad}v_a\mathrm{ad}v_b)=2(n-2)\delta_{ab}$ |
 
 - **Stated but unused:** H5 for the core equivalence. This is a benign over-restriction, the lemma holds verbatim for every symmetric $W$ on $\mathfrak{so}(n)$, and it is recorded as a finding of scope, not a defect.
 - **Used but unstated on the lemma's lines:** H4 (for $\theta=P(W)$). The brief's conventions supply it.
@@ -51,8 +51,8 @@
 ## 1. The polarised identity and $M=-2W^\#$
 
 - **Step (a).** With $X=\mathrm{ad}(v)$, $[v,u]_d=\sum_{a,c}v_au_cc_{acd}$, so $X_{dc}=\sum_av_ac_{acd}$. Then $\langle v,W^\#v\rangle=\tfrac12\sum X_{dc}X_{fe}W_{ce}W_{df}$.
-- **Step (b).** H1 gives $X_{fe}=-X_{ef}$, and H2 gives $W_{df}=W_{fd}$. So the sum is $-\tfrac12\sum X_{dc}W_{ce}X_{ef}W_{fd}=-\tfrac12\operatorname{tr}(XWXW)$. The identity at line 656 holds.
-- **Step (c), polarisation.** $W^\#$ is symmetric (swap $a,b$ and rename $c\leftrightarrow e$, $d\leftrightarrow f$, using H2). With $q(v)=-\tfrac12\operatorname{tr}(\mathrm{ad}v\,W\mathrm{ad}v\,W)$, $q(u+v)-q(u-v)=-2\operatorname{tr}(\mathrm{ad}u\,W\mathrm{ad}v\,W)$ by cyclicity, so $\langle u,W^\#v\rangle=-\tfrac12\operatorname{tr}(\mathrm{ad}u\,W\mathrm{ad}v\,W)$.
+- **Step (b).** H1 gives $X_{fe}=-X_{ef}$, and H2 gives $W_{df}=W_{fd}$. So the sum is $-\tfrac12\sum X_{dc}W_{ce}X_{ef}W_{fd}=-\tfrac12\mathop{\mathrm{tr}}(XWXW)$. The identity at line 656 holds.
+- **Step (c), polarisation.** $W^\#$ is symmetric (swap $a,b$ and rename $c\leftrightarrow e$, $d\leftrightarrow f$, using H2). With $q(v)=-\tfrac12\mathop{\mathrm{tr}}(\mathrm{ad}v\,W\mathrm{ad}v\,W)$, $q(u+v)-q(u-v)=-2\mathop{\mathrm{tr}}(\mathrm{ad}u\,W\mathrm{ad}v\,W)$ by cyclicity, so $\langle u,W^\#v\rangle=-\tfrac12\mathop{\mathrm{tr}}(\mathrm{ad}u\,W\mathrm{ad}v\,W)$.
 - **Conclusion.** $M_{kl}=-2(W^\#)_{kl}$ in any orthonormal basis, eigenbasis or not.
 - **The factor against Passage B.** With the $\tfrac12$ of conventions 77 the factor is $-2$. Had the $\tfrac12$ been dropped, $W^\#$ doubles and $M=-W^\#$, giving $\lambda_k(\lambda_k-\theta)$. The record's $2$ is the one consistent with its own convention.
 - **Direct index check.** $M_{kl}=\sum_{\alpha\beta}c_{k\beta\alpha}\lambda_\beta c_{l\alpha\beta}\lambda_\alpha=-\sum\lambda_\alpha\lambda_\beta c_{k\alpha\beta}c_{l\alpha\beta}$, and the index formula gives $(W^\#)_{kl}=\tfrac12\sum\lambda_\alpha\lambda_\beta c_{k\alpha\beta}c_{l\alpha\beta}$. The two agree.
@@ -60,8 +60,8 @@
 
 ## 2. Criticality is equivalent to the matrix form
 
-- **Forward.** $Q(W)=\theta W$ gives $W^\#=\theta W-W^2$, which in any orthonormal eigenbasis is $\operatorname{diag}(\theta\lambda_k-\lambda_k^2)$. By section 1, $M_{kl}=-2(\theta\lambda_k-\lambda_k^2)\delta_{kl}=2\lambda_k(\lambda_k-\theta)\delta_{kl}$.
-- **Backward.** If $M_{kl}=2\lambda_k(\lambda_k-\theta)\delta_{kl}$ for all $k,l$ in one orthonormal eigenbasis, then $W^\#$ has matrix $\operatorname{diag}(\theta\lambda_k-\lambda_k^2)$ there, which is the matrix of $\theta W-W^2$. So $Q(W)=\theta W$. Pairing with $W$ and using H4 gives $\theta=P(W)$.
+- **Forward.** $Q(W)=\theta W$ gives $W^\#=\theta W-W^2$, which in any orthonormal eigenbasis is $\mathop{\mathrm{diag}}(\theta\lambda_k-\lambda_k^2)$. By section 1, $M_{kl}=-2(\theta\lambda_k-\lambda_k^2)\delta_{kl}=2\lambda_k(\lambda_k-\theta)\delta_{kl}$.
+- **Backward.** If $M_{kl}=2\lambda_k(\lambda_k-\theta)\delta_{kl}$ for all $k,l$ in one orthonormal eigenbasis, then $W^\#$ has matrix $\mathop{\mathrm{diag}}(\theta\lambda_k-\lambda_k^2)$ there, which is the matrix of $\theta W-W^2$. So $Q(W)=\theta W$. Pairing with $W$ and using H4 gives $\theta=P(W)$.
 - **$\delta_{kl}$.** It is a conclusion in the forward direction and part of the hypothesis in the backward direction. Both directions need all $N^2$ entries, including $k\ne l$ inside a repeated eigenspace.
 - **Scope.** Without H4 the backward direction gives $Q(W)=\theta W$ for a non-unit $W$, which is criticality of $W/\lVert W\rVert$ with multiplier $\theta/\lVert W\rVert$. The record's convention fixes the unit sphere, so this is not a defect.
 
@@ -108,7 +108,7 @@
 
 - **7a, "$N$ constraints where the record used one".**
   - Locate: line 662, "the diagonal entries pin $\sum\lambda_\alpha\lambda_\beta c_{k\alpha\beta}^2=2\lambda_k(\theta-\lambda_k)$ for every $k$, which is $N$ constraints where the record used one".
-  - Exhibit: summing over $k$, the left side is $2\operatorname{tr}W^\#$ and the right side is $2\theta\operatorname{tr}W-2\lVert W\rVert^2=-2$. By H6, $\operatorname{tr}Q(W)=0$ on $\mathcal W_n$, so $\operatorname{tr}W^\#=-\lVert W\rVert^2=-1$ for every unit Weyl tensor, critical or not. The summed equation is $-2=-2$ identically, and $\theta$ drops out. Closed-form check on the coordinate-diagonal family without H6: $\operatorname{tr}W^\#=\sum_m\tfrac12\big[(\sum_iw_{im})^2-\sum_iw_{im}^2\big]=-\lVert W\rVert^2$.
+  - Exhibit: summing over $k$, the left side is $2\mathop{\mathrm{tr}}W^\#$ and the right side is $2\theta\mathop{\mathrm{tr}}W-2\lVert W\rVert^2=-2$. By H6, $\mathop{\mathrm{tr}}Q(W)=0$ on $\mathcal W_n$, so $\mathop{\mathrm{tr}}W^\#=-\lVert W\rVert^2=-1$ for every unit Weyl tensor, critical or not. The summed equation is $-2=-2$ identically, and $\theta$ drops out. Closed-form check on the coordinate-diagonal family without H6: $\mathop{\mathrm{tr}}W^\#=\sum_m\tfrac12\big[(\sum_iw_{im})^2-\sum_iw_{im}^2\big]=-\lVert W\rVert^2$.
   - Charitable reading: "$N$ constraints" counts equations, and "the one" the record used may be a single $k$ rather than the trace. Even so, the $N$ equations carry at most $N-1$ independent pieces of criticality information, and their independence as constraints on the basis has no argument on file.
 - **7b, off-diagonal entries and $T$.** Replacing $\varphi_k$ by $-\varphi_k$ flips every $c_{k\alpha\beta}$ and hence $M_{kl}$ for $l\ne k$, while $T$ is unchanged. So off-diagonal entries are not functions of $T$ (outside the critical locus where they vanish), and the sign-sensitive Jacobi identity cannot be seen through $T$. Confirmed. "The only place the Jacobi identity can enter a bound on $D$" is a universal over all bounds on $D$, with $D$ undefined in the brief and no argument on file. GAP. What would have to be proved: every relation among the $c_{k\alpha\beta}$ that enters $D$ and is not a function of $T$ factors through the off-diagonal entries of $W^\#$.
 
@@ -123,7 +123,7 @@
 - `IsCriticalHere` is $Q=\theta W$ entrywise in the eigenbasis, with no $\lVert W\rVert=1$ and no $\theta=P(W)$. It is the record's criticality only once `Ws` is the $W^\#$ of a Weyl tensor with spectrum `lam`.
 - `matrix_form_is_criticality`: direction `↔`, correct, a linear rearrangement. Matches claim 2 modulo the definition of `Mmat`.
 - `critical_forces_all_offdiagonal` and `critical_imp_bracket_form`: match 3b and the forward half of claim 5.
-- `bracket_form_strictly_weaker`: witness `lam = ![1, -1]` on `Fin 2`, `Ws = 0`. Not a Weyl tensor: $N=2$ is no $\binom n2$, and `Ws = 0` is not $W^\#$ of $\operatorname{diag}(1,-1)$ on any $\mathfrak{so}(n)$. It separates the two predicates, not the record's two conditions on $\mathcal W_n$. The mathematical strictness (section 5) is unformalised.
+- `bracket_form_strictly_weaker`: witness `lam = ![1, -1]` on `Fin 2`, `Ws = 0`. Not a Weyl tensor: $N=2$ is no $\binom n2$, and `Ws = 0` is not $W^\#$ of $\mathop{\mathrm{diag}}(1,-1)$ on any $\mathfrak{so}(n)$. It separates the two predicates, not the record's two conditions on $\mathcal W_n$. The mathematical strictness (section 5) is unformalised.
 - `dropped_count_identity`, `counts_at_balanced_products`: correct arithmetic. The $(6,9)$ and $(30,36)$ inputs are the spectral multiplicities of $S^3\times S^3$ and $S^6\times S^6$ (for the latter, vertex sums $5\alpha+6\beta=0$ in both factors force equal factor eigenvalues).
 - `dropped_fractions`: uses $1130/2210$ where the file counts $1131$ of $2211$, while the $n=6$ case uses the unshifted $66/120$. Both $1130/2210=113/221$ and $1131/2211=377/737$ lie in $(0.511,0.512)$ ($1131000>1129821$ and $1131000<1132032$). The inequality holds either way. The shift by one has no stated reason.
 

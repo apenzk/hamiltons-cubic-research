@@ -30,7 +30,7 @@ Quoted from the brief:
 - "The $\circ$ product: $X\circ Y=\tfrac12(Q(X+Y)-Q(X)-Q(Y))$."
 - "$T$, third sense: the fully symmetric trilinear form $T(X,Y,Z)=\langle X\circ Y,Z\rangle$ on $\mathcal W_n$." Passage A writes $T(X,Y,Z)=\langle X,Y\circ Z\rangle$. Section 1 records why the two agree.
 
-Nienhaus, at source: $R\#S(v,w)=-\tfrac12\operatorname{tr}(\mathrm{ad}_v\circ R\circ\mathrm{ad}_w\circ S)$ (Definition 2.11), $Q(R)=R^2+R^\#$ (Lemma 2.13), $P(R)=\langle Q(R),R\rangle$ with $\langle R,S\rangle=\operatorname{tr}(R\circ S)$ (Definition 2.15 and Section 2.1), $W_{S_{k,l}}=\widetilde W_{S_{k,l}}/\lVert\widetilde W_{S_{k,l}}\rVert$ (page 23).
+Nienhaus, at source: $R\#S(v,w)=-\tfrac12\mathop{\mathrm{tr}}(\mathrm{ad}_v\circ R\circ\mathrm{ad}_w\circ S)$ (Definition 2.11), $Q(R)=R^2+R^\#$ (Lemma 2.13), $P(R)=\langle Q(R),R\rangle$ with $\langle R,S\rangle=\mathop{\mathrm{tr}}(R\circ S)$ (Definition 2.15 and Section 2.1), $W_{S_{k,l}}=\widetilde W_{S_{k,l}}/\lVert\widetilde W_{S_{k,l}}\rVert$ (page 23).
 
 ## 0.1 Hypothesis inventory
 
@@ -54,7 +54,7 @@ The only variation is the slot convention: Passage A has $T(X,Y,Z)=\langle X,Y\c
 
 ## 2. Total symmetry of $T$
 
-**Trace part.** With the Frobenius product on symmetric operators, $\langle\tfrac12(XY+YX),Z\rangle=\tfrac12(\operatorname{tr}XYZ+\operatorname{tr}YXZ)$. $\operatorname{tr}XYZ$ is invariant under the cyclic subgroup of $S_3$, and $\operatorname{tr}YXZ=\operatorname{tr}XZY$ is the other coset. A transposition exchanges the two cosets, so their sum is $S_3$-invariant. Passage D's "symmetrisation of $\operatorname{tr}(XYZ)$" is this. It closes.
+**Trace part.** With the Frobenius product on symmetric operators, $\langle\tfrac12(XY+YX),Z\rangle=\tfrac12(\mathop{\mathrm{tr}}XYZ+\mathop{\mathrm{tr}}YXZ)$. $\mathop{\mathrm{tr}}XYZ$ is invariant under the cyclic subgroup of $S_3$, and $\mathop{\mathrm{tr}}YXZ=\mathop{\mathrm{tr}}XZY$ is the other coset. A transposition exchanges the two cosets, so their sum is $S_3$-invariant. Passage D's "symmetrisation of $\mathop{\mathrm{tr}}(XYZ)$" is this. It closes.
 
 **$\#$ part, with the $\tfrac12$.** Polarising $(W^\#)_{ab}=\tfrac12c_{acd}c_{bef}W_{ce}W_{df}$ gives $(X\#Y)_{ab}=\tfrac14c_{acd}c_{bef}(X_{ce}Y_{df}+Y_{ce}X_{df})$. Renaming $c\leftrightarrow d$, $e\leftrightarrow f$ in the second term costs $(-1)^2$, so $(X\#Y)_{ab}=\tfrac12c_{acd}c_{bef}X_{ce}Y_{df}$ and $\langle X\#Y,Z\rangle=\tfrac12\sum c_{acd}c_{bef}X_{ce}Y_{df}Z_{ab}$. Here $X$ sits on the second slots of both $c$'s, $Y$ on the third, $Z$ on the first. Exchanging two of $X,Y,Z$ and renaming the corresponding index pairs applies the same transposition to both $c$'s, sign $(-1)^2=1$. Transpositions generate $S_3$. The $\tfrac12$ multiplies every term and is invisible to symmetry, so the brief's warning that "a step reading a value off it is out by two" does not touch this step, which reads no value. It closes.
 
@@ -70,7 +70,7 @@ $T(W,W,W)=\sum_{i,j,l}a_ia_ja_lT(A_i,A_j,A_l)$ by trilinearity. Take Passage A's
 
 So $P(W)=\sum_ia_i^3P(A_i)$, exactly Passage A's account including which slot moves. Under Passages C and D's convention the roles swap: $\langle A_i\circ A_j,A_j\rangle$ dies directly and $\langle Q(A_j),A_i\rangle$ needs the move. Either way one transposition beyond the automatic symmetry of $\circ$ is required, and together they generate $S_3$, so "total symmetry" is exactly the requirement. Passage C's "every term of $T(W,W,W)$ carrying two distinct indices vanishes" is the same claim.
 
-*Screen, $S^2\times S^2$ at $n=4$.* By (2.6) and page 23, $\widetilde W_{S_{2,2}}$ is $\tfrac23$ on $\mathrm{span}\{e_{12},e_{34}\}=\mathrm{span}\{\omega^+,\omega^-\}$ and $-\tfrac13$ on the four mixed planes, so in $\Lambda^+\oplus\Lambda^-$ it is $\tfrac13\operatorname{diag}(2,-1,-1)\oplus\tfrac13\operatorname{diag}(2,-1,-1)$. Hence $W_{S_{2,2}}=\tfrac1{\sqrt2}(A+B)$ with $A=\tfrac1{\sqrt6}\operatorname{diag}(2,-1,-1)\oplus0$ and $B=0\oplus\tfrac1{\sqrt6}\operatorname{diag}(2,-1,-1)$, both unit. $AB=BA=0$, and by Lemma 2.19 (for Weyl operators the off-diagonal block vanishes and $\#$ is $2\operatorname{adj}$ on each block) $(A+B)^\#=A^\#+B^\#$, so $A\#B=0$ and $A\circ B=0$. Each piece is Nienhaus's redefined $W_{\mathbb{CP}^2}$ up to orientation, with $P=\sqrt{3/2}$ (page 27). Additivity predicts $P(W_{S_{2,2}})=2\cdot2^{-3/2}\sqrt{3/2}=\tfrac{\sqrt3}2$, and Proposition 2.25 gives $\theta_{2,2}=\sqrt{2\cdot\tfrac12\cdot\tfrac12\cdot\tfrac32}=\tfrac{\sqrt3}2$. The screen matches exactly. **CONFIRMED.**
+*Screen, $S^2\times S^2$ at $n=4$.* By (2.6) and page 23, $\widetilde W_{S_{2,2}}$ is $\tfrac23$ on $\mathrm{span}\{e_{12},e_{34}\}=\mathrm{span}\{\omega^+,\omega^-\}$ and $-\tfrac13$ on the four mixed planes, so in $\Lambda^+\oplus\Lambda^-$ it is $\tfrac13\mathop{\mathrm{diag}}(2,-1,-1)\oplus\tfrac13\mathop{\mathrm{diag}}(2,-1,-1)$. Hence $W_{S_{2,2}}=\tfrac1{\sqrt2}(A+B)$ with $A=\tfrac1{\sqrt6}\mathop{\mathrm{diag}}(2,-1,-1)\oplus0$ and $B=0\oplus\tfrac1{\sqrt6}\mathop{\mathrm{diag}}(2,-1,-1)$, both unit. $AB=BA=0$, and by Lemma 2.19 (for Weyl operators the off-diagonal block vanishes and $\#$ is $2\mathop{\mathrm{adj}}$ on each block) $(A+B)^\#=A^\#+B^\#$, so $A\#B=0$ and $A\circ B=0$. Each piece is Nienhaus's redefined $W_{\mathbb{CP}^2}$ up to orientation, with $P=\sqrt{3/2}$ (page 27). Additivity predicts $P(W_{S_{2,2}})=2\cdot2^{-3/2}\sqrt{3/2}=\tfrac{\sqrt3}2$, and Proposition 2.25 gives $\theta_{2,2}=\sqrt{2\cdot\tfrac12\cdot\tfrac12\cdot\tfrac32}=\tfrac{\sqrt3}2$. The screen matches exactly. **CONFIRMED.**
 
 ## 4. $\lvert P(A_i)\rvert\le M(n)$
 
@@ -119,7 +119,7 @@ Sections 3 to 6 use H2 to H7, oddness, total symmetry, and $M(n)>0$. No critical
 
 The claim that the two hypotheses differ rests on "A run at $n=8$ found two critical, Frobenius-orthogonal copies of padded $W_{\mathbb{CP}^2}$ with $\lVert A\circ B\rVert\approx0.664$, and a rotated $S^4\times S^4$ pair at $\approx0.273$", followed by "No closed-form witness is on file." On the brief's rule a claim supported only by a run is debt. What would have to be proved: a closed-form pair $A,B\in\mathcal W_n$, both unit and critical, with $\langle A,B\rangle=0$ and $A\circ B\ne0$.
 
-*Screen, reported as a screen only.* In $\Lambda^+$ at $n=4$, for traceless symmetric $3\times3$ blocks Lemma 2.19 and Cayley–Hamilton give $X\circ Y=\tfrac32(XY+YX)-\operatorname{tr}(XY)I$, which reproduces Nienhaus's $Q(\operatorname{diag}(-1,2,-1))=\operatorname{diag}(-3,6,-3)$ on page 27. With $A'=3uu^T-I$, $B'=3vv^T-I$, $u=e_1$, $v=\tfrac1{\sqrt3}(1,1,1)$: $Q(A')=3A'$ and $Q(B')=3B'$, $\operatorname{tr}(A'B')=9(u\cdot v)^2-3=0$, and $A'B'+B'A'=\begin{pmatrix}0&1&1\\1&0&-2\\1&-2&0\end{pmatrix}\ne0$. The screen is consistent with the remark. It is not in the record, and the grade stands. The remark is non-load-bearing for L66. **HYPOTHESIS-DEBT.**
+*Screen, reported as a screen only.* In $\Lambda^+$ at $n=4$, for traceless symmetric $3\times3$ blocks Lemma 2.19 and Cayley–Hamilton give $X\circ Y=\tfrac32(XY+YX)-\mathop{\mathrm{tr}}(XY)I$, which reproduces Nienhaus's $Q(\mathop{\mathrm{diag}}(-1,2,-1))=\mathop{\mathrm{diag}}(-3,6,-3)$ on page 27. With $A'=3uu^T-I$, $B'=3vv^T-I$, $u=e_1$, $v=\tfrac1{\sqrt3}(1,1,1)$: $Q(A')=3A'$ and $Q(B')=3B'$, $\mathop{\mathrm{tr}}(A'B')=9(u\cdot v)^2-3=0$, and $A'B'+B'A'=\begin{pmatrix}0&1&1\\1&0&-2\\1&-2&0\end{pmatrix}\ne0$. The screen is consistent with the remark. It is not in the record, and the grade stands. The remark is non-load-bearing for L66. **HYPOTHESIS-DEBT.**
 
 ## 11. Passage C detail
 
@@ -140,7 +140,7 @@ The claim that the two hypotheses differ rests on "A run at $n=8$ found two crit
 ### 12.1 Withdrawn candidate: pieces with $\theta_A=0$
 
 1. Locate: Passage C landscape, "At a critical point split into two critical pieces with $A\circ B=0$" states no condition $\theta_A\theta_B\ne0$.
-2. Exhibit: I could not exhibit a unit critical Weyl operator with $Q(A)=0$ in closed form. At $n=4$ inside one block, $X^2+2\operatorname{adj}X=0$ with $\operatorname{tr}X=0$ forces the eigenvalues equal and hence $X=0$, so the $n=4$ block family supplies none.
+2. Exhibit: I could not exhibit a unit critical Weyl operator with $Q(A)=0$ in closed form. At $n=4$ inside one block, $X^2+2\mathop{\mathrm{adj}}X=0$ with $\mathop{\mathrm{tr}}X=0$ forces the eigenvalues equal and hence $X=0$, so the $n=4$ block family supplies none.
 3. Argue the opposite: the displayed law contains $\tfrac1{\theta_A^2}$ and $\tfrac1{\theta_B^2}$, so it presupposes both nonzero on its face.
 
 **Withdrawn**, failing step 2, and the display itself carries the hypothesis.

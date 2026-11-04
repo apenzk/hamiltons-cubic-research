@@ -6,7 +6,7 @@
 
 | # | Claim | Verdict |
 |---|---|---|
-| 1 | $\operatorname{spec}(W^*)$ on $\Lambda^2\mathbb R^{2m}$ is the two points $\lambda_-=-g_n$, $\lambda_+=\tfrac m{m-1}g_n$, with $\ker W^*=0$ | **CORRECT, reproduced independently** |
+| 1 | $\mathop{\mathrm{spec}}(W^*)$ on $\Lambda^2\mathbb R^{2m}$ is the two points $\lambda_-=-g_n$, $\lambda_+=\tfrac m{m-1}g_n$, with $\ker W^*=0$ | **CORRECT, reproduced independently** |
 | 2 | $D=\tfrac{2m-1}{m-1}=\lvert\lambda_+-\lambda_-\rvert/g_n$ | **CORRECT** |
 | 3 | $\max_\Gamma\lVert(W^*-\zeta)^{-1}\rVert=1/(dg_n)$, $d=\min(\alpha,D-\alpha)$ | **CORRECT on $0<\alpha<D$; FALSE outside, where the statement gives no domain** |
 | 4 | $C(\alpha,\gamma)=\dfrac{\alpha(1+\alpha)}{d(d-\gamma)}$ | **CORRECT AS A FORMULA, NOT DERIVED BY THE WRITTEN PROOF** |
@@ -30,8 +30,8 @@
 - $n=2m$, $W^*$ the unit-norm Weyl operator of the balanced product $S^m\times S^m$ acting on $\Lambda^2\mathbb R^n$, $m\ge2$.
 - $g_n=\lvert\lambda_-\rvert$, the **absolute** $\Lambda^2$ spectral gap, per [findings/second-order.md:1447](../findings/second-order.md) and the warning at [findings/second-order.md:956](../findings/second-order.md) that the relative gap $\tfrac{m-1}{2m-1}$ is a different number.
 - $\Gamma=\{\lvert\zeta-\lambda_-\rvert=\alpha g_n\}$, $W(z)=W^*+zH$, $\rho=\gamma g_n/\lVert H\rVert_{op}$, $D=\lvert\lambda_+-\lambda_-\rvert/g_n$, $d=\min(\alpha,D-\alpha)$.
-- $\Pi(z)$ the Riesz projection over $\Gamma$, $W_-(z)=\Pi(z)W(z)$, $A=-\operatorname{Alt}\big(W_-(z)-W_-(0)\big)$, $M=\sup_{\lvert z\rvert=\rho}\lVert A\rVert$.
-- All norms in the resolvent chain are operator norms; $\lVert\operatorname{Alt}(X)\rVert\le\lVert X\rVert$ is [conventions.md](../findings/conventions.md).
+- $\Pi(z)$ the Riesz projection over $\Gamma$, $W_-(z)=\Pi(z)W(z)$, $A=-\mathop{\mathrm{Alt}}\big(W_-(z)-W_-(0)\big)$, $M=\sup_{\lvert z\rvert=\rho}\lVert A\rVert$.
+- All norms in the resolvent chain are operator norms; $\lVert\mathop{\mathrm{Alt}}(X)\rVert\le\lVert X\rVert$ is [conventions.md](../findings/conventions.md).
 - $C$ and $J$ are **dimensionless in $g_n$**: $C$ is a function of $(\alpha,\gamma,D)$ alone and $M\le C\gamma g_n$ scales with $g_n$. So nothing in L156 depends on the value of $g_n$, and the trap recorded at [findings/second-order.md:960](../findings/second-order.md) (the relative gap used where the absolute one belongs, worth a factor $n$), cannot touch this lemma. That is a robustness fact worth having, and it is not on the record.
 
 ## 1. The hypothesis inventory
@@ -40,14 +40,14 @@
 
 | # | Hypothesis | Carried by the statement? | Used by the written proof? | Checked against the object |
 |---|---|---|---|---|
-| H1 | $W^*$ symmetric | no (implied by "$W^*=S^m\times S^m$") | **yes**, explicitly, it is what makes $\lVert(W^*-\zeta)^{-1}\rVert=1/\operatorname{dist}(\zeta,\operatorname{spec})$ | holds: the Weyl operator on $\Lambda^2$ is symmetric |
-| H2 | $\operatorname{spec}(W^*)$ is exactly two points, so $\ker W^*=0$ | no | **yes**, explicitly | holds at $S^m\times S^m$, §2, and its failure is catastrophic, §6 |
+| H1 | $W^*$ symmetric | no (implied by "$W^*=S^m\times S^m$") | **yes**, explicitly, it is what makes $\lVert(W^*-\zeta)^{-1}\rVert=1/\mathop{\mathrm{dist}}(\zeta,\mathop{\mathrm{spec}})$ | holds: the Weyl operator on $\Lambda^2$ is symmetric |
+| H2 | $\mathop{\mathrm{spec}}(W^*)$ is exactly two points, so $\ker W^*=0$ | no | **yes**, explicitly | holds at $S^m\times S^m$, §2, and its failure is catastrophic, §6 |
 | H3 | $n=2m$ and $m\ge2$ | no | yes, through $D$ | $m=1$ makes $D$ undefined and $W^*=0$; the corollary evaluates at $m=2$, the chain at $m\ge6$ |
 | H4 | $0<\alpha<D$ | **no** | yes, silently, $d>0$ and the encirclement of $\lambda_-$ alone both need it | §5 exhibits a point outside it that falsifies the minimum claim as written |
 | H5 | $0<\gamma<d$ | **no** | yes, through "$d-\gamma$" | at the optimum $d-\gamma=D/4>0$ |
 | H6 | $\gamma<1$ (no perturbed eigenvalue crosses $0$) | no (it is in the entry's prose, not the box) | no | holds: $\gamma^*=D/4\le\tfrac34<1$ for all $m\ge2$, §4 |
 | H7 | $W(z)=W^*+zH$ affine, so $\lVert W(z)-W^*\rVert_{op}\le\gamma g_n$ on the disc | no | **not mentioned**, yet the $\gamma g_n$ it supplies is the factor that cancels into $J=C/\gamma$ | §3 |
-| H8 | $\lVert\operatorname{Alt}(X)\rVert\le\lVert X\rVert$ | no | not mentioned | holds, [conventions.md](../findings/conventions.md) |
+| H8 | $\lVert\mathop{\mathrm{Alt}}(X)\rVert\le\lVert X\rVert$ | no | not mentioned | holds, [conventions.md](../findings/conventions.md) |
 | H9 | The norm in which $M$, and hence $C$, is measured | no | no | operator norm throughout; a Frobenius $M$ would change $\lVert W(z)-W^*\rVert$ to $\lvert z\rvert\lVert H\rVert_F$ and so change $\rho$'s definition |
 | H10 | $\max_\Gamma\lvert\zeta\rvert=(1+\alpha)g_n$ | as an import | **yes**, cited to L152's surviving half | holds: $\max_{\lvert\zeta-\lambda_-\rvert=\alpha g_n}\lvert\zeta\rvert=\lvert\lambda_-\rvert+\alpha g_n$, attained on the ray from $0$ through $\lambda_-$ |
 | H11 | The inequality $C$ is the constant in ($M\le C\gamma g_n$ | **no: the box defines a function and never says what it bounds** |), | §3 recovers it and checks it against [r441](../reviews/REVIEW_r441.md) |
@@ -56,7 +56,7 @@
 
 ## 2. The spectrum, computed independently, and the kernel question
 
-$S^m\times S^m$ with both factors of curvature $1$ has $R=\operatorname{id}$ on $\Lambda^2V_1$ and on $\Lambda^2V_2$ and $R=0$ on $V_1\otimes V_2$, the mixed planes being flat. It is Einstein: $\operatorname{Ric}=(m-1)g$, $\operatorname{scal}=2m(m-1)$, so the Weyl operator is $W=R-\tfrac{\operatorname{scal}}{n(n-1)}\operatorname{id}=R-\tfrac{m-1}{2m-1}\operatorname{id}$. Hence
+$S^m\times S^m$ with both factors of curvature $1$ has $R=\mathop{\mathrm{id}}$ on $\Lambda^2V_1$ and on $\Lambda^2V_2$ and $R=0$ on $V_1\otimes V_2$, the mixed planes being flat. It is Einstein: $\mathop{\mathrm{Ric}}=(m-1)g$, $\mathop{\mathrm{scal}}=2m(m-1)$, so the Weyl operator is $W=R-\tfrac{\mathop{\mathrm{scal}}}{n(n-1)}\mathop{\mathrm{id}}=R-\tfrac{m-1}{2m-1}\mathop{\mathrm{id}}$. Hence
 
 $$\lambda_+=1-\tfrac{m-1}{2m-1}=\tfrac m{2m-1}\ \ (\text{multiplicity } m(m-1)),\qquad \lambda_-=-\tfrac{m-1}{2m-1}\ \ (\text{multiplicity } m^2),$$
 
@@ -70,11 +70,11 @@ Two independent confirmations that this is the right operator and the right norm
 
 ### 3.1 What the correct derivation is
 
-$A$ is the difference of two Riesz integrals. Writing $A=-\operatorname{Alt}(W_-(z)-W_-(0))$ and using the resolvent identity $(W(z)-\zeta)^{-1}-(W^*-\zeta)^{-1}=(W(z)-\zeta)^{-1}(W^*-W(z))(W^*-\zeta)^{-1}$,
+$A$ is the difference of two Riesz integrals. Writing $A=-\mathop{\mathrm{Alt}}(W_-(z)-W_-(0))$ and using the resolvent identity $(W(z)-\zeta)^{-1}-(W^*-\zeta)^{-1}=(W(z)-\zeta)^{-1}(W^*-W(z))(W^*-\zeta)^{-1}$,
 
 $$\lVert A\rVert\ \le\ \frac1{2\pi}\cdot\underbrace{2\pi\alpha g_n}_{\text{length}}\cdot\underbrace{(1+\alpha)g_n}_{\max_\Gamma\lvert\zeta\rvert}\cdot\underbrace{\frac1{(d-\gamma)g_n}}_{\text{resolvent at }W(z)}\cdot\underbrace{\gamma g_n}_{\lVert W(z)-W^*\rVert}\cdot\underbrace{\frac1{d\,g_n}}_{\text{resolvent at }W^*}\ =\ \frac{\alpha(1+\alpha)}{d(d-\gamma)}\,\gamma g_n .$$
 
-**Five factors.** So $M\le C\gamma g_n$ with $C=\tfrac{\alpha(1+\alpha)}{d(d-\gamma)}$, the stated formula, exactly. Three checks that this is the intended object and not a reconstruction of my own: (i) r447's decomposition $A=\operatorname{Alt}(-\Pi(z)(W(z)-W^*)-(\Pi(z)-\Pi(0))W^*)$, quoted at [findings/second-order.md:1445](../findings/second-order.md), telescopes to $-\operatorname{Alt}(W_-(z)-W_-(0))$ identically, so the two routes bound the same $A$; (ii) at $d=\alpha$ the display returns $\tfrac{1+\alpha}{\alpha-\gamma}$, r456's constant, which is the reduction clause the statement asserts; (iii) at $(\alpha,\gamma)=(\tfrac12,\tfrac14)$ it gives $M\le6\cdot\tfrac14 g_n=\tfrac32g_n$, which is [r441](../reviews/REVIEW_r441.md)'s independently computed value **exactly**.
+**Five factors.** So $M\le C\gamma g_n$ with $C=\tfrac{\alpha(1+\alpha)}{d(d-\gamma)}$, the stated formula, exactly. Three checks that this is the intended object and not a reconstruction of my own: (i) r447's decomposition $A=\mathop{\mathrm{Alt}}(-\Pi(z)(W(z)-W^*)-(\Pi(z)-\Pi(0))W^*)$, quoted at [findings/second-order.md:1445](../findings/second-order.md), telescopes to $-\mathop{\mathrm{Alt}}(W_-(z)-W_-(0))$ identically, so the two routes bound the same $A$; (ii) at $d=\alpha$ the display returns $\tfrac{1+\alpha}{\alpha-\gamma}$, r456's constant, which is the reduction clause the statement asserts; (iii) at $(\alpha,\gamma)=(\tfrac12,\tfrac14)$ it gives $M\le6\cdot\tfrac14 g_n=\tfrac32g_n$, which is [r441](../reviews/REVIEW_r441.md)'s independently computed value **exactly**.
 
 ### 3.2 The finding
 
@@ -130,7 +130,7 @@ The $\gamma$ in $J=C/\gamma$ **is** the $\gamma$ of the disc radius: it enters t
 
 **Admissible range of the contour parameter.** $0<\alpha<D$ and $0<\gamma<d$, neither in the statement; $\gamma<1$ additionally, never binding (§5). At $\alpha=D$ exactly, $\lambda_+$ sits on $\Gamma$ and the resolvent is unbounded; at $\alpha\downarrow0$ the contour collapses and $C\to\infty$. Both ends are excluded and both send $J$ to $+\infty$, which is the coercivity §5 uses.
 
-**$\ker W\ne0$, what this lemma asserts there.** *Nothing, and it must assert nothing.* The record's named witness is $W_{\mathbb{CP}^2}$ at $n=4$ with $\dim\ker W=3$ ([findings/second-order.md:1173](../findings/second-order.md), which records that $g_n$, $\rho$, $M$ and branches 2–3 do not exist there). L156 is stated at $W^*=S^m\times S^m$, where $\ker W^*=0$ by §2, so it is silent at the witness, correctly. **What is worth recording is how violently it would fail if it were not silent.** With $0\in\operatorname{spec}$, the distance from $\Gamma$ to the spectrum acquires a third term and $d$ becomes $\min(\alpha,\lvert1-\alpha\rvert,D-\alpha)$. At the lemma's own optimum, $m=6$ and $\alpha^*=\tfrac{11}{10}$, that is $\min(\tfrac{11}{10},\tfrac1{10},\tfrac{11}{10})=\tfrac1{10}$, while $\gamma^*=\tfrac{11}{20}>\tfrac1{10}$, so $d-\gamma<0$, $C$ is negative and the bound is not merely weaker but meaningless. The kernel hypothesis is therefore not a technicality: **the optimum $\alpha^*>1$ is precisely what makes a kernel fatal**, because $\Gamma$ then passes within $(\alpha^*-1)g_n=\tfrac{g_n}{2(m-1)}$ of the origin. That $\alpha^*>1$ is the entry's own headline ruling makes this the hypothesis most worth writing into the box.
+**$\ker W\ne0$, what this lemma asserts there.** *Nothing, and it must assert nothing.* The record's named witness is $W_{\mathbb{CP}^2}$ at $n=4$ with $\dim\ker W=3$ ([findings/second-order.md:1173](../findings/second-order.md), which records that $g_n$, $\rho$, $M$ and branches 2–3 do not exist there). L156 is stated at $W^*=S^m\times S^m$, where $\ker W^*=0$ by §2, so it is silent at the witness, correctly. **What is worth recording is how violently it would fail if it were not silent.** With $0\in\mathop{\mathrm{spec}}$, the distance from $\Gamma$ to the spectrum acquires a third term and $d$ becomes $\min(\alpha,\lvert1-\alpha\rvert,D-\alpha)$. At the lemma's own optimum, $m=6$ and $\alpha^*=\tfrac{11}{10}$, that is $\min(\tfrac{11}{10},\tfrac1{10},\tfrac{11}{10})=\tfrac1{10}$, while $\gamma^*=\tfrac{11}{20}>\tfrac1{10}$, so $d-\gamma<0$, $C$ is negative and the bound is not merely weaker but meaningless. The kernel hypothesis is therefore not a technicality: **the optimum $\alpha^*>1$ is precisely what makes a kernel fatal**, because $\Gamma$ then passes within $(\alpha^*-1)g_n=\tfrac{g_n}{2(m-1)}$ of the origin. That $\alpha^*>1$ is the entry's own headline ruling makes this the hypothesis most worth writing into the box.
 
 ## 7. Quantifier order and scope
 

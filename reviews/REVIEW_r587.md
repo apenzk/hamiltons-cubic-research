@@ -8,7 +8,7 @@ Standing rule for this audit: analysis only. No sweep, census, optimisation or f
 
 | item | verdict |
 | --- | --- |
-| the three conclusions, the ratio, $\theta=(n-1)\lvert\lambda_{\min}\rvert$, $\theta\ge\theta_0(n)$ | **CONFIRMED.** Rebuilt in §2 from the row relations (A) and (B), $\operatorname{tr}W=0$ and $\lVert W\rVert=1$. This is the first independent confirmation on the record: the block's only authority is [r324](REVIEW_r324.md), which is where the claim was authored |
+| the three conclusions, the ratio, $\theta=(n-1)\lvert\lambda_{\min}\rvert$, $\theta\ge\theta_0(n)$ | **CONFIRMED.** Rebuilt in §2 from the row relations (A) and (B), $\mathop{\mathrm{tr}}W=0$ and $\lVert W\rVert=1$. This is the first independent confirmation on the record: the block's only authority is [r324](REVIEW_r324.md), which is where the claim was authored |
 | **D1** the heading, "Lemma L71's converse" | **REFUTED.** L71 and L117 carry the *same* hypothesis $D(v)=0$ in the *same* direction. L117 is an input to L71, not its converse |
 | **D2** the argument, as a thing present in the block | **REFUTED AS A RECORD ENTRY.** The block asserts a proof and contains none. §2 supplies one in eight lines |
 | **D3** "proved from first Bianchi and $\mathrm{Ric}=0$" | **REFUTED AS STATED.** That names one of five inputs. §3 |
@@ -33,11 +33,11 @@ Lines 494–498 of [findings/bounds.md](../findings/bounds.md), running to end o
 
 ## 2. The rebuild, all three conclusions, from the definitions
 
-Fix a critical unit $W\in\mathcal W_n$: $Q(W)=\theta W$, $\lVert W\rVert=1$, so $\sum_a\lambda_a^2=1$ over the $N=\binom n2$ eigenvalues of $W$ on $\Lambda^2$, and $\operatorname{tr}W=0$. Structure constants $c_{abc}=\langle[v_a,v_b],v_c\rangle$ in an eigenbasis are totally antisymmetric, so $T_{abc}=c_{abc}^2$ is totally symmetric and hollow. The record's per-index relations, at any index $k$, over **ordered** pairs:
+Fix a critical unit $W\in\mathcal W_n$: $Q(W)=\theta W$, $\lVert W\rVert=1$, so $\sum_a\lambda_a^2=1$ over the $N=\binom n2$ eigenvalues of $W$ on $\Lambda^2$, and $\mathop{\mathrm{tr}}W=0$. Structure constants $c_{abc}=\langle[v_a,v_b],v_c\rangle$ in an eigenbasis are totally antisymmetric, so $T_{abc}=c_{abc}^2$ is totally symmetric and hollow. The record's per-index relations, at any index $k$, over **ordered** pairs:
 
 $$\text{(A)}\ \sum_{\beta\gamma}T_{k\beta\gamma}=2(n-2),\qquad \text{(B)}\ \sum_{\beta\gamma}\lambda_\beta T_{k\beta\gamma}=-2\lambda_k .$$
 
-**Step 0, the hypothesis, unpacked.** $\operatorname{tr}W=0$ at $W\ne0$ gives $\lambda_{\min}<0<\lambda_{\max}$ strictly. Write $m=\lvert\lambda_{\min}\rvert$, $h=\lambda_{\max}$. With $k$ an index of $E_{\min}$, $D(v_k)=\tfrac12\sum_{ab}(\lambda_a\lambda_b-\lambda_{\min}\lambda_{\max})T_{kab}$, and $\lambda_a\lambda_b\ge\lambda_{\min}\lambda_{\max}$ termwise, so $D(v_k)=0$ forces $T_{kab}=0$ unless $\lambda_a\lambda_b=\lambda_{\min}\lambda_{\max}$.
+**Step 0, the hypothesis, unpacked.** $\mathop{\mathrm{tr}}W=0$ at $W\ne0$ gives $\lambda_{\min}<0<\lambda_{\max}$ strictly. Write $m=\lvert\lambda_{\min}\rvert$, $h=\lambda_{\max}$. With $k$ an index of $E_{\min}$, $D(v_k)=\tfrac12\sum_{ab}(\lambda_a\lambda_b-\lambda_{\min}\lambda_{\max})T_{kab}$, and $\lambda_a\lambda_b\ge\lambda_{\min}\lambda_{\max}$ termwise, so $D(v_k)=0$ forces $T_{kab}=0$ unless $\lambda_a\lambda_b=\lambda_{\min}\lambda_{\max}$.
 
 **Step 1, the support is exactly $E_{\min}\times E_{\max}$, and this is strict.** $xy$ is bilinear on $[\lambda_{\min},\lambda_{\max}]^2$, so for fixed $x$ it is affine in $y$ and its minimum over $y$ sits at an endpoint, strictly unless $x=0$; and $x=0$ gives $xy=0>\lambda_{\min}\lambda_{\max}$. So $\lambda_a\lambda_b=\lambda_{\min}\lambda_{\max}$ forces $\{\lambda_a,\lambda_b\}=\{\lambda_{\min},\lambda_{\max}\}$. *This is where the strict sign separation of step 0 is spent.*
 
@@ -49,19 +49,19 @@ $$(n-2)(\lambda_{\min}+\lambda_{\max})=-2\lambda_{\min}\quad\Longrightarrow\quad
 
 **Step 4, $\theta$.** $D(v)=0$ is $\theta=\lambda_{\min}+(n-2)\lambda_{\max}$ by [Lemma L70](../findings/bounds.md)'s identity, and step 3 turns that into $\theta=-m+nm=(n-1)m$. In particular $\theta>0$, so **no critical point with $\theta\le0$ can saturate**, a clause the block drops and which is worth having, since $Q$ is quadratic and every critical point has a partner at $-\theta$.
 
-**Step 5, $\theta\ge\theta_0(n)$, from the norm and nothing else.** Every eigenvalue lies in $[-m,h]$, so $(\lambda_a+m)(h-\lambda_a)\ge0$, i.e. $\lambda_a^2\le(h-m)\lambda_a+mh$. Summing over all $N$ eigenvalues and using $\operatorname{tr}W=0$ and $\sum\lambda_a^2=1$,
+**Step 5, $\theta\ge\theta_0(n)$, from the norm and nothing else.** Every eigenvalue lies in $[-m,h]$, so $(\lambda_a+m)(h-\lambda_a)\ge0$, i.e. $\lambda_a^2\le(h-m)\lambda_a+mh$. Summing over all $N$ eigenvalues and using $\mathop{\mathrm{tr}}W=0$ and $\sum\lambda_a^2=1$,
 
 $$1\;\le\;N\,mh\;=\;\frac{n(n-1)}2\cdot\frac{n\,m^2}{n-2}\quad\Longrightarrow\quad m^2\ \ge\ \frac{2(n-2)}{n^2(n-1)},$$
 
 and therefore $\theta^2=(n-1)^2m^2\ge\dfrac{2(n-1)(n-2)}{n^2}=\theta_0(n)^2$, with $\theta>0$ from step 4. $\square$
 
-**Step 6, the equality case, which the block drops.** Equality in step 5 needs $(\lambda_a+m)(h-\lambda_a)=0$ for every $a$, i.e. $\lambda_a\in\{-m,h\}$, exactly two eigenvalues, $\mathfrak r=0$. Then $\operatorname{tr}W=0$ reads $pm=qh$ with $p+q=N$, and with $h/m=n/(n-2)$ this gives $q\cdot\frac{2n-2}{n-2}=\frac{n(n-1)}2$, so
+**Step 6, the equality case, which the block drops.** Equality in step 5 needs $(\lambda_a+m)(h-\lambda_a)=0$ for every $a$, i.e. $\lambda_a\in\{-m,h\}$, exactly two eigenvalues, $\mathfrak r=0$. Then $\mathop{\mathrm{tr}}W=0$ reads $pm=qh$ with $p+q=N$, and with $h/m=n/(n-2)$ this gives $q\cdot\frac{2n-2}{n-2}=\frac{n(n-1)}2$, so
 
 $$\dim E_{\max}=\frac{n(n-2)}4,\qquad \dim E_{\min}=N-\frac{n(n-2)}4=\frac{n^2}4,$$
 
 and integrality forces $n$ even. **No Lie theory, no classification, no Cartan.**
 
-*Screen.* Building the spectrum from these closed forms alone at $n=4,6,8,10,12$ returns $\operatorname{tr}W=0$ and $\sum\lambda^2=1$ to machine zero, $\theta_0(n)=0.866025,1.054093,1.145644,1.200000,1.236033$, and $mh=1/N$ exactly at every one, the equality case of step 5, as predicted. At $n=4$ the ratio applied to $W_{\mathbb{CP}^2}$'s $\theta=\sqrt{3/2}$ returns $m=0.408248$, $h=0.816497$, multiplicities $(2,1)$ and a three-dimensional kernel, again with $\operatorname{tr}W=0$ and $\sum\lambda^2=1$, and $mh=1/3>1/6=1/N$, the strict case. The negated critical points give saturation defect $\lvert\theta\rvert$ in closed form: $1.224745$ at $-W_{\mathbb{CP}^2}$ and $0.866025$ at $-(S^2\times S^2)$, reproducing the two figures the [L71](../findings/bounds.md) material records to nine places.
+*Screen.* Building the spectrum from these closed forms alone at $n=4,6,8,10,12$ returns $\mathop{\mathrm{tr}}W=0$ and $\sum\lambda^2=1$ to machine zero, $\theta_0(n)=0.866025,1.054093,1.145644,1.200000,1.236033$, and $mh=1/N$ exactly at every one, the equality case of step 5, as predicted. At $n=4$ the ratio applied to $W_{\mathbb{CP}^2}$'s $\theta=\sqrt{3/2}$ returns $m=0.408248$, $h=0.816497$, multiplicities $(2,1)$ and a three-dimensional kernel, again with $\mathop{\mathrm{tr}}W=0$ and $\sum\lambda^2=1$, and $mh=1/3>1/6=1/N$, the strict case. The negated critical points give saturation defect $\lvert\theta\rvert$ in closed form: $1.224745$ at $-W_{\mathbb{CP}^2}$ and $0.866025$ at $-(S^2\times S^2)$, reproducing the two figures the [L71](../findings/bounds.md) material records to nine places.
 
 ## 3. D3, what the proof actually consumes
 
@@ -72,12 +72,12 @@ and integrality forces $n$ even. **No Lie theory, no classification, no Cartan.*
 | $T$ totally symmetric and hollow | ad-invariance of the inner product, [conventions.md](../findings/conventions.md) |
 | step 2, the mass $2(n-2)$ | relation (A), the Killing marginal, a fact about $\mathfrak{so}(n)$ and its normalisation |
 | step 3, the first moment | relation (B), **this, and only this, is first Bianchi and $\mathrm{Ric}=0$** |
-| steps 0–1, the strict sign separation | $\operatorname{tr}W=0$ on $\mathcal W_n$ at $W\ne0$ |
+| steps 0–1, the strict sign separation | $\mathop{\mathrm{tr}}W=0$ on $\mathcal W_n$ at $W\ne0$ |
 | step 5 | $\lVert W\rVert=1$ **and** $N=\binom n2$ |
 
 The last row is the live one. [Lemma L70](../findings/bounds.md)'s audit found unit norm missing from its own hypothesis list and recorded that [r323](REVIEW_r323.md) and [r324](REVIEW_r324.md) both propagated the omission. L117's *statement* is clean here ("at a critical unit" carries it) but its *provenance sentence* is not, and a reader repairing the provenance from that sentence would drop the hypothesis a second time. The dimension $N$ is not named anywhere in the block at all, and $\theta\ge\theta_0(n)$ is false without it.
 
-**Repair.** Replace "proved from first Bianchi and $\mathrm{Ric}=0$" with "proved from the row relations (A) and (B) together with $\operatorname{tr}W=0$, $\lVert W\rVert=1$ and $\dim\Lambda^2=\binom n2$; $\mathrm{Ric}=0$ and first Bianchi enter through (B) alone".
+**Repair.** Replace "proved from first Bianchi and $\mathrm{Ric}=0$" with "proved from the row relations (A) and (B) together with $\mathop{\mathrm{tr}}W=0$, $\lVert W\rVert=1$ and $\dim\Lambda^2=\binom n2$; $\mathrm{Ric}=0$ and first Bianchi enter through (B) alone".
 
 ## 4. D1 and D4, the label and the missing clause
 
@@ -85,7 +85,7 @@ The last row is the live one. [Lemma L70](../findings/bounds.md)'s audit found u
 
 **Repair.** Retitle: "Lemma L117, saturation pins the spectral ratio: $D(v)=0\Rightarrow\lambda_{\max}/\lvert\lambda_{\min}\rvert=n/(n-2)$, $\theta=(n-1)\lvert\lambda_{\min}\rvert\ge\theta_0(n)$".
 
-**D4. The block records a truncation of the theorem it cites.** [r324](REVIEW_r324.md) §5 states $\theta\ge\theta_0(n)$ **with equality iff $W$ has exactly two eigenvalues, in which case $n$ is even and $\dim E_{\min}=n^2/4$, $\dim E_{\max}=n(n-2)/4$**. The block keeps the inequality and drops the clause. That clause is §2's step 6, it costs three lines from $\operatorname{tr}W=0$ and $\lVert W\rVert=1$, and **it is precisely the statement [r568](REVIEW_r568.md) found L71 asserting as "the required $\dim\mathfrak h$" with no derivation and no citation.** The record has been carrying, unnumbered and undeclared, the derivation of a quantity it separately records as underived, because L117's own block threw it away.
+**D4. The block records a truncation of the theorem it cites.** [r324](REVIEW_r324.md) §5 states $\theta\ge\theta_0(n)$ **with equality iff $W$ has exactly two eigenvalues, in which case $n$ is even and $\dim E_{\min}=n^2/4$, $\dim E_{\max}=n(n-2)/4$**. The block keeps the inequality and drops the clause. That clause is §2's step 6, it costs three lines from $\mathop{\mathrm{tr}}W=0$ and $\lVert W\rVert=1$, and **it is precisely the statement [r568](REVIEW_r568.md) found L71 asserting as "the required $\dim\mathfrak h$" with no derivation and no citation.** The record has been carrying, unnumbered and undeclared, the derivation of a quantity it separately records as underived, because L117's own block threw it away.
 
 **Repair.** Restore the equality clause to the statement. Then [L71](../findings/bounds.md)'s $\dim\mathfrak h=n(n-2)/4$ and its odd-$n$ exclusion both cite L117 instead of asserting, and the inline re-derivation twenty-four lines above L117's heading ("Relations (A) and (B) at a row $v\in\mathfrak m$, with $T$'s mass splitting evenly across the support") becomes a citation. That paragraph's phrase "$T$'s mass splitting evenly across the support" is a hedge standing where §2 step 2 has a proof: the split is *forced* by the total symmetry of $T$, and is not an assumption about how mass distributes.
 

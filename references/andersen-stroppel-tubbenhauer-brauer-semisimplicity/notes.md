@@ -2,8 +2,8 @@
 
 **Theorem 7.1 verbatim**, from [aswt-1507.07676.pdf](https://doi.org/10.1016/j.jcta.2004.11.009) p. 27, extraction line 1367, *"$B_d(\delta)$ is semisimple if and only if one of the following conditions hold"*, of which the two this programme uses are:
 
-> **(3)** $\delta_0\ne0$, $\operatorname{char}(K)=0$ and $d\le\delta_0+1$.
-> **(5)** $\delta_0=0$, $\operatorname{char}(K)=0$ and $d\in\{1,3,5\}$.
+> **(3)** $\delta_0\ne0$, $\mathop{\mathrm{char}}(K)=0$ and $d\le\delta_0+1$.
+> **(5)** $\delta_0=0$, $\mathop{\mathrm{char}}(K)=0$ and $d\in\{1,3,5\}$.
 
 Clause (3) with $\delta_0=n$ and $d=f$ is the inequality $f\le n+1$, i.e. $n\ge f-1$. Clause (5) is why the *iff* fails at $\delta=0$.
 
@@ -16,11 +16,11 @@ Clause (3) with $\delta_0=n$ and $d=f$ is the inequality $f\le n+1$, i.e. $n\ge 
 
 For the Brauer algebra $B_f(\delta)$ over a field $k$ with $\delta = n$ a positive integer:
 
-> $B_f(n)$ is **semisimple** $\iff$ $n \ge f-1$, for $\delta = n$ a **positive** integer and $\operatorname{char} k = 0$ or $\operatorname{char} k > f$.
+> $B_f(n)$ is **semisimple** $\iff$ $n \ge f-1$, for $\delta = n$ a **positive** integer and $\mathop{\mathrm{char}} k = 0$ or $\mathop{\mathrm{char}} k > f$.
 
 Over $\mathbb{Q}$ the characteristic clause is automatic, so the criterion is the single inequality $n \ge f-1$.
 
-**PRIMARY SOURCE, and the paper this folder holds.** Found by r259, open access: Andersen–Stroppel–Tubbenhauer, [*Semisimplicity of Hecke and (walled) Brauer algebras*](https://arxiv.org/abs/1507.07676), **Theorem 7.1(3)**: for $\operatorname{char}K=0$ and $\delta_0=|\delta|\ne0$, $B_d(\delta)$ is semisimple iff $d\le\delta_0+1$, which is $n\ge f-1$ verbatim.
+**PRIMARY SOURCE, and the paper this folder holds.** Found by r259, open access: Andersen–Stroppel–Tubbenhauer, [*Semisimplicity of Hecke and (walled) Brauer algebras*](https://arxiv.org/abs/1507.07676), **Theorem 7.1(3)**: for $\mathop{\mathrm{char}}K=0$ and $\delta_0=|\delta|\ne0$, $B_d(\delta)$ is semisimple iff $d\le\delta_0+1$, which is $n\ge f-1$ verbatim.
 
 **Two corrections to what this note first said**, both found by r259 and r260:
 
@@ -39,6 +39,6 @@ This is a *different* threshold from [Lehrer–Zhang Theorem 3.4](../lehrer-zhan
 
 ## What it buys
 
-**Less than this note first claimed.** The diagram-realisation theorem needs $M_\lambda=\operatorname{Hom}_{O(n)}(V_\lambda,V^{\otimes12})$ irreducible over the **image** $\nu(B_{12}(n))$, and the double centraliser gives that at **every** $n$ with no inequality, see [brauer-pairing.md](../../findings/brauer-pairing.md).
+**Less than this note first claimed.** The diagram-realisation theorem needs $M_\lambda=\mathop{\mathrm{Hom}}_{O(n)}(V_\lambda,V^{\otimes12})$ irreducible over the **image** $\nu(B_{12}(n))$, and the double centraliser gives that at **every** $n$ with no inequality, see [brauer-pairing.md](../../findings/brauer-pairing.md).
 
 What Rui's criterion adds is the identification of $M_\lambda$ with the **abstract** cell module $\Delta_\lambda$, which the theorem does not use and only the verification's $\sum(\dim\Delta_\lambda)^2$ form relies on.

@@ -13,7 +13,7 @@
 
 ## Item 1
 
-- By the givens, $B_{bc}=\tfrac12\sum_{\gamma\in E_b,\delta\in E_c}[\psi_\gamma,\psi_\delta]\otimes[\psi_\gamma,\psi_\delta]$ over orthonormal bases, so $t_{abc}=\operatorname{tr}(P_aB_{bc})=\tfrac12\sum_{\varepsilon\in E_a,\gamma\in E_b,\delta\in E_c}\langle[\psi_\gamma,\psi_\delta],\psi_\varepsilon\rangle^2$.
+- By the givens, $B_{bc}=\tfrac12\sum_{\gamma\in E_b,\delta\in E_c}[\psi_\gamma,\psi_\delta]\otimes[\psi_\gamma,\psi_\delta]$ over orthonormal bases, so $t_{abc}=\mathop{\mathrm{tr}}(P_aB_{bc})=\tfrac12\sum_{\varepsilon\in E_a,\gamma\in E_b,\delta\in E_c}\langle[\psi_\gamma,\psi_\delta],\psi_\varepsilon\rangle^2$.
 - The squared structure constant $\langle[\psi_\gamma,\psi_\delta],\psi_\varepsilon\rangle^2$ is invariant under every permutation of $(\gamma,\delta,\varepsilon)$: antisymmetry of the bracket handles the transposition of $\gamma,\delta$, and ad-invariance $\langle[x,y],z\rangle=-\langle y,[x,z]\rangle$ moves an index between slot and bracket up to sign. The prefactor $\tfrac12$ is common to all three index placements, so $t_{abc}$ is totally symmetric with the stated normalisation. CONFIRMED.
 - The same formula gives $B_{bc}=B_{cb}$ and $t_{abc}\ge0$, both used below.
 
@@ -31,13 +31,13 @@ Notation: $d=(p,m,p)$, $\lambda=(-a,0,a)$, $\kappa:=\theta/a=\theta\sqrt{2p}$. R
 
 ## Item 3
 
-- The chain: the certificate $\lambda_{\max}(B_{\mathrm{lead}})\ge T/\operatorname{rank}P_0C=T/p$, and $4T=p+\kappa^{-1}(t_{000}-t_{022}+p)$ from $(C)_0$. So $T/p>\tfrac14$ iff $t_{022}<t_{000}+p$ iff $t_{001}<t_{012}$ by $(B)_0$ iff $D<0$ by the solved form. Each step is an equivalence. The mirror form $\operatorname{tr}(P_2B_{00})>\operatorname{tr}(P_2B_{22})+p$ is $t_{002}>t_{222}+p$, i.e. $D<0$. Correct.
+- The chain: the certificate $\lambda_{\max}(B_{\mathrm{lead}})\ge T/\mathop{\mathrm{rank}}P_0C=T/p$, and $4T=p+\kappa^{-1}(t_{000}-t_{022}+p)$ from $(C)_0$. So $T/p>\tfrac14$ iff $t_{022}<t_{000}+p$ iff $t_{001}<t_{012}$ by $(B)_0$ iff $D<0$ by the solved form. Each step is an equivalence. The mirror form $\mathop{\mathrm{tr}}(P_2B_{00})>\mathop{\mathrm{tr}}(P_2B_{22})+p$ is $t_{002}>t_{222}+p$, i.e. $D<0$. Correct.
 
 ### Correction A: what "exactly" can mean
 
-- **What holds exactly**: the rank certificate $T/\operatorname{rank}P_0C>\tfrac14$ holds iff $D<0$. That is an exact equivalence between two class-level conditions.
+- **What holds exactly**: the rank certificate $T/\mathop{\mathrm{rank}}P_0C>\tfrac14$ holds iff $D<0$. That is an exact equivalence between two class-level conditions.
 - **What it cannot mean**: the bracket part $\lambda_{\max}(B_{\mathrm{lead}})$ exceeds $\tfrac14$ (its $L_e$ form exceeds $\tfrac12$) only when $D<0$. The certificate bounds $\lambda_{\max}$ from below and is attained only when the positive eigenvalues are equal, so at $D\ge0$ the bracket part may still exceed $\tfrac12$. The same caveat applies to "binds" in the bold headline, which moreover concerns the leading (bracket) part only, with the Ricci and $\Lambda^4$ corrections at relative size $p^{-1/2}$ still owed.
-- **Suggested wording**: "the rank certificate for the bracket part fires exactly when $D<0$, i.e. $\operatorname{tr}(P_2B_{00})>\operatorname{tr}(P_2B_{22})+p$".
+- **Suggested wording**: "the rank certificate for the bracket part fires exactly when $D<0$, i.e. $\mathop{\mathrm{tr}}(P_2B_{00})>\mathop{\mathrm{tr}}(P_2B_{22})+p$".
 - **On "mirror"**: the condition is the formal $0\leftrightarrow2$ mirror of the $E_0$ one, but the rows themselves are not mirror symmetric ($(C)_0$ carries $-(\kappa+1)$, $(C)_2$ carries $\kappa-1$), so the mirror is of form only.
 
 ## Item 4

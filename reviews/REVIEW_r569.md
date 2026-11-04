@@ -34,7 +34,7 @@ $$\theta=\sum_\alpha\lambda_\alpha^3+3\!\!\sum_{\alpha<\beta<\gamma}\!\!T_{\alph
 
 ## Defect D2, the chain consumes two hypotheses the block never names. Verdict: REAL
 
-Once past the identity, the chain uses $\operatorname{tr}W=0$ and $\lVert W\rVert=1$ twice more and says so nowhere:
+Once past the identity, the chain uses $\mathop{\mathrm{tr}}W=0$ and $\lVert W\rVert=1$ twice more and says so nowhere:
 
 - $s=b+c$, where $s=\sum_{\lambda>0}\lambda$ and $-b,-c$ are the negatives, this is trace-freeness.
 - $bc=(s^2+u-1)/2$ with $u=\sum_{\lambda>0}\lambda^2$, from $b^2+c^2=1-u$, which is unit norm, together with $(b+c)^2=s^2$.
@@ -43,7 +43,7 @@ Once past the identity, the chain uses $\operatorname{tr}W=0$ and $\lVert W\rVer
 
 ## Defect D3, the row marginal, and the number behind it. Verdict: MINOR, and the brief's premise needs one correction
 
-The block relaxes to tensors "with row marginals $m-2$". **That value is right under the unordered reading and wrong under the record's stated default.** [conventions.md](../findings/conventions.md) fixes "sums over pairs are over ORDERED pairs unless the line says otherwise" and records the Killing marginal as $\sum_\beta\lVert[v_\alpha,v_\beta]\rVert^2=2(n-2)$. I re-derived that constant rather than quoting it: $\sum_\beta\lVert[v_\alpha,v_\beta]\rVert^2=-\operatorname{tr}(\mathrm{ad}_{v_\alpha}^2)=-B(v_\alpha,v_\alpha)=-(n-2)\operatorname{tr}(v_\alpha^2)=2(n-2)$. Halving for unordered $\{\beta,\gamma\}$ gives $m-2$, which is what the objective's $\sum_{\alpha<\beta<\gamma}$ convention wants. So the block is self-consistent and reads against the file that governs it.
+The block relaxes to tensors "with row marginals $m-2$". **That value is right under the unordered reading and wrong under the record's stated default.** [conventions.md](../findings/conventions.md) fixes "sums over pairs are over ORDERED pairs unless the line says otherwise" and records the Killing marginal as $\sum_\beta\lVert[v_\alpha,v_\beta]\rVert^2=2(n-2)$. I re-derived that constant rather than quoting it: $\sum_\beta\lVert[v_\alpha,v_\beta]\rVert^2=-\mathop{\mathrm{tr}}(\mathrm{ad}_{v_\alpha}^2)=-B(v_\alpha,v_\alpha)=-(n-2)\mathop{\mathrm{tr}}(v_\alpha^2)=2(n-2)$. Halving for unordered $\{\beta,\gamma\}$ gives $m-2$, which is what the objective's $\sum_{\alpha<\beta<\gamma}$ convention wants. So the block is self-consistent and reads against the file that governs it.
 
 **It costs the bound nothing, and the reason matters.** If the marginal were read as an equality at the wrong value, the true $T$ would be *infeasible* and the very first step $\theta\le\mathrm{LP}(\lambda)$ would fail. It survives only because the marginals are dropped one line later. **A constraint that is stated ambiguously and then discarded is safe; the same ambiguity in a constraint that is kept is not.**
 
@@ -180,7 +180,7 @@ The same file already carries this defect once, at line 389 (*"$\sup\theta\le\sq
 
 ## The quantifier "any $m$"
 
-**The smallest $m$ at which the claim has content is $m=4$, and the bound is attained there.** $\mathcal W_m$ is trivial below $4$ and has dimension $10$ at $m=4$. At $m=4$, $W=W_+\oplus W_-$ with both blocks trace-free $3\times3$; taking $W_-=0$ and $W_+\propto\operatorname{diag}(2,-1,-1)$ gives $W_{\mathbb{CP}^2}$, whose $\Lambda^2$ spectrum is $(2,-1,-1,0,0,0)/\sqrt6$, exactly two negative eigenvalues, and $\theta=\sqrt{3/2}$. **So the hypothesis is non-vacuous and the bound sharp at the smallest dimension in range**, and by the padding row of [conventions.md](../findings/conventions.md) it stays attained at every larger $m$.
+**The smallest $m$ at which the claim has content is $m=4$, and the bound is attained there.** $\mathcal W_m$ is trivial below $4$ and has dimension $10$ at $m=4$. At $m=4$, $W=W_+\oplus W_-$ with both blocks trace-free $3\times3$; taking $W_-=0$ and $W_+\propto\mathop{\mathrm{diag}}(2,-1,-1)$ gives $W_{\mathbb{CP}^2}$, whose $\Lambda^2$ spectrum is $(2,-1,-1,0,0,0)/\sqrt6$, exactly two negative eigenvalues, and $\theta=\sqrt{3/2}$. **So the hypothesis is non-vacuous and the bound sharp at the smallest dimension in range**, and by the padding row of [conventions.md](../findings/conventions.md) it stays attained at every larger $m$.
 
 **How L35 relates to [Lemma L29](../findings/stratum-two-negative.md).** L29 assumes *exactly one positive and two negative*; L35 assumes *at most two negative, any number of positive*. **L35 strictly generalises L29's hypothesis and reaches the same constant**, and it does not merely extend it: at $k=1$ the chain collapses to $g(A)$, whose maximum over the forced domain $A\le A_0$ is $\sqrt{3/2}$ at $A=A_0$, L29's conclusion, by L35's own machinery. The two are consistent on their overlap, which I checked at the shared extremiser above.
 
@@ -226,7 +226,7 @@ $91$ occurrences of the identifier, in $39$ files. Grepping the **statement** ra
 
 ## Convention check
 
-- **The norm.** Read against [conventions.md](../findings/conventions.md) rather than the block: $\theta=P(W)/\lVert W\rVert^3$ and $\sum_\alpha\lambda_\alpha^2=\operatorname{tr}(W^2)=1$ at unit norm. The pair cap $\lVert[X,Y]\rVert^2\le2$ is stated in the half-trace pairing, which is the pairing the $\Lambda^2$ spectrum lives in, so **no conversion is owed anywhere in the chain** and none is silently taken. The $\sqrt2$ trap of the $M$/$W$ row does not arise: L35 never touches the sectional matrix.
+- **The norm.** Read against [conventions.md](../findings/conventions.md) rather than the block: $\theta=P(W)/\lVert W\rVert^3$ and $\sum_\alpha\lambda_\alpha^2=\mathop{\mathrm{tr}}(W^2)=1$ at unit norm. The pair cap $\lVert[X,Y]\rVert^2\le2$ is stated in the half-trace pairing, which is the pairing the $\Lambda^2$ spectrum lives in, so **no conversion is owed anywhere in the chain** and none is silently taken. The $\sqrt2$ trap of the $M$/$W$ row does not arise: L35 never touches the sectional matrix.
 - **The index order.** [conventions.md](../findings/conventions.md) records that this whole file is written in Bourguignon–Karcher's $ikjl$ while the record is on Li's $iklj$. **L35 is immune**: nothing in it mentions $\mathring W$, and $\theta$, $Q$, $W^\#$ and the pair cap are all order-free.
 - **Warning [W5](../findings/INDEX-traps.md).** $\Theta_n$ against $M(n)$. L35 never writes $\Theta_n$, and the comparison it feeds is against $\theta_0(n)$, which is the right object. **Clean.** The neighbouring section at line 606 also uses $\theta_0(n)$ correctly.
 - **$\Pi$, $\mathfrak m$, $B$, $b$, $d$, $t$, $M$.** Of the collisions [conventions.md](../findings/conventions.md) tables, four are live in this block: $b$ (here a negative eigenvalue's magnitude), $d$, $t$ and $M$. Only $d$ and $M$ are load-bearing and undefined; see D4.
@@ -238,7 +238,7 @@ $91$ occurrences of the identifier, in $39$ files. Grepping the **statement** ra
 | # | defect | verdict |
 | --- | --- | --- |
 | D1 | the identity is stated as needing no hypothesis; it needs $\lVert W\rVert=1$ | **REAL**, repair given, one clause |
-| D2 | the chain consumes $\operatorname{tr}W=0$ and $\lVert W\rVert=1$ and names neither | **REAL**, and it hides a stronger theorem than the one claimed |
+| D2 | the chain consumes $\mathop{\mathrm{tr}}W=0$ and $\lVert W\rVert=1$ and names neither | **REAL**, and it hides a stronger theorem than the one claimed |
 | D3 | the row marginal $m-2$ reads against [conventions.md](../findings/conventions.md)'s ordered-pair default, and carries no result number | **MINOR**, right under the unordered reading, and harmless because the constraint is dropped |
 | D4 | nine load-bearing symbols undefined anywhere on the record; $d$, $T$ and $M$ collide with defined objects | **REAL**, and the largest defect here |
 | D5 | the block credits $(0.7,A_0]$ to an endpoint expansion its own file withdraws, and overstates the $F'>0$ certificate | **REAL**, bound unaffected |

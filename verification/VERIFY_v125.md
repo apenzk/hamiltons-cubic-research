@@ -25,7 +25,7 @@
 
 Fixed from [findings/conventions.md](../findings/conventions.md):55–68 before anything was checked, because two of the block's three constants are convention-carried.
 
-- **The pairing.** $\tfrac12\operatorname{tr}(X^{\mathsf T}Y)$ at the $\Lambda^2$ level, plain Frobenius on the pair matrix, so $\{\varphi_{ab}\}_{a<b}$ is orthonormal. For $A$ in $\Lambda^4\subset S^2(\Lambda^2)$ this makes $\lVert A\rVert^2=\sum_{i<j,\;k<l}A_{ijkl}^2=\tfrac14\sum_{i,j,k,l}A_{ijkl}^2$. **This quarter is where the block's $24$ comes from**, and the same file records that under plain Frobenius on $\Lambda^2$ the companion constant $6$ becomes $4$.
+- **The pairing.** $\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$ at the $\Lambda^2$ level, plain Frobenius on the pair matrix, so $\{\varphi_{ab}\}_{a<b}$ is orthonormal. For $A$ in $\Lambda^4\subset S^2(\Lambda^2)$ this makes $\lVert A\rVert^2=\sum_{i<j,\;k<l}A_{ijkl}^2=\tfrac14\sum_{i,j,k,l}A_{ijkl}^2$. **This quarter is where the block's $24$ comes from**, and the same file records that under plain Frobenius on $\Lambda^2$ the companion constant $6$ becomes $4$.
 - **$\#$** is the halved Böhm–Wilking product; **$\mathrm{Ric}$** is the adjoint of $\cdot\wedge\mathrm{id}$, with $\lVert\mathrm{Ric}\rVert$ the Frobenius norm of the resulting symmetric $n\times n$ matrix.
 - **Spectral parts.** $W=W_+-W_-$ with $W_\pm\succeq0$, so $\lvert W\rvert=W+2W_-$; $P_\pm,P_0$ are the spectral projections, $P_0$ onto $\ker\lvert W\rvert$. $\delta^2:=\lVert\mathrm{Alt}(W_-)\rVert^2$.
 - **The three thresholds, from the primary source's Notation 3.0.3** ([diss_jaeger_florian.txt](https://repositorium.uni-muenster.de/document/miami/820840d1-0252-4bf3-8fc7-853730eee3f5/diss_jaeger_florian.pdf):1767–1772), read rather than recalled:
@@ -47,12 +47,12 @@ Fixed from [findings/conventions.md](../findings/conventions.md):55–68 before 
 | H3 | $r=\lVert\mathrm{Ric}(\lvert W\rvert)\rVert\ne0$ | $S=\mathrm{Ric}/r$ and $\widehat{\mathrm{Ric}\owedge\mathrm{Ric}}$ are undefined otherwise | nowhere stated; the record's proven scal floor is where it would be discharged | no |
 | H4 | $\langle\lvert W\rvert,\widehat{\mathrm{Ric}\owedge\mathrm{Ric}}\rangle\ge0$, i.e. the leading term's sign | writing the leading coefficient as $+\sqrt{1-e^2}$ | **tested only**, [REVIEW_r9.md](../reviews/REVIEW_r9.md) §1: *"the cosine … which was positive at every point tested"* | no |
 | H5 | The Gram identity $D(R)=\tfrac32\,\mathrm{Gram}(\mathrm{Alt}\,R)$ | the whole pricing claim | **proven**, symbolically, in [REVIEW_r9.md](../reviews/REVIEW_r9.md) §2 | the constant is quoted; the proof's location is not |
-| H6 | $D\succeq0$ as an $n\times n$ matrix | $J_4\le\lambda_{\max}\operatorname{tr}D$ | free, from H5 (a Gram matrix) | yes, as *"positive-semidefinite"* |
+| H6 | $D\succeq0$ as an $n\times n$ matrix | $J_4\le\lambda_{\max}\mathop{\mathrm{tr}}D$ | free, from H5 (a Gram matrix) | yes, as *"positive-semidefinite"* |
 | H7 | $J_5\ge0$ | replaces the refuted $X_{\mathrm{inv}}\succeq0$ | **proven on the commuting class $[H,W]=0$** ([ATTEMPTS.md](../ATTEMPTS.md) Result 13, single-run, script halted at part 4 of 7); open off it | yes, this is the one grant |
 | H8 | The E-track certificate | produces $c(12)$, hence the quoted $10^{-3}$ | [LEDGER.md](../findings/LEDGER.md):39, *"single-author since inception; never audited"* | **no** |
 | H9 | Lemma 3.4.7's frame-free assembly (Jäger's Assumption 1/2 bookkeeping) | §3.4 → §3.5 hand-off | **owed**, [ATTEMPTS.md](../ATTEMPTS.md) Result 8's own Consequence: *"the remaining bookkeeping is the frame-free Lemma 3.4.7 assembly plus §3.6"*; Result 7 records 3.4.7 as *spot-verified numerically* | no |
 | H10 | Lifted Lemma 3.3.5 | load-bearing for $c(12)$ | **discharged** by Result 11 (proven, with constant $4(n-1-\nu_0)$ in place of $4(n-2)$); Result 11 is itself marked *single-run, unreviewed* | no, and it need not be, being discharged |
-| H11 | Jäger's $x\le2$ hypothesis | the lifted Lemma 3.3.6 ceiling on $\operatorname{tr}S^4$ | a **scope limit**, not a grant: Result 10 records the chain going vacuous for $\delta^2\gtrsim0.04$ | no |
+| H11 | Jäger's $x\le2$ hypothesis | the lifted Lemma 3.3.6 ceiling on $\mathop{\mathrm{tr}}S^4$ | a **scope limit**, not a grant: Result 10 records the chain going vacuous for $\delta^2\gtrsim0.04$ | no |
 | H12 | $\theta$ above the threshold | Corollary 3.2.6, and Assumption 2's contradiction | present in the source; see §6 on strictness | yes, as *"clearing the threshold"* |
 | H13 | An $n$ for which $c(n)>0$ is established | the dichotomy's second branch | computed at $n=12$ only | no |
 
@@ -74,19 +74,19 @@ Three steps carry the claim.
 
 **Step 2, the trace, and where the $4$ enters.** Taking $i=j$ and summing,
 
-$$\operatorname{tr}D(R)=\tfrac32\sum_{i,k,l,m}\mathrm{Alt}(R)_{iklm}^2=\tfrac32\cdot4\,\lVert\mathrm{Alt}(R)\rVert^2=6\,\lVert\mathrm{Alt}(R)\rVert^2,$$
+$$\mathop{\mathrm{tr}}D(R)=\tfrac32\sum_{i,k,l,m}\mathrm{Alt}(R)_{iklm}^2=\tfrac32\cdot4\,\lVert\mathrm{Alt}(R)\rVert^2=6\,\lVert\mathrm{Alt}(R)\rVert^2,$$
 
 the factor $4$ being exactly §0's $\lVert A\rVert^2=\tfrac14\sum_{ijkl}A_{ijkl}^2$ for $A\in\Lambda^4$ under the record's pairing. **This reproduces the record's scal-level constant $6$ from the component-level constant $\tfrac32$**, so the two are one statement and neither is free-standing.
 
 Now $\lvert W\rvert=W+2W_-$ and $\mathrm{Alt}(W)=0$ give $\mathrm{Alt}(\lvert W\rvert)=2\,\mathrm{Alt}(W_-)$, hence $\lVert\mathrm{Alt}(\lvert W\rvert)\rVert^2=4\delta^2$ and
 
-$$\operatorname{tr}D(\lvert W\rvert)=6\cdot4\,\delta^2=24\,\delta^2 .$$
+$$\mathop{\mathrm{tr}}D(\lvert W\rvert)=6\cdot4\,\delta^2=24\,\delta^2 .$$
 
 **The $24$ is right, and it is $6\cdot4$ where the $6$ is the norm conversion and the $4$ is the squared spectral factor**, the record states this and I confirm it by hand.
 
 **Step 3, the bound.** For $D\succeq0$ and any symmetric $\mathrm{Ric}$, diagonalise $D=\sum_k\mu_k u_ku_k^{\mathsf T}$ with $\mu_k\ge0$; then
-$$J_4=\langle D,\mathrm{Ric}\rangle=\sum_k\mu_k\,u_k^{\mathsf T}\mathrm{Ric}\,u_k\le\lambda_{\max}(\mathrm{Ric})\sum_k\mu_k=\lambda_{\max}(\mathrm{Ric})\operatorname{tr}D=24\,\delta^2\,\lambda_{\max}(\mathrm{Ric}(\lvert W\rvert)).$$
-No sign condition on $\mathrm{Ric}$ is needed. **Equality holds exactly when $\mathrm{Ric}$ acts as $\lambda_{\max}$ on $\operatorname{ran}D$**, which is the record's stated equality criterion.
+$$J_4=\langle D,\mathrm{Ric}\rangle=\sum_k\mu_k\,u_k^{\mathsf T}\mathrm{Ric}\,u_k\le\lambda_{\max}(\mathrm{Ric})\sum_k\mu_k=\lambda_{\max}(\mathrm{Ric})\mathop{\mathrm{tr}}D=24\,\delta^2\,\lambda_{\max}(\mathrm{Ric}(\lvert W\rvert)).$$
+No sign condition on $\mathrm{Ric}$ is needed. **Equality holds exactly when $\mathrm{Ric}$ acts as $\lambda_{\max}$ on $\mathop{\mathrm{ran}}D$**, which is the record's stated equality criterion.
 
 ### 2.2 Is it unconditional, pointwise and dimension-free?
 
@@ -195,13 +195,13 @@ Since $0<1-e^2\le1$, dividing a positive penalty by $\sqrt{1-e^2}$ **strictly in
 **Locate it exactly.** [problem.md](../findings/problem.md):309: *"Spectral compressions of the criticality equation turn the workhorse inequality of Jäger's §3.3 into an exact identity holding at every critical point in every frame, verified at machine precision on the named families and on generic saddle points alike."*
 
 The identity is [ATTEMPTS.md](../ATTEMPTS.md) Result 1:
-$$\theta r^2=\sqrt2\,r^2\sqrt{1-\operatorname{tr}S^4}\,\sqrt{1-e^2}\;-\;2\langle\mathrm{Ric}(W_-^2),\mathrm{Ric}\rangle\;+\;J_4\;-\;J_5 .$$
+$$\theta r^2=\sqrt2\,r^2\sqrt{1-\mathop{\mathrm{tr}}S^4}\,\sqrt{1-e^2}\;-\;2\langle\mathrm{Ric}(W_-^2),\mathrm{Ric}\rangle\;+\;J_4\;-\;J_5 .$$
 
 **Exhibit the failure concretely.** The only argument on file is [REVIEW_r9.md](../reviews/REVIEW_r9.md) §1, which supplies a four-line hand derivation and then says of the leading factor:
 
 > *"the '$\sqrt{1-e^2}$' factor is the cosine $c=\langle|W|,\widehat{\mathrm{Ric}\owedge\mathrm{Ric}}\rangle$, **which was positive at every point tested**."*
 
-The decomposition $\lvert W\rvert=c\,\widehat{\mathrm{Ric}\owedge\mathrm{Ric}}+E$ determines $\lvert c\rvert=\sqrt{1-e^2}$ but not the sign of $c$; writing the leading term as $+\sqrt2\,r^2\sqrt{1-\operatorname{tr}S^4}\sqrt{1-e^2}$ **asserts $c\ge0$**. At a critical point where $c<0$ the leading term flips sign and every downstream inequality of the lifted §§3.3–3.5 chain reverses direction at its dominant term. Nothing in [problem.md](../findings/problem.md), [ATTEMPTS.md](../ATTEMPTS.md) or [results.md](../results.md) proves $c\ge0$; the two remaining links of the same hand proof ($\langle\lvert W\rvert.\mathrm{Ric},\mathrm{Ric}\rangle=\langle\lvert W\rvert,\mathrm{Ric}\owedge\mathrm{Ric}\rangle$ and $\lVert\mathrm{Ric}\owedge\mathrm{Ric}\rVert=\sqrt2\,r^2\sqrt{1-\operatorname{tr}S^4}$) are likewise recorded as *"verified here to $10^{-15}$"* and *"printed explicitly in the script"*.
+The decomposition $\lvert W\rvert=c\,\widehat{\mathrm{Ric}\owedge\mathrm{Ric}}+E$ determines $\lvert c\rvert=\sqrt{1-e^2}$ but not the sign of $c$; writing the leading term as $+\sqrt2\,r^2\sqrt{1-\mathop{\mathrm{tr}}S^4}\sqrt{1-e^2}$ **asserts $c\ge0$**. At a critical point where $c<0$ the leading term flips sign and every downstream inequality of the lifted §§3.3–3.5 chain reverses direction at its dominant term. Nothing in [problem.md](../findings/problem.md), [ATTEMPTS.md](../ATTEMPTS.md) or [results.md](../results.md) proves $c\ge0$; the two remaining links of the same hand proof ($\langle\lvert W\rvert.\mathrm{Ric},\mathrm{Ric}\rangle=\langle\lvert W\rvert,\mathrm{Ric}\owedge\mathrm{Ric}\rangle$ and $\lVert\mathrm{Ric}\owedge\mathrm{Ric}\rVert=\sqrt2\,r^2\sqrt{1-\mathop{\mathrm{tr}}S^4}$) are likewise recorded as *"verified here to $10^{-15}$"* and *"printed explicitly in the script"*.
 
 **Argue the opposite.** $\lvert W\rvert\succeq0$ and $\mathrm{Ric}\owedge\mathrm{Ric}$ is built from $\mathrm{Ric}(\lvert W\rvert)$, so $c\ge0$ is plausible on general grounds, and Jäger works in the diagonal case where it may be immediate. **That is a reason to expect the statement, not an argument for it, and the record carries no argument**, so I state the debt and stop. **A verifier who supplied the missing positivity proof here would be handing the record a fresh proof nobody audited.**
 
@@ -249,8 +249,8 @@ The decomposition $\lvert W\rvert=c\,\widehat{\mathrm{Ric}\owedge\mathrm{Ric}}+E
 
 1. **The Gram identity.** $D(R)=\tfrac32\,\mathrm{Gram}(\mathrm{Alt}\,R)$ for every symmetric $R$ on $\Lambda^2\mathbb R^n$, every $n$, symbolic proof in [REVIEW_r9.md](../reviews/REVIEW_r9.md) §2, using only the $S^2(\Lambda^2)$ symmetries.
 2. **$D\succeq0$**, free from 1.
-3. **$\operatorname{tr}D(\lvert W\rvert)=24\delta^2$**, under the record's pairing (§0), from 1 plus $\mathrm{Alt}(\lvert W\rvert)=2\mathrm{Alt}(W_-)$.
-4. **$J_4\le24\,\delta^2\,\lambda_{\max}(\mathrm{Ric}(\lvert W\rvert))$** at every Weyl $W$ (no criticality, no dimension bound), with equality iff $\mathrm{Ric}$ acts as $\lambda_{\max}$ on $\operatorname{ran}D$.
+3. **$\mathop{\mathrm{tr}}D(\lvert W\rvert)=24\delta^2$**, under the record's pairing (§0), from 1 plus $\mathrm{Alt}(\lvert W\rvert)=2\mathrm{Alt}(W_-)$.
+4. **$J_4\le24\,\delta^2\,\lambda_{\max}(\mathrm{Ric}(\lvert W\rvert))$** at every Weyl $W$ (no criticality, no dimension bound), with equality iff $\mathrm{Ric}$ acts as $\lambda_{\max}$ on $\mathop{\mathrm{ran}}D$.
 5. **Lifted Lemmas 3.4.6, 3.4.3 and 3.4.8**, with hand proofs in [ATTEMPTS.md](../ATTEMPTS.md) Result 8 (one cosmetic index-order slip flagged by [REVIEW_r9.md](../reviews/REVIEW_r9.md) §5).
 6. **Lifted Lemma 3.3.5's replacement**, [ATTEMPTS.md](../ATTEMPTS.md) Result 11, with the weaker constant $4(n-1-\nu_0)$; marked single-run and unreviewed.
 7. **$J_5\ge0$ on the commuting class $[H,W]=0$**, [ATTEMPTS.md](../ATTEMPTS.md) Result 13 Theorem B; and $J_5^{\mathrm{diag}}\ge0$ unconditionally, Result 5(b).
@@ -260,7 +260,7 @@ The decomposition $\lvert W\rvert=c\,\widehat{\mathrm{Ric}\owedge\mathrm{Ric}}+E
 
 **What a consumer may cite, exactly.**
 
-> *For every Weyl operator $W$ on $\Lambda^2\mathbb R^n$, at every $n\ge4$, the Bianchi correction $D(\lvert W\rvert)$ is positive semidefinite with $\operatorname{tr}D(\lvert W\rvert)=24\lVert\mathrm{Alt}(W_-)\rVert^2$ under the record's $\Lambda^2$ pairing, so $J_4=\langle D(\lvert W\rvert),\mathrm{Ric}(\lvert W\rvert)\rangle\le24\,\delta^2\,\lambda_{\max}(\mathrm{Ric}(\lvert W\rvert))$, with equality at the $\mathbb{CP}^2$-type competitor.*
+> *For every Weyl operator $W$ on $\Lambda^2\mathbb R^n$, at every $n\ge4$, the Bianchi correction $D(\lvert W\rvert)$ is positive semidefinite with $\mathop{\mathrm{tr}}D(\lvert W\rvert)=24\lVert\mathrm{Alt}(W_-)\rVert^2$ under the record's $\Lambda^2$ pairing, so $J_4=\langle D(\lvert W\rvert),\mathrm{Ric}(\lvert W\rvert)\rangle\le24\,\delta^2\,\lambda_{\max}(\mathrm{Ric}(\lvert W\rvert))$, with equality at the $\mathbb{CP}^2$-type competitor.*
 
 **Nothing about the dichotomy may be cited as a lemma**, and nothing about it may be cited without naming $J_5\ge0$ off the commuting class, the E-track certificate, and $n=12$.
 
@@ -281,7 +281,7 @@ Read alone, the pricing sentence in [problem.md](../findings/problem.md):311 is 
 
 | Statement | The object that would falsify it | What I did |
 |---|---|---|
-| The pricing bound (§2) | a symmetric $R$ with $x^{\mathsf T}D(R)x<0$ for some $x$, or a Weyl $W$ with $\langle D,\mathrm{Ric}\rangle>\lambda_{\max}\operatorname{tr}D$ | derived both from the Gram form by hand; **neither can exist given the identity**, so the only falsifier is a counterexample to the identity itself, which [REVIEW_r9.md](../reviews/REVIEW_r9.md) §2 proves symbolically in every dimension from the $S^2(\Lambda^2)$ symmetries alone |
+| The pricing bound (§2) | a symmetric $R$ with $x^{\mathsf T}D(R)x<0$ for some $x$, or a Weyl $W$ with $\langle D,\mathrm{Ric}\rangle>\lambda_{\max}\mathop{\mathrm{tr}}D$ | derived both from the Gram form by hand; **neither can exist given the identity**, so the only falsifier is a counterexample to the identity itself, which [REVIEW_r9.md](../reviews/REVIEW_r9.md) §2 proves symbolically in every dimension from the $S^2(\Lambda^2)$ symmetries alone |
 | The constant $24$ | a pairing convention on $\Lambda^4$ other than $\tfrac14\sum_{ijkl}$ | found one, [conventions.md](../findings/conventions.md):57 records plain Frobenius sending the companion $6$ to $4$, hence $24$ to $16$; **the block does not name its convention** |
 | The identity (H4) | a critical point with $\langle\lvert W\rvert,\widehat{\mathrm{Ric}\owedge\mathrm{Ric}}\rangle<0$ | searched [problem.md](../findings/problem.md), [ATTEMPTS.md](../ATTEMPTS.md) Results 1–13, [REVIEW_r9.md](../reviews/REVIEW_r9.md) and the source for a positivity proof; **found only "positive at every point tested"**. Under the analysis-only rule I opened no search for such a point and did not screen for one; the finding is the absence of the argument |
 | The three-names identification | an $n$ where $\tilde\theta_0(n)$, $\hat\theta_0(n)$, $\Theta_n$ differ | **found: every $n>3$ for $\hat\theta_0$, every even $n$ for $\Theta_n$**; exhibited at $n=12$ by comparing $99/65$, $55/36$, $220/117$ as exact rationals |

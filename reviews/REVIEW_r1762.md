@@ -22,9 +22,9 @@
 
 ## The record
 
-Statement (1), quoted in full: *"(1) For every $X\in\operatorname{End}(\mathfrak{so}(n))$, with $\#$ extended off $\operatorname{Sym}^2$ by $(X\#Y)_{\alpha\beta}=\tfrac12c_\alpha^{\gamma\delta}c_\beta^{\varepsilon\zeta}X_{\gamma\varepsilon}Y_{\delta\zeta}$ (the rows of both factors in one structure constant, so $F(X)=\tfrac12\sum\sigma_a\sigma_b\sigma_c\langle u_c,[u_a,u_b]\rangle\langle v_c,[v_a,v_b]\rangle$ at $X=\sum\sigma_au_a\otimes v_a$), $F(X)\le\tfrac12\big(F(|X^{\mathsf T}|)+F(|X|)\big)$, so [L259]'s $\kappa_n$ is attained on the PSD cone and a norm-minimal $\#$-idempotent can be taken PSD."*
+Statement (1), quoted in full: *"(1) For every $X\in\mathop{\mathrm{End}}(\mathfrak{so}(n))$, with $\#$ extended off $\mathop{\mathrm{Sym}}^2$ by $(X\#Y)_{\alpha\beta}=\tfrac12c_\alpha^{\gamma\delta}c_\beta^{\varepsilon\zeta}X_{\gamma\varepsilon}Y_{\delta\zeta}$ (the rows of both factors in one structure constant, so $F(X)=\tfrac12\sum\sigma_a\sigma_b\sigma_c\langle u_c,[u_a,u_b]\rangle\langle v_c,[v_a,v_b]\rangle$ at $X=\sum\sigma_au_a\otimes v_a$), $F(X)\le\tfrac12\big(F(|X^{\mathsf T}|)+F(|X|)\big)$, so [L259]'s $\kappa_n$ is attained on the PSD cone and a norm-minimal $\#$-idempotent can be taken PSD."*
 
-The convention paragraph, quoted in full: *"**The convention in (1) is load-bearing off $\operatorname{Sym}^2$.** In the layer's operator convention, $\langle(A\#B)\varphi,\psi\rangle=\tfrac12\sum\langle[A\omega_a,B\omega_b],\varphi\rangle\langle[\omega_a,\omega_b],\psi\rangle$, the matrix of $X\#X$ is the transpose of the one above, $F$ pairs rows with columns, and (1) fails: a screen of 2000 random $X$ on $\mathfrak{so}(4)$ gives a gap up to $+24.5$ there against at most $-6.3$ in the convention above, the two agreeing on $\operatorname{Sym}^2$ (the lean session's finding, reproduced independently). Nothing downstream moves: $\kappa_n$ is a supremum over $\operatorname{Sym}^2$, and (1) is used only at self-adjoint $X$, where `L260_psd_cone` proves it."*
+The convention paragraph, quoted in full: *"**The convention in (1) is load-bearing off $\mathop{\mathrm{Sym}}^2$.** In the layer's operator convention, $\langle(A\#B)\varphi,\psi\rangle=\tfrac12\sum\langle[A\omega_a,B\omega_b],\varphi\rangle\langle[\omega_a,\omega_b],\psi\rangle$, the matrix of $X\#X$ is the transpose of the one above, $F$ pairs rows with columns, and (1) fails: a screen of 2000 random $X$ on $\mathfrak{so}(4)$ gives a gap up to $+24.5$ there against at most $-6.3$ in the convention above, the two agreeing on $\mathop{\mathrm{Sym}}^2$ (the lean session's finding, reproduced independently). Nothing downstream moves: $\kappa_n$ is a supremum over $\mathop{\mathrm{Sym}}^2$, and (1) is used only at self-adjoint $X$, where `L260_psd_cone` proves it."*
 
 Proof (1), quoted in full: *"(1) Expand $F$ over the singular value decomposition and apply $ab\le\tfrac12(a^2+b^2)$ to each term, whose weight $\sigma_k\sigma_l\sigma_m$ is nonnegative. A PSD maximiser is then a global maximiser, hence critical."*
 
@@ -64,7 +64,7 @@ Proof (1), quoted in full: *"(1) Expand $F$ over the singular value decompositio
 
 ## Q7. The INDEX row
 
-- Correct: the file list adds L260One.lean, the new clause "**(1) at every $X$ is PROVED** in L260One.lean, in the rows-together extension of $F$ off $\operatorname{Sym}^2$ the record now states" describes `L260_one` accurately, and the screen paragraph matches both the record and this review's screen.
+- Correct: the file list adds L260One.lean, the new clause "**(1) at every $X$ is PROVED** in L260One.lean, in the rows-together extension of $F$ off $\mathop{\mathrm{Sym}}^2$ the record now states" describes `L260_one` accurately, and the screen paragraph matches both the record and this review's screen.
 - Stale (O1): the row's opening summary still reads *"every typed clause proved, at $\mathfrak h=\mathfrak{so}(n)$ and self-adjoint $X$"*, and the screen paragraph still ends *"Routed to the research session."*, although the record now states the convention and the row itself says (1) is proved at every X.
 
 ## Overall verdict

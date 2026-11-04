@@ -30,7 +30,7 @@ Dimensions, by eigenvalue count on my own $\mathcal W_n$ basis:
 
 $155$ is confirmed a second way, by characters and with no linear algebra at all. With $\sigma=\mathrm{diag}(I_3,-I_5)$ and $\mathrm{Sym}^2(\Lambda^2)=\mathcal W\oplus\Lambda^4\oplus\mathrm{Sym}^2\mathbb R^n$,
 
-$$\operatorname{tr}_{\mathcal W}(\sigma)=\tfrac12\big(\chi_{\Lambda^2}(\sigma)^2+\chi_{\Lambda^2}(\sigma^2)\big)-\chi_{\Lambda^4}(\sigma)-\tfrac12\big(\chi(\sigma)^2+\chi(\sigma^2)\big)=16-0-6=10,$$
+$$\mathop{\mathrm{tr}}_{\mathcal W}(\sigma)=\tfrac12\big(\chi_{\Lambda^2}(\sigma)^2+\chi_{\Lambda^2}(\sigma^2)\big)-\chi_{\Lambda^4}(\sigma)-\tfrac12\big(\chi(\sigma)^2+\chi(\sigma^2)\big)=16-0-6=10,$$
 
 and $\dim V=\tfrac12(300+10)=155$. The same computation gives $12$ and $156$ at $(4,4)$, and $30$ and $834$ at $(6,6)$, $n=12$, all matching the measured values.
 

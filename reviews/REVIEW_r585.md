@@ -42,7 +42,7 @@ The steps exist, in [ATTEMPTS.md](../ATTEMPTS.md) lines 1183-1191 (the numbered 
 | clause | status | grade |
 | --- | --- | --- |
 | $S\ge0$ at a critical point | proved unconditionally by the decomposition at [ATTEMPTS.md](../ATTEMPTS.md) line 1224 | Lemma-grade, and the block owns none of the proof |
-| $S=\operatorname{tr}(P_{E_-}W_-^\#P_{E_-})$ under the two conditions | proved (chain steps 1-7, modulo F1/F2 which the hypotheses supply) | Lemma-grade, conditional; proof off-file |
+| $S=\mathop{\mathrm{tr}}(P_{E_-}W_-^\#P_{E_-})$ under the two conditions | proved (chain steps 1-7, modulo F1/F2 which the hypotheses supply) | Lemma-grade, conditional; proof off-file |
 | the closed-form expansion $\tfrac12\sum\mu_i\mu_j\lVert P_{E_-}[v_i,v_j]\rVert^2$ | proved from rank-one $\#$-positivity | Lemma-grade; proof off-file |
 | the $239$-point gap, the ceiling, the $S=4/7$ non-monotonicity | measured | Observation-grade, correctly labelled |
 
@@ -90,8 +90,8 @@ The sentence has no referent for *"the supporting trace lemmas"*, and on the rea
 
 **There are four trace identities in the chain**, and they split cleanly:
 
-- **(A)** $\operatorname{tr}(W_+^2)+\operatorname{tr}(W_+^\#)=\operatorname{tr}(W_-^2)+\operatorname{tr}(W_-^\#)$ and **(B)** $\operatorname{tr}(W_-^2)+\operatorname{tr}(W_-^\#)=\operatorname{tr}(W_+\#W_-)$, [ATTEMPTS.md](../ATTEMPTS.md) lines 1205-1207. These do hold where the bracket conditions fail.
-- **(F1)** $\operatorname{tr}(P_-W_+^\#P_-)=0$ and **(F2)** $\operatorname{tr}(W_-^2)+\operatorname{tr}(W_-^\#)=\operatorname{tr}(P_-(W_+\#W_-)P_-)$, chain steps 5 and 6, lines 1189-1190. These are trace identities too, they are the block's *"supporting"* steps in the most literal sense, and [ATTEMPTS.md](../ATTEMPTS.md) line 1209 proves
+- **(A)** $\mathop{\mathrm{tr}}(W_+^2)+\mathop{\mathrm{tr}}(W_+^\#)=\mathop{\mathrm{tr}}(W_-^2)+\mathop{\mathrm{tr}}(W_-^\#)$ and **(B)** $\mathop{\mathrm{tr}}(W_-^2)+\mathop{\mathrm{tr}}(W_-^\#)=\mathop{\mathrm{tr}}(W_+\#W_-)$, [ATTEMPTS.md](../ATTEMPTS.md) lines 1205-1207. These do hold where the bracket conditions fail.
+- **(F1)** $\mathop{\mathrm{tr}}(P_-W_+^\#P_-)=0$ and **(F2)** $\mathop{\mathrm{tr}}(W_-^2)+\mathop{\mathrm{tr}}(W_-^\#)=\mathop{\mathrm{tr}}(P_-(W_+\#W_-)P_-)$, chain steps 5 and 6, lines 1189-1190. These are trace identities too, they are the block's *"supporting"* steps in the most literal sense, and [ATTEMPTS.md](../ATTEMPTS.md) line 1209 proves
 
   $$\textbf{F1}\iff[E_+,E_+]\perp E_-,\qquad \textbf{F2}\iff[E_+,E_-]\subseteq E_-.$$
 
@@ -140,11 +140,11 @@ The record agrees with the second. [ATTEMPTS.md](../ATTEMPTS.md) line 1174: *"Th
 
 The block's title promises *"its slack has a closed form"* and delivers a conditional one on an undefined class. The record holds
 
-$$S=T_1+2T_2+T_3,\qquad T_1=\operatorname{tr}(P_-W_+^\#P_-),\quad T_2=\operatorname{tr}\bigl((1-P_-)(W_+\#W_-)(1-P_-)\bigr),\quad T_3=\operatorname{tr}(P_-W_-^\#P_-)=\tfrac12G_1,$$
+$$S=T_1+2T_2+T_3,\qquad T_1=\mathop{\mathrm{tr}}(P_-W_+^\#P_-),\quad T_2=\mathop{\mathrm{tr}}\bigl((1-P_-)(W_+\#W_-)(1-P_-)\bigr),\quad T_3=\mathop{\mathrm{tr}}(P_-W_-^\#P_-)=\tfrac12G_1,$$
 
 **at every critical point with no hypotheses whatever**, each term a compression of a PSD operator and so nonnegative ([ATTEMPTS.md](../ATTEMPTS.md) line 1224, Gate 2 passed). The block's identity is the special case $T_1=T_2=0$.
 
-I rebuilt this by hand and it is right. From step 3, $S=2\operatorname{tr}(W_-^2)+2\operatorname{tr}(W_-^\#)+\operatorname{tr}(P_-W^\#P_-)$; (A)+(B) replace the first two terms by $2\operatorname{tr}(W_+\#W_-)$; $W^\#=W_+^\#-2W_+\#W_-+W_-^\#$ splits the third into $T_1-2\operatorname{tr}(P_-(W_+\#W_-)P_-)+T_3$; and for symmetric $X$, $\operatorname{tr}(X)-\operatorname{tr}(P_-XP_-)=\operatorname{tr}((1-P_-)X(1-P_-))$, so the two $W_+\#W_-$ terms combine to exactly $2T_2$. No hypothesis enters.
+I rebuilt this by hand and it is right. From step 3, $S=2\mathop{\mathrm{tr}}(W_-^2)+2\mathop{\mathrm{tr}}(W_-^\#)+\mathop{\mathrm{tr}}(P_-W^\#P_-)$; (A)+(B) replace the first two terms by $2\mathop{\mathrm{tr}}(W_+\#W_-)$; $W^\#=W_+^\#-2W_+\#W_-+W_-^\#$ splits the third into $T_1-2\mathop{\mathrm{tr}}(P_-(W_+\#W_-)P_-)+T_3$; and for symmetric $X$, $\mathop{\mathrm{tr}}(X)-\mathop{\mathrm{tr}}(P_-XP_-)=\mathop{\mathrm{tr}}((1-P_-)X(1-P_-))$, so the two $W_+\#W_-$ terms combine to exactly $2T_2$. No hypothesis enters.
 
 **The block advertises the weaker statement as its headline, and the stronger one is recorded six lines below it**, in [L132](../findings/ungraded-slack.md)'s withdrawal note, which says so in as many words: *"[ATTEMPTS.md](../ATTEMPTS.md)'s slack decomposition is that replacement, and it is stronger."* The block was not updated when that was written.
 
@@ -152,7 +152,7 @@ I rebuilt this by hand and it is right. From step 3, $S=2\operatorname{tr}(W_-^2
 
 Three separate quantifier gaps:
 
-- **$S\ge0$ is displayed with no hypothesis.** It is a fact about **critical points**, not about $\mathcal W_n$: the Gate-2 strengthening at [ATTEMPTS.md](../ATTEMPTS.md) line 1238 gives $S-(T_1+2T_2+T_3)=-\operatorname{tr}(P_-(Q(W)-\theta W)P_-)$, whose right side vanishes exactly on the critical set. Off it $S$ can be negative, and [ungraded-slack.md](../findings/ungraded-slack.md) itself records observed negative values, in the $n=6$ walk: *"what they measure is $S$ off the critical set, where the graded compression inequality does not apply, several sampled values are negative"*. The preceding sentence supplies the context; the display does not carry it.
+- **$S\ge0$ is displayed with no hypothesis.** It is a fact about **critical points**, not about $\mathcal W_n$: the Gate-2 strengthening at [ATTEMPTS.md](../ATTEMPTS.md) line 1238 gives $S-(T_1+2T_2+T_3)=-\mathop{\mathrm{tr}}(P_-(Q(W)-\theta W)P_-)$, whose right side vanishes exactly on the critical set. Off it $S$ can be negative, and [ungraded-slack.md](../findings/ungraded-slack.md) itself records observed negative values, in the $n=6$ walk: *"what they measure is $S$ off the critical set, where the graded compression inequality does not apply, several sampled values are negative"*. The preceding sentence supplies the context; the display does not carry it.
 - **No $n$ is stated anywhere in the block.** The inequality and the identity are dimension-free. The measurements are not: $239$ points at $n=8$ and $n=12$; the ceiling at $n=6$ and $n=8$ (line 69) or $n=8$ and $n=12$ ([ATTEMPTS.md](../ATTEMPTS.md) line 1150), the record disagrees with itself on which; the companion bound at $n=6\ldots24$. A reader has no way to tell which sentence is dimension-free.
 - **The class for the closed form is "the structured class"**, which D2 shows is defined nowhere.
 
@@ -172,11 +172,11 @@ Against [conventions.md](../findings/conventions.md), which the section note two
 
 - $\lVert\mathrm{Ric}(W_-)\rVert^2$, plain Frobenius on the $n\times n$ symmetric matrix;
 - $\delta^2=\lVert\mathrm{Alt}(W_-)\rVert^2$, at the $S^2(\Lambda^2)$ level;
-- $\operatorname{tr}(W_-)$, $\operatorname{tr}(W_-^2)$, operator traces on $\Lambda^2$, in the basis $\{\varphi_{ab}\}_{a<b}$ that [conventions.md](../findings/conventions.md) makes orthonormal.
+- $\mathop{\mathrm{tr}}(W_-)$, $\mathop{\mathrm{tr}}(W_-^2)$, operator traces on $\Lambda^2$, in the basis $\{\varphi_{ab}\}_{a<b}$ that [conventions.md](../findings/conventions.md) makes orthonormal.
 
 [conventions.md](../findings/conventions.md) warns in terms that *"the $\Lambda^2$ and $n\times n$ Frobenius pairings differ by a factor $2$"* and that *"two reviewers once disagreed on a value for exactly this reason"*, and this display is a place the two meet.
 
-**Pinned by hand, at the round sphere.** Take $R=\mathrm{Id}$ on $\Lambda^2\mathbb R^n$, the curvature operator of $S^n$ with sectional curvature $1$. Then $\mathrm{Id}^\#=(n-2)\mathrm{Id}$: by the rank-one identity, $\operatorname{tr}(\mathrm{Id}^\#)=\tfrac12\sum_{\alpha,\beta}\lVert[\varphi_\alpha,\varphi_\beta]\rVert^2=\tfrac12 N\cdot 2(n-2)=N(n-2)$ using [conventions.md](../findings/conventions.md)'s Killing marginal $\sum_\beta\lVert[v_\alpha,v_\beta]\rVert^2=2(n-2)$, and $\mathrm{Id}^\#$ is $SO(n)$-equivariant, hence scalar. So $\operatorname{tr}(R^2+R^\#)=N(n-1)$ and $\operatorname{scal}=2\operatorname{tr}$ gives $n(n-1)^2$. On the right, $\mathrm{Ric}=(n-1)\,\mathrm{Id}_n$ gives $\lVert\mathrm{Ric}\rVert_F^2=n(n-1)^2$, and $\mathrm{Alt}(R)=0$ by Bianchi. **They agree exactly**, which fixes $\lVert\mathrm{Ric}\rVert$ as the plain $n\times n$ Frobenius norm and $\operatorname{scal}=2\operatorname{tr}_{\Lambda^2}$. *The check leaves the normalisation of $\lVert\mathrm{Alt}\rVert$ against the constant $6$ untested, $\mathrm{Alt}$ vanishing there.*
+**Pinned by hand, at the round sphere.** Take $R=\mathrm{Id}$ on $\Lambda^2\mathbb R^n$, the curvature operator of $S^n$ with sectional curvature $1$. Then $\mathrm{Id}^\#=(n-2)\mathrm{Id}$: by the rank-one identity, $\mathop{\mathrm{tr}}(\mathrm{Id}^\#)=\tfrac12\sum_{\alpha,\beta}\lVert[\varphi_\alpha,\varphi_\beta]\rVert^2=\tfrac12 N\cdot 2(n-2)=N(n-2)$ using [conventions.md](../findings/conventions.md)'s Killing marginal $\sum_\beta\lVert[v_\alpha,v_\beta]\rVert^2=2(n-2)$, and $\mathrm{Id}^\#$ is $SO(n)$-equivariant, hence scalar. So $\mathop{\mathrm{tr}}(R^2+R^\#)=N(n-1)$ and $\mathop{\mathrm{scal}}=2\mathop{\mathrm{tr}}$ gives $n(n-1)^2$. On the right, $\mathrm{Ric}=(n-1)\,\mathrm{Id}_n$ gives $\lVert\mathrm{Ric}\rVert_F^2=n(n-1)^2$, and $\mathrm{Alt}(R)=0$ by Bianchi. **They agree exactly**, which fixes $\lVert\mathrm{Ric}\rVert$ as the plain $n\times n$ Frobenius norm and $\mathop{\mathrm{scal}}=2\mathop{\mathrm{tr}}_{\Lambda^2}$. *The check leaves the normalisation of $\lVert\mathrm{Alt}\rVert$ against the constant $6$ untested, $\mathrm{Alt}$ vanishing there.*
 
 So the display is **self-consistent under the reading the rest of the record uses**, but the block declares none of it, and [conventions.md](../findings/conventions.md) gives $S$ no formula to check against.
 
@@ -201,7 +201,7 @@ Counted in [findings/](../findings/), [results.md](../results.md) and [report/](
 
 ## Overall verdict, **REPAIRABLE; the mathematics stands, four clauses around it do not**
 
-**What is correct.** The definition of $S$; the inequality $S\ge0$ at critical points; the conditional identity $S=\operatorname{tr}(P_{E_-}W_-^\#P_{E_-})=\tfrac12\sum_{i,j}\mu_i\mu_j\lVert P_{E_-}[v_i,v_j]\rVert^2$ under $T_1=T_2=0$; the bilinear expansion; the honest conditionality clause with its $11.5$-against-$\tfrac12$ ratio; the $239$-point count ($209$ at $n=8$ plus $30$ at $n=12$, [ATTEMPTS.md](../ATTEMPTS.md) lines 1148, 1150); the $S=4/7$ non-monotonicity (three points at $0.540$, $0.720$, $0.837$, spread $0.297$); the $(S^m)^3$ refutation of the companion bound. I rebuilt the chain from the definitions and it holds.
+**What is correct.** The definition of $S$; the inequality $S\ge0$ at critical points; the conditional identity $S=\mathop{\mathrm{tr}}(P_{E_-}W_-^\#P_{E_-})=\tfrac12\sum_{i,j}\mu_i\mu_j\lVert P_{E_-}[v_i,v_j]\rVert^2$ under $T_1=T_2=0$; the bilinear expansion; the honest conditionality clause with its $11.5$-against-$\tfrac12$ ratio; the $239$-point count ($209$ at $n=8$ plus $30$ at $n=12$, [ATTEMPTS.md](../ATTEMPTS.md) lines 1148, 1150); the $S=4/7$ non-monotonicity (three points at $0.540$, $0.720$, $0.837$, spread $0.297$); the $(S^m)^3$ refutation of the companion bound. I rebuilt the chain from the definitions and it holds.
 
 **What is defective.**
 

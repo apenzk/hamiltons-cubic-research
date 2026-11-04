@@ -29,7 +29,7 @@ $$\theta^2(S^p\times S^q)=\frac{2(n-1)(p-1)(q-1)}{(n-2)\,pq},\qquad n=p+q.$$
 
 It reproduces $\theta_0(n)^2=2(n-1)(n-2)/n^2$ at $p=q$ and $\theta(S^3\times S^5)=1.115547$ at $n=8$, two anchors the fit did not use.
 
-**The norm formula, derived independently.** For a product of Einstein factors with $\mathrm{Ric}=\lambda g$, block-diagonality of $R$ on $\Lambda^2$ gives $\lVert R\rVert^2=\sum_a\lVert R_a\rVert^2$, and $\lVert W\rVert^2=\lVert R\rVert^2-(\operatorname{tr}R)^2/N$ with $\operatorname{tr}R=\lambda n/2$, $N=\binom n2$. Expanding each factor's own Einstein splitting,
+**The norm formula, derived independently.** For a product of Einstein factors with $\mathrm{Ric}=\lambda g$, block-diagonality of $R$ on $\Lambda^2$ gives $\lVert R\rVert^2=\sum_a\lVert R_a\rVert^2$, and $\lVert W\rVert^2=\lVert R\rVert^2-(\mathop{\mathrm{tr}}R)^2/N$ with $\mathop{\mathrm{tr}}R=\lambda n/2$, $N=\binom n2$. Expanding each factor's own Einstein splitting,
 
 $$\lVert W\rVert^2=\sum_a\lVert W_a\rVert^2+\frac{\lambda^2}2\Bigl[\sum_a\frac{n_a}{n_a-1}-\frac n{n-1}\Bigr],$$
 
@@ -95,7 +95,7 @@ The three generators are the Kulkarni–Nomizu tensors $g_p\owedge g_p,\ g_q\owe
 
 The cited theorem exists and says what is claimed: [graded-half.md](../findings/graded-half.md) line 90, *"On every compact irreducible symmetric space, $\lVert W\rVert^2\ge\tfrac16$, with equality exactly at $\mathbb{CP}^2$. Equivalently $\theta\le\sqrt{3/2}$"*, this is [Lemma L47](../findings/problem.md). I checked its own derivation:
 
-- $\lVert W\rVert^2=\lVert R\rVert^2-(\operatorname{tr}R)^2/N$ with $\operatorname{tr}R=n/4$, $N=\binom n2$ gives the subtracted constant $\frac n{8(n-1)}$, **correct**.
+- $\lVert W\rVert^2=\lVert R\rVert^2-(\mathop{\mathrm{tr}}R)^2/N$ with $\mathop{\mathrm{tr}}R=n/4$, $N=\binom n2$ gives the subtracted constant $\frac n{8(n-1)}$, **correct**.
 - Cauchy–Schwarz $\sum_id_i\lambda_i^2\ge(n/4)^2/\dim\mathfrak h$ then yields $\dim\mathfrak h\le\frac{3n^2(n-1)}{2(7n-4)}\Rightarrow\lVert W\rVert^2\ge\tfrac16$, I re-derived the threshold and it is **exact**.
 - The residue is the compact rank-one spaces, and that list ($S^n$, $\mathbb{RP}^n$, $\mathbb{CP}^m$, $\mathbb{HP}^m$, $\mathbb{OP}^2$) is **complete**; each is disposed of.
 

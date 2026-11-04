@@ -42,19 +42,19 @@ Write $U=V_{1/3}$, $Z=\ker F_u$, $\Pi_Z$ its projector, $x\circ y$ the polarisat
 
 $$\langle M_{W_1}b,K\rangle=\langle W_1\circ b,K\rangle=T(W_1,b,K)=\langle b,W_1\circ K\rangle=\langle\Pi_ZQ(W_1),\Pi_Z(W_1\circ K)\rangle .$$
 
-So $M_{W_1}b=0$ says exactly $b(W_1)\perp\operatorname{range}(M_{W_1})$, and the polarised version r21 also measured is
+So $M_{W_1}b=0$ says exactly $b(W_1)\perp\mathop{\mathrm{range}}(M_{W_1})$, and the polarised version r21 also measured is
 
 $$\boxed{\ \Pi_Z\big(V_{1/3}\circ V_{1/3}\big)\ \perp\ \Pi_Z\big(V_{1/3}\circ\ker F_u\big)\ }$$
 
 **an orthogonality between two fixed subspaces of $\ker F_u$**, with no free parameter. Equivalently, moving the projector to the other side, $\Pi_{V_{1/3}}\big(\ker F_u\circ\Pi_{\ker}Q(W_1)\big)=0$, which puts L102 in the same family as the coupling table's measured row $T(W_1,K,N)=0$.
 
-This single statement implies, in one step each: (i) the displayed L102; (ii) the hard-case condition, since a top eigenvector of $M_{W_1}$ with $\lambda_{\max}\ne0$ lies in $\operatorname{range}(M_{W_1})\subseteq\Pi_Z(U\circ Z)$; (iii) the **cross-pair** bilinear identity $\langle\Pi_{\ker}Q(W_1),\operatorname{top}(W_1')\rangle=0$ of [route-a.md](../findings/route-a.md) line 381; and (iv) the cross-pair annihilation $M_{W_1}b(W_1')=0$, which the record never states.
+This single statement implies, in one step each: (i) the displayed L102; (ii) the hard-case condition, since a top eigenvector of $M_{W_1}$ with $\lambda_{\max}\ne0$ lies in $\mathop{\mathrm{range}}(M_{W_1})\subseteq\Pi_Z(U\circ Z)$; (iii) the **cross-pair** bilinear identity $\langle\Pi_{\ker}Q(W_1),\mathop{\mathrm{top}}(W_1')\rangle=0$ of [route-a.md](../findings/route-a.md) line 381; and (iv) the cross-pair annihilation $M_{W_1}b(W_1')=0$, which the record never states.
 
 ### 4. "Not a subspace condition" is false, and it is what closed the proof search
 
 [ATTEMPTS.md](../ATTEMPTS.md) §*Characterising the hard-case identity* is titled *"a bilinear orthogonality, **not a subspace condition**"*, and its table refutes the third reading:
 
-> $\operatorname{span}(b)\perp\operatorname{span}(\text{tops})$ as fixed subspaces (**No**), neither saturates: $48$ dimensions from $24$ samples and $24$ from $24$, both growing linearly
+> $\mathop{\mathrm{span}}(b)\perp\mathop{\mathrm{span}}(\text{tops})$ as fixed subspaces (**No**), neither saturates: $48$ dimensions from $24$ samples and $24$ from $24$, both growing linearly
 
 **That is a non sequitur, and the run's own output says so.** [p0_opid4.log](../agent_logs/p0_opid4.log) ends both dimensions with
 
@@ -99,7 +99,7 @@ Neither side of the product is trivial: $\lVert b\rVert$ reaches $\sup_KT(W_1,W_
 
 **The cross-pair data already blocks the cheap version of vacuity**: a large $\ker M_{W_1}$ explains $M_{W_1}b(W_1)=0$ but says nothing about $b(W_1')$ for $24$ other draws, and the orthogonality survives all $24\times24$ pairs at $1.3\times10^{-15}$.
 
-**The decisive test, named and not run.** Finding 3's form forces $\dim\Pi_Z(U\circ U)+\dim\Pi_Z(U\circ Z)\le\dim\ker F_u$, $483$ at $n=10$, $1161$ at $n=12$. Both spans were still **growing linearly** at the record's 24 samples ($24$ and $48$). Two one-line additions to an existing script decide it: (a) $\operatorname{rank}(M_{W_1})$ for a single $W_1$ at $n=10$, the $483\times483$ eigendecomposition is already computed there, and any rank above $483-\dim\Pi_Z(U\circ U)$ refutes L102 outright; (b) push the sample count until both spans saturate and check the sum against $\dim\ker F_u$. **Outcome if the sum exceeds the ambient dimension: L102 is false and the frontier branch of L22 goes with it. If both saturate well short: the two pieces are a genuine refinement of the Peirce component $\ker F_u$, and that refinement is the theorem to prove.** *No such run was made for this review.*
+**The decisive test, named and not run.** Finding 3's form forces $\dim\Pi_Z(U\circ U)+\dim\Pi_Z(U\circ Z)\le\dim\ker F_u$, $483$ at $n=10$, $1161$ at $n=12$. Both spans were still **growing linearly** at the record's 24 samples ($24$ and $48$). Two one-line additions to an existing script decide it: (a) $\mathop{\mathrm{rank}}(M_{W_1})$ for a single $W_1$ at $n=10$, the $483\times483$ eigendecomposition is already computed there, and any rank above $483-\dim\Pi_Z(U\circ U)$ refutes L102 outright; (b) push the sample count until both spans saturate and check the sum against $\dim\ker F_u$. **Outcome if the sum exceeds the ambient dimension: L102 is false and the frontier branch of L22 goes with it. If both saturate well short: the two pieces are a genuine refinement of the Peirce component $\ker F_u$, and that refinement is the theorem to prove.** *No such run was made for this review.*
 
 ### 9. Two internal inconsistencies inside the L102 block
 

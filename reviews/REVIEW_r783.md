@@ -10,7 +10,7 @@
 | 1b | "No Weyl hypothesis is used anywhere", read against the block *as written* | **REFUTED AS WRITTEN**, case 1's body still ends in [L181](BRIEF-g2-l184b.md) and concludes $W=0$ |
 | 2a | $s_{ij}s_{ik}$ is well defined and equal wedges make it independent of $i$ | **CONFIRMED** |
 | 2b | That independence gives $\omega_i=\eta_i\omega_1$ exactly, not something weaker | **CONFIRMED** |
-| 2c | The constant: $\operatorname{tr}(\omega_1\omega_2)=\mp2$ | **CONFIRMED**, sign pairing included |
+| 2c | The constant: $\mathop{\mathrm{tr}}(\omega_1\omega_2)=\mp2$ | **CONFIRMED**, sign pairing included |
 | 3a | The common mechanism $\omega_i=\pm\omega_1$ holds in case 3 | **CONFIRMED**, it follows in one line the body does not take |
 | 3b | "$\sigma_i=\tau_i$ outright" | **CHOICE-DEPENDENT**, the invariant statement is $\rho_i$ constant |
 | 4 | The strengthening loses nothing for the rank-three corollary | **HYPOTHESIS-DEBT**, $\Phi$ is nowhere defined, so the bridge is not on file |
@@ -26,8 +26,8 @@
 
 ## 0. Conventions, fixed once
 
-- $\langle\alpha,\beta\rangle=-\tfrac12\operatorname{tr}(\alpha\beta)$ and $\lVert\omega\rVert^2=-\tfrac12\operatorname{tr}(\omega^2)$, as the brief fixes them. So an orthonormal family satisfies $\operatorname{tr}(\omega_i^2)=-2$ and $\operatorname{tr}(\omega_i\omega_j)=0$ for $i\ne j$.
-- For a plane $P$ with orthonormal basis $f_1,f_2$, the unit area form $\varepsilon_P=f_1\wedge f_2$ is the skew matrix with $\varepsilon_{12}=1$, so $\varepsilon_P^2=-\mathrm{Id}_P$, $\operatorname{tr}(\varepsilon_P^2)=-2$ and $\lVert\varepsilon_P\rVert^2=1$. This is the normalisation the block's arithmetic uses throughout, and it is consistent.
+- $\langle\alpha,\beta\rangle=-\tfrac12\mathop{\mathrm{tr}}(\alpha\beta)$ and $\lVert\omega\rVert^2=-\tfrac12\mathop{\mathrm{tr}}(\omega^2)$, as the brief fixes them. So an orthonormal family satisfies $\mathop{\mathrm{tr}}(\omega_i^2)=-2$ and $\mathop{\mathrm{tr}}(\omega_i\omega_j)=0$ for $i\ne j$.
+- For a plane $P$ with orthonormal basis $f_1,f_2$, the unit area form $\varepsilon_P=f_1\wedge f_2$ is the skew matrix with $\varepsilon_{12}=1$, so $\varepsilon_P^2=-\mathrm{Id}_P$, $\mathop{\mathrm{tr}}(\varepsilon_P^2)=-2$ and $\lVert\varepsilon_P\rVert^2=1$. This is the normalisation the block's arithmetic uses throughout, and it is consistent.
 - $e_{a_1\dots a_k}$ denotes $f_{a_1}\wedge\dots\wedge f_{a_k}$.
 - $V$ is the common support, $\dim V=6$; $\omega_i$ restricted to $V$ is skew and invertible, and $\omega_i$ preserves $V$ and $V^\perp$.
 
@@ -48,11 +48,11 @@ The first five entries carry no Weyl content whatever, and sections 3 to 5 below
 
 ## 2. Item 9 first, exhaustiveness, since the later items depend on it
 
-Set $A=-\omega_i^2$, common by hypothesis. $A$ is symmetric positive semidefinite ($\langle Ax,x\rangle=\lVert\omega_ix\rVert^2$) with $\operatorname{im}A=\omega_i(\operatorname{im}\omega_i)=V$, so $A|_V$ is positive definite and $A|_{V^\perp}=0$. Its trace is fixed: $\operatorname{tr}A=-\operatorname{tr}(\omega_i^2)=2\lVert\omega_i\rVert^2=2$.
+Set $A=-\omega_i^2$, common by hypothesis. $A$ is symmetric positive semidefinite ($\langle Ax,x\rangle=\lVert\omega_ix\rVert^2$) with $\mathop{\mathrm{im}}A=\omega_i(\mathop{\mathrm{im}}\omega_i)=V$, so $A|_V$ is positive definite and $A|_{V^\perp}=0$. Its trace is fixed: $\mathop{\mathrm{tr}}A=-\mathop{\mathrm{tr}}(\omega_i^2)=2\lVert\omega_i\rVert^2=2$.
 
 $\omega_i|_V$ is skew and invertible, so its eigenvalues are $\pm\mathrm ic$ with $c\ne0$ in conjugate pairs, and each positive eigenvalue $c^2$ of $A|_V$ has even multiplicity. The even partitions of $6$ are $2+2+2$, $4+2$ and $6$, which are exactly cases 1, 3 and 2. **Exhaustive, and no Weyl tensor is consulted to make the split.** Item 9 is confirmed, and confirmed in the form the strengthened statement needs: the case division is a fact about a single positive definite $A$ of even multiplicities, not about a spectrum some Weyl condition constrained.
 
-Two constraints fall out of $\operatorname{tr}A=2$ that the block uses in one place and omits in another: case 2 gets $6c=2$, hence $c=\tfrac13$ (stated), and case 3 gets $4a+2b=2$, hence $2a+b=1$ (not stated). The omission is harmless (case 3's contradiction is $4a=-2b$ with $a,b>0$, which needs only positivity) but the relation is worth carrying, since it makes the incompatibility numerical as well as sign-theoretic: $2a+b=1$ and $2a=-b$ together give $0=1$.
+Two constraints fall out of $\mathop{\mathrm{tr}}A=2$ that the block uses in one place and omits in another: case 2 gets $6c=2$, hence $c=\tfrac13$ (stated), and case 3 gets $4a+2b=2$, hence $2a+b=1$ (not stated). The omission is harmless (case 3's contradiction is $4a=-2b$ with $a,b>0$, which needs only positivity) but the relation is worth carrying, since it makes the incompatibility numerical as well as sign-theoretic: $2a+b=1$ and $2a=-b$ together give $0=1$.
 
 ## 3. Item 2, case 1's Weyl-free route, derived from scratch
 
@@ -60,7 +60,7 @@ This is the round's reason for existing, so I derive it without consulting the b
 
 **The block structure.** In case 1 the three eigenvalues $c_1^2,c_2^2,c_3^2$ of $A|_V$ are pairwise distinct, each of multiplicity two, so the eigenspaces are three specific planes $P_1,P_2,P_3$ with $V=P_1\oplus P_2\oplus P_3$ orthogonally. Each $\omega_i$ commutes with $\omega_i^2=-A$ and hence preserves each $P_j$. A skew endomorphism of a plane is a real multiple of that plane's area form, so $\omega_i|_{P_j}=t_{ij}\varepsilon_j$ for a chosen unit area form $\varepsilon_j$ of $P_j$; and $\omega_i^2|_{P_j}=-t_{ij}^2\mathrm{Id}_{P_j}$ must equal $-c_j^2\mathrm{Id}_{P_j}$, so $t_{ij}=s_{ij}c_j$ with $s_{ij}\in\{+1,-1\}$ and $c_j>0$. Hence
 $$\omega_i=\sum_{j=1}^3 s_{ij}c_j\varepsilon_j,\qquad s_{ij}=\pm1 .$$
-As a check, $\lVert\omega_i\rVert^2=\sum_jc_j^2=\tfrac12\operatorname{tr}A=1$, as orthonormality demands.
+As a check, $\lVert\omega_i\rVert^2=\sum_jc_j^2=\tfrac12\mathop{\mathrm{tr}}A=1$, as orthonormality demands.
 
 **Is $s_{ij}s_{ik}$ well defined?** Not absolutely, and this needs saying because the block does not. Each $\varepsilon_j$ is fixed only up to sign, and replacing $\varepsilon_j$ by $-\varepsilon_j$ flips $s_{ij}$ **for every $i$ at once**. So no single $s_{ij}$ is canonical, and neither is a single product $s_{ij}s_{ik}$. What *is* invariant under every such flip is (i) the assertion "$s_{ij}s_{ik}$ takes the same value at $i=1,2,3$", both sides flipping together, and (ii) the sign $\eta_i=s_{i1}s_{11}$, in which the ambiguity of $\varepsilon_1$ cancels. Both the hypothesis and the conclusion of the step are therefore choice-independent, and the step is legitimate once a choice of the $\varepsilon_j$ is fixed and held. **Confirmed, with the caveat made explicit.**
 
@@ -75,8 +75,8 @@ $$\omega_i=\sum_j s_{ij}c_j\varepsilon_j=\eta_i\sum_j s_{1j}c_j\varepsilon_j=\et
 Nothing weaker: the conclusion is a strict proportionality with a sign, not a proportionality up to a permutation of the planes or a relation among the $c_j$. The three pairwise relations are exactly enough, with $m$ planes one gets $m-1$ independent relations from the pairs $(1,j)$ and the remaining $\binom{m-1}2$ are consequences, which is why the argument is not overdetermined and does not silently need a fourth plane. **Confirmed.**
 
 **The constant.** With $\omega_2=\eta_2\omega_1$,
-$$\operatorname{tr}(\omega_1\omega_2)=\eta_2\operatorname{tr}(\omega_1^2)=\eta_2\cdot(-2\lVert\omega_1\rVert^2)=-2\eta_2 ,$$
-so $\eta_2=+1$ gives $-2$ and $\eta_2=-1$ gives $+2$: the block's "$\omega_i=\eta_i\omega_1$ and $\operatorname{tr}(\omega_1\omega_2)=\mp2$" pairs the signs correctly, and $\mp2\ne0$ contradicts orthogonality. Equivalently and more directly, $\langle\omega_1,\omega_2\rangle=\eta_2\ne0$. **The constant is right, in magnitude and in its sign pairing.**
+$$\mathop{\mathrm{tr}}(\omega_1\omega_2)=\eta_2\mathop{\mathrm{tr}}(\omega_1^2)=\eta_2\cdot(-2\lVert\omega_1\rVert^2)=-2\eta_2 ,$$
+so $\eta_2=+1$ gives $-2$ and $\eta_2=-1$ gives $+2$: the block's "$\omega_i=\eta_i\omega_1$ and $\mathop{\mathrm{tr}}(\omega_1\omega_2)=\mp2$" pairs the signs correctly, and $\mp2\ne0$ contradicts orthogonality. Equivalently and more directly, $\langle\omega_1,\omega_2\rangle=\eta_2\ne0$. **The constant is right, in magnitude and in its sign pairing.**
 
 **Weyl content of this route: none.** It used the common $6$-dimensional support, the equal squares, the equal wedges, and the orthogonality of one pair. Trace-freeness, the first Bianchi identity and the Riemann symmetries appear nowhere, and neither does $n$.
 
@@ -88,7 +88,7 @@ So the paragraph both denies and performs the appeal. Three consequences, and th
 
 - **The body proves a different statement.** [L181](BRIEF-g2-l184b.md)'s conclusion is $W=0$ for a $W\in\mathcal W_n$. A triple of $2$-forms with no Weyl tensor attached is outside its hypotheses entirely, so the body's last step cannot close the strengthened statement even in principle, there is no $W$ for it to annihilate.
 - **The strengthened statement's own headline is false against the text.** "No Weyl hypothesis is used anywhere" is contradicted by the sixth row of my hypothesis inventory. The mathematics of section 3 rescues the statement; the block does not contain that mathematics in the place where the proof runs.
-- **The route survives only as a clause in a callout.** The whole of the Weyl-free argument on file is the phrase *"equal wedges make $s_{ij}s_{ik}$ independent of $i$, so $\omega_i=\eta_i\omega_1$ and $\operatorname{tr}(\omega_1\omega_2)=\mp2\ne0$"* in the mechanism box. That is a correct summary (I reconstructed the same derivation from it, and it came out sound) but a summary in a box is not the case's proof, and a later reader following the case will follow it to [L181](BRIEF-g2-l184b.md).
+- **The route survives only as a clause in a callout.** The whole of the Weyl-free argument on file is the phrase *"equal wedges make $s_{ij}s_{ik}$ independent of $i$, so $\omega_i=\eta_i\omega_1$ and $\mathop{\mathrm{tr}}(\omega_1\omega_2)=\mp2\ne0$"* in the mechanism box. That is a correct summary (I reconstructed the same derivation from it, and it came out sound) but a summary in a box is not the case's proof, and a later reader following the case will follow it to [L181](BRIEF-g2-l184b.md).
 
 **Verdict on items 1 and 5.** The strengthened statement is *true* (item 1a: confirmed, by sections 2, 3, 5 and 6 together, all Weyl-free). The claim that the block as written establishes it without a Weyl hypothesis is *false* (item 1b, item 5: refuted as written). The repair is to move section 3's derivation into case 1's body and delete its last sentence; I am not making that repair, this round exists because the last reviewer supplied rather than checked.
 
@@ -104,8 +104,8 @@ the last term vanishing by decomposability. The first term lies in $\Lambda^4Q$ 
 $$\omega_i=\sqrt a\,\tau_iJ+\tau_i\sqrt b\,\varepsilon_P=\tau_i\big(\sqrt a\,J+\sqrt b\,\varepsilon_P\big)=\tau_i\tau_1\,\omega_1 .$$
 The $4$-plane part and the $2$-plane part carry **the same** sign $\tau_i$, which is exactly why the two statements the brief distinguishes collapse into one here. The box's "the hypotheses force $\omega_i=\pm\omega_1$ in all three cases" is therefore accurate, and case 3's contradiction can be had in one further line as $\langle\omega_1,\omega_2\rangle=\pm1\ne0$, a line the body does not take, running the trace identity instead. That is a stylistic gap, not an error: the body's route is also correct, as the next paragraph confirms.
 
-**The body's own route, checked.** With $\operatorname{tr}(J^2)=-4$ on the $4$-plane and $\operatorname{tr}(\varepsilon_P^2)=-2$,
-$$\operatorname{tr}(\omega_i\omega_j)=a\operatorname{tr}(J_iJ_j)+\tau_i\tau_j\,b\operatorname{tr}(\varepsilon_P^2)=-4a\,\sigma_i\sigma_j-2b\,\tau_i\tau_j ,$$
+**The body's own route, checked.** With $\mathop{\mathrm{tr}}(J^2)=-4$ on the $4$-plane and $\mathop{\mathrm{tr}}(\varepsilon_P^2)=-2$,
+$$\mathop{\mathrm{tr}}(\omega_i\omega_j)=a\mathop{\mathrm{tr}}(J_iJ_j)+\tau_i\tau_j\,b\mathop{\mathrm{tr}}(\varepsilon_P^2)=-4a\,\sigma_i\sigma_j-2b\,\tau_i\tau_j ,$$
 so orthogonality reads $4a\,\sigma_i\sigma_j=-2b\,\tau_i\tau_j$ at all three pairs, as the block states. Setting $\rho_i=\sigma_i\tau_i$, the ratio $\sigma_i\sigma_j/(\tau_i\tau_j)=\rho_i\rho_j$ must be one constant $k$ across the three pairs; multiplying the three relations gives $(\rho_1\rho_2\rho_3)^2=k^3$, so $k^3=1$ and $k=+1$, whence $4a=-2b$, impossible for $a,b>0$. **The three-signs step is correct**, and so is the block's remark that $\sigma_i=\tau_i$ makes it unnecessary.
 
 **Sub-finding 3b, and it is small but real.** "In fact $\sigma_i=\tau_i$" is choice-dependent. The common value of $\tau_iJ_i$ can be named $J$ or $-J$; the first naming gives $\sigma_i=\tau_i$ and $\rho_i=+1$, the second gives $\sigma_i=-\tau_i$ and $\rho_i=-1$. The invariant content of the cross-term step is that **$\rho_i$ is constant in $i$**, from which $\rho_i\rho_j=+1$ and $4a=-2b$ follow either way. The block should say "$\rho_i$ is constant, hence $+1$ after the harmless normalisation $J:=\tau_1J_1$" rather than "$\sigma_i=\tau_i$ outright". The conclusion is unaffected.
@@ -114,7 +114,7 @@ so orthogonality reads $4a\,\sigma_i\sigma_j=-2b\,\tau_i\tau_j$ at all three pai
 
 ## 6. Items 7 and 2's neighbour, case 2, and the $\dim V$ against $n$ question
 
-Case 2 has $A|_V=c\,\mathrm{Id}_V$ with $6c=\operatorname{tr}A=2$, so $c=\tfrac13$ and $J_i=\sqrt3\,\omega_i$ satisfies $J_i^2=-\mathrm{Id}_V$; being skew as well, $J_i^{\mathsf T}J_i=-J_i^2=\mathrm{Id}$, so each $J_i$ is an orthogonal complex structure. The block's "unit norm forces $c=\tfrac13$, so $c$ is not a free parameter" is correct.
+Case 2 has $A|_V=c\,\mathrm{Id}_V$ with $6c=\mathop{\mathrm{tr}}A=2$, so $c=\tfrac13$ and $J_i=\sqrt3\,\omega_i$ satisfies $J_i^2=-\mathrm{Id}_V$; being skew as well, $J_i^{\mathsf T}J_i=-J_i^2=\mathrm{Id}$, so each $J_i$ is an orthogonal complex structure. The block's "unit norm forces $c=\tfrac13$, so $c$ is not a free parameter" is correct.
 
 **The identity, verified in closed form.** With $\mathrm{vol}_V=e_{123456}$ and $J=e_{12}+e_{34}+e_{56}$: $J\wedge J=2(e_{1234}+e_{1256}+e_{3456})$, and $\star e_{1234}=e_{56}$, $\star e_{1256}=e_{34}$, $\star e_{3456}=e_{12}$ (each because the complementary product returns $+\mathrm{vol}_V$; for $e_{1256}\wedge e_{34}$ the block transposition is even). So $\star_V(J\wedge J)=2J$, i.e. $\epsilon_J=+1$. For the opposite orientation, $J'=e_{12}+e_{34}-e_{56}$ gives $J'\wedge J'=2(e_{1234}-e_{1256}-e_{3456})$ and $\star_V(J'\wedge J')=2(e_{56}-e_{34}-e_{12})=-2J'$, i.e. $\epsilon_{J'}=-1$. Every orthogonal complex structure on $V$ is $SO(V)$-conjugate to one of these two, and $\star_V$ is $SO(V)$-equivariant, so $\star_V(J\wedge J)=2\epsilon_JJ$ with $\epsilon_J=\pm1$ according to orientation. **The identity and its sign are confirmed, and the block's appeal to the connectedness of $U(3)\subset SO(6)$ for well-definedness is sound.** $\star_V$ is an isomorphism $\Lambda^2V\to\Lambda^4V$, so equal wedges give $\epsilon_iJ_i$ all equal, hence $J_i=\pm K$, hence $\omega_i=\pm\omega_1$; both the block's exits (linear independence, or $\langle\omega_1,\omega_2\rangle=\pm1$), close it.
 
@@ -134,7 +134,7 @@ Case 2 has $A|_V=c\,\mathrm{Id}_V$ with $6c=\operatorname{tr}A=2$, so $c=\tfrac1
 
 ## 8. Item 8, the kernel
 
-**Clean.** $\ker\omega_i=V^\perp$ is nonzero whenever $n>6$, and no step needs it to vanish. The setup's "$A$ has spectrum $\{c_1^2,c_1^2,\dots\}$" is a statement about $A|_V$ and should say so, but case 1's parenthetical supplies the missing "$V=\operatorname{im}A$" that makes it read correctly. Every subsequent object lives in $V$: the eigenplanes $P_j\subset V$, the wedges in $\Lambda^4V$, the star $\star_V$, the splitting $Q\oplus P=V$. The independence facts invoked, the $\varepsilon_j\wedge\varepsilon_k$ in case 1, the $\Lambda^4Q$ against $\Lambda^2Q\wedge\Lambda^2P$ split in case 3, are independence within $\Lambda^4V$, which is what is needed and is implied by, rather than implying, independence in $\Lambda^4\mathbb R^n$. **No step assumes the triple spans more than the six dimensions it spans.**
+**Clean.** $\ker\omega_i=V^\perp$ is nonzero whenever $n>6$, and no step needs it to vanish. The setup's "$A$ has spectrum $\{c_1^2,c_1^2,\dots\}$" is a statement about $A|_V$ and should say so, but case 1's parenthetical supplies the missing "$V=\mathop{\mathrm{im}}A$" that makes it read correctly. Every subsequent object lives in $V$: the eigenplanes $P_j\subset V$, the wedges in $\Lambda^4V$, the star $\star_V$, the splitting $Q\oplus P=V$. The independence facts invoked, the $\varepsilon_j\wedge\varepsilon_k$ in case 1, the $\Lambda^4Q$ against $\Lambda^2Q\wedge\Lambda^2P$ split in case 3, are independence within $\Lambda^4V$, which is what is needed and is implied by, rather than implying, independence in $\Lambda^4\mathbb R^n$. **No step assumes the triple spans more than the six dimensions it spans.**
 
 ## 9. Item 4, what the strengthening costs the corollary
 
@@ -160,7 +160,7 @@ Given that this very box carries the block's own warning about an inflated readi
 
 ## 11. A screen, and an observation
 
-**Screen (permitted: seconds, by hand, on objects I constructed for the purpose, exact, and evidence for nothing positive).** I recomputed the three-matchings witness the block attributes to [r780](REVIEW_r780.md), because case 2's claim that the wedge alone does the work rests on it. With $J_1=e_{12}+e_{34}+e_{56}$, $J_2=e_{13}+e_{25}+e_{46}$, $J_3=e_{14}+e_{26}+e_{35}$: the nine edges are distinct, so $\operatorname{tr}(J_kJ_l)=\sum_{a,b}(J_k)_{ab}(J_l)_{ba}$ vanishes termwise for $k\ne l$; each $J_k$ is block-diagonal in disjoint index pairs so $J_k^2=-\mathrm{Id}_6$; and $\lVert J_k\rVert^2=3$. The self-wedges come out as
+**Screen (permitted: seconds, by hand, on objects I constructed for the purpose, exact, and evidence for nothing positive).** I recomputed the three-matchings witness the block attributes to [r780](REVIEW_r780.md), because case 2's claim that the wedge alone does the work rests on it. With $J_1=e_{12}+e_{34}+e_{56}$, $J_2=e_{13}+e_{25}+e_{46}$, $J_3=e_{14}+e_{26}+e_{35}$: the nine edges are distinct, so $\mathop{\mathrm{tr}}(J_kJ_l)=\sum_{a,b}(J_k)_{ab}(J_l)_{ba}$ vanishes termwise for $k\ne l$; each $J_k$ is block-diagonal in disjoint index pairs so $J_k^2=-\mathrm{Id}_6$; and $\lVert J_k\rVert^2=3$. The self-wedges come out as
 $$J_1\wedge J_1=2(e_{1234}+e_{1256}+e_{3456}),\quad J_2\wedge J_2=2(-e_{1235}+e_{1346}-e_{2456}),\quad J_3\wedge J_3=2(-e_{1246}-e_{1345}+e_{2356}),$$
 agreeing with the block sign for sign, the three negative signs arise from single transpositions ($1325\to1235$, $2546\to2456$, $1426\to1246$, $1435\to1345$) and $2635\to2356$ is even, hence positive. The nine $4$-sets are distinct, so the three wedges are pairwise orthogonal and in particular unequal. A further consistency screen: $J_k/\sqrt3$ has $A=\tfrac13\mathrm{Id}_6$, which is case 2's forced $c=\tfrac13$. **The witness stands as stated, and case 2's "the wedge alone does the work" is not empty.**
 

@@ -33,7 +33,7 @@
 | # | Hypothesis | Stated where | Used where |
 | --- | --- | --- | --- |
 | H1 | $W$ is a critical point of $P$ on $\mathcal W_n$: $Q(W)=\theta W$ | both files | (R1) is the $\mathfrak k$-block of this equation |
-| H2 | $W$ is **graded**: $\operatorname{ran}W_+\oplus\operatorname{ran}W_-$ is a $\mathbb Z_2$-graded subalgebra, $\mathfrak h$ | both files | the $\mathfrak m$-block equation holds **only** when $[\mathfrak m,\mathfrak m]\subseteq\mathfrak k$ ([ATTEMPTS.md](../ATTEMPTS.md):1025) |
+| H2 | $W$ is **graded**: $\mathop{\mathrm{ran}}W_+\oplus\mathop{\mathrm{ran}}W_-$ is a $\mathbb Z_2$-graded subalgebra, $\mathfrak h$ | both files | the $\mathfrak m$-block equation holds **only** when $[\mathfrak m,\mathfrak m]\subseteq\mathfrak k$ ([ATTEMPTS.md](../ATTEMPTS.md):1025) |
 | H3 | $W$ is **$\mathrm{ad}(\mathfrak p)$-equivariant** | both files, added at the scope refutation | Schur makes $W$ scalar on each irreducible summand, this is what licenses the ansatz |
 | H4 | **$\mathfrak k$ is simple, or its ideals are interchanged by a symmetry of the pair**, i.e. $\mathfrak k$ acts on $\mathfrak m$ with a *single* Casimir | [ATTEMPTS.md](../ATTEMPTS.md):1039 only | the entire $c_{\mathfrak k}$-formula. **Absent from both [results.md](../results.md):124 and :369** |
 | H5 | $2q>p$ (strictly; $2q=p$ is degenerate) | [ATTEMPTS.md](../ATTEMPTS.md):1039, :1362 | the denominator. **Absent from both [results.md](../results.md) forms** |
@@ -62,7 +62,7 @@ The block is two different kinds of statement wearing one number. Separated:
 | --- | --- | --- |
 | **The elimination identity.** Given $\theta=(qC-p)/\sqrt{pq(p+q)}$ and (R1), $\theta=\dfrac{c_{\mathfrak k}q^2+2q^2+p^2}{(2q-p)\sqrt{pq(p+q)}}$ | every $(p,q,C,c_{\mathfrak k})$ with $2q\ne p$ | **exact algebra**, re-derived in §3a |
 | **The structure-constant double count.** $\sum_i c_ip_i+3q\sum_iC_i=c^{\mathrm{ad}}_{\mathfrak h}(p+q)$ | every $\mathbb Z_2$-graded $\mathfrak h$ | asserted at [ATTEMPTS.md](../ATTEMPTS.md):1033 from total antisymmetry; **not written out**, and checked at one point ($\mathbb{HP}^2$, $336=336$) |
-| **The Casimir normalisation.** $c^{\mathrm{ad}}_{\mathfrak h}=\frac{2(p+q)}n\cdot\frac{C_2(\mathrm{adj})}{C_2(V)}$ | $\mathfrak h$ irreducible on $\mathbb R^n$ | pinned by the trace $\sum_{\alpha\in\mathfrak h}\operatorname{tr}(e_\alpha^2)=-2\dim\mathfrak h$; **the trace identity itself is asserted** |
+| **The Casimir normalisation.** $c^{\mathrm{ad}}_{\mathfrak h}=\frac{2(p+q)}n\cdot\frac{C_2(\mathrm{adj})}{C_2(V)}$ | $\mathfrak h$ irreducible on $\mathbb R^n$ | pinned by the trace $\sum_{\alpha\in\mathfrak h}\mathop{\mathrm{tr}}(e_\alpha^2)=-2\dim\mathfrak h$; **the trace identity itself is asserted** |
 | **Zero defect of every sphere product.** $\mathrm{Alt}(vv^{\mathsf T})\propto v\wedge v$, which vanishes iff $v$ is decomposable; $\mathfrak m$ for a block split is spanned by mixed coordinate $2$-planes, all decomposable, so $\mathrm{Alt}(\Pi_{\mathfrak m})=0$ | **every $N$, every split**, balanced or not | **PROVEN**, and I confirm the argument closes: $\mathrm{Alt}$ is linear and $\mathrm{Alt}(\mathrm{Id})=0$ for the same reason, so $\mathrm{Alt}(W)=-(a+b)\mathrm{Alt}(\Pi_{\mathfrak m})=0$ |
 | **Two rank-uniform closed forms.** $(\mathfrak{so}(2m),\mathfrak{so}(m)\oplus\mathfrak{so}(m))\Rightarrow\theta=\sqrt{(m-1)(2m-1)}/m$ and $(\mathfrak{su}(m),\mathfrak{so}(m))\Rightarrow\theta^2=\frac{m(m+1)}{(m-1)(m+2)}$ | all $m$ | **PROVEN**; both re-derived exactly in §3b |
 

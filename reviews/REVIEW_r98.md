@@ -6,7 +6,7 @@ Independent audit. Every number below comes from my own implementation in [scrip
 
 | Claim | Verdict |
 |---|---|
-| A, $\alpha=8\operatorname{tr}(M^3)$, $\beta=2\langle M^\#,M\rangle$ | **CONFIRMED**, and true on a strictly larger space than claimed |
+| A, $\alpha=8\mathop{\mathrm{tr}}(M^3)$, $\beta=2\langle M^\#,M\rangle$ | **CONFIRMED**, and true on a strictly larger space than claimed |
 | B, bi-spectral identity, Li's convention | **CONFIRMED**, sign included; the $s=0$ specialisation is legitimate |
 | C, $\beta=\tfrac12\alpha$ exactly for $n\le5$, with constant $-64$ | **CONFIRMED** in every part, including "only for $n\le5$" |
 | D, fence-posts post F2g is wrong at $n=5$ | **CONFIRMED**; the gap is a quantifier inversion, and the conclusion is unrepairable |
@@ -26,11 +26,11 @@ Spanning at every $n$ tested. No identity below is riding on a deficient sample.
 
 ## Claim A, CONFIRMED, and stronger than stated
 
-On unit-norm samples, $\max|\alpha-8\operatorname{tr}M^3|$ and $\max|\beta-2\langle M^\#,M\rangle|$ are $\le8\times10^{-16}$ at $n=4,\dots,8$, against invariant scales of order $10^{-1}$ to $2$.
+On unit-norm samples, $\max|\alpha-8\mathop{\mathrm{tr}}M^3|$ and $\max|\beta-2\langle M^\#,M\rangle|$ are $\le8\times10^{-16}$ at $n=4,\dots,8$, against invariant scales of order $10^{-1}$ to $2$.
 
 Two remarks that sharpen the claim.
 
-- $\alpha=8\operatorname{tr}(M^3)$ is combinatorics, not geometry: the all-index sum runs over three antisymmetric pairs, each contributing a factor 2 relative to the $i<j$ sum.
+- $\alpha=8\mathop{\mathrm{tr}}(M^3)$ is combinatorics, not geometry: the all-index sum runs over three antisymmetric pairs, each contributing a factor 2 relative to the $i<j$ sum.
 - Neither identity uses the first Bianchi identity or trace-freeness. I re-tested on a general algebraic curvature tensor with nonzero Ricci (residuals $0$ and $4\times10^{-14}$) and on a general element of $S^2(\Lambda^2)$ with no Bianchi symmetry at all (residuals $1.6\times10^{-14}$ and $1.8\times10^{-15}$, at invariant scales $1.3$ and $15.1$). **Claim A holds on all of $S^2(\Lambda^2\mathbb R^n)$.** Stating it only on $\mathcal W_n$ understates it.
 
 Hamilton's sharp was implemented with the structure constants of the *unnormalised* basis $\phi_{ij}=E_{ij}-E_{ji}$, exactly as the brief specifies. That convention is the one Claim A validates; the orthonormal basis $\phi_{ij}/\sqrt2$ would halve $M^\#$ and break $\beta=2\langle M^\#,M\rangle$. Worth keeping explicit, since it is a factor-of-2 trap. In the pair-orthonormal indexing $c$ is totally antisymmetric (checked: deviation exactly $0$), so $T_{abc}=c_{abc}^2$ is totally symmetric, used in the Claim D analysis below.
@@ -39,22 +39,22 @@ Hamilton's sharp was implemented with the structure constants of the *unnormalis
 
 With $(\mathring Wh)_{ij}=\sum_{kl}W_{iklj}h_{kl}$ and $\|M\|_F=1$:
 
-- $\operatorname{tr}(\mathring W^2)=3.000000$ at $n=4,\dots,8$, on random samples and at every named point.
-- $\theta-\big(\tfrac32\operatorname{tr}M^3-\tfrac12\operatorname{tr}\mathring W^3\big)$ is $\le4\times10^{-16}$ throughout.
+- $\mathop{\mathrm{tr}}(\mathring W^2)=3.000000$ at $n=4,\dots,8$, on random samples and at every named point.
+- $\theta-\big(\tfrac32\mathop{\mathrm{tr}}M^3-\tfrac12\mathop{\mathrm{tr}}\mathring W^3\big)$ is $\le4\times10^{-16}$ throughout.
 
-I computed $\operatorname{tr}(\mathring W^{m})$ two ways, over an orthonormal basis of the whole of $S^2$, and over an explicit orthonormal basis of $S^2_0$, and they agree to machine precision. That is expected and worth recording as a convenience: for trace-free $W$, $\mathring W(g)_{ij}=\sum_kW_{ikkj}=-\mathrm{Ric}_{ij}=0$, so $g$ lies in the kernel and the $S^2$ and $S^2_0$ traces of every positive power coincide.
+I computed $\mathop{\mathrm{tr}}(\mathring W^{m})$ two ways, over an orthonormal basis of the whole of $S^2$, and over an explicit orthonormal basis of $S^2_0$, and they agree to machine precision. That is expected and worth recording as a convenience: for trace-free $W$, $\mathring W(g)_{ij}=\sum_kW_{ikkj}=-\mathrm{Ric}_{ij}=0$, so $g$ lies in the kernel and the $S^2$ and $S^2_0$ traces of every positive power coincide.
 
-**The sign is right, and it is load-bearing.** At $n=6$ on one sample, $\operatorname{tr}(\mathring W^3)=+0.124916$ with the order $iklj$ and $-0.124916$ with $ikjl$ or $kilj$; only $iklj$ reproduces $\theta=-0.166863$. The order $ijkl$ gives $\operatorname{tr}(\mathring W^2)=0$ and is not the operator at all. Li's (2.2) as quoted in the brief is the correct reading.
+**The sign is right, and it is load-bearing.** At $n=6$ on one sample, $\mathop{\mathrm{tr}}(\mathring W^3)=+0.124916$ with the order $iklj$ and $-0.124916$ with $ikjl$ or $kilj$; only $iklj$ reproduces $\theta=-0.166863$. The order $ijkl$ gives $\mathop{\mathrm{tr}}(\mathring W^2)=0$ and is not the operator at all. Li's (2.2) as quoted in the brief is the correct reading.
 
 ### Is the $s=0$ specialisation of Dai–Fu Lemma 3.3 legitimate?
 
 Yes, and I tested it rather than assuming it. I built Einstein algebraic curvature tensors $R=W+\frac{s}{2n(n-1)}(g\owedge g)$ at $s=0,\,1,\,-2.3$ for $n=4,5,6$ and evaluated both halves of the lemma with $\mathring R$ restricted to $S^2_0$:
 
-$$\operatorname{tr}\mathring R^3=-\beta+\tfrac18\alpha+\tfrac{s^3}{n^3},\qquad \operatorname{tr}\mathring R^2=\tfrac34|R|^2-\tfrac{s^2}{n^2}.$$
+$$\mathop{\mathrm{tr}}\mathring R^3=-\beta+\tfrac18\alpha+\tfrac{s^3}{n^3},\qquad \mathop{\mathrm{tr}}\mathring R^2=\tfrac34|R|^2-\tfrac{s^2}{n^2}.$$
 
 All 18 checks pass with residuals $\le2.8\times10^{-14}$ against invariant scales of order $1$ to $70$. **The lemma is a pointwise algebraic identity on Einstein algebraic curvature tensors; the differential hypothesis in Dai–Fu's statement is packaging, not content.** Setting $s=0$ and taking $W$ purely algebraic is legitimate.
 
-Chaining: with $s=0$ and Claim A, $\operatorname{tr}\mathring W^3=-2\langle M^\#,M\rangle+\operatorname{tr}M^3$, so $\tfrac32\operatorname{tr}M^3-\tfrac12\operatorname{tr}\mathring W^3=\operatorname{tr}M^3+\langle M^\#,M\rangle=\theta$. Claim B is exactly Claim A plus Lemma 3.3, as advertised.
+Chaining: with $s=0$ and Claim A, $\mathop{\mathrm{tr}}\mathring W^3=-2\langle M^\#,M\rangle+\mathop{\mathrm{tr}}M^3$, so $\tfrac32\mathop{\mathrm{tr}}M^3-\tfrac12\mathop{\mathrm{tr}}\mathring W^3=\mathop{\mathrm{tr}}M^3+\langle M^\#,M\rangle=\theta$. Claim B is exactly Claim A plus Lemma 3.3, as advertised.
 
 ### Named points
 
@@ -73,7 +73,7 @@ Built from the vertex matrix: $W$ coordinate-diagonal, $W_{ijij}=\Lambda_{ij}$, 
 
 The balanced products hit $\theta_0(n)$ exactly; the unbalanced ones fall below it, consistent with balance being the maximiser within the family. $\mathbb{CP}^2$ was built as $M=\lambda(2\omega_1\omega_1^{\mathsf T}-\omega_2\omega_2^{\mathsf T}-\omega_3\omega_3^{\mathsf T})$ on the self-dual $\Lambda^+$ frame with $\lambda=1/\sqrt6$; all five Weyl constraints came out at exactly $0$, the $\Lambda^2$-spectrum is $(0.816497,0,0,0,-0.408248,-0.408248)$, i.e. $(2,-1,-1,0,0,0)/\sqrt6$, and the anti-self-dual variant gives the same $\theta$.
 
-$\operatorname{tr}(\mathring W^2)=3$ at every one of these points.
+$\mathop{\mathrm{tr}}(\mathring W^2)=3$ at every one of these points.
 
 ## Claim C, CONFIRMED in all three parts
 
@@ -82,7 +82,7 @@ $\operatorname{tr}(\mathring W^2)=3$ at every one of these points.
 | $n$ | 4 | 5 | 6 | 7 | 8 |
 |---|---|---|---|---|---|
 | $\max|\beta-\alpha/2|$ | $1.6\times10^{-15}$ | $6.0\times10^{-16}$ | $2.6\times10^{-1}$ | $1.6\times10^{-1}$ | $1.1\times10^{-1}$ |
-| $\max|\theta-3\operatorname{tr}M^3|$ | $3.3\times10^{-16}$ | $2.5\times10^{-16}$ | $1.3\times10^{-1}$ | $7.9\times10^{-2}$ | $5.3\times10^{-2}$ |
+| $\max|\theta-3\mathop{\mathrm{tr}}M^3|$ | $3.3\times10^{-16}$ | $2.5\times10^{-16}$ | $1.3\times10^{-1}$ | $7.9\times10^{-2}$ | $5.3\times10^{-2}$ |
 
 Holds at $n=4,5$; fails at $n=6,7,8$ by margins fourteen orders of magnitude above the noise floor, on samples of full rank $84$ at $n=6$ and $168$ at $n=7$. Both halves of "and ONLY for $n\le5$" are verified.
 
@@ -105,7 +105,7 @@ The claimed mechanism therefore stands as a complete proof of Claim C. The fence
 
 [findings/fence-posts.md](../findings/fence-posts.md) post F2g concludes: *"for $n\ge5$ the collapse space contains nothing $\mathfrak{so}(n)$ can realise, and the cubic is never spectral"*, with the stated driver being that $\mathrm{Weyl}_n$ is $O(n)$-irreducible for $n\ge5$ (one trace condition) versus reducible at $n=4$ (two).
 
-**Direct refutation.** At $n=5$, on random spanning samples, $\langle M^\#,M\rangle/\operatorname{tr}(M^3)=2.000000$ and $\theta=3\operatorname{tr}(M^3)$ to $2.5\times10^{-16}$. The cubic *is* a function of the $\Lambda^2$-spectrum alone at $n=5$. For contrast, the same ratio at $n=6$ is $2.763441$ and varies from sample to sample.
+**Direct refutation.** At $n=5$, on random spanning samples, $\langle M^\#,M\rangle/\mathop{\mathrm{tr}}(M^3)=2.000000$ and $\theta=3\mathop{\mathrm{tr}}(M^3)$ to $2.5\times10^{-16}$. The cubic *is* a function of the $\Lambda^2$-spectrum alone at $n=5$. For contrast, the same ratio at $n=6$ is $2.763441$ and varies from sample to sample.
 
 **The mechanism 2g names is falsified, not merely the conclusion.** I computed $T_{\alpha\beta\gamma}=\langle[v_\alpha,v_\beta],v_\gamma\rangle^2$ in the actual $M$-eigenframe at $n=5$ ($N=10$, so 120 triples). It is emphatically non-constant: values run from $1\times10^{-6}$ to $0.747$ with standard deviation $0.131$. Yet $\sum_{\alpha<\beta<\gamma}T_{\alpha\beta\gamma}\lambda_\alpha\lambda_\beta\lambda_\gamma=2e_3(\lambda)$ holds to $6\times10^{-16}$. So a non-constant, genuinely $\mathfrak{so}(5)$-realised $T$ collapses the cubic. 2g's "constant $T$ is never realised" is true and irrelevant.
 

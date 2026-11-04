@@ -104,7 +104,7 @@ $\dim\mathrm{Weyl}_{12}=\frac{12\cdot13\cdot14\cdot9}{12}=1638$, so $\dim\mathrm
 
 ### (iii) The orbit obstruction, confirmed, derivation sound
 
-$F$ is a degree-six form, so $F(W)=v(W)^{\mathsf T}Gv(W)$ with $v(W)\in\mathrm{Sym}^3(\mathrm{Weyl}_5)$. If $G\succeq0$ and $F(W_0)=0$ then $Gv(W_0)=0$, hence $G$ annihilates the whole orbit-evaluation span. With that span measured at $3570$ inside $\dim\mathrm{Sym}^3=\binom{37}3=7770$: $3570/7770=45.946\%$ and $\operatorname{rank}G\le4200$. **Both figures reproduce.** The trivial block is forced to zero because the trivial multiplicity at $n=5$ is $1$ and $\operatorname{tr}(W_0^3)=1/\sqrt6\ne0$. Sound.
+$F$ is a degree-six form, so $F(W)=v(W)^{\mathsf T}Gv(W)$ with $v(W)\in\mathrm{Sym}^3(\mathrm{Weyl}_5)$. If $G\succeq0$ and $F(W_0)=0$ then $Gv(W_0)=0$, hence $G$ annihilates the whole orbit-evaluation span. With that span measured at $3570$ inside $\dim\mathrm{Sym}^3=\binom{37}3=7770$: $3570/7770=45.946\%$ and $\mathop{\mathrm{rank}}G\le4200$. **Both figures reproduce.** The trivial block is forced to zero because the trivial multiplicity at $n=5$ is $1$ and $\mathop{\mathrm{tr}}(W_0^3)=1/\sqrt6\ne0$. Sound.
 
 *One gap in the summary.* "$24$ blocks, multiplicities $1\ldots4$ summing to $41$, $65$ scalar unknowns" does not determine the multiplicity profile, three profiles satisfy all three aggregates: $(14,3,7,0)$, $(13,6,4,1)$ and $(12,9,1,2)$ counts of multiplicity $1,2,3,4$. Since [plan.md](../plan.md) calls the profile *"the object that matters"*, the profile itself belongs on the record, not its three aggregates.
 

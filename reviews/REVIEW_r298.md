@@ -1,6 +1,6 @@
 # Reviewer 298, $\Delta$ as orbit-motion mass, the route it closes, and the dimension screen
 
-Cold adversarial audit of the four claims in the brief. Every number below comes from an implementation written from the definitions in [scripts/reviewers/r298/](../scripts/reviewers/r298/), sharing no code with [b_symmetry_defect.py](../scripts/lib/b_symmetry_defect.py) or [review_r30_core.py](../scripts/lib/review_r30_core.py). The independent $\#$ was derived from the Hamilton structure-constant form $(W^{\#})_{ab}=\tfrac12c_{anm}c_{bpq}W_{np}W_{mq}$ and then checked against the record's $-\tfrac12\operatorname{tr}(A_aWA_bW)$: agreement to $0.0$ at $n=5,6,8$. The Weyl basis was rebuilt from the $4$-tensor Bianchi and Ricci conditions and reproduces $\dim\mathrm{Weyl}_n=n(n+1)(n+2)(n-3)/12$ at $n=4,\dots,8$.
+Cold adversarial audit of the four claims in the brief. Every number below comes from an implementation written from the definitions in [scripts/reviewers/r298/](../scripts/reviewers/r298/), sharing no code with [b_symmetry_defect.py](../scripts/lib/b_symmetry_defect.py) or [review_r30_core.py](../scripts/lib/review_r30_core.py). The independent $\#$ was derived from the Hamilton structure-constant form $(W^{\#})_{ab}=\tfrac12c_{anm}c_{bpq}W_{np}W_{mq}$ and then checked against the record's $-\tfrac12\mathop{\mathrm{tr}}(A_aWA_bW)$: agreement to $0.0$ at $n=5,6,8$. The Weyl basis was rebuilt from the $4$-tensor Bianchi and Ricci conditions and reproduces $\dim\mathrm{Weyl}_n=n(n+1)(n+2)(n-3)/12$ at $n=4,\dots,8$.
 
 | claim | verdict |
 |---|---|
@@ -13,7 +13,7 @@ Cold adversarial audit of the four claims in the brief. Every number below comes
 
 ## F1, CONFIRMED, as an exact identity with no factor and no projection
 
-$g_\gamma=\lVert[\mathrm{ad}(v_\gamma),W]\rVert_F^2$ holds to machine precision, not merely up to a constant. Written out: with $\{v_a\}$ the orthonormal eigenbasis of $W$, $\langle v_a,[\mathrm{ad}(x),W]v_b\rangle=(\lambda_b-\lambda_a)c_{xab}$, so the Frobenius norm of the commutator is $\sum_{ab}(\lambda_a-\lambda_b)^2c_{\gamma ab}^2$, which is the record's $\sum_{ab}(\lambda_a-\lambda_b)^2T_{\gamma ab}$ because the $\tfrac12$ inside $T$ is exactly the factor that turns $\operatorname{tr}(X^{\!\top}Y)$ into the metric $\langle X,Y\rangle=\tfrac12\operatorname{tr}(X^{\!\top}Y)$ in which the $\phi_{ij}$ are orthonormal. Measured $\max_\gamma\lvert g_\gamma-\lVert[\mathrm{ad}(v_\gamma),W]\rVert_F^2\rVert$:
+$g_\gamma=\lVert[\mathrm{ad}(v_\gamma),W]\rVert_F^2$ holds to machine precision, not merely up to a constant. Written out: with $\{v_a\}$ the orthonormal eigenbasis of $W$, $\langle v_a,[\mathrm{ad}(x),W]v_b\rangle=(\lambda_b-\lambda_a)c_{xab}$, so the Frobenius norm of the commutator is $\sum_{ab}(\lambda_a-\lambda_b)^2c_{\gamma ab}^2$, which is the record's $\sum_{ab}(\lambda_a-\lambda_b)^2T_{\gamma ab}$ because the $\tfrac12$ inside $T$ is exactly the factor that turns $\mathop{\mathrm{tr}}(X^{\!\top}Y)$ into the metric $\langle X,Y\rangle=\tfrac12\mathop{\mathrm{tr}}(X^{\!\top}Y)$ in which the $\phi_{ij}$ are orthonormal. Measured $\max_\gamma\lvert g_\gamma-\lVert[\mathrm{ad}(v_\gamma),W]\rVert_F^2\rVert$:
 
 | population | worst deviation |
 |---|---|
@@ -55,7 +55,7 @@ Answering the brief's four probes:
 - **Criticality is load-bearing.** At random *non-critical* $\mathrm{Weyl}_n$ tensors the deviation is $2.55$, $5.63$, $2.75$, $13.98$, not a near miss.
 - **Weyl-ness is not needed.** The argument uses only equivariance of $Q$ on $\mathrm{Sym}^2$. Separately, $\mathrm{Weyl}_n$ turns out to be $Q$-closed ($\lVert Q(W)-\Pi Q(W)\rVert\le3.3\times10^{-16}$ at random $\mathrm{Weyl}_n$ tensors, $n=5,6,7$), so the projected and unprojected critical equations coincide and the question is moot in this setting; had they differed, $\Pi$ is equivariant and the argument survives.
 - **$\theta>0$ is not needed** for F2 (it is needed for Lemma L24). At a critical point with $\theta=-1.224745$ the orbit directions are still exact $\tfrac12$-eigenvectors ($1.2\times10^{-15}$).
-- **The orbit tangent is entirely inside $e^\perp$.** $\langle[\mathrm{ad}(x),W],W\rangle= \operatorname{tr}(\mathrm{ad}(x)W^2)-\operatorname{tr}(W\,\mathrm{ad}(x)W)=0$ by cyclicity, measured $\le6.4\times10^{-17}$ at arbitrary $W$, critical or not. So "the part not in $e^\perp$" is empty; there is nothing there for the claim to have missed.
+- **The orbit tangent is entirely inside $e^\perp$.** $\langle[\mathrm{ad}(x),W],W\rangle= \mathop{\mathrm{tr}}(\mathrm{ad}(x)W^2)-\mathop{\mathrm{tr}}(W\,\mathrm{ad}(x)W)=0$ by cyclicity, measured $\le6.4\times10^{-17}$ at arbitrary $W$, critical or not. So "the part not in $e^\perp$" is empty; there is nothing there for the claim to have missed.
 - **Degeneracy and small orbits change nothing.** $\mathbb{CP}^2$ carries a repeated negative eigenvalue and a $3$-dimensional kernel with $\dim\mathcal O=2$ out of $6$; padded $\mathbb{CP}^2$ has $\dim\mathcal O=18$ of $28$. Both exact.
 
 ---
@@ -124,7 +124,7 @@ Six of six carry $\Delta>0$ and violate by a factor of at least $9$, consistent 
 
 **"A large $\Delta$ piles directions up AT the bound" is false as stated.** $\Delta$ is a mass, not a count, and the count of directions at the bound is $\ge\dim\mathcal O$, which is fixed by the isotropy and is *not* a function of $\Delta$:
 
-| point | $\Delta$ | $\dim\mathcal O$ | $\operatorname{mult}(\tfrac12)$ on $e^\perp$ |
+| point | $\Delta$ | $\dim\mathcal O$ | $\mathop{\mathrm{mult}}(\tfrac12)$ on $e^\perp$ |
 |---|---|---|---|
 | $S^3\times S^5$ | $0$ | 15 | 15 |
 | $S^5\times S^5$ | $0$ | 25 | 25 |
@@ -145,7 +145,7 @@ That half is true for a trivial reason (eigenvectors at $\lambda\ne\tfrac12$ are
 | $\mathbb{CP}^4$ | $0.60000000$ | $0.000000$ | $\mathbf{1.000000}$ |
 | $C_5$ blow-up | $1.20601133$ | $0.000000$ | $0.421795$ |
 
-At $\mathbb{CP}^{3,4}$ the violating direction is **entirely** a metric deformation, and at the $C_5$ blow-up a single random $H_A$ already gives Rayleigh quotient $0.5658>\tfrac12$. This is the structural point the record should take from F3: $\Delta$ is built from $\mathrm{ad}(v_\gamma)$, i.e. from the **skew** half of $\mathfrak{gl}(n)$, which is exactly the half on which every variational statement is vacuous; the working second-order instrument already in the tree ([run_defect_instability_trace.py](../scripts/runs/run_defect_instability_trace.py), the $\operatorname{tr}_{GL}$ condition) traces the Hessian over the **symmetric** half. A defect built the same way over $\mathrm{Sym}_0(\mathbb R^n)$ instead of over $\mathfrak p\subset\mathfrak{so}(n)$ is the object that would not be vacuous, that is the constructive content of F3, and it is not in the record.
+At $\mathbb{CP}^{3,4}$ the violating direction is **entirely** a metric deformation, and at the $C_5$ blow-up a single random $H_A$ already gives Rayleigh quotient $0.5658>\tfrac12$. This is the structural point the record should take from F3: $\Delta$ is built from $\mathrm{ad}(v_\gamma)$, i.e. from the **skew** half of $\mathfrak{gl}(n)$, which is exactly the half on which every variational statement is vacuous; the working second-order instrument already in the tree ([run_defect_instability_trace.py](../scripts/runs/run_defect_instability_trace.py), the $\mathop{\mathrm{tr}}_{GL}$ condition) traces the Hessian over the **symmetric** half. A defect built the same way over $\mathrm{Sym}_0(\mathbb R^n)$ instead of over $\mathfrak p\subset\mathfrak{so}(n)$ is the object that would not be vacuous, that is the constructive content of F3, and it is not in the record.
 
 ### Is F3 vacuous?
 

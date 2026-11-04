@@ -8,7 +8,7 @@ Unitality appears in the abstract and is fixed again at Definition 1.1 ("a unita
 
 ## Why it does not transfer to $\mathrm{Weyl}_n$
 
-$\mathrm{Weyl}_n$ under $X\circ Y=\tfrac12\big(Q(X+Y)-Q(X)-Q(Y)\big)$ carries the right bilinear form but **has no unit**: a unit $u$ would give $L_u=\mathrm{Id}$ and hence $\operatorname{tr}(L_u)>0$, while $\operatorname{tr}(L_x)\equiv0$ for every $x$ in this algebra. The characterisation therefore says nothing about the extremal idempotent $e=W/\theta$ at a maximiser, and the Clifford/Hurwitz–Radon cap stays closed.
+$\mathrm{Weyl}_n$ under $X\circ Y=\tfrac12\big(Q(X+Y)-Q(X)-Q(Y)\big)$ carries the right bilinear form but **has no unit**: a unit $u$ would give $L_u=\mathrm{Id}$ and hence $\mathop{\mathrm{tr}}(L_u)>0$, while $\mathop{\mathrm{tr}}(L_x)\equiv0$ for every $x$ in this algebra. The characterisation therefore says nothing about the extremal idempotent $e=W/\theta$ at a maximiser, and the Clifford/Hurwitz–Radon cap stays closed.
 
 ## What remains usable
 

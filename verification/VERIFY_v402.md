@@ -5,7 +5,7 @@ The brief ([BRIEF_L66r2.md](BRIEF_L66r2.md)) was cold. I worked from the definit
 | # | Claim attacked | Verdict | Reason |
 |---|---|---|---|
 | 1 | The definition of $\circ$-decomposable agrees across Passages A, B, C | CONFIRMED | same six clauses in all three. The slot placement of $T$ differs between A and C/D, and total symmetry makes that immaterial |
-| 2 | $T(X,Y,Z)=\langle X\circ Y,Z\rangle$ is totally symmetric (Passage D) | CONFIRMED | $\operatorname{tr}(XYZ)$ is $S_3$-invariant on symmetric operators, and the $\#$ part permutes two antisymmetric $c$'s at sign $(-1)^2$ |
+| 2 | $T(X,Y,Z)=\langle X\circ Y,Z\rangle$ is totally symmetric (Passage D) | CONFIRMED | $\mathop{\mathrm{tr}}(XYZ)$ is $S_3$-invariant on symmetric operators, and the $\#$ part permutes two antisymmetric $c$'s at sign $(-1)^2$ |
 | 3 | Additivity $P(W)=\sum_ia_i^3P(A_i)$ | CONFIRMED | terms $i\ne j$ die at slot 1-2, terms $i=j\ne l$ need one slot-3 move, which is exactly total symmetry |
 | 4 | $\lvert P(A_i)\rvert\le M(n)$ | CONFIRMED | $P$ cubic hence odd, and $-A_i$ is also a unit element of $\mathcal W_n$ |
 | 5 | The chain $\sum a_i^3P(A_i)\le M\sum\lvert a_i\rvert^3\le M\max\lvert a_i\rvert<M$ | CONFIRMED | each step closes, the strict step uses $M>0$ and $\max\lvert a_i\rvert<1$ |
@@ -48,7 +48,7 @@ Consequences used below, each immediate from the quoted definitions: $\circ$ is 
 | every $a_i\ne0$ | $\max\lvert a_i\rvert<1$ | only "each $i$ has a nonzero partner $j\ne i$" is needed, which "every $a_i\ne0$" with $k\ge2$ gives |
 | $A_i\circ A_j=0$, $i\ne j$ | additivity | |
 
-**Used but not in the statement.** Total symmetry of $T$ (stated and argued in Passage D, checked in section 1). Existence of the maximum $M(n)$ (continuous $P$ on the compact unit sphere of a finite-dimensional space, unstated and standard). That $\langle A,B\rangle=\operatorname{tr}(AB)$ on symmetric operators and that the $c$'s are totally antisymmetric structure constants in an orthonormal basis (both carried by Passage D's wording). No hypothesis is used without being available in the passages.
+**Used but not in the statement.** Total symmetry of $T$ (stated and argued in Passage D, checked in section 1). Existence of the maximum $M(n)$ (continuous $P$ on the compact unit sphere of a finite-dimensional space, unstated and standard). That $\langle A,B\rangle=\mathop{\mathrm{tr}}(AB)$ on symmetric operators and that the $c$'s are totally antisymmetric structure constants in an orthonormal basis (both carried by Passage D's wording). No hypothesis is used without being available in the passages.
 
 **The imported result, Nienhaus Proposition 2.25.** Hypotheses: $k,l\in\mathbb N$, $k+l=n$, the product $S^k\times S^l_r$ with $r=\sqrt{(l-1)/(k-1)}$, which needs $k\ge2$. $W_{S_{k,l}}=\widetilde W_{S_{k,l}}/\lVert\widetilde W_{S_{k,l}}\rVert$ with $\lVert\widetilde W_{S_{k,l}}\rVert^2=\tfrac{kl}2\cdot\tfrac{k-1}{l-1}\cdot\tfrac{n-2}{n-1}$ (printed page 23), which is nonzero for $k,l\ge2$, so the unit element exists. $P$ is Nienhaus's Definition 2.15, $P(R)=\langle Q(R),R\rangle$ with $Q(R,S)=\tfrac12(RS+SR)+R\#S$ (Lemma 2.13). Checked against the application: Passage A takes $k,l\ge2$, which meets every hypothesis, and the convention checks are in section 7.
 
@@ -60,9 +60,9 @@ No finding. The one difference is the slot placement of $T$ (candidate W1, withd
 
 ## 2. Total symmetry of $T$ (brief item 2, second half)
 
-$T(X,Y,Z)=\langle X\circ Y,Z\rangle=\tfrac12\bigl(\operatorname{tr}(XYZ)+\operatorname{tr}(YXZ)\bigr)+\langle X\#Y,Z\rangle$, with $X\#Y$ the polarisation of $\#$.
+$T(X,Y,Z)=\langle X\circ Y,Z\rangle=\tfrac12\bigl(\mathop{\mathrm{tr}}(XYZ)+\mathop{\mathrm{tr}}(YXZ)\bigr)+\langle X\#Y,Z\rangle$, with $X\#Y$ the polarisation of $\#$.
 
-**The $W^2$ part.** $\operatorname{tr}(XYZ)$ is invariant under cyclic permutations. For symmetric $X,Y,Z$, $\operatorname{tr}(XYZ)=\operatorname{tr}((XYZ)^{\mathsf T})=\operatorname{tr}(ZYX)$, the reversal. Cycles and one reversal generate $S_3$, so $\operatorname{tr}(XYZ)$ is already totally symmetric and the symmetrisation equals it. Passage D's "symmetrisation of $\operatorname{tr}(XYZ)$" is correct.
+**The $W^2$ part.** $\mathop{\mathrm{tr}}(XYZ)$ is invariant under cyclic permutations. For symmetric $X,Y,Z$, $\mathop{\mathrm{tr}}(XYZ)=\mathop{\mathrm{tr}}((XYZ)^{\mathsf T})=\mathop{\mathrm{tr}}(ZYX)$, the reversal. Cycles and one reversal generate $S_3$, so $\mathop{\mathrm{tr}}(XYZ)$ is already totally symmetric and the symmetrisation equals it. Passage D's "symmetrisation of $\mathop{\mathrm{tr}}(XYZ)$" is correct.
 
 **The $\#$ part.** From the index formula, $\langle X\#Y,Z\rangle=\tfrac12\sum c_{acd}c_{bef}X_{ce}Y_{df}Z_{ab}$ (the polarisation needs no extra symmetrisation because swapping $(c,d)$ and $(e,f)$ together costs $(-1)^2$). Here $X$ occupies the second index of each $c$, $Y$ the third, $Z$ the first. Exchanging the roles of $X$ and $Z$ and renaming $a\leftrightarrow c$, $b\leftrightarrow e$ gives $c_{cad}c_{ebf}=(-1)(-1)c_{acd}c_{bef}$. The same holds for $X\leftrightarrow Y$ and $Y\leftrightarrow Z$. The factor $\tfrac12$ is a common scalar and does not enter. Passage D's argument closes once the $c$'s are totally antisymmetric, which D states.
 
@@ -78,7 +78,7 @@ $P(W)=T(W,W,W)=\sum_{i,j,l}a_ia_ja_l\,T(A_i,A_j,A_l)$. With $T(X,Y,Z)=\langle X\
 
 So $P(W)=\sum_ia_i^3P(A_i)$. The step needs symmetry between slot 3 and the others, which is more than the symmetry of $\circ$ and is exactly what section 2 supplies. Passage A's wording, the cross term $\langle A_i,Q(A_j)\rangle=T(A_i,A_j,A_j)$ moved to $\langle A_j,A_i\circ A_j\rangle$, is the same move in A's slot convention.
 
-Screen of additivity against the imported proposition, at $n=4$. By Nienhaus Lemma 2.19, $R^\#=\begin{pmatrix}A^\#&B^\#\\ (B^\#)^{\mathsf T}&C^\#\end{pmatrix}$ with $A^\#=2\operatorname{adj}(A)$ on $\Lambda^\pm$. For $A\in\mathcal W^+$ and $C\in\mathcal W^-$, $AC=0$ and $(A+C)^\#=A^\#+C^\#$, so $A\circ C=0$. On a traceless $3\times3$ block with eigenvalues $\lambda$, $P=\sum\lambda^3+6\lambda_1\lambda_2\lambda_3=9\lambda_1\lambda_2\lambda_3$. The unit $W_{S_{2,2}}$ has $\mathcal W^\pm$ parts each $\tfrac1{\sqrt2}\operatorname{diag}(2,-1,-1)/\sqrt6$ (from $\widetilde W=\tfrac23$ on $e_{12},e_{34}$ and $-\tfrac13$ on the mixed planes). Additivity predicts $P=2\cdot(\tfrac1{\sqrt2})^3\cdot\tfrac{3}{\sqrt6}=\tfrac{\sqrt3}2$, and Proposition 2.25 gives $\theta_{2,2}=\sqrt2\sqrt{\tfrac12\cdot\tfrac12\cdot\tfrac32}=\tfrac{\sqrt3}2$. The two agree. Reported as a screen.
+Screen of additivity against the imported proposition, at $n=4$. By Nienhaus Lemma 2.19, $R^\#=\begin{pmatrix}A^\#&B^\#\\ (B^\#)^{\mathsf T}&C^\#\end{pmatrix}$ with $A^\#=2\mathop{\mathrm{adj}}(A)$ on $\Lambda^\pm$. For $A\in\mathcal W^+$ and $C\in\mathcal W^-$, $AC=0$ and $(A+C)^\#=A^\#+C^\#$, so $A\circ C=0$. On a traceless $3\times3$ block with eigenvalues $\lambda$, $P=\sum\lambda^3+6\lambda_1\lambda_2\lambda_3=9\lambda_1\lambda_2\lambda_3$. The unit $W_{S_{2,2}}$ has $\mathcal W^\pm$ parts each $\tfrac1{\sqrt2}\mathop{\mathrm{diag}}(2,-1,-1)/\sqrt6$ (from $\widetilde W=\tfrac23$ on $e_{12},e_{34}$ and $-\tfrac13$ on the mixed planes). Additivity predicts $P=2\cdot(\tfrac1{\sqrt2})^3\cdot\tfrac{3}{\sqrt6}=\tfrac{\sqrt3}2$, and Proposition 2.25 gives $\theta_{2,2}=\sqrt2\sqrt{\tfrac12\cdot\tfrac12\cdot\tfrac32}=\tfrac{\sqrt3}2$. The two agree. Reported as a screen.
 
 Verdict CONFIRMED.
 
@@ -136,9 +136,9 @@ Verdict CONFIRMED.
 
 **What is on file.** The two figures rest on a run and nothing else, which the brief grades `HYPOTHESIS-DEBT`. To discharge it, a closed-form pair of unit critical elements with $\langle A,B\rangle=0$ and $A\circ B\ne0$ is needed. The $n=8$ values would need their own exact derivation.
 
-**Screen (not a repair, and not on file).** At $n=4$ on $\Lambda^+$, Nienhaus Lemma 2.19 gives $X^\#=2\operatorname{adj}X=2X^2-\operatorname{tr}(X^2)I$ for traceless $X$, so $X\circ Y=\tfrac32(XY+YX)-\operatorname{tr}(XY)I$. Take $A=\tfrac1{\sqrt6}\operatorname{diag}(2,-1,-1)$ (Nienhaus's $W_{\mathbb{CP}^2}$ block) and $B=\tfrac1{\sqrt6}(J-I)$.
-- $Q(A)=3A^2-I=\operatorname{diag}(1,-\tfrac12,-\tfrac12)=\sqrt{3/2}\,A$ and $Q(B)=\tfrac12(J+I)-I=\sqrt{3/2}\,B$, so both are critical.
-- $\operatorname{tr}(AB)=0$.
+**Screen (not a repair, and not on file).** At $n=4$ on $\Lambda^+$, Nienhaus Lemma 2.19 gives $X^\#=2\mathop{\mathrm{adj}}X=2X^2-\mathop{\mathrm{tr}}(X^2)I$ for traceless $X$, so $X\circ Y=\tfrac32(XY+YX)-\mathop{\mathrm{tr}}(XY)I$. Take $A=\tfrac1{\sqrt6}\mathop{\mathrm{diag}}(2,-1,-1)$ (Nienhaus's $W_{\mathbb{CP}^2}$ block) and $B=\tfrac1{\sqrt6}(J-I)$.
+- $Q(A)=3A^2-I=\mathop{\mathrm{diag}}(1,-\tfrac12,-\tfrac12)=\sqrt{3/2}\,A$ and $Q(B)=\tfrac12(J+I)-I=\sqrt{3/2}\,B$, so both are critical.
+- $\mathop{\mathrm{tr}}(AB)=0$.
 - $A\circ B=\tfrac14\begin{pmatrix}0&1&1\\1&0&-2\\1&-2&0\end{pmatrix}\ne0$, of Frobenius norm $\tfrac{\sqrt3}2$.
 
 The qualitative claim holds by this screen, at $n=4$ rather than $n=8$. The paragraph is unused by the proof and does not affect the verdict.
@@ -149,7 +149,7 @@ Verdict HYPOTHESIS-DEBT, confined to the side paragraph.
 
 **$\lvert P(W)\rvert$.** $\lvert\sum a_i^3P(A_i)\rvert\le\sum\lvert a_i\rvert^3\lvert P(A_i)\rvert$ by the triangle inequality. This bounds $\lvert P(W)\rvert$, which is stronger than Passage A's bound on $P(W)$ and valid. C compresses the steps $\lvert P(A_i)\rvert\le M$ and $\sum\lvert a_i\rvert^3\le\max\lvert a_i\rvert$ that A carries (candidate W5, withdrawn).
 
-**"Runs against $M(n)$", "$0<0$".** With $m=\max_i\lvert P(A_i)\rvert$ in place of $M(n)$ the last step reads $m\max\lvert a_i\rvert<m$, false at $m=0$. Screen: such a splitting exists at $n=4$, $A=\tfrac1{\sqrt2}\operatorname{diag}(1,0,-1)$ in $\mathcal W^+$ with $P=9\lambda_1\lambda_2\lambda_3=0$ and its mirror in $\mathcal W^-$. Correct.
+**"Runs against $M(n)$", "$0<0$".** With $m=\max_i\lvert P(A_i)\rvert$ in place of $M(n)$ the last step reads $m\max\lvert a_i\rvert<m$, false at $m=0$. Screen: such a splitting exists at $n=4$, $A=\tfrac1{\sqrt2}\mathop{\mathrm{diag}}(1,0,-1)$ in $\mathcal W^+$ with $P=9\lambda_1\lambda_2\lambda_3=0$ and its mirror in $\mathcal W^-$. Correct.
 
 **"No induction on $n$".** The lemma concludes only about maximisers and says nothing about the support of the $A_i$. Correct.
 
@@ -157,7 +157,7 @@ Verdict HYPOTHESIS-DEBT, confined to the side paragraph.
 
 **"As one coefficient tends to 1".** $P(W)=a_1^3P(A_1)+a_2^3P(A_2)\to P(A_1)$ as $a_1\to1$. With $P(A_2)=0$ (the $\mathcal W^-$ piece above) and $P(A_1)\ne0$, $\lvert P(W)\rvert$ exceeds $\min_i\lvert P(A_i)\rvert=0$ near the limit, so the min-bound fails without criticality. Correct under the reading that $\theta$ is replaced by $P(W)$ off criticality.
 
-**"Reach non-critical splittings and ones sharing coordinates".** As a scope statement it is correct: the hypotheses do not mention criticality or supports. Existence is not on file. Screen: at every $n\ge4$, a padded $\mathcal W^+$ piece and a padded $\mathcal W^-$ piece on the same four coordinates are $\circ$-orthogonal (the structure constants between $\Lambda^+$ and $\Lambda^-$ vanish inside $\mathfrak{so}(n)$), and a non-critical choice exists, e.g. $\tfrac1{\sqrt2}\operatorname{diag}(1,0,-1)$, whose $Q=(\tfrac12,-1,\tfrac12)$ is not proportional to it.
+**"Reach non-critical splittings and ones sharing coordinates".** As a scope statement it is correct: the hypotheses do not mention criticality or supports. Existence is not on file. Screen: at every $n\ge4$, a padded $\mathcal W^+$ piece and a padded $\mathcal W^-$ piece on the same four coordinates are $\circ$-orthogonal (the structure constants between $\Lambda^+$ and $\Lambda^-$ vanish inside $\mathfrak{so}(n)$), and a non-critical choice exists, e.g. $\tfrac1{\sqrt2}\mathop{\mathrm{diag}}(1,0,-1)$, whose $Q=(\tfrac12,-1,\tfrac12)$ is not proportional to it.
 
 Verdicts: detail CONFIRMED, landscape CONFIRMED AS ALGEBRA.
 

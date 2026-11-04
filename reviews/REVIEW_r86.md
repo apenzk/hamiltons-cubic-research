@@ -17,11 +17,11 @@ Independent of [Reviewer 85](REVIEW_r85.md), same brief. **Agrees on every verdi
 
 **The eigenvalues are derivable, not a citation.** Petersen–Stanfield's own Prop 2.2 mechanism $R=\mu^\dagger\mu$ with $\mu(X\wedge Y)=[X,Y]$ gives $\lambda_i=\tfrac12(1-B_{\mathfrak h_i}/B_{\mathfrak g})$ in three lines, reproducing the paper **including the overall scale**, its centre eigenvalue $\tfrac12$, and its trace identity $\mathrm{scal}=\dim M/2$.
 
-**$\theta$ is scale-invariant** and $c=\mathrm{scal}/(n(n-1))$ equals $\operatorname{tr}R/N$ identically, so $W$ is just $R$ minus its trace part, **the metric normalisation cannot bite here at all**, checked because it is the obvious place for a factor to hide.
+**$\theta$ is scale-invariant** and $c=\mathrm{scal}/(n(n-1))$ equals $\mathop{\mathrm{tr}}R/N$ identically, so $W$ is just $R$ minus its trace part, **the metric normalisation cannot bite here at all**, checked because it is the obvious place for a factor to hide.
 
 **The $m=2$ accident has a sharper explanation than the record gave.** $S_{\mathfrak{mmm}}=0$ *is* the symmetric-pair condition $[\mathfrak m,\mathfrak m]\subseteq\mathfrak h$ for $(\mathfrak{so}(4m),\mathfrak h)$. At $m=2$, $\mathfrak{sp}(1)\oplus\mathfrak{sp}(2)\cong\mathfrak{so}(3)\oplus\mathfrak{so}(5)\subset\mathfrak{so}(8)$, and $(\mathfrak{so}(8),\mathfrak{so}(3)\oplus\mathfrak{so}(5))$ **genuinely is** a symmetric pair, dimensions $13+15$, $15=3\cdot5$. So the false premise is **true at $m=2$ and nowhere else with $m\ge2$**, which is the real reason it reproduced $\mathbb{HP}^2$ and failed at $\mathbb{HP}^3$. It also explains the record's separate triality observation about $\mathbb{HP}^2$.
 
-**Killing constants derived without the convention.** $c_{\mathfrak{sp}(1)}=4/m$ from $|J_p|^2=2m$ and $[L_i,L_j]=2L_k$; $c_{\mathfrak{sp}(m)}=2(m+1)$ via $\mathbb H\cong\mathbb C\oplus j\mathbb C$ and $B_{\mathfrak{sp}(m)}(A,A)=2(m+1)\cdot2\operatorname{Re}\operatorname{tr}(A^2)$, **no Dynkin index anywhere**, so the factor-2 trap is not present.
+**Killing constants derived without the convention.** $c_{\mathfrak{sp}(1)}=4/m$ from $|J_p|^2=2m$ and $[L_i,L_j]=2L_k$; $c_{\mathfrak{sp}(m)}=2(m+1)$ via $\mathbb H\cong\mathbb C\oplus j\mathbb C$ and $B_{\mathfrak{sp}(m)}(A,A)=2(m+1)\cdot2\mathop{\mathrm{Re}}\mathop{\mathrm{tr}}(A^2)$, **no Dynkin index anywhere**, so the factor-2 trap is not present.
 
 **$S_{333}$ needs no second unstated premise.** $[\mathfrak{sp}(1),\mathfrak m]\subseteq\mathfrak m$ and $[\mathfrak{sp}(m),\mathfrak m]\subseteq\mathfrak m$ are used but **automatic**: $\mathfrak h$ is a subalgebra and $\mathrm{ad}(\mathfrak h)$ is skew for the invariant form, so $\mathfrak h^\perp$ is $\mathrm{ad}(\mathfrak h)$-invariant.
 
@@ -35,11 +35,11 @@ The $m=1$ pole is the $W=0$ degeneration ($\mathbb{HP}^1=S^4$, conformally flat)
 
 Same theorem as Reviewer 85, reached independently: for a compact irreducible symmetric space normalised to Einstein constant $\tfrac12$, $Q(W)=\tfrac12W$ **exactly, blockwise**, hence
 
-$$\theta^2=\frac1{4\big(\lVert R\rVert^2-(\operatorname{tr}R)^2/N\big)} .$$
+$$\theta^2=\frac1{4\big(\lVert R\rVert^2-(\mathop{\mathrm{tr}}R)^2/N\big)} .$$
 
-Two ingredients: the **bridge identity** $\lambda_i=1/(c_i+2)$ (from $\lambda_i=\tfrac12(1-t_i)$ and $c_i=2t_i/(1-t_i)$) which ties the eigenvalue input to the block-mass input the record treats as independent; and the block relations $S_{ipp}=\rho d_i-c_id_i$, $S_{ppp}=\rho d_p-2\sum_iS_{ipp}$. Checked for $r=1,\dots,5$ holonomy factors with $\lambda_i,d_i,n$ all free symbols; at $r=1$ the residual before normalising is $d_1\lambda_1(4d_1\lambda_1-n)/(n^2(n-1))$, so **the identity holds precisely on $\operatorname{tr}R=n/4$, the Einstein condition is not incidental.**
+Two ingredients: the **bridge identity** $\lambda_i=1/(c_i+2)$ (from $\lambda_i=\tfrac12(1-t_i)$ and $c_i=2t_i/(1-t_i)$) which ties the eigenvalue input to the block-mass input the record treats as independent; and the block relations $S_{ipp}=\rho d_i-c_id_i$, $S_{ppp}=\rho d_p-2\sum_iS_{ipp}$. Checked for $r=1,\dots,5$ holonomy factors with $\lambda_i,d_i,n$ all free symbols; at $r=1$ the residual before normalising is $d_1\lambda_1(4d_1\lambda_1-n)/(n^2(n-1))$, so **the identity holds precisely on $\mathop{\mathrm{tr}}R=n/4$, the Einstein condition is not incidental.**
 
-For $\mathbb{HP}^m$: $\lVert R\rVert^2=\frac{m(5m+1)}{4(m+2)^2}$, $(\operatorname{tr}R)^2/N=\frac m{2(4m-1)}$, and the closed form drops out in one line.
+For $\mathbb{HP}^m$: $\lVert R\rVert^2=\frac{m(5m+1)}{4(m+2)^2}$, $(\mathop{\mathrm{tr}}R)^2/N=\frac m{2(4m-1)}$, and the closed form drops out in one line.
 
 **The third family does not fit, and that is a distinction rather than a gap.** Computing the actual curvature operator of $SU(m)/SO(m)$ (holonomy $\mathfrak{so}(m)$, simple, $\lambda=(m+2)/(4m)$) gives $\theta^2=\frac{8m(m^2+m-4)}{(m-2)(m-1)(m+1)(m+2)(m+4)}$, **not** the record's $\frac{m(m+1)}{(m-1)(m+2)}$. A free by-product: a second closed-form family, decreasing, with $\theta^2(SU(3)/SO(3))=24/35$.
 

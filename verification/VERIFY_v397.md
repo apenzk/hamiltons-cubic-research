@@ -26,7 +26,7 @@ Quoted from the brief:
 
 - "$V=\mathbb R^n$ with the standard action of $O(n)$, and $V^{\otimes m}$ with the diagonal action $g\cdot(v_1\otimes\dots\otimes v_m)=gv_1\otimes\dots\otimes gv_m$ and the induced inner product."
 - "A **block label** is a partition $\lambda$ with $\lvert\lambda\rvert\in\{0,2,\dots,12\}$. $\lambda'$ is the conjugate partition, so $\lambda'_1$ is the number of nonzero parts of $\lambda$ and $\lambda'_2$ the number of parts of size at least $2$. $\lambda$ is **$O(n)$-admissible** when $\lambda'_1+\lambda'_2\le n$."
-- "$V_\lambda$ is the $O(n)$-representation labelled by $\lambda$, and $M_\lambda=\operatorname{Hom}_{O(n)}(V_\lambda,V^{\otimes12})$."
+- "$V_\lambda$ is the $O(n)$-representation labelled by $\lambda$, and $M_\lambda=\mathop{\mathrm{Hom}}_{O(n)}(V_\lambda,V^{\otimes12})$."
 - From Passage A: "$k=(12-\lvert\lambda\rvert)/2$, let $\iota_\lambda:V_\lambda\hookrightarrow V^{\otimes\lvert\lambda\rvert}$ be the inclusion given by Weyl's construction of $V_\lambda$ as the traceless tensors of symmetry type $\lambda$ (classical, unfiled), and let $\mathrm{cup}=\sum_a e_a\otimes e_a\in V\otimes V$ be the invariant metric element."
 
 I read $e_a$ as the standard orthonormal basis of $\mathbb R^n$ (see withdrawn candidate W3). Slots of $V^{\otimes12}$ are ordered as the passage writes them: $\iota_\lambda(x)$ in slots $1,\dots,\lvert\lambda\rvert$, then the cups in the adjacent pairs $(\lvert\lambda\rvert+2j-1,\lvert\lambda\rvert+2j)$ for $j=1,\dots,k$.
@@ -73,7 +73,7 @@ No finding.
 
 **Contraction route.** Let $\kappa_j$ contract slots $\lvert\lambda\rvert+2j-1$ and $\lvert\lambda\rvert+2j$ with $\langle\cdot,\cdot\rangle$. Applied to $u\otimes\mathrm{cup}^{\otimes j}$ it gives $\big(\sum_a\langle e_a,e_a\rangle\big)u\otimes\mathrm{cup}^{\otimes(j-1)}=n\,u\otimes\mathrm{cup}^{\otimes(j-1)}$. Composing $\kappa_1\circ\dots\circ\kappa_k$ (innermost pair first) gives $n^k\iota_\lambda$ as a map $V_\lambda\to V^{\otimes\lvert\lambda\rvert}$. With $n\ge1$, $n^k\ne0$, and $\iota_\lambda\ne0$ because $V_\lambda\ne0$, so $c_0\ne0$. At $k=0$ the identity reads $\iota_\lambda=1\cdot\iota_\lambda$.
 
-**Claim 4.** $M_\lambda$ is a linear subspace of $\operatorname{Hom}_{\mathbb R}(V_\lambda,V^{\otimes12})$ and its zero is the zero map, so the two readings of "nonzero" coincide.
+**Claim 4.** $M_\lambda$ is a linear subspace of $\mathop{\mathrm{Hom}}_{\mathbb R}(V_\lambda,V^{\otimes12})$ and its zero is the zero map, so the two readings of "nonzero" coincide.
 
 No finding beyond W1.
 
@@ -105,7 +105,7 @@ No finding.
 
 ## 7. Claim 10, the realisation theorem
 
-Passage A states the theorem's requirement as "one nonzero seed per block generates that block", and identifies a seed with "a nonzero element of $\operatorname{Hom}(V_\lambda,V^{\otimes12})$". The lemma supplies a nonzero element of $M_\lambda$ for every admissible block label and every $n\ge1$. That matches the requirement as A states it. The theorem itself is not quoted in the brief, so any further hypothesis it carries (on $n$, or on what "generates" acts with) is outside what I can check, and the lemma does not claim to check it.
+Passage A states the theorem's requirement as "one nonzero seed per block generates that block", and identifies a seed with "a nonzero element of $\mathop{\mathrm{Hom}}(V_\lambda,V^{\otimes12})$". The lemma supplies a nonzero element of $M_\lambda$ for every admissible block label and every $n\ge1$. That matches the requirement as A states it. The theorem itself is not quoted in the brief, so any further hypothesis it carries (on $n$, or on what "generates" acts with) is outside what I can check, and the lemma does not claim to check it.
 
 No finding within the brief. See W7 for the missing subscript.
 
@@ -117,7 +117,7 @@ No finding within the brief. See W7 for the missing subscript.
 | Admissibility | $\lambda'_1+\lambda'_2\le n$ | "$O(n)$-admissible" | "$O(n)$-admissible" | "$O(n)$-admissible" |
 | Size | $\{0,2,\dots,12\}$ | same | same | same |
 | $\iota_\lambda$ | Weyl's traceless tensors | "the inclusion" | "the inclusion" | "the inclusion of the irreducible" |
-| Conclusion | nonzero element of $M_\lambda$ | nonzero element of $\operatorname{Hom}_{O(n)}$ | nonzero $O(n)$-equivariant map | nonzero element of $\operatorname{Hom}_{O(n)}$ |
+| Conclusion | nonzero element of $M_\lambda$ | nonzero element of $\mathop{\mathrm{Hom}}_{O(n)}$ | nonzero $O(n)$-equivariant map | nonzero element of $\mathop{\mathrm{Hom}}_{O(n)}$ |
 | Closed form | "relative to $\iota_\lambda$" | unqualified | "constructed rather than searched for" | "removes a search" |
 | $\lvert\lambda\rvert\le n$ gives admissible | yes, argued | yes, stated | yes, stated | yes, with $\lambda'_1+\lambda'_2\le\lvert\lambda\rvert$ |
 
@@ -206,7 +206,7 @@ The traps by name: range boundaries, section 10, no failure. Subfamily used in g
 ### W3. The basis $e_a$ is undefined
 
 1. Locate: "$\mathrm{cup}=\sum_a e_a\otimes e_a$".
-2. Exhibit: for a non-orthonormal basis, say $f_1=e_1$, $f_2=2e_2$ at $n=2$, $\sum_a f_a\otimes f_a$ has coefficient matrix $\operatorname{diag}(1,4)$, and the rotation by a quarter turn sends it to $\operatorname{diag}(4,1)$, which is not invariant.
+2. Exhibit: for a non-orthonormal basis, say $f_1=e_1$, $f_2=2e_2$ at $n=2$, $\sum_a f_a\otimes f_a$ has coefficient matrix $\mathop{\mathrm{diag}}(1,4)$, and the rotation by a quarter turn sends it to $\mathop{\mathrm{diag}}(4,1)$, which is not invariant.
 3. Opposite: the passage calls it "the invariant metric element" and computes with $gg^{\mathsf T}$, which presupposes an orthonormal basis. **Withdrawn.**
 
 ### W4. "The inclusion" with a definite article
@@ -227,17 +227,17 @@ The traps by name: range boundaries, section 10, no failure. Subfamily used in g
 2. Exhibit: a real statement is needed, $V_\lambda\ne0$ as a real space.
 3. Opposite: the traceless subspace and the Young symmetrizer are cut out and defined by linear maps with rational coefficients, so the real construction complexifies to the complex one and the two have the same dimension. Weyl's own treatment covers the real orthogonal group. **Withdrawn.**
 
-### W7. $\operatorname{Hom}$ without the subscript $O(n)$
+### W7. $\mathop{\mathrm{Hom}}$ without the subscript $O(n)$
 
-1. Locate: A's opening paragraph, "a nonzero element of $\operatorname{Hom}(V_\lambda,V^{\otimes12})$".
-2. Exhibit: the unrestricted $\operatorname{Hom}_{\mathbb R}$ is trivially nonzero, so read literally the search problem would be empty.
-3. Opposite: the lemma and every later line use $M_\lambda=\operatorname{Hom}_{O(n)}$. **Withdrawn.**
+1. Locate: A's opening paragraph, "a nonzero element of $\mathop{\mathrm{Hom}}(V_\lambda,V^{\otimes12})$".
+2. Exhibit: the unrestricted $\mathop{\mathrm{Hom}}_{\mathbb R}$ is trivially nonzero, so read literally the search problem would be empty.
+3. Opposite: the lemma and every later line use $M_\lambda=\mathop{\mathrm{Hom}}_{O(n)}$. **Withdrawn.**
 
 ### W8. "Nonzero $O(n)$-equivariant map" omits "linear"
 
 1. Locate: C landscape line.
 2. Exhibit: a nonlinear equivariant map would not lie in $M_\lambda$.
-3. Opposite: $c_0$ is linear (section 2), and C's detail line says "element of $\operatorname{Hom}_{O(n)}$". **Withdrawn.**
+3. Opposite: $c_0$ is linear (section 2), and C's detail line says "element of $\mathop{\mathrm{Hom}}_{O(n)}$". **Withdrawn.**
 
 ### W9. Lean states the $n=12$ case while A says $n\ge12$
 

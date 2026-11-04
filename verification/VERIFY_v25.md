@@ -49,9 +49,9 @@
 
 Write $(h\owedge k)_{ijkl}=h_{ik}k_{jl}+h_{jl}k_{ik}-h_{il}k_{jk}-h_{jk}k_{il}$, take $h\in S^2_0(V_1)$ extended by zero, and $g_q=I_{V_2}$, $g_p=I_{V_1}$, $g=g_p+g_q$.
 
-**The Ricci tensor.** $\mathrm{Ric}(h\owedge g_q)_{jl}=\sum_i(h\owedge g_q)_{ijil}=\operatorname{tr}(h)(g_q)_{jl}+q\,h_{jl}-(hg_q)_{jl}-(g_qh)_{jl}$. Here $\operatorname{tr}(h)=0$ and $hg_q=g_qh=0$, the two tensors having disjoint support, so $\mathrm{Ric}(h\owedge g_q)=q\,h=m\,h$. **This reproduces [Lemma L146](../findings/second-order.md)'s corrected line exactly**, and it is the reason the projection term survives.
+**The Ricci tensor.** $\mathrm{Ric}(h\owedge g_q)_{jl}=\sum_i(h\owedge g_q)_{ijil}=\mathop{\mathrm{tr}}(h)(g_q)_{jl}+q\,h_{jl}-(hg_q)_{jl}-(g_qh)_{jl}$. Here $\mathop{\mathrm{tr}}(h)=0$ and $hg_q=g_qh=0$, the two tensors having disjoint support, so $\mathrm{Ric}(h\owedge g_q)=q\,h=m\,h$. **This reproduces [Lemma L146](../findings/second-order.md)'s corrected line exactly**, and it is the reason the projection term survives.
 
-**The Weyl projection.** With the record's projector ([nondegeneracy.md](../findings/nondegeneracy.md), line 375) $P(X)=Y-\tfrac2{n-2}\mathrm{KN}(\rho_0)-\tfrac1{n(n-1)}s\,\mathrm{KN}(g)$, $Y=X-\mathrm{Alt}(X)$ and $\mathrm{KN}(h)=\tfrac12(h\owedge g)$: here $\mathrm{Alt}(X)=0$ by §3, $\rho_0=mh$ is already traceless, and $s=\operatorname{tr}\mathrm{Ric}=0$. Hence
+**The Weyl projection.** With the record's projector ([nondegeneracy.md](../findings/nondegeneracy.md), line 375) $P(X)=Y-\tfrac2{n-2}\mathrm{KN}(\rho_0)-\tfrac1{n(n-1)}s\,\mathrm{KN}(g)$, $Y=X-\mathrm{Alt}(X)$ and $\mathrm{KN}(h)=\tfrac12(h\owedge g)$: here $\mathrm{Alt}(X)=0$ by §3, $\rho_0=mh$ is already traceless, and $s=\mathop{\mathrm{tr}}\mathrm{Ric}=0$. Hence
 $$H\;=\;P(h\owedge g_q)\;=\;(h\owedge g_q)-\tfrac{m}{2m-2}\big(h\owedge g_p+h\owedge g_q\big)\;=\;\alpha\,(h\owedge g_q)-\beta\,(h\owedge g_p),$$
 $$\alpha=1-\tfrac{m}{2m-2}=\tfrac{m-2}{2(m-1)},\qquad\beta=\tfrac{m}{2(m-1)},$$
 matching [Lemma L146](../findings/second-order.md)'s $\alpha$ and $\beta$ on the nose.

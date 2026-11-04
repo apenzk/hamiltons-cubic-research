@@ -31,9 +31,9 @@
 
 I use the brief's normalisation and nothing else.
 
-- A $2$-form and a real skew matrix are one object, under $f_a\wedge f_b\mapsto E_{ab}-E_{ba}$; $\lVert\omega\rVert^2=-\tfrac12\operatorname{tr}(\omega^2)$ and $\langle\alpha,\beta\rangle=-\tfrac12\operatorname{tr}(\alpha\beta)$. Orthonormality of the triple is therefore $\operatorname{tr}(\omega_i\omega_j)=-2\delta_{ij}$.
+- A $2$-form and a real skew matrix are one object, under $f_a\wedge f_b\mapsto E_{ab}-E_{ba}$; $\lVert\omega\rVert^2=-\tfrac12\mathop{\mathrm{tr}}(\omega^2)$ and $\langle\alpha,\beta\rangle=-\tfrac12\mathop{\mathrm{tr}}(\alpha\beta)$. Orthonormality of the triple is therefore $\mathop{\mathrm{tr}}(\omega_i\omega_j)=-2\delta_{ij}$.
 - **Support** of $\omega$ is the image of its matrix. $V$ is the common support, $\dim V=6$, so each $\omega_i$ has rank $6$ and $\ker\omega_i=V^\perp$ for all three.
-- $\varepsilon_P$ is a unit area form of an oriented plane $P$: $\varepsilon_P^2=-\mathrm{Id}_P$, $\operatorname{tr}(\varepsilon_P^2)=-2$.
+- $\varepsilon_P$ is a unit area form of an oriented plane $P$: $\varepsilon_P^2=-\mathrm{Id}_P$, $\mathop{\mathrm{tr}}(\varepsilon_P^2)=-2$.
 - A **complex structure** on a Euclidean space means skew with $J^2=-\mathrm{Id}$; orthogonality then follows from $J^{\mathsf T}J=-J^2=\mathrm{Id}$.
 - $\star$ always means the Hodge star **of $V$**. Section 7 is about why that matters.
 - **None of $\sqrt{3/2}$, $6+2\sqrt7$ or the range "even $n\ge12$" is used anywhere in the block or in the premise.** The brief asked me to say so if one appeared. One appears as text and not as a step: the anchor text of the link to L178 inside the premise's supporting prose contains $\Theta\le\sqrt{3/2}$. It is a title, no argument reads it, and I record it only because the instruction was literal.
@@ -42,22 +42,22 @@ I use the brief's normalisation and nothing else.
 
 **Used, and stated.**
 
-- *Orthonormality of $\omega_1,\omega_2,\omega_3$.* Carries $\operatorname{tr}A=2$, and is the whole contradiction in case 1's new route and in case 3. In case 2 only linear independence of the triple is used.
+- *Orthonormality of $\omega_1,\omega_2,\omega_3$.* Carries $\mathop{\mathrm{tr}}A=2$, and is the whole contradiction in case 1's new route and in case 3. In case 2 only linear independence of the triple is used.
 - *Coincidence of the squares*, $\omega_1^2=\omega_2^2=\omega_3^2$. This makes $A$ common, hence the eigenspace splitting common. Everything rests on it.
 - *Coincidence of the self-wedges*, $\omega_1\wedge\omega_1=\omega_2\wedge\omega_2=\omega_3\wedge\omega_3$. Used in all three cases once case 1 is run the new way.
 - *$\dim V=6$.* Gives the three-pair spectrum, hence the three-way split; and in case 2 it is what puts $\star_V\Lambda^4V$ back in $\Lambda^2V$.
 
 **Used, and unstated.**
 
-- *$\ker\omega=\ker\omega^2$ for a real skew $\omega$.* The setup asserts $A$ is positive definite on $V$ "because $V=\operatorname{im}A$"; that $\operatorname{im}A=\operatorname{im}\omega_i$ needs the one line $\omega^2x=0\Rightarrow\langle\omega^2x,x\rangle=-\lVert\omega x\rVert^2=0\Rightarrow\omega x=0$. It is true and cheap, and the block's parenthesis half-states it.
+- *$\ker\omega=\ker\omega^2$ for a real skew $\omega$.* The setup asserts $A$ is positive definite on $V$ "because $V=\mathop{\mathrm{im}}A$"; that $\mathop{\mathrm{im}}A=\mathop{\mathrm{im}}\omega_i$ needs the one line $\omega^2x=0\Rightarrow\langle\omega^2x,x\rangle=-\lVert\omega x\rVert^2=0\Rightarrow\omega x=0$. It is true and cheap, and the block's parenthesis half-states it.
 - *Injectivity of $\alpha\mapsto\alpha\wedge\varepsilon_P$ on $\Lambda^2Q$*, and the independence of $\Lambda^4Q$ from $\Lambda^2Q\wedge\varepsilon_P$ inside $\Lambda^4V$. Case 3's cross-term step is exactly a component-wise reading and needs both. Both hold; section 3 gives them.
 - *A choice of orientation on each eigenplane*, so that the signs $s_{ij}$ and $\tau_i$ exist as numbers at all. Section 2 shows the conclusions are invariant under changing it.
 
 **Stated, and not used.**
 
 - *Every Weyl condition* (trace-freeness, first Bianchi, the Riemann symmetries), in cases 2 and 3 and in the setup, and in case 1 under the boxed route. In case 1 **as printed** they are used, through the premise; that is finding 1.
-- *$\operatorname{tr}(J_iJ_j)\ne0$ in case 2*, which the block itself already retires.
-- *Unit norm*, beyond fixing $\operatorname{tr}A=2$ and the numerical value $c=\tfrac13$ in case 2. Nothing in any of the three contradictions needs the normalisation: they all survive for a merely orthogonal triple of nonzero forms.
+- *$\mathop{\mathrm{tr}}(J_iJ_j)\ne0$ in case 2*, which the block itself already retires.
+- *Unit norm*, beyond fixing $\mathop{\mathrm{tr}}A=2$ and the numerical value $c=\tfrac13$ in case 2. Nothing in any of the three contradictions needs the normalisation: they all survive for a merely orthogonal triple of nonzero forms.
 
 ## 1. Is the strengthened statement what the three cases establish?
 
@@ -67,7 +67,7 @@ I checked each case for a surviving Weyl condition.
 
 - **Setup.** $A=-\omega_i^2$ common, positive definite on $V$ of trace $2$, doubled spectrum. Every ingredient is skewness, orthonormality and $\dim V=6$. **Weyl-free.**
 - **Case 2.** Complex structures, $\star_V(J\wedge J)=2\epsilon_JJ$, injectivity of $\star$, then linear independence of the triple. **Weyl-free.**
-- **Case 3.** The $4+2$ splitting, the cross term, the trace identity $\operatorname{tr}(\omega_i\omega_j)=-4a\sigma_i\sigma_j-2b\tau_i\tau_j$, then $4a=-2b$ against $a,b>0$. **Weyl-free.**
+- **Case 3.** The $4+2$ splitting, the cross term, the trace identity $\mathop{\mathrm{tr}}(\omega_i\omega_j)=-4a\sigma_i\sigma_j-2b\tau_i\tau_j$, then $4a=-2b$ against $a,b>0$. **Weyl-free.**
 - **Case 1, as printed.** Its last two sentences read "all three block-diagonal for one common splitting. [Lemma L181] then gives $W=0$." L181 is a statement about $W\in\mathcal W_n$ and its proof consumes Ricci-flatness *and* the first Bianchi identity, the brief's own premise is emphatic that neither half is redundant. So the printed case 1 uses two Weyl conditions and, worse, concludes something about a $W$ that the strengthened statement does not have. **A Weyl condition survives here.**
 
 The strengthened statement is nonetheless **true**, because the route in the pull-quote closes case 1 with no Weyl input at all, and I re-derive it from scratch in section 2. The finding is that the block asserts "No Weyl hypothesis is used anywhere" while its case-1 paragraph visibly uses two. This is not hypothesis debt (the argument is on file, one paragraph above), it is a block that was strengthened in its headline and its box and left stale in its body. The repair is mechanical and I do not perform it: replace case 1's last two sentences with the box's three, and the block says what it means.
@@ -93,9 +93,9 @@ so $u_1=u_2=u_3=:\eta_i\in\{\pm1\}$, and $s_{ij}=u_js_{1j}=\eta_is_{1j}$ for eve
 $$\omega_i=\sum_j \eta_i s_{1j}c_j\varepsilon_j=\eta_i\,\omega_1 .$$
 **It really gives $\omega_i=\eta_i\omega_1$ and nothing weaker.** The step needs at least two blocks so that a pair $j<k$ exists; with three planes there are three pairs and the system is over-determined, which is why the conclusion is this rigid.
 
-**The constant.** $\lVert\omega_1\rVert^2=1$ is $-\tfrac12\operatorname{tr}(\omega_1^2)=1$, i.e. $\operatorname{tr}(\omega_1^2)=-2$. Hence
-$$\operatorname{tr}(\omega_1\omega_2)=\eta_2\operatorname{tr}(\omega_1^2)=-2\eta_2=\mp2\neq0,$$
-against $\operatorname{tr}(\omega_1\omega_2)=0$. **The constant $\mp2$ is correct** with the brief's normalisation, and the sign convention is the block's: $\eta_2=+1$ gives $-2$. Case 1 is closed by orthogonality alone. Linear independence would do just as well, so the route survives even a triple that is merely independent rather than orthonormal.
+**The constant.** $\lVert\omega_1\rVert^2=1$ is $-\tfrac12\mathop{\mathrm{tr}}(\omega_1^2)=1$, i.e. $\mathop{\mathrm{tr}}(\omega_1^2)=-2$. Hence
+$$\mathop{\mathrm{tr}}(\omega_1\omega_2)=\eta_2\mathop{\mathrm{tr}}(\omega_1^2)=-2\eta_2=\mp2\neq0,$$
+against $\mathop{\mathrm{tr}}(\omega_1\omega_2)=0$. **The constant $\mp2$ is correct** with the brief's normalisation, and the sign convention is the block's: $\eta_2=+1$ gives $-2$. Case 1 is closed by orthogonality alone. Linear independence would do just as well, so the route survives even a triple that is merely independent rather than orthonormal.
 
 **One remark on scope, since it is free.** Nothing above used $\dim V=6$ beyond having at least two distinct eigenplanes. The route closes the pairwise-distinct sub-case at every even $\dim V\ge4$. This is what section 10 measures the block's $\dim V\ge8$ sentence against.
 
@@ -117,7 +117,7 @@ $$\omega_i=\tau_i\big(\rho\sqrt a\,J+\sqrt b\,\varepsilon_P\big)=\tau_i\tau_1\,\
 
 Three things had to be checked before saying that, and all three hold.
 
-- **Common support is not an extra demand.** In the Weyl instance one might worry that the three eigenforms have different supports. They cannot: $\omega_i^2=\omega_j^2$ already forces $\operatorname{im}\omega_i=\operatorname{im}\omega_j$, since $\operatorname{im}\omega=\operatorname{im}(-\omega^2)$ for skew $\omega$. **Coincidence of the squares supplies the common support for free**, so the corollary's $\dim V=6$ is the general statement's $\dim V=6$ and no reconciliation step is needed.
+- **Common support is not an extra demand.** In the Weyl instance one might worry that the three eigenforms have different supports. They cannot: $\omega_i^2=\omega_j^2$ already forces $\mathop{\mathrm{im}}\omega_i=\mathop{\mathrm{im}}\omega_j$, since $\mathop{\mathrm{im}}\omega=\mathop{\mathrm{im}}(-\omega^2)$ for skew $\omega$. **Coincidence of the squares supplies the common support for free**, so the corollary's $\dim V=6$ is the general statement's $\dim V=6$ and no reconciliation step is needed.
 - **The conclusion is not weaker.** The old case 1 ended at "$W=0$"; the new statement ends at "no such triple". For a rank-three $W$ the triple *is* the tensor together with its three eigenvalues, so no triple means no such $W$. Nothing that the old conclusion delivered is missing.
 - **Orthonormality is available.** The eigenforms of a symmetric operator with three nonzero eigenvalues can be taken orthonormal.
 
@@ -127,7 +127,7 @@ Three things had to be checked before saying that, and all three hold.
 
 **The boxed route is free of it; the printed case 1 is not.**
 
-I went through case 1's paragraph clause by clause. "$A$ positive definite because $V=\operatorname{im}A$", no premise. "Multiplicities all even", no premise. "$A$'s eigenspaces are three planes, each $\omega_i$ preserves them, a skew map on a plane is a multiple of its area form", no premise. "$\omega_i=\sum_j\pm c_j\varepsilon_j$, all three block-diagonal for one common splitting", no premise, and this is precisely the hypothesis of L181. "[Lemma L181] then gives $W=0$", **the premise, load-bearing, and the only thing that ends the case in the printed text.**
+I went through case 1's paragraph clause by clause. "$A$ positive definite because $V=\mathop{\mathrm{im}}A$", no premise. "Multiplicities all even", no premise. "$A$'s eigenspaces are three planes, each $\omega_i$ preserves them, a skew map on a plane is a multiple of its area form", no premise. "$\omega_i=\sum_j\pm c_j\varepsilon_j$, all three block-diagonal for one common splitting", no premise, and this is precisely the hypothesis of L181. "[Lemma L181] then gives $W=0$", **the premise, load-bearing, and the only thing that ends the case in the printed text.**
 
 So the sentence "Case 1 no longer appeals to Given C at all" is, in the paragraph that contains it, contradicted two sentences later. The replacement route of section 2 is complete on its own: it uses the same block-diagonal form, the wedge hypothesis, and orthonormality, and it needs no Ricci-flatness, no Bianchi and no $W$. **Case 1 is Weyl-free once the last sentence goes, and not before.**
 
@@ -135,7 +135,7 @@ So the sentence "Case 1 no longer appeals to Given C at all" is, in the paragrap
 
 **There is no parity restriction anywhere, in the premise or in the new route, and the earlier odd-$n$ debt does not exist against the premise as quoted here.**
 
-- **In the premise.** The splitting is $\mathbb R^n=P_1\oplus\dots\oplus P_m\oplus P_0$ *with a remainder summand $P_0$*, whose dimension is unconstrained and may be odd. No step touches it: $\varepsilon_j$ is supported on $P_j$, so $\varepsilon_j\varepsilon_k=0$ for $j\ne k$ and $\omega_i^2=-\sum_jM_{ij}^2\mathrm{Id}_{P_j}$; the Ricci half reads $\operatorname{diag}(M^{\mathsf T}\Lambda M)=0$, the Bianchi half reads the off-diagonal, and $MM^{\mathsf T}=I_r$ turns $M^{\mathsf T}\Lambda M=0$ into $\Lambda=0$. **$\dim P_0$ enters no equation.** The only arithmetic constraint is $m\le\lfloor n/2\rfloor$, which is a bound at odd $n$ and not an exclusion. The premise's own box says as much ("the statement holds at every $n$, every rank and every number of blocks") and the derivation bears it out.
+- **In the premise.** The splitting is $\mathbb R^n=P_1\oplus\dots\oplus P_m\oplus P_0$ *with a remainder summand $P_0$*, whose dimension is unconstrained and may be odd. No step touches it: $\varepsilon_j$ is supported on $P_j$, so $\varepsilon_j\varepsilon_k=0$ for $j\ne k$ and $\omega_i^2=-\sum_jM_{ij}^2\mathrm{Id}_{P_j}$; the Ricci half reads $\mathop{\mathrm{diag}}(M^{\mathsf T}\Lambda M)=0$, the Bianchi half reads the off-diagonal, and $MM^{\mathsf T}=I_r$ turns $M^{\mathsf T}\Lambda M=0$ into $\Lambda=0$. **$\dim P_0$ enters no equation.** The only arithmetic constraint is $m\le\lfloor n/2\rfloor$, which is a bound at odd $n$ and not an exclusion. The premise's own box says as much ("the statement holds at every $n$, every rank and every number of blocks") and the derivation bears it out.
 - **In case 1's new route.** Three planes inside $V$, $\dim V=6$; the ambient $n$ appears only as $n\ge6$. **No parity.**
 - **Anywhere else.** Case 2 needs $\dim V=6$, case 3 needs $\dim V=4+2$; both are constraints on $\dim V$, which is even because it carries a nonsingular skew form, not because of anything about $n$. The nearest thing to a divisibility question in the block is "nothing here wants $4\mid n$", which the three-matchings construction settles by exhibiting three pairwise trace-orthogonal complex structures on $\mathbb R^6$. That is correct and I re-checked it (section 11).
 
@@ -167,7 +167,7 @@ The chain is: each $\omega_i$ is skew and $\ker\omega_i=V^\perp$, so on $V$ the 
 
 Every ingredient of that chain is skewness, the coincidence of the squares, and $\dim V=6$. **Trace-freeness, the first Bianchi identity and the Riemann symmetries appear nowhere in it.** In the Weyl instance those conditions constrain the *eigenvalues of $W$*, for example Ricci-flatness with coincident squares would read $(\sum_i\lambda_i)A=0$, hence $\sum_i\lambda_i=0$, but the case split is on the spectrum of $A$, not on the $\lambda_i$, so it never drew on them. This was the brief's nominated likeliest break and **it does not break**: the split was over-attributed to the Weyl setting, not derived from it.
 
-Two boundary readings I checked and found harmless. First, $\operatorname{tr}A=2$ comes from unit norms and enters only as a numerical value ($c=\tfrac13$ in case 2, $2a+b=1$ in case 3), never into the classification. Second, $A$ is symmetric positive semidefinite and therefore always diagonalisable, so no defective-spectrum case is being silently skipped.
+Two boundary readings I checked and found harmless. First, $\mathop{\mathrm{tr}}A=2$ comes from unit norms and enters only as a numerical value ($c=\tfrac13$ in case 2, $2a+b=1$ in case 3), never into the classification. Second, $A$ is symmetric positive semidefinite and therefore always diagonalisable, so no defective-spectrum case is being silently skipped.
 
 ## 10. Overreach
 
@@ -179,7 +179,7 @@ Two boundary readings I checked and found harmless. First, $\operatorname{tr}A=2
 
 ## 11. The screen, reported as a screen
 
-I had derived by hand, exactly, the three self-wedges of the block's witness $J_1=e_{12}+e_{34}+e_{56}$, $J_2=e_{13}+e_{25}+e_{46}$, $J_3=e_{14}+e_{26}+e_{35}$, together with $\operatorname{tr}(J_kJ_l)=0$ and the two values of $\epsilon_J$. To re-check the sign bookkeeping I ran about a second of exact integer arithmetic on those four forms, which I wrote down myself for the purpose. It returned $J_k^2=-\mathrm{Id}_6$ for all three, $\operatorname{tr}(J_kJ_l)=0$ for all three pairs, the self-wedges $2(e_{1234}+e_{1256}+e_{3456})$, $2(-e_{1235}+e_{1346}-e_{2456})$, $2(-e_{1246}-e_{1345}+e_{2356})$ with nine pairwise distinct $\Lambda^4$ supports, and $\star(J_1\wedge J_1)=2J_1$ against $\star(J'\wedge J')=-2J'$ for $J'=e_{12}+e_{34}-e_{56}$.
+I had derived by hand, exactly, the three self-wedges of the block's witness $J_1=e_{12}+e_{34}+e_{56}$, $J_2=e_{13}+e_{25}+e_{46}$, $J_3=e_{14}+e_{26}+e_{35}$, together with $\mathop{\mathrm{tr}}(J_kJ_l)=0$ and the two values of $\epsilon_J$. To re-check the sign bookkeeping I ran about a second of exact integer arithmetic on those four forms, which I wrote down myself for the purpose. It returned $J_k^2=-\mathrm{Id}_6$ for all three, $\mathop{\mathrm{tr}}(J_kJ_l)=0$ for all three pairs, the self-wedges $2(e_{1234}+e_{1256}+e_{3456})$, $2(-e_{1235}+e_{1346}-e_{2456})$, $2(-e_{1246}-e_{1345}+e_{2356})$ with nine pairwise distinct $\Lambda^4$ supports, and $\star(J_1\wedge J_1)=2J_1$ against $\star(J'\wedge J')=-2J'$ for $J'=e_{12}+e_{34}-e_{56}$.
 
 This agrees with my hand derivation and with every value the block prints. **It is a screen and I cite it for nothing positive**; the block's claims here stand on the closed-form computation, which is short enough to be read directly.
 

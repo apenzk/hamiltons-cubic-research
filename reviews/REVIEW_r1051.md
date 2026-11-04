@@ -55,7 +55,7 @@ The standard three, with no `sorryAx` and no `Lean.ofReduceBool`, so no `native_
 
 **The two component theorems are strictly stronger than the record needs**, and the record row's "$\mathcal D_n$'s row-sum clause is never used" checks out against them: `trCube_diagOp` takes hollowness alone and `sharpPair_diagOp` takes symmetry and hollowness, neither taking the row sum, which enters only through `IsWeight` in the packaged `DiagCubicFormula`.
 
-**One correction to the new row's description.** It says "`trCube_diagOp` gives the entrywise cube sum and `sharpPair_diagOp` gives $\tfrac12\operatorname{tr}w^3$". `trCube_diagOp` gives HALF the entrywise cube sum, `trCube (diagOp w) = ½ ∑_a ∑_b w_ab³`. As printed the two halves do not add to `diagP`. The same elision is in the file's docstring at line 41.
+**One correction to the new row's description.** It says "`trCube_diagOp` gives the entrywise cube sum and `sharpPair_diagOp` gives $\tfrac12\mathop{\mathrm{tr}}w^3$". `trCube_diagOp` gives HALF the entrywise cube sum, `trCube (diagOp w) = ½ ∑_a ∑_b w_ab³`. As printed the two halves do not add to `diagP`. The same elision is in the file's docstring at line 41.
 
 Compilation: `lake env lean HamiltonsCubic/Base/SharpDiag.lean` in 43 seconds, zero errors, warnings only, all of them the unused-section-variable linter. **"Recompiles clean, warnings only" is CONFIRMED.** So is the absence claim behind the whole commit: `L231` occurs nowhere under [lean/](../lean/) at `e77293b8^`. The Gate 2 attribution to [r1001](REVIEW_r1001.md) is accurate, that report's claims 1 to 4 covering `Pcubic`, `diagOp`, `diagP` and `DiagCubicFormula`.
 
@@ -113,7 +113,7 @@ The rewrite removed the word from both places. The superseded W7 said "two **scr
 - The Alt paragraph is faithful to r1050 and correct on its own terms, see claim 6.
 - The padded $W_{\mathbb{CP}^2}$ re-anchoring, the off-catalogue provenance, the [r336](REVIEW_r336.md) twenty points at residual $\le5\times10^{-15}$, and the deletion of "may well be enough, the cheapest thing to try next" are all r1050's, all applied, all accurate. [bounds.md](../findings/bounds.md)'s source sentence does open "BUT IT IS A CATALOGUE PROPERTY, NOT A PROPERTY OF CRITICAL POINTS", so the inversion is real and is fixed.
 - [INDEX-traps.md](../findings/INDEX-traps.md)'s preamble now reads `W1`…`W7`.
-- Dropping I68 from W7 is sanctioned by r1050's recommendation 4, though it goes further than "drop I68 from the reach sentence": the clause's load-bearing status for I68, and r1050's positive consequence that 15 distinct eigenvalues on the 15-dimensional $\Lambda^2$ force $\operatorname{rank}\ge14$, are now recorded nowhere.
+- Dropping I68 from W7 is sanctioned by r1050's recommendation 4, though it goes further than "drop I68 from the reach sentence": the clause's load-bearing status for I68, and r1050's positive consequence that 15 distinct eigenvalues on the 15-dimensional $\Lambda^2$ force $\mathop{\mathrm{rank}}\ge14$, are now recorded nowhere.
 
 **One label to tighten.** The block credits "Gate 2 by [r1050](REVIEW_r1050.md)" without qualification, where [reviews/INDEX.md](INDEX.md) correctly says "SOLE reviewer" and the new [lean/INDEX.md](../lean/INDEX.md) row qualifies its own Gate 2 with "one reviewer". Match the block to those two.
 

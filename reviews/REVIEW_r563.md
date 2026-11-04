@@ -10,7 +10,7 @@
 | **D1** the heading's "derived twice" | **REFUTED**, the block carries **one** derivation; the record carries **three**, two of them 45 lines away in another lemma's section |
 | **D2** the measure $\mu_a$ and the moment the chain needs | **REPAIRED**, $\mu_a$ is the $T$-weighted measure, **not uniform**, and its first moment is relation **(B)**, not trace-freeness. The block names neither |
 | **D3** the provenance of (A), (B), (C) | **DEFECT**, all three are load-bearing and **none carries a result number** |
-| **D4** the sign conditions $\lambda_{\max}>0$, $\lambda_{\min}<0$ | **CONFIRMED, discharge missing from the text**, both are automatic from $\operatorname{tr}_{\Lambda^2}W=0$ with $W\ne0$ |
+| **D4** the sign conditions $\lambda_{\max}>0$, $\lambda_{\min}<0$ | **CONFIRMED, discharge missing from the text**, both are automatic from $\mathop{\mathrm{tr}}_{\Lambda^2}W=0$ with $W\ne0$ |
 | **D5** the quantifier | **REPAIRED, and the lemma is stronger than stated**, the bound holds at **every** $W\in\mathcal W_n$ of unit norm, criticality nowhere. It is the withdrawn [L142](../findings/INDEX-results.md) |
 | **D6** the letter $\Pi$ | **DEFECT**, three unrelated objects, two of them **incompatible scalars**, and the incompatible pair is where [LEDGER.md](../findings/LEDGER.md) says the lemma is closed |
 | **D7** is the bound ever binding | **REFUTED as posed**, it is **exactly tight** at the balanced product and on the whole $S^p\times S^q$ family, so it is binding precisely at the conjectured maximiser |
@@ -72,7 +72,7 @@ $$g_k=\sum_{\alpha\beta}(\lambda_\alpha-\lambda_\beta)^2\,T_{k\alpha\beta}\ \ge\
 manifestly, at **every** $W$. [bounds.md](../findings/bounds.md) line 245 instead gives the criticality-specialised rewriting $g_k=2R_k-4\lambda_k(\theta-\lambda_k)$, which is what hides the pointwise reading. Now:
 
 - $\sum_kg_k=4(n-1)\lVert W\rVert^2$ uses **(A) and (B) only**: expanding the square, $\sum_{k\alpha\beta}\lambda_\alpha^2T=2(n-2)\lVert W\rVert^2$ by (A) with $\alpha$ free, twice, and $\sum_{k\alpha\beta}\lambda_\alpha\lambda_\beta T=-2\lVert W\rVert^2$ by (B) with $\alpha$ free.
-- $\sum_k\lambda_kg_k=-4P(W)$ uses **(B) and the cubic identity**: the two square terms give $-2\operatorname{tr}W^3$ each by (B) with $\alpha$ free, and the cross term is $-2\sum_{k\alpha\beta}\lambda_k\lambda_\alpha\lambda_\beta T=-4\langle W,W^\#\rangle=-4(P-\operatorname{tr}W^3)$, since $\langle v,W^\#v\rangle=\tfrac12\sum\lambda_\alpha\lambda_\beta c_{v\alpha\beta}^2$ is a definitional identity for $\#$ ([post F40](../findings/fence-posts.md) states it). Total $-4P$.
+- $\sum_k\lambda_kg_k=-4P(W)$ uses **(B) and the cubic identity**: the two square terms give $-2\mathop{\mathrm{tr}}W^3$ each by (B) with $\alpha$ free, and the cross term is $-2\sum_{k\alpha\beta}\lambda_k\lambda_\alpha\lambda_\beta T=-4\langle W,W^\#\rangle=-4(P-\mathop{\mathrm{tr}}W^3)$, since $\langle v,W^\#v\rangle=\tfrac12\sum\lambda_\alpha\lambda_\beta c_{v\alpha\beta}^2$ is a definitional identity for $\#$ ([post F40](../findings/fence-posts.md) states it). Total $-4P$.
 
 **Criticality enters neither.** Hence at $\lVert W\rVert=1$, from $\lambda_k\ge\lambda_{\min}$ and $g_k\ge0$,
 
@@ -160,7 +160,7 @@ The third case is [r337](REVIEW_r337.md)'s two-moment hull answer at padded $W_{
 
 1. **[bounds.md](../findings/bounds.md), the L107 heading**, "derived twice" is wrong in both directions. Either move the elimination and the one-line argument into the block or say in the heading that the block carries the row-calculus derivation and the other two are at [Lemma L108](../findings/bounds.md).
 2. **[bounds.md](../findings/bounds.md), the L107 block**, state $\mu_a$ and its two moments rather than writing "feeding in the two row moments", and name (B) as the source of the first. Two lines.
-3. **[bounds.md](../findings/bounds.md), the L107 block**, add the sign discharge: $\operatorname{tr}_{\Lambda^2}W=0$ with $W\ne0$ gives $\lambda_{\max}>0>\lambda_{\min}$, so step 5's divisor is never an extra hypothesis.
+3. **[bounds.md](../findings/bounds.md), the L107 block**, add the sign discharge: $\mathop{\mathrm{tr}}_{\Lambda^2}W=0$ with $W\ne0$ gives $\lambda_{\max}>0>\lambda_{\min}$, so step 5's divisor is never an extra hypothesis.
 4. **[bounds.md](../findings/bounds.md), the L107 block**, a clause saying the withdrawn STEP 2 is about the per-row family's optimal row and does not reach this derivation, which needs only that the display holds *at* $\arg\max$.
 5. **[bounds.md](../findings/bounds.md) and [INDEX-results.md](../findings/INDEX-results.md)**, record the pointwise quantifier: $\lvert P(W)\rvert\le(n-1)\lVert\lambda\rVert_\infty$ at every unit $W\in\mathcal W_n$, with L107 the $\theta$-reading of it, and note that row 142's repaired form and L107 are the same inequality rather than two of the same shape.
 6. **[bounds.md](../findings/bounds.md) line 245**, give $g_k=\sum_{\alpha\beta}(\lambda_\alpha-\lambda_\beta)^2T_{k\alpha\beta}$ as the definition and $2R_k-4\lambda_k(\theta-\lambda_k)$ as the critical-point rewriting. The present order is what hides item 5.

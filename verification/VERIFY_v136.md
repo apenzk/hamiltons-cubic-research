@@ -13,7 +13,7 @@
 | C5 | Schur/division-algebra: $L_e$ is a real scalar on each summand | **PROVEN**, and symmetry is strictly stronger than what the step needs |
 | C6 | $\tfrac12$ on $\mathbb R^p\otimes\mathbb R^q$, that summand being the orbit tangent | **PROVEN**, the identification is Nienhaus Prop 4.6(b), read |
 | C7 | $\dim(\text{orbit})=pq$ | **PROVEN**, two independent hand routes |
-| C8 | $-\mu$ on $S^2_0\otimes S^2_0$, forced uniquely by $\operatorname{tr}L_e=0$ | **PROVEN**, the trace identity closes to $0$ identically; verified in full below |
+| C8 | $-\mu$ on $S^2_0\otimes S^2_0$, forced uniquely by $\mathop{\mathrm{tr}}L_e=0$ | **PROVEN**, the trace identity closes to $0$ identically; verified in full below |
 | C9 | $L_e=0$ on $\mathrm{Weyl}_p$, $\mathrm{Weyl}_q$, $X_p\otimes\mathbb R^q$, $X_q\otimes\mathbb R^p$ | **GAP**, mechanisms named and attested, no derivation on file a reader can check |
 | C10 | $\tfrac12$ is the maximum on $W^\perp$, attained on the orbit alone | **PROVEN**, conditional on C4 and C9 |
 | C11 | $\dim E(\tfrac12)=pq$ | **PROVEN**, conditional on C4 and C9 |
@@ -45,7 +45,7 @@
 |---|---|---|---|
 | H1 | $W_{p,q}$ is a critical point of $P$ on the unit sphere, with $Q(W)=\theta W$, $\theta\ne0$ | [nondegeneracy.md](../findings/nondegeneracy.md):742, $Q(W_{p,q})=\frac{n-1}{pq}W_{p,q}$ | yes, twice, for the orbit's $\tfrac12$ and for $L_ee=e$ |
 | H2 | $\mathrm{Weyl}_n$ is $O(n)$-irreducible and non-trivial | Nienhaus Appendix II ($n\ge5$; $\mathrm{Weyl}_4$ is $O(4)$-irreducible by $D=\mathrm{diag}(1,1,1,-1)$). $p,q\ge3\Rightarrow n\ge6$ | yes, the trace identity, and nothing else |
-| H3 | $T(X,Y,Z)$ fully symmetric, so $\operatorname{tr}L_e=\langle e,\sum_iQ(V_i)\rangle$ | [second-order.md](../findings/second-order.md):62 | yes, the trace identity |
+| H3 | $T(X,Y,Z)$ fully symmetric, so $\mathop{\mathrm{tr}}L_e=\langle e,\sum_iQ(V_i)\rangle$ | [second-order.md](../findings/second-order.md):62 | yes, the trace identity |
 | H4 | $L_e$ self-adjoint | same | yes, the division-algebra step |
 | H5 | Each of the ten summands is $O(p)\times O(q)$-**irreducible** | source, $k,l\ge5$ proved / $k,l\ge3$ asserted; $p,q\le4$ by commutant computation in [r38](../reviews/REVIEW_r38.md) | **claimed via labels, which do not supply it**, §3 |
 | H6 | $\mathrm{Ric}(W)=0$ | Weyl tensors are Ricci-flat by construction | yes, inside the $X_p\otimes\mathbb R^q$ index proof |
@@ -138,7 +138,7 @@ And $12W(n)=(p+q)^4-7(p+q)^2-6(p+q)$ expands to the same nine terms. **Identity 
 
 ## 6. The trace identity closes exactly (C8), derived in full
 
-**The identity.** $\mathcal W_n$ is $O(n)$-irreducible and non-trivial, so it carries no invariant vector. $\sum_iQ(V_i)$ over an orthonormal basis is basis-independent, hence $O(n)$-invariant, hence zero. Full symmetry of $T$ gives $\operatorname{tr}L_e=\sum_i\langle e\circ V_i,V_i\rangle=\langle e,\sum_iQ(V_i)\rangle=0$. **Unconditional, and correct as written.** It needs H2 and H3 and nothing else, in particular not $p,q\ge3$.
+**The identity.** $\mathcal W_n$ is $O(n)$-irreducible and non-trivial, so it carries no invariant vector. $\sum_iQ(V_i)$ over an orthonormal basis is basis-independent, hence $O(n)$-invariant, hence zero. Full symmetry of $T$ gives $\mathop{\mathrm{tr}}L_e=\sum_i\langle e\circ V_i,V_i\rangle=\langle e,\sum_iQ(V_i)\rangle=0$. **Unconditional, and correct as written.** It needs H2 and H3 and nothing else, in particular not $p,q\ge3$.
 
 **The check, with $\nu$ the unknown on $S^2_0\otimes S^2_0$.** Weighting each value by its dimension:
 $$1\cdot1+\tfrac12pq+\lambda_ps_p+\lambda_qs_q+\mu\,c_pc_q+\nu\,s_ps_q+0=0 .$$
@@ -163,7 +163,7 @@ $$=4pq+2p^2+2q^2-8-2(p{+}q{-}2)(p{+}q{+}2)=4pq+2p^2+2q^2-8-2\bigl[(p{+}q)^2-4\bi
 
 The four zeros are load-bearing twice: they enter the maximum claim (a non-zero value there could exceed $\tfrac12$), and they enter the trace identity's determination of $-\mu$, which is a single linear equation and therefore fixes one unknown only once the other nine are known. So the block's whole spectral list stands or falls with them. I read [ATTEMPTS.md](../ATTEMPTS.md):2014, [r34](../reviews/REVIEW_r34.md) and [r38](../reviews/REVIEW_r38.md) before writing this section.
 
-**$L_e=0$ on $\mathrm{Weyl}_p$ and $\mathrm{Weyl}_q$.** Two routes are named, in one sentence each ([nondegeneracy.md](../findings/nondegeneracy.md):724, [r34](../reviews/REVIEW_r34.md) M4): (a) via $\Phi(V)=2V$ on $\mathrm{Weyl}_n$ with $\Phi(V)_{\alpha\beta}=\tfrac12\operatorname{tr}(\{A_\alpha,A_\beta\}V)$, "established by Schur plus an $n$-independence argument through zero-padding"; (b) via $e=\eta I_n+(A-\eta)I_p+(B-\eta)I_q$ with $L_{I_n}\equiv0$ on $\mathrm{Weyl}_n$ (Böhm–Wilking, $\mathrm{Ric}=0$) "with a support argument for the rest". **Neither route is written out anywhere I could find.** Route (b) in particular does not close on its face: $L_{I_n}\equiv0$ leaves $(A-\eta)L_{I_p}+(B-\eta)L_{I_q}$ on $\mathrm{Weyl}_p$, and support alone does not kill $L_{I_p}$ there, r38's own arithmetic records $\mathrm{sharp\_bilin}(I_p,\cdot)=\tfrac{p-4}2$ on the $(pp,pp)$ part, which is non-zero for $p\ne4$. A reader cannot check "the rest".
+**$L_e=0$ on $\mathrm{Weyl}_p$ and $\mathrm{Weyl}_q$.** Two routes are named, in one sentence each ([nondegeneracy.md](../findings/nondegeneracy.md):724, [r34](../reviews/REVIEW_r34.md) M4): (a) via $\Phi(V)=2V$ on $\mathrm{Weyl}_n$ with $\Phi(V)_{\alpha\beta}=\tfrac12\mathop{\mathrm{tr}}(\{A_\alpha,A_\beta\}V)$, "established by Schur plus an $n$-independence argument through zero-padding"; (b) via $e=\eta I_n+(A-\eta)I_p+(B-\eta)I_q$ with $L_{I_n}\equiv0$ on $\mathrm{Weyl}_n$ (Böhm–Wilking, $\mathrm{Ric}=0$) "with a support argument for the rest". **Neither route is written out anywhere I could find.** Route (b) in particular does not close on its face: $L_{I_n}\equiv0$ leaves $(A-\eta)L_{I_p}+(B-\eta)L_{I_q}$ on $\mathrm{Weyl}_p$, and support alone does not kill $L_{I_p}$ there, r38's own arithmetic records $\mathrm{sharp\_bilin}(I_p,\cdot)=\tfrac{p-4}2$ on the $(pp,pp)$ part, which is non-zero for $p\ne4$. A reader cannot check "the rest".
 
 **$L_e=0$ on $X_p\otimes\mathbb R^q$ and $X_q\otimes\mathbb R^p$.** This one is written to a greater depth ([nondegeneracy.md](../findings/nondegeneracy.md):736, [r38](../reviews/REVIEW_r38.md)): the identity $\mathrm{sharp\_bilin}(X,Y)=\mathrm{Sym}_{\text{pair}}\mathrm{Alt}_{ij}H$ with $H$ given explicitly, the specialisation $X=I_p$, the single use of Ricci-flatness to force $\rho=0$, then *"a six-case exhaustion by block type kills five cases on support or on the $\chi$ factors, and the single live $(PP,MX)$ case uses Bianchi twice to return exactly $-V_{ijkl}/2$."* **The six cases are not enumerated and the two Bianchi applications are not shown**, and the step from $\mathrm{sharp\_bilin}(I_p,V)=-V/2$ to $L_eV=0$ is not written at all.
 
@@ -245,7 +245,7 @@ Every multiplicity, every value, every total. The record's remark that *"the sig
 
 **Citable without qualification.**
 - The ten-summand decomposition of $\mathrm{Weyl}_n$ as the source's, with the ten dimensions summing to $\dim\mathrm{Weyl}_n$ identically for $p,q\ge3$ (§2).
-- $\operatorname{tr}_{\mathcal W_n}L_e=0$, unconditionally, for every $n\ge5$ and at every critical point (§6), this is the block's most robust component and it needs neither $p,q\ge3$ nor Schur.
+- $\mathop{\mathrm{tr}}_{\mathcal W_n}L_e=0$, unconditionally, for every $n\ge5$ and at every critical point (§6), this is the block's most robust component and it needs neither $p,q\ge3$ nor Schur.
 - Given the ten values, the trace identity closes to zero identically in $p,q$, and $-\mu$ on $S^2_0\otimes S^2_0$ is the unique value consistent with the other nine (§6).
 - $\tfrac12-\mu=\frac{(p-2)(q-2)-1}{2(p-1)(q-1)}$, and $\mu=\tfrac12$ over integers $p,q\ge3$ exactly at $(3,3)$ (§5, §9).
 - $\dim(\text{orbit})=pq$ (§8b), and the orbit tangent is an exact $\tfrac12$-eigenspace at every non-zero critical point (§8c).

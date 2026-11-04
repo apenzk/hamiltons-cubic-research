@@ -38,7 +38,7 @@ The root vector of a triple is $Y_{ijk}=\varepsilon_i^{\mathsf T}+\varepsilon_j^
 
 Three separate facts, each of them the answer to a part of the question:
 
-1. **A support consequence exists.** Jacobi forbids a diagram carrying exactly one $-1$ edge in a Jacobi position, a condition on $\operatorname{supp}T$, which $T$ sees.
+1. **A support consequence exists.** Jacobi forbids a diagram carrying exactly one $-1$ edge in a Jacobi position, a condition on $\mathop{\mathrm{supp}}T$, which $T$ sees.
 2. **Beyond the support there is no consequence at all in the favourable case.** Corollary 14: no $-1$ entries, Jacobi free. So Jacobi cannot in general impose anything on the values of $T$; whether it imposes anything is decided by the support first.
 3. **Where it does impose something, $T$ cannot see it.** Equation (8) is a signed sum of products; the same $[\alpha^2]$ supports both a signing that satisfies it and (at $\mu_7,\mu_8$), two inequivalent algebras. **$T$ does not determine the algebra, so no function of $T$ can be equivalent to Jacobi.**
 

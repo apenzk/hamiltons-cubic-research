@@ -23,7 +23,7 @@
 
 ## 0. The family, reconstructed cold
 
-$M_{ab}=\alpha$ inside $F_1$ ($\lvert F_1\rvert=p$), $\beta$ inside $F_2$ ($\lvert F_2\rvert=q$), $\gamma$ across; $n=p+q$, $D=n-1$. Zero row sums give $(p-1)\alpha+q\gamma=0$ and $(q-1)\beta+p\gamma=0$. Cross-block criticality is $\gamma^2+(M^2)_{jk}=\theta\gamma$ with $(M^2)_{jk}=(p-1)\alpha\gamma+(q-1)\beta\gamma=-n\gamma^2$, so $\gamma(1-n)=\theta$; within-block criticality is then an identity in $\theta$, and $\operatorname{tr}M^2=2$ closes it:
+$M_{ab}=\alpha$ inside $F_1$ ($\lvert F_1\rvert=p$), $\beta$ inside $F_2$ ($\lvert F_2\rvert=q$), $\gamma$ across; $n=p+q$, $D=n-1$. Zero row sums give $(p-1)\alpha+q\gamma=0$ and $(q-1)\beta+p\gamma=0$. Cross-block criticality is $\gamma^2+(M^2)_{jk}=\theta\gamma$ with $(M^2)_{jk}=(p-1)\alpha\gamma+(q-1)\beta\gamma=-n\gamma^2$, so $\gamma(1-n)=\theta$; within-block criticality is then an identity in $\theta$, and $\mathop{\mathrm{tr}}M^2=2$ closes it:
 
 $$\gamma=-\frac\theta D,\qquad\alpha=\frac{\theta q}{D(p-1)},\qquad\beta=\frac{\theta p}{D(q-1)},\qquad\theta^2=\frac{2(n-1)(p-1)(q-1)}{pq(n-2)} .$$
 
@@ -39,7 +39,7 @@ $$\alpha-\gamma=\frac{\theta(q+p-1)}{D(p-1)}=\frac\theta{p-1},\qquad \beta-\gamm
 
 $$\sum_{a\in S}s_a=2m_4+E,\qquad E:=\!\!\sum_{a\in S,\,c\notin S}\!\!M_{ac}^2\ \ge0 .$$
 
-So $m_4\le\tfrac12\sum_{a\in S}s_a$ is the identity with $E$ discarded, **direction and constant both forced**, equality exactly when $S$ is a union of connected components of $\operatorname{supp}M$. Connectedness is one of the item's standing hypotheses, so **the inequality is strict at every point the item is about**, and the step is never tight.
+So $m_4\le\tfrac12\sum_{a\in S}s_a$ is the identity with $E$ discarded, **direction and constant both forced**, equality exactly when $S$ is a union of connected components of $\mathop{\mathrm{supp}}M$. Connectedness is one of the item's standing hypotheses, so **the inequality is strict at every point the item is about**, and the step is never tight.
 
 **1b, computed cold at the witness.** At $S^5\times S^{43}$'s $(4,0)$ set inside the $5$-factor, $s_a=4\alpha^2+43\gamma^2=\tfrac{2021}{8836}\theta^2$ for each $a\in F_1$, hence
 
@@ -104,13 +104,13 @@ $$\boxed{\ M_{ab}\ \le\ \frac{s_a+s_b}{2\theta}\ }\qquad\text{at every pure crit
 
 *This is [Lemma L68](../findings/diagonal-half.md)'s $g_{ab}=2(s_a+s_b)-4\theta M_{ab}$ with the observation that $g_{ab}\ge0$ needs no hypothesis at all, the symmetry defect is nonnegative on hollow matrices by the two coordinates $a$ and $b$ alone.*
 
-**Step 2, two row masses are all a row can hold.** $s_a=\sum_bM_{ab}^2$ sums over the pairs meeting $a$, a subset of all pairs, whose total is $\tfrac12\operatorname{tr}M^2=1$: so $s_a\le1$ for every $a$, and $\sum_as_a=2$ gives $s_a+s_j+s_k\le2$.
+**Step 2, two row masses are all a row can hold.** $s_a=\sum_bM_{ab}^2$ sums over the pairs meeting $a$, a subset of all pairs, whose total is $\tfrac12\mathop{\mathrm{tr}}M^2=1$: so $s_a\le1$ for every $a$, and $\sum_as_a=2$ gives $s_a+s_j+s_k\le2$.
 
 **Step 3, the chain, and the band is the last step.**
 
 $$p_a=M_{aj}+M_{ak}\ \le\ \frac{2s_a+s_j+s_k}{2\theta}\ =\ \frac{s_a+(s_a+s_j+s_k)}{2\theta}\ \le\ \frac3{2\theta}\ \le\ \theta,$$
 
-the final inequality being **precisely $\theta^2\ge\tfrac32$**. Equality throughout forces $\theta^2=\tfrac32$, $s_a=1$ and $s_j+s_k=1$ with every other row null, so $\operatorname{supp}M$ is a star centred at $a$, whose leaf row sums force $M_{ja}=0$ and hence $M=0$, against $\operatorname{tr}M^2=2$. **Therefore $p_a<\theta$ strictly, for every pair $\{j,k\}$, every $a\in I$, and every in-band pure critical point.**
+the final inequality being **precisely $\theta^2\ge\tfrac32$**. Equality throughout forces $\theta^2=\tfrac32$, $s_a=1$ and $s_j+s_k=1$ with every other row null, so $\mathop{\mathrm{supp}}M$ is a star centred at $a$, whose leaf row sums force $M_{ja}=0$ and hence $M=0$, against $\mathop{\mathrm{tr}}M^2=2$. **Therefore $p_a<\theta$ strictly, for every pair $\{j,k\}$, every $a\in I$, and every in-band pure critical point.**
 
 **Quantitatively**, keeping $s_a$:
 
@@ -126,7 +126,7 @@ $$\theta-p_a\ \ge\ \frac{2\theta^2-2s_a-s_j-s_k}{2\theta}\ \ge\ \frac{1-s_a}{2\t
 | $S^5\times S^{70}$ | $1.264416$ | $0.378082$ | $0.666381$ | $0.666381$ | $0.245931$ | $0.078097$ |
 | $S^{12}\times S^{12}$ | $1.325498$ | $0.083333$ | $1.199759$ | $1.199759$ | $0.345782$ | $0.193848$ |
 
-*Axioms re-verified at each row: $\max_a\lvert(M\mathbf1)_a\rvert\le8\times10^{-16}$, $\operatorname{tr}M^2=2$, criticality residual $\le3\times10^{-16}$, cap violation $\le2\times10^{-16}$.* Over the whole in-band family the true minimum of $\lvert\theta-p_a\rvert$ across within-factor, cross and other-factor positions is $0.635256$, approaching $\theta/2$ along $p=5$.
+*Axioms re-verified at each row: $\max_a\lvert(M\mathbf1)_a\rvert\le8\times10^{-16}$, $\mathop{\mathrm{tr}}M^2=2$, criticality residual $\le3\times10^{-16}$, cap violation $\le2\times10^{-16}$.* Over the whole in-band family the true minimum of $\lvert\theta-p_a\rvert$ across within-factor, cross and other-factor positions is $0.635256$, approaching $\theta/2$ along $p=5$.
 
 **4a is confirmed exactly.** With $u=\theta/55$ at $S^6\times S^6$: $\alpha=6u$, $\gamma=-5u$, $g=\lvert\gamma\rvert=5u$, and for a within-factor pair $\theta-p_a=43u=\tfrac{43}5g=8.6g$ on the same factor and $65u=13g$ on the other. In closed form, $\tfrac{43}{6\sqrt{55}}=0.9663531$ and $\tfrac{13\sqrt{55}}{66}=1.4607664$.
 
@@ -148,7 +148,7 @@ $$\theta-p_a\ \ge\ \frac{2\theta^2-2s_a-s_j-s_k}{2\theta}\ \ge\ \frac{1-s_a}{2\t
 ## 6. Hypotheses used silently by the sections
 
 1. **Every "in-band pure critical point" in the three sections is a two-factor sphere product.** Each quantitative claim, $0.28125$, the non-decay, the $\sigma$ comparison, the $\theta-p_a$ evaluation, is a statement about a two-parameter family of maximally symmetric diagonal points. [ATTEMPTS.md](../ATTEMPTS.md) says so once; [plan.md](../plan.md)'s "the extremes are understood" does not.
-2. **Connectedness of $\operatorname{supp}M$** is what makes $E>0$, hence what makes §1's inequality strict and lossy. It is listed among the item's silent hypotheses elsewhere and is not restated where the row-mass step uses it.
+2. **Connectedness of $\mathop{\mathrm{supp}}M$** is what makes $E>0$, hence what makes §1's inequality strict and lossy. It is listed among the item's silent hypotheses elsewhere and is not restated where the row-mass step uses it.
 3. **$\gamma\ne0$** in the family's construction, the cross-criticality equation is divided by $\gamma$. $\gamma=0$ is the disconnected $M$ that hypothesis 2 excludes.
 4. **$\theta>0$** in the entry cap of §4 and in every division by $\theta$ in the block calculus.
 5. **The four-set clause's target is $\Sigma\ne\theta^2$, not $\Sigma<\theta^2$** ([r373](REVIEW_r373.md)/[r374](REVIEW_r374.md)). The sections work with the sufficient condition $3m_4-\tfrac12\sigma^2<\theta^2$, which is fine, but "the clause clears by $3.5\times$" is a margin in the sufficient condition and not in the clause.

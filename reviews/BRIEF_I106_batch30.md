@@ -10,10 +10,10 @@ You are auditing one block of a research record. **Work from the definitions bel
 
 ## The setting, in full
 
-Let $\hat U$ and $V$ be real symmetric traceless $3\times3$ matrices. Write $\{X,Y\}=XY+YX$, $[X,Y]=XY-YX$, $K=[\hat U,V]$, and $\langle X,Y\rangle=\operatorname{tr}(X^{\mathsf T}Y)$.
+Let $\hat U$ and $V$ be real symmetric traceless $3\times3$ matrices. Write $\{X,Y\}=XY+YX$, $[X,Y]=XY-YX$, $K=[\hat U,V]$, and $\langle X,Y\rangle=\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$.
 
 The functional is
-$$\Phi=\alpha\operatorname{tr}\hat U^3+\beta\operatorname{tr}(\hat UV^2)+\langle\hat U,A\rangle+\langle V,C\rangle,\qquad \alpha=\tfrac{15}4,\quad\beta=\tfrac94,$$
+$$\Phi=\alpha\mathop{\mathrm{tr}}\hat U^3+\beta\mathop{\mathrm{tr}}(\hat UV^2)+\langle\hat U,A\rangle+\langle V,C\rangle,\qquad \alpha=\tfrac{15}4,\quad\beta=\tfrac94,$$
 maximised subject to $\tfrac32\lvert\hat U\rvert^2+\tfrac12\lvert V\rvert^2=T$, where $A$ and $C$ are fixed real symmetric matrices, **both diagonal in one fixed orthonormal frame $F$**, called the field frame. $\alpha-\beta=\tfrac32$.
 
 **Given (batch 10, already on the record, quoted so the items below are answerable).** At a critical point with multiplier $\mu$, the Lagrange conditions are

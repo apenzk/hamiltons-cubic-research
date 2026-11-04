@@ -15,7 +15,7 @@ I read [BRIEF_L31.md](BRIEF_L31.md) cold and checked the block at [stratum-two-n
 | 3b | $\mathrm{im}\,Y\subseteq\mathrm{im}\,X$ | **PROVEN** |
 | 3c | $XY=-YX$ from the triangle step with $\lVert XY\rVert_F=\lVert YX\rVert_F$ | **PROVEN** |
 | 4 | "and symmetrically" gives $\mathrm{im}\,X=\mathrm{im}\,Y$ | **PROVEN, and redundant, a dimension count already closes it** |
-| 5 | The converse: $X^2=Y^2=-P_V/2$, $[X,Y]=2XY$, $\lVert[X,Y]\rVert^2=\operatorname{tr}(Y^{\mathsf T}Y)=2$ | **PROVEN in the record's normalisation** |
+| 5 | The converse: $X^2=Y^2=-P_V/2$, $[X,Y]=2XY$, $\lVert[X,Y]\rVert^2=\mathop{\mathrm{tr}}(Y^{\mathsf T}Y)=2$ | **PROVEN in the record's normalisation** |
 | 6 | The recorded correction: $s^2=(0.5,0.3,0.2)$ kills the $4s_1^2$ route, and the replacement avoids the flaw | **CONFIRMED, needs $n\ge6$ (unstated)** |
 | 7 | L31 delivers [L29](../findings/stratum-two-negative.md#L69)'s clause *"equality forces the support to have $r=4$"*, in three lines | **CONFIRMED, the chain closes** |
 | 8 | The three conditions are independent; the biconditional is non-vacuous | **CONFIRMED, both witnesses constructed in closed form** |
@@ -30,9 +30,9 @@ I read [BRIEF_L31.md](BRIEF_L31.md) cold and checked the block at [stratum-two-n
 
 Three norms appear in one proof, so the conversion is fixed before anything else. From [conventions.md](../findings/conventions.md), quoted:
 
-> **A skew matrix's norm**, in the form the stratum arguments use: $\langle X,X\rangle=\tfrac12\operatorname{tr}(X^{\mathsf T}X)$, singular values in pairs $s_1,s_1,s_2,s_2,\dots$ with $\sum_i s_i^2=1$. Equivalent to $\operatorname{tr}(v^2)=-2$ above.
+> **A skew matrix's norm**, in the form the stratum arguments use: $\langle X,X\rangle=\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}X)$, singular values in pairs $s_1,s_1,s_2,s_2,\dots$ with $\sum_i s_i^2=1$. Equivalent to $\mathop{\mathrm{tr}}(v^2)=-2$ above.
 
-> **The $\tfrac12$ goes at the $\Lambda^2$ level, not the operator level.** The inner product is $\tfrac12\operatorname{tr}(X^{\mathsf T}Y)$ at the $\Lambda^2$ level and plain Frobenius on the pair matrix.
+> **The $\tfrac12$ goes at the $\Lambda^2$ level, not the operator level.** The inner product is $\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$ at the $\Lambda^2$ level and plain Frobenius on the pair matrix.
 
 > **The $\Lambda^2$ and $n\times n$ Frobenius pairings differ by a factor $2$.** Two reviewers once disagreed on a value for exactly this reason.
 
@@ -60,7 +60,7 @@ Numeric consequences, fixed once and used throughout section 3:
 | --- | --- | --- | --- |
 | $X,Y\in\mathfrak{so}(n)$, real skew-symmetric | statement | throughout, normal form, $YX=(XY)^{\mathsf T}$, $X^{\mathsf T}X=-X^2$ | **used, essential** |
 | $\lVert X\rVert=1$ under the half-trace norm | "orthonormal" | Cauchy–Schwarz step, as $\sum_is_i^2=1$ | **used, essential** |
-| $\lVert Y\rVert=1$ | "orthonormal" | the $\max_{\lVert Y\rVert=1}$ quantifier, and the converse's $\operatorname{tr}(Y^{\mathsf T}Y)=2$ | **used, essential** |
+| $\lVert Y\rVert=1$ | "orthonormal" | the $\max_{\lVert Y\rVert=1}$ quantifier, and the converse's $\mathop{\mathrm{tr}}(Y^{\mathsf T}Y)=2$ | **used, essential** |
 | $\langle X,Y\rangle=0$ | "orthonormal" | **nowhere** | **UNUSED, see §9** |
 | a dimension restriction on $n$ | *none stated* | none needed | **correctly absent, see §1b** |
 | $Y$ has rank $4$ with all $s_i=1/\sqrt2$ | statement, and the italic derivation note | the symmetrisation of §4, via $\lVert Y\rVert_{\rm op}=1/\sqrt2$ | **derived, then used** |
@@ -121,13 +121,13 @@ The trap here is low-rank $X$ or $Y$, which is the generic situation at large $n
 
 ## 3. The Cauchy–Schwarz step, §2 of the table
 
-$(s_1+s_2)^2\le2(s_1^2+s_2^2)\le2\sum_is_i^2=2$. The first is Cauchy–Schwarz on $(1,1)\cdot(s_1,s_2)$, with equality iff $s_1=s_2$; the second has equality iff $s_i=0$ for all $i\ge3$. Together: $2s_1^2=1$, so $s_1=s_2=1/\sqrt2$ and everything else vanishes, giving $\operatorname{rank}X=2\cdot2=4$ with all four nonzero singular values $1/\sqrt2$. Exactly as written.
+$(s_1+s_2)^2\le2(s_1^2+s_2^2)\le2\sum_is_i^2=2$. The first is Cauchy–Schwarz on $(1,1)\cdot(s_1,s_2)$, with equality iff $s_1=s_2$; the second has equality iff $s_i=0$ for all $i\ge3$. Together: $2s_1^2=1$, so $s_1=s_2=1/\sqrt2$ and everything else vanishes, giving $\mathop{\mathrm{rank}}X=2\cdot2=4$ with all four nonzero singular values $1/\sqrt2$. Exactly as written.
 
 **The normalisation is the record's.** $\sum_is_i^2=1$ *is* what $\lVert X\rVert=1$ means here, per the quoted bullet of §0, the sum runs over pairs. This is the factor-of-two the brief flags, and it comes out right: had $s$ ranged over the full singular-value list the sum would be $2$ and the bound $4$, and the lemma's constant would be wrong. **Nothing found.**
 
 ## 4. The two-step chain and its three conclusions, §3 of the table
 
-**The chain is tight, and the block never says why.** This is the one place where the three norms have to be reconciled, and the block reconciles them nowhere. Doing it from §0: at this point in the proof $\operatorname{rank}X=4$ with all $s_i=1/\sqrt2$ is already in hand, so
+**The chain is tight, and the block never says why.** This is the one place where the three norms have to be reconciled, and the block reconciles them nowhere. Doing it from §0: at this point in the proof $\mathop{\mathrm{rank}}X=4$ with all $s_i=1/\sqrt2$ is already in hand, so
 
 $$\lVert[X,Y]\rVert_F=\sqrt2\cdot\sqrt{\lVert[X,Y]\rVert^2}=\sqrt2\cdot\sqrt2=2,\qquad 2\lVert X\rVert_{\rm op}\lVert Y\rVert_F=2\cdot\tfrac1{\sqrt2}\cdot\sqrt2=2 .$$
 
@@ -157,17 +157,17 @@ $Y X=(X^{\mathsf T}Y^{\mathsf T})^{\mathsf T}$, more directly, $(YX)^{\mathsf T}
 
 ## 6. The converse, §5 of the table
 
-Assume the right-hand side. Rank $4$ with all singular values $1/\sqrt2$ and $\mathrm{im}\,X=\mathrm{im}\,Y=:V$ gives $X^{\mathsf T}X=\tfrac12P_V$, i.e. $-X^2=\tfrac12P_V$, so $X^2=Y^2=-P_V/2$ as the block writes; and $\lVert X\rVert^2=\tfrac12\operatorname{tr}(\tfrac12P_V)=\tfrac{\dim V}4=1$ recovers $\dim V=4$, consistent.
+Assume the right-hand side. Rank $4$ with all singular values $1/\sqrt2$ and $\mathrm{im}\,X=\mathrm{im}\,Y=:V$ gives $X^{\mathsf T}X=\tfrac12P_V$, i.e. $-X^2=\tfrac12P_V$, so $X^2=Y^2=-P_V/2$ as the block writes; and $\lVert X\rVert^2=\tfrac12\mathop{\mathrm{tr}}(\tfrac12P_V)=\tfrac{\dim V}4=1$ recovers $\dim V=4$, consistent.
 
 $[X,Y]=XY-YX=XY-(-XY)=2XY$, **which is exactly the anticommuting hypothesis and nothing more.** Then, using $P_VY=Y$ (from $\mathrm{im}\,Y\subseteq V$),
 
-$$\lVert[X,Y]\rVert^2=4\lVert XY\rVert^2=4\cdot\tfrac12\operatorname{tr}\!\big(Y^{\mathsf T}X^{\mathsf T}XY\big)=2\operatorname{tr}\!\big(Y^{\mathsf T}\cdot\tfrac12P_V\cdot Y\big)=\operatorname{tr}(Y^{\mathsf T}Y)=2\lVert Y\rVert^2=2 .$$
+$$\lVert[X,Y]\rVert^2=4\lVert XY\rVert^2=4\cdot\tfrac12\mathop{\mathrm{tr}}\!\big(Y^{\mathsf T}X^{\mathsf T}XY\big)=2\mathop{\mathrm{tr}}\!\big(Y^{\mathsf T}\cdot\tfrac12P_V\cdot Y\big)=\mathop{\mathrm{tr}}(Y^{\mathsf T}Y)=2\lVert Y\rVert^2=2 .$$
 
-**The trace does evaluate to $2$ in the record's normalisation**, $\operatorname{tr}(Y^{\mathsf T}Y)=2\lVert Y\rVert^2$, and $\lVert Y\rVert=1$. Every step of the block's one-line converse checks, and it is an identity valid for all such $X,Y$, **not a check at one object**. The consistency of the right-hand side with the "orthonormal" hypothesis also holds automatically: anticommuting skew $X,Y$ have $\operatorname{tr}(XY)=\operatorname{tr}(YX)=-\operatorname{tr}(XY)=0$, so $\langle X,Y\rangle=-\tfrac12\operatorname{tr}(XY)=0$.
+**The trace does evaluate to $2$ in the record's normalisation**, $\mathop{\mathrm{tr}}(Y^{\mathsf T}Y)=2\lVert Y\rVert^2$, and $\lVert Y\rVert=1$. Every step of the block's one-line converse checks, and it is an identity valid for all such $X,Y$, **not a check at one object**. The consistency of the right-hand side with the "orthonormal" hypothesis also holds automatically: anticommuting skew $X,Y$ have $\mathop{\mathrm{tr}}(XY)=\mathop{\mathrm{tr}}(YX)=-\mathop{\mathrm{tr}}(XY)=0$, so $\langle X,Y\rangle=-\tfrac12\mathop{\mathrm{tr}}(XY)=0$.
 
 ## 7. The recorded correction, §6 of the table
 
-**The counterexample is valid.** $s^2=(1/2,3/10,1/5)$ sums to $5/10+3/10+2/10=1$ exactly, has $s_1^2=1/2\ge1/2$, and has three nonzero angles, so $\operatorname{rank}X=6$. The inference "$\lVert[X,Y]\rVert^2\le4s_1^2$ and the cap force rank $4$" therefore fails. **It requires $n\ge6$, which the block does not say**, three angles do not fit below $\mathfrak{so}(6)$. The parallel copy at [line 273](../findings/stratum-two-negative.md#L273) adds a second profile $(0.6,0.3,0.1)$ and the further remark that $4s_1^2$ reads $4$ at rank $2$ against a true maximum of $1$; both agree with the canonical block.
+**The counterexample is valid.** $s^2=(1/2,3/10,1/5)$ sums to $5/10+3/10+2/10=1$ exactly, has $s_1^2=1/2\ge1/2$, and has three nonzero angles, so $\mathop{\mathrm{rank}}X=6$. The inference "$\lVert[X,Y]\rVert^2\le4s_1^2$ and the cap force rank $4$" therefore fails. **It requires $n\ge6$, which the block does not say**, three angles do not fit below $\mathfrak{so}(6)$. The parallel copy at [line 273](../findings/stratum-two-negative.md#L273) adds a second profile $(0.6,0.3,0.1)$ and the further remark that $4s_1^2$ reads $4$ at rank $2$ against a true maximum of $1$; both agree with the canonical block.
 
 **The replacement genuinely avoids the flaw.** The new route bounds $\lVert[X,Y]\rVert^2\le(s_1+s_2)^2$, which is at most $4s_1^2$ since $s_2\le s_1$, and is strictly smaller whenever $s_2<s_1$. On the counterexample profile itself, $(s_1+s_2)^2\le2(s_1^2+s_2^2)=2\cdot\tfrac45=\tfrac85<2$, so the profile is excluded outright by the replacement, no square roots needed. The flaw in the old route was that $s_1^2\ge\tfrac12$ is a one-coordinate condition that says nothing about the tail; the replacement's Cauchy–Schwarz constrains $s_1,s_2$ and the tail together, which is exactly the missing content.
 
@@ -175,16 +175,16 @@ $$\lVert[X,Y]\rVert^2=4\lVert XY\rVert^2=4\cdot\tfrac12\operatorname{tr}\!\big(Y
 
 ## 8. Does L31 deliver L29's clause?, §7 of the table
 
-[results.md:451](../results.md#L451) credits L31 with *"equality forces the support to have $r=4$"*, in three lines. The chain [L29](../findings/stratum-two-negative.md#L69)'s block states is: *"equality forces $T_{1,N-1,N}=2$, hence $\lVert[v_{N-1},v_N]\rVert^2=2$, hence $\operatorname{im}v_2=\operatorname{im}v_3$ of dimension $4$, hence $r=4$ through Ricci-flatness."* Each link:
+[results.md:451](../results.md#L451) credits L31 with *"equality forces the support to have $r=4$"*, in three lines. The chain [L29](../findings/stratum-two-negative.md#L69)'s block states is: *"equality forces $T_{1,N-1,N}=2$, hence $\lVert[v_{N-1},v_N]\rVert^2=2$, hence $\mathop{\mathrm{im}}v_2=\mathop{\mathrm{im}}v_3$ of dimension $4$, hence $r=4$ through Ricci-flatness."* Each link:
 
 1. **$T_{1,N-1,N}=2$.** L29's only inequality is $3T_{1,N-1,N}\lambda_1ab\le6\lambda_1ab$. With one positive and two negative eigenvalues, $\lambda_1>0$ and $a,b>0$, so $\lambda_1ab\ne0$ and equality in $\theta$ forces $T_{1,N-1,N}=2$. **Holds.**
 2. **$\lVert[v_{N-1},v_N]\rVert^2=2$.** By the pair cap in the form [conventions.md](../findings/conventions.md) records (*"The pair cap $\sum_\gamma T_{\alpha\beta\gamma}=\lVert[v_\alpha,v_\beta]\rVert^2\le2$"*) and $T\ge0$, we get $2=T_{1,N-1,N}\le\sum_\gamma T_{N-1,N,\gamma}=\lVert[v_{N-1},v_N]\rVert^2\le2$. **Holds.**
-3. **L31 applies.** $v_{N-1},v_N$ are eigenvectors of $W$ as an operator on $\Lambda^2$, so they are orthonormal in the $\Lambda^2$ inner product $\tfrac12\operatorname{tr}(X^{\mathsf T}Y)$, **which is exactly L31's norm**, so the constant $2$ transports without a conversion. L31 then gives $\mathrm{im}\,v_{N-1}=\mathrm{im}\,v_N$ of dimension $4$. **Holds.**
+3. **L31 applies.** $v_{N-1},v_N$ are eigenvectors of $W$ as an operator on $\Lambda^2$, so they are orthonormal in the $\Lambda^2$ inner product $\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$, **which is exactly L31's norm**, so the constant $2$ transports without a conversion. L31 then gives $\mathrm{im}\,v_{N-1}=\mathrm{im}\,v_N$ of dimension $4$. **Holds.**
 4. **$r=4$.** Ricci-flatness reads $\lambda_1v_1v_1^{\mathsf T}=a\,v_2v_2^{\mathsf T}+b\,v_3v_3^{\mathsf T}$ with all terms positive semidefinite and $a,b>0$, so $\mathrm{im}\,v_1=\mathrm{im}\,v_2+\mathrm{im}\,v_3=\mathrm{im}\,v_2$, of dimension $4$; and the support is exactly $\mathrm{im}\,v_1$. **Holds.**
 
 **Verdict: L31 delivers the clause, at every $n$ and with no numerics, in the lines the record claims.** Two notes that do not disturb it:
 
-- **A notation slip in the chain.** It opens with $v_{N-1},v_N$ and closes with $\operatorname{im}v_2=\operatorname{im}v_3$, the same two vectors under this file's other indexing for the one-positive stratum. Unambiguous, but it is a third live index convention alongside the collisions [conventions.md](../findings/conventions.md) already tables for this file.
+- **A notation slip in the chain.** It opens with $v_{N-1},v_N$ and closes with $\mathop{\mathrm{im}}v_2=\mathop{\mathrm{im}}v_3$, the same two vectors under this file's other indexing for the one-positive stratum. Unambiguous, but it is a third live index convention alongside the collisions [conventions.md](../findings/conventions.md) already tables for this file.
 - **The two sites disagree about what L31 closes.** [L29](../findings/stratum-two-negative.md#L69)'s block says L31 closes *"the converse, that equality forces that spectrum"* and then gives a chain terminating at $r=4$; [results.md:451](../results.md#L451) splits the two correctly, assigning the spectrum to L29's own $f(t)$ equality case and only $r=4$ to L31. **results.md is the accurate site**; L29's block conflates the two, and only the $r=4$ half is L31's.
 
 ### 8a. An impact note on the consumer, outside L31
@@ -215,7 +215,7 @@ $$\lVert[X,Y]\rVert^2=4\lVert XY\rVert^2=4\cdot\tfrac12\operatorname{tr}\!\big(Y
 
 **It is a biconditional, so there are two falsifiers.**
 
-**Forward falsifier**: a unit pair $X,Y\in\mathfrak{so}(n)$ with $\lVert[X,Y]\rVert^2=2$ but failing any one of, $\operatorname{rank}X=4$ with all $s_i=1/\sqrt2$, the same for $Y$, $\mathrm{im}\,X=\mathrm{im}\,Y$, $XY=-YX$. **No such object can exist**, and the reason is that §2 and §3 leave no freedom: $\lVert[X,Y]\rVert^2\le(s_1+s_2)^2\le2$ collapses the singular-value profile to a point, and the chain then collapses the geometry. Any candidate must have some $s_i>0$ with $i\ge3$, or $s_1\ne s_2$, and either makes $(s_1+s_2)^2<2$ strictly. I looked at the natural place, the rank-$6$ profiles the correction paragraph itself names, $s^2=(1/2,3/10,1/5)$ and $(3/5,3/10,1/10)$, and both give $(s_1+s_2)^2\le2(s_1^2+s_2^2)=8/5$ and $9/5$ respectively, under $2$ in each case.
+**Forward falsifier**: a unit pair $X,Y\in\mathfrak{so}(n)$ with $\lVert[X,Y]\rVert^2=2$ but failing any one of, $\mathop{\mathrm{rank}}X=4$ with all $s_i=1/\sqrt2$, the same for $Y$, $\mathrm{im}\,X=\mathrm{im}\,Y$, $XY=-YX$. **No such object can exist**, and the reason is that §2 and §3 leave no freedom: $\lVert[X,Y]\rVert^2\le(s_1+s_2)^2\le2$ collapses the singular-value profile to a point, and the chain then collapses the geometry. Any candidate must have some $s_i>0$ with $i\ge3$, or $s_1\ne s_2$, and either makes $(s_1+s_2)^2<2$ strictly. I looked at the natural place, the rank-$6$ profiles the correction paragraph itself names, $s^2=(1/2,3/10,1/5)$ and $(3/5,3/10,1/10)$, and both give $(s_1+s_2)^2\le2(s_1^2+s_2^2)=8/5$ and $9/5$ respectively, under $2$ in each case.
 
 **Converse falsifier**: an anticommuting pair, both rank $4$ with all singular values $1/\sqrt2$ and equal images, whose bracket has $\lVert[X,Y]\rVert^2\ne2$. §6 is an identity under those hypotheses, so none exists.
 

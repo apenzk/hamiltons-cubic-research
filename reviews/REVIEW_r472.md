@@ -14,7 +14,7 @@ $$\sum_\alpha\lambda_\alpha\,\mathrm{ad}(v_\alpha)^2=2W,\qquad\text{equivalently
 
 So $v\in\mathfrak{so}(m)=\Lambda^2\mathbb R^m$ (a bivector *and* an element of $\mathfrak{so}(m)$, the two identified throughout the record) and $N_v$ is an operator on that same space, $v\otimes v$ being the rank-one map $u\mapsto\langle v,u\rangle v$ and $\mathrm{ad}(v)u=[v,u]$. The statement is well posed.
 
-**One ambiguity, and it is harmless *here*.** The definition never says which of the record's two inner products ([conventions.md](../findings/conventions.md): the $\Lambda^2$ pairing $\tfrac12\operatorname{tr}(X^{\mathsf T}Y)$ and the $n\times n$ Frobenius pairing, which "differ by a factor $2$") supplies $v\otimes v$ and $v^\perp$. For L80 the choice cannot matter: the two are positive multiples of each other, so $v^\perp$ is the same subspace, $\mathrm{ad}(v)$ is skew-adjoint for both (any multiple of the trace form is ad-invariant), and both assertions survive verbatim. It matters for the *identity* $N_v$ sits in, finding 6.
+**One ambiguity, and it is harmless *here*.** The definition never says which of the record's two inner products ([conventions.md](../findings/conventions.md): the $\Lambda^2$ pairing $\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$ and the $n\times n$ Frobenius pairing, which "differ by a factor $2$") supplies $v\otimes v$ and $v^\perp$. For L80 the choice cannot matter: the two are positive multiples of each other, so $v^\perp$ is the same subspace, $\mathrm{ad}(v)$ is skew-adjoint for both (any multiple of the trace form is ad-invariant), and both assertions survive verbatim. It matters for the *identity* $N_v$ sits in, finding 6.
 
 ## 2. Assertion (A), confirmed, and it is one line, of which the block gives the honest version
 
@@ -51,9 +51,9 @@ $\dim\ker N_v=\dim\mathfrak c\ge\lfloor m/2\rfloor-1$, by the torus bound record
 
 ## 6. DEFECT, the derivation given for the coefficient $2$ does not reproduce it, though the coefficient is right
 
-The block introducing $N_v$ derives it from a pairing that "gives $\sum_\alpha\lambda_\alpha[\langle v_\alpha,u\rangle^2-2\operatorname{tr}((v_\alpha u)^2)]=0$", with $\operatorname{tr}(u^2v_\alpha^2)$ cleared by Ricci-flatness. Using $\lVert[v,u]\rVert^2=-\operatorname{tr}((vu)^2)+\operatorname{tr}(v^2u^2)$ in the record's $\Lambda^2$ pairing:
+The block introducing $N_v$ derives it from a pairing that "gives $\sum_\alpha\lambda_\alpha[\langle v_\alpha,u\rangle^2-2\mathop{\mathrm{tr}}((v_\alpha u)^2)]=0$", with $\mathop{\mathrm{tr}}(u^2v_\alpha^2)$ cleared by Ricci-flatness. Using $\lVert[v,u]\rVert^2=-\mathop{\mathrm{tr}}((vu)^2)+\mathop{\mathrm{tr}}(v^2u^2)$ in the record's $\Lambda^2$ pairing:
 
-$$\langle v,u\rangle^2-2\operatorname{tr}((vu)^2)=\langle v,u\rangle^2+2\lVert[v,u]\rVert^2-2\operatorname{tr}(v^2u^2),$$
+$$\langle v,u\rangle^2-2\mathop{\mathrm{tr}}((vu)^2)=\langle v,u\rangle^2+2\lVert[v,u]\rVert^2-2\mathop{\mathrm{tr}}(v^2u^2),$$
 
 so the Ricci-cleared remainder carries relative weights $(1,2)$ on $(\langle v,u\rangle^2,\lVert[v,u]\rVert^2)$. Read instead in the full Frobenius pairing the same line clears to weights $(1,1)$. But $\langle u,N_vu\rangle=2\langle v,u\rangle^2+\lVert[v,u]\rVert^2$ has weights $(2,1)$. **No stated normalisation of the record turns the displayed intermediate into the displayed $N_v$**, and it is the line a reader would use to check the coefficient.
 

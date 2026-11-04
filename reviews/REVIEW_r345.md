@@ -16,7 +16,7 @@
 
 ## The one fact everything turns on: $\chi_S=\chi_{S^c}$ on $\Gamma$
 
-$\Gamma=\{\operatorname{diag}(\varepsilon):\prod\varepsilon_i=1\}$ is the kernel of the character $\chi_{[n]}:\varepsilon\mapsto\prod_i\varepsilon_i$ of $(\mathbb Z/2)^n$, so it has index $2$ and is elementary abelian of order $2^{n-1}$, $\Gamma\cong(\mathbb Z/2)^{n-1}$, as E1 says. Every character of $(\mathbb Z/2)^n$ is $\chi_S(\varepsilon)=\prod_{i\in S}\varepsilon_i$ for a subset $S$, and restriction to $\Gamma$ is surjective on characters with kernel the annihilator of $\Gamma$, which is exactly $\{1,\chi_{[n]}\}$. Hence
+$\Gamma=\{\mathop{\mathrm{diag}}(\varepsilon):\prod\varepsilon_i=1\}$ is the kernel of the character $\chi_{[n]}:\varepsilon\mapsto\prod_i\varepsilon_i$ of $(\mathbb Z/2)^n$, so it has index $2$ and is elementary abelian of order $2^{n-1}$, $\Gamma\cong(\mathbb Z/2)^{n-1}$, as E1 says. Every character of $(\mathbb Z/2)^n$ is $\chi_S(\varepsilon)=\prod_{i\in S}\varepsilon_i$ for a subset $S$, and restriction to $\Gamma$ is surjective on characters with kernel the annihilator of $\Gamma$, which is exactly $\{1,\chi_{[n]}\}$. Hence
 
 $$\chi_S\big|_\Gamma=\chi_{S'}\big|_\Gamma\iff S'=S\ \text{ or }\ S'=[n]\setminus S .$$
 
@@ -31,7 +31,7 @@ The blocks of E1 are labelled by $S=\varnothing$ (trivial), $|S|=2$ (pair blocks
 
 For $n$ odd there is never a collision, because $|S^c|$ is then odd and no listed label has odd size. So the exceptional set is exactly $\{4,6,8\}$.
 
-**The determinant-one condition is the whole cause**, which answers E1's question directly. On the full sign group $\widetilde\Gamma=\{\operatorname{diag}(\varepsilon)\}\cong(\mathbb Z/2)^n\subset O(n)$ the characters $\chi_S$ are pairwise distinct, and the listed summands are the isotypic components at every $n\ge4$ with no exceptions. Nothing is lost by that substitution: $W^\#$ is built from the structure constants of $\mathfrak{so}(n)$ in an orthonormal basis, conjugation by any $g\in O(n)$ is a metric-preserving Lie algebra automorphism, so $\circ$ is $O(n)$-equivariant, which is what [DERIVE-df1.md](DERIVE-df1.md) itself asserts in Step 2 and then declines to use. **Replacing $\Gamma$ by $\widetilde\Gamma$ repairs the proposition's proof at $n=4,6,8$ at no cost.**
+**The determinant-one condition is the whole cause**, which answers E1's question directly. On the full sign group $\widetilde\Gamma=\{\mathop{\mathrm{diag}}(\varepsilon)\}\cong(\mathbb Z/2)^n\subset O(n)$ the characters $\chi_S$ are pairwise distinct, and the listed summands are the isotypic components at every $n\ge4$ with no exceptions. Nothing is lost by that substitution: $W^\#$ is built from the structure constants of $\mathfrak{so}(n)$ in an orthonormal basis, conjugation by any $g\in O(n)$ is a metric-preserving Lie algebra automorphism, so $\circ$ is $O(n)$-equivariant, which is what [DERIVE-df1.md](DERIVE-df1.md) itself asserts in Step 2 and then declines to use. **Replacing $\Gamma$ by $\widetilde\Gamma$ repairs the proposition's proof at $n=4,6,8$ at no cost.**
 
 The one thing that does not change is the effective group on $\Lambda^2$: $-I$ acts trivially there, so for even $n$ the action factors through a group of order $2^{n-2}$ (or $2^{n-1}$ for $\widetilde\Gamma$). This is harmless (every character in play has $|S|$ even, hence is trivial on $-I$ and descends) and it introduces no further identification beyond $S\leftrightarrow S^c$.
 
@@ -104,11 +104,11 @@ on the full $3$-dimensional space, in the ordered signed basis. Three consequenc
 
 **The Weyl cut is automatic.** $G\mathbf 1=(A+B+C)\mathbf 1$, and $G$ is symmetric, so $G$ preserves $\mathbf 1^\perp$, which is exactly the Bianchi subspace. The $\Lambda^4$ line is the $\mathbf 1$ direction with eigenvalue $\tfrac12(A+B+C)=\tfrac12\sum_{\{i,j\}\subset S}M_{ij}$. *This is a strong check on the signs: a single sign error anywhere in the computation destroys $G\mathbf 1\parallel\mathbf 1$.*
 
-**The block is traceless, hence its spectrum is a $\pm$ pair.** $\operatorname{tr}(\tfrac12G)=\tfrac12(A+B+C)$ is entirely the $\Lambda^4$ eigenvalue, so on the Weyl $2$-plane
+**The block is traceless, hence its spectrum is a $\pm$ pair.** $\mathop{\mathrm{tr}}(\tfrac12G)=\tfrac12(A+B+C)$ is entirely the $\Lambda^4$ eigenvalue, so on the Weyl $2$-plane
 
-$$\operatorname{spec}\big(L_M\big|_{V_{abcd}}\big)=\Big\{+\tfrac\lambda2,\,-\tfrac\lambda2\Big\},\qquad \lambda^2=A^2+B^2+C^2-AB-BC-CA=\tfrac12\big[(A-B)^2+(B-C)^2+(C-A)^2\big],$$
+$$\mathop{\mathrm{spec}}\big(L_M\big|_{V_{abcd}}\big)=\Big\{+\tfrac\lambda2,\,-\tfrac\lambda2\Big\},\qquad \lambda^2=A^2+B^2+C^2-AB-BC-CA=\tfrac12\big[(A-B)^2+(B-C)^2+(C-A)^2\big],$$
 
-from $\operatorname{tr}(G^2)=3(A^2+B^2+C^2)$. **Every $4$-set contributes exactly as much to the negative spectrum as to the positive**, at every diagonal critical point, a structural fact the record does not currently carry. For $L_e$ divide by $\theta$: the $4$-set contribution to [Lemma L24](../findings/second-order.md) is
+from $\mathop{\mathrm{tr}}(G^2)=3(A^2+B^2+C^2)$. **Every $4$-set contributes exactly as much to the negative spectrum as to the positive**, at every diagonal critical point, a structural fact the record does not currently carry. For $L_e$ divide by $\theta$: the $4$-set contribution to [Lemma L24](../findings/second-order.md) is
 
 $$\frac{\lambda}{2\theta}\le\frac12\iff \tfrac12\big[(A-B)^2+(B-C)^2+(C-A)^2\big]\le\theta^2\quad\text{for every }4\text{-subset}.$$
 
@@ -116,7 +116,7 @@ So the $4$-set half of the second-order condition is a **single explicit inequal
 
 **What it gives at $S^p\times S^q$.** Let the vertex matrix be $u$ inside the $p$-block, $v$ inside the $q$-block, $x$ across. A $4$-set split $4$–$0$ has $A=B=C=2u$, and split $3$–$1$ has $A=B=C=u+x$; both give $\lambda=0$. Only the $2$–$2$ splits survive, with $A=u+v$, $B=C=2x$, hence $\lambda=|u+v-2x|$ and
 
-$$\operatorname{spec}\big(L_e\big|_{V}\big)=\pm\frac{u+v-2x}{2\theta}=\pm\frac{1}{2\theta}\sqrt{\frac{2(n-1)(n-2)}{pq(p-1)(q-1)}}\;=\;\pm\,\mu,\qquad \mu=\frac{n-2}{2(p-1)(q-1)},$$
+$$\mathop{\mathrm{spec}}\big(L_e\big|_{V}\big)=\pm\frac{u+v-2x}{2\theta}=\pm\frac{1}{2\theta}\sqrt{\frac{2(n-1)(n-2)}{pq(p-1)(q-1)}}\;=\;\pm\,\mu,\qquad \mu=\frac{n-2}{2(p-1)(q-1)},$$
 
 the last step using $\theta^2(S^p\times S^q)=\frac{2(p-1)(q-1)(n-1)}{pq(n-2)}$ from [target.md](../findings/target.md). At the balanced product this is $\pm\frac2{n-2}$ exactly, and the number of contributing $4$-sets is $\binom p2\binom q2$.
 
@@ -133,7 +133,7 @@ The note's caution says the record attributes $(p-2)/(2(p-1))$ to the *diagonal*
 
 ## The screens, reported as screens
 
-Built from the definitions in this review, importing nothing from the repository: $\Lambda^2$ with $\langle X,Y\rangle=\tfrac12\operatorname{tr}(X^{\mathsf T}Y)$ so the $\varphi_{ab}$ are orthonormal, $c_{\alpha\beta\gamma}=\langle[\varphi_\alpha,\varphi_\beta],\varphi_\gamma\rangle$, and $R^\#=k\sum cc RR$.
+Built from the definitions in this review, importing nothing from the repository: $\Lambda^2$ with $\langle X,Y\rangle=\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$ so the $\varphi_{ab}$ are orthonormal, $c_{\alpha\beta\gamma}=\langle[\varphi_\alpha,\varphi_\beta],\varphi_\gamma\rangle$, and $R^\#=k\sum cc RR$.
 
 1. **Calibration.** $k=\tfrac12$ exactly at $n=5,6,7,8$ (residual $\le2\times10^{-15}$) against the classical diagonal identity $(M^\#)_{ij,ij}=\sum_kM_{ik}M_{jk}$, confirming the convention used in the hand derivation. With it, $S^p\times S^q$ is critical to $10^{-16}$ with $\theta=\theta_0(n)$ at $(6,3),(8,4),(10,5),(12,6)$ and $\theta=1.11554670$ at $(8,3)$, matching the record.
 2. **The $4$-set closed form.** For random diagonal $M$ at $n=6,7,8,9$: $\max|L_MX-\tfrac12GX|=0$ to machine zero on all three basis directions, and the leak outside the $4$-set block is $0$, **including at $n=6$ and $n=8$, where the character fuses**, confirming the support argument rather than the character argument.

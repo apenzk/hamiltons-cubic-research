@@ -27,7 +27,7 @@
 - **$T_{abc}=c_{abc}^2$** with $c_{abc}=\langle[v_a,v_b],v_c\rangle$ in an orthonormal eigenbasis of $W$ on $\Lambda^2\mathbb R^n$; $T\ge0$, totally symmetric, hollow. $N=\binom n2$.
 - **$\lambda$ is the $\Lambda^2$ spectrum**, $\nu_1,\dots,\nu_d$ its distinct values with multiplicities $m_j$, $\sum_jm_j\nu_j=0$, $\sum_jm_j\nu_j^2=1$. $\mu_j=m_j-\delta_{ij}$ inside row $i$.
 - **$\theta$ is a variable of the relaxation**, not a function of $\lambda$: $\Pi(\lambda)$ is a set of *pairs* $(T,\theta)$, per [L104](../findings/bounds-relaxations.md).
-- **$W$ as an operator on $\Lambda^2$** carries $\operatorname{tr}(W^2)=1$ at unit norm; $K_{ab}=W_{abab}$ is the $n\times n$ sectional matrix, whose entries are $W$'s **diagonal** in the pair basis $\{\varphi_{ab}\}_{a<b}$ of the frame ([conventions.md](../findings/conventions.md) line 88, half-trace pairing, $\lVert\varphi_{ab}\rVert=1$).
+- **$W$ as an operator on $\Lambda^2$** carries $\mathop{\mathrm{tr}}(W^2)=1$ at unit norm; $K_{ab}=W_{abab}$ is the $n\times n$ sectional matrix, whose entries are $W$'s **diagonal** in the pair basis $\{\varphi_{ab}\}_{a<b}$ of the frame ([conventions.md](../findings/conventions.md) line 88, half-trace pairing, $\lVert\varphi_{ab}\rVert=1$).
 - **All arithmetic below is exact.** No sweep, census, optimisation or falsifier hunt was run; the four Lean statements in §4 were screened as screens and are reported as such.
 
 ## 1. Hypothesis inventory
@@ -46,8 +46,8 @@
 
 | # | Hypothesis | Where it binds | Stated? |
 | --- | --- | --- | --- |
-| H6 | $\operatorname{tr}(W^2)=1$, $W$ the $\Lambda^2$ operator | the numeral $2$ in $t\le2$ | **yes**, in the same bullet |
-| H7 | $K$'s entries are $W$'s pair-basis diagonal in the frame $F$ | the whole derivation; it is what makes $t=2\lVert\operatorname{diag}W\rVert^2$ | implicit, and tabled at line 138 |
+| H6 | $\mathop{\mathrm{tr}}(W^2)=1$, $W$ the $\Lambda^2$ operator | the numeral $2$ in $t\le2$ | **yes**, in the same bullet |
+| H7 | $K$'s entries are $W$'s pair-basis diagonal in the frame $F$ | the whole derivation; it is what makes $t=2\lVert\mathop{\mathrm{diag}}W\rVert^2$ | implicit, and tabled at line 138 |
 | H8 | The bullet is read as a **global** glossary entry rather than as scoped to [diagonal-half.md](../findings/diagonal-half.md) | the claim that the original is *wrong* rather than merely unscoped | **no**, see §7 |
 
 ## 2. Item 1, $\theta$ is absent from (A) and (B), checked at source
@@ -58,7 +58,7 @@ $$\text{(A)}\ \sum_{\beta\gamma}T_{k\beta\gamma}=2(n-2),\qquad \text{(B)}\ \sum_
 
 Three routes by which $\theta$ could enter (A) or (B), each closed:
 
-1. **Through $\nu$.** $\nu$ is the multiset of distinct values of $\operatorname{spec}(W)$ on $\Lambda^2$. It is the datum $\Pi(\lambda)$ is fixed at, and $\theta$ is a coordinate of the polytope over it. No definitional dependence in either direction inside the relaxation.
+1. **Through $\nu$.** $\nu$ is the multiset of distinct values of $\mathop{\mathrm{spec}}(W)$ on $\Lambda^2$. It is the datum $\Pi(\lambda)$ is fixed at, and $\theta$ is a coordinate of the polytope over it. No definitional dependence in either direction inside the relaxation.
 2. **Through the normalisation.** The two normalisations in play are $\sum_jm_j\nu_j=0$ (tracelessness) and $\sum_jm_j\nu_j^2=1$ (unit norm). Neither mentions $\theta$.
 3. **Through provenance.** (A) is [L153](../findings/bounds.md)'s Killing row marginal and is Böhm–Wilking's $I\#I=(n-2)I$; (B) is $W\#I=-W$, linear in $W$ and consuming first Bianchi and Ricci-flatness. (C) is the only one of the three that consumes **criticality**, $Q(W)=\theta W$, which is where $\theta$ is defined at all. So the location of $\theta$ is not an accident of presentation: it tracks which relation consumes criticality.
 
@@ -166,7 +166,7 @@ The two bullets:
 - Line 136: $t=\lVert K\rVert_F^2=\sum_{a\ne b}K_{ab}^2\le2$, with $t=2$ iff $W$ is coordinate-diagonal in some frame.
 - Line 153 before the edit: *"$M$ (or $K$) is the $n\times n$ **sectional** matrix in [diagonal-half.md](../findings/diagonal-half.md), where $\lVert K\rVert_F^2=2$ at a unit Weyl tensor"*.
 
-**The escape the brief asks about exists and is grammatical.** The relative clause *"where …"* attaches to *"in [diagonal-half.md](../findings/diagonal-half.md)"*, and [diagonal-half.md](../findings/diagonal-half.md) is a file **wholly about the diagonal locus**, its opening line says so (*"the functional on the diagonal locus"*), its every $W$ is $\operatorname{diag}(w)$, and it carries $\operatorname{tr}M^2=2$ as a **standing normalisation constraint** in its own display, four lines below $\sum_{a<b}w_{ab}^2=1$. On the diagonal locus $\lVert K\rVert_F^2=2$ is not an approximation or a special case: it is exact and universal there, because $t=2\sum_{a<b}W_{abab}^2=2\operatorname{tr}(W^2)=2$ when every off-diagonal pair entry vanishes. **So in the scope its locator names, the original bullet is true.**
+**The escape the brief asks about exists and is grammatical.** The relative clause *"where …"* attaches to *"in [diagonal-half.md](../findings/diagonal-half.md)"*, and [diagonal-half.md](../findings/diagonal-half.md) is a file **wholly about the diagonal locus**, its opening line says so (*"the functional on the diagonal locus"*), its every $W$ is $\mathop{\mathrm{diag}}(w)$, and it carries $\mathop{\mathrm{tr}}M^2=2$ as a **standing normalisation constraint** in its own display, four lines below $\sum_{a<b}w_{ab}^2=1$. On the diagonal locus $\lVert K\rVert_F^2=2$ is not an approximation or a special case: it is exact and universal there, because $t=2\sum_{a<b}W_{abab}^2=2\mathop{\mathrm{tr}}(W^2)=2$ when every off-diagonal pair entry vanishes. **So in the scope its locator names, the original bullet is true.**
 
 **What is genuinely wrong is the placement, not the sentence.** [conventions.md](../findings/conventions.md) is the record's global glossary (the file every other file quotes definitions from, by its own standfirst) so a row of it is read as a fact about the letter, not as a fact about one file. A locus-restricted value sitting in a global glossary is an accident waiting, and this one has already happened: [second-order.md](../findings/second-order.md) line 1612 records the near-miss in as many words, *"under the table's one attached sense of $M$, $\lVert M\rVert_F^2=2$ at a unit Weyl tensor, so L94 would read $\kappa^2\le4$ and this block's 'at unit norm that reads $\kappa^2=2$' would be false"*, and [r765](REVIEW_r765.md) filed the repair as a named reopening route (*"the letter $M$, the live route, L94 is safe only in line 92's $\Lambda^2$ sense, and line 153's sectional sense gives $\kappa^2\le4$"*).
 
@@ -182,7 +182,7 @@ The repair reads: *"$\lVert K\rVert_F^2\le2$ otherwise, since $K$ captures only 
 
 **Derivation, exact.** Fix a frame $F$ and let $\alpha,\beta$ range over the $\binom n2$ pair indices, $\{\varphi_{ab}\}_{a<b}$ orthonormal. Then $K_{ab}=W_{\alpha\alpha}$ for $\alpha=\{a,b\}$, and
 
-$$t_F=\lVert K\rVert_F^2=\sum_{a\ne b}K_{ab}^2=2\sum_{\alpha}W_{\alpha\alpha}^2,\qquad \operatorname{tr}(W^2)=\sum_{\alpha,\beta}W_{\alpha\beta}^2=1 .$$
+$$t_F=\lVert K\rVert_F^2=\sum_{a\ne b}K_{ab}^2=2\sum_{\alpha}W_{\alpha\alpha}^2,\qquad \mathop{\mathrm{tr}}(W^2)=\sum_{\alpha,\beta}W_{\alpha\beta}^2=1 .$$
 
 Hence, in closed form,
 
@@ -194,7 +194,7 @@ $$t_F\;=\;2\Big(1-\sum_{\alpha\ne\beta}W_{\alpha\beta}^2\Big)\;\le\;2,$$
 
 **The other reading is circular rather than false.** If *"determine"* means "determine $W$ among symmetric operators on $\Lambda^2$ with that diagonal", then the diagonal determines $W$ exactly when $W$ has no off-diagonal part, which is diagonality, the thing to be concluded, assumed. Either way the clause is not a derivation.
 
-**What the true clause is, in one word.** Equality holds exactly where the captured entries **exhaust** $W$ (where they carry all of $\lVert W\rVert_F^2$) which is $\sum_{\alpha\ne\beta}W_{\alpha\beta}^2=0$. The record already carries this, correctly, at [conventions.md](../findings/conventions.md) line 138: *"$t=2\lVert\operatorname{diag}W\rVert^2$ … with equality exactly when $W$ is diagonal."* The repair reached for a fresh reason fifteen lines from a correct one.
+**What the true clause is, in one word.** Equality holds exactly where the captured entries **exhaust** $W$ (where they carry all of $\lVert W\rVert_F^2$) which is $\sum_{\alpha\ne\beta}W_{\alpha\beta}^2=0$. The record already carries this, correctly, at [conventions.md](../findings/conventions.md) line 138: *"$t=2\lVert\mathop{\mathrm{diag}}W\rVert^2$ … with equality exactly when $W$ is diagonal."* The repair reached for a fresh reason fifteen lines from a correct one.
 
 *A smaller note on the same bullet, and it is right:* the new headline *"their norms differ by $\sqrt2$ on the diagonal locus and by less off it"* checks, $\lVert K\rVert_F=\sqrt{t_F}\le\sqrt2=\sqrt2\cdot\lVert W\rVert_F$, with strict inequality off the locus.
 
@@ -224,9 +224,9 @@ Two qualifications the sentence does not make, neither of which damages it:
 
 Named as positive conditions, each checkable:
 
-1. **A unit Weyl tensor, coordinate-diagonal in some frame, with $\lVert K\rVert_F^2\ne2$ in that frame.** This would break §8's closed form and with it both bullets. It cannot exist while $\operatorname{tr}(W^2)=1$ and the pair basis is orthonormal.
+1. **A unit Weyl tensor, coordinate-diagonal in some frame, with $\lVert K\rVert_F^2\ne2$ in that frame.** This would break §8's closed form and with it both bullets. It cannot exist while $\mathop{\mathrm{tr}}(W^2)=1$ and the pair basis is orthonormal.
 2. **A tabled reading of $K$ under which the sectional matrix is normalised to $\lVert K\rVert_F=1$**, i.e. an unordered-pair convention for $t$. Then $t\le1$, the numeral $2$ moves, and both bullets are restated, the hazard [r765](REVIEW_r765.md) and [r766](REVIEW_r766.md) closed, and it stays closed only while line 136 keeps the word *"ordered"* and the word *"matrix"*.
-3. **A consumer that reads line 153 as scoped to [diagonal-half.md](../findings/diagonal-half.md) and needs the unqualified value there.** Since [diagonal-half.md](../findings/diagonal-half.md) fixes $\operatorname{tr}M^2=2$ as a constraint, such a consumer loses nothing from the edit; a consumer that instead reads the bullet globally is the one the edit protects.
+3. **A consumer that reads line 153 as scoped to [diagonal-half.md](../findings/diagonal-half.md) and needs the unqualified value there.** Since [diagonal-half.md](../findings/diagonal-half.md) fixes $\mathop{\mathrm{tr}}M^2=2$ as a constraint, such a consumer loses nothing from the edit; a consumer that instead reads the bullet globally is the one the edit protects.
 4. **A proof that $\mathrm{diag}_F$ is injective on $\mathcal W_n$ at coordinate-diagonal points.** That, and only that, would rescue the word *"determine"*. §8's dimension count forecloses it at every $n\ge6$; at $n=4,5$ the count is $\dim\mathcal W_4=10$ against $6$ and $\dim\mathcal W_5=35$ against $10$, so it is foreclosed there too.
 
 ## 12. Two smaller findings, recorded because silence is not a verdict
@@ -245,7 +245,7 @@ Named as positive conditions, each checkable:
 | L175 clause 1e, majorisation | **PROVEN** | nothing; but [I17](../plan.md)'s closure narrows to this half |
 | [L175.lean](../lean/HamiltonsCubic/Results/L175.lean) | **BROKEN** | `theta_free_bounds_nothing` and the two `_theta_free` theorems state nothing; `bound_must_come_from_C`'s hypothesis is unsatisfiable when `P` is inhabited |
 | conventions bullet, the edit | **GAP** | keep the edit; drop *"wrong as written"*, the original was scoped by its locator, and under-placed rather than false |
-| conventions bullet, the reason | **BROKEN** | replace *"where those determine $W$"* with *"where those exhaust $W$"*, or cite line 138's $t=2\lVert\operatorname{diag}W\rVert^2$ |
+| conventions bullet, the reason | **BROKEN** | replace *"where those determine $W$"* with *"where those exhaust $W$"*, or cite line 138's $t=2\lVert\mathop{\mathrm{diag}}W\rVert^2$ |
 | conventions bullet, conclusion and consequence | **PROVEN** | nothing |
 | [second-order.md](../findings/second-order.md) line 1060 | **defect, unrepaired** | $\lVert K\rVert_F^2=2\lVert W\rVert^2$ holds only on the diagonal locus; write $\le$ |
 

@@ -12,7 +12,7 @@
 | --- | --- | --- |
 | $(\lambda_1,\lambda_2)$ in the table | **$e$-coordinates**, $\lambda=\lambda_1e_1+\lambda_2e_2$ | Forced: $(2,2)$ must be $\mathcal W_5$ at dimension $35$, and $4\omega_2=2e_1+2e_2$. The fundamental-weight reading gives $4\omega_1+2\omega_2=(5,1)$ at dimension $260$, so it fails every row. **The block never states which**, and $c_2(\lambda)=\lambda_1(\lambda_1+3)+\lambda_2(\lambda_2+1)$ holds only in $e$-coordinates. |
 | $\rho$ | $B_2$'s, $(3/2,1/2)$ in $e$-coordinates | positive roots $e_1-e_2,\ e_2,\ e_1,\ e_1+e_2$; half-sum $=(3/2,1/2)$ |
-| $\langle\cdot,\cdot\rangle$ on weights | the standard Euclidean form on $e$-coordinates, dual to $B(X,Y)=-\tfrac12\operatorname{tr}(XY)$ | stated in the section above L83 and cross-listed at [conventions.md](../findings/conventions.md) under "THE LETTER $B$ MEANS TWO THINGS, live" |
+| $\langle\cdot,\cdot\rangle$ on weights | the standard Euclidean form on $e$-coordinates, dual to $B(X,Y)=-\tfrac12\mathop{\mathrm{tr}}(XY)$ | stated in the section above L83 and cross-listed at [conventions.md](../findings/conventions.md) under "THE LETTER $B$ MEANS TWO THINGS, live" |
 | block extent | **a `####` Lemma block runs from its heading to the next `####`, absorbing any `##` in between** | line 16 is blank and `## The 24 blocks` sits *below* the `####`, so this is the only reading under which L83 has content at all. Flagged because the brief says two audits have disagreed on it. |
 
 **The three conventions repaired in [conventions.md](../findings/conventions.md) today ($\theta_0(n)$, $\Theta_n$, $S_{XYZ}$), do not appear in L83 and do not bear on it.**

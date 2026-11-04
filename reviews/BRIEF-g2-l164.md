@@ -15,7 +15,7 @@
 ## Definitions, fixed before anything else
 
 - $\mathcal W_n=\mathrm{Weyl}_n$ is the space of algebraic Weyl tensors on $\mathbb R^n$: symmetric operators on $\Lambda^2\mathbb R^n$ satisfying the first Bianchi identity and Ricci-flat.
-- **Inner product.** The $\tfrac12$ goes at the $\Lambda^2$ level: $\langle X,Y\rangle=\tfrac12\operatorname{tr}(X^{\mathsf T}Y)$ for skew matrices, so the coordinate bivectors $\varphi_{ab}=E_{ab}-E_{ba}$ have $\lVert\varphi_{ab}\rVert^2=1$ and $\{\varphi_{ab}\}_{a<b}$ is orthonormal. (Under plain Frobenius the same bivector has squared norm $2$; the record runs on the half-trace pairing.) On operators the pairing is plain Frobenius.
+- **Inner product.** The $\tfrac12$ goes at the $\Lambda^2$ level: $\langle X,Y\rangle=\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$ for skew matrices, so the coordinate bivectors $\varphi_{ab}=E_{ab}-E_{ba}$ have $\lVert\varphi_{ab}\rVert^2=1$ and $\{\varphi_{ab}\}_{a<b}$ is orthonormal. (Under plain Frobenius the same bivector has squared norm $2$; the record runs on the half-trace pairing.) On operators the pairing is plain Frobenius.
 - **Structure constants** $c_{abc}=\langle[v_a,v_b],v_c\rangle$ in an orthonormal basis $\{v_a\}$ of $\Lambda^2\mathbb R^n\cong\mathfrak{so}(n)$, totally antisymmetric.
 - **The sharp product** is the halved Böhm–Wilking product, $vv^{\mathsf T}\#ww^{\mathsf T}=\tfrac12[v,w][v,w]^{\mathsf T}$; in the basis above, $(W^\#)_{ab}=\sum c_{acd}c_{bef}W_{ce}W_{df}$.
 - $Q(W)=W^2+W^\#$, $P(W)=\langle W,Q(W)\rangle$, $\theta(W)=P(W)/\lVert W\rVert^3$.

@@ -8,23 +8,23 @@ You are an adversarial reviewer. **TWO reviewers on identical briefs**, because 
 
 $\{\omega_\alpha\}_{\alpha=1}^{N}$, $N=\binom n2$, is an **orthonormal basis of $\Lambda^2\mathbb R^n$ by DECOMPOSABLE unit forms**, $\omega_\alpha=a_\alpha\wedge b_\alpha$ with $a_\alpha\perp b_\alpha$ unit. Write $P_\alpha=\mathrm{span}\{a_\alpha,b_\alpha\}$ for its plane and $\Pi_\alpha$ for the orthogonal projection of $\mathbb R^n$ onto $P_\alpha$. Set
 
-$$S_{\alpha\beta}:=\operatorname{tr}(\Pi_\alpha\Pi_\beta),\qquad W:=\sum_\alpha\lambda_\alpha\,\omega_\alpha\otimes\omega_\alpha,\qquad M:=\sum_\alpha\lambda_\alpha\Pi_\alpha .$$
+$$S_{\alpha\beta}:=\mathop{\mathrm{tr}}(\Pi_\alpha\Pi_\beta),\qquad W:=\sum_\alpha\lambda_\alpha\,\omega_\alpha\otimes\omega_\alpha,\qquad M:=\sum_\alpha\lambda_\alpha\Pi_\alpha .$$
 
-The inner product on $\Lambda^2$ is the one making $\{\varphi_{ab}=e_b\otimes e_a-e_a\otimes e_b\}_{a<b}$ orthonormal, and $\langle A,B\rangle=\operatorname{tr}(AB)$ on $\mathrm{Sym}^2\mathbb R^n$. Throughout $n\ge3$, and **the hypothesis is that the WHOLE basis is decomposable**.
+The inner product on $\Lambda^2$ is the one making $\{\varphi_{ab}=e_b\otimes e_a-e_a\otimes e_b\}_{a<b}$ orthonormal, and $\langle A,B\rangle=\mathop{\mathrm{tr}}(AB)$ on $\mathrm{Sym}^2\mathbb R^n$. Throughout $n\ge3$, and **the hypothesis is that the WHOLE basis is decomposable**.
 
-**GIVEN, Gate 2 passed, not audited here.** [Lemma L201](../lean/HamiltonsCubic/Results/L201Statement.lean): if $\operatorname{tr}(\Pi_\alpha\Pi_\beta)\in\{0,1\}$ at every pair, then some orthonormal frame of $\mathbb R^n$ has the $P_\alpha$ as exactly its coordinate planes. **Also given and OUT OF SCOPE**: that $\operatorname{rank}S\ge n$ at every configuration, with equality exactly at the coordinate ones. *Do not re-audit either.*
+**GIVEN, Gate 2 passed, not audited here.** [Lemma L201](../lean/HamiltonsCubic/Results/L201Statement.lean): if $\mathop{\mathrm{tr}}(\Pi_\alpha\Pi_\beta)\in\{0,1\}$ at every pair, then some orthonormal frame of $\mathbb R^n$ has the $P_\alpha$ as exactly its coordinate planes. **Also given and OUT OF SCOPE**: that $\mathop{\mathrm{rank}}S\ge n$ at every configuration, with equality exactly at the coordinate ones. *Do not re-audit either.*
 
 ## The claims to attack, one row per claim, with the Lean declaration
 
 | # | claim | Lean |
 |---|---|---|
-| 1 | **THE BRIDGE**: $\lVert[\omega_\alpha,\omega_\beta]\rVert^2=\operatorname{tr}(\Pi_\alpha\Pi_\beta)$ at every pair of $\Lambda^2$-orthogonal decomposable unit forms | [trace_instA_instB](../lean/HamiltonsCubic/Results/L201Statement.lean) and [frobSq_commutator_inst](../lean/HamiltonsCubic/Results/L201Statement.lean) type it **at one concrete instance only**, $9/25$; **no declaration states the general identity** |
+| 1 | **THE BRIDGE**: $\lVert[\omega_\alpha,\omega_\beta]\rVert^2=\mathop{\mathrm{tr}}(\Pi_\alpha\Pi_\beta)$ at every pair of $\Lambda^2$-orthogonal decomposable unit forms | [trace_instA_instB](../lean/HamiltonsCubic/Results/L201Statement.lean) and [frobSq_commutator_inst](../lean/HamiltonsCubic/Results/L201Statement.lean) type it **at one concrete instance only**, $9/25$; **no declaration states the general identity** |
 | 2 | the bracket $[\omega_\alpha,\omega_\beta]$ is itself DECOMPOSABLE, so integrality says every bracket is zero or a UNIT bivector | none: a claim about the rank of a bracket, which the layer does not express |
 | 3 | hence [Lemma L31](../findings/stratum-two-negative.md)'s pair cap SHARPENS from $2$ to $1$ on the decomposable locus, with equality exactly when the two planes share a line | none: the cap is recorded as a bound on $\lVert[v_\alpha,v_\beta]\rVert^2$, and its restriction is the claim |
-| 4 | $\sum_{\beta\ne\alpha}\operatorname{tr}(\Pi_\alpha\Pi_\beta)=2(n-2)$ at every $\alpha$ | [sum_trace_row](../lean/HamiltonsCubic/Results/L201Statement.lean) |
-| 5 | $\sum_{\alpha\ne\beta}\operatorname{tr}(\Pi_\alpha\Pi_\beta)=n(n-1)(n-2)$, fixed across every configuration | [sum_trace_off](../lean/HamiltonsCubic/Results/L201Statement.lean) |
+| 4 | $\sum_{\beta\ne\alpha}\mathop{\mathrm{tr}}(\Pi_\alpha\Pi_\beta)=2(n-2)$ at every $\alpha$ | [sum_trace_row](../lean/HamiltonsCubic/Results/L201Statement.lean) |
+| 5 | $\sum_{\alpha\ne\beta}\mathop{\mathrm{tr}}(\Pi_\alpha\Pi_\beta)=n(n-1)(n-2)$, fixed across every configuration | [sum_trace_off](../lean/HamiltonsCubic/Results/L201Statement.lean) |
 | 6 | **Ricci-flatness of $W$ is EXACTLY $S\lambda=0$** | none: no declaration relates Ricci-flatness to this Gram matrix |
-| 7 | $S$ is positive semidefinite, of trace $n(n-1)$, with $\operatorname{rank}S=\dim\mathrm{span}\{\Pi_\alpha\}$, and the all-ones vector is an eigenvector at $2(n-1)$ | none, same reason |
+| 7 | $S$ is positive semidefinite, of trace $n(n-1)$, with $\mathop{\mathrm{rank}}S=\dim\mathrm{span}\{\Pi_\alpha\}$, and the all-ones vector is an eigenvector at $2(n-1)$ | none, same reason |
 | 8 | at a coordinate configuration $S=A(J(n,2))+2\,\mathrm{Id}$, with spectrum $2n-2,\ n-2,\ 0$ at multiplicities $1,\ n-1,\ \binom n2-n$, so $\lVert S\rVert_F^2=n^2(n-1)$ | none, same reason |
 | 9 | relation (B) reads $(\hat S\lambda)_k=-2\lambda_k$ with $\hat S=S-2\,\mathrm{Id}$, which IS $(S\lambda)_k=0$ | none, same reason |
 | 10 | **relation (C) summed gives $\lambda^{\mathsf T}S\lambda=0$, and $S\succeq0$ then forces $S\lambda=0$, so on this locus Ricci-flatness is a CONSEQUENCE of criticality's diagonal rather than a hypothesis beside it** | none, and **this is the row with the most to lose** |
@@ -33,7 +33,7 @@ The inner product on $\Lambda^2$ is the one making $\{\varphi_{ab}=e_b\otimes e_
 ## What to do
 
 1. **Row 1 is the bridge everything else crosses, and it is typed only at a single instance.** Derive it in general. *The record's proof puts the two planes in principal position and claims three of the four terms of $[a\wedge b,c\wedge d]$ vanish.* **Check the principal-position normalisation is available at EVERY $\Lambda^2$-orthogonal pair**, including when the planes are equal, when they meet in a line, and when they are orthogonal, and say whether $\Lambda^2$-orthogonality really forces $\cos\vartheta_1\cos\vartheta_2=0$.
-2. **Row 10 is the one this brief most doubts.** It upgrades Ricci-flatness from hypothesis to consequence, which is a strong claim. **Check what "relation (C) summed" actually needs**, whether $\operatorname{tr}W=0$ is enough, and whether $S\succeq0$ plus $\lambda^{\mathsf T}S\lambda=0$ really gives $S\lambda=0$ *for a possibly singular $S$*. Say precisely which hypotheses the upgrade consumes.
+2. **Row 10 is the one this brief most doubts.** It upgrades Ricci-flatness from hypothesis to consequence, which is a strong claim. **Check what "relation (C) summed" actually needs**, whether $\mathop{\mathrm{tr}}W=0$ is enough, and whether $S\succeq0$ plus $\lambda^{\mathsf T}S\lambda=0$ really gives $S\lambda=0$ *for a possibly singular $S$*. Say precisely which hypotheses the upgrade consumes.
 3. **Rows 6 and 7 carry a positivity argument in one line**: $M$ lies in $\mathrm{span}\{\Pi_\beta\}$ and a vector of that span orthogonal to all of it is zero. **Check that $M$ really lies in the span** and that the pairing is positive definite there.
 4. **Row 8 is arithmetic and is checkable exactly.** Verify the Johnson-graph identification and recompute the three eigenvalues and the Frobenius norm. *A slip here would be invisible to every other row.*
 5. **Row 3 claims a sharpening of a recorded cap.** Confirm the equality case, and say whether it needs both arguments to have rank $4$, which a decomposable form does not.

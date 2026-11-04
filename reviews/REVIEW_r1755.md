@@ -17,17 +17,17 @@ One line: L273Op composes `L268_rep` with the two torus-family theorems correctl
 
 ## The record
 
-Lemma L273, Statement, verbatim: *"In L271's coordinates let $X=(A,P,Q)$ be torus-invariant with $b^2=\tfrac12(\lVert P\rVert^2+\lVert Q\rVert^2)=1$, $g=\lVert A_\mu\rVert$ and $T=\tfrac12(\operatorname{tr}P^3+\operatorname{tr}Q^3)$, and put $\kappa=c/\sqrt N=\tfrac{2(m-1)}{\sqrt{m(2m-1)}}$, $\lambda_m=\tfrac{\sqrt{2m}\,(m-2)}{(m-1)^{3/2}}$ and $\Psi_\kappa(g)=\min_{a\ge0}\big(\kappa(1+a^2)^{3/2}-3ag\big)$. (1) $F(X)\le3\lVert A\rVert g+T$, with equality when $A$ is a non-negative multiple of $A_\mu$, and $g\ge1/\sqrt m$. (2) For $m\ge5$, $\lambda_m(1-g^2)\le\Psi_\kappa(g)$ for every $g\ge1/\sqrt m$, with equality at $g=1/\sqrt m$; at $m=4$ it fails for $g$ just above $1/\sqrt m$. (3) Hence for $m\ge5$, $\textbf{(J1)}\ T+\lambda_m\,g^2\le\lambda_m$ whenever $b=1$ implies H on the torus slice: $F(X)\le\kappa\lVert X\rVert^3$ for every torus-invariant $X\in\operatorname{Sym}^2\mathfrak{so}(2m)$."*
+Lemma L273, Statement, verbatim: *"In L271's coordinates let $X=(A,P,Q)$ be torus-invariant with $b^2=\tfrac12(\lVert P\rVert^2+\lVert Q\rVert^2)=1$, $g=\lVert A_\mu\rVert$ and $T=\tfrac12(\mathop{\mathrm{tr}}P^3+\mathop{\mathrm{tr}}Q^3)$, and put $\kappa=c/\sqrt N=\tfrac{2(m-1)}{\sqrt{m(2m-1)}}$, $\lambda_m=\tfrac{\sqrt{2m}\,(m-2)}{(m-1)^{3/2}}$ and $\Psi_\kappa(g)=\min_{a\ge0}\big(\kappa(1+a^2)^{3/2}-3ag\big)$. (1) $F(X)\le3\lVert A\rVert g+T$, with equality when $A$ is a non-negative multiple of $A_\mu$, and $g\ge1/\sqrt m$. (2) For $m\ge5$, $\lambda_m(1-g^2)\le\Psi_\kappa(g)$ for every $g\ge1/\sqrt m$, with equality at $g=1/\sqrt m$; at $m=4$ it fails for $g$ just above $1/\sqrt m$. (3) Hence for $m\ge5$, $\textbf{(J1)}\ T+\lambda_m\,g^2\le\lambda_m$ whenever $b=1$ implies H on the torus slice: $F(X)\le\kappa\lVert X\rVert^3$ for every torus-invariant $X\in\mathop{\mathrm{Sym}}^2\mathfrak{so}(2m)$."*
 
 J1 is defined only there (line 556). L277's proof reuses the same quantities.
 
 ## Q1. The J1 hypothesis
 
 The elaborated signature (printed with coercions) is: for all `U V` with `IsPairWeights U`, `IsPairWeights V` (symmetric, zero diagonal, any sign) and $\tfrac12\big(\sum_{ij}(U+V)_{ij}^2+\sum_{ij}(U-V)_{ij}^2\big)=1$,
-$$\tfrac12\big(\operatorname{tr}(U+V)^3+\operatorname{tr}(U-V)^3\big)+\lambda_m\Big(\sum_id_i^2+\sum_{i\ne j}\big((U+V)_{ij}(U-V)_{ij}\big)^2\Big)\le\lambda_m,$$
+$$\tfrac12\big(\mathop{\mathrm{tr}}(U+V)^3+\mathop{\mathrm{tr}}(U-V)^3\big)+\lambda_m\Big(\sum_id_i^2+\sum_{i\ne j}\big((U+V)_{ij}(U-V)_{ij}\big)^2\Big)\le\lambda_m,$$
 with $\lambda_m$ written $\sqrt{2m}(m-2)/((m-1)\sqrt{m-1})$ over real casts of $m$.
 
-- **Term by term.** $P=U+V$ and $Q=U-V$ are L271's. The constraint is $b^2=1$ with Frobenius norms over ordered pairs, the normalisation of `L271_norm` ($\lVert C\rVert^2=\lVert A\rVert^2+\tfrac12\lVert P\rVert^2+\tfrac12\lVert Q\rVert^2$). The record's proof uses the same normalisation: $\operatorname{tr}A_\mu=\sum_id_i=b^2$, and `sum_dvec` gives the same identity. The bracket is $g^2=\lVert A_\mu\rVert^2$ by `Amu_sq`, since $(A_\mu)_{ii}=d_i$ and $(A_\mu)_{ij}=V_{ij}^2-U_{ij}^2=-P_{ij}Q_{ij}$. The first term is $T$.
+- **Term by term.** $P=U+V$ and $Q=U-V$ are L271's. The constraint is $b^2=1$ with Frobenius norms over ordered pairs, the normalisation of `L271_norm` ($\lVert C\rVert^2=\lVert A\rVert^2+\tfrac12\lVert P\rVert^2+\tfrac12\lVert Q\rVert^2$). The record's proof uses the same normalisation: $\mathop{\mathrm{tr}}A_\mu=\sum_id_i=b^2$, and `sum_dvec` gives the same identity. The bracket is $g^2=\lVert A_\mu\rVert^2$ by `Amu_sq`, since $(A_\mu)_{ii}=d_i$ and $(A_\mu)_{ij}=V_{ij}^2-U_{ij}^2=-P_{ij}Q_{ij}$. The first term is $T$.
 - **Quantifier.** The record's (3) concludes for every torus-invariant $X$, whose root weights $\mu_\alpha$ are arbitrary reals. So J1 "whenever $b=1$" ranges over all real pair weights. $(U,V)\mapsto(P,Q)$ is a bijection of symmetric zero-diagonal pairs. The hypothesis is therefore the record's J1 exactly, neither stronger nor weaker. It is also the form `J1_holds` proves for $m\ge7$ (L277).
 
 ## Q2. The conclusion of L273_J1_op
@@ -36,7 +36,7 @@ with $\lambda_m$ written $\sqrt{2m}(m-2)/((m-1)\sqrt{m-1})$ over real casts of $
 
 - $\kappa$ is the record's constant. `normSq2 C` is $\lVert C\rVert^2$ in L271's normalisation (`L271_norm`, through `L268_rep`), and `normSq2 C ≥ 0`, so the real power is $\lVert C\rVert^3$.
 - `Ftri` is the record's $F(X)=\langle X\#X,X\rangle$. The check file proves `Ftri idOp idOp idOp = (2m - 2) · normSq2 idOp` from `Ftri_sharp` and `sharpMapCL_id`, and `normSq2_idOp_torus` gives $N=m(2m-1)$. So $F(I)/\lVert I\rVert^3=c/\sqrt N=\kappa$, and the conclusion is tight at $I$, as H is.
-- Torus invariance is `derOp (cartS x) C = 0` for every Cartan generator $J_x=e_{2x-1}\wedge e_{2x}$, the infinitesimal form of commuting with the torus. Self-adjointness for `inner2` is membership in $\operatorname{Sym}^2$.
+- Torus invariance is `derOp (cartS x) C = 0` for every Cartan generator $J_x=e_{2x-1}\wedge e_{2x}$, the infinitesimal form of commuting with the torus. Self-adjointness for `inner2` is membership in $\mathop{\mathrm{Sym}}^2$.
 
 ## Q3. L273_F_bound_op
 
@@ -69,7 +69,7 @@ Every clause has a theorem, so "proved" is justified. The observations are packa
 
 $C=\mathrm{idOp}$ satisfies both hypotheses: `derOp (cartS x) idOp = 0` by `simp [derOp_apply]`, and self-adjointness by `rfl`. Both applications typecheck in the check file. By `idOp_eq_torusOp`, $\mathrm{idOp}$ is `torusOp 1 onesOff onesOff`, so $A=I_m$, $U=V=J-I$, $P=2(J-I)$, $Q=0$.
 
-- **`L273_F_bound_op` returns** $F(I)\le3\cdot\sqrt m\cdot2(m-1)\sqrt m+4m(m-1)(m-2)=2m(m-1)(2m-1)$ by hand. Here $A_\mu=2(m-1)I_m$ and $\operatorname{tr}(J-I)^3=(m-1)^3-(m-1)$. The left side is $cN=2(m-1)\,m(2m-1)$, so equality holds, as (1)'s equality case predicts ($A=I_m$ is $A_\mu/(2(m-1))$).
+- **`L273_F_bound_op` returns** $F(I)\le3\cdot\sqrt m\cdot2(m-1)\sqrt m+4m(m-1)(m-2)=2m(m-1)(2m-1)$ by hand. Here $A_\mu=2(m-1)I_m$ and $\mathop{\mathrm{tr}}(J-I)^3=(m-1)^3-(m-1)$. The left side is $cN=2(m-1)\,m(2m-1)$, so equality holds, as (1)'s equality case predicts ($A=I_m$ is $A_\mu/(2(m-1))$).
 - **`L273_J1_op` returns**, given J1 at $m\ge5$, $F(I)\le\kappa(m(2m-1))^{3/2}$, which holds with equality.
 
 ## Overall verdict: CONFIRMED WITH OBSERVATIONS
@@ -80,5 +80,5 @@ $C=\mathrm{idOp}$ satisfies both hypotheses: `derOp (cartS x) idOp = 0` by `simp
 
 **Falsifiers.**
 
-- `L273_J1_op`: at some $m\ge5$ where J1 holds, a self-adjoint $C$ commuting with every $\operatorname{ad}_{J_x}$ with $F(C)>\kappa\lVert C\rVert^3$. The record's $m=4$ $\Lambda^2_+$ point ($F/\lVert X\rVert^3=2/\sqrt3>\kappa_4$) shows why the hypothesis $m\ge5$ is needed.
+- `L273_J1_op`: at some $m\ge5$ where J1 holds, a self-adjoint $C$ commuting with every $\mathop{\mathrm{ad}}_{J_x}$ with $F(C)>\kappa\lVert C\rVert^3$. The record's $m=4$ $\Lambda^2_+$ point ($F/\lVert X\rVert^3=2/\sqrt3>\kappa_4$) shows why the hypothesis $m\ge5$ is needed.
 - `L273_F_bound_op`: such a $C$ with $F(C)>3\lVert A\rVert g+T$. That would contradict Cauchy–Schwarz on $3\langle A,A_\mu\rangle$ in L271 (1).

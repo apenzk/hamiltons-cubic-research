@@ -4,7 +4,7 @@
 
 ## 0. Verdict
 
-**The off-diagonal block adds nothing on $T$, and this is a theorem, not an averaging argument.** Decomposed by eigenvalue pairs, the block condition is a statement about a family of Gram matrices $G^{\mu\nu}$ (positive semidefinite, summing to the Killing form), whose diagonals are exactly the type-aggregated masses of $T$. Given *any* nonnegative $T$ satisfying (A), (B), (C), the diagonal matrices $\operatorname{diag}(\text{type masses})$ satisfy all three block conditions, so positivity plus the three polarised identities can never produce an inequality on $T$ beyond the LP class (§4, Theorem 1). Its content is entirely on the *signed* structure constants: sign-realizability of a given $T$.
+**The off-diagonal block adds nothing on $T$, and this is a theorem, not an averaging argument.** Decomposed by eigenvalue pairs, the block condition is a statement about a family of Gram matrices $G^{\mu\nu}$ (positive semidefinite, summing to the Killing form), whose diagonals are exactly the type-aggregated masses of $T$. Given *any* nonnegative $T$ satisfying (A), (B), (C), the diagonal matrices $\mathop{\mathrm{diag}}(\text{type masses})$ satisfy all three block conditions, so positivity plus the three polarised identities can never produce an inequality on $T$ beyond the LP class (§4, Theorem 1). Its content is entirely on the *signed* structure constants: sign-realizability of a given $T$.
 
 What the Gram reading does give, beyond a proved "nothing":
 
@@ -14,7 +14,7 @@ What the Gram reading does give, beyond a proved "nothing":
 
 ## 1. Normalisation, verified against the record
 
-Orthonormal eigenbasis $\{e_a\}$ of $W$ on $\mathfrak{so}(n)$ for $\langle X,Y\rangle=\tfrac12\operatorname{tr}(X^{\mathsf T}Y)$, eigenvalues $\lambda_a$, $c_{abc}=\langle[e_a,e_b],e_c\rangle$ totally antisymmetric, $T_{abc}=c_{abc}^2$. Sums over $(c,d)$ are over **ordered** pairs. In this basis $(\mathrm{ad}\,u)_{dc}=\langle e_d,[u,e_c]\rangle=c_{ucd}$.
+Orthonormal eigenbasis $\{e_a\}$ of $W$ on $\mathfrak{so}(n)$ for $\langle X,Y\rangle=\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$, eigenvalues $\lambda_a$, $c_{abc}=\langle[e_a,e_b],e_c\rangle$ totally antisymmetric, $T_{abc}=c_{abc}^2$. Sums over $(c,d)$ are over **ordered** pairs. In this basis $(\mathrm{ad}\,u)_{dc}=\langle e_d,[u,e_c]\rangle=c_{ucd}$.
 
 $$(W^\#)_{ab}=\tfrac12\sum_{c,d}\lambda_c\lambda_d\,c_{acd}\,c_{bcd}.$$
 
@@ -40,16 +40,16 @@ with $P_\mu$ the orthogonal projector onto $E_\mu$; $G^{\mu\nu}=G^{\nu\mu}$ as m
 
 $$\text{(A}^\ast)\ \sum_{\mu\nu}G^{\mu\nu}=2(n-2)\,I,\qquad\text{(B}^\ast)\ \sum_{\mu\nu}\mu\,G^{\mu\nu}=-2W,\qquad\text{(C}^\ast)\ \sum_{\mu\nu}\mu\nu\,G^{\mu\nu}=2(\theta W-W^2).$$
 
-**(A\*) and (B\*) hold as full matrices on all of $\mathcal W_n$; only (C\*) is criticality.** (A\*) is the Killing form, $-\operatorname{tr}(\mathrm{ad}\,u\,\mathrm{ad}\,v)=2(n-2)\langle u,v\rangle$. (B\*) is $\sum_{cd}\lambda_cc_{ucd}c_{vcd}=-\operatorname{tr}(W\,\mathrm{ad}(v)\,\mathrm{ad}(u))$; polarising r331's master identity $(\star)$ at $S=W$ gives the symmetric part $\tfrac12\operatorname{tr}(W\{\mathrm{ad}\,u,\mathrm{ad}\,v\})=2\langle u,Wv\rangle$, and the antisymmetric part $\tfrac12\operatorname{tr}(W\,\mathrm{ad}[u,v])$ vanishes because $W$ is symmetric and $\mathrm{ad}[u,v]$ is skew. So $\sum_{cd}\lambda_cc_{ucd}c_{vcd}=-2\langle u,Wv\rangle$, which is [Böhm–Wilking](../references/boehm-wilking-2008-space-forms/notes.md) Lemma 2.1's $W\#I=-W$ read as a matrix. (C\*) is (OD) together with the diagonal blocks. **Hence the off-diagonal blocks of all three weighted sums of the $G$'s vanish; criticality contributes the third weight $\mu\nu$ and nothing else.**
+**(A\*) and (B\*) hold as full matrices on all of $\mathcal W_n$; only (C\*) is criticality.** (A\*) is the Killing form, $-\mathop{\mathrm{tr}}(\mathrm{ad}\,u\,\mathrm{ad}\,v)=2(n-2)\langle u,v\rangle$. (B\*) is $\sum_{cd}\lambda_cc_{ucd}c_{vcd}=-\mathop{\mathrm{tr}}(W\,\mathrm{ad}(v)\,\mathrm{ad}(u))$; polarising r331's master identity $(\star)$ at $S=W$ gives the symmetric part $\tfrac12\mathop{\mathrm{tr}}(W\{\mathrm{ad}\,u,\mathrm{ad}\,v\})=2\langle u,Wv\rangle$, and the antisymmetric part $\tfrac12\mathop{\mathrm{tr}}(W\,\mathrm{ad}[u,v])$ vanishes because $W$ is symmetric and $\mathrm{ad}[u,v]$ is skew. So $\sum_{cd}\lambda_cc_{ucd}c_{vcd}=-2\langle u,Wv\rangle$, which is [Böhm–Wilking](../references/boehm-wilking-2008-space-forms/notes.md) Lemma 2.1's $W\#I=-W$ read as a matrix. (C\*) is (OD) together with the diagonal blocks. **Hence the off-diagonal blocks of all three weighted sums of the $G$'s vanish; criticality contributes the third weight $\mu\nu$ and nothing else.**
 
-**What the $G$'s are.** Let $\iota=\mathrm{ad}:\mathfrak{so}(n)\to\operatorname{End}(\mathfrak{so}(n))$, and let $\Pi_{\mu\nu}$ be the orthogonal projector onto $\operatorname{Hom}(E_\mu,E_\nu)\subset\operatorname{End}(\mathfrak{so}(n))$. Then $G^{\mu\nu}=\iota^\ast\Pi_{\mu\nu}\iota$ and $\iota^\ast\iota=2(n-2)I$. Consequently:
+**What the $G$'s are.** Let $\iota=\mathrm{ad}:\mathfrak{so}(n)\to\mathop{\mathrm{End}}(\mathfrak{so}(n))$, and let $\Pi_{\mu\nu}$ be the orthogonal projector onto $\mathop{\mathrm{Hom}}(E_\mu,E_\nu)\subset\mathop{\mathrm{End}}(\mathfrak{so}(n))$. Then $G^{\mu\nu}=\iota^\ast\Pi_{\mu\nu}\iota$ and $\iota^\ast\iota=2(n-2)I$. Consequently:
 
 | property | statement | source |
 | --- | --- | --- |
 | positivity | $G^{\mu\nu}\succeq0$, since $G^{\mu\nu}(u,u)=\lVert P_\nu\,\mathrm{ad}(u)P_\mu\rVert^2$ | definition |
 | POVM | $\sum_{\mu\nu}G^{\mu\nu}/2(n-2)=I$ | (A\*) |
-| rank | $\operatorname{rank}G^{\mu\nu}\le d_\mu d_\nu$ for $\mu\ne\nu$; $\le\binom{d_\mu}2$ for $\mu=\nu$, because $P_\mu\mathrm{ad}(u)P_\mu$ is skew on $E_\mu$ | dimension of the target |
-| trace | $\operatorname{tr}G^{\mu\nu}=\sum_{c\in E_\mu,d\in E_\nu}\lVert[e_c,e_d]\rVert^2\le2d_\mu d_\nu$ | the pair cap, already on record |
+| rank | $\mathop{\mathrm{rank}}G^{\mu\nu}\le d_\mu d_\nu$ for $\mu\ne\nu$; $\le\binom{d_\mu}2$ for $\mu=\nu$, because $P_\mu\mathrm{ad}(u)P_\mu$ is skew on $E_\mu$ | dimension of the target |
+| trace | $\mathop{\mathrm{tr}}G^{\mu\nu}=\sum_{c\in E_\mu,d\in E_\nu}\lVert[e_c,e_d]\rVert^2\le2d_\mu d_\nu$ | the pair cap, already on record |
 | diagonal | $G^{\mu\nu}(e_k,e_k)=\sum_{c\in E_\mu,d\in E_\nu}T_{kcd}=:m_k^{\mu\nu}$, the **type mass** of row $k$ | definition |
 | off-diagonal entries | $\lvert G^{\mu\nu}(u,v)\rvert^2\le G^{\mu\nu}(u,u)\,G^{\mu\nu}(v,v)$ | Cauchy–Schwarz |
 | operator Jensen | for any scalars $x_{\mu\nu}$, $\sum x_{\mu\nu}^2G^{\mu\nu}\succeq\big(\sum x_{\mu\nu}G^{\mu\nu}\big)^2/2(n-2)$ | §6 |
@@ -60,7 +60,7 @@ The last line is the general fact $\sum_ix_i^2F_i-X^2=\sum_i(x_i-X)F_i(x_i-X)\su
 
 ## 4. Theorem 1, at the Gram level, the block condition adds nothing on $T$
 
-**Theorem 1.** *Let $(\lambda,\theta)$ be given, $W=\operatorname{diag}(\lambda)$, and let $T\ge0$ be totally symmetric, vanishing on repeated indices, and satisfy (A), (B), (C) in every row. Define $\widehat G^{\mu\nu}:=\operatorname{diag}_k\big(m_k^{\mu\nu}\big)$ with $m_k^{\mu\nu}=\sum_{c\in E_\mu,d\in E_\nu}T_{kcd}$. Then every $\widehat G^{\mu\nu}$ is positive semidefinite and the family satisfies (A\*), (B\*), (C\*) as full matrices.*
+**Theorem 1.** *Let $(\lambda,\theta)$ be given, $W=\mathop{\mathrm{diag}}(\lambda)$, and let $T\ge0$ be totally symmetric, vanishing on repeated indices, and satisfy (A), (B), (C) in every row. Define $\widehat G^{\mu\nu}:=\mathop{\mathrm{diag}}_k\big(m_k^{\mu\nu}\big)$ with $m_k^{\mu\nu}=\sum_{c\in E_\mu,d\in E_\nu}T_{kcd}$. Then every $\widehat G^{\mu\nu}$ is positive semidefinite and the family satisfies (A\*), (B\*), (C\*) as full matrices.*
 
 *Proof.* Diagonal matrices with nonnegative entries are PSD. The three sums are diagonal, and their $k$-th entries are $\sum_{\mu\nu}m_k^{\mu\nu}=\sum_{cd}T_{kcd}=2(n-2)$, $\sum_{\mu\nu}\mu\,m_k^{\mu\nu}=\sum_{cd}\lambda_cT_{kcd}=-2\lambda_k$ and $\sum_{\mu\nu}\mu\nu\,m_k^{\mu\nu}=\sum_{cd}\lambda_c\lambda_dT_{kcd}=2\lambda_k(\theta-\lambda_k)$, relations (A), (B), (C) of row $k$. $\square$
 
@@ -68,7 +68,7 @@ The last line is the general fact $\sum_ix_i^2F_i-X^2=\sum_i(x_i-X)F_i(x_i-X)\su
 
 This is the answer to question 3, and it is stronger than r331's "averaged, empty": r331 showed the block condition has no *invariant linear* shadow in $T$; Theorem 1 shows it has no shadow in $T$ at all, linear or not, at the level of positive-semidefinite Gram families. **Cauchy–Schwarz and operator Jensen bound the off-diagonal blocks by the diagonals, never the reverse**, which is why they cannot feed back. The diagonal realisation is also what the two-eigenvalue rigidity of §5 forces at the balanced product, so the theorem's witness is the extremal point itself, in a suitable basis.
 
-**What the theorem does not cover, stated exactly.** Three pieces of Gram-level structure lie outside "PSD + three identities": the rank caps of §3 (the diagonal realisation has $\operatorname{rank}\widehat G^{\mu\nu}=\#\{k:m_k^{\mu\nu}>0\}$, which can exceed $d_\mu d_\nu$); the fact that $\iota(\mathfrak{so}(n))$ is a Lie subalgebra of $\mathfrak{so}(\mathfrak{so}(n))$ (Jacobi, cubic in $c$, r331 shows it is empty at linear order in $T$); and the specific compression structure $G^{\mu\nu}=\iota^\ast\Pi_{\mu\nu}\iota$ with $\Pi_{\mu\nu}$ a fixed orthogonal resolution of the identity of prescribed dimensions. Any constraint on $T$ from the off-diagonal block must come through one of these. Whether the rank caps ever bind on the type masses is **open**; the only trace-level shadow of a rank cap is the pair cap, already on record.
+**What the theorem does not cover, stated exactly.** Three pieces of Gram-level structure lie outside "PSD + three identities": the rank caps of §3 (the diagonal realisation has $\mathop{\mathrm{rank}}\widehat G^{\mu\nu}=\#\{k:m_k^{\mu\nu}>0\}$, which can exceed $d_\mu d_\nu$); the fact that $\iota(\mathfrak{so}(n))$ is a Lie subalgebra of $\mathfrak{so}(\mathfrak{so}(n))$ (Jacobi, cubic in $c$, r331 shows it is empty at linear order in $T$); and the specific compression structure $G^{\mu\nu}=\iota^\ast\Pi_{\mu\nu}\iota$ with $\Pi_{\mu\nu}$ a fixed orthogonal resolution of the identity of prescribed dimensions. Any constraint on $T$ from the off-diagonal block must come through one of these. Whether the rank caps ever bind on the type masses is **open**; the only trace-level shadow of a rank cap is the pair cap, already on record.
 
 ## 5. Theorem 2, two-eigenvalue rigidity
 
@@ -98,7 +98,7 @@ Three consequences, each one line:
 
 ## 6. By-product, a per-row lower bound on $g_k$, and its status
 
-Take the POVM inequality of §3 with $x_{\mu\nu}=\mu+\nu$, i.e. operator Jensen for $S=W\otimes1+1\otimes W$ acting on $\operatorname{End}(\mathfrak{so}(n))$ by $X\mapsto WX+XW$:
+Take the POVM inequality of §3 with $x_{\mu\nu}=\mu+\nu$, i.e. operator Jensen for $S=W\otimes1+1\otimes W$ acting on $\mathop{\mathrm{End}}(\mathfrak{so}(n))$ by $X\mapsto WX+XW$:
 
 $$\iota^\ast S^2\iota\ \succeq\ (\iota^\ast S\iota)(\iota^\ast\iota)^{-1}(\iota^\ast S\iota).$$
 
@@ -120,7 +120,7 @@ which returns exactly $(n-1)\lvert\lambda_{\min}\rvert$ at both test points (at 
 
 ## 7. Tests at the two named points
 
-**Balanced product $S^{n/2}\times S^{n/2}$, by hand.** $E_h=\mathfrak h=\mathfrak{so}(p)\oplus\mathfrak{so}(p)$, $E_m=\mathfrak m=\mathbb R^p\otimes\mathbb R^p$, $p=n/2$. Since $[\mathfrak m,\mathfrak m]\subseteq\mathfrak h$ and $[\mathfrak h,\mathfrak m]\subseteq\mathfrak m$: $G^{mm}$ vanishes on $\mathfrak m$ and on $\mathfrak h$ equals $\langle\mathrm{ad}(u)\vert_{\mathfrak m},\mathrm{ad}(v)\vert_{\mathfrak m}\rangle=p\operatorname{tr}(u_1v_1)+p\operatorname{tr}(u_2v_2)$, scalar; $G^{hm}$ vanishes on $\mathfrak h$ and on $\mathfrak m$ is the Casimir of $\mathfrak h$ on the irreducible $\mathbb R^p\otimes\mathbb R^p$, scalar by Schur; $G^{hh}$ vanishes on $\mathfrak m$ and on $\mathfrak h$ is the Killing form of $\mathfrak h$, the same constant on both factors. All six blocks scalar, all off-blocks zero, Theorem 2 as it must be. The closed forms give $A_{hh}(m)=0$ (saturation) and $A_{mm}(h)=2h[\theta_0+(n-1)h]/(h-m)^2$.
+**Balanced product $S^{n/2}\times S^{n/2}$, by hand.** $E_h=\mathfrak h=\mathfrak{so}(p)\oplus\mathfrak{so}(p)$, $E_m=\mathfrak m=\mathbb R^p\otimes\mathbb R^p$, $p=n/2$. Since $[\mathfrak m,\mathfrak m]\subseteq\mathfrak h$ and $[\mathfrak h,\mathfrak m]\subseteq\mathfrak m$: $G^{mm}$ vanishes on $\mathfrak m$ and on $\mathfrak h$ equals $\langle\mathrm{ad}(u)\vert_{\mathfrak m},\mathrm{ad}(v)\vert_{\mathfrak m}\rangle=p\mathop{\mathrm{tr}}(u_1v_1)+p\mathop{\mathrm{tr}}(u_2v_2)$, scalar; $G^{hm}$ vanishes on $\mathfrak h$ and on $\mathfrak m$ is the Casimir of $\mathfrak h$ on the irreducible $\mathbb R^p\otimes\mathbb R^p$, scalar by Schur; $G^{hh}$ vanishes on $\mathfrak m$ and on $\mathfrak h$ is the Killing form of $\mathfrak h$, the same constant on both factors. All six blocks scalar, all off-blocks zero, Theorem 2 as it must be. The closed forms give $A_{hh}(m)=0$ (saturation) and $A_{mm}(h)=2h[\theta_0+(n-1)h]/(h-m)^2$.
 
 **Padded $W_{\mathbb{CP}^2}$, by hand.** Spectrum $(2\varepsilon,-\varepsilon,-\varepsilon,0,\dots)$, $\varepsilon^2=\tfrac16$, $\theta=3\varepsilon$, with $E_{2\varepsilon}=\mathbb R\omega$ and $E_{-\varepsilon}$ spanning the rest of $\mathfrak{su}(2)_+\subset\mathfrak{so}(4)$, kernel $\mathfrak{su}(2)_-\oplus(\mathbb R^4\otimes\mathbb R^{n-4})\oplus\mathfrak{so}(n-4)$. Within $\mathfrak{su}(2)_+$ the pair cap is saturated, $c_{\omega23}^2=2$. Row $\omega$: types $\{-\varepsilon,-\varepsilon\}$ mass $4$ and $\{0,0\}$ mass $2(n-4)$; (B): $-4\varepsilon=-2\cdot2\varepsilon$; (C): $4\varepsilon^2=2\cdot2\varepsilon(3\varepsilon-2\varepsilon)$. Row $\omega_2$: type $\{2\varepsilon,-\varepsilon\}$ mass $4$, $\{0,0\}$ mass $2(n-4)$; (B): $4\varepsilon-2\varepsilon=2\varepsilon$; (C): $-8\varepsilon^2=2(-\varepsilon)(4\varepsilon)$. The $G$'s: $G^{(-\varepsilon,-\varepsilon)}=4$ on $E_{2\varepsilon}$, zero elsewhere; $G^{(2\varepsilon,-\varepsilon)}=2I$ on $E_{-\varepsilon}$; $G^{(\mu,0)}$ for $\mu\ne0$ is supported on the mixed block, where it is $-\mathrm{ad}(e_\mu)^2$ restricted, and $G^{(0,0)}$ is scalar on $\mathfrak{so}(4)$ and zero between $\mathfrak{so}(4)$ and its complement. Every $G^{\mu\nu}$ is block-diagonal for $W$'s eigenspaces; the kernel blocks are not scalar, and need not be. The by-product bound is valid and slack: $15.4\varepsilon$ at $n=12$ against $\theta=3\varepsilon$.
 

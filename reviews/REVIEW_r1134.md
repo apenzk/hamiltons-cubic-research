@@ -19,8 +19,8 @@ Brief: [2026-09-25-L246-gate2-brief.md](2026-09-25-L246-gate2-brief.md). Analysi
 - $\sum_cM_c(e)=I-ee^{\mathsf T}$. $M(e)=\sum_\psi(\psi e)(\psi e)^{\mathsf T}$ is basis independent (the form $z\mapsto\sum_\psi\langle\psi e,z\rangle^2$ is the squared norm of the representer of a linear functional). In the basis $e_i\wedge e_j$ with $e_1=e$, only $e_1\wedge e_j$ contributes, with $\psi e=-e_j$. The sum is $\sum_{j\ge2}e_je_j^{\mathsf T}$.
 - $M_c(e)\preceq\hat A_c$. $\langle\psi e,z\rangle=-\langle e,\psi z\rangle$ by skew symmetry, then Cauchy–Schwarz with $\lvert e\rvert=1$, then sum over $E_c$. Correct.
 - Compression eigenvalues. $e$ is an eigenvector of $A_a+A_b$, so $e^\perp$ is invariant and the compression carries the multiset $\{\beta_i\}_{i\ne j}$ (one copy of $\beta_j$ removed when it is repeated). Correct.
-- Capped trace. $\operatorname{tr}X=\operatorname{tr}QXQ+\operatorname{tr}(I-Q)X(I-Q)$ holds for any projector. The first part is at most $\operatorname{rank}Q$ by $X\preceq I-ee^{\mathsf T}$, the second at most $\sum_{\beta_i<1}\beta_i$ by $X\preceq\hat A_a+\hat A_b$ and $[Q,\hat A_a+\hat A_b]=0$. Correct.
-- $\operatorname{tr}X=\beta_j$. $\operatorname{tr}M_c(e)=\sum\lvert\psi e\rvert^2=\langle A_ce,e\rangle$. Correct.
+- Capped trace. $\mathop{\mathrm{tr}}X=\mathop{\mathrm{tr}}QXQ+\mathop{\mathrm{tr}}(I-Q)X(I-Q)$ holds for any projector. The first part is at most $\mathop{\mathrm{rank}}Q$ by $X\preceq I-ee^{\mathsf T}$, the second at most $\sum_{\beta_i<1}\beta_i$ by $X\preceq\hat A_a+\hat A_b$ and $[Q,\hat A_a+\hat A_b]=0$. Correct.
+- $\mathop{\mathrm{tr}}X=\beta_j$. $\mathop{\mathrm{tr}}M_c(e)=\sum\lvert\psi e\rvert^2=\langle A_ce,e\rangle$. Correct.
 - Remark. The argument never uses that $E_a,E_b$ are eigenspaces or that the $A_c$ commute: for ANY subspace $V\subseteq\Lambda^2$ and any eigenvector $e$ of $A_V$, $\alpha_j\le\sum_{i\ne j}\min(1,\alpha_i)$. L246 is this subspace inequality applied to $V=E_a\oplus E_b$. Screen: 1200 random subspaces at $n=4..7$, largest excess $9\cdot10^{-15}$ (a screen only).
 
 ## Item 2: CONFIRMED, one wording fix
@@ -41,7 +41,7 @@ Brief: [2026-09-25-L246-gate2-brief.md](2026-09-25-L246-gate2-brief.md). Analysi
 
 - The inequality uses no property of $W$ (item 1 remark). Ric$(W)=0$ and three eigenvalues enter the commuting statement and the corollary. Bianchi is never used, so everything holds for Ric-free self-adjoint operators with three eigenvalues.
 - The symmetric family has $\lambda_1=0$ and is covered.
-- Suggested clarification: "it holds at every $n$ with only $\operatorname{Ric}(W)=0$" is accurate for the corollary. The inequality itself holds for any subspace of $\Lambda^2$, so the coupling of two eigenspaces comes from $\operatorname{Ric}(W)=0$ through the corollary.
+- Suggested clarification: "it holds at every $n$ with only $\mathop{\mathrm{Ric}}(W)=0$" is accurate for the corollary. The inequality itself holds for any subspace of $\Lambda^2$, so the coupling of two eigenspaces comes from $\mathop{\mathrm{Ric}}(W)=0$ through the corollary.
 
 ## Item 5: CONFIRMED against the givens, PLAUSIBLE against L245
 

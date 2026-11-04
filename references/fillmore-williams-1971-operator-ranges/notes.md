@@ -20,7 +20,7 @@ $$\mathcal R(A^{1/2})+\mathcal R(B^{1/2})=\mathcal R\big((A+B)^{1/2}\big).$$
 
 In finite dimensions $\mathcal R(M^{1/2})=\mathcal R(M)$ for positive semidefinite $M$, the two have the same kernel, and both are self-adjoint, so the ranges are the same orthogonal complement. Hence
 
-$$\operatorname{range}(A+B)=\operatorname{range}(A)+\operatorname{range}(B),$$
+$$\mathop{\mathrm{range}}(A+B)=\mathop{\mathrm{range}}(A)+\mathop{\mathrm{range}}(B),$$
 
 and by induction the same holds for any finite sum of positive semidefinite matrices. This is the statement L180(3) uses.
 
@@ -28,12 +28,12 @@ and by induction the same holds for any finite sum of positive semidefinite matr
 
 Hu, Im, Lin, Lütkenhaus, Wolkowicz, *Robust Interior Point Method for Quantum Key Distribution Rate Computation*, Quantum **6** (2022), [arXiv:2104.03847](https://arxiv.org/abs/2104.03847), equation (A.7) in Appendix A.2:
 
-> $A,B\succeq 0 \implies \operatorname{range}(A+B)=\operatorname{range}(A)+\operatorname{range}(B).$
+> $A,B\succeq 0 \implies \mathop{\mathrm{range}}(A+B)=\mathop{\mathrm{range}}(A)+\mathop{\mathrm{range}}(B).$
 
 They state it as a recalled fact and use it without proof; it is the exact matrix form, so it is worth citing alongside the Fillmore–Williams proof rather than instead of it.
 
 ## Elementary proof, for the record's own use
 
-For positive semidefinite $A$, $x^{\mathsf T}Ax=0\iff Ax=0$ (write $x^{\mathsf T}Ax=\lVert A^{1/2}x\rVert^2$). So for positive semidefinite $A_1,\dots,A_k$ and $x$ with $\sum_iA_ix=0$: $0=x^{\mathsf T}\big(\sum_iA_i\big)x=\sum_ix^{\mathsf T}A_ix$ is a sum of non-negative terms, hence each vanishes, hence each $A_ix=0$. Therefore $\ker\big(\sum_iA_i\big)=\bigcap_i\ker A_i$. Taking orthogonal complements of symmetric matrices, $\operatorname{range}\big(\sum_iA_i\big)=\big(\bigcap_i\ker A_i\big)^\perp=\sum_i(\ker A_i)^\perp=\sum_i\operatorname{range}A_i$.
+For positive semidefinite $A$, $x^{\mathsf T}Ax=0\iff Ax=0$ (write $x^{\mathsf T}Ax=\lVert A^{1/2}x\rVert^2$). So for positive semidefinite $A_1,\dots,A_k$ and $x$ with $\sum_iA_ix=0$: $0=x^{\mathsf T}\big(\sum_iA_i\big)x=\sum_ix^{\mathsf T}A_ix$ is a sum of non-negative terms, hence each vanishes, hence each $A_ix=0$. Therefore $\ker\big(\sum_iA_i\big)=\bigcap_i\ker A_i$. Taking orthogonal complements of symmetric matrices, $\mathop{\mathrm{range}}\big(\sum_iA_i\big)=\big(\bigcap_i\ker A_i\big)^\perp=\sum_i(\ker A_i)^\perp=\sum_i\mathop{\mathrm{range}}A_i$.
 
-The positivity is essential and not decoration: $A=\begin{pmatrix}1&0\\0&0\end{pmatrix}$, $B=-A$ gives $\operatorname{range}(A+B)=0$ while $\operatorname{range}A+\operatorname{range}B$ is a line.
+The positivity is essential and not decoration: $A=\begin{pmatrix}1&0\\0&0\end{pmatrix}$, $B=-A$ gives $\mathop{\mathrm{range}}(A+B)=0$ while $\mathop{\mathrm{range}}A+\mathop{\mathrm{range}}B$ is a line.

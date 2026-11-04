@@ -15,7 +15,7 @@ where $S_g$ is the Schouten tensor and $W_g$ the Weyl tensor.
 > **Theorem 1.1.** *Let $(M,g)$ be a compact manifold of dimension $n\ge4$, and let $\{e_i\}_{1,\dots,n}$ be an orthonormal eigenbasis for the Ricci curvature tensor. Then the curvature operator $\mathcal R$ satisfies*
 $$\langle \mathcal R(e_i\wedge e_j), e_i\wedge e_j\rangle = \lambda_{ij} + W_{ijij} = \mathrm{Rm}(e_i,e_j,e_i,e_j),$$
 $$\langle \mathcal R(e_i\wedge e_j), e_k\wedge e_l\rangle = W_{ijkl},\qquad \forall\,(i,j)\ne(k,l),$$
-*where $\lambda_{ij} = \frac1{n-2}\bigl(\lambda_i + \lambda_j - \frac{R_g}{n-1}\bigr)$ and $i<j$, $k<l$. Consequently $\mathcal R = \mathcal S + \mathcal W$, with $\mathcal S = \operatorname{diag}(\lambda_{12},\dots,\lambda_{(n-1)n})$ and $\mathcal W = (W_{ijkl})$.*
+*where $\lambda_{ij} = \frac1{n-2}\bigl(\lambda_i + \lambda_j - \frac{R_g}{n-1}\bigr)$ and $i<j$, $k<l$. Consequently $\mathcal R = \mathcal S + \mathcal W$, with $\mathcal S = \mathop{\mathrm{diag}}(\lambda_{12},\dots,\lambda_{(n-1)n})$ and $\mathcal W = (W_{ijkl})$.*
 
 So in the Ricci eigenbasis, $\mathcal S$ carries the whole diagonal and $\mathcal W$ carries the whole off-diagonal, the Hermitian split the title names. **Lemma 2.4** is the computational half: $\mathcal S(e_i\wedge e_j) = \frac1{n-2}\bigl(\lambda_i + \lambda_j - \frac{R_g}{n-1}\bigr)(e_i\wedge e_j)$, so $\{e_i\wedge e_j\}$ is an eigenbasis of $\mathcal S$ with eigenvalues $\lambda_{ij}$. **Corollary 2.5** specialises to locally conformally flat metrics, where $\mathcal W=0$ and the $\lambda_{ij}$ are the eigenvalues of $\mathcal R$ itself. **Remark 2.6** notes only the extremes are ordered: $\lambda_{12}<\lambda_{13}$ minimal, $\lambda_{(n-2)n}<\lambda_{(n-1)n}$ maximal.
 

@@ -12,11 +12,11 @@ Read [conventions.md](../findings/conventions.md) in full. What it supplies, and
 
 | symbol | what conventions.md fixes | status for L54 |
 | --- | --- | --- |
-| pairing on $\Lambda^2$ | $\langle X,Y\rangle=\tfrac12\operatorname{tr}(X^{\mathsf T}Y)$, so $\{\varphi_{ab}\}_{a<b}$ is orthonormal | fixed |
+| pairing on $\Lambda^2$ | $\langle X,Y\rangle=\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$, so $\{\varphi_{ab}\}_{a<b}$ is orthonormal | fixed |
 | pairing on $S^2_0$ |, | **absent**; forced to plain Frobenius by $\varphi_{ij}=(e_i\odot e_j)/\sqrt2$ having norm $1$ |
 | $\mathring W$ | Li's $iklj$: $(\mathring Wh)_{ij}=\sum_{kl}W_{iklj}h_{kl}$ | fixed, and load-bearing for the sign of the $\varphi$-diagonal |
 | $K$, $t$ | $K$ symmetric hollow, $K_{ab}=W_{abab}$; $t=\lVert K\rVert_F^2=\sum_{a\ne b}K_{ab}^2$, the **ordered** sum | fixed |
-| $\mu$, $\omega$ | $\mu=\operatorname{spec}(M)$ on $\Lambda^2$ at $\lVert M\rVert_F=1$, $\omega=\operatorname{spec}(\mathring W)$; $\sum\mu^2=1$, $\sum\omega^2=3$ | fixed, with a live collision, see D5 |
+| $\mu$, $\omega$ | $\mu=\mathop{\mathrm{spec}}(M)$ on $\Lambda^2$ at $\lVert M\rVert_F=1$, $\omega=\mathop{\mathrm{spec}}(\mathring W)$; $\sum\mu^2=1$, $\sum\omega^2=3$ | fixed, with a live collision, see D5 |
 | $\theta_0(n)$ | $\theta_0(n)^2=2(n-1)(n-2)/n^2$ | fixed |
 | $\Theta_n$ | the **diagonal** maximum; $=\theta_0(n)$ at even $n$, $\sqrt{2(n-1)(n-3)/((n+1)(n-2))}$ at odd | fixed |
 | $M(n)$, $W5$ | global maximum of $P$ on the unit sphere; $\Theta_n\le M(n)$ | fixed, and unused by L54 |
@@ -32,7 +32,7 @@ Neither identity is quoted below; both are derived from Li's $iklj$ order.
 
 **The $\varphi$-diagonal.** Put $h=\varphi_{ab}=(E_{ab}+E_{ba})/\sqrt2$, so $h_{kl}=(\delta_{ka}\delta_{lb}+\delta_{kb}\delta_{la})/\sqrt2$. Then $(\mathring Wh)_{ab}=(W_{aabb}+W_{abab})/\sqrt2=K_{ab}/\sqrt2$, the first term dying on antisymmetry in the first pair, and $(\mathring Wh)_{ba}=(W_{baba}+W_{bbaa})/\sqrt2=K_{ab}/\sqrt2$. Hence $\langle\mathring W\varphi_{ab},\varphi_{ab}\rangle=\tfrac1{\sqrt2}\big(K_{ab}/\sqrt2+K_{ab}/\sqrt2\big)=K_{ab}$. **CONFIRMED.** *The index order is what fixes the sign: in the order $ikjl$ the surviving term is $W_{abba}=-K_{ab}$, so the same computation returns $-K$. The record is in Li's order, so $+K$ is right for it.*
 
-**The $\psi$-block.** Put $h=\operatorname{diag}(v)$, $h'=\operatorname{diag}(w)$, both traceless. Then $(\mathring Wh)_{ij}=\sum_kW_{ikkj}v_k$ and $\langle\mathring Wh,h'\rangle=\sum_{i,k}W_{ikki}v_kw_i=-\sum_{i,k}K_{ik}v_kw_i=-w^{\mathsf T}Kv$, using $W_{ikki}=-W_{ikik}=-K_{ik}$ and $W_{iiii}=0$. So the compression of $\mathring W$ to the traceless diagonal subspace is exactly $-K\vert_{\mathbf1^\perp}$. **CONFIRMED**, and it is an operator identity, carrying no basis with it.
+**The $\psi$-block.** Put $h=\mathop{\mathrm{diag}}(v)$, $h'=\mathop{\mathrm{diag}}(w)$, both traceless. Then $(\mathring Wh)_{ij}=\sum_kW_{ikkj}v_k$ and $\langle\mathring Wh,h'\rangle=\sum_{i,k}W_{ikki}v_kw_i=-\sum_{i,k}K_{ik}v_kw_i=-w^{\mathsf T}Kv$, using $W_{ikki}=-W_{ikik}=-K_{ik}$ and $W_{iiii}=0$. So the compression of $\mathring W$ to the traceless diagonal subspace is exactly $-K\vert_{\mathbf1^\perp}$. **CONFIRMED**, and it is an operator identity, carrying no basis with it.
 
 **The $\Lambda^2$ diagonal.** $\langle M\varphi_{ab},\varphi_{ab}\rangle=W_{abab}=K_{ab}$ under the half-trace pairing conventions.md fixes, which is the definition of the curvature operator. **CONFIRMED.**
 
@@ -44,7 +44,7 @@ Neither identity is quoted below; both are derived from Li's $iklj$ order.
 
 $\sum d_\varphi^2=\sum_{a<b}K_{ab}^2=\tfrac12\sum_{a\ne b}K_{ab}^2=t/2$. **The brief's worry that this needs $\sum_aK_{aa}^2=0$ is answered by the definition rather than by a hypothesis**: conventions.md defines $K$ as *hollow* and $t$ as the sum over $a\ne b$, and hollowness is forced anyway by $W_{aaaa}=0$.
 
-$\sum_i\lambda_i(-K\vert_{\mathbf1^\perp})^2=\operatorname{tr}(K^2)-0=\lVert K\rVert_F^2=t$, **and this half does need $K\mathbf1=0$**, it is what puts $K$'s missing eigenvalue at $0$ rather than at some $\lambda\ne0$ that $\operatorname{tr}(K^2)$ would then have to be debited by. $K\mathbf1=0$ is automatic on $\mathcal W_n$: total trace-freeness gives $\sum_kW_{ikjk}=0$, and $i=j$ is $\sum_kK_{ik}=0$.
+$\sum_i\lambda_i(-K\vert_{\mathbf1^\perp})^2=\mathop{\mathrm{tr}}(K^2)-0=\lVert K\rVert_F^2=t$, **and this half does need $K\mathbf1=0$**, it is what puts $K$'s missing eigenvalue at $0$ rather than at some $\lambda\ne0$ that $\mathop{\mathrm{tr}}(K^2)$ would then have to be debited by. $K\mathbf1=0$ is automatic on $\mathcal W_n$: total trace-freeness gives $\sum_kW_{ikjk}=0$, and $i=j$ is $\sum_kK_{ik}=0$.
 
 So $\sum d^2=\tfrac t2+t=\tfrac32t$, **for the eigenvector reading of $d_\psi$, and for that reading only.** That qualifier is the defect below.
 
@@ -87,7 +87,7 @@ Hence $\sum d^2=\tfrac t2+\tfrac12=\tfrac32$, **half of the claimed $\tfrac32t=3
 
 **$t$ is per-frame and the block mixes the two readings.** [conventions.md](../findings/conventions.md) warns in bold: "*$t$ IS PER-FRAME UNLESS SAID OTHERWISE ... Write $t_F$ when the frame is fixed and $t=\max_Ft_F$ when it is not.*" L54 writes $\sum d^2=\tfrac32t$, where $K$, $d$, $d_\varphi$ are all built in one frame and $t$ must be $t_F$; then "with equality exactly when $W$ is coordinate-diagonal in **some** frame", which is the extremal reading $\max_Ft_F$. **The two are used in one sentence under one symbol.** The conclusion survives ($t_F=2$ for some $F$ and $\max_Ft_F=2$ are equivalent, and the rigidity is then run in that $F$) but the sentence as written is the trap conventions.md names. *Repair: $t_F$ throughout, and "$\max_Ft_F\le2$ with equality exactly when $W$ is coordinate-diagonal in some frame; in such a frame $t_F=2$".*
 
-**L54 is not a leaf.** Its rigidity clause consumes $t\le2$ with its equality case, which is **[Lemma L94](../findings/bispectral.md)**, "$\kappa^2\le2\lVert M\rVert_F^2$, with equality exactly when $W$ is coordinate-diagonal in some frame", $\kappa^2=\max_F\lVert K(F)\rVert_F^2$, Gate 2 confirmed. **L54's block names neither L94 nor conventions.md for it**, so a reader meets the input as an assertion. *Re-derived here, both directions: $\lVert\operatorname{diag}_\varphi M\rVert^2\le\lVert M\rVert_F^2$ with equality iff every off-diagonal $\varphi$-entry vanishes, which is coordinate-diagonality in that frame; $\max_F$ is attained, $O(n)$ being compact. **CONFIRMED**, and the record's one-line proof is the right one.* *Aside: conventions.md calls this step "Cauchy–Schwarz", where it is the weaker fact that a subsum of squares is at most the full sum, harmless, and a mislabel.*
+**L54 is not a leaf.** Its rigidity clause consumes $t\le2$ with its equality case, which is **[Lemma L94](../findings/bispectral.md)**, "$\kappa^2\le2\lVert M\rVert_F^2$, with equality exactly when $W$ is coordinate-diagonal in some frame", $\kappa^2=\max_F\lVert K(F)\rVert_F^2$, Gate 2 confirmed. **L54's block names neither L94 nor conventions.md for it**, so a reader meets the input as an assertion. *Re-derived here, both directions: $\lVert\mathop{\mathrm{diag}}_\varphi M\rVert^2\le\lVert M\rVert_F^2$ with equality iff every off-diagonal $\varphi$-entry vanishes, which is coordinate-diagonality in that frame; $\max_F$ is attained, $O(n)$ being compact. **CONFIRMED**, and the record's one-line proof is the right one.* *Aside: conventions.md calls this step "Cauchy–Schwarz", where it is the weaker fact that a subsum of squares is at most the full sum, harmless, and a mislabel.*
 
 **Quantifiers, settled.** The two operator identities and $\sum d_\varphi^2=t/2$ hold **for every $n\ge4$, every $W\in\mathcal W_n$, every orthonormal frame**, no criticality, no Ricci-flatness beyond what $\mathcal W_n$ carries, no dimension restriction. The $\psi$-half of the norm count adds $K\mathbf1=0$, which $\mathcal W_n$ supplies. The rigidity clause adds $t_F=2$.
 
@@ -97,7 +97,7 @@ This is the section's own headline, [bispectral.md](../findings/bispectral.md) l
 
 ### The cap itself, CONFIRMED, re-derived cold
 
-$\mu:=-\omega_{\min}$. The bottom unit eigenvector $h$ of $\mathring W$ is traceless symmetric, so in its own eigenframe $F$ it is $\operatorname{diag}(v)$ with $\sum v_i=0$, $\sum v_i^2=1$, and by the $\psi$-block identity derived above $\omega_{\min}=\langle\mathring Wh,h\rangle=-v^{\mathsf T}K^Fv$, hence $\mu=v^{\mathsf T}K^Fv\le\mu_1(K^F)$. With $\lambda_1\ge\dots\ge\lambda_{n-1}$ the spectrum of $K^F$ on $\mathbf1^\perp$: $\sum\lambda_i=0$, $\sum\lambda_i^2=t_F$, so $\lambda_1^2=\big(\sum_{i\ge2}\lambda_i\big)^2\le(n-2)(t_F-\lambda_1^2)$, giving $\mu_1(K^F)\le\sqrt{t_F(n-2)/(n-1)}\le\sqrt{2(n-2)/(n-1)}$, using $t_F\le2$ frame by frame. **CONFIRMED**, both the bound and the equality case ($\lambda_2=\dots=\lambda_{n-1}$).
+$\mu:=-\omega_{\min}$. The bottom unit eigenvector $h$ of $\mathring W$ is traceless symmetric, so in its own eigenframe $F$ it is $\mathop{\mathrm{diag}}(v)$ with $\sum v_i=0$, $\sum v_i^2=1$, and by the $\psi$-block identity derived above $\omega_{\min}=\langle\mathring Wh,h\rangle=-v^{\mathsf T}K^Fv$, hence $\mu=v^{\mathsf T}K^Fv\le\mu_1(K^F)$. With $\lambda_1\ge\dots\ge\lambda_{n-1}$ the spectrum of $K^F$ on $\mathbf1^\perp$: $\sum\lambda_i=0$, $\sum\lambda_i^2=t_F$, so $\lambda_1^2=\big(\sum_{i\ge2}\lambda_i\big)^2\le(n-2)(t_F-\lambda_1^2)$, giving $\mu_1(K^F)\le\sqrt{t_F(n-2)/(n-1)}\le\sqrt{2(n-2)/(n-1)}$, using $t_F\le2$ frame by frame. **CONFIRMED**, both the bound and the equality case ($\lambda_2=\dots=\lambda_{n-1}$).
 
 ### The record's cap **cannot be attained at odd $n$**, proved
 
@@ -111,7 +111,7 @@ $$K=\lambda\,\frac{n-1}{n-2}\,uu^{\mathsf T}-\frac{\lambda}{n-2}\Big(I-\tfrac1nJ
 
 ### The exact maximum, and it closes the odd case
 
-**The step that loses at odd $n$ is that the eigenvalue argument throws hollowness away**, using only $\operatorname{tr}K=0$ and $K\mathbf1=0$. Keep it. $K^F$ lies in the **vertex space** $\mathcal D_n=\{K\text{ symmetric, hollow},K\mathbf1=0\}$ that [conventions.md](../findings/conventions.md) already names, so with $P$ the orthogonal projection of symmetric matrices onto $\mathcal D_n$,
+**The step that loses at odd $n$ is that the eigenvalue argument throws hollowness away**, using only $\mathop{\mathrm{tr}}K=0$ and $K\mathbf1=0$. Keep it. $K^F$ lies in the **vertex space** $\mathcal D_n=\{K\text{ symmetric, hollow},K\mathbf1=0\}$ that [conventions.md](../findings/conventions.md) already names, so with $P$ the orthogonal projection of symmetric matrices onto $\mathcal D_n$,
 
 $$\mu=\langle K^F,vv^{\mathsf T}\rangle=\langle K^F,P(vv^{\mathsf T})\rangle\le\lVert K^F\rVert_F\,\lVert P(vv^{\mathsf T})\rVert_F=\sqrt{t_F}\,\lVert P(vv^{\mathsf T})\rVert_F .$$
 

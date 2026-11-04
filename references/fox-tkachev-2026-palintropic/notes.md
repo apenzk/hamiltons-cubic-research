@@ -4,7 +4,7 @@
 
 **The $(2,3)$-palintropic identity** is $[x,x,x^2,x^2]=(x^2)^3-(x^3)^2=0$, the lowest-degree case in which the mediator of monomials in $x$ is not automatically zero, parallel to $[x,x,x^2]=(x^2)^2-x^4$ for power associativity. *(line 262)*
 
-> **Proposition 1.4.** The following algebras are $(2,3)$-palintropic: (i) any commutative algebra with $A^3=0$; (ii) any commutative power-associative algebra; (iii) any Jordan algebra, if $\operatorname{char}k$ is prime to $2$; (iv) any medial algebra; (v) any J-medial algebra; (vi) any commutative algebra satisfying (12), $x^3(x^2y)-(x^2)^2(xy)=0$. *(line 286)*
+> **Proposition 1.4.** The following algebras are $(2,3)$-palintropic: (i) any commutative algebra with $A^3=0$; (ii) any commutative power-associative algebra; (iii) any Jordan algebra, if $\mathop{\mathrm{char}}k$ is prime to $2$; (iv) any medial algebra; (v) any J-medial algebra; (vi) any commutative algebra satisfying (12), $x^3(x^2y)-(x^2)^2(xy)=0$. *(line 286)*
 
 > **Definition 1.5.** An idempotent $c$ is **singular** if $\Phi(c):=\mathrm{Id}-2L(c)$ is not invertible, nonsingular otherwise; in finite dimension, singular if and only if $\tfrac12\in\sigma(c)$. *(line 313)*
 

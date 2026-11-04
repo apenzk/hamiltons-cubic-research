@@ -133,7 +133,7 @@ The residual statement must hold at **every even $n\ge12$**. L40's evidence:
 
 ### F8, the block's pointer to its own argument is wrong, and it cites no artefact
 
-The provenance line sends the reader to *"The totally-summed vertex equation is an identity, and the reason is p"*. That heading is [target.md:25](../findings/target.md#L25) and concerns the $\operatorname{tr}(W^\#)$ identity; **it contains no census and no measurement**. The material L40 summarises is at [target.md:425–445](../findings/target.md#L425). The pointer text is also truncated mid-word, "the reason is p" for "…is published".
+The provenance line sends the reader to *"The totally-summed vertex equation is an identity, and the reason is p"*. That heading is [target.md:25](../findings/target.md#L25) and concerns the $\mathop{\mathrm{tr}}(W^\#)$ identity; **it contains no census and no measurement**. The material L40 summarises is at [target.md:425–445](../findings/target.md#L425). The pointer text is also truncated mid-word, "the reason is p" for "…is published".
 
 Combined with F4's absent script link, **Observation L40 as it stands in [findings/](../findings/) has no warrant a reader can reach**: wrong pointer, no run, no artefact, and its value hidden behind an undefined macro. Prior logging at [ELIM-target.md:181](ELIM-target.md#L181), unfixed.
 
@@ -196,7 +196,7 @@ Attack point 5 resolves in L40's favour. The full sentence is *"Diagonal control
 1. **Direction, unstated (F1).** A supremum over a catalogue is a **lower** bound on the supremum over everything. L40 therefore yields $\sup_{\mathcal N}\theta\ge\theta^*$, while the abstract's residual needs $\sup_{\mathcal N}\theta\le\theta^*$, **the opposite direction**. The block never says which way its measurement runs, and the displayed set-builder carries **no restriction to the catalogue**, so read as written it asserts the open residual as an equality. The scope survives only in the prefatory adverbial "Over the catalogued critical points".
 2. **"Three independent hunts" is one hunt (F6).** The two closure sweeps are functions of the catalogue whose outcome is *forced* by the record's own theorems (padding preserves $\theta$, $\circ$-sums strictly decrease it) so the supremum over the closure equals the supremum over the catalogue by proof, and their agreement carries no information. What remains is one biased symmetric-space list whose own $S=0$ tally contradicts the census table ten lines below it.
 3. **Silent above $n=12$ (F7)**, which is exactly the range the conjecture lives in and exactly where the hypothesis-free form of this supremum is *false*.
-4. **No reachable warrant (F8, F4).** The pointer names a section about the $\operatorname{tr}(W^\#)$ identity; no script or run is cited; the margin figure is traceable to nothing.
+4. **No reachable warrant (F8, F4).** The pointer names a section about the $\mathop{\mathrm{tr}}(W^\#)$ identity; no script or run is cited; the margin figure is traceable to nothing.
 5. **The margin is round-off presented as a finding (F4)**, a failure to separate, with a sign that literally reads as non-attainment, and no bearing whatever on separation from a violator.
 6. **The block does not render (F3)**, and the value $\theta^*$ never appears in it.
 7. **A sibling passage states a false form of the same supremum (F9)**, unmarked, in the same file.

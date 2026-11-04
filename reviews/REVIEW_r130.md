@@ -11,7 +11,7 @@ Cold review of commit 546757b, commit 5da5126, commit b764ebf, commit f135fc1, c
 | C, closed form for $E_{ab}$ at a critical point | CONFIRMED, to $1.2\times10^{-16}$, including at off-locus critical points |
 | D, $(W^2)_{(ab),(ab)}=K_{ab}^2+\lVert F_{(ab)}\rVert^2$ | CONFIRMED unconditionally |
 | E, both brackets vanish together on the locus | CONFIRMED; the normalisation the brief flagged resolves in the record's favour |
-| F, $W\#I=-W$, $\operatorname{tr}(W^\#)=-\lVert W\rVert^2$, summed equation vacuous | CONFIRMED, with the numbered lemma statement below |
+| F, $W\#I=-W$, $\mathop{\mathrm{tr}}(W^\#)=-\lVert W\rVert^2$, summed equation vacuous | CONFIRMED, with the numbered lemma statement below |
 | G, the PSD statement fails off the locus, and fails maximally | **FALSE as concluded.** Witnesses below. The measurements are right; the sentence drawn from them is not |
 | H, counting corollary $r\le2/\lambda^2$, $r=1$ at $\theta_0(12)$ | CONFIRMED; the factor-of-two hazard does not bite. Two silent hypotheses |
 
@@ -22,7 +22,7 @@ The derivation reconstructs exactly. The off-diagonal half of $K^{\circ2}+K^2=\l
 Two scope errors, both in the same sentence at the end of the new material.
 
 - **It uses criticality essentially.** The diagonal entry is criticality-free; the off-diagonal entry $-K_{ab}^2$ is the vertex equation at $(ab)$ and nothing else. Away from a critical point $\lambda$ has no definition, so the statement is not merely unproved off criticality, it is not posed. The correct scope is **diagonal critical points**, and the write-up says so in its own derivation ("On the diagonal locus the criticality equation is …") before contradicting itself in the closing sentence.
-- **Naming it a Laplacian adds no proof.** $L(K^{\circ2})=\operatorname{diag}(\operatorname{diag}K^2)-K^{\circ2}$ holds for any symmetric hollow $K$ by definition, so "$K^2-\lambda K$ is a Laplacian" *is* the criticality equation rearranged, and the PSD proof is the same $\tfrac12\sum w(v_a-v_b)^2$ display already at [diagonal-half.md:112](findings/diagonal-half.md#L112). The commit says as much and is right to; the value is the name, not the argument.
+- **Naming it a Laplacian adds no proof.** $L(K^{\circ2})=\mathop{\mathrm{diag}}(\mathop{\mathrm{diag}}K^2)-K^{\circ2}$ holds for any symmetric hollow $K$ by definition, so "$K^2-\lambda K$ is a Laplacian" *is* the criticality equation rearranged, and the PSD proof is the same $\tfrac12\sum w(v_a-v_b)^2$ display already at [diagonal-half.md:112](findings/diagonal-half.md#L112). The commit says as much and is right to; the value is the name, not the argument.
 
 ## B, hollowness of $E$
 
@@ -50,9 +50,9 @@ coefficient exactly $1$, with the cross-check $\langle W^\#,W\rangle=3\sum_{a<b<
 
 Böhm–Wilking Lemma 2.1, located and read: for $R\in S^2_B(\mathfrak{so}(n))$, $R+R\#I=(n-1)R_I+\tfrac{n-2}2R_{\mathrm{Ric}_0}$, the right-hand side being the $\mathrm{Ric}\wedge\mathrm{id}$ part. The hypothesis is membership of $S^2_B$ (symmetric with first Bianchi) which Weyl tensors satisfy, so $\mathrm{Ric}=0$ gives $W\#I=-W$ with no extra condition. Verified to $1.8\times10^{-16}$ at random Weyl tensors, $n=5,6,7$. Sanity anchor: at $R=I$ the lemma returns $I\#I=(n-2)I$, matching my independently fixed sign.
 
-The trace bridge is sound: $\operatorname{tr}(W^\#)=\mathrm{tri}(W,W,I)=\mathrm{tri}(W,I,W)=\langle W\#I,W\rangle=-\lVert W\rVert^2$, using the total symmetry of $\mathrm{tri}$, which holds in this convention. Verified to $2.2\times10^{-16}$. A second, independent route exists on the diagonal locus and is worth recording because it uses no lemma at all: $\operatorname{tr}W^\#=\sum_{a<b}\sum_cw_{ac}w_{cb}=\tfrac12\big[\sum_c(\textstyle\sum_aw_{ac})(\sum_bw_{cb})-\sum_{a,c}w_{ac}^2\big]=-\lVert W\rVert^2$ by zero row sums.
+The trace bridge is sound: $\mathop{\mathrm{tr}}(W^\#)=\mathrm{tri}(W,W,I)=\mathrm{tri}(W,I,W)=\langle W\#I,W\rangle=-\lVert W\rVert^2$, using the total symmetry of $\mathrm{tri}$, which holds in this convention. Verified to $2.2\times10^{-16}$. A second, independent route exists on the diagonal locus and is worth recording because it uses no lemma at all: $\mathop{\mathrm{tr}}W^\#=\sum_{a<b}\sum_cw_{ac}w_{cb}=\tfrac12\big[\sum_c(\textstyle\sum_aw_{ac})(\sum_bw_{cb})-\sum_{a,c}w_{ac}^2\big]=-\lVert W\rVert^2$ by zero row sums.
 
-Vacuity of the summed vertex equation follows: $\lVert W\rVert^2+\operatorname{tr}(W^\#)=\lambda\operatorname{tr}W$ reads $1-1=0$. Confirmed. One presentational nit in [findings/target.md](findings/target.md): the gloss "i.e. $t/2+(1-t/2)=1$" is written under an equation whose right-hand side is $0$, so the display and its gloss report different quantities.
+Vacuity of the summed vertex equation follows: $\lVert W\rVert^2+\mathop{\mathrm{tr}}(W^\#)=\lambda\mathop{\mathrm{tr}}W$ reads $1-1=0$. Confirmed. One presentational nit in [findings/target.md](findings/target.md): the gloss "i.e. $t/2+(1-t/2)=1$" is written under an equation whose right-hand side is $0$, so the display and its gloss report different quantities.
 
 ## G, FALSE as concluded, and the measurements were never a test
 
@@ -62,7 +62,7 @@ The tabulated numbers are all reproducible. The conclusion drawn from them is re
 
 $O(n)$ acts on the problem, $Q$ is equivariant, and $\theta$ is invariant, so a rotated sphere product is a critical point of the same $\theta$ that is **not** on the diagonal locus. Rotating $S^3{\times}S^3$ ($n=8$, $\theta=1.145644$) by $\exp(\varepsilon A)$ along a fixed random $A$:
 
-| $\varepsilon$ | $\lVert F\rVert$ | $t=\operatorname{tr}K^2$ | $\min\operatorname{spec}(K^2-\theta K)$ | PSD | eigenvalues in $(0,\theta)$ |
+| $\varepsilon$ | $\lVert F\rVert$ | $t=\mathop{\mathrm{tr}}K^2$ | $\min\mathop{\mathrm{spec}}(K^2-\theta K)$ | PSD | eigenvalues in $(0,\theta)$ |
 |---|---|---|---|---|---|
 | $0.20$ | $0.1148$ | $1.9737$ | $-2.0\times10^{-17}$ | yes | $0$ |
 | $0.50$ | $0.2815$ | $1.8415$ | $-5.0\times10^{-17}$ | yes | $0$ |
@@ -77,7 +77,7 @@ The mechanism paragraph fails with it. "Off the locus … the weights are no lon
 
 ### The catalogue's "maximal failure" is one line of arithmetic
 
-"Every positive eigenvalue lies in $(0,\lambda)$" is the same statement as $\mu_1(K)<\lambda$, since $K$ is traceless and nonzero. And $\mu_1(K)^2\le\operatorname{tr}K^2=t$. So
+"Every positive eigenvalue lies in $(0,\lambda)$" is the same statement as $\mu_1(K)<\lambda$, since $K$ is traceless and nonzero. And $\mu_1(K)^2\le\mathop{\mathrm{tr}}K^2=t$. So
 
 $$\boxed{\;t<\lambda^2\ \Longrightarrow\ \text{every positive eigenvalue of }K\text{ lies in }(0,\lambda),\;}$$
 
@@ -111,16 +111,16 @@ i.e. at least $\lambda^2/2$ of $\lVert W\rVert^2$ (about $76\%$ at $\lambda=\the
 
 ## H, the counting corollary
 
-Correct, and the factor-of-two hazard the brief flags does not bite. On the diagonal locus $\lVert W\rVert^2=\sum_{a<b}w_{ab}^2=1$, so $\lVert K\rVert_F^2=\operatorname{tr}K^2=2\sum_{a<b}K_{ab}^2=2$, the ordered sum, measured as $2.00000$ at four sphere products. $2/\lambda^2$ runs $1.256$–$1.524$ across them and $r=1$ in every case. Two hypotheses go unstated:
+Correct, and the factor-of-two hazard the brief flags does not bite. On the diagonal locus $\lVert W\rVert^2=\sum_{a<b}w_{ab}^2=1$, so $\lVert K\rVert_F^2=\mathop{\mathrm{tr}}K^2=2\sum_{a<b}K_{ab}^2=2$, the ordered sum, measured as $2.00000$ at four sphere products. $2/\lambda^2$ runs $1.256$–$1.524$ across them and $r=1$ in every case. Two hypotheses go unstated:
 
-- $r\ge1$ is needed for "forces $r=1$" and is never said. It is free ($\operatorname{tr}K=0$ with $K\ne0$) but it is a step.
+- $r\ge1$ is needed for "forces $r=1$" and is never said. It is free ($\mathop{\mathrm{tr}}K=0$ with $K\ne0$) but it is a step.
 - The bound is only usable where $t$ is near $2$, which by the section above means near the diagonal locus. Off it $t$ shrinks and $r\le t/\lambda^2$ becomes vacuous or false, exactly as $\mathbb{CP}^6$ shows. The corollary inherits G's restriction rather than standing beside it.
 
 Also: "$r=1$ at $\theta_0(12)$" is a statement about a critical point achieving the conjectured value, not about diagonal critical points generally. The write-up says "at the conjectured value" and is clean; the commit message drops the qualifier.
 
 ## Literature
 
-Nothing here is a re-derivation of a named theorem, and nothing is missed. The two ingredients are textbook and are used correctly: a weighted Laplacian with nonnegative weights is PSD via $v^{\mathsf T}Lv=\tfrac12\sum w_{ab}(v_a-v_b)^2$ (Fiedler; any spectral graph theory text), and $M^2-\lambda M\succeq0\iff\operatorname{spec}(M)\cap(0,\lambda)=\emptyset$ is elementary. What is **not** a matrix-theory theorem is the identity $K^2-\lambda K=L(K^{\circ2})$ itself: for a general symmetric hollow zero-row-sum $K$ it is false, and here it holds only because it *is* the criticality equation rearranged. Searching the Seidel / association-scheme / signless-Laplacian literature for a gap theorem of this shape returns nothing applicable, the constraint that makes it work is the vertex equation, not the combinatorial structure. So the "standard name" is correctly claimed as a name and correctly not claimed as a citation.
+Nothing here is a re-derivation of a named theorem, and nothing is missed. The two ingredients are textbook and are used correctly: a weighted Laplacian with nonnegative weights is PSD via $v^{\mathsf T}Lv=\tfrac12\sum w_{ab}(v_a-v_b)^2$ (Fiedler; any spectral graph theory text), and $M^2-\lambda M\succeq0\iff\mathop{\mathrm{spec}}(M)\cap(0,\lambda)=\emptyset$ is elementary. What is **not** a matrix-theory theorem is the identity $K^2-\lambda K=L(K^{\circ2})$ itself: for a general symmetric hollow zero-row-sum $K$ it is false, and here it holds only because it *is* the criticality equation rearranged. Searching the Seidel / association-scheme / signless-Laplacian literature for a gap theorem of this shape returns nothing applicable, the constraint that makes it work is the vertex equation, not the combinatorial structure. So the "standard name" is correctly claimed as a name and correctly not claimed as a citation.
 
 ## The single most load-bearing defect
 

@@ -2,7 +2,7 @@
 
 Auditor ELIM-target, 2026-09-01. Assigned file: [findings/target.md](../findings/target.md), 730 lines, read in full. Analytical only, no script was run, no value was evaluated, nothing numerical was checked. Every verdict below is a substitution carried out on paper.
 
-The test applied to every bound, reduction, equivalence and "what a successor needs" in the file: substitute $W^{\#}=\theta W-W^{2}$, $\operatorname{Ric}(W)=0$, $\operatorname{tr}W=0$, first Bianchi, then ask what free variable is left. The file writes $\theta$ as $\lambda$ throughout; both are used below in whichever form the quoted claim uses.
+The test applied to every bound, reduction, equivalence and "what a successor needs" in the file: substitute $W^{\#}=\theta W-W^{2}$, $\mathop{\mathrm{Ric}}(W)=0$, $\mathop{\mathrm{tr}}W=0$, first Bianchi, then ask what free variable is left. The file writes $\theta$ as $\lambda$ throughout; both are used below in whichever form the quoted claim uses.
 
 ---
 
@@ -24,18 +24,18 @@ The three structural hypotheses are exactly three families of $N=\binom n2$ line
 
 Two consequences the file has in pieces and never assembles, both free:
 
-- $R\mathbf1=2(n-2)\mathbf1$ and $R\lambda=-2\lambda$. The bracket Gram has two known eigenpairs at **every** Weyl tensor; distinctness of the two eigenvalues re-proves $\operatorname{tr}W=0$.
+- $R\mathbf1=2(n-2)\mathbf1$ and $R\lambda=-2\lambda$. The bracket Gram has two known eigenpairs at **every** Weyl tensor; distinctness of the two eigenvalues re-proves $\mathop{\mathrm{tr}}W=0$.
 - The $\mathbf1$-contraction of criticality, $\langle\lambda,R\lambda\rangle=-2$, is already implied by the degree-1 row. So the criticality family carries at most $N-1$ independent conditions, not $N$.
 
-### S2. $g_\gamma=\lVert[\operatorname{ad}(v_\gamma),W]\rVert^{2}$, survives, and its free part is now named exactly
+### S2. $g_\gamma=\lVert[\mathop{\mathrm{ad}}(v_\gamma),W]\rVert^{2}$, survives, and its free part is now named exactly
 
-Lemma L41 at [target.md:698](../findings/target.md#L698) is the file's live lead, and it passes. Expanding $[\operatorname{ad}(v_\gamma),W]v_\alpha=\sum_\beta c_{\gamma\alpha\beta}(\lambda_\alpha-\lambda_\beta)v_\beta$ with $c^{2}=T$,
+Lemma L41 at [target.md:698](../findings/target.md#L698) is the file's live lead, and it passes. Expanding $[\mathop{\mathrm{ad}}(v_\gamma),W]v_\alpha=\sum_\beta c_{\gamma\alpha\beta}(\lambda_\alpha-\lambda_\beta)v_\beta$ with $c^{2}=T$,
 
 $$g_\gamma=\sum_{\alpha\beta}T_{\gamma\alpha\beta}(\lambda_\alpha-\lambda_\beta)^{2}=2\underbrace{\sum_\alpha\lambda_\alpha^{2}R_{\gamma\alpha}}_{\textstyle\rho_\gamma}-4\lambda_\gamma(\theta-\lambda_\gamma).$$
 
-The second term is the degree-2 row, dead. **The entire free content of $g_\gamma$ is $\rho_\gamma$, the second spectral moment of row $\gamma$ of the bracket Gram**, which no row of the table above touches. Its only constraints are $\sum_\gamma\rho_\gamma=2(n-2)$ and $\sum_\gamma\lambda_\gamma\rho_\gamma=-2\operatorname{tr}W^{3}$, both inherited from degrees 0 and 1.
+The second term is the degree-2 row, dead. **The entire free content of $g_\gamma$ is $\rho_\gamma$, the second spectral moment of row $\gamma$ of the bracket Gram**, which no row of the table above touches. Its only constraints are $\sum_\gamma\rho_\gamma=2(n-2)$ and $\sum_\gamma\lambda_\gamma\rho_\gamma=-2\mathop{\mathrm{tr}}W^{3}$, both inherited from degrees 0 and 1.
 
-Two checks of this decomposition against the file's own stated constants, done symbolically: summing it gives $\sum_\gamma g_\gamma=4(n-2)-4(\theta\cdot 0-1)=4(n-1)$, the file's constant; and $\sum_\gamma\lambda_\gamma g_\gamma=-4\operatorname{tr}W^{3}-4\langle W,W^{\#}\rangle=-4\theta$, the file's identity. Both fall out, which confirms the framework and confirms the identity is Ricci-flatness plus the definition of $P$, exactly as the file says at [target.md:575](../findings/target.md#L575).
+Two checks of this decomposition against the file's own stated constants, done symbolically: summing it gives $\sum_\gamma g_\gamma=4(n-2)-4(\theta\cdot 0-1)=4(n-1)$, the file's constant; and $\sum_\gamma\lambda_\gamma g_\gamma=-4\mathop{\mathrm{tr}}W^{3}-4\langle W,W^{\#}\rangle=-4\theta$, the file's identity. Both fall out, which confirms the framework and confirms the identity is Ricci-flatness plus the definition of $P$, exactly as the file says at [target.md:575](../findings/target.md#L575).
 
 Corollary worth carrying: $G_0=\sum_{\gamma\in\ker W}g_\gamma=2\sum_{\gamma\in\ker W}\rho_\gamma$ exactly, since $\lambda_\gamma=0$ there. $G_0$ is a **pure** survivor with no criticality content at all. $\Delta$ is mixed: $\Delta=2\sum_{\mathfrak p}\rho_\gamma-4\sum_{\mathfrak p}\lambda_\gamma(\theta-\lambda_\gamma)$, so part of it is already spoken for by $(\lambda,\theta)$ and only $\sum_{\mathfrak p}\rho_\gamma$ is new. A successor pushing Lemma L41 should push on $\rho$, not on $\Delta$.
 
@@ -53,8 +53,8 @@ A structural certificate that $\mu$ is not a function of $(\mathrm{spec}\,W,\the
 
 ### S4. Genuine survivors, briefly
 
-- $\lVert\operatorname{Ric}(W_-)\rVert^{2}$ in Observation L12, the Ricci of the truncated tensor depends on how the negative eigenvectors sit as bivectors, which no row of S1's table constrains.
-- $\operatorname{tr}(P_{E_-}(W^{\#}-W_-^{\#})P_{E_-})$, the bracket mass coupling $E_-$ to $E_+\cup\ker W$. See T6 below: this difference is the *whole* of Observation L12's content, because the compression of the full $W^{\#}$ is dead.
+- $\lVert\mathop{\mathrm{Ric}}(W_-)\rVert^{2}$ in Observation L12, the Ricci of the truncated tensor depends on how the negative eigenvectors sit as bivectors, which no row of S1's table constrains.
+- $\mathop{\mathrm{tr}}(P_{E_-}(W^{\#}-W_-^{\#})P_{E_-})$, the bracket mass coupling $E_-$ to $E_+\cup\ker W$. See T6 below: this difference is the *whole* of Observation L12's content, because the compression of the full $W^{\#}$ is dead.
 - $\mu_{\max}(K)$ and $\lVert G_{\rm off}\rVert^2$, survivors, but frame-dependent, which is the separate and correct reason the file closes that route at [target.md:67](../findings/target.md#L67).
 - $\lambda_{\max}(L_e|_{e^\perp})$, the second-order discriminator. It is a contraction of $T$ well outside the three rows, so nothing in the elimination touches it. The file's own separating argument for it ($\mathbb{CP}^{3}$ and $S^{3}\times S^{3}$ share $\theta$ and land on opposite sides), is weaker than stated, since those two have different spectra and the test is against $(\lambda,\theta)$, not $\theta$ alone. The isospectral triality pair would be the right test, and both members saturate, so it does not separate either. The survival verdict stands on the contraction argument, not on the file's table.
 - $\ker\Phi_W$ (Lemma L37). Criticality never enters $\Phi_W(A)=[W,\delta_A]$. Survives, and the file already correctly restricts it to defining the target set rather than bounding $\theta$ on it.
@@ -97,35 +97,35 @@ which is the inequality that had **already** been spent one line earlier by drop
 
 At [target.md:316](../findings/target.md#L315), listed as the fourth of "Four identities, each proved" and screened at $10^{-16}$:
 
-$$\sum_\beta M_{\alpha\beta}=\lambda_\alpha-\tfrac12\operatorname{tr}\big(W\operatorname{ad}(v_\alpha)^{2}\big).$$
+$$\sum_\beta M_{\alpha\beta}=\lambda_\alpha-\tfrac12\mathop{\mathrm{tr}}\big(W\mathop{\mathrm{ad}}(v_\alpha)^{2}\big).$$
 
-Expand the second term: $-\operatorname{tr}(W\operatorname{ad}(v_\alpha)^{2})=\langle W,\sum_\beta b_{\alpha\beta}\otimes b_{\alpha\beta}\rangle=\sum_{\beta\gamma}T_{\alpha\beta\gamma}\lambda_\gamma$. By total symmetry of $T$ this is the same sum as the per-row identity's left side, $\sum_\beta\lambda_\beta R_{\alpha\beta}=-2\lambda_\alpha$, which this same file records at [target.md:663](../findings/target.md#L663) as a theorem valid on all of $\mathrm{Weyl}_n$. Hence
+Expand the second term: $-\mathop{\mathrm{tr}}(W\mathop{\mathrm{ad}}(v_\alpha)^{2})=\langle W,\sum_\beta b_{\alpha\beta}\otimes b_{\alpha\beta}\rangle=\sum_{\beta\gamma}T_{\alpha\beta\gamma}\lambda_\gamma$. By total symmetry of $T$ this is the same sum as the per-row identity's left side, $\sum_\beta\lambda_\beta R_{\alpha\beta}=-2\lambda_\alpha$, which this same file records at [target.md:663](../findings/target.md#L663) as a theorem valid on all of $\mathrm{Weyl}_n$. Hence
 
 $$\sum_\beta M_{\alpha\beta}=\lambda_\alpha+\tfrac12(-2\lambda_\alpha)=0 .$$
 
-So identity 4 is not an independent identity; it is $M\mathbf1=0$, and the "measurement" of $\operatorname{tr}(W\operatorname{ad}(v_\alpha)^{2})$ is Ricci-flatness. The upgrade is worth taking: $M$ is symmetric with $M_{\alpha\alpha}=\lambda_\alpha$, $M\mathbf1=0$ and $M\lambda=\theta\lambda$, so $\mathbf1$ and $\lambda$ are orthogonal eigenvectors with eigenvalues $0$ and $\theta$. That is the same hollow, zero-row-sum shape the file exploits for the vertex matrix $K$ at [target.md:61](../findings/target.md#L61), and the Cauchy–Schwarz norm-budget argument recorded there applies to $M$ on $\mathbf1^\perp$ verbatim. The file states only the weaker "$\operatorname{tr}M=0$, so $\lambda_{\max}(M)\ge0$".
+So identity 4 is not an independent identity; it is $M\mathbf1=0$, and the "measurement" of $\mathop{\mathrm{tr}}(W\mathop{\mathrm{ad}}(v_\alpha)^{2})$ is Ricci-flatness. The upgrade is worth taking: $M$ is symmetric with $M_{\alpha\alpha}=\lambda_\alpha$, $M\mathbf1=0$ and $M\lambda=\theta\lambda$, so $\mathbf1$ and $\lambda$ are orthogonal eigenvectors with eigenvalues $0$ and $\theta$. That is the same hollow, zero-row-sum shape the file exploits for the vertex matrix $K$ at [target.md:61](../findings/target.md#L61), and the Cauchy–Schwarz norm-budget argument recorded there applies to $M$ on $\mathbf1^\perp$ verbatim. The file states only the weaker "$\mathop{\mathrm{tr}}M=0$, so $\lambda_{\max}(M)\ge0$".
 
 ### T4. $M\lambda=\theta\lambda$ is the diagonal of criticality; $\langle\lambda,M\lambda\rangle=P$ is the definition of $P$
 
-Same section, "All four screen at $10^{-16}$, alongside $\langle\lambda,M\lambda\rangle=P$ and $M\lambda=\theta\lambda$ at a critical point." Expanding, $(M\lambda)_\alpha=\lambda_\alpha^{2}+\langle v_\alpha,W^{\#}v_\alpha\rangle=\langle v_\alpha,Q(W)v_\alpha\rangle$, so $M\lambda=\theta\lambda$ **is** $Q(W)=\theta W$ read on the diagonal of the eigenbasis, and it exhausts the diagonal information: any $\langle v_\alpha,W^{\#}v_\alpha\rangle$ is $\lambda_\alpha(\theta-\lambda_\alpha)$. Contracting once more, $\langle\lambda,M\lambda\rangle=\operatorname{tr}W^{3}+\langle W,W^{\#}\rangle=P$ holds at every $W$, critical or not, it is the definition of $P$. Screening either to $10^{-16}$ verifies arithmetic, not mathematics. Identities 2 ($M_{\alpha\alpha}=\lambda_\alpha$, from $[v,v]=0$) and 3 ($\operatorname{tr}M=\operatorname{tr}W=0$) are likewise definitional.
+Same section, "All four screen at $10^{-16}$, alongside $\langle\lambda,M\lambda\rangle=P$ and $M\lambda=\theta\lambda$ at a critical point." Expanding, $(M\lambda)_\alpha=\lambda_\alpha^{2}+\langle v_\alpha,W^{\#}v_\alpha\rangle=\langle v_\alpha,Q(W)v_\alpha\rangle$, so $M\lambda=\theta\lambda$ **is** $Q(W)=\theta W$ read on the diagonal of the eigenbasis, and it exhausts the diagonal information: any $\langle v_\alpha,W^{\#}v_\alpha\rangle$ is $\lambda_\alpha(\theta-\lambda_\alpha)$. Contracting once more, $\langle\lambda,M\lambda\rangle=\mathop{\mathrm{tr}}W^{3}+\langle W,W^{\#}\rangle=P$ holds at every $W$, critical or not, it is the definition of $P$. Screening either to $10^{-16}$ verifies arithmetic, not mathematics. Identities 2 ($M_{\alpha\alpha}=\lambda_\alpha$, from $[v,v]=0$) and 3 ($\mathop{\mathrm{tr}}M=\mathop{\mathrm{tr}}W=0$) are likewise definitional.
 
 ### T5. "$\sum_a\mathrm{LOSS}(h_a)=3$" and "LOSS depends on $h$ only through its eigenvalue" are the same tautology, plus normalisation
 
-Both bullets sit at [target.md:236](../findings/target.md#L236) under "What survives, and two of it are upgrades". At a critical point $\mathrm{LOSS}(h_a)=\nu_a^{2}+\theta\nu_a$ for every eigenvector, which is the dependence-on-eigenvalue claim; summing gives $\sum\nu_a^{2}+\theta\sum\nu_a=3+0=3$, i.e. $\lVert\mathring W\rVert_F^{2}=3$ and $\operatorname{tr}\mathring W=0$. Neither bullet survives T1 as an independent gain.
+Both bullets sit at [target.md:236](../findings/target.md#L236) under "What survives, and two of it are upgrades". At a critical point $\mathrm{LOSS}(h_a)=\nu_a^{2}+\theta\nu_a$ for every eigenvector, which is the dependence-on-eigenvalue claim; summing gives $\sum\nu_a^{2}+\theta\sum\nu_a=3+0=3$, i.e. $\lVert\mathring W\rVert_F^{2}=3$ and $\mathop{\mathrm{tr}}\mathring W=0$. Neither bullet survives T1 as an independent gain.
 
 ### T6. Observation L12's slack: the compression of the *full* sharp is dead, and only the difference is content
 
-At [target.md:41](../findings/target.md#L42) the claimed closed form is $S=\operatorname{tr}(P_{E_-}W_-^{\#}P_{E_-})$. Note first what happens with the full $W^{\#}$ rather than the sharp of the compression:
+At [target.md:41](../findings/target.md#L42) the claimed closed form is $S=\mathop{\mathrm{tr}}(P_{E_-}W_-^{\#}P_{E_-})$. Note first what happens with the full $W^{\#}$ rather than the sharp of the compression:
 
-$$\operatorname{tr}\big(P_{E_-}W^{\#}P_{E_-}\big)=\sum_{\alpha\in E_-}\lambda_\alpha(\theta-\lambda_\alpha)=-\theta\textstyle\sum\mu_\alpha-\sum\mu_\alpha^{2},$$
+$$\mathop{\mathrm{tr}}\big(P_{E_-}W^{\#}P_{E_-}\big)=\sum_{\alpha\in E_-}\lambda_\alpha(\theta-\lambda_\alpha)=-\theta\textstyle\sum\mu_\alpha-\sum\mu_\alpha^{2},$$
 
-a function of (spectrum, $\theta$) alone. In the $T$ picture, $\operatorname{tr}(P_-W^{\#}P_-)$ sums the degree-2 rows over $\gamma\in E_-$ with $\beta,\gamma$ free, whereas the claimed form $\tfrac12\sum_{i,j}\mu_i\mu_j\lVert P_{E_-}[v_i,v_j]\rVert^{2}$ restricts **all three** indices to $E_-$. So Observation L12's content is exactly the difference, the part of $\sum_{\gamma\in E_-}T_{\gamma ij}\lambda_i\lambda_j$ with at least one of $i,j$ outside $E_-$, i.e. the bracket mass $E_-$ fails to expel. That is the survivor S4 above, and stating the slack in that form rather than as a compressed trace would make the conditionality on the two bracket conditions visible in the formula instead of in a caveat.
+a function of (spectrum, $\theta$) alone. In the $T$ picture, $\mathop{\mathrm{tr}}(P_-W^{\#}P_-)$ sums the degree-2 rows over $\gamma\in E_-$ with $\beta,\gamma$ free, whereas the claimed form $\tfrac12\sum_{i,j}\mu_i\mu_j\lVert P_{E_-}[v_i,v_j]\rVert^{2}$ restricts **all three** indices to $E_-$. So Observation L12's content is exactly the difference, the part of $\sum_{\gamma\in E_-}T_{\gamma ij}\lambda_i\lambda_j$ with at least one of $i,j$ outside $E_-$, i.e. the bracket mass $E_-$ fails to expel. That is the survivor S4 above, and stating the slack in that form rather than as a compressed trace would make the conditionality on the two bracket conditions visible in the formula instead of in a caveat.
 
 ### I28. Confirmed and self-flagged, listed for completeness
 
 - The totally-summed vertex equation, $t/2+(1-t/2)=1$, the file catches this itself at [target.md:31](../findings/target.md#L31).
 - The $(ab),(ab)$ vertex equation at [target.md:15](../findings/target.md#L15) is criticality's diagonal entry with $(W^{2})_{abab}=K_{ab}^{2}+R_{ab}$ expanded. It carries nothing beyond criticality; the file says this in words. Its $v\otimes v$ pairing is likewise criticality contracted, and all content sits in the combinatorial expansion of $(W^{\#})_{abab}$, which is why the route had to close on frame-dependence rather than on sign.
-- The $\xi$-Gram form at [target.md:302](../findings/target.md#L302): since $\operatorname{tr}(WM)=-16\langle Q(W),W\rangle$, the displayed inequality is Conjecture A transcribed. The file grades it correctly as "neither easier nor harder".
+- The $\xi$-Gram form at [target.md:302](../findings/target.md#L302): since $\mathop{\mathrm{tr}}(WM)=-16\langle Q(W),W\rangle$, the displayed inequality is Conjecture A transcribed. The file grades it correctly as "neither easier nor harder".
 - $\mathrm{CD}_n$ restricted to the target set reading as the target verbatim, [target.md:220](../findings/target.md#L220). Honestly labelled.
 
 ---
@@ -178,7 +178,7 @@ Not part of the elimination brief, but found in the same pass and cheap to fix. 
 |---|---|---|---|
 | Lemma L37 | "What survives, because it was verified directly rather than taken from" | [target.md:394](../findings/target.md#L394), the $(\mathfrak{su}(m),\mathfrak{so}(m))$ family | **wrong**, the $\Phi_W$ argument is at [target.md:519](../findings/target.md#L519) |
 | Lemma L39 | "...generalises to EV" | [target.md:348](../findings/target.md#L348) | correct |
-| Observation L40 | "The totally-summed vertex equation is an identity, and the reason is p" | [target.md:25](../findings/target.md#L25), the $\operatorname{tr}(W^{\#})$ identity | **wrong**, the census bound is at [target.md:436](../findings/target.md#L436) |
+| Observation L40 | "The totally-summed vertex equation is an identity, and the reason is p" | [target.md:25](../findings/target.md#L25), the $\mathop{\mathrm{tr}}(W^{\#})$ identity | **wrong**, the census bound is at [target.md:436](../findings/target.md#L436) |
 | Lemma L41 | "The magnitude is convention-dependent; the sign is not" | [target.md:334](../findings/target.md#L334) | correct |
 | Lemma L45 | "What fence post F29 closes, and what it leaves open" | [target.md:79](../findings/target.md#L79), the vertex equation | **wrong**, and the off-slice $R=cI+Y+W$ argument appears nowhere in this file |
 | Lemma L49 | "The diagonal proof's ENGINE lifts... and its corr" | [target.md:9](../findings/target.md#L9), the vertex equation | **wrong**, and the collapse-space argument appears nowhere in this file |
@@ -198,7 +198,7 @@ Three headings are also duplicated by a concatenation bug, at [target.md:85](../
 Checked by substitution or by symbolic re-derivation; nothing collapses.
 
 - The criticality-is-a-hypothesis refutation ([target.md:287](../findings/target.md#L287)), a dimension count, $834$ against $54$, with a non-critical perturbation as the witness. Sound.
-- $W\#I=-W$ for every Weyl tensor, and $\operatorname{tr}(W^{\#})=-\lVert W\rVert^{2}$ derived from it by symmetry of $\mathrm{tri}$.
+- $W\#I=-W$ for every Weyl tensor, and $\mathop{\mathrm{tr}}(W^{\#})=-\lVert W\rVert^{2}$ derived from it by symmetry of $\mathrm{tri}$.
 - The sum law $1/\theta^{2}=1/\theta_1^{2}+1/\theta_2^{2}$, including that criticality of the sum forces criticality of each summand. Re-derived: $a^{2}Q(W_1)=\theta aW_1$ gives $Q(W_1)=(\theta/a)W_1$.
 - $\theta^{2}(S^{p}\times S^{q})=\frac{2(p-1)(q-1)(n-1)}{pq(n-2)}$, and its specialisation at $p=q=n/2$ to $\theta_0(n)^{2}=2(n-1)(n-2)/n^{2}$. Verified symbolically; the balanced product attains the cap identically.
 - $\theta_0(2k)^{2}=2-3/k+1/k^{2}$ for $(\mathfrak{so}(2k),\mathfrak{so}(k)+\mathfrak{so}(k))$, and the crossing of $3/2$ between $k=5$ and $k=6$.

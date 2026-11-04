@@ -139,7 +139,7 @@ So $-\tfrac38\theta<0$ is the no-corrector value and $0$ is the optimised one, a
 
 The fusion rule needs $\langle Bu,y\rangle=\langle u,By\rangle$, hence $L_W$ self-adjoint, hence $T(x,y,z)=T(x,z,y)$. **In L51 this is a stated hypothesis**, so the step is licensed. It is also what makes $\lambda_{\max}$ well defined in the guard, and what makes $B$ preserve $W^\perp$, used twice more in D1 and D2.
 
-The instantiation at $\mathcal W_n$ is inside the hypotheses: $O(n)$ acts orthogonally, $P=\langle W,Q(W)\rangle$ is invariant, and total symmetry of $T$ is proved in [Lemma L24](../findings/second-order.md#L62)'s Argument (the $W^2$ part as the symmetrisation of $\operatorname{tr}(XYZ)$, the $\#$ part by the total antisymmetry of the structure constants). I checked the consumers by grepping the statement rather than the identifier; none applies the abstract lemma in a setting where either hypothesis is unverified.
+The instantiation at $\mathcal W_n$ is inside the hypotheses: $O(n)$ acts orthogonally, $P=\langle W,Q(W)\rangle$ is invariant, and total symmetry of $T$ is proved in [Lemma L24](../findings/second-order.md#L62)'s Argument (the $W^2$ part as the symmetrisation of $\mathop{\mathrm{tr}}(XYZ)$, the $\#$ part by the total antisymmetry of the structure constants). I checked the consumers by grepping the statement rather than the identifier; none applies the abstract lemma in a setting where either hypothesis is unverified.
 
 ## 5. The Statement understates its own file
 

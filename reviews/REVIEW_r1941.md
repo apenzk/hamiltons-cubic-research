@@ -25,7 +25,7 @@ One step the proof leaves tacit: $\pi_D$ of a Weyl tensor is its coordinate-diag
 
 The written chain is right but loose ("built from $\varphi_\alpha\varphi_\beta^{\mathsf T}\varphi_\gamma\cdots$"). A proof in two lines:
 
-- $\varphi_\alpha\odot\varphi_\beta=\tfrac12\big[(\varphi_\alpha+\varphi_\beta)(\varphi_\alpha+\varphi_\beta)^{\mathsf T}-(\varphi_\alpha-\varphi_\beta)(\varphi_\alpha-\varphi_\beta)^{\mathsf T}\big]$ up to the record's normalisation of $\odot$, so $\nu=\sum_i\epsilon_iv_iv_i^{\mathsf T}$ with every $v_i\in\mathfrak{so}(U)=\Lambda^2\operatorname{span}\{f_i:i\in U\}$.
+- $\varphi_\alpha\odot\varphi_\beta=\tfrac12\big[(\varphi_\alpha+\varphi_\beta)(\varphi_\alpha+\varphi_\beta)^{\mathsf T}-(\varphi_\alpha-\varphi_\beta)(\varphi_\alpha-\varphi_\beta)^{\mathsf T}\big]$ up to the record's normalisation of $\odot$, so $\nu=\sum_i\epsilon_iv_iv_i^{\mathsf T}$ with every $v_i\in\mathfrak{so}(U)=\Lambda^2\mathop{\mathrm{span}}\{f_i:i\in U\}$.
 - $\nu^2=\sum\epsilon_i\epsilon_j\langle v_i,v_j\rangle v_iv_j^{\mathsf T}$ and $\nu\#\nu=\tfrac12\sum\epsilon_i\epsilon_j[v_i,v_j][v_i,v_j]^{\mathsf T}$ by bilinearity of $\#$. $\mathfrak{so}(U)$ is a subalgebra, since $[\varphi_{ab},\varphi_{cd}]$ is zero or $\pm\varphi$ on the symmetric difference, whose indices lie in $\{a,b,c,d\}$. So $Q(\nu)$ maps $\mathfrak{so}(n)$ into $\mathfrak{so}(U)$ and kills $\mathfrak{so}(U)^\perp$.
 
 The bracket question the brief raises has answer no: a bracket of two bivectors in $\mathfrak{so}(U)$ never produces an index outside $U$. So $\pi_D(\nu\circ\nu)$, the diagonal part of $Q(\nu)$, sits on pairs inside $U$, and by item 1 so does $\hat A$. $W=a\hat A+b\nu$ is then an operator on $\mathfrak{so}(U)$ extended by zero. Note the conclusion uses pairs *inside* $U$, a set that can be larger than the set of pairs occurring in $\nu$. That is harmless.
@@ -76,7 +76,7 @@ What the batch needs is weaker than equality: $M(6)<\theta_0(n)$ for $n\ge12$, i
 ## 8. Record search
 
 - **The general reduction is new.** Batch 6 (2) is its instance for one four-set, and [L220](../findings/second-order.md) step 2 computes $\nu\circ\nu\in\Pi_Q$ for one block. Neither states the $U$-reduction for arbitrary $\nu$. [support-dichotomy.md](../findings/support-dichotomy.md) is about $\circ$-decomposition, with no padding. [L61](../findings/sym3-blocks.md)'s review notes that "no maximiser has 5-dimensional support" is "a statement the record does not make". Batch 8 at $\lvert U\rvert\le5$ makes the critical-point, $R=0$ version of it.
-- **L224** (one pair block, $\sup P=\Theta_n$) needs no padding, and it is compatible: a pair character $\{j,k\}$ touches $j,k$ and every $i$ with $x_i\ne0$, so padding caps it only when $\lvert\operatorname{supp}x\rvert\le3$.
+- **L224** (one pair block, $\sup P=\Theta_n$) needs no padding, and it is compatible: a pair character $\{j,k\}$ touches $j,k$ and every $i$ with $x_i\ne0$, so padding caps it only when $\lvert\mathop{\mathrm{supp}}x\rvert\le3$.
 - **The [I121 note](2026-09-28-I121-MG-audit.md)** (lines 64–65) locates $W$ in $\mathcal D_n\oplus\bigoplus V_S$ and lists L220, L221 and L224 as the bounded cases. It has no padding argument.
 - **The [I104 note](2026-09-14-I104-tau-positive.md)** works with $D\in\mathcal D_n$ throughout and has no $R=0$ reduction.
 - Classification: **new**, generalising batch 6 (2). The I104 corollary at $\tau\le0$ agrees with L221(b), and at $\tau>0$ it is new and conditional on $M(6)$.

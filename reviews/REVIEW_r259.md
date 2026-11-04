@@ -11,7 +11,7 @@ Every number below comes from a code path that shares nothing with the reviewed 
 | 1 | The leg count, and which algebra acts | **NOT INCONSISTENT, AND THE TABLE IS A CATEGORY ERROR.** $f=12$ governs the algebra acting on $V^{\otimes12}$; $r=6$ governs the *invariant functionals* on $V^{\otimes12}$, the $\lambda=\varnothing$ block alone. Different objects, both right. But the findings table sets their "slack" side by side, and applied to the algebra the theorem actually uses Lehrer–Zhang reads $r=12\le n$, **zero** slack, tighter than Rui's. For a covariant into a block of label $\lambda$ the honest count is $r=6+|\lambda|/2$, running to $12$ |
 | 2 | Rui's criterion as quoted | **CONFIRMED, inequality, direction and sharpness.** Andersen–Stroppel–Tubbenhauer Theorem 7.1(3) states it as $d\le\delta_0+1$ for $\delta_0=\lvert\delta\rvert\ne0$ in characteristic zero, which is $n\ge f-1$ verbatim. Independently reproduced by the trace form at $f=2\dots5$, $n=1\dots8$, **both directions**, boundaries included, and the same computation rediscovers the literature's own exception clause at $n=0$. Two misquotes in the note, neither load-bearing |
 | 3 | Step (ii), and what semisimplicity buys | **THE CONCLUSION THE ROUTE USES IS UNCONDITIONAL; THE THRESHOLD IS DECORATION.** $M_\lambda$ is an irreducible module over the **image** at every $n$, by the double centraliser plus the surjectivity half, no inequality enters. Demonstrated below the threshold: at $(f,n)=(6,3)$, where $B_6(3)$ is **not** semisimple, one seed still generates all $15$ dimensions of $M_\varnothing$. "The binding constraint of the whole route" is **refuted**; the *literal* statement (ii) is honest at $n\ge11$, and injectivity, which nothing here needs, would want $n\ge12$ |
-| 4 | Step (iii), the projector | **CONFIRMED, wording loose in one place.** Surjectivity is unconditional at every $n$ (ASWT Theorem 3.17(b)), so $e\in\nu(B_{12}(n))$, as a *combination* of diagrams, not "a diagram element". The composition is well defined because $e$ preserves isotypic components, and $e\,M_\lambda=\operatorname{Hom}_{O(n)}(V_\lambda,\mathrm{Sym}^3\mathrm{Weyl}_n)$ exactly. The seed need not lie in the covariant space: verified with a seed $e$ **annihilates** |
+| 4 | Step (iii), the projector | **CONFIRMED, wording loose in one place.** Surjectivity is unconditional at every $n$ (ASWT Theorem 3.17(b)), so $e\in\nu(B_{12}(n))$, as a *combination* of diagrams, not "a diagram element". The composition is well defined because $e$ preserves isotypic components, and $e\,M_\lambda=\mathop{\mathrm{Hom}}_{O(n)}(V_\lambda,\mathrm{Sym}^3\mathrm{Weyl}_n)$ exactly. The seed need not lie in the covariant space: verified with a seed $e$ **annihilates** |
 | 5 | The identity and its admissibility filter | **BOTH CORRECT; THE RUN UNDER-TESTS ITS OWN THRESHOLD.** Every reported number reproduces. But "exactly ONE sub-threshold failure" is an artefact of starting $n$ at $2$: $(3,1)$ and $(4,1)$ fail too, and $f=5$ adds $(5,3)$, $(5,2)$, $(5,1)$, **five more**. The universal identity is $\sum_\lambda m_\lambda(n)^2$ over *restricted* up–down tableaux, which matches the rank at all $40$ pairs tested; the cell-module form agrees with it exactly when $n\ge f-1$. And at $f=12$ itself the two part company at every $n\le10$ and agree at every $n\ge11$ |
 | 6 | Option (b)'s dependency audit | **ITS CENTRAL CLAIM IS REFUTED, AND THE FILE CONTRADICTS ITSELF FOUR PARAGRAPHS APART.** Theorem 3.4 cannot supply A2″'s hypothesis, for a reason the same file states: the covariants are not known to be the $\gamma_D$. Two further gaps, the hypothesis is root-freeness on a **real interval**, which a theorem about integer dimensions cannot give, and $r=6$ is the wrong count for a covariant. The r244 citation inverts r244's own reading. All three asserts are constant-folded |
 
@@ -21,11 +21,11 @@ Every number below comes from a code path that shares nothing with the reviewed 
 
 Evidence: [r259_claim6.py](../scripts/reviewers/r259/r259_claim6.py) part (3), [out_claim6.txt](../scripts/reviewers/r259/out_claim6.txt).
 
-**Two statements, two algebras, no contradiction.** Lehrer–Zhang Theorem 3.4's basis half is quoted in the record as: *"If $r\le n$, the $\gamma_D$ form a basis of the space of $O(V)$-invariants on $(V^{\otimes2r})^*$."* Invariants on $V^{\otimes12}$ means $2r=12$, $r=6$, and that is correct. The theorem's $f=12$ is the number of legs $B_f(n)$ acts on in $\operatorname{End}(V^{\otimes12})$, and that is correct too. The isomorphism $B_r(n)\cong\{\gamma_D\text{ on }V^{\otimes2r}\}$ is the bend, and $\dim B_6(n)=11!!=10395$ is the dimension of the invariant space on $12$ legs, so both numbers are describing the same $12$ legs from two ends. **The record is not inconsistent.**
+**Two statements, two algebras, no contradiction.** Lehrer–Zhang Theorem 3.4's basis half is quoted in the record as: *"If $r\le n$, the $\gamma_D$ form a basis of the space of $O(V)$-invariants on $(V^{\otimes2r})^*$."* Invariants on $V^{\otimes12}$ means $2r=12$, $r=6$, and that is correct. The theorem's $f=12$ is the number of legs $B_f(n)$ acts on in $\mathop{\mathrm{End}}(V^{\otimes12})$, and that is correct too. The isomorphism $B_r(n)\cong\{\gamma_D\text{ on }V^{\otimes2r}\}$ is the bend, and $\dim B_6(n)=11!!=10395$ is the dimension of the invariant space on $12$ legs, so both numbers are describing the same $12$ legs from two ends. **The record is not inconsistent.**
 
 **What the table gets wrong is the comparison.** [findings/brauer-pairing.md](../findings/brauer-pairing.md) puts the two side by side under a column headed *slack at $n=12$* (six dimensions against one) and concludes Rui's is "the binding constraint of the route". Two different constraints on two different objects have no common scale, and the ranking does not survive being made honest:
 
-- **Applied to the algebra the theorem uses**, Lehrer–Zhang (equivalently ASWT Theorem 3.17(b): $\Phi_{Br}:B_d(\delta)\to\operatorname{End}(T_n^d)$ is an isomorphism *if $n\ge d$*) reads $12\le n$. At $n=12$ that is **zero** slack, which is tighter than Rui's one.
+- **Applied to the algebra the theorem uses**, Lehrer–Zhang (equivalently ASWT Theorem 3.17(b): $\Phi_{Br}:B_d(\delta)\to\mathop{\mathrm{End}}(T_n^d)$ is an isomorphism *if $n\ge d$*) reads $12\le n$. At $n=12$ that is **zero** slack, which is tighter than Rui's one.
 - **Applied to the covariants**, $r=6$ covers only $\lambda=\varnothing$. A covariant into a block of label $\lambda$ is a map $V^{\otimes12}\to V_\lambda$; pairing against $V_\lambda\subset V^{\otimes|\lambda|}$ makes it an invariant functional on $V^{\otimes(12+|\lambda|)}$, so Theorem 3.4 wants $r=6+|\lambda|/2$. The labels of $V^{\otimes12}$ have $|\lambda|\in\{0,2,\dots,12\}$:
 
 | $\lvert\lambda\rvert$ | 0 | 2 | 4 | 6 | 8 | 10 | 12 |
@@ -53,7 +53,7 @@ $d\le\delta_0+1$ **is** $n\ge f-1$. The inequality in the note is right, it is a
 
 ### The independent verification
 
-Dickson's criterion, over a characteristic-zero field an algebra is semisimple iff the trace form of its regular representation is nondegenerate, decides this without any of the cell-module theory. I built the Brauer multiplication table from the diagrams (composition verified: associativity on 300 random triples, closure, $e^2=\delta e$, $s^2=1$), formed $T(D,D')=\operatorname{tr}(L_{DD'})$ and ranked it:
+Dickson's criterion, over a characteristic-zero field an algebra is semisimple iff the trace form of its regular representation is nondegenerate, decides this without any of the cell-module theory. I built the Brauer multiplication table from the diagrams (composition verified: associativity on 300 random triples, closure, $e^2=\delta e$, $s^2=1$), formed $T(D,D')=\mathop{\mathrm{tr}}(L_{DD'})$ and ranked it:
 
 | $f$ | $\dim B_f$ | trace-form rank at $n=0,1,2,3,4,5$ | semisimple exactly at |
 |---|---|---|---|
@@ -79,19 +79,19 @@ Evidence: [r259_seed_span.py](../scripts/reviewers/r259/r259_seed_span.py), [out
 
 ### The derivation
 
-$V$ is a semisimple $O(n)$-module in characteristic zero, so $V^{\otimes f}=\bigoplus_\lambda V_\lambda\otimes M_\lambda$ with $M_\lambda=\operatorname{Hom}_{O(n)}(V_\lambda,V^{\otimes f})$, and the double centraliser gives
+$V$ is a semisimple $O(n)$-module in characteristic zero, so $V^{\otimes f}=\bigoplus_\lambda V_\lambda\otimes M_\lambda$ with $M_\lambda=\mathop{\mathrm{Hom}}_{O(n)}(V_\lambda,V^{\otimes f})$, and the double centraliser gives
 
-$$\operatorname{End}_{O(n)}(V^{\otimes f})=\bigoplus_\lambda\operatorname{End}(M_\lambda).$$
+$$\mathop{\mathrm{End}}_{O(n)}(V^{\otimes f})=\bigoplus_\lambda\mathop{\mathrm{End}}(M_\lambda).$$
 
-By the **surjectivity** half of the SFT that algebra *is* $\nu(B_f(n))$. So each $M_\lambda$ is a simple module over $\nu(B_f(n))$ (**at every $n$, with no inequality anywhere in the argument**) and therefore $\operatorname{span}\{\nu(D)c_0:D\}=M_\lambda$ for any nonzero $c_0\in M_\lambda$.
+By the **surjectivity** half of the SFT that algebra *is* $\nu(B_f(n))$. So each $M_\lambda$ is a simple module over $\nu(B_f(n))$ (**at every $n$, with no inequality anywhere in the argument**) and therefore $\mathop{\mathrm{span}}\{\nu(D)c_0:D\}=M_\lambda$ for any nonzero $c_0\in M_\lambda$.
 
-The brief's dichotomy is the right question and the answer is *neither*. The multiplicity space is a module over the image, as the brief says; irreducibility over the image is free; injectivity of $\nu$ is not needed. What semisimplicity of $B_f(n)$ buys is the stronger *identification* $M_\lambda\cong\Delta_\lambda$, a semisimple algebra is $\bigoplus_\lambda\operatorname{End}(\Delta_\lambda)$, any quotient is a sub-sum of those blocks, so for the surviving $\lambda$ the multiplicity space is the cell module on the nose. **The route uses only "generated by any nonzero vector", which is the free half.**
+The brief's dichotomy is the right question and the answer is *neither*. The multiplicity space is a module over the image, as the brief says; irreducibility over the image is free; injectivity of $\nu$ is not needed. What semisimplicity of $B_f(n)$ buys is the stronger *identification* $M_\lambda\cong\Delta_\lambda$, a semisimple algebra is $\bigoplus_\lambda\mathop{\mathrm{End}}(\Delta_\lambda)$, any quotient is a sub-sum of those blocks, so for the surviving $\lambda$ the multiplicity space is the cell module on the nose. **The route uses only "generated by any nonzero vector", which is the free half.**
 
 ### The demonstration, below the threshold
 
 $\lambda=\varnothing$ makes everything computable: $M_\varnothing$ is the invariant subspace of $V^{\otimes f}$. I take the seed $c_0=\delta_{12}\delta_{34}\cdots$, apply every Brauer diagram, and rank the result.
 
-| $f$ | $n$ | $B_f(n)$ semisimple | $\dim M_\varnothing$ | $\operatorname{span}\{\nu(D)c_0\}$ |
+| $f$ | $n$ | $B_f(n)$ semisimple | $\dim M_\varnothing$ | $\mathop{\mathrm{span}}\{\nu(D)c_0\}$ |
 |---|---|---|---|---|
 | 4 | 2 | **no** ($2<3$) | 3 | **3** |
 | 4 | 3, 4, 5 | yes | 3 | 3 |
@@ -114,13 +114,13 @@ So the theorem's stated $n\ge11$ is honest for the sentence it is attached to. W
 
 Evidence: same script.
 
-**Surjectivity is unconditional, in the exact form needed.** ASWT Theorem 3.17(b), type $B_m$: $\Phi_{Br}:B_d(\delta)\twoheadrightarrow\operatorname{End}_{U}(T_n^d)$, with the isomorphism clause carrying the extra hypothesis $n\ge d$ and the surjection carrying none. $T_n^d=V^{\otimes d}$ and $d=f=12$, $n=12$, so it applies as used. This is the classical first fundamental theorem and it has no threshold.
+**Surjectivity is unconditional, in the exact form needed.** ASWT Theorem 3.17(b), type $B_m$: $\Phi_{Br}:B_d(\delta)\twoheadrightarrow\mathop{\mathrm{End}}_{U}(T_n^d)$, with the isomorphism clause carrying the extra hypothesis $n\ge d$ and the surjection carrying none. $T_n^d=V^{\otimes d}$ and $d=f=12$, $n=12$, so it applies as used. This is the classical first fundamental theorem and it has no threshold.
 
 **Therefore $e\in\nu(B_{12}(n))$**, since $\mathrm{Sym}^3(\mathrm{Weyl}_n)$ is an $O(n)$-submodule of $V^{\otimes12}$ and the projector onto it along its orthogonal complement is $O(n)$-equivariant. Then $e=\nu(b)$ and $e\,\nu(D)=\nu(bD)$, as claimed.
 
 **One wording defect.** [findings/brauer-pairing.md](../findings/brauer-pairing.md) says *"Step 3 needs $e$ itself to be a diagram element, and it is"*. $e$ lies in the **span** of the diagram images; it is a linear combination, not a diagram. The argument is unaffected ($\nu(B)$ is closed under multiplication either way) but the item this theorem replaces is *"exhibit the covariants over Brauer diagrams"*, where the distinction between a diagram and a combination of them is the entire currency.
 
-**The composition is well defined.** $e$ commutes with $O(n)$, so it preserves the isotypic decomposition and restricts to an endomorphism of each $M_\lambda$; $\mathrm{Sym}^3(\mathrm{Weyl}_n)$ being a direct summand gives $e\,M_\lambda=\operatorname{Hom}_{O(n)}(V_\lambda,\mathrm{Sym}^3\mathrm{Weyl}_n)$, the block's covariant space, exactly. Composing with $\operatorname{span}\{\nu(D)c_0\}=M_\lambda$ gives the spanning claim.
+**The composition is well defined.** $e$ commutes with $O(n)$, so it preserves the isotypic decomposition and restricts to an endomorphism of each $M_\lambda$; $\mathrm{Sym}^3(\mathrm{Weyl}_n)$ being a direct summand gives $e\,M_\lambda=\mathop{\mathrm{Hom}}_{O(n)}(V_\lambda,\mathrm{Sym}^3\mathrm{Weyl}_n)$, the block's covariant space, exactly. Composing with $\mathop{\mathrm{span}}\{\nu(D)c_0\}=M_\lambda$ gives the spanning claim.
 
 **The seed need not lie in the covariant space, and the check is arranged so it does not.** Every row above uses $c_0=\delta_{12}\delta_{34}\cdots$ with $e=A_{12}A_{34}\cdots$ the product of antisymmetrisers (a stand-in for the Weyl projector with the same equivariance) and $e\,c_0=0$ at every row. The projected seeds still span $e\,M_\varnothing$ in full. **A seed annihilated by the projector still generates the projector's image.**
 
@@ -132,7 +132,7 @@ Evidence: [r259_brauer.py](../scripts/reviewers/r259/r259_brauer.py) parts (A), 
 
 ### Is the identity correct?
 
-Yes, in this direction. Semisimplicity gives $B_f(n)=\bigoplus_\lambda\operatorname{End}(\Delta_\lambda)$; the image is a quotient, hence a sub-sum; the surviving labels are the $O(n)$-admissible ones; so $\dim\nu(B_f(n))=\sum_{\lambda\text{ adm}}(\dim\Delta_\lambda)^2$. The converse does not hold, so a match is consistent with semisimplicity rather than evidence of it, which is why claim 2 is settled by the trace form instead.
+Yes, in this direction. Semisimplicity gives $B_f(n)=\bigoplus_\lambda\mathop{\mathrm{End}}(\Delta_\lambda)$; the image is a quotient, hence a sub-sum; the surviving labels are the $O(n)$-admissible ones; so $\dim\nu(B_f(n))=\sum_{\lambda\text{ adm}}(\dim\Delta_\lambda)^2$. The converse does not hold, so a match is consistent with semisimplicity rather than evidence of it, which is why claim 2 is settled by the trace form instead.
 
 **The identity that holds without any hypothesis** is $\dim\nu(B_f(n))=\sum_\lambda m_\lambda(n)^2$ with $m_\lambda(n)$ the number of up–down tableaux of length $f$ ending at $\lambda$ **all of whose intermediate shapes are admissible**. I computed both predictions against the Gram rank at every $(f,n)$ with $2\le f\le5$, $1\le n\le8$: the restricted count matches the rank at **all 40 pairs**, the cell-module count matches exactly where $n\ge f-1$.
 

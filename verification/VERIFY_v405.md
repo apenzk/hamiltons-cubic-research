@@ -23,21 +23,21 @@ Quoted from the brief:
 
 ## 1. Hypothesis inventory
 
-1. **Dimension-4 block form.** For $n=4$, $\Lambda^2\mathbb R^4=\Lambda^+\oplus\Lambda^-$ with orthonormal bases, and an algebraic curvature operator is $R=\begin{pmatrix}A&B\\B^{\mathrm{tr}}&C\end{pmatrix}$ with $A,C$ symmetric $3\times3$. The first Bianchi identity is $\operatorname{tr}A=\operatorname{tr}C$, the traceless Ricci part is carried by $B$, and the scalar curvature is a positive multiple of $\operatorname{tr}A+\operatorname{tr}C$. So $R$ is Weyl exactly when $B=0$ and $\operatorname{tr}A=\operatorname{tr}C=0$, and $W^+=\{\mathrm{diag}(A,0):A=A^{\mathrm{tr}},\operatorname{tr}A=0\}$. Standard (Singer–Thorpe). Checked: holds.
-2. **Frobenius inner product in these coordinates.** On block-diagonal operators with orthonormal bases of $\Lambda^\pm$, $\langle\mathrm{diag}(A,0),\mathrm{diag}(A',0)\rangle=\operatorname{tr}(AA')$. Any other orthonormalisation convention for $\Lambda^2$ rescales this by a fixed positive constant, which changes neither orthogonality nor criticality nor whether $A\circ B$ vanishes. Checked: holds.
-3. **Hamilton's formula for $\#$ in dimension 4**, Nienhaus Lemma 2.19 (citing [Ham86]): $R^\#=\begin{pmatrix}A^\#&B^\#\\(B^\#)^{\mathrm{tr}}&C^\#\end{pmatrix}$ with $A^\#=2\operatorname{adj}(A)$. **Convention match with the record.** At $R=\mathrm{id}$ ($A=C=I_3$, $B=0$) this gives $\mathrm{id}^\#=2\,\mathrm{id}=(n-2)\mathrm{id}$ and $Q(\mathrm{id})=3\,\mathrm{id}=(n-1)\mathrm{id}$, which is the halved normalisation the conventions pin. Checked: holds, so Nienhaus's $\#$ and the record's $\#$ agree at $n=4$.
-4. **Adjugate of a traceless symmetric $3\times3$ matrix.** Cayley–Hamilton gives $\operatorname{adj}(A)=A^2-(\operatorname{tr}A)A+\sigma_2(A)I$ with $\sigma_2=\tfrac12((\operatorname{tr}A)^2-\operatorname{tr}A^2)$. At $\operatorname{tr}A=0$ this is $\operatorname{adj}(A)=A^2-\tfrac12\operatorname{tr}(A^2)\,I$. Standard. Checked: holds.
+1. **Dimension-4 block form.** For $n=4$, $\Lambda^2\mathbb R^4=\Lambda^+\oplus\Lambda^-$ with orthonormal bases, and an algebraic curvature operator is $R=\begin{pmatrix}A&B\\B^{\mathrm{tr}}&C\end{pmatrix}$ with $A,C$ symmetric $3\times3$. The first Bianchi identity is $\mathop{\mathrm{tr}}A=\mathop{\mathrm{tr}}C$, the traceless Ricci part is carried by $B$, and the scalar curvature is a positive multiple of $\mathop{\mathrm{tr}}A+\mathop{\mathrm{tr}}C$. So $R$ is Weyl exactly when $B=0$ and $\mathop{\mathrm{tr}}A=\mathop{\mathrm{tr}}C=0$, and $W^+=\{\mathrm{diag}(A,0):A=A^{\mathrm{tr}},\mathop{\mathrm{tr}}A=0\}$. Standard (Singer–Thorpe). Checked: holds.
+2. **Frobenius inner product in these coordinates.** On block-diagonal operators with orthonormal bases of $\Lambda^\pm$, $\langle\mathrm{diag}(A,0),\mathrm{diag}(A',0)\rangle=\mathop{\mathrm{tr}}(AA')$. Any other orthonormalisation convention for $\Lambda^2$ rescales this by a fixed positive constant, which changes neither orthogonality nor criticality nor whether $A\circ B$ vanishes. Checked: holds.
+3. **Hamilton's formula for $\#$ in dimension 4**, Nienhaus Lemma 2.19 (citing [Ham86]): $R^\#=\begin{pmatrix}A^\#&B^\#\\(B^\#)^{\mathrm{tr}}&C^\#\end{pmatrix}$ with $A^\#=2\mathop{\mathrm{adj}}(A)$. **Convention match with the record.** At $R=\mathrm{id}$ ($A=C=I_3$, $B=0$) this gives $\mathrm{id}^\#=2\,\mathrm{id}=(n-2)\mathrm{id}$ and $Q(\mathrm{id})=3\,\mathrm{id}=(n-1)\mathrm{id}$, which is the halved normalisation the conventions pin. Checked: holds, so Nienhaus's $\#$ and the record's $\#$ agree at $n=4$.
+4. **Adjugate of a traceless symmetric $3\times3$ matrix.** Cayley–Hamilton gives $\mathop{\mathrm{adj}}(A)=A^2-(\mathop{\mathrm{tr}}A)A+\sigma_2(A)I$ with $\sigma_2=\tfrac12((\mathop{\mathrm{tr}}A)^2-\mathop{\mathrm{tr}}A^2)$. At $\mathop{\mathrm{tr}}A=0$ this is $\mathop{\mathrm{adj}}(A)=A^2-\tfrac12\mathop{\mathrm{tr}}(A^2)\,I$. Standard. Checked: holds.
 5. **The step needs no criticality beyond $Q(A)=\theta_AA$, no normalisation of $\theta$, and no symmetry of $T$.** The $\circ$ product is read directly off its defining polarisation. Checked: nothing else is used.
 
 ## 2. The argument
 
 ### 2.1 $Q$ and $\circ$ on $W^+$
 
-Let $W=\mathrm{diag}(A,0)$ with $A$ traceless symmetric. By items 3 and 4, $W^2=\mathrm{diag}(A^2,0)$ and $W^\#=\mathrm{diag}(2A^2-\operatorname{tr}(A^2)I,0)$, since $\operatorname{adj}(0)=0$ and $B^\#=0$ at $B=0$. Hence
-$$Q(W)=\mathrm{diag}\big(3A^2-\operatorname{tr}(A^2)\,I,\quad 0\big).$$
-The block is traceless, since $\operatorname{tr}(3A^2)=3\operatorname{tr}(A^2)$, so $Q(W)\in W^+$, consistent with $Q$ mapping $\mathcal W_4$ to itself. Polarising, for $V=\mathrm{diag}(A',0)$,
-$$W\circ V=\tfrac12\big(Q(W+V)-Q(W)-Q(V)\big)=\mathrm{diag}\Big(\tfrac32(AA'+A'A)-\operatorname{tr}(AA')\,I,\quad 0\Big),$$
-because $(A+A')^2-A^2-A'^2=AA'+A'A$ and $\operatorname{tr}((A+A')^2)-\operatorname{tr}A^2-\operatorname{tr}A'^2=2\operatorname{tr}(AA')$.
+Let $W=\mathrm{diag}(A,0)$ with $A$ traceless symmetric. By items 3 and 4, $W^2=\mathrm{diag}(A^2,0)$ and $W^\#=\mathrm{diag}(2A^2-\mathop{\mathrm{tr}}(A^2)I,0)$, since $\mathop{\mathrm{adj}}(0)=0$ and $B^\#=0$ at $B=0$. Hence
+$$Q(W)=\mathrm{diag}\big(3A^2-\mathop{\mathrm{tr}}(A^2)\,I,\quad 0\big).$$
+The block is traceless, since $\mathop{\mathrm{tr}}(3A^2)=3\mathop{\mathrm{tr}}(A^2)$, so $Q(W)\in W^+$, consistent with $Q$ mapping $\mathcal W_4$ to itself. Polarising, for $V=\mathrm{diag}(A',0)$,
+$$W\circ V=\tfrac12\big(Q(W+V)-Q(W)-Q(V)\big)=\mathrm{diag}\Big(\tfrac32(AA'+A'A)-\mathop{\mathrm{tr}}(AA')\,I,\quad 0\Big),$$
+because $(A+A')^2-A^2-A'^2=AA'+A'A$ and $\mathop{\mathrm{tr}}((A+A')^2)-\mathop{\mathrm{tr}}A^2-\mathop{\mathrm{tr}}A'^2=2\mathop{\mathrm{tr}}(AA')$.
 
 ### 2.2 The witness
 
@@ -46,11 +46,11 @@ $$A_0=\begin{pmatrix}2&0&0\\0&-1&0\\0&0&-1\end{pmatrix},\qquad B_0=J-I=\begin{pm
 and set $A=\tfrac1{\sqrt6}\mathrm{diag}(A_0,0)$, $B=\tfrac1{\sqrt6}\mathrm{diag}(B_0,0)$.
 
 - **In $\mathcal W_4$.** Both $A_0$ and $B_0$ are symmetric with trace $0$, so by item 1 both $A$ and $B$ are Weyl tensors (in $W^+$).
-- **Unit.** $\operatorname{tr}(A_0^2)=4+1+1=6$ and $\operatorname{tr}(B_0^2)=6$ (six off-diagonal ones), so $\lVert A\rVert=\lVert B\rVert=1$.
-- **Frobenius orthogonal.** $A_0$ is diagonal and $B_0$ has zero diagonal, so $\operatorname{tr}(A_0B_0)=\sum_i(A_0)_{ii}(B_0)_{ii}=0$, hence $\langle A,B\rangle=0$.
+- **Unit.** $\mathop{\mathrm{tr}}(A_0^2)=4+1+1=6$ and $\mathop{\mathrm{tr}}(B_0^2)=6$ (six off-diagonal ones), so $\lVert A\rVert=\lVert B\rVert=1$.
+- **Frobenius orthogonal.** $A_0$ is diagonal and $B_0$ has zero diagonal, so $\mathop{\mathrm{tr}}(A_0B_0)=\sum_i(A_0)_{ii}(B_0)_{ii}=0$, hence $\langle A,B\rangle=0$.
 - **$A$ critical.** $A_0^2=\mathrm{diag}(4,1,1)$, so $3A_0^2-6I=\mathrm{diag}(6,-3,-3)=3A_0$. By 2.1, $Q(\mathrm{diag}(A_0,0))=3\,\mathrm{diag}(A_0,0)$, and by homogeneity $Q(A)=\tfrac16\cdot3\,\mathrm{diag}(A_0,0)=\tfrac{3}{\sqrt6}A=\tfrac{\sqrt6}2A$. So $\theta_A=\tfrac{\sqrt6}2$.
 - **$B$ critical.** $J^2=3J$, so $B_0^2=J^2-2J+I=J+I$, and $3B_0^2-6I=3J-3I=3B_0$. Hence $Q(B)=\tfrac{\sqrt6}2B$ and $\theta_B=\tfrac{\sqrt6}2$.
-- **$A\circ B\ne0$.** Since $\operatorname{tr}(A_0B_0)=0$, 2.1 gives $A\circ B=\tfrac16\,\mathrm{diag}\big(\tfrac32(A_0B_0+B_0A_0),0\big)$. With $A_0=\mathrm{diag}(a)$, $(A_0B_0+B_0A_0)_{ij}=(a_i+a_j)(B_0)_{ij}$, which is $0$ on the diagonal and $a_1+a_2=1$, $a_1+a_3=1$, $a_2+a_3=-2$ off it. So
+- **$A\circ B\ne0$.** Since $\mathop{\mathrm{tr}}(A_0B_0)=0$, 2.1 gives $A\circ B=\tfrac16\,\mathrm{diag}\big(\tfrac32(A_0B_0+B_0A_0),0\big)$. With $A_0=\mathrm{diag}(a)$, $(A_0B_0+B_0A_0)_{ij}=(a_i+a_j)(B_0)_{ij}$, which is $0$ on the diagonal and $a_1+a_2=1$, $a_1+a_3=1$, $a_2+a_3=-2$ off it. So
 $$A\circ B=\tfrac14\,\mathrm{diag}\left(\begin{pmatrix}0&1&1\\1&0&-2\\1&-2&0\end{pmatrix},\,0\right)\ne0,\qquad \lVert A\circ B\rVert=\tfrac14\sqrt{2(1+1+4)}=\tfrac{\sqrt3}2=\tfrac{\theta_A}{\sqrt2}.$$
 
 So $A,B$ are critical unit elements of $\mathcal W_4$ with $\langle A,B\rangle=0$ and $A\circ B\ne0$, which is K1a at $n=4$, and K1b follows at once.

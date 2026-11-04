@@ -15,8 +15,8 @@ Cold brief ([ADJ_L115_F6.md](ADJ_L115_F6.md)). No numerical work, no scripts wri
 
 ## 0. Conventions, fixed once
 
-- $\Lambda^2=\Lambda^2\mathbb R^n\cong\mathfrak{so}(n)$, $N=\dim\Lambda^2$. The ambient space is $\mathrm{Sym}(\Lambda^2)$ with $\langle A,B\rangle=\operatorname{tr}(AB)$. It contains $\mathcal W_n\subset S^2_B\subset\mathrm{Sym}(\Lambda^2)$ and $\mathcal D$.
-- $\{v_\alpha\}$ is an orthonormal eigenbasis of $W$, $W v_\alpha=\lambda_\alpha v_\alpha$, and $E_\alpha=v_\alpha v_\alpha^{T}$. Then $\langle E_\alpha,E_\beta\rangle=\delta_{\alpha\beta}$, $\mathcal D=\operatorname{span}\{E_\alpha\}$, and $W=\sum_\alpha\lambda_\alpha E_\alpha\in\mathcal D$.
+- $\Lambda^2=\Lambda^2\mathbb R^n\cong\mathfrak{so}(n)$, $N=\dim\Lambda^2$. The ambient space is $\mathrm{Sym}(\Lambda^2)$ with $\langle A,B\rangle=\mathop{\mathrm{tr}}(AB)$. It contains $\mathcal W_n\subset S^2_B\subset\mathrm{Sym}(\Lambda^2)$ and $\mathcal D$.
+- $\{v_\alpha\}$ is an orthonormal eigenbasis of $W$, $W v_\alpha=\lambda_\alpha v_\alpha$, and $E_\alpha=v_\alpha v_\alpha^{T}$. Then $\langle E_\alpha,E_\beta\rangle=\delta_{\alpha\beta}$, $\mathcal D=\mathop{\mathrm{span}}\{E_\alpha\}$, and $W=\sum_\alpha\lambda_\alpha E_\alpha\in\mathcal D$.
 - $c'_{\alpha\beta\gamma}$ are the structure constants of $\mathfrak{so}(n)$ in the basis $\{v_\alpha\}$, totally antisymmetric because the basis is orthonormal for an ad-invariant inner product, and $c'^2_{\alpha\beta\gamma}=(c'_{\alpha\beta\gamma})^2$ is totally symmetric.
 - $Q(X)=X^2+X^\#$ on $\mathrm{Sym}(\Lambda^2)$, $X\circ Y=\tfrac12\big(Q(X+Y)-Q(X)-Q(Y)\big)=\tfrac12(XY+YX)+X\#Y$, so $X\circ X=Q(X)$. $L_X=X\circ(\cdot)$, hence $L_W=\theta L_e$ for $e=W/\theta$.
 - $\mathcal W_n^\perp$ is the orthogonal complement of $\mathcal W_n$ in $\mathrm{Sym}(\Lambda^2)$, and $W^\perp$ in Lemma L24 is the tangent space $\mathcal W_n\cap W^\perp$ of the unit sphere of $\mathcal W_n$.
@@ -25,7 +25,7 @@ Cold brief ([ADJ_L115_F6.md](ADJ_L115_F6.md)). No numerical work, no scripts wri
 ## Hypothesis inventory
 
 - **H1 (ambient).** The complement $\mathcal W_n^\perp$ in the cap is taken inside $\mathrm{Sym}(\Lambda^2)$, the space that contains $\mathcal D$. The passage supports this reading: it stresses that elements of $\mathcal D$ are "generically neither trace-free nor Bianchi".
-- **H2 ($Q$ preserves Weyl).** $Q(\mathcal W_n)\subseteq\mathcal W_n$. This is standard: $Q$ preserves $S^2_B$, and for $R\in S^2_B$ the Ricci contraction of $R^2+R^\#$ is linear in $\operatorname{Ric}(R)$ (the reaction term of Hamilton's Ricci equation in an Uhlenbeck frame), so it vanishes on Weyl tensors. The brief's own definition of a critical point, $Q(W)=\theta W$ with no projection, already uses it.
+- **H2 ($Q$ preserves Weyl).** $Q(\mathcal W_n)\subseteq\mathcal W_n$. This is standard: $Q$ preserves $S^2_B$, and for $R\in S^2_B$ the Ricci contraction of $R^2+R^\#$ is linear in $\mathop{\mathrm{Ric}}(R)$ (the reaction term of Hamilton's Ricci equation in an Uhlenbeck frame), so it vanishes on Weyl tensors. The brief's own definition of a critical point, $Q(W)=\theta W$ with no projection, already uses it.
 - **H3 (symmetry of the sharp).** $(A,B,C)\mapsto\langle A\#B,C\rangle$ is totally symmetric on $\mathrm{Sym}(\Lambda^2)$. Proved in Section 1 from total antisymmetry of $c'$.
 - **H4 (the displayed cubic on $\mathcal D$).** Passage B's identity $\langle X,Q(X)\rangle=\sum_\alpha x_\alpha^3+\tfrac12\sum c'^2_{\alpha\beta\gamma}x_\alpha x_\beta x_\gamma$ holds for every $X=\sum x_\alpha E_\alpha\in\mathcal D$. The "one line" derivation uses only that $X$ is diagonal in the frame, not criticality or the norm.
 - **H5 (the maximiser).** $W$ is a unit critical point with $\theta=P(W)>0$ that is a local maximiser, so Lemma L24 applies. A global maximiser qualifies, since $\theta=M(n)\ge\sqrt{3/2}>0$ by padded $W_{\mathbb{CP}^2}$.
@@ -33,7 +33,7 @@ Cold brief ([ADJ_L115_F6.md](ADJ_L115_F6.md)). No numerical work, no scripts wri
 
 ## 1. $L_e$ is self-adjoint (H3)
 
-The Jordan part is symmetric: for symmetric $X,Y,Z$, $\operatorname{tr}(XYZ)=\operatorname{tr}\big((XYZ)^T\big)=\operatorname{tr}(ZYX)$, and with cyclicity all six orderings of $\operatorname{tr}(XYZ)$ agree, so $\langle\tfrac12(XY+YX),Z\rangle$ is totally symmetric.
+The Jordan part is symmetric: for symmetric $X,Y,Z$, $\mathop{\mathrm{tr}}(XYZ)=\mathop{\mathrm{tr}}\big((XYZ)^T\big)=\mathop{\mathrm{tr}}(ZYX)$, and with cyclicity all six orderings of $\mathop{\mathrm{tr}}(XYZ)$ agree, so $\langle\tfrac12(XY+YX),Z\rangle$ is totally symmetric.
 
 The sharp in the frame is $(A\#B)_{\alpha\beta}=\tfrac12\sum c'_{\alpha\gamma\delta}c'_{\beta\varepsilon\eta}A_{\gamma\varepsilon}B_{\delta\eta}$, so $T_\#(A,B,C)=\tfrac12\sum c'_{\alpha\gamma\delta}c'_{\beta\varepsilon\eta}A_{\gamma\varepsilon}B_{\delta\eta}C_{\alpha\beta}$.
 
@@ -85,7 +85,7 @@ $$\boxed{\ \lambda_{\max}\big(L_W|_{\mathcal W_n^\perp}\big)\le\theta\ }\qquad\t
 
 **The uniform form.** At a global maximiser $\theta=M(n)\ge\sqrt{3/2}$. So a bound $\lambda_{\max}(L_W|_{\mathcal W_n^\perp})\le\sqrt{3/2}$ for every unit $W$ (or only for unit global maximisers) implies the pointwise cap of H6 at every global maximiser. This is the one place the word "global" does work. The pointwise cap gives the conclusion at every local maximiser with $\theta>0$.
 
-**What else the argument uses.** Lemma L24 at level $\tfrac12$ (any level $\le1$ would do, and simplicity of the eigenvalue $1$ is unused), H2 for the invariance of $\mathcal W_n$ and for $L_eW=W$, H3 for self-adjointness, and H4 to identify $M$ with the compression. The by-product in Passage A then follows: $\operatorname{diag}M=\lambda$ gives $\lambda_\alpha=M_{\alpha\alpha}\le\lambda_{\max}(M)=\theta$.
+**What else the argument uses.** Lemma L24 at level $\tfrac12$ (any level $\le1$ would do, and simplicity of the eigenvalue $1$ is unused), H2 for the invariance of $\mathcal W_n$ and for $L_eW=W$, H3 for self-adjointness, and H4 to identify $M$ with the compression. The by-product in Passage A then follows: $\mathop{\mathrm{diag}}M=\lambda$ gives $\lambda_\alpha=M_{\alpha\alpha}\le\lambda_{\max}(M)=\theta$.
 
 ## 5. Arguing the opposite: where a reading fails
 

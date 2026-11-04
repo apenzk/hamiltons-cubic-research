@@ -64,7 +64,7 @@ The three negative $\theta$ values that do appear in the record -- $-1.2247$ in 
 
 ### Two corrections to 5ba3fbd's own account
 
-**"theta is CUBIC ... only a CUBIC quantity sees it" is the wrong invariant.** What $W\mapsto-W$ preserves is *even* degree; what it flips is *odd*. Degree one flips too: the $\Lambda^2$ spectrum $\mu$, the $S^2_0$ spectrum $\omega$, the NPW diagonal $d$, $\min\omega$, the vertex matrix $K_{ab}$. `evaluate()` returns $\mu$ and $\omega$ to its callers and they were negated for the whole programme alongside $\theta$; the commit message and the in-file comment both name only $\theta$. The screens that are genuinely blind are the even ones -- $\lvert W\rvert$, $\operatorname{tr}(\mathring W^2)$ -- plus the linear ones (Ricci, Bianchi) which vanish identically and so cannot discriminate.
+**"theta is CUBIC ... only a CUBIC quantity sees it" is the wrong invariant.** What $W\mapsto-W$ preserves is *even* degree; what it flips is *odd*. Degree one flips too: the $\Lambda^2$ spectrum $\mu$, the $S^2_0$ spectrum $\omega$, the NPW diagonal $d$, $\min\omega$, the vertex matrix $K_{ab}$. `evaluate()` returns $\mu$ and $\omega$ to its callers and they were negated for the whole programme alongside $\theta$; the commit message and the in-file comment both name only $\theta$. The screens that are genuinely blind are the even ones -- $\lvert W\rvert$, $\mathop{\mathrm{tr}}(\mathring W^2)$ -- plus the linear ones (Ricci, Bianchi) which vanish identically and so cannot discriminate.
 
 **"printed it for the whole programme" overstates the damage.** It printed it; the record never adopted it. The programme's odd-degree numbers came from the ten sibling builders and from closed forms, all of which had the right sign. The correct statement is that the catalogue's printout disagreed with the rest of the repository for the whole programme and nobody reconciled them -- which is a process failure rather than a mathematical one, and the fix for it is a cross-check, not a comment.
 
@@ -156,7 +156,7 @@ $W_{ikjl}=-W_{iklj}$ by antisymmetry in the last pair, so the two operators are 
 
 ### Ricci-flatness is necessary and sufficient, with the deficit in closed form
 
-Split $\mathrm{Sym}^2=\mathbb R\hat g\oplus S^2_0$ and write $\mathring R=\begin{pmatrix}a&v^{\mathsf T}\\ v&B\end{pmatrix}$, $a=\langle\hat g,\mathring R\hat g\rangle$, $v=P\mathring R\hat g$. Then $\operatorname{tr}(\mathring R^2)=a^2+2\lvert v\rvert^2+\operatorname{tr}(B^2)$, and Bianchi gives $\operatorname{tr}(\mathring R^2)=\tfrac34\lvert R\rvert^2$ on full $\mathrm{Sym}^2$ for every algebraic curvature tensor. So
+Split $\mathrm{Sym}^2=\mathbb R\hat g\oplus S^2_0$ and write $\mathring R=\begin{pmatrix}a&v^{\mathsf T}\\ v&B\end{pmatrix}$, $a=\langle\hat g,\mathring R\hat g\rangle$, $v=P\mathring R\hat g$. Then $\mathop{\mathrm{tr}}(\mathring R^2)=a^2+2\lvert v\rvert^2+\mathop{\mathrm{tr}}(B^2)$, and Bianchi gives $\mathop{\mathrm{tr}}(\mathring R^2)=\tfrac34\lvert R\rvert^2$ on full $\mathrm{Sym}^2$ for every algebraic curvature tensor. So
 
 $$p_2(S^2_0)=\tfrac34\lvert R\rvert^2-\big(a^2+2\lvert v\rvert^2\big),\qquad\text{equality}\iff \mathring R(\hat g)=0\iff\mathrm{Ric}=0 .$$
 

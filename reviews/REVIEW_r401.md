@@ -27,7 +27,7 @@
 
 ## 0. The family, re-derived cold
 
-$M_{ab}=\alpha$ within $F_1$ ($\lvert F_1\rvert=p$), $\beta$ within $F_2$ ($\lvert F_2\rvert=q$), $\gamma$ across, $n=p+q$, $D=n-1$. Zero row sums give $(p-1)\alpha+q\gamma=0$ and $(q-1)\beta+p\gamma=0$; cross criticality collapses to $\gamma(1-n)=\theta$; $\operatorname{tr}M^2=2$ closes it:
+$M_{ab}=\alpha$ within $F_1$ ($\lvert F_1\rvert=p$), $\beta$ within $F_2$ ($\lvert F_2\rvert=q$), $\gamma$ across, $n=p+q$, $D=n-1$. Zero row sums give $(p-1)\alpha+q\gamma=0$ and $(q-1)\beta+p\gamma=0$; cross criticality collapses to $\gamma(1-n)=\theta$; $\mathop{\mathrm{tr}}M^2=2$ closes it:
 
 $$\gamma=-\frac\theta D,\qquad \alpha=\frac{\theta q}{D(p-1)},\qquad \beta=\frac{\theta p}{D(q-1)},\qquad \theta^2=\frac{2(n-1)(p-1)(q-1)}{pq(n-2)} .$$
 
@@ -51,7 +51,7 @@ Reproduces $\theta=1.263631$ at $(5,43)$ and $m_4=6\alpha^2=0.501203$ on a $(4,0
 
 **One wording correction that has propagated.** *"$\sigma^2=6m_4$ makes it vacuous"* ([ATTEMPTS.md](../ATTEMPTS.md) and [plan.md](../plan.md)) is defensible only under the reading *"the criterion then says nothing about $m_4$"*. Under the natural reading it inverts the difficulty: at $\sigma^2=6m_4$ the bound is $0<\theta^2$, which is the clause **automatically satisfied**, the best case available, and (at a $(4,0)$ set), *exact*, since $\Sigma=0$ there too.
 
-**A calibration the record does not have, for the $\sigma=0$ branch.** Take $n=4$ with $M$ the $\mathbb Z_2\times\mathbb Z_2$ Cayley matrix, $M_{12}=M_{34}=a$, $M_{13}=M_{24}=b$, $M_{14}=M_{23}=c$. Zero row sums give $a+b+c=0$; $\operatorname{tr}M^2=2$ gives $a^2+b^2+c^2=\tfrac12$; criticality collapses to $3x^2-\tfrac12=\theta x$ for each of $a,b,c$, so at most two values occur, forcing $a=b=-\tfrac1{2\sqrt3}$, $c=\tfrac1{\sqrt3}$ (up to sign) and $\theta=\tfrac{\sqrt3}2=0.866025$. **Its single four-set has $\sigma=0$, $m_4=1$, and $3m_4-\tfrac12\sigma^2=3>\theta^2=\tfrac34$**, the clause fails by a factor of $4$. This is $n=4$, so it is no counterexample to a clause stated at $n\ge12$; what it establishes is that **the $\sigma=0$ branch is false without the band**, so any proof of $m_4<\theta^2/3$ must consume $\theta\ge\sqrt{3/2}$ and cannot be an unconditional mass estimate.
+**A calibration the record does not have, for the $\sigma=0$ branch.** Take $n=4$ with $M$ the $\mathbb Z_2\times\mathbb Z_2$ Cayley matrix, $M_{12}=M_{34}=a$, $M_{13}=M_{24}=b$, $M_{14}=M_{23}=c$. Zero row sums give $a+b+c=0$; $\mathop{\mathrm{tr}}M^2=2$ gives $a^2+b^2+c^2=\tfrac12$; criticality collapses to $3x^2-\tfrac12=\theta x$ for each of $a,b,c$, so at most two values occur, forcing $a=b=-\tfrac1{2\sqrt3}$, $c=\tfrac1{\sqrt3}$ (up to sign) and $\theta=\tfrac{\sqrt3}2=0.866025$. **Its single four-set has $\sigma=0$, $m_4=1$, and $3m_4-\tfrac12\sigma^2=3>\theta^2=\tfrac34$**, the clause fails by a factor of $4$. This is $n=4$, so it is no counterexample to a clause stated at $n\ge12$; what it establishes is that **the $\sigma=0$ branch is false without the band**, so any proof of $m_4<\theta^2/3$ must consume $\theta\ge\sqrt{3/2}$ and cannot be an unconditional mass estimate.
 
 ## 2. The margin, confirmed, and it is a theorem on the family, not a screen
 
@@ -75,7 +75,7 @@ Every $(4,0)$ and $(0,4)$ set gives exactly $0$. The $(2,2)$ sets give $\big[\tf
 
 $$\sum_{a\in S}s_a=\sum_{a\in S}\Big[\sum_{b\in S}M_{ab}^2+\sum_{c\notin S}M_{ac}^2\Big]=2m_4+E,\qquad E=\!\!\sum_{a\in S,\,c\notin S}\!\!M_{ac}^2\ge0 .$$
 
-**Direction and constant confirmed, equality iff $E=0$**, iff $S$ is a union of connected components of $\operatorname{supp}M$. ✓ *Absent from [findings/](../findings/) (grep), but it is a double-counting identity, so the novelty is bookkeeping and not mathematics.*
+**Direction and constant confirmed, equality iff $E=0$**, iff $S$ is a union of connected components of $\mathop{\mathrm{supp}}M$. ✓ *Absent from [findings/](../findings/) (grep), but it is a double-counting identity, so the novelty is bookkeeping and not mathematics.*
 
 **3b: the arithmetic is right and the figure cited is the weakest available.** $m_4=0.501203\Rightarrow\sum_{a\in S}s_a\ge1.002406$ is correct via $E\ge0$. **The direct value the brief asks for**: at $S^5\times S^{43}$'s $(4,0)$ set, $s_a=\big(\tfrac{2021}{8836}\big)\theta^2$ for each $a\in F_1$, so
 

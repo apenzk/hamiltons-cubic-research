@@ -14,7 +14,7 @@
 
 | object | reading adopted here | pinned at | verdict |
 | --- | --- | --- | --- |
-| $\langle X,Y\rangle$ | $\tfrac12\operatorname{tr}(X^{\mathsf T}Y)$ on $\mathfrak{so}(n)=\Lambda^2\mathbb R^n$, so $\{\varphi_{ab}\}_{a<b}$ is **orthonormal** | [conventions.md](../findings/conventions.md), "Norms and pairings", first two bullets | ✓ the record's choice, pinned twice ([r519](REVIEW_r519.md), [r520](REVIEW_r520.md)) |
+| $\langle X,Y\rangle$ | $\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$ on $\mathfrak{so}(n)=\Lambda^2\mathbb R^n$, so $\{\varphi_{ab}\}_{a<b}$ is **orthonormal** | [conventions.md](../findings/conventions.md), "Norms and pairings", first two bullets | ✓ the record's choice, pinned twice ([r519](REVIEW_r519.md), [r520](REVIEW_r520.md)) |
 | $c_{\alpha\beta\gamma}=\langle[v_\alpha,v_\beta],v_\gamma\rangle$ | **totally** antisymmetric | [conventions.md](../findings/conventions.md), "Structure constants" | ✓, and it is load-bearing in §2, where the block does not say so |
 | $N$ | $\binom n2=\dim\Lambda^2\mathbb R^n$ | [conventions.md](../findings/conventions.md), "The objects" | ✓ confirmed; the row cites **no source**, which is harmless here |
 | $\omega$ | the Cartan $3$-form $\omega(x,y,z)=\langle[x,y],z\rangle$ | [isotropy-cap.md](../findings/isotropy-cap.md), line 11 | ✓ |
@@ -36,9 +36,9 @@ $$\mathfrak{so}(p)\oplus\mathfrak{so}(q)\ \text{isotropic}\iff[\mathfrak m,\math
 
 For $\max(p,q)\ge3$ it fails outright, with a one-line witness: inside the first factor, $[\varphi_{12},\varphi_{23}]=\varphi_{13}$, so $\omega(\varphi_{12},\varphi_{23},\varphi_{13})=1\ne0$. So the heading is false at $(3,3)$ and $(2,4)$, including the very pair the block's example uses.
 
-**And even where it is isotropic it is not maximal.** At $p=q=2$, $n=4$: $\mathfrak m=\operatorname{span}(\varphi_{12},\varphi_{34})$ is abelian, $[\mathfrak m,\mathfrak m]=0$, $[\mathfrak m,\mathfrak m]^\perp=\mathfrak{so}(4)\ne\mathfrak m$. So the reading survives at no $(p,q)$ with $p+q\ge3$ except by accident of smallness, and at $(2,2)$ it is refuted by the criterion the block itself invokes.
+**And even where it is isotropic it is not maximal.** At $p=q=2$, $n=4$: $\mathfrak m=\mathop{\mathrm{span}}(\varphi_{12},\varphi_{34})$ is abelian, $[\mathfrak m,\mathfrak m]=0$, $[\mathfrak m,\mathfrak m]^\perp=\mathfrak{so}(4)\ne\mathfrak m$. So the reading survives at no $(p,q)$ with $p+q\ge3$ except by accident of smallness, and at $(2,2)$ it is refuted by the criterion the block itself invokes.
 
-**The block's own arithmetic proves it means something else.** It writes: *"At $n=6$ the pair $(2,4)$ has $\dim\mathfrak m=8$."* But $\dim\big(\mathfrak{so}(2)\oplus\mathfrak{so}(4)\big)=1+6=7$, and $pq=2\cdot4=8$. The number quoted is $pq$. The same sentence writes $\operatorname{rank}[\mathfrak m,\mathfrak m]=N-pq$, $pq$, not $\binom p2+\binom q2$. **So the block's $\mathfrak m$ is $\mathbb R^p\otimes\mathbb R^q$, the mixed planes, and the name attached to it is its orthogonal complement.**
+**The block's own arithmetic proves it means something else.** It writes: *"At $n=6$ the pair $(2,4)$ has $\dim\mathfrak m=8$."* But $\dim\big(\mathfrak{so}(2)\oplus\mathfrak{so}(4)\big)=1+6=7$, and $pq=2\cdot4=8$. The number quoted is $pq$. The same sentence writes $\mathop{\mathrm{rank}}[\mathfrak m,\mathfrak m]=N-pq$, $pq$, not $\binom p2+\binom q2$. **So the block's $\mathfrak m$ is $\mathbb R^p\otimes\mathbb R^q$, the mixed planes, and the name attached to it is its orthogonal complement.**
 
 **D2, the file already refuted this heading, 170 lines above it, today.** [L36](../findings/isotropy-cap.md)'s correction block carries the identical finding in the identical words:
 
@@ -48,7 +48,7 @@ For $\max(p,q)\ge3$ it fails outright, with a one-line witness: inside the first
 
 ## 3, The intended statement, proved in closed form for every $(p,q)$ with $p,q\ge1$
 
-**Statement.** Let $[n]=P\sqcup Q$ with $|P|=p\ge1$, $|Q|=q\ge1$, and let $\mathfrak m_{p,q}=\operatorname{span}\{\varphi_{ab}:a\in P,\,b\in Q\}$, of dimension $pq$. Then $\mathfrak m_{p,q}$ is a **maximal isotropic** subspace of the Cartan $3$-form of $\mathfrak{so}(n)$.
+**Statement.** Let $[n]=P\sqcup Q$ with $|P|=p\ge1$, $|Q|=q\ge1$, and let $\mathfrak m_{p,q}=\mathop{\mathrm{span}}\{\varphi_{ab}:a\in P,\,b\in Q\}$, of dimension $pq$. Then $\mathfrak m_{p,q}$ is a **maximal isotropic** subspace of the Cartan $3$-form of $\mathfrak{so}(n)$.
 
 **Proof.** In the orthonormal basis $\varphi_{ij}=E_{ij}-E_{ji}$,
 
@@ -68,7 +68,7 @@ $$[\mathfrak m_{p,q},\mathfrak m_{p,q}]=\mathfrak{so}(P)\oplus\mathfrak{so}(Q)=\
 
 *Maximality.* Therefore $[\mathfrak m,\mathfrak m]^\perp=\big(\mathfrak m^\perp\big)^\perp=\mathfrak m$, which is L75's criterion met on the nose. In rank form, the binomial identity $\binom{p+q}2=\binom p2+\binom q2+pq$ gives
 
-$$\operatorname{rank}[\mathfrak m,\mathfrak m]=\binom p2+\binom q2=\binom n2-pq=N-\dim\mathfrak m. \qquad\square$$
+$$\mathop{\mathrm{rank}}[\mathfrak m,\mathfrak m]=\binom p2+\binom q2=\binom n2-pq=N-\dim\mathfrak m. \qquad\square$$
 
 **This is symbolic in $(p,q)$ and closed at every $n$.** It supersedes the block's evidence (*"at every $(p,q)$ for $n=6,7,8$"*) which is a census over three values of $n$ offered for an unbounded *every*. The claim is true; the warrant on the page is not one.
 
@@ -84,17 +84,17 @@ $$\mathfrak m\ \text{maximal}\iff[\mathfrak m,\mathfrak m]^\perp\subseteq\mathfr
 
 The reverse inclusion $\mathfrak m\subseteq[\mathfrak m,\mathfrak m]^\perp$ **is** isotropy, restated, it says $\langle[u,v],w\rangle=0$ for $u,v,w\in\mathfrak m$ and nothing more. So under the standing hypothesis it is automatic and the block's equality is correct. **It is also the better formulation**, for a reason the block does not claim: the equality is *self-enforcing*. $[\mathfrak m,\mathfrak m]^\perp=\mathfrak m$ implies $\mathfrak m\perp[\mathfrak m,\mathfrak m]$, hence isotropy; so the equality characterises "maximal isotropic" among **all** subspaces, while the inclusion characterises it only among isotropic ones.
 
-**Second equivalence: CONFIRMED, and it is a subspace dimension.** $\operatorname{rank}[\mathfrak m,\mathfrak m]$ means $\dim\operatorname{span}\{[u,v]:u,v\in\mathfrak m\}$, computed as the rank of the matrix whose rows are $[e_a,e_b]$ over basis pairs, the two agree because the span is exactly the row space. With $N=\binom n2$, $\dim[\mathfrak m,\mathfrak m]^\perp=N-\operatorname{rank}[\mathfrak m,\mathfrak m]$, and given the automatic inclusion, equality of subspaces reduces to equality of dimensions. ✓
+**Second equivalence: CONFIRMED, and it is a subspace dimension.** $\mathop{\mathrm{rank}}[\mathfrak m,\mathfrak m]$ means $\dim\mathop{\mathrm{span}}\{[u,v]:u,v\in\mathfrak m\}$, computed as the rank of the matrix whose rows are $[e_a,e_b]$ over basis pairs, the two agree because the span is exactly the row space. With $N=\binom n2$, $\dim[\mathfrak m,\mathfrak m]^\perp=N-\mathop{\mathrm{rank}}[\mathfrak m,\mathfrak m]$, and given the automatic inclusion, equality of subspaces reduces to equality of dimensions. ✓
 
-**But isotropy is a hypothesis of the second equivalence, and the block does not flag it.** Without it the rank count is not sufficient. Witness, in this file: $n=4$, $\mathfrak m=\mathfrak{so}(3)=\operatorname{span}(\varphi_{12},\varphi_{13},\varphi_{23})$, $d=3$, $N=6$. Then $[\mathfrak m,\mathfrak m]=\mathfrak{so}(3)$, so $\operatorname{rank}=3=N-d$ (the criterion's arithmetic is satisfied) while $[\mathfrak m,\mathfrak m]^\perp=\operatorname{span}(\varphi_{14},\varphi_{24},\varphi_{34})\ne\mathfrak m$ and $\mathfrak m$ is not isotropic at all. **This is the same $\mathfrak{so}(3)\subset\mathfrak{so}(4)$ configuration [L77](../findings/isotropy-cap.md) was repaired with, forty lines below**, and it applies here for the same reason: the rank identity is a consequence of maximal isotropy, not a substitute for isotropy.
+**But isotropy is a hypothesis of the second equivalence, and the block does not flag it.** Without it the rank count is not sufficient. Witness, in this file: $n=4$, $\mathfrak m=\mathfrak{so}(3)=\mathop{\mathrm{span}}(\varphi_{12},\varphi_{13},\varphi_{23})$, $d=3$, $N=6$. Then $[\mathfrak m,\mathfrak m]=\mathfrak{so}(3)$, so $\mathop{\mathrm{rank}}=3=N-d$ (the criterion's arithmetic is satisfied) while $[\mathfrak m,\mathfrak m]^\perp=\mathop{\mathrm{span}}(\varphi_{14},\varphi_{24},\varphi_{34})\ne\mathfrak m$ and $\mathfrak m$ is not isotropic at all. **This is the same $\mathfrak{so}(3)\subset\mathfrak{so}(4)$ configuration [L77](../findings/isotropy-cap.md) was repaired with, forty lines below**, and it applies here for the same reason: the rank identity is a consequence of maximal isotropy, not a substitute for isotropy.
 
-**The strongest thing on the page, named.** The block says an unpolished run gave $\operatorname{rank}=15$ at $d=6$, *"impossible for a nonzero isotropic"*. The argument is one line and is the inequality the criterion saturates: isotropy gives $[\mathfrak m,\mathfrak m]\subseteq\mathfrak m^\perp$, hence
+**The strongest thing on the page, named.** The block says an unpolished run gave $\mathop{\mathrm{rank}}=15$ at $d=6$, *"impossible for a nonzero isotropic"*. The argument is one line and is the inequality the criterion saturates: isotropy gives $[\mathfrak m,\mathfrak m]\subseteq\mathfrak m^\perp$, hence
 
-$$\boxed{\ \operatorname{rank}[\mathfrak m,\mathfrak m]\le N-\dim\mathfrak m\ }$$
+$$\boxed{\ \mathop{\mathrm{rank}}[\mathfrak m,\mathfrak m]\le N-\dim\mathfrak m\ }$$
 
 for every isotropic $\mathfrak m$, with equality iff maximal. At $d=6$, $n=6$ the ceiling is $9$; rank $15$ overshoots by six. **The block understates its own tell**, any value above $9$ was already impossible, so the run was detectably wrong long before it reached $N$.
 
-**A bound the record does not carry, and it is free.** For maximal isotropic $\mathfrak m$ of dimension $d$, the span $[\mathfrak m,\mathfrak m]$ has at most $\binom d2$ generators $[e_a,e_b]$, so $N-d=\operatorname{rank}[\mathfrak m,\mathfrak m]\le\binom d2$, i.e. $\binom n2\le d+\binom d2=\binom{d+1}2$, whence
+**A bound the record does not carry, and it is free.** For maximal isotropic $\mathfrak m$ of dimension $d$, the span $[\mathfrak m,\mathfrak m]$ has at most $\binom d2$ generators $[e_a,e_b]$, so $N-d=\mathop{\mathrm{rank}}[\mathfrak m,\mathfrak m]\le\binom d2$, i.e. $\binom n2\le d+\binom d2=\binom{d+1}2$, whence
 
 $$\textbf{every maximal isotropic subspace of the Cartan 3-form has }\dim\ge n-1 .$$
 
@@ -102,12 +102,12 @@ Attained, with the generator count saturated, by $\mathfrak m_{1,n-1}$, where $\
 
 ## 5, L75's table, its labels, and the Witt-index comparison
 
-At $n=6$, $N=15$. The four rows are internally consistent ($\text{free}=(N-\operatorname{rank})-d$ throughout), and this is what closed form now says about each.
+At $n=6$, $N=15$. The four rows are internally consistent ($\text{free}=(N-\mathop{\mathrm{rank}})-d$ throughout), and this is what closed form now says about each.
 
 | $d$ | row's verdict | status after §3–§4 |
 | --- | --- | --- |
 | $4$ | extends, free $5$ | **Proven, and for all $4$-subspaces, not this one.** $d\ge n-1=5$ forbids any maximal isotropic of dimension $4$. The row's *destination* ("climbs into the maximal-$5$ family"), stays a measurement. |
-| $5$ | maximal, rank $10$ | **Proven that dimension $5$ is achieved**: $\mathfrak m_{1,5}$ has $\operatorname{rank}=\binom52=10=N-5$. **The row cannot certify what it claims**, namely that a *generic* isotropic $5$-space is maximal: $\mathfrak m_{1,5}$ produces the identical rank, so the number does not separate generic from symmetric-pair. |
+| $5$ | maximal, rank $10$ | **Proven that dimension $5$ is achieved**: $\mathfrak m_{1,5}$ has $\mathop{\mathrm{rank}}=\binom52=10=N-5$. **The row cannot certify what it claims**, namely that a *generic* isotropic $5$-space is maximal: $\mathfrak m_{1,5}$ produces the identical rank, so the number does not separate generic from symmetric-pair. |
 | $6$ | maximal, rank $9$ | **Measurement, and irreducibly so.** $pq=6$ with $p+q=6$ has no integer solution, so no symmetric pair sits here and §3 says nothing. Verified numerically at $n=6$ only. |
 | $9$ | maximal, rank $6$, six singular values $\sqrt6$ | **Fully closed-form**, it is $\mathfrak m_{3,3}$; see §6. Not a measurement at all. |
 
@@ -125,7 +125,7 @@ At $n=6$, $N=15$. The four rows are internally consistent ($\text{free}=(N-\oper
 
 ## 6, The screen, and what it does and does not license
 
-Screened, on objects constructed here, in exact rational arithmetic (Gaussian elimination over $\mathbb Q$; no tolerance, no random draw, no search): for every $(p,q)$ at $n=2,\dots,9$ the isotropy residual of $\mathfrak m_{p,q}$ is exactly $0$, and $\operatorname{rank}[\mathfrak m_{p,q},\mathfrak m_{p,q}]=\binom p2+\binom q2=N-pq$, with the criterion met at every $p,q\ge1$ and failing at every $q=0$. This **agrees with §3 and is reported only as agreement**; §3 is the warrant.
+Screened, on objects constructed here, in exact rational arithmetic (Gaussian elimination over $\mathbb Q$; no tolerance, no random draw, no search): for every $(p,q)$ at $n=2,\dots,9$ the isotropy residual of $\mathfrak m_{p,q}$ is exactly $0$, and $\mathop{\mathrm{rank}}[\mathfrak m_{p,q},\mathfrak m_{p,q}]=\binom p2+\binom q2=N-pq$, with the criterion met at every $p,q\ge1$ and failing at every $q=0$. This **agrees with §3 and is reported only as agreement**; §3 is the warrant.
 
 The same screen settles the block's singular-value figures as closed form, and here the derivation is the point. Under [conventions.md](../findings/conventions.md)'s **ordered**-pair convention, the bracket matrix has one row per ordered pair from $\mathfrak m_{p,q}$. Its columns are indexed by $\mathfrak{so}(P)\oplus\mathfrak{so}(Q)$ and are mutually orthogonal, because a target $\varphi_{bb'}$ is produced only by pairs $(\varphi_{ab},\varphi_{ab'})$ sharing their $P$-index and a target $\varphi_{aa'}$ only by pairs sharing their $Q$-index. Counting the $\pm1$ entries in each column,
 

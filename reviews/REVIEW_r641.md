@@ -12,13 +12,13 @@ Per the brief, [conventions.md](../findings/conventions.md) is treated as unreli
 
 | symbol | reading used here | pinned by |
 | --- | --- | --- |
-| $\Lambda^2\mathbb R^n\cong\mathfrak{so}(n)$ | inner product $\tfrac12\operatorname{tr}(X^{\mathsf T}Y)$, so $\{\varphi_{ab}\}_{a<b}$ is orthonormal | [conventions.md](../findings/conventions.md) "Norms and pairings", settled by [r519](REVIEW_r519.md)/[r520](REVIEW_r520.md) |
+| $\Lambda^2\mathbb R^n\cong\mathfrak{so}(n)$ | inner product $\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$, so $\{\varphi_{ab}\}_{a<b}$ is orthonormal | [conventions.md](../findings/conventions.md) "Norms and pairings", settled by [r519](REVIEW_r519.md)/[r520](REVIEW_r520.md) |
 | $c_{k\alpha\beta}$ | $\langle[\varphi_k,\varphi_\alpha],\varphi_\beta\rangle$, **totally antisymmetric** | [conventions.md](../findings/conventions.md) "Structure constants" |
 | $N$ | $\binom n2$ | [conventions.md](../findings/conventions.md) |
-| $\lambda_k$ | the $\Lambda^2$ spectrum of $W$, $\sum\lambda_k^2=\operatorname{tr}(W^2)=1$, **not** the spectrum of the sectional matrix | [conventions.md](../findings/conventions.md), "the letter $M$ carries two objects" |
+| $\lambda_k$ | the $\Lambda^2$ spectrum of $W$, $\sum\lambda_k^2=\mathop{\mathrm{tr}}(W^2)=1$, **not** the spectrum of the sectional matrix | [conventions.md](../findings/conventions.md), "the letter $M$ carries two objects" |
 | $W^\#$ | **half-convention**: $(W^\#)_{kl}=\tfrac12\sum_{\alpha,\beta}\lambda_\alpha\lambda_\beta c_{k\alpha\beta}c_{l\alpha\beta}$ in an eigenbasis, the sum over all ordered $(\alpha,\beta)$ | [bounds.md:159](../findings/bounds.md), [fence-posts.md:340](../findings/fence-posts.md), and [problem.md:118](../findings/problem.md)'s diagonal formula, three independent occurrences |
 | criticality | $Q(W)=W^2+W^\#=\theta W$ at $\lVert W\rVert=1$, $\theta=P(W)$, no projection onto $\mathcal W_n$ needed | [conventions.md](../findings/conventions.md); legitimacy of the un-projected form proved at [problem.md:53](../findings/problem.md) via [BW08](../references/boehm-wilking-2008-space-forms/) eq. (6), and cited as load-bearing at [bounds.md:181](../findings/bounds.md) |
-| $M_{kl}$ | $\operatorname{tr}(\mathrm{ad}(\varphi_k)W\,\mathrm{ad}(\varphi_l)W)$, **a third object under the letter $M$**, see the finding below | this block only |
+| $M_{kl}$ | $\mathop{\mathrm{tr}}(\mathrm{ad}(\varphi_k)W\,\mathrm{ad}(\varphi_l)W)$, **a third object under the letter $M$**, see the finding below | this block only |
 | $D(v)$ | $\tfrac12\sum_{a,b}(\lambda_a\lambda_b-\lambda_{\min}\lambda_{\max})c_{vab}^2$ | [Lemma L70](../findings/bounds.md) |
 
 **The factor $2$ in the lemma statement is convention-dependent and the record's convention is the one that makes it right.** Under the full-sum reading $(W^\#)_{kl}=\sum_{\alpha\beta}(\cdots)$ the same derivation gives $M_{kl}=\lambda_k(\lambda_k-\theta)\delta_{kl}$ with no $2$. Three record occurrences fix the half-convention, so the block's constant stands, but it stands on a normalisation that [conventions.md](../findings/conventions.md) never tables, which is the same class of exposure the $\varphi_{ab}$-norm dispute already cost a cycle for.
@@ -29,7 +29,7 @@ Per the brief, [conventions.md](../findings/conventions.md) is treated as unreli
 
 $$(\mathrm{ad}(\varphi_k)W)_{\beta\alpha}=c_{k\alpha\beta}\lambda_\alpha,\qquad M_{kl}=\sum_{\alpha\beta}c_{k\beta\alpha}\lambda_\beta\,c_{l\alpha\beta}\lambda_\alpha=-\sum_{\alpha\beta}\lambda_\alpha\lambda_\beta\,c_{k\alpha\beta}c_{l\alpha\beta}=-2(W^\#)_{kl},$$
 
-the middle sign being total antisymmetry of $c$ and nothing else. Setting $k=l$ recovers the block's own opening line $\langle v,W^\#v\rangle=-\tfrac12\operatorname{tr}(\mathrm{ad}(v)W\mathrm{ad}(v)W)$, so the polarisation step is sound; $\operatorname{tr}(AWBW)$ is already symmetric in $(A,B)$ by cyclicity, so polarising is a formality.
+the middle sign being total antisymmetry of $c$ and nothing else. Setting $k=l$ recovers the block's own opening line $\langle v,W^\#v\rangle=-\tfrac12\mathop{\mathrm{tr}}(\mathrm{ad}(v)W\mathrm{ad}(v)W)$, so the polarisation step is sound; $\mathop{\mathrm{tr}}(AWBW)$ is already symmetric in $(A,B)$ by cyclicity, so polarising is a formality.
 
 **Step 2: substitute criticality.** $Q(W)=\theta W$ gives $W^\#=\theta W-W^2$, which in an orthonormal eigenbasis is $(W^\#)_{kl}=\lambda_k(\theta-\lambda_k)\delta_{kl}$, hence
 

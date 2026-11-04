@@ -58,7 +58,7 @@
 
 **D3.** The unit Weyl tensors of $S^2\times S^2$ and $S^3\times S^3$ are coordinate-diagonal with $Q(\hat W)=\tfrac{\sqrt3}2\hat W$ and $Q(\hat W)=\tfrac{\sqrt{10}}3\hat W$. On the diagonal circle of $\mathcal W_4$ the criticality residual is $\tfrac{\sqrt3}2\lvert\sin3\varphi\rvert$, zero at six points, so neither "every" nor "nowhere near" holds.
 
-**D6.** The defects $d_k=-2(Q(W)-\theta W)_{kk}$ satisfy $\sum_kd_k=0$, since $\operatorname{tr}Q(W)=0=\operatorname{tr}W$, and $\sum_k\lambda_kd_k=2(\theta-P(W))$, on every unit Weyl tensor, so at most $N-2$ are independent.
+**D6.** The defects $d_k=-2(Q(W)-\theta W)_{kk}$ satisfy $\sum_kd_k=0$, since $\mathop{\mathrm{tr}}Q(W)=0=\mathop{\mathrm{tr}}W$, and $\sum_k\lambda_kd_k=2(\theta-P(W))$, on every unit Weyl tensor, so at most $N-2$ are independent.
 
 **D7, the split settled.** v340 reads "enter" as the sign-dependent part of the Jacobi identity and finds the off-diagonal entries the only entries of $M$ that see it, while refuting the literal sentence with an $n=5$ pattern of $T$ that satisfies the Killing normalisation and fails Jacobi for every choice of signs. v341 shows Jacobi has closed-form consequences in $T=c^2$ alone, the currency of $D$ and of the diagonal entries, and that under the linear degree-two reading neither kind of entry meets a Jacobi term. **Both refute the sentence as written**, and v340's reading changes what it asserts, so the finding is confirmed as stated and the sentence is removed. What survives is the fact all three original verifiers confirmed: the off-diagonal entries are not functions of $T$.
 

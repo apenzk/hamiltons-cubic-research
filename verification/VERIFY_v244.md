@@ -19,9 +19,9 @@ The brief was cold: I worked from verification/BRIEF_L49.md and the definitions 
 
 ## 0. Conventions, fixed once
 
-- $\mathfrak{so}(n)$ carries $\langle A,B\rangle=-\tfrac12\operatorname{tr}(AB)$, under which $E_{ij}=e_ie_j^{\mathsf T}-e_je_i^{\mathsf T}$ ($i<j$) is orthonormal. $N=\binom n2$.
-- $\#$ is Böhm and Wilking's, their eq. (4) (source line 173 onward): $\langle(R\#S)(h),h\rangle=\tfrac12\sum_{\alpha,\beta}\langle[R b_\alpha,S b_\beta],h\rangle\langle[b_\alpha,b_\beta],h\rangle$ for an orthonormal basis $b$, and $R^\#=R\#R$. The source states the factor $\tfrac12$ is tied to the scalar product $-\tfrac12\operatorname{tr}$.
-- Operators on $\mathfrak{so}(n)$ are paired by $\langle A,B\rangle=\operatorname{tr}(A^{\mathsf T}B)$, so $\langle W,W^2\rangle=\sum\lambda_\alpha^3$.
+- $\mathfrak{so}(n)$ carries $\langle A,B\rangle=-\tfrac12\mathop{\mathrm{tr}}(AB)$, under which $E_{ij}=e_ie_j^{\mathsf T}-e_je_i^{\mathsf T}$ ($i<j$) is orthonormal. $N=\binom n2$.
+- $\#$ is Böhm and Wilking's, their eq. (4) (source line 173 onward): $\langle(R\#S)(h),h\rangle=\tfrac12\sum_{\alpha,\beta}\langle[R b_\alpha,S b_\beta],h\rangle\langle[b_\alpha,b_\beta],h\rangle$ for an orthonormal basis $b$, and $R^\#=R\#R$. The source states the factor $\tfrac12$ is tied to the scalar product $-\tfrac12\mathop{\mathrm{tr}}$.
+- Operators on $\mathfrak{so}(n)$ are paired by $\langle A,B\rangle=\mathop{\mathrm{tr}}(A^{\mathsf T}B)$, so $\langle W,W^2\rangle=\sum\lambda_\alpha^3$.
 - $c_{\alpha\beta\gamma}=\langle[v_\alpha,v_\beta],v_\gamma\rangle$, $T=c^2$. $p_k=\sum\lambda^k$, $e_3=\sum_{\alpha<\beta<\gamma}\lambda_\alpha\lambda_\beta\lambda_\gamma$, $C_T(\lambda)=\sum_{\alpha<\beta<\gamma}T_{\alpha\beta\gamma}\lambda_\alpha\lambda_\beta\lambda_\gamma$, $V=\{\lambda\in\mathbb R^N:p_1=0\}$.
 - "Collapse" in the canonical reading (Passage C, Lean `Collapses`): $\exists c\ \forall\lambda\in V:\ p_3+3C_T=c\,p_3$.
 
@@ -31,7 +31,7 @@ The brief was cold: I worked from verification/BRIEF_L49.md and the definitions 
 |---|---|---|---|
 | $W\in\mathcal W_n$ symmetric on $\mathfrak{so}(n)$ with orthonormal eigenframe | A, C, definitions | Holds, spectral theorem | C1 only |
 | Inner product on $\mathfrak{so}(n)$ and the normalisation of $\#$ | Unstated in A, B, C | The coefficient 3 depends on it (section 1) | C1, silently |
-| $c$ totally antisymmetric | Unstated | Holds for any ad-invariant inner product: $\operatorname{tr}([X,Y]Z)=\operatorname{tr}(X[Y,Z])$ | C1 (kills repeated-index terms) |
+| $c$ totally antisymmetric | Unstated | Holds for any ad-invariant inner product: $\mathop{\mathrm{tr}}([X,Y]Z)=\mathop{\mathrm{tr}}(X[Y,Z])$ | C1 (kills repeated-index terms) |
 | "The trace conditions", a single one $\sum\lambda=0$ | C ("$n\ge5$"), Lean `Collapses` | Under the brief's definition, a single condition at every $n\ge4$ including $n=4$ (section 4) | C3 |
 | $T$ fixed while $\lambda$ ranges over $V$ | Implicit in A, C and the Lean | Frame-diagonal operators with arbitrary $\lambda\in V$ are not Weyl tensors in general (section 3.3) | C3, and it is what C6 would need to transfer |
 | $N\ge4$ | A, C, Lean `hN` | $N\in\{1,3,6,10,\dots\}$, so $N\ge4\iff n\ge4$ | Not used: the proof needs three distinct indices, $N\ge3$ |
@@ -49,7 +49,7 @@ Used but unstated: the normalisation of $\#$ and of the inner product (C1), and 
 
 Check of whether it holds. With Böhm and Wilking (4) polarised at $h=v_\gamma$ and $b=v$: $\langle W^\#v_\gamma,v_\gamma\rangle=\tfrac12\sum_{\alpha,\beta}\lambda_\alpha\lambda_\beta c_{\alpha\beta\gamma}^2$. Hence $\langle W,W^\#\rangle=\sum_\gamma\lambda_\gamma W^\#_{\gamma\gamma}=\tfrac12\sum_{\alpha,\beta,\gamma}c_{\alpha\beta\gamma}^2\lambda_\alpha\lambda_\beta\lambda_\gamma$. Total antisymmetry of $c$ removes every term with a repeated index, and the remaining ordered sum is six times the increasing one, so $\langle W,W^\#\rangle=3\sum_{\alpha<\beta<\gamma}T\lambda\lambda\lambda$. With $\langle W,W^2\rangle=p_3$ the display holds, coefficient 3, in the normalisation of section 0.
 
-Dependence on normalisation, closed form. Rescale to $\langle\cdot,\cdot\rangle'=-\operatorname{tr}=2\langle\cdot,\cdot\rangle$ with the same operator $W^\#$. Then $v'=v/\sqrt2$, $c'=2\cdot2^{-3/2}c=c/\sqrt2$, $T'=T/2$, and the same identity reads $\theta=p_3+6\sum_{\alpha<\beta<\gamma}T'\lambda\lambda\lambda$. The coefficient 3 is therefore a statement about the pair ($-\tfrac12\operatorname{tr}$, the $\tfrac12$ in (4)), and the record would have to fix both where $\theta$, $\#$ and $T$ are defined. The collapse statement (C3) and constancy of $T$ (C5) are invariant under this rescaling, so the debt does not reach them.
+Dependence on normalisation, closed form. Rescale to $\langle\cdot,\cdot\rangle'=-\mathop{\mathrm{tr}}=2\langle\cdot,\cdot\rangle$ with the same operator $W^\#$. Then $v'=v/\sqrt2$, $c'=2\cdot2^{-3/2}c=c/\sqrt2$, $T'=T/2$, and the same identity reads $\theta=p_3+6\sum_{\alpha<\beta<\gamma}T'\lambda\lambda\lambda$. The coefficient 3 is therefore a statement about the pair ($-\tfrac12\mathop{\mathrm{tr}}$, the $\tfrac12$ in (4)), and the record would have to fix both where $\theta$, $\#$ and $T$ are defined. The collapse statement (C3) and constancy of $T$ (C5) are invariant under this rescaling, so the debt does not reach them.
 
 ## 2. C2, linearity and the subspace
 
@@ -90,7 +90,7 @@ What would have to be proved is sensitive to how eigenvalues are labelled. Under
 **Verdict: REFUTED AS STATED.**
 
 1. Location: Passage C, results.md line 655: "the number of irreducible summands of $\mathcal W_n$ under $O(n)$ ... At $n=4$, where $\mathcal W_4$ is reducible, the cubic is spectral."
-2. Failure, closed form: $\mathcal W_4$ is irreducible under $O(4)$. Under $SO(4)$ it is $\mathcal W^+\oplus\mathcal W^-$, the two summands non-isomorphic, since the right $SU(2)$ factor of $\mathrm{Spin}(4)$ acts trivially on $\mathcal W^+$ and nontrivially on $\mathcal W^-$. So the only $SO(4)$-invariant subspaces are $0,\mathcal W^+,\mathcal W^-,\mathcal W_4$. The reflection $r=\operatorname{diag}(-1,1,1,1)$ satisfies $r^*\star=-\star r^*$, so it maps $\Lambda^+$ to $\Lambda^-$ and $\mathcal W^+$ to $\mathcal W^-$. Neither summand is $O(4)$-invariant, so $\mathcal W_4$ has one $O(4)$ summand. Passage C's own rule then gives a single condition at $n=4$, its "under a single condition ... exactly one-dimensional" applies at $n=4$, and that contradicts its "$\mathcal W_4$ is reducible" and treats $n=4$ as the exception.
+2. Failure, closed form: $\mathcal W_4$ is irreducible under $O(4)$. Under $SO(4)$ it is $\mathcal W^+\oplus\mathcal W^-$, the two summands non-isomorphic, since the right $SU(2)$ factor of $\mathrm{Spin}(4)$ acts trivially on $\mathcal W^+$ and nontrivially on $\mathcal W^-$. So the only $SO(4)$-invariant subspaces are $0,\mathcal W^+,\mathcal W^-,\mathcal W_4$. The reflection $r=\mathop{\mathrm{diag}}(-1,1,1,1)$ satisfies $r^*\star=-\star r^*$, so it maps $\Lambda^+$ to $\Lambda^-$ and $\mathcal W^+$ to $\mathcal W^-$. Neither summand is $O(4)$-invariant, so $\mathcal W_4$ has one $O(4)$ summand. Passage C's own rule then gives a single condition at $n=4$, its "under a single condition ... exactly one-dimensional" applies at $n=4$, and that contradicts its "$\mathcal W_4$ is reducible" and treats $n=4$ as the exception.
 3. Charitable reading: "under $SO(n)$" was meant. That reading is consistent with Passage A (no group named) and with "$\mathcal W_4$ reducible", and it gives 2 at $n=4$ only with the labelled frame of 4.1. The text as written says $O(n)$, so the finding stands as stated, corrected by $SO(n)$ plus an adapted labelling.
 
 ## 5. C5, constant $T$ realised by no $\mathfrak{so}(n)$
@@ -173,11 +173,11 @@ $\ker W\ne0$: repeated eigenvalues, including a kernel of dimension $\ge2$, make
 
 | Claim | Object that would falsify it | What I did |
 |---|---|---|
-| C1 | A normalisation in force under which the coefficient differs | Read (4) at source. Coefficient is 6 under $-\operatorname{tr}$ with $T'$ |
+| C1 | A normalisation in force under which the coefficient differs | Read (4) at source. Coefficient is 6 under $-\mathop{\mathrm{tr}}$ with $T'$ |
 | C2 | $T,S$ collapsing with $T+S$ not collapsing | Checked the constants $c+d-1$, $rc-r+1$ |
 | C3 | Non-constant $T$ on distinct triples collapsing over $V$ | Spike argument excludes it at $N\ge3$ |
 | C4a | A labelling convention under which the count is not the summand count | $n=4$ with arbitrary labelling gives 1 against 2 |
-| C4b | $\mathcal W_4$ irreducible under $O(4)$ | Exhibited via $r=\operatorname{diag}(-1,1,1,1)$ |
+| C4b | $\mathcal W_4$ irreducible under $O(4)$ | Exhibited via $r=\mathop{\mathrm{diag}}(-1,1,1,1)$ |
 | C5 | Orthonormal basis of $\mathfrak{so}(n)$, $n\ge4$, with $c^2$ constant on distinct triples | Screened $n=4$ structure by hand, not settled. $n=3$ is realised but out of scope (withdrawn, 11.2) |
 | C6 | Critical $W$, $n\ge5$, with $\theta$ determined by the spectrum near $W$ | Showed the inference pattern fails at $n=4$. Did not search for critical points (unbounded) |
 | C7 | $W\in\mathcal W_4$ with $\theta\ne(1+\kappa^2)p_3$ | Adapted-frame computation excludes it |

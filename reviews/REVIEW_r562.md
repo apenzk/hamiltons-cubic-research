@@ -6,17 +6,17 @@ Status: **COMPLETE**, REPAIRED overall, with one REFUTED component (D1).
 
 ## Setting, fixed from the definitions before anything else
 
-Throughout, $M$ is the **sectional matrix** of a coordinate-diagonal Weyl operator, in the normalisation [conventions.md](../findings/conventions.md) fixes: symmetric, hollow, $M\mathbf1=0$, and $\operatorname{tr}M^2=\sum_{a,b}M_{ab}^2=2$ at unit Weyl norm, the sum over **ordered** pairs. The value is $\theta=\tfrac12\big(\sum_{a,b}M_{ab}^3+\operatorname{tr}M^3\big)$ and criticality is [diagonal-half.md](../findings/diagonal-half.md)'s
+Throughout, $M$ is the **sectional matrix** of a coordinate-diagonal Weyl operator, in the normalisation [conventions.md](../findings/conventions.md) fixes: symmetric, hollow, $M\mathbf1=0$, and $\mathop{\mathrm{tr}}M^2=\sum_{a,b}M_{ab}^2=2$ at unit Weyl norm, the sum over **ordered** pairs. The value is $\theta=\tfrac12\big(\sum_{a,b}M_{ab}^3+\mathop{\mathrm{tr}}M^3\big)$ and criticality is [diagonal-half.md](../findings/diagonal-half.md)'s
 
-$$M^{\circ2}+M^2=\theta M+\operatorname{diag}(s),\qquad s_i=\sum_jM_{ij}^2,$$
+$$M^{\circ2}+M^2=\theta M+\mathop{\mathrm{diag}}(s),\qquad s_i=\sum_jM_{ij}^2,$$
 
 whose diagonal is an identity ($0+s_i=0+s_i$), so the content is the off-diagonal $M_{ij}^2+(M^2)_{ij}=\theta M_{ij}$.
 
-The second-order operator on the locus is $\mathcal L(N)=\mathrm{hol}\big(M\circ N+\tfrac12(MN+NM)\big)$, $\mathrm{hol}$ the hollowing that the block itself installs as the correct object ($\tfrac12D[\Phi-\operatorname{diag}(s)]$), and $L_e=\mathcal L/\theta$. **Admissible** means $N$ symmetric, hollow, $N\mathbf1=0$, $N\perp M$, the last being [Lemma L24](../findings/second-order.md)'s $N\perp W$, which [Lemma L120](../findings/second-order.md) confirms cuts $\mathcal D_n$ and nothing else.
+The second-order operator on the locus is $\mathcal L(N)=\mathrm{hol}\big(M\circ N+\tfrac12(MN+NM)\big)$, $\mathrm{hol}$ the hollowing that the block itself installs as the correct object ($\tfrac12D[\Phi-\mathop{\mathrm{diag}}(s)]$), and $L_e=\mathcal L/\theta$. **Admissible** means $N$ symmetric, hollow, $N\mathbf1=0$, $N\perp M$, the last being [Lemma L24](../findings/second-order.md)'s $N\perp W$, which [Lemma L120](../findings/second-order.md) confirms cuts $\mathcal D_n$ and nothing else.
 
 The **support graph** is $\{ab:M_{ab}\ne0\}$; a **component** is a component of it, and a component **carries an edge** when it has more than one vertex.
 
-**Two calibration facts, used below.** The radial direction is always a $\theta$-eigenvector: $\mathcal LM=\mathrm{hol}(M^{\circ2}+M^2)=\mathrm{hol}(\theta M+\operatorname{diag}(s))=\theta M$. And [Lemma L24](../findings/second-order.md) gives $\mathrm{Hess}_SP=6\theta(L_e-\tfrac12\mathrm{Id})$ on $W^\perp$, so an admissible $N$ with $\mathcal LN=\theta N$ at $\theta>0$ makes the Hessian strictly positive along $N$, failure of second-order maximality.
+**Two calibration facts, used below.** The radial direction is always a $\theta$-eigenvector: $\mathcal LM=\mathrm{hol}(M^{\circ2}+M^2)=\mathrm{hol}(\theta M+\mathop{\mathrm{diag}}(s))=\theta M$. And [Lemma L24](../findings/second-order.md) gives $\mathrm{Hess}_SP=6\theta(L_e-\tfrac12\mathrm{Id})$ on $W^\perp$, so an admissible $N$ with $\mathcal LN=\theta N$ at $\theta>0$ makes the Hessian strictly positive along $N$, failure of second-order maximality.
 
 ## Verdicts
 
@@ -44,17 +44,17 @@ The conclusion "fails second-order maximality" happens to survive at that witnes
 
 The block verifies to $10^{-17}$ at three points what follows from block-orthogonality alone. Both directions:
 
-**(a) Every disconnected diagonal critical point IS such a direct sum**, this direction the block never states, and it is what removes the hypothesis. Let $M$ be critical with components $C_1,\dots,C_k$ and blocks $B_c$. Set $\lambda_c=\lVert B_c\rVert_F/\sqrt2>0$ and $M_c=B_c/\lambda_c$, so $\operatorname{tr}M_c^2=2$. Each $M_c$ is hollow, symmetric and $M_c\mathbf1=0$ (the row sum of $M$ at $a\in C_c$ has no terms outside $C_c$). Off-diagonal criticality inside $C_c$ reads $\lambda_c^2\big(M_c^{\circ2}+M_c^2\big)_{ab}=\theta\lambda_cM_{c,ab}$, i.e. **$M_c$ is itself a diagonal critical point at $\theta_c:=\theta/\lambda_c$**, and $\theta_c>0$ whenever $\theta>0$.
+**(a) Every disconnected diagonal critical point IS such a direct sum**, this direction the block never states, and it is what removes the hypothesis. Let $M$ be critical with components $C_1,\dots,C_k$ and blocks $B_c$. Set $\lambda_c=\lVert B_c\rVert_F/\sqrt2>0$ and $M_c=B_c/\lambda_c$, so $\mathop{\mathrm{tr}}M_c^2=2$. Each $M_c$ is hollow, symmetric and $M_c\mathbf1=0$ (the row sum of $M$ at $a\in C_c$ has no terms outside $C_c$). Off-diagonal criticality inside $C_c$ reads $\lambda_c^2\big(M_c^{\circ2}+M_c^2\big)_{ab}=\theta\lambda_cM_{c,ab}$, i.e. **$M_c$ is itself a diagonal critical point at $\theta_c:=\theta/\lambda_c$**, and $\theta_c>0$ whenever $\theta>0$.
 
 **(b) The scaling law.** Conversely, for $M=\bigoplus_c\lambda_cM_c$ the cross-block entries of $M$, $M^{\circ2}$ and $M^2$ all vanish, so criticality is one equation per block: $\lambda_c^2\theta_cM_{c,ab}=\theta\lambda_cM_{c,ab}$, giving **$\lambda_c\theta_c=\theta$ at every block carrying an entry**. A block with no entry is unconstrained, which is precisely the padding loophole of D1.
 
-**(c) The value law.** $\operatorname{tr}M^2=2\sum_c\lambda_c^2$, so unit norm is $\sum_c\lambda_c^2=1$; substituting $\lambda_c=\theta/\theta_c$ gives $\theta^2\sum_c\theta_c^{-2}=1$, hence
+**(c) The value law.** $\mathop{\mathrm{tr}}M^2=2\sum_c\lambda_c^2$, so unit norm is $\sum_c\lambda_c^2=1$; substituting $\lambda_c=\theta/\theta_c$ gives $\theta^2\sum_c\theta_c^{-2}=1$, hence
 
 $$\theta=\Big(\sum_c\theta_c^{-2}\Big)^{-1/2}$$
 
 on the record's $\theta>0$ branch (both signs solve it, $-M$ being critical at $-\theta$).
 
-**(d) Consistency, which is the block's "verified to $10^{-17}$".** $\theta(M)=\tfrac12\sum_c\lambda_c^3\big(\sum M_{c,ab}^3+\operatorname{tr}M_c^3\big)=\sum_c\lambda_c^3\theta_c=\theta^3\sum_c\theta_c^{-2}=\theta$. **An identity, not a measurement.**
+**(d) Consistency, which is the block's "verified to $10^{-17}$".** $\theta(M)=\tfrac12\sum_c\lambda_c^3\big(\sum M_{c,ab}^3+\mathop{\mathrm{tr}}M_c^3\big)=\sum_c\lambda_c^3\theta_c=\theta^3\sum_c\theta_c^{-2}=\theta$. **An identity, not a measurement.**
 
 **(e) The block's own aside is derivable too.** *"with equal scaling instead it is not critical at all […] unless the summands share a $\theta$"* is (b) read at $\lambda_c\equiv1/\sqrt k$: $\theta_c=\theta\sqrt k$ for every $c$.
 
@@ -64,9 +64,9 @@ on the record's $\theta>0$ branch (both signs solve it, $-M$ being critical at $
 
 > **Let $M$ be a diagonal critical point with $\theta>0$ whose support graph has $k\ge2$ components carrying an edge. Then $\mathcal L$ has eigenvalue $\theta$ on an admissible subspace of dimension $\ge k-1$, so $\lambda_{\max}(L_e\vert_{\mathcal D_n\cap M^\perp})\ge1>\tfrac12$ and $M$ fails second-order maximality.**
 
-**Proof.** Decompose as in D2(a): $M=\bigoplus_c\lambda_cM_c$ with $\lambda_c\theta_c=\theta$ over the $k$ edge-carrying components. For $a\in\mathbb R^k$ put $N=\bigoplus_ca_c\lambda_cM_c$ (equivalently $N=\tfrac12(AM+MA)$ for $A=\operatorname{diag}(a)$ constant on components, since $M_{ab}\ne0$ only within one). Then $N$ is symmetric, hollow, $N\mathbf1=0$, and
+**Proof.** Decompose as in D2(a): $M=\bigoplus_c\lambda_cM_c$ with $\lambda_c\theta_c=\theta$ over the $k$ edge-carrying components. For $a\in\mathbb R^k$ put $N=\bigoplus_ca_c\lambda_cM_c$ (equivalently $N=\tfrac12(AM+MA)$ for $A=\mathop{\mathrm{diag}}(a)$ constant on components, since $M_{ab}\ne0$ only within one). Then $N$ is symmetric, hollow, $N\mathbf1=0$, and
 
-$$\langle N,M\rangle_F=\sum_ca_c\lambda_c^2\operatorname{tr}M_c^2=2\theta^2\sum_ca_c\theta_c^{-2},$$
+$$\langle N,M\rangle_F=\sum_ca_c\lambda_c^2\mathop{\mathrm{tr}}M_c^2=2\theta^2\sum_ca_c\theta_c^{-2},$$
 
 so **admissibility is the single linear condition $\sum_ca_c\theta_c^{-2}=0$** (the record's own repair, here derived), cutting the $k$-dimensional family to $k-1$ dimensions, nonzero as soon as $k\ge2$. On the block $c$,
 
@@ -84,12 +84,12 @@ The block: *"$\dim\ker M$ is the NUMBER OF CONNECTED COMPONENTS, not $1$, verifi
 
 **Proof.** [Lemma L97](../findings/diagonal-half.md) gives $M^2-\theta M=L(w)$, the weighted graph Laplacian with $w_{ab}=M_{ab}^2\ge0$, the diagonal is $s_a$ by hollowness, the off-diagonal $-M_{ab}^2$ by off-diagonal criticality. [Lemma L129](../findings/diagonal-half.md) then states, in its own proof, both halves needed:
 
-- $\ker L(w)=\operatorname{span}\{\mathbf1_{C_t}\}$ over the components of $\{w_{ab}>0\}$, which is the support graph;
+- $\ker L(w)=\mathop{\mathrm{span}}\{\mathbf1_{C_t}\}$ over the components of $\{w_{ab}>0\}$, which is the support graph;
 - $M\mathbf1_{C_t}=0$ for every component, *"for $a\in C_t$, $(M\mathbf1_{C_t})_a=\sum_{b\in C_t}M_{ab}=\sum_bM_{ab}=0$"*.
 
-So $\ker M\supseteq\operatorname{span}\{\mathbf1_{C_t}\}$; and $Mx=0\Rightarrow L(w)x=M^2x-\theta Mx=0\Rightarrow x\in\ker L(w)=\operatorname{span}\{\mathbf1_{C_t}\}$. Hence
+So $\ker M\supseteq\mathop{\mathrm{span}}\{\mathbf1_{C_t}\}$; and $Mx=0\Rightarrow L(w)x=M^2x-\theta Mx=0\Rightarrow x\in\ker L(w)=\mathop{\mathrm{span}}\{\mathbf1_{C_t}\}$. Hence
 
-$$\ker M=\ker L(w)=\operatorname{span}\{\mathbf1_{C_t}:t\},\qquad\dim\ker M=\#\text{components}. \qquad\square$$
+$$\ker M=\ker L(w)=\mathop{\mathrm{span}}\{\mathbf1_{C_t}:t\},\qquad\dim\ker M=\#\text{components}. \qquad\square$$
 
 **Verdict: CONFIRMED as a theorem, REPAIRED as evidence.** The reverse inequality the brief could find no argument for is [Lemma L129](../findings/diagonal-half.md) minus one line. **The census of $400$ points decides nothing that the identity does not decide at every critical point and every $n$.** *This is the third time in this audit that the fact settling the block sits inside the block's own file.*
 
@@ -113,7 +113,7 @@ $$\ker M=\ker L(w)=\operatorname{span}\{\mathbf1_{C_t}:t\},\qquad\dim\ker M=\#\t
 
 ### D6, the retractions. Two are one-line theorems, one is near-vacuous, one is unverifiable.
 
-**(a) *"they are not three candidates but two: criticality forces $\mathrm{proj}(M^{\circ2})=-\mathrm{proj}(M^2)$ identically, verified here to $7\times10^{-17}$"*, CORRECT, and it is one line, not a measurement.** Let $\mathrm{proj}$ be the orthogonal projection onto $\mathcal D_n\cap M^\perp$ (the block never says which projection; this is the only reading its numbers fit). Criticality reads $M^{\circ2}+M^2=\theta M+\operatorname{diag}(s)$. Hollowing kills $\operatorname{diag}(s)$; $\perp M$ kills $\theta M$. Hence $\mathrm{proj}(M^{\circ2})+\mathrm{proj}(M^2)=0$. $\square$ *The equal pair $0.211$, $0.211$ and the repeated $0.059$ are this identity being measured.*
+**(a) *"they are not three candidates but two: criticality forces $\mathrm{proj}(M^{\circ2})=-\mathrm{proj}(M^2)$ identically, verified here to $7\times10^{-17}$"*, CORRECT, and it is one line, not a measurement.** Let $\mathrm{proj}$ be the orthogonal projection onto $\mathcal D_n\cap M^\perp$ (the block never says which projection; this is the only reading its numbers fit). Criticality reads $M^{\circ2}+M^2=\theta M+\mathop{\mathrm{diag}}(s)$. Hollowing kills $\mathop{\mathrm{diag}}(s)$; $\perp M$ kills $\theta M$. Hence $\mathrm{proj}(M^{\circ2})+\mathrm{proj}(M^2)=0$. $\square$ *The equal pair $0.211$, $0.211$ and the repeated $0.059$ are this identity being measured.*
 
 **(b) *"the vanishing at sphere products is a dimension count (the invariant admissible subspace is $0$-dimensional there"*), CORRECT, and it is three lines.** $\mathrm{Aut}(M)\supseteq S_p\times S_q$ at $S^p\times S^q$, and a symmetric hollow $S_p\times S_q$-invariant matrix is block-constant: $\alpha$ within $P$, $\beta$ within $Q$, $\gamma$ across, a $3$-dimensional space. Zero row sums impose $(p-1)\alpha+q\gamma=0$ and $(q-1)\beta+p\gamma=0$ (independent for $p,q\ge2$), leaving dimension $1$. That line contains $M\ne0$, so it **is** $\mathbb RM$, and $\mathbb RM\cap M^\perp=0$. $\square$
 
@@ -140,9 +140,9 @@ $$\ker M=\ker L(w)=\operatorname{span}\{\mathbf1_{C_t}:t\},\qquad\dim\ker M=\#\t
 
 ### D8, the norm, checked against [conventions.md](../findings/conventions.md) rather than the block. CONFIRMED.
 
-The block runs at $\operatorname{tr}M^2=2$ with $M$ the $n\times n$ sectional matrix, which is [conventions.md](../findings/conventions.md)'s $\lVert K\rVert_F^2=2$ at a unit Weyl tensor, ordered sum. Every step of D2–D4 is invariant under the $\Lambda^2$/Frobenius factor $2$: the scaling law $\lambda_c\theta_c=\theta$ is an equation between entries; unit norm is $\sum\lambda_c^2=1$ in either pairing; admissibility $\sum_ca_c\theta_c^{-2}=0$ carries the constant $\lVert M_c\rVert^2$ as an overall factor and **only the exponent $-2$ enters**, which the block already says and which is right. **No normalisation defect.**
+The block runs at $\mathop{\mathrm{tr}}M^2=2$ with $M$ the $n\times n$ sectional matrix, which is [conventions.md](../findings/conventions.md)'s $\lVert K\rVert_F^2=2$ at a unit Weyl tensor, ordered sum. Every step of D2–D4 is invariant under the $\Lambda^2$/Frobenius factor $2$: the scaling law $\lambda_c\theta_c=\theta$ is an equation between entries; unit norm is $\sum\lambda_c^2=1$ in either pairing; admissibility $\sum_ca_c\theta_c^{-2}=0$ carries the constant $\lVert M_c\rVert^2$ as an overall factor and **only the exponent $-2$ enters**, which the block already says and which is right. **No normalisation defect.**
 
-*Two presentational notes.* The block writes $\theta_i$ for the summand values without saying they are the *normalised* summands' values ($\operatorname{tr}M_i^2=2$ each), under any other normalisation of $M_i$ the formula is false. And $\theta=(\sum\theta_c^{-2})^{-1/2}$ selects the positive root; $-M$ is critical at $-\theta$ and solves the same equation. The record's $\theta>0$ convention covers this, unstated here.
+*Two presentational notes.* The block writes $\theta_i$ for the summand values without saying they are the *normalised* summands' values ($\mathop{\mathrm{tr}}M_i^2=2$ each), under any other normalisation of $M_i$ the formula is false. And $\theta=(\sum\theta_c^{-2})^{-1/2}$ selects the positive root; $-M$ is critical at $-\theta$ and solves the same equation. The record's $\theta>0$ convention covers this, unstated here.
 
 ### D9, the quantifier, and three or more components. The heading understates.
 

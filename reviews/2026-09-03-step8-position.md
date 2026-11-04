@@ -27,9 +27,9 @@ Section 2 carries eight build items, section 3 two disprove items, BLOCKED five.
 
 ## 4. What the fence posts close
 
-Fifty-four posts. Grouped by mechanism: reaching $P$ through $\operatorname{tr}W^3$ alone (F1); **separate** caps on the two cubic terms (F2 item 2e, F34, F35); Cauchy–Schwarz on the sharp term (F34); $\Pi/4$-shaped bounds (F28); fixed-frame eigenvalue bounds (F29); LPs on the pinned set (F17, F42); per-row conditions at $d\ge3$ (F43, F45); third/fourth-variation calculus on the orbit tangent (F37); the half-flat four-set family (F46); **the entire pair-clause apparatus** (F47–F52); the $\Lambda^2$ spectral gap (F53); and re-bounding $H$ by trace data (F54).
+Fifty-four posts. Grouped by mechanism: reaching $P$ through $\mathop{\mathrm{tr}}W^3$ alone (F1); **separate** caps on the two cubic terms (F2 item 2e, F34, F35); Cauchy–Schwarz on the sharp term (F34); $\Pi/4$-shaped bounds (F28); fixed-frame eigenvalue bounds (F29); LPs on the pinned set (F17, F42); per-row conditions at $d\ge3$ (F43, F45); third/fourth-variation calculus on the orbit tangent (F37); the half-flat four-set family (F46); **the entire pair-clause apparatus** (F47–F52); the $\Lambda^2$ spectral gap (F53); and re-bounding $H$ by trace data (F54).
 
-**Unfenced:** the *joint* treatment of $\operatorname{tr}W^3$ and $\langle W,W^\#\rangle$ (which is F1's own prescription) and the lifted chain.
+**Unfenced:** the *joint* treatment of $\mathop{\mathrm{tr}}W^3$ and $\langle W,W^\#\rangle$ (which is F1's own prescription) and the lifted chain.
 
 ## 5. What the previous sweep covered, so it is not repeated
 

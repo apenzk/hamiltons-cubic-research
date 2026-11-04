@@ -6,9 +6,9 @@ Reviewer r629, independent adversarial audit, cold from the definitions in [conv
 
 ## Verdict
 
-**REFUTED as written.** The three conditions are not three characterisations of one thing. The first two are equivalent; **the third is strictly weaker, and the chain is false in the direction $\text{rank}\Rightarrow$ everything else.** The witness is the one the neighbouring audit named, and it survives: $\mathfrak m=\mathfrak{so}(3)\subset\mathfrak{so}(4)$ satisfies $\operatorname{rank}[\mathfrak m,\mathfrak m]=N-\dim\mathfrak m$ exactly, and is not isotropic, so it is not maximal isotropic and it does not satisfy $[\mathfrak m,\mathfrak m]^\perp=\mathfrak m$.
+**REFUTED as written.** The three conditions are not three characterisations of one thing. The first two are equivalent; **the third is strictly weaker, and the chain is false in the direction $\text{rank}\Rightarrow$ everything else.** The witness is the one the neighbouring audit named, and it survives: $\mathfrak m=\mathfrak{so}(3)\subset\mathfrak{so}(4)$ satisfies $\mathop{\mathrm{rank}}[\mathfrak m,\mathfrak m]=N-\dim\mathfrak m$ exactly, and is not isotropic, so it is not maximal isotropic and it does not satisfy $[\mathfrak m,\mathfrak m]^\perp=\mathfrak m$.
 
-**The two reviewers who disagreed in passing are both right, and about different conditions.** $[\mathfrak m,\mathfrak m]^\perp=\mathfrak m$ *does* entail isotropy on its own; $\operatorname{rank}[\mathfrak m,\mathfrak m]=N-\dim\mathfrak m$ *does not*, because it is only $\dim[\mathfrak m,\mathfrak m]^\perp=\dim\mathfrak m$, which fixes a dimension and leaves the subspace free. That is precisely the compatibility the brief asked for, and it means the repair is not symmetric: the equality form needs nothing, and **the rank form needs "for isotropic $\mathfrak m$" written into it**, the same repair [L77](../findings/isotropy-cap.md#L112) received forty lines below, with the same witness at the same $n=4$.
+**The two reviewers who disagreed in passing are both right, and about different conditions.** $[\mathfrak m,\mathfrak m]^\perp=\mathfrak m$ *does* entail isotropy on its own; $\mathop{\mathrm{rank}}[\mathfrak m,\mathfrak m]=N-\dim\mathfrak m$ *does not*, because it is only $\dim[\mathfrak m,\mathfrak m]^\perp=\dim\mathfrak m$, which fixes a dimension and leaves the subspace free. That is precisely the compatibility the brief asked for, and it means the repair is not symmetric: the equality form needs nothing, and **the rank form needs "for isotropic $\mathfrak m$" written into it**, the same repair [L77](../findings/isotropy-cap.md#L112) received forty lines below, with the same witness at the same $n=4$.
 
 **The mathematics under the standing hypothesis is entirely correct**, and the block's own prose carries that hypothesis one line above the display ("Adding $w$ to an **isotropic** $\mathfrak m$"). What fails is the display and the heading, which state the chain free-standing, and the heading is what the index quotes and what a consumer cites.
 
@@ -19,7 +19,7 @@ Reviewer r629, independent adversarial audit, cold from the definitions in [conv
 | 1 | The chain of three equivalences as stated in the heading and the display | **REFUTED**; the third condition is strictly weaker |
 | 2 | $\mathfrak m$ maximal isotropic $\iff[\mathfrak m,\mathfrak m]^\perp=\mathfrak m$ | **CONFIRMED**, both directions, and the equality is forced rather than chosen |
 | 3 | $[\mathfrak m,\mathfrak m]^\perp=\mathfrak m$ entails isotropy unaided | **CONFIRMED**, it contains $\mathfrak m\subseteq[\mathfrak m,\mathfrak m]^\perp$, which *is* isotropy |
-| 4 | $\operatorname{rank}[\mathfrak m,\mathfrak m]=N-\dim\mathfrak m$ as a free-standing test | **REFUTED**; witness $\mathfrak{so}(3)\subset\mathfrak{so}(4)$, rank $3=6-3$, isotropy residual $1$ |
+| 4 | $\mathop{\mathrm{rank}}[\mathfrak m,\mathfrak m]=N-\dim\mathfrak m$ as a free-standing test | **REFUTED**; witness $\mathfrak{so}(3)\subset\mathfrak{so}(4)$, rank $3=6-3$, isotropy residual $1$ |
 | 5 | The same rank condition **under a standing isotropy hypothesis** | **CONFIRMED**, and then equivalent to both others |
 | 6 | Sufficiency of $w\perp[\mathfrak m,\mathfrak m]$ for the extension | **CONFIRMED**, but it consumes total antisymmetry of $\omega$, which the block never names |
 | 7 | Row $d=4$, *extends* | **CONFIRMED as a theorem**, $\binom42=6<11$; no run was ever needed |
@@ -42,14 +42,14 @@ The brief warns that [conventions.md](../findings/conventions.md) is incomplete 
 
 - **$\mathfrak m$.** [conventions.md](../findings/conventions.md) tables three senses. **None of them is the one L75 uses.** Here $\mathfrak m$ is an *arbitrary linear subspace of $\Lambda^2\mathbb R^n=\mathfrak{so}(n)$* being tested for isotropy, not $E_{\min}$ at a critical point, not [L36](../findings/isotropy-cap.md#L17)'s whole negative eigenspace, not [target.md](../findings/target.md)'s symmetric-pair odd part. **This is a fourth sense and it is the one the criterion needs**, since the criterion's whole value is that it applies to a subspace with no critical point behind it. I adopt it, and note that the table's rows then silently switch back to the eigenspace sense when they are read against $\dim\mathfrak m$ at catalogued $S=0$ points.
 - **Isotropy.** $\mathfrak m$ is isotropic when the Cartan $3$-form $\omega(u,v,w)=\langle[u,v],w\rangle$ vanishes on $\mathfrak m$, i.e. $\langle[\mathfrak m,\mathfrak m],\mathfrak m\rangle=0$. Total antisymmetry of $\omega$ is [conventions.md](../findings/conventions.md)'s structure-constant bullet, $c_{abc}=\langle[v_a,v_b],v_c\rangle$ totally antisymmetric.
-- **The pairing.** I run in the half-trace pairing, $\langle X,Y\rangle=\tfrac12\operatorname{tr}(X^{\mathsf T}Y)$, under which $\{\varphi_{ab}\}_{a<b}$ is orthonormal, the one [conventions.md](../findings/conventions.md) says "every result uses". This is the reading that matters for finding 12 and for nothing else: **rank is pairing-independent, so the criterion itself is immune.**
+- **The pairing.** I run in the half-trace pairing, $\langle X,Y\rangle=\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$, under which $\{\varphi_{ab}\}_{a<b}$ is orthonormal, the one [conventions.md](../findings/conventions.md) says "every result uses". This is the reading that matters for finding 12 and for nothing else: **rank is pairing-independent, so the criterion itself is immune.**
 - **$N=\binom n2$**, and the table is at $n=6$, so $N=15$. The block never states $n$; it is fixed by the sentence two lines above the heading and by $N-d$ arithmetic.
 - **$S_{XYZ}$ and $\theta_0$** are not used by this block, so their unfixed normalisations do not reach it.
-- **"$\operatorname{rank}[\mathfrak m,\mathfrak m]$"** I read as $\dim\operatorname{span}\{[u,v]:u,v\in\mathfrak m\}$. It coincides with the matrix rank of the $N\times\binom d2$ array of bracket coordinates on any basis, by bilinearity, and is basis-independent.
+- **"$\mathop{\mathrm{rank}}[\mathfrak m,\mathfrak m]$"** I read as $\dim\mathop{\mathrm{span}}\{[u,v]:u,v\in\mathfrak m\}$. It coincides with the matrix rank of the $N\times\binom d2$ array of bracket coordinates on any basis, by bilinearity, and is basis-independent.
 
 ## 1. The three-way equivalence, which is what this audit is for
 
-Write $d=\dim\mathfrak m$ and $r=\operatorname{rank}[\mathfrak m,\mathfrak m]$, so that $\dim[\mathfrak m,\mathfrak m]^\perp=N-r$ always. The three conditions are
+Write $d=\dim\mathfrak m$ and $r=\mathop{\mathrm{rank}}[\mathfrak m,\mathfrak m]$, so that $\dim[\mathfrak m,\mathfrak m]^\perp=N-r$ always. The three conditions are
 
 $$(\mathrm A)\ \mathfrak m\ \text{maximal isotropic},\qquad(\mathrm B)\ [\mathfrak m,\mathfrak m]^\perp=\mathfrak m,\qquad(\mathrm C)\ r=N-d.$$
 
@@ -65,7 +65,7 @@ So the *inclusion half* of (B) is not an extra fact about $\mathfrak m$; **it is
 
 (C) says $N-r=d$, i.e. $\dim[\mathfrak m,\mathfrak m]^\perp=\dim\mathfrak m$. **It says nothing about where $[\mathfrak m,\mathfrak m]^\perp$ sits.** Two subspaces of equal dimension need not meet at all, so (C) is strictly weaker than (B) unless something independently forces $\mathfrak m\subseteq[\mathfrak m,\mathfrak m]^\perp$, and that something is isotropy.
 
-**The witness, by hand.** Take $n=4$, $N=6$, and $\mathfrak m=\mathfrak{so}(3)=\operatorname{span}\{\varphi_{12},\varphi_{13},\varphi_{23}\}$, so $d=3$ and $N-d=3$.
+**The witness, by hand.** Take $n=4$, $N=6$, and $\mathfrak m=\mathfrak{so}(3)=\mathop{\mathrm{span}}\{\varphi_{12},\varphi_{13},\varphi_{23}\}$, so $d=3$ and $N-d=3$.
 
 With $\varphi_{ab}=E_{ab}-E_{ba}$ and $E_{ab}E_{cd}=\delta_{bc}E_{ad}$,
 
@@ -75,7 +75,7 @@ and cyclically $[\varphi_{12},\varphi_{23}]=\varphi_{13}$, $[\varphi_{13},\varph
 
 - **(C) holds exactly:** $r=3=6-3=N-d$. No tolerance, no genericity, no run.
 - **Isotropy fails maximally:** $\langle[\varphi_{12},\varphi_{13}],\varphi_{23}\rangle=-\lVert\varphi_{23}\rVert^2=-1$ in the half-trace pairing (and $-2$ in Frobenius). The residual is of order the norm, not of order a tolerance.
-- **(B) fails:** $[\mathfrak m,\mathfrak m]^\perp=\mathfrak m^\perp=\operatorname{span}\{\varphi_{14},\varphi_{24},\varphi_{34}\}$, which has dimension $3=\dim\mathfrak m$ and meets $\mathfrak m$ in $\{0\}$. **This is the strictly-weaker phenomenon in its purest form: the dimensions agree and the subspaces are transverse.**
+- **(B) fails:** $[\mathfrak m,\mathfrak m]^\perp=\mathfrak m^\perp=\mathop{\mathrm{span}}\{\varphi_{14},\varphi_{24},\varphi_{34}\}$, which has dimension $3=\dim\mathfrak m$ and meets $\mathfrak m$ in $\{0\}$. **This is the strictly-weaker phenomenon in its purest form: the dimensions agree and the subspaces are transverse.**
 - **(A) fails**, since $\mathfrak m$ is not isotropic and so is not maximal isotropic.
 
 *Screen, reported as a screen.* A seconds-long numerical check on this subspace returns $\dim\mathfrak m=3$, $r=3$, $N-d=3$, isotropy residual $1.000$. It agrees with the hand computation and is not the evidence for it.
@@ -86,13 +86,13 @@ and cyclically $[\varphi_{12},\varphi_{23}]=\varphi_{13}$, $[\varphi_{13},\varph
 
 **For *isotropic* $\mathfrak m$:**
 
-$$\mathfrak m\ \text{maximal}\iff[\mathfrak m,\mathfrak m]^\perp=\mathfrak m\iff\operatorname{rank}[\mathfrak m,\mathfrak m]=N-\dim\mathfrak m.$$
+$$\mathfrak m\ \text{maximal}\iff[\mathfrak m,\mathfrak m]^\perp=\mathfrak m\iff\mathop{\mathrm{rank}}[\mathfrak m,\mathfrak m]=N-\dim\mathfrak m.$$
 
 Under isotropy, $\mathfrak m\subseteq[\mathfrak m,\mathfrak m]^\perp$ holds automatically, and two nested subspaces of equal dimension are equal, so (C) $\Rightarrow$ (B) is restored. **The equality form (B) may keep the chain's left-hand side with no hypothesis; only (C) needs it.**
 
 The repair is load-bearing rather than pedantic because **(C) is the form that gets used.** (B) is a subspace identity nobody evaluates; the table evaluates (C), a rank against an integer, and reads off a verdict in the "verdict" column. As a decision procedure, the table's column is unsound: $\mathfrak{so}(3)\subset\mathfrak{so}(4)$ would enter it as *maximal*. Every consumer of L75 that computes a rank is consuming the unsound form.
 
-**The same omission, in the same file, forty lines below.** [L77](../findings/isotropy-cap.md#L112) was refuted by [r609](REVIEW_r609.md) and [r610](REVIEW_r610.md) for dropping exactly this hypothesis, and its warning box uses **the same witness at the same $n=4$**, $\mathfrak m=\mathfrak{so}(3)$, $d=3$, $\mathfrak m^\perp=\operatorname{span}(\varphi_{14},\varphi_{24},\varphi_{34})$. That box is on line 116 of the file. **The refutation of L75's third condition was already written into this file, sixty-seven lines above L75's own heading, in the subspace it names.** This is the sixteen-times pattern the brief warns about, and it is the second time in this file that a hypothesis restored in one block was not propagated to a neighbouring one.
+**The same omission, in the same file, forty lines below.** [L77](../findings/isotropy-cap.md#L112) was refuted by [r609](REVIEW_r609.md) and [r610](REVIEW_r610.md) for dropping exactly this hypothesis, and its warning box uses **the same witness at the same $n=4$**, $\mathfrak m=\mathfrak{so}(3)$, $d=3$, $\mathfrak m^\perp=\mathop{\mathrm{span}}(\varphi_{14},\varphi_{24},\varphi_{34})$. That box is on line 116 of the file. **The refutation of L75's third condition was already written into this file, sixty-seven lines above L75's own heading, in the subspace it names.** This is the sixteen-times pattern the brief warns about, and it is the second time in this file that a hypothesis restored in one block was not propagated to a neighbouring one.
 
 ## 2. The first equivalence: which containment is definitional
 

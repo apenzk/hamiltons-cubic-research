@@ -12,11 +12,11 @@
 
 Quoted from [conventions.md](../findings/conventions.md), which is where every one of these lives:
 
-- **Norm.** $\lVert W\rVert=1$ in the half-trace $\Lambda^2$ pairing, under which $\{\varphi_{ab}\}_{a<b}$ is orthonormal; on the diagonal locus this is $\operatorname{tr}M^2=\sum_{a\ne b}M_{ab}^2=2$, the sum over **ordered** pairs.
+- **Norm.** $\lVert W\rVert=1$ in the half-trace $\Lambda^2$ pairing, under which $\{\varphi_{ab}\}_{a<b}$ is orthonormal; on the diagonal locus this is $\mathop{\mathrm{tr}}M^2=\sum_{a\ne b}M_{ab}^2=2$, the sum over **ordered** pairs.
 - **$\theta$.** $P(W)/\lVert W\rVert^3$, and $Q(W)=\theta W$ at a critical point. **$\theta$ is odd**: $\pm M$ are both critical and $\theta\mapsto-\theta$.
 - **$\theta_0(n)$.** The closed form $\theta_0^2=2(n-1)(n-2)/n^2$ **and nothing more**, equal to the balanced-product value **at even $n$ only**. I use it only at even $n$ and say so at each use.
-- **The vertex matrix.** $M=K$ symmetric, hollow, $M\mathbf1=0$ (Ricci-flatness), $\operatorname{tr}M^2=2$; the $\Lambda^2$ spectrum is the multiset of **entries** of $M$, not its eigenvalues.
-- **Criticality on the locus**, from this file's own boxed criterion: $M^{\circ2}+M^2=\theta M+\operatorname{diag}(s)$, $s_i=\sum_jM_{ij}^2$, whose only content is the off-diagonal equation $M_{ab}^2+(M^2)_{ab}=\theta M_{ab}$.
+- **The vertex matrix.** $M=K$ symmetric, hollow, $M\mathbf1=0$ (Ricci-flatness), $\mathop{\mathrm{tr}}M^2=2$; the $\Lambda^2$ spectrum is the multiset of **entries** of $M$, not its eigenvalues.
+- **Criticality on the locus**, from this file's own boxed criterion: $M^{\circ2}+M^2=\theta M+\mathop{\mathrm{diag}}(s)$, $s_i=\sum_jM_{ij}^2$, whose only content is the off-diagonal equation $M_{ab}^2+(M^2)_{ab}=\theta M_{ab}$.
 - **"The band."** *Not tabled in [conventions.md](../findings/conventions.md), and the record uses it in two inequivalent senses*, see §5. I read L144's "the band" as [I18](../plan.md)'s and [I5](../plan.md)'s, namely $\theta\ge\sqrt{3/2}$ at $n\ge12$, because that is the only reading under which "except the balanced product" is not vacuous.
 
 **Graph parameters.** $\Gamma=\mathrm{srg}(n,k,\lambda,\mu)$ with adjacency $A$, complement adjacency $\bar A=J-I-A$, $w:=n-1-k$, and eigenvalues $k>r\ge0>s$ with $r,s$ the roots of $x^2-(\lambda-\mu)x-(k-\mu)$. I write $s=-m$ and $S:=m-1$ throughout §4.
@@ -28,7 +28,7 @@ Quoted from [conventions.md](../findings/conventions.md), which is where every o
 Put $M=a\big(A-t\bar A\big)$, the only shape available if the entries are to take one value on edges and one on non-edges.
 
 **The normalisation is fixed by the record's own two constraints and nothing else.** $M\mathbf1=0$ reads $ak-atw=0$, so $t=k/w$. Then, over ordered pairs,
-$$\operatorname{tr}M^2=a^2\big(nk+nw t^2\big)=a^2nk\frac{w+k}{w}=\frac{a^2nk(n-1)}{w}=2\ \Longrightarrow\ a=\sqrt{\frac{2w}{nk(n-1)}} .$$
+$$\mathop{\mathrm{tr}}M^2=a^2\big(nk+nw t^2\big)=a^2nk\frac{w+k}{w}=\frac{a^2nk(n-1)}{w}=2\ \Longrightarrow\ a=\sqrt{\frac{2w}{nk(n-1)}} .$$
 **No DGK convention enters.** The block's hedge *"pinned from criticality alone"* is therefore substantially right and verbally loose: criticality is scale-covariant ($tM$ is critical at $t\theta$), so what pins $a$ is the **unit-norm constraint**, and criticality then pins $\theta$. Nothing is transcribed either way.
 
 With $b=a(1+t)$, $c=at$ and $A^2=(k-\mu)I+(\lambda-\mu)A+\mu J$,

@@ -25,7 +25,7 @@ Against [conventions.md](../findings/conventions.md), before touching the block:
 - **"Critical point" is $Q(W)=\theta W$** with $Q(W)=W^2+W^\#$. In an eigenframe this is diagonal, so row $\beta$ reads $(W^\#)_{\beta\beta}=\lambda_\beta(\theta-\lambda_\beta)$, the block's row equation is exact, not an approximation.
 - **$T_{abc}=c_{abc}^2$** with $c_{abc}=\langle[v_a,v_b],v_c\rangle$ totally antisymmetric. So $T\ge0$ and $T$ vanishes on repeated indices.
 - **The pair sum inside $W^\#$ is UNORDERED.** conventions.md says pair sums are ordered unless stated, but the anchor $\mathrm{Id}^\#=(n-2)\mathrm{Id}$ forces the unordered reading here: $\sum_{\gamma<\delta}T_{\beta\gamma\delta}=\tfrac12\sum_\gamma\lVert[v_\beta,v_\gamma]\rVert^2=n-2$. Under the ordered reading every row would carry a spurious factor $2$ and the block's $(W^\#)_{11}=Tab$ would be $2Tab$. **The block is in the right normalisation**; it does not say which, and this is exactly the class of collision conventions.md exists to prevent.
-- Unit norm is $\sum_\alpha\lambda_\alpha^2=\operatorname{tr}(W^2)=1$, so $6a^2=1$ is right.
+- Unit norm is $\sum_\alpha\lambda_\alpha^2=\mathop{\mathrm{tr}}(W^2)=1$, so $6a^2=1$ is right.
 - Pair cap $\sum_\gamma T_{\alpha\beta\gamma}=\lVert[v_\alpha,v_\beta]\rVert^2\le2$; deficit $\epsilon_{\alpha\beta}=2-\lVert[v_\alpha,v_\beta]\rVert^2\ge0$.
 
 Cross-check against [bounds.md:233](../findings/bounds.md#L233): the record's per-index relation (C), $\sum_{\beta\gamma}\lambda_\beta\lambda_\gamma T_{k\beta\gamma}=2\lambda_k(\theta-\lambda_k)$, is the block's row halved into unordered form. Agreement.
@@ -73,7 +73,7 @@ conventions.md: *"Structure constants $c_{abc}=\langle[v_a,v_b],v_c\rangle$ are 
 
 **Under the parent's counting, no: the system is square. Under the block's own counting, yes, but the block never says which unknowns it is counting, and the two answers differ.**
 
-*Parent's counting.* Unknowns $(\lambda_1,a,b,T,\theta)$: five. Normalisations $\operatorname{tr}W=0$ and $\lVert W\rVert=1$: two. Three freedoms left, three rows, **square**, and a square system generically has an isolated solution, which is precisely what comes out. Nothing is over-constrained in this reading.
+*Parent's counting.* Unknowns $(\lambda_1,a,b,T,\theta)$: five. Normalisations $\mathop{\mathrm{tr}}W=0$ and $\lVert W\rVert=1$: two. Three freedoms left, three rows, **square**, and a square system generically has an isolated solution, which is precisely what comes out. Nothing is over-constrained in this reading.
 
 *The block's counting*, given in the "Why this stratum and no other" paragraph: hold the spectrum and $\theta$ fixed, take $T$ as the unknown. Then at rank $r$ there are $r$ rows against $\binom r3$ live entries: $3$ vs $1$ at $r=3$ (overdetermined), $4$ vs $4$ at $r=4$, $5$ vs $10$ at $r=5$. The arithmetic is right and the crossing is where the block says it is.
 
@@ -123,7 +123,7 @@ L72's hypothesis is **"critical point"**, $Q(W)=\theta W$. The clause's hypothes
 
 Take $W$ in the stratum with $\theta=\sqrt{3/2}$.
 
-1. Equality in L29's chain $\theta\le\operatorname{tr}W^3+6\lambda_1ab$ forces $3T_{1,N-1,N}\lambda_1ab=6\lambda_1ab$, so $T_{1,N-1,N}=2$; then $\lVert[v_2,v_3]\rVert^2\ge T_{1,N-1,N}=2$ and the cap gives $\lVert[v_2,v_3]\rVert^2=2$.
+1. Equality in L29's chain $\theta\le\mathop{\mathrm{tr}}W^3+6\lambda_1ab$ forces $3T_{1,N-1,N}\lambda_1ab=6\lambda_1ab$, so $T_{1,N-1,N}=2$; then $\lVert[v_2,v_3]\rVert^2\ge T_{1,N-1,N}=2$ and the cap gives $\lVert[v_2,v_3]\rVert^2=2$.
 2. [Lemma L31](../findings/stratum-two-negative.md#L391), *"$\lVert[X,Y]\rVert^2=2$ if and only if $XY=-YX$, both $X$ and $Y$ have rank $4$ with all singular values $1/\sqrt2$, and $\mathrm{im}\,X=\mathrm{im}\,Y$"*, gives $\mathrm{im}\,v_2=\mathrm{im}\,v_3$ of dimension $4$.
 3. L29's Ricci-flatness identity $\lambda_1v_1v_1^{\mathsf T}=a\,v_2v_2^{\mathsf T}+b\,v_3v_3^{\mathsf T}$ gives support $=\mathrm{im}\,v_1=\mathrm{im}\,v_2+\mathrm{im}\,v_3$, so $r=4$; there the stratum is the self-dual family $W^+=\mathrm{diag}(q+r,-q,-r)$ and equality forces $q=r$, i.e. padded $W_{\mathbb{CP}^2}$.
 
@@ -148,7 +148,7 @@ Two earlier reviewers passed it. [r513](REVIEW_r513.md) re-derived L72's algebra
 
 ## The block's last paragraph, one confirmed identity, one overstatement
 
-**Confirmed, re-derived cold.** Pairing L33's identity $\sum_\alpha\lambda_\alpha N_{v_\alpha}=0$, $N_v=2v\otimes v-\mathrm{ad}(v)^2$, against $v_\beta$ gives $\langle N_{v_\alpha}v_\beta,v_\beta\rangle=2\delta_{\alpha\beta}+\lVert[v_\alpha,v_\beta]\rVert^2$, hence $2\lambda_\beta+\sum_\alpha\lambda_\alpha\lVert[v_\alpha,v_\beta]\rVert^2=0$; substituting $\lVert[v_\alpha,v_\beta]\rVert^2=2-\epsilon_{\alpha\beta}$ with $\operatorname{tr}W=0$ and $\epsilon_{\beta\beta}=2$ leaves exactly
+**Confirmed, re-derived cold.** Pairing L33's identity $\sum_\alpha\lambda_\alpha N_{v_\alpha}=0$, $N_v=2v\otimes v-\mathrm{ad}(v)^2$, against $v_\beta$ gives $\langle N_{v_\alpha}v_\beta,v_\beta\rangle=2\delta_{\alpha\beta}+\lVert[v_\alpha,v_\beta]\rVert^2$, hence $2\lambda_\beta+\sum_\alpha\lambda_\alpha\lVert[v_\alpha,v_\beta]\rVert^2=0$; substituting $\lVert[v_\alpha,v_\beta]\rVert^2=2-\epsilon_{\alpha\beta}$ with $\mathop{\mathrm{tr}}W=0$ and $\epsilon_{\beta\beta}=2$ leaves exactly
 
 $$\sum_{\alpha\ne\beta}\lambda_\alpha\epsilon_{\alpha\beta}=0 .$$
 

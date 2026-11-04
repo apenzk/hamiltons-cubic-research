@@ -13,7 +13,7 @@ Every route on I73 characterises the maximiser $W$ from information at $W$: crit
 | a rearrangement map $T$ with $P(TW)\ge P(W)$ and $TW$ two-valued | a global map, the analyst's symmetrisation | no candidate map: the only natural two-valued competitor is the best product, and "$P(W)\le\theta_{p,q}$" is the goal itself |
 | Morse theory, Łojasiewicz flow, Z-eigenvalue and nonnegativity certificates | all critical points at once | covered by the ten earlier sweeps ([2026-09-22](2026-09-22-LIT-step8-sweep.md)), no method |
 | extremal idempotents (Tkachev, Krasnov–Tkachev) | algebra identities at the extremal idempotent | covered, the Weyl algebra is neither eiconal nor medial ([notes](../references/tkachev-2019-spectral-nonassociative/README.md)) |
-| a class-level ceiling from $\theta\ge\theta_0$ scaling with $\sqrt p$ | the value hypothesis at the level of a whole eigenspace | open, no named inequality: the averaged fourth moment gives $\mathbb E\operatorname{tr}x^4\le2n/(p+2)$, already on file as insufficient |
+| a class-level ceiling from $\theta\ge\theta_0$ scaling with $\sqrt p$ | the value hypothesis at the level of a whole eigenspace | open, no named inequality: the averaged fourth moment gives $\mathbb E\mathop{\mathrm{tr}}x^4\le2n/(p+2)$, already on file as insufficient |
 
 **Web searches** (Huisken-type sharp cubic constant, symmetrisation for invariant cubics on spheres, Tkachev 2025 to 2026, Nienhaus and Böhm–Wilking follow-ups): nothing beyond the shelf.
 

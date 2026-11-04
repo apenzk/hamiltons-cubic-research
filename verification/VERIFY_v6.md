@@ -2,7 +2,7 @@
 
 Verifier `v6`. Cold brief; no numerical work; no project record read.
 
-Notation used throughout: $N=\binom n2$, $\Lambda^2=\Lambda^2\mathbb R^n\cong\mathfrak{so}(n)$ with $\langle X,Y\rangle=-\tfrac12\operatorname{tr}(XY)$ (so $|e_i\wedge e_j|=1$), $\mathfrak h\subseteq\mathfrak{so}(n)$ of dimension $r$, $\pi$ the orthogonal projection of $\Lambda^2$ onto $\mathfrak h$, $s=N-r$, $\theta=P(W)/\lVert W\rVert^3$.
+Notation used throughout: $N=\binom n2$, $\Lambda^2=\Lambda^2\mathbb R^n\cong\mathfrak{so}(n)$ with $\langle X,Y\rangle=-\tfrac12\mathop{\mathrm{tr}}(XY)$ (so $|e_i\wedge e_j|=1$), $\mathfrak h\subseteq\mathfrak{so}(n)$ of dimension $r$, $\pi$ the orthogonal projection of $\Lambda^2$ onto $\mathfrak h$, $s=N-r$, $\theta=P(W)/\lVert W\rVert^3$.
 
 ## 1. Hypothesis inventory
 
@@ -25,7 +25,7 @@ Notation used throughout: $N=\binom n2$, $\Lambda^2=\Lambda^2\mathbb R^n\cong\ma
 | U1 | $K$ compact, or replaced by its closure | Palais' principle needs a compact/proper action. Harmless: $\mathcal W_n^K=\mathcal W_n^{\overline K}$ for a linear continuous action, so taking closures is free. **Correctable.** |
 | U2 | $\mathbb R^n$ is $K$-irreducible | Without it $\Lambda^2$ has $\ge 3$ invariant summands and H5 is false, Finding 1. |
 | U3 | $\mathfrak h\neq 0$, i.e. $K$ is not finite | H4's parameter $r$ would be $0$ while $P\neq0$. Flagged, not exhibited (Finding 8, withdrawn). |
-| U4 | $\mathfrak g=\mathfrak h\oplus\mathbb R^n$ is semisimple (no flat factor) | the Casimir normalisation $\operatorname{Cas}_{\mathfrak h}\vert_{\mathfrak p}=\tfrac12$ used in the closed form fails. |
+| U4 | $\mathfrak g=\mathfrak h\oplus\mathbb R^n$ is semisimple (no flat factor) | the Casimir normalisation $\mathop{\mathrm{Cas}}_{\mathfrak h}\vert_{\mathfrak p}=\tfrac12$ used in the closed form fails. |
 | U5 | $\mathfrak h$ simple, or its simple factors interchanged by $K$ | $A=\sum_\alpha\gamma_\alpha r_\alpha$ is not $\gamma r$; the closed form is then false, Finding 1's mechanism. |
 | U6 | $\ker W=0$ | zero-padding produces $\ker\tilde W\neq0$ and breaks both H5 and the closed form, Finding 2. |
 | U7 | $n$ even, for the maximiser clause | $\mathfrak{so}(n/2)\oplus\mathfrak{so}(n/2)$ does not exist for odd $n$, Finding 6. |
@@ -34,18 +34,18 @@ Notation used throughout: $N=\binom n2$, $\Lambda^2=\Lambda^2\mathbb R^n\cong\ma
 
 **Principle of symmetric criticality (Palais).** Hypotheses: a compact group (or proper action) acting by isometries on a Riemannian manifold $M$, an invariant smooth $f$, and the fixed set $M^G$. Checked against the object here:
 
-- $M=$ unit sphere of $\mathcal W_n$, $K$ acts by isometries because the $SO(n)$-action on $\operatorname{Sym}^2(\Lambda^2)$ preserves $\langle\cdot,\cdot\rangle$. ✓
+- $M=$ unit sphere of $\mathcal W_n$, $K$ acts by isometries because the $SO(n)$-action on $\mathop{\mathrm{Sym}}^2(\Lambda^2)$ preserves $\langle\cdot,\cdot\rangle$. ✓
 - $f=P$ is $O(n)$-invariant because $Q$ is equivariant. ✓
 - Compactness: supplied by U1. ✓ (correctable, see above)
 - $M^K$ = unit sphere of the linear subspace $\mathcal W_n^K$. Under H3 this is $\{\pm W_0\}$, zero-dimensional.
 
-I do not in fact need Palais here; the one-line direct argument is stronger and avoids the citation. $\nabla(P\vert_M)(W_0)=3\operatorname{proj}_{\mathcal W_n}Q(W_0)-\lambda W_0$ lies in $T_{W_0}M=W_0^{\perp}\cap\mathcal W_n$ and is $K$-invariant (equivariance of $Q$ and of the projection), hence lies in $\mathcal W_n^K\cap W_0^\perp=0$ under H3. **So H3 alone gives criticality.**
+I do not in fact need Palais here; the one-line direct argument is stronger and avoids the citation. $\nabla(P\vert_M)(W_0)=3\mathop{\mathrm{proj}}_{\mathcal W_n}Q(W_0)-\lambda W_0$ lies in $T_{W_0}M=W_0^{\perp}\cap\mathcal W_n$ and is $K$-invariant (equivariance of $Q$ and of the projection), hence lies in $\mathcal W_n^K\cap W_0^\perp=0$ under H3. **So H3 alone gives criticality.**
 
-**Bianchi $\leftrightarrow$ symmetric pair.** The classical correspondence I used: for $\mathfrak h\subseteq\mathfrak{so}(n)$, $\pi_{\mathfrak h}\in\operatorname{Sym}^2(\Lambda^2)$ satisfies the first Bianchi identity iff $\mathfrak g:=\mathfrak h\oplus\mathbb R^n$ with $[x,y]:=-\pi_{\mathfrak h}(x\wedge y)$ for $x,y\in\mathbb R^n$ satisfies Jacobi, i.e. iff $(\mathfrak g,\mathfrak h)$ is an orthogonal symmetric pair with $\mathfrak h$ the holonomy. This is standard symmetric-space theory; I verified it internally rather than from a paper, by re-deriving the two consequences it predicts and checking them on four independent examples in §3, Finding 5. Two of those checks are recorded there: $C=\sum_{p,q,t\in\mathfrak m}c_{pqt}^2=0$ for the balanced product, which is exactly $[\mathfrak m,\mathfrak m]\subseteq\mathfrak h$; and $\gamma=2(n-2)$ for $\mathfrak h=\mathfrak{so}(n)$, matching $\operatorname{id}^{\#}=(n-2)\operatorname{id}$.
+**Bianchi $\leftrightarrow$ symmetric pair.** The classical correspondence I used: for $\mathfrak h\subseteq\mathfrak{so}(n)$, $\pi_{\mathfrak h}\in\mathop{\mathrm{Sym}}^2(\Lambda^2)$ satisfies the first Bianchi identity iff $\mathfrak g:=\mathfrak h\oplus\mathbb R^n$ with $[x,y]:=-\pi_{\mathfrak h}(x\wedge y)$ for $x,y\in\mathbb R^n$ satisfies Jacobi, i.e. iff $(\mathfrak g,\mathfrak h)$ is an orthogonal symmetric pair with $\mathfrak h$ the holonomy. This is standard symmetric-space theory; I verified it internally rather than from a paper, by re-deriving the two consequences it predicts and checking them on four independent examples in §3, Finding 5. Two of those checks are recorded there: $C=\sum_{p,q,t\in\mathfrak m}c_{pqt}^2=0$ for the balanced product, which is exactly $[\mathfrak m,\mathfrak m]\subseteq\mathfrak h$; and $\gamma=2(n-2)$ for $\mathfrak h=\mathfrak{so}(n)$, matching $\mathop{\mathrm{id}}^{\#}=(n-2)\mathop{\mathrm{id}}$.
 
 **Lemma L23 (the cap $r\le n(n-2)/4$).** Not supplied in this brief and not read (record files are out of bounds). Its conclusion is load-bearing for the maximiser claim and is recorded as hypothesis-debt in Finding 7. I did check that the cap survives the obvious attacks: $\mathbb{CP}^{n/2}$ has $r=n^2/4>n(n-2)/4$ but is excluded by H2; $S^{n-1}\times S^1$ has $r=\binom{n-1}2$ but has $\dim\mathcal W^K=0$; real Grassmannians and $SU(m)/SO(m)$ fall far below.
 
-**$\operatorname{id}^{\#}=(n-2)\operatorname{id}$** and $Q(\mathcal W_n)\subseteq\mathcal W_n$ (asserted in the README). I independently confirmed the second on the balanced product: $\operatorname{tr}(W^{\#})=-\tfrac{(n-1)(n-2)}2=-\lVert W\rVert^2$, so $\operatorname{tr} Q(W)=0$. ✓
+**$\mathop{\mathrm{id}}^{\#}=(n-2)\mathop{\mathrm{id}}$** and $Q(\mathcal W_n)\subseteq\mathcal W_n$ (asserted in the README). I independently confirmed the second on the balanced product: $\mathop{\mathrm{tr}}(W^{\#})=-\tfrac{(n-1)(n-2)}2=-\lVert W\rVert^2$, so $\mathop{\mathrm{tr}} Q(W)=0$. ✓
 
 ## 3. Findings
 
@@ -57,7 +57,7 @@ Let $W=a\pi+b(I-\pi)$. In an adapted orthonormal basis of $\Lambda^2$ with total
 
 $$\langle W,W^{\#}\rangle=\tfrac12\sum_{\alpha\gamma\delta}c_{\alpha\gamma\delta}^2\,w_\alpha w_\gamma w_\delta=\tfrac12\big(Aa^3+Bab^2+Cb^3\big),$$
 
-where $A$ sums over triples inside $\mathfrak h$, $B$ over triples with exactly one $\mathfrak h$-index, $C$ over triples inside $\mathfrak m=\mathfrak h^{\perp}$; triples with exactly two $\mathfrak h$-indices vanish because $\mathfrak h$ is a subalgebra. From $\operatorname{id}^{\#}=(n-2)\operatorname{id}$: $A+B+C=2(n-2)N$ and $A+B/3=2(n-2)r$. Eliminating,
+where $A$ sums over triples inside $\mathfrak h$, $B$ over triples with exactly one $\mathfrak h$-index, $C$ over triples inside $\mathfrak m=\mathfrak h^{\perp}$; triples with exactly two $\mathfrak h$-indices vanish because $\mathfrak h$ is a subalgebra. From $\mathop{\mathrm{id}}^{\#}=(n-2)\mathop{\mathrm{id}}$: $A+B+C=2(n-2)N$ and $A+B/3=2(n-2)r$. Eliminating,
 
 $$2\langle W,W^{\#}\rangle=A\,(a-b)^2(a+2b)+2(n-2)\big(3rab^2+(N-3r)b^3\big).$$
 
@@ -69,10 +69,10 @@ So $\theta$ depends on $\mathfrak h$ through the single extra invariant $\gamma$
 
 ### Finding 5 (positive), the closed form is a theorem on the isotropy-irreducible subfamily, not a fit
 
-(i) **Re-derivation.** Under H2, $\pi_{\mathfrak h}$ satisfies Bianchi, so $\mathfrak g=\mathfrak h\oplus\mathfrak p$ is a symmetric pair. Two Casimir computations, both with respect to the metric $q$ induced on $\mathfrak h$ from $\Lambda^2$, which satisfies $q(h,h)=-\tfrac12\operatorname{tr}_{\mathfrak p}(\operatorname{ad}_h^2)$:
+(i) **Re-derivation.** Under H2, $\pi_{\mathfrak h}$ satisfies Bianchi, so $\mathfrak g=\mathfrak h\oplus\mathfrak p$ is a symmetric pair. Two Casimir computations, both with respect to the metric $q$ induced on $\mathfrak h$ from $\Lambda^2$, which satisfies $q(h,h)=-\tfrac12\mathop{\mathrm{tr}}_{\mathfrak p}(\mathop{\mathrm{ad}}_h^2)$:
 
-- $\operatorname{Cas}^q_{\mathfrak h}\vert_{\mathfrak p}=2r/n$, forced by $\operatorname{tr}\operatorname{Cas}=2r$ and Schur (needs U2).
-- $\operatorname{Cas}^{-\kappa_{\mathfrak g}}_{\mathfrak h}\vert_{\mathfrak p}=\tfrac12$, the standard symmetric-space fact (needs U4). Verified on $S^n=SO(n+1)/SO(n)$: $\operatorname{Cas}$ with respect to $-\operatorname{tr}$ is $\tfrac{n-1}2$, and $-\kappa_{\mathfrak{so}(n+1)}=-(n-1)\operatorname{tr}$, giving $\tfrac12$. ✓
+- $\mathop{\mathrm{Cas}}^q_{\mathfrak h}\vert_{\mathfrak p}=2r/n$, forced by $\mathop{\mathrm{tr}}\mathop{\mathrm{Cas}}=2r$ and Schur (needs U2).
+- $\mathop{\mathrm{Cas}}^{-\kappa_{\mathfrak g}}_{\mathfrak h}\vert_{\mathfrak p}=\tfrac12$, the standard symmetric-space fact (needs U4). Verified on $S^n=SO(n+1)/SO(n)$: $\mathop{\mathrm{Cas}}$ with respect to $-\mathop{\mathrm{tr}}$ is $\tfrac{n-1}2$, and $-\kappa_{\mathfrak{so}(n+1)}=-(n-1)\mathop{\mathrm{tr}}$, giving $\tfrac12$. ✓
 
 Hence $q=\sigma\,(-\kappa_{\mathfrak g}\vert_{\mathfrak h})$ with $\sigma=n/(4r)$, and with $c=\kappa_{\mathfrak h}/\kappa_{\mathfrak g}\vert_{\mathfrak h}$ one gets $\gamma=4rc/n$. Independently, $q=\tfrac12(-\kappa_{\mathfrak g}\vert_{\mathfrak h}+\kappa_{\mathfrak h})$ gives $\gamma=2c/(1-c)$. Eliminating $c$:
 
@@ -96,7 +96,7 @@ Two corollaries worth recording. For every bi-invariant metric on a compact simp
 
 ### Finding 1, "every member has just two eigenvalues" is FALSE; closed form fails on genuine members
 
-(i) **Re-derivation of the eigenvalue count.** If $\Lambda^2$ is multiplicity-free with $m_2$ irreducible summands and $\mathbb R^n$ with $m_1$, then $\dim\operatorname{Sym}^2(\Lambda^2)^K=m_2$ (each real/complex/quaternionic irreducible contributes exactly $1$ to the symmetric invariants, since $J,i,j,k$ are skew), $\dim(\operatorname{Sym}^2_0\mathbb R^n)^K=m_1-1$, and
+(i) **Re-derivation of the eigenvalue count.** If $\Lambda^2$ is multiplicity-free with $m_2$ irreducible summands and $\mathbb R^n$ with $m_1$, then $\dim\mathop{\mathrm{Sym}}^2(\Lambda^2)^K=m_2$ (each real/complex/quaternionic irreducible contributes exactly $1$ to the symmetric invariants, since $J,i,j,k$ are skew), $\dim(\mathop{\mathrm{Sym}}^2_0\mathbb R^n)^K=m_1-1$, and
 
 $$\dim\mathcal W_n^K=m_2-m_1-\dim(\Lambda^4\mathbb R^n)^K .$$
 
@@ -107,7 +107,7 @@ Under H2 and H3 this reads $m_2=m_1+1$. The invariant $W$ therefore has $m_2=m_1
 - $(\Lambda^4\mathbb R^8)^K=0$: the summands of $\Lambda^4(\mathbb R^3\oplus\mathbb R^5)$ are $\Lambda^3\mathbb R^3\otimes\mathbb R^5$ (no $SO(5)$-invariant vector), $\Lambda^2\otimes\Lambda^2$ (no $SO(p)$-invariant $2$-form), and $\Lambda^4\mathbb R^5\cong\mathbb R^5$ (no invariant). H2 holds. ✓
 - $m_1=2$, and $\Lambda^2\mathbb R^8=\Lambda^2\mathbb R^3\oplus\Lambda^2\mathbb R^5\oplus(\mathbb R^3\otimes\mathbb R^5)$ gives $m_2=3$, so $\dim\mathcal W_8^K=3-2-0=1$. H3 holds. ✓
 - So $W$ is a critical point by the generator, and is a genuine member of the family as the entry defines it.
-- Its three eigenvalues are distinct. With $R=\pi_1+\pi_2$ of eigenvalues $(1,1,0)$ and $\operatorname{Ric}$-correction proportional to $(2(p-1),2(q-1),p+q-2)=(4,8,6)$, the Weyl eigenvalues are $W_i=R_i-\kappa u_i+C$ with $\kappa>0$: $W_1-W_2=4\kappa\neq0$, $W_1-W_3=1+2\kappa\neq0$, $W_2-W_3=1-2\kappa\neq0$ for $\kappa=\tfrac1{2(n-2)}=\tfrac1{12}$. **Three distinct eigenvalues.**
+- Its three eigenvalues are distinct. With $R=\pi_1+\pi_2$ of eigenvalues $(1,1,0)$ and $\mathop{\mathrm{Ric}}$-correction proportional to $(2(p-1),2(q-1),p+q-2)=(4,8,6)$, the Weyl eigenvalues are $W_i=R_i-\kappa u_i+C$ with $\kappa>0$: $W_1-W_2=4\kappa\neq0$, $W_1-W_3=1+2\kappa\neq0$, $W_2-W_3=1-2\kappa\neq0$ for $\kappa=\tfrac1{2(n-2)}=\tfrac1{12}$. **Three distinct eigenvalues.**
 - The closed form fails. Here $\mathfrak h=\mathfrak{so}(3)\oplus\mathfrak{so}(5)$ has $\gamma_\alpha=2(p-2)$ per factor, so $A=2\cdot1\cdot3+2\cdot3\cdot10=66$ and $A/r=66/13$, whereas $\gamma_{\mathrm{req}}=2(2r-n)/n=2(26-8)/8=9/2$. Since $66/13\neq 9/2$ ($132\neq117$), $\theta\neq\tfrac2n\sqrt{rN/(N-r)}$. The single-$\gamma$ step (U5) is exactly what breaks: $\mathfrak h$ has two simple factors with different index ratios and no symmetry exchanging them.
 - The same construction lands **inside the target range**: $S^5\times S^7$, $n=12$, $r=31$, $A=2\cdot3\cdot10+2\cdot5\cdot21=270$, $A/r=270/31$ against $\gamma_{\mathrm{req}}=2(62-12)/12=25/3$; $810\neq775$.
 
@@ -115,7 +115,7 @@ Under H2 and H3 this reads $m_2=m_1+1$. The invariant $W$ therefore has $m_2=m_1
 
 ### Finding 2, zero-padding contradicts both H5 and the closed form
 
-(i) **Re-derivation.** Let $W\in\mathcal W_8$ be the $SU(3)$ member and $\tilde W\in\mathcal W_{12}$ its extension by zero. $\tilde W$ is a legitimate element of $\mathcal W_{12}$ (Bianchi and $\operatorname{Ric}$ are block-local) and $\theta(\tilde W)=\theta(W)$, so the *value* does persist. It also remains critical, but for a reason the entry does not give: $\tilde W^{\#}=\widetilde{W^{\#}}$ because $c_{\alpha\gamma\delta}\neq0$ with $\gamma,\delta\in\mathfrak{so}(8)$ forces $\alpha\in\mathfrak{so}(8)$, and $\operatorname{Ric}(Q(W))=0$ makes the $\mathcal W_{12}$-projection block-local too.
+(i) **Re-derivation.** Let $W\in\mathcal W_8$ be the $SU(3)$ member and $\tilde W\in\mathcal W_{12}$ its extension by zero. $\tilde W$ is a legitimate element of $\mathcal W_{12}$ (Bianchi and $\mathop{\mathrm{Ric}}$ are block-local) and $\theta(\tilde W)=\theta(W)$, so the *value* does persist. It also remains critical, but for a reason the entry does not give: $\tilde W^{\#}=\widetilde{W^{\#}}$ because $c_{\alpha\gamma\delta}\neq0$ with $\gamma,\delta\in\mathfrak{so}(8)$ forces $\alpha\in\mathfrak{so}(8)$, and $\mathop{\mathrm{Ric}}(Q(W))=0$ makes the $\mathcal W_{12}$-projection block-local too.
 
 (ii) **Concrete failure of the stated mechanism and of the closed form.**
 
@@ -127,7 +127,7 @@ Under H2 and H3 this reads $m_2=m_1+1$. The invariant $W$ therefore has $m_2=m_1
 
 ### Finding 3, "None is coordinate-diagonalizable" contradicts "the balanced sphere product is itself a member"
 
-(i) **Re-derivation.** For $S^m\times S^m$ ($n=2m$) the curvature operator $R=\pi_1+\pi_2$ is diagonal in the basis $\{e_i\wedge e_j\}$. Because $p=q$, $\operatorname{Ric}=(m-1)g$ is a multiple of the metric, so $\operatorname{Ric}_0=0$ and $W=R-\tfrac{\tau}{2n(n-1)}\,g\owedge g$ differs from $R$ by a multiple of the identity. Hence $W$ is diagonal in $\{e_i\wedge e_j\}$.
+(i) **Re-derivation.** For $S^m\times S^m$ ($n=2m$) the curvature operator $R=\pi_1+\pi_2$ is diagonal in the basis $\{e_i\wedge e_j\}$. Because $p=q$, $\mathop{\mathrm{Ric}}=(m-1)g$ is a multiple of the metric, so $\mathop{\mathrm{Ric}}_0=0$ and $W=R-\tfrac{\tau}{2n(n-1)}\,g\owedge g$ differs from $R$ by a multiple of the identity. Hence $W$ is diagonal in $\{e_i\wedge e_j\}$.
 
 (ii) **Concrete failure.** $S^m\times S^m$ for every $m\ge3$ is simultaneously (a) asserted to be a member and the family's maximiser, and (b) covered by "None is coordinate-diagonalizable". Both cannot hold. The entry itself supplies the $m=3$ instance and calls it "the lone exception", but the exception is not lone: it is the whole balanced series.
 

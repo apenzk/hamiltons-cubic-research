@@ -6,11 +6,11 @@
 
 | # | Claim | Verdict |
 | --- | --- | --- |
-| 1 | the $\mathcal D_n$ clause is false off the band; the table's two violators refute it | **REFUTED, for a reason the section itself states three paragraphs earlier.** The units check out (the column is $L_e$, off $M$), both points are genuine pure critical points, and both are below the band. But $\lambda_{\max}>\tfrac12$ refutes the *inequality* $\lambda_{\max}\le\tfrac12$, which [Gate 2 withdrew](../ATTEMPTS.md) as "the wrong encoding", and says **nothing** about the surviving clause $\tfrac12\notin\operatorname{spec}$ |
+| 1 | the $\mathcal D_n$ clause is false off the band; the table's two violators refute it | **REFUTED, for a reason the section itself states three paragraphs earlier.** The units check out (the column is $L_e$, off $M$), both points are genuine pure critical points, and both are below the band. But $\lambda_{\max}>\tfrac12$ refutes the *inequality* $\lambda_{\max}\le\tfrac12$, which [Gate 2 withdrew](../ATTEMPTS.md) as "the wrong encoding", and says **nothing** about the surviving clause $\tfrac12\notin\mathop{\mathrm{spec}}$ |
 | 2 | therefore any proof must spend $\theta\ge\sqrt{3/2}$, and no bound valid at all pure critical points exists | **REFUTED as an inference.** Both witnesses sit at $n=9$ and $n=10$, where **the band is empty** ($\Theta_n<\sqrt{3/2}$ for every $n\le11$) so they cannot separate "spends the band" from "spends $n\ge12$". Padding repairs $n$ but makes both witnesses $\circ$-decomposable, so they cannot separate it from "spends indecomposability" either |
 | 3 | all three I18 clauses are band-dependent | **REFUTED, by [plan.md](../plan.md)'s own sentence.** The pair clause is *closed* on every non-orbit-free pair and "**needs only $\theta\ge1$, not the band**". [Post F47](../findings/INDEX-traps.md) and F48 fence *methods*; [post F50](../findings/INDEX-traps.md) kills a *route* and the record says in as many words "the clause itself is untouched" |
-| 4 | I20 $\theta\le\Theta_n-c_nd^2$, $d=\operatorname{dist}(M,SO(n)\cdot M_{\text{bal}})$ in $\mathcal D_n$ | **The shape is right; the orbit is wrong.** $SO(n)$ conjugation does **not** preserve $\mathcal D_n$, it destroys both hollowness and the zero row sums. The object is the **finite** orbit $S_n\cdot M_{\text{bal}}=SO(n)\cdot M_{\text{bal}}\cap\mathcal D_n$, and its finiteness is what makes the whole second-order calculation clean |
-| 5 | $c_n\le3\Theta_n/(2(m-1))$, from the Hessian's least-negative eigenvalue | **CONFIRMED, in the $\Lambda^2$ normalisation $\lVert W\rVert^2=\tfrac12\operatorname{tr}M^2=1$**, re-derived cold. The direction of the inequality is **right**, a global inequality restricted to small $d$ is exactly what the expansion constrains. **But the cap is only valid if I20 is the all-$M$ statement**, and the application needs only the critical-point statement, for which no local expansion is available |
+| 4 | I20 $\theta\le\Theta_n-c_nd^2$, $d=\mathop{\mathrm{dist}}(M,SO(n)\cdot M_{\text{bal}})$ in $\mathcal D_n$ | **The shape is right; the orbit is wrong.** $SO(n)$ conjugation does **not** preserve $\mathcal D_n$, it destroys both hollowness and the zero row sums. The object is the **finite** orbit $S_n\cdot M_{\text{bal}}=SO(n)\cdot M_{\text{bal}}\cap\mathcal D_n$, and its finiteness is what makes the whole second-order calculation clean |
+| 5 | $c_n\le3\Theta_n/(2(m-1))$, from the Hessian's least-negative eigenvalue | **CONFIRMED, in the $\Lambda^2$ normalisation $\lVert W\rVert^2=\tfrac12\mathop{\mathrm{tr}}M^2=1$**, re-derived cold. The direction of the inequality is **right**, a global inequality restricted to small $d$ is exactly what the expansion constrains. **But the cap is only valid if I20 is the all-$M$ statement**, and the application needs only the critical-point statement, for which no local expansion is available |
 | 6 | $d\le0.175$ at $n=12$; diameter $2\sqrt2$; vacuous near $n\approx180$ | **$0.175$ CONFIRMED** (in $\Lambda^2$ units, $0.2467$ Frobenius). **The diameter is $2$, not $2\sqrt2$**, in the same units the $0.175$ is in. **$n\approx180$ is REFUTED and is the artefact of that mixed pair**: done consistently the Hessian-cap window closes at $n=102$ |
 | 7 | is I20 true? | **TRUE with some $c_n>0$**, one line from L57's uniqueness plus compactness, so this is not the open question. **But the constant is $O(n^{-2})$, not $O(n^{-1})$**, and the binding competitor is on record: $S^{m-1}\times S^{m+1}$ forces $c_{12}\le0.0126$, **thirty times** below the Hessian cap. **The consequence the item wants is vacuous from $n=14$ up** |
 | 7b | are the DGK/SRG solutions the falsifier? | **NO, and this closes [R15](../routes.md)'s falsifier question.** $\theta$ on the whole SRG family in closed form; **primitive** SRGs cap at $\theta<\tfrac12$; the imprimitive ones are $\sqrt{2(n-1)(g-1)/(n(n-g))}$, maximised uniquely at $g=n/2$, which **is** the balanced product. **No SRG point is in the band except the maximiser itself** |
@@ -23,13 +23,13 @@
 
 $$c=-\frac{\theta}{n-1},\qquad a=\frac{q\theta}{(n-1)(p-1)},\qquad b=\frac{p\theta}{(n-1)(q-1)},$$
 
-and the two within-block equations are then **identities**, every $(p,q)$ is critical. Imposing $\operatorname{tr}M^2=2$:
+and the two within-block equations are then **identities**, every $(p,q)$ is critical. Imposing $\mathop{\mathrm{tr}}M^2=2$:
 
 $$\boxed{\ \theta(S^p\times S^q)^2=\frac{2(n-1)(p-1)(q-1)}{pq\,(n-2)}\ }$$
 
-which returns $\Theta_n^2=2(n-1)(n-2)/n^2$ at $p=q$, $1.115547$ at $(3,5)$ and $1.228239$ at $(5,7)$, the record's own three values, reproduced from criticality and the normalisation with nothing borrowed. *Screen: the constructed matrices have row sums $10^{-16}$, $\operatorname{tr}M^2=2.000000$ and criticality residual $5.6\times10^{-17}$ at $(n,p)=(12,6),(12,5),(12,4),(8,3)$.*
+which returns $\Theta_n^2=2(n-1)(n-2)/n^2$ at $p=q$, $1.115547$ at $(3,5)$ and $1.228239$ at $(5,7)$, the record's own three values, reproduced from criticality and the normalisation with nothing borrowed. *Screen: the constructed matrices have row sums $10^{-16}$, $\mathop{\mathrm{tr}}M^2=2.000000$ and criticality residual $5.6\times10^{-17}$ at $(n,p)=(12,6),(12,5),(12,4),(8,3)$.*
 
-**The full $L_e$ spectrum on $\mathcal D_n$ at $S^p\times S^q$, derived here.** $\mathcal L(N)=\operatorname{hollow}(M\circ N+\tfrac12(MN+NM))$ splits $\mathcal D_n$ into four $S_p\times S_q$-types, and each is an eigenspace:
+**The full $L_e$ spectrum on $\mathcal D_n$ at $S^p\times S^q$, derived here.** $\mathcal L(N)=\mathop{\mathrm{hollow}}(M\circ N+\tfrac12(MN+NM))$ splits $\mathcal D_n$ into four $S_p\times S_q$-types, and each is an eigenspace:
 
 | type | description | dimension | $L_e$ eigenvalue |
 | --- | --- | --- | --- |
@@ -47,7 +47,7 @@ Dimensions sum to $n(n-3)/2=\dim\mathcal D_n$. **So $\lambda_{\max}(L_e\vert_{\m
 
 ## 1. The $\mathcal D_n$ refutation refutes a statement the record already withdrew
 
-**The clause, in the form Gate 2 left standing**, is quoted correctly at the head of the section: $\tfrac12\notin\operatorname{spec}(L_e\vert_{\mathcal D_n\cap M^\perp})$, an **eigen-equation**, not an inequality. The section then refutes $\lambda_{\max}\le\tfrac12$ with a table of two points at $1.206011$ and $1.303584$.
+**The clause, in the form Gate 2 left standing**, is quoted correctly at the head of the section: $\tfrac12\notin\mathop{\mathrm{spec}}(L_e\vert_{\mathcal D_n\cap M^\perp})$, an **eigen-equation**, not an inequality. The section then refutes $\lambda_{\max}\le\tfrac12$ with a table of two points at $1.206011$ and $1.303584$.
 
 **A point with $\lambda_{\max}=1.206011$ is silent on whether $\tfrac12$ is in the spectrum.** The record makes exactly this correction one screen higher, on the same page: *"no quadratic-form inequality in $X$ can encode that, since a Rayleigh range is an interval and may straddle $\tfrac12$ without containing it"*, and prints the witness that shows it, a $54$-dimensional $\mathcal D_n$ spectrum $\{-0.5,-0.3,-0.15,0,0.25,0.45,0.6,1.0,1.2\}$ with **$\tfrac12$ absent and $\lambda_{\max}=1.2$**, where "the clause holds while the box fails". The new section reproduces that pattern at two more points and reads it the opposite way.
 
@@ -63,7 +63,7 @@ Dimensions sum to $n(n-3)/2=\dim\mathcal D_n$. **So $\lambda_{\max}(L_e\vert_{\m
 
 **The clause as stated in [plan.md](../plan.md) carries two hypotheses**, $n\ge12$ **and** $\theta\ge\sqrt{3/2}$. Both witnesses violate the first. Since the band is empty below $n=12$, a witness at $n\le11$ **cannot distinguish which of the two hypotheses is load-bearing**, and the section's conclusion, "any proof of this clause must therefore spend $\theta\ge\sqrt{3/2}$; an attempt that never uses the band is refuted before it starts", is not supported by them.
 
-**The repair is available and the section should make it.** Padding is legitimate: appending zero rows preserves hollowness, symmetry, zero row sums, $\operatorname{tr}M^2=2$ and every criticality equation (both sides vanish on a padded index), and $\mathcal D_{n_0}\hookrightarrow\mathcal D_n$ is $\mathcal L$-equivariant on the supported block, so $\lambda_{\max}$ cannot fall. The $C_5$ blow-up padded to $n=12$ is a pure critical point at $n=12$ with $\theta=0.670820$ and $\lambda_{\max}(L_e\vert_{\mathcal D_{12}})\ge1.206011$. **With that step the dimension hypothesis is genuinely eliminated.**
+**The repair is available and the section should make it.** Padding is legitimate: appending zero rows preserves hollowness, symmetry, zero row sums, $\mathop{\mathrm{tr}}M^2=2$ and every criticality equation (both sides vanish on a padded index), and $\mathcal D_{n_0}\hookrightarrow\mathcal D_n$ is $\mathcal L$-equivariant on the supported block, so $\lambda_{\max}$ cannot fall. The $C_5$ blow-up padded to $n=12$ is a pure critical point at $n=12$ with $\theta=0.670820$ and $\lambda_{\max}(L_e\vert_{\mathcal D_{12}})\ge1.206011$. **With that step the dimension hypothesis is genuinely eliminated.**
 
 **But the repair costs the conclusion the rest of its force.** A padded point has a zero row, hence is $\circ$-decomposable, and [plan.md](../plan.md) names $\circ$-indecomposability as the other candidate hypothesis in the same item, "free at a maximiser and exactly what a maximiser has that a critical point does not". So after padding the witnesses separate the clause from *pure criticality alone*, and from nothing finer. **The honest statement is: the $\mathcal D_n$ inequality needs some hypothesis beyond pure criticality, and the record's two witnesses do not say which.** Both $\theta\ge\sqrt{3/2}$ and indecomposability remain live, and they are not the same hypothesis.
 
@@ -88,23 +88,23 @@ Checked against the three cited posts, one at a time.
 
 ## 4. The orbit is the wrong object, and the right one is better
 
-**$SO(n)$ acting by conjugation does not preserve $\mathcal D_n$.** For $g\in SO(n)$, $(gMg^{\mathsf T})_{ii}\ne0$ in general, so hollowness fails; and $gMg^{\mathsf T}\mathbf1=gM(g^{\mathsf T}\mathbf1)$, which is zero only when $g^{\mathsf T}\mathbf1$ is in $\ker M$, so the zero row sums fail too. **"$\operatorname{dist}(M,\ SO(n)\cdot M_{\text{bal}})$ in $\mathcal D_n$" is therefore not well posed as written**, the set it measures distance to is not in the space the metric is on. *(The sign group does no better: $DMD$ for $D=\operatorname{diag}(\pm1)$ is hollow but has row sums $DM\epsilon\ne0$.)*
+**$SO(n)$ acting by conjugation does not preserve $\mathcal D_n$.** For $g\in SO(n)$, $(gMg^{\mathsf T})_{ii}\ne0$ in general, so hollowness fails; and $gMg^{\mathsf T}\mathbf1=gM(g^{\mathsf T}\mathbf1)$, which is zero only when $g^{\mathsf T}\mathbf1$ is in $\ker M$, so the zero row sums fail too. **"$\mathop{\mathrm{dist}}(M,\ SO(n)\cdot M_{\text{bal}})$ in $\mathcal D_n$" is therefore not well posed as written**, the set it measures distance to is not in the space the metric is on. *(The sign group does no better: $DMD$ for $D=\mathop{\mathrm{diag}}(\pm1)$ is hollow but has row sums $DM\epsilon\ne0$.)*
 
 **The correct object is $S_n\cdot M_{\text{bal}}$**, the permutation orbit, which is exactly $SO(n)\cdot M_{\text{bal}}\cap\mathcal D_n$: the frames in which the balanced product's Weyl tensor is coordinate-diagonal are $O(m)\times O(m)$ times a permutation, and $O(m)\times O(m)$ fixes $M$ pointwise because each factor's curvature tensor is $O(m)$-invariant.
 
 **This is a correction that makes the item easier, not harder.** The permutation orbit is **finite**, so it has no tangent space, so the second-order expansion of §5 has no orbit directions to quotient out and $d(M(t))=\lVert M(t)-M_{\text{bal}}\rVert$ exactly for small $t$. Under the $SO(n)$ reading the orbit would be positive-dimensional and $d$ strictly smaller, making I20 a strictly stronger statement than the one the item wants.
 
-**The item should also say which norm $d$ is in.** The record carries two, differing by $\sqrt2$ in $d$ and $2$ in $c_n$, $\lVert X\rVert^2_{\Lambda^2}=\tfrac12\operatorname{tr}X^2$ (the canonical one, in which $\lVert W\rVert=1$) and Frobenius. §6 shows the section mixes them.
+**The item should also say which norm $d$ is in.** The record carries two, differing by $\sqrt2$ in $d$ and $2$ in $c_n$, $\lVert X\rVert^2_{\Lambda^2}=\tfrac12\mathop{\mathrm{tr}}X^2$ (the canonical one, in which $\lVert W\rVert=1$) and Frobenius. §6 shows the section mixes them.
 
 ---
 
 ## 5. Re-deriving the cap: the direction is right, the constant is right, and the hypothesis it needs is stronger than the one the item wants
 
-**The value functional on the locus.** $F(M)=\tfrac12\big(\sum_{i,j}M_{ij}^3+\operatorname{tr}M^3\big)$, with $F(M)=\theta$ at a critical point (contract criticality against $M$). Its derivatives:
+**The value functional on the locus.** $F(M)=\tfrac12\big(\sum_{i,j}M_{ij}^3+\mathop{\mathrm{tr}}M^3\big)$, with $F(M)=\theta$ at a critical point (contract criticality against $M$). Its derivatives:
 
-$$DF(M)[N]=\tfrac32\big(\langle M^{\circ2},N\rangle+\langle M^2,N\rangle\big),\qquad D^2F(M)[N,N]=3\big(\langle M\circ N,N\rangle+\operatorname{tr}(MN^2)\big)=3\langle N,\mathcal LN\rangle .$$
+$$DF(M)[N]=\tfrac32\big(\langle M^{\circ2},N\rangle+\langle M^2,N\rangle\big),\qquad D^2F(M)[N,N]=3\big(\langle M\circ N,N\rangle+\mathop{\mathrm{tr}}(MN^2)\big)=3\langle N,\mathcal LN\rangle .$$
 
-**The spherical Hessian.** On $\{\operatorname{tr}X^2=2\}$, $\operatorname{Hess}=D^2F-\frac{\langle\nabla F,M\rangle}{\lVert M\rVert^2}\operatorname{Id}$ with $\langle\nabla F,M\rangle=3F(M)=3\theta$, so in **Frobenius** units $\operatorname{Hess}=3\theta\,(L_e-\tfrac12)$, and in the $\Lambda^2$ units where $\lVert M\rVert^2=1$ it is $6\theta\,(L_e-\tfrac12)$, **[r375](REVIEW_r375.md)'s operator exactly**. Its least-negative eigenvalue is $6\theta(\lambda_m-\tfrac12)=-3\theta/(m-1)$ at the top $\mathcal D_n$ direction $\lambda_m=\frac{m-2}{2(m-1)}$ of §0, and halving for the quadratic gives
+**The spherical Hessian.** On $\{\mathop{\mathrm{tr}}X^2=2\}$, $\mathop{\mathrm{Hess}}=D^2F-\frac{\langle\nabla F,M\rangle}{\lVert M\rVert^2}\mathop{\mathrm{Id}}$ with $\langle\nabla F,M\rangle=3F(M)=3\theta$, so in **Frobenius** units $\mathop{\mathrm{Hess}}=3\theta\,(L_e-\tfrac12)$, and in the $\Lambda^2$ units where $\lVert M\rVert^2=1$ it is $6\theta\,(L_e-\tfrac12)$, **[r375](REVIEW_r375.md)'s operator exactly**. Its least-negative eigenvalue is $6\theta(\lambda_m-\tfrac12)=-3\theta/(m-1)$ at the top $\mathcal D_n$ direction $\lambda_m=\frac{m-2}{2(m-1)}$ of §0, and halving for the quadratic gives
 
 $$c_n\ \le\ \frac{3\Theta_n}{2(m-1)}\quad(\Lambda^2),\qquad\qquad c_n\ \le\ \frac{3\Theta_n}{4(m-1)}\quad(\text{Frobenius}).$$
 
@@ -141,7 +141,7 @@ is a non-implication as written, "$d^2\le X$ and $X\ge Y$" gives no bound by $Y$
 
 ### (a) True, and trivially so, which means the item is asking the wrong question
 
-$K=\{M\in\mathcal D_n:\operatorname{tr}M^2=2\}$ is compact; $F$ is continuous; [Lemma L57](../findings/problem.md) gives $F\le\Theta_n$ with equality **exactly** on $S_n\cdot M_{\text{bal}}$. So $(\Theta_n-F)/d^2$ is continuous off the orbit, and near it tends to the Hessian quotient, which is $\ge\frac32\Theta_n(\tfrac12-\lambda_m)>0$ by §5. Its infimum over $K$ is therefore attained and positive. **I20 holds with $c_n=\min_K(\Theta_n-F)/d^2>0$, in one paragraph.** The open question was never existence; it is the *size* of $c_n$, which is what confinement consumes.
+$K=\{M\in\mathcal D_n:\mathop{\mathrm{tr}}M^2=2\}$ is compact; $F$ is continuous; [Lemma L57](../findings/problem.md) gives $F\le\Theta_n$ with equality **exactly** on $S_n\cdot M_{\text{bal}}$. So $(\Theta_n-F)/d^2$ is continuous off the orbit, and near it tends to the Hessian quotient, which is $\ge\frac32\Theta_n(\tfrac12-\lambda_m)>0$ by §5. Its infimum over $K$ is therefore attained and positive. **I20 holds with $c_n=\min_K(\Theta_n-F)/d^2>0$, in one paragraph.** The open question was never existence; it is the *size* of $c_n$, which is what confinement consumes.
 
 ### (b) The binding competitor is on record and it is not an SRG
 
@@ -164,7 +164,7 @@ against the Hessian cap's $\sim\frac{3\sqrt2}{4m}$. **The true constant is a fac
 
 *Screen: the criticality of every matrix in this table was checked to $5.6\times10^{-17}$; the $\theta$, $d^2$ and $c$ columns are evaluations of the §0 closed forms; the $d^2$ at $(12,5)$ was also computed by hand from the five pair classes and agrees to five digits. The other splits were swept and $(m-1,m+1)$ binds at every $n$ in the table.*
 
-**The confinement the item wants is therefore vacuous from $n=14$ up.** Any two points of $\{ \operatorname{tr}X^2=2\}$ satisfy $d^2_{\Lambda^2}\le4$; the table's last column exceeds $4$ already at $n=14$. **At $n=12$, the only dimension where anything survives**, I20 confines to $d_{\Lambda^2}\le0.94751$ ($d_F\le1.34$), against $d_F=1.11$ for the very point that forces the constant, $d_F=1.897$ for the antipode $-M_{\text{bal}}$, and $d_F\approx1.84$ for a typical point of $\mathcal D_{12}$ on the sphere. **So the confinement is a ball that barely contains the competitor that produced it, at one value of $n$.**
+**The confinement the item wants is therefore vacuous from $n=14$ up.** Any two points of $\{ \mathop{\mathrm{tr}}X^2=2\}$ satisfy $d^2_{\Lambda^2}\le4$; the table's last column exceeds $4$ already at $n=14$. **At $n=12$, the only dimension where anything survives**, I20 confines to $d_{\Lambda^2}\le0.94751$ ($d_F\le1.34$), against $d_F=1.11$ for the very point that forces the constant, $d_F=1.897$ for the antipode $-M_{\text{bal}}$, and $d_F\approx1.84$ for a typical point of $\mathcal D_{12}$ on the sphere. **So the confinement is a ball that barely contains the competitor that produced it, at one value of $n$.**
 
 *This is a strictly stronger closure than the Hessian cap gives, and it does not share the cap's weakness: $S^{m-1}\times S^{m+1}$ is a genuine critical point, so the bound survives restricting I20 to critical points, which is the reading I18 consumes.*
 
@@ -174,7 +174,7 @@ against the Hessian cap's $\sim\frac{3\sqrt2}{4m}$. **The true constant is a fac
 
 $$\text{(off-graph coefficient)}\quad z^2(1+\lambda-\mu)=\theta z,\qquad\text{(constant)}\quad z^2\mu+2zyk+y^2(n-1)=\theta y,$$
 
-and substituting $y$ makes the second **exactly** the strongly-regular identity $k(k-1-\lambda)=\mu(n-1-k)$. *So every strongly regular graph is a diagonal critical point, and no other two-value $M$ is, DGK's theorem, re-derived from this record's own equation.* Then $\operatorname{tr}M^2=2$ gives $z^2=\frac{2(n-1)}{nk(n-1-k)}$ and
+and substituting $y$ makes the second **exactly** the strongly-regular identity $k(k-1-\lambda)=\mu(n-1-k)$. *So every strongly regular graph is a diagonal critical point, and no other two-value $M$ is, DGK's theorem, re-derived from this record's own equation.* Then $\mathop{\mathrm{tr}}M^2=2$ gives $z^2=\frac{2(n-1)}{nk(n-1-k)}$ and
 
 $$\boxed{\ \theta(\Gamma)=\lvert 1+\lambda-\mu\rvert\sqrt{\frac{2(n-1)}{n\,k\,(n-1-k)}}=\lvert1+r+s\rvert\sqrt{\frac{2(n-1)}{n\,k\,(n-1-k)}}\ }$$
 
@@ -212,7 +212,7 @@ which is $\le\tfrac14$ for all $u,v\ge2$, the expression being symmetric in $u\l
 
 Three, each on objects constructed here from a hand derivation, each after the claim it tests was derived analytically, none offered as evidence for a positive claim.
 
-1. **Criticality of the constructed sphere products**, row sums $\le1.4\times10^{-16}$, $\operatorname{tr}M^2=2.000000$, criticality residual $\le5.6\times10^{-17}$ at $(n,p)=(12,6),(12,5),(12,4),(8,3)$. Confirms §0's closed form for $a,b,c,\theta$.
+1. **Criticality of the constructed sphere products**, row sums $\le1.4\times10^{-16}$, $\mathop{\mathrm{tr}}M^2=2.000000$, criticality residual $\le5.6\times10^{-17}$ at $(n,p)=(12,6),(12,5),(12,4),(8,3)$. Confirms §0's closed form for $a,b,c,\theta$.
 2. **Arithmetic evaluation of §0/§5/§6's closed forms** across $n=12\ldots180$, including the permutation-orbit distance (a finite maximisation over the single overlap parameter), and the $n=12$ distance reproduced by hand from the five pair classes. The two orientation figures for $n=12$, the antipode at $d_F=1.897$ and a median $d_F=1.844$ over $300$ constructed points of $\mathcal D_{12}$ on the sphere, come from the same evaluation and are offered only as scale, not as evidence.
 3. **Sweep of arithmetically feasible SRG parameter tuples, $n\le200$**, against the hand-proved bound $\theta<\tfrac12$ for primitive SRGs. Maximum $0.475755$; no violation.
 

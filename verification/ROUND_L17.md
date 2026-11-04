@@ -28,7 +28,7 @@ Whether $d^+\delta^2(u;H)=-2aF(H)$ is right and what it needs; whether the reduc
 
 ## Clustering, all three in, all `PROVEN, hypotheses corrected`, unanimous
 
-**`PROVEN, hypotheses corrected`.** *All four ingredients rebuilt cold and landing on the record's formula.* $a=\tfrac1{3\sqrt6}$ and $\delta^2(u)=6a^2=\tfrac19$ exactly at every $n$; the smooth branch by Daleckii–Krein, every rotation term pairing to zero; the kink branch by first-order degenerate perturbation, **with $\mathrm{Alt}(u_-)$ zero on the padded part, which is why padding is harmless**; and the chain closing at $F\ge\tfrac23\operatorname{tr}(B_+)+\tfrac13\operatorname{tr}(B_-)\ge0$. **Both structural facts do exactly the work claimed.**
+**`PROVEN, hypotheses corrected`.** *All four ingredients rebuilt cold and landing on the record's formula.* $a=\tfrac1{3\sqrt6}$ and $\delta^2(u)=6a^2=\tfrac19$ exactly at every $n$; the smooth branch by Daleckii–Krein, every rotation term pairing to zero; the kink branch by first-order degenerate perturbation, **with $\mathrm{Alt}(u_-)$ zero on the padded part, which is why padding is harmless**; and the chain closing at $F\ge\tfrac23\mathop{\mathrm{tr}}(B_+)+\tfrac13\mathop{\mathrm{tr}}(B_-)\ge0$. **Both structural facts do exactly the work claimed.**
 
 ### The falsifier, and what the Bianchi identity is buying
 
@@ -45,7 +45,7 @@ Whether $d^+\delta^2(u;H)=-2aF(H)$ is right and what it needs; whether the reduc
 | **P8** | **the equality-set inclusion is witness-free**: the audit says $\{F=0\}$ contains every mixed $E$–$K$ direction, and **no Weyl tensor with a nonzero $E$–$K$ block is exhibited anywhere on the record** | v187 |
 | **P9** | the $18\times$ second-order margin on the padded flat **is $n=12$'s alone and is not so labelled**, *on the crude bound it falls to $1.08$ as $n\to\infty$, though the exact identity with $\delta^2\le\tfrac14$ holds it above $7.7\times$ uniformly.* The structural half, $T(u,H,H)=0$ and $-\tfrac32\theta$, re-derives in closed form and is dimension-free | v187 |
 | **P10** | the two odd values alone **do not establish "$n\ge12$"**: even $n$ and monotonicity are needed and are stated nowhere | v187 |
-| **P11** | **Daleckii–Krein is cited loosely**, $x_-\notin C^1$ at $0\in\operatorname{spec}(u)$, so *the split into branches is right and the label on half of it is not* | v187 |
+| **P11** | **Daleckii–Krein is cited loosely**, $x_-\notin C^1$ at $0\in\mathop{\mathrm{spec}}(u)$, so *the split into branches is right and the label on half of it is not* | v187 |
 | **P12** | **where the calculus lives is unstated**: the compression runs in $\mathrm{Sym}(\Lambda^2\mathbb R^n)$ and not in $\mathcal W_n$, **Bianchi being consumed on $H$ before any operator surgery**, *which is also why the unital trap cannot bite* | v187 |
 | **P5** | [ATTEMPTS.md](../ATTEMPTS.md)'s auxiliary *"$F$ is convex and $1$-homogeneous, so directed subgradient descent certifies the sign globally"* **does not follow**, $x_-$ is convex but not *operator* convex. **Non-load-bearing**, the equality set being characterised outright | v185 |
 

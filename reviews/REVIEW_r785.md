@@ -23,7 +23,7 @@
 
 ## 0. Conventions, fixed once
 
-$\mathbb R^n$ carries its standard inner product. A $2$-form $\omega$ is identified with a real skew matrix; $\langle\alpha,\beta\rangle=-\tfrac12\operatorname{tr}(\alpha\beta)$ and $\lVert\omega\rVert^2=-\tfrac12\operatorname{tr}(\omega^2)$. The **support** of $\omega$ is $\operatorname{im}\omega$. An **orthonormal pair** is $\lVert\omega_1\rVert=\lVert\omega_2\rVert=1$ with $\langle\omega_1,\omega_2\rangle=0$. Products $\omega^2$, $\omega_1\omega_2$ are matrix products; $\wedge$ is the exterior product, so $\omega\wedge\omega\in\Lambda^4$. For an oriented $6$-dimensional subspace $V$, $\star_V:\Lambda^4V\to\Lambda^2V$ is the Hodge star of $V$ with its induced metric and a chosen orientation.
+$\mathbb R^n$ carries its standard inner product. A $2$-form $\omega$ is identified with a real skew matrix; $\langle\alpha,\beta\rangle=-\tfrac12\mathop{\mathrm{tr}}(\alpha\beta)$ and $\lVert\omega\rVert^2=-\tfrac12\mathop{\mathrm{tr}}(\omega^2)$. The **support** of $\omega$ is $\mathop{\mathrm{im}}\omega$. An **orthonormal pair** is $\lVert\omega_1\rVert=\lVert\omega_2\rVert=1$ with $\langle\omega_1,\omega_2\rangle=0$. Products $\omega^2$, $\omega_1\omega_2$ are matrix products; $\wedge$ is the exterior product, so $\omega\wedge\omega\in\Lambda^4$. For an oriented $6$-dimensional subspace $V$, $\star_V:\Lambda^4V\to\Lambda^2V$ is the Hodge star of $V$ with its induced metric and a chosen orientation.
 
 **Neither $\mathcal W_n$ nor any Weyl hypothesis is needed at any point of this review, and none of $n\ge12$, $\sqrt{3/2}$, $6+2\sqrt7$ appears anywhere in the pair statement, in the argument, or in my own derivation.** The only dimensional input is $\dim V=6$; $n$ enters solely as the ambient dimension, and $n\ge6$ is the only constraint on it.
 
@@ -36,13 +36,13 @@ Throughout, $A:=-\omega_1^2$. I write $V$ for the common support.
 - **H1** $\omega_1,\omega_2\in\Lambda^2\mathbb R^n$.
 - **H2** $\lVert\omega_1\rVert=\lVert\omega_2\rVert=1$.
 - **H3** $\langle\omega_1,\omega_2\rangle=0$.
-- **H4** $\operatorname{im}\omega_1=\operatorname{im}\omega_2=:V$ with $\dim V=6$.
+- **H4** $\mathop{\mathrm{im}}\omega_1=\mathop{\mathrm{im}}\omega_2=:V$ with $\dim V=6$.
 - **H5** $\omega_1^2=\omega_2^2$.
 - **H6** $\omega_1\wedge\omega_1=\omega_2\wedge\omega_2$.
 
-**Used.** H1, H3, H5, H6 throughout. From H4, only $\dim\operatorname{im}\omega_1=6$ is an independent assumption (see §9), and that dimension is genuinely load-bearing in cases 2 and 3, case 2 because $\star_V$ carries $\Lambda^4V$ back into $\Lambda^2V$ only at $\dim V=6$, case 3 because the complementary eigenspace $P$ is then a plane and $\varepsilon_P\wedge\varepsilon_P=0$.
+**Used.** H1, H3, H5, H6 throughout. From H4, only $\dim\mathop{\mathrm{im}}\omega_1=6$ is an independent assumption (see §9), and that dimension is genuinely load-bearing in cases 2 and 3, case 2 because $\star_V$ carries $\Lambda^4V$ back into $\Lambda^2V$ only at $\dim V=6$, case 3 because the complementary eigenspace $P$ is then a plane and $\varepsilon_P\wedge\varepsilon_P=0$.
 
-**Stated and all but unused.** H2 is used three times and none of the three needs the full strength of a unit norm: (i) $\operatorname{tr}A=2$, which the case split never consults; (ii) $c=\tfrac13$ in case 2, which is decorative; (iii) $\operatorname{tr}(\omega_1^2)=-2$ at the end of case 1, where $\operatorname{tr}(\omega_1^2)\ne0$ would do. Further, $\lVert\omega_2\rVert=1$ follows from $\lVert\omega_1\rVert=1$ and H5, so half of H2 is derivable rather than assumed. See §7.
+**Stated and all but unused.** H2 is used three times and none of the three needs the full strength of a unit norm: (i) $\mathop{\mathrm{tr}}A=2$, which the case split never consults; (ii) $c=\tfrac13$ in case 2, which is decorative; (iii) $\mathop{\mathrm{tr}}(\omega_1^2)=-2$ at the end of case 1, where $\mathop{\mathrm{tr}}(\omega_1^2)\ne0$ would do. Further, $\lVert\omega_2\rVert=1$ follows from $\lVert\omega_1\rVert=1$ and H5, so half of H2 is derivable rather than assumed. See §7.
 
 **Used and unstated.** Case 3 equates the cross terms and concludes $\tau_1J_1=\tau_2J_2$; that step is the injectivity of $\alpha\mapsto\alpha\wedge\varepsilon_P$ on $\Lambda^2Q$, which the block uses and does not state. It is true, and I supply no more than the name of the fact being used. Case 2 also requires an orientation on $V$ before $\star_V$ exists; the block never chooses one. The conclusion is orientation-independent, so this is a presentational omission rather than a defect.
 
@@ -54,7 +54,7 @@ Throughout, $A:=-\omega_1^2$. I write $V$ for the common support.
 
 Let $\omega_1,\omega_2$ satisfy H1, H4, H5, H6, and set $A=-\omega_1^2=-\omega_2^2$.
 
-For a real skew $\omega$, $-\omega^2=\omega^{\mathsf T}\omega$ is positive semidefinite with $\operatorname{im}(-\omega^2)=\operatorname{im}\omega$ and $\ker\omega=(\operatorname{im}\omega)^\perp$. Hence $A$ is symmetric, positive semidefinite, $\operatorname{im}A=V$, positive definite on $V$ and zero on $V^\perp$, and **both** $\omega_i$ vanish on $V^\perp$, so $\omega_1,\omega_2\in\Lambda^2V$.
+For a real skew $\omega$, $-\omega^2=\omega^{\mathsf T}\omega$ is positive semidefinite with $\mathop{\mathrm{im}}(-\omega^2)=\mathop{\mathrm{im}}\omega$ and $\ker\omega=(\mathop{\mathrm{im}}\omega)^\perp$. Hence $A$ is symmetric, positive semidefinite, $\mathop{\mathrm{im}}A=V$, positive definite on $V$ and zero on $V^\perp$, and **both** $\omega_i$ vanish on $V^\perp$, so $\omega_1,\omega_2\in\Lambda^2V$.
 
 Each $\omega_i$ commutes with $A$: $\omega_iA=-\omega_i^3=A\omega_i$. So each preserves every eigenspace of $A$.
 
@@ -81,8 +81,8 @@ so $\omega_2=\pm\omega_1$.
 **CLEAN. Every input to the split is a statement about $\omega_1$ alone; no second form is used, let alone a third.**
 
 - **Doubled spectrum**: from $\omega_1|_V$ being invertible and skew. One form.
-- **Positive definiteness on $V$**: from $-\omega_1^2=\omega_1^{\mathsf T}\omega_1$ with $\operatorname{im}=V$. One form.
-- **Trace $2$**: $\operatorname{tr}A=-\operatorname{tr}(\omega_1^2)=2\lVert\omega_1\rVert^2=2$. One form, and (as flagged in §1), never consulted by the split, which is a trichotomy on how many of $c_1^2,c_2^2,c_3^2$ agree and is insensitive to their scale.
+- **Positive definiteness on $V$**: from $-\omega_1^2=\omega_1^{\mathsf T}\omega_1$ with $\mathop{\mathrm{im}}=V$. One form.
+- **Trace $2$**: $\mathop{\mathrm{tr}}A=-\mathop{\mathrm{tr}}(\omega_1^2)=2\lVert\omega_1\rVert^2=2$. One form, and (as flagged in §1), never consulted by the split, which is a trichotomy on how many of $c_1^2,c_2^2,c_3^2$ agree and is insensitive to their scale.
 - **Exhaustiveness**: three positive reals admit exactly the three coincidence patterns. Purely arithmetic.
 
 The block's own defence of the split ("every input to that split is Weyl-free") is correct as far as it goes, and the pair reading is strictly weaker again: it needs no property of $\omega_2$ beyond H5 to inherit the same decomposition, since $A$ is common by hypothesis and $\omega_2$ commutes with it.
@@ -106,7 +106,7 @@ Consequences, both of which the brief's framing invites:
 
 **Screen.** Enumerating all $8\times8$ sign pairs $(s_1,s_2)$ against the three conditions returns exactly $16$ solutions, all with $s_2=\pm s_1$, and none outside that form. Exact integer arithmetic, seconds of compute, on objects I constructed for the purpose. Recorded as a screen of a claim I make by hand above, not as evidence for it.
 
-**Terminal step.** $\operatorname{tr}(\omega_1\omega_2)=\eta\operatorname{tr}(\omega_1^2)=-2\eta$, so $\langle\omega_1,\omega_2\rangle=\eta=\pm1\ne0$. Correct as written in the traced argument.
+**Terminal step.** $\mathop{\mathrm{tr}}(\omega_1\omega_2)=\eta\mathop{\mathrm{tr}}(\omega_1^2)=-2\eta$, so $\langle\omega_1,\omega_2\rangle=\eta=\pm1\ne0$. Correct as written in the traced argument.
 
 ## 5. Case 2 for a pair
 
@@ -144,19 +144,19 @@ $\lVert\omega_1\rVert=1$ is H2, a hypothesis, so it is available by assumption i
 
 | Case | Terminal step as it must read for a pair | What of H2 it consumes |
 |---|---|---|
-| 1 | $\operatorname{tr}(\omega_1\omega_2)=\eta\operatorname{tr}(\omega_1^2)=-2\eta$, so $\langle\omega_1,\omega_2\rangle=\eta\ne0$ | The value $-2$; only $\operatorname{tr}(\omega_1^2)\ne0$ is needed |
+| 1 | $\mathop{\mathrm{tr}}(\omega_1\omega_2)=\eta\mathop{\mathrm{tr}}(\omega_1^2)=-2\eta$, so $\langle\omega_1,\omega_2\rangle=\eta\ne0$ | The value $-2$; only $\mathop{\mathrm{tr}}(\omega_1^2)\ne0$ is needed |
 | 2 | $\omega_2=\pm\omega_1$, so $\langle\omega_1,\omega_2\rangle=\pm1\ne0$ | The value $1$; only $\omega_1\ne0$ is needed |
 | 3 | $\omega_2=\pm\omega_1$, so $\langle\omega_1,\omega_2\rangle=\pm1\ne0$ | The value $1$; only $\omega_1\ne0$ is needed |
 
-**In every case the contradiction is $\langle\omega_1,\omega_2\rangle=\pm\lVert\omega_1\rVert^2$ against H3, and it needs only $\omega_1\ne0$.** Since $\omega_1$ has six-dimensional image by H4 it is nonzero anyway, so the norm hypothesis is doing no work in the contradiction at all. The two other appearances of H2 ($\operatorname{tr}A=2$ in the setup and $c=\tfrac13$ in case 2), are consumed by statements that no later step uses. **This means the pair statement holds verbatim for any *orthogonal* pair of $2$-forms with common six-dimensional support, normalisation dropped.** I record that as an observation about what the argument establishes and deliberately do not fold it into the statement; that is the author's call and this round was convened over exactly this kind of unadopted strengthening.
+**In every case the contradiction is $\langle\omega_1,\omega_2\rangle=\pm\lVert\omega_1\rVert^2$ against H3, and it needs only $\omega_1\ne0$.** Since $\omega_1$ has six-dimensional image by H4 it is nonzero anyway, so the norm hypothesis is doing no work in the contradiction at all. The two other appearances of H2 ($\mathop{\mathrm{tr}}A=2$ in the setup and $c=\tfrac13$ in case 2), are consumed by statements that no later step uses. **This means the pair statement holds verbatim for any *orthogonal* pair of $2$-forms with common six-dimensional support, normalisation dropped.** I record that as an observation about what the argument establishes and deliberately do not fold it into the statement; that is the author's call and this round was convened over exactly this kind of unadopted strengthening.
 
-Also worth stating: $\lVert\omega_2\rVert=1$ is not an independent hypothesis, since $\lVert\omega_2\rVert^2=\tfrac12\operatorname{tr}(-\omega_2^2)=\tfrac12\operatorname{tr}A=\lVert\omega_1\rVert^2$ by H5.
+Also worth stating: $\lVert\omega_2\rVert=1$ is not an independent hypothesis, since $\lVert\omega_2\rVert^2=\tfrac12\mathop{\mathrm{tr}}(-\omega_2^2)=\tfrac12\mathop{\mathrm{tr}}A=\lVert\omega_1\rVert^2$ by H5.
 
 ## 8. Does the pair statement imply the triple statement?
 
 **Yes, immediately, and nothing is lost.**
 
-Suppose $\omega_1,\omega_2,\omega_3$ were an orthonormal triple with common six-dimensional support $V$, coincident squares and coincident self-wedges. Then $\omega_1,\omega_2$ is a pair of $2$-forms with $\lVert\omega_1\rVert=\lVert\omega_2\rVert=1$, $\langle\omega_1,\omega_2\rangle=0$, $\operatorname{im}\omega_1=\operatorname{im}\omega_2=V$ of dimension six, $\omega_1^2=\omega_2^2$ and $\omega_1\wedge\omega_1=\omega_2\wedge\omega_2$. Every hypothesis of the pair statement holds for it, so the pair statement forbids it. **The restriction of a triple's hypotheses to two of its members is hypothesis-for-hypothesis exactly the pair hypotheses**, this is the point to check, and it checks: orthonormality restricts, common support restricts, and both coincidence conditions restrict.
+Suppose $\omega_1,\omega_2,\omega_3$ were an orthonormal triple with common six-dimensional support $V$, coincident squares and coincident self-wedges. Then $\omega_1,\omega_2$ is a pair of $2$-forms with $\lVert\omega_1\rVert=\lVert\omega_2\rVert=1$, $\langle\omega_1,\omega_2\rangle=0$, $\mathop{\mathrm{im}}\omega_1=\mathop{\mathrm{im}}\omega_2=V$ of dimension six, $\omega_1^2=\omega_2^2$ and $\omega_1\wedge\omega_1=\omega_2\wedge\omega_2$. Every hypothesis of the pair statement holds for it, so the pair statement forbids it. **The restriction of a triple's hypotheses to two of its members is hypothesis-for-hypothesis exactly the pair hypotheses**, this is the point to check, and it checks: orthonormality restricts, common support restricts, and both coincidence conditions restrict.
 
 **What is lost: nothing.** The triple statement is a corollary with a one-line proof and no residue. The converse fails, so the pair statement is strictly stronger, as the block's observation says. The corollary the programme actually wanted from L184, that there is no rank-three $W\in\mathcal W_n$ with $\dim V=6$ whose three images under $\Phi$ coincide, therefore also follows from the pair statement through the triple statement, with the same bridge (the eigenforms of such a $W$ being an orthonormal triple with coincident $\Phi$-images) and no new step.
 
@@ -166,11 +166,11 @@ Suppose $\omega_1,\omega_2,\omega_3$ were an orthonormal triple with common six-
 
 **Same hypothesis as for a triple, and partly redundant.**
 
-For a triple, "common six-dimensional support" is $\operatorname{im}\omega_1=\operatorname{im}\omega_2=\operatorname{im}\omega_3=V$, $\dim V=6$. For a pair it is the same sentence over two forms. There is no reading under which the pair version is weaker or stronger per form.
+For a triple, "common six-dimensional support" is $\mathop{\mathrm{im}}\omega_1=\mathop{\mathrm{im}}\omega_2=\mathop{\mathrm{im}}\omega_3=V$, $\dim V=6$. For a pair it is the same sentence over two forms. There is no reading under which the pair version is weaker or stronger per form.
 
-**The redundancy.** Given H5, $\operatorname{im}\omega_2=\operatorname{im}(-\omega_2^2)=\operatorname{im}A=\operatorname{im}(-\omega_1^2)=\operatorname{im}\omega_1$, using $\operatorname{im}\omega=\operatorname{im}(\omega^{\mathsf T}\omega)$ for skew $\omega$. **So "common" is a theorem, not a hypothesis, once the squares agree; the only independent content of H4 is $\dim\operatorname{im}\omega_1=6$.** The block observes the same thing for the triple (*"equal squares already force a common support, so no reconciliation step is needed"*) and the observation is exactly as true for two forms.
+**The redundancy.** Given H5, $\mathop{\mathrm{im}}\omega_2=\mathop{\mathrm{im}}(-\omega_2^2)=\mathop{\mathrm{im}}A=\mathop{\mathrm{im}}(-\omega_1^2)=\mathop{\mathrm{im}}\omega_1$, using $\mathop{\mathrm{im}}\omega=\mathop{\mathrm{im}}(\omega^{\mathsf T}\omega)$ for skew $\omega$. **So "common" is a theorem, not a hypothesis, once the squares agree; the only independent content of H4 is $\dim\mathop{\mathrm{im}}\omega_1=6$.** The block observes the same thing for the triple (*"equal squares already force a common support, so no reconciliation step is needed"*) and the observation is exactly as true for two forms.
 
-The kernels follow: $\ker\omega_i=(\operatorname{im}\omega_i)^\perp=V^\perp$, common, of dimension $n-6$, so both forms lie in $\Lambda^2V$ and every computation may be done inside $V$. **Nothing in the argument needs more than this.** Specifically, no step needs $n$, needs $V^\perp$ to have even dimension, or needs $V$ to be spanned in any particular way.
+The kernels follow: $\ker\omega_i=(\mathop{\mathrm{im}}\omega_i)^\perp=V^\perp$, common, of dimension $n-6$, so both forms lie in $\Lambda^2V$ and every computation may be done inside $V$. **Nothing in the argument needs more than this.** Specifically, no step needs $n$, needs $V^\perp$ to have even dimension, or needs $V$ to be spanned in any particular way.
 
 **Where the dimension is genuinely spent.** Case 1 spends only "three planes", which is $\dim V=6$ via the doubling. Case 2 spends $\dim V=6$ essentially, since $\star_V:\Lambda^4V\to\Lambda^2V$ requires $\binom{2m}{4}=\binom{2m}{2}$, true only at $2m=6$. Case 3 spends it as $4+2$, needing $\dim P=2$ for $\varepsilon_P\wedge\varepsilon_P=0$ and for the injectivity of $\wedge\varepsilon_P$. The block's entailment box is right that cases 2 and 3 are strictly six-dimensional, and the pair reading changes none of that.
 

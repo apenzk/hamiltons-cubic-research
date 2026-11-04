@@ -18,7 +18,7 @@
 
 **$\mathrm{RHS}_{\rm even}$ and $\mathrm{RHS}_{\rm odd}$ appear in the two-sided bound and are defined in no passage**, while $\mathrm{LHS}_{\rm odd}$ is. Brief item 5 asks.
 
-**Two vanishers have mechanisms the argument does not write**: $(I,I,Y)$ is $(n-1)\operatorname{tr}Y=0$, and $(Y,W,W)$ needs $Q(W)$ Weyl, which is Böhm–Wilking's equation (6). *Screened by hand in phase 0; the argument names Xu (3) for the $I$–$W$ pairings only.* Brief item 2 asks for all five without saying which are written.
+**Two vanishers have mechanisms the argument does not write**: $(I,I,Y)$ is $(n-1)\mathop{\mathrm{tr}}Y=0$, and $(Y,W,W)$ needs $Q(W)$ Weyl, which is Böhm–Wilking's equation (6). *Screened by hand in phase 0; the argument names Xu (3) for the $I$–$W$ pairings only.* Brief item 2 asks for all five without saying which are written.
 
 **The third form types the combinatorial skeleton and an abstract reflection**, `two_sided` over free reals and `omega0_sign_symmetric` for an arbitrary predicate of the norm, so neither touches the curvature objects. Brief item 7 asks whether their hypotheses exclude anything.
 

@@ -18,22 +18,22 @@ Scope: [L228Relabel.lean](../lean/HamiltonsCubic/Results/L228Relabel.lean) as co
 ## (2) blockP_perm, term by term
 
 - `cubicJ S` does not involve $\sigma$.
-- $\sum_a(\operatorname{tr}M_a^3+3\operatorname{tr}(S\operatorname{adj}M_a))$ is invariant by `Equiv.sum_comp`.
-- For the pair term, the summand $K_{ab}^3+3K_{ab}\operatorname{tr}(M_aM_b)$ is symmetric by hK and `trace_mul_comm`. `sum_lt_perm` gives $\sum_{a<b}$ as $\tfrac12\sum_{a\ne b}$ via `sum_ne_eq_two_lt`, and $\sum_{a\ne b}$ is reindexing-invariant. This holds for any $M$, symmetric or not.
+- $\sum_a(\mathop{\mathrm{tr}}M_a^3+3\mathop{\mathrm{tr}}(S\mathop{\mathrm{adj}}M_a))$ is invariant by `Equiv.sum_comp`.
+- For the pair term, the summand $K_{ab}^3+3K_{ab}\mathop{\mathrm{tr}}(M_aM_b)$ is symmetric by hK and `trace_mul_comm`. `sum_lt_perm` gives $\sum_{a<b}$ as $\tfrac12\sum_{a\ne b}$ via `sum_ne_eq_two_lt`, and $\sum_{a\ne b}$ is reindexing-invariant. This holds for any $M$, symmetric or not.
 - For the triple term, $K_{ab}K_{ac}K_{bc}$ is invariant under $a\leftrightarrow b$ (by $K_{ab}=K_{ba}$ and $K_{ac}\leftrightarrow K_{bc}$) and under $b\leftrightarrow c$ (by $K_{bc}=K_{cb}$). The h12 and h23 discharges match, and the factor 3 is untouched.
 - The lemma needs only hK. The zero diagonal is not used, which is harmless.
 - Falsifier: symmetric $K$, any $S$, $M$ and a permutation $\sigma$ with `blockP` changed.
 
 ## (3) ricci_perm, perm_transfer, relabel_bound
 
-- `ricci_perm` is sound. [ricciFlat_iff](../lean/HamiltonsCubic/Results/L226Mixed.lean) reduces Ricci-flatness to $(\operatorname{tr}S)I-S+\sum_aM_a=0$, which is permutation-invariant, and to $\operatorname{tr}M_a+\sum_bK_{ab}=0$ for every $a$. Relabelled, the second condition reads $\operatorname{tr}M_{\sigma a}+\sum_bK_{\sigma a,\sigma b}$, which is the original condition at $\sigma a$ after reindexing $b$. All of `ricciFlat_iff`'s hypotheses (S, M symmetric, K symmetric with zero diagonal) are carried over. Falsifier: a Ricci-flat `blockOp S M K` in the family whose relabelling has a non-zero Ricci entry.
+- `ricci_perm` is sound. [ricciFlat_iff](../lean/HamiltonsCubic/Results/L226Mixed.lean) reduces Ricci-flatness to $(\mathop{\mathrm{tr}}S)I-S+\sum_aM_a=0$, which is permutation-invariant, and to $\mathop{\mathrm{tr}}M_a+\sum_bK_{ab}=0$ for every $a$. Relabelled, the second condition reads $\mathop{\mathrm{tr}}M_{\sigma a}+\sum_bK_{\sigma a,\sigma b}$, which is the original condition at $\sigma a$ after reindexing $b$. All of `ricciFlat_iff`'s hypotheses (S, M symmetric, K symmetric with zero diagonal) are carried over. Falsifier: a Ricci-flat `blockOp S M K` in the family whose relabelling has a non-zero Ricci entry.
 - `perm_transfer` is sound. $P$ and the norm of the relabelled operator equal those of the original through `Pcubic_blockOp`, `normSq_blockOp` and the two invariance lemmas.
 - `relabel_bound` is sound. The relabelled $S=\sum_aX_{\sigma a}-\tfrac12\sum_at_{\sigma a}I$ is rewritten to the unrelabelled $S$ by `Equiv.sum_comp`, and `perm_transfer` then rewrites both sides. This works for any real $c$ because only equalities are used. Falsifier: data where the relabelled operator obeys $P\le c\lVert\cdot\rVert^3$ and the original does not, which is impossible given equal $P$ and norm.
 
 ## (4) The _any forms
 
-- `L228_item3_any` uses $\sigma=\operatorname{swap}(0,a)$, so $\sigma0=a$, including $a=0$ where the swap is the identity. The other blocks $\sigma(i.\mathrm{succ})$ differ from $a$: $\sigma(i.\mathrm{succ})=\sigma0$ would force $i.\mathrm{succ}=0$. They are therefore diagonal by hdiag. The hypotheses match the record's item 3: the blocks $X_c$, $c\ne a$, share an orthonormal frame, with $F^{\mathsf T}F=FF^{\mathsf T}=1$.
-- `L228_item4_any` builds $\tau=\operatorname{swap}(0,a)$ and $\sigma=\tau\cdot\operatorname{swap}(1,\tau b)$.
+- `L228_item3_any` uses $\sigma=\mathop{\mathrm{swap}}(0,a)$, so $\sigma0=a$, including $a=0$ where the swap is the identity. The other blocks $\sigma(i.\mathrm{succ})$ differ from $a$: $\sigma(i.\mathrm{succ})=\sigma0$ would force $i.\mathrm{succ}=0$. They are therefore diagonal by hdiag. The hypotheses match the record's item 3: the blocks $X_c$, $c\ne a$, share an orthonormal frame, with $F^{\mathsf T}F=FF^{\mathsf T}=1$.
+- `L228_item4_any` builds $\tau=\mathop{\mathrm{swap}}(0,a)$ and $\sigma=\tau\cdot\mathop{\mathrm{swap}}(1,\tau b)$.
   - hσ0 holds: $\tau b\ne0$ because $\tau b=0=\tau a$ gives $a=b$, and $0\ne1$ in `Fin (m+2)`, so the inner swap fixes 0 and $\tau0=a$.
   - hσ1 holds: $\sigma1=\tau(\tau b)=b$. The case $\tau b=1$ is covered, since the inner swap is then the identity.
   - $\sigma(i+2)\notin\{a,b\}$ holds by injectivity against $\sigma0$ and $\sigma1$.
@@ -54,7 +54,7 @@ It is justified. Each part of the record's L228 now has a typed counterpart:
 | "At $m\le2$ item 3 covers every $W$" | `L57_block_le_two_of` |
 | Attainment | `L228_attained_even`, `L228_attained_odd` |
 
-The identification of $\mathcal S_J\cap\mathcal W_n$ with Ricci-flat `blockOp` data, and $\mathcal D_n\subseteq\mathcal S_J$, are L226's and the block note's. That leaves no untyped part of the Statement. From the Setting, the normal form $S=N-\tfrac12(\operatorname{tr}N)I$ is assumed at item 2 (the identity holds there without Ricci-flatness) and is derived from Ricci-flatness in `L228_item1_ricci`.
+The identification of $\mathcal S_J\cap\mathcal W_n$ with Ricci-flat `blockOp` data, and $\mathcal D_n\subseteq\mathcal S_J$, are L226's and the block note's. That leaves no untyped part of the Statement. From the Setting, the normal form $S=N-\tfrac12(\mathop{\mathrm{tr}}N)I$ is assumed at item 2 (the identity holds there without Ricci-flatness) and is derived from Ricci-flatness in `L228_item1_ricci`.
 
 ## Observations
 

@@ -59,14 +59,14 @@ The file uses the phrase in two incompatible ways, both live, both within sixty 
 
 - **"any *pair*"**, why two? A moment argument may chain three inequalities, or impose the full Hankel/Markov–Lukács moment cone on $[\lambda_{\min},\lambda_{\max}]$. The stated argument covers neither.
 - **"*the* free moment", singular**, $m_3,m_4,\dots$ are free too. The block silently treats the problem as three-variable when it is infinite-dimensional.
-- **the support fact used is the weak one.** $\operatorname{supp}\mu\subseteq\{\lambda_k\}$, a finite set with known multiplicities, is far stronger than $\operatorname{supp}\mu\subseteq[\lambda_{\min},\lambda_{\max}]$, which is all the block uses. An argument using the atoms is not covered.
+- **the support fact used is the weak one.** $\mathop{\mathrm{supp}}\mu\subseteq\{\lambda_k\}$, a finite set with known multiplicities, is far stronger than $\mathop{\mathrm{supp}}\mu\subseteq[\lambda_{\min},\lambda_{\max}]$, which is all the block uses. An argument using the atoms is not covered.
 - **"built from them" is undefined.** Does an argument that also uses the proved pair cap $\sum_\gamma T_{\alpha\beta\gamma}\le2$ ([Lemma L31](../findings/stratum-two-negative.md)) count as *moment analysis of the $g$-distribution*? The cap is not a consequence of positivity or support, so it escapes the stated class, and this is not academic, since the record's own full pinned relaxation includes it.
 
 Each of these is fatal to the block's argument and **harmless to the correct one**, which is the next section.
 
 ## 3. The theorem that is actually true, proved
 
-**Proposition.** Fix $n$ and a spectrum $\lambda$. Let $\mathcal R(\lambda)=\{T\ \text{totally symmetric, hollow},\ T\ge0,\ \text{(A)},\ \text{(B)}\}$ and let $\vartheta(T):=\operatorname{tr}W^3+\tfrac12\sum_{abc}\lambda_a\lambda_b\lambda_cT_{abc}$. Then every conclusion of every argument whose hypotheses are *positivity of $g$, the support of $\mu$, and the values of $m_0$ and $m_1$* is a true statement about all of $\mathcal R(\lambda)$. Hence no such argument can prove $\theta\le c$ for any $c<\sup\{\vartheta(T):T\in\mathcal R(\lambda)\}$.
+**Proposition.** Fix $n$ and a spectrum $\lambda$. Let $\mathcal R(\lambda)=\{T\ \text{totally symmetric, hollow},\ T\ge0,\ \text{(A)},\ \text{(B)}\}$ and let $\vartheta(T):=\mathop{\mathrm{tr}}W^3+\tfrac12\sum_{abc}\lambda_a\lambda_b\lambda_cT_{abc}$. Then every conclusion of every argument whose hypotheses are *positivity of $g$, the support of $\mu$, and the values of $m_0$ and $m_1$* is a true statement about all of $\mathcal R(\lambda)$. Hence no such argument can prove $\theta\le c$ for any $c<\sup\{\vartheta(T):T\in\mathcal R(\lambda)\}$.
 
 *Proof.* Three steps, each an identity or a containment.
 
@@ -80,7 +80,7 @@ a linear functional of $T$ at fixed $\lambda$. So is $G_2$, and so is every high
 
 $m_0$: expand $(\lambda_\alpha-\lambda_\beta)^2=\lambda_\alpha^2-2\lambda_\alpha\lambda_\beta+\lambda_\beta^2$ and use symmetry in $\alpha\beta$, so $m_0=2\sum_{k\alpha\beta}\lambda_\alpha^2T-2\sum_{k\alpha\beta}\lambda_\alpha\lambda_\beta T$. Relabelling under total symmetry, the first sum is (A) weighted by $\lambda^2$ on the free index, $\sum_a\lambda_a^2\cdot2(n-2)=2(n-2)$; the second is (B) weighted by $\lambda$, $\sum_a\lambda_a(-2\lambda_a)=-2$. Hence $m_0=4(n-2)+4=\boxed{4(n-1)}$, **with no criticality anywhere.**
 
-$m_1$: likewise $m_1=2\sum_{k\alpha\beta}\lambda_k\lambda_\alpha^2T-2\sum_{k\alpha\beta}\lambda_k\lambda_\alpha\lambda_\beta T$. The first is (B) weighted by $\lambda^2$: $\sum_a\lambda_a^2(-2\lambda_a)=-2\operatorname{tr}W^3$. The second is $X:=\sum_{abc}\lambda_a\lambda_b\lambda_cT_{abc}$, and by the definition of $P$ (§4) $X=2\theta-2\operatorname{tr}W^3$. Hence $m_1=-4\operatorname{tr}W^3-2(2\theta-2\operatorname{tr}W^3)=\boxed{-4\theta}$.
+$m_1$: likewise $m_1=2\sum_{k\alpha\beta}\lambda_k\lambda_\alpha^2T-2\sum_{k\alpha\beta}\lambda_k\lambda_\alpha\lambda_\beta T$. The first is (B) weighted by $\lambda^2$: $\sum_a\lambda_a^2(-2\lambda_a)=-2\mathop{\mathrm{tr}}W^3$. The second is $X:=\sum_{abc}\lambda_a\lambda_b\lambda_cT_{abc}$, and by the definition of $P$ (§4) $X=2\theta-2\mathop{\mathrm{tr}}W^3$. Hence $m_1=-4\mathop{\mathrm{tr}}W^3-2(2\theta-2\mathop{\mathrm{tr}}W^3)=\boxed{-4\theta}$.
 
 **(iii) Containment.** Every inequality the method invokes (Cauchy–Schwarz, the support quadratic, any Hankel condition), is true for *every* nonnegative measure with those atoms, hence true at every $T\in\mathcal R(\lambda)$. Note the inequalities need not be linear; only the *hypotheses* need be implied, and they are. So the method's feasible region contains $\mathcal R(\lambda)$'s image, and its optimum over $\theta$ is at least $\mathcal R(\lambda)$'s. $\square$
 
@@ -98,9 +98,9 @@ $m_1$: likewise $m_1=2\sum_{k\alpha\beta}\lambda_k\lambda_\alpha^2T-2\sum_{k\alp
 
 Multiply (C) by $\lambda_a$ and sum over $a$:
 
-$$\sum_{abc}\lambda_a\lambda_b\lambda_cT_{abc}=\sum_a\lambda_a\cdot2\lambda_a(\theta-\lambda_a)=2\theta\sum_a\lambda_a^2-2\sum_a\lambda_a^3=2\theta\lVert W\rVert^2-2\operatorname{tr}W^3.$$
+$$\sum_{abc}\lambda_a\lambda_b\lambda_cT_{abc}=\sum_a\lambda_a\cdot2\lambda_a(\theta-\lambda_a)=2\theta\sum_a\lambda_a^2-2\sum_a\lambda_a^3=2\theta\lVert W\rVert^2-2\mathop{\mathrm{tr}}W^3.$$
 
-At $\lVert W\rVert=1$ this is $2\theta-2\operatorname{tr}W^3$, exactly as the block states. **CONFIRMED.** One rider: the display **silently sets $\lVert W\rVert=1$**, which is the record's standing normalisation but is a step, not an identity.
+At $\lVert W\rVert=1$ this is $2\theta-2\mathop{\mathrm{tr}}W^3$, exactly as the block states. **CONFIRMED.** One rider: the display **silently sets $\lVert W\rVert=1$**, which is the record's standing normalisation but is a step, not an identity.
 
 ### 4.2 Which convention makes the $2$ right
 
@@ -115,9 +115,9 @@ This is the same collision class the brief flags: the constant is right, and it 
 
 ### 4.3 "The objective disappears", what disappears, and what it costs
 
-The record's cubic identity $\theta=\operatorname{tr}W^3+\tfrac12X$ is the definition of $P(W)=\langle W,W^2+W^\#\rangle$ unpacked: $\langle W,W^2\rangle=\operatorname{tr}W^3$ and $\langle W,W^\#\rangle=\sum_a\lambda_a(W^\#)_{aa}=\tfrac12X$. So §4.1's identity and the cubic identity are the same equation. **CONFIRMED**, with one direction of it only: the cubic identity is the $\lambda$-contraction of (C), so it adds nothing to (C); (C) is $N$ equations and is not recoverable from the one. And the cubic identity holds on all of $\mathcal W_n$ with $\theta:=P(W)$, while (C) needs criticality, so *"these are the same equation"* is true at critical points and the honest form is the block's own second clause, *"the cubic identity adds nothing to (C)"*.
+The record's cubic identity $\theta=\mathop{\mathrm{tr}}W^3+\tfrac12X$ is the definition of $P(W)=\langle W,W^2+W^\#\rangle$ unpacked: $\langle W,W^2\rangle=\mathop{\mathrm{tr}}W^3$ and $\langle W,W^\#\rangle=\sum_a\lambda_a(W^\#)_{aa}=\tfrac12X$. So §4.1's identity and the cubic identity are the same equation. **CONFIRMED**, with one direction of it only: the cubic identity is the $\lambda$-contraction of (C), so it adds nothing to (C); (C) is $N$ equations and is not recoverable from the one. And the cubic identity holds on all of $\mathcal W_n$ with $\theta:=P(W)$, while (C) needs criticality, so *"these are the same equation"* is true at critical points and the honest form is the block's own second clause, *"the cubic identity adds nothing to (C)"*.
 
-**What disappears, precisely.** At fixed $\lambda$, the constraint set is (A), (B), (C)$_\theta$, $T\ge0$, with $\theta$ a *parameter* of (C). The functional $\vartheta(T)=\operatorname{tr}W^3+\tfrac12X$ is affine in $T$, and the $\lambda$-contraction of (C)$_\theta$ says $\vartheta(T)=\theta$ **identically on the feasible set**. So the objective is constant there: "maximise $\theta$" is not an optimisation but a **feasibility question in the parameter $\theta$**. That is the correct content of the heading, it is what the block means by *"a consistency condition, not a maximisation"*, and it is what line 411 later draws out correctly.
+**What disappears, precisely.** At fixed $\lambda$, the constraint set is (A), (B), (C)$_\theta$, $T\ge0$, with $\theta$ a *parameter* of (C). The functional $\vartheta(T)=\mathop{\mathrm{tr}}W^3+\tfrac12X$ is affine in $T$, and the $\lambda$-contraction of (C)$_\theta$ says $\vartheta(T)=\theta$ **identically on the feasible set**. So the objective is constant there: "maximise $\theta$" is not an optimisation but a **feasibility question in the parameter $\theta$**. That is the correct content of the heading, it is what the block means by *"a consistency condition, not a maximisation"*, and it is what line 411 later draws out correctly.
 
 **What it costs a relaxation.** Since the objective is constant on the feasible set, **a relaxation in this class can never be tightened by improving its objective, only by adding constraints.** That is the load-bearing consequence and the block does not state it.
 

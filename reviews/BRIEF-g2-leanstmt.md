@@ -28,7 +28,7 @@ For each of the four, compare the record's statement with the Lean statement and
 
 ### Record L176
 
-**Statement.** Let $W\ne0$ be a Weyl tensor coordinate-diagonal in some **orthonormal** frame $\{f_a\}$, *orthonormality is used and both audits found it unstated: it is what makes $K$ well defined and the $\Lambda^2$ action orthogonal*, with sectional matrix $K_{ab}=W_{abab}$, and let $G$ be the graph on $\{1,\dots,n\}$ whose edges are the pairs with $K_{ab}\ne0$. Then **every vertex of $G$ has degree $0$ or degree $\ge2$**, and $G$ has **at least four edges**, **in particular** $\operatorname{rank}(W:\Lambda^2\to\Lambda^2)\ge4$. *Only the edge bound is equivalent to the rank bound; the degree statement is strictly more than it.*
+**Statement.** Let $W\ne0$ be a Weyl tensor coordinate-diagonal in some **orthonormal** frame $\{f_a\}$, *orthonormality is used and both audits found it unstated: it is what makes $K$ well defined and the $\Lambda^2$ action orthogonal*, with sectional matrix $K_{ab}=W_{abab}$, and let $G$ be the graph on $\{1,\dots,n\}$ whose edges are the pairs with $K_{ab}\ne0$. Then **every vertex of $G$ has degree $0$ or degree $\ge2$**, and $G$ has **at least four edges**, **in particular** $\mathop{\mathrm{rank}}(W:\Lambda^2\to\Lambda^2)\ge4$. *Only the edge bound is equivalent to the rank bound; the degree statement is strictly more than it.*
 
 ### Record L177
 

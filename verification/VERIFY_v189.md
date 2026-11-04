@@ -51,7 +51,7 @@ A pass with no inventory is not a pass. Every input L44 consumes, where it is st
 | H3 | $W$ is a **critical point**, $Q(W)=\theta W$ | **never used** | yes, in the canonical statement | true (§2), but decoration for this lemma |
 | H4 | $\partial\Omega_0:\ \tfrac{n-2}n\lVert R_W\rVert^2=\lVert R_I\rVert^2$ on $\mathrm{scal}>0$ | **essential** | yes | [conventions.md:50](../findings/conventions.md), Beitz p. 96, Xu (1.2) |
 | H5 | $\lVert I\rVert^2=\binom n2$ | **essential** | yes | stated in the block; Beitz Remark 1.1.7 |
-| H6 | $\mathrm{scal}(cI+W)>0$, selecting the positive root of $c$ | **essential** | **no** | [problem.md:62](../findings/problem.md), *"the positive root, and $\operatorname{tr}(R)>0$ is what selects it"* |
+| H6 | $\mathrm{scal}(cI+W)>0$, selecting the positive root of $c$ | **essential** | **no** | [problem.md:62](../findings/problem.md), *"the positive root, and $\mathop{\mathrm{tr}}(R)>0$ is what selects it"* |
 | H7 | $\lVert W\rVert=1$ normalisation, for "$\langle W,Q(W)\rangle\le c(n-1)$" to typecheck | **essential** | **no**, dropped | [results.md:276](../results.md#L276), L43's own statement, carries $\lVert W\rVert^2$ and $\lVert W\rVert^3$ correctly |
 | H8 | [L43](../results.md)'s collapse | **essential** | yes, cited | [problem.md:528](../findings/problem.md#L528) and §56–70 of the same file |
 | H9 | $Q(\mathcal W_n)\subseteq\mathcal W_n$ (i.e. $\Phi$ preserves Weyl and first Bianchi) | **essential**, inside H8 | named in the L43 section, not in the L44 block | BW08 eq. (6); Xu Prop 2.7(4), which **is** in [the Xu notes](../references/xu-2024-ricci-flow-invariant-conditions/notes.md) |
@@ -64,7 +64,7 @@ A pass with no inventory is not a pass. Every input L44 consumes, where it is st
 
 ## 2. The witness, rebuilt from the $\mathfrak{so}(4)$ structure constants
 
-The record's own presentation is [problem.md:264](../findings/problem.md#L264): $W_{\mathbb{CP}^2}=\operatorname{diag}(0,0,0,-1,-1,2)/\sqrt6$ on $\Lambda^2(\mathbb R^4)$. I rebuilt it rather than reading it off.
+The record's own presentation is [problem.md:264](../findings/problem.md#L264): $W_{\mathbb{CP}^2}=\mathop{\mathrm{diag}}(0,0,0,-1,-1,2)/\sqrt6$ on $\Lambda^2(\mathbb R^4)$. I rebuilt it rather than reading it off.
 
 **The bracket, and the one normalisation that fixes everything.** Take $e_{12},\dots,e_{34}$ orthonormal in $\Lambda^2\mathbb R^4$ and the self-dual triple
 $$f_1=\tfrac1{\sqrt2}(e_{12}+e_{34}),\quad f_2=\tfrac1{\sqrt2}(e_{13}-e_{24}),\quad f_3=\tfrac1{\sqrt2}(e_{14}+e_{23}),$$

@@ -37,9 +37,9 @@ Quoted from [conventions.md](../findings/conventions.md), not restated.
 - $\theta_0(n)$: "**the closed form $\theta_0(n)^2=2(n-1)(n-2)/n^2$, and nothing more.** *It is the value at the balanced sphere product **at even $n$ only**, at odd $n$ the balanced split gives $\Theta_n<\theta_0(n)$, the gap being $\theta_0^2-\Theta_n^2=8(n-1)/(n^2(n+1)(n-2))$ from the identity $(n-2)^2(n+1)-n^2(n-3)=4$.*"
 - $\Theta_n$: "the diagonal maximum; equals $\theta_0(n)$ at even $n$, and $\sqrt{2(n-1)(n-3)/((n+1)(n-2))}$ at odd $n$".
 - $R_I$, $R_{\mathrm{ric}_0}$, $R_W$: "the three $O(n)$-irreducible pieces of an algebraic curvature operator, scalar, **trace-free** Ricci, and Weyl. $R_{\mathrm{ric}_0}=0$ makes a slice **Einstein**".
-- $B$: "$B=\tfrac\theta2\mathrm{Id}-L_W$ at a critical point ... *This is a third object under the letter $B$ in this record*". And separately: "**THE LETTER $B$ MEANS TWO THINGS, live.** [conventions.md]'s Killing form above is $B(X,Y)=(n-2)\operatorname{tr}(XY)$ on $\mathfrak{so}(n)$; [sym3-blocks.md](../findings/sym3-blocks.md) writes $B(X,Y)=-\tfrac12\operatorname{tr}(XY)$".
+- $B$: "$B=\tfrac\theta2\mathrm{Id}-L_W$ at a critical point ... *This is a third object under the letter $B$ in this record*". And separately: "**THE LETTER $B$ MEANS TWO THINGS, live.** [conventions.md]'s Killing form above is $B(X,Y)=(n-2)\mathop{\mathrm{tr}}(XY)$ on $\mathfrak{so}(n)$; [sym3-blocks.md](../findings/sym3-blocks.md) writes $B(X,Y)=-\tfrac12\mathop{\mathrm{tr}}(XY)$".
 - $N$: "$\binom n2=\dim\Lambda^2\mathbb R^n$".
-- The normalisation L48 silently runs in is quoted from [L47](../findings/problem.md): "Normalising to Einstein constant $\tfrac12$ forces $\operatorname{tr}R=n/4$, makes the centre constant universal at $c=\frac1{2(n-1)}$, and gives $\lVert W\rVert^2=\lVert R\rVert^2-\frac n{8(n-1)}$."
+- The normalisation L48 silently runs in is quoted from [L47](../findings/problem.md): "Normalising to Einstein constant $\tfrac12$ forces $\mathop{\mathrm{tr}}R=n/4$, makes the centre constant universal at $c=\frac1{2(n-1)}$, and gives $\lVert W\rVert^2=\lVert R\rVert^2-\frac n{8(n-1)}$."
 
 ## 1. Hypothesis inventory
 
@@ -78,15 +78,15 @@ So $W$'s mixed blocks are nonzero, and they are precisely part of what $B$ colle
 
 ## 3. Claim 2, the closed form, derived twice
 
-**Route A, from $\lVert R\rVert^2$ (the record's own route, reconstructed).** With $\lambda=\tfrac12$, [L47](../findings/problem.md) gives $\operatorname{tr}R=n/4$, $c=\tfrac1{2(n-1)}$ and
+**Route A, from $\lVert R\rVert^2$ (the record's own route, reconstructed).** With $\lambda=\tfrac12$, [L47](../findings/problem.md) gives $\mathop{\mathrm{tr}}R=n/4$, $c=\tfrac1{2(n-1)}$ and
 
-$$\lVert W\rVert^2=\lVert R-cI\rVert^2=\lVert R\rVert^2-2c\operatorname{tr}R+c^2N=\lVert R\rVert^2-\tfrac n{4(n-1)}+\tfrac{n}{8(n-1)}=\lVert R\rVert^2-\tfrac n{8(n-1)} ,$$
+$$\lVert W\rVert^2=\lVert R-cI\rVert^2=\lVert R\rVert^2-2c\mathop{\mathrm{tr}}R+c^2N=\lVert R\rVert^2-\tfrac n{4(n-1)}+\tfrac{n}{8(n-1)}=\lVert R\rVert^2-\tfrac n{8(n-1)} ,$$
 
 using $N=\binom n2$. The same identity read inside factor $a$ (legitimate exactly because the factor is itself Einstein at the *same* constant $\tfrac12$), gives $\lVert R_a\rVert^2=\lVert W_a\rVert^2+f(n_a)$ with $f(m)=\tfrac m{8(m-1)}$. Claim 1 gives $\lVert R\rVert^2=\sum_a\lVert R_a\rVert^2$. Substituting,
 
 $$\lVert W\rVert^2=\sum_a\lVert W_a\rVert^2+\sum_af(n_a)-\tfrac n{8(n-1)} .$$
 
-**Route B, from the Weyl decomposition, sharing nothing with Route A.** For Einstein metrics $R=W+\tfrac{s}{n(n-1)}\mathrm{Id}$ with $s=n\lambda$, so on the blocks $W$ is as displayed in section 2. Since $\operatorname{tr}_{\Lambda^2}W=0$, the cross terms $\langle W_a,\mathrm{Id}_a\rangle$ vanish and the blocks are orthogonal, so with $c_a=\lambda\big(\tfrac1{n_a-1}-\tfrac1{n-1}\big)$ and $D=\sum_{a<b}n_an_b=\tfrac{n^2-\sum n_a^2}2$,
+**Route B, from the Weyl decomposition, sharing nothing with Route A.** For Einstein metrics $R=W+\tfrac{s}{n(n-1)}\mathrm{Id}$ with $s=n\lambda$, so on the blocks $W$ is as displayed in section 2. Since $\mathop{\mathrm{tr}}_{\Lambda^2}W=0$, the cross terms $\langle W_a,\mathrm{Id}_a\rangle$ vanish and the blocks are orthogonal, so with $c_a=\lambda\big(\tfrac1{n_a-1}-\tfrac1{n-1}\big)$ and $D=\sum_{a<b}n_an_b=\tfrac{n^2-\sum n_a^2}2$,
 
 $$\lVert W\rVert^2=\sum_a\lVert W_a\rVert^2+\sum_ac_a^2\binom{n_a}2+\frac{\lambda^2D}{(n-1)^2}.$$
 
@@ -214,7 +214,7 @@ The record lists them at [graded-half.md](../findings/graded-half.md) line 69: *
 
 ## 10. Claim 15, a broken sentence in the import's canonical entry
 
-**DISCREPANCY 3.** *Located:* [results.md](../results.md) line 294, the canonical entry for L46: "Normalising to Einstein constant $\tfrac12$ makes $\operatorname{tr}R=n/4$ and the centre constant $c=\frac1{2(n-1)}$, so $\theta\le\theta_0(n)$ becomes the single inequality $\lVert W\rVert^2\ge\tfrac16$, **the form Lemmas 47 and 48 verify**."
+**DISCREPANCY 3.** *Located:* [results.md](../results.md) line 294, the canonical entry for L46: "Normalising to Einstein constant $\tfrac12$ makes $\mathop{\mathrm{tr}}R=n/4$ and the centre constant $c=\frac1{2(n-1)}$, so $\theta\le\theta_0(n)$ becomes the single inequality $\lVert W\rVert^2\ge\tfrac16$, **the form Lemmas 47 and 48 verify**."
 
 *Exhibited in closed form.* With $\lambda=\tfrac12$, L46 gives $\theta=\tfrac1{2\lVert W\rVert}$, so
 
@@ -255,7 +255,7 @@ which equals $\tfrac16$ only at $n^2-12n+8=0$, i.e. $n=6+2\sqrt7\notin\mathbb Z$
 
 ## 13. Claim 16, symbol hygiene
 
-- **$B$.** L48's $B=\sum_af(n_a)-\tfrac n{8(n-1)}$ is a **scalar**. [conventions.md](../findings/conventions.md) already tables three objects under that letter, the Killing form $(n-2)\operatorname{tr}(XY)$ on $\mathfrak{so}(n)$, [sym3-blocks.md](../findings/sym3-blocks.md)'s $-\tfrac12\operatorname{tr}(XY)$, and the critical-point **operator** $B=\tfrac\theta2\mathrm{Id}-L_W$, with the standing warning "**THE LETTER $B$ MEANS TWO THINGS, live** ... **Say which you mean, every time**". L48's is a **fourth**, it is untabled, and it is the only one that is a scalar, so a reader meeting "$B\succeq0$" and "$B=\sum_af(n_a)-\ldots$" in the same file has no way to sort them but context. **GAP**, it should be tabled.
+- **$B$.** L48's $B=\sum_af(n_a)-\tfrac n{8(n-1)}$ is a **scalar**. [conventions.md](../findings/conventions.md) already tables three objects under that letter, the Killing form $(n-2)\mathop{\mathrm{tr}}(XY)$ on $\mathfrak{so}(n)$, [sym3-blocks.md](../findings/sym3-blocks.md)'s $-\tfrac12\mathop{\mathrm{tr}}(XY)$, and the critical-point **operator** $B=\tfrac\theta2\mathrm{Id}-L_W$, with the standing warning "**THE LETTER $B$ MEANS TWO THINGS, live** ... **Say which you mean, every time**". L48's is a **fourth**, it is untabled, and it is the only one that is a scalar, so a reader meeting "$B\succeq0$" and "$B=\sum_af(n_a)-\ldots$" in the same file has no way to sort them but context. **GAP**, it should be tabled.
 - **$f$.** Defined only inside L48's own sentence, and consumed in three files, [problem.md](../findings/problem.md) line 256, [graded-half.md](../findings/graded-half.md) lines 130 and 381, and [results.md](../results.md) line 567, with no entry in conventions. It is the record's second-most-travelled unlisted symbol in this neighbourhood after $B$. **GAP.**
 - **$k$.** The number of de Rham factors here. It collides with [second-order.md](../findings/second-order.md)'s $k$ in "$m(1)=\binom k2$ and $m(\tfrac12)=k\cdot\mathrm{orb}$ at $(S^3)^k$" (which is *the same* $k$, so this one is benign) and with the index $k$ of $g_k=\lVert[\mathrm{ad}(v_k),W]\rVert^2$ in [bounds.md](../findings/bounds.md), which is not. Untabled, low severity.
 - **$c$.** Not written in L48's block, but consumed through it: the whole argument runs on $c=\tfrac1{2(n-1)}$, and conventions already flags $c$ as colliding with [L44](../findings/problem.md)'s pinned $\partial\Omega_0$ constant "twenty lines up" in the same file. Since L48 sits sixteen lines below L47, which does write $c=\tfrac1{2(n-1)}$, a reader of `problem.md` meets three $c$'s within forty lines.

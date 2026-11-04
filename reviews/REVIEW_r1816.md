@@ -57,7 +57,7 @@ Summing gives $a=t\langle L_eB,B\rangle\le t\,c_*\sum_{2+2}\lVert B_Q\rVert^2\le
 
 ## Claim 4, averaging
 
-- $\mathcal W_n$ is an irreducible $O(n)$-module of real type for $n\ge4$ (at $n=4$ it splits under $SO(4)$ only), so $\int_{O(n)}g^{-1}\pi_{\mathcal D}g\,dg$ restricted to $\mathcal W_n$ commutes with $O(n)$ and is the scalar $\operatorname{tr}\pi_{\mathcal D}/\dim\mathcal W_n=\dim\mathcal D_n/\dim\mathcal W_n$. The norm is HS on $\Lambda^2$, the same as $t=\lVert A\rVert$.
+- $\mathcal W_n$ is an irreducible $O(n)$-module of real type for $n\ge4$ (at $n=4$ it splits under $SO(4)$ only), so $\int_{O(n)}g^{-1}\pi_{\mathcal D}g\,dg$ restricted to $\mathcal W_n$ commutes with $O(n)$ and is the scalar $\mathop{\mathrm{tr}}\pi_{\mathcal D}/\dim\mathcal W_n=\dim\mathcal D_n/\dim\mathcal W_n$. The norm is HS on $\Lambda^2$, the same as $t=\lVert A\rVert$.
 - A maximum is at least an average, so $t^2\ge\frac{n(n-3)/2}{n(n-3)(n+1)(n+2)/12}=\frac6{(n+1)(n+2)}$.
 - bispectral.md's $\mathbb E_F\lVert K(F)\rVert_F^2=\frac{12}{(n+1)(n+2)}\lVert M\rVert_F^2$ sums over $a\ne b$, twice the unordered sum, so the two agree.
 - $6(n-4)^2\ge4(n+1)(n+2)\iff n^2-30n+44\ge0$, roots $15\pm\sqrt{181}$, i.e. $1.55$ and $28.45$. So the first even $n$ is $30$, and the inequality is strict there ($44>0$), which gives $t>T$ and hence $b=0$ through the dichotomy. [average_beats_threshold](../lean/HamiltonsCubic/Results/ProductFoothold.lean) states the strict form.

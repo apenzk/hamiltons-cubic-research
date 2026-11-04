@@ -11,7 +11,7 @@ Cold review, derivation only. Every entry, multiplicity, norm and asymptotic bel
 | 1. the floor sits at $p=3$ | **REFUTED**, $p=2$ is admissible, graded, critical, already on the record's own graded table, and gives a strictly smaller gap at every $n\ge7$ |
 | 1. $\mathrm{floor}(n)\sim2/n^{3/2}$ | **REFUTED**, it is $\sim2\sqrt3/n^2$; the wrong power came from dropping the dominant term of the norm |
 | 1. "positive at every $n$" | **SCOPE ERROR**, the closed form is the gap only for $n\ge7$ |
-| 2. $\operatorname{tr}\mathring W=0$ | **CONFIRMED and DERIVED** in three lines |
+| 2. $\mathop{\mathrm{tr}}\mathring W=0$ | **CONFIRMED and DERIVED** in three lines |
 | 2. Lemma 3.2 degenerates | **CONFIRMED, and the record understates it**, the hypothesis set is $\{W=0\}$, so the lemma is vacuous, not merely uncalibrated |
 | 2. "both sides carry $\bar\lambda$, check the ratio" | **the premise is false**, the left side carries no $\bar\lambda$; there is no ratio |
 | 2. the demotion of 3a | **WRONG DIRECTION**, the defect is repaired by an identity shift that keeps the published constants |
@@ -101,9 +101,9 @@ The step that motivates the whole "smallest **nonzero** modulus" repair reads: *
 
 ## CLAIM 2, the calibration defect
 
-### $\operatorname{tr}\mathring W=0$, CONFIRMED, and it is derivable, not measurable
+### $\mathop{\mathrm{tr}}\mathring W=0$, CONFIRMED, and it is derivable, not measurable
 
-Two lines, no numerics. On $S^2(\mathbb R^n)$, the diagonal basis vectors $e_a\otimes e_a$ contribute $R_{aaaa}=0$ and the off-diagonal ones $(e_a\otimes e_b+e_b\otimes e_a)/\sqrt2$ contribute $R_{abba}$, so $\operatorname{tr}\mathring R|_{S^2}$ is a fixed multiple of the scalar curvature. And $\mathring R(g)_{ij}=\sum_kR_{ikjk}=\mathrm{Ric}_{ij}$, so $\mathring R$ preserves the splitting $S^2=S^2_0\oplus\mathbb R g$ with $\mathring R(g)=\mathrm{Ric}$. For $W$ both traces vanish identically, hence $\mathring W(g)=0$ and $\operatorname{tr}\mathring W|_{S^2_0}=0$, so $\bar\lambda=0$. **The record's $10^{-16}$ at $n=5,6,7,8$ was measuring a theorem.**
+Two lines, no numerics. On $S^2(\mathbb R^n)$, the diagonal basis vectors $e_a\otimes e_a$ contribute $R_{aaaa}=0$ and the off-diagonal ones $(e_a\otimes e_b+e_b\otimes e_a)/\sqrt2$ contribute $R_{abba}$, so $\mathop{\mathrm{tr}}\mathring R|_{S^2}$ is a fixed multiple of the scalar curvature. And $\mathring R(g)_{ij}=\sum_kR_{ikjk}=\mathrm{Ric}_{ij}$, so $\mathring R$ preserves the splitting $S^2=S^2_0\oplus\mathbb R g$ with $\mathring R(g)=\mathrm{Ric}$. For $W$ both traces vanish identically, hence $\mathring W(g)=0$ and $\mathop{\mathrm{tr}}\mathring W|_{S^2_0}=0$, so $\bar\lambda=0$. **The record's $10^{-16}$ at $n=5,6,7,8$ was measuring a theorem.**
 
 ### The lemma does not merely lose its constants, it is VACUOUS
 
@@ -119,7 +119,7 @@ The right-hand side of Lemma 3.2 carries $\bar\lambda$ in every term; **the left
 
 ### The demotion is the WRONG DIRECTION, the defect repairs in one line, constants intact
 
-$\bar\lambda$ is not an accident of Cheng–Wang's proof; it is the coordinate along which the Weyl tensor was projected out. Restore it. Let $R_1$ be the constant-curvature tensor, $(R_1)_{ikjl}=\delta_{ij}\delta_{kl}-\delta_{il}\delta_{kj}$; then $\mathring R_1h=\delta\operatorname{tr}h-h=-h$ on $S^2_0$, so $\mathring R_1=-\mathrm{Id}$ there. Set $R_s=W-sR_1$ for $s>0$. Then
+$\bar\lambda$ is not an accident of Cheng–Wang's proof; it is the coordinate along which the Weyl tensor was projected out. Restore it. Let $R_1$ be the constant-curvature tensor, $(R_1)_{ikjl}=\delta_{ij}\delta_{kl}-\delta_{il}\delta_{kj}$; then $\mathring R_1h=\delta\mathop{\mathrm{tr}}h-h=-h$ on $S^2_0$, so $\mathring R_1=-\mathrm{Id}$ there. Set $R_s=W-sR_1$ for $s>0$. Then
 
 - $\mathring R_s=\mathring W+s\,\mathrm{Id}$, same eigenbasis $\{S^j\}$, eigenvalues $\lambda_j+s$, and $\bar\lambda(R_s)=s>0$;
 - the Weyl part of $R_s$ is $W$ unchanged, so every $|S^jW|^2$ is untouched;

@@ -90,7 +90,7 @@ The block does acknowledge the hypothesis, but only in the *verification* paragr
 
 ### D4, the row marginal
 
-$\sum_\beta\|[v_\alpha,v_\beta]\|^2=-\operatorname{tr}\operatorname{ad}(v_\alpha)^2=-B(v_\alpha,v_\alpha)=-(n-2)\operatorname{tr}(v_\alpha^2)=2(n-2)$, using $\operatorname{tr}(v^2)=-2$ for a unit bivector. **This is the same Killing-form fact**, not a coincident constant: [conventions.md:89](../findings/conventions.md#L89) carries it verbatim under *"The pair cap and the Killing marginal"*, alongside $\kappa=2(n-2)$ in the normalisations. It carries no result number, and by the record's own quoting rule L77 should cite it rather than restate it.
+$\sum_\beta\|[v_\alpha,v_\beta]\|^2=-\mathop{\mathrm{tr}}\mathop{\mathrm{ad}}(v_\alpha)^2=-B(v_\alpha,v_\alpha)=-(n-2)\mathop{\mathrm{tr}}(v_\alpha^2)=2(n-2)$, using $\mathop{\mathrm{tr}}(v^2)=-2$ for a unit bivector. **This is the same Killing-form fact**, not a coincident constant: [conventions.md:89](../findings/conventions.md#L89) carries it verbatim under *"The pair cap and the Killing marginal"*, alongside $\kappa=2(n-2)$ in the normalisations. It carries no result number, and by the record's own quoting rule L77 should cite it rather than restate it.
 
 ## 3. The two equivalences
 
@@ -152,7 +152,7 @@ so $P_{\mathfrak h}[\mathfrak h,\mathfrak m]=0$ and $P_{\mathfrak m}[\mathfrak h
 
 $$S_{\mathfrak{mhh}}=0\iff[\mathfrak h,\mathfrak h]\subseteq\mathfrak h\ \textbf{and}\ [\mathfrak h,\mathfrak m]\subseteq\mathfrak m,\qquad S_{\mathfrak{mmm}}=0\iff[\mathfrak m,\mathfrak m]\subseteq\mathfrak h .$$
 
-Equivalently, in one clause: the orthogonal complement of a subalgebra is automatically an $\operatorname{ad}$-module, the pairing being $\operatorname{ad}$-invariant. Two conditions do give all three relations, the map $\sigma=+1$ on $\mathfrak h$, $-1$ on $\mathfrak m$ is then an involutive automorphism, and $(\mathfrak{so}(n),\mathfrak h)$ is a symmetric pair. **Arrow CONFIRMED, but "exactly a $\mathbb Z_2$-grading" is a hedge covering a step, and it costs one sentence to state.**
+Equivalently, in one clause: the orthogonal complement of a subalgebra is automatically an $\mathop{\mathrm{ad}}$-module, the pairing being $\mathop{\mathrm{ad}}$-invariant. Two conditions do give all three relations, the map $\sigma=+1$ on $\mathfrak h$, $-1$ on $\mathfrak m$ is then an involutive automorphism, and $(\mathfrak{so}(n),\mathfrak h)$ is a symmetric pair. **Arrow CONFIRMED, but "exactly a $\mathbb Z_2$-grading" is a hedge covering a step, and it costs one sentence to state.**
 
 ### D10, Cartan, $SO(n)$-conjugacy, and $n=8$
 
@@ -161,7 +161,7 @@ Equivalently, in one clause: the orthogonal complement of a subalgebra is automa
 **Is $n=8$ affected? No, and the record already holds both reasons, in files L77 does not cite.**
 
 - At the cap, $\dim\mathfrak h=N-\lfloor n^2/4\rfloor=n(n-2)/4$, which is $12$ at $n=8$. [Trap W2](../findings/INDEX-traps.md#L20) records that triality adds exactly two involutions at $n=8$, $\mathfrak{spin}(7)$ at dimension $21$ and $\mathfrak{sp}(1)\oplus\mathfrak{sp}(2)$ at $13$. **Neither is $12$**, so the cap dimension is untouched.
-- [bounds.md:478](../findings/bounds.md#L478) closes the conjugacy question directly: $\operatorname{Ad}(\operatorname{diag}(-1_4,1_4))$ has determinant $+1$ and is **inner**, so Cartan up to $\mathrm{Aut}$ already delivers $SO(8)$-conjugacy (*"which is exactly why dimension $12$ is safe and $13$ is not"*), with a second route through the weight pattern $(1^4,(-1)^4)$ on $V$, $S^+$, $S^-$ alike. Gate 2, [r567](REVIEW_r567.md) and [r568](REVIEW_r568.md).
+- [bounds.md:478](../findings/bounds.md#L478) closes the conjugacy question directly: $\mathop{\mathrm{Ad}}(\mathop{\mathrm{diag}}(-1_4,1_4))$ has determinant $+1$ and is **inner**, so Cartan up to $\mathrm{Aut}$ already delivers $SO(8)$-conjugacy (*"which is exactly why dimension $12$ is safe and $13$ is not"*), with a second route through the weight pattern $(1^4,(-1)^4)$ on $V$, $S^+$, $S^-$ alike. Gate 2, [r567](REVIEW_r567.md) and [r568](REVIEW_r568.md).
 
 Two further steps the block leaves silent, both closed in [bounds.md:478](../findings/bounds.md#L478) and neither cited here: $\mathfrak u(n/2)$ has dimension $n^2/4\ne n(n-2)/4$ and is excluded at every even $n$; and writing $p=\tfrac n2+t$, $q=\tfrac n2-t$ gives $\dim(\mathfrak{so}(p)\oplus\mathfrak{so}(q))=\tfrac{n^2}4+t^2-\tfrac n2$, so the target $\tfrac{n(n-2)}4$ forces $t=0$, **the balanced split at every even $n$ at once, no case list.**
 
@@ -175,7 +175,7 @@ The table at [isotropy-cap.md:130](../findings/isotropy-cap.md#L130) contains fo
 
 **Column $\|P_0\|^2$.** $\|P_0\|^2=\|P\|^2-d^2/N=d(N-d)/N$. This gives $2.4$, $3.6$, $108/21=5.142857$, $320/36=8.8889$, **all four rows exactly.**
 
-**Column $\Lambda^4$.** At the symmetric pair $P$ is diagonal in the coordinate-plane basis, so $P_{ijkl}=0$ on four distinct indices and $\operatorname{Alt}(P)=0$. **Both parities, derived**, the block's *"vanishes at both parities"* is right.
+**Column $\Lambda^4$.** At the symmetric pair $P$ is diagonal in the coordinate-plane basis, so $P_{ijkl}=0$ on four distinct indices and $\mathop{\mathrm{Alt}}(P)=0$. **Both parities, derived**, the block's *"vanishes at both parities"* is right.
 
 **Column $\mathrm{Sym}^2_0$.** Two independent routes, agreeing.
 

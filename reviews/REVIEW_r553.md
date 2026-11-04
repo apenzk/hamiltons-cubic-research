@@ -12,7 +12,7 @@ Verdicts are appended below as they are reached.
 
 ## Setup as I fix it, from [conventions.md](../findings/conventions.md)
 
-$\langle A,B\rangle=\tfrac12\operatorname{tr}(A^{\mathsf T}B)$ at the $\Lambda^2$ level; $Q(W)=W^2+W^\#$; $P(W)=\langle W,Q(W)\rangle$; $X\circ Y=\tfrac12(Q(X+Y)-Q(X)-Q(Y))$, so $X\circ X=Q(X)$ and $\circ$ is the symmetric bilinear polarisation of the quadratic map $Q$. Write $T(X,Y,Z)=\langle X,Y\circ Z\rangle$ and $M(n)=\max\{P(W):W\in\mathcal W_n,\lVert W\rVert=1\}$, the second of these is my own definition, because the record has none (defect D2 below).
+$\langle A,B\rangle=\tfrac12\mathop{\mathrm{tr}}(A^{\mathsf T}B)$ at the $\Lambda^2$ level; $Q(W)=W^2+W^\#$; $P(W)=\langle W,Q(W)\rangle$; $X\circ Y=\tfrac12(Q(X+Y)-Q(X)-Q(Y))$, so $X\circ X=Q(X)$ and $\circ$ is the symmetric bilinear polarisation of the quadratic map $Q$. Write $T(X,Y,Z)=\langle X,Y\circ Z\rangle$ and $M(n)=\max\{P(W):W\in\mathcal W_n,\lVert W\rVert=1\}$, the second of these is my own definition, because the record has none (defect D2 below).
 
 ## D1, the additivity step is TRUE, and the property it needs is total symmetry of $T$. CONFIRMED, with a citation gap
 
@@ -24,7 +24,7 @@ The off-diagonal terms are $T(A_i,A_j,A_j)$ with $i\ne j$, and $A_i\circ A_j=0$ 
 
 **$T$ is totally symmetric, by two independent computations, one per term of $Q$.**
 
-- **The $W^2$ term.** Its polarisation is $\tfrac12(XY+YX)$, so its contribution to $T$ is $\tfrac14\big(\operatorname{tr}(XYZ)+\operatorname{tr}(XZY)\big)$. The two summands are the two cyclic classes of $\{X,Y,Z\}$ and their sum is a sum over all six orderings up to cyclicity, hence invariant under every permutation.
+- **The $W^2$ term.** Its polarisation is $\tfrac12(XY+YX)$, so its contribution to $T$ is $\tfrac14\big(\mathop{\mathrm{tr}}(XYZ)+\mathop{\mathrm{tr}}(XZY)\big)$. The two summands are the two cyclic classes of $\{X,Y,Z\}$ and their sum is a sum over all six orderings up to cyclicity, hence invariant under every permutation.
 - **The $W^\#$ term.** In an orthonormal basis of $\mathfrak{so}(n)$ with $c_{\alpha\beta\gamma}=\langle[v_\alpha,v_\beta],v_\gamma\rangle$ totally antisymmetric ([conventions.md](../findings/conventions.md)), its trilinear form is proportional to $\sum c_{\alpha\gamma\delta}c_{\beta\epsilon\zeta}X_{\alpha\beta}Y_{\gamma\epsilon}Z_{\delta\zeta}$: each of $X,Y,Z$ contributes one index to each of the two $c$'s. Exchanging $X$ and $Y$ transposes the first two slots of **both** $c$'s, and the two sign changes cancel. Every transposition behaves the same way, and $X,Y,Z$ symmetric makes the slot order inside each irrelevant.
 
 Equivalently, total symmetry says $\nabla P=3Q$, which is what makes [conventions.md](../findings/conventions.md)'s own critical-point equation $Q(W)=\theta W$ the Lagrange condition. So the property is not merely true, it is presupposed by the conventions the file runs on.

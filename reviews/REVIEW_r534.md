@@ -50,7 +50,7 @@ The block asserts *"the orbit tangent for the $(j,k)$ generator lies in the $\{j
 
 Neither L126 nor [Lemma L121](../findings/second-order.md) proves this closed form in place; both quote it. I derived it cold. Normalise $S^p\times S^q$ to $\mathrm{Ric}=(n-1)g$. The Weyl sectional matrix is
 $$w_1=\frac q{p-1}\ \text{(within }S^p),\qquad w_2=\frac p{q-1}\ \text{(within }S^q),\qquad w_{12}=-1 ,$$
-whose row sums vanish, confirming Ricci-flatness. Calibrating $\#$ against the record's two anchors ($\mathrm{Id}^\#=(n-2)\mathrm{Id}$ and $\operatorname{tr}W^\#=-1$ at unit norm), fixes $(W^\#)_{(ab)}=\sum_{c\ne a,b}w_{ac}w_{bc}=(K^2)_{ab}$ on a pair-diagonal operator. Then entrywise
+whose row sums vanish, confirming Ricci-flatness. Calibrating $\#$ against the record's two anchors ($\mathrm{Id}^\#=(n-2)\mathrm{Id}$ and $\mathop{\mathrm{tr}}W^\#=-1$ at unit norm), fixes $(W^\#)_{(ab)}=\sum_{c\ne a,b}w_{ac}w_{bc}=(K^2)_{ab}$ on a pair-diagonal operator. Then entrywise
 
 $$Q(W)_{(ab)}=w_{ab}^2+(K^2)_{ab}=(n-1)\,w_{ab}\quad\text{for every }a\ne b ,$$
 

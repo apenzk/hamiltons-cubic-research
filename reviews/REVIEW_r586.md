@@ -70,24 +70,24 @@ Both guards are sound, and they are not the same set. For $W_{\mathfrak h}=c(\Pi
 Conventions used, each quoted from [conventions.md](../findings/conventions.md) or [problem.md](../findings/problem.md): $Q(W)=W^2+W^\#$; a critical point is $Q(W)=\theta W$ on $\{\lVert W\rVert=1\}$; $W_-:=\tfrac12(\lvert W\rvert-W)\succeq0$; $\mathrm{Alt}$ is the orthogonal projection of $S^2(\Lambda^2)$ onto $\Lambda^4$; $\delta^2=\lVert\mathrm{Alt}(W_-)\rVert^2$; $\#$ is the symmetric bilinear map with $R^\#=R\#R$ and the rank-one law $(uu^{\mathsf T})\#(vv^{\mathsf T})=\tfrac12[u,v][u,v]^{\mathsf T}$.
 
 **Step 1, compress criticality onto $E_-$. Consumes: criticality; that $W$ and $W^2$ preserve $E_-$.** $P_-(W^2+W^\#)P_-=\theta P_-WP_-$, and $P_-WP_-=-W_-$, $P_-W^2P_-=W_-^2$, so
-$$\theta\operatorname{tr}(W_-)+\operatorname{tr}(W_-^2)=-\operatorname{tr}(P_-W^\#P_-).$$
+$$\theta\mathop{\mathrm{tr}}(W_-)+\mathop{\mathrm{tr}}(W_-^2)=-\mathop{\mathrm{tr}}(P_-W^\#P_-).$$
 
-**Step 2, the scalar-curvature identity at $W_-$. Consumes: [Observation L15](../findings/problem.md)'s $\operatorname{scal}(R^2+R^\#)=\lVert\mathrm{Ric}(R)\rVert^2+6\lVert\mathrm{Alt}(R)\rVert^2$ with $\operatorname{scal}=2\operatorname{tr}$, valid for every symmetric $R$ and so applicable to $W_-$, which is not Weyl.** This gives
-$$\lVert\mathrm{Ric}(W_-)\rVert^2+6\delta^2=2\operatorname{tr}(W_-^2)+2\operatorname{tr}(W_-^\#).$$
+**Step 2, the scalar-curvature identity at $W_-$. Consumes: [Observation L15](../findings/problem.md)'s $\mathop{\mathrm{scal}}(R^2+R^\#)=\lVert\mathrm{Ric}(R)\rVert^2+6\lVert\mathrm{Alt}(R)\rVert^2$ with $\mathop{\mathrm{scal}}=2\mathop{\mathrm{tr}}$, valid for every symmetric $R$ and so applicable to $W_-$, which is not Weyl.** This gives
+$$\lVert\mathrm{Ric}(W_-)\rVert^2+6\delta^2=2\mathop{\mathrm{tr}}(W_-^2)+2\mathop{\mathrm{tr}}(W_-^\#).$$
 
-**Step 3, subtract.** $S=2\operatorname{tr}(W_-^2)+2\operatorname{tr}(W_-^\#)+\operatorname{tr}(P_-W^\#P_-)$.
+**Step 3, subtract.** $S=2\mathop{\mathrm{tr}}(W_-^2)+2\mathop{\mathrm{tr}}(W_-^\#)+\mathop{\mathrm{tr}}(P_-W^\#P_-)$.
 
 **Step 4, expand $\#$ bilinearly. Consumes: bilinearity alone.** $W^\#=W_+^\#-2\,W_+\#W_-+W_-^\#$.
 
 **Step 5, the two trace lemmas.**
-- **(A)** $\operatorname{tr}(W_+^2)+\operatorname{tr}(W_+^\#)=\operatorname{tr}(W_-^2)+\operatorname{tr}(W_-^\#)$. *Consumes: $W$ Weyl.* Apply step 2 to $W_+$ and to $W_-$ separately; the right-hand sides agree because $\mathrm{Ric}(W)=0$ gives $\mathrm{Ric}(W_+)=\mathrm{Ric}(W_-)$ and first Bianchi gives $\mathrm{Alt}(W_+)=\mathrm{Alt}(W_-)$, both by linearity of $\mathrm{Ric}$ and $\mathrm{Alt}$ on $W=W_+-W_-$.
-- **(B)** $\operatorname{tr}(W_-^2)+\operatorname{tr}(W_-^\#)=\operatorname{tr}(W_+\#W_-)$. *Consumes: $W$ Weyl only.* Step 2 at $W$ itself gives $\operatorname{tr}(W^2)+\operatorname{tr}(W^\#)=0$; expanding with step 4 and $W_+W_-=0$ gives $\operatorname{tr}(W_+^2)+\operatorname{tr}(W_-^2)+\operatorname{tr}(W_+^\#)+\operatorname{tr}(W_-^\#)=2\operatorname{tr}(W_+\#W_-)$, and (A) halves it.
+- **(A)** $\mathop{\mathrm{tr}}(W_+^2)+\mathop{\mathrm{tr}}(W_+^\#)=\mathop{\mathrm{tr}}(W_-^2)+\mathop{\mathrm{tr}}(W_-^\#)$. *Consumes: $W$ Weyl.* Apply step 2 to $W_+$ and to $W_-$ separately; the right-hand sides agree because $\mathrm{Ric}(W)=0$ gives $\mathrm{Ric}(W_+)=\mathrm{Ric}(W_-)$ and first Bianchi gives $\mathrm{Alt}(W_+)=\mathrm{Alt}(W_-)$, both by linearity of $\mathrm{Ric}$ and $\mathrm{Alt}$ on $W=W_+-W_-$.
+- **(B)** $\mathop{\mathrm{tr}}(W_-^2)+\mathop{\mathrm{tr}}(W_-^\#)=\mathop{\mathrm{tr}}(W_+\#W_-)$. *Consumes: $W$ Weyl only.* Step 2 at $W$ itself gives $\mathop{\mathrm{tr}}(W^2)+\mathop{\mathrm{tr}}(W^\#)=0$; expanding with step 4 and $W_+W_-=0$ gives $\mathop{\mathrm{tr}}(W_+^2)+\mathop{\mathrm{tr}}(W_-^2)+\mathop{\mathrm{tr}}(W_+^\#)+\mathop{\mathrm{tr}}(W_-^\#)=2\mathop{\mathrm{tr}}(W_+\#W_-)$, and (A) halves it.
 
-**Step 6, assemble.** Substituting (A)+(B) and step 4 into step 3, and using $\operatorname{tr}(X)-\operatorname{tr}(P_-XP_-)=\operatorname{tr}((1-P_-)X(1-P_-))$,
+**Step 6, assemble.** Substituting (A)+(B) and step 4 into step 3, and using $\mathop{\mathrm{tr}}(X)-\mathop{\mathrm{tr}}(P_-XP_-)=\mathop{\mathrm{tr}}((1-P_-)X(1-P_-))$,
 $$S=T_1+2T_2+T_3,\qquad
-T_1=\operatorname{tr}(P_-W_+^\#P_-),\quad
-T_2=\operatorname{tr}\bigl((1-P_-)(W_+\#W_-)(1-P_-)\bigr),\quad
-T_3=\operatorname{tr}(P_-W_-^\#P_-).$$
+T_1=\mathop{\mathrm{tr}}(P_-W_+^\#P_-),\quad
+T_2=\mathop{\mathrm{tr}}\bigl((1-P_-)(W_+\#W_-)(1-P_-)\bigr),\quad
+T_3=\mathop{\mathrm{tr}}(P_-W_-^\#P_-).$$
 
 **Step 7, the rank-one law.** $W_-=\sum_i\mu_iv_iv_i^{\mathsf T}$ gives $T_3=\tfrac12\sum_{i,j}\mu_i\mu_j\lVert P_{E_-}[v_i,v_j]\rVert^2$, and likewise $T_1=\tfrac12\sum_{a,b}\nu_a\nu_b\lVert P_{E_-}[u_a,u_b]\rVert^2$, $T_2=\tfrac12\sum_{a,i}\nu_a\mu_i\lVert(1-P_{E_-})[u_a,v_i]\rVert^2$. **All three are sums of nonnegative terms unconditionally.**
 
@@ -99,7 +99,7 @@ $S\ge0$, the inequality the block attributes to [Lemma L7](../results.md), falls
 
 ## Defect 3, the closed form on the record is unconditional, and it is twelve lines below the block
 
-$S=T_1+2T_2+T_3$ holds **at every critical point with no hypotheses whatever**. It is in [ATTEMPTS.md](../ATTEMPTS.md) under *The slack decomposition, the conditional identity repaired into an unconditional theorem*, it passed Gate 2 (Reviewer 12), and it was strengthened there: (A) and (B) are identities of the whole Weyl space, and the theorem is equivalent to the single identity $S-(T_1+2T_2+T_3)=-\operatorname{tr}(P_-(Q(W)-\theta W)P_-)$.
+$S=T_1+2T_2+T_3$ holds **at every critical point with no hypotheses whatever**. It is in [ATTEMPTS.md](../ATTEMPTS.md) under *The slack decomposition, the conditional identity repaired into an unconditional theorem*, it passed Gate 2 (Reviewer 12), and it was strengthened there: (A) and (B) are identities of the whole Weyl space, and the theorem is equivalent to the single identity $S-(T_1+2T_2+T_3)=-\mathop{\mathrm{tr}}(P_-(Q(W)-\theta W)P_-)$.
 
 **The block's own file records this twelve lines below it.** [Lemma L132](../findings/ungraded-slack.md), the WITHDRAWN block at line 305, says in its first paragraph that ATTEMPTS.md's decomposition *"is that replacement, and it is stronger"*, gives $S\ge\tfrac12G_1$ with equality iff F1 and F2, and names the two bracket conditions **that L12 twelve lines above declines to name**.
 
@@ -146,7 +146,7 @@ Tested against the source. [ATTEMPTS.md](../ATTEMPTS.md) reads: *"Chain steps 1�
 ## Defect 6, the quantifier on $S\ge0$
 
 The display is
-$$S(W):=\lVert\mathrm{Ric}(W_-)\rVert^2+6\delta^2-\theta\operatorname{tr}(W_-)-\operatorname{tr}(W_-^2)\;\ge\;0$$
+$$S(W):=\lVert\mathrm{Ric}(W_-)\rVert^2+6\delta^2-\theta\mathop{\mathrm{tr}}(W_-)-\mathop{\mathrm{tr}}(W_-^2)\;\ge\;0$$
 with $W$ free and no hypothesis attached to the inequality sign.
 
 **Read as printed it is false, and the record holds the witness.** $\theta$ is only defined as $P(W)/\lVert W\rVert^3$, so the expression is defined for every unit Weyl $W$; and [ATTEMPTS.md](../ATTEMPTS.md)'s (GC) section records *"Criticality is genuinely load-bearing: off the critical set the margin runs to $-0.18$ under directed minimization at $n=6$."* The preceding sentence mentions critical points, so context supplies the hypothesis to a careful reader, **but the block is the canonical statement, and the canonical statement of an inequality carries its hypothesis on the line.**
@@ -166,8 +166,8 @@ Checked against [conventions.md](../findings/conventions.md), which is explicit 
 | $\delta$ | **absent from conventions.md.** Defined in [problem.md](../findings/problem.md) as $\delta^2=\lVert\mathrm{Alt}(W_-)\rVert^2$, from Observation L15. conventions.md tables $\Delta$, a different object |
 | $E_-$ | **absent from conventions.md and from the block.** conventions.md tables $\mathfrak m$ for $E_{\min}$ at a critical point and warns that $\mathfrak m$ carries a second sense, *"[L36](../findings/isotropy-cap.md)'s whole negative eigenspace"*, which is what $E_-$ is here. Whether $\ker W$ joins $E_-$ is exactly what the block's own kernel-contamination paragraph turns on, and it is left to the reader |
 | $\mu_i$ | **a fourth sense of $\mu$, undeclared.** conventions.md already flags three, *"$\mu$ carries two meanings thirty lines apart in [bispectral.md](../findings/bispectral.md), and a third in [target.md](../findings/target.md)"*. Here it is the positive spectrum of $W_-$ |
-| $\lVert\mathrm{Ric}(W_-)\rVert$ | **the norm is never named**, and $\mathrm{Ric}$ is not in conventions.md. It is pinned only implicitly, by the scal identity of Observation L15 with $\operatorname{scal}=2\operatorname{tr}$; the record's own factor-$2$ trap between the two Frobenius pairings is live exactly here |
-| $\operatorname{tr}$ | the level ($\Lambda^2$ operator) is inferable and unstated |
+| $\lVert\mathrm{Ric}(W_-)\rVert$ | **the norm is never named**, and $\mathrm{Ric}$ is not in conventions.md. It is pinned only implicitly, by the scal identity of Observation L15 with $\mathop{\mathrm{scal}}=2\mathop{\mathrm{tr}}$; the record's own factor-$2$ trap between the two Frobenius pairings is live exactly here |
+| $\mathop{\mathrm{tr}}$ | the level ($\Lambda^2$ operator) is inferable and unstated |
 | $\#$ | normalisation fixed only by the rank-one law, which the block does not print |
 
 **One convention the block is obliged to read and does not.** conventions.md's $S(W)$ row says ***"Read [W4](../findings/INDEX-traps.md) before using it: the screen is vacuous when $\ker W\ne0$."*** W4: *"it traces only over $E_\pm$, so a point whose kernel carries most of $\mathfrak{so}(n)$ reports $S=0$ while admitting no grading; padded $W_{\mathbb{CP}^2}$ has kernel $63$ of $66$ at $n=12$."*
@@ -185,7 +185,7 @@ Heading at line 292: *"Observation L12 (the ungraded half, measured) and its sla
 | L7 splits the critical points by equality in its inequality | **definitional**, and correct |
 | "Lemma L8 settles the equality side across the classical families" | **refuted**, Defect 4 |
 | $S(W):=\dots\ge0$ | **a theorem at critical points**, proved elsewhere ([L7](../results.md)); no proof here, and no hypothesis on the line |
-| $S=\operatorname{tr}(P_{E_-}W_-^\#P_{E_-})=\tfrac12\sum\mu_i\mu_j\lVert P_{E_-}[v_i,v_j]\rVert^2$ | **a theorem on $\{$F1, F2$\}$**, and the block gives **no proof**, *"Compressing …, applying …, and expanding … reduces it"* names three ingredients and derives nothing |
+| $S=\mathop{\mathrm{tr}}(P_{E_-}W_-^\#P_{E_-})=\tfrac12\sum\mu_i\mu_j\lVert P_{E_-}[v_i,v_j]\rVert^2$ | **a theorem on $\{$F1, F2$\}$**, and the block gives **no proof**, *"Compressing …, applying …, and expanding … reduces it"* names three ingredients and derives nothing |
 | "the supporting trace lemmas are genuine theorems …" | **refuted as reasoning**, Defect 5 |
 | the gap: 239 points, ceiling $0.9067$, 380 points, the screen story | **measured throughout** |
 | the $(S^m)^3$ refutation of the companion bound | **proved**, and it is the one derivation in the block: $\mathrm{RHS}=\theta(4m-1)/(3m-1)$ with $\theta^2=(3m-1)(m-1)/(3m^2)$, closed forms, limit $4/3$ |

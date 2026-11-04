@@ -22,7 +22,7 @@ The brief instructs me to treat [conventions.md](../findings/conventions.md) as 
 
 | symbol | reading adopted | authority |
 | --- | --- | --- |
-| $\langle\cdot,\cdot\rangle$ on $\Lambda^2\cong\mathfrak{so}(n)$ | the **half-trace** pairing $\tfrac12\operatorname{tr}(X^{\mathsf T}Y)=-\tfrac12\operatorname{tr}(XY)$, under which $\{\varphi_{ab}\}_{a<b}$ is orthonormal | [conventions.md](../findings/conventions.md), "Norms and pairings", pinned by [r519](REVIEW_r519.md)/[r520](REVIEW_r520.md) |
+| $\langle\cdot,\cdot\rangle$ on $\Lambda^2\cong\mathfrak{so}(n)$ | the **half-trace** pairing $\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)=-\tfrac12\mathop{\mathrm{tr}}(XY)$, under which $\{\varphi_{ab}\}_{a<b}$ is orthonormal | [conventions.md](../findings/conventions.md), "Norms and pairings", pinned by [r519](REVIEW_r519.md)/[r520](REVIEW_r520.md) |
 | $c_{\alpha\beta\gamma}$, $T_{\alpha\beta\gamma}$ | $c_{\alpha\beta\gamma}=\langle[v_\alpha,v_\beta],v_\gamma\rangle$, totally antisymmetric; $T=c^2$, totally symmetric and hollow | [conventions.md](../findings/conventions.md), "Structure constants" |
 | $S_{XYZ}$ | **the FULLY ORDERED block mass** $\sum_{\alpha\in X}\sum_{\beta\in Y}\sum_{\gamma\in Z}T_{\alpha\beta\gamma}$, every slot ranges independently over its block. Forced by §1 | derived, not quoted; the record fixes it nowhere |
 | $\theta$ | $P(W)/\lVert W\rVert^3$ with $P(W)=\langle W,Q(W)\rangle$, **defined for every $W$**, a critical value only when $Q(W)=\theta W$ | [conventions.md](../findings/conventions.md), "The objects" |
@@ -38,7 +38,7 @@ The brief instructs me to treat [conventions.md](../findings/conventions.md) as 
 
 The cubic in an eigenframe is
 
-$$P(W)=\operatorname{tr}(W^3)+\langle W,W^\#\rangle,\qquad \langle W,W^\#\rangle=\tfrac12\sum_{\alpha,\beta,\gamma}T_{\alpha\beta\gamma}\lambda_\alpha\lambda_\beta\lambda_\gamma,$$
+$$P(W)=\mathop{\mathrm{tr}}(W^3)+\langle W,W^\#\rangle,\qquad \langle W,W^\#\rangle=\tfrac12\sum_{\alpha,\beta,\gamma}T_{\alpha\beta\gamma}\lambda_\alpha\lambda_\beta\lambda_\gamma,$$
 
 the sum running over **all** ordered triples. Three independent anchors fix that $\tfrac12$, and I checked each:
 
@@ -87,13 +87,13 @@ Let $\sigma$ be the involution, $\mathfrak k=\ker(\sigma-1)$, $\mathfrak m=\ker(
 
 Fix an orthonormal basis of $\mathfrak{so}(n)$ adapted to $\mathfrak k\oplus\mathfrak m\oplus\mathfrak g^\perp$, and let $W=a\Pi_{\mathfrak k}+b\Pi_{\mathfrak m}$.
 
-**Step 0, the operator has three eigenvalues, not two.** $W$ is $0$ on $\mathfrak g^\perp$, of dimension $\binom n2-p-q$. This costs nothing: every term of $\sum T\lambda\lambda\lambda$ touching $\mathfrak g^\perp$ carries a factor $0$, and $\operatorname{tr}(W^3)$, $\operatorname{tr}(W)$, $\lVert W\rVert^2$ are unaffected. **But the name "two-eigenvalue point" is inaccurate whenever $\mathfrak g\subsetneq\mathfrak{so}(n)$, which is the generic case**, and the record's own [trap W4](../findings/INDEX-traps.md) is about exactly what a kernel does to block bookkeeping.
+**Step 0, the operator has three eigenvalues, not two.** $W$ is $0$ on $\mathfrak g^\perp$, of dimension $\binom n2-p-q$. This costs nothing: every term of $\sum T\lambda\lambda\lambda$ touching $\mathfrak g^\perp$ carries a factor $0$, and $\mathop{\mathrm{tr}}(W^3)$, $\mathop{\mathrm{tr}}(W)$, $\lVert W\rVert^2$ are unaffected. **But the name "two-eigenvalue point" is inaccurate whenever $\mathfrak g\subsetneq\mathfrak{so}(n)$, which is the generic case**, and the record's own [trap W4](../findings/INDEX-traps.md) is about exactly what a kernel does to block bookkeeping.
 
 **Step 1, the normalisation.** Trace-freeness $ap+bq=0$ gives $b=-ap/q$; unit norm $a^2p+b^2q=1$ then gives $a^2p(p+q)/q=1$, so
 
 $$a^2=\frac{q}{p(p+q)},\qquad b=-\frac{ap}{q}.$$
 
-**Step 2, the cube trace.** $\operatorname{tr}(W^3)=a^3p+b^3q=a^3\big(p-p^3/q^2\big)=a^3\,p\,(q^2-p^2)/q^2$.
+**Step 2, the cube trace.** $\mathop{\mathrm{tr}}(W^3)=a^3p+b^3q=a^3\big(p-p^3/q^2\big)=a^3\,p\,(q^2-p^2)/q^2$.
 
 **Step 3, the bracket part.** From §1 with $S_{\mathfrak{kkm}}=S_{\mathfrak{mmm}}=0$ and $b^2=a^2p^2/q^2$,
 
@@ -103,7 +103,7 @@ $$\langle W,W^\#\rangle=\tfrac12\big[a^3S_{\mathfrak{kkk}}+3ab^2S_{\mathfrak{kmm
 
 $$\theta=P(W)=\frac{a^3}{2q^2}\Big[S_{\mathfrak{kkk}}q^2+3S_{\mathfrak{kmm}}p^2-2p^3+2pq^2\Big],$$
 
-the $-2p^3+2pq^2$ being $2q^2\operatorname{tr}(W^3)/a^3$. Squaring with $a^6=q^3/\big(p^3(p+q)^3\big)$:
+the $-2p^3+2pq^2$ being $2q^2\mathop{\mathrm{tr}}(W^3)/a^3$. Squaring with $a^6=q^3/\big(p^3(p+q)^3\big)$:
 
 $$\theta^2=\frac{q^3}{p^3(p+q)^3}\cdot\frac{1}{4q^4}\Big[\cdots\Big]^2=\frac{\big(S_{\mathfrak{kkk}}q^2+3S_{\mathfrak{kmm}}p^2-2p^3+2pq^2\big)^2}{4p^3q(p+q)^3}.\qquad\blacksquare$$
 
@@ -134,7 +134,7 @@ The generalisation claim is the one the brief flags as the place a hidden hypoth
 | $S_{\mathfrak{kkm}}=S_{\mathfrak{mmm}}=0$ | the grading only | general, §2 |
 | $S_{\mathfrak{kkk}}=(m-2)p$, $S_{\mathfrak{kmm}}=mq$ | $\mathfrak k=\mathfrak{so}(m)$ simple, and the pair's Killing constant | **left as free symbols in L39** |
 | $a^2=q/(p(m^2-1))$ | $m^2-1=\dim\mathfrak{su}(m)=p+q$ | the general $a^2=q/(p(p+q))$ |
-| $\theta=\operatorname{tr}(W^3)+\tfrac12[a^3S_{\mathfrak{kkk}}+3ab^2S_{\mathfrak{kmm}}]$ | the cubic expansion | general, §1 |
+| $\theta=\mathop{\mathrm{tr}}(W^3)+\tfrac12[a^3S_{\mathfrak{kkk}}+3ab^2S_{\mathfrak{kmm}}]$ | the cubic expansion | general, §1 |
 
 **No step uses simplicity of $\mathfrak g$, the bracket structure of $\mathfrak{su}(m)$, or anything beyond the grading and the two normalisations.** Simplicity enters only at the *next* claim, the reduction to $cp$, and there it is stated. The generalisation is sound.
 
@@ -150,13 +150,13 @@ Split $\beta$ by block. For $\beta\in\mathfrak k$: $[\mathfrak k,\mathfrak k]\su
 
 $$S_{\mathfrak{kkk}}+S_{\mathfrak{kmm}}=cp.\qquad\blacksquare$$
 
-**It is a Killing-form identity, as the brief expects**, since $\sum_{b\in\mathfrak g}\lVert[a,b]\rVert^2=-\operatorname{tr}_{\mathfrak g}(\mathrm{ad}_a^2)=-B_{\mathfrak g}(a,a)$. **And note it is stated in the fully ordered reading**: $S_{\mathfrak{kkk}}=c_{\mathfrak k}p$ for simple $\mathfrak k$ comes out of exactly the same computation with $\mathfrak g$ replaced by $\mathfrak k$, and $(m-2)p$ is what the record records.
+**It is a Killing-form identity, as the brief expects**, since $\sum_{b\in\mathfrak g}\lVert[a,b]\rVert^2=-\mathop{\mathrm{tr}}_{\mathfrak g}(\mathrm{ad}_a^2)=-B_{\mathfrak g}(a,a)$. **And note it is stated in the fully ordered reading**: $S_{\mathfrak{kkk}}=c_{\mathfrak k}p$ for simple $\mathfrak k$ comes out of exactly the same computation with $\mathfrak g$ replaced by $\mathfrak k$, and $(m-2)p$ is what the record records.
 
 ### Simplicity is sufficient, and more than the identity needs
 
-- **What is actually required is $\operatorname{tr}\big(-B_{\mathfrak g}\vert_{\mathfrak k}\big)=c\,p$**, a trace over $\mathfrak k$ only. **Simplicity of $\mathfrak g$ delivers it** because the space of $\mathrm{ad}$-invariant symmetric forms on a simple algebra is one-dimensional, so $-B_{\mathfrak g}=c\langle\cdot,\cdot\rangle$ on all of $\mathfrak g$.
+- **What is actually required is $\mathop{\mathrm{tr}}\big(-B_{\mathfrak g}\vert_{\mathfrak k}\big)=c\,p$**, a trace over $\mathfrak k$ only. **Simplicity of $\mathfrak g$ delivers it** because the space of $\mathrm{ad}$-invariant symmetric forms on a simple algebra is one-dimensional, so $-B_{\mathfrak g}=c\langle\cdot,\cdot\rangle$ on all of $\mathfrak g$.
 - **Semisimplicity alone does not**, since each simple ideal $\mathfrak g_i$ carries its own $c_i$. **But the identity has a correct replacement rather than simply failing**:
-$$S_{\mathfrak{kkk}}+S_{\mathfrak{kmm}}=\sum_i c_i\operatorname{tr}\big(\Pi_{\mathfrak g_i}\vert_{\mathfrak k}\big)=\sum_i c_i\sum_{\alpha\in\mathfrak k}\lVert\Pi_{\mathfrak g_i}v_\alpha\rVert^2 ,$$
+$$S_{\mathfrak{kkk}}+S_{\mathfrak{kmm}}=\sum_i c_i\mathop{\mathrm{tr}}\big(\Pi_{\mathfrak g_i}\vert_{\mathfrak k}\big)=\sum_i c_i\sum_{\alpha\in\mathfrak k}\lVert\Pi_{\mathfrak g_i}v_\alpha\rVert^2 ,$$
 which is a definite number at $\mathfrak{so}(3)\oplus\mathfrak{so}(5)\subset\mathfrak{so}(8)$ even though [target.md:369](../findings/target.md#L369)'s "$c\in\{2,6\}$ and the Killing relation fails outright" is correct about the *single-$c$* form. *It is the four-invariant reduction that fails there, not the identity: the count becomes $p$, $q$, $S_{\mathfrak{kkk}}$ and one $c_i$ per ideal.*
 
 > **THE PAIR THE PROGRAMME CARES ABOUT IS NOT A COUNTEREXAMPLE, AND THE BRIEF'S FRAMING OF IT IS OFF BY ONE LEVEL.** The balanced sphere product's pair is $(\mathfrak{so}(2k),\ \mathfrak{so}(k)\oplus\mathfrak{so}(k))$: **the non-simple algebra is $\mathfrak k$, and the simplicity hypothesis is on $\mathfrak g=\mathfrak{so}(2k)$, which is simple** for $2k\ge6$. So the reduction applies at the maximiser. What $\mathfrak k$'s non-simplicity costs is only the shortcut $S_{\mathfrak{kkk}}=c_{\mathfrak k}p$, replaced by $\sum_ic_i\dim\mathfrak k_i$, the correction [target.md:355](../findings/target.md#L355) and [results.md:480](../results.md#L480) both carry and **this block does not**. §7 uses it and it works.
@@ -165,7 +165,7 @@ which is a definite number at $\mathfrak{so}(3)\oplus\mathfrak{so}(5)\subset\mat
 
 ## 6. $c=2h^\vee(\mathfrak g)/I_\rho$, confirmed, and the block states it in the form its own file corrected
 
-**The two-line derivation.** With $(\cdot,\cdot)_{\rm norm}$ normalised to long roots of squared length $2$: $B_{\mathfrak g}=2h^\vee(\cdot,\cdot)_{\rm norm}$ and $\operatorname{tr}_{\mathbb R}\rho(X)\rho(Y)=2I_\rho(\cdot,\cdot)_{\rm norm}$. The record's pairing is $\langle X,Y\rangle=-\tfrac12\operatorname{tr}_{\mathbb R}\rho(X)\rho(Y)=-I_\rho(\cdot,\cdot)_{\rm norm}$. Since $c=-B_{\mathfrak g}(a,a)/\langle a,a\rangle$,
+**The two-line derivation.** With $(\cdot,\cdot)_{\rm norm}$ normalised to long roots of squared length $2$: $B_{\mathfrak g}=2h^\vee(\cdot,\cdot)_{\rm norm}$ and $\mathop{\mathrm{tr}}_{\mathbb R}\rho(X)\rho(Y)=2I_\rho(\cdot,\cdot)_{\rm norm}$. The record's pairing is $\langle X,Y\rangle=-\tfrac12\mathop{\mathrm{tr}}_{\mathbb R}\rho(X)\rho(Y)=-I_\rho(\cdot,\cdot)_{\rm norm}$. Since $c=-B_{\mathfrak g}(a,a)/\langle a,a\rangle$,
 
 $$c=\frac{-2h^\vee(a,a)_{\rm norm}}{-I_\rho(a,a)_{\rm norm}}=\frac{2h^\vee}{I_\rho}.$$
 
@@ -175,9 +175,9 @@ Signs are consistent: on a compact real form $(\cdot,\cdot)_{\rm norm}$ is negat
 
 | pair | intrinsic computation | $c$ | table $2h^\vee/I_\rho$ |
 | --- | --- | --- | --- |
-| $\mathfrak{so}(n)$, vector | $B=(n-2)\operatorname{tr}(XY)$, $\operatorname{tr}(a^2)=-2$ at $\lVert a\rVert=1$ | $2(n-2)$ | $2(n-2)/1$ ✓ |
-| $\mathfrak{su}(m)$ on $\mathbb R^{2m}$ | $B=2m\operatorname{tr}_{\mathbb C}(XY)$, $\langle X,X\rangle=-\operatorname{tr}_{\mathbb C}(X^2)$ | $2m$ | $2m/1$ ✓ |
-| $\mathfrak{so}(m)\subset\mathfrak{su}(m)$ on $\mathbb R^m\oplus\mathbb R^m$ | $\langle X,X\rangle=-\operatorname{tr}_{\mathbb R^m}(X^2)$, $B=(m-2)\operatorname{tr}_{\mathbb R^m}(X^2)$ | $m-2$ | $2(m-2)/2$ ✓ |
+| $\mathfrak{so}(n)$, vector | $B=(n-2)\mathop{\mathrm{tr}}(XY)$, $\mathop{\mathrm{tr}}(a^2)=-2$ at $\lVert a\rVert=1$ | $2(n-2)$ | $2(n-2)/1$ ✓ |
+| $\mathfrak{su}(m)$ on $\mathbb R^{2m}$ | $B=2m\mathop{\mathrm{tr}}_{\mathbb C}(XY)$, $\langle X,X\rangle=-\mathop{\mathrm{tr}}_{\mathbb C}(X^2)$ | $2m$ | $2m/1$ ✓ |
+| $\mathfrak{so}(m)\subset\mathfrak{su}(m)$ on $\mathbb R^m\oplus\mathbb R^m$ | $\langle X,X\rangle=-\mathop{\mathrm{tr}}_{\mathbb R^m}(X^2)$, $B=(m-2)\mathop{\mathrm{tr}}_{\mathbb R^m}(X^2)$ | $m-2$ | $2(m-2)/2$ ✓ |
 | $\mathfrak{so}(3)$ on $\mathrm{Sym}^2_0(\mathbb R^3)$ | $L_z$ has weights $im$, $\lvert m\rvert\le2$: $\langle X,X\rangle=5$, $B(X,X)=-2$ | $\mathbf{2/5}$ | matches the record's sharpest check ✓ |
 
 **So the constant is right and the match to the half-trace pairing is exact**, the pairing enters only through $\langle X,Y\rangle=-I_\rho(\cdot,\cdot)_{\rm norm}$, and that is where the $\tfrac12$ of the half-trace is spent.
@@ -228,7 +228,7 @@ $\Theta_n=\theta_0(n)$ **at even $n$ only**, and the odd-$n$ value is $\sqrt{2(n
 The brief asks. $\sum_\beta\lVert[v_\alpha,v_\beta]\rVert^2=2(n-2)$ is:
 
 - **stated as a standing fact, unnumbered**, in [conventions.md](../findings/conventions.md), bullet "The pair cap and the Killing marginal";
-- **proved in one line** inside [fence post F18](../findings/bounds-relaxations.md#L114), *"the Killing form $\operatorname{tr}(\mathrm{ad}X\,\mathrm{ad}Y)=(n-2)\operatorname{tr}(XY)$ makes every row marginal $\rho_\alpha=2(n-2)$, which needs only $\lVert v_\alpha\rVert=1$ and holds off $\mathrm{Weyl}_n$ too"*, so [target.md:626](../findings/target.md#L626)'s citation of it to F18 is fair;
+- **proved in one line** inside [fence post F18](../findings/bounds-relaxations.md#L114), *"the Killing form $\mathop{\mathrm{tr}}(\mathrm{ad}X\,\mathrm{ad}Y)=(n-2)\mathop{\mathrm{tr}}(XY)$ makes every row marginal $\rho_\alpha=2(n-2)$, which needs only $\lVert v_\alpha\rVert=1$ and holds off $\mathrm{Weyl}_n$ too"*, so [target.md:626](../findings/target.md#L626)'s citation of it to F18 is fair;
 - **consumed unnumbered** in [Lemma L114](../findings/bounds-relaxations.md#L126) and across [fence-posts.md](../findings/fence-posts.md).
 
 **Its companion, the pair cap $\sum_\gamma T_{\alpha\beta\gamma}\le2$, IS numbered, [Lemma L31](../findings/stratum-two-negative.md).** The marginal, which is the stronger and more used of the two, is not. *Owed: a number, or an explicit note in [INDEX-results.md](../findings/INDEX-results.md) that it is a definitional consequence and deliberately unnumbered.*

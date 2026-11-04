@@ -24,7 +24,7 @@ An orthogonal matrix **splits** when, up to permutations of rows and columns, it
 
 ## The block under review, quoted verbatim from disk
 
-> **Statement.** *Let $Q\in O(k)$ have $Q_{ii}=0$ for every $i$. Then $Q$ is a singular point of $\varphi_r$, at every $k$. At $k=3$ no such $Q$ has all its off-diagonal entries nonzero. At $k=4$ one does, it does not split, and $\operatorname{rank}d\varphi_r=5$ there against $\dim O(4)=6$.* **So "singular implies splits" is a theorem at $k=3$ and FALSE at $k=4$.**
+> **Statement.** *Let $Q\in O(k)$ have $Q_{ii}=0$ for every $i$. Then $Q$ is a singular point of $\varphi_r$, at every $k$. At $k=3$ no such $Q$ has all its off-diagonal entries nonzero. At $k=4$ one does, it does not split, and $\mathop{\mathrm{rank}}d\varphi_r=5$ there against $\dim O(4)=6$.* **So "singular implies splits" is a theorem at $k=3$ and FALSE at $k=4$.**
 >
 > 1. **The mechanism.** The tangent space to $O(k)$ at $Q$ is $\{Q\Omega:\Omega^{\mathsf T}=-\Omega\}$, and $\varphi_r$ has differential $Z\mapsto2\,Q\circ Z$ at $Q$, so a tangent vector maps to $2\,Q\circ(Q\Omega)$. Its $i$-th diagonal entry is $2Q_{ii}(Q\Omega)_{ii}$, which vanishes for every $\Omega$ once $Q_{ii}=0$. The image of $d\varphi_r$ therefore lies in the zero-diagonal subspace, on top of the zero row sums and zero column sums that every tangent to the bistochastic matrices already satisfies. That is $k$ further linear conditions on a space of dimension $(k-1)^2$, so the image has dimension at most $(k-1)^2-k$, and $d\varphi_r$ fails to be injective as soon as $(k-1)^2-k<\tbinom k2$, which holds at every $k\ge3$.
 >
@@ -32,7 +32,7 @@ An orthogonal matrix **splits** when, up to permutations of rows and columns, it
 >
 > 3. **The witness at $k=4$.** Take $Q=3^{-1/2}M$ with $M$ the matrix of rows $(0,1,1,1)$, $(1,0,-1,1)$, $(1,1,0,-1)$ and $(1,-1,1,0)$. Then $MM^{\mathsf T}=3I$, so $Q\in O(4)$, its diagonal is zero, and every other entry is $\pm3^{-1/2}$. Its image is $Q^{\circ2}=\tfrac13(J-I)$, which is bistochastic and has no zero off the diagonal, so its support graph is connected and it does not split.
 >
-> **The kernel is explicit.** $M\odot(M\Omega)=0$ needs $(M\Omega)_{ij}=0$ at every $i\ne j$, because every off-diagonal entry of $M$ is nonzero, so $M\Omega$ must be DIAGONAL. With $MM^{\mathsf T}=3I$ that forces $\Omega=\tfrac13M^{\mathsf T}D$ for diagonal $D$, and skewness pins $D=3\operatorname{diag}(1,-1,-1,-1)$, leaving $\Omega=\operatorname{diag}(-1,1,1,1)M$ and $M\Omega=\operatorname{diag}(3,-3,-3,-3)$.
+> **The kernel is explicit.** $M\odot(M\Omega)=0$ needs $(M\Omega)_{ij}=0$ at every $i\ne j$, because every off-diagonal entry of $M$ is nonzero, so $M\Omega$ must be DIAGONAL. With $MM^{\mathsf T}=3I$ that forces $\Omega=\tfrac13M^{\mathsf T}D$ for diagonal $D$, and skewness pins $D=3\mathop{\mathrm{diag}}(1,-1,-1,-1)$, leaving $\Omega=\mathop{\mathrm{diag}}(-1,1,1,1)M$ and $M\Omega=\mathop{\mathrm{diag}}(3,-3,-3,-3)$.
 >
 > **What it does to R28.** The rung's step reads *exclude the interior tangency, therefore the maximum is on the boundary, therefore it is on the split locus, which is the previous rung*. **The last arrow is a theorem at $\lvert J\rvert=3$ and fails at $\lvert J\rvert=4$**, so from there the step acquires a second stratum rather than an unproved lemma.
 
@@ -45,7 +45,7 @@ An orthogonal matrix **splits** when, up to permutations of rows and columns, it
 | 3 | Hence the image has dimension at most $(k-1)^2-k$, so $d\varphi_r$ is non-injective at every $k\ge3$ | mathematics |
 | 4 | At $k=3$ a zero-diagonal orthogonal matrix cannot have all off-diagonal entries nonzero | mathematics |
 | 5 | The stated $4\times4$ $M$ satisfies $MM^{\mathsf T}=3I$, has zero diagonal, and every other entry nonzero | mathematics |
-| 6 | $\Omega=\operatorname{diag}(-1,1,1,1)M$ is skew, nonzero, and satisfies $M\odot(M\Omega)=0$, so the witness is singular | mathematics |
+| 6 | $\Omega=\mathop{\mathrm{diag}}(-1,1,1,1)M$ is skew, nonzero, and satisfies $M\odot(M\Omega)=0$, so the witness is singular | mathematics |
 | 7 | The witness does not split | mathematics |
 | 8 | Hence "singular implies splits" is false at $k=4$, and R28's boundary-to-split-locus step fails from $\lvert J\rvert=4$ | about a route |
 

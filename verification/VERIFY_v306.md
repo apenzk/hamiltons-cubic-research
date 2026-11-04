@@ -21,7 +21,7 @@ The brief was cold. No numerical work was done, every value below is exact, and 
 
 ## 0. Conventions, fixed once
 
-- $\mathcal W_5$: algebraic Weyl tensors on $\mathbb R^5$. $W_0$: the padded Weyl tensor of $\mathbb{CP}^2$, $W_0\neq0$. $F_5=\tfrac32\lVert W\rVert^6-9\operatorname{tr}(W^3)^2$, an $O(5)$-invariant sextic.
+- $\mathcal W_5$: algebraic Weyl tensors on $\mathbb R^5$. $W_0$: the padded Weyl tensor of $\mathbb{CP}^2$, $W_0\neq0$. $F_5=\tfrac32\lVert W\rVert^6-9\mathop{\mathrm{tr}}(W^3)^2$, an $O(5)$-invariant sextic.
 - $S_6:=(\mathrm{Sym}^6\mathcal W_5^*)^{O(5)}$, of dimension $14$ (Observation L85, carried by the given L89).
 - $K\subseteq\mathrm{Sym}^3\mathcal W_5^*$: the cubics cut out by $Ta=0$ on the copy index of each isotypic block, each $V_\lambda$ kept whole (line 176).
 - $\mu_{\mathrm{full}}$: multiplication $\mathrm{Sym}^2(\mathrm{Sym}^3\mathcal W_5^*)^{O(5)}\to S_6$, rank $14$ by L89. $\mu_K$: its restriction to $D:=\mathrm{Sym}^2(K)^{O(5)}$ (the invariant Grams over $K$). Where Passage A writes $\mu$ with rank $13$, it is read as $\mu_K$ (Section 2, withdrawn candidate W1).
@@ -116,7 +116,7 @@ Both values are measurements by the passage's own word. The only analytic conten
 
 **Derivation.** $\mathcal A(W_0^6)$ annihilates $\mathrm{im}\,\mu_K$ because it pairs with an invariant sextic as a nonzero multiple of evaluation at $W_0$, and every image element vanishes there (C5). It is nonzero on $S_6$ (pair with $\lVert W\rVert^6$). If $\mathrm{rank}\,\mu_K=13$ then $\dim\mathrm{ANN}=14-13=1$ and $\mathrm{ANN}=\mathbb R\,\mathcal A(W_0^6)$. In finite dimension $\mathrm{im}\,\mu_K=\mathrm{ANN}^\perp$ within $S_6$. $F_5\in S_6$, and $F_5\in\mathrm{ANN}^\perp$ iff $F_5(W_0)=0$. So "rank $13$ and $F_5(W_0)=0$ imply $F_5\in\mathrm{im}\,\mu_K$" is correct algebra.
 
-The premises are open on the passages. $\mathrm{rank}\,\mu_K=13$ is C2's measurement. $F_5(W_0)=0$ is asserted "exact over $\mathbb Z$ in both normalisations" with no derivation, and neither normalisation of $\lVert W\rVert$ or $\operatorname{tr}(W^3)$ is defined in the brief, so the value cannot be checked from what is quoted. **HYPOTHESIS-DEBT**: what would have to be proved is $\mathrm{rank}\,\mu_K=13$ (as in C2) and the closed-form evaluation $\tfrac32\lVert W_0\rVert^6=9\operatorname{tr}(W_0^3)^2$ in a fixed stated normalisation.
+The premises are open on the passages. $\mathrm{rank}\,\mu_K=13$ is C2's measurement. $F_5(W_0)=0$ is asserted "exact over $\mathbb Z$ in both normalisations" with no derivation, and neither normalisation of $\lVert W\rVert$ or $\mathop{\mathrm{tr}}(W^3)$ is defined in the brief, so the value cannot be checked from what is quoted. **HYPOTHESIS-DEBT**: what would have to be proved is $\mathrm{rank}\,\mu_K=13$ (as in C2) and the closed-form evaluation $\tfrac32\lVert W_0\rVert^6=9\mathop{\mathrm{tr}}(W_0^3)^2$ in a fixed stated normalisation.
 
 **Direction check.** $F_5(W_0)=0$ is necessary for $F_5\in\mathrm{im}\,\mu_K$ unconditionally (C5). That necessary condition is the "theorem" of line 167's heading, and it is confirmed. Sufficiency needs rank $13$.
 

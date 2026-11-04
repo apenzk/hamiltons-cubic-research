@@ -17,8 +17,8 @@
 
 - **[L201](../findings/diagonal-half.md)**: an orthonormal basis of $\mathfrak{so}(n)$ by rank-two elements whose pairwise brackets are each zero or of unit norm is the standard basis of some frame, up to signs. Gate 2 passed. *Its scope limit, learned expensively: it constrains a BASIS, not an eigenspace.*
 - **The $\kappa=1$ theorem**: at $a=n/2$ the planes are mutually orthogonal, so $W$ is coordinate-diagonal, and the unique object up to $O(n)$ is the perfect-matching tensor, a product of two-spheres.
-- **[L204](../findings/bounds.md)**: $\lVert\mathrm{Alt}(A)\rVert\le\sqrt{(m-1)/(3m)}\operatorname{tr}A$ for positive $A$, sharp and attained, with $m$ entering as the rank of $\omega^2$.
-- **The bridge** $\lVert[\omega_\alpha,\omega_\beta]\rVert^2=\operatorname{tr}(\Pi_\alpha\Pi_\beta)$, which makes the plane geometry and the record's $T$-calculus one object on the decomposable locus.
+- **[L204](../findings/bounds.md)**: $\lVert\mathrm{Alt}(A)\rVert\le\sqrt{(m-1)/(3m)}\mathop{\mathrm{tr}}A$ for positive $A$, sharp and attained, with $m$ entering as the rank of $\omega^2$.
+- **The bridge** $\lVert[\omega_\alpha,\omega_\beta]\rVert^2=\mathop{\mathrm{tr}}(\Pi_\alpha\Pi_\beta)$, which makes the plane geometry and the record's $T$-calculus one object on the decomposable locus.
 - **The Vandermonde relations**: the $\Lambda^4$ obstructions lie in the kernel of a $2\times s$ Vandermonde, so they vanish at two distinct eigenvalues and reduce to $s-2$ conditions in general.
 
 ## The fence posts that bear on any new route

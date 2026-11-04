@@ -27,7 +27,7 @@ $W_{\mathbb{CP}^2}$ has spectrum $(2,-1,-1)/\sqrt6$ and lies in that stratum.
 eigenvalues, $\lambda_1>0>-a\ge-b$. Then $\theta(W)\le\sqrt{3/2}$, attained at the spectrum
 $(2,-1,-1)/\sqrt6$. The bound carries no dimension restriction. The converse, that equality forces
 that spectrum, **is closed in three lines by [Lemma L31](../findings/stratum-two-negative.md#lemma-l31-the-bracket-cap-characterised-canonical-statement-and-proof), at every $n$ and with no numerics**: equality forces
-$T_{1,N-1,N}=2$, hence $\lVert[v_{N-1},v_N]\rVert^2=2$, hence $\operatorname{im}v_2=\operatorname{im}v_3$ of dimension $4$, hence $r=4$ through Ricci-flatness.
+$T_{1,N-1,N}=2$, hence $\lVert[v_{N-1},v_N]\rVert^2=2$, hence $\mathop{\mathrm{im}}v_2=\mathop{\mathrm{im}}v_3$ of dimension $4$, hence $r=4$ through Ricci-flatness.
 [Lemma L33](../findings/stratum-two-negative.md#lemma-l33-one-eigenvalue-of-one-sign-forces-the-tensor-to-vanish-canonical-statement-and-proof) closes it by a second route.
 > **THE CREDIT ONCE GIVEN HERE TO [LEMMA L72](../findings/stratum-two-negative.md#lemma-l72-the-rank-3-stratum-is-overdetermined-and-its-converse-clause-closes-in-three-lines) IS WITHDRAWN, AND THE CONTAINMENT RUNS THE OTHER WAY.** L72 quantifies over **critical** points; this clause quantifies over **equality** points, and by this lemma together with L72 the critical points are a *subset* of the equality points, so L72 is the weaker statement and cannot close it. *What the numerics at $r=6,8,10$ hedged was the realisability of a full-support rank-$3$ element, which the criticality rows do not touch.* *Gate 2, [r541](../reviews/REVIEW_r541.md) and [r542](../reviews/REVIEW_r542.md) on identical briefs, agreeing.*
 **Proof.** In an eigenbasis, $\langle W,W^\#\rangle=\tfrac12\sum T_{\alpha\beta\gamma}\lambda_\alpha
@@ -37,7 +37,7 @@ two or three distinct positive indices while only one exists and $T$ vanishes on
 $(---)$ needs three indices in a $2$-dimensional space, where a form antisymmetric in three indices is
 identically zero. Only $(+--)$ survives, equal to $3\,T_{1,N-1,N}\lambda_1ab$, and the pair cap
 $\sum_\gamma T_{\alpha\beta\gamma}=\|[v_\alpha,v_\beta]\|^2\le2$ bounds it, giving
-$\langle W,W^\#\rangle\le6\lambda_1ab$ against the exact $\operatorname{tr}W^3=\lambda_1^3-(a^3+b^3)$.
+$\langle W,W^\#\rangle\le6\lambda_1ab$ against the exact $\mathop{\mathrm{tr}}W^3=\lambda_1^3-(a^3+b^3)$.
 Trace-freeness gives $\lambda_1=a+b$ and unit norm $(a+b)^2+a^2+b^2=1$; both are scale-free in $t=b/a$,
 and substituting collapses the estimate to
 $$\theta\le f(t)=\frac{9\sqrt2\,t(t+1)}{4\,(t^2+t+1)^{3/2}},$$

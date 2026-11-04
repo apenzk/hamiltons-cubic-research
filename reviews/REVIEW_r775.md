@@ -27,11 +27,11 @@
 These are the brief's, restated so that nothing below is ambiguous. I add no convention of my own.
 
 - $\{f_a\wedge f_b\}_{a<b}$ is orthonormal in $\Lambda^2\mathbb R^n$, and I write $e_{ab}:=f_a\wedge f_b$.
-- A $2$-form read as a skew matrix: $e_{ab}\mapsto E_{ab}-E_{ba}$. This is the identification consistent with the brief's two normalisations at once: for $\omega=\sum_{a<b}\omega_{ab}e_{ab}$ one has $\operatorname{tr}(\omega^2)=-2\sum_{a<b}\omega_{ab}^2$, so $-\tfrac12\operatorname{tr}(\omega^2)=\sum_{a<b}\omega_{ab}^2=\lVert\omega\rVert^2$. There is therefore no free factor to hide in.
+- A $2$-form read as a skew matrix: $e_{ab}\mapsto E_{ab}-E_{ba}$. This is the identification consistent with the brief's two normalisations at once: for $\omega=\sum_{a<b}\omega_{ab}e_{ab}$ one has $\mathop{\mathrm{tr}}(\omega^2)=-2\sum_{a<b}\omega_{ab}^2$, so $-\tfrac12\mathop{\mathrm{tr}}(\omega^2)=\sum_{a<b}\omega_{ab}^2=\lVert\omega\rVert^2$. There is therefore no free factor to hide in.
 - $\omega^{\mathsf T}=-\omega$ for every $2$-form, hence $\omega\omega^{\mathsf T}=-\omega^2$.
-- $\Lambda=\operatorname{diag}(\lambda_1,\dots,\lambda_r)$, all $\lambda_i\ne0$; $M\in\mathbb R^{r\times m}$ with $\omega_i=\sum_jM_{ij}\varepsilon_j$.
+- $\Lambda=\mathop{\mathrm{diag}}(\lambda_1,\dots,\lambda_r)$, all $\lambda_i\ne0$; $M\in\mathbb R^{r\times m}$ with $\omega_i=\sum_jM_{ij}\varepsilon_j$.
 - After an orthogonal change of basis I may and do assume $P_j=\langle f_{2j-1},f_{2j}\rangle$ and $\varepsilon_j=e_{2j-1,2j}$; $P_0=\langle f_{2m+1},\dots,f_n\rangle$, of dimension $n-2m\ge0$.
-- $V:=\operatorname{span}_{\mathbb R}\{\varepsilon_1,\dots,\varepsilon_m\}\subseteq\Lambda^2\mathbb R^n$, a subspace of dimension exactly $m$.
+- $V:=\mathop{\mathrm{span}}_{\mathbb R}\{\varepsilon_1,\dots,\varepsilon_m\}\subseteq\Lambda^2\mathbb R^n$, a subspace of dimension exactly $m$.
 
 ## Hypothesis inventory
 
@@ -80,7 +80,7 @@ Setting this to $\delta_{ii'}$ gives $MM^{\mathsf T}=I_r$. The middle equality i
 
 **Is $M$ real?** Yes, twice over: the hypothesis says *real* combination, and independently, a real self-adjoint operator on the real inner-product space $\Lambda^2\mathbb R^n$ has a real orthonormal eigenbasis, so the $\omega_i$ may be taken real to begin with.
 
-**Is $r\le m$ forced?** Yes, and by the equation itself rather than by fiat: $\operatorname{rank}(M)\le\min(r,m)$, while $MM^{\mathsf T}=I_r$ has rank $r$ and $\operatorname{rank}(MM^{\mathsf T})\le\operatorname{rank}(M)$. Hence $r\le\operatorname{rank}(M)\le m$. Equivalently: the $\omega_i$ are $r$ orthonormal vectors inside the $m$-dimensional space $V$. **This bound is the one the proof never uses and the non-vacuity block should have used**, see §9.
+**Is $r\le m$ forced?** Yes, and by the equation itself rather than by fiat: $\mathop{\mathrm{rank}}(M)\le\min(r,m)$, while $MM^{\mathsf T}=I_r$ has rank $r$ and $\mathop{\mathrm{rank}}(MM^{\mathsf T})\le\mathop{\mathrm{rank}}(M)$. Hence $r\le\mathop{\mathrm{rank}}(M)\le m$. Equivalently: the $\omega_i$ are $r$ orthonormal vectors inside the $m$-dimensional space $V$. **This bound is the one the proof never uses and the non-vacuity block should have used**, see §9.
 
 ## 3. The Ricci half
 
@@ -157,9 +157,9 @@ This is the item where I expected to find the defect, and I did not.
 
 If these differed, the hypothesis would be ill posed under (weak) and the proof would be applying it to a basis it has not been given.
 
-**They do not differ.** (strong) $\Rightarrow$ (weak) is immediate. For (weak) $\Rightarrow$ (strong): suppose $\{\omega_i\}_{i\in I_\lambda}$ is a basis of $E_\lambda$ with every $\omega_i\in V$. Then $E_\lambda=\operatorname{span}\{\omega_i\}_{i\in I_\lambda}\subseteq V$, because **$V$ is a linear subspace and therefore closed under the real linear combinations that produce every other vector of $E_\lambda$**. So every vector of $E_\lambda$ is in $V$, which is (strong).
+**They do not differ.** (strong) $\Rightarrow$ (weak) is immediate. For (weak) $\Rightarrow$ (strong): suppose $\{\omega_i\}_{i\in I_\lambda}$ is a basis of $E_\lambda$ with every $\omega_i\in V$. Then $E_\lambda=\mathop{\mathrm{span}}\{\omega_i\}_{i\in I_\lambda}\subseteq V$, because **$V$ is a linear subspace and therefore closed under the real linear combinations that produce every other vector of $E_\lambda$**. So every vector of $E_\lambda$ is in $V$, which is (strong).
 
-**Hence the hypothesis has a basis-free form:** $W$ is simultaneously block-diagonal for the splitting **iff** $\operatorname{im}(W)\subseteq V$, equivalently $\bigoplus_{\lambda\ne0}E_\lambda\subseteq V$. This depends on $W$ and the splitting alone and on no choice of basis.
+**Hence the hypothesis has a basis-free form:** $W$ is simultaneously block-diagonal for the splitting **iff** $\mathop{\mathrm{im}}(W)\subseteq V$, equivalently $\bigoplus_{\lambda\ne0}E_\lambda\subseteq V$. This depends on $W$ and the splitting alone and on no choice of basis.
 
 **Does the proof need it not to depend on the choice?** Yes, and it gets it. The proof (i) invokes the spectral theorem to fix *some* orthonormal eigenbasis $\{\omega_i\}$ of the nonzero part, then (ii) asserts each $\omega_i\in V$. Step (ii) is licensed immediately by (strong), which is the literal reading of the statement, and by the equivalence above it is licensed by (weak) too. **Under either reading the proof is entitled to what it uses, and the choice of basis inside a degenerate eigenspace is free.**
 
@@ -233,7 +233,7 @@ for the splitting $\mathbb R^4=\langle f_1,f_3\rangle\oplus\langle f_2,f_4\rangl
 
 **The general fact behind the refutation.** Every $2$-form on $\mathbb R^n$ is a real combination of the unit area forms of some orthogonal splitting into planes, that is the real skew normal form of a skew matrix under an orthogonal change of basis. **So "$\omega$ is not block-diagonal for any splitting" is false for every $2$-form $\omega$ whatever, and the block's reason cannot be right for any choice of forms.** The obstruction is never about one form; it is about several forms *simultaneously*, which is precisely what the word "simultaneously" in the statement of the theorem is doing and what the check overlooked.
 
-**The conclusion is nonetheless true**, by the proof's own bound and not by the block's reason: $W_{\mathbb{CP}^2}$ has $W^+$ of rank $3$ (eigenvalues in the ratio $2:-1:-1$) and $W^-=0$, so $r=3$; while $n=4$ forces $m\le2$ and $\dim V=m\le2$. Then $\operatorname{im}(W)=\Lambda^+$ has dimension $3>2\ge\dim V$, so $\operatorname{im}(W)\not\subseteq V$ for **every** splitting, the quantification over all splittings is discharged by a dimension count, uniformly. Equivalently: $r\le m$ from §2 fails.
+**The conclusion is nonetheless true**, by the proof's own bound and not by the block's reason: $W_{\mathbb{CP}^2}$ has $W^+$ of rank $3$ (eigenvalues in the ratio $2:-1:-1$) and $W^-=0$, so $r=3$; while $n=4$ forces $m\le2$ and $\dim V=m\le2$. Then $\mathop{\mathrm{im}}(W)=\Lambda^+$ has dimension $3>2\ge\dim V$, so $\mathop{\mathrm{im}}(W)\not\subseteq V$ for **every** splitting, the quantification over all splittings is discharged by a dimension count, uniformly. Equivalently: $r\le m$ from §2 fails.
 
 **Verdict on 9b: CONCLUSION TRUE, STATED REASON REFUTED.** As a claim quantified over all splittings, the block gives no argument, so on the brief's own rule the block's version is **`HYPOTHESIS-DEBT`**; I note that the debt is dischargeable from a step already inside the proof ($r\le m$, §2), which the block does not invoke.
 
@@ -264,11 +264,11 @@ The block's "at every $n$, every rank and every number of blocks" **is entailed*
 
 ## What would break it, and what I did to look for it
 
-**The falsifier.** A nonzero $W\in\mathcal W_n$ together with an orthogonal splitting $\mathbb R^n=P_1\oplus\dots\oplus P_m\oplus P_0$ into planes such that $\operatorname{im}(W)\subseteq\operatorname{span}\{\varepsilon_1,\dots,\varepsilon_m\}$. Equivalently, in coordinates: real $\Lambda=\operatorname{diag}(\lambda_1,\dots,\lambda_r)$ with all $\lambda_i\ne0$ and real $M\in\mathbb R^{r\times m}$ with $MM^{\mathsf T}=I_r$ and $M^{\mathsf T}\Lambda M=0$.
+**The falsifier.** A nonzero $W\in\mathcal W_n$ together with an orthogonal splitting $\mathbb R^n=P_1\oplus\dots\oplus P_m\oplus P_0$ into planes such that $\mathop{\mathrm{im}}(W)\subseteq\mathop{\mathrm{span}}\{\varepsilon_1,\dots,\varepsilon_m\}$. Equivalently, in coordinates: real $\Lambda=\mathop{\mathrm{diag}}(\lambda_1,\dots,\lambda_r)$ with all $\lambda_i\ne0$ and real $M\in\mathbb R^{r\times m}$ with $MM^{\mathsf T}=I_r$ and $M^{\mathsf T}\Lambda M=0$.
 
 **What I did to look for it.** No search, no sweep, no numerical work of any kind, the brief's analysis-only footing forbids it and I did not need it. I did three things by hand:
 
-1. **Checked the two-equation system for slack.** The $m$ diagonal equations alone leave room: §1.1 exhibits $\Lambda=\operatorname{diag}(1,-1)$, $M=\tfrac1{\sqrt2}\left(\begin{smallmatrix}1&1\\-1&1\end{smallmatrix}\right)$ with $MM^{\mathsf T}=I_2$ and $\operatorname{diag}(M^{\mathsf T}\Lambda M)=0$. **This is a Ricci-flat, non-Bianchi falsifier of the Ricci half in isolation**, which is the closest object to a falsifier that exists, and it dies on the off-diagonal.
+1. **Checked the two-equation system for slack.** The $m$ diagonal equations alone leave room: §1.1 exhibits $\Lambda=\mathop{\mathrm{diag}}(1,-1)$, $M=\tfrac1{\sqrt2}\left(\begin{smallmatrix}1&1\\-1&1\end{smallmatrix}\right)$ with $MM^{\mathsf T}=I_2$ and $\mathop{\mathrm{diag}}(M^{\mathsf T}\Lambda M)=0$. **This is a Ricci-flat, non-Bianchi falsifier of the Ricci half in isolation**, which is the closest object to a falsifier that exists, and it dies on the off-diagonal.
 2. **Checked whether the non-square shape leaves a gap.** It does not: §5. The one substitution that would open a gap, $M^{\mathsf T}M=I_m$, is never used.
 3. **Checked whether the degenerate-eigenvalue freedom leaves a gap.** It does not: §6, and the rotation-invariance argument there shows both of the proof's equations are unchanged by any regauging inside a degenerate eigenspace.
 
@@ -278,7 +278,7 @@ The block's "at every $n$, every rank and every number of blocks" **is entailed*
 
 **SOUND, ANNEX REFUTED.**
 
-- **The theorem and its proof: SOUND.** Every one of the eleven items the brief raised holds up. The non-square final step is legitimate and uses the correct one of the two Gram identities. The block-diagonality hypothesis is well posed under repeated eigenvalues and is in fact basis-free, equivalent to $\operatorname{im}(W)\subseteq V$. $P_0$, odd $n$ and a large kernel are all inert. No constant of the conjecture appears, and none is needed.
+- **The theorem and its proof: SOUND.** Every one of the eleven items the brief raised holds up. The non-square final step is legitimate and uses the correct one of the two Gram identities. The block-diagonality hypothesis is well posed under repeated eigenvalues and is in fact basis-free, equivalent to $\mathop{\mathrm{im}}(W)\subseteq V$. $P_0$, odd $n$ and a large kernel are all inert. No constant of the conjecture appears, and none is needed.
 - **Owed, and cheap: three sentences.** Why the $\varepsilon_j$ are orthonormal; that Given A's $\omega_i^2$ is $-\omega_i\omega_i^{\mathsf T}$; and that the hypothesis does not depend on the eigenbasis chosen inside a degenerate eigenspace.
 - **The non-vacuity block: must be struck and rewritten.** Check 2's stated reason is **refuted in closed form**, $\tfrac1{\sqrt2}(e_{13}-e_{24})=\tfrac1{\sqrt2}(g_1\wedge g_2-g_3\wedge g_4)$ is block-diagonal for $\langle f_1,f_3\rangle\oplus\langle f_2,f_4\rangle$, and indeed *every* $2$-form is block-diagonal for some splitting, and it also miscounts the self-dual forms. Check 1 is a **non-sequitur**, arguing from eigenforms of eigenvalue $0$ that the hypothesis does not constrain, and it carries a **`HYPOTHESIS-DEBT`**: the existence of a nonzero coordinate-diagonal algebraic Weyl tensor has no argument on file, and per the brief I have not supplied one.
 - **Both conclusions survive** on $r\le m$, which is already inside the proof at §2 and which the block does not invoke.

@@ -3,11 +3,11 @@
 | Claim | Verdict | Reason |
 |---|---|---|
 | `xk` is $x\wedge e_k$ | CONFIRMED | $\sum_a x_a\varphi_{ak}=e_kx^{\mathsf T}-xe_k^{\mathsf T}$, the record's $x\wedge e_k$ up to a sign that every use squares or pairs twice |
-| `isoW P x` is $\langle A_cx,x\rangle$ at $P=\sum_{\psi\in E_c}\psi\psi^{\mathsf T}$ | CONFIRMED | $\langle\psi,x\wedge e_k\rangle=\pm(\psi x)_k$ under inner2 $=\tfrac12\operatorname{tr}$, so $\sum_k\langle\psi,x\wedge e_k\rangle^2=\lvert\psi x\rvert^2=\langle\psi\psi^{\mathsf T}x,x\rangle$ (hand derivation, plus a screen) |
+| `isoW P x` is $\langle A_cx,x\rangle$ at $P=\sum_{\psi\in E_c}\psi\psi^{\mathsf T}$ | CONFIRMED | $\langle\psi,x\wedge e_k\rangle=\pm(\psi x)_k$ under inner2 $=\tfrac12\mathop{\mathrm{tr}}$, so $\sum_k\langle\psi,x\wedge e_k\rangle^2=\lvert\psi x\rvert^2=\langle\psi\psi^{\mathsf T}x,x\rangle$ (hand derivation, plus a screen) |
 | `isoW_expand` | CONFIRMED | bilinear expansion over the $\varphi$ basis, checked at source |
 | `isoW_add`, `isoW_smul`, `isoW_sum` | CONFIRMED | linearity of the pairing in its first slot, induction for the sum |
 | `isoW_nonneg` | CONFIRMED | each summand is `IsPSD2` evaluated at `xk x k` |
-| `isoW_weyl` | CONFIRMED | after expansion the inner sum is `hW.ric a b`, which is the record's $\operatorname{Ric}_{ab}=\sum_c\langle W\varphi_{ac},\varphi_{bc}\rangle=0$ |
+| `isoW_weyl` | CONFIRMED | after expansion the inner sum is `hW.ric a b`, which is the record's $\mathop{\mathrm{Ric}}_{ab}=\sum_c\langle W\varphi_{ac},\varphi_{bc}\rangle=0$ |
 | `isoW_id` | CONFIRMED | Gram matrix $\langle\varphi_{ak},\varphi_{bk}\rangle=\delta_{ab}-\delta_{ak}\delta_{bk}$ gives $n\lvert x\rvert^2-\lvert x\rvert^2$, the record's $(n-1)$ |
 | `L245_op` | CONFIRMED | the record's three facts, under hypotheses satisfied by the spectral projectors and strictly weaker than them |
 | `L245_ceilings` | CONFIRMED | the record's $h_0$ and $h_2$ multiplied out, with the right order hypothesis fed to each scalar lemma |
@@ -24,12 +24,12 @@
 - At $P=\sum_{\psi\in E}\psi\langle\psi,\cdot\rangle$ with $E$ inner2-orthonormal, $\langle P(x\wedge e_k),x\wedge e_k\rangle=\sum_\psi\langle\psi,x\wedge e_k\rangle^2$, so `isoW P x` $=\sum_{\psi\in E}\lvert\psi x\rvert^2=\langle A x,x\rangle$. This matches the record.
 - The $(n-1)$ is the record's. The record's own $\sum_cA_c=(n-1)I$ fixes inner2-orthonormality: $\sum_{a<b}\varphi_{ab}\varphi_{ab}^{\mathsf T}=\sum_{a<b}(e_ae_a^{\mathsf T}+e_be_b^{\mathsf T})=(n-1)I$. Under Frobenius normalisation it would read $\tfrac{n-1}2I$. `isoW_id` gives $(n-1)\lvert x\rvert^2$, so both sides use the same convention.
 - Screen: for 20 random inner2-unit skew $\psi$ and random $x$ at $n=6$, $\max\lvert\,\lvert\psi x\rvert^2-\sum_k\langle\psi,\sum_ax_a\varphi_{ak}\rangle^2\rvert=4.4\times10^{-16}$. This is a screen of the hand identity and serves as no further evidence.
-- Observation O1: the identification of `isoW` with $\langle A_cx,x\rangle$ at a rank-one sum lives in the docstring and the INDEX row and is not typed. It is a two-line computation (above) and the operator-level statement remains meaningful without it, because the record itself writes $\sum_cA_c=\operatorname{Ric}(\mathrm{Id})$, which is `isoW` read as a Ricci contraction.
+- Observation O1: the identification of `isoW` with $\langle A_cx,x\rangle$ at a rank-one sum lives in the docstring and the INDEX row and is not typed. It is a two-line computation (above) and the operator-level statement remains meaningful without it, because the record itself writes $\sum_cA_c=\mathop{\mathrm{Ric}}(\mathrm{Id})$, which is `isoW` read as a Ricci contraction.
 
 ## 2. Is `isoW_weyl` sound from IsWeyl2's `ric` field?
 
-- `IsWeyl2.ric` ([Bivectors2.lean:352](../lean/HamiltonsCubic/Base/Bivectors2.lean)) reads `∀ a b, ∑ c, inner2 (applyPhi R a c) (phi b c) = 0`, with `applyPhi R a c = R φ_ac` coerced. This is the record's $\operatorname{Ric}_{ab}=\sum_c\langle W\varphi_{ac},\varphi_{bc}\rangle=0$. The $c=a$ and $c=b$ terms vanish because $\varphi_{aa}=0$.
-- The proof expands `isoW W x` to $\sum_k\sum_a\sum_bx_ax_b\langle W\varphi_{ak},\varphi_{bk}\rangle$, commutes $k$ inward past both $a$ and $b$, and applies `hW.ric a b`. Sound. It uses only `ric`, as the record says only $\operatorname{Ric}(W)=0$ is used.
+- `IsWeyl2.ric` ([Bivectors2.lean:352](../lean/HamiltonsCubic/Base/Bivectors2.lean)) reads `∀ a b, ∑ c, inner2 (applyPhi R a c) (phi b c) = 0`, with `applyPhi R a c = R φ_ac` coerced. This is the record's $\mathop{\mathrm{Ric}}_{ab}=\sum_c\langle W\varphi_{ac},\varphi_{bc}\rangle=0$. The $c=a$ and $c=b$ terms vanish because $\varphi_{aa}=0$.
+- The proof expands `isoW W x` to $\sum_k\sum_a\sum_bx_ax_b\langle W\varphi_{ak},\varphi_{bk}\rangle$, commutes $k$ inward past both $a$ and $b$, and applies `hW.ric a b`. Sound. It uses only `ric`, as the record says only $\mathop{\mathrm{Ric}}(W)=0$ is used.
 
 ## 3. The hypotheses on $P_c$
 
@@ -61,7 +61,7 @@
 |---|---|---|
 | `isoW` $=\langle A_cx,x\rangle$ | a normalisation mismatch, e.g. $\varphi$ of Frobenius norm 1, giving a factor 2 | derived by hand from `phi`, `inner2` at source, then screened at $n=6$ |
 | `isoW_id` | $\varphi$ Gram matrix other than $\delta_{ik}\delta_{jl}-\delta_{jk}\delta_{il}$ | read `inner2_phi_phi` at source and recomputed $\sum_{a<b}\varphi\varphi^{\mathsf T}=(n-1)I$ |
-| `isoW_weyl` | an `IsWeyl2` field weaker than $\operatorname{Ric}=0$ | read the `ric` field, which is the full Ricci contraction for every $a,b$ |
+| `isoW_weyl` | an `IsWeyl2` field weaker than $\mathop{\mathrm{Ric}}=0$ | read the `ric` field, which is the full Ricci contraction for every $a,b$ |
 | `L245_op` | vacuous hypotheses, or hypotheses the spectral projectors fail | exhibited $W=0$, $P=(\mathrm{id},0,0)$ and argued the spectral projectors satisfy all three |
 | `L245_ceilings` | a swapped order hypothesis or index | matched `hn 1`, `hl12`, `hl01` against the scalar lemmas |
 

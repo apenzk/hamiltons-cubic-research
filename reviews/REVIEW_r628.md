@@ -43,7 +43,7 @@ $$T(A\!\cdot\!x,y,z)+T(x,A\!\cdot\!y,z)+T(x,y,A\!\cdot\!z)=0 .$$
 
 **$T$ is the invariant trilinear form of this record, and its total symmetry is a theorem, not a convention.** Write $T(x,y,z)=\langle x\circ y,z\rangle$ with $x\circ y=\tfrac12(xy+yx)+x\#y$. Then
 
-- $\langle X,\tfrac12(YZ+ZY)\rangle=\tfrac12\big(\operatorname{tr}(XYZ)+\operatorname{tr}(XZY)\big)$ is invariant under all of $S_3$: $\operatorname{tr}(XYZ)$ is cyclic-invariant and the second term is the reversal, so the sum is the full symmetrisation;
+- $\langle X,\tfrac12(YZ+ZY)\rangle=\tfrac12\big(\mathop{\mathrm{tr}}(XYZ)+\mathop{\mathrm{tr}}(XZY)\big)$ is invariant under all of $S_3$: $\mathop{\mathrm{tr}}(XYZ)$ is cyclic-invariant and the second term is the reversal, so the sum is the full symmetrisation;
 - $\langle X,Y\#Z\rangle$ is totally symmetric because $\#$ is built from the structure constants $c_{\alpha\beta\gamma}=\langle[v_\alpha,v_\beta],v_\gamma\rangle$, which are totally antisymmetric ([conventions.md](../findings/conventions.md), normalisations), so the induced trilinear form is totally symmetric.
 
 Hence $T$ is totally symmetric and $T(x,x,x)=\langle Q(x),x\rangle=P(x)$, which is the record's normalisation.
@@ -66,7 +66,7 @@ Put $y=x$, $z=u$. The first two terms coincide by symmetry of $T$ in its first t
 
 $$2\,T(A\!\cdot\!x,x,u)+T(x,x,[\rho(A),u])=0 .$$
 
-By move 1 above, $T(A\!\cdot\!x,x,u)=\langle A\!\cdot\!x,F_ux\rangle$. If $F_ux=\lambda_{\mathrm{abs}}x$ this is $\lambda_{\mathrm{abs}}\langle A\!\cdot\!x,x\rangle$, and $\langle[\rho(A),x],x\rangle=\operatorname{tr}(x\rho(A)x)-\operatorname{tr}(\rho(A)x^2)=0$ by cyclicity of the trace. So
+By move 1 above, $T(A\!\cdot\!x,x,u)=\langle A\!\cdot\!x,F_ux\rangle$. If $F_ux=\lambda_{\mathrm{abs}}x$ this is $\lambda_{\mathrm{abs}}\langle A\!\cdot\!x,x\rangle$, and $\langle[\rho(A),x],x\rangle=\mathop{\mathrm{tr}}(x\rho(A)x)-\mathop{\mathrm{tr}}(\rho(A)x^2)=0$ by cyclicity of the trace. So
 
 $$T(x,x,[\rho(A),u])=\langle Q(x),[\rho(A),u]\rangle=0 .$$
 

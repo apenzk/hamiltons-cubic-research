@@ -14,7 +14,7 @@ This adjudication was done cold from [ADJ_L101_B3.md](ADJ_L101_B3.md). No numeri
 
 ## 0. Conventions, fixed once
 
-- $\mathcal W_n$ is the space of algebraic Weyl tensors as symmetric operators on $\Lambda^2\mathbb R^n$, with $\langle X,Y\rangle=\operatorname{tr}(XY)$.
+- $\mathcal W_n$ is the space of algebraic Weyl tensors as symmetric operators on $\Lambda^2\mathbb R^n$, with $\langle X,Y\rangle=\mathop{\mathrm{tr}}(XY)$.
 - $\#$ is the record's halved Böhm–Wilking product, a symmetric bilinear map $\mathcal W_n\times\mathcal W_n\to\mathcal W_n$ with $W^\#=W\#W$ ([conventions.md](../findings/conventions.md) lines 75–79). $Q(W)=W^2+W^\#$.
 - $X\circ Y=\tfrac12(Q(X+Y)-Q(X)-Q(Y))=\tfrac12(XY+YX)+X\#Y$, and $T(X,Y,Z)=\langle X\circ Y,Z\rangle$.
 - $u=W_{\mathbb{CP}^2}$ padded, $\|u\|=1$, $\theta^*=P(u)=\sqrt{3/2}$, $F_u(h)=\tfrac12(uh+hu)+u\#h$. Comparing with the previous item, $F_u=u\circ(\cdot)=L_u$ exactly.
@@ -34,7 +34,7 @@ This adjudication was done cold from [ADJ_L101_B3.md](ADJ_L101_B3.md). No numeri
 
 By H2, $\circ$ is the polarisation of an equivariant quadratic map, so $g\cdot(X\circ Y)=(g\cdot X)\circ(g\cdot Y)$. With H3, $T(g\cdot X,g\cdot Y,g\cdot Z)=\langle g\cdot(X\circ Y),g\cdot Z\rangle=T(X,Y,Z)$. Put $g=\exp(tA)$ and differentiate at $t=0$. Since $\frac{d}{dt}\big|_0\exp(tA)\cdot X=[\rho(A),X]$ and $T$ is trilinear, the product rule gives $T(A\cdot x,y,z)+T(x,A\cdot y,z)+T(x,y,A\cdot z)=0$.
 
-Two side facts used below. First, $[\rho(A),X]$ is symmetric when $X$ is: $(\rho(A)X-X\rho(A))^{\mathsf T}=-X\rho(A)+\rho(A)X$. It lies in $\mathcal W_n$ because it is the derivative of a curve in $\mathcal W_n$. Second, $A\cdot$ is Frobenius-skew: $\langle[\rho(A),X],Y\rangle=\operatorname{tr}(\rho(A)XY)-\operatorname{tr}(\rho(A)YX)$ and $\langle X,[\rho(A),Y]\rangle=\operatorname{tr}(\rho(A)YX)-\operatorname{tr}(\rho(A)XY)$, which is its negative.
+Two side facts used below. First, $[\rho(A),X]$ is symmetric when $X$ is: $(\rho(A)X-X\rho(A))^{\mathsf T}=-X\rho(A)+\rho(A)X$. It lies in $\mathcal W_n$ because it is the derivative of a curve in $\mathcal W_n$. Second, $A\cdot$ is Frobenius-skew: $\langle[\rho(A),X],Y\rangle=\mathop{\mathrm{tr}}(\rho(A)XY)-\mathop{\mathrm{tr}}(\rho(A)YX)$ and $\langle X,[\rho(A),Y]\rangle=\mathop{\mathrm{tr}}(\rho(A)YX)-\mathop{\mathrm{tr}}(\rho(A)XY)$, which is its negative.
 
 ## 2. The identity with raw eigenvalues (C2, C5)
 

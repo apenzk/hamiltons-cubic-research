@@ -58,8 +58,8 @@ Rotate padded $\mathbb{CP}^2$ by a Givens rotation in the $(e_2,e_3)$ plane. Bec
 
 ### Repaired statement
 
-> **(0)** $A+B+C=\operatorname{tr}V$, and the first Bianchi component on $S$ ($W_{ijkl}+W_{iklj}+W_{iljk}=0$), is exactly $\operatorname{tr}V_+=\operatorname{tr}V_-$.
-> **(ii$'$)** If $V_-=0$ then $A+B+C=0$ **automatically**; $(A,B,C)=\operatorname{diag}(V_+)$ in the basis $\{\omega_1,\omega_2,\omega_3\}$; and
+> **(0)** $A+B+C=\mathop{\mathrm{tr}}V$, and the first Bianchi component on $S$ ($W_{ijkl}+W_{iklj}+W_{iljk}=0$), is exactly $\mathop{\mathrm{tr}}V_+=\mathop{\mathrm{tr}}V_-$.
+> **(ii$'$)** If $V_-=0$ then $A+B+C=0$ **automatically**; $(A,B,C)=\mathop{\mathrm{diag}}(V_+)$ in the basis $\{\omega_1,\omega_2,\omega_3\}$; and
 > $$\Sigma=\tfrac32\big(A^2+B^2+C^2\big)\;\le\;\tfrac32\rho^2,$$
 > with equality **iff** $V_+$ is diagonal in that basis, i.e. iff the three opposite-pair planes are $W$-invariant.
 
@@ -91,9 +91,9 @@ Reproduced exactly at $n=8$: $\theta=\sqrt{3/2}$, half-flat at $S=\{1,2,3,4\}$, 
 
 ### Route 1: $\theta$ and $\Sigma$ are coupled on the family, and CP² is the equality point
 
-Consider the family L124's corollary lives in: $W\in\mathcal W_n$ supported on $\Lambda^2_+\langle S\rangle$, i.e. $W\leftrightarrow V_+$ traceless symmetric $3\times3$. This is a genuine $5$-parameter family, Ricci-flatness is automatic, since $M_{ij}=M_{kl}=\tfrac A2$ etc. makes every row sum $\tfrac12(A+B+C)=0$, and Bianchi is $\operatorname{tr}V_+=0$.
+Consider the family L124's corollary lives in: $W\in\mathcal W_n$ supported on $\Lambda^2_+\langle S\rangle$, i.e. $W\leftrightarrow V_+$ traceless symmetric $3\times3$. This is a genuine $5$-parameter family, Ricci-flatness is automatic, since $M_{ij}=M_{kl}=\tfrac A2$ etc. makes every row sum $\tfrac12(A+B+C)=0$, and Bianchi is $\mathop{\mathrm{tr}}V_+=0$.
 
-On it, $\Lambda^2(\mathbb R^4)=\mathfrak{so}(3)_+\oplus\mathfrak{so}(3)_-$ with the bracket preserving each factor, so both $W^2$ and $W^{\#}$ stay in $\Lambda^2_+$ and $W^{\#}$ is the adjugate of $V_+$ up to a constant. Hence $P(W)=\operatorname{tr}(V_+^3)+\kappa\operatorname{tr}(V_+\operatorname{adj}V_+)=3(1+\kappa)\det V_+$ for traceless $V_+$, and the record's own catalogued $\theta=\sqrt{3/2}$ at the $\tfrac1{\sqrt6}(2,-1,-1)$ member pins the constant:
+On it, $\Lambda^2(\mathbb R^4)=\mathfrak{so}(3)_+\oplus\mathfrak{so}(3)_-$ with the bracket preserving each factor, so both $W^2$ and $W^{\#}$ stay in $\Lambda^2_+$ and $W^{\#}$ is the adjugate of $V_+$ up to a constant. Hence $P(W)=\mathop{\mathrm{tr}}(V_+^3)+\kappa\mathop{\mathrm{tr}}(V_+\mathop{\mathrm{adj}}V_+)=3(1+\kappa)\det V_+$ for traceless $V_+$, and the record's own catalogued $\theta=\sqrt{3/2}$ at the $\tfrac1{\sqrt6}(2,-1,-1)$ member pins the constant:
 
 $$\boxed{\ \theta=9\det V_+\ }$$
 
@@ -141,11 +141,11 @@ Since $\rho^2\le\lVert W\rVert^2=1$ is free, the bound $\rho^2\le\tfrac23\theta^
 
 ## V6, REFUTED: on L124's own family $t_F$ *is* $\tfrac23\Sigma$, and $\rho$ is the constant
 
-**First, the two $\rho$'s are different objects.** [DERIVE-mx1.md](DERIVE-mx1.md)'s $\rho=\langle X,W\rangle=\langle X,R\rangle$ is the four-set's overlap with the **off-diagonal** part; L124's $\rho^2=\lVert W|_{\Lambda^2\langle S\rangle}\rVert^2$ includes $\operatorname{diag}(M)$. At padded $\mathbb{CP}^2$ they are $\tfrac12$ and $1$. The paragraph "What this changes in I12" moves between them without saying so.
+**First, the two $\rho$'s are different objects.** [DERIVE-mx1.md](DERIVE-mx1.md)'s $\rho=\langle X,W\rangle=\langle X,R\rangle$ is the four-set's overlap with the **off-diagonal** part; L124's $\rho^2=\lVert W|_{\Lambda^2\langle S\rangle}\rVert^2$ includes $\mathop{\mathrm{diag}}(M)$. At padded $\mathbb{CP}^2$ they are $\tfrac12$ and $1$. The paragraph "What this changes in I12" moves between them without saying so.
 
 **Second, the attribution is a distinction without a difference.** For $W$ supported on one half-flat four-set, $M_{ij}=M_{kl}=\tfrac A2$ and its relatives give
 
-$$t_F=2\lVert\operatorname{diag}(M)\rVert^2=2\cdot\tfrac{A^2+B^2+C^2}{2}=A^2+B^2+C^2=\tfrac23\Sigma .$$
+$$t_F=2\lVert\mathop{\mathrm{diag}}(M)\rVert^2=2\cdot\tfrac{A^2+B^2+C^2}{2}=A^2+B^2+C^2=\tfrac23\Sigma .$$
 
 **Screened**: $t_F=1$ with $\Sigma=1.5$ in the record frame, $t_F=0.4375$ with $\Sigma=0.65625$ after the rotation, the identity $\Sigma=\tfrac32t_F$ holds exactly in both. Meanwhile $\rho^2$ (L124's) is $1$ in *both* frames. **So on the very family the corollary reasons about, $t_F$ tracks $\Sigma$ perfectly and $\rho$ does not vary at all.** Attributing the effect to $\rho$ rather than $t_F$ is not a relocation of the slack; it renames the frame budget and then denies it.
 
@@ -169,5 +169,5 @@ $$t_F=2\lVert\operatorname{diag}(M)\rVert^2=2\cdot\tfrac{A^2+B^2+C^2}{2}=A^2+B^2
 
 - **V1**, as an identity.
 - The **sign pattern** $(1,-1),(1,1),(1,-1)$ for the anti-self-dual vectors, which is correct for $i<j<k<l$ and the standard orientation.
-- The repaired **(ii$'$)** above, which is a real lemma: half-flatness makes $\Sigma$ a norm defect, $\Sigma=\tfrac32\lvert\operatorname{diag}V_+\rvert^2\le\tfrac32\lVert V_+\rVert^2$.
+- The repaired **(ii$'$)** above, which is a real lemma: half-flatness makes $\Sigma$ a norm defect, $\Sigma=\tfrac32\lvert\mathop{\mathrm{diag}}V_+\rvert^2\le\tfrac32\lVert V_+\rVert^2$.
 - The new coupling $\theta^2\le\Sigma$ on the half-flat single-four-set family, which is worth more than the claim it refutes: combined with L121 it says the only member of that family that could be a maximiser is padded $\mathbb{CP}^2$.

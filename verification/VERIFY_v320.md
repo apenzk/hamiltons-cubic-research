@@ -16,7 +16,7 @@ Cold brief ([BRIEF_L101.md](BRIEF_L101.md)). No numerical work was done and no s
 
 ## 0. Conventions, fixed once
 
-- $\mathcal W_n$ is the space of algebraic Weyl tensors read as symmetric operators on $\Lambda^2\mathbb R^n\cong\mathfrak{so}(n)$, $N=\binom n2$, with $\langle X,Y\rangle=\operatorname{tr}(XY)$. It is nonzero exactly for $n\ge4$.
+- $\mathcal W_n$ is the space of algebraic Weyl tensors read as symmetric operators on $\Lambda^2\mathbb R^n\cong\mathfrak{so}(n)$, $N=\binom n2$, with $\langle X,Y\rangle=\mathop{\mathrm{tr}}(XY)$. It is nonzero exactly for $n\ge4$.
 - $\mathcal S$ denotes all symmetric operators on $\Lambda^2\mathbb R^n$, and $\pi:\mathcal S\to\mathcal W_n$ the orthogonal projection. $Q(X)=X^2+X^\#$ takes values in $\mathcal S$, and in general $Q(X)\notin\mathcal W_n$. Every pairing with an element of $\mathcal W_n$ below is unchanged by inserting $\pi$.
 - $X\circ Y=\tfrac12(XY+YX)+X\#Y$, the polarisation of $Q$ (Passage B), and $T(X,Y,Z)=\langle X\circ Y,Z\rangle$, fully symmetric on $\mathcal W_n$ (Passage B, line 24).
 - $F_u=\pi(u\circ\cdot)$ restricted to $\mathcal W_n$. This is the self-adjoint operator on $\mathcal W_n$ whose eigenvectors the lemma speaks of, and it is Nienhaus's $F:\mathrm{Weyl}_n\to\mathrm{Weyl}_n$ (paper L4339). With full symmetry, $T(p,q,u)=T(u,q,p)=\langle F_uq,p\rangle$ for $p,q\in\mathcal W_n$.
@@ -34,7 +34,7 @@ Cold brief ([BRIEF_L101.md](BRIEF_L101.md)). No numerical work was done and no s
 |---|---|---|---|
 | (I1) $Q(g\cdot X)=g\cdot Q(X)$ for $g\in SO(n)$, hence $T$ invariant | C1 | Yes. $(\rho X\rho^{-1})^2=\rho X^2\rho^{-1}$, and $\#$ is built from the structure constants of $\mathfrak{so}(n)$, which $\mathrm{Ad}_g$ preserves. Nienhaus uses exactly this at (4.6), L4339-4345. Asserted in the passage without argument | Yes |
 | (I2) $\mathcal W_n$ is $SO(n)$-invariant | C2, C4: $A\cdot x\in\mathcal W_n$ so that $T(A\cdot x,y,u)=\langle A\cdot x,F_uy\rangle$ | Yes, standard | Yes, silently |
-| (I3) $X\mapsto[\rho(A),X]$ is Frobenius-skew | C2, C4 | Yes: $\langle[S,X],Y\rangle=\operatorname{tr}(SXY)-\operatorname{tr}(XSY)=-\langle X,[S,Y]\rangle$ by cyclicity, and $[S,X]$ is symmetric because $S$ is skew | Yes, stated |
+| (I3) $X\mapsto[\rho(A),X]$ is Frobenius-skew | C2, C4 | Yes: $\langle[S,X],Y\rangle=\mathop{\mathrm{tr}}(SXY)-\mathop{\mathrm{tr}}(XSY)=-\langle X,[S,Y]\rangle$ by cyclicity, and $[S,X]$ is symmetric because $S$ is skew | Yes, stated |
 | (I4) Full symmetry of $T$ on $\mathcal W_n$ | C2 (slots 1-2 and moving $u$), C4 | Yes (Passage B) | Yes, stated as "$F_u$ is symmetric" |
 | (I5) $T_u(SO(n).u)=\{[\rho(A),u]:A\in\mathfrak{so}(n)\}$ | C3, C6 | Yes, the orbit map's differential. Nienhaus Remark 4.16, L4670-4672 | Yes, silently |
 | (I6) $V_{1/2}=T_u(SO(n).u)$ | C6 | Yes at $n\ge9$: Theorem 4.14(b) gives $V_{1/2}=\mathrm{Weyl}^{-,1}_4\oplus X^{-,2}_4\otimes\mathbb R^{n-4}$, of dimension $2+4(n-4)=4n-14$ (L4138, L4222), Remark 4.16 gives the inclusion $T_u(SO(n).u)\subseteq V_{1/2}$ and the equality "by dimension comparison" (L4674-4675) | **No. Nothing is written** |

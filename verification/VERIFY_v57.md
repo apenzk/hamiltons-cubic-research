@@ -9,8 +9,8 @@
 | # | claim attacked | verdict | reason, in a clause |
 |---|---|---|---|
 | 1 | Step 1: $(\mathrm{Sym}^3\mathcal W_5)^{O(5)}$ is one-dimensional | **SUPPORTED, MIS-CITED** | a real proof exists (the $\delta^{[6]}$ pigeonhole at $n\le5$) and the canonical entry cites [L50](../results.md) instead, which does not supply the constant |
-| 2 | Step 2: the anchor pins $c=2$ | **CONFIRMED** | $\operatorname{tr}(W_0^3)=1/\sqrt6$ and $P(W_0)=3/\sqrt6$ both follow from the conventions file; $c=2$ exactly, and the padded anchor's kernel is harmless |
-| 3 | Step 3: $P(W)=3\operatorname{tr}(W^3)$ on $\mathcal W_5$ | **CONFIRMED** | $\langle W,W^2\rangle=\operatorname{tr}(W^3)$ under this record's operator pairing, then step 2 |
+| 2 | Step 2: the anchor pins $c=2$ | **CONFIRMED** | $\mathop{\mathrm{tr}}(W_0^3)=1/\sqrt6$ and $P(W_0)=3/\sqrt6$ both follow from the conventions file; $c=2$ exactly, and the padded anchor's kernel is harmless |
+| 3 | Step 3: $P(W)=3\mathop{\mathrm{tr}}(W^3)$ on $\mathcal W_5$ | **CONFIRMED** | $\langle W,W^2\rangle=\mathop{\mathrm{tr}}(W^3)$ under this record's operator pairing, then step 2 |
 | 4 | Step 4: $F_5\ge0\iff\theta\le\sqrt{3/2}$ | **CONFIRMED, SCOPE WIDER** | $F_5\ge0$ is the two-sided $\lvert\theta\rvert\le\sqrt{3/2}$; homogeneity carries it off the unit sphere; $W=0$ is outside $\theta$'s domain |
 | 5 | Step 5: positive-definiteness of the 16 blocks | **CONFIRMED, EXACT** | the sign-alternation test is a correct criterion for a Hermitian matrix, run over $\mathbb Q$ with no elimination, on both the packed and the halved form |
 | 6 | Step 6: the Gram's sextic *is* $F_5$ | **GAP** | the injectivity that turns 40 equations into an identity is a **float64 SVD rank at threshold `1e-10`**, and the record owns an exact instrument it did not use |
@@ -33,13 +33,13 @@ Quoted from [findings/conventions.md](../findings/conventions.md), not restated.
 - $M(n)$, "**the global maximum** of $P$ on the unit sphere of $\mathcal W_n$, $M(n)=\max\{P(A):\lVert A\rVert=1\}$ … padded $W_{\mathbb{CP}^2}$ giving $M(n)\ge\sqrt{3/2}$". Distinct from $\Theta_n$, "the *diagonal* maximum".
 - $\Theta_n$, at odd $n$, $\sqrt{2(n-1)(n-3)/((n+1)(n-2))}$; at $n=5$ that is $\sqrt{16/18}=2\sqrt2/3$.
 - $W_0$, $H$, "the $n=5$ base point of the $\mathrm{Sym}^3$ machinery and its stabiliser $H\subset O(5)$, the orbit $O(5)\cdot W_0$ being the zero set a certificate must vanish on. … *Cubics are odd, so vanishing on $O(5)\cdot W_0$ forces vanishing on the orbit of $-W_0$ automatically.*"
-- The operator pairing, "$W$ is the operator on $\Lambda^2$, where $\sum_\alpha\lambda_\alpha^2=\operatorname{tr}(W^2)=1$", and "**The $\tfrac12$ goes at the $\Lambda^2$ level, not the operator level.**"
+- The operator pairing, "$W$ is the operator on $\Lambda^2$, where $\sum_\alpha\lambda_\alpha^2=\mathop{\mathrm{tr}}(W^2)=1$", and "**The $\tfrac12$ goes at the $\Lambda^2$ level, not the operator level.**"
 - Padding, "**Padding commutes with $Q$**, and preserves both the norm and $\theta$."
 - Structure constants, "$c_{abc}=\langle[v_a,v_b],v_c\rangle$ are **totally antisymmetric**", which is what makes $W^\#$ an $O(n)$-equivariant quadratic map and hence $\langle W,W^\#\rangle$ an invariant cubic.
 
 Two consequences I will use and which the conventions file does not state.
 
-- **The operator inner product carries no $\tfrac12$.** The file pins $\langle W,W\rangle=\operatorname{tr}(W^2)$, so $\langle W,W^2\rangle=\operatorname{tr}(W^3)$ with no factor. The half-trace lives one level down, on bivectors.
+- **The operator inner product carries no $\tfrac12$.** The file pins $\langle W,W\rangle=\mathop{\mathrm{tr}}(W^2)$, so $\langle W,W^2\rangle=\mathop{\mathrm{tr}}(W^3)$ with no factor. The half-trace lives one level down, on bivectors.
 - **At $n=5$, $O(5)$-invariance and $SO(5)$-invariance coincide on $\mathcal W_5$.** $O(5)=SO(5)\times\{\pm\mathrm{Id}\}$ and $-\mathrm{Id}$ acts trivially on $\Lambda^2\mathbb R^5$, hence trivially on $\mathcal W_5$. So the $O$ in "$O(5)$-orbit", "$(\mathrm{Sym}^3\mathcal W_5)^{O(5)}$" and "$(\mathrm{Sym}^6\mathcal W_5)^{O(5)}$" adds nothing at this $n$, and $O(5)\cdot W_0=SO(5)\cdot W_0$. This is a place a reader could expect content and find none; it is worth one line in the block.
 
 ## 1. The hypothesis inventory
@@ -50,7 +50,7 @@ Two consequences I will use and which the conventions file does not state.
 |---|---|---|---|---|
 | H1 | $W\in\mathcal W_5$: symmetric on $\Lambda^2\mathbb R^5$, first Bianchi, Ricci-flat | all four forms | the object is the whole of $\mathcal W_5$ | **used, and indispensable**, see §1.4 |
 | H2 | $n=5$ exactly | all four forms | $\mathcal W_5$ | **used three times**, the cubic collapse, $\dim=14$, the 16-block shape |
-| H3 | the norm is $\operatorname{tr}(W^2)^{1/2}$ on $\Lambda^2$ | conventions, not restated in the forms | $F_5$'s coefficients $\tfrac32$ and $9$ | **used**; the constants are normalisation-specific |
+| H3 | the norm is $\mathop{\mathrm{tr}}(W^2)^{1/2}$ on $\Lambda^2$ | conventions, not restated in the forms | $F_5$'s coefficients $\tfrac32$ and $9$ | **used**; the constants are normalisation-specific |
 | H4 | "critical or not" | Form B only | scope widening, not a hypothesis | correctly widens |
 | H5 | "with exact rational coefficients" | Forms B, D | a property of the artefact | **stated, and misleading**, §9 |
 
@@ -58,14 +58,14 @@ Two consequences I will use and which the conventions file does not state.
 
 | # | imported | its hypothesis | met? | where the argument uses it |
 |---|---|---|---|---|
-| T1 | the cubic collapse $\langle W,W^\#\rangle=2\operatorname{tr}(W^3)$ | $n\le5$ (the generalised Kronecker $\delta^{[6]}$ vanishes by pigeonhole) | ✔ at $n=5$ | steps 1–3 |
+| T1 | the cubic collapse $\langle W,W^\#\rangle=2\mathop{\mathrm{tr}}(W^3)$ | $n\le5$ (the generalised Kronecker $\delta^{[6]}$ vanishes by pigeonhole) | ✔ at $n=5$ | steps 1–3 |
 | T2 | $\dim(\mathrm{Sym}^6\mathcal W_5)^{O(5)}=14$ | none stated; three machine routes | machine only | step 6's cap |
 | T3 | Weyl's first fundamental theorem for $O(n)$ | none binding | ✔ | step 6, to know the 120 contractions are invariant sextics |
 | T4 | a Hermitian PSD Gram of a **real** form is a real sum of squares | $F_5$ real, the basis real | ✔ | step 5 → the word "squares" in the statement |
 | T5 | a Hermitian matrix is positive definite iff its characteristic polynomial's coefficients alternate | the spectrum is real | ✔, and asserted at runtime | step 5 |
-| T6 | $M\succ0\Rightarrow\tfrac12(M+\operatorname{diag}M)\succ0$ | $M$ Hermitian | ✔ | step 5's second pass |
+| T6 | $M\succ0\Rightarrow\tfrac12(M+\mathop{\mathrm{diag}}M)\succ0$ | $M$ Hermitian | ✔ | step 5's second pass |
 
-**T5 checked from scratch.** For $p(x)=x^k+c_1x^{k-1}+\dots+c_k$ with all roots real, $c_m=(-1)^me_m(\lambda)$, so "all $(-1)^mc_m>0$" is "all $e_m(\lambda)>0$". If every root is positive every $e_m>0$; conversely $e_m>0$ for all $m$ makes $p(-x)$ positive for $x\ge0$, so $p$ has no root in $(-\infty,0]$, and reality of the spectrum then forces every root positive. The criterion is correct, and it needs Hermiticity for exactly one thing (reality of the roots) which [run_n5_verify.py](../scripts/runs/run_n5_verify.py) both enforces by construction in `blocks()` and re-checks by asserting each Faddeev–LeVerrier trace is real. **T6 checked**: $\tfrac12(M+D)$ with $D=\operatorname{diag}M$; $M\succ0$ forces $D_{ii}=e_i^*Me_i>0$, so $D\succ0$ and the average of two positive-definite forms is positive definite. Both are sound.
+**T5 checked from scratch.** For $p(x)=x^k+c_1x^{k-1}+\dots+c_k$ with all roots real, $c_m=(-1)^me_m(\lambda)$, so "all $(-1)^mc_m>0$" is "all $e_m(\lambda)>0$". If every root is positive every $e_m>0$; conversely $e_m>0$ for all $m$ makes $p(-x)$ positive for $x\ge0$, so $p$ has no root in $(-\infty,0]$, and reality of the spectrum then forces every root positive. The criterion is correct, and it needs Hermiticity for exactly one thing (reality of the roots) which [run_n5_verify.py](../scripts/runs/run_n5_verify.py) both enforces by construction in `blocks()` and re-checks by asserting each Faddeev–LeVerrier trace is real. **T6 checked**: $\tfrac12(M+D)$ with $D=\mathop{\mathrm{diag}}M$; $M\succ0$ forces $D_{ii}=e_i^*Me_i>0$, so $D\succ0$ and the average of two positive-definite forms is positive definite. Both are sound.
 
 ### 1.3 Hypotheses used and nowhere stated
 
@@ -75,7 +75,7 @@ Two consequences I will use and which the conventions file does not state.
 | U2 | the cubics the Gram is written in genuinely vanish on $O(5)\cdot W_0$ ("membership by construction") | the phrase "cubics vanishing on the $O(5)$-orbit" in every form |
 | U3 | the Hermitian-to-real bridge T4 | the word "squares" |
 | U4 | the degree-3 part of $I(O(5)\cdot W_0)$ cuts out the orbit cone set-theoretically | **the equality clause alone**, §7 |
-| U5 | $\operatorname{tr}(W^3)\not\equiv0$ on $\mathcal W_5$ | step 2, so that one anchor pins $c$ |
+| U5 | $\mathop{\mathrm{tr}}(W^3)\not\equiv0$ on $\mathcal W_5$ | step 2, so that one anchor pins $c$ |
 
 ### 1.4 Hypotheses stated and unused, and the one that looks decorative and is not
 
@@ -115,16 +115,16 @@ Two further machine-only inputs cited in general: $\dim(\mathrm{Sym}^6\mathcal W
 
 The canonical detail entry, [results.md:625](../results.md), reads:
 
-> Since $\langle W,W^\#\rangle=2\operatorname{tr}(W^3)$ on $\mathcal W_5$ (the cubic collapses to one spectrum, Lemma L50) …
+> Since $\langle W,W^\#\rangle=2\mathop{\mathrm{tr}}(W^3)$ on $\mathcal W_5$ (the cubic collapses to one spectrum, Lemma L50) …
 
-[Lemma L50](../results.md)'s detail entry at [results.md:723](../results.md) states $\theta=\tfrac32p_3(\mu)-\tfrac12p_3(\omega)$ with the two normalisations and the index-order warning, **and contains no collapse clause at all**; the clause "*Collapses to one spectrum exactly for $n\le5$*" lives only in L50's one-line glance at [results.md:244](../results.md). Even taken there, it delivers "$\theta$ is *a* multiple of $\operatorname{tr}(W^3)$" and not the multiple. **L61's parenthetical cites a lemma that does not carry the constant the sentence asserts.**
+[Lemma L50](../results.md)'s detail entry at [results.md:723](../results.md) states $\theta=\tfrac32p_3(\mu)-\tfrac12p_3(\omega)$ with the two normalisations and the index-order warning, **and contains no collapse clause at all**; the clause "*Collapses to one spectrum exactly for $n\le5$*" lives only in L50's one-line glance at [results.md:244](../results.md). Even taken there, it delivers "$\theta$ is *a* multiple of $\mathop{\mathrm{tr}}(W^3)$" and not the multiple. **L61's parenthetical cites a lemma that does not carry the constant the sentence asserts.**
 
 The real argument is elsewhere and is a genuine proof: the generalised Kronecker delta $\delta^{[6]}$ antisymmetrises over six indices and so vanishes identically at $n\le5$ by pigeonhole, which is a one-sentence theorem, and the difference of the two cubic contractions is a $\delta^{[6]}$-contraction. That is the Lovelock syzygy, recorded at [findings/sym3-blocks.md:78](../findings/sym3-blocks.md), with the same file at [:42](../findings/sym3-blocks.md) drawing the trivial-multiplicity conclusion and at [:283](../findings/sym3-blocks.md) noting the dimension is $1$ here against $2$ from $n\ge6$. Independently, [run_cubic_invariant_dimension.py](../scripts/runs/run_cubic_invariant_dimension.py) records three routes to the same fact, of which route **(B)** is an *exact integer* polarisation certificate showing $s-2t\equiv0$ at $n=4,5$ and rank $2$ at $n=6$, with $s(W)=W_{ijkl}W_{klpq}W_{pqij}$ and $t(W)=W_{ipkq}W_{jplq}W_{ijkl}$. Route (C), Newell–Littlewood $N_{(2,2),(2,2),(2,2)}=2$, is a **stable-range** count and does not reach $n=5$; the script says so.
 
 Three observations follow.
 
 - **The route the round's brief reconstructs (one-dimensionality plus a single anchor), is strictly weaker than the route the record actually has.** The syzygy delivers the identity *with its constant*, derived. The dimension-plus-anchor route delivers the identity with a constant *measured at one point*. Both reach the same place here, and the second is the one the canonical entry gestures at.
-- **One-dimensionality is more than the argument needs.** All L61 consumes is the single identity $\langle W,W^\#\rangle=2\operatorname{tr}(W^3)$. Spanning is not required, which matters because [sym3-blocks.md:78](../findings/sym3-blocks.md) itself records that the *"so"* between the collapse and the dimension count "owes the step that $\alpha,\beta$ **span** the cubic invariants". That debt does not touch L61.
+- **One-dimensionality is more than the argument needs.** All L61 consumes is the single identity $\langle W,W^\#\rangle=2\mathop{\mathrm{tr}}(W^3)$. Spanning is not required, which matters because [sym3-blocks.md:78](../findings/sym3-blocks.md) itself records that the *"so"* between the collapse and the dimension count "owes the step that $\alpha,\beta$ **span** the cubic invariants". That debt does not touch L61.
 - **The exactness of route (B) is real and is the strongest thing on the record here.** It is integer arithmetic on an integer basis, not a rank read off a tolerance.
 
 **Verdict on step 1: SUPPORTED, MIS-CITED.** The fact holds and has a proof; the canonical entry cites a lemma that does not carry it.
@@ -133,27 +133,27 @@ Three observations follow.
 
 **Both quoted values are exactly right, and I rebuilt them from the conventions file alone.**
 
-$W_{\mathbb{CP}^2}$ is self-dual Einstein: $W_-=0$, and $W_+$ on $\Lambda^2_+$ has eigenvalues proportional to $(2,-1,-1)$, the $+2$ eigenvector being the Kähler form and the sign fixed by $\operatorname{scal}>0$. So on $\Lambda^2\mathbb R^4$ the spectrum is $(2a,-a,-a,0,0,0)$. The conventions file pins $\operatorname{tr}(W^2)=\lVert W\rVert^2$, so
+$W_{\mathbb{CP}^2}$ is self-dual Einstein: $W_-=0$, and $W_+$ on $\Lambda^2_+$ has eigenvalues proportional to $(2,-1,-1)$, the $+2$ eigenvector being the Kähler form and the sign fixed by $\mathop{\mathrm{scal}}>0$. So on $\Lambda^2\mathbb R^4$ the spectrum is $(2a,-a,-a,0,0,0)$. The conventions file pins $\mathop{\mathrm{tr}}(W^2)=\lVert W\rVert^2$, so
 
-$$6a^2=1,\qquad a=\tfrac1{\sqrt6},\qquad \operatorname{tr}(W^3)=8a^3-a^3-a^3=6a^3=\tfrac{6}{6\sqrt6}=\tfrac1{\sqrt6}. \qquad\checkmark$$
+$$6a^2=1,\qquad a=\tfrac1{\sqrt6},\qquad \mathop{\mathrm{tr}}(W^3)=8a^3-a^3-a^3=6a^3=\tfrac{6}{6\sqrt6}=\tfrac1{\sqrt6}. \qquad\checkmark$$
 
-$\theta(W_0)=\sqrt{3/2}=3/\sqrt6$ is proved independently of this chain: [lean/INDEX.md](../lean/INDEX.md) records `θ² = 3/2` at the competitor at $n=4$ machine-checked **from $Q$**, with $W_{\mathbb{CP}^2}$ first verified to lie in $\mathcal W_4$. Padding carries both to $n=5$, the conventions file's "padding commutes with $Q$, and preserves both the norm and $\theta$", and $\operatorname{tr}(W^3)$ is padding-invariant outright. Hence
+$\theta(W_0)=\sqrt{3/2}=3/\sqrt6$ is proved independently of this chain: [lean/INDEX.md](../lean/INDEX.md) records `θ² = 3/2` at the competitor at $n=4$ machine-checked **from $Q$**, with $W_{\mathbb{CP}^2}$ first verified to lie in $\mathcal W_4$. Padding carries both to $n=5$, the conventions file's "padding commutes with $Q$, and preserves both the norm and $\theta$", and $\mathop{\mathrm{tr}}(W^3)$ is padding-invariant outright. Hence
 
-$$\langle W_0,W_0^\#\rangle=P(W_0)-\operatorname{tr}(W_0^3)=\tfrac3{\sqrt6}-\tfrac1{\sqrt6}=\tfrac2{\sqrt6}=2\operatorname{tr}(W_0^3),\qquad c=2. \qquad\checkmark$$
+$$\langle W_0,W_0^\#\rangle=P(W_0)-\mathop{\mathrm{tr}}(W_0^3)=\tfrac3{\sqrt6}-\tfrac1{\sqrt6}=\tfrac2{\sqrt6}=2\mathop{\mathrm{tr}}(W_0^3),\qquad c=2. \qquad\checkmark$$
 
 And $F_5(W_0)=\tfrac32-9\cdot\tfrac16=\tfrac32-\tfrac32=0$, so the certificate's target does vanish at the point it must. ✓
 
-**Does one point suffice?** Yes, given step 1. A one-dimensional space of invariant cubics with $\operatorname{tr}(W^3)$ a nonzero member makes $\operatorname{tr}(W^3)$ a spanning vector, and $c$ is then determined by any point where $\operatorname{tr}(W^3)\ne0$, U5, which holds at $W_0$. **The padded anchor's kernel is harmless here**: the identity being pinned is linear in the coefficient, so nothing about the anchor's degeneracy propagates. This is the one place in the round where I expected the kernel to bite and it does not.
+**Does one point suffice?** Yes, given step 1. A one-dimensional space of invariant cubics with $\mathop{\mathrm{tr}}(W^3)$ a nonzero member makes $\mathop{\mathrm{tr}}(W^3)$ a spanning vector, and $c$ is then determined by any point where $\mathop{\mathrm{tr}}(W^3)\ne0$, U5, which holds at $W_0$. **The padded anchor's kernel is harmless here**: the identity being pinned is linear in the coefficient, so nothing about the anchor's degeneracy propagates. This is the one place in the round where I expected the kernel to bite and it does not.
 
 **Verdict on step 2: CONFIRMED.** The two quoted values are consistent with the conventions file's normalisations and with each other.
 
-### 5.3 Step 3, $P(W)=3\operatorname{tr}(W^3)$
+### 5.3 Step 3, $P(W)=3\mathop{\mathrm{tr}}(W^3)$
 
-$P(W)=\langle W,W^2+W^\#\rangle=\langle W,W^2\rangle+\langle W,W^\#\rangle$. The first term is $\operatorname{tr}(W^3)$ because the operator pairing on $\Lambda^2$ carries no $\tfrac12$ (§0). With step 2, $P=3\operatorname{tr}(W^3)$. **CONFIRMED**, and this is the step where a reader who applied the $\tfrac12$ at the operator level instead of the $\Lambda^2$ level (the trap the conventions file flags), would arrive at a different constant and a different $F_5$.
+$P(W)=\langle W,W^2+W^\#\rangle=\langle W,W^2\rangle+\langle W,W^\#\rangle$. The first term is $\mathop{\mathrm{tr}}(W^3)$ because the operator pairing on $\Lambda^2$ carries no $\tfrac12$ (§0). With step 2, $P=3\mathop{\mathrm{tr}}(W^3)$. **CONFIRMED**, and this is the step where a reader who applied the $\tfrac12$ at the operator level instead of the $\Lambda^2$ level (the trap the conventions file flags), would arrive at a different constant and a different $F_5$.
 
 ### 5.4 Step 4, the equivalence, at every $W$
 
-$F_5=\tfrac32\lVert W\rVert^6-9\operatorname{tr}(W^3)^2=\tfrac32\lVert W\rVert^6-P(W)^2$ by step 3.
+$F_5=\tfrac32\lVert W\rVert^6-9\mathop{\mathrm{tr}}(W^3)^2=\tfrac32\lVert W\rVert^6-P(W)^2$ by step 3.
 
 - **At $\lVert W\rVert\ne1$:** $F_5$ is homogeneous of degree six and $P^2/\lVert W\rVert^6=\theta^2$, so $F_5\ge0\iff\theta^2\le\tfrac32$ at every nonzero $W$, with no restriction to the unit sphere. The forms' "on all of $\mathcal W_5$" is honest. ✔
 - **At $W=0$:** $F_5(0)=0$ and $\theta$ is $0/0$. The claim "$\theta\le\sqrt{3/2}$ on all of $\mathcal W_5$" is literally a claim about $\mathcal W_5\setminus\{0\}$. Cosmetic, and worth a parenthesis nowhere.
@@ -182,7 +182,7 @@ I read [run_n5_verify.py](../scripts/runs/run_n5_verify.py) line by line and [n5
 **Three positive consistency checks I derived by hand from the recorded artefacts.**
 
 - **The recorded shape reconciles $47$ with the record's $36$.** A $k\times k$ Hermitian block holds $k^2$ real parameters and a $k\times k$ real-symmetric one holds $k(k+1)/2$. On this shape the second count is $6+6+3\cdot5+1\cdot9=36$ and the antisymmetric remainder is $3+3+1\cdot5=11$, with $36+11=47$. **So [Lemma L59](../results.md)'s "$65=36+29$" and the certificate's $47$ are the same object counted twice**, and the apparent Hermitian-versus-real discrepancy dissolves arithmetically. (Grep surfaced one line of [REVIEW_r684](../reviews/REVIEW_r684.md) reaching the same conclusion by a different route; I derived the $36$ before seeing it, from the shape alone.)
-- **The trivial block is correctly absent.** The JSON's `blocks` field lists sixteen $SO(5)$ labels, $(2,2),(4,2),(3,2),(2,0),(2,1),(3,0),(3,1),(4,0),(4,1),(4,3),(4,4),(5,2),(3,3),(5,1),(5,3),(6,3)$, and $(0,0)$ is not among them. It must not be: the trivial isotypic component of $\mathrm{Sym}^3\mathcal W_5$ is spanned by $\operatorname{tr}(W^3)$, which is $1/\sqrt6\ne0$ at $W_0$, so no invariant cubic vanishes on the orbit and the trivial multiplicity space contributes nothing to $K$. ✔
+- **The trivial block is correctly absent.** The JSON's `blocks` field lists sixteen $SO(5)$ labels, $(2,2),(4,2),(3,2),(2,0),(2,1),(3,0),(3,1),(4,0),(4,1),(4,3),(4,4),(5,2),(3,3),(5,1),(5,3),(6,3)$, and $(0,0)$ is not among them. It must not be: the trivial isotypic component of $\mathrm{Sym}^3\mathcal W_5$ is spanned by $\mathop{\mathrm{tr}}(W^3)$, which is $1/\sqrt6\ne0$ at $W_0$, so no invariant cubic vanishes on the orbit and the trivial multiplicity space contributes nothing to $K$. ✔
 - **The blocks are genuinely complex.** Reading the packing order off `blocks()`, the imaginary slots are indices $\{2,4,7,11,13,16,20,25,30,35,39\}$, eleven of them, matching the count above. Of these, four are nonzero: block $0$ has purely imaginary $(0,1)$ and $(1,2)$ entries and block $2$ a purely imaginary off-diagonal. **So T4, the Hermitian-to-real bridge, is genuinely load-bearing and is stated in none of Forms A–D.**
 
 **A fourth figure, which I record without being able to close it.** Using Weyl's dimension formula for $B_2$, $\dim V_{(a,b)}=(a-b+1)\cdot\frac{a+b+2}2\cdot\frac{2a+3}3\cdot(2b+1)$ (checked against $\dim V_{(2,2)}=35=\dim\mathcal W_5$), the certificate's sixteen blocks carry $\sum_\lambda m_\lambda\dim V_\lambda=4200$, against $\dim\mathrm{Sym}^3\mathcal W_5=\binom{37}3=7770$. The space of cubics vanishing on the orbit has codimension $\sum_\lambda m_\lambda\dim V_\lambda^H$, which is bounded by the number of blocks with $\dim V_\lambda^H=1$ and is therefore of order tens, not thousands. **So the certificate is supported on roughly half of $K$, not on all of it.** That is entirely legitimate for the inequality (an SOS need only use cubics *from* $K$, not all of them) and I raise it only because §7 needs the opposite. Closing the figure needs the $\mathrm{Sym}^3\mathcal W_5$ block table, which lives in the file this brief excludes.
@@ -256,7 +256,7 @@ The conventions file's own line, *"Cubics are odd, so vanishing on $O(5)\cdot W_
 
 ### Is the clause even true?
 
-I cannot decide it and neither can the record. What I can say is that it does not follow from the value: $\theta=\sqrt{3/2}$ forces $\operatorname{tr}(W^3)=\tfrac1{\sqrt6}\lVert W\rVert^3$, and $\tfrac1{\sqrt6}$ is *not* the unconstrained maximum of $p_3(\mu)$ on the unit sphere of trace-free operators on $\Lambda^2\mathbb R^5$, it is only the maximum on the rank-$\le3$ stratum (§1.4). So attaining the value does not by itself pin the spectrum, let alone the orbit. **The clause needs a rigidity argument, and rigidity is a separate statement with a separate proof.**
+I cannot decide it and neither can the record. What I can say is that it does not follow from the value: $\theta=\sqrt{3/2}$ forces $\mathop{\mathrm{tr}}(W^3)=\tfrac1{\sqrt6}\lVert W\rVert^3$, and $\tfrac1{\sqrt6}$ is *not* the unconstrained maximum of $p_3(\mu)$ on the unit sphere of trace-free operators on $\Lambda^2\mathbb R^5$, it is only the maximum on the rank-$\le3$ stratum (§1.4). So attaining the value does not by itself pin the spectrum, let alone the orbit. **The clause needs a rigidity argument, and rigidity is a separate statement with a separate proof.**
 
 ### Three-step discrepancy record
 
@@ -266,7 +266,7 @@ I cannot decide it and neither can the record. What I can say is that it does no
 
 **3. Argued the opposite.** The strongest reading is that the author means the clause as a claim about the *equality set of the inequality*, supported by some rigidity result elsewhere in the file rather than by the certificate. Under that reading Forms A and B are asserting a true-and-separately-proved fact in the same breath as the certificate. Two things defeat it. First, [results.md:23](../results.md) (the same record, seventeen lines above Form D), says the equality case "is unproven and unreachable by that route", so the author's own reading is that there is no such separate support. Second, the sentence's grammar attaches the clause to the certificate ("$F_5$ is a sum of squares … *Hence* $\theta\le\sqrt{3/2}$ … with equality exactly on that orbit"), which is the inference I have just shown is unavailable.
 
-**Verdict: HYPOTHESIS-DEBT.** What would have to be proved, precisely: *the degree-3 part of the ideal of the cone over $O(5)\cdot W_0$ cuts that cone out set-theoretically, and the certificate's cubics span it*, or, alternatively and independently of the certificate, *a rigidity theorem showing $\operatorname{tr}(W^3)=\tfrac1{\sqrt6}$ on the unit sphere of $\mathcal W_5$ forces $W\in O(5)\cdot W_0$.* I am not supplying either.
+**Verdict: HYPOTHESIS-DEBT.** What would have to be proved, precisely: *the degree-3 part of the ideal of the cone over $O(5)\cdot W_0$ cuts that cone out set-theoretically, and the certificate's cubics span it*, or, alternatively and independently of the certificate, *a rigidity theorem showing $\mathop{\mathrm{tr}}(W^3)=\tfrac1{\sqrt6}$ on the unit sphere of $\mathcal W_5$ forces $W\in O(5)\cdot W_0$.* I am not supplying either.
 
 ## 8. Forms A, B, C and D against each other
 
@@ -302,13 +302,13 @@ Four findings.
 
 ## 10. What would break it, and what I did to look
 
-**The falsifier is a single object**: a $W\in\mathcal W_5$ with $\lVert W\rVert=1$ and $\operatorname{tr}(W^3)>1/\sqrt6=0.40825$. By step 3 that is $\theta>\sqrt{3/2}$, and it refutes L61 outright regardless of the certificate.
+**The falsifier is a single object**: a $W\in\mathcal W_5$ with $\lVert W\rVert=1$ and $\mathop{\mathrm{tr}}(W^3)>1/\sqrt6=0.40825$. By step 3 that is $\theta>\sqrt{3/2}$, and it refutes L61 outright regardless of the certificate.
 
 **What I did.** Analysis only, in closed form, on objects I constructed for the purpose.
 
 - **The rank-stratum bound.** The maximum of $p_3(\mu)$ over trace-free symmetric operators of rank $\le r$ with $\sum\mu^2=1$ is $(r-2)/\sqrt{r(r-1)}$, attained at $\mu=\big(\tfrac{r-1}{\sqrt{r(r-1)}},-\tfrac1{\sqrt{r(r-1)}},\dots\big)$. At $r=3$ this is exactly $1/\sqrt6$, **so $W_0$ is the champion of its own stratum and no rank-$\le3$ falsifier exists.** At $r=4$ it is $0.5774$ and at $r=10$ it is $0.8433$, so every falsifier must have $\Lambda^2$-rank at least four.
 - **Against the record's own spectral necessary condition.** [Lemma L73](../results.md) gives $\lambda_{\max}\le(n-2)\lvert\lambda_{\min}\rvert=3\lvert\lambda_{\min}\rvert$ on all of $\mathcal W_5$. $W_0$ satisfies it with room ($2a$ against $3a$), so it does not select $W_0$; and the spectra I tried under it that beat $1/\sqrt6$ all violate something else or fail to be Weyl. Two closed-form probes: $(3m,3m,m,-m^{\times7})$ gives $48/26^{3/2}=0.362$ and $\big(\tfrac73b,\tfrac73b,\tfrac73b,-b^{\times7}\big)$ gives $0.276$, both **below** $1/\sqrt6$. Neither is a falsifier and neither is a proof, the constraint that would have to do the work is realisability as a Weyl tensor, which no closed form on the record supplies.
-- **Against the record's own family.** [Lemma L74](../results.md) puts every strongly regular graph on the diagonal locus of $\mathcal W_v$; at $v=5$ the diagonal maximum is $\Theta_5=2\sqrt2/3=0.9428$, so $\operatorname{tr}(W^3)=\theta/3=0.3143<0.40825$. The diagonal locus supplies no falsifier, which is exactly what one expects since $W_0$ is diagonal in no frame.
+- **Against the record's own family.** [Lemma L74](../results.md) puts every strongly regular graph on the diagonal locus of $\mathcal W_v$; at $v=5$ the diagonal maximum is $\Theta_5=2\sqrt2/3=0.9428$, so $\mathop{\mathrm{tr}}(W^3)=\theta/3=0.3143<0.40825$. The diagonal locus supplies no falsifier, which is exactly what one expects since $W_0$ is diagonal in no frame.
 
 **No falsifier found, and I did not expect to find one by hand.** The interest of the exercise is what it shows about the shape of the claim: the certificate's whole content is a statement about ranks four and above, and none of the record's closed-form families lives there.
 

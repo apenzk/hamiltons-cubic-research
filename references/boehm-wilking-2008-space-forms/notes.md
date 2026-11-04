@@ -28,21 +28,21 @@ $$\langle(R\,\#\,S)(h),h\rangle=\frac12\sum_{\alpha,\beta=1}^{N}\big\langle[R(b_
 
 for $h\in\mathfrak{so}(n)$ and $b_1,\dots,b_N$ an orthonormal basis of $\mathfrak{so}(n)$.
 
-**The factor $\tfrac12$ is a normalisation artefact**, stated explicitly: it "stems from the fact that we are using the scalar product $-\tfrac12\operatorname{tr}(AB)$ instead of $-\operatorname{tr}(AB)$ as in [H2]". Any comparison with Hamilton's constants must carry it.
+**The factor $\tfrac12$ is a normalisation artefact**, stated explicitly: it "stems from the fact that we are using the scalar product $-\tfrac12\mathop{\mathrm{tr}}(AB)$ instead of $-\mathop{\mathrm{tr}}(AB)$ as in [H2]". Any comparison with Hamilton's constants must carry it.
 
 Invariantly, $R\,\#\,S=S\,\#\,R=\mathrm{ad}\circ(R\wedge S)\circ\mathrm{ad}^*$ with $\mathrm{ad}:\Lambda^2\mathfrak{so}(n)\to\mathfrak{so}(n)$, $u\wedge v\mapsto[u,v]$. And $R^\#:=R\,\#\,R$.
 
 ## The trilinear form and the potential (eq. 5, p. 4)
 
-$$\mathrm{tri}(R_1,R_2,R_3)=\operatorname{tr}\big((R_1R_2+R_2R_1+2\,R_1\,\#\,R_2)\cdot R_3\big),$$
+$$\mathrm{tri}(R_1,R_2,R_3)=\mathop{\mathrm{tr}}\big((R_1R_2+R_2R_1+2\,R_1\,\#\,R_2)\cdot R_3\big),$$
 
 **symmetric in all three arguments** (attributed to Huisken), because
 
-$$\operatorname{tr}\big(2(R_1\,\#\,R_2)\cdot R_3\big)=\sum_{\alpha,\beta,\gamma=1}^{N}\big\langle[R_1(b_\alpha),R_2(b_\beta)],R_3(b_\gamma)\big\rangle\cdot\big\langle[b_\alpha,b_\beta],b_\gamma\big\rangle,$$
+$$\mathop{\mathrm{tr}}\big(2(R_1\,\#\,R_2)\cdot R_3\big)=\sum_{\alpha,\beta,\gamma=1}^{N}\big\langle[R_1(b_\alpha),R_2(b_\beta)],R_3(b_\gamma)\big\rangle\cdot\big\langle[b_\alpha,b_\beta],b_\gamma\big\rangle,$$
 
 which is manifestly symmetric. Huisken also observed that the ODE is the **gradient flow** of
 
-$$P(R)=\tfrac13\operatorname{tr}(R^3+R\,R^\#)=\tfrac16\,\mathrm{tri}(R,R,R).$$
+$$P(R)=\tfrac13\mathop{\mathrm{tr}}(R^3+R\,R^\#)=\tfrac16\,\mathrm{tri}(R,R,R).$$
 
 > This is the programme's $P$ up to the factor $\tfrac13$, and it is the reason $\langle W,Q(W)\rangle$ is the right functional: it is the potential whose gradient flow is the ODE the maximum principle is stated for.
 

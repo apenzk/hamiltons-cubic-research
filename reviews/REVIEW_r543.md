@@ -9,7 +9,7 @@
 
 ## The conventions, fixed first
 
-[findings/conventions.md](../findings/conventions.md) fixes $\langle A,B\rangle=\tfrac12\operatorname{tr}(A^{\mathsf T}B)$ at the $\Lambda^2$ level, and with it *"singular values in pairs $s_1,s_1,s_2,s_2,\dots$ with $\sum_is_i^2=1$"* and $\lVert\varphi_{ab}\rVert^2=1$, making $\{\varphi_{ab}\}_{a<b}$ orthonormal. **L31's hypothesis $\sum_is_i^2=1$ is that pairing verbatim, and every constant in the block is consistent with it.** This was the collision to look for and it is not present:
+[findings/conventions.md](../findings/conventions.md) fixes $\langle A,B\rangle=\tfrac12\mathop{\mathrm{tr}}(A^{\mathsf T}B)$ at the $\Lambda^2$ level, and with it *"singular values in pairs $s_1,s_1,s_2,s_2,\dots$ with $\sum_is_i^2=1$"* and $\lVert\varphi_{ab}\rVert^2=1$, making $\{\varphi_{ab}\}_{a<b}$ orthonormal. **L31's hypothesis $\sum_is_i^2=1$ is that pairing verbatim, and every constant in the block is consistent with it.** This was the collision to look for and it is not present:
 
 | quantity | value at the cap | consistent? |
 | --- | --- | --- |
@@ -19,11 +19,11 @@
 | $\lVert[X,Y]\rVert_F$ | $2$, since $\lVert[X,Y]\rVert^2=2$ | yes |
 | the block's bound $2\lVert X\rVert_{\rm op}\lVert Y\rVert_F$ | $2$ | **equality throughout, the chain is forced, as the proof needs** |
 
-The eigenvectors L29 feeds in are orthonormal in exactly this pairing ($\sum_\alpha\lambda_\alpha^2=\operatorname{tr}W^2=1$ against an orthonormal $\Lambda^2$ basis), so the hypothesis transfers cleanly. Had the record run at Frobenius unit norm instead, the cap would read $\lVert[X,Y]\rVert_F^2\le1$ and every consumer would be off by a factor $2$; it does not.
+The eigenvectors L29 feeds in are orthonormal in exactly this pairing ($\sum_\alpha\lambda_\alpha^2=\mathop{\mathrm{tr}}W^2=1$ against an orthonormal $\Lambda^2$ basis), so the hypothesis transfers cleanly. Had the record run at Frobenius unit norm instead, the cap would read $\lVert[X,Y]\rVert_F^2\le1$ and every consumer would be off by a factor $2$; it does not.
 
 ## Q1, the cap is proved here, not assumed
 
-**Proved, in the block's first two sentences, and I re-derive it cold.** $\operatorname{ad}_X$ is skew for the ad-invariant half-trace form, so its operator norm is the largest modulus of an eigenvalue of its complexification, and the roots of $\mathfrak{so}(n)$ give those as $i(\pm s_i\pm s_j)$ (and $i(\pm s_i)$ at odd $n$). Hence
+**Proved, in the block's first two sentences, and I re-derive it cold.** $\mathop{\mathrm{ad}}_X$ is skew for the ad-invariant half-trace form, so its operator norm is the largest modulus of an eigenvalue of its complexification, and the roots of $\mathfrak{so}(n)$ give those as $i(\pm s_i\pm s_j)$ (and $i(\pm s_i)$ at odd $n$). Hence
 
 $$\max_{\lVert Y\rVert=1}\lVert[X,Y]\rVert^2=(s_1+s_2)^2,\qquad (s_1+s_2)^2\le2(s_1^2+s_2^2)\le2\sum_is_i^2=2 .$$
 
@@ -38,12 +38,12 @@ This is the direction L29's closure consumes, so I re-derived every step rather 
 1. $2=\lVert[X,Y]\rVert^2\le(s_1+s_2)^2\le2$ forces $s_1=s_2=1/\sqrt2$ and the rest zero: **rank exactly $4$, all singular values $1/\sqrt2$**. Sound.
 2. The same argument with the roles swapped ($\lVert[Y,X]\rVert=\lVert[X,Y]\rVert$ against $Y$'s own angles), gives the same for $Y$. Sound, **but the block does not say it** (see defect 4).
 3. Equality throughout $\lVert[X,Y]\rVert_F\le\lVert XY\rVert_F+\lVert YX\rVert_F\le2\lVert X\rVert_{\rm op}\lVert Y\rVert_F$ is forced, because with step 1 the right end is exactly $2$ and the left end is exactly $2$. Sound.
-4. Equality in $\lVert XY\rVert_F\le\lVert X\rVert_{\rm op}\lVert Y\rVert_F$ means every column $y$ of $Y$ satisfies $\lVert Xy\rVert=\lVert X\rVert_{\rm op}\lVert y\rVert$, i.e. lies in the top right-singular subspace of $X$. Since all four nonzero singular values coincide, that subspace **is** $\operatorname{im}X$, for skew $X$, $X^{\mathsf T}X=-X^2$ and its top eigenspace is $\operatorname{im}X$. So $\operatorname{im}Y\subseteq\operatorname{im}X$, and equality follows from $\dim=4$ on both sides (the block's "and symmetrically" also works). Sound.
-5. Triangle equality $\lVert A-B\rVert_F=\lVert A\rVert_F+\lVert B\rVert_F$ with $A=XY$, $B=YX$ and $\lVert A\rVert_F=\lVert B\rVert_F=1\ne0$ forces $A=-B$, i.e. $XY=-YX$. Sound. The auxiliary $\lVert XY\rVert_F=\lVert YX\rVert_F$ is an identity for skew $X,Y$, both sides equalling $\operatorname{tr}(X^2Y^2)$, so it is not an extra assumption.
+4. Equality in $\lVert XY\rVert_F\le\lVert X\rVert_{\rm op}\lVert Y\rVert_F$ means every column $y$ of $Y$ satisfies $\lVert Xy\rVert=\lVert X\rVert_{\rm op}\lVert y\rVert$, i.e. lies in the top right-singular subspace of $X$. Since all four nonzero singular values coincide, that subspace **is** $\mathop{\mathrm{im}}X$, for skew $X$, $X^{\mathsf T}X=-X^2$ and its top eigenspace is $\mathop{\mathrm{im}}X$. So $\mathop{\mathrm{im}}Y\subseteq\mathop{\mathrm{im}}X$, and equality follows from $\dim=4$ on both sides (the block's "and symmetrically" also works). Sound.
+5. Triangle equality $\lVert A-B\rVert_F=\lVert A\rVert_F+\lVert B\rVert_F$ with $A=XY$, $B=YX$ and $\lVert A\rVert_F=\lVert B\rVert_F=1\ne0$ forces $A=-B$, i.e. $XY=-YX$. Sound. The auxiliary $\lVert XY\rVert_F=\lVert YX\rVert_F$ is an identity for skew $X,Y$, both sides equalling $\mathop{\mathrm{tr}}(X^2Y^2)$, so it is not an extra assumption.
 
-**The "if" direction is sound too**, and its arithmetic is right in the record's pairing: $X^2=Y^2=-P_V/2$, $[X,Y]=2XY$, so $\lVert[X,Y]\rVert^2=2\operatorname{tr}(Y^{\mathsf T}X^{\mathsf T}XY)=\operatorname{tr}(Y^{\mathsf T}P_VY)=\operatorname{tr}(Y^{\mathsf T}Y)=2$, the middle step using $P_VY=Y$, which is where the **equal-images hypothesis is consumed**.
+**The "if" direction is sound too**, and its arithmetic is right in the record's pairing: $X^2=Y^2=-P_V/2$, $[X,Y]=2XY$, so $\lVert[X,Y]\rVert^2=2\mathop{\mathrm{tr}}(Y^{\mathsf T}X^{\mathsf T}XY)=\mathop{\mathrm{tr}}(Y^{\mathsf T}P_VY)=\mathop{\mathrm{tr}}(Y^{\mathsf T}Y)=2$, the middle step using $P_VY=Y$, which is where the **equal-images hypothesis is consumed**.
 
-**And the closure L29 needs goes through.** Equality in L29 forces $T_{1,N-1,N}=2$; since $T_{1,N-1,N}\le\sum_\gamma T_{1,N-1,\gamma}=\lVert[v_1,v_{N-1}]\rVert^2\le2$, the pair saturates, and by total symmetry of $T$ so does $(v_{N-1},v_N)$. L31's "only if" then gives $\operatorname{im}v_{N-1}=\operatorname{im}v_N$ of dimension $4$, so [Lemma L30](../findings/stratum-two-negative.md)'s $U$ is four-dimensional and $r=4$. **The three lines are real.**
+**And the closure L29 needs goes through.** Equality in L29 forces $T_{1,N-1,N}=2$; since $T_{1,N-1,N}\le\sum_\gamma T_{1,N-1,\gamma}=\lVert[v_1,v_{N-1}]\rVert^2\le2$, the pair saturates, and by total symmetry of $T$ so does $(v_{N-1},v_N)$. L31's "only if" then gives $\mathop{\mathrm{im}}v_{N-1}=\mathop{\mathrm{im}}v_N$ of dimension $4$, so [Lemma L30](../findings/stratum-two-negative.md)'s $U$ is four-dimensional and $r=4$. **The three lines are real.**
 
 ## Q2, all three conditions are independent, and none is missing
 
@@ -53,11 +53,11 @@ Each witness below kills one condition while satisfying the other two *and* orth
 | --- | --- | --- | --- |
 | $XY=-YX$ | $X=I_1/\sqrt2$ self-dual, $Y=J_1/\sqrt2$ anti-self-dual on $\mathbb R^4$, these **commute** | yes: both rank $4$, all singular values $1/\sqrt2$, images both $\mathbb R^4$, and $\langle X,Y\rangle=0$ | $0$ |
 | rank $4$ with equal singular values | $X=\varphi_{12}$, $Y=\varphi_{34}$ | yes: $XY=YX=0$ so they anticommute; orthonormal | $0$ |
-| $\operatorname{im}X=\operatorname{im}Y$ | $I_1/\sqrt2$ on $\mathbb R^4\oplus0$ and on $0\oplus\mathbb R^4$ inside $\mathfrak{so}(8)$ | yes: anticommute, both rank $4$ with singular values $1/\sqrt2$ | $0$ |
+| $\mathop{\mathrm{im}}X=\mathop{\mathrm{im}}Y$ | $I_1/\sqrt2$ on $\mathbb R^4\oplus0$ and on $0\oplus\mathbb R^4$ inside $\mathfrak{so}(8)$ | yes: anticommute, both rank $4$ with singular values $1/\sqrt2$ | $0$ |
 
 The self-dual/anti-self-dual pair is the sharp one: it is the reason the anticommuting clause **cannot** be deduced from "rank $4$, equal singular values, equal images, orthonormal", which is the deduction a reader in a hurry would make.
 
-**Orthonormality is redundant in the "only if" direction**: $XY=-YX$ gives $\operatorname{tr}(XY)=0$, hence $\langle X,Y\rangle=0$; and rank $4$ with singular values $1/\sqrt2$ already gives $\lVert X\rVert^2=1$. Harmless as a hypothesis, and it is how the consumers supply the pair anyway.
+**Orthonormality is redundant in the "only if" direction**: $XY=-YX$ gives $\mathop{\mathrm{tr}}(XY)=0$, hence $\langle X,Y\rangle=0$; and rank $4$ with singular values $1/\sqrt2$ already gives $\lVert X\rVert^2=1$. Harmless as a hypothesis, and it is how the consumers supply the pair anyway.
 
 ## Q4, the range of $n$
 
@@ -100,7 +100,7 @@ At `a9e4b8c0^` (the parent of the commit *"refactor(results): the proofs move to
 
 **3. The index in the consuming sentence slips mid-clause.** [stratum-two-negative.md:82](../findings/stratum-two-negative.md) reads
 
-> *"equality forces $T_{1,N-1,N}=2$, hence $\lVert[v_2,v_3]\rVert^2=2$, hence $\operatorname{im}v_2=\operatorname{im}v_3$ of dimension $4$"*
+> *"equality forces $T_{1,N-1,N}=2$, hence $\lVert[v_2,v_3]\rVert^2=2$, hence $\mathop{\mathrm{im}}v_2=\mathop{\mathrm{im}}v_3$ of dimension $4$"*
 
 the triple is indexed $1,N-1,N$ and the pair is then indexed $2,3$. The mathematics is right under the reading "$v_2,v_3$ = the second and third support vectors = $v_{N-1},v_N$", and $v_{N-1},v_N$ is the pair the conclusion actually needs, since [Lemma L30](../findings/stratum-two-negative.md)'s $U$ is built from the two negative eigenvectors. **Written as it stands it names a pair that does not exist in the sentence's own indexing.** [LEDGER.md:912](../findings/LEDGER.md) repeats it verbatim.
 
@@ -108,7 +108,7 @@ the triple is indexed $1,N-1,N$ and the pair is then indexed $2,3$. The mathemat
 
 **5. No range of $n$ is stated.** Correct as written (see Q4), but a reader checking the $4$-plane witness has to establish the vacuity at $n\le3$ himself.
 
-**6. A consumer under-uses the lemma.** [stratum-two-negative.md:200](../findings/stratum-two-negative.md) argues *"the bracket cap forces both to rank $4$, so the sum has rank $\le8<n$ and $\epsilon_{\min}=0$"*. L31 gives $\operatorname{im}X=\operatorname{im}Y$, so the sum has rank exactly $4$ and the conclusion holds at every $n\ge5$ rather than only $n\ge9$. True as written, weaker than what is available.
+**6. A consumer under-uses the lemma.** [stratum-two-negative.md:200](../findings/stratum-two-negative.md) argues *"the bracket cap forces both to rank $4$, so the sum has rank $\le8<n$ and $\epsilon_{\min}=0$"*. L31 gives $\mathop{\mathrm{im}}X=\mathop{\mathrm{im}}Y$, so the sum has rank exactly $4$ and the conclusion holds at every $n\ge5$ rather than only $n\ge9$. True as written, weaker than what is available.
 
 ## What the parent checked, re-checked
 
@@ -116,7 +116,7 @@ The quaternionic witness and the $\lVert[\varphi_{12},\varphi_{13}]\rVert^2=1$ c
 
 ## Screen
 
-*Permitted screening only, seconds of compute on objects I constructed for the purpose, reported as a screen and never as evidence for a positive claim.* In the record's own half-trace pairing: $\lVert\operatorname{ad}_X\rVert_{\rm op}^2$ agreed with $(s_1+s_2)^2$ to twelve digits on four angle profiles at $n=6$ and $n=7$; the quaternionic pair returned exactly $2$ with anticommutator residual $0$; and the three independence witnesses returned bracket norm $0$ with the stated ranks, singular values and orthonormality. Nothing in the screen disagrees with the derivations above, and the derivations stand on their own.
+*Permitted screening only, seconds of compute on objects I constructed for the purpose, reported as a screen and never as evidence for a positive claim.* In the record's own half-trace pairing: $\lVert\mathop{\mathrm{ad}}_X\rVert_{\rm op}^2$ agreed with $(s_1+s_2)^2$ to twelve digits on four angle profiles at $n=6$ and $n=7$; the quaternionic pair returned exactly $2$ with anticommutator residual $0$; and the three independence witnesses returned bracket norm $0$ with the stated ranks, singular values and orthonormality. Nothing in the screen disagrees with the derivations above, and the derivations stand on their own.
 
 ## Adjacent, out of scope, flagged not fixed
 

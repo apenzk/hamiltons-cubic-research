@@ -20,16 +20,16 @@ I read [conventions.md](../findings/conventions.md) in full. The conventions tha
 
 | item | reading adopted | why it does not bite |
 | --- | --- | --- |
-| the $\Lambda^2$ pairing | $\langle X,Y\rangle=\tfrac12\operatorname{tr}(X^{\mathsf T}Y)$, the half-trace, so $\{\varphi_{ab}\}_{a<b}$ is orthonormal | **inert here.** The whole argument is about the *rank* of a Gram matrix. Rescaling the pairing by $c\ne0$ rescales every entry of $\langle g_aW_0,g_bW_0\rangle^3$ by $c^3$, a global unit, and rank is unchanged. $p$ is odd and does not divide the small constants in play |
+| the $\Lambda^2$ pairing | $\langle X,Y\rangle=\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$, the half-trace, so $\{\varphi_{ab}\}_{a<b}$ is orthonormal | **inert here.** The whole argument is about the *rank* of a Gram matrix. Rescaling the pairing by $c\ne0$ rescales every entry of $\langle g_aW_0,g_bW_0\rangle^3$ by $c^3$, a global unit, and rank is unchanged. $p$ is odd and does not divide the small constants in play |
 | $W_0$'s normalisation | $W_0$ is the padded $W_{\mathbb{CP}^2}$, $\Lambda^2$-spectrum $(2,-1,-1,0^7)/\sqrt6$ | **inert.** [orbit_span.sage](../scripts/reviewers/r178/orbit_span.sage) works at spectrum $(4,-2,-2,0^7)$ unnormalised; scaling $W_0$ scales the span's spanning set and moves no dimension |
 | $\Pi$ | none of the four senses is in play in this block |, |
-| $B$ | neither the Killing form nor the second-order operator is in play; this file's own $B(X,Y)=-\tfrac12\operatorname{tr}(XY)$ on $\mathfrak{so}(5)$ appears only in the header material above L83 |, |
+| $B$ | neither the Killing form nor the second-order operator is in play; this file's own $B(X,Y)=-\tfrac12\mathop{\mathrm{tr}}(XY)$ on $\mathfrak{so}(5)$ appears only in the header material above L83 |, |
 | the $O(5)$ versus $SO(5)$ question | $-\mathrm{Id}$ acts trivially on $\mathcal W_5$, so $O(5)\cdot W_0=SO(5)\cdot W_0$ and the two spans coincide | stated in [L86](../findings/sym3-blocks.md) and in [r170](REVIEW_r170.md); I checked it independently, $\mathcal W_5\subset V^{\otimes4}$, so $-\mathrm{Id}$ acts by $(-1)^4$ |
 | the weight-label basis | the $e$-basis, as in [L83](../findings/sym3-blocks.md)'s table; *"$\lambda_2$ even"* means the second $e$-basis label | in the $\omega$-basis the parity statement is a different statement; [r663](REVIEW_r663.md)/[r664](REVIEW_r664.md) already flagged that the basis is unstated in L83, and L87 inherits the silence |
 
 ## What the block actually claims, restated so the halves separate
 
-Write $U=\operatorname{span}\{(gW_0)^{\otimes3}:g\in O(5)\}\subseteq\mathrm{Sym}^3(\mathcal W_5)$, and $K=U^\perp$ the cubics vanishing on the orbit. Decompose $\mathrm{Sym}^3(\mathcal W_5)=\bigoplus_\lambda M_\lambda\otimes V_\lambda$, $\dim M_\lambda=m_\lambda$. Then $U$'s $\lambda$-part is $N_\lambda\otimes V_\lambda$ for some $N_\lambda\subseteq M_\lambda$, and the claim *"block $\lambda$ loses exactly one multiplicity"* is $\dim N_\lambda=1$.
+Write $U=\mathop{\mathrm{span}}\{(gW_0)^{\otimes3}:g\in O(5)\}\subseteq\mathrm{Sym}^3(\mathcal W_5)$, and $K=U^\perp$ the cubics vanishing on the orbit. Decompose $\mathrm{Sym}^3(\mathcal W_5)=\bigoplus_\lambda M_\lambda\otimes V_\lambda$, $\dim M_\lambda=m_\lambda$. Then $U$'s $\lambda$-part is $N_\lambda\otimes V_\lambda$ for some $N_\lambda\subseteq M_\lambda$, and the claim *"block $\lambda$ loses exactly one multiplicity"* is $\dim N_\lambda=1$.
 
 The block asserts three things and they have three different statuses.
 
@@ -74,9 +74,9 @@ $\langle X^{\otimes3},Y^{\otimes3}\rangle=\langle X,Y\rangle^3$, so the $3700\ti
 
 The brief asks specifically. They do, and I checked each junction for a reversal:
 
-$$3570=\operatorname{rank}_{\mathbb F_p}(\text{Gram})\ \overset{(1)}{\le}\ \dim_{\mathbb F_p}\operatorname{span}\{(g_aW_0)^{\otimes3}\}\ \overset{(2)}{\le}\ \dim\operatorname{span}\Phi(SO_5)_{\overline{\mathbb F_p}}\ \overset{(3)}{\le}\ \dim_{\mathbb C}U\ \overset{(4)}{\le}\ 3570 .$$
+$$3570=\mathop{\mathrm{rank}}_{\mathbb F_p}(\text{Gram})\ \overset{(1)}{\le}\ \dim_{\mathbb F_p}\mathop{\mathrm{span}}\{(g_aW_0)^{\otimes3}\}\ \overset{(2)}{\le}\ \dim\mathop{\mathrm{span}}\Phi(SO_5)_{\overline{\mathbb F_p}}\ \overset{(3)}{\le}\ \dim_{\mathbb C}U\ \overset{(4)}{\le}\ 3570 .$$
 
-- **(1)** In characteristic $p$ the form can be degenerate on the row space, so $\operatorname{rank}(VV^{\mathsf T})\le\operatorname{rank}(V)$ and the Gram trick can only **under**-report. That is the safe direction here, since we want a lower bound on the span. *This is the one place a squeeze of this shape usually goes wrong and it does not go wrong.*
+- **(1)** In characteristic $p$ the form can be degenerate on the row space, so $\mathop{\mathrm{rank}}(VV^{\mathsf T})\le\mathop{\mathrm{rank}}(V)$ and the Gram trick can only **under**-report. That is the safe direction here, since we want a lower bound on the span. *This is the one place a squeeze of this shape usually goes wrong and it does not go wrong.*
 - **(2)** A finite sample spans no more than the whole image.
 - **(3)** is the step the block gets wrong. See below.
 - **(4)** is the cap, and it is the theorem, **on the full parity rule, not on the $\le1$ the block names.**
@@ -85,7 +85,7 @@ The chain closes, so every $\dim N_\lambda$ is $1$ on the sixteen. *Exactly one*
 
 ### Step (3) is not the step the block states
 
-The block's warrant is *"a mod-$p$ rank is a lower bound for the characteristic-zero span"*. That is true of $\operatorname{rank}_{\mathbb F_p}(\bar A)\le\operatorname{rank}_{\mathbb Q}(A)$ **for a fixed integral $A$**. The matrix here is not one. Reading [orbit_span.sage](../scripts/reviewers/r178/orbit_span.sage): $p$ is fixed first, then
+The block's warrant is *"a mod-$p$ rank is a lower bound for the characteristic-zero span"*. That is true of $\mathop{\mathrm{rank}}_{\mathbb F_p}(\bar A)\le\mathop{\mathrm{rank}}_{\mathbb Q}(A)$ **for a fixed integral $A$**. The matrix here is not one. Reading [orbit_span.sage](../scripts/reviewers/r178/orbit_span.sage): $p$ is fixed first, then
 
 ```
 A random skew over F_p ;  B = I + A ;  g = (I - A) B^{-1}  ;  check g g^T = I
@@ -93,7 +93,7 @@ A random skew over F_p ;  B = I + A ;  g = (I - A) B^{-1}  ;  check g g^T = I
 
 so the $3700$ group elements live in the finite group $SO(5,\mathbb F_p)$ and are **not** reductions of characteristic-zero rotations. There is no integral matrix of which the sampled rows are the reduction, so the quoted one-liner has nothing to reduce. The script's own header makes the same too-quick claim.
 
-**The conclusion is nonetheless correct, by a different argument, and it is short enough that the block should carry it.** $W_0$ is integral and $SO_5$ is smooth over $\mathbb Z[\tfrac12]$. Let $\Lambda:\mathrm{Sym}^3(\mathcal W_5)^*\to\mathbb Z[\tfrac12][SO_5]$ send $f$ to the regular function $g\mapsto f(gW_0)$; fix $\mathbb Z[\tfrac12]$-bases and let $L$ be its matrix. Over any field $k$ of characteristic $\ne2$, $SO_{5,k}$ is reduced, so $f$ kills the whole image iff $L_kf=0$; hence $\dim_k\operatorname{span}\Phi(SO_{5,k})=\operatorname{rank}(L_k)$. Rank drops on reduction, so $\operatorname{rank}(L_{\mathbb F_p})\le\operatorname{rank}(L_{\mathbb Q})=\dim U$, and (2)–(3) compose. **Two lines, and they are the load-bearing two.**
+**The conclusion is nonetheless correct, by a different argument, and it is short enough that the block should carry it.** $W_0$ is integral and $SO_5$ is smooth over $\mathbb Z[\tfrac12]$. Let $\Lambda:\mathrm{Sym}^3(\mathcal W_5)^*\to\mathbb Z[\tfrac12][SO_5]$ send $f$ to the regular function $g\mapsto f(gW_0)$; fix $\mathbb Z[\tfrac12]$-bases and let $L$ be its matrix. Over any field $k$ of characteristic $\ne2$, $SO_{5,k}$ is reduced, so $f$ kills the whole image iff $L_kf=0$; hence $\dim_k\mathop{\mathrm{span}}\Phi(SO_{5,k})=\mathop{\mathrm{rank}}(L_k)$. Rank drops on reduction, so $\mathop{\mathrm{rank}}(L_{\mathbb F_p})\le\mathop{\mathrm{rank}}(L_{\mathbb Q})=\dim U$, and (2)–(3) compose. **Two lines, and they are the load-bearing two.**
 
 ### Is the sample's exactness guaranteed?
 
@@ -155,14 +155,14 @@ Partly, and against the block. Above: L86 states the objection and the answer, a
 **They may rest on L87 as they do. The dependency is real, correct and acyclic, and it is a dependency on a measurement.**
 
 - **[L59](../findings/sym3-blocks.md)** needs *"an even one keeps $u\otimes v+v\otimes u$, $K$ having codimension $1$ there"*. Codimension **exactly** one is L87's conclusion; the proved half gives only codimension $\le1$, under which $36$ becomes a lower bound on the unknowns and $29$ an upper bound on the forms killing $K\times K$, and the clean split $65=36+29$ becomes an inequality in both directions. **So L59's strongest and best-verified sentence rests entirely on L87's measured half.**
-- **[L62](../findings/sym3-blocks.md)** needs L59's apolarity to turn $\operatorname{rank}=13$ into $\dim\mathrm{ANN}=1$, and needs the $36$ for *"the affine family is $36-13=23$ dimensional"*. Its own $\operatorname{rank}\ge13$ is a **second** mod-$p$ attained-cap measurement, at $40$ points and two primes.
+- **[L62](../findings/sym3-blocks.md)** needs L59's apolarity to turn $\mathop{\mathrm{rank}}=13$ into $\dim\mathrm{ANN}=1$, and needs the $36$ for *"the affine family is $36-13=23$ dimensional"*. Its own $\mathop{\mathrm{rank}}\ge13$ is a **second** mod-$p$ attained-cap measurement, at $40$ points and two primes.
 
 **So the chain carries exactly two measured links, and they are the same failure mode twice:**
 
 | link | what is proved | what is measured | recorded as measured? |
 | --- | --- | --- | --- |
-| **L87** | cap $\dim U\le3570$ | $\operatorname{rank}_{\mathbb F_{46337}}=3570$, $3700$ points, one prime, one seed | **no**, the block says "proved" |
-| **L62** | cap $\operatorname{rank}\le13$ | $\operatorname{rank}=13$ at $40$ points, $p=1000033$ and $p=1000003$ | **yes**, since [r633](REVIEW_r633.md)/[r634](REVIEW_r634.md) |
+| **L87** | cap $\dim U\le3570$ | $\mathop{\mathrm{rank}}_{\mathbb F_{46337}}=3570$, $3700$ points, one prime, one seed | **no**, the block says "proved" |
+| **L62** | cap $\mathop{\mathrm{rank}}\le13$ | $\mathop{\mathrm{rank}}=13$ at $40$ points, $p=1000033$ and $p=1000003$ | **yes**, since [r633](REVIEW_r633.md)/[r634](REVIEW_r634.md) |
 
 The companion audit's finding is confirmed in full. I add one thing it did not have: **the two links are unequally supported.** L62's is two primes with a deliberately chosen second and an independent code path; L87's is one prime and one run, guarded only by three floating-point agreements the block does not cite. **If either link is the weaker, it is L87's**, which is the one the record calls proved.
 

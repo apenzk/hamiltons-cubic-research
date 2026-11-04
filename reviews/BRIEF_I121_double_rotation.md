@@ -6,7 +6,7 @@
 
 - Operators are symmetric linear maps $R$ on $\Lambda^2\mathbb R^n$ with the Hilbert–Schmidt norm, in the basis $e_{ab}=e_a\wedge e_b$, $a<b$, of an orthonormal frame; $a_{ab}=R_{ab,ab}$ are the diagonal entries and the **diagonal mass** is $\sum_{a<b}a_{ab}^2$. $g\in O(n)$ acts by $R\mapsto\hat gR\hat g^{\mathsf T}$ with $\hat g=\Lambda^2g$.
 - **A frame globally maximises the diagonal mass of $W$** when no $g\in O(n)$ gives $\hat gW\hat g^{\mathsf T}$ a larger diagonal mass in that frame.
-- Weyl operators satisfy the first Bianchi identity $W_{12,34}+W_{13,42}+W_{14,23}=0$ and $\operatorname{Ric}=0$.
+- Weyl operators satisfy the first Bianchi identity $W_{12,34}+W_{13,42}+W_{14,23}=0$ and $\mathop{\mathrm{Ric}}=0$.
 
 ## The claims
 
@@ -18,7 +18,7 @@
 
 ## The double-rotation inequality: frame maximality bounds a four-set block by the diagonal's rectangle difference
 
-**Derived here, screened, owed Gate 2 and Lean.** Fix four indices, written $1,2,3,4$, and rotate by $\theta_1$ in the plane $(1,2)$ and by $\theta_2$ in the plane $(3,4)$. On $\operatorname{span}\{e_{13},e_{14},e_{23},e_{24}\}\cong\mathbb R^2\otimes\mathbb R^2$ write the $4\times4$ block of $W$ in the products of $I$, $Z=\operatorname{diag}(1,-1)$, $X=\left(\begin{smallmatrix}0&1\\1&0\end{smallmatrix}\right)$ and $J\otimes J$. Conjugation rotates the $(Z,X)$ pair in each factor by twice the angle and fixes $I$ and $J\otimes J$, and the diagonal mass of the block is $4(\alpha_{II}^2+\alpha_{IZ}^2+\alpha_{ZI}^2+\alpha_{ZZ}^2)$. **The four-set block enters only through $\alpha_{XX}=\tfrac12(W_{13,24}+W_{14,23})$, and it trades with $\alpha_{ZZ}=\tfrac14\square$, $\square=a_{13}-a_{14}-a_{23}+a_{24}$, the rectangle difference of the diagonal.** At $\theta_1=\theta_2=\tfrac\pi4$ the two exchange completely, and the whole change of the diagonal mass is, exactly,
+**Derived here, screened, owed Gate 2 and Lean.** Fix four indices, written $1,2,3,4$, and rotate by $\theta_1$ in the plane $(1,2)$ and by $\theta_2$ in the plane $(3,4)$. On $\mathop{\mathrm{span}}\{e_{13},e_{14},e_{23},e_{24}\}\cong\mathbb R^2\otimes\mathbb R^2$ write the $4\times4$ block of $W$ in the products of $I$, $Z=\mathop{\mathrm{diag}}(1,-1)$, $X=\left(\begin{smallmatrix}0&1\\1&0\end{smallmatrix}\right)$ and $J\otimes J$. Conjugation rotates the $(Z,X)$ pair in each factor by twice the angle and fixes $I$ and $J\otimes J$, and the diagonal mass of the block is $4(\alpha_{II}^2+\alpha_{IZ}^2+\alpha_{ZI}^2+\alpha_{ZZ}^2)$. **The four-set block enters only through $\alpha_{XX}=\tfrac12(W_{13,24}+W_{14,23})$, and it trades with $\alpha_{ZZ}=\tfrac14\square$, $\square=a_{13}-a_{14}-a_{23}+a_{24}$, the rectangle difference of the diagonal.** At $\theta_1=\theta_2=\tfrac\pi4$ the two exchange completely, and the whole change of the diagonal mass is, exactly,
 $$(v+w)^2-\tfrac14\square^2+\big[(x^{34}_1+x^{34}_2)^2-(\delta^{34}_1+\delta^{34}_2)^2\big]+\big[(x^{12}_3+x^{12}_4)^2-(\delta^{12}_3+\delta^{12}_4)^2\big]+2\sum_{m\ge5}\big[(x^{12}_m)^2-(\delta^{12}_m)^2+(x^{34}_m)^2-(\delta^{34}_m)^2\big],$$
 with $v=W_{13,24}$, $w=W_{14,23}$, $x^{ij}_m=W_{im,jm}$ and $\delta^{ij}_m=\tfrac12(a_{im}-a_{jm})$. **In a frame that globally maximises the diagonal mass this is $\le0$**, so $(v+w)^2$ is bounded by $\tfrac14\square^2$ plus pair-block slack. The other two pairings of $\{1,2,3,4\}$ bound $u-w$ and $u+v$ (up to sign, $u=W_{12,34}$) the same way, and with Bianchi $u-v+w=0$ the three together control the whole four-set block.
 

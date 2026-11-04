@@ -9,8 +9,8 @@
 | 1 | Hard Lefschetz on a symplectic vector space is linear algebra, needing only nondegeneracy | **CORRECT, AND IT IS THE VECTOR-SPACE STATEMENT. THE RANGE IS OMITTED: THE ISOMORPHISM IS $L^{m-k}:\Lambda^k\to\Lambda^{2m-k}$ FOR $0\le k\le m$ ONLY** |
 | 2 | $L:\Lambda^2\to\Lambda^4$ is injective at every $m\ge3$ because $L^{m-2}$ factors through it | **CORRECT. THE ISOMORPHISM NEEDS $m\ge2$, THE FACTORING NEEDS $m\ge3$, AND AT $m=3$ IT IS THE TRIVIAL FACTORING $L^1=\mathrm{id}\circ L$** |
 | 3 | At $m=2$, $L$ maps six dimensions to one and is never injective, which is where the witness lives | **CORRECT AND UNDER-STATED. $\ker L_\gamma$ IS THE FIVE-PLANE $(\star\gamma)^\perp$, THE WITNESS'S $\alpha$ LIES IN IT, AND $\alpha$ IS NONDEGENERATE, WHICH IS THE SHARP FAILURE. THE PRIORITY CLAIM IS RHETORIC** |
-| 4 | $\omega_2=\pm\omega_1$ contradicts trace-orthogonality | **CORRECT. $\langle\omega_1,\omega_2\rangle=\pm m\ne0$ AT EVERY $m\ge1$, AND THE BLOCK'S $\operatorname{tr}(J_1J_2)=\mp2m$ CARRIES THE RIGHT SIGN** |
-| 5 | $T=-J_1J_2$ orthogonal, $J_1\pm J_2=J_1(I\pm T)$, and $\operatorname{tr}T=0$ is trace-orthogonality | **ALL THREE CORRECT AND THE SIGN ASSIGNMENT IS RIGHT: $J_1-J_2$ SINGULAR IS $+1\in\operatorname{spec}T$. THE IDENTITY $\operatorname{tr}T=2\langle\omega_1,\omega_2\rangle$ IS INDEPENDENT OF WHICH OF THE TWO $\omega_J$ SIGN CONVENTIONS IS USED** |
+| 4 | $\omega_2=\pm\omega_1$ contradicts trace-orthogonality | **CORRECT. $\langle\omega_1,\omega_2\rangle=\pm m\ne0$ AT EVERY $m\ge1$, AND THE BLOCK'S $\mathop{\mathrm{tr}}(J_1J_2)=\mp2m$ CARRIES THE RIGHT SIGN** |
+| 5 | $T=-J_1J_2$ orthogonal, $J_1\pm J_2=J_1(I\pm T)$, and $\mathop{\mathrm{tr}}T=0$ is trace-orthogonality | **ALL THREE CORRECT AND THE SIGN ASSIGNMENT IS RIGHT: $J_1-J_2$ SINGULAR IS $+1\in\mathop{\mathrm{spec}}T$. THE IDENTITY $\mathop{\mathrm{tr}}T=2\langle\omega_1,\omega_2\rangle$ IS INDEPENDENT OF WHICH OF THE TWO $\omega_J$ SIGN CONVENTIONS IS USED** |
 | 6 | $J_1TJ_1^{-1}=T^{-1}$, hence $E_\pm$ are $J_1$-invariant and even-dimensional | **DERIVATION CORRECT. EVENNESS IS $J_1^2=-I$ ON AN INVARIANT PIECE AND USES NOTHING OF $T$. ORTHOGONALITY OF $T$ IS LOAD-BEARING ELSEWHERE, FOR $E_+\perp E_-\perp R$ AND FOR $R$ TO EXIST AT ALL** |
 | 7 | $J_2=J_1$ on $E_+$ and $J_2=-J_1$ on $E_-$ | **BOTH CORRECT. $E_\pm$ ARE $J_2$-INVARIANT AUTOMATICALLY, AND THAT IS NEEDED, THOUGH THE SHORTER ROUTE IS $\ker\alpha=E_+$ AND $\ker\beta=E_-$ EXACTLY** |
 | 8 | $\alpha$ is $2\omega_1$ on $E_-$ and zero on $E_+$, cross terms vanishing by invariance and orthogonality | **THE STATED REASON IS THE RIGHT ONE AND IT COVERS THE $R$ CROSS TERMS TOO. INCOMPLETE AS A DESCRIPTION OF $\alpha$: THE $\Lambda^2R$ BLOCK IS OMITTED, AND THE NEXT PARAGRAPH SILENTLY RESTORES IT** |
@@ -18,7 +18,7 @@
 | 10 | The surviving shape is $\pm1$ present with even multiplicity and $R\ne0$, at all three pairs at once | **THE INHERITANCE TO THREE PAIRS IS CORRECT. THE SHAPE IS EMPTY, SO THE CONCLUSION IS VOID. THE CHEAP FACT AT $m=4$ IS THE COCYCLE $T_{12}T_{23}=T_{13}$, WHICH IS NOT NEEDED** |
 | 11 | Falsifiers | **NAMED. THE SECOND ONE EXISTS AND IS D1** |
 | **D1** | "If $R=0$ then ... What survives the whole Lefschetz route is therefore: both $\pm1$ eigenvalues present, each with even multiplicity, AND a nontrivial rotation part, at all three pairs at once" | **REAL, AS A COMPLETENESS DEFECT RATHER THAN AN ERROR. THE SAME COMPONENT COMPUTATION WITH $R\ne0$ FORCES $E_+=0$ OR $E_-=0$, SO ONE OF $\alpha,\beta$ IS NONDEGENERATE AND THE BLOCK'S OWN LEFSCHETZ STEP CLOSES THE BRANCH. NOTHING SURVIVES AT ANY $m\ge3$** |
-| **D2** | $\operatorname{tr}T=0$ "permits both and forbids neither" | **TRUE AND A STRICT WEAKENING. IN FULL IT READS $p-q+\sum_j\cos\theta_j=0$, WHICH FORCES $\dim E_+=\dim E_-=m$ WHENEVER $R=0$ AND FORBIDS $R=0$ OUTRIGHT AT ODD $m$** |
+| **D2** | $\mathop{\mathrm{tr}}T=0$ "permits both and forbids neither" | **TRUE AND A STRICT WEAKENING. IN FULL IT READS $p-q+\sum_j\cos\theta_j=0$, WHICH FORCES $\dim E_+=\dim E_-=m$ WHENEVER $R=0$ AND FORBIDS $R=0$ OUTRIGHT AT ODD $m$** |
 
 ## One line someone can act on
 
@@ -28,10 +28,10 @@
 
 | object | reading used here | source |
 |---|---|---|
-| inner product on $2$-forms | $\langle X,Y\rangle=\tfrac12\operatorname{tr}(X^{\mathsf T}Y)$ | brief, and [conventions.md](../findings/conventions.md) |
+| inner product on $2$-forms | $\langle X,Y\rangle=\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$ | brief, and [conventions.md](../findings/conventions.md) |
 | complex structure | $J$ orthogonal and skew, so $J^2=-I$ and $J^{\mathsf T}=-J=J^{-1}$ | brief |
 | the $2$-form of $J$ | $\omega_J(x,y)=\langle Jx,y\rangle$, so its matrix is $(\omega_J)_{ij}=\langle Je_i,e_j\rangle=J_{ji}$, that is $J^{\mathsf T}=-J$ | brief |
-| norm | $\lVert\omega_J\rVert^2=\tfrac12\operatorname{tr}(J^{\mathsf T}J)=\tfrac12\operatorname{tr}I=m$ | brief, checked |
+| norm | $\lVert\omega_J\rVert^2=\tfrac12\mathop{\mathrm{tr}}(J^{\mathsf T}J)=\tfrac12\mathop{\mathrm{tr}}I=m$ | brief, checked |
 | the wedge of two $2$-forms | $(a\wedge b)_{ijkl}=\tfrac12\big(a_{ij}b_{kl}+b_{ij}a_{kl}-a_{ik}b_{jl}-b_{ik}a_{jl}+a_{il}b_{jk}+b_{il}a_{jk}\big)$, the `wbil` of [PhiSphere.lean](../lean/HamiltonsCubic/Results/PhiSphere.lean) | Lean file on disk |
 | symmetry | manifest in that formula, and $(a-b)\wedge(a+b)=a\wedge a-b\wedge b$ is `wbil_sub_add` | Lean file on disk |
 | $L_\gamma$ | $\gamma\wedge\cdot$, in any fixed normalisation of $\wedge$, every claim below being invariant under rescaling $\wedge$ | block |
@@ -49,7 +49,7 @@
 | 5, 6, 7 | $J_1^2=J_2^2=-I$, and $T$ orthogonal for the orthogonal splitting only | trace-orthogonality, the wedge hypothesis |
 | 8, the block structure | $E_+\perp E_-\perp R$, each $J_1$- and $J_2$-invariant | $R=0$ |
 | 9 as the block writes it | all of the above plus $R=0$ | trace-orthogonality |
-| 9 as it should be written (D1) | all of the above, **and nothing about $R$** | $R=0$, trace-orthogonality, $\operatorname{tr}T=0$ |
+| 9 as it should be written (D1) | all of the above, **and nothing about $R$** | $R=0$, trace-orthogonality, $\mathop{\mathrm{tr}}T=0$ |
 
 **Trace-orthogonality is spent exactly once in the whole route, at the last line of item 4.** Everything before it holds for any two orthogonal complex structures with a common self-wedge, which is why D1's theorem below carries no orthogonality hypothesis.
 
@@ -59,7 +59,7 @@
 
 **Proof, self-contained.** Let $(W,\gamma)$ be symplectic of dimension $2m$ over $\mathbb R$. Choose a symplectic basis, so $\gamma=\sum_{i=1}^m e^i\wedge f^i$. Then
 $$\Lambda^\bullet W^*\;=\;\bigotimes_{i=1}^m\Lambda^\bullet\langle e^i,f^i\rangle,$$
-each factor four-dimensional with basis $1,\ e^i,\ f^i,\ e^i\wedge f^i$. Set $L=\gamma\wedge\cdot=\sum_iL_i$ with $L_i=e^i\wedge f^i\wedge\cdot$, which acts only on the $i$-th factor. Inside that factor, $L_i$ sends $1\mapsto e^i\wedge f^i$ and kills $e^i\wedge f^i$, $e^i$ and $f^i$. So $\operatorname{span}\{1,e^i\wedge f^i\}$ is the two-dimensional irreducible $\mathfrak{sl}_2$-module $V_1$ with weights $-1,+1$, and $e^i,f^i$ each span a trivial module $V_0$ of weight $0$. Hence
+each factor four-dimensional with basis $1,\ e^i,\ f^i,\ e^i\wedge f^i$. Set $L=\gamma\wedge\cdot=\sum_iL_i$ with $L_i=e^i\wedge f^i\wedge\cdot$, which acts only on the $i$-th factor. Inside that factor, $L_i$ sends $1\mapsto e^i\wedge f^i$ and kills $e^i\wedge f^i$, $e^i$ and $f^i$. So $\mathop{\mathrm{span}}\{1,e^i\wedge f^i\}$ is the two-dimensional irreducible $\mathfrak{sl}_2$-module $V_1$ with weights $-1,+1$, and $e^i,f^i$ each span a trivial module $V_0$ of weight $0$. Hence
 $$\Lambda^\bullet W^*\;\cong\;(V_1\oplus V_0\oplus V_0)^{\otimes m}$$
 as $\mathfrak{sl}_2$-modules, with $L$ the raising operator, the lowering operator $\Lambda$ the corresponding factorwise contraction, and $H=[L,\Lambda]$ acting on $\Lambda^kW^*$ as $k-m$ (add the weights: degree $0$ contributes $-1$, degree $2$ contributes $+1$, degree $1$ contributes $0$, over $m$ factors). Hard Lefschetz is then the standard $\mathfrak{sl}_2$ fact that in a finite-dimensional module over a field of characteristic zero the map $E^n$ from the weight $-n$ space to the weight $+n$ space is an isomorphism for every $n\ge0$.
 
@@ -87,7 +87,7 @@ $L^{m-2}:\Lambda^2\to\Lambda^{2m-2}$ is an isomorphism by item 1, which requires
 
 **What $\ker L$ is.** On $\Lambda^2\mathbb R^4$ the wedge defines a symmetric bilinear form $q$ by $\eta\wedge\zeta=q(\eta,\zeta)\,\mathrm{vol}$. It is nondegenerate of signature $(3,3)$: $\Lambda^+$ is positive definite, since $(e^{12}+e^{34})\wedge(e^{12}+e^{34})=2\,e^{1234}$, and $\Lambda^-$ negative definite, since $(e^{12}-e^{34})\wedge(e^{12}-e^{34})=-2\,e^{1234}$. Since $q(\eta,\zeta)$ is a positive multiple of $\langle\eta,\star\zeta\rangle$,
 $$\ker L_\gamma=\{\eta:\gamma\wedge\eta=0\}=(\star\gamma)^{\perp}\quad\text{in the Euclidean metric},$$
-a **five-dimensional hyperplane** whenever $\gamma\ne0$. The map $L_\gamma$ is nonzero precisely when $\gamma$ is nondegenerate, since $\gamma\wedge\gamma=2\operatorname{Pf}(\gamma)\,\mathrm{vol}$, so the kernel is exactly five-dimensional there.
+a **five-dimensional hyperplane** whenever $\gamma\ne0$. The map $L_\gamma$ is nonzero precisely when $\gamma$ is nondegenerate, since $\gamma\wedge\gamma=2\mathop{\mathrm{Pf}}(\gamma)\,\mathrm{vol}$, so the kernel is exactly five-dimensional there.
 
 **Whether the quaternionic triple's $\alpha$ lies in it.** Yes, and this is the sharp form of the exception. Take $\omega_1,\omega_2,\omega_3$ the quaternionic triple, each of norm $\sqrt2$ in $\Lambda^+$. Put $\beta=\omega_1+\omega_2$ and $\alpha=\omega_1-\omega_2$. Then $\beta\in\Lambda^+$, so $\star\beta=\beta$ and $\ker L_\beta=\beta^\perp$, and $\langle\alpha,\beta\rangle=\lVert\omega_1\rVert^2-\lVert\omega_2\rVert^2=0$, so $\alpha\in\ker L_\beta$. **Both $\alpha$ and $\beta$ are nondegenerate**, every nonzero element of $\Lambda^+$ being so, since $\eta\wedge\eta=\lVert\eta\rVert^2\mathrm{vol}$ there. *Screened: $\det\alpha=\det\beta=4$ and $\alpha\wedge\beta=0$ exactly.*
 
@@ -106,8 +106,8 @@ $\alpha\wedge\beta=0$ with $\beta$ nondegenerate reads $L_\beta(\alpha)=0$, and 
 $\alpha=0$ is $\omega_2=\omega_1$, hence $J_2=J_1$. And $\beta=0$ is $\omega_2=-\omega_1$, hence $J_2=-J_1$.
 
 **The contradiction, computed.** Under the conventions above the matrix of $\omega_J$ is $-J$, so
-$$\langle\omega_1,\omega_2\rangle=\tfrac12\operatorname{tr}\big((-J_1)^{\mathsf T}(-J_2)\big)=\tfrac12\operatorname{tr}(J_1^{\mathsf T}J_2)=-\tfrac12\operatorname{tr}(J_1J_2).$$
-At $J_2=J_1$: $\operatorname{tr}(J_1J_2)=\operatorname{tr}(J_1^2)=\operatorname{tr}(-I)=-2m$, so $\langle\omega_1,\omega_2\rangle=+m$. At $J_2=-J_1$: $\operatorname{tr}(J_1J_2)=+2m$, so $\langle\omega_1,\omega_2\rangle=-m$. **Both are nonzero at every $m\ge1$**, and the block's rendering $\operatorname{tr}(J_1J_2)=\mp2m$ for $J_2=\pm J_1$ carries exactly the right sign.
+$$\langle\omega_1,\omega_2\rangle=\tfrac12\mathop{\mathrm{tr}}\big((-J_1)^{\mathsf T}(-J_2)\big)=\tfrac12\mathop{\mathrm{tr}}(J_1^{\mathsf T}J_2)=-\tfrac12\mathop{\mathrm{tr}}(J_1J_2).$$
+At $J_2=J_1$: $\mathop{\mathrm{tr}}(J_1J_2)=\mathop{\mathrm{tr}}(J_1^2)=\mathop{\mathrm{tr}}(-I)=-2m$, so $\langle\omega_1,\omega_2\rangle=+m$. At $J_2=-J_1$: $\mathop{\mathrm{tr}}(J_1J_2)=+2m$, so $\langle\omega_1,\omega_2\rangle=-m$. **Both are nonzero at every $m\ge1$**, and the block's rendering $\mathop{\mathrm{tr}}(J_1J_2)=\mp2m$ for $J_2=\pm J_1$ carries exactly the right sign.
 
 *In full, rather than only what the block takes: the constraint is $\lvert\langle\omega_1,\omega_2\rangle\rvert=m=\lVert\omega_1\rVert\lVert\omega_2\rVert$, that is equality in Cauchy-Schwarz. So the extreme cases are ruled out not by a numerical accident but because $\omega_2=\pm\omega_1$ saturates the inequality that orthogonality makes vanish.*
 
@@ -119,16 +119,16 @@ At $J_2=J_1$: $\operatorname{tr}(J_1J_2)=\operatorname{tr}(J_1^2)=\operatorname{
 
 **The factorisations.** $J_1^{-1}=-J_1$, so $J_1^{-1}J_2=-J_1J_2=T$ and therefore
 $$J_1+J_2=J_1(I+J_1^{-1}J_2)=J_1(I+T),\qquad J_1-J_2=J_1(I-T).$$
-$J_1$ is invertible, so **$J_1-J_2$ is singular exactly when $+1\in\operatorname{spec}T$, and $J_1+J_2$ exactly when $-1\in\operatorname{spec}T$.** The block's assignment is correct, and it is corroborated three ways: $\ker\alpha=\ker(J_1-J_2)=\ker(I-T)=E_+$ and $\ker\beta=E_-$, which agrees with item 7's $J_2=J_1$ on $E_+$ making $\alpha$ vanish there, and with $J_2=J_1$ giving $T=-J_1^2=I$ so that $E_+$ is everything.
+$J_1$ is invertible, so **$J_1-J_2$ is singular exactly when $+1\in\mathop{\mathrm{spec}}T$, and $J_1+J_2$ exactly when $-1\in\mathop{\mathrm{spec}}T$.** The block's assignment is correct, and it is corroborated three ways: $\ker\alpha=\ker(J_1-J_2)=\ker(I-T)=E_+$ and $\ker\beta=E_-$, which agrees with item 7's $J_2=J_1$ on $E_+$ making $\alpha$ vanish there, and with $J_2=J_1$ giving $T=-J_1^2=I$ so that $E_+$ is everything.
 
-**Trace-orthogonality.** $\operatorname{tr}T=-\operatorname{tr}(J_1J_2)=2\langle\omega_1,\omega_2\rangle$ by the computation of item 4, so $\operatorname{tr}T=0$ is exactly trace-orthogonality. **This is convention-robust**: under the alternative reading $\omega_J(x,y)=\langle x,Jy\rangle$, whose matrix is $+J$, one gets $\langle\omega_1,\omega_2\rangle=\tfrac12\operatorname{tr}(J_1^{\mathsf T}J_2)=-\tfrac12\operatorname{tr}(J_1J_2)$ again. The brief's worry about a sign error swapping the two singularities does not materialise.
+**Trace-orthogonality.** $\mathop{\mathrm{tr}}T=-\mathop{\mathrm{tr}}(J_1J_2)=2\langle\omega_1,\omega_2\rangle$ by the computation of item 4, so $\mathop{\mathrm{tr}}T=0$ is exactly trace-orthogonality. **This is convention-robust**: under the alternative reading $\omega_J(x,y)=\langle x,Jy\rangle$, whose matrix is $+J$, one gets $\langle\omega_1,\omega_2\rangle=\tfrac12\mathop{\mathrm{tr}}(J_1^{\mathsf T}J_2)=-\tfrac12\mathop{\mathrm{tr}}(J_1J_2)$ again. The brief's worry about a sign error swapping the two singularities does not materialise.
 
 **VERDICT: ALL THREE CORRECT.**
 
 ## D2, recorded here because it is a constraint the block weakens
 
-The block says $\operatorname{tr}T=0$ "permits both and forbids neither", which is true and is a strict weakening. **In full**, $T$ is orthogonal, so it is semisimple over $\mathbb R$ with $\mathbb R^{2m}=E_+\oplus E_-\oplus R$ orthogonally, $R$ splitting into two-dimensional rotation blocks at angles $\theta_1,\dots,\theta_r$ with $\theta_j\notin\{0,\pi\}$. Write $\dim E_+=2p$ and $\dim E_-=2q$, both even by item 6, so $p+q+r=m$ and
-$$\operatorname{tr}T=2p-2q+2\sum_{j=1}^r\cos\theta_j=0,\qquad\text{that is}\qquad p-q+\sum_{j=1}^r\cos\theta_j=0 .$$
+The block says $\mathop{\mathrm{tr}}T=0$ "permits both and forbids neither", which is true and is a strict weakening. **In full**, $T$ is orthogonal, so it is semisimple over $\mathbb R$ with $\mathbb R^{2m}=E_+\oplus E_-\oplus R$ orthogonally, $R$ splitting into two-dimensional rotation blocks at angles $\theta_1,\dots,\theta_r$ with $\theta_j\notin\{0,\pi\}$. Write $\dim E_+=2p$ and $\dim E_-=2q$, both even by item 6, so $p+q+r=m$ and
+$$\mathop{\mathrm{tr}}T=2p-2q+2\sum_{j=1}^r\cos\theta_j=0,\qquad\text{that is}\qquad p-q+\sum_{j=1}^r\cos\theta_j=0 .$$
 Two consequences the block does not take:
 
 - **$R=0$ forces $\dim E_+=\dim E_-=m$**, hence both are nonzero. *This independently supplies the one hypothesis item 9 needs and does not check.*
@@ -205,11 +205,11 @@ so $\alpha|_{E_-}\ne0$ whenever $E_-\ne0$, and it is in fact nondegenerate, bein
 **Why it is not needed.** Restore $R$ and decompose $\Lambda^4$ by how many indices fall in each of $E_-,E_+,R$. By section 8, $\alpha$ carries no $E_+$ index and $\beta$ carries no $E_-$ index. At the index set $\{a,b,p,q\}$ with $a,b\in E_-$ and $p,q\in E_+$ there are, up to sign, three ways to split four indices two-and-two between the factors, and two of them ask $\alpha$ for an $E_+$ index or $\beta$ for an $E_-$ index. **Only the split $\alpha\mapsto\{a,b\}$, $\beta\mapsto\{p,q\}$ survives, and the $R$ blocks of $\alpha$ and $\beta$ contribute no term at all, carrying no index in $E_+\cup E_-$.** The displayed six-term computation of 9.1 is therefore valid verbatim with $R\ne0$, every crossed-out term vanishing for the same reason as before. Hence, with no hypothesis on $R$,
 $$\alpha\wedge\beta=0\ \Longrightarrow\ \alpha|_{E_-}\otimes\beta|_{E_+}=0\ \Longrightarrow\ E_-=0\ \text{ or }\ E_+=0 .$$
 
-**Exhibit the failure concretely.** The block's declared surviving shape is nonempty as a set of pairs $(J_1,J_2)$, and its members do not satisfy $\alpha\wedge\beta=0$. Take $m=4$ on $\mathbb R^8$, $J_1=\operatorname{diag}(j,j,j,j)$ with $j$ the right-angle rotation, $je_1=e_2$ and $je_2=-e_1$, and
+**Exhibit the failure concretely.** The block's declared surviving shape is nonempty as a set of pairs $(J_1,J_2)$, and its members do not satisfy $\alpha\wedge\beta=0$. Take $m=4$ on $\mathbb R^8$, $J_1=\mathop{\mathrm{diag}}(j,j,j,j)$ with $j$ the right-angle rotation, $je_1=e_2$ and $je_2=-e_1$, and
 $$T=I_2\ \oplus\ (-I_2)\ \oplus\ T_R,\qquad T_R:\ e_5\mapsto e_7,\ e_6\mapsto-e_8,\ e_7\mapsto-e_5,\ e_8\mapsto e_6,$$
-$T_R$ being the quaternionic structure on $\operatorname{span}(e_5,\dots,e_8)\cong\mathbb C^2$, which is orthogonal, anticommutes with $J_1$, and has $T_R^2=-I$. Then $J_1TJ_1^{-1}=T^{-1}$ holds blockwise, so $J_2:=J_1T$ satisfies $J_2^2=J_1TJ_1T=T^{-1}J_1^2T=-I$ and is an orthogonal complex structure. **This pair meets every condition of the block's surviving shape**: $\dim E_+=\dim E_-=2$, both even and both nonzero, $\dim R=4$ nontrivial, and $\operatorname{tr}T=2-2+0=0$, so the pair is trace-orthogonal. Yet
+$T_R$ being the quaternionic structure on $\mathop{\mathrm{span}}(e_5,\dots,e_8)\cong\mathbb C^2$, which is orthogonal, anticommutes with $J_1$, and has $T_R^2=-I$. Then $J_1TJ_1^{-1}=T^{-1}$ holds blockwise, so $J_2:=J_1T$ satisfies $J_2^2=J_1TJ_1T=T^{-1}J_1^2T=-I$ and is an orthogonal complex structure. **This pair meets every condition of the block's surviving shape**: $\dim E_+=\dim E_-=2$, both even and both nonzero, $\dim R=4$ nontrivial, and $\mathop{\mathrm{tr}}T=2-2+0=0$, so the pair is trace-orthogonal. Yet
 $$(\alpha\wedge\beta)_{3412}=\tfrac12\,\alpha_{34}\beta_{12}=\tfrac12\cdot2\cdot2=2\ne0,$$
-so $\omega_1\wedge\omega_1\ne\omega_2\wedge\omega_2$. *Screened, and the screen returns $(\alpha\wedge\beta)_{3412}=2$ against the predicted $2$, with $\operatorname{tr}(J_1J_2)=0$ and $\operatorname{spec}T=\{1,1,-1,-1,\pm i,\pm i\}$.*
+so $\omega_1\wedge\omega_1\ne\omega_2\wedge\omega_2$. *Screened, and the screen returns $(\alpha\wedge\beta)_{3412}=2$ against the predicted $2$, with $\mathop{\mathrm{tr}}(J_1J_2)=0$ and $\mathop{\mathrm{spec}}T=\{1,1,-1,-1,\pm i,\pm i\}$.*
 
 **Argue the opposite.** The most charitable reading the words support is that "what survives the whole Lefschetz route" is a claim about what the route **as executed in the block** leaves untouched, not a claim that the leftover set contains anything. Under that reading no sentence of the block is false, and the paragraph is an honest statement of where its author stopped. I accept that reading, which is why D1 is recorded as a completeness defect rather than an error. **What makes it worth recording anyway** is that the same paragraph's conclusion is carried upward: [L195](../findings/diagonal-half.md)'s closing box says the question is "OPEN at $m\ge4$", and [REVIEW_r834.md](REVIEW_r834.md) names the $\dim V=8$ scalar stratum "the honest frontier". Both statements are now false, and both will otherwise reach the report.
 

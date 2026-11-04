@@ -90,7 +90,7 @@ That independence is established numerically and nowhere else: [ATTEMPTS.md](../
 Take the file's own $\Delta$. Since $g$ is a sum of squares, $\Delta(W)=0\iff[\mathrm{ad}(v_\delta),W]=0$ for every positive eigenvector, i.e. $\mathfrak p\subseteq\mathfrak k(W)$, the isotropy algebra. This is [Lemma L106](../findings/bounds.md), which I rebuilt independently before reading it. Two immediate consequences:
 
 - $\mathrm{ad}(x)$ for $x\in\mathfrak p$ preserves every eigenspace of $W$, so **$\mathfrak p$ is a Lie subalgebra** and $W$ is $\mathfrak p$-invariant. The condition is a *rigidity* condition, not a codimension-$\binom n4$ slice.
-- $\operatorname{tr}_{\Lambda^2}W=\tfrac12\operatorname{scal}=0$ on a Weyl operator, so every $W\ne0$ has $\mathfrak p\ne0$, hence $\dim\mathfrak k(W)\ge1$: **every zero-$\Delta$ point has positive-dimensional isotropy.**
+- $\mathop{\mathrm{tr}}_{\Lambda^2}W=\tfrac12\mathop{\mathrm{scal}}=0$ on a Weyl operator, so every $W\ne0$ has $\mathfrak p\ne0$, hence $\dim\mathfrak k(W)\ge1$: **every zero-$\Delta$ point has positive-dimensional isotropy.**
 
 Now $n=4$, where the count is checkable by hand. $\mathfrak{so}(4)=\mathfrak{su}(2)_+\oplus\mathfrak{su}(2)_-$ as ideals, $\Lambda^2\mathbb R^4=\Lambda^+\oplus\Lambda^-$, and $W=W^+\oplus W^-$ with each $W^\pm$ traceless symmetric on the $3$-dimensional $\Lambda^\pm$; $\dim\mathcal W_4=5+5=10$, matching [conventions.md](../findings/conventions.md)'s $n(n-3)(n+1)(n+2)/12$. For $x=x_++x_-$, $\mathrm{ad}(x)$ acts on $\Lambda^\pm$ as $\mathrm{ad}(x_\pm)$, i.e. as $x_\pm\times(\cdot)$ under $\Lambda^\pm\cong\mathbb R^3$. Let $v\in\Lambda^+$ be a positive eigenvector of $W^+$. Then
 

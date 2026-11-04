@@ -1,8 +1,8 @@
 # Reviewer 303, the second-order operator on the diagonal locus
 
-Cold adversarial audit of J1–J4 of `brief7.md`, plus J5 and J6 added mid-task by the coordinator. Everything below was rebuilt from the definitions in [scripts/reviewers/r303/](../scripts/reviewers/r303/) and imports nothing under review: $\mathfrak{so}(n)$ structure constants by literal commutators of $E_{ab}-E_{ba}$ under $\langle X,Y\rangle=\tfrac12\operatorname{tr}(X^{\mathsf T}Y)$, the sharp product as $(R\# S)_{\alpha\beta}=\tfrac12c_{\alpha\gamma\varepsilon}c_{\beta\delta\zeta}R_{\gamma\delta}S_{\varepsilon\zeta}$, $\mathrm{Weyl}_n$ as the nullspace of first Bianchi together with the Ricci contraction of the $4$-tensor, and $L_WH=\tfrac12(WH+HW)+W\# H$.
+Cold adversarial audit of J1–J4 of `brief7.md`, plus J5 and J6 added mid-task by the coordinator. Everything below was rebuilt from the definitions in [scripts/reviewers/r303/](../scripts/reviewers/r303/) and imports nothing under review: $\mathfrak{so}(n)$ structure constants by literal commutators of $E_{ab}-E_{ba}$ under $\langle X,Y\rangle=\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$, the sharp product as $(R\# S)_{\alpha\beta}=\tfrac12c_{\alpha\gamma\varepsilon}c_{\beta\delta\zeta}R_{\gamma\delta}S_{\varepsilon\zeta}$, $\mathrm{Weyl}_n$ as the nullspace of first Bianchi together with the Ricci contraction of the $4$-tensor, and $L_WH=\tfrac12(WH+HW)+W\# H$.
 
-**Gatekeepers passed before any claim was touched.** $c$ totally antisymmetric with entries $0,\pm1$; $\dim\mathrm{Weyl}_n=35,84$ at $n=5,6$; $W\#I=-W$ at $6\times10^{-16}$; $\operatorname{tr}(W^\#)=-\lVert W\rVert^2$ at $4\times10^{-16}$; $Q(W)=\theta W$ at every sphere product at $10^{-16}$ with $\theta_0(6)=1.054093$ and $\theta_0(8)=1.145644$ reproduced; and Hamilton's diagonal $\#$-formula recovered from the structure constants rather than assumed.
+**Gatekeepers passed before any claim was touched.** $c$ totally antisymmetric with entries $0,\pm1$; $\dim\mathrm{Weyl}_n=35,84$ at $n=5,6$; $W\#I=-W$ at $6\times10^{-16}$; $\mathop{\mathrm{tr}}(W^\#)=-\lVert W\rVert^2$ at $4\times10^{-16}$; $Q(W)=\theta W$ at every sphere product at $10^{-16}$ with $\theta_0(6)=1.054093$ and $\theta_0(8)=1.145644$ reproduced; and Hamilton's diagonal $\#$-formula recovered from the structure constants rather than assumed.
 
 ## Verdicts
 
@@ -29,11 +29,11 @@ $\mathcal L(N)=M\circ N+\tfrac12(MN+NM)$ read as a matrix identity assigns $\mat
 
 $$\sum_{j\ne i}\big(\mathcal L N\big)_{ij}=\langle M_i,N_i\rangle+\tfrac12\big[(MN\mathbf 1)_i+(NM\mathbf 1)_i\big]-(MN)_{ii}=0$$
 
-for $M\mathbf1=N\mathbf1=0$, **because** the $-(MN)_{ii}$ from hollowing cancels the $M\circ N$ row sum. Keeping the diagonal gives row sums $2\langle M_i,N_i\rangle$, measured at $0.28$–$0.81$, and the zero-row-sum space is then *not* invariant. So the hollowing is load-bearing, and it is what makes $\mathcal L$ an endomorphism of the admissible space at **every** $M$, critical or not. The same reading repairs $D\Phi(M)[N]/2$: its diagonal is the derivative of the $\operatorname{diag}(s)$ term on the other side of the criticality equation, not part of $\mathcal L$.
+for $M\mathbf1=N\mathbf1=0$, **because** the $-(MN)_{ii}$ from hollowing cancels the $M\circ N$ row sum. Keeping the diagonal gives row sums $2\langle M_i,N_i\rangle$, measured at $0.28$–$0.81$, and the zero-row-sum space is then *not* invariant. So the hollowing is load-bearing, and it is what makes $\mathcal L$ an endomorphism of the admissible space at **every** $M$, critical or not. The same reading repairs $D\Phi(M)[N]/2$: its diagonal is the derivative of the $\mathop{\mathrm{diag}}(s)$ term on the other side of the criticality equation, not part of $\mathcal L$.
 
 ## J2, the Rayleigh form
 
-$\langle N,\mathcal L N\rangle=\sum_{ij}M_{ij}N_{ij}^2+\operatorname{tr}(MN^2)$ holds to $4\times10^{-16}$ at $n=6,7,8$, at critical and non-critical $M$, and for $N$ with non-zero row sums. **The normalisation is the $n\times n$ Frobenius one**, $\langle A,B\rangle=\sum_{ij}A_{ij}B_{ij}$; the $\Lambda^2$ pairing $\langle H,L_WH\rangle$ is exactly half of it, as it must be since $\lVert N\rVert_F^2=2\lVert H\rVert_{\Lambda^2}^2$. The Rayleigh **quotient** is therefore convention-free, which is why nothing downstream breaks. The derivation is one line from J1: $\sum_{ij}N_{ij}(MN)_{ij}=\operatorname{tr}(MN^2)$, and the hollow correction drops out because $N_{ii}=0$.
+$\langle N,\mathcal L N\rangle=\sum_{ij}M_{ij}N_{ij}^2+\mathop{\mathrm{tr}}(MN^2)$ holds to $4\times10^{-16}$ at $n=6,7,8$, at critical and non-critical $M$, and for $N$ with non-zero row sums. **The normalisation is the $n\times n$ Frobenius one**, $\langle A,B\rangle=\sum_{ij}A_{ij}B_{ij}$; the $\Lambda^2$ pairing $\langle H,L_WH\rangle$ is exactly half of it, as it must be since $\lVert N\rVert_F^2=2\lVert H\rVert_{\Lambda^2}^2$. The Rayleigh **quotient** is therefore convention-free, which is why nothing downstream breaks. The derivation is one line from J1: $\sum_{ij}N_{ij}(MN)_{ij}=\mathop{\mathrm{tr}}(MN^2)$, and the hollow correction drops out because $N_{ii}=0$.
 
 ## J3, the reduction is real, the "no representation theory" is the sales pitch
 
@@ -56,16 +56,16 @@ $\langle N,\mathcal L N\rangle=\sum_{ij}M_{ij}N_{ij}^2+\operatorname{tr}(MN^2)$ 
 
 ## J4, REFUTED: the family is not vacuous, and $\dim\ker M=1$ is an accident
 
-The three algebraic parts are correct and reproduce: $N_{ij}=2M_{ij}(a_i+a_j)$ for $A=\operatorname{diag}(a)$; the row sums are $2(Ma)_i$; and, substituting criticality,
+The three algebraic parts are correct and reproduce: $N_{ij}=2M_{ij}(a_i+a_j)$ for $A=\mathop{\mathrm{diag}}(a)$; the row sums are $2(Ma)_i$; and, substituting criticality,
 
-$$(\mathcal LN)_{ij}=(a_i+a_j)\big[M_{ij}^2+\theta M_{ij}\big]+2\big(M\operatorname{diag}(a)M\big)_{ij}$$
+$$(\mathcal LN)_{ij}=(a_i+a_j)\big[M_{ij}^2+\theta M_{ij}\big]+2\big(M\mathop{\mathrm{diag}}(a)M\big)_{ij}$$
 
 which I re-derived from J1 rather than checking numerically. The conclusion drawn from them is what fails.
 
 **Two mechanisms give $\dim\ker M\ge2$, and one of them revives the family.**
 
-1. **Padding.** Appending a zero row to a critical $M$ leaves criticality intact (the appended row satisfies $0=\theta\cdot0$ and $s_{n+1}=0$) so every padded point has $\ker M\supseteq\langle\mathbf1,e_{n+1}\rangle$. Found at $n=6,\dots,10$ with $\dim\ker M$ up to $7$. Here the family stays vacuous, and provably: $a\in\langle\mathbf1,e_{n+1}\rangle$ has $a_i+a_j$ constant on $\operatorname{supp}M$, so $N$ is radial.
-2. **Disconnected support, and this one breaks the claim.** If $M_1,M_2$ are critical with $\operatorname{tr}M_k^2=2$ then $M=\alpha M_1\oplus\beta M_2$ is critical for $\alpha=\theta/\theta_1$, $\beta=\theta/\theta_2$ and $\theta=(\theta_1^{-2}+\theta_2^{-2})^{-1/2}$, verified at $10^{-16}$ for three pairs, with $\theta$ matching the closed form to $15$ digits. Then $\ker M=\langle\mathbf1_{C_1},\mathbf1_{C_2}\rangle$, and $a=\alpha^{-1}\mathbf1_{C_1}-\beta^{-1}\mathbf1_{C_2}$ gives an $N$ that is **admissible** (row sums $4\times10^{-12}$), **non-radial** ($\lVert N-\mathrm{rad}\,M\rVert=2.0$), and satisfies $\mathcal L(N)=\theta N$ to $3\times10^{-11}$.
+1. **Padding.** Appending a zero row to a critical $M$ leaves criticality intact (the appended row satisfies $0=\theta\cdot0$ and $s_{n+1}=0$) so every padded point has $\ker M\supseteq\langle\mathbf1,e_{n+1}\rangle$. Found at $n=6,\dots,10$ with $\dim\ker M$ up to $7$. Here the family stays vacuous, and provably: $a\in\langle\mathbf1,e_{n+1}\rangle$ has $a_i+a_j$ constant on $\mathop{\mathrm{supp}}M$, so $N$ is radial.
+2. **Disconnected support, and this one breaks the claim.** If $M_1,M_2$ are critical with $\mathop{\mathrm{tr}}M_k^2=2$ then $M=\alpha M_1\oplus\beta M_2$ is critical for $\alpha=\theta/\theta_1$, $\beta=\theta/\theta_2$ and $\theta=(\theta_1^{-2}+\theta_2^{-2})^{-1/2}$, verified at $10^{-16}$ for three pairs, with $\theta$ matching the closed form to $15$ digits. Then $\ker M=\langle\mathbf1_{C_1},\mathbf1_{C_2}\rangle$, and $a=\alpha^{-1}\mathbf1_{C_1}-\beta^{-1}\mathbf1_{C_2}$ gives an $N$ that is **admissible** (row sums $4\times10^{-12}$), **non-radial** ($\lVert N-\mathrm{rad}\,M\rVert=2.0$), and satisfies $\mathcal L(N)=\theta N$ to $3\times10^{-11}$.
 
 The witness the solver found first is $n=8$, $\theta=\sqrt6/4=0.612372$: two disjoint copies of the $n=4$ sphere-product matrix, $\dim\ker M=2$, no zero rows, $\Delta=0$, criticality residual $1.1\times10^{-11}$ from the solver and $3.6\times10^{-16}$ when rebuilt exactly as the direct sum ([j4_revive.py](../scripts/reviewers/r303/j4_revive.py)). The withdrawn $\theta$-free criterion evaluates there to $+0.612396$, i.e. $\langle N,\mathcal LN\rangle-\tfrac\theta2\lVert N\rVert^2=+1.2248$, **a genuine violation from a genuine admissible direction.**
 

@@ -27,7 +27,7 @@ $$[\rho(E_{jk}),W]=\sum_{i\notin\{j,k\}}(M_{ji}-M_{ki})\,e_{ji}\odot e_{ki}.$$
 
 By linearity in $A=\sum a_{jk}E_{jk}$ every orbit direction is a sum of such vectors, one per pair block, so $T_W\mathcal O\subseteq\bigoplus_{\{j,k\}}V_{jk}$ and neither the four-set blocks nor $\mathcal D_n$ carries an orbit direction. **The positive and negative halves are one computation**, not two.
 
-**Two things the printed proof skips.** The span of the $f_i=e_{ji}\odot e_{ki}$ has dimension $n-2$; $V_{jk}$ has dimension $n-3$ ([Lemma L120](../findings/second-order.md)). The containment holds because $\sum_{i\notin\{j,k\}}(M_{ki}-M_{ji})=-M_{kj}+M_{jk}=0$, using $M\mathbf 1=0$ and $M$ symmetric, Ricci-flatness, free from $W\in\mathcal W_n$, but used. Equivalently: $\mathcal W_n$ is $SO(n)$-invariant, so the orbit tangent lies in it automatically and $\mathcal W_n\cap\operatorname{span}\{f_i\}=V_{jk}$.
+**Two things the printed proof skips.** The span of the $f_i=e_{ji}\odot e_{ki}$ has dimension $n-2$; $V_{jk}$ has dimension $n-3$ ([Lemma L120](../findings/second-order.md)). The containment holds because $\sum_{i\notin\{j,k\}}(M_{ki}-M_{ji})=-M_{kj}+M_{jk}=0$, using $M\mathbf 1=0$ and $M$ symmetric, Ricci-flatness, free from $W\in\mathcal W_n$, but used. Equivalently: $\mathcal W_n$ is $SO(n)$-invariant, so the orbit tangent lies in it automatically and $\mathcal W_n\cap\mathop{\mathrm{span}}\{f_i\}=V_{jk}$.
 
 ### The kernel of the Hessian
 

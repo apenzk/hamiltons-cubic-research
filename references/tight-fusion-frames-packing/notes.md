@@ -16,7 +16,7 @@ with equality if and only if $\{U_j\}$ is an **equi-chordal tight fusion frame**
 
 ## What it means in this record's notation
 
-$\lVert\Phi_j^*\Phi_{j'}\rVert^2_{\mathrm{Fro}}=\operatorname{tr}(P_jP_{j'})$, which for eigenplanes is the bridge quantity $S_{\alpha\beta}=\operatorname{tr}(\Pi_\alpha\Pi_\beta)=\lVert[\omega_\alpha,\omega_\beta]\rVert^2$. So with $c=2$ and $d=n$ the bound is
+$\lVert\Phi_j^*\Phi_{j'}\rVert^2_{\mathrm{Fro}}=\mathop{\mathrm{tr}}(P_jP_{j'})$, which for eigenplanes is the bridge quantity $S_{\alpha\beta}=\mathop{\mathrm{tr}}(\Pi_\alpha\Pi_\beta)=\lVert[\omega_\alpha,\omega_\beta]\rVert^2$. So with $c=2$ and $d=n$ the bound is
 $$\max_{\alpha\ne\beta}S_{\alpha\beta}\;\ge\;\frac{2(2M-n)}{n(M-1)} .$$
 **And the record's per-index relation $\sum_{\beta\ne\alpha}S_{\alpha\beta}=2(\kappa-1)$, with $\kappa=2M/n$ at a tight frame, has mean $\frac{2(2M/n-1)}{M-1}=\frac{2(2M-n)}{n(M-1)}$ over the $M-1$ partners.** *Identical, so the simplex bound is that relation read as max at least mean, and the equality case is isotropy.*
 

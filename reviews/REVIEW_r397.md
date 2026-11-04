@@ -6,7 +6,7 @@
 
 | # | Claim | Verdict |
 | --- | --- | --- |
-| **6** | **L129 bounds $\operatorname{dist}(T,\operatorname{spec}M)$ below, so $\lVert o\rVert$ is bounded above** | **VACUOUS, unconditionally.** The bound's right-hand side is **always at least $4\times$** the one-line Cauchy–Schwarz cap $\lVert\tilde o\rVert^2\le2(s_j+s_k)$, and it bounds a quantity [Lemma L68](../findings/diagonal-half.md) already gives **exactly**. It never beats L68 and it never beats Cauchy–Schwarz. Proof below, no cases |
+| **6** | **L129 bounds $\mathop{\mathrm{dist}}(T,\mathop{\mathrm{spec}}M)$ below, so $\lVert o\rVert$ is bounded above** | **VACUOUS, unconditionally.** The bound's right-hand side is **always at least $4\times$** the one-line Cauchy–Schwarz cap $\lVert\tilde o\rVert^2\le2(s_j+s_k)$, and it bounds a quantity [Lemma L68](../findings/diagonal-half.md) already gives **exactly**. It never beats L68 and it never beats Cauchy–Schwarz. Proof below, no cases |
 | **1** | $M\tilde o-T\tilde o$ is **constant** on $I$ | **FALSE.** The exact residual is $-\tilde o_a(M_{aj}+M_{ak}+M_{jk})$, which varies with $a$. The derivation equivocates between $\sum_{b\in I}$ and $\sum_{b\in[n]}$: $\sum_{b\in I}M_{ib}=-M_{ij}-M_{ik}\ne0$ |
 | **2** | $c=(s_j-s_k)/(n-2)$, with $(M\tilde o)_j=(M^2)_{jk}-s_j$, $(M\tilde o)_k=s_k-(M^2)_{jk}$ | **CORRECT ARITHMETIC, WRONG STATUS.** All three values check. But $c$ is the **mean** of the residual over $I$, not its value. Proved independently below: $\sum_{a\in I}\tilde o_a(M_{aj}+M_{ak})=s_k-s_j$ |
 | **3** | The boxed exact relation $M\tilde o=T\tilde o+c\mathbf1+r_je_j+r_ke_k$ | **FALSE on $I$, CORRECT at $j,k$.** $r_j,r_k$ verified. The $c\mathbf1$ term is wrong. The printed consistency check is **circular** (it is the equation that defined $c$) and its stated value is wrong: $\mathbf1^\top$ of both sides gives $0$, not $-cn$ |
@@ -22,13 +22,13 @@ Write $M_{jk}=-\mu$ with $\mu>0$ (the only sign for which [Lemma L129](../findin
 
 ### What L129 actually supplies
 
-L129 says $\operatorname{spec}(M)\cap(0,\theta]=\varnothing$. It does **not** say the spectrum is far from $T$. Two facts cap what can be extracted:
+L129 says $\mathop{\mathrm{spec}}(M)\cap(0,\theta]=\varnothing$. It does **not** say the spectrum is far from $T$. Two facts cap what can be extracted:
 
-- **$0\in\operatorname{spec}(M)$ always**, since $M\mathbf1=0$. So $\operatorname{dist}(T,\operatorname{spec}M)\le T=\theta-\mu$ at every pure critical point, with no exceptions.
-- **An eigenvalue may sit at $\theta+\varepsilon$** for any $\varepsilon>0$ without violating L129, and by [L129's own corollary (i)](../findings/diagonal-half.md) one always sits above $\theta$. So $\operatorname{dist}(T,\operatorname{spec}M)$ may be as small as $\mu+\varepsilon$.
+- **$0\in\mathop{\mathrm{spec}}(M)$ always**, since $M\mathbf1=0$. So $\mathop{\mathrm{dist}}(T,\mathop{\mathrm{spec}}M)\le T=\theta-\mu$ at every pure critical point, with no exceptions.
+- **An eigenvalue may sit at $\theta+\varepsilon$** for any $\varepsilon>0$ without violating L129, and by [L129's own corollary (i)](../findings/diagonal-half.md) one always sits above $\theta$. So $\mathop{\mathrm{dist}}(T,\mathop{\mathrm{spec}}M)$ may be as small as $\mu+\varepsilon$.
 
 Hence the *sharp* consequence of L129 is
-$$D_{\text{guar}}:=\min(\theta-\mu,\ \mu)\ \le\ \operatorname{dist}(T,\operatorname{spec}M),$$
+$$D_{\text{guar}}:=\min(\theta-\mu,\ \mu)\ \le\ \mathop{\mathrm{dist}}(T,\mathop{\mathrm{spec}}M),$$
 and no spectrum-free argument can improve it, because the spectrum $\{0,\ \theta+\varepsilon,\ \text{negatives}\}$ realises it. In particular **$D_{\text{guar}}\le\mu$ and $D_{\text{guar}}\le\theta/2$ always.**
 
 ### The bound is always at least four times weaker than one line of Cauchy–Schwarz
@@ -57,7 +57,7 @@ Confirmed, and it is the generic regime. As $\mu\to0^+$ with $\sigma$ fixed, $D_
 ### $T>0$, and the $M_{jk}>0$ side
 
 - **$T>0$ is not free, but it is provable in the band**, and the section never noticed it needed an argument. Criticality gives $(M^2)_{jk}=M_{jk}(\theta-M_{jk})=-\mu(\theta+\mu)$, and Cauchy–Schwarz on the rows gives $\lvert(M^2)_{jk}\rvert\le\sqrt{s_js_k}\le\sigma/2\le1$. So $\mu^2+\theta\mu-1\le0$, i.e. $\mu\le\tfrac12\big(\sqrt{\theta^2+4}-\theta\big)$, which is $<\theta$ exactly when $\theta>1/\sqrt2$. **In the band ($\theta$ near $\sqrt{3/2}$) $T>0$ holds; below $\theta=1/\sqrt2$ nothing rules out $T\le0$, where L129 is silent entirely.**
-- **$T\le\theta$ iff $M_{jk}\le0$**, trivially. For $M_{jk}>0$, $T>\theta$ sits **outside** the forbidden window and L129 gives nothing: the spectrum is unconstrained above $\theta$, so $\operatorname{dist}(T,\operatorname{spec}M)$ can be arbitrarily small and the bound is contentless. This is not hypothetical, [post F48](../findings/second-order.md)'s padded witness has $T=\theta$ with an eigenvalue just above it.
+- **$T\le\theta$ iff $M_{jk}\le0$**, trivially. For $M_{jk}>0$, $T>\theta$ sits **outside** the forbidden window and L129 gives nothing: the spectrum is unconstrained above $\theta$, so $\mathop{\mathrm{dist}}(T,\mathop{\mathrm{spec}}M)$ can be arbitrarily small and the bound is contentless. This is not hypothetical, [post F48](../findings/second-order.md)'s padded witness has $T=\theta$ with an eigenvalue just above it.
 
 **So the mechanism reaches only $M_{jk}<0$ with $\theta>1/\sqrt2$, and there it is vacuous.**
 
@@ -103,7 +103,7 @@ with $\sum_{a\in I}d_a=s_j-s_k$. **The printed relation is this one with $d$ rep
 
 By Cauchy–Schwarz, $\sum_{a\in I}d_a^2\ge(\sum_ad_a)^2/(n-2)=(s_j-s_k)^2/(n-2)$, so
 $$\lVert M\tilde o-T\tilde o\rVert^2=\sum_{a\in I}d_a^2+\rho_j^2+\rho_k^2\ \ge\ B^2,$$
-**with equality exactly when $d$ is constant on $I$, i.e. exactly when claim 1 holds.** So $B$ is the Cauchy–Schwarz *minimum* of the true defect given its mean: the printed $B$ discards the residual's variance. The correct inequality is $\operatorname{dist}(T,\operatorname{spec}M)\lVert\tilde o\rVert\le\lVert M\tilde o-T\tilde o\rVert$, and the printed one asserts the strictly smaller ceiling $B$. **It is not implied by the correct one and it is not proved.** I have no falsifier for the printed inequality itself, but that is because it is far too weak to be violated, which is the vacuity result above, not evidence for the identity.
+**with equality exactly when $d$ is constant on $I$, i.e. exactly when claim 1 holds.** So $B$ is the Cauchy–Schwarz *minimum* of the true defect given its mean: the printed $B$ discards the residual's variance. The correct inequality is $\mathop{\mathrm{dist}}(T,\mathop{\mathrm{spec}}M)\lVert\tilde o\rVert\le\lVert M\tilde o-T\tilde o\rVert$, and the printed one asserts the strictly smaller ceiling $B$. **It is not implied by the correct one and it is not proved.** I have no falsifier for the printed inequality itself, but that is because it is far too weak to be violated, which is the vacuity result above, not evidence for the identity.
 
 ### "Approximate eigenvector" overstates it
 
@@ -124,7 +124,7 @@ Right side at $j$: $(\theta+M_{jk})M_{jk}-\theta M_{jk}-2M_{jk}^2=-M_{jk}^2$; at
 
 ## The counterexample, exact and by hand
 
-Take the two-block family on $P\sqcup Q$, $\lvert P\rvert=p$, $\lvert Q\rvert=q$, $n=p+q$: $M_{ab}=\alpha$ inside $P$, $\beta$ inside $Q$, $\gamma$ across. Zero row sums force $(p-1)\alpha=-q\gamma$ and $(q-1)\beta=-p\gamma$; off-diagonal criticality on the three block types reduces to $(p-1)\alpha^2+q\gamma^2=\theta\alpha$, its $Q$-mirror, and $\gamma+(p-1)\alpha+(q-1)\beta=\theta$. Substituting the row sums, the third gives $\gamma=-\theta/(n-1)$ and the first two become identities. **So with $g:=\theta/(n-1)$: $\gamma=-g$, $\alpha=qg/(p-1)$, $\beta=pg/(q-1)$, $\theta=(n-1)g$, for every $p,q$**, the diagonal critical points of the sphere-product family, and $\operatorname{tr}M^2=2$ fixes $g$.
+Take the two-block family on $P\sqcup Q$, $\lvert P\rvert=p$, $\lvert Q\rvert=q$, $n=p+q$: $M_{ab}=\alpha$ inside $P$, $\beta$ inside $Q$, $\gamma$ across. Zero row sums force $(p-1)\alpha=-q\gamma$ and $(q-1)\beta=-p\gamma$; off-diagonal criticality on the three block types reduces to $(p-1)\alpha^2+q\gamma^2=\theta\alpha$, its $Q$-mirror, and $\gamma+(p-1)\alpha+(q-1)\beta=\theta$. Substituting the row sums, the third gives $\gamma=-\theta/(n-1)$ and the first two become identities. **So with $g:=\theta/(n-1)$: $\gamma=-g$, $\alpha=qg/(p-1)$, $\beta=pg/(q-1)$, $\theta=(n-1)g$, for every $p,q$**, the diagonal critical points of the sphere-product family, and $\mathop{\mathrm{tr}}M^2=2$ fixes $g$.
 
 For a cross pair $j\in P$, $k\in Q$ (so $M_{jk}=\gamma<0$, the regime L129 reaches):
 $$\tilde o_a=\gamma-\alpha=-\tfrac{(n-1)g}{p-1}\ (a\in P\setminus j),\qquad \tilde o_a=\beta-\gamma=\tfrac{(n-1)g}{q-1}\ (a\in Q\setminus k),$$
@@ -138,7 +138,7 @@ $-0.6875g^2$ against $+2.138889g^2$, mean $1.008333g^2$. **The residual takes tw
 
 ### Screen
 
-Six members of the family, built for this review; off-diagonal criticality residual $\le2.2\times10^{-16}$ and $\operatorname{tr}M^2=2$ to $10^{-12}$ at each. Every column below was derived by hand above and is reproduced digit for digit.
+Six members of the family, built for this review; off-diagonal criticality residual $\le2.2\times10^{-16}$ and $\mathop{\mathrm{tr}}M^2=2$ to $10^{-12}$ at each. Every column below was derived by hand above and is reproduced digit for digit.
 
 | $(p,q)$ | $n$ | $\theta$ | $c$ | residual on $I$ | $\lVert\tilde o\rVert$ $=$ L68 | $B$ | true defect | $D_{\text{guar}}$ | bound gives $\lVert\tilde o\rVert\le$ | trivial cap $\sqrt{2\sigma}$ |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -162,7 +162,7 @@ Four readings, all of which match the analysis:
 
 ## Novelty
 
-**The true content is [post F47](../findings/second-order.md) rewritten.** F47 records $\widetilde No=To$ on $I$ with $\widetilde N=M^{(jk)}+\operatorname{diag}(u+v)$, $u_a=M_{aj}$, $v_a=M_{ak}$. Since $(M\tilde o)_a=(M^{(jk)}o)_a-M_{jk}o_a$ for $a\in I$, the two statements are related by one line of algebra:
+**The true content is [post F47](../findings/second-order.md) rewritten.** F47 records $\widetilde No=To$ on $I$ with $\widetilde N=M^{(jk)}+\mathop{\mathrm{diag}}(u+v)$, $u_a=M_{aj}$, $v_a=M_{ak}$. Since $(M\tilde o)_a=(M^{(jk)}o)_a-M_{jk}o_a$ for $a\in I$, the two statements are related by one line of algebra:
 $$(M\tilde o)_a=To_a-(u_a+v_a+M_{jk})o_a=\tilde o_a(\theta-M_{aj}-M_{ak}),$$
 which is the exact identity derived above. **Moving the diagonal shift from one side to the other adds no information**, so the framing *"not merely an eigenvector of the compressed $\widetilde N$; it is an approximate eigenvector of $M$ itself"* describes the same fact twice, and the second description is the weaker one, $\widetilde No=To$ is exact, $M\tilde o\approx T\tilde o$ is not even approximately true.
 

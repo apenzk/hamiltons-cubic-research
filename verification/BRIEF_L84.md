@@ -29,7 +29,7 @@ The dimension and Casimir columns are arithmetic on the highest weights: the Wey
 
 The table has $24$ blocks, $\sum m_\lambda d_\lambda=7770=\binom{37}3$ exactly, multiplicities summing to $41$ and unknowns to $65$, of which only $7770$ is an external check. The twelve multiplicity-$1$ dimensions sum to $4125$.
 
-**The trivial multiplicity is $1$ here**, which agrees with the Lovelock relation $\langle W^\#,W\rangle=2\operatorname{tr}(W^3)$ on $\mathcal W_5$ ([bispectral.md](bispectral.md)): the cubic invariants are then spanned by $\operatorname{tr}(W^3)$ once the two contractions span them. *That spanning, and $\operatorname{tr}(W^3)\not\equiv0$ on $\mathcal W_5$, are owed.*
+**The trivial multiplicity is $1$ here**, which agrees with the Lovelock relation $\langle W^\#,W\rangle=2\mathop{\mathrm{tr}}(W^3)$ on $\mathcal W_5$ ([bispectral.md](bispectral.md)): the cubic invariants are then spanned by $\mathop{\mathrm{tr}}(W^3)$ once the two contractions span them. *That spanning, and $\mathop{\mathrm{tr}}(W^3)\not\equiv0$ on $\mathcal W_5$, are owed.*
 
 ## Passage C, the Lean statement
 

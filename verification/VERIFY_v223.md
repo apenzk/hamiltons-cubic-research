@@ -106,7 +106,7 @@ $$a^2p\Big(1+\tfrac pq\Big)=1\ \Longrightarrow\ a^2=\frac q{p(p+q)}=\frac{(m-1)(
 
 **The cubic.** With $S_{\mathfrak{kkm}}=S_{\mathfrak{mmm}}=0$ (H5),
 
-$$\theta=\operatorname{tr}(W^3)+\tfrac12\big[a^3S_{\mathfrak{kkk}}+3ab^2S_{\mathfrak{kmm}}\big],\qquad \operatorname{tr}(W^3)=a^3p+b^3q .$$
+$$\theta=\mathop{\mathrm{tr}}(W^3)+\tfrac12\big[a^3S_{\mathfrak{kkk}}+3ab^2S_{\mathfrak{kmm}}\big],\qquad \mathop{\mathrm{tr}}(W^3)=a^3p+b^3q .$$
 
 **The two masses.** $S_{\mathfrak{kkk}}=c_{\mathfrak k}p=(m-2)p$ from $c(\mathfrak{so}(m)\subset\mathfrak{su}(m))=2h^\vee/I_\rho=2(m-2)/2=m-2$ (the index is $2$ because $\mathbb R^{2m}$ restricts to $\mathbb R^m\oplus\mathbb R^m$). Then the Killing relation $S_{\mathfrak{kkk}}+S_{\mathfrak{kmm}}=cp$ with $c(\mathfrak{su}(m))=2m/1=2m$ gives
 
@@ -165,7 +165,7 @@ $$\frac{2m-1}{3m}=\frac m{m+2}\ \Longrightarrow\ 2m^2+3m-2=3m^2\ \Longrightarrow
 
 **Yes.** Roots $\{1,2\}$. The cancellation of $(m-1)$ is what puts $m=1$ into the root set, and $m=1$ is precisely where both formulas are undefined, so on the common domain $m>1$ the unique intersection is $m=2$. The claim "meet at $m=2$ and nowhere else" is **correct**, and it is correct *because* of the exclusion the canon does not state for family 2. The two statements lean on each other.
 
-**The identification of the $m=2$ member.** The block's data: $\mathfrak k=\mathbb R\omega\cong\mathfrak{so}(2)$, $p=1$, $q=2$, $ap+bq=0$, spectrum $(2,-1,-1,0,0,0)/\sqrt6$. Checking it: $a=-2b$ and $4b^2+2b^2=1$ give $b=-1/\sqrt6$, $a=2/\sqrt6$, the stated spectrum exactly. [target.md](../findings/target.md) names the eigenvectors: $\mathfrak k=\operatorname{span}\{e_{01}+e_{23}\}$, $\mathfrak m=\operatorname{span}\{e_{02}-e_{13},\,e_{03}+e_{12}\}$, and all three are **self-dual**, so $W$ is supported on $\Lambda^+$ with $\Lambda^-\subseteq\ker W$.
+**The identification of the $m=2$ member.** The block's data: $\mathfrak k=\mathbb R\omega\cong\mathfrak{so}(2)$, $p=1$, $q=2$, $ap+bq=0$, spectrum $(2,-1,-1,0,0,0)/\sqrt6$. Checking it: $a=-2b$ and $4b^2+2b^2=1$ give $b=-1/\sqrt6$, $a=2/\sqrt6$, the stated spectrum exactly. [target.md](../findings/target.md) names the eigenvectors: $\mathfrak k=\mathop{\mathrm{span}}\{e_{01}+e_{23}\}$, $\mathfrak m=\mathop{\mathrm{span}}\{e_{02}-e_{13},\,e_{03}+e_{12}\}$, and all three are **self-dual**, so $W$ is supported on $\Lambda^+$ with $\Lambda^-\subseteq\ker W$.
 
 That closes the identification, and the closing step is worth writing because the record leaves it implicit: a Weyl operator on $\mathbb R^4$ has no $\Lambda^+\!-\!\Lambda^-$ mixing (that is the trace-free Ricci part), so it is determined up to $SO(4)$ by the two spectra of $W|_{\Lambda^\pm}$, the map $SO(4)\to SO(\Lambda^+)\times SO(\Lambda^-)$ being onto. Here those are $(2,-1,-1)/\sqrt6$ and $(0,0,0)$, $W_{\mathbb{CP}^2}$'s. **Proved, not asserted**, as the annotation says.
 

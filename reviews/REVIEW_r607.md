@@ -40,7 +40,7 @@ The derivation reads rows only and never transposes. **The inequality holds verb
 
 ### The absolute value, forced, and cosmetic for $K\ne0$
 
-Each row's $n-1$ entries sum to $0$, so each row has an entry $\le0$; hence $\min_{a\ne b}K_{ab}\le0$ always. If the minimum is $0$ then every off-diagonal entry is $\ge0$ with every row summing to $0$, forcing $K=0$. So **for $K\ne0$ the minimum is strictly negative** and $m=-\min_{a\ne b}K_{ab}$; the bars do no work. This uses hollowness and zero row sums, not symmetry, and it does not need $K\ne0$ to be assumed from criticality, it is the two-line argument above. *The record's usual route to a forced sign is $\operatorname{tr}K=0$ with $K\ne0$; that route bounds the spectrum, not the entries, so it is the wrong tool here and the entrywise argument is the right one.* **The block states neither.**
+Each row's $n-1$ entries sum to $0$, so each row has an entry $\le0$; hence $\min_{a\ne b}K_{ab}\le0$ always. If the minimum is $0$ then every off-diagonal entry is $\ge0$ with every row summing to $0$, forcing $K=0$. So **for $K\ne0$ the minimum is strictly negative** and $m=-\min_{a\ne b}K_{ab}$; the bars do no work. This uses hollowness and zero row sums, not symmetry, and it does not need $K\ne0$ to be assumed from criticality, it is the two-line argument above. *The record's usual route to a forced sign is $\mathop{\mathrm{tr}}K=0$ with $K\ne0$; that route bounds the spectrum, not the entries, so it is the wrong tool here and the entrywise argument is the right one.* **The block states neither.**
 
 ### The block's own wording makes the summation step a non-sequitur
 

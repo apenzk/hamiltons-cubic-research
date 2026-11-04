@@ -18,7 +18,7 @@
 | 10 | $n=4$: "the family is therefore two-parameter" | **SOUND AS A WEIGHT COUNT**; projectively one-parameter; the L178 attribution is **UNVERIFIABLE** from a cold brief |
 | 11 | $\omega\omega^{\mathsf T}=cI\Rightarrow\omega/\sqrt c$ is a complex structure | **SOUND** (and $c=1/3$ is forced at $n=6$) |
 | 12 | "Equal squares at full rank forces each $\omega_i$ to be a scaled complex structure" | **REFUTED** as reasoning, exhibit in §8; the triple version is **HYPOTHESIS-DEBT** |
-| 13 | $\operatorname{tr}(J_iJ_j)=0$ is the right rendering of orthogonality | **SOUND** |
+| 13 | $\mathop{\mathrm{tr}}(J_iJ_j)=0$ is the right rendering of orthogonality | **SOUND** |
 | 14 | "The first two conditions are the quaternionic relations, which need a dimension divisible by four" | **REFUTED**, explicit triple on $\mathbb R^6$ in §9 |
 | 15 | No step assumes $\ker W=0$ | **SOUND**, no defect found |
 | 16 | Repair 1 (coordinator): the criterion is "all coincide, or distinct and collinear" | **RIGHT**, it is exactly what I derived independently |
@@ -33,12 +33,12 @@
 
 I use the brief's conventions and add nothing to them.
 
-A $2$-form $\omega=\sum_{a<b}\omega_{ab}f_a\wedge f_b$ is read as the skew matrix under $f_a\wedge f_b\mapsto E_{ab}-E_{ba}$, so that $f_a\wedge f_b$ sends $e_b\mapsto e_a$ and $e_a\mapsto -e_b$. This is the correspondence the brief's two normalisations force: $\lVert f_a\wedge f_b\rVert^2=1$ and $\lVert\omega\rVert^2=-\tfrac12\operatorname{tr}(\omega^2)$ agree on it, since $(E_{12}-E_{21})^2=-(E_{11}+E_{22})$ has trace $-2$.
+A $2$-form $\omega=\sum_{a<b}\omega_{ab}f_a\wedge f_b$ is read as the skew matrix under $f_a\wedge f_b\mapsto E_{ab}-E_{ba}$, so that $f_a\wedge f_b$ sends $e_b\mapsto e_a$ and $e_a\mapsto -e_b$. This is the correspondence the brief's two normalisations force: $\lVert f_a\wedge f_b\rVert^2=1$ and $\lVert\omega\rVert^2=-\tfrac12\mathop{\mathrm{tr}}(\omega^2)$ agree on it, since $(E_{12}-E_{21})^2=-(E_{11}+E_{22})$ has trace $-2$.
 
 Three consequences used throughout, each one line:
 
-- $\langle\omega,\eta\rangle=\tfrac12\operatorname{tr}(\omega\eta^{\mathsf T})=-\tfrac12\operatorname{tr}(\omega\eta)$, so orthogonality of two $2$-forms is exactly $\operatorname{tr}(\omega\eta)=0$.
-- $A:=\omega\omega^{\mathsf T}=-\omega^2$ is positive semidefinite with $\operatorname{tr}A=2\lVert\omega\rVert^2$, so a **unit** $\omega$ has $\operatorname{tr}A=2$.
+- $\langle\omega,\eta\rangle=\tfrac12\mathop{\mathrm{tr}}(\omega\eta^{\mathsf T})=-\tfrac12\mathop{\mathrm{tr}}(\omega\eta)$, so orthogonality of two $2$-forms is exactly $\mathop{\mathrm{tr}}(\omega\eta)=0$.
+- $A:=\omega\omega^{\mathsf T}=-\omega^2$ is positive semidefinite with $\mathop{\mathrm{tr}}A=2\lVert\omega\rVert^2$, so a **unit** $\omega$ has $\mathop{\mathrm{tr}}A=2$.
 - $\Phi(c\,\omega)=c^2\Phi(\omega)$ and $(c\omega)\otimes(c\omega)=c^2\,\omega\otimes\omega$. **$\Phi$ is homogeneous of degree two.** This single fact decides §10.
 
 Given A is stated with $A_i=\omega_i\omega_i^{\mathsf T}$ and the proof writes $\omega_i^2$; these differ by one global sign and the equation $\sum_i\lambda_iA_i=0$ is unaffected. I record the discrepancy and treat it as harmless.
@@ -53,7 +53,7 @@ Given A is stated with $A_i=\omega_i\omega_i^{\mathsf T}$ and the proof writes $
 
 **Stated and unused.** Mutual orthogonality $\langle\omega_i,\omega_j\rangle=0$. It appears nowhere in the affine-dependence argument. What it supplies is outside that argument: it makes $\sum\lambda_i\omega_i\otimes\omega_i$ a *spectral* decomposition, so that the $\lambda_i$ are $W$'s eigenvalues and the $\Lambda^2$-rank is three rather than merely at most three. This is item 5 and I agree with the coordinator's repair 2 up to the correction in §10.
 
-**Used and unstated.** (u1) In the converse, the case assumption $\Phi_2\ne\Phi_3$, without which the parametrisation by $t$ does not exist. This is the defect of §3. (u2) In the $n=6$ remark, that each $\omega_i$ has full rank. This one is *true but unargued*: equal squares force equal supports, since $\operatorname{supp}\omega_i=\operatorname{im}(A_i)$ and the $A_i$ coincide, so $\dim V=6$ forces $\operatorname{rank}A=6$. The block asserts "at full rank" as a hypothesis where it is a consequence. (u3) In the same remark, that the constant $c$ is common to the three, see §8, where it is not a consequence at all.
+**Used and unstated.** (u1) In the converse, the case assumption $\Phi_2\ne\Phi_3$, without which the parametrisation by $t$ does not exist. This is the defect of §3. (u2) In the $n=6$ remark, that each $\omega_i$ has full rank. This one is *true but unargued*: equal squares force equal supports, since $\mathop{\mathrm{supp}}\omega_i=\mathop{\mathrm{im}}(A_i)$ and the $A_i$ coincide, so $\dim V=6$ forces $\mathop{\mathrm{rank}}A=6$. The block asserts "at full rank" as a hypothesis where it is a consequence. (u3) In the same remark, that the constant $c$ is common to the three, see §8, where it is not a consequence at all.
 
 ## 1. The reduction to $\sum_i\lambda_i\Phi(\omega_i)=0$, SOUND
 
@@ -61,11 +61,11 @@ Given A is $\sum_i\lambda_i\omega_i^2=0$ in $S^2$, Given B is $\sum_i\lambda_i\,
 
 ## 2. Tracelessness and $\sum_i\lambda_i=0$, SOUND, and it is where normalisation lives
 
-Take the trace of Given A. With $A_i=\omega_i\omega_i^{\mathsf T}$ and $\lVert\omega_i\rVert=1$ we have $\operatorname{tr}A_i=2$, so $0=\operatorname{tr}\big(\sum_i\lambda_iA_i\big)=2\sum_i\lambda_i$, hence $\sum_i\lambda_i=0$.
+Take the trace of Given A. With $A_i=\omega_i\omega_i^{\mathsf T}$ and $\lVert\omega_i\rVert=1$ we have $\mathop{\mathrm{tr}}A_i=2$, so $0=\mathop{\mathrm{tr}}\big(\sum_i\lambda_iA_i\big)=2\sum_i\lambda_i$, hence $\sum_i\lambda_i=0$.
 
 The block's content is right: this is a consequence of Given A, not an independent constraint. Its *phrasing* is muddled ("adds $\sum\lambda_i=0$" describes as an addition something that is a derived corollary) but no step depends on the phrasing.
 
-What the step does depend on is that $\operatorname{tr}A_i$ is the **same** for all three. With unequal norms the trace yields $\sum_i\lambda_i\lVert\omega_i\rVert^2=0$, which is a different linear functional of $\lambda$ and does **not** make the weights affine. Flagging this is the whole of §10.
+What the step does depend on is that $\mathop{\mathrm{tr}}A_i$ is the **same** for all three. With unequal norms the trace yields $\sum_i\lambda_i\lVert\omega_i\rVert^2=0$, which is a different linear functional of $\lambda$ and does **not** make the weights affine. Flagging this is the whole of §10.
 
 ## 3. The converse, and the exhibit that refutes the biconditional, REFUTED
 
@@ -77,7 +77,7 @@ Both $\lambda_1,\lambda_2\ne0$, so $\Phi_1-\Phi_3$ and $\Phi_2-\Phi_3$ are paral
 
 - **All three equal.** Collinear; a point lies on a line. No failure.
 - **Exactly two equal.** *This cannot happen on the Weyl side.* If $\Phi_1=\Phi_3$ the displayed identity gives $\lambda_2(\Phi_2-\Phi_3)=0$, and $\lambda_2\ne0$ forces $\Phi_2=\Phi_3$ as well. So a rank-three Weyl tensor has its three images either pairwise distinct or all three coincident, never in between. This is the sharpest structural fact in the lemma and the block does not state it.
-- **An image at the origin.** Impossible. $\Phi(\omega)=0$ forces $\omega^2=0$, hence $\operatorname{tr}(\omega\omega^{\mathsf T})=0$, hence $\omega=0$, and the $\omega_i$ are unit. Equivalently the $S^2$ component always has trace $-2$.
+- **An image at the origin.** Impossible. $\Phi(\omega)=0$ forces $\omega^2=0$, hence $\mathop{\mathrm{tr}}(\omega\omega^{\mathsf T})=0$, hence $\omega=0$, and the $\omega_i$ are unit. Equivalently the $S^2$ component always has trace $-2$.
 
 **The converse as written is correct algebra.** From $\Phi_1-\Phi_3=t(\Phi_2-\Phi_3)$, the vector $(1,-t,t-1)$ sums to zero and annihilates the triple, and it has no zero entry precisely when $t\notin\{0,1\}$. So the exclusion is the right one *for that parametrisation*.
 
@@ -89,7 +89,7 @@ $$\omega_1=\tfrac{1}{\sqrt2}(f_{12}+f_{34}),\qquad \omega_3=\tfrac{1}{\sqrt2}(f_
 
 *Orthonormality.* Each is a unit vector: $\lVert\omega_1\rVert^2=\tfrac12(1+1)=1$, likewise $\omega_3$, and $\lVert f_{45}\rVert=1$. The three expand in the pairwise disjoint sets of basis $2$-forms $\{f_{12},f_{34}\}$, $\{f_{13},f_{24}\}$, $\{f_{45}\}$, so all inner products vanish.
 
-*Images.* $\omega_1$ and $\omega_3$ are two of the three self-dual forms on $\operatorname{span}(e_1,\dots,e_4)$, so by §7 below $\omega_1^2=\omega_3^2=-\tfrac12\mathrm{Id}_{1234}$ and $\omega_1\wedge\omega_1=\omega_3\wedge\omega_3=f_{1234}$. Hence $\Phi_1=\Phi_3$. And $\omega_2^2=-(E_{44}+E_{55})$ with $f_{45}\wedge f_{45}=0$, so $\Phi_2=\big(-(E_{44}+E_{55}),\,0\big)\ne\Phi_1$.
+*Images.* $\omega_1$ and $\omega_3$ are two of the three self-dual forms on $\mathop{\mathrm{span}}(e_1,\dots,e_4)$, so by §7 below $\omega_1^2=\omega_3^2=-\tfrac12\mathrm{Id}_{1234}$ and $\omega_1\wedge\omega_1=\omega_3\wedge\omega_3=f_{1234}$. Hence $\Phi_1=\Phi_3$. And $\omega_2^2=-(E_{44}+E_{55})$ with $f_{45}\wedge f_{45}=0$, so $\Phi_2=\big(-(E_{44}+E_{55}),\,0\big)\ne\Phi_1$.
 
 *The triple is collinear*, two distinct points, and every point of a two-point set lies on the line through them.
 
@@ -143,7 +143,7 @@ the cross terms cancelling in pairs. **Correct, and for every unit self-dual for
 
 For the wedge, $\eta_i\wedge\eta_j=0$ whenever $i\ne j$: each of the four products of basis $2$-forms repeats an index, for instance $\eta_1\wedge\eta_2=\tfrac12(f_{12}\wedge f_{13}+f_{12}\wedge f_{42}+f_{34}\wedge f_{13}+f_{34}\wedge f_{42})=0$. And $\eta_1\wedge\eta_1=f_{12}\wedge f_{34}=f_{1234}$, $\eta_2\wedge\eta_2=f_{13}\wedge f_{42}=f_{1342}=f_{1234}$ (the cycle $2\to3\to4\to2$ is even), $\eta_3\wedge\eta_3=f_{14}\wedge f_{23}=f_{1423}=f_{1234}$ (likewise). Hence $\omega\wedge\omega=(a^2+b^2+c^2)f_{1234}=f_{1234}$. **Correct.**
 
-*Consistency of the constants.* $-\tfrac12\operatorname{tr}(-\tfrac12\mathrm{Id}_4)=1$, so $\omega^2=-\tfrac12\mathrm{Id}_4$ is exactly the unit normalisation in dimension four. At $n=6$ the same computation gives $\omega^2=-\tfrac13\mathrm{Id}_6$; see §8.
+*Consistency of the constants.* $-\tfrac12\mathop{\mathrm{tr}}(-\tfrac12\mathrm{Id}_4)=1$, so $\omega^2=-\tfrac12\mathrm{Id}_4$ is exactly the unit normalisation in dimension four. At $n=6$ the same computation gives $\omega^2=-\tfrac13\mathrm{Id}_6$; see §8.
 
 *The parameter count.* $\{\lambda\in\mathbb R^3:\sum\lambda_i=0\}$ is a two-dimensional vector space, and deleting the three coordinate hyperplanes to enforce rank three leaves an open dense subset of it. So "two-parameter set" is right **as a count of weight vectors**. If $\theta$ is scale-invariant (the brief does not say, and I decline to assume), the family of $\theta$-values is one-parameter. Whether this is what L178's family is, I cannot check: L178 is not in my brief. Recorded as **UNVERIFIABLE**, not as an error.
 
@@ -151,7 +151,7 @@ For the wedge, $\eta_i\wedge\eta_j=0$ whenever $i\ne j$: each of the four produc
 
 ## 8. The complex-structure reduction, the implication is a non sequitur
 
-**What is correct.** If $\omega\omega^{\mathsf T}=cI$ with $c>0$ then $J:=\omega/\sqrt c$ satisfies $JJ^{\mathsf T}=I$ and $J^{\mathsf T}=-J$, so $-J^2=I$, so $J^2=-I$: a metric-compatible complex structure. **SOUND.** Under the unit normalisation the constant is not free: $1=-\tfrac12\operatorname{tr}(\omega^2)=\tfrac12\cdot 6c$ gives $c=1/3$ at $n=6$. The block leaves $c$ unpinned; it should not.
+**What is correct.** If $\omega\omega^{\mathsf T}=cI$ with $c>0$ then $J:=\omega/\sqrt c$ satisfies $JJ^{\mathsf T}=I$ and $J^{\mathsf T}=-J$, so $-J^2=I$, so $J^2=-I$: a metric-compatible complex structure. **SOUND.** Under the unit normalisation the constant is not free: $1=-\tfrac12\mathop{\mathrm{tr}}(\omega^2)=\tfrac12\cdot 6c$ gives $c=1/3$ at $n=6$. The block leaves $c$ unpinned; it should not.
 
 **What is correct about "full rank".** As noted in the inventory, equal squares force equal supports, so $\dim V=6$ already gives each $\omega_i$ rank six. The block states this as a hypothesis where it is a consequence, harmless, but it hides that no extra assumption was needed.
 
@@ -161,7 +161,7 @@ For the wedge, $\eta_i\wedge\eta_j=0$ whenever $i\ne j$: each of the four produc
 
 $$\omega_1=\sqrt p\,f_{12}+\sqrt q\,f_{34}+\tfrac{1}{\sqrt2}f_{56},\qquad \omega_2=\sqrt p\,f_{12}+\sqrt q\,f_{34}-\tfrac{1}{\sqrt2}f_{56}.$$
 
-Both are unit ($p+q+\tfrac12=1$) and orthogonal ($p+q-\tfrac12=0$). Both have the same square, $\omega_i^2=-\operatorname{diag}(p,p,q,q,\tfrac12,\tfrac12)$, which is invertible and **not** a multiple of the identity, so neither $\omega_i$ is a scaled complex structure. $\square$
+Both are unit ($p+q+\tfrac12=1$) and orthogonal ($p+q-\tfrac12=0$). Both have the same square, $\omega_i^2=-\mathop{\mathrm{diag}}(p,p,q,q,\tfrac12,\tfrac12)$, which is invertible and **not** a multiple of the identity, so neither $\omega_i$ is a scaled complex structure. $\square$
 
 **One correction to the coordinator's repair 4.** It says $\omega\omega^{\mathsf T}=A$ "with $A$ merely positive definite of trace 2 has solutions for many non-scalar $A$". The existential is right, the qualification is too loose: since $\omega$ is real skew, $\omega^2$ has every eigenvalue of even multiplicity, so $A$ is realisable **exactly when every eigenvalue of $A$ has even multiplicity**. Say that, or say "for many non-scalar $A$" without "merely".
 
@@ -169,13 +169,13 @@ Both are unit ($p+q+\tfrac12=1$) and orthogonal ($p+q-\tfrac12=0$). Both have th
 
 ## 9. The quaternionic remark, REFUTED, in closed form
 
-The block writes: "The first two conditions are the quaternionic relations, which need a dimension divisible by four." The first two conditions are (i) each $J_i$ is a metric-compatible complex structure and (ii) $\operatorname{tr}(J_iJ_j)=0$ for $i\ne j$. These are **not** the quaternionic relations. The quaternionic relations are $J_iJ_j=-J_jJ_i$ for $i\ne j$ with $J_1J_2=\pm J_3$; they make $\mathbb R^n$ a module over $\mathbb H$ and so do force $4\mid n$. Anticommutation *implies* trace-orthogonality, since $J_1J_2=\pm J_3$ is skew and skew matrices are traceless. **The converse fails, and there is no dimension obstruction at $\mathbb R^6$.**
+The block writes: "The first two conditions are the quaternionic relations, which need a dimension divisible by four." The first two conditions are (i) each $J_i$ is a metric-compatible complex structure and (ii) $\mathop{\mathrm{tr}}(J_iJ_j)=0$ for $i\ne j$. These are **not** the quaternionic relations. The quaternionic relations are $J_iJ_j=-J_jJ_i$ for $i\ne j$ with $J_1J_2=\pm J_3$; they make $\mathbb R^n$ a module over $\mathbb H$ and so do force $4\mid n$. Anticommutation *implies* trace-orthogonality, since $J_1J_2=\pm J_3$ is skew and skew matrices are traceless. **The converse fails, and there is no dimension obstruction at $\mathbb R^6$.**
 
 **Exhibit: three pairwise trace-orthogonal complex structures on $\mathbb R^6$.**
 
 $$J_1=f_{12}+f_{34}+f_{56},\qquad J_2=f_{24}+f_{36}+f_{51},\qquad J_3=f_{13}+f_{46}+f_{25}.$$
 
-Each is the sum of three basis $2$-forms whose index pairs partition $\{1,\dots,6\}$ (a perfect matching of $K_6$), hence each is a rotation by a quarter turn in three mutually orthogonal planes, so $J_k^2=-\mathrm{Id}_6$, $J_k^{\mathsf T}=-J_k$ and $J_kJ_k^{\mathsf T}=\mathrm{Id}_6$. The three matchings $\{12,34,56\}$, $\{24,36,15\}$, $\{13,46,25\}$ are pairwise edge-disjoint, so the $J_k$ have disjoint supports in the basis $\{f_{ab}\}$ and $\langle J_i,J_j\rangle=0$ for $i\ne j$, that is $\operatorname{tr}(J_iJ_j)=-2\langle J_i,J_j\rangle=0$. $\square$
+Each is the sum of three basis $2$-forms whose index pairs partition $\{1,\dots,6\}$ (a perfect matching of $K_6$), hence each is a rotation by a quarter turn in three mutually orthogonal planes, so $J_k^2=-\mathrm{Id}_6$, $J_k^{\mathsf T}=-J_k$ and $J_kJ_k^{\mathsf T}=\mathrm{Id}_6$. The three matchings $\{12,34,56\}$, $\{24,36,15\}$, $\{13,46,25\}$ are pairwise edge-disjoint, so the $J_k$ have disjoint supports in the basis $\{f_{ab}\}$ and $\langle J_i,J_j\rangle=0$ for $i\ne j$, that is $\mathop{\mathrm{tr}}(J_iJ_j)=-2\langle J_i,J_j\rangle=0$. $\square$
 
 Normalised, $\omega_k=J_k/\sqrt3$ is an orthonormal triple with the common scalar square $\omega_k^2=-\tfrac13\mathrm{Id}_6$. So the block's asserted obstruction does not exist: what obstructs the coincident sub-case at $\dim V=6$ has to come from the shared $4$-form, which is exactly where the new claim goes. The block's own following clause, "whether the weaker trace condition can be met on $\mathbb R^6$ together with the shared $4$-form is the question", is inconsistent with the sentence before it, and my exhibit settles half of it: the trace condition alone **is** met.
 
@@ -187,7 +187,7 @@ This is the item the coordinator asked me to look hardest at, and it is where I 
 
 Repair 2 says the equivalence "holds for any three $2$-forms". It does not. Two reasons, the second decisive.
 
-**(a) The trace step needs equal norms.** §2 derives $\sum_i\lambda_i=0$ from $\operatorname{tr}A_i=2$. For arbitrary $2$-forms the trace of Given A yields $\sum_i\lambda_i\lVert\omega_i\rVert^2=0$. That is a linear dependence among the $\Phi_i$ with one weight vector and an affine condition on a *different* one, and the affine-dependence argument (which needs the same $\lambda$ in both roles), does not run.
+**(a) The trace step needs equal norms.** §2 derives $\sum_i\lambda_i=0$ from $\mathop{\mathrm{tr}}A_i=2$. For arbitrary $2$-forms the trace of Given A yields $\sum_i\lambda_i\lVert\omega_i\rVert^2=0$. That is a linear dependence among the $\Phi_i$ with one weight vector and an affine condition on a *different* one, and the affine-dependence argument (which needs the same $\lambda$ in both roles), does not run.
 
 **(b) $\Phi$ is homogeneous of degree two, so the criterion is not well defined on unnormalised triples.** Both $\omega\otimes\omega$ and $\Phi(\omega)$ scale by $c^2$, so replacing $\omega_1$ by $c\,\omega_1$ and $\lambda_1$ by $\lambda_1/c^2$ leaves $W$ **unchanged** while moving the first image from $\Phi_1$ to $c^2\Phi_1$ along its ray. Collinearity is not preserved by rescaling one point of a triple along its ray, so the same Weyl tensor is assigned both answers depending on how its sum is written.
 
@@ -201,13 +201,13 @@ I flag the Given C tension in the open: I am not exhibiting a rank-three Weyl te
 
 I attacked the three points named.
 
-**The adapted frame exists and its orientation is well defined.** For a metric-compatible $J$ on $\mathbb R^6$, choose a unit $u_1$; then $Ju_1\perp u_1$ by skewness and is unit; the orthogonal complement of $\operatorname{span}(u_1,Ju_1)$ is $J$-invariant, and iterating gives an orthonormal frame $(u_1,Ju_1,u_2,Ju_2,u_3,Ju_3)$ in which $J$ is the $2$-form $\varepsilon^1+\varepsilon^2+\varepsilon^3$, the three block area forms. All such frames differ by an element of $U(3)\subset SO(6)$, so they all carry the same orientation and $\varepsilon_J=\pm1$, comparing that orientation to the fixed one, is well defined.
+**The adapted frame exists and its orientation is well defined.** For a metric-compatible $J$ on $\mathbb R^6$, choose a unit $u_1$; then $Ju_1\perp u_1$ by skewness and is unit; the orthogonal complement of $\mathop{\mathrm{span}}(u_1,Ju_1)$ is $J$-invariant, and iterating gives an orthonormal frame $(u_1,Ju_1,u_2,Ju_2,u_3,Ju_3)$ in which $J$ is the $2$-form $\varepsilon^1+\varepsilon^2+\varepsilon^3$, the three block area forms. All such frames differ by an element of $U(3)\subset SO(6)$, so they all carry the same orientation and $\varepsilon_J=\pm1$, comparing that orientation to the fixed one, is well defined.
 
 **The Hodge computation.** $J\wedge J=2(\varepsilon^1\wedge\varepsilon^2+\varepsilon^1\wedge\varepsilon^3+\varepsilon^2\wedge\varepsilon^3)$, since $\varepsilon^k\wedge\varepsilon^k=0$. With $\beta=\varepsilon^1\wedge\varepsilon^2$ one has $\lvert\beta\rvert=1$ and $\beta\wedge\varepsilon^3=\mathrm{vol}$, so $\star\beta=\varepsilon^3$ in the adapted orientation, and likewise for the other two. Hence $\star(J\wedge J)=2J$ with respect to the adapted orientation, and $\star(J\wedge J)=2\varepsilon_JJ$ with respect to the fixed one, the star changing sign with the orientation. **SOUND.**
 
 **The deduction from equal wedges.** $\star$ is a linear isomorphism $\Lambda^4\to\Lambda^2$ on $\mathbb R^6$, so $J_i\wedge J_i=J_j\wedge J_j$ gives $\varepsilon_iJ_i=\varepsilon_jJ_j$, hence $J_j=\pm J_i$. This is equality of $\varepsilon_iJ_i$, not something weaker, precisely because $\star$ is injective. **SOUND**, and it is the step where "equal wedges" is genuinely stronger than "equal up to sign".
 
-**The sign of the trace.** $K^2=-\mathrm{Id}_6$ gives $\operatorname{tr}(K^2)=-6$. With $J_i=s_iK$, $s_i=\pm1$, one gets $\operatorname{tr}(J_iJ_j)=s_is_j\operatorname{tr}(K^2)=\mp6\ne0$, contradicting trace-orthogonality. **SOUND.** In fact the contradiction is available one step earlier and without the constant: $J_i=\pm J_j$ makes $\omega_i$ and $\omega_j$ parallel unit vectors, which no orthonormal pair can be. I would state it that way, since it removes the sign bookkeeping from the conclusion.
+**The sign of the trace.** $K^2=-\mathrm{Id}_6$ gives $\mathop{\mathrm{tr}}(K^2)=-6$. With $J_i=s_iK$, $s_i=\pm1$, one gets $\mathop{\mathrm{tr}}(J_iJ_j)=s_is_j\mathop{\mathrm{tr}}(K^2)=\mp6\ne0$, contradicting trace-orthogonality. **SOUND.** In fact the contradiction is available one step earlier and without the constant: $J_i=\pm J_j$ makes $\omega_i$ and $\omega_j$ parallel unit vectors, which no orthonormal pair can be. I would state it that way, since it removes the sign bookkeeping from the conclusion.
 
 **An independent check, off the standard frame.** For $J_2=f_{24}+f_{36}+f_{51}$ from §9, $J_2\wedge J_2=2(f_{24}\wedge f_{36}+f_{24}\wedge f_{51}+f_{36}\wedge f_{51})=2(-f_{2346}-f_{1245}+f_{1356})$, counting $1$, $3$ and $4$ inversions respectively. Then $\star f_{2346}=-f_{15}$ ($5$ inversions in $234615$), $\star f_{1245}=f_{36}$ ($2$ inversions in $124536$), $\star f_{1356}=-f_{24}$ ($5$ inversions in $135624$). So $\star(J_2\wedge J_2)=2(f_{15}-f_{36}-f_{24})=-2J_2$, i.e. $\varepsilon_{J_2}=-1$. The claim holds on a complex structure that is not the standard one and whose $\varepsilon$ is the non-trivial sign. This is the strongest check I can make without opening a search.
 

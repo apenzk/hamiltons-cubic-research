@@ -55,7 +55,7 @@ There is a second gap in the same sentence: **$\mu\ne0$ is asserted with no sour
 Scalar fields contribute nothing to $\Phi$, since $\hat U$ and $V$ are traceless, so the conditions are $3\alpha\hat U^2+\beta V^2=\rho I$ and $\beta\{\hat U,V\}=\lambda I$ at $\mu=0$. In $\hat U$'s eigenframe the second gives $(u_i+u_j)V_{ij}=0$ off the diagonal and $2u_iV_{ii}=\lambda$ on it.
 
 - If every $u_k\ne0$ then $u_i+u_j=-u_k\ne0$ forces every off-diagonal entry to zero, so $K=0$ directly.
-- Otherwise some $u_k=0$, say $u_3=0$, so $u_1=-u_2=u$. Then $V_{13}=V_{23}=0$, the diagonal equations give $\lambda=0$ and $V_{11}=V_{22}=0$, and tracelessness gives $V_{33}=0$, leaving $V=w(E_{12}+E_{21})$. The first condition is then $\operatorname{diag}(3\alpha u^2+\beta w^2,\ 3\alpha u^2+\beta w^2,\ 0)=\rho I$, and with $\alpha,\beta>0$ that forces $u=w=0$, hence $\hat U=0$ and $K=0$.
+- Otherwise some $u_k=0$, say $u_3=0$, so $u_1=-u_2=u$. Then $V_{13}=V_{23}=0$, the diagonal equations give $\lambda=0$ and $V_{11}=V_{22}=0$, and tracelessness gives $V_{33}=0$, leaving $V=w(E_{12}+E_{21})$. The first condition is then $\mathop{\mathrm{diag}}(3\alpha u^2+\beta w^2,\ 3\alpha u^2+\beta w^2,\ 0)=\rho I$, and with $\alpha,\beta>0$ that forces $u=w=0$, hence $\hat U=0$ and $K=0$.
 
 **So with both fields scalar there is no critical point at $\mu=0$ on the constraint surface at all**, and claim 9 holds at every critical point rather than only at those with $\mu\ne0$.
 
@@ -73,7 +73,7 @@ The block's chain survives every case I could put to it, and three of them it do
 
 ### The one place batch 18's bound could have failed, and does not
 
-**Batch 18 derives its bound from a trust-region problem "at fixed $\lvert V\rvert$", which is vacuous at $V=0$**, and $V=0$ is consistent with criticality whenever $C$ is scalar. That would have left claim 6 unsupported on a nonempty set. The bound survives, by the second-order condition in the direction $(X,Y)=(0,Y)$, which is tangent for every traceless symmetric $Y$ when $V=0$: the second variation of $\Phi-\mu g$ there is $\beta\operatorname{tr}(\hat UY^2)-\tfrac{\mu}2\lvert Y\rvert^2\le0$, and maximising the left term over $Y$ gives $\mu\ge2\beta\lambda_{\max}(\mathcal L)=2\beta\lvert\hat U\rvert/\sqrt6$. **That is the form [mu_ge_of_rayleigh](../lean/HamiltonsCubic/Results/I106Criticality.lean) already carries**, so the Lean statement is the robust one and the derivation's prose is the fragile one. Worth a clause in batch 18 saying the bound comes from the second-order condition rather than from a trust region with positive radius.
+**Batch 18 derives its bound from a trust-region problem "at fixed $\lvert V\rvert$", which is vacuous at $V=0$**, and $V=0$ is consistent with criticality whenever $C$ is scalar. That would have left claim 6 unsupported on a nonempty set. The bound survives, by the second-order condition in the direction $(X,Y)=(0,Y)$, which is tangent for every traceless symmetric $Y$ when $V=0$: the second variation of $\Phi-\mu g$ there is $\beta\mathop{\mathrm{tr}}(\hat UY^2)-\tfrac{\mu}2\lvert Y\rvert^2\le0$, and maximising the left term over $Y$ gives $\mu\ge2\beta\lambda_{\max}(\mathcal L)=2\beta\lvert\hat U\rvert/\sqrt6$. **That is the form [mu_ge_of_rayleigh](../lean/HamiltonsCubic/Results/I106Criticality.lean) already carries**, so the Lean statement is the robust one and the derivation's prose is the fragile one. Worth a clause in batch 18 saying the bound comes from the second-order condition rather than from a trust region with positive radius.
 
 ### Batch 30 is new information, not a rearrangement of batch 15
 
@@ -93,7 +93,7 @@ Batch 15's system is not a consequence of relations 1 and 2, because $[A,C]$ inv
 
 ### Claim 9 is not vacuous, and its witness saturates batch 18
 
-Vacuity was a live worry, since a scalar-field critical point could have been forced into a degenerate corner where commutativity is automatic for an unrelated reason. It is not. **With $A$ and $C$ scalar the global maximum is $\hat U\propto V\propto\operatorname{diag}(2,-1,-1)$ with both nonzero**, found by maximising $\alpha\operatorname{tr}\hat U^3+\beta\langle V,\mathcal LV\rangle$ at $\lvert\hat U\rvert^2=x$ and $\lvert V\rvert^2=2T-3x$, which gives $\Phi_{\max}(x)=\tfrac{\sqrt x}{\sqrt6}\big(2\beta T-3x\big)$ and an interior optimum at $x=T/2$, hence $\Phi^\ast=\tfrac{\sqrt3}2T^{3/2}$.
+Vacuity was a live worry, since a scalar-field critical point could have been forced into a degenerate corner where commutativity is automatic for an unrelated reason. It is not. **With $A$ and $C$ scalar the global maximum is $\hat U\propto V\propto\mathop{\mathrm{diag}}(2,-1,-1)$ with both nonzero**, found by maximising $\alpha\mathop{\mathrm{tr}}\hat U^3+\beta\langle V,\mathcal LV\rangle$ at $\lvert\hat U\rvert^2=x$ and $\lvert V\rvert^2=2T-3x$, which gives $\Phi_{\max}(x)=\tfrac{\sqrt x}{\sqrt6}\big(2\beta T-3x\big)$ and an interior optimum at $x=T/2$, hence $\Phi^\ast=\tfrac{\sqrt3}2T^{3/2}$.
 
 **Three things follow, and the third is new to the record.**
 
@@ -146,6 +146,6 @@ I compared each declaration in [I106Criticality.lean](../lean/HamiltonsCubic/Res
 3. **Fix $[\hat U,V^2]$ to $[\hat U,\{\hat U,V\}]$** in batch 30 and in the docstring of [commutator_from_C](../lean/HamiltonsCubic/Results/I106Criticality.lean). ([D1](#d1))
 4. **Move $\alpha\ne\beta$ and $\mu\ne0$ off the displayed identity and onto the inversion**, and say where $\mu\ne0$ comes from at a critical point as against a maximum. ([D2](#d2))
 5. **Add the $\mu=0$ branch to claim 9**, in the three lines of [D5](#d5), so "a critical point with both fields scalar commutes" is derived rather than asserted.
-6. **Add to batch 18** that the bound comes from the second-order condition in the direction $(0,Y)$ and therefore holds at $V=0$, where the trust-region phrasing is vacuous, and that the constant is sharp, attained at $\hat U\propto V\propto\operatorname{diag}(2,-1,-1)$ with $\lvert\hat U\rvert^2=T/2$ and $\mu=\tfrac{3\sqrt3}4\sqrt T$ when both fields are scalar.
+6. **Add to batch 18** that the bound comes from the second-order condition in the direction $(0,Y)$ and therefore holds at $V=0$, where the trust-region phrasing is vacuous, and that the constant is sharp, attained at $\hat U\propto V\propto\mathop{\mathrm{diag}}(2,-1,-1)$ with $\lvert\hat U\rvert^2=T/2$ and $\mu=\tfrac{3\sqrt3}4\sqrt T$ when both fields are scalar.
 7. **Record that batch 30 descends from batch 10 and is independent of batch 15 in both directions**, which is the answer to whether it is new information. It is.
 8. **Say in the Lean header that the entrywise control is screened rather than typed**, and that [K_zero_of_field_commutes](../lean/HamiltonsCubic/Results/I106Criticality.lean) concludes three entries rather than $K=0$.

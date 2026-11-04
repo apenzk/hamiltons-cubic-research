@@ -12,7 +12,7 @@
 | 6 | The hazard is *"closed"* | **CONFIRMED for the reading, GAP for the citation**, the reading is closed for every consumer checked; what L174 quotes is the half of the box that does not close it |
 | 7 | What would reopen it | answered, four routes, and the live one runs through the letter $M$ rather than the index set |
 
-**Actionable summary.** Replace L174's quotation with the sentence that actually does the work, *"in operator terms $t=2\lVert\operatorname{diag}W\rVert^2$ … so $t\le2$ is Cauchy–Schwarz against $\lVert W\rVert=1$"*, or, cheaper, cite [L94](../findings/bispectral.md)'s own factor $2$, which is the ordered doubling and cannot be rescaled away.
+**Actionable summary.** Replace L174's quotation with the sentence that actually does the work, *"in operator terms $t=2\lVert\mathop{\mathrm{diag}}W\rVert^2$ … so $t\le2$ is Cauchy–Schwarz against $\lVert W\rVert=1$"*, or, cheaper, cite [L94](../findings/bispectral.md)'s own factor $2$, which is the ordered doubling and cannot be rescaled away.
 
 ## 0. Conventions, fixed once
 
@@ -20,7 +20,7 @@ Fixed from [conventions.md](../findings/conventions.md) by line, before anything
 
 - **$K$ and $t$** (line 136): $K$ is the symmetric hollow $n\times n$ sectional matrix, $K_{ab}=W_{abab}$ for all $a\ne b$, and $t=\lVert K\rVert_F^2=\sum_{a\ne b}K_{ab}^2$, the sum over **ordered** pairs; $t\le2$ with $t=2$ iff $W$ is coordinate-diagonal in some frame.
 - **$t$ against $t_F$** (line 23 and line 140): $t=t_F=\lVert K(F)\rVert_F^2$ per frame and $\kappa^2=\max_Ft_F$; the extremal reading belongs to $\kappa^2$ alone.
-- **$M$ on $\Lambda^2$** (line 92): $\mu=\operatorname{spec}(M)$ at $\lVert M\rVert_F=1$, with $\sum\mu=0$ and $\sum\mu^2=1$.
+- **$M$ on $\Lambda^2$** (line 92): $\mu=\mathop{\mathrm{spec}}(M)$ at $\lVert M\rVert_F=1$, with $\sum\mu=0$ and $\sum\mu^2=1$.
 - **$M$ as the sectional matrix** (line 153): the second object the letter carries, where $\lVert K\rVert_F^2=2$ at a unit Weyl tensor. *The two norms differ by $\sqrt2$, and the table says so.*
 - **"Diagonal"** (line 69): diagonal in the coordinate $2$-planes $e_i\wedge e_j$ of an orthonormal frame of $\mathbb R^n$, which is strictly stronger than diagonal as an operator on $\Lambda^2$.
 - **The bivector norm** (line 88): the record runs at $\lVert\varphi_{ab}\rVert^2=1$, the half-trace pairing, under which $\{\varphi_{ab}\}_{a<b}$ is orthonormal.
@@ -34,7 +34,7 @@ What the derivations below consume, and where each is discharged.
 | --- | --- |
 | $\{\varphi_{ab}\}_{a<b}$ is an orthonormal basis of $\Lambda^2$ | [conventions.md](../findings/conventions.md) line 88 |
 | $\lVert W\rVert=1$ in that basis, equivalently $\lVert M\rVert_F=1$ with $\sum\mu^2=1$ | [conventions.md](../findings/conventions.md) line 92 |
-| At a coordinate-diagonal $W$, $\operatorname{spec}(M)=\{K_{ab}\}_{a<b}$ | [conventions.md](../findings/conventions.md) line 153, [bispectral.md](../findings/bispectral.md) line 480 |
+| At a coordinate-diagonal $W$, $\mathop{\mathrm{spec}}(M)=\{K_{ab}\}_{a<b}$ | [conventions.md](../findings/conventions.md) line 153, [bispectral.md](../findings/bispectral.md) line 480 |
 | $K\mathbf1=0$, Ricci-flatness of the Weyl tensor | [diagonal-half.md](../findings/diagonal-half.md) line 15 |
 | $\lVert K\rVert_F$ means the Frobenius norm of the $n\times n$ **matrix** | [conventions.md](../findings/conventions.md) line 136, definitional |
 
@@ -46,7 +46,7 @@ What the derivations below consume, and where each is discharged.
 
 **And the quoted sentence is there, verbatim.** Line 138, the box immediately below, in full, the claim quotes its second clause and stops:
 
-> **THE ORDERED SUM IS THE WHOLE OF THE NORMALISATION AND WAS AMBIGUOUS HERE.** Writing $K$ as $(W_{abab})_{a<b}$ reads as an index set over *unordered* pairs, whose square sum is $\tfrac t2\le1$, so the bound $t\le2$ and that reading are inconsistent. *Checked: at a unit-norm coordinate-diagonal $W$ the unordered sum is $1$ and the ordered sum is $2$, and the record's $t=2$ is the ordered one.* In operator terms $t=2\lVert\operatorname{diag}W\rVert^2$ with the diagonal taken in the pair basis, so $t\le2$ is Cauchy–Schwarz against $\lVert W\rVert=1$, with equality exactly when $W$ is diagonal.
+> **THE ORDERED SUM IS THE WHOLE OF THE NORMALISATION AND WAS AMBIGUOUS HERE.** Writing $K$ as $(W_{abab})_{a<b}$ reads as an index set over *unordered* pairs, whose square sum is $\tfrac t2\le1$, so the bound $t\le2$ and that reading are inconsistent. *Checked: at a unit-norm coordinate-diagonal $W$ the unordered sum is $1$ and the ordered sum is $2$, and the record's $t=2$ is the ordered one.* In operator terms $t=2\lVert\mathop{\mathrm{diag}}W\rVert^2$ with the diagonal taken in the pair basis, so $t\le2$ is Cauchy–Schwarz against $\lVert W\rVert=1$, with equality exactly when $W$ is diagonal.
 
 So on item 1 the claim is right on both halves: the file tables the ordered reading in the word *"ordered"* and in the index set $\sum_{a\ne b}$, and the sentence the claim quotes is on file with the force it is given. **The finding here is not in what was quoted but in what was left out**, and that is section 2.
 
@@ -64,9 +64,9 @@ That file is about the block-mass identity rather than about $t$, so it is not a
 
 **What does beat it is the definitional half of the same line.** $t$ is not introduced as an abstract symbol constrained by a bound; it is *defined* as $\lVert K\rVert_F^2$ where $K$ is an $n\times n$ **matrix** (line 136). The Frobenius norm of a matrix runs over all index pairs. So $\sum_{a<b}K_{ab}^2$ is not an alternative reading of $\lVert K\rVert_F^2$, it is a different quantity, half of it, and the ambiguity the box confesses is one of *notation for $K$* (writing the object as a family $(W_{abab})_{a<b}$ rather than as a matrix), not of the norm. **On that reading the box is refuting a mis-typing of $K$, and the refutation is airtight and needs no constant.**
 
-**And the anchoring half is the third sentence, which the claim does not quote.** *"In operator terms $t=2\lVert\operatorname{diag}W\rVert^2$ with the diagonal taken in the pair basis, so $t\le2$ is Cauchy–Schwarz against $\lVert W\rVert=1$."* Here the numeral $2$ is **derived**, from a normalisation ($\lVert W\rVert=1$, tabled independently at [conventions.md](../findings/conventions.md) lines 88 and 92) that no choice about pair ordering can move. Spelled out: in the orthonormal pair basis $\{\varphi_{ab}\}_{a<b}$ the diagonal entries of $W$ are $\langle\varphi_{ab},W\varphi_{ab}\rangle=W_{abab}=K_{ab}$, so
+**And the anchoring half is the third sentence, which the claim does not quote.** *"In operator terms $t=2\lVert\mathop{\mathrm{diag}}W\rVert^2$ with the diagonal taken in the pair basis, so $t\le2$ is Cauchy–Schwarz against $\lVert W\rVert=1$."* Here the numeral $2$ is **derived**, from a normalisation ($\lVert W\rVert=1$, tabled independently at [conventions.md](../findings/conventions.md) lines 88 and 92) that no choice about pair ordering can move. Spelled out: in the orthonormal pair basis $\{\varphi_{ab}\}_{a<b}$ the diagonal entries of $W$ are $\langle\varphi_{ab},W\varphi_{ab}\rangle=W_{abab}=K_{ab}$, so
 
-$$\lVert\operatorname{diag}W\rVert^2=\sum_{a<b}K_{ab}^2=\tfrac12\sum_{a\ne b}K_{ab}^2=\tfrac t2\le\lVert W\rVert^2=1,$$
+$$\lVert\mathop{\mathrm{diag}}W\rVert^2=\sum_{a<b}K_{ab}^2=\tfrac12\sum_{a\ne b}K_{ab}^2=\tfrac t2\le\lVert W\rVert^2=1,$$
 
 whence $t\le2$ with equality iff $W$ is diagonal in the pair basis. **The constant is a consequence of a fixed normalisation, so it is held fixed and the reading that disagrees with it is refuted rather than rescaled.**
 
@@ -86,9 +86,9 @@ whence $t\le2$ with equality iff $W$ is diagonal in the pair basis. **The consta
 
 **Object.** The balanced sphere product $S^m\times S^m$ at $n=2m$, which is coordinate-diagonal (the curvature operator is diagonal in the coordinate pair basis of the product-adapted frame) and is the record's own witness ([diagonal-half.md](../findings/diagonal-half.md) line 21, [stratum-two-negative.md](../findings/stratum-two-negative.md) line 363).
 
-**Derivation, in closed form.** For round factors of equal radius the sectional curvatures are $R_{abab}=1$ within a factor and $0$ across, with $\operatorname{Ric}_{aa}=m-1$ for every $a$ and scalar curvature $2m(m-1)$. Then
+**Derivation, in closed form.** For round factors of equal radius the sectional curvatures are $R_{abab}=1$ within a factor and $0$ across, with $\mathop{\mathrm{Ric}}_{aa}=m-1$ for every $a$ and scalar curvature $2m(m-1)$. Then
 
-$$K_{ab}=W_{abab}=R_{abab}-\frac{\operatorname{Ric}_{aa}+\operatorname{Ric}_{bb}}{n-2}+\frac{\mathrm{scal}}{(n-1)(n-2)}=R_{abab}-1+\frac m{2m-1},$$
+$$K_{ab}=W_{abab}=R_{abab}-\frac{\mathop{\mathrm{Ric}}_{aa}+\mathop{\mathrm{Ric}}_{bb}}{n-2}+\frac{\mathrm{scal}}{(n-1)(n-2)}=R_{abab}-1+\frac m{2m-1},$$
 
 so $K_{ab}=\dfrac m{2m-1}$ within a factor and $-\dfrac{m-1}{2m-1}$ across. **Row sums vanish**: $(m-1)\cdot\frac m{2m-1}+m\cdot\frac{-(m-1)}{2m-1}=0$, so this is a genuine Weyl tensor. Counting $2\binom m2=m(m-1)$ unordered within-factor pairs and $m^2$ across,
 
@@ -112,12 +112,12 @@ $$\boxed{\ \sum_{a\ne b}K_{ab}^2=2\ \text{ exactly},\qquad \sum_{a<b}K_{ab}^2=1\
 | --- | --- | --- |
 | [conventions.md](../findings/conventions.md) line 23 | $\kappa^2\le2\lVert M\rVert_F^2$, hence $t_F\le2$ | ordered |
 | [bispectral.md](../findings/bispectral.md) line 308 | $t=\lVert K\rVert_F^2\le2$, $\sum d_\varphi^2=t/2$, $\sum d^2=3t/2$; at $t=2$, $\sum d_\varphi^2=1=\sum\mu^2$ | ordered, with the halving explicit and $\sum\mu^2=1$ as the anchor |
-| [diagonal-half.md](../findings/diagonal-half.md) lines 15 and 27 | $\sum_{a<b}w_{ab}^2=1$ at line 15, $\operatorname{tr}M^2=2$ at line 27 | **both forms, twelve lines apart, with the factor right** |
+| [diagonal-half.md](../findings/diagonal-half.md) lines 15 and 27 | $\sum_{a<b}w_{ab}^2=1$ at line 15, $\mathop{\mathrm{tr}}M^2=2$ at line 27 | **both forms, twelve lines apart, with the factor right** |
 | [diagonal-half.md](../findings/diagonal-half.md) line 273 | $\sum\kappa^2=\lVert K\rVert_F^2=t\le2$ over $K$'s eigenvalues | ordered, and correct, since $\sum_i\lambda_i(K)^2=\lVert K\rVert_F^2$ |
 | [target.md](../findings/target.md) line 17 | $\sum R=1-t/2$, with $R=0$ at a diagonal point | ordered, the identity forces $t=2$ there |
 | [target.md](../findings/target.md) line 50 | $K$ trace-free on $\mathbf1^\perp$ with Frobenius square $t\le2$, giving $\mu_1\le\sqrt{t(n-2)/(n-1)}$ | ordered, the eigenvalue bound needs the full matrix norm |
 
-**The [diagonal-half.md](../findings/diagonal-half.md) row is the interesting one and it is not a defect.** That file states its normalisation as $\sum_{a<b}w_{ab}^2=1$ (the unordered sum, equal to $1$) and then, twelve lines later, the same constraint as $\operatorname{tr}M^2=2$, the ordered sum, equal to $2$. **The two are the same constraint and the file converts correctly**, which is what a consumer under a settled convention looks like. Its header says so: *"Definitions and normalisations are quoted from [conventions.md](../findings/conventions.md)"*.
+**The [diagonal-half.md](../findings/diagonal-half.md) row is the interesting one and it is not a defect.** That file states its normalisation as $\sum_{a<b}w_{ab}^2=1$ (the unordered sum, equal to $1$) and then, twelve lines later, the same constraint as $\mathop{\mathrm{tr}}M^2=2$, the ordered sum, equal to $2$. **The two are the same constraint and the file converts correctly**, which is what a consumer under a settled convention looks like. Its header says so: *"Definitions and normalisations are quoted from [conventions.md](../findings/conventions.md)"*.
 
 **The one genuine mismatch on the record was caught, and it is filed as such.** [second-order.md](../findings/second-order.md) line 1397, among the defects of the **withdrawn** [Lemma L150](../findings/second-order.md): *"The norm was wrong. [conventions.md](../findings/conventions.md) fixes $\lVert K\rVert_F^2=2$ over ordered pairs, so '$\lVert M\rVert\le\lVert W\rVert=1$' is false as written; only the explicitly unordered sum keeps the stated threshold."* **So the convention has already been used, once, in anger, to refute a lemma**, which is the strongest available evidence that the record holds it fixed rather than merely tabling it.
 

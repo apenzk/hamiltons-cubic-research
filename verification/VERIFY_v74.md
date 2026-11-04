@@ -41,7 +41,7 @@ Three facts from the source settle the substitution the standing finding makes.
 
 **Plainly: redundancy.** The four runs share the sample, the code and the construction, and the mathematics is closed by the first.
 
-- **One prime already closes the squeeze.** $\operatorname{rank}_{\mathbb F_p}(A\bmod p)\le\operatorname{rank}_{\mathbb Q}(A)\le\operatorname{rank}\mu_K\le13$, the last step being the order-one vanishing at $W_0$. A single prime attaining $13$ forces every inequality to equality. A second prime cannot strengthen an equality.
+- **One prime already closes the squeeze.** $\mathop{\mathrm{rank}}_{\mathbb F_p}(A\bmod p)\le\mathop{\mathrm{rank}}_{\mathbb Q}(A)\le\mathop{\mathrm{rank}}\mu_K\le13$, the last step being the order-one vanishing at $W_0$. A single prime attaining $13$ forces every inequality to equality. A second prime cannot strengthen an equality.
 - **The four are four reductions of one rational matrix.** [run_n5_assemble.py:1246](../scripts/runs/run_n5_assemble.py) says so where it dumps: *"The sample points are regenerated identically from the fixed seed at every prime, so the rows correspond entry for entry."* Same $40$ points, same $47$ columns, same block order.
 - **What repetition does buy is a guard against arithmetic accident and coding error**, not against the theorem being false, and the accident it guards is the one direction the cap already excludes. It is also the lift's actual requirement: $123$ bits of modulus, per [run_n5_lift.py:8](../scripts/runs/run_n5_lift.py), which is why four exist at all.
 - **The genuine breadth lies elsewhere and is not what "four primes" names.** [r209](../reviews/REVIEW_r209.md) at $p=1000003$ used its own code, its own points and $T$ rebuilt from three positions, and $1000003\equiv3\bmod4$, so $\mathbb F_p[i]$ is a field rather than a split algebra, exercising a different arithmetic path. [r214](../reviews/REVIEW_r214.md)'s elimination is independent of the pipeline's. **Two independent code paths is the breadth; four moduli is the redundancy.** The claim advertises the redundancy and leaves the breadth unmentioned.
@@ -54,7 +54,7 @@ Three facts from the source settle the substitution the standing finding makes.
 | [results.md:631](../results.md) | *"it equals $13$ at four primes"* | no |
 | [results.md:206](../results.md) | *"a sampled rank attaining $13$ at four primes"* | no |
 | [sym3-blocks.md:346](../findings/sym3-blocks.md) | *"It attains it, at four primes."* | no |
-| [sym3-blocks.md:221](../findings/sym3-blocks.md) | *"$\operatorname{rank}(\mathrm{ev}\circ\mu)=13=\operatorname{rank}\mu$ is measured at four primes"* | no |
+| [sym3-blocks.md:221](../findings/sym3-blocks.md) | *"$\mathop{\mathrm{rank}}(\mathrm{ev}\circ\mu)=13=\mathop{\mathrm{rank}}\mu$ is measured at four primes"* | no |
 | [report/sections/07-gradedness-split.tex:905](../report/sections/07-gradedness-split.tex) | verbatim restatement | no |
 | [report/sections/09-status.tex:13](../report/sections/09-status.tex) | *"Equality rests on one sampled mod-$p$ rank, at four primes"* | no |
 
@@ -62,7 +62,7 @@ Three facts from the source settle the substitution the standing finding makes.
 
 ## 6. The strongest reading the words support
 
-**"A sampled rank equal to $13$ forces equality; it equals $13$ at four primes"** is true under its own subject: *it* is the sampled rank, the rank of the $40\times47$ restricted evaluation matrix, and that is measured at four primes with the matrices on disk, at two more in prose, and exactly over $\mathbb Q$ once. **What "four primes" cannot reach is $\operatorname{rank}\mu_K$ itself**, which no prime measures, the squeeze reaches it, through the cap. The count is sound; the plural is decoration; and the load-bearing companion to the measurement is the theorem, not the repetition.
+**"A sampled rank equal to $13$ forces equality; it equals $13$ at four primes"** is true under its own subject: *it* is the sampled rank, the rank of the $40\times47$ restricted evaluation matrix, and that is measured at four primes with the matrices on disk, at two more in prose, and exactly over $\mathbb Q$ once. **What "four primes" cannot reach is $\mathop{\mathrm{rank}}\mu_K$ itself**, which no prime measures, the squeeze reaches it, through the cap. The count is sound; the plural is decoration; and the load-bearing companion to the measurement is the theorem, not the repetition.
 
 ## What would change this verdict
 
@@ -73,4 +73,4 @@ Three facts from the source settle the substitution the standing finding makes.
 
 1. **Withdraw the "unsupported" finding** at [sym3-blocks.md:339](../findings/sym3-blocks.md) and [INDEX-results.md:76](../findings/INDEX-results.md), replacing it with the count of six and the two named sources.
 2. **Name the primes at one canonical site**, so that no reader has to reconstruct the set from filenames.
-3. **Quote the exact result instead of the modular one**, [r211](../reviews/REVIEW_r211.md)'s $\operatorname{rank}_{\mathbb Q}(A)=13$ is stronger than any number of primes and is already on file.
+3. **Quote the exact result instead of the modular one**, [r211](../reviews/REVIEW_r211.md)'s $\mathop{\mathrm{rank}}_{\mathbb Q}(A)=13$ is stronger than any number of primes and is already on file.

@@ -85,16 +85,16 @@ and [results.md](../results.md):116:
 
 **Exhibit, at the family's own stated maximiser.** Let $n=2m$ be even and split $\{1,\dots,n\}=A\sqcup B$ with $A=\{1,\dots,m\}$, $B=\{m+1,\dots,n\}$. Then
 
-$$\mathfrak h=\mathfrak{so}(m)_A\oplus\mathfrak{so}(m)_B=\operatorname{span}\{e_i\wedge e_j:\ i<j,\ \{i,j\}\subseteq A\ \text{or}\ \{i,j\}\subseteq B\},$$
-$$\mathfrak m=\mathfrak h^\perp=\operatorname{span}\{e_i\wedge e_j:\ i\in A,\ j\in B\}.$$
+$$\mathfrak h=\mathfrak{so}(m)_A\oplus\mathfrak{so}(m)_B=\mathop{\mathrm{span}}\{e_i\wedge e_j:\ i<j,\ \{i,j\}\subseteq A\ \text{or}\ \{i,j\}\subseteq B\},$$
+$$\mathfrak m=\mathfrak h^\perp=\mathop{\mathrm{span}}\{e_i\wedge e_j:\ i\in A,\ j\in B\}.$$
 
 Both are **spanned by basis vectors of $\{e_i\wedge e_j\}$**. Hence, in that basis,
 
-$$\Pi_{\mathfrak h}=\operatorname{diag}\big(\underbrace{1,\dots,1}_{\text{within-block pairs}},\ \underbrace{0,\dots,0}_{\text{cross pairs}}\big),$$
+$$\Pi_{\mathfrak h}=\mathop{\mathrm{diag}}\big(\underbrace{1,\dots,1}_{\text{within-block pairs}},\ \underbrace{0,\dots,0}_{\text{cross pairs}}\big),$$
 
 a $0/1$ **diagonal** matrix, and therefore
 
-$$W_{\mathfrak h}=c\Big(\Pi_{\mathfrak h}-\tfrac rN\mathrm{Id}\Big)=\operatorname{diag}\big(\underbrace{u,\dots,u}_{r},\ \underbrace{v,\dots,v}_{N-r}\big),\qquad u=c\big(1-\tfrac rN\big),\ v=-c\tfrac rN,$$
+$$W_{\mathfrak h}=c\Big(\Pi_{\mathfrak h}-\tfrac rN\mathrm{Id}\Big)=\mathop{\mathrm{diag}}\big(\underbrace{u,\dots,u}_{r},\ \underbrace{v,\dots,v}_{N-r}\big),\qquad u=c\big(1-\tfrac rN\big),\ v=-c\tfrac rN,$$
 
 is diagonal in $\{e_i\wedge e_j\}$, that is, **coordinate-diagonal**, in exactly the sense [conventions.md](../findings/conventions.md):53 fixes. No computation is involved; it is inspection of a span.
 

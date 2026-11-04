@@ -69,7 +69,7 @@ So claim 3 is arithmetically true and evidentially empty. Any cubic-plus-linear 
 
 ## Claim 5, CONFIRMED, with an exact formula and one warning
 
-The reason given is correct. $\operatorname{tr}\hat U^3$ and $\operatorname{tr}(\hat UV^2)$ are invariant under simultaneous conjugation and so is $T$, while $\langle\hat U,A\rangle+\langle V,C\rangle$ is not when $A$ and $C$ are held fixed, so $\Phi$ is not conjugation-invariant and $Q(e^{t\Omega}\!\cdot\!p)=\theta\,e^{t\Omega}\!\cdot\!p$ has no analogue to differentiate.
+The reason given is correct. $\mathop{\mathrm{tr}}\hat U^3$ and $\mathop{\mathrm{tr}}(\hat UV^2)$ are invariant under simultaneous conjugation and so is $T$, while $\langle\hat U,A\rangle+\langle V,C\rangle$ is not when $A$ and $C$ are held fixed, so $\Phi$ is not conjugation-invariant and $Q(e^{t\Omega}\!\cdot\!p)=\theta\,e^{t\Omega}\!\cdot\!p$ has no analogue to differentiate.
 
 **The obstruction has a closed form, which the block reports only as three magnitudes.** Let $\xi=([\Omega,\hat U],[\Omega,V])$ be the orbit tangent. Differentiating the invariance of the cubic part twice along the orbit and using $d\Phi_p=\mu\,dT_p$,
 
@@ -97,7 +97,7 @@ So claim 6 is unproved where it would be substantive and trivial where it is tru
 
 ## Claim 7, CONFIRMED
 
-Real traceless symmetric $3\times3$ matrices form a $5$-dimensional space, so pairs $(X,Y)$ give $10$. The tangency condition $3\operatorname{tr}(\hat UX)+\operatorname{tr}(VY)=0$ is a single linear functional, nonzero whenever $(\hat U,V)\ne(0,0)$, which holds at any point with $T_0>0$. Hence $10-1=9$. Correct, and the brief's Lean row is accurate: [constraint_expansion](../lean/HamiltonsCubic/Results/I106Criticality.lean) types the tangency form and the rank statement that turns it into a dimension is not typed.
+Real traceless symmetric $3\times3$ matrices form a $5$-dimensional space, so pairs $(X,Y)$ give $10$. The tangency condition $3\mathop{\mathrm{tr}}(\hat UX)+\mathop{\mathrm{tr}}(VY)=0$ is a single linear functional, nonzero whenever $(\hat U,V)\ne(0,0)$, which holds at any point with $T_0>0$. Hence $10-1=9$. Correct, and the brief's Lean row is accurate: [constraint_expansion](../lean/HamiltonsCubic/Results/I106Criticality.lean) types the tangency form and the rank statement that turns it into a dimension is not typed.
 
 ## Claim 8, NOT REPRODUCIBLE from the brief, and the inference as written is incomplete
 

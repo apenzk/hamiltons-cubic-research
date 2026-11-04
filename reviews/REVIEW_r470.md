@@ -12,15 +12,15 @@ Analysis-only footing (`.claude/rules/analysis-only.md`). No sweeps; screening o
 
 ### Finding 1, the displayed identity is CORRECT, constant and all, and it is not vacuous
 
-$$\operatorname{scal}(R^2+R^\#)=\lVert\mathrm{Ric}(R)\rVert^2+6\lVert\mathrm{Alt}(R)\rVert^2$$
+$$\mathop{\mathrm{scal}}(R^2+R^\#)=\lVert\mathrm{Ric}(R)\rVert^2+6\lVert\mathrm{Alt}(R)\rVert^2$$
 
 checks out analytically, in the record's own conventions, by three independent routes.
 
-- **Depolarising [Lemma L131](../findings/isotropy-cap.md).** $\mathrm{Ric}(R)\wedge\mathrm{id}=R+R\#I-3\,\mathrm{Alt}(R)$ paired with $R$: $\langle R\#I,R\rangle=\langle R\#R,I\rangle=\operatorname{tr}(R^\#)$ by full symmetry of Huisken's $\mathrm{tri}$, $\langle\mathrm{Alt}(R),R\rangle=\lVert\mathrm{Alt}(R)\rVert^2$ by idempotent self-adjointness ([conventions.md](../findings/conventions.md)), and $\langle\mathrm{Ric}(R)\wedge\mathrm{id},R\rangle=\tfrac12\lVert\mathrm{Ric}(R)\rVert^2$ since $\mathrm{Ric}^*=2(\cdot\wedge\mathrm{id})$ is $\mathrm{Ric}$'s adjoint. Doubling and using $\operatorname{scal}=2\operatorname{tr}$ on $\Lambda^2$ gives the display exactly.
-- **Anchor $R=\mathrm{Id}$.** $\mathrm{Id}\#\mathrm{Id}=(n-2)\mathrm{Id}$, so $\operatorname{scal}((n-1)\mathrm{Id})=2(n-1)\binom n2=n(n-1)^2=\lVert\mathrm{Ric}\rVert^2$, $\mathrm{Alt}=0$. Holds at every $n$.
+- **Depolarising [Lemma L131](../findings/isotropy-cap.md).** $\mathrm{Ric}(R)\wedge\mathrm{id}=R+R\#I-3\,\mathrm{Alt}(R)$ paired with $R$: $\langle R\#I,R\rangle=\langle R\#R,I\rangle=\mathop{\mathrm{tr}}(R^\#)$ by full symmetry of Huisken's $\mathrm{tri}$, $\langle\mathrm{Alt}(R),R\rangle=\lVert\mathrm{Alt}(R)\rVert^2$ by idempotent self-adjointness ([conventions.md](../findings/conventions.md)), and $\langle\mathrm{Ric}(R)\wedge\mathrm{id},R\rangle=\tfrac12\lVert\mathrm{Ric}(R)\rVert^2$ since $\mathrm{Ric}^*=2(\cdot\wedge\mathrm{id})$ is $\mathrm{Ric}$'s adjoint. Doubling and using $\mathop{\mathrm{scal}}=2\mathop{\mathrm{tr}}$ on $\Lambda^2$ gives the display exactly.
+- **Anchor $R=\mathrm{Id}$.** $\mathrm{Id}\#\mathrm{Id}=(n-2)\mathrm{Id}$, so $\mathop{\mathrm{scal}}((n-1)\mathrm{Id})=2(n-1)\binom n2=n(n-1)^2=\lVert\mathrm{Ric}\rVert^2$, $\mathrm{Alt}=0$. Holds at every $n$.
 - **Anchor $R\in\Lambda^4$.** $\mathrm{Ric}$ annihilates $\Lambda^4$ and $\#I=+2$ there ([Lemma L79](../findings/isotropy-cap.md) via $\mathcal A=-2(\cdot\#I)$), so LHS $=2\lVert R\rVert^2+2\cdot2\lVert R\rVert^2=6\lVert R\rVert^2$ against RHS $=6\lVert\mathrm{Alt}R\rVert^2$. **This is where the $6$ comes from, and it is $2(1+c_4)$ with $c_4=2$, dimension-free**, so "exactly $6$ in every dimension" is right.
 
-No cross-term because $\Lambda^4\perp\operatorname{im}\mathrm{Ric}^*$. **The $\tfrac13$ in $\mathrm{Alt}$ and the $\Lambda^2$-level $\tfrac12$ are both used and both used correctly.** The downstream $+24\delta^2$ is $6\lVert\mathrm{Alt}(\lvert W\rvert)\rVert^2=6\cdot4\delta^2$ via $\mathrm{Alt}(\lvert W\rvert)=2\,\mathrm{Alt}(W_-)$, which is consistent with [isotropy-cap.md](../findings/isotropy-cap.md)'s own warning that a constant stated at $\lvert W\rvert$ is not comparable with one stated at $W_-$. **Nothing in the sign convention on $W_-$ bites here**: $\mathrm{Alt}(W_+)=\mathrm{Alt}(W_-)=\tfrac12\mathrm{Alt}(\lvert W\rvert)$ under $W_-=\tfrac12(\lvert W\rvert-W)$, and $\delta^2$ is a square, so it is sign-blind. "Every sphere product, in any frame, has defect zero" is right and frame-invariance is real: a sphere product is coordinate-diagonal in its product frame, a coordinate-diagonal operator has no all-distinct-index components, so $\mathrm{Alt}=0$, and $\delta^2$ is $O(n)$-invariant.
+No cross-term because $\Lambda^4\perp\mathop{\mathrm{im}}\mathrm{Ric}^*$. **The $\tfrac13$ in $\mathrm{Alt}$ and the $\Lambda^2$-level $\tfrac12$ are both used and both used correctly.** The downstream $+24\delta^2$ is $6\lVert\mathrm{Alt}(\lvert W\rvert)\rVert^2=6\cdot4\delta^2$ via $\mathrm{Alt}(\lvert W\rvert)=2\,\mathrm{Alt}(W_-)$, which is consistent with [isotropy-cap.md](../findings/isotropy-cap.md)'s own warning that a constant stated at $\lvert W\rvert$ is not comparable with one stated at $W_-$. **Nothing in the sign convention on $W_-$ bites here**: $\mathrm{Alt}(W_+)=\mathrm{Alt}(W_-)=\tfrac12\mathrm{Alt}(\lvert W\rvert)$ under $W_-=\tfrac12(\lvert W\rvert-W)$, and $\delta^2$ is a square, so it is sign-blind. "Every sphere product, in any frame, has defect zero" is right and frame-invariance is real: a sphere product is coordinate-diagonal in its product frame, a coordinate-diagonal operator has no all-distinct-index components, so $\mathrm{Alt}=0$, and $\delta^2$ is $O(n)$-invariant.
 
 **So the identity half of L15 survives. The completeness half does not.**
 
@@ -61,7 +61,7 @@ If the Bianchi defect were *exactly* what stops the lift, setting it to zero wou
 [diss_jaeger_florian.txt](https://repositorium.uni-muenster.de/document/miami/820840d1-0252-4bf3-8fc7-853730eee3f5/diss_jaeger_florian.pdf) L2012–2040, Lemma 3.2.2 and its proof, read at the hit and nowhere else:
 
 > **Lemma 3.2.2.** … $\theta n\bar\lambda=r^2-4\lVert W_-\rVert^2-C_\#(W)$. In particular, $C_\#(W)\ge0$ …
-> *Proof.* As seen in equation (1.6), it is known that $\operatorname{scal}(R^2+R^\#)=\sum_{i,j}(\mathrm{Ric}(R)_{ij})^2$ **for all operators $R\in S^2_B(\mathfrak{so}(n))$**. … Moreover, $C_\#(W)\ge0$ **because $X(W)\ge0$**.
+> *Proof.* As seen in equation (1.6), it is known that $\mathop{\mathrm{scal}}(R^2+R^\#)=\sum_{i,j}(\mathrm{Ric}(R)_{ij})^2$ **for all operators $R\in S^2_B(\mathfrak{so}(n))$**. … Moreover, $C_\#(W)\ge0$ **because $X(W)\ge0$**.
 
 and the line closing Lemma 3.2.1's proof, L2003:
 
@@ -74,7 +74,7 @@ and the line closing Lemma 3.2.1's proof, L2003:
 | eq. (1.6), stated on $S^2_B$ | a coordinate-diagonal operator has no all-distinct-index components, so $\mathrm{Alt}(\lvert W\rvert)=0$ | **priced**: $+6\lVert\mathrm{Alt}\rVert^2$, i.e. $+24\delta^2$, L15's exception, and L15 identifies it correctly |
 | $X(W)\succeq0$, "obvious by the definitions of $W_\pm$" | $W_\pm$ are **entrywise masks** there, so every summand is entrywise signed | **REFUTED**, $\lambda_{\min}\approx-2.4\times10^{-2}$ at a real $n=6$ critical point ([ATTEMPTS.md:618](../ATTEMPTS.md)) |
 
-The second is repaired at §3.2 ($\operatorname{scal}(X)\ge0$ survives because $\#$ preserves the PSD cone) and that repair is a *replacement of a failed step by a weaker one*, which is not the same as the step surviving. At §3.3 the identical pair recurs and **the repair is only conjectural**: the surviving contraction there is $J_5\ge0$, still owed. **"Every step of that transfer survives … with one exception" is false at the exact step L15 names**, by the thesis's own two-line proof.
+The second is repaired at §3.2 ($\mathop{\mathrm{scal}}(X)\ge0$ survives because $\#$ preserves the PSD cone) and that repair is a *replacement of a failed step by a weaker one*, which is not the same as the step surviving. At §3.3 the identical pair recurs and **the repair is only conjectural**: the surviving contraction there is $J_5\ge0$, still owed. **"Every step of that transfer survives … with one exception" is false at the exact step L15 names**, by the thesis's own two-line proof.
 
 ### Finding 5, as written it is a note, and its one checkable sentence is [Lemma L131](../findings/isotropy-cap.md) depolarised
 
@@ -95,7 +95,7 @@ Two smaller inaccuracies in the same paragraph, both from over-stating:
 
 | component | verdict |
 | --- | --- |
-| $\operatorname{scal}(R^2+R^\#)=\lVert\mathrm{Ric}(R)\rVert^2+6\lVert\mathrm{Alt}(R)\rVert^2$, constant $6$ at every $n$, no cross-term | **CONFIRMED**, three independent derivations, all $n\ge3$, non-vacuous |
+| $\mathop{\mathrm{scal}}(R^2+R^\#)=\lVert\mathrm{Ric}(R)\rVert^2+6\lVert\mathrm{Alt}(R)\rVert^2$, constant $6$ at every $n$, no cross-term | **CONFIRMED**, three independent derivations, all $n\ge3$, non-vacuous |
 | the Bianchi failure of $\lvert W\rvert,W_\pm$ is *an* obstruction, priced at $+24\delta^2$, sharp at $\mathcal S^4(\alpha)$ | **CONFIRMED** |
 | it is **the** obstruction, "every step survives with one exception", "identified exactly" | **REFUTED** |
 | L15 as a *lemma* | **REFUTED**, a note; its displayed content is [Lemma L131](../findings/isotropy-cap.md) depolarised |

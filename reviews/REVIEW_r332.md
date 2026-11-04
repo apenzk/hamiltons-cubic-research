@@ -1,6 +1,6 @@
 # Reviewer 332, the invariant census, post F42, and the Cauchy–Schwarz bound on $G_2$
 
-**Cold brief, independent build.** Everything below is computed from $\mathfrak{so}(n)$, the structure constants, $\#$ and $\mathcal W_n$ rebuilt from their definitions in [scripts/reviewers/r332/](../scripts/reviewers/r332/); no script of the record was read or run, and [scripts/reviewers/r331/](../scripts/reviewers/r331/) was not opened. Build validation: $\dim\mathcal W_6=84$ from the constraint nullspace; $S^3\times S^3$, $S^4\times S^4$, $S^3\times S^5$ and padded $W_{\mathbb{CP}^2}$ reproduce $\theta=1.054092553$, $1.145643924$, $\sqrt{56/45}=1.115546702$, $\sqrt{3/2}=1.224744871$ with criticality residuals $\le3\times10^{-16}$, and (A), (B), (C) hold at every one of them to $\le2\times10^{-14}$. Conventions: $\langle A,B\rangle=-\tfrac12\operatorname{tr}(AB)$, $c_{abc}=\langle[\varphi_a,\varphi_b],\varphi_c\rangle$ in $W$'s eigenbasis, $T=c^2$, all contractions $\sum_{abc}$ over ordered index triples.
+**Cold brief, independent build.** Everything below is computed from $\mathfrak{so}(n)$, the structure constants, $\#$ and $\mathcal W_n$ rebuilt from their definitions in [scripts/reviewers/r332/](../scripts/reviewers/r332/); no script of the record was read or run, and [scripts/reviewers/r331/](../scripts/reviewers/r331/) was not opened. Build validation: $\dim\mathcal W_6=84$ from the constraint nullspace; $S^3\times S^3$, $S^4\times S^4$, $S^3\times S^5$ and padded $W_{\mathbb{CP}^2}$ reproduce $\theta=1.054092553$, $1.145643924$, $\sqrt{56/45}=1.115546702$, $\sqrt{3/2}=1.224744871$ with criticality residuals $\le3\times10^{-16}$, and (A), (B), (C) hold at every one of them to $\le2\times10^{-14}$. Conventions: $\langle A,B\rangle=-\tfrac12\mathop{\mathrm{tr}}(AB)$, $c_{abc}=\langle[\varphi_a,\varphi_b],\varphi_c\rangle$ in $W$'s eigenbasis, $T=c^2$, all contractions $\sum_{abc}$ over ordered index triples.
 
 | claim | verdict |
 | --- | --- |
@@ -10,7 +10,7 @@
 | **Q3** post F42's empirical premise | **REFUTED AS STATED**, r324 measured a one-row sub-relaxation, not "the full pinned relaxation", and a looser LP's high ceiling cannot establish that the tighter full LP fails |
 | **Q4** freeness of $\{2,2,0\}$ | **PROVED at the formal level**, an exact rational pair $T\ne T'$, same $(\lambda,\theta)$, all rows of (A),(B),(C), $S_{22}=11480/17$ against $18592/23$. Realizability-level freeness **UNDECIDED**, and the catalogue cannot decide it: its only same-$(\lambda,\theta)$ pairs are triality pairs, which are bracket-isomorphic and agree on every $T$-functional |
 | **Q5(i)** $S_{22}$ basis-free | **CONFIRMED**, proof supplied: the sum is $\lVert C\circ(W\otimes W)\rVert_{HS}^2$ for the bracket $C$ |
-| **Q5(ii)** equality iff $\lambda_k^2$ constant on $\operatorname{supp}(g)$ | **REFUTED AS STATED, repaired**, equality iff $\lambda_k$ is constant on $\operatorname{supp}(g)$; the $\lambda^2$ version admits mixed-sign support and is false there |
+| **Q5(ii)** equality iff $\lambda_k^2$ constant on $\mathop{\mathrm{supp}}(g)$ | **REFUTED AS STATED, repaired**, equality iff $\lambda_k$ is constant on $\mathop{\mathrm{supp}}(g)$; the $\lambda^2$ version admits mixed-sign support and is false there |
 | **Q5(iii)** exact at the balanced product | **CONFIRMED in substance, deflated**, the cited support fact needs Lemma L71's symmetric-pair structure for the $E_{\max}$ rows, and the exactness is *forced*: at any two-value spectrum (A),(B),(C) pin $G_2=4\theta^2/(n-1)$ identically, so the bound is an identity there and discriminates nothing |
 | **Q5(iv)** the padded-$W_{\mathbb{CP}^2}$ refutation | **CONFIRMED and STRENGTHENED**, the arithmetic checks ($4\theta\sqrt6=12$, target $8(n-2)/n^2$), $\Delta=0$ is recorded on the $\{\lambda>0\}$ branch ([bounds.md](../findings/bounds.md), the padding-artefact paragraph), and the true statement is stronger: $G_2=2$ **exactly**, pinned by (A),(B),(C) alone, every padding, no $\Delta$, no support argument |
 
@@ -20,7 +20,7 @@
 
 ## 0. The frame all five questions share
 
-Every per-index quantity linear in $T$ with polynomial $\lambda$-weights is one of $m_{ij}(k):=\sum_{\beta\gamma}\lambda_\beta^i\lambda_\gamma^jT_{k\beta\gamma}=\pm\operatorname{tr}\!\big(\mathrm{ad}(\varphi_k)W^i\,\mathrm{ad}(\varphi_k)W^j\big)$, symmetric in $(i,j)$. The record's three are $m_{00}$ (Killing), $m_{10}$ (Bianchi + Ricci-flat), $m_{11}$ (criticality). A fourth relation means: some $m_{ij}$ with $\max(i,j)\ge2$ is a function of $(\lambda_k,\lambda,\theta)$. The smallest candidate is $m_{20}=R_k=\sum\lambda_\beta^2T_{k\beta\gamma}$, and pinning it pins every $\{p,2,0\}$ pattern including $\{2,2,0\}$, since $S_{22}=\sum_k\lambda_k^2R_k$.
+Every per-index quantity linear in $T$ with polynomial $\lambda$-weights is one of $m_{ij}(k):=\sum_{\beta\gamma}\lambda_\beta^i\lambda_\gamma^jT_{k\beta\gamma}=\pm\mathop{\mathrm{tr}}\!\big(\mathrm{ad}(\varphi_k)W^i\,\mathrm{ad}(\varphi_k)W^j\big)$, symmetric in $(i,j)$. The record's three are $m_{00}$ (Killing), $m_{10}$ (Bianchi + Ricci-flat), $m_{11}$ (criticality). A fourth relation means: some $m_{ij}$ with $\max(i,j)\ge2$ is a function of $(\lambda_k,\lambda,\theta)$. The smallest candidate is $m_{20}=R_k=\sum\lambda_\beta^2T_{k\beta\gamma}$, and pinning it pins every $\{p,2,0\}$ pattern including $\{2,2,0\}$, since $S_{22}=\sum_k\lambda_k^2R_k$.
 
 ## 1. Q1, the hunt for a fourth relation, mechanism by mechanism
 
@@ -127,7 +127,7 @@ For any linear $A$ on $\mathfrak{so}(n)$ and the bracket $C:\mathfrak{so}(n)\oti
 
 ### 5.2 (ii) The equality case, REFUTED AS STATED
 
-Cauchy–Schwarz on $u_k=\lambda_k\sqrt{g_k}$, $v_k=\sqrt{g_k}$ has equality iff $u\propto v$, i.e. iff $\lambda_k$ **itself** is constant on $\operatorname{supp}(g)$. "$\lambda_k^2$ constant" admits support meeting both $\pm c$: there $(\sum\lambda g)^2=c^2(\sum\pm g)^2<c^2(\sum g)^2=(\sum\lambda^2g)(\sum g)$ whenever both signs carry mass, so the stated criterion is necessary but not sufficient. The repair costs nothing downstream: at the balanced product $\operatorname{supp}(g)=E_{\min}$ carries the single value $\lambda_{\min}$, so equality genuinely holds.
+Cauchy–Schwarz on $u_k=\lambda_k\sqrt{g_k}$, $v_k=\sqrt{g_k}$ has equality iff $u\propto v$, i.e. iff $\lambda_k$ **itself** is constant on $\mathop{\mathrm{supp}}(g)$. "$\lambda_k^2$ constant" admits support meeting both $\pm c$: there $(\sum\lambda g)^2=c^2(\sum\pm g)^2<c^2(\sum g)^2=(\sum\lambda^2g)(\sum g)$ whenever both signs carry mass, so the stated criterion is necessary but not sufficient. The repair costs nothing downstream: at the balanced product $\mathop{\mathrm{supp}}(g)=E_{\min}$ carries the single value $\lambda_{\min}$, so equality genuinely holds.
 
 ### 5.3 (iii) Exactness at the balanced product, CONFIRMED in substance, with a provenance gap and a deflation
 

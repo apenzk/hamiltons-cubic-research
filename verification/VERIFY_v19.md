@@ -27,8 +27,8 @@
 
 **Kulkarni–Nomizu.** $(A\owedge B)_{ijkl}=A_{ik}B_{jl}+A_{jl}B_{ik}-A_{il}B_{jk}-A_{jk}B_{il}$, matching the record's projector normalisation $\mathrm{KN}(h)=\tfrac12(h\owedge g)$ ([nondegeneracy.md](../findings/nondegeneracy.md):375). Two consequences used throughout, both derived here:
 
-- **Ricci.** $\mathrm{Ric}(A\owedge B)=(\operatorname{tr}A)B+(\operatorname{tr}B)A-AB-BA$.
-- **Simultaneous diagonality.** If $A=\operatorname{diag}(a_i)$ and $B=\operatorname{diag}(b_i)$ in one orthonormal frame, then $A\owedge B$ is diagonal in $\{e_i\wedge e_j\}_{i<j}$ with eigenvalue $a_ib_j+a_jb_i$ on $e_i\wedge e_j$, and every off-diagonal entry vanishes.
+- **Ricci.** $\mathrm{Ric}(A\owedge B)=(\mathop{\mathrm{tr}}A)B+(\mathop{\mathrm{tr}}B)A-AB-BA$.
+- **Simultaneous diagonality.** If $A=\mathop{\mathrm{diag}}(a_i)$ and $B=\mathop{\mathrm{diag}}(b_i)$ in one orthonormal frame, then $A\owedge B$ is diagonal in $\{e_i\wedge e_j\}_{i<j}$ with eigenvalue $a_ib_j+a_jb_i$ on $e_i\wedge e_j$, and every off-diagonal entry vanishes.
 
 **The objects.** $V=\mathbb R^n=V_1\oplus V_2$ with $\dim V_1=\dim V_2=m$, $n=2m$; $B_1,B_2$ the two coordinate blocks; $g_1=P_{V_1}$, $g_2=P_{V_2}$, $g=g_1+g_2$. $h\in S^2_0(\mathbb R^m)$ is a traceless symmetric form on $V_1$, extended by zero, with eigenvalues $h_1,\dots,h_m$, $\sum_ah_a=0$. Write $M_1:=\max_a\lvert h_a\rvert$ and $M_2:=\max_{a\ne a'}\lvert h_a+h_{a'}\rvert$.
 
@@ -44,7 +44,7 @@
 
 **Unstated hypotheses the written proof actually uses.**
 
-- **$m\ge3$.** At $m=2$, $\alpha=0$ and $h=\operatorname{diag}(t,-t)$ gives $h_a+h_{a'}=0$, so $H\equiv0$: the hypothesis $\lVert H\rVert_F=1$ is unsatisfiable, the lemma is vacuous, and the "supremum $1/\sqrt{m-1}$" reads as $1$ over an empty set. Nothing in the boxed statement excludes it.
+- **$m\ge3$.** At $m=2$, $\alpha=0$ and $h=\mathop{\mathrm{diag}}(t,-t)$ gives $h_a+h_{a'}=0$, so $H\equiv0$: the hypothesis $\lVert H\rVert_F=1$ is unsatisfiable, the lemma is vacuous, and the "supremum $1/\sqrt{m-1}$" reads as $1$ over an empty set. Nothing in the boxed statement excludes it.
 - **$h$ is a single traceless form on one factor**, so that $H$ lies in one of the two $S^2_0(\mathbb R^m)$ summands rather than in their sum. This is the load-bearing omission; section 5.
 - **A frame diagonalising $h$ has been chosen.** Legitimate: $O(m)\times O(m)\subset O(n)$ preserves $g_1$, $g_2$ and $W^*$, and diagonalises any $h$ on $V_1$. Recorded because the eigenvalue list is stated frame-first.
 - **$m\ge5$** for the *applicability* clause, not for the algebra. Correctly stated in the follow-up box; verified exactly in section 6.
@@ -54,16 +54,16 @@
 | import | hypotheses | checked against $W^*=S^m\times S^m$ |
 |---|---|---|
 | [Lemma L27](../findings/nondegeneracy.md), the $L_e$ spectrum at $S^p\times S^q$ | $p,q\ge3$, $(p,q)\ne(3,3)$, $n\ge5$ | $p=q=m\ge5$ satisfies all three; the spectrum list at [nondegeneracy.md](../findings/nondegeneracy.md):700 gives $\lambda_m$ at multiplicity $s_m=(m+2)(m-1)/2=\dim S^2_0(\mathbb R^m)$ **for each of $p$ and $q$**, so the $\lambda_m$-eigenspace is $2s_m$-dimensional, and this is precisely the fact section 5 turns on |
-| the record's Weyl projector, $P(X)=Y-\frac2{n-2}\mathrm{KN}(\rho_0)-\frac1{n(n-1)}s\,\mathrm{KN}(g)$ | $X$ an algebraic curvature tensor | $h\owedge g_2$ satisfies the first Bianchi identity as a Kulkarni–Nomizu product of symmetric forms; its scalar curvature is $\operatorname{tr}(mh)=0$, so the third term drops and the projection is $H_0-\frac1{n-2}\mathring{\mathrm{Ric}}\owedge g$, used in section 2 |
+| the record's Weyl projector, $P(X)=Y-\frac2{n-2}\mathrm{KN}(\rho_0)-\frac1{n(n-1)}s\,\mathrm{KN}(g)$ | $X$ an algebraic curvature tensor | $h\owedge g_2$ satisfies the first Bianchi identity as a Kulkarni–Nomizu product of symmetric forms; its scalar curvature is $\mathop{\mathrm{tr}}(mh)=0$, so the third term drops and the projection is $H_0-\frac1{n-2}\mathring{\mathrm{Ric}}\owedge g$, used in section 2 |
 | [Lemma L145](../findings/second-order.md)'s $c_p$ and $g_n=\frac2n\sqrt{\frac{n-2}{2(n-1)}}$ | the balanced product; $\theta_0(n)\uparrow\sqrt2$ | the arithmetic $\tfrac12-\lambda_m=\tfrac1{n-2}$ is verified exactly in section 6; the factor $3\theta_0$ is **not** checked here, it is a Hessian normalisation from L145 and the brief carries no derivation of it |
 
 **Hypotheses stated but never used.** None. **No finding: every hypothesis printed in the boxed statement does work somewhere, and $\lVert H\rVert_F=1$ does work in exactly two of the four clauses.**
 
 ## 2. The embedding and the Frobenius identity, rebuilt
 
-$g_q$ in "$\mathrm{Ric}(h\owedge g_q)=m\,h$" is the metric of the **complementary** factor. Taking $A=h$ (traceless, supported on $V_1$) and $B=g_2$ in the Ricci formula of section 0: $\operatorname{tr}h=0$, $\operatorname{tr}g_2=m$, and $hg_2=g_2h=0$ by disjoint support, so $\mathrm{Ric}(h\owedge g_2)=m\,h$. **The record's motivating identity is exact**, and it fixes $q$ as the other factor.
+$g_q$ in "$\mathrm{Ric}(h\owedge g_q)=m\,h$" is the metric of the **complementary** factor. Taking $A=h$ (traceless, supported on $V_1$) and $B=g_2$ in the Ricci formula of section 0: $\mathop{\mathrm{tr}}h=0$, $\mathop{\mathrm{tr}}g_2=m$, and $hg_2=g_2h=0$ by disjoint support, so $\mathrm{Ric}(h\owedge g_2)=m\,h$. **The record's motivating identity is exact**, and it fixes $q$ as the other factor.
 
-Scalar curvature $\operatorname{tr}(mh)=0$, so $\mathring{\mathrm{Ric}}=mh$ and the Weyl part is
+Scalar curvature $\mathop{\mathrm{tr}}(mh)=0$, so $\mathring{\mathrm{Ric}}=mh$ and the Weyl part is
 
 $$H=h\owedge g_2-\frac{m}{n-2}\,h\owedge g=h\owedge\Big(\big(1-\tfrac m{2(m-1)}\big)g_2-\tfrac m{2(m-1)}g_1\Big)=h\owedge(\alpha g_2-\beta g_1),$$
 

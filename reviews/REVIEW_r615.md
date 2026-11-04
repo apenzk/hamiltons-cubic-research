@@ -51,7 +51,7 @@ Take Fubini–Study on $\mathbb R^{2m}$ with $J$ the compatible complex structur
 
 $$R_{ijkl}=g_{ik}g_{jl}-g_{il}g_{jk}+J_{ik}J_{jl}-J_{il}J_{jk}+2J_{ij}J_{kl},$$
 
-so that $R_{abab}=1+3J_{ab}^2$ on an orthonormal pair: holomorphic sectional curvature $4$, totally real $1$. Contracting, $\operatorname{Ric}=(n+2)g$ with $n=2m$, so the space is Einstein and
+so that $R_{abab}=1+3J_{ab}^2$ on an orthonormal pair: holomorphic sectional curvature $4$, totally real $1$. Contracting, $\mathop{\mathrm{Ric}}=(n+2)g$ with $n=2m$, so the space is Einstein and
 
 $$W_{ijkl}=R_{ijkl}-\frac{s}{n(n-1)}\big(g_{ik}g_{jl}-g_{il}g_{jk}\big),\qquad \frac{s}{n(n-1)}=\frac{n+2}{n-1}=\frac{2m+2}{2m-1}.$$
 

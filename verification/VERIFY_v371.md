@@ -28,7 +28,7 @@ Cold brief ([ADJ_L115_F8.md](ADJ_L115_F8.md)), no numerical work, no scripts wri
 - **H1 (file identity).** The step's "L115.lean" names the file of that name. Checked by its namespace line alone: [L115.lean:26](../lean/HamiltonsCubic/Results/L115.lean#L26) opens HamiltonsCubic.OutsideItsSpace and [L115Statement.lean:76](../lean/HamiltonsCubic/Results/L115Statement.lean#L76) opens HamiltonsCubic.L115Statement, so the first quoted block is L115.lean.
 - **H2 (compilation).** The quoted declarations elaborate as written. Not checked here, since a build is a computation. Every verdict below rests on the mathematical content of the statements and proofs, which is checked by hand, and the FAILS verdict does not depend on H2 at all.
 - **H3 (companion reading).** "L115.lean" is read to include its statement file L115Statement.lean. This is the only hypothesis under which the step is VALID (section 5). The words of the step name a single file and H1 settles which one it is, so H3 substitutes a different object rather than supplying an unwritten premise.
-- **H4 (instantiation for theta_ge_diag).** $A=M$, lam $=\lambda$, hdiag from $\operatorname{diag}M=\lambda$, hlam from $\lambda_{\max}(M)\le\theta$. The last is half of the GAP-graded first clause of Lemma L115.
+- **H4 (instantiation for theta_ge_diag).** $A=M$, lam $=\lambda$, hdiag from $\mathop{\mathrm{diag}}M=\lambda$, hlam from $\lambda_{\max}(M)\le\theta$. The last is half of the GAP-graded first clause of Lemma L115.
 - **H5 (instantiation for theta_gt_lambda).** hnorm from $\|W\|=1$, hθ from $\theta=M(n)\ge\sqrt{3/2}$, which the brief gives for $n\ge4$ through padded $W_{\mathbb{CP}^2}$.
 
 ## 2. The claims of Passage A
@@ -36,18 +36,18 @@ Cold brief ([ADJ_L115_F8.md](ADJ_L115_F8.md)), no numerical work, no scripts wri
 Passage A carries these mathematical claims.
 
 - (A1) $\lambda_{\max}(M)=\theta$ at every global maximiser. Graded GAP in the unrestricted form, asserted at coordinate-diagonal global maximisers and at $S^m\times S^m$, $m\ge4$.
-- (A2) $\theta\ge\max_\alpha\lambda_\alpha$ at a maximiser, derived from $\operatorname{diag}M=\lambda$ and (A1).
+- (A2) $\theta\ge\max_\alpha\lambda_\alpha$ at a maximiser, derived from $\mathop{\mathrm{diag}}M=\lambda$ and (A1).
 - (A3) Lemma L24 caps $\lambda_{\max}(L_e|_{W^\perp})$ on $\mathcal W_n\cap W^\perp$ only, and reading that cap over $\mathcal D$ is the unlicensed step. What would close (A1) is a cap on $\lambda_{\max}(L_W|_{\mathcal W_n^\perp})$.
 - (A4) $\sup_W\lambda_{\max}(M)\le\theta_0$ is strictly stronger than Conjecture A, and the pointwise statement at maximisers is equivalent to it.
 
-The components (A1) to (A4) use are: $M$ symmetric with $\operatorname{diag}M=\lambda$, the Rayleigh reading of $\lambda_{\max}$, the scope of Lemma L24's statement, and the fact that a cap on the compression of a self-adjoint operator to a subspace $U$ does not bound its compression to a larger subspace $V\supset U$.
+The components (A1) to (A4) use are: $M$ symmetric with $\mathop{\mathrm{diag}}M=\lambda$, the Rayleigh reading of $\lambda_{\max}$, the scope of Lemma L24's statement, and the fact that a cap on the compression of a self-adjoint operator to a subspace $U$ does not bound its compression to a larger subspace $V\supset U$.
 
 ## 3. The declarations of L115.lean, one by one
 
 ### 3.1 The dimension arithmetic
 
 - lambda2_six: $6\cdot5/2=15=\dim\Lambda^2\mathbb R^6$. Correct.
-- ambient_dim: $16\cdot15/2=120=\dim\operatorname{Sym}^2(\mathbb R^{15})$. Correct.
+- ambient_dim: $16\cdot15/2=120=\dim\mathop{\mathrm{Sym}}^2(\mathbb R^{15})$. Correct.
 - weyl_six: $6\cdot7\cdot8\cdot3/12=84=n(n+1)(n+2)(n-3)/12$ at $n=6$, the dimension of $\mathcal W_6$. Correct.
 - intersection_share_ambient, intersection_share_weyl, share_bracket: $\tfrac1{120}<\tfrac1{100}<\tfrac1{84}<\tfrac{12}{1000}$. Correct, since $84\cdot12=1008>1000$.
 
@@ -59,7 +59,7 @@ The statement is $\exists f:\mathbb Q^2\to\mathbb Q,\ \exists c,\ (\forall t,\ f
 
 **The case for it.** (A3) says a cap proved on $\mathcal W_n\cap W^\perp$ is read over $\mathcal D$, and that this reading is unlicensed. The Lean statement witnesses that a bound on a subset of a domain does not bound the function on the domain. That is the logical shape of the objection.
 
-**Why it is not the component.** An inference is shown invalid by form only by a counterexample that is an instance of the form. The form (A3) objects to is: for a self-adjoint $L$ on a finite-dimensional inner-product space and subspaces $U\subset V$, $\lambda_{\max}(L|_U)\le c$ implies $\lambda_{\max}(L|_V)\le c$. An instance is a Rayleigh quotient $x\mapsto\langle x,Lx\rangle/\langle x,x\rangle$, homogeneous of degree $0$ and bounded on $V\setminus\{0\}$ by $\|L\|$. The witness $f(p)=p_2$ is linear, homogeneous of degree $1$, and unbounded, so it is an instance of no such form, and its second conjunct $\forall B\ \exists p,\ B<f(p)$ is false for every Rayleigh quotient. Hence the Lean statement follows from the operator-level non-transfer but does not imply it. The operator-level fact has a one-line instance, $L=\operatorname{diag}(0,1)$ on $\mathbb R^2$, $U=\operatorname{span}(e_1)$, $c=0$, $\lambda_{\max}(L|_U)=0\le0<1=\lambda_{\max}(L|_{\mathbb R^2})$, and L115.lean does not state it. The declaration is REFUTED AS STATED as the component of (A3).
+**Why it is not the component.** An inference is shown invalid by form only by a counterexample that is an instance of the form. The form (A3) objects to is: for a self-adjoint $L$ on a finite-dimensional inner-product space and subspaces $U\subset V$, $\lambda_{\max}(L|_U)\le c$ implies $\lambda_{\max}(L|_V)\le c$. An instance is a Rayleigh quotient $x\mapsto\langle x,Lx\rangle/\langle x,x\rangle$, homogeneous of degree $0$ and bounded on $V\setminus\{0\}$ by $\|L\|$. The witness $f(p)=p_2$ is linear, homogeneous of degree $1$, and unbounded, so it is an instance of no such form, and its second conjunct $\forall B\ \exists p,\ B<f(p)$ is false for every Rayleigh quotient. Hence the Lean statement follows from the operator-level non-transfer but does not imply it. The operator-level fact has a one-line instance, $L=\mathop{\mathrm{diag}}(0,1)$ on $\mathbb R^2$, $U=\mathop{\mathrm{span}}(e_1)$, $c=0$, $\lambda_{\max}(L|_U)=0\le0<1=\lambda_{\max}(L|_{\mathbb R^2})$, and L115.lean does not state it. The declaration is REFUTED AS STATED as the component of (A3).
 
 Even the operator-level fact would not state (A3) itself, which is a claim about the scope of Lemma L24's hypothesis ($W^\perp$ inside $\mathcal W_n$) and about the absence of an argument for the $\mathcal D$ reading. A non-transfer witness shows only that such an argument is needed, and neither version mentions $L_e$, $\mathcal W_n\cap W^\perp$ or $\mathcal D$.
 
@@ -79,11 +79,11 @@ Every declaration of L115.lean is correctly proved, and none states (A1), (A2), 
 
 ### 4.1 diag M equals lambda and M is symmetric
 
-$M_{\alpha\alpha}=\lambda_\alpha+\tfrac12\sum_\gamma c'^2_{\alpha\alpha\gamma}\lambda_\gamma$ and $c'_{\alpha\alpha\gamma}=\langle[v_\alpha,v_\alpha],v_\gamma\rangle=0$, so $\operatorname{diag}M=\lambda$. $M$ is symmetric because $c'^2$ is totally symmetric. Hence for $M$, IsTopRayleigh $M$ $\theta$ is equivalent to $\lambda_{\max}(M)\le\theta$.
+$M_{\alpha\alpha}=\lambda_\alpha+\tfrac12\sum_\gamma c'^2_{\alpha\alpha\gamma}\lambda_\gamma$ and $c'_{\alpha\alpha\gamma}=\langle[v_\alpha,v_\alpha],v_\gamma\rangle=0$, so $\mathop{\mathrm{diag}}M=\lambda$. $M$ is symmetric because $c'^2$ is totally symmetric. Hence for $M$, IsTopRayleigh $M$ $\theta$ is equivalent to $\lambda_{\max}(M)\le\theta$.
 
 ### 4.2 theta_ge_diag is the deduction of (A2)
 
-diag_is_rayleigh gives $e_\alpha\cdot Ae_\alpha=A_{\alpha\alpha}$ and $e_\alpha\cdot e_\alpha=1$, both immediate from $A e_\alpha$ being column $\alpha$. theta_ge_diag then reads $A_{\alpha\alpha}=e_\alpha\cdot Ae_\alpha\le\theta$ with $A_{\alpha\alpha}=\lambda_\alpha$. Under H4 this is exactly Passage A's "since $\operatorname{diag}M=\lambda$ and $\lambda_{\max}(M)=\theta$ at a maximiser, $\theta\ge\max_\alpha\lambda_\alpha$", and it uses only the upper half $\lambda_{\max}(M)\le\theta$ of (A1). CONFIRMED, conditional on that GAP-graded half.
+diag_is_rayleigh gives $e_\alpha\cdot Ae_\alpha=A_{\alpha\alpha}$ and $e_\alpha\cdot e_\alpha=1$, both immediate from $A e_\alpha$ being column $\alpha$. theta_ge_diag then reads $A_{\alpha\alpha}=e_\alpha\cdot Ae_\alpha\le\theta$ with $A_{\alpha\alpha}=\lambda_\alpha$. Under H4 this is exactly Passage A's "since $\mathop{\mathrm{diag}}M=\lambda$ and $\lambda_{\max}(M)=\theta$ at a maximiser, $\theta\ge\max_\alpha\lambda_\alpha$", and it uses only the upper half $\lambda_{\max}(M)\le\theta$ of (A1). CONFIRMED, conditional on that GAP-graded half.
 
 ### 4.3 theta_gt_lambda proves (A2) outright
 

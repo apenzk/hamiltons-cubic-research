@@ -57,12 +57,12 @@ $U(m)$ is a maximal connected subgroup of $SO(2m)$ for $m\ge3$ ($SO(2m)/U(m)$ is
 
 ### Two moment identities pin the whole eigenvalue list, and refute the table's $4m$
 
-Fox's Theorem 1.3, recorded at [findings/algebra.md](../findings/algebra.md) lines 12–16, gives $\operatorname{tr}L(x)=0$ and $\operatorname{tr}(L(x)L(y))=\kappa_F\langle x,y\rangle$ with $\kappa_F(n)=\frac{(2n-1)(n-1)}4$. Both hold exactly on the table above:
+Fox's Theorem 1.3, recorded at [findings/algebra.md](../findings/algebra.md) lines 12–16, gives $\mathop{\mathrm{tr}}L(x)=0$ and $\mathop{\mathrm{tr}}(L(x)L(y))=\kappa_F\langle x,y\rangle$ with $\kappa_F(n)=\frac{(2n-1)(n-1)}4$. Both hold exactly on the table above:
 
-$$\operatorname{tr}L_e=1+\tfrac{(m-1)(m+2)}2+\tfrac{m(m-1)}2+\tfrac{m^2(m-3)}2-\tfrac{m^2(m-1)}2=1+\tfrac12(0\cdot m^2-2)=0,$$
-$$\operatorname{tr}(L_e^2)=\frac{12m^3-15m^2+3m}{4(m+1)}=\frac{3m(m-1)(4m-1)}{4(m+1)}=\frac{(4m-1)(2m-1)}4\cdot\frac{3m(m-1)}{(m+1)(2m-1)}=\kappa_F(2m)\lVert e\rVert^2 .$$
+$$\mathop{\mathrm{tr}}L_e=1+\tfrac{(m-1)(m+2)}2+\tfrac{m(m-1)}2+\tfrac{m^2(m-3)}2-\tfrac{m^2(m-1)}2=1+\tfrac12(0\cdot m^2-2)=0,$$
+$$\mathop{\mathrm{tr}}(L_e^2)=\frac{12m^3-15m^2+3m}{4(m+1)}=\frac{3m(m-1)(4m-1)}{4(m+1)}=\frac{(4m-1)(2m-1)}4\cdot\frac{3m(m-1)}{(m+1)(2m-1)}=\kappa_F(2m)\lVert e\rVert^2 .$$
 
-Both are identities in $m$, and **both fail under the block's table**: replacing either $0$ by $\frac1{m+1}$ on a summand of dimension $\frac{2m^2(m^2-4)}3$ or $\frac{m^2(m-1)(m+3)}4$ makes $\operatorname{tr}L_e$ strictly positive for every $m\ge3$.
+Both are identities in $m$, and **both fail under the block's table**: replacing either $0$ by $\frac1{m+1}$ on a summand of dimension $\frac{2m^2(m^2-4)}3$ or $\frac{m^2(m-1)(m+3)}4$ makes $\mathop{\mathrm{tr}}L_e$ strictly positive for every $m\ge3$.
 
 ## Defects, in order
 
@@ -102,7 +102,7 @@ At $m=3$ the summand is **absent**: $V_{(1,1);(1,1)}$ needs $\ell(\alpha)+\ell(\
 
 Three things the block leans on and does not flag:
 
-- **The affine law is asserted.** "Closed forms for $\sharp(P_\omega,\cdot)$ and $\sharp(P_{\mathfrak u},\cdot)$ then make every block value depend only on the $U(1)$ charge", neither closed form is stated, cited or derived, and the step from them to $\lambda_S=1-\frac{c_S+q_S^2}{4(m+1)}$ is a sketch. What can be said instead, and what I verified: **given** that $\lambda_S$ is affine in $c_S+q_S^2$, the law is forced by $L_ee=e$ and by equivariance putting the orbit at $\tfrac12$, and the resulting seven values satisfy $\operatorname{tr}L_e=0$ and $\operatorname{tr}(L_e^2)=\kappa_F(2m)\lVert e\rVert^2$ identically in $m$, two constraints the list would fail if any single value were wrong by a rational function of $m$.
+- **The affine law is asserted.** "Closed forms for $\sharp(P_\omega,\cdot)$ and $\sharp(P_{\mathfrak u},\cdot)$ then make every block value depend only on the $U(1)$ charge", neither closed form is stated, cited or derived, and the step from them to $\lambda_S=1-\frac{c_S+q_S^2}{4(m+1)}$ is a sketch. What can be said instead, and what I verified: **given** that $\lambda_S$ is affine in $c_S+q_S^2$, the law is forced by $L_ee=e$ and by equivariance putting the orbit at $\tfrac12$, and the resulting seven values satisfy $\mathop{\mathrm{tr}}L_e=0$ and $\mathop{\mathrm{tr}}(L_e^2)=\kappa_F(2m)\lVert e\rVert^2$ identically in $m$, two constraints the list would fail if any single value were wrong by a rational function of $m$.
 - **Criticality is asserted.** That $W_{\mathbb{CP}^m}$ is critical is proved elsewhere in the record and unjoined: $\dim\mathcal W_{2m}^{U(m)}=1$, so $Q(W)$ is again $U(m)$-invariant and hence a multiple of $W$ ([findings/target.md](../findings/target.md) lines 460–462). That one-line argument belongs in the block, and it is also the independent confirmation that the trivial summand occurs exactly once.
 - **$\theta^2$ is asserted.** Derived in [findings/algebra.md](../findings/algebra.md) from Fox's Lemma 10.1 and (10.4), and unjoined here. The block's own $e$ corroborates it through $\lVert e\rVert^2=1/\theta^2$, which is worth stating since it checks the projector coefficients at the same time.
 

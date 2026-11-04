@@ -21,13 +21,13 @@ $W\in\mathcal W_n$ of unit norm acts on $\Lambda^2\mathbb R^n\cong\mathfrak{so}(
 
 Two facts used repeatedly, both derived rather than quoted:
 
-$$\langle v_a,W^\#v_a\rangle=-\tfrac12\operatorname{tr}\big(\mathrm{ad}(v_a)W\,\mathrm{ad}(v_a)W\big)=\tfrac12\sum_{b,c}\lambda_b\lambda_c\,T_{abc},$$
+$$\langle v_a,W^\#v_a\rangle=-\tfrac12\mathop{\mathrm{tr}}\big(\mathrm{ad}(v_a)W\,\mathrm{ad}(v_a)W\big)=\tfrac12\sum_{b,c}\lambda_b\lambda_c\,T_{abc},$$
 
-since $(\mathrm{ad}\,v_a)_{cb}=c_{abc}$ is antisymmetric in $(b,c)$, so $\operatorname{tr}(AWAW)=\sum_{b,c}\lambda_b\lambda_cA_{bc}A_{cb}=-\sum_{b,c}\lambda_b\lambda_cT_{abc}$; and
+since $(\mathrm{ad}\,v_a)_{cb}=c_{abc}$ is antisymmetric in $(b,c)$, so $\mathop{\mathrm{tr}}(AWAW)=\sum_{b,c}\lambda_b\lambda_cA_{bc}A_{cb}=-\sum_{b,c}\lambda_b\lambda_cT_{abc}$; and
 
 $$\sum_{b,c}T_{abc}=\sum_b\lVert[v_a,v_b]\rVert^2=\lVert\mathrm{ad}(v_a)\rVert_{\mathrm{HS}}^2=-B(v_a,v_a)=2(n-2),$$
 
-$B$ the Killing form of $\mathfrak{so}(n)$, $B(X,Y)=(n-2)\operatorname{tr}(XY)$, with $\operatorname{tr}(v_a^2)=-2$ in this normalisation. Scaled spectra below are integer multiples of the true ones; (A) is scale-free, (B) is degree-$1$ homogeneous in $\lambda$ and (C) degree-$2$ with $\theta$ carrying $\lambda$'s weight, so every relation is preserved and exactness stays visible.
+$B$ the Killing form of $\mathfrak{so}(n)$, $B(X,Y)=(n-2)\mathop{\mathrm{tr}}(XY)$, with $\mathop{\mathrm{tr}}(v_a^2)=-2$ in this normalisation. Scaled spectra below are integer multiples of the true ones; (A) is scale-free, (B) is degree-$1$ homogeneous in $\lambda$ and (C) degree-$2$ with $\theta$ carrying $\lambda$'s weight, so every relation is preserved and exactness stays visible.
 
 ---
 
@@ -37,11 +37,11 @@ $B$ the Killing form of $\mathfrak{so}(n)$, $B(X,Y)=(n-2)\operatorname{tr}(XY)$,
 
 Take (C) at index $a$, multiply by $\lambda_a$, sum over $a$:
 
-$$\sum_{a,b,c}\lambda_a\lambda_b\lambda_c\,T_{abc}=\sum_a\lambda_a\cdot2\lambda_a(\theta-\lambda_a)=2\theta\sum_a\lambda_a^2-2\sum_a\lambda_a^3=2\theta\lVert W\rVert^2-2\operatorname{tr}W^3=2\theta-2\operatorname{tr}W^3$$
+$$\sum_{a,b,c}\lambda_a\lambda_b\lambda_c\,T_{abc}=\sum_a\lambda_a\cdot2\lambda_a(\theta-\lambda_a)=2\theta\sum_a\lambda_a^2-2\sum_a\lambda_a^3=2\theta\lVert W\rVert^2-2\mathop{\mathrm{tr}}W^3=2\theta-2\mathop{\mathrm{tr}}W^3$$
 
-at unit norm. The record's cubic identity, $\theta=\operatorname{tr}W^3+\tfrac12\sum_{abc}\lambda_a\lambda_b\lambda_cT_{abc}$, rearranges to $\sum_{abc}\lambda_a\lambda_b\lambda_cT_{abc}=2\theta-2\operatorname{tr}W^3$. **Identical.** The record's claim of exactness is right, with no slack and no hidden hypothesis beyond $\lVert W\rVert=1$.
+at unit norm. The record's cubic identity, $\theta=\mathop{\mathrm{tr}}W^3+\tfrac12\sum_{abc}\lambda_a\lambda_b\lambda_cT_{abc}$, rearranges to $\sum_{abc}\lambda_a\lambda_b\lambda_cT_{abc}=2\theta-2\mathop{\mathrm{tr}}W^3$. **Identical.** The record's claim of exactness is right, with no slack and no hidden hypothesis beyond $\lVert W\rVert=1$.
 
-And the reason is worth stating, because it makes the "why" immediate. (C) at index $a$ is exactly $\langle v_a,W^\#v_a\rangle=\lambda_a(\theta-\lambda_a)$ (the $a$-th diagonal entry of $W^\#=\theta W-W^2$), via the first display of §0. The cubic identity is $\theta=\langle W,Q(W)\rangle=\langle W,W^2\rangle+\langle W,W^\#\rangle=\operatorname{tr}W^3+\sum_a\lambda_a\langle v_a,W^\#v_a\rangle$. So the cubic identity is literally $\sum_a\lambda_a\times$(C)$_a$. The contraction cannot fail to reproduce it; it is a $\lambda$-weighted trace of the same $N$ scalar equations.
+And the reason is worth stating, because it makes the "why" immediate. (C) at index $a$ is exactly $\langle v_a,W^\#v_a\rangle=\lambda_a(\theta-\lambda_a)$ (the $a$-th diagonal entry of $W^\#=\theta W-W^2$), via the first display of §0. The cubic identity is $\theta=\langle W,Q(W)\rangle=\langle W,W^2\rangle+\langle W,W^\#\rangle=\mathop{\mathrm{tr}}W^3+\sum_a\lambda_a\langle v_a,W^\#v_a\rangle$. So the cubic identity is literally $\sum_a\lambda_a\times$(C)$_a$. The contraction cannot fail to reproduce it; it is a $\lambda$-weighted trace of the same $N$ scalar equations.
 
 ### 1.2 The inference. REFUTED
 
@@ -51,7 +51,7 @@ What §1.1 establishes is that on the feasible set
 
 $$\mathcal F(\lambda)=\{(T,\theta):T\ge0,\ T\text{ totally symmetric, zero on repeated indices},\ \text{(A),(B),(C) hold}\}$$
 
-the coordinate $\theta$ is an **affine function of $T$**: $\theta=\operatorname{tr}W^3+\tfrac12S_{111}(T)$ with $S_{111}(T)=\sum\lambda_a\lambda_b\lambda_cT_{abc}$ and $\operatorname{tr}W^3$ a constant of the spectrum. That is a statement that $\theta$ carries no *independent* degree of freedom. It is **not** a statement that $\theta$ takes one value on $\mathcal F(\lambda)$, which is what "not a free objective" and "a consistency condition, not a maximisation" both assert. The two differ exactly when $S_{111}$ is non-constant on $\mathcal F(\lambda)$, and the feasible set is a polyhedron of positive dimension, so there is no reason for $S_{111}$ to be frozen on it.
+the coordinate $\theta$ is an **affine function of $T$**: $\theta=\mathop{\mathrm{tr}}W^3+\tfrac12S_{111}(T)$ with $S_{111}(T)=\sum\lambda_a\lambda_b\lambda_cT_{abc}$ and $\mathop{\mathrm{tr}}W^3$ a constant of the spectrum. That is a statement that $\theta$ carries no *independent* degree of freedom. It is **not** a statement that $\theta$ takes one value on $\mathcal F(\lambda)$, which is what "not a free objective" and "a consistency condition, not a maximisation" both assert. The two differ exactly when $S_{111}$ is non-constant on $\mathcal F(\lambda)$, and the feasible set is a polyhedron of positive dimension, so there is no reason for $S_{111}$ to be frozen on it.
 
 Note also that every step of §1.1 uses **(C) alone**. So whatever the contraction proves, it proves on the larger set cut out by (A) and (C) without (B), which is the record's own diagonal-criticality LP.
 
@@ -86,7 +86,7 @@ Three consequences, and the first is the opposite of what the record drew.
 
 Stated precisely, since the brief asks. At fixed $\lambda$:
 
-- **$\theta$ is not an independent variable**: it is the affine image $\operatorname{tr}W^3+\tfrac12S_{111}(T)$ of $T$, and equivalently is over-determined by $T$, (C) gives $\theta=\lambda_a+\tfrac1{2\lambda_a}\sum_{bc}\lambda_b\lambda_cT_{abc}$ for every $a$ with $\lambda_a\ne0$, and all of these must agree. The contraction of §1.1 is one weighted average of those $N$ determinations.
+- **$\theta$ is not an independent variable**: it is the affine image $\mathop{\mathrm{tr}}W^3+\tfrac12S_{111}(T)$ of $T$, and equivalently is over-determined by $T$, (C) gives $\theta=\lambda_a+\tfrac1{2\lambda_a}\sum_{bc}\lambda_b\lambda_cT_{abc}$ for every $a$ with $\lambda_a\ne0$, and all of these must agree. The contraction of §1.1 is one weighted average of those $N$ determinations.
 - **$T$ is free** in the polyhedron $\mathcal F(\lambda)$, of positive dimension at every spectrum tested (r331 records this too, at fixed $(\lambda,\theta)$).
 - **What is undecided, and is the live question**, is whether $S_{111}$ (the one shadow of $T$ that matters), is constant on $\mathcal F(\lambda)$. Screened: constant at the $n=6$ torus, padded $W_{\mathbb{CP}^2}$ and $\mathbb{CP}^3$; **non-constant at $S^3\times S^3$**. So the answer is spectrum-dependent, and the interesting spectra are the ones where it is free.
 
@@ -112,7 +112,7 @@ $\mu_a$ is a probability measure and $\lambda_b\in[\lambda_{\min},\lambda_{\max}
 
 ### 3.2 It is not implied by tracelessness
 
-The traceless unit spectrum $\lambda=(1,-\tfrac1{N-1},\dots,-\tfrac1{N-1})$ up to scale (which is $\Pi_{\mathfrak h}-\tfrac1NI$ for a one-dimensional $\mathfrak h$), has $\lambda_{\max}/\lvert\lambda_{\min}\rvert=N-1=\tfrac{n^2-n-2}2$, which exceeds $n-2$ for every $n\ge4$. So R2 **fails** on a traceless unit spectrum, and is therefore a strictly stronger condition than $\operatorname{tr}W=0$. Its content is (B)'s, i.e. Ricci-flatness together with first Bianchi, not tracelessness.
+The traceless unit spectrum $\lambda=(1,-\tfrac1{N-1},\dots,-\tfrac1{N-1})$ up to scale (which is $\Pi_{\mathfrak h}-\tfrac1NI$ for a one-dimensional $\mathfrak h$), has $\lambda_{\max}/\lvert\lambda_{\min}\rvert=N-1=\tfrac{n^2-n-2}2$, which exceeds $n-2$ for every $n\ge4$. So R2 **fails** on a traceless unit spectrum, and is therefore a strictly stronger condition than $\mathop{\mathrm{tr}}W=0$. Its content is (B)'s, i.e. Ricci-flatness together with first Bianchi, not tracelessness.
 
 More sharply, on the whole two-eigenvalue family $W=\Pi_{\mathfrak h}-\tfrac rNI$ ($r=\dim\mathfrak h$): $\lambda_{\max}=1-\tfrac rN$, $\lambda_{\min}=-\tfrac rN$, so $\lambda_{\max}/\lvert\lambda_{\min}\rvert=(N-r)/r$ and R2 reads
 

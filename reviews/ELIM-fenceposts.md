@@ -1,6 +1,6 @@
 # ELIM-fenceposts, elimination audit of findings/fence-posts.md and findings/problem.md
 
-*Auditor ELIM-fenceposts. Both files read in full, no computation run. The test applied to every bound, reduction, equivalence and "what a successor must clear" in the two files: substitute $W^\#=\theta W-W^2$, $\mathrm{Ric}(W)=0$, first Bianchi and $\operatorname{tr}W=0$, then ask what free variable survives. [fence-posts.md](../findings/fence-posts.md) grew from 543 to 558 lines during the audit, a new post F42 appeared, and it independently reaches the same survivor this audit reached. That post is confirmed below and then pushed on.*
+*Auditor ELIM-fenceposts. Both files read in full, no computation run. The test applied to every bound, reduction, equivalence and "what a successor must clear" in the two files: substitute $W^\#=\theta W-W^2$, $\mathrm{Ric}(W)=0$, first Bianchi and $\mathop{\mathrm{tr}}W=0$, then ask what free variable survives. [fence-posts.md](../findings/fence-posts.md) grew from 543 to 558 lines during the audit, a new post F42 appeared, and it independently reaches the same survivor this audit reached. That post is confirmed below and then pushed on.*
 
 ---
 
@@ -23,7 +23,7 @@ Since [post F41](../findings/fence-posts.md#L516)'s $g_v=2\lVert\mathrm{ad}(v)W\
 
 ### S2. $\delta^2=\lVert\mathrm{Alt}(W_-)\rVert^2$, the one lever in problem.md that the substitution does not touch
 
-[Conjecture L16](../findings/problem.md#L299) is written in $\delta^2$, the $\Lambda^4$-part of the negative spectral half of $W$. Substituting criticality changes nothing: $W^\#=\theta W-W^2$ relates $W^\#$ to $W$, and says nothing about $W_-^\#$ or about how $W$'s eigenspaces sit inside $\Lambda^2\mathbb R^n$ as bivectors. [Lemma L15](../findings/problem.md#L173)'s identity $\operatorname{scal}(R^2+R^\#)=\lVert\mathrm{Ric}(R)\rVert^2+6\lVert\mathrm{Alt}(R)\rVert^2$ at $R=W_-$ gives $6\delta^2=\operatorname{scal}(W_-^2+W_-^\#)-\lVert\mathrm{Ric}(W_-)\rVert^2$, both terms quadratic in $W_-$ and neither spectral. **$\delta^2$ is genuine alignment data**, it is not a contraction of $T$ against any weight, so post F42's exponent test does not reach it, and it is the only quantity in either assigned file that survives the substitution while also carrying a proposed sharp bound.
+[Conjecture L16](../findings/problem.md#L299) is written in $\delta^2$, the $\Lambda^4$-part of the negative spectral half of $W$. Substituting criticality changes nothing: $W^\#=\theta W-W^2$ relates $W^\#$ to $W$, and says nothing about $W_-^\#$ or about how $W$'s eigenspaces sit inside $\Lambda^2\mathbb R^n$ as bivectors. [Lemma L15](../findings/problem.md#L173)'s identity $\mathop{\mathrm{scal}}(R^2+R^\#)=\lVert\mathrm{Ric}(R)\rVert^2+6\lVert\mathrm{Alt}(R)\rVert^2$ at $R=W_-$ gives $6\delta^2=\mathop{\mathrm{scal}}(W_-^2+W_-^\#)-\lVert\mathrm{Ric}(W_-)\rVert^2$, both terms quadratic in $W_-$ and neither spectral. **$\delta^2$ is genuine alignment data**, it is not a contraction of $T$ against any weight, so post F42's exponent test does not reach it, and it is the only quantity in either assigned file that survives the substitution while also carrying a proposed sharp bound.
 
 ### S3. The off-diagonal correlations are pinned to zero, and that is where Jacobi lives
 
@@ -41,15 +41,15 @@ Substitute. For $v\in E_{\min}$, $D(v)=\tfrac12\sum_{ab}(\lambda_a\lambda_b-\lam
 
 $$D(v)=\lambda_{\min}\big(\theta-\lambda_{\min}-(n-2)\lambda_{\max}\big)=\lvert\lambda_{\min}\rvert\big(\lambda_{\min}+(n-2)\lambda_{\max}-\theta\big)$$
 
-identically, $\lambda_{\min}<0$ being supplied by $\operatorname{tr}W=0$. So "bound $D$ below by the $\theta_0$ expression" is $\theta\le\theta_0(n)$ with $\lvert\lambda_{\min}\rvert(\lambda_{\min}+(n-2)\lambda_{\max})$ subtracted from both sides. This is r323's closure verbatim and it is written out in full in [bounds.md](../findings/bounds.md), which post F41 links, but post F41 itself states the reduction as live, and post F42 sits fifteen lines below it applying the same test to four other routes without touching this one.
+identically, $\lambda_{\min}<0$ being supplied by $\mathop{\mathrm{tr}}W=0$. So "bound $D$ below by the $\theta_0$ expression" is $\theta\le\theta_0(n)$ with $\lvert\lambda_{\min}\rvert(\lambda_{\min}+(n-2)\lambda_{\max})$ subtracted from both sides. This is r323's closure verbatim and it is written out in full in [bounds.md](../findings/bounds.md), which post F41 links, but post F41 itself states the reduction as live, and post F42 sits fifteen lines below it applying the same test to four other routes without touching this one.
 
 **What the sentence should say, and it is a real statement rather than a tautology:** the honest reduction is *bound $\langle v,W^\#v\rangle$ below at the $\lambda_{\min}$ eigenvector using only Weyl membership, Jacobi and the spectrum, invoking $Q(W)=\theta W$ nowhere.* Any attempted proof of $D\ge f(\lambda)$ that uses criticality at any step returns $0=0$. Post F41's own LP program is of the honest kind (it carries (A), and r326 added (B)) which is why the post's conclusion survives while its premise does not.
 
 ### T2. Post F40's "route that remains" is closed by post F42's own test
 
-> *"The route that remains is an identity rather than an estimate, computing $\operatorname{tr}(\mathrm{ad}(v)W\,\mathrm{ad}(v)W)$ from the structure constants at a critical point, not bounding it."*, [fence-posts.md:489](../findings/fence-posts.md#L489)
+> *"The route that remains is an identity rather than an estimate, computing $\mathop{\mathrm{tr}}(\mathrm{ad}(v)W\,\mathrm{ad}(v)W)$ from the structure constants at a critical point, not bounding it."*, [fence-posts.md:489](../findings/fence-posts.md#L489)
 
-$\operatorname{tr}(\mathrm{ad}(v)W\,\mathrm{ad}(v)W)=-2\langle v,W^\#v\rangle$, which at a critical point is $-2\lambda(\theta-\lambda)$. In post F42's coordinates the weight is $\lambda_\beta\lambda_\gamma$ on the pair slots and $1$ on the free slot: pattern $\{0,1,1\}$, which is relation (C) itself. Two exponents are $\le1$, so post F42's rule closes it. **The recommendation is dead on arrival at a critical point** (the "computing" was already done by criticality) and it survives only under the same repair as T1: compute the trace *without* criticality, which makes it an identity on all of $\mathcal W_n$ and no longer "at a critical point". Post F40 still carries the sentence as the surviving shape, and [bounds.md](../findings/bounds.md) quotes it approvingly one paragraph before r323 closes it.
+$\mathop{\mathrm{tr}}(\mathrm{ad}(v)W\,\mathrm{ad}(v)W)=-2\langle v,W^\#v\rangle$, which at a critical point is $-2\lambda(\theta-\lambda)$. In post F42's coordinates the weight is $\lambda_\beta\lambda_\gamma$ on the pair slots and $1$ on the free slot: pattern $\{0,1,1\}$, which is relation (C) itself. Two exponents are $\le1$, so post F42's rule closes it. **The recommendation is dead on arrival at a critical point** (the "computing" was already done by criticality) and it survives only under the same repair as T1: compute the trace *without* criticality, which makes it an identity on all of $\mathcal W_n$ and no longer "at a critical point". Post F40 still carries the sentence as the surviving shape, and [bounds.md](../findings/bounds.md) quotes it approvingly one paragraph before r323 closes it.
 
 ### T3. Post F31's $C-B$ vanishes on the whole critical set, not at one witness, and this is stronger than the post claims
 
@@ -105,14 +105,14 @@ Item 5 still carries the refuted form, and [fence-posts.md:470](../findings/fenc
 ## Clean, passed the substitution, one line each
 
 - **Post F1**, the $300$-tensor witness at $n=6$: exhaustive and exact; proves $P$ is not a spectral function, and scopes itself correctly.
-- **Post F2**, $B_\#/\theta_0+\operatorname{tr}(W^3)/P=1$ identically at the balanced product: the two closed forms are consistent with item 9's $\sqrt2(n-3)/\sqrt{(n-1)(n-2)}$, checked here.
-- **Post F2c**, $\langle W^\#,W\rangle=2\operatorname{tr}(W^3)$ at $n=4$ via $c^\pm=\mp\sqrt2\,\varepsilon$ and $\#=2\operatorname{adj}$: a stated identity, correctly scoped to ideals by 2e2.
+- **Post F2**, $B_\#/\theta_0+\mathop{\mathrm{tr}}(W^3)/P=1$ identically at the balanced product: the two closed forms are consistent with item 9's $\sqrt2(n-3)/\sqrt{(n-1)(n-2)}$, checked here.
+- **Post F2c**, $\langle W^\#,W\rangle=2\mathop{\mathrm{tr}}(W^3)$ at $n=4$ via $c^\pm=\mp\sqrt2\,\varepsilon$ and $\#=2\mathop{\mathrm{adj}}$: a stated identity, correctly scoped to ideals by 2e2.
 - **Post F2g**, the Lovelock six-index identity for $n\le5$: mechanism supplied, and the quantifier-inversion diagnosis of the previous version is right.
 - **Post F23**, no linear relation among the five invariants at $n\ge6$: uses rank in the sound direction, and correctly separates "no identity" from "no sharp inequality".
 - **Post F30**, Levin–Chandrasekaran's finite-index hypothesis fails for $\{O_n\}$: a definitional obstruction, quoted from the source.
 - **Post F31's monotonicity**, $\tfrac{d}{dn}\Theta_n^2=2(3n-4)/n^3>0$: verified by hand.
 - **Post F34**, $\cos\varphi$ is a definition so the Cauchy–Schwarz relaxation is $\theta\le\theta_0$ restated: a correctly identified tautology, with the successor criterion stated in the right currency.
-- **Post F35**, padded $W_{\mathbb{CP}^2}$ carries $\operatorname{tr}(M^3)+\lVert M^\#\rVert_F=1+1/\sqrt6$ for all $n$: $n$-independence is padding-invariance, which is a mechanism.
+- **Post F35**, padded $W_{\mathbb{CP}^2}$ carries $\mathop{\mathrm{tr}}(M^3)+\lVert M^\#\rVert_F=1+1/\sqrt6$ for all $n$: $n$-independence is padding-invariance, which is a mechanism.
 - **Post F36**, the cone reformulation is vacuous because $C=\mathbb R_+W^\ast$ satisfies it: correct vacuity argument.
 - **Post F37**, differentiating equivariance gives $L_Wz=\tfrac\theta2z$ and $Bu=z\circ z$ with no maximality hypothesis: a real derived identity, and the post correctly refuses to claim it closes the calculus.
 - **problem.md, the $\theta_0$ bridge at $a=0$**: $c(n-1)=\sqrt{2(n-1)(n-2)}/n$ from $\lVert I\rVert^2=\binom n2$, re-derived here and it comes out.

@@ -29,7 +29,7 @@
 | --- | --- | --- | --- | --- |
 | C1 | the collapse space is the constants | proved by hand and in Lean, at every $N\ge3$, the threshold unused | v242, v243, v244 | **confirmed**, stated at $N\ge3$ |
 | C2 | the quantifier over spectra | Passages A and B omit "every spectrum", and at one spectrum the dimension claim is false | v243; v242, v244 through the Lean statement | **confirmed**, written in |
-| C3 | the eigenframe display's coefficient $3$ | right at $\langle A,B\rangle=-\tfrac12\operatorname{tr}$ with Böhm–Wilking's $\#$, $6$ under $-\operatorname{tr}$; no derivation quoted | v242, v243 (`CONFIRMED AS ALGEBRA`), v244 (`HYPOTHESIS-DEBT`) | **confirmed**, normalisation stated; derivation routed below |
+| C3 | the eigenframe display's coefficient $3$ | right at $\langle A,B\rangle=-\tfrac12\mathop{\mathrm{tr}}$ with Böhm–Wilking's $\#$, $6$ under $-\mathop{\mathrm{tr}}$; no derivation quoted | v242, v243 (`CONFIRMED AS ALGEBRA`), v244 (`HYPOTHESIS-DEBT`) | **confirmed**, normalisation stated; derivation routed below |
 | C4 | trace conditions counted as irreducible summands "under $O(n)$" | $\mathcal W_4$ is $O(4)$-irreducible, a reflection swapping $\mathcal W^\pm$; the count is unargued under either group | v242, v243, v244 | **confirmed**, moved to open under $SO(n)$ |
 | C5 | constant $T$ realised by no $\mathfrak{so}(n)$ | no argument quoted; needs "on distinct triples" and $n\ge4$ | v242, v243, v244 | **confirmed**, moved to open |
 | C6 | "for $n\ge5$ the cubic is spectral at no critical point" | the lemma fixes $T$ over every trace-free spectrum, which a frame's Weyl spectra do not fill; at $n=4$ a non-constant $T$ still gives a spectral cubic | v242, v243, v244 (`GAP`) | **confirmed**, deleted from the canon |
@@ -50,4 +50,4 @@
 
 ### Routed
 
-**The eigenframe display's derivation at $-\tfrac12\operatorname{tr}$** is filed under *Support owed* in [plan-verification.md](../plan-verification.md): it is foundational and derived in no quoted passage, and three verifiers each rebuilt it, which a round may not adopt as proof.
+**The eigenframe display's derivation at $-\tfrac12\mathop{\mathrm{tr}}$** is filed under *Support owed* in [plan-verification.md](../plan-verification.md): it is foundational and derived in no quoted passage, and three verifiers each rebuilt it, which a round may not adopt as proof.

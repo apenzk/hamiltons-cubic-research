@@ -1,6 +1,6 @@
 # Review r301, V3's branching reduction: the reduction is wrong, the closed form is wider than claimed, and the separating statistic has a counterexample
 
-Everything below is built from the definitions in the brief, $\phi_{ij}=E_{ij}-E_{ji}$, $\langle X,Y\rangle=\tfrac12\operatorname{tr}(X^{\mathsf T}Y)$, $\mathrm{ad}_a$ acting on $\mathfrak{so}(n)\cong\Lambda^2\mathbb R^n$, $(X\#Y)_{ab}=-\tfrac14\big(\operatorname{tr}(\mathrm{ad}_aX\,\mathrm{ad}_bY)+\operatorname{tr}(\mathrm{ad}_bX\,\mathrm{ad}_aY)\big)$, $Q(X)=X^2+X^\#$, $X\circ Y=\tfrac12(XY+YX)+X\#Y$, $\mathcal W_n=\ker(\text{Bianchi})\cap\ker(\text{Ricci})$, $L_e=\theta^{-1}L_W$, in [core301.py](../scripts/reviewers/r301/core301.py). Nothing under review was imported. Every test point except the $n=8$ witness was rebuilt from geometry; the witness is loaded as raw data from [w_n8_nondiagonal_witness.npy](../scripts/data/w_n8_nondiagonal_witness.npy).
+Everything below is built from the definitions in the brief, $\phi_{ij}=E_{ij}-E_{ji}$, $\langle X,Y\rangle=\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$, $\mathrm{ad}_a$ acting on $\mathfrak{so}(n)\cong\Lambda^2\mathbb R^n$, $(X\#Y)_{ab}=-\tfrac14\big(\mathop{\mathrm{tr}}(\mathrm{ad}_aX\,\mathrm{ad}_bY)+\mathop{\mathrm{tr}}(\mathrm{ad}_bX\,\mathrm{ad}_aY)\big)$, $Q(X)=X^2+X^\#$, $X\circ Y=\tfrac12(XY+YX)+X\#Y$, $\mathcal W_n=\ker(\text{Bianchi})\cap\ker(\text{Ricci})$, $L_e=\theta^{-1}L_W$, in [core301.py](../scripts/reviewers/r301/core301.py). Nothing under review was imported. Every test point except the $n=8$ witness was rebuilt from geometry; the witness is loaded as raw data from [w_n8_nondiagonal_witness.npy](../scripts/data/w_n8_nondiagonal_witness.npy).
 
 ## Verdicts
 
@@ -35,9 +35,9 @@ Every number in the brief reproduces. The disagreements below are about what the
 
 ## H1, the reduction is wrong, and it is wrong at both points that carry the claim
 
-Schur gives less than the record takes from it. $V=\operatorname{span}\{\Pi_{e^\perp}\Pi_{\mathcal W_n}H_A\}$ is $\mathfrak k$-invariant and the compression $M=P_VL_eP_V$ commutes with $\mathfrak k$ (residual $\le1.9\times10^{-15}$ at every point). Schur then says $M$ acts on an isotypic component of type $V_\lambda$ with multiplicity $m$ as an $m\times m$ matrix tensored with $\mathrm{Id}_{V_\lambda}$, **scalar only when that matrix is**, which needs $m=1$ or a coincidence. The record's step from "commutes" to "scalar" drops the multiplicity space.
+Schur gives less than the record takes from it. $V=\mathop{\mathrm{span}}\{\Pi_{e^\perp}\Pi_{\mathcal W_n}H_A\}$ is $\mathfrak k$-invariant and the compression $M=P_VL_eP_V$ commutes with $\mathfrak k$ (residual $\le1.9\times10^{-15}$ at every point). Schur then says $M$ acts on an isotypic component of type $V_\lambda$ with multiplicity $m$ as an $m\times m$ matrix tensored with $\mathrm{Id}_{V_\lambda}$, **scalar only when that matrix is**, which needs $m=1$ or a coincidence. The record's step from "commutes" to "scalar" drops the multiplicity space.
 
-The test is exact and needs no irreducible decomposition: $M$ is scalar on every isotypic component **iff** $M$ lies in the centre of $\operatorname{End}_{\mathfrak k}(V)$. Building the commutant and its centre, and splitting $V$ by a generic central element, gives the true isotypic decomposition:
+The test is exact and needs no irreducible decomposition: $M$ is scalar on every isotypic component **iff** $M$ lies in the centre of $\mathop{\mathrm{End}}_{\mathfrak k}(V)$. Building the commutant and its centre, and splitting $V$ by a generic central element, gives the true isotypic decomposition:
 
 | point | $\dim\mathfrak k$ | $\dim V$ | isotypic components | components where $L_e$ is not scalar | $\max\lVert[Y,M]\rVert/\lVert Y\rVert$ over the commutant |
 |---|---|---|---|---|---|
@@ -159,7 +159,7 @@ Solving $\lambda^2+\lambda\lambda=\theta\lambda$ with vanishing row sums on the 
 | blocks / negative block graph | $5$ blocks, $5$ edges, one isolated block |
 | $\lambda_{\max}(L_e\vert_{W^\perp})$ | $\mathbf{1.303584}$, a violator by a factor of $2.6$ |
 | $\lambda_{\max}(L_e\vert_{\mathrm{Sym}_0})$ | $0.962465$ |
-| **edge average** $\operatorname{tr}(L_e\vert_V)/\dim V$ | $\mathbf{0.472395}$ on $16$ dimensions |
+| **edge average** $\mathop{\mathrm{tr}}(L_e\vert_V)/\dim V$ | $\mathbf{0.472395}$ on $16$ dimensions |
 | **all-pairs average** | $\mathbf{0.450411}$ on $32$ dimensions |
 
 Both variants of the statistic are below $\tfrac12$ at a point that misses Lemma L24 by more than any catalogued example except the very low-$\theta$ ones. The statistic does not separate. The zero-padded $n=10$ parent gives the same verdict ($0.466788$ and $0.458970$), so the failure is not an artefact of the padding either way.

@@ -55,7 +55,7 @@ The half-trace pairing is the one [Lemma L31](../findings/stratum-two-negative.m
 | --- | --- | --- | --- |
 | $W\in\mathrm{Weyl}_m$ | yes | yes | **no**, the chain never touches first Bianchi; §7 |
 | $\lVert W\rVert=1$ | **absent** | present | **yes**, three times: the identity, $b^2+c^2=1-u$, $bc=(s^2+u-1)/2$ |
-| $\operatorname{tr}W=0$ | implicit in $\mathrm{Weyl}_m$ | implicit | **yes**, $s=b+c$, and it is never named as a hypothesis |
+| $\mathop{\mathrm{tr}}W=0$ | implicit in $\mathrm{Weyl}_m$ | implicit | **yes**, $s=b+c$, and it is never named as a hypothesis |
 | at most two negative eigenvalues | yes | yes | **partly**, the argument is written for exactly two |
 | any number of positives | yes | yes | yes, split at $k\le2$ / $k\ge3$ |
 | any $m$ | yes | yes | yes; $m$ enters only the marginal, which is discarded |
@@ -73,7 +73,7 @@ The half-trace pairing is the one [Lemma L31](../findings/stratum-two-negative.m
 
 ### 1c. Hypotheses used but never stated
 
-- **$\operatorname{tr}W=0$**, load-bearing at $s=b+c$, appears in neither form of the statement except through $\mathrm{Weyl}_m$, and the block simultaneously claims the result for "any trace-free symmetric operator", where it would have to be a hypothesis in its own right.
+- **$\mathop{\mathrm{tr}}W=0$**, load-bearing at $s=b+c$, appears in neither form of the statement except through $\mathrm{Weyl}_m$, and the block simultaneously claims the result for "any trace-free symmetric operator", where it would have to be a hypothesis in its own right.
 - **$s^2\ge u$**, i.e. $\lVert\lambda_P\rVert_1\ge\lVert\lambda_P\rVert_2$. Without it $s^2-u<0$ and the substitution $h\le\min(A,K_0\sqrt d)$ into $3M\le h(s^2-u)$ runs backwards. The record has this inequality (as correction (i)) and never connects it to the step that needs it.
 - **$\alpha>0$ on $(0,A_0)$**, which is what makes the envelope's argmax unique and Danskin applicable.
 - **$k\ge3$** at the point [Lemma L42](../findings/stratum-two-negative.md) is invoked. The chain section states it ("Hypothesis, previously unstated: at least three positives"); the L35 block does not.
@@ -99,7 +99,7 @@ The canonical form has no unit-norm hypothesis; the block's has one and emphasis
 
 ## 4. The chain, re-derived
 
-**Claim 1.** In an orthonormal eigenbasis, $(W^\#)_{\alpha\alpha}=\tfrac12\sum_{\gamma\delta}c_{\alpha\gamma\delta}^2\lambda_\gamma\lambda_\delta$ under the halved Böhm–Wilking product of [conventions.md](../findings/conventions.md), so $\langle W,W^\#\rangle=\tfrac12\sum_{\alpha\gamma\delta}T_{\alpha\gamma\delta}\lambda_\alpha\lambda_\gamma\lambda_\delta$ over *ordered* triples. $T$ is totally symmetric and hollow, so the ordered sum is $6\sum_{\alpha<\beta<\gamma}$ and $\langle W,W^\#\rangle=3\sum_{\alpha<\beta<\gamma}T\lambda\lambda\lambda$. With $\operatorname{tr}W^3=\sum\lambda^3$ and $P=\langle W,W^2+W^\#\rangle$ the display follows. The coefficient $3$ checks at $(2,-1,-1)/\sqrt6$: $\sum\lambda^3=6/(6\sqrt6)=1/\sqrt6$ and $3\cdot2\cdot2/(6\sqrt6)=2/\sqrt6$, summing to $3/\sqrt6=\sqrt6/2=\sqrt{3/2}$.
+**Claim 1.** In an orthonormal eigenbasis, $(W^\#)_{\alpha\alpha}=\tfrac12\sum_{\gamma\delta}c_{\alpha\gamma\delta}^2\lambda_\gamma\lambda_\delta$ under the halved Böhm–Wilking product of [conventions.md](../findings/conventions.md), so $\langle W,W^\#\rangle=\tfrac12\sum_{\alpha\gamma\delta}T_{\alpha\gamma\delta}\lambda_\alpha\lambda_\gamma\lambda_\delta$ over *ordered* triples. $T$ is totally symmetric and hollow, so the ordered sum is $6\sum_{\alpha<\beta<\gamma}$ and $\langle W,W^\#\rangle=3\sum_{\alpha<\beta<\gamma}T\lambda\lambda\lambda$. With $\mathop{\mathrm{tr}}W^3=\sum\lambda^3$ and $P=\langle W,W^2+W^\#\rangle$ the display follows. The coefficient $3$ checks at $(2,-1,-1)/\sqrt6$: $\sum\lambda^3=6/(6\sqrt6)=1/\sqrt6$ and $3\cdot2\cdot2/(6\sqrt6)=2/\sqrt6$, summing to $3/\sqrt6=\sqrt6/2=\sqrt{3/2}$.
 
 **Claim 4.** $b^3+c^3=(b+c)^3-3bc(b+c)=s^3-3bcs$, so $\sum_\alpha\lambda_\alpha^3=\sum_P\lambda^3-s^3+3bcs$, and adding $6bc\lambda_1$ and $3\,\mathrm{FTP}$ gives the block's formula, **provided the bare $\sum\lambda^3$ in it is read over the positives only**, twenty lines after $\sum_\alpha\lambda_\alpha^3$ meant all eigenvalues. [r569](../reviews/REVIEW_r569.md) already booked that collision; it is still there. $bc=(s^2+u-1)/2$ is an identity, not an estimate: $s^2+u-1=(b+c)^2-b^2-c^2=2bc$.
 
@@ -155,7 +155,7 @@ Every recorded constant falls out of this and nothing was fitted: $\alpha'=-\tfr
 
 ## 7. The gap between what is proven and what is used
 
-**No finding, and the gap runs the generous way.** The block claims the chain never uses first Bianchi, so the bound holds for any trace-free unit-norm symmetric operator on $\Lambda^2$ with the sign pattern. I checked each input: the cubic identity needs only symmetry of $W$ and the ad-invariance of the pairing; the pair cap is a statement about orthonormal pairs in $\mathfrak{so}(m)$ and asks nothing of $W$; the marginal is a Casimir identity and is discarded; $s=b+c$ and $bc=(s^2+u-1)/2$ need trace-freeness and unit norm only. So the proven statement is strictly stronger than the used one. The cost is that **$\operatorname{tr}W=0$ then has to be a hypothesis in its own right** and appears in neither statement, §1c.
+**No finding, and the gap runs the generous way.** The block claims the chain never uses first Bianchi, so the bound holds for any trace-free unit-norm symmetric operator on $\Lambda^2$ with the sign pattern. I checked each input: the cubic identity needs only symmetry of $W$ and the ad-invariance of the pairing; the pair cap is a statement about orthonormal pairs in $\mathfrak{so}(m)$ and asks nothing of $W$; the marginal is a Casimir identity and is discarded; $s=b+c$ and $bc=(s^2+u-1)/2$ need trace-freeness and unit norm only. So the proven statement is strictly stronger than the used one. The cost is that **$\mathop{\mathrm{tr}}W=0$ then has to be a hypothesis in its own right** and appears in neither statement, §1c.
 
 ## 8. Correction (i): the misattributed Cauchy–Schwarz
 

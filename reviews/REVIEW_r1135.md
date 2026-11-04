@@ -55,8 +55,8 @@ Every link checked by hand.
 ## Corrections, exact wording
 
 1. Sharp paragraph, replace "It is also sharp at $n=4$ for the Hodge star, where $A_\pm=\tfrac32I$ and $3=3$." with "(For a pair making up all of $\Lambda^2$, $A_a+A_b=(n-1)I$ and equality is automatic, so only pairs within three classes test sharpness.)" and replace "(a) and (c) by these two points" with "(a) and (c) by the $S^5\times S^7$ pairs".
-2. Statement, append after the displayed inequality: "The inequality holds for $A_F=\sum_{\psi}\psi^{\mathsf T}\psi$ over an orthonormal basis of any subspace $F\subseteq\Lambda^2$, and uses $\operatorname{Ric}(W)=0$ only through the common eigenbasis. The corollary is where $\operatorname{Ric}(W)=0$ does the work."
-3. What it does, replace "*It is the first ingredient on file that couples two eigenspaces, and it holds at every $n$ with only $\operatorname{Ric}(W)=0$.*" with "*Applied to $F=E_0\oplus E_2$ with $\operatorname{Ric}(W)=0$, which at $\lambda_1=0$ gives $A_2=\tfrac{\lvert\lambda_0\rvert}{\lambda_2}A_0$, it is the first ingredient on file that couples two eigenspaces, at every $n$.*"
+2. Statement, append after the displayed inequality: "The inequality holds for $A_F=\sum_{\psi}\psi^{\mathsf T}\psi$ over an orthonormal basis of any subspace $F\subseteq\Lambda^2$, and uses $\mathop{\mathrm{Ric}}(W)=0$ only through the common eigenbasis. The corollary is where $\mathop{\mathrm{Ric}}(W)=0$ does the work."
+3. What it does, replace "*It is the first ingredient on file that couples two eigenspaces, and it holds at every $n$ with only $\mathop{\mathrm{Ric}}(W)=0$.*" with "*Applied to $F=E_0\oplus E_2$ with $\mathop{\mathrm{Ric}}(W)=0$, which at $\lambda_1=0$ gives $A_2=\tfrac{\lvert\lambda_0\rvert}{\lambda_2}A_0$, it is the first ingredient on file that couples two eigenspaces, at every $n$.*"
 4. What it does, replace "A near-star at $\lambda_1=0$ has" with "Heuristically, a near-star at $\lambda_1=0$ has".
 5. Corollary (optional sharpening): "whenever $\lambda_1=0$, no extreme eigenspace is a star $e\wedge U$ with $1\le p\le n-1$".
 6. Lean docstring: `star_forces` should read `star_impossible_at_zero` and `star_sign`.

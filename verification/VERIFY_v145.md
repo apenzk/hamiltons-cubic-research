@@ -102,7 +102,7 @@ This is the record's own headline pair ($S^3\times S^5$, and under triality $\ma
 
 **Second: the true operator has three eigenvalues, so no two-eigenvalue ansatz represents it.** The record gives its spectrum as $(0.398410^{\times3},\,0.119523^{\times10},\,-0.159364^{\times15})$. These are exactly $\sqrt{10/63}$, $\sqrt{1/70}$, $-\sqrt{8/315}$, which I confirm by the two invariants the ansatz must satisfy:
 $$3\cdot\tfrac{10}{63}+10\cdot\tfrac1{70}+15\cdot\tfrac8{315}=\tfrac{10}{21}+\tfrac3{21}+\tfrac8{21}=1\quad(\lVert W\rVert^2=1),$$
-$$3\sqrt{\tfrac{10}{63}}+10\sqrt{\tfrac1{70}}=\tfrac{\sqrt{10}}{\sqrt7}+\tfrac{10}{\sqrt{70}}=\tfrac{2\sqrt{70}}7=15\sqrt{\tfrac8{315}}\quad(\operatorname{tr}W=0).$$
+$$3\sqrt{\tfrac{10}{63}}+10\sqrt{\tfrac1{70}}=\tfrac{\sqrt{10}}{\sqrt7}+\tfrac{10}{\sqrt{70}}=\tfrac{2\sqrt{70}}7=15\sqrt{\tfrac8{315}}\quad(\mathop{\mathrm{tr}}W=0).$$
 Both exact. The multiplicities $3$ and $10$ are $\dim\mathfrak{so}(3)$ and $\dim\mathfrak{so}(5)$: $W$ is scalar on each **ideal** and not on $\mathfrak k$.
 
 **Third: the advertised route returns the wrong number.** Take the sentence at its word ("the value follows from three integers and one table lookup") and run (D) with $n=8$, $p=13$, $q=15$, $c^{\mathrm{ad}}_{\mathfrak{so}(8)}=12$:

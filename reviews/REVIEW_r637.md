@@ -13,39 +13,39 @@ The brief warns that [conventions.md](../findings/conventions.md) is unreliable.
 | $K$ | the symmetric hollow $n\times n$ **sectional** matrix, $K_{ab}=W_{abab}$ for $a\ne b$; the block's $K$ and the file's $M$ are the same object | [conventions.md](../findings/conventions.md), "The vertex matrix"; the alias is tabled under "the letter $M$ carries two objects" |
 | pairing | the half-trace one at the $\Lambda^2$ level, under which $\{\varphi_{ab}\}_{a<b}$ is orthonormal, so $\lVert W\rVert^2=\sum_{a<b}K_{ab}^2$ | [conventions.md](../findings/conventions.md), "Norms and pairings" |
 | $\sum_{ab}$ | **ordered** pairs, $a=b$ included | [conventions.md](../findings/conventions.md), "Sums over pairs are over ORDERED pairs unless the line says otherwise" |
-| $t$ | $t=\lVert K\rVert_F^2=\sum_{a\ne b}K_{ab}^2=\operatorname{tr}K^2$, per frame; $t=2$ identically on the diagonal locus at unit Weyl norm | [conventions.md](../findings/conventions.md), "The vertex matrix" |
+| $t$ | $t=\lVert K\rVert_F^2=\sum_{a\ne b}K_{ab}^2=\mathop{\mathrm{tr}}K^2$, per frame; $t=2$ identically on the diagonal locus at unit Weyl norm | [conventions.md](../findings/conventions.md), "The vertex matrix" |
 | $K^{\circ2}$ | the **Hadamard** square, $(K^{\circ2})_{ab}=K_{ab}^2$; entrywise nonnegative, and hollow because $K$ is | the block's own use, and [diagonal-half.md:78](../findings/diagonal-half.md) |
 | $K^2$ | the **matrix** square, $(K^2)_{ab}=\sum_cK_{ac}K_{cb}$; **not** hollow, its diagonal being $s_a$ | same |
-| $D$ | $\operatorname{diag}(\operatorname{diag}K^2)=\operatorname{diag}(s_1,\dots,s_n)$ with $s_a=\sum_bK_{ab}^2$ | the identity $(K^2)_{aa}=\sum_bK_{ab}K_{ba}=\sum_bK_{ab}^2$, by symmetry alone |
+| $D$ | $\mathop{\mathrm{diag}}(\mathop{\mathrm{diag}}K^2)=\mathop{\mathrm{diag}}(s_1,\dots,s_n)$ with $s_a=\sum_bK_{ab}^2$ | the identity $(K^2)_{aa}=\sum_bK_{ab}K_{ba}=\sum_bK_{ab}^2$, by symmetry alone |
 | $\lambda$ | **$\theta$**, the critical value $P(W)/\lVert W\rVert^3$, positive | fixed in §5 below, from the block's own $2/\lambda^2=1.309$ at $n=12$ |
 
-The two squares are distinguished at every occurrence below, and §2 records where each one is load-bearing. The check that $D=\operatorname{diag}(s)$ and $\operatorname{diag}(\operatorname{diag}K^2)$ are the same object costs one line and needs only $K=K^{\mathsf T}$; hollowness is not consumed there.
+The two squares are distinguished at every occurrence below, and §2 records where each one is load-bearing. The check that $D=\mathop{\mathrm{diag}}(s)$ and $\mathop{\mathrm{diag}}(\mathop{\mathrm{diag}}K^2)$ are the same object costs one line and needs only $K=K^{\mathsf T}$; hollowness is not consumed there.
 
-**A normalisation cross-check, since a factor $2$ is what this audit most often finds.** The file's diagonal-locus problem carries $\operatorname{tr}M^2=2$ ([diagonal-half.md:30](../findings/diagonal-half.md)) against $\sum_{a<b}w_{ab}^2=1$ ([diagonal-half.md:14](../findings/diagonal-half.md)). Those agree exactly under the ordered-pair reading, and they agree with [conventions.md](../findings/conventions.md)'s $t=2$. So the block, the file and the conventions file are in one normalisation, and no factor $2$ enters anywhere in what follows.
+**A normalisation cross-check, since a factor $2$ is what this audit most often finds.** The file's diagonal-locus problem carries $\mathop{\mathrm{tr}}M^2=2$ ([diagonal-half.md:30](../findings/diagonal-half.md)) against $\sum_{a<b}w_{ab}^2=1$ ([diagonal-half.md:14](../findings/diagonal-half.md)). Those agree exactly under the ordered-pair reading, and they agree with [conventions.md](../findings/conventions.md)'s $t=2$. So the block, the file and the conventions file are in one normalisation, and no factor $2$ enters anywhere in what follows.
 
 ## 1. The criticality equation, DERIVED, and it holds
 
 I derive it from scratch rather than from the file's account, then compare.
 
-**The variational problem.** On the diagonal locus a Weyl operator is $W=\operatorname{diag}(w)$ with $W\varphi_{ab}=K_{ab}\varphi_{ab}$, and the locus is parametrised by $\mathcal D_n=\{K\text{ symmetric},\ \operatorname{diag}K=0,\ K\mathbf1=0\}$: hollowness is the absence of an $a=b$ pair, $K\mathbf1=0$ is Ricci-flatness, and the first Bianchi identity is automatic because every component with three or four distinct indices vanishes. The functional is $P(K)=\tfrac12\big(\sum_{a,b}K_{ab}^3+\operatorname{tr}K^3\big)$, and $\theta=P$ at $\operatorname{tr}K^2=2$.
+**The variational problem.** On the diagonal locus a Weyl operator is $W=\mathop{\mathrm{diag}}(w)$ with $W\varphi_{ab}=K_{ab}\varphi_{ab}$, and the locus is parametrised by $\mathcal D_n=\{K\text{ symmetric},\ \mathop{\mathrm{diag}}K=0,\ K\mathbf1=0\}$: hollowness is the absence of an $a=b$ pair, $K\mathbf1=0$ is Ricci-flatness, and the first Bianchi identity is automatic because every component with three or four distinct indices vanishes. The functional is $P(K)=\tfrac12\big(\sum_{a,b}K_{ab}^3+\mathop{\mathrm{tr}}K^3\big)$, and $\theta=P$ at $\mathop{\mathrm{tr}}K^2=2$.
 
 **First variation.** For symmetric hollow $\delta K$,
 
-$$\delta\!\sum_{a,b}K_{ab}^3=3\langle K^{\circ2},\delta K\rangle,\qquad \delta\operatorname{tr}K^3=3\langle K^2,\delta K\rangle,\qquad \delta\operatorname{tr}K^2=2\langle K,\delta K\rangle,$$
+$$\delta\!\sum_{a,b}K_{ab}^3=3\langle K^{\circ2},\delta K\rangle,\qquad \delta\mathop{\mathrm{tr}}K^3=3\langle K^2,\delta K\rangle,\qquad \delta\mathop{\mathrm{tr}}K^2=2\langle K,\delta K\rangle,$$
 
-the middle one using $\operatorname{tr}(K^2\delta K)=\langle K^2,\delta K\rangle$ by symmetry. The Ricci-flatness constraint contributes $\sum_a v_a\sum_b\delta K_{ab}=\tfrac12\sum_{a,b}(v_a+v_b)\delta K_{ab}$ after symmetrising. Hollowness is a constraint on the diagonal only, so stationarity is imposed off the diagonal alone:
+the middle one using $\mathop{\mathrm{tr}}(K^2\delta K)=\langle K^2,\delta K\rangle$ by symmetry. The Ricci-flatness constraint contributes $\sum_a v_a\sum_b\delta K_{ab}=\tfrac12\sum_{a,b}(v_a+v_b)\delta K_{ab}$ after symmetrising. Hollowness is a constraint on the diagonal only, so stationarity is imposed off the diagonal alone:
 
 $$\big(K^{\circ2}+K^2\big)_{ab}=c\,K_{ab}+v_a+v_b\qquad(a\ne b).$$
 
 Note that $K^{\circ2}$ and $K^2$ enter through **different** derivatives (the entrywise cube sum gives the Hadamard square, the trace of the cube gives the matrix square) and swapping them changes the equation. This is the conflation the brief flags, and the two terms are distinct here for a structural reason, not by coincidence.
 
-**The multiplier is $\theta$.** Contract with $K$. The $v$ term dies on $K\mathbf1=0$; $\sum_{a\ne b}(K^2)_{ab}K_{ab}=\operatorname{tr}K^3$ because the $a=b$ term is $K_{aa}(K^2)_{aa}=0$; $\sum_{a,b}K_{ab}^2K_{ab}=\sum K_{ab}^3$; and $\sum_{a\ne b}K_{ab}^2=\operatorname{tr}K^2=2$. So $2P=2c$, i.e. $c=P=\theta$ at unit norm. **Unit norm is consumed exactly here** and nowhere else.
+**The multiplier is $\theta$.** Contract with $K$. The $v$ term dies on $K\mathbf1=0$; $\sum_{a\ne b}(K^2)_{ab}K_{ab}=\mathop{\mathrm{tr}}K^3$ because the $a=b$ term is $K_{aa}(K^2)_{aa}=0$; $\sum_{a,b}K_{ab}^2K_{ab}=\sum K_{ab}^3$; and $\sum_{a\ne b}K_{ab}^2=\mathop{\mathrm{tr}}K^2=2$. So $2P=2c$, i.e. $c=P=\theta$ at unit norm. **Unit norm is consumed exactly here** and nowhere else.
 
 **The multiplier vanishes.** Sum the off-diagonal equation over $b\ne a$. The Hadamard term gives $s_a$ (the $a=b$ term is $0$ by hollowness); the matrix term gives $\sum_b(K^2)_{ab}-(K^2)_{aa}=0-s_a$, using $K^2\mathbf1=0$; the $\theta K$ term gives $0$. So $0=(n-2)v_a+\mathbf1^{\mathsf T}v$ for every $a$, hence all $v_a$ are equal, hence $(2n-2)v=0$ and $v=0$ at every $n\ge2$. The file's arithmetic here is right.
 
-**The diagonal comes for free.** $(K^{\circ2})_{aa}=0$, $\theta K_{aa}=0$, $(K^2)_{aa}=s_a$, so the equation extends to $a=b$ once $\operatorname{diag}(s)$ is added:
+**The diagonal comes for free.** $(K^{\circ2})_{aa}=0$, $\theta K_{aa}=0$, $(K^2)_{aa}=s_a$, so the equation extends to $a=b$ once $\mathop{\mathrm{diag}}(s)$ is added:
 
-$$K^{\circ2}+K^2=\theta K+D,\qquad D=\operatorname{diag}(s)=\operatorname{diag}(\operatorname{diag}K^2).$$
+$$K^{\circ2}+K^2=\theta K+D,\qquad D=\mathop{\mathrm{diag}}(s)=\mathop{\mathrm{diag}}(\mathop{\mathrm{diag}}K^2).$$
 
 **CONFIRMED**, identical to the block's statement and to the boxed equivalence at [diagonal-half.md:78](../findings/diagonal-half.md).
 
@@ -57,7 +57,7 @@ $$K^{\circ2}+K^2=\theta K+D,\qquad D=\operatorname{diag}(s)=\operatorname{diag}(
 | criticality (stationarity) | **yes** | the Euler–Lagrange step |
 | $K$ hollow | **yes** | the $a=b$ term dropping in the row sum, and the diagonal extension |
 | Ricci-flatness $K\mathbf1=0$ | **yes** | killing $v$ in the contraction, and $K^2\mathbf1=0$ in the row sum |
-| unit norm $\operatorname{tr}K^2=2$ | **yes** | only to identify $c$ with $\theta$ rather than an unnamed multiplier |
+| unit norm $\mathop{\mathrm{tr}}K^2=2$ | **yes** | only to identify $c$ with $\theta$ rather than an unnamed multiplier |
 | maximality | **no** | stationarity alone is used |
 | first Bianchi | **not separately** | it is automatic on the locus, so it is consumed in setting up $\mathcal D_n$, never invoked as a step |
 | $\theta>0$ | **no**, for the equation | needed only downstream, at the interval reading (§4) |
@@ -111,7 +111,7 @@ $\lambda$ is $\theta$ everywhere in the block. Three independent anchors pin it:
 
 - the counting corollary evaluates $2/\lambda^2=1.309$ "at $\lambda=\theta_0(12)$", and $2/\theta_0(12)^2=144/110=1.3\overline{09}$ under [conventions.md](../findings/conventions.md)'s $\theta_0(n)^2=2(n-1)(n-2)/n^2$;
 - the general claim $2/\theta_0(n)^2=n^2/((n-1)(n-2))$ is that same substitution;
-- [Lemma L129](../findings/diagonal-half.md) and [r388](REVIEW_r388.md) restate the identical result as $\operatorname{spec}(M)\cap(0,\theta]=\varnothing$ and $M^2-\theta M=L(M^{\circ2})$.
+- [Lemma L129](../findings/diagonal-half.md) and [r388](REVIEW_r388.md) restate the identical result as $\mathop{\mathrm{spec}}(M)\cap(0,\theta]=\varnothing$ and $M^2-\theta M=L(M^{\circ2})$.
 
 So there is no $\Lambda^2$-eigenvalue reading in play and no $\theta$-for-$\lambda$ substitution error of the kind the brief warns about. **Two presentational hazards remain**, and I record them because the brief asks:
 
@@ -128,7 +128,7 @@ These are two separate things and the record needs to know which it may cite.
 2. its contrapositive, $r\ge2\Rightarrow\theta\le1$, which needs a second positive eigenvalue to be constrained;
 3. [Lemma L129](../findings/diagonal-half.md)'s kernel argument, which runs on $\ker(K^2-\theta K)$ and so needs the whole matrix.
 
-I checked the counting corollary. $r\lambda^2\le\sum_{\kappa>0}\kappa^2\le\operatorname{tr}K^2=t$, the second step discarding the negative eigenvalues' non-negative contribution; $t=2$ on the locus. The claim "$2/\theta_0(n)^2<2$ at every $n\ge6$" reduces to $n^2<2(n-1)(n-2)$, i.e. $n^2-6n+4>0$, i.e. $n>3+\sqrt5=5.236$, so it is true at every $n\ge6$, of either parity, and the "even" qualifier is there because $\Theta_n=\theta_0(n)$ only at even $n$, not because the inequality needs it. **All CONFIRMED.**
+I checked the counting corollary. $r\lambda^2\le\sum_{\kappa>0}\kappa^2\le\mathop{\mathrm{tr}}K^2=t$, the second step discarding the negative eigenvalues' non-negative contribution; $t=2$ on the locus. The claim "$2/\theta_0(n)^2<2$ at every $n\ge6$" reduces to $n^2<2(n-1)(n-2)$, i.e. $n^2-6n+4>0$, i.e. $n>3+\sqrt5=5.236$, so it is true at every $n\ge6$, of either parity, and the "even" qualifier is there because $\Theta_n=\theta_0(n)$ only at even $n$, not because the inequality needs it. **All CONFIRMED.**
 
 **There is a fourth gain the block does not claim and could.** The scalar $\theta\le\mu_1$ as derived at [diagonal-half.md:214](../findings/diagonal-half.md) bounds $u^{\mathsf T}K^{\circ2}u$ by $\max_as_a$, which is lossless **only where the row norms are equal**, the vertex-transitive locus. The $v=u$ instance of L97's identity gives $\theta\le\mu_1$ at **every** diagonal critical point, vertex-transitive or not. So the matrix form is stronger in reach as well as in content.
 
@@ -148,7 +148,7 @@ The sentence is therefore a **GAP-grade defect in the reading, not in the mathem
 
 **Every diagonal critical point, not only maximisers. CONFIRMED.** §1 uses stationarity and nothing else; no second-order information, no comparison with a competitor, no $\theta=\Theta_n$ enters. The heading is accurate.
 
-**The kernel.** On the locus $K^2-\lambda K$ **is** $L(w)$ with $w_{ab}=K_{ab}^2$, so $\ker(K^2-\lambda K)=\ker L(w)=\operatorname{span}\{\mathbf1_{C_t}\}$ over the connected components $C_t$ of the graph $\{K_{ab}\ne0\}$ (note $w_{ab}>0\iff K_{ab}\ne0$), of dimension the number of components. That is **consistent with the block at [diagonal-half.md:479](../findings/diagonal-half.md)**, which asserts the same span and is what [Lemma L130](../findings/diagonal-half.md) and [Lemma L129](../findings/diagonal-half.md) lean on. The two are the same statement because the identification of $K^2-\lambda K$ with $L(w)$ is exact rather than approximate, which is the point of §3. It also matches [r562](REVIEW_r562.md)'s reading, $\dim\ker M=\#$components, derived from L97/L129.
+**The kernel.** On the locus $K^2-\lambda K$ **is** $L(w)$ with $w_{ab}=K_{ab}^2$, so $\ker(K^2-\lambda K)=\ker L(w)=\mathop{\mathrm{span}}\{\mathbf1_{C_t}\}$ over the connected components $C_t$ of the graph $\{K_{ab}\ne0\}$ (note $w_{ab}>0\iff K_{ab}\ne0$), of dimension the number of components. That is **consistent with the block at [diagonal-half.md:479](../findings/diagonal-half.md)**, which asserts the same span and is what [Lemma L130](../findings/diagonal-half.md) and [Lemma L129](../findings/diagonal-half.md) lean on. The two are the same statement because the identification of $K^2-\lambda K$ with $L(w)$ is exact rather than approximate, which is the point of §3. It also matches [r562](REVIEW_r562.md)'s reading, $\dim\ker M=\#$components, derived from L97/L129.
 
 **Off the locus, in one sentence.** The vertex equation at $(a,b)$ picks up $W^{\#}$ and $C^{pq}$ contributions from the non-diagonal components, so the off-diagonal entry of $K^2-\lambda K$ ceases to be $-K_{ab}^2$; the matrix stays symmetric with the *same* diagonal (because $E$ is hollow for free, §3), and every bit of the failure is carried by off-diagonal weights that are no longer squares and no longer signed. The block says this and it is right, including the sharper reading that the argument is not weakened off the locus but **unavailable** there.
 
@@ -162,20 +162,20 @@ The sentence is therefore a **GAP-grade defect in the reading, not in the mathem
 | **"strictly stronger"** | **TRUE as a claim**, wrongly pointed, §6. |
 | **"arbitrary"** | **TRUE.** The display holds for every $v\in\mathbb R^n$, with no normalisation, no orthogonality to $\mathbf1$, and no eigenvector hypothesis. |
 | **"Gate 2 owed on this section"** | **STALE and misleading.** The section below the hedge carries four separate Gate 2 verdicts (reviewers 127, 128, 129, 130), on the off-locus material, the locus-not-criticality refutation and the frame question. What was never Gate-2'd is the identity itself and the box, which is what this pair is for. The hedge should say which half it applies to. |
-| **Does the file settle it above or below?** | **Yes, above.** [diagonal-half.md:78](../findings/diagonal-half.md) already carries the criticality equation as a boxed iff, with the multiplier argument. The block restates it at line 235 in different letters ($K$, $\lambda$, $D$ against $M$, $\theta$, $\operatorname{diag}(s)$) without citing it, a restatement of the kind [conventions.md](../findings/conventions.md) exists to forbid. |
+| **Does the file settle it above or below?** | **Yes, above.** [diagonal-half.md:78](../findings/diagonal-half.md) already carries the criticality equation as a boxed iff, with the multiplier argument. The block restates it at line 235 in different letters ($K$, $\lambda$, $D$ against $M$, $\theta$, $\mathop{\mathrm{diag}}(s)$) without citing it, a restatement of the kind [conventions.md](../findings/conventions.md) exists to forbid. |
 | **Pointers** | **One dead.** [diagonal-half.md:268](../findings/diagonal-half.md) writes `[post F29](INDEX.md)`; [findings/INDEX.md](../findings/INDEX.md) contains no occurrence of "F29", and neither does [INDEX-traps.md](../findings/INDEX-traps.md). The post is at [target.md:54](../findings/target.md), "Post F29, $\lambda\le\mu_{\max}(K)$ in a fixed frame cannot bound $\theta$". The two in-file anchors in the block, to [Lemma L129](../findings/diagonal-half.md) and from [diagonal-half.md:479](../findings/diagonal-half.md) back to L97, both slug correctly and resolve. |
 
 ## 9. Summary of what the record may and may not cite
 
 | statement | status |
 | --- | --- |
-| $K^{\circ2}+K^2=\lambda K+D$ at a diagonal critical point, $D=\operatorname{diag}(\operatorname{diag}K^2)$ | **CONFIRMED**, derived cold here |
+| $K^{\circ2}+K^2=\lambda K+D$ at a diagonal critical point, $D=\mathop{\mathrm{diag}}(\mathop{\mathrm{diag}}K^2)$ | **CONFIRMED**, derived cold here |
 | $v^{\mathsf T}(K^2-\lambda K)v=\tfrac12\sum_{a,b}K_{ab}^2(v_a-v_b)^2$ for every $v$ | **CONFIRMED**, both equalities, factor $\tfrac12$ correct |
 | $K^2-\lambda K=L(K_{ab}^2)$, the weighted graph Laplacian | **CONFIRMED**, exact, diagonal and off-diagonal |
 | $K^2-\lambda K\succeq0$ at **every** diagonal critical point | **CONFIRMED**, no maximality used |
 | $K$ has no eigenvalue in $(0,\lambda)$ | **CONFIRMED**, this, and only this, is equivalent to PSD |
 | $K$ has no eigenvalue in $(0,\lambda]$ | **TRUE but not by this lemma**, the word "equivalently" at [diagonal-half.md:241](../findings/diagonal-half.md) is false; cite [Lemma L129](../findings/diagonal-half.md) for the endpoint |
-| $\ker(K^2-\lambda K)=\operatorname{span}\{\mathbf1_{C_t}\}$ | **CONFIRMED**, consistent with [diagonal-half.md:479](../findings/diagonal-half.md) |
+| $\ker(K^2-\lambda K)=\mathop{\mathrm{span}}\{\mathbf1_{C_t}\}$ | **CONFIRMED**, consistent with [diagonal-half.md:479](../findings/diagonal-half.md) |
 | $r\le2/\lambda^2$, hence $r=1$ at $\lambda=\theta_0(12)$, and $r\ge2\Rightarrow\theta\le1$ at every $n\ge6$ | **CONFIRMED** |
 | "strictly stronger than the scalar one" | **CONFIRMED as a claim**; the sentence's word "below" points at B1's open conjecture and should point up |
 | provenance to [r125](REVIEW_r125.md) | **CONFIRMED** by text and by git, to the minute |

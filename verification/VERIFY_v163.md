@@ -45,7 +45,7 @@ Quoted from [conventions.md](../findings/conventions.md), not restated.
 
 > $N$ | $\binom n2=\dim\Lambda^2\mathbb R^n$
 
-> **A skew matrix's norm**, in the form the stratum arguments use: $\langle X,X\rangle=\tfrac12\operatorname{tr}(X^{\mathsf T}X)$, singular values in pairs $s_1,s_1,s_2,s_2,\dots$ with $\sum_i s_i^2=1$.
+> **A skew matrix's norm**, in the form the stratum arguments use: $\langle X,X\rangle=\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}X)$, singular values in pairs $s_1,s_1,s_2,s_2,\dots$ with $\sum_i s_i^2=1$.
 
 > **A bivector's norm**, and the record runs in the first of these: $\lVert\varphi_{ab}\rVert^2=1$ under the half-trace pairing of the bullet above, which is the one every result uses and which makes $\{\varphi_{ab}\}_{a<b}$ orthonormal
 
@@ -65,7 +65,7 @@ and the norm normalisation from the same proof, which pins $\lVert W\rVert^2=\su
 
 > Trace-freeness gives $\lambda_1=a+b$ and unit norm $(a+b)^2+a^2+b^2=1$
 
-I calibrated both against the record's own anchor before using them: at padded $W_{\mathbb{CP}^2}$, spectrum $(2,-1,-1)/\sqrt6$, they give $\operatorname{tr}W^3=6/6^{3/2}$ and $\langle W,W^\#\rangle=3\cdot2\cdot2/6^{3/2}$, summing to $18/6^{3/2}=\sqrt{3/2}$, the value [L29](../findings/stratum-two-negative.md) records. The conventions are the ones the proofs commit to.
+I calibrated both against the record's own anchor before using them: at padded $W_{\mathbb{CP}^2}$, spectrum $(2,-1,-1)/\sqrt6$, they give $\mathop{\mathrm{tr}}W^3=6/6^{3/2}$ and $\langle W,W^\#\rangle=3\cdot2\cdot2/6^{3/2}$, summing to $18/6^{3/2}=\sqrt{3/2}$, the value [L29](../findings/stratum-two-negative.md) records. The conventions are the ones the proofs commit to.
 
 ## 1. Hypothesis inventory
 
@@ -79,9 +79,9 @@ Three conditions, all linear in $W\in S^2(\Lambda^2\mathbb R^m)$:
 | --- | --- | --- | --- |
 | (W1) | pair symmetry, $W$ is a symmetric operator on $\Lambda^2$ | yes | assumed silently |
 | (W2) | first Bianchi, $\mathrm{Alt}(W)=0$ | yes | **counted as one of "both defining conditions"** |
-| (W3) | Ricci-flatness, $\sum_\alpha\lambda_\alpha v_\alpha v_\alpha^{\mathsf T}=0$, equivalently $\operatorname{Ric}(W)=0$ | yes | **counted as the other** |
+| (W3) | Ricci-flatness, $\sum_\alpha\lambda_\alpha v_\alpha v_\alpha^{\mathsf T}=0$, equivalently $\mathop{\mathrm{Ric}}(W)=0$ | yes | **counted as the other** |
 
-**The block names neither.** It says only "*Both defining conditions are linear*". Two readings are available and they are not the same condition: (W3) as stated, or the weaker $\operatorname{tr}W=0$. Only (W3) is enough (a trace-free non-Ricci-flat operator on $\Lambda^2$ is not a Weyl operator) and (W3) is what the witnesses actually satisfy, which I verify at §5.3. Under either reading linearity holds, so the ambiguity costs nothing here; it costs a reader the ability to check.
+**The block names neither.** It says only "*Both defining conditions are linear*". Two readings are available and they are not the same condition: (W3) as stated, or the weaker $\mathop{\mathrm{tr}}W=0$. Only (W3) is enough (a trace-free non-Ricci-flat operator on $\Lambda^2$ is not a Weyl operator) and (W3) is what the witnesses actually satisfy, which I verify at §5.3. Under either reading linearity holds, so the ambiguity costs nothing here; it costs a reader the ability to check.
 
 ### 1.2 What $W_4(q,r)$ is, and what $q,r$ must satisfy
 
@@ -132,7 +132,7 @@ $$A=-2P_{w^A_1}+P_{w^A_2}+P_{w^A_3},\qquad B=-2P_{w^B_1}+P_{w^B_2}+P_{w^B_3},\qq
 
 **Spectrum.** The six bivectors are mutually orthonormal ($V_A\perp V_B$ gives disjoint index sets), so $W$ is already diagonal in them:
 
-$$\operatorname{spec}W=\{-2,-2,1,1,1,1\}\cup\{0^{\times22}\},\qquad \lVert W\rVert^2=4+4+1+1+1+1=12 .$$
+$$\mathop{\mathrm{spec}}W=\{-2,-2,1,1,1,1\}\cup\{0^{\times22}\},\qquad \lVert W\rVert^2=4+4+1+1+1+1=12 .$$
 
 Normalising, $-2/\sqrt{12}=-1/\sqrt3$ at multiplicity $2$ and $1/\sqrt{12}=1/(2\sqrt3)$ at multiplicity $4$. **This is the recorded spectrum, exactly.**
 
@@ -142,7 +142,7 @@ $$[w^A_1,w^A_2]=\tfrac12\big(-E_{23}-E_{14}-E_{14}-E_{23}\big)=-(E_{14}+E_{23})=
 
 so $c_{123}^A=-\sqrt2$, $T^A_{123}=2$ and $\lVert[w^A_1,w^A_2]\rVert^2=2$, the pair cap saturated, as [L29](../findings/stratum-two-negative.md) says every orthonormal pair in $\Lambda^+\cong\mathfrak{su}(2)$ does. The same holds for each pair, and every cross bracket $[w^A_i,w^B_j]$ vanishes on disjoint index sets.
 
-**The cubic.** $\operatorname{tr}W^3=2(-8+1+1)=-12$. For $\langle W,W^\#\rangle$ each unordered triple carries $6$ ordered permutations, so the $\tfrac12$ becomes a $3$:
+**The cubic.** $\mathop{\mathrm{tr}}W^3=2(-8+1+1)=-12$. For $\langle W,W^\#\rangle$ each unordered triple carries $6$ ordered permutations, so the $\tfrac12$ becomes a $3$:
 
 $$\langle W,W^\#\rangle=3\sum_{\alpha<\beta<\gamma}T_{\alpha\beta\gamma}\lambda_\alpha\lambda_\beta\lambda_\gamma=3\big[2\cdot(-2)\cdot1\cdot1\big]\times2\ \text{copies}=-24 .$$
 
@@ -150,7 +150,7 @@ $$P(W)=-12-24=-36,\qquad \theta=\frac{-36}{12^{3/2}}=\frac{-3}{\sqrt{12}}=-\frac
 
 **This is the recorded value, exactly.**
 
-**Independent cross-check.** $\operatorname{tr}W^\#=\sum_{\alpha<\beta}\lambda_\alpha\lambda_\beta\lVert[v_\alpha,v_\beta]\rVert^2$. Within each copy the three pairs give $(-2)(1)(2)+(-2)(1)(2)+(1)(1)(2)=-6$; cross pairs vanish; total $-12=-\lVert W\rVert^2$. The identity $\operatorname{tr}W^\#=-\lVert W\rVert^2$ holds because $Q$ preserves $\mathcal W_n$, so this is a necessary condition on Weyl membership and the witness passes it. Normalised, $\operatorname{tr}W^\#=-1$, which is what [INDEX-results.md](../findings/INDEX-results.md) row 34 records the previous two reviewers recovering.
+**Independent cross-check.** $\mathop{\mathrm{tr}}W^\#=\sum_{\alpha<\beta}\lambda_\alpha\lambda_\beta\lVert[v_\alpha,v_\beta]\rVert^2$. Within each copy the three pairs give $(-2)(1)(2)+(-2)(1)(2)+(1)(1)(2)=-6$; cross pairs vanish; total $-12=-\lVert W\rVert^2$. The identity $\mathop{\mathrm{tr}}W^\#=-\lVert W\rVert^2$ holds because $Q$ preserves $\mathcal W_n$, so this is a necessary condition on Weyl membership and the witness passes it. Normalised, $\mathop{\mathrm{tr}}W^\#=-1$, which is what [INDEX-results.md](../findings/INDEX-results.md) row 34 records the previous two reviewers recovering.
 
 **$\dim U=8$.** The eigenvalue $-1/\sqrt3$ has a two-dimensional eigenspace $\langle w^A_1,w^B_1\rangle$. Each $w^A_1=\tfrac1{\sqrt2}(E_{12}+E_{34})$ has rank $4$ with image $V_A$; $w^B_1$ has image $V_B$; so $U=V_A\oplus V_B=\mathbb R^8$. **The degeneracy does not spoil this**: any basis $\cos\phi\,w^A_1+\sin\phi\,w^B_1$, $-\sin\phi\,w^A_1+\cos\phi\,w^B_1$ of the eigenspace consists of block-diagonal skew matrices whose images sum to $\mathbb R^8$ for every $\phi$ (at $\phi\notin\tfrac\pi2\mathbb Z$ each single one already has rank $8$). $\dim U=8=m$ at every admissible choice. **CONFIRMED.**
 
@@ -158,11 +158,11 @@ $$P(W)=-12-24=-36,\qquad \theta=\frac{-36}{12^{3/2}}=\frac{-3}{\sqrt{12}}=-\frac
 
 The block's whole membership argument is one clause: *"Both defining conditions are linear, so the sum is a $\mathrm{Weyl}_m$ element whatever the planes do."*
 
-**The linearity is correct.** (W2) is $\mathrm{Alt}(W)=0$ and (W3) is $\operatorname{Ric}(W)=0$; both are the vanishing of a linear map on $S^2(\Lambda^2\mathbb R^m)$, so $\mathrm{Weyl}_m$ is a linear subspace and closed under addition with no hypothesis relating the summands. So "*whatever the planes do*" is exactly right, and it is the strongest thing in the block.
+**The linearity is correct.** (W2) is $\mathrm{Alt}(W)=0$ and (W3) is $\mathop{\mathrm{Ric}}(W)=0$; both are the vanishing of a linear map on $S^2(\Lambda^2\mathbb R^m)$, so $\mathrm{Weyl}_m$ is a linear subspace and closed under addition with no hypothesis relating the summands. So "*whatever the planes do*" is exactly right, and it is the strongest thing in the block.
 
 **The step it rests on is missing.** Linearity gives $A+B\in\mathrm{Weyl}_m$ only once $A\in\mathrm{Weyl}_m$ and $B\in\mathrm{Weyl}_m$. $A$ is not $W_4(q,r)$; it is $W_4(q,r)$ *padded* into $\mathbb R^m$, and the block never establishes that padding preserves membership. It cannot borrow [conventions.md](../findings/conventions.md)'s padding bullet, which asserts only that padding commutes with $Q$ and preserves the norm and $\theta$, three statements, none of them membership.
 
-The step is one line and is available: for $W$ supported on $V\subseteq\mathbb R^m$, $\mathrm{Alt}(W)_{ijkl}$ vanishes unless all four indices lie in $V$, where it is the $\Lambda^4V$ component of a $\mathrm{Weyl}_4$ element and hence zero; and $\operatorname{Ric}(W)_{ij}=\sum_kW_{ikjk}$ vanishes unless $i,j\in V$, where it is the $\mathrm{Weyl}_4$ Ricci and hence zero. **I record this as the missing step, not as a repair, supplying it is not mine to do.** The same clause appears verbatim in [isotropy-cap.md](../findings/isotropy-cap.md) as "*Weyl membership needs no check beyond the arithmetic, both conditions being linear*", with the same omission.
+The step is one line and is available: for $W$ supported on $V\subseteq\mathbb R^m$, $\mathrm{Alt}(W)_{ijkl}$ vanishes unless all four indices lie in $V$, where it is the $\Lambda^4V$ component of a $\mathrm{Weyl}_4$ element and hence zero; and $\mathop{\mathrm{Ric}}(W)_{ij}=\sum_kW_{ikjk}$ vanishes unless $i,j\in V$, where it is the $\mathrm{Weyl}_4$ Ricci and hence zero. **I record this as the missing step, not as a repair, supplying it is not mine to do.** The same clause appears verbatim in [isotropy-cap.md](../findings/isotropy-cap.md) as "*Weyl membership needs no check beyond the arithmetic, both conditions being linear*", with the same omission.
 
 Verdict on claim 7: **TRUE BUT INCOMPLETE.**
 
@@ -189,17 +189,17 @@ All three have exactly two negative eigenvalues, and only the first has the reco
 
 ### 4.2 The recorded case, in closed form
 
-Write $x=w^A_1$, $y=w^B_1$, $\langle x,y\rangle=c=\pm\tfrac12$, $T=\langle x,y\rangle$-plane $=\operatorname{span}(x,y)$ and $R=\operatorname{span}(w^A_2,w^A_3,w^B_2,w^B_3)$, which is orthonormal and orthogonal to $T$. Then
+Write $x=w^A_1$, $y=w^B_1$, $\langle x,y\rangle=c=\pm\tfrac12$, $T=\langle x,y\rangle$-plane $=\mathop{\mathrm{span}}(x,y)$ and $R=\mathop{\mathrm{span}}(w^A_2,w^A_3,w^B_2,w^B_3)$, which is orthonormal and orthogonal to $T$. Then
 
 $$W=\Pi_A+\Pi_B-3(P_x+P_y).$$
 
 On $R$: $P_x,P_y$ vanish and $\Pi_A+\Pi_B$ acts as the identity, so $W|_R=\mathrm{Id}_R$, **eigenvalues $1,1,1,1$.**
 
-On $T$: $\Pi_A|_T=P_x|_T$ and $\Pi_B|_T=P_y|_T$, so $W|_T=-2(P_x+P_y)|_T$. For unit $x,y$ with $\langle x,y\rangle=c$, the operator $P_x+P_y$ on $\operatorname{span}(x,y)$ has eigenvalues $1\pm|c|$, at eigenvectors $x\pm\operatorname{sgn}(c)y$. With $|c|=\tfrac12$: eigenvalues $\tfrac32$ and $\tfrac12$, so
+On $T$: $\Pi_A|_T=P_x|_T$ and $\Pi_B|_T=P_y|_T$, so $W|_T=-2(P_x+P_y)|_T$. For unit $x,y$ with $\langle x,y\rangle=c$, the operator $P_x+P_y$ on $\mathop{\mathrm{span}}(x,y)$ has eigenvalues $1\pm|c|$, at eigenvectors $x\pm\mathop{\mathrm{sgn}}(c)y$. With $|c|=\tfrac12$: eigenvalues $\tfrac32$ and $\tfrac12$, so
 
 $$W|_T\ \text{has eigenvalues}\ -3\ \text{and}\ -1 .$$
 
-$$\operatorname{spec}W=(-3,-1,1,1,1,1)\cup\{0^{\times9}\},\qquad \lVert W\rVert^2=9+1+4=14 .$$
+$$\mathop{\mathrm{spec}}W=(-3,-1,1,1,1,1)\cup\{0^{\times9}\},\qquad \lVert W\rVert^2=9+1+4=14 .$$
 
 **The recorded spectrum, exactly, and it does not depend on the orientation signs, only on $|c|=\tfrac12$.**
 
@@ -232,7 +232,7 @@ everything else zero.
 
 ### 4.4 The cubic, and the closed form the record does not carry
 
-$$\operatorname{tr}W^3=-27-1+1+1+1+1=-24 .$$
+$$\mathop{\mathrm{tr}}W^3=-27-1+1+1+1+1=-24 .$$
 
 $$\langle W,W^\#\rangle=3\sum_{\alpha<\beta<\gamma}T_{\alpha\beta\gamma}\lambda_\alpha\lambda_\beta\lambda_\gamma =3\Big[\tfrac32(-3)+\tfrac12(-1)+\tfrac32(-3)+\tfrac12(-1)\Big]=3(-10)=-30 .$$
 
@@ -242,9 +242,9 @@ $27/(7\sqrt{14})=27/26.191601707\ldots=1.0308648\ldots$, which is the recorded $
 
 ### 4.5 Two independent controls on the $m=6$ witness
 
-**Control 1, $\operatorname{tr}W^\#=-\lVert W\rVert^2$.** The bracket norms are $\lVert[u_1,u_j]\rVert^2=\tfrac32$ for $j\in\{3,4,5,6\}$; $\lVert[u_2,u_j]\rVert^2=\tfrac12$ for the same four; $\lVert[u_3,u_4]\rVert^2=\lVert[u_5,u_6]\rVert^2=2$; $\lVert[u_3,u_5]\rVert^2=\cdots=\lVert[u_4,u_6]\rVert^2=\tfrac12$ for the four cross pairs; $\lVert[u_1,u_2]\rVert^2=0$. Then
+**Control 1, $\mathop{\mathrm{tr}}W^\#=-\lVert W\rVert^2$.** The bracket norms are $\lVert[u_1,u_j]\rVert^2=\tfrac32$ for $j\in\{3,4,5,6\}$; $\lVert[u_2,u_j]\rVert^2=\tfrac12$ for the same four; $\lVert[u_3,u_4]\rVert^2=\lVert[u_5,u_6]\rVert^2=2$; $\lVert[u_3,u_5]\rVert^2=\cdots=\lVert[u_4,u_6]\rVert^2=\tfrac12$ for the four cross pairs; $\lVert[u_1,u_2]\rVert^2=0$. Then
 
-$$\operatorname{tr}W^\#=\sum_{\alpha<\beta}\lambda_\alpha\lambda_\beta\lVert[v_\alpha,v_\beta]\rVert^2 =0+4(-3)(\tfrac32)+4(-1)(\tfrac12)+2+2+4(\tfrac12)=-18-2+2+2+2=-14 ,$$
+$$\mathop{\mathrm{tr}}W^\#=\sum_{\alpha<\beta}\lambda_\alpha\lambda_\beta\lVert[v_\alpha,v_\beta]\rVert^2 =0+4(-3)(\tfrac32)+4(-1)(\tfrac12)+2+2+4(\tfrac12)=-18-2+2+2+2=-14 ,$$
 
 which is $-\lVert W\rVert^2$ exactly, and $-1$ after normalisation. ✔
 
@@ -257,7 +257,7 @@ $$\sum_\alpha\lambda_\alpha u_\alpha u_\alpha^{\mathsf T}=-\tfrac12(d_1{+}d_2{+}
 
 every coefficient vanishing: $-\tfrac12-\tfrac12+1=0$ at $d_1,\dots,d_4$ and $-2+1+1=0$ at $d_5,d_6$. **The witness is Ricci-flat, exactly, and (W2) follows from linearity once §3's missing step is supplied.** ✔
 
-**Control 3, the norm decomposes as it must.** $\lVert A\rVert^2=\lVert B\rVert^2=4+1+1=6$, and $\lVert W\rVert^2=14$, so $\langle A,B\rangle=1$. Independently, $\Pi_A$ acts as $P_x$ on $B$'s span, so $\operatorname{tr}(AB)=\operatorname{tr}\big((-3P_x+P_x)(-3P_y+P_y)\big)=4\operatorname{tr}(P_xP_y)=4c^2=1$ ✔. **This is the number §7 turns on.**
+**Control 3, the norm decomposes as it must.** $\lVert A\rVert^2=\lVert B\rVert^2=4+1+1=6$, and $\lVert W\rVert^2=14$, so $\langle A,B\rangle=1$. Independently, $\Pi_A$ acts as $P_x$ on $B$'s span, so $\mathop{\mathrm{tr}}(AB)=\mathop{\mathrm{tr}}\big((-3P_x+P_x)(-3P_y+P_y)\big)=4\mathop{\mathrm{tr}}(P_xP_y)=4c^2=1$ ✔. **This is the number §7 turns on.**
 
 ### 4.6 $\dim U=6$
 
@@ -338,7 +338,7 @@ The block writes:
 
 ### 9.1 $\ker W\ne0$
 
-**Both witnesses are massively degenerate.** At $m=8$, $\operatorname{rank}W=6$ against $N=28$: $\dim\ker W=22$. At $m=6$, $\operatorname{rank}W=6$ against $N=15$: $\dim\ker W=9$. Even the unpadded $W_4(q,r)$ has a $3$-dimensional kernel, $\Lambda^-\mathbb R^4$.
+**Both witnesses are massively degenerate.** At $m=8$, $\mathop{\mathrm{rank}}W=6$ against $N=28$: $\dim\ker W=22$. At $m=6$, $\mathop{\mathrm{rank}}W=6$ against $N=15$: $\dim\ker W=9$. Even the unpadded $W_4(q,r)$ has a $3$-dimensional kernel, $\Lambda^-\mathbb R^4$.
 
 What that does to each step:
 
@@ -346,7 +346,7 @@ What that does to each step:
 | --- | --- |
 | Weyl membership | none, (W1)–(W3) are linear and blind to rank |
 | the spectra | none, the kernel contributes the recorded zeros, uncounted in both displays |
-| $\operatorname{tr}W^3$ and $\langle W,W^\#\rangle$ | none, a kernel index kills its term in both, which is why §2 and §4.4 sum over six indices and not $N$ |
+| $\mathop{\mathrm{tr}}W^3$ and $\langle W,W^\#\rangle$ | none, a kernel index kills its term in both, which is why §2 and §4.4 sum over six indices and not $N$ |
 | $U=\mathrm{im}\,v_{N-1}+\mathrm{im}\,v_N$ | **it makes the index convention matter.** With $22$ (resp. $9$) zeros in the middle of the spectrum, $v_{N-1},v_N$ are the two negatives only under descending order. §1.3 |
 | $S(W)$, the gradedness slack | [conventions.md](../findings/conventions.md)'s $S(W)$ row warns *"the screen is vacuous when $\ker W\ne0$"*. **L34 does not use $S(W)$**, so nothing here is affected, but any consumer that feeds these witnesses to a slack screen gets nothing. |
 | the pair-cap and deficit machinery of [L29](../findings/stratum-two-negative.md)/[L31](../findings/stratum-two-negative.md)/[L35](../findings/stratum-two-negative.md) | **L34 uses none of it**, so the kernel's effect on $\sum_\beta\epsilon_{\alpha\beta}=2(N-n+1)$ never reaches this block |
@@ -371,7 +371,7 @@ What that does to each step:
 ### 9.5 A universal claim with no witness, and an existence claim whose witness fails the hypotheses
 
 - **A universal claim with no witness**: the construction sentence is written universally ("*Orthogonal planes at $m=8$ give…*", "*planes meeting in a 2-plane at $m=6$ give…*") and is false read that way, §4.1. **Read existentially, which the statement above it is, both are true.** The defect is grammatical and it hides §9.4's two hypotheses.
-- **The converse, a witness failing the hypotheses**: **checked and cleared at both dimensions.** Each witness is in $\mathrm{Weyl}_m$ (Ricci-flatness verified exactly at $m=6$ in §4.5, and at $m=8$ the summands are unmixed padded $\mathrm{Weyl}_4$ elements; (W2) from linearity once §3's step is supplied), has exactly two negative eigenvalues (exhibited spectra), and has $\dim U=m$ (§2 and §4.6). $\operatorname{tr}W^\#=-\lVert W\rVert^2$ passes at both as an independent necessary condition.
+- **The converse, a witness failing the hypotheses**: **checked and cleared at both dimensions.** Each witness is in $\mathrm{Weyl}_m$ (Ricci-flatness verified exactly at $m=6$ in §4.5, and at $m=8$ the summands are unmixed padded $\mathrm{Weyl}_4$ elements; (W2) from linearity once §3's step is supplied), has exactly two negative eigenvalues (exhibited spectra), and has $\dim U=m$ (§2 and §4.6). $\mathop{\mathrm{tr}}W^\#=-\lVert W\rVert^2$ passes at both as an independent necessary condition.
 
 ### 9.6 An imported theorem whose hypotheses were never checked
 
@@ -434,7 +434,7 @@ This is exactly the clause [isotropy-cap.md](../findings/isotropy-cap.md) withdr
 
 **Withdrawn, "the block's $\theta$ values are inconsistent with [L35](../findings/stratum-two-negative.md)'s cap."** Both are negative and every recorded positive figure for the family is below $\sqrt{3/2}$. **Reason for withdrawal: gate 1, there is no step at which the two meet.**
 
-**Withdrawn, "$\operatorname{tr}W^\#=-\lVert W\rVert^2$ fails at the $m=6$ witness because of the overlap."** It holds exactly, §4.5. **Reason for withdrawal: gate 2, the arithmetic closes at $-14$.**
+**Withdrawn, "$\mathop{\mathrm{tr}}W^\#=-\lVert W\rVert^2$ fails at the $m=6$ witness because of the overlap."** It holds exactly, §4.5. **Reason for withdrawal: gate 2, the arithmetic closes at $-14$.**
 
 ## 12. What would falsify the statement, and what I did to look for it
 
@@ -444,7 +444,7 @@ What I did to look for it:
 
 1. **Rebuilt both objects from the definitions in closed form** and computed their full spectra by hand, §2 and §4.2–4.4. If either rebuild is right, no such proof can exist.
 2. **Checked $\mathrm{Weyl}_m$ membership independently of the block's linearity clause.** Ricci-flatness at the $m=6$ witness verified coefficient by coefficient against the six diagonal generators, §4.5, Control 2. First Bianchi from the coefficient sum of $W_4(q,r)$ vanishing, §1.2.
-3. **Ran two structural controls that a non-Weyl object would fail**: $\operatorname{tr}W^\#=-\lVert W\rVert^2$ at both witnesses, and the norm decomposition $\lVert W\rVert^2=\lVert A\rVert^2+\lVert B\rVert^2+2\langle A,B\rangle$ against an independent computation of $\langle A,B\rangle$.
+3. **Ran two structural controls that a non-Weyl object would fail**: $\mathop{\mathrm{tr}}W^\#=-\lVert W\rVert^2$ at both witnesses, and the norm decomposition $\lVert W\rVert^2=\lVert A\rVert^2+\lVert B\rVert^2+2\langle A,B\rangle$ against an independent computation of $\langle A,B\rangle$.
 4. **Checked $\dim U$ from the eigenvectors rather than from the block's "union of the planes"** at both dimensions, and checked the degenerate case at $m=8$ over the whole eigenspace.
 5. **Searched the record for any result that would contradict the statement**, [L33](../findings/stratum-two-negative.md) (hypothesis not met by either witness), [L35](../findings/stratum-two-negative.md) (a $\theta$ cap, silent on support), [L82](../findings/isotropy-cap.md) (equality clause already refuted, and its lever "information-free at every $m\le9$"). **None contradicts it.**
 6. **Attacked the one place where the ordering convention could flip the answer**, the ascending reading of $v_{N-1},v_N$, under which $\dim U=4$ at $m=6$, §1.3, and confirmed the record's own usage in [L29](../findings/stratum-two-negative.md) fixes the descending reading.

@@ -2,7 +2,7 @@
 
 Adversarial Gate 2 audit of the three claims U1–U3 recorded in [findings/bounds.md](../findings/bounds.md) under "The walk identity at the $\lambda_{\min}$ eigenvector", the first step of route [R13](../routes.md).
 
-**Everything below is computed from a from-scratch implementation** in [scripts/reviewers/r321/core.py](../scripts/reviewers/r321/core.py): $\mathfrak{so}(n)$ basis $E_{ij}$ orthonormal for $\langle A,B\rangle=-\tfrac12\operatorname{tr}(AB)$, structure constants by direct matrix commutators, $\mathrm{Weyl}_n$ as the nullspace of (first Bianchi $\oplus$ Ricci) on symmetric operators, and $\mathrm{sharp}(n,W)_{ab}=-\tfrac12\operatorname{tr}(A_aWA_bW)$. Nothing is imported from the repository's scripts. Self-validation: $\dim\mathrm{Weyl}_n=35,84,168,300$ at $n=5,6,7,8$, matching $n(n+1)(n+2)(n-3)/12$; $S^{n/2}\times S^{n/2}$ comes out critical with $\theta=\theta_0(n)$ to $10^{-15}$; and $\dim\mathfrak m$, $\dim\mathfrak p$, $\dim\ker$, $\theta$ and $S_{\mathfrak{mpp}}$ agree with the record's own table at all ten catalogued points.
+**Everything below is computed from a from-scratch implementation** in [scripts/reviewers/r321/core.py](../scripts/reviewers/r321/core.py): $\mathfrak{so}(n)$ basis $E_{ij}$ orthonormal for $\langle A,B\rangle=-\tfrac12\mathop{\mathrm{tr}}(AB)$, structure constants by direct matrix commutators, $\mathrm{Weyl}_n$ as the nullspace of (first Bianchi $\oplus$ Ricci) on symmetric operators, and $\mathrm{sharp}(n,W)_{ab}=-\tfrac12\mathop{\mathrm{tr}}(A_aWA_bW)$. Nothing is imported from the repository's scripts. Self-validation: $\dim\mathrm{Weyl}_n=35,84,168,300$ at $n=5,6,7,8$, matching $n(n+1)(n+2)(n-3)/12$; $S^{n/2}\times S^{n/2}$ comes out critical with $\theta=\theta_0(n)$ to $10^{-15}$; and $\dim\mathfrak m$, $\dim\mathfrak p$, $\dim\ker$, $\theta$ and $S_{\mathfrak{mpp}}$ agree with the record's own table at all ten catalogued points.
 
 | claim | verdict |
 |---|---|
@@ -19,15 +19,15 @@ Adversarial Gate 2 audit of the three claims U1–U3 recorded in [findings/bound
 
 All three parts follow from the definitions in three lines each; the numerics are a check on the implementation, not the evidence.
 
-**The identity.** With $W\varphi_a=\lambda_a\varphi_a$ orthonormal, $v=\varphi_1$, $c_{1ab}=\langle[v,\varphi_a],\varphi_b\rangle$, expand the trace in the eigenbasis: $\mathrm{ad}(v)\varphi_a=\sum_bc_{1ab}\varphi_b$, so $\langle\varphi_a,\mathrm{ad}(v)W\mathrm{ad}(v)W\varphi_a\rangle=\lambda_a\sum_b\lambda_bc_{1ab}c_{1ba}=-\lambda_a\sum_b\lambda_bc_{1ab}^2$ by antisymmetry of $\mathrm{ad}(v)$. Hence $\operatorname{tr}(\mathrm{ad}(v)W\mathrm{ad}(v)W)=-\sum_{a,b}\lambda_a\lambda_bc_{1ab}^2$ and $\langle v,W^\#v\rangle=\tfrac12\sum_{a,b}\lambda_a\lambda_bc_{1ab}^2$.
+**The identity.** With $W\varphi_a=\lambda_a\varphi_a$ orthonormal, $v=\varphi_1$, $c_{1ab}=\langle[v,\varphi_a],\varphi_b\rangle$, expand the trace in the eigenbasis: $\mathrm{ad}(v)\varphi_a=\sum_bc_{1ab}\varphi_b$, so $\langle\varphi_a,\mathrm{ad}(v)W\mathrm{ad}(v)W\varphi_a\rangle=\lambda_a\sum_b\lambda_bc_{1ab}c_{1ba}=-\lambda_a\sum_b\lambda_bc_{1ab}^2$ by antisymmetry of $\mathrm{ad}(v)$. Hence $\mathop{\mathrm{tr}}(\mathrm{ad}(v)W\mathrm{ad}(v)W)=-\sum_{a,b}\lambda_a\lambda_bc_{1ab}^2$ and $\langle v,W^\#v\rangle=\tfrac12\sum_{a,b}\lambda_a\lambda_bc_{1ab}^2$.
 
-**The mass is exact and universal, and stronger than recorded.** $\sum_{a,b}c_{1ab}^2=-\operatorname{tr}(\mathrm{ad}(v)^2)$, which is the Killing form $B(v,v)=(n-2)\operatorname{tr}(v^2)$ of $\mathfrak{so}(n)$ up to sign; with $\langle v,v\rangle=-\tfrac12\operatorname{tr}(v^2)=1$ this is exactly $2(n-2)$. **No property of $W$ or of $v$ beyond $\lVert v\rVert=1$ enters**, $v$ need not be an eigenvector and there need not be a $W$ at all. Verified at $10^{-12}$ for random unit elements of $\mathfrak{so}(n)$ at $n=5,6,9,12$. So the record's "the mass is $2(n-2)$ at every one" of four points understates it: it is an identity of the Killing form, not a coincidence of the points tested.
+**The mass is exact and universal, and stronger than recorded.** $\sum_{a,b}c_{1ab}^2=-\mathop{\mathrm{tr}}(\mathrm{ad}(v)^2)$, which is the Killing form $B(v,v)=(n-2)\mathop{\mathrm{tr}}(v^2)$ of $\mathfrak{so}(n)$ up to sign; with $\langle v,v\rangle=-\tfrac12\mathop{\mathrm{tr}}(v^2)=1$ this is exactly $2(n-2)$. **No property of $W$ or of $v$ beyond $\lVert v\rVert=1$ enters**, $v$ need not be an eigenvector and there need not be a $W$ at all. Verified at $10^{-12}$ for random unit elements of $\mathfrak{so}(n)$ at $n=5,6,9,12$. So the record's "the mass is $2(n-2)$ at every one" of four points understates it: it is an identity of the Killing form, not a coincidence of the points tested.
 
 **The critical-point value.** $Q(W)=\theta W$ gives $W^\#v=\theta\lambda_{\min}v-\lambda_{\min}^2v$, hence $\langle v,W^\#v\rangle=\lambda_{\min}(\theta-\lambda_{\min})$.
 
 **Measured** ([t2_u1.py](../scripts/reviewers/r321/t2_u1.py)) at $S^3\times S^3$, $S^4\times S^4$, $S^3\times S^5$, $S^5\times S^5$, $\mathbb{CP}^3$: identity residual $\le2\times10^{-16}$, mass exact, critical-point value to $\le1.5\times10^{-15}$. At three random non-critical Weyl points the identity and the mass still hold exactly while $\lambda_{\min}(\theta-\lambda_{\min})$ misses by $0.12$–$0.26$, as it must.
 
-**The sign convention is right.** With $\mathrm{sharp}=-\tfrac12\operatorname{tr}(A_aWA_bW)$ and $Q=W^2+W^\#$, the balanced sphere product is critical at $\theta=\theta_0(n)$, residual $9\times10^{-16}$. With the sign flipped ($Q=W^2-W^\#$) the same point gives $P=-0.843274$ and criticality residual $0.516$, the convention is not merely conventional, and the recorded one is the correct one.
+**The sign convention is right.** With $\mathrm{sharp}=-\tfrac12\mathop{\mathrm{tr}}(A_aWA_bW)$ and $Q=W^2+W^\#$, the balanced sphere product is critical at $\theta=\theta_0(n)$, residual $9\times10^{-16}$. With the sign flipped ($Q=W^2-W^\#$) the same point gives $P=-0.843274$ and criticality residual $0.516$, the convention is not merely conventional, and the recorded one is the correct one.
 
 ---
 
@@ -111,7 +111,7 @@ $$\boxed{\ \theta\ \le\ \lambda_{\min}+(n-2)\lambda_{\max}\ }$$
 
 **(O2) $S_{\mathfrak{mmm}}=0$ is an inactive constraint for any bound built from the spectrum plus the Cartan third-moment data.** Summing the criticality identity over the eigenbasis with weight $\lambda_a$ gives, with $t_{abc}=c_{abc}^2$ on unordered triples,
 
-$$\theta=\operatorname{tr}W^3+3\!\!\sum_{\{a,b,c\}}\!\!\lambda_a\lambda_b\lambda_c\,t_{abc}.$$
+$$\theta=\mathop{\mathrm{tr}}W^3+3\!\!\sum_{\{a,b,c\}}\!\!\lambda_a\lambda_b\lambda_c\,t_{abc}.$$
 
 Triples inside $\mathfrak m\times\mathfrak m\times\mathfrak m$ carry $\lambda_a\lambda_b\lambda_c<0$ (a **strictly negative objective coefficient**) so a maximiser of $\theta$ over the $t$-data sets them to zero of its own accord. Measured ([t10_inert.py](../scripts/reviewers/r321/t10_inert.py)): at the sphere-product spectrum and at every sampled spectrum with positive optimum, the unconstrained LP optimum already carries mass $0.000\times10^{0}$ on $\mathfrak m\times\mathfrak m\times\mathfrak m$. The hypothesis constrains only variables the extremal configuration has already switched off.
 

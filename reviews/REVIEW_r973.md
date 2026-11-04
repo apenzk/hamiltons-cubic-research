@@ -77,11 +77,11 @@ The record's splitting is proved inside the same proposition, under the same hyp
 
 ## Claim 7, CONFIRMED
 
-Real traceless symmetric $3\times3$ matrices form a $5$-dimensional space, so pairs $(X,Y)$ span $10$ dimensions. The tangent space at $p=(\hat U,V)$ is cut by the single condition $3\operatorname{tr}(\hat UX)+\operatorname{tr}(VY)=0$, which is $\langle p,\cdot\rangle$ in the inner product $\langle Z,Z'\rangle_T=3\operatorname{tr}(XX')+\operatorname{tr}(YY')$ and so is a nonzero functional exactly when $p\ne0$, true at each of the three points. **$10-1=9$.**
+Real traceless symmetric $3\times3$ matrices form a $5$-dimensional space, so pairs $(X,Y)$ span $10$ dimensions. The tangent space at $p=(\hat U,V)$ is cut by the single condition $3\mathop{\mathrm{tr}}(\hat UX)+\mathop{\mathrm{tr}}(VY)=0$, which is $\langle p,\cdot\rangle$ in the inner product $\langle Z,Z'\rangle_T=3\mathop{\mathrm{tr}}(XX')+\mathop{\mathrm{tr}}(YY')$ and so is a nonzero functional exactly when $p\ne0$, true at each of the three points. **$10-1=9$.**
 
 ## Claim 8, REFUTED, with its first half confirmed
 
-**The three points were rebuilt here from the criticality system, not taken from the table.** With $\hat U=\operatorname{diag}(\text{spectrum})$ and $V$ carrying one vanishing off-diagonal entry, the system $[A,C]=0$ in $(a_1,a_2,\mu)$ was solved from multistart least squares and polished by Newton at $60$ digits. It returns $\mu=11.6005951538$, $24.4386964721$ and $762.384530179$, the record's three values, at $\lvert[A,C]\rvert$ between $8\cdot10^{-58}$ and $2\cdot10^{-52}$.
+**The three points were rebuilt here from the criticality system, not taken from the table.** With $\hat U=\mathop{\mathrm{diag}}(\text{spectrum})$ and $V$ carrying one vanishing off-diagonal entry, the system $[A,C]=0$ in $(a_1,a_2,\mu)$ was solved from multistart least squares and polished by Newton at $60$ digits. It returns $\mu=11.6005951538$, $24.4386964721$ and $762.384530179$, the record's three values, at $\lvert[A,C]\rvert$ between $8\cdot10^{-58}$ and $2\cdot10^{-52}$.
 
 **The reconstruction was then validated against the brief's own identity.** At each point, with $Z$ scaled to $\lVert Z\rVert_T=\lVert p\rVert_T$, the closed form $-\tfrac12\Phi_0(c-1)^2(c+2)+\tfrac12cs^2Q+s^3(\Xi-S)$ matched $\Phi(\gamma(\theta))-\Phi(p)$ to a worst relative mismatch of $3.4\cdot10^{-51}$ over six values of $\theta$, with the constraint drift below $10^{-45}$. So the objects measured below are the brief's objects.
 

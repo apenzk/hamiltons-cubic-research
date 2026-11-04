@@ -10,7 +10,7 @@ Here $B$ is the symmetric bilinear form with $B(R,R)=Q(R)$. The second bullet is
 
 ## Lemma 4.1, $Q(R)=\lambda R$ at symmetric Einstein spaces (L510–L532, verbatim)
 
-> **Lemma 4.1.** Let $(M^n,g_0)$ be a non negatively curved Einstein symmetric space, then its curvature operator $R$ satisfies $Q(R)=\lambda R$ (3) where $\lambda>0$ is such that $\operatorname{Ric}_{g_0}=\lambda g_0$.
+> **Lemma 4.1.** Let $(M^n,g_0)$ be a non negatively curved Einstein symmetric space, then its curvature operator $R$ satisfies $Q(R)=\lambda R$ (3) where $\lambda>0$ is such that $\mathop{\mathrm{Ric}}_{g_0}=\lambda g_0$.
 
 > *Proof.* Since $(M^n,g_0)$ is Einstein, we can use Proposition 3 of [Bre10a] to get that (note that our definition of $Q$ differs from the one used by Brendle by a factor of 2): $\Delta_{g_0}R_{g_0}+2Q(R_{g_0})=\lambda R$. Then, since $g_0$ is symmetric, $R_{g_0}$ is parallel and $\Delta_{g_0}R_{g_0}=0$. This proves that $Q(R_{g_0})=\lambda R_{g_0}$.
 

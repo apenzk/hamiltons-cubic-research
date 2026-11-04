@@ -12,7 +12,7 @@ Verifier v187, cold reader on [BRIEF_L17.md](BRIEF_L17.md). **No numerical work 
 | 4 | "Unit-norm tangency fixes the remaining diagonal entry against it" | **CONFIRMED FOR TANGENCY; $\lVert H\rVert=1$ IS INERT**, §3.3, a stated hypothesis that no step uses |
 | 5 | $\{F=0\}=\{H:\Pi_{ASD}H\Pi_{\ker u}=0\}$, a linear subspace | **CONFIRMED, both directions**, §4, and it is exactly the set of directions in which $\delta^2$ is two-sided differentiable |
 | 6 | The three prose families are sufficient, not the equality set; mixed $E$–$K$ included | **CONFIRMED** as an inclusion, §4.3, **WITNESS-FREE**: no Weyl tensor with a nonzero $E$–$K$ block is exhibited anywhere on the record |
-| 7 | $\operatorname{codim}\{F=0\}\le186$ at $n=12$; $\ge1451$ of $1637$ | **CONFIRMED**, §5, $3\cdot63-3=186$, $1638-1=1637$ |
+| 7 | $\mathop{\mathrm{codim}}\{F=0\}\le186$ at $n=12$; $\ge1451$ of $1637$ | **CONFIRMED**, §5, $3\cdot63-3=186$, $1638-1=1637$ |
 | 8 | "about $89\%$ of directions" | **MISDESCRIBED**, §5.2, $1451/1637=88.64\%$ is a ratio of *dimensions*; $\{F=0\}$ is a proper subspace and so a **measure-zero** set of directions. Correct as written arithmetically, false as read |
 | 9 | $d^+\Phi=2a\kappa_nF$ needs $\kappa_n\le0$; $d^+\delta^2\le0$ is dimension-free | **CONFIRMED, AND IT RESTS ON AN UNSTATED HYPOTHESIS**, §6: $Q(u)=\theta u$. Nowhere stated in either block or in the notebook |
 | 10 | $\Theta_{11}=1.21716<\sqrt{3/2}<1.24838=\Theta_{13}$, crossover still at $n\ge12$ | **CONFIRMED** to the digits printed, §7, but the two odd values alone do **not** establish "$n\ge12$"; even $n$ and monotonicity are needed and are stated nowhere |
@@ -74,11 +74,11 @@ With $\hat\omega_1,\hat\omega_2,\hat\omega_3$ the orthonormal self-dual forms of
 
 $$\tfrac2{\sqrt6}\ (\text{mult }1),\qquad -\tfrac1{\sqrt6}\ (\text{mult }2),\qquad 0\ \big(\text{mult }\tbinom n2-3\big),$$
 
-so $\lVert u\rVert^2=(4+1+1)/6=1$ and $\operatorname{tr}_{\Lambda^2}u=(2-1-1)/\sqrt6=0$, the "$2{:}1$ eigenvalue ratio is forced by $\operatorname{tr}_{\Lambda^2}W=0$" of the notebook checks out.
+so $\lVert u\rVert^2=(4+1+1)/6=1$ and $\mathop{\mathrm{tr}}_{\Lambda^2}u=(2-1-1)/\sqrt6=0$, the "$2{:}1$ eigenvalue ratio is forced by $\mathop{\mathrm{tr}}_{\Lambda^2}W=0$" of the notebook checks out.
 
 By the quoted $W_-$ convention, $u_-=\tfrac1{\sqrt6}(\hat\omega_2\hat\omega_2^{\mathsf T}+\hat\omega_3\hat\omega_3^{\mathsf T})=\tfrac1{\sqrt6}(\Pi_{SD}-\hat\omega_1\hat\omega_1^{\mathsf T})$, supported in $S^2(\Lambda^2\mathbb R^4)$. Since $\Lambda^4\mathbb R^4=\mathbb R\star$ and $\mathrm{Alt}$ is the orthogonal projection onto $\Lambda^4$,
 
-$$\mathrm{Alt}(u_-)=\frac{\langle u_-,\star\rangle}{\lVert\star\rVert^2}\,\star,\qquad \langle u_-,\star\rangle=\tfrac1{\sqrt6}\operatorname{tr}\!\big[(\Pi_{SD}-\hat\omega_1\hat\omega_1^{\mathsf T})(\Pi_{SD}-\Pi_{ASD})\big]=\tfrac{3-1}{\sqrt6}=\tfrac2{\sqrt6},$$
+$$\mathrm{Alt}(u_-)=\frac{\langle u_-,\star\rangle}{\lVert\star\rVert^2}\,\star,\qquad \langle u_-,\star\rangle=\tfrac1{\sqrt6}\mathop{\mathrm{tr}}\!\big[(\Pi_{SD}-\hat\omega_1\hat\omega_1^{\mathsf T})(\Pi_{SD}-\Pi_{ASD})\big]=\tfrac{3-1}{\sqrt6}=\tfrac2{\sqrt6},$$
 
 whence $\mathrm{Alt}(u_-)=\tfrac{2/\sqrt6}{6}\star=\tfrac1{3\sqrt6}\star=a\star$. **$a=\tfrac1{3\sqrt6}$ confirmed**, and with it $\delta^2(u)=a^2\lVert\star\rVert^2=\tfrac6{54}=\tfrac19$, the value the whole penalty is pinned on.
 
@@ -88,7 +88,7 @@ Restricting to $\ker u$: $\ker u$ meets the self-dual $3$-space in $0$ (all thre
 
 ### 2.2 The two branches
 
-Write $E=\operatorname{span}\{\hat\omega_1,\hat\omega_2,\hat\omega_3\}$, $A=\Lambda^2_{ASD}\mathbb R^4$, $K'=(E\oplus A)^\perp$, so $\ker u=A\oplus K'$ and $P_0=\Pi_{A\oplus K'}$. Since $\delta^2(W)=\lVert\mathrm{Alt}(W_-)\rVert^2$ and $\mathrm{Alt}$ is self-adjoint and idempotent,
+Write $E=\mathop{\mathrm{span}}\{\hat\omega_1,\hat\omega_2,\hat\omega_3\}$, $A=\Lambda^2_{ASD}\mathbb R^4$, $K'=(E\oplus A)^\perp$, so $\ker u=A\oplus K'$ and $P_0=\Pi_{A\oplus K'}$. Since $\delta^2(W)=\lVert\mathrm{Alt}(W_-)\rVert^2$ and $\mathrm{Alt}$ is self-adjoint and idempotent,
 
 $$d^+\delta^2(u;H)=2\big\langle\mathrm{Alt}(u_-),\ d^+u_-(H)\big\rangle=2a\big\langle\star,\ d^+u_-(H)\big\rangle .$$
 
@@ -96,11 +96,11 @@ $\star=\Pi_{SD}-\Pi_{ASD}$ is **block-diagonal for $E\oplus A\oplus K'$**, indee
 
 *(a) Smooth branch.* On the pairs of eigenvalues not both zero, $f(x)=x_-$ has well-defined divided differences and the Daleckii–Krein formula applies entrywise; only the diagonal entries at nonzero eigenvalues reach $\star$, with multiplier $f'(\lambda)$. $f'(2/\sqrt6)=0$ and $f'(-1/\sqrt6)=-1$, so the branch contributes $2a\cdot\big(1\cdot0\cdot H_{11}+1\cdot(-1)H_{22}+1\cdot(-1)H_{33}\big)=-2a(H_{22}+H_{33})$. Every off-diagonal term (the $E$–$E$ rotations *and* the $E$–$K$ tilts), pairs to zero against a block-diagonal $\star$, which is the notebook's "(a) … every eigenvector-rotation term pairs to zero". **Confirmed.**
 
-*(b) Kink branch.* On $\ker u$, first-order degenerate perturbation theory gives eigenvalues $t\mu_k+o(t)$ with $\mu_k=\operatorname{spec}(P_0HP_0\rvert_{\ker u})$, and eigenvectors converging inside $\ker u$ to those of $P_0HP_0$. For $t\to0^+$, $(t\mu_k)_-=t(\mu_k)_-$, so the kernel block of $u_-$ gains $t(P_0HP_0)_-+o(t)$. Pairing: $2\langle\mathrm{Alt}(u_-)\rvert_{\ker u},(P_0HP_0)_-\rangle=-2a\operatorname{tr}\!\big(\Pi_{ASD}(P_0HP_0)_-\big)$. **Confirmed.**
+*(b) Kink branch.* On $\ker u$, first-order degenerate perturbation theory gives eigenvalues $t\mu_k+o(t)$ with $\mu_k=\mathop{\mathrm{spec}}(P_0HP_0\rvert_{\ker u})$, and eigenvectors converging inside $\ker u$ to those of $P_0HP_0$. For $t\to0^+$, $(t\mu_k)_-=t(\mu_k)_-$, so the kernel block of $u_-$ gains $t(P_0HP_0)_-+o(t)$. Pairing: $2\langle\mathrm{Alt}(u_-)\rvert_{\ker u},(P_0HP_0)_-\rangle=-2a\mathop{\mathrm{tr}}\!\big(\Pi_{ASD}(P_0HP_0)_-\big)$. **Confirmed.**
 
 Adding,
 
-$$\boxed{\,d^+\delta^2(u;H)=-2a\,F(H),\qquad F(H)=H_{22}+H_{33}+\operatorname{tr}\!\big(\Pi_{ASD}(P_0HP_0)_-\big).}$$
+$$\boxed{\,d^+\delta^2(u;H)=-2a\,F(H),\qquad F(H)=H_{22}+H_{33}+\mathop{\mathrm{tr}}\!\big(\Pi_{ASD}(P_0HP_0)_-\big).}$$
 
 Normalisation is harmless: $\lVert u+tH\rVert^2=1+t^2$ under H3, and $\delta^2$ is $2$-homogeneous, so the sphere and the affine line agree to first order.
 
@@ -108,23 +108,23 @@ Normalisation is harmless: $\lVert u+tH\rVert^2=1+t^2$ under H3, and $\delta^2$ 
 
 It costs two-sidedness, and nothing else. For $t\to0^-$ the kernel block gains $\lvert t\rvert(-P_0HP_0)_-=\lvert t\rvert(P_0HP_0)_+$, so
 
-$$d^-\delta^2(u;H)=2a\,F(-H)=2a\Big[-(H_{22}+H_{33})+\operatorname{tr}\!\big(\Pi_{ASD}(P_0HP_0)_+\big)\Big],$$
+$$d^-\delta^2(u;H)=2a\,F(-H)=2a\Big[-(H_{22}+H_{33})+\mathop{\mathrm{tr}}\!\big(\Pi_{ASD}(P_0HP_0)_+\big)\Big],$$
 
-and $d^-\!-d^+=2a\operatorname{tr}(\Pi_{ASD}\lvert P_0HP_0\rvert)\ge0$. Three consequences, all confirming the block's prose:
+and $d^-\!-d^+=2a\mathop{\mathrm{tr}}(\Pi_{ASD}\lvert P_0HP_0\rvert)\ge0$. Three consequences, all confirming the block's prose:
 
 1. $\delta^2$ is a **concave kink** at $u$ in every direction: $d^+\le0$ and $d^-\ge0$ (apply $F\ge0$ to both $H$ and $-H$; $-H$ is also a unit tangent Weyl direction). So $u$ is a first-order local maximum of the defect itself.
 2. $\delta^2$ is differentiable at $u$ in direction $H$ **iff** $\Pi_{ASD}(P_0HP_0)=0$, the same set as $\{F=0\}$ by §4. The equality set and the smooth locus of directions coincide.
 3. Non-smoothness is where the protection comes from, not an obstacle to it: the penalty enters $\Phi$ as $+\lvert\kappa_n\rvert\delta^2$ (H7), and a concave kink in $\delta^2$ is exactly a downward kink in $\Phi$.
 
-The block's "the kink prices that mass at exactly the rate the deepening gains" is a fair description of $F=\underbrace{\tfrac23\operatorname{tr}B}_{\text{smooth gain}}+\underbrace{\operatorname{tr}(\Pi_{ASD}(P_0HP_0)_-)}_{\text{kink price}}$ after §3.
+The block's "the kink prices that mass at exactly the rate the deepening gains" is a fair description of $F=\underbrace{\tfrac23\mathop{\mathrm{tr}}B}_{\text{smooth gain}}+\underbrace{\mathop{\mathrm{tr}}(\Pi_{ASD}(P_0HP_0)_-)}_{\text{kink price}}$ after §3.
 
 ## 3. The reduction, and its two structural facts
 
 ### 3.1 Jensen, and it must be the trace form
 
-The step is (c): $\operatorname{tr}\big(\Pi_{ASD}(P_0HP_0)_-\big)\ge\operatorname{tr}(B_-)$ with $B=\Pi_{ASD}H\Pi_{ASD}$.
+The step is (c): $\mathop{\mathrm{tr}}\big(\Pi_{ASD}(P_0HP_0)_-\big)\ge\mathop{\mathrm{tr}}(B_-)$ with $B=\Pi_{ASD}H\Pi_{ASD}$.
 
-Let $C:A\hookrightarrow\ker u$ be the inclusion isometry ($C^*C=\mathrm{id}_A$, legitimate because $A\subseteq\ker u$), $X=P_0HP_0\rvert_{\ker u}$, $f(x)=x_-$. Then $C^*XC=\Pi_{ASD}H\Pi_{ASD}=B$, since $\Pi_{ASD}P_0=\Pi_{ASD}$. The Hansen–Pedersen **trace** Jensen inequality, for $f$ convex on an interval containing $0$ with $f(0)\le0$ and $C$ a contraction, $\operatorname{tr}f(C^*XC)\le\operatorname{tr}\big(C^*f(X)C\big)$, gives exactly $\operatorname{tr}(B_-)\le\operatorname{tr}\big(\Pi_{ASD}(P_0HP_0)_-\big)$.
+Let $C:A\hookrightarrow\ker u$ be the inclusion isometry ($C^*C=\mathrm{id}_A$, legitimate because $A\subseteq\ker u$), $X=P_0HP_0\rvert_{\ker u}$, $f(x)=x_-$. Then $C^*XC=\Pi_{ASD}H\Pi_{ASD}=B$, since $\Pi_{ASD}P_0=\Pi_{ASD}$. The Hansen–Pedersen **trace** Jensen inequality, for $f$ convex on an interval containing $0$ with $f(0)\le0$ and $C$ a contraction, $\mathop{\mathrm{tr}}f(C^*XC)\le\mathop{\mathrm{tr}}\big(C^*f(X)C\big)$, gives exactly $\mathop{\mathrm{tr}}(B_-)\le\mathop{\mathrm{tr}}\big(\Pi_{ASD}(P_0HP_0)_-\big)$.
 
 **Hypotheses checked against the object.** $f(x)=x_-=\max(-x,0)$ is convex on $\mathbb R$ with $f(0)=0\le0$ ✓. $C$ is an isometry, hence a contraction ✓. $X$ is self-adjoint ✓.
 
@@ -138,21 +138,21 @@ $$\langle H,\star\rangle=\langle H,\mathrm{Alt}\star\rangle=\langle\mathrm{Alt}H
 
 Expanding $\star=\Pi_{SD}-\Pi_{ASD}$ in the $E\oplus A\oplus K'$ splitting,
 
-$$0=\langle H,\star\rangle=\operatorname{tr}(\Pi_{SD}H\Pi_{SD})-\operatorname{tr}(\Pi_{ASD}H\Pi_{ASD})=(H_{11}+H_{22}+H_{33})-\operatorname{tr}(B).$$
+$$0=\langle H,\star\rangle=\mathop{\mathrm{tr}}(\Pi_{SD}H\Pi_{SD})-\mathop{\mathrm{tr}}(\Pi_{ASD}H\Pi_{ASD})=(H_{11}+H_{22}+H_{33})-\mathop{\mathrm{tr}}(B).$$
 
-**Confirmed**: this is precisely "a self-dual/anti-self-dual trace balance on the distinguished $4$-plane", it is nothing but $\langle H,\star\rangle=0$, and it is the *only* place $H$'s being a curvature tensor is used. Drop it and the lemma fails: an arbitrary symmetric $H$ can carry $\operatorname{tr}(B)=0$ with $H_{22}+H_{33}<0$, giving $F<0$.
+**Confirmed**: this is precisely "a self-dual/anti-self-dual trace balance on the distinguished $4$-plane", it is nothing but $\langle H,\star\rangle=0$, and it is the *only* place $H$'s being a curvature tensor is used. Drop it and the lemma fails: an arbitrary symmetric $H$ can carry $\mathop{\mathrm{tr}}(B)=0$ with $H_{22}+H_{33}<0$, giving $F<0$.
 
 ### 3.3 Tangency, and the inert half of the phrase
 
-$\langle H,u\rangle=\tfrac1{\sqrt6}(2H_{11}-H_{22}-H_{33})=0$ gives $2H_{11}=H_{22}+H_{33}$. With §3.2, $\tfrac32(H_{22}+H_{33})=\operatorname{tr}(B)$, i.e.
+$\langle H,u\rangle=\tfrac1{\sqrt6}(2H_{11}-H_{22}-H_{33})=0$ gives $2H_{11}=H_{22}+H_{33}$. With §3.2, $\tfrac32(H_{22}+H_{33})=\mathop{\mathrm{tr}}(B)$, i.e.
 
-$$H_{22}+H_{33}=\tfrac23\operatorname{tr}(B).$$
+$$H_{22}+H_{33}=\tfrac23\mathop{\mathrm{tr}}(B).$$
 
 **Confirmed**, and it is *tangency* that does it. The block says "**unit-norm** tangency fixes the remaining diagonal entry"; $\lVert H\rVert=1$ appears in no step of (a)–(d), and $F$ is $1$-homogeneous so the sign statement is scale-free. **H4 is a stated-but-unused hypothesis** (trap: "a hypothesis stated but never used"). Harmless, but it should be dropped from the statement or demoted to a normalisation remark, since a reader may take it for a constraint the proof needs.
 
 ### 3.4 The chain
 
-$$F=\tfrac23\operatorname{tr}(B)+\operatorname{tr}\!\big(\Pi_{ASD}(P_0HP_0)_-\big)\ \overset{\text{(c)}}{\ge}\ \tfrac23\operatorname{tr}(B)+\operatorname{tr}(B_-)=\tfrac23\big(\operatorname{tr}B_+-\operatorname{tr}B_-\big)+\operatorname{tr}B_-=\tfrac23\operatorname{tr}(B_+)+\tfrac13\operatorname{tr}(B_-)\ \ge\ 0,$$
+$$F=\tfrac23\mathop{\mathrm{tr}}(B)+\mathop{\mathrm{tr}}\!\big(\Pi_{ASD}(P_0HP_0)_-\big)\ \overset{\text{(c)}}{\ge}\ \tfrac23\mathop{\mathrm{tr}}(B)+\mathop{\mathrm{tr}}(B_-)=\tfrac23\big(\mathop{\mathrm{tr}}B_+-\mathop{\mathrm{tr}}B_-\big)+\mathop{\mathrm{tr}}B_-=\tfrac23\mathop{\mathrm{tr}}(B_+)+\tfrac13\mathop{\mathrm{tr}}(B_-)\ \ge\ 0,$$
 
 using $B=B_+-B_-$ with $B_\pm\succeq0$. **The whole chain confirmed as printed**, coefficients included: the $(\tfrac23,\tfrac13)$ are forced by the $2{:}{-}1{:}{-}1$ spectrum meeting the SD/ASD balance, exactly as the notebook says.
 
@@ -160,11 +160,11 @@ using $B=B_+-B_-$ with $B_\pm\succeq0$. **The whole chain confirmed as printed**
 
 ### 4.1 $\Pi_{ASD}H\Pi_{\ker u}=0\Rightarrow F=0$
 
-If $\Pi_{ASD}H\Pi_{\ker u}=0$ then $B=\Pi_{ASD}H\Pi_{ASD}=0$ (as $A\subseteq\ker u$), so $H_{22}+H_{33}=\tfrac23\operatorname{tr}B=0$; and $P_0HP_0$ annihilates $A$, hence so does $(P_0HP_0)_-$ (a spectral function of it), hence the sliver trace vanishes. So $F=0$.
+If $\Pi_{ASD}H\Pi_{\ker u}=0$ then $B=\Pi_{ASD}H\Pi_{ASD}=0$ (as $A\subseteq\ker u$), so $H_{22}+H_{33}=\tfrac23\mathop{\mathrm{tr}}B=0$; and $P_0HP_0$ annihilates $A$, hence so does $(P_0HP_0)_-$ (a spectral function of it), hence the sliver trace vanishes. So $F=0$.
 
 ### 4.2 $F=0\Rightarrow\Pi_{ASD}H\Pi_{\ker u}=0$
 
-$F=0$ forces equality throughout §3.4. From the last inequality, $\operatorname{tr}(B_+)=\operatorname{tr}(B_-)=0$, and $B_\pm\succeq0$, so $B=0$. Then $F=\operatorname{tr}(\Pi_{ASD}X_-)$ with $X=P_0HP_0\rvert_{\ker u}$, so $\operatorname{tr}(\Pi_{ASD}X_-)=0$ with $X_-\succeq0$ and $\Pi_{ASD}$ an orthogonal projection; hence $\operatorname{tr}\big((X_-^{1/2}\Pi_{ASD})^*(X_-^{1/2}\Pi_{ASD})\big)=0$, so $X_-\Pi_{ASD}=0$: $A$ lies in the closed span of the eigenvectors of $X$ with eigenvalue $\ge0$, call it $V_+$, and $X$ preserves $V_+$ with $X\rvert_{V_+}\succeq0$. For $v\in A\subseteq V_+$, $\langle Xv,v\rangle=\langle Bv,v\rangle=0$, and a positive semidefinite operator with $\langle Xv,v\rangle=0$ has $Xv=0$. So $X\Pi_{ASD}=0$, i.e. $\Pi_{ASD}P_0HP_0=0$, i.e. $\Pi_{ASD}H\Pi_{\ker u}=0$.
+$F=0$ forces equality throughout §3.4. From the last inequality, $\mathop{\mathrm{tr}}(B_+)=\mathop{\mathrm{tr}}(B_-)=0$, and $B_\pm\succeq0$, so $B=0$. Then $F=\mathop{\mathrm{tr}}(\Pi_{ASD}X_-)$ with $X=P_0HP_0\rvert_{\ker u}$, so $\mathop{\mathrm{tr}}(\Pi_{ASD}X_-)=0$ with $X_-\succeq0$ and $\Pi_{ASD}$ an orthogonal projection; hence $\mathop{\mathrm{tr}}\big((X_-^{1/2}\Pi_{ASD})^*(X_-^{1/2}\Pi_{ASD})\big)=0$, so $X_-\Pi_{ASD}=0$: $A$ lies in the closed span of the eigenvectors of $X$ with eigenvalue $\ge0$, call it $V_+$, and $X$ preserves $V_+$ with $X\rvert_{V_+}\succeq0$. For $v\in A\subseteq V_+$, $\langle Xv,v\rangle=\langle Bv,v\rangle=0$, and a positive semidefinite operator with $\langle Xv,v\rangle=0$ has $Xv=0$. So $X\Pi_{ASD}=0$, i.e. $\Pi_{ASD}P_0HP_0=0$, i.e. $\Pi_{ASD}H\Pi_{\ker u}=0$.
 
 **The characterisation is confirmed, both directions.** It is manifestly a linear condition, closed under $H\mapsto-H$, so $\{F=0\}$ is a **linear subspace** of $T_uS\cap\mathcal W_n$, not merely the convex cone that convexity plus $1$-homogeneity of $F$ would give. The block's headline is right and the prose it corrects was wrong.
 
@@ -187,13 +187,13 @@ At $n=12$: $\dim\Lambda^2\mathbb R^{12}=66$, $u$ has rank $3$, so $\dim\ker u=63
 
 $$3\cdot63-\tbinom32=189-3=186 .$$
 
-Imposed on $T_uS\cap\mathcal W_{12}$ they may be dependent, so $\operatorname{codim}\{F=0\}\le186$, **the "$\le$" is correct and necessary**. With $\dim\mathcal W_{12}=\frac{12\cdot9\cdot13\cdot14}{12}=1638$ and one dimension removed by tangency, $\dim T_uS=1637$ and $\dim\{F=0\}\ge1637-186=1451$. **All three numbers confirmed.**
+Imposed on $T_uS\cap\mathcal W_{12}$ they may be dependent, so $\mathop{\mathrm{codim}}\{F=0\}\le186$, **the "$\le$" is correct and necessary**. With $\dim\mathcal W_{12}=\frac{12\cdot9\cdot13\cdot14}{12}=1638$ and one dimension removed by tangency, $\dim T_uS=1637$ and $\dim\{F=0\}\ge1637-186=1451$. **All three numbers confirmed.**
 
 ### 5.2 "About $89\%$ of directions", misdescribed
 
 $1451/1637=0.8864$, so "about $89\%$" is arithmetically right **as a ratio of dimensions**. As a statement about directions it is false and the sentence invites exactly that reading ("$1451$ of $T_uS$'s $1637$ dimensions, about $89\%$ of directions"). $\{F=0\}$ is a proper linear subspace of $T_uS$, hence a **measure-zero** subset of the unit sphere of directions: the set of directions on which the protection is an equality has measure $0$, and for Lebesgue-almost every tangent direction $F>0$ strictly.
 
-*Discrepancy protocol.* **Located**: [route-a.md](../findings/route-a.md) l. 81, the blockquote "AND THE CONE IS MOST OF THE TANGENT SPACE". **Exhibited in closed form**: take $H$ with $\Pi_{ASD}H\Pi_{ASD}=B\succ0$ (the notebook's own "engineered $B\succ0$ directions"); then $F\ge\tfrac23\operatorname{tr}(B_+)>0$, and the set of such $H$ is open and non-empty, so $\{F>0\}$ has full measure while $\{F=0\}$ has none. **Argued the opposite**: could "directions" be a licensed shorthand for "dimensions"? The sentence itself makes the substitution in one clause, so the gloss is the author's, not a reader's; and the substitution is exactly the one that turns a true dimension count into a false measure claim. It fails the "argue the opposite" test only as an error of *fact*; as an error of *description* it stands.
+*Discrepancy protocol.* **Located**: [route-a.md](../findings/route-a.md) l. 81, the blockquote "AND THE CONE IS MOST OF THE TANGENT SPACE". **Exhibited in closed form**: take $H$ with $\Pi_{ASD}H\Pi_{ASD}=B\succ0$ (the notebook's own "engineered $B\succ0$ directions"); then $F\ge\tfrac23\mathop{\mathrm{tr}}(B_+)>0$, and the set of such $H$ is open and non-empty, so $\{F>0\}$ has full measure while $\{F=0\}$ has none. **Argued the opposite**: could "directions" be a licensed shorthand for "dimensions"? The sentence itself makes the substitution in one clause, so the gloss is the author's, not a reader's; and the substitution is exactly the one that turns a true dimension count into a false measure claim. It fails the "argue the opposite" test only as an error of *fact*; as an error of *description* it stands.
 
 **Reported as: WORDING DEFECT, not a broken claim.** The repair is one word: "about $89\%$ of the tangent directions' **dimensions**", or better, "a subspace of codimension at most $186$, large, but still of measure zero among directions".
 
@@ -279,8 +279,8 @@ Assembled from [ATTEMPTS.md](../ATTEMPTS.md) Result 6 with the hypothesis invent
 
 > **Lemma L17 (first-order protection at the rival maximizer).** Let $n\ge4$ and let $u\in\mathcal W_n$ be the zero-padded $\mathbb{CP}^2$-type competitor, $u=\tfrac1{\sqrt6}\big(2\hat\omega_1\hat\omega_1^{\mathsf T}-\hat\omega_2\hat\omega_2^{\mathsf T}-\hat\omega_3\hat\omega_3^{\mathsf T}\big)$ for $\hat\omega_1,\hat\omega_2,\hat\omega_3$ the orthonormal self-dual Kähler forms of a distinguished $\mathbb R^4\subseteq\mathbb R^n$. Let $P_0$ be the orthogonal projection of $\Lambda^2\mathbb R^n$ onto $\ker u$, $\Pi_{ASD}$ the projection onto the anti-self-dual $3$-space of the distinguished $\mathbb R^4$, and $a=\tfrac1{3\sqrt6}$, so that $\mathrm{Alt}(u_-)=a\star$ and $\delta^2(u)=\tfrac19$. Then for every $H\in\mathcal W_n$ with $\langle H,u\rangle=0$:
 >
-> **(i)** $d^+\delta^2(u;H)=-2a\,F(H)$ with $F(H)=H_{22}+H_{33}+\operatorname{tr}\big(\Pi_{ASD}(P_0HP_0)_-\big)$, where $H_{ii}=\langle\hat\omega_i,H\hat\omega_i\rangle$;
-> **(ii)** $F(H)\ge\tfrac23\operatorname{tr}(B_+)+\tfrac13\operatorname{tr}(B_-)\ge0$ for $B=\Pi_{ASD}H\Pi_{ASD}$; hence $d^+\delta^2(u;H)\le0$ **in every ambient dimension**;
+> **(i)** $d^+\delta^2(u;H)=-2a\,F(H)$ with $F(H)=H_{22}+H_{33}+\mathop{\mathrm{tr}}\big(\Pi_{ASD}(P_0HP_0)_-\big)$, where $H_{ii}=\langle\hat\omega_i,H\hat\omega_i\rangle$;
+> **(ii)** $F(H)\ge\tfrac23\mathop{\mathrm{tr}}(B_+)+\tfrac13\mathop{\mathrm{tr}}(B_-)\ge0$ for $B=\Pi_{ASD}H\Pi_{ASD}$; hence $d^+\delta^2(u;H)\le0$ **in every ambient dimension**;
 > **(iii)** $F(H)=0\iff\Pi_{ASD}H\Pi_{\ker u}=0$, a linear subspace of $T_uS\cap\mathcal W_n$, of codimension at most $3\dim\ker u-3$, at most $186$ at $n=12$, so of dimension at least $1451$ out of $1637$;
 > **(iv)** if in addition $Q(u)=\theta u$ with $\theta=\sqrt{3/2}$, then for $\Phi=P-\kappa_n\delta^2$, $d^+\Phi(u;H)=2a\kappa_n F(H)$; so $d^+\Phi(u;H)\le0$ for every tangent $H$ **iff $\kappa_n\le0$**, which holds exactly for $n\ge12$ under either the $\Theta_n$ or the $\theta_0(n)$ pinning of $\kappa_n$, and reverses to $d^+\Phi\ge0$, strictly wherever $F>0$, for $4\le n\le11$.
 
@@ -296,13 +296,13 @@ Changes against what the record implies: $\lVert H\rVert=1$ dropped (inert); $Q(
 
 **11.4 A claim proven on a subfamily and used in general.** Two candidates, both clean. The $-\tfrac32\theta$ second-order computation is proved for complement-supported $H$ and used only there (§8), correctly scoped; its accompanying *number* is $n=12$'s and is used unscoped, which is §8's finding. The three equality families were used as if they were the equality set, which is exactly what the block's own audit corrects; the correction is right and I confirm it.
 
-**11.5 A hypothesis stated but never used.** $\lVert H\rVert=1$ (§3.3). Also, more mildly, the notebook's "$F$ is convex and $1$-homogeneous" underwrites only a numerical certification procedure ("directed subgradient descent"), never the inequality, which §3.4 proves directly. **I did not verify the convexity of $H\mapsto\operatorname{tr}(\Pi_{ASD}(P_0HP_0)_-)$ and it is not load-bearing**; it should not be cited.
+**11.5 A hypothesis stated but never used.** $\lVert H\rVert=1$ (§3.3). Also, more mildly, the notebook's "$F$ is convex and $1$-homogeneous" underwrites only a numerical certification procedure ("directed subgradient descent"), never the inequality, which §3.4 proves directly. **I did not verify the convexity of $H\mapsto\mathop{\mathrm{tr}}(\Pi_{ASD}(P_0HP_0)_-)$ and it is not load-bearing**; it should not be cited.
 
 **11.6 A step using a hypothesis never stated.** $Q(u)=\theta u$ (§6), the finding of this round with the widest reach, since every use of L17 as "first-order protection of $\Phi$" silently imports it. Second, smaller: the monotonicity of $\Theta_n$ in each parity (§7.2).
 
 **11.7 An imported theorem whose hypotheses were never checked.** Two imports.
 - *Hansen–Pedersen.* Hypotheses checked in §3.1 and they hold. **The named unital-algebra trap does not bite here**, and it is worth saying why: the compression is taken inside $\mathrm{Sym}(\Lambda^2\mathbb R^n)$, a unital matrix algebra, not inside $\mathcal W_n$. $\mathcal W_n$ carries no unit and is not even closed under the operations the step uses, $(P_0HP_0)_-$ is not a Weyl tensor. The argument never needs it to be: Bianchi is consumed on $H$ itself (§3.2) *before* any operator surgery, and everything after is linear algebra on $\Lambda^2$. **This is H9 and it is nowhere stated**; a reader who assumes the calculus stays inside $\mathcal W_n$ will think the step illegal.
-- *Daleckii–Krein.* Its hypothesis ($f\in C^1$ on a neighbourhood of the spectrum), **fails**, since $0\in\operatorname{spec}(u)$ and $x\mapsto x_-$ is not differentiable at $0$. The record's citation is therefore loose. It is not wrong in substance: the divided differences $f^{[1]}(\lambda,0)=(f(\lambda)-f(0))/\lambda$ that the mixed $E$–$K$ blocks need are perfectly well defined, the only genuinely non-smooth block is kernel–kernel, and that block is handled separately by degenerate perturbation theory. The correct citation is the one-sided/Lipschitz directional-derivative formula for spectral functions, not DK; the record names DK for the branch where it applies and the perturbation theory for the other, which is the right split with the wrong label on half of it. **Reported as a loose citation, not a gap**, [r476](../reviews/REVIEW_r476.md)'s note that the off-diagonal terms die "**without needing any claim about eigenvector rotations**" is the stronger phrasing and should be the record's.
+- *Daleckii–Krein.* Its hypothesis ($f\in C^1$ on a neighbourhood of the spectrum), **fails**, since $0\in\mathop{\mathrm{spec}}(u)$ and $x\mapsto x_-$ is not differentiable at $0$. The record's citation is therefore loose. It is not wrong in substance: the divided differences $f^{[1]}(\lambda,0)=(f(\lambda)-f(0))/\lambda$ that the mixed $E$–$K$ blocks need are perfectly well defined, the only genuinely non-smooth block is kernel–kernel, and that block is handled separately by degenerate perturbation theory. The correct citation is the one-sided/Lipschitz directional-derivative formula for spectral functions, not DK; the record names DK for the branch where it applies and the perturbation theory for the other, which is the right split with the wrong label on half of it. **Reported as a loose citation, not a gap**, [r476](../reviews/REVIEW_r476.md)'s note that the off-diagonal terms die "**without needing any claim about eigenvector rotations**" is the stronger phrasing and should be the record's.
 
 **11.8 A universal claim with no witness.** $F\ge0$ for all tangent $H$ is universal and its equality set is exhibited, so the sharpness is witnessed. The one witness-free statement is "contains every mixed $E$–$K$ direction" (§4.3).
 
@@ -313,7 +313,7 @@ Changes against what the record implies: $\lVert H\rVert=1$ dropped (inert); $Q(
 | $\kappa_n$ | $9(\sqrt{3/2}-\Theta_n)$ or $9(\sqrt{3/2}-\theta_0(n))$, the L16 penalty, **negative for $n\ge12$**; **tabled nowhere** | [conventions.md](../findings/conventions.md): "**The algebra's Killing constant** is $\kappa_n=(2n-1)(n-1)/4$", **positive at every $n$**; also $\kappa^2=\max_Ft_F$ in the $t,\kappa$ row, and $\kappa=2(n-2)$ for $\mathfrak{so}(n)$'s Killing form | **FATAL AS READ.** Under the tabled $\kappa_n$, "$\kappa_n\le0$" is false at every $n$ and L17's conclusion is empty. The one constant the lemma's dimension-dependence turns on is the one constant the conventions file gives an incompatible value for |
 | $\Phi$ | the penalized functional $P-\kappa_n\delta^2$ | [conventions.md](../findings/conventions.md) tables **four** unrelated $\Phi$s and this is not among them; sense (ii) is "**Hamilton's map $Q$ itself**", under which "$d^+\Phi=2a\kappa_nF$" is not even type-correct | **HIGH.** The penalized functional has no tabled symbol anywhere |
 | $u$ | the competitor $W_{\mathbb{CP}^2}$ | [conventions.md](../findings/conventions.md) $\Pi$ row: "the orbit acceleration $u$ satisfies $\langle u,W\rangle=-\lVert z\rVert^2$, so $u\notin W^\perp$", and note L17 needs $\langle H,u\rangle=0$, the opposite relation | **HIGH**, and self-inflicted: conventions.md itself writes "$\mathrm{Alt}(u_-)=+a\star$ … at the $\mathbb{CP}^2$-type competitor" **in the same file** that tables $u$ as the acceleration. [ATTEMPTS.md](../ATTEMPTS.md) uses $W$ and is clean; the collision entered at the lift |
-| $F$ | $F(H)=H_{22}+H_{33}+\operatorname{tr}(\Pi_{ASD}(P_0HP_0)_-)$ | [problem.md](../findings/problem.md), Beitz's $F=\lVert R\rVert^2/\lVert\mathrm{ric}(R)\rVert^2$, in the *same* discussion of L16's cone formulation; and $t_F$'s $F$ = a frame; and $F_u=L(u)$ in [algebra.md](../findings/algebra.md) | **MEDIUM**: four senses, two of them within one page of L17 |
+| $F$ | $F(H)=H_{22}+H_{33}+\mathop{\mathrm{tr}}(\Pi_{ASD}(P_0HP_0)_-)$ | [problem.md](../findings/problem.md), Beitz's $F=\lVert R\rVert^2/\lVert\mathrm{ric}(R)\rVert^2$, in the *same* discussion of L16's cone formulation; and $t_F$'s $F$ = a frame; and $F_u=L(u)$ in [algebra.md](../findings/algebra.md) | **MEDIUM**: four senses, two of them within one page of L17 |
 | $\lvert W\rvert$ | the operator absolute value, inside $W_-=\tfrac12(\lvert W\rvert-W)$ | [conventions.md](../findings/conventions.md): "$\lvert W\rvert^2=4\lVert W\rVert_F^2$ relates the two $\Lambda^2$ normalisations"; and [problem.md](../findings/problem.md) states L16 "on $\{\lvert W\rvert=1\}$" | **MEDIUM**, and it sits *inside L17's own defining formula*. $\lvert W\rvert=1$ reads as a norm there and as an operator identity here |
 | $a$ | the scalar $\tfrac1{3\sqrt6}$ | [conventions.md](../findings/conventions.md): "$a$ the singular-value vector of $x$" in [isotropy-cap.md](../findings/isotropy-cap.md), a **vector** | LOW (context separates) |
 | $B$ | $\Pi_{ASD}H\Pi_{ASD}$ | "**THE LETTER $B$ MEANS TWO THINGS, live**", two Killing forms; plus $b:=z\circ z$, $B^+$ in the orbit calculus | LOW–MEDIUM: L17 makes it a **third** |
@@ -329,11 +329,11 @@ Also unnamed anywhere: the competitor itself carries **four** names across two f
 
 **Where such an $H$ could live.** The chain of §3.4 has exactly three joints, and I attacked each in closed form:
 
-1. *The Jensen compression.* If $\operatorname{tr}(\Pi_{ASD}X_-)<\operatorname{tr}(B_-)$ for some $X$, the chain breaks. I checked Hansen–Pedersen's hypotheses against the object (convexity of $x_-$, $f(0)=0$, $C^*C=\mathrm{id}$) and confirmed that the *operator* form (which would fail, $x_-$ not being operator convex), is not what is used. **No opening.**
-2. *The SD/ASD balance.* If some Weyl $H$ had $H_{11}+H_{22}+H_{33}\ne\operatorname{tr}(B)$, $F$ could go negative. But that identity is exactly $\langle H,\star\rangle=0$, which follows from $\mathrm{Alt}(H)=0$, which conventions.md states holds "for every $H$ satisfying the first Bianchi identity, in particular for every Weyl tensor". **No opening**, and this is the joint where a non-Weyl $H$ *does* break the lemma, the falsifier must be a genuine curvature tensor or it proves nothing.
+1. *The Jensen compression.* If $\mathop{\mathrm{tr}}(\Pi_{ASD}X_-)<\mathop{\mathrm{tr}}(B_-)$ for some $X$, the chain breaks. I checked Hansen–Pedersen's hypotheses against the object (convexity of $x_-$, $f(0)=0$, $C^*C=\mathrm{id}$) and confirmed that the *operator* form (which would fail, $x_-$ not being operator convex), is not what is used. **No opening.**
+2. *The SD/ASD balance.* If some Weyl $H$ had $H_{11}+H_{22}+H_{33}\ne\mathop{\mathrm{tr}}(B)$, $F$ could go negative. But that identity is exactly $\langle H,\star\rangle=0$, which follows from $\mathrm{Alt}(H)=0$, which conventions.md states holds "for every $H$ satisfying the first Bianchi identity, in particular for every Weyl tensor". **No opening**, and this is the joint where a non-Weyl $H$ *does* break the lemma, the falsifier must be a genuine curvature tensor or it proves nothing.
 3. *The tangency relation.* $2H_{11}=H_{22}+H_{33}$ is $\langle H,u\rangle=0$ read in $u$'s eigenbasis, an identity, not an estimate. **No opening.**
 
-I also probed the one place the chain is *lossy*, the passage from $\operatorname{tr}(\Pi_{ASD}(P_0HP_0)_-)$ to $\operatorname{tr}(B_-)$ discards the $K'$-directions of the sliver, and found it loses only in the safe direction: the discarded quantity is a trace of a positive semidefinite operator, so it can only raise $F$.
+I also probed the one place the chain is *lossy*, the passage from $\mathop{\mathrm{tr}}(\Pi_{ASD}(P_0HP_0)_-)$ to $\mathop{\mathrm{tr}}(B_-)$ discards the $K'$-directions of the sliver, and found it loses only in the safe direction: the discarded quantity is a trace of a positive semidefinite operator, so it can only raise $F$.
 
 **And for (iv):** I checked $\Theta_n\ge\sqrt{3/2}$ at every $n\ge12$ by proving monotonicity of both parity formulas in closed form (§7.2), and checked the boundary at $n=11$ and $n=12$ exactly in rationals. **No $n\ge12$ escapes.**
 
@@ -345,7 +345,7 @@ I also probed the one place the chain is *lossy*, the passage from $\operatornam
 
 **PROVEN, hypotheses corrected.**
 
-- The formula $d^+\delta^2(u;H)=-2aF(H)$, the constant $a=\tfrac1{3\sqrt6}$, the Jensen reduction, the two structural facts, the chain $F\ge\tfrac23\operatorname{tr}B_++\tfrac13\operatorname{tr}B_-\ge0$, the equality set $\{F=0\}=\{\Pi_{ASD}H\Pi_{\ker u}=0\}$ in both directions, the codimension $\le186$ at $n=12$, and the crossover at $n\ge12$ under the corrected $\Theta_n$: **all re-derived from scratch and all confirmed.**
+- The formula $d^+\delta^2(u;H)=-2aF(H)$, the constant $a=\tfrac1{3\sqrt6}$, the Jensen reduction, the two structural facts, the chain $F\ge\tfrac23\mathop{\mathrm{tr}}B_++\tfrac13\mathop{\mathrm{tr}}B_-\ge0$, the equality set $\{F=0\}=\{\Pi_{ASD}H\Pi_{\ker u}=0\}$ in both directions, the codimension $\le186$ at $n=12$, and the crossover at $n\ge12$ under the corrected $\Theta_n$: **all re-derived from scratch and all confirmed.**
 - **Corrections required in the statement**: add $Q(u)=\theta u$ (used, never stated); drop $\lVert H\rVert=1$ (stated, never used); say which pinning $\kappa_n$ takes; say that $\delta^2$'s calculus runs in $\mathrm{Sym}(\Lambda^2\mathbb R^n)$ and not in $\mathcal W_n$; replace "about $89\%$ of directions" with the dimension count; label the "$18\times$" margin as $n=12$'s.
 - **GAP, documentation**: no statement of L17 exists on the record. §10 supplies one.
 - **HYPOTHESIS-DEBT, carried in the same block and not part of L17**: the second-order Hessian comparison on the mixed $E$–$K$ directions of $\{F=0\}$, stated precisely in §9. Local maximality of $\Phi$ at the competitor may **not** be cited.

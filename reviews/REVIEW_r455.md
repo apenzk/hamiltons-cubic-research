@@ -59,9 +59,9 @@ L150 opens under the heading *What is owed at a pure critical point* and then wr
 
 L150 says the reduction "uses only $\lVert M\rVert\le\lVert W\rVert=1$ ([I11](../plan.md))". **[I11](../plan.md) is an unchecked plan item** whose frame-search half is itself blocked. It is also unnecessary: at a pure critical point $W$ is diagonal in its own eigenframe, and there [conventions.md](../findings/conventions.md)'s vertex-matrix block gives the *equality*
 
-$$\sum_{a<b}M_{ab}^2=\lVert\operatorname{diag}W\rVert^2=\lVert W\rVert^2=1,$$
+$$\sum_{a<b}M_{ab}^2=\lVert\mathop{\mathrm{diag}}W\rVert^2=\lVert W\rVert^2=1,$$
 
-Cauchy–Schwarz being saturated exactly at diagonality, the same normalisation [diagonal-half.md](../findings/diagonal-half.md) states as $\operatorname{tr}M^2=2$ over ordered pairs. **Cite the closed identity, not the open item.** *Mathematically harmless; a provenance defect that makes the lemma read as resting on unproved work when it rests on proved work.*
+Cauchy–Schwarz being saturated exactly at diagonality, the same normalisation [diagonal-half.md](../findings/diagonal-half.md) states as $\mathop{\mathrm{tr}}M^2=2$ over ordered pairs. **Cite the closed identity, not the open item.** *Mathematically harmless; a provenance defect that makes the lemma read as resting on unproved work when it rests on proved work.*
 
 ## F5, the norm attack finds nothing, and the "half" is genuinely half
 
@@ -69,9 +69,9 @@ The brief's primary suspicion does not hold up. Three readings were separated an
 
 - **The threshold.** The final step needs $\theta^2>\tfrac32$ against $3\sigma_S$, so $\sigma_S<\tfrac12$; the total is $\sum_{a<b}M_{ab}^2=1$ exactly at a unit-norm pure critical point. **Half, not a quarter and not all.**
 - **The ordered/unordered trap** flagged in [conventions.md](../findings/conventions.md) does not bite, because both the four-set sum and the total are unordered in L150's display and the ratio is normalisation-free.
-- **The $\tfrac12\operatorname{tr}(X^{\mathsf T}Y)$ pairing** enters at the $\Lambda^2$ level, where the pair basis is orthonormal, so the sectional entries *are* the $\Lambda^2$ eigenvalues on the diagonal locus and no half survives into the display.
+- **The $\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$ pairing** enters at the $\Lambda^2$ level, where the pair basis is orthonormal, so the sectional entries *are* the $\Lambda^2$ eigenvalues on the diagonal locus and no half survives into the display.
 
-**Independent confirmation.** Building $M$ from Ricci-flatness alone and taking $\theta$ from [diagonal-half.md](../findings/diagonal-half.md)'s closed form $\theta=\tfrac12(\sum_{a,b}M_{ab}^3+\operatorname{tr}M^3)$, using nothing from L150 or [Lemma L121](../findings/second-order.md), reproduces $\theta_0(6)^2=\tfrac{10}9$ and $\theta_0(12)^2=\tfrac{2\cdot11\cdot10}{144}$ exactly.
+**Independent confirmation.** Building $M$ from Ricci-flatness alone and taking $\theta$ from [diagonal-half.md](../findings/diagonal-half.md)'s closed form $\theta=\tfrac12(\sum_{a,b}M_{ab}^3+\mathop{\mathrm{tr}}M^3)$, using nothing from L150 or [Lemma L121](../findings/second-order.md), reproduces $\theta_0(6)^2=\tfrac{10}9$ and $\theta_0(12)^2=\tfrac{2\cdot11\cdot10}{144}$ exactly.
 
 ## F6, the eigenvalue translation carries no stray factor
 
@@ -94,4 +94,4 @@ The brief's vacuity test passes. At $S^m\times S^m$ a $(2,2)$-split four-set car
 
 ## Method note
 
-The screen built $M$ from the Ricci-flatness relations, checked hollowness, symmetry, zero row sums and $\operatorname{tr}M^2=2$ **before** computing anything, took $\theta$ from a closed form in a different file, and **verified criticality independently** from $Q(W)_{ab,ab}=M_{ab}^2+(M^2)_{ab}$, three equations, $\theta=(p-1)(\alpha-\gamma)=(q-1)(\beta-\gamma)=\gamma+(p-1)\alpha+(q-1)\beta$, all equal to $-(n-1)$ at $\gamma=1$, exactly in rationals. It reproduced three record values it was not built from before it was believed, and the counterexample was then confirmed in exact rational arithmetic.
+The screen built $M$ from the Ricci-flatness relations, checked hollowness, symmetry, zero row sums and $\mathop{\mathrm{tr}}M^2=2$ **before** computing anything, took $\theta$ from a closed form in a different file, and **verified criticality independently** from $Q(W)_{ab,ab}=M_{ab}^2+(M^2)_{ab}$, three equations, $\theta=(p-1)(\alpha-\gamma)=(q-1)(\beta-\gamma)=\gamma+(p-1)\alpha+(q-1)\beta$, all equal to $-(n-1)$ at $\gamma=1$, exactly in rationals. It reproduced three record values it was not built from before it was believed, and the counterexample was then confirmed in exact rational arithmetic.

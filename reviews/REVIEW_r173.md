@@ -8,7 +8,7 @@ Cold adversarial review of [plan.md](../plan.md) item 3c, [sym3_weyl_blocks.sage
 |---|---|---|
 | 1 | $24$ blocks, dims summing to $7770$, mults $4,4,3,2^{\times9},1^{\times12}$, $65$ unknowns | **verified exactly**, two independent routes; every entry of the table reproduces |
 | 2 | at most four vectors per block; group averaging "neither needed nor desirable" | **half right**, the multiplicity bound sizes the SDP correctly but does not price the projection, and the stated reason for rejecting averaging is wrong |
-| 3a | the trivial block $()_1$ is forced to zero, $\operatorname{tr}(W_0^3)=1/\sqrt6$ | **verified, and upgraded to exact**, $\operatorname{tr}(M^2)=24$, $\operatorname{tr}(M^3)=48$, $\theta^2=3/2$ in rational arithmetic |
+| 3a | the trivial block $()_1$ is forced to zero, $\mathop{\mathrm{tr}}(W_0^3)=1/\sqrt6$ | **verified, and upgraded to exact**, $\mathop{\mathrm{tr}}(M^2)=24$, $\mathop{\mathrm{tr}}(M^3)=48$, $\theta^2=3/2$ in rational arithmetic |
 | 3b | the vector block $(1)_5$ "carries no cubic covariant of $\mathrm{Weyl}_5$ by parity" | **REFUTED.** The block is present with **multiplicity $1$**, and its covariant is exhibited below. Parity excludes the vector $[1]$ and nothing else; the block that occurs is $[1]\otimes\det=\Lambda^4\mathbb R^5$ |
 | 4 | the orbit constraint is unconditional | **the narrow implication is right and both earlier reviewers were loose**, but the claim is a statement about the SDP's feasible set, so it is vacuous rather than false if the SDP is infeasible |
 |, | the orbit-evaluation span is $3570$, $45.9\%$ | **rebuilt from the definition and confirmed**, rank stable across four tolerances |
@@ -44,9 +44,9 @@ Two independent computations, in [r173_n5_blocks.sage](../scripts/reviewers/r173
 
 Both give $\dim\mathrm{Sym}^3=7770$, $24$ blocks, and
 
-$$\boxed{\ \operatorname{mult}\big((1,0)_5\big)=1\ }$$
+$$\boxed{\ \mathop{\mathrm{mult}}\big((1,0)_5\big)=1\ }$$
 
-alongside $\operatorname{mult}\big(()_1\big)=1$, $\operatorname{mult}\big((2,2)_{35}\big)=4$, $\operatorname{mult}\big((4,2)_{220}\big)=4$, $\operatorname{mult}\big((3,2)_{105}\big)=3$.
+alongside $\mathop{\mathrm{mult}}\big(()_1\big)=1$, $\mathop{\mathrm{mult}}\big((2,2)_{35}\big)=4$, $\mathop{\mathrm{mult}}\big((4,2)_{220}\big)=4$, $\mathop{\mathrm{mult}}\big((3,2)_{105}\big)=3$.
 
 ### 1.4 The covariant, exhibited
 
@@ -67,7 +67,7 @@ $$T(W_0)=\Big(0,0,0,0,\tfrac{2}{\sqrt6}\Big),\qquad |T(W_0)|=0.81649658\ne0,$$
 so $G_{(1)_5}\,T(W_0)=0$ forces the single scalar of that block to zero. The direction is forced by isotropy and the value by self-duality:
 
 - $g=\mathrm{diag}(1,1,1,1,-1)$ fixes $W_0$ and has $\det=-1$, so $T(W_0)=-g\,T(W_0)$, killing the first four components;
-- $W_{\mathbb{CP}^2}$ is self-dual, so no orientation-reversing element of $O(4)$ fixes it, and nothing forces the fifth component to vanish. Measured on the padded tensor: $\operatorname{tr}((W^+)^3)=384$, $\operatorname{tr}((W^-)^3)=0$, and $T^5$ is exactly that $n=4$ pseudo-scalar.
+- $W_{\mathbb{CP}^2}$ is self-dual, so no orientation-reversing element of $O(4)$ fixes it, and nothing forces the fifth component to vanish. Measured on the padded tensor: $\mathop{\mathrm{tr}}((W^+)^3)=384$, $\mathop{\mathrm{tr}}((W^-)^3)=0$, and $T^5$ is exactly that $n=4$ pseudo-scalar.
 
 **Net effect on the record: one line of item 3c is wrong and the number it produces is right.** The correct statement is *"the $5$-dimensional block is $\Lambda^4\mathbb R^5$, not the vector; it carries one cubic covariant; its unknown is forced to zero by the orbit constraint, since that covariant does not vanish at $W_{\mathbb{CP}^2}$."*
 
@@ -77,11 +77,11 @@ so $G_{(1)_5}\,T(W_0)=0$ forces the single scalar of that block to zero. The dir
 
 **The implication is valid and needs no nonnegativity.** If $F(W)=v(W)^{\mathsf T}Gv(W)$ with $G\succeq0$ and $F(W_0)=0$, then $\lVert G^{1/2}v(W_0)\rVert^2=0$, so $Gv(W_0)=0$, and by $O(5)$-invariance $G$ annihilates the whole orbit span. $F\ge0$ appears nowhere. Against reviewers 171 and 172, item 3c is right on this point.
 
-**And the zero is stronger than "exhibited".** [plan.md](../plan.md) presents $F(W_0)=-8.9\times10^{-16}$ as a numerical exhibit. It is a theorem the record already owns: [algebra.md](../findings/algebra.md) derives $\theta(S^r)^2=\frac{2(r+2)(r-1)}{3r(r-2)}$ from Fox's norm identity (10.4), which is $3/2$ at $r=4$, and Fox's Lemma 10.1 makes $S^4$ an idempotent, so $Q(W_0)=\theta W_0$ holds exactly and the $\mu\lvert W\wedge Q(W)\rvert^2$ term vanishes identically rather than to $1.1\times10^{-16}$. Reproduced here in rational arithmetic from the Fubini–Study tensor, [r173_exact_theta.py](../scripts/reviewers/r173/r173_exact_theta.py): the Weyl projection satisfies all four symmetries exactly, $\operatorname{tr}(M^2)=24$, $\operatorname{tr}(M^3)=48$, hence $\operatorname{tr}(M^3)^2/\operatorname{tr}(M^2)^3=1/6$ exactly and $\theta^2=9\cdot\tfrac16=\tfrac32$. So $\operatorname{tr}(W_0^3)=1/\sqrt6$ and $F(W_0)=0$ are both exact.
+**And the zero is stronger than "exhibited".** [plan.md](../plan.md) presents $F(W_0)=-8.9\times10^{-16}$ as a numerical exhibit. It is a theorem the record already owns: [algebra.md](../findings/algebra.md) derives $\theta(S^r)^2=\frac{2(r+2)(r-1)}{3r(r-2)}$ from Fox's norm identity (10.4), which is $3/2$ at $r=4$, and Fox's Lemma 10.1 makes $S^4$ an idempotent, so $Q(W_0)=\theta W_0$ holds exactly and the $\mu\lvert W\wedge Q(W)\rvert^2$ term vanishes identically rather than to $1.1\times10^{-16}$. Reproduced here in rational arithmetic from the Fubini–Study tensor, [r173_exact_theta.py](../scripts/reviewers/r173/r173_exact_theta.py): the Weyl projection satisfies all four symmetries exactly, $\mathop{\mathrm{tr}}(M^2)=24$, $\mathop{\mathrm{tr}}(M^3)=48$, hence $\mathop{\mathrm{tr}}(M^3)^2/\mathop{\mathrm{tr}}(M^2)^3=1/6$ exactly and $\theta^2=9\cdot\tfrac16=\tfrac32$. So $\mathop{\mathrm{tr}}(W_0^3)=1/\sqrt6$ and $F(W_0)=0$ are both exact.
 
 **Where the framing still overreaches.** "$45.9\%$ of $\mathrm{Sym}^3$ forced into $\ker G$" quantifies over feasible $G$. If $F$ is not a sum of squares of cubics the feasible set is empty and the sentence is true but empty, which is what reviewers 171 and 172 were reaching for with "conditional". The right formulation is the one that survives both readings: *the equality $Gv(W_0)=0$ is a valid constraint to impose on the search, and imposing it cannot remove a certificate that exists*. As a statement about the search space it is unconditional; as a statement about a certificate it presupposes one. Item 3c uses it in the first sense, so the use is sound and the word "UNCONDITIONAL" is doing more work in the prose than in the mathematics.
 
-**The span is confirmed.** $\langle v(A),v(B)\rangle=\langle A,B\rangle^3$ for the Veronese $v(W)=W^{\otimes3}$, so the span's dimension is the rank of the entrywise cube of a Gram matrix of orbit samples, no $7770$-dimensional object is built. With $4800$ Haar samples of $SO(5)$, [r173_orbit_span.py](../scripts/reviewers/r173/r173_orbit_span.py) gives rank $3570$ at every relative tolerance from $10^{-6}$ to $10^{-12}$, hence $\operatorname{rank}G\le4200$ and $45.946\%$. **Both figures rebuilt from the definition rather than reproduced arithmetically.**
+**The span is confirmed.** $\langle v(A),v(B)\rangle=\langle A,B\rangle^3$ for the Veronese $v(W)=W^{\otimes3}$, so the span's dimension is the rank of the entrywise cube of a Gram matrix of orbit samples, no $7770$-dimensional object is built. With $4800$ Haar samples of $SO(5)$, [r173_orbit_span.py](../scripts/reviewers/r173/r173_orbit_span.py) gives rank $3570$ at every relative tolerance from $10^{-6}$ to $10^{-12}$, hence $\mathop{\mathrm{rank}}G\le4200$ and $45.946\%$. **Both figures rebuilt from the definition rather than reproduced arithmetically.**
 
 ---
 
@@ -126,7 +126,7 @@ Every figure in item 3c's table matches, including "largest multiplicity-$1$ blo
 
 **(c) How much smaller than $65$, exactly.** Two answers, and item 3c conflates them.
 
-*The two named blocks are exactly two parameters.* $()_1$ and $(1)_5$ both have multiplicity $1$, so each is a single scalar and each is forced to zero, the trivial one by $\operatorname{tr}(W_0^3)=1/\sqrt6\ne0$, the vector one by $T(W_0)=\tfrac2{\sqrt6}e_5\ne0$. That leaves $63$, and the item's phrase "smaller than $65$ parameters" is worth exactly $2$.
+*The two named blocks are exactly two parameters.* $()_1$ and $(1)_5$ both have multiplicity $1$, so each is a single scalar and each is forced to zero, the trivial one by $\mathop{\mathrm{tr}}(W_0^3)=1/\sqrt6\ne0$, the vector one by $T(W_0)=\tfrac2{\sqrt6}e_5\ne0$. That leaves $63$, and the item's phrase "smaller than $65$ parameters" is worth exactly $2$.
 
 *The orbit constraint as a whole is worth much more, and the bracket is derivable.* Write $G=\bigoplus_\lambda G_\lambda\otimes I_{d_\lambda}$. By Burnside the cyclic module generated by $v(W_0)$ is $\bigoplus_\lambda U_\lambda\otimes V_\lambda$ with $U_\lambda$ the column space of the $\lambda$-isotypic component of $v(W_0)$, so
 
@@ -146,8 +146,8 @@ All under [scripts/reviewers/r173/](../scripts/reviewers/r173/), each runnable a
 
 | script | what it settles |
 |---|---|
-| [r173_n5_blocks.sage](../scripts/reviewers/r173/r173_n5_blocks.sage) | the $24$-block table with $O(5)$ labels; $\operatorname{mult}((1,0)_5)=1$ |
+| [r173_n5_blocks.sage](../scripts/reviewers/r173/r173_n5_blocks.sage) | the $24$-block table with $O(5)$ labels; $\mathop{\mathrm{mult}}((1,0)_5)=1$ |
 | [r173_pseudovector_covariant.py](../scripts/reviewers/r173/r173_pseudovector_covariant.py) | the covariant $T$ is nonzero, and $T(W_{\mathbb{CP}^2})=\tfrac2{\sqrt6}e_5$ |
-| [r173_exact_theta.py](../scripts/reviewers/r173/r173_exact_theta.py) | $\operatorname{tr}(M^2)=24$, $\operatorname{tr}(M^3)=48$, $\theta^2=3/2$ in $\mathbb Q$ |
+| [r173_exact_theta.py](../scripts/reviewers/r173/r173_exact_theta.py) | $\mathop{\mathrm{tr}}(M^2)=24$, $\mathop{\mathrm{tr}}(M^3)=48$, $\theta^2=3/2$ in $\mathbb Q$ |
 | [r173_orbit_span.py](../scripts/reviewers/r173/r173_orbit_span.py) | orbit span $=3570$ from the Veronese kernel |
 | [r173_surviving_params.py](../scripts/reviewers/r173/r173_surviving_params.py) | the $[9,56]$ bracket reproduces, and tightens to $[9,54]$ |

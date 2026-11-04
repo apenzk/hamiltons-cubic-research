@@ -13,9 +13,9 @@
 | 5 | Step 3, the fourth-moment lemma, Proof I | **PROVEN**, parity-blind, re-derived here including Lemma A and the two-value evaluation |
 | 6 | Step 3, Proof II | **GAP**, the sub-lemma's `all $24$ monomials positive` is an assertion about an unexhibited expansion; the route is redundant, Proof I standing alone |
 | 7 | The chaining $\lambda^2\le(\frac{n-1}n)^2\cdot4\lvert Z\rvert^2_{\max}=\Theta_n^2$, both parities | **PROVEN**, both constants re-derived exactly; normalisation consistent across the three steps |
-| 8 | The normalisation: $\operatorname{tr}S^2=2$ against $\lvert S\rvert=1$ | **PROVEN (hypotheses corrected**), the chain is consistent, but step 2 silently runs in the **unordered** pairing against [conventions.md](../findings/conventions.md)'s stated ordered default, and the block warns only about the opposite error |
+| 8 | The normalisation: $\mathop{\mathrm{tr}}S^2=2$ against $\lvert S\rvert=1$ | **PROVEN (hypotheses corrected**), the chain is consistent, but step 2 silently runs in the **unordered** pairing against [conventions.md](../findings/conventions.md)'s stated ordered default, and the block warns only about the opposite error |
 | 9 | The bridge from a critical point to **every** diagonal $W$ | **PROVEN (hypotheses corrected**), the reduction exists, at a heading the block's own *whole map* does not name; its load-bearing step is proved in [diagonal-half.md](../findings/diagonal-half.md), not where the bridge says |
-| 10 | The translation $\operatorname{tr}W^3=\tfrac12\langle M^{\circ2},M\rangle$, $\langle W,W^\#\rangle=\tfrac12\langle M^2,M\rangle$ | **HYPOTHESIS-DEBT**, `exact at every test point` is the whole of its support. Without it the matrix problem is not the Weyl problem |
+| 10 | The translation $\mathop{\mathrm{tr}}W^3=\tfrac12\langle M^{\circ2},M\rangle$, $\langle W,W^\#\rangle=\tfrac12\langle M^2,M\rangle$ | **HYPOTHESIS-DEBT**, `exact at every test point` is the whole of its support. Without it the matrix problem is not the Weyl problem |
 | 11 | The domain bijection $\mathcal D_n\leftrightarrow$ the coordinate-diagonal part of $\mathcal W_n$ | **PROVEN (hypotheses corrected**), the block asserts it; the read source [Jäger](../references/jaeger-2016-diagonal-case/notes.md) states it |
 | 12 | Attainment: $\theta(S^p\times S^q)^2=\frac{2(n-1)(p-1)(q-1)}{(n-2)pq}$, and balance beats every other split | **PROVEN**, the monotonicity step is correct and one line; the closed form is [Nienhaus Proposition 2.25](../references/nienhaus-2023-second-best-einstein/notes.md), read |
 | 13 | The equality clause (attainment **and** uniqueness), `equality exactly at $S^{\lfloor n/2\rfloor}\times S^{\lceil n/2\rceil}$` | **PROVEN (hypotheses corrected**), both halves hold and I re-derived the odd case's three ratios exactly; but the clause reaches a non-critical maximiser only through §6's unmapped bridge, and the block's own sign correction is unreadable alone because $V$ is defined nowhere on the record |
@@ -32,9 +32,9 @@ Read from [conventions.md](../findings/conventions.md), quoted rather than resta
 - $Q(W)=W^2+W^\#$; $P(W)=\langle W,Q(W)\rangle$; $\theta=P(W)/\lVert W\rVert^3$; a critical point is $Q(W)=\theta W$ on $\{\lVert W\rVert=1\}$.
 - $\mathcal D_n=\{S$ symmetric, hollow, $S\mathbf1=0\}$, the vertex matrices of coordinate-diagonal Weyl operators.
 - **Sums over pairs are over ORDERED pairs unless the line says otherwise.** This is the file's own default and it matters in §4 below.
-- $\lVert K\rVert_F^2=\sum_{a\ne b}K_{ab}^2=2$ at a unit Weyl tensor. So the block's locus $\operatorname{tr}S^2=2$ **is** $\lVert W\rVert=1$, and $\lvert S\rvert=1$ under plain Frobenius over ordered pairs would be $\lVert W\rVert=1/\sqrt2$, giving $\Theta_n/\sqrt2$. The block's warning is correct and I use $\operatorname{tr}S^2=2$ throughout.
+- $\lVert K\rVert_F^2=\sum_{a\ne b}K_{ab}^2=2$ at a unit Weyl tensor. So the block's locus $\mathop{\mathrm{tr}}S^2=2$ **is** $\lVert W\rVert=1$, and $\lvert S\rvert=1$ under plain Frobenius over ordered pairs would be $\lVert W\rVert=1/\sqrt2$, giving $\Theta_n/\sqrt2$. The block's warning is correct and I use $\mathop{\mathrm{tr}}S^2=2$ throughout.
 - $\Theta_n$ is the **diagonal** maximum; $\theta_0(n)^2=2(n-1)(n-2)/n^2$ **and nothing more**. They agree at even $n$ and differ at odd.
-- Throughout, $\mu$ is the largest eigenvalue of $S$ with unit eigenvector $v$, $r_i=\sum_js_{ij}^2$, $D=\operatorname{diag}(r_1,\dots,r_n)$, and $m_4=\sum_iv_i^4$.
+- Throughout, $\mu$ is the largest eigenvalue of $S$ with unit eigenvector $v$, $r_i=\sum_js_{ij}^2$, $D=\mathop{\mathrm{diag}}(r_1,\dots,r_n)$, and $m_4=\sum_iv_i^4$.
 
 ## 1. The hypothesis inventory
 
@@ -45,7 +45,7 @@ Read from [conventions.md](../findings/conventions.md), quoted rather than resta
 | hypothesis | where it is used | carried? |
 | --- | --- | --- |
 | $S$ symmetric, hollow, $S\mathbf1=0$ | everywhere; $S\mathbf1=0$ is used twice in step 1 and once in step 2(a) | yes |
-| $\operatorname{tr}S^2=2$ | **only** in step 2, at $\mu=2\langle S,Z\rangle\le2\lvert S\rvert\lvert Z\rvert$ | yes, and it is the one place the $\sqrt2$ trap bites |
+| $\mathop{\mathrm{tr}}S^2=2$ | **only** in step 2, at $\mu=2\langle S,Z\rangle\le2\lvert S\rvert\lvert Z\rvert$ | yes, and it is the one place the $\sqrt2$ trap bites |
 | $n\ge4$ | step 3's Proof I, at *"since $n\ge4$ some coordinate is untouched"*; and $1/(n-2)$, $1/(n-1)$ in $Z$ | yes |
 | $Q(S)=\lambda S$, i.e. $S^{\circ2}+S^2=\lambda S+D$ | step 1 only | yes |
 | $v\perp\mathbf1$, $\lvert v\rvert=1$ | step 1's $\sum_{i<j}(v_i-v_j)^2=n$; step 3's constraint set | yes |
@@ -54,7 +54,7 @@ Read from [conventions.md](../findings/conventions.md), quoted rather than resta
 
 | hypothesis | where | consequence of omitting it |
 | --- | --- | --- |
-| **$\mu>0$** | step 1 divides $\lambda\mu\le\frac{n-1}n\mu^2$ by $\mu$; step 2's Cauchy–Schwarz is read in the direction $\mu\le2\lvert Z\rvert$ | the division reverses at $\mu<0$. *It is free ($S$ hollow gives $\operatorname{tr}S=0$, and $S\ne0$ then forces $\mu>0$) but it is nowhere on the page* |
+| **$\mu>0$** | step 1 divides $\lambda\mu\le\frac{n-1}n\mu^2$ by $\mu$; step 2's Cauchy–Schwarz is read in the direction $\mu\le2\lvert Z\rvert$ | the division reverses at $\mu<0$. *It is free ($S$ hollow gives $\mathop{\mathrm{tr}}S=0$, and $S\ne0$ then forces $\mu>0$) but it is nowhere on the page* |
 | **$S\ne0$** | the same place, and $\theta$ is undefined at $S=0$ | the statement is vacuous rather than false; the same omission [L46](../findings/problem.md)'s audit found and booked |
 | **the unordered pairing in step 2** | $\lvert Z\rvert^2$ and $\mu=2\langle S,Z\rangle$ are both sums over $i<j$ | see §4: a reader applying the file's own default gets $\lvert Z\rvert^2$ doubled and $\Theta_n\sqrt2$ |
 | **$v$ is the top eigenvector of the $S$ the equality case produces** | the equality clause, at *"Equality forces … $S\parallel Z(v)$"* | consistency of the equality case, unchecked on file |
@@ -63,13 +63,13 @@ Read from [conventions.md](../findings/conventions.md), quoted rather than resta
 
 | imported | its hypotheses | checked against the object here |
 | --- | --- | --- |
-| the criticality equation $S^{\circ2}+S^2=\lambda S+D$, from [diagonal-half.md](../findings/diagonal-half.md):69–78 | $M$ in $\mathcal D_n$, critical for the **restricted** problem on $\mathcal D_n$ | ✓ matches. And its $D$ is $\operatorname{diag}(s_i)$ with $s_i=(M^2)_{ii}=\sum_jM_{ij}^2$, which is exactly the $r_i$ step 1's proof uses. Consistent |
-| the translation $\operatorname{tr}W^3=\tfrac12\langle M^{\circ2},M\rangle$, $\langle W,W^\#\rangle=\tfrac12\langle M^2,M\rangle$, [diagonal-half.md](../findings/diagonal-half.md):428 | $W$ coordinate-diagonal | ✓ applies, but see §7, its support on file is *"exact at every test point"* |
+| the criticality equation $S^{\circ2}+S^2=\lambda S+D$, from [diagonal-half.md](../findings/diagonal-half.md):69–78 | $M$ in $\mathcal D_n$, critical for the **restricted** problem on $\mathcal D_n$ | ✓ matches. And its $D$ is $\mathop{\mathrm{diag}}(s_i)$ with $s_i=(M^2)_{ii}=\sum_jM_{ij}^2$, which is exactly the $r_i$ step 1's proof uses. Consistent |
+| the translation $\mathop{\mathrm{tr}}W^3=\tfrac12\langle M^{\circ2},M\rangle$, $\langle W,W^\#\rangle=\tfrac12\langle M^2,M\rangle$, [diagonal-half.md](../findings/diagonal-half.md):428 | $W$ coordinate-diagonal | ✓ applies, but see §7, its support on file is *"exact at every test point"* |
 | [Nienhaus](../references/nienhaus-2023-second-best-einstein/notes.md) Proposition 2.25, $\theta_{k,l}=\sqrt2\sqrt{\frac{k-1}k\frac{l-1}l\frac{n-1}{n-2}}$, $P(W_{S_{k,l}})=\theta_{k,l}$ | unconditional, every split $k+l=n$ | ✓ read in [references/](../references/). It is the attainment half, and it fixes the **sign**: $P$ is $+\theta_{k,l}$ at the sphere product itself |
 | [Jäger](../references/jaeger-2016-diagonal-case/notes.md) Theorem A | **even $n\ge16$** | ✓ read. It covers neither odd $n$ nor even $n\le14$, so the block's *"the odd case rests on this theorem and on nothing published"* is true and **understates**: even $n\in\{4,6,8,10,12,14\}$ rests on it equally |
 | Jäger's setup sentence, *"the condition that $W$ is Weyl reduces to $\sum_iw_{ij}=0$"* | coordinate-diagonal $W$ | ✓ read; it is the domain bijection the block asserts and proves nowhere |
 
-**Which of these the written proof actually uses.** Steps 1–3 use rows 1, 4 and 5 of §1.1 plus the criticality equation. They use $\operatorname{tr}S^2=2$ once. They use **nothing** about compactness, irreducibility, Einstein, or $\ker W$. The two published sources are used only for attainment and for the domain, never inside the chain.
+**Which of these the written proof actually uses.** Steps 1–3 use rows 1, 4 and 5 of §1.1 plus the criticality equation. They use $\mathop{\mathrm{tr}}S^2=2$ once. They use **nothing** about compactness, irreducibility, Einstein, or $\ker W$. The two published sources are used only for attainment and for the domain, never inside the chain.
 
 ## 2. Step 1, $\lambda\le\frac{n-1}n\mu$: PROVEN, and parity-free
 
@@ -89,7 +89,7 @@ Cauchy–Schwarz on the splitting $s_{ij}(v_i-v_j)^2=[s_{ij}(v_i-v_j)]\cdot(v_i-
 
 **Verdict: PROVEN.** Every line reproduces. **Parity: parity-free**, no argument in it distinguishes $n$ even from $n$ odd, and none of $n$'s parity enters the two contractions.
 
-**One hypothesis is missing and it is free.** The final division needs $\mu>0$. It holds because $S$ is hollow, so $\operatorname{tr}S=0$, so a nonzero $S$ has a strictly positive eigenvalue. The block never writes it. I record it rather than repair it.
+**One hypothesis is missing and it is free.** The final division needs $\mu>0$. It holds because $S$ is hollow, so $\mathop{\mathrm{tr}}S=0$, so a nonzero $S$ has a strictly positive eigenvalue. The block never writes it. I record it rather than repair it.
 
 ## 3. Step 2, the projection: two halves PROVEN, the norm formula NOT
 
@@ -107,7 +107,7 @@ The residual is $(v_iv_j)-Z_{ij}=a_i+a_j+c$ with $a_i=-v_i^2/(n-2)$ and $c=1/((n
 
 $$\sum_{i<j}(a_i+a_j)T_{ij}=\tfrac12\sum_{i\ne j}(a_i+a_j)T_{ij}=\sum_ia_i\sum_{j\ne i}T_{ij}=0,\qquad \sum_{i<j}cT_{ij}=\tfrac c2\sum_{i\ne j}T_{ij}=0 .$$
 
-Reproduces exactly. **Parity-free.** It yields $\mu=v^{\mathsf T}Sv=\sum_{i,j}s_{ij}v_iv_j=2\sum_{i<j}s_{ij}v_iv_j=2\langle S,Z(v)\rangle$ in the $i<j$ pairing, and then $\mu\le2\lvert S\rvert\lvert Z\rvert=2\lvert Z\rvert$ because $\operatorname{tr}S^2=2$ is $\sum_{i<j}s_{ij}^2=1$.
+Reproduces exactly. **Parity-free.** It yields $\mu=v^{\mathsf T}Sv=\sum_{i,j}s_{ij}v_iv_j=2\sum_{i<j}s_{ij}v_iv_j=2\langle S,Z(v)\rangle$ in the $i<j$ pairing, and then $\mu\le2\lvert S\rvert\lvert Z\rvert=2\lvert Z\rvert$ because $\mathop{\mathrm{tr}}S^2=2$ is $\sum_{i<j}s_{ij}^2=1$.
 
 ### 3.3 The norm formula, HYPOTHESIS-DEBT
 
@@ -186,7 +186,7 @@ $$\lvert Z\rvert^2_{\max}=\frac{n^2(n-3)}{2(n-2)(n-1)(n+1)},\qquad \lambda^2\le\
 
 **Locate it.** [problem.md](../findings/problem.md):264 and the same sentence quoted into the brief:
 
-> *"with $\operatorname{tr}S^2=2$, not $\lvert S\rvert=1$, which under [conventions.md](../findings/conventions.md)'s default of plain Frobenius over ordered pairs gives $\Theta_n/\sqrt2$"*
+> *"with $\mathop{\mathrm{tr}}S^2=2$, not $\lvert S\rvert=1$, which under [conventions.md](../findings/conventions.md)'s default of plain Frobenius over ordered pairs gives $\Theta_n/\sqrt2$"*
 
 **Exhibit the failure.** The warning names the danger of mis-normalising $S$ and is correct. The **live** ambiguity is a different one and goes unmentioned: step 2's two displays ($\mu=2\langle S,Z(v)\rangle$ and the $\lvert Z\rvert^2$ formula), are sums over **unordered** pairs, and [conventions.md](../findings/conventions.md) says in terms *"sums over pairs are over ORDERED pairs unless the line says otherwise"*. Neither line says otherwise. A reader who applies the file's stated default to $\lvert Z\rvert^2$ doubles it, gets $4\lvert Z\rvert^2_{\max}=\frac{4(n-2)}{n-1}$ at even $n$, and concludes $\Theta_n\sqrt2$, the trap in the direction the warning does not face.
 
@@ -202,7 +202,7 @@ $$\lvert Z\rvert^2_{\max}=\frac{n^2(n-3)}{2(n-2)(n-1)(n+1)},\qquad \lambda^2\le\
 
 > *"$\mathcal D_n$ is a linear subspace and the cubic is continuous and homogeneous, so its maximum over the unit sphere of $\mathcal D_n$ (compact), is attained, and the maximiser is critical for the restricted problem. **$Q$ preserves $\mathcal D_n$**, so that restricted criticality is the equation the chain solves … Hence the bound at critical points is the bound everywhere on $\mathcal D_n$."*
 
-**It is correct, and its load-bearing step is proved somewhere else.** The step that can fail is *"$Q$ preserves $\mathcal D_n$"*, because the constrained Lagrange condition on $\{\operatorname{tr}S^2=2\}\cap\mathcal D_n$ is not $S^{\circ2}+S^2=\lambda S+D$ but
+**It is correct, and its load-bearing step is proved somewhere else.** The step that can fail is *"$Q$ preserves $\mathcal D_n$"*, because the constrained Lagrange condition on $\{\mathop{\mathrm{tr}}S^2=2\}\cap\mathcal D_n$ is not $S^{\circ2}+S^2=\lambda S+D$ but
 
 $$\big(S^{\circ2}+S^2\big)_{ij}=\lambda S_{ij}+\beta_i+\beta_j\qquad(i\ne j),$$
 
@@ -220,7 +220,7 @@ I checked the mechanism independently: $S^{\circ2}$ has row sums $r_i$, $S^2$ ha
 
 **Locate it.** [diagonal-half.md](../findings/diagonal-half.md):428:
 
-$$\operatorname{tr}W^3=\tfrac12\langle M^{\circ2},M\rangle,\qquad \langle W,W^\#\rangle=\tfrac12\langle M^2,M\rangle,\qquad 2\theta=\langle M^{\circ2}+M^2,\ M\rangle,$$
+$$\mathop{\mathrm{tr}}W^3=\tfrac12\langle M^{\circ2},M\rangle,\qquad \langle W,W^\#\rangle=\tfrac12\langle M^2,M\rangle,\qquad 2\theta=\langle M^{\circ2}+M^2,\ M\rangle,$$
 
 > *"exact at every test point."*
 
@@ -281,8 +281,8 @@ $$Z_{ab}=-\tfrac1n+\frac{2(n^2+1)}{n(n^2-1)(n-2)}-\frac1{(n-1)(n-2)}=\frac{-n^3+
 | **$n=4$** | Every step holds. Step 3's Proof I needs exactly $n\ge4$ (*"since $n\ge4$ some coordinate is untouched"*) so $n=4$ is the boundary case of the one step that has a boundary, and it clears: three coordinates are moved and the fourth is not. $\Theta_4^2=\frac{2\cdot3\cdot2}{16}=\frac34$, and $S^2\times S^2$ gives $\frac{2\cdot3\cdot1\cdot1}{2\cdot4}=\frac34$. ✓ |
 | **$n=5$** | $\Theta_5^2=\frac{2\cdot4\cdot2}{6\cdot3}=\frac89$, and $S^2\times S^3$ gives $\frac{2\cdot4\cdot1\cdot2}{3\cdot6}=\frac89$. ✓ The odd identification needs $n\ge5$ (§9.2) and gets it. **A collision to flag**: [LEDGER.md](../findings/LEDGER.md) records that $\Theta_5$ carries two values inside [results.md](../results.md), $\sqrt{3/2}$ for the global maximum on $\mathcal W_5$ and $2\sqrt2/3$ for the diagonal one. $\sqrt{8/9}=2\sqrt2/3$ is this theorem's, and the other is not $\Theta$ |
 | **odd $n$** | See §5.1 and §11. Steps 1 and 2 parity-free, step 3 parity-blind, the chaining parity-split with both branches exact |
-| **$\ker W\ne0$** | **No finding.** Nothing in the chain excludes it. Step 1 needs $\mu>0$, which is free from hollowness; step 2 needs $\operatorname{tr}S^2=2$; step 3 is about $v$, not $S$. A degenerate $S$ passes all three untouched, and the equality case is itself highly degenerate, the balanced two-block vertex matrix has a large kernel |
-| **$S=0$** | Excluded by $\operatorname{tr}S^2=2$, and the statement is homogeneous, so $W=0$ satisfies it trivially with both sides zero |
+| **$\ker W\ne0$** | **No finding.** Nothing in the chain excludes it. Step 1 needs $\mu>0$, which is free from hollowness; step 2 needs $\mathop{\mathrm{tr}}S^2=2$; step 3 is about $v$, not $S$. A degenerate $S$ passes all three untouched, and the equality case is itself highly degenerate, the balanced two-block vertex matrix has a large kernel |
+| **$S=0$** | Excluded by $\mathop{\mathrm{tr}}S^2=2$, and the statement is homogeneous, so $W=0$ satisfies it trivially with both sides zero |
 
 ## 11. Pre-registered question 3, F8, step by step
 
@@ -306,7 +306,7 @@ $$Z_{ab}=-\tfrac1n+\frac{2(n^2+1)}{n(n^2-1)(n-2)}-\frac1{(n-1)(n-2)}=\frac{-n^3+
 | --- | --- | --- | --- |
 | quantifier | *"for every diagonal $W$ at every $n\ge4$"* | *"every $n\ge4$ and every unit $W$ diagonal in some frame"* | *"$W\in\mathcal W_n$, $n\ge4$, diagonal in some orthonormal frame"* |
 | the inequality | $\langle Q(W),W\rangle\le\Theta_n\lVert W\rVert^3$ | $\theta\le\Theta_n$ | $\langle W,Q(W)\rangle\le\Theta_n$ at $\lVert W\rVert=1$ |
-| normalisation | stated in the proof as $\operatorname{tr}S^2=2$, **with the warning** | absent | *"$\lVert M\rVert$ normalised to $\lVert W\rVert=1$"*, **which is the right statement and does not say what $\lVert M\rVert$ then is**; the reader is left to find $\operatorname{tr}M^2=2$ |
+| normalisation | stated in the proof as $\mathop{\mathrm{tr}}S^2=2$, **with the warning** | absent | *"$\lVert M\rVert$ normalised to $\lVert W\rVert=1$"*, **which is the right statement and does not say what $\lVert M\rVert$ then is**; the reader is left to find $\mathop{\mathrm{tr}}M^2=2$ |
 | equality | split by parity, $S^{n/2}\times S^{n/2}$ / $S^{\lfloor\rfloor}\times S^{\lceil\rceil}$ | one form, $S^{\lfloor\rfloor}\times S^{\lceil\rceil}$ | *"the Weyl tensor of $S^{\lfloor\rfloor}\times S^{\lceil\rceil}$"*, the best of the three, since it names the *Weyl* tensor |
 | status | *"CANDIDATE … Gate 2 owed"*, *"none audited"* | **Lemma**, Gate 1 and Gate 2 passed | **Lemma** |
 
@@ -329,7 +329,7 @@ $$Z_{ab}=-\tfrac1n+\frac{2(n^2+1)}{n(n^2-1)(n-2)}-\frac1{(n-1)(n-2)}=\frac{-n^3+
 
 **That reason is imported from the wrong proof.** The classification of compact symmetric spaces is how **[Jäger](../references/jaeger-2016-diagonal-case/notes.md)** closes the diagonal case, the reference notes say so in terms: *"a closing appeal to the classification of compact symmetric spaces"*. **This proof appeals to no classification.** It is an inequality about hollow symmetric zero-row-sum $n\times n$ matrices, three Cauchy–Schwarz applications and a Lagrange argument, and the only geometry in it is the sentence identifying the extremal matrix. So L57 is bucketed out for an obstruction belonging to the argument it replaces.
 
-**And parts of it are already kernel-checked, under other names.** [Theta0.lean](../lean/HamiltonsCubic/Results/Theta0.lean) proves the constants and their exact rational squares; [BalanceMax.lean](../lean/HamiltonsCubic/Results/BalanceMax.lean) proves *"the most balanced split maximises $\theta^2$"* over $4\le n\le24$, which the row itself calls *"the fact $\theta_0$ and $\Theta_n$ rest on, and which the record never states"*; [DiagonalOdd.lean](../lean/HamiltonsCubic/Results/DiagonalOdd.lean) carries the odd constant. **What a genuine L57 row would have to claim, and none of these does:** for every $S\in\mathcal D_n$ with $\operatorname{tr}S^2=2$ and every $n\ge4$, $\tfrac12\langle S^{\circ2}+S^2,S\rangle\le\Theta_n$, with the $\lvert Z\rvert^2$ identity of §3.3 either proved or listed as **owed**, since without it the constant has no source. That is a formalisation of the *matrix* statement; the further step to $\langle Q(W),W\rangle$ needs §7's translation and would be a second **owed** line.
+**And parts of it are already kernel-checked, under other names.** [Theta0.lean](../lean/HamiltonsCubic/Results/Theta0.lean) proves the constants and their exact rational squares; [BalanceMax.lean](../lean/HamiltonsCubic/Results/BalanceMax.lean) proves *"the most balanced split maximises $\theta^2$"* over $4\le n\le24$, which the row itself calls *"the fact $\theta_0$ and $\Theta_n$ rest on, and which the record never states"*; [DiagonalOdd.lean](../lean/HamiltonsCubic/Results/DiagonalOdd.lean) carries the odd constant. **What a genuine L57 row would have to claim, and none of these does:** for every $S\in\mathcal D_n$ with $\mathop{\mathrm{tr}}S^2=2$ and every $n\ge4$, $\tfrac12\langle S^{\circ2}+S^2,S\rangle\le\Theta_n$, with the $\lvert Z\rvert^2$ identity of §3.3 either proved or listed as **owed**, since without it the constant has no source. That is a formalisation of the *matrix* statement; the further step to $\langle Q(W),W\rangle$ needs §7's translation and would be a second **owed** line.
 
 ## 13. The named trap, each citable claim read alone, as a consumer would
 
@@ -343,7 +343,7 @@ $$Z_{ab}=-\tfrac1n+\frac{2(n^2+1)}{n(n^2-1)(n-2)}-\frac1{(n-1)(n-2)}=\frac{-n^3+
 | results.md's *"Three steps, each proved"* | all three discharged | step 2's norm formula is not proved anywhere; §3.3, and the record books it on [LEDGER.md](../findings/LEDGER.md) rather than in the block |
 | results.md's *"a fourth-moment lemma, proved by two independent arguments"* | two proofs | one proof and one sketch; §4.2 |
 | results.md's *"the odd case rests on this theorem and on nothing published"* | even $n$ is covered by the literature | Jäger covers even $n\ge16$; **$n=12$ and $n=14$ are not published either**; §11 |
-| results.md's *"$\lVert M\rVert$ normalised to $\lVert W\rVert=1$"* | a normalisation | the number is $\operatorname{tr}M^2=2$, and the whole $\sqrt2$ warning is in [problem.md](../findings/problem.md) only; §5 |
+| results.md's *"$\lVert M\rVert$ normalised to $\lVert W\rVert=1$"* | a normalisation | the number is $\mathop{\mathrm{tr}}M^2=2$, and the whole $\sqrt2$ warning is in [problem.md](../findings/problem.md) only; §5 |
 | lean/INDEX.md's *"L57 … the classification of compact symmetric spaces"* | this proof needs a classification | it needs none; the reason belongs to Jäger's argument; §12.2 |
 
 **Eight citable sentences, and six of them mislead a reader who stops there.** None of the six is wrong about a *number*: every constant in every form is the same and every one of them is correct. **The defect is uniformly one of provenance and standing, never of value**, which is the shape this record was warned about, appearing again at the one result the whole programme's foundation section rests on.
@@ -353,7 +353,7 @@ $$Z_{ab}=-\tfrac1n+\frac{2(n^2+1)}{n(n^2-1)(n-2)}-\frac1{(n-1)(n-2)}=\frac{-n^3+
 ### 14.1 Proven here, under the round's rules
 
 1. **Step 1**, $\lambda\le\frac{n-1}n\mu$, at every $n\ge4$, both parities, for every $S\in\mathcal D_n$ critical for the restricted problem, with the free hypothesis $S\ne0$ made explicit.
-2. **Step 2(a) and 2(b)**, hence $\mu=2\langle S,Z(v)\rangle$ and $\mu\le2\lvert Z(v)\rvert$ at $\operatorname{tr}S^2=2$.
+2. **Step 2(a) and 2(b)**, hence $\mu=2\langle S,Z(v)\rangle$ and $\mu\le2\lvert Z(v)\rvert$ at $\mathop{\mathrm{tr}}S^2=2$.
 3. **Step 3**, the fourth-moment lemma with its equality case, at every $n\ge4$, by one argument that never splits on parity.
 4. **The chaining arithmetic**, both constants, given (5).
 5. **Attainment** of $\Theta_n$ at the balanced sphere product, and that balance beats every other split, on a read source plus one line of algebra.
@@ -362,7 +362,7 @@ $$Z_{ab}=-\tfrac1n+\frac{2(n^2+1)}{n(n^2-1)(n-2)}-\frac1{(n-1)(n-2)}=\frac{-n^3+
 ### 14.2 Used and not proven
 
 1. **$\lvert Z(v)\rvert^2=\frac{n^2-3n+3}{2(n-1)(n-2)}-\frac n{2(n-2)}\sum v_i^4$**, the single line every constant comes off. On file: five dimensions to $10^{-12}$.
-2. **$\operatorname{tr}W^3=\tfrac12\langle M^{\circ2},M\rangle$ and $\langle W,W^\#\rangle=\tfrac12\langle M^2,M\rangle$**, the line that makes the matrix problem the Weyl problem. On file: *"exact at every test point"*.
+2. **$\mathop{\mathrm{tr}}W^3=\tfrac12\langle M^{\circ2},M\rangle$ and $\langle W,W^\#\rangle=\tfrac12\langle M^2,M\rangle$**, the line that makes the matrix problem the Weyl problem. On file: *"exact at every test point"*.
 3. **The constrained-criticality form** $(M^{\circ2}+M^2)_{ij}=\theta M_{ij}+v_i+v_j$, on file as *"fitted jointly … residual $10^{-16}$"*, though its consequence $v=0$ is proved and I checked the mechanism independently in §6.
 4. **The domain bijection** $\mathcal D_n\leftrightarrow$ the coordinate-diagonal part of $\mathcal W_n$, asserted in the block; the read [Jäger](../references/jaeger-2016-diagonal-case/notes.md) notes state it, so it rests on a source rather than on nothing.
 5. **Step 1's equality clause** at every sphere product, ten products to $10^{-16}$.
@@ -370,13 +370,13 @@ $$Z_{ab}=-\tfrac1n+\frac{2(n^2+1)}{n(n^2-1)(n-2)}-\frac1{(n-1)(n-2)}=\frac{-n^3+
 
 ### 14.3 What a consumer may cite today
 
-> **For every $n\ge4$ and every $W\in\mathcal W_n$ diagonal in some orthonormal frame, $\langle Q(W),W\rangle\le\Theta_n\lVert W\rVert^3$, with $\Theta_n^2=\frac{2(n-1)(n-2)}{n^2}$ at even $n$ and $\frac{2(n-1)(n-3)}{(n+1)(n-2)}$ at odd $n$, and equality exactly at the Weyl tensor of $S^{\lfloor n/2\rfloor}\times S^{\lceil n/2\rceil}$, **conditional on two identities the record verifies numerically and derives nowhere**: step 2's $\lvert Z(v)\rvert^2$ and the diagonal translation of $\operatorname{tr}W^3$ and $\langle W,W^\#\rangle$.**
+> **For every $n\ge4$ and every $W\in\mathcal W_n$ diagonal in some orthonormal frame, $\langle Q(W),W\rangle\le\Theta_n\lVert W\rVert^3$, with $\Theta_n^2=\frac{2(n-1)(n-2)}{n^2}$ at even $n$ and $\frac{2(n-1)(n-3)}{(n+1)(n-2)}$ at odd $n$, and equality exactly at the Weyl tensor of $S^{\lfloor n/2\rfloor}\times S^{\lceil n/2\rceil}$, **conditional on two identities the record verifies numerically and derives nowhere**: step 2's $\lvert Z(v)\rvert^2$ and the diagonal translation of $\mathop{\mathrm{tr}}W^3$ and $\langle W,W^\#\rangle$.**
 
 **A consumer may not cite** *"three steps, each proved"*, *"proved by two independent arguments"*, or any reading under which even $n\le14$ is covered by the literature.
 
 ## 15. What would break it, and what I did to look
 
-**The object that would falsify the statement.** A matrix $S\in\mathcal D_n$ with $\operatorname{tr}S^2=2$ and $\tfrac12\langle S^{\circ2}+S^2,S\rangle>\Theta_n$ at some $n\ge4$. There are exactly five places it could hide, and I went to each:
+**The object that would falsify the statement.** A matrix $S\in\mathcal D_n$ with $\mathop{\mathrm{tr}}S^2=2$ and $\tfrac12\langle S^{\circ2}+S^2,S\rangle>\Theta_n$ at some $n\ge4$. There are exactly five places it could hide, and I went to each:
 
 | the hiding place | what I did | outcome |
 | --- | --- | --- |
@@ -399,7 +399,7 @@ $$Z_{ab}=-\tfrac1n+\frac{2(n^2+1)}{n(n^2-1)(n-2)}-\frac1{(n-1)(n-2)}=\frac{-n^3+
 **Two identities carry the whole result and neither has a derivation anywhere.**
 
 1. **$\lvert Z(v)\rvert^2=\frac{n^2-3n+3}{2(n-1)(n-2)}-\frac n{2(n-2)}\sum v_i^4$.** Every constant in $\Theta_n$ comes off this line. On file: *"verified to $10^{-12}$ at $n=6,7,8,11,12$"*. **What must be shown:** the expansion of $\sum_{i<j}Z_{ij}^2$ under $\sum v=0$, $\sum v^2=1$, the contractions needed are $\sum_{i\ne j}v_i^2v_j^2=1-m_4$, $\sum_{i\ne j}v_i^3v_j=-m_4$ and $\sum_{i\ne j}v_iv_j=-1$.
-2. **$\operatorname{tr}W^3=\tfrac12\langle M^{\circ2},M\rangle$ and $\langle W,W^\#\rangle=\tfrac12\langle M^2,M\rangle$** for coordinate-diagonal $W$. Without them the three steps bound a matrix functional that has not been shown to be $\langle Q(W),W\rangle$. On file: *"exact at every test point"*. **What must be shown:** the $\#$-computation on the coordinate-diagonal locus, from the definition of $\#$. Unlike (1), this one is **not** on [LEDGER.md](../findings/LEDGER.md).
+2. **$\mathop{\mathrm{tr}}W^3=\tfrac12\langle M^{\circ2},M\rangle$ and $\langle W,W^\#\rangle=\tfrac12\langle M^2,M\rangle$** for coordinate-diagonal $W$. Without them the three steps bound a matrix functional that has not been shown to be $\langle Q(W),W\rangle$. On file: *"exact at every test point"*. **What must be shown:** the $\#$-computation on the coordinate-diagonal locus, from the definition of $\#$. Unlike (1), this one is **not** on [LEDGER.md](../findings/LEDGER.md).
 
 **And the block's own map omits the sentence that answers its own quantifier.** The bridge from a critical point to every diagonal $W$ exists, is correct, and is not among the five places the map calls *"the whole map"*. The repair is one heading name.
 

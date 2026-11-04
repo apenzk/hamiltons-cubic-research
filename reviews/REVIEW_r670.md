@@ -14,7 +14,7 @@
 
 | symbol | reading adopted | pinned at | status |
 | --- | --- | --- | --- |
-| $\langle X,Y\rangle$ | $\tfrac12\operatorname{tr}(X^{\mathsf T}Y)$ on $\mathfrak{so}(m)\cong\Lambda^2\mathbb R^m$, so $\{\varphi_{ab}\}_{a<b}$ is orthonormal | [conventions.md](../findings/conventions.md), "Norms and pairings", bullets 1–2 | the record's choice, pinned twice ([r519](REVIEW_r519.md), [r520](REVIEW_r520.md)) |
+| $\langle X,Y\rangle$ | $\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$ on $\mathfrak{so}(m)\cong\Lambda^2\mathbb R^m$, so $\{\varphi_{ab}\}_{a<b}$ is orthonormal | [conventions.md](../findings/conventions.md), "Norms and pairings", bullets 1–2 | the record's choice, pinned twice ([r519](REVIEW_r519.md), [r520](REVIEW_r520.md)) |
 | $\lambda_N$ | the **most negative** eigenvalue of $W$ acting on $\Lambda^2\mathbb R^m$, $\lambda_N<0$ | **nowhere in [findings/](../findings/)** | **D1** |
 | $v_N$ | its **unit** eigenvector, an element of $\mathfrak{so}(m)$; the eigenbasis $\{v_\alpha\}$ is orthonormal for the pairing above | **nowhere** | **D1** |
 | $T_+$ | $\sum_{\lambda>0}\lambda$, the sum of the positive eigenvalues of $W$ | the block itself, line 376 | defined in place, not tabled |
@@ -64,7 +64,7 @@ $$\boxed{\ \lVert\mathrm{ad}_{v_\beta}\rVert_{\rm op}^2\ \ge\ \frac{2\lvert\lamb
 | hypothesis | used? |
 | --- | --- |
 | first Bianchi identity | **yes**, it is what gives $\mathcal A(W)=2W$ rather than $\mathcal A(W)=2W-\mathrm{Ric}$ terms ([L79](../findings/isotropy-cap.md)) |
-| Ricci-flatness | **yes**, it deletes the $\operatorname{tr}(u^2v_\alpha^2)$ terms |
+| Ricci-flatness | **yes**, it deletes the $\mathop{\mathrm{tr}}(u^2v_\alpha^2)$ terms |
 | $\lVert W\rVert=1$ | **no**. Both sides of the boxed bound are degree-zero in $W$, so it is scale-invariant |
 | criticality $Q(W)=\theta W$ | **no**, nowhere |
 | $\lVert v_N\rVert=1$ | **yes**, and only in the last step |
@@ -82,7 +82,7 @@ Exactly **one** negative term is killed, the $\alpha=N$ term, by $[v_N,v_N]=0$. 
 
 ### 3.1, Derivation
 
-$W$ is trace-free on $\Lambda^2$, **this is not an extra hypothesis**: Ricci-flatness $\sum_kW_{ikjk}=0$ contracted on $i=j$ gives $\sum_{i,k}W_{ikik}=0$, i.e. $\operatorname{tr}W=0$. Hence $T_+=\sum_{\lambda<0}\lvert\lambda\rvert$. With at most two negative eigenvalues, counted with multiplicity, that sum is $\lvert\lambda_{N-1}\rvert+\lvert\lambda_N\rvert$ with $\lvert\lambda_{N-1}\rvert\le\lvert\lambda_N\rvert$ by the choice of $\lambda_N$ as the **most** negative. So $T_+\le2\lvert\lambda_N\rvert$. **Confirmed**, and this is the one step where "most negative" earns its place. Chaining, $\lVert\mathrm{ad}_{v_N}\rVert^2_{\rm op}\ge2\lvert\lambda_N\rvert/T_+\ge1$.
+$W$ is trace-free on $\Lambda^2$, **this is not an extra hypothesis**: Ricci-flatness $\sum_kW_{ikjk}=0$ contracted on $i=j$ gives $\sum_{i,k}W_{ikik}=0$, i.e. $\mathop{\mathrm{tr}}W=0$. Hence $T_+=\sum_{\lambda<0}\lvert\lambda\rvert$. With at most two negative eigenvalues, counted with multiplicity, that sum is $\lvert\lambda_{N-1}\rvert+\lvert\lambda_N\rvert$ with $\lvert\lambda_{N-1}\rvert\le\lvert\lambda_N\rvert$ by the choice of $\lambda_N$ as the **most** negative. So $T_+\le2\lvert\lambda_N\rvert$. **Confirmed**, and this is the one step where "most negative" earns its place. Chaining, $\lVert\mathrm{ad}_{v_N}\rVert^2_{\rm op}\ge2\lvert\lambda_N\rvert/T_+\ge1$.
 
 ### 3.2, D4: "exactly two" is the wrong quantifier
 
@@ -151,7 +151,7 @@ The block closes with *What B0 now owes*, naming two items. Taking them in order
 1. *"$\sup\theta$ over $\dim\mathfrak m\le2$ with any number of positive eigenvalues (Lemma L29 covers rank 3 only) which closes B0 without any descent"*. **This is [Lemma L35](../findings/stratum-two-negative.md) verbatim**, at [stratum-two-negative.md:443](../findings/stratum-two-negative.md): *"Let $W\in\mathrm{Weyl}_m$ have unit norm and at most two negative eigenvalues, at any number of positive ones, at any $m$. Then $\theta\le\sqrt{3/2}$."* Its own block says it *"generalises the one-positive lemma above to any number of positive eigenvalues and needs no descent"*, and [stratum-two-negative.md:397](../findings/stratum-two-negative.md) records that B0's stratum bound *"is **closed** by Lemma L35 below"*. **The debt is discharged and the block is stale.** *(One qualification the record itself states and I repeat rather than soften: L35's interval $(\tfrac13,0.7096]$ closes by certified interval arithmetic, so it is a proof with a machine-checked step rather than one a reader follows end to end.)*
 2. *"the sharpening $s_1+s_2=\sqrt2$, which closes $m\ge10$"*. Still open, and **the block overstates what the sharpening would give**, in two places:
    - *"would force **both** negative eigenvectors to be rank-4 complex structures"*. The lever is derived at $v_N$ only. Applying it at the other negative eigenvector $v_{N-1}$ gives $\lVert\mathrm{ad}_{v_{N-1}}\rVert^2\ge2\lvert\lambda_{N-1}\rvert/T_+$, and since $\lvert\lambda_{N-1}\rvert\le\lvert\lambda_N\rvert$ that right-hand side is **at most $1$**, it never reaches $2$ unless the two negative eigenvalues are equal. **"Both" needs a separate argument the block does not have.**
-   - *"and close $m\ge10$ outright"*. Two rank-$4$ complex structures have images spanning at most eight dimensions, so the conclusion needs $\operatorname{supp}W\subseteq\operatorname{im}v_{N-1}+\operatorname{im}v_N$. **The block never supplies that step.** The record does supply it in the shape needed at the *bracket cap*, [stratum-two-negative.md:273](../findings/stratum-two-negative.md) runs it from $\sum_\alpha\lambda_\alpha v_\alpha^{\mathsf T}v_\alpha=0$, but that argument uses $\operatorname{im}v_{N-1}=\operatorname{im}v_N$, which is L31's equality case and is a strictly stronger input than "both are rank $4$".
+   - *"and close $m\ge10$ outright"*. Two rank-$4$ complex structures have images spanning at most eight dimensions, so the conclusion needs $\mathop{\mathrm{supp}}W\subseteq\mathop{\mathrm{im}}v_{N-1}+\mathop{\mathrm{im}}v_N$. **The block never supplies that step.** The record does supply it in the shape needed at the *bracket cap*, [stratum-two-negative.md:273](../findings/stratum-two-negative.md) runs it from $\sum_\alpha\lambda_\alpha v_\alpha^{\mathsf T}v_\alpha=0$, but that argument uses $\mathop{\mathrm{im}}v_{N-1}=\mathop{\mathrm{im}}v_N$, which is L31's equality case and is a strictly stronger input than "both are rank $4$".
 
 **So the honest summary of the lever is: it closes nothing.** It is one correct, scale-invariant, hypothesis-light inequality; its degraded form is vacuous where the record has witnesses; the debt it was recorded against has since been paid elsewhere; and the sharpening it points at is the whole of the remaining problem rather than a step toward it. The block should say so.
 

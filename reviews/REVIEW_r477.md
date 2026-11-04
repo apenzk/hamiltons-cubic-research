@@ -49,7 +49,7 @@ The block's enumeration is: §3.3 priced by one term, *"§§3.4 and 3.5 then lif
 
 ### F4, the constants check out; the sharpness attribution and the evidence base do not quite
 
-**The two constants are right.** $D(R)=\tfrac32\sum_{k,l,m}\mathrm{Alt}(R)_{iklm}\mathrm{Alt}(R)_{jklm}$ is Result 2's identity, proven twice ([ATTEMPTS.md](../ATTEMPTS.md): exact integer arithmetic plus Brauer stability, and Reviewer 9's dummy-relabelling proof). $D\succeq0$ is automatic as a Gram form, so $J_4\le\lambda_{\max}(\mathrm{Ric})\operatorname{tr}D$, and $\operatorname{tr}D=6\|\mathrm{Alt}(R)\|^2$. With $|W|=W+2W_-$ and $\mathrm{Alt}(W)=0$ for a Weyl tensor ([conventions.md](../findings/conventions.md)), $\mathrm{Alt}(|W|)=2\,\mathrm{Alt}(W_-)$, so $\operatorname{tr}D(|W|)=6\cdot4\delta^2=24\delta^2$. **The $\tfrac32$ and the $24$ are both correct, and $\delta^2$ is Conjecture L16's own scalar.**
+**The two constants are right.** $D(R)=\tfrac32\sum_{k,l,m}\mathrm{Alt}(R)_{iklm}\mathrm{Alt}(R)_{jklm}$ is Result 2's identity, proven twice ([ATTEMPTS.md](../ATTEMPTS.md): exact integer arithmetic plus Brauer stability, and Reviewer 9's dummy-relabelling proof). $D\succeq0$ is automatic as a Gram form, so $J_4\le\lambda_{\max}(\mathrm{Ric})\mathop{\mathrm{tr}}D$, and $\mathop{\mathrm{tr}}D=6\|\mathrm{Alt}(R)\|^2$. With $|W|=W+2W_-$ and $\mathrm{Alt}(W)=0$ for a Weyl tensor ([conventions.md](../findings/conventions.md)), $\mathrm{Alt}(|W|)=2\,\mathrm{Alt}(W_-)$, so $\mathop{\mathrm{tr}}D(|W|)=6\cdot4\delta^2=24\delta^2$. **The $\tfrac32$ and the $24$ are both correct, and $\delta^2$ is Conjecture L16's own scalar.**
 
 **The cost is stated at critical points, correctly.** The master identity needs $Q(W)=\theta W$; the bound $J_4\le24\delta^2\lambda_{\max}$ needs only $D\succeq0$ and so is pointwise. The block's "at every critical point in every frame" is the right reading of the record and does not confuse the two.
 
@@ -101,7 +101,7 @@ Searched by quantity, the defect floor $c(n)$ and the chain's $\theta$-coverage,
 
 | input | status |
 | --- | --- |
-| the $\tfrac32$ Gram identity, $D\succeq0$, $\operatorname{tr}D=6\|\mathrm{Alt}\|^2$ | **proved twice** (exact integer arithmetic + Brauer stability; Reviewer 9's relabelling proof). Clears. |
+| the $\tfrac32$ Gram identity, $D\succeq0$, $\mathop{\mathrm{tr}}D=6\|\mathrm{Alt}\|^2$ | **proved twice** (exact integer arithmetic + Brauer stability; Reviewer 9's relabelling proof). Clears. |
 | the master identity at critical points | machine-verified at 12 points, "derivable by hand from the established compressions". **No written derivation in [findings/](../findings/).** |
 | lifted Lemmas 3.4.6, 3.4.3, 3.4.8 | **proved** (Result 8), no Bianchi, no diagonality. Clears. |
 | lifted Lemma 3.3.5 | **proved** (Result 11), with the weaker constant $4(n-1-\nu_0)$. Clears, at a cost of $7.4\%$ of $c(12)$. |
@@ -132,7 +132,7 @@ L18 does not rest on a Conjecture. It rests on **two open grants and one open as
 
 **The label it deserves.** A statement resting on two open grants and one open assembly is not a Lemma. **Observation L18 (conditional)**, with the hypotheses written out:
 
-> *At every critical point of $P$ with $\theta\ge\tilde\theta_0(n)$, granting (i) $J_5\ge0$ off the commuting class, (ii) the E-track certificate, and (iii) the frame-free Lemma 3.4.7 assembly, either $\operatorname{scal}(|W|)\ge(n+1)\tilde\theta_0(n)$ or $\delta^2\ge c(n)$, with $c(12)=1.0008\times10^{-3}$.*
+> *At every critical point of $P$ with $\theta\ge\tilde\theta_0(n)$, granting (i) $J_5\ge0$ off the commuting class, (ii) the E-track certificate, and (iii) the frame-free Lemma 3.4.7 assembly, either $\mathop{\mathrm{scal}}(|W|)\ge(n+1)\tilde\theta_0(n)$ or $\delta^2\ge c(n)$, with $c(12)=1.0008\times10^{-3}$.*
 
 The **unconditional** content that should keep the `Lemma` label is narrower and is worth stating on its own: *the Bianchi correction to Jäger's §3.3 is a PSD Gram form in $\mathrm{Alt}(R)$ with constant $\tfrac32$, so $J_4\le24\,\delta^2\,\lambda_{\max}(\mathrm{Ric}(|W|))$, with equality when $\mathrm{Ric}$ is $\lambda_{\max}$ on $D$'s support.* That is proved, dimension-free, and independent of every open grant.
 

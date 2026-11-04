@@ -4,10 +4,10 @@
 
 ## Phase 1, where the project stands
 
-- **Closed since 28n on I123:** no $O(n)$-invariant linear enlargement of the Weyl subspace carries P's bound (through $I$, $\operatorname{Ric}_0$ and $\Lambda^4$, Gate 2 [r1901](REVIEW_r1901.md) to [r1905](REVIEW_r1905.md)), and no member of the lift family $s\operatorname{tr}X^3+\langle X^\#X,X\rangle$, $s\in(0,1]$, is sharp at the balanced product (Gate 2 [r1915](REVIEW_r1915.md), [r1913](REVIEW_r1913.md), CONFIRMED).
+- **Closed since 28n on I123:** no $O(n)$-invariant linear enlargement of the Weyl subspace carries P's bound (through $I$, $\mathop{\mathrm{Ric}}_0$ and $\Lambda^4$, Gate 2 [r1901](REVIEW_r1901.md) to [r1905](REVIEW_r1905.md)), and no member of the lift family $s\mathop{\mathrm{tr}}X^3+\langle X^\#X,X\rangle$, $s\in(0,1]$, is sharp at the balanced product (Gate 2 [r1915](REVIEW_r1915.md), [r1913](REVIEW_r1913.md), CONFIRMED).
 - **Closed since 28n on I117:** H on $\mathfrak g_2$'s, $\mathfrak{sp}(2)$'s and $\mathfrak{sp}(3)$'s torus families ([L286](../findings/second-order.md)), and at every embedding of index $j^2\ge\tfrac34h^\vee$, $\mathfrak f_4$, $\mathfrak e_6$, $\mathfrak e_7$, $\mathfrak e_8$ among them ([L287](../findings/second-order.md)).
 - **What stands between the programme and P**, unchanged from 28m: *a global maximiser is diagonal in some frame* ([L57](../findings/problem.md) finishes from there), exact on the unbalanced products to a relative $n^{-3}$ ([L232](../findings/diagonal-half.md)) and global, since padded $W_{\mathbb{CP}^2}$ is second-order critical at $\sqrt{3/2}<\theta_0$ ([F73](../findings/INDEX-traps.md)). The coupling route (I123) is the alternative to diagonality: one inequality using both halves at one tensor.
-- **The coupling's target, in the plane of the two halves.** With $A=\operatorname{tr}W^3$ and $B=\langle W^\#W,W\rangle$ on unit Weyl tensors, P is the supporting line $A+B\le\theta_0$ through the balanced product's $(t_0,\beta)$, $t_0=\frac1{m\sqrt{(m-1)(2m-1)}}$, $\beta=\frac{2m-3}{\sqrt{(m-1)(2m-1)}}$, and H is the line $B\le\beta$ there. Under H, P is owed only where $A>t_0$.
+- **The coupling's target, in the plane of the two halves.** With $A=\mathop{\mathrm{tr}}W^3$ and $B=\langle W^\#W,W\rangle$ on unit Weyl tensors, P is the supporting line $A+B\le\theta_0$ through the balanced product's $(t_0,\beta)$, $t_0=\frac1{m\sqrt{(m-1)(2m-1)}}$, $\beta=\frac{2m-3}{\sqrt{(m-1)(2m-1)}}$, and H is the line $B\le\beta$ there. Under H, P is owed only where $A>t_0$.
 
 ## The live items and their grades
 

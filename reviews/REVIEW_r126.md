@@ -17,13 +17,13 @@ Adversarial review of the three claims in [target.md](../findings/target.md) §"
 
 ## 1. The vertex equation, upheld
 
-The $(ab),(ab)$ entry of $W^2$ in the coordinate basis is $\sum_{c<d}W_{abcd}W_{cdab}=K_{ab}^2+R_{ab}$, so the diagonal of $Q(W)=\lambda W$ is the boxed equation. The sum rule is immediate: $\sum_{a<b}(K_{ab}^2+R_{ab})=\operatorname{tr}(W^2)=\lVert W\rVert^2=1$ and $\sum_{a<b}K_{ab}^2=t/2$, hence $\sum R=1-t/2$.
+The $(ab),(ab)$ entry of $W^2$ in the coordinate basis is $\sum_{c<d}W_{abcd}W_{cdab}=K_{ab}^2+R_{ab}$, so the diagonal of $Q(W)=\lambda W$ is the boxed equation. The sum rule is immediate: $\sum_{a<b}(K_{ab}^2+R_{ab})=\mathop{\mathrm{tr}}(W^2)=\lVert W\rVert^2=1$ and $\sum_{a<b}K_{ab}^2=t/2$, hence $\sum R=1-t/2$.
 
 Reproduced at residual $\le 8.3\times10^{-17}$ at twelve exactly-constructed critical points ($S^3\!\times\!S^3$, $S^4\!\times\!S^4$, $S^6\!\times\!S^6$, $S^4\!\times\!S^8$, $\mathbb{CP}^{2\ldots5}$, and non-diagonal critical points reached by flowing $W\mapsto Q(W)/\lVert Q(W)\rVert$ from random Weyl tensors at $n=6$). The control behaves: at a *non*-critical Weyl tensor the vertex residual is $0.04$–$0.20$.
 
 **No projector is needed and the record is right not to use one.** $\Phi$ preserves Ricci-flatness ([BW08](../references/boehm-wilking-2008-space-forms/) eq. (6)) and the first Bianchi identity, so $Q(W)$ is already Weyl and the Lagrange condition on the unit sphere of $\langle W\rangle$ is $Q(W)=\lambda W$ verbatim. This was the first attack tried and it fails.
 
-**The one correction: "including the $D$ term" is a mis-statement.** The vertex equation lives only on $a\ne b$, there is no $(aa)$ two-plane. At a diagonal point $H_{ab}:=(W^\#)_{abab}=\langle A^a,A^b\rangle=(K^2)_{ab}$ (the Jäger/Poljsak diagonal $\#$-formula, reproduced here at $2.8\times10^{-17}$), so the vertex equation *is* the $a\ne b$ part of $M^{\circ2}+M^2=\theta M+\operatorname{diag}(s)$ from [diagonal-half.md](../findings/diagonal-half.md). The $D=\operatorname{diag}(s_a)$ term is the $a=b$ part, which the vertex equation never sees and which holds tautologically because $K$ is hollow: $(K^{\circ2})_{aa}=0$, $(K^2)_{aa}=s_a$, $\lambda K_{aa}=0$. So the identification is correct **off the diagonal of the matrix equation**, and $D$ is a remainder the vertex equation does not derive.
+**The one correction: "including the $D$ term" is a mis-statement.** The vertex equation lives only on $a\ne b$, there is no $(aa)$ two-plane. At a diagonal point $H_{ab}:=(W^\#)_{abab}=\langle A^a,A^b\rangle=(K^2)_{ab}$ (the Jäger/Poljsak diagonal $\#$-formula, reproduced here at $2.8\times10^{-17}$), so the vertex equation *is* the $a\ne b$ part of $M^{\circ2}+M^2=\theta M+\mathop{\mathrm{diag}}(s)$ from [diagonal-half.md](../findings/diagonal-half.md). The $D=\mathop{\mathrm{diag}}(s_a)$ term is the $a=b$ part, which the vertex equation never sees and which holds tautologically because $K$ is hollow: $(K^{\circ2})_{aa}=0$, $(K^2)_{aa}=s_a$, $\lambda K_{aa}=0$. So the identification is correct **off the diagonal of the matrix equation**, and $D$ is a remainder the vertex equation does not derive.
 
 ---
 
@@ -33,13 +33,13 @@ The $\#$-formula holds with the convention $R^\#_{ijkl}=\sum_{pq}(R_{ipkq}R_{jpl
 
 Three details the record leaves implicit, all checked:
 
-- $\sum_{pq}W_{apbq}W_{bpaq}=\operatorname{tr}\big((B^{ab})^2\big)$ because $B^{ab}_{qp}=W_{aqbp}=W_{bpaq}$. $B^{ab}$ is **not** symmetric off the diagonal locus, which is exactly why its trace-square is unsigned.
+- $\sum_{pq}W_{apbq}W_{bpaq}=\mathop{\mathrm{tr}}\big((B^{ab})^2\big)$ because $B^{ab}_{qp}=W_{aqbp}=W_{bpaq}$. $B^{ab}$ is **not** symmetric off the diagonal locus, which is exactly why its trace-square is unsigned.
 - Extending both sums from $a\ne b$ to all $a,b$ is free: $H_{aa}=\lVert A^a\rVert^2-\lVert A^a\rVert^2=0$ and $K_{aa}=0$.
-- $\operatorname{diag}(G)_p=\sum_a v_aW_{apap}=(Kv)_p$ in one line, for every $W$ and every $v$. Residual $2.8\times10^{-17}$.
+- $\mathop{\mathrm{diag}}(G)_p=\sum_a v_aW_{apap}=(Kv)_p$ in one line, for every $W$ and every $v$. Residual $2.8\times10^{-17}$.
 
 **The identity is true for every unit $v$, not only for eigenvectors:**
 
-$$\lambda\,(v^{\mathsf T}Kv)=\lVert Kv\rVert^2+\lVert G_{\text{off}}\rVert^2+v^{\mathsf T}\hat Rv+\Big[v^{\mathsf T}K^{\circ2}v-\textstyle\sum_{ab}v_av_b\operatorname{tr}\big((B^{ab})^2\big)\Big],$$
+$$\lambda\,(v^{\mathsf T}Kv)=\lVert Kv\rVert^2+\lVert G_{\text{off}}\rVert^2+v^{\mathsf T}\hat Rv+\Big[v^{\mathsf T}K^{\circ2}v-\textstyle\sum_{ab}v_av_b\mathop{\mathrm{tr}}\big((B^{ab})^2\big)\Big],$$
 
 residual $\le 5.6\times10^{-17}$ at random unit $v$ at non-diagonal critical points, $n=5,6,7$. Eigenvector-ness is used **only** to replace $\lVert Kv\rVert^2$ by $\mu_K^2$ and $v^{\mathsf T}Kv$ by $\mu_K$. At a diagonal point it collapses to $\theta\mu_1=\mu_1^2+u^{\mathsf T}M^{\circ2}u-\sum_is_iu_i^2$, which is [diagonal-half.md](../findings/diagonal-half.md) line 86 term for term.
 
@@ -127,7 +127,7 @@ So the honest statement is: **the top-eigenvector pairing can deliver $\theta_0(
 
 **(d) Is fence post F29 too strong? Yes as stated, and simultaneously too weak as a diagnosis.**
 
-- *Too strong.* It closes one contraction of the vertex equation, pairing with $v\otimes v$ for $v$ a $K$-eigenvector, aiming at $\lambda\le c\mu_K$. The vertex equation is $\binom n2$ scalar equations and admits any weighting $\sum_{a\ne b}P_{ab}(\cdot)$; one such weighting *is* the diagonal proof (the vertex equation in a frame where $R=0$). Another, $P=\mathbf1\mathbf1^{\mathsf T}$, gives $\operatorname{tr}(W^\#)=-\lVert W\rVert^2$, verified at $10^{-12}$ for every Weyl tensor and vacuous, since it follows from $\langle I,W\#W\rangle=\langle W,W\#I\rangle=-\lVert W\rVert^2$ ([BW08](../references/boehm-wilking-2008-space-forms/) Lemma 2.1) with no criticality used. So "every route through the vertex equation" is not what has been closed.
+- *Too strong.* It closes one contraction of the vertex equation, pairing with $v\otimes v$ for $v$ a $K$-eigenvector, aiming at $\lambda\le c\mu_K$. The vertex equation is $\binom n2$ scalar equations and admits any weighting $\sum_{a\ne b}P_{ab}(\cdot)$; one such weighting *is* the diagonal proof (the vertex equation in a frame where $R=0$). Another, $P=\mathbf1\mathbf1^{\mathsf T}$, gives $\mathop{\mathrm{tr}}(W^\#)=-\lVert W\rVert^2$, verified at $10^{-12}$ for every Weyl tensor and vacuous, since it follows from $\langle I,W\#W\rangle=\langle W,W\#I\rangle=-\lVert W\rVert^2$ ([BW08](../references/boehm-wilking-2008-space-forms/) Lemma 2.1) with no criticality used. So "every route through the vertex equation" is not what has been closed.
 - *Too weak.* The post attributes the failure to the sign of two corrections at one frame at two points, when the real obstruction is a frame-free norm budget: $\mu_1$ collapses off the diagonal locus because $t=2-2\sum R$ does, and $\lambda$ does not. That diagnosis is a one-line Cauchy–Schwarz argument (§4), needs no numerics, covers **every** frame and every constant $c$, and explains why the diagonal case is the exact equality case rather than a lucky one. Anyone reading the present post would go looking for a bound on $\lVert G_{\text{off}}\rVert^2$ and $R$, which is the wrong target.
 
 **Recommendation: rewrite fence post F29, keep the verdict.** Replace "the obstruction is not looseness but orientation" with the budget statement, drop the claim that $R$ and $\lVert G_{\text{off}}\rVert^2$ are both non-negative contributions, name the bracket as the term that flips, and record the $K=0$ frames as the sharpest form of the closure.
@@ -148,7 +148,7 @@ So the honest statement is: **the top-eigenvector pairing can deliver $\theta_0(
 
 Exact at $n=4$ for every Weyl tensor (the classical $C_{ipqr}C_{jpqr}=\tfrac14\delta_{ij}\lvert C\rvert^2$) and failing from $n=5$ at $15$–$35\%$ relative. The identification and the threshold are both correct.
 
-**One sharpening worth folding in.** The [random_control.py](../scripts/random_control.py) header says the claim "holds at every $S^k\times S^k$" and needs a *random* tensor to break. The real discriminator is finer: it is whether the isotropy group acts irreducibly on $\mathbb R^n$. It holds exactly at $\mathbb{CP}^3$, $\mathbb{CP}^4$, $S^3\!\times\!S^3$ (deviation $\le1.1\times10^{-16}$), and **fails at $S^4\!\times\!S^8$**, a catalogue point, with $\operatorname{spec}(N)=\{0.15^{(8)},0.70^{(4)}\}$ and deviation $0.367$. So one unbalanced product from the existing catalogue would have caught it. The lesson stands but is stronger as "a catalogue of *irreducible* points cannot test an equivariant claim", and the cheap fix is to keep an anisotropic point in the catalogue, not only to sample randomly.
+**One sharpening worth folding in.** The [random_control.py](../scripts/random_control.py) header says the claim "holds at every $S^k\times S^k$" and needs a *random* tensor to break. The real discriminator is finer: it is whether the isotropy group acts irreducibly on $\mathbb R^n$. It holds exactly at $\mathbb{CP}^3$, $\mathbb{CP}^4$, $S^3\!\times\!S^3$ (deviation $\le1.1\times10^{-16}$), and **fails at $S^4\!\times\!S^8$**, a catalogue point, with $\mathop{\mathrm{spec}}(N)=\{0.15^{(8)},0.70^{(4)}\}$ and deviation $0.367$. So one unbalanced product from the existing catalogue would have caught it. The lesson stands but is stronger as "a catalogue of *irreducible* points cannot test an equivariant claim", and the cheap fix is to keep an anisotropic point in the catalogue, not only to sample randomly.
 
 ---
 

@@ -19,7 +19,7 @@
 
 **$W\ne0$ is used and stated nowhere in the statement or the canon**: the round sphere is locally symmetric Einstein with $\lambda>0$ and $W=0$. *The block's own annotation records this and the statement below it was never changed.* Brief item 3.
 
-**The canon's detail entry says *compact* and prints $\theta^2=\frac1{4(\lVert R\rVert^2-(\operatorname{tr}R)^2/N)}$ before it normalises $\lambda=\tfrac12$**, while the block states it only in Petersen–Stanfield's normalisation. Brief items 5 and 6.
+**The canon's detail entry says *compact* and prints $\theta^2=\frac1{4(\lVert R\rVert^2-(\mathop{\mathrm{tr}}R)^2/N)}$ before it normalises $\lambda=\tfrac12$**, while the block states it only in Petersen–Stanfield's normalisation. Brief items 5 and 6.
 
 **The block is an annotation stack ending in a sentence fragment**, *"The statement is below; the section it used to point at is"*. Brief item 11.
 

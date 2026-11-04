@@ -21,7 +21,7 @@ Brief: [BRIEF_L223_L224.md](BRIEF_L223_L224.md). Log: [agent_logs/review-r945.lo
 | 13 | L223 scope and What it gives | CONFIRMED |
 | Lean | [L224Statement.lean](../lean/HamiltonsCubic/Results/L224Statement.lean), [L223Statement.lean](../lean/HamiltonsCubic/Results/L223Statement.lean) | CONFIRMED as scalar cores, nothing vacuous |
 
-**Summary: L224 survives every attack, its supremum and equality case are correct at every $n\ge4$ for every unit $W\in\mathcal D_n\oplus V_{jk}$, and L223 is correct up to two cosmetic repairs (the value of $\operatorname{sign}(0)$ and the sign of $B$).**
+**Summary: L224 survives every attack, its supremum and equality case are correct at every $n\ge4$ for every unit $W\in\mathcal D_n\oplus V_{jk}$, and L223 is correct up to two cosmetic repairs (the value of $\mathop{\mathrm{sign}}(0)$ and the sign of $B$).**
 
 ## Claim A, Lemma L224
 
@@ -31,7 +31,7 @@ Brief: [BRIEF_L223_L224.md](BRIEF_L223_L224.md). Log: [agent_logs/review-r945.lo
 - Row sums of $D^-_y$: row $j$ gives $\sum y$, row $k$ gives $-\sum y$, row $a$ gives $y_a-y_a=0$. So $D^-_y\in\mathcal D_n$ exactly when $\sum y=0$. For $D\in\mathcal D_n$ this holds automatically because $\sigma D\in\mathcal D_n$, and then $E=D-D^-_y\in\mathcal D_n$ as well.
 - $\Lambda^2\sigma$ sends $e_{ja}\mapsto e_{ka}$ and $e_{ka}\mapsto e_{ja}$, so $e_{ja}\odot e_{ka}$ is fixed and $\sigma\nu_x=\nu_x$. On $e_{jk}$ it acts by $-1$, which squares away in the diagonal entry.
 - Norms, Frobenius over all entries of an operator on $\Lambda^2$ (one diagonal entry per unordered pair): $\lVert D^-_y\rVert^2=\sum_a(y_a^2+y_a^2)=2\lVert y\rVert^2$. $\nu_x$ has the entry $x_a$ at both $(ja,ka)$ and $(ka,ja)$, so $\lVert\nu_x\rVert^2=2\lVert x\rVert^2$. $E$, $D^-_y$ and $\nu_x$ are pairwise orthogonal (even against odd, diagonal against off-diagonal), so $\lVert W\rVert^2=\lVert E\rVert^2+2s$.
-- This norm agrees with L57's: $\operatorname{tr}S^2=2$ is $\sum_{i<j}s_{ij}^2=1$, the same unit sphere. A sanity value confirms it: at $n=4$ with $K_{12}=K_{34}=2/\sqrt{12}$ and cross entries $-1/\sqrt{12}$, the product formula gives $P=3/\sqrt{12}=\sqrt3/2=\Theta_4$.
+- This norm agrees with L57's: $\mathop{\mathrm{tr}}S^2=2$ is $\sum_{i<j}s_{ij}^2=1$, the same unit sphere. A sanity value confirms it: at $n=4$ with $K_{12}=K_{34}=2/\sqrt{12}$ and cross entries $-1/\sqrt{12}$, the product formula gives $P=3/\sqrt{12}=\sqrt3/2=\Theta_4$.
 
 ### Item 2, step 2: CONFIRMED
 
@@ -65,7 +65,7 @@ Write $D=D^-_y$, $\nu=\nu_x$. The ten terms of $T(W,W,W)$ with multinomial coeff
 
 - **Swap.** $\sigma\in O(n)$, and $Q=W^2+W^\#$ is built from contractions with the metric, so it is $O(n)$-equivariant (determinant $-1$ included) and $T(\sigma A,\sigma B,\sigma C)=T(A,B,C)$. With $\sigma E=E$, $\sigma\nu=\nu$, $\sigma D=-D$, a term odd in $D$ equals its negative.
 - **Character.** The flip $\varepsilon_j$ fixes every diagonal tensor and sends $e_{ja}\mapsto-e_{ja}$, $e_{ka}\mapsto e_{ka}$, so $\nu\mapsto-\nu$. A term odd in $\nu$ vanishes. The brief's phrase "by the character $\varepsilon_j\varepsilon_k$" names the character, and $\varepsilon_j$ is the group element that witnesses it.
-- **Total symmetry.** $\operatorname{tr}(ABC)$ is totally symmetric on symmetric operators ($\operatorname{tr}ABC=\operatorname{tr}(ABC)^{\mathsf T}=\operatorname{tr}CBA$ joins the two cyclic classes), and $\langle A\#B,C\rangle$ is the polarisation of a cubic form. Any non-Weyl part of $A\circ B$ pairs to zero with a Weyl $C$, so the identity is insensitive to whether $\circ$ includes a projection.
+- **Total symmetry.** $\mathop{\mathrm{tr}}(ABC)$ is totally symmetric on symmetric operators ($\mathop{\mathrm{tr}}ABC=\mathop{\mathrm{tr}}(ABC)^{\mathsf T}=\mathop{\mathrm{tr}}CBA$ joins the two cyclic classes), and $\langle A\#B,C\rangle$ is the polarisation of a cubic form. Any non-Weyl part of $A\circ B$ pairs to zero with a Weyl $C$, so the identity is insensitive to whether $\circ$ includes a projection.
 - $\nu\circ\nu$ is $\Gamma$-fixed (fixed by $\ker\varepsilon_j\varepsilon_k$, and by $\varepsilon_j$ because $(-\nu)\circ(-\nu)=\nu\circ\nu$), hence diagonal, and L222 item 2 identifies it as $G_x$.
 
 **Screen, not evidence.** An index-level implementation of $Q(R)=R^2+R^\#$ with $(R^\#)_{abcd}=\sum_{p,q}(R_{apcq}R_{bpdq}-R_{apdq}R_{bpcq})$, run for a few seconds, returned $P(S^2\times S^2)=0.86602540\ldots=\Theta_4$ at $n=4$, and at $n=6$ with a random swap-even $E\in\mathcal D_6$ and random centred $y,x$: $\lvert Q(\nu_x)-G_x\rvert\le4\times10^{-18}$, $Q(D^-_y)=G_y$ exactly, and $P(W)$ equal to $P(E)+3\langle E,G_y+G_x\rangle$ to $10^{-14}$. Script at scratchpad path `r945_screen.py`, not committed.
@@ -104,7 +104,7 @@ Write $D=D^-_y$, $\nu=\nu_x$. The ten terms of $T(W,W,W)$ with multinomial coeff
 
 The falsifier would be a unit $W\in\mathcal S_{jk}$ with $P(W)>\Theta_n$. Structured candidates:
 
-- **$W_{\mathbb{CP}^2}$ at $n=4$**, the natural threat since $P(W_{\mathbb{CP}^2})=\sqrt{3/2}>\Theta_4=\sqrt3/2$ (the same constant L178 records). With $j,k=1,2$ and the self-dual basis $e_{12}+e_{34}$, $e_{13}-e_{24}$, $e_{14}+e_{23}$, a diagonal tensor has $W^\pm=\operatorname{diag}(p,q,r)$ on both halves, and $\nu_x$ acts as $\begin{psmallmatrix}0&x\\x&0\end{psmallmatrix}$ on the last two self-dual vectors and as $\begin{psmallmatrix}0&-x\\-x&0\end{psmallmatrix}$ on the last two anti-self-dual ones. So every element of $\mathcal S_{jk}$ at $n=4$ has $W^+$ and $W^-$ isospectral, while $W_{\mathbb{CP}^2}$ has $W^-=0\ne W^+$. It meets no $\mathcal S_{jk}$ in any frame, since $O(4)$ preserves or exchanges the two spectra. The same observation shows $\mathcal S_{jk}\subset O(4)\cdot\mathcal D_4$ at $n=4$, so there L224 reduces to L57 directly, an independent confirmation.
+- **$W_{\mathbb{CP}^2}$ at $n=4$**, the natural threat since $P(W_{\mathbb{CP}^2})=\sqrt{3/2}>\Theta_4=\sqrt3/2$ (the same constant L178 records). With $j,k=1,2$ and the self-dual basis $e_{12}+e_{34}$, $e_{13}-e_{24}$, $e_{14}+e_{23}$, a diagonal tensor has $W^\pm=\mathop{\mathrm{diag}}(p,q,r)$ on both halves, and $\nu_x$ acts as $\begin{psmallmatrix}0&x\\x&0\end{psmallmatrix}$ on the last two self-dual vectors and as $\begin{psmallmatrix}0&-x\\-x&0\end{psmallmatrix}$ on the last two anti-self-dual ones. So every element of $\mathcal S_{jk}$ at $n=4$ has $W^+$ and $W^-$ isospectral, while $W_{\mathbb{CP}^2}$ has $W^-=0\ne W^+$. It meets no $\mathcal S_{jk}$ in any frame, since $O(4)$ preserves or exchanges the two spectra. The same observation shows $\mathcal S_{jk}\subset O(4)\cdot\mathcal D_4$ at $n=4$, so there L224 reduces to L57 directly, an independent confirmation.
 - **Padded products with $j,k$ in the padding.** Then $E$ is swap-even with $K_{ja}=K_{ka}$, and the theorem's chain applies unchanged. No special structure escapes step 4.
 - **Rank-two Gram at the balanced product**, $j\in A$, $k\in B$, $y\parallel\bar u$, $x\perp\bar u$. Then $q_E(x)=0<\lambda\lVert x\rVert^2$ and $P(W)<\Theta_n$ strictly, as step 5 predicts.
 
@@ -118,8 +118,8 @@ A search of findings for "rank one" and the identity finds no earlier statement 
 
 ### Item 9, step 1: CONFIRMED
 
-- On matrices, $S^{\circ2}+S^2=\lambda S+E+\operatorname{diag}\big((S^2)_{ii}\big)$, the diagonal term carrying the diagonal of $S^2$. Pairing with $vv^{\mathsf T}$: $\sum_{i\ne j}s_{ij}^2v_iv_j+\mu^2=\lambda\mu+v^{\mathsf T}Ev+\sum_{i\ne j}s_{ij}^2v_i^2$, and $\sum_{i\ne j}s_{ij}^2(v_iv_j-v_i^2)=-\sum_{i<j}s_{ij}^2(v_i-v_j)^2$. This gives $\lambda\mu+v^{\mathsf T}Ev=\mu^2-\sum_{i<j}s_{ij}^2(v_i-v_j)^2$ with the sign as stated.
-- $\mu>0$ since $\operatorname{tr}S=0$ and $S\ne0$, so $v\perp\mathbf 1$ (the eigenvalue of $\mathbf 1$ is $0$). Then $\sum_{i<j}s_{ij}(v_i-v_j)^2=\sum_iv_i^2\cdot(\text{row sum})-\mu=-\mu$ and $\sum_{i<j}(v_i-v_j)^2=n$. Cauchy-Schwarz gives $\eta_1\ge0$.
+- On matrices, $S^{\circ2}+S^2=\lambda S+E+\mathop{\mathrm{diag}}\big((S^2)_{ii}\big)$, the diagonal term carrying the diagonal of $S^2$. Pairing with $vv^{\mathsf T}$: $\sum_{i\ne j}s_{ij}^2v_iv_j+\mu^2=\lambda\mu+v^{\mathsf T}Ev+\sum_{i\ne j}s_{ij}^2v_i^2$, and $\sum_{i\ne j}s_{ij}^2(v_iv_j-v_i^2)=-\sum_{i<j}s_{ij}^2(v_i-v_j)^2$. This gives $\lambda\mu+v^{\mathsf T}Ev=\mu^2-\sum_{i<j}s_{ij}^2(v_i-v_j)^2$ with the sign as stated.
+- $\mu>0$ since $\mathop{\mathrm{tr}}S=0$ and $S\ne0$, so $v\perp\mathbf 1$ (the eigenvalue of $\mathbf 1$ is $0$). Then $\sum_{i<j}s_{ij}(v_i-v_j)^2=\sum_iv_i^2\cdot(\text{row sum})-\mu=-\mu$ and $\sum_{i<j}(v_i-v_j)^2=n$. Cauchy-Schwarz gives $\eta_1\ge0$.
 - Rearranged, $\lambda=\tfrac{n-1}n\mu-\eta_1/\mu-v^{\mathsf T}Ev/\mu\le\tfrac{n-1}n\mu-\eta_1/\mu+e_-/\mu$.
 
 ### Item 10, step 2: CONFIRMED
@@ -132,8 +132,8 @@ A search of findings for "rank one" and the identity finds no earlier statement 
 ### Item 11, step 3: CONFIRMED
 
 - The chain $\bar\Theta(1-r\cos\alpha)+\eta_1/\mu\le\Delta$ follows, and with $r,\cos\alpha\in[0,1]$ ($\cos\alpha>0$ from $\mu>0$) it gives $\Delta\ge0$ and item 2's three bounds.
-- $\langle S\circ S,S\rangle=\sum_{i<j}s_{ij}^3+\sum_{i<j}(S^2)_{ij}s_{ij}=\tfrac12\sum_{i\ne j}s_{ij}^3+\tfrac12\operatorname{tr}S^3$, using $s_{ii}=0$.
-- Term by term: $s_{ij}^3\le\mu s_{ij}^2$ for $s_{ij}\le\mu$ (negative $s_{ij}$ trivially), and $s_{ij}\le\mu$ from the Rayleigh quotient at $e_i+e_j$. So $\sum_{i<j}s_{ij}^3\le\mu$. Likewise $\lambda_i^3\le\mu\lambda_i^2$ for every eigenvalue, so $\tfrac12\operatorname{tr}S^3\le\tfrac12\mu\operatorname{tr}S^2=\mu$.
+- $\langle S\circ S,S\rangle=\sum_{i<j}s_{ij}^3+\sum_{i<j}(S^2)_{ij}s_{ij}=\tfrac12\sum_{i\ne j}s_{ij}^3+\tfrac12\mathop{\mathrm{tr}}S^3$, using $s_{ii}=0$.
+- Term by term: $s_{ij}^3\le\mu s_{ij}^2$ for $s_{ij}\le\mu$ (negative $s_{ij}$ trivially), and $s_{ij}\le\mu$ from the Rayleigh quotient at $e_i+e_j$. So $\sum_{i<j}s_{ij}^3\le\mu$. Likewise $\lambda_i^3\le\mu\lambda_i^2$ for every eigenvalue, so $\tfrac12\mathop{\mathrm{tr}}S^3\le\tfrac12\mu\mathop{\mathrm{tr}}S^2=\mu$.
 - $\langle S\circ S,S\rangle=\lambda+\langle E,S\rangle\ge\lambda-\lvert E\rvert$, so $\mu\ge(\lambda-\lvert E\rvert)/2>0$.
 - $e_-\le\lVert E\rVert_{\mathrm{op}}\le\lVert E\rVert_{F,\text{all entries}}=\sqrt2\lvert E\rvert$. Item 1's upper bound follows.
 
@@ -141,7 +141,7 @@ A search of findings for "rank one" and the identity finds no earlier statement 
 
 - $\eta_3=\tfrac{2(n-2)}nZ_*^2(1-r^2)=\tfrac{(n-2)^2}{n(n-1)}(1-r^2)\le\tfrac{(n-2)^2}{n(n-1)}\cdot2(1-r)$, and $1-r\le\Delta/\bar\Theta$. Item 3's first bound holds.
 - $\lvert\lvert v_i\rvert-\tfrac1{\sqrt n}\rvert\le\sqrt n\lvert v_i^2-\tfrac1n\rvert$ gives $\lVert v-w\rVert^2\le n\eta_3$ and the second bound.
-- **Repair 1, the value of $\operatorname{sign}(0)$.** With the usual $\operatorname{sign}(0)=0$, a coordinate $v_i=0$ gives $w_i=0$, so $w$ is not a unit vector, $p+q<n$, and step 5's "for unit $v,w$" fails. The bound itself survives if $\operatorname{sign}(0)$ is read as $+1$ (or either sign), since then $\lvert v_i-w_i\rvert=1/\sqrt n=\lvert\lvert v_i\rvert-1/\sqrt n\rvert$. The statement should say so.
+- **Repair 1, the value of $\mathop{\mathrm{sign}}(0)$.** With the usual $\mathop{\mathrm{sign}}(0)=0$, a coordinate $v_i=0$ gives $w_i=0$, so $w$ is not a unit vector, $p+q<n$, and step 5's "for unit $v,w$" fails. The bound itself survives if $\mathop{\mathrm{sign}}(0)$ is read as $+1$ (or either sign), since then $\lvert v_i-w_i\rvert=1/\sqrt n=\lvert\lvert v_i\rvert-1/\sqrt n\rvert$. The statement should say so.
 - $\lvert p-q\rvert/\sqrt n=\lvert\sum(w-v)\rvert\le\sqrt n\lVert v-w\rVert$ by Cauchy-Schwarz.
 - **Lipschitz bound.** In the unordered norm, $\lvert(v_iv_j)-(w_iw_j)\rvert^2=\tfrac12\big(2-2c^2-\sum(v_i^2-w_i^2)^2\big)\le1-c^2\le2(1-c)=\lVert v-w\rVert^2$ with $c=\langle v,w\rangle\le1$.
 - **Invariance.** $\mathcal D_n$ is permutation-invariant, so $\Pi$ is permutation-equivariant, and $\Pi(ww^{\mathsf T})$ is constant on the orbits of $S_p\times S_q$ on pairs. An element of $\mathcal D_n$ constant on the three classes satisfies $(p-1)a+q\gamma=0$ and $(q-1)b+p\gamma=0$. At $p,q\ge2$ it is a multiple of the vertex matrix. At $p=1$ the single row forces $\gamma=0$ and then $b=0$, and at $p=0$ everything vanishes. So nonzero forces $p,q\ge2$, as claimed.

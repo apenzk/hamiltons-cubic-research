@@ -22,7 +22,7 @@ VERDICT: PLAUSIBLE, the statement is true and independently confirmed on two of 
 
 ### F0, Conventions fixed against the record's anchors
 
-Checked before deriving anything. $\theta_0(6)=\sqrt{2\cdot5\cdot4}/6=\sqrt{40}/6=\sqrt{10}/3=1.054092553$, the brief's anchor and the block's own figure are the same number. $\lVert\varphi_{ab}\rVert^2=1$ under the half-trace pairing, per [conventions.md:38](../findings/conventions.md#L38), which is what makes $\{\varphi_{ab}\}_{a<b}$ orthonormal and $N=\binom n2$ the right normalisation for $\Pi_{\mathfrak h}$. Unit norm is $\operatorname{tr}(W^2)=1$ on $\Lambda^2$, per [conventions.md:99](../findings/conventions.md#L99). No convention mismatch reaches this block: the eigenvalue-count mechanism is scale-free and pairing-free, as the source section itself says, *"an argument using no $\theta$, no slack and no convention"*.
+Checked before deriving anything. $\theta_0(6)=\sqrt{2\cdot5\cdot4}/6=\sqrt{40}/6=\sqrt{10}/3=1.054092553$, the brief's anchor and the block's own figure are the same number. $\lVert\varphi_{ab}\rVert^2=1$ under the half-trace pairing, per [conventions.md:38](../findings/conventions.md#L38), which is what makes $\{\varphi_{ab}\}_{a<b}$ orthonormal and $N=\binom n2$ the right normalisation for $\Pi_{\mathfrak h}$. Unit norm is $\mathop{\mathrm{tr}}(W^2)=1$ on $\Lambda^2$, per [conventions.md:99](../findings/conventions.md#L99). No convention mismatch reaches this block: the eigenvalue-count mechanism is scale-free and pairing-free, as the source section itself says, *"an argument using no $\theta$, no slack and no convention"*.
 
 ### F1, The pointer resolves; the title is merely truncated, and the section does hold the argument
 

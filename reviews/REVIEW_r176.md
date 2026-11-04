@@ -24,17 +24,17 @@ Cold adversarial review of [plan.md](../plan.md) item 3c, [REVIEW_r173.md](REVIE
 
 The record asserts agreement without saying which bilinear form its Casimir belongs to, and that is exactly where a convention factor would hide. Write $L_{ij}=E_{ij}-E_{ji}$ for the ten generators of $\mathfrak{so}(5)$ in the vector representation. Then
 
-$$\operatorname{tr}(L_{ij}L_{ij})=-2,\qquad\text{so } B(X,Y):=\tfrac12\operatorname{tr}(XY)\ \text{ makes } \{L_{ij}\}\ \text{orthonormal up to sign,}$$
+$$\mathop{\mathrm{tr}}(L_{ij}L_{ij})=-2,\qquad\text{so } B(X,Y):=\tfrac12\mathop{\mathrm{tr}}(XY)\ \text{ makes } \{L_{ij}\}\ \text{orthonormal up to sign,}$$
 
 and $C:=-\sum_{i<j}A_{ij}^2$ is the Casimir element for $B$. On the vector representation itself $L_{ij}^2=-(E_{ii}+E_{jj})$, so
 
 $$C\big|_{\mathbb R^5}=\sum_{i<j}(E_{ii}+E_{jj})=(n-1)\,\mathrm{Id}=4\,\mathrm{Id},$$
 
-against $\langle\lambda,\lambda+2\rho\rangle=1\cdot(1+3)+0=4$ for $\lambda=(1,0)$. **That single line is the whole content of "no convention factor"**: it fixes $B=\tfrac12\operatorname{tr}$, and $B$ is precisely the form under which the $e$-coordinates on $\mathfrak h^*$ are orthonormal, which is the form $\langle\lambda,\lambda+2\rho\rangle$ presupposes. The agreement at $\lambda=(2,2)$ is then forced rather than lucky.
+against $\langle\lambda,\lambda+2\rho\rangle=1\cdot(1+3)+0=4$ for $\lambda=(1,0)$. **That single line is the whole content of "no convention factor"**: it fixes $B=\tfrac12\mathop{\mathrm{tr}}$, and $B$ is precisely the form under which the $e$-coordinates on $\mathfrak h^*$ are orthonormal, which is the form $\langle\lambda,\lambda+2\rho\rangle$ presupposes. The agreement at $\lambda=(2,2)$ is then forced rather than lucky.
 
 ### 1.2 There is a convention, and naming the alternative shows it
 
-For $\mathfrak{so}(n)$ the Killing form is $\kappa=(n-2)\operatorname{tr}$, so at $n=5$, $\kappa=6B$. Had the generators been normalised against $\kappa$ (the default in a great deal of the literature), the same operator on $\mathrm{Weyl}_5$ would read $16/6=8/3$. **So "with NO convention factor" is a claim about the chosen normalisation, and it should be recorded as one.** The correct sentence is *"the generators are $B$-orthonormal for $B=\tfrac12\operatorname{tr}$, which is the form the $e$-coordinates are orthonormal for, so the Casimir reads $\langle\lambda,\lambda+2\rho\rangle$ on the nose."* As written, the record invites a later reader to reproduce the computation with $\kappa$-normalised generators and conclude the record is wrong by a factor of six.
+For $\mathfrak{so}(n)$ the Killing form is $\kappa=(n-2)\mathop{\mathrm{tr}}$, so at $n=5$, $\kappa=6B$. Had the generators been normalised against $\kappa$ (the default in a great deal of the literature), the same operator on $\mathrm{Weyl}_5$ would read $16/6=8/3$. **So "with NO convention factor" is a claim about the chosen normalisation, and it should be recorded as one.** The correct sentence is *"the generators are $B$-orthonormal for $B=\tfrac12\mathop{\mathrm{tr}}$, which is the form the $e$-coordinates are orthonormal for, so the Casimir reads $\langle\lambda,\lambda+2\rho\rangle$ on the nose."* As written, the record invites a later reader to reproduce the computation with $\kappa$-normalised generators and conclude the record is wrong by a factor of six.
 
 ### 1.3 Reproduced from scratch, and the accompanying sentence over-claims
 
@@ -85,7 +85,7 @@ Harish-Chandra identifies $Z(U(\mathfrak{so}(5)))$ with the $W(B_2)$-invariants 
 
 $$e_1=p^2+q^2,\qquad e_2=p^2q^2,$$
 
-of degrees $2$ and $4$ in $\ell$. The quadratic Casimir is $e_1-|\rho|^2=e_1-\tfrac52$. Any degree-$4$ **generator** of the centre has Harish-Chandra image involving $e_2$ with nonzero coefficient, for the standard $C_4=\operatorname{tr}(F^4)$ the image is $p^4+q^4+(\text{lower in }e_1)=e_1^2-2e_2+\cdots$. Since $(e_1,e_2)$ determines the multiset $\{p^2,q^2\}$, and $p>q>0$ for dominant $\lambda$, the pair $(c_2,c_4)$ **determines $\lambda$ outright**. So no pair can remain merged, at $n=5$ or anywhere in $B_2$. Explicitly, [quartic.sage](../scripts/reviewers/r176/quartic.sage):
+of degrees $2$ and $4$ in $\ell$. The quadratic Casimir is $e_1-|\rho|^2=e_1-\tfrac52$. Any degree-$4$ **generator** of the centre has Harish-Chandra image involving $e_2$ with nonzero coefficient, for the standard $C_4=\mathop{\mathrm{tr}}(F^4)$ the image is $p^4+q^4+(\text{lower in }e_1)=e_1^2-2e_2+\cdots$. Since $(e_1,e_2)$ determines the multiset $\{p^2,q^2\}$, and $p>q>0$ for dominant $\lambda$, the pair $(c_2,c_4)$ **determines $\lambda$ outright**. So no pair can remain merged, at $n=5$ or anywhere in $B_2$. Explicitly, [quartic.sage](../scripts/reviewers/r176/quartic.sage):
 
 | pair | $p^2+q^2$ (equal) | $p^2q^2$ | $p^4+q^4$ |
 |---|---|---|---|
@@ -193,12 +193,12 @@ Three of my findings are now on the record via reviewer 175, and I record the in
 
 ### 6.1 The amended Casimir sentence carries a sign it cannot carry
 
-[plan.md:349](../plan.md#L349) now reads: *"under the trace form $B(X,Y)=-\tfrac12\operatorname{tr}(XY)$ … that form makes $\{E_{ij}-E_{ji}\}$ orthonormal and its dual is exactly $\langle e_i,e_j\rangle=\delta_{ij}$."* **Those two clauses need opposite signs, and the sentence asserts both.**
+[plan.md:349](../plan.md#L349) now reads: *"under the trace form $B(X,Y)=-\tfrac12\mathop{\mathrm{tr}}(XY)$ … that form makes $\{E_{ij}-E_{ji}\}$ orthonormal and its dual is exactly $\langle e_i,e_j\rangle=\delta_{ij}$."* **Those two clauses need opposite signs, and the sentence asserts both.**
 
-- $B=-\tfrac12\operatorname{tr}$ is positive definite on the compact real form, so it does make $\{L_{ij}\}$ orthonormal, that clause is right.
+- $B=-\tfrac12\mathop{\mathrm{tr}}$ is positive definite on the compact real form, so it does make $\{L_{ij}\}$ orthonormal, that clause is right.
 - Its Casimir is then $\Omega=\sum_p A_p^2$, which on $\mathbb R^5$ equals $-4\,\mathrm{Id}$, so the induced form on $\mathfrak h^*$ is $\langle e_i,e_j\rangle=-\delta_{ij}$, and $\Omega$ reads $-16$ on $\mathrm{Weyl}_5$.
 
-The record's operator is $C=-\sum_p A_p^2=-\Omega$, which is the Casimir for $B'=+\tfrac12\operatorname{tr}$; under $B'$ the $e$-coordinates are orthonormal and $C=+16$. **So the minus sign in front of the sum is not decoration, it is what carries the normalisation from the compact torus to the $e$-basis**, and the amended sentence attributes the flip to the form instead. The corrected statement is §1.1: $C=-\sum A_p^2$ is the Casimir for $B'=\tfrac12\operatorname{tr}$, checked at $C|_{\mathbb R^5}=4=\langle(1,0),(1,0)+2\rho\rangle$. The value $16$ is unaffected because $\langle\lambda,\lambda+2\rho\rangle$ is quadratic, which is exactly why the sign can sit there unnoticed.
+The record's operator is $C=-\sum_p A_p^2=-\Omega$, which is the Casimir for $B'=+\tfrac12\mathop{\mathrm{tr}}$; under $B'$ the $e$-coordinates are orthonormal and $C=+16$. **So the minus sign in front of the sum is not decoration, it is what carries the normalisation from the compact torus to the $e$-basis**, and the amended sentence attributes the flip to the form instead. The corrected statement is §1.1: $C=-\sum A_p^2$ is the Casimir for $B'=\tfrac12\mathop{\mathrm{tr}}$, checked at $C|_{\mathbb R^5}=4=\langle(1,0),(1,0)+2\rho\rangle$. The value $16$ is unaffected because $\langle\lambda,\lambda+2\rho\rangle$ is quadratic, which is exactly why the sign can sit there unnoticed.
 
 ### 6.2 The grade row still carries the withdrawn word, and `attackable` should move
 
@@ -214,7 +214,7 @@ The $n\ge12$ plethysm was not invoked and no $D_6$ symmetric power was formed. `
 
 | script | what it settles |
 |---|---|
-| [casimir.py](../scripts/reviewers/r176/casimir.py) | $C=-\sum A_p^2$ rebuilt from $L_{ij}=E_{ij}-E_{ji}$; spectrum $0,4,10,16$ on $\mathrm{Sym}^2(\Lambda^2\mathbb R^5)$; the $B=\tfrac12\operatorname{tr}$ normalisation |
+| [casimir.py](../scripts/reviewers/r176/casimir.py) | $C=-\sum A_p^2$ rebuilt from $L_{ij}=E_{ij}-E_{ji}$; spectrum $0,4,10,16$ on $\mathrm{Sym}^2(\Lambda^2\mathbb R^5)$; the $B=\tfrac12\mathop{\mathrm{tr}}$ normalisation |
 | [n5b.sage](../scripts/reviewers/r176/n5b.sage) | the $24$ blocks, $7770$, the eigenvalue list, $21$ distinct, span $3570$, $36$ unknowns, shapes $\{1:9,2:5,3:2\}$ |
 | [quartic.sage](../scripts/reviewers/r176/quartic.sage) | $p^2q^2$ separates all three colliding pairs; neither highest weight is a weight of the other |
 | [labels.sage](../scripts/reviewers/r176/labels.sage) | the $71$ stable block labels with multiplicities |

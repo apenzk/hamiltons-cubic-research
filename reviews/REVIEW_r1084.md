@@ -13,13 +13,13 @@
 
 ## The `#` index contraction, derived here
 
-With $\{\varphi_a\}$ orthonormal in $\Lambda^2$ under the record's $\langle X,Y\rangle=\tfrac12\operatorname{tr}(X^{\mathsf T}Y)$ and $c_{abc}=\langle[\varphi_a,\varphi_b],\varphi_c\rangle$ totally antisymmetric, the record's index formula $(X^{\#})_{ab}=\tfrac12\sum c_{acd}c_{bef}X_{ce}X_{df}$ polarises in the curvature slot to
+With $\{\varphi_a\}$ orthonormal in $\Lambda^2$ under the record's $\langle X,Y\rangle=\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$ and $c_{abc}=\langle[\varphi_a,\varphi_b],\varphi_c\rangle$ totally antisymmetric, the record's index formula $(X^{\#})_{ab}=\tfrac12\sum c_{acd}c_{bef}X_{ce}X_{df}$ polarises in the curvature slot to
 
 $$\mathrm{sharpBil}(X,Y)_{ab}=\tfrac12\sum_{cdef}c_{acd}c_{bef}X_{ce}Y_{df},$$
 
 the two polarisation terms being equal under $(c,d,e,f)\mapsto(d,c,f,e)$, which flips both $c$'s at sign $(-1)^2$. Contracting against a symmetric $Y$ and writing $(\mathrm{ad}_\psi)_{xy}=\langle[\psi,\varphi_y],\varphi_x\rangle$ gives
 
-$$\langle Y,\mathrm{sharpBil}(E,Y)\rangle=\tfrac12\sum_\gamma\varepsilon_\gamma\operatorname{tr}\big((\mathrm{ad}_{\psi_\gamma})^{\mathsf T}Y\,\mathrm{ad}_{\psi_\gamma}Y\big)=-\tfrac12\sum_\gamma\varepsilon_\gamma\operatorname{tr}\big((\mathrm{ad}_{\psi_\gamma}Y)^2\big),$$
+$$\langle Y,\mathrm{sharpBil}(E,Y)\rangle=\tfrac12\sum_\gamma\varepsilon_\gamma\mathop{\mathrm{tr}}\big((\mathrm{ad}_{\psi_\gamma})^{\mathsf T}Y\,\mathrm{ad}_{\psi_\gamma}Y\big)=-\tfrac12\sum_\gamma\varepsilon_\gamma\mathop{\mathrm{tr}}\big((\mathrm{ad}_{\psi_\gamma}Y)^2\big),$$
 
 **which is the block's identity, sign and factor included.** The normalisation was checked against the anchor before use and against two further anchors the record fixes: $\mathrm{id}^{\#}=(n-2)\,\mathrm{id}$ holds **exactly** (machine zero at $n=4,5,6$), $vv^{\mathsf T}\#ww^{\mathsf T}=\tfrac12[v,w][v,w]^{\mathsf T}$ holds to $10^{-14}$, and the derived form reproduces [WeylReal.lean](../lean/HamiltonsCubic/Base/WeylReal.lean)'s own `sharpQF R η = -½ tr((ad_η R)²)` after the ordered-pair doubling is paid. *The anchor is what settles the $\tfrac12$: dropping it returns $2(n-2)\,\mathrm{id}$, the error [conventions.md](../findings/conventions.md) records as having entered twice.*
 
@@ -45,7 +45,7 @@ $$\frac{\langle Y_0,\,e\circ Y_0\rangle}{\lVert Y_0\rVert^2}=\tfrac12\big(\langl
 
 Three small gaps between the Lean and the prose, none of them defects in the mathematics:
 
-- **`trace_mul_pairDir_sq` proves $\operatorname{tr}(EY^2)$, not $\langle Y,\tfrac12(EY+YE)\rangle$.** The step between them needs symmetry of $Y$ and cyclicity, and is untyped. The same holds for reading `trace_pairDir_sq` as $\lVert Y\rVert^2$.
+- **`trace_mul_pairDir_sq` proves $\mathop{\mathrm{tr}}(EY^2)$, not $\langle Y,\tfrac12(EY+YE)\rangle$.** The step between them needs symmetry of $Y$ and cyclicity, and is untyped. The same holds for reading `trace_pairDir_sq` as $\lVert Y\rVert^2$.
 - **The bridge from $(u\cdot A_\gamma v)^2$ to $\langle\psi_\gamma,[u,v]\rangle^2$ is untyped.** It is ad-invariance, and it carries a sign: screened, $u\cdot(\mathrm{ad}_\psi v)=-\langle\psi,[u,v]\rangle$ to $10^{-15}$. *Squared, so the block's figure is unaffected.*
 - **The Lean transfers to the record only in orthonormal coordinates**, because `dotProduct` is the Euclidean form and $A^{\mathsf T}$ the Euclidean adjoint. $\mathrm{ad}_\psi$ is antisymmetric on $\Lambda^2$ in the $\varphi$ basis, which is orthonormal under the record's $\tfrac12$-carrying inner product, so the hypothesis is met. It is met rather than free.
 
@@ -71,11 +71,11 @@ Both shared-index rows are genuine orthonormal eigenvectors of the same $e$ (eig
 
 ## K5, confirmed, with the hypothesis correctly named
 
-$\langle W,Y_0\rangle=\operatorname{tr}(WY_0)=u^{\mathsf T}Wv=\theta\,\varepsilon_\beta\langle u,v\rangle=0$. **The hypothesis consumed is $\langle u,v\rangle=0$, which orthonormality of the eigenbasis supplies, and not $\alpha\ne\beta$ in the sense of distinct eigenvalues.** Screened at machine zero at every pair above, including the degenerate pair. And since $W\in\mathcal W_n$, $\langle W,\pi_{\mathcal W_n}Y_0\rangle=\langle W,Y_0\rangle=0$, so the admissible direction inherits it, which is what [L24](../findings/second-order.md) and [L125](../findings/second-order.md) need.
+$\langle W,Y_0\rangle=\mathop{\mathrm{tr}}(WY_0)=u^{\mathsf T}Wv=\theta\,\varepsilon_\beta\langle u,v\rangle=0$. **The hypothesis consumed is $\langle u,v\rangle=0$, which orthonormality of the eigenbasis supplies, and not $\alpha\ne\beta$ in the sense of distinct eigenvalues.** Screened at machine zero at every pair above, including the degenerate pair. And since $W\in\mathcal W_n$, $\langle W,\pi_{\mathcal W_n}Y_0\rangle=\langle W,Y_0\rangle=0$, so the admissible direction inherits it, which is what [L24](../findings/second-order.md) and [L125](../findings/second-order.md) need.
 
 ## K6, the implication is valid, the headline is wider than it
 
-**The inference is sound and needs only containment.** $L_e$ is self-adjoint, so eigenvectors at distinct eigenvalues are orthogonal. The orbit tangent lies inside $E(\tfrac12)$ by [post F37](../findings/fence-posts.md), so anything that is an $L_e$-eigenvector at $\mu\ne\tfrac12$ is orthogonal to all of $E(\tfrac12)$ and a fortiori to the tangent. **Whether the tangent is the whole $\tfrac12$-eigenspace is irrelevant to the conclusion, and here it happens to be the whole of it**: at this $W$, $\operatorname{spec}(L_e)$ on $\mathcal W_8$ is $1^{(1)},\tfrac12^{(16)},\tfrac13^{(54)},0^{(148)},(-\tfrac13)^{(81)}$, summing to $300$, and the orbit tangent has dimension $16$ with $\lVert L_et-\tfrac12t\rVert\le9\cdot10^{-17}$ on an orthonormal basis of it. The overlap of the projected pair direction with the tangent reproduces at $8.8\cdot10^{-17}$.
+**The inference is sound and needs only containment.** $L_e$ is self-adjoint, so eigenvectors at distinct eigenvalues are orthogonal. The orbit tangent lies inside $E(\tfrac12)$ by [post F37](../findings/fence-posts.md), so anything that is an $L_e$-eigenvector at $\mu\ne\tfrac12$ is orthogonal to all of $E(\tfrac12)$ and a fortiori to the tangent. **Whether the tangent is the whole $\tfrac12$-eigenspace is irrelevant to the conclusion, and here it happens to be the whole of it**: at this $W$, $\mathop{\mathrm{spec}}(L_e)$ on $\mathcal W_8$ is $1^{(1)},\tfrac12^{(16)},\tfrac13^{(54)},0^{(148)},(-\tfrac13)^{(81)}$, summing to $300$, and the orbit tangent has dimension $16$ with $\lVert L_et-\tfrac12t\rVert\le9\cdot10^{-17}$ on an orthonormal basis of it. The overlap of the projected pair direction with the tangent reproduces at $8.8\cdot10^{-17}$.
 
 **The scope the headline drops.** The argument applies only where the projected direction *is* an $L_e$-eigenvector, and that is a property of this configuration rather than of pair directions. Screened at the same $W$: the disjoint pair's projection is an eigenvector to $10^{-15}$, while both shared-index projections fail to be eigenvectors by a relative $1.2\cdot10^{-1}$. *For those, [post F39](../findings/fence-posts.md)'s trap has to be excluded some other way, and L233 offers nothing.* The block's *"The test is NOT vacuous"* is therefore established for one direction at one point, not for the route.
 

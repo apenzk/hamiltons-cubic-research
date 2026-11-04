@@ -60,13 +60,13 @@ So "§§3.4 and 3.5 then lift at no cost at all" is true of the *defect* cost an
 
 ## 4. "The defect cost quantified", the constant is right, the operative penalty is not the one stated
 
-**The $24$ checks out.** $\operatorname{tr}D=6\lVert\mathrm{Alt}R\rVert^2$ from the $\tfrac32$-Gram form; $\mathrm{Alt}(W)=0$ for a Weyl operator and $\lvert W\rvert=W+2W_-$ give $\mathrm{Alt}(\lvert W\rvert)=2\,\mathrm{Alt}(W_-)$, so $\lVert\mathrm{Alt}(\lvert W\rvert)\rVert^2=4\delta^2$ and $6\cdot4=24$. Consistent with [conventions.md](../findings/conventions.md)'s $\mathrm{Alt}$ normalisation and with $\mathrm{Alt}(W_+)=\mathrm{Alt}(W_-)$. **Pointwise, not critical-points-only** ($D(R)\succeq0$ holds for every symmetric $R$) so the record has not confused the two here.
+**The $24$ checks out.** $\mathop{\mathrm{tr}}D=6\lVert\mathrm{Alt}R\rVert^2$ from the $\tfrac32$-Gram form; $\mathrm{Alt}(W)=0$ for a Weyl operator and $\lvert W\rvert=W+2W_-$ give $\mathrm{Alt}(\lvert W\rvert)=2\,\mathrm{Alt}(W_-)$, so $\lVert\mathrm{Alt}(\lvert W\rvert)\rVert^2=4\delta^2$ and $6\cdot4=24$. Consistent with [conventions.md](../findings/conventions.md)'s $\mathrm{Alt}$ normalisation and with $\mathrm{Alt}(W_+)=\mathrm{Alt}(W_-)$. **Pointwise, not critical-points-only** ($D(R)\succeq0$ holds for every symmetric $R$) so the record has not confused the two here.
 
 **But the chain's penalty carries a factor the block drops.** [ATTEMPTS.md:892](../ATTEMPTS.md) Result 7 states it as
 
 $$\frac{J_4-J_5}{\sqrt{1-e^2}}\;\le\;\frac{24\,\delta^2\lambda_{\max}(\mathrm{Ric}(\lvert W\rvert))}{\sqrt{1-e^2}} .$$
 
-The L18 block writes the numerator only, *"it costs at most $24\lVert\mathrm{Alt}(W_-)\rVert^2\lambda_{\max}(\mathrm{Ric}(\lvert W\rvert))$"*, and never mentions $e$, never bounds it, and then draws the dichotomy, which needs the divided form. $1/\sqrt{1-e^2}\ge1$ always and is unbounded as $e\to1$. **The stated cost is the §3.3-level cost; the dichotomy runs on the §3.5-level cost.** The record's own diagnosis confirms the amplified version is what bites: at Fox *"the penalty $p=(J_4-J_5)/r^2=0.8165$ makes the lifted 3.3.6 ceiling on $\operatorname{tr}S^4$ vacuous"* ([ATTEMPTS.md:908](../ATTEMPTS.md)).
+The L18 block writes the numerator only, *"it costs at most $24\lVert\mathrm{Alt}(W_-)\rVert^2\lambda_{\max}(\mathrm{Ric}(\lvert W\rvert))$"*, and never mentions $e$, never bounds it, and then draws the dichotomy, which needs the divided form. $1/\sqrt{1-e^2}\ge1$ always and is unbounded as $e\to1$. **The stated cost is the §3.3-level cost; the dichotomy runs on the §3.5-level cost.** The record's own diagnosis confirms the amplified version is what bites: at Fox *"the penalty $p=(J_4-J_5)/r^2=0.8165$ makes the lifted 3.3.6 ceiling on $\mathop{\mathrm{tr}}S^4$ vacuous"* ([ATTEMPTS.md:908](../ATTEMPTS.md)).
 
 ## 5. The threshold is stated in a symbol the record never defines
 
@@ -144,6 +144,6 @@ Not vacuously false, but very nearly empty. At $n=12$ the hypothesis $\theta\ge\
 
 ## 11. The hypotheses it actually needs
 
-> **Observation L18 (dichotomy half).** Assume (a) $J_5\ge0$ at critical points off the class $[H,W]=0$, and (b) the E-track certificate. Then for every critical point $W$ with $\lVert W\rVert=1$ and $\theta\ge\tilde\theta_0(n)=\Theta_n$, either $\operatorname{scal}(\lvert W\rvert)\ge(n+1)\Theta_n$ or $\delta^2\ge c(n)>0$, with $c(12)=1.0008\times10^{-3}$. The chain is silent for $\delta^2\gtrsim2\times10^{-3}$.
+> **Observation L18 (dichotomy half).** Assume (a) $J_5\ge0$ at critical points off the class $[H,W]=0$, and (b) the E-track certificate. Then for every critical point $W$ with $\lVert W\rVert=1$ and $\theta\ge\tilde\theta_0(n)=\Theta_n$, either $\mathop{\mathrm{scal}}(\lvert W\rvert)\ge(n+1)\Theta_n$ or $\delta^2\ge c(n)>0$, with $c(12)=1.0008\times10^{-3}$. The chain is silent for $\delta^2\gtrsim2\times10^{-3}$.
 >
-> **Lemma L18 (pricing half; unconditional, pointwise).** For every symmetric $R$ on $\Lambda^2\mathbb R^n$, $D(R)=\tfrac32\sum_{k,l,m}\mathrm{Alt}(R)_{iklm}\mathrm{Alt}(R)_{jklm}\succeq0$ and $\operatorname{tr}D=6\lVert\mathrm{Alt}R\rVert^2$; hence at any $W$, $J_4\le24\,\delta^2\,\lambda_{\max}(\mathrm{Ric}(\lvert W\rvert))$, sharp at the $\mathbb{CP}^2$-type competitor.
+> **Lemma L18 (pricing half; unconditional, pointwise).** For every symmetric $R$ on $\Lambda^2\mathbb R^n$, $D(R)=\tfrac32\sum_{k,l,m}\mathrm{Alt}(R)_{iklm}\mathrm{Alt}(R)_{jklm}\succeq0$ and $\mathop{\mathrm{tr}}D=6\lVert\mathrm{Alt}R\rVert^2$; hence at any $W$, $J_4\le24\,\delta^2\,\lambda_{\max}(\mathrm{Ric}(\lvert W\rvert))$, sharp at the $\mathbb{CP}^2$-type competitor.

@@ -6,16 +6,16 @@ You are an adversarial reviewer. **Work from the definitions below and from the 
 
 $\hat U,V$ are real traceless symmetric $3\times3$ matrices. Write
 
-$$\Phi(\hat U,V)=\alpha\operatorname{tr}\hat U^3+\beta\operatorname{tr}(\hat UV^2)+\langle\hat U,A\rangle+\langle V,C\rangle,\qquad\alpha=\tfrac{15}4,\ \beta=\tfrac94,$$
+$$\Phi(\hat U,V)=\alpha\mathop{\mathrm{tr}}\hat U^3+\beta\mathop{\mathrm{tr}}(\hat UV^2)+\langle\hat U,A\rangle+\langle V,C\rangle,\qquad\alpha=\tfrac{15}4,\ \beta=\tfrac94,$$
 
-$$n_U=\lvert\hat U\rvert^2,\quad n_V=\lvert V\rvert^2,\quad p_3=\operatorname{tr}\hat U^3,\quad q=\operatorname{tr}(\hat UV^2),\qquad T=\tfrac32n_U+\tfrac12n_V .$$
+$$n_U=\lvert\hat U\rvert^2,\quad n_V=\lvert V\rvert^2,\quad p_3=\mathop{\mathrm{tr}}\hat U^3,\quad q=\mathop{\mathrm{tr}}(\hat UV^2),\qquad T=\tfrac32n_U+\tfrac12n_V .$$
 
 $A$ and $C$ are the Lagrange fields, **given and not under review**: $A\equiv3\mu\hat U-3\alpha\hat U^2-\beta V^2$ and $C\equiv\mu V-\beta\{\hat U,V\}$, each up to a multiple of $I$.
 
-**Given, verbatim from the record, batch 20's two pairings.** From the $\hat U$ equation, $3\alpha p_3+\beta q+\langle\hat U,A\rangle=3\mu n_U$. From the $V$ equation $\beta\{\hat U,V\}+C\equiv\mu V$, using $\operatorname{tr}(V\{\hat U,V\})=2\operatorname{tr}(\hat UV^2)$, $2\beta q+\langle V,C\rangle=\mu n_V$.
+**Given, verbatim from the record, batch 20's two pairings.** From the $\hat U$ equation, $3\alpha p_3+\beta q+\langle\hat U,A\rangle=3\mu n_U$. From the $V$ equation $\beta\{\hat U,V\}+C\equiv\mu V$, using $\mathop{\mathrm{tr}}(V\{\hat U,V\})=2\mathop{\mathrm{tr}}(\hat UV^2)$, $2\beta q+\langle V,C\rangle=\mu n_V$.
 
-**Given, verbatim from the record, batch 21's condition.** At every local maximum, for all traceless symmetric $X,Y$ with $3\operatorname{tr}(\hat UX)+\operatorname{tr}(VY)=0$,
-$$6\alpha\operatorname{tr}(\hat UX^2)+4\beta\operatorname{tr}(XVY)+2\beta\operatorname{tr}(\hat UY^2)\ \le\ \mu\big(3\lvert X\rvert^2+\lvert Y\rvert^2\big).$$
+**Given, verbatim from the record, batch 21's condition.** At every local maximum, for all traceless symmetric $X,Y$ with $3\mathop{\mathrm{tr}}(\hat UX)+\mathop{\mathrm{tr}}(VY)=0$,
+$$6\alpha\mathop{\mathrm{tr}}(\hat UX^2)+4\beta\mathop{\mathrm{tr}}(XVY)+2\beta\mathop{\mathrm{tr}}(\hat UY^2)\ \le\ \mu\big(3\lvert X\rvert^2+\lvert Y\rvert^2\big).$$
 
 **Given, verbatim from the record, batch 35.** Three non-commuting critical points clear batch 18, batch 21 and batch 33's orbit bound together: $(1,-3,2)$ with $\mu=11.60060$, $(-1,-3,4)$ with $\mu=24.43870$, and $(19,-20,1)$ with $\mu=762.38453$. Batch 18 needs $\mu\ge9.3675$ at the first and batch 21 needs $\mu\ge15$.
 

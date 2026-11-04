@@ -7,15 +7,15 @@
 | # | claim as the record states it | verdict |
 | --- | --- | --- |
 | 1 | $\mathrm{Alt}(u_-)=a\star$ with $a=\tfrac1{3\sqrt6}$, and $\delta^2(u)=\tfrac19$ | **CONFIRMED**, re-derived from scratch, both exact |
-| 2 | $d^+\delta^2(u;H)=-2aF(H)$, $F(H)=H_{22}+H_{33}+\operatorname{tr}(\Pi_{ASD}(P_0HP_0)_-)$ | **CONFIRMED**, derived in full, §3 |
+| 2 | $d^+\delta^2(u;H)=-2aF(H)$, $F(H)=H_{22}+H_{33}+\mathop{\mathrm{tr}}(\Pi_{ASD}(P_0HP_0)_-)$ | **CONFIRMED**, derived in full, §3 |
 | 3 | ingredient (a): smooth branch $=-2a(H_{22}+H_{33})$ by Daleckii–Krein | **CONFIRMED** |
 | 4 | ingredient (b): kink branch $=2\langle\mathrm{Alt}(W_-),(P_0HP_0)_-\rangle$, with $\mathrm{Alt}(W_-)\vert_{\ker W}=-a\Pi_{ASD}$ | **CONFIRMED** |
-| 5 | ingredient (c): Jensen compression $\operatorname{tr}(\Pi_{ASD}(P_0HP_0)_-)\ge\operatorname{tr}(B_-)$ | **CONFIRMED**, and it needs no imported theorem, §5 gives a four-line elementary proof |
-| 6 | ingredient (d): Bianchi forces $H_{11}+H_{22}+H_{33}=\operatorname{tr}(B)$; tangency forces $2H_{11}=H_{22}+H_{33}$ | **CONFIRMED**, both, and both are load-bearing |
-| 7 | $F\ge\tfrac23\operatorname{tr}(B_+)+\tfrac13\operatorname{tr}(B_-)\ge0$, hence $d^+\delta^2\le0$, dimension-free | **CONFIRMED** at every $n\ge4$ |
+| 5 | ingredient (c): Jensen compression $\mathop{\mathrm{tr}}(\Pi_{ASD}(P_0HP_0)_-)\ge\mathop{\mathrm{tr}}(B_-)$ | **CONFIRMED**, and it needs no imported theorem, §5 gives a four-line elementary proof |
+| 6 | ingredient (d): Bianchi forces $H_{11}+H_{22}+H_{33}=\mathop{\mathrm{tr}}(B)$; tangency forces $2H_{11}=H_{22}+H_{33}$ | **CONFIRMED**, both, and both are load-bearing |
+| 7 | $F\ge\tfrac23\mathop{\mathrm{tr}}(B_+)+\tfrac13\mathop{\mathrm{tr}}(B_-)\ge0$, hence $d^+\delta^2\le0$, dimension-free | **CONFIRMED** at every $n\ge4$ |
 | 8 | $\{F=0\}=\{H:\Pi_{ASD}H\Pi_{\ker u}=0\}$, a linear subspace | **CONFIRMED**, both inclusions proved, §6 |
 | 9 | the three families named in the block's prose are the equality set | **REFUTED**, as the block's own audit line says, but **the prose was never repaired and still asserts it** |
-| 10 | $\operatorname{codim}\{F=0\}\le186$ at $n=12$; at least $1451$ of $1637$ | **CONFIRMED**, the count is $6+180=186$ exactly, §7 |
+| 10 | $\mathop{\mathrm{codim}}\{F=0\}\le186$ at $n=12$; at least $1451$ of $1637$ | **CONFIRMED**, the count is $6+180=186$ exactly, §7 |
 | 11 | $d^+\Phi=2a\kappa_nF$, so the conclusion needs $\kappa_n\le0$ and is **not** dimension-free | **CONFIRMED**, and it also silently needs $u$ critical, §8 |
 | 12 | $\Theta_{11}=1.21716<\sqrt{3/2}<1.24838=\Theta_{13}$, odd-$n$ formula with its square root | **CONFIRMED**, $\Theta_{11}^2=\tfrac{40}{27}$, $\Theta_{13}^2=\tfrac{120}{77}$ |
 | 13 | the crossover still lands at $n\ge12$ under the corrected $\Theta_n$ | **CONFIRMED**, from $n^2-13n+18>0$ at odd $n$ and $n^2-12n+8>0$ at even $n$, but the block's two-value display does not establish it, §9 |
@@ -45,9 +45,9 @@ This is what I verified, and it is the form in which the result should be writte
 
 > **Lemma L17.** Let $n\ge4$ and let $u\in\mathcal W_n$ be the unit-norm $\mathbb{CP}^2$-type competitor $\mathcal S^4(\alpha)$ zero-padded into $\mathbb R^n$, with distinguished $4$-plane $V\subset\mathbb R^n$, $\Lambda^2V=\Lambda^+\oplus\Lambda^-$, and $\hat\omega_1,\hat\omega_2,\hat\omega_3$ the orthonormal self-dual forms diagonalising $u$. Write $a=\tfrac1{3\sqrt6}$, $P_0=\Pi_{\ker u}$, $\Pi_{ASD}$ for the projection onto $\Lambda^-$, $B=\Pi_{ASD}H\Pi_{ASD}$, and $\delta^2(W)=\lVert\mathrm{Alt}(W_-)\rVert^2$ in the sign convention above. Then for every $H\in\mathcal W_n$ with $\langle H,u\rangle=0$:
 >
-> **(i)** $\displaystyle d^+\delta^2(u;H)=-2a\,F(H),\qquad F(H)=H_{22}+H_{33}+\operatorname{tr}\big(\Pi_{ASD}(P_0HP_0)_-\big).$
+> **(i)** $\displaystyle d^+\delta^2(u;H)=-2a\,F(H),\qquad F(H)=H_{22}+H_{33}+\mathop{\mathrm{tr}}\big(\Pi_{ASD}(P_0HP_0)_-\big).$
 >
-> **(ii)** $\displaystyle F(H)\;\ge\;\tfrac23\operatorname{tr}(B_+)+\tfrac13\operatorname{tr}(B_-)\;\ge\;0$, hence $d^+\delta^2(u;H)\le0$, **at every $n\ge4$, with no dimension hypothesis.**
+> **(ii)** $\displaystyle F(H)\;\ge\;\tfrac23\mathop{\mathrm{tr}}(B_+)+\tfrac13\mathop{\mathrm{tr}}(B_-)\;\ge\;0$, hence $d^+\delta^2(u;H)\le0$, **at every $n\ge4$, with no dimension hypothesis.**
 >
 > **(iii)** $F(H)=0\iff\Pi_{ASD}H\,\Pi_{\ker u}=0$. The equality set is therefore a **linear subspace** of $T_uS\cap\mathcal W_n$, of codimension at most $6+3(\dim\ker u-3)$; at $n=12$ that is $186$, leaving at least $1451$ of the $1637$ dimensions of $T_uS$.
 >
@@ -69,10 +69,10 @@ This is what I verified, and it is the form in which the result should be writte
 
 ## 3. The one-sided derivative, derived
 
-**Set-up.** $u=\tfrac1{\sqrt6}\big(2\hat\omega_1\hat\omega_1^{\mathsf T}-\hat\omega_2\hat\omega_2^{\mathsf T}-\hat\omega_3\hat\omega_3^{\mathsf T}\big)$. Norm $\tfrac16(4+1+1)=1$; trace $\tfrac1{\sqrt6}(2-1-1)=0$. So $\operatorname{spec}(u)=\{2/\sqrt6,\,-1/\sqrt6,\,-1/\sqrt6\}$ on $\Lambda^+$ and $0$ on $\ker u=\Lambda^-\oplus R$, where $R=\Lambda^2\mathbb R^n\ominus\Lambda^2V$. **The kernel is where everything happens, and it grows with $n$.**
+**Set-up.** $u=\tfrac1{\sqrt6}\big(2\hat\omega_1\hat\omega_1^{\mathsf T}-\hat\omega_2\hat\omega_2^{\mathsf T}-\hat\omega_3\hat\omega_3^{\mathsf T}\big)$. Norm $\tfrac16(4+1+1)=1$; trace $\tfrac1{\sqrt6}(2-1-1)=0$. So $\mathop{\mathrm{spec}}(u)=\{2/\sqrt6,\,-1/\sqrt6,\,-1/\sqrt6\}$ on $\Lambda^+$ and $0$ on $\ker u=\Lambda^-\oplus R$, where $R=\Lambda^2\mathbb R^n\ominus\Lambda^2V$. **The kernel is where everything happens, and it grows with $n$.**
 
 **$a$, from the definition of $\mathrm{Alt}$.** $u_-=\tfrac12(\lvert u\rvert-u)=\tfrac1{\sqrt6}(\hat\omega_2\hat\omega_2^{\mathsf T}+\hat\omega_3\hat\omega_3^{\mathsf T})$. Since $\mathrm{Alt}$ is the orthogonal projection onto $\mathbb R\star$ inside $S^2(\Lambda^2V)$ and $\lVert\star\rVert^2=6$,
-$$\mathrm{Alt}(u_-)=\frac{\langle u_-,\star\rangle}{6}\,\star=\frac{\operatorname{tr}(u_-)}{6}\star=\frac{2/\sqrt6}{6}\star=\frac1{3\sqrt6}\star=a\star,$$
+$$\mathrm{Alt}(u_-)=\frac{\langle u_-,\star\rangle}{6}\,\star=\frac{\mathop{\mathrm{tr}}(u_-)}{6}\star=\frac{2/\sqrt6}{6}\star=\frac1{3\sqrt6}\star=a\star,$$
 using $\star=+1$ on $\Lambda^+$, where $u_-$ is supported. Then $\delta^2(u)=a^2\lVert\star\rVert^2=\tfrac{6}{9\cdot6}=\tfrac19$, **the record's $\delta^2=1/9$, recovered exactly, and independent of $n$ because $\mathrm{Alt}$ acts entrywise and $u_-$ has all four indices in $V$.**
 
 **$\mathrm{Alt}(u_-)$ on the kernel.** $a\star$ is $+a$ on $\Lambda^+$, $-a$ on $\Lambda^-$, and **zero on $R$**, again because $\mathrm{Alt}(u_-)$ has all indices in $V$. So $\mathrm{Alt}(u_-)\vert_{\ker u}=-a\Pi_{ASD}$, which is ingredient (b)'s claim, and the vanishing on $R$ is precisely why the padded flat sits in $\{F=0\}$.
@@ -87,11 +87,11 @@ Split $d^+W_-[H]$ over $u$'s spectral decomposition.
 $$\sum_{i=1}^{3}A_{ii}f'(\lambda_i)H_{ii}=a\big[0\cdot H_{11}+(-1)H_{22}+(-1)H_{33}\big]=-a(H_{22}+H_{33}),$$
 since $f'=0$ at $\lambda_1=2/\sqrt6>0$ and $f'=-1$ at $\lambda_2=\lambda_3=-1/\sqrt6<0$. Doubling gives $-2a(H_{22}+H_{33})$: **ingredient (a) confirmed.**
 
-**(b) The kernel block, the kink.** On $\ker u$ the eigenvalues of $u+tH$ are, to first order, $t\mu_k$ with $\mu_k\in\operatorname{spec}(P_0HP_0)$ and eigenvectors the corresponding eigenvectors of $P_0HP_0$ (first-order degenerate perturbation theory; the coupling to $\Lambda^+$ enters the kernel eigenvalues at $O(t^2)$ and so does not reach $d^+$). Hence $\big(W_-\big)\big\vert_{\ker u}=t\,(P_0HP_0)_-+o(t)$, and the contribution is
-$$2\big\langle A,(P_0HP_0)_-\big\rangle=2\operatorname{tr}\!\big(A\vert_{\ker u}(P_0HP_0)_-\big)=-2a\operatorname{tr}\!\big(\Pi_{ASD}(P_0HP_0)_-\big).$$
+**(b) The kernel block, the kink.** On $\ker u$ the eigenvalues of $u+tH$ are, to first order, $t\mu_k$ with $\mu_k\in\mathop{\mathrm{spec}}(P_0HP_0)$ and eigenvectors the corresponding eigenvectors of $P_0HP_0$ (first-order degenerate perturbation theory; the coupling to $\Lambda^+$ enters the kernel eigenvalues at $O(t^2)$ and so does not reach $d^+$). Hence $\big(W_-\big)\big\vert_{\ker u}=t\,(P_0HP_0)_-+o(t)$, and the contribution is
+$$2\big\langle A,(P_0HP_0)_-\big\rangle=2\mathop{\mathrm{tr}}\!\big(A\vert_{\ker u}(P_0HP_0)_-\big)=-2a\mathop{\mathrm{tr}}\!\big(\Pi_{ASD}(P_0HP_0)_-\big).$$
 **Ingredient (b) confirmed, including the sign.** Note the mixed $\Lambda^+$–$\ker u$ divided-difference terms also pair to zero against the diagonal $A$, so nothing is double-counted.
 
-**Summing:** $d^+\delta^2(u;H)=-2a\big[H_{22}+H_{33}+\operatorname{tr}(\Pi_{ASD}(P_0HP_0)_-)\big]=-2aF(H)$. **Claim 2 confirmed.**
+**Summing:** $d^+\delta^2(u;H)=-2a\big[H_{22}+H_{33}+\mathop{\mathrm{tr}}(\Pi_{ASD}(P_0HP_0)_-)\big]=-2aF(H)$. **Claim 2 confirmed.**
 
 **What the non-smoothness costs.** Exactly one term: the kink branch. Were $\delta^2$ smooth at $u$ the derivative would be $-2a(H_{22}+H_{33})$ alone, and that is **sign-indefinite**, take any Weyl $H$ with $H_{22}+H_{33}<0$, which the constraints permit. The whole of $F\ge0$ is bought by the kink term, which is $\ge0$ always and which the Bianchi balance then dominates. **The large kernel is not an obstacle the proof works around; it is the entire mechanism**, and the proof's structure (smooth branch plus zero-mode sliver), is the correct handling of it.
 
@@ -99,33 +99,33 @@ $$2\big\langle A,(P_0HP_0)_-\big\rangle=2\operatorname{tr}\!\big(A\vert_{\ker u}
 
 **Bianchi.** $\star$, read as an element of $S^2(\Lambda^2)$, is $\star_{(ij)(kl)}=\epsilon_{ijkl}$ on $V$, totally antisymmetric, so $\star\in\Lambda^4$ and $\mathrm{Alt}(\star)=\star$. For $H$ Weyl, $\mathrm{Alt}(H)=0$, so
 $$\langle H,\star\rangle=\langle H,\mathrm{Alt}\star\rangle=\langle\mathrm{Alt}H,\star\rangle=0.$$
-Reading $\langle H,\star\rangle=\operatorname{tr}(H\star)$ blockwise, $\star$ being $+1$ on $\Lambda^+$, $-1$ on $\Lambda^-$, $0$ on $R$:
-$$H_{11}+H_{22}+H_{33}-\operatorname{tr}(B)=0.$$
+Reading $\langle H,\star\rangle=\mathop{\mathrm{tr}}(H\star)$ blockwise, $\star$ being $+1$ on $\Lambda^+$, $-1$ on $\Lambda^-$, $0$ on $R$:
+$$H_{11}+H_{22}+H_{33}-\mathop{\mathrm{tr}}(B)=0.$$
 **Confirmed: the first Bianchi identity is exactly an SD/ASD trace balance on the distinguished $4$-plane, and it does the work claimed.**
 
-**Tangency.** $0=\langle H,u\rangle=\tfrac1{\sqrt6}(2H_{11}-H_{22}-H_{33})$, so $2H_{11}=H_{22}+H_{33}$. **Confirmed: unit-norm tangency fixes the remaining diagonal entry against the balance, and it does the work claimed.** Substituting, $\tfrac32(H_{22}+H_{33})=\operatorname{tr}(B)$, i.e. $H_{22}+H_{33}=\tfrac23\operatorname{tr}(B)$.
+**Tangency.** $0=\langle H,u\rangle=\tfrac1{\sqrt6}(2H_{11}-H_{22}-H_{33})$, so $2H_{11}=H_{22}+H_{33}$. **Confirmed: unit-norm tangency fixes the remaining diagonal entry against the balance, and it does the work claimed.** Substituting, $\tfrac32(H_{22}+H_{33})=\mathop{\mathrm{tr}}(B)$, i.e. $H_{22}+H_{33}=\tfrac23\mathop{\mathrm{tr}}(B)$.
 
-**Neither fact is decorative.** Drop Bianchi and §12's witness kills the inequality. Drop tangency and $H_{11}$ is free, so $H_{22}+H_{33}$ is unrelated to $\operatorname{tr}(B)$ and the chain has no first term.
+**Neither fact is decorative.** Drop Bianchi and §12's witness kills the inequality. Drop tangency and $H_{11}$ is free, so $H_{22}+H_{33}$ is unrelated to $\mathop{\mathrm{tr}}(B)$ and the chain has no first term.
 
 ## 5. The compression step, and the imported-theorem trap
 
 ATTEMPTS cites "Jensen's trace inequality (Hansen–Pedersen, $f(x)=x_-$)". The brief warns that one route here died on a cited theorem assuming a unital algebra. **Here the citation is safe but also unnecessary**, and I record the elementary replacement so no consumer has to check Hansen–Pedersen's hypotheses against $\mathcal W_n$.
 
 Write $C=P_0HP_0$, $\Pi=\Pi_{ASD}$, and note $\Pi P_0=\Pi$ since $\Lambda^-\subseteq\ker u$, so $\Pi C\Pi=\Pi H\Pi=B$. For any $Z$ with $0\le Z\le\Pi$:
-$$-\operatorname{tr}(CZ)=\operatorname{tr}(C_-Z)-\operatorname{tr}(C_+Z)\le\operatorname{tr}(C_-Z)\le\operatorname{tr}(C_-\Pi),$$
-the last step because $C_-\succeq0$ and $Z\le\Pi$. Now $\operatorname{tr}(B_-)=\max\{-\operatorname{tr}(BY):0\le Y\le\Pi\}$ (the variational characterisation of the negative part, on the space $\Lambda^-$), and $-\operatorname{tr}(BY)=-\operatorname{tr}(C\,\Pi Y\Pi)$ with $0\le\Pi Y\Pi\le\Pi$. Hence
-$$\operatorname{tr}(B_-)\le\operatorname{tr}(\Pi C_-)=\operatorname{tr}\!\big(\Pi_{ASD}(P_0HP_0)_-\big).$$
+$$-\mathop{\mathrm{tr}}(CZ)=\mathop{\mathrm{tr}}(C_-Z)-\mathop{\mathrm{tr}}(C_+Z)\le\mathop{\mathrm{tr}}(C_-Z)\le\mathop{\mathrm{tr}}(C_-\Pi),$$
+the last step because $C_-\succeq0$ and $Z\le\Pi$. Now $\mathop{\mathrm{tr}}(B_-)=\max\{-\mathop{\mathrm{tr}}(BY):0\le Y\le\Pi\}$ (the variational characterisation of the negative part, on the space $\Lambda^-$), and $-\mathop{\mathrm{tr}}(BY)=-\mathop{\mathrm{tr}}(C\,\Pi Y\Pi)$ with $0\le\Pi Y\Pi\le\Pi$. Hence
+$$\mathop{\mathrm{tr}}(B_-)\le\mathop{\mathrm{tr}}(\Pi C_-)=\mathop{\mathrm{tr}}\!\big(\Pi_{ASD}(P_0HP_0)_-\big).$$
 **Ingredient (c) confirmed, with no operator-convexity, no unitality, and no imported theorem.** (Hansen–Pedersen would also apply: the inclusion $\Lambda^-\hookrightarrow\ker u$ is an isometry, so $V^*V=I$ and $f(x)=x_-$ is convex with $f(0)=0$. But the elementary route is what I checked.)
 
-**The chain.** With $\operatorname{tr}(B)=\operatorname{tr}(B_+)-\operatorname{tr}(B_-)$ in the record's sign convention,
-$$F\;\ge\;\tfrac23\operatorname{tr}(B)+\operatorname{tr}(B_-)\;=\;\tfrac23\operatorname{tr}(B_+)-\tfrac23\operatorname{tr}(B_-)+\operatorname{tr}(B_-)\;=\;\tfrac23\operatorname{tr}(B_+)+\tfrac13\operatorname{tr}(B_-)\;\ge\;0.$$
+**The chain.** With $\mathop{\mathrm{tr}}(B)=\mathop{\mathrm{tr}}(B_+)-\mathop{\mathrm{tr}}(B_-)$ in the record's sign convention,
+$$F\;\ge\;\tfrac23\mathop{\mathrm{tr}}(B)+\mathop{\mathrm{tr}}(B_-)\;=\;\tfrac23\mathop{\mathrm{tr}}(B_+)-\tfrac23\mathop{\mathrm{tr}}(B_-)+\mathop{\mathrm{tr}}(B_-)\;=\;\tfrac23\mathop{\mathrm{tr}}(B_+)+\tfrac13\mathop{\mathrm{tr}}(B_-)\;\ge\;0.$$
 **Claim 7 confirmed. Nothing in this chain mentions $n$: $d^+\delta^2(u;\cdot)\le0$ holds at every $n\ge4$, which is what the landscape entry's correction says is dimension-free.**
 
 ## 6. The equality set, both inclusions
 
-**$\Leftarrow$.** Suppose $\Pi_{ASD}H\Pi_{\ker u}=0$. Then $B=\Pi_{ASD}H\Pi_{ASD}=(\Pi_{ASD}H\Pi_{\ker u})\Pi_{ASD}=0$, using $\Pi_{\ker u}\Pi_{ASD}=\Pi_{ASD}$; and $\Pi_{ASD}C=\Pi_{ASD}HP_0=0$, so $\Lambda^-\subseteq\ker C\subseteq\ker C_-$ and $\operatorname{tr}(\Pi_{ASD}C_-)=0$. Since $B=0$ gives $\operatorname{tr}(B)=0$ and hence $H_{22}+H_{33}=\tfrac23\operatorname{tr}(B)=0$, we get $F=0$.
+**$\Leftarrow$.** Suppose $\Pi_{ASD}H\Pi_{\ker u}=0$. Then $B=\Pi_{ASD}H\Pi_{ASD}=(\Pi_{ASD}H\Pi_{\ker u})\Pi_{ASD}=0$, using $\Pi_{\ker u}\Pi_{ASD}=\Pi_{ASD}$; and $\Pi_{ASD}C=\Pi_{ASD}HP_0=0$, so $\Lambda^-\subseteq\ker C\subseteq\ker C_-$ and $\mathop{\mathrm{tr}}(\Pi_{ASD}C_-)=0$. Since $B=0$ gives $\mathop{\mathrm{tr}}(B)=0$ and hence $H_{22}+H_{33}=\tfrac23\mathop{\mathrm{tr}}(B)=0$, we get $F=0$.
 
-**$\Rightarrow$.** Suppose $F=0$. The chain forces $\operatorname{tr}(B_+)=\operatorname{tr}(B_-)=0$, so $B=0$; and then $F=\operatorname{tr}(\Pi_{ASD}C_-)=0$ with $C_-\succeq0$, $\Pi_{ASD}\succeq0$, so $\Pi_{ASD}C_-=0$, i.e. $\Lambda^-\subseteq\ker C_-=E_{\ge0}(C)$. $E_{\ge0}(C)$ is $C$-invariant and $C\vert_{E_{\ge0}}\succeq0$; for $v\in\Lambda^-$, $\langle v,Cv\rangle=\langle v,Bv\rangle=0$, and a positive semidefinite operator kills every vector on which its quadratic form vanishes, so $Cv=0$. Thus $C\Pi_{ASD}=0$, hence $\Pi_{ASD}C=0$, hence $\Pi_{ASD}H\Pi_{\ker u}=\Pi_{ASD}P_0HP_0=\Pi_{ASD}C=0$.
+**$\Rightarrow$.** Suppose $F=0$. The chain forces $\mathop{\mathrm{tr}}(B_+)=\mathop{\mathrm{tr}}(B_-)=0$, so $B=0$; and then $F=\mathop{\mathrm{tr}}(\Pi_{ASD}C_-)=0$ with $C_-\succeq0$, $\Pi_{ASD}\succeq0$, so $\Pi_{ASD}C_-=0$, i.e. $\Lambda^-\subseteq\ker C_-=E_{\ge0}(C)$. $E_{\ge0}(C)$ is $C$-invariant and $C\vert_{E_{\ge0}}\succeq0$; for $v\in\Lambda^-$, $\langle v,Cv\rangle=\langle v,Bv\rangle=0$, and a positive semidefinite operator kills every vector on which its quadratic form vanishes, so $Cv=0$. Thus $C\Pi_{ASD}=0$, hence $\Pi_{ASD}C=0$, hence $\Pi_{ASD}H\Pi_{\ker u}=\Pi_{ASD}P_0HP_0=\Pi_{ASD}C=0$.
 
 **Claim 8 confirmed. $\{F=0\}$ is the kernel of the linear map $H\mapsto\Pi_{ASD}H\Pi_{\ker u}$ intersected with $T_uS\cap\mathcal W_n$, a linear subspace, as the audit says.**
 
@@ -137,7 +137,7 @@ At $n=12$: $\dim\mathcal W_{12}=\tfrac{12\cdot9\cdot13\cdot14}{12}=1638$, so $\d
 
 The map $H\mapsto\Pi_{ASD}H\Pi_{\ker u}$ records the $\Lambda^-\times\Lambda^-$ block, which is **symmetric** ($6$ independent entries) and the $\Lambda^-\times R$ block, $3\times60=180$ entries. Total target dimension
 $$6+180=186.$$
-So $\operatorname{codim}\{F=0\}\le186$, with "$\le$" the honest form because the map is restricted to the Bianchi- and tangency-constrained $T_uS\cap\mathcal W_{12}$ and its rank there is not established. Hence $\{F=0\}$ holds at least $1637-186=1451$ dimensions, and $1451/1637=0.8863\ldots$, **"about $89\%$" ✔. Claim 10 confirmed, and the arithmetic is exact.**
+So $\mathop{\mathrm{codim}}\{F=0\}\le186$, with "$\le$" the honest form because the map is restricted to the Bianchi- and tangency-constrained $T_uS\cap\mathcal W_{12}$ and its rank there is not established. Hence $\{F=0\}$ holds at least $1637-186=1451$ dimensions, and $1451/1637=0.8863\ldots$, **"about $89\%$" ✔. Claim 10 confirmed, and the arithmetic is exact.**
 
 **The consequence the block states correctly and which matters most:** on $89\%$ of directions $d^+\Phi=0$, an equality, so first-order protection decides nothing there and the entire content is pushed to second order.
 
@@ -173,7 +173,7 @@ Both give the integer threshold $n\ge12$, so under the corrected $\Theta_n$ the 
 The block's closing sentence: *"What remains at this point is second-order: the mixed flat directions need a Hessian comparison, verified numerically but not yet proven."*
 
 **What is owed, precisely:** for every $H\in\{F=0\}$ that is neither an orbit/hyper-Kähler tangent (where $\Phi$ is constant) nor supported on $\Lambda^2\mathbb R^{n-4}$ (the padded flat, cleared with the $18\times$ margin), prove
-$$\tfrac12\operatorname{Hess}(P\vert_S)_u[H,H]-\kappa_n\,c_2(H)\;\le\;0,\qquad c_2(H)=\tfrac12\tfrac{d^2}{dt^2}\Big\vert_{t=0^+}\delta^2(\cos t\,u+\sin t\,H),$$
+$$\tfrac12\mathop{\mathrm{Hess}}(P\vert_S)_u[H,H]-\kappa_n\,c_2(H)\;\le\;0,\qquad c_2(H)=\tfrac12\tfrac{d^2}{dt^2}\Big\vert_{t=0^+}\delta^2(\cos t\,u+\sin t\,H),$$
 equivalently, via [Lemma L134](../findings/route-a.md)(b), $c_2(H)\le\theta^*/(2\lvert\kappa_n\rvert)$, whose binding value as $n\to\infty$ is $0.3591$.
 
 **Three things must be said about it.**
@@ -187,7 +187,7 @@ equivalently, via [Lemma L134](../findings/route-a.md)(b), $c_2(H)\le\theta^*/(2
 ATTEMPTS asserts "$F$ is convex and $1$-homogeneous on the tangent space, so directed subgradient descent certifies the sign globally".
 
 - **$1$-homogeneity: confirmed.** $H\mapsto H_{22}+H_{33}$ is linear, $(P_0(sH)P_0)_-=s(P_0HP_0)_-$ for $s>0$.
-- **Convexity: not established by anything on file.** $x\mapsto x_-$ is convex as a scalar function, and $X\mapsto\operatorname{tr}(X_-)$ inherits that; but $X\mapsto\operatorname{tr}(\Pi X_-)$ for a **proper** projection $\Pi$ does not, because $x\mapsto x_-$ is not *operator* convex (the operator convex functions on $\mathbb R$ are the quadratics), and the weighted trace $\operatorname{tr}(Af(X))$ inherits convexity from $f$ only for $A$ a multiple of the identity or $f$ operator convex. The variational bound of §5 gives $\operatorname{tr}(\Pi X_-)\ge\sup\{-\operatorname{tr}(XZ):0\le Z\le\Pi\}$ with the supremum generally **not** attained, so it supplies a lower envelope rather than a convexity proof.
+- **Convexity: not established by anything on file.** $x\mapsto x_-$ is convex as a scalar function, and $X\mapsto\mathop{\mathrm{tr}}(X_-)$ inherits that; but $X\mapsto\mathop{\mathrm{tr}}(\Pi X_-)$ for a **proper** projection $\Pi$ does not, because $x\mapsto x_-$ is not *operator* convex (the operator convex functions on $\mathbb R$ are the quadratics), and the weighted trace $\mathop{\mathrm{tr}}(Af(X))$ inherits convexity from $f$ only for $A$ a multiple of the identity or $f$ operator convex. The variational bound of §5 gives $\mathop{\mathrm{tr}}(\Pi X_-)\ge\sup\{-\mathop{\mathrm{tr}}(XZ):0\le Z\le\Pi\}$ with the supremum generally **not** attained, so it supplies a lower envelope rather than a convexity proof.
 
 **Reported as UNVERIFIED rather than as a discrepancy**, under the three-part protocol: I can locate it and argue the opposite, but I did not produce a closed-form pair $(X,Y)$ violating it, and producing one is exactly the kind of search this loop does not run. **It is non-load-bearing**: §5 proves $F\ge0$ and §6 characterises $\{F=0\}$ outright, neither using convexity. The claim's only role is to license a numerical certificate, and that certificate is superseded by the closed-form characterisation.
 
@@ -239,7 +239,7 @@ $$F(-\star)=-2+0=-2\;<\;0,\qquad d^+\delta^2(u;-\star)=+\tfrac{4}{3\sqrt6}>0.$$
 
 **PROVEN, hypotheses corrected.**
 
-The mathematics is right and I rebuilt every step of it: $a=\tfrac1{3\sqrt6}$, $\delta^2(u)=\tfrac19$, the Daleckii–Krein smooth branch, the degenerate-perturbation kink branch, the compression (by elementary means, retiring the imported theorem), the Bianchi/tangency balance, the sharp chain $F\ge\tfrac23\operatorname{tr}B_++\tfrac13\operatorname{tr}B_-\ge0$, the equality-set characterisation in both directions, the count $6+180=186$, and both crossover polynomials. **The first-order statement is dimension-free and holds from $n=4$; the $\Phi$ conclusion needs $\kappa_n\le0$ and therefore $n\ge12$, at both parities and under either pinning of $\kappa_n$.**
+The mathematics is right and I rebuilt every step of it: $a=\tfrac1{3\sqrt6}$, $\delta^2(u)=\tfrac19$, the Daleckii–Krein smooth branch, the degenerate-perturbation kink branch, the compression (by elementary means, retiring the imported theorem), the Bianchi/tangency balance, the sharp chain $F\ge\tfrac23\mathop{\mathrm{tr}}B_++\tfrac13\mathop{\mathrm{tr}}B_-\ge0$, the equality-set characterisation in both directions, the count $6+180=186$, and both crossover polynomials. **The first-order statement is dimension-free and holds from $n=4$; the $\Phi$ conclusion needs $\kappa_n\le0$ and therefore $n\ge12$, at both parities and under either pinning of $\kappa_n$.**
 
 **The corrections owed to the record, in order of severity:**
 

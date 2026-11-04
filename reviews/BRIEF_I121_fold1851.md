@@ -12,7 +12,7 @@ The fold is commit `f1ae74a7`. It answers [REVIEW_r1851.md](REVIEW_r1851.md) and
 
 ## Item 2: CPmE.lean against the claim it types
 
-The draft is `/private/tmp/claude-501/-Users-ap-code-private-hamiltons-cubic/d3790d3b-3383-4c5d-9548-46ea15965c86/scratchpad/CPmE.lean` (it compiles, and is not yet in the tree). Check that `cp_E` states the note's closed form $E(\mathbb{CP}^m)=\dfrac9{2\sqrt{3m(m^2-1)(2m-1)}}$ from the stated spectrum and $\theta$: in particular that $\theta=(m+1)(2m-1)/\sqrt N$ with $N=3m(m^2-1)(2m-1)$ equals $\sqrt{(m+1)(2m-1)/(3m(m-1))}$ at $m\ge2$, that $\operatorname{tr}W^3=K/(N\sqrt N)$ is the normalised cube sum of the stated spectrum, that the hypothesis $N>0$ is the right one, and that the docstring's "not typed" line is accurate. Run `#print axioms` on `cp_E` if you can (`lake env lean` on a copy with the line appended, from the `lean/` directory), and exhibit one $m$ satisfying the hypothesis.
+The draft is `/private/tmp/claude-501/-Users-ap-code-private-hamiltons-cubic/d3790d3b-3383-4c5d-9548-46ea15965c86/scratchpad/CPmE.lean` (it compiles, and is not yet in the tree). Check that `cp_E` states the note's closed form $E(\mathbb{CP}^m)=\dfrac9{2\sqrt{3m(m^2-1)(2m-1)}}$ from the stated spectrum and $\theta$: in particular that $\theta=(m+1)(2m-1)/\sqrt N$ with $N=3m(m^2-1)(2m-1)$ equals $\sqrt{(m+1)(2m-1)/(3m(m-1))}$ at $m\ge2$, that $\mathop{\mathrm{tr}}W^3=K/(N\sqrt N)$ is the normalised cube sum of the stated spectrum, that the hypothesis $N>0$ is the right one, and that the docstring's "not typed" line is accurate. Run `#print axioms` on `cp_E` if you can (`lake env lean` on a copy with the line appended, from the `lean/` directory), and exhibit one $m$ satisfying the hypothesis.
 
 ## The sections as they stand at dispatch
 
@@ -38,14 +38,14 @@ The draft is `/private/tmp/claude-501/-Users-ap-code-private-hamiltons-cubic/d37
 
 $\mathbb{CP}^m$'s Weyl tensor has $\Lambda^2$-spectrum proportional to $2(m^2-1)$, $m-2$ and $-(m+1)$ with multiplicities $1$, $m^2-1$ and $m^2-m$ (from the curvature operator's $2(m+1)$, $2$, $0$ on $\langle\omega\rangle$, $\mathfrak{su}(m)$, $\mathfrak u(m)^\perp$ minus its trace part; at $m=2$ it is $W_{\mathbb{CP}^2}$'s $(2,-1,-1,0,0,0)$). With $\theta^2=\tfrac{(m+1)(2m-1)}{3m(m-1)}$ ([INDEX-values.md](../findings/INDEX-values.md), matching the catalogue at $m=3,4,5$), exactly:
 
-| $m$ | $n$ | $\theta$ | $\operatorname{tr}W^3$ | $\theta\lambda_{\max}$ | $E$ | $\varepsilon_n$ | maximal-frame $t^2$ |
+| $m$ | $n$ | $\theta$ | $\mathop{\mathrm{tr}}W^3$ | $\theta\lambda_{\max}$ | $E$ | $\varepsilon_n$ | maximal-frame $t^2$ |
 |---|---|---|---|---|---|---|---|
 | $5$ | $10$ | $0.948683$ | $0.579751$ | $0.8000$ | $0.079057$ | $-0.050000$ | $0.250$ |
 | $6$ | $12$ | $0.924962$ | $0.580604$ | $0.7778$ | $0.054056$ | $+0.022473$ | $0.214$ |
 | $7$ | $14$ | $0.908514$ | $0.579469$ | $0.7619$ | $0.039311$ | $+0.072789$ | $0.188$ |
 | $8$ | $16$ | $0.896421$ | $0.577694$ | $0.7500$ | $0.029881$ | $+0.109789$ | $0.167$ |
 
-*The maximal-frame mass is $\tfrac3{n+2}$ at every $m$, by [L95](../findings/bispectral.md) (`kappaSq_CP`: the unitary frame attains the maximum over all frames). In closed form $E(\mathbb{CP}^m)=\dfrac9{2\sqrt{3m(m^2-1)(2m-1)}}$, decreasing in $m$, while $\varepsilon_n$ increases* ([r1851](REVIEW_r1851.md); checked here at $m=5,6$). **So at $n=12$, $\mathbb{CP}^6$ is a small-mass critical point with $E>\varepsilon_{12}$**, and "$E<\varepsilon_n$ at small mass" is false there: the reduction cannot close the node at $n=12$ down to $t^2=\tfrac3{14}$ by bounding $E$ alone. The loss is L198's step spread over the spectrum: $1-\theta\operatorname{tr}W^3=0.463$ at $\mathbb{CP}^6$, of which the top eigenvalue carries $0.157$, $\mathfrak{su}(6)$ $0.077$ and the negative eigenspace $0.229$ ([r1851](REVIEW_r1851.md), [r1852](REVIEW_r1852.md)). **From $n=14$, $\mathbb{CP}^m$ sits below $\varepsilon_n$**, by the closed form and the monotonicity of both sides, and $E(\mathbb{CP}^m)\to0$ as $\operatorname{tr}W^3\to\tfrac23\theta$.
+*The maximal-frame mass is $\tfrac3{n+2}$ at every $m$, by [L95](../findings/bispectral.md) (`kappaSq_CP`: the unitary frame attains the maximum over all frames). In closed form $E(\mathbb{CP}^m)=\dfrac9{2\sqrt{3m(m^2-1)(2m-1)}}$, decreasing in $m$, while $\varepsilon_n$ increases* ([r1851](REVIEW_r1851.md); checked here at $m=5,6$). **So at $n=12$, $\mathbb{CP}^6$ is a small-mass critical point with $E>\varepsilon_{12}$**, and "$E<\varepsilon_n$ at small mass" is false there: the reduction cannot close the node at $n=12$ down to $t^2=\tfrac3{14}$ by bounding $E$ alone. The loss is L198's step spread over the spectrum: $1-\theta\mathop{\mathrm{tr}}W^3=0.463$ at $\mathbb{CP}^6$, of which the top eigenvalue carries $0.157$, $\mathfrak{su}(6)$ $0.077$ and the negative eigenspace $0.229$ ([r1851](REVIEW_r1851.md), [r1852](REVIEW_r1852.md)). **From $n=14$, $\mathbb{CP}^m$ sits below $\varepsilon_n$**, by the closed form and the monotonicity of both sides, and $E(\mathbb{CP}^m)\to0$ as $\mathop{\mathrm{tr}}W^3\to\tfrac23\theta$.
 
 ## Large $E$ and the maximal frame (screens)
 

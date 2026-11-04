@@ -30,7 +30,7 @@ Also (L301–L302): $R+\mathrm{id}\#R=(n-1)R_0+\tfrac{n-2}{n}R_1$ and $(R_2+R^\#
 
 ## §3, the matrix form, inflation, and the block law (L386–L453)
 
-Equation (1) (L400): $S=S^{\mathsf T}$, $S\odot\mathbb 1=0$, $SJ=0$, $S\odot S+S^2=\theta S+D$ with $D$ diagonal, $D_{i,i}=\sum_kS_{i,k}^2$, $\operatorname{tr}D=\lVert S\rVert_2^2$. Scale law (2): $tS$ solves with $(t\theta,t^2D)$. Inflation (L424–L427): a solution in dimension $n$ padded by zeros is a solution in every $m>n$ with the same $\theta$, the record's zero-padding.
+Equation (1) (L400): $S=S^{\mathsf T}$, $S\odot\mathbb 1=0$, $SJ=0$, $S\odot S+S^2=\theta S+D$ with $D$ diagonal, $D_{i,i}=\sum_kS_{i,k}^2$, $\mathop{\mathrm{tr}}D=\lVert S\rVert_2^2$. Scale law (2): $tS$ solves with $(t\theta,t^2D)$. Inflation (L424–L427): a solution in dimension $n$ padded by zeros is a solution in every $m>n$ with the same $\theta$, the record's zero-padding.
 
 > **Lemma 3.1** (L428–L438). Suppose that we have two nonzero solutions $S_1,S_2$ to the equations (1), in dimensions $n_1$ and $n_2$ and for constants $\theta_1,\theta_2$, respectively. If $\theta_1,\theta_2\ne0$, then the block diagonal matrix $S=\tfrac1{\theta_1}S_1\oplus\tfrac1{\theta_2}S_2$ solves (1) in dimension $n=n_1+n_2$, with $\theta=1$ and $\hat\theta=\hat\theta_1\hat\theta_2/\sqrt{\hat\theta_1^2+\hat\theta_2^2}$. If $\theta_1=\theta_2=0$, then $S_1\oplus S_2$ solves (1) with $\theta=\hat\theta=0$.
 
@@ -44,7 +44,7 @@ Proof (L446–L453): composite $n$ from Example 5.2 or 6.4, then inflation; the 
 
 > **Theorem 5.1.** Suppose that the $n\times n$ matrix $S$ solves (1) and that the off-diagonal entries of $S$ assume precisely two different values $x\ne y$. Put $z=x-y$. Then $S=zA+yK$ and $A\ne0,K$ is the adjacency matrix of a strongly regular graph $\Gamma$. Conversely, if $A\ne0,K$ is the adjacency matrix of an $\mathrm{srg}(n,r,\lambda,\mu)$, then $S=zA+yK$ solves (1), with $y/z=r/(1-n)$ and $\hat\theta=|\lambda-\mu+1|\sqrt{(n-1)/(nrr^c)}$, where $r^c=n-r-1$. An integer $n$ occurs in this situation if and only if $n$ is either a composite number or if $n=p$ is a prime with $p\equiv1\pmod4$. In the latter case $\theta=0$.
 
-Here $K=J-\mathbb 1$. In the proof: $\theta=\lambda-\mu+1$ at $z=1$, $D=r(y+1)\mathbb 1$, $\operatorname{tr}D=nrr^c/(n-1)$; complement flips the sign of $\theta$ (L590–L591). Primes: an SRG on a prime number of vertices is a conference graph, so $p\equiv1\pmod 4$ and $\theta=0$ (L620–L624, citing Godsil–Royle 10.3.2, 10.3.4).
+Here $K=J-\mathbb 1$. In the proof: $\theta=\lambda-\mu+1$ at $z=1$, $D=r(y+1)\mathbb 1$, $\mathop{\mathrm{tr}}D=nrr^c/(n-1)$; complement flips the sign of $\theta$ (L590–L591). Primes: an SRG on a prime number of vertices is a conference graph, so $p\equiv1\pmod 4$ and $\theta=0$ (L620–L624, citing Godsil–Royle 10.3.2, 10.3.4).
 
 **This is the record's [Lemma 74](../../findings/diagonal-half.md) verbatim, with $\theta_{\text{record}}=\sqrt2\hat\theta$.** The record's derivation went through the SRG identity $k(k-\lambda-1)=w\mu$ and reached the same $\theta$; Lemma 74's numerator is DGK's $|\lambda-\mu+1|$ and its normaliser is DGK's $\sqrt{nrr^c/(n-1)}$. The record's $T12$ classification (saturation only at $K_{m,m}$ and $2K_m$) is downstream of this theorem and is not in DGK.
 
@@ -79,7 +79,7 @@ The first "is also contained in Jäger's Thesis [12, Thm. 2.2.5]"; for $m=\ell$ 
 Lemma 7.2: every real solution on $(\mathbb F_q,+)$ is a complex combination $\sum_{\alpha\ne\varepsilon}c_\alpha\alpha$ of nontrivial multiplicative characters with $\bar c_\alpha=c_{\bar\alpha}$; convolution of characters is a modified Jacobi sum, $\alpha*\beta=J'(\alpha,\beta)\,\alpha\beta$ on $\mathbb F_q^\times$ (L1000–L1005), $J'(\bar\alpha,\alpha)=-\alpha(-1)$ (Lemma 7.3).
 
 - **7.4, quartic**, $q\equiv1\pmod4$: $\varphi=\alpha^2$, $\theta=\hat\theta=0$, the Paley graph.
-- **7.5, octic**, $q\equiv1\pmod8$: $\varphi=c\alpha^2+\bar c\bar\alpha^2$ with $\operatorname{Re}(c^2(1+J'(\alpha^2,\alpha^2)))=0$; $\theta=\hat\theta=0$. Peisert graphs when $q=p^{2s}$, $p\equiv3\pmod4$; and (L1091–L1094, verbatim) "Our general construction does not necessarily correspond to strongly regular graphs. For example, if $q=73$, then $J(\alpha^2,\alpha^2)=3+8i$ and $\varphi$ assumes four different values on $\mathbb F_{73}^\times$." **A diagonal critical point with four off-diagonal values, at $\theta=0$.**
+- **7.5, octic**, $q\equiv1\pmod8$: $\varphi=c\alpha^2+\bar c\bar\alpha^2$ with $\mathop{\mathrm{Re}}(c^2(1+J'(\alpha^2,\alpha^2)))=0$; $\theta=\hat\theta=0$. Peisert graphs when $q=p^{2s}$, $p\equiv3\pmod4$; and (L1091–L1094, verbatim) "Our general construction does not necessarily correspond to strongly regular graphs. For example, if $q=73$, then $J(\alpha^2,\alpha^2)=3+8i$ and $\varphi$ assumes four different values on $\mathbb F_{73}^\times$." **A diagonal critical point with four off-diagonal values, at $\theta=0$.**
 - **7.6, cubic**, $q\equiv1\pmod3$: $\varphi=c\alpha+\bar c\bar\alpha$ with $\theta=c^3(1+J'(\alpha,\alpha))\in\mathbb R$; $\hat\theta=|1+J'(\alpha,\alpha)|/\sqrt{2q(q-1)}$, bounded between $(\sqrt q\mp1)/\sqrt{2q(q-1)}$, so $\theta_{\text{record}}\sim\sqrt{2/q}$. Three off-diagonal values in general, $\theta\ne0$, tiny.
 
 ## §8, Conjecture 8.1 and the acknowledgement (L1121–L1146)

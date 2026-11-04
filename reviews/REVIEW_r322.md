@@ -14,19 +14,19 @@ Gate 2, adversarial. Everything below is computed from an implementation written
 
 ### Sign of $\#$
 
-Settled independently of the record. Hamilton's $\#$ preserves the cone of nonnegative curvature operators, so the convention is fixed by the test "$W\succeq0\Rightarrow W^\#\succeq0$". With $\mathrm{sharp}(n,W)_{ab}=-\tfrac12\operatorname{tr}(A_aWA_bW)$ and $A_a=\mathrm{ad}(\varphi_a)$, random positive definite $W$ at $n=4,5,6,7$ give $\lambda_{\min}(W^\#)/\lVert W^\#\rVert$ equal to $+0.0035$, $+0.087$, $+0.087$, $+0.127$, positive at every trial. **The stated sign is right**, and the calibration above (four values of $\theta_0$ reproduced exactly) fixes the scale as well, so no factor is loose.
+Settled independently of the record. Hamilton's $\#$ preserves the cone of nonnegative curvature operators, so the convention is fixed by the test "$W\succeq0\Rightarrow W^\#\succeq0$". With $\mathrm{sharp}(n,W)_{ab}=-\tfrac12\mathop{\mathrm{tr}}(A_aWA_bW)$ and $A_a=\mathrm{ad}(\varphi_a)$, random positive definite $W$ at $n=4,5,6,7$ give $\lambda_{\min}(W^\#)/\lVert W^\#\rVert$ equal to $+0.0035$, $+0.087$, $+0.087$, $+0.127$, positive at every trial. **The stated sign is right**, and the calibration above (four values of $\theta_0$ reproduced exactly) fixes the scale as well, so no factor is loose.
 
 Structure constants $c_{abc}=\langle[\varphi_a,\varphi_b],\varphi_c\rangle$ come out totally antisymmetric to $0.0$ (exact), and $\dim\mathcal W_n$ matches $n(n+1)(n+2)(n-3)/12$ at $n=4,5,6$.
 
 ### The identity
 
 Diagonalising $W\varphi_a=\lambda_a\varphi_a$ and using $(A_a)_{bc}=c_{acb}$ with $A_a$ skew,
-$$\operatorname{tr}(A_1WA_1W)=\sum_{a,b}\lambda_a\lambda_b(A_1)_{ab}(A_1)_{ba}=-\sum_{a,b}\lambda_a\lambda_bc_{1ab}^2 ,$$
+$$\mathop{\mathrm{tr}}(A_1WA_1W)=\sum_{a,b}\lambda_a\lambda_b(A_1)_{ab}(A_1)_{ba}=-\sum_{a,b}\lambda_a\lambda_bc_{1ab}^2 ,$$
 so $\langle v,W^\#v\rangle=\tfrac12\sum\lambda_a\lambda_bc_{1ab}^2$ **identically**, for every $W$ and every eigenvector, critical or not. It is a rearrangement of the definition, not a fact about Weyl operators. Measured residual $<10^{-16}$ at all six points below.
 
 ### The mass is exact and universal, and the record understates it
 
-$\sum_{a,b}c_{1ab}^2=\sum_a\lVert[v,\varphi_a]\rVert^2=-\operatorname{tr}(\mathrm{ad}_v^2)$, and the Killing form of $\mathfrak{so}(n)$ is $\operatorname{tr}(\mathrm{ad}_X\mathrm{ad}_Y)=(n-2)\operatorname{tr}(XY)=-2(n-2)\langle X,Y\rangle$. Hence
+$\sum_{a,b}c_{1ab}^2=\sum_a\lVert[v,\varphi_a]\rVert^2=-\mathop{\mathrm{tr}}(\mathrm{ad}_v^2)$, and the Killing form of $\mathfrak{so}(n)$ is $\mathop{\mathrm{tr}}(\mathrm{ad}_X\mathrm{ad}_Y)=(n-2)\mathop{\mathrm{tr}}(XY)=-2(n-2)\langle X,Y\rangle$. Hence
 
 $$\sum_{a,b}c_{1ab}^2=2(n-2)\lVert v\rVert^2 ,$$
 
@@ -36,7 +36,7 @@ for **any** unit $v\in\mathfrak{so}(n)$, no eigenvector hypothesis, no $W$, no c
 
 $\langle v,W^\#v\rangle=\lambda_{\min}(\theta-\lambda_{\min})$ needs $Q(W)=\theta W$ *exactly*, not after projection to $\mathcal W_n$, because $vv^{\mathsf T}\notin\mathcal W_n$. That is a real gap in principle and it closes: **$Q$ maps $\mathcal W_n$ into $\mathcal W_n$.** For random $W\in\mathcal W_n$ at $n=5,6,7$ the Bianchi defect of $Q(W)$ is $\le5.6\times10^{-17}$, $\mathrm{Ric}(Q(W))\le1.7\times10^{-16}$, and $\lVert Q-P_{\mathcal W}Q\rVert/\lVert Q\rVert\le5.7\times10^{-16}$. So the criticality equation carries no projection and the entrywise identity is legitimate.
 
-Free by-product, checked at $n=5,6,7,8$ and not in the record here: **$\operatorname{tr}(W^\#)=-\operatorname{tr}(W^2)$ identically on $\mathcal W_n$** (measured $-1.000000000$ at unit norm, at non-critical points too). Equivalently $\tfrac12\sum_{p,q}\lambda_p\lambda_q\lVert[\varphi_p,\varphi_q]\rVert^2=-1$, a global constraint coupling the spectrum to the bracket two-tensor, available for free to any successor.
+Free by-product, checked at $n=5,6,7,8$ and not in the record here: **$\mathop{\mathrm{tr}}(W^\#)=-\mathop{\mathrm{tr}}(W^2)$ identically on $\mathcal W_n$** (measured $-1.000000000$ at unit norm, at non-critical points too). Equivalently $\tfrac12\sum_{p,q}\lambda_p\lambda_q\lVert[\varphi_p,\varphi_q]\rVert^2=-1$, a global constraint coupling the spectrum to the bracket two-tensor, available for free to any successor.
 
 ### Measurements
 
@@ -106,7 +106,7 @@ Two independent reasons the recorded pair is wrong. First, a generic $SO(10)$ co
 
 ### Nosal's proof, derived
 
-Triangle-free $G$ with $m$ edges: $\sum_i\lambda_i^2=\operatorname{tr}A^2=2m$ and $\sum_i\lambda_i^3=\operatorname{tr}A^3=6\cdot\#\text{triangles}=0$. With $\lambda=\lambda_1$ largest and $|\lambda_i|\le\lambda$,
+Triangle-free $G$ with $m$ edges: $\sum_i\lambda_i^2=\mathop{\mathrm{tr}}A^2=2m$ and $\sum_i\lambda_i^3=\mathop{\mathrm{tr}}A^3=6\cdot\#\text{triangles}=0$. With $\lambda=\lambda_1$ largest and $|\lambda_i|\le\lambda$,
 $$\lambda^3=-\sum_{i\ge2}\lambda_i^3\le\lambda\sum_{i\ge2}\lambda_i^2=\lambda(2m-\lambda^2)\ \Longrightarrow\ \lambda^2\le m,$$
 equality forcing the spectrum $\{\lambda,0^{\times},-\lambda\}$, i.e. complete bipartite. The load-bearing feature: **triangle-freeness enters as the vanishing of a term that would otherwise sit on the *large* side of the inequality.** With $t$ triangles the bound degrades to $\lambda^3\le6t+\lambda(2m-\lambda^2)$. The hypothesis buys something because it removes a *positive* contribution to the quantity being bounded above.
 
@@ -156,16 +156,16 @@ Lemma L36 **is** active, the optimum sits exactly at $\dim\mathfrak m=\lfloor n^
 
 1. **The hypothesis is inert in the direction the bound needs.** Any argument of the shape "bound $\mathfrak{mm}+\mathfrak{mp}+\mathfrak{pp}$ from below" cannot use $S_{\mathfrak{mmm}}=0$, because the terms it kills are nonnegative and are dropped for free. A successor must find a route in which $S_{\mathfrak{mmm}}=0$ constrains the $[\mathfrak m,\mathfrak m]\to\mathfrak p$ tensor, and it constrains it in the *wrong* direction, since $S_{\mathfrak{mmm}}=0$ maximises $S_{\mathfrak{mmp}}$ at fixed $\lVert[\mathfrak m,\mathfrak m]\rVert^2$. Something must cap $\lVert[\mathfrak m,\mathfrak m]\rVert^2$ itself.
 2. **The record's stated repair ("keep the pairing"), is demonstrably insufficient.** Measured: $2.392$ against $1.054$ at $n=6$, with pairing fully retained and Lemma L36 imposed.
-3. **The sign structure of the transfer is inverted.** In Nosal the vanishing third moment removes a positive term from the side being bounded above; here the vanishing block removes a positive term from the side that helps. Any successor claiming the Nosal template must say which quantity plays the role of $\operatorname{tr}A^3$ *with the right sign*. The natural candidate is $\theta=\operatorname{tr}(W^3)+\tfrac12\sum_{abc}\lambda_a\lambda_b\lambda_cc_{abc}^2$ (derived here, and on the diagonal locus $=\sum_{i<j}M_{ij}^3+\tfrac12\operatorname{tr}M^3$), where $S_{\mathfrak{mmm}}=0$ *does* delete terms of the unfavourable sign, but that is the full three-index identity, not the one-index walk at $v$.
-4. **One free global constraint is available and unused**: $\operatorname{tr}(W^\#)=-\operatorname{tr}(W^2)$ identically on $\mathcal W_n$, i.e. $\tfrac12\sum_{p,q}\lambda_p\lambda_q\lVert[\varphi_p,\varphi_q]\rVert^2=-\lVert W\rVert^2$.
-5. **The single-index identity is one of $N$ and the others are not independent**: $\sum_c\langle\varphi_c,W^\#\varphi_c\rangle=\operatorname{tr}W^\#=-1$ and $\sum_c\lambda_c\langle\varphi_c,W^\#\varphi_c\rangle=\theta-\operatorname{tr}(W^3)$ reproduce items already known, so aggregating the identities over $c$ adds nothing. A successor needs the identities *pointwise* with a joint constraint between them, which is frame-realizability again, the thing every relaxation here discards.
+3. **The sign structure of the transfer is inverted.** In Nosal the vanishing third moment removes a positive term from the side being bounded above; here the vanishing block removes a positive term from the side that helps. Any successor claiming the Nosal template must say which quantity plays the role of $\mathop{\mathrm{tr}}A^3$ *with the right sign*. The natural candidate is $\theta=\mathop{\mathrm{tr}}(W^3)+\tfrac12\sum_{abc}\lambda_a\lambda_b\lambda_cc_{abc}^2$ (derived here, and on the diagonal locus $=\sum_{i<j}M_{ij}^3+\tfrac12\mathop{\mathrm{tr}}M^3$), where $S_{\mathfrak{mmm}}=0$ *does* delete terms of the unfavourable sign, but that is the full three-index identity, not the one-index walk at $v$.
+4. **One free global constraint is available and unused**: $\mathop{\mathrm{tr}}(W^\#)=-\mathop{\mathrm{tr}}(W^2)$ identically on $\mathcal W_n$, i.e. $\tfrac12\sum_{p,q}\lambda_p\lambda_q\lVert[\varphi_p,\varphi_q]\rVert^2=-\lVert W\rVert^2$.
+5. **The single-index identity is one of $N$ and the others are not independent**: $\sum_c\langle\varphi_c,W^\#\varphi_c\rangle=\mathop{\mathrm{tr}}W^\#=-1$ and $\sum_c\lambda_c\langle\varphi_c,W^\#\varphi_c\rangle=\theta-\mathop{\mathrm{tr}}(W^3)$ reproduce items already known, so aggregating the identities over $c$ adds nothing. A successor needs the identities *pointwise* with a joint constraint between them, which is frame-realizability again, the thing every relaxation here discards.
 
 ---
 
 ## Found but not asked about
 
 - **$Q$ preserves $\mathcal W_n$.** Checked at $n=5,6,7$ on random $W$: $\mathrm{Ric}(Q(W))$ and the Bianchi defect are $O(10^{-16})$. Several statements in the record are stated as if a Weyl projection stood between $Q(W)$ and $\theta W$; it does not, and the entrywise reading of criticality is safe.
-- **$\operatorname{tr}(W^\#)=-\operatorname{tr}(W^2)$ on $\mathcal W_n$**, at non-critical points too.
+- **$\mathop{\mathrm{tr}}(W^\#)=-\mathop{\mathrm{tr}}(W^2)$ on $\mathcal W_n$**, at non-critical points too.
 - **$\sup\lVert[v,\varphi]\rVert^2=2$** over unit bivectors, independent of $n$ ($6,8,10$).
 - **The mass claim is $W$-independent**, holding for any unit $v\in\mathfrak{so}(n)$; it is the Killing form and carries no information about the point.
 - **Critical points with $\theta\le\lambda_{\min}$ exist** and are not rare, $9$ of $109$ sampled diagonal critical points at $n=6,7,8$, at $\theta=-2\sqrt2/3$, $-0.968246$, $-0.866025$, $-0.612372$. At every one $\mathfrak m\times\mathfrak p=0$ exactly. Any statement of the form "the $\mathfrak m$–$\mathfrak p$ sum is strictly negative" must carry $\theta>\lambda_{\min}$.

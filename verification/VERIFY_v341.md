@@ -15,7 +15,7 @@
 
 - $\{v_k\}$ is an orthonormal eigenbasis of $W$ on $\mathfrak{so}(n)\cong\Lambda^2\mathbb R^n$, $Wv_k=\lambda_kv_k$, and $c_{abc}=\langle[v_a,v_b],v_c\rangle$ is totally antisymmetric (Passage B). $T_{abc}=c_{abc}^2$.
 - $(\mathrm{ad}\,v_a)_{ij}=\langle v_i,[v_a,v_j]\rangle=c_{aji}$.
-- $M_{kl}=\operatorname{tr}(\mathrm{ad}(v_k)W\,\mathrm{ad}(v_l)W)$. With $W$ diagonal, $M_{kl}=\sum_{ij}c_{kji}\lambda_j c_{lij}\lambda_i=-\sum_{\alpha\beta}\lambda_\alpha\lambda_\beta c_{k\alpha\beta}c_{l\alpha\beta}$. The sign is immaterial to everything below, which reads only which monomials an entry contains.
+- $M_{kl}=\mathop{\mathrm{tr}}(\mathrm{ad}(v_k)W\,\mathrm{ad}(v_l)W)$. With $W$ diagonal, $M_{kl}=\sum_{ij}c_{kji}\lambda_j c_{lij}\lambda_i=-\sum_{\alpha\beta}\lambda_\alpha\lambda_\beta c_{k\alpha\beta}c_{l\alpha\beta}$. The sign is immaterial to everything below, which reads only which monomials an entry contains.
 - Criticality is $Q(W)=\theta W$. Relations (A), (B), (C) are as quoted in Passage B. The Killing form is proportional to the inner product, so $\sum_{\alpha\beta}c_{k\alpha\beta}c_{l\alpha\beta}=2(n-2)\delta_{kl}$, whose diagonal is (A).
 - The Jacobi identity paired with $v_d$ reads, for all $a,b,c,d$,
 $$J_{abcd}:=\sum_e\big(c_{abe}c_{cde}+c_{bce}c_{ade}+c_{cae}c_{bde}\big)=0,$$

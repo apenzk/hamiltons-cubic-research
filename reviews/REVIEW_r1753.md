@@ -6,7 +6,7 @@ Target: [L271Coord.lean](../lean/HamiltonsCubic/Results/L271Coord.lean) (commit 
 
 ## (1) Is "coordinate-diagonal" faithful as ∃ w, torusOp A U V = coordOp w?
 
-Yes. `coordOp w` sends $X$ to $\operatorname{skew}(w\odot X)$. On a basis bivector $\varphi(a,b)=E_{ba}-E_{ab}$ this gives $\tfrac12(w_{ab}+w_{ba})\,\varphi(a,b)$, so `coordOp w` is diagonal in the basis $e_a\wedge e_b$ with the weights of $w$ symmetrised. Every operator that is diagonal in that basis is `coordOp` of its own weight matrix, so the existential over arbitrary $w$ (neither symmetric nor positive) is exactly "coordinate-diagonal". The index $(i,0),(i,1)$ is the record's $e_{2i-1},e_{2i}$, the basis fixed by the torus that the record's proof of (3) uses.
+Yes. `coordOp w` sends $X$ to $\mathop{\mathrm{skew}}(w\odot X)$. On a basis bivector $\varphi(a,b)=E_{ba}-E_{ab}$ this gives $\tfrac12(w_{ab}+w_{ba})\,\varphi(a,b)$, so `coordOp w` is diagonal in the basis $e_a\wedge e_b$ with the weights of $w$ symmetrised. Every operator that is diagonal in that basis is `coordOp` of its own weight matrix, so the existential over arbitrary $w$ (neither symmetric nor positive) is exactly "coordinate-diagonal". The index $(i,0),(i,1)$ is the record's $e_{2i-1},e_{2i}$, the basis fixed by the torus that the record's proof of (3) uses.
 
 ## (2) Hand checks
 
@@ -26,7 +26,7 @@ Yes. `coordOp w` sends $X$ to $\operatorname{skew}(w\odot X)$. On a basis bivect
   - `L268_pd_pos` gives $\mu>0$.
   - `L268_torus_idem` gives $A=A_\mu$ and the system.
   - `L271_Q_zero` gives $U\equiv1/(2(m-1))$.
-  - $A_\mu=\operatorname{diag}(2(m-1)u^2)=I/c$ and `idOp_eq_torusOp` with linearity give the operator.
+  - $A_\mu=\mathop{\mathrm{diag}}(2(m-1)u^2)=I/c$ and `idOp_eq_torusOp` with linearity give the operator.
 
   `L271_Q_zero` itself stops at the weights and names neither $A$ nor the operator. The composition is mechanical but untyped.
 - **O3: the third clause is immediate but untyped.** "Every other torus-invariant PD idempotent has $V_{ij}\ne U_{ij}$ for some pair" is the contrapositive of O2's composite.

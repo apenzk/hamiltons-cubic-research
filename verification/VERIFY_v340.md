@@ -35,7 +35,7 @@ Cold brief ([ADJ_L111_D7.md](ADJ_L111_D7.md)). No numerical work was done and no
 
 ## 1. The entries of $M$ in bracket coordinates
 
-$M_{kl}=\operatorname{tr}(\mathrm{ad}\varphi_k\,W\,\mathrm{ad}\varphi_l\,W)=\sum_{a,b}(\mathrm{ad}\varphi_k)_{ab}\lambda_b(\mathrm{ad}\varphi_l)_{ba}\lambda_a=\sum_{a,b}c_{kba}c_{lab}\lambda_a\lambda_b=-\sum_{a,b}\lambda_a\lambda_b c_{kab}c_{lab}$.
+$M_{kl}=\mathop{\mathrm{tr}}(\mathrm{ad}\varphi_k\,W\,\mathrm{ad}\varphi_l\,W)=\sum_{a,b}(\mathrm{ad}\varphi_k)_{ab}\lambda_b(\mathrm{ad}\varphi_l)_{ba}\lambda_a=\sum_{a,b}c_{kba}c_{lab}\lambda_a\lambda_b=-\sum_{a,b}\lambda_a\lambda_b c_{kab}c_{lab}$.
 
 By Section 0 this is $-2(W^\#)_{kl}$, matching Mmat in [L111Statement.lean](../lean/HamiltonsCubic/Results/L111Statement.lean) as quoted in the brief. Criticality gives $(W^\#)_{kl}=\lambda_k(\theta-\lambda_k)\delta_{kl}$, so $M_{kl}=2\lambda_k(\lambda_k-\theta)\delta_{kl}$.
 

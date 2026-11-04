@@ -8,7 +8,7 @@ The impossibility is **real, and I supply the proof the block does not have**, i
 
 | # | claim | verdict |
 | --- | --- | --- |
-| 1 | contracting (C) against $\lambda_a$ gives $\sum_{abc}\lambda_a\lambda_b\lambda_cT_{abc}=2\theta-2\operatorname{tr}W^3$ | **CONFIRMED**, constant and all |
+| 1 | contracting (C) against $\lambda_a$ gives $\sum_{abc}\lambda_a\lambda_b\lambda_cT_{abc}=2\theta-2\mathop{\mathrm{tr}}W^3$ | **CONFIRMED**, constant and all |
 | 2 | the cubic identity adds nothing to (C) | **CONFIRMED**, with the logical relation stated exactly below |
 | 3 | *any* pair of moment inequalities from positivity and support returns a pinned conclusion | **CONFIRMED and strengthened**, it holds for *every* family, not pairs, and the complete consequence is exactly [L107](../findings/bounds.md) |
 | 4 | "moment analysis of the $g$-distribution cannot leave the pinned class" | **UNFALSIFIABLE AS A ROUTE-CLOSURE.** The conjecture's own target is a pinned-class statement, so staying pinned closes nothing |
@@ -18,7 +18,7 @@ The impossibility is **real, and I supply the proof the block does not have**, i
 
 ## Readings adopted, stated because the table is incomplete
 
-- **Normalisation.** $\lambda$ is the $\Lambda^2$ spectrum of $W$ at $\lVert W\rVert=1$, so $\sum_a\lambda_a^2=\operatorname{tr}(W^2)=1$ and $\sum_a\lambda_a=0$, the operator reading of the $M$ row in [conventions.md](../findings/conventions.md), not the sectional-matrix one. Every constant below depends on it.
+- **Normalisation.** $\lambda$ is the $\Lambda^2$ spectrum of $W$ at $\lVert W\rVert=1$, so $\sum_a\lambda_a^2=\mathop{\mathrm{tr}}(W^2)=1$ and $\sum_a\lambda_a=0$, the operator reading of the $M$ row in [conventions.md](../findings/conventions.md), not the sectional-matrix one. Every constant below depends on it.
 - **Ordered slots.** All of $\sum_{bc}$, $\sum_{abc}$ and $\sum_{\alpha\beta}$ run over **ordered** tuples, per [conventions.md](../findings/conventions.md)'s standing default. $T_{abc}=c_{abc}^2$ is totally symmetric and hollow.
 - **$\#$, which the table does not carry.** I read $(A\#B)_{\alpha\beta}=\tfrac12\sum c_{\alpha\gamma\delta}c_{\beta\varepsilon\zeta}A_{\gamma\varepsilon}B_{\delta\zeta}$, i.e. $(W^\#)_{aa}=\tfrac12\sum_{bc}\lambda_b\lambda_cT_{abc}$ in the eigenbasis. **This $\tfrac12$ is not defined anywhere in [conventions.md](../findings/conventions.md)** (the table has a $Q(W)$ row reading "$W^2+W^\#$" and stops) and it is what makes the $2$ in (A), (B) and (C) come out. It is pinned by three independent occurrences, exactly as the brief anticipated. **It should be tabled.**
 - **"Pinned class"** is undefined in [conventions.md](../findings/conventions.md) and carries **two senses inside bounds.md alone**: at line 309 it is *the class of conclusions expressible in $(\lambda,\theta)$*; at line 413 ("the conjecture **falls out of** the pinned class and is closed") it is *the LP feasible set cut out by (A), (B), (C) and $T\ge0$*, which is also the sense of [bounds-relaxations.md](../findings/bounds-relaxations.md) line 350 and [plan.md](../plan.md) lines 13–19. The two senses point opposite ways, under the first, being pinned is the failure; under the second, being pinned is the win. Read against the second sense, L113's headline is unintelligible. **I audit it under the first, which is the only one its own sentence supports.**
@@ -27,9 +27,9 @@ The impossibility is **real, and I supply the proof the block does not have**, i
 
 Relation (C) at [bounds.md](../findings/bounds.md) line 236 reads $\sum_{bc}\lambda_b\lambda_cT_{abc}=2\lambda_a(\theta-\lambda_a)$ for every $a$. Contract against $\lambda_a$:
 
-$$\sum_{abc}\lambda_a\lambda_b\lambda_cT_{abc}=2\sum_a\lambda_a^2(\theta-\lambda_a)=2\theta\operatorname{tr}(W^2)-2\operatorname{tr}(W^3)=2\theta-2\operatorname{tr}W^3 .$$
+$$\sum_{abc}\lambda_a\lambda_b\lambda_cT_{abc}=2\sum_a\lambda_a^2(\theta-\lambda_a)=2\theta\mathop{\mathrm{tr}}(W^2)-2\mathop{\mathrm{tr}}(W^3)=2\theta-2\mathop{\mathrm{tr}}W^3 .$$
 
-**The block's right-hand side is confirmed.** It needs $\operatorname{tr}W^2=1$, which is the normalisation above and is the *only* place the unit norm enters.
+**The block's right-hand side is confirmed.** It needs $\mathop{\mathrm{tr}}W^2=1$, which is the normalisation above and is the *only* place the unit norm enters.
 
 **Where the $2$ comes from, stated as the brief asks.** At a critical point $W^\#=\theta W-W^2$, so $(W^\#)_{aa}=\lambda_a(\theta-\lambda_a)$. With $\#$ as tabled above and **ordered** $(b,c)$, $(W^\#)_{aa}=\tfrac12\sum_{bc}\lambda_b\lambda_cT_{abc}$, and the $2$ in (C) is exactly the reciprocal of Hamilton's $\tfrac12$. **Under the unordered reading ($\sum_{b<c}$), the same identity reads $\sum_{b<c}\lambda_b\lambda_cT_{abc}=\lambda_a(\theta-\lambda_a)$ with no $2$ at all.** So the constant is right iff both conventions are held together: ordered slots *and* the $\tfrac12$ in $\#$. Drop either and the factor-2 collision the brief warns of is immediate. The same pair fixes (A), $\sum_{\beta\gamma}T_{k\beta\gamma}=\sum_\beta\lVert[v_k,v_\beta]\rVert^2=2(n-2)$, the Killing marginal, and (B), $(W\#I)_{aa}=\tfrac12\sum_{bc}\lambda_bT_{abc}=-\lambda_a$ from Böhm–Wilking's $W\#I=-W$. **All three carry one $2$ from one source, and they are mutually consistent.**
 
@@ -37,21 +37,21 @@ $$\sum_{abc}\lambda_a\lambda_b\lambda_cT_{abc}=2\sum_a\lambda_a^2(\theta-\lambda
 
 $$m_0=\sum_kg_k=2\sum_{k\alpha\beta}\lambda_\alpha^2T-2\sum_{k\alpha\beta}\lambda_\alpha\lambda_\beta T \overset{\text{(A)},\text{(B)}}{=}2\cdot2(n-2)-2\cdot(-2)=4(n-1),$$
 
-$$m_1=\sum_k\lambda_kg_k=2\sum_k\lambda_kR_k-2\sum_{abc}\lambda_a\lambda_b\lambda_cT \overset{\text{(B)}}{=}-4\operatorname{tr}W^3-2\Sigma_3 .$$
+$$m_1=\sum_k\lambda_kg_k=2\sum_k\lambda_kR_k-2\sum_{abc}\lambda_a\lambda_b\lambda_cT \overset{\text{(B)}}{=}-4\mathop{\mathrm{tr}}W^3-2\Sigma_3 .$$
 
 Both reproduce the record's $4(n-1)$ and $-4\theta$ **exactly**, on the ordered/$\tfrac12$ reading and on no other. This is the strongest evidence available that the convention pair is the record's, and it is derivable by hand.
 
 ### 1.1 "These are the same equation", CONFIRMED, with the implication stated precisely
 
-The cubic identity $P(W)=\operatorname{tr}W^3+\tfrac12\Sigma_3$, with $\Sigma_3:=\sum_{abc}\lambda_a\lambda_b\lambda_cT_{abc}$, is an identity at **every** $W$: it is $\langle W,W^2+W^\#\rangle$ with $\langle W,W^\#\rangle=\tfrac12\Sigma_3$. Feeding in the contracted (C):
+The cubic identity $P(W)=\mathop{\mathrm{tr}}W^3+\tfrac12\Sigma_3$, with $\Sigma_3:=\sum_{abc}\lambda_a\lambda_b\lambda_cT_{abc}$, is an identity at **every** $W$: it is $\langle W,W^2+W^\#\rangle$ with $\langle W,W^\#\rangle=\tfrac12\Sigma_3$. Feeding in the contracted (C):
 
-$$\operatorname{tr}W^3+\tfrac12(2\theta-2\operatorname{tr}W^3)=\theta,\qquad\text{i.e.}\qquad P(W)=\theta .$$
+$$\mathop{\mathrm{tr}}W^3+\tfrac12(2\theta-2\mathop{\mathrm{tr}}W^3)=\theta,\qquad\text{i.e.}\qquad P(W)=\theta .$$
 
 So the contracted (C) is **the cubic identity plus $P(W)=\theta$**, and $P(W)=\theta$ is immediate from $Q(W)=\theta W$ at $\lVert W\rVert=1$. **Inside the pinned relaxation the block's claim is exactly right**: imposing the cubic identity on a variable $T$ after (C) has been imposed adds no constraint, because the two read as the same linear equation in $T$. The block's phrasing ("the same equation") is correct; what it omits is that the cubic identity is *general* and the contracted (C) is that identity *evaluated at a critical point*.
 
 ### 1.2 What actually disappears, and it is not what the block says
 
-**The block's own $m_1$ is the contracted (C) in different notation.** Substituting $\Sigma_3=2(P-\operatorname{tr}W^3)$ into the $m_1$ line above gives $m_1=-4P(W)$ at every $W\in\mathcal W_n$, criticality nowhere, which is [L107](../findings/bounds.md)'s "the $g$-route needs no criticality", independently reconfirmed here. **So the moment problem reads $\theta$ exactly once, at $m_1$, and reads it as the objective itself.** That is what "disappears": there is no second, independent handle on $\theta$ anywhere in the system.
+**The block's own $m_1$ is the contracted (C) in different notation.** Substituting $\Sigma_3=2(P-\mathop{\mathrm{tr}}W^3)$ into the $m_1$ line above gives $m_1=-4P(W)$ at every $W\in\mathcal W_n$, criticality nowhere, which is [L107](../findings/bounds.md)'s "the $g$-route needs no criticality", independently reconfirmed here. **So the moment problem reads $\theta$ exactly once, at $m_1$, and reads it as the objective itself.** That is what "disappears": there is no second, independent handle on $\theta$ anywhere in the system.
 
 **Is L113 the same fact as L112's Gate 2?** *Nearly, and the record should say so.* [L112](../findings/INDEX-results.md)'s verdict is "(A) and (B) contain no $\theta$, so nothing built from them can bound it". The $g$-moment problem's inputs are: (A) and (B) for $m_0$ ($\theta$-free; the cubic identity for $m_1=-4P$) which *is* the objective; and $g_k\ge0$, $\theta$-free. **So L113 is a two-line corollary of L112's observation**: the only $\theta$ in the system is the thing being bounded, hence nothing about $\theta$ can come out that was not put in. This is not one result under two numbers (the statements differ) but the record files as a theorem-shaped extension what follows from a sentence it already holds.
 
@@ -61,7 +61,7 @@ So the contracted (C) is **the cubic identity plus $P(W)=\theta$**, and $P(W)=\t
 
 The block quantifies over "*any* pair of moment inequalities built from [positivity and support], however the free moment enters". Three things go unsaid, and all three matter.
 
-- **"Support" is not an ingredient.** $\mu=\sum_kg_k\delta_{\lambda_k}$ has its atoms *at the eigenvalues* by construction, so $\operatorname{supp}\mu\subseteq[\lambda_{\min},\lambda_{\max}]$ is a tautology, not a hypothesis. The support inequality at [bounds.md](../findings/bounds.md) line 295 is positivity tested against the polynomial $(\lambda-\lambda_{\min})(\lambda_{\max}-\lambda)$, exactly as Cauchy–Schwarz at line 294 is positivity tested against $(\lambda-c)^2$. **The class has one ingredient, not two.**
+- **"Support" is not an ingredient.** $\mu=\sum_kg_k\delta_{\lambda_k}$ has its atoms *at the eigenvalues* by construction, so $\mathop{\mathrm{supp}}\mu\subseteq[\lambda_{\min},\lambda_{\max}]$ is a tautology, not a hypothesis. The support inequality at [bounds.md](../findings/bounds.md) line 295 is positivity tested against the polynomial $(\lambda-\lambda_{\min})(\lambda_{\max}-\lambda)$, exactly as Cauchy–Schwarz at line 294 is positivity tested against $(\lambda-c)^2$. **The class has one ingredient, not two.**
 - **"Any pair" is the wrong arity.** With every moment from $m_2$ up free, a pair of inequalities involving $m_3$ and $m_4$ eliminates nothing and returns no pinned conclusion at all. The claim is only true once the class is restricted to inequalities in $(m_0,m_1,m_2)$, a restriction the block never states.
 - **"Cannot leave the pinned class" names the conclusion, not its strength.** A pinned conclusion is precisely what Conjecture A is: $\theta\le\theta_0(n)$ mentions no free datum. **So "cannot leave the pinned class" cannot close a route, and as a route-closure the statement is unfalsifiable.** What would close the route is "cannot improve on L107", which is a different claim and is the one §2.2 proves and §3 refutes at the wider class.
 
@@ -95,7 +95,7 @@ three lines of Hölder against the row marginal $2(n-2)$ from (A) and $T\ge0$. I
 
 $$C\ \le\ 4(n-2)\ <\ 4(n-1)=m_0\qquad\text{at every unit }W .$$
 
-L107's equality case is $\operatorname{supp}(g)\subseteq E_{\min}$, i.e. the whole mass $4(n-1)$ sits on the $\lambda_{\min}$-eigenspace. **Whenever $\lambda_{\min}$ is simple, the cap forbids that outright** (one index cannot carry $4(n-1)>C$) so L107 cannot be attained and the capped problem is strictly stronger there. The general bite condition is $\dim E_{\min}\cdot C<4(n-1)$, which is why nothing is lost at $S^k\times S^k$, where the two sides are equal. *This reproduces, by hand and independently, the condition [r593](REVIEW_r593.md)/[r594](REVIEW_r594.md) record on L109's own block; I reached it before reading theirs.*
+L107's equality case is $\mathop{\mathrm{supp}}(g)\subseteq E_{\min}$, i.e. the whole mass $4(n-1)$ sits on the $\lambda_{\min}$-eigenspace. **Whenever $\lambda_{\min}$ is simple, the cap forbids that outright** (one index cannot carry $4(n-1)>C$) so L107 cannot be attained and the capped problem is strictly stronger there. The general bite condition is $\dim E_{\min}\cdot C<4(n-1)$, which is why nothing is lost at $S^k\times S^k$, where the two sides are equal. *This reproduces, by hand and independently, the condition [r593](REVIEW_r593.md)/[r594](REVIEW_r594.md) record on L109's own block; I reached it before reading theirs.*
 
 **What the capped class returns** is a fractional-knapsack bound: order the $\Lambda^2$ spectrum increasingly, fill capacity $C$ from the bottom until mass $4(n-1)$ is used, and
 

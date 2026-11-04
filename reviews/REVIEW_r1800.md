@@ -35,7 +35,7 @@ On $X=E_{qp}-E_{pq}$ this is $v_p(Se_q)e_p^{\mathsf T}+v_qe_q(Se_p)^{\mathsf T}-
 - $\varphi_{ab}$ with $a,b\notin\{j,k\}$: $Se_a=Se_b=0$ kills all four terms, so $\nu_x\varphi_{ab}=0$.
 - $\langle\varphi_{kb},\nu_x\varphi_{ja}\rangle=x_a\langle\varphi_{kb},\varphi_{ka}\rangle=0$ for $a\ne b$.
 
-So `nuX` is supported exactly on the pairs $\varphi_{ja}\leftrightarrow\varphi_{ka}$, which is $\sum_ax_a(\varphi_{ja}\otimes\varphi_{ka}+\varphi_{ka}\otimes\varphi_{ja})$ under [conventions.md:104](../findings/conventions.md)'s $u\odot v=u\otimes v+v\otimes u$. **Normalisation.** `inner2` is $\tfrac12\operatorname{tr}(X^{\mathsf T}Y)$, so each $\varphi_{pq}$ ($p<q$) is a unit vector, and `innerOp2` ([Bivectors2.lean:279](../lean/HamiltonsCubic/Base/Bivectors2.lean)) is $\tfrac12\sum_{i,j}$ over ordered pairs, which is the Hilbert–Schmidt sum over $p<q$ ([conventions.md:85](../findings/conventions.md): $\tfrac12$ at the $\Lambda^2$ level, plain Frobenius on the pair matrix). Hence $\lVert\nu_x\rVert^2=\sum_a(x_a^2+x_a^2)=2\lVert x\rVert^2$, the record's normalisation. PairSquare does not prove this norm (O4). The orientation of $e_{ja}$ enters $\varphi_{ja}$ and $\varphi_{ka}$ alike, so no sign of $x_a$ is at stake, and $G_x$ is quadratic in $x$ in any case.
+So `nuX` is supported exactly on the pairs $\varphi_{ja}\leftrightarrow\varphi_{ka}$, which is $\sum_ax_a(\varphi_{ja}\otimes\varphi_{ka}+\varphi_{ka}\otimes\varphi_{ja})$ under [conventions.md:104](../findings/conventions.md)'s $u\odot v=u\otimes v+v\otimes u$. **Normalisation.** `inner2` is $\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$, so each $\varphi_{pq}$ ($p<q$) is a unit vector, and `innerOp2` ([Bivectors2.lean:279](../lean/HamiltonsCubic/Base/Bivectors2.lean)) is $\tfrac12\sum_{i,j}$ over ordered pairs, which is the Hilbert–Schmidt sum over $p<q$ ([conventions.md:85](../findings/conventions.md): $\tfrac12$ at the $\Lambda^2$ level, plain Frobenius on the pair matrix). Hence $\lVert\nu_x\rVert^2=\sum_a(x_a^2+x_a^2)=2\lVert x\rVert^2$, the record's normalisation. PairSquare does not prove this norm (O4). The orientation of $e_{ja}$ enters $\varphi_{ja}$ and $\varphi_{ka}$ alike, so no sign of $x_a$ is at stake, and $G_x$ is quadratic in $x$ in any case.
 
 ## 2. `Q_nuX`
 
@@ -62,7 +62,7 @@ $n=4$, $j=0$, $k=1$, $x=(\cdot,\cdot,1,-1)$, so $v=(0,0,1,-1)$ and $\sum v=0$.
 - $\nu_x\varphi_{02}=\varphi_{12}$, $\nu_x\varphi_{12}=\varphi_{02}$, $\nu_x\varphi_{03}=-\varphi_{13}$, $\nu_x\varphi_{13}=-\varphi_{03}$, $\nu_x\varphi_{01}=\nu_x\varphi_{23}=0$.
 - $G_x$: $K_{02}=K_{12}=1$, $K_{03}=K_{13}=1$, $K_{01}=-2$, $K_{23}=-2$. Row sums vanish ($-2+1+1=0$ at rows $0,1$, $1+1-2=0$ at rows $2,3$).
 - Cross-check through $D^-_x$ ($K_{02}=1$, $K_{12}=-1$, $K_{03}=-1$, $K_{13}=1$) and the diagonal product: $(01)$ entry $A_{02}A_{21}+A_{03}A_{31}=-1-1=-2$, $(23)$ entry $A_{20}A_{03}+A_{21}A_{13}=-2$, $(02)$ entry $A_{02}^2+A_{01}A_{12}+A_{03}A_{32}=1$. It agrees with $G_x$, as `rot45_Dminus` and `Gy_rot` require.
-- $\nu_x^2$ is the identity on $\operatorname{span}\{\varphi_{02},\varphi_{12},\varphi_{03},\varphi_{13}\}$, the record's $(\nu^2)_{ja,ja}=x_a^2=1$. $\lVert\nu_x\rVert^2=4=2\lVert x\rVert^2$ and $\lVert G_x\rVert^2=1+1+1+1+4+4=12=3\lVert x\rVert^4$.
+- $\nu_x^2$ is the identity on $\mathop{\mathrm{span}}\{\varphi_{02},\varphi_{12},\varphi_{03},\varphi_{13}\}$, the record's $(\nu^2)_{ja,ja}=x_a^2=1$. $\lVert\nu_x\rVert^2=4=2\lVert x\rVert^2$ and $\lVert G_x\rVert^2=1+1+1+1+4+4=12=3\lVert x\rVert^4$.
 
 ## Axioms
 

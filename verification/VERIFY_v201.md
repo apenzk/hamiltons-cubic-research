@@ -15,7 +15,7 @@ Brief read cold: [BRIEF_L21.md](BRIEF_L21.md), sections A–E, with [conventions
 | 7 | *"Every $F_\lambda$ spectrum is identical across $n=10,12,14$"* | **HYPOTHESIS-DEBT**, three sampled dimensions, no argument on file, and the record's two audits contradict each other about what is owed |
 | 8 | Fifth row, *"two higher types ($0$ throughout"* | **PROVEN), hypotheses corrected**: the conclusion holds, the record's stated reason does not |
 | 9 | *"$F_u$ preserves $A$-index degree and vanishes on degree $\le1$"* | **BROKEN**, $F_u$ vanishes on neither the degree-$1$ block $AC$ nor the degree-$0$ block $BB$, and the sentence's own image clause lists both |
-| 10 | $\operatorname{im}F_u\subseteq AA\oplus AB\oplus AC\oplus BB$ | **PROVEN**, derived here from $[\mathfrak{so}(4),\mathfrak{so}(m)]=0$ and $u$'s support |
+| 10 | $\mathop{\mathrm{im}}F_u\subseteq AA\oplus AB\oplus AC\oplus BB$ | **PROVEN**, derived here from $[\mathfrak{so}(4),\mathfrak{so}(m)]=0$ and $u$'s support |
 | 11 | $T_u(SO(n).u)=2\cdot\mathbf1\oplus4\cdot V$, $\dim=4n-14$ | **PROVEN** |
 | 12 | The $\tfrac12\theta^*$-eigenspace **is** the orbit tangent space | **PROVEN, hypotheses corrected**: one inclusion is two lines from equivariance and criticality, not the numerical coincidence the record records; the reverse needs the tables |
 | 13 | *"The remaining formal obligation is a proof that the stable range begins at $n-4\ge8$"* (section C) | **BROKEN**, over-strong; refuted by the explicit $m=5$ branching below |
@@ -104,7 +104,7 @@ which is $\mathrm{Mat}_k(D)$, not $\mathrm{Mat}_k(\mathbb R)$. Concretely: if $D
 
 $$F_u\big|_{\text{isotypic}}\;=\;F_\lambda\otimes\mathrm{Id}_V\;+\;F'_\lambda\otimes J$$
 
-is $G$-equivariant for **any** pair $F_\lambda,F'_\lambda$, and the claimed form is the special case $F'_\lambda=0$. The eigenvalue consequence changes with it: the spectrum of $F_\lambda\otimes\mathrm{Id}+F'_\lambda\otimes J$ is not $\operatorname{spec}(F_\lambda)$ but the spectrum of the complex matrix $F_\lambda+iF'_\lambda$, each eigenvalue doubled. **So $\operatorname{spec}(F_u)=\bigcup_\lambda\operatorname{spec}(F_\lambda)$ genuinely requires $D=\mathbb R$**, i.e. each $V_\lambda$ absolutely irreducible. That $F_u$ is real and symmetric does not supply it, a symmetric operator commuting with a quaternionic $G$-action is still an $\mathbb H$-linear map.
+is $G$-equivariant for **any** pair $F_\lambda,F'_\lambda$, and the claimed form is the special case $F'_\lambda=0$. The eigenvalue consequence changes with it: the spectrum of $F_\lambda\otimes\mathrm{Id}+F'_\lambda\otimes J$ is not $\mathop{\mathrm{spec}}(F_\lambda)$ but the spectrum of the complex matrix $F_\lambda+iF'_\lambda$, each eigenvalue doubled. **So $\mathop{\mathrm{spec}}(F_u)=\bigcup_\lambda\mathop{\mathrm{spec}}(F_\lambda)$ genuinely requires $D=\mathbb R$**, i.e. each $V_\lambda$ absolutely irreducible. That $F_u$ is real and symmetric does not supply it, a symmetric operator commuting with a quaternionic $G$-action is still an $\mathbb H$-linear map.
 
 **Does the step have absolute irreducibility here?** Yes, at $m\ge5$, and the record never says so. The six types occurring (§5) are $\nu=(0),(1),(1,1),(2),(2,1),(2,2)$, every one a **tensor** representation of $SO(m)$ with row length $\ell(\nu)\le2$. For $m\ge5$ we have $\ell(\nu)\le2<m/2$, so none of them is a $\pm$-split half of a middle exterior power and each stays irreducible after complexification. A real representation that is irreducible and remains irreducible over $\mathbb C$ is absolutely irreducible, so $D=\mathbb R$ in all six cases and the claimed form is correct.
 
@@ -130,7 +130,7 @@ and only the first three are consulted. So $(\alpha,\delta)$ is in $A\times A$ o
 
 **Two conclusions, and they are not the same conclusion.**
 
-- **Image claim: CORRECT.** $\operatorname{im}F_u\subseteq AA\oplus AB\oplus AC\oplus BB$. Both parts land there; nothing lands in $BC$ or $CC$. The record's stated reason, *"from $[\mathfrak{so}(4),\mathfrak{so}(m)]=0$"*, is the right reason and is the $[A,C]=0$ row above.
+- **Image claim: CORRECT.** $\mathop{\mathrm{im}}F_u\subseteq AA\oplus AB\oplus AC\oplus BB$. Both parts land there; nothing lands in $BC$ or $CC$. The record's stated reason, *"from $[\mathfrak{so}(4),\mathfrak{so}(m)]=0$"*, is the right reason and is the $[A,C]=0$ row above.
 - **Degree claim: BROKEN.** *"$F_u$ preserves the $A$-index degree and vanishes on degree $\le1$"* is false twice over, and the sentence refutes itself: if $F_u$ preserved degree **and** vanished on degree $\le1$, its image would be $AA$ alone, and the same sentence's image list contains $AB$, $AC$ and $BB$.
   - **$AC$ is degree $1$ and $F_u$ does not vanish on it.** In closed form: take $h=\omega\odot\eta$ with $\omega\in\Lambda^+\subset A$ an eigenvector of $u|_A$ with eigenvalue $2c\ne0$ and $\eta\in C$ any nonzero bivector of $\mathbb R^m$. Then $u\#h=0$ (the $AC$ block is killed by the sharp part) but $\tfrac12(uh+hu)=2c\,\omega\odot\eta\ne0$. So $F_uh=2c\,h\ne0$.
   - **$BB$ is degree $0$ and $F_u$ does not vanish on it.** There the anticommutator dies and the sharp part does not, $BB\to BB$ is one of the three surviving arrows, and $S^2B$ is where the $S^2_0$ row's multiplicity space largely lives (§5), a block the table itself records as carrying $\tfrac13$ and $-\tfrac16$.
@@ -223,7 +223,7 @@ The $m=5$ row is the one that decides the round, so I redid the whole count ther
 
 **The stabiliser and the trivial part.** $\mathfrak{so}(4)=\mathfrak{su}(2)_+\oplus\mathfrak{su}(2)_-$ acting as $\mathfrak{so}(3)$ on each of $\Lambda^\pm$. For $u=W_{\mathbb{CP}^2}$, $W^-=0$, so all of $\mathfrak{su}(2)_-$ stabilises; and $W^+$ has eigenvalues proportional to $(2,-1,-1)$, whose stabiliser in $\mathfrak{so}(3)$ is the $\mathfrak{so}(2)$ rotating the repeated eigenplane. So $\dim\mathfrak{stab}_{\mathfrak{so}(4)}(u)=3+1=4$, and $\dim(\mathfrak{so}(4)/\mathfrak{stab}_4)=6-4=2$ ✓, matching the record's asserted $2$, **which the record asserts and does not derive** (H10). It is $\mathfrak u(2)$, dimension $4$, consistent with the $\mathbb{CP}^2$ isotropy.
 
-**The vector part.** For $\xi\in B$, $\xi\cdot u=[\operatorname{ad}\xi,u]$, and since $u_{BB}=u_{CC}=0$, its only surviving block is $(\operatorname{ad}\xi)_{BA}\,u_{AA}$, in $AB$. This vanishes only if $\operatorname{ad}\xi$ annihilates $\operatorname{im}(u|_A)=\Lambda^+$; but $\Lambda^+$ contains nondegenerate $2$-forms on $\mathbb R^4$, and $[\,e_i\wedge f_a,\omega\,]\ne0$ for such $\omega$ and any $0\ne e_i\wedge f_a$. So $B$ injects, contributing $\dim B=4m$, and as a $G$-module the image of an injective $G$-map on $B=4\cdot V$ is $4\cdot V$. **$C=\mathfrak{so}(m)$ stabilises $u$ outright**, $u$ being supported in $A$.
+**The vector part.** For $\xi\in B$, $\xi\cdot u=[\mathop{\mathrm{ad}}\xi,u]$, and since $u_{BB}=u_{CC}=0$, its only surviving block is $(\mathop{\mathrm{ad}}\xi)_{BA}\,u_{AA}$, in $AB$. This vanishes only if $\mathop{\mathrm{ad}}\xi$ annihilates $\mathop{\mathrm{im}}(u|_A)=\Lambda^+$; but $\Lambda^+$ contains nondegenerate $2$-forms on $\mathbb R^4$, and $[\,e_i\wedge f_a,\omega\,]\ne0$ for such $\omega$ and any $0\ne e_i\wedge f_a$. So $B$ injects, contributing $\dim B=4m$, and as a $G$-module the image of an injective $G$-map on $B=4\cdot V$ is $4\cdot V$. **$C=\mathfrak{so}(m)$ stabilises $u$ outright**, $u$ being supported in $A$.
 
 $$T_u(SO(n).u)=2\cdot\mathbf1\;\oplus\;4\cdot V,\qquad\dim=2+4m=2+4(n-4)=4n-14.\quad\checkmark$$
 
@@ -257,7 +257,7 @@ Two lines, from equivariance and criticality alone, no dimension in it. So $T_u\
 **Two consistency screens that the tabulated spectra pass.** Exact rational arithmetic on the table's own entries, reported as screens and not as evidence for the spectra.
 
 - **Dimensions.** At $n=12$: $20\cdot1+20\cdot8+6\cdot28+10\cdot35=698$, and $698+940=1638=\dim\mathcal W_{12}$. ✓ The full eigenvalue census reads $1$ at multiplicity $1$; $\tfrac12$ at $2+4\cdot8=34=4n-14$ ✓; $\tfrac13$ at $3+28+3\cdot35=136$, matching the block's own *"attained on $136$ dimensions at $n=12$"* ✓; $-\tfrac16$ at $6+2\cdot28+6\cdot35=272$; $-\tfrac12$ at $32$; $-1$ at $2$; $0$ at $1161$. Sum $1638$. ✓
-- **Trace.** $\operatorname{tr}(F_u)/\theta^*=1+\tfrac12(2+4m)+\tfrac13X-\tfrac16(2X)-\tfrac12(4m)-2$ where $X=3+\binom m2+3\big(\tfrac{m(m+1)}2-1\big)$ is the $\tfrac13$-multiplicity, and the table makes the $-\tfrac16$-multiplicity **exactly $2X$**, identically in $m$. So the $\tfrac13$ and $-\tfrac16$ contributions cancel, and the rest is $1+1+2m-2m-2=0$. **$\operatorname{tr}F_u=0$ identically in $m$**, which is what a traceless $u$ forces. The table has this structure built in and is internally consistent at $m=6,8,10$ and beyond.
+- **Trace.** $\mathop{\mathrm{tr}}(F_u)/\theta^*=1+\tfrac12(2+4m)+\tfrac13X-\tfrac16(2X)-\tfrac12(4m)-2$ where $X=3+\binom m2+3\big(\tfrac{m(m+1)}2-1\big)$ is the $\tfrac13$-multiplicity, and the table makes the $-\tfrac16$-multiplicity **exactly $2X$**, identically in $m$. So the $\tfrac13$ and $-\tfrac16$ contributions cancel, and the rest is $1+1+2m-2m-2=0$. **$\mathop{\mathrm{tr}}F_u=0$ identically in $m$**, which is what a traceless $u$ forces. The table has this structure built in and is internally consistent at $m=6,8,10$ and beyond.
 
 These screens make the tabulated spectra harder to doubt. **They are not a proof of them**, and I record them as screens only.
 
@@ -271,7 +271,7 @@ These screens make the tabulated spectra harder to doubt. **They are not a proof
 
 **Reported as `withdrawn`, reason: fails step (ii) of the protocol, no closed-form exhibition of an actual inconsistency between the two tables.** What replaces it is the positive statement: **the correct table has six rows**, and §5 supplies every entry the record left as `—`:
 
-| $G$-type | highest weight | $\dim V_\lambda$ | $\dim M_\lambda$ | $\operatorname{spec}(F_\lambda)/\theta^*$ |
+| $G$-type | highest weight | $\dim V_\lambda$ | $\dim M_\lambda$ | $\mathop{\mathrm{spec}}(F_\lambda)/\theta^*$ |
 | --- | --- | --- | --- | --- |
 | trivial | $(0)$ | $1$ | $20$ | $-1^{2},\,-\tfrac16^{6},\,0^{6},\,\tfrac13^{3},\,\tfrac12^{2},\,1$ |
 | vector | $(1)$ | $m$ | $20$ | $-\tfrac12^{4},\,0^{12},\,\tfrac12^{4}$ |
@@ -284,7 +284,7 @@ The last two columns of the last two rows are **proved** (§3, §5). The last co
 
 ## 9. The conclusion's direction: bound, attained, or both
 
-**The normalisation first, because it decides the reading.** $\alpha=\sqrt{2/3}\langle F_uV,V\rangle$ and $\theta^*=\sqrt{3/2}$, so $\sqrt{2/3}\,\theta^*=1$ and **the table's column $\operatorname{spec}(F_\lambda)/\theta^*$ is literally the multiset of attainable $\alpha$ values.** Section C's header $\operatorname{spec}(F_\lambda)/\sqrt{3/2}$ and section D's $\operatorname{spec}(F_\lambda)/\theta^*$ are the same column. ✓ No discrepancy there.
+**The normalisation first, because it decides the reading.** $\alpha=\sqrt{2/3}\langle F_uV,V\rangle$ and $\theta^*=\sqrt{3/2}$, so $\sqrt{2/3}\,\theta^*=1$ and **the table's column $\mathop{\mathrm{spec}}(F_\lambda)/\theta^*$ is literally the multiset of attainable $\alpha$ values.** Section C's header $\mathop{\mathrm{spec}}(F_\lambda)/\sqrt{3/2}$ and section D's $\mathop{\mathrm{spec}}(F_\lambda)/\theta^*$ are the same column. ✓ No discrepancy there.
 
 **What the deletion does.** $\mathbb Ru$ removes the single $1$ (in closed form: $F_uu=Q(u)=\theta^*u$). $T_u\mathcal O$ removes the $\tfrac12$'s, the two in the trivial block and four per vector copy, $2+4m=4n-14$ in all, and by §6 those are exactly the orbit. What remains has top entry $\tfrac13$, in the trivial, $\Lambda^2$ and $S^2_0$ blocks, and $0$ in the vector block and in the two higher types.
 
@@ -336,7 +336,7 @@ A reader who resolves the second occurrence against the first is told that four 
 - **A nonzero eigenvalue on the $940$.** Ruled out. §3 shows $F_u$ annihilates $BC\oplus CC$, and §5 shows the $(2,1)$ and $(2,2)$ isotypics are confined there. So the falsifier cannot live in the unnamed rows.
 - **A $\tfrac12\theta^*$-eigenvector outside the orbit.** Not ruled out, and this is where a falsifier could still hide: §6 proves only $T_u\mathcal O\subseteq E(\tfrac12\theta^*)$. If some $F_\lambda$ carried an extra $\tfrac12$ that the sampled dimensions missed, the deletion would leave $\tfrac12$ behind and **L20 would become vacuous**, since its interval is empty at $\alpha=\tfrac12$. The tabulated $\tfrac12$-multiplicity is exactly $4n-14$ at all three sampled $n$ and identically in $m$ as a formula, which is a real constraint but is not a proof.
 - **An eigenvalue in $(\tfrac13\theta^*,\tfrac12\theta^*)$.** Not ruled out. This is the debt of §7 in its sharpest form, and it lives entirely inside the four matrices.
-- **A trace obstruction.** I looked for one and it does not obstruct: §7's screen shows $\operatorname{tr}F_u=0$ holds identically in $m$ on the tabulated spectra, so trace gives no leverage against a falsifier.
+- **A trace obstruction.** I looked for one and it does not obstruct: §7's screen shows $\mathop{\mathrm{tr}}F_u=0$ holds identically in $m$ on the tabulated spectra, so trace gives no leverage against a falsifier.
 
 **I ran nothing.** No script, no Sage, no numeric evaluation; the four $F_\lambda$ were not rebuilt or re-diagonalised, and the record's three sampled dimensions were not re-sampled.
 
@@ -346,7 +346,7 @@ A reader who resolves the second occurrence against the first is told that four 
 
 The lemma splits cleanly into a half that is now proved and a half that is not.
 
-**Proved here, for every $n\ge9$, identically in $m$:** the six $SO(m)$-types; the multiplicities $20,20,6,10,4,1$ and their $n$-independence; the two unnamed dimension formulas and the identity $\sum\dim M_\lambda\dim V_\lambda=\dim\mathcal W_n$; the image inclusion $\operatorname{im}F_u\subseteq AA\oplus AB\oplus AC\oplus BB$; the annihilation of the $940$; the orbit decomposition $2\cdot\mathbf1\oplus4\cdot V$ of dimension $4n-14$; and $T_u\mathcal O\subseteq E(\tfrac12\theta^*)$.
+**Proved here, for every $n\ge9$, identically in $m$:** the six $SO(m)$-types; the multiplicities $20,20,6,10,4,1$ and their $n$-independence; the two unnamed dimension formulas and the identity $\sum\dim M_\lambda\dim V_\lambda=\dim\mathcal W_n$; the image inclusion $\mathop{\mathrm{im}}F_u\subseteq AA\oplus AB\oplus AC\oplus BB$; the annihilation of the $940$; the orbit decomposition $2\cdot\mathbf1\oplus4\cdot V$ of dimension $4n-14$; and $T_u\mathcal O\subseteq E(\tfrac12\theta^*)$.
 
 **Owed:** that the four matrices $F_{\mathbf1},F_V,F_{\Lambda^2},F_{S^2_0}$ on $\mathbb R^{20},\mathbb R^{20},\mathbb R^6,\mathbb R^{10}$ have entries independent of $m$ for all $m\ge5$, and have the tabulated spectra, by rational rank certificates $\dim\ker(F_\lambda-r\,\mathrm{Id})$, no eigenvectors and no floating point. Until that exists, $\alpha\le\tfrac13$ rests on three sampled dimensions, and $\alpha=\tfrac13$ attained rests on no exhibited witness at all.
 

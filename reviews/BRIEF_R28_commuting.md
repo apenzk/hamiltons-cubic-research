@@ -12,7 +12,7 @@ You are an adversarial reviewer. **Work from the definitions below and from the 
 
 > the $V$-frame dependence of the value is $\sum_k\big(\beta\nu_k^2\,p_k^{\mathsf T}\hat Up_k+\nu_k\,p_k^{\mathsf T}Cp_k\big)$ over an orthonormal frame
 
-**Given, and not under review**, from a landed Gate 2 round: $\Pi_k\subseteq X_k\subseteq B_k=\operatorname{conv}(\Pi_k)$ where $X_k=\varphi_r(O(k))$, $B_k$ is Birkhoff's polytope and $\Pi_k$ the permutation matrices, so $\operatorname{conv}(X_k)=B_k$ and a linear functional on a SINGLE orthostochastic matrix attains its maximum at a permutation matrix. Every permutation matrix splits.
+**Given, and not under review**, from a landed Gate 2 round: $\Pi_k\subseteq X_k\subseteq B_k=\mathop{\mathrm{conv}}(\Pi_k)$ where $X_k=\varphi_r(O(k))$, $B_k$ is Birkhoff's polytope and $\Pi_k$ the permutation matrices, so $\mathop{\mathrm{conv}}(X_k)=B_k$ and a linear functional on a SINGLE orthostochastic matrix attains its maximum at a permutation matrix. Every permutation matrix splits.
 
 **Given, verbatim from the record**, and this is the sentence the reduction claims to meet:
 

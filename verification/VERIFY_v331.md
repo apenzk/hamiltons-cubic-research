@@ -4,7 +4,7 @@ Cold brief ([BRIEF_L111.md](BRIEF_L111.md)), no numerical work, no scripts writt
 
 | # | Claim | Verdict |
 |---|---|---|
-| 1 | $\langle v,W^\#v\rangle=-\tfrac12\operatorname{tr}(\mathrm{ad}(v)W\mathrm{ad}(v)W)$, polarised, gives $M_{kl}=-2(W^\#)_{kl}$ | CONFIRMED |
+| 1 | $\langle v,W^\#v\rangle=-\tfrac12\mathop{\mathrm{tr}}(\mathrm{ad}(v)W\mathrm{ad}(v)W)$, polarised, gives $M_{kl}=-2(W^\#)_{kl}$ | CONFIRMED |
 | 2 | Criticality $Q(W)=\theta W$ is equivalent to $M_{kl}=2\lambda_k(\lambda_k-\theta)\delta_{kl}$ | CONFIRMED |
 | 3 | The display's "i.e.": the matrix form is equivalent to $\sum\lambda_\alpha\lambda_\beta c_{k\alpha\beta}c_{l\alpha\beta}=0$ whenever $\lambda_k\ne\lambda_l$ | REFUTED AS STATED |
 | 4 | The bracket form is exactly $[W,Q(W)]=0$ | CONFIRMED |
@@ -35,7 +35,7 @@ Cold brief ([BRIEF_L111.md](BRIEF_L111.md)), no numerical work, no scripts writt
 | Hypothesis | Source | Used where | Checked against the object |
 |---|---|---|---|
 | $W$ symmetric on $\Lambda^2$ | definition of $\mathcal W_n$ | Claims 1, 2 (existence of an orthonormal eigenbasis, $W^T=W$ in the trace) | holds |
-| inner product ad-invariant, $c$ totally antisymmetric | conventions line 61 | Claim 1 ($\langle[x,y],z\rangle=-\langle y,[x,z]\rangle$), Claim 6 ($c_{kba}=-c_{kab}$) | holds for $-\tfrac12\operatorname{tr}$ on $\mathfrak{so}(n)$ |
+| inner product ad-invariant, $c$ totally antisymmetric | conventions line 61 | Claim 1 ($\langle[x,y],z\rangle=-\langle y,[x,z]\rangle$), Claim 6 ($c_{kba}=-c_{kab}$) | holds for $-\tfrac12\mathop{\mathrm{tr}}$ on $\mathfrak{so}(n)$ |
 | factor $\tfrac12$ in the index formula for $\#$ | conventions line 77 | Claim 1 (the $-\tfrac12$), Claim 6 (the $2$ in (C)) | consistent, Section 1 |
 | $W\in\mathcal W_n$ (Bianchi, Ricci-flat) | ambient | **unused** by Claims 1 to 6. Used by the definition of criticality (the first-order condition on the sphere of $\mathcal W_n$ is $Q(W)=\theta W$ only because $Q(W)\in\mathcal W_n$), by Claims 9, 10, 11 | the fact $Q(\mathcal W_n)\subset\mathcal W_n$ is imported by the definition and has no argument in the brief |
 | $\lVert W\rVert=1$, $\theta=P(W)$ | conventions line 151 | **unused** by Claim 2 (the equivalence holds for every $\theta$ and every scale). Used in Claim 11 | a matrix form holding at some $\theta$ forces $\theta=P(W)$ once $\lVert W\rVert=1$, since $\langle W,Q(W)\rangle=\theta\lVert W\rVert^2$ |
@@ -46,9 +46,9 @@ The two unused hypotheses are benign: Claims 1 to 6 hold for every symmetric $W$
 
 ## 1. The polarised identity and $M_{kl}$
 
-Located: "Polarising $\langle v,W^\#v\rangle=-\tfrac12\operatorname{tr}(\mathrm{ad}(v)W\mathrm{ad}(v)W)$ and substituting $W^\#=\theta W-W^2$ gives exactly that. Define $M_{kl}=\operatorname{tr}\big(\mathrm{ad}(\varphi_k)W\,\mathrm{ad}(\varphi_l)W\big)$".
+Located: "Polarising $\langle v,W^\#v\rangle=-\tfrac12\mathop{\mathrm{tr}}(\mathrm{ad}(v)W\mathrm{ad}(v)W)$ and substituting $W^\#=\theta W-W^2$ gives exactly that. Define $M_{kl}=\mathop{\mathrm{tr}}\big(\mathrm{ad}(\varphi_k)W\,\mathrm{ad}(\varphi_l)W\big)$".
 
-Derivation, directly in bilinear form. From the index formula, $\langle u,W^\#v\rangle=\tfrac12\sum_{ab}\langle[Wv_a,Wv_b],u\rangle\,\langle[v_a,v_b],v\rangle$. By ad-invariance, $\langle[v_a,v_b],v\rangle=\langle v_a,[v_b,v]\rangle=-(\mathrm{ad}\,v)_{ab}$ and likewise $\langle[Wv_a,Wv_b],u\rangle=-\langle Wv_a,\mathrm{ad}(u)Wv_b\rangle=-(W\mathrm{ad}(u)W)_{ab}$. Hence $\langle u,W^\#v\rangle=\tfrac12\sum_{ab}(W\mathrm{ad}(u)W)_{ab}(\mathrm{ad}\,v)_{ab}=\tfrac12\operatorname{tr}\big((W\mathrm{ad}(u)W)^T\mathrm{ad}(v)\big)$. With $\mathrm{ad}(u)^T=-\mathrm{ad}(u)$ and $W^T=W$ this is $-\tfrac12\operatorname{tr}(\mathrm{ad}(u)W\mathrm{ad}(v)W)$. At $u=v$ it is the record's identity, and the form is symmetric in $u,v$ by cyclicity of the trace, so polarisation returns the same bilinear form.
+Derivation, directly in bilinear form. From the index formula, $\langle u,W^\#v\rangle=\tfrac12\sum_{ab}\langle[Wv_a,Wv_b],u\rangle\,\langle[v_a,v_b],v\rangle$. By ad-invariance, $\langle[v_a,v_b],v\rangle=\langle v_a,[v_b,v]\rangle=-(\mathrm{ad}\,v)_{ab}$ and likewise $\langle[Wv_a,Wv_b],u\rangle=-\langle Wv_a,\mathrm{ad}(u)Wv_b\rangle=-(W\mathrm{ad}(u)W)_{ab}$. Hence $\langle u,W^\#v\rangle=\tfrac12\sum_{ab}(W\mathrm{ad}(u)W)_{ab}(\mathrm{ad}\,v)_{ab}=\tfrac12\mathop{\mathrm{tr}}\big((W\mathrm{ad}(u)W)^T\mathrm{ad}(v)\big)$. With $\mathrm{ad}(u)^T=-\mathrm{ad}(u)$ and $W^T=W$ this is $-\tfrac12\mathop{\mathrm{tr}}(\mathrm{ad}(u)W\mathrm{ad}(v)W)$. At $u=v$ it is the record's identity, and the form is symmetric in $u,v$ by cyclicity of the trace, so polarisation returns the same bilinear form.
 
 Therefore $M_{kl}=-2\langle\varphi_k,W^\#\varphi_l\rangle=-2(W^\#)_{kl}$. The factor $2$ is exactly the inverse of the $\tfrac12$ in the index formula. Dropping that $\tfrac12$ would give $M_{kl}=-(W^\#)_{kl}$ and the value $\lambda_k(\lambda_k-\theta)$, so the record's $2$ is the one consistent with [conventions.md](../findings/conventions.md) line 77. Hypotheses used: $W$ symmetric, ad-invariance, the $\tfrac12$. Bianchi, Ricci-flatness and the norm are not used.
 
@@ -125,8 +125,8 @@ Located: "the diagonal entries pin $\sum\lambda_\alpha\lambda_\beta c_{k\alpha\b
 
 No argument on file for independence. Dependencies in closed form, following the step's own algebra with $E_k$ the $k$-th equation (C):
 
-- $\sum_k\lambda_kE_k$ is an identity. Its left side is $2\sum_k\lambda_k(W^\#)_{kk}=2\langle W,W^\#\rangle$, its right side is $2\theta\lVert W\rVert^2-2\operatorname{tr}W^3=2\theta-2\operatorname{tr}W^3$, and $\theta=P(W)=\operatorname{tr}W^3+\langle W,W^\#\rangle$ makes them equal. So the $\lambda$-weighted sum restates the definition of $\theta$.
-- $\sum_kE_k$ reads $2\operatorname{tr}W^\#=2\theta\operatorname{tr}W-2\lVert W\rVert^2$, which is $\operatorname{tr}Q(W)=0$. It is an identity on $\mathcal W_n$ given the imported fact $Q(\mathcal W_n)\subset\mathcal W_n$ that the definition of criticality already uses.
+- $\sum_k\lambda_kE_k$ is an identity. Its left side is $2\sum_k\lambda_k(W^\#)_{kk}=2\langle W,W^\#\rangle$, its right side is $2\theta\lVert W\rVert^2-2\mathop{\mathrm{tr}}W^3=2\theta-2\mathop{\mathrm{tr}}W^3$, and $\theta=P(W)=\mathop{\mathrm{tr}}W^3+\langle W,W^\#\rangle$ makes them equal. So the $\lambda$-weighted sum restates the definition of $\theta$.
+- $\sum_kE_k$ reads $2\mathop{\mathrm{tr}}W^\#=2\theta\mathop{\mathrm{tr}}W-2\lVert W\rVert^2$, which is $\mathop{\mathrm{tr}}Q(W)=0$. It is an identity on $\mathcal W_n$ given the imported fact $Q(\mathcal W_n)\subset\mathcal W_n$ that the definition of criticality already uses.
 - At $n=4$, in a $\Lambda^\pm$-adapted eigenbasis, $\sum_{k\in\Lambda^+}E_k$ reads $2\cdot2\sigma_2(W^+)=-2\lVert W^+\rVert^2$, true for every $W\in\mathcal W_4$ and every $\theta$ (Section 7), and likewise for $\Lambda^-$.
 
 So the $N$ diagonal equations carry at most $N-2$ independent constraints for $n\ge5$ (given the import, and since $\lambda$ is orthogonal to $\mathbf 1$ and nonzero) and at most $N-3=3$ at $n=4$ when $W\ne0$, since the weight vectors $\lambda$, $\mathbf 1_{\Lambda^+}$, $\mathbf 1_{\Lambda^-}$ are independent there. Charitable reading: "$N$ scalar equations, one per index". Under that reading the count is right. Under the reading the sentence invites, $N$ constraints of content against one, it overcounts, and the adjacent sentence "a route may not count it as an extra constraint" shows the record cares about exactly that distinction. GAP: the record needs either "N equations" or an independence count with the dependencies above removed.

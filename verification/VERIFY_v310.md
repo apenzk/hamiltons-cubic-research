@@ -5,7 +5,7 @@ Cold brief ([BRIEF_L91.md](BRIEF_L91.md)), quotations checked against [findings/
 | # | Claim | Verdict |
 |---|---|---|
 | 1 | Heading and bullet 1: the identity Gram gives $\mathrm{rank}\,\mu_K\ge1$ unconditionally | HYPOTHESIS-DEBT |
-| 2 | Bullet 2: $36-\mathrm{rank}$ is the solution-set dimension only when the system is consistent, and consistency is $F_5\in\operatorname{im}\mu_K$ | CONFIRMED |
+| 2 | Bullet 2: $36-\mathrm{rank}$ is the solution-set dimension only when the system is consistent, and consistency is $F_5\in\mathop{\mathrm{im}}\mu_K$ | CONFIRMED |
 | 3 | Bullet 3, the identity $\mathrm{rank}=14-\dim\{F:\mathrm{Cat}_F(K,K)=0\}$, a space containing $\mathcal A(W_0^6)$ | HYPOTHESIS-DEBT |
 | 4 | Bullet 3, the count $14+29-65<0$ and "$13$ holds unless a second coincidence occurs" | HYPOTHESIS-DEBT |
 | 5 | $\Delta$ as a lead: psd, invariant, sum of squares, vanishing exactly on the orbit cone, $F_5/\Delta\in[2.50,3.15]$ bounded and positive | HYPOTHESIS-DEBT |
@@ -20,7 +20,7 @@ Cold brief ([BRIEF_L91.md](BRIEF_L91.md)), quotations checked against [findings/
 - $K$: the cubics with $\sigma_\lambda(W_0)=0$, taken as in L90: an $O(5)$-stable subspace of real cubics on $\mathcal W_5$ each vanishing at $W_0$ (this is what L90's cap "a product of two cubics of $K$ vanishes at $W_0$" uses).
 - $\langle\cdot,\cdot\rangle$: the apolar inner product on polynomials. $q_1,\dots,q_k$ an apolar-orthonormal basis of $K$.
 - Grams: symmetric $k\times k$ matrices $G$, $\mu_K(G)=\sum_{a,b}G_{ab}q_aq_b$. The $36$: the $O(5)$-invariant ones. $V$: the $14$-dimensional space of invariant sextics, the codomain of $\mu_K$ as in L90.
-- $\mathrm{rank}\,\mu_K=\dim\operatorname{im}\mu_K\subseteq V$. $\mathrm{rank}(\mathrm{ev}\circ\mu_K)$ is L90's rank at a finite set $S$.
+- $\mathrm{rank}\,\mu_K=\dim\mathop{\mathrm{im}}\mu_K\subseteq V$. $\mathrm{rank}(\mathrm{ev}\circ\mu_K)$ is L90's rank at a finite set $S$.
 - $L_0=\langle\cdot,W_0\rangle$, so $\mathcal A(W_0^6)$ is read as the sextic $L_0^6$ (up to a nonzero constant), with $\langle P,L_0^6\rangle\propto P(W_0)$ for every sextic $P$. $R$: the Reynolds (Haar average) projection onto invariants.
 - Casimir of the $SO(5)$ block with partition label $(\lambda_1,\lambda_2)$: $c=\langle\lambda,\lambda+2\rho\rangle=\lambda_1(\lambda_1+3)+\lambda_2(\lambda_2+1)$, $\rho=(3/2,1/2)$. Section 6 shows this is the convention the stated values fit.
 - Verdicts attach to the written chain in the cited lines. Where I say an argument exists, that answers the brief's question and is not credited to the record.
@@ -36,7 +36,7 @@ Cold brief ([BRIEF_L91.md](BRIEF_L91.md)), quotations checked against [findings/
 | H5. real coefficients, real points | "psd", "sum of squares" | no |
 | H6. $F_5$ is an invariant sextic, $F_5\in V$ | bullet 2 (a system with right side in $V$), $F_5/\Delta$ comparisons | no |
 | H7. in bullet 3, $F$ ranges over $V$, not over all sextics | the identity $\mathrm{rank}=14-\dim\{\cdot\}$ | no |
-| H8. $\operatorname{im}\mu_K=R(\operatorname{span}K\cdot K)$ and $\langle\cdot,\cdot\rangle$ is nondegenerate and invariant on $V$ | the identity in bullet 3 | no |
+| H8. $\mathop{\mathrm{im}}\mu_K=R(\mathop{\mathrm{span}}K\cdot K)$ and $\langle\cdot,\cdot\rangle$ is nondegenerate and invariant on $V$ | the identity in bullet 3 | no |
 | H9. the meaning of $29$ and $65$ | the count $14+29-65$ | no |
 | H10. the list of blocks among which "three" collisions occur, and what "them" refers to | Casimir paragraph | not in the cited lines |
 | Given L90: cap $\mathrm{rank}\,\mu_K\le13$ (proved), and evaluation at $W_0$ nonzero on $V$ | edges rank $13,14$, the annihilator containing $R(L_0^6)\ne0$ | yes, as given |
@@ -46,7 +46,7 @@ Every use of L90 in L91 matches what L90 states: L91 never uses the measured ran
 
 ## 1. Bullet 1 and the heading: the lower bound $1$
 
-**Which rank (attack item 1).** The heading says "gives the unconditional lower bound $1$" and bullet 1 says "Lower bound $1$, unconditionally". Neither names a rank. Passage B names two: $\mathrm{rank}\,\mu_K$ (capped at $13$, proved) and $\mathrm{rank}(\mathrm{ev}\circ\mu_K)$ (measured $\ge13$). The argument offered, a nonzero element $\Delta\in\operatorname{im}\mu_K$, bounds $\mathrm{rank}\,\mu_K$. It bounds $\mathrm{rank}(\mathrm{ev}\circ\mu_K)$ only if $\Delta$ is nonzero at a point of $S$, which is not argued. The rank bounded is $\mathrm{rank}\,\mu_K$, the dimension of $\operatorname{im}\mu_K$ in the $14$-dimensional $V$.
+**Which rank (attack item 1).** The heading says "gives the unconditional lower bound $1$" and bullet 1 says "Lower bound $1$, unconditionally". Neither names a rank. Passage B names two: $\mathrm{rank}\,\mu_K$ (capped at $13$, proved) and $\mathrm{rank}(\mathrm{ev}\circ\mu_K)$ (measured $\ge13$). The argument offered, a nonzero element $\Delta\in\mathop{\mathrm{im}}\mu_K$, bounds $\mathrm{rank}\,\mu_K$. It bounds $\mathrm{rank}(\mathrm{ev}\circ\mu_K)$ only if $\Delta$ is nonzero at a point of $S$, which is not argued. The rank bounded is $\mathrm{rank}\,\mu_K$, the dimension of $\mathop{\mathrm{im}}\mu_K$ in the $14$-dimensional $V$.
 
 **The written chain, link by link.**
 
@@ -55,7 +55,7 @@ Every use of L90 in L91 matches what L90 states: L91 never uses the measured ran
 3. "a sum of squares of cubics of $K$, psd." Correct under H5.
 4. "vanishing on the orbit." Correct: for $g\in O(5)$, $q_a(gW_0)=(g^{-1}\cdot q_a)(W_0)=0$ since $g^{-1}\cdot q_a\in K$ (H1) and elements of $K$ vanish at $W_0$ (H2). By homogeneity it vanishes on the orbit cone.
 5. "and nonzero ($\Delta/\lVert W\rVert^6\approx0.5$ at random points)." The only support on file is the sampled value. By the brief's rule, a statement supported only by a measurement is HYPOTHESIS-DEBT.
-6. $\Delta\ne0$ and $\Delta\in\operatorname{im}\mu_K$ give $\mathrm{rank}\,\mu_K\ge1$. This step is not written but is immediate.
+6. $\Delta\ne0$ and $\Delta\in\mathop{\mathrm{im}}\mu_K$ give $\mathrm{rank}\,\mu_K\ge1$. This step is not written but is immediate.
 
 **Attack item 2.** The identity Gram argument proves $\mathrm{rank}\,\mu_K\ge1$ once $\Delta\ne0$ is proved. The parenthetical sample contributes only a numerical indication that $\Delta$ is not the zero polynomial. A two-line argument without sampling exists and is not on file: a real polynomial vanishing at every real point is zero, so $\sum_aq_a^2=0$ forces every $q_a=0$, which contradicts $q_a$ being basis vectors as soon as $K\ne0$ (H4). The same argument shows more: $\mu_K(G)\ne0$ for every nonzero psd $G$.
 
@@ -70,14 +70,14 @@ Every use of L90 in L91 matches what L90 states: L91 never uses the measured ran
 ### 1.1 Candidate withdrawn: "the lower bound $1$" as a bound on $\mathrm{rank}(\mathrm{ev}\circ\mu_K)$
 
 1. Locate: line 175, "the unconditional lower bound $1$", with L90's measured quantity $\mathrm{rank}(\mathrm{ev}\circ\mu_K)$ the rank named in Passage B's lower bound.
-2. Exhibit: L90's statement allows any finite $S$. Take $S=\{W_0\}$. Every element of $\operatorname{im}\mu_K$ vanishes at $W_0$ (L90's cap), so $\mathrm{ev}\circ\mu_K=0$ and $\mathrm{rank}(\mathrm{ev}\circ\mu_K)=0<1$.
+2. Exhibit: L90's statement allows any finite $S$. Take $S=\{W_0\}$. Every element of $\mathop{\mathrm{im}}\mu_K$ vanishes at $W_0$ (L90's cap), so $\mathrm{ev}\circ\mu_K=0$ and $\mathrm{rank}(\mathrm{ev}\circ\mu_K)=0<1$.
 3. Charitable reading: the bound is on $\mathrm{rank}\,\mu_K$, the only rank the identity Gram argument addresses, and the same rank as bullet 3's formula over the $14$. Under that reading the exhibit is irrelevant.
 
 Withdrawn: the charitable reading is the natural one. It is recorded here because the heading leaves the quantity unnamed.
 
 ## 2. Bullet 2: the solution-set dimension
 
-**Derivation.** The system is $\mu_K(G)=F_5$ with $G$ in the $36$-dimensional space of invariant Grams. Under H6 the right side lies in $V$. The solution set is empty when $F_5\notin\operatorname{im}\mu_K$. Otherwise it is $G_0+\ker\mu_K$ for any particular solution $G_0$, an affine subspace of dimension $\dim\ker\mu_K=36-\mathrm{rank}\,\mu_K$ by rank-nullity. "Consistent" is then literally "$F_5\in\operatorname{im}\mu_K$", so the second clause is a tautology and correct. It is a necessary condition for any route representing $F_5=\mu_K(G)$.
+**Derivation.** The system is $\mu_K(G)=F_5$ with $G$ in the $36$-dimensional space of invariant Grams. Under H6 the right side lies in $V$. The solution set is empty when $F_5\notin\mathop{\mathrm{im}}\mu_K$. Otherwise it is $G_0+\ker\mu_K$ for any particular solution $G_0$, an affine subspace of dimension $\dim\ker\mu_K=36-\mathrm{rank}\,\mu_K$ by rank-nullity. "Consistent" is then literally "$F_5\in\mathop{\mathrm{im}}\mu_K$", so the second clause is a tautology and correct. It is a necessary condition for any route representing $F_5=\mu_K(G)$.
 
 **Attack item 3, linear, affine, psd.**
 
@@ -100,10 +100,10 @@ Withdrawn: the bullet is a statement about the linear system. The psd set is bou
 
 ## 3. Bullet 3: the identity $\mathrm{rank}=14-\dim\{F:\mathrm{Cat}_F(K,K)=0\}$
 
-**Attack item 4, which $F$.** $\mathrm{Cat}_F(K,K)=0$ means $\langle qq',F\rangle=0$ for all $q,q'\in K$, that is $F\perp\operatorname{span}(K\cdot K)$. The range of $F$ is not stated (H7).
+**Attack item 4, which $F$.** $\mathrm{Cat}_F(K,K)=0$ means $\langle qq',F\rangle=0$ for all $q,q'\in K$, that is $F\perp\mathop{\mathrm{span}}(K\cdot K)$. The range of $F$ is not stated (H7).
 
 - **All sextics.** The identity is impossible. Every product $qq'$ with $q,q'\in K$ vanishes to order $2$ at $W_0\ne0$. In coordinates with $W_0$ along $e_1$, the sextics vanishing to order $2$ at $W_0$ are those with zero coefficient on $x_1^6$ and on the $34$ monomials $x_1^5x_j$ ($j\ge2$), a subspace of codimension $35$ (value plus $34$ transverse derivatives, the radial derivative following by Euler's relation), so its annihilator has dimension $35$. Hence $\dim\{F\ \text{all sextics}:\mathrm{Cat}_F(K,K)=0\}\ge35$, and $14-35<0\le\mathrm{rank}$. This reading is excluded.
-- **Invariant sextics $V$.** The identity holds if one proves H8: $\operatorname{im}\mu_K=R(\operatorname{span}K\cdot K)$ (the equivariant map $\operatorname{Sym}^2K\to\operatorname{span}K\cdot K$ carries invariants onto invariants for the compact group $O(5)$), and for $F\in V$, $\langle F,P\rangle=\langle F,RP\rangle$ by invariance of the apolar form, so $F\perp K\cdot K$ iff $F\perp\operatorname{im}\mu_K$ inside $V$. Positive definiteness on $V$ then gives dimension $14-\mathrm{rank}\,\mu_K$. None of this is on file.
+- **Invariant sextics $V$.** The identity holds if one proves H8: $\mathop{\mathrm{im}}\mu_K=R(\mathop{\mathrm{span}}K\cdot K)$ (the equivariant map $\mathop{\mathrm{Sym}}^2K\to\mathop{\mathrm{span}}K\cdot K$ carries invariants onto invariants for the compact group $O(5)$), and for $F\in V$, $\langle F,P\rangle=\langle F,RP\rangle$ by invariance of the apolar form, so $F\perp K\cdot K$ iff $F\perp\mathop{\mathrm{im}}\mu_K$ inside $V$. Positive definiteness on $V$ then gives dimension $14-\mathrm{rank}\,\mu_K$. None of this is on file.
 
 **"A space containing $\mathcal A(W_0^6)$."** Read literally, $L_0^6$ is not invariant: $\mathcal W_5$ is an irreducible nontrivial $O(5)$-module, so the orbit of $W_0$ spans $\mathcal W_5$ and contains some $gW_0\ne\pm W_0$, and $\langle\cdot,gW_0\rangle^6\ne L_0^6$. So $L_0^6$ lies in the all-sextics annihilator (since $\mathrm{Cat}_{L_0^6}(q,q')\propto q(W_0)q'(W_0)=0$), not in $V$. Its Reynolds image $R(L_0^6)$ lies in the $V$-annihilator, represents evaluation at $W_0$ on $V$, and is nonzero because L90 states that functional is nonzero. That is the reading under which "containing" is right, and it reproduces L90's cap by the same functional.
 
@@ -179,7 +179,7 @@ All three pairs collide at exactly the stated values. The Dynkin-label reading $
 ## 8. Scope against Passage B (attack items 5 and 8)
 
 - **Bullet 1 against B.** $\mathrm{rank}\,\mu_K\ge1$ is consistent with B and far weaker than B's conditional $13$. Unconditionally, L91 plus L90's cap gives $1\le\mathrm{rank}\,\mu_K\le13$. With L90's measurement granted, bullet 1 adds nothing.
-- **Bullet 2 against B.** Consistent: $36-13=23$ under B. B's conclusion (injectivity of ev on the image) does not assert $F_5\in\operatorname{im}\mu_K$, and bullet 2 correctly leaves it open.
+- **Bullet 2 against B.** Consistent: $36-13=23$ under B. B's conclusion (injectivity of ev on the image) does not assert $F_5\in\mathop{\mathrm{im}}\mu_K$, and bullet 2 correctly leaves it open.
 - **Bullet 3 against B.** Consistent: "Tightness is open" matches B's conditional status. The formula reproduces B's cap via the same functional (evaluation at $W_0$), so it is a reformulation, not a new bound.
 - **What L91 adds.** A proof-shaped route to $\mathrm{rank}\,\mu_K\ge1$ (with the sampled step), a correct rank-nullity remark, and an unwritten duality reformulation of tightness. The $\Delta$ paragraph and the Casimir paragraph are search leads with no proved content beyond the construction properties of $\Delta$ and the collision arithmetic.
 

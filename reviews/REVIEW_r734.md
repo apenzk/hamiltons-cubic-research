@@ -103,20 +103,20 @@ $E(12)$ reproduces exactly from the block's own $E(n)=\tfrac{8n^2-41n+49}{4(n+1)
 
 | clause | verdict |
 | --- | --- |
-| $(\tfrac12,\tfrac15)$ excluded by $(\operatorname{tr}S^3)^2\le\operatorname{tr}S^4$ | **true**: $\tfrac14>\tfrac15$ |
-| $(\tfrac12,\tfrac15)$ admitted by $\operatorname{tr}S^3\ge1/\sqrt{12}$ | **true**: $\tfrac12>0.2886751$ |
+| $(\tfrac12,\tfrac15)$ excluded by $(\mathop{\mathrm{tr}}S^3)^2\le\mathop{\mathrm{tr}}S^4$ | **true**: $\tfrac14>\tfrac15$ |
+| $(\tfrac12,\tfrac15)$ admitted by $\mathop{\mathrm{tr}}S^3\ge1/\sqrt{12}$ | **true**: $\tfrac12>0.2886751$ |
 | the corner sits on the working edge with equality | **true by construction**, its first coordinate being the floor |
 | the Cauchy–Schwarz edge admits the corner | **true**: $\tfrac1{12}=0.0833333\le\tfrac{709}{4680}=0.1514957$ |
 | equality forces the flat spectrum | **true, and by a shorter route than the block gives** |
-| the flat spectrum forces $\operatorname{tr}S^4=\tfrac1{12}<E(12)$ | **true**: $12\cdot12^{-2}=\tfrac1{12}$ |
+| the flat spectrum forces $\mathop{\mathrm{tr}}S^4=\tfrac1{12}<E(12)$ | **true**: $12\cdot12^{-2}=\tfrac1{12}$ |
 
-**The equality case is unique to the flat spectrum, CONFIRMED, and the block understates its own argument.** The working edge is a chain of two: $\operatorname{tr}S^3\ge\tfrac{(\operatorname{tr}S^2)^2}{\operatorname{tr}S}=\tfrac1{\operatorname{tr}S}\ge\tfrac1{\sqrt n}$, the first from $\sum\lambda^2=\sum\lambda^{1/2}\lambda^{3/2}$ and the second from $\sum\lambda\cdot1\le\sqrt n\sqrt{\sum\lambda^2}$, both needing $S\succeq0$ and $\operatorname{tr}S^2=1$ and nothing else. Equality at the end forces equality in **both**, and the second alone has equality iff $(\lambda_i)\parallel(1,\dots,1)$, the flat spectrum, with no appeal to the first. Then $\lambda_i\equiv12^{-1/2}$ and $\operatorname{tr}S^4=\tfrac1{12}$, which is simultaneously the floor of $\operatorname{tr}S^4$ under $\operatorname{tr}S^2=1$.
+**The equality case is unique to the flat spectrum, CONFIRMED, and the block understates its own argument.** The working edge is a chain of two: $\mathop{\mathrm{tr}}S^3\ge\tfrac{(\mathop{\mathrm{tr}}S^2)^2}{\mathop{\mathrm{tr}}S}=\tfrac1{\mathop{\mathrm{tr}}S}\ge\tfrac1{\sqrt n}$, the first from $\sum\lambda^2=\sum\lambda^{1/2}\lambda^{3/2}$ and the second from $\sum\lambda\cdot1\le\sqrt n\sqrt{\sum\lambda^2}$, both needing $S\succeq0$ and $\mathop{\mathrm{tr}}S^2=1$ and nothing else. Equality at the end forces equality in **both**, and the second alone has equality iff $(\lambda_i)\parallel(1,\dots,1)$, the flat spectrum, with no appeal to the first. Then $\lambda_i\equiv12^{-1/2}$ and $\mathop{\mathrm{tr}}S^4=\tfrac1{12}$, which is simultaneously the floor of $\mathop{\mathrm{tr}}S^4$ under $\mathop{\mathrm{tr}}S^2=1$.
 
-**Defect 1, "the Cauchy–Schwarz equality binds only at the flat spectrum" is false of one of the two Cauchy–Schwarz inequalities the same paragraph names.** For $(\operatorname{tr}S^2)^2\le(\operatorname{tr}S)(\operatorname{tr}S^3)$ the equality case is $(\lambda_i^{1/2})\parallel(\lambda_i^{3/2})$, i.e. *all non-zero eigenvalues equal*, which admits every rank-$k$ flat spectrum $\lambda=(k^{-1/2},\dots,k^{-1/2},0,\dots,0)$. Those are excluded from the corner only downstream, by $\operatorname{tr}S^3=1/\sqrt k>1/\sqrt{12}$ for $k<12$. The block should name which inequality it means; it names both four lines apart.
+**Defect 1, "the Cauchy–Schwarz equality binds only at the flat spectrum" is false of one of the two Cauchy–Schwarz inequalities the same paragraph names.** For $(\mathop{\mathrm{tr}}S^2)^2\le(\mathop{\mathrm{tr}}S)(\mathop{\mathrm{tr}}S^3)$ the equality case is $(\lambda_i^{1/2})\parallel(\lambda_i^{3/2})$, i.e. *all non-zero eigenvalues equal*, which admits every rank-$k$ flat spectrum $\lambda=(k^{-1/2},\dots,k^{-1/2},0,\dots,0)$. Those are excluded from the corner only downstream, by $\mathop{\mathrm{tr}}S^3=1/\sqrt k>1/\sqrt{12}$ for $k<12$. The block should name which inequality it means; it names both four lines apart.
 
-**Defect 2, the witness pair lies outside the box it is offered to describe.** *"A box bounding the two traces separately admits $(\tfrac12,\tfrac15)$"* is false of Jäger's box at $n=12$: $\tfrac15=0.2$ exceeds the ceiling $E(12)=0.1514957$, so that box already excludes the pair on the $\operatorname{tr}S^4$ coordinate and neither edge is required. The pair also fails under the transposed reading, $\tfrac12>E(12)$. The two edges' division of labour is correctly described; the illustration is of a hypothetical box, not of the one the paragraph is about.
+**Defect 2, the witness pair lies outside the box it is offered to describe.** *"A box bounding the two traces separately admits $(\tfrac12,\tfrac15)$"* is false of Jäger's box at $n=12$: $\tfrac15=0.2$ exceeds the ceiling $E(12)=0.1514957$, so that box already excludes the pair on the $\mathop{\mathrm{tr}}S^4$ coordinate and neither edge is required. The pair also fails under the transposed reading, $\tfrac12>E(12)$. The two edges' division of labour is correctly described; the illustration is of a hypothetical box, not of the one the paragraph is about.
 
-**Falsifier for the confirmation:** a PSD $S$ on $\mathbb R^{12}$ with $\operatorname{tr}S^2=1$, $\operatorname{tr}S^3=1/\sqrt{12}$ and a non-flat spectrum.
+**Falsifier for the confirmation:** a PSD $S$ on $\mathbb R^{12}$ with $\mathop{\mathrm{tr}}S^2=1$, $\mathop{\mathrm{tr}}S^3=1/\sqrt{12}$ and a non-flat spectrum.
 
 ---
 

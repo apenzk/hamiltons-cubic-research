@@ -1,4 +1,4 @@
-# Review r875 on the sharp bound $\lVert\mathrm{Alt}(A)\rVert\le\sqrt{(m-1)/(3m)}\operatorname{tr}A$, the ruling between the $m$-form and the $n$-form, and [L204AltBound.lean](../lean/HamiltonsCubic/Results/L204AltBound.lean)
+# Review r875 on the sharp bound $\lVert\mathrm{Alt}(A)\rVert\le\sqrt{(m-1)/(3m)}\mathop{\mathrm{tr}}A$, the ruling between the $m$-form and the $n$-form, and [L204AltBound.lean](../lean/HamiltonsCubic/Results/L204AltBound.lean)
 
 The brief was cold: this reviewer read the brief and [L204AltBound.lean](../lean/HamiltonsCubic/Results/L204AltBound.lean) and nothing else of the record. No numerical work was done beyond screening claims about to be recorded, in exact rational arithmetic on objects constructed for that purpose, and every value below is exact. Log: [agent_logs/review-r875-altbound.log](../agent_logs/review-r875-altbound.log).
 
@@ -6,8 +6,8 @@ The brief was cold: this reviewer read the brief and [L204AltBound.lean](../lean
 
 | # | Claim as recorded | Verdict | Reason |
 |---|---|---|---|
-| 1 | $\lVert\mathrm{Alt}(A)\rVert\le\sqrt{(m-1)/(3m)}\operatorname{tr}A$ for PSD $A$, record's norm, $m=\lfloor n/2\rfloor$ | **CONFIRMED** | both steps re-derived, and the constant is attained, so it is sharp over PSD operators |
-| 2 | Step one, the triangle inequality with $\operatorname{tr}A=\sum\mu_\alpha$ | **CONFIRMED** | positivity is exactly what converts $\sum_\alpha\lvert\mu_\alpha\rvert$ into $\operatorname{tr}A$ |
+| 1 | $\lVert\mathrm{Alt}(A)\rVert\le\sqrt{(m-1)/(3m)}\mathop{\mathrm{tr}}A$ for PSD $A$, record's norm, $m=\lfloor n/2\rfloor$ | **CONFIRMED** | both steps re-derived, and the constant is attained, so it is sharp over PSD operators |
+| 2 | Step one, the triangle inequality with $\mathop{\mathrm{tr}}A=\sum\mu_\alpha$ | **CONFIRMED** | positivity is exactly what converts $\sum_\alpha\lvert\mu_\alpha\rvert$ into $\mathop{\mathrm{tr}}A$ |
 | 3 | The same step without positivity | **REFUTED AS STATED** | false, not merely unproved: a trace-free $A$ on $\Lambda^2\mathbb R^4$ has $\lVert\mathrm{Alt}(A)\rVert=\sqrt{2/3}>0$ |
 | 4 | $\lVert\omega\wedge\omega\rVert^2=24\sum_{i<j}a_i^2a_j^2$ and $\max=\sqrt{12(m-1)/m}$ | **CONFIRMED** | $4!$ orderings per block pair, each of modulus $2a_ia_j$, times $\tfrac14$, gives $24$ |
 | 5 | The maximiser is the balanced bivector $a_i^2=1/m$ | **CONFIRMED**, with a precision | unique in the $a_i^2$, a positive-dimensional family as bivectors (all signs, all frames) |
@@ -27,17 +27,17 @@ The bound and the ruling stand as written and the bound is sharp, so fold both i
 
 ## Conventions, quoted from the brief
 
-- $\Lambda^2\mathbb R^n$ is realised as skew matrices. $\varphi_{ab}=E_{ba}-E_{ab}$ and it is a UNIT bivector, the inner product being $\langle X,Y\rangle=\tfrac12\operatorname{tr}(X^{\mathsf T}Y)$.
+- $\Lambda^2\mathbb R^n$ is realised as skew matrices. $\varphi_{ab}=E_{ba}-E_{ab}$ and it is a UNIT bivector, the inner product being $\langle X,Y\rangle=\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$.
 - The norm on a four-index tensor is the record's: $\lVert R\rVert^2=\tfrac14\sum_{ijkl}R_{ijkl}^2$.
 - The wedge is $(\omega\wedge\eta)_{ijkl}=\omega_{ij}\eta_{kl}-\omega_{ik}\eta_{jl}+\omega_{il}\eta_{jk}+\omega_{jk}\eta_{il}-\omega_{jl}\eta_{ik}+\omega_{kl}\eta_{ij}$, so $(\omega\wedge\omega)_{ijkl}=2(\omega_{ij}\omega_{kl}-\omega_{ik}\omega_{jl}+\omega_{il}\omega_{jk})$, twice the Pfaffian.
-- $\mathcal W_n$ is the space of algebraic Weyl tensors: symmetric operators on $\Lambda^2\mathbb R^n$, first Bianchi, Ricci-flat, trace-free, with $\lVert W\rVert^2=\sum_\alpha\lambda_\alpha^2=\operatorname{tr}(W^2)$.
+- $\mathcal W_n$ is the space of algebraic Weyl tensors: symmetric operators on $\Lambda^2\mathbb R^n$, first Bianchi, Ricci-flat, trace-free, with $\lVert W\rVert^2=\sum_\alpha\lambda_\alpha^2=\mathop{\mathrm{tr}}(W^2)$.
 
 ## Hypothesis inventory
 
 | Hypothesis | Where it is used | Does it hold at the object |
 |---|---|---|
 | $A$ symmetric on $\Lambda^2\mathbb R^n$ | supplies the orthonormal eigenbasis that given 1 is stated over | yes at $A=W^2$, since $W$ is symmetric |
-| $A$ positive semidefinite | converts $\sum_\alpha\lvert\mu_\alpha\rvert$ into $\operatorname{tr}A$, and nowhere else | yes at $A=W^2$, whose eigenvalues are $\lambda_\alpha^2\ge0$ |
+| $A$ positive semidefinite | converts $\sum_\alpha\lvert\mu_\alpha\rvert$ into $\mathop{\mathrm{tr}}A$, and nowhere else | yes at $A=W^2$, whose eigenvalues are $\lambda_\alpha^2\ge0$ |
 | $\lVert\omega_\alpha\rVert=1$ | lets $\lVert\omega_\alpha\wedge\omega_\alpha\rVert$ be compared with the maximum over the UNIT sphere | yes, the eigenbasis is orthonormal |
 | Canonical form with $m=\lfloor n/2\rfloor$ blocks (given 3) | reduces the maximisation to the simplex | yes, per eigenform, each in its own frame |
 | $O(n)$-invariance of the record's four-index norm | lets the per-eigenform frames differ, which the written argument does not mention | yes, the wedge is equivariant and the norm is a frame-independent sum of squares |
@@ -51,11 +51,11 @@ Given 1 reads $\mathrm{Alt}(A)=\tfrac16\sum_\alpha\mu_\alpha\,\omega_\alpha\wedg
 
 $$\lVert\mathrm{Alt}(A)\rVert\ \le\ \tfrac16\sum_\alpha\lvert\mu_\alpha\rvert\,\lVert\omega_\alpha\wedge\omega_\alpha\rVert\ \le\ \tfrac16\Big(\max_{\lVert\omega\rVert=1}\lVert\omega\wedge\omega\rVert\Big)\sum_\alpha\lvert\mu_\alpha\rvert .$$
 
-Each $\omega_\alpha$ is a unit bivector, so the second inequality is exactly the maximisation over the unit sphere and needs nothing further. Positivity of $A$ enters at one place only, in the last factor: $\sum_\alpha\lvert\mu_\alpha\rvert=\sum_\alpha\mu_\alpha=\operatorname{tr}A$. So $\operatorname{tr}A$ is the right factor, and the general statement the argument proves is the trace-norm statement $\lVert\mathrm{Alt}(A)\rVert\le\sqrt{(m-1)/(3m)}\sum_\alpha\lvert\mu_\alpha\rvert$ for every symmetric $A$, of which the recorded bound is the positive case.
+Each $\omega_\alpha$ is a unit bivector, so the second inequality is exactly the maximisation over the unit sphere and needs nothing further. Positivity of $A$ enters at one place only, in the last factor: $\sum_\alpha\lvert\mu_\alpha\rvert=\sum_\alpha\mu_\alpha=\mathop{\mathrm{tr}}A$. So $\mathop{\mathrm{tr}}A$ is the right factor, and the general statement the argument proves is the trace-norm statement $\lVert\mathrm{Alt}(A)\rVert\le\sqrt{(m-1)/(3m)}\sum_\alpha\lvert\mu_\alpha\rvert$ for every symmetric $A$, of which the recorded bound is the positive case.
 
 **Without positivity the recorded step is false, not merely unproved.** Work in $\mathbb R^4$ and put $\omega_1=(\varphi_{12}+\varphi_{34})/\sqrt2$ and $\omega_2=(\varphi_{12}-\varphi_{34})/\sqrt2$, an orthonormal pair. Both are balanced, and their wedges are opposite: with $(\omega\wedge\omega)_{1234}=2\omega_{12}\omega_{34}$ and $(\varphi_{ab})_{ab}=-1$, the first gives $+1$ and the second $-1$. Take
 
-$$A=\omega_1\otimes\omega_1-\omega_2\otimes\omega_2,\qquad \operatorname{tr}A=0,$$
+$$A=\omega_1\otimes\omega_1-\omega_2\otimes\omega_2,\qquad \mathop{\mathrm{tr}}A=0,$$
 
 a symmetric operator on $\Lambda^2\mathbb R^4$. Then $\mathrm{Alt}(A)=\tfrac16(\omega_1\wedge\omega_1-\omega_2\wedge\omega_2)=\tfrac13\,\omega_1\wedge\omega_1$, whose norm is $\tfrac13\sqrt6=\sqrt{2/3}=0.816497$, against a right-hand side of $0$. Screened exact: the Bianchi antisymmetriser of this $A$ returns $\tfrac13\,\omega_1\wedge\omega_1$ and $\lVert\mathrm{Alt}(A)\rVert^2=2/3$ as rationals. So positivity is load-bearing and cannot be relaxed to trace-free, which matters because $W$ itself is trace-free while $W^2$ is the object the bound is applied to.
 
@@ -132,14 +132,14 @@ zero on $\Lambda^-$. Every condition of $\mathcal W_4$ holds, screened in exact 
 - pair symmetry $R_{ijkl}=R_{klij}$, defect $0$;
 - first Bianchi, $\max_{ijkl}\lvert R_{ijkl}+R_{iklj}+R_{iljk}\rvert=0$, equivalently $\mathrm{Alt}(W)=\tfrac16(2-1-1)\Omega=0$ because $W$ is trace-free on $\Lambda^+$;
 - Ricci-flat, $\max_{ik}\lvert\sum_jR_{ijkj}\rvert=0$;
-- trace-free, $\operatorname{tr}W=2-1-1=0$;
-- $\lVert W\rVert^2=\operatorname{tr}(W^2)=6$ both as $\sum_\alpha\lambda_\alpha^2$ and as $\tfrac14\sum R_{ijkl}^2$, which also checks that the operator-to-tensor identification respects the record's norm.
+- trace-free, $\mathop{\mathrm{tr}}W=2-1-1=0$;
+- $\lVert W\rVert^2=\mathop{\mathrm{tr}}(W^2)=6$ both as $\sum_\alpha\lambda_\alpha^2$ and as $\tfrac14\sum R_{ijkl}^2$, which also checks that the operator-to-tensor identification respects the record's norm.
 
-Then $W^2=4\,s_1\otimes s_1+s_2\otimes s_2+s_3\otimes s_3$ is PSD with $\operatorname{tr}W^2=6$ and all three nonzero eigenforms balanced and wedge-aligned, so
+Then $W^2=4\,s_1\otimes s_1+s_2\otimes s_2+s_3\otimes s_3$ is PSD with $\mathop{\mathrm{tr}}W^2=6$ and all three nonzero eigenforms balanced and wedge-aligned, so
 
 $$\mathrm{Alt}(W^2)=\tfrac16(4+1+1)\,\Omega=\Omega,\qquad \lVert\mathrm{Alt}(W^2)\rVert=\sqrt6,$$
 
-against the bound $\sqrt{(m-1)/(3m)}\operatorname{tr}W^2=\tfrac1{\sqrt6}\cdot6=\sqrt6$ at $m=2$. **Equality, exactly.** Screened as rationals: $\lVert\mathrm{Alt}(W^2)\rVert^2=6=\tfrac16(\operatorname{tr}W^2)^2$.
+against the bound $\sqrt{(m-1)/(3m)}\mathop{\mathrm{tr}}W^2=\tfrac1{\sqrt6}\cdot6=\sqrt6$ at $m=2$. **Equality, exactly.** Screened as rationals: $\lVert\mathrm{Alt}(W^2)\rVert^2=6=\tfrac16(\mathop{\mathrm{tr}}W^2)^2$.
 
 So the claim that no Weyl tensor attains the constant is refuted at the first dimension where $\Lambda^4\ne0$, and any scalar multiple of $W$, and every self-dual or anti-self-dual algebraic Weyl tensor of $\mathbb R^4$ whose $\Lambda^\mp$ block vanishes, does the same. The structural reason the obstruction fails: none of first Bianchi, Ricci-flatness or trace-freeness enters the derivation, and the one condition that could have fought the equality, $\mathrm{Alt}(W)=\tfrac16\sum_\alpha\lambda_\alpha\,\omega_\alpha\wedge\omega_\alpha=0$, becomes $\big(\sum_{\lambda_\alpha\ne0}\lambda_\alpha\big)\Omega=0$ once all the wedges coincide, and that is implied by trace-freeness rather than opposed to it. Bianchi and balance point the same way here, not against each other.
 
@@ -147,23 +147,23 @@ So the claim that no Weyl tensor attains the constant is refuted at the first di
 
 ## 7. The kernel
 
-Nothing above breaks at $\ker W\ne0$. The derivation needs $\mu_\alpha\ge0$ and no more, and an eigenvalue $\lambda_\alpha=0$ of $W$ gives $\mu_\alpha=0$ in $W^2$, contributing to neither $\mathrm{Alt}(W^2)$ nor $\operatorname{tr}W^2$. The section 6 witness makes the point sharply: it has a three-dimensional kernel on $\Lambda^2\mathbb R^4$, namely all of $\Lambda^-$, and attains equality. The recurring kernel obstruction does not bite on this bound.
+Nothing above breaks at $\ker W\ne0$. The derivation needs $\mu_\alpha\ge0$ and no more, and an eigenvalue $\lambda_\alpha=0$ of $W$ gives $\mu_\alpha=0$ in $W^2$, contributing to neither $\mathrm{Alt}(W^2)$ nor $\mathop{\mathrm{tr}}W^2$. The section 6 witness makes the point sharply: it has a three-dimensional kernel on $\Lambda^2\mathbb R^4$, namely all of $\Lambda^-$, and attains equality. The recurring kernel obstruction does not bite on this bound.
 
-**At a padded object the bound is strictly weaker.** If $W$ lives on $\mathbb R^{n'}\subset\mathbb R^n$ and vanishes elsewhere, both $\lVert\mathrm{Alt}(W^2)\rVert$ and $\operatorname{tr}W^2$ are unchanged while $m=\lfloor n/2\rfloor$ grows, so the constant rises and the slack opens. The section 6 witness padded into $\mathbb R^8$ has $\lVert\mathrm{Alt}(W^2)\rVert=\sqrt6=2.449490$ against a bound of $\sqrt{3/12}\cdot6=3$. So the constant is attained only by objects whose nonzero eigenforms occupy all $\lfloor n/2\rfloor$ blocks, which is the correct statement of what the $m$-dependence measures.
+**At a padded object the bound is strictly weaker.** If $W$ lives on $\mathbb R^{n'}\subset\mathbb R^n$ and vanishes elsewhere, both $\lVert\mathrm{Alt}(W^2)\rVert$ and $\mathop{\mathrm{tr}}W^2$ are unchanged while $m=\lfloor n/2\rfloor$ grows, so the constant rises and the slack opens. The section 6 witness padded into $\mathbb R^8$ has $\lVert\mathrm{Alt}(W^2)\rVert=\sqrt6=2.449490$ against a bound of $\sqrt{3/12}\cdot6=3$. So the constant is attained only by objects whose nonzero eigenforms occupy all $\lfloor n/2\rfloor$ blocks, which is the correct statement of what the $m$-dependence measures.
 
 ## 8. Vacuity, triviality, and where the bound is beaten
 
-**Attained.** Two witnesses. The rank-one PSD operator $A=\omega\otimes\omega$ at a balanced $\omega$ has $\operatorname{tr}A=1$ and $\lVert\mathrm{Alt}(A)\rVert=\tfrac16\sqrt{12(m-1)/m}=\sqrt{(m-1)/(3m)}$, so the constant is exactly the supremum of $\lVert\mathrm{Alt}(A)\rVert/\operatorname{tr}A$ over PSD $A$ at every $n\ge2$, and the bound is sharp as an inequality about PSD operators. Inside $\mathcal W_n$ it is attained at $n=4$ by section 6.
+**Attained.** Two witnesses. The rank-one PSD operator $A=\omega\otimes\omega$ at a balanced $\omega$ has $\mathop{\mathrm{tr}}A=1$ and $\lVert\mathrm{Alt}(A)\rVert=\tfrac16\sqrt{12(m-1)/m}=\sqrt{(m-1)/(3m)}$, so the constant is exactly the supremum of $\lVert\mathrm{Alt}(A)\rVert/\mathop{\mathrm{tr}}A$ over PSD $A$ at every $n\ge2$, and the bound is sharp as an inequality about PSD operators. Inside $\mathcal W_n$ it is attained at $n=4$ by section 6.
 
-**Far from tight.** The identity $A=\mathrm{id}$ on $\Lambda^2\mathbb R^n$ is PSD with $\operatorname{tr}A=n(n-1)/2$, and $\mathrm{Alt}(\mathrm{id})=0$ because constant curvature satisfies first Bianchi, checked above in two different orthonormal bases. So the bound gives $\sqrt{(m-1)/(3m)}\,n(n-1)/2$ against a true value of $0$: the slack is the whole bound. A rank-one $A=\omega\otimes\omega$ at a simple $\omega$ is a second such case, $\mathrm{Alt}(A)=0$ against a positive bound.
+**Far from tight.** The identity $A=\mathrm{id}$ on $\Lambda^2\mathbb R^n$ is PSD with $\mathop{\mathrm{tr}}A=n(n-1)/2$, and $\mathrm{Alt}(\mathrm{id})=0$ because constant curvature satisfies first Bianchi, checked above in two different orthonormal bases. So the bound gives $\sqrt{(m-1)/(3m)}\,n(n-1)/2$ against a true value of $0$: the slack is the whole bound. A rank-one $A=\omega\otimes\omega$ at a simple $\omega$ is a second such case, $\mathrm{Alt}(A)=0$ against a positive bound.
 
-**The trivial bound available from the norm alone.** $\mathrm{Alt}$ is the orthogonal projection onto $\Lambda^4$ in the record's norm, so $\lVert\mathrm{Alt}(A)\rVert\le\lVert A\rVert=\sqrt{\operatorname{tr}(A^2)}$ with constant one. Screened exact at $A=s_1\otimes s_1$: writing $b(A)_{ijkl}=A_{ijkl}+A_{iklj}+A_{iljk}$, one gets $\mathrm{Alt}(A)=\tfrac13b(A)$, $\tfrac13b$ is idempotent, $b(A-\mathrm{Alt}(A))=0$, and $\lVert\mathrm{Alt}(A)\rVert^2+\lVert A-\mathrm{Alt}(A)\rVert^2=\tfrac16+\tfrac56=1=\lVert A\rVert^2$. Two things follow. First, this is an independent screen of given 1's constant: $\tfrac16$ is exactly the normalisation under which $\mathrm{Alt}$ is the projection, and the withdrawn $\tfrac13$ would make it non-idempotent, so the withdrawal was right and the whole bound, which scales linearly with that constant, rests on the confirmed value. Second, the comparison is genuine, not vacuous either way:
+**The trivial bound available from the norm alone.** $\mathrm{Alt}$ is the orthogonal projection onto $\Lambda^4$ in the record's norm, so $\lVert\mathrm{Alt}(A)\rVert\le\lVert A\rVert=\sqrt{\mathop{\mathrm{tr}}(A^2)}$ with constant one. Screened exact at $A=s_1\otimes s_1$: writing $b(A)_{ijkl}=A_{ijkl}+A_{iklj}+A_{iljk}$, one gets $\mathrm{Alt}(A)=\tfrac13b(A)$, $\tfrac13b$ is idempotent, $b(A-\mathrm{Alt}(A))=0$, and $\lVert\mathrm{Alt}(A)\rVert^2+\lVert A-\mathrm{Alt}(A)\rVert^2=\tfrac16+\tfrac56=1=\lVert A\rVert^2$. Two things follow. First, this is an independent screen of given 1's constant: $\tfrac16$ is exactly the normalisation under which $\mathrm{Alt}$ is the projection, and the withdrawn $\tfrac13$ would make it non-idempotent, so the withdrawal was right and the whole bound, which scales linearly with that constant, rests on the confirmed value. Second, the comparison is genuine, not vacuous either way:
 
 - for PSD $A$ of rank $r$ with flat spectrum, the recorded bound reads $c\,r\mu$ and the projection bound $\sqrt r\,\mu$ at $c=\sqrt{(m-1)/(3m)}$, so the projection bound is the stronger one exactly when $r>1/c^2=3m/(m-1)$;
 - at $m=2$ that threshold is $6=\dim\Lambda^2\mathbb R^4$, so at $n=4$ the recorded bound is never worse, tying only at the identity where both are slack;
 - at $n=6$, $m=3$, the threshold is $4.5$, and at $A=\mathrm{id}$ the recorded bound gives $\sqrt{2/9}\cdot15=7.071068$ against the projection bound's $\sqrt{15}=3.872983$.
 
-So $\sqrt{(m-1)/(3m)}$ is the sharp constant in the family "$\text{const}\times\operatorname{tr}A$", which is the family the application wants, and it is superseded by $\sqrt{\operatorname{tr}(A^2)}$ whenever the spectrum is spread. Both should be on the record, not one.
+So $\sqrt{(m-1)/(3m)}$ is the sharp constant in the family "$\text{const}\times\mathop{\mathrm{tr}}A$", which is the family the application wants, and it is superseded by $\sqrt{\mathop{\mathrm{tr}}(A^2)}$ whenever the spectrum is spread. Both should be on the record, not one.
 
 ## 9. The reach claimed for the route
 
@@ -179,7 +179,7 @@ which at a critical point, where $W^2+W^\#=\theta W$, becomes a usable constrain
 
 | Claim | The falsifier | What was done |
 |---|---|---|
-| The bound | a PSD $A$ with $\lVert\mathrm{Alt}(A)\rVert>\sqrt{(m-1)/(3m)}\operatorname{tr}A$ | none can exist: the two steps were re-derived from given 1 and the maximisation is exact on the simplex. The only remaining dependence is given 1's constant $\tfrac16$, which section 8 screened independently through the idempotence of $\tfrac13b$ |
+| The bound | a PSD $A$ with $\lVert\mathrm{Alt}(A)\rVert>\sqrt{(m-1)/(3m)}\mathop{\mathrm{tr}}A$ | none can exist: the two steps were re-derived from given 1 and the maximisation is exact on the simplex. The only remaining dependence is given 1's constant $\tfrac16$, which section 8 screened independently through the idempotence of $\tfrac13b$ |
 | The maximisation | a unit $\omega$ with $\lVert\omega\wedge\omega\rVert^2>12(m-1)/m$ | none can exist: the component count is exhaustive over the three index cases and the simplex maximum is strict |
 | The ruling | an $n$ with $2\lfloor n/2\rfloor>n$ | none exists by definition of the floor, so no search was run |
 | "Not attained in $\mathcal W_n$" | a Weyl tensor attaining equality | found, in closed form, at $n=4$, with every condition of $\mathcal W_4$ verified in exact rational arithmetic |
@@ -209,13 +209,13 @@ Build: `lake build HamiltonsCubic.Results.L204AltBound` completes, with one adve
 
 Two defects, the first of them independent of anything outside the file:
 
-1. **The eigenbasis is indexed by `Fin n`.** A symmetric operator on $\Lambda^2\mathbb R^n$ has an eigenbasis of $n(n-1)/2$ members, so `∑ a : Fin n, μ a` is not $\operatorname{tr}A$ and the sum over `a` is not the sum of given 1. At $n=4$ the statement sees four of the six eigenforms. The typed object is therefore neither the prose claim nor a special case of it.
+1. **The eigenbasis is indexed by `Fin n`.** A symmetric operator on $\Lambda^2\mathbb R^n$ has an eigenbasis of $n(n-1)/2$ members, so `∑ a : Fin n, μ a` is not $\mathop{\mathrm{tr}}A$ and the sum over `a` is not the sum of given 1. At $n=4$ the statement sees four of the six eigenforms. The typed object is therefore neither the prose claim nor a special case of it.
 2. **Nothing constrains `ω`.** There is no hypothesis that `ω a` is skew, that it is a unit bivector, or that the family is orthonormal. Since `wedgeSelf` is quadratic in its argument, replacing `ω 0` by `c • ω 0` multiplies the left-hand side by $c^2$ and leaves the right-hand side fixed, so the statement asserts a bound uniform over all matrices and fails for large $c$. Concretely, with $n=4$, $\mu=(1,0,0,0)$ and $\omega_0=c\,s_1$, the left-hand side is $c^2\sqrt6/6$ and the right-hand side is $\sqrt{1/6}$, so it breaks at any $c>1$. This reading assumes `wedgeSelf M` is the record's $M\wedge M$, which is what the file's own docstring asserts. The argument is unchanged for any nonzero quadratic wedge, and the alternative, that `wedgeSelf` normalises its argument, would contradict the identity the docstring states.
 
 So the `sorry` at line 95 is not a gap that the maximisation would close. The maximisation is genuinely what the true statement needs, and it is what this review derived in section 2, but the statement must first be re-typed with the eigenbasis indexed by a basis of $\Lambda^2\mathbb R^n$ and with the `ω a` hypothesised orthonormal unit bivectors. Two smaller notes: the module docstring calls the ruling `altBound_le_nBound`, a name that does not occur in the file, and the file's prose "attained at the balanced bivector" inherits the uniqueness overstatement of section 2.
 
 ## Verdict
 
-The mathematics of the recorded block holds. The bound $\lVert\mathrm{Alt}(A)\rVert\le\sqrt{(m-1)/(3m)}\operatorname{tr}A$ is correct for positive semidefinite $A$ in the record's norm, both of its steps survive being re-derived, and it is sharp: the supremum of $\lVert\mathrm{Alt}(A)\rVert/\operatorname{tr}A$ over PSD $A$ equals that constant at every $n\ge2$. The ruling holds for the stated reason, the inequality being $2\lfloor n/2\rfloor\le n$ with equality exactly at even $n$, and it cannot reverse. Positivity is the one hypothesis that cannot be weakened, since the same statement with $\operatorname{tr}A$ is false at trace-free $A$.
+The mathematics of the recorded block holds. The bound $\lVert\mathrm{Alt}(A)\rVert\le\sqrt{(m-1)/(3m)}\mathop{\mathrm{tr}}A$ is correct for positive semidefinite $A$ in the record's norm, both of its steps survive being re-derived, and it is sharp: the supremum of $\lVert\mathrm{Alt}(A)\rVert/\mathop{\mathrm{tr}}A$ over PSD $A$ equals that constant at every $n\ge2$. The ruling holds for the stated reason, the inequality being $2\lfloor n/2\rfloor\le n$ with equality exactly at even $n$, and it cannot reverse. Positivity is the one hypothesis that cannot be weakened, since the same statement with $\mathop{\mathrm{tr}}A$ is false at trace-free $A$.
 
 Three things must change. The claim that no Weyl tensor attains the constant is refuted by the self-dual Weyl tensor of $\mathbb R^4$, which attains it exactly, so the constant is sharp inside $\mathcal W_4$ and no improvement of it can come from the Weyl conditions at $n=4$. The claim that only a lower bound could serve the $G_W$ route is backwards: the upper bound is the direction positivity can consume, and what is actually owed is the constant converting the four-index norm into a quadratic form on $\Lambda^2$. And `alt_le_altConst_trace` states something other than the bound, with an eigenbasis of the wrong size and no hypothesis on its bivectors, so its `sorry` is unfillable as typed.

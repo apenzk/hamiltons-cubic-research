@@ -14,19 +14,19 @@ Log: agent_logs/r1901-i123-extensions.log. Subject: [2026-09-28o-I123-coupling.m
 ## 1. The object
 
 - The note's $Q(X)=X^2+X^\#$ should read $X^2+X^\#X$ (or $X^2+X\#X$), as in the conventions. This is notation only.
-- For symmetric $X,Y,Z$, $\operatorname{tr}(XYZ)$ is cyclic and reversal-invariant ($\operatorname{tr}(XYZ)=\operatorname{tr}(ZYX)$), so it is fully $S_3$-symmetric. $\langle X\#Y,Z\rangle$ is fully symmetric for the Böhm–Wilking product. So $T(X,Y,Z)=\operatorname{tr}XYZ+\langle X\#Y,Z\rangle$ is fully symmetric, with $G(X)=T(X,X,X)$ and $T(X,X,Y)=\langle Q(X),Y\rangle$. Extension 2 uses the second of these.
-- On the Weyl subspace $G(W)=\operatorname{tr}W^3+\langle W\#W,W\rangle=P(W)$. This matches the record's normalisation exactly.
+- For symmetric $X,Y,Z$, $\mathop{\mathrm{tr}}(XYZ)$ is cyclic and reversal-invariant ($\mathop{\mathrm{tr}}(XYZ)=\mathop{\mathrm{tr}}(ZYX)$), so it is fully $S_3$-symmetric. $\langle X\#Y,Z\rangle$ is fully symmetric for the Böhm–Wilking product. So $T(X,Y,Z)=\mathop{\mathrm{tr}}XYZ+\langle X\#Y,Z\rangle$ is fully symmetric, with $G(X)=T(X,X,X)$ and $T(X,X,Y)=\langle Q(X),Y\rangle$. Extension 2 uses the second of these.
+- On the Weyl subspace $G(W)=\mathop{\mathrm{tr}}W^3+\langle W\#W,W\rangle=P(W)$. This matches the record's normalisation exactly.
 
 ## 2. Extension 1
 
 - $G(W+cI)=G(W)+3c\langle Q(W),I\rangle+3c^2\langle Q(I),W\rangle+c^3G(I)$.
-- $\langle Q(I),W\rangle=(n-1)\operatorname{tr}W=0$, and $G(I)=\operatorname{tr}I+\langle I\#I,I\rangle=N+(n-2)N=(n-1)N$.
+- $\langle Q(I),W\rangle=(n-1)\mathop{\mathrm{tr}}W=0$, and $G(I)=\mathop{\mathrm{tr}}I+\langle I\#I,I\rangle=N+(n-2)N=(n-1)N$.
 - $\langle Q(W),I\rangle=\lVert W\rVert^2+\langle W\#W,I\rangle=\lVert W\rVert^2+\langle W,I\#W\rangle=\lVert W\rVert^2-\lVert W\rVert^2=0$ by L265 and the symmetry of the triple form. That is the stated cancellation.
 - Screen: $38032.054$ on both sides at $n=6$.
 
 ## 3. Extension 2
 
-- The first Bianchi map $b$ is the orthogonal projection of $\operatorname{Sym}^2\Lambda^2$ onto $\Lambda^4$ (up to a constant), and the algebraic curvature operators are $\ker b$. So $\Lambda^4$ is their orthogonal complement.
+- The first Bianchi map $b$ is the orthogonal projection of $\mathop{\mathrm{Sym}}^2\Lambda^2$ onto $\Lambda^4$ (up to a constant), and the algebraic curvature operators are $\ker b$. So $\Lambda^4$ is their orthogonal complement.
 - $Q(W)$ is an algebraic curvature operator (Böhm–Wilking), so $\langle Q(W),Y\rangle=T(W,W,Y)=0$.
 - $G(W+Y)=P(W)+3T(W,Y,Y)+G(Y)=P(W)+3\langle Q(Y),W\rangle+G(Y)$. This is correct.
 - Criticality: $\lVert W+Y\rVert^2=\lVert W\rVert^2+\lVert Y\rVert^2$, so the normalised ratio is also stationary in the $\Lambda^4$ directions.
@@ -39,10 +39,10 @@ Log: agent_logs/r1901-i123-extensions.log. Subject: [2026-09-28o-I123-coupling.m
   - $X\#X=(a^2(p-2)+c^2q)P_p+(b^2(q-2)+c^2p)P_q+c(a(p-1)+b(q-1))P_{\mathrm{mix}}$.
   - Pair with $X$ and use $q\,d_p=\tfrac12pq(p-1)$.
   - This gives $a^3d_p(p-2)+b^3d_q(q-2)+\tfrac32pq\,c^2(a(p-1)+b(q-1))$.
-  - Add $\operatorname{tr}X^3=a^3d_p+b^3d_q+c^3pq$. The stated formula follows.
+  - Add $\mathop{\mathrm{tr}}X^3=a^3d_p+b^3d_q+c^3pq$. The stated formula follows.
   - The products are consistent with $I\#I=(n-2)I$, and the explicit # at $n=6$, $p=2,3$ reproduces all four products and the formula to $10^{-14}$.
 - **$a=b=c=1$.** This is $G(I)=(n-1)N$, which is $726$ at $p=q=6$.
-- **Ricci-free line.** The sectional values are $a$, $b$ and $c$, so $\operatorname{Ric}=(p-1)a+qc$ on the first factor and $(q-1)b+pc$ on the second. The same holds for the record's $\operatorname{Ric}$, the adjoint of $\cdot\wedge\mathrm{id}$ normalised by $\operatorname{Ric}(I)=n-1$, and it is screened. Its kernel in the 3-dimensional invariant ACOs is the 1-dimensional invariant Weyl line, which contains the Weyl part of $S^p\times S^q$ (with $c<0$). At $p=q=6$ that gives $108900t^3/1980^{3/2}=1.2360331$. CONFIRMED.
+- **Ricci-free line.** The sectional values are $a$, $b$ and $c$, so $\mathop{\mathrm{Ric}}=(p-1)a+qc$ on the first factor and $(q-1)b+pc$ on the second. The same holds for the record's $\mathop{\mathrm{Ric}}$, the adjoint of $\cdot\wedge\mathrm{id}$ normalised by $\mathop{\mathrm{Ric}}(I)=n-1$, and it is screened. Its kernel in the 3-dimensional invariant ACOs is the 1-dimensional invariant Weyl line, which contains the Weyl part of $S^p\times S^q$ (with $c<0$). At $p=q=6$ that gives $108900t^3/1980^{3/2}=1.2360331$. CONFIRMED.
 - **Maximiser, derived independently.**
   - Put $s=a+b$ and $t=a-b$. The trace condition is $s=-12c/5$ and the norm condition is $79.2c^2+7.5t^2=1$.
   - Eliminating $t^2$ gives $G=554.4c^3-18c$ on $c^2\le1/79.2$.
@@ -57,7 +57,7 @@ Log: agent_logs/r1901-i123-extensions.log. Subject: [2026-09-28o-I123-coupling.m
 
 ## 5. The conclusion
 
-- **Decomposition.** CONFIRMED. $Q(W)$ is an ACO, so it has no $\Lambda^4$ part, and $\operatorname{tr}Q(W)=0$ (the computation in §2), so it has no scalar part. That leaves Weyl plus traceless Ricci, which are orthogonal. $P(W)=\langle Q(W)_{\mathrm{Weyl}},W\rangle$ holds because $W\perp$ the Ricci part.
+- **Decomposition.** CONFIRMED. $Q(W)$ is an ACO, so it has no $\Lambda^4$ part, and $\mathop{\mathrm{tr}}Q(W)=0$ (the computation in §2), so it has no scalar part. That leaves Weyl plus traceless Ricci, which are orthogonal. $P(W)=\langle Q(W)_{\mathrm{Weyl}},W\rangle$ holds because $W\perp$ the Ricci part.
 - **"An inequality valid on all traceless curvature operators cannot be P".** Correct in its precise reading: the bound $G\le\theta_0(12)\lVert X\rVert^3$ fails on traceless ACOs at $n=12$, so P does not extend there with its constant. The note shows this at $n=12$ only. The identity above shows it for every even $n=2m\ge4$, since $\Theta(S^m\times S^{m+1})>\theta_0(2m)$ there (screened $m=2..8$).
 - **Correction: "the three extensions available by lifting all fail" overstates extension 2.**
   - Extensions 1 and 3 do fail: $I$ alone gives $\sqrt{2(n-1)/n}$ (post F14), and the traceless family gives $\Theta_{n+1}$.

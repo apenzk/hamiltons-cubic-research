@@ -13,10 +13,10 @@
 
 ## D1, CONFIRMED
 
-- The basis $\{\varphi_{ij}\}_{i<j}$ is orthonormal for $\langle\cdot,\cdot\rangle$, so an operator's matrix entries are $R_{ijkl}$ with $i<j$, $k<l$, and $\operatorname{tr}(e\,\omega^2)=\sum_{i<j,\,k<l,\,a<b}e_{ijkl}\omega_{klab}\omega_{abij}$.
+- The basis $\{\varphi_{ij}\}_{i<j}$ is orthonormal for $\langle\cdot,\cdot\rangle$, so an operator's matrix entries are $R_{ijkl}$ with $i<j$, $k<l$, and $\mathop{\mathrm{tr}}(e\,\omega^2)=\sum_{i<j,\,k<l,\,a<b}e_{ijkl}\omega_{klab}\omega_{abij}$.
 - Passing to ordered pairs doubles each of the three pair sums, a factor $2^3=8$, and $\omega_{abij}=\omega_{ijab}$ (a pair swap is an even permutation of a 4-form) turns the result into $\sum e_{ijkl}\omega_{ijab}\omega_{klab}$. The factor 8 is right.
-- With L234's $\tfrac38$: $\langle N_4,e\circ N_4\rangle=3\operatorname{tr}(eN_4^2)$. Since $N_4$ is symmetric, $N_4^2\succeq0$ and $\operatorname{tr}(eN_4^2)\le\varepsilon_{\max}\operatorname{tr}(N_4^2)$, with $\lVert N_4\rVert^2=\operatorname{tr}(N_4^2)$ in the convention that gives $\lVert Y_0\rVert^2=\tfrac12$.
-- Screen, $n=6,7$, random Weyl $e$ and random orthonormal pairs: factor 8 to $3\cdot10^{-17}$, $\langle N_4,e\circ N_4\rangle=3\operatorname{tr}(eN_4^2)$ to $2\cdot10^{-18}$, $\lVert N_4\rVert^2=\tfrac16(1-g)$ to $10^{-16}$, the L234 split and the vanishing $N_4$–$N_r$ cross term to $3\cdot10^{-17}$. Slack of the bound positive at every sample.
+- With L234's $\tfrac38$: $\langle N_4,e\circ N_4\rangle=3\mathop{\mathrm{tr}}(eN_4^2)$. Since $N_4$ is symmetric, $N_4^2\succeq0$ and $\mathop{\mathrm{tr}}(eN_4^2)\le\varepsilon_{\max}\mathop{\mathrm{tr}}(N_4^2)$, with $\lVert N_4\rVert^2=\mathop{\mathrm{tr}}(N_4^2)$ in the convention that gives $\lVert Y_0\rVert^2=\tfrac12$.
+- Screen, $n=6,7$, random Weyl $e$ and random orthonormal pairs: factor 8 to $3\cdot10^{-17}$, $\langle N_4,e\circ N_4\rangle=3\mathop{\mathrm{tr}}(eN_4^2)$ to $2\cdot10^{-18}$, $\lVert N_4\rVert^2=\tfrac16(1-g)$ to $10^{-16}$, the L234 split and the vanishing $N_4$–$N_r$ cross term to $3\cdot10^{-17}$. Slack of the bound positive at every sample.
 - "$\nu\le8\varepsilon_{\max}$" is right as an upper bound on section 4's $\nu$.
 
 ## D2, CONFIRMED
@@ -25,7 +25,7 @@
 - **Sign of $\mu$.** [target.md](../findings/target.md) and [bispectral.md](../findings/bispectral.md) define $\mu$ by $\mathring Wh=-\mu h$ at the bottom of $\mathring W$ on $S^2_0$, at unit $W$. The top of $-\mathring W$ is therefore $\mu$, and at $e=W/\theta$ the top of the note's operator is $\mathring\mu=\mu/\theta$. Conventions match.
 - **Scope of the estimate.** bispectral.md states the cap $\mu\le n\theta_0(n)/(n-1)$ "unconditionally", frame by frame, at every unit Weyl $W$. It needs neither criticality nor a maximiser, and section 5 assumes no $\theta\ge\Theta_n$: the cap is kept as $n\Theta_n/((n-1)\theta)$. Screened: $\tfrac{n-1}n\mu/\Theta_n\le0.63$ at random unit Weyl, $n=6,7$.
 - **$\Theta_n$.** The note leaves $\Theta_n$ undefined, and this brief wrote it as $\sqrt{2(n-1)(n-2)}/n$, which is $\theta_0(n)$. The record's $\Theta_n$ equals $\theta_0(n)$ at even $n$ and is smaller at odd $n$ ([conventions.md](../findings/conventions.md)). The odd-$n$ estimate rests on the vertex-space argument, which bispectral.md takes from the external report, Gate 2 by [r555](REVIEW_r555.md) and [r556](REVIEW_r556.md). With $\theta_0(n)$ in place of $\Theta_n$, the cap is proved inside bispectral.md at every $n$. *Correction: define $\Theta_n$ in the note, or state the cap with $\theta_0(n)$ and add that the odd-$n$ sharpening is available.*
-- **Ricci bound.** L234 gives $\langle N_r,e\circ N_r\rangle=\frac1{2(n-2)}\sum e_{ijkl}h_{ik}h_{jl}=\frac1{2(n-2)}\langle h,\mathring{S}h\rangle_F$, where $\mathring S$ is the note's operator. Here $h\in S^2_0$ because $\operatorname{tr}h=-\operatorname{tr}(UV)=2\langle u,v\rangle=0$, and $\lvert h\rvert^2$ is the full Frobenius norm, as section 2 uses it. Screened to $10^{-17}$, with the bound's slack positive.
+- **Ricci bound.** L234 gives $\langle N_r,e\circ N_r\rangle=\frac1{2(n-2)}\sum e_{ijkl}h_{ik}h_{jl}=\frac1{2(n-2)}\langle h,\mathring{S}h\rangle_F$, where $\mathring S$ is the note's operator. Here $h\in S^2_0$ because $\mathop{\mathrm{tr}}h=-\mathop{\mathrm{tr}}(UV)=2\langle u,v\rangle=0$, and $\lvert h\rvert^2$ is the full Frobenius norm, as section 2 uses it. Screened to $10^{-17}$, with the bound's slack positive.
 
 ## D3, CONFIRMED
 
@@ -55,10 +55,10 @@ The chain, link by link:
 - **Screened constants,** $n=6,7$, random Weyl $e$, random symmetric $Y$:
   - $\Phi(e;\mathrm{Id},Y)/\langle e,Y\rangle=12$, since the $h$-form gives $3.000000$.
   - $\Omega(e;\mathrm{Id},Y)/\langle e,Y\rangle=0.222222$ and $0.666667$, which is $(n-4)(n-5)/9$.
-  - $\Phi(e;e,e)=8\operatorname{tr}e^3-4\langle e,e^\#\rangle$ to all printed digits.
+  - $\Phi(e;e,e)=8\mathop{\mathrm{tr}}e^3-4\langle e,e^\#\rangle$ to all printed digits.
   - $\Phi(e;e,e)/\Omega(e;e,e)=9.000000$.
-- **Schur argument.** Each form is linear in $e\in\mathcal W_n$ and linear in $Y\in\operatorname{Sym}^2\Lambda^2$, and $O(n)$-invariant. $\mathcal W_n$ occurs once in $\operatorname{Sym}^2\Lambda^2=\mathbb R\oplus S^2_0\oplus\mathcal W_n\oplus\Lambda^4$, so each form is a multiple of $\langle e,\pi_{\mathcal W}Y\rangle=\langle e,Y\rangle$. This is sound.
-- **"Spectral at a critical point".** $Q(e)=e$ at $e=W/\theta$, so $\langle e,e^\#\rangle=\theta^{-2}-\operatorname{tr}e^3$. Correct.
+- **Schur argument.** Each form is linear in $e\in\mathcal W_n$ and linear in $Y\in\mathop{\mathrm{Sym}}^2\Lambda^2$, and $O(n)$-invariant. $\mathcal W_n$ occurs once in $\mathop{\mathrm{Sym}}^2\Lambda^2=\mathbb R\oplus S^2_0\oplus\mathcal W_n\oplus\Lambda^4$, so each form is a multiple of $\langle e,\pi_{\mathcal W}Y\rangle=\langle e,Y\rangle$. This is sound.
+- **"Spectral at a critical point".** $Q(e)=e$ at $e=W/\theta$, so $\langle e,e^\#\rangle=\theta^{-2}-\mathop{\mathrm{tr}}e^3$. Correct.
 - **$\Phi(e;e,e^2)$.** Screen at $n=6$, 14 random Weyl $e$: least squares against the six listed quartics leaves relative residual $9\cdot10^{-3}$, while a control built in their span fits to $4\cdot10^{-16}$. So it is outside that span (screen, random $e$ only; I did not reproduce the twelve critical points).
 - **"A quartic invariant outside the pinned data"** is stronger than the screen supports, because the six are not shown to span the pinned quartics. PLAUSIBLE. It is not load-bearing, since section 5 routes around the exact term.
 

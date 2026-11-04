@@ -26,7 +26,7 @@
 
 I use the record's own, taken from [L180](../findings/diagonal-half.md#lemma-l180-ricci-flatness-is-a-signed-psd-identity-and-it-names-the-support) and nothing else.
 
-- A $2$-form and a real skew matrix are the same object; $\lVert\omega\rVert^2=-\tfrac12\operatorname{tr}(\omega^2)=\tfrac12\sum_{a,b}\omega_{ab}^2$. This is the pairing that carries the $\tfrac12$, and L180's proof states it in the form $\operatorname{tr}(\omega\omega^{\mathsf T})=\sum_{a,b}\omega_{ab}^2=2\lVert\omega\rVert^2$.
+- A $2$-form and a real skew matrix are the same object; $\lVert\omega\rVert^2=-\tfrac12\mathop{\mathrm{tr}}(\omega^2)=\tfrac12\sum_{a,b}\omega_{ab}^2$. This is the pairing that carries the $\tfrac12$, and L180's proof states it in the form $\mathop{\mathrm{tr}}(\omega\omega^{\mathsf T})=\sum_{a,b}\omega_{ab}^2=2\lVert\omega\rVert^2$.
 - **Support** of $\omega$ is the image of its matrix; $V$ is the span of the supports of the eigenforms with nonzero eigenvalue, which is [L179](../findings/diagonal-half.md#lemma-l179-the-support-of-a-low-rank-weyl-tensor-and-the-first-bianchi-identity-read-on-the-spectrum)(a)'s definition.
 - $\Pi_P$ is the orthogonal projection onto a plane $P$; $\varepsilon_P$ a unit area form of it.
 - $A_i=-\omega_i^2=\omega_i\omega_i^{\mathsf T}$, L180's symbol.
@@ -45,9 +45,9 @@ I use the record's own, taken from [L180](../findings/diagonal-half.md#lemma-l18
 
 $$\omega\omega^{\mathsf T}=-\omega^2=c^2\big(e_1e_1^{\mathsf T}+e_2e_2^{\mathsf T}\big)=c^2\,\Pi_P,\qquad \lVert\omega\rVert^2=\tfrac12\sum_{a,b}\omega_{ab}^2=c^2 .$$
 
-So unit norm is $c^2=1$ and $\omega\omega^{\mathsf T}=\Pi_P$ on the nose, the sign of $c$ dropping out because the expression is quadratic. **The record's own $\operatorname{tr}A_i=2$ is the same statement read at the trace**, $\operatorname{tr}\Pi_P=2$.
+So unit norm is $c^2=1$ and $\omega\omega^{\mathsf T}=\Pi_P$ on the nose, the sign of $c$ dropping out because the expression is quadratic. **The record's own $\mathop{\mathrm{tr}}A_i=2$ is the same statement read at the trace**, $\mathop{\mathrm{tr}}\Pi_P=2$.
 
-**And a factor would change nothing, which is the branch the brief asks me to name.** Had the pairing been $\langle\alpha,\beta\rangle=\operatorname{tr}(\alpha^{\mathsf T}\beta)$ without the $\tfrac12$, unit norm would read $c^2=\tfrac12$ and each $\omega_i\omega_i^{\mathsf T}$ would be $\tfrac12\Pi_i$. **The constant is the same $c^2$ for all three $i$ precisely because all three are unit**, so it factors out of $\sum_i\lambda_i\,\omega_i\omega_i^{\mathsf T}=0$ and the equation $\sum_i\lambda_i\Pi_i=0$ survives verbatim. A factor here could only change everything if it were $i$-dependent, and unit norm is what forbids that.
+**And a factor would change nothing, which is the branch the brief asks me to name.** Had the pairing been $\langle\alpha,\beta\rangle=\mathop{\mathrm{tr}}(\alpha^{\mathsf T}\beta)$ without the $\tfrac12$, unit norm would read $c^2=\tfrac12$ and each $\omega_i\omega_i^{\mathsf T}$ would be $\tfrac12\Pi_i$. **The constant is the same $c^2$ for all three $i$ precisely because all three are unit**, so it factors out of $\sum_i\lambda_i\,\omega_i\omega_i^{\mathsf T}=0$ and the equation $\sum_i\lambda_i\Pi_i=0$ survives verbatim. A factor here could only change everything if it were $i$-dependent, and unit norm is what forbids that.
 
 **One step is genuinely unproved and the Lean file says so.** "Decomposable and unit $\Rightarrow$ area form of a plane" needs the real skew normal form (or, equivalently, the choice of an orthonormal basis of $\langle u,v\rangle$ above); [L185Statement.lean](../lean/HamiltonsCubic/Results/L185Statement.lean)'s "What is NOT typed here" lists exactly this as the missing bridge from a general decomposable $\omega$ to `areaForm`. **The honesty is on file, so this is debt and not a defect.**
 
@@ -57,7 +57,7 @@ So unit norm is $c^2=1$ and $\omega\omega^{\mathsf T}=\Pi_P$ on the nose, the si
 
 **The brief's "consider the planes meeting" is the contrapositive, not a counterexample.** If $P_1\cap P_2\ne0$, or more generally if some $x\in P_1$ lies in $P_2+P_3$, the sum drops: $\dim(P_1+P_2+P_3)\le5$. So a meeting configuration is one where the hypothesis $\dim V=6$ fails, and the lemma says nothing about it, correctly, since at $\dim V=4$ [L178](../findings/diagonal-half.md#lemma-l178-every-weyl-tensor-of-lambda2-rank-at-most-three-has-thetalesqrt32-with-equality-exactly-at-w_mathbbcp2) already governs.
 
-**Directness here is independence and not orthogonality, and the Lean is right to type it that way.** Three pairwise non-orthogonal planes can be independent, the record's own sentence "three pairwise non-orthogonal planes can still span six dimensions" is true, and it is exactly the case L185 kills. `RangeIndependent` in the Lean file quantifies over families $x_i$ fixed by $\Pi_i$ summing to zero, which for idempotent $\Pi_i$ is $x_i\in\operatorname{range}\Pi_i$, that is independence of the three ranges and nothing more. **No orthogonality, no first Bianchi identity and no rank enter, exactly as the file claims.**
+**Directness here is independence and not orthogonality, and the Lean is right to type it that way.** Three pairwise non-orthogonal planes can be independent, the record's own sentence "three pairwise non-orthogonal planes can still span six dimensions" is true, and it is exactly the case L185 kills. `RangeIndependent` in the Lean file quantifies over families $x_i$ fixed by $\Pi_i$ summing to zero, which for idempotent $\Pi_i$ is $x_i\in\mathop{\mathrm{range}}\Pi_i$, that is independence of the three ranges and nothing more. **No orthogonality, no first Bianchi identity and no rank enter, exactly as the file claims.**
 
 ## 4. Step 6, is the decomposition of $0$ unique?
 
@@ -77,7 +77,7 @@ So unit norm is $c^2=1$ and $\omega\omega^{\mathsf T}=\Pi_P$ on the nose, the si
 
 ### 6a. The route the record already owns
 
-[L180](../findings/diagonal-half.md#lemma-l180-ricci-flatness-is-a-signed-psd-identity-and-it-names-the-support)(3): at rank three the $\lambda_i$ are nonzero and sum to zero, so up to relabelling the sign pattern is $(+,+,-)$, and moving the minority term across gives $\operatorname{supp}\omega_1+\operatorname{supp}\omega_2=\operatorname{supp}\omega_3$; **the minority form's support is therefore $V$ itself.** In the all-decomposable branch every support is a plane, so $V=P_3$ and $\dim V=2$. But at $\dim V=2$ the space $\Lambda^2V$ is one-dimensional and the rank is at most one, which is L180(3)'s own reason for $\dim V\ge4$. **Contradiction, in one line, with no dimension hypothesis anywhere.**
+[L180](../findings/diagonal-half.md#lemma-l180-ricci-flatness-is-a-signed-psd-identity-and-it-names-the-support)(3): at rank three the $\lambda_i$ are nonzero and sum to zero, so up to relabelling the sign pattern is $(+,+,-)$, and moving the minority term across gives $\mathop{\mathrm{supp}}\omega_1+\mathop{\mathrm{supp}}\omega_2=\mathop{\mathrm{supp}}\omega_3$; **the minority form's support is therefore $V$ itself.** In the all-decomposable branch every support is a plane, so $V=P_3$ and $\dim V=2$. But at $\dim V=2$ the space $\Lambda^2V$ is one-dimensional and the rank is at most one, which is L180(3)'s own reason for $\dim V\ge4$. **Contradiction, in one line, with no dimension hypothesis anywhere.**
 
 ### 6b. An independent route, free of the PSD range-sum import
 
@@ -91,7 +91,7 @@ so, using $\lambda_1=-\lambda_2-\lambda_3$ to rewrite $\lambda_2(\lambda_2+\lamb
 
 $$\lambda_2\lambda_3\big(\{\Pi_2,\Pi_3\}-\Pi_2-\Pi_3\big)=0 .$$
 
-Every $\lambda_i\ne0$, so $\{\Pi_2,\Pi_3\}=\Pi_2+\Pi_3$. Put $S:=\Pi_2+\Pi_3$; then $S^2=\Pi_2+\Pi_3+\{\Pi_2,\Pi_3\}=2S$, so $S$ is symmetric with spectrum in $\{0,2\}$ and $\operatorname{tr}S=4$ makes its $2$-eigenspace exactly two-dimensional. **And that eigenspace is $P_2\cap P_3$**: $\langle Sx,x\rangle=\lVert\Pi_2x\rVert^2+\lVert\Pi_3x\rVert^2\le2\lVert x\rVert^2$ with equality only when $\Pi_2x=x$ and $\Pi_3x=x$. So $\dim(P_2\cap P_3)=2$ and $P_2=P_3$. Feeding that back, $\lambda_1\Pi_1+(\lambda_2+\lambda_3)\Pi_2=0$ with $\lambda_2+\lambda_3=-\lambda_1\ne0$ gives $\Pi_1=\Pi_2$, hence
+Every $\lambda_i\ne0$, so $\{\Pi_2,\Pi_3\}=\Pi_2+\Pi_3$. Put $S:=\Pi_2+\Pi_3$; then $S^2=\Pi_2+\Pi_3+\{\Pi_2,\Pi_3\}=2S$, so $S$ is symmetric with spectrum in $\{0,2\}$ and $\mathop{\mathrm{tr}}S=4$ makes its $2$-eigenspace exactly two-dimensional. **And that eigenspace is $P_2\cap P_3$**: $\langle Sx,x\rangle=\lVert\Pi_2x\rVert^2+\lVert\Pi_3x\rVert^2\le2\lVert x\rVert^2$ with equality only when $\Pi_2x=x$ and $\Pi_3x=x$. So $\dim(P_2\cap P_3)=2$ and $P_2=P_3$. Feeding that back, $\lambda_1\Pi_1+(\lambda_2+\lambda_3)\Pi_2=0$ with $\lambda_2+\lambda_3=-\lambda_1\ne0$ gives $\Pi_1=\Pi_2$, hence
 
 $$P_1=P_2=P_3=:P .$$
 
@@ -101,7 +101,7 @@ $$P_1=P_2=P_3=:P .$$
 
 ### 6c. Argued the opposite, three ways
 
-- *"The emptiness proof smuggles in $\dim V=6$."* It does not: sections 6a and 6b use no dimension hypothesis, only $\operatorname{rank}\Pi_i=2$, $\Pi_i^2=\Pi_i$ and $\lambda_i\ne0$. The trace step gives $\sum_i\lambda_i=0$ from Ricci-flatness alone.
+- *"The emptiness proof smuggles in $\dim V=6$."* It does not: sections 6a and 6b use no dimension hypothesis, only $\mathop{\mathrm{rank}}\Pi_i=2$, $\Pi_i^2=\Pi_i$ and $\lambda_i\ne0$. The trace step gives $\sum_i\lambda_i=0$ from Ricci-flatness alone.
 - *"The method is too strong, it would empty everything."* It would not, and the boundary is exact. **At four planes such dependencies exist**: in $\mathbb R^4$, $\Pi_{\langle e_1,e_2\rangle}+\Pi_{\langle e_3,e_4\rangle}=\mathrm{Id}=\Pi_{\langle e_1+e_3,\,e_2+e_4\rangle}+\Pi_{\langle e_3-e_1,\,e_4-e_2\rangle}$, a fully supported dependence with $\lambda=(1,1,-1,-1)$. So the emptiness is a rank-three fact, matching L180's own "(3) is a rank-three statement and not the first case of a pattern".
 - *"Then some known rank-three Weyl tensor must be a counterexample."* The one the record carries is padded $W_{\mathbb{CP}^2}$, whose eigenforms span $\Lambda^+$; a self-dual $2$-form satisfies $\omega\wedge\omega=\lVert\omega\rVert^2\mathrm{vol}\ne0$ and is therefore **non-decomposable**. It corroborates the emptiness rather than contradicting it, and it is why the surviving branch of [I38](../plan.md) is the non-decomposable one.
 
@@ -119,7 +119,7 @@ $$P_1=P_2=P_3=:P .$$
 
 **Screen 1, the Lean.** `lake env lean HamiltonsCubic/Results/L185Statement.lean` returns exit $0$ with no output, and the file contains no `sorry`. I read `lam_eq_zero_of_rangeIndependent` line by line before running it: `hfix` uses `hidem` to put each summand in its own range, `hzero` applies `hsum` to $v$, and `hind` then kills $\lambda_i\cdot v$ with $v\ne0$. **The theorem is correct and is what its docstring says.** It also assumes less than the geometry supplies (only idempotence, never symmetry) so it is genuinely a statement about projections rather than planes, as the file claims.
 
-**Screen 2, the emptiness.** Seconds of floating-point arithmetic on five plane triples I constructed by hand (orthogonal $2+2+2$; three planes pairwise meeting in a line; two planes equal; one arbitrary triple; three members of the $\theta$-family of section 6c), computing the Gram matrix $G_{ij}=\operatorname{tr}(\Pi_i\Pi_j)$ whose kernel is exactly the space of dependences, since $\lVert\sum_i\lambda_i\Pi_i\rVert_F^2=\lambda^{\mathsf T}G\lambda$. $G$ came back nonsingular on every triple except the one with two equal planes, whose kernel is $(1,-1,0)$, a dependence with a zero entry, which the hypothesis $\lambda_i\ne0$ excludes. **Reported as a screen of section 6, evidence for nothing; the emptiness rests on 6a and 6b, both closed form.**
+**Screen 2, the emptiness.** Seconds of floating-point arithmetic on five plane triples I constructed by hand (orthogonal $2+2+2$; three planes pairwise meeting in a line; two planes equal; one arbitrary triple; three members of the $\theta$-family of section 6c), computing the Gram matrix $G_{ij}=\mathop{\mathrm{tr}}(\Pi_i\Pi_j)$ whose kernel is exactly the space of dependences, since $\lVert\sum_i\lambda_i\Pi_i\rVert_F^2=\lambda^{\mathsf T}G\lambda$. $G$ came back nonsingular on every triple except the one with two equal planes, whose kernel is $(1,-1,0)$, a dependence with a zero entry, which the hypothesis $\lambda_i\ne0$ excludes. **Reported as a screen of section 6, evidence for nothing; the emptiness rests on 6a and 6b, both closed form.**
 
 ## 8. Where L185 sits in the record
 

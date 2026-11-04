@@ -4,7 +4,7 @@ Reviewer 279. Commits under review: `a826ede` (primary), `e1fc1e6`, `45ac2ac`.
 Primary file: [findings/support-dichotomy.md](../findings/support-dichotomy.md). Supporting: [findings/nondegeneracy.md](../findings/nondegeneracy.md), [findings/second-order.md](../findings/second-order.md), [findings/sym3-blocks.md](../findings/sym3-blocks.md), [findings/fence-posts.md](../findings/fence-posts.md), [reviews/REVIEW_r277.md](REVIEW_r277.md), [reviews/REVIEW_r278.md](REVIEW_r278.md).
 Scripts: [scripts/reviewers/r279/](../scripts/reviewers/r279/). Reviewer 280 runs the identical brief concurrently and independently.
 
-Every number below comes from [review_r27_core.py](../scripts/review_r27_core.py), an independent from-the-definitions build that shares no code with the reviewed material: $\langle X,Y\rangle=\operatorname{tr}(XY)$ on symmetric operators on $\Lambda^2\mathbb R^n$, $Q(W)=W^2+W^\#$, $X\circ Y=\tfrac12(Q(X+Y)-Q(X)-Q(Y))$, $P(W)=\langle W,Q(W)\rangle$. The salvage and hook cases run the **committed** files against constructed logs in a throwaway tree.
+Every number below comes from [review_r27_core.py](../scripts/review_r27_core.py), an independent from-the-definitions build that shares no code with the reviewed material: $\langle X,Y\rangle=\mathop{\mathrm{tr}}(XY)$ on symmetric operators on $\Lambda^2\mathbb R^n$, $Q(W)=W^2+W^\#$, $X\circ Y=\tfrac12(Q(X+Y)-Q(X)-Q(Y))$, $P(W)=\langle W,Q(W)\rangle$. The salvage and hook cases run the **committed** files against constructed logs in a throwaway tree.
 
 | # | Claim | Verdict |
 |---|---|---|
@@ -67,11 +67,11 @@ Evidence: [r279_theta5.py](../scripts/reviewers/r279/r279_theta5.py), [out_theta
 
 **$\Theta_5=\sqrt{3/2}$ is proved. The flag's stated reason for doubt is a non-reason.**
 
-**Step 1, the cubic invariant space is one-dimensional at $n=5$, so $P$ *is* $3\operatorname{tr}(W^3)$.** Tested directly rather than cited: $\langle W,W^\#\rangle-2\operatorname{tr}(W^3)$ has relative size $2.8\times10^{-15}$ at $n=4$ and $1.9\times10^{-15}$ at $n=5$, against $1.3$ and $1.1$ at $n=6$ and $n=7$. Since $Q(W)=W^2+W^\#$, $P=\operatorname{tr}(W^3)+\langle W,W^\#\rangle=3\operatorname{tr}(W^3)$ at $n\le5$ and nowhere above. This is the Lovelock syzygy the file names, and [sym3-blocks.md](../findings/sym3-blocks.md) independently recovers it by Weyl integration, degree $3$ giving $1$ in the sequence $1,1,4,5,14$, a method sharing nothing with the contraction identity.
+**Step 1, the cubic invariant space is one-dimensional at $n=5$, so $P$ *is* $3\mathop{\mathrm{tr}}(W^3)$.** Tested directly rather than cited: $\langle W,W^\#\rangle-2\mathop{\mathrm{tr}}(W^3)$ has relative size $2.8\times10^{-15}$ at $n=4$ and $1.9\times10^{-15}$ at $n=5$, against $1.3$ and $1.1$ at $n=6$ and $n=7$. Since $Q(W)=W^2+W^\#$, $P=\mathop{\mathrm{tr}}(W^3)+\langle W,W^\#\rangle=3\mathop{\mathrm{tr}}(W^3)$ at $n\le5$ and nowhere above. This is the Lovelock syzygy the file names, and [sym3-blocks.md](../findings/sym3-blocks.md) independently recovers it by Weyl integration, degree $3$ giving $1$ in the sequence $1,1,4,5,14$, a method sharing nothing with the contraction identity.
 
 **Step 2, $F_5$ *is* the statement.** Substituting,
 
-$$F_5=\tfrac32\lVert W\rVert^6-9\operatorname{tr}(W^3)^2=\tfrac32\lVert W\rVert^6-P(W)^2 ,$$
+$$F_5=\tfrac32\lVert W\rVert^6-9\mathop{\mathrm{tr}}(W^3)^2=\tfrac32\lVert W\rVert^6-P(W)^2 ,$$
 
 **identically on $\mathcal W_5$**, at every scale. Confirmed at four random non-unit points, $\lVert W\rVert^2$ from $24.2$ to $41.2$: the two expressions agree to the last digit printed. So *"$F_5\ge0$ on $\mathcal W_5$"* and *"$\lvert P\rvert\le\sqrt{3/2}$ on the unit sphere of $\mathcal W_5$"* are the same sentence.
 

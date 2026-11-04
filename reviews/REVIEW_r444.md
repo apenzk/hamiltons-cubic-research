@@ -26,7 +26,7 @@ I swept [findings/](../findings/) by value rather than by vocabulary for every u
 | $\theta\le\sqrt y+(n-2)y$, $y=\lVert\lambda\rVert_4^2$ | [second-order.md](../findings/second-order.md), and cited at [L142's withdrawal](../findings/bounds.md) | $n-1$ |
 | $\theta\le(n-1)\lvert\lambda_{\min}\rvert$, [Lemma L107](../findings/bounds.md), derived twice | [bounds.md](../findings/bounds.md) | $n-1$ |
 | $\theta\le\tfrac12\sqrt{(n-1)G_2}$, [Lemma L108](../findings/bounds.md) | [bounds.md](../findings/bounds.md) | not uniform in $n$ without a $G_2$ cap |
-| $\theta\le\lambda_{\min}+(n-2)\lambda_{\max}$, [Lemma L70](../findings/bounds.md) / L73 | [bounds.md](../findings/bounds.md) | $n-2$, since $\operatorname{tr}_{\Lambda^2}W=0$ forces $\lambda_{\min}\le0$ |
+| $\theta\le\lambda_{\min}+(n-2)\lambda_{\max}$, [Lemma L70](../findings/bounds.md) / L73 | [bounds.md](../findings/bounds.md) | $n-2$, since $\mathop{\mathrm{tr}}_{\Lambda^2}W=0$ forces $\lambda_{\min}\le0$ |
 | $\theta\le\lambda_{\max}(M(\lambda))$ | [second-order.md](../findings/second-order.md) | no proved a-priori cap; the $\theta_0(n)$ reading there is explicitly conditional |
 | $\theta\le1.5444$ at rank $\le3$ | [second-order.md](../findings/second-order.md) | proved, but only on rank $\le3$ |
 
@@ -36,7 +36,7 @@ I swept [findings/](../findings/) by value rather than by vocabulary for every u
 
 ## N2, the order $\sqrt{n-2}$ was already on the record, as a measurement, from these same two marginals
 
-[Post F10](../findings/fence-posts.md) records an LP over exactly L143's raw material, $T\ge0$, totally symmetric, row marginals $2(n-2)$, pair caps $2$, plus $\operatorname{tr}(W^\#)=-1$, and its optimum is **near $0.80\sqrt{n-2}$**: $1.6059$ at $n=6$, $2.53$ at $n=12$, with the same figures in [bounds-relaxations.md](../findings/bounds-relaxations.md).
+[Post F10](../findings/fence-posts.md) records an LP over exactly L143's raw material, $T\ge0$, totally symmetric, row marginals $2(n-2)$, pair caps $2$, plus $\mathop{\mathrm{tr}}(W^\#)=-1$, and its optimum is **near $0.80\sqrt{n-2}$**: $1.6059$ at $n=6$, $2.53$ at $n=12$, with the same figures in [bounds-relaxations.md](../findings/bounds-relaxations.md).
 
 Two consequences the lemma should carry:
 
@@ -55,16 +55,16 @@ Each link holds. $Q$ is quadratic, so $Q(-W)=Q(W)$ and $P(-W)=\langle-W,Q(W)\ran
 
 The brief's sharpest line of attack is that $\theta\le\lambda_{\max}p+B_5$ might hold only on a subclass. It does not. Its derivation in [second-order.md](../findings/second-order.md) is, in an eigenbasis of $W$ with $T=c'^2$ transported there and $\mu=\lvert\lambda\rvert$:
 
-- $\operatorname{tr}W^3=\sum_\alpha\lambda_\alpha^3\le\lambda_{\max}\sum_{\lambda>0}\lambda^2=\lambda_{\max}p$, because the negative eigenvalues contribute $\le0$ and may be dropped;
+- $\mathop{\mathrm{tr}}W^3=\sum_\alpha\lambda_\alpha^3\le\lambda_{\max}\sum_{\lambda>0}\lambda^2=\lambda_{\max}p$, because the negative eigenvalues contribute $\le0$ and may be dropped;
 - $\langle W,W^\#\rangle=\tfrac12\sum_{\alpha\beta\gamma}T_{\alpha\beta\gamma}\lambda_\alpha\lambda_\beta\lambda_\gamma\le\tfrac12\sum_\alpha\mu_\alpha\langle T_\alpha\mu,\mu\rangle\le\tfrac12\lVert\mu\rVert\big(\sum_\alpha\langle T_\alpha\mu,\mu\rangle^2\big)^{1/2}=B_5$, by $T\ge0$ and one Cauchy–Schwarz with $\lVert\mu\rVert=1$.
 
 **Criticality appears nowhere in either half.** Three independent confirmations that the record reads it this way: [second-order.md](../findings/second-order.md) takes the supremum over $r$-planes with every Weyl constraint dropped except trace-freeness, which is a statement about all of $\mathrm{Weyl}_n$; the same file poses the open question as $\sup\{\lambda_{\max}p+B_5:W$ an algebraic curvature operator, $\lVert W\rVert=1\}\le\sqrt3$; and [I31](../plan.md) states the target as a supremum over $\lVert W\rVert=1$. So the borrowed quantity is used **inside** its domain, with room to spare. No finding.
 
 ## D3, step 3 holds, and the "$1$" is inert exactly where the lemma is used
 
-$p=\sum_{\lambda>0}\lambda_\alpha^2\le\sum_\alpha\lambda_\alpha^2=1$ and $\lambda_{\max}^2\le\sum\lambda^2=1$, both under [conventions.md](../findings/conventions.md)'s $\sum_\alpha\lambda_\alpha^2=\operatorname{tr}(W^2)=1$ at $\lVert W\rVert=1$. Correct.
+$p=\sum_{\lambda>0}\lambda_\alpha^2\le\sum_\alpha\lambda_\alpha^2=1$ and $\lambda_{\max}^2\le\sum\lambda^2=1$, both under [conventions.md](../findings/conventions.md)'s $\sum_\alpha\lambda_\alpha^2=\mathop{\mathrm{tr}}(W^2)=1$ at $\lVert W\rVert=1$. Correct.
 
-*Worth recording where the looseness sits, since the lemma's own note does not say it.* $\lambda_{\max}p=1$ needs $\lambda_{\max}=1$ and $p=1$, i.e. $W$ of rank one, impossible for a trace-free operator, and $B_5=0$ identically at rank $\le2$ (recorded in [second-order.md](../findings/second-order.md)). So the two summands of $1+\sqrt{n-2}$ are never near their maxima together. More sharply, [post F11](../findings/second-order.md) is the statement that this first term is the inert one: where $P$ is large, $\operatorname{tr}W^3$ is $0.0225$ against a $\#$-term of $1.2136$. **The "$1$" in the headline is post F11's dead term**, and $\sqrt{n-2}$ is the whole of the content.
+*Worth recording where the looseness sits, since the lemma's own note does not say it.* $\lambda_{\max}p=1$ needs $\lambda_{\max}=1$ and $p=1$, i.e. $W$ of rank one, impossible for a trace-free operator, and $B_5=0$ identically at rank $\le2$ (recorded in [second-order.md](../findings/second-order.md)). So the two summands of $1+\sqrt{n-2}$ are never near their maxima together. More sharply, [post F11](../findings/second-order.md) is the statement that this first term is the inert one: where $P$ is large, $\mathop{\mathrm{tr}}W^3$ is $0.0225$ against a $\#$-term of $1.2136$. **The "$1$" in the headline is post F11's dead term**, and $\sqrt{n-2}$ is the whole of the content.
 
 ## D4, step 4: the index bookkeeping is right, and so is the normalisation
 
@@ -74,15 +74,15 @@ $$\langle T_\alpha\mu,\mu\rangle=\sum_{\beta\gamma}T_{\alpha\beta\gamma}\mu_\bet
 
 The middle equality is the $\beta\leftrightarrow\gamma$ symmetry of $T$, which [conventions.md](../findings/conventions.md) supplies from total antisymmetry of $c_{abc}$; $\sum_\gamma T_{\alpha\beta\gamma}$ is indeed the pair cap for the pair $(\alpha,\beta)$, that being $\lVert[v_\alpha,v_\beta]\rVert^2$; and $\sum_\beta\mu_\beta^2=\lVert\lambda\rVert^2=1$ is [conventions.md](../findings/conventions.md)'s unit normalisation. **The AM–GM does collapse as claimed.**
 
-**The factor-of-two question the brief flags is the one place this could have died, and it does not.** The pair cap $\le2$ and the row mass $=2(n-2)$ have to hold in *one* inner product, and the record states both in a single line of [conventions.md](../findings/conventions.md) without saying which. They are simultaneously true in $\langle X,Y\rangle=\tfrac12\operatorname{tr}(X^{\mathsf T}Y)$, which is the record's $\Lambda^2$ inner product:
+**The factor-of-two question the brief flags is the one place this could have died, and it does not.** The pair cap $\le2$ and the row mass $=2(n-2)$ have to hold in *one* inner product, and the record states both in a single line of [conventions.md](../findings/conventions.md) without saying which. They are simultaneously true in $\langle X,Y\rangle=\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$, which is the record's $\Lambda^2$ inner product:
 
 - $\varphi_{ab}=E_{ab}-E_{ba}$ is then already a unit vector, and $[\varphi_{12},\varphi_{23}]=\varphi_{13}$ gives $\lVert[v_\alpha,v_\beta]\rVert^2=1$ on a coordinate pair, comfortably inside the cap;
 - the cap $2$ is attained, not merely asserted: a unit $X$ has $\lVert\mathrm{ad}_X\rVert_{\rm op}=\max\lvert\theta_j\pm\theta_k\rvert$ with $\sum\theta_j^2=1$, which is $\sqrt2$ at $X=(\varphi_{12}+\varphi_{34})/\sqrt2$;
 - $v_\alpha=\varphi_{12}$ brackets nontrivially with exactly the $2(n-2)$ basis elements sharing one index, each contributing $1$, so the row mass is $2(n-2)$ **exactly**.
 
-*Screen, reported as a screen*, seconds of compute on bases I constructed for the purpose, no bearing on any positive claim: in the coordinate basis and in a randomly rotated one (the eigenframe's shape) at $n=4,5,6,7$, $T$ is totally symmetric to $3\times10^{-16}$, $\sum_{\beta\gamma}T_{\alpha\beta\gamma}=2(n-2)$ to machine precision in **every** row and **both** frames, and a random search over unit $Y$ in $\mathfrak{so}(4)$ reaches $\lVert[X,Y]\rVert^2=1.9757$ against the cap $2$. Basis-independence of the row mass is in any case a theorem (it is $-\operatorname{tr}(\mathrm{ad}_{v_\alpha}^2)$) which is what licenses using it in $W$'s eigenframe.
+*Screen, reported as a screen*, seconds of compute on bases I constructed for the purpose, no bearing on any positive claim: in the coordinate basis and in a randomly rotated one (the eigenframe's shape) at $n=4,5,6,7$, $T$ is totally symmetric to $3\times10^{-16}$, $\sum_{\beta\gamma}T_{\alpha\beta\gamma}=2(n-2)$ to machine precision in **every** row and **both** frames, and a random search over unit $Y$ in $\mathfrak{so}(4)$ reaches $\lVert[X,Y]\rVert^2=1.9757$ against the cap $2$. Basis-independence of the row mass is in any case a theorem (it is $-\mathop{\mathrm{tr}}(\mathrm{ad}_{v_\alpha}^2)$) which is what licenses using it in $W$'s eigenframe.
 
-**And the two levels of the $\tfrac12$ are used in the right places**, which is the trap [conventions.md](../findings/conventions.md) exists to prevent: the $\tfrac12$ belongs to the inner product on elements of $\Lambda^2$ (where the eigenvectors $v_\alpha$ live, and where the cap and the row mass are stated), while $W$ is an operator on $\Lambda^2$ normalised by $\operatorname{tr}(W^2)=1$ with no $\tfrac12$. L143 takes $\lVert\mu\rVert=1$ from the second and the marginals from the first. Correct.
+**And the two levels of the $\tfrac12$ are used in the right places**, which is the trap [conventions.md](../findings/conventions.md) exists to prevent: the $\tfrac12$ belongs to the inner product on elements of $\Lambda^2$ (where the eigenvectors $v_\alpha$ live, and where the cap and the row mass are stated), while $W$ is an operator on $\Lambda^2$ normalised by $\mathop{\mathrm{tr}}(W^2)=1$ with no $\tfrac12$. L143 takes $\lVert\mu\rVert=1$ from the second and the marginals from the first. Correct.
 
 ## D5, step 5: both uses are legitimate, and the estimate is optimal for its input
 
@@ -93,7 +93,7 @@ With $x_\alpha:=\langle T_\alpha\mu,\mu\rangle$:
 
 Hence $\sum_\alpha x_\alpha^2\le4(n-2)$ and $B_5\le\tfrac12\cdot2\sqrt{n-2}=\sqrt{n-2}$.
 
-*And this is the best the two marginals give through this route.* Maximising $\sum x_\alpha^2$ subject to $0\le x_\alpha\le2$ and $\sum x_\alpha\le2(n-2)$ is an LP whose optimum puts $(n-2)$ coordinates at $2$ and the rest at $0$, giving exactly $4(n-2)$. So the lemma's remark that "the two marginals are the whole of its input" is right about this chain, though [post F10](../findings/fence-posts.md)'s LP shows the same marginals plus positivity, symmetry and $\operatorname{tr}(W^\#)=-1$ do better by $1.25\times$, so the marginals are not the whole of what the marginals can give.
+*And this is the best the two marginals give through this route.* Maximising $\sum x_\alpha^2$ subject to $0\le x_\alpha\le2$ and $\sum x_\alpha\le2(n-2)$ is an LP whose optimum puts $(n-2)$ coordinates at $2$ and the rest at $0$, giving exactly $4(n-2)$. So the lemma's remark that "the two marginals are the whole of its input" is right about this chain, though [post F10](../findings/fence-posts.md)'s LP shows the same marginals plus positivity, symmetry and $\mathop{\mathrm{tr}}(W^\#)=-1$ do better by $1.25\times$, so the marginals are not the whole of what the marginals can give.
 
 *One tension with the lemma's closing citation.* It cites [post F12](../findings/second-order.md) ("a single flatness inequality cannot cap $M(n)$") as explaining why this stops at $O(\sqrt n)$, saying the lemma "uses one inequality for both" regimes. That is close to right but not what F12 fences: F12 is about $\sqrt y+(n-2)y$, and [reduction 1](../findings/second-order.md) in the same file records that $B_5$ is a strictly sharper object ($B_5\le(n-2)\lVert\lambda\rVert_4^2$, worst observed ratio $0.9748$). The two are also incomparable pointwise (L143's estimate wins for $y>1/\sqrt{n-2}$ and the flatness bound wins for flat spectra) so a successor should carry the minimum of the two, not this one alone.
 

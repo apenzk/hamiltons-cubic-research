@@ -29,7 +29,7 @@ Quoted from [conventions.md](../findings/conventions.md):
 
 - $\mathcal W_n$ is "the space of algebraic Weyl curvature operators on $\mathbb R^n$", of dimension "$\frac{n(n-3)(n+1)(n+2)}{12}$, $10$ at $n=4$, $84$ at $n=6$, $1638$ at $n=12$".
 - $Q(W)$ is "Hamilton's quadratic map $W^2+W^\#$, sending $\mathcal W_n$ to itself"; $P(W)=\langle W,Q(W)\rangle$.
-- The competitor, from [problem.md](../findings/problem.md): "Nienhaus's $W_{\mathbb{CP}^2}$ … is the Weyl operator of $\mathbb{CP}^2$ **in dimension 4** ($\operatorname{diag}(0,0,0,-1,-1,2)/\sqrt6$ on $\Lambda^2(\mathbb{R}^4)$), zero-padded into $\Lambda^2(\mathbb{R}^n)$ … and $P(W_{\mathbb{CP}^2})=\sqrt{3/2}$ for **every** $n$."
+- The competitor, from [problem.md](../findings/problem.md): "Nienhaus's $W_{\mathbb{CP}^2}$ … is the Weyl operator of $\mathbb{CP}^2$ **in dimension 4** ($\mathop{\mathrm{diag}}(0,0,0,-1,-1,2)/\sqrt6$ on $\Lambda^2(\mathbb{R}^4)$), zero-padded into $\Lambda^2(\mathbb{R}^n)$ … and $P(W_{\mathbb{CP}^2})=\sqrt{3/2}$ for **every** $n$."
 - $\theta^*$ is fixed by [results.md](../results.md): "Write $\theta^*=\sqrt{3/2}=P(W_{\mathbb{CP}^2})$". The two tables of the brief are normalised by $\sqrt{3/2}$ (section C) and by $\theta^*$ (section D), **these agree**, which is the one place the two tables are demonstrably the same object.
 - $F_u$ is defined in the brief itself, section E: "$F_u(h)=\tfrac12(uh+hu)+u\# h$", and [route-a.md:235](../findings/route-a.md) identifies it: it "**is** $u\circ h$, since polarising $Q(X)=X^2+X^\#$ gives $X\circ Y=\tfrac12(XY+YX)+X\#Y$; hence $F_u=\theta^*L_e$".
 
@@ -55,7 +55,7 @@ A pass without an inventory is not a pass, so here is every hypothesis the argum
 | H1 | $u$ is the padded $W_{\mathbb{CP}^2}$, supported in the $\Lambda^2\mathbb R^4$ block | yes | yes, everywhere | fine |
 | H2 | $F_u$ commutes with $G=SO(m)$ acting on the last $m=n-4$ coordinates | yes | yes | **its only support on file is a numerical residual**, "verified at $3.9\times10^{-15}$ over the generators". The *analytic* reason is one line and is never written: $u$ is $SO(m)$-fixed, and $Q$ is $O(n)$-equivariant, so $F_u=u\circ(\cdot)$ commutes with the stabiliser of $u$, which contains $SO(m)$. **Stated as a measurement where a proof was available** |
 | H3 | each $V_\lambda$ is **absolutely** irreducible, i.e. $\mathrm{End}_{SO(m)}(V_\lambda)=\mathbb R$ | **no** | yes, silently, in the Schur step | holds at $m\ge5$; see §2 |
-| H4 | the six types are pairwise non-isomorphic | **no** | yes, in "$\operatorname{spec}(F_u)=\bigcup_\lambda\operatorname{spec}(F_\lambda)$" and in the block-by-block orbit match | holds at $m\ge5$ |
+| H4 | the six types are pairwise non-isomorphic | **no** | yes, in "$\mathop{\mathrm{spec}}(F_u)=\bigcup_\lambda\mathop{\mathrm{spec}}(F_\lambda)$" and in the block-by-block orbit match | holds at $m\ge5$ |
 | H5 | $m\ge5$, i.e. $n\ge9$ | **stated in the annotation, contradicted in the body** ("$n-4\ge8$") | yes | see §6 |
 | H6 | the four named $F_\lambda$ have $m$-independent entries | **no, the record states the opposite as a finding** | yes, for every "in every dimension" claim | **the debt**; see §5 |
 | H7 | $\mathfrak{stab}(u)=\mathfrak u(2)\oplus\mathfrak{so}(m)$, i.e. no orbit direction is lost in $\mathbb R^4\otimes\mathbb R^m$ | **no** | yes, for $\dim T_u\mathcal O=4n-14$ | see §8 |
@@ -167,7 +167,7 @@ $u$ is supported in the $A$-block: as an operator on $\Lambda^2\mathbb R^n$ it m
 
 *The sharp product.* $u\#h$ contracts $u$ and $h$ against two copies of the $\mathfrak{so}(n)$ structure constants. With $u$ supported on $A=\mathfrak{so}(4)$, the surviving brackets are $[\mathfrak{so}(4),A]\subseteq A$ and $[\mathfrak{so}(4),B]\subseteq B$, while $[\mathfrak{so}(4),C]=0$, this is exactly the record's "$[\mathfrak{so}(4),\mathfrak{so}(m)]=0$". So both free indices of $u\#h$ land in $A\cup B$, and the $h$-slots read only $A\cup B$: the image sits in $AA\oplus AB\oplus BB$ and reads only $h_{AA},h_{AB},h_{BB}$.
 
-**Together: $\operatorname{im}F_u\subseteq AA\oplus AB\oplus AC\oplus BB$.** The record's image claim is correct, and this is the derivation it does not print.
+**Together: $\mathop{\mathrm{im}}F_u\subseteq AA\oplus AB\oplus AC\oplus BB$.** The record's image claim is correct, and this is the derivation it does not print.
 
 Now read the branching table of §3 for which types those four blocks carry: $AA$ carries $\mathbf 1$ only; $AB$ carries $v$ only; $AC$ carries $\lambda^2$ only; $BB=S^2B$ carries $s^2_0,\mathbf 1,\lambda^2$ only. **None of the four carries $V_{(2,1)}$ or $V_{(2,2)}$.** Since $F_u$ is $G$-equivariant it preserves isotypic components, so on the $V_{(2,1)}$- and $V_{(2,2)}$-isotypics it is a map into a space containing none of that type, hence zero.
 
@@ -241,14 +241,14 @@ Section A is a heading and a proof pointer with nothing between them. Section D 
 
 **Drawn from the argument as written, the canonical statement has to be this.**
 
-> **Lemma L21.** Let $n\ge9$, put $m=n-4$, let $u\in\mathcal W_n$ be the padded competitor $W_{\mathbb{CP}^2}=\operatorname{diag}(0,0,0,-1,-1,2)/\sqrt6$ on $\Lambda^2\mathbb R^4\subseteq\Lambda^2\mathbb R^n$, let $\theta^*=\sqrt{3/2}=P(u)$, and let $F_u(h)=\tfrac12(uh+hu)+u\#h=u\circ h$ on $\mathcal W_n$. Then:
+> **Lemma L21.** Let $n\ge9$, put $m=n-4$, let $u\in\mathcal W_n$ be the padded competitor $W_{\mathbb{CP}^2}=\mathop{\mathrm{diag}}(0,0,0,-1,-1,2)/\sqrt6$ on $\Lambda^2\mathbb R^4\subseteq\Lambda^2\mathbb R^n$, let $\theta^*=\sqrt{3/2}=P(u)$, and let $F_u(h)=\tfrac12(uh+hu)+u\#h=u\circ h$ on $\mathcal W_n$. Then:
 > **(i)** $F_u$ commutes with $G=SO(m)$ acting on the last $m$ coordinates;
 > **(ii)** $\mathcal W_n$ has exactly six $G$-isotypic types, trivial, $\mathbb R^m$, $\Lambda^2\mathbb R^m$, $S^2_0\mathbb R^m$, $V_{(2,1)}$ and $V_{(2,2)}=\mathcal W_m$, with multiplicities $20,20,6,10,4,1$ **independent of $n$**, each type absolutely irreducible;
-> **(iii)** hence $F_u=\bigoplus_\lambda F_\lambda\otimes\mathrm{Id}_{V_\lambda}$ and $\operatorname{spec}(F_u)=\bigcup_\lambda\operatorname{spec}(F_\lambda)$, with **no multiplicity-free hypothesis**;
+> **(iii)** hence $F_u=\bigoplus_\lambda F_\lambda\otimes\mathrm{Id}_{V_\lambda}$ and $\mathop{\mathrm{spec}}(F_u)=\bigcup_\lambda\mathop{\mathrm{spec}}(F_\lambda)$, with **no multiplicity-free hypothesis**;
 > **(iv)** $F_{V_{(2,1)}}=0$ and $F_{V_{(2,2)}}=0$;
 > **(v)** the four remaining $F_\lambda$ have the tabulated spectra, **independent of $n$**;
 > **(vi)** $T_u(SO(n).u)=2\cdot\text{trivial}\oplus4\cdot\text{vector}$, of dimension $4n-14$, and equals the $\tfrac12\theta^*$-eigenspace of $F_u$;
-> **(vii)** consequently $\max\operatorname{spec}\big(F_u|_{u^\perp\cap T_u\mathcal O^\perp}\big)=\tfrac13\theta^*$ (that is, $\alpha\le\tfrac13$ with equality attained) for every $n\ge9$.
+> **(vii)** consequently $\max\mathop{\mathrm{spec}}\big(F_u|_{u^\perp\cap T_u\mathcal O^\perp}\big)=\tfrac13\theta^*$ (that is, $\alpha\le\tfrac13$ with equality attained) for every $n\ge9$.
 
 Of these, **(i)–(iv) are proved** (this report's §2, §3, §4; (i) has an available one-line proof the record replaces with a residual). **(v) is the debt** of §5. **(vi) is half-proved**, §8. **(vii) follows from (iii)–(vi)** and from nothing weaker.
 
@@ -291,16 +291,16 @@ Section C has five rows, the fifth reading "two higher types, $0$ throughout"; s
 
 **$\mathfrak{so}(m)$ acts trivially on $u$**: $u$ is supported in $\Lambda^2\mathbb R^4$, on which $SO(m)$ acts trivially. Correct.
 
-**$\dim\mathfrak{so}(4)/\mathfrak{stab}_4=2$ is correct, and checkable in closed form from the record's own spectrum.** With $u=\operatorname{diag}(0,0,0,-1,-1,2)/\sqrt6$, the zeros sit on one chirality block and $(-1,-1,2)$ on the other. Under $\mathfrak{so}(4)=\mathfrak{su}(2)_+\oplus\mathfrak{su}(2)_-$ acting as $\mathfrak{so}(3)$ on each $\Lambda^2_\pm$: the stabiliser of a scalar-zero block is all of $\mathfrak{so}(3)$ (dimension $3$), and the stabiliser of $\operatorname{diag}(-1,-1,2)$ in $\mathfrak{so}(3)$ is $\mathfrak{so}(2)$ (dimension $1$). Total $4=\dim\mathfrak u(2)$, leaving $6-4=2$, of trivial $SO(m)$-type. **Correct.**
+**$\dim\mathfrak{so}(4)/\mathfrak{stab}_4=2$ is correct, and checkable in closed form from the record's own spectrum.** With $u=\mathop{\mathrm{diag}}(0,0,0,-1,-1,2)/\sqrt6$, the zeros sit on one chirality block and $(-1,-1,2)$ on the other. Under $\mathfrak{so}(4)=\mathfrak{su}(2)_+\oplus\mathfrak{su}(2)_-$ acting as $\mathfrak{so}(3)$ on each $\Lambda^2_\pm$: the stabiliser of a scalar-zero block is all of $\mathfrak{so}(3)$ (dimension $3$), and the stabiliser of $\mathop{\mathrm{diag}}(-1,-1,2)$ in $\mathfrak{so}(3)$ is $\mathfrak{so}(2)$ (dimension $1$). Total $4=\dim\mathfrak u(2)$, leaving $6-4=2$, of trivial $SO(m)$-type. **Correct.**
 
-**The remaining step is asserted and never argued.** For $\dim T_u\mathcal O=2+4m$ one needs $\mathfrak{stab}(u)\cap(\mathbb R^4\otimes\mathbb R^m)=0$, that no $\xi$ in the off-diagonal block kills $u$. The record writes "modulo the stabilizer the orbit directions are $\mathfrak{so}(4)/\mathfrak{stab}_4$ … together with $\mathbb{R}^4\otimes\mathbb{R}^{n-4}$" and supplies nothing for the second summand. **What would prove it, named and not supplied**: $\xi\cdot u$ has $(B,A)$-block $\mathrm{ad}(\xi)\circ u|_A$, so the claim is that no nonzero $\xi\in\mathbb R^4\otimes\mathbb R^m$ annihilates $\operatorname{im}(u|_{\Lambda^2\mathbb R^4})$, which for this $u$ is one full chirality block.
+**The remaining step is asserted and never argued.** For $\dim T_u\mathcal O=2+4m$ one needs $\mathfrak{stab}(u)\cap(\mathbb R^4\otimes\mathbb R^m)=0$, that no $\xi$ in the off-diagonal block kills $u$. The record writes "modulo the stabilizer the orbit directions are $\mathfrak{so}(4)/\mathfrak{stab}_4$ … together with $\mathbb{R}^4\otimes\mathbb{R}^{n-4}$" and supplies nothing for the second summand. **What would prove it, named and not supplied**: $\xi\cdot u$ has $(B,A)$-block $\mathrm{ad}(\xi)\circ u|_A$, so the claim is that no nonzero $\xi\in\mathbb R^4\otimes\mathbb R^m$ annihilates $\mathop{\mathrm{im}}(u|_{\Lambda^2\mathbb R^4})$, which for this $u$ is one full chirality block.
 
 **The arithmetic is right either way**: $2+4(n-4)=4n-14$, and the stabiliser reading $\binom n2-\binom m2-4=(4m+6)-4=4m+2=4n-14$ agrees.
 
 **The coincidence with the $\tfrac12\theta^*$-eigenspace: one inclusion is a theorem, the other is the table.**
 
 - *Orbit $\subseteq E_{1/2}$ is proved, and not here.* [second-order.md:64](../findings/second-order.md): "the orbit directions are exact $\tfrac12$-eigenvectors by equivariance … the equivariance identity $2L_W\delta_vW=\theta\,\delta_vW$ with $\delta_vW\perp W$ puts an exact $\tfrac12$-eigenvector in $W^\perp$ at every such point." Combined with $F_u=\theta^*L_e$, this gives the inclusion at every $n$, free.
-- *Equality is a dimension count off the disputed table*, and **the record itself flags this exact trap**: [second-order.md:27](../findings/second-order.md), "The multiplicity relation is $\operatorname{mult}(\tfrac12)\ge\dim\mathcal O$, an **inequality** rather than an identity", with $S^3\times S^3$ giving $18$ against an orbit of $9$. So a coincidental extra $\tfrac12$ is a phenomenon this programme has actually met.
+- *Equality is a dimension count off the disputed table*, and **the record itself flags this exact trap**: [second-order.md:27](../findings/second-order.md), "The multiplicity relation is $\mathop{\mathrm{mult}}(\tfrac12)\ge\dim\mathcal O$, an **inequality** rather than an identity", with $S^3\times S^3$ giving $18$ against an orbit of $9$. So a coincidental extra $\tfrac12$ is a phenomenon this programme has actually met.
 
 **And equality is load-bearing, not decorative.** A single extra $\tfrac12\theta^*$-eigenvector transverse to $\mathbb Ru\oplus T_u\mathcal O$ turns $\alpha\le\tfrac13$ into $\alpha\le\tfrac12$, at which (section E), "the interval is empty and the theorem is vacuous". **§4 removes that risk on $940$ of the $1638$ dimensions by proof; on the remaining $698$ it rests on the tabulated spectra.**
 
@@ -312,7 +312,7 @@ Section C has five rows, the fifth reading "two higher types, $0$ throughout"; s
 
 *The normalisation closes.* $\alpha=\sqrt{2/3}\,\langle F_uV,V\rangle$ (section E) and the top transverse eigenvalue is $\tfrac13\theta^*=\tfrac13\sqrt{3/2}$, so $\alpha\le\sqrt{2/3}\cdot\tfrac13\sqrt{3/2}=\tfrac13$, since $\sqrt{2/3}\cdot\sqrt{3/2}=1$. The $\tfrac13$ of the table and the $\tfrac13$ of the tube proof are the same number in the same units. **This is worth stating because the two sections normalise differently** (C by $\sqrt{3/2}$, D by $\theta^*$) and they agree only because $\theta^*=\sqrt{3/2}$.
 
-*Bound.* [L20](../findings/route-a.md) needs $\max\operatorname{spec}(F_u|_{u^\perp\cap T_u\mathcal O^\perp})\le\tfrac13\theta^*$, an upper bound over the whole transverse space. That is what "deleting $\mathbb Ru$ and the orbit leaves top eigenvalue $\tfrac13\theta^*$" delivers, *provided* the deletion is exhaustive, i.e. provided clause (vi)'s **equality**. Deleting a subspace of the $\tfrac12$-eigenspace would leave $\tfrac12$ behind.
+*Bound.* [L20](../findings/route-a.md) needs $\max\mathop{\mathrm{spec}}(F_u|_{u^\perp\cap T_u\mathcal O^\perp})\le\tfrac13\theta^*$, an upper bound over the whole transverse space. That is what "deleting $\mathbb Ru$ and the orbit leaves top eigenvalue $\tfrac13\theta^*$" delivers, *provided* the deletion is exhaustive, i.e. provided clause (vi)'s **equality**. Deleting a subspace of the $\tfrac12$-eigenspace would leave $\tfrac12$ behind.
 
 *Attained.* [L134](../results.md) "consumes the numerical $\tfrac13$" as a value. Attainment is the easier half: the $\tfrac13\theta^*$-eigenspace has dimension $3+\dim\Lambda^2\mathbb R^m+3\dim S^2_0\mathbb R^m$ ($136$ at $n=12$, $78$ at $n=10$) and by the block structure it lies inside $u^\perp\cap T_u\mathcal O^\perp$, since $u$ is the $\theta^*$-eigenvector and the orbit is the $\tfrac12\theta^*$-eigenspace, all three eigenvalues being distinct.
 
@@ -324,7 +324,7 @@ Section C has five rows, the fifth reading "two higher types, $0$ throughout"; s
 
 ## 11. The traps, answered by name
 
-- **$\ker W\ne0$ and padded objects.** $u$ is maximally padded: $\ker u\supseteq B\oplus C$, of codimension $3$ in $\Lambda^2\mathbb R^n$, and $u$ has a further $3$-dimensional kernel inside $A$ from the $\operatorname{diag}(0,0,0,\cdot,\cdot,\cdot)$ block. **Nothing in L21 divides by $u$ or inverts it**, the whole argument is *about* the support of $u$, which is the padding read positively. The one place the kernel does bite is elsewhere and the record knows it: [route-a.md:247](../findings/route-a.md), "$\delta^2$ is one-sided at $u$ because $u$ has a kernel". L21 is clean here.
+- **$\ker W\ne0$ and padded objects.** $u$ is maximally padded: $\ker u\supseteq B\oplus C$, of codimension $3$ in $\Lambda^2\mathbb R^n$, and $u$ has a further $3$-dimensional kernel inside $A$ from the $\mathop{\mathrm{diag}}(0,0,0,\cdot,\cdot,\cdot)$ block. **Nothing in L21 divides by $u$ or inverts it**, the whole argument is *about* the support of $u$, which is the padding read positively. The one place the kernel does bite is elsewhere and the record knows it: [route-a.md:247](../findings/route-a.md), "$\delta^2$ is one-sided at $u$ because $u$ has a kernel". L21 is clean here.
 - **$n=9$.** Inside, by §6, $m=5$, odd, $\ell(\nu)\le2$. The record's C section would place it outside; D's annotation and my §3 place it inside. **This is the tightest boundary in the lemma and neither table column tests it.**
 - **$n=10$.** Inside, and it is the *only* dimension at which the spectra are both in range and exactly verified (§5).
 - **$m=4$ ($n=8$).** **Fails**, and the failure is exhibited: $\Lambda^2\mathbb R^4$ and $\mathcal W_4$ both split. No consumer is harmed, since every consumer runs at $n\ge9$ or $n\ge12$, but [L21.lean](../lean/HamiltonsCubic/Results/L21.lean)'s hypothesis is $4\le m$, which is the positivity threshold and not the irreducibility threshold, so the Lean file's stated range is one step too generous for the mathematics it is attached to.
@@ -343,11 +343,11 @@ Section C has five rows, the fifth reading "two higher types, $0$ throughout"; s
 
 $$H\perp u,\qquad H\perp T_u(SO(n).u),\qquad F_uH=\mu H\ \text{ with }\ \mu>\tfrac13\theta^* .$$
 
-By §2–§4 such an $H$ is forced into one of the four named multiplicity spaces, so it is equivalently: **a fifth eigenvalue $\tfrac12$ in the $20\times20$ trivial block $F_{\mathbf 1}$, or a fifth in the $20\times20$ vector block $F_v$, or any eigenvalue in $(\tfrac13,\tfrac12)\cup(\tfrac12,1)$ anywhere in the four blocks, at some $m\ge5$.** The cleanest single form: an $m$ at which $\operatorname{mult}_{F_u}(\tfrac12\theta^*)>4n-14$.
+By §2–§4 such an $H$ is forced into one of the four named multiplicity spaces, so it is equivalently: **a fifth eigenvalue $\tfrac12$ in the $20\times20$ trivial block $F_{\mathbf 1}$, or a fifth in the $20\times20$ vector block $F_v$, or any eigenvalue in $(\tfrac13,\tfrac12)\cup(\tfrac12,1)$ anywhere in the four blocks, at some $m\ge5$.** The cleanest single form: an $m$ at which $\mathop{\mathrm{mult}}_{F_u}(\tfrac12\theta^*)>4n-14$.
 
 **Where I looked, and it was analysis only.**
 
-1. **The $940$.** I derived the block support of $\operatorname{im}F_u$ and the block location of both higher isotypics independently (§4), and the two higher types cannot host such an $H$ at any $m$. **A whole majority of the space is closed to the falsifier by proof.** This is the strongest positive result in the lemma and it is the one B omits.
+1. **The $940$.** I derived the block support of $\mathop{\mathrm{im}}F_u$ and the block location of both higher isotypics independently (§4), and the two higher types cannot host such an $H$ at any $m$. **A whole majority of the space is closed to the falsifier by proof.** This is the strongest positive result in the lemma and it is the one B omits.
 2. **The multiplicity column.** I re-derived $20,20,6,10,4,1$ from scratch (§3) and checked the resulting dimension identity as an equality of quartics in $m$, not at sample points. **The falsifier cannot come from a type the table missed**, there is no seventh type at any $m\ge5$.
 3. **The boundary.** I tested $m=2,4,5,6$ by hand against the irreducibility requirements and located the exact threshold, $m\ge5$. **The falsifier cannot come from $n=9$ or $n=10$ being outside the range**, which is what section C's obligation would have suggested.
 4. **The four blocks themselves.** **I did not look, and could not.** Deciding whether $F_{\mathbf 1}$ or $F_v$ acquires a fifth $\tfrac12$ at some $m$ means writing down those matrices as functions of $m$ and computing, which is exactly the computation this loop is forbidden to run and exactly the computation the record already ran at five dimensions. **I neither reproduced nor contradicted the record's numbers; I have no independent knowledge of them.**

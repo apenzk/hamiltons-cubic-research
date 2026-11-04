@@ -33,7 +33,7 @@ All from [conventions.md](../findings/conventions.md), repaired today; none rest
 - **Therefore the bare $\lambda_{\max}(L_e)$ in this block must mean $\lambda_{\max}(L_e\vert_{W^\perp})$.** Under the full-space reading the table's three rows at $0.553$–$0.609$ are impossible, since the radial direction forces $1$. [Lemma L99](../findings/diagonal-half.md#L163) three paragraphs above writes the restriction explicitly; L98 does not. I read the restricted operator throughout, and flag the omission.
 - **$\lambda_{\max}(L_e\vert_{W^\perp})\ge\tfrac12$ at every critical point**, because $L_W[A,W]=\tfrac\theta2[A,W]$ for every $A\in\mathfrak{so}(n)$ and $[A,W]\perp W$. So the table's "margin over $\tfrac12$" column is a ratio against a value that is *forced everywhere*, not against a bound that could fail. That is worth saying, and the block does not say it.
 - **$\Delta$**: the symmetry defect, traced over $\{\lambda>0\}$ only, discontinuous at eigenvalue zero-crossings. On the diagonal locus [Lemma L68(ii)](../findings/diagonal-half.md#L86) gives $\Delta=\sum_{M_{ab}>0}g_{ab}$ with $g_{ab}=2\sum_{d\ne a,b}(M_{ad}-M_{bd})^2$, and $\Delta=0$ exactly when every positive edge joins twins.
-- **Diagonal** means diagonal in coordinate $2$-planes; $\mathcal D_n=\{S\text{ symmetric, hollow},\ S\mathbf1=0\}$; $\operatorname{tr}M^2=2$ at unit norm.
+- **Diagonal** means diagonal in coordinate $2$-planes; $\mathcal D_n=\{S\text{ symmetric, hollow},\ S\mathbf1=0\}$; $\mathop{\mathrm{tr}}M^2=2$ at unit norm.
 - **$\theta_0$** is the closed form alone, $\theta_0^2=2(n-1)(n-2)/n^2$; the diagonal maximum is $\Theta_n$.
 
 ---
@@ -46,7 +46,7 @@ For $M,N\in\mathcal D_n$, polarising $Q$ in the pair basis gives, at the pair $(
 
 $$(M\circ N)_{ab}\ =\ M_{ab}N_{ab}\ +\ \tfrac12(MN+NM)_{ab},$$
 
-the Hadamard product plus the Jordan product. The row sums vanish identically: $\sum_{b\ne a}M_{ab}N_{ab}=\sum_bM_{ab}N_{ab}$ by hollowness, while $\sum_{b\ne a}\tfrac12(MN+NM)_{ab}=-(MN)_{aa}=-\sum_bM_{ab}N_{ab}$ because $N\mathbf1=0$. **So $\mathcal D_n$ is closed under $\circ$ with no hypothesis at all**, a cleaner statement than the file's "the diagonal locus is an $L_W$-invariant subspace, verified at non-critical $W$ too" at [:157](../findings/diagonal-half.md#L157), which is recorded as a verification. The form is symmetric, since $\langle\mathcal A N,P\rangle$ is $\sum_{a\ne b}M_{ab}N_{ab}P_{ab}+\tfrac12\operatorname{tr}(MNP)+\tfrac12\operatorname{tr}(NMP)$.
+the Hadamard product plus the Jordan product. The row sums vanish identically: $\sum_{b\ne a}M_{ab}N_{ab}=\sum_bM_{ab}N_{ab}$ by hollowness, while $\sum_{b\ne a}\tfrac12(MN+NM)_{ab}=-(MN)_{aa}=-\sum_bM_{ab}N_{ab}$ because $N\mathbf1=0$. **So $\mathcal D_n$ is closed under $\circ$ with no hypothesis at all**, a cleaner statement than the file's "the diagonal locus is an $L_W$-invariant subspace, verified at non-critical $W$ too" at [:157](../findings/diagonal-half.md#L157), which is recorded as a verification. The form is symmetric, since $\langle\mathcal A N,P\rangle$ is $\sum_{a\ne b}M_{ab}N_{ab}P_{ab}+\tfrac12\mathop{\mathrm{tr}}(MNP)+\tfrac12\mathop{\mathrm{tr}}(NMP)$.
 
 ### D2. The eigenvalue $1$ is exact, and re-derives L99 in five lines
 
@@ -60,11 +60,11 @@ by the block's own criticality equation. **So the eigenvalue is exactly $\theta$
 
 The brief asks whether $n=3,4$ are excluded by hypothesis or silently. **Silently, and I can show the exclusion is sound at $n=4$.**
 
-$\dim\mathcal W_3=0$, so $n=3$ is empty by the dimension formula. At $n=4$, subtracting pairs of the four row-sum equations forces $M_{13}=M_{24}$, $M_{14}=M_{23}$, $M_{12}=M_{34}$; write $a,b,c$ for the three values, so $a+b+c=0$ and $\dim\mathcal D_4=2$. With $\operatorname{tr}M^2=4(a^2+b^2+c^2)=2$ we get $a^2+b^2+c^2=\tfrac12$. The off-diagonal criticality equation at the pair $(12)$ is $a^2+2bc=\theta a$, and $2bc=a^2-(b^2+c^2)$, so
+$\dim\mathcal W_3=0$, so $n=3$ is empty by the dimension formula. At $n=4$, subtracting pairs of the four row-sum equations forces $M_{13}=M_{24}$, $M_{14}=M_{23}$, $M_{12}=M_{34}$; write $a,b,c$ for the three values, so $a+b+c=0$ and $\dim\mathcal D_4=2$. With $\mathop{\mathrm{tr}}M^2=4(a^2+b^2+c^2)=2$ we get $a^2+b^2+c^2=\tfrac12$. The off-diagonal criticality equation at the pair $(12)$ is $a^2+2bc=\theta a$, and $2bc=a^2-(b^2+c^2)$, so
 
 $$3a^2-\tfrac12=\theta a,\qquad 3b^2-\tfrac12=\theta b,\qquad 3c^2-\tfrac12=\theta c .$$
 
-All three are roots of one quadratic, so at most two distinct values; $a+b+c=0$ then forces the shape $\{x,x,-2x\}$, giving $6x^2=\tfrac12$, $x=\mp1/\sqrt{12}$ and $\theta=-3x=\pm\sqrt3/2$. **Independent confirmations that this is right**: the spectrum is $\{0,-2,-2,4\}/\sqrt{12}$, whose $\operatorname{tr}M^2$ is $2$ and whose $\tfrac12(\sum M_{ab}^3+\operatorname{tr}M^3)$ is $3/\sqrt{12}=\sqrt3/2$; and $\sqrt3/2=0.866$ is [conventions.md](../findings/conventions.md)'s $\Theta_4$ and equals $\theta_0(4)$, as it must at even $n$.
+All three are roots of one quadratic, so at most two distinct values; $a+b+c=0$ then forces the shape $\{x,x,-2x\}$, giving $6x^2=\tfrac12$, $x=\mp1/\sqrt{12}$ and $\theta=-3x=\pm\sqrt3/2$. **Independent confirmations that this is right**: the spectrum is $\{0,-2,-2,4\}/\sqrt{12}$, whose $\mathop{\mathrm{tr}}M^2$ is $2$ and whose $\tfrac12(\sum M_{ab}^3+\mathop{\mathrm{tr}}M^3)$ is $3/\sqrt{12}=\sqrt3/2$; and $\sqrt3/2=0.866$ is [conventions.md](../findings/conventions.md)'s $\Theta_4$ and equals $\theta_0(4)$, as it must at even $n$.
 
 The positive edges are the pair class carrying $c=2/\sqrt{12}$, and for such an edge $(1,4)$ the remaining rows agree, $M_{12}-M_{42}=a-b=0$ and $M_{13}-M_{43}=b-a=0$, so $g_{14}=0$. **Every diagonal critical point at $n=4$ is the single $S^2\times S^2$ orbit and has $\Delta=0.$** The set L98 minimises over is empty at $n=4$, and the formula's pole there is the empty minimum, not a live case mis-stated.
 

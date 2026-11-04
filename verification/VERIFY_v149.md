@@ -24,9 +24,9 @@
 Taken from [findings/conventions.md](../findings/conventions.md) and quoted, never restated from memory.
 
 - $N=\binom n2=\dim\Lambda^2\mathbb R^n$. $\mathcal W_n=\mathrm{Weyl}_n$ is the space of algebraic Weyl curvature operators on $\mathbb R^n$; $\dim\mathcal W_n=n(n-3)(n+1)(n+2)/12$, so it is the zero space at $n\le3$ and the smallest admissible dimension with content is $n=4$.
-- $Q(W)=W^2+W^\#$, $P(W)=\langle W,Q(W)\rangle$, $\theta=P(W)/\lVert W\rVert^3$. So $P(W)=\operatorname{tr}W^3+\langle W,W^\#\rangle$ and at $\lVert W\rVert=1$, $\theta=P(W)$.
+- $Q(W)=W^2+W^\#$, $P(W)=\langle W,Q(W)\rangle$, $\theta=P(W)/\lVert W\rVert^3$. So $P(W)=\mathop{\mathrm{tr}}W^3+\langle W,W^\#\rangle$ and at $\lVert W\rVert=1$, $\theta=P(W)$.
 - $\#$ is the halved Böhm–Wilking product, $vv^{\mathsf T}\#ww^{\mathsf T}=\tfrac12[v,w][v,w]^{\mathsf T}$.
-- Inner product: $\langle X,X\rangle=\tfrac12\operatorname{tr}(X^{\mathsf T}X)$ at the $\Lambda^2$ level, so $\lVert\varphi_{ab}\rVert^2=1$ for $\varphi_{ab}=E_{ab}-E_{ba}$ and $\{\varphi_{ab}\}_{a<b}$ is orthonormal.
+- Inner product: $\langle X,X\rangle=\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}X)$ at the $\Lambda^2$ level, so $\lVert\varphi_{ab}\rVert^2=1$ for $\varphi_{ab}=E_{ab}-E_{ba}$ and $\{\varphi_{ab}\}_{a<b}$ is orthonormal.
 - $c_{\alpha\beta\gamma}=\langle[v_\alpha,v_\beta],v_\gamma\rangle$ is **totally antisymmetric**, so $T_{\alpha\beta\gamma}=c_{\alpha\beta\gamma}^2$ is totally symmetric and **vanishes whenever two indices coincide**. This hollowness is the whole of the sign-block argument.
 - Pair cap: $\sum_\gamma T_{\alpha\beta\gamma}=\lVert[v_\alpha,v_\beta]\rVert^2\le2$ for orthonormal $v_\alpha,v_\beta$, which is [Lemma L31](../findings/stratum-two-negative.md). Row marginal $\sum_{\beta\gamma}T_{\alpha\beta\gamma}=2(n-2)$ over ordered pairs is [Lemma L153](../findings/bounds.md), **the one dimension-carrying input in the neighbourhood, and L29 never touches it.**
 - $\theta_0(n)^2=2(n-1)(n-2)/n^2$, **and nothing more**; $\Theta_n$ is the diagonal maximum, equal to $\theta_0(n)$ at even $n$ and $\sqrt{2(n-1)(n-3)/((n+1)(n-2))}$ at odd $n$, where it is strictly smaller. The conventions file marks the gloss "$\theta_0(n)$ is the value at the balanced sphere product" as the error that regrew [L0](../findings/problem.md)'s refuted constant. **Section 7 below turns on this line.**
@@ -38,7 +38,7 @@ Taken from [findings/conventions.md](../findings/conventions.md) and quoted, nev
 
 | # | hypothesis, as written | where it is used in the written proof |
 |---|---|---|
-| H1 | $W\in\mathrm{Weyl}_n$, symmetric on $\Lambda^2$, first Bianchi, Ricci-flat | only through **trace-freeness** ($\operatorname{scal}=2\operatorname{tr}$, so $\operatorname{tr}W=0$) and through the **spectral theorem** giving an orthonormal eigenbasis of $\Lambda^2$. **First Bianchi is never used** |
+| H1 | $W\in\mathrm{Weyl}_n$, symmetric on $\Lambda^2$, first Bianchi, Ricci-flat | only through **trace-freeness** ($\mathop{\mathrm{scal}}=2\mathop{\mathrm{tr}}$, so $\mathop{\mathrm{tr}}W=0$) and through the **spectral theorem** giving an orthonormal eigenbasis of $\Lambda^2$. **First Bianchi is never used** |
 | H2 | $\lVert W\rVert=1$ | the normalisation $2(a^2+ab+b^2)=1$, and the identification $\theta=P(W)$ |
 | H3 | exactly one positive and exactly two negative eigenvalues, **counted with multiplicity** | the three vanishing sign-blocks, and nothing else |
 | H4 | the ordering $\lambda_1>0>-a\ge-b$ | nothing. The chain is maximised over all $t=b/a\ge0$, and §5 shows it holds at every real $t$ |
@@ -54,7 +54,7 @@ Taken from [findings/conventions.md](../findings/conventions.md) and quoted, nev
 | the pair cap, [L31](../findings/stratum-two-negative.md) | $X,Y\in\mathfrak{so}(n)$ **orthonormal** | $v_{N-1},v_N$ are orthonormal eigenvectors of a symmetric operator, distinct eigenvalues or not. **Holds.** Its root-system proof needs two angles, hence $n\ge4$, which is every $n$ where $\mathcal W_n\ne0$ |
 | $T$ hollow and totally symmetric | ad-invariance of $\langle\cdot,\cdot\rangle$ on $\mathfrak{so}(n)$ | a convention, [conventions.md](../findings/conventions.md). **Holds unconditionally** |
 | $\langle W,W^\#\rangle=\tfrac12\sum T\lambda\lambda\lambda$ | $W$ symmetric on $\Lambda^2$ with an orthonormal eigenbasis | derived in §2 below from the record's own $\#$ convention in two lines. Independently on record at [bounds-relaxations.md](../findings/bounds-relaxations.md):118, which adds that it *"holds off $\mathrm{Weyl}_n$, free of Bianchi and Ricci-flatness"*. **Holds** |
-| $\operatorname{tr}W=0$ | $\operatorname{scal}=2\operatorname{tr}$ on $\Lambda^2$ and Ricci-flatness | **Holds** |
+| $\mathop{\mathrm{tr}}W=0$ | $\mathop{\mathrm{scal}}=2\mathop{\mathrm{tr}}$ on $\Lambda^2$ and Ricci-flatness | **Holds** |
 | [L33](../findings/stratum-two-negative.md), cited as "a second route" to the converse | a **one-dimensional** eigenspace on one side, and the eigenvector not a $4$-plane complex structure | H3 gives the one-dimensional positive eigenspace. At the attaining object $v_1$ **is** a $4$-plane complex structure, so L33 lands in its exception and returns $r=4$ rather than $W=0$. L33 in turn imports [L32](../findings/isotropy-cap.md), whose repaired hypothesis $\mathfrak c\ne0$ needs $n\ge4$. **Holds, with the exception clause doing the work** |
 | [L30](../findings/stratum-two-negative.md), the padding descent | $\dim U<n$ | **fails at $n=4$**, where $\dim U=4=n$. L29's bound does not use L30, so nothing breaks; but any consumer chaining L29 through L30 must not do so at $n=4$ |
 | [L35](../findings/stratum-two-negative.md), named as covering $k\ge3$ | at most two negative eigenvalues, any $m$ | **Holds.** Not circular: [LEDGER.md](../findings/LEDGER.md):1403 records that L35's proof *consumes* L29 for $k\le2$, and the packing argument covering $k\ge3$ does not. Worth stating, since the block cites L35 for coverage without saying the dependence runs the other way for $k\le2$ |
@@ -69,7 +69,7 @@ The block's display is right, and the sum is over **ordered** triples, the recor
 
 **Step 2, only $(+--)$ survives.** §3 below. The surviving block is the six orderings of $\{1,N-1,N\}$, each contributing $T_{1,N-1,N}\lambda_1(-a)(-b)$, so $\tfrac12\cdot6\cdot T_{1,N-1,N}\lambda_1ab=3T_{1,N-1,N}\lambda_1ab$. **The block's coefficient $3$ is right.**
 
-**Step 3, the pair cap.** $T_{1,N-1,N}\le\sum_\gamma T_{N-1,N,\gamma}=\lVert[v_{N-1},v_N]\rVert^2\le2$, the other summands being squares. So $\langle W,W^\#\rangle\le6\lambda_1ab$, against $\operatorname{tr}W^3=\lambda_1^3-(a^3+b^3)$ exactly, the remaining $N-3$ eigenvalues being zero.
+**Step 3, the pair cap.** $T_{1,N-1,N}\le\sum_\gamma T_{N-1,N,\gamma}=\lVert[v_{N-1},v_N]\rVert^2\le2$, the other summands being squares. So $\langle W,W^\#\rangle\le6\lambda_1ab$, against $\mathop{\mathrm{tr}}W^3=\lambda_1^3-(a^3+b^3)$ exactly, the remaining $N-3$ eigenvalues being zero.
 
 **Step 4, collapse.** Trace-freeness gives $\lambda_1=a+b$, so $\lambda_1^3-(a^3+b^3)=3ab(a+b)$ and
 $$P(W)\ \le\ 3ab(a+b)+6ab(a+b)=9ab(a+b).$$
@@ -133,7 +133,7 @@ with $\varphi_{ab}=E_{ab}-E_{ba}$ and $\lVert\varphi_{ab}\rVert^2=1$ under the r
 **(iv) Its $\theta$ is $\sqrt{3/2}$, by hand.** I compute the one live structure constant. Using $E_{ij}E_{kl}=\delta_{jk}E_{il}$, $[\varphi_{ab},\varphi_{bc}]=\varphi_{ac}$ for distinct $a,b,c$. Then
 $$[w_1,w_2]=\tfrac12\big([\varphi_{12},\varphi_{13}]+[\varphi_{12},\varphi_{42}]+[\varphi_{34},\varphi_{13}]+[\varphi_{34},\varphi_{42}]\big)=\tfrac12\big(-\varphi_{23}-\varphi_{14}-\varphi_{14}-\varphi_{23}\big)=-(\varphi_{14}+\varphi_{23})=-\sqrt2\,w_3 .$$
 So $\lVert[w_1,w_2]\rVert^2=2$ (**the pair cap is attained, exactly, and $\sqrt2$ is the right constant**) and $T_{123}=\langle[w_1,w_2],w_3\rangle^2=2$. Hence
-$$P(W)=\operatorname{tr}W^3+3T_{123}\lambda_1\lambda_2\lambda_3=\frac{8-1-1}{6\sqrt6}+3\cdot2\cdot\frac{2\cdot(-1)(-1)}{6\sqrt6}=\frac1{\sqrt6}+\frac2{\sqrt6}=\frac3{\sqrt6}=\sqrt{\tfrac32}.$$
+$$P(W)=\mathop{\mathrm{tr}}W^3+3T_{123}\lambda_1\lambda_2\lambda_3=\frac{8-1-1}{6\sqrt6}+3\cdot2\cdot\frac{2\cdot(-1)(-1)}{6\sqrt6}=\frac1{\sqrt6}+\frac2{\sqrt6}=\frac3{\sqrt6}=\sqrt{\tfrac32}.$$
 **Holds, exactly.** Cross-checked twice: against [L35](../findings/stratum-two-negative.md)'s anchor ($\sum\lambda^3=1/\sqrt6$, $3T\lambda_1\lambda_2\lambda_3=2/\sqrt6$), and against the $n=4$ adjugate form $P=9\det W^+=9\cdot\tfrac2{6\sqrt6}=\tfrac3{\sqrt6}$. Three routes, one value.
 
 **(v) What its kernel does to the hypothesis.** $\ker W$ has dimension $N-3$, three at $n=4$ (all of $\Lambda^-$), sixty-three of sixty-six at $n=12$. **To L29's own hypothesis it does nothing:** H3 counts eigenvalues of each sign and is silent on zeros, and §3 shows the zero indices drop out of the cubic term by term. **The kernel bites in three places nearby, and a consumer needs each.**
@@ -242,13 +242,13 @@ attained only as $\lambda_2\to0$ with $a=b$. **That is the whole content of "it 
 | [results.md](../results.md):784, closing section | L72 *"closing the converse clause of Lemma L29"* | **§8's BROKEN clause, second site** |
 | [lean/INDEX.md](../lean/INDEX.md):104, row L29, **partial** | the one-variable half via the perfect-square factorisation; *"the converse at tensor level ... is L31/L33's"*; **Owed**: the reduction to one variable, the three vanishing sign-blocks, the pair cap, trace-freeness, the normalisation | **correct on every count, and it already carries the corrected attribution [results.md](../results.md) does not.** I derived the same factorisation independently in §2 before reading the row |
 
-**A Lean row exists, so the counterfactual the brief asks for does not arise.** Recording what it would take to move that row from **partial** to **proved**, since it is the sharpest statement of what is formalised: the three sign-block vanishings (hollowness of $T$ plus the sign counts of H3), the pair cap $\lVert[v_\alpha,v_\beta]\rVert^2\le2$ at the pair $(N-1,N)$, $\operatorname{tr}W=0$, and $\lVert W\rVert=1$, after which the row's own identity closes it. The row names exactly these four. **No finding.**
+**A Lean row exists, so the counterfactual the brief asks for does not arise.** Recording what it would take to move that row from **partial** to **proved**, since it is the sharpest statement of what is formalised: the three sign-block vanishings (hollowness of $T$ plus the sign counts of H3), the pair cap $\lVert[v_\alpha,v_\beta]\rVert^2\le2$ at the pair $(N-1,N)$, $\mathop{\mathrm{tr}}W=0$, and $\lVert W\rVert=1$, after which the row's own identity closes it. The row names exactly these four. **No finding.**
 
 **The one form that disagrees on mathematics rather than on citation** is the development form's *"reduced but not closed"* against the canonical *"closed ... with no numerics"*. §8 shows the canonical one is right.
 
 ## 11. The gap between what is proven and what is used, and what a consumer may cite
 
-**What the written proof establishes.** For any $W$ on $\Lambda^2\mathbb R^n$ that is symmetric, trace-free, of unit norm, with exactly one positive and exactly two negative eigenvalues counted with multiplicity: $\theta(W)\le\sqrt{3/2}$, with equality iff the nonzero spectrum is $(2,-1,-1)/\sqrt6$. **First Bianchi and Ricci-flatness are used only through $\operatorname{tr}W=0$**, so the theorem is strictly stronger than the statement, in the same way [L35](../findings/stratum-two-negative.md) records of its own chain. The bound is attained, at every $n\ge4$, by padded $W_{\mathbb{CP}^2}$.
+**What the written proof establishes.** For any $W$ on $\Lambda^2\mathbb R^n$ that is symmetric, trace-free, of unit norm, with exactly one positive and exactly two negative eigenvalues counted with multiplicity: $\theta(W)\le\sqrt{3/2}$, with equality iff the nonzero spectrum is $(2,-1,-1)/\sqrt6$. **First Bianchi and Ricci-flatness are used only through $\mathop{\mathrm{tr}}W=0$**, so the theorem is strictly stronger than the statement, in the same way [L35](../findings/stratum-two-negative.md) records of its own chain. The bound is attained, at every $n\ge4$, by padded $W_{\mathbb{CP}^2}$.
 
 **What a consumer may cite, stated exactly.**
 

@@ -41,5 +41,5 @@ The degree drop is an artefact of the normalization $c_I=\pm1$ on part of the in
 ## What this settles for T6
 
 - **Realizability from magnitudes has no criterion in the literature.** The state of the art enumerates by computer to dimension $9$ ([DEMONbLAST](https://github.com/diego-conti/DEMONbLAST)); dimension $>9$ is stated to be out of practical reach.
-- **The support consequence is real and is the only one that survives squaring.** (N4) is a condition on $\operatorname{supp}T$ and nothing else.
+- **The support consequence is real and is the only one that survives squaring.** (N4) is a condition on $\mathop{\mathrm{supp}}T$ and nothing else.
 - **Everything else is sign cancellation.** Remark 2.11 makes the point sharply: over $\mathbb C$ all constants normalize to $1$ and each nice diagram gives at most one family, while over $\mathbb R$ some diagrams die, the real/complex difference is entirely in the signs, with the magnitudes identical.

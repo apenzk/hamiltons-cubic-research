@@ -41,7 +41,7 @@ Quoted from [conventions.md](../findings/conventions.md), not restated.
 
 - Line 60, **"Structure constants $c_{abc}=\langle[v_a,v_b],v_c\rangle$ are totally antisymmetric, the inner product being ad-invariant; so $T_{abc}=c_{abc}^2$ is totally symmetric and vanishes when two indices coincide."**
 - Line 20, $S_{XYZ}$ is **"the block-restricted contraction of $T$ over ORDERED slots"**, with **"conversion is per pattern, $S^{\mathrm{ord}}=6S^{\mathrm{unord}}$ on $\mathfrak{mmm}$ and $\mathfrak{hhh}$, $2\times$ on the mixed patterns, not a global constant."**
-- Line 59, **"The Killing form of $\mathfrak{so}(n)$ is $B(X,Y)=(n-2)\operatorname{tr}(XY)$, with $\operatorname{tr}(v^2)=-2$ for a unit bivector, so $\kappa=2(n-2)$ in an orthonormal basis. Killing constants come from the definition, never from an index convention."**
+- Line 59, **"The Killing form of $\mathfrak{so}(n)$ is $B(X,Y)=(n-2)\mathop{\mathrm{tr}}(XY)$, with $\mathop{\mathrm{tr}}(v^2)=-2$ for a unit bivector, so $\kappa=2(n-2)$ in an orthonormal basis. Killing constants come from the definition, never from an index convention."**
 - Line 118, **"$\sum_{\beta\gamma}T_{\alpha\beta\gamma}=2(n-2)$ over ordered pairs, $\sum_{\beta<\gamma}T_{\alpha\beta\gamma}=n-2$ over unordered, so convert before comparing constants."** This is [Lemma L153](../findings/bounds.md).
 - Line 121, **"The Killing constant of a SUBALGEBRA $\mathfrak g$ simple: $\sum_{b\in\mathfrak g}\lVert[a,b]\rVert^2=c\lVert a\rVert^2$, with $c=2h^\vee(\mathfrak g)/I_\rho$ and $I$ normalised so the $\mathfrak{so}(n)$ vector representation has index $1$."**
 - Line 19, $\Theta_n$ is **"the diagonal maximum; equals $\theta_0(n)$ at even $n$, and $\sqrt{2(n-1)(n-3)/((n+1)(n-2))}$ at odd $n$."**
@@ -58,11 +58,11 @@ For the four-invariant form (section C's display, section A's statement):
 | --- | --- | --- | --- | --- |
 | H1 | $(\mathfrak g,\mathfrak k)$ a symmetric pair: $\mathfrak g=\mathfrak k\oplus\mathfrak m$ orthogonal, $[\mathfrak k,\mathfrak k]\subseteq\mathfrak k$, $[\mathfrak k,\mathfrak m]\subseteq\mathfrak m$, $[\mathfrak m,\mathfrak m]\subseteq\mathfrak k$ | yes | H1a, H1c yes; H1b **not** in the vanishings | §2 |
 | H2 | $\mathfrak g\subseteq\mathfrak{so}(n)$ | yes | only to fix the inner product; $n$ appears nowhere in the formula | §11.2 |
-| H3 | the inner product on $\Lambda^2\mathbb R^n$ has $e_i\wedge e_j$ orthonormal, i.e. $\langle A,B\rangle=\tfrac12\operatorname{tr}(A^{\mathsf T}B)$ | **no** | fixes $c$ (which scales as $1/\lambda$ under $\langle,\rangle\mapsto\lambda\langle,\rangle$) and the value of every $S$ | §11.2 |
+| H3 | the inner product on $\Lambda^2\mathbb R^n$ has $e_i\wedge e_j$ orthonormal, i.e. $\langle A,B\rangle=\tfrac12\mathop{\mathrm{tr}}(A^{\mathsf T}B)$ | **no** | fixes $c$ (which scales as $1/\lambda$ under $\langle,\rangle\mapsto\lambda\langle,\rangle$) and the value of every $S$ | §11.2 |
 | H4 | $W=a\Pi_{\mathfrak k}+b\Pi_{\mathfrak m}$ extended by **zero** on $\mathfrak g^\perp\subseteq\Lambda^2\mathbb R^n$ | **no** | pins the spectrum as $(a,b,0)$ whenever $\mathfrak g\subsetneq\mathfrak{so}(n)$, so the name "two-eigenvalue" holds only for $\mathfrak g=\mathfrak{so}(n)$ | §11.3 |
 | H5 | $ap+bq=0$ and $a^2p+b^2q=1$ | yes | $b=-ap/q$, $a^2=q/(p(p+q))$ | §3 |
 | H6 | $p\ge1$ and $q\ge1$ | **no** (the Lean file has them; the prose does not) | division by $p^3q$ | §11.1 |
-| H7 | $P(W)=\operatorname{tr}(W^3)+\tfrac12\sum T_{\alpha\beta\gamma}\lambda_\alpha\lambda_\beta\lambda_\gamma$, the Böhm–Wilking $\#$ normalisation | **no** | the whole cubic | §3.1 |
+| H7 | $P(W)=\mathop{\mathrm{tr}}(W^3)+\tfrac12\sum T_{\alpha\beta\gamma}\lambda_\alpha\lambda_\beta\lambda_\gamma$, the Böhm–Wilking $\#$ normalisation | **no** | the whole cubic | §3.1 |
 | H8 | $W\in\mathcal W_n$, Ricci-flat **and** first Bianchi | **in section A only, dropped from section C** | needed for $\theta$ to be a Weyl-tensor value at all | §6 |
 
 Additional, for the three-invariant form only:
@@ -91,11 +91,11 @@ The full symmetry of $T$ makes the *pattern* $\mathfrak{kkm}$ cover all three sl
 
 ### 3.1 The cubic
 
-$P(W)=\langle W,W^2+W^\#\rangle=\operatorname{tr}(W^3)+\langle W,W^\#\rangle$. With the standard $\#$, $(W^\#)_{\alpha\beta}=\tfrac12\sum_{\gamma\delta\epsilon\zeta}c_{\alpha\gamma\delta}c_{\beta\epsilon\zeta}W_{\gamma\epsilon}W_{\delta\zeta}$; for $W$ diagonal with eigenvalues $\lambda_\gamma$ this is $\tfrac12\sum_{\gamma\delta}c_{\alpha\gamma\delta}c_{\beta\gamma\delta}\lambda_\gamma\lambda_\delta$, so
+$P(W)=\langle W,W^2+W^\#\rangle=\mathop{\mathrm{tr}}(W^3)+\langle W,W^\#\rangle$. With the standard $\#$, $(W^\#)_{\alpha\beta}=\tfrac12\sum_{\gamma\delta\epsilon\zeta}c_{\alpha\gamma\delta}c_{\beta\epsilon\zeta}W_{\gamma\epsilon}W_{\delta\zeta}$; for $W$ diagonal with eigenvalues $\lambda_\gamma$ this is $\tfrac12\sum_{\gamma\delta}c_{\alpha\gamma\delta}c_{\beta\gamma\delta}\lambda_\gamma\lambda_\delta$, so
 
 $$\langle W,W^\#\rangle=\tfrac12\sum_{\alpha\gamma\delta}c_{\alpha\gamma\delta}^2\lambda_\alpha\lambda_\gamma\lambda_\delta=\tfrac12\Sigma,\qquad \Sigma:=\sum_{\alpha\beta\gamma}T_{\alpha\beta\gamma}\lambda_\alpha\lambda_\beta\lambda_\gamma.$$
 
-The factor $\tfrac12$ is H7 and is nowhere on the record; it is the Böhm–Wilking normalisation and it is what the record's line "$\theta=\operatorname{tr}(W^3)+\tfrac12[a^3S_{\mathfrak{kkk}}+3ab^2S_{\mathfrak{kmm}}]$" silently uses.
+The factor $\tfrac12$ is H7 and is nowhere on the record; it is the Böhm–Wilking normalisation and it is what the record's line "$\theta=\mathop{\mathrm{tr}}(W^3)+\tfrac12[a^3S_{\mathfrak{kkk}}+3ab^2S_{\mathfrak{kmm}}]$" silently uses.
 
 ### 3.2 The multinomial expansion
 
@@ -107,7 +107,7 @@ the $3$'s counting the three slot placements of the odd index. Terms touching $\
 
 ### 3.3 The elimination
 
-$b=-ap/q$ and $a^2=q/(p(p+q))$. Then $\operatorname{tr}(W^3)=a^3p+b^3q=a^3p(q^2-p^2)/q^2$, and $ab^2=a^3p^2/q^2$, so
+$b=-ap/q$ and $a^2=q/(p(p+q))$. Then $\mathop{\mathrm{tr}}(W^3)=a^3p+b^3q=a^3p(q^2-p^2)/q^2$, and $ab^2=a^3p^2/q^2$, so
 
 $$\theta=P(W)=\frac{a^3}{2q^2}\Big[S_{\mathfrak{kkk}}q^2+3S_{\mathfrak{kmm}}p^2+2p(q^2-p^2)\Big]=\frac{a^3}{2q^2}\,N,\quad N:=S_{\mathfrak{kkk}}q^2+3S_{\mathfrak{kmm}}p^2-2p^3+2pq^2.$$
 
@@ -164,12 +164,12 @@ So section A's sentence is true but redundant, and its "so $\theta$ depends on $
 
 ## 6. Admissibility, what hypothesis the formula needs to be about Weyl tensors at all
 
-**H8: $W\in\mathcal W_n$.** Concretely, under $\operatorname{Sym}^2(\Lambda^2\mathbb R^n)=\mathcal W_n\oplus(\text{Ricci part})\oplus(\text{scalar})\oplus\Lambda^4\mathbb R^n$, the ansatz must have
+**H8: $W\in\mathcal W_n$.** Concretely, under $\mathop{\mathrm{Sym}}^2(\Lambda^2\mathbb R^n)=\mathcal W_n\oplus(\text{Ricci part})\oplus(\text{scalar})\oplus\Lambda^4\mathbb R^n$, the ansatz must have
 
 1. **vanishing $\Lambda^4$ component**, the first Bianchi identity; and
 2. **vanishing trace-free Ricci component**, Ricci-flatness.
 
-The normalisation $ap+bq=0$ is only $\operatorname{tr}W=0$, the scalar part. It is the weakest of the three and the only one the ansatz enforces. [target.md](../findings/target.md) records that of 16 pairs built, **three** pass: $(\mathfrak{su}(m),\mathfrak{so}(m))$, $(\mathfrak{so}(2k),\mathfrak{so}(k)+\mathfrak{so}(k))$, $(\mathfrak{su}(2),\mathfrak{so}(2))$; $(\mathfrak{so}(2m),\mathfrak u(m))$ and $(\mathfrak{sp}(2),\mathfrak u(2))$ fail Bianchi; unequal sphere pairs fail Ricci-flatness. **So the guard is load-bearing and annotation 3 is right that section C dropped it.** Section A carries it.
+The normalisation $ap+bq=0$ is only $\mathop{\mathrm{tr}}W=0$, the scalar part. It is the weakest of the three and the only one the ansatz enforces. [target.md](../findings/target.md) records that of 16 pairs built, **three** pass: $(\mathfrak{su}(m),\mathfrak{so}(m))$, $(\mathfrak{so}(2k),\mathfrak{so}(k)+\mathfrak{so}(k))$, $(\mathfrak{su}(2),\mathfrak{so}(2))$; $(\mathfrak{so}(2m),\mathfrak u(m))$ and $(\mathfrak{sp}(2),\mathfrak u(2))$ fail Bianchi; unequal sphere pairs fail Ricci-flatness. **So the guard is load-bearing and annotation 3 is right that section C dropped it.** Section A carries it.
 
 A sufficient structural condition already on the record is [target.md](../findings/target.md) line 470's $\dim\mathcal W_n^K=1$ (with $(\Lambda^4\mathbb R^n)^K=0$ doing other work there); this verifier does not endorse it as necessary, and it is not what L39 states.
 
@@ -260,9 +260,9 @@ Row 3 of [target.md](../findings/target.md)'s table is *"$\mathfrak{so}(m)\subse
 
 **The two cells do fail.** $h^\vee(\mathfrak{so}(m))=m-2$ holds for $m\ge5$ ($B_r$: $h^\vee=2r-1=m-2$; $D_r$: $h^\vee=2r-2=m-2$). At $m=3$, $\mathfrak{so}(3)\cong\mathfrak{su}(2)$ has $h^\vee=2\ne1$. At $m=4$, $\mathfrak{so}(4)=\mathfrak{su}(2)\oplus\mathfrak{su}(2)$ is not simple and $h^\vee$ is undefined. **Claim 22 holds.**
 
-**The doubling argument, checked.** $c$ is metric data: under $\langle,\rangle\mapsto\lambda\langle,\rangle$ an orthonormal basis rescales by $\lambda^{-1/2}$ and $\sum_i\lVert[a,b'_i]\rVert'^2=\lambda\lambda^{-1}\sum_i\lVert[a,b_i]\rVert^2=c\lVert a\rVert^2=(c/\lambda)\lVert a\rVert'^2$, so $c\mapsto c/\lambda$. The embedding $\mathfrak{so}(m)\hookrightarrow\mathfrak{so}(2m)$ is $X\mapsto X\oplus X$ on $\mathbb R^m\oplus\mathbb R^m$, a Lie algebra map, and $\lVert X\oplus X\rVert^2_{\mathfrak{so}(2m)}=\tfrac12\operatorname{tr}\big((X\oplus X)^{\mathsf T}(X\oplus X)\big)=\operatorname{tr}(X^{\mathsf T}X)=2\lVert X\rVert^2_{\mathfrak{so}(m)}$. So $\lambda=2$ and $c=c_{\rm std}(\mathfrak{so}(m))/2$.
+**The doubling argument, checked.** $c$ is metric data: under $\langle,\rangle\mapsto\lambda\langle,\rangle$ an orthonormal basis rescales by $\lambda^{-1/2}$ and $\sum_i\lVert[a,b'_i]\rVert'^2=\lambda\lambda^{-1}\sum_i\lVert[a,b_i]\rVert^2=c\lVert a\rVert^2=(c/\lambda)\lVert a\rVert'^2$, so $c\mapsto c/\lambda$. The embedding $\mathfrak{so}(m)\hookrightarrow\mathfrak{so}(2m)$ is $X\mapsto X\oplus X$ on $\mathbb R^m\oplus\mathbb R^m$, a Lie algebra map, and $\lVert X\oplus X\rVert^2_{\mathfrak{so}(2m)}=\tfrac12\mathop{\mathrm{tr}}\big((X\oplus X)^{\mathsf T}(X\oplus X)\big)=\mathop{\mathrm{tr}}(X^{\mathsf T}X)=2\lVert X\rVert^2_{\mathfrak{so}(m)}$. So $\lambda=2$ and $c=c_{\rm std}(\mathfrak{so}(m))/2$.
 
-**And $c_{\rm std}(\mathfrak{so}(m))=2(m-2)$ needs no simplicity.** By direct count in the orthonormal basis $v_{ij}=E_{ij}-E_{ji}$ ($i<j$, unit under $\langle A,B\rangle=\tfrac12\operatorname{tr}(A^{\mathsf T}B)$, per conventions line 59): $[v_{12},v_{1k}]=-(v_{2k})$ for $k\ge3$ and likewise for $v_{2k}$, each of unit norm; the basis elements meeting $\{1,2\}$ in exactly one index number $2(m-2)$, and no other bracket with $v_{12}$ is nonzero. Hence $c_{\rm std}=2(m-2)$, valid at every $m\ge2$. This is conventions line 118's $\kappa=2(n-2)$, i.e. [Lemma L153](../findings/bounds.md).
+**And $c_{\rm std}(\mathfrak{so}(m))=2(m-2)$ needs no simplicity.** By direct count in the orthonormal basis $v_{ij}=E_{ij}-E_{ji}$ ($i<j$, unit under $\langle A,B\rangle=\tfrac12\mathop{\mathrm{tr}}(A^{\mathsf T}B)$, per conventions line 59): $[v_{12},v_{1k}]=-(v_{2k})$ for $k\ge3$ and likewise for $v_{2k}$, each of unit norm; the basis elements meeting $\{1,2\}$ in exactly one index number $2(m-2)$, and no other bracket with $v_{12}$ is nonzero. Hence $c_{\rm std}=2(m-2)$, valid at every $m\ge2$. This is conventions line 118's $\kappa=2(n-2)$, i.e. [Lemma L153](../findings/bounds.md).
 
 **Therefore $c=m-2$ at every $m\ge2$, $m=3$ and $m=4$ included, and the argument never touches $h^\vee$ or $I_\rho$.** Consistency: at $m=2$, $c=0$ and $\mathfrak{so}(2)$ is abelian; at $m=4$, a single $c$ exists because the two $\mathfrak{su}(2)$ factors are isomorphic, which is exactly the guard [target.md](../findings/target.md) line 369 states.
 
@@ -286,13 +286,13 @@ Never stated in section A, B, or C; present in [L39.lean](../lean/HamiltonsCubic
 
 ### 11.2 The metric normalisation
 
-$c$ and every $S$ scale with the inner product on $\Lambda^2\mathbb R^n$ (see §10). The value $c=2h^\vee/I_\rho$ and $c(\mathfrak{so}(n))=2(n-2)$ hold in the normalisation making $e_i\wedge e_j$ orthonormal, i.e. $\langle A,B\rangle=\tfrac12\operatorname{tr}(A^{\mathsf T}B)$, which conventions line 59 fixes ("$\operatorname{tr}(v^2)=-2$ for a unit bivector") but which **neither copy of L39 quotes**. Under the plain Frobenius form every $c$ halves and the formula returns different numbers. This is what H2 ($\mathfrak g\subseteq\mathfrak{so}(n)$) is actually for, $n$ appears nowhere in the formula, so the embedding hypothesis is doing metric work and saying so nowhere. **A hypothesis stated, and its real role never stated.**
+$c$ and every $S$ scale with the inner product on $\Lambda^2\mathbb R^n$ (see §10). The value $c=2h^\vee/I_\rho$ and $c(\mathfrak{so}(n))=2(n-2)$ hold in the normalisation making $e_i\wedge e_j$ orthonormal, i.e. $\langle A,B\rangle=\tfrac12\mathop{\mathrm{tr}}(A^{\mathsf T}B)$, which conventions line 59 fixes ("$\mathop{\mathrm{tr}}(v^2)=-2$ for a unit bivector") but which **neither copy of L39 quotes**. Under the plain Frobenius form every $c$ halves and the formula returns different numbers. This is what H2 ($\mathfrak g\subseteq\mathfrak{so}(n)$) is actually for, $n$ appears nowhere in the formula, so the embedding hypothesis is doing metric work and saying so nowhere. **A hypothesis stated, and its real role never stated.**
 
 ### 11.3 $\ker W\ne0$ and padded objects
 
 The trap fires here. If $\mathfrak g\subsetneq\mathfrak{so}(n)$, which is the case for every example on the record, including $\mathfrak{su}(m)\subset\mathfrak{so}(2m)$, then $\mathfrak k\oplus\mathfrak m$ is a proper subspace of $\Lambda^2\mathbb R^n$ and $W$ must be defined on the complement. The only reading under which the derivation works is extension by zero, so **$\ker W\supseteq\mathfrak g^\perp$ has dimension $\binom n2-(p+q)$ and "the two-eigenvalue operator" is a three-eigenvalue operator $(a,b,0)$ unless $\mathfrak g=\mathfrak{so}(n)$.** Consequences:
 
-- **harmless for the value**, every $T$-term touching $\mathfrak g^\perp$ carries $\lambda=0$, and $\operatorname{tr}(W^3)$, $\operatorname{tr}(W^2)$, $\operatorname{tr}(W)$ are unaffected. So §3 stands;
+- **harmless for the value**, every $T$-term touching $\mathfrak g^\perp$ carries $\lambda=0$, and $\mathop{\mathrm{tr}}(W^3)$, $\mathop{\mathrm{tr}}(W^2)$, $\mathop{\mathrm{tr}}(W)$ are unaffected. So §3 stands;
 - **not harmless for criticality**, $Q(W)=\theta W$ requires $Q(W)$ to vanish on $\mathfrak g^\perp$; $W^2$ does, but $(W^\#)_{\delta\delta}=\tfrac12\sum_{\gamma\epsilon}T_{\delta\gamma\epsilon}\lambda_\gamma\lambda_\epsilon$ for $\delta\in\mathfrak g^\perp$ is generically nonzero. L39 asserts only a value, so it does not fall over; but any consumer reading "the two-eigenvalue critical point" out of it is reading something L39 does not prove.
 
 **H4 is unstated and load-bearing for the name of the object.**

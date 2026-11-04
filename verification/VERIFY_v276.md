@@ -22,12 +22,12 @@
 
 ## 0. Conventions, fixed once
 
-- $V=V_1\oplus V_2=\mathbb R^m\oplus\mathbb R^m$, $n=2m$, $P_i$ the orthogonal projection onto $V_i$, $g=I=P_1+P_2$. For $h\in S^2(V)$, $t_i=\operatorname{tr}(P_ih)$.
+- $V=V_1\oplus V_2=\mathbb R^m\oplus\mathbb R^m$, $n=2m$, $P_i$ the orthogonal projection onto $V_i$, $g=I=P_1+P_2$. For $h\in S^2(V)$, $t_i=\mathop{\mathrm{tr}}(P_ih)$.
 - **Curvature sign convention: $R_{ijij}=+\sec(e_i,e_j)$.** This is Li's. It is pinned by two identities at source: Li §2, Example 2.1, $\mathring R=\kappa\,\mathrm{id}_{S^2_0}$ on $S^n(\kappa)$, and the proof of Li's Lemma 2.3, $\mathring R_i(g_i)=-\mathrm{Ric}(R_i)$. With $\mathrm{Ric}_{il}=\sum_jR_{ijlj}$, the second reads $\sum_jR_{ijjl}=-\sum_jR_{ijlj}$, which holds only under $R_{ijij}=+\sec$ with the operator below.
 - **Operator: $(\mathring Wh)_{ij}=\sum_{k,l}W_{iklj}h_{kl}$** (Passage G). Li's introduction writes the bilinear form $\mathring R(\varphi,\psi)=R_{ijkl}\varphi_{il}\psi_{jk}$ (txt line 33), whose operator is $(\mathring R\varphi)_{jk}=\sum_{il}R_{jilk}\varphi_{il}$, the same pattern. Li's §2 proofs compute $\sum_{j,k}R(e_i,e_j,e_k,e_l)\varphi(e_j,e_k)$, again the same pattern.
 - **Source note, not load-bearing.** Li 2022 p. 7 displays $\mathring R(\varphi)_{ij}=\sum_{k,l}R_{ijkl}\varphi_{kl}$ (confirmed on the PDF page, not an extraction artefact). Read literally this vanishes on $S^2(V)$ by antisymmetry in $kl$, so it is a typo at source. Every computation in Li's §2 uses the $iklj$ pattern, and the record takes its convention from Li 2021 (2.2), so nothing downstream reads the typo.
 - Constant-curvature tensors: $G_{ijkl}=\delta_{ik}\delta_{jl}-\delta_{il}\delta_{jk}$, $G^{(i)}_{ijkl}=(P_i)_{ik}(P_i)_{jl}-(P_i)_{il}(P_i)_{jk}$. Kulkarni–Nomizu product $(h\owedge k)_{ijkl}=h_{ik}k_{jl}+h_{jl}k_{ik}-h_{il}k_{jk}-h_{jk}k_{il}$, so $G=\tfrac12g\owedge g$ and $G^{(i)}=\tfrac12P_i\owedge P_i$.
-- **$\Lambda^2$ normalisation: $M_{(ij),(kl)}=W_{ijkl}$ for $i<j$, $k<l$, on the orthonormal basis $e_i\wedge e_j$.** $\lVert W\rVert_F=\lVert M\rVert_F$, $\mu=\operatorname{spec}M$, so $\lVert W\rVert_F=1$ is $\sum\mu^2=1$. Then $|W|^2=\sum_{ijkl}W_{ijkl}^2=4\lVert M\rVert_F^2$. This choice is pinned by a derived identity in §4, which is the only reading under which the record's pair $\sum\mu^2=1$, $\sum\omega^2=3$ is consistent.
+- **$\Lambda^2$ normalisation: $M_{(ij),(kl)}=W_{ijkl}$ for $i<j$, $k<l$, on the orthonormal basis $e_i\wedge e_j$.** $\lVert W\rVert_F=\lVert M\rVert_F$, $\mu=\mathop{\mathrm{spec}}M$, so $\lVert W\rVert_F=1$ is $\sum\mu^2=1$. Then $|W|^2=\sum_{ijkl}W_{ijkl}^2=4\lVert M\rVert_F^2$. This choice is pinned by a derived identity in §4, which is the only reading under which the record's pair $\sum\mu^2=1$, $\sum\omega^2=3$ is consistent.
 - $m$ is an integer, $m\ge2$ unless stated.
 
 ## Hypothesis inventory
@@ -40,7 +40,7 @@
 | H4 | Index order $iklj$ | Passage G | Sign of $\mathring W$ | Yes |
 | H5 | $\Lambda^2$ normalisation $M_{(ij),(kl)}=W_{ijkl}$ | Brief's definitions, loosely ("Frobenius norm of $W$ acting on $\Lambda^2$") | Magnitude of $A$ | Yes, pinned in §4 |
 | H6 | Li Thm 1.8: $(M_i,g_i)$ Einstein, $\mathrm{Ric}(g_i)=\rho_ig_i$, $n_i\ge1$ | Li, at source | Passage D | Yes: unit $S^m$ has $\rho=m-1$, $n_i=m\ge1$ |
-| H7 | $\operatorname{spec}\mathring R_i$ on round $S^m$: $\kappa$ on $S^2_0(V_i)$ | Li Example 2.1 (stated without proof, $n\ge2$). Not cited by the record | Passage D (Thm 1.8 needs the factor spectra as input) | Yes, and B's formula restricted to one factor gives it (§1.2) |
+| H7 | $\mathop{\mathrm{spec}}\mathring R_i$ on round $S^m$: $\kappa$ on $S^2_0(V_i)$ | Li Example 2.1 (stated without proof, $n\ge2$). Not cited by the record | Passage D (Thm 1.8 needs the factor spectra as input) | Yes, and B's formula restricted to one factor gives it (§1.2) |
 | H8 | The product is Einstein, $\rho_1=\rho_2$ | Implicit in D's "Einstein part" | The shift $\mathring W=\mathring R-c\,\mathrm{id}$ | Yes at equal radii |
 | H9 | $\sum\omega^2=3\sum\mu^2$ on $\mathcal W_n$ | Not in the passages. The Lean file cites "the source's $\tfrac34|W|^2$" without quoting it | Equivalence of $\lVert W\rVert_F=1$ with $\sum\omega^2=3$ | Holds, derived in §4 as the normalisation-settling identity |
 | H10 | Meanings of $G^{(1)},G^{(2)},G,P_1,P_2,t_1,t_2$ | **Nowhere in the passages** | Passage B | Charitable reading (§0) makes every B claim true (withdrawn candidate W2) |
@@ -50,31 +50,31 @@
 ### 1.1 The curvature, the Weyl tensor, and $c$
 
 - $R=G^{(1)}+G^{(2)}$ is the curvature of unit $S^m\times S^m$: by Li (2.2) the product curvature is the direct sum, and unit $S^m$ has curvature $G^{(i)}$ in convention H3.
-- $\mathrm{Ric}(G^{(i)})_{il}=\sum_jG^{(i)}_{ijlj}=\operatorname{tr}(P_i)(P_i)_{il}-(P_i)_{il}=(m-1)(P_i)_{il}$. So $\mathrm{Ric}(R)=(m-1)g$, $s=2m(m-1)$.
+- $\mathrm{Ric}(G^{(i)})_{il}=\sum_jG^{(i)}_{ijlj}=\mathop{\mathrm{tr}}(P_i)(P_i)_{il}-(P_i)_{il}=(m-1)(P_i)_{il}$. So $\mathrm{Ric}(R)=(m-1)g$, $s=2m(m-1)$.
 - For an Einstein tensor the trace-free Ricci part vanishes and $W=R-\frac{s}{n(n-1)}G$, with $\frac{s}{n(n-1)}=\frac{2m(m-1)}{2m(2m-1)}=\frac{m-1}{2m-1}=c$.
 - Derived check: $\mathrm{Ric}(W)=(m-1)g-c(n-1)g=(m-1)g-(m-1)g=0$. **$c$ is the right constant.**
 
 ### 1.2 The operator formula (Passage B, Passage G)
 
 - $\sum_{k,l}G^{(1)}_{iklj}h_{kl}=\sum_{kl}\big[(P_1)_{il}(P_1)_{kj}-(P_1)_{ij}(P_1)_{kl}\big]h_{kl}=(P_1hP_1)_{ij}-t_1(P_1)_{ij}$.
-- Likewise $\mathring G^{(2)}h=P_2hP_2-t_2P_2$ and $\mathring Gh=h-(\operatorname{tr}h)g$.
-- Hence $\mathring Wh=P_1hP_1+P_2hP_2-t_1P_1-t_2P_2-c\,h+c(\operatorname{tr}h)g$, which on $S^2_0$ is **exactly B's formula**.
-- $\mathring W$ maps $S^2_0$ into itself with no projection: $\operatorname{tr}\mathring Wh=t_1+t_2-m t_1-m t_2=(1-m)\operatorname{tr}h=0$.
+- Likewise $\mathring G^{(2)}h=P_2hP_2-t_2P_2$ and $\mathring Gh=h-(\mathop{\mathrm{tr}}h)g$.
+- Hence $\mathring Wh=P_1hP_1+P_2hP_2-t_1P_1-t_2P_2-c\,h+c(\mathop{\mathrm{tr}}h)g$, which on $S^2_0$ is **exactly B's formula**.
+- $\mathring W$ maps $S^2_0$ into itself with no projection: $\mathop{\mathrm{tr}}\mathring Wh=t_1+t_2-m t_1-m t_2=(1-m)\mathop{\mathrm{tr}}h=0$.
 - Restricted to one factor, $\mathring G^{(1)}=\mathrm{id}$ on $S^2_0(V_1)$, which is H7 at $\kappa=1$.
 
 ### 1.3 The three summands, values and multiplicities
 
-Write $h=\begin{pmatrix}a&b\\b^{\mathsf T}&d\end{pmatrix}$, $a,d\in S^2(\mathbb R^m)$, $b\in\mathbb R^{m\times m}$, $\operatorname{tr}a+\operatorname{tr}d=0$. Then $\mathring Wh=\begin{pmatrix}a-(\operatorname{tr}a)I&0\\0&d-(\operatorname{tr}d)I\end{pmatrix}-c\,h$.
+Write $h=\begin{pmatrix}a&b\\b^{\mathsf T}&d\end{pmatrix}$, $a,d\in S^2(\mathbb R^m)$, $b\in\mathbb R^{m\times m}$, $\mathop{\mathrm{tr}}a+\mathop{\mathrm{tr}}d=0$. Then $\mathring Wh=\begin{pmatrix}a-(\mathop{\mathrm{tr}}a)I&0\\0&d-(\mathop{\mathrm{tr}}d)I\end{pmatrix}-c\,h$.
 
 | Summand | Elements | $\mathring Wh$ | Eigenvalue | Dimension |
 |---|---|---|---|---|
-| $E_1=S^2_0(V_1)\oplus S^2_0(V_2)$ | $b=0$, $\operatorname{tr}a=\operatorname{tr}d=0$ | $(1-c)h$ | $\frac{m}{2m-1}$ | $2\cdot\frac{(m-1)(m+2)}2=(m-1)(m+2)$ |
+| $E_1=S^2_0(V_1)\oplus S^2_0(V_2)$ | $b=0$, $\mathop{\mathrm{tr}}a=\mathop{\mathrm{tr}}d=0$ | $(1-c)h$ | $\frac{m}{2m-1}$ | $2\cdot\frac{(m-1)(m+2)}2=(m-1)(m+2)$ |
 | $E_2$, cross block | $a=d=0$ | $-c\,h$ | $-\frac{m-1}{2m-1}$ | $m^2$ |
 | $E_3=\mathbb R(P_1-P_2)$ | $a=I$, $d=-I$, $b=0$ | $(1-m)h-c\,h$ | $-\frac{2m(m-1)}{2m-1}$ | $1$ |
 
-- The three are mutually orthogonal, and $(m-1)(m+2)+m^2+1=2m^2+m-1=\binom{2m+1}2-1=\dim S^2_0$, so they exhaust $S^2_0$. Any $h$ decomposes with $a=a_0+\frac{\operatorname{tr}a}mI$, $d=d_0-\frac{\operatorname{tr}a}mI$.
+- The three are mutually orthogonal, and $(m-1)(m+2)+m^2+1=2m^2+m-1=\binom{2m+1}2-1=\dim S^2_0$, so they exhaust $S^2_0$. Any $h$ decomposes with $a=a_0+\frac{\mathop{\mathrm{tr}}a}mI$, $d=d_0-\frac{\mathop{\mathrm{tr}}a}mI$.
 - Unnormalised values: $A_0\{m,-(m-1),-2m(m-1)\}$ with $A_0=\frac1{2m-1}>0$. **The ratio and the assignment of multiplicities are as stated.**
-- **Independent route via Li.** Thm 1.8 with $\mathring R_i=\mathrm{id}$ (H7) gives $\operatorname{spec}\mathring R=\{1^{((m-1)(m+2))},0^{(m^2)},-(m-1)^{(1)}\}$, the last from $-\frac{m\rho+m\rho}{2m}$ at $\rho=m-1$. Subtracting $c\,\mathrm{id}$ (§1.2) gives $\{1-c,-c,-(m-1)-c\}$, the same table. The eigenvectors also agree: Li's $E$ is $E_2$, Li's $\zeta\propto n_2g_1-n_1g_2$ is $E_3$.
+- **Independent route via Li.** Thm 1.8 with $\mathring R_i=\mathrm{id}$ (H7) gives $\mathop{\mathrm{spec}}\mathring R=\{1^{((m-1)(m+2))},0^{(m^2)},-(m-1)^{(1)}\}$, the last from $-\frac{m\rho+m\rho}{2m}$ at $\rho=m-1$. Subtracting $c\,\mathrm{id}$ (§1.2) gives $\{1-c,-c,-(m-1)-c\}$, the same table. The eigenvectors also agree: Li's $E$ is $E_2$, Li's $\zeta\propto n_2g_1-n_1g_2$ is $E_3$.
 - Distinctness at $m\ge2$ with $A>0$: $-2m(m-1)A<-(m-1)A$ iff $(2m-1)(m-1)A>0$, and $-(m-1)A<mA$ iff $(2m-1)A>0$. **Exactly three values, bottom $-2m(m-1)A$.**
 
 ### 1.4 Scope check on H2, unequal radii (a candidate falsifier, not a repair)
@@ -90,7 +90,7 @@ Write $h=\begin{pmatrix}a&b\\b^{\mathsf T}&d\end{pmatrix}$, $a,d\in S^2(\mathbb 
 
 ### 2.1 Withdrawn candidates for Claim 2
 
-**W2, undefined symbols.** (1) Line 507: "Write $R=G^{(1)}+G^{(2)}$ and $W=R-cG$ … $P_1hP_1+P_2hP_2-t_1P_1-t_2P_2-ch$", no definition in any passage. (2) Under a different reading, for instance $G$ the curvature of radius-$r$ spheres or $t_i=\operatorname{tr}h_{ii\text{-block}}/m$, $c$ and the formula change. (3) Charitable reading: $P_i$ the factor projections, $t_i=\operatorname{tr}(P_ih)$, $G^{(i)}$ and $G$ the unit constant-curvature tensors. This is the only reading under which $c=(m-1)/(2m-1)$ makes $W$ trace-free, so the symbols are determined by B's own constant. **Withdrawn**, with the text owing the definitions.
+**W2, undefined symbols.** (1) Line 507: "Write $R=G^{(1)}+G^{(2)}$ and $W=R-cG$ … $P_1hP_1+P_2hP_2-t_1P_1-t_2P_2-ch$", no definition in any passage. (2) Under a different reading, for instance $G$ the curvature of radius-$r$ spheres or $t_i=\mathop{\mathrm{tr}}h_{ii\text{-block}}/m$, $c$ and the formula change. (3) Charitable reading: $P_i$ the factor projections, $t_i=\mathop{\mathrm{tr}}(P_ih)$, $G^{(i)}$ and $G$ the unit constant-curvature tensors. This is the only reading under which $c=(m-1)/(2m-1)$ makes $W$ trace-free, so the symbols are determined by B's own constant. **Withdrawn**, with the text owing the definitions.
 
 **W2b, the parenthetical names the wrong three summands.** (1) Line 507: "three $O(m)\times O(m)$-invariant summands (the two within-factor trace-free parts and the cross block)". (2) Literal reading $S^2_0(V_1)$, $S^2_0(V_2)$, cross block: dimensions sum to $2m^2+m-2$, missing $P_1-P_2$, and the first two share the eigenvalue $mA_0$, so no ratio of three distinct entries can be read off them. The missing line is exactly the eigenspace of $-2m(m-1)A_0$. (3) Charitable reading: the within-factor block $\{b=0\}\cap S^2_0$ splits into two trace-free parts, the factorwise trace-free part $E_1$ and the trace line $E_3$, plus the cross block $E_2$. That reading gives the correct three summands. **Withdrawn**, with the parenthetical owing the words "and the line $\mathbb R(P_1-P_2)$".
 
@@ -99,7 +99,7 @@ Write $h=\begin{pmatrix}a&b\\b^{\mathsf T}&d\end{pmatrix}$, $a,d\in S^2(\mathbb 
 - **Li Thm 1.8 at source (p. 5):** "Let $(M_i,g_i)$ be an $n_i$-dimensional Einstein manifold with $\mathrm{Ric}(g_i)=\rho_ig_i$ and $n_i\ge1$ … Then the eigenvalues of $\mathring R$ are precisely those of $\mathring R_1$ and $\mathring R_2$, and $0$ with multiplicity $n_1n_2$, and $-\frac{n_1\rho_2+n_2\rho_1}{n_1+n_2}$ with multiplicity one." D's transcription matches.
 - **Proof at source.** Li's Lemmas 2.1–2.3 and the orthonormal basis of Prop. 2.1 were read link by link. Lemma 2.2 checks $\mathring R\varphi_p$ on the $V_1$ block and the $V_2$ block and omits the mixed block $i\le n_1<l$, where (2.3) gives $0$ at once. Lemma 2.3's projection computation checks: the $g_1$ coefficient is $-n_2\rho_1+\frac{n_1n_2(\rho_1-\rho_2)}{n_1+n_2}=-\frac{n_2(n_1\rho_2+n_2\rho_1)}{n_1+n_2}$. No defect that reaches L67.
 - **Hypotheses against the object.** Unit $S^m$ is Einstein, $\rho=m-1$, $n_i=m\ge1$. At $m=1$ H6 still holds ($\rho=0$), but Thm 1.8 then describes $R=0$.
-- **The gap.** D's step "subtracting the Einstein part to reach the Weyl tensor" is one phrase. D states neither $c$ nor that the Einstein part acts as $c\,\mathrm{id}$ on $S^2_0$ (which is $\mathring Gh=h-(\operatorname{tr}h)g$), nor the factor spectra H7 that Thm 1.8 takes as input. The table and $A$ are then attributed to [run_maximiser_closed_form.py](../scripts/runs/run_maximiser_closed_form.py), and the Thm 1.8 check to a run at $1.8\times10^{-15}$, which adds nothing to a filed, proven theorem.
+- **The gap.** D's step "subtracting the Einstein part to reach the Weyl tensor" is one phrase. D states neither $c$ nor that the Einstein part acts as $c\,\mathrm{id}$ on $S^2_0$ (which is $\mathring Gh=h-(\mathop{\mathrm{tr}}h)g$), nor the factor spectra H7 that Thm 1.8 takes as input. The table and $A$ are then attributed to [run_maximiser_closed_form.py](../scripts/runs/run_maximiser_closed_form.py), and the Thm 1.8 check to a run at $1.8\times10^{-15}$, which adds nothing to a filed, proven theorem.
 - **Closure.** Passage B's $-ch$ term, with its formula restricted to a factor for H7, supplies exactly the missing step. Since B is at the lemma's own block, the lemma's chain is complete even though Passage A's locator ("the surrounding material") points to the half with the gap.
 
 ## 4. Claim 4, the constant $A$ (CONFIRMED)
@@ -145,7 +145,7 @@ Write $h=\begin{pmatrix}a&b\\b^{\mathsf T}&d\end{pmatrix}$, $a,d\in S^2(\mathbb 
 ### 5.3 Claim 7, "$A$ is not a new constant" (CONFIRMED AS ALGEBRA)
 
 - At $n=2m$: $\frac{2\sqrt2}{2m\sqrt{(2m-1)(2m-2)}}=\frac{\sqrt2}{m\sqrt2\sqrt{(2m-1)(m-1)}}=A$.
-- The identification of "the record's $\operatorname{tr}(W^3)$" with $p_3(\mu)$ is not written in the passages, and "checked to be identically zero difference" is a run. The equality of the two closed forms is exact.
+- The identification of "the record's $\mathop{\mathrm{tr}}(W^3)$" with $p_3(\mu)$ is not written in the passages, and "checked to be identically zero difference" is a run. The equality of the two closed forms is exact.
 
 ### 5.4 Claim 8, the radical (CONFIRMED AS ALGEBRA)
 
@@ -202,7 +202,7 @@ $(2m^2-3m+1)^2=4m^4-12m^3+13m^2-6m+1$, and $2m^2-3m+1=(2m-1)(m-1)\ge0$ for $m\ge
 **Item 6, the brief's attack items.**
 1. Where the argument is: B establishes the spectrum given its symbols. D alone has the §3 gap. A's locator points to D. Imports: Li Thm 1.8 (D), H7 and H3 (both, unstated).
 2. B's objects: undefined in every passage (W2). $R=G^{(1)}+G^{(2)}$ is the unit-sphere product curvature in convention H3. $c$ is the trace-free constant (§1.1).
-3. The operator formula agrees with Passage G on $S^2_0$, and is off $S^2_0$ by $c(\operatorname{tr}h)g$ (§1.2).
+3. The operator formula agrees with Passage G on $S^2_0$, and is off $S^2_0$ by $c(\mathop{\mathrm{tr}}h)g$ (§1.2).
 4. Summands and ratio correct under the charitable reading. Literal parenthetical omits $\mathbb R(P_1-P_2)$ (W2b). Multiplicities assigned correctly (§1.3).
 5. Li at source, hypotheses satisfied. The Einstein subtraction is unwritten in D (§3).
 6. $A$ and its sign CONFIRMED. Both sums fix $A^2$, equivalently by §4.1. E states the value one sentence after its statement (§4.3).

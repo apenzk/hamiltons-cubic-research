@@ -211,9 +211,9 @@ end HamiltonsCubic.L45
 
 ## Definitions and sources
 
-- $\Lambda^2\mathbb R^n$, $\langle R,S\rangle=\operatorname{tr}(R\circ S)$, $I$ the identity, $\lVert I\rVert^2=\binom n2$. For $n\ge4$ a curvature operator decomposes orthogonally as $R=cI+Y+W$, $Y=R_{\mathrm{ric}_0}$ the traceless-Ricci part, $W$ Weyl.
+- $\Lambda^2\mathbb R^n$, $\langle R,S\rangle=\mathop{\mathrm{tr}}(R\circ S)$, $I$ the identity, $\lVert I\rVert^2=\binom n2$. For $n\ge4$ a curvature operator decomposes orthogonally as $R=cI+Y+W$, $Y=R_{\mathrm{ric}_0}$ the traceless-Ricci part, $W$ Weyl.
 - $\Phi(R)=R^2+R^\#$, $\Phi(A,B)$ its symmetric polarisation, $T(A,B,C)=\langle A,\Phi(B,C)\rangle$; on Weyl tensors $Q(W)=\Phi(W)$.
-- $F(R)=\lVert R\rVert^2/\lVert\mathrm{ric}(R)\rVert^2$ on $\{\mathrm{scal}>0\}$, $\Omega_0=\{\mathrm{scal}>0\}\cap F^{-1}((-\infty,\tfrac4{n-2}])$, equivalently $\{\tfrac{n-2}n\lVert R_W\rVert^2\le\lVert R_I\rVert^2,\ \operatorname{tr}R>0\}$; the criterion at $R$ is $\langle R,\Phi(R)\rangle\le F(R)\,\langle\mathrm{ric}(R),\mathrm{ric}(\Phi(R))\rangle$.
+- $F(R)=\lVert R\rVert^2/\lVert\mathrm{ric}(R)\rVert^2$ on $\{\mathrm{scal}>0\}$, $\Omega_0=\{\mathrm{scal}>0\}\cap F^{-1}((-\infty,\tfrac4{n-2}])$, equivalently $\{\tfrac{n-2}n\lVert R_W\rVert^2\le\lVert R_I\rVert^2,\ \mathop{\mathrm{tr}}R>0\}$; the criterion at $R$ is $\langle R,\Phi(R)\rangle\le F(R)\,\langle\mathrm{ric}(R),\mathrm{ric}(\Phi(R))\rangle$.
 - **Filed sources, readable at source**: [references/xu-2024-ricci-flow-invariant-conditions/](../references/xu-2024-ricci-flow-invariant-conditions/) (Proposition 2.7, Lemma 2.6 eq. (2.31), Lemma 2.8 eq. (2.34), items (3) and (5)), [references/boehm-wilking-2008-space-forms/](../references/boehm-wilking-2008-space-forms/) (Lemma 2.1, Lemma 2.2, eqs. (5), (6)), [references/huisken-1985-ricci-deformation/](../references/huisken-1985-ricci-deformation/), and [references/beitz-2018-bianchi-convexity/](../references/beitz-2018-bianchi-convexity/).
 
 ## What to attack, beyond the standing list

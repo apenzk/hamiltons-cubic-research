@@ -46,7 +46,7 @@
 | # | hypothesis | status at the object |
 |---|---|---|
 | H5 | $\ker W^*=0$ | **holds**, and here it is a computed fact rather than a debt, step 1 proves it (§2). It is the hypothesis of step 2's analyticity, and step 2 does not name it |
-| H6 | $\lambda_+>\lvert\lambda_-\rvert$, so that $g_n=\lvert\lambda_-\rvert$ **is** $\operatorname{dist}(\operatorname{spec},0)$ | **holds at every $m\ge2$**: $\lambda_+/\lvert\lambda_-\rvert=m/(m-1)$ (§2). Never remarked on |
+| H6 | $\lambda_+>\lvert\lambda_-\rvert$, so that $g_n=\lvert\lambda_-\rvert$ **is** $\mathop{\mathrm{dist}}(\mathop{\mathrm{spec}},0)$ | **holds at every $m\ge2$**: $\lambda_+/\lvert\lambda_-\rvert=m/(m-1)$ (§2). Never remarked on |
 | H7 | $H\perp W^*$ and $H\perp T_{W^*}\mathcal O$ | **absent, and its absence is fatal to the displayed formula**, see §5, where the unrestricted infimum is $0$ |
 | H8 | a dimension floor | **no range whatever is stated.** Step 1 is honest at $m\ge2$; the closing box imports L146, which needs $m\ge3$ and whose margin-summand clause needs $m\ge5$; the surrounding programme needs $n\ge12$ (§8) |
 | H9 | the record's $W_-$ sign and $\mathrm{Alt}$ normalisation | **holds**, checked at [findings/conventions.md](../findings/conventions.md):95, and the entry's $W^*_-$ formula is right in that convention, sign included (§3.3) |
@@ -81,7 +81,7 @@ $$\lvert\lambda_-\rvert=\frac{m-1}{2m-1}\cdot\frac{\sqrt{2m-1}}{m\sqrt{m-1}}=\fr
 
 Against the entry's closed form at $n=2m$: $\ \tfrac2n\sqrt{\tfrac{n-2}{2(n-1)}}=\tfrac1m\sqrt{\tfrac{2m-2}{2(2m-1)}}=\tfrac{\sqrt{m-1}}{m\sqrt{2m-1}}$. **Exact match.** At $n=12$ both read $\sqrt{55}/66$.
 
-**No kernel, and $g_n$ is the distance to $0$.** Both eigenvalues are non-zero at every $m\ge2$, and $\lambda_+/\lvert\lambda_-\rvert=\tfrac m{2m-1}\cdot\tfrac{2m-1}{m-1}=\tfrac m{m-1}>1$, so $\operatorname{dist}(\operatorname{spec}W^*,0)=\lvert\lambda_-\rvert=g_n$. **C2 CONFIRMED**, including the "no kernel" clause, at every $m\ge2$.
+**No kernel, and $g_n$ is the distance to $0$.** Both eigenvalues are non-zero at every $m\ge2$, and $\lambda_+/\lvert\lambda_-\rvert=\tfrac m{2m-1}\cdot\tfrac{2m-1}{m-1}=\tfrac m{m-1}>1$, so $\mathop{\mathrm{dist}}(\mathop{\mathrm{spec}}W^*,0)=\lvert\lambda_-\rvert=g_n$. **C2 CONFIRMED**, including the "no kernel" clause, at every $m\ge2$.
 
 **The order.** $g_n=\tfrac{\sqrt{m-1}}{m\sqrt{2m-1}}\sim\tfrac1{m\sqrt2}=\tfrac{\sqrt2}n$, so $g_n=\Theta(1/n)$. **CONFIRMED.**
 
@@ -115,7 +115,7 @@ $$W^*_-=\lvert\lambda_-\rvert\big(\mathrm{id}-P_{\Lambda^2V_1}-P_{\Lambda^2V_2}\
 
 ### 3.4 Where the norm is spent, and whether it is worth $n^2$
 
-$\lVert X\rVert_F\le\sqrt{\operatorname{rank}X}\,\lVert X\rVert_{op}$ with $\operatorname{rank}\le\binom n2$, and
+$\lVert X\rVert_F\le\sqrt{\mathop{\mathrm{rank}}X}\,\lVert X\rVert_{op}$ with $\mathop{\mathrm{rank}}\le\binom n2$, and
 
 $$\sqrt{\tbinom n2}\;g_n=\sqrt{\frac{n(n-1)}2}\cdot\frac2n\sqrt{\frac{n-2}{2(n-1)}}=\frac2n\cdot\frac{\sqrt{n(n-2)}}2=\sqrt{1-\frac2n}.$$
 
@@ -175,7 +175,7 @@ The taxonomy paragraph is the entry's best paragraph and its equalities are stil
 
 ## 7. The per-direction-to-neighbourhood box, confirmed, on a better ground
 
-The box claims the geodesic segments from the orbit **fill** the tube by invariance, so nothing is extended from rays and no normal-injectivity hypothesis is owed. **This is correct, and invariance is not what makes it correct.** The ambient $\mathcal W_n$ is a finite-dimensional inner-product space and $\mathcal O=SO(n)\cdot W^*$ is compact, so every $X$ with $\operatorname{dist}(X,\mathcal O)<r$ has a nearest point $p\in\mathcal O$, and $X-p$ is orthogonal to $T_p\mathcal O$ by first-order optimality. The "geodesics" are straight segments; the tube is filled by normal segments of length $<r$ with no hypothesis at all. Normal **injectivity** would be needed only for a foot point that is unique, and a lower bound on the radius does not need uniqueness. **C9 CONFIRMED.**
+The box claims the geodesic segments from the orbit **fill** the tube by invariance, so nothing is extended from rays and no normal-injectivity hypothesis is owed. **This is correct, and invariance is not what makes it correct.** The ambient $\mathcal W_n$ is a finite-dimensional inner-product space and $\mathcal O=SO(n)\cdot W^*$ is compact, so every $X$ with $\mathop{\mathrm{dist}}(X,\mathcal O)<r$ has a nearest point $p\in\mathcal O$, and $X-p$ is orthogonal to $T_p\mathcal O$ by first-order optimality. The "geodesics" are straight segments; the tube is filled by normal segments of length $<r$ with no hypothesis at all. Normal **injectivity** would be needed only for a foot point that is unique, and a lower bound on the radius does not need uniqueness. **C9 CONFIRMED.**
 
 *What invariance genuinely supplies* is that the per-direction estimate proved at $W^*$ transports to $gW^*$ in direction $gH$, so the infimum need be taken at one orbit point. That is also true and also unstated.
 

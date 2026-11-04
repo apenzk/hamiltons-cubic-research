@@ -4,11 +4,11 @@
 
 ## The owed statement
 
-**The seven-frame lemma.** $X_1,\dots,X_7$ orthonormal in $\mathfrak{so}(n)$ under $\langle X,Y\rangle=-\tfrac12\operatorname{tr}XY$; $T=\sum_{i\neq j}\lVert[X_i,X_j]\rVert^2$. Owed: $T\le54.06$ uniformly in $n$. Known frames reach $42$ (octonion $L_{e_i}/2$ at $d=8$, the $\mathfrak g_2$-complement at $d=7$, the pencil $u\wedge w_i$). It closes [L173](../findings/bounds-relaxations.md)'s ray at $\sqrt{3/2}$ and so finishes [I73](../plan.md)'s sub-step (c) via [L237](../findings/second-order.md).
+**The seven-frame lemma.** $X_1,\dots,X_7$ orthonormal in $\mathfrak{so}(n)$ under $\langle X,Y\rangle=-\tfrac12\mathop{\mathrm{tr}}XY$; $T=\sum_{i\neq j}\lVert[X_i,X_j]\rVert^2$. Owed: $T\le54.06$ uniformly in $n$. Known frames reach $42$ (octonion $L_{e_i}/2$ at $d=8$, the $\mathfrak g_2$-complement at $d=7$, the pencil $u\wedge w_i$). It closes [L173](../findings/bounds-relaxations.md)'s ray at $\sqrt{3/2}$ and so finishes [I73](../plan.md)'s sub-step (c) via [L237](../findings/second-order.md).
 
 ## What the record already holds
 
-- [L238](../findings/second-order.md): $T=\mathbb E[(\operatorname{tr}G)^2-\lVert G\rVert_F^2]-168$, $G$ the Gram of $X_iv$; $T\le(1-\tfrac1r)(196+2\operatorname{tr}P^2)-168$ with $r=\min(7,d-1)$, $P=\sum X_i^{\mathsf T}X_i$; isotropic $P$ gives $T\le42$. Exact identity $T=2(1-\tfrac1k)\operatorname{tr}P^2-2\sum\lVert M_{ij}\rVert_F^2$, equality iff pairwise anticommuting and $Q_i=P/k$.
+- [L238](../findings/second-order.md): $T=\mathbb E[(\mathop{\mathrm{tr}}G)^2-\lVert G\rVert_F^2]-168$, $G$ the Gram of $X_iv$; $T\le(1-\tfrac1r)(196+2\mathop{\mathrm{tr}}P^2)-168$ with $r=\min(7,d-1)$, $P=\sum X_i^{\mathsf T}X_i$; isotropic $P$ gives $T\le42$. Exact identity $T=2(1-\tfrac1k)\mathop{\mathrm{tr}}P^2-2\sum\lVert M_{ij}\rVert_F^2$, equality iff pairwise anticommuting and $Q_i=P/k$.
 - [L237](../findings/second-order.md): Ky Fan row caps; at the vertex every available bound returns exactly $56$, saturated by $Q_i=\tfrac13\Pi_W$ on a common six-space.
 - Screened dead ([ATTEMPTS](../ATTEMPTS.md) 2026-09-24): spin representation (min of vector and spin bounds reaches $56.6$ at $n=8$), a $\mathrm{Cl}_{0,8}$ operator ($147$ on the octonion frame).
 - The missing piece, as the record states it: continuity across a small leak off a common six-space $W$, i.e. a quantitative Hurwitz–Radon statement.

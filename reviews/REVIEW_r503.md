@@ -83,7 +83,7 @@ The block's sentence is *"Since the compact symmetric pairs are classified, the 
 
 **Where the file does argue toward it, it is a different argument, in a different section, under hypotheses L8 never states**: the Reviewers 30/31 paragraph, *"for a critical point **of the subalgebra family** at $n\ne8$"*, shows $[\mathfrak m,\mathfrak m]\subseteq\mathfrak h$ makes $\sigma=(+1,-1)$ an involution and Cartan then leaves $\mathfrak{so}(p)\oplus\mathfrak{so}(q)$ and $\mathfrak u(m)$. That is (i) restricted to the subalgebra family, (ii) restricted to $n\ne8$, (iii) not part of L8, and (iv) **still short of what L8 needs**, because it produces a pair but not the *equivariance* of $W$ for it, which is the second half of the correspondence and the half that carries the Schur step.
 
-**So [L69](../findings/graded-half.md)'s repair was necessary**, and its replacement, the invariant count $\dim\operatorname{End}^{\mathrm{sym}}_K(\Lambda^2)-\operatorname{rank}(\mathrm{Alt})-\operatorname{rank}(\mathrm{Ric})=1$, is the right shape, since it runs the implication in the direction L8 never did.
+**So [L69](../findings/graded-half.md)'s repair was necessary**, and its replacement, the invariant count $\dim\mathop{\mathrm{End}}^{\mathrm{sym}}_K(\Lambda^2)-\mathop{\mathrm{rank}}(\mathrm{Alt})-\mathop{\mathrm{rank}}(\mathrm{Ric})=1$, is the right shape, since it runs the implication in the direction L8 never did.
 
 ## 5. "Running it over the classical families settles it there", the two words carrying the weight
 

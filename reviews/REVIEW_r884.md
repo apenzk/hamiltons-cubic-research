@@ -2,7 +2,7 @@
 
 Cold brief, worked from the definitions and givens alone: I read no findings file, no plan, no route, and no other review. Everything below is derived from (G1)–(G4) as stated, plus one imported structural fact I flag explicitly (self-adjointness of $L_e$).
 
-I computed. Every value is exact rational arithmetic unless marked as a float rounding of an exact value. Three computations: the Claim 3 and Claim 4 arithmetic in `fractions.Fraction`, the comparison of the new bound against the standing $(n-1)/\sqrt{n+1}$, and an explicit five-dimensional model of the self-dual half of $\mathcal W_4$ in which I located two critical points in closed form and diagonalised $L_e$ at each. That model was validated against both trace identities of (G2) before any claim was read off it: $\operatorname{tr}L_X=1.5\cdot10^{-16}$ and $\operatorname{tr}(L_XL_Y)=5.689721082133507$ against $\tfrac{21}{4}\langle X,Y\rangle=5.689721082133508$ at a random pair. Nothing here is a numerics-established positive claim: the two critical points are exhibited in closed form and their spectra are rational, and the arithmetic of Claims 3 and 4 is exact with a polynomial certificate.
+I computed. Every value is exact rational arithmetic unless marked as a float rounding of an exact value. Three computations: the Claim 3 and Claim 4 arithmetic in `fractions.Fraction`, the comparison of the new bound against the standing $(n-1)/\sqrt{n+1}$, and an explicit five-dimensional model of the self-dual half of $\mathcal W_4$ in which I located two critical points in closed form and diagonalised $L_e$ at each. That model was validated against both trace identities of (G2) before any claim was read off it: $\mathop{\mathrm{tr}}L_X=1.5\cdot10^{-16}$ and $\mathop{\mathrm{tr}}(L_XL_Y)=5.689721082133507$ against $\tfrac{21}{4}\langle X,Y\rangle=5.689721082133508$ at a random pair. Nothing here is a numerics-established positive claim: the two critical points are exhibited in closed form and their spectra are rational, and the arithmetic of Claims 3 and 4 is exact with a polynomial certificate.
 
 Log: [agent_logs/review-r884-traceform.log](../agent_logs/review-r884-traceform.log).
 
@@ -32,7 +32,7 @@ Quoted from the brief.
 - "A **critical point** is $W$ with $\lVert W\rVert=1$ and $Q(W)=\theta W$ for a scalar $\theta$; then $\theta=P(W)$."
 - "$O(n)$ acts on $\mathcal W_n$ orthogonally. $d:=\dim\big(O(n)\cdot W\big)$, the dimension of the orbit of $W$."
 - "$L_x$ denotes the multiplication operator of the commutative nonassociative algebra on $\mathcal W_n$ whose cubic form is $P$; for $\theta\ne0$ set $e:=W/\theta$, which is an idempotent of that algebra."
-- (G2): "$\operatorname{tr}L_x=0$, and $\operatorname{tr}(L_xL_y)=\kappa(n)\langle x,y\rangle$ with $\kappa(n)=\frac{(2n-1)(n-1)}{4}$ … Consequently at an idempotent $e=W/\theta$, where $\lvert e\rvert^2=1/\theta^2$, one has $\operatorname{tr}(L_e^2)=\kappa(n)/\theta^2$."
+- (G2): "$\mathop{\mathrm{tr}}L_x=0$, and $\mathop{\mathrm{tr}}(L_xL_y)=\kappa(n)\langle x,y\rangle$ with $\kappa(n)=\frac{(2n-1)(n-1)}{4}$ … Consequently at an idempotent $e=W/\theta$, where $\lvert e\rvert^2=1/\theta^2$, one has $\mathop{\mathrm{tr}}(L_e^2)=\kappa(n)/\theta^2$."
 - (G3): "$L_ee=e$ … and the tangent space to the $O(n)$-orbit of $W$ lies in the $\tfrac12$-eigenspace of $L_e$. … The orbit tangent is never zero, since $\mathcal W_n$ carries no $O(n)$-invariant vector."
 - $k:=D-1-d$ and $f(d,k):=1+\frac d4+\frac{(2+d)^2}{4k}$.
 
@@ -45,14 +45,14 @@ Every hypothesis carried by the claims and by what they import, each checked aga
 | $\lVert W\rVert=1$ and $Q(W)=\theta W$ | all claims | holds by definition of critical point | yes, via $\lvert e\rvert^2=1/\theta^2$ |
 | $\theta\ne0$ | Claims 1, 5 | needed to define $e=W/\theta$ at all | yes, essentially |
 | $\theta>0$ | Claim 1 as written | strictly stronger than needed | **no**: see §4 |
-| $L_e$ self-adjoint, hence real spectrum and $\operatorname{tr}(L_e^2)=\sum\lambda_i^2$ | imported, unstated in the brief | holds, because $\langle x\circ y,z\rangle$ is the full polarisation of the cubic $P$ and is therefore totally symmetric, and verified numerically in the $n=4$ model ($L_X$ symmetric) | **yes, load-bearing**: Cauchy–Schwarz over $\mathbb R$ fails for a complex-conjugate pair, where $\sum\lambda_i^2$ can even be negative |
-| $\operatorname{tr}L_e=0$ | (G2) | given | yes, supplies the first moment |
-| $\operatorname{tr}(L_e^2)=\kappa(n)/\theta^2$ | (G2) | given, and independently reproduced at $n=4$, where $\operatorname{tr}(L_e^2)=7/2$ against $\kappa(4)/\theta^2=(21/4)/(3/2)=7/2$ at the $\theta=\sqrt{3/2}$ point and $7$ against $7$ at the $\theta=\sqrt3/2$ point | yes, supplies the second moment |
+| $L_e$ self-adjoint, hence real spectrum and $\mathop{\mathrm{tr}}(L_e^2)=\sum\lambda_i^2$ | imported, unstated in the brief | holds, because $\langle x\circ y,z\rangle$ is the full polarisation of the cubic $P$ and is therefore totally symmetric, and verified numerically in the $n=4$ model ($L_X$ symmetric) | **yes, load-bearing**: Cauchy–Schwarz over $\mathbb R$ fails for a complex-conjugate pair, where $\sum\lambda_i^2$ can even be negative |
+| $\mathop{\mathrm{tr}}L_e=0$ | (G2) | given | yes, supplies the first moment |
+| $\mathop{\mathrm{tr}}(L_e^2)=\kappa(n)/\theta^2$ | (G2) | given, and independently reproduced at $n=4$, where $\mathop{\mathrm{tr}}(L_e^2)=7/2$ against $\kappa(4)/\theta^2=(21/4)/(3/2)=7/2$ at the $\theta=\sqrt{3/2}$ point and $7$ against $7$ at the $\theta=\sqrt3/2$ point | yes, supplies the second moment |
 | $1$ is an eigenvalue of $L_e$ | (G3), $L_ee=e$ | holds, $e\ne0$ | yes |
 | multiplicity of $1$ is **exactly** $1$ | Claim 1 | **fails** at an exhibited critical point (§3) | no: only "at least $1$" is used |
 | $\tfrac12$-eigenspace has dimension **exactly** $d$ | Claim 1 | holds exactly at both $n=4$ critical points I found, but (G3) gives only the inclusion, so equality is an extra assumption in general | no: only "at least $d$" is used |
 | $d\ge1$ | (G3), orbit tangent nonzero | holds | not by the inequality, though it matters for §9 |
-| $k=D-1-d\ge1$ | implicit in $f$, which divides by $k$ | **forced**, not assumed: $k=0$ would give $\operatorname{tr}L_e=1+\tfrac d2>0$, contradicting (G2) | yes |
+| $k=D-1-d\ge1$ | implicit in $f$, which divides by $k$ | **forced**, not assumed: $k=0$ would give $\mathop{\mathrm{tr}}L_e=1+\tfrac d2>0$, contradicting (G2) | yes |
 | $0\le d\le n(n-1)/2$ | Claim 4 | holds, and is a hard cap since $d\le\dim O(n)$. At $n=4$ the true ceiling for *critical* points is $4$, not $6$ (§7) | yes, as the range quantified over |
 | $\kappa(n)>0$ | (G2) | $(2n-1)(n-1)/4>0$ for $n\ge4$ | yes, to divide by $f$ preserving the sense |
 | the Frobenius normalisation, rather than the metric four times it | (G2)'s parenthesis | matters: the two differ by a factor $4$ in $\kappa$ and would move Claims 3 and 4 wholesale | yes, and my $n=4$ model reproduces $\kappa(4)=21/4$, so the convention used here is the stated one |
@@ -62,7 +62,7 @@ Every hypothesis carried by the claims and by what they import, each checked aga
 
 Yes. Let the spectrum of $L_e$ be $1$ once, $\tfrac12$ with multiplicity $d$, and $\mu_1,\dots,\mu_k$ with $k=D-1-d$. The two identities of (G2) at $e$ read
 
-$$\operatorname{tr}L_e=1+\frac d2+\sum_{i=1}^k\mu_i=0,\qquad \operatorname{tr}(L_e^2)=1+\frac d4+\sum_{i=1}^k\mu_i^2=\frac{\kappa(n)}{\theta^2}.$$
+$$\mathop{\mathrm{tr}}L_e=1+\frac d2+\sum_{i=1}^k\mu_i=0,\qquad \mathop{\mathrm{tr}}(L_e^2)=1+\frac d4+\sum_{i=1}^k\mu_i^2=\frac{\kappa(n)}{\theta^2}.$$
 
 The first fixes the first moment of the unknown block, $\sum_i\mu_i=-\frac{2+d}{2}$. Cauchy–Schwarz against the all-ones vector, $\big(\sum_i\mu_i\big)^2\le k\sum_i\mu_i^2$, then gives
 
@@ -70,7 +70,7 @@ $$\sum_{i=1}^k\mu_i^2\ \ge\ \frac{1}{k}\Big(\frac{2+d}{2}\Big)^2=\frac{(2+d)^2}{
 
 so $\dfrac{\kappa(n)}{\theta^2}\ \ge\ 1+\dfrac d4+\dfrac{(2+d)^2}{4k}=f(d,k)$, and since $f(d,k)\ge1>0$ and $\kappa(n)>0$, inverting gives $\theta^2\le\kappa(n)/f(d,k)$.
 
-**Which inequality does the work, and in which direction.** Cauchy–Schwarz, used as a *lower* bound on $\sum\mu_i^2$ from a *fixed* $\sum\mu_i$. The direction is right: a lower bound on $\operatorname{tr}(L_e^2)=\kappa/\theta^2$ is an upper bound on $\theta^2$. The one place a sign could have been fumbled is the inversion, and it is correct because both sides are positive.
+**Which inequality does the work, and in which direction.** Cauchy–Schwarz, used as a *lower* bound on $\sum\mu_i^2$ from a *fixed* $\sum\mu_i$. The direction is right: a lower bound on $\mathop{\mathrm{tr}}(L_e^2)=\kappa/\theta^2$ is an upper bound on $\theta^2$. The one place a sign could have been fumbled is the inversion, and it is correct because both sides are positive.
 
 **Equality.** The step is an equality exactly when all $\mu_i$ are equal, that is $\mu_i=-\frac{2+d}{2k}$ for every $i$. At $n=12$, $d=66$ that means $1571$ eigenvalues all equal to $-34/1571$, alongside $1$ and $\tfrac12^{(66)}$. Combined with the Peirce-type structure an idempotent forces on a multiplication operator, that is a very rigid spectrum, so equality should be expected to be unattained and the bound to be lossy. §5 measures the loss at a real critical point: a factor $3.5$ in the Cauchy–Schwarz step at $n=4$ and a factor $160$ at $n=12$.
 
@@ -94,7 +94,7 @@ $$\theta^2\ \le\ \frac{\kappa(n)}{f_p(d,p)},\qquad f_p(d,p):=p+\frac d4+\frac{(2
 
 and $f_p$ is increasing in $p$, so again the stated bound **still holds** and is not the sharpest available. Claim 1's conclusion is therefore a statement about *every* critical point with $\theta\ne0$, not only about ones with a spectral coincidence. What is *not* about every critical point is Claim 1's stated hypothesis.
 
-**And Case B is real, not hypothetical.** In the five-dimensional model of the self-dual half of $\mathcal W_4$ (see §5 for its construction and validation), the element $W=(A,C)$ with $A=C=\operatorname{diag}(-1,-1,2)/\sqrt{12}$ satisfies $\lVert W\rVert=1$ and $Q(W)=\theta W$ with $\theta=\sqrt3/2=\theta_0(4)$ of (G4), and its orbit dimension is $d=4$ by rank computation. Its $L_e$ spectrum is exactly
+**And Case B is real, not hypothetical.** In the five-dimensional model of the self-dual half of $\mathcal W_4$ (see §5 for its construction and validation), the element $W=(A,C)$ with $A=C=\mathop{\mathrm{diag}}(-1,-1,2)/\sqrt{12}$ satisfies $\lVert W\rVert=1$ and $Q(W)=\theta W$ with $\theta=\sqrt3/2=\theta_0(4)$ of (G4), and its orbit dimension is $d=4$ by rank computation. Its $L_e$ spectrum is exactly
 
 $$\{\,1,1,\ \tfrac12,\tfrac12,\tfrac12,\tfrac12,\ -1,-1,-1,-1\,\},\qquad \textstyle\sum\lambda=0,\ \sum\lambda^2=7=\kappa(4)/\theta^2=(21/4)/(3/4).$$
 
@@ -110,26 +110,26 @@ There is a cleaner reason, worth recording. $Q$ is homogeneous of degree $2$, so
 
 $$e(-W)=\frac{-W}{-\theta}=e(W),\qquad L_{e(-W)}=L_{e(W)}.$$
 
-The idempotent, and therefore the entire spectrum, the orbit dimension and the bound, are invariant under the sign flip. A critical point with $\theta<0$ is the same idempotent seen twice. In the $n=4$ model this is visible directly: $A=\operatorname{diag}(1,1,-2)/\sqrt6$ gives $\theta=-\sqrt{3/2}$ with the identical $L_e$ spectrum $\{1,\tfrac12^{(2)},-1^{(2)},0^{(5)}\}$.
+The idempotent, and therefore the entire spectrum, the orbit dimension and the bound, are invariant under the sign flip. A critical point with $\theta<0$ is the same idempotent seen twice. In the $n=4$ model this is visible directly: $A=\mathop{\mathrm{diag}}(1,1,-2)/\sqrt6$ gives $\theta=-\sqrt{3/2}$ with the identical $L_e$ spectrum $\{1,\tfrac12^{(2)},-1^{(2)},0^{(5)}\}$.
 
 **At $\theta=0$.** Then $Q(W)=0$, $e$ is undefined, $L_e$ does not exist, and every claim above is silent by hypothesis. Read as a statement about $\theta^2$ it is trivially true, $0\le\kappa/f$, and carries no information. Claims 3, 4 and 5 are unaffected because they are arithmetic about the right-hand side. Two remarks:
 
-- at $n=4$ there are **no** critical points with $\theta=0$: in the model, $Q(W)=0$ forces $3A^2=\operatorname{tr}(A^2)I_3$ on each half, so $A^2=\lambda I$ with $\lambda\ge0$ and the three eigenvalues of $A$ all equal $\pm\sqrt\lambda$ while summing to zero, which forces $\lambda=0$ and $A=0$, and likewise $C=0$, contradicting $\lVert W\rVert=1$;
-- for general $n$ the useful substitute at $\theta=0$ is the same identity applied to $W$ itself rather than $e$: $\operatorname{tr}(L_W^2)=\kappa(n)$ with $\operatorname{tr}L_W=0$ and $L_WW=Q(W)=0$, so $0$ is an eigenvalue and $\sum\lambda_i^2=\kappa(n)$ over the remaining $D-1$. That constrains the spectrum without saying anything about $\theta$, which is already known.
+- at $n=4$ there are **no** critical points with $\theta=0$: in the model, $Q(W)=0$ forces $3A^2=\mathop{\mathrm{tr}}(A^2)I_3$ on each half, so $A^2=\lambda I$ with $\lambda\ge0$ and the three eigenvalues of $A$ all equal $\pm\sqrt\lambda$ while summing to zero, which forces $\lambda=0$ and $A=0$, and likewise $C=0$, contradicting $\lVert W\rVert=1$;
+- for general $n$ the useful substitute at $\theta=0$ is the same identity applied to $W$ itself rather than $e$: $\mathop{\mathrm{tr}}(L_W^2)=\kappa(n)$ with $\mathop{\mathrm{tr}}L_W=0$ and $L_WW=Q(W)=0$, so $0$ is an eigenvalue and $\sum\lambda_i^2=\kappa(n)$ over the remaining $D-1$. That constrains the spectrum without saying anything about $\theta$, which is already known.
 
 ## 5. $\ker W\ne0$ and the padded tensor: the orbit dimension is $d=4n-14$
 
 Nothing in the derivation of §2 refers to $\ker W$: the two trace identities of (G2) hold at every element, the inclusion of (G3) holds at every critical point with $\theta\ne0$, and $f$ sees only $d$ and $D$. So a kernel changes nothing structurally. It changes the *numbers*, through $d$, and that is worth computing rather than assuming.
 
-**Construction and validation of the $n=4$ model.** Ricci-flatness kills the mixed block of the curvature operator on $\Lambda^2(\mathbb R^4)=\Lambda^2_+\oplus\Lambda^2_-$, so $\mathcal W_4=S^2_0(\Lambda^2_+)\oplus S^2_0(\Lambda^2_-)$, of dimension $5+5=10=D$ as (G1) requires. Writing $W=(A,C)$ with $A,C$ symmetric trace-free $3\times3$ in orthonormal bases of $\Lambda^2_\pm$, the Frobenius normalisation gives $\lVert W\rVert^2=\operatorname{tr}(A^2)+\operatorname{tr}(C^2)$, and the product acts blockwise as
+**Construction and validation of the $n=4$ model.** Ricci-flatness kills the mixed block of the curvature operator on $\Lambda^2(\mathbb R^4)=\Lambda^2_+\oplus\Lambda^2_-$, so $\mathcal W_4=S^2_0(\Lambda^2_+)\oplus S^2_0(\Lambda^2_-)$, of dimension $5+5=10=D$ as (G1) requires. Writing $W=(A,C)$ with $A,C$ symmetric trace-free $3\times3$ in orthonormal bases of $\Lambda^2_\pm$, the Frobenius normalisation gives $\lVert W\rVert^2=\mathop{\mathrm{tr}}(A^2)+\mathop{\mathrm{tr}}(C^2)$, and the product acts blockwise as
 
-$$X\circ Y=\tfrac32(XY+YX)-\operatorname{tr}(XY)\,I_3,\qquad Q(X)=X\circ X=3X^2-\operatorname{tr}(X^2)I_3 .$$
+$$X\circ Y=\tfrac32(XY+YX)-\mathop{\mathrm{tr}}(XY)\,I_3,\qquad Q(X)=X\circ X=3X^2-\mathop{\mathrm{tr}}(X^2)I_3 .$$
 
-Before using it I checked it against (G2) on the five-dimensional half at a random pair: $L_X$ is symmetric, $\operatorname{tr}L_X=1.5\cdot10^{-16}$, and $\operatorname{tr}(L_XL_Y)=5.689721082133507$ against $\tfrac{21}{4}\operatorname{tr}(XY)=5.689721082133508$. Both trace identities hold with the stated $\kappa(4)=21/4$, in the stated normalisation. That is two independent nontrivial constants reproduced, and it also pins down that $L_W$ annihilates the opposite half (otherwise $\operatorname{tr}(L_W^2)$ would exceed $\kappa$).
+Before using it I checked it against (G2) on the five-dimensional half at a random pair: $L_X$ is symmetric, $\mathop{\mathrm{tr}}L_X=1.5\cdot10^{-16}$, and $\mathop{\mathrm{tr}}(L_XL_Y)=5.689721082133507$ against $\tfrac{21}{4}\mathop{\mathrm{tr}}(XY)=5.689721082133508$. Both trace identities hold with the stated $\kappa(4)=21/4$, in the stated normalisation. That is two independent nontrivial constants reproduced, and it also pins down that $L_W$ annihilates the opposite half (otherwise $\mathop{\mathrm{tr}}(L_W^2)$ would exceed $\kappa$).
 
-**The $\theta=\sqrt{3/2}$ point, in closed form.** Take $A=\operatorname{diag}(-1,-1,2)/\sqrt6$, $C=0$. Then $\operatorname{tr}(A^2)=1$, and
+**The $\theta=\sqrt{3/2}$ point, in closed form.** Take $A=\mathop{\mathrm{diag}}(-1,-1,2)/\sqrt6$, $C=0$. Then $\mathop{\mathrm{tr}}(A^2)=1$, and
 
-$$Q(A)=3A^2-I=\operatorname{diag}(-\tfrac12,-\tfrac12,1)=\sqrt{\tfrac32}\,A,$$
+$$Q(A)=3A^2-I=\mathop{\mathrm{diag}}(-\tfrac12,-\tfrac12,1)=\sqrt{\tfrac32}\,A,$$
 
 so this is a critical point with $\theta=P(W)=\sqrt{3/2}=1.224744871\ldots$, confirming the brief's given at $n=4$ rather than assuming it. Note $\sqrt{3/2}\ne\theta_0(4)=\sqrt3/2$: these are two different critical points, and (G4)'s $\theta_0$ family is the second one, found in §3.
 
@@ -192,7 +192,7 @@ For $n\ge7$: $5n^6-9n^5\ge(5\cdot7-9)n^5=26n^5\ge182n^4>103n^4$, so the first th
 
 From $d=4$ on, the bound is below $3/2$ and so **does** certify $\theta\le\sqrt{3/2}$ at $n=4$. This is not a contradiction with the existence of a $\theta=\sqrt{3/2}$ critical point, because that point has $d=2$ (§5), where the bound reads $2.5345$. It is instead a consistency test that the claims pass, and a sharp one: a critical point with $\theta^2=3/2$ forces $f(d,9-d)\le\kappa(4)/(3/2)=7/2$, hence $d\le3$, and the actual value is $d=2$.
 
-**Is $d\le n(n-1)/2$ the right constraint?** It is a hard *cap*, since $d\le\dim O(n)$, so Claim 4 cannot be defeated by a larger $d$. And a smaller true ceiling only helps, because $f$ increases in $d$: restricting the range shrinks $f_{\max}$ and raises $\min_d\kappa/f$, leaving Claim 4 true on a subrange. So the choice of ceiling is safe in the direction that matters. A smaller ceiling does exist at $n=4$, and the argument for it is short enough to be worth recording: the critical equation on each block is $3A^2-\operatorname{tr}(A^2)I=\theta A$, so every eigenvalue of $A$ is a root of the single quadratic $3t^2-\theta t-\operatorname{tr}(A^2)=0$, hence at most two distinct values occur among three eigenvalues and $A$ has a repeated eigenvalue. Each nonzero block therefore has stabiliser containing an $O(2)$, and $d\le6-1-1=4$ when both blocks are nonzero, $d\le2$ when one vanishes. Rank computation confirms $d\in\{2,4\}$ at the two critical points and $d=6$ only at non-critical points. So at $n=4$ the critical ceiling is $4$, not $6$, and the relevant entry of the table above is $105/76$ rather than $63/94$.
+**Is $d\le n(n-1)/2$ the right constraint?** It is a hard *cap*, since $d\le\dim O(n)$, so Claim 4 cannot be defeated by a larger $d$. And a smaller true ceiling only helps, because $f$ increases in $d$: restricting the range shrinks $f_{\max}$ and raises $\min_d\kappa/f$, leaving Claim 4 true on a subrange. So the choice of ceiling is safe in the direction that matters. A smaller ceiling does exist at $n=4$, and the argument for it is short enough to be worth recording: the critical equation on each block is $3A^2-\mathop{\mathrm{tr}}(A^2)I=\theta A$, so every eigenvalue of $A$ is a root of the single quadratic $3t^2-\theta t-\mathop{\mathrm{tr}}(A^2)=0$, hence at most two distinct values occur among three eigenvalues and $A$ has a repeated eigenvalue. Each nonzero block therefore has stabiliser containing an $O(2)$, and $d\le6-1-1=4$ when both blocks are nonzero, $d\le2$ when one vanishes. Rank computation confirms $d\in\{2,4\}$ at the two critical points and $d=6$ only at non-critical points. So at $n=4$ the critical ceiling is $4$, not $6$, and the relevant entry of the table above is $105/76$ rather than $63/94$.
 
 ## 8. Claim 5's reach
 
@@ -207,7 +207,7 @@ From below, and strictly: $\kappa<4f$ reduces to $0<\tfrac14n+\tfrac{27}4+(\text
 **Reading (ii), "no bound obtainable from (G2) and (G3) reaches it": REFUTED AS STATED.** Three reasons, in increasing order of force.
 
 1. The method itself is not intrinsically incapable: at $n=4$ it *does* certify $\theta\le\sqrt{3/2}$ whenever $d\ge4$ (§7). What defeats it for $n\ge5$ is a ratio, $\dim O(n)\sim n^2/2$ against $D\sim n^4/12$, not the shape of the argument.
-2. Claim 1 uses (G2) only at the single element $e$, and only its two lowest moments. (G2) is stated "at every element", which is strictly more information, for instance $\operatorname{tr}(L_xL_y)$ for $x,y$ in the orbit tangent or in the $\mu$-eigenspaces.
+2. Claim 1 uses (G2) only at the single element $e$, and only its two lowest moments. (G2) is stated "at every element", which is strictly more information, for instance $\mathop{\mathrm{tr}}(L_xL_y)$ for $x,y$ in the orbit tangent or in the $\mu$-eigenspaces.
 3. Claim 1 uses (G3) only through the *dimension* $d$, discarding the fact that the $\tfrac12$-eigenspace *contains the orbit tangent*, which is a specific subspace on which the algebra acts.
 
 **What the claims do support, in its sharpest correct form.** Reading (ii) is true for the narrow input actually used, and that is worth recording as the reason the route is closed rather than merely stalled. Given only $\sum\mu_i=-\frac{2+d}2$ and $k\ge2$, for every $S_2\ge\frac{(2+d)^2}{4k}$ there exist $k$ reals with $\sum\mu_i=-\frac{2+d}2$ and $\sum\mu_i^2=S_2$. So no inequality derived from those two moments plus the multiplicity data alone can beat $f(d,k)$: Claim 1 is *optimal* for its input, and improving it requires new input, not a cleverer inequality.
@@ -216,7 +216,7 @@ From below, and strictly: $\kappa<4f$ reduces to $0<\tfrac14n+\tfrac{27}4+(\text
 
 - the $\tfrac12$-eigenspace has dimension at least $\tfrac43n^2$, considerably more than the orbit tangent gives;
 - the eigenvalue $1$ has multiplicity $p\gtrsim n^2/3$, which enters $f_p$ linearly (§3);
-- a **third** trace identity, some $\operatorname{tr}(L_x^3)=c_1P(x)+c_2\ldots$, adding a third moment. With three moments the feasible set for the $\mu$ block shrinks genuinely, and the sharpness argument above no longer applies.
+- a **third** trace identity, some $\mathop{\mathrm{tr}}(L_x^3)=c_1P(x)+c_2\ldots$, adding a third moment. With three moments the feasible set for the $\mu$ block shrinks genuinely, and the sharpness argument above no longer applies.
 
 ## 9. Vacuity check
 
@@ -228,7 +228,7 @@ From below, and strictly: $\kappa<4f$ reduces to $0<\tfrac14n+\tfrac{27}4+(\text
 
 $$\lambda=1\ (\times1),\qquad \tfrac12\ (\times66),\qquad -\tfrac{34}{1571}\ (\times1571).$$
 
-Then $\sum\lambda=1+33-34=0$ and $\sum\lambda^2=1+\frac{66}4+1571\cdot\frac{34^2}{1571^2}=\frac{35}2+\frac{1156}{1571}=\frac{57297}{3142}$, which is $\kappa(12)/\theta^2$ for $\theta^2=397463/114594$. Both identities hold, so the system is consistent and the bound is exactly the equality case. Two remarks on what this does and does not show: it is a *formal* spectrum, and whether any $W\in\mathcal W_{12}$ realises it is untouched by this check, and $k\ge1$ is not an assumption but a consequence, since $k=0$ would force $\operatorname{tr}L_e=1+\frac d2>0$ against (G2).
+Then $\sum\lambda=1+33-34=0$ and $\sum\lambda^2=1+\frac{66}4+1571\cdot\frac{34^2}{1571^2}=\frac{35}2+\frac{1156}{1571}=\frac{57297}{3142}$, which is $\kappa(12)/\theta^2$ for $\theta^2=397463/114594$. Both identities hold, so the system is consistent and the bound is exactly the equality case. Two remarks on what this does and does not show: it is a *formal* spectrum, and whether any $W\in\mathcal W_{12}$ realises it is untouched by this check, and $k\ge1$ is not an assumption but a consequence, since $k=0$ would force $\mathop{\mathrm{tr}}L_e=1+\frac d2>0$ against (G2).
 
 ## 10. Is the bound worth anything, and what would break it
 
@@ -251,7 +251,7 @@ $$d\ \ge\ n-1\qquad\text{at every critical point},\ n\ge5,$$
 
 which is a factor of roughly $2$ short of $d^\ast\approx2n$, and at $d=n-1$ the new bound reads $(2n-1)(n-1)/(n+3)\sim2n$ against the standing $\sim n$: it **loses by a factor of about two**. The one critical-point family whose orbit dimension I computed independently, the padded tensor with $d=4n-14$ (§5), clears $2n$ for $n\ge7$ and fails it at $n=5,6$.
 
-**Hypothesis debt, named precisely.** For the new bound to be an unconditional improvement on (G4), the following must be proved: *at every critical point of $P$ on the unit sphere of $\mathcal W_n$, $n\ge5$, the stabiliser $\operatorname{Stab}_{O(n)}(W)$ has codimension $d\ge d^\ast(n)$ in $O(n)$*, with $d^\ast(n)$ the threshold tabulated above, $d^\ast\approx2n$. Anything weaker than that leaves the new bound conditional on the orbit dimension of the point it is applied to, and it must then be quoted with $d$ as a hypothesis rather than as a theorem about critical points.
+**Hypothesis debt, named precisely.** For the new bound to be an unconditional improvement on (G4), the following must be proved: *at every critical point of $P$ on the unit sphere of $\mathcal W_n$, $n\ge5$, the stabiliser $\mathop{\mathrm{Stab}}_{O(n)}(W)$ has codimension $d\ge d^\ast(n)$ in $O(n)$*, with $d^\ast(n)$ the threshold tabulated above, $d^\ast\approx2n$. Anything weaker than that leaves the new bound conditional on the orbit dimension of the point it is applied to, and it must then be quoted with $d$ as a hypothesis rather than as a theorem about critical points.
 
 **The object that would falsify Claim 1,** and what I did to look for it. It would be a critical point $W$, $\theta\ne0$, orbit dimension $d$, whose $L_e$ has $1$ as an eigenvalue and $\tfrac12$ with multiplicity at least $d$, yet $\theta^2>\kappa(n)/f(d,D-1-d)$. No such object can exist without falsifying a given: the derivation is two moment identities and one Cauchy–Schwarz, so such a $W$ would refute (G2), or (G3), or the self-adjointness of $L_e$. I looked in the three places where the derivation could have been leaky, and found nothing: at a point where the $\tfrac12$-eigenspace exceeds the orbit tangent (§3, Case A: bound holds, and is improvable), at a point where $1$ has higher multiplicity (§3, Case B: found one explicitly at $n=4$, bound holds and the refined version is *exact*), and at a point with a large kernel (§5, the padded tensor: bound holds with a factor $160$ to spare at $n=12$). I also tested the two obvious $n=4$ critical points, both in closed form, and both satisfy the bound.
 

@@ -20,11 +20,11 @@
 
 ## 1. The exchange claim, CONFIRMED, and $\beta$ is diagonal
 
-Let $A_0$ be trace-free symmetric on $\mathbb R^4$. Diagonalise it as $A_0=g\operatorname{diag}(a_1,\dots,a_4)g^{\mathsf T}$ with $g\in SO(4)$; a sign flip on one column makes $\det g=+1$ without disturbing the diagonalisation, so this costs nothing. Since $\delta_{gAg^{\mathsf T}}=\Lambda^2(g)\,\delta_A\,\Lambda^2(g)^{-1}$ and $\Lambda^2(g)$ preserves $\Lambda^\pm$ for $g\in SO(4)$, it is enough to check the diagonal case. With $\omega^\pm_1=e_{12}\pm e_{34}$, $\omega^\pm_2=e_{13}\mp e_{24}$, $\omega^\pm_3=e_{14}\pm e_{23}$ and $\delta_{A_0}e_{ij}=(a_i+a_j)e_{ij}$:
+Let $A_0$ be trace-free symmetric on $\mathbb R^4$. Diagonalise it as $A_0=g\mathop{\mathrm{diag}}(a_1,\dots,a_4)g^{\mathsf T}$ with $g\in SO(4)$; a sign flip on one column makes $\det g=+1$ without disturbing the diagonalisation, so this costs nothing. Since $\delta_{gAg^{\mathsf T}}=\Lambda^2(g)\,\delta_A\,\Lambda^2(g)^{-1}$ and $\Lambda^2(g)$ preserves $\Lambda^\pm$ for $g\in SO(4)$, it is enough to check the diagonal case. With $\omega^\pm_1=e_{12}\pm e_{34}$, $\omega^\pm_2=e_{13}\mp e_{24}$, $\omega^\pm_3=e_{14}\pm e_{23}$ and $\delta_{A_0}e_{ij}=(a_i+a_j)e_{ij}$:
 
 $$\delta_{A_0}\omega^+_1=(a_1+a_2)e_{12}+(a_3+a_4)e_{34}=(a_1+a_2)\,\omega^-_1,$$
 
-using $a_3+a_4=-(a_1+a_2)$, and identically $\delta_{A_0}\omega^+_2=(a_1+a_3)\omega^-_2$, $\delta_{A_0}\omega^+_3=(a_1+a_4)\omega^-_3$. So the map is not merely *into* the sum: in the paired bases $\beta$ is **diagonal**, $\beta=\operatorname{diag}(a_1+a_2,\,a_1+a_3,\,a_1+a_4)$.
+using $a_3+a_4=-(a_1+a_2)$, and identically $\delta_{A_0}\omega^+_2=(a_1+a_3)\omega^-_2$, $\delta_{A_0}\omega^+_3=(a_1+a_4)\omega^-_3$. So the map is not merely *into* the sum: in the paired bases $\beta$ is **diagonal**, $\beta=\mathop{\mathrm{diag}}(a_1+a_2,\,a_1+a_3,\,a_1+a_4)$.
 
 **Trace-freeness is exactly what does it**, and the block's trace split is therefore load-bearing rather than cosmetic: $\delta_{\mathrm{Id}}=2\,\mathrm{Id}_{\Lambda^2}$ is diagonal, so an $A$ with trace has a diagonal part in $\delta_A$ and the matrix is not off-diagonal.
 
@@ -34,9 +34,9 @@ using $a_3+a_4=-(a_1+a_2)$, and identically $\delta_{A_0}\omega^+_2=(a_1+a_3)\om
 
 ## 2. Sylvester, and the spectrum at $W_{\mathbb{CP}^2}$, CONFIRMED
 
-$\beta W^+-W^-\beta=0$ is a Sylvester equation with the two coefficient matrices real symmetric, so their spectra are real and disjointness over $\mathbb C$ is disjointness over $\mathbb R$; $\beta=0$ follows. At $W^-=0$ the condition collapses to $0\notin\operatorname{spec}(W^+)$, so invertibility of $W^+$ is exactly enough and Sylvester is not needed, $\beta W^+=0$ with $W^+$ invertible is one line.
+$\beta W^+-W^-\beta=0$ is a Sylvester equation with the two coefficient matrices real symmetric, so their spectra are real and disjointness over $\mathbb C$ is disjointness over $\mathbb R$; $\beta=0$ follows. At $W^-=0$ the condition collapses to $0\notin\mathop{\mathrm{spec}}(W^+)$, so invertibility of $W^+$ is exactly enough and Sylvester is not needed, $\beta W^+=0$ with $W^+$ invertible is one line.
 
-I built the Fubini–Study curvature operator from the tensor $R(X,Y,Z,T)=\langle X,T\rangle\langle Y,Z\rangle-\langle X,Z\rangle\langle Y,T\rangle+\langle JX,T\rangle\langle JY,Z\rangle-\langle JX,Z\rangle\langle JY,T\rangle-2\langle JX,Y\rangle\langle JZ,T\rangle$ (holomorphic sectional curvature $4$; it returns $K=1+3\langle JX,Y\rangle^2$, so the normalisation is pinned by the formula itself) and subtracted the Einstein shift $\operatorname{scal}/(n(n-1))=2(m+1)/(2m-1)$. The Weyl operator of $\mathbb{CP}^m$ on $\Lambda^2\mathbb R^{2m}$ then has exactly three eigenvalues,
+I built the Fubini–Study curvature operator from the tensor $R(X,Y,Z,T)=\langle X,T\rangle\langle Y,Z\rangle-\langle X,Z\rangle\langle Y,T\rangle+\langle JX,T\rangle\langle JY,Z\rangle-\langle JX,Z\rangle\langle JY,T\rangle-2\langle JX,Y\rangle\langle JZ,T\rangle$ (holomorphic sectional curvature $4$; it returns $K=1+3\langle JX,Y\rangle^2$, so the normalisation is pinned by the formula itself) and subtracted the Einstein shift $\mathop{\mathrm{scal}}/(n(n-1))=2(m+1)/(2m-1)$. The Weyl operator of $\mathbb{CP}^m$ on $\Lambda^2\mathbb R^{2m}$ then has exactly three eigenvalues,
 
 $$a=\frac{4(m^2-1)}{2m-1}\ \text{on}\ \mathbb R\omega,\qquad b=\frac{2m-4}{2m-1}\ \text{on}\ \mathfrak{su}(m),\qquad c=-\frac{2(m+1)}{2m-1}\ \text{on}\ \mathfrak m,$$
 
@@ -46,7 +46,7 @@ At $m=2$ this reads $(4,0,0,0,-2,-2)$, that is $2\times$ the record's $(2,-1,-1,
 
 Screened exactly: $\dim\ker(W-\lambda)$ at $\lambda=a,b,c$ returns $1,3,2$ at $m=2$ and $1,8,6$ at $m=3$, over $\mathbb Q$.
 
-**Falsifier.** A zero in $\operatorname{spec}(W^+)$ at $W_{\mathbb{CP}^2}$, or $W^-\ne0$. Both are excluded by the eigenvalue list, which is derived rather than measured.
+**Falsifier.** A zero in $\mathop{\mathrm{spec}}(W^+)$ at $W_{\mathbb{CP}^2}$, or $W^-\ne0$. Both are excluded by the eigenvalue list, which is derived rather than measured.
 
 ## 3. Part (a) is an equality, CONFIRMED, and it generalises off $n=4$
 
@@ -68,7 +68,7 @@ Write $\mathbb R^n=\mathbb R^m\oplus V$, $k=\dim V=n-m$, $\Lambda^2\mathbb R^n=U
 
 $$K(W_0):=\{c\in\mathbb R^m:\ W_0(c\wedge x)=0\ \ \forall x\in\mathbb R^m\},$$
 
-the three surviving conditions are $P\in\ker\Phi_{W_0}$, $\operatorname{im}C\subseteq K(W_0)$, and nothing at all on $B$. Hence
+the three surviving conditions are $P\in\ker\Phi_{W_0}$, $\mathop{\mathrm{im}}C\subseteq K(W_0)$, and nothing at all on $B$. Hence
 
 $$\boxed{\ \dim\ker\Phi_{W_0\oplus0}\;=\;\dim\ker\Phi_{W_0}\;+\;\binom{k+1}2\;+\;k\,\dim K(W_0).\ }$$
 
@@ -78,7 +78,7 @@ L163's display is this with $P$ cut down to $\mathbb R\,\mathrm{Id}_m$ and $C$ s
 
 **And $K(W_{\mathbb{CP}^m})=0$ at every $m\ge2$**, which is what makes the record's own rows tight. For $c\ne0$, $\langle c\wedge Jc,\omega\rangle=\lvert c\rvert^2\ne0$, so $c\wedge Jc\notin\omega^\perp$; since $a\ne0$, $\ker W_{\mathbb{CP}^m}\subseteq\omega^\perp$, so $W_{\mathbb{CP}^m}(c\wedge Jc)\ne0$. Screened exactly: $\dim K=0$ at $m=2$ and $m=3$.
 
-**Falsifier.** An $A\in\ker\Phi_{W_0\oplus0}$ outside the boxed description, or a padded example where the boxed count and a direct rank computation disagree. Direct exact rank computation of $\Phi_W$ on $\operatorname{Sym}^2\mathbb R^n$ returns $4$, $11$ and $4$ at the three catalogued paddings, matching the box in each.
+**Falsifier.** An $A\in\ker\Phi_{W_0\oplus0}$ outside the boxed description, or a padded example where the boxed count and a direct rank computation disagree. Direct exact rank computation of $\Phi_W$ on $\mathop{\mathrm{Sym}}^2\mathbb R^n$ returns $4$, $11$ and $4$ at the three catalogued paddings, matching the box in each.
 
 ## 5. *"Three rows the record held as measurements now follow from the formula"*, REFUTED
 
@@ -98,7 +98,7 @@ This is where the lemma's stated form fails its consumer.
 
 **L37's corollary cannot deliver it, by construction.** The corollary reads *"$\dim\ker\Phi_W<n$ certifies non-diagonality"*, and the whole point of the witness is that $11>8$. So at padded $W_{\mathbb{CP}^2}$ the corollary is silent, which [target.md](../findings/target.md) already records at the block on Reviewer 75's test: *"Implementing only the dimension corollary was not enough, that wrongly called padded $W_{\mathbb{CP}^2}$ diagonal"*. **L163 asserts *"while being non-diagonal"* and argues nothing, cites nothing, and a lower bound on the kernel is the wrong direction to argue it from**, a larger kernel makes diagonality easier, not harder.
 
-**The exact kernel supplies it immediately.** By §3 and §4, $\ker\Phi_{W_{\mathbb{CP}^2}\oplus0}=\{a\,\mathrm{Id}_4\oplus B:\ a\in\mathbb R,\ B\in\operatorname{Sym}(V)\}$ exactly. Every such $A$ has the eigenvalue $a$ at multiplicity at least $4$, so the sum $2a$ occurs $\binom42=6$ times among the $a_i+a_j$. **No element of the kernel has pairwise-distinct sums, so by L37's equivalence $W$ is diagonal in no orthonormal frame.** The same line gives it for padded $W_{\mathbb{CP}^m}$ at every $m\ge2$ and every $n\ge2m$, the multiplicity being $2m\ge4$.
+**The exact kernel supplies it immediately.** By §3 and §4, $\ker\Phi_{W_{\mathbb{CP}^2}\oplus0}=\{a\,\mathrm{Id}_4\oplus B:\ a\in\mathbb R,\ B\in\mathop{\mathrm{Sym}}(V)\}$ exactly. Every such $A$ has the eigenvalue $a$ at multiplicity at least $4$, so the sum $2a$ occurs $\binom42=6$ times among the $a_i+a_j$. **No element of the kernel has pairwise-distinct sums, so by L37's equivalence $W$ is diagonal in no orthonormal frame.** The same line gives it for padded $W_{\mathbb{CP}^m}$ at every $m\ge2$ and every $n\ge2m$, the multiplicity being $2m\ge4$.
 
 **A second, independent line.** $\mathbb R\omega$ is a *simple* eigenspace of $W_{\mathbb{CP}^m}$ (eigenvalue $a$, multiplicity $1$), padding does not change that, and $\omega\wedge\omega\ne0$, so that eigenspace contains no decomposable bivector. That is the Plücker obstruction of [diagonality.md](../findings/diagonality.md), which the record carries **as a measurement**, $\min\lVert\omega\wedge\omega\rVert=0.50$ at padded $W_{\mathbb{CP}^2}$, discharged exactly, for the whole family, in one sentence.
 

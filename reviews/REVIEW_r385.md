@@ -20,7 +20,7 @@
 
 ## 1. What I derived before opening the text
 
-**The trace bound, from scratch.** $\widetilde N$ is symmetric on $\mathbb R^I$, $\lvert I\rvert=d=n-2$, with $\widetilde N\mathbf1=0$. So $\mathbb R^I=\mathbb R\mathbf1\oplus\mathbf1^\perp$ is $\widetilde N$-invariant, $\dim\mathbf1^\perp=d-1=:D$, and both moments carry over unchanged: the eigenvalue on $\mathbb R\mathbf1$ is $0$, so $\operatorname{tr}(\widetilde N|_{\mathbf1^\perp})=\operatorname{tr}\widetilde N=-2M_{jk}=:t$ and $\lVert\widetilde N|_{\mathbf1^\perp}\rVert_F^2=\lVert\widetilde N\rVert_F^2=f$. List the $D$ eigenvalues on $\mathbf1^\perp$ with multiplicity, let $\lambda$ be a largest, and apply Cauchy–Schwarz to the remaining $D-1=d-2=:E$:
+**The trace bound, from scratch.** $\widetilde N$ is symmetric on $\mathbb R^I$, $\lvert I\rvert=d=n-2$, with $\widetilde N\mathbf1=0$. So $\mathbb R^I=\mathbb R\mathbf1\oplus\mathbf1^\perp$ is $\widetilde N$-invariant, $\dim\mathbf1^\perp=d-1=:D$, and both moments carry over unchanged: the eigenvalue on $\mathbb R\mathbf1$ is $0$, so $\mathop{\mathrm{tr}}(\widetilde N|_{\mathbf1^\perp})=\mathop{\mathrm{tr}}\widetilde N=-2M_{jk}=:t$ and $\lVert\widetilde N|_{\mathbf1^\perp}\rVert_F^2=\lVert\widetilde N\rVert_F^2=f$. List the $D$ eigenvalues on $\mathbf1^\perp$ with multiplicity, let $\lambda$ be a largest, and apply Cauchy–Schwarz to the remaining $D-1=d-2=:E$:
 
 $$(t-\lambda)^2=\Big(\sum_{i\ge2}\lambda_i\Big)^2\le E\sum_{i\ge2}\lambda_i^2=E(f-\lambda^2)\ \Longrightarrow\ (1+E)\lambda^2-2t\lambda+(t^2-Ef)\le0 ,$$
 
@@ -36,9 +36,9 @@ $$\lambda\ \le\ \frac{t+\sqrt{E\big[Df-t^2\big]}}{D}\ =\ \frac{-2M_{jk}+\sqrt{(d
 - **The radicand is automatically non-negative**, a point the text does not make and which a reader would otherwise have to check. Cauchy–Schwarz on all $D$ eigenvalues gives $t^2\le Df$, so $Df-t^2\ge0$ with no extra hypothesis. There is no hidden side condition here.
 - **Small $d$.** $E\ge1$ needs $d\ge3$. At $d=2$ ($D=1$, $E=0$) the formula returns $\lambda\le t$, which is *exact*, the single eigenvalue on $\mathbf1^\perp$ **is** the trace. At $d\le1$ the formula divides by $D=0$ and is undefined. The band forces $n\ge12$, so nothing here bites.
 
-> **The one defect: the bound is on $\mathbf1^\perp$, and the display is not.** What is proved is $\lambda_{\max}(\widetilde N|_{\mathbf1^\perp})\le L$. Since $0\in\operatorname{spec}\widetilde N$, the honest global statement is $\lambda_{\max}(\widetilde N)\le\max(0,L)$. It is harmless in every use, because $T>0$ makes $\lambda_{\max}(\widetilde N)\le T$ follow from $L\le T$ either way, but the display as written is literally false whenever $L<0$, and the fix is to write $\widetilde N|_{\mathbf1^\perp}$.
+> **The one defect: the bound is on $\mathbf1^\perp$, and the display is not.** What is proved is $\lambda_{\max}(\widetilde N|_{\mathbf1^\perp})\le L$. Since $0\in\mathop{\mathrm{spec}}\widetilde N$, the honest global statement is $\lambda_{\max}(\widetilde N)\le\max(0,L)$. It is harmless in every use, because $T>0$ makes $\lambda_{\max}(\widetilde N)\le T$ follow from $L\le T$ either way, but the display as written is literally false whenever $L<0$, and the fix is to write $\widetilde N|_{\mathbf1^\perp}$.
 
-**The twin identity, from criticality alone.** For $a\in I$, splitting $(M^2)_{aj}=\sum_{b\in I}M_{ab}M_{bj}+M_{aj}M_{jj}+M_{ak}M_{kj}$ and using hollowness gives $(Nu)_a=(M^2)_{aj}-M_{jk}v_a$. Off-diagonal criticality at $(a,j)$ gives $(M^2)_{aj}=\theta u_a-u_a^2$. At a twin pair $v=u$ and $\widetilde N=N+2\operatorname{diag}(u)$, so
+**The twin identity, from criticality alone.** For $a\in I$, splitting $(M^2)_{aj}=\sum_{b\in I}M_{ab}M_{bj}+M_{aj}M_{jj}+M_{ak}M_{kj}$ and using hollowness gives $(Nu)_a=(M^2)_{aj}-M_{jk}v_a$. Off-diagonal criticality at $(a,j)$ gives $(M^2)_{aj}=\theta u_a-u_a^2$. At a twin pair $v=u$ and $\widetilde N=N+2\mathop{\mathrm{diag}}(u)$, so
 
 $$(\widetilde Nu)_a=\theta u_a-u_a^2-M_{jk}u_a+2u_a^2=(\theta-M_{jk})u_a+u_a^2 .$$
 
@@ -160,7 +160,7 @@ $L$ **exceeds $T$ by $10.3\%$.** The bound certifies nothing there.
 
 **The clause itself still holds, and the equitable partition gives the truth exactly.** On $I$, split into the $5$-block and the $38$ survivors of the $40$-block, $\widetilde N$ has quotient $g\begin{psmallmatrix}38&-38\\-5&5\end{psmallmatrix}$ (determinant $0$, trace $43g$) plus $-12g$ on the $5$-block's zero-sum space and $\tfrac5{39}g$ on the $38$-block's, so
 
-$$\operatorname{spec}\widetilde N=\{43g,\ 0,\ (-12g)^{(4)},\ (\tfrac5{39}g)^{(37)}\},\qquad \lambda_{\max}=43g=1.23472485<T .$$
+$$\mathop{\mathrm{spec}}\widetilde N=\{43g,\ 0,\ (-12g)^{(4)},\ (\tfrac5{39}g)^{(37)}\},\qquad \lambda_{\max}=43g=1.23472485<T .$$
 
 *Consistency, both exact: the trace is $43g-48g+\tfrac{185}{39}g=-\tfrac{10}{39}g=-2M_{jk}$, and the sum of squares is $g^2(1849+576+\tfrac{925}{1521})=2-2M_{jk}^2=f$.* **So the bound overshoots the genuine slack $T-\lambda_{\max}=0.032396$ by a factor of $5.0$.**
 
@@ -188,9 +188,9 @@ At the pair $\{13,14\}$: $u=v=0$, so it is a **twin** pair, $o=0$, $M_{jk}=0$, $
 
 $$L=\frac{\sqrt{10\cdot11\cdot2}}{11}=\frac{\sqrt{220}}{11}=\mathbf{1.34840},\qquad T=\theta=\mathbf{1.23603}.$$
 
-**And $L$ is exactly $\lambda_{\max}$.** $\operatorname{spec}(M')=\{12g,\ 0,\ (-1.2g)^{(10)}\}$, so on $\mathbf1^\perp$ the ten non-maximal eigenvalues are *all equal* (the equality case of Cauchy–Schwarz) and $L=12g=\lambda_{\max}(\widetilde N|_{\mathbf1^\perp})$ **on the nose**.
+**And $L$ is exactly $\lambda_{\max}$.** $\mathop{\mathrm{spec}}(M')=\{12g,\ 0,\ (-1.2g)^{(10)}\}$, so on $\mathbf1^\perp$ the ten non-maximal eigenvalues are *all equal* (the equality case of Cauchy–Schwarz) and $L=12g=\lambda_{\max}(\widetilde N|_{\mathbf1^\perp})$ **on the nose**.
 
-> **This is not a loose bound. It is a tight bound on a false statement**, and it generalises: at any padded pair $\widetilde N=M'$, and $\lambda_{\max}(M')=\lambda_1\ge\theta=T$ by the gap $\operatorname{spec}(M)\cap(0,\theta)=\varnothing$ together with $\operatorname{tr}M'=0$, $M'\ne0$, **strictly whenever $\lambda_1>\theta$, which holds at every sphere product.** *So $\lambda_{\max}(\widetilde N)\le T$ is FALSE at every padded pair of every in-band point with $\lambda_1>\theta$.*
+> **This is not a loose bound. It is a tight bound on a false statement**, and it generalises: at any padded pair $\widetilde N=M'$, and $\lambda_{\max}(M')=\lambda_1\ge\theta=T$ by the gap $\mathop{\mathrm{spec}}(M)\cap(0,\theta)=\varnothing$ together with $\mathop{\mathrm{tr}}M'=0$, $M'\ne0$, **strictly whenever $\lambda_1>\theta$, which holds at every sphere product.** *So $\lambda_{\max}(\widetilde N)\le T$ is FALSE at every padded pair of every in-band point with $\lambda_1>\theta$.*
 
 ---
 
@@ -198,11 +198,11 @@ $$L=\frac{\sqrt{10\cdot11\cdot2}}{11}=\frac{\sqrt{220}}{11}=\mathbf{1.34840},\qq
 
 **[r383](REVIEW_r383.md) and the section's Gate-2 note (5) both flag the padded pair, and both flag it as a place where *the argument* degenerates**, "the orbit-free budget degenerates to $\theta^2\ge2$ and fails". **The correct statement is stronger and changes what a successor may attempt: at a padded pair the *target inequality itself* is false.** §6.2 exhibits it, and exhibits it at a point where the trace bound is exactly tight, so *no sharpening of any moment-based instrument can reach it.*
 
-**What survives, and it is the reason [I18](../plan.md) is not damaged.** [I18](../plan.md)'s pair clause is a **simplicity** statement, not a bound, [Lemma L128](../findings/second-order.md)(ii) excludes the *value* $\tfrac12$ rather than bounding the spectrum, and through [Lemma L122](../findings/second-order.md) that is "$T\notin\operatorname{spec}(\widetilde N|_{\mathbf1^\perp})$ off the orbit direction". At the padded pair of §6.2 the orbit direction is $o=0$ (the pair contributes none) and $T=\theta=11g$ is **not** in $\{12g,(-1.2g)^{(10)}\}$. **So the clause holds there while the bound fails.**
+**What survives, and it is the reason [I18](../plan.md) is not damaged.** [I18](../plan.md)'s pair clause is a **simplicity** statement, not a bound, [Lemma L128](../findings/second-order.md)(ii) excludes the *value* $\tfrac12$ rather than bounding the spectrum, and through [Lemma L122](../findings/second-order.md) that is "$T\notin\mathop{\mathrm{spec}}(\widetilde N|_{\mathbf1^\perp})$ off the orbit direction". At the padded pair of §6.2 the orbit direction is $o=0$ (the pair contributes none) and $T=\theta=11g$ is **not** in $\{12g,(-1.2g)^{(10)}\}$. **So the clause holds there while the bound fails.**
 
 > **The consequence, stated positively.** *The twin-case programme has been proving a sufficient condition that is strictly stronger than what [I18](../plan.md) needs, and that sufficient condition is false on a sub-case [I18](../plan.md) must cover.* Two ways forward, and they are the only two:
 >
-> 1. **Prove $T\notin\operatorname{spec}(\widetilde N|_{\mathbf1^\perp})$ directly**, abandoning $\lambda_{\max}\le T$. This is what the clause asks and it is what survives padding. It is a *separation* question, not an extremal one, and no moment argument bounds it, the padded pair has $T$ sitting strictly inside the spectrum's convex hull.
+> 1. **Prove $T\notin\mathop{\mathrm{spec}}(\widetilde N|_{\mathbf1^\perp})$ directly**, abandoning $\lambda_{\max}\le T$. This is what the clause asks and it is what survives padding. It is a *separation* question, not an extremal one, and no moment argument bounds it, the padded pair has $T$ sitting strictly inside the spectrum's convex hull.
 > 2. **Add the hypothesis that excludes padding**, no zero row of $M$, equivalently $s_i>0$ for all $i$, equivalently $\circ$-indecomposability ([support-dichotomy.md](../findings/support-dichotomy.md)), and then $\lambda_{\max}\le T$ is at least not known to be false. *This hypothesis is free at a maximiser and is exactly what a maximiser has that a critical point does not*, which is the same seam [r376](REVIEW_r376.md) identified when it split the clause into an unconditional half and a maximality-needing half.
 >
 > **Either way the current instrument's target statement needs restating before more effort goes into it**, and that is a cheaper correction now than after a third estimate is built on it.

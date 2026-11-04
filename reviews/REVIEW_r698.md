@@ -38,7 +38,7 @@ $$Q(W)=\theta W\quad\text{exactly, as an operator, with }\theta=\frac{2(p-1)(q-1
 
 and the same three lines applied to $|W|^\#+(W-\theta)|W|$ return **zero on every plane type**. So $X_{\mathrm{inv}}=0$ identically at every sphere product, $p,q\ge2$.
 
-**The validation that makes this citable.** At $n=12$, $p=q=6$ the closed form gives $\lVert W\rVert^2=1980/121$ and $\theta/\lVert W\rVert=1.236033$; at $p=3$, $q=9$ it gives $3.2/\sqrt{23760/3025}=1.141798$. Both are [ATTEMPTS.md](../ATTEMPTS.md)'s catalogued critical values to every printed digit, from a derivation that used none of the record's machinery. *It also pins the pairing: the match holds under plain $\operatorname{tr}_{\Lambda^2}$ with $\{e_i\wedge e_j\}_{i<j}$ orthonormal, and fails by $\sqrt2$ under an operator-level half-trace, [conventions.md](../findings/conventions.md)'s named trap, here confirmed on the record's own numbers.*
+**The validation that makes this citable.** At $n=12$, $p=q=6$ the closed form gives $\lVert W\rVert^2=1980/121$ and $\theta/\lVert W\rVert=1.236033$; at $p=3$, $q=9$ it gives $3.2/\sqrt{23760/3025}=1.141798$. Both are [ATTEMPTS.md](../ATTEMPTS.md)'s catalogued critical values to every printed digit, from a derivation that used none of the record's machinery. *It also pins the pairing: the match holds under plain $\mathop{\mathrm{tr}}_{\Lambda^2}$ with $\{e_i\wedge e_j\}_{i<j}$ orthonormal, and fails by $\sqrt2$ under an operator-level half-trace, [conventions.md](../findings/conventions.md)'s named trap, here confirmed on the record's own numbers.*
 
 The variant is then $2W_-(W_-+\theta)$, whose mixed-plane entries are $2\lvert c\rvert(\lvert c\rvert+\theta)>0$. Nonzero, as claimed.
 
@@ -63,7 +63,7 @@ $\mathrm{Ric}^*(h)$ is a multiple of the derivation $D_h(x\wedge y)=hx\wedge y+x
 
 ### The constant: REFUTED
 
-Let the pairings be $\langle h,g\rangle=\sigma\operatorname{tr}(hg)$ on $S^2\mathbb R^n$ and $\langle X,Y\rangle=\tau\operatorname{tr}_{\Lambda^2}(XY)$ on operators. With $\mathrm{Ric}(A)_{ik}=\sum_jA_{ijkj}$ as the brief defines it, and $A_{ij,ij}=A_{ji,ji}$,
+Let the pairings be $\langle h,g\rangle=\sigma\mathop{\mathrm{tr}}(hg)$ on $S^2\mathbb R^n$ and $\langle X,Y\rangle=\tau\mathop{\mathrm{tr}}_{\Lambda^2}(XY)$ on operators. With $\mathrm{Ric}(A)_{ik}=\sum_jA_{ijkj}$ as the brief defines it, and $A_{ij,ij}=A_{ji,ji}$,
 
 $$\langle\mathrm{Ric}(A),h\rangle=\sigma\sum_{i\ne j}\eta_i A_{ij,ij}=\sigma\sum_{i<j}(\eta_i+\eta_j)A_{ij,ij}\quad\Longrightarrow\quad \mathrm{Ric}^*(h)\ \text{has eigenvalue}\ \tfrac\sigma\tau(\eta_i+\eta_j).$$
 
@@ -109,7 +109,7 @@ The batch glosses Theorem B as *"$[H,W]=0$ says exactly that $W$ is diagonal in 
 
 ### What is true, and it is convention-proof
 
-$\langle\mathrm{Ric}(A)x,x\rangle=\sum_j\langle A(x\wedge e_j),x\wedge e_j\rangle$ holds with coefficient one when $x\wedge e_j$ is unit-normalised, which is [conventions.md](../findings/conventions.md)'s choice ($\lVert\varphi_{ab}\rVert^2=1$); under the plain-Frobenius bivector normalisation it carries a $\tfrac12$. **The sign is convention-free in either case**, so every implication in the ladder stands: $A\succeq0\Rightarrow\sec(A)\ge0\Rightarrow\mathrm{Ric}(A)\succeq0$, and $\mathrm{Ric}(X)\succeq0$ with $h\succeq0$ gives $J_5=\operatorname{tr}(\mathrm{Ric}(X)h)\ge0$.
+$\langle\mathrm{Ric}(A)x,x\rangle=\sum_j\langle A(x\wedge e_j),x\wedge e_j\rangle$ holds with coefficient one when $x\wedge e_j$ is unit-normalised, which is [conventions.md](../findings/conventions.md)'s choice ($\lVert\varphi_{ab}\rVert^2=1$); under the plain-Frobenius bivector normalisation it carries a $\tfrac12$. **The sign is convention-free in either case**, so every implication in the ladder stands: $A\succeq0\Rightarrow\sec(A)\ge0\Rightarrow\mathrm{Ric}(A)\succeq0$, and $\mathrm{Ric}(X)\succeq0$ with $h\succeq0$ gives $J_5=\mathop{\mathrm{tr}}(\mathrm{Ric}(X)h)\ge0$.
 
 ### The rung the record refutes, and the refutation is sound as far as it goes
 

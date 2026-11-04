@@ -12,7 +12,7 @@ Cold read of [Lemma L31](../findings/stratum-two-negative.md) from the definitio
 | 3 | The two-step Frobenius chain is tight, and all three equality conclusions follow | **CORRECT**, I derive each of the three separately |
 | 3a | The chain mixes $\lVert\cdot\rVert$, $\lVert\cdot\rVert_F$, $\lVert\cdot\rVert_{\rm op}$ with no conversion stated | **HARMLESS**, the inequality is homogeneous of degree one in the Frobenius-type norm, so the factor $\sqrt2$ cancels and both readings give the same equality |
 | 4 | "and symmetrically" delivers $\mathrm{im}\,X\subseteq\mathrm{im}\,Y$ | **CORRECT**, and it consumes $Y$'s rank-$4$ clause, which lives in the Statement's aside rather than in the proof |
-| 5 | The converse: $X^2=Y^2=-P_V/2$, $[X,Y]=2XY$, $\lVert[X,Y]\rVert^2=\operatorname{tr}(Y^{\mathsf T}Y)=2$ | **CORRECT** in the record's normalisation, every step, including $\operatorname{tr}(Y^{\mathsf T}Y)=2\lVert Y\rVert^2=2$ |
+| 5 | The converse: $X^2=Y^2=-P_V/2$, $[X,Y]=2XY$, $\lVert[X,Y]\rVert^2=\mathop{\mathrm{tr}}(Y^{\mathsf T}Y)=2$ | **CORRECT** in the record's normalisation, every step, including $\mathop{\mathrm{tr}}(Y^{\mathsf T}Y)=2\lVert Y\rVert^2=2$ |
 | 5a | The stated right-hand side implies orthonormality outright | **STRENGTHENING**, norm and orthogonality both fall out of the RHS |
 | 6 | The recorded correction, and its counterexample $s^2=(0.5,0.3,0.2)$ at rank $6$ | **CORRECT**, and the replacement genuinely avoids the flaw: that spectrum gives $(s_1+s_2)^2=0.8+2\sqrt{0.15}<1.6<2$ |
 | 7 | [results.md](../results.md)'s clause, L31 delivers "equality forces the support to have $r=4$" in three lines | **DELIVERED**, all four steps check |
@@ -27,11 +27,11 @@ Cold read of [Lemma L31](../findings/stratum-two-negative.md) from the definitio
 
 Quoted, not restated. From [conventions.md](../findings/conventions.md), the bullet that settles the normalisation:
 
-> **A skew matrix's norm**, in the form the stratum arguments use: $\langle X,X\rangle=\tfrac12\operatorname{tr}(X^{\mathsf T}X)$, singular values in pairs $s_1,s_1,s_2,s_2,\dots$ with $\sum_i s_i^2=1$. Equivalent to $\operatorname{tr}(v^2)=-2$ above.
+> **A skew matrix's norm**, in the form the stratum arguments use: $\langle X,X\rangle=\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}X)$, singular values in pairs $s_1,s_1,s_2,s_2,\dots$ with $\sum_i s_i^2=1$. Equivalent to $\mathop{\mathrm{tr}}(v^2)=-2$ above.
 
 and the bullet that fixes the identification of $\Lambda^2$ with $\mathfrak{so}(n)$:
 
-> **A bivector's norm**, and the record runs in the first of these: $\lVert\varphi_{ab}\rVert^2=1$ under the half-trace pairing of the bullet above, which is the one every result uses and which makes $\{\varphi_{ab}\}_{a<b}$ orthonormal; $\lVert\varphi_{ab}\rVert^2=2$ under **plain Frobenius**, $\operatorname{tr}(X^{\mathsf T}X)$, for $\varphi_{ab}=E_{ab}-E_{ba}$.
+> **A bivector's norm**, and the record runs in the first of these: $\lVert\varphi_{ab}\rVert^2=1$ under the half-trace pairing of the bullet above, which is the one every result uses and which makes $\{\varphi_{ab}\}_{a<b}$ orthonormal; $\lVert\varphi_{ab}\rVert^2=2$ under **plain Frobenius**, $\mathop{\mathrm{tr}}(X^{\mathsf T}X)$, for $\varphi_{ab}=E_{ab}-E_{ba}$.
 
 and, for what L31 is to the record:
 
@@ -39,11 +39,11 @@ and, for what L31 is to the record:
 
 **Three norms appear in the one proof and this section fixes all three before section 1.**
 
-- $\lVert\cdot\rVert$ on $\mathfrak{so}(n)$ is the half-trace of the first quoted bullet: $\lVert A\rVert^2=\tfrac12\operatorname{tr}(A^{\mathsf T}A)$. Every displayed constant in the Statement (the $2$, the $1/\sqrt2$), is in this norm.
-- $\lVert\cdot\rVert_F$ is plain Frobenius, $\lVert A\rVert_F^2=\operatorname{tr}(A^{\mathsf T}A)=2\lVert A\rVert^2$. It appears only inside the chain.
+- $\lVert\cdot\rVert$ on $\mathfrak{so}(n)$ is the half-trace of the first quoted bullet: $\lVert A\rVert^2=\tfrac12\mathop{\mathrm{tr}}(A^{\mathsf T}A)$. Every displayed constant in the Statement (the $2$, the $1/\sqrt2$), is in this norm.
+- $\lVert\cdot\rVert_F$ is plain Frobenius, $\lVert A\rVert_F^2=\mathop{\mathrm{tr}}(A^{\mathsf T}A)=2\lVert A\rVert^2$. It appears only inside the chain.
 - $\lVert\cdot\rVert_{\rm op}$ is the genuine operator norm, carrying no factor at all, so $\lVert X\rVert_{\rm op}=s_1$ under either of the other two.
 
-**The constant $2$ is entirely a creature of the half-trace convention.** Under plain Frobenius, $\lVert X\rVert_F=1$ would read $\sum_is_i^2=\tfrac12$ and the cap would be $1$. That the record means the half-trace one is pinned twice over: by the quoted bullet, and independently by [Lemma L29](../findings/stratum-two-negative.md), whose chain $\langle W,W^\#\rangle\le6\lambda_1ab$ is the pair cap $\le2$ substituted once, and which at the spectrum $(2,-1,-1)/\sqrt6$ returns $\operatorname{tr}W^3+\langle W,W^\#\rangle=6^{-1/2}+2\cdot6^{-1/2}=3/\sqrt6=\sqrt{3/2}$, the record's own attained value. Halving the cap would return $\sqrt{2/3}$ and break that anchor.
+**The constant $2$ is entirely a creature of the half-trace convention.** Under plain Frobenius, $\lVert X\rVert_F=1$ would read $\sum_is_i^2=\tfrac12$ and the cap would be $1$. That the record means the half-trace one is pinned twice over: by the quoted bullet, and independently by [Lemma L29](../findings/stratum-two-negative.md), whose chain $\langle W,W^\#\rangle\le6\lambda_1ab$ is the pair cap $\le2$ substituted once, and which at the spectrum $(2,-1,-1)/\sqrt6$ returns $\mathop{\mathrm{tr}}W^3+\langle W,W^\#\rangle=6^{-1/2}+2\cdot6^{-1/2}=3/\sqrt6=\sqrt{3/2}$, the record's own attained value. Halving the cap would return $\sqrt{2/3}$ and break that anchor.
 
 ## 1. The hypothesis inventory
 
@@ -53,7 +53,7 @@ and, for what L31 is to the record:
 | --- | --- | --- |
 | $X,Y\in\mathfrak{so}(n)$ | real skew $n\times n$ | yes, throughout, skewness gives $\mathrm{im}\,X=(\ker X)^\perp$ and $\mathrm{im}\,X^{\mathsf T}=\mathrm{im}\,X$, both load-bearing at step 3 |
 | $\lVert X\rVert=\lVert Y\rVert=1$ | half-trace, i.e. $\sum_is_i^2=1$ | yes, at the Cauchy–Schwarz step and at the chain's right-hand side |
-| $\langle X,Y\rangle=0$ (the other half of "orthonormal") | half-trace pairing $\tfrac12\operatorname{tr}(X^{\mathsf T}Y)$ | **no, never used**, see §5a |
+| $\langle X,Y\rangle=0$ (the other half of "orthonormal") | half-trace pairing $\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)$ | **no, never used**, see §5a |
 | $s_1,s_2$ | the two largest angles, ordering assumed and never stated | yes; the identity is false without the ordering |
 | "rank $4$ with all singular values $1/\sqrt2$" | rank $4$, and all **nonzero** singular values $1/\sqrt2$ |, (conclusion) |
 | $\mathrm{im}\,X=\mathrm{im}\,Y$ | equality of $4$-dimensional subspaces of $\mathbb R^n$ |, (conclusion) |
@@ -69,7 +69,7 @@ Two entries deserve their own line.
 
 **What has to be shown.** For $X\in\mathfrak{so}(n)$ with angles $s_1\ge s_2\ge\cdots\ge s_p\ge0$, $p=\lfloor n/2\rfloor$, that $\max_{\lVert Y\rVert=1}\lVert[X,Y]\rVert^2=(s_1+s_2)^2$.
 
-**Step (i), $X$ may be taken in a Cartan subalgebra.** Every $X\in\mathfrak{so}(n)$ has a block normal form under $SO(n)$-conjugation: $\lfloor n/2\rfloor$ blocks $\begin{pmatrix}0&-s_i\\ s_i&0\end{pmatrix}$, plus one zero row and column at odd $n$. The pairing $\tfrac12\operatorname{tr}(X^{\mathsf T}Y)=-\tfrac12\operatorname{tr}(XY)$ is $\mathrm{Ad}$-invariant, so both $\lVert\cdot\rVert$ and the bracket are carried along and the reduction is without loss. **The block never says this**; it is the one unstated step of the identity, and it is standard.
+**Step (i), $X$ may be taken in a Cartan subalgebra.** Every $X\in\mathfrak{so}(n)$ has a block normal form under $SO(n)$-conjugation: $\lfloor n/2\rfloor$ blocks $\begin{pmatrix}0&-s_i\\ s_i&0\end{pmatrix}$, plus one zero row and column at odd $n$. The pairing $\tfrac12\mathop{\mathrm{tr}}(X^{\mathsf T}Y)=-\tfrac12\mathop{\mathrm{tr}}(XY)$ is $\mathrm{Ad}$-invariant, so both $\lVert\cdot\rVert$ and the bracket are carried along and the reduction is without loss. **The block never says this**; it is the one unstated step of the identity, and it is standard.
 
 **Step (ii), $\mathrm{ad}_X$ is skew-adjoint, hence normal.** Ad-invariance of the pairing is $\langle[X,Y],Z\rangle+\langle Y,[X,Z]\rangle=0$. So $\mathrm{ad}_X$ is a real skew operator on $\mathfrak{so}(n)$ and $\max_{\lVert Y\rVert=1}\lVert[X,Y]\rVert=\lVert\mathrm{ad}_X\rVert_{\rm op}$ is the largest modulus in its spectrum, the maximum attained. **So the identity is exact and not merely an upper bound** (the brief's question) and the maximum is attained on the real two-dimensional root space of a maximising root, which is a genuine element of $\mathfrak{so}(n)$: **the maximiser is admissible.**
 
@@ -95,7 +95,7 @@ The block writes the two families together with no parity qualifier, so read lit
 
 ## 3. Cauchy–Schwarz, and the rank
 
-$(s_1+s_2)^2\le2(s_1^2+s_2^2)\le2\sum_{i}s_i^2=2$, the first step Cauchy–Schwarz on $(1,1)\cdot(s_1,s_2)$ and the second because the remaining $s_i^2$ are nonnegative. Equality in the first needs $s_1=s_2$; equality in the second needs $s_i=0$ for $i\ge3$. Together with $\sum_is_i^2=1$ this gives $s_1=s_2=1/\sqrt2$ and the rest zero. Each nonzero angle contributes a $2\times2$ block, so $\operatorname{rank}X=4$ with the four nonzero singular values all $1/\sqrt2$. **Correct**, and $\sum_is_i^2=1$ is exactly $\lVert X\rVert=1$ in this record's convention, per §0.
+$(s_1+s_2)^2\le2(s_1^2+s_2^2)\le2\sum_{i}s_i^2=2$, the first step Cauchy–Schwarz on $(1,1)\cdot(s_1,s_2)$ and the second because the remaining $s_i^2$ are nonnegative. Equality in the first needs $s_1=s_2$; equality in the second needs $s_i=0$ for $i\ge3$. Together with $\sum_is_i^2=1$ this gives $s_1=s_2=1/\sqrt2$ and the rest zero. Each nonzero angle contributes a $2\times2$ block, so $\mathop{\mathrm{rank}}X=4$ with the four nonzero singular values all $1/\sqrt2$. **Correct**, and $\sum_is_i^2=1$ is exactly $\lVert X\rVert=1$ in this record's convention, per §0.
 
 **This is where the low-rank trap is disposed of**, the brief's $\ker W\ne0$ item, here $X$ or $Y$ of low rank. Rank $2$ means $s_1=1$ and the rest zero, so $(s_1+s_2)^2=1<2$: no equality. Rank $2k$ with $k\ge3$ has some $s_i\ne0$ for $i\ge3$, so the second inequality is strict: no equality. **Rank $4$ is forced, and the generic-at-large-$n$ low-rank case is excluded rather than assumed away.**
 
@@ -131,7 +131,7 @@ The block moves from $\lVert\cdot\rVert$ to $\lVert\cdot\rVert_F$ without saying
 
 **The forward proof never uses $\langle X,Y\rangle=0$.** §2 uses skewness and the Cartan reduction; §3 uses $\lVert X\rVert=1$; §4 uses $\lVert X\rVert_{\rm op}$, $\lVert Y\rVert_F$ and skewness. Orthogonality appears nowhere.
 
-**And it is not merely unused, it is implied.** From $XY=-YX$, $\operatorname{tr}(XY)=\operatorname{tr}(-YX)=-\operatorname{tr}(XY)$, so $\operatorname{tr}(XY)=0$ and $\langle X,Y\rangle=-\tfrac12\operatorname{tr}(XY)=0$. Likewise rank $4$ with all nonzero singular values $1/\sqrt2$ gives $\lVert X\rVert^2=\sum_is_i^2=\tfrac12+\tfrac12=1$.
+**And it is not merely unused, it is implied.** From $XY=-YX$, $\mathop{\mathrm{tr}}(XY)=\mathop{\mathrm{tr}}(-YX)=-\mathop{\mathrm{tr}}(XY)$, so $\mathop{\mathrm{tr}}(XY)=0$ and $\langle X,Y\rangle=-\tfrac12\mathop{\mathrm{tr}}(XY)=0$. Likewise rank $4$ with all nonzero singular values $1/\sqrt2$ gives $\lVert X\rVert^2=\sum_is_i^2=\tfrac12+\tfrac12=1$.
 
 So **the right-hand side of the biconditional implies "orthonormal" outright**, and L31 is true under the weaker hypothesis $\lVert X\rVert=\lVert Y\rVert=1$. This is a strengthening rather than a fault, and it is free for the record's consumers, who all take $v_\alpha,v_\beta$ from an orthonormal eigenframe where orthogonality holds anyway.
 
@@ -143,9 +143,9 @@ So **the right-hand side of the biconditional implies "orthonormal" outright**, 
 
 **The trace.** In the record's normalisation,
 
-$$\lVert[X,Y]\rVert^2=\tfrac12\operatorname{tr}\big((2XY)^{\mathsf T}(2XY)\big)=2\operatorname{tr}\big(Y^{\mathsf T}X^{\mathsf T}XY\big)=2\operatorname{tr}\big(Y^{\mathsf T}\tfrac12P_VY\big)=\operatorname{tr}\big(Y^{\mathsf T}P_VY\big)=\operatorname{tr}(Y^{\mathsf T}Y),$$
+$$\lVert[X,Y]\rVert^2=\tfrac12\mathop{\mathrm{tr}}\big((2XY)^{\mathsf T}(2XY)\big)=2\mathop{\mathrm{tr}}\big(Y^{\mathsf T}X^{\mathsf T}XY\big)=2\mathop{\mathrm{tr}}\big(Y^{\mathsf T}\tfrac12P_VY\big)=\mathop{\mathrm{tr}}\big(Y^{\mathsf T}P_VY\big)=\mathop{\mathrm{tr}}(Y^{\mathsf T}Y),$$
 
-the last step because $\mathrm{im}\,Y=V$ gives $P_VY=Y$. And $\operatorname{tr}(Y^{\mathsf T}Y)=2\lVert Y\rVert^2=2$. **So the block's display $\lVert[X,Y]\rVert^2=\operatorname{tr}(Y^{\mathsf T}Y)=2$ is correct, and correct only because the left side is half-trace and the right side full trace**, the two factors of $2$ that cancel are exactly the ones §0 fixes. Under plain Frobenius throughout, the chain would read $\lVert[X,Y]\rVert_F^2=2\operatorname{tr}(Y^{\mathsf T}Y)=4$, still consistent, but the *stated constant* $2$ requires the record's convention. **The brief's question (whether the trace evaluates to $2$ in the record's normalisation), is answered yes.**
+the last step because $\mathrm{im}\,Y=V$ gives $P_VY=Y$. And $\mathop{\mathrm{tr}}(Y^{\mathsf T}Y)=2\lVert Y\rVert^2=2$. **So the block's display $\lVert[X,Y]\rVert^2=\mathop{\mathrm{tr}}(Y^{\mathsf T}Y)=2$ is correct, and correct only because the left side is half-trace and the right side full trace**, the two factors of $2$ that cancel are exactly the ones §0 fixes. Under plain Frobenius throughout, the chain would read $\lVert[X,Y]\rVert_F^2=2\mathop{\mathrm{tr}}(Y^{\mathsf T}Y)=4$, still consistent, but the *stated constant* $2$ requires the record's convention. **The brief's question (whether the trace evaluates to $2$ in the record's normalisation), is answered yes.**
 
 ### 6a. The converse is not checked at one object, but a witness is owed and I supply it
 
@@ -177,7 +177,7 @@ using $0.15<0.16$. So the sharp identity excludes the very configuration that de
 
 ## 8. The clause L31 was reassigned, "equality forces the support to have $r=4$"
 
-The three lines are at [stratum-two-negative.md](../findings/stratum-two-negative.md) line 82: *equality forces $T_{1,N-1,N}=2$, hence $\lVert[v_{N-1},v_N]\rVert^2=2$, hence $\operatorname{im}v_2=\operatorname{im}v_3$ of dimension $4$, hence $r=4$ through Ricci-flatness.* **All four steps check.**
+The three lines are at [stratum-two-negative.md](../findings/stratum-two-negative.md) line 82: *equality forces $T_{1,N-1,N}=2$, hence $\lVert[v_{N-1},v_N]\rVert^2=2$, hence $\mathop{\mathrm{im}}v_2=\mathop{\mathrm{im}}v_3$ of dimension $4$, hence $r=4$ through Ricci-flatness.* **All four steps check.**
 
 1. **$T_{1,N-1,N}=2$.** [Lemma L29](../findings/stratum-two-negative.md)'s proof reduces $\langle W,W^\#\rangle$ to the single surviving block $3T_{1,N-1,N}\lambda_1ab$ and bounds it by $6\lambda_1ab$. Equality in $\theta=\sqrt{3/2}$ forces equality at every step, and $\lambda_1ab\ne0$ since exactly one positive and two negative eigenvalues means $\lambda_1,a,b>0$. So $T_{1,N-1,N}=2$.
 2. **$\lVert[v_{N-1},v_N]\rVert^2=2$.** $T$ is totally symmetric, [conventions.md](../findings/conventions.md): "*Structure constants $c_{abc}=\langle[v_a,v_b],v_c\rangle$ are **totally antisymmetric** … so $T_{abc}=c_{abc}^2$ is totally symmetric*", so the cap may be read off **any** of the three pairs, and the chain reads it off $(N-1,N)$: $2=T_{N-1,N,1}\le\sum_\gamma T_{N-1,N,\gamma}=\lVert[v_{N-1},v_N]\rVert^2\le2$. Both inequalities collapse. **The pair the cap is applied to is not the pair the block's $\lambda_1$-factor suggests, and total symmetry is what licenses the switch**, it is stated in [conventions.md](../findings/conventions.md) and correctly used.

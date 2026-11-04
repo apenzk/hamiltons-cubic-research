@@ -20,9 +20,9 @@
 
 Statement (2), quoted: *"(2) On a compact semisimple $\mathfrak h$ with two or more simple ideals, no positive-definite idempotent is stable."*
 
-Stability, from Statement (1), quoted: *"stable: $\langle C\#H,H\rangle\le\tfrac12\lVert H\rVert^2$ for every $H\perp C$."* In (1) $C$ lives in $\operatorname{Sym}^2\mathfrak{so}(n)$, so $H$ ranges over $\operatorname{Sym}^2\mathfrak{so}(n)$.
+Stability, from Statement (1), quoted: *"stable: $\langle C\#H,H\rangle\le\tfrac12\lVert H\rVert^2$ for every $H\perp C$."* In (1) $C$ lives in $\mathop{\mathrm{Sym}}^2\mathfrak{so}(n)$, so $H$ ranges over $\mathop{\mathrm{Sym}}^2\mathfrak{so}(n)$.
 
-Proof (2), quoted: *"(2) Write $C=D_1+D_2+E$ over $\mathfrak h=\mathfrak h_1\oplus\mathfrak h_2$ with $E$ the cross block. $\mathrm{ad}$ kills $\mathfrak h_1\wedge\mathfrak h_2$, so $(C\#C)_{\mathfrak h_i\mathfrak h_i}=D_i\#D_i$ and $C\#D_i=D_i$: each $D_i$ is an eigenvector of eigenvalue $1$, and $\operatorname{span}(D_1,D_2)$ meets $C^\perp$."*
+Proof (2), quoted: *"(2) Write $C=D_1+D_2+E$ over $\mathfrak h=\mathfrak h_1\oplus\mathfrak h_2$ with $E$ the cross block. $\mathrm{ad}$ kills $\mathfrak h_1\wedge\mathfrak h_2$, so $(C\#C)_{\mathfrak h_i\mathfrak h_i}=D_i\#D_i$ and $C\#D_i=D_i$: each $D_i$ is an eigenvector of eigenvalue $1$, and $\mathop{\mathrm{span}}(D_1,D_2)$ meets $C^\perp$."*
 
 ## Q1: the hypothesis set of L264_semisimple_unstable
 

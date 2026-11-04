@@ -18,7 +18,7 @@ Since $P(W)=\theta$ at a critical point and every maximizer is critical, **this 
 
 1. **The threshold is $n\ge16$, not $n\ge12$.** The sentence immediately following Theorem A: *"The conjecture is that this is also true for all even integers $n\ge12$ and all operators $W\in\langle W\rangle$."* So $n=12$ and $n=14$ are open **even in the diagonal case**, exactly the dimensions where the conjecture first bites.
 2. **Even $n$ only.** Odd $n$ is not addressed; the analogous $S^m\times S^{m+1}$ statement is left explicitly conjectural.
-3. **The proof is long.** Roughly 50 pages (§§3.1–3.6), by contradiction, via a scalar-curvature gap phenomenon, chained $\operatorname{tr}\mathrm{Ric}^3/\operatorname{tr}\mathrm{Ric}^4$ estimates, and a closing appeal to the classification of compact symmetric spaces.
+3. **The proof is long.** Roughly 50 pages (§§3.1–3.6), by contradiction, via a scalar-curvature gap phenomenon, chained $\mathop{\mathrm{tr}}\mathrm{Ric}^3/\mathop{\mathrm{tr}}\mathrm{Ric}^4$ estimates, and a closing appeal to the classification of compact symmetric spaces.
 
 ## The setup is this project's vertex matrix (L28 of FINDINGS)
 
@@ -31,7 +31,7 @@ A hollow symmetric matrix with vanishing row sums, independently rediscovered he
 **Two** dimension constraints carry Theorem A: the $n\ge15$ pair inside Lemma 3.5.6, and Assumption 1's $m\ge8$. *The "every constraint flows from one lemma" once written here is false.* The first needs a single quantity to be negative and bounds it through a chain of rational roundings. The accumulated slack costs four dimensions.
 
 - Evaluating his own expression exactly, at his own case endpoints, already reaches $n=14$.
-- $n=12$ needs one further observation: he bounds $\operatorname{tr}S^3$ and $\operatorname{tr}S^4$ separately, and the worst case puts one at its floor while the other sits at its ceiling, but they are moments of a single operator, and that corner does not exist. Replacing the box by the true moment body closes the gap.
+- $n=12$ needs one further observation: he bounds $\mathop{\mathrm{tr}}S^3$ and $\mathop{\mathrm{tr}}S^4$ separately, and the worst case puts one at its floor while the other sits at its ceiling, but they are moments of a single operator, and that corner does not exist. Replacing the box by the true moment body closes the gap.
 - A census of every dimension hypothesis in Chapter 3 finds Assumption 1's $m\ge8$ binding as well, *the line once here, that nothing else binds above $n=12$, states the opposite of what the census found.*
 
 **So $n\ge16$ is rounding slack rather than a real obstruction.** Both threshold dimensions are closed here with exact and validated interval arithmetic; the record is in [ATTEMPTS.md](../../ATTEMPTS.md).

@@ -35,7 +35,7 @@ Throughout, $m\ge2$ and $n=2m$; $W^*$ is the balanced product point $S^m\times S
 | Hypothesis | Where it applies | Status |
 |---|---|---|
 | $W^*=S^m\times S^m$, symmetric | the resolvent norm identity | holds; $W^*$ is a real symmetric curvature operator |
-| spectrum exactly $\{\lambda_-,\lambda_+\}$, $\lambda_-<0<\lambda_+$ | $\operatorname{dist}(\Gamma,\operatorname{spec})$ and the $d$-kink | holds, §2 |
+| spectrum exactly $\{\lambda_-,\lambda_+\}$, $\lambda_-<0<\lambda_+$ | $\mathop{\mathrm{dist}}(\Gamma,\mathop{\mathrm{spec}})$ and the $d$-kink | holds, §2 |
 | $\Gamma$ = circle of radius $\alpha g_n$ about $\lambda_-$ | contour length, $\max_\Gamma\lvert\zeta\rvert$ | definitional |
 | $\rho=\gamma g_n/\lVert H\rVert_{op}$ | the Neumann step and $J=C/\gamma$ | definitional; it is what makes the two $\gamma$'s one $\gamma$, §5 |
 | $D=\tfrac{2m-1}{m-1}=\lvert\lambda_+-\lambda_-\rvert/g_n$ | everything | holds, and is *derived* in §2 rather than assumed |
@@ -54,7 +54,7 @@ Throughout, $m\ge2$ and $n=2m$; $W^*$ is the balanced product point $S^m\times S
 |---|---|---|
 | $\max_\Gamma\lvert\zeta\rvert=(1+\alpha)g_n$ | [findings/second-order.md](../findings/second-order.md):1451 | correct, and it needs $\lvert\lambda_-\rvert=g_n$, which is the definition of the absolute gap at this point |
 | $W_-=-\tfrac1{2\pi i}\oint_\Gamma\zeta(W-\zeta)^{-1}d\zeta$ | [findings/second-order.md](../findings/second-order.md):1447 | correct for $\Gamma$ enclosing the negative spectrum only |
-| $\lVert(A-\zeta)^{-1}\rVert=1/\operatorname{dist}(\zeta,\operatorname{spec}A)$ | normality | applies to $W^*$; it does **not** apply to $W(z)$, which is complex symmetric and non-normal. The proof uses the identity only at $W^*$ and the Neumann bound at $W(z)$, which is the correct division |
+| $\lVert(A-\zeta)^{-1}\rVert=1/\mathop{\mathrm{dist}}(\zeta,\mathop{\mathrm{spec}}A)$ | normality | applies to $W^*$; it does **not** apply to $W(z)$, which is complex symmetric and non-normal. The proof uses the identity only at $W^*$ and the Neumann bound at $W(z)$, which is the correct division |
 | $g_n=\sqrt{2(n-2)}/(n\sqrt{n-1})$ | [findings/second-order.md](../findings/second-order.md):1108, 1227 | reproduced independently in §2 |
 | scope $n\ge12$, $m\ge5$ | L146, L149 | consistent with the corollary's exclusion of $m=2$ |
 
@@ -152,7 +152,7 @@ Both displayed values **PROVEN**. At $m=6$: $D=\tfrac{11}5$, $(\alpha^*,\gamma^*
 
 **Settled: there is exactly one $\gamma$, and the lemma's own hypothesis forces the identification.**
 
-$\gamma$ enters the lemma through one clause only, $\rho=\gamma g_n/\lVert H\rVert_{op}$. It reaches the resolvent through the perturbation size: on the disc, $\lVert W(z)-W^*\rVert\le\lVert H\rVert_{op}\rho=\gamma g_n$, which is precisely the quantity the Neumann step subtracts from $\operatorname{dist}(\Gamma,\operatorname{spec})=dg_n$ to give $(d-\gamma)g_n$. So the $\gamma$ in $d-\gamma$ *is* the $\gamma$ of $\rho$, by construction: the parametrisation exists to measure the disc in units that make the perturbation commensurate with the gap.
+$\gamma$ enters the lemma through one clause only, $\rho=\gamma g_n/\lVert H\rVert_{op}$. It reaches the resolvent through the perturbation size: on the disc, $\lVert W(z)-W^*\rVert\le\lVert H\rVert_{op}\rho=\gamma g_n$, which is precisely the quantity the Neumann step subtracts from $\mathop{\mathrm{dist}}(\Gamma,\mathop{\mathrm{spec}})=dg_n$ to give $(d-\gamma)g_n$. So the $\gamma$ in $d-\gamma$ *is* the $\gamma$ of $\rho$, by construction: the parametrisation exists to measure the disc in units that make the perturbation commensurate with the gap.
 
 It reaches $J$ through the same clause. With $M\le C\gamma g_n$,
 
@@ -166,7 +166,7 @@ and with the alternative $M\le C\rho$ one gets $2J\lVert H\rVert_{op}/((1-\sigma
 
 ### 6.1 The admissible range of $\alpha$
 
-The entry's ruling that $\alpha<1$ is not a constraint is **correct**. $\operatorname{spec}(W^*)=\{\lambda_-,\lambda_+\}$ contains no point at $0$; a contour of radius $\alpha g_n>g_n$ about $\lambda_-=-g_n$ encloses the origin, and the Riesz integrand $\zeta(W-\zeta)^{-1}$ is holomorphic at $\zeta=0$ (the singularities are the spectrum, and the explicit $\zeta$ vanishes there), so the integral is unchanged in value and meaning. What the contour must do is enclose $\lambda_-$ and exclude $\lambda_+$, giving $\alpha<D=1+\tfrac m{m-1}$, the record's own alternative at line 1455. So the range is $0<\alpha<D$, and it is never stated in the lemma. The optimum $\alpha^*=D/2$ sits strictly inside it, and exceeds $1$ for every $m$, since $\alpha^*=1+\tfrac1{2(m-1)}$.
+The entry's ruling that $\alpha<1$ is not a constraint is **correct**. $\mathop{\mathrm{spec}}(W^*)=\{\lambda_-,\lambda_+\}$ contains no point at $0$; a contour of radius $\alpha g_n>g_n$ about $\lambda_-=-g_n$ encloses the origin, and the Riesz integrand $\zeta(W-\zeta)^{-1}$ is holomorphic at $\zeta=0$ (the singularities are the spectrum, and the explicit $\zeta$ vanishes there), so the integral is unchanged in value and meaning. What the contour must do is enclose $\lambda_-$ and exclude $\lambda_+$, giving $\alpha<D=1+\tfrac m{m-1}$, the record's own alternative at line 1455. So the range is $0<\alpha<D$, and it is never stated in the lemma. The optimum $\alpha^*=D/2$ sits strictly inside it, and exceeds $1$ for every $m$, since $\alpha^*=1+\tfrac1{2(m-1)}$.
 
 ### 6.2 $\gamma<1$, and the smallest dimension
 
@@ -178,7 +178,7 @@ The smallest dimension at which anything is defined is $m=2$ ($n=4$), where $D=3
 
 **The lemma asserts nothing at any point with $\ker W\ne0$, and this is the correct answer rather than an omission.** Its hypothesis is the single point $W^*=S^m\times S^m$, whose spectrum $\{-g_n,\tfrac m{m-1}g_n\}$ has $\ker W^*=0$; the record already requires that at line 1227, where $\ker W^*=0$ is listed as a hypothesis the chain uses and is discharged by the same $g_n$.
 
-What is worth saying is how *badly* the statement degenerates at a kernel point, because it bears on any later attempt to transport the constant: at $\ker W\ne0$ the absolute gap $g_n=\operatorname{dist}(0,\operatorname{spec})$ is zero, so $\Gamma$ has radius $0$, $\rho=0$, $D$ is undefined, and $C$, $J$, $\alpha^*$, $\gamma^*$ have no values. The $W_{\mathbb{CP}^2}$ witness with $\dim\ker W=3$ sits at $n=4$, which is also the $m=2$ endpoint the corollary excludes; the two exclusions are independent, and neither rescues the other. **No finding against the lemma**; a note against any future use of $C^*$ off the balanced orbit.
+What is worth saying is how *badly* the statement degenerates at a kernel point, because it bears on any later attempt to transport the constant: at $\ker W\ne0$ the absolute gap $g_n=\mathop{\mathrm{dist}}(0,\mathop{\mathrm{spec}})$ is zero, so $\Gamma$ has radius $0$, $\rho=0$, $D$ is undefined, and $C$, $J$, $\alpha^*$, $\gamma^*$ have no values. The $W_{\mathbb{CP}^2}$ witness with $\dim\ker W=3$ sits at $n=4$, which is also the $m=2$ endpoint the corollary excludes; the two exclusions are independent, and neither rescues the other. **No finding against the lemma**; a note against any future use of $C^*$ off the balanced orbit.
 
 ## 7. "$J=23.85$", refuted
 

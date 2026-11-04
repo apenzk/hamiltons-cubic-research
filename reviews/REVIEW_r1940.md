@@ -21,12 +21,12 @@ The $D$ component of $W\circ W=\theta W$ is $a^2Q(\hat A)+b^2\pi_D(\nu\circ\nu)=
 
 ## 2. The support claim
 
-First, $\nu$ has zero diagonal entries in the $\varphi$ basis: the diagonal part of any Weyl tensor has row sums $\sum_jW_{ijij}=\mathrm{Ric}_{ii}=0$ and satisfies Bianchi trivially, so it lies in $D$. Hence $\pi_DW=\operatorname{diag}(W)$ and $\nu=\sum_{\alpha\ne\beta}c_{\alpha\beta}\varphi_\alpha\odot\varphi_\beta$, and $U=\bigcup\{\alpha\cup\beta:c_{\alpha\beta}\ne0\}$ is well defined.
+First, $\nu$ has zero diagonal entries in the $\varphi$ basis: the diagonal part of any Weyl tensor has row sums $\sum_jW_{ijij}=\mathrm{Ric}_{ii}=0$ and satisfies Bianchi trivially, so it lies in $D$. Hence $\pi_DW=\mathop{\mathrm{diag}}(W)$ and $\nu=\sum_{\alpha\ne\beta}c_{\alpha\beta}\varphi_\alpha\odot\varphi_\beta$, and $U=\bigcup\{\alpha\cup\beta:c_{\alpha\beta}\ne0\}$ is well defined.
 
 - **The square part.** $(\nu^2)_{\gamma\delta}=\sum_\beta\nu_{\gamma\beta}\nu_{\beta\delta}$ is nonzero only if $\nu$ has a nonzero entry in row $\gamma$ and in row $\delta$, so $\gamma,\delta\subseteq U$. In particular the diagonal entries of $\nu^2$ sit on pairs inside $U$.
 - **The sharp part.** $(\nu^\#)_{\alpha\beta}=\tfrac12\sum c_{\alpha\gamma\delta}c_{\beta\varepsilon\zeta}\nu_{\gamma\varepsilon}\nu_{\delta\zeta}$ needs $\gamma,\delta,\varepsilon,\zeta$ to be pairs carrying entries of $\nu$, so all lie in $U$. The structure constant $c_{\alpha\gamma\delta}\ne0$ needs $\gamma,\delta$ to share exactly one index and $\alpha=\gamma\triangle\delta$ ($[\varphi_{ij},\varphi_{jk}]=\pm\varphi_{ik}$), so $\alpha\subseteq\gamma\cup\delta\subseteq U$. **A bracket cannot produce an index outside $U$.**
 
-So $\pi_D(\nu\circ\nu)$, hence $\hat A$, is supported on diagonal pairs inside $U$, and $W=a\hat A+b\nu$ on $\Lambda^2\operatorname{span}\{f_i:i\in U\}$. The proof's phrase "built from $\varphi_\alpha\varphi_\beta^{\mathsf T}\varphi_\gamma\cdots$" is loose (the square's entries are indexed by the four pairs through inner products $\langle\varphi_\beta,\varphi_\gamma\rangle$), but the index bookkeeping it gestures at is right. This is exactly [L164](../findings/stratum-two-negative.md)'s step (iii) read for $\nu$ in place of $W$. **CONFIRMED.**
+So $\pi_D(\nu\circ\nu)$, hence $\hat A$, is supported on diagonal pairs inside $U$, and $W=a\hat A+b\nu$ on $\Lambda^2\mathop{\mathrm{span}}\{f_i:i\in U\}$. The proof's phrase "built from $\varphi_\alpha\varphi_\beta^{\mathsf T}\varphi_\gamma\cdots$" is loose (the square's entries are indexed by the four pairs through inner products $\langle\varphi_\beta,\varphi_\gamma\rangle$), but the index bookkeeping it gestures at is right. This is exactly [L164](../findings/stratum-two-negative.md)'s step (iii) read for $\nu$ in place of $W$. **CONFIRMED.**
 
 ## 3. Padding
 
@@ -73,7 +73,7 @@ What the record holds, read in the cited files and their sources:
 
 - **Padding and the restriction lemma**: [L164](../findings/stratum-two-negative.md), proved. Batch 8 should cite it.
 - **Support arguments of this kind in the closed branch**: batch 6 (2) did the same for a single four-set character, and [L220](../findings/second-order.md) caps that case at $\sqrt{3/2}$ on the operators. [L221](../findings/second-order.md) caps disjoint four-sets and two four-sets sharing two indices with $\tau\le0$, and the [I121 note](2026-09-28-I121-MG-audit.md) (lines 64–65) places the closed branch on these subalgebras. [L284](../findings/second-order.md) supplies the $C=0$ equivalence.
-- **New**: the general statement that at $R=0$ the whole of $W$ lives on the indices $\nu$ touches, for $\nu$ over any mix of characters, and the resulting exclusion of $\lvert U\rvert\le5$. I found no prior occurrence. The [I104 tau-positive note](2026-09-14-I104-tau-positive.md) and the [I104 derivation](2026-09-15-I104-derivation.md) work on the six indices directly, and the derivation's $\Sigma=\operatorname{Fix}_\varphi(\mathcal D_6)$ is the natural home of the $R=0$ branch at I104, but neither makes the padding reduction.
+- **New**: the general statement that at $R=0$ the whole of $W$ lives on the indices $\nu$ touches, for $\nu$ over any mix of characters, and the resulting exclusion of $\lvert U\rvert\le5$. I found no prior occurrence. The [I104 tau-positive note](2026-09-14-I104-tau-positive.md) and the [I104 derivation](2026-09-15-I104-derivation.md) work on the six indices directly, and the derivation's $\Sigma=\mathop{\mathrm{Fix}}_\varphi(\mathcal D_6)$ is the natural home of the $R=0$ branch at I104, but neither makes the padding reduction.
 
 ## Corrections owed
 

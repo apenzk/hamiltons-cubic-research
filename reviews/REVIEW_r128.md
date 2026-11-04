@@ -22,19 +22,19 @@ $$v^{\mathsf T}(K^2-\lambda K)v=v^{\mathsf T}Dv-v^{\mathsf T}K^{\circ2}v=\sum_{a
 
 using $(K^2)_{aa}=\sum_bK_{ab}^2$ (which is $K$ symmetric and hollow) for the first step and $a\leftrightarrow b$ symmetry of $K_{ab}^2$ for the last. Four lines, no hypothesis beyond the equation.
 
-**$D$'s origin is sound, and the worry in the brief resolves in the right direction.** $\Lambda^2$ carries no $(aa)$ index, so criticality supplies equations only at $a\ne b$. Setting $D_{aa}:=(K^2)_{aa}$ is what turns an off-diagonal-only system into a matrix identity: at $a=b$ the left side is $0+(K^2)_{aa}$ and the right is $0+D_{aa}$, so the diagonal row is a definition rather than a constraint. $D=\operatorname{diag}(\operatorname{diag}K^2)$ is therefore exactly right, and it agrees with the record's $\operatorname{diag}(s_1,\dots,s_n)$, $s_i=\sum_jM_{ij}^2$, because $(K^2)_{ii}=s_i$.
+**$D$'s origin is sound, and the worry in the brief resolves in the right direction.** $\Lambda^2$ carries no $(aa)$ index, so criticality supplies equations only at $a\ne b$. Setting $D_{aa}:=(K^2)_{aa}$ is what turns an off-diagonal-only system into a matrix identity: at $a=b$ the left side is $0+(K^2)_{aa}$ and the right is $0+D_{aa}$, so the diagonal row is a definition rather than a constraint. $D=\mathop{\mathrm{diag}}(\mathop{\mathrm{diag}}K^2)$ is therefore exactly right, and it agrees with the record's $\mathop{\mathrm{diag}}(s_1,\dots,s_n)$, $s_i=\sum_jM_{ij}^2$, because $(K^2)_{ii}=s_i$.
 
-**Two supporting facts checked directly, both exact.** The diagonal locus is closed under $Q$: for $M=\operatorname{diag}(K_{ab})$, the operator $M^{\#}$ is diagonal to $0.0$ and its $(ab)$ entry equals $(K^2)_{ab}$ to $0.0$, while $(M^2)_{(ab)(ab)}=K_{ab}^2$. So the reduction to $n\times n$ matrices loses nothing, there are no residual off-diagonal equations. And Ricci-flatness is preserved for free: $\operatorname{Ric}(Q(W))_{aa}=\sum_{c\ne a}(K^{\circ2}+K^2)_{ac}=\lambda(K\mathbf1)_a=0$, so no Lagrange multiplier for the trace-free constraint is needed and $Q(W)=\lambda W$ holds on the nose. (The $\#$ operator was calibrated against $R=\mathrm{Id}\Rightarrow R^{\#}=(n-2)\,\mathrm{Id}$, exact at $n=4,5,6,7$.)
+**Two supporting facts checked directly, both exact.** The diagonal locus is closed under $Q$: for $M=\mathop{\mathrm{diag}}(K_{ab})$, the operator $M^{\#}$ is diagonal to $0.0$ and its $(ab)$ entry equals $(K^2)_{ab}$ to $0.0$, while $(M^2)_{(ab)(ab)}=K_{ab}^2$. So the reduction to $n\times n$ matrices loses nothing, there are no residual off-diagonal equations. And Ricci-flatness is preserved for free: $\mathop{\mathrm{Ric}}(Q(W))_{aa}=\sum_{c\ne a}(K^{\circ2}+K^2)_{ac}=\lambda(K\mathbf1)_a=0$, so no Lagrange multiplier for the trace-free constraint is needed and $Q(W)=\lambda W$ holds on the nose. (The $\#$ operator was calibrated against $R=\mathrm{Id}\Rightarrow R^{\#}=(n-2)\,\mathrm{Id}$, exact at $n=4,5,6,7$.)
 
 **The right name for the object, and what it buys.** $K^2-\lambda K=L(w)$ with $w_{ab}=K_{ab}^2\ge0$. Positive semidefiniteness is then free, but so is the kernel: $\dim\ker L=$ number of connected components of $\{w_{ab}>0\}$. Since $K$ and $K-\lambda I$ commute, $\ker L=\ker K\oplus\ker(K-\lambda I)$, so for $\lambda\ne0$
 
-$$c\;=\;\dim\ker K\;+\;\big[\lambda\in\operatorname{spec}K\big].$$
+$$c\;=\;\dim\ker K\;+\;\big[\lambda\in\mathop{\mathrm{spec}}K\big].$$
 
 Each component contributes its own indicator to $\ker K$ (Ricci-flatness restricts to components), so $\dim\ker K\ge c$, forcing the bracket to vanish:
 
 > **At a diagonal critical point with $\lambda\ne0$, $\lambda$ is never an eigenvalue of $K$, and $\dim\ker K$ equals the number of components of the vertex graph.**
 
-So the inequality is **strict**: every positive eigenvalue satisfies $\theta>\lambda$, not $\ge$. Confirmed on every solution found: $c=\dim\ker K$ and $\lambda\notin\operatorname{spec}K$ in all of them, across $\approx60$ distinct diagonal critical points at $n=5\ldots10$ obtained from random starts, with $\lambda$ of both signs, all at $t=2.0000$ and $\lambda_{\min}(L)$ at $10^{-17}$.
+So the inequality is **strict**: every positive eigenvalue satisfies $\theta>\lambda$, not $\ge$. Confirmed on every solution found: $c=\dim\ker K$ and $\lambda\notin\mathop{\mathrm{spec}}K$ in all of them, across $\approx60$ distinct diagonal critical points at $n=5\ldots10$ obtained from random starts, with $\lambda$ of both signs, all at $t=2.0000$ and $\lambda_{\min}(L)$ at $10^{-17}$.
 
 *Note the interval statement presupposes $\lambda>0$. The identity is sign-blind, the correct reading is "no eigenvalue strictly between $0$ and $\lambda$", and roughly half the solutions found have $\lambda<0$, where "$(0,\lambda)$" is empty and the content sits in $(\lambda,0)$.*
 
@@ -62,7 +62,7 @@ On the diagonal locus $t=2$ identically, since $\lVert M\rVert_F^2=\sum_{a<b}K_{
 
 **The eight sphere products do not test the counting bound.** Solving the family in closed form,
 
-$$\lambda(S^p\times S^q)^2=\frac{2(n-1)(p-1)(q-1)}{pq\,(n-2)},\qquad \operatorname{spec}K=\Big\{\tfrac{n\lambda}{n-1},\;0,\;-\tfrac{q\lambda}{(p-1)(n-1)}^{(p-1)},\;-\tfrac{p\lambda}{(q-1)(n-1)}^{(q-1)}\Big\},$$
+$$\lambda(S^p\times S^q)^2=\frac{2(n-1)(p-1)(q-1)}{pq\,(n-2)},\qquad \mathop{\mathrm{spec}}K=\Big\{\tfrac{n\lambda}{n-1},\;0,\;-\tfrac{q\lambda}{(p-1)(n-1)}^{(p-1)},\;-\tfrac{p\lambda}{(q-1)(n-1)}^{(q-1)}\Big\},$$
 
 with $\Theta_{12}=\lambda(S^6\times S^6)=\sqrt{55}/6=1.2360330$ exactly. **Every sphere product has $r=1$ structurally**, for every $p,q$, there is exactly one positive eigenvalue $n\lambda/(n-1)$ and all the rest are $\le0$, independently of $\lambda$. At $S^2\times S^2$ the bound permits $r\le2$ and the truth is still $r=1$; the same at $S^2\times S^3$, $S^3\times S^3$, $S^2\times S^4$. So "checked at eight sphere products, both parities" confirms $r=1$ without exercising the counting argument anywhere. A test that would exercise it is a critical point with $r=2$: **$S^6\times S^6\oplus S^4\times S^4$** at $n=20$ has $\lambda=0.840232$, $2/\lambda^2=2.83$, and $r=2$ with both positive eigenvalues above $\lambda$, the bound tight and the statement holding.
 
@@ -84,7 +84,7 @@ The brief asked for these because claim 3's evidence was $\mathbb{CP}^m$ plus on
 
 Every one is non-Kähler and non-diagonal, and every one fails maximally, so **claim 3's negative is under-evidenced rather than over-stated on this axis**. The $\mathbb{CP}^m$ row of the record reproduces exactly: counts $1,2,3,4,5$ at $\mathbb{CP}^{2\ldots6}$ and $1,1,1$ at padded $W_{\mathbb{CP}^2}$ for $n=6,8,12$, with $\lambda=\sqrt{3/2}$ and $t=1$ invariant under padding.
 
-**But the mechanism is arithmetic, not criticality, which is what the record has since said.** Every row has $\lambda>\sqrt t$, and $\mu_1\le\sqrt{\operatorname{tr}K^2}=\sqrt t$ then forces the outcome with nothing else used. This matches [findings/diagonal-half.md](../findings/diagonal-half.md) line 139 (reviewer 130), reached independently here.
+**But the mechanism is arithmetic, not criticality, which is what the record has since said.** Every row has $\lambda>\sqrt t$, and $\mu_1\le\sqrt{\mathop{\mathrm{tr}}K^2}=\sqrt t$ then forces the outcome with nothing else used. This matches [findings/diagonal-half.md](../findings/diagonal-half.md) line 139 (reviewer 130), reached independently here.
 
 **Frame-independence of those failures, which the record does not state.** Maximising $t$ over $O(n)$ returns $t^*(\mathbb{CP}^2)=1.000000$ and $t^*(\mathbb{HP}^2)=0.600000$, the natural-frame values, so $t$ is a **frame invariant** at these points and the failure is a property of $W$, not of a frame. (Control: the same maximiser returns $t^*=2.000000$ at the diagonal $S^2\times S^2$ and $S^3\times S^3$, recovering the diagonal frame.)
 
@@ -129,7 +129,7 @@ $t\to2^-$ like $1/k$ with the statement failing throughout. So $t\ge\lambda^2$ i
 
 ## What should change in the record
 
-1. **Keep claim 1 as is**, it is correct and the Laplacian naming is right. **Add the kernel statement**: $\lambda\notin\operatorname{spec}K$ and $\dim\ker K=$ components, hence the inequality is strict. The record's connectivity table (reviewer 132) is the $c=1$ case of this; the general statement needs no case analysis.
+1. **Keep claim 1 as is**, it is correct and the Laplacian naming is right. **Add the kernel statement**: $\lambda\notin\mathop{\mathrm{spec}}K$ and $\dim\ker K=$ components, hence the inequality is strict. The record's connectivity table (reviewer 132) is the $c=1$ case of this; the general statement needs no case analysis.
 2. **Demote the counting corollary and promote the bound.** $\theta\le\mu_1$ is unconditional via PSD, so $\theta_0(n)<\sqrt{2(n-2)/(n-1)}$ holds at every diagonal critical point and the $(n-1)/n$ reduction is not confined to the vertex-transitive locus. Also record that $r=1$ is structural at every sphere product, so the eight-point check does not test the bound; $S^6\times S^6\oplus S^4\times S^4$ is a point where it does.
 3. **Close reviewer 130's live question with the block-sum witnesses.** $S^4\times S^4\oplus\mathbb{HP}^2$ ($t=1.281\ge\lambda^2=0.639$, $\lambda_{\min}=-0.1467$) and the $t\to2^-$ family settle it negatively. Record the structural reason (a block sum satisfies PSD iff every block does) since that is what makes the family unbounded rather than a coincidence.
 4. **Broaden the failure table beyond Kähler.** $\mathbb{HP}^2$, $\mathbb{HP}^3$, $\mathfrak{su}(3)$, $\mathfrak{so}(5)$, $\mathfrak{so}(6)$ fail identically, and $t^*(\mathbb{CP}^2)=1$, $t^*(\mathbb{HP}^2)=0.6$ show those failures are frame-independent. As briefed, the negative was drawn too broadly *and* supported too narrowly; the record's current text fixes the first and this fixes the second.

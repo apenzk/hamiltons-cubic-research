@@ -4,7 +4,7 @@ The brief was cold: I worked from verification/BRIEF_L49.md, the definitions, th
 
 | # | Claim | Verdict |
 |---|---|---|
-| 1 | Eigenframe display $\theta=\sum\lambda_\alpha^3+3\sum_{\alpha<\beta<\gamma}T_{\alpha\beta\gamma}\lambda_\alpha\lambda_\beta\lambda_\gamma$ | CONFIRMED AS ALGEBRA (at the scalar product $-\tfrac12\operatorname{tr}(AB)$ and Böhm–Wilking's $\#$, neither stated in the passages) |
+| 1 | Eigenframe display $\theta=\sum\lambda_\alpha^3+3\sum_{\alpha<\beta<\gamma}T_{\alpha\beta\gamma}\lambda_\alpha\lambda_\beta\lambda_\gamma$ | CONFIRMED AS ALGEBRA (at the scalar product $-\tfrac12\mathop{\mathrm{tr}}(AB)$ and Böhm–Wilking's $\#$, neither stated in the passages) |
 | 2 | The collapse condition is linear in $T$, the collapsing configurations form a subspace | CONFIRMED |
 | 3 | Under the single condition $\sum\lambda=0$ the collapse space is exactly the constants, one-dimensional, at every $N\ge4$ | CONFIRMED (proof reaches every $N\ge3$) |
 | 3a | Lean docstring and quoted Gate 2 text: at one fixed $\lambda$ the condition is "codimension 1 in $T$" | REFUTED AS STATED (commentary only, the theorem is unaffected) |
@@ -30,7 +30,7 @@ The brief was cold: I worked from verification/BRIEF_L49.md, the definitions, th
 | Hypothesis | Where stated | Checked against the object | Used by |
 |---|---|---|---|
 | H1. $W\in\mathcal W_n$ symmetric on $\mathfrak{so}(n)$, orthonormal eigenframe | Definitions | Holds, every symmetric operator has one | Claim 1 |
-| H2. The scalar product on $\mathfrak{so}(n)$ is $-\tfrac12\operatorname{tr}(AB)$ and $\#$ is Böhm–Wilking's (4) | **Unstated** in A to D | Read at source, see section 2 | Claim 1 (the coefficient 3) |
+| H2. The scalar product on $\mathfrak{so}(n)$ is $-\tfrac12\mathop{\mathrm{tr}}(AB)$ and $\#$ is Böhm–Wilking's (4) | **Unstated** in A to D | Read at source, see section 2 | Claim 1 (the coefficient 3) |
 | H3. $T$ totally symmetric and zero on repeated indices | Implicit in the display summing only $\alpha<\beta<\gamma$ | Holds by ad-invariance: $c$ is totally antisymmetric | Claim 1 |
 | H4. A single trace condition, namely $p_1=0$ | Definitions, Passages A, C | The Lean `Collapses` encodes exactly $p_1=0$ | Claims 3, 8 |
 | H5. $N\ge4$ | Passages A, C, Lean `hN` | Unused by the proof, which needs $N\ge3$ for content and is vacuous-true below | Nothing |
@@ -45,14 +45,14 @@ Used but unstated: H2, H7, H8.
 
 ## 2. Claim 1, the eigenframe display
 
-**Derivation.** Böhm–Wilking, references/boehm-wilking-2008-space-forms/, eq. (4), read at source: $\langle(R\#S)(h),h\rangle=\tfrac12\sum_{\alpha,\beta}\langle[R b_\alpha,S b_\beta],h\rangle\langle[b_\alpha,b_\beta],h\rangle$ for an orthonormal basis, "using the scalar product $-1/2\operatorname{tr}(AB)$ instead of $-\operatorname{tr}(AB)$ as in [H2]", with $R^\#=R\#R$.
+**Derivation.** Böhm–Wilking, references/boehm-wilking-2008-space-forms/, eq. (4), read at source: $\langle(R\#S)(h),h\rangle=\tfrac12\sum_{\alpha,\beta}\langle[R b_\alpha,S b_\beta],h\rangle\langle[b_\alpha,b_\beta],h\rangle$ for an orthonormal basis, "using the scalar product $-1/2\mathop{\mathrm{tr}}(AB)$ instead of $-\mathop{\mathrm{tr}}(AB)$ as in [H2]", with $R^\#=R\#R$.
 
 - In the eigenframe, $\langle W^\#v_\gamma,v_\gamma\rangle=\tfrac12\sum_{\alpha,\beta}\lambda_\alpha\lambda_\beta T_{\alpha\beta\gamma}$.
 - $\langle W,W^\#\rangle=\sum_\gamma\lambda_\gamma\langle W^\#v_\gamma,v_\gamma\rangle=\tfrac12\sum_{\alpha,\beta,\gamma}T_{\alpha\beta\gamma}\lambda_\alpha\lambda_\beta\lambda_\gamma$.
 - $T$ vanishes unless the indices are distinct and is symmetric, so the ordered sum is $6\sum_{\alpha<\beta<\gamma}$, giving $3\sum_{\alpha<\beta<\gamma}T\lambda\lambda\lambda$.
 - $\langle W,W^2\rangle=p_3$. With the brief's $P(W)=\langle W,W^2+W^\#\rangle$ (no factor $\tfrac13$, unlike Böhm–Wilking's $P$), $\theta=p_3+3C_T$. The coefficient 3 is confirmed.
 
-**Normalisation.** Böhm–Wilking state that $\#$ is the same operator in both scalar products. Under $-\operatorname{tr}(AB)$ the orthonormal basis is $b/\sqrt2$, so $c'=c/\sqrt2$ and $T'=T/2$, and the same $\langle W,W^\#\rangle$ reads $6\sum T'\lambda\lambda\lambda$. So the coefficient 3 holds exactly when $T$ is computed at $-\tfrac12\operatorname{tr}$.
+**Normalisation.** Böhm–Wilking state that $\#$ is the same operator in both scalar products. Under $-\mathop{\mathrm{tr}}(AB)$ the orthonormal basis is $b/\sqrt2$, so $c'=c/\sqrt2$ and $T'=T/2$, and the same $\langle W,W^\#\rangle$ reads $6\sum T'\lambda\lambda\lambda$. So the coefficient 3 holds exactly when $T$ is computed at $-\tfrac12\mathop{\mathrm{tr}}$.
 
 **Is a derivation needed.** Passages A to C give none, and the brief's definitions do not define $\#$ or the scalar product. The record should state H2 where $\theta$ and $T$ are defined. The collapse space (claims 2, 3) and constancy of $T$ (claim 5) are invariant under $T\mapsto T/2$, so no downstream claim changes.
 
@@ -102,12 +102,12 @@ Verdict on 3a: REFUTED AS STATED, commentary only. Replacement wording: "at one 
 
 **Candidate 4a, the group, three-step record.**
 1. Located: Passage C, "which is the number of irreducible summands of $\mathcal W_n$ under $O(n)$", and "At $n=4$, where $\mathcal W_4$ is reducible".
-2. Exhibited: take $r=\operatorname{diag}(-1,1,1,1)\in O(4)\setminus SO(4)$ acting on $\Lambda^2\mathbb R^4$. Then $r(e_1\wedge e_2+e_3\wedge e_4)=-(e_1\wedge e_2-e_3\wedge e_4)$, which maps $\Lambda^+$ to $\Lambda^-$, and conjugation by $r$ maps $\mathcal W^+$ to $\mathcal W^-$. Take Passage C's own $SO(4)$ splitting $\mathcal W_4=\mathcal W^+\oplus\mathcal W^-$. The two summands are non-isomorphic irreducibles, since $SO(3)\times SO(3)$ acts on them through different factors. So the only $SO(4)$-invariant subspaces are $0$, $\mathcal W^\pm$ and $\mathcal W_4$. Every $O(4)$-invariant subspace is among these, and $r$ moves $\mathcal W^\pm$, so $\mathcal W_4$ is $O(4)$-irreducible. Under $O(n)$ the count is therefore 1 at $n=4$. Passage C's own chain would then put $n=4$ in the single-condition case, contradicting its "At $n=4$ ... the cubic is spectral".
+2. Exhibited: take $r=\mathop{\mathrm{diag}}(-1,1,1,1)\in O(4)\setminus SO(4)$ acting on $\Lambda^2\mathbb R^4$. Then $r(e_1\wedge e_2+e_3\wedge e_4)=-(e_1\wedge e_2-e_3\wedge e_4)$, which maps $\Lambda^+$ to $\Lambda^-$, and conjugation by $r$ maps $\mathcal W^+$ to $\mathcal W^-$. Take Passage C's own $SO(4)$ splitting $\mathcal W_4=\mathcal W^+\oplus\mathcal W^-$. The two summands are non-isomorphic irreducibles, since $SO(3)\times SO(3)$ acts on them through different factors. So the only $SO(4)$-invariant subspaces are $0$, $\mathcal W^\pm$ and $\mathcal W_4$. Every $O(4)$-invariant subspace is among these, and $r$ moves $\mathcal W^\pm$, so $\mathcal W_4$ is $O(4)$-irreducible. Under $O(n)$ the count is therefore 1 at $n=4$. Passage C's own chain would then put $n=4$ in the single-condition case, contradicting its "At $n=4$ ... the cubic is spectral".
 3. Charitable reading: "under $O(n)$" means "under $SO(n)$". That makes the $n=4$ clause consistent (two summands, matching $\sum_{\alpha\le3}\lambda_\alpha=0=\sum_{\alpha\ge4}\lambda_\alpha$ in a frame adapted to $\Lambda^+\oplus\Lambda^-$). But the text names $O(n)$ explicitly, so the words are refuted.
 
 Verdict on 4a: REFUTED AS STATED. Correction: $SO(n)$.
 
-**Candidate 4b, what "trace condition" counts (H7).** The brief defines trace conditions as linear conditions on $(\lambda_\alpha)$ that every $W$ obeys. At $n=4$, $W^+=\operatorname{diag}(2,-1,-1)$ and $W^-=\operatorname{diag}(1,1,-2)$ in adapted frames give $\lambda=(2,-1,-1,1,1,-2)$. Relabelling $v_1\leftrightarrow v_4$ gives $\lambda=(1,-1,-1,2,1,-2)$, where $\lambda_1+\lambda_2+\lambda_3=-1\ne0$. So the second condition holds only under an adapted labelling. Charitable reading: the record means adapted labellings. This is plausible, but the convention is stated nowhere. Recorded as part of the debt, not as a separate refutation.
+**Candidate 4b, what "trace condition" counts (H7).** The brief defines trace conditions as linear conditions on $(\lambda_\alpha)$ that every $W$ obeys. At $n=4$, $W^+=\mathop{\mathrm{diag}}(2,-1,-1)$ and $W^-=\mathop{\mathrm{diag}}(1,1,-2)$ in adapted frames give $\lambda=(2,-1,-1,1,1,-2)$. Relabelling $v_1\leftrightarrow v_4$ gives $\lambda=(1,-1,-1,2,1,-2)$, where $\lambda_1+\lambda_2+\lambda_3=-1\ne0$. So the second condition holds only under an adapted labelling. Charitable reading: the record means adapted labellings. This is plausible, but the convention is stated nowhere. Recorded as part of the debt, not as a separate refutation.
 
 **Debt named.** The record would have to prove: (i) for a stated labelling convention, the linear conditions obeyed by all spectra of $\mathcal W_n$ number exactly the $SO(n)$-summands, in particular only $p_1=0$ at $n\ge5$; (ii) a statement of how the collapse dimension depends on that number.
 
@@ -130,7 +130,7 @@ Verdict: HYPOTHESIS-DEBT.
 **Quantifier tracked.** Claims 3 and 5 give: for any frame $F$, $\theta_{T_F}$ is not a multiple of $p_3$ on all of $V$. The conclusion concerns a critical point $W_0$, which is one spectrum $\lambda_0$ and one (possibly non-unique) frame.
 
 - Under the fixed-$\lambda$ reading, every $T$ collapses at $\lambda_0$ when $p_3(\lambda_0)\ne0$ (section 4). The lemma then says nothing about $T$ at $W_0$, so this reading cannot carry the inference.
-- Under the $\forall$ reading, the relevant domain for frame $F$ is the set $L_F\subseteq V$ of spectra of Weyl tensors diagonal in $F$, not all of $V$. $L_F$ can be a proper subspace. Exhibit, $n=5$, $F=\{e_i\wedge e_j\}$: a curvature operator diagonal in this frame satisfies Bianchi automatically (the Bianchi map lands in $\Lambda^4$, which needs four distinct indices), and it is Weyl iff $\operatorname{Ric}=0$, i.e. $\sum_j\lambda_{ij}=0$ for each $i$. These are 5 independent conditions ($K_5$ is not bipartite), so $\dim L_F=5<9=\dim V$. Non-collapse on $V$ does not decide collapse on $L_F$.
+- Under the $\forall$ reading, the relevant domain for frame $F$ is the set $L_F\subseteq V$ of spectra of Weyl tensors diagonal in $F$, not all of $V$. $L_F$ can be a proper subspace. Exhibit, $n=5$, $F=\{e_i\wedge e_j\}$: a curvature operator diagonal in this frame satisfies Bianchi automatically (the Bianchi map lands in $\Lambda^4$, which needs four distinct indices), and it is Weyl iff $\mathop{\mathrm{Ric}}=0$, i.e. $\sum_j\lambda_{ij}=0$ for each $i$. These are 5 independent conditions ($K_5$ is not bipartite), so $\dim L_F=5<9=\dim V$. Non-collapse on $V$ does not decide collapse on $L_F$.
 - "Critical point" and "alignment slack" are not defined in the passages, and no argument links them to the collapse space.
 - $\ker W\ne0$ or any repeated eigenvalue: the frame at $W_0$ is not unique, so "the $T$ of the critical point" is not defined. The conclusion would need "for no frame", which claim 5 over all bases would supply if proved.
 
@@ -158,7 +158,7 @@ Verdict: CONFIRMED.
 
 ## 10. Items of the brief, answered in order
 
-1. Display: holds with coefficient 3 at $-\tfrac12\operatorname{tr}$ and Böhm–Wilking (4). The record must state H2 where $\theta$ is introduced (section 2).
+1. Display: holds with coefficient 3 at $-\tfrac12\mathop{\mathrm{tr}}$ and Böhm–Wilking (4). The record must state H2 where $\theta$ is introduced (section 2).
 2. Quantifier: $\forall$ reading gives dimension 1. Fixed-$\lambda$ reading gives full dimension $\binom N3$ when $p_3(\lambda)\ne0$ and codimension $\le1$ otherwise. Passage A's "reduce to a multiple of $\sum\lambda^3$" reads charitably as an identity of cubic forms on $V$. That candidate is withdrawn, but Passage A should carry the quantifier (sections 4, 3a).
 3. Lean is that claim on increasing triples, the proof establishes it, and $N\ge4$ is unused (sections 4, 9).
 4. Unargued. Wrong under $O(n)$ at $n=4$, consistent under $SO(n)$ in adapted labellings (section 5).
@@ -176,7 +176,7 @@ Verdict: CONFIRMED.
 
 | Claim | Falsifying object | Search |
 |---|---|---|
-| 1 | A convention for $\#$ and scalar product under which the coefficient is not 3 | Found: $-\operatorname{tr}$ gives 6. Resolved by stating H2 |
+| 1 | A convention for $\#$ and scalar product under which the coefficient is not 3 | Found: $-\mathop{\mathrm{tr}}$ gives 6. Resolved by stating H2 |
 | 2 | Two collapsing $T$ whose sum does not collapse | None possible, the proof is a linear preimage |
 | 3 | A nonconstant $T$ collapsing on $V$ at $N\ge3$ | Excluded by the spike argument |
 | 3a | $\lambda_0$ with every $T$ collapsing | Found: $e_1+e_2-2e_3$ |

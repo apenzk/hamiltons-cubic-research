@@ -42,7 +42,7 @@ using $\langle Q(W),W\rangle=P(W)=\theta$ at $\lVert W\rVert=1$. The second fund
 
 The statement's "$\lambda_{\max}$", the operator identity $\mathrm{Hess}=6\theta(L_e-\tfrac12\mathrm{Id})$, and the restriction to $W^\perp$ all need $T$ fully symmetric; the block asserts none of it. It is true. On $\Lambda^2\cong\mathfrak{so}(n)$ with $c_{\alpha\beta\gamma}=\langle[b_\alpha,b_\beta],b_\gamma\rangle$ totally antisymmetric ([conventions.md](../findings/conventions.md)):
 
-- $\langle W,W^2\rangle=\operatorname{tr}(W^3)$ polarises to the symmetric $\operatorname{tr}(W_1W_2W_3)$-symmetrisation; gradient $3W^2$.
+- $\langle W,W^2\rangle=\mathop{\mathrm{tr}}(W^3)$ polarises to the symmetric $\mathop{\mathrm{tr}}(W_1W_2W_3)$-symmetrisation; gradient $3W^2$.
 - With $\langle R^\#u,v\rangle=\tfrac12\sum_{\alpha\beta}\langle[b_\alpha,b_\beta],u\rangle\langle[Rb_\alpha,Rb_\beta],v\rangle$, expanding gives $\langle R^\#,X\rangle=\tfrac12F(R,R,X)$ with $F(R_1,R_2,R_3)=\sum c_{\alpha\beta\gamma}c_{\alpha'\beta'\gamma'}(R_1)_{\alpha\alpha'}(R_2)_{\beta\beta'}(R_3)_{\gamma\gamma'}$. Swapping any two arguments and relabelling the paired index pairs flips **both** $c$ factors, so the signs cancel and $F$ is fully symmetric; gradient $3R^\#$.
 
 Hence $\nabla P=3Q(W)$ and $T$ is fully symmetric, so $\langle X\circ Y,Z\rangle=\langle Y,X\circ Z\rangle$ and $L_e^{\mathsf T}=L_e$. **The record already owns this**, [r285](REVIEW_r285.md) Claim 1 proves exactly $\langle X\#Y,Z\rangle=\tfrac12c_{pqa}c_{rsb}X_{pr}Y_{qs}Z_{ab}$ and names the slot-1-to-slot-3 transposition as the load-bearing half. **The defect is that L24 does not cite it**: the canonical block's proof reads as if self-adjointness were free.
@@ -63,7 +63,7 @@ $$2\,W\circ V=A\ast Q(W)=\theta\,(A\ast W)=\theta V\quad\Longrightarrow\quad L_e
 
 Exact, and $V\perp W$ because $\lVert g\cdot W\rVert$ is constant. **The record already owns this** ([bounds.md](../findings/bounds.md), [diagonal-half.md:151](../findings/diagonal-half.md), [LEDGER.md:59](../findings/LEDGER.md)); L24's block states it without derivation or citation.
 
-**"at every critical point" is right, and the L32 worry does not bite.** $V=0$ for all $A$ would make $W$ an $O(n)$-invariant element of $\mathcal W_n$. For $n\ne4$, $\Lambda^2$ is $\mathfrak{so}(n)$-irreducible, so Schur forces $W=c\,\mathrm{Id}$, which is not trace-free; at $n=4$, $\Lambda^2=\Lambda^+\oplus\Lambda^-$ gives $W=c_+\Pi_++c_-\Pi_-$, and $\operatorname{tr}W=0$ with $\langle W,\star\rangle=0$ (Bianchi) forces $c_\pm=0$. So the orbit is positive-dimensional at **every** nonzero critical point and $\tfrac12$ is attained on $W^\perp$. A nontrivial stabiliser, [Lemma L32](../findings/isotropy-cap.md)'s territory, lowers $\dim\mathcal O$ and hence $\operatorname{mult}(\tfrac12)$, never to zero.
+**"at every critical point" is right, and the L32 worry does not bite.** $V=0$ for all $A$ would make $W$ an $O(n)$-invariant element of $\mathcal W_n$. For $n\ne4$, $\Lambda^2$ is $\mathfrak{so}(n)$-irreducible, so Schur forces $W=c\,\mathrm{Id}$, which is not trace-free; at $n=4$, $\Lambda^2=\Lambda^+\oplus\Lambda^-$ gives $W=c_+\Pi_++c_-\Pi_-$, and $\mathop{\mathrm{tr}}W=0$ with $\langle W,\star\rangle=0$ (Bianchi) forces $c_\pm=0$. So the orbit is positive-dimensional at **every** nonzero critical point and $\tfrac12$ is attained on $W^\perp$. A nontrivial stabiliser, [Lemma L32](../findings/isotropy-cap.md)'s territory, lowers $\dim\mathcal O$ and hence $\mathop{\mathrm{mult}}(\tfrac12)$, never to zero.
 
 ### F5, the SCOPE paragraph is REFUTED: the witness cannot separate the sign of $\theta$, and it is mislabelled
 
@@ -79,7 +79,7 @@ $$e(-W)=\frac{-W}{-\theta}=\frac W\theta=e(W),\qquad (-W)^\perp=W^\perp .$$
 
 $$L_e(\alpha W_1+\beta W_2)=\alpha\,e_1\circ W_1+\beta\,e_2\circ W_2=\alpha W_1+\beta W_2 ,$$
 
-so the whole $2$-plane $\operatorname{span}(W_1,W_2)$ lies in $E_{L_e}(1)$ and $E_{L_e}(1)\cap W^\perp\ne0$: **$\lambda_{\max}(L_e|_{W^\perp})=1$** at $\pm S^2\times S^2$, $n=4$. Independently, on the great circle $\gamma(t)=\cos t\,U+\sin t\,V$ through the balanced point ($U,V$ the unit blocks), $P(\gamma)=\theta\sqrt2(\cos^3t+\sin^3t)$ has $P''(\pi/4)=+3\theta>0$, a local **minimum** along a tangent direction, so the point is a saddle and L24's "maximizer" hypothesis already fails.
+so the whole $2$-plane $\mathop{\mathrm{span}}(W_1,W_2)$ lies in $E_{L_e}(1)$ and $E_{L_e}(1)\cap W^\perp\ne0$: **$\lambda_{\max}(L_e|_{W^\perp})=1$** at $\pm S^2\times S^2$, $n=4$. Independently, on the great circle $\gamma(t)=\cos t\,U+\sin t\,V$ through the balanced point ($U,V$ the unit blocks), $P(\gamma)=\theta\sqrt2(\cos^3t+\sin^3t)$ has $P''(\pi/4)=+3\theta>0$, a local **minimum** along a tangent direction, so the point is a saddle and L24's "maximizer" hypothesis already fails.
 
 **What is actually true, and should replace the paragraph.** $\theta>0$ enters at exactly one step: dividing "$\mathrm{Hess}=6\theta(L_e-\tfrac12\mathrm{Id})\preceq0$ on $W^\perp$" by $6\theta$. At $\theta<0$ the division flips, and a *local maximiser* with $\theta<0$ satisfies
 

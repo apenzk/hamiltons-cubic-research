@@ -23,7 +23,7 @@
 | --- | --- | --- |
 | $g_\delta$ | $\lVert[\mathrm{ad}(v_\delta),W]\rVert^2$, the [Petersen–Wink](../references/petersen-wink-2019-bochner-technique/notes.md) Prop 1.7 density | [diagonal-half.md:88](../findings/diagonal-half.md), quoted correctly |
 | $\Delta$ | the trace of $g$ over the **strictly** positive eigenspace | [conventions.md](../findings/conventions.md) ("traced over $\{\lambda>0\}$ only") |
-| $\mathfrak p$ | $\operatorname{span}\{v_a:\lambda_a>0\}$, the positive eigenspace **of $W$ itself** | never stated in the block; forced by $\dim\mathfrak m+\dim\ker+\dim\mathfrak p=\binom n2$ in every row |
+| $\mathfrak p$ | $\mathop{\mathrm{span}}\{v_a:\lambda_a>0\}$, the positive eigenspace **of $W$ itself** | never stated in the block; forced by $\dim\mathfrak m+\dim\ker+\dim\mathfrak p=\binom n2$ in every row |
 | $\mathfrak m$ | the **whole** negative eigenspace, [L36](../findings/isotropy-cap.md)'s sense, **not** [conventions.md](../findings/conventions.md)'s $\mathfrak m=E_{\min}$ | same row arithmetic; under $E_{\min}$ the columns would not close |
 | $\mathfrak k(W)$ | $\{x\in\mathfrak{so}(n):[\mathrm{ad}(x),W]=0\}$, the isotropy algebra | [b_symmetry_defect.py](../scripts/lib/b_symmetry_defect.py) header; no findings file defines it |
 | $S$ | $S_{\mathfrak{mmm}}=\sum_{a,b,c\in\mathfrak m}\langle[\varphi_a,\varphi_b],\varphi_c\rangle^2$ | defined in-block, matching [ungraded-slack.md:81](../findings/ungraded-slack.md) |
@@ -39,8 +39,8 @@
 **Derivation, cold.** $x\mapsto\mathrm{ad}(x)$ is linear and $A\mapsto[A,W]$ is linear, so
 $$G(x):=\lVert[\mathrm{ad}(x),W]\rVert^2$$
 is the squared norm of a linear map of $x$: a **positive semi-definite quadratic form on $\mathfrak{so}(n)$**. Its trace over a subspace is therefore basis-independent, and
-$$\Delta(W)=\operatorname{tr}\big(G\vert_{\mathfrak p}\big)=\sum_{\delta}g_\delta$$
-over any orthonormal basis of $\mathfrak p$, the eigenbasis included. For a psd form, $\operatorname{tr}(G\vert_{\mathfrak p})=0\iff G\vert_{\mathfrak p}\equiv0$: ($\Leftarrow$) trivial; ($\Rightarrow$) a sum of non-negative terms vanishes iff each vanishes, and vanishing on a basis extends to the span because $x\mapsto[\mathrm{ad}(x),W]$ is linear, not merely because $G$ is. Hence
+$$\Delta(W)=\mathop{\mathrm{tr}}\big(G\vert_{\mathfrak p}\big)=\sum_{\delta}g_\delta$$
+over any orthonormal basis of $\mathfrak p$, the eigenbasis included. For a psd form, $\mathop{\mathrm{tr}}(G\vert_{\mathfrak p})=0\iff G\vert_{\mathfrak p}\equiv0$: ($\Leftarrow$) trivial; ($\Rightarrow$) a sum of non-negative terms vanishes iff each vanishes, and vanishing on a basis extends to the span because $x\mapsto[\mathrm{ad}(x),W]$ is linear, not merely because $G$ is. Hence
 $$\Delta(W)=0\iff[\mathrm{ad}(x),W]=0\ \forall x\in\mathfrak p\iff\mathfrak p\subseteq\mathfrak k(W).\qquad\blacksquare$$
 
 **The index sets do agree, which was the brief's leading suspicion.** $\Delta$ sums $g_\delta$ over $\delta$ in an orthonormal basis of $\mathfrak p$, the script's `g[p].sum()` with `p = lam > tol`, and the statement quantifies over $x\in\mathfrak p$. Same set. **No defect here.**

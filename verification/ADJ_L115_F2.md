@@ -29,7 +29,7 @@ $$\lambda_{\max}(M)=\theta\qquad\text{at every COORDINATE-DIAGONAL global maximi
 
 #### The Rayleigh bound is tight where it matters and slack elsewhere
 
-So $\sup_W\lambda_{\max}(M)\le\theta_0$ (B3's target as posed), is **strictly stronger than Conjecture A**: the $C_5$ blow-up carries ratio $1.206$ while its $\theta$ sits far below $\theta_0$. The equivalent target is the pointwise statement at maximisers, and that is Conjecture A rewritten, neither easier nor harder. A free by-product: since $\operatorname{diag}M=\lambda$ and $\lambda_{\max}(M)=\theta$ at a maximiser, $\theta\ge\max_\alpha\lambda_\alpha$, the largest eigenvalue of a maximiser is at most its own $\theta$.
+So $\sup_W\lambda_{\max}(M)\le\theta_0$ (B3's target as posed), is **strictly stronger than Conjecture A**: the $C_5$ blow-up carries ratio $1.206$ while its $\theta$ sits far below $\theta_0$. The equivalent target is the pointwise statement at maximisers, and that is Conjecture A rewritten, neither easier nor harder. A free by-product: since $\mathop{\mathrm{diag}}M=\lambda$ and $\lambda_{\max}(M)=\theta$ at a maximiser, $\theta\ge\max_\alpha\lambda_\alpha$, the largest eigenvalue of a maximiser is at most its own $\theta$.
 
 ## Passage B, the definition of $M$ and its first facts ([findings/second-order.md](../findings/second-order.md) lines 532-548, odd lines)
 

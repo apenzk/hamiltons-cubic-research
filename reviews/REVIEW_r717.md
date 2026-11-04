@@ -46,7 +46,7 @@ $$c(H)\ \ge\ c_p(1-w^2)+c_{\min,r}w^2\ =\ c_p+3\theta_0\tfrac{m-4}{2(m-1)}w^2,$$
 
 $$G'(w)=\frac{2(A+Bw)\big[\rho Aw-Bc\big]}{(A+Bw)^4},$$
 
-so $\operatorname{sign}g'=\operatorname{sign}(\rho Aw-Bc)$, the stationary point is $w^*=Bc/(\rho A)$, and substituting gives $g(w^*)=\sqrt c/\sqrt{A^2+B^2c/\rho}$, both of C2's displays, confirmed. *The $\rho\mapsto1$ specialisation returns the entry's original pair, so the carry-through is clean.*
+so $\mathop{\mathrm{sign}}g'=\mathop{\mathrm{sign}}(\rho Aw-Bc)$, the stationary point is $w^*=Bc/(\rho A)$, and substituting gives $g(w^*)=\sqrt c/\sqrt{A^2+B^2c/\rho}$, both of C2's displays, confirmed. *The $\rho\mapsto1$ specialisation returns the entry's original pair, so the carry-through is clean.*
 
 > **$w^*=\dfrac{2\sqrt n}{n-8}$, WHICH EXCEEDS $1$ FOR EVERY $n\le14$ AND EQUALS $1$ AT $n=16$.** With $c=\kappa/n$, $A=n^{1/2}$, $B=n$ and $\kappa/\rho_n=2n/(n-8)$, the $\theta_0$ that C3 cancels from the ratio cancels from the minimiser too:
 > $$w^*=\frac{Bc}{\rho_nA}=\frac{\kappa}{\rho_n\sqrt n}=\frac{2\sqrt n}{n-8},\qquad w^*\le1\iff (\sqrt n-4)(\sqrt n+2)\ge0\iff n\ge16 .$$
@@ -106,7 +106,7 @@ so $\rho\to0$ sends this to $\sqrt\rho/n$, and at $\rho=0$ exactly, $g$ is $\sqr
 - **Whether $\lVert H\rVert_{op}\le1$ is reachable near $w=1$.** [r716](REVIEW_r716.md) leaves this open and it bears directly on my endpoint values: if the saturation constant is below $1$, every $g(1)$ in the tables above rises. *Naming it is analytical work.*
 - **The $w$-dependence of $(1-\eta^*)^2$.** Excluded from the blockquote's $g$ by construction, and [Lemma L158](../findings/second-order.md) shows it cannot overturn a rise, so it changes minimisers without changing the shape verdicts. I did not carry it.
 
-**Inherited without re-derivation**: [Lemma L146](../findings/second-order.md)'s $\lVert H\rVert_{op}$ supremum and its extension to the joint two-copy eigenspace; [Lemma L156](../findings/second-order.md)'s $J^*$; [Lemma L157](../findings/second-order.md)'s fixed point; [Lemma L141](../findings/second-order.md)(a)'s contraction; $g_n$ and $\theta_0(n)$ from [conventions.md](../findings/conventions.md). **Re-derived here**: [Lemma L27](../findings/nondegeneracy.md)'s ten summand margins at $p=q=m$ and the identification of $\Lambda^2\otimes\Lambda^2$ as the smallest surviving one; the convex-combination bound and its sharpness; the $m\to n$ substitution; $\operatorname{sign}g'$, $w^*$ and $g(w^*)$ with $\rho$ carried; $\kappa/\rho_n=2n/(n-8)$; $w^*=2\sqrt n/(n-8)$ and $\sqrt{2(n-2)}/(n-8)$; the $\rho\to0$ order collapse; the monotonicity and supremum of $\rho_n$.
+**Inherited without re-derivation**: [Lemma L146](../findings/second-order.md)'s $\lVert H\rVert_{op}$ supremum and its extension to the joint two-copy eigenspace; [Lemma L156](../findings/second-order.md)'s $J^*$; [Lemma L157](../findings/second-order.md)'s fixed point; [Lemma L141](../findings/second-order.md)(a)'s contraction; $g_n$ and $\theta_0(n)$ from [conventions.md](../findings/conventions.md). **Re-derived here**: [Lemma L27](../findings/nondegeneracy.md)'s ten summand margins at $p=q=m$ and the identification of $\Lambda^2\otimes\Lambda^2$ as the smallest surviving one; the convex-combination bound and its sharpness; the $m\to n$ substitution; $\mathop{\mathrm{sign}}g'$, $w^*$ and $g(w^*)$ with $\rho$ carried; $\kappa/\rho_n=2n/(n-8)$; $w^*=2\sqrt n/(n-8)$ and $\sqrt{2(n-2)}/(n-8)$; the $\rho\to0$ order collapse; the monotonicity and supremum of $\rho_n$.
 
 ## Recommended repairs
 

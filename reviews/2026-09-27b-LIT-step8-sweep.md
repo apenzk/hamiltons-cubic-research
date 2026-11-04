@@ -2,7 +2,7 @@
 
 Works from [the position file](2026-09-27b-step8-position.md).
 
-## Batch 1: can an invariant of $\operatorname{Sym}^2\mathfrak{so}(n)$ be conjugated into the torus slice?
+## Batch 1: can an invariant of $\mathop{\mathrm{Sym}}^2\mathfrak{so}(n)$ be conjugated into the torus slice?
 
 **No section exists, so no reduction of that kind.** *A representation of a compact group is polar exactly when it is orbit-equivalent to an s-representation (Dadok's classification, stated in [Kollross, polar actions on symmetric spaces](https://arxiv.org/abs/math/0506312) and [Gorodski–Kollross, representations of low copolarity](https://arxiv.org/abs/2106.00458) for the statement and its context). An irreducible s-representation on $\mathbb R^D$ has rank $r$ with $D\ge r(r+1)/2$, so $r\le\sqrt{2D}$, while the $SO(n)$-orbits on the Weyl module have codimension at least $D-\dim SO(n)$, with $D=n(n+1)(n+2)(n-3)/12$. For $n\ge5$ that codimension exceeds $\sqrt{2D}$, so the Weyl module is not polar and has no section containing the torus slice.* **So H off the torus slice needs an argument about the maximiser, not about the orbit space.** *This is an argument from a cited classification, checked here only by the dimension count.*
 

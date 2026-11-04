@@ -13,7 +13,7 @@
 
 ## Claim 1, rank at most 2: CONFIRMED
 
-$A_{ik}=\beta\nu_k^2u_i+\nu_kc_i=u_ia_k+c_ib_k$ with $a_k=\beta\nu_k^2$ and $b_k=\nu_k$, so $A=ua^{\mathsf T}+cb^{\mathsf T}$ is a sum of two outer products and $\operatorname{rank}A\le2$. Nothing else is needed and no hypothesis on $Q$, $\beta$ or the spectrum enters.
+$A_{ik}=\beta\nu_k^2u_i+\nu_kc_i=u_ia_k+c_ib_k$ with $a_k=\beta\nu_k^2$ and $b_k=\nu_k$, so $A=ua^{\mathsf T}+cb^{\mathsf T}$ is a sum of two outer products and $\mathop{\mathrm{rank}}A\le2$. Nothing else is needed and no hypothesis on $Q$, $\beta$ or the spectrum enters.
 
 ## Claim 2, the per-pair system: CONFIRMED, and it is an equivalence
 
@@ -29,7 +29,7 @@ using $a_m-a_l=\beta(\nu_m-\nu_l)(\nu_m+\nu_l)$ and $b_m-b_l=\nu_m-\nu_l$. **Thi
 
 **Both directions hold, so it is an equivalence and not an implication.** Three links, each reversible.
 
-- $\mathrm df_Q[Q\Omega]=2\langle A\circ Q,Q\Omega\rangle=2\langle Q^{\mathsf T}(A\circ Q),\Omega\rangle$, since $\langle B,Q\Omega\rangle=\operatorname{tr}(B^{\mathsf T}Q\Omega)=\langle Q^{\mathsf T}B,\Omega\rangle$.
+- $\mathrm df_Q[Q\Omega]=2\langle A\circ Q,Q\Omega\rangle=2\langle Q^{\mathsf T}(A\circ Q),\Omega\rangle$, since $\langle B,Q\Omega\rangle=\mathop{\mathrm{tr}}(B^{\mathsf T}Q\Omega)=\langle Q^{\mathsf T}B,\Omega\rangle$.
 - $\{Q\Omega:\Omega\ \text{skew}\}$ is the whole tangent space of $O(k)$ at $Q$, and $\langle M,\Omega\rangle=0$ for every skew $\Omega$ holds exactly when the skew part of $M$ vanishes, which is $M=M^{\mathsf T}$.
 - $M-M^{\mathsf T}$ is antisymmetric, so its diagonal vanishes identically and quantifying over $l<m$ loses nothing.
 
@@ -94,7 +94,7 @@ Solving for face critical points at $k=6$ with $\nu$ of multiplicity $(3,2,1)$ f
 
 That statement implies [face_hands_down](../lean/HamiltonsCubic/Results/I106bFace.lean) immediately with $P=Q$, because every permutation matrix satisfies the file's own `Splits` at $k\ge2$: take $R=\{i\}$ and $C=\{\sigma(i)\}$, and both quantifier clauses hold. **No second-order condition enters.**
 
-*Screened, and reported as a screen.* Solving criticality together with the face from random starts at generic $\nu$, every solution found was a signed permutation: $118$ of $118$ at $k=4$ and $109$ of $109$ at $k=6$, measured as $\max\big|\,|Q|-\operatorname{round}|Q|\,\big|<10^{-8}$. **This refutes nothing and proves nothing. It says the surviving first-order route is worth an attempt, which the note had ruled out on the strength of the table claim 4 rests on.**
+*Screened, and reported as a screen.* Solving criticality together with the face from random starts at generic $\nu$, every solution found was a signed permutation: $118$ of $118$ at $k=4$ and $109$ of $109$ at $k=6$, measured as $\max\big|\,|Q|-\mathop{\mathrm{round}}|Q|\,\big|<10^{-8}$. **This refutes nothing and proves nothing. It says the surviving first-order route is worth an attempt, which the note had ruled out on the strength of the table claim 4 rests on.**
 
 *And the counting is consistent with it*: the combined system has $\binom k2+k$ equations on a $\binom k2$-dimensional manifold, overdetermined by $k$, so a solution set that is nonempty for every $A$ has to come from structure rather than from dimension, and the permutations are that structure.
 
@@ -104,7 +104,7 @@ That statement implies [face_hands_down](../lean/HamiltonsCubic/Results/I106bFac
 
 ### As a statement about the programme it names, it is valid
 
-[Post F10](../findings/fence-posts.md)'s programme is over $T_{abc}$ in the eigenframe under nonnegativity, total symmetry, the row marginals $2(n-2)$, the pair caps $\le2$ and $\operatorname{tr}(W^\#)=-1$, and it ceilings near $0.80\sqrt{n-2}$. A programme whose only constraints on $T$ are nonnegativity, total symmetry and the pair caps has a feasible set containing F10's, over the same variables and the same objective, so its optimum is at least F10's. **It is also bounded, which the closure does not say and which the argument needs**: the caps give $T_{abc}\le S_{ab}\le2$ entrywise on their own, so dropping the marginals does not send the programme to $+\infty$ and the comparison is between two finite numbers.
+[Post F10](../findings/fence-posts.md)'s programme is over $T_{abc}$ in the eigenframe under nonnegativity, total symmetry, the row marginals $2(n-2)$, the pair caps $\le2$ and $\mathop{\mathrm{tr}}(W^\#)=-1$, and it ceilings near $0.80\sqrt{n-2}$. A programme whose only constraints on $T$ are nonnegativity, total symmetry and the pair caps has a feasible set containing F10's, over the same variables and the same objective, so its optimum is at least F10's. **It is also bounded, which the closure does not say and which the argument needs**: the caps give $T_{abc}\le S_{ab}\le2$ entrywise on their own, so dropping the marginals does not send the programme to $+\infty$ and the comparison is between two finite numbers.
 
 ### As a closure of I77, it fails, because it closes a different programme
 
@@ -139,8 +139,8 @@ The closure sits in [diagonal-half.md](../findings/diagonal-half.md), whose subj
 
 | claim | declaration that types it |
 |---|---|
-| 1 | **None, and the brief's "untypable" is too strong.** $A=\operatorname{vecMulVec}u\,a+\operatorname{vecMulVec}c\,b$ types directly, and Mathlib has [Matrix.rank_vecMulVec](https://leanprover-community.github.io/mathlib4_docs/Mathlib/LinearAlgebra/Matrix/Rank.html) giving rank at most $1$ for each summand, with [rank_add_le](https://leanprover-community.github.io/mathlib4_docs/Mathlib/LinearAlgebra/Dimension/LinearMap.html) for the sum. No smooth structure and no new axiom. |
-| 2 | **The brief's "NONE EXISTS" is wrong.** `first_order_apply` and `coeff_factor` in [I106bFace.lean](../lean/HamiltonsCubic/Results/I106bFace.lean) already type the per-pair form entrywise in its commutator disguise, with $\tilde U=X$, $\tilde C=Y$, $a=\beta\nu^{\circ2}$, $b=\nu$, and `first_order_antisymm` types the half that makes it an equivalence. **One link is missing and it is a base-layer statement**: that $M-M^{\mathsf T}=-\big([\operatorname{diag}a,X]+[\operatorname{diag}b,Y]\big)$ at $M=Q^{\mathsf T}(A\circ Q)$, $A=ua^{\mathsf T}+cb^{\mathsf T}$, $X=Q^{\mathsf T}UQ$, $Y=Q^{\mathsf T}CQ$. It needs `Matrix.hadamard_apply`, `Matrix.mul_apply` and `ring`, and nothing else. |
+| 1 | **None, and the brief's "untypable" is too strong.** $A=\mathop{\mathrm{vecMulVec}}u\,a+\mathop{\mathrm{vecMulVec}}c\,b$ types directly, and Mathlib has [Matrix.rank_vecMulVec](https://leanprover-community.github.io/mathlib4_docs/Mathlib/LinearAlgebra/Matrix/Rank.html) giving rank at most $1$ for each summand, with [rank_add_le](https://leanprover-community.github.io/mathlib4_docs/Mathlib/LinearAlgebra/Dimension/LinearMap.html) for the sum. No smooth structure and no new axiom. |
+| 2 | **The brief's "NONE EXISTS" is wrong.** `first_order_apply` and `coeff_factor` in [I106bFace.lean](../lean/HamiltonsCubic/Results/I106bFace.lean) already type the per-pair form entrywise in its commutator disguise, with $\tilde U=X$, $\tilde C=Y$, $a=\beta\nu^{\circ2}$, $b=\nu$, and `first_order_antisymm` types the half that makes it an equivalence. **One link is missing and it is a base-layer statement**: that $M-M^{\mathsf T}=-\big([\mathop{\mathrm{diag}}a,X]+[\mathop{\mathrm{diag}}b,Y]\big)$ at $M=Q^{\mathsf T}(A\circ Q)$, $A=ua^{\mathsf T}+cb^{\mathsf T}$, $X=Q^{\mathsf T}UQ$, $Y=Q^{\mathsf T}CQ$. It needs `Matrix.hadamard_apply`, `Matrix.mul_apply` and `ring`, and nothing else. |
 | 3 | **Typable and untyped.** It is the $\nu_i=\nu_j$ instance of `coeff_factor` composed with $b_i-b_j=\nu_i-\nu_j$, one line. |
 | 4 | none, and none can. Correct in the brief. |
 | 5 | none for the inference. **The statement the inference leaves open IS typable** as `∀ Q, Q * Qᵀ = 1 → (∀ i, Q i i = 0) → (critical) → (∃ σ, signed permutation)`, and the step from it to [face_hands_down](../lean/HamiltonsCubic/Results/I106bFace.lean) is `Splits` at $R=\{i\}$, $C=\{\sigma(i)\}$, which is provable in the current layer today. |
